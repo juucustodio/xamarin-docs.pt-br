@@ -1,39 +1,39 @@
 ---
-title: Passo a passo – local do plano de fundo no xamarin. IOS
-description: Este documento fornece um passo a passo de como usar informações de localização em um aplicativo xamarin. IOS backgrounded. Ele descreve a instalação necessários, a interface do usuário e estados do aplicativo.
+title: Walkthrough-local do plano de fundo no Xamarin. iOS
+description: Este documento fornece uma explicação sobre como usar informações de local em um aplicativo Xamarin. iOS em segundo plano. Ele descreve a instalação necessária, a interface do usuário e os Estados do aplicativo.
 ms.prod: xamarin
 ms.assetid: F8EEA0FD-5614-47FE-ADAC-80A5BCA6EB5F
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: fa8a48e165764a449af4bc5414d2e66aecea8269
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 20f49f3f0c103791064545311d9f66d409cff357
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61392230"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656536"
 ---
-# <a name="walkthrough---background-location-in-xamarinios"></a>Passo a passo – local do plano de fundo no xamarin. IOS
+# <a name="walkthrough---background-location-in-xamarinios"></a>Walkthrough-local do plano de fundo no Xamarin. iOS
 
-Neste exemplo, vamos criar um iOS aplicativo local que imprime informações sobre nosso local atual: latitude, longitude e outros parâmetros para a tela. Este aplicativo será demonstram como executar corretamente as atualizações de local enquanto o aplicativo está ativo ou Backgrounded.
+Neste exemplo, vamos criar um aplicativo de local do iOS que imprime informações sobre nosso local atual: latitude, longitude e outros parâmetros na tela. Este aplicativo demonstrará como executar corretamente as atualizações de local enquanto o aplicativo estiver ativo ou em segundo plano.
 
-Este passo a passo explica alguma chave backgrounding conceitos, incluindo o registro de um aplicativo como um aplicativo necessário em segundo plano, a suspensão de atualizações da interface do usuário quando o aplicativo é colocado em segundo plano e trabalhar com o `WillEnterBackground` e `WillEnterForeground` `AppDelegate` métodos .
+Este guia explica alguns conceitos importantes de plano de fundo, incluindo o registro de um aplicativo como um aplicativo necessário em segundo plano, a suspensão de atualizações da interface do usuário quando o aplicativo `WillEnterBackground` é `WillEnterForeground` em segundo plano e o trabalho com os métodos e `AppDelegate` .
 
-## <a name="application-set-up"></a>Configurar do aplicativo
+## <a name="application-set-up"></a>Configuração do aplicativo
 
 
-1. Primeiro, crie uma nova **iOS > aplicativo > aplicativo de exibição única (C#)**. Chamá-lo _local_ e certifique-se de que o iPad e iPhone foi selecionadas.
+1. Primeiro, crie um novo **aplicativo iOS > > aplicativo de exibição únicaC#()** . Ligue para o _local_ e verifique se o iPad e o iPhone foram selecionados.
 
-1. Um aplicativo local se qualifica como um aplicativo necessário em segundo plano no iOS. Registrar o aplicativo como um aplicativo local por meio da edição do **Info. plist** arquivo para o projeto.
+1. Um aplicativo de localização é qualificado como um aplicativo necessário em segundo plano no iOS. Registre o aplicativo como um aplicativo de local editando o arquivo **info. plist** para o projeto.
 
-    No Gerenciador de soluções, clique duas vezes no **Info. plist** arquivo para abri-lo e role até a parte inferior da lista. Colocar uma marca de seleção por ambos os **habilitar modos de plano de fundo** e o **atualizações de local** caixas de seleção.
+    Em Gerenciador de Soluções, clique duas vezes no arquivo **info. plist** para abri-lo e role até a parte inferior da lista. Marque as caixas de seleção **habilitar modos de segundo plano** e **atualizações de local** .
 
-    No Visual Studio para Mac, ele terá aparência semelhante a esta:
+    No Visual Studio para Mac, ele será semelhante a este:
 
-    [![](location-walkthrough-images/image7.png "Colocar uma marca de seleção Habilitar modos de plano de fundo e as caixas de seleção de atualizações de local")](location-walkthrough-images/image7.png#lightbox)
+    [![](location-walkthrough-images/image7.png "Marque as caixas de seleção Habilitar modos de segundo plano e atualizações de local")](location-walkthrough-images/image7.png#lightbox)
 
-    No Visual Studio, **Info. plist** precisa ser atualizado manualmente adicionando o par chave/valor a seguir:
+    No Visual Studio, o **info. plist** precisa ser atualizado manualmente Adicionando o seguinte par de chave/valor:
 
     ```xml
     <key>UIBackgroundModes</key>
@@ -42,9 +42,9 @@ Este passo a passo explica alguma chave backgrounding conceitos, incluindo o reg
     </array>
     ```
 
-1. Agora que o aplicativo está registrado, ele pode obter dados de localização do dispositivo. No iOS, o `CLLocationManager` classe é usada para acessar informações de local e pode gerar eventos que fornecem atualizações de local.
+1. Agora que o aplicativo está registrado, ele pode obter dados de localização do dispositivo. No Ios, a `CLLocationManager` classe é usada para acessar informações de local e pode gerar eventos que fornecem atualizações de local.
 
-1. No código, crie uma nova classe chamada `LocationManager` que fornece um único lugar para várias telas e código para assinar as atualizações de local. No `LocationManager` classe, para tornar uma instância das `CLLocationManager` chamado `LocMgr`:
+1. No código, crie uma nova classe chamada `LocationManager` que fornece um único local para várias telas e código para assinar atualizações de local. Na classe, faça uma instância `CLLocationManager` do chamada `LocMgr`: `LocationManager`
 
     ```csharp
     public class LocationManager
@@ -72,21 +72,21 @@ Este passo a passo explica alguma chave backgrounding conceitos, incluindo o reg
     }
     ```
 
-    O código acima define um número de propriedades e permissões sobre o [CLLocationManager](xref:CoreLocation.CLLocationManager) classe:
+    O código acima define um número de propriedades e permissões na classe [CLLocationManager](xref:CoreLocation.CLLocationManager) :
 
-    - `PausesLocationUpdatesAutomatically` – Esse é um valor booleano que pode ser definido, dependendo se o sistema tem permissão para pausar as atualizações de local. Em alguns dispositivos padrão é `true`, que pode fazer com que o dispositivo parar de receber atualizações do local após cerca de 15 minutos de plano de fundo.
-    - `RequestAlwaysAuthorization` -Você deve passar esse método para atribuir o usuário do aplicativo a opção para permitir que o local a ser acessado em segundo plano. `RequestWhenInUseAuthorization` também pode ser passado se você quiser dar ao usuário a opção para permitir que o local a ser acessado somente quando o aplicativo estiver em primeiro plano.
-    - `AllowsBackgroundLocationUpdates` – Esta é uma propriedade booleana, introduzida no iOS 9 que podem ser definidas para permitir que um aplicativo receber atualizações de localização quando suspenso.
+    - `PausesLocationUpdatesAutomatically`– É um booliano que pode ser definido dependendo se o sistema tem permissão para pausar atualizações de local. Em algum dispositivo, ele usa como `true`padrão, o que pode fazer com que o dispositivo pare de obter atualizações de local de plano de fundo após cerca de 15 minutos.
+    - `RequestAlwaysAuthorization`-Você deve passar esse método para dar ao usuário do aplicativo a opção de permitir que o local seja acessado em segundo plano. `RequestWhenInUseAuthorization`também pode ser passado se você quiser conceder ao usuário a opção de permitir que o local seja acessado somente quando o aplicativo estiver em primeiro plano.
+    - `AllowsBackgroundLocationUpdates`– Essa é uma propriedade booliana, introduzida no iOS 9, que pode ser definida para permitir que um aplicativo Receba atualizações de local quando suspenso.
 
     > [!IMPORTANT]
-    > iOS 8 (e superior) também requer uma entrada na **Info. plist** arquivo para mostrar ao usuário como parte da solicitação de autorização.
+    > o iOS 8 (e superior) também requer uma entrada no arquivo **info. plist** para mostrar o usuário como parte da solicitação de autorização.
 
-1. Adicionar uma chave `NSLocationAlwaysUsageDescription` ou `NSLocationWhenInUseUsageDescription` com uma cadeia de caracteres que será exibida para o usuário no alerta que solicita acesso a dados local.
+1. Adicione uma chave `NSLocationAlwaysUsageDescription` ou `NSLocationWhenInUseUsageDescription` com uma cadeia de caracteres que será exibida para o usuário no alerta que solicita acesso a dados de local.
 
-1. iOS 9 requer que, ao usar `AllowsBackgroundLocationUpdates` as **Info. plist** inclui a chave `UIBackgroundModes` com o valor `location`. Se você tiver concluído a etapa 2 deste passo a passo, isso deve já esteve em seu arquivo Info. plist.
+1. o Ios 9 requer que, `AllowsBackgroundLocationUpdates` ao usar o **info. plist** , `UIBackgroundModes` inclua a chave `location`com o valor. Se você concluiu a etapa 2 deste passo a passos, ele já deve estar em seu arquivo info. plist.
 
 
-1. Dentro de `LocationManager` classe, crie um método chamado `StartLocationUpdates` com o código a seguir. Este código mostra como começar a receber atualizações de local do `CLLocationManager`:
+1. Dentro da `LocationManager` classe, crie um método chamado `StartLocationUpdates` com o código a seguir. Esse código mostra como começar a receber atualizações de local do `CLLocationManager`:
 
     ```csharp
     if (CLLocationManager.LocationServicesEnabled) {
@@ -101,20 +101,20 @@ Este passo a passo explica alguma chave backgrounding conceitos, incluindo o reg
     }
     ```
 
-    Há várias coisas importantes acontecendo neste método. Primeiro, podemos executar uma verificação para ver se o aplicativo tem acesso a dados locais no dispositivo. Podemos verificar isso chamando `LocationServicesEnabled` sobre o `CLLocationManager`. Esse método retornará **falsos** se o usuário negou o acesso de aplicativo para informações de localização.
+    Há várias coisas importantes que ocorrem neste método. Primeiro, executamos uma verificação para ver se o aplicativo tem acesso aos dados de localização no dispositivo. Verificamos isso chamando `LocationServicesEnabled` `CLLocationManager`no. Esse método retornará **false** se o usuário tiver negado o acesso do aplicativo às informações de localização.
 
-1. Em seguida, informar ao Gerenciador de localização a frequência com que a atualização. `CLLocationManager` fornece muitas opções de filtragem e configurando os dados de local, incluindo a frequência de atualizações. Neste exemplo, defina o `DesiredAccuracy` atualizar sempre que o local for alterado por um medidor. Para obter mais informações sobre como configurar a frequência de atualização do local e outras preferências, consulte o [referência de classe CLLocationManager](https://developer.apple.com/library/ios/#documentation/CoreLocation/Reference/CLLocationManager_Class/CLLocationManager/CLLocationManager.html) na documentação da Apple.
+1. Em seguida, diga ao Gerenciador de locais a frequência de atualização. `CLLocationManager`fornece muitas opções para filtrar e configurar dados de localização, incluindo a frequência de atualizações. Neste exemplo, defina `DesiredAccuracy` como atualizar sempre que o local for alterado por um medidor. Para obter mais informações sobre como configurar a frequência de atualização de local e outras preferências, consulte a [referência de classe CLLocationManager](https://developer.apple.com/library/ios/#documentation/CoreLocation/Reference/CLLocationManager_Class/CLLocationManager/CLLocationManager.html) na documentação da Apple.
 
-1. Por fim, chame `StartUpdatingLocation` sobre o `CLLocationManager` instância. Isso informa ao Gerenciador de localizações para obter uma correção inicial sobre o local atual e iniciar o envio de atualizações
+1. Por fim, `StartUpdatingLocation` chame `CLLocationManager` na instância. Isso informa o Gerenciador de local para obter uma correção inicial no local atual e iniciar o envio de atualizações
 
-Até agora, o Gerenciador local tiver sido criado, configurado com os tipos de dados que desejamos receber, e determina o local inicial. Agora, o código precisa processar os dados de localização para a interface do usuário. Podemos fazer isso com um evento personalizado que usa um `CLLocation` como um argumento:
+Até agora, o Gerenciador de local foi criado, configurado com os tipos de dados que queremos receber e determinou o local inicial. Agora, o código precisa renderizar os dados de localização para a interface do usuário. Podemos fazer isso com um evento personalizado que usa um `CLLocation` como argumento:
 
 ```csharp
 // event for the location changing
 public event EventHandler<LocationUpdatedEventArgs>LocationUpdated = delegate { };
 ```
 
-A próxima etapa é assinar atualizações de local do `CLLocationManager`e geram personalizado `LocationUpdated` quando novos dados de localização se torna disponíveis, passando o local como um argumento de evento. Para fazer isso, crie uma nova classe **LocationUpdateEventArgs.cs**. Esse código é acessível dentro do aplicativo principal e retorna o local do dispositivo quando o evento é gerado:
+A próxima etapa é assinar as atualizações de local do `CLLocationManager`e gerar o evento personalizado `LocationUpdated` quando novos dados de local se tornarem disponíveis, passando o local como um argumento. Para fazer isso, crie uma nova classe **LocationUpdateEventArgs.cs**. Esse código pode ser acessado dentro do aplicativo principal e retorna o local do dispositivo quando o evento é gerado:
 
 ```csharp
 public class LocationUpdatedEventArgs : EventArgs
@@ -135,16 +135,16 @@ public class LocationUpdatedEventArgs : EventArgs
 
 ## <a name="user-interface"></a>Interface do Usuário
 
-1. Use o designer do iOS para criar a tela que exibirá informações de localização. Clique duas vezes no **Main. Storyboard** arquivo para começar.
+1. Use o designer do iOS para criar a tela que exibirá informações de localização. Clique duas vezes no arquivo **Main. Storyboard** para começar.
 
-    No storyboard, arraste vários rótulos para a tela para atuar como espaços reservados para as informações de localização. Neste exemplo, há rótulos para latitude, longitude, altitude, curso e velocidade.
+    No storyboard, arraste vários rótulos para a tela para atuar como espaços reservados para as informações de local. Neste exemplo, há rótulos para latitude, longitude, altitude, curso e velocidade.
 
     O layout deve ser semelhante ao seguinte:
 
-    ![](location-walkthrough-images/image8.png "Um exemplo de layout da interface do usuário no iOS Designer")
+    ![](location-walkthrough-images/image8.png "Um exemplo de layout de interface do usuário no designer do iOS")
 
-1. No painel de soluções, clique duas vezes o `ViewController.cs` do arquivo e editá-lo para criar uma nova instância da chamada e LocationManager `StartLocationUpdates`nele.
-  Altere o código para a seguinte aparência:
+1. No painel de soluções, clique duas vezes no arquivo `ViewController.cs` e edite-o para criar uma nova instância do localmanager e chamá `StartLocationUpdates`-lo.
+  Altere o código para que fique semelhante ao seguinte:
 
     ```csharp
     #region Computed Properties
@@ -166,9 +166,9 @@ public class LocationUpdatedEventArgs : EventArgs
     #endregion
     ```
 
-    Isso iniciará as atualizações de local na inicialização do aplicativo, embora nenhum dado será exibido.
+    Isso iniciará as atualizações de local na inicialização do aplicativo, embora nenhum dado seja exibido.
 
-1. Agora que as atualizações de local são recebidas, atualize a tela com as informações de localização. O método a seguir obtém o local do nosso `LocationUpdated` eventos e os exibe na interface do usuário:
+1. Agora que as atualizações de local foram recebidas, atualize a tela com as informações de localização. O método a seguir obtém o local de `LocationUpdated` nosso evento e o mostra na interface do usuário:
 
     ```csharp
     #region Public Methods
@@ -188,7 +188,7 @@ public class LocationUpdatedEventArgs : EventArgs
     #endregion
     ```
 
-Ainda assim será preciso assinar o `LocationUpdated` evento no nosso AppDelegate e chame o novo método para atualizar a interface do usuário. Adicione o seguinte código no `ViewDidLoad,` logo após o `StartLocationUpdates` chamar:
+Ainda precisamos assinar o `LocationUpdated` evento em nosso AppDelegate e chamar o novo método para atualizar a interface do usuário. Adicione o seguinte código `ViewDidLoad,` à direita após a `StartLocationUpdates` chamada:
 
 ```csharp
 public override void ViewDidLoad ()
@@ -203,13 +203,13 @@ public override void ViewDidLoad ()
 ```
 
 
-Agora, quando o aplicativo é executado, ele deve ser algo parecido com isto:
+Agora, quando o aplicativo for executado, ele deverá ser semelhante a este:
 
-[![](location-walkthrough-images/image5.png "Um execução do aplicativo de exemplo")](location-walkthrough-images/image5.png#lightbox)
+[![](location-walkthrough-images/image5.png "Uma execução de aplicativo de exemplo")](location-walkthrough-images/image5.png#lightbox)
 
-## <a name="handling-active-and-background-states"></a>Tratamento de estados ativo e em segundo plano
+## <a name="handling-active-and-background-states"></a>Manipulando Estados ativos e em segundo plano
 
-1. O aplicativo é saída de atualizações local enquanto ele está em primeiro plano e Active Directory. Para demonstrar o que acontece quando o aplicativo entra em segundo plano, substituir o `AppDelegate` alterações de estado de métodos que acompanham o aplicativo para que o aplicativo grava no console quando ele faz a transição entre o primeiro plano e o plano de fundo:
+1. O aplicativo está gerando atualizações de local enquanto está em primeiro plano e ativo. Para demonstrar o que acontece quando o aplicativo entra no plano de fundo `AppDelegate` , substitua os métodos que controlam as alterações de estado do aplicativo para que o aplicativo grave no console quando ele faz a transição entre o primeiro plano e o plano de fundo:
 
     ```csharp
     public override void DidEnterBackground (UIApplication application)
@@ -223,7 +223,7 @@ Agora, quando o aplicativo é executado, ele deve ser algo parecido com isto:
     }
     ```
 
-    Adicione o seguinte código no `LocationManager` continuamente imprimir local atualizado dados para a saída do aplicativo, para verificar as informações de localização ainda estão disponíveis no plano de fundo:
+    Adicione o código a seguir no `LocationManager` para imprimir continuamente os dados de localização atualizados na saída do aplicativo, para verificar se as informações de local ainda estão disponíveis em segundo plano:
 
     ```csharp
     public class LocationManager
@@ -247,11 +247,11 @@ Agora, quando o aplicativo é executado, ele deve ser algo parecido com isto:
     }
     ```
 
-1. Há um problema restante com o código: tentativa de atualizar a interface do usuário quando o aplicativo é colocado em segundo plano será causa iOS encerrará-lo. Quando o aplicativo entra em segundo plano, o código precisa cancelar a assinatura de atualizações de local e param de atualizar a interface do usuário.
+1. Há um problema restante com o código: a tentativa de atualizar a interface do usuário quando o aplicativo está em segundo plano fará com que o iOS o encerre. Quando o aplicativo entra em segundo plano, o código precisa cancelar a assinatura de atualizações de local e parar de atualizar a interface do usuário.
 
-    iOS nos fornece notificações quando o aplicativo está prestes a fazer a transição para um aplicativo em diferente estados. Nesse caso, podemos pode assinar o `ObserveDidEnterBackground` notificação.
+    o iOS nos fornece notificações quando o aplicativo está prestes a fazer a transição para um estado de aplicativo diferente. Nesse caso, podemos assinar a `ObserveDidEnterBackground` notificação.
 
-    O trecho de código a seguir mostra como usar uma notificação para informar o modo de exibição quando interromper as atualizações da interface do usuário. Isso vai entrar no `ViewDidLoad`:
+    O trecho de código a seguir mostra como usar uma notificação para permitir que a exibição saiba quando interromper as atualizações da interface do usuário. Isso vai em `ViewDidLoad`:
 
     ```csharp
     UIApplication.Notifications.ObserveDidEnterBackground ((sender, args) => {
@@ -259,15 +259,15 @@ Agora, quando o aplicativo é executado, ele deve ser algo parecido com isto:
     });
     ```
 
-    Quando o aplicativo é executado, a saída será algo parecido com isso:
+    Quando o aplicativo estiver em execução, a saída terá uma aparência semelhante a esta:
 
-    ![](location-walkthrough-images/image6.png "Exemplo da saída local no console do")
+    ![](location-walkthrough-images/image6.png "Exemplo de saída de local no console")
 
-1. O aplicativo imprime as atualizações de local na tela ao operar em primeiro plano e continua a imprimir os dados na janela de saída do aplicativo enquanto estiver operando em segundo plano.
+1. O aplicativo imprime as atualizações de local na tela ao operar em primeiro plano e continua a imprimir dados na janela de saída do aplicativo enquanto estiver operando em segundo plano.
 
-Apenas um problema pendente permanece: tela inicia atualizações da interface do usuário quando o aplicativo é carregado pela primeira vez, mas ele não tem nenhuma maneira de saber quando o aplicativo entrou novamente em primeiro plano. Se o aplicativo backgrounded é trazido de volta para o primeiro plano, as atualizações da interface do usuário não serão retomada.
+Somente um problema pendente permanece: a tela inicia as atualizações da interface do usuário quando o aplicativo é carregado pela primeira vez, mas não tem como saber quando o aplicativo reinseriu o primeiro plano. Se o aplicativo em segundo plano for devolvido ao primeiro plano, as atualizações da interface do usuário não serão retomadas.
 
-Para corrigir isso, aninhe uma chamada para iniciar as atualizações da interface do usuário dentro de outra notificação, que será disparado quando o aplicativo entra no estado ativo:
+Para corrigir isso, aninhe uma chamada para iniciar atualizações da interface do usuário dentro de outra notificação, que será acionada quando o aplicativo entrar no estado ativo:
 
 ```csharp
 UIApplication.Notifications.ObserveDidBecomeActive ((sender, args) => {
@@ -275,12 +275,12 @@ UIApplication.Notifications.ObserveDidBecomeActive ((sender, args) => {
 });
 ```
 
-Agora a interface do usuário será iniciada a atualização quando o aplicativo é iniciado pela primeira vez, e continuar atualizando sempre que o aplicativo volta a entrar em primeiro plano.
+Agora, a interface do usuário começará a ser atualizada quando o aplicativo for iniciado pela primeira vez e retomará a atualização sempre que o aplicativo voltar ao primeiro plano.
 
-Neste passo a passo, criamos um aplicativo iOS bem comportado, reconhecimento de plano de fundo que imprime os dados de local para a tela e janela de saída do aplicativo.
+Neste tutorial, criamos um aplicativo iOS com reconhecimento de plano de fundo bem comparado que imprime dados de localização na janela de saída do aplicativo e na tela.
 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Local (parte 4) (amostra)](https://developer.xamarin.com/samples/monotouch/Location/)
-- [Referência de Framework Core local](https://developer.apple.com/library/ios/documentation/CoreLocation/Reference/CoreLocation_Framework/_index.html)
+- [Local (parte 4) (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/location)
+- [Referência da estrutura de localização principal](https://developer.apple.com/library/ios/documentation/CoreLocation/Reference/CoreLocation_Framework/_index.html)

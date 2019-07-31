@@ -6,24 +6,24 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/15/2018
-ms.openlocfilehash: fc95c05c1945464cd9cac8565d8a11ff1b4c7e1d
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 5d2fec537f10ad3ef5300275c9851d4f57bc961d
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61175099"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68645162"
 ---
 # <a name="adding-a-second-toolbar"></a>Adicionar uma segunda barra de ferramentas
 
 
 ## <a name="overview"></a>Visão geral 
 
-O `Toolbar` pode fazer mais do que substituir a barra de ação &ndash; ele pode ser usado várias vezes dentro de uma atividade, ele pode ser personalizado para o posicionamento em qualquer lugar na tela e ele pode ser configurado para abranger apenas uma parcial largura da tela. Os exemplos a seguir ilustram como criar um segundo `Toolbar` e coloque-o na parte inferior da tela. Isso `Toolbar` implementa **cópia**, **Recortar**, e **colar** itens de menu. 
+O `Toolbar` pode fazer mais do que substituir a barra &ndash; de ação que pode ser usada várias vezes em uma atividade, pode ser personalizada para posicionamento em qualquer lugar na tela e pode ser configurada para abranger apenas uma largura parcial da tela. Os exemplos a seguir ilustram como criar um `Toolbar` segundo e colocá-lo na parte inferior da tela. Isso `Toolbar` implementa os itens de menu **copiar**, recortar e **colar** . 
 
 
 ## <a name="define-the-second-toolbar"></a>Definir a segunda barra de ferramentas 
 
-Edite o arquivo de layout **Main. axml** e substitua seu conteúdo com o XML a seguir:
+Edite o arquivo de layout **Main. axml** e substitua seu conteúdo por pelo seguinte XML:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -54,53 +54,53 @@ Edite o arquivo de layout **Main. axml** e substitua seu conteúdo com o XML a s
 </RelativeLayout>
 ```
 
-Esse XML adiciona uma segunda `Toolbar` na parte inferior da tela com um vazio `ImageView` preenchendo o meio da tela. A altura desta `Toolbar` é definido como a altura de uma barra de ações: 
+Esse XML adiciona um segundo `Toolbar` à parte inferior da tela com um preenchimento vazio `ImageView` do meio da tela. A altura disso `Toolbar` é definida como a altura de uma barra de ação: 
 
 ```xml
 android:minHeight="?android:attr/actionBarSize"
 ```
 
-A cor do plano de fundo desse `Toolbar` é definido como uma cor de ênfase será definida em seguida:
+A cor do plano de `Toolbar` fundo é definida como uma cor de destaque que será definida em seguida:
 
 ```xml
 android:background="?android:attr/colorAccent
 ```
 
-Observe que este `Toolbar` baseia-se em um tema diferente (**ThemeOverlay.Material.Dark.ActionBar**) diferente daquela usada pelo `Toolbar` criados no [substituindo a barra de ação](~/android/user-interface/controls/tool-bar/replacing-the-action-bar.md) &ndash;ele não está associado a decoração de janela de atividade ou o tema usado no primeiro `Toolbar`.
+Observe que isso `Toolbar` se baseia em um tema diferente (**ThemeOverlay. material. Dark. ActionBar**) do que o `Toolbar` usado pelo criado na [substituição da barra](~/android/user-interface/controls/tool-bar/replacing-the-action-bar.md) &ndash; de ação ela não está associada à janela da atividade décor ou a o tema usado no primeiro `Toolbar`.
 
-Edite **Resources/values/styles.xml** e adicione a seguinte cor de destaque para a definição de estilo: 
+Edite Resources **/Values/Styles. xml** e adicione a seguinte cor de destaque à definição de estilo: 
 
 ```xml
 <item name="android:colorAccent">#C7A935</item>
 ```
 
-Isso dá a barra de ferramentas inferior âmbar escura. Criar e executar o aplicativo exibe uma barra de ferramentas de segundo em branco na parte inferior da tela: 
+Isso dá à barra de ferramentas inferior uma cor âmbar escura. Compilar e executar o aplicativo exibe uma segunda barra de ferramentas em branco na parte inferior da tela: 
 
-[![Captura de tela do aplicativo com a segunda barra de ferramentas amarela na parte inferior da tela](adding-a-second-toolbar-images/01-second-toolbar-sml.png)](adding-a-second-toolbar-images/01-second-toolbar.png#lightbox)
+[![Captura de tela do aplicativo com a segunda barra de ferramentas amarela na parte inferior do ecrã](adding-a-second-toolbar-images/01-second-toolbar-sml.png)](adding-a-second-toolbar-images/01-second-toolbar.png#lightbox)
 
 
  
-## <a name="add-edit-menu-items"></a>Adicionar itens de Menu Editar 
+## <a name="add-edit-menu-items"></a>Adicionar itens de menu de edição 
 
-Esta seção explica como adicionar editar itens de menu na parte inferior `Toolbar`. 
+Esta seção explica como adicionar itens de menu de edição à parte `Toolbar`inferior. 
 
-Para adicionar itens de menu para um secundário `Toolbar`: 
+Para adicionar itens de menu a um `Toolbar`secundário: 
 
-1.  Adicionar ícones de menu para o `mipmap-` pastas do projeto de aplicativo (se necessário).
+1.  Adicione ícones de menu às `mipmap-` pastas do projeto de aplicativo (se necessário).
 
-2.  Definir o conteúdo dos itens de menu, adicionando um arquivo de recurso de menu adicionais à **menu derecursos/**. 
+2.  Defina o conteúdo dos itens de menu adicionando um arquivo de recurso de menu adicional para **recursos/menu**. 
 
-3.  Na atividade de `OnCreate` método, localizar o `Toolbar` (chamando `FindViewById`) e aumentar a `Toolbar`do menus.
+3.  No método da `OnCreate` atividade, localize o `Toolbar` (chamando `FindViewById`) e aumente os `Toolbar`menus do.
 
-4.  Implementar um manipulador click no `OnCreate` para os novos itens de menu. 
+4.  Implemente um manipulador de `OnCreate` cliques no para os novos itens de menu. 
 
-As seções a seguir demonstram esse processo em detalhes: **Recortar**, **cópia**, e **colar** itens de menu são adicionados à parte inferior `Toolbar`. 
+As seções a seguir demonstram esse processo em detalhes:Os itens de menu recortar, **copiar**e **colar** são adicionados à `Toolbar`parte inferior. 
 
 
 
-### <a name="define-the-edit-menu-resource"></a>Definir o recurso de Menu Editar
+### <a name="define-the-edit-menu-resource"></a>Definir o recurso de menu Editar
 
-No **/menu de recursos** subdiretório, crie um novo arquivo XML chamado **edit_menus.xml** e substitua o conteúdo com o seguinte XML:
+No subdiretório de **recursos/menu** , crie um novo arquivo XML chamado **edit_menus. xml** e substitua o conteúdo pelo seguinte XML:
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -123,13 +123,13 @@ No **/menu de recursos** subdiretório, crie um novo arquivo XML chamado **edit_
 </menu>
 ```
 
-Este XML cria o **Recortar**, **cópia**, e **colar** itens de menu (usando os ícones que foram adicionados para o `mipmap-` pastas no [substituindo a barra de ação ](~/android/user-interface/controls/tool-bar/replacing-the-action-bar.md)).
+Esse XML cria ositens de menu recortar, **copiar**e **colar** (usando ícones `mipmap-` que foram adicionados às pastas ao [substituir a barra de ação](~/android/user-interface/controls/tool-bar/replacing-the-action-bar.md)).
 
 
 
-### <a name="inflate-the-menus"></a>Aumentar os Menus
+### <a name="inflate-the-menus"></a>Inflar os menus
 
-No final de `OnCreate` método no **MainActivity.cs**, adicione as seguintes linhas de código: 
+No final do `OnCreate` método no **MainActivity.cs**, adicione as seguintes linhas de código: 
 
 ```csharp
 var editToolbar = FindViewById<Toolbar>(Resource.Id.edit_toolbar);
@@ -140,28 +140,28 @@ editToolbar.MenuItemClick += (sender, e) => {
 };
 ```
 
-Esse código localiza os `edit_toolbar` exibição definida no **Main. axml**, define seu título para **edição**e irá aumentar seus itens de menu (definidos no **edit_menus.xml**). Ele define um menu que exibe uma notificação do sistema para indicar qual ícone de edição foi tocado manipulador de clique. 
+Esse código localiza o modo `edit_toolbar` de exibição definido em **Main. axml**, define seu título como **editando**e inplana seus itens de menu (definidos em **edit_menus. xml**). Ele define um manipulador de cliques de menu que exibe um sistema de notificação para indicar qual ícone de edição foi tocado. 
 
-Compile e execute o aplicativo. Quando o aplicativo é executado, o texto e os ícones adicionados acima serão exibida conforme mostrado aqui: 
+Compile e execute o aplicativo. Quando o aplicativo for executado, o texto e os ícones adicionados acima aparecerão como mostrado aqui: 
 
-[![Diagrama da parte inferior da barra de ferramentas com ícones de recortar, copiar e colar](adding-a-second-toolbar-images/02-bottom-toolbar-sml.png)](adding-a-second-toolbar-images/02-bottom-toolbar.png#lightbox)
+[![Diagrama da barra de ferramentas inferior com ícones de recortar, copiar e colar](adding-a-second-toolbar-images/02-bottom-toolbar-sml.png)](adding-a-second-toolbar-images/02-bottom-toolbar.png#lightbox)
 
-Tocar o **Recortar** ícone do menu faz com que a seguinte notificação do sistema a ser exibido: 
+Tocar no ícone do menu recortar faz com que o seguinte sistema de notificação seja exibido: 
 
-[![Captura de tela de notificação do sistema que indica que o ícone do menu Recortar foi tocado](adding-a-second-toolbar-images/03-bottom-tapped-sml.png)](adding-a-second-toolbar-images/03-bottom-tapped.png#lightbox)
+[![Captura de tela do sistema indicando que o ícone do menu recortar foi tocado](adding-a-second-toolbar-images/03-bottom-tapped-sml.png)](adding-a-second-toolbar-images/03-bottom-tapped.png#lightbox)
 
-Tocando em itens de menu em qualquer barra de ferramentas exibe as notificações do sistema resultantes: 
+Tocar em itens de menu em qualquer barra de ferramentas exibe as notificações resultantes: 
 
-[![Capturas de tela de notificações do sistema para salvar, copiar e colar itens de menu sendo tocados](adding-a-second-toolbar-images/04-menu-action-sml.png)](adding-a-second-toolbar-images/04-menu-action.png#lightbox)
+[![Capturas de tela das notificações dos itens de menu salvar, copiar e colar que estão sendo tocadas](adding-a-second-toolbar-images/04-menu-action-sml.png)](adding-a-second-toolbar-images/04-menu-action.png#lightbox)
 
 
 
-## <a name="the-up-button"></a>Botão para cima 
+## <a name="the-up-button"></a>O botão para cima 
 
-Contam com a maioria dos aplicativos do Android a **volta** botão para navegação de aplicativo; pressionando o **volta** botão leva o usuário para a tela anterior.
-No entanto, você talvez queira fornecer um **backup** botão que torna mais fácil para os usuários navegarem "até" à tela principal do aplicativo. Quando o usuário seleciona o **para cima** botão, o usuário move para um nível mais alto na hierarquia de aplicativo &ndash; ou seja, o aplicativo retira o usuário voltar várias atividades em pilha voltar em vez de retirada novamente para o anteriormente visitado Atividade. 
+A maioria dos aplicativos Android depende do botão **voltar** para a navegação do aplicativo; pressionar o botão **voltar** leva o usuário para a tela anterior.
+No entanto, você também pode querer fornecer um botão para **cima** que torna mais fácil para os usuários navegar "para cima" na tela principal do aplicativo. Quando o usuário seleciona o botão **para cima** , o usuário passa para um nível mais alto na hierarquia &ndash; do aplicativo, ou seja, o aplicativo faz o usuário voltar a várias atividades na pilha voltar, em vez de voltar à atividade visitada anteriormente. 
 
-Para habilitar o **para cima** botão em uma segunda atividade que usa um `Toolbar` como sua barra de ação, chame o `SetDisplayHomeAsUpEnabled` e `SetHomeButtonEnabled` métodos em que a segunda atividade `OnCreate` método:
+Para habilitar o botão para **cima** em uma segunda atividade que usa `Toolbar` uma como sua barra de ação, `SetDisplayHomeAsUpEnabled` chame `SetHomeButtonEnabled` os métodos e no método da `OnCreate` segunda atividade:
 
 ```csharp
 SetActionBar (toolbar);
@@ -170,7 +170,7 @@ ActionBar.SetDisplayHomeAsUpEnabled (true);
 ActionBar.SetHomeButtonEnabled (true);
 ```
 
-O [dar suporte a barra de ferramentas v7](https://developer.xamarin.com/samples/monodroid/Supportv7/AppCompat/Toolbar/) código de exemplo demonstra o **backup** botão em ação. Este exemplo (que usa a biblioteca de AppCompat descrita a seguir) implementa uma segunda atividade que usa a barra de ferramentas **backup** botão Navegação hierárquica volta para a atividade anterior. Neste exemplo, o `DetailActivity` botão Início permite que o **backup** botão fazendo o seguinte `SupportActionBar` chamadas de método: 
+O exemplo de código de [barra de ferramentas v7 de suporte](https://docs.microsoft.com/samples/xamarin/monodroid-samples/supportv7-appcompat-toolbar) demonstra o botão **para cima** em ação. Este exemplo (que usa a biblioteca AppCompat descrita em Avançar) implementa uma segunda atividade que usa o botão de **cima** da barra de ferramentas para navegação hierárquica de volta para a atividade anterior. Neste exemplo, o `DetailActivity` botão página inicial habilita o botão **para cima** fazendo as seguintes `SupportActionBar` chamadas de método: 
 
 ```csharp
 SetSupportActionBar (toolbar);
@@ -179,15 +179,15 @@ SupportActionBar.SetDisplayHomeAsUpEnabled (true);
 SupportActionBar.SetHomeButtonEnabled (true);
 ```
 
-Quando o usuário navega `MainActivity` para `DetailActivity`, o `DetailActivity` exibe um **backup** botão (apontador seta para a esquerda), conforme mostrado na captura de tela:
+Quando o usuário navega `MainActivity` de para `DetailActivity`, o `DetailActivity` exibe um botão para **cima** (seta apontando para a esquerda), conforme mostrado na captura de tela:
 
-[![Captura de tela exemplo de uma seta à esquerda do botão Up na barra de ferramentas](adding-a-second-toolbar-images/05-up-button-sml.png)](adding-a-second-toolbar-images/05-up-button.png#lightbox)
+[![Exemplo de captura de tela de uma seta para a esquerda do botão para cima na barra de ferramentas](adding-a-second-toolbar-images/05-up-button-sml.png)](adding-a-second-toolbar-images/05-up-button.png#lightbox)
 
-Tocando isso **para cima** botão faz com que o aplicativo retornar ao `MainActivity`. Em um aplicativo mais complexo com vários níveis da hierarquia, tocar neste botão retornaria o usuário para o próximo nível mais alto no aplicativo em vez da tela anterior. 
+Tocar no botão **up** faz com que o aplicativo retorne `MainActivity`. Em um aplicativo mais complexo com vários níveis de hierarquia, tocar nesse botão retornaria o usuário para o próximo nível mais alto no aplicativo, e não para a tela anterior. 
 
 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Barra de ferramentas de pirulito (amostra)](https://developer.xamarin.com/samples/monodroid/android5.0/Toolbar/)
-- [Barra de ferramentas AppCompat (amostra)](https://developer.xamarin.com/samples/monodroid/Supportv7/AppCompat/Toolbar/)
+- [Barra de ferramentas pirulito (exemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android50-toolbar)
+- [Barra de ferramentas AppCompat (exemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/supportv7-appcompat-toolbar)

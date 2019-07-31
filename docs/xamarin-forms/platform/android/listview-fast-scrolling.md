@@ -1,24 +1,24 @@
 ---
-title: Fast de ListView, rolagem no Android
-description: Especificidades da plataforma permitem que você consumir funcionalidade só está disponível em uma plataforma específica, sem implementar renderizadores personalizados ou efeitos. Este artigo explica como utilizar o Android específicos da plataforma que habilita a rolagem rápida por meio de dados em um ListView.
+title: Rolagem rápida de ListView no Android
+description: Especificidades da plataforma permitem que você consumir funcionalidade só está disponível em uma plataforma específica, sem implementar renderizadores personalizados ou efeitos. Este artigo explica como consumir a plataforma Android específica que permite a rolagem rápida por meio de dados em um ListView.
 ms.prod: xamarin
 ms.assetid: 37D95A2D-74AC-488A-B903-2BDD799EAA5C
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2018
-ms.openlocfilehash: 6ae266f9309e32c79ec6028d737cfdcaaa85b0d4
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: ce51483da9599cf049cf005ae18b35d110aa325b
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65926573"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68649984"
 ---
-# <a name="listview-fast-scrolling-on-android"></a>Fast de ListView, rolagem no Android
+# <a name="listview-fast-scrolling-on-android"></a>Rolagem rápida de ListView no Android
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
-Este específicos da plataforma Android é usado para habilitar a rolagem rápida por meio de dados em um [ `ListView` ](xref:Xamarin.Forms.ListView). Ele é consumido em XAML, definindo o `ListView.IsFastScrollEnabled` anexado à propriedade um `boolean` valor:
+Essa plataforma do Android específica é usada para habilitar a rolagem rápida por meio de [`ListView`](xref:Xamarin.Forms.ListView)dados em um. Ele é consumido em XAML, definindo o `ListView.IsFastScrollEnabled` anexado à propriedade um `boolean` valor:
 
 ```xaml
 <ContentPage ...
@@ -60,7 +60,7 @@ O resultado é que rolagem rápida por meio de dados em um [ `ListView` ](xref:X
 
 ## <a name="related-links"></a>Links relacionados
 
-- [PlatformSpecifics (amostra)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+- [PlatformSpecifics (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [Criação de itens específicos à plataforma](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
-- [AndroidSpecific API](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific)
-- [AndroidSpecific.AppCompat API](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat)
+- [API AndroidSpecific](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific)
+- [API AndroidSpecific. AppCompat](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat)

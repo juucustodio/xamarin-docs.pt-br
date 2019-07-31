@@ -6,41 +6,41 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/06/2017
-ms.openlocfilehash: 9fcabc90875dda28ecdd5d94f1ca2f263ffe4886
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 0c4f7303d3620dcc2c829d732fe7a5f97f0e3883
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60954172"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68643768"
 ---
 # <a name="android-beam"></a>Beam do Android
 
-Beam do Android é uma tecnologia de (NFC comunicação) introduzida no Android 4.0 que permite que os aplicativos compartilhem informações por NFC quando nas proximidades.
+O feixe do Android é uma tecnologia NFC (comunicação a curta distância) introduzida no Android 4,0 que permite que os aplicativos compartilhem informações sobre o NFC quando estiverem próximos.
 
-[![Diagrama que ilustra dois dispositivos nas proximidades, compartilhamento de informações](android-beam-images/androidbeam.png)](android-beam-images/androidbeam.png#lightbox)
+[![Diagrama ilustrando dois dispositivos em fechar proximidades informações de compartilhamento](android-beam-images/androidbeam.png)](android-beam-images/androidbeam.png#lightbox)
 
-Beam do Android funciona enviando mensagens ao longo de NFC quando dois dispositivos estiverem no intervalo. Dispositivos cerca de 4cm uns dos outros podem compartilhar dados usando Beam do Android. Cria uma mensagem de uma atividade em um dispositivo e especifica uma atividade (ou atividades) que pode lidar com enviá-la. Quando a atividade especificada está em primeiro plano e os dispositivos estão no intervalo, Beam do Android enviará a mensagem para o segundo dispositivo. No dispositivo de recebimento, uma intenção é invocada que contém os dados da mensagem.
+O feixe do Android funciona enviando mensagens por meio de NFC quando dois dispositivos estão no intervalo. Os dispositivos sobre 4cm uns dos outros podem compartilhar dados usando o feixe do Android. Uma atividade em um dispositivo cria uma mensagem e especifica uma atividade (ou atividades) que pode lidar com o envio por push. Quando a atividade especificada estiver em primeiro plano e os dispositivos estiverem no intervalo, o feixe do Android enviará por push a mensagem para o segundo dispositivo. No dispositivo receptor, uma tentativa é invocada contendo os dados da mensagem.
 
-Android dá suporte a duas maneiras de mensagens de configuração com Beam do Android:
+O Android dá suporte a duas maneiras de definir mensagens com o feixe do Android:
 
--   `SetNdefPushMessage` -Antes Beam do Android é iniciado, um aplicativo pode chamar SetNdefPushMessage para especificar um NdefMessage para enviar por push por NFC e a atividade que está enviando por push. Esse mecanismo é melhor usado quando uma mensagem não é alterado enquanto um aplicativo está em uso.
+-   `SetNdefPushMessage`-Antes de o feixe do Android ser iniciado, um aplicativo pode chamar SetNdefPushMessage para especificar um NdefMessage a ser enviado por Push por meio de NFC e a atividade que o está enviando. Esse mecanismo é melhor usado quando uma mensagem não é alterada enquanto um aplicativo está em uso.
 
--   `SetNdefPushMessageCallback` -Quando Beam do Android é iniciado, um aplicativo pode manipular um retorno de chamada para criar um NdefMessage. Esse mecanismo permite a criação de mensagem deve ser atrasada até que os dispositivos estão no intervalo. Ele dá suporte a cenários em que a mensagem pode variar com base no que está acontecendo no aplicativo.
+-   `SetNdefPushMessageCallback`-Quando o feixe do Android é iniciado, um aplicativo pode manipular um retorno de chamada para criar um NdefMessage. Esse mecanismo permite que a criação de mensagens seja atrasada até que os dispositivos estejam no intervalo. Ele dá suporte a cenários em que a mensagem pode variar com base no que está acontecendo no aplicativo.
 
 
-Em ambos os casos, para enviar os dados com Beam do Android, um aplicativo envia uma `NdefMessage`, Empacotando os dados em vários `NdefRecords`. Vamos dar uma olhada nos pontos principais que devem ser abordadas antes que podemos disparar Beam do Android. Primeiro, trabalharemos com o estilo de retorno de chamada de criação de um `NdefMessage`.
+Em ambos os casos, para enviar dados com o transmissão do Android, um `NdefMessage`aplicativo envia um, empacotando `NdefRecords`os dados em vários. Vamos dar uma olhada nos principais pontos que devem ser resolvidos antes que possamos disparar o feixe do Android. Primeiro, trabalharemos com o estilo de retorno de chamada para `NdefMessage`criar um.
 
 
 ## <a name="creating-a-message"></a>Criando uma mensagem
 
-Podemos pode registrar retornos de chamada com um `NfcAdapter` na atividade de `OnCreate` método. Por exemplo, supondo que um `NfcAdapter` chamado `mNfcAdapter` é declarado como uma variável de classe na atividade, podemos escrever o código a seguir para criar o retorno de chamada que construirão a mensagem:
+Podemos registrar retornos de chamada com `NfcAdapter` um no método da `OnCreate` atividade. Por exemplo, supondo `NfcAdapter` que `mNfcAdapter` um nome seja declarado como uma variável de classe na atividade, podemos escrever o código a seguir para criar o retorno de chamada que construirá a mensagem:
 
 ```csharp
 mNfcAdapter = NfcAdapter.GetDefaultAdapter (this);
 mNfcAdapter.SetNdefPushMessageCallback (this, this);
 ```
 
-A atividade, que implementa `NfcAdapter.ICreateNdefMessageCallback`, é passado para o `SetNdefPushMessageCallback` método acima. Quando Beam do Android é iniciado, o sistema chamará `CreateNdefMessage`, na qual a atividade pode construir um `NdefMessage` conforme mostrado abaixo:
+A atividade, que implementa `NfcAdapter.ICreateNdefMessageCallback`, é passada para o `SetNdefPushMessageCallback` método acima. Quando o feixe do Android for iniciado, o sistema `CreateNdefMessage`chamará, do qual a atividade pode `NdefMessage` construir um conforme mostrado abaixo:
 
 ```csharp
 public NdefMessage CreateNdefMessage (NfcEvent evt)
@@ -66,23 +66,23 @@ public NdefRecord CreateMimeRecord (String mimeType, byte [] payload)
 ```
 
 
-## <a name="receiving-a-message"></a>Receber uma mensagem
+## <a name="receiving-a-message"></a>Recebendo uma mensagem
 
-No lado de recepção, o sistema invoca uma intenção com a `ActionNdefDiscovered` ação, do qual podemos pode extrair o NdefMessage da seguinte maneira:
+No lado do recebimento, o sistema invoca uma intenção com a `ActionNdefDiscovered` ação, na qual podemos extrair o NdefMessage da seguinte maneira:
 
 ```csharp
 IParcelable [] rawMsgs = intent.GetParcelableArrayExtra (NfcAdapter.ExtraNdefMessages);
 NdefMessage msg = (NdefMessage) rawMsgs [0];
 ```
 
-Para obter um exemplo de código completo que usa Beam do Android, mostrado em execução na captura de tela abaixo, consulte a [demonstração Beam do Android](https://developer.xamarin.com/samples/monodroid/AndroidBeamDemo/) na Galeria de exemplo.
+Para obter um exemplo de código completo que usa o feixe do Android, mostrado em execução na captura de tela abaixo, consulte a [demonstração do feixe do Android](https://docs.microsoft.com/samples/xamarin/monodroid-samples/androidbeamdemo) na Galeria de exemplos.
 
-[![Capturas de tela de exemplo da demonstração Beam do Android](android-beam-images/24.png)](android-beam-images/24.png#lightbox)
+[![Capturas de tela de exemplo da demonstração do feixe do Android](android-beam-images/24.png)](android-beam-images/24.png#lightbox)
 
 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Demonstração do Beam do Android (amostra)](https://developer.xamarin.com/samples/monodroid/AndroidBeamDemo/)
-- [Apresentando o Ice Cream Sandwich](http://www.android.com/about/ice-cream-sandwich/)
-- [Plataforma 4.0 Android](https://developer.android.com/sdk/android-4.0.html)
+- [Demonstração do feixe do Android (exemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/androidbeamdemo)
+- [Introdução ao sanduíche de sorvete](http://www.android.com/about/ice-cream-sandwich/)
+- [Plataforma Android 4,0](https://developer.android.com/sdk/android-4.0.html)

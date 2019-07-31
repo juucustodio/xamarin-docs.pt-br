@@ -7,16 +7,16 @@ ms.assetid: 26C25BB8-FBE8-4B77-B01D-16A163A16890
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/09/2017
-ms.openlocfilehash: c1e4a76a70dcac3414d384469f25bad7908ae77f
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: e2bf493a5d8a4197fbc59044edf126761b41cf8d
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61019926"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68649721"
 ---
 # <a name="pixels-and-device-independent-units"></a>Unidades independentes de dispositivo e pixels
 
-[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Explore as diferenças entre coordenadas de SkiaSharp e xamarin. Forms_
 
@@ -28,7 +28,7 @@ Se você tiver Programando no xamarin. Forms por algum tempo, você pode ter uma
 
 Os círculos *são* pequeno em comparação com tamanhos de xamarin. Forms. Por padrão, SkiaSharp desenha em unidades de pixels, enquanto o xamarin. Forms baseia as coordenadas e tamanhos em uma unidade independente de dispositivo estabelecida pela plataforma subjacente. (Para obter mais informações sobre o sistema de coordenadas do xamarin. Forms podem ser encontradas no [capítulo 5. Lidando com tamanhos](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter05.md) do livro *criação de aplicativos móveis com xamarin. Forms*.)
 
-A página na [ **SkewSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) programa intitulado **tamanho da superfície** usa saída de texto de SkiaSharp para mostrar o tamanho da superfície de exibição de três fontes diferentes:
+A página na [ **SkewSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) programa intitulado **tamanho da superfície** usa saída de texto de SkiaSharp para mostrar o tamanho da superfície de exibição de três fontes diferentes:
 
 - O xamarin. Forms normal [ `Width` ](xref:Xamarin.Forms.VisualElement.Width) e [ `Height` ](xref:Xamarin.Forms.VisualElement.Height) propriedades do `SKCanvasView` objeto.
 - O [ `CanvasSize` ](xref:SkiaSharp.Views.Forms.SKCanvasView.CanvasSize) propriedade o `SKCanvasView` objeto.
@@ -55,7 +55,7 @@ public SurfaceSizePage()
 public void DrawText (String text, Single x, Single y, SKPaint paint)
 ```
 
-Você especifica a cadeia de caracteres de texto, as coordenadas X e Y em que o texto deve iniciar e um `SKPaint` objeto. A coordenada X Especifica em que o lado esquerdo do texto é posicionado, mas tome cuidado com: A coordenada Y Especifica a posição do *linha de base* do texto. Se você já escreveu manualmente no papel pautado, a linha de base é a linha na qual caracteres sit e abaixo descendem quais descendentes (como aqueles no letras g, p, q e y).
+Você especifica a cadeia de caracteres de texto, as coordenadas X e Y em que o texto deve iniciar e um `SKPaint` objeto. A coordenada X especifica onde o lado esquerdo do texto está posicionado, mas observe: A coordenada Y especifica a posição da *linha de base* do texto. Se você já escreveu manualmente no papel pautado, a linha de base é a linha na qual caracteres sit e abaixo descendem quais descendentes (como aqueles no letras g, p, q e y).
 
 O `SKPaint` objeto permite que você especifique a cor do texto, a família de fontes e o tamanho do texto. Por padrão, o [ `TextSize` ](xref:SkiaSharp.SKPaint.TextSize) propriedade tem um valor de 12, que resulta em texto pequeno em alta resolução dispositivos como telefones. Em nada mais simples aplicativos, você também precisará algumas informações sobre o tamanho do texto que você está exibindo. O `SKPaint` classe define um [ `FontMetrics` ](xref:SkiaSharp.SKPaint.FontMetrics) propriedade e vários [ `MeasureText` ](xref:SkiaSharp.SKPaint.MeasureText(System.String)) métodos, mas para necessidades menos sofisticadas, o [ `FontSpacing` ](xref:SkiaSharp.SKPaint.FontSpacing) propriedade fornece um valor recomendado para linhas sucessivas de espaçamento de texto.
 
@@ -167,4 +167,4 @@ canvas.DrawOval(rect, paint);
 ## <a name="related-links"></a>Links relacionados
 
 - [APIs de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (amostra)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

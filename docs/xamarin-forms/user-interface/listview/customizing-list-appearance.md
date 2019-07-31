@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/13/2018
-ms.openlocfilehash: 270191890e8747ecad7d250fb0fe18ce253d3823
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 49bb3f901f2b1f8ed4ae26650cb0509aabfd2369
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61169795"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68647615"
 ---
 # <a name="customizing-listview-appearance"></a>Personalizando a aparência de ListView
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/Grouping)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-grouping)
 
-[`ListView`](xref:Xamarin.Forms.ListView) tem a capacidade de controlar a apresentação da lista, além de [ `ViewCell` ](xref:Xamarin.Forms.ViewCell) instâncias para cada linha na lista.
+[`ListView`](xref:Xamarin.Forms.ListView)o tem a capacidade de controlar a apresentação da lista, além das [`ViewCell`](xref:Xamarin.Forms.ViewCell) instâncias de cada linha da lista.
 
 <a name="Grouping" />
 
@@ -78,7 +78,7 @@ static PageTypeGroup()
 }
 ```
 
-No código acima, também podemos chamar `Add` nos elementos de `groups`, que são instâncias do tipo `PageTypeGroup`. Isso é possível porque `PageTypeGroup` herda de `List<PageModel>`. Este é um exemplo da lista de padrão de listas observado acima.
+No código acima, também podemos chamar `Add` os elementos de `groups`, que são instâncias do tipo `PageTypeGroup`. Isso é possível porque `PageTypeGroup` herda de `List<PageModel>`. Este é um exemplo da lista de padrão de listas observado acima.
 
 Aqui está o XAML para exibir a lista agrupada:
 
@@ -203,11 +203,11 @@ Para criar um cabeçalho personalizado e um rodapé, defina os modos de exibiç�
 
 ## <a name="scrollbar-visibility"></a>Visibilidade da barra de rolagem
 
-[`ListView`](xref:Xamarin.Forms.ListView) tem `HorizontalScrollBarVisibility` e `VerticalScrollBarVisibility` propriedades, o qual obtém ou definir um [ `ScrollBarVisibility` ](xref:Xamarin.Forms.ScrollBarVisibility) valor que representa quando a barra de rolagem horizontal ou vertical, está visível. Ambas as propriedades podem ser definidas com os seguintes valores:
+[`ListView`](xref:Xamarin.Forms.ListView)tem `HorizontalScrollBarVisibility` [`ScrollBarVisibility`](xref:Xamarin.Forms.ScrollBarVisibility) e `VerticalScrollBarVisibility` Propriedades, que Obtém ou define um valor que representa quando a barra de rolagem horizontal ou vertical é visível. Ambas as propriedades podem ser definidas com os seguintes valores:
 
-- [`Default`](xref:Xamarin.Forms.ScrollBarVisibility) indica o comportamento padrão de barra de rolagem para a plataforma e é o valor padrão para o `HorizontalScrollBarVisibility` e `VerticalScrollBarVisibility` propriedades.
-- [`Always`](xref:Xamarin.Forms.ScrollBarVisibility) indica que as barras de rolagem será visíveis, mesmo quando o conteúdo se ajusta no modo de exibição.
-- [`Never`](xref:Xamarin.Forms.ScrollBarVisibility) indica que as barras de rolagem não será visíveis, mesmo se o conteúdo não se encaixa no modo de exibição.
+- [`Default`](xref:Xamarin.Forms.ScrollBarVisibility)indica o comportamento da barra de rolagem padrão para a plataforma e é o valor padrão `HorizontalScrollBarVisibility` para `VerticalScrollBarVisibility` as propriedades e.
+- [`Always`](xref:Xamarin.Forms.ScrollBarVisibility)indica que as barras de rolagem estarão visíveis, mesmo quando o conteúdo couber na exibição.
+- [`Never`](xref:Xamarin.Forms.ScrollBarVisibility)indica que as barras de rolagem não estarão visíveis, mesmo se o conteúdo não couber na exibição.
 
 <a name="Row_Separators" />
 
@@ -342,8 +342,8 @@ Observe que há uma grande possibilidade de degradação do desempenho se esse r
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Agrupamento (amostra)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/Grouping)
-- [Exibição de renderizador personalizado (amostra)](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithListviewNative/)
-- [Redimensionamento de linhas dinâmicas (amostra)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/DynamicUnevenListCells/)
+- [Agrupamento (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-grouping)
+- [Exibição de renderizador personalizado (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithlistviewnative)
+- [Redimensionamento de linhas dinâmicas (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-dynamicunevenlistcells)
 - [Notas de versão 1.4](http://forums.xamarin.com/discussion/35451/xamarin-forms-1-4-0-released/)
 - [Notas de versão 1.3](http://forums.xamarin.com/discussion/29934/xamarin-forms-1-3-0-released/)

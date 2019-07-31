@@ -1,24 +1,24 @@
 ---
-title: Cor do Cursor de entrada no iOS
-description: Especificidades da plataforma permitem que você consumir funcionalidade só está disponível em uma plataforma específica, sem implementar renderizadores personalizados ou efeitos. Este artigo explica como utilizar a plataforma iOS-que define a cor do cursor de uma entrada específica.
+title: Cor do cursor de entrada no iOS
+description: Especificidades da plataforma permitem que você consumir funcionalidade só está disponível em uma plataforma específica, sem implementar renderizadores personalizados ou efeitos. Este artigo explica como consumir a plataforma específica do iOS que define a cor do cursor de uma entrada.
 ms.prod: xamarin
 ms.assetid: 867D70BA-53F9-4434-8094-85D71DCECC2D
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: 6d075f782778313fafff3f26760152a1efbd84c8
-ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
+ms.openlocfilehash: ff88302755f1c1947591d90ab3373dae7e7db8ec
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65971029"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656689"
 ---
-# <a name="entry-cursor-color-on-ios"></a>Cor do Cursor de entrada no iOS
+# <a name="entry-cursor-color-on-ios"></a>Cor do cursor de entrada no iOS
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
-Este específicos da plataforma iOS define a cor do cursor de um [ `Entry` ](xref:Xamarin.Forms.Entry) como uma cor especificada. Ele é consumido em XAML, definindo o [ `Entry.CursorColor` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.Entry.CursorColorProperty) propriedade associável a uma [ `Color` ](xref:Xamarin.Forms.Color):
+Essa plataforma do IOS específica define a cor do cursor de [`Entry`](xref:Xamarin.Forms.Entry) um para uma cor especificada. Ele é consumido em XAML, definindo o [ `Entry.CursorColor` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.Entry.CursorColorProperty) propriedade associável a uma [ `Color` ](xref:Xamarin.Forms.Color):
 
 ```xaml
 <ContentPage ...
@@ -48,6 +48,6 @@ O resultado é que a cor do cursor em uma [ `Entry` ](xref:Xamarin.Forms.Entry) 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [PlatformSpecifics (amostra)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+- [PlatformSpecifics (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [Criação de itens específicos à plataforma](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
-- [iOSSpecific API](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)
+- [API iOSSpecific](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)

@@ -1,24 +1,24 @@
 ---
-title: Sombras ImageButton no Android
-description: Especificidades da plataforma permitem que você consumir funcionalidade só está disponível em uma plataforma específica, sem implementar renderizadores personalizados ou efeitos. Este artigo explica como utilizar o Android específicos da plataforma que permite uma sombra em um ImageButton.
+title: Sombras suspensas de ImageButton no Android
+description: Especificidades da plataforma permitem que você consumir funcionalidade só está disponível em uma plataforma específica, sem implementar renderizadores personalizados ou efeitos. Este artigo explica como consumir a plataforma Android específica que habilita uma sombra em um ImageButton.
 ms.prod: xamarin
 ms.assetid: D3604D87-9F9F-4FE2-8B10-DF3B143C0734
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2018
-ms.openlocfilehash: ba666d2474934b0cd4349e607329433ae1988b47
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: 567216171dd289e849ee0164452e4b876953f2a3
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65926809"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68653592"
 ---
-# <a name="imagebutton-drop-shadows-on-android"></a>Sombras ImageButton no Android
+# <a name="imagebutton-drop-shadows-on-android"></a>Sombras suspensas de ImageButton no Android
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
-Este específicos da plataforma Android é usado para habilitar uma sombra em um `ImageButton`. Ele é consumido em XAML, definindo o `ImageButton.IsShadowEnabled` para a propriedade associável `true`, junto com um número opcional associável propriedades adicionais que controlam a sombra:
+Esse recurso específico da plataforma Android é usado para habilitar uma sombra em um `ImageButton`. Ele é consumido em XAML, definindo o `ImageButton.IsShadowEnabled` para a propriedade associável `true`, junto com um número opcional associável propriedades adicionais que controlam a sombra:
 
 ```xaml
 <ContentPage ...
@@ -77,7 +77,7 @@ O resultado é que uma sombra pode ser habilitada em um `ImageButton`:
 
 ## <a name="related-links"></a>Links relacionados
 
-- [PlatformSpecifics (amostra)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+- [PlatformSpecifics (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [Criação de itens específicos à plataforma](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
-- [AndroidSpecific API](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific)
-- [AndroidSpecific.AppCompat API](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat)
+- [API AndroidSpecific](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific)
+- [API AndroidSpecific. AppCompat](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat)

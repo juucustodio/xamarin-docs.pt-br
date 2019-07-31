@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/30/2018
-ms.openlocfilehash: e53f6dce47dd7db60267d21c8d816ece554dc46c
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 9855255464b32b99d78d7a1cdb24acce22d01648
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61319888"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68654754"
 ---
 # <a name="listview-data-sources"></a>Fontes de dados de ListView
 
-[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/SwitchEntryTwoBinding)
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-switchentrytwobinding)
 
 Um [ `ListView` ](xref:Xamarin.Forms.ListView) é usado para exibir listas de dados. Aprenderemos sobre preenchendo um ListView com dados e como podemos fazer a ligação para o item selecionado.
 
@@ -58,10 +58,6 @@ listView.ItemsSource = new string[]
   "monomodal",
   "mononucleosis"
 };
-
-//monochrome will not appear in the list because it was added
-//after the list was populated.
-listView.ItemsSource.Add("monochrome");
 ```
 
 ![](data-and-databinding-images/itemssource-simple.png "ListView exibindo lista de cadeias de caracteres")
@@ -88,7 +84,7 @@ Associação de dados funciona mantendo os objetos sincronizados como alteram se
 Para obter mais informações sobre associação de dados, consulte [Noções básicas de vinculação de dados](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md) que é a parte quatro da [série de artigos de Noções básicas de XAML do xamarin. Forms](~/xamarin-forms/xaml/xaml-basics/index.md).
 
 ### <a name="binding-cells"></a>Células de associação
-Propriedades de células (e seus filhos de células) podem ser associadas às propriedades de objetos no `ItemsSource`. Por exemplo, um ListView pode ser usado para apresentar uma lista de funcionários.
+Propriedades de células (e seus filhos de células) podem ser associadas às propriedades de objetos no `ItemsSource`. Por exemplo, um `ListView` pode ser usado para apresentar uma lista de funcionários.
 
 A classe do funcionário:
 
@@ -99,10 +95,12 @@ public class Employee
 }
 ```
 
-`ObservableCollection<Employee>` é criado e definido como o `ListView`do `ItemsSource`:
+Um `ObservableCollection<Employee>` é criado e definido `ListView`como `ItemsSource`:
 
 ```csharp
 ObservableCollection<Employee> employees = new ObservableCollection<Employee>();
+public ObservableCollection<Employee> Employees { get { return employees; }}
+
 public EmployeeListPage()
 {
   //defined in XAML to follow
@@ -131,11 +129,12 @@ O trecho a seguir demonstra um `ListView` associado a uma lista de funcionários
 ```xaml
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-xmlns:constants="clr-namespace:XamarinFormsSample;assembly=XamarinFormsXamlSample"
-x:Class="XamarinFormsXamlSample.Views.EmployeeListPage"
-Title="Employee List">
-  <ListView x:Name="EmployeeView">
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:constants="clr-namespace:XamarinFormsSample;assembly=XamarinFormsXamlSample"
+             x:Class="XamarinFormsXamlSample.Views.EmployeeListPage"
+             Title="Employee List">
+  <ListView x:Name="EmployeeView"
+            ItemsSource="{Binding Employees}">
     <ListView.ItemTemplate>
       <DataTemplate>
         <TextCell Text="{Binding DisplayName}" />
@@ -145,11 +144,7 @@ Title="Employee List">
 </ContentPage>
 ```
 
-Observe que a associação foi configurada no código para manter a simplicidade, embora ele foi vinculado em XAML.
-
-O bit anterior de XAML define uma `ContentPage` que contém um `ListView`. Fonte de dados das `ListView` é definido por meio de `ItemsSource` atributo. O layout de cada linha na `ItemsSource`é definido dentro de `ListView.ItemTemplate` elemento.
-
-Esse é o resultado:
+Este exemplo de XAML define `ContentPage` um que contém `ListView`um. Fonte de dados das `ListView` é definido por meio de `ItemsSource` atributo. O layout de cada linha no `ItemsSource` é definido dentro do `ListView.ItemTemplate` elemento. Isso resulta nas seguintes capturas de tela:
 
 ![](data-and-databinding-images/bound-data.png "Usando a associação de dados de ListView")
 
@@ -169,4 +164,4 @@ Supondo `listView`do `ItemsSource` é uma lista de cadeias de caracteres `SomeLa
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Associação bidirecional (amostra)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/SwitchEntryTwoBinding)
+- [Associação bidirecional (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-switchentrytwobinding)

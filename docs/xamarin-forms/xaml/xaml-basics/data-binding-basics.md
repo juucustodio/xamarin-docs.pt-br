@@ -7,22 +7,22 @@ ms.assetid: 342288C3-BB4C-4924-B178-72E112D777BA
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017
-ms.openlocfilehash: 6d8ed5e2ec4707af2b61e299ee8274402f3a88a4
-ms.sourcegitcommit: e45f0cd6d7d4a77dba5ecaad4d7894025005a2dc
+ms.openlocfilehash: f5c5f0449962dec45a521112b2de92cddefe453f
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67309528"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68655249"
 ---
 # <a name="part-4-data-binding-basics"></a>Parte 4. Noções básicas de vinculação de dados
 
-[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
 
 _Associações de dados permitem que as propriedades de dois objetos a serem vinculadas para que a alteração de uma causa uma alteração no outro. Essa é uma ferramenta muito valiosa, e enquanto as associações de dados podem ser definidas inteiramente no código, XAML fornece atalhos e conveniência. Consequentemente, uma das extensões de marcação mais importantes no xamarin. Forms é associação._
 
 ## <a name="data-bindings"></a>Associações de dados
 
-Associações de dados se conectar a propriedades de dois objetos, chamados de *fonte* e o *destino*. No código, são necessárias duas etapas: O `BindingContext` propriedade do objeto de destino deve ser definida para o objeto de origem e o `SetBinding` método (geralmente usado em conjunto com o `Binding` classe) deve ser chamado no objeto de destino para associar uma propriedade desse objeto para uma propriedade da fonte objeto.
+Associações de dados se conectar a propriedades de dois objetos, chamados de *fonte* e o *destino*. No código, são necessárias duas etapas: A `BindingContext` Propriedade do objeto de destino deve ser definida como o objeto de origem e o `SetBinding` método (geralmente usado em conjunto com a `Binding` classe) deve ser chamado no objeto de destino para associar uma propriedade desse objeto a uma propriedade da origem objeto.
 
 A propriedade de destino deve ser uma propriedade vinculável, o que significa que o objeto de destino deve derivar de `BindableObject`. A documentação do xamarin. Forms online indica quais propriedades são propriedades associáveis. Uma propriedade de `Label` , como `Text` associado com a propriedade associável `TextProperty`.
 
@@ -114,11 +114,11 @@ A solução para esse e outros problemas envolve a `Mode` propriedade, que é de
 - `OneWay` — valores que são transferidos da origem ao destino
 - `OneWayToSource` — valores que são transferidos do destino para a fonte
 - `TwoWay` — valores são transferidos ambas as direções entre origem e destino
-- `OneTime` — dados vão da fonte para o destino, mas somente quando o `BindingContext` alterações
+- `OneTime`— os dados vão da origem para o destino, mas somente `BindingContext` quando as alterações
 
 O programa a seguir demonstra um uso comum de `OneWayToSource` e `TwoWay` modos de ligação. Quatro `Slider` modos de exibição destinam-se ao controle de `Scale`, `Rotate`, `RotateX`, e `RotateY` propriedades de um `Label`. A princípio, parece como se essas quatro propriedades do `Label` deve ser destinos de vinculação de dados, porque cada um está sendo definida um `Slider`. No entanto, o `BindingContext` de `Label` pode ser apenas um objeto, e há quatro controles deslizantes diferentes.
 
-Por esse motivo, todas as associações são definidas aparentemente com versões anteriores maneiras: O `BindingContext` de cada um dos quatro controles deslizantes é definido como o `Label`, e as associações são definidas no `Value` propriedades dos controles deslizantes. Usando o `OneWayToSource` e `TwoWay` modos, essas `Value` propriedades podem definir as propriedades da fonte, que são os `Scale`, `Rotate`, `RotateX`, e `RotateY` propriedades do `Label`:
+Por esse motivo, todas as associações são definidas de maneira aparentemente retroativa: O `BindingContext` de cada um dos quatro controles deslizantes é definido `Label`como e as associações são definidas nas `Value` propriedades dos controles deslizantes. Usando o `OneWayToSource` e `TwoWay` modos, essas `Value` propriedades podem definir as propriedades da fonte, que são os `Scale`, `Rotate`, `RotateX`, e `RotateY` propriedades do `Label`:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -255,7 +255,7 @@ Para definir um modelo para os itens, você desejará separar a `ItemTemplate` a
 ```
 
 > [!NOTE]
-> A origem da associação para células e filhos de células, é o `ListView.ItemsSource` coleção.
+> A fonte de associação para células e filhos de células é a `ListView.ItemsSource` coleção.
 
 O `Label` é definido como o `View` propriedade do `ViewCell`. (O `ViewCell.View` marcas não são necessárias porque o `View` é a propriedade de conteúdo do `ViewCell`.) Essa marcação exibe a `FriendlyName` propriedade de cada `NamedColor` objeto:
 
@@ -410,7 +410,7 @@ Associações de dados fornecem um mecanismo poderoso para vincular as proprieda
 
 ## <a name="related-links"></a>Links relacionados
 
-- [XamlSamples](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
+- [XamlSamples](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
 - [Parte 1. Introdução ao XAML (amostra)](~/xamarin-forms/xaml/xaml-basics/get-started-with-xaml.md)
 - [Parte 2. Sintaxe essencial de XAML (amostra)](~/xamarin-forms/xaml/xaml-basics/essential-xaml-syntax.md)
 - [Parte 3. Extensões de marcação de XAML (amostra)](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)

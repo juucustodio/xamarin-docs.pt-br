@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/29/2017
-ms.openlocfilehash: 500cb497d8c0d8c304cc9501aa64b1ce90c7ecba
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 5aad72de5d894a83d734cd53fce3ac060125d740
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68509429"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656939"
 ---
 # <a name="additional-ios-10-frameworks-changes"></a>Alterações adicionais em estruturas do iOS 10
 
@@ -122,7 +122,7 @@ Consulte nossa [introdução à](~/ios/platform/homekit.md) documentação do ho
 
 Os aprimoramentos a seguir foram feitos na estrutura de metal no iOS 10:
 
-- os aplicativos e jogos 3D agora podem  usar o mosaico para renderizar com eficiência cenas e geometria complexas por meio da GPU.
+- os aplicativos e jogos 3D agora podem usar o mosaico para renderizar com eficiência cenas e geometria complexas por meio da GPU.
 - Forneça um controle refinado de alocação de recursos para otimizar o desempenho de aplicativos baseados em metal usando heaps de recursos e destinos de renderização sem memória.
 - Use a especialização de função para criar uma coleção altamente otimizada de funções de combinação de material e leve para uma cena.
 
@@ -185,7 +185,7 @@ Os aprimoramentos a seguir foram feitos no controle ScrollView no iOS 10,3:
     - `Automatic`-A exibição do índice é controlada pelo sistema operacional.
     - `AlwaysHidden`-A exibição do índice está sempre oculta.
 
-Consulte o [exemplo de iOSTenThree](https://developer.xamarin.com/samples/monotouch/iOS10/iOSTenThree) para uso.
+Consulte o [exemplo de iOSTenThree](https://docs.microsoft.com/samples/xamarin/ios-samples/ios10-iostenthree) para uso.
 
 ## <a name="uikit-enhancements"></a>Aprimoramentos do UIKit
 
@@ -214,5 +214,5 @@ Os aprimoramentos a seguir foram feitos na estrutura WebKit no iOS 10:
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Amostras do iOS 10](https://developer.xamarin.com/samples/ios/iOS10/)
+- [Amostras do iOS 10](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS10)
 - [O que há de novo no iOS 10](https://developer.apple.com/library/prerelease/content/releasenotes/General/WhatsNewIniOS/Articles/iOS10.html#//apple_ref/doc/uid/TP40017084-SW1)

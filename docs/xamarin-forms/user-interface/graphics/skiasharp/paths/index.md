@@ -7,16 +7,16 @@ ms.technology: xamarin-skiasharp
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: b266ef96513ac392afa83bc672d41db7cfe3ce16
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 14b92bb576679dee3408c5805c6b698addd9bd8a
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61278656"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68657451"
 ---
 # <a name="skiasharp-lines-and-paths"></a>Caminhos e linhas de SkiaSharp
 
-[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Usar SkiaSharp para desenhar linhas e elementos gráficos caminhos_
 
@@ -24,7 +24,7 @@ O [seção anterior](~/xamarin-forms/user-interface/graphics/skiasharp/basics/in
 
 O caminho de gráficos é a abordagem mais generalizada para desenho de linhas e curvas em SkiaSharp. Esta seção aborda o uso um [ `SKPath` ](xref:SkiaSharp.SKPath) objeto para desenhar linhas retas e usar uma coleção de linhas retas pequenas (chamado um *polilinha*) para desenhar curvas que você pode definir de forma algorítmica. Uma seção posterior sobre [ **SkiaSharp curvas e caminhos** ](../curves/index.md) discute os vários tipos de curvas com suporte pelo `SKPath`.
 
-Todos os programas de exemplo nesta seção são exibidos sob o título **linhas e caminhos** na home page do [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) programa e, no [ **Caminhos** ](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Paths) pasta da solução.
+Todos os programas de exemplo nesta seção são exibidos sob o título **linhas e caminhos** na home page do [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) programa e, no [ **Caminhos** ](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Paths) pasta da solução.
 
 ## <a name="lines-and-stroke-capslinesmd"></a>[limites de linha e de traço](lines.md)
 
@@ -54,4 +54,4 @@ Use os dedos para pintar na tela.
 ## <a name="related-links"></a>Links relacionados
 
 - [APIs de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (amostra)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

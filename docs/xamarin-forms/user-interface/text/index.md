@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/26/2018
-ms.openlocfilehash: 8754f6573b00334fd228b1c9bd094cd91565976c
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 3e30e3d4ea3bf0ec58aff842ffee68885a47d44a
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61363064"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656186"
 ---
 # <a name="text-in-xamarinforms"></a>Texto no xamarin. Forms
 
-[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Text)
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
 
 _Usando o xamarin. Forms para inserir ou exibir texto._
 
@@ -66,7 +66,7 @@ Consulte a [Editor](editor.md) artigo para obter mais informações.
 
 ## <a name="fontsfontsmd"></a>[Fontes](fonts.md)
 
-Muitos controles oferecem suporte a configurações de fonte diferente usando as fontes internas em cada plataforma, ou fontes personalizadas, incluídas com o seu aplicativo. Consulte a [fontes](fonts.md) do artigo para obter mais informações.
+Muitos controles dão suporte a diferentes configurações de fonte usando as fontes internas em cada plataforma ou fontes personalizadas incluídas em seu aplicativo. Consulte a [fontes](fonts.md) do artigo para obter mais informações.
 
 <a name="Styles" />
 
@@ -76,4 +76,4 @@ Consulte a [trabalhar com estilos](~/xamarin-forms/user-interface/styles/index.m
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Texto (exemplo)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Text)
+- [Texto (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)

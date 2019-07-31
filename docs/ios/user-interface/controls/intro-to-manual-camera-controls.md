@@ -1,68 +1,68 @@
 ---
-title: Controles de câmera manuais no xamarin. IOS
-description: Este documento descreve como o framework do iOS AVFoundation pode ser usado com xamarin. IOS para habilitar controles de câmera manuais. Controles de câmera manuais permitem que um usuário de configurações de exposição, balanço de branco e o foco do controle.
+title: Controles de câmera manuais no Xamarin. iOS
+description: Este documento descreve como a estrutura AVFoundation do iOS pode ser usada com o Xamarin. iOS para habilitar controles de câmera manuais. Os controles de câmera manual permitem que um usuário controle o foco, o equilíbrio de branco e as configurações de exposição.
 ms.prod: xamarin
 ms.assetid: 56340225-5F3C-4BFC-9A79-61496D7FE5B5
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: c61b3fee9009afb86ccd3fd0e16d7812a8e90feb
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 5230294dcacf6677e145dd8803d65841b3e22618
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61384056"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68655428"
 ---
-# <a name="manual-camera-controls-in-xamarinios"></a>Controles de câmera manuais no xamarin. IOS
+# <a name="manual-camera-controls-in-xamarinios"></a>Controles de câmera manuais no Xamarin. iOS
 
-Os controles de câmera manuais, fornecida pelo `AVFoundation Framework` no iOS 8, que um aplicativo móvel para assumir controle total sobre a câmera de um dispositivo iOS. Esse nível refinado de controle pode ser usado para criar aplicativos de câmera de nível profissional e forneça composições artista ao ajustar os parâmetros da câmera ao mesmo tempo, uma imagem ou um vídeo ainda.
+Os controles de câmera manual, fornecidos pelo `AVFoundation Framework` no Ios 8, permitem que um aplicativo móvel assuma o controle total sobre a câmera de um dispositivo IOS. Esse nível refinado de controle pode ser usado para criar aplicativos de câmera de nível profissional e fornecer composições de artista ajustando os parâmetros da câmera ao mesmo tempo em que faz uma imagem ou um vídeo ainda.
 
-Esses controles também podem ser úteis ao desenvolver aplicativos científicos ou industriais, onde os resultados são menos destinados a correção ou a beleza da imagem e se destinam mais a realçar algum recurso ou elemento da imagem que está sendo executada.
+Esses controles também podem ser úteis ao desenvolver aplicativos científicos ou industriais, onde os resultados são menos direcionados para a exatidão ou a beleza da imagem, e são voltados para realçar algum recurso ou elemento da imagem que está sendo executada.
 
 ## <a name="avfoundation-capture-objects"></a>Objetos de captura AVFoundation
 
-Se colocar o vídeo ou imagens usando a câmera em um dispositivo iOS, o processo usado para capturar essas imagens é basicamente o mesmo. Isso é verdadeiro para aplicativos que usam os controles de câmera padrão automatizada ou aqueles que tiram proveito dos novos controles de câmera manuais:
+Seja ao tirar vídeo ou imagens que usam a câmera em um dispositivo iOS, o processo usado para capturar essas imagens é basicamente o mesmo. Isso é verdadeiro para aplicativos que usam os controles de câmera automatizados padrão ou aqueles que aproveitam os novos controles de câmera manual:
 
- [![](intro-to-manual-camera-controls-images/image1.png "Visão geral de objetos da captura AVFoundation")](intro-to-manual-camera-controls-images/image1.png#lightbox)
+ [![](intro-to-manual-camera-controls-images/image1.png "Visão geral dos objetos de captura do AVFoundation")](intro-to-manual-camera-controls-images/image1.png#lightbox)
 
-Entrada provém de um `AVCaptureDeviceInput` em um `AVCaptureSession` por meio de um `AVCaptureConnection`. O resultado é a saída como uma imagem estática ou como um fluxo de vídeo. O processo inteiro é controlado por um `AVCaptureDevice`.
+A entrada é retirada de `AVCaptureDeviceInput` um em `AVCaptureSession` um por meio de `AVCaptureConnection`um. O resultado é a saída como uma imagem ainda ou como um fluxo de vídeo. Todo o processo é controlado por um `AVCaptureDevice`.
 
-## <a name="manual-controls-provided"></a>Manuais controles fornecidos
+## <a name="manual-controls-provided"></a>Controles manuais fornecidos
 
-Usando as novas APIs fornecidas pelo iOS 8, o aplicativo pode assumir o controle dos recursos de câmera a seguir:
+Usando as novas APIs fornecidas pelo iOS 8, o aplicativo pode assumir o controle dos seguintes recursos de câmera:
 
--  **Foco manual** –, permitindo que o usuário final assumir o controle do foco diretamente, um aplicativo pode fornecer mais controle sobre a imagem extraída.
--  **Exposição manual** – fornecendo o controle manual sobre a exposição, um aplicativo pode fornecer mais liberdade para usuários e permitir que eles tenham uma aparência estilizada.
--  **Saldo de branco manual** – saldo em branco é usado para ajustar a cor de uma imagem — muitas vezes para que ela fique realista. Fontes de luz diferentes têm temperaturas de cor diferente e as configurações da câmera usadas para capturar uma imagem é ajustada para compensar essas diferenças. Novamente, permitindo que o usuário controle a proporção de branco, os usuários podem fazer ajustes que não podem ser feitos automaticamente.
+-  **Foco manual** – ao permitir que o usuário final assuma o controle do foco diretamente, um aplicativo pode fornecer mais controle sobre a imagem obtida.
+-  **Exposição manual** – ao fornecer controle manual sobre a exposição, um aplicativo pode fornecer mais liberdade aos usuários e permitir que eles atinjam uma aparência estilizada.
+-  **Balanço de branco manual** – o balanço de branco é usado para ajustar a cor em uma imagem — geralmente para torná-la realista. Fontes de luz diferentes têm temperaturas de cor diferentes e as configurações de câmera usadas para capturar uma imagem são ajustadas para compensar essas diferenças. Novamente, ao permitir que o usuário controle o equilíbrio de branco, os usuários podem fazer ajustes que não podem ser feitos automaticamente.
 
 
-iOS 8 fornece extensões e aprimoramentos para APIs para fornecer esse controle refinado sobre a imagem existentes do iOS o processo de captura.
+o iOS 8 fornece extensões e aprimoramentos às APIs do iOS existentes para fornecer esse controle refinado sobre o processo de captura de imagem.
 
 ## <a name="bracketed-capture"></a>Captura entre colchetes
 
-A captura entre colchetes é baseada nas configurações dos controles de câmera manuais apresentadas acima e permite que o aplicativo capturar um momento específico, em uma variedade de maneiras diferentes.
+A captura entre colchetes é baseada nas configurações dos controles de câmera manuais apresentados acima e permite que o aplicativo Capture um momento no tempo, de várias maneiras diferentes.
 
-Em poucas palavras, entre colchetes captura é uma intermitência de ainda imagens tiradas com uma variedade de configurações de imagem para a imagem.
+Simplesmente declarado, a captura entre colchetes é uma intermitência de imagens ainda realizadas com uma variedade de configurações de imagem para imagem.
 
 ## <a name="requirements"></a>Requisitos
 
-A seguir é necessários para concluir as etapas apresentadas neste artigo:
+Os itens a seguir são necessários para concluir as etapas apresentadas neste artigo:
 
--  **Xcode 7 + e iOS 8 ou mais recente** – do Apple Xcode 7 e iOS 8 ou APIs mais recentes precisarão ser instalado e configurado no computador do desenvolvedor.
--  **O Visual Studio para Mac** – a versão mais recente do Visual Studio para Mac deve ser instalada e configurada no dispositivo do usuário.
--  **iOS 8 dispositivo** – um dispositivo iOS executando a versão mais recente do iOS 8. Recursos de câmera não podem ser testados no simulador de iOS.
+-  **Xcode 7 + e Ios 8 ou mais recente** – as APIs do Xcode 7 e Ios 8 ou mais recentes da Apple precisam ser instaladas e configuradas no computador do desenvolvedor.
+-  **Visual Studio para Mac** – a versão mais recente do Visual Studio para Mac deve ser instalada e configurada no dispositivo do usuário.
+-  **dispositivo IOS 8** – um dispositivo IOS executando a versão mais recente do IOS 8. Os recursos de câmera não podem ser testados no simulador de iOS.
 
 
-## <a name="general-av-capture-setup"></a>Captura de AV geral de instalação
+## <a name="general-av-capture-setup"></a>Configuração geral da captura de AV
 
-Quando a gravação de vídeo em um dispositivo iOS, há alguns códigos de configuração geral que é sempre necessário. Esta seção abordará a configuração mínima necessária para gravar vídeo de câmera do dispositivo iOS e exibir esse vídeo em tempo real em um `UIImageView`.
+Ao gravar vídeo em um dispositivo iOS, há algum código de instalação geral que é sempre necessário. Esta seção abordará a configuração mínima necessária para gravar vídeo da câmera do dispositivo iOS e exibir esse vídeo em tempo real em um `UIImageView`.
 
-### <a name="output-sample-buffer-delegate"></a>Delegado de Buffer de exemplo de saída
+### <a name="output-sample-buffer-delegate"></a>Delegar exemplo de buffer de saída
 
-Uma das primeiras coisas que precisam estarão um delegado para monitorar o buffer de saída de exemplo e exibir uma imagem capturada no buffer para um `UIImageView` no aplicativo de interface do usuário.
+Uma das primeiras coisas necessárias será um delegado para monitorar o buffer de saída de exemplo e exibir uma imagem capturada do buffer para um `UIImageView` na interface do usuário do aplicativo.
 
-A seguinte rotina monitorará o Buffer de exemplo e atualizar a interface do usuário:
+A rotina a seguir monitorará o buffer de exemplo e atualizará a interface do usuário:
 
 ```csharp
 using System;
@@ -161,17 +161,17 @@ namespace ManualCameraControls
 }
 ```
 
-Com essa rotina em vigor, o `AppDelegate` podem ser modificados para abrir uma sessão de captura de AV para gravar um feed de vídeo ao vivo.
+Com essa rotina em vigor, o `AppDelegate` pode ser modificado para abrir uma sessão de captura de AV para registrar um feed de vídeo ao vivo.
 
-### <a name="creating-an-av-capture-session"></a>Criar uma sessão de captura de AV
+### <a name="creating-an-av-capture-session"></a>Criando uma sessão de captura do AV
 
-A sessão de captura de AV é usada para controlar a gravação de vídeo ao vivo da câmera do dispositivo iOS e é necessário para obter um vídeo em um aplicativo iOS. Desde o exemplo `ManualCameraControl` aplicativo de exemplo está usando a sessão de captura em vários lugares diferentes, ele será configurado no `AppDelegate` e disponibilizado para todo o aplicativo.
+A sessão de captura de AV é usada para controlar a gravação de vídeo ao vivo da câmera do dispositivo iOS e é necessária para obter o vídeo em um aplicativo iOS. Como o aplicativo `ManualCameraControl` de exemplo de exemplo está usando a sessão de captura em vários locais diferentes, ele será configurado `AppDelegate` no e disponibilizado para todo o aplicativo.
 
-Faça o seguinte para modificar o aplicativo `AppDelegate` e adicione o código necessário:
+Faça o seguinte para modificar o aplicativo `AppDelegate` e adicionar o código necessário:
 
 
-1. Clique duas vezes o `AppDelegate.cs` arquivo no Gerenciador de soluções para abri-lo para edição.
-1. Adicione o seguinte usando instruções na parte superior do arquivo:
+1. Clique duas vezes no `AppDelegate.cs` arquivo no Gerenciador de soluções para abri-lo para edição.
+1. Adicione as seguintes instruções using à parte superior do arquivo:
     
     ```
     using System;
@@ -187,7 +187,7 @@ Faça o seguinte para modificar o aplicativo `AppDelegate` e adicione o código 
     using CoreFoundation;
     ```
 
-1. Adicione as seguintes variáveis particulares e propriedades computadas para o `AppDelegate` classe:
+1. Adicione as seguintes variáveis particulares e propriedades computadas à `AppDelegate` classe:
     
     ```
     #region Private Variables
@@ -205,7 +205,7 @@ Faça o seguinte para modificar o aplicativo `AppDelegate` e adicione o código 
     #endregion
     ```
   
-1. Substitua o método concluído e altere-a para:
+1. Substitua o método concluído e altere-o para:
     
     ```
     public override void FinishedLaunching (UIApplication application)
@@ -270,79 +270,79 @@ Faça o seguinte para modificar o aplicativo `AppDelegate` e adicione o código 
 1. Salve as alterações no arquivo.
 
 
-Com esse código em vigor, os controles de câmera manuais podem ser facilmente implementados para experimentação e teste.
+Com esse código em vigor, os controles manuais da câmera podem ser facilmente implementados para experimentação e teste.
 
 ## <a name="manual-focus"></a>Foco manual
 
-Ao permitir que o usuário final entrem em contato diretamente com controles do foco, um aplicativo pode fornecer mais artístico controle sobre a imagem extraída.
+Ao permitir que o usuário final assuma os controles do foco diretamente, um aplicativo pode fornecer mais controle artístico sobre a imagem feita.
 
-Por exemplo, fotógrafa profissional pode suavizar o foco de uma imagem para obter um [Bokeh efeito](https://en.wikipedia.org/wiki/Bokeh):
+Por exemplo, um fotógrafo profissional pode suavizar o foco de uma imagem para obter um [efeito bokeh](https://en.wikipedia.org/wiki/Bokeh):
 
-[![](intro-to-manual-camera-controls-images/image2.png "Um efeito Bokeh")](intro-to-manual-camera-controls-images/image2.png#lightbox)
+[![](intro-to-manual-camera-controls-images/image2.png "Um efeito bokeh")](intro-to-manual-camera-controls-images/image2.png#lightbox)
 
-Ou, criar uma [foco Pull efeito](http://www.mediacollege.com/video/camera/focus/pull.html), tais como:
+Ou crie um [efeito de pull de foco](http://www.mediacollege.com/video/camera/focus/pull.html), como:
 
-[![](intro-to-manual-camera-controls-images/image3.png "O efeito de Pull de foco")](intro-to-manual-camera-controls-images/image3.png#lightbox)
+[![](intro-to-manual-camera-controls-images/image3.png "O efeito de pull de foco")](intro-to-manual-camera-controls-images/image3.png#lightbox)
 
-Para cientistas ou um gravador de aplicativos médicos, o aplicativo talvez queira mover a lente em torno de experimentos de forma programática. De qualquer forma, a nova API permite que o usuário final ou o aplicativo para assumir controle foco no momento em que a imagem seja colocado.
+Para cientistas ou um escritor de aplicativos médicos, o aplicativo pode querer mover a lente de forma programática para os experimentos. De qualquer forma, a nova API permite que o usuário final ou o aplicativo assuma o controle do foco no momento em que a imagem é executada.
 
-### <a name="how-focus-works"></a>Como funciona o foco
+### <a name="how-focus-works"></a>Como o foco funciona
 
-Antes de discutir os detalhes de controle do foco em um aplicativo IOS 8. Vamos dar uma olhada rápida como foco funciona em um dispositivo iOS:
+Antes de abordar os detalhes do controle do foco em um aplicativo IOS 8. Vamos dar uma olhada rápida em como o foco funciona em um dispositivo iOS:
 
 [![](intro-to-manual-camera-controls-images/image4.png "Como o foco funciona em um dispositivo iOS")](intro-to-manual-camera-controls-images/image4.png#lightbox)
 
-Luz insere a Lente de câmera no dispositivo iOS e se concentra em um sensor de imagem. A distância da lente do sensor de controla onde é o ponto Focal (a área em que a imagem será exibida a mais agudo), em relação ao sensor. Quanto mais distante das lentes é do sensor, os objetos de distância parecem mais brilhantes e quanto mais próximo, quase objetos parecem mais brilhantes.
+A luz entra na lente da câmera no dispositivo iOS e concentra-se em um sensor de imagem. A distância da lente do sensor controla onde o ponto focal (a área onde a imagem aparecerá mais nítida) é, em relação ao sensor. Quanto mais distante a lente for do sensor, os objetos de distância parecem mais nítidos e mais próximos, os objetos próximos parecem mais nítidos.
 
-Um dispositivo iOS, a Lente é movida mais próximo para ou mais longe, o sensor ímãs e springs. Como resultado, o posicionamento exato da lente é impossível, pois irá variar de um dispositivo para o dispositivo e pode ser afetada por parâmetros, como a orientação do dispositivo ou a idade do dispositivo e spring.
+Em um dispositivo iOS, a lente é movida para perto, ou ainda, do sensor por ímãs e molas. Como resultado, o posicionamento exato da lente é impossível, pois ela varia de dispositivo para dispositivo e pode ser afetada por parâmetros como a orientação do dispositivo ou a idade do dispositivo e a primavera.
 
-### <a name="important-focus-terms"></a>Termos importantes de foco
+### <a name="important-focus-terms"></a>Termos de foco importantes
 
-Ao lidar com foco, há alguns termos que o desenvolvedor deve estar familiarizado com:
+Ao lidar com o foco, há alguns termos com os quais o desenvolvedor deve estar familiarizado:
 
--  **Profundidade do campo** – a distância entre os objetos mais próximos e mais distante em foco. 
--  **Macro** -esse é o próximo ao fim do espectro de foco e é a distância mais próxima em que a Lente possa se concentrar.
--  **Infinito** – essa é a extremidade do espectro de foco e é a distância mais distante no qual a Lente possa se concentrar.
--  **Distância Hyperfocal** – isso é o ponto no espectro de foco em que o objeto mais distante do quadro é apenas na extremidade oposta de foco. Em outras palavras, essa é a posição de focal que maximiza a profundidade do campo. 
--  **Posição de lente** – que é o que controla todas as opções acima outros termos. Isso é a distância da lente do sensor e, portanto, o controlador de foco.
-
-
-Com esses termos e dados de conhecimento em mente, os novos controles de foco Manual pode ser implementados com êxito em um aplicativo iOS 8.
-
-### <a name="existing-focus-controls"></a>Controles existentes do foco
-
-iOS 7 e versões anteriores, fornecidas controles existentes do foco via `FocusMode`a propriedade como:
-
--   `AVCaptureFocusModeLocked` – O foco está bloqueado em um ponto único de foco.
--   `AVCaptureFocusModeAutoFocus` – A câmera varre a Lente por meio de todos os pontos de focal até que ele encontra o foco definido e, em seguida, permanece lá.
--   `AVCaptureFocusModeContinuousAutoFocus` – A câmera refocuses sempre que detecta uma condição de fora de foco.
+-  **Profundidade do campo** – a distância entre os objetos em foco mais próximo e mais distante. 
+-  **Macro** -essa é a extremidade próxima do espectro de foco e é a distância mais próxima na qual a lente pode se concentrar.
+-  **Infinito** – esta é a extremidade distante do espectro de foco e é a distância mais distante na qual a lente pode se concentrar.
+-  **Hyperfocal Distance** – esse é o ponto no espectro de foco em que o objeto mais distante no quadro está apenas no final do foco. Em outras palavras, essa é a posição focal que maximiza a profundidade do campo. 
+-  **Posição da lente** – é isso que controla todos os outros termos acima. Essa é a distância da lente do sensor e, portanto, do controle de foco.
 
 
-Os controles existentes fornecidos também definível pelo ponto de interesse por meio de`FocusPointOfInterest` propriedade, para que o usuário pode tocar nos concentrar em uma área específica. O aplicativo também pode rastrear o movimento de lente monitorando o `IsAdjustingFocus` propriedade.
+Com esses termos e conhecimento em mente, os novos controles de foco manual podem ser implementados com êxito em um aplicativo iOS 8.
 
-Além disso, a restrição de intervalo foi fornecida pelo `AutoFocusRangeRestriction` a propriedade como:
+### <a name="existing-focus-controls"></a>Controles de foco existentes
 
--   `AVCaptureAutoFocusRangeRestrictionNear` – Restringe o autofocus intensidades próximas. É útil em situações como digitalizar um código QR ou código de barras.
--   `AVCaptureAutoFocusRangeRestrictionFar` – Restringe o autofocus intensidades distantes. É útil em situações em que os objetos que são conhecidos como irrelevante no campo de visão (por exemplo, um quadro de janela).
+Ios 7 e versões anteriores, fornecidos controles de foco existentes por `FocusMode`meio de propriedade como:
+
+-   `AVCaptureFocusModeLocked`– O foco está bloqueado em um único ponto de foco.
+-   `AVCaptureFocusModeAutoFocus`– A câmera varre a lente por todos os pontos focal até encontrar um foco nítido e, em seguida, permanecer lá.
+-   `AVCaptureFocusModeContinuousAutoFocus`– A câmera se concentra sempre que detecta uma condição fora de foco.
 
 
-Finalmente, há o `SmoothAutoFocus` propriedade que diminui o algoritmo de foco automaticamente e as etapas-lo em incrementos menores para evitar a movimentação de artefatos durante a gravação de vídeo.
+Os controles existentes também forneciam um ponto de interesse configurável por meio`FocusPointOfInterest` da propriedade, para que o usuário possa tocar para se concentrar em uma área específica. O aplicativo também pode rastrear a movimentação de lentes monitorando `IsAdjustingFocus` a propriedade.
+
+Além disso, a restrição de `AutoFocusRangeRestriction` intervalo foi fornecida pela propriedade como:
+
+-   `AVCaptureAutoFocusRangeRestrictionNear`– Restringe o foco para as profundidades adjacentes. Útil em situações como, por exemplo, digitalizar um código QR ou códigos de barras.
+-   `AVCaptureAutoFocusRangeRestrictionFar`– Restringe o foco para as camadas distantes. Útil em situações em que os objetos conhecidos por serem irrelevantes estão no campo de exibição (por exemplo, um quadro de janela).
+
+
+Finalmente, há a `SmoothAutoFocus` propriedade que reduz o algoritmo de foco automático e o percorre em incrementos menores para evitar a movimentação de artefatos ao gravar vídeo.
 
 ### <a name="new-focus-controls-in-ios-8"></a>Novos controles de foco no iOS 8
 
-Além de recursos já fornecidos pelo iOS 7 e superior, os recursos a seguir agora estão disponíveis para controlar o foco no iOS 8:
+Além dos recursos já fornecidos pelo iOS 7 e posterior, os recursos a seguir agora estão disponíveis para controlar o foco no iOS 8:
 
--  Controle manual completa da posição das lentes ao bloquear o foco.
--  Observação de chave-valor da posição das lentes em qualquer modo de foco.
+-  Controle manual completo da posição da lente ao bloquear o foco.
+-  Observação de valor-chave da posição da lente em qualquer modo de foco.
 
 
-Para implementar os recursos acima, o `AVCaptureDevice` classe foi modificado para incluir somente leitura `LensPosition` propriedade usada para obter a posição atual da Lente de câmera.
+Para implementar os recursos acima, a `AVCaptureDevice` classe foi modificada para incluir uma propriedade somente `LensPosition` leitura usada para obter a posição atual da lente da câmera.
 
-Para assumir o controle manual da Lente de posição, o dispositivo de captura deve ser no modo de foco bloqueado. Exemplo:
+Para assumir o controle manual da posição da lente, o dispositivo de captura deve estar no modo de foco bloqueado. Exemplo:
 
  `CaptureDevice.FocusMode = AVCaptureFocusMode.Locked;`
 
-O `SetFocusModeLocked` método do dispositivo de captura é usado para ajustar a posição da Lente de câmera. Uma rotina de retorno de chamada opcional pode ser fornecer ao receber notificação quando a alteração entra em vigor. Exemplo:
+O `SetFocusModeLocked` método do dispositivo de captura é usado para ajustar a posição da lente da câmera. Uma rotina de retorno de chamada opcional pode ser fornecida para receber notificações quando a alteração entrar em vigor. Exemplo:
 
 ```csharp
 ThisApp.CaptureDevice.LockForConfiguration(out Error);
@@ -350,22 +350,22 @@ ThisApp.CaptureDevice.SetFocusModeLocked(Position.Value,null);
 ThisApp.CaptureDevice.UnlockForConfiguration();
 ```
 
-Como visto no código acima, o dispositivo de captura deve ser bloqueado para a configuração antes de uma alteração na posição de Lente pode ser feita. Os valores de posição de lente válidos são entre 0,0 e 1,0.
+Como visto no código acima, o dispositivo de captura deve ser bloqueado para configuração antes que uma alteração na posição da lente possa ser feita. Os valores válidos da posição da lente estão entre 0,0 e 1,0.
 
 ### <a name="manual-focus-example"></a>Exemplo de foco manual
 
-Com o código de configuração de captura geral de AV em vigor, um `UIViewController` podem ser adicionados ao Storyboard do aplicativo e configurados da seguinte maneira:
+Com o código de configuração geral da captura AV em vigor `UIViewController` , um pode ser adicionado ao storyboard do aplicativo e configurado da seguinte maneira:
 
-[![](intro-to-manual-camera-controls-images/image5.png "Um UIViewController pode ser adicionado aos aplicativos Storyboard e configurado conforme mostrado aqui")](intro-to-manual-camera-controls-images/image5.png#lightbox)
+[![](intro-to-manual-camera-controls-images/image5.png "Um UIViewController pode ser adicionado ao storyboard dos aplicativos e configurado como mostrado aqui")](intro-to-manual-camera-controls-images/image5.png#lightbox)
 
-O modo de exibição contém os seguintes elementos principais:
+A exibição contém os seguintes elementos principais:
 
--  Um `UIImageView` que exibirá a transmissão de vídeo.
+-  Um `UIImageView` que exibirá o feed de vídeo.
 -  Um `UISegmentedControl` que irá alterar o modo de foco de automático para bloqueado.
--  Um `UISlider` que mostrará e atualize a posição atual de lente.
+-  Um `UISlider` que mostrará e atualizará a posição atual da lente.
 
 
-Faça o seguinte para o controlador de exibição de transmissão-up para controle de foco Manual:
+Faça o seguinte para conectar o controlador de exibição para controle de foco manual:
 
 
 1. Adicione as seguintes instruções using:
@@ -385,7 +385,7 @@ Faça o seguinte para o controlador de exibição de transmissão-up para contro
     using System.Timers;
     ```  
   
-1. Adicione as seguintes variáveis particulares:
+1. Adicione as seguintes variáveis privadas:
 
     ```csharp
     #region Private Variables
@@ -405,7 +405,7 @@ Faça o seguinte para o controlador de exibição de transmissão-up para contro
     #endregion
     ```  
   
-1. Substituir o `ViewDidLoad` método e adicione o seguinte código:
+1. Substitua o `ViewDidLoad` método e adicione o seguinte código:
 
     ```csharp
     public override void ViewDidLoad ()
@@ -469,7 +469,7 @@ Faça o seguinte para o controlador de exibição de transmissão-up para contro
     }
     ```  
   
-1. Substituir o `ViewDidAppear` método e adicione o seguinte para iniciar a gravação quando o modo de exibição é carregado:
+1. Substitua o `ViewDidAppear` método e adicione o seguinte para iniciar a gravação quando a exibição for carregada:
 
     ```csharp
     public override void ViewDidAppear (bool animated)
@@ -487,75 +487,75 @@ Faça o seguinte para o controlador de exibição de transmissão-up para contro
     }
     ```  
   
-1. Com a câmera no modo Auto, o controle deslizante será movido automaticamente como a câmera ajusta o foco:
+1. Com a câmera no modo auto, o controle deslizante será movido automaticamente à medida que a câmera ajustar o foco:
 
-    [![](intro-to-manual-camera-controls-images/image6.png "O controle deslizante será movido automaticamente como a câmera ajusta o foco neste aplicativo de exemplo")](intro-to-manual-camera-controls-images/image6.png#lightbox)
-1. Toque o segmento bloqueado e arraste o controle deslizante de posição para ajustar a posição de lente manualmente:
+    [![](intro-to-manual-camera-controls-images/image6.png "O controle deslizante será movido automaticamente conforme a câmera ajustar o foco neste aplicativo de exemplo")](intro-to-manual-camera-controls-images/image6.png#lightbox)
+1. Toque no segmento bloqueado e arraste o controle deslizante posição para ajustar a posição da lente manualmente:
 
-    [![](intro-to-manual-camera-controls-images/image7.png "Ajustar manualmente a posição de Lente")](intro-to-manual-camera-controls-images/image7.png#lightbox)
-1. Interrompa o aplicativo.
+    [![](intro-to-manual-camera-controls-images/image7.png "Ajustando manualmente a posição da lente")](intro-to-manual-camera-controls-images/image7.png#lightbox)
+1. Pare o aplicativo.
 
 
-O código acima mostra como monitorar a posição de lente quando a câmera está no modo automático ou usar um controle deslizante para controlar a posição de lente quando ele estiver no modo bloqueado.
+O código acima mostrou como monitorar a posição da lente quando a câmera está no modo automático ou usar um controle deslizante para controlar a posição da lente quando ela estiver no modo bloqueado.
 
 ## <a name="manual-exposure"></a>Exposição manual
 
-Exposição refere-se ao brilho de uma imagem em relação o brilho do código-fonte e é determinada pelo quanta luz atinge sensor, como long e pelo nível de ganho do sensor (mapeamento ISO). Fornecendo o controle manual sobre a exposição, um aplicativo pode fornecer mais liberdade para o usuário final e permitir que eles tenham uma aparência estilizada.
+A exposição refere-se ao brilho de uma imagem em relação ao brilho da origem e é determinada pelo quanto a luz atinge o sensor, por quanto tempo e pelo nível de lucro do sensor (mapeamento ISO). Ao fornecer controle manual sobre a exposição, um aplicativo pode fornecer mais liberdade ao usuário final e permitir que eles atinjam uma aparência estilizada.
 
-Usando os controles de exposição de Manual, o usuário pode executar uma imagem de forma irrealista brilhante em escuro e moody:
+Usando os controles de exposição manual, o usuário pode tirar uma imagem de forma inrealista para escuro e Moody:
 
-[![](intro-to-manual-camera-controls-images/image8.png "Um exemplo de imagem que mostra a exposição de forma irrealista brilhante para escuro e moody")](intro-to-manual-camera-controls-images/image8.png#lightbox)
+[![](intro-to-manual-camera-controls-images/image8.png "Um exemplo de imagem que mostra a exposição de forma inrealista ao escuro e Moody")](intro-to-manual-camera-controls-images/image8.png#lightbox)
 
-Novamente, isso pode ser feito automaticamente usando o controle programático para aplicativos científicos ou por meio de controles manuais fornecidos pela interface do usuário de aplicativos. De qualquer forma, o novo iOS 8 APIs de exposição fornecem controle refinado sobre as configurações de exposição da câmera.
+Novamente, isso pode ser feito automaticamente usando o controle programático para aplicativos científicos ou por meio de controles manuais fornecidos pela interface do usuário dos aplicativos. De qualquer forma, as novas APIs de exposição do iOS 8 fornecem um controle refinado sobre as configurações de exposição da câmera.
 
 ### <a name="how-exposure-works"></a>Como funciona a exposição
 
-Antes de discutir os detalhes de controle da exposição em um aplicativo IOS 8. Vamos dar uma olhada rápida como exposição funciona:
+Antes de discutir os detalhes de controlar a exposição em um aplicativo IOS 8. Vamos dar uma olhada rápida em como funciona a exposição:
 
 [![](intro-to-manual-camera-controls-images/image9.png "Como funciona a exposição")](intro-to-manual-camera-controls-images/image9.png#lightbox)
 
-Os três elementos básicos que são reunidos para controlar a exposição são:
+Os três elementos básicos que vêm juntos para controlar a exposição são:
 
--  **Obturador velocidade** – esse é o período de tempo que obturador está aberto para permitir que a luz sobre o sensor da câmera. A mais curta o tempo que obturador estiver aberto, a menos luz é permitem que e é a imagem de nítidos (menos movimento desfoque). Quanto mais longa obturador estiver aberto, a luz mais let além e movimento mais desfoque ocorre.
--  **Mapeamento de ISO** – isso é um termo emprestado da fotografia de filme e refere-se a confidencialidade de produtos químicos no filme à luz. Valores de ISO de baixa no filme têm menor detalhamento e a reprodução de cores mais refinada; valores baixos de ISO nos sensores digitais têm menos ruído de sensor, mas menos brilho. Quanto maior o valor ISO, quanto mais brilhantes na imagem, mas com mais ruído do sensor. "ISO" em um sensor digital é uma medida da [ganho eletrônico](https://en.wikipedia.org/wiki/Gain), não é um recurso físico. 
--  **Abertura de lente** – esse é o tamanho da abertura das lentes. Em todos os dispositivos iOS a diafragma for corrigida, para que o somente dois valores que podem ser usados para ajustar a exposição do obturador velocidade e ISO.
+-  **Velocidade** do obturador – esse é o período de tempo que o obturador está aberto para permitir a luz do sensor de câmera. Quanto menor o tempo que o obturador está aberto, a menor luz é deixá-in e a imagem é mais nítida (menos desfoque de movimento). Quanto mais longo o obturador estiver aberto, mais claro será deixar em e quanto mais desfoque de movimento ocorrer.
+-  **Mapeamento ISO** – esse é um termo emprestado de fotografia de filmes e refere-se à sensibilidade das químicas no filme à luz. Valores ISO baixos em filme têm uma reprodução de cor menos granular e mais fina; valores ISO baixos em sensores digitais têm menos ruído de sensor, mas menos brilho. Quanto maior o valor ISO, mais brilhante a imagem, mas com mais ruído de sensor. "ISO" em um sensor digital é uma medida de [lucro eletrônico](https://en.wikipedia.org/wiki/Gain), não um recurso físico. 
+-  **Abertura de lentes** – esse é o tamanho da abertura da lente. Em todos os dispositivos iOS, a abertura da lente é fixa, portanto, os dois únicos valores que podem ser usados para ajustar a exposição são velocidade do obturador e ISO.
 
 
-### <a name="how-continuous-auto-exposure-works"></a>Funciona como contínua de exposição automática
+### <a name="how-continuous-auto-exposure-works"></a>Como a exposição automática contínua funciona
 
-Antes de aprendizado de como funciona a exposição manual, é uma boa ideia compreender como contínua exposição de automático funciona em um dispositivo iOS.
+Antes de aprender como a exposição manual funciona, é uma boa ideia entender como a exposição automática contínua funciona em um dispositivo iOS.
 
-[![](intro-to-manual-camera-controls-images/image10.png "Como funciona a exposição automática contínua em um dispositivo iOS")](intro-to-manual-camera-controls-images/image10.png#lightbox)
+[![](intro-to-manual-camera-controls-images/image10.png "Como a exposição automática contínua funciona em um dispositivo iOS")](intro-to-manual-camera-controls-images/image10.png#lightbox)
 
-Primeiro é o bloco de exposição automática, ele tem o trabalho de cálculo de exposição ideal e é feito continuamente estatísticas de medição. Ele usa essas informações para calcular a combinação ideal de ISO e do obturador velocidade para obter a cena bem iluminada. Esse ciclo é conhecido como o Loop AE.
+Primeiro, é o bloco de exposição automática, ele tem o trabalho de calcular a exposição ideal e está continuamente sendo alimentado com estatísticas de medição. Ele usa essas informações para calcular a combinação ideal de ISO e velocidade do obturador para que a cena fique bem acesa. Esse ciclo é chamado de loop AE.
 
-### <a name="how-locked-exposure-works"></a>Funciona como bloqueado de exposição
+### <a name="how-locked-exposure-works"></a>Como a exposição bloqueada funciona
 
-Em seguida, vamos examinar como bloqueado works exposição em dispositivos iOS.
+Em seguida, vamos examinar como a exposição bloqueada funciona em dispositivos iOS.
 
-[![](intro-to-manual-camera-controls-images/image11.png "Como bloqueado exposição funciona em dispositivos iOS")](intro-to-manual-camera-controls-images/image11.png#lightbox)
+[![](intro-to-manual-camera-controls-images/image11.png "Como a exposição bloqueada funciona em dispositivos iOS")](intro-to-manual-camera-controls-images/image11.png#lightbox)
 
-Novamente, você tem o bloco de exposição automática que está tentando calcular os valores de duração e o iOS ideal. No entanto, nesse modo, o bloco AE está desconectado do mecanismo de medição de estatísticas.
+Novamente, você tem o bloco de exposição automática que está tentando calcular os valores ideais de iOS e duração. No entanto, nesse modo, o bloco AE é desconectado do mecanismo de estatísticas de medição.
 
 ### <a name="existing-exposure-controls"></a>Controles de exposição existentes
 
-iOS 7 e acima, forneça os seguintes controles existentes de exposição por meio de `ExposureMode` propriedade:
+Ios 7 e posterior, forneça os seguintes controles de exposição existentes por `ExposureMode` meio da propriedade:
 
--   `AVCaptureExposureModeLocked` – Amostras da cena uma vez e usa esses valores ao longo da cena.
--   `AVCaptureExposureModeContinuousAutoExposure` – A cena continuamente para garantir que ele está bem aceso a amostra.
+-   `AVCaptureExposureModeLocked`– Amostra a cena uma vez e usa esses valores em toda a cena.
+-   `AVCaptureExposureModeContinuousAutoExposure`– Amostra a cena continuamente para garantir que ela esteja bem acesa.
 
 
-O `ExposurePointOfInterest` pode ser usado para toque para expor a cena, selecionando um objeto de destino para expor no, e o aplicativo pode monitorar o `AdjustingExposure` propriedade para ver quando exposição é ajustada.
+O `ExposurePointOfInterest` pode ser usado para tocar para expor a cena selecionando um objeto de destino para expor, e o aplicativo pode monitorar a `AdjustingExposure` propriedade para ver quando a exposição está sendo ajustada.
 
 ### <a name="new-exposure-controls-in-ios-8"></a>Novos controles de exposição no iOS 8
 
-Além de recursos já fornecidos pelo iOS 7 e superior, os recursos a seguir agora estão disponíveis para controlar a exposição no iOS 8:
+Além dos recursos já fornecidos pelo iOS 7 e posterior, os recursos a seguir agora estão disponíveis para controlar a exposição no iOS 8:
 
 -  Exposição personalizada totalmente manual.
--  Get, Set e chave-valor observam do obturador velocidade (duração) e IOS.
+-  Get, set e key-value observam o IOS e a velocidade do obturador (duração).
 
 
-Para implementar os recursos acima, um novo `AVCaptureExposureModeCustom` modo foi adicionado. Quando a câmera no é o modo personalizado, o código a seguir pode ser usado para ajustar a duração de exposição e ISO:
+Para implementar os recursos acima, um novo `AVCaptureExposureModeCustom` modo foi adicionado. Quando a câmera no é o modo personalizado, o código a seguir pode ser usado para ajustar a duração da exposição e o ISO:
 
 ```csharp
 CaptureDevice.LockForConfiguration(out Error);
@@ -563,7 +563,7 @@ CaptureDevice.LockExposure(DurationValue,ISOValue,null);
 CaptureDevice.UnlockForConfiguration();
 ```
 
-Nos modos Auto e bloqueado, o aplicativo pode ajustar o desvio da rotina exposição automática usando o seguinte código:
+Nos modos automático e bloqueado, o aplicativo pode ajustar a tendência da rotina de exposição automática usando o seguinte código:
 
 ```csharp
 CaptureDevice.LockForConfiguration(out Error);
@@ -571,7 +571,7 @@ CaptureDevice.SetExposureTargetBias(Value,null);
 CaptureDevice.UnlockForConfiguration();
 ```
 
-Os intervalos de configuração de mínimo e máximo dependem do dispositivo que o aplicativo está em execução, para que eles devem nunca ser codificados. Em vez disso, use as propriedades a seguir para obter os intervalos de valores mínimo e máximo:
+Os intervalos de configuração mínimo e máximo dependem do dispositivo em que o aplicativo está sendo executado, portanto, eles nunca devem ser embutidos em código. Em vez disso, use as seguintes propriedades para obter os intervalos de valor mínimo e máximo:
 
 -   `CaptureDevice.MinExposureTargetBias` 
 -   `CaptureDevice.MaxExposureTargetBias` 
@@ -581,22 +581,22 @@ Os intervalos de configuração de mínimo e máximo dependem do dispositivo que
 -   `CaptureDevice.ActiveFormat.MaxExposureDuration` 
 
 
-Como visto no código acima, o dispositivo de captura deve ser bloqueado para a configuração antes de uma alteração na exposição pode ser feita.
+Como visto no código acima, o dispositivo de captura deve ser bloqueado para configuração antes que uma alteração na exposição possa ser feita.
 
 ### <a name="manual-exposure-example"></a>Exemplo de exposição manual
 
-Com o código de configuração de captura geral de AV em vigor, um `UIViewController` podem ser adicionados ao Storyboard do aplicativo e configurados da seguinte maneira:
+Com o código de configuração geral da captura AV em vigor `UIViewController` , um pode ser adicionado ao storyboard do aplicativo e configurado da seguinte maneira:
 
-[![](intro-to-manual-camera-controls-images/image12.png "Um UIViewController pode ser adicionado aos aplicativos Storyboard e configurado conforme mostrado aqui")](intro-to-manual-camera-controls-images/image12.png#lightbox)
+[![](intro-to-manual-camera-controls-images/image12.png "Um UIViewController pode ser adicionado ao storyboard dos aplicativos e configurado como mostrado aqui")](intro-to-manual-camera-controls-images/image12.png#lightbox)
 
-O modo de exibição contém os seguintes elementos principais:
+A exibição contém os seguintes elementos principais:
 
--  Um `UIImageView` que exibirá a transmissão de vídeo.
+-  Um `UIImageView` que exibirá o feed de vídeo.
 -  Um `UISegmentedControl` que irá alterar o modo de foco de automático para bloqueado.
--  Quatro `UISlider` controles que mostrará e atualizar o deslocamento, a duração, o ISO e o desvio.
+-  Quatro `UISlider` controles que irão mostrar e atualizar o deslocamento, a duração, a ISO e a tendência.
 
 
-Faça o seguinte para o controlador de exibição de transmissão-up para controle de exposição Manual:
+Faça o seguinte para conectar o controlador de exibição para controle de exposição manual:
 
 
 1. Adicione as seguintes instruções using:
@@ -616,7 +616,7 @@ Faça o seguinte para o controlador de exibição de transmissão-up para contro
     using System.Timers;
     ```  
   
-1. Adicione as seguintes variáveis particulares:
+1. Adicione as seguintes variáveis privadas:
 
     ```csharp
     #region Private Variables
@@ -638,7 +638,7 @@ Faça o seguinte para o controlador de exibição de transmissão-up para contro
     #endregion
     ```  
   
-1. Substituir o `ViewDidLoad` método e adicione o seguinte código:
+1. Substitua o `ViewDidLoad` método e adicione o seguinte código:
 
     ```csharp
     public override void ViewDidLoad ()
@@ -769,7 +769,7 @@ Faça o seguinte para o controlador de exibição de transmissão-up para contro
     }
     ```  
   
-1. Substituir o `ViewDidAppear` método e adicione o seguinte para iniciar a gravação quando o modo de exibição é carregado:
+1. Substitua o `ViewDidAppear` método e adicione o seguinte para iniciar a gravação quando a exibição for carregada:
 
     ```csharp
     public override void ViewDidAppear (bool animated)
@@ -787,128 +787,128 @@ Faça o seguinte para o controlador de exibição de transmissão-up para contro
     }
     ```  
   
-1. Com a câmera no modo automático, os controles deslizantes moverá automaticamente como a câmera ajusta exposição:
+1. Com a câmera no modo auto, os controles deslizantes serão movidos automaticamente à medida que a câmera ajustar a exposição:
 
-    [![](intro-to-manual-camera-controls-images/image13.png "Os controles deslizantes moverá automaticamente como a câmera ajusta exposição")](intro-to-manual-camera-controls-images/image13.png#lightbox)
-1. Toque o segmento bloqueado e arraste o controle deslizante de desvio para ajustar o desvio da exposição automática manualmente:
+    [![](intro-to-manual-camera-controls-images/image13.png "Os controles deslizantes serão movidos automaticamente à medida que a câmera ajustar a exposição")](intro-to-manual-camera-controls-images/image13.png#lightbox)
+1. Toque no segmento bloqueado e arraste o controle deslizante de tendência para ajustar a tendência da exposição automática manualmente:
 
-    [![](intro-to-manual-camera-controls-images/image14.png "Ajustando o desvio da exposição automática manualmente")](intro-to-manual-camera-controls-images/image14.png#lightbox)
-1. Toque o segmento personalizado e arraste os controles deslizantes de duração e ISO para controlar a exposição manualmente:
+    [![](intro-to-manual-camera-controls-images/image14.png "Ajustando a tendência da exposição automática manualmente")](intro-to-manual-camera-controls-images/image14.png#lightbox)
+1. Toque no segmento personalizado e arraste os controles deslizantes de duração e ISO para controlar manualmente a exposição:
 
-    [![](intro-to-manual-camera-controls-images/image15.png "Arraste os controles deslizantes de duração e ISO para controlar a exposição manualmente")](intro-to-manual-camera-controls-images/image15.png#lightbox)
-1. Interrompa o aplicativo.
-
-
-O código acima mostra como monitorar as configurações de exposição quando a câmera está no modo automático e como usar os controles deslizantes para controlar a exposição quando ele estiver em modos de bloqueado ou personalizado.
-
-## <a name="manual-white-balance"></a>Proporção de branco manual
-
-Controles de balanço de branco permitem aos usuários ajustar o equilíbrio de colosr em uma imagem para torná-las mais realista. Fontes de luz diferentes têm temperaturas de cor diferente e as configurações da câmera usadas para capturar uma imagem devem ser ajustadas para compensar essas diferenças. Novamente, permitindo que o usuário controle a proporção de branco, eles podem tornar profissionais ajustes que as rotinas automática não são capazes de obter efeitos artísticos.
-
-[![](intro-to-manual-camera-controls-images/image16.png "Uma imagem de exemplo que mostra os ajustes de balanço de branco Manual")](intro-to-manual-camera-controls-images/image16.png#lightbox)
-
-Por exemplo, o horário de verão tem uma conversão blueish, enquanto as luzes incandescentes de tungsten têm uma tonalidade mais frequente, laranja. (Erroneamente, cores "interessantes" têm maior temperaturas de cor que cores "passivos". Cor temperaturas são uma medida física, não uma percepção.)
-
-A mente humana é muito boa para compensar as diferenças de temperatura de cor, mas isso é algo que não é possível uma câmera. A câmera funciona pelo aumento de cor no espectro oposto para ajustar as diferenças de cor.
-
-O novo iOS 8 exposição API permite que o aplicativo assumir o controle do processo e fornecer controle refinado sobre as configurações de balanço de branco da câmera.
-
-### <a name="how-white-balance-works"></a>Funciona como o branco de saldo
-
-Antes de discutir os detalhes de controle de saldo em branco em um aplicativo IOS 8. Vamos dar uma olhada rápida em branco como funciona o saldo:
-
-No estudo de percepção de cor, o [CIE 1931 RGB de cor espaço e o espaço de cor CIE 1931 XYZ](https://en.wikipedia.org/wiki/CIE_1931_color_space) são o primeiro matematicamente, espaços de cores. Eles foram criados pela comissão internacional de iluminação (CIE) em 1931.
-
-[![](intro-to-manual-camera-controls-images/image17.png "O espaço de cores RGB CIE 1931 e CIE 1931 XYZ espaço de cores")](intro-to-manual-camera-controls-images/image17.png#lightbox)
-
-O gráfico acima mostra todas as cores visíveis ao olho humano, dos níveis mais profundos de azul para verde brilhante para vermelho brilhante. Qualquer ponto no diagrama pode ser plotado com um valor de X e Y, conforme mostrado no gráfico acima.
-
-Como visível no gráfico, há valores de X e Y que podem ser plotados no gráfico que seria fora do intervalo de visão humana e, como resultado, essas cores não podem ser reproduzidas por uma câmera.
-
-A curva menor no gráfico acima é chamada de [Planckian local](https://en.wikipedia.org/wiki/Planckian_locus), que expressa a temperatura de cor (em graus kelvin) com números mais altos no lado do azul (mais quente) e inferior de números no lado do vermelho (mais frio). Elas são úteis para situações de iluminação típico.
-
-Em condições de iluminação misto, os ajustes de balanço de branco precisa desviar-se o local de Planckian para fazer as alterações necessárias. Nessas situações, que o ajuste será necessário ser deslocados para verde ou vermelho/magenta lado o CIE dimensionar.
-
-Dispositivos iOS compensam projeções de cores, aumentando o ganho de cor oposta. Por exemplo, se uma cena tem muita azul, o ganho de vermelho serão ser aumentado para compensar. Esses valores são calibrados para dispositivos específicos para que sejam dependentes do dispositivo de ganho.
-
-### <a name="existing-white-balance-controls"></a>Controles existentes do saldo em branco
-
-iOS 7 e acima fornecido os seguintes controles de balanço de branco existentes por meio de `WhiteBalanceMode` propriedade:
-
--   `AVCapture WhiteBalance ModeLocked` – Amostras de uma vez a cena e usar esses valores ao longo da cena.
--   `AVCapture WhiteBalance ModeContinuousAutoExposure` – Amostras de cena continuamente para garantir que ele também é balanceado.
+    [![](intro-to-manual-camera-controls-images/image15.png "Arraste os controles deslizantes de duração e ISO para controlar manualmente a exposição")](intro-to-manual-camera-controls-images/image15.png#lightbox)
+1. Pare o aplicativo.
 
 
-E o aplicativo pode monitorar o `AdjustingWhiteBalance` propriedade para ver quando exposição é ajustada.
+O código acima mostrou como monitorar as configurações de exposição quando a câmera está no modo automático e como usar os controles deslizantes para controlar a exposição quando está nos modos bloqueados ou personalizados.
 
-### <a name="new-white-balance-controls-in-ios-8"></a>Novos controles de saldo em branco no iOS 8
+## <a name="manual-white-balance"></a>Saldo de branco manual
 
-Além de recursos já fornecidos pelo iOS 7 e superior, os recursos a seguir agora estão disponíveis para controle de saldo em branco no iOS 8:
+Os controles de balanço de branco permitem que os usuários ajustem o saldo de colosr em uma imagem para que eles pareçam mais realistas. Fontes de luz diferentes têm temperaturas de cor diferentes e as configurações de câmera usadas para capturar uma imagem devem ser ajustadas para compensar essas diferenças. Novamente, ao permitir que o usuário controle o equilíbrio de branco, eles podem fazer ajustes profissionais de que as rotinas automáticas são incapazes de obter efeitos artísticos.
 
--  Obtém controle totalmente manual do dispositivo RGB.
--  Get, Set e chave-valor observar o dispositivo RGB ganha.
--  Suporte para o saldo em branco usando um cartão de cinza.
--  Rotinas de conversão para e de espaços de cores independentes de dispositivo.
+[![](intro-to-manual-camera-controls-images/image16.png "Uma imagem de exemplo mostrando os ajustes de balanço de branco manual")](intro-to-manual-camera-controls-images/image16.png#lightbox)
+
+Por exemplo, o horário de verão tem uma conversão azul, enquanto as luzes Tungsten incandescentes têm um tom mais quente e laranja amarelo. (Confusamente, as cores "frias" têm temperaturas de cor mais altas do que as cores "quentes". As temperaturas de cor são uma medida física, e não uma perceptiva.)
+
+A mente humana é muito boa em compensar as diferenças na temperatura de cor, mas isso é algo que uma câmera não pode fazer. A câmera funciona aumentando a cor no espectro oposto para ajustar as diferenças de cor.
+
+A nova API de exposição do iOS 8 permite que o aplicativo assuma o controle do processo e forneça controle refinado sobre as configurações de balanço de branco da câmera.
+
+### <a name="how-white-balance-works"></a>Como o equilíbrio de branco funciona
+
+Antes de discutir os detalhes do equilíbrio de branco de controle em um aplicativo IOS 8. Vamos dar uma olhada rápida em como o equilíbrio de branco funciona:
+
+No estudo de percepção de cor, o espaço de cores [RGB 1931 de cie e o espaço de cores cie 1931 XYZ](https://en.wikipedia.org/wiki/CIE_1931_color_space) são os primeiros espaços de cores definidos matematicamente. Eles foram criados pela CIE (Comissão Internacional de iluminação) em 1931.
+
+[![](intro-to-manual-camera-controls-images/image17.png "O espaço de cores RGB de CIE 1931 e o espaço de cores CIE 1931 XYZ")](intro-to-manual-camera-controls-images/image17.png#lightbox)
+
+O gráfico acima mostra todas as cores visíveis para o olho humano, de azul profundo a verde brilhante a vermelho brilhante. Qualquer ponto no diagrama pode ser plotado com um valor X e Y, conforme mostrado no gráfico acima.
+
+Como visível no grafo, há valores X e Y que podem ser plotados no grafo que estaria fora do intervalo de visão humana e, como resultado, essas cores não podem ser reproduzidas por uma câmera.
+
+A curva menor no gráfico acima é chamada de [Planckian local](https://en.wikipedia.org/wiki/Planckian_locus), que expressa a temperatura de cor (em graus Kelvin), com números mais altos no lado azul (mais quente) e números menores no lado vermelho (resfriamento). Elas são úteis para situações de iluminação típicas.
+
+Em condições de iluminação mista, os ajustes de balanço de branco precisarão se desviar do Planckian local para fazer as alterações necessárias. Nessas situações, o ajuste precisará ser deslocado para o lado verde ou vermelho/magenta da escala de CIE.
+
+os dispositivos iOS compensam as conversões de cores aumentando o lucro de cor oposto. Por exemplo, se uma cena tiver muito azul, o lucro vermelho será aumentado para compensar. Esses valores de obter são calibrados para dispositivos específicos para que eles sejam dependentes do dispositivo.
+
+### <a name="existing-white-balance-controls"></a>Controles de balanço de branco existentes
+
+o Ios 7 e superior forneceu os seguintes controles de balanço `WhiteBalanceMode` de branco existentes por meio da propriedade:
+
+-   `AVCapture WhiteBalance ModeLocked`– Amostras da cena uma vez e usando esses valores em toda a cena.
+-   `AVCapture WhiteBalance ModeContinuousAutoExposure`– Amostra a cena continuamente para garantir que ela esteja bem equilibrada.
 
 
-Para implementar os recursos acima, o `AVCaptureWhiteBalanceGain` estrutura foi adicionada com os seguintes membros:
+E o aplicativo pode monitorar a `AdjustingWhiteBalance` propriedade para ver quando a exposição está sendo ajustada.
+
+### <a name="new-white-balance-controls-in-ios-8"></a>Novos controles de balanço de branco no iOS 8
+
+Além dos recursos já fornecidos pelo iOS 7 e posterior, os seguintes recursos agora estão disponíveis para controlar o equilíbrio de branco no iOS 8:
+
+-  Controle totalmente manual dos ganhos de RGB do dispositivo.
+-  Get, set e key-value observam os ganhos de RGB do dispositivo.
+-  Suporte para balanço de branco usando cartão cinza.
+-  Rotinas de conversão de e para espaços de cores independentes de dispositivo.
+
+
+Para implementar os recursos acima, a `AVCaptureWhiteBalanceGain` estrutura foi adicionada com os seguintes membros:
 
 -   `RedGain` 
 -   `GreenGain` 
 -   `BlueGain` 
 
 
-O ganho de balanço de branco máximo está atualmente quatro (4) e pode ser pronta a partir de `MaxWhiteBalanceGain` propriedade. Portanto, o intervalo válido é de um (1) `MaxWhiteBalanceGain` (4) no momento.
+O máximo de equilíbrio de branco é de quatro (4) no momento e pode estar `MaxWhiteBalanceGain` pronto a partir da propriedade. Portanto, o intervalo legal é de um (1) `MaxWhiteBalanceGain` a (4) no momento.
 
-O `DeviceWhiteBalanceGains` propriedade pode ser usada para observar os valores atuais. Use `SetWhiteBalanceModeLockedWithDeviceWhiteBalanceGains` ajustar o equilíbrio ganha quando a câmera está no modo de balanço de branco bloqueado.
+A `DeviceWhiteBalanceGains` propriedade pode ser usada para observar os valores atuais. Use `SetWhiteBalanceModeLockedWithDeviceWhiteBalanceGains` para ajustar os ganhos de saldo quando a câmera estiver no modo de balanço de branco bloqueado.
 
 #### <a name="conversion-routines"></a>Rotinas de conversão
 
-Rotinas de conversão foram adicionadas ao iOS 8 para ajudar com a conversão para e de, espaços de cores independentes de dispositivo. Para implementar as rotinas de conversão, o `AVCaptureWhiteBalanceChromaticityValues` estrutura foi adicionada com os seguintes membros:
+Rotinas de conversão foram adicionadas ao iOS 8 para ajudar na conversão de espaços de cores independentes de dispositivo. Para implementar as rotinas de conversão `AVCaptureWhiteBalanceChromaticityValues` , a estrutura foi adicionada com os seguintes membros:
 
--   `X` -é um valor de 0 a 1.
--   `Y` -é um valor de 0 a 1.
-
-
-Um `AVCaptureWhiteBalanceTemperatureAndTintValues` estrutura também foi adicionada com os seguintes membros:
-
--   `Temperature` -é flutuante valor de ponto em graus Kelvin.
--   `Tint` -é um deslocamento de verde ou magenta de 0 a 150 com valores positivos em direção a direção de verde e negativo em direção a magenta.
+-   `X`-é um valor de 0 a 1.
+-   `Y`-é um valor de 0 a 1.
 
 
-Use o `CaptureDevice.GetTemperatureAndTintValues`e o `CaptureDevice.GetDeviceWhiteBalanceGains`métodos para converter entre a temperatura e tom, cromaticidade e RGB obtém espaços de cores.
+Uma `AVCaptureWhiteBalanceTemperatureAndTintValues` estrutura também foi adicionada com os seguintes membros:
+
+-   `Temperature`-é um valor de ponto flutuante em graus Kelvin.
+-   `Tint`-é um deslocamento de verde ou magenta de 0 a 150 com valores positivos na direção verde e negativo em direção no magenta.
+
+
+Use os `CaptureDevice.GetTemperatureAndTintValues` `CaptureDevice.GetDeviceWhiteBalanceGains`métodos e para converter entre temperatura e tonalidade, desvio e espaços de cores de lucro de RGB.
 
 > [!NOTE]
-> As rotinas de conversão são mais precisas quanto mais próximo o valor a ser convertido é o local de Planckian.
+> As rotinas de conversão são mais precisas quanto mais próximo o valor a ser convertido é a local Planckian.
 
 
 
 
-#### <a name="gray-card-support"></a>Suporte a cartões de cinza
+#### <a name="gray-card-support"></a>Suporte a cartão cinza
 
-Apple usa o termo mundo cinza para referir-se para o suporte de cartão de cinza embutido no iOS 8. Ele permite que o usuário para se concentrar em um cartão físico de cinza que abrange pelo menos 50% do centro do quadro e usa isso para ajustar o equilíbrio em branco. A finalidade do cartão cinza é em branco que aparece com neutralidade de atingir.
+A Apple usa o termo cinza mundo para se referir ao suporte de cartão cinza incorporado ao iOS 8. Ele permite que o usuário se concentre em um cartão cinza físico que cobre pelo menos 50% do centro do quadro e o usa para ajustar o equilíbrio de branco. A finalidade do cartão cinza é obter branco que pareça neutro.
 
-Isso pode ser implementado em um aplicativo, solicitando que o usuário coloque um cartão físico cinza na frente da câmera, monitorando o `GrayWorldDeviceWhiteBalanceGains` propriedade e esperar até que os valores acomode.
+Isso pode ser implementado em um aplicativo solicitando que o usuário Coloque um cartão cinza físico na frente da câmera, monitorando a `GrayWorldDeviceWhiteBalanceGains` Propriedade e aguardando até que os valores sejam liquidados.
 
-O aplicativo, em seguida, pode bloquear os ganhos de balanço de branco para o `SetWhiteBalanceModeLockedWithDeviceWhiteBalanceGains` método usando os valores da `GrayWorldDeviceWhiteBalanceGains` propriedade para aplicar as alterações.
+O aplicativo bloquearia os ganhos do equilíbrio de branco para `SetWhiteBalanceModeLockedWithDeviceWhiteBalanceGains` o método usando os valores `GrayWorldDeviceWhiteBalanceGains` da propriedade para aplicar as alterações.
 
-O dispositivo de captura deve ser bloqueado para a configuração antes de uma alteração no saldo em branco pode ser feita.
+O dispositivo de captura deve ser bloqueado para configuração antes que uma alteração no equilíbrio de branco possa ser feita.
 
 ### <a name="manual-white-balance-example"></a>Exemplo de balanço de branco manual
 
-Com o código de configuração de captura geral de AV em vigor, um `UIViewController` podem ser adicionados ao Storyboard do aplicativo e configurados da seguinte maneira:
+Com o código de configuração geral da captura AV em vigor `UIViewController` , um pode ser adicionado ao storyboard do aplicativo e configurado da seguinte maneira:
 
-[![](intro-to-manual-camera-controls-images/image18.png "Um UIViewController pode ser adicionado aos aplicativos Storyboard e configurado conforme mostrado aqui")](intro-to-manual-camera-controls-images/image18.png#lightbox)
+[![](intro-to-manual-camera-controls-images/image18.png "Um UIViewController pode ser adicionado ao storyboard dos aplicativos e configurado como mostrado aqui")](intro-to-manual-camera-controls-images/image18.png#lightbox)
 
-O modo de exibição contém os seguintes elementos principais:
+A exibição contém os seguintes elementos principais:
 
--  Um `UIImageView` que exibirá a transmissão de vídeo.
+-  Um `UIImageView` que exibirá o feed de vídeo.
 -  Um `UISegmentedControl` que irá alterar o modo de foco de automático para bloqueado.
--  Dois `UISlider` controles que mostrará e atualizar a temperatura e tom.
--  Um `UIButton` usado para um espaço de cartão de cinza (mundo cinza) de exemplo e definir o saldo em branco usando esses valores.
+-  Dois `UISlider` controles que mostrarão e atualizarão a temperatura e a tonalidade.
+-  Um `UIButton` usado para exemplificar um espaço cinza (mundo cinza) e definir o equilíbrio de branco usando esses valores.
 
 
-Faça o seguinte para o controlador de exibição de transmissão-up Manual em branco para controle de saldo:
+Faça o seguinte para conectar o controlador de exibição para controle de balanço de branco manual:
 
 
 1. Adicione as seguintes instruções using:
@@ -928,7 +928,7 @@ Faça o seguinte para o controlador de exibição de transmissão-up Manual em b
     using System.Timers;
     ```  
   
-1. Adicione as seguintes variáveis particulares:
+1. Adicione as seguintes variáveis privadas:
 
     ```csharp
     #region Private Variables
@@ -948,7 +948,7 @@ Faça o seguinte para o controlador de exibição de transmissão-up Manual em b
     #endregion
     ```  
   
-1. Adicione o seguinte método privado para definir o novo white equilibrar a temperatura e tonalidade:
+1. Adicione o seguinte método particular para definir a nova temperatura e a tonalidade do balanço de branco:
 
     ```csharp
     #region Private Methods
@@ -983,7 +983,7 @@ Faça o seguinte para o controlador de exibição de transmissão-up Manual em b
     #endregion
     ```   
   
-1. Substituir o `ViewDidLoad` método e adicione o seguinte código:
+1. Substitua o `ViewDidLoad` método e adicione o seguinte código:
 
     ```csharp
     public override void ViewDidLoad ()
@@ -1088,7 +1088,7 @@ Faça o seguinte para o controlador de exibição de transmissão-up Manual em b
     }
     ``` 
   
-1. Substituir o `ViewDidAppear` método e adicione o seguinte para iniciar a gravação quando o modo de exibição é carregado:
+1. Substitua o `ViewDidAppear` método e adicione o seguinte para iniciar a gravação quando a exibição for carregada:
 
     ```csharp
     public override void ViewDidAppear (bool animated)
@@ -1106,96 +1106,96 @@ Faça o seguinte para o controlador de exibição de transmissão-up Manual em b
     }
     ```  
   
-1. Salve as alterações de código e executar o aplicativo.
-1. Com a câmera no modo automático, os controles deslizantes moverá automaticamente como a câmera ajusta proporção de branco:
+1. Salve as alterações no código e execute o aplicativo.
+1. Com a câmera no modo auto, os controles deslizantes serão movidos automaticamente à medida que a câmera ajustar o equilíbrio de branco:
 
-    [![](intro-to-manual-camera-controls-images/image19.png "Os controles deslizantes moverá automaticamente como a câmera ajusta proporção de branco")](intro-to-manual-camera-controls-images/image19.png#lightbox)
-1. Toque o segmento bloqueado e arraste os controles deslizantes Temp e tom para ajustar o equilíbrio de branco manualmente:
+    [![](intro-to-manual-camera-controls-images/image19.png "Os controles deslizantes serão movidos automaticamente à medida que a câmera ajustar o equilíbrio de branco")](intro-to-manual-camera-controls-images/image19.png#lightbox)
+1. Toque no segmento bloqueado e arraste os controles deslizantes de temp e de tonalidade para ajustar o balanço de branco manualmente:
 
-    [![](intro-to-manual-camera-controls-images/image20.png "Arraste os controles deslizantes Temp e tom para ajustar o equilíbrio de branco manualmente")](intro-to-manual-camera-controls-images/image20.png#lightbox)
-1. Com o segmento bloqueado ainda selecionado, coloque um cartão físico cinza na frente da câmera e toque no botão de cartão de cinza para ajustar o equilíbrio de branco para o mundo cinza:
+    [![](intro-to-manual-camera-controls-images/image20.png "Arraste os controles deslizantes temporários e de tonalidade para ajustar o balanço de branco manualmente")](intro-to-manual-camera-controls-images/image20.png#lightbox)
+1. Com o segmento bloqueado ainda selecionado, coloque um cartão cinza físico na frente da câmera e toque no botão cartão cinza para ajustar o equilíbrio de branco ao mundo cinza:
 
-    [![](intro-to-manual-camera-controls-images/image21.png "Toque no botão de cartão de cinza para ajustar o equilíbrio de branco para o mundo de cinza")](intro-to-manual-camera-controls-images/image21.png#lightbox)
-1. Interrompa o aplicativo.
+    [![](intro-to-manual-camera-controls-images/image21.png "Toque no botão cartão cinza para ajustar o equilíbrio de branco ao mundo cinza")](intro-to-manual-camera-controls-images/image21.png#lightbox)
+1. Pare o aplicativo.
 
-O código acima mostra como monitorar as configurações de balanço de branco quando a câmera está no modo automático ou usar os controles deslizantes para controlar o equilíbrio em branco quando ele estiver no modo bloqueado.
+O código acima mostrou como monitorar as configurações de balanço de branco quando a câmera está no modo automático ou usar controles deslizantes para controlar o equilíbrio de branco quando ele está no modo bloqueado.
 
 ## <a name="bracketed-capture"></a>Captura entre colchetes
 
-A captura entre colchetes é baseada nas configurações dos controles de câmera manuais apresentadas acima e permite que o aplicativo capturar um momento específico, em uma variedade de maneiras diferentes.
+A captura entre colchetes é baseada nas configurações dos controles de câmera manuais apresentados acima e permite que o aplicativo Capture um momento no tempo, de várias maneiras diferentes.
 
-Em poucas palavras, entre colchetes captura é uma intermitência de ainda imagens tiradas com uma variedade de configurações de imagem para a imagem.
+Simplesmente declarado, a captura entre colchetes é uma intermitência de imagens ainda realizadas com uma variedade de configurações de imagem para imagem.
 
-[![](intro-to-manual-camera-controls-images/image22.png "Como funciona a capturar entre colchetes")](intro-to-manual-camera-controls-images/image22.png#lightbox)
+[![](intro-to-manual-camera-controls-images/image22.png "Como funciona a captura entre colchetes")](intro-to-manual-camera-controls-images/image22.png#lightbox)
 
-Usando a captura entre colchetes no iOS 8, um aplicativo pode predefinir uma série de controles de câmera manuais, emitir um comando único e têm a cena atual retornar uma série de imagens para cada uma das predefinições de manual.
+Usando a captura entre colchetes no iOS 8, um aplicativo pode predefinir uma série de controles de câmera manual, emitir um único comando e fazer com que a cena atual retorne uma série de imagens para cada uma das predefinições manuais.
 
 ### <a name="bracketed-capture-basics"></a>Noções básicas de captura entre colchetes
 
-Novamente, entre colchetes de captura é uma intermitência de ainda imagens tiradas com configurações variadas de imagem para imagem. Os tipos de entre colchetes capturar disponíveis são:
+Novamente, a captura entre colchetes é uma intermitência de imagens ainda realizadas com configurações variadas de imagem para imagem. Os tipos de captura entre colchetes disponíveis são:
 
--  **Auto exposição colchete** – em que todas as imagens têm uma quantidade de Bias variada.
--  **Colchete de exposição manual** – em que todas as imagens têm uma variadas do obturador velocidade (duração) e ISO quantidade.
--  **Colchete de intermitente simples** – uma série de imagens estáticas executadas em sucessão rápida.
+-  **Colchete de exposição automática** – onde todas as imagens têm um valor de tendência variado.
+-  **Colchete de exposição manual** – onde todas as imagens têm uma velocidade de obturador (duração) variada e um valor ISO.
+-  **Colchete de intermitência simples** – uma série de imagens ainda realizadas em sucessão rápida.
 
 
-### <a name="new-bracketed-capture-controls-in-ios-8"></a>Novos entre colchetes capturar controles no iOS 8
+### <a name="new-bracketed-capture-controls-in-ios-8"></a>Novos controles de captura entre colchetes no iOS 8
 
-Todos os comandos de captura entre colchetes são implementados no `AVCaptureStillImageOutput` classe. Use o `CaptureStillImageBracket`método para obter uma série de imagens com a matriz de configurações fornecida.
+Todos os comandos de captura entre colchetes são `AVCaptureStillImageOutput` implementados na classe. Use o `CaptureStillImageBracket`método para obter uma série de imagens com a matriz de configurações determinada.
 
 Duas novas classes foram implementadas para lidar com as configurações:
 
--   `AVCaptureAutoExposureBracketedStillImageSettings` – Ele tem uma propriedade, `ExposureTargetBias`, usado para definir o desvio para um colchete de exposição automática. 
--   `AVCaptureManual`  `ExposureBracketedStillImageSettings` – Ele tem duas propriedades, `ExposureDuration` e `ISO`, usado para definir a velocidade do obturador e ISO para um colchete de exposição manual. 
+-   `AVCaptureAutoExposureBracketedStillImageSettings`– Ele tem uma propriedade, `ExposureTargetBias`, usada para definir a tendência de um colchete de exposição automática. 
+-   `AVCaptureManual`  `ExposureBracketedStillImageSettings`– Ele tem duas propriedades `ExposureDuration` e `ISO`, usado para definir a velocidade do obturador e o ISO para um colchete de exposição manual. 
 
 
-### <a name="bracketed-capture-controls-dos-and-donts"></a>Regras de controla a captura entre colchetes
+### <a name="bracketed-capture-controls-dos-and-donts"></a>Controles de captura entre colchetes são e não são
 
-#### <a name="dos"></a>Tarefas pendentes
+#### <a name="dos"></a>Do
 
-A seguir está uma lista de coisas que deve ser feita quando o uso da captura entre colchetes controla no iOS 8:
+Veja a seguir uma lista de coisas que devem ser feitas ao usar os controles de captura entre colchetes no iOS 8:
 
--  Preparar o aplicativo para a captura pior situação chamando o `PrepareToCaptureStillImageBracket` método.
--  Suponha que os buffers de exemplo serão vêm do mesmo pool compartilhado.
--  Para liberar a memória que foi alocada por uma chamada anterior de preparação, chamar `PrepareToCaptureStillImageBracket` novamente e enviá-lo em uma matriz de um objeto.
-
-
-#### <a name="donts"></a>Dicas sobre
-
-A seguir está uma lista de coisas que não deve ser feita quando o uso da captura entre colchetes controla no iOS 8:
-
--  Não misture entre colchetes capturar tipos de configurações em uma única captura.
--  Não solicitar mais de `MaxBracketedCaptureStillImageCount` imagens em uma única captura.
+-  Prepare o aplicativo para a pior situação de captura chamando o `PrepareToCaptureStillImageBracket` método.
+-  Suponha que os buffers de exemplo vão vir do mesmo pool compartilhado.
+-  Para liberar a memória que foi alocada por uma chamada de preparação anterior `PrepareToCaptureStillImageBracket` , chame novamente e envie uma matriz de um objeto.
 
 
-### <a name="bracketed-capture-details"></a>Detalhes de captura entre colchetes
+#### <a name="donts"></a>Regras
 
-Os seguintes detalhes devem ser levados em consideração ao trabalhar com a captura de entre colchetes no iOS 8:
+Veja a seguir uma lista de coisas que não devem ser feitas ao usar os controles de captura entre colchetes no iOS 8:
 
--  Configurações entre colchetes substituem temporariamente o `AVCaptureDevice` configurações.
--  Configurações de estabilização da imagem Flash e ainda são ignoradas.
--  Todas as imagens devem usar o mesmo formato de saída (jpeg, png, etc.)
+-  Não misture tipos de configurações de captura entre colchetes em uma única captura.
+-  Não solicite mais `MaxBracketedCaptureStillImageCount` de imagens em uma única captura.
+
+
+### <a name="bracketed-capture-details"></a>Detalhes da captura entre colchetes
+
+Os detalhes a seguir devem ser levados em consideração ao trabalhar com a captura entre colchetes no iOS 8:
+
+-  Configurações entre colchetes substituem `AVCaptureDevice` temporariamente as configurações.
+-  As configurações de estabilização do flash e da imagem ainda são ignoradas.
+-  Todas as imagens devem usar o mesmo formato de saída (JPEG, png, etc.)
 -  Visualização de vídeo pode descartar quadros.
--  Captura entre colchetes é compatível com todos os dispositivos compatíveis com iOS 8.
+-  Há suporte para a captura entre colchetes em todos os dispositivos compatíveis com o iOS 8.
 
 
-Com essas informações em mente, vamos dar uma olhada em um exemplo de como usar o entre colchetes capturar no iOS 8.
+Com essas informações em mente, vamos dar uma olhada em um exemplo de uso da captura entre colchetes no iOS 8.
 
 ### <a name="bracket-capture-example"></a>Exemplo de captura de colchete
 
-Com o código de configuração de captura geral de AV em vigor, um `UIViewController` podem ser adicionados ao Storyboard do aplicativo e configurados da seguinte maneira:
+Com o código de configuração geral da captura AV em vigor `UIViewController` , um pode ser adicionado ao storyboard do aplicativo e configurado da seguinte maneira:
 
-[![](intro-to-manual-camera-controls-images/image23.png "Um UIViewController pode ser adicionado aos aplicativos Storyboard e configurado conforme mostrado aqui")](intro-to-manual-camera-controls-images/image23.png#lightbox)
+[![](intro-to-manual-camera-controls-images/image23.png "Um UIViewController pode ser adicionado ao storyboard dos aplicativos e configurado como mostrado aqui")](intro-to-manual-camera-controls-images/image23.png#lightbox)
 
-O modo de exibição contém os seguintes elementos principais:
+A exibição contém os seguintes elementos principais:
 
--  Um `UIImageView` que exibirá a transmissão de vídeo.
--  Três `UIImageViews` que exibirá os resultados da captura.
--  Um `UIScrollView` para abrigar o feed de vídeo e modos de exibição de resultado.
--  Um `UIButton` usado para tirar uma captura entre colchetes com algumas configurações predefinidas.
+-  Um `UIImageView` que exibirá o feed de vídeo.
+-  Três `UIImageViews` que exibirão os resultados da captura.
+-  Um `UIScrollView` para alojar as exibições de feed de vídeo e resultado.
+-  Um `UIButton` usado para fazer uma captura entre colchetes com algumas configurações predefinidas.
 
 
-Faça o seguinte para o controlador de exibição de transmissão-up para capturar entre colchetes:
+Faça o seguinte para conectar o controlador de exibição para captura entre colchetes:
 
 
 1. Adicione as seguintes instruções using:
@@ -1216,7 +1216,7 @@ Faça o seguinte para o controlador de exibição de transmissão-up para captur
     using CoreImage;
     ```  
   
-1. Adicione as seguintes variáveis particulares:
+1. Adicione as seguintes variáveis privadas:
 
     ```csharp
     #region Private Variables
@@ -1236,7 +1236,7 @@ Faça o seguinte para o controlador de exibição de transmissão-up para captur
     #endregion
     ```  
   
-1. Adicione o seguinte método particular para criar os modos de exibição de imagem de saída necessária:
+1. Adicione o seguinte método particular para criar as exibições de imagem de saída necessárias:
 
     ```csharp
     #region Private Methods
@@ -1263,7 +1263,7 @@ Faça o seguinte para o controlador de exibição de transmissão-up para captur
     #endregion
     ```  
   
-1. Substituir o `ViewDidLoad` método e adicione o seguinte código:
+1. Substitua o `ViewDidLoad` método e adicione o seguinte código:
     
     ```
     public override void ViewDidLoad ()
@@ -1322,7 +1322,7 @@ Faça o seguinte para o controlador de exibição de transmissão-up para captur
     ```
     
   
-1. Substituir o `ViewDidAppear` método e adicione o seguinte código:
+1. Substitua o `ViewDidAppear` método e adicione o seguinte código:
 
     ```csharp
     public override void ViewDidAppear (bool animated)
@@ -1340,23 +1340,23 @@ Faça o seguinte para o controlador de exibição de transmissão-up para captur
     
     ```  
     
-1. Salve as alterações de código e executar o aplicativo.
-1. Uma cena de quadro e toque no botão de colchete capturar:
+1. Salve as alterações no código e execute o aplicativo.
+1. Quadro uma cena e toque no botão capturar colchete:
 
-    [![](intro-to-manual-camera-controls-images/image24.png "Uma cena de quadro e toque no botão de captura de colchete")](intro-to-manual-camera-controls-images/image24.png#lightbox)
-1. Passe o dedo para direita para a esquerda para ver as três imagens tomadas por capturar entre colchetes:
+    [![](intro-to-manual-camera-controls-images/image24.png "Quadro uma cena e toque no botão de colchete de captura")](intro-to-manual-camera-controls-images/image24.png#lightbox)
+1. Passe o dedo da direita para a esquerda para ver as três imagens tiradas pela captura entre colchetes:
 
-    [![](intro-to-manual-camera-controls-images/image25.png "Passe o dedo para direita para a esquerda para ver as três imagens tomadas por capturar entre colchetes")](intro-to-manual-camera-controls-images/image25.png#lightbox)
-1. Interrompa o aplicativo.
+    [![](intro-to-manual-camera-controls-images/image25.png "Passe o dedo da direita para a esquerda para ver as três imagens tiradas pela captura entre colchetes")](intro-to-manual-camera-controls-images/image25.png#lightbox)
+1. Pare o aplicativo.
 
 
-O código acima mostra como configurar e levar um automática exposição entre colchetes capturar no iOS 8.
+O código acima mostrou como configurar e pegar uma captura com colchetes de exposição automática no iOS 8.
 
 ## <a name="summary"></a>Resumo
 
-Neste artigo temos coberto uma introdução para os novos controles de câmera manuais fornecido pelo iOS 8 e abordou os conceitos básicos do que eles fazem e como eles funcionam. Podemos dar exemplos de foco Manual, Manual de exposição e balanço de branco Manual. Por fim, demos um exemplo levando um entre colchetes capturar usando os controles de câmera manuais discutido anteriormente
+Neste artigo, abordamos uma introdução aos novos controles de câmera manual fornecidos pelo iOS 8 e abordamos os conceitos básicos do que eles fazem e como eles funcionam. Nós fornecemos exemplos de foco manual, exposição manual e saldo branco manual. Finalmente, fornecemos um exemplo de uma captura com colchetes usando os controles de câmera manual abordados anteriormente
 
 ## <a name="related-links"></a>Links relacionados
 
-- [ManualCameraControls (amostra)](https://developer.xamarin.com/samples/monotouch/ManualCameraControls)
+- [ManualCameraControls (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/manualcameracontrols)
 - [Introdução ao iOS 8](~/ios/platform/introduction-to-ios8.md)

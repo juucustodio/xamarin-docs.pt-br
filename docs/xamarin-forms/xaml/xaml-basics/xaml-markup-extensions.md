@@ -7,16 +7,16 @@ ms.assetid: F4A37564-B18B-42FF-B841-9A1949895AB6
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/27/2018
-ms.openlocfilehash: 17ca8ec481b8af5ad0515e6544613864f0a66271
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 2417d6400faf80ad9b3b24a032046e7e867814f5
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61341953"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68655482"
 ---
 # <a name="part-3-xaml-markup-extensions"></a>Parte 3. Extensões de marcação XAML
 
-[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
 
 _Extensões de marcação XAML constituem um recurso importante no XAML que permitem que as propriedades sejam definidas para objetos ou valores que são referenciados indiretamente de outras fontes. Extensões de marcação XAML são particularmente importantes para compartilhamento de objetos e fazendo referência constantes usadas em todo um aplicativo, mas que encontrar seu utilitário maior de associações de dados._
 
@@ -403,7 +403,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib"
 
 Observe que a palavra-chave `clr-namespace` é seguido por dois-pontos e, em seguida, o nome do namespace .NET, seguido por um ponto e vírgula, a palavra-chave `assembly`, um sinal de igual e o nome do assembly.
 
-Sim, seguido por dois pontos `clr-namespace` , mas o sinal de igual segue `assembly`. A sintaxe foi definida desta maneira deliberadamente: A maioria das declarações de namespace XML fazem referência a um URI que começa um nome de esquema URI, como `http`, que é sempre seguido por dois-pontos. O `clr-namespace` parte dessa cadeia de caracteres destina-se para simular que a convenção.
+Sim, seguido por dois pontos `clr-namespace` , mas o sinal de igual segue `assembly`. A sintaxe foi definida dessa forma deliberadamente: A maioria das declarações de namespace XML fazem referência a um URI que inicia um `http`nome de esquema de URI, como, que é sempre seguido por dois-pontos. O `clr-namespace` parte dessa cadeia de caracteres destina-se para simular que a convenção.
 
 As duas declarações de namespace esses estão incluídas na **StaticConstantsPage** exemplo. Observe que o `BoxView` dimensões são definidas como `Math.PI` e `Math.E`, mas em escala por um fator de 100:
 
@@ -547,7 +547,7 @@ Aqui está um exemplo:
 </ContentPage>
 ```
 
-Talvez a lição mais importante que você deve executar este exemplo é a sintaxe de extensão de marcação: Sem aspas devem aparecer dentro das chaves de uma extensão de marcação. Ao digitar a extensão de marcação em um arquivo XAML, é natural deseja colocar os valores das propriedades entre aspas. Resista à tentação!
+Talvez a lição mais importante que você deve seguir neste exemplo seja a sintaxe da extensão de marcação: Nenhuma aspa deve aparecer dentro das chaves de uma extensão de marcação. Ao digitar a extensão de marcação em um arquivo XAML, é natural deseja colocar os valores das propriedades entre aspas. Resista à tentação!
 
 Aqui está o programa em execução:
 
@@ -561,7 +561,7 @@ As extensões de marcação XAML mostradas aqui oferecem suporte importante para
 
 ## <a name="related-links"></a>Links relacionados
 
-- [XamlSamples](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
+- [XamlSamples](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
 - [Parte 1. Introdução ao XAML](~/xamarin-forms/xaml/xaml-basics/get-started-with-xaml.md)
 - [Parte 2. Sintaxe essencial de XAML](~/xamarin-forms/xaml/xaml-basics/essential-xaml-syntax.md)
 - [Parte 4. Conceitos básicos da associação de dados](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: 7e2d6c1bb462a8eee5debc139aee9f71ae8ac6a8
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 9fafc6965c5d2dec79f440579a5cf3746a545bae
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68508780"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68644389"
 ---
 # <a name="walkthrough---saving-the-activity-state"></a>Passo a passo: salvar o estado da atividade
 
@@ -20,7 +20,7 @@ _Abordamos a teoria por trás do estado de salvamento no guia do ciclo de vida d
 
 ## <a name="activity-state-walkthrough"></a>Instruções do estado da atividade
 
-Vamos abrir o projeto **ActivityLifecycle_Start** (no exemplo de [ActivityLifecycle](https://developer.xamarin.com/samples/monodroid/ActivityLifecycle) ), compilá-lo e executá-lo. Esse é um projeto muito simples que tem duas atividades para demonstrar o ciclo de vida da atividade e como os vários métodos de ciclo de vida são chamados. Quando você inicia o aplicativo, a tela de `MainActivity` é exibida:
+Vamos abrir o projeto **ActivityLifecycle_Start** (no exemplo de [ActivityLifecycle](https://docs.microsoft.com/samples/xamarin/monodroid-samples/activitylifecycle) ), compilá-lo e executá-lo. Esse é um projeto muito simples que tem duas atividades para demonstrar o ciclo de vida da atividade e como os vários métodos de ciclo de vida são chamados. Quando você inicia o aplicativo, a tela de `MainActivity` é exibida:
 
 [![Atividade de uma tela](saving-state-images/01-activity-a-sml.png)](saving-state-images/01-activity-a.png#lightbox)
 
@@ -176,6 +176,6 @@ Neste Walkthough, usamos nosso conhecimento do ciclo de vida da atividade para p
 
 ## <a name="related-links"></a>Links relacionados
 
-- [ActivityLifecycle (exemplo)](https://developer.xamarin.com/samples/monodroid/ActivityLifecycle)
+- [ActivityLifecycle (exemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/activitylifecycle)
 - [Ciclo de vida da atividade](~/android/app-fundamentals/activity-lifecycle/index.md)
 - [Atividade do Android](xref:Android.App.Activity)

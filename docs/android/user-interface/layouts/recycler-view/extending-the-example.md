@@ -1,45 +1,45 @@
 ---
 title: Estendendo o exemplo de RecyclerView
-description: Adicionando manipuladores de eventos de clique de item para o aplicativo de exemplo de RecyclerView.
+description: Adicionar manipuladores de eventos de clique de item ao aplicativo de exemplo RecyclerView.
 ms.prod: xamarin
 ms.assetid: 707EE1CE-C164-485B-944C-82C6795E8A24
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/13/2018
-ms.openlocfilehash: eca0f58a470228ce8e6331defe88c1ef727cef57
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: fd813427836b0250b84941eca54d6bbe6219518e
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61035981"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68645327"
 ---
 # <a name="extending-the-recyclerview-example"></a>Estendendo o exemplo de RecyclerView
 
 
-O aplicativo básico descrito em [um exemplo de RecyclerView básico](~/android/user-interface/layouts/recycler-view/recyclerview-example.md) , na verdade, não faz muita coisa &ndash; simplesmente rola e exibe uma lista fixa de itens de fotografia para facilitar a navegação. Em aplicativos do mundo real, os usuários esperam ser capaz de interagir com o aplicativo tocando em itens na exibição. Além disso, a fonte de dados subjacente pode alterar (ou ser alterada pelo aplicativo) e o conteúdo da exibição deve permanecer consistente com essas alterações. Nas seções a seguir, você aprenderá como lidar com eventos de clique de item e atualizar `RecyclerView` quando as alterações da fonte de dados subjacentes.
+O aplicativo básico descrito em [um exemplo de RecyclerView básico](~/android/user-interface/layouts/recycler-view/recyclerview-example.md) realmente não faz &ndash; muito, simplesmente rola e exibe uma lista fixa de itens de fotografia para facilitar a navegação. Em aplicativos do mundo real, os usuários esperam ser capazes de interagir com o aplicativo tocando em itens na exibição. Além disso, a fonte de dados subjacente pode alterar (ou ser alterada pelo aplicativo) e o conteúdo da exibição deve permanecer consistente com essas alterações. Nas seções a seguir, você aprenderá a lidar com eventos de clique de item e `RecyclerView` atualizar quando a fonte de dados subjacente for alterada.
 
 
-### <a name="handling-item-click-events"></a>Manipulação de eventos de clique de Item
+### <a name="handling-item-click-events"></a>Manipulando eventos de clique de item
 
-Quando um usuário toca em um item a `RecyclerView`, um evento de clique de item é gerado para notificar o aplicativo no qual o item foi tocado. Esse evento não é gerado por `RecyclerView` &ndash; em vez disso, o modo de exibição de item (que é encapsulado em titular da exibição) detecta toques e reporta esses toques como eventos de clique.
+Quando um usuário toca um item no `RecyclerView`, um evento de clique de item é gerado para notificar o aplicativo sobre qual item foi tocado. Esse evento não é gerado pelo `RecyclerView` &ndash; em vez disso, o modo de exibição de item (que é encapsulado no espaço de exibição) detecta toques e relatórios como eventos de clique.
 
-Para ilustrar como manipular eventos de clique de item, as etapas a seguir explicam como o aplicativo de exibição de fotos básico é modificado para relatório quais fotografia tinha sido tocada pelo usuário. Quando ocorre um evento de clique do item no aplicativo de exemplo, ocorre a seguinte sequência:
+Para ilustrar como lidar com eventos de clique de item, as etapas a seguir explicam como o aplicativo básico de exibição de fotos é modificado para relatar qual fotografia foi tocada pelo usuário. Quando um evento de clique de item ocorre no aplicativo de exemplo, a sequência a seguir ocorre:
 
-1.  A fotografia `CardView` detecta o evento de clique no item e notifica o adaptador.
+1.  A fotografia `CardView` detecta o evento de clique do item e notifica o adaptador.
 
-2.  O adaptador de encaminha o evento (com informações de posição do item) para o manipulador de clique de item de atividade.
+2.  O adaptador encaminha o evento (com informações de posição de item) para o manipulador de clique de item da atividade.
 
-3.  Manipulador de clique de item de atividade responde ao evento de clique do item.
+3.  O manipulador de item-clique da atividade responde ao evento de clique do item.
 
-Chamado pela primeira vez, de um membro do manipulador de eventos `ItemClick` é adicionado para o `PhotoAlbumAdapter` definição de classe:
+Primeiro, um membro do manipulador de `ItemClick` eventos chamado é adicionado `PhotoAlbumAdapter` à definição de classe:
 
 ```csharp
 public event EventHandler<int> ItemClick;
 ```
 
-Em seguida, um método de manipulador de eventos de clique do item é adicionado à `MainActivity`.
-Esse manipulador exibirá rapidamente uma notificação do sistema que indica qual item de fotografia foi tocado:
+Em seguida, um método de manipulador de eventos de clique de `MainActivity`item é adicionado a.
+Este manipulador exibe brevemente um sistema de notificação que indica qual item de fotografia foi tocado:
 
 ```csharp
 void OnItemClick (object sender, int position)
@@ -50,7 +50,7 @@ void OnItemClick (object sender, int position)
 
 ```
 
-Em seguida, uma linha de código é necessário para registrar o `OnItemClick` manipulador com `PhotoAlbumAdapter`. Um bom lugar para fazer isso é imediatamente após `PhotoAlbumAdapter` é criado: 
+Em seguida, uma linha de código é necessária para registrar `OnItemClick` o manipulador `PhotoAlbumAdapter`com. Um bom local para fazer isso é imediatamente após `PhotoAlbumAdapter` a criação: 
 
 ```csharp
 mAdapter = new PhotoAlbumAdapter (mPhotoAlbum);
@@ -58,9 +58,9 @@ mAdapter.ItemClick += OnItemClick;
 
 ```
 
-Neste exemplo básico, o registro do manipulador é feita na atividade principal `OnCreate` método, mas um aplicativo de produção pode registrar o manipulador no `OnResume` e cancelar o registro no `OnPause` &ndash; consulte [ciclo de vida de atividade ](~/android/app-fundamentals/activity-lifecycle/index.md) para obter mais informações.
+Neste exemplo básico, o registro do manipulador ocorre no método `OnCreate` da atividade principal, mas um aplicativo de produção pode registrar o manipulador no `OnResume` e cancelar seu registro em `OnPause` &ndash; consulte [ciclo de vida da atividade](~/android/app-fundamentals/activity-lifecycle/index.md) para obter mais divulgação.
 
-`PhotoAlbumAdapter` agora irá chamar `OnItemClick` quando ele recebe um evento de clique no item. A próxima etapa é criar um manipulador no adaptador que emite isso `ItemClick` eventos. O seguinte método, `OnClick`, é adicionada logo após o adaptador `ItemCount` método:
+`PhotoAlbumAdapter`Agora será chamado `OnItemClick` quando receber um evento de clique de item. A próxima etapa é criar um manipulador no adaptador que gera esse `ItemClick` evento. O método a seguir `OnClick`,, é adicionado imediatamente após o método `ItemCount` do adaptador:
 
 ```csharp
 void OnClick (int position)
@@ -70,8 +70,8 @@ void OnClick (int position)
 }
 ```
 
-Isso `OnClick` método é o adaptador *ouvinte* para eventos de clique de item de modos de exibição do item. Antes que este ouvinte pode ser registrado com uma exibição de item (por meio do titular do modo de exibição do modo de exibição de item), o `PhotoViewHolder` construtor deve ser modificada para aceitar esse método como um argumento adicional e registre `OnClick` com o modo de exibição do item `Click` eventos.
-Aqui está o modificado `PhotoViewHolder` construtor:
+Esse `OnClick` método é o ouvinte do adaptador para eventos de clique de item das exibições de item. Antes que esse ouvinte possa ser registrado com um modo de exibição de item (por meio do espaço de `PhotoViewHolder` exibição do modo de exibição de item), o construtor deve ser modificado para `OnClick` aceitar esse método como `Click` um argumento adicional e registrar com o evento de exibição de item.
+Este é o construtor `PhotoViewHolder` modificado:
 
 ```csharp
 public PhotoViewHolder (View itemView, Action<int> listener)
@@ -85,19 +85,19 @@ public PhotoViewHolder (View itemView, Action<int> listener)
 
 ```
 
-O `itemView` parâmetro contém uma referência para o `CardView` que foi tocado pelo usuário. Observe que a classe base do modo de exibição titular sabe a posição de layout do item (`CardView`) que ele representa (por meio de `LayoutPosition` propriedade), e essa posição é passada para o adaptador `OnClick` método quando um evento de clique no item ocorre. O adaptador `OnCreateViewHolder` método é modificado para passar o adaptador `OnClick` método ao construtor do titular exibição:
+O `itemView` parâmetro contém uma referência `CardView` ao que foi tocado pelo usuário. Observe que a classe base do modo de exibição tem conhecimento da posição de layout`CardView`do item () que ele representa `LayoutPosition` (por meio da propriedade), e essa posição é passada `OnClick` para o método do adaptador quando ocorre um evento de clique de item. O método do `OnCreateViewHolder` adaptador é modificado para passar o método do `OnClick` adaptador para o construtor do titular do modo de exibição:
 
 ```csharp
 PhotoViewHolder vh = new PhotoViewHolder (itemView, OnClick);
 ```
 
-Agora quando você compila e executa o aplicativo de exibição de fotos de exemplo, tocando em uma foto na exibição fará com que uma notificação do sistema apareçam que relata qual fotografia foi tocada:
+Agora, quando você cria e executa o exemplo de aplicativo de exibição de fotos, tocar em uma foto na tela fará com que apareça uma notificação de que o relatório que a fotografia foi tocado:
 
-[![Toast de exemplo que aparece quando uma cartão de foto é tocado](extending-the-example-images/01-photo-selected-sml.png)](extending-the-example-images/01-photo-selected.png#lightbox)
+[![Exemplo de notificação que aparece quando um cartão de fotos é tocado](extending-the-example-images/01-photo-selected-sml.png)](extending-the-example-images/01-photo-selected.png#lightbox)
 
-Este exemplo demonstra apenas uma abordagem para a implementação de manipuladores de eventos com `RecyclerView`. Outra abordagem que pode ser usada aqui é colocar eventos no proprietário da exibição e têm o adaptador de assinar esses eventos. Se o aplicativo de fotos de exemplo fornecido a um recurso de edição de fotos, eventos separados seria necessários para o `ImageView` e o `TextView` dentro de cada `CardView`: aborda o `TextView` iniciaria uma `EditView` caixa de diálogo que permite que o usuário edite a legenda e toca no `ImageView` iniciaria uma ferramenta Retocar fotos que permite ao usuário recortar ou gire a foto. Dependendo das necessidades do seu aplicativo, você deve projetar a melhor abordagem para manipular e respondendo a eventos de toque.
+Este exemplo demonstra apenas uma abordagem para implementar manipuladores de eventos `RecyclerView`com. Outra abordagem que poderia ser usada aqui é inserir eventos no detentor do modo de exibição e fazer com que o adaptador assine esses eventos. Se o aplicativo de fotos de exemplo forneceu um recurso de edição de fotos, os eventos `ImageView` separados seriam `TextView` necessários para `CardView`o e o em `TextView` cada um: `EditView` os toques no iniciarão uma caixa de diálogo que permite ao usuário editar a legenda e os toques no `ImageView` iniciarão uma ferramenta de retoque de fotos que permite ao usuário cortar ou girar a foto. Dependendo das necessidades do seu aplicativo, você deve criar a melhor abordagem para lidar e responder a eventos de toque.
 
-Para demonstrar como `RecyclerView` pode ser atualizada quando as alterações do conjunto de dados, o aplicativo de exibição de fotos de exemplo podem ser modificadas para escolher uma foto na fonte de dados aleatoriamente e trocá-lo com a foto primeiro. Primeiro, uma **escolher aleatório** botão é adicionado para o aplicativo de fotos de exemplo **Main. axml** layout:
+Para demonstrar como `RecyclerView` o pode ser atualizado quando o conjunto de dados é alterado, o aplicativo de exibição de fotos de exemplo pode ser modificado para escolher aleatoriamente uma foto na fonte de dados e trocá-la pela primeira foto. Primeiro, um botão de **seleção aleatório** é adicionado ao layout **principal. axml** do aplicativo de foto de exemplo:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -120,7 +120,7 @@ Para demonstrar como `RecyclerView` pode ser atualizada quando as alterações d
 </LinearLayout>
 ```
 
-Em seguida, o código é adicionado ao final da atividade principal `OnCreate` método para localizar o `Random Pick` botão no layout e anexar um manipulador para ele:
+Em seguida, o código é adicionado ao final do método da `OnCreate` atividade principal para localizar o `Random Pick` botão no layout e anexar um manipulador a ele:
 
 ```csharp
 Button randomPickBtn = FindViewById<Button>(Resource.Id.randPickButton);
@@ -136,9 +136,9 @@ randomPickBtn.Click += delegate
 
 ```
 
-Esse manipulador chama o álbum de fotos `RandomSwap` método quando o **escolha aleatória** botão é tocado. O `RandomSwap` método aleatoriamente alterna uma foto com a primeira foto na fonte de dados, em seguida, retorna o índice da foto trocado aleatoriamente. Quando você compila e executar o aplicativo de exemplo com esse código, tocando o **escolher aleatório** botão não resulta em uma alteração de exibição porque o `RecyclerView` não está ciente da mudança para a fonte de dados.
+Esse manipulador chama o método do `RandomSwap` álbum de fotos quando o botão de **seleção aleatória** é tocado. O `RandomSwap` método troca aleatoriamente uma foto pela primeira foto da fonte de dados e, em seguida, retorna o índice da foto trocada aleatoriamente. Quando você compila e executa o aplicativo de exemplo com esse código, tocar no botão de **seleção aleatório** não resulta em uma alteração de exibição `RecyclerView` porque o não está ciente da alteração na fonte de dados.
 
-Para manter `RecyclerView` atualizado depois que a fonte de dados alterações, o **escolha aleatória** clique manipulador deve ser modificado para chamar o adaptador `NotifyItemChanged` método para cada item na coleção que foi alterada (nesse caso, dois itens têm alterado: a foto de primeira e a foto trocada). Isso faz com que `RecyclerView` para atualizar sua exibição para que ele seja consistente com o novo estado da fonte de dados:
+Para manter `RecyclerView` a atualização após a alteração da fonte de dados, o manipulador de cliques de **seleção aleatório** deve ser modificado `NotifyItemChanged` para chamar o método do adaptador para cada item na coleção que foi alterada (nesse caso, dois itens foram alterados: a primeira foto e a foto trocada). Isso faz `RecyclerView` com que o atualize sua exibição para que seja consistente com o novo estado da fonte de dados:
 
 ```csharp
 Button randomPickBtn = FindViewById<Button>(Resource.Id.randPickButton);
@@ -159,17 +159,17 @@ randomPickBtn.Click += delegate
 
 ```
 
-Agora, quando o **escolher aleatório** botão é tocado, `RecyclerView` atualiza a exibição para mostrar que uma foto ainda mais para baixo na coleção foi trocada com a primeira foto na coleção:
+Agora, quando o botão de **seleção aleatória** é tocado `RecyclerView` , o atualiza a exibição para mostrar que uma foto mais para baixo na coleção foi trocada pela primeira foto da coleção:
 
-[![Primeira captura de tela antes da troca, a segunda captura de tela após a troca](extending-the-example-images/02-random-pick-sml.png)](extending-the-example-images/02-random-pick.png#lightbox)
+[![Primeira captura de tela antes da permuta, segunda captura de tela após permuta](extending-the-example-images/02-random-pick-sml.png)](extending-the-example-images/02-random-pick.png#lightbox)
 
-É claro `NotifyDataSetChanged` pode ter sido chamado em vez de fazer as duas chamadas para `NotifyItemChanged`, mas fazer então forçaria `RecyclerView` atualizar toda a coleção, mesmo que apenas dois itens da coleção foi alterado. Chamando `NotifyItemChanged` é significativamente mais eficiente do que chamar `NotifyDataSetChanged`.
+É claro `NotifyDataSetChanged` que poderia ter sido chamado em vez de fazer as duas `NotifyItemChanged`chamadas, mas isso forçaria `RecyclerView` a atualizar toda a coleção, embora apenas dois itens da coleção tivessem mudado. Chamar `NotifyItemChanged` é significativamente mais eficiente do que `NotifyDataSetChanged`chamar.
 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [RecyclerViewer (amostra)](https://developer.xamarin.com/samples/monodroid/android5.0/RecyclerViewer)
+- [RecyclerViewer (exemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android50-recyclerviewer)
 - [RecyclerView](~/android/user-interface/layouts/recycler-view/index.md)
-- [RecyclerView partes e funcionalidade](~/android/user-interface/layouts/recycler-view/parts-and-functionality.md)
+- [Partes e funcionalidades do RecyclerView](~/android/user-interface/layouts/recycler-view/parts-and-functionality.md)
 - [Um exemplo de RecyclerView básico](~/android/user-interface/layouts/recycler-view/recyclerview-example.md)
 - [RecyclerView](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.html)

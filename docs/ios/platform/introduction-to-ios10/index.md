@@ -1,235 +1,235 @@
 ---
 title: Introdução ao iOS 10
-description: Este artigo apresenta todas as APIs e recursos disponíveis no iOS 10 novos e modificados para desenvolvedores do xamarin. IOS.
+description: Este artigo apresenta todas as APIs e recursos novos e modificados disponíveis no iOS 10 para desenvolvedores do Xamarin. iOS.
 ms.prod: xamarin
 ms.assetid: FB91DFFE-CF5E-4253-92CB-78A6371259D9
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/29/2017
-ms.openlocfilehash: e84f5acdd1660633521d1a99325155b614b87e1b
-ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
+ms.openlocfilehash: edc585364df2e0b2129135e7bf5977c33a77a6e0
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67268913"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68647418"
 ---
 # <a name="introduction-to-ios-10"></a>Introdução ao iOS 10
 
-Com o novo iOS SDK 10, Apple incluiu novas APIs e serviços que permitem ao desenvolvedor criar novas categorias de aplicativos e recursos. Um aplicativo iOS agora pode estender os aplicativos de mensagens, Siri, telefone e mapas para fornecer a funcionalidade de avançados e envolvente para o usuário final que não estavam disponível anteriormente.
+Com o novo SDK do iOS 10, a Apple incluiu novas APIs e serviços que permitem ao desenvolvedor criar novas categorias de aplicativos e recursos. Um aplicativo iOS agora pode estender as mensagens, Siri, telefone e mapas de aplicativos para fornecer funcionalidade avançada e envolvente para o usuário final que estava indisponível anteriormente.
 
-Para obter mais informações sobre o iOS 10, consulte da Apple [iOS + aplicativos](https://developer.apple.com/ios/) documentação.
+Para obter mais informações sobre o iOS 10, consulte a documentação do [Ios + aplicativos](https://developer.apple.com/ios/) da Apple.
 
 ## <a name="whats-new-in-ios-10"></a>O que há de novo no iOS 10
 
-Apple adicionou várias novas APIs e serviços no iOS 10 junto com muitos aprimoramentos aos recursos existentes, incluindo:
+A Apple adicionou várias novas APIs e serviços no iOS 10, juntamente com vários aprimoramentos nos recursos existentes, incluindo:
 
-## <a name="adapting-to-the-true-tone-display"></a>Adaptação de acordo com a exibição de tom True
+## <a name="adapting-to-the-true-tone-display"></a>Adaptando para a exibição de Tom verdadeiro
 
-Tecnologia de exibição True de tom da Apple usa o sensor de luz ambiente em um dispositivo iOS para ajustar dinamicamente a cor e a intensidade da tela para coincidir com as condições de iluminação atuais. iOS 10 fornece as novas [UIWhitePointAdaptivityStyle](https://developer.apple.com/library/prerelease/content/documentation/General/Reference/InfoPlistKeyReference/Articles/iPhoneOSKeys.html#//apple_ref/doc/uid/TP40009252-SW31) chave que pode ser adicionado para o aplicativo `Info.plist` de arquivo e controla como o tom True se aplica a mudança de cor padrão. 
+A tecnologia de vídeo de verdadeiro tom da Apple usa o sensor de luz ambiente em um dispositivo iOS para ajustar dinamicamente a cor e a intensidade da exibição para corresponder às condições de iluminação atuais. o Ios 10 fornece a nova chave [UIWhitePointAdaptivityStyle](https://developer.apple.com/library/prerelease/content/documentation/General/Reference/InfoPlistKeyReference/Articles/iPhoneOSKeys.html#//apple_ref/doc/uid/TP40009252-SW31) que pode ser adicionada ao arquivo do `Info.plist` aplicativo e controla como o verdadeiro Tom aplica a mudança de cor padrão. 
 
-Os valores a seguir estão disponíveis:
+Os seguintes valores estão disponíveis:
 
-- `UIWhitePointAdaptivityStyleStandard` **Padrão** -usar a adaptabilidade ponto branco padrão.
-- `UIWhitePointAdaptivityStyleReading` – Usado para aplicativos voltados a leitura.
-- `UIWhitePointAdaptivityStyleGame` – Usado para aplicativos focados no jogo.
-- `UIWhitePointAdaptivityStyleVideo` – Usado para aplicativos focados no vídeo.
-- `UIWhitePointAdaptivityStylePhoto` – Usado para aplicativos voltados a fotografia onde a fidelidade de cor é mais importante do que o ponto branco ambientais ajustes.
+- `UIWhitePointAdaptivityStyleStandard`**Padrão** -use o adaptivity de ponto branco padrão.
+- `UIWhitePointAdaptivityStyleReading`-Usado para aplicativos com foco em leitura.
+- `UIWhitePointAdaptivityStyleGame`-Usado para aplicativos focados em jogos.
+- `UIWhitePointAdaptivityStyleVideo`-Usado para aplicativos com foco em vídeo.
+- `UIWhitePointAdaptivityStylePhoto`-Usado para aplicativos focados em fotografia em que a fidelidade de cor é mais importante do que os ajustes ambientais de ponto de branco.
 
 ## <a name="app-extensions"></a>Extensões de aplicativo
 
-Apple forneceu vários novos pontos de extensão de aplicativo no iOS 10:
+A Apple forneceu vários novos pontos de extensão de aplicativo no iOS 10:
 
 - Diretório de chamada
-- As intenções e propósitos de interface do usuário
+- Interface do usuário de tentativas e intenções
 - Mensagens
 - Conteúdo da notificação
-- Serviços de notificação
+- Notification Services
 - Pacote de adesivo
 
-Além disso, 3º extensões de aplicativo de teclado de terceiros têm os seguintes aprimoramentos:
+Além disso, as extensões de aplicativo de teclado de terceiros têm os seguintes aprimoramentos:
 
-- O novo `DocumentInputMode` propriedade do `UITextDocumentProxy` classe pode determinar o idioma de entrada de um documento e permitir a extensão de teclado alinhar com esse idioma.
-- O novo `HandleInputModeList` método permite que a extensão de teclado exiba o menu de seletor de teclado do sistema em resposta à chave de todo mundo sendo tocado.
+- A nova `DocumentInputMode` propriedade `UITextDocumentProxy` da classe pode determinar o idioma de entrada de um documento e permitir que a extensão do teclado se alinhe com esse idioma.
+- O novo `HandleInputModeList` método permite que a extensão do teclado exiba o menu do seletor de teclado do sistema em resposta à tecla do globo que está sendo tocado.
 
-Para obter mais informações, consulte nosso [Introdução às extensões](~/ios/platform/extensions.md), [integração de aplicativos de mensagem](~/ios/platform/message-app-integration/index.md), [Introdução ao sugestões proativas](~/ios/platform/search/proactive-suggestions.md), [ Introdução ao SiriKit](~/ios/platform/sirikit/index.md), [Introdução a notificações de usuário](~/ios/platform/user-notifications/index.md) da Apple [guia de programação de extensão do aplicativo](https://developer.apple.com/library/prerelease/content/documentation/General/Conceptual/ExtensibilityPG/index.html#//apple_ref/doc/uid/TP40014214).
+Para obter mais informações, consulte nossa [introdução às extensões](~/ios/platform/extensions.md), [integração de aplicativos de mensagens](~/ios/platform/message-app-integration/index.md), [introdução a sugestões](~/ios/platform/search/proactive-suggestions.md)proativas, [introdução ao SiriKit](~/ios/platform/sirikit/index.md), [introdução às notificações de usuário](~/ios/platform/user-notifications/index.md) e à Apple [ Guia de programação de extensão de aplicativo](https://developer.apple.com/library/prerelease/content/documentation/General/Conceptual/ExtensibilityPG/index.html#//apple_ref/doc/uid/TP40014214).
 
 ## <a name="app-search-enhancements"></a>Aperfeiçoamentos na pesquisa de aplicativo
 
-Destaque principal no iOS 10 oferece vários aprimoramentos para o aplicativo de pesquisa, como:
+O principal Spotlight no iOS 10 fornece vários aprimoramentos para a pesquisa de aplicativos, como:
 
-- **Popularidade do Link profundo de crowdsourcing (com a privacidade diferencial)** -fornece uma maneira de promover o conteúdo do aplicativo com vínculo profundo nos resultados da pesquisa.
-- **No aplicativo pesquisando** -usar o novo `CSSearchQuery` classe para fornecer capacidade de pesquisa de destaque no aplicativo semelhante a como funcionam os aplicativos de email, mensagens e anotações.
-- **Pesquisar continuação** - permite que um usuário iniciar uma pesquisa em destaque ou Safari e, em seguida, abrir um aplicativo e continuar essa pesquisa.
-- **Visualização de resultados de validação** – da Apple [ferramenta de validação de API de pesquisa do aplicativo](https://search.developer.apple.com/appsearch-validation-tool) agora exibe uma representação visual de marcação de um site e vinculação profunda ao realizar testes.
-- **Aplicativo de compartilhamento de imagem da mensagem** -permite populares imagens no aplicativo fornecidas para o compartilhamento de mensagens (por meio de uma extensão de aplicativo de mensagem) para aparecer em pesquisas de destaque.
+- **Crowdsourcing a popularidade do link profundo (com privacidade diferencial)** – fornece uma maneira de promover o conteúdo do aplicativo vinculado em profundidade nos resultados da pesquisa.
+- **Pesquisa no aplicativo** – use a nova `CSSearchQuery` classe para fornecer uma capacidade de pesquisa em destaque no aplicativo, semelhante à forma como os aplicativos mail, messages e Notes funcionam.
+- **Continuação da pesquisa** – permite que um usuário inicie uma pesquisa no Spotlight ou no Safari, em seguida, abra um aplicativo e continue a pesquisa.
+- **Visualização dos resultados da validação** – a [ferramenta de validação da API de pesquisa de aplicativos](https://search.developer.apple.com/appsearch-validation-tool) da Apple agora exibe uma representação visual da marcação de um site e da vinculação profunda ao preformar testes.
+- **Compartilhamento de imagem de aplicativo de mensagem** – permite que imagens populares no aplicativo fornecidas para compartilhamento em mensagens (por meio de uma extensão de aplicativo de mensagem) apareçam em pesquisas de destaque.
 
-Para obter mais informações, consulte nosso [aprimoramentos de aplicativo de pesquisa](~/ios/platform/search/app-search-enhancements.md) guia.
+Para saber mais, consulte nosso guia de [aprimoramentos de pesquisa de aplicativo](~/ios/platform/search/app-search-enhancements.md) .
 
-## <a name="apple-pay-enhancements"></a>Aprimoramentos do Apple Pay
+## <a name="apple-pay-enhancements"></a>Aprimoramentos de Apple Pay
 
-Apple fez várias melhorias para Apple Pay no iOS 10 que permitem ao usuário fazer pagamentos seguros de sites e por meio de interação com Siri e mapas.
+A Apple fez vários aprimoramentos para Apple Pay no iOS 10 que permitem ao usuário fazer pagamentos seguros de sites e por meio de interação com siri e mapas.
 
-Com o iOS 10, diversas APIs novas foram adicionadas que funcionam com o iOS e watchOS para dar suporte a redes de pagamento dinâmico e um novo ambiente de teste de área restrita.
+Com o iOS 10, foram adicionadas várias novas APIs que funcionam com o iOS e o watchOS para dar suporte a redes de pagamento dinâmico e um novo ambiente de teste da área restrita.
 
-Além disso, PassKit framework foi expandido para dar suporte a Apple Pay fora do `UIKit` e permitir que os emissores de cartão apresentar seus cartões de dentro de seus aplicativos.
+Além disso, a estrutura PassKit foi expandida para dar suporte a `UIKit` Apple Pay fora do e para permitir que os emissores apresentem seus cartões de dentro de seus aplicativos.
 
-Para obter mais informações, consulte nosso [aprimoramentos de pagamento de Apple](~/ios/platform/apple-pay.md) guia.
+Para saber mais, consulte nosso guia de [aprimoramentos de Apple Pay](~/ios/platform/apple-pay.md) .
 
 ## <a name="alternate-app-icons"></a>Ícones de aplicativos alternativos
 
-Apple adicionou várias melhorias para o iOS 10.3 que permitem que um aplicativo gerenciar seu ícone:
+A Apple adicionou vários aprimoramentos ao iOS 10,3 que permitem que um aplicativo Gerencie seu ícone:
 
-- `ApplicationIconBadgeNumber` -Obtém ou define o selo do ícone do aplicativo em do Springboard.
-- `SupportsAlternateIcons` -Se `true` o aplicativo tem um conjunto alternativo de ícones.
-- `AlternateIconName` -Retorna o nome do ícone alternativo selecionado no momento ou `null` se usando o ícone principal.
-- `SetAlternameIconName` -Use esse método para alternar o ícone do aplicativo para o ícone alternativo especificado.
+- `ApplicationIconBadgeNumber`-Obtém ou define o emblema do ícone do aplicativo no Springboard.
+- `SupportsAlternateIcons`-Se `true` o aplicativo tiver um conjunto alternativo de ícones.
+- `AlternateIconName`-Retorna o nome do ícone alternativo selecionado no momento ou `null` se estiver usando o ícone primário.
+- `SetAlternameIconName`-Use este método para alternar o ícone do aplicativo para o ícone alternativo fornecido.
 
-Para obter mais informações, consulte nosso [ícones de aplicativos alternativo](~/ios/app-fundamentals/images-icons/alternate-app-icons.md) guia.
+Para saber mais, confira nosso guia de [ícones de aplicativos alternativos](~/ios/app-fundamentals/images-icons/alternate-app-icons.md) .
 
 ## <a name="introduction-to-callkit"></a>Introdução ao CallKit
 
-A nova API de CallKit no iOS 10 fornece uma maneira para aplicativos VOIP integrar com o iPhone da interface do usuário e fornecer uma interface familiar e experiência para o usuário final. Com essa API, os usuários podem exibir e interagir com chamadas VOIP de tela de bloqueio do dispositivo iOS e gerenciar contatos usando o aplicativo de telefone **Favoritos** e **recentes** modos de exibição.
+A nova API do CallKit no iOS 10 fornece uma maneira para que os aplicativos de VOIP se integrem à interface do usuário do iPhone e forneçam uma interface familiar e uma experiência para os usuários finais. Com essa API, os usuários podem exibir e interagir com chamadas de VOIP da tela de bloqueio do dispositivo iOS e gerenciar contatos usando as exibições de **favoritos** e **recentes** do aplicativo de telefone.
 
-Além disso, a API de CallKit fornece a capacidade de criar extensões de aplicativo que pode associar um número de telefone com um nome (ID do chamador) ou informar ao sistema quando um número deve ser bloqueado (chamada de bloqueio).
+Além disso, a API do CallKit fornece a capacidade de criar extensões de aplicativo que podem associar um número de telefone com um nome (ID do chamador) ou informar ao sistema quando um número deve ser bloqueado (bloqueio de chamada).
 
-Para obter mais informações, consulte nosso [Introdução ao Callkit](~/ios/platform/callkit.md) guia.
+Para saber mais, consulte nossa [introdução ao guia de Callkit](~/ios/platform/callkit.md) .
 
 ## <a name="message-app-integration"></a>Integração do aplicativo de mensagens
 
-iOS 10 permite a inclusão de uma extensão de aplicativo de mensagem na solução xamarin. IOS que se integra com o **mensagens** aplicativo e apresenta novas funcionalidades para o usuário. A extensão pode enviar mensagens de texto, adesivos, arquivos de mídia e interativas. Dois tipos de mensagem da extensão do aplicativo estão disponíveis:
+o iOS 10 permite a inclusão de uma extensão de aplicativo de mensagem na solução Xamarin. iOS que se integra ao aplicativo de **mensagens** e apresenta novas funcionalidades para o usuário. A extensão pode enviar texto, adesivos, arquivos de mídia e mensagens interativas. Dois tipos de extensão de aplicativo de mensagem estão disponíveis:
 
-- **Pacotes de adesivo** -contém uma coleção de adesivos que o usuário pode adicionar a uma mensagem. Pacotes de adesivo podem ser criados sem escrever nenhum código.
-- **iMessage aplicativo** -pode apresentar uma Interface de usuário personalizada dentro do aplicativo de mensagens para selecionar os adesivos, inserir texto, incluindo arquivos de mídia (com conversões de tipo opcional) e criando, editando e enviando mensagens de interação.
+- **Pacotes de adesivo** -contém uma coleção de adesivos que o usuário pode adicionar a uma mensagem. Os pacotes adesivos podem ser criados sem escrever nenhum código.
+- **aplicativo IMessage** – pode apresentar uma interface do usuário personalizada no aplicativo mensagens para selecionar adesivos, inserir texto, incluir arquivos de mídia (com conversões de tipo opcionais) e criar, editar e enviar mensagens de interação.
 
-Para obter mais informações, consulte nosso [integração de aplicativos de mensagem](~/ios/platform/message-app-integration/index.md) guia.
+Para saber mais, consulte nosso guia de [integração do aplicativo de mensagens](~/ios/platform/message-app-integration/index.md) .
 
-## <a name="news-publisher-enhancements"></a>Aprimoramentos do Editor de notícias
+## <a name="news-publisher-enhancements"></a>Aprimoramentos no Publicador de notícias
 
-Com o iOS 10, Apple será permitir que qualquer pessoa principais revistas e novas organizações bloggers e editores independentes para se inscrever e produto e entregar conteúdo para o aplicativo Apple News. Para obter mais informações, consulte da Apple [notícias recursos](https://newsresources.apple.com/) documentação.
+Com o iOS 10, a Apple permitirá que qualquer um das principais revistas e novas organizações para bloggers e editores independentes assinem e forneçam conteúdo para o aplicativo Apple News. Para saber mais, confira a documentação de [recursos de notícias](https://newsresources.apple.com/) da Apple.
 
 ## <a name="providing-haptic-feedback"></a>Como fornecer comentários hápticos
 
-No iPhone 7 e iPhone 7 Além disso, o Apple incluiu novas respostas haptics que fornecem maneiras adicionais para envolver fisicamente o usuário. Use as novas opções de comentários táteis para obter a atenção do usuário e reforçar suas ações.
+No iPhone 7 e no iPhone 7 Plus, a Apple incluiu novas respostas haptics que fornecem maneiras adicionais de envolver fisicamente o usuário. Use as novas opções de comentários do tactile para obter a atenção do usuário e reforçar suas ações.
 
-Vários elementos de interface do usuário internos já fornecem comentários hápticos como selecionadores, comutadores e os controles deslizantes. iOS 10 agora adiciona a capacidade de disparar programaticamente haptics usando uma subclasse concreta do `UIFeedbackGenerator` classe.
+Vários elementos internos da interface do usuário já fornecem comentários haptics, como seletores, interruptores e controles deslizantes. Agora, o Ios 10 adiciona a capacidade de programaticamente disparar haptics usando uma subclasse `UIFeedbackGenerator` concreta da classe.
 
-Para obter mais informações, consulte nosso [fornecer comentários Hápticos](~/ios/user-interface/ios-ui/haptic-feedback.md) guia.
+Para saber mais, consulte nosso guia de [comentários sobre como fornecer Haptic](~/ios/user-interface/ios-ui/haptic-feedback.md) .
 
 ## <a name="proactive-suggestions"></a>Sugestões proativas
 
-iOS 10 apresenta novas maneiras de condução contrato a um aplicativo, permitindo que o sistema de forma proativa apresentam informações úteis automaticamente para o usuário em momentos apropriados. Assim como o iOS 9 fornecidos a capacidade de adicionar a pesquisa aprofundada ao aplicativo usando o destaque, entrega e sugestões de Siri com iOS 10, que um aplicativo pode expor a funcionalidade que pode ser apresentada ao usuário pelo sistema de dentro dos seguintes locais:
+o iOS 10 apresenta novas maneiras de conduzir o envolvimento a um aplicativo, permitindo que o sistema apresente informações úteis de forma proativa automaticamente para o usuário em momentos apropriados. Assim como o iOS 9 fornecia a capacidade de adicionar uma pesquisa profunda ao aplicativo usando as sugestões de Spotlight, entrega e Siri, com o iOS 10, um aplicativo pode expor a funcionalidade que pode ser apresentada ao usuário pelo sistema de dentro dos seguintes locais:
 
-- O seletor de aplicativo
+- O alternador de aplicativo
 - A tela de bloqueio
 - CarPlay
 - Mapas
 - Interações de Siri
-- Sugestões de QuickType
+- Sugestões de apelidos
 
-Um aplicativo expõe essa funcionalidade no sistema usando uma coleção de tecnologias, como [NSUserActivity](xref:Foundation.NSUserActivity), marcação de web, destaque principal, MapKit, Media Player e UIKit.
+Um aplicativo expõe essa funcionalidade ao sistema usando uma coleção de tecnologias como [NSUserActivity](xref:Foundation.NSUserActivity), Web Markup, Core Spotlight, MapKit, Media Player e UIKit.
 
-Para obter mais informações, consulte nosso [Introdução ao sugestões proativas](~/ios/platform/search/proactive-suggestions.md) guia.
+Para saber mais, consulte nosso guia [de introdução ao Proactive Suggestions](~/ios/platform/search/proactive-suggestions.md) .
 
 ## <a name="request-app-review"></a>Solicitação de revisão do aplicativo
 
-Novo para o iOS 10.3, o `RequestReview()` método permite que um aplicativo iOS solicitar que o usuário avalie ou revisá-lo. Embora esse método pode ser chamado a qualquer momento em que faz sentido na experiência do usuário, o processo de revisão é regido e manipulado pela política da App Store. Como resultado, esse método pode ou não pode exibir um alerta e nunca deve ser chamado em resposta a uma ação do usuário, como tocar em um botão.
+Novo no Ios 10,3, o `RequestReview()` método permite que um aplicativo IOS peça ao usuário para classificá-lo ou examiná-lo. Embora esse método possa ser chamado em qualquer ponto em que faça sentido na experiência do usuário, o processo de revisão é regido e manipulado pela política da loja de aplicativos. Como resultado, esse método pode ou não exibir um alerta e nunca deve ser chamado em resposta a uma ação do usuário, como tocar em um botão.
 
-Para obter mais informações, consulte nosso [solicitar revisão de aplicativo](~/ios/platform/request-app-review.md) guia.
+Para saber mais, consulte nosso guia de [revisão do aplicativo de solicitação](~/ios/platform/request-app-review.md) .
 
-## <a name="security-and-privacy-enhancements"></a>Aperfeiçoamentos de segurança e privacidade
+## <a name="security-and-privacy-enhancements"></a>Aprimoramentos de segurança e privacidade
 
-Apple fez várias melhorias de segurança e privacidade no iOS 10 que ajudarão o desenvolvedor melhorar a segurança dos seus aplicativos e garantir a privacidade do usuário final.
+A Apple fez vários aprimoramentos na segurança e na privacidade no iOS 10, que ajudarão o desenvolvedor a melhorar a segurança de seus aplicativos e garantir a privacidade do usuário final.
 
-Como resultado, os aplicativos que executam o iOS 10 (ou posterior) estaticamente devem declarar sua intenção para acessar informações do usuário ou recursos específicos, inserindo uma ou mais chaves específicas de privacidade em seus `Info.plist` arquivos explicam ao usuário por que o aplicativo deseja acessar.
+Como resultado, os aplicativos em execução no Ios 10 (ou posterior) devem declarar estaticamente sua intenção de acessar recursos específicos ou informações do usuário inserindo uma ou mais chaves específicas de privacidade `Info.plist` em seus arquivos que explicam ao usuário por que o aplicativo deseja obter acesso.
 
-Para obter mais informações, consulte nosso [aperfeiçoamentos de segurança e privacidade](~/ios/app-fundamentals/security-privacy.md) guia.
+Para saber mais, confira nosso guia de aprimoramentos de [segurança e privacidade](~/ios/app-fundamentals/security-privacy.md) .
 
 ## <a name="sirikit"></a>SiriKit
 
-Novo para o iOS 10, o SiriKit permite que um aplicativo xamarin. IOS fornecer serviços que são acessíveis para o usuário usando o Siri em um dispositivo iOS. Essa funcionalidade é fornecida em um ou mais a extensão do aplicativo usando o novo **intenções** e **IU de Intents** estruturas.
+Novo no iOS 10, o SiriKit permite que um aplicativo Xamarin. iOS forneça serviços que são acessíveis para o usuário usando o Siri em um dispositivo iOS. Essa funcionalidade é fornecida em uma ou mais extensões de aplicativo usando as novas estruturas de **interface do usuário** de **tentativas** e intenções.
 
-SiriKit dá suporte aos seguintes domínios do serviço:
+O SiriKit dá suporte aos seguintes domínios de serviço:
 
-- Chamada de vídeo ou de áudio.
-- Uma jornada de reserva.
-- Gerenciando exercícios físicos.
-- Sistema de mensagens.
+- Chamada de áudio ou vídeo.
+- Reserva de um Ride.
+- Gerenciando exercícios.
+- Mensagens.
 - Pesquisando fotos.
-- Enviar ou receber pagamentos.
+- Enviando ou recebendo pagamentos.
 
-Quando o usuário faz uma solicitação do Siri que envolvem um dos serviços de aplicativo da extensão, SiriKit envia a extensão de um **intenção** objeto que descreve a solicitação do usuário, juntamente com quaisquer dados de suporte. A extensão de aplicativo, em seguida, gera apropriado **resposta** do objeto para o determinado **intenção**, detalhando como a extensão pode lidar com a solicitação.
+Quando o usuário faz uma solicitação de Siri envolvendo um dos serviços da extensão do aplicativo, o SiriKit envia a extensão um objeto de **intenção** que descreve a solicitação do usuário junto com quaisquer dados de suporte. Em seguida, a extensão do aplicativo gera o objeto de **resposta** apropriado para a **intenção**determinada, detalhando como a extensão pode lidar com a solicitação.
 
-Embora Siri geralmente lida com toda a interação de usuário, a extensão de aplicativo pode usar o **intenção de interface do usuário do** framework para apresentar uma rica e personalizado Interface do usuário que contam com a identidade visual do aplicativo e informações adicionais.
+Embora Siri geralmente lide com toda a interação do usuário, a extensão do aplicativo pode usar a estrutura **da interface do** usuário da intenção para apresentar uma interface de usuário avançada e personalizada, apresentando a identidade visual do aplicativo e informações adicionais.
 
-Para obter mais informações, consulte nosso [Introdução ao SiriKit](~/ios/platform/sirikit/index.md) guia.
+Para saber mais, consulte nossa [introdução ao guia de SiriKit](~/ios/platform/sirikit/index.md) .
 
 ## <a name="speech-recognition"></a>Reconhecimento de fala
 
-iOS 10 inclui uma nova API de fala que permite que o aplicativo para dar suporte a reconhecimento de fala contínua e transcrição de fala (de fluxos de áudio ao vivo ou gravados) em texto.
+o iOS 10 inclui um novo Speech API que permite ao aplicativo dar suporte ao reconhecimento de fala contínuo e transcrever a fala (a partir de fluxos de áudio dinâmicos ou gravados) em texto.
 
-Porque a transmissão e o armazenamento temporário de dados em servidores da Apple, o aplicativo requer que o reconhecimento de fala _deve_ solicitar permissão do usuário para realizar o reconhecimento, incluindo o `NSSpeechRecognitionUsageDescription` chave no seu `Info.plist` arquivo e chamar o `SFSpeechRecognizer.RequestAutorization` método.
+Como o reconhecimento de fala requer a transmissão e o armazenamento temporário de dados nos servidores da Apple, o aplicativo _deve_ solicitar a permissão do usuário para executar o `NSSpeechRecognitionUsageDescription` reconhecimento, incluindo `Info.plist` a chave em seu arquivo e chamar o `SFSpeechRecognizer.RequestAutorization` método.
 
-Para obter mais informações, consulte nosso [Introdução ao reconhecimento de fala](~/ios/platform/speech.md) guia.
+Para saber mais, consulte nossa [introdução ao guia de reconhecimento de fala](~/ios/platform/speech.md) .
 
 ## <a name="user-notifications"></a>Notificações do usuário
 
-Novo no iOS 10, a notificação do usuário framework permite a entrega e a manipulação de notificações locais e remotas. Usando essa estrutura, o aplicativo ou extensão do aplicativo pode agendar a entrega de notificações locais, especificando um conjunto de condições, como local ou a hora do dia.
+Novo no iOS 10, a estrutura de notificação de usuário permite a entrega e a manipulação de notificações locais e remotas. Usando essa estrutura, a extensão do aplicativo ou do aplicativo pode agendar a entrega de notificações locais, especificando um conjunto de condições, como local ou hora do dia.
 
-Além disso, o aplicativo ou a extensão pode receber (e potencialmente modificar) notificações locais e remotas conforme elas são entregues ao dispositivo iOS do usuário.
+Além disso, o aplicativo ou a extensão pode receber (e potencialmente modificar) as notificações locais e remotas à medida que elas são entregues ao dispositivo iOS do usuário.
 
-A nova estrutura de interface do usuário de notificação de usuário permite que o aplicativo ou extensão do aplicativo para personalizar a aparência de notificações locais e remotas quando eles são apresentados ao usuário.
+A nova estrutura de IU de notificação do usuário permite que a extensão do aplicativo ou do aplicativo Personalize a aparência de notificações locais e remotas quando elas são apresentadas ao usuário.
 
-Para obter mais informações, consulte nosso [estrutura de notificações de usuário](~/ios/platform/user-notifications/index.md) guia.
+Para obter mais informações, consulte nosso guia da [estrutura de notificações do usuário](~/ios/platform/user-notifications/index.md) .
 
-## <a name="video-subscriber-account"></a>Conta de assinante de vídeo
+## <a name="video-subscriber-account"></a>Conta do assinante de vídeo
 
-Novo para iOS 10, a estrutura de conta de assinante de vídeo permite que os aplicativos que suporte autenticado streaming ou vídeo sob demanda para autenticar com seu provedor de TV cabo ou satélite usando uma experiência de logon único para o usuário final.
+Novo para iOS 10, a estrutura de conta do assinante de vídeo permite que aplicativos que dão suporte a streaming autenticado ou vídeo sob demanda sejam autenticados com seu cabo ou provedor de TV por satélite usando uma experiência de logon único para o usuário final.
 
 ## <a name="wide-color"></a>Cores amplas
 
-iOS 10 estende o suporte para formatos de pixel de intervalo estendido e espaços de cores de toda a gama de cores em todo o sistema, incluindo estruturas como elementos gráficos principais, imagem principal, sistema operacional e AVFoundation. Suporte para dispositivos com telas de cores adicional é facilitado por fornecendo esse comportamento em toda a pilha inteira de gráficos.
+o iOS 10 estende o suporte para formatos de pixel de intervalo estendido e espaços de cores de ampla gama em todo o sistema, incluindo estruturas como gráficos principais, imagem principal, metal e AVFoundation. O suporte para dispositivos com monitores largos de cores é mais facilitou, fornecendo esse comportamento em toda a pilha gráfica.
 
-Além disso, [UIKit](xref:UIKit) tiver sido modificado funcionar no novo estendido **sRGB** espaço de cor, que facilita a combinação de cores em gamas de cores amplas sem perda de desempenho significativa.
+Além disso, o [UIKit](xref:UIKit) foi modificado para funcionar no novo colorspace do **sRGB** estendido, facilitando a combinação de cores em grandes gamas de cores sem perda significativa de desempenho.
 
 A Apple oferece as seguintes práticas recomendadas ao trabalhar com cores amplas:
 
-- [UIColor](xref:UIKit.UIColor) agora usa o sRGB espaço de cores e não poderá mais clamp valores para o `0.0` para `1.0` intervalo. Se o aplicativo utiliza o comportamento de clamp anterior, ele precisará ser modificado para iOS 10.
-- O ambiente de desenho será configurado para o espaço de cor sRGB ao executar personalizado `UIView` desenhando em um iPad Pro.
-- Se o aplicativo executa o processamento personalizado de `UIImages`, use a nova [UIGraphicsImageRender](https://developer.apple.com/reference/uikit/uigraphicsimagerenderer) classe para especificar o uso de formatos de intervalo estendido ou o intervalo padrão.
-- Ao usar uma API de nível inferior, como elementos gráficos principais ou Bare Metal para fornecer processamento de imagem, o desenvolvedor deve usar uma extensa variedade espaço e pixel formato de cor que dá suporte a valores de ponto flutuante de 16 bits. Quando for necessário, o desenvolvedor precisará clamp manualmente os valores de componente de cor.
-- Elementos gráficos principais, imagem principal e sombreadores de desempenho do sistema operacional fornecem novos métodos para converter entre os espaços de duas cores.
+- O [UIColor](xref:UIKit.UIColor) agora usa o espaço de cores sRGB e não fixe mais valores para `0.0` o `1.0` intervalo de to. Se o aplicativo depender do comportamento anterior do fixe, ele precisará ser modificado para iOS 10.
+- O ambiente de desenho será configurado para o espaço de cores sRGB ao executar `UIView` o desenho personalizado em um iPad pro.
+- Se o aplicativo executar a renderização personalizada `UIImages`de, use a nova classe [UIGraphicsImageRender](https://developer.apple.com/reference/uikit/uigraphicsimagerenderer) para especificar o uso dos formatos de intervalo estendido ou de intervalo padrão.
+- Ao usar uma API de nível baixo, como gráficos principal ou metal, para fornecer processamento de imagens, o desenvolvedor deve usar um espaço de cores de intervalo estendido e um formato de pixel que dê suporte a valores de ponto flutuante de 16 bits. Quando necessário, o desenvolvedor terá que fixe manualmente os valores de componente de cor.
+- Os principais gráficos, a imagem principal e os sombreadores de desempenho de metal fornecem novos métodos para conversão entre os dois espaços de cores.
 
-Para obter mais informações, consulte nosso [Introdução a cores amplas](~/ios/platform/wide-color.md) guia.
+Para obter mais informações, consulte nosso [introdução ao guia de cores largo](~/ios/platform/wide-color.md) .
 
-## <a name="widget-enhancements"></a>Aprimoramentos de widget
+## <a name="widget-enhancements"></a>Aprimoramentos do widget
 
-Apple introduziu vários aprimoramentos para o sistema de Widget para garantir que os widgets combinam bem com qualquer plano de fundo que existe no iOS nova tela de bloqueio 10. O [NotificationCenterVibrancyEffect](https://developer.apple.com/reference/uikit/uivibrancyeffect/1613917-notificationcentervibrancyeffect) propriedade foi preterida e foi substituída com o novo [WidgetPrimaryVibrancyEffect](https://developer.apple.com/reference/uikit/uivibrancyeffect/1771278-widgetprimaryvibrancyeffect) ou [WidgetSecondaryVibrancyEffect](https://developer.apple.com/reference/uikit/uivibrancyeffect/1771277-widgetsecondaryvibrancyeffect) propriedades. Além disso, widgets agora contêm uma [NCWidgetDisplayMode](https://developer.apple.com/reference/notificationcenter/ncwidgetdisplaymode) propriedade que permite ao desenvolvedor descrever a quantidade de conteúdo está disponível e permite que o usuário expandir e recolher o conteúdo.
+A Apple introduziu vários aprimoramentos no sistema de widget para garantir que os widgets fiquem ótimos em qualquer plano de fundo que exista na nova tela de bloqueio do iOS 10. A propriedade [NotificationCenterVibrancyEffect](https://developer.apple.com/reference/uikit/uivibrancyeffect/1613917-notificationcentervibrancyeffect) foi preterida e foi substituída pelas novas propriedades [WidgetPrimaryVibrancyEffect](https://developer.apple.com/reference/uikit/uivibrancyeffect/1771278-widgetprimaryvibrancyeffect) ou [WidgetSecondaryVibrancyEffect](https://developer.apple.com/reference/uikit/uivibrancyeffect/1771277-widgetsecondaryvibrancyeffect) . Além disso, os widgets agora contêm uma propriedade [NCWidgetDisplayMode](https://developer.apple.com/reference/notificationcenter/ncwidgetdisplaymode) que permite que o desenvolvedor descreva a quantidade de conteúdo disponível e permite que o usuário expanda e recolha o conteúdo.
 
-Para obter mais informações, consulte nosso [pesquisa e aprimoramentos de Widget de tela início](~/ios/platform/search/widgets.md) guia.
+Para saber mais, consulte nosso guia de [aprimoramentos do widget de pesquisa e página inicial](~/ios/platform/search/widgets.md) .
 
 ## <a name="additional-framework-changes"></a>Alterações de estrutura adicionais
 
-Além das alterações de estrutura principais e adições listadas acima, Apple fez muitas alterações de estrutura secundárias adicionais no iOS 10.
+Além das principais alterações de estrutura e adições listadas acima, a Apple fez muitas alterações de estrutura secundárias adicionais no iOS 10.
 
-Para obter mais informações, consulte nosso [alterações adicionais do Framework](~/ios/platform/introduction-to-ios10/additional-framework-changes.md) guia.
+Para saber mais, consulte nosso guia de [alterações de estrutura adicionais](~/ios/platform/introduction-to-ios10/additional-framework-changes.md) .
 
 ## <a name="deprecated-apis"></a>APIs obsoletas
 
 As seguintes APIs foram preteridas no iOS 10:
 
-- O `CKDiscoverAllContactsOperation`, `CKDiscoveredUserInfo`, `CKDiscoverUserInfosOperation` e `CKFetchRecordChangesOperation` classes foram substituídas no CloudKit do iOS 10. Use o [CKDiscoverAllUserIdentitiesOperation](xref:CloudKit.CKDiscoverUserIdentitiesOperation), [CKUserIdentity](xref:CloudKit.CKUserIdentity) e [CKFetchRecordZoneChangesOperation](xref:CloudKit.CKFetchRecordZoneChangesOperation) classes (que dá suporte a compartilhamento de registro) em vez disso.
-- Vários [CKSubscription](https://developer.apple.com/reference/cloudkit/cksubscription) APIs (como as assinaturas de baseados em consulta e zona) foram preteridas. Use o [CKRecordZoneSubscription](xref:CloudKit.CKRecordZoneSubscription) e [CKQuerySubscription](xref:CloudKit.CKQuerySubscription) APIs em vez disso.
-- [NSPersistentStoreCoordinator](xref:CoreData.NSPersistentStoreCoordinator) símbolos relacionados ao conteúdo onipresente foram preteridos.
-- `ADBannerView`, `ADInterstitialAd` e relacionadas a símbolos em de [UIViewController](xref:UIKit.UIViewController) classe foram preteridos.
-- [SKUniform](https://developer.apple.com/reference/spritekit/skuniform) símbolos relacionados a valores de ponto flutuante foram preteridos.
-- O `UILocalNotification`, `UIMutableUserNotificationAction`, `UIMutableUserNotificationCategory`, `UIUserNotificationAction`, `UIUserNotificationCategory` e `UIUserNotificationSettings` classes de UIKit foram preteridas. Use o [notificações do usuário](#user-notifications) framework em vez disso.
-- O `HandleActionForLocalNotification`, `HandleActionForRemoteNotification`, `DidReceiveLocalNotification` e `DidReceiveRemoteNotification` WatchKit métodos foram preteridos. Use o `HandleActionForNotification` e `DidReceiveNotification` métodos em vez disso.
-- O `DidReceiveLocalNotification` e `DidReceiveRemoteNotification` métodos das [WKExtensionDelegate](https://developer.apple.com/reference/watchkit/wkextensiondelegate) foram preteridos. Criar uma instância de [UNUserNotificationCenterDelegate](https://developer.apple.com/reference/usernotifications/unusernotificationcenterdelegate) que implementa os métodos apropriados e atribuí-lo para o `Delegate` propriedade do [UNUserNotificationCenter](https://developer.apple.com/reference/usernotifications/unusernotificationcenter) objeto.
-- O **Game Center aplicativo** foi preterido e removido do iOS. Se o aplicativo usa GameKit, ele _deve_ apresentar sua própria interface para exibir os recursos de GameKit como placares de líderes, etc.
+- As `CKDiscoverAllContactsOperation`classes `CKDiscoveredUserInfo` ,e`CKFetchRecordChangesOperation`foram preteridas no CloudKit para IOS 10. `CKDiscoverUserInfosOperation` Use as classes [CKDiscoverAllUserIdentitiesOperation](xref:CloudKit.CKDiscoverUserIdentitiesOperation), [CKUserIdentity](xref:CloudKit.CKUserIdentity) e [CKFetchRecordZoneChangesOperation](xref:CloudKit.CKFetchRecordZoneChangesOperation) (que dão suporte ao compartilhamento de registros) em vez disso.
+- Várias APIs [CKSubscription](https://developer.apple.com/reference/cloudkit/cksubscription) (como assinaturas baseadas em zona e com base em consulta) foram preteridas. Use as APIs [CKRecordZoneSubscription](xref:CloudKit.CKRecordZoneSubscription) e [CKQuerySubscription](xref:CloudKit.CKQuerySubscription) em vez disso.
+- Os símbolos [NSPersistentStoreCoordinator](xref:CoreData.NSPersistentStoreCoordinator) relacionados ao conteúdo onipresente foram preteridos.
+- `ADBannerView`, `ADInterstitialAd` e os símbolos relacionados na classe [UIViewController](xref:UIKit.UIViewController) foram preteridos.
+- Os símbolos [SKUniform](https://developer.apple.com/reference/spritekit/skuniform) relacionados a valores de ponto flutuante foram preteridos.
+- As `UILocalNotification`classes `UIMutableUserNotificationAction`,, `UIMutableUserNotificationCategory`, edeUIKitforam`UIUserNotificationCategory`preteridas. `UIUserNotificationAction` `UIUserNotificationSettings` Em vez disso, use a estrutura de [notificações do usuário](#user-notifications) .
+- Os `HandleActionForLocalNotification`métodos `HandleActionForRemoteNotification` ,e`DidReceiveRemoteNotification`WatchKitforampreteridos. `DidReceiveLocalNotification` Use os `HandleActionForNotification` métodos `DidReceiveNotification` e em vez disso.
+- Os `DidReceiveLocalNotification` métodos `DidReceiveRemoteNotification` e do [WKExtensionDelegate](https://developer.apple.com/reference/watchkit/wkextensiondelegate) foram preteridos. Crie uma instância de [UNUserNotificationCenterDelegate](https://developer.apple.com/reference/usernotifications/unusernotificationcenterdelegate) que implementa os métodos apropriados e atribua-o à `Delegate` Propriedade do objeto [UNUserNotificationCenter](https://developer.apple.com/reference/usernotifications/unusernotificationcenter) .
+- O **aplicativo Game Center** foi preterido e removido do Ios. Se o aplicativo usar GameKit, ele _deverá_ apresentar sua própria interface para exibir recursos de GameKit, como placares, etc.
 
-Consulte da Apple [iOS 9.3 às diferenças de API do iOS 10.0](https://developer.apple.com/library/prerelease/content/releasenotes/General/iOS10APIDiffs/index.html) documentação para obter uma lista completa de substituições.
+Consulte a documentação de [diferenças da API do ios 9,3 para ios 10,0](https://developer.apple.com/library/prerelease/content/releasenotes/General/iOS10APIDiffs/index.html) da Apple para obter uma lista completa de reprovações.
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Amostras do iOS 10](https://developer.xamarin.com/samples/ios/iOS10/)
+- [Amostras do iOS 10](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS10)

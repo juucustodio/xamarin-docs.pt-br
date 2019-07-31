@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017
-ms.openlocfilehash: 60add066d581afffeaa200769efcdff9e0644535
-ms.sourcegitcommit: e45f0cd6d7d4a77dba5ecaad4d7894025005a2dc
+ms.openlocfilehash: d8052e00809b15f0858583ee2919c47cfd8af00b
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67309493"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68646564"
 ---
 # <a name="part-2-essential-xaml-syntax"></a>Parte 2. Sintaxe XAML essencial
 
-[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
 
 _XAML é projetado principalmente para instanciar e inicializar objetos. Muitas vezes, mas propriedades devem ser definidas para objetos complexos que não podem ser facilmente representados como cadeias de caracteres XML e, às vezes, as propriedades definidas por uma classe devem ser definidas em uma classe filha. Essas duas necessidades exigem os recursos de sintaxe XAML essencial de elementos de propriedade e propriedades anexadas._
 
@@ -351,7 +351,7 @@ Você certamente pode incluir a `Content` e `Children` propriedades como element
 </ContentPage>
 ```
 
-A pergunta real é: Por que são esses elementos de propriedade *não* necessárias no arquivo XAML?
+A pergunta real é: Por que esses elementos de propriedade *não* são necessários no arquivo XAML?
 
 Os elementos definidos no xamarin. Forms para uso em XAML podem ter uma propriedade sinalizada no `ContentProperty` atributo na classe. Se você pesquisar o `ContentPage` classe na documentação online do xamarin. Forms, você verá esse atributo:
 
@@ -384,7 +384,7 @@ if (Device.RuntimePlatform == Device.iOS)
 }
 ```
 
-Você também pode fazer algo semelhante em XAML usando o [ `OnPlatform` ](xref:Xamarin.Forms.OnPlatform`1) e [ `On` ](xref:Xamarin.Forms.On) classes. Primeiro, inclua os elementos de propriedade para o `Padding` propriedade próximo à parte superior da página:
+Você também pode fazer algo semelhante em XAML usando as [`OnPlatform`](xref:Xamarin.Forms.OnPlatform`1) classes [`On`](xref:Xamarin.Forms.On) e. Primeiro, inclua os elementos de propriedade para o `Padding` propriedade próximo à parte superior da página:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -524,7 +524,7 @@ Essa é a maneira padrão para definir um dependente de plataforma `Padding` pro
 ```
 
 > [!NOTE]
-> O `OnPlatform` extensão de marcação também pode ser usada em XAML para personalizar a aparência da interface do usuário em uma base por plataforma. Ele fornece a mesma funcionalidade que o `OnPlatform` e `On` classes, mas com uma representação mais concisa. Para obter mais informações, consulte [extensão de marcação OnPlatform](~/xamarin-forms/xaml/markup-extensions/consuming.md#onplatform).
+> A `OnPlatform` extensão de marcação também pode ser usada em XAML para personalizar a aparência da interface do usuário em uma base por plataforma. Ele fornece a mesma funcionalidade das `OnPlatform` classes e `On` , mas com uma representação mais concisa. Para obter mais informações, consulte [extensão de marcação OnPlatform](~/xamarin-forms/xaml/markup-extensions/consuming.md#onplatform).
 
 ## <a name="summary"></a>Resumo
 
@@ -532,7 +532,7 @@ Com elementos de propriedade e propriedades anexadas, grande parte da sintaxe XA
 
 ## <a name="related-links"></a>Links relacionados
 
-- [XamlSamples](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
+- [XamlSamples](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
 - [Parte 1. Introdução ao XAML](~/xamarin-forms/xaml/xaml-basics/get-started-with-xaml.md)
 - [Parte 3. Extensões de Marcação XAML](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
 - [Parte 4. Conceitos básicos da associação de dados](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)

@@ -7,16 +7,16 @@ ms.assetid: 774E7B55-AEC8-4F12-B657-1C0CEE01AD63
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/28/2018
-ms.openlocfilehash: 71c0495520a5dd596be2e9cafec6b63e316fb627
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 5aa8b2e85d5a7d547af5333dcaf350025b86cc26
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61342302"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68647693"
 ---
 # <a name="skiasharp-color-filters"></a>Filtros de cores de SkiaSharp
 
-[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 Filtros de cor pode converter cores em um bitmap (ou outra imagem) para as outras cores para efeitos como posterização:
 
@@ -120,7 +120,7 @@ Estático [ `SKColorFilter.CreateColorMatrix` ](xref:SkiaSharp.SKColorFilter.Cre
 public static SKColorFilter CreateColorMatrix (float[] matrix);
 ```
 
-em que `matrix` é uma matriz do 20 `float` valores. Ao criar a matriz em C#, é fácil formatar os números para que eles se parecer com a matriz 4 × 5. Isso é demonstrado no **matriz de escala de cinza** página de [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) exemplo:
+em que `matrix` é uma matriz do 20 `float` valores. Ao criar a matriz em C#, é fácil formatar os números para que eles se parecer com a matriz 4 × 5. Isso é demonstrado no **matriz de escala de cinza** página de [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) exemplo:
 
 ```csharp
 public class GrayScaleMatrixPage : ContentPage
@@ -163,7 +163,7 @@ public class GrayScaleMatrixPage : ContentPage
 }
 ```
 
-O `DrawBitmap` provém do método usado neste código o **BitmapExtension.cs** arquivo incluído com o [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) exemplo. 
+O `DrawBitmap` provém do método usado neste código o **BitmapExtension.cs** arquivo incluído com o [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) exemplo. 
 
 Aqui está o resultado em execução no iOS, Android e plataforma Universal do Windows:
 
@@ -232,7 +232,7 @@ public static SKColorFilter CreateTable (byte[] table);
 public static SKColorFilter CreateTable (byte[] tableA, byte[] tableR, byte[] tableG, byte[] tableB);
 ```
 
-As matrizes sempre contenham 256 entradas. No `CreateTable` método com uma tabela, a mesma tabela é usado para os componentes vermelhos, verdes e azuis. É uma tabela de pesquisa simples: Se a cor da fonte é (R, G, B) e é a cor de destino (R', 'B, G'), em seguida, os componentes de destino são obtidos por indexação `table` com os componentes de origem:
+As matrizes sempre contenham 256 entradas. No `CreateTable` método com uma tabela, a mesma tabela é usado para os componentes vermelhos, verdes e azuis. É uma tabela simples de pesquisa: Se a cor de origem for (r, g, B) e a cor de destino for (r ', B ', g '), os componentes de destino serão obtidos pela indexação `table` com os componentes de origem:
 
 `R' = table[R]`
 
@@ -300,4 +300,4 @@ Você pode usar várias tabelas de cores para os canais de cores diferentes para
 ## <a name="related-links"></a>Links relacionados
 
 - [APIs de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (amostra)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

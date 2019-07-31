@@ -1,25 +1,25 @@
 ---
-title: Tecnologias de notificação preteridas no xamarin. IOS
-description: Este documento descreve as tecnologias de notificação do iOS que foram preteridas em favor a estrutura de notificações do usuário, introduzida no iOS 10.
+title: Tecnologias de notificação preteridas no Xamarin. iOS
+description: Este documento descreve as tecnologias de notificação do iOS que foram preteridas em favor da estrutura de notificações do usuário, introduzida no iOS 10.
 ms.prod: xamarin
 ms.assetid: 20C4F6E5-56DF-4A85-BBF0-E38C88586307
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 10/07/2016
-ms.openlocfilehash: 63134298e437e7ac9b99ac4d716f6265752651c3
-ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
+ms.openlocfilehash: af9f4d606dbe258b224d09f68f9b65d6f56ab28f
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67865680"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68653904"
 ---
-# <a name="deprecated-notification-technologies-in-xamarinios"></a>Tecnologias de notificação preteridas no xamarin. IOS
+# <a name="deprecated-notification-technologies-in-xamarinios"></a>Tecnologias de notificação preteridas no Xamarin. iOS
 
-Esta seção mostra como implementar um local e enviar notificações por push no xamarin. IOS. Ele explica os vários elementos de interface do usuário de uma notificação de iOS e discutir a API do envolvido com a criação e exibindo uma notificação.
+Esta seção mostra como implementar notificações locais e por push no Xamarin. iOS. Ele explicará os vários elementos da interface do usuário de uma notificação do iOS e discutirá as APIs envolvidas na criação e exibição de uma notificação.
 
 > [!IMPORTANT]
-> As informações nesta seção referem-se ao iOS 9 e anterior, ele foi deixado aqui para dar suporte a versões anteriores do iOS. Para iOS 10 e posterior, consulte a [guia de estrutura de notificação do usuário](~/ios/platform/user-notifications/index.md) para dar suporte a locais e remotas de notificação em um dispositivo iOS.
+> As informações contidas nesta seção pertencem ao iOS 9 e anteriores, foram deixadas aqui para dar suporte a versões mais antigas do iOS. Para o iOS 10 e posterior, consulte o [guia da estrutura de notificação do usuário](~/ios/platform/user-notifications/index.md) para dar suporte a notificações locais e remotas em um dispositivo IOS.
 
 ## <a name="sections"></a>Seções
 
@@ -27,20 +27,20 @@ Esta seção mostra como implementar um local e enviar notificações por push n
 
 ## <a name="local-notifications-in-ioslocal-notifications-in-iosmd"></a>[Notificações locais no iOS](local-notifications-in-ios.md)
 
-Esta seção aborda como implementar notificações locais no xamarin. IOS. Ele explica os vários elementos de interface do usuário de uma notificação de iOS e discutir a API do envolvido com a criação e exibindo uma notificação.
+Esta seção explicará como implementar notificações locais no Xamarin. iOS. Ele explicará os vários elementos da interface do usuário de uma notificação do iOS e discutirá as APIs envolvidas na criação e exibição de uma notificação.
 
 <a name="Local Notifications Walkthrough" />
 
 ## <a name="walkthrough---using-local-notifications-in-xamarinioslocal-notifications-in-ios-walkthroughmd"></a>[Passo a passo: usar notificações locais no Xamarin.iOS](local-notifications-in-ios-walkthrough.md)
 
-Nesta seção vamos examinar como usar notificações locais em um aplicativo xamarin. IOS. Ela demonstrará as Noções básicas de criação e publicação de uma notificação que será exibido um alerta quando recebidas pelo aplicativo.
+Nesta seção, vamos examinar como usar as notificações locais em um aplicativo Xamarin. iOS. Ele demonstrará as noções básicas de criação e publicação de uma notificação que exibirá um alerta quando recebido pelo aplicativo.
 
 <a name="Remote Notifications In iOS" />
 
 ## <a name="remote-notifications-in-iosremote-notifications-in-iosmd"></a>[Notificações remotas no iOS](remote-notifications-in-ios.md)
 
-Esta seção abordará as notificações por push no iOS. Ele apresenta as notificações de Gateway de serviço APNS (Apple Push) e a função que desempenha em notificações de publicação para aplicativos do iOS. Ele explicará como criar os certificados de segurança necessárias para habilitar notificações por push e discutir. Por fim esta seção aborda algumas das tarefas de manutenção do sistema que servidores de aplicativos devem executar para controlar os dispositivos móveis de cliente.
+Esta seção abordará as notificações por push no iOS. Ele apresenta o serviço de gateway de notificações por push da Apple (APNS) e a função que ele desempenha na publicação de notificações em aplicativos iOS. Ele explicará como criar os certificados de segurança necessários para habilitar notificações por push e discutir. Por fim, esta seção discutirá algumas das tarefas de manutenção que os servidores de aplicativos devem executar para manter o controle dos dispositivos móveis do cliente.
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Notificações (amostra)](https://developer.xamarin.com/samples/monotouch/Notifications/)
+- [Notificações (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/notifications)

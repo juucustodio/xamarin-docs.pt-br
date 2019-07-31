@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/30/2019
-ms.openlocfilehash: 0be5c788b5be3d01234cc9a3124fa6a01ded2394
-ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
+ms.openlocfilehash: 328063fd6924902738722813cfb961e56af5385e
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65971137"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68644469"
 ---
 # <a name="implicit-styles-in-xamarinforms"></a>Estilos implícitos no xamarin. Forms
 
-[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Styles/BasicStyles/)
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-basicstyles)
 
 _Um estilo implícito é aquele que é usado por todos os controles de TargetType mesmo, sem a necessidade de cada controle para fazer referência ao estilo._
 
@@ -121,9 +121,9 @@ O construtor define uma única *implícita* estilo é aplicado para a página [ 
 
 ## <a name="apply-a-style-to-derived-types"></a>Aplicar um estilo a tipos derivados
 
-O [ `Style.ApplyToDerivedTypes` ](xref:Xamarin.Forms.Style.ApplyToDerivedTypes) propriedade permite que um estilo a ser aplicado aos controles que derivam do tipo de base referenciado pela [ `TargetType` ](xref:Xamarin.Forms.Style.TargetType) propriedade. Portanto, definir essa propriedade como `true` permite que um único estilo como destino vários tipos, desde que os tipos derivam do tipo base especificado no `TargetType` propriedade.
+A [`Style.ApplyToDerivedTypes`](xref:Xamarin.Forms.Style.ApplyToDerivedTypes) propriedade permite que um estilo seja aplicado a controles que são derivados do tipo base referenciado [`TargetType`](xref:Xamarin.Forms.Style.TargetType) pela propriedade. Portanto, definir essa propriedade como `true` permite que um único estilo direcione vários tipos, desde que os tipos derivem do tipo base especificado `TargetType` na propriedade.
 
-O exemplo a seguir mostra um estilo implícito que define a cor de fundo [ `Button` ](xref:Xamarin.Forms.Button) instâncias para vermelho:
+O exemplo a seguir mostra um estilo implícito que define a cor do [`Button`](xref:Xamarin.Forms.Button) plano de fundo de instâncias como vermelho:
 
 ```xaml
 <Style TargetType="Button"
@@ -133,7 +133,7 @@ O exemplo a seguir mostra um estilo implícito que define a cor de fundo [ `Butt
 </Style>
 ```
 
-Colocando esse estilo em um nível de página [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) resultará em que ele está sendo aplicada a todos os [ `Button` ](xref:Xamarin.Forms.Button) instâncias na página e também para todos os controles que derivam de `Button`. No entanto, se o [ `ApplyToDerivedTypes` ](xref:Xamarin.Forms.Style.ApplyToDerivedTypes) propriedade permanece definida, o estilo só deve ser aplicado a `Button` instâncias.
+Colocar esse estilo em nível [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) de página resultará na aplicação de todas as [`Button`](xref:Xamarin.Forms.Button) instâncias na página e também aos controles que derivam de `Button`. No entanto, [`ApplyToDerivedTypes`](xref:Xamarin.Forms.Style.ApplyToDerivedTypes) se a propriedade permanecesse desdefinida, o estilo só `Button` seria aplicado a instâncias.
 
 O código C# equivalente é:
 
@@ -157,8 +157,8 @@ Resources = new ResourceDictionary { buttonStyle };
 ## <a name="related-links"></a>Links relacionados
 
 - [Extensões de marcação XAML](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
-- [Estilos básicos (amostra)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Styles/BasicStyles/)
-- [Trabalhar com estilos (amostra)](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithStyles/)
+- [Estilos básicos (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-basicstyles)
+- [Trabalhar com estilos (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithstyles)
 - [Dicionário de recurso](xref:Xamarin.Forms.ResourceDictionary)
 - [Estilo](xref:Xamarin.Forms.Style)
 - [Setter](xref:Xamarin.Forms.Setter)

@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/19/2017
-ms.openlocfilehash: 294483e8b831aa085fc338eb05147ced1098c1c5
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 12f34e7bc77fd3978ccfdfb57cc95747123c5603
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68508255"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68657239"
 ---
 # <a name="authenticate-users-with-an-identity-provider"></a>Autenticar usuários com um provedor de identidade
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/WebServices/OAuthNativeFlow/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-oauthnativeflow)
 
 _AUTH é um SDK de plataforma cruzada para autenticar usuários e armazenar suas contas. Ele inclui os autenticadores de OAuth que oferecem suporte para o consumo de provedores de identidade, como Google, Microsoft, Facebook e Twitter. Este artigo explica como usar auth para gerenciar o processo de autenticação em um aplicativo xamarin. Forms._
 
@@ -267,7 +267,7 @@ Este artigo explicou como usar auth para gerenciar o processo de autenticação 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [OAuthNativeFlow (amostra)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/OAuthNativeFlow/)
+- [OAuthNativeFlow (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-oauthnativeflow)
 - [OAuth 2.0 para aplicativos nativos](https://tools.ietf.org/html/draft-ietf-oauth-native-apps-12)
 - [Usando o OAuth 2.0 para acessar as APIs do Google](https://developers.google.com/identity/protocols/OAuth2)
 - [AUTH (NuGet)](https://www.nuget.org/packages/xamarin.auth/)

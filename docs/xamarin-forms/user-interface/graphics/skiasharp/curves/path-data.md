@@ -7,16 +7,16 @@ ms.assetid: 1D53067B-3502-4D74-B89D-7EC496901AE2
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/24/2017
-ms.openlocfilehash: 690d3c15d7ad2aad06be5b499bae1a94107414f4
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: a645ef4ed55c8b4c78bad94865777088f62f1175
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61019498"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68647401"
 ---
 # <a name="svg-path-data-in-skiasharp"></a>Dados de caminho SVG em SkiaSharp
 
-[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Definir caminhos usando cadeias de caracteres de texto no formato de elementos gráficos vetoriais escaláveis_
 
@@ -361,7 +361,7 @@ public class PrettyAnalogClockPage : ContentPage
 }
 ```
 
-O [ **por pontos e traços** ](~/xamarin-forms/user-interface/graphics/skiasharp/paths/dots.md) artigo discutiu como você pode usar o [ `SKPathEffect.CreateDash` ](xref:SkiaSharp.SKPathEffect.CreateDash*) método para criar uma linha tracejada. O primeiro argumento é um `float` matriz que geralmente tem dois elementos: O primeiro elemento é o comprimento dos traços e o segundo elemento é a lacuna entre os traços. Quando o `StrokeCap` estiver definida como `SKStrokeCap.Round`, em seguida, as extremidades arredondadas do traço efetivamente aumentam o comprimento do traço usando a largura do traço em ambos os lados do traço. Assim, definindo o primeiro elemento da matriz como 0 cria uma linha pontilhada.
+O [ **por pontos e traços** ](~/xamarin-forms/user-interface/graphics/skiasharp/paths/dots.md) artigo discutiu como você pode usar o [ `SKPathEffect.CreateDash` ](xref:SkiaSharp.SKPathEffect.CreateDash*) método para criar uma linha tracejada. O primeiro argumento é uma `float` matriz que geralmente tem dois elementos: O primeiro elemento é o comprimento dos traços e o segundo elemento é a lacuna entre os traços. Quando o `StrokeCap` estiver definida como `SKStrokeCap.Round`, em seguida, as extremidades arredondadas do traço efetivamente aumentam o comprimento do traço usando a largura do traço em ambos os lados do traço. Assim, definindo o primeiro elemento da matriz como 0 cria uma linha pontilhada.
 
 A distância entre esses pontos é regida por segundo elemento de matriz. Como você verá em breve, esses dois `SKPaint` objetos são usados para desenhar círculos com um raio de 90 unidades. A circunferência deste círculo, portanto, é 180π, o que significa que as marcas de 60 minutos devem aparecer cada unidades 3 π, que é o valor de segundo na `float` matriz em `minuteMarkPaint`. As marcas de 12 horas devem aparecer cada unidades 15π, que é o valor no segundo `float` matriz.
 
@@ -433,4 +433,4 @@ Algo especial é feito com a mão de segundo, no entanto. Porque o relógio é a
 ## <a name="related-links"></a>Links relacionados
 
 - [APIs de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (amostra)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

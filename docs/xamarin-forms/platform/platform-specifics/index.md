@@ -1,22 +1,22 @@
 ---
 title: Especificidades da plataforma
-description: Especificidades da plataforma permitem que você consumir funcionalidade só está disponível em uma plataforma específica, sem implementar renderizadores personalizados ou efeitos. Este artigo explica como consumir e criar as especificidades da plataforma.
+description: Especificidades da plataforma permitem que você consumir funcionalidade só está disponível em uma plataforma específica, sem implementar renderizadores personalizados ou efeitos. Este artigo explica como consumir e criar especificações específicas da plataforma.
 ms.prod: xamarin
 ms.assetid: 4729DB9C-8800-4E29-9D66-3BE13C5F8C94
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/01/2018
-ms.openlocfilehash: 04cbdaac50b0ea77659d7c495dcd1a9e6d43335c
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: f6190b9c0d29d57d6d509bdff25e2ce3572e3a3c
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65926990"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68646844"
 ---
 # <a name="platform-specifics"></a>Especificidades da plataforma
 
-[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 _Especificidades da plataforma permitem que você consumir funcionalidade só está disponível em uma plataforma específica, sem implementar renderizadores personalizados ou efeitos._
 
@@ -34,11 +34,11 @@ O processo para o consumo de um específico da plataforma por meio de XAML, ou p
 
 Especificidades da plataforma consumidos por meio de `On<T>` retorno da API de código fluente [ `IPlatformElementConfiguration` ](xref:Xamarin.Forms.IPlatformElementConfiguration`2) objetos. Isso permite que várias especificações de plataforma a ser invocado no mesmo objeto com método em cascata.
 
-Para obter mais informações sobre as especificidades de plataforma fornecido pelo xamarin. Forms, consulte [especificidades da plataforma do iOS](~/xamarin-forms/platform/ios/index.md), [especificidades da plataforma Android](~/xamarin-forms/platform/android/index.md), e [Windows-especificidades da plataforma](~/xamarin-forms/platform/windows/index.md).
+Para obter mais informações sobre as especificações de plataforma fornecidas pelo Xamarin. Forms, consulte [especificações da plataforma iOS](~/xamarin-forms/platform/ios/index.md), [especificações da plataforma Android](~/xamarin-forms/platform/android/index.md)e [especificações da plataforma Windows](~/xamarin-forms/platform/windows/index.md).
 
-## <a name="creating-platform-specifics"></a>Criando as especificidades da plataforma
+## <a name="creating-platform-specifics"></a>Criando especificações específicas da plataforma
 
-Fornecedores podem criar seus próprios itens específicos à plataforma com efeitos. Um efeito fornece a funcionalidade específica, que, em seguida, é exposta por meio de uma plataforma específica. O resultado é um efeito que pode ser mais facilmente consumido por meio de XAML e um API fluente de código.
+Os fornecedores podem criar suas próprias especificações de plataforma com efeitos. Um efeito fornece a funcionalidade específica, que, em seguida, é exposta por meio de uma plataforma específica. O resultado é um efeito que pode ser mais facilmente consumido por meio de XAML e um API fluente de código.
 
 O processo para a criação de uma plataforma específica é da seguinte maneira:
 
@@ -53,11 +53,11 @@ O resultado de expor um efeito como uma plataforma específica é que o efeito p
 > [!NOTE]
 > É previu que fornecedores usará essa técnica para criar seus próprios-especificidades da plataforma, para facilitar o consumo por usuários. Embora os usuários podem optar por criar seus próprios especificidades da plataforma, deve-se observar que ela requer mais código que criar e consumir um efeito.
 
-O [aplicativo de exemplo](https://developer.xamarin.com/samples/xamarin-forms/userinterface/shadowplatformspecific/) demonstra uma `Shadow` específicos da plataforma que adiciona uma sombra para o texto exibido por um [ `Label` ](xref:Xamarin.Forms.Label) controle:
+O [aplicativo de exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shadowplatformspecific) demonstra `Shadow` uma plataforma específica que adiciona uma sombra ao texto exibido por um [`Label`](xref:Xamarin.Forms.Label) controle:
 
 ![](images/screenshots.png "Específico da plataforma de sombra")
 
-O [aplicativo de exemplo](https://developer.xamarin.com/samples/xamarin-forms/userinterface/shadowplatformspecific/) implementa o `Shadow` específico da plataforma em cada plataforma, para facilitar a compreensão. No entanto, além de cada implementação do efeito específico da plataforma, a implementação da classe sombra é praticamente idêntica para cada plataforma. Portanto, este guia concentra-se na implementação da classe de sombra e efeito associado em uma única plataforma.
+O [aplicativo de exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shadowplatformspecific) implementa `Shadow` a plataforma específica em cada plataforma, para facilitar a compreensão. No entanto, além de cada implementação do efeito específico da plataforma, a implementação da classe sombra é praticamente idêntica para cada plataforma. Portanto, este guia concentra-se na implementação da classe de sombra e efeito associado em uma única plataforma.
 
 Para obter mais informações sobre os efeitos, consulte [personalizar controles com efeitos](~/xamarin-forms/app-fundamentals/effects/index.md).
 
@@ -252,7 +252,7 @@ Se o `Shadow.IsShadowed` anexado alterações de valor de propriedade em tempo d
 
 Para obter mais informações sobre como criar um efeito, consulte [criando um efeito](~/xamarin-forms/app-fundamentals/effects/creating.md) e [passando os parâmetros de efeito como propriedades anexadas](~/xamarin-forms/app-fundamentals/effects/passing-parameters/attached-properties.md).
 
-### <a name="consuming-the-platform-specific"></a>Consumindo o específicos da plataforma
+### <a name="consuming-the-platform-specific"></a>Consumindo a plataforma específica
 
 O `Shadow` específico da plataforma é consumido em XAML, definindo o `Shadow.IsShadowed` anexado à propriedade um `boolean` valor:
 
@@ -277,11 +277,11 @@ shadowLabel.On<iOS>().SetIsShadowed(true);
 
 ## <a name="related-links"></a>Links relacionados
 
-- [PlatformSpecifics (amostra)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
-- [ShadowPlatformSpecific (amostra)](https://developer.xamarin.com/samples/xamarin-forms/userinterface/shadowplatformspecific/)
-- [Especificidades da plataforma do iOS](~/xamarin-forms/platform/ios/index.md)
-- [Especificidades da plataforma Android](~/xamarin-forms/platform/android/index.md)
-- [Especificidades da plataforma Windows](~/xamarin-forms/platform/windows/index.md)
+- [PlatformSpecifics (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+- [ShadowPlatformSpecific (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shadowplatformspecific)
+- [Especificações da plataforma iOS](~/xamarin-forms/platform/ios/index.md)
+- [Especificações da plataforma Android](~/xamarin-forms/platform/android/index.md)
+- [Especificações da plataforma Windows](~/xamarin-forms/platform/windows/index.md)
 - [Personalizar controles com efeitos](~/xamarin-forms/app-fundamentals/effects/index.md)
 - [Propriedades anexadas](~/xamarin-forms/xaml/attached-properties.md)
-- [PlatformConfiguration API](xref:Xamarin.Forms.PlatformConfiguration)
+- [API PlatformConfiguration](xref:Xamarin.Forms.PlatformConfiguration)

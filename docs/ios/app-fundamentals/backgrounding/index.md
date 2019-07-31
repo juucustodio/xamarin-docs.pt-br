@@ -1,28 +1,28 @@
 ---
-title: Backgrounding no xamarin. IOS
-description: Plano de fundo de processamento ou backgrounding é o processo de permitir que aplicativos executar tarefas em segundo plano, enquanto outro aplicativo está em execução em primeiro plano. Este guia serve como uma introdução ao processamento no iOS em segundo plano.
+title: Plano de fundo no Xamarin. iOS
+description: O processamento em segundo plano ou o plano de fundo é o processo de permitir que aplicativos executem tarefas em segundo plano enquanto outro aplicativo está em execução em primeiro plano. Este guia serve como uma introdução ao processamento em segundo plano no iOS.
 ms.prod: xamarin
 ms.assetid: F377440C-C5D9-4267-85D8-2C816E3A0300
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/05/2018
-ms.openlocfilehash: a4f5112b6e77ab6e00453c19c766d1e905df1144
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: ee96288cee83e3a073da4e12aaa4332e38beb804
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60946651"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68649265"
 ---
-# <a name="backgrounding-in-xamarinios"></a>Backgrounding no xamarin. IOS
+# <a name="backgrounding-in-xamarinios"></a>Plano de fundo no Xamarin. iOS
 
-_Plano de fundo de processamento ou backgrounding é o processo de permitir que aplicativos executar tarefas em segundo plano, enquanto outro aplicativo está em execução em primeiro plano. Este guia serve como uma introdução ao processamento no iOS em segundo plano._
+_O processamento em segundo plano ou o plano de fundo é o processo de permitir que aplicativos executem tarefas em segundo plano enquanto outro aplicativo está em execução em primeiro plano. Este guia serve como uma introdução ao processamento em segundo plano no iOS._
 
-Backgrounding em aplicativos móveis é fundamentalmente diferente do conceito tradicional de multitarefa na área de trabalho. Computadores desktop têm uma variedade de recursos disponíveis para um aplicativo, incluindo memória, energia e espaço na tela. Os aplicativos são capazes de executar lado a lado e permanecem com bom desempenho e utilizável. Em um dispositivo móvel, os recursos são muito mais limitados. É difícil Mostrar mais de um aplicativo em uma tela pequena e executando vários aplicativos em velocidade total seria consomem a bateria. Backgrounding é um compromisso constante entre fornecendo os recursos para executar as tarefas em segundo plano necessárias para funcionar bem a aplicativos e manter o dispositivo e o aplicativo foregrounded responsiva. IOS e Android têm provisões para backgrounding, mas eles manipulá-lo de maneiras muito diferentes.
+O plano de fundo em aplicativos móveis é fundamentalmente diferente do conceito tradicional de multitarefas na área de trabalho. Os computadores desktop têm uma variedade de recursos disponíveis para um aplicativo, incluindo espaço real da tela, energia e memória. Os aplicativos podem ser executados lado a lado e permanecem em bom desempenho e utilizáveis. Em um dispositivo móvel, os recursos são muito mais limitados. É difícil mostrar mais de um aplicativo em uma tela pequena, e executar vários aplicativos em plena velocidade drenaria a bateria. O plano de fundo é um comprometimento constante entre dar aos aplicativos os recursos para executar as tarefas em segundo plano que eles precisam executar bem e manter o aplicativo em primeiro plano e o dispositivo responsivo. O iOS e o Android têm provisões para o plano de fundo, mas eles o tratam de maneiras muito diferentes.
 
-No iOS, backgrounding é reconhecido como um estado de aplicativo e aplicativos são movidos para dentro e fora o estado do plano de fundo, dependendo do comportamento do aplicativo e o usuário. iOS também oferece várias opções para conectar um aplicativo para ser executado em segundo plano, incluindo pedir o sistema operacional para o tempo para concluir uma tarefa importante, operando como um tipo de aplicativo necessário em segundo plano conhecido, e atualizar o conteúdo de um aplicativo em designado intervalos.
+No iOS, o plano de fundo é reconhecido como um estado do aplicativo e os aplicativos são movidos para dentro e para fora do estado do plano de fundo, dependendo do comportamento do aplicativo e do usuário. o iOS também oferece várias opções para conectar um aplicativo a ser executado em segundo plano, incluindo pedir ao sistema operacional o tempo para concluir uma tarefa importante, operar como um tipo de aplicativo conhecido em segundo plano necessário e atualizar o conteúdo de um aplicativo em design específicos.
 
-Este guia e que acompanha o passo a passo, vamos aprender a executar tarefas de aplicativo em segundo plano. Vamos abordar os principais conceitos e práticas recomendadas e, em seguida, passa pela criação de um aplicativo do mundo real que recebe atualizações de localização em segundo plano.
+Neste guia e orientações detalhadas, vamos aprender a executar tarefas de aplicativo em segundo plano. Abordaremos os principais conceitos e práticas recomendadas e, em seguida, percorrerei a criação de um aplicativo do mundo real que recebe atualizações de local em segundo plano.
 
 ## <a name="contents"></a>Conteúdo
 
@@ -34,14 +34,14 @@ Este guia e que acompanha o passo a passo, vamos aprender a executar tarefas de 
 
 ## <a name="summary"></a>Resumo
 
-Neste guia, apresentamos as diferentes maneiras de fazer o processamento em segundo plano no iOS. Podemos coberto iOS estados do aplicativo e examinado a função backgrounding desempenha no ciclo de vida do aplicativo iOS. Além disso, aprendemos como podemos poderia registrar tarefas individuais ou aplicativos inteiros para operar em segundo plano no iOS. Por fim, podemos reforçado nossa compreensão de backgrounding no iOS com a criação de aplicativos que executam atualizações em segundo plano.
+Neste guia, apresentamos as diferentes maneiras de fazer processamento em segundo plano no iOS. Abordamos os Estados do aplicativo iOS e examinamos as reproduções de plano de fundo de função no ciclo de vida do aplicativo iOS. Além disso, aprendemos como poderíamos registrar tarefas individuais ou aplicativos inteiros para operar em segundo plano no iOS. Por fim, reforçamos nossa compreensão do plano de fundo no iOS criando aplicativos que executam atualizações em segundo plano.
 
 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Backgrounding no Android](~/android/app-fundamentals/services/index.md)
-- [LifecycleDemo (amostra)](https://developer.xamarin.com/samples/monotouch/LifecycleDemo/)
-- [Local (exemplo)](https://developer.xamarin.com/samples/monotouch/Location/)
-- [Transferência simples em segundo plano (amostra)](https://developer.xamarin.com/samples/monotouch/SimpleBackgroundTransfer/)
+- [Plano de fundo no Android](~/android/app-fundamentals/services/index.md)
+- [LifecycleDemo (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/lifecycledemo)
+- [Local (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/location)
+- [Transferência simples em segundo plano (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/simplebackgroundtransfer)
 - [Execução em segundo plano do iOS](https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/BackgroundExecution/BackgroundExecution.html)

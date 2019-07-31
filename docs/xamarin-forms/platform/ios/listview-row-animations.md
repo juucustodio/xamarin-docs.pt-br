@@ -1,24 +1,24 @@
 ---
-title: Animações de linha de ListView no iOS
-description: Especificidades da plataforma permitem que você consumir funcionalidade só está disponível em uma plataforma específica, sem implementar renderizadores personalizados ou efeitos. Este artigo explica como utilizar o iOS específicos da plataforma que controla se as animações de linha estão desabilitadas quando a coleção de itens de ListView está sendo atualizada.
+title: Animações de linha ListView no iOS
+description: Especificidades da plataforma permitem que você consumir funcionalidade só está disponível em uma plataforma específica, sem implementar renderizadores personalizados ou efeitos. Este artigo explica como consumir a plataforma específica do iOS que controla se as animações de linha são desabilitadas quando a coleção de itens ListView está sendo atualizada.
 ms.prod: xamarin
 ms.assetid: E8F5103F-4D8E-4A5A-A16C-7FA14EE786AC
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/21/2019
-ms.openlocfilehash: ac71be25492866b1cf2b12d3343c2f4095fc738d
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: 9e44c22e670847102cf0bc0f79a860abcac30760
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65925795"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68652829"
 ---
-# <a name="listview-row-animations-on-ios"></a>Animações de linha de ListView no iOS
+# <a name="listview-row-animations-on-ios"></a>Animações de linha ListView no iOS
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
-Essa controla de específico da plataforma iOS de linha se as animações são desabilitados quando o [ `ListView` ](xref:Xamarin.Forms.ListView) coleção de itens está sendo atualizada. Ele é consumido em XAML, definindo o `ListView.RowAnimationsEnabled` para a propriedade associável `false`:
+Esses controles específicos da plataforma iOS controlam se as animações de linha [`ListView`](xref:Xamarin.Forms.ListView) são desabilitadas quando a coleção de itens está sendo atualizada. Ele é consumido em XAML, definindo o `ListView.RowAnimationsEnabled` para a propriedade associável `false`:
 
 ```xaml
 <ContentPage ...
@@ -41,13 +41,13 @@ using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 listView.On<iOS>().SetRowAnimationsEnabled(false);
 ```
 
-O `ListView.On<iOS>` método Especifica que este específicos da plataforma serão executado apenas no iOS. O `ListView.SetRowAnimationsEnabled` método, no [ `Xamarin.Forms.PlatformConfiguration.iOSSpecific` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) namespace, é usada para controlar se as animações de linha são desabilitado quando o [ `ListView` ](xref:Xamarin.Forms.ListView) coleção de itens está sendo atualizada. Além disso, o `ListView.GetRowAnimationsEnabled` método pode ser usado para retornar se animações de linha estão desabilitadas no `ListView`.
+O `ListView.On<iOS>` método Especifica que este específicos da plataforma serão executado apenas no iOS. O `ListView.SetRowAnimationsEnabled` método, [`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) no namespace, é usado para controlar se as animações de linha são desabilitadas [`ListView`](xref:Xamarin.Forms.ListView) quando a coleção de itens está sendo atualizada. Além disso, o `ListView.GetRowAnimationsEnabled` método pode ser usado para retornar se as animações de linha estão desabilitadas `ListView`no.
 
 > [!NOTE]
-> [`ListView`](xref:Xamarin.Forms.ListView) animações de linha são habilitadas por padrão. Portanto, uma animação ocorre quando uma nova linha é inserida em um `ListView`.
+> [`ListView`](xref:Xamarin.Forms.ListView)as animações de linha são habilitadas por padrão. Portanto, uma animação ocorre quando uma nova linha é inserida em `ListView`um.
 
 ## <a name="related-links"></a>Links relacionados
 
-- [PlatformSpecifics (amostra)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+- [PlatformSpecifics (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [Criação de itens específicos à plataforma](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
-- [iOSSpecific API](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)
+- [API iOSSpecific](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)

@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/25/2015
-ms.openlocfilehash: 4bd4524f4bf84327571609c8fb43dec164c9db56
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: c5032bfa49fb1cee63c48ea8fa3e98bcd5748c31
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61370528"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68657185"
 ---
 # <a name="xamarinforms-relativelayout"></a>Xamarin. Forms RelativeLayout
 
-[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Layout/)
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
 
 `RelativeLayout` é usado para a posição e modos de exibição de tamanho em relação a propriedades das exibições de layout ou irmão. Diferentemente `AbsoluteLayout`, `RelativeLayout` não tem o conceito da âncora de movimentação e não tem recursos para posicionar elementos em relação a margem inferior ou direita do layout. `RelativeLayout` oferece suporte a elementos de posicionamento fora de seus próprios limites.
 
@@ -171,7 +171,7 @@ Title="RelativeLayout">
             <BoxView BackgroundColor="Black" WidthRequest="50"
                 HeightRequest="50" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=5}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=0, Constant=5}" />
             <BoxView BackgroundColor="Maroon" WidthRequest="50"
-                HeightRequest="50" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=5}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.5, Constant=}" />
+                HeightRequest="50" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=5}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.5}" />
             <Label FontSize="14" TextColor="Black" Text="Accent Color"
                 RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=20}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=0, Constant=60}" />
             <Label FontSize="14" TextColor="Black" Text="Primary Color"
@@ -230,5 +230,5 @@ Observe que `RelativeLayouts`s forem aninhadas, pois em alguns casos layouts de 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Layout (amostra)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Layout/)
-- [Exemplo de BusinessTumble (amostra)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/BusinessTumble/)
+- [Layout (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
+- [Exemplo de BusinessTumble (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-businesstumble)

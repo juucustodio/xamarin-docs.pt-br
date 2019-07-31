@@ -7,16 +7,16 @@ ms.assetid: 57F172F8-BA03-43EC-A215-ED6B78696BB5
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
-ms.openlocfilehash: f988c16e933214b3ce737febb89d05a451eb2f14
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 60de4b8abc200ac7892838765210167f8a79dcfe
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61205345"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68645838"
 ---
 # <a name="porter-duff-blend-modes"></a>Modos de mesclagem Porter Duff
 
-[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 Os modos do blend Porter Duff são nomeados depois Thomas Porter e Tom Duff, que desenvolveu uma álgebra de composição enquanto trabalhava Lucasfilm. Seu papel [ _imagens digitais de composição_ ](https://graphics.pixar.com/library/Compositing/paper.pdf) foi publicado na edição de julho de 1984 _gráficos de computador_, páginas de 253 para 259. Esses modos de mesclagem são essenciais para a composição, que é montando diversas imagens em uma cena de composição:
 
@@ -279,11 +279,11 @@ Pode haver uma tentação de substituir os bitmaps na **grade Porter Duff** pág
 
 ## <a name="using-mattes-with-porter-duff"></a>Usando foscos com Porter Duff
 
-O **composição de parede de tijolos** página mostra um exemplo de uma tarefa de composição clássico: Uma imagem precisa ser montada a partir de várias partes, incluindo um bitmap com um plano de fundo que precisa ser eliminada. Aqui está o **SeatedMonkey.jpg** bitmap com o plano de fundo de um problema:
+A página **composição de tijolo na parede** mostra um exemplo de uma tarefa de composição clássica: Uma imagem precisa ser montada de várias partes, incluindo um bitmap com um plano de fundo que precisa ser eliminado. Aqui está o **SeatedMonkey.jpg** bitmap com o plano de fundo de um problema:
 
 ![Encaixado Monkey](porter-duff-images/SeatedMonkey.jpg "encaixado Monkey")
 
-Em preparação para a composição, um correspondente _fosco_ foi criado, que é outro bitmap é preto, em que você deseja que a imagem apareça e transparente, caso contrário. Esse arquivo é denominado **SeatedMonkeyMatte.png** e está entre os recursos na **mídia** pasta no [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) exemplo :
+Em preparação para a composição, um correspondente _fosco_ foi criado, que é outro bitmap é preto, em que você deseja que a imagem apareça e transparente, caso contrário. Esse arquivo é denominado **SeatedMonkeyMatte.png** e está entre os recursos na **mídia** pasta no [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) exemplo :
 
 ![Encaixado Monkey fosco](porter-duff-images/SeatedMonkeyMatte.png "encaixado Monkey fosco")
 
@@ -505,9 +505,9 @@ A notação na tabela a seguir usa as seguintes abreviações:
 - **SA** é o canal alfa de origem
 - **SC** é a cor RGB de origem
 
-As cores RGB já forem multiplicadas pelo valor alfa. Por exemplo, se **Sc** representa vermelho puro, mas **Sa** é 0x80, em seguida, é a cor RGB **(0x80, 0, 0)**. Se **Sa** é 0 e, em seguida, todos os componentes RGB também são zero.
+As cores RGB já forem multiplicadas pelo valor alfa. Por exemplo, se **Sc** representa vermelho puro, mas **Sa** é 0x80, em seguida, é a cor RGB **(0x80, 0, 0)** . Se **Sa** é 0 e, em seguida, todos os componentes RGB também são zero.
 
-O resultado é mostrado entre colchetes com o canal alfa e a cor RGB separados por vírgula: **[cor alfa,]**. Para a cor, o cálculo é executado separadamente para os componentes vermelhos, verdes e azuis:
+O resultado é mostrado entre colchetes com o canal alfa e a cor RGB separados por vírgula: **[cor alfa,]** . Para a cor, o cálculo é executado separadamente para os componentes vermelhos, verdes e azuis:
 
 | Modo       | Operação |
 | ---------- | --------- |
@@ -526,11 +526,11 @@ O resultado é mostrado entre colchetes com o canal alfa e a cor RGB separados p
 | `Plus`     | [Sa + acelerador de desenvolvimento, Sc + Dc] |
 | `Modulate` | [Sa· Acelerador de desenvolvimento, Sc· O controlador de domínio] | 
 
-Essas operações são mais fáceis de analisar quando **da{1:0000** e **Sa** são 0 ou 1. Por exemplo, para o padrão `SrcOver` modo, se **Sa** for 0, então **Sc** é também 0 e o resultado é **[acelerador de desenvolvimento, o controlador de domínio]**, o alfa do destino e a cor. Se **Sa** é 1, o resultado será **[Sa, Sc]**, o alfa do código-fonte e cor, ou **[1, Sc]**.
+Essas operações são mais fáceis de analisar quando **da{1:0000** e **Sa** são 0 ou 1. Por exemplo, para o padrão `SrcOver` modo, se **Sa** for 0, então **Sc** é também 0 e o resultado é **[acelerador de desenvolvimento, o controlador de domínio]** , o alfa do destino e a cor. Se **Sa** é 1, o resultado será **[Sa, Sc]** , o alfa do código-fonte e cor, ou **[1, Sc]** .
 
-O `Plus` e `Modulate` modos são um pouco diferentes dos outros em que novas cores podem resultar da combinação de origem e o destino. O `Plus` modo pode ser interpretado com componentes de byte ou componentes de ponto flutuantes. No **grade Porter Duff** página mostrada anteriormente, a cor de destino é **(0xC0, 0x80, 0x00)** e a cor da fonte é **(0x00, 0x80, 0xC0)**. Cada par de componentes é adicionada, mas a soma é fixada em 0xFF. O resultado é a cor **(0xC0, 0xFF, 0xC0)**. Que é a cor que mostra a interseção.
+O `Plus` e `Modulate` modos são um pouco diferentes dos outros em que novas cores podem resultar da combinação de origem e o destino. O `Plus` modo pode ser interpretado com componentes de byte ou componentes de ponto flutuantes. No **grade Porter Duff** página mostrada anteriormente, a cor de destino é **(0xC0, 0x80, 0x00)** e a cor da fonte é **(0x00, 0x80, 0xC0)** . Cada par de componentes é adicionada, mas a soma é fixada em 0xFF. O resultado é a cor **(0xC0, 0xFF, 0xC0)** . Que é a cor que mostra a interseção.
 
-Para o `Modulate` modo, os valores RGB devem ser convertidos para ponto flutuante. É a cor de destino **(0,75, 0,5, 0)** e a fonte for **(0, 0,5, 0,75)**. Os componentes RGB são cada multiplicados juntos e o resultado será **(0, 0,25, 0)**. Que é a cor que mostra a interseção na **Duff Porter grade** página nesse modo.
+Para o `Modulate` modo, os valores RGB devem ser convertidos para ponto flutuante. É a cor de destino **(0,75, 0,5, 0)** e a fonte for **(0, 0,5, 0,75)** . Os componentes RGB são cada multiplicados juntos e o resultado será **(0, 0,25, 0)** . Que é a cor que mostra a interseção na **Duff Porter grade** página nesse modo.
 
 O **Duff Porter transparência** página permite que você examine como os modos do blend Porter Duff operam em objetos gráficos que são parcialmente transparentes. O arquivo XAML inclui um `Picker` com os modos de Porter Duff:
 
@@ -903,4 +903,4 @@ As capturas de tela a seguir mostram os três tipos de transições diferentes, 
 ## <a name="related-links"></a>Links relacionados
 
 - [APIs de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (amostra)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

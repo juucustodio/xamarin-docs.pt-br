@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/19/2018
-ms.openlocfilehash: f97cd3030b865b53b82845ff8941e3f0a10f0320
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 90d860cb6429025672a058e22e76f029872d3b34
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61169781"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68657170"
 ---
 # <a name="xamarinforms-imagebutton"></a>Xamarin. Forms ImageButton
 
-[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/FormsGallery/)
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery)
 
 _O ImageButton exibe uma imagem e responde a um toque ou clique que direciona um aplicativo para executar uma tarefa específica._
 
@@ -25,7 +25,7 @@ O `ImageButton` exibir combina o [ `Button` ](xref:Xamarin.Forms.Button) modo de
 > [!NOTE]
 > Enquanto o [ `Button` ](xref:Xamarin.Forms.Button) view define uma [ `Image` ](xref:Xamarin.Forms.Button.Image) propriedade, que lhe permite exibir uma imagem no `Button`, esta propriedade destina-se a ser usado ao exibir um ícone pequeno ao lado de `Button` texto.
 
-Os exemplos de código neste guia são tirados de [FormsGallery exemplo](https://developer.xamarin.com/samples/xamarin-forms/FormsGallery/).
+Os exemplos de código neste guia são tirados de [FormsGallery exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery).
 
 ## <a name="setting-the-image-source"></a>Definir a origem da imagem
 
@@ -276,4 +276,4 @@ Para obter mais informações sobre estados visuais, consulte [o Gerenciador de 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Exemplo de FormsGallery](https://developer.xamarin.com/samples/xamarin-forms/FormsGallery/)
+- [Exemplo de FormsGallery](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery)

@@ -1,69 +1,69 @@
 ---
-title: Imagens e ícones no xamarin. IOS
-description: Esta seção inclui uma variedade de artigos que abrangem a trabalhar com imagens em um aplicativo xamarin. IOS, como usá-las como ícones, telas de lançamento ou incluindo-os em controles e fornecendo os ícones para tipos de documento personalizados.
+title: Imagens e ícones no Xamarin. iOS
+description: Esta seção inclui uma variedade de artigos que abordam o trabalho com imagens em um aplicativo Xamarin. iOS, como usá-los como ícones, iniciar telas ou incluí-los em controles e fornecer ícones para tipos de documento personalizados.
 ms.prod: xamarin
 ms.assetid: 0AB8CC07-11E4-0D75-4119-AED1A1252424
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 60b450cba73166462747de41176575da27190e0a
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: 443cdb5028964e64aeb831f8d706bfdb99f637b2
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67832383"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68654439"
 ---
-# <a name="images-and-icons-in-xamarinios"></a>Imagens e ícones no xamarin. IOS
+# <a name="images-and-icons-in-xamarinios"></a>Imagens e ícones no Xamarin. iOS
 
-_Esta seção inclui uma variedade de artigos que abrangem a trabalhar com imagens em um aplicativo xamarin. IOS, como usá-las como ícones, telas de lançamento ou incluindo-os em controles e fornecendo os ícones para tipos de documento personalizados._
+_Esta seção inclui uma variedade de artigos que abordam o trabalho com imagens em um aplicativo Xamarin. iOS, como usá-los como ícones, iniciar telas ou incluí-los em controles e fornecer ícones para tipos de documento personalizados._
 
-Há várias maneiras de imagem ativos são usados dentro de um aplicativo iOS. De simplesmente exibir uma imagem como parte da interface do usuário um aplicativo, atribuindo-o a um controle de interface do usuário, como um `UIButton` ou `UIImageView`, ao fornecer ícones e telas de inicialização, xamarin. IOS torna mais fácil adicionar arte excelente para um aplicativo iOS das seguintes maneiras: 
+Há várias maneiras de os ativos de imagem serem usados dentro de um aplicativo iOS. De simplesmente exibir uma imagem como parte da interface do usuário de um aplicativo para, atribuí-la a um controle de interface do `UIButton` usuário `UIImageView`, como um ou, para fornecer ícones e telas de inicialização, o Xamarin. Ios facilita a adição de um grande trabalho artístico a um aplicativo IOS das seguintes maneiras: 
 
-- **Imagens independentes de resolução** – usar o suporte interno do iOS para trabalhar com imagens em resoluções de dispositivos diferentes e tipos (iPhone, iPad, etc.).
-- **Conjuntos de imagem do catálogo de ativos** -Use **conjuntos de imagem do catálogo de ativos** para gerenciar e agrupar todas as versões de um ativo de determinada imagem exigido por um aplicativo.
-- **Imagens no iOS Designer** -usar o Designer do iOS para definir imagens para controles.
-- **Imagens no código** – Use o `UIImage` métodos da classe para carregar e trabalhar com ativos de imagem e atribuí-los aos controles de interface do usuário no C# código.
-- **Ícone do aplicativo** -definir o ícone do aplicativo necessário para cada aplicativo iOS. Esse é o ícone que o usuário deverá tocar da tela inicial do iOS para iniciar o aplicativo. Além disso, esse ícone é usado pela Central de jogo, se aplicável.
-- **Ícone de destaque** -definir o ícone do aplicativo em destaque. Sempre que o usuário insere o nome de um aplicativo em uma pesquisa de destaque, esse ícone é exibido.
-- **Ícone de configurações** -definir o aplicativo **configurações** ícone. Se o usuário insere o **configurações** aplicativo em seu dispositivo iOS, esse ícone será exibido no final da lista de configurações para o aplicativo. 
-- **Iniciar telas** -definir tela de inicialização do aplicativo. Depois que o usuário toca o ícone do aplicativo e antes da primeira exibição é exibida, uma tela em branco será mostrada. Felizmente, o iOS inclui suporte para exibir uma imagem no lugar da tela em branco usando um Storyboard. 
-- **Ícone do iTunes** -forneça um ícone iTune. Se usar o método Ad Hoc do fornecimento de um aplicativo (ou para usuários corporativos ou de teste beta em dispositivos reais), o desenvolvedor também precisa incluir um 512 x 512 e uma imagem de 1024 x 1024 que será usada para representar o aplicativo no iTunes.
-- **Ícones de documento** -usar uma imagem como um ícone para qualquer tipo de documento específico que um aplicativo xamarin. IOS dá suporte a ou cria.
+- **Imagens independentes de resolução** – use o suporte interno do IOS para trabalhar com imagens em diferentes resoluções e tipos de dispositivo (iPhone, iPad etc.).
+- **Conjuntos de imagens do catálogo de ativos** – use **conjuntos de imagens do catálogo de ativos** para gerenciar e agrupar todas as versões de um determinado ativo de imagem exigido por um aplicativo.
+- **Imagens no designer do IOS** – use o designer do IOS para definir imagens para controles.
+- **Imagens no código** – use os `UIImage` métodos da classe para carregar e trabalhar com ativos de imagem e atribuí-los a controles C# de interface do usuário no código.
+- **Ícone do aplicativo** – defina o ícone do aplicativo exigido por cada aplicativo Ios. Esse é o ícone que o usuário irá tocar na tela inicial do iOS para iniciar o aplicativo. Além disso, esse ícone é usado por Game Center, se aplicável.
+- **Ícone de destaque** – defina o ícone de destaque do aplicativo. Sempre que o usuário inserir o nome de um aplicativo em uma pesquisa de destaque, esse ícone será exibido.
+- **Ícone de configurações** – defina o ícone de **configurações** do aplicativo. Se o usuário inserir o aplicativo de **configurações** em seu dispositivo IOS, esse ícone será exibido no final da lista de configurações para o aplicativo. 
+- **Telas de inicialização** – defina a tela de inicialização do aplicativo. Depois que o usuário toca no ícone do aplicativo e antes da primeira exibição aparecer, uma tela em branco será mostrada. Felizmente, o iOS inclui suporte para exibir uma imagem no lugar da tela em branco usando um Storyboard. 
+- **ícone do iTunes** – forneça um ícone de iTune. Se você estiver usando o método ad hoc de entregar um aplicativo (para usuários corporativos ou para testes beta em dispositivos reais), o desenvolvedor também precisará incluir uma 512x512 e uma imagem 1024x1024 que serão usadas para representar o aplicativo no iTunes.
+- **Ícones de documento** -use uma imagem como um ícone para qualquer tipo de documento específico ao qual um aplicativo Xamarin. Ios dá suporte ou cria.
 
-Há várias considerações que devem ser levadas em conta ao criar ativos de imagem para um aplicativo iOS, bem como vários lugares onde esses ativos serão usados. Cada uma delas tem um impacto sobre não somente quantas ativos de imagem será necessários, mas como esses ativos são criados. Os tópicos a seguir abordam os tipos de ativos de imagens que serão necessários, como esses ativos são incluídos no pacote do aplicativo e como os ativos de imagem são consumidos para fornecer a funcionalidade necessária:
+Há várias considerações que devem ser levadas em conta ao criar ativos de imagem para um aplicativo iOS, bem como vários locais em que esses ativos serão usados. Cada um deles tem um efeito sobre não apenas quantos ativos de imagem serão necessários, mas como esses ativos são criados. Os tópicos a seguir abordam os tipos de ativos de imagens que serão necessários, como esses ativos são incluídos no grupo do aplicativo e como os ativos da imagem são consumidos para fornecer a funcionalidade necessária:
 
 
 ## <a name="displaying-an-imageiosapp-fundamentalsimages-iconsdisplaying-an-imagemd"></a>[Exibir uma imagem](~/ios/app-fundamentals/images-icons/displaying-an-image.md)
 
-Este artigo aborda incluindo um ativo de imagem em um aplicativo xamarin. IOS e exibir essa imagem, usando o código c# ou atribuindo-a um controle no Designer do iOS.
+Este artigo aborda a inclusão de um ativo de imagem em um aplicativo Xamarin. iOS e a exibição dessa C# imagem usando código ou atribuindo-a a um controle no designer do Ios.
 
 ## <a name="application-iconsiosapp-fundamentalsimages-iconsapp-iconsmd"></a>[Ícones de aplicativo](~/ios/app-fundamentals/images-icons/app-icons.md)
 
-Aborda esse artigo incluindo e gerenciar um ativo de imagem em um aplicativo xamarin. IOS para ser usado como um ícone de aplicativo.
+Este artigo aborda a inclusão e o gerenciamento de um ativo de imagem em um aplicativo Xamarin. iOS a ser usado como um ícone de aplicativo.
 
 ## <a name="alternate-app-iconsiosapp-fundamentalsimages-iconsalternate-app-iconsmd"></a>[Ícones de aplicativos alternativos](~/ios/app-fundamentals/images-icons/alternate-app-icons.md)
 
-Apple adicionou várias melhorias para o iOS 10.3 que permitem que um aplicativo gerenciar seu ícone:
+A Apple adicionou vários aprimoramentos ao iOS 10,3 que permitem que um aplicativo Gerencie seu ícone:
 
-- `ApplicationIconBadgeNumber` -Obtém ou define o selo do ícone do aplicativo em do Springboard.
-- `SupportsAlternateIcons` -Se `true` o aplicativo tem um conjunto alternativo de ícones.
-- `AlternateIconName` -Retorna o nome do ícone alternativo selecionado no momento ou `null` se usando o ícone principal.
-- `SetAlternameIconName` -Use esse método para alternar o ícone do aplicativo para o ícone alternativo especificado.
+- `ApplicationIconBadgeNumber`-Obtém ou define o emblema do ícone do aplicativo no Springboard.
+- `SupportsAlternateIcons`-Se `true` o aplicativo tiver um conjunto alternativo de ícones.
+- `AlternateIconName`-Retorna o nome do ícone alternativo selecionado no momento ou `null` se estiver usando o ícone primário.
+- `SetAlternameIconName`-Use este método para alternar o ícone do aplicativo para o ícone alternativo fornecido.
 
 
 ## <a name="launch-screensiosapp-fundamentalsimages-iconslaunch-screensmd"></a>[Telas de Inicialização](~/ios/app-fundamentals/images-icons/launch-screens.md)
 
-Este artigo aborda o uso de um tipo especial de Storyboard para fornecer uma tela de inicialização universal para cada tamanho de dispositivo iOS e a resolução.
+Este artigo aborda o uso de um tipo especial de storyboard para fornecer uma tela de inicialização universal para cada tamanho e resolução do dispositivo iOS.
 
 ## <a name="custom-document-typesiosapp-fundamentalsimages-iconscustom-document-typesmd"></a>[Tipos de documento personalizado](~/ios/app-fundamentals/images-icons/custom-document-types.md)
 
-Aborda esse artigo incluindo e gerenciar um ativo de imagem em um aplicativo xamarin. IOS para ser usado como um ícone de tipo de documento personalizado.
+Este artigo aborda a inclusão e o gerenciamento de um ativo de imagem em um aplicativo Xamarin. iOS a ser usado como um ícone de tipo de documento personalizado.
 
 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Trabalhando com imagens (amostra)](https://developer.xamarin.com/samples/monotouch/WorkingWithImages/)
+- [Trabalhando com imagens (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/workingwithimages)
 - [Hello, iPhone](~/ios/get-started/hello-ios/index.md)
-- [Ícone personalizado e diretrizes de criação de imagem](https://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/IconsImages/IconsImages.html)
+- [Diretrizes personalizadas de criação de imagem e ícone](https://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/IconsImages/IconsImages.html)

@@ -7,16 +7,16 @@ ms.assetid: 940422A1-8BC0-4039-8AD7-26C61320F858
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/27/2018
-ms.openlocfilehash: d68153cdaad67b407def3ed5bfaddf928ef98bb4
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 1d85c705fb993e9b6b558b0c051de93e449b9d05
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61289073"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68648729"
 ---
 # <a name="skiasharp-mask-filters"></a>Filtros de máscara de SkiaSharp
 
-[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 Os filtros de máscara são efeitos que manipulam a geometria e o canal alfa de objetos gráficos. Para usar um filtro de máscara, defina as [ `MaskFilter` ](xref:SkiaSharp.SKPaint.MaskFilter) propriedade do `SKPaint` a um objeto do tipo [ `SKMaskFilter` ](xref:SkiaSharp.SKMaskFilter) que você criou, chamando um do `SKMaskFilter` métodos estáticos.
 
@@ -43,7 +43,7 @@ Sobrecargas permitem especificar sinalizadores para o algoritmo usado para criar
 
 Os efeitos desses estilos são mostrados nos exemplos a seguir. O `sigma` parâmetro especifica a extensão do desfoque. Nas versões mais antigas do Skia, a extensão do desfoque foi indicada com um valor de raio. Se um valor de raio for melhor para seu aplicativo, há um estático [ `SKMaskFilter.ConvertRadiusToSigma` ](xref:SkiaSharp.SKMaskFilter.ConvertRadiusToSigma*) método que pode ser convertido de um para o outro. O método multiplica o radius por 0.57735 e adiciona 0,5.
 
-O **máscara desfoque experimento** página na [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) exemplo permite que você pode experimentar com os estilos de desfoque e os valores de sigma. O arquivo XAML instancia uma `Picker` com o quatro `SKBlurStyle` membros de enumeração e um `Slider` para especificar o valor do sigma:
+O **máscara desfoque experimento** página na [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) exemplo permite que você pode experimentar com os estilos de desfoque e os valores de sigma. O arquivo XAML instancia uma `Picker` com o quatro `SKBlurStyle` membros de enumeração e um `Slider` para especificar o valor do sigma:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -180,9 +180,9 @@ As capturas de tela até o momento mostraram desfoque criado com o `SKBlurStyle.
 
 [![Mascarar o experimento de desfoque](mask-filters-images/MaskBlurExperiment.png "mascarar o experimento de desfoque")](mask-filters-images/MaskBlurExperiment-Large.png#lightbox)
 
-A captura de tela do iOS mostra o `Solid` estilo: Os caracteres de texto ainda estão presentes como traços pretos sólidos, e o desfoque é adicionado para fora desses caracteres de texto. 
+A captura de tela do `Solid` Ios mostra o estilo: Os caracteres de texto ainda estão presentes como traços pretos sólidos e o desfoque é adicionado ao fora desses caracteres de texto. 
 
-A captura de tela de Android no meio mostra o `Outer` estilo: Os traços de caractere em si são eliminados (como o bitmap) e o desfoque envolve o espaço vazio no qual os caracteres de texto apareceram uma vez. 
+A captura de tela do Android no meio `Outer` mostra o estilo: Os próprios traços de caractere são eliminados (como o bitmap) e o desfoque circunda o espaço vazio onde os caracteres de texto apareceram depois. 
 
 A captura de tela UWP no direito mostra o `Inner` estilo. O desfoque é restrito para a área ocupada normalmente por caracteres de texto.
 
@@ -274,4 +274,4 @@ Esse filtro de desfoque faz com que a reflexão parecer muito mais realistas:
 ## <a name="related-links"></a>Links relacionados
 
 - [APIs de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (amostra)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

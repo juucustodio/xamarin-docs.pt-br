@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/22/2018
-ms.openlocfilehash: adfc3247bce4d40d73580d6ca9baa31df4f57229
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: cb569a425bf636a51dd6d132f6efa539e74443a0
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67658963"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68644573"
 ---
 # <a name="consume-a-restful-web-service"></a>Consumir um serviço Web RESTful
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoREST/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todorest)
 
 _Integrar um serviço web em um aplicativo é um cenário comum. Este artigo demonstra como consumir um serviço web RESTful em um aplicativo xamarin. Forms._
 
@@ -38,7 +38,7 @@ Serviços web rESTful normalmente usam mensagens JSON para retornar dados ao cli
 
 A simplicidade do REST ajudou a torná-lo o principal método para acessar os serviços da web em aplicativos móveis.
 
-Quando o aplicativo de exemplo é executado, ele se conecte a um serviço REST hospedado localmente, conforme mostrado na seguinte captura de tela:
+Quando o aplicativo de exemplo for executado, ele se conectará a um serviço REST hospedado localmente, conforme mostrado na seguinte captura de tela:
 
 ![](rest-images/portal.png "Aplicativo de exemplo")
 
@@ -208,5 +208,5 @@ O serviço REST envia um código de status HTTP no `HttpResponseMessage.IsSucces
 ## <a name="related-links"></a>Links relacionados
 
 - [Criando Serviços de Back-end para Aplicativos Móveis Nativos](/aspnet/core/mobile/native-mobile-backend/)
-- [TodoREST (amostra)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoREST/)
+- [TodoREST (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todorest)
 - [HttpClient](https://msdn.microsoft.com/library/system.net.http.httpclient(v=vs.110).aspx)

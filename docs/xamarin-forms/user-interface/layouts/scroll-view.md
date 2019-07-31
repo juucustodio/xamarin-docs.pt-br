@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2018
-ms.openlocfilehash: 34339b9ca3a15c7f7f24edee5401c542fd09ba74
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 79f3f88dba37899bcb9467fcd6d1bd7e9dc5eb10
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61370513"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68657160"
 ---
 # <a name="xamarinforms-scrollview"></a>Xamarin. Forms ScrollView
 
-[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Layout/)
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
 
 [`ScrollView`](xref:Xamarin.Forms.ScrollView) contém layouts e permite que eles para fora da tela de rolagem. `ScrollView` também é usado para permitir que os modos de exibição mover automaticamente para a parte visível da tela quando o teclado está mostrando.
 
@@ -119,5 +119,5 @@ Observe que as posições de rolagem podem ser negativas, devido ao efeito de de
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Layout (amostra)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Layout/)
-- [Exemplo de BusinessTumble (amostra)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/BusinessTumble/)
+- [Layout (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
+- [Exemplo de BusinessTumble (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-businesstumble)

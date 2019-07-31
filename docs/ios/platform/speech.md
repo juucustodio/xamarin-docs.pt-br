@@ -1,125 +1,125 @@
 ---
-title: Reconhecimento de fala no xamarin. IOS
-description: Este artigo apresenta a nova API de fala e mostra como implementá-lo em um aplicativo xamarin. IOS para dar suporte a reconhecimento de fala contínua e transcrição de fala (de fluxos de áudio ao vivo ou gravados) em texto.
+title: Reconhecimento de fala no Xamarin. iOS
+description: Este artigo apresenta o novo Speech API e mostra como implementá-lo em um aplicativo Xamarin. iOS para dar suporte ao reconhecimento de fala contínuo e transcrever a fala (de fluxos de áudio dinâmicos ou gravados) em texto.
 ms.prod: xamarin
 ms.assetid: 64FED50A-6A28-4833-BEAE-63CEC9A09010
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: 8af7474036eb0fd6e2236cf52e96b8d12c8bc44e
-ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
+ms.openlocfilehash: fe871985700c5a40db2736ded78588b0b7d4f616
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67865716"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68655399"
 ---
-# <a name="speech-recognition-in-xamarinios"></a>Reconhecimento de fala no xamarin. IOS
+# <a name="speech-recognition-in-xamarinios"></a>Reconhecimento de fala no Xamarin. iOS
 
-_Este artigo apresenta a nova API de fala e mostra como implementá-lo em um aplicativo xamarin. IOS para dar suporte a reconhecimento de fala contínua e transcrição de fala (de fluxos de áudio ao vivo ou gravados) em texto._
+_Este artigo apresenta o novo Speech API e mostra como implementá-lo em um aplicativo Xamarin. iOS para dar suporte ao reconhecimento de fala contínuo e transcrever a fala (de fluxos de áudio dinâmicos ou gravados) em texto._
 
-Novo para o iOS 10, a Apple tem liberar a API de reconhecimento de fala que permite que um aplicativo iOS para dar suporte a reconhecimento de fala contínua e transcrição de fala (de fluxos de áudio ao vivo ou gravados) em texto.
+Novo no iOS 10, a Apple lançou a API de reconhecimento de fala que permite que um aplicativo iOS dê suporte ao reconhecimento de fala contínuo e transcrevesse a fala (de fluxos de áudio dinâmicos ou gravados) em texto.
 
-De acordo com a Apple, a API de reconhecimento de fala tem os seguintes benefícios:
+De acordo com a Apple, a API de reconhecimento de fala tem os seguintes recursos e benefícios:
 
-- Altamente precisos
-- De última geração
+- Altamente preciso
+- Estado da arte
 - Fácil de usar
 - Rápido
 - Dá suporte a vários idiomas
-- Privacidade do usuário respeita
+- Respeita a privacidade do usuário
 
 ## <a name="how-speech-recognition-works"></a>Como funciona o reconhecimento de fala
 
-Reconhecimento de fala é implementado em um aplicativo iOS pela aquisição de áudio ao vivo ou pré-gravado (em qualquer um dos idiomas falados que a API dá suporte) e passá-la para um reconhecedor de fala que retorna uma transcrição de texto sem formatação das palavras faladas.
+O reconhecimento de fala é implementado em um aplicativo iOS adquirindo áudio dinâmico ou gravado previamente (em qualquer um dos idiomas falados que a API suporta) e passando-o para um reconhecedor de fala que retorna uma transcrição de texto sem formatação das palavras faladas.
 
 [![](speech-images/speech01.png "Como funciona o reconhecimento de fala")](speech-images/speech01.png#lightbox)
 
 ### <a name="keyboard-dictation"></a>Ditado de teclado
 
-Quando a maioria dos usuários pensam de reconhecimento de fala em um dispositivo iOS, eles pensam o Assistente de voz Siri interno, que foi lançado junto com o ditado de teclado no iOS 5 com o iPhone 4S.
+Quando a maioria dos usuários imagina o reconhecimento de fala em um dispositivo iOS, eles consideram o assistente interno de voz Siri, que foi lançado junto com o ditado de teclado no iOS 5 com o 4S do iPhone.
 
-Ditado de teclado é compatível com qualquer elemento de interface que dá suporte a TextKit (como `UITextField` ou `UITextArea`) e é ativado quando o usuário clica no botão de ditado (diretamente à esquerda da barra de espaço) no teclado virtual iOS.
+O ditado de teclado tem suporte de qualquer elemento de interface que dê `UITextField` suporte `UITextArea`a TextKit (como ou) e é ativado pelo usuário clicando no botão de ditado (diretamente à esquerda da barra de espaços) no teclado virtual do Ios.
 
-Apple lançou as seguintes estatísticas de ditado de teclado (coletadas desde 2011):
+A Apple lançou as seguintes estatísticas de ditado de teclado (coletadas desde 2011):
 
-- Ditado de teclado tem sido amplamente usado, pois ele foi lançado no iOS 5.
-- Aproximadamente 65.000 aplicativos usá-lo por dia.
-- Sobre um terço do iOS de todas as ditado é feito em um aplicativo de terceiros 3ª.
+- O ditado de teclado foi amplamente usado desde que foi lançado no iOS 5.
+- Aproximadamente 65.000 aplicativos usam-os por dia.
+- Um terço de todos os ditados do iOS é feito em um aplicativo de terceiros.
 
-Ditado de teclado é extremamente fácil de usar, pois ele não requer nenhum esforço de parte do desenvolvedor, além de usar um elemento de interface TextKit no design de interface do usuário do aplicativo. Ditado de teclado também tem a vantagem de não exigir a quaisquer solicitações de privilégio especial do aplicativo antes que ele pode ser usado.
+O ditado de teclado é extremamente fácil de usar, pois não requer nenhum esforço na parte do desenvolvedor, além de usar um elemento de interface TextKit no design da interface do usuário do aplicativo. O ditado de teclado também tem a vantagem de não exigir nenhuma solicitação de privilégio especial do aplicativo antes de poder ser usado.
 
-Aplicativos que usam as novas APIs de reconhecimento de fala exigirá permissões especiais sejam concedidas pelo usuário, como reconhecimento de fala requer a transmissão e o armazenamento temporário de dados em servidores da Apple. Consulte nosso [aperfeiçoamentos de segurança e privacidade](~/ios/app-fundamentals/security-privacy.md) documentação para obter detalhes.
+Os aplicativos que usam as novas APIs de reconhecimento de fala exigirão permissões especiais para serem concedidas pelo usuário, pois o reconhecimento de fala requer a transmissão e o armazenamento temporário de dados nos servidores da Apple. Consulte nossa documentação de aprimoramentos de [segurança e privacidade](~/ios/app-fundamentals/security-privacy.md) para obter detalhes.
 
-Enquanto o ditado de teclado é fácil de implementar, ela apresenta várias desvantagens e limitações:
+Embora o ditado de teclado seja fácil de implementar, ele vem com várias limitações e desvantagens:
 
 - Ele requer o uso de um campo de entrada de texto e a exibição de um teclado.
-- Ele funciona com apenas de entrada de áudio ao vivo e o aplicativo não tem controle sobre o processo de gravação de áudio.
-- Ele não fornece controle sobre a linguagem que é usada para interpretar a voz do usuário.
-- Não há nenhuma maneira do aplicativo saber se o botão de ditado estará disponível até mesmo para o usuário.
-- O aplicativo não é possível personalizar o processo de gravação de áudio.
+- Ele funciona apenas com entrada de áudio ao vivo e o aplicativo não tem controle sobre o processo de gravação de áudio.
+- Ele não fornece controle sobre o idioma usado para interpretar a fala do usuário.
+- Não há como o aplicativo saber se o botão de ditado está ainda disponível para o usuário.
+- O aplicativo não pode personalizar o processo de gravação de áudio.
 - Ele fornece um conjunto muito superficial de resultados que não tem informações como tempo e confiança.
 
 ### <a name="speech-recognition-api"></a>API de reconhecimento de fala
 
-Novo para o iOS 10, a Apple lançou a API de reconhecimento de fala que fornece uma maneira mais eficiente para um aplicativo iOS implementar o reconhecimento de fala. Essa API é o mesmo que usa o Apple para alimentação Siri e ditado de teclado e é capaz de fornecer a transcrição rápida com precisão de última geração.
+Novo no iOS 10, a Apple lançou a API de reconhecimento de fala, que fornece uma maneira mais eficiente para um aplicativo iOS implementar o reconhecimento de fala. Essa API é a mesma que a Apple usa para ligar o ditado de siri e de teclado e é capaz de fornecer uma transcrição rápida com a precisão do estado da arte.
 
-Os resultados fornecidos pela API de reconhecimento de fala transparentemente são personalizados para usuários individuais, sem o aplicativo precisar coletar ou acessar quaisquer dados particulares do usuário.
+Os resultados fornecidos pela API de reconhecimento de fala são personalizados de forma transparente para os usuários individuais, sem que o aplicativo precise coletar ou acessar dados de usuário privados.
 
-A API de reconhecimento de fala fornece resultados de volta para o aplicativo de chamada em quase em tempo real conforme o usuário está falando e fornece mais informações sobre os resultados da conversão do que apenas texto. Elas incluem:
+A API de reconhecimento de fala fornece resultados de volta ao aplicativo de chamada quase em tempo real conforme o usuário está falando e fornece mais informações sobre os resultados da tradução do que apenas texto. Elas incluem:
 
-- Várias interpretações do que o usuário disseram.
-- Níveis de confiança para as conversões individuais.
+- Várias interpretações do que o usuário disse.
+- Níveis de confiança para as traduções individuais.
 - Informações de tempo.
 
-Como mencionado acima, áudio para tradução pode ser fornecido tanto por um feed em tempo real, ou da origem pré-gravados e em qualquer um dos mais de 50 idiomas e dialetos com suporte no iOS 10.
+Conforme mencionado acima, o áudio para tradução pode ser fornecido por um feed ao vivo ou de uma fonte previamente gravada e em qualquer um dos mais de 50 idiomas e dialetos com suporte no iOS 10.
 
-A API de reconhecimento de fala pode ser usada em qualquer dispositivo iOS que executam o iOS 10 e na maioria dos casos, requer uma conexão de internet em tempo real, pois a maior parte das traduções ocorre em servidores da Apple. Dito isso, alguns dispositivos suportam AlwaysOn mais recentes do iOS, no dispositivo tradução de idiomas específicos.
+A API de reconhecimento de fala pode ser usada em qualquer dispositivo iOS que executa o iOS 10 e, na maioria dos casos, requer uma conexão com a Internet ao vivo, desde que a grande parte das traduções ocorra nos servidores da Apple. Dito isso, alguns dispositivos iOS mais recentes dão suporte à tradução do Always on no dispositivo de idiomas específicos.
 
-Apple incluiu uma API de disponibilidade para determinar se um determinado idioma está disponível para a tradução no momento atual. O aplicativo deve usar essa API em vez de testar a conectividade com a internet em si diretamente.
+A Apple incluiu uma API de disponibilidade para determinar se um determinado idioma está disponível para tradução no momento atual. O aplicativo deve usar essa API em vez de testar diretamente a conectividade com a Internet.
 
-Conforme observado acima na seção de ditado de teclado, reconhecimento de fala requer a transmissão e o armazenamento temporário de dados em servidores da Apple na Internet e como tal, o aplicativo _deve_ solicitar permissão do usuário para executar reconhecimento, incluindo o `NSSpeechRecognitionUsageDescription` chave em seu `Info.plist` arquivo e chamar o `SFSpeechRecognizer.RequestAuthorization` método. 
+Conforme observado acima na seção ditado do teclado, o reconhecimento de fala requer a transmissão e o armazenamento temporário de dados nos servidores da Apple pela Internet e, dessa forma, o aplicativo _deve_ solicitar a permissão do usuário para executar o reconhecimento, incluindo a `NSSpeechRecognitionUsageDescription` chave em seu `Info.plist` arquivo e a chamada `SFSpeechRecognizer.RequestAuthorization` do método. 
 
-Com base na origem do áudio que está sendo usado para o reconhecimento de fala, outras alterações para o aplicativo `Info.plist` arquivo pode ser necessário. Consulte nosso [aperfeiçoamentos de segurança e privacidade](~/ios/app-fundamentals/security-privacy.md) documentação para obter detalhes.
+Com base na origem do áudio que está sendo usado para reconhecimento de fala, outras alterações no arquivo `Info.plist` do aplicativo podem ser necessárias. Consulte nossa documentação de aprimoramentos de [segurança e privacidade](~/ios/app-fundamentals/security-privacy.md) para obter detalhes.
 
-## <a name="adopting-speech-recognition-in-an-app"></a>Adotando o reconhecimento de fala em um aplicativo
+## <a name="adopting-speech-recognition-in-an-app"></a>Adoção do reconhecimento de fala em um aplicativo
 
-Há quatro etapas principais que o desenvolvedor deve executar para adotar o reconhecimento de fala em um aplicativo iOS:
+Há quatro etapas principais que o desenvolvedor deve adotar para adotar o reconhecimento de fala em um aplicativo iOS:
 
-- Forneça uma descrição de uso do aplicativo `Info.plist` de arquivos usando o `NSSpeechRecognitionUsageDescription` chave. Por exemplo, um aplicativo de câmera pode incluir a seguinte descrição, _"Permite que você tire uma foto apenas dizendo a palavra 'queijo'"._
-- Solicitar autorização chamando o `SFSpeechRecognizer.RequestAuthorization` método para apresentar uma explicação (fornecido no `NSSpeechRecognitionUsageDescription` acima de chave) de por que o aplicativo deseja fala o reconhecimento de acesso para o usuário em uma caixa de diálogo e permitir que eles aceitar ou recusar.
-- Crie uma solicitação de reconhecimento de fala:
-    * Para áudio previamente gravado no disco, use o `SFSpeechURLRecognitionRequest` classe.
-    * Para áudio ao vivo (ou áudio da memória), use o `SFSPeechAudioBufferRecognitionRequest` classe.
-- Passar a solicitação de reconhecimento de fala para um reconhecedor de fala (`SFSpeechRecognizer`) para iniciar o reconhecimento. O aplicativo pode, opcionalmente, mantenha retornado `SFSpeechRecognitionTask` para monitorar e acompanhar os resultados do reconhecimento.
+- Forneça uma descrição de uso no arquivo do `Info.plist` aplicativo usando a `NSSpeechRecognitionUsageDescription` chave. Por exemplo, um aplicativo de câmera pode incluir a seguinte descrição: _"isso permite que você tire uma foto apenas dizendo a palavra" queijo "._
+- Solicite autorização chamando o `SFSpeechRecognizer.RequestAuthorization` método para apresentar uma explicação (fornecida `NSSpeechRecognitionUsageDescription` na chave acima) de por que o aplicativo deseja acesso de reconhecimento de fala ao usuário em uma caixa de diálogo e permitir que eles aceitem ou recusem.
+- Criar uma solicitação de reconhecimento de fala:
+    * Para áudio previamente gravado em disco, use a `SFSpeechURLRecognitionRequest` classe.
+    * Para áudio ao vivo (ou áudio da memória), use `SFSPeechAudioBufferRecognitionRequest` a classe.
+- Passe a solicitação de reconhecimento de fala para um reconhecedor de fala (`SFSpeechRecognizer`) para iniciar o reconhecimento. O aplicativo pode, opcionalmente, manter o `SFSpeechRecognitionTask` retorno para monitorar e acompanhar os resultados de reconhecimento.
 
 Essas etapas serão abordadas em detalhes abaixo.
 
 ### <a name="providing-a-usage-description"></a>Fornecendo uma descrição de uso
 
-Para fornecer o necessária `NSSpeechRecognitionUsageDescription` principais no `Info.plist` de arquivo, faça o seguinte:
+Para fornecer a chave `NSSpeechRecognitionUsageDescription` necessária `Info.plist` no arquivo, faça o seguinte:
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
-1. Clique duas vezes o `Info.plist` arquivo para abri-lo para edição.
-2. Alterne para o **origem** exibição: 
+1. Clique duas vezes no `Info.plist` arquivo para abri-lo para edição.
+2. Alterne para a exibição de **origem** : 
 
     [![](speech-images/speech02.png "A exibição da fonte")](speech-images/speech02.png#lightbox)
-3. Clique em **adicionar nova entrada**, insira `NSSpeechRecognitionUsageDescription` para o **propriedade**, `String` para o **tipo** e um **descrição de uso** como o **valor**. Por exemplo: 
+3. Clique em **Adicionar nova entrada**, insira `NSSpeechRecognitionUsageDescription` para a **Propriedade**, `String` para o **tipo** e uma **Descrição de uso** como o **valor**. Por exemplo: 
 
     [![](speech-images/speech03.png "Adicionando NSSpeechRecognitionUsageDescription")](speech-images/speech03.png#lightbox)
-4. Se o aplicativo estará manipulando a transcrição de áudio ao vivo, ela também exigirá uma descrição de uso do microfone. Clique em **adicionar nova entrada**, insira `NSMicrophoneUsageDescription` para o **propriedade**, `String` para o **tipo** e um **descrição de uso** como o **valor**. Por exemplo: 
+4. Se o aplicativo for manipular a transcrição de áudio ao vivo, ele também exigirá uma descrição de uso do microfone. Clique em **Adicionar nova entrada**, insira `NSMicrophoneUsageDescription` para a **Propriedade**, `String` para o **tipo** e uma **Descrição de uso** como o **valor**. Por exemplo: 
 
     [![](speech-images/speech04.png "Adicionando NSMicrophoneUsageDescription")](speech-images/speech04.png#lightbox)
 5. Salve as alterações no arquivo.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-1. Clique duas vezes o `Info.plist` arquivo para abri-lo para edição.
-2. Clique em **adicionar nova entrada**, insira `NSSpeechRecognitionUsageDescription` para o **propriedade**, `String` para o **tipo** e um **descrição de uso** como o **valor**. Por exemplo: 
+1. Clique duas vezes no `Info.plist` arquivo para abri-lo para edição.
+2. Clique em **Adicionar nova entrada**, insira `NSSpeechRecognitionUsageDescription` para a **Propriedade**, `String` para o **tipo** e uma **Descrição de uso** como o **valor**. Por exemplo: 
 
     [![](speech-images/speech03w.png "Adicionando NSSpeechRecognitionUsageDescription")](speech-images/speech03w.png#lightbox)
-3. Se o aplicativo estará manipulando a transcrição de áudio ao vivo, ela também exigirá uma descrição de uso do microfone. Clique em **adicionar nova entrada**, insira `NSMicrophoneUsageDescription` para o **propriedade**, `String` para o **tipo** e um **descrição de uso** como o **valor**. Por exemplo: 
+3. Se o aplicativo for manipular a transcrição de áudio ao vivo, ele também exigirá uma descrição de uso do microfone. Clique em **Adicionar nova entrada**, insira `NSMicrophoneUsageDescription` para a **Propriedade**, `String` para o **tipo** e uma **Descrição de uso** como o **valor**. Por exemplo: 
 
     [![](speech-images/speech04w.png "Adicionando NSMicrophoneUsageDescription")](speech-images/speech04w.png#lightbox)
 4. Salve as alterações no arquivo.
@@ -127,14 +127,14 @@ Para fornecer o necessária `NSSpeechRecognitionUsageDescription` principais no 
 -----
 
 > [!IMPORTANT]
-> Deixar de fornecer qualquer uma das opções acima `Info.plist` chaves (`NSSpeechRecognitionUsageDescription` ou `NSMicrophoneUsageDescription`) pode resultar em falha sem aviso ao tentar acessar o reconhecimento de fala ou o microfone para áudio ao vivo no aplicativo.
+> A falha ao fornecer qualquer uma das `Info.plist` chaves acima`NSSpeechRecognitionUsageDescription` ( `NSMicrophoneUsageDescription`ou) pode resultar na falha do aplicativo sem aviso ao tentar acessar o reconhecimento de fala ou o microfone para áudio ao vivo.
 
 
 
 
-### <a name="requesting-authorization"></a>Solicitando a autorização
+### <a name="requesting-authorization"></a>Solicitando autorização
 
-Para solicitar a autorização necessária para o usuário que permite que o aplicativo acessar o reconhecimento de fala, edite a classe de controlador de exibição principal e adicione o seguinte código:
+Para solicitar a autorização de usuário necessária que permita que o aplicativo acesse o reconhecimento de fala, edite a classe do controlador de exibição principal e adicione o seguinte código:
 
 ```csharp
 using System;
@@ -181,16 +181,16 @@ namespace MonkeyTalk
 }
 ```
 
-O `RequestAuthorization` método da `SFSpeechRecognizer` classe solicitar permissão do usuário para o reconhecimento de fala de acesso usando o motivo pelo qual o desenvolvedor fornecido na `NSSpeechRecognitionUsageDescription` chave do `Info.plist` arquivo.
+O `RequestAuthorization` método `NSSpeechRecognitionUsageDescription` `Info.plist` da classe solicitará permissão do usuário para acessar o reconhecimento de fala usando o motivo pelo qual o desenvolvedor forneceu a chave do arquivo. `SFSpeechRecognizer`
 
-Um `SFSpeechRecognizerAuthorizationStatus` resultado é retornado para o `RequestAuthorization` rotina de retorno de chamada do método que pode ser usada para agir com base em permissão do usuário. 
+Um `SFSpeechRecognizerAuthorizationStatus` resultado é retornado para a `RequestAuthorization` rotina de retorno de chamada do método que pode ser usada para agir com base na permissão do usuário. 
 
 > [!IMPORTANT]
-> A Apple sugere aguardando até que o usuário iniciou uma ação no aplicativo que exige o reconhecimento de fala antes de solicitar essa permissão.
+> A Apple sugere aguardar até que o usuário tenha iniciado uma ação no aplicativo que requer reconhecimento de fala antes de solicitar essa permissão.
 
-### <a name="recognizing-pre-recorded-speech"></a>Reconhecimento de fala pré-gravados
+### <a name="recognizing-pre-recorded-speech"></a>Reconhecendo fala previamente gravada
 
-Se o aplicativo deseja reconhecer fala de um arquivo WAV ou MP3 pré-gravados, ele poderá usar o código a seguir:
+Se o aplicativo quiser reconhecer a fala a partir de um arquivo WAV ou MP3 previamente gravado, ele poderá usar o seguinte código:
 
 ```csharp
 using System;
@@ -233,17 +233,17 @@ public void RecognizeFile (NSUrl url)
 }
 ```
 
-Examinar esse código detalhadamente, primeiro, ele tenta criar um reconhecedor de fala (`SFSpeechRecognizer`). Se o idioma padrão não tem suporte para o reconhecimento de fala `null` é retornado e sair do functions.
+Examinando esse código em detalhes primeiro, ele tenta criar um reconhecedor de fala (`SFSpeechRecognizer`). Se o idioma padrão não tiver suporte para reconhecimento de `null` fala, o será retornado e as funções serão encerradas.
 
-Se o reconhecedor de fala está disponível para o idioma padrão, o aplicativo verifica para ver se ele está disponível atualmente para o reconhecimento usando a `Available` propriedade. Por exemplo, o reconhecimento não pode ser disponível se o dispositivo não tiver uma conexão de internet ativa.
+Se o reconhecedor de fala estiver disponível para o idioma padrão, o aplicativo verificará se ele está disponível no momento para reconhecimento `Available` usando a propriedade. Por exemplo, o reconhecimento pode não estar disponível se o dispositivo não tiver uma conexão ativa com a Internet.
 
-Um `SFSpeechUrlRecognitionRequest` é criado a partir de `NSUrl` local do arquivo pré-gravados no dispositivo iOS e ele é passado para o reconhecedor de fala para serem processados com uma rotina de retorno de chamada.
+Um `SFSpeechUrlRecognitionRequest` é criado a `NSUrl` partir do local do arquivo previamente registrado no dispositivo IOS e ele é enviado para o reconhecedor de fala para processar com uma rotina de retorno de chamada.
 
-Quando o retorno de chamada é chamado, se o `NSError` não é `null` houve um erro que deve ser tratado. Como o reconhecimento de fala é feito de forma incremental, a rotina de retorno de chamada pode ser chamada mais de uma vez para que o `SFSpeechRecognitionResult.Final` propriedade é testada para ver se a conversão for concluída e melhor a versão da tradução é gravado (`BestTranscription`).
+Quando o retorno de chamada for chamado, `NSError` se `null` não houver um erro que deve ser manipulado. Como o reconhecimento de fala é feito incrementalmente, a rotina de retorno de chamada pode ser chamada `SFSpeechRecognitionResult.Final` mais de uma vez para que a propriedade seja testada para ver se a tradução foi concluída e a`BestTranscription`melhor versão da tradução é gravada ().
 
-### <a name="recognizing-live-speech"></a>Reconhecimento de fala em tempo real
+### <a name="recognizing-live-speech"></a>Reconhecendo a fala ao vivo
 
-Se o aplicativo deseja reconhecer fala em tempo real, o processo é muito semelhante ao reconhecer fala pré-gravado. Por exemplo:
+Se o aplicativo quiser reconhecer a fala ao vivo, o processo será muito semelhante a reconhecer a fala previamente gravada. Por exemplo:
 
 ```csharp
 using System;
@@ -311,7 +311,7 @@ public void CancelRecording ()
 }
 ```
 
-Examinar esse código detalhadamente, ele cria várias variáveis privadas para manipular o processo de reconhecimento:
+Observando esse código em detalhes, ele cria várias variáveis privadas para lidar com o processo de reconhecimento:
 
 ```csharp
 private AVAudioEngine AudioEngine = new AVAudioEngine ();
@@ -320,7 +320,7 @@ private SFSpeechAudioBufferRecognitionRequest LiveSpeechRequest = new SFSpeechAu
 private SFSpeechRecognitionTask RecognitionTask;
 ```
 
-Ele usa AV Foundation para gravar o áudio será passado para um `SFSpeechAudioBufferRecognitionRequest` para manipular a solicitação de reconhecimento:
+Ele usa o AV Foundation para gravar áudio que será passado para um `SFSpeechAudioBufferRecognitionRequest` para lidar com a solicitação de reconhecimento:
 
 ```csharp
 var node = AudioEngine.InputNode;
@@ -331,7 +331,7 @@ node.InstallTapOnBus (0, 1024, recordingFormat, (AVAudioPcmBuffer buffer, AVAudi
 });
 ```
 
-O aplicativo tenta iniciar a gravação e os erros são tratados, se a gravação não pode ser iniciada:
+O aplicativo tentará iniciar a gravação e os erros serão tratados se a gravação não puder ser iniciada:
 
 ```csharp
 AudioEngine.Prepare ();
@@ -346,7 +346,7 @@ if (error != null) {
 }
 ```
 
-A tarefa de reconhecimento é iniciada e um identificador é mantido para a tarefa de reconhecimento (`SFSpeechRecognitionTask`):
+A tarefa de reconhecimento é iniciada e um identificador é mantido para a tarefa`SFSpeechRecognitionTask`de reconhecimento ():
 
 ```csharp
 RecognitionTask = SpeechRecognizer.GetRecognitionTask (LiveSpeechRequest, (SFSpeechRecognitionResult result, NSError err) => {
@@ -354,9 +354,9 @@ RecognitionTask = SpeechRecognizer.GetRecognitionTask (LiveSpeechRequest, (SFSpe
 });
 ```
 
-O retorno de chamada é usado de maneira semelhante à usada acima em fala pré-gravado.
+O retorno de chamada é usado de maneira semelhante à usada acima em fala previamente gravada.
 
-Se a gravação é parada pelo usuário, o mecanismo de áudio e a solicitação de reconhecimento de fala, eles serão informados:
+Se a gravação for interrompida pelo usuário, o mecanismo de áudio e a solicitação de reconhecimento de fala serão informados:
 
 ```csharp
 AudioEngine.Stop ();
@@ -370,37 +370,37 @@ AudioEngine.Stop ();
 RecognitionTask.Cancel ();
 ```
 
-É importante chamar `RecognitionTask.Cancel` se o usuário cancelar a tradução para liberar a memória e processador do dispositivo.
+É importante chamar `RecognitionTask.Cancel` se o usuário cancelar a tradução para liberar memória e o processador do dispositivo.
 
 > [!IMPORTANT]
-> Deixar de fornecer a `NSSpeechRecognitionUsageDescription` ou `NSMicrophoneUsageDescription` `Info.plist` chaves podem resultar em falha sem aviso ao tentar acessar o reconhecimento de fala ou o microfone para áudio ao vivo no aplicativo (`var node = AudioEngine.InputNode;`). Consulte a **fornecendo uma descrição de uso** seção acima para obter mais informações.
+> A falha ao fornecer `NSSpeechRecognitionUsageDescription` as `NSMicrophoneUsageDescription` chaves ou `Info.plist` pode resultar na falha do aplicativo sem aviso ao tentar acessar o reconhecimento de fala ou o microfone para áudio ao`var node = AudioEngine.InputNode;`vivo (). Consulte a seção **fornecendo uma descrição de uso** acima para obter mais informações.
 
 ## <a name="speech-recognition-limits"></a>Limites de reconhecimento de fala
 
-Apple impõe as seguintes limitações ao trabalhar com o reconhecimento de fala em um aplicativo iOS:
+A Apple impõe as seguintes limitações ao trabalhar com o reconhecimento de fala em um aplicativo iOS:
 
-- Reconhecimento de fala é gratuito para todos os aplicativos, mas seu uso não é ilimitado:
-    - Os dispositivos iOS individuais têm um número limitado de reconhecimentos que podem ser executadas por dia.
-    - Aplicativos serão limitados globalmente em uma base de solicitação por dia.
-- O aplicativo deve estar preparado para lidar com falhas de limite de taxa de uso e conexão de rede de reconhecimento de fala.
-- Reconhecimento de fala pode ter um alto custo em bateria e alto tráfego de rede no dispositivo do iOS do usuário, por isso, Apple impõe um limite de duração de áudio estrita de aproximadamente um minuto de fala max.
+- O reconhecimento de fala é gratuito para todos os aplicativos, mas seu uso não é ilimitado:
+    - Dispositivos iOS individuais têm um número limitado de reconhecimentos que podem ser executados por dia.
+    - Os aplicativos serão limitados globalmente em uma base de solicitação por dia.
+- O aplicativo deve estar preparado para lidar com as falhas de conexão de rede e de limite de taxa de uso do reconhecimento de fala.
+- O reconhecimento de fala pode ter um alto custo tanto no desgaste da bateria quanto no alto tráfego de rede no dispositivo iOS do usuário, por isso, a Apple impõe um limite de duração de áudio estrito de aproximadamente um minuto de fala máx.
 
-Se um aplicativo rotineiramente está atingindo seus limites de limitação de taxa, Apple solicita que o desenvolvedor contatá-lo.
+Se um aplicativo estiver atingindo rotineiramente seus limites de limitação de taxa, a Apple pedirá que o desenvolvedor entre em contato com eles.
 
-## <a name="privacy-and-usability-considerations"></a>Privacidade e considerações de usabilidade
+## <a name="privacy-and-usability-considerations"></a>Considerações sobre privacidade e usabilidade
 
-Apple tem a seguinte sugestão para sendo transparente e respeitando a privacidade do usuário ao incluir o reconhecimento de fala em um aplicativo iOS:
+A Apple tem a seguinte sugestão para ser transparente e respeitar a privacidade do usuário ao incluir o reconhecimento de fala em um aplicativo iOS:
 
-- Durante a gravação de voz do usuário, certifique-se de que indicam claramente que gravação está ocorrendo na Interface do usuário do aplicativo. Por exemplo, o aplicativo pode reproduzir som uma "gravação" e exibir um indicador de gravação.
+- Ao registrar a fala do usuário, lembre-se de indicar claramente que a gravação está ocorrendo na interface do usuário do aplicativo. Por exemplo, o aplicativo pode reproduzir um som de "gravação" e exibir um indicador de gravação.
 - Não use o reconhecimento de fala para informações confidenciais do usuário, como senhas, dados de integridade ou informações financeiras.
-- Mostrar os resultados de reconhecimento _antes de_ agir sobre eles. Isso não só fornece comentários sobre o que o aplicativo está fazendo, mas permite que o usuário lidar com erros de reconhecimento de que elas são feitas.
+- Mostre os resultados do reconhecimento _antes_ de agir neles. Isso não apenas fornece comentários sobre o que o aplicativo está fazendo, mas permite que o usuário manipule erros de reconhecimento conforme eles são feitos.
 
 ## <a name="summary"></a>Resumo
 
-Este artigo tem apresentado a nova API de fala e mostrou como implementá-lo em um aplicativo xamarin. IOS para dar suporte a reconhecimento de fala contínua e transcrição de fala (de fluxos de áudio ao vivo ou gravados) em texto. 
+Este artigo apresentou o novo Speech API e mostrou como implementá-lo em um aplicativo Xamarin. iOS para dar suporte ao reconhecimento de fala contínuo e transcrever a fala (de fluxos de áudio dinâmicos ou gravados) em texto. 
 
 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [SpeakToMe (amostra)](https://developer.xamarin.com/samples/monotouch/ios10/SpeakToMe/)
+- [SpeakToMe (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios10-speaktome)

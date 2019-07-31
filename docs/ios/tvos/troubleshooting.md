@@ -1,5 +1,5 @@
 ---
-title: Solucionar problemas de aplicativos do tvOS criados com o Xamarin
+title: Solução de problemas de aplicativos tvOS criados com o Xamarin
 description: Este artigo fornece várias dicas para ajudar a solucionar problemas durante o desenvolvimento de um aplicativo tvOS criado com o Xamarin. Ele descreve problemas conhecidos e erros específicos.
 ms.topic: troubleshooting
 ms.prod: xamarin
@@ -8,52 +8,52 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 6830df267aa0b9c4f12fbd53520206ea94fc8a38
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: ad0952bb620645a4cbc5fbc17b21f6a977c889ff
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67831889"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68657316"
 ---
-# <a name="troubleshooting-tvos-apps-built-with-xamarin"></a>Solucionar problemas de aplicativos do tvOS criados com o Xamarin
+# <a name="troubleshooting-tvos-apps-built-with-xamarin"></a>Solução de problemas de aplicativos tvOS criados com o Xamarin
 
-_Este artigo aborda Saiba que esses problemas, você pode encontrar ao trabalhar com o suporte de tvOS do Xamarin._
+_Este artigo aborda os problemas conhecidos que você pode encontrar ao trabalhar com o suporte do tvOS do Xamarin._
 
 <a name="Known-Issues" />
 
 ## <a name="known-issues"></a>Problemas Conhecidos
 
-A versão atual do suporte de tvOS do Xamarin tem os seguintes problemas conhecidos:
+A versão atual do suporte do tvOS do Xamarin tem os seguintes problemas conhecidos:
 
-- **Estrutura mono** – Mono 4.3 Cryptography.ProtectedData não conseguir descriptografar os dados da versão 4.2 do Mono. Como resultado, os pacotes do NuGet serão Falha na restauração com o erro `Data unprotection failed` quando uma origem de NuGet protegida é configurada.
-    - **Solução alternativa** – no Visual Studio para Mac, você precisará adicionar novamente qualquer pacote NuGet que usar autenticação de senha antes de tentar novamente restaurar os pacotes de códigos-fonte.
-- **O Visual Studio para Mac com F# Add-in** – erro ao criar um F# modelo Android no Windows. Isso ainda deverá funcionar corretamente no Mac.
-- **Xamarin. Mac** – ao executar o projeto de modelo unificado do xamarin. Mac com a estrutura de destino definido como `Unsupported`, o pop-up `Could not connect to the debugger` pode aparecer.
-    - **Solução alternativa potencial** – fazer Downgrade da versão do Mono framework disponível em nosso canal estável.
-- **Xamarin para Visual Studio e xamarin. IOS** – ao implantar aplicativos do WatchKit no Visual studio, o erro `The file ‘bin\iPhoneSimulator\Debug\WatchKitApp1WatchKitApp.app\WatchKitApp1WatchKitApp’ does not exist` pode aparecer.
+- **Estrutura mono** – mono 4,3 Cryptography. ProtectedData falha ao descriptografar dados do mono 4,2. Como resultado, os pacotes NuGet não conseguirão restaurar com o `Data unprotection failed` erro quando uma origem do NuGet protegida for configurada.
+    - **Solução alternativa** – em Visual Studio para Mac você precisará adicionar todas as fontes de pacote NuGet que usam autenticação de senha antes de tentar restaurar os pacotes novamente.
+- **Visual Studio para Mac w/ F# Add-in** – erro ao criar um F# modelo do Android no Windows. Isso ainda deve funcionar corretamente no Mac.
+- **Xamarin. Mac** – ao executar o projeto de modelo unificado do Xamarin. Mac com a `Unsupported`estrutura de destino `Could not connect to the debugger` definida como, o pop-up pode aparecer.
+    - **Possível solução alternativa** – faça downgrade da versão do mono Framework disponível em nosso canal estável.
+- **Xamarin Visual Studio & xamarin. Ios** – ao implantar aplicativos WatchKit no Visual Studio, o erro `The file ‘bin\iPhoneSimulator\Debug\WatchKitApp1WatchKitApp.app\WatchKitApp1WatchKitApp’ does not exist` pode ser exibido.
 
-Relatório de quaisquer bugs que você encontre na [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
+Informe todos os bugs encontrados no [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 ## <a name="troubleshooting"></a>Solução de problemas
 
-As seções a seguir listam alguns problemas conhecidos que podem ocorrer ao usar tvOS 9 com xamarin. tvos e a solução para esses problemas:
+As seções a seguir listam alguns problemas conhecidos que podem ocorrer ao usar o tvOS 9 com o Xamarin. tvOS e a solução para esses problemas:
 
-### <a name="invalid-executable---the-executable-does-not-contain-bitcode"></a>Executável inválido - o executável não contêm bitcode
+### <a name="invalid-executable---the-executable-does-not-contain-bitcode"></a>Executável inválido-o executável não contém BitCode
 
-Ao tentar enviar um aplicativo xamarin. tvos para a Store de aplicativo da Apple TV, você poderá receber uma mensagem de erro no formulário _"Executável inválido - o executável não contêm bitcode"_ .
+Ao tentar enviar um aplicativo Xamarin. tvOS para a loja de aplicativos da Apple TV, você pode receber uma mensagem de erro no formato _"executável inválido-o executável não contém BitCode"_ .
 
 Para resolver esse problema, faça o seguinte:
 
-1. No Visual Studio para Mac, clique com botão direito no seu arquivo de projeto do xamarin. tvos na **Gerenciador de soluções** e selecione **opções**.
-2. Selecione **Build do tvOS** e certifique-se de que você estiver usando o **versão** configuração: 
+1. Em Visual Studio para Mac, clique com o botão direito do mouse no arquivo de projeto Xamarin. tvOS na **Gerenciador de soluções** e selecione **Opções**.
+2. Selecione **TvOS Build** e verifique se você está na configuração de **versão** : 
 
     [![](troubleshooting-images/ts01.png "Selecione as opções de Build do tvOS")](troubleshooting-images/ts01.png#lightbox)
-3. Adicione `--bitcode=asmonly` para o **argumentos adicionais do mtouch** campo e clique no **Okey** botão.
-4. Recompilar seu aplicativo na **versão** configuração.
+3. Adicione `--bitcode=asmonly` ao campo **argumentos mTouch adicionais** e clique no botão **OK** .
+4. Recrie seu aplicativo na configuração de **versão** .
 
-### <a name="verifying-that-your-tvos-app-contains-bitcode"></a>Verificando se seu aplicativo contém Bitcode tvOS
+### <a name="verifying-that-your-tvos-app-contains-bitcode"></a>Verificando se seu aplicativo tvOS contém BitCode
 
-Para verificar se sua compilação Xamarin.tvOS App contém Bitcode, abra o aplicativo Terminal e digite o seguinte:
+Para verificar se o Build do aplicativo Xamarin. tvOS contém BitCode, abra o aplicativo terminal e insira o seguinte:
 
 ```csharp
 otool -l /path/to/your/tv.app/tv
@@ -76,13 +76,13 @@ Section
  reserved2 0
 ```
 
-`addr` e `size` serão diferentes, mas outros campos devem ser idênticos.
+`addr`e `size` serão diferentes, mas outros campos devem ser idênticos.
 
-Você precisará ter certeza de que qualquer terceiro estático (`.a`) foram construídas bibliotecas que você estiver usando bibliotecas de tvOS (não a bibliotecas de iOS) e que também inclui informações de bitcode.
+Você precisará certificar-se de que todas as bibliotecas estáticas (`.a`) de terceiros que você está usando foram criadas em relação a bibliotecas tvOS (não bibliotecas Ios) e que também incluem informações de BitCode.
 
-Para aplicativos ou bibliotecas que incluem o bitcode válido a `size` será maior do que um. Há algumas situações em que uma biblioteca pode ter o marcador de bitcode, ainda não contêm bitcode válido. Por exemplo:
+Para aplicativos ou bibliotecas que incluem BitCode válidas `size` , o será maior que um. Há algumas situações em que uma biblioteca pode ter o marcador BitCode, mas não contém BitCode válido. Por exemplo:
 
-**Bitcode inválido**
+**BitCode inválido**
 
 ```csharp
  $ otool -arch arm64 libLibrary.a | grep __bitcode -A 3
@@ -92,7 +92,7 @@ Para aplicativos ou bibliotecas que incluem o bitcode válido a `size` será mai
       size 0x0000000000000001
 ```
 
-**Bitcode válido** 
+**BitCode válido** 
 
 ```csharp
 $ otool -l -arch arm64 libDownloadableAgent-tvos.a |grep __bitcode -A 3
@@ -102,15 +102,15 @@ $ otool -l -arch arm64 libDownloadableAgent-tvos.a |grep __bitcode -A 3
       size 0x0000000000045440
 ```
 
-Observe a diferença no `size` entre as duas bibliotecas no exemplo listado é executado acima. A biblioteca deve ser gerada de um build de arquivo morto do Xcode com bitcode habilitado (configuração do Xcode `ENABLE_BITCODE`) como uma solução para esse problema de tamanho.
+Observe que a diferença `size` entre as duas bibliotecas no exemplo listado é executada acima. A biblioteca deve ser gerada a partir de uma compilação de arquivo do Xcode com BitCode `ENABLE_BITCODE`habilitado (configuração do Xcode) como uma solução para esse problema de tamanho.
 
-### <a name="apps-that-only-contain-the-arm64-slice-must-also-have-arm64-in-the-list-of-uirequireddevicecapabilities-in-infoplist"></a>Aplicativos que contêm apenas a fatia arm64 também devem ter "arm64" na lista de UIRequiredDeviceCapabilities no Info. plist
+### <a name="apps-that-only-contain-the-arm64-slice-must-also-have-arm64-in-the-list-of-uirequireddevicecapabilities-in-infoplist"></a>Os aplicativos que contêm apenas a fatia arm64 também devem ter "arm64" na lista de UIRequiredDeviceCapabilities no info. plist
 
-Ao enviar um aplicativo para a Store do Apple TV App para publicação, você poderá receber um erro no formulário:
+Ao enviar um aplicativo para a loja de aplicativos da Apple TV para publicação, você pode receber um erro no formato:
 
-_"O aplicativos que contêm apenas a fatia arm64 também devem ter"arm64"na lista de UIRequiredDeviceCapabilities no Info. plist"_
+_"Os aplicativos que contêm apenas a fatia arm64 também devem ter" arm64 "na lista de UIRequiredDeviceCapabilities no info. plist"_
 
-Se isso ocorrer, edite seu `Info.plist` de arquivo e certifique-se de que ele tem as seguintes chaves:
+Se isso ocorrer, edite `Info.plist` o arquivo e verifique se ele tem as seguintes chaves:
 
 ```xml
 <key>UIRequiredDeviceCapabilities</key>
@@ -119,43 +119,43 @@ Se isso ocorrer, edite seu `Info.plist` de arquivo e certifique-se de que ele te
 </array>
 ```
 
-Recompilar seu aplicativo para lançamento e envie novamente para o iTunes Connect.
+Recompile seu aplicativo para liberação e reenvie para o iTunes Connect.
 
-### <a name="task-mtouch-execution----failed"></a>"MTouch" – Falha na execução de tarefas
+### <a name="task-mtouch-execution----failed"></a>Execução da tarefa "MTouch"--com falha
 
-Se você estiver usando uma biblioteca de terceiros 3ª (por exemplo, MonoGame) e sua compilação de versão falha com longa uma série de mensagens de erro que terminam em `Task "MTouch" execution -- FAILED`, tente adicionar `-gcc_flags="-framework OpenAL"` para seu **argumentos adicionais de toque**:
+Se você estiver usando uma biblioteca de terceiros (como monogames) e a compilação da versão falhar com uma longa série de mensagens de erro terminando em `Task "MTouch" execution -- FAILED`, tente adicionar `-gcc_flags="-framework OpenAL"` aos seus argumentos de **toque adicionais**:
 
-[![](troubleshooting-images/mtouch01.png "Execução de MTouch da tarefa")](troubleshooting-images/mtouch01.png#lightbox)
+[![](troubleshooting-images/mtouch01.png "Execução de MTouch de tarefa")](troubleshooting-images/mtouch01.png#lightbox)
 
-Você também deve incluir `--bitcode=asmonly` no **argumentos adicionais de toque**, definiu as opções do vinculador como **vincular todos** e fazer uma compilação limpa.
+Você também deve incluir `--bitcode=asmonly` os **argumentos de toque adicionais**, ter suas opções de vinculador definidas para **vincular tudo** e fazer uma compilação limpa.
 
-### <a name="itms-90471-error-the-large-icon-is-missing"></a>Erro do ITMS 90471. O ícone grande está ausente
+### <a name="itms-90471-error-the-large-icon-is-missing"></a>Erro de ITMS-90471. O ícone grande está ausente
 
-Se você receber uma mensagem no formato "ITMS 90471 erro. O ícone grande está ausente"ao tentar enviar um aplicativo xamarin. tvos para a Store do Apple TV App para versão, verifique o seguinte:
+Se você receber uma mensagem no formato "ITMS-90471 Error. O ícone grande está ausente "ao tentar enviar um aplicativo Xamarin. tvOS para a versão da loja de aplicativos da Apple TV para o Release, verifique o seguinte:
 
-1. Certifique-se de que você incluiu os ativos de ícone grande em seu `Assets.car` arquivo que você criou usando o [ícones do aplicativo](~/ios/tvos/app-fundamentals/icons-images.md#App-Icons) documentação.
-2. Certifique-se de que você incluiu a `Assets.car` arquivo do [trabalhando com imagens e ícones](~/ios/tvos/app-fundamentals/icons-images.md) documentação no pacote de aplicativo final.
+1. Verifique se você incluiu os ativos de ícone grande no `Assets.car` arquivo que você criou usando a documentação de [ícones de aplicativo](~/ios/tvos/app-fundamentals/icons-images.md#App-Icons) .
+2. Certifique-se de incluir `Assets.car` o arquivo da documentação [trabalhando com ícones e imagens](~/ios/tvos/app-fundamentals/icons-images.md) em seu pacote de aplicativos final.
 
-### <a name="invalid-bundle--an-app-that-supports-game-controllers-must-also-support-the-apple-tv-remote"></a>Pacote inválido – um aplicativo que dá suporte a controladores de jogos também deve dar suporte a Apple TV remoto
-
-ou 
-
-### <a name="invalid-bundle--apple-tv-apps-with-the-gamecontroller-framework-must-include-the-gcsupportedgamecontrollers-key-in-the-apps-infoplist"></a>Pacote inválido – aplicativos da Apple TV com o framework GameController deve incluir a chave de GCSupportedGameControllers no Info. plist do aplicativo
-
-Controladores de jogos podem ser usados para aprimorar o jogo e fornecer um senso de imersão em um jogo. Eles também podem ser usados para controlar a interface de Apple TV padrão para que o usuário não precise alternar entre o computador remoto e o controlador.
-
-Se você estiver enviando um aplicativo tvos com o suporte de controlador de jogo para Apple TV App store e recebam uma mensagem de erro na forma de:
-
-
-_Descobrimos um ou mais problemas com sua recente entrega para "nome do aplicativo". Sua entrega foi bem-sucedida, mas você poderá corrigir os problemas a seguir em sua próxima entrega:_
-
-_Pacote inválido – um aplicativo que dá suporte a controladores de jogos também deve dar suporte a Apple TV remoto._
+### <a name="invalid-bundle--an-app-that-supports-game-controllers-must-also-support-the-apple-tv-remote"></a>Pacote inválido – um aplicativo que dá suporte a controladores de jogos também deve dar suporte ao Apple TV Remote
 
 ou 
 
-_Pacote inválido – aplicativos da Apple TV com o framework GameController deve incluir a chave de GCSupportedGameControllers no Info. plist do aplicativo._
+### <a name="invalid-bundle--apple-tv-apps-with-the-gamecontroller-framework-must-include-the-gcsupportedgamecontrollers-key-in-the-apps-infoplist"></a>Pacote inválido – os aplicativos da Apple TV com a estrutura GameController devem incluir a chave GCSupportedGameControllers no info. plist do aplicativo
 
-A solução é adicionar suporte para o Siri remoto (`GCMicroGamepad`) ao seu aplicativo `Info.plist` arquivo. O perfil do controlador de jogo Micro foi adicionado pela Apple para que o Siri remoto de destino. Por exemplo, incluem as seguintes chaves:
+Os controladores de jogo podem ser usados para aprimorar jogos e fornecer uma noção de imersão em um jogo. Eles também podem ser usados para controlar a interface padrão da Apple TV para que o usuário não precise alternar entre o remoto e o controlador.
+
+Se você estiver enviando um aplicativo Xamarin. tvOS com suporte do controlador de jogo para a loja de aplicativos da Apple TV e receber uma mensagem de erro na forma de:
+
+
+_Descobrimos um ou mais problemas com sua entrega recente para "nome do aplicativo". Sua entrega foi bem-sucedida, mas talvez você queira corrigir os seguintes problemas em sua próxima entrega:_
+
+_Pacote inválido – um aplicativo que dá suporte a controladores de jogos também deve dar suporte ao Apple TV Remote._
+
+ou 
+
+_Pacote inválido – os aplicativos da Apple TV com a estrutura GameController devem incluir a chave GCSupportedGameControllers no info. plist do aplicativo._
+
+A solução é adicionar suporte para o Siri remoto (`GCMicroGamepad`) ao arquivo do `Info.plist` aplicativo. O perfil do micro Game Controller foi adicionado pela Apple para direcionar o Siri remoto. Por exemplo, inclua as seguintes chaves:
 
 ```xml
 <key>GCSupportedGameControllers</key>  
@@ -174,15 +174,15 @@ A solução é adicionar suporte para o Siri remoto (`GCMicroGamepad`) ao seu ap
 ```
 
 > [!IMPORTANT]
-> Controladores de jogo de Bluetooth são uma compra adicional que os usuários finais podem fazer, seu aplicativo não pode forçar o usuário compra um. Se seu aplicativo dá suporte a controladores de jogos também deve suportar Siri remoto para que o jogo seja utilizável por todos os usuários de Apple TV.
+> Controladores de jogos Bluetooth são uma compra opcional que os usuários finais podem fazer, seu aplicativo não pode forçar o usuário a comprar um. Se seu aplicativo der suporte a controladores de jogos, ele também deverá oferecer suporte ao Siri remoto para que o jogo seja utilizável por todos os usuários da Apple TV.
 
-Para obter mais informações, consulte nosso [trabalhar com controladores de jogo](~/ios/tvos/platform/remote-bluetooth.md#Working-with-Game-Controllers) seção do nosso [Siri remoto e controladores de Bluetooth](~/ios/tvos/platform/remote-bluetooth.md) documentação.
+Para obter mais informações, consulte [a seção trabalhando com controladores de jogos](~/ios/tvos/platform/remote-bluetooth.md#Working-with-Game-Controllers) da documentação de nossa Siri de [controladores remotos e Bluetooth](~/ios/tvos/platform/remote-bluetooth.md) .
 
-### <a name="incompatible-target-framework-netportable-versionv45-profileprofile78"></a>Estrutura de destino incompatível:. NetPortable, versão = v4.5, perfil = Profile78
+### <a name="incompatible-target-framework-netportable-versionv45-profileprofile78"></a>Estrutura de destino incompatível:. Netportável, versão = v 4.5, perfil = Profile78
 
-Durante a tentativa de incluir uma biblioteca de classe portátil (PCL) em um projeto xamarin. tvos pode receber uma mensagem para formar:
+Ao tentar incluir uma PCL (biblioteca de classes portátil) em um projeto Xamarin. tvOS, você pode receber uma mensagem para formar:
 
-_Estrutura de destino incompatível:. NetPortable, versão = v4.5, perfil = Profile78_
+_Estrutura de destino incompatível:. Netportável, versão = v 4.5, perfil = Profile78_
 
 Para resolver esse problema, adicione um arquivo XML chamado `Xamarin.TVOS.xml` com o seguinte conteúdo:
 
@@ -197,15 +197,15 @@ Para o seguinte caminho:
 
 ```
 
-Observe que o número de perfil no caminho deve corresponder ao número de perfil de PCL.
+Observe que o número do perfil no caminho deve corresponder ao número de perfil do PCL.
 
-Com esse arquivo em vigor, você deve ser capaz de adicionar com êxito o arquivo PCL para o projeto xamarin. tvos.
+Com esse arquivo em vigor, você deve ser capaz de adicionar com êxito o arquivo PCL ao projeto Xamarin. tvOS.
 
 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Amostras do tvOS](https://developer.xamarin.com/samples/tvos/all/)
+- [Amostras do tvOS](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
 - [tvOS](https://developer.apple.com/tvos/)
-- [Guias de Interface humana do tvOS](https://developer.apple.com/tvos/human-interface-guidelines/)
+- [Guias de interface humana do tvOS](https://developer.apple.com/tvos/human-interface-guidelines/)
 - [Guia de programação de aplicativo para tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)

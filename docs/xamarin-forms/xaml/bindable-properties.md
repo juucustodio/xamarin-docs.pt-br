@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/02/2016
-ms.openlocfilehash: d3e1c8a2b17ba41e3c9d212948f42023c15205ac
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: 59ec82c222208ff0e73b0b7b5226d416d3a53398
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65926237"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656605"
 ---
 # <a name="bindable-properties"></a>Propriedades vinculáveis
 
-[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/Behaviors/EventToCommandBehavior/)
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-eventtocommandbehavior)
 
 _No xamarin. Forms, a funcionalidade de propriedades comuns de runtime (CLR) de linguagem é estendida por propriedades associáveis. Uma propriedade associável é um tipo especial de propriedade, em que o valor da propriedade é controlado pelo sistema de propriedades de xamarin. Forms. Este artigo fornece uma introdução a propriedades associáveis e demonstra como criar e consumi-los._
 
@@ -226,8 +226,8 @@ Este artigo fornece uma introdução para propriedades vinculáveis e demonstrou
 ## <a name="related-links"></a>Links relacionados
 
 - [Namespaces XAML](~/xamarin-forms/xaml/namespaces.md)
-- [Eventos para comportamento de comando (amostra)](https://developer.xamarin.com/samples/xamarin-forms/Behaviors/EventToCommandBehavior/)
-- [Retorno de chamada de validação (amostra)](https://developer.xamarin.com/samples/xamarin-forms/xaml/validationcallback/)
-- [Impor o valor de retorno de chamada (exemplo)](https://developer.xamarin.com/samples/xamarin-forms/xaml/coercevaluecallback/)
+- [Eventos para comportamento de comando (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-eventtocommandbehavior)
+- [Retorno de chamada de validação (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-validationcallback)
+- [Impor o valor de retorno de chamada (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-coercevaluecallback)
 - [BindableProperty](xref:Xamarin.Forms.BindableProperty)
 - [BindableObject](xref:Xamarin.Forms.BindableObject)

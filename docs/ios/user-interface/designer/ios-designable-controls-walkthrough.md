@@ -1,42 +1,42 @@
 ---
 title: Como usar controles personalizados com o iOS Designer
-description: Este documento descreve como criar um controle personalizado e usá-lo com o Designer do Xamarin para iOS. Ele mostra como tornar o controle disponíveis na caixa de ferramentas do Designer do iOS, implementar o controle para que ele renderize corretamente e tempo de design e muito mais.
+description: Este documento descreve como criar um controle personalizado e usá-lo com o Xamarin Designer para iOS. Ele mostra como tornar o controle disponível na caixa de ferramentas do designer do iOS, implementar o controle para que ele seja renderizado corretamente e o tempo de design e muito mais.
 ms.prod: xamarin
 ms.assetid: 9032B32E-97BD-4DA6-9955-811B84682578
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: 98504c9d5f210d55a2be4c85c52d4bc1418fc223
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 448bc60891a44d8cd5eea0480031d692b4fb5d31
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61154316"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68657473"
 ---
 # <a name="using-custom-controls-with-the-ios-designer"></a>Como usar controles personalizados com o iOS Designer
 
 ## <a name="requirements"></a>Requisitos
 
-O Designer de Xamarin para iOS está disponível no Visual Studio para Mac e Visual Studio 2017 e posterior no Windows.
+O Xamarin Designer para iOS está disponível no Visual Studio para Mac e no Visual Studio 2017 e posterior no Windows.
 
-Este guia pressupõe uma familiaridade com o conteúdo abordados os [guias de Introdução ao](~/ios/get-started/index.md).
+Este guia pressupõe familiaridade com o conteúdo abordado nos [guias de introdução](~/ios/get-started/index.md).
 
 ## <a name="walkthrough"></a>Passo a passo
 
 > [!IMPORTANT]
-> A maneira na qual os controles personalizados são criados a partir do xamarin. Studio 5.5, é ligeiramente diferente para versões anteriores. Para criar um controle personalizado, ou o `IComponent` interface é necessária (com os métodos de implementação associada) ou a classe pode ser anotada com `[DesignTimeVisible(true)]`. O último método está sendo usado no exemplo de passo a passo a seguir.
+> A partir do Xamarin. Studio 5,5, a maneira como os controles personalizados são criados é um pouco diferente das versões anteriores. Para criar um controle personalizado, a `IComponent` interface é necessária (com os métodos de implementação associados) ou a classe pode ser anotada. `[DesignTimeVisible(true)]` O último método está sendo usado no exemplo a seguir.
 
 
-1. Criar uma nova solução do **iOS > aplicativo > aplicativo de exibição única > c#** modelo, nomeie- `ScratchTicket`e prossiga com o Assistente de novo projeto:
+1. Crie uma nova solução do aplicativo **> do IOS > modelo de > C# de aplicativo de exibição única** , nomeie- `ScratchTicket`o e continue pelo assistente de novo projeto:
 
     [![](ios-designable-controls-walkthrough-images/01new.png "Criar uma nova solução")](ios-designable-controls-walkthrough-images/01new.png#lightbox)
 
-1. Crie um novo arquivo de classe vazia chamado `ScratchTicketView`:
+1. Crie um novo arquivo de classe vazio `ScratchTicketView`chamado:
 
-    [![](ios-designable-controls-walkthrough-images/02new.png "Crie uma nova classe ScratchTicketView")](ios-designable-controls-walkthrough-images/02new.png#lightbox)
+    [![](ios-designable-controls-walkthrough-images/02new.png "Criar uma nova classe ScratchTicketView")](ios-designable-controls-walkthrough-images/02new.png#lightbox)
 
-1. Adicione o seguinte código para `ScratchTicketView` classe:
+1. Adicione o seguinte código para `ScratchTicketView` a classe:
 
     ```csharp
     using System;
@@ -158,60 +158,60 @@ Este guia pressupõe uma familiaridade com o conteúdo abordados os [guias de In
     ```
 
 
-1. Adicione a `FillTexture.png`, `FillTexture2.png` e `Monkey.png` arquivos (disponível [do GitHub](https://github.com/xamarin/ios-samples/blob/master/ScratchTicket/Resources/images.zip?raw=true)) para o **recursos** pasta.
+1. Adicione os `FillTexture.png` `FillTexture2.png` arquivos e`Monkey.png` (disponíveis [no GitHub](https://github.com/xamarin/ios-samples/blob/master/ScratchTicket/Resources/images.zip?raw=true)) à pasta **recursos** .
     
-1. Clique duas vezes o `Main.storyboard` arquivo para abri-lo no designer:
+1. Clique duas vezes no `Main.storyboard` arquivo para abri-lo no designer:
 
-    [![](ios-designable-controls-walkthrough-images/03new.png "O Designer do iOS")](ios-designable-controls-walkthrough-images/03new.png#lightbox)
-
-
-1. Arrastar/soltar uma **modo de exibição de imagem** da **caixa de ferramentas** no modo de exibição no storyboard.
-
-    [![](ios-designable-controls-walkthrough-images/04new.png "Uma exibição de imagem adicionado ao layout")](ios-designable-controls-walkthrough-images/04new.png#lightbox)
+    [![](ios-designable-controls-walkthrough-images/03new.png "O designer do iOS")](ios-designable-controls-walkthrough-images/03new.png#lightbox)
 
 
-1. Selecione o **modo de exibição de imagem** e altere seu **imagem** propriedade `Monkey.png`.
+1. Arraste/solte um **modo de exibição de imagem** da **caixa de ferramentas** para a exibição no storyboard.
 
-    [![](ios-designable-controls-walkthrough-images/05new.png "Definindo a propriedade de imagem de exibição de imagem como Monkey.png")](ios-designable-controls-walkthrough-images/05new.png#lightbox)
+    [![](ios-designable-controls-walkthrough-images/04new.png "Uma exibição de imagem adicionada ao layout")](ios-designable-controls-walkthrough-images/04new.png#lightbox)
+
+
+1. Selecione a **exibição de imagem** e altere sua propriedade Image `Monkey.png`para.
+
+    [![](ios-designable-controls-walkthrough-images/05new.png "Definindo a propriedade Image View Image como macaco. png")](ios-designable-controls-walkthrough-images/05new.png#lightbox)
 
     
-1. Como estamos usando as classes de tamanho precisaremos restringir a exibição de imagem. Clique na imagem duas vezes para colocá-lo em modo de restrição. Vamos restringi-lo para o Centro de clicando-se a alça de fixação de centro e alinhá-lo verticalmente e horizontalmente:
+1. Como estamos usando classes de tamanho, precisaremos restringir essa exibição de imagem. Clique na imagem duas vezes para colocá-la no modo de restrição. Vamos restringi-lo ao centro clicando no identificador de fixação central e alinhando-o vertical e horizontalmente:
 
-    [![](ios-designable-controls-walkthrough-images/06new.png "Centralizar a imagem")](ios-designable-controls-walkthrough-images/06new.png#lightbox)
+    [![](ios-designable-controls-walkthrough-images/06new.png "Centralizando a imagem")](ios-designable-controls-walkthrough-images/06new.png#lightbox)
 
-1. Para restringir a altura e largura, clique nas alças de fixação de tamanho (as alças em forma de ' bem-acabados') e selecione largura e altura, respectivamente:
+1. Para restringir a altura e a largura, clique nas alças de fixação de tamanho (as alças moldadas ' Bone ') e selecione largura e altura, respectivamente:
 
     [![](ios-designable-controls-walkthrough-images/07new.png "Adicionando restrições")](ios-designable-controls-walkthrough-images/07new.png#lightbox)
 
 
-1. Atualize o quadro com base nas restrições clicando no botão Atualizar na barra de ferramentas:
+1. Atualize o quadro com base nas restrições clicando no botão atualizar na barra de ferramentas:
 
-    [![](ios-designable-controls-walkthrough-images/08new.png "A barra de ferramentas de restrições")](ios-designable-controls-walkthrough-images/08new.png#lightbox)
+    [![](ios-designable-controls-walkthrough-images/08new.png "A barra de ferramentas restrições")](ios-designable-controls-walkthrough-images/08new.png#lightbox)
 
 
-1. Em seguida, compile o projeto para que o **exibição de rascunho de tíquete** aparecerá sob **componentes personalizados** na caixa de ferramentas:
+1. Em seguida, compile o projeto para que a **exibição de tíquete transitório** apareça em **componentes personalizados** na caixa de ferramentas:
 
     [![](ios-designable-controls-walkthrough-images/09new.png "A caixa de ferramentas de componentes personalizados")](ios-designable-controls-walkthrough-images/09new.png#lightbox)
 
 
-1. Arraste e solte uma **rascunho tíquete exibição** para que ele apareça sobre a imagem monkey. Ajuste as arraste as alças para que o modo de exibição do tíquete de rascunho aborda monkey completamente, conforme mostrado abaixo:
+1. Arraste e solte um **modo de exibição de tíquete transitório** para que ele apareça sobre a imagem do macaco. Ajuste as alças de arrastar para que a exibição de tíquete transitório cubra completamente o princípio, conforme mostrado abaixo:
 
-    [![](ios-designable-controls-walkthrough-images/10new.png "Um modo de exibição de rascunho do tíquete sobre a exibição de imagem")](ios-designable-controls-walkthrough-images/10new.png#lightbox)
+    [![](ios-designable-controls-walkthrough-images/10new.png "Uma exibição de tíquete transitório sobre a exibição de imagem")](ios-designable-controls-walkthrough-images/10new.png#lightbox)
 
-1. Restringir a exibição de tíquete de rascunho para o modo de exibição de imagem ao desenhar um retângulo delimitador para selecionar ambos os modos de exibição. Selecione as opções para restringi-la para os quadros de largura, altura, centro e intermediária e atualização com base nas restrições, conforme mostrado abaixo:
+1. Restrinja a exibição do tíquete transitório ao modo de exibição de imagem desenhando um retângulo delimitador para selecionar ambas as exibições. Selecione as opções para restringi-lo à largura, altura, centro e central e atualizar quadros com base em restrições, conforme mostrado abaixo:
 
-    [![](ios-designable-controls-walkthrough-images/11new.png "Centralizar e adicionando restrições")](ios-designable-controls-walkthrough-images/11new.png#lightbox)
+    [![](ios-designable-controls-walkthrough-images/11new.png "Centralizando e adicionando restrições")](ios-designable-controls-walkthrough-images/11new.png#lightbox)
 
 
-1. Execute o aplicativo e "scratch off" a imagem para revelar o monkey.
+1. Executar o aplicativo e "riscar" a imagem para revelar o macaco.
 
-    [![](ios-designable-controls-walkthrough-images/10-app.png "Execução de um aplicativo de exemplo")](ios-designable-controls-walkthrough-images/10-app.png#lightbox)
+    [![](ios-designable-controls-walkthrough-images/10-app.png "Uma execução de aplicativo de exemplo")](ios-designable-controls-walkthrough-images/10-app.png#lightbox)
 
-## <a name="adding-design-time-properties"></a>Adicionando propriedades de tempo de Design
+## <a name="adding-design-time-properties"></a>Adicionando propriedades de tempo de design
 
-O designer também inclui suporte de tempo de design para controles personalizados do tipo numérico da propriedade, enumeração, cadeia de caracteres, bool, CGSize, UIColor e UIImage. Para demonstrar, vamos adicionar uma propriedade para o `ScratchTicketView` para definir a imagem que é "uma pequena off."
+O designer também inclui suporte a tempo de design para controles personalizados de tipo de propriedade Numeric, Enumeration, String, bool, CGSize, UIColor e UIImage. Para demonstrar, vamos adicionar uma propriedade ao `ScratchTicketView` para definir a imagem que está "riscada".
 
-Adicione o seguinte código para o `ScratchTicketView` classe para a propriedade:
+Adicione o seguinte código à `ScratchTicketView` classe para a propriedade:
 
 ```csharp
 [Export("Image"), Browsable(true)]
@@ -225,7 +225,7 @@ public UIImage Image
 }
 ```
 
-Também podemos adicionar uma verificação nula para o `Draw` método, da seguinte forma:
+Talvez também queiramos adicionar uma verificação nula ao método, `Draw` da seguinte forma:
 
 ```csharp
 public override void Draw(CGRect rect)
@@ -265,17 +265,17 @@ public override void Draw(CGRect rect)
 }
 ```
 
-Incluindo uma `ExportAttribute` e uma `BrowsableAttribute` com o argumento definido como `true` resulta na propriedade que está sendo exibida no designer de **propriedade** painel. Alterar a propriedade para outra imagem incluída com o projeto, como `FillTexture2.png`, resulta em atualização de controle em tempo de design, conforme mostrado abaixo:
+Incluir um `ExportAttribute` e com o argumento definido como `true` Results na propriedade que está sendo exibida no painel de propriedades do designer. `BrowsableAttribute` Alterar a propriedade para outra imagem incluída no projeto, `FillTexture2.png`como, resulta na atualização do controle em tempo de design, conforme mostrado abaixo:
 
- [![](ios-designable-controls-walkthrough-images/11-customproperty.png "Editando propriedades de tempo de Design")](ios-designable-controls-walkthrough-images/10-app.png#lightbox)
+ [![](ios-designable-controls-walkthrough-images/11-customproperty.png "Editando propriedades de tempo de design")](ios-designable-controls-walkthrough-images/10-app.png#lightbox)
 
 ## <a name="summary"></a>Resumo
 
-Este artigo percorremos como criar um controle personalizado, bem como consumi-lo em um aplicativo iOS usando o designer do iOS. Vimos como criar e compilar o controle para disponibilizá-lo a um aplicativo no designer de **caixa de ferramentas**. Além disso, vimos como implementar o controle, de modo que ele renderize corretamente em tempo de design e tempo de execução como expor as propriedades de controle personalizado no designer.
+Neste artigo, mostramos como criar um controle personalizado, bem como consumi-lo em um aplicativo iOS usando o designer do iOS. Vimos como criar e criar o controle para torná-lo disponível para um aplicativo na **caixa de ferramentas**do designer. Além disso, vimos como implementar o controle de modo que ele seja renderizado corretamente no tempo de design e no runtime, bem como expor propriedades de controle personalizadas no designer.
 
 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [ScratchTicket (amostra)](https://developer.xamarin.com/samples/monotouch/ScratchTicket/)
+- [ScratchTicket (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/scratchticket)
 - [imagens necessárias (exemplo)](https://github.com/xamarin/ios-samples/blob/master/ScratchTicket/Resources/images.zip?raw=true)

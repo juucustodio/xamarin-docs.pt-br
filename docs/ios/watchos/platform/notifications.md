@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: f5961987e28c09ad703988083f1b127cd7b9dbd0
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: a3273b4bed13c3982b9d9b4df874e4ad2ee30e3f
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60897137"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68645917"
 ---
 # <a name="watchos-notifications-in-xamarin"></a>watchOS notificações no Xamarin
 
@@ -69,11 +69,11 @@ O modo de exibição dinâmico pode exibir mais dados e fornecer mais interativi
 
 As notificações podem vir de um servidor remoto ([serviço de notificações por Push da Apple](https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html), ou APNS) ou podem ser gerados localmente no aplicativo do iOS.
 
-Consulte a [instruções passo a passo de notificações do iOS](~/ios/platform/user-notifications/deprecated/local-notifications-in-ios-walkthrough.md) para obter um exemplo de como gerar notificações locais e o [WatchNotifications exemplo](https://developer.xamarin.com/samples/monotouch/WatchKit/WatchNotifications/) para obter um exemplo de trabalho.
+Consulte a [instruções passo a passo de notificações do iOS](~/ios/platform/user-notifications/deprecated/local-notifications-in-ios-walkthrough.md) para obter um exemplo de como gerar notificações locais e o [WatchNotifications exemplo](https://docs.microsoft.com/samples/xamarin/ios-samples/watchkit-watchnotifications) para obter um exemplo de trabalho.
 
 Notificações locais devem ter o `AlertTitle` definido para ser exibido sobre o Apple Watch - o `AlertTitle` cadeia de caracteres é exibida na interface do curto aparência. Tanto a `AlertTitle` e `AlertBody` são exibidos na lista de notificações; e o `AlertBody` é exibido na interface de análise longa.
 
-Nesta captura de tela mostra a `AlertTitle` que está sendo exibido na lista de notificações e o `AlertBody` exibido na interface de aparência longa (usando o [código de exemplo](https://developer.xamarin.com/samples/monotouch/WatchKit/WatchNotifications/)):
+Nesta captura de tela mostra a `AlertTitle` que está sendo exibido na lista de notificações e o `AlertBody` exibido na interface de aparência longa (usando o [código de exemplo](https://docs.microsoft.com/samples/xamarin/ios-samples/watchkit-watchnotifications)):
 
 ![](notifications-images/watch-notificationslist-sml.png "Esta captura de tela mostra o que está sendo exibido na lista de notificações de AlertTitle") ![](notifications-images/watch-notificationcontroller-sml.png "AlertBody o exibido na interface de análise longa")
 
@@ -126,7 +126,7 @@ Também é possível usar o [linha de comando](~/ios/watchos/troubleshooting.md#
 
 ### <a name="example-notification-payload"></a>Exemplo de carga de notificação
 
-No [catálogo do Kit de inspeção](https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/) existe amostra é um exemplo de arquivo JSON de carga **NotificationPayload.json** (listados abaixo).
+No [catálogo do Kit de inspeção](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog) existe amostra é um exemplo de arquivo JSON de carga **NotificationPayload.json** (listados abaixo).
 
 ```csharp
 {
@@ -151,6 +151,6 @@ No [catálogo do Kit de inspeção](https://developer.xamarin.com/samples/monoto
 
 ## <a name="related-links"></a>Links relacionados
 
-- [WatchNotifications (notificações locais) (amostra)](https://developer.xamarin.com/samples/monotouch/WatchKit/WatchNotifications/)
-- [WatchKitCatalog (amostra)](https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/)
+- [WatchNotifications (notificações locais) (amostra)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchkit-watchnotifications)
+- [WatchKitCatalog (amostra)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
 - [Documentos de notificações do Kit de inspeção da Apple](https://developer.apple.com/library/ios/documentation/General/Conceptual/WatchKitProgrammingGuide/BasicSupport.html)

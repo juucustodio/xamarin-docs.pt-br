@@ -1,80 +1,80 @@
 ---
-title: tvOS no Xamarin – recursos internos
-description: Documentos que descrevem o funcionamento interno do tvOS no Xamarin, que se baseia no xamarin. IOS. Link de conteúdo aborda a assemblies, estruturas de destino e relacionadas a conceitos de iOS.
+title: tvOS no Xamarin – interno
+description: Documentos que descrevem o funcionamento interno do tvOS no Xamarin, que se baseia no Xamarin. iOS. O conteúdo do link discute assemblies, estruturas de destino e conceitos de iOS relacionados.
 ms.prod: xamarin
 ms.assetid: 8C076FED-9C03-44DE-9723-0E20272DD16B
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/07/2016
-ms.openlocfilehash: 080a565b46dd9f56abee767ab0fe1089c5aa3b06
-ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
+ms.openlocfilehash: 45341418779405e52251eb07576c8e5fa9f09297
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67865664"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68647109"
 ---
-# <a name="tvos-in-xamarin-internals"></a>tvOS no Xamarin – recursos internos 
+# <a name="tvos-in-xamarin-internals"></a>tvOS no Xamarin – interno 
 
 ## <a name="assembliesiostvosinternalsassembliesmd"></a>[Assemblies](~/ios/tvos/internals/assemblies.md)
 
-Lista de assemblies com suporte pelo Xamarin para seus aplicativos xamarin. tvos.
+Lista dos assemblies com suporte do Xamarin para seus aplicativos Xamarin. tvOS.
 
 ## <a name="target-frameworksiostvosinternalsframeworksmd"></a>[Estruturas de Destino](~/ios/tvos/internals/frameworks.md)
 
-Este artigo aborda os tipos de estruturas de destino (bibliotecas de classes Base) que estão disponíveis no xamarin. tvos e as implicações da seleção de um destino específico para seu aplicativo xamarin. tvos.
+Este artigo aborda os tipos de estruturas de destino (bibliotecas de classes base) que estão disponíveis no Xamarin. tvOS e as implicações de selecionar um destino específico para seu aplicativo Xamarin. tvOS.
 
-## <a name="related-ios-articles"></a>Artigos relacionados do iOS
+## <a name="related-ios-articles"></a>Artigos do iOS relacionados
 
-Os artigos a seguir são específicos para iOS mas relevantes para tvOS (já que tvOS 9 é um subconjunto do iOS 9).
+Os artigos a seguir são específicos para iOS, mas relevantes para tvOS (desde que o tvOS 9 seja um subconjunto do iOS 9).
 
 ### <a name="unified-apicross-platformmaciosunifiedindexmd"></a>[API Unificada](~/cross-platform/macios/unified/index.md)
 
-Apresenta as novas APIs de Unificação que permitir para bases de código mais simples do compartilhamento de código entre Apple TV e iOS, bem como a introdução do suporte para APIs de 64 bits e a compilação de 64 bits.  
+Apresenta as novas APIs unificadas que permitem o compartilhamento de código mais simples entre as bases de TV da Apple e do iOS, além de introduzir o suporte para APIs de 64 bits e a compilação de 64 bits.  
 
 ### <a name="api-designiosinternalsapi-designindexmd"></a>[Design de API](~/ios/internals/api-design/index.md)
 
-Explica os princípios de design por trás de API de associação.
+Explica os princípios de design por trás da Associação de API.
 
 ### <a name="limitationsiosinternalslimitationsmd"></a>[Limitações](~/ios/internals/limitations.md)
 
-Esta seção ilustra as armadilhas e as limitações a serem consideradas com relação xamarin. IOS, muitas delas são aplicáveis ao xamarin. tvos.
+Esta seção ilustra as armadilhas e limitações a serem consideradas com relação ao Xamarin. iOS, muitas das quais são aplicáveis ao Xamarin. tvOS.
 
 ### <a name="linkeriosdeploy-testlinkermd"></a>[Vinculador](~/ios/deploy-test/linker.md)
 
-Explica como funciona o vinculador para garantir que o pacote de aplicativos possível menor, bem como para modificar as configurações e uso de TI.
+Explica como o vinculador funciona para garantir o menor pacote de aplicativos possível, bem como modificar as configurações e o uso.
 
-### <a name="localization-and-internationalizationiosapp-fundamentalslocalizationindexmd"></a>[Internacionalização e localização](~/ios/app-fundamentals/localization/index.md)
+### <a name="localization-and-internationalizationiosapp-fundamentalslocalizationindexmd"></a>[Localização e internacionalização](~/ios/app-fundamentals/localization/index.md)
 
-Este guia aborda a adição de codificações para um aplicativo xamarin. IOS para dar suporte à internacionalização.
+Este guia aborda a adição de codificações a um aplicativo Xamarin. iOS para dar suporte à internacionalização.
 
 ### <a name="mtouchiosdeploy-testmtouchmd"></a>[mtouch](~/ios/deploy-test/mtouch.md)
 
 Notas e informações sobre o mtouch.exe, a ferramenta de linha de comando que compila seu projeto em um aplicativo que pode ser usado em iOS.
 
-### <a name="linking-native-librariesiosplatformnative-interopmd"></a>[Bibliotecas nativas de vinculação](~/ios/platform/native-interop.md)
+### <a name="linking-native-librariesiosplatformnative-interopmd"></a>[Vinculando bibliotecas nativas](~/ios/platform/native-interop.md)
 
-Xamarin. IOS dá suporte à vinculação com bibliotecas de C nativas e bibliotecas de Objective-C. Este documento aborda como vincular suas bibliotecas C nativas com o seu projeto xamarin. IOS. Para obter informações sobre como fazer o mesmo para bibliotecas de Objective-C, consulte o&nbsp; [tipos de associação de Objective-C](~/ios/platform/binding-objective-c/index.md)&nbsp;documento.
+O Xamarin. iOS dá suporte à vinculação com bibliotecas C nativas e bibliotecas objec-C. Este documento discute como vincular suas bibliotecas nativas do C ao seu projeto do Xamarin. iOS. Para obter informações sobre como fazer o mesmo para bibliotecas Objective-c&nbsp; , consulte o documento Associação de&nbsp; [tipos Objective-c](~/ios/platform/binding-objective-c/index.md).
 
 ## <a name="objective-c-selectorsiosinternalsobjective-c-selectorsmd"></a>[Seletores de Objective-C](~/ios/internals/objective-c-selectors.md)
 
-Notas e uso para chamar diretamente o seletores de Objective-C (métodos).
+Observações e uso para chamar os seletores de Objective-C (métodos) diretamente.
 
 ### <a name="systemdataiosdata-cloudsystemdatamd"></a>[System.Data](~/ios/data-cloud/system.data.md)
 
-Informações e instruções sobre como usar o System. Data para acessar o sistema de banco de dados SQLite interno.
+Informações e instruções sobre como usar System. Data para acessar o sistema de banco de dados SQLite interno.
 
 ### <a name="threadingiosapp-fundamentalsthreadingmd"></a>[Threading](~/ios/app-fundamentals/threading.md)
 
-Observações sobre o uso de threading em aplicativos xamarin. IOS.
+Observações sobre o uso de Threading em aplicativos Xamarin. iOS.
 
 ### <a name="xib-code-generationiosinternalsxib-code-generationmd"></a>[Geração de código XIB](~/ios/internals/xib-code-generation.md)
 
-Como o Visual Studio para Mac se integra com o Interface Builder do Xcode para que você possa usar o construtor de Interface para o design da interface do usuário.
+Como o Visual Studio para Mac se integra ao Interface Builder do Xcode para permitir que você use Interface Builder para criar a interface do usuário.
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Amostras do tvOS](https://developer.xamarin.com/samples/tvos/all/)
+- [Amostras do tvOS](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
 - [tvOS](https://developer.apple.com/tvos/)
-- [Guias de Interface humana do tvOS](https://developer.apple.com/tvos/human-interface-guidelines/)
+- [Guias de interface humana do tvOS](https://developer.apple.com/tvos/human-interface-guidelines/)
 - [Guia de programação de aplicativo para tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)

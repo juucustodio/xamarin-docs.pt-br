@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/07/2018
-ms.openlocfilehash: 61f74e54d4760bb3a85084371fa8e2a62dc06dfd
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: e16aa1b96749047554b4f8e6887791d8ed4ff63b
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68510669"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68643688"
 ---
 # <a name="creating-a-custom-contentprovider"></a>Criando um ContentProvider personalizado
 
@@ -124,7 +124,7 @@ O restante do código irá formar a implementação do provedor de conteúdo rea
 
 Há quatro tipos diferentes de metadados que vamos expor na `ContentProvider` classe. Somente a autoridade é necessária, o restante é feito por convenção.
 
-- **Autoridade** O atributo deve ser adicionado à classe para que seja registrado com o Android quando o aplicativo for instalado.  &ndash; `ContentProvider`
+- **Autoridade** O atributo deve ser adicionado à classe para que seja registrado com o Android quando o aplicativo for instalado. &ndash; `ContentProvider`
 
 - **URI** do &ndash; O`CONTENT_URI` é exposto como uma constante para que seja fácil de usar no código. Ele deve corresponder à autoridade, mas incluir o esquema e o caminho base.
 
@@ -319,4 +319,4 @@ protected void OnListItemClick(object sender, AdapterView.ItemClickEventArgs e)
 
 ## <a name="related-links"></a>Links relacionados
 
-- [SimpleContentProvider (exemplo)](https://developer.xamarin.com/samples/monodroid/PlatformFeatures/SimpleContentProvider)
+- [SimpleContentProvider (exemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/platformfeatures-simplecontentprovider)

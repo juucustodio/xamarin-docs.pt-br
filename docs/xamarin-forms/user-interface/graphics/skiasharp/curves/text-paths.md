@@ -7,16 +7,16 @@ ms.technology: xamarin-skiasharp
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/01/2017
-ms.openlocfilehash: 366a6e9585817c5a47ba5bec14fb2f238ab23a6b
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: d38391f3fd0f02dda8bfd92fce650c557bda0153
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61021977"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68645208"
 ---
 # <a name="paths-and-text-in-skiasharp"></a>Caminhos e texto em SkiaSharp
 
-[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Explore a intersecção de caminhos e texto_
 
@@ -30,7 +30,7 @@ Além de usar um efeito de caminho para traçar um contorno de caractere, você 
 
 Neste artigo anterior sobre [ **efeitos de caminho**](effects.md), você viu como o [ `GetFillPath` ](xref:SkiaSharp.SKPaint.GetFillPath(SkiaSharp.SKPath,SkiaSharp.SKPath,SkiaSharp.SKRect,System.Single)) método `SKPaint` pode obter uma descrição de um caminho traçado. Você também pode usar esse método com caminhos derivados de contornos de caracteres.
 
-Por fim, este artigo demonstra outra interseção dos caminhos e texto: O [ `DrawTextOnPath` ](xref:SkiaSharp.SKCanvas.DrawTextOnPath(System.String,SkiaSharp.SKPath,System.Single,System.Single,SkiaSharp.SKPaint)) método `SKCanvas` permite que você exiba uma cadeia de caracteres de texto para que a linha de base do texto segue um caminho curvo.
+Por fim, este artigo demonstra outra interseção de caminhos e texto: O [`DrawTextOnPath`](xref:SkiaSharp.SKCanvas.DrawTextOnPath(System.String,SkiaSharp.SKPath,System.Single,System.Single,SkiaSharp.SKPaint)) método de `SKCanvas` permite exibir uma cadeia de caracteres de texto para que a linha de base do texto siga um caminho curvo.
 
 ## <a name="text-to-path-conversion"></a>Texto para a conversão de caminho
 
@@ -128,7 +128,7 @@ O **efeito de caminho do texto** página converte um caractere único e comercia
 
 [![](text-paths-images/textpatheffect-small.png "Tripla captura de tela da página de texto caminho efeito")](text-paths-images/textpatheffect-large.png#lightbox "tripla captura de tela da página do efeito de caminho do texto")
 
-Muito do trabalho na [ `TextPathEffectPath` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/TextPathEffectPage.cs) classe ocorre no construtor e campos. Os dois `SKPaint` objetos definidos como campos são usados para duas finalidades diferentes: A primeira (denominada `textPathPaint`) é usado para converter o e comercial com um `TextSize` de 50 para um caminho para o efeito de caminho 1D. A segunda (`textPaint`) é usado para exibir a versão maior do e comercial com o efeito desse caminho. Por esse motivo, o `Style` de pintura Este segundo objeto é definido como `Stroke`, mas o `StrokeWidth` propriedade não é definida porque essa propriedade não é necessária ao usar um efeito de caminho 1D:
+Muito do trabalho na [ `TextPathEffectPath` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/TextPathEffectPage.cs) classe ocorre no construtor e campos. Os dois `SKPaint` objetos definidos como campos são usados para duas finalidades diferentes: O primeiro (nomeado `textPathPaint`) é usado para converter o e comercial com `TextSize` um de 50 para um caminho para o efeito de caminho 1D. A segunda (`textPaint`) é usado para exibir a versão maior do e comercial com o efeito desse caminho. Por esse motivo, o `Style` de pintura Este segundo objeto é definido como `Stroke`, mas o `StrokeWidth` propriedade não é definida porque essa propriedade não é necessária ao usar um efeito de caminho 1D:
 
 ```csharp
 public class TextPathEffectPage : ContentPage
@@ -285,7 +285,7 @@ Há vezes, no entanto, quando deseja que o texto a ser executado ao longo de uma
 public Void DrawTextOnPath (String text, SKPath path, Single hOffset, Single vOffset, SKPaint paint)
 ```
 
-O texto especificado no primeiro argumento é feito para ser executado ao longo do caminho especificado como o segundo argumento. Você pode começar o texto em um deslocamento do início do caminho com o `hOffset` argumento. Normalmente, o caminho de formulários a linha de base do texto: Ascendentes de texto estão em um lado do caminho e os descendentes de texto são no outro. Mas você pode deslocar a linha de base do texto do caminho com o `vOffset` argumento.
+O texto especificado no primeiro argumento é feito para ser executado ao longo do caminho especificado como o segundo argumento. Você pode começar o texto em um deslocamento do início do caminho com o `hOffset` argumento. Normalmente, o caminho forma a linha de base do texto: Os ascendentes de texto estão em um lado do caminho, e os descendentes de texto estão no outro. Mas você pode deslocar a linha de base do texto do caminho com o `vOffset` argumento.
 
 Esse método não tem nenhum recurso para fornecer orientação sobre como o `TextSize` propriedade de `SKPaint` para tornar o texto dimensionado perfeitamente para executados desde o início do caminho até o fim. Às vezes, você pode descobrir esse tamanho de texto por conta própria. Outras vezes, você precisará usar funções de medição de caminho a ser descrito no próximo artigo na [ **informações de caminho e enumeração**](information.md).
 
@@ -326,9 +326,9 @@ O `TextSize` propriedade de `textPaint` , em seguida, é ajustado para que a lar
 
 [![](text-paths-images/circulartext-small.png "Captura de tela da página de texto Circular tripla")](text-paths-images/circulartext-large.png#lightbox "tripla captura de tela da página de texto Circular")
 
-O texto em si foi escolhido para ser um pouco circular bem: A palavra "círculo" é o assunto da sentença e o objeto de uma frase prepositional.
+O texto em si foi escolhido como um pouco circular também: A palavra "Circle" é o assunto da frase e o objeto de uma frase preposicional.
 
 ## <a name="related-links"></a>Links relacionados
 
 - [APIs de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (amostra)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

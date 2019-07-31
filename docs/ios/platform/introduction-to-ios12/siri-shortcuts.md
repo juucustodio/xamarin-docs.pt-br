@@ -1,68 +1,68 @@
 ---
-title: Atalhos do Siri no xamarin. IOS
-description: Este documento descreve como usar atalhos do Siri no iOS 12. Ele aborda NSUserActivities, intenções personalizadas, atribuir atalhos de voz, atalhos relevantes e muito mais.
+title: Atalhos do Siri no Xamarin. iOS
+description: Este documento descreve como usar atalhos do Siri no iOS 12. Ele discute NSUserActivities, tentativas personalizadas, atribuição de atalhos de voz, atalhos relevantes e muito mais.
 ms.prod: xamarin
 ms.assetid: 86424F79-3A7D-436E-927D-9A3267DA333B
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/08/2018
-ms.openlocfilehash: 62b577393a498587ee2e2e899d20bfeec7988c4e
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: 4fa15e73575e20541df7ee8f606b01ec6e3d875a
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67832370"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656713"
 ---
-# <a name="siri-shortcuts-in-xamarinios"></a>Atalhos do Siri no xamarin. IOS
+# <a name="siri-shortcuts-in-xamarinios"></a>Atalhos do Siri no Xamarin. iOS
 
-Na [iOS 10](~/ios/platform/sirikit/index.md), a Apple introduziu SiriKit, tornando possível para compilação de mensagens, chamada VoIP, pagamentos, treinamentos, surfar reserva e pesquisar aplicativos que interagem com Siri de fotos.
+No [Ios 10](~/ios/platform/sirikit/index.md), a Apple introduziu o SiriKit, possibilitando a criação de mensagens, chamadas de VoIP, pagamentos, treinamentos, reserva de Rides e aplicativos de pesquisa de fotos que interagem com siri.
 
-Na [iOS 11](~/ios/platform/introduction-to-ios11/sirikit.md), SiriKit ganhou o suporte para mais tipos de aplicativos e maior flexibilidade para personalização da interface do usuário.
+No [Ios 11](~/ios/platform/introduction-to-ios11/sirikit.md), o SiriKit ganhou suporte para mais tipos de aplicativos e maior flexibilidade para a personalização da interface do usuário.
 
-iOS 12 adiciona Siri atalhos, permitindo que todos os tipos de aplicativos exponham suas funcionalidades para Siri. Siri aprende quando determinadas tarefas com base no aplicativo são mais relevantes para o usuário e usa esse conhecimento para sugerir possíveis ações via _atalhos_. Tocando em um atalho ou invocá-lo com um comando de voz será abrir um aplicativo ou executar uma tarefa em segundo plano.
+o iOS 12 adiciona atalhos do Siri, permitindo que todos os tipos de aplicativos exponham sua funcionalidade ao Siri. O Siri aprende quando determinadas tarefas baseadas em aplicativo são mais relevantes para o usuário e usa esse conhecimento para sugerir ações potenciais por meio de _atalhos_. Tocar em um atalho ou chamá-lo com um comando de voz abrirá um aplicativo ou executará uma tarefa em segundo plano.
 
-Atalhos de devem ser usados para acelerar a capacidade de um usuário para realizar uma tarefa comum – em muitos casos, sem precisar abrir o aplicativo em questão.
+Os atalhos devem ser usados para acelerar a capacidade do usuário de realizar uma tarefa comum – em muitos casos, sem abrir o aplicativo em questão.
 
-## <a name="sample-app-soup-chef"></a>Aplicativo de exemplo: Sopa Chef
+## <a name="sample-app-soup-chef"></a>Aplicativo de exemplo: Chefe de sopa
 
-Para entender melhor o Siri atalhos, dê uma olhada a [sopa Chef](https://developer.xamarin.com/samples/monotouch/ios12/SoupChef/) aplicativo de exemplo. Sopa Chef permite aos usuários fazer pedidos de um restaurante sopa imaginário, exibir histórico de seus pedidos e definir expressões para usar ao ordenar sopa interagindo com Siri.
+Para entender melhor os atalhos do Siri, dê uma olhada no aplicativo de exemplo do [chefe de sopa](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-soupchef) . A sopa chefe permite que os usuários façam pedidos de um restaurante de sopa imaginário, exibam seu histórico de pedidos e definam frases a serem usadas ao ordenar a sopa interagindo com o Siri.
 
 > [!TIP]
-> Antes de testar Chef sopa em um dispositivo ou simulador de iOS 12, habilite a duas configurações a seguir, que são úteis ao depurar atalhos:
+> Antes de testar o chefe de sopa em um dispositivo ou simulador do iOS 12, habilite as duas configurações a seguir, que são úteis ao depurar atalhos:
 >
-> - No **configurações** aplicativo, habilite **desenvolvedor > atalhos recentes de exibição**.
-> - No **configurações** aplicativo, habilite **desenvolvedor > doações de exibição na tela de bloqueio**.
+> - No aplicativo **configurações** , habilite o **desenvolvedor > exibir atalhos recentes**.
+> - No aplicativo **configurações** , habilite o **desenvolvedor > exibir doações na tela de bloqueio**.
 >
-> Eles depurar Verifique as configurações a encontrar-criado recentemente (em vez de previstos) atalhos no iOS tela de bloqueio e tela de pesquisa.
+> Essas configurações de depuração facilitam a localização de atalhos criados recentemente (em vez de previsto) na tela de bloqueio e na tela de pesquisa do iOS.
 
 Para usar o aplicativo de exemplo:
 
-- Instalar e executar o Chef Sopa de aplicativo de exemplo em um simulador de iOS 12 ou [dispositivo](#testing-on-device).
-- Clique o **+** botão no canto superior direito para criar uma nova ordem.
-- Selecione um tipo de sopa, especifique uma quantidade e as opções e toque **fazer pedido**.
-- Sobre o **histórico de pedidos** tela, toque em ordem recém-criado para exibir seus detalhes.
-- Na parte inferior da tela de detalhes do pedido, toque em **adicionar a Siri**.
-- Registre uma frase de voz para associar com a ordem e toque **feito**.
-- Minimizar sopa Chef, invocar Siri e fazer o pedido novamente usando a frase de voz que você acabou de gravar.
-- Concluída a Siri o pedido, abra novamente o sopa Chef e observe que o novo pedido está listado na **histórico de pedidos** tela.
+- Instale e execute o aplicativo de exemplo do chefe de sopa em um [dispositivo](#testing-on-device)ou simulador do IOS 12.
+- Clique no **+** botão no canto superior direito para criar um novo pedido.
+- Selecione um tipo de sopa, especifique uma quantidade e opções e toque em **fazer ordem**.
+- Na tela **histórico do pedido** , toque no pedido criado recentemente para exibir seus detalhes.
+- Na parte inferior da tela detalhes do pedido, toque em **Adicionar a Siri**.
+- Registre uma frase de voz para associar ao pedido e toque em **concluído**.
+- Minimize o chefe de sopa, invoque Siri e faça o pedido novamente usando a frase de voz que você acabou de gravar.
+- Depois que o Siri concluir a ordem, abra novamente o sopa chefe e observe que o novo pedido está listado na tela **histórico do pedido** .
 
 O aplicativo de exemplo demonstra como:
 
 - [Use um atalho NSUserActivity para abrir um aplicativo](#using-an-nsuseractivity-shortcut-to-open-an-app).
-- [Usar um atalho de intenção personalizado para executar uma tarefa](#using-a-custom-intent-shortcut-to-perform-a-task).
-- [Fornecer uma interface de usuário para uma intenção personalizada](#providing-a-user-interface-for-a-custom-intent).
-- [Criar um atalho de voz](#creating-a-voice-shortcut).
+- [Use um atalho de intenção personalizado para executar uma tarefa](#using-a-custom-intent-shortcut-to-perform-a-task).
+- [Forneça uma interface do usuário para uma intenção personalizada](#providing-a-user-interface-for-a-custom-intent).
+- [Crie um atalho de voz](#creating-a-voice-shortcut).
 
-## <a name="infoplist-and-entitlementsplist"></a>Info. plist e Entitlements. plist
+## <a name="infoplist-and-entitlementsplist"></a>Info. plist e direitos. plist
 
-Antes de aprofundar mais profundamente os-para o código de sopa Chef, dar uma olhada no seu **Info. plist** e **Entitlements. plist** arquivos.
+Antes de se aprofundar no código do chefe de sopa, dê uma olhada em seus arquivos **info. plist** e intitulados **. plist** .
 
 ### <a name="infoplist"></a>Info.plist
 
-O **Info. plist** arquivo na **SoupChef** projeto define o **identificador do pacote** como `com.xamarin.SoupChef`. Esse identificador de lote será usado como um prefixo para os identificadores de pacote do intenções e propósitos de interface do usuário do extensões discutidas neste documento.
+O arquivo **info. plist** no projeto **SoupChef** define o **identificador de pacote** como `com.xamarin.SoupChef`. Esse identificador de pacote será usado como um prefixo para os identificadores de pacote das extensões de interface do usuário de tentativas e tentativas discutidas posteriormente neste documento.
 
-O **Info. plist** arquivo também contém o seguinte:
+O arquivo **info. plist** também contém o seguinte:
 
 ```xml
 <key>NSUserActivityTypes</key>
@@ -72,13 +72,13 @@ O **Info. plist** arquivo também contém o seguinte:
 </array>
 ```
 
-Isso `NSUserActivityTypes` par chave/valor indica que o Chef sopa sabe como lidar com um `OrderSoupIntent`e um [ `NSUserActivity` ](xref:Foundation.NSUserActivity) tendo um [ `ActivityType` ](xref:Foundation.NSUserActivity.ActivityType) de "com.xamarin.SoupChef.viewMenu".
+Esse `NSUserActivityTypes` par chave/valor indica que a sopa chefe sabe como lidar com `OrderSoupIntent`um e [`NSUserActivity`](xref:Foundation.NSUserActivity) com [`ActivityType`](xref:Foundation.NSUserActivity.ActivityType) um de "com. xamarin. SoupChef. viewMenu".
 
-Atividades e intenções personalizadas passadas para o aplicativo em si, em vez de suas extensões são manipuladas na `AppDelegate` (uma [ `UIApplicationDelegate` ](xref:UIKit.UIApplicationDelegate) pela [ `ContinueUserActivity` ](xref:UIKit.UIApplicationDelegate.ContinueUserActivity*) método.
+As atividades e as intenções personalizadas passadas para o aplicativo em si, ao contrário de suas extensões, são tratadas `AppDelegate` no [`UIApplicationDelegate`](xref:UIKit.UIApplicationDelegate) (um [`ContinueUserActivity`](xref:UIKit.UIApplicationDelegate.ContinueUserActivity*) pelo método.
 
 ### <a name="entitlementsplist"></a>Entitlements.plist
 
-O **Entitlements. plist** arquivo na **SoupChef** projeto contém o seguinte:
+O arquivo **. plist de direitos** no projeto **SoupChef** contém o seguinte:
 
 ```xml
 <key>com.apple.security.application-groups</key>
@@ -89,21 +89,21 @@ O **Entitlements. plist** arquivo na **SoupChef** projeto contém o seguinte:
 <true/>
 ```
 
-Essa configuração indica que o aplicativo usa o grupo de aplicativos "group.com.xamarin.SoupChef". O **SoupChefIntents** extensão do aplicativo usa o mesmo grupo de aplicativo, que permite que os dois projetos compartilhar [`NSUserDefaults`](xref:Foundation.NSUserDefaults)
+Essa configuração indica que o aplicativo usa o grupo de aplicativos "Group. com. xamarin. SoupChef". A extensão do aplicativo **SoupChefIntents** usa esse mesmo grupo de aplicativos, o que permite que os dois projetos compartilhem[`NSUserDefaults`](xref:Foundation.NSUserDefaults)
 dados.
 
-O `com.apple.developer.siri` chave indica que o aplicativo interage com Siri.
+A `com.apple.developer.siri` chave indica que o aplicativo interage com siri.
 
 > [!NOTE]
-> O **SoupChef** conjuntos de configuração de build do projeto **direitos personalizados** para **Entitlements. plist**.
+> A configuração de Build do projeto **SoupChef** define **direitos personalizados** para **direitos. plist**.
 
 ## <a name="using-an-nsuseractivity-shortcut-to-open-an-app"></a>Usando um atalho NSUserActivity para abrir um aplicativo
 
-Para criar um atalho que abre um aplicativo para exibir o conteúdo específico, crie um `NSUserActivity` e anexá-lo para o controlador de exibição para a tela que você gostaria de atalho para abrir.
+Para criar um atalho que abre um aplicativo para exibir um conteúdo específico, crie `NSUserActivity` um e anexe-o ao controlador de exibição da tela que você deseja que o atalho abra.
 
 ### <a name="setting-up-an-nsuseractivity"></a>Configurando um NSUserActivity
 
-Na tela do menu, `SoupMenuViewController` cria um `NSUserActivity` e atribui a ele para o controlador de exibição [ `UserActivity` ](xref:UIKit.UIResponder.UserActivity) propriedade:
+Na tela do menu, `SoupMenuViewController` cria um `NSUserActivity` e o atribui à propriedade do [`UserActivity`](xref:UIKit.UIResponder.UserActivity) controlador de exibição:
 
 ```csharp
 public override void ViewDidLoad()
@@ -113,9 +113,9 @@ public override void ViewDidLoad()
 }
 ```
 
-Definindo o `UserActivity` propriedade _doa_ a atividade a Siri. Dessa doação, Siri obtém informações sobre quando e onde essa atividade é relevante para o usuário e aprende para melhor sugeri-lo no futuro.
+Definir a `UserActivity` propriedade _donate_ a atividade como Siri. Dessa doação, o Siri Obtém informações sobre quando e onde essa atividade é relevante para o usuário e aprende a sugerir isso melhor no futuro.
 
-`NSUserActivityHelper` uma classe de utilitário que está incluída na **SoupChef** solução, no **SoupKit** biblioteca de classes. Ele cria um `NSUserActivity` e define várias propriedades relacionadas a Siri e pesquisa:
+`NSUserActivityHelper`é uma classe de utilitário incluída na solução **SoupChef** , na biblioteca de classes **SoupKit** . Ele cria um `NSUserActivity` e define várias propriedades relacionadas ao Siri e à pesquisa:
 
 ```csharp
 public static string ViewMenuActivityType = "com.xamarin.SoupChef.viewMenu";
@@ -148,13 +148,13 @@ public static NSUserActivity ViewMenuActivity {
 
 Observe o seguinte em particular:
 
-- Definindo `EligibleForPrediction` para `true` indica que o Siri pode prever esta atividade e fazê-lo como um atalho.
-- O [ `ContentAttributeSet` ](xref:Foundation.NSUserActivity.ContentAttributeSet) array é um padrão [ `CSSearchableItemAttributeSet` ](xref:CoreSpotlight.CSSearchableItemAttributeSet) usado para incluir um `NSUserActivity` nos resultados da pesquisa de iOS.
-- [`SuggestedInvocationPhrase`](xref:Foundation.NSUserActivity.SuggestedInvocationPhrase) é uma frase que Siri sugerirá ao usuário como uma escolha potencial durante a atribuição de uma frase em um atalho.
+- Configuração `EligibleForPrediction` para`true` indicar que Siri pode prever essa atividade e Surface-la como um atalho.
+- A [`ContentAttributeSet`](xref:Foundation.NSUserActivity.ContentAttributeSet) matriz é um padrão [`CSSearchableItemAttributeSet`](xref:CoreSpotlight.CSSearchableItemAttributeSet) usado para incluir um `NSUserActivity` nos resultados da pesquisa do Ios.
+- [`SuggestedInvocationPhrase`](xref:Foundation.NSUserActivity.SuggestedInvocationPhrase)é uma frase que o Siri irá sugerir para o usuário como uma opção potencial ao atribuir uma frase a um atalho.
 
-### <a name="handling-an-nsuseractivity-shortcut"></a>Tratamento de um atalho NSUserActivity
+### <a name="handling-an-nsuseractivity-shortcut"></a>Manipulando um atalho NSUserActivity
 
-Para lidar com um `NSUserActivity` atalho invocado por um usuário, um aplicativo iOS deve substituir o `ContinueUserActivity` método da `AppDelegate` classe, respondendo com base no `ActivityType` campo do passado `NSUserActivity` objeto:
+Para manipular um `NSUserActivity` atalho invocado por um usuário, um aplicativo IOS deve substituir `ContinueUserActivity` o método da `AppDelegate` classe, respondendo com base `ActivityType` `NSUserActivity` no campo do objeto passado:
 
 ```csharp
 public override bool ContinueUserActivity(UIApplication application, NSUserActivity userActivity, UIApplicationRestorationHandler completionHandler)
@@ -169,7 +169,7 @@ public override bool ContinueUserActivity(UIApplication application, NSUserActiv
 }
 ```
 
-Este método chama `HandleUserActivity`, que localiza o segue para a tela do menu e o invoca:
+Esse método chama `HandleUserActivity`, que localiza o transição na tela de menu e o invoca:
 
 ```csharp
 void HandleUserActivity()
@@ -186,139 +186,139 @@ void HandleUserActivity()
 }
 ```
 
-### <a name="assigning-a-phrase-to-an-nsuseractivity"></a>Atribuindo uma frase para um NSUserActivity
+### <a name="assigning-a-phrase-to-an-nsuseractivity"></a>Atribuindo uma frase a um NSUserActivity
 
-Para atribuir uma expressão para uma `NSUserActivity`, abra o iOS **configurações** aplicativo e escolha **Siri e pesquisa > Meus atalhos**. Em seguida, selecione o atalho (nesse caso, "Ordem de almoço") e registre uma frase.
+Para atribuir uma frase a um `NSUserActivity`, abra o aplicativo **configurações** do IOS e escolha **Siri & Pesquisar > meus atalhos**. Em seguida, selecione o atalho (neste caso, "pedido de almoço") e registre uma frase.
 
-Invocando Siri e usar essa frase serão aberto sopa Chef para a tela do menu.
+Invocar Siri e usar essa frase abrirá o chefe de sopa na tela do menu.
 
 ## <a name="using-a-custom-intent-shortcut-to-perform-a-task"></a>Usando um atalho de intenção personalizado para executar uma tarefa
 
 ### <a name="defining-a-custom-intent"></a>Definindo uma intenção personalizada
 
-Para fornecer um atalho que permite que um usuário concluir rapidamente a uma tarefa específica relacionada ao seu aplicativo, crie uma intenção personalizada. Uma intenção personalizada representa uma tarefa que um usuário pode querer para ser concluída, os parâmetros relevantes a essa tarefa e possíveis respostas resultantes da execução da tarefa. Dependendo de como uma intenção personalizada é definida, invocá-lo pode abrir seu aplicativo, ou executar uma tarefa em segundo plano.
+Para fornecer um atalho que permita que um usuário conclua rapidamente uma tarefa específica relacionada ao seu aplicativo, crie uma intenção personalizada. Uma intenção personalizada representa uma tarefa que um usuário pode querer concluir, parâmetros relevantes para essa tarefa e respostas potenciais resultantes da execução da tarefa. Dependendo de como uma intenção personalizada é definida, chamá-la pode abrir seu aplicativo ou executar uma tarefa em segundo plano.
 
-Use 10 do Xcode para criar as intenções personalizadas. No [SoupChef repositório](https://github.com/xamarin/ios-samples/tree/master/ios12/SoupChef), a intenção personalizada é definida no **OrderSoupIntentCodeGen**, um projeto de Objective-C. Abrir este projeto e selecione o **Intents.intentdefinition** arquivo na **navegador de projeto** para exibir o **OrderSoup** intenção.
+Use o Xcode 10 para criar tentativas personalizadas. No [repositório SoupChef](https://github.com/xamarin/ios-samples/tree/master/ios12/SoupChef), a intenção personalizada é definida em **OrderSoupIntentCodeGen**, um projeto Objective-C. Abra este projeto e selecione o arquivo **retenções. intentdefinition** no navegador de **projeto** para exibir a intenção de **OrderSoup** .
 
 Observe o seguinte:
 
-- A intenção tem um **categoria** dos **ordem**. Há várias categorias predefinidas que podem ser usadas para propósitos de personalizado; Selecione aquele que mais se aproxima da tarefa que permitirá que sua intenção personalizada. Como essa é uma mistura de ordenação do aplicativo, **OrderSoupIntent** usa **ordem**.
-- O **confirmação** caixa de seleção indica se o Siri deve solicitar confirmação antes de executar a tarefa. Para o **Sopa de ordem** intencional no sopa Chef, essa opção é habilitada, pois o usuário está fazendo uma compra.
-- O **parâmetros** seção do arquivo .intentdefinition define os parâmetros relevantes a um atalho. Para fazer um pedido sopa, Chef sopa deve saber o tipo de sopa, sua quantidade e qualquer opção associada.
-Cada parâmetro tem um tipo; parâmetro não pode ser representado por um tipo predefinido está definido como **personalizado**.
-- O **tipos de atalho** interface descreve as várias combinações de parâmetro Siri pode usar ao sugerir o atalho. Associado **Title** e **subtítulo** seções permitem que você defina as mensagens Siri usará ao apresentar um atalho sugerido para o usuário.
-- O **dá suporte à execução de plano de fundo** caixa de seleção deve ser selecionada para qualquer atalho que pode ser executado sem abrir o aplicativo para interação adicional do usuário.
+- A intenção tem uma **categoria** de **ordem**. Há várias categorias predefinidas que podem ser usadas para tentativas personalizadas; Selecione aquela que mais se aproximará da tarefa que sua intenção personalizada habilitará. Como esse é um aplicativo de ordenação de sopa, o **OrderSoupIntent** usa **Order**.
+- A caixa de seleção de **confirmação** indica se Siri deve ou não solicitar confirmação antes de executar a tarefa. Para a tentativa de **sopa de pedido** no chefe de sopa, essa opção é habilitada porque o usuário está fazendo uma compra.
+- A seção de **parâmetros** do arquivo. intentdefinition define os parâmetros relevantes para um atalho. Para fazer uma ordem de sopa, o chefe de sopa deve saber o tipo de sopa, sua quantidade e quaisquer opções associadas.
+Cada parâmetro tem um tipo; o parâmetro que não pode ser representado por um tipo predefinido é definido como **personalizado**.
+- A interface de **tipos de atalho** descreve as várias combinações de parâmetros que o Siri pode usar ao sugerir seu atalho. As seções **título** e **subtítulo** associadas permitem que você defina as mensagens que o Siri usará ao apresentar um atalho sugerido para o usuário.
+- A caixa de seleção **dá suporte à execução em segundo plano** deve ser selecionada para qualquer atalho que possa ser executado sem abrir o aplicativo para maior interação do usuário.
 
-### <a name="defining-custom-intent-responses"></a>Definir respostas personalizadas de intenção
+### <a name="defining-custom-intent-responses"></a>Definindo respostas de intenção personalizada
 
-O **resposta** item aninhado abaixo de **OrderSoup** intenção representa as respostas possíveis que resultam de uma ordem de letrinhas.
+O item de **resposta** aninhado abaixo da intenção **OrderSoup** representa as respostas em potencial resultantes de uma ordem de sopa.
 
-No **OrderSoup** definição da intenção da resposta, observe o seguinte:
+Na definição de resposta da intenção de **OrderSoup** , observe o seguinte:
 
-- Uma resposta **propriedades** pode ser usado para personalizar a mensagem de comunicado de volta para o usuário. O **OrderSoup** intenção resposta tem **sopa** e **waitTime** propriedades.
-- O **modelos de resposta** especificar as várias mensagens de êxito e falha que podem ser usadas para indicar o status após a conclusão de tarefa de uma tentativa.
-- O **sucesso** caixa de seleção deve ser selecionada para respostas que indicam o sucesso.
-- O **OrderSoupIntent** resposta de êxito usa o **sopa** e **waitTime** propriedades para fornecer uma mensagem amigável e útil que descrevem quando a ordem de sopa estará pronta.
+- **As propriedades** de uma resposta podem ser usadas para personalizar a mensagem comunicada de volta ao usuário. A resposta da tentativa **OrderSoup** tem as propriedades **sopa** e **waittime** .
+- Os **modelos de resposta** especificam as várias mensagens de êxito e de falha que podem ser usadas para indicar o status após a conclusão da tarefa de uma intenção.
+- A caixa de seleção **êxito** deve ser selecionada para respostas que indicam êxito.
+- A resposta de sucesso do **OrderSoupIntent** usa as propriedades de **sopa** e de **espera** para fornecer uma mensagem amigável e útil que descreve quando a ordem de sopa estará pronta.
 
-### <a name="generating-code-for-the-custom-intent"></a>Geração de código para a intenção personalizado
+### <a name="generating-code-for-the-custom-intent"></a>Gerando código para a intenção personalizada
 
-Criando o projeto do Xcode que contém essa definição personalizada de intenção faz com que o Xcode gerar o código que pode ser usado para interagir programaticamente com a intenção personalizada e suas respostas.
+A criação do projeto Xcode que contém essa definição de intenção personalizada faz com que o Xcode gere código que possa ser usado para interagir programaticamente com a intenção personalizada e suas respostas.
 
-Para exibir esse código gerado:
+Para exibir este código gerado:
 
-- Abra **Appdelegate**.
-- Adicione uma importação para o arquivo de cabeçalho da intenção personalizado: `#import "OrderSoupIntent.h"`
-- Em qualquer método na classe, adicione uma referência ao `OrderSoupIntent`.
-- Clique duas vezes em `OrderSoupIntent` e escolha **ir para definição**.
-- Clique com botão direito no arquivo de recém-aberta **OrderSoupIntent.h**e selecione **Mostrar no localizador**.
-- Isso abrirá uma **Finder** janela que contém um arquivo. h e. m, que contém o código gerado.
+- Abra **AppDelegate. m**.
+- Adicione uma importação ao arquivo de cabeçalho da intenção personalizada:`#import "OrderSoupIntent.h"`
+- Em qualquer método na classe, adicione uma referência a `OrderSoupIntent`.
+- Clique com o botão `OrderSoupIntent` direito do mouse em e escolha **ir para definição**.
+- Clique com o botão direito do mouse no arquivo recentemente aberto, **OrderSoupIntent. h**, e selecione **Mostrar no Finder**.
+- Isso abrirá uma janela do **Finder** que contém um arquivo. h e. m contendo o código gerado.
 
 Esse código gerado inclui:
 
-- `OrderSoupIntent` – Uma classe que representa a intenção de personalizado.
-- `OrderSoupIntentHandling` – Um protocolo que define os métodos que serão usados para confirmar que a intenção deve ser executada e o método que realmente executa-o.
-- `OrderSoupIntentResponseCode` – Uma enumeração que define vários status de resposta.
-- `OrderSoupIntentResponse` – uma classe que representa a resposta para a execução de uma intenção.
+- `OrderSoupIntent`– Uma classe que representa a intenção personalizada.
+- `OrderSoupIntentHandling`– Um protocolo que define os métodos que serão usados para confirmar que a intenção deve ser executada e o método que realmente a executa.
+- `OrderSoupIntentResponseCode`– Uma enumeração que define vários status de resposta.
+- `OrderSoupIntentResponse`– uma classe que representa a resposta à execução de uma intenção.
 
 ### <a name="creating-a-binding-to-the-custom-intent"></a>Criando uma associação à intenção personalizada
 
-Para usar o código gerado pelo Xcode em um aplicativo xamarin. IOS, crie um C# de associação para ele.
+Para usar o código gerado pelo Xcode em um aplicativo Xamarin. iOS, crie uma C# Associação para ele.
 
 #### <a name="creating-a-static-library-and-c-binding-definitions"></a>Criando uma biblioteca estática e C# definições de associação
 
-No [SoupChef repositório](https://github.com/xamarin/ios-samples/tree/master/ios12/SoupChef), dê uma olhada **OrderSoupIntentStaticLib** pasta e abra o **OrderSoupIntentStaticLib.xcodeproj** projeto Xcode.
+No [repositório SoupChef](https://github.com/xamarin/ios-samples/tree/master/ios12/SoupChef), dê uma olhada na pasta **OrderSoupIntentStaticLib** e abra o projeto Xcode **OrderSoupIntentStaticLib. xcodeproj** .
 
-Isso **Cocoa Touch lib** projeto contém o **OrderSoupIntent.h** e **OrderSoupIntent.m** arquivos gerados pelo Xcode.
+Esse projeto de **biblioteca estática Cocoa Touch** contém os arquivos **OrderSoupIntent. h** e **OrderSoupIntent. m** gerados pelo Xcode.
 
-#### <a name="configuring-the-static-library-project-build-settings"></a>Configurando as configurações de build do projeto de biblioteca estática
+#### <a name="configuring-the-static-library-project-build-settings"></a>Definindo as configurações de compilação do projeto de biblioteca estática
 
-No Xcode **navegador de projeto**, selecione o projeto de nível superior **OrderSoupIntentStaticLib**e navegue até **fases de compilação > compilar fontes**.
-Observe que **OrderSoupIntent.m** (quais imports **OrderSoupIntent.h**) está listado aqui. Na **vincular binário com bibliotecas**, observe que **Intents.framework** e **Foundation.framework** são incluídos.
-Com essas configurações em vigor, o framework seja compilado corretamente.
+No navegador de **projeto**do Xcode, selecione o projeto de nível superior, **OrderSoupIntentStaticLib**, e navegue até **fases de compilação > compilar fontes**.
+Observe que **OrderSoupIntent. m** (que importa **OrderSoupIntent. h**) está listado aqui. No **link Binary com bibliotecas**, observe que o **retenções. Framework** e o **Foundation. Framework** estão incluídos.
+Com essas configurações em vigor, a estrutura será criada corretamente.
 
-#### <a name="building-the-static-library-and-generating-c-bindings-definitions"></a>Criar a biblioteca estática e gerar C# definições de associações
+#### <a name="building-the-static-library-and-generating-c-bindings-definitions"></a>Criando a biblioteca estática e gerando C# definições de associações
 
-Para compilar a biblioteca estática e gerar C# definições de associações para ele, siga estas etapas:
+Para criar a biblioteca estática e gerar C# definições de associações para ela, siga estas etapas:
 
-- [Instalar o objetivo Sharpie](https://docs.microsoft.com/xamarin/cross-platform/macios/binding/objective-sharpie/get-started?context=xamarin/mac#installing-objective-sharpie), a ferramenta usada para gerar definições de associações dos arquivos. h e. m criados pelo Xcode.
+- [Instale a nitidez do objetivo](https://docs.microsoft.com/xamarin/cross-platform/macios/binding/objective-sharpie/get-started?context=xamarin/mac#installing-objective-sharpie), a ferramenta usada para gerar definições de associações dos arquivos. h e. m criados pelo Xcode.
 
-- Configure o sistema para usar as ferramentas de linha de comando do Xcode 10:
+- Configure seu sistema para usar as ferramentas de linha de comando do Xcode 10:
 
     > [!WARNING]
-    > Atualizar as ferramentas de linha de comando selecionado afeta todas as versões instaladas do Xcode em seu sistema. Quando você terminar de usar o Chef Sopa de aplicativo de exemplo, não se esqueça de reverter isso definindo-se à sua configuração original.
+    > A atualização das ferramentas de linha de comando selecionadas afeta todas as versões instaladas do Xcode no seu sistema. Quando você terminar de usar o aplicativo de exemplo do chefe de sopa, certifique-se de reverter essa configuração para sua configuração original.
 
-    - No Xcode, escolha **Xcode > Preferências > locais** e defina **ferramentas de linha de comando** à instalação do Xcode 10 mais atual disponível no sistema.
+    - No Xcode, escolha **Xcode > preferências > locais** e defina **ferramentas de linha de comando** para a instalação mais recente do Xcode 10 disponível no sistema.
 
-- No terminal, `cd` para o **OrderSoupIntentStaticLib** directory.
+- No terminal, `cd` para o diretório **OrderSoupIntentStaticLib**
 
-- Tipo `make`, quais compilações:
+- Tipo `make`, que compila:
 
-    - A biblioteca estática, **libOrderSoupIntentStaticLib.a**
-    - No **bo** diretório de saída, C# definições de associações:
+    - A biblioteca estática, **libOrderSoupIntentStaticLib. a**
+    - No diretório de saída de Bo C# , definições de associações:
         - **ApiDefinitions.cs**
         - **StructsAndEnums.cs**
 
-O **OrderSoupIntentBindings** builds de projeto, que conta com essa biblioteca estática e suas definições de associações associadas, esses itens automaticamente.
-No entanto, executar manualmente o processo acima garantirá que o se ele é compilado conforme o esperado.
+O projeto **OrderSoupIntentBindings** , que se baseia nessa biblioteca estática e suas definições de associações associadas, compila esses itens automaticamente.
+No entanto, a execução manual por meio do processo acima garantirá que ele seja criado conforme o esperado.
 
-Para obter mais informações sobre como criar uma biblioteca estática e usando o objetivo Sharpie para criar C# definições de associações, dê uma olhada a [associação de uma biblioteca do iOS Objective-C](https://docs.microsoft.com/xamarin/ios/platform/binding-objective-c/walkthrough?tabs=vsmac#creating-a-static-library) passo a passo.
+Para obter mais informações sobre como criar uma biblioteca estática e usar a nitidez objetiva C# para criar definições de associações, dê uma olhada na explicação sobre a [Associação de uma biblioteca de Objective do IOS-C](https://docs.microsoft.com/xamarin/ios/platform/binding-objective-c/walkthrough?tabs=vsmac#creating-a-static-library) .
 
 #### <a name="creating-a-bindings-library"></a>Criando uma biblioteca de associações
 
-Com a biblioteca estática e o C# as definições de associações criadas, a peça que falta é necessária consumir o Xcode gerado pelo código relacionado a intenção em um projeto xamarin. IOS uma biblioteca de associações.
+Com a biblioteca estática e as C# definições de associações criadas, a parte restante necessária para consumir o código relacionado à intenção gerado pelo Xcode em um projeto Xamarin. Ios é uma biblioteca de associações.
 
-No [repositório sopa Chef](https://github.com/xamarin/ios-samples/tree/master/ios12/SoupChef), abra o **SoupChef.sln** arquivo. Entre outras coisas, essa solução contém **OrderSoupIntentBinding**, uma biblioteca de associações para a biblioteca estática gerada acima.
+No [repositório chefe de sopa](https://github.com/xamarin/ios-samples/tree/master/ios12/SoupChef), abra o arquivo **SoupChef. sln** . Entre outras coisas, essa solução contém **OrderSoupIntentBinding**, uma biblioteca de associações para a biblioteca estática gerada acima.
 
-Em particular, observe que esse projeto inclui:
+Observe que, especificamente, esse projeto inclui:
 
-- **ApiDefinitions.cs** – um arquivo gerado acima por objetivo Sharpie e adicionados a este projeto. Este arquivo **ação de compilação** é definido como **ObjcBindingApiDefinition**.
-- **StructsAndEnums.cs** – outro arquivo gerado acima por objetivo Sharpie e adicionados a este projeto. Este arquivo **ação de compilação** é definido como **ObjcBindingCoreSource**.
-- Um **referência nativa** à **libOrderSoupIntentStaticLib.a**, a biblioteca estática criada acima.
+- **ApiDefinitions.cs** – um arquivo gerado acima por nitidez objetiva e adicionado a este projeto. A ação de **Build** deste arquivo está definida como **ObjcBindingApiDefinition**.
+- **StructsAndEnums.cs** – outro arquivo gerado acima por nitidez objetiva e adicionado a este projeto. A ação de **Build** deste arquivo está definida como **ObjcBindingCoreSource**.
+- Uma **referência nativa** para **libOrderSoupIntentStaticLib.** a, a biblioteca estática criada acima.
 
 > [!NOTE]
-> Ambos **ApiDefinitions.cs** e **StructsAndEnums.cs** contêm atributos como `[Watch (5,0), iOS (12,0)]`. Esses atributos, gerados pelo objetivo Sharpie, foram comentados, pois eles não são necessários para este projeto.
+> **ApiDefinitions.cs** e **StructsAndEnums.cs** contêm `[Watch (5,0), iOS (12,0)]`atributos como. Esses atributos, gerados por nitidez objetiva, foram comentados, pois não são necessários para este projeto.
 
-Para obter mais informações sobre como criar um C# biblioteca de associações, dê uma olhada nos [associação de um biblioteca Objective-C do iOS](https://docs.microsoft.com/xamarin/ios/platform/binding-objective-c/walkthrough?tabs=vsmac#create-a-xamarinios-binding-project) passo a passo.
+Para obter mais informações sobre como C# criar uma biblioteca de associações, dê uma olhada na explicação sobre a [vinculação de uma biblioteca de Objective do IOS-C](https://docs.microsoft.com/xamarin/ios/platform/binding-objective-c/walkthrough?tabs=vsmac#create-a-xamarinios-binding-project) .
 
-Observe que o **SoupChef** projeto contém uma referência a **OrderSoupIntentBinding**, que significa que ele agora pode acessar, em C#, as classes, interfaces e enumerações que ele contém:
+Observe que o projeto **SoupChef** contém uma referência a **OrderSoupIntentBinding**, o que significa que agora ele pode acessar, C#no, as classes, interfaces e enumerações que ele contém:
 
 - `OrderSoupIntent`
 - `OrderSoupIntentHandling`
 - `OrderSoupIntentResponse`
 - `OrderSoupIntenseResponseCode`
 
-### <a name="adding-the-intentdefinition-file-to-your-solution"></a>Adicionando o arquivo de .intentdefinition à sua solução
+### <a name="adding-the-intentdefinition-file-to-your-solution"></a>Adicionando o arquivo. intentdefinition à sua solução
 
-No C# **SoupChef** solução, o **SoupKit** projeto contém o código compartilhado entre o aplicativo e suas extensões. O **Intents.intentdefinition** arquivo foi colocado na **Base.lproj** diretório de **SoupKit**, e ele tem um **Build Action** de **Conteúdo**. O processo de compilação copia esse arquivo em lote de aplicativo sopa Chef, onde ela é necessária para o aplicativo funcione corretamente.
+C# Na solução **SoupChef** , o projeto **SoupKit** contém o código compartilhado entre o aplicativo e suas extensões. O **arquivo retenções. intentdefinition** foi colocado no diretório **base. lproj** de **SoupKit**e tem uma **ação de compilação** de **conteúdo**. O processo de compilação copia esse arquivo para o grupo de aplicativos de sopa do meio-chefe, onde é necessário que o aplicativo funcione corretamente.
 
-### <a name="donating-an-intent"></a>Doar uma intenção
+### <a name="donating-an-intent"></a>Doação de uma intenção
 
-Em ordem para Siri sugerir um atalho, deve primeiro entender quando o atalho é relevante.
+Para que o Siri sugira um atalho, ele deve primeiro entender quando o atalho é relevante.
 
-Para fornecer Siri essa compreensão, Chef sopa _doa_ uma tentativa de Siri cada vez que o usuário faz um pedido de letrinhas. Com base nessa doação – quando foram doado, onde ele foi doado, os parâmetros que ele contém – Siri aprende quando sugerir o atalho no futuro.
+Para dar a Siri essa compreensão, a sopa chefe donate é uma intenção de Siri cada vez que o usuário coloca um pedido de sopa. Com base nessa doação – quando foi donate, em que foi donate, os parâmetros que ele contém – Siri aprende quando sugerir o atalho no futuro.
 
-**SoupChef** usa o `SoupOrderDataManager` classe colocar doações.
-Quando chamado para fazer um pedido sopa para um usuário, o `PlaceOrder` por sua vez chama um método [ `DonateInteraction` ](xref:Intents.INInteraction.DonateInteraction*):
+**SoupChef** usa a `SoupOrderDataManager` classe para inserir doações.
+Quando chamado para colocar uma ordem de sopa para um usuário, `PlaceOrder` o método, por [`DonateInteraction`](xref:Intents.INInteraction.DonateInteraction*)sua vez, chama:
 
 ```csharp
 void DonateInteraction(Order order)
@@ -332,11 +332,11 @@ void DonateInteraction(Order order)
 }
 ```
 
-Depois de buscar uma intenção, ele é encapsulado em um [ `INInteraction` ](xref:Intents.INInteraction).
-O `INInteraction` recebe um [`Identifier`](xref:Intents.INInteraction.Identifier*)
-que corresponde a ID exclusiva do pedido (Isso será útil mais tarde quando a exclusão de doações intencionais que não são mais válidas). Em seguida, a interação será doada a Siri.
+Depois de buscar uma intenção, ela é encapsulada em [`INInteraction`](xref:Intents.INInteraction)um.
+O `INInteraction` recebe um[`Identifier`](xref:Intents.INInteraction.Identifier*)
+que corresponde à ID exclusiva da ordem (isso será útil posteriormente ao excluir doações de intenção que não são mais válidas). Em seguida, a interação é donate a siri.
 
-A chamada para o `order.Intent` getter buscas uma `OrderSoupIntent` que representa a ordem, definindo seu `Quantity`, `Soup`, `Options`e a imagem e uma frase de invocação a ser usada como uma sugestão quando o usuário registra uma frase para Siri associar com a intenção:
+`order.Intent` A chamada para getter busca um `Quantity` `OrderSoupIntent` que representa a ordem definindo sua imagem, `Soup`, `Options`, e uma frase de invocação a ser usada como sugestão quando o usuário registra uma frase para Siri para associar com a intenção:
 
 ```csharp
 public OrderSoupIntent Intent
@@ -368,15 +368,15 @@ public OrderSoupIntent Intent
 }
 ```
 
-#### <a name="removing-invalid-donations"></a>Remoção de doações inválidas
+#### <a name="removing-invalid-donations"></a>Removendo doações inválidas
 
-É importante remover doações que não são mais válidas para que o Siri não faz sugestões de atalho inúteis ou confusos.
+É importante remover doações que não são mais válidas para que o Siri não faça sugestões de atalho não auxiliares ou confusas.
 
-No sopa Chef, o **Menu configurar** tela pode ser usada para marcar um menu de item como indisponível. Siri não deve sugerir um atalho para pedir um item de menu não está disponível, portanto, o `RemoveDonation` método de `SoupMenuManager` exclui doações para itens de menu que não estão mais disponíveis. Isso é feito:
+No chefe de sopa, a tela de **menu Configurar** pode ser usada para marcar um item de menu como não disponível. Siri não deve mais sugerir um atalho para solicitar um item de menu indisponível, portanto `RemoveDonation` , o `SoupMenuManager` método de excluir doações para itens de menu que não estão mais disponíveis. Ele faz isso por meio de:
 
-- Localizando pedidos associados ao item de menu não está disponível agora.
-- Pegando seus identificadores.
-- Excluindo as interações que têm o mesmo identificador.
+- Localizando pedidos associados ao item de menu Now-inavailable.
+- Captando seus identificadores.
+- Excluindo interações que têm esse mesmo identificador.
 
 ```csharp
 void RemoveDonation(MenuItem menuItem)
@@ -411,15 +411,15 @@ void RemoveDonation(MenuItem menuItem)
 
 ### <a name="creating-an-intents-extension"></a>Criando uma extensão de tentativas
 
-O código que é executado quando o Siri invoca uma intenção é colocado em uma extensão de tentativas, que pode ser adicionada como um novo projeto para a mesma solução que um aplicativo xamarin. IOS existente, como Chef de letrinhas. No **SoupChef** solução, a extensão é chamada **SoupChefIntents**.
+O código que é executado quando Siri invoca uma intenção é colocado em uma extensão de intenções, que pode ser adicionada como um novo projeto à mesma solução que um aplicativo Xamarin. iOS existente, como a sopa chefe. Na solução **SoupChef** , a extensão é chamada de **SoupChefIntents**.
 
-#### <a name="soupchefintents-infoplist-and-entitlementsplist"></a>SoupChefIntents – Info. plist e Entitlements. plist
+#### <a name="soupchefintents-infoplist-and-entitlementsplist"></a>SoupChefIntents – info. plist e direitos. plist
 
-##### <a name="soupchefintents-infoplist"></a>SoupChefIntents – Info. plist
+##### <a name="soupchefintents-infoplist"></a>SoupChefIntents – info. plist
 
-O **Info. plist** na **SoupChefIntents** projeto define o **identificador do pacote** como `com.xamarin.SoupChef.SoupChefIntents`.
+O **info. plist** no projeto **SoupChefIntents** define o **identificador de pacote** como `com.xamarin.SoupChef.SoupChefIntents`.
 
-O **Info. plist** arquivo também contém o seguinte:
+O arquivo **info. plist** também contém o seguinte:
 
 ```xml
 <key>NSExtension</key>
@@ -442,16 +442,16 @@ O **Info. plist** arquivo também contém o seguinte:
 </dict>
 ```
 
-No acima **Info. plist**:
+No **info. plist**acima:
 
-- `IntentsRestrictedWhileLocked` lista as intenções que só devem ser tratadas quando o dispositivo seja desbloqueado.
-- `IntentsSupported` lista as tentativas manipuladas por esta extensão.
-- `NSExtensionPointIdentifier` Especifica o tipo de extensão do aplicativo (consulte [documentação da Apple](https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/AppExtensionKeys.html#//apple_ref/doc/uid/TP40014212-SW15) para obter mais informações).
-- `NSExtensionPrincipalClass` Especifica a classe que deve ser usada para lidar com as intenções essa extensão dá suportadas.
+- `IntentsRestrictedWhileLocked`lista as tentativas que só devem ser tratadas quando o dispositivo for desbloqueado.
+- `IntentsSupported`lista as tentativas tratadas por essa extensão.
+- `NSExtensionPointIdentifier`Especifica o tipo de extensão do aplicativo (consulte a [documentação da Apple](https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/AppExtensionKeys.html#//apple_ref/doc/uid/TP40014212-SW15) para obter mais informações).
+- `NSExtensionPrincipalClass`Especifica a classe que deve ser usada para lidar com tentativas com suporte nesta extensão.
 
-##### <a name="soupchefintents-entitlementsplist"></a>SoupChefIntents – Entitlements. plist
+##### <a name="soupchefintents-entitlementsplist"></a>SoupChefIntents – direitos. plist
 
-O **Entitlements. plist** na **SoupChefIntents** projeto tem o **grupos de aplicativos** funcionalidade. Esse recurso é configurado para usar o mesmo grupo de aplicativos como o **SoupChef** projeto:
+O **direitos. plist** no projeto **SoupChefIntents** tem a capacidade de **grupos de aplicativos** . Essa funcionalidade é configurada para usar o mesmo grupo de aplicativos que o projeto **SoupChef** :
 
 ```xml
 <key>com.apple.security.application-groups</key>
@@ -460,16 +460,16 @@ O **Entitlements. plist** na **SoupChefIntents** projeto tem o **grupos de aplic
 </array>
 ```
 
-Sopa Chef persistir dados com `NSUserDefaults`. Para compartilhar dados entre o aplicativo e a extensão do aplicativo, eles fazem referência o mesmo grupo de aplicativos em seus **Entitlements. plist** arquivos.
+A sopa chefe mantém os dados `NSUserDefaults`com. Para compartilhar dados entre o aplicativo e a extensão do aplicativo, eles fazem referência ao mesmo grupo de aplicativos em seus arquivos **. plist de direitos** .
 
 > [!NOTE]
-> O **SoupChefIntents** conjuntos de configuração de build do projeto **direitos personalizados** para **Entitlements. plist**.
+> A configuração de Build do projeto **SoupChefIntents** define **direitos personalizados** para **direitos. plist**.
 
-#### <a name="handling-an-ordersoupintent-background-task"></a>Tratamento de uma tarefa de plano de fundo OrderSoupIntent
+#### <a name="handling-an-ordersoupintent-background-task"></a>Manipulando uma tarefa em segundo plano do OrderSoupIntent
 
-Uma extensão de tentativas executa as tarefas em segundo plano necessários para um atalho com base em uma intenção personalizada.
+Uma extensão de tentativas executa as tarefas em segundo plano necessárias para um atalho com base em uma intenção personalizada.
 
-Siri chamadas a [ `GetHandler` ](xref:Intents.INExtension.GetHandler*) método da `IntentHandler` classe (definido na **Info. plist** como o `NSExtensionPrincipalClass`) para obter uma instância de uma classe que estende o `OrderSoupIntentHandling`, que pode ser usado para lidar com um `OrderSoupIntent`:
+Siri chama o [`GetHandler`](xref:Intents.INExtension.GetHandler*) método `IntentHandler` da classe (definido em **info. plist** como o `NSExtensionPrincipalClass`) para obter uma instância de uma classe que estende `OrderSoupIntentHandling`, que pode ser usada para lidar com um `OrderSoupIntent`:
 
 ```csharp
 [Register("IntentHandler")]
@@ -488,15 +488,15 @@ public class IntentHandler : INExtension
 }
 ```
 
-`OrderSoupIntentHandler`, definido na **SoupKit** projeto de código compartilhado, implementa dois métodos de importantes:
+`OrderSoupIntentHandler`, definido no projeto **SoupKit** do código compartilhado, implementa dois métodos importantes:
 
-- `ConfirmOrderSoup` – Confirma se a tarefa associada a intenção, na verdade, deve ser executada
-- `HandleOrderSoup` – Faz o pedido de sopa e responde ao usuário chamando o manipulador de conclusão no passado
+- `ConfirmOrderSoup`– Confirma se a tarefa associada à intenção deve ser realmente executada
+- `HandleOrderSoup`– Coloca a ordem de sopa e responde ao usuário chamando o manipulador de conclusão passado
 
-#### <a name="handling-an-ordersoupintent-that-opens-the-app"></a>Manipulando uma OrderSoupIntent que abre o aplicativo
+#### <a name="handling-an-ordersoupintent-that-opens-the-app"></a>Manipulando um OrderSoupIntent que abre o aplicativo
 
-Um aplicativo deve lidar adequadamente com as intenções que não são executados em segundo plano.
-Eles são tratados da mesma forma como `NSUserActivity` atalhos, no `ContinueUserActivity` método `AppDelegate`:
+Um aplicativo deve lidar corretamente com tentativas que não são executadas em segundo plano.
+Eles são tratados da mesma forma que `NSUserActivity` os atalhos, `ContinueUserActivity` no método de `AppDelegate`:
 
 ```csharp
 public override bool ContinueUserActivity(UIApplication application, NSUserActivity userActivity, UIApplicationRestorationHandler completionHandler)
@@ -511,17 +511,17 @@ public override bool ContinueUserActivity(UIApplication application, NSUserActiv
 }  
 ```
 
-## <a name="providing-a-user-interface-for-a-custom-intent"></a>Fornecendo uma interface de usuário para uma intenção personalizada
+## <a name="providing-a-user-interface-for-a-custom-intent"></a>Fornecendo uma interface do usuário para uma intenção personalizada
 
-Uma extensão de tentativas da interface do usuário fornece uma interface de usuário personalizada para uma extensão de tentativas. No **SoupChef** solução **SoupChefIntentsUI** é uma extensão de tentativas da interface do usuário que fornece uma interface para **SoupChefIntents**.
+Uma extensão de interface de usuário de tentativas fornece uma interface de usuário personalizada para uma extensão de tentativas. Na solução **SoupChef** , **SoupChefIntentsUI** é uma extensão de interface do usuário de tentativas que fornece uma interface para **SoupChefIntents**.
 
-### <a name="soupchefintentsui--infoplist-and-entitlementsplist"></a>SoupChefIntentsUI – Info. plist e Entitlements. plist
+### <a name="soupchefintentsui--infoplist-and-entitlementsplist"></a>SoupChefIntentsUI – info. plist e direitos. plist
 
-#### <a name="soupchefintentsui-infoplist"></a>SoupChefIntentsUI – Info.plist
+#### <a name="soupchefintentsui-infoplist"></a>SoupChefIntentsUI – info. plist
 
-O **Info. plist** na **SoupChefIntentsUI** projeto define o **identificador do pacote** como `com.xamarin.SoupChef.SoupChefIntentsui`.
+O **info. plist** no projeto **SoupChefIntentsUI** define o **identificador de pacote** como `com.xamarin.SoupChef.SoupChefIntentsui`.
 
-O **Info. plist** arquivo também contém o seguinte:
+O arquivo **info. plist** também contém o seguinte:
 
 ```xml
 <key>NSExtension</key>
@@ -541,31 +541,31 @@ O **Info. plist** arquivo também contém o seguinte:
 </dict>
 ```
 
-No acima **Info. plist**:
+No **info. plist**acima:
 
-- `IntentsSupported` indica que o `OrderSoupIntent` é manipulada por esta extensão de tentativas da interface do usuário.
-- `NSExtensionPointIdentifier` Especifica o tipo de extensão do aplicativo (consulte [documentação da Apple](https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/AppExtensionKeys.html#//apple_ref/doc/uid/TP40014212-SW15) para obter mais informações).
-- `NSExtensionMainStoryboard` Especifica o storyboard que define a interface primária dessa extensão
+- `IntentsSupported`indica que o `OrderSoupIntent` é tratado por essa extensão de interface do usuário de tentativas.
+- `NSExtensionPointIdentifier`Especifica o tipo de extensão do aplicativo (consulte a [documentação da Apple](https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/AppExtensionKeys.html#//apple_ref/doc/uid/TP40014212-SW15) para obter mais informações).
+- `NSExtensionMainStoryboard`Especifica o storyboard que define a interface primária desta extensão
 
-#### <a name="soupchefintentsui-entitlementsplist"></a>SoupChefIntentsUI – Entitlements. plist
+#### <a name="soupchefintentsui-entitlementsplist"></a>SoupChefIntentsUI – direitos. plist
 
-O **SoupChefIntentsUI** projeto não precisa de uma **Entitlements. plist** arquivo.
+O projeto **SoupChefIntentsUI** não precisa de um arquivo **. plist de direitos** .
 
 ### <a name="creating-the-user-interface"></a>Criar a interface do usuário
 
-Desde que o **Info. plist** para **SoupChefIntentsUI** define o `NSExtensionMainStoryboard` chave `MainInterface`, o **MainInterace.storyboard** arquivo define a interface para a extensão de tentativas da interface do usuário.
+Como o **info. plist** para **SoupChefIntentsUI** define a `NSExtensionMainStoryboard` chave como `MainInterface`, o arquivo **MainInterace. Storyboard** define a interface para a extensão da interface do usuário de tentativas.
 
-Nesse storyboard, há um controlador de exibição única, do tipo **IntentViewController**. Ele faz referência a dois modos de exibição:
+Neste storyboard, há um único controlador de exibição, do tipo **IntentViewController**. Ele faz referência a dois modos de exibição:
 
-- **invoiceView**, do tipo `InvoiceView`
-- **confirmationView**, do tipo `ConfirmOrderView`
+- **invoiceView**, do tipo`InvoiceView`
+- **confirmationView**, do tipo`ConfirmOrderView`
 
 > [!NOTE]
-> As interfaces **invoiceView** e **confirmationView** são definidos no **Main. Storyboard** como modos de exibição secundários. O iOS Designer no Visual Studio para Mac e Visual Studio 2017 não oferece suporte para exibir ou editar modos de exibição secundários; Para fazer isso, abra **Main. Storyboard** no Interface Builder do Xcode.
+> As interfaces para **invoiceView** e **confirmationView** são definidas em **Main. Storyboard** como exibições secundárias. O designer do iOS no Visual Studio para Mac e no Visual Studio 2017 não oferece suporte para exibição ou edição de exibições secundárias; para fazer isso, abra **Main. Storyboard** no interface Builder do Xcode.
 
-`IntentViewController` implementa o [`IINUIHostedViewControlling`](xref:IntentsUI.IINUIHostedViewControlling)
-interface usada para fornecer uma interface personalizada ao trabalhar com as intenções do Siri. O [`ConfigureView`](xref:IntentsUI.INUIHostedViewControlling_Extensions.ConfigureView*)
-método é chamado para personalizar a interface, exibindo a confirmação ou a nota fiscal, dependendo se a interação é que está sendo confirmada ([`INIntentHandlingStatus.Ready`](xref:Intents.INIntentHandlingStatus)) ou foi executado com êxito ([ `INIntentHandlingStatus.Success`](xref:Intents.INIntentHandlingStatus)):
+`IntentViewController`implementa o[`IINUIHostedViewControlling`](xref:IntentsUI.IINUIHostedViewControlling)
+interface, usada para fornecer uma interface personalizada ao trabalhar com tentativas de siri. Dos[`ConfigureView`](xref:IntentsUI.INUIHostedViewControlling_Extensions.ConfigureView*)
+o método é chamado para personalizar a interface, exibindo a confirmação ou a fatura, dependendo se a interação está sendo confirmada[`INIntentHandlingStatus.Ready`](xref:Intents.INIntentHandlingStatus)() ou se foi executada com êxito[`INIntentHandlingStatus.Success`](xref:Intents.INIntentHandlingStatus)():
 
 ```csharp
 [Export("configureViewForParameters:ofInteraction:interactiveBehavior:context:completion:")]
@@ -594,13 +594,13 @@ public void ConfigureView(
 ```
 
 > [!TIP]
-> Para obter mais informações sobre o `ConfigureView` método, assista a apresentação de WWDC 2017 da Apple, [o que há de novo no SiriKit](https://developer.apple.com/videos/play/wwdc2017/214/).
+> Para obter mais informações sobre `ConfigureView` o método, Assista à apresentação do WWDC 2017 da Apple, [o que há de novo no SiriKit](https://developer.apple.com/videos/play/wwdc2017/214/).
 
-## <a name="creating-a-voice-shortcut"></a>Criar um atalho de voz
+## <a name="creating-a-voice-shortcut"></a>Criando um atalho de voz
 
-Sopa Chef fornece uma interface para atribuir um atalho de voz para cada pedido, tornando possível a sopa de ordem com Siri. Na verdade, a interface usada para registrar e atribuir atalhos de voz é fornecida pelo iOS e exige pouco código personalizado.
+A sopa chefe fornece uma interface para atribuir um atalho de voz a cada pedido, possibilitando a ordem de sopa com siri. Na verdade, a interface usada para registrar e atribuir atalhos de voz é fornecida pelo iOS e requer pouco código personalizado.
 
-Na `OrderDetailViewController`, quando um usuário toca a tabela **adicionar a Siri** linha, o [ `RowSelected` ](xref:UIKit.UITableViewSource.RowSelected*) método apresenta uma tela para adicionar ou editar um atalho de voz:
+No `OrderDetailViewController`, quando um usuário toca a linha **Add to Siri** da tabela, o [`RowSelected`](xref:UIKit.UITableViewSource.RowSelected*) método apresenta uma tela para adicionar ou editar um atalho de voz:
 
 ```csharp
 public override void RowSelected(UITableView tableView, NSIndexPath indexPath)
@@ -631,80 +631,80 @@ public override void RowSelected(UITableView tableView, NSIndexPath indexPath)
 }
 ```
 
-Com base em se existe ou não um atalho de voz existente para a ordem exibida no momento, `RowSelected` apresenta um controlador de exibição do tipo [ `INUIEditVoiceShortcutViewController` ](xref:IntentsUI.INUIEditVoiceShortcutViewController) ou [ `INUIAddVoiceShortcutViewController` ](xref:IntentsUI.INUIAddVoiceShortcutViewController).
-Em cada caso, `OrderDetailViewController` se define como o controlador de exibição `Delegate`, por isso, ele também implementa [`IINUIAddVoiceShortcutViewControllerDelegate`](xref:IntentsUI.IINUIAddVoiceShortcutViewControllerDelegate)
-e [ `IINUIEditVoiceShortcutViewControllerDelegate` ](xref:IntentsUI.IINUIEditVoiceShortcutViewControllerDelegate).
+Com base em se um atalho de voz existente existe ou não para a ordem exibida atualmente `RowSelected` , apresenta um controlador de exibição [`INUIEditVoiceShortcutViewController`](xref:IntentsUI.INUIEditVoiceShortcutViewController) do [`INUIAddVoiceShortcutViewController`](xref:IntentsUI.INUIAddVoiceShortcutViewController)tipo ou.
+Em cada caso, `OrderDetailViewController` ele se define como o `Delegate`controlador de exibição, que é o motivo pelo qual ele também implementa[`IINUIAddVoiceShortcutViewControllerDelegate`](xref:IntentsUI.IINUIAddVoiceShortcutViewControllerDelegate)
+e [`IINUIEditVoiceShortcutViewControllerDelegate`](xref:IntentsUI.IINUIEditVoiceShortcutViewControllerDelegate).
 
-## <a name="testing-on-device"></a>Teste no dispositivo
+## <a name="testing-on-device"></a>Testando no dispositivo
 
-Para executar o Chef sopa em um dispositivo, siga as instruções abaixo. Leia também o [Observação sobre o provisionamento automático](#automatic-provisioning).
+Para executar o chefe de sopa em um dispositivo, siga as instruções abaixo. Leia também a [Observação sobre o provisionamento automático](#automatic-provisioning).
 
-### <a name="app-group-app-ids-provisioning-profiles"></a>Grupo de aplicativos, IDs do aplicativo, perfis de provisionamento
+### <a name="app-group-app-ids-provisioning-profiles"></a>Grupo de aplicativos, IDs de aplicativo, perfis de provisionamento
 
-No **certificados, IDs e perfis** seção o [Portal do desenvolvedor Apple](https://developer.apple.com/), faça o seguinte:
+Na seção **certificados, IDs & perfis** do portal do [desenvolvedor da Apple](https://developer.apple.com/), faça o seguinte:
 
-- Crie um grupo de aplicativos para compartilhar dados entre o aplicativo sopa Chef e suas extensões. Por exemplo: **group.com.yourcompanyname.SoupChef**
+- Crie um grupo de aplicativos para compartilhar dados entre o aplicativo chefe de sopa e suas extensões. Por exemplo: **Group. com. Yourcompanyname pela. SoupChef**
 
-- Crie três IDs de aplicativo: um para o aplicativo em si, para a extensão de tentativas e outro para a extensão de tentativas da interface do usuário. Por exemplo:
+- Crie três IDs de aplicativo: uma para o aplicativo em si, uma para a extensão de intenções e outra para a extensão de interface do usuário de tentativas. Por exemplo:
 
-    - Aplicativo: **com.yourcompanyname.SoupChef**
-        - Para essa ID do aplicativo, atribua o SiriKit e **grupos de aplicativos** recursos.
+    - Aplicativo: **com. Yourcompanyname pela. SoupChef**
+        - Para essa ID do aplicativo, atribua os recursos SiriKit e **grupos de aplicativos** .
 
-    - Extensão de tentativas: **com.yourcompanyname.SoupChef.Intents**
-        - Para essa ID do aplicativo, atribua o **grupos de aplicativos** funcionalidade.
+    - Extensão de tentativas: **com. Yourcompanyname pela. SoupChef. intenções**
+        - Para essa ID de aplicativo, atribua a capacidade de **grupos de aplicativos** .
 
-    - Extensão de interface do usuário de tentativas: **com.yourcompanyname.SoupChef.Intentsui**
-        - Essa ID do aplicativo não precisa de nenhuma recursos especiais.
+    - Extensão da interface do usuário de tentativas: **com. Yourcompanyname pela. SoupChef. Intentsui**
+        - Esta ID de aplicativo não precisa de funcionalidades especiais.
 
-- Depois de criar as IDs do aplicativo acima, edite o **grupos de aplicativos** capacidade atribuída ao aplicativo e a extensão de tentativas, especificando o grupo de aplicativos específico criado acima.
+- Depois de criar as IDs de aplicativo acima, edite a funcionalidade de **grupos de aplicativos** atribuída ao aplicativo e a extensão de tentativas, especificando o grupo de aplicativos específico criado acima.
 
-- Crie três novos desenvolvimento perfis de provisionamento, uma para cada uma das IDs do novo aplicativo.
+- Crie três novos perfis de provisionamento de desenvolvimento, um para cada um dos novos IDs de aplicativo.
 
-- Baixe esse perfis de provisionamento e clique duas vezes em cada um para instalá-lo. Se o Visual Studio para Mac ou Visual Studio 2017 já está em execução, reinicie-o para certificar-se de que ele registra novos perfis de provisionamento.
+- Baixe esses perfis de provisionamento e clique duas vezes em cada um para instalá-lo. Se Visual Studio para Mac ou o Visual Studio 2017 já estiver em execução, reinicie-o para certificar-se de que ele registra os novos perfis de provisionamento.
 
-### <a name="editing-infoplist-entitlementsplist-and-source-code"></a>Edição de código-fonte, Entitlements. plist e info. plist
+### <a name="editing-infoplist-entitlementsplist-and-source-code"></a>Edição do info. plist, direitos. plist e código-fonte
 
-No Visual Studio para Mac ou Visual Studio 2017, faça o seguinte:
+No Visual Studio para Mac ou no Visual Studio 2017, faça o seguinte:
 
-- Atualizar os vários **Info. plist** arquivos na solução. Defina o aplicativo, a extensão de tentativas e a extensão de IU de Intents **identificador de pacote** para as IDs do aplicativo definida acima:
+- Atualize os vários arquivos **info. plist** na solução. Defina o **identificador do pacote** do aplicativo, a extensão de tentativas e a extensão da interface do usuário de tentativas para as IDs de aplicativo definidas acima:
 
-    - Aplicativo: **com.yourcompanyname.SoupChef**
-    - Extensão de tentativas: **com.yourcompanyname.SoupChef.Intents**
-    - Extensão de interface do usuário de tentativas: **com.yourcompanyname.SoupChef.Intentsui**
+    - Aplicativo: **com. Yourcompanyname pela. SoupChef**
+    - Extensão de tentativas: **com. Yourcompanyname pela. SoupChef. intenções**
+    - Extensão da interface do usuário de tentativas: **com. Yourcompanyname pela. SoupChef. Intentsui**
 
-- Atualizar o **Entitlements. plist** do arquivo para o **SoupChef** projeto:
-    - Para o **grupos de aplicativos** capacidade, defina o grupo para o novo grupo de aplicativos criado acima (no exemplo acima, ele era **group.com.yourcompanyname.SoupChef**).
-    - Certifique-se de que **SiriKit** está habilitado.
+- Atualize o arquivo **. plist de direitos** para o projeto **SoupChef** :
+    - Para o recurso de **grupos de aplicativos** , defina o grupo para o novo grupo de aplicativos criado acima (no exemplo acima, era **Group. com. Yourcompanyname pela. SoupChef**).
+    - Verifique se o **SiriKit** está habilitado.
 
-- Atualizar o **Entitlements. plist** do arquivo para o **SoupChefIntents** projeto:
-    - Para o **grupos de aplicativos** capacidade, defina o grupo para o novo grupo de aplicativos criado acima (no exemplo acima, ele era **group.com.yourcompanyname.SoupChef**).
+- Atualize o arquivo **. plist de direitos** para o projeto **SoupChefIntents** :
+    - Para o recurso de **grupos de aplicativos** , defina o grupo para o novo grupo de aplicativos criado acima (no exemplo acima, era **Group. com. Yourcompanyname pela. SoupChef**).
 
-- Por fim, abra **NSUserDefaultsHelper.cs**. Defina a `AppGroup` variável para o valor do seu novo grupo de aplicativos (por exemplo, defina-o `group.com.yourcompanyname.SoupChef`).
+- Por fim, abra **NSUserDefaultsHelper.cs**. Defina a `AppGroup` variável para o valor do novo grupo de aplicativos (por exemplo, defina-a `group.com.yourcompanyname.SoupChef`como).
 
 ### <a name="configuring-the-build-settings"></a>Definindo as configurações de compilação
 
-No Visual Studio para Mac ou Visual Studio 2017:
+No Visual Studio para Mac ou no Visual Studio 2017:
 
-- Abra as opções/propriedades para o **SoupChef** projeto. Sobre o **assinatura do pacote iOS** guia, defina **identidade de assinatura** como automático e **perfil de provisionamento** para o novo provisionamento de específicos do aplicativo de perfil você criou anteriormente.
+- Abra as opções/Propriedades do projeto **SoupChef** . Na guia **assinatura do pacote do IOS** , defina **identidade de assinatura** como automática e perfil de **provisionamento** para o novo perfil de provisionamento específico do aplicativo criado acima.
 
-- Abra as opções/propriedades para o **SoupChefIntents** projeto. Sobre o **assinatura do pacote iOS** guia, defina **identidade de assinatura** como automático e **perfil de provisionamento** para as tentativas de novo perfil de provisionamento específicas à extensão você criou acima.
+- Abra as opções/Propriedades do projeto **SoupChefIntents** . Na guia **assinatura do pacote do IOS** , defina **identidade de assinatura** como automática e perfil de **provisionamento** para o novo perfil de provisionamento específico da extensão de tentativas que você criou acima.
 
-- Abra as opções/propriedades para o **SoupChefIntentsUI** projeto. Sobre o **assinatura do pacote iOS** guia, defina **identidade de assinatura** como automático e **perfil de provisionamento** para a nova interface do usuário de tentativas de provisionamento específicas da extensão de perfil você criado acima.
+- Abra as opções/Propriedades do projeto **SoupChefIntentsUI** . Na guia **assinatura do pacote do IOS** , defina **identidade de assinatura** como automática e perfil de **provisionamento** para o novo perfil de provisionamento específico da extensão de interface do usuário de novas intenções que você criou acima.
 
-Com essas alterações realizadas, o aplicativo será executado em um dispositivo iOS.
+Com essas alterações em vigor, o aplicativo será executado em um dispositivo iOS.
 
-### <a name="automatic-provisioning"></a>O provisionamento automático
+### <a name="automatic-provisioning"></a>Provisionamento automático
 
-Observe que você pode usar [provisionamento automático](https://docs.microsoft.com/xamarin/ios/get-started/installation/device-provisioning/automatic-provisioning) para realizar muitas dessas tarefas diretamente no IDE de provisionamento.
-No entanto, o provisionamento automático não configurar grupos de aplicativos. Você precisará configurar manualmente o **Entitlements. plist** arquivos com o nome do grupo de aplicativo que você deseja usar, visite o Portal do desenvolvedor da Apple para criar o grupo de aplicativos, atribuir esse grupo de aplicativo para cada ID do aplicativo criado pelo automático provisionamento, gere novamente os perfis de provisionamento (aplicativo, extensão de tentativas, a extensão de tentativas da interface do usuário) para incluir o grupo de aplicativos criada recentemente e baixar e instalá-los.
+Observe que você pode usar o [provisionamento automático](https://docs.microsoft.com/xamarin/ios/get-started/installation/device-provisioning/automatic-provisioning) para realizar muitas dessas tarefas de provisionamento diretamente no IDE.
+No entanto, o provisionamento automático não configura grupos de aplicativos. Você precisará configurar manualmente os arquivos **. plist de direitos** com o nome do grupo de aplicativos que deseja usar, visitar o portal do desenvolvedor da Apple para criar o grupo de aplicativos, atribuir esse grupo de aplicativos a cada ID de aplicativo criada pelo provisionamento automático, regenerar os perfis de provisionamento (aplicativo, extensão de intenções, extensão de interface do usuário de tentativas) para incluir o grupo de aplicativos recém-criado e baixá-los e instalá-los.
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Sopa Chef (Xamarin)](https://developer.xamarin.com/samples/monotouch/ios12/SoupChef/)
-- [Sopa Chef (Swift)](https://developer.apple.com/documentation/sirikit/accelerating_app_interactions_with_shortcuts?language=objc)
+- [Chefe de sopa (Xamarin)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-soupchef)
+- [Chefe de sopa (Swift)](https://developer.apple.com/documentation/sirikit/accelerating_app_interactions_with_shortcuts?language=objc)
 - [SiriKit (Apple)](https://developer.apple.com/sirikit/)
-- [Introdução aos atalhos de Siri – WWDC 2018](https://developer.apple.com/videos/play/wwdc2018/211/)
+- [Introdução aos atalhos do Siri – WWDC 2018](https://developer.apple.com/videos/play/wwdc2018/211/)
 - [Criando para voz com atalhos de Siri – WWDC 2018](https://developer.apple.com/videos/play/wwdc2018/214/)
-- [Atalhos de Siri na Face do relógio de Siri – WWDC 2018](https://developer.apple.com/videos/play/wwdc2018/217/)
+- [Atalhos do Siri na superfície do Siri Watch – WWDC 2018](https://developer.apple.com/videos/play/wwdc2018/217/)
 - [O que há de novo no SiriKit – WWDC 2017](https://developer.apple.com/videos/play/wwdc2017/214/)
 - [Criar uma extensão de aplicativo de tentativas (Apple)](https://developer.apple.com/documentation/sirikit/creating_an_intents_app_extension?language=objc)

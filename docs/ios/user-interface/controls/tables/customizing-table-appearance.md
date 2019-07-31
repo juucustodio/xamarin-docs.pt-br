@@ -1,38 +1,38 @@
 ---
-title: Personalizando a aparência de uma tabela no xamarin. IOS
-description: Este documento descreve como personalizar a aparência de uma tabela no xamarin. IOS. Ele aborda os estilos de célula, Acessórios, separadores de célula e layouts de célula personalizado.
+title: Personalizando a aparência de uma tabela no Xamarin. iOS
+description: Este documento descreve como personalizar a aparência de uma tabela no Xamarin. iOS. Ele aborda estilos de célula, acessórios, separadores de células e layouts de células personalizadas.
 ms.prod: xamarin
 ms.assetid: 8A83DE38-0028-CB61-66F9-0FB9DE552286
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: e1e86918d29e12d2f34dd3008b8c1d8e47471c24
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: cad7378e3d569454606a9d472cf30c42956553e4
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61225741"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68644938"
 ---
-# <a name="customizing-a-tables-appearance-in-xamarinios"></a>Personalizando a aparência de uma tabela no xamarin. IOS
+# <a name="customizing-a-tables-appearance-in-xamarinios"></a>Personalizando a aparência de uma tabela no Xamarin. iOS
 
-A maneira mais simples para alterar a aparência de uma tabela é usar um estilo de célula diferentes. Você pode alterar o estilo de célula é usado durante a criação de cada célula de `UITableViewSource`do `GetCell` método.
+A maneira mais simples de alterar a aparência de uma tabela é usar um estilo de célula diferente. Você pode alterar qual estilo de célula é usado ao criar cada célula no `UITableViewSource` `GetCell` método.
 
 ## <a name="cell-styles"></a>Estilos de célula
 
 Há quatro estilos internos:
 
--  **Padrão** – oferece suporte a um `UIImageView`.
--  **Subtítulo** – oferece suporte a um `UIImageView` e o subtítulo.
--  **Valor1** – à direita subtítulo alinhado, dá suporte a um `UIImageView`.
--  **Value2** – título é alinhado à direita e o subtítulo é alinhado à esquerda (mas nenhuma imagem).
+-  **Padrão** – dá suporte `UIImageView`a um.
+-  **Subtítulo** – dá `UIImageView` suporte a um subtítulo e.
+-  **Value1** – subtítulo alinhado à direita `UIImageView`, dá suporte a um.
+-  **Value2** – o título é alinhado à direita e o subtítulo é alinhado à esquerda (mas nenhuma imagem).
 
 
 Essas capturas de tela mostram como cada estilo é exibido:
 
- [![](customizing-table-appearance-images/image7.png "Essas capturas de tela mostram como cada estilo é exibido")](customizing-table-appearance-images/image7.png#lightbox)
+ [![](customizing-table-appearance-images/image7.png "Essas capturas de tela mostram como cada estilo aparece")](customizing-table-appearance-images/image7.png#lightbox)
 
-O exemplo **CellDefaultTable** contém o código para produzir essas telas. O estilo de célula é definido `UITableViewCell` construtor, como este:
+O **CellDefaultTable** de exemplo contém o código para produzir essas telas. O estilo de célula é definido no `UITableViewCell` Construtor, desta forma:
 
 ```csharp
 cell = new UITableViewCell (UITableViewCellStyle.Default, cellIdentifier);
@@ -41,7 +41,7 @@ cell = new UITableViewCell (UITableViewCellStyle.Default, cellIdentifier);
 //cell = new UITableViewCell (UITableViewCellStyle.Value2, cellIdentifier);
 ```
 
-[Suporte para propriedades](xref:UIKit.UITableViewCell) da célula estilo pode então definir:
+[As propriedades com suporte](xref:UIKit.UITableViewCell) do estilo de célula podem ser definidas:
 
 ```csharp
 cell.TextLabel.Text = tableItems[indexPath.Row].Heading;
@@ -51,19 +51,19 @@ cell.ImageView.Image = UIImage.FromFile("Images/" + tableItems[indexPath.Row].Im
 
 ## <a name="accessories"></a>Acessórios
 
-As células podem ter os seguintes Acessórios adicionados à direita do modo de exibição:
+As células podem ter os seguintes acessórios adicionados à direita da exibição:
 
--   **Marca de seleção** – pode ser usado para indicar a seleção múltipla em uma tabela.
--   **DetailButton** – responde ao toque, independentemente do restante da célula, permitindo que ele execute uma função diferente para tocar a própria célula (, como abrir uma janela pop-up ou uma nova janela que não seja parte de um `UINavigationController` pilha).
--   **DisclosureIndicator** – normalmente usada para indicar que tocar a célula abrirá outra exibição.
--   **DetailDisclosureButton** – uma combinação da `DetailButton` e `DisclosureIndicator`.
+-   **Marca** de seleção – pode ser usada para indicar várias seleções em uma tabela.
+-   **DetailButton** – responde ao toque independentemente do restante da célula, permitindo que ele execute uma função diferente para tocar a própria célula (como abrir um pop-up ou uma nova janela que não faz parte de uma `UINavigationController` pilha).
+-   **DisclosureIndicator** – normalmente usado para indicar que tocar na célula abrirá outra exibição.
+-   **DetailDisclosureButton** – uma combinação de `DetailButton` e. `DisclosureIndicator`
 
 
-Esta é sua aparência:
+Isso é o que eles parecem:
 
  [![](customizing-table-appearance-images/image8.png "Acessórios de exemplo")](customizing-table-appearance-images/image8.png#lightbox)
 
-Para exibir uma entre esses acessórios que você pode definir as `Accessory` propriedade no `GetCell` método:
+Para exibir um desses acessórios, você pode definir a `Accessory` propriedade `GetCell` no método:
 
 ```csharp
 cell.Accessory = UITableViewCellAccessory.Checkmark;
@@ -72,7 +72,7 @@ cell.Accessory = UITableViewCellAccessory.Checkmark;
 //cell.Accessory = UITableViewCellAccessory.None; // to clear the accessory
 ```
 
-Quando o `DetailButton` ou `DetailDisclosureButton` são mostrados, você também deve substituir o `AccessoryButtonTapped` para realizar alguma ação quando ele é tocado.
+Quando o `DetailButton` ou `DetailDisclosureButton` for mostrado, você também deverá substituir o `AccessoryButtonTapped` para executar alguma ação quando ele for tocado.
 
 ```csharp
 public override void AccessoryButtonTapped (UITableView tableView, NSIndexPath indexPath)
@@ -85,18 +85,18 @@ public override void AccessoryButtonTapped (UITableView tableView, NSIndexPath i
 }
 ```
 
-O exemplo **CellAccessoryTable** mostra um exemplo de uso de Acessórios.
+O exemplo de **CellAccessoryTable** mostra um exemplo usando acessórios.
 
-## <a name="cell-separators"></a>Separadores de célula
+## <a name="cell-separators"></a>Separadores de células
 
-Separadores de célula são as células da tabela usadas para separar a tabela. As propriedades são definidas na tabela.
+Separadores de células são células de tabela usadas para separar a tabela. As propriedades são definidas na tabela.
 
 ```csharp
 TableView.SeparatorColor = UIColor.Blue;
 TableView.SeparatorStyle = UITableViewCellSeparatorStyle.DoubleLineEtched;
 ```
 
-Também é possível adicionar um efeito de desfoque ou valorize para o separador:
+Também é possível adicionar um efeito de desfoque ou Vibrancy ao separador:
 
 ```csharp
 // blur effect
@@ -114,22 +114,22 @@ O separador também pode ter uma margem interna:
 TableView.SeparatorInset.InsetRect(new CGRect(4, 4, 150, 2));
 ```
 
-## <a name="creating-custom-cell-layouts"></a>Criação de Layouts de célula personalizado
+## <a name="creating-custom-cell-layouts"></a>Criando layouts de célula personalizados
 
-Para alterar o estilo visual de uma tabela que você precisa fornecer células personalizadas para exibi-la. A célula personalizada pode ter diferentes layouts de cores e controle.
+Para alterar o estilo visual de uma tabela, você precisa fornecer células personalizadas para exibição. A célula personalizada pode ter cores e layouts de controle diferentes.
 
-O exemplo CellCustomTable implementa um `UITableViewCell` que define um layout personalizado da subclasse `UILabel`s e um `UIImage` com diferentes fontes e cores. As células resultantes tem esta aparência:
+O exemplo CellCustomTable implementa uma `UITableViewCell` subclasse que define um layout personalizado de `UILabel`s e um `UIImage` com fontes e cores diferentes. As células resultantes têm a seguinte aparência:
 
- [![](customizing-table-appearance-images/image9.png "Layouts de célula personalizado")](customizing-table-appearance-images/image9.png#lightbox)
+ [![](customizing-table-appearance-images/image9.png "Layouts de células personalizadas")](customizing-table-appearance-images/image9.png#lightbox)
 
-A classe de célula personalizado consiste em apenas três métodos:
+A classe de célula Personalizada consiste em apenas três métodos:
 
--   **Construtor** – cria os controles de interface do usuário e define as propriedades de estilo personalizado (por exemplo. tipo de fonte, tamanho e cores).
+-   **Construtor** – cria os controles da interface do usuário e define as propriedades de estilo personalizado (por exemplo, face da fonte, tamanho e cores).
 -   **UpdateCell** – um método para `UITableView.GetCell` usar para definir as propriedades da célula.
--   **LayoutSubviews** – definir o local dos controles da interface do usuário. No exemplo, cada célula tem o mesmo layout, mas uma célula mais complexa (especialmente aqueles com tamanhos variados) talvez seja necessário de posições de layout diferente, dependendo do conteúdo que está sendo exibido.
+-   **LayoutSubviews** – defina o local dos controles da interface do usuário. No exemplo, cada célula tem o mesmo layout, mas uma célula mais complexa (particularmente aquelas com tamanhos variados) pode precisar de diferentes posições de layout dependendo do conteúdo que está sendo exibido.
 
 
-O código de exemplo completo **CellCustomTable > CustomVegeCell.cs** segue:
+O código de exemplo completo no **CellCustomTable > CustomVegeCell.cs** segue:
 
 ```csharp
 public class CustomVegeCell : UITableViewCell  {
@@ -170,7 +170,7 @@ public class CustomVegeCell : UITableViewCell  {
 }
 ```
 
-O `GetCell` método da `UITableViewSource` precisa ser modificado para criar a célula personalizada:
+O `GetCell` método`UITableViewSource` do precisa ser modificado para criar a célula Personalizada:
 
 ```csharp
 public override UITableViewCell GetCell (UITableView tableView, NSIndexPath indexPath)
@@ -189,4 +189,4 @@ public override UITableViewCell GetCell (UITableView tableView, NSIndexPath inde
 
 ## <a name="related-links"></a>Links relacionados
 
-- [WorkingWithTables (amostra)](https://developer.xamarin.com/samples/monotouch/WorkingWithTables)
+- [WorkingWithTables (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/workingwithtables)

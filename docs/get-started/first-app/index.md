@@ -9,12 +9,12 @@ ms.custom: video
 author: conceptdev
 ms.author: crdun
 ms.date: 05/23/2019
-ms.openlocfilehash: 3b25be2c929e0f072af2ff563d49ceaf07cae058
-ms.sourcegitcommit: 10b4ccbfcf182be940899c00fc0fecae1e199c5b
+ms.openlocfilehash: 245b41eea556ef36c81b337b57ce58d922e4e8fd
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66252339"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68653676"
 ---
 # <a name="build-your-first-xamarinforms-app"></a>Compilar seu primeiro aplicativo Xamarin.Forms
 
@@ -26,23 +26,23 @@ _Assista a este vídeo e acompanhe-o para compilar seu primeiro aplicativo móve
 
 ## <a name="step-by-step-instructions-for-windows"></a>Instruções passo a passo para Windows
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/FirstApp/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-firstapp/)
 
 Siga estas etapas em conjunto com o vídeo acima:
 
-1. Escolha **arquivo > Novo > projeto...**  ou pressione o **criar novo projeto...**  botão:
+1. Escolha **arquivo > novo projeto de >...** ou pressione o botão **criar novo projeto..** .:
 
     [![Criar um novo projeto](images/win-2019/01-sml.png)](images/win-2019/01.png#lightbox)
 
-2. Pesquise por "Xamarin" ou escolha **Mobile** da **tipo de projeto** menu. Selecione o **aplicativo móvel (xamarin. Forms)** tipo de projeto:
+2. Pesquise "Xamarin" ou escolha **móvel** no menu **tipo de projeto** . Selecione o tipo de projeto **aplicativo móvel (Xamarin. Forms)** :
 
     [![Filtro para projetos do Xamarin](images/win-2019/02-sml.png)](images/win-2019/02.png#lightbox)
 
-3. Escolha um nome de projeto &ndash; o exemplo usa "AwesomeApp":
+3. Escolha um nome &ndash; de projeto o exemplo usa "AwesomeApp":
 
-    [![Escolha um nome de projeto](images/win-2019/03-sml.png)](images/win-2019/03.png#lightbox)
+    [![Escolher um nome de projeto](images/win-2019/03-sml.png)](images/win-2019/03.png#lightbox)
 
-4. Clique no **em branco** tipo de projeto e verifique se **Android** e **iOS** estão selecionadas:
+4. Clique no tipo de projeto **em branco** e verifique se **Android** e **Ios** estão selecionados:
 
     [![Android e iOS, com .NET Standard](images/win-2019/04-sml.png)](images/win-2019/04.png#lightbox)
 
@@ -74,9 +74,9 @@ Siga estas etapas em conjunto com o vídeo acima:
     > [!TIP]
     > É possível compilar e depurar o aplicativo iOS no Visual Studio com um computador Mac em rede. Veja as [instruções de instalação](~/ios/get-started/installation/windows/index.md) para obter mais informações.
 
-## <a name="build-an-ios-app-in-visual-studio-2019"></a>Criar um aplicativo iOS no Visual Studio de 2019
+## <a name="build-an-ios-app-in-visual-studio-2019"></a>Compilar um aplicativo iOS no Visual Studio 2019
 
-Este vídeo aborda o processo de criação e teste um aplicativo iOS usando o Visual Studio de 2019 no Windows:
+Este vídeo aborda o processo de criação e teste de um aplicativo iOS usando o Visual Studio 2019 no Windows:
 
 > [!Video https://channel9.msdn.com/Shows/XamarinShow/Build-Your-First-iOS-App-with-Visual-Studio-2019-and-Xamarin/player]
 
@@ -87,7 +87,7 @@ Este vídeo aborda o processo de criação e teste um aplicativo iOS usando o Vi
 
 ## <a name="step-by-step-instructions-for-windows"></a>Instruções passo a passo para Windows
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/FirstApp/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-firstapp/)
 
 Siga estas etapas em conjunto com o vídeo acima:
 
@@ -134,7 +134,7 @@ Siga estas etapas em conjunto com o vídeo acima:
 
 ## <a name="step-by-step-instructions-for-mac"></a>Instruções passo a passo para Mac
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/FirstApp/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-firstapp/)
 
 Siga estas etapas em conjunto com o vídeo acima:
 
@@ -183,10 +183,10 @@ Siga estas etapas em conjunto com o vídeo acima:
 
 ::: zone-end
 
-Você pode baixar o código completo na [Galeria de amostras](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/FirstApp/) ou exibi-lo no [GitHub](https://github.com/xamarin/xamarin-forms-samples/tree/master/GetStarted/FirstApp).
+Você pode baixar o código completo na [Galeria de amostras](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-firstapp/) ou exibi-lo no [GitHub](https://github.com/xamarin/xamarin-forms-samples/tree/master/GetStarted/FirstApp).
 
 ## <a name="next-steps"></a>Próximas etapas
 
-- [Único Page Quickstart](~/get-started/quickstarts/single-page.md) &ndash; compilar um aplicativo mais funcional.
+- [Início rápido de página única](~/get-started/quickstarts/single-page.md) &ndash; Crie um aplicativo mais funcional.
 - [Exemplos de Xamarin.Forms](~/xamarin-forms/samples/index.yml) &ndash; baixe e execute exemplos de código e de aplicativos.
 - [Livro eletrônico Creating Mobile Apps (Criando aplicativos móveis)](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md) &ndash; capítulos detalhados que ensinam o desenvolvimento de Xamarin.Forms, disponível em PDF e incluindo centenas de exemplos adicionais.

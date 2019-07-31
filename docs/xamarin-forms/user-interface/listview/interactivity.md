@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/27/2019
-ms.openlocfilehash: 1447526ef925431e3cad5f36d4ce7a528c8ab07c
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 833e6d3fc06ceeb5f8f63cb8b8b255b2a940098c
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61386552"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68653885"
 ---
 # <a name="listview-interactivity"></a>Interatividade do ListView
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/interactivity)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-interactivity)
 
-[`ListView`](xref:Xamarin.Forms.ListView) dá suporte a interagir com os dados que ele apresenta.
+[`ListView`](xref:Xamarin.Forms.ListView)dá suporte à interação com os dados que ele apresenta.
 
 <a name="selectiontaps" />
 
@@ -37,7 +37,7 @@ Quando um usuário toca um item, dois eventos são disparados:
 Tocar duas vezes o mesmo item será disparado duas [ `ItemTapped` ](xref:Xamarin.Forms.ListView.ItemTapped) eventos, mas será apenas acionar uma única [ `ItemSelected` ](xref:Xamarin.Forms.ListView.ItemSelected) eventos.
 
 > [!NOTE]
-> O [ `ItemTappedEventArgs` ](xref:Xamarin.Forms.ItemTappedEventArgs) classe, que contém os argumentos de evento para o [ `ItemTapped` ](xref:Xamarin.Forms.ListView.ItemTapped) , o evento tem [ `Group` ](xref:Xamarin.Forms.ItemTappedEventArgs.Group) e [ `Item` ](xref:Xamarin.Forms.ItemTappedEventArgs.Item) propriedades e uma `ItemIndex` propriedade cujo valor representa o índice no [ `ListView` ](xref:Xamarin.Forms.ListView) do item tocado. Da mesma forma, o [ `SelectedItemChangedEventArgs` ](xref:Xamarin.Forms.SelectedItemChangedEventArgs) classe, que contém os argumentos de evento para o [ `ItemSelected` ](xref:Xamarin.Forms.ListView.ItemSelected) evento, tem um [ `SelectedItem` ](xref:Xamarin.Forms.SelectedItemChangedEventArgs.SelectedItem) propriedade e um `SelectedItemIndex` propriedade cujo valor representa o índice no `ListView` do item selecionado.
+> A [`ItemTappedEventArgs`](xref:Xamarin.Forms.ItemTappedEventArgs) classe, que contém os argumentos [`ItemTapped`](xref:Xamarin.Forms.ListView.ItemTapped) do evento, tem [`Group`](xref:Xamarin.Forms.ItemTappedEventArgs.Group) e [`Item`](xref:Xamarin.Forms.ItemTappedEventArgs.Item) propriedades [`ListView`](xref:Xamarin.Forms.ListView) , e uma `ItemIndex` propriedade cujo valor representa o índice no do item tocado. Da mesma forma [`SelectedItemChangedEventArgs`](xref:Xamarin.Forms.SelectedItemChangedEventArgs) , a classe, que contém os argumentos [`ItemSelected`](xref:Xamarin.Forms.ListView.ItemSelected) do evento, tem uma [`SelectedItem`](xref:Xamarin.Forms.SelectedItemChangedEventArgs.SelectedItem) Propriedade e uma `SelectedItemIndex` propriedade cujo valor representa o índice no `ListView` do item selecionado.
 
 Quando o [ `SelectionMode` ](xref:Xamarin.Forms.ListView.SelectionMode) estiver definida como [ `Single` ](xref:Xamarin.Forms.ListViewSelectionMode.Single), os itens no [ `ListView` ](xref:Xamarin.Forms.ListView) pode ser selecionado, a [ `ItemSelected` ](xref:Xamarin.Forms.ListView.ItemSelected) e [ `ItemTapped` ](xref:Xamarin.Forms.ListView.ItemTapped) eventos serão disparados e o [ `SelectedItem` ](xref:Xamarin.Forms.ListView.SelectedItem) propriedade será definida como o valor do item selecionado.
 
@@ -149,7 +149,7 @@ public void OnDelete (object sender, EventArgs e) {
 
 ## <a name="pull-to-refresh"></a>Efetue pull para atualizar
 
-Os usuários já conhecem movendo para baixo em uma lista de dados que será atualizada nessa lista. [`ListView`](xref:Xamarin.Forms.ListView) dá suporte a esse out-of-the-box. Para habilitar a funcionalidade de puxar para atualizar, defina [ `IsPullToRefreshEnabled` ](xref:Xamarin.Forms.ListView.IsPullToRefreshEnabled) para `true`:
+Os usuários já conhecem movendo para baixo em uma lista de dados que será atualizada nessa lista. [`ListView`](xref:Xamarin.Forms.ListView)o dá suporte a isso de pronto para uso. Para habilitar a funcionalidade de pull para atualização, defina [`IsPullToRefreshEnabled`](xref:Xamarin.Forms.ListView.IsPullToRefreshEnabled) como `true`:
 
 ```xaml
 <ListView ...
@@ -162,7 +162,7 @@ O código C# equivalente é:
 listView.IsPullToRefreshEnabled = true;
 ```
 
-Um controle giratório aparece durante a atualização, o que é preta por padrão. No entanto, a cor do controle giratório pode ser alterada no iOS e Android, definindo o `RefreshControlColor` propriedade para um [ `Color` ](xref:Xamarin.Forms.Color):
+Um controle giratório aparece durante a atualização, que é preto por padrão. No entanto, a cor de controle giratório pode ser alterada no Ios e `RefreshControlColor` no Android definindo [`Color`](xref:Xamarin.Forms.Color)a propriedade como um:
 
 ```xaml
 <ListView ...
@@ -176,19 +176,19 @@ O código C# equivalente é:
 listView.RefreshControlColor = Color.Red;
 ```
 
-As capturas de tela a seguir mostram puxar para atualizar como o usuário está obtendo:
+As capturas de tela a seguir mostram o pull-to-Refresh à medida que o usuário está puxando:
 
 ![](interactivity-images/refresh-start.png "ListView Pull para atualizar em andamento")
 
-As capturas de tela a seguir mostram puxar para atualizar, depois que o usuário lançou o pull com o controle giratório que está sendo mostrado enquanto o [ `ListView` ](xref:Xamarin.Forms.ListView) está atualizando:
+As capturas de tela a seguir mostram o pull-to-Refresh depois que o usuário lançou o pull, com o controle [`ListView`](xref:Xamarin.Forms.ListView) giratório exibido enquanto o está atualizando:
 
-![](interactivity-images/refresh-in-progress.png "Pull do ListView para atualização concluída")
+![](interactivity-images/refresh-in-progress.png "Pull de exibição de ListView para atualização concluída")
 
-[`ListView`](xref:Xamarin.Forms.ListView) é acionado o [ `Refreshing` ](xref:Xamarin.Forms.ListView.Refreshing) evento para iniciar a atualização e o [ `IsRefreshing` ](xref:Xamarin.Forms.ListView.IsRefreshing) propriedade será definida como `true`. O código que é necessário para atualizar o conteúdo do `ListView` , em seguida, deve ser executado após o manipulador de eventos para o `Refreshing` evento, ou pelo método executado pelo [ `RefreshCommand` ](xref:Xamarin.Forms.ListView.RefreshCommand). Uma vez a `ListView` é atualizado, o `IsRefreshing` propriedade deve ser definida como `false`, ou o [ `EndRefresh` ](xref:Xamarin.Forms.ListView.EndRefresh) método deve ser chamado, para indicar que a atualização for concluída.
+[`ListView`](xref:Xamarin.Forms.ListView)aciona o [`Refreshing`](xref:Xamarin.Forms.ListView.Refreshing) evento para iniciar a atualização e a [`IsRefreshing`](xref:Xamarin.Forms.ListView.IsRefreshing) propriedade será definida como `true`. Qualquer código necessário para atualizar o conteúdo de `ListView` deve ser executado pelo manipulador de eventos para o `Refreshing` evento ou pelo método executado pelo [`RefreshCommand`](xref:Xamarin.Forms.ListView.RefreshCommand). Depois que `ListView` o for atualizado, a `IsRefreshing` Propriedade deverá ser definida como `false`, ou o [`EndRefresh`](xref:Xamarin.Forms.ListView.EndRefresh) método deverá ser chamado para indicar que a atualização foi concluída.
 
 > [!NOTE]
-> Ao definir uma [ `RefreshCommand` ](xref:Xamarin.Forms.ListView.RefreshCommand), o `CanExecute` método do comando pode ser especificado para habilitar ou desabilitar o comando.
+> Ao definir um [`RefreshCommand`](xref:Xamarin.Forms.ListView.RefreshCommand), o `CanExecute` método do comando pode ser especificado para habilitar ou desabilitar o comando.
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Interatividade do ListView (amostra)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/interactivity)
+- [Interatividade do ListView (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-interactivity)

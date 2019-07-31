@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: 7717e247ca3b3ecf82e1814ab43e8351b4f75ba6
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 4a0d0e46147a37da4787224e797d403ab7b1097e
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68510446"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68643046"
 ---
 # <a name="actionbar-for-xamarinandroid"></a>ActionBar para Xamarin. Android
 
@@ -87,7 +87,7 @@ A `ShareActionProvider` classe permite que uma ação de compartilhamento ocorra
 
 ### <a name="image-sharing-example"></a>Exemplo de compartilhamento de imagem
 
-Por exemplo, abaixo está uma captura de tela de uma barra de ação com um item de menu para compartilhar uma imagem (obtida do exemplo [ShareActionProvider](https://developer.xamarin.com/samples/monodroid/ShareActionProviderDemo/) ). Quando o usuário toca no item de menu na barra de ação, o ShareActionProvider carrega o aplicativo para lidar com `ShareActionProvider`uma intenção associada ao. Neste exemplo, o aplicativo de mensagens foi usado anteriormente, portanto, ele é apresentado na barra de ação.
+Por exemplo, abaixo está uma captura de tela de uma barra de ação com um item de menu para compartilhar uma imagem (obtida do exemplo [ShareActionProvider](https://docs.microsoft.com/samples/xamarin/monodroid-samples/shareactionproviderdemo) ). Quando o usuário toca no item de menu na barra de ação, o ShareActionProvider carrega o aplicativo para lidar com `ShareActionProvider`uma intenção associada ao. Neste exemplo, o aplicativo de mensagens foi usado anteriormente, portanto, ele é apresentado na barra de ação.
 
 [![Captura de tela do ícone do aplicativo de mensagens na barra de ações](action-bar-images/09-shareactionprovider.png)](action-bar-images/09-shareactionprovider.png#lightbox)
 
@@ -150,7 +150,7 @@ A imagem no exemplo de código acima é incluída como um ativo com o aplicativo
 
 ## <a name="related-links"></a>Links relacionados
 
-- [As guias de saudação do ICS (exemplo)](https://developer.xamarin.com/samples/monodroid/HelloTabsICS/)
-- [Demonstração do ShareActionProvider (exemplo)](https://developer.xamarin.com/samples/monodroid/ShareActionProviderDemo/)
+- [As guias de saudação do ICS (exemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/hellotabsics)
+- [Demonstração do ShareActionProvider (exemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/shareactionproviderdemo)
 - [Introdução ao sanduíche de sorvete](http://www.android.com/about/ice-cream-sandwich/)
 - [Plataforma Android 4,0](https://developer.android.com/sdk/android-4.0.html)

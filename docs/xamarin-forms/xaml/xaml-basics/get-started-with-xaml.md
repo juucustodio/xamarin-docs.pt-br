@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/10/2018
-ms.openlocfilehash: 855bbc61fb5e4e653dbd39ddf05fac3e2fb42d8c
-ms.sourcegitcommit: 00deecefc17a98210bed12b4ef99ecca710275f1
+ms.openlocfilehash: 085960b92aa0f349d4cb2737385e723d8b6aa6b7
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67493351"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656506"
 ---
 # <a name="part-1-getting-started-with-xaml"></a>Parte 1. Introdução ao XAML
 
-[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
 
 _Em um aplicativo xamarin. Forms, o XAML é usado principalmente para definir o conteúdo visual de uma página e funciona em conjunto com um C# arquivo code-behind._
 
@@ -102,7 +102,7 @@ O **MainPage. XAML** arquivo tem esta aparência (embora a formatação pode ser
 </ContentPage>
 ```
 
-O namespace XML de dois (`xmlns`) declarações façam referência URIs, a primeira aparentemente no site de web do Xamarin e o segundo da Microsoft. Não se preocupe em que ponto os URIs para a verificação. Não há nada. Eles são simplesmente URIs pertencentes a Xamarin e a Microsoft e eles basicamente funcionam como identificadores de versão.
+As duas declarações de namespace`xmlns`XML () referem-se a URIs, o primeiro aparentemente no site do Xamarin e o segundo na Microsoft. Não se preocupe em que ponto os URIs para a verificação. Não há nada. Eles são simplesmente URIs pertencentes a Xamarin e a Microsoft e eles basicamente funcionam como identificadores de versão.
 
 A primeira declaração de namespace XML significa que marcas definidas dentro do arquivo XAML sem prefixo se referem às classes no xamarin. Forms, por exemplo `ContentPage`. A segunda declaração de namespace define um prefixo de `x`. Isso é usado para vários elementos e atributos que são intrínsecos para XAML em si e que são compatíveis com outras implementações de XAML. No entanto, esses elementos e atributos são ligeiramente diferentes dependendo do ano inserido no URI. Xamarin. Forms dá suporte à especificação do XAML 2009, mas nem tudo dela.
 
@@ -203,9 +203,9 @@ O `ContentPage.Content` marcas são chamadas *elemento de propriedade* marcas. `
 
 Observe também que um `Title` atributo foi definido na marca raiz.
 
-Neste momento, a relação entre as classes, propriedades e XML deve ser evidente: Uma classe de xamarin. Forms (como `ContentPage` ou `Label`) aparece no arquivo XAML como um elemento XML. Propriedades da classe — incluindo `Title` na `ContentPage` e sete propriedades de `Label`— normalmente são exibidos como atributos XML.
+Neste momento, a relação entre classes, propriedades e XML deve ser evidente: Uma classe Xamarin. Forms ( `ContentPage` como ou `Label`) aparece no arquivo XAML como um elemento XML. Propriedades da classe — incluindo `Title` na `ContentPage` e sete propriedades de `Label`— normalmente são exibidos como atributos XML.
 
-Existem muitos atalhos para definir os valores dessas propriedades. Algumas propriedades são tipos de dados básicos: Por exemplo, o `Title` e `Text` propriedades são do tipo `String`, `Rotation` é do tipo `Double`, e `IsVisible` (que é `true` por padrão e é definido aqui apenas para ilustração) é do tipo `Boolean`.
+Existem muitos atalhos para definir os valores dessas propriedades. Algumas propriedades são tipos de dados básicos: Por exemplo, as `Title` propriedades `Text` e são do tipo `String`, `Rotation` é do tipo `Double`e `IsVisible` (que é `true` por padrão e é definido aqui somente para ilustração) é do tipo `Boolean`.
 
 O `HorizontalTextAlignment` propriedade é do tipo `TextAlignment`, que é uma enumeração. Para uma propriedade de qualquer tipo de enumeração, tudo o que você precisa fornecer é um nome de membro.
 
@@ -453,7 +453,7 @@ Com essa introdução, você viu como um arquivo XAML e o arquivo de código con
 
 ## <a name="related-links"></a>Links relacionados
 
-- [XamlSamples](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
+- [XamlSamples](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
 - [Parte 2. Sintaxe essencial de XAML](~/xamarin-forms/xaml/xaml-basics/essential-xaml-syntax.md)
 - [Parte 3. Extensões de Marcação XAML](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
 - [Parte 4. Conceitos básicos da associação de dados](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)

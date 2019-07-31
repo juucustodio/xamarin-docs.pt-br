@@ -1,42 +1,42 @@
 ---
-title: Compra no xamarin. IOS no aplicativo
-description: Este documento descreve como vender produtos digitais e serviços usando as APIs de StoreKit. Ele vincula às guias que discutem a configuração, produtos de consumo, produtos não consumíveis, transações, assinaturas e muito mais.
+title: Compras no aplicativo no Xamarin. iOS
+description: Este documento descreve como vender produtos e serviços digitais usando as APIs do StoreKit. Ele é vinculado a guias que abordam a configuração, produtos consumíveis, produtos não consumíveis, transações, assinaturas e muito mais.
 ms.prod: xamarin
 ms.assetid: B41929D8-47E4-466D-1F09-6CC3C09C83B2
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: b4165f9e6c3088a41d6bd746b1912a64570c553a
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: 2320aa9a611a44d654bcbae18bb2664797054e50
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67832551"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68647918"
 ---
-# <a name="in-app-purchasing-in-xamarinios"></a>Compra no xamarin. IOS no aplicativo
+# <a name="in-app-purchasing-in-xamarinios"></a>Compras no aplicativo no Xamarin. iOS
 
-aplicativos do iOS podem vender produtos digitais ou serviços que usam StoreKit – um conjunto de APIs fornecidos pelo iOS que se comunicam com servidores da Apple para conduzir transações financeiras com o usuário por meio de sua ID da Apple. As APIs StoreKit estão principalmente preocupados com Recuperando informações de produto e conduzir transações – não há nenhum componente de interface do usuário. Aplicativos que implementam a compras no aplicativo devem criar sua própria interface do usuário e acompanhar os itens comprados com código personalizado para fornecer os serviços ou produtos necessários para o usuário.
+os aplicativos iOS podem vender produtos ou serviços digitais usando o StoreKit – um conjunto de APIs fornecidas pelo iOS que se comunicam com os servidores da Apple para conduzir transações financeiras com o usuário por meio de sua ID Apple. As APIs StoreKit se preocupam principalmente com a recuperação de informações do produto e a condução de transações – não há nenhum componente de interface do usuário. Os aplicativos que implementam a compra no aplicativo devem criar sua própria interface do usuário e acompanhar os itens comprados com código personalizado para fornecer os produtos ou serviços necessários ao usuário.
 
-Fornecendo funcionalidade de compra no aplicativo requer um número de etapas:
+Fornecer a funcionalidade de compra no aplicativo requer uma série de etapas:
 
--  **Configurar seu aplicativo** – o perfil de provisionamento do aplicativo deve ser configurado corretamente.
--  **Criação de produtos** – preços e as descrições de produto devem ser criados no portal do iTunes Connect.
--  **Implementando StoreKit** – StoreKit com a API da deve ser implementada de acordo com os tipos de produtos que estão sendo vendidos.
--  **Criando a interface do usuário e os produtos propriamente ditos** – os produtos devem ser implementados, incluindo mecanismos para controlar cada compra e backup/restauração-los se apropriado.
--  **Monitoramento de vendas e recebimento de fundos** – Use as informações fornecidas pelo iTunes Connect para monitorar as tendências de vendas e acompanhar seu renda.
+-  **Configurando seu aplicativo** – o perfil de provisionamento do aplicativo deve ser configurado corretamente.
+-  **Criando produtos** – as descrições e os preços do produto devem ser criados no portal do iTunes Connect.
+-  **Implementando StoreKit** – a API StoreKit deve ser implementada de acordo com os tipos de produtos vendidos.
+-  **Criando a interface do usuário e os próprios produtos** – os produtos devem ser implementados, incluindo mecanismos para controlar cada compra e fazer backup/restaurá-los, se apropriado.
+-  **Monitorando vendas e recebendo fundos** – use as informações fornecidas pelo iTunes Connect para monitorar as tendências de vendas e acompanhar sua renda.
 
-Este documento explica como concluir todas essas etapas para fornecer a compras no aplicativo usando o xamarin. IOS.
+Este documento explica como concluir todas essas etapas para fornecer compras no aplicativo usando o Xamarin. iOS.
 
 ## <a name="requirements"></a>Requisitos
 
-Para dar suporte a compras no aplicativo, você deve usar o xamarin. IOS 5.0 ou mais recente com o Xcode 7 e posterior.
+Para dar suporte à compra no aplicativo, você deve usar o Xamarin. iOS 5,0 ou mais recente com o Xcode 7 e superior.
 
 ## <a name="contents"></a>Conteúdo
 
 * [Noções básicas e configuração de compras no aplicativo](~/ios/platform/in-app-purchasing/in-app-purchase-basics-and-configuration.md)
 
-* [Visão geral de StoreKit e ao recuperar informações do produto](~/ios/platform/in-app-purchasing/store-kit-overview-and-retreiving-product-information.md)
+* [Visão geral do StoreKit e recuperação das informações do produto](~/ios/platform/in-app-purchasing/store-kit-overview-and-retreiving-product-information.md)
 
 * [Comprar produtos de consumo](~/ios/platform/in-app-purchasing/purchasing-consumable-products.md)
 
@@ -48,25 +48,25 @@ Para dar suporte a compras no aplicativo, você deve usar o xamarin. IOS 5.0 ou 
 
 ## <a name="summary"></a>Resumo
 
-Este artigo tem introduziu o conceito de compras no aplicativo, descreveu como configurar seu aplicativo para tirar proveito dela e apresentados exemplos usando o xamarin. IOS. Ele abordou:
+Este artigo introduziu o conceito de compra no aplicativo, descreveu como configurar seu aplicativo para tirar proveito dele e obter exemplos apresentados usando o Xamarin. iOS. Ele abordou:
 
--  **Portal de provisionamento iOS** – diretrizes para habilitação no aplicativo de compra funcionalidade.
--  **o iTunes Connect** – configurar produtos para vender em seu aplicativo.
--  **Store Kit** – explicação das classes usadas para criar recursos de compra no aplicativo.
--  **Codificar seu aplicativo para a compra de** – exemplos de como criar as compras no aplicativo em um aplicativo xamarin. IOS.
--  **Relatórios** – visão geral das estatísticas disponíveis por meio do iTunes Connect.
+-  **portal de provisionamento do IOS** – diretrizes para habilitar a funcionalidade de compra no aplicativo.
+-  **iTunes Connect** – Configurando produtos para vender em seu aplicativo.
+-  **Store kit** – explicação das classes usadas para criar recursos de compra no aplicativo.
+-  **Codificação de seu aplicativo para compra** – exemplos de como criar compras no aplicativo em um aplicativo Xamarin. Ios.
+-  **Relatório** – visão geral das estatísticas disponíveis por meio do iTunes Connect.
 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [InAppPurchaseSample](https://developer.xamarin.com/samples/StoreKit/)
-- [Na guia de programação de aplicativo de compra](https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/StoreKitGuide/Introduction.html)
+- [InAppPurchaseSample](https://docs.microsoft.com/en-us/samples/xamarin/ios-samples/storekit/)
+- [Guia de programação de compra no aplicativo](https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/StoreKitGuide/Introduction.html)
 - [Guia do Desenvolvedor do iTunes Connect](https://developer.apple.com/library/ios/documentation/LanguagesUtilities/Conceptual/iTunesConnect_Guide/iTunesConnect_Guide.pdf)
-- [Referência do Store Kit Framework](https://developer.apple.com/library/ios/documentation/StoreKit/Reference/StoreKit_Collection/StoreKit_Collection.pdf)
-- [Identificadores de produtos de compra no aplicativo p e r](https://developer.apple.com/library/ios/#qa/qa1329/_index.html)
+- [Referência da estrutura do kit de repositório](https://developer.apple.com/library/ios/documentation/StoreKit/Reference/StoreKit_Collection/StoreKit_Collection.pdf)
+- [Identificadores de produtos de compra no aplicativo Q & A](https://developer.apple.com/library/ios/#qa/qa1329/_index.html)
 - [Nota técnica de compra no aplicativo](https://developer.apple.com/library/ios/#technotes/tn2259/_index.html)
-- [O envio da primeira App Store](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/Introduction/Introduction.html)
-- [Central de recursos do App Store](https://developer.apple.com/appstore/index.html)
+- [Seu primeiro envio da loja de aplicativos](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/Introduction/Introduction.html)
+- [Central de recursos da App Store](https://developer.apple.com/appstore/index.html)
 - [Dicas de Envio da App Store](https://developer.apple.com/appstore/resources/submission/tips.html)
 - [Diretrizes de Análise da App Store](https://developer.apple.com/appstore/resources/approval/guidelines.html)
-- [Gerenciar seus aplicativos](https://developer.apple.com/appstore/resources/managing/index.html)
+- [Gerenciando seus aplicativos](https://developer.apple.com/appstore/resources/managing/index.html)

@@ -1,5 +1,5 @@
 ---
-title: Consumir um serviço Web do ASP.NET (ASMX)
+title: Consumir um serviço Web ASP.NET (ASMX)
 description: Este artigo demonstra como consumir um serviço ASMX SOAP de um aplicativo xamarin. Forms.
 ms.prod: xamarin
 ms.assetid: D5533964-5528-4D35-9C2B-FAFB632472AC
@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/02/2019
-ms.openlocfilehash: 73e7d13188c4c2ea1be39a237c3dc5cfd7fd8a7d
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: 124cffaf827ebeb8109f3cd4ac4dfd2701e43f9c
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67659053"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656652"
 ---
-# <a name="consume-an-aspnet-web-service-asmx"></a>Consumir um serviço Web do ASP.NET (ASMX)
+# <a name="consume-an-aspnet-web-service-asmx"></a>Consumir um serviço Web ASP.NET (ASMX)
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoASMX/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todoasmx)
 
 _ASMX fornece a capacidade de criar serviços web que enviam mensagens usando o SOAP Simple Object Access Protocol (). SOAP é um protocolo independente de plataforma e linguagem para criar e acessar serviços web. Os consumidores de um serviço ASMX não precisam saber nada sobre a plataforma, um modelo de objeto ou uma linguagem de programação usada para implementar o serviço. Eles só precisam entender como enviar e receber mensagens SOAP. Este artigo demonstra como consumir um serviço ASMX SOAP de um aplicativo xamarin. Forms._
 
@@ -29,7 +29,7 @@ Uma mensagem SOAP é um documento XML que contém os seguintes elementos:
 
 SOAP pode operar em vários protocolos de transporte, incluindo HTTP, SMTP, TCP e UDP. No entanto, um serviço ASMX só pode operar sobre HTTP. A plataforma Xamarin dá suporte a implementações padrão de SOAP 1.1 via HTTP, e isso inclui suporte para muitas das configurações de serviço padrão do ASMX.
 
-Este exemplo inclui os aplicativos móveis que são executados em dispositivos físicos ou emulados e um serviço ASMX que fornece métodos para obter, adicionar, editar e excluir dados. Quando os aplicativos móveis são executados, eles se conectam ao serviço ASMX hospedado localmente conforme mostrado na seguinte captura de tela:
+Este exemplo inclui os aplicativos móveis que são executados em dispositivos físicos ou emulados e um serviço ASMX que fornece métodos para obter, adicionar, editar e excluir dados. Quando os aplicativos móveis são executados, eles se conectam ao serviço ASMX hospedado localmente, conforme mostrado na seguinte captura de tela:
 
 ![](asmx-images/portal.png "Aplicativo de exemplo")
 
@@ -37,7 +37,7 @@ Este exemplo inclui os aplicativos móveis que são executados em dispositivos f
 > No iOS 9 e superior, a segurança de transporte de aplicativo (ATS) impõe conexões seguras entre recursos da internet (como o servidor de back-end do aplicativo) e o aplicativo, impedindo assim a divulgação acidental de informações confidenciais. Desde que o ATS é habilitado por padrão em aplicativos criados para o iOS 9, todas as conexões serão sujeitos a requisitos de segurança ATS. Se as conexões não atender a esses requisitos, eles falharão com uma exceção.
 > ATS poderá ser aceito de se ele não é possível usar o `HTTPS` de protocolo e proteger a comunicação para recursos da internet. Isso pode ser feito atualizando o aplicativo **Info. plist** arquivo. Para obter mais informações, consulte [segurança de transporte de aplicativo](~/ios/app-fundamentals/ats.md).
 
-## <a name="consume-the-web-service"></a>Consumir o serviço web
+## <a name="consume-the-web-service"></a>Consumir o serviço Web
 
 O serviço ASMX oferece as seguintes operações:
 
@@ -52,19 +52,19 @@ Para obter mais informações sobre o modelo de dados usado no aplicativo, consu
 
 ## <a name="create-the-todoservice-proxy"></a>Criar o proxy TodoService
 
-Uma classe de proxy, chamada `TodoService`, estende `SoapHttpClientProtocol` e fornece métodos para se comunicar com o serviço ASMX em HTTP. O proxy é gerado, adicionando uma referência web para cada projeto específico da plataforma no 2019 do Visual Studio ou Visual Studio 2017. A referência web gera métodos e eventos para cada ação definida no documento de descrição linguagem WSDL (Web Services) do serviço.
+Uma classe proxy, chamada `TodoService`, estende `SoapHttpClientProtocol` e fornece métodos para se comunicar com o serviço ASMX por http. O proxy é gerado adicionando uma referência Web a cada projeto específico da plataforma no Visual Studio 2019 ou no Visual Studio 2017. A referência Web gera métodos e eventos para cada ação definida no documento WSDL (Web Services Description Language) do serviço.
 
-Por exemplo, o `GetTodoItems` ação de serviço resulta em um `GetTodoItemsAsync` método e um `GetTodoItemsCompleted` eventos no proxy. O método gerado tem um tipo de retorno void e invoca o `GetTodoItems` ação pai `SoapHttpClientProtocol` classe. Quando o método invocado recebe uma resposta do serviço, ele aciona o `GetTodoItemsCompleted` evento e fornece os dados de resposta dentro do evento `Result` propriedade.
+Por exemplo, a `GetTodoItems` ação de serviço resulta em `GetTodoItemsAsync` um método e `GetTodoItemsCompleted` um evento no proxy. O método gerado tem um tipo de retorno void e invoca a `GetTodoItems` ação na classe pai `SoapHttpClientProtocol` . Quando o método chamado recebe uma resposta do serviço, ele dispara o `GetTodoItemsCompleted` evento e fornece os dados de resposta dentro da Propriedade do `Result` evento.
 
 ## <a name="create-the-isoapservice-implementation"></a>Criar a implementação de ISoapService
 
-Para habilitar o projeto compartilhado e de plataforma cruzada trabalhar com o serviço, o exemplo define o `ISoapService` da interface, que segue o [modelo de programação assíncrona de tarefa em C# ](/dotnet/csharp/programming-guide/concepts/async/). Cada plataforma implementa o `ISoapService` para expor o proxy específico da plataforma. O exemplo usa `TaskCompletionSource` objetos para expor o proxy como uma interface de tarefa assíncrona. Detalhes sobre como usar `TaskCompletionSource` são encontrados nas implementações de cada tipo de ação nas seções a seguir.
+Para habilitar o projeto de plataforma cruzada e compartilhada para trabalhar com o serviço, o exemplo define `ISoapService` a interface, que segue o [modelo de programação assíncrona de tarefa no C# ](/dotnet/csharp/programming-guide/concepts/async/). Cada plataforma implementa o `ISoapService` para expor o proxy específico da plataforma. O exemplo usa `TaskCompletionSource` objetos para expor o proxy como uma interface assíncrona de tarefa. Detalhes sobre como `TaskCompletionSource` usar são encontrados nas implementações de cada tipo de ação nas seções a seguir.
 
 O exemplo `SoapService`:
 
-1. Cria uma instância de `TodoService` como uma instância de nível de classe
+1. Instancia o `TodoService` como uma instância de nível de classe
 1. Cria uma coleção chamada `Items` para armazenar `TodoItem` objetos
-1. Especifica um ponto de extremidade personalizado para opcional `Url` propriedade sobre a `TodoService`
+1. Especifica um ponto de extremidade personalizado para `Url` a propriedade opcional no`TodoService`
 
 ```csharp
 public class SoapService : ISoapService
@@ -97,7 +97,7 @@ ASMXService.TodoItem ToASMXServiceTodoItem (TodoItem item)
 }
 ```
 
-Esse método cria uma nova `ASMService.TodoItem` da instância e define cada propriedade para a propriedade idêntica do `TodoItem` instância.
+Esse método cria uma nova `ASMService.TodoItem` instância e define cada propriedade para a propriedade idêntica `TodoItem` da instância.
 
 Da mesma forma, quando os dados são recuperados do serviço da web, ele deve ser convertido do proxy gerado `TodoItem` de tipo para um `TodoItem` instância. Isso é feito com o `FromASMXServiceTodoItem` método, conforme mostrado no exemplo de código a seguir:
 
@@ -113,13 +113,13 @@ static TodoItem FromASMXServiceTodoItem (ASMXService.TodoItem item)
 }
 ```
 
-Esse método recupera os dados do proxy gerado `TodoItem` de tipo e define-a no recém-criado `TodoItem` instância.
+Esse método recupera os dados do tipo gerado `TodoItem` por proxy e os define na `TodoItem` instância recém-criada.
 
 ### <a name="retrieve-data"></a>Recuperar dados
 
-O `ISoapService` interface espera que o `RefreshDataAsync` método retorne um `Task` com a coleção de itens. No entanto, o `TodoService.GetTodoItemsAsync` método retorna void. Para satisfazer o padrão de interface, você deve chamar `GetTodoItemsAsync`, aguarde até que o `GetTodoItemsCompleted` evento seja acionado e popular a coleção. Isso permite que você retorne uma coleção válida para a interface do usuário.
+A `ISoapService` interface espera que `RefreshDataAsync` o método retorne `Task` um com a coleção de itens. No entanto `TodoService.GetTodoItemsAsync` , o método retorna void. Para satisfazer o padrão de interface, você deve `GetTodoItemsAsync`chamar, aguardar `GetTodoItemsCompleted` até que o evento seja acionado e preencher a coleção. Isso permite que você retorne uma coleção válida para a interface do usuário.
 
-O exemplo a seguir cria um novo `TaskCompletionSource`, inicia a chamada assíncrona na `RefreshDataAsync` método e aguarda o `Task` fornecidos pelo `TaskCompletionSource`. Quando o `TodoService_GetTodoItemsCompleted` manipulador de eventos é invocado ele preenche os `Items` coleção e atualizações a `TaskCompletionSource`:
+O exemplo a seguir cria um `TaskCompletionSource`novo, inicia a chamada assíncrona `RefreshDataAsync` no método e aguarda o `Task` fornecido pelo `TaskCompletionSource`. Quando o `TodoService_GetTodoItemsCompleted` manipulador de eventos é invocado, ele `Items` popula a coleção e `TaskCompletionSource`atualiza:
 
 ```csharp
 public class SoapService : ISoapService
@@ -164,11 +164,11 @@ public class SoapService : ISoapService
 }
 ```
 
-Para obter mais informações, consulte [modelo de programação assíncrona](/dotnet/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm) e [.NET Framework programação assíncrona tradicional e TPL](/dotnet/standard/parallel-programming/tpl-and-traditional-async-programming).
+Para obter mais informações, consulte [modelo de programação assíncrona](/dotnet/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm) e [tpl e programação assíncrona de .NET Framework tradicional](/dotnet/standard/parallel-programming/tpl-and-traditional-async-programming).
 
 ### <a name="create-or-edit-data"></a>Criar ou editar dados
 
-Quando você cria ou edita dados, você deve implementar o `ISoapService.SaveTodoItemAsync` método. Este método detecta se o `TodoItem` é um item novo ou atualizado e chama o método apropriado no `todoService` objeto. O `CreateTodoItemCompleted` e `EditTodoItemCompleted` manipuladores de eventos devem ser implementados para que você saiba quando o `todoService` recebeu uma resposta do serviço ASMX (eles podem ser combinados em um único manipulador porque elas executam a mesma operação). O exemplo a seguir demonstra as implementações de manipulador de interface e eventos, bem como o `TaskCompletionSource` objeto usado para operar de maneira assíncrona:
+Ao criar ou editar dados, você deve implementar o `ISoapService.SaveTodoItemAsync` método. Esse método detecta se o `TodoItem` é um item novo ou atualizado e chama o método apropriado `todoService` no objeto. Os `CreateTodoItemCompleted` manipuladores de eventos e `EditTodoItemCompleted` também devem ser implementados para que você `todoService` saiba quando o recebeu uma resposta do serviço ASMX (eles podem ser combinados em um único manipulador, pois eles executam a mesma operação). O exemplo a seguir demonstra a interface e as implementações do manipulador de eventos `TaskCompletionSource` , bem como o objeto usado para operar de forma assíncrona:
 
 ```csharp
 public class SoapService : ISoapService
@@ -220,7 +220,7 @@ public class SoapService : ISoapService
 
 ### <a name="delete-data"></a>Excluir dados
 
-A exclusão de dados requer uma implementação semelhante. Definir um `TaskCompletionSource`, implemente um manipulador de eventos e o `ISoapService.DeleteTodoItemAsync` método:
+A exclusão de dados requer uma implementação semelhante. Defina um `TaskCompletionSource`, implemente um manipulador de eventos e `ISoapService.DeleteTodoItemAsync` o método:
 
 ```csharp
 public class SoapService : ISoapService
@@ -261,11 +261,11 @@ public class SoapService : ISoapService
 }
 ```
 
-## <a name="test-the-web-service"></a>Testar o serviço web
+## <a name="test-the-web-service"></a>Testar o serviço Web
 
-Teste físicos ou emulados dispositivos com um serviço hospedado localmente requer a configuração personalizada do IIS, endereços de ponto de extremidade e regras de firewall para estar em vigor. Para obter mais detalhes sobre como configurar seu ambiente de teste, consulte o [configurar o acesso remoto para o IIS Express](wcf.md#configure-remote-access-to-iis-express). A única diferença entre o teste de WCF e ASMX é o número da porta do TodoService.
+O teste de dispositivos físicos ou emulados com um serviço hospedado localmente requer configuração personalizada do IIS, endereços de ponto de extremidade e regras de firewall. Para obter mais detalhes sobre como configurar seu ambiente para teste, consulte Configurar o [acesso remoto para IIS Express](wcf.md#configure-remote-access-to-iis-express). A única diferença entre testar o WCF e o ASMX é o número da porta do TodoService.
 
 ## <a name="related-links"></a>Links relacionados
 
-- [TodoASMX (amostra)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoASMX/)
+- [TodoASMX (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todoasmx)
 - [IAsyncResult](https://docs.microsoft.com/dotnet/api/system.iasyncresult)

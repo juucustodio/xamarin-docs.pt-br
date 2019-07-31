@@ -7,16 +7,16 @@ ms.assetid: E9BE322E-ECB3-4395-AFE4-4474A0F25551
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: a57e50f098c92dbfcdcaa3139565d2ba0e291e3d
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 39de35c8e43ebf2b3db25724ad761e3576ba5057
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61347749"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68644950"
 ---
 # <a name="skiasharp-transforms"></a>Transformações de SkiaSharp
 
-[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Saiba mais sobre as transformações de exibição de gráficos de SkiaSharp_
 
@@ -49,9 +49,9 @@ A primeira diferença é que as transformações de SkiaSharp são aplicadas a t
 
 As transformações de SkiaSharp são relativas ao canto superior esquerdo dos `SKCanvas` enquanto as transformações de xamarin. Forms são relativas ao canto superior esquerdo do `VisualElement` ao qual eles são aplicados. Essa diferença é importante ao aplicar o dimensionamento e rotação transforma porque essas transformações são sempre relativas a um ponto específico.
 
-A realmente grande diferença é que são de transformações de SKiaSharp *métodos* enquanto as transformações do xamarin. Forms são *propriedades*. Essa é uma diferença semântica além a diferença sintática: Transformações de SkiaSharp executam uma operação enquanto o xamarin. Forms transforma o conjunto de um estado. Transformações de SkiaSharp se aplicam a objetos de gráficos subsequentemente desenhado, mas não a objetos de gráficos são desenhados antes que a transformação é aplicada. Em contraste, uma transformação do xamarin. Forms aplica-se a um elemento de renderizado anteriormente assim que a propriedade está definida. Transformações de SkiaSharp são cumulativas, como os métodos são chamados; Transformações de xamarin. Forms são substituídas quando a propriedade é definida com outro valor.
+A realmente grande diferença é que são de transformações de SKiaSharp *métodos* enquanto as transformações do xamarin. Forms são *propriedades*. Essa é uma diferença semântica além da diferença sintática: Transformações de SkiaSharp executam uma operação enquanto as transformações do Xamarin. Forms definem um estado. Transformações de SkiaSharp se aplicam a objetos de gráficos subsequentemente desenhado, mas não a objetos de gráficos são desenhados antes que a transformação é aplicada. Em contraste, uma transformação do xamarin. Forms aplica-se a um elemento de renderizado anteriormente assim que a propriedade está definida. Transformações de SkiaSharp são cumulativas, como os métodos são chamados; Transformações de xamarin. Forms são substituídas quando a propriedade é definida com outro valor.
 
-Todos os programas de exemplo nesta seção são exibidos na **transformações de SkiaSharp** seção o [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) programa. Código-fonte pode ser encontrado na [ **transforma** ](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms) pasta da solução.
+Todos os programas de exemplo nesta seção são exibidos na **transformações de SkiaSharp** seção o [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) programa. Código-fonte pode ser encontrado na [ **transforma** ](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms) pasta da solução.
 
 ## <a name="the-translate-transformtranslatemd"></a>[A transformação de conversão](translate.md)
 
@@ -89,4 +89,4 @@ Use transformações não afins para girar objetos 2D no espaço 3D.
 ## <a name="related-links"></a>Links relacionados
 
 - [APIs de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (amostra)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

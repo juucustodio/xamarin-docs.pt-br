@@ -1,53 +1,53 @@
 ---
-title: Alertas no xamarin. Mac
-description: Este artigo aborda o trabalho com alertas em um aplicativo xamarin. Mac. Ele descreve a criação e exibição de alertas do C# código e responder às interações do usuário.
+title: Alertas no Xamarin. Mac
+description: Este artigo aborda como trabalhar com alertas em um aplicativo Xamarin. Mac. Ele descreve a criação e a exibição C# de alertas do código e a resposta às interações do usuário.
 ms.prod: xamarin
 ms.assetid: F1DB93A1-7549-4540-AD5E-D7605CCD8435
 ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 6545b1423b809e42293302baf3eba9521848edc1
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 14a7fdc21c95b2febcf73497055461830b0df831
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61237417"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68645784"
 ---
-# <a name="alerts-in-xamarinmac"></a>Alertas no xamarin. Mac
+# <a name="alerts-in-xamarinmac"></a>Alertas no Xamarin. Mac
 
-_Este artigo aborda o trabalho com alertas em um aplicativo xamarin. Mac. Ele descreve a criação e exibição de alertas do C# código e responder às interações do usuário._
+_Este artigo aborda como trabalhar com alertas em um aplicativo Xamarin. Mac. Ele descreve a criação e a exibição C# de alertas do código e a resposta às interações do usuário._
 
-Ao trabalhar com C# e .NET em um aplicativo xamarin. Mac, você tem acesso para os mesmos alertas que um desenvolvedor que trabalha *Objective-C* e *Xcode* faz. 
+Ao trabalhar com C# o e o .net em um aplicativo Xamarin. Mac, você tem acesso aos mesmos alertas que um desenvolvedor trabalhando no *Objective-C* e no *Xcode* . 
 
-Um alerta é um tipo especial de caixa de diálogo que aparece quando um problema sério ocorre (por exemplo, um erro) ou como um aviso (por exemplo, se preparando para excluir um arquivo). Como um alerta é uma caixa de diálogo, ele também requer uma resposta do usuário antes de ser fechado.
+Um alerta é um tipo especial de caixa de diálogo que aparece quando ocorre um problema sério (como um erro) ou como um aviso (como a preparação para excluir um arquivo). Como um alerta é uma caixa de diálogo, ele também requer uma resposta do usuário para que possa ser fechado.
 
-[![](alert-images/alert06.png "Um exemplo de alerta")](alert-images/alert06.png#lightbox)
+[![](alert-images/alert06.png "Um alerta de exemplo")](alert-images/alert06.png#lightbox)
 
-Neste artigo, abordaremos os fundamentos de trabalhar com alertas em um aplicativo xamarin. Mac. 
+Neste artigo, abordaremos as noções básicas de como trabalhar com alertas em um aplicativo Xamarin. Mac. 
 
 <a name="Introduction_to_Alerts" />
 
 ## <a name="introduction-to-alerts"></a>Introdução aos alertas
 
-Um alerta é um tipo especial de caixa de diálogo que aparece quando um problema sério ocorre (por exemplo, um erro) ou como um aviso (por exemplo, se preparando para excluir um arquivo). Porque alertas interrompem o usuário, pois deve ser descartados antes que o usuário pode continuar com sua tarefa, evite a exibição de um alerta, a menos que seja absolutamente necessário.
+Um alerta é um tipo especial de caixa de diálogo que aparece quando ocorre um problema sério (como um erro) ou como um aviso (como a preparação para excluir um arquivo). Como os alertas interrompem o usuário, pois eles devem ser ignorados antes que o usuário possa continuar com sua tarefa, evite exibir um alerta, a menos que seja absolutamente necessário.
 
-Apple sugere as diretrizes a seguir:
+A Apple sugere as seguintes diretrizes:
 
-- Não use um alerta apenas para dar aos usuários informações.
-- Não exiba um alerta para ações comuns, que podem ser desfeitas. Mesmo se essa situação pode causar perda de dados.
-- Se uma situação é digna de um alerta, evite usar qualquer outro elemento de interface do usuário ou o método para exibi-lo.
+- Não use um alerta simplesmente para fornecer informações aos usuários.
+- Não exibir um alerta para ações comuns e desfeitas. Mesmo que essa situação possa causar perda de dados.
+- Se uma situação for digna de um alerta, evite usar qualquer outro elemento ou método de interface do usuário para exibi-lo.
 - O ícone de cuidado deve ser usado com moderação.
-- Descreva a situação de alerta clara e sucinta na mensagem de alerta.
-- O nome do botão padrão deve corresponder à ação que você descreve na mensagem de alerta.
+- Descreva a situação de alerta de forma clara e sucinta na mensagem de alerta.
+- O nome do botão padrão deve corresponder à ação que você descreveu em sua mensagem de alerta.
 
-Para obter mais informações, consulte o [alertas](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/WindowAlerts.html#//apple_ref/doc/uid/20000957-CH44-SW1) seção da Apple [diretrizes de Interface humana dos X](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
+Para obter mais informações, consulte a seção de [alertas](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/WindowAlerts.html#//apple_ref/doc/uid/20000957-CH44-SW1) das [diretrizes de interface humana do os X](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/) da Apple
 
 <a name="Anatomy_of_an_Alert" />
 
 ## <a name="anatomy-of-an-alert"></a>Anatomia de um alerta
 
-Conforme mencionado acima, os alertas devem ser mostrados ao usuário do seu aplicativo quando ocorre um problema sério, ou como um aviso solicitando a potencial perda de dados (como fechar um arquivo não salvo). Xamarin. Mac, um alerta é criado no C# de código, por exemplo:
+Conforme mencionado acima, os alertas devem ser mostrados para o usuário do seu aplicativo quando ocorre um problema sério ou como um aviso para potencial perda de dados (como fechar um arquivo não salvo). No Xamarin. Mac, um alerta é criado no C# código, por exemplo:
 
 ```csharp
 var alert = new NSAlert () {
@@ -58,29 +58,29 @@ var alert = new NSAlert () {
 alert.RunModal ();
 ```
 
-O código acima exibirá um alerta com o ícone de aplicativos sobreposto no ícone de aviso, um título, uma mensagem de aviso e uma única **Okey** botão:
+O código acima exibe um alerta com o ícone de aplicativos sobreposto no ícone de aviso, um título, uma mensagem de aviso e um único botão **OK** :
 
-[![](alert-images/alert01.png "Um alerta com um botão Okey")](alert-images/alert01.png#lightbox)
+[![](alert-images/alert01.png "Um alerta com um botão OK")](alert-images/alert01.png#lightbox)
 
 A Apple fornece várias propriedades que podem ser usadas para personalizar um alerta:
 
-- **AlertStyle** define o tipo de um alerta como um dos seguintes:
-    - **Aviso** - usado para avisar o usuário de um evento iminente ou atual que não é crítico. Este é o estilo padrão.
-    - **Informativo** - usado para avisar o usuário sobre um evento iminente ou atual. Atualmente, não há nenhuma diferença visível entre um **aviso** e um **informativo**
-    - **Crítico** - usado para avisar o usuário sobre as consequências graves de um evento iminente (como excluir um arquivo). Esse tipo de alerta deve ser usado com moderação.
-- **MessageText** -essa é a mensagem principal ou o título do alerta e deve definir rapidamente a situação para o usuário.
-- **InformativeText** -este é o corpo do alerta em que você deve definir a situação claramente e apresentar opções viável para o usuário.
-- **Ícone** -permite que um ícone personalizado a ser exibida ao usuário.
-- **HelpAnchor** & **ShowsHelp** -permite que o alerta a ser associado ao aplicativo HelpBook e exibir a Ajuda para o alerta.
-- **Botões** -por padrão, um alerta tem apenas o **Okey** botão, mas o **botões** coleção permite que você adicionar mais opções, conforme necessário.
-- **ShowsSuppressionButton** - se `true` exibe uma caixa de seleção que o usuário pode usar para suprimir o alerta para ocorrências subsequentes do evento que disparou a ele.
-- **AccessoryView** -permite que você anexe outro modo de exibição de secundário para o alerta para fornecer informações adicionais, como a adição de um **campo de texto** para entrada de dados. Se você definir uma nova **AccessoryView** ou modificar um existente, você precisa chamar o `Layout()` método para ajustar o layout visível do alerta.
+- **Alertstyle** define o tipo de um alerta como um dos seguintes:
+    - **Aviso** -usado para avisar ao usuário um evento atual ou iminente que não é crítico. Este é o estilo padrão.
+    - Informativo-usado para avisar o usuário sobre um evento atual ou iminente. Atualmente, não há nenhuma diferença visível entre um **aviso** e uma **informação**
+    - **Crítico** – usado para avisar o usuário sobre consequências graves de um evento iminente (como excluir um arquivo). Esse tipo de alerta deve ser usado com moderação.
+- **MessageText** -esta é a mensagem principal ou o título do alerta e deve definir rapidamente a situação para o usuário.
+- **InformativeText** -este é o corpo do alerta em que você deve definir a situação claramente e apresentar opções de viável para o usuário.
+- **Ícone** – permite que um ícone personalizado seja exibido ao usuário.
+- HelpAnchor & **ShowsHelp** – permite que o alerta seja vinculado ao HelpBook do aplicativo e exiba a ajuda para o alerta.
+- **Botões** – por padrão, um alerta tem apenas o botão **OK** , mas a coleção de **botões** permite que você adicione mais opções, conforme necessário.
+- **ShowsSuppressionButton** -se `true` exibe uma caixa de seleção que o usuário pode usar para suprimir o alerta para ocorrências subsequentes do evento que o disparou.
+- **AccessoryView** -permite que você anexe outra subexibição ao alerta para fornecer informações extras, como adicionar um campo de **texto** para entrada de dados. Se você definir um novo **AccessoryView** ou modificar um existente, será necessário chamar o `Layout()` método para ajustar o layout visível do alerta.
 
 <a name="Displaying_an_Alert" />
 
 ## <a name="displaying-an-alert"></a>Exibindo um alerta
 
-Há duas maneiras diferentes que um alerta pode ser exibido, flutuante ou como uma planilha. O código a seguir exibe um alerta como flutuante:
+Há duas maneiras diferentes pelas quais um alerta pode ser exibido, flutuante livre ou como uma planilha. O código a seguir exibe um alerta como flutuante livre:
 
 ```csharp
 var alert = new NSAlert () {
@@ -90,7 +90,7 @@ var alert = new NSAlert () {
 };
 alert.RunModal ();
 ```
-Se esse código é executado, o seguinte é exibido:
+Se esse código for executado, o seguinte será exibido:
 
 [![](alert-images/alert02.png "Um alerta simples")](alert-images/alert02.png#lightbox)
 
@@ -105,16 +105,16 @@ var alert = new NSAlert () {
 alert.BeginSheet (this);
 ```
 
-Se esse código é executado, a seguinte mensagem será exibida:
+Se esse código for executado, o seguinte será exibido:
 
-[![](alert-images/alert03.png "Um alerta exibido como uma folha")](alert-images/alert03.png#lightbox)
+[![](alert-images/alert03.png "Um alerta exibido como uma planilha")](alert-images/alert03.png#lightbox)
 
 
 <a name="Working_with_Alert_Buttons" />
 
 ## <a name="working-with-alert-buttons"></a>Trabalhando com botões de alerta
 
-Por padrão, um alerta exibe apenas o **Okey** botão. No entanto, não há limite para que, você pode criar botões extras, acrescentando-os para o **botões** coleção. O código a seguir cria um alerta de flutuante com um **Okey**, **Cancelar** e **talvez** botão:
+Por padrão, um alerta exibe apenas o botão **OK** . No entanto, você não está limitado a isso, você pode criar botões extras acrescentando-os à coleção **Buttons** . O código a seguir cria um alerta de flutuação livre com um botão **OK**, **Cancelar** e **talvez** :
 
 ```csharp
 var alert = new NSAlert () {
@@ -128,17 +128,17 @@ alert.AddButton ("Maybe");
 var result = alert.RunModal ();
 ```
 
-O primeiro botão adicionado será o _botão padrão_ que serão ativados se o usuário pressiona a tecla Enter. O valor retornado será um inteiro que representa qual botão o usuário pressionado. No nosso caso, serão retornados os valores a seguir:
+O primeiro botão adicionado será o _botão padrão_ que será ativado se o usuário pressionar a tecla Enter. O valor retornado será um inteiro que representa qual botão o usuário pressionou. Em nosso caso, os seguintes valores serão retornados:
 
 - **OK** - 1000.
-- **Cancelar** - 1001.
-- **Talvez** - 1002.
+- **Cancelar** -1001.
+- **Talvez** -1002.
 
-Se executarmos o código, a seguinte mensagem será exibida:
+Se executarmos o código, o seguinte será exibido:
 
 [![](alert-images/alert04.png "Um alerta com três opções de botão")](alert-images/alert04.png#lightbox)
 
-Aqui está o código para o mesmo alerta como uma planilha:
+Este é o código para o mesmo alerta que uma planilha:
 
 ```csharp
 var alert = new NSAlert () {
@@ -153,18 +153,18 @@ alert.BeginSheetForResponse (this, (result) => {
     Console.WriteLine ("Alert Result: {0}", result);
 });
 ```
-Se esse código é executado, a seguinte mensagem será exibida:
+Se esse código for executado, o seguinte será exibido:
 
-[![](alert-images/alert05.png "Um alerta de três botão exibido como uma planilha")](alert-images/alert05.png#lightbox)
+[![](alert-images/alert05.png "Um alerta de três botões exibido como uma planilha")](alert-images/alert05.png#lightbox)
 
 > [!IMPORTANT]
 > Você nunca deve adicionar mais de três botões a um alerta.
 
 <a name="Showing_the_Suppress_Button" />
 
-## <a name="showing-the-suppress-button"></a>Mostrando o botão de suprimir
+## <a name="showing-the-suppress-button"></a>Mostrando o botão suprimir
 
-Se o alerta `ShowSuppressButton` é de propriedade `true`, uma caixa de seleção que o usuário pode usar para suprimir o alerta para ocorrências subsequentes do evento que disparou o alerta é exibido. O código a seguir exibe um alerta com um botão de suprimir de flutuante:
+Se a propriedade do `ShowSuppressButton` alerta for `true`, o alerta exibirá uma caixa de seleção que o usuário pode usar para suprimir o alerta para ocorrências subsequentes do evento que o disparou. O código a seguir exibe um alerta flutuante livre com um botão suprimir:
 
 ```csharp
 var alert = new NSAlert () {
@@ -180,13 +180,13 @@ var result = alert.RunModal ();
 Console.WriteLine ("Alert Result: {0}, Suppress: {1}", result, alert.SuppressionButton.State == NSCellStateValue.On);
 ```
 
-Se o valor de `alert.SuppressionButton.State` é `NSCellStateValue.On`, o usuário fez check-in na caixa de seleção suprimir, caso contrário eles não foram alterados.
+Se o valor de `alert.SuppressionButton.State` for `NSCellStateValue.On`, o usuário marcou a caixa de seleção suprimir, caso contrário, não.
 
-Se o código for executado, a seguinte mensagem será exibida:
+Se o código for executado, o seguinte será exibido:
 
-[![](alert-images/alert06.png "Um alerta com um botão de suprimir")](alert-images/alert06.png#lightbox)
+[![](alert-images/alert06.png "Um alerta com um botão suprimir")](alert-images/alert06.png#lightbox)
 
-Aqui está o código para o mesmo alerta como uma planilha:
+Este é o código para o mesmo alerta que uma planilha:
 
 ```csharp
 var alert = new NSAlert () {
@@ -203,15 +203,15 @@ alert.BeginSheetForResponse (this, (result) => {
 });
 ```
 
-Se esse código é executado, a seguinte mensagem será exibida:
+Se esse código for executado, o seguinte será exibido:
 
-[![](alert-images/alert07.png "Um alerta com um botão de suprimir exibir como uma planilha")](alert-images/alert07.png#lightbox)
+[![](alert-images/alert07.png "Um alerta com um botão suprimir exibido como uma planilha")](alert-images/alert07.png#lightbox)
 
 <a name="Adding_a_Custom_SubView" />
 
-## <a name="adding-a-custom-subview"></a>Adicionar um modo de exibição personalizado secundário
+## <a name="adding-a-custom-subview"></a>Adicionando uma subexibição personalizada
 
-Alertas têm um `AccessoryView` propriedade que pode ser usada para personalizar ainda mais o alerta e adicionar coisas como uma **campo de texto** entrada do usuário. O código a seguir cria um alerta de flutuante com um campo de entrada de texto adicionado:
+Os alertas têm `AccessoryView` uma propriedade que pode ser usada para personalizar ainda mais o alerta e adicionar itens como um **campo de texto** para entrada do usuário. O código a seguir cria um alerta de flutuação livre com um campo de entrada de texto adicionado:
 
 ```csharp
 var input = new NSTextField (new CGRect (0, 0, 300, 20));
@@ -231,13 +231,13 @@ var result = alert.RunModal ();
 Console.WriteLine ("Alert Result: {0}, Suppress: {1}", result, alert.SuppressionButton.State == NSCellStateValue.On);
 ```
 
-As principais linhas são `var input = new NSTextField (new CGRect (0, 0, 300, 20));` que cria um novo **campo de texto** que adicionaremos o alerta. `alert.AccessoryView = input;` quais anexa a **campo de texto** para o alerta e a chamada para o `Layout()` método, que é necessário para redimensionar o alerta para caber nele é novo.
+As principais linhas aqui são `var input = new NSTextField (new CGRect (0, 0, 300, 20));` o que cria um novo **campo de texto** ao qual vamos adicionar o alerta. `alert.AccessoryView = input;`que anexa o **campo de texto** ao alerta e a chamada para o `Layout()` método, que é necessário para redimensionar o alerta para caber na nova subexibição.
 
-Se executarmos o código, a seguinte mensagem será exibida:
+Se executarmos o código, o seguinte será exibido:
 
-[![](alert-images/alert08.png "Se executarmos o código, a seguinte mensagem será exibida")](alert-images/alert08.png#lightbox)
+[![](alert-images/alert08.png "Se executarmos o código, o seguinte será exibido")](alert-images/alert08.png#lightbox)
 
-Aqui está o mesmo alerta como uma planilha:
+Este é o mesmo alerta que uma planilha:
 
 ```csharp
 var input = new NSTextField (new CGRect (0, 0, 300, 20));
@@ -258,7 +258,7 @@ alert.BeginSheetForResponse (this, (result) => {
 });
 ```
 
-Se executarmos esse código, a seguinte mensagem será exibida:
+Se executarmos esse código, o seguinte será exibido:
 
 [![](alert-images/alert09.png "Um alerta com uma exibição personalizada")](alert-images/alert09.png#lightbox)
 
@@ -266,11 +266,11 @@ Se executarmos esse código, a seguinte mensagem será exibida:
 
 ## <a name="summary"></a>Resumo
 
-Este artigo apresentou uma visão detalhada de como trabalhar com alertas em um aplicativo xamarin. Mac. Vimos os diferentes tipos e os usos de alertas, como criar e personalizar alertas e como trabalhar com alertas no C# código.
+Este artigo deu uma visão detalhada de como trabalhar com alertas em um aplicativo Xamarin. Mac. Vimos os diferentes tipos e usos de alertas, como criar e personalizar alertas e como trabalhar com alertas no C# código.
 
 ## <a name="related-links"></a>Links relacionados
 
-- [MacWindows (amostra)](https://developer.xamarin.com/samples/mac/MacWindows/)
+- [MacWindows (exemplo)](https://docs.microsoft.com/samples/xamarin/mac-samples/macwindows)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Trabalhando com o Windows](~/mac/user-interface/window.md)
 - [Diretrizes de interface humana do OS X](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)

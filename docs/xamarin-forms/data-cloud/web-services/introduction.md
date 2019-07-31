@@ -1,22 +1,22 @@
 ---
-title: Introdução de serviços Web do xamarin. Forms
-description: Este guia fornece um passo a passo do aplicativo de exemplo do xamarin. Forms que demonstra como se comunicar com serviços web diferentes. Enquanto a cada serviço web usa um aplicativo de exemplo separado, elas são funcionalmente semelhantes e compartilharem classes comuns.
+title: Introdução aos serviços Web do Xamarin. Forms
+description: Este guia fornece uma explicação do aplicativo de exemplo Xamarin. Forms que demonstra como se comunicar com diferentes serviços Web. Enquanto a cada serviço web usa um aplicativo de exemplo separado, elas são funcionalmente semelhantes e compartilharem classes comuns.
 ms.prod: xamarin
 ms.assetid: A3FEB262-0D79-42E6-8F8B-A565618C490B
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/28/2017
-ms.openlocfilehash: b34381ad587d623e66af1b581200094448851bf6
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: bbeab6a6ab0d4a9d0e3a962240317fc0d54f9e25
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67658983"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656635"
 ---
-# <a name="xamarinforms-web-services-introduction"></a>Introdução de serviços Web do xamarin. Forms
+# <a name="xamarinforms-web-services-introduction"></a>Introdução aos serviços Web do Xamarin. Forms
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoREST)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todorest)
 
 _Este tópico fornece um passo a passo do aplicativo de exemplo do xamarin. Forms que demonstra como se comunicar com serviços web diferentes. Enquanto a cada serviço web usa um aplicativo de exemplo separado, elas são funcionalmente semelhantes e compartilharem classes comuns._
 
@@ -36,7 +36,7 @@ Quando o aplicativo é iniciado, é exibida uma página que lista as tarefas rec
 
 Cada tópico deste guia fornece um link de download para um *diferentes* versão do aplicativo que demonstra um tipo específico de back-end de serviço web. Baixe o código de exemplo relevante na página relacionadas ao estilo de cada serviço web.
 
-## <a name="understand-the-application-anatomy"></a>Entenda a anatomia do aplicativo
+## <a name="understand-the-application-anatomy"></a>Entender a anatomia do aplicativo
 
 O projeto de código compartilhado para cada aplicativo de exemplo consiste em três pastas principais:
 
@@ -46,7 +46,7 @@ O projeto de código compartilhado para cada aplicativo de exemplo consiste em t
 |Modelos|Contém as classes de modelo de dados para o aplicativo. No mínimo, isso inclui o `TodoItem` classe, que modela um único item de dados usados pelo aplicativo. A pasta também pode incluir quaisquer classes adicionais usados para modelar dados de usuário.|
 |Exibições|Contém as páginas do aplicativo. Isso geralmente consiste de `TodoListPage` e `TodoItemPage` classes e as classes adicionais usadas para fins de autenticação.|
 
-O projeto de código compartilhado para cada aplicativo também consiste em um número de arquivos importantes:
+O projeto de código compartilhado para cada aplicativo também consiste em vários arquivos importantes:
 
 |Arquivo|Finalidade|
 |--- |--- |
@@ -63,7 +63,7 @@ A maioria dos aplicativos de exemplo contém pelo menos duas páginas:
 
 Além disso, alguns aplicativos de exemplo contêm páginas adicionais que são usadas para gerenciar o processo de autenticação do usuário.
 
-### <a name="model-the-data"></a>Os dados de modelo
+### <a name="model-the-data"></a>Modelar os dados
 
 Cada aplicativo de exemplo usa o `TodoItem` classe para modelar os dados que são exibidos e enviados para o serviço web para o armazenamento. O exemplo de código a seguir mostra a classe `TodoItem`:
 
@@ -79,7 +79,7 @@ public class TodoItem
 
 O `ID` propriedade é usada para identificar exclusivamente cada `TodoItem` instância e são usados por cada serviço da web para identificar os dados a serem atualizados ou excluídos.
 
-### <a name="invoke-web-service-operations"></a>Chamar operações de serviço web
+### <a name="invoke-web-service-operations"></a>Invocar operações de serviço Web
 
 Operações de serviço Web são acessadas por meio de `TodoItemManager` classe e uma instância da classe podem ser acessados por meio do `App.TodoManager` propriedade. O `TodoItemManager` classe fornece os seguintes métodos para chamar operações de serviço web:
 
@@ -93,6 +93,6 @@ Em vez de invocar as operações de serviço web diretamente, o `TodoItemManager
 
 ## <a name="related-links"></a>Links relacionados
 
-- [ASMX (amostra)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoASMX)
-- [WCF (amostra)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoWCF)
-- [REST (amostra)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoREST)
+- [ASMX (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todoasmx)
+- [WCF (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todowcf)
+- [REST (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todorest)

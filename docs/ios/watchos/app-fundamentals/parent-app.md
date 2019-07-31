@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: 6b3a6f45d78c0febb2aacf4f7693bc6e328c3ec0
-ms.sourcegitcommit: d3f48bfe72bfe03aca247d47bc64bfbfad1d8071
+ms.openlocfilehash: 0dc3c8e4c8b4db99b07114e855910ccfe5fe180f
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66740955"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68654561"
 ---
 # <a name="working-with-the-watchos-parent-application-in-xamarin"></a>Trabalhando com o aplicativo pai no Xamarin watchOS
 
@@ -35,7 +35,7 @@ O aplicativo pai, às vezes, também é conhecido como o aplicativo de contêine
 
 ## <a name="run-code"></a>Executar código
 
-Comunicação entre uma extensão de inspeção e o aplicativo de iPhone pai é demonstrada na [GpsWatch exemplo](https://developer.xamarin.com/samples/monotouch/WatchKit/GpsWatch/).
+Comunicação entre uma extensão de inspeção e o aplicativo de iPhone pai é demonstrada na [GpsWatch exemplo](https://docs.microsoft.com/samples/xamarin/ios-samples/watchkit-gpswatch).
 Sua extensão de inspeção pode solicitar o aplicativo do iOS pai fazer algum processamento em seu nome usando o `OpenParentApplication` método.
 
 Isso é especialmente útil para tarefas em execução demorada (incluindo solicitações de rede) - somente o pai aplicativo iOS podem tirar proveito do processamento em segundo plano para concluir essas tarefas e salvar os dados recuperados em um local acessível para a extensão de inspeção.
@@ -147,7 +147,7 @@ Baixe o C# versão [WormHoleSharp](https://github.com/Clancey/WormHoleSharp).
 
 ## <a name="related-links"></a>Links relacionados
 
-- [GpsWatch (amostra)](https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/)
+- [GpsWatch (amostra)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
 - [WormHoleSharp (amostra)](https://github.com/Clancey/WormHoleSharp)
 - [Referência de WKInterfaceController da Apple](https://developer.apple.com/library/prerelease/ios/documentation/WatchKit/Reference/WKInterfaceController_class/index.html#//apple_ref/occ/clm/WKInterfaceController/openParentApplication:reply:)
 - [Apple compartilhamento de dados com seu aplicativo contém](https://developer.apple.com/library/ios/documentation/General/Conceptual/ExtensibilityPG/ExtensionScenarios.html)

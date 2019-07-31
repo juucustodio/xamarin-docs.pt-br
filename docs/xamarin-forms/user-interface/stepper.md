@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/17/2018
-ms.openlocfilehash: a224d82ed7bb993f51be6cca6ccf09b5331cfac0
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 6c89f04b1d1d87fed8d86d50cb68527391a7f317
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61250420"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656198"
 ---
 # <a name="xamarinforms-stepper"></a>Seletor de xamarin. Forms
 
-[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/StepperDemos)
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-stepperdemos)
 
 _Use um seletor para selecionar um valor numérico de um intervalo de valores._
 
@@ -42,11 +42,11 @@ O [ `ValueChangedEventArgs` ](xref:Xamarin.Forms.ValueChangedEventArgs) objeto q
 
 ## <a name="basic-stepper-code-and-markup"></a>Marcação e código de escalonador básico
 
-O [ **StepperDemos** ](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/StepperDemos) exemplo contém três páginas que são funcionalmente idênticos, mas são implementadas de maneiras diferentes. A primeira página usa apenas C# código, o segundo usa XAML com um manipulador de eventos no código e o terceiro é capaz de evitar o manipulador de eventos usando a associação de dados no arquivo XAML.
+O [ **StepperDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-stepperdemos) exemplo contém três páginas que são funcionalmente idênticos, mas são implementadas de maneiras diferentes. A primeira página usa apenas C# código, o segundo usa XAML com um manipulador de eventos no código e o terceiro é capaz de evitar o manipulador de eventos usando a associação de dados no arquivo XAML.
 
 ### <a name="creating-a-stepper-in-code"></a>Criando um seletor em código
 
-O **código básico de escalonador** página na [ **StepperDemos** ](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/StepperDemos) exemplo mostra como criar um [ `Stepper` ](xref:Xamarin.Forms.Stepper) e dois [ `Label` ](xref:Xamarin.Forms.Label) objetos no código:
+O **código básico de escalonador** página na [ **StepperDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-stepperdemos) exemplo mostra como criar um [ `Stepper` ](xref:Xamarin.Forms.Stepper) e dois [ `Label` ](xref:Xamarin.Forms.Label) objetos no código:
 
 ```csharp
 public class BasicStepperCodePage : ContentPage
@@ -182,7 +182,7 @@ O **associações básicas de escalonador** página mostra como escrever um apli
 </ContentPage>
 ```
 
-O [ `Rotation` ](xref:Xamarin.Forms.VisualElement.Rotation) propriedade do primeiro [ `Label` ](xref:Xamarin.Forms.Label) está associado a [ `Value` ](xref:Xamarin.Forms.Stepper.Value) propriedade do [ `Stepper` ](xref:Xamarin.Forms.Stepper), como é o [ `Text` ](xref:Xamarin.Forms.Label.Text) propriedade do segundo `Label` com um `StringFormat` especificação. O **associações básicas de escalonador** funções da página um pouco diferente das duas páginas anteriores: Quando a página aparece pela primeira vez, o segundo `Label` exibe a cadeia de caracteres de texto com o valor. Esse é um benefício do uso de associação de dados. Para exibir texto sem a associação de dados, você precisa inicializar especificamente a `Text` propriedade do `Label` ou simular um acionamento da [ `ValueChanged` ](xref:Xamarin.Forms.Stepper.ValueChanged) evento chamando o manipulador de eventos do construtor de classe .
+O [ `Rotation` ](xref:Xamarin.Forms.VisualElement.Rotation) propriedade do primeiro [ `Label` ](xref:Xamarin.Forms.Label) está associado a [ `Value` ](xref:Xamarin.Forms.Stepper.Value) propriedade do [ `Stepper` ](xref:Xamarin.Forms.Stepper), como é o [ `Text` ](xref:Xamarin.Forms.Label.Text) propriedade do segundo `Label` com um `StringFormat` especificação. A página de **associações de stepper básica** funciona um pouco diferente das duas páginas anteriores: Quando a página é exibida pela primeira vez `Label` , a segunda exibe a cadeia de caracteres de texto com o valor. Esse é um benefício do uso de associação de dados. Para exibir texto sem a associação de dados, você precisa inicializar especificamente a `Text` propriedade do `Label` ou simular um acionamento da [ `ValueChanged` ](xref:Xamarin.Forms.Stepper.ValueChanged) evento chamando o manipulador de eventos do construtor de classe .
 
 ## <a name="precautions"></a>Precauções
 
@@ -258,5 +258,5 @@ Quando [ `Minimum` ](xref:Xamarin.Forms.Stepper.Minimum) é definido para 180, [
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Exemplo de demonstrações escalonador](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/StepperDemos)
+- [Exemplo de demonstrações escalonador](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-stepperdemos)
 - [Seletor de API](xref:Xamarin.Forms.Stepper)

@@ -1,28 +1,28 @@
 ---
-title: Carregando XAML em tempo de execução no xamarin. Forms
-description: XAML pode ser carregado e analisado em tempo de execução com os métodos de extensão de LoadFromXaml.
+title: Carregando XAML em tempo de execução no Xamarin. Forms
+description: O XAML pode ser carregado e analisado em tempo de execução com os métodos de extensão LoadFromXaml.
 ms.prod: xamarin
 ms.assetid: 25F73FBF-2DD3-468E-A2D8-0897414F0F4A
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/12/2018
-ms.openlocfilehash: ce8ba32a1a6a1f69033615558c7ebf15d41e70fe
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: e253d2ba949a94637d7773fdc50b479679fd3f41
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61178040"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68657249"
 ---
-# <a name="loading-xaml-at-runtime-in-xamarinforms"></a>Carregando XAML em tempo de execução no xamarin. Forms
+# <a name="loading-xaml-at-runtime-in-xamarinforms"></a>Carregando XAML em tempo de execução no Xamarin. Forms
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/XAML/LoadRuntimeXAML/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-loadruntimexaml)
 
-O [ `Xamarin.Forms.Xaml` ](xref:Xamarin.Forms.Xaml) namespace inclui dois [ `LoadFromXaml` ](xref:Xamarin.Forms.Xaml.Extensions.LoadFromXaml*) métodos de extensão que podem ser usados para carregar e analisar o XAML em tempo de execução.
+O [`Xamarin.Forms.Xaml`](xref:Xamarin.Forms.Xaml) namespace inclui dois [`LoadFromXaml`](xref:Xamarin.Forms.Xaml.Extensions.LoadFromXaml*) métodos de extensão que podem ser usados para carregar e analisar XAML em tempo de execução.
 
 ## <a name="background"></a>Informações preliminares
 
-Quando uma classe de XAML de xamarin. Forms é construída, o [ `LoadFromXaml` ](xref:Xamarin.Forms.Xaml.Extensions.LoadFromXaml*) método é chamado indiretamente. Isso ocorre porque o arquivo code-behind para um XAML classe chama o `InitializeComponent` método de seu construtor:
+Quando uma classe XAML Xamarin. Forms é construída, o [`LoadFromXaml`](xref:Xamarin.Forms.Xaml.Extensions.LoadFromXaml*) método é chamado indiretamente. Isso ocorre porque o arquivo code-behind para uma classe XAML chama o `InitializeComponent` método de seu construtor:
 
 ```csharp
 public partial class MainPage : ContentPage
@@ -34,7 +34,7 @@ public partial class MainPage : ContentPage
 }
 ```
 
-Quando o Visual Studio compila um projeto que contém um arquivo XAML, ele analisa o arquivo XAML para gerar um C# arquivo de código (por exemplo, **MainPage.xaml.g.cs**) que contém a definição do `InitializeComponent` método:
+Quando o Visual Studio cria um projeto que contém um arquivo XAML, ele analisa o arquivo XAML para gerar C# um arquivo de código (por exemplo, **MainPage.XAML.g.cs**) que contém a `InitializeComponent` definição do método:
 
 ```csharp
 private void InitializeComponent()
@@ -44,16 +44,16 @@ private void InitializeComponent()
 }
 ```
 
-O `InitializeComponent` chamadas de método de [ `LoadFromXaml` ](xref:Xamarin.Forms.Xaml.Extensions.LoadFromXaml*) método para extrair o arquivo XAML (ou seu binário compilado) da biblioteca do .NET Standard. Após a extração, ele inicializa todos os objetos definidos no arquivo XAML, conecta-se-los todos juntos em relações pai-filho, anexa os manipuladores de eventos definidos no código aos eventos definido no arquivo XAML e define a árvore resultante de objetos que o conteúdo das página.
+O `InitializeComponent` método chama o [`LoadFromXaml`](xref:Xamarin.Forms.Xaml.Extensions.LoadFromXaml*) método para extrair o arquivo XAML (ou seu binário compilado) da biblioteca de .net Standard. Após a extração, ele inicializa todos os objetos definidos no arquivo XAML, conecta-os juntos em relações pai-filho, anexa manipuladores de eventos definidos no código aos eventos definidos no arquivo XAML e define a árvore resultante de objetos como o conteúdo do Web.
 
 ## <a name="loading-xaml-at-runtime"></a>Carregando XAML em tempo de execução
 
-O [ `LoadFromXaml` ](xref:Xamarin.Forms.Xaml.Extensions.LoadFromXaml*) métodos são `public`e, portanto, podem ser chamados de aplicativos xamarin. Forms para carregar e analisar o XAML em tempo de execução. Isso permite cenários como um aplicativo baixando o XAML de um serviço web, criando a exibição necessária do XAML e exibi-lo no aplicativo.
+Os [`LoadFromXaml`](xref:Xamarin.Forms.Xaml.Extensions.LoadFromXaml*) métodos são `public`e, portanto, podem ser chamados de aplicativos Xamarin. Forms para carregar e analisar XAML em tempo de execução. Isso permite cenários como um aplicativo baixando XAML de um serviço Web, criando a exibição necessária a partir do XAML e exibindo-o no aplicativo.
 
 > [!WARNING]
-> Carregar XAML em tempo de execução tem um custo de desempenho significativo e geralmente deve ser evitado.
+> O carregamento de XAML em tempo de execução tem um custo de desempenho significativo e, em geral, deve ser evitado.
 
-O exemplo de código a seguir mostra um uso simple:
+O exemplo de código a seguir mostra um uso simples:
 
 ```csharp
 using Xamarin.Forms.Xaml;
@@ -65,12 +65,12 @@ Button navigationButton = new Button().LoadFromXaml(navigationButtonXAML);
 _stackLayout.Children.Add(navigationButton);
 ```
 
-Neste exemplo, uma [ `Button` ](xref:Xamarin.Forms.Button) instância é criada, com seus [ `Text` ](xref:Xamarin.Forms.Button.Text) definido pelo valor da propriedade sendo definida do XAML no `string`. O `Button` é adicionado a um [ `StackLayout` ](xref:Xamarin.Forms.StackLayout) que foi definido no XAML para a página.
+Neste exemplo, uma [`Button`](xref:Xamarin.Forms.Button) instância é criada, com `string`o valor da [`Text`](xref:Xamarin.Forms.Button.Text) propriedade sendo definido a partir do XAML definido no. O `Button` é então adicionado a um [`StackLayout`](xref:Xamarin.Forms.StackLayout) que foi definido no XAML para a página.
 
 > [!NOTE]
-> O [ `LoadFromXaml` ](xref:Xamarin.Forms.Xaml.Extensions.LoadFromXaml*) métodos de extensão permitem que um argumento de tipo genérico a ser especificado. No entanto, raramente é necessário especificar o argumento de tipo, pois ela será inferido do tipo da instância de seu operando.
+> Os [`LoadFromXaml`](xref:Xamarin.Forms.Xaml.Extensions.LoadFromXaml*) métodos de extensão permitem que um argumento de tipo genérico seja especificado. No entanto, raramente é necessário especificar o argumento de tipo, pois ele será inferido do tipo da instância em que está operando.
 
-O [ `LoadFromXaml` ](xref:Xamarin.Forms.Xaml.Extensions.LoadFromXaml*) método pode ser usado para Inflar qualquer XAML, com o exemplo a seguir inflacionando uma [ `ContentPage` ](xref:Xamarin.Forms.ContentPage) e, em seguida, navegando até ele:
+O [`LoadFromXaml`](xref:Xamarin.Forms.Xaml.Extensions.LoadFromXaml*) método pode ser usado para aumentar qualquer XAML, com o exemplo a seguir, replanando um [`ContentPage`](xref:Xamarin.Forms.ContentPage) e, em seguida, navegando até ele:
 
 ```csharp
 using Xamarin.Forms.Xaml;
@@ -85,7 +85,7 @@ await Navigation.PushAsync(page);
 
 ## <a name="accessing-elements"></a>Acessando elementos
 
-Carregando XAML em tempo de execução com o [ `LoadFromXaml` ](xref:Xamarin.Forms.Xaml.Extensions.LoadFromXaml*) método não permite acesso fortemente tipado aos elementos XAML que especificou os nomes de objeto de tempo de execução (usando `x:Name`). No entanto, esses elementos XAML podem ser recuperados usando o [ `FindByName` ](xref:Xamarin.Forms.NameScopeExtensions.FindByName*) método e, em seguida, acessados conforme necessário:
+O carregamento de XAML em tempo [`LoadFromXaml`](xref:Xamarin.Forms.Xaml.Extensions.LoadFromXaml*) de execução com o método não permite o acesso de tipo forte aos elementos XAML que têm nomes de objeto `x:Name`de tempo de execução especificados (usando). No entanto, esses elementos XAML podem ser recuperados usando o [`FindByName`](xref:Xamarin.Forms.NameScopeExtensions.FindByName*) método e, em seguida, acessados conforme necessário:
 
 ```csharp
 // See the sample for the full XAML string
@@ -97,8 +97,8 @@ monkeyLabel.Text = "Seated Monkey";
 ...
 ```
 
-Neste exemplo, o XAML para um [ `ContentPage` ](xref:Xamarin.Forms.ContentPage) está inflado. Esse XAML inclui um [ `Label` ](xref:Xamarin.Forms.Label) denominada `monkeyName`, que é recuperado usando o [ `FindByName` ](xref:Xamarin.Forms.NameScopeExtensions.FindByName*) método, antes que ele tenha [ `Text` ](xref:Xamarin.Forms.Label.Text) propriedade está definida.
+Neste exemplo, o XAML para um [`ContentPage`](xref:Xamarin.Forms.ContentPage) é inconsistente. Esse XAML inclui um [`Label`](xref:Xamarin.Forms.Label) chamado `monkeyName`, que é recuperado usando o [`FindByName`](xref:Xamarin.Forms.NameScopeExtensions.FindByName*) método, antes que [`Text`](xref:Xamarin.Forms.Label.Text) a propriedade seja definida.
 
 ## <a name="related-links"></a>Links relacionados
 
-- [LoadRuntimeXAML (amostra)](https://developer.xamarin.com/samples/xamarin-forms/XAML/LoadRuntimeXAML/)
+- [LoadRuntimeXAML (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-loadruntimexaml)

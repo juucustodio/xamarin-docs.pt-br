@@ -1,26 +1,26 @@
 ---
-title: Modo de cor VisualElement herdado no iOS
-description: Especificidades da plataforma permitem que você consumir funcionalidade só está disponível em uma plataforma específica, sem implementar renderizadores personalizados ou efeitos. Este artigo explica como utilizar a plataforma específica do iOS que desabilita o modo de cor herdados do xamarin. Forms.
+title: Modo de cor herdado do visualelement no iOS
+description: Especificidades da plataforma permitem que você consumir funcionalidade só está disponível em uma plataforma específica, sem implementar renderizadores personalizados ou efeitos. Este artigo explica como consumir a plataforma específica do iOS que desabilita o modo de cor herdado do Xamarin. Forms.
 ms.prod: xamarin
 ms.assetid: 60FFBA67-6E06-439B-A5EB-8C808285E2CD
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: 7399301e8a979097d25f1916de76fd49a584f90e
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: 6a991e1fb3b8d0325a5fd5f56f943bf69f9be602
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65926731"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68655445"
 ---
-# <a name="visualelement-legacy-color-mode-on-ios"></a>Modo de cor VisualElement herdado no iOS
+# <a name="visualelement-legacy-color-mode-on-ios"></a>Modo de cor herdado do visualelement no iOS
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 Algumas das exibições de xamarin. Forms apresentam um modo de cor herdado. Nesse modo, quando o [ `IsEnabled` ](xref:Xamarin.Forms.VisualElement.IsEnabled) propriedade do modo de exibição é definida como `false`, o modo de exibição substituirá as cores definidas pelo usuário com os nativo as cores padrão para o estado desabilitado. Para versões anteriores compatibilidade, esse modo herdado cor permanece o comportamento padrão para modos de exibição com suporte.
 
-Este específicos da plataforma iOS desabilita esse modo herdado de cor em um [ `VisualElement` ](xref:Xamarin.Forms.VisualElement), de modo que as cores definidas em uma exibição pelo usuário permanecem até mesmo quando o modo de exibição está desabilitado. Ele é consumido em XAML, definindo o [ `VisualElement.IsLegacyColorModeEnabled` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.VisualElement.IsLegacyColorModeEnabledProperty) anexado à propriedade `false`:
+Essa plataforma do IOS específica desabilita esse modo de cor herdado em um [`VisualElement`](xref:Xamarin.Forms.VisualElement), de modo que as cores definidas em uma exibição pelo usuário permaneçam mesmo quando a exibição estiver desabilitada. Ele é consumido em XAML, definindo o [ `VisualElement.IsLegacyColorModeEnabled` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.VisualElement.IsLegacyColorModeEnabledProperty) anexado à propriedade `false`:
 
 ```xaml
 <ContentPage ...
@@ -57,6 +57,6 @@ O resultado é que o modo herdado de cor pode ser desabilitado, para que as core
 
 ## <a name="related-links"></a>Links relacionados
 
-- [PlatformSpecifics (amostra)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+- [PlatformSpecifics (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [Criação de itens específicos à plataforma](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
-- [iOSSpecific API](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)
+- [API iOSSpecific](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)

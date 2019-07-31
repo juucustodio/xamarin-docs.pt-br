@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/15/2017
-ms.openlocfilehash: 996e6469347a50523964a5b855804b0041ff8d21
-ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
+ms.openlocfilehash: 40a44b2748b29b21a1456c55cb75514f18506dd7
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65970978"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68648568"
 ---
 # <a name="images-in-xamarinforms"></a>Imagens no xamarin. Forms
 
-[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithImages/)
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithimages)
 
 _Imagens podem ser compartilhadas entre plataformas com o xamarin. Forms, podem ser carregados especificamente para cada plataforma ou podem ser baixados para exibição._
 
@@ -44,7 +44,7 @@ O [ `Aspect` ](xref:Xamarin.Forms.Image.Aspect) propriedade determina como a ima
 - [`AspectFill`](xref:Xamarin.Forms.Aspect.AspectFill) -Recorta a imagem de modo que ele preencha a área de exibição, preservando o aspecto (ie. nenhuma distorção).
 - [`AspectFit`](xref:Xamarin.Forms.Aspect.AspectFit) -E Letterbox a imagem (se necessário) para que a imagem inteira se adapta a área de exibição, com espaço em branco adicionado para o de cima para baixo ou os lados, dependendo se a imagem é altas ou largas.
 
-Imagens podem ser carregadas de um [arquivo local](#local-images), um [recurso incorporado](#embedded-images), ou [baixado](#downloading-images). Além disso, os ícones de fonte podem ser exibidos pela [ `Image` ](xref:Xamarin.Forms.Image) exibição, especificando os dados do ícone de fonte em um `FontImageSource` objeto. Para obter mais informações, consulte [exibir ícones de fonte](~/xamarin-forms/user-interface/text/fonts.md#display-font-icons) na [fontes](~/xamarin-forms/user-interface/text/fonts.md) guia.
+Imagens podem ser carregadas de um [arquivo local](#local-images), um [recurso incorporado](#embedded-images), ou [baixado](#downloading-images). Além disso, os [`Image`](xref:Xamarin.Forms.Image) ícones de fonte podem ser exibidos pelo modo de exibição especificando os dados de ícone de fonte em um `FontImageSource` objeto. Para obter mais informações, consulte [exibir ícones de fonte](~/xamarin-forms/user-interface/text/fonts.md#display-font-icons) no guia [fontes](~/xamarin-forms/user-interface/text/fonts.md) .
 
 ## <a name="local-images"></a>Imagens locais
 
@@ -53,11 +53,11 @@ Arquivos de imagem podem ser adicionados a cada projeto de aplicativo e referenc
 Para usar uma única imagem em todos os aplicativos, *o mesmo nome de arquivo deve ser usado em todas as plataformas*, e ele deve ser um nome de recurso válido do Android (ie. são permitidos apenas letras minúsculas, números, sublinhado e o período de).
 
 - **iOS** – o preferencial a maneira de gerenciar e dar suporte a imagens desde que o iOS 9 é usar **conjuntos de imagem do catálogo de ativos**, que deve conter todas as versões de uma imagem que são necessárias para dar suporte a vários dispositivos e fatores de escala um aplicativo. Para obter mais informações, consulte [adicionar imagens a um conjunto de imagem de catálogo ativo](~/ios/app-fundamentals/images-icons/displaying-an-image.md).
-- **Android** -colocar imagens em de **recursos/drawable** diretório com **ação de compilação: AndroidResource**. Versões de DPI alto e baixo de uma imagem também podem ser fornecidas (adequadamente chamado **recursos** subdiretórios, como **desenháveis ldpi**, **drawable-hdpi**e **desenháveis xhdpi**).
-- **Plataforma universal do Windows (UWP)** -Insira imagens no diretório de raiz do aplicativo com **ação de compilação: Content**.
+- Imagens no local do **Android** no diretório de **recursos/** empates **com a ação de compilação: AndroidResource**. Versões de DPI alto e baixo de uma imagem também podem ser fornecidas (adequadamente chamado **recursos** subdiretórios, como **desenháveis ldpi**, **drawable-hdpi**e **desenháveis xhdpi**).
+- **Plataforma universal do Windows (UWP)** -Coloque as imagens no diretório raiz do aplicativo com **a ação de compilação: Conteúdo**.
 
 > [!IMPORTANT]
-> Antes do iOS 9, imagens normalmente foram colocadas na **recursos** pasta com **ação de compilação: BundleResource**. No entanto, esse método de trabalhar com imagens em um aplicativo iOS foi substituído pela Apple. Para obter mais informações, consulte [tamanhos de imagem e nomes de arquivo](~/ios/app-fundamentals/images-icons/displaying-an-image.md).
+> Antes do IOS 9, as imagens normalmente eram colocadas na pasta de recursos **com a ação de Build: BundleResource**. No entanto, esse método de trabalhar com imagens em um aplicativo iOS foi substituído pela Apple. Para obter mais informações, consulte [tamanhos de imagem e nomes de arquivo](~/ios/app-fundamentals/images-icons/displaying-an-image.md).
 
 Aderir a essas regras de nomenclatura de arquivo e o posicionamento permite que o XAML a seguir carregar e exibir a imagem em todas as plataformas:
 
@@ -90,7 +90,7 @@ iOS, Android e UWP incluem suporte para resoluções de imagem diferente, em que
 
 A maneira preferencial para gerenciar imagens, pois o iOS 9 é arrastar imagens para cada resolução necessária para o conjunto de imagens do catálogo de ativos apropriado. Para obter mais informações, consulte [adicionar imagens a um conjunto de imagem de catálogo ativo](~/ios/app-fundamentals/images-icons/displaying-an-image.md).
 
-Antes do iOS 9, versões de retina da imagem pode ser colocadas na **recursos** pasta - dois e três vezes a resolução com um **@2x** ou **@3x**sufixos de nome de arquivo antes da extensão de arquivo (por exemplo. **myimage@2x.png**). No entanto, esse método de trabalhar com imagens em um aplicativo iOS foi substituído pela Apple. Para obter mais informações, consulte [tamanhos de imagem e nomes de arquivo](~/ios/app-fundamentals/images-icons/displaying-an-image.md).
+Antes do iOS 9, versões de retina da imagem pode ser colocadas na **recursos** pasta - dois e três vezes a resolução com um **@2x** ou **@3x** sufixos de nome de arquivo antes da extensão de arquivo (por exemplo. **myimage@2x.png** ). No entanto, esse método de trabalhar com imagens em um aplicativo iOS foi substituído pela Apple. Para obter mais informações, consulte [tamanhos de imagem e nomes de arquivo](~/ios/app-fundamentals/images-icons/displaying-an-image.md).
 
 Imagens de resolução alternativo Android devem ser colocadas em [diretórios especialmente denominada](https://developer.android.com/guide/practices/screens_support.html) no projeto do Android, conforme mostrado na seguinte captura de tela:
 
@@ -102,19 +102,19 @@ Nomes de arquivo de imagem UWP [pode ser com o sufixo `.scale-xxx` antes da exte
 
 Alguns controles têm propriedades que exibem uma imagem, como:
 
-- [`Page`](xref:Xamarin.Forms.Page) -Qualquer tipo que deriva de página `Page` tem [ `IconImageSource` ](xref:Xamarin.Forms.Page.IconImageSource) e [ `BackgroundImageSource` ](xref:Xamarin.Forms.Page.BackgroundImageSource) propriedades que podem ser atribuídas a um arquivo, o recurso inserido, o URI ou o fluxo. Em determinadas circunstâncias, como quando um [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage) está exibindo um [ `ContentPage` ](xref:Xamarin.Forms.ContentPage), o ícone será exibido se houver suporte pela plataforma.
+- [`Page`](xref:Xamarin.Forms.Page)-Qualquer tipo de página que deriva de `Page` tem [`IconImageSource`](xref:Xamarin.Forms.Page.IconImageSource) propriedades [`BackgroundImageSource`](xref:Xamarin.Forms.Page.BackgroundImageSource) e que pode ser atribuído a um arquivo, recurso inserido, URI ou fluxo. Em determinadas circunstâncias, como quando um [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage) está exibindo um [ `ContentPage` ](xref:Xamarin.Forms.ContentPage), o ícone será exibido se houver suporte pela plataforma.
 
   > [!IMPORTANT]
-  > No iOS, o [ `Page.IconImageSource` ](xref:Xamarin.Forms.Page.IconImageSource) não é possível popular a propriedade de uma imagem em um conjunto de imagens de catálogo ativo. Em vez disso, carregar imagens de ícone para o `Page.IconImageSource` propriedade de um arquivo, o recurso inserido, o URI ou o fluxo.
+  > No iOS, o [ `Page.IconImageSource` ](xref:Xamarin.Forms.Page.IconImageSource) não é possível popular a propriedade de uma imagem em um conjunto de imagens de catálogo ativo. Em vez disso, carregue imagens de `Page.IconImageSource` ícone para a propriedade de um arquivo, recurso inserido, URI ou fluxo.
 
-- [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem) – Tem um [ `IconImageSource` ](xref:Xamarin.Forms.MenuItem.IconImageSource) propriedade que pode ser definida como uma imagem que é carregada de um arquivo, o recurso inserido, o URI ou o fluxo.
-- [`ImageCell`](xref:Xamarin.Forms.ImageCell) – Tem um [ `ImageSource` ](xref:Xamarin.Forms.ImageCell.ImageSource) recuperados de propriedade que pode ser definida como uma imagem de um arquivo, o recurso inserido, o URI ou o fluxo.
+- [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem)-Tem uma [`IconImageSource`](xref:Xamarin.Forms.MenuItem.IconImageSource) propriedade que pode ser definida como uma imagem que é carregada de um arquivo, recurso inserido, URI ou fluxo.
+- [`ImageCell`](xref:Xamarin.Forms.ImageCell)-Tem uma [`ImageSource`](xref:Xamarin.Forms.ImageCell.ImageSource) propriedade que pode ser definida para uma imagem recuperada de um arquivo, recurso inserido, URI ou fluxo.
 
 ## <a name="embedded-images"></a>Imagens inseridas
 
 Imagens inseridas também são fornecidas com um aplicativo (como imagens locais), mas em vez de ter uma cópia da imagem na estrutura de arquivos de cada aplicativo a imagem do arquivo é inserido no assembly como um recurso. Esse método de distribuição de imagens é recomendado quando imagens idênticas são usadas em cada plataforma e é especialmente adequado para a criação de componentes, como a imagem é fornecida com o código.
 
-Para inserir uma imagem em um projeto, clique com botão direito para adicionar novos itens e selecione a imagem/s que você deseja adicionar. Por padrão a imagem terá **ação de compilação: None**; isso deve ser definido como **ação de compilação: EmbeddedResource**.
+Para inserir uma imagem em um projeto, clique com botão direito para adicionar novos itens e selecione a imagem/s que você deseja adicionar. Por padrão, a imagem terá **uma ação de Build: Nenhum**; isso precisa ser definido para a **ação de Build: EmbeddedResource**.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
@@ -298,7 +298,7 @@ Configurando ícones e telas de abertura para aplicativos xamarin. Forms é feit
 
 Consulte a [iOS trabalhando com imagens](~/ios/app-fundamentals/images-icons/index.md), [Google iconografia](https://developer.android.com/design/style/iconography.html), e [diretrizes para ativos de bloco e ícone](/windows/uwp/controls-and-patterns/tiles-and-notifications-app-assets/) para obter mais informações sobre como criar esses recursos de aplicativo.
 
-Além disso, os ícones de fonte podem ser exibidos pela [ `Image` ](xref:Xamarin.Forms.Image) exibição, especificando os dados do ícone de fonte em um `FontImageSource` objeto. Para obter mais informações, consulte [exibir ícones de fonte](~/xamarin-forms/user-interface/text/fonts.md#display-font-icons) na [fontes](~/xamarin-forms/user-interface/text/fonts.md) guia.
+Além disso, os [`Image`](xref:Xamarin.Forms.Image) ícones de fonte podem ser exibidos pelo modo de exibição especificando os dados de ícone de fonte em um `FontImageSource` objeto. Para obter mais informações, consulte [exibir ícones de fonte](~/xamarin-forms/user-interface/text/fonts.md#display-font-icons) no guia [fontes](~/xamarin-forms/user-interface/text/fonts.md) .
 
 ## <a name="splash-screens"></a>Telas de abertura
 
@@ -314,7 +314,7 @@ Imagens de tela de abertura e de ícone de aplicativo são a configuração e co
 
 ## <a name="related-links"></a>Links relacionados
 
-- [WorkingWithImages (amostra)](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithImages/)
+- [WorkingWithImages (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithimages)
 - [iOS trabalhando com imagens](~/ios/app-fundamentals/images-icons/index.md)
 - [Iconografia Android](https://developer.android.com/design/style/iconography.html)
 - [Diretrizes para ativos de bloco e ícone](/windows/uwp/controls-and-patterns/tiles-and-notifications-app-assets/)

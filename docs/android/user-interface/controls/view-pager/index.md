@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: 0535dc5d2abcfa1587b8101d7a4e382782efb8ca
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 8c7aae672d284d4105c6b09dfe81b72cf4ad519b
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68510200"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68645509"
 ---
 # <a name="viewpager"></a>ViewPager
 
@@ -31,10 +31,10 @@ Normalmente, `ViewPager` é usado em conjunto com [fragmentos](~/android/platfor
 
 Este guia demonstra as duas abordagens: 
 
--   No [Viewpager com exibições](~/android/user-interface/controls/view-pager/viewpager-and-views.md), um aplicativo [TreePager](https://developer.xamarin.com/samples/monodroid/UserInterface/TreePager/) é desenvolvido para demonstrar como usar `ViewPager` o para exibir exibições de um catálogo de árvore (uma galeria de imagens das árvores decídua e verde). 
+-   No [Viewpager com exibições](~/android/user-interface/controls/view-pager/viewpager-and-views.md), um aplicativo [TreePager](https://docs.microsoft.com/samples/xamarin/monodroid-samples/userinterface-treepager) é desenvolvido para demonstrar como usar `ViewPager` o para exibir exibições de um catálogo de árvore (uma galeria de imagens das árvores decídua e verde). 
     `PagerTabStrip`e `PagerTitleStrip` são usados para exibir títulos que ajudam na navegação da página.
 
--   Em [Viewpager com fragmentos](~/android/user-interface/controls/view-pager/viewpager-and-fragments.md), um aplicativo [FlashCardPager](https://developer.xamarin.com/samples/monodroid/UserInterface/TreePager/) um pouco mais complexo é desenvolvido para demonstrar como usar `ViewPager` com `Fragment`s para criar um aplicativo que apresenta problemas de matemática como cartões flash e responde à entrada do usuário. 
+-   Em [Viewpager com fragmentos](~/android/user-interface/controls/view-pager/viewpager-and-fragments.md), um aplicativo [FlashCardPager](https://docs.microsoft.com/samples/xamarin/monodroid-samples/userinterface-treepager) um pouco mais complexo é desenvolvido para demonstrar como usar `ViewPager` com `Fragment`s para criar um aplicativo que apresenta problemas de matemática como cartões flash e responde à entrada do usuário. 
 
 
 ## <a name="requirements"></a>Requisitos
@@ -85,5 +85,5 @@ Este guia demonstra como immplement `ViewPager`, adaptador e componentes de apli
 
 ## <a name="related-links"></a>Links relacionados
 
-- [TreePager (exemplo)](https://developer.xamarin.com/samples/monodroid/UserInterface/TreePager)
-- [FlashCardPager (exemplo)](https://developer.xamarin.com/samples/monodroid/UserInterface/FlashCardPager)
+- [TreePager (exemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/userinterface-treepager)
+- [FlashCardPager (exemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/userinterface-flashcardpager)

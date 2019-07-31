@@ -1,6 +1,6 @@
 ---
 title: Criar um aplicativo Xamarin.Forms de página única
-description: Este artigo explica como criar um aplicativo do xamarin. Forms de plataforma cruzada de página única, que permite que você insira uma observação e mantê-lo no armazenamento do dispositivo.
+description: Este artigo explica como criar um aplicativo Xamarin. Forms de plataforma cruzada de única página, que permite que você insira uma anotação e persista-a no armazenamento do dispositivo.
 zone_pivot_groups: platform-dev16
 ms.topic: quickstart
 ms.prod: xamarin
@@ -9,24 +9,24 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/01/2019
-ms.openlocfilehash: 83c71962ceb4a30c2e05d44fffe4d64b54e4883d
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: 48af81856ebe92a712b5d41d8d856bb00a526982
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67832027"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68655002"
 ---
-# <a name="create-a-single-page-xamarinforms-application"></a>Criar um aplicativo xamarin. Forms de página única
+# <a name="create-a-single-page-xamarinforms-application"></a>Criar um aplicativo Xamarin. Forms de página única
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/SinglePage/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-singlepage/)
 
-Neste início rápido, você aprenderá como:
+Neste guia de início rápido, você aprenderá a:
 
-- Crie um aplicativo de plataforma cruzada xamarin. Forms.
-- Defina a interface do usuário para uma página usando a linguagem de marcação de aplicativo extensível (XAML).
-- Interagir com elementos de interface do usuário XAML do código.
+- Crie um aplicativo Xamarin. Forms de plataforma cruzada.
+- Defina a interface do usuário para uma página usando XAML (eXtensible Application Markup Language).
+- Interaja com elementos XAML da interface do usuário do código.
 
-O guia de início rápido explica como criar um aplicativo de xamarin. Forms entre plataformas, que permite que você insira uma observação e mantê-lo no armazenamento do dispositivo. O aplicativo final é mostrado abaixo:
+O guia de início rápido explica como criar um aplicativo Xamarin. Forms de plataforma cruzada, que permite que você insira uma anotação e persista-a no armazenamento do dispositivo. O aplicativo final é mostrado abaixo:
 
 [![](single-page-images/screenshots-sml.png "Aplicativo de Notas")](single-page-images/screenshots.png#lightbox "Aplicativo de Notas")
 
@@ -34,30 +34,30 @@ O guia de início rápido explica como criar um aplicativo de xamarin. Forms ent
 
 ### <a name="prerequisites"></a>Pré-requisitos
 
-- Visual Studio 2019 (versão mais recente), com o **desenvolvimento móvel com .NET** carga de trabalho instalada.
-- Dados de Conhecimento da C#.
-- (opcional) Um Mac emparelhado para compilar o aplicativo no iOS.
+- Visual Studio 2019 (versão mais recente), com o **desenvolvimento móvel com** carga de trabalho do .net instalada.
+- Conhecimento de C#.
+- adicional Um Mac emparelhado para compilar o aplicativo no iOS.
 
 Para obter mais informações sobre esses pré-requisitos, consulte [instalando o Xamarin](~/get-started/installation/index.md). Para obter informações sobre como conectar o Visual Studio 2019 a um host de build Mac, confira [Emparelhar com o Mac para desenvolvimento no Xamarin.iOS](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
 
-## <a name="get-started-with-visual-studio-2019"></a>Introdução ao Visual Studio de 2019
+## <a name="get-started-with-visual-studio-2019"></a>Introdução ao Visual Studio 2019
 
-1. Inicie o Visual Studio de 2019 e na janela de início, clique em **criar um novo projeto** para criar um novo projeto:
+1. Inicie o Visual Studio 2019 e, na janela iniciar, clique em **criar um novo projeto** para criar um novo projeto:
 
     ![](single-page-images/vs/new-solution-2019.png "Novo Projeto")
 
-2. No **criar um novo projeto** janela, selecione **Mobile** no **tipo de projeto** lista suspensa, selecione o **aplicativo móvel (xamarin. Forms** modelo) e clique no **próxima** botão:
+2. Na janela **criar um novo projeto** , selecione **móvel** na lista suspensa **tipo de projeto** , selecione o **aplicativo móvel (modelo Xamarin. Forms** ) e clique no botão **Avançar** :
 
     ![](single-page-images/vs/new-project-2019.png "Modelos de Projeto de Multiplataforma")
 
-3. No **configurar seu novo projeto** janela, defina as **nome do projeto** para **notas**, escolha um local adequado para o projeto e clique no **criar** botão:
+3. Na janela **configurar seu novo projeto** , defina o **nome do projeto** como **anotações**, escolha um local adequado para o projeto e clique no botão **criar** :
 
     ![](single-page-images/vs/configure-project.png "Configurar seu projeto")
 
     > [!IMPORTANT]
     > Os snippets C# e XAML neste início rápido requerem que a solução seja nomeada como **Notas**. O uso de um nome diferente resultará em erros de build ao copiar o código deste início rápido para a solução.
 
-4. No **novo aplicativo de plataforma cruzada** caixa de diálogo, clique em **aplicativo em branco**e clique no **Okey** botão:
+4. Na caixa de diálogo **novo aplicativo de plataforma cruzada** , clique em **aplicativo em branco**e clique no botão **OK** :
 
     ![](single-page-images/vs/new-app-2019.png "Novo Aplicativo de Multiplataforma")
 
@@ -96,7 +96,7 @@ Para obter mais informações sobre esses pré-requisitos, consulte [instalando 
     </ContentPage>
     ```
 
-    Esse código define declarativamente a interface do usuário para a página, que consiste em uma [ `Label` ](xref:Xamarin.Forms.Label) para exibir texto, uma [ `Editor` ](xref:Xamarin.Forms.Editor) para entrada de texto e dois [ `Button` ](xref:Xamarin.Forms.Button) instâncias que direcionam o aplicativo para salvar ou excluir um arquivo. As duas instâncias de `Button` são dispostas horizontalmente em uma [`Grid`](xref:Xamarin.Forms.Grid), com o `Label`, o `Editor` e a `Grid` dispostos verticalmente em um [`StackLayout`](xref:Xamarin.Forms.StackLayout). Para obter mais informações sobre como criar a interface do usuário, consulte [interface do usuário](deepdive.md#user-interface) na [aprofundamento de início rápido de xamarin. Forms](deepdive.md).
+    Esse código define declarativamente a interface do usuário para a página, que consiste em [`Label`](xref:Xamarin.Forms.Label) um para exibir texto, [`Editor`](xref:Xamarin.Forms.Editor) uma entrada de texto e duas [`Button`](xref:Xamarin.Forms.Button) instâncias que direcionam o aplicativo para salvar ou excluir um arquivo. As duas instâncias de `Button` são dispostas horizontalmente em uma [`Grid`](xref:Xamarin.Forms.Grid), com o `Label`, o `Editor` e a `Grid` dispostos verticalmente em um [`StackLayout`](xref:Xamarin.Forms.StackLayout). Para obter mais informações sobre como criar a interface do usuário, consulte [interface do usuário](deepdive.md#user-interface) no guia de [início rápido do Xamarin. Forms](deepdive.md).
 
     Salve as alterações em **MainPage.xaml** ao pressionar **CTRL+S** e feche o arquivo.
 
@@ -144,7 +144,7 @@ Para obter mais informações sobre esses pré-requisitos, consulte [instalando 
     }
     ```
 
-    Esse código define um campo `_fileName`, que referencia um arquivo chamado `notes.txt` que armazenará os dados de notas na pasta de dados local do aplicativo. Quando o construtor de página for executado o arquivo será lido, caso exista, e exibido no [`Editor`](xref:Xamarin.Forms.Editor). Quando o [`Button`](xref:Xamarin.Forms.Button) **Salvar** for pressionado, o manipulador de eventos `OnSaveButtonClicked` será executado, salvando no arquivo o conteúdo do `Editor`. Quando o `Button` **Excluir** for pressionado, o manipulador de eventos `OnDeleteButtonClicked` será executado, excluindo o arquivo, caso ele exista, e removendo todo o texto do `Editor`. Para obter mais informações sobre a interação do usuário, consulte [responder à interação do usuário](deepdive.md#responding-to-user-interaction) na [aprofundamento de início rápido de xamarin. Forms](deepdive.md).
+    Esse código define um campo `_fileName`, que referencia um arquivo chamado `notes.txt` que armazenará os dados de notas na pasta de dados local do aplicativo. Quando o construtor de página for executado o arquivo será lido, caso exista, e exibido no [`Editor`](xref:Xamarin.Forms.Editor). Quando o [`Button`](xref:Xamarin.Forms.Button) **Salvar** for pressionado, o manipulador de eventos `OnSaveButtonClicked` será executado, salvando no arquivo o conteúdo do `Editor`. Quando o `Button` **Excluir** for pressionado, o manipulador de eventos `OnDeleteButtonClicked` será executado, excluindo o arquivo, caso ele exista, e removendo todo o texto do `Editor`. Para obter mais informações sobre a interação do usuário, consulte [respondendo à interação do usuário](deepdive.md#responding-to-user-interaction) no guia de [início rápido do Xamarin. Forms](deepdive.md).
 
     Salve as alterações em **MainPage.xaml.cs** ao pressionar **CTRL+S** e feche o arquivo.
 
@@ -160,11 +160,11 @@ Para obter mais informações sobre esses pré-requisitos, consulte [instalando 
 
     ![](single-page-images/vs/android-start.png "Barra de ferramentas do Visual Studio para Android")
 
-    [![](single-page-images/vs/notes-android.png "Anotações no emulador do Android")](single-page-images/vs/notes-android-large.png#lightbox "Notes in the Android Simulator")
+    [![](single-page-images/vs/notes-android.png "Observações no Android Emulator")](single-page-images/vs/notes-android-large.png#lightbox "Notes in the Android Simulator")
 
     Insira uma nota e pressione o botão **Salvar**.
 
-    Para obter mais informações sobre como o aplicativo é iniciado em cada plataforma, consulte [iniciá-lo em cada plataforma](deepdive.md#launching-the-application-on-each-platform) na [aprofundamento de início rápido de xamarin. Forms](deepdive.md).
+    Para obter mais informações sobre como o aplicativo é iniciado em cada plataforma, consulte [iniciando o aplicativo em cada plataforma](deepdive.md#launching-the-application-on-each-platform) no guia de [início rápido do Xamarin. Forms](deepdive.md).
 
     > [!NOTE]
     > As etapas a seguir deverão ser realizadas somente se você tiver um [Mac emparelhado](~/ios/get-started/installation/windows/connecting-to-mac/index.md) que atenda aos requisitos do sistema para o desenvolvimento no Xamarin.Forms.
@@ -177,26 +177,26 @@ Para obter mais informações sobre esses pré-requisitos, consulte [instalando 
 
     ![](single-page-images/vs/ios-start.png "Barra de ferramentas do iOS do Visual Studio")
 
-    [![](single-page-images/vs/notes-ios.png "Anotações no simulador de iOS")](single-page-images/vs/notes-ios-large.png#lightbox "anotações no simulador de iOS")
+    [Observações no simulador de Ios ![(single-page-images/vs/notes-ios.png " ")]] (single-page-images/vs/notes-ios-large.png#lightbox "Observações no simulador de Ios")
 
     Insira uma nota e pressione o botão **Salvar**.
 
-    Para obter mais informações sobre como o aplicativo é iniciado em cada plataforma, consulte [iniciá-lo em cada plataforma](deepdive.md#launching-the-application-on-each-platform) na [aprofundamento de início rápido de xamarin. Forms](deepdive.md).
+    Para obter mais informações sobre como o aplicativo é iniciado em cada plataforma, consulte [iniciando o aplicativo em cada plataforma](deepdive.md#launching-the-application-on-each-platform) no guia de [início rápido do Xamarin. Forms](deepdive.md).
 
 ::: zone-end
 ::: zone pivot="win-vs2017"
 
 ### <a name="prerequisites"></a>Pré-requisitos
 
-- Visual Studio 2017, com o **desenvolvimento móvel com .NET** carga de trabalho instalada.
-- Dados de Conhecimento da C#.
-- (opcional) Um Mac emparelhado para compilar o aplicativo no iOS.
+- Visual Studio 2017, com o **desenvolvimento móvel com** carga de trabalho do .net instalado.
+- Conhecimento de C#.
+- adicional Um Mac emparelhado para compilar o aplicativo no iOS.
 
 Para obter mais informações sobre esses pré-requisitos, consulte [instalando o Xamarin](~/get-started/installation/index.md). Para obter informações sobre como conectar o Visual Studio 2019 a um host de build Mac, confira [Emparelhar com o Mac para desenvolvimento no Xamarin.iOS](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
 
 ## <a name="get-started-with-visual-studio-2017"></a>Introdução ao Visual Studio 2017
 
-1. Inicie o Visual Studio 2017 e, na página inicial, clique em **criar novo projeto...**  para criar um novo projeto:
+1. Inicie o Visual Studio 2017 e, na página Iniciar, clique em **criar novo projeto...** para criar um novo projeto:
 
     ![](single-page-images/vs/new-solution.png "Novo Projeto")
 
@@ -246,7 +246,7 @@ Para obter mais informações sobre esses pré-requisitos, consulte [instalando 
     </ContentPage>
     ```
 
-    Esse código define declarativamente a interface do usuário para a página, que consiste em uma [ `Label` ](xref:Xamarin.Forms.Label) para exibir texto, uma [ `Editor` ](xref:Xamarin.Forms.Editor) para entrada de texto e dois [ `Button` ](xref:Xamarin.Forms.Button) instâncias que direcionam o aplicativo para salvar ou excluir um arquivo. As duas instâncias de `Button` são dispostas horizontalmente em uma [`Grid`](xref:Xamarin.Forms.Grid), com o `Label`, o `Editor` e a `Grid` dispostos verticalmente em um [`StackLayout`](xref:Xamarin.Forms.StackLayout). Para obter mais informações sobre como criar a interface do usuário, consulte [interface do usuário](deepdive.md#user-interface) na [aprofundamento de início rápido de xamarin. Forms](deepdive.md).
+    Esse código define declarativamente a interface do usuário para a página, que consiste em [`Label`](xref:Xamarin.Forms.Label) um para exibir texto, [`Editor`](xref:Xamarin.Forms.Editor) uma entrada de texto e duas [`Button`](xref:Xamarin.Forms.Button) instâncias que direcionam o aplicativo para salvar ou excluir um arquivo. As duas instâncias de `Button` são dispostas horizontalmente em uma [`Grid`](xref:Xamarin.Forms.Grid), com o `Label`, o `Editor` e a `Grid` dispostos verticalmente em um [`StackLayout`](xref:Xamarin.Forms.StackLayout). Para obter mais informações sobre como criar a interface do usuário, consulte [interface do usuário](deepdive.md#user-interface) no guia de [início rápido do Xamarin. Forms](deepdive.md).
 
     Salve as alterações em **MainPage.xaml** ao pressionar **CTRL+S** e feche o arquivo.
 
@@ -294,7 +294,7 @@ Para obter mais informações sobre esses pré-requisitos, consulte [instalando 
     }
     ```
 
-    Esse código define um campo `_fileName`, que referencia um arquivo chamado `notes.txt` que armazenará os dados de notas na pasta de dados local do aplicativo. Quando o construtor de página for executado o arquivo será lido, caso exista, e exibido no [`Editor`](xref:Xamarin.Forms.Editor). Quando o [`Button`](xref:Xamarin.Forms.Button) **Salvar** for pressionado, o manipulador de eventos `OnSaveButtonClicked` será executado, salvando no arquivo o conteúdo do `Editor`. Quando o `Button` **Excluir** for pressionado, o manipulador de eventos `OnDeleteButtonClicked` será executado, excluindo o arquivo, caso ele exista, e removendo todo o texto do `Editor`. Para obter mais informações sobre a interação do usuário, consulte [responder à interação do usuário](deepdive.md#responding-to-user-interaction) na [aprofundamento de início rápido de xamarin. Forms](deepdive.md).
+    Esse código define um campo `_fileName`, que referencia um arquivo chamado `notes.txt` que armazenará os dados de notas na pasta de dados local do aplicativo. Quando o construtor de página for executado o arquivo será lido, caso exista, e exibido no [`Editor`](xref:Xamarin.Forms.Editor). Quando o [`Button`](xref:Xamarin.Forms.Button) **Salvar** for pressionado, o manipulador de eventos `OnSaveButtonClicked` será executado, salvando no arquivo o conteúdo do `Editor`. Quando o `Button` **Excluir** for pressionado, o manipulador de eventos `OnDeleteButtonClicked` será executado, excluindo o arquivo, caso ele exista, e removendo todo o texto do `Editor`. Para obter mais informações sobre a interação do usuário, consulte [respondendo à interação do usuário](deepdive.md#responding-to-user-interaction) no guia de [início rápido do Xamarin. Forms](deepdive.md).
 
     Salve as alterações em **MainPage.xaml.cs** ao pressionar **CTRL+S** e feche o arquivo.
 
@@ -310,11 +310,11 @@ Para obter mais informações sobre esses pré-requisitos, consulte [instalando 
 
     ![](single-page-images/vs/android-start.png "Barra de ferramentas do Visual Studio para Android")
 
-    [![](single-page-images/vs/notes-android.png "Anotações no emulador do Android")](single-page-images/vs/notes-android-large.png#lightbox "Notes in the Android Simulator")
+    [![](single-page-images/vs/notes-android.png "Observações no Android Emulator")](single-page-images/vs/notes-android-large.png#lightbox "Notes in the Android Simulator")
 
     Insira uma nota e pressione o botão **Salvar**.
 
-    Para obter mais informações sobre como o aplicativo é iniciado em cada plataforma, consulte [iniciá-lo em cada plataforma](deepdive.md#launching-the-application-on-each-platform) na [aprofundamento de início rápido de xamarin. Forms](deepdive.md).
+    Para obter mais informações sobre como o aplicativo é iniciado em cada plataforma, consulte [iniciando o aplicativo em cada plataforma](deepdive.md#launching-the-application-on-each-platform) no guia de [início rápido do Xamarin. Forms](deepdive.md).
 
     > [!NOTE]
     > As etapas a seguir deverão ser realizadas somente se você tiver um [Mac emparelhado](~/ios/get-started/installation/windows/connecting-to-mac/index.md) que atenda aos requisitos do sistema para o desenvolvimento no Xamarin.Forms.
@@ -327,26 +327,26 @@ Para obter mais informações sobre esses pré-requisitos, consulte [instalando 
 
     ![](single-page-images/vs/ios-start.png "Barra de ferramentas do iOS do Visual Studio")
 
-    [![](single-page-images/vs/notes-ios.png "Anotações no simulador de iOS")](single-page-images/vs/notes-ios-large.png#lightbox "anotações no simulador de iOS")
+    [Observações no simulador de Ios ![(single-page-images/vs/notes-ios.png " ")]] (single-page-images/vs/notes-ios-large.png#lightbox "Observações no simulador de Ios")
 
     Insira uma nota e pressione o botão **Salvar**.
 
-    Para obter mais informações sobre como o aplicativo é iniciado em cada plataforma, consulte [iniciá-lo em cada plataforma](deepdive.md#launching-the-application-on-each-platform) na [aprofundamento de início rápido de xamarin. Forms](deepdive.md).
+    Para obter mais informações sobre como o aplicativo é iniciado em cada plataforma, consulte [iniciando o aplicativo em cada plataforma](deepdive.md#launching-the-application-on-each-platform) no guia de [início rápido do Xamarin. Forms](deepdive.md).
 
 ::: zone-end
 ::: zone pivot="macos"
 
 ### <a name="prerequisites"></a>Pré-requisitos
 
-- Visual Studio para Mac (versão mais recente), iOS e o suporte da plataforma Android instalado.
+- Visual Studio para Mac (versão mais recente), com o suporte à plataforma iOS e Android instalado.
 - Xcode (versão mais recente).
-- Dados de Conhecimento da C#.
+- Conhecimento de C#.
 
 Para obter mais informações sobre esses pré-requisitos, consulte [instalando o Xamarin](~/get-started/installation/index.md).
 
 ## <a name="get-started-with-visual-studio-for-mac"></a>Introdução ao Visual Studio para Mac
 
-1. Clique em Iniciar o Visual Studio para Mac e na janela de início **New** para criar um novo projeto:
+1. Inicie o Visual Studio para Mac e, na janela iniciar, clique em **novo** para criar um novo projeto:
 
     ![](single-page-images/vsmac/new-project.png "Nova Solução")
 
@@ -400,7 +400,7 @@ Para obter mais informações sobre esses pré-requisitos, consulte [instalando 
     </ContentPage>
     ```
 
-    Esse código define declarativamente a interface do usuário para a página, que consiste em uma [ `Label` ](xref:Xamarin.Forms.Label) para exibir texto, uma [ `Editor` ](xref:Xamarin.Forms.Editor) para entrada de texto e dois [ `Button` ](xref:Xamarin.Forms.Button) instâncias que direcionam o aplicativo para salvar ou excluir um arquivo. As duas instâncias de `Button` são dispostas horizontalmente em uma [`Grid`](xref:Xamarin.Forms.Grid), com o `Label`, o `Editor` e a `Grid` dispostos verticalmente em um [`StackLayout`](xref:Xamarin.Forms.StackLayout). Para obter mais informações sobre como criar a interface do usuário, consulte [interface do usuário](deepdive.md#user-interface) na [aprofundamento de início rápido de xamarin. Forms](deepdive.md).
+    Esse código define declarativamente a interface do usuário para a página, que consiste em [`Label`](xref:Xamarin.Forms.Label) um para exibir texto, [`Editor`](xref:Xamarin.Forms.Editor) uma entrada de texto e duas [`Button`](xref:Xamarin.Forms.Button) instâncias que direcionam o aplicativo para salvar ou excluir um arquivo. As duas instâncias de `Button` são dispostas horizontalmente em uma [`Grid`](xref:Xamarin.Forms.Grid), com o `Label`, o `Editor` e a `Grid` dispostos verticalmente em um [`StackLayout`](xref:Xamarin.Forms.StackLayout). Para obter mais informações sobre como criar a interface do usuário, consulte [interface do usuário](deepdive.md#user-interface) no guia de [início rápido do Xamarin. Forms](deepdive.md).
 
     Salve as alterações em **MainPage.xaml** ao escolher **Arquivo > Salvar** (ou ao pressionar **&#8984; + S**) e feche o arquivo.
 
@@ -448,7 +448,7 @@ Para obter mais informações sobre esses pré-requisitos, consulte [instalando 
     }
     ```
 
-    Esse código define um campo `_fileName`, que referencia um arquivo chamado `notes.txt` que armazenará os dados de notas na pasta de dados local do aplicativo. Quando o construtor de página for executado o arquivo será lido, caso exista, e exibido no [`Editor`](xref:Xamarin.Forms.Editor). Quando o [`Button`](xref:Xamarin.Forms.Button) **Salvar** for pressionado, o manipulador de eventos `OnSaveButtonClicked` será executado, salvando no arquivo o conteúdo do `Editor`. Quando o `Button` **Excluir** for pressionado, o manipulador de eventos `OnDeleteButtonClicked` será executado, excluindo o arquivo, caso ele exista, e removendo todo o texto do `Editor`. Para obter mais informações sobre a interação do usuário, consulte [responder à interação do usuário](deepdive.md#responding-to-user-interaction) na [aprofundamento de início rápido de xamarin. Forms](deepdive.md).
+    Esse código define um campo `_fileName`, que referencia um arquivo chamado `notes.txt` que armazenará os dados de notas na pasta de dados local do aplicativo. Quando o construtor de página for executado o arquivo será lido, caso exista, e exibido no [`Editor`](xref:Xamarin.Forms.Editor). Quando o [`Button`](xref:Xamarin.Forms.Button) **Salvar** for pressionado, o manipulador de eventos `OnSaveButtonClicked` será executado, salvando no arquivo o conteúdo do `Editor`. Quando o `Button` **Excluir** for pressionado, o manipulador de eventos `OnDeleteButtonClicked` será executado, excluindo o arquivo, caso ele exista, e removendo todo o texto do `Editor`. Para obter mais informações sobre a interação do usuário, consulte [respondendo à interação do usuário](deepdive.md#responding-to-user-interaction) no guia de [início rápido do Xamarin. Forms](deepdive.md).
 
     Salve as alterações em **MainPage.xaml.cs** ao escolher **Arquivo > Salvar** (ou ao pressionar **&#8984; + S**) e feche o arquivo.
 
@@ -460,7 +460,7 @@ Para obter mais informações sobre esses pré-requisitos, consulte [instalando 
 
     Se houver erros, repita as etapas anteriores e corrija-os até que os projetos sejam compilados com êxito.
 
-2. No **painel de soluções**, selecione o **Notes.iOS** projeto, o botão direito do mouse e selecione **definir como projeto de inicialização**:
+2. No **painel de soluções**, selecione o projeto **Notes. Ios** , clique com o botão direito do mouse e selecione **definir como projeto de inicialização**:
 
       ![](single-page-images/vsmac/set-startup-project-ios.png "Definir o iOS como projeto de inicialização")
 
@@ -468,40 +468,40 @@ Para obter mais informações sobre esses pré-requisitos, consulte [instalando 
 
       ![](single-page-images/vsmac/start.png "Barra de ferramentas do Visual Studio para Mac")
 
-      [![](single-page-images/vsmac/notes-ios.png "Anotações no simulador de iOS")](single-page-images/vsmac/notes-ios-large.png#lightbox "anotações no simulador de iOS")
+      [Observações no simulador de Ios ![(single-page-images/vsmac/notes-ios.png " ")]] (single-page-images/vsmac/notes-ios-large.png#lightbox "Observações no simulador de Ios")
 
     Insira uma nota e pressione o botão **Salvar**.
 
-    Para obter mais informações sobre como o aplicativo é iniciado em cada plataforma, consulte [iniciá-lo em cada plataforma](deepdive.md#launching-the-application-on-each-platform) na [aprofundamento de início rápido de xamarin. Forms](deepdive.md).
+    Para obter mais informações sobre como o aplicativo é iniciado em cada plataforma, consulte [iniciando o aplicativo em cada plataforma](deepdive.md#launching-the-application-on-each-platform) no guia de [início rápido do Xamarin. Forms](deepdive.md).
 
-4. No **painel de soluções**, selecione o **Notes.Droid** projeto, o botão direito do mouse e selecione **definir como projeto de inicialização**:
+4. No **painel de soluções**, selecione o projeto **Notes. Droid** , clique com o botão direito do mouse e selecione **definir como projeto de inicialização**:
 
       ![](single-page-images/vsmac/set-startup-project-android.png "Definir Android como projeto de inicialização")
 
 5. Na barra de ferramentas do Visual Studio para Mac, pressione o botão **Iniciar** (o botão triangular que se parece com o botão Reproduzir) para iniciar o aplicativo em seu emulador Android escolhido:
 
-      [![](single-page-images/vsmac/notes-android.png "Anotações no emulador do Android")](single-page-images/vsmac/notes-android-large.png#lightbox "Notes in the Android Simulator")
+      [![](single-page-images/vsmac/notes-android.png "Observações no Android Emulator")](single-page-images/vsmac/notes-android-large.png#lightbox "Notes in the Android Simulator")
 
     Insira uma nota e pressione o botão **Salvar**.
 
-    Para obter mais informações sobre como o aplicativo é iniciado em cada plataforma, consulte [iniciá-lo em cada plataforma](deepdive.md#launching-the-application-on-each-platform) na [aprofundamento de início rápido de xamarin. Forms](deepdive.md).
+    Para obter mais informações sobre como o aplicativo é iniciado em cada plataforma, consulte [iniciando o aplicativo em cada plataforma](deepdive.md#launching-the-application-on-each-platform) no guia de [início rápido do Xamarin. Forms](deepdive.md).
 
 ::: zone-end
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Neste início rápido, você aprendeu como:
+Neste guia de início rápido, você aprendeu a:
 
-- Crie um aplicativo de plataforma cruzada xamarin. Forms.
-- Defina a interface do usuário para uma página usando a linguagem de marcação de aplicativo extensível (XAML).
-- Interagir com elementos de interface do usuário XAML do código.
+- Crie um aplicativo Xamarin. Forms de plataforma cruzada.
+- Defina a interface do usuário para uma página usando XAML (eXtensible Application Markup Language).
+- Interaja com elementos XAML da interface do usuário do código.
 
-Para ativar esse aplicativo de página única em um aplicativo de várias página, continue para o próximo início rápido.
+Para transformar esse aplicativo de página única em um aplicativo de várias páginas, vá para o próximo início rápido.
 
 > [!div class="nextstepaction"]
 > [Avançar](multi-page.md)
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Notas (exemplo)](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/SinglePage/)
-- [Aprofundamento de início rápido do xamarin. Forms](deepdive.md)
+- [Notas (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-singlepage/)
+- [Detalhamento do guia de início rápido do Xamarin. Forms](deepdive.md)

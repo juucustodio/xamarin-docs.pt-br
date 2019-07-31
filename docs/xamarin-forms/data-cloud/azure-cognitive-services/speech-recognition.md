@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/08/2017
-ms.openlocfilehash: f854ac363fe3e5b9dc3df046c9fab592b97bc962
-ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
+ms.openlocfilehash: 97997a527647ae972eadff47da8c1321d5d55daa
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67675255"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68655454"
 ---
 # <a name="speech-recognition-using-the-microsoft-speech-api"></a>Reconhecimento de fala usando a API de fala da Microsoft
 
-[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoCognitiveServices/)
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
 
 _A API de fala da Microsoft é uma API baseada em nuvem que fornece algoritmos para processar a linguagem falada. Este artigo explica como usar a API de REST de reconhecimento de fala Microsoft para converter áudio em texto em um aplicativo xamarin. Forms._
 
@@ -114,7 +114,7 @@ string GenerateRequestUri(string speechEndpoint)
 }
 ```
 
-A principal configuração executada pelo `GenerateRequestUri` método é definir a localidade do conteúdo de áudio. Para obter uma lista de localidades com suporte, consulte [idiomas com suporte](/azure/cognitive-services/speech/api-reference-rest/supportedlanguages/).
+A principal configuração executada pelo `GenerateRequestUri` método é definir a localidade do conteúdo de áudio. Para obter uma lista das localidades com suporte, consulte [idiomas com suporte](/azure/cognitive-services/speech/api-reference-rest/supportedlanguages/).
 
 ### <a name="sending-the-request"></a>Enviar a solicitação
 
@@ -171,4 +171,4 @@ Este artigo explicou como usar a API de REST de fala da Microsoft para converter
 
 - [Documentação da API de fala da Microsoft](/azure/cognitive-services/speech/home/).
 - [Consumir um serviço Web RESTful](~/xamarin-forms/data-cloud/web-services/rest.md)
-- [Serviços Cognitivos de tarefas pendentes (amostra)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoCognitiveServices/)
+- [Serviços Cognitivos de tarefas pendentes (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)

@@ -7,24 +7,24 @@ ms.assetid: 8E074F8D-4715-4146-8CC0-FD7A8290EDE9
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/17/2018
-ms.openlocfilehash: 73fdccf1f6ccee4f6610c1078f5aab14c2be3d78
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 47b4a1bb0249bc21bd75e82067cb00b3f272e202
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61204679"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68642683"
 ---
 # <a name="displaying-skiasharp-bitmaps"></a>Exibição de bitmaps de SkiaSharp
 
-[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
-O assunto de bitmaps de SkiaSharp foi introduzido no artigo  **[Noções básicas de Bitmap no SkiaSharp](../basics/bitmaps.md)**. Esse artigo mostrou três maneiras de bitmaps de carga e de três maneiras de exibir bitmaps. Este artigo examina as técnicas para carregar bitmaps e o uso de se aprofundar a `DrawBitmap` métodos de `SKCanvas`.
+O assunto de bitmaps de SkiaSharp foi introduzido no artigo  **[Noções básicas de Bitmap no SkiaSharp](../basics/bitmaps.md)** . Esse artigo mostrou três maneiras de bitmaps de carga e de três maneiras de exibir bitmaps. Este artigo examina as técnicas para carregar bitmaps e o uso de se aprofundar a `DrawBitmap` métodos de `SKCanvas`.
 
 ![Exibindo a amostra](displaying-images/DisplayingSample.png "exibindo o exemplo")
 
-O `DrawBitmapLattice` e `DrawBitmapNinePatch` métodos são discutidos neste artigo  **[segmentada a exibição de bitmaps de SkiaSharp](segmented.md)**.
+O `DrawBitmapLattice` e `DrawBitmapNinePatch` métodos são discutidos neste artigo  **[segmentada a exibição de bitmaps de SkiaSharp](segmented.md)** .
 
-Os exemplos nesta página são obtidos de **[SkiaSharpFormsDemos](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)** aplicativo. Na home page do aplicativo, escolha **SkiaSharp Bitmaps**e, em seguida, vá para o **Bitmaps exibindo** seção.
+Os exemplos nesta página são obtidos de **[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** aplicativo. Na home page do aplicativo, escolha **SkiaSharp Bitmaps**e, em seguida, vá para o **Bitmaps exibindo** seção.
 
 ## <a name="loading-a-bitmap"></a>Carregar um bitmap
 
@@ -34,7 +34,7 @@ Um bitmap usado por um aplicativo de SkiaSharp geralmente vem de uma das três f
 - De um recurso incorporado no executável
 - Da biblioteca de fotos do usuário
 
-Também é possível que um aplicativo de SkiaSharp criar um novo bitmap e, em seguida, desenhar nele ou definir os bits de bitmap algoritmicamente. Essas técnicas são discutidas nos artigos **[criação e desenho em SkiaSharp Bitmaps](drawing.md)** e **[acessando Pixels do Bitmap de SkiaSharp](pixel-bits.md)**.
+Também é possível que um aplicativo de SkiaSharp criar um novo bitmap e, em seguida, desenhar nele ou definir os bits de bitmap algoritmicamente. Essas técnicas são discutidas nos artigos **[criação e desenho em SkiaSharp Bitmaps](drawing.md)** e **[acessando Pixels do Bitmap de SkiaSharp](pixel-bits.md)** .
 
 Nos seguintes três exemplos de código de carregamento de um bitmap, a classe deve para conter um campo do tipo `SKBitmap`:
 
@@ -48,7 +48,7 @@ Como o artigo **[Noções básicas de Bitmap no SkiaSharp](../basics/bitmaps.md)
 HttpClient httpClient = new HttpClient();
 ```
 
-Ao usar `HttpClient` com aplicativos iOS e Android, você vai querer definir propriedades do projeto, conforme descrito nos documentos  **[Transport Layer Security (TLS) 1.2](~/cross-platform/app-fundamentals/transport-layer-security.md)**.
+Ao usar `HttpClient` com aplicativos iOS e Android, você vai querer definir propriedades do projeto, conforme descrito nos documentos  **[Transport Layer Security (TLS) 1.2](~/cross-platform/app-fundamentals/transport-layer-security.md)** .
 
 O código que usa `HttpClient` geralmente envolve a `await` operador, portanto, ele deve residir em um `async` método:
 
@@ -73,7 +73,7 @@ catch
 
 Observe que o `Stream` objeto obtido `GetStreamAsync` é copiado para um `MemoryStream`. Android não permite que o `Stream` de `HttpClient` a serem processados pelo thread principal, exceto em métodos assíncronos. 
 
-O [ `SKBitmap.Decode` ](xref:SkiaSharp.SKBitmap.Decode(System.IO.Stream)) faz grande parte do trabalho: O `Stream` objeto passado para ele faz referência a um bloco de memória que contém um bitmap inteiro em um do comuns formatos de arquivo de bitmap, geralmente, JPEG, PNG ou GIF. O `Decode` método deve determinar o formato e, em seguida, decodificar o arquivo de bitmap em formato de bitmap interno do SkiaSharp.
+O [`SKBitmap.Decode`](xref:SkiaSharp.SKBitmap.Decode(System.IO.Stream)) faz muito trabalho: O `Stream` objeto passado a ele faz referência a um bloco de memória que contém um bitmap inteiro em um dos formatos de arquivo de bitmap comuns, geralmente JPEG, png ou GIF. O `Decode` método deve determinar o formato e, em seguida, decodificar o arquivo de bitmap em formato de bitmap interno do SkiaSharp.
 
 Depois de seu código chama `SKBitmap.Decode`, provavelmente invalidará os `CanvasView` para que o `PaintSurface` manipulador pode exibir o bitmap carregado recentemente.
 
@@ -92,7 +92,7 @@ using (Stream stream = assembly.GetManifestResourceStream(resourceID))
 
 Arquivos de bitmap também podem ser armazenados como recursos do projeto de plataforma individual para iOS, Android e Universal Windows Platform (UWP). No entanto, ao carregar esses bitmaps requer código que está localizado no projeto da plataforma.
 
-Uma terceira abordagem para obtenção de um bitmap é da biblioteca de imagens do usuário. O código a seguir usa um serviço de dependência que está incluído na **[SkiaSharpFormsDemos](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)** aplicativo. O **SkiaSharpFormsDemo** inclui o .NET Standard Library a `IPhotoLibrary` interface, enquanto cada um dos projetos de plataforma contém um `PhotoLibrary` classe que implementa essa interface.
+Uma terceira abordagem para obtenção de um bitmap é da biblioteca de imagens do usuário. O código a seguir usa um serviço de dependência que está incluído na **[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** aplicativo. O **SkiaSharpFormsDemo** inclui o .NET Standard Library a `IPhotoLibrary` interface, enquanto cada um dos projetos de plataforma contém um `PhotoLibrary` classe que implementa essa interface.
 
 ```csharp
 IPhotoicturePicker picturePicker = DependencyService.Get<IPhotoLibrary>();
@@ -144,7 +144,7 @@ No entanto, a cor em si é irrelevante. Apenas o canal alfa é examinado quando 
 
 O `SKPaint` objeto também desempenha uma função ao usar de bitmaps exibindo modos do blend ou efeitos de filtro. Esses são demonstrados nos artigos [modos de composição e o blend SkiaSharp](../effects/blend-modes/index.md) e [filtros de imagem de SkiaSharp](../effects/image-filters.md).
 
-O **dimensões de Pixel** página de **[SkiaSharpFormsDemos](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)** programa de exemplo exibe um recurso de bitmap é 320 pixels de largura por 240 pixels de altura:
+O **dimensões de Pixel** página de **[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** programa de exemplo exibe um recurso de bitmap é 320 pixels de largura por 240 pixels de altura:
 
 ```csharp
 public class PixelDimensionsPage : ContentPage
@@ -194,7 +194,7 @@ Se o aplicativo deseja exibir o bitmap no canto superior esquerdo, ele simplesme
 
 ## <a name="a-method-for-loading-resource-bitmaps"></a>Um método de carregamento de bitmaps de recurso
 
-Muitos dos exemplos em breve serão preciso carregar recursos de bitmap. Estático `BitmapExtensions` classe de **[SkiaSharpFormsDemos](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)** solução contém um método para ajudar:
+Muitos dos exemplos em breve serão preciso carregar recursos de bitmap. Estático `BitmapExtensions` classe de **[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** solução contém um método para ajudar:
 
 ```csharp
 static class BitmapExtensions
@@ -319,7 +319,7 @@ Taxa de proporção do bitmap é preservada mas áreas à esquerda e à direita 
 
 ## <a name="a-versatile-bitmap-display-function"></a>Uma função de exibição do bitmap versátil
 
-Os ambientes de programação baseado em XAML (por exemplo, UWP e xamarin. Forms) tem um recurso para expandir ou reduzir o tamanho de bitmaps, preservando a suas proporções. Embora SkiaSharp não inclui esse recurso, você pode implementá-lo você mesmo. O `BitmapExtensions` classe incluída na [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) aplicativo mostra como. A classe define dois novos `DrawBitmap` métodos que executam o cálculo de taxa de proporção. Esses novos métodos são métodos de extensão de `SKCanvas`.
+Os ambientes de programação baseado em XAML (por exemplo, UWP e xamarin. Forms) tem um recurso para expandir ou reduzir o tamanho de bitmaps, preservando a suas proporções. Embora SkiaSharp não inclui esse recurso, você pode implementá-lo você mesmo. O `BitmapExtensions` classe incluída na [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) aplicativo mostra como. A classe define dois novos `DrawBitmap` métodos que executam o cálculo de taxa de proporção. Esses novos métodos são métodos de extensão de `SKCanvas`.
 
 O novo `DrawBitmap` métodos incluem um parâmetro do tipo `BitmapStretch`, uma enumeração definida na **BitmapExtensions.cs** arquivo:
 
@@ -666,5 +666,5 @@ Esta fonte de retângulo isola head do monkey, conforme mostrado nessas capturas
 ## <a name="related-links"></a>Links relacionados
 
 - [APIs de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (amostra)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 

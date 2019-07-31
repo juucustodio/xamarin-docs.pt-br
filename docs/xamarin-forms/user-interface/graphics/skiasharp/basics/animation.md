@@ -7,16 +7,16 @@ ms.assetid: 31C96FD6-07E4-4473-A551-24753A5118C3
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: 8a533dd48acf698667044d600338555b6c00a0ae
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: e9af5a78900fce714b214dfd3b3e0e83e17bbce2
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61181301"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68648743"
 ---
 # <a name="basic-animation-in-skiasharp"></a>Animação básica no SkiaSharp
 
-[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Descubra como animar a seus gráficos de SkiaSharp_
 
@@ -24,7 +24,7 @@ Você pode animar elementos gráficos de SkiaSharp em xamarin. Forms, fazendo co
 
 ![](animation-images/animationexample.png "Vários círculos concêntricos aparentemente expandindo no centro da")
 
-O **elipse Pulsating** página na [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) programa anima dois eixos de uma elipse para que ele apareça ser pulsating e até mesmo, você pode controlar o taxa deste pulsation. O [ **PulsatingEllipsePage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/PulsatingEllipsePage.xaml) arquivo cria uma instância de um xamarin. Forms `Slider` e um `Label` para exibir o valor atual do controle deslizante. Essa é uma maneira comum para integrar um `SKCanvasView` com outros modos de exibição do xamarin. Forms:
+O **elipse Pulsating** página na [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) programa anima dois eixos de uma elipse para que ele apareça ser pulsating e até mesmo, você pode controlar o taxa deste pulsation. O [ **PulsatingEllipsePage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/PulsatingEllipsePage.xaml) arquivo cria uma instância de um xamarin. Forms `Slider` e um `Label` para exibir o valor atual do controle deslizante. Essa é uma maneira comum para integrar um `SKCanvasView` com outros modos de exibição do xamarin. Forms:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -250,4 +250,4 @@ O resultado é que a imagem é o mesmo ao `t` é igual a 0, assim como quando `t
 ## <a name="related-links"></a>Links relacionados
 
 - [APIs de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (amostra)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/13/2017
-ms.openlocfilehash: 4b37435c9cec7549c04c35a81ec31d3a2236e7c1
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: 97aa8c321362ebccc954a79f99b7bc69b5a0ad63
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65925464"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68657071"
 ---
 # <a name="layout-compression"></a>Compactação de Layout
 
-[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/LayoutCompression/)
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layoutcompression)
 
 _Compactação de layout remove os layouts especificados da árvore visual em uma tentativa de melhorar o desempenho de renderização da página. Este artigo explica como habilitar a compactação de layout e os benefícios que ele pode trazer._
 
@@ -123,4 +123,4 @@ Compactação de layout remove os layouts especificados da árvore visual em uma
 
 - [Criar um layout personalizado](~/xamarin-forms/user-interface/layouts/custom.md)
 - [Renderizadores Rápidos](~/xamarin-forms/internals/fast-renderers.md)
-- [LayoutCompression (amostra)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/LayoutCompression/)
+- [LayoutCompression (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layoutcompression)

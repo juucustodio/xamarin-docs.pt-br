@@ -1,54 +1,54 @@
 ---
-title: Ícones de documento personalizado no xamarin. IOS
-description: Aborda esse artigo incluindo e gerenciar um ativo de imagem em um aplicativo xamarin. IOS para ser usado como um ícone de tipo de documento personalizado.
+title: Ícones de documento personalizados no Xamarin. iOS
+description: Este artigo aborda a inclusão e o gerenciamento de um ativo de imagem em um aplicativo Xamarin. iOS a ser usado como um ícone de tipo de documento personalizado.
 ms.prod: xamarin
 ms.assetid: 7A3F3C94-2578-4F53-9B8E-25714F48BDD6
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/23/2017
-ms.openlocfilehash: 7520d3984a204dbceb67ef5310a10b1571f03127
-ms.sourcegitcommit: 2eb8961dd7e2a3e06183923adab6e73ecb38a17f
+ms.openlocfilehash: 1125b0c420d6dbd23c5539a2183d531bc0d6089f
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66827378"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68643009"
 ---
-# <a name="custom-document-icons-in-xamarinios"></a>Ícones de documento personalizado no xamarin. IOS
+# <a name="custom-document-icons-in-xamarinios"></a>Ícones de documento personalizados no Xamarin. iOS
 
-_Aborda esse artigo incluindo e gerenciar um ativo de imagem em um aplicativo xamarin. IOS para ser usado como um ícone de tipo de documento personalizado._
+_Este artigo aborda a inclusão e o gerenciamento de um ativo de imagem em um aplicativo Xamarin. iOS a ser usado como um ícone de tipo de documento personalizado._
 
-Se um aplicativo xamarin. IOS dá suporte ao carregamento de um tipo de documento em particular, o desenvolvedor pode fornecer ícones que o sistema usará quando encontra esse tipo de documento, como quando um usuário segura para baixo de um anexo na *aplicativo de email* como mostrado aqui:
+Se um aplicativo Xamarin. iOS der suporte ao carregamento de um tipo de documento específico, o desenvolvedor poderá fornecer ícones que o sistema usará quando encontrar esse tipo de documento, como quando um usuário mantiver um anexo no *aplicativo de email* , como mostrado aqui:
 
- [![](custom-document-types-images/17.png "Um exemplo de ícones do tipo de documento")](custom-document-types-images/17.png#lightbox)
+ [![](custom-document-types-images/17.png "Um exemplo de ícones de tipo de documento")](custom-document-types-images/17.png#lightbox)
 
-O desenvolvedor pode adicionar informações de tipo de documento para um formato de arquivo, o aplicativo é capaz de abertura, incluindo as entradas de dicionário para o `CFBundleTypeName` cadeia de caracteres e `LSItemContentTypes` matriz em que o aplicativo `Info.plist`. Os ícones para o tipo de documento entrar a `CFBundleTypeIconFiles` matriz. Se um ícone de documento não for fornecido, o iOS derivará um do ícone do aplicativo.
-Ícones podem ser fornecidos para vários tamanhos, otimizados para as várias resoluções de dispositivo. 
+O desenvolvedor pode adicionar informações de tipo de documento para um formato de arquivo que o aplicativo é capaz de abrir, incluindo `CFBundleTypeName` entradas de `LSItemContentTypes` dicionário para a cadeia de `Info.plist`caracteres e a matriz no aplicativo. Os ícones para o tipo de documento entram na `CFBundleTypeIconFiles` matriz. Se um ícone de documento não for fornecido, o iOS irá derivar um do ícone do aplicativo.
+Os ícones podem ser fornecidos para vários tamanhos, otimizados para as várias resoluções de dispositivo. 
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
-Para atribuir esses valores no Visual Studio para Mac, use o **tipos de documento** seção sob o **avançado** guia o `Info.plist` editor para adicionar o tipo de documento e atribua os ícones de imagem para ele. Por exemplo, aqui está uma captura de tela mostrando o registro para suporte a PDF:
+Para atribuir esses valores em Visual Studio para Mac, use a seção **tipos de documento** na `Info.plist` guia Avançado no editor para adicionar o tipo de documento e atribuir ícones de imagem a ele. Por exemplo, aqui está uma captura de tela mostrando o registro do suporte a PDF:
 
- [![](custom-document-types-images/18.png "A seção de tipos de documento sob a guia Avançado no editor de 'info.'")](custom-document-types-images/18.png#lightbox)
+ [![](custom-document-types-images/18.png "A seção tipos de documento sob a guia Avançado no editor ' info. plist '")](custom-document-types-images/18.png#lightbox)
  
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-Para atribuir esses valores no Visual Studio, use o **tipos de documento** seção sob o **avançado** guia o `Info.plist`:
+Para atribuir esses valores no Visual Studio, use a seção **tipos de documento** na `Info.plist`guia Avançado no:
 
- ![](custom-document-types-images/doc01w.png "Abra a seção tipos de documento sob a guia Avançado")
+ ![](custom-document-types-images/doc01w.png "Abra a seção tipos de documento na guia Avançado")
 
-Clique o **Adicionar tipo de documento** botão e preencha os campos obrigatórios:
+Clique no botão **Adicionar tipo de documento** e preencha os campos obrigatórios:
 
 ![](custom-document-types-images/doc02w.png "O formulário Adicionar tipo de documento")
 
 -----
 
 
-Para obter mais informações sobre tipos de documento, consulte da Apple [referência de identificadores de tipo de uniforme](https://developer.apple.com/library/ios/#documentation/Miscellaneous/Reference/UTIRef/Articles/System-DeclaredUniformTypeIdentifiers.html) e [tópicos de programação de interação de documento para iOS](https://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/DocumentInteraction_TopicsForIOS/Introduction/Introduction.html).
+Para obter mais informações sobre tipos de documento, consulte [referência de identificadores de tipo uniforme](https://developer.apple.com/library/ios/#documentation/Miscellaneous/Reference/UTIRef/Articles/System-DeclaredUniformTypeIdentifiers.html) da Apple e [Tópicos de programação de interação de documentos para IOS](https://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/DocumentInteraction_TopicsForIOS/Introduction/Introduction.html).
 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Trabalhando com imagens (amostra)](https://developer.xamarin.com/samples/monotouch/WorkingWithImages/)
+- [Trabalhando com imagens (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/workingwithimages)
 - [Hello, iPhone](~/ios/get-started/hello-ios/index.md)
-- [Ícone personalizado e diretrizes de criação de imagem](https://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/IconsImages/IconsImages.html)
+- [Diretrizes personalizadas de criação de imagem e ícone](https://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/IconsImages/IconsImages.html)

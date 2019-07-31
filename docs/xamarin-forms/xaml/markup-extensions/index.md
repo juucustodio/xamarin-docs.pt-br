@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: cfdd639672f7fa624c7c8e30f17fbfc9dad403af
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 3b135f916225f896680cfb73175ba0568928be06
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61075458"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68655758"
 ---
 # <a name="xaml-markup-extensions"></a>Extensões de marcação XAML
 
-[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/XAML/MarkupExtensions/)
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-markupextensions)
 
 Extensões de marcação XAML ajudam a estender o poder e flexibilidade do XAML, permitindo que os atributos do elemento a ser definido de fontes diferentes cadeias de caracteres de texto literal.
 
@@ -36,7 +36,7 @@ Em ambos os casos, a cadeia de caracteres de texto é definida como o `Color` at
 
 Talvez você prefira em vez disso, defina as `Color` de um valor armazenado em um dicionário de recurso, ou o valor de uma propriedade estática de uma classe que você criou ou uma propriedade de tipo de atributo `Color` de outro elemento na página, ou construídos a partir de Separe os valores de matiz, saturação e luminosidade.
 
-Todas essas opções são possíveis usando extensões de marcação XAML. Mas não deixe que a frase "extensões de marcação" assustam você: Extensões de marcação XAML são *não* extensões para XML. Mesmo com extensões de marcação XAML, o XAML é sempre XML legal.
+Todas essas opções são possíveis usando extensões de marcação XAML. Mas não deixe a frase "extensões de marcação" assustam você: As extensões de marcação XAML *não* são extensões para XML. Mesmo com extensões de marcação XAML, o XAML é sempre XML legal.
 
 Uma extensão de marcação é realmente apenas uma maneira diferente para expressar um atributo de um elemento. Extensões de marcação XAML são geralmente identificadas por uma configuração de atributo que é colocada entre chaves:
 
@@ -60,7 +60,7 @@ Escreva suas próprias extensões de marcação XAML personalizados.
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Extensões de marcação (amostra)](https://developer.xamarin.com/samples/xamarin-forms/XAML/MarkupExtensions/)
+- [Extensões de marcação (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-markupextensions)
 - [Capítulo de extensões de marcação XAML do xamarin. Forms book](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter10.md)
 - [Dicionários de recurso](~/xamarin-forms/xaml/resource-dictionaries.md)
 - [Estilos dinâmicos](~/xamarin-forms/user-interface/styles/dynamic.md)

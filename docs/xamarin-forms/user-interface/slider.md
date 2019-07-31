@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/27/2019
-ms.openlocfilehash: 1fa46af1ac1cf6ea49a53e3f8d3c3dca6ba83e13
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: e54b36989f5b4694da5d46a89391d56920b8d6a9
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68511896"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656250"
 ---
 # <a name="xamarinforms-slider"></a>Controle deslizante do xamarin. Forms
 
-[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/SliderDemos)
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-sliderdemos)
 
 _Use um controle deslizante para selecionar um intervalo de valores contínuos._
 
@@ -56,11 +56,11 @@ O `Slider` também define várias propriedades que afetam sua aparência:
 
 ## <a name="basic-slider-code-and-markup"></a>Marcação e código básico do controle deslizante
 
-O [ **SliderDemos** ](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/SliderDemos) exemplo começa com três páginas que são funcionalmente idênticos, mas são implementadas de maneiras diferentes. A primeira página usa apenas um código C#, o segundo usa XAML com um manipulador de eventos no código e o terceiro é capaz de evitar o manipulador de eventos usando a associação de dados no arquivo XAML.
+O [ **SliderDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-sliderdemos) exemplo começa com três páginas que são funcionalmente idênticos, mas são implementadas de maneiras diferentes. A primeira página usa apenas um código C#, o segundo usa XAML com um manipulador de eventos no código e o terceiro é capaz de evitar o manipulador de eventos usando a associação de dados no arquivo XAML.
 
 ### <a name="creating-a-slider-in-code"></a>Criando um controle deslizante no código
 
-O **código básico do controle deslizante** página na [ **SliderDemos** ](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/SliderDemos) exemplo mostra como criar um `Slider` e dois `Label` objetos no código:
+O **código básico do controle deslizante** página na [ **SliderDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-sliderdemos) exemplo mostra como criar um `Slider` e dois `Label` objetos no código:
 
 ```csharp
 public class BasicSliderCodePage : ContentPage
@@ -295,7 +295,7 @@ A implementação de Android da `Slider` se baseia no Android [ `SeekBar` ](xref
 
 A implementação UWP `Slider` baseia-se na UWP [ `Slider` ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.slider) controle. O `StepFrequency` propriedade da UWP `Slider` é definido como a diferença entre o `Maximum` e `Minimum` propriedades dividido por 10, mas não é maior que 1.
 
-Por exemplo, para o intervalo padrão de 0 a 1, o `StepFrequency` estiver definida como 0,1. Como o `Slider` seja manipulado, o `Value` propriedade é restrita a 0, 0.1, 0.2, 0.3, 0,4, 0,5, 0,6, 0,7, 0,8, 0,9 e 1.0. (Isso fica evidente na última página do [ **SliderDemos** ](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/SliderDemos) exemplo.) Quando a diferença entre o `Maximum` e `Minimum` propriedades é 10 ou superior, em seguida, `StepFrequency` é definido como 1 e o `Value` propriedade tem valores integrais.
+Por exemplo, para o intervalo padrão de 0 a 1, o `StepFrequency` estiver definida como 0,1. Como o `Slider` seja manipulado, o `Value` propriedade é restrita a 0, 0.1, 0.2, 0.3, 0,4, 0,5, 0,6, 0,7, 0,8, 0,9 e 1.0. (Isso fica evidente na última página do [ **SliderDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-sliderdemos) exemplo.) Quando a diferença entre o `Maximum` e `Minimum` propriedades é 10 ou superior, em seguida, `StepFrequency` é definido como 1 e o `Value` propriedade tem valores integrais.
 
 ### <a name="the-stepslider-solution"></a>A solução StepSlider
 
@@ -303,7 +303,7 @@ Mais versátil `StepSlider` é discutida em [Capítulo 27. Renderizadores person
 
 ## <a name="sliders-for-color-selection"></a>Controles deslizantes para seleção de cor
 
-O último duas páginas na [ **SliderDemos** ](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/SliderDemos) exemplo usam três `Slider` instâncias para seleção de cor. A primeira página lida com todas as interações no arquivo code-behind, enquanto a segunda página mostra como usar a vinculação de dados com um ViewModel.
+O último duas páginas na [ **SliderDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-sliderdemos) exemplo usam três `Slider` instâncias para seleção de cor. A primeira página lida com todas as interações no arquivo code-behind, enquanto a segunda página mostra como usar a vinculação de dados com um ViewModel.
 
 ### <a name="handling-sliders-in-the-code-behind-file"></a>Manipulando controles deslizantes no arquivo code-behind
 
@@ -509,5 +509,5 @@ O `StringFormat` componente de `Binding` extensão de marcação é definida par
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Exemplo de demonstrações do controle deslizante](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/SliderDemos)
+- [Exemplo de demonstrações do controle deslizante](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-sliderdemos)
 - [API de controle deslizante](xref:Xamarin.Forms.Slider)

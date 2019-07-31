@@ -1,24 +1,24 @@
 ---
-title: VisualElement Drop sombras no iOS
-description: Especificidades da plataforma permitem que você consumir funcionalidade só está disponível em uma plataforma específica, sem implementar renderizadores personalizados ou efeitos. Este artigo explica como utilizar a plataforma específica do iOS que permite uma sombra em um VisualElement.
+title: Sombras de soltar do visualelement no iOS
+description: Especificidades da plataforma permitem que você consumir funcionalidade só está disponível em uma plataforma específica, sem implementar renderizadores personalizados ou efeitos. Este artigo explica como consumir a plataforma específica do iOS que habilita uma sombra em um Visualelement.
 ms.prod: xamarin
 ms.assetid: 2147FD66-058E-4BE5-840A-369842B26EC4
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: 9c576be30eb4b456e2eabcb5a041c57e58bdc747
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: 9d58576e67e6e8129b15f4935986c494bb093538
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65925638"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68649554"
 ---
-# <a name="visualelement-drop-shadows-on-ios"></a>VisualElement Drop sombras no iOS
+# <a name="visualelement-drop-shadows-on-ios"></a>Sombras de soltar do visualelement no iOS
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
-Este específicos da plataforma iOS é usado para habilitar uma sombra em um [ `VisualElement` ](xref:Xamarin.Forms.VisualElement). Ele é consumido em XAML, definindo o [ `VisualElement.IsShadowEnabled` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.VisualElement.IsShadowEnabledProperty) anexado à propriedade `true`, juntamente com um número de adicionais opcional propriedades que controlam a sombra anexadas:
+Esse recurso específico da plataforma iOS é usado para habilitar uma sombra em um [`VisualElement`](xref:Xamarin.Forms.VisualElement). Ele é consumido em XAML, definindo o [ `VisualElement.IsShadowEnabled` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.VisualElement.IsShadowEnabledProperty) anexado à propriedade `true`, juntamente com um número de adicionais opcional propriedades que controlam a sombra anexadas:
 
 ```xaml
 <ContentPage ...
@@ -75,6 +75,6 @@ O resultado é que uma sombra pode ser habilitada em um [ `VisualElement` ](xref
 
 ## <a name="related-links"></a>Links relacionados
 
-- [PlatformSpecifics (amostra)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+- [PlatformSpecifics (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [Criação de itens específicos à plataforma](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
-- [iOSSpecific API](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)
+- [API iOSSpecific](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)

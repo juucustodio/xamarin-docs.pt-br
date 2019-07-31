@@ -1,141 +1,141 @@
 ---
-title: Trabalhando com tvOS indicadores de progresso no Xamarin
-description: Este documento descreve como trabalhar com indicadores de progresso em um aplicativo tvOS criados com o Xamarin. Ele aborda as barras de progresso e indicadores de atividade.
+title: Trabalhando com indicadores de progresso tvOS no Xamarin
+description: Este documento descreve como trabalhar com indicadores de progresso em um aplicativo tvOS criado com o Xamarin. Ele aborda as barras de progresso e os indicadores de atividade.
 ms.prod: xamarin
 ms.assetid: 582B6D0C-1F16-4299-A9A6-5651E76009FE
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 04/25/2018
-ms.openlocfilehash: cbd2b2de237a5bb22d1dc0242569b96b12bca070
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 6ab1b4ad5493075e8806190e77f6d234354af9ff
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61180502"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68648971"
 ---
-# <a name="working-with-tvos-progress-indicators-in-xamarin"></a>Trabalhando com tvOS indicadores de progresso no Xamarin
+# <a name="working-with-tvos-progress-indicators-in-xamarin"></a>Trabalhando com indicadores de progresso tvOS no Xamarin
 
-_Este artigo aborda a projetar e trabalhar com indicadores de progresso dentro de um aplicativo xamarin. tvos._
+_Este artigo aborda a criação e o trabalho com indicadores de progresso dentro de um aplicativo Xamarin. tvOS._
 
-Pode haver vezes quando seu aplicativo tvos precisa carregar novo conteúdo ou executar uma operação de processamento mais extenso. Durante esses horários, você deve apresentar um indicador de atividade ou uma barra de progresso para informar o usuário que o aplicativo ainda está em execução e para fornecer alguma indicação quanto à duração da tarefa que está sendo executada.
+Pode haver ocasiões em que o aplicativo Xamarin. tvOS precisa carregar novo conteúdo ou executar uma operação de processamento demorada. Durante esses momentos, você deve apresentar um indicador de atividade ou uma barra de progresso para permitir que o usuário saiba que o aplicativo ainda está em execução e para dar a eles alguma indicação sobre o comprimento da tarefa que está sendo executada.
 
-![Indicadores de progresso de exemplo](progress-indicators-images/intro01.png "indicadores de progresso de exemplo")
+![Indicadores de progresso de exemplo](progress-indicators-images/intro01.png "Indicadores de progresso de exemplo")
 
 ## <a name="about-activity-indicators"></a>Sobre indicadores de atividade
 
-Um indicador de atividade apresenta como uma engrenagem de rotação e é usado para representar uma tarefa de um período indeterminado. O indicador é apresentado quando a tarefa é iniciado e desaparece quando a tarefa é concluída.
+Um indicador de atividade apresenta um engrenagem girando e é usado para representar uma tarefa de um comprimento indeterminado. O indicador é apresentado quando a tarefa é iniciada e desaparece quando a tarefa é concluída.
 
-Apple tem as sugestões a seguir para trabalhar com indicadores de atividade:
+A Apple tem as seguintes sugestões para trabalhar com indicadores de atividade:
 
-- **Sempre que possível, use as barras de progresso em vez disso,** – porque dá um indicador a atividade levará o usuário que nenhum feedback como longo processo que está sendo executado, sempre use uma barra de progresso se o tamanho é conhecido (por exemplo, o número de bytes baixados em um arquivo).
-- **Manter o indicador animado** -usuários relacionam um indicador de atividade de estática para um aplicativo paralisado, para que você sempre deve animar o indicador enquanto ele está sendo exibido.
-- **Descrever a tarefa que está sendo processada** -exibir apenas o indicador de atividade por si só não é suficiente; o usuário precisa ser informado sobre o processo em que estão aguardando. Inclua um rótulo significativo (geralmente uma frase simples e completa) que defina claramente a tarefa.
+- **Sempre que possível, use as barras de progresso** – como um indicador de atividade fornece ao usuário nenhum comentário sobre quanto tempo o processo será executado, sempre use uma barra de progresso se o comprimento for conhecido (por exemplo, quantos bytes baixar em um arquivo).
+- **Mantenha o indicador animado** -os usuários relacionam um indicador de atividade estacionário a um aplicativo interrompido, portanto, você deve sempre animar o indicador enquanto ele está sendo exibido.
+- **Descrever a tarefa que está sendo processada** – apenas exibindo o indicador de atividade por si só não é suficiente; o usuário precisa ser informado sobre o processo no qual está aguardando. Inclua um rótulo significativo (geralmente uma frase única, completa) que define claramente a tarefa.
 
-## <a name="about-progress-bars"></a>Sobre barras de progresso
+## <a name="about-progress-bars"></a>Sobre as barras de progresso
 
-Apresenta uma barra de progresso como uma linha que é preenchido com cor para indicar o estado e o comprimento de uma tarefa demorada. Barras de progresso sempre devem ser usadas quando o comprimento das tarefas é conhecido, ou pode ser computado.
+Uma barra de progresso apresenta uma linha que preenche a cor para indicar o estado e o comprimento de uma tarefa demorada. As barras de progresso sempre devem ser usadas quando o comprimento das tarefas é conhecido ou podem ser computadas.
 
-Apple tem as sugestões a seguir para trabalhar com barras de progresso:
+A Apple tem as seguintes sugestões para trabalhar com barras de progresso:
 
-- **Relatar com precisão o progresso** -barras de progresso sempre devem apresentar uma representação precisa do tempo necessário para concluir uma tarefa. Nunca falsificar o tempo para fazer com que o aplicativo apareça ocupado.
-- **Uso de durações bem-definidos** -progresso barras devem não apenas Mostrar que uma tarefa demorada faz colocar, mas fornecem aos usuários e indicação de quanto da tarefa é concluída e uma estimativa do tempo restante.
+- **Relatar com precisão o progresso** -as barras de progresso sempre devem apresentar uma representação precisa do tempo necessário para concluir uma tarefa. Nunca simule o tempo para que o aplicativo pareça estar ocupado.
+- **Use para durações bem definidas** -as barras de progresso não devem mostrar apenas que uma tarefa demorada está ocorrendo, mas forneça ao usuário e a indicação de quanto da tarefa foi concluída e uma estimativa do tempo restante.
 
 ## <a name="progress-indicators-and-storyboards"></a>Indicadores de progresso e storyboards
 
-A maneira mais fácil trabalhar com um indicador de progresso em um aplicativo xamarin. tvos é adicioná-lo à interface de usuário do aplicativo usando o Designer do iOS.
+A maneira mais fácil de trabalhar com um indicador de progresso em um aplicativo Xamarin. tvOS é adicioná-lo à interface do usuário do aplicativo usando o designer do iOS.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
     
-1. No **painel de soluções**, clique duas vezes o **Main. Storyboard** de arquivo e abri-lo para edição.
+1. Na **painel de soluções**, clique duas vezes no arquivo **Main. Storyboard** e abra-o para edição.
 
-2. Arraste uma **indicador de atividade** da **caixa de ferramentas** e solte-o no modo de exibição: 
+2. Arraste um **indicador de atividade** da **caixa de ferramentas** e solte-o na exibição: 
 
-    ![Um indicador de atividade](progress-indicators-images/activity01.png "um indicador de atividade")
+    ![Um indicador de atividade](progress-indicators-images/activity01.png "Um indicador de atividade")
 
-3. No **Widget** guia da **painel de propriedades**, você pode ajustar várias propriedades do indicador de atividade, como seu **estilo**, **comportamento**, e **nome**: 
+3. Na guia **widget** da **painel de propriedades**, você pode ajustar várias propriedades do indicador de atividade, como seu **estilo**, **comportamento**e **nome**: 
 
-    ![Na guia de Widget para um indicador de atividade](progress-indicators-images/activity02.png "guia o Widget para um indicador de atividade")
+    ![A guia do widget para um indicador de atividade](progress-indicators-images/activity02.png "A guia do widget para um indicador de atividade")
     
     O **nome** determina o nome da propriedade que representa o indicador de atividade no C# código.
 
-4. Arraste uma **modo de exibição do progresso** da **caixa de ferramentas** e solte-o no modo de exibição: 
+4. Arraste um **modo de exibição de progresso** da **caixa de ferramentas** e solte-o na exibição: 
 
-    ![Um modo de exibição do progresso](progress-indicators-images/activity03.png "um modo de exibição do progresso")
+    ![Um modo de exibição de progresso](progress-indicators-images/activity03.png "Um modo de exibição de progresso")
 
-5. No **Widget** guia da **Property Explorer**, você pode ajustar várias propriedades da exibição de progresso, como seu **estilo**, **progresso**(porcentagem concluída), e **nome**: 
+5. Na guia **widget** do Gerenciador de **Propriedades**, você pode ajustar várias propriedades da exibição de progresso, como seu **estilo**, **progresso** (porcentagem concluída) e **nome**: 
 
-    ![Na guia de Widget para um modo de exibição do progresso](progress-indicators-images/activity04.png "guia o Widget para um modo de exibição do progresso")
+    ![A guia do widget para um modo de exibição de progresso](progress-indicators-images/activity04.png "A guia do widget para um modo de exibição de progresso")
     
-    O **nome** determina o nome da propriedade que representa o modo de exibição do progresso em C# código.
+    O **nome** determina o nome da propriedade que representa o modo de exibição de C# andamento no código.
 
 6. Salve as alterações.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
     
-1. No **Gerenciador de soluções**, clique duas vezes o **Main. Storyboard** de arquivo e abri-lo para edição.
+1. Na **Gerenciador de soluções**, clique duas vezes no arquivo **Main. Storyboard** e abra-o para edição.
 
-2. Arraste uma **indicador de atividade** da **caixa de ferramentas** e solte-o no modo de exibição: 
+2. Arraste um **indicador de atividade** da **caixa de ferramentas** e solte-o na exibição: 
 
-    ![Um indicador de atividade](progress-indicators-images/activity01-vs.png
-    "um indicador de atividade")
+    ![Um](progress-indicators-images/activity01-vs.png
+    "indicador de atividade de um indicador de atividade")
 
-3. No **Widget** guia da **Gerenciador de propriedades**, você pode ajustar várias propriedades do indicador de atividade, como seu **estilo**, **comportamento**, e **nome**: 
+3. Na guia **widget** do Gerenciador de **Propriedades**, você pode ajustar várias propriedades do indicador de atividade, como seu **estilo**, **comportamento**e **nome**: 
 
-    ![Na guia de Widget para um indicador de atividade](progress-indicators-images/activity02-vs.png "guia o Widget para um indicador de atividade")
+    ![A guia do widget para um indicador de atividade](progress-indicators-images/activity02-vs.png "A guia do widget para um indicador de atividade")
 
     O **nome** determina o nome da propriedade que representa o indicador de atividade no C# código.
 
-4. Arraste uma **modo de exibição do progresso** da **caixa de ferramentas** e solte-o no modo de exibição: 
+4. Arraste um **modo de exibição de progresso** da **caixa de ferramentas** e solte-o na exibição: 
 
-   ![Um modo de exibição do progresso](progress-indicators-images/activity03-vs.png "um modo de exibição do progresso")
+   ![Um modo de exibição de progresso](progress-indicators-images/activity03-vs.png "Um modo de exibição de progresso")
 
-5. No **Widget** guia da **Property Explorer**, você pode ajustar várias propriedades da exibição de progresso, como seu **estilo**, **progresso**(porcentagem concluída), e **nome**: 
+5. Na guia **widget** do Gerenciador de **Propriedades**, você pode ajustar várias propriedades da exibição de progresso, como seu **estilo**, **progresso** (porcentagem concluída) e **nome**: 
 
-    ![Na guia de Widget para um modo de exibição do progresso](progress-indicators-images/activity04-vs.png "guia o Widget para um modo de exibição do progresso")
+    ![A guia do widget para um modo de exibição de progresso](progress-indicators-images/activity04-vs.png "A guia do widget para um modo de exibição de progresso")
     
-    O **nome** determina o nome da propriedade que representa o modo de exibição do progresso em C# código.
+    O **nome** determina o nome da propriedade que representa o modo de exibição de C# andamento no código.
 
 6. Salve as alterações.
 
 -----
 
-Para obter mais informações sobre como trabalhar com storyboards, consulte nosso [Olá, guia de início rápido do tvOS](~/ios/tvos/get-started/hello-tvos.md). 
+Para obter mais informações sobre como trabalhar com storyboards, consulte nossa [Guia de início rápido Olá, tvOS](~/ios/tvos/get-started/hello-tvos.md). 
 
-## <a name="working-with-activity-indicators"></a>Trabalhar com indicadores de atividade
+## <a name="working-with-activity-indicators"></a>Trabalhando com indicadores de atividade
 
-Como mencionado acima, os indicadores de atividade devem ser mostrados quando seu aplicativo está em execução em um processo longo de comprimento indeterminado.
+Conforme mencionado acima, os indicadores de atividade devem ser mostrados quando seu aplicativo estiver executando um longo processo de comprimento indeterminado.
 
-Em qualquer ponto, você pode ver se um indicador de atividade é animada, verificando seu `IsAnimating` propriedade. Se o `HidesWhenStopped` é de propriedade `true`, o indicador de atividade será ocultado automaticamente quando a animação é interrompida.
+A qualquer momento, você pode ver se um indicador de atividade é animado verificando `IsAnimating` sua propriedade. Se a `HidesWhenStopped` propriedade for `true`, o indicador de atividade será ocultado automaticamente quando sua animação for interrompida.
 
-Você pode usar o código a seguir para iniciar a animação: 
+Você pode usar o seguinte código para iniciar a animação: 
 
 ```csharp
 ActivityIndicator.StartAnimating();
 ```
 
-E o código a seguir interromperá a animação:
+E o seguinte irá parar a animação:
 
 ```csharp
 ActivityIndicator.StopAnimating();
 ```
 
 > [!NOTE]
-> Esses trechos de código supõem que o indicador de atividade **nome** foi definida como **ActivityIndicator** no **Widget** guia do Designer do iOS.
+> Esses trechos de código pressupõem que o **nome** do indicador de atividade foi definido como **ActivityIndicator** na guia **widget** do designer do Ios.
 
 ## <a name="working-with-progress-bars"></a>Trabalhando com barras de progresso
 
-Novamente, uma barra de progresso deve ser usada sempre que seu aplicativo está executando uma tarefa demorada de uma duração conhecida. 
+Novamente, uma barra de progresso deve ser usada sempre que seu aplicativo estiver executando uma tarefa de longa execução de uma duração conhecida. 
 
-O `Progress` propriedade é usada para definir o valor da tarefa que foi concluída de 0% a 100% (0,0 a 1,0). Use o `ProgressTintColor` propriedade para definir a cor da barra de quantidade concluída e o `TrackTintColor` propriedade para definir a cor do plano de fundo (quantidade não concluída).
+A `Progress` propriedade é usada para definir a quantidade da tarefa que foi concluída de 0% a 100% (0,0 a 1,0). Use a `ProgressTintColor` propriedade para definir a cor da barra quantidade concluída e da `TrackTintColor` propriedade para definir a cor do plano de fundo (valor não concluído).
 
 ## <a name="summary"></a>Resumo
 
-Este artigo abordou a projetar e trabalhar com indicadores de progresso dentro de um aplicativo xamarin. tvos.
+Este artigo abordou a criação e o trabalho com indicadores de progresso dentro de um aplicativo Xamarin. tvOS.
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Amostras do tvOS](https://developer.xamarin.com/samples/tvos/all/)
+- [Amostras do tvOS](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
 - [tvOS](https://developer.apple.com/tvos/)
-- [Guias de Interface humana do tvOS](https://developer.apple.com/tvos/human-interface-guidelines/)
+- [Guias de interface humana do tvOS](https://developer.apple.com/tvos/human-interface-guidelines/)
 - [Guia de programação de aplicativo para tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)

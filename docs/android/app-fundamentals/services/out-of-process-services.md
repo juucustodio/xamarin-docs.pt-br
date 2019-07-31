@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: aaecc0da52fe692840ed928946963a995364fa9f
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 360ea18de0c9d30988d63602ba3c17c3d00ed83a
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68509182"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68644088"
 ---
 # <a name="running-android-services-in-remote-processes"></a>Executando serviços Android em processos remotos
 
@@ -386,7 +386,7 @@ Há quatro níveis de permissão diferentes que o Android fornece:
 
 * **normal** &ndash; Esse é o nível de permissão padrão. Ele é usado para identificar permissões de baixo risco que podem ser concedidas automaticamente pelo Android aos clientes que o solicitam. O usuário não precisa conceder essas permissões explicitamente, mas as permissões podem ser exibidas nas configurações do aplicativo.
 * **assinatura** do &ndash; Essa é uma categoria especial de permissão que será concedida automaticamente pelo Android a aplicativos que estão todos assinados com o mesmo certificado. Essa permissão foi projetada para tornar fácil para um desenvolvedor de aplicativos compartilhar componentes ou dados entre seus aplicativos sem incomodarr o usuário para aprovações constantes.
-* **signatureOrSystem** Isso é muito semelhante às permissões de assinatura descritas acima.  &ndash; Além de ser concedido automaticamente a aplicativos que são assinados pelo mesmo certificado, essa permissão também será concedida aos aplicativos que assinaram o mesmo certificado que foi usado para assinar os aplicativos instalados com a imagem do sistema Android. Essa permissão normalmente é usada apenas por desenvolvedores de ROM Android para permitir que seus aplicativos funcionem com aplicativos de terceiros. Normalmente, ele não é usado por aplicativos que destinam a distribuição geral para o público de grande porte.
+* **signatureOrSystem** Isso é muito semelhante às permissões de assinatura descritas acima. &ndash; Além de ser concedido automaticamente a aplicativos que são assinados pelo mesmo certificado, essa permissão também será concedida aos aplicativos que assinaram o mesmo certificado que foi usado para assinar os aplicativos instalados com a imagem do sistema Android. Essa permissão normalmente é usada apenas por desenvolvedores de ROM Android para permitir que seus aplicativos funcionem com aplicativos de terceiros. Normalmente, ele não é usado por aplicativos que destinam a distribuição geral para o público de grande porte.
 * **perigoso** &ndash; Permissões perigosas são aquelas que podem causar problemas para o usuário. Por esse motivo, permissões **perigosas** devem ser explicitamente aprovadas pelo usuário.
 
 Como `signature` e`normal` as permissões são concedidas automaticamente no momento da instalação pelo Android, é crucial que o apk que hospeda o serviço seja instalado **antes** do APK que contém o cliente. Se o cliente for instalado primeiro, o Android não concederá as permissões. Nesse caso, será necessário desinstalar o APK do cliente, instalar o serviço APK e, em seguida, reinstalar o APK do cliente.
@@ -488,4 +488,4 @@ Este guia foi uma discussão avançada sobre como executar um serviço Android e
 - [Processos e threads](https://developer.android.com/guide/components/processes-and-threads.html)
 - [Manifesto do Android-permissões](https://developer.android.com/guide/topics/manifest/manifest-intro.html#perms)
 - [Dicas de segurança](https://developer.android.com/training/articles/security-tips.html)
-- [MessengerServiceDemo (sample)](https://developer.xamarin.com/samples/monodroid/ApplicationFundamentals/ServiceSamples/MessengerServiceDemo/)
+- [MessengerServiceDemo (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/applicationfundamentals-servicesamples-messengerservicedemo)

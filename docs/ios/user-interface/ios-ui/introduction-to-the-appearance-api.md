@@ -1,45 +1,45 @@
 ---
-title: API de aparência no xamarin. IOS
-description: iOS permite aplicar configurações de propriedade visual em um nível de classe estática em vez de em objetos individuais, para que a alteração se aplica a todas as instâncias desse controle no aplicativo.
+title: API de aparência no Xamarin. iOS
+description: o iOS permite aplicar configurações de Propriedade Visual em um nível de classe estática em vez de em objetos individuais para que a alteração se aplique a todas as instâncias desse controle no aplicativo.
 ms.prod: xamarin
 ms.assetid: C1727F0C-82B1-D085-D46F-C6383FF04B16
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 11/15/2018
-ms.openlocfilehash: bfbc902b0912527fea6aaa58c6706ef5a0ccbf8e
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 2211897af70712f9de2dec5c7c0771c5089dad1a
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61178228"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68655887"
 ---
-# <a name="appearance-api-in-xamarinios"></a>API de aparência no xamarin. IOS
+# <a name="appearance-api-in-xamarinios"></a>API de aparência no Xamarin. iOS
 
-_iOS permite aplicar configurações de propriedade visual em um nível de classe estática em vez de em objetos individuais, para que a alteração se aplica a todas as instâncias desse controle no aplicativo._
+_o iOS permite aplicar configurações de Propriedade Visual em um nível de classe estática em vez de em objetos individuais para que a alteração se aplique a todas as instâncias desse controle no aplicativo._
 
-Essa funcionalidade é exposta no xamarin. IOS por meio de um estático `Appearance` propriedade em todos os controles UIKit que dão suporte a ele. A aparência visual (propriedades como como imagem de tonalidade cor e tela de fundo), portanto, pode ser facilmente personalizada para dar uma aparência consistente de seu aplicativo. A API de aparência foi introduzida no iOS 5 e, embora algumas partes dele foram substituídas no iOS 9 ainda é uma boa maneira de obter alguns estilos e efeitos de temas em aplicativos xamarin. IOS.
+Essa funcionalidade é exposta no Xamarin. Ios por meio de `Appearance` uma propriedade estática em todos os controles UIKit que dão suporte a ela. A aparência visual (propriedades como cor de tonalidade e imagem de plano de fundo), portanto, pode ser facilmente personalizada para dar a seu aplicativo uma aparência consistente. A API de aparência foi introduzida no iOS 5 e, embora algumas partes dele tenham sido preteridas no iOS 9, ainda é uma boa maneira de obter algum estilo e efeitos de tema nos aplicativos Xamarin. iOS.
 
 ## <a name="overview"></a>Visão geral
 
-iOS permite que você personalize a aparência dos muitos controles UIKit para fazer com que os controles padrão estão em conformidade com a marca que você deseja aplicar ao seu aplicativo.
+o iOS permite que você personalize a aparência de muitos controles UIKit para que os controles padrão estejam em conformidade com a identidade visual que você deseja aplicar ao seu aplicativo.
 
 Há duas maneiras diferentes de aplicar uma aparência personalizada:
 
-- **Diretamente em uma instância de controle** – você pode definir a cor da tonalidade, imagem de plano de fundo e posição do título (bem como alguns outros atributos) em vários controles, incluindo as barras de ferramentas, barras de navegação, botões e controles deslizantes.
+- **Diretamente em uma instância de controle** – você pode definir a cor da tonalidade, a imagem do plano de fundo e a posição do título (bem como alguns outros atributos) em vários controles, incluindo barras de ferramentas, barras de navegação, botões e controles deslizantes.
 
-- **Definir padrões sobre a propriedade estática de aparência** – atributos personalizáveis para cada controle são expostos por meio de `Appearance` propriedade estática. As personalizações que se aplicam a essas propriedades serão usadas como padrão para qualquer controle desse tipo criado depois que a propriedade é definida.
+- **Definir padrões na propriedade estática de aparência** – atributos personalizáveis para cada controle são expostos por meio da `Appearance` propriedade estática. Todas as personalizações aplicadas a essas propriedades serão usadas como o padrão para qualquer controle desse tipo criado depois que a propriedade for definida.
 
-O aplicativo de exemplo da aparência demonstra todos os três métodos, conforme mostrado nessas capturas de tela:
+O aplicativo de exemplo aparência demonstra todos os três métodos, conforme mostrado nestas capturas de tela:
 
-[![](introduction-to-the-appearance-api-images/appearance01-sml.png "O aplicativo de exemplo da aparência demonstra todos os três métodos")](introduction-to-the-appearance-api-images/appearance01.png#lightbox)
+[![](introduction-to-the-appearance-api-images/appearance01-sml.png "O aplicativo de exemplo aparência demonstra todos os três métodos")](introduction-to-the-appearance-api-images/appearance01.png#lightbox)
 
 A partir do iOS 8, o proxy de aparência foi estendido para TraitCollections.
- `AppearanceForTraitCollection` pode ser usado para definir a aparência padrão em uma coleção de característica específica. Você pode ler mais sobre isso na [Introdução ao Storyboards](~/ios/user-interface/storyboards/unified-storyboards.md) guia.
+ `AppearanceForTraitCollection`pode ser usado para definir a aparência padrão em uma determinada coleção de características. Você pode ler mais sobre isso no guia [introdução ao storyboards](~/ios/user-interface/storyboards/unified-storyboards.md) .
 
 ## <a name="setting-appearance-properties"></a>Definindo propriedades de aparência
 
-Na primeira tela, a classe estática de aparência é usada para estilizar os botões e amarelo/laranja elementos como este:
+Na primeira tela, a classe de aparência estática é usada para estilizar os botões e elementos amarelo/laranja como este:
 
 ```csharp
 // Set the default appearance values
@@ -54,7 +54,7 @@ UIProgressView.Appearance.ProgressTintColor = UIColor.Yellow;
 UIProgressView.Appearance.TrackTintColor = UIColor.Orange;
 ```
 
-Os estilos do elemento verdes são definidos como este, além de `ViewDidLoad` método que substitui os valores padrão e o *aparência* classe estática:
+Os estilos de elemento verdes são definidos como este, no `ViewDidLoad` método que substitui os valores padrão e a classe estática de *aparência* :
 
 ```csharp
 slider2.ThumbTintColor = UIColor.FromRGB (0,127,70); // dark green
@@ -67,46 +67,46 @@ progress2.ProgressTintColor = UIColor.FromRGB (66,255,63);
 progress2.TrackTintColor = UIColor.FromRGB (197,255,132);
 ```
 
-## <a name="using-uiappearance-in-xamarinforms"></a>Usando UIAppearance no xamarin. Forms
+## <a name="using-uiappearance-in-xamarinforms"></a>Usando UIAppearance no Xamarin. Forms
 
-A API de aparência pode ser útil quando [definindo o estilo de aplicativo do iOS](~/xamarin-forms/platform/ios/formatting.md#uiappearance) em soluções xamarin. Forms. Algumas linhas na `AppDelegate` classe pode ajudar a implementar um esquema de cores específica sem precisar criar um [renderizador personalizado](~/xamarin-forms/app-fundamentals/custom-renderer/index.md).
+A API de aparência pode ser útil ao [estilizar o aplicativo IOS](~/xamarin-forms/platform/ios/formatting.md#uiappearance) em soluções Xamarin. Forms. Algumas linhas na `AppDelegate` classe podem ajudar a implementar um esquema de cores específico sem precisar criar um renderizador [personalizado](~/xamarin-forms/app-fundamentals/custom-renderer/index.md).
 
-### <a name="custom-themes-and-uiappearance"></a>UIAppearance e temas personalizados
+### <a name="custom-themes-and-uiappearance"></a>Temas e UIAppearance personalizados
 
-iOS permite que muitos atributos visuais do usuário controles de interface "tema" usando o *UIAppearance* APIs para forçar todas as instâncias de um controle específico para ter a mesma aparência. Isso é exposto como uma propriedade de aparência em muitas classes de controle de interface de usuário, não em instâncias individuais do controle. Definir uma propriedade de exibição em estático `Appearance` propriedade afeta todos os controles desse tipo em seu aplicativo.
+o iOS permite que muitos atributos visuais dos controles da interface do usuário sejam "com tema" usando as APIs do *UIAppearance* para forçar todas as instâncias de um controle específico a terem a mesma aparência. Isso é exposto como uma propriedade Appearance em muitas classes de controle de interface do usuário, não em instâncias individuais do controle. A definição de uma propriedade de exibição `Appearance` na propriedade estática afeta todos os controles desse tipo em seu aplicativo.
 
 Para entender melhor o conceito, considere um exemplo.
 
-Para alterar um determinado `UISegmentedControl` para ter uma tonalidade Magenta, podemos fazer referência o controle específico em nossa tela como esta na `ViewDidLoad`:
+Para alterar um específico `UISegmentedControl` para ter uma tonalidade magenta, referenciamos o controle específico em nossa tela como esta em: `ViewDidLoad`
 
 ```csharp
 sg1.TintColor = UIColor.Magenta;
 ```
 
-Como alternativa, defina o valor no painel de propriedades do Designer:
+Como alternativa, defina o valor no painel de propriedades do designer:
 
-[![](introduction-to-the-appearance-api-images/propertiespadtint.png "Tom do painel de propriedades")](introduction-to-the-appearance-api-images/propertiespadtint.png#lightbox)
+[![](introduction-to-the-appearance-api-images/propertiespadtint.png "Tonalidade de Painel de Propriedades")](introduction-to-the-appearance-api-images/propertiespadtint.png#lightbox)
 
-A imagem a seguir ilustra que define o tom no controle denominado 'sg1'.
+A imagem abaixo ilustra que isso define a tonalidade somente no controle chamado ' SG1 '.
 
-[![](introduction-to-the-appearance-api-images/image53.png "Definindo o tom de controle individual")](introduction-to-the-appearance-api-images/image53.png#lightbox)
+[![](introduction-to-the-appearance-api-images/image53.png "Definindo a tonalidade de controle individual")](introduction-to-the-appearance-api-images/image53.png#lightbox)
 
-Para definir muitos controles dessa forma seria completamente ineficiente, portanto, em vez disso, definimos estático `Appearance` propriedade na classe em si. Isso é mostrado no código a seguir:
+Definir muitos controles dessa maneira seria completamente ineficiente, portanto, podemos definir a propriedade estática `Appearance` na própria classe. Isso é mostrado no código abaixo:
 
 ```csharp
 UISegmentedControl.Appearance.TintColor = UIColor.Magenta;
 ```
 
-Agora, a imagem a seguir ilustra ambos os controles segmentados com a aparência definida como Magenta:
+A imagem abaixo agora ilustra os dois controles segmentados com a aparência definida como magenta:
 
-[![](introduction-to-the-appearance-api-images/image54.png "Definindo o tom de controle de aparência")](introduction-to-the-appearance-api-images/image54.png#lightbox)
+[![](introduction-to-the-appearance-api-images/image54.png "Definindo a tonalidade do controle de aparência")](introduction-to-the-appearance-api-images/image54.png#lightbox)
 
-`Appearance` propriedades devem ser definidas no início do ciclo de vida do aplicativo, como no AppDelegate `FinishedLaunching` evento, ou em um ViewController antes que os controles afetados são exibidos.
+`Appearance`as propriedades devem ser definidas no início do ciclo de vida do aplicativo, como no `FinishedLaunching` evento do AppDelegate ou em um ViewController antes de os controles afetados serem exibidos.
 
-Consulte a [Introdução à API do aparência](~/ios/user-interface/ios-ui/introduction-to-the-appearance-api.md) para obter mais informações.
+Consulte a [introdução à API de aparência](~/ios/user-interface/ios-ui/introduction-to-the-appearance-api.md) para obter informações mais detalhadas.
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Aparência (amostra)](https://developer.xamarin.com/samples/monotouch/Appearance/)
+- [Aparência (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/appearance)
 - [Referência de protocolo UIAppearance](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAppearance_Protocol/)
-- [Aparência no xamarin. Forms](~/xamarin-forms/platform/ios/formatting.md#uiappearance)
+- [Aparência no Xamarin. Forms](~/xamarin-forms/platform/ios/formatting.md#uiappearance)

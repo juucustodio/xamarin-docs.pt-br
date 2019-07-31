@@ -7,16 +7,16 @@ ms.assetid: 400AE23A-6A0B-4FA8-BD6B-DE4146B04732
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
-ms.openlocfilehash: a17ddf438856600870c9bb3da60a5f4667128d57
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: df45908af9e2d13dcaeff732e8e8b1b49c523934
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61218071"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68647640"
 ---
 # <a name="the-skiasharp-circular-gradients"></a>Os gradientes circulares de SkiaSharp
 
-[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 O [ `SKShader` ](xref:SkiaSharp.SKShader) classe define os métodos estáticos para criar quatro tipos diferentes de gradientes. O [ **gradiente linear do SkiaSharp** ](linear-gradient.md) artigo discute os [ `CreateLinearGradient` ](xref:SkiaSharp.SKShader.CreateLinearGradient*) método. Este artigo aborda os outros três tipos de gradientes, que se baseiam em círculos.
 
@@ -54,7 +54,7 @@ Os dois primeiros especificam o Centro de um círculo e um raio. O gradiente com
 
 Se você usar `CreateRadialGradient` para preencher um círculo, você pode definir o centro do gradiente para o centro do círculo e o raio do gradiente para o raio do círculo. Nesse caso, o `SKShaderTileMode` argumento não tem efeito sobre a renderização do gradiente. Porém, se a área preenchida pelo gradiente é maior do que o círculo definido pelo gradiente, em seguida, a `SKShaderTileMode` argumento tem um efeito profundo sobre o que acontece fora do círculo.
 
-O efeito de `SKShaderMode` é demonstrado na **gradiente Radial** página a [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) exemplo. O arquivo XAML para essa página instancia uma `Picker` que permite que você selecione um dos três membros do `SKShaderTileMode` enumeração:
+O efeito de `SKShaderMode` é demonstrado na **gradiente Radial** página a [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) exemplo. O arquivo XAML para essa página instancia uma `Picker` que permite que você selecione um dos três membros do `SKShaderTileMode` enumeração:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -140,7 +140,7 @@ Esse código cria um gradiente com preta no centro, esmaecida gradualmente para 
 
 [![Gradiente radial](circular-gradients-images/RadialGradient.png "gradiente Radial")](circular-gradients-images/RadialGradient-Large.png#lightbox)
 
-Em todos os três casos, o gradiente preenche a tela. Na tela do iOS à esquerda, o gradiente além do raio continua com a última cor é branca. Que é o resultado de `SKShaderTileMode.Clamp`. A tela Android mostra o efeito de `SKShaderTileMode.Repeat`: Com 100 pixels a partir do centro, o gradiente é iniciado novamente com a primeira cor é preta. O gradiente se repete a cada 100 pixels do radius. 
+Em todos os três casos, o gradiente preenche a tela. Na tela do iOS à esquerda, o gradiente além do raio continua com a última cor é branca. Que é o resultado de `SKShaderTileMode.Clamp`. A tela do Android mostra o efeito `SKShaderTileMode.Repeat`de: A 100 pixels do centro, o gradiente começa novamente com a primeira cor, que é preta. O gradiente se repete a cada 100 pixels do radius. 
 
 Tela da plataforma Universal do Windows o direito mostra como `SKShaderTileMode.Mirror` faz com que os gradientes para direções alternativos. O primeiro gradiente é de preto no centro em branco em um raio de 100 pixels. A próxima é branca do raio de 100 pixels para preto em um raio de 200 pixels e Avançar gradiente é invertido novamente.
 
@@ -620,4 +620,4 @@ Os dois círculos tem centros das `offCenter` e `center`. O círculo centralizad
 ## <a name="related-links"></a>Links relacionados
 
 - [APIs de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (amostra)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

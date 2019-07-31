@@ -1,5 +1,5 @@
 ---
-title: Introdução de serviços Cognitivos do xamarin. Forms e do Azure
+title: Introdução aos serviços do Xamarin. Forms e do Azure cognitiva
 description: Este artigo fornece uma introdução a um aplicativo de exemplo que demonstra como invocar algumas das APIs de serviços Cognitivos da Microsoft.
 ms.prod: xamarin
 ms.assetid: 74121ADB-1322-4C1E-A103-F37257BC7CB0
@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/08/2017
-ms.openlocfilehash: 36aa53a6d257d8f5311cab84485e608bef3e97f8
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: 52774b387644b14e3d4612dffa6d3c3b28a37f25
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67659263"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68652307"
 ---
-# <a name="xamarinforms-and-azure-cognitive-services-introduction"></a>Introdução de serviços Cognitivos do xamarin. Forms e do Azure
+# <a name="xamarinforms-and-azure-cognitive-services-introduction"></a>Introdução aos serviços do Xamarin. Forms e do Azure cognitiva
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoCognitiveServices/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
 
 _Serviços Cognitivos da Microsoft são um conjunto de APIs, SDKs e serviços disponíveis para desenvolvedores para tornar seus aplicativos mais inteligentes com a adição de recursos, como reconhecimento facial, reconhecimento de fala e reconhecimento vocal. Este artigo fornece uma introdução ao aplicativo de exemplo que demonstra como invocar algumas das APIs de serviços Cognitivos da Microsoft._
 
@@ -50,7 +50,7 @@ Clicar no botão smilies na `TodoListPage` navega para o `RateAppPage`, que é u
 
 O `RateAppPage` permite que o usuário tirar uma foto do seu face, que é enviado à API de detecção facial com a detecção de emoções retornada que está sendo exibida.
 
-## <a name="understand-the-application-anatomy"></a>Entenda a anatomia do aplicativo
+## <a name="understand-the-application-anatomy"></a>Entender a anatomia do aplicativo
 
 O projeto de código compartilhado para o aplicativo de exemplo consiste em cinco pastas principais:
 
@@ -80,7 +80,7 @@ O aplicativo de exemplo usa os seguintes pacotes NuGet:
 
 Além disso, esses pacotes do NuGet também instalam suas próprias dependências.
 
-### <a name="model-the-data"></a>Os dados de modelo
+### <a name="model-the-data"></a>Modelar os dados
 
 O aplicativo de exemplo usa o `TodoItem` classe para modelar os dados que são exibidos e armazenados no banco de dados SQLite local. O exemplo de código a seguir mostra a classe `TodoItem`:
 
@@ -107,13 +107,13 @@ O `TodoItemRepository` classe implementa as operações de banco de dados e uma 
 
 ### <a name="platform-project-implementations"></a>Implementações de projeto de plataforma
 
-O `Services` pasta no projeto de código compartilhado contém a `IFileHelper` e `IAudioRecorderService` interfaces que são usadas pelo `DependencyService` classe para localizar as classes que implementam as interfaces em projetos de plataforma.
+A `Services` pasta no projeto de código compartilhado contém as `IFileHelper` interfaces `IAudioRecorderService` e que são usadas pela `DependencyService` classe para localizar as classes que implementam as interfaces em projetos de plataforma.
 
 O `IFileHelper` interface é implementada pelo `FileHelper` classe em cada projeto da plataforma. Essa classe consiste em um único método, `GetLocalFilePath`, que retorna um caminho de arquivo local para armazenar o banco de dados SQLite.
 
 O `IAudioRecorderService` interface é implementada pelo `AudioRecorderService` classe em cada projeto da plataforma. Essa classe consiste `StartRecording`, `StopRecording`e que dão suporte a métodos, que usam as APIs da plataforma para gravar áudio do microfone do dispositivo e armazená-lo como um arquivo wav. No iOS, o `AudioRecorderService` usa o `AVFoundation` API gravar áudio. No Android, o `AudioRecordService` usa o `AudioRecord` API gravar áudio. Na Universal Windows Platform (UWP), o `AudioRecorderService` usa o `AudioGraph` API gravar áudio.
 
-### <a name="invoke-cognitive-services"></a>Invocar serviços cognitivos
+### <a name="invoke-cognitive-services"></a>Invocar serviços cognitivas
 
 O aplicativo de exemplo invoca os seguintes serviços Cognitivos da Microsoft:
 
@@ -125,4 +125,4 @@ O aplicativo de exemplo invoca os seguintes serviços Cognitivos da Microsoft:
 ## <a name="related-links"></a>Links relacionados
 
 - [Documentação dos serviços Cognitivos da Microsoft](https://www.microsoft.com/cognitive-services/documentation)
-- [Serviços Cognitivos de tarefas pendentes (amostra)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoCognitiveServices/)
+- [Serviços Cognitivos de tarefas pendentes (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)

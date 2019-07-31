@@ -1,43 +1,43 @@
 ---
-title: Botões de ação de notificação dinâmico no xamarin. IOS
-description: Com o iOS 12, uma extensão de conteúdo de notificação pode adicionar, remover e atualizar os botões de ação exibidos ao lado de uma notificação. Este documento descreve como usar os botões de ação de notificação dinâmico com xamarin. IOS.
+title: Botões de ação de notificação dinâmica no Xamarin. iOS
+description: Com o iOS 12, uma extensão de conteúdo de notificação pode adicionar, remover e atualizar os botões de ação exibidos junto com uma notificação. Este documento descreve como usar botões de ação de notificação dinâmica com o Xamarin. iOS.
 ms.prod: xamarin
 ms.assetid: 6B34AD78-5117-42D0-B6E7-C8B4B453EAFF
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 09/04/2018
-ms.openlocfilehash: 5611d673ecc7af896fd3a9e566e184e408b6b367
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 1a4380e321035b8948f9b40bdce052161025d5f3
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60876052"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68652582"
 ---
-# <a name="dynamic-notification-action-buttons-in-xamarinios"></a>Botões de ação de notificação dinâmico no xamarin. IOS
+# <a name="dynamic-notification-action-buttons-in-xamarinios"></a>Botões de ação de notificação dinâmica no Xamarin. iOS
 
-No iOS 12, notificações dinamicamente podem adicionar, remover e atualizar seus botões de ação associada. Tal personalização torna possível fornecer aos usuários com as ações que são diretamente relevantes para o conteúdo da notificação e a interação do usuário com ele.
+No iOS 12, as notificações podem adicionar, remover e atualizar dinamicamente seus botões de ação associados. Essa personalização possibilita fornecer aos usuários ações que são diretamente relevantes para o conteúdo da notificação e a interação do usuário com ele.
 
 ## <a name="sample-app-redgreennotifications"></a>Aplicativo de exemplo: RedGreenNotifications
 
-Os trechos de código neste guia são provenientes de [RedGreenNotifications](https://developer.xamarin.com/samples/monotouch/iOS12/RedGreenNotifications) aplicativo de exemplo que demonstra como usar o xamarin. IOS para trabalhar com os botões de ação de notificação no iOS 12.
+Os trechos de código neste guia são provenientes do aplicativo de exemplo [RedGreenNotifications](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-redgreennotifications) , que demonstra como usar o Xamarin. Ios para trabalhar com botões de ação de notificação no IOS 12.
 
 Este aplicativo de exemplo envia dois tipos de notificações locais: vermelho e verde.
-Depois de ter o aplicativo enviar uma notificação, use o 3D Touch para exibir sua interface de usuário personalizada. Em seguida, use os botões de ação da notificação para girar a imagem que ele exibe. Como gira a imagem, uma **redefinir rotação** botão aparece e desaparece conforme necessário.
+Depois de fazer com que o aplicativo envie uma notificação, use o 3D Touch para exibir sua interface do usuário personalizada. Em seguida, use os botões de ação da notificação para girar a imagem exibida. À medida que a imagem gira, um botão **Redefinir rotação** é exibido e desaparece conforme necessário.
 
-Trechos de código neste guia são provenientes este aplicativo de exemplo.
+Trechos de código neste guia são provenientes deste aplicativo de exemplo.
 
 ## <a name="default-action-buttons"></a>Botões de ação padrão
 
-Categoria de uma notificação determina seus botões de ação padrão.
+A categoria de uma notificação determina seus botões de ação padrão.
 
-Crie e registre as categorias de notificação enquanto um aplicativo é iniciado.
-Por exemplo, nos [aplicativo de exemplo](#sample-app-redgreennotifications), o `FinishedLaunching` método `AppDelegate` faz o seguinte:
+Crie e registre categorias de notificação enquanto um aplicativo é iniciado.
+Por exemplo, no [aplicativo de exemplo](#sample-app-redgreennotifications), o `FinishedLaunching` método de `AppDelegate` faz o seguinte:
 
-- Define uma categoria para notificações vermelhas e outro para notificações verdes
-- Registra essas categorias chamando o [`SetNotificationCategories`](xref:UserNotifications.UNUserNotificationCenter.SetNotificationCategories*)
-método de `UNUserNotificationCenter`
-- Anexa um único [`UNNotificationAction`](xref:UserNotifications.UNNotificationAction)
+- Define uma categoria para notificações vermelhas e outra para notificações verdes
+- Registra essas categorias chamando o[`SetNotificationCategories`](xref:UserNotifications.UNUserNotificationCenter.SetNotificationCategories*)
+método de`UNUserNotificationCenter`
+- Anexa um único[`UNNotificationAction`](xref:UserNotifications.UNNotificationAction)
 para cada categoria
 
 O código de exemplo a seguir mostra como isso funciona:
@@ -74,14 +74,14 @@ public override bool FinishedLaunching(UIApplication application, NSDictionary l
 }
 ```
 
-Com base nesse código, qualquer notificação cuja [`Content.CategoryIdentifier`](xref:UserNotifications.UNNotificationContent.CategoryIdentifier)
-será "vermelho-categoria" ou "verde-", por padrão, mostrar um **girar 20°** botão de ação.
+Com base nesse código, qualquer notificação cujo[`Content.CategoryIdentifier`](xref:UserNotifications.UNNotificationContent.CategoryIdentifier)
+é "Red-category" ou "Green-category", por padrão, mostrará um botão de ação **girar 20 °** .
 
-## <a name="in-app-handling-of-notification-action-buttons"></a>No aplicativo tratamento dos botões de ação de notificação
+## <a name="in-app-handling-of-notification-action-buttons"></a>Manipulação no aplicativo de botões de ação de notificação
 
-`UNUserNotificationCenter` tem um `Delegate` propriedade do tipo [ `IUNUserNotificationCenterDelegate` ](xref:UserNotifications.IUNUserNotificationCenterDelegate).
+`UNUserNotificationCenter`tem uma `Delegate` Propriedade do tipo [`IUNUserNotificationCenterDelegate`](xref:UserNotifications.IUNUserNotificationCenterDelegate).
 
-No aplicativo de exemplo, `AppDelegate` se define como representante da Central de notificação do usuário em `FinishedLaunching`:
+No aplicativo de exemplo, `AppDelegate` ele se define como o delegado do centro de notificação `FinishedLaunching`do usuário em:
 
 ```csharp
 public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
@@ -95,8 +95,8 @@ public override bool FinishedLaunching(UIApplication application, NSDictionary l
         // ...
 ```
 
-Em seguida, `AppDelegate` implementa [`DidReceiveNotificationResponse`](xref:UserNotifications.UNUserNotificationCenterDelegate_Extensions.DidReceiveNotificationResponse*)
-para lidar com o botão de ação toca:
+Em seguida `AppDelegate` , implementa[`DidReceiveNotificationResponse`](xref:UserNotifications.UNUserNotificationCenterDelegate_Extensions.DidReceiveNotificationResponse*)
+para lidar com toques de botão de ação:
 
 ```csharp
 [Export("userNotificationCenter:didReceiveNotificationResponse:withCompletionHandler:")]
@@ -119,29 +119,29 @@ public void DidReceiveNotificationResponse(UNUserNotificationCenter center, UNNo
         }
 ```
 
-Essa implementação do `DidReceiveNotificationResponse` não processa a notificação **girar 20°** botão de ação. Em vez disso, a extensão de conteúdo da notificação manipula toques neste botão. Ainda mais a próxima seção aborda o tratamento do botão de ação de notificação.
+Essa implementação do `DidReceiveNotificationResponse` não manipula o botão de ação **girar 20 °** da notificação. Em vez disso, a extensão de conteúdo da notificação lida com toques nesse botão. A próxima seção aborda ainda mais o tratamento do botão de ação de notificação.
 
 ## <a name="action-buttons-in-the-notification-content-extension"></a>Botões de ação na extensão de conteúdo de notificação
 
 Uma extensão de conteúdo de notificação contém um controlador de exibição que define a interface personalizada para uma notificação.
 
-Esse controlador de exibição pode usar o `GetNotificationActions` e `SetNotificationActions` métodos em seu [`ExtensionContext`](xref:UIKit.UIViewController.ExtensionContext)
-propriedade para acessar e modificar os botões de ação da notificação.
+Este controlador de exibição pode usar `GetNotificationActions` os `SetNotificationActions` métodos e em seu[`ExtensionContext`](xref:UIKit.UIViewController.ExtensionContext)
+Propriedade para acessar e modificar os botões de ação da notificação.
 
-No aplicativo de exemplo, o controlador de exibição da extensão de conteúdo de notificação modifica os botões de ação somente ao responder a um toque de um botão de ação já existente.
+No aplicativo de exemplo, o controlador de exibição da extensão de conteúdo de notificação modifica os botões de ação somente ao responder a um toque em um botão de ação já existente.
 
 > [!NOTE]
-> Uma extensão de conteúdo pode responder a um toque de botão de ação em seu controlador de exibição de notificação [ `DidReceiveNotificationResponse` ](xref:UserNotificationsUI.UNNotificationContentExtension_Extensions.DidReceiveNotificationResponse*) método, declarado como parte da [IUNNotificationContentExtension](xref:UserNotificationsUI.IUNNotificationContentExtension).
+> Uma extensão de conteúdo de notificação pode responder a um botão de ação tocar no método [`DidReceiveNotificationResponse`](xref:UserNotificationsUI.UNNotificationContentExtension_Extensions.DidReceiveNotificationResponse*) do controlador de exibição, declarado como parte de [IUNNotificationContentExtension](xref:UserNotificationsUI.IUNNotificationContentExtension).
 >
-> Embora ele compartilha um nome com o `DidReceiveNotificationResponse` método [descrito acima](#in-app-handling-of-notification-action-buttons), esse é um método diferente.
+> Embora Compartilhe um nome com o `DidReceiveNotificationResponse` método [descrito acima](#in-app-handling-of-notification-action-buttons), esse é um método diferente.
 >
-> Depois que uma extensão de conteúdo de notificação termina de processar um toque de botão, ele pode escolher se deseja ou não informar o aplicativo principal para lidar com esse mesmo toque de botão. Para fazer isso, ele deve passar um valor apropriado igual [UNNotificationContentExtensionResponseOption](xref:UserNotificationsUI.UNNotificationContentExtensionResponseOption) para seu manipulador de conclusão:
+> Depois que uma extensão de conteúdo de notificação termina de processar um toque de botão, ela pode escolher se quer ou não instruir o aplicativo principal a lidar com o mesmo toque de botão. Para fazer isso, ele deve passar um valor apropriado de [UNNotificationContentExtensionResponseOption](xref:UserNotificationsUI.UNNotificationContentExtensionResponseOption) para seu manipulador de conclusão:
 >
-> - `Dismiss` indica que a interface de notificação deve ser descartada, e que o aplicativo principal não precisa lidar com o toque de botão.
-> - `DismissAndForwardAction` indica que a interface de notificação deve ser descartada, e que o aplicativo principal também deve lidar com o toque de botão.
-> - `DoNotDismiss` indica que a interface de notificação não deve ser ignorada, e que o aplicativo principal não precisa lidar com o toque de botão.
+> - `Dismiss`indica que a interface de notificação deve ser ignorada e que o aplicativo principal não precisa manipular o toque do botão.
+> - `DismissAndForwardAction`indica que a interface de notificação deve ser ignorada e que o aplicativo principal também deve lidar com o toque do botão.
+> - `DoNotDismiss`indica que a interface de notificação não deve ser ignorada e que o aplicativo principal não precisa manipular o toque do botão.
 
-A extensão de conteúdo `DidReceiveNotificationResponse` método determina qual botão de ação foi tocada, gira a imagem da interface da notificação e mostra ou oculta uma **redefinir** botão de ação:
+O método da `DidReceiveNotificationResponse` extensão de conteúdo determina qual botão de ação foi tocado, gira a imagem na interface da notificação e mostra ou oculta um botão de ação de redefinição:
 
 ```csharp
 [Export("didReceiveNotificationResponse:completionHandler:")]
@@ -184,14 +184,14 @@ public void DidReceiveNotificationResponse(UNNotificationResponse response, Acti
 }
 ```
 
-Nesse caso, o método passa `UNNotificationContentExtensionResponseOption.DoNotDismiss` para seu manipulador de conclusão. Isso que significa que a interface da notificação permanecerá aberta.
+Nesse caso, o método passa `UNNotificationContentExtensionResponseOption.DoNotDismiss` para seu manipulador de conclusão. Isso significa que a interface da notificação permanecerá aberta.
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Aplicativo de exemplo – RedGreenNotifications](https://developer.xamarin.com/samples/monotouch/iOS12/RedGreenNotifications)
-- [Estrutura de notificações de usuário no xamarin. IOS](~/ios/platform/user-notifications/index.md)
-- [Declarando tipos sua notificação acionáveis](https://developer.apple.com/documentation/usernotifications/declaring_your_actionable_notification_types?language=objc)
-- [UserNotifications (Apple)](https://developer.apple.com/documentation/usernotifications?language=objc)
-- [Quais são as novidades em notificações de usuário (WWDC 2018)](https://developer.apple.com/videos/play/wwdc2018/710/)
-- [Práticas recomendadas e quais são as novidades em notificações de usuário (WWDC 2017)](https://developer.apple.com/videos/play/wwdc2017/708/)
-- [Gerar uma notificação remota (Apple)](https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/generating_a_remote_notification)
+- [Aplicativo de exemplo – RedGreenNotifications](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-redgreennotifications)
+- [Estrutura de notificações do usuário no Xamarin. iOS](~/ios/platform/user-notifications/index.md)
+- [Declarando seus tipos de notificação acionáveis](https://developer.apple.com/documentation/usernotifications/declaring_your_actionable_notification_types?language=objc)
+- [Usernotifications (Apple)](https://developer.apple.com/documentation/usernotifications?language=objc)
+- [O que há de novo nas notificações do usuário (WWDC 2018)](https://developer.apple.com/videos/play/wwdc2018/710/)
+- [Práticas recomendadas e o que há de novo nas notificações do usuário (WWDC 2017)](https://developer.apple.com/videos/play/wwdc2017/708/)
+- [Gerando uma notificação remota (Apple)](https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/generating_a_remote_notification)

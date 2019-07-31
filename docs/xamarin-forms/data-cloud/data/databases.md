@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/21/2018
-ms.openlocfilehash: 235a30293939333555c52b8d9e00bcf25ddd4dbd
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: 321448453ebe38bd7d43665a3c8bade4fe0f68c2
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67658583"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68645250"
 ---
 # <a name="xamarinforms-local-databases"></a>Bancos de dados locais do Xamarin.Forms
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/Todo/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo)
 
 _O Xamarin.Forms dá suporte a aplicativos controlados por banco de dados usando o mecanismo de banco de dados SQLite, que torna possível carregar e salvar objetos em código compartilhado. Este artigo descreve como os aplicativos Xamarin.Forms podem ler e gravar dados em um banco de dados SQLite local usando o SQLite.Net._
 
@@ -122,6 +122,6 @@ O foco deste artigo foi o **acesso** a um banco de dados SQLite que usa o Xamari
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Exemplo de tarefas pendentes](https://developer.xamarin.com/samples/xamarin-forms/Todo/)
-- [Amostras do Xamarin.Forms](https://developer.xamarin.com/samples/xamarin-forms/all/)
+- [Exemplo de tarefas pendentes](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo)
+- [Amostras do Xamarin.Forms](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms)
 

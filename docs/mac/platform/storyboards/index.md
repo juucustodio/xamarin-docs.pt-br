@@ -1,108 +1,108 @@
 ---
-title: Introdução ao Storyboards no xamarin. Mac
-description: Este artigo fornece uma introdução ao trabalhar com Storyboards em um aplicativo xamarin. Mac. Ele aborda a criação e manutenção da interface do usuário do aplicativo usando storyboards e o Interface Builder do Xcode.
+title: Introdução aos storyboards no Xamarin. Mac
+description: Este artigo fornece uma introdução ao trabalho com storyboards em um aplicativo Xamarin. Mac. Ele aborda a criação e manutenção da interface do usuário do aplicativo usando storyboards e o Interface Builder do Xcode.
 ms.prod: xamarin
 ms.assetid: F37BA503-0B25-489F-80A8-58C493291A55
 ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 8a5a2f87c16a5dd040cefb2fbc615b01431ebcf5
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: 75affbdb6e919c15c644a68ae45e7ff657a53f6a
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67832298"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68652271"
 ---
-# <a name="introduction-to-storyboards-in-xamarinmac"></a>Introdução ao Storyboards no xamarin. Mac
+# <a name="introduction-to-storyboards-in-xamarinmac"></a>Introdução aos storyboards no Xamarin. Mac
 
-_Este artigo fornece uma introdução ao trabalhar com Storyboards em um aplicativo xamarin. Mac. Ele aborda a criação e manutenção da interface do usuário do aplicativo usando storyboards e Interface Builder do Xcode._
+_Este artigo fornece uma introdução ao trabalho com storyboards em um aplicativo Xamarin. Mac. Ele aborda a criação e a manutenção da interface do usuário do aplicativo usando storyboards e Interface Builder do Xcode._
 
-Storyboards permitem que você desenvolva uma Interface do usuário para seu aplicativo xamarin. MAC que inclui não apenas as definições de janela e os controles, mas também contém os links entre janelas diferentes (por meio de segues) e estados de exibição.
+Os storyboards permitem desenvolver uma interface do usuário para seu aplicativo Xamarin. Mac que não inclui apenas as definições e controles de janela, mas também contém os links entre janelas diferentes (via continuações) e Estados de exibição.
 
-[![](images/intro01.png "Um exemplo de interface do usuário no Xcode")](images/intro01.png#lightbox)
+[![](images/intro01.png "Uma interface do usuário de exemplo no Xcode")](images/intro01.png#lightbox)
 
-Este artigo fornece uma introdução ao uso de Storyboards para definir a Interface do usuário de um aplicativo xamarin. Mac.
+Este artigo fornecerá uma introdução ao uso de storyboards para definir uma interface do usuário do aplicativo Xamarin. Mac.
 
 <a name="What-are-Storyboards" />
 
-## <a name="what-are-storyboards"></a>Quais são os Storyboards?
+## <a name="what-are-storyboards"></a>O que são storyboards?
 
-Ao usar Storyboards, todos da interface do usuário de um aplicativo xamarin. Mac podem ser definidos em um único local com toda a navegação entre seus elementos individuais e interfaces do usuário. Storyboards para xamarin. Mac, funciona de maneira muito semelhante aos Storyboards para xamarin. IOS. No entanto, eles contêm um conjunto diferente de _Segue tipos_ devido às linguagens de interface diferente.
+Usando storyboards, toda a interface do usuário de um aplicativo Xamarin. Mac pode ser definida em um único local com toda a navegação entre seus elementos individuais e interfaces de usuário. Os storyboards para Xamarin. Mac funcionam de maneira muito semelhante aos storyboards para Xamarin. iOS. No entanto, eles contêm um conjunto diferente de _tipos transição_ por causa dos diferentes idiomas da interface.
 
 <a name="Working-with-Scenes" />
 
 ### <a name="working-with-scenes"></a>Trabalhando com cenas
 
-Como mencionado acima, um Storyboard define todos a interface do usuário para um determinado aplicativo dividido em uma visão funcional de seu _controladores de exibição_. No Interface Builder do Xcode, cada um desses controladores reside em seu próprio _cena_.
+Como mencionado acima, um storyboard define toda a interface do usuário para um determinado aplicativo dividido em uma visão geral funcional de seus _controladores de exibição_. No Interface Builder do Xcode, cada um desses controladores reside em sua própria _cena_.
 
 [![](images/intro02.png "Um controlador de exibição de exemplo")](images/intro02.png#lightbox)
 
-Cada cena representa um determinado modo de exibição e par de controlador de exibição com um conjunto de linhas (chamado de transições) que se conectam cada cena na interface do usuário, mostrando assim suas relações. Alguns transições definem como um controlador de exibição contém um ou mais modos de exibição filho ou controladores de exibição. Outras transições, definir transições entre o controlador de exibição (como exibir uma caixa de diálogo ou pop-over). 
+Cada cena representa um determinado par de controlador de exibição e exibição com um conjunto de linhas (chamado continuações) que conectam cada cena na interface do usuário, mostrando assim suas relações. Alguns continuações definem como um controlador de exibição contém uma ou mais exibições filho ou controladores de exibição. Outros continuações, definem transições entre o controlador de exibição (como exibir um popover ou uma caixa de diálogo). 
 
-[![](images/intro03.png "Segue um exemplo")](images/intro03.png#lightbox)
+[![](images/intro03.png "Um exemplo de transição")](images/intro03.png#lightbox)
 
-A coisa mais importante a observar é que cada Segue representa o fluxo de alguma forma de dados entre o determinado elemento de interface do usuário do aplicativo.
+A coisa mais importante a observar é que cada transição representa o fluxo de alguma forma de dados entre o elemento fornecido da interface do usuário do aplicativo.
 
 <a name="Working-with-View-Controllers" />
 
-### <a name="working-with-view-controllers"></a>Trabalhar com controladores de exibição
+### <a name="working-with-view-controllers"></a>Trabalhando com controladores de exibição
 
-Controladores de exibição definem as relações entre um determinado modo de exibição de informações dentro de um aplicativo do Mac e o modelo de dados que fornece essas informações. Cada cena de nível superior no Storyboard representa um controlador de exibição no código do aplicativo xamarin. Mac.
+Os controladores de exibição definem as relações entre uma determinada exibição de informações em um aplicativo Mac e o modelo de dados que fornece essas informações. Cada cena de nível superior no storyboard representa um controlador de exibição no código do aplicativo Xamarin. Mac.
 
-[![](images/intro04.png "Um exemplo guias de controlador de exibição")](images/intro04.png#lightbox)
+[![](images/intro04.png "Um controlador de exibição de guias de exemplo")](images/intro04.png#lightbox)
 
-Dessa forma, cada controlador de exibição é um emparelhamento reutilizável, independente da representação visual das informações (exibição) e a lógica para apresentar e controlar essas informações.
+Dessa forma, cada controlador de exibição é um emparelhamento reutilizável e independente da representação visual da informação (exibição) e da lógica para apresentar e controlar essas informações.
 
-Dentro de uma cena determinada, você pode fazer todas as coisas que normalmente seriam terem sido manipuladas por indivíduo `.xib` arquivos: 
+Em uma determinada cena, você pode fazer todas as coisas que normalmente teriam sido tratadas por arquivos `.xib` individuais: 
 
-- Local subviews e controles (como botões e caixas de texto).
-- Defina posições de elemento e restrições do layout automático.
-- Wire-up ações e as saídas para expor elementos de interface do usuário ao código.
+- Coloque subexibições e controles (como botões e caixas de texto).
+- Definir posições de elemento e restrições de layout automático.
+- Ações de conexão e saídas para expor elementos de interface do usuário ao código.
 
 <a name="Working-with-Segues" />
 
-### <a name="working-with-segues"></a>Trabalhar com Segues
+### <a name="working-with-segues"></a>Trabalhando com continuações
 
-Como mencionado acima, transições fornecem as relações entre todas as cenas que definem a interface de usuário do seu aplicativo. Se você estiver familiarizado com trabalhando em Storyboards no iOS, você sabe que Segues para iOS normalmente define transições entre modos de exibição de tela inteira. Isso difere do macOS, quando transições geralmente definem "contenção" (onde uma cena é o filho de uma cena pai).
+Como mencionado acima, o continuações fornece as relações entre todos os bastidores que definem a interface do usuário do aplicativo. Se você estiver familiarizado com o trabalho em storyboards no iOS, saberá que continuações para iOS geralmente definem transições entre exibições de tela inteira. Isso difere do macOS, quando continuações geralmente define "contenção" (em que uma cena é o filho de uma cena pai).
 
-No macOS, a maioria dos aplicativos tendem a agrupar seus modos de exibição juntos na mesma janela usando elementos de interface do usuário, como modos de exibição de divisão e guias. Ao contrário do iOS, onde as exibições precisam ser transferidas e desativar a tela, devido a física limitada exiba espaço.
+No macOS, a maioria dos aplicativos tendem a agrupar suas exibições na mesma janela usando elementos de interface do usuário, como exibições divididas e guias. Ao contrário do iOS, em que as exibições precisam ser transferidas e desativadas na tela, devido ao espaço de exibição físico limitado.
 
-Considerando as tendências do macOS em direção a contenção, há situações em que _apresentação Segues_ forem usados, como Windows Modal, modos de exibição da folha e Popovers.
+Considerando o as tendências da macOS em relação à contenção, há situações em que as _continuações de apresentação_ são usadas, como janelas restritas, exibições de planilha e popovers.
 
-Ao usar Segues de apresentação, você pode substituir o `PrepareForSegue` método do controlador de exibição de pai para a apresentação para inicializar e variáveis e forneça todos os dados para o controlador de exibição que está sendo apresentado.
+Ao usar a apresentação continuações, você pode substituir `PrepareForSegue` o método do controlador de exibição pai para que a apresentação seja inicializada e as variáveis e forneça todos os dados para o controlador de exibição que está sendo apresentado.
 
 <a name="Design-and-Run-Times" />
 
-### <a name="design-and-run-times"></a>Design e tempos de execução
+### <a name="design-and-run-times"></a>Tempos de design e de execução
 
-Em tempo de Design (ao layout de interface do usuário no Interface Builder do Xcode), cada elemento da interface do usuário do aplicativo é dividido em itens constituintes de TI:
+Em tempo de design (ao definir o layout da interface do usuário no Interface Builder do Xcode), cada elemento da interface do usuário do aplicativo é dividido nos itens constituintes:
 
-- **Cenas** - que são compostos de:
-    - **Exibir controlador** -que definem as relações entre os modos de exibição e os dados que dão suporte a eles.
-    - **Exibições e subexibições** -os elementos reais que compõem a interface do usuário.
-    - **Transições de confinamento** -que definem as relações pai-filho entre as cenas.
-- **Transições de apresentação** -que definem os modos de apresentação individuais. 
+- **Cenas** – que são compostas por:
+    - **Exibir controlador** – que definem as relações entre exibições e os dados que dão suporte a eles.
+    - **Exibições e** subexibições – os elementos reais que compõem a interface do usuário.
+    - **Continuações** de contenção – que definem as relações pai-filho entre cenas.
+- **Continuações de apresentação** -que define modos de apresentação individuais. 
 
-Com a definição de cada elemento dessa forma, ele permite o carregamento lento de cada elemento conforme o necessário durante o tempo de execução. No macOS, todo o processo foi projetado para permitir que o desenvolvedor criar Interfaces do usuário complexa e flexível que exigem um mínimo de fazer o código para torná-los funcionar, ao mesmo tempo, sendo o mais eficiente com recursos de sistema quanto possível.
+Ao definir cada elemento dessa forma, ele permite o carregamento lento de cada elemento apenas conforme necessário durante o tempo de execução. No macOS, todo o processo foi projetado para permitir que o desenvolvedor criasse interfaces de usuário complexas e flexíveis que exigem um mínimo de suporte de código para fazer com que funcionem, tudo isso enquanto fosse eficiente com os recursos do sistema como possível.
 
 <a name="Storyboard-Quick-Start" />
 
-## <a name="storyboard-quick-start"></a>Início rápido do storyboard
+## <a name="storyboard-quick-start"></a>Início Rápido de storyboard
 
-No [início rápido do Storyboard](~/mac/platform/storyboards/quickstart.md) guia, vamos criar um aplicativo xamarin. Mac simples que apresenta os principais conceitos de trabalhar com storyboards para criar uma Interface do usuário. O aplicativo de exemplo consistirá em uma exibição distribuídos que contém um _área de conteúdo_ e uma _Inspetor área_ e ele apresentará uma janela de caixa de diálogo Preferências simples. Usaremos transições para reunir todos os elementos de Interface do usuário.
+No guia de [início rápido do storyboard](~/mac/platform/storyboards/quickstart.md) , criaremos um aplicativo Xamarin. Mac simples que apresenta os principais conceitos de trabalhar com storyboards para criar uma interface do usuário. O aplicativo de exemplo consistirá em uma exibição distribuídos contendo uma _área de conteúdo_ e uma área de _Inspetor_ e apresentará uma janela de diálogo de preferências simples. Vamos usar continuações para reunir todos os elementos da interface do usuário.
 
 <a name="Working-with-Storyboards" />
 
 ## <a name="working-with-storyboards"></a>Trabalhando com Storyboards
 
-Esta seção aborda os detalhes do [trabalhar com Storyboards](~/mac/platform/storyboards/indepth.md) em um aplicativo xamarin. Mac. Vamos dar uma visão detalhada de cenas e como eles são compostos de controladores de exibição e modo de exibição. Em seguida, vamos dar uma olhada em como as cenas são reunidas com transições. Por fim, vamos dar uma olhada em como trabalhar com tipos personalizados de Segue. 
+Esta seção aborda os detalhes detalhados de [como trabalhar com storyboards](~/mac/platform/storyboards/indepth.md) em um aplicativo Xamarin. Mac. Vamos dar uma olhada aprofundada nos bastidores e como eles são compostos de modos de exibição e de exibição. Em seguida, vamos dar uma olhada em como os bastidores estão vinculados com continuações. Por fim, vamos dar uma olhada no trabalho com tipos transição personalizados. 
 
 <a name="Complex-Storyboard-Example" />
 
-## <a name="complex-storyboard-example"></a>Exemplo de Storyboard complexos
+## <a name="complex-storyboard-example"></a>Exemplo de storyboard complexo
 
-Para obter um exemplo de um exemplo complexo de como trabalhar com Storyboards em um aplicativo xamarin. Mac, consulte a [aplicativo de exemplo SourceWriter](https://developer.xamarin.com/samples/mac/SourceWriter/). SourceWriter é um editor de código-fonte simples que dá suporte para a conclusão de código e realce de sintaxe simples.
+Para obter um exemplo de um exemplo complexo de como trabalhar com storyboards em um aplicativo Xamarin. Mac, consulte o [aplicativo de exemplo SourceWriter](https://docs.microsoft.com/samples/xamarin/mac-samples/sourcewriter). SourceWriter é um editor de código-fonte simples que dá suporte para a conclusão de código e realce de sintaxe simples.
 
 O código do SourceWriter foi totalmente comentado e, quando disponível, foram fornecidos links de tecnologias-chave ou métodos para informações relevantes na Documentação de Guias do Xamarin.Mac.
 
@@ -110,12 +110,12 @@ O código do SourceWriter foi totalmente comentado e, quando disponível, foram 
 
 ## <a name="summary"></a>Resumo
 
-Este artigo apresentou uma visão geral de trabalhar com Storyboards em um aplicativo xamarin. Mac. Vimos como criar um novo aplicativo usando storyboards e como definir uma interface do usuário. Também vimos como navegar entre janelas diferentes e transições de estados de exibição usando o.
+Este artigo deu uma olhada rápida no trabalho com storyboards em um aplicativo Xamarin. Mac. Vimos como criar um novo aplicativo usando storyboards e como definir uma interface do usuário. Também vimos como navegar entre diferentes janelas e Estados de exibição usando o continuações.
 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Hello, Mac (amostra)](https://developer.xamarin.com/samples/mac/Hello_Mac/)
+- [Hello, Mac (amostra)](https://docs.microsoft.com/samples/xamarin/mac-samples/hello-mac)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Trabalhando com o Windows](~/mac/user-interface/window.md)
 - [Diretrizes de interface humana do OS X](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)

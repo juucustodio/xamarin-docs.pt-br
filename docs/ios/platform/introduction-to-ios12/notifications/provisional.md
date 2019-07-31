@@ -1,32 +1,32 @@
 ---
-title: Notificações provisória no xamarin. IOS
-description: Este documento descreve como usar o xamarin. IOS para funcionar com notificações provisória. Notificações provisória, introduzidas no iOS 12, permitir que os aplicativos enviar notificações silenciosa sem a permissão explícita do usuário.
+title: Notificações provisórias no Xamarin. iOS
+description: Este documento descreve como usar o Xamarin. iOS para trabalhar com notificações provisórias. As notificações provisionas, introduzidas no iOS 12, permitem que os aplicativos enviem notificações silenciosas sem permissão explícita do usuário.
 ms.prod: xamarin
 ms.assetid: 5DCB36B9-2637-48AE-8FC0-F6124F08AC48
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 09/04/2018
-ms.openlocfilehash: 434dd2e2ee7a0064b706872a228070c5114078c4
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 1b4cf7f2caee274f353afff89e30c2db96009c12
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61034766"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68652361"
 ---
-# <a name="provisional-notifications-in-xamarinios"></a>Notificações provisória no xamarin. IOS
+# <a name="provisional-notifications-in-xamarinios"></a>Notificações provisórias no Xamarin. iOS
 
-Notificações provisória permitem que os aplicativos entregar notificações sem o consentimento explícito de inicial do usuário. Essas notificações chegam no modo silencioso e mostram somente no Centro de notificações, que permite aos usuários visualizá-las antes de aceitar ou recusar o fornecimento contínuo.
+As notificações provisórias permitem que os aplicativos forneçam notificações sem o consentimento inicial explícito de um usuário. Essas notificações chegam discretamente e mostram apenas no centro de notificações, que permite aos usuários visualizá-las antes de optar pela entrega contínua.
 
-No Centro de notificação, os usuários podem especificar que um aplicativo deve interromper a entrega de notificações provisória, continuar entregá-los provisoriamente ou iniciar entregá-los de modo mais visível.
+No centro de notificações, os usuários podem especificar que um aplicativo deve parar de fornecer notificações provisionas, continuar entregando-as provisionas ou começar a fornecê-las com mais destaque.
 
 ## <a name="sample-app-redgreennotifications"></a>Aplicativo de exemplo: RedGreenNotifications
 
-Examine os [RedGreenNotifications](https://developer.xamarin.com/samples/monotouch/iOS12/RedGreenNotifications) aplicativo de exemplo que envia notificações provisória.
+Dê uma olhada no aplicativo de exemplo [RedGreenNotifications](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-redgreennotifications) , que envia notificações provisionas.
 
-## <a name="sending-provisional-notifications"></a>Envio de notificações provisionais
+## <a name="sending-provisional-notifications"></a>Enviando notificações provisórias
 
-Para enviar notificações provisória, fornecer `UNAuthorizationOptions.Provisional` como uma opção para o [`RequestAuthorization`](xref:UserNotifications.UNUserNotificationCenter.RequestAuthorization*)
+Para enviar notificações provisionas `UNAuthorizationOptions.Provisional` , forneça como uma opção para o[`RequestAuthorization`](xref:UserNotifications.UNUserNotificationCenter.RequestAuthorization*)
 método de `UNUserNotificationCenter`:
 
 ```csharp
@@ -41,13 +41,13 @@ public override bool FinishedLaunching(UIApplication application, NSDictionary l
 }
 ```
 
-Se o usuário promove notificações provisória para entrega proeminente, o `UNAuthorizationOptions` valores passados para `RequestAuthorization` determinará as novas configurações de entrega de notificação (no código acima, `UNAuthorizationOptions.Alert` e `UNAuthorizationOptions.Sound`).
+Se o usuário promover notificações provisionas para entrega proeminente `UNAuthorizationOptions` , os valores `RequestAuthorization` passados para determinarão as novas configurações de entrega de notificação ( `UNAuthorizationOptions.Alert` no código `UNAuthorizationOptions.Sound`acima e).
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Aplicativo de exemplo – RedGreenNotifications](https://developer.xamarin.com/samples/monotouch/iOS12/RedGreenNotifications)
-- [Estrutura de notificações de usuário no xamarin. IOS](~/ios/platform/user-notifications/index.md)
-- [UserNotifications (Apple)](https://developer.apple.com/documentation/usernotifications?language=objc)
-- [Quais são as novidades em notificações de usuário (WWDC 2018)](https://developer.apple.com/videos/play/wwdc2018/710/)
-- [Práticas recomendadas e quais são as novidades em notificações de usuário (WWDC 2017)](https://developer.apple.com/videos/play/wwdc2017/708/)
-- [Gerar uma notificação remota (Apple)](https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/generating_a_remote_notification)
+- [Aplicativo de exemplo – RedGreenNotifications](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-redgreennotifications)
+- [Estrutura de notificações do usuário no Xamarin. iOS](~/ios/platform/user-notifications/index.md)
+- [Usernotifications (Apple)](https://developer.apple.com/documentation/usernotifications?language=objc)
+- [O que há de novo nas notificações do usuário (WWDC 2018)](https://developer.apple.com/videos/play/wwdc2018/710/)
+- [Práticas recomendadas e o que há de novo nas notificações do usuário (WWDC 2017)](https://developer.apple.com/videos/play/wwdc2017/708/)
+- [Gerando uma notificação remota (Apple)](https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/generating_a_remote_notification)

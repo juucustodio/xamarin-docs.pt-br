@@ -1,56 +1,56 @@
 ---
-title: Coordenadas 3D no MonoGame
-description: Noções básicas sobre o sistema de coordenadas 3D é uma etapa importante no desenvolvimento de jogos 3D. MonoGame fornece uma série de classes para posicionamento, a orientação e dimensionando objetos no espaço 3D.
+title: Coordenadas 3D em monojogo
+description: Entender o sistema de coordenadas 3D é uma etapa importante no desenvolvimento de jogos 3D. O monogame fornece várias classes para posicionamento, orientação e dimensionamento de objetos no espaço 3D.
 ms.prod: xamarin
 ms.assetid: A4130995-48FD-4E2E-9C2B-ADCEFF35BE3A
 author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
-ms.openlocfilehash: dc21228f1daa74a90ff8f0ea346bc01b109f0987
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: f2e65439084d4e89ae529bda79c2cb2739f1529d
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61229265"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656208"
 ---
-# <a name="3d-coordinates-in-monogame"></a>Coordenadas 3D no MonoGame
+# <a name="3d-coordinates-in-monogame"></a>Coordenadas 3D em monojogo
 
-_Noções básicas sobre o sistema de coordenadas 3D é uma etapa importante no desenvolvimento de jogos 3D. MonoGame fornece uma série de classes para posicionamento, a orientação e dimensionando objetos no espaço 3D._
+_Entender o sistema de coordenadas 3D é uma etapa importante no desenvolvimento de jogos 3D. O monogame fornece várias classes para posicionamento, orientação e dimensionamento de objetos no espaço 3D._
 
-Desenvolvimento de jogos 3D requer uma compreensão de como manipular objetos em um sistema de coordenadas 3D. Este passo a passo abordará como manipular objetos visuais (especificamente, um modelo). Criaremos os conceitos de controle de um modelo para criar uma classe de câmera 3D.
+O desenvolvimento de jogos 3D requer uma compreensão de como manipular objetos em um sistema de coordenadas 3D. Este tutorial abordará como manipular objetos visuais (especificamente um modelo). Vamos criar os conceitos de controle de um modelo para criar uma classe de câmera 3D.
 
-Os conceitos apresentados se originam de álgebra linear, mas vamos dar uma abordagem prática para que qualquer usuário sem um plano de fundo de matemática forte pode aplicar esses conceitos em seus próprios jogos.
+Os conceitos apresentados originam-se da Algebra linear, mas usaremos uma abordagem prática para que qualquer usuário sem um plano de fundo de matemática forte possa aplicar esses conceitos em seus próprios jogos.
 
-Falaremos sobre os tópicos a seguir:
+Abordaremos os seguintes tópicos:
 
 - Criando um projeto
-- Criar uma entidade de robô
+- Criando uma entidade de robô
 - Movendo a entidade de robô
 - Multiplicação de matriz
-- Criar a entidade de câmera
-- Mover a câmera com a entrada
+- Criando a entidade de câmera
+- Movendo a câmera com entrada
 
-Depois de concluído, teremos um projeto com um robô movendo em um círculo e uma câmera que pode ser controlada pela entrada de toque:
+Quando terminar, teremos um projeto com um robô movendo em um círculo e uma câmera que pode ser controlada pela entrada por toque:
 
-![](part3-images/image1.gif "Quando terminar, o aplicativo incluirá um projeto com um robô movendo em um círculo e uma câmera que pode ser controlada pela entrada de toque")
+![](part3-images/image1.gif "Depois de concluído, o aplicativo incluirá um projeto com um robô que se move em um círculo e uma câmera que pode ser controlada pela entrada por toque")
 
 
 ## <a name="creating-a-project"></a>Criando um projeto
 
-Este passo a passo se concentra na movimentação de objetos no espaço 3D. Vamos começar com o projeto para modelos de renderização e matrizes de vértice [que podem ser encontrado aqui](https://developer.xamarin.com/samples/mobile/ModelsAndVertsMG/). Após o download, descompacte e abra o projeto para garantir que ele é executado e deveremos ver o seguinte:
+Este tutorial explica como mover objetos no espaço 3D. Vamos começar com o projeto para renderizar modelos e matrizes de vértices [que podem ser encontrados aqui](https://developer.xamarin.com/samples/mobile/ModelsAndVertsMG/). Depois de baixado, descompacte e abra o projeto para verificar se ele é executado e devemos ver o seguinte:
 
-![](part3-images/image2.png "Após o download, descompacte e abra o projeto para garantir que ele é executado e essa exibição deve ser exibida.")
+![](part3-images/image2.png "Depois de baixado, descompacte e abra o projeto para certificar-se de que ele é executado e esta exibição deve ser exibida")
 
 
-## <a name="creating-a-robot-entity"></a>Criar uma entidade de robô
+## <a name="creating-a-robot-entity"></a>Criando uma entidade de robô
 
-Antes de começarmos a mover nossa robô ao redor, criaremos um `Robot` classe para conter a lógica de desenho e a movimentação. Os desenvolvedores de jogos se referir a esse encapsulamento da lógica e os dados como uma *entidade*.
+Antes de começarmos a mover nosso robô, criaremos uma `Robot` classe para conter a lógica de desenho e movimento. Os desenvolvedores de jogos se referem a esse encapsulamento de lógica e dados como uma *entidade*.
 
-Adicione um novo arquivo de classe vazia para o **MonoGame3D** biblioteca de classes portátil (não o ModelAndVerts.Android específico da plataforma). Denomine **robô** e clique em **New**:
+Adicione um novo arquivo de classe vazio à biblioteca de classes portátil **MonoGame3D** (não o ModelAndVerts. Android específico da plataforma). Nomeie-o como **robô** e clique em **novo**:
 
-![](part3-images/image3.png "Nomeie-o robô e clique em novo")
+![](part3-images/image3.png "Nomeie-o como robô e clique em novo")
 
-Modificar o `Robot` classe da seguinte maneira:
+Modifique a `Robot` classe da seguinte maneira:
 
 ```csharp
 using System;
@@ -107,7 +107,7 @@ namespace MonoGame3D
 }
 ```
 
-O `Robot` código é basicamente o mesmo código no `Game1` para desenhar um `Model`. Para uma revisão no `Model` Carregando e de desenho, consulte [neste guia sobre como trabalhar com modelos](~/graphics-games/monogame/3d/part1.md). Agora podemos remover todos os `Model` carregamento e processamento de código do `Game1`e substituí-lo com um `Robot` instância:
+O `Robot` código é essencialmente o mesmo código no `Game1` para desenhar um `Model`. Para uma revisão sobre `Model` como carregar e desenhar, consulte [este guia sobre como trabalhar com modelos](~/graphics-games/monogame/3d/part1.md). Agora podemos remover todo o `Model` código de carregamento e renderização de `Game1`e substituí-lo por uma `Robot` instância:
 
 ```csharp
 using Microsoft.Xna.Framework;
@@ -228,17 +228,17 @@ namespace MonoGame3D
 }
 ```
 
-Se executarmos o código agora temos uma cena com apenas um robô que é desenhada sobretudo sob o chão:
+Se executarmos o código agora, teremos uma cena com apenas um robô que é desenhado na maior parte do piso:
 
-![](part3-images/image4.png "Se o código for executado agora, o aplicativo exibirá uma cena com apenas um robô que é desenhada sobretudo sob o piso")
+![](part3-images/image4.png "Se o código for executado agora, o aplicativo exibirá uma cena com apenas um robô, que é desenhado na maior parte do chão")
 
-## <a name="moving-the-robot"></a>Mover o robô
+## <a name="moving-the-robot"></a>Movendo o robô
 
-Agora que temos um `Robot` classe, podemos adicionar lógica de movimentação para o robô. Nesse caso, podemos simplesmente fazer o robô mover em um círculo de acordo com o tempo de jogo. Isso é uma implementação de um pouco impraticável para um jogo real, pois um caractere normalmente pode reagir à entrada ou de inteligência artificial, mas ela fornece um ambiente para que possamos explorar o posicionamento 3D e rotação.
+Agora que temos uma `Robot` classe, podemos adicionar lógica de movimentação ao robô. Nesse caso, simplesmente faremos a movimentação do robô em um círculo de acordo com o horário do jogo. Essa é uma implementação um pouco prática para um jogo real, uma vez que um caractere normalmente pode responder à entrada ou inteligência artificial, mas fornece um ambiente para explorar o posicionamento e a rotação 3D.
 
-A única informação que vamos precisar de fora do `Robot` classe é a hora atual do jogo. Vamos adicionar um `Update` método que o levará um `GameTime` parâmetro. Isso `GameTime` parâmetro será usado para incrementar uma variável de ângulo que usaremos para determinar a posição final para o robô.
+A única informação que precisaremos de fora da `Robot` classe é a hora atual do jogo. Vamos adicionar um `Update` método que usará um `GameTime` parâmetro. Esse `GameTime` parâmetro será usado para incrementar uma variável de ângulo que usaremos para determinar a posição final do robô.
 
-Em primeiro lugar, adicionaremos o campo de ângulo para o `Robot` classe sob o `model` campo:
+Primeiro, adicionaremos o campo Angle à `Robot` classe sob o `model` campo:
 
 ```csharp
 public class Robot
@@ -250,7 +250,7 @@ public class Robot
     ...
 ```
 
- Agora podemos pode incrementar esse valor em uma `Update` função:
+ Agora, podemos incrementar esse valor em `Update` uma função:
 
 ```csharp
 public void Update(GameTime gameTime)
@@ -260,7 +260,7 @@ public void Update(GameTime gameTime)
 }
 ```
 
-Precisamos ter certeza de que o `Update` método é chamado de `Game1.Update`:
+Precisamos garantir que o `Update` método seja chamado de: `Game1.Update`
 
 ```csharp
 protected override void Update(GameTime gameTime)
@@ -270,7 +270,7 @@ protected override void Update(GameTime gameTime)
 }
 ```
 
-É claro que, neste ponto, o campo de ângulo não fará nada – precisamos escrever código para usá-lo. Vamos modificar o `Draw` método para que podemos calcular o mundo `Matrix` em um método dedicado: 
+É claro que neste ponto o campo de ângulo não faz nada – precisamos escrever código para usá-lo. Modificaremos o `Draw` método para que possamos calcular o mundo `Matrix` em um método dedicado: 
 
 ```csharp
 public void Draw(Vector3 cameraPosition, float aspectRatio)
@@ -303,7 +303,7 @@ public void Draw(Vector3 cameraPosition, float aspectRatio)
 }
 ```
 
-Em seguida, implementaremos o `GetWorldMatrix` método no `Robot` classe:
+Em seguida, implementaremos o `GetWorldMatrix` método `Robot` na classe:
 
 ```csharp
 Matrix GetWorldMatrix()
@@ -325,39 +325,39 @@ Matrix GetWorldMatrix()
 }
 ```
 
-O resultado da execução desse código resulta no robô mover em círculo:
+O resultado da execução deste código resulta na movimentação do robô em um círculo:
 
-![](part3-images/image5.gif "Em execução desse código resulta no robô movendo em um círculo")
+![](part3-images/image5.gif "Executar esse código resulta na movimentação do robô em um círculo")
 
 ## <a name="matrix-multiplication"></a>Multiplicação de matriz
 
-O código acima gira o robô com a criação de um `Matrix` no `GetWorldMatrix` método. O `Matrix` struct contém 16 valores de float que podem ser usados para traduzir (conjunto de posição), girar e dimensionar (Definir tamanho). Quando nós atribuímos a `effect.World` propriedade, estamos informando subjacente sistema de renderização como posicionar, tamanho e orientação sobre tudo o que por acaso está desenhando (um `Model` ou geometria de vértices). 
+O código acima gira o robô criando um `Matrix` `GetWorldMatrix` no método. A `Matrix` struct contém 16 valores float que podem ser usados para traduzir (definir posição), girar e dimensionar (definir tamanho). Quando atribuímos a `effect.World` Propriedade, estamos dizendo ao sistema de renderização subjacente como posicionar, dimensionar e orientar qualquer coisa que estejamos desenhando ( `Model` a ou geometria de vértices). 
 
-Felizmente, o `Matrix` struct inclui uma série de métodos que simplificam a criação dos tipos comuns de matrizes. A primeira usada no código acima é `Matrix.CreateTranslation`. O termo matemático *tradução* refere-se a uma operação que resulta em um ponto (ou em nosso caso, um modelo) movendo de um local para outro sem qualquer modificação outra (por exemplo, girar ou redimensionar). A função utiliza um valor de X, Y e Z para tradução. Se podemos exibir nossa cena de cima para baixo, nosso `CreateTranslation` método (isoladamente) executará o seguinte:
+Felizmente, a `Matrix` estrutura inclui vários métodos que simplificam a criação de tipos comuns de matrizes. O primeiro usado no código acima é `Matrix.CreateTranslation`. A *tradução* de termo matemático se refere a uma operação que resulta em um ponto (ou em nosso caso um modelo) mudando de um local para outro sem nenhuma outra modificação (como rotação ou redimensionamento). A função usa um valor X, Y e Z para a tradução. Se exibirmos nossa cena de cima para baixo, nosso `CreateTranslation` método (em isolamento) executará o seguinte:
 
-![](part3-images/image6.png "O método CreateTranslation em isolamento para executar esta ação")
+![](part3-images/image6.png "O método createtranslation em isolamento executa essa ação")
 
-A segunda matriz que criamos é uma matriz de rotação usando a `CreateRotationZ` matriz. Esse é um dos três métodos que podem ser usados para criar a rotação:
+A segunda matriz que criamos é uma matriz de rotação usando `CreateRotationZ` a matriz. Esse é um dos três métodos que podem ser usados para criar a rotação:
 
 - `CreateRotationX`
 - `CreateRoationY`
 - `CreateRotationZ`
 
-Cada método cria uma matriz de rotação, girando sobre um eixo. Em nosso caso, estamos está girando sobre o eixo Z, que aponta "para cima". A seguir pode ajudar a visualizar como com base no eixo de rotação funciona:
+Cada método cria uma matriz de rotação girando sobre um determinado eixo. Em nosso caso, estamos girando sobre o eixo Z, que aponta para "up". O seguinte pode ajudar a visualizar como a rotação baseada em eixo funciona:
 
-![](part3-images/image7.png "Isso pode ajudar a visualizar como com base no eixo de rotação funciona")
+![](part3-images/image7.png "Isso pode ajudar a visualizar como funciona a rotação baseada em eixo")
 
-Também estamos usando o `CreateRotationZ` método com o campo de ângulo, o que aumenta ao longo do tempo devido ao nosso `Update` método sendo chamado. O resultado é que o `CreateRotationZ` método faz com que nosso robô girar em torno da origem passar do tempo.
+Também estamos usando o método `CreateRotationZ` com o campo Angle, que é incrementado ao longo do tempo devido `Update` ao nosso método sendo chamado. O resultado é que o `CreateRotationZ` método faz com que nosso robô gire em volta da origem à medida que o tempo passa.
 
-A linha de código final combina as duas matrizes em uma:
+A linha final do código combina as duas matrizes em uma:
 
 ```csharp
 Matrix combined = translationMatrix * rotationMatrix;
 ```
 
-Isso é chamado de multiplicação de matriz, que funciona um pouco diferente de multiplicação regular. O *Propriedade Comutativa da multiplicação* afirma que a ordem dos números em uma operação de multiplicação não altera o resultado. Ou seja, 3 * 4 é equivalente a 4 * 3. Multiplicação de matriz é diferente em que não é comutativa. Ou seja, a linha acima pode ser lido como "Se aplicam a translationMatrix para mover o modelo e girar tudo ao aplicar o rotationMatrix". Podemos pode visualizar a forma como a linha acima afeta a posição e rotação da seguinte maneira:
+Isso é chamado de multiplicação de matriz, que funciona um pouco diferente do que a multiplicação regular. A *propriedade comutativa de multiplicação* indica que a ordem dos números em uma operação de multiplicação não altera o resultado. Ou seja, 3 * 4 é equivalente a 4 * 3. A multiplicação de matriz é diferente, pois não é comutador. Ou seja, a linha acima pode ser lida como "aplicar o translationMatrix para mover o modelo e, em seguida, girar tudo aplicando o rotationMatrix". Poderíamos Visualizar a maneira como a linha acima afeta a posição e a rotação da seguinte maneira:
 
-![](part3-images/image8.png "Uma visualização pf da maneira que a linha acima afeta a posição e rotação")
+![](part3-images/image8.png "Uma visualização PF da forma como a linha acima afeta a posição e a rotação")
 
 Para ajudar a entender como a ordem de multiplicação de matriz pode afetar o resultado, considere o seguinte, em que a multiplicação de matriz é invertida:
 
@@ -365,19 +365,19 @@ Para ajudar a entender como a ordem de multiplicação de matriz pode afetar o r
 Matrix combined = rotationMatrix * translationMatrix;
 ```
 
-O código acima seria primeiro girar o modelo no lugar, e em seguida, convertê-lo:
+O código acima primeiro giraria o modelo no local e, em seguida, o converteva:
 
-![](part3-images/image9.png "O código acima seria primeiro girar o modelo no lugar e convertê-lo")
+![](part3-images/image9.png "O código acima primeiro giraria o modelo no local e, em seguida, o converte")
 
-Se executarmos o código com a multiplicação invertida, você notará que como a rotação aplica-se pela primeira vez, ele afeta somente a orientação do modelo e a posição do modelo permaneça o mesmo. Em outras palavras, o modelo gira em vigor:
+Se executarmos o código com a multiplicação invertida, notaremos que, como a rotação é aplicada primeiro, afetará apenas a orientação do modelo e a posição do modelo permanecerá a mesma. Em outras palavras, o modelo gira em vigor:
 
 ![](part3-images/image10.gif "O modelo gira em vigor")
 
-## <a name="creating-the-camera-entity"></a>Criar a entidade de câmera
+## <a name="creating-the-camera-entity"></a>Criando a entidade de câmera
 
-O `Camera` entidade conterá toda a lógica necessária para realizar a movimentação com base em entrada e para fornecer as propriedades para atribuir propriedades no `BasicEffect` classe.
+A `Camera` entidade conterá toda a lógica necessária para executar a movimentação baseada em entrada e para fornecer propriedades para a `BasicEffect` atribuição de propriedades na classe.
 
-Primeiro vamos implementar uma câmera estática (nenhum movimento baseado em entrada) e integrá-lo ao nosso projeto existente. Adicione uma nova classe para o **MonoGame3D** biblioteca de classes portátil (o mesmo projeto com `Robot.cs`) e nomeie-o **câmera**. Substitua o conteúdo do arquivo pelo seguinte código:
+Primeiro, implementaremos uma câmera estática (sem movimento baseado em entrada) e a integraremos ao nosso projeto existente. Adicione uma nova classe à biblioteca de classes portátil **MonoGame3D** (o mesmo projeto com `Robot.cs`) e nomeie-a como **câmera**. Substitua o conteúdo do arquivo pelo seguinte código:
 
 ```csharp
 using System;
@@ -433,9 +433,9 @@ namespace MonoGame3D
 }
 ```
 
-O código acima é muito semelhante ao código do `Game1` e `Robot` que atribuir as matrizes na `BasicEffect`. 
+O código acima é muito semelhante ao código de `Game1` e `Robot` `BasicEffect`que atribui as matrizes. 
 
-Agora podemos pode integrar o novo `Camera` classe em nossos projetos existentes. Primeiro, vamos modificar o `Robot` classe tirar uma `Camera` da instância no seu `Draw` método, o que eliminará muito código duplicado. Substitua o `Robot.Draw` método com o seguinte:
+Agora, podemos integrar a nova `Camera` classe em nossos projetos existentes. Primeiro, modificaremos a `Robot` classe para pegar uma `Camera` instância em seu `Draw` método, o que eliminará muito código duplicado. Substitua o `Robot.Draw` método pelo seguinte:
 
 ```csharp
 public void Draw(Camera camera)
@@ -457,7 +457,7 @@ public void Draw(Camera camera)
 }
 ```
 
-Em seguida, modifique o `Game1.cs` arquivo:
+Em seguida, modifique `Game1.cs` o arquivo:
 
 ```csharp
 using Microsoft.Xna.Framework;
@@ -573,29 +573,29 @@ namespace MonoGame3D
 }
 ```
 
-As modificações a `Game1` da versão anterior (que é identificado com `// New camera code` ) são:
+As modificações `Game1` no da versão anterior (que são identificadas com `// New camera code` ) são:
 
-- `Camera` Campo em `Game1`
-- `Camera` instanciação em `Game1.Initialize`
-- `Camera.Update` chamar em `Game1.Update`
-- `Robot.Draw` agora usa um `Camera` parâmetro
-- `Game1.Draw` agora usa `Camera.ViewMatrix` e `Camera.ProjectionMatrix`
+- `Camera`campo em`Game1`
+- `Camera`instanciação em`Game1.Initialize`
+- `Camera.Update`chamada em`Game1.Update`
+- `Robot.Draw`Agora usa um `Camera` parâmetro
+- `Game1.Draw`Agora usa `Camera.ViewMatrix` e`Camera.ProjectionMatrix`
 
-## <a name="moving-the-camera-with-input"></a>Mover a câmera com a entrada
+## <a name="moving-the-camera-with-input"></a>Movendo a câmera com entrada
 
-Até agora, adicionamos um `Camera` entidade, mas ainda não fez nada com a mudança de comportamento de tempo de execução. Vamos adicionar comportamento que permite ao usuário para:
+Até agora, adicionamos uma entidade `Camera` , mas não fizemos nada com ela para alterar o comportamento do tempo de execução. Adicionaremos um comportamento que permite ao usuário:
 
-- O lado esquerdo da tela para ativar a câmera em direção à esquerda de toque
-- O lado direito da tela para ativar a câmera à direita de toque
-- Toque o centro da tela para mover a câmera para frente
+- Toque no lado esquerdo da tela para transformar a câmera em direção à esquerda
+- Toque no lado direito da tela para transformar a câmera à direita
+- Toque no centro da tela para mover a câmera para frente
 
-### <a name="making-lookat-relative"></a>Tornando lookAt relativo
+### <a name="making-lookat-relative"></a>Tornando o ver relativo
 
-Primeiro vamos atualizar o `Camera` classe para incluir uma `angle` campo que será usado para definir a direção que o `Camera` está enfrentando. Atualmente, nossos `Camera` determina a direção em que ele é voltado para a por meio do local `lookAtVector`, que é atribuído à `Vector3.Zero`. Em outras palavras, nossa `Camera` sempre foca a origem. Se a câmera for movida, o ângulo que é voltado para a câmera também será alterado:
+Primeiro, atualizaremos a `Camera` classe para incluir um `angle` campo que será usado para definir a direção que o `Camera` está voltado. Atualmente, nosso `Camera` determina a direção que ele está enfrentando por meio `lookAtVector`do local, que é `Vector3.Zero`atribuído a. Em outras palavras, nossa `Camera` sempre examina a origem. Se a câmera for movida, o ângulo que a câmera voltará também será alterado:
 
-![](part3-images/image11.gif "Se move a câmera, em seguida, o ângulo que é voltado para a câmera também será alterado")
+![](part3-images/image11.gif "Se a câmera for movida, o ângulo que a câmera voltará também será alterado")
 
-Queremos que o `Camera` para ser voltada para a mesma direção, independentemente de sua posição – pelo menos até que podemos implementar a lógica para girar o `Camera` usando entrada. A primeira alteração será ajustar o `lookAtVector` variável ser baseado em nosso local atual, em vez de aparência em uma posição absoluta:
+Queremos que o `Camera` esteja voltado para a mesma direção, independentemente de sua posição – pelo menos até implementarmos a lógica para `Camera` girar o uso da entrada. A primeira alteração será ajustar a variável para `lookAtVector` que ela se baseie em nosso local atual, em vez de examinar uma posição absoluta:
 
 ```csharp
 public class Camera
@@ -621,17 +621,17 @@ public class Camera
     ...
 ```
 
-Isso resulta no `Camera` ver o mundo em estreita. Observe que o inicial `position` valor tiver sido modificado para `(0, 20, 10)` para que o `Camera` é centralizada no eixo X. Executando o jogo exibe:
+Isso resulta na `Camera` exibição do mundo diretamente. Observe que o valor `position` inicial foi modificado para `(0, 20, 10)` que o `Camera` esteja centralizado no eixo X. A execução do jogo exibe:
 
-![](part3-images/image12.png "Executar o jogo exibe este modo de exibição")
+![](part3-images/image12.png "A execução do jogo exibe esta exibição")
 
-### <a name="creating-an-angle-variable"></a>Criação de um ângulo de variável
+### <a name="creating-an-angle-variable"></a>Criando uma variável de ângulo
 
-O `lookAtVector` variável controla o ângulo que nosso câmera está exibindo. Atualmente, ele é fixo para exibir para baixo do eixo Y negativo e Inclinado um pouco para baixo (da `-.5f` valor Z). Vamos criar uma `angle` variável que será usado para ajustar o `lookAtVector` propriedade. 
+A `lookAtVector` variável controla o ângulo que a câmera está exibindo. Atualmente, ele é fixado para exibir o eixo Y negativo e ligeiramente inclinado para baixo (do `-.5f` valor Z). Criaremos uma `angle` variável que será usada para ajustar a `lookAtVector` propriedade. 
 
-Nas seções anteriores deste passo a passo, mostramos que matrizes podem ser usadas para girar a como os objetos são desenhados. Também podemos usar matrizes para girar os vetores como o `lookAtVector` usando o `Vector3.Transform` método. 
+Nas seções anteriores deste passo a passos, mostramos que as matrizes podem ser usadas para girar a forma como os objetos são desenhados. Também podemos usar matrizes para girar vetores como o `lookAtVector` usando o `Vector3.Transform` método. 
 
-Adicionar um `angle` do campo e modificar o `ViewMatrix` propriedade da seguinte maneira:
+Adicione um `angle` campo e modifique a `ViewMatrix` propriedade da seguinte maneira:
 
 ```csharp
 public class Camera
@@ -662,21 +662,21 @@ public class Camera
     ...
 ```
 
-### <a name="reading-input"></a>Ler a entrada
+### <a name="reading-input"></a>Lendo entrada
 
-Nosso `Camera` entidade agora pode ser totalmente controlada por meio de sua posição e as variáveis de ângulo – precisamos apenas alterá-los de acordo com a entrada.
+Nossa `Camera` entidade agora pode ser totalmente controlada por meio de suas variáveis de posição e ângulo – precisamos apenas alterá-las de acordo com a entrada.
 
-Primeiro, falaremos sobre o `TouchPanel` estado para localizar onde o usuário está tocando a tela. Para obter mais informações sobre como usar o `TouchPanel` classe, consulte [referência da API TouchPanel](http://www.monogame.net/documentation/?page=T_Microsoft_Xna_Framework_Input_Touch_TouchPanel).
+Primeiro, obteremos o `TouchPanel` estado para descobrir onde o usuário está tocando na tela. Para obter mais informações sobre como `TouchPanel` usar a classe, consulte [a referência da API do TouchPanel](http://www.monogame.net/documentation/?page=T_Microsoft_Xna_Framework_Input_Touch_TouchPanel).
 
-Se o usuário toca na terceira à esquerda, em seguida, podemos ajustar o `angle` valor para que o `Camera` gira à esquerda, e se o usuário toca na terceira certa, podemos irá girar de outra forma. Se o usuário toca no terceiro intermediário da tela, então, veremos o `Camera` para frente.
+Se o usuário estiver tocando no terceiro lado esquerdo, vamos ajustar o `angle` valor para que as girações para a `Camera` esquerda e, se o usuário estiver tocando no terceiro, vamos girar da outra maneira. Se o usuário estiver tocando no meio do terceiro da tela, `Camera` avançaremos.
 
-Primeiro, adicione um usando a instrução para qualificar os `TouchPanel` e `TouchCollection` as classes no `Camera.cs`:
+Primeiro, adicione uma instrução using para qualificar `TouchPanel` as `TouchCollection` classes e `Camera.cs`em:
 
 ```csharp
 using Microsoft.Xna.Framework.Input.Touch; 
 ```
 
-Em seguida, modifique a `Update` método para ler o painel de toque e ajustar as `angle` e `position` variáveis adequadamente:
+Em seguida, modifique `Update` o método para ler o painel de toque e `angle` ajuste `position` as variáveis e adequadamente:
 
 ```csharp
 public void Update(GameTime gameTime)
@@ -714,21 +714,21 @@ public void Update(GameTime gameTime)
 }
 ```
 
-Agora o `Camera` responderá à entrada por toque:
+Agora, `Camera` o responderá à entrada por toque:
 
-![](part3-images/image1.gif "Agora a câmera responderá à entrada por toque")
+![](part3-images/image1.gif "Agora, a câmera responderá à entrada por toque")
 
-O método de atualização começa chamando `TouchPanel.GetState`, que retorna uma coleção de toques. Embora `TouchPanel.GetState` pode retornar vários pontos de toque, vou apenas nos preocupamos o primeiro para manter a simplicidade.
+O método Update começa chamando `TouchPanel.GetState`, que retorna uma coleção de toques. Embora `TouchPanel.GetState` possa retornar vários pontos de toque, vamos nos preocupar apenas com o primeiro para simplificar.
 
-Se o usuário toca a tela, em seguida, o código verifica se o primeiro toque está à esquerda, meio ou terceiro à direita da tela. Os terços left e right girar a câmera, aumentando ou diminuindo o `angle` variável de acordo com o `TotalSeconds` valor (de modo que o jogo se comporta da mesma, independentemente da taxa de quadros).
+Se o usuário estiver tocando na tela, o código verificará se o primeiro toque está no terceiro esquerdo, médio ou direito da tela. Os terços esquerdo e direito giram a câmera aumentando ou diminuindo a `angle` variável de acordo com `TotalSeconds` o valor (de modo que o jogo se comporta da mesma forma, independentemente da taxa de quadros).
 
-Se o usuário toca o centro em terceiro lugar da tela, em seguida, a câmera é movida para frente. Isso é feito pela primeira vez, obtendo o vetor de avanço, que é inicialmente definido como apontando para o eixo Y negativo, então, girado em uma matriz criada usando `Matrix.CreateRotationZ` e o `angle` valor. Por fim o `forwardVector` é aplicada ao `position` usando o `unitsPerSecond` coeficiente.
+Se o usuário estiver tocando no terceiro centro da tela, a câmera avançará. Isso é feito primeiro obtendo o vetor de encaminhamento, que é inicialmente definido como apontador para o eixo Y negativo e, em seguida, girado `Matrix.CreateRotationZ` por uma `angle` matriz criada usando e o valor. Por fim `forwardVector` , o é `position` aplicado ao `unitsPerSecond` uso do coeficiente.
 
 ## <a name="summary"></a>Resumo
 
-Este passo a passo aborda como mover e girar `Models` em 3D de espaço usando `Matrices` e o `BasicEffect.World` propriedade. Essa forma de movimentação fornece a base para a movimentação de objetos em jogos 3D. Este passo a passo também aborda como implementar um `Camera` entidade para ver o mundo de qualquer posição e um ângulo.
+Este tutorial explica como mover e girar `Models` no espaço 3D usando `Matrices` e a `BasicEffect.World` propriedade. Essa forma de movimentação fornece a base para mover objetos em jogos 3D. Este passo a passos também aborda como implementar `Camera` uma entidade para exibir o mundo de qualquer posição e ângulo.
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Link da API MonoGame](http://www.monogame.net/documentation/?page=api)
-- [Projeto concluído (amostra)](https://developer.xamarin.com/samples/monodroid/MonoGame3DCamera/)
+- [Link da API monogame](http://www.monogame.net/documentation/?page=api)
+- [Projeto concluído (exemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/monogame3dcamera)
