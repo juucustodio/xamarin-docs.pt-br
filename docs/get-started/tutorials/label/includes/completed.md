@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 37c2ba1b03d4894d7d7528f4cf520ddb4e6e5aab
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: b2a15ab67cdf6498a2ca92b29bebda2998349314
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60896632"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68669518"
 ---
 Parabéns por concluir este tutorial, no qual você aprendeu a:
 
@@ -22,6 +22,6 @@ Para saber mais sobre os conceitos básicos da criação de aplicativos móveis 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [LabelTutorial (amostra)](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Tutorials/LabelTutorial)
+- [LabelTutorial (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-tutorials-labeltutorial/)
 - [Rótulo de Xamarin.Forms (guia)](~/xamarin-forms/user-interface/text/label.md)
 - [API de Rótulo](xref:Xamarin.Forms.Label)

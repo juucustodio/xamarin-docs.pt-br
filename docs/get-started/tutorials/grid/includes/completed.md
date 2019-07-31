@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: d7af34feb7ca9526efef067bdce79a59164d0e3f
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 5155752f9bcf87eab8a9d48552071c51ffd10b15
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61375332"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68669513"
 ---
 Parabéns por concluir este tutorial, no qual você aprendeu a:
 
@@ -22,7 +22,7 @@ Para saber mais sobre os conceitos básicos da criação de aplicativos móveis 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [GridTutorial (amostra)](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Tutorials/GridTutorial)
+- [GridTutorial (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-tutorials-gridtutorial/)
 - [Grade do Xamarin.Forms (guia)](~/xamarin-forms/user-interface/layouts/grid.md)
 - [Margem e preenchimento (guia)](~/xamarin-forms/user-interface/layouts/margin-and-padding.md)
 - [API de Grade](xref:Xamarin.Forms.Grid)

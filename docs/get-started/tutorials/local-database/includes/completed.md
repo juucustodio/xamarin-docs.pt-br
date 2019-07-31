@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: da54409bdf0c36984feb1d70d50a718cff36ac95
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: 07934bfdd924a0b52cbb240124e073c82aeb41ef
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67659737"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68669519"
 ---
 Parabéns por concluir este tutorial, no qual você aprendeu a:
 
@@ -22,6 +22,6 @@ Para saber mais sobre os conceitos básicos da criação de aplicativos móveis 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [LocalDatabaseTutorial (amostra)](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Tutorials/LocalDatabaseTutorial)
+- [LocalDatabaseTutorial (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-tutorials-localdatabasetutorial/)
 - [Bancos de dados locais do Xamarin.Forms (guia)](~/xamarin-forms/data-cloud/data/databases.md)
 - [Pacote do NuGet SQLite.NET](https://www.nuget.org/packages/sqlite-net-pcl/)

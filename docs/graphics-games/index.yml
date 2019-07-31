@@ -11,7 +11,7 @@ abstract:
   description: Jogos com gráficos 2D e 3D de plataforma cruzada para plataformas móveis e desktop.
   menu:
     items:
-      - href: 'https://developer.xamarin.com/samples/'
+      - href: 'https://docs.microsoft.com/samples/browse/?products=xamarin'
         text: Exemplos
 sections:
   - title: null

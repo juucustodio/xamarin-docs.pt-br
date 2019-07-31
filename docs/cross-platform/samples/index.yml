@@ -11,7 +11,7 @@ abstract:
   description: 'Aplicativos de exemplo de plataforma cruzada do Xamarin e demonstrações de código para ajudar você a começar a compilar aplicativos móveis com C# e Xamarin.'
   menu:
     items:
-      - href: 'https://developer.xamarin.com/samples/'
+      - href: 'https://docs.microsoft.com/samples/browse/?products=xamarin'
         text: Todos os exemplos de Xamarin
 sections:
   - title: Introdução
@@ -20,11 +20,11 @@ sections:
         style: cards
         className: cardsW
         items:
-          - href: 'https://developer.xamarin.com/samples/xamarin-forms/Todo/'
+          - href: 'https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo/'
             html: 'Este exemplo demonstra um aplicativo de Lista de tarefas em que os dados são armazenados e acessados em um banco de dados local do SQLite, criado com o Xamarin.Forms.'
             image:
               src: images/todo.png
-              href: 'https://developer.xamarin.com/samples/xamarin-forms/Todo/'
+              href: 'https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo/'
             title: Todo
           - href: 'https://github.com/xamarinhq/app-myshoppe'
             html: 'Aplicativo de demonstração para os vendedores acompanharem o desempenho de vendas, gerenciarem leads, exibirem contatos, gerenciarem pedidos e consultarem o catálogo de produtos.'
@@ -74,9 +74,9 @@ sections:
         style: cards
         className: cardsW
         items:
-          - href: 'https://developer.xamarin.com/samples/'
+          - href: 'https://docs.microsoft.com/samples/browse/?products=xamarin'
             html: O conjunto completo de aplicativos de exemplo e demonstrações de código multiplataforma do Xamarin.
             image:
               src: ~/media/shared/sample-download.svg
-              href: 'https://developer.xamarin.com/samples/'
+              href: 'https://docs.microsoft.com/samples/browse/?products=xamarin'
             title: Todos os exemplos de Xamarin
