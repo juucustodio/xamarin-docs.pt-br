@@ -1,22 +1,22 @@
 ---
-title: ScrollView toques de conteúdo no iOS
-description: Especificidades da plataforma permitem que você consumir funcionalidade só está disponível em uma plataforma específica, sem implementar renderizadores personalizados ou efeitos. Este artigo explica como consumir do iOS específicas da plataforma que controla se um ScrollView lida com um gesto de toque ou passá-lo ao seu conteúdo.
+title: O conteúdo do ScrollView se toca no iOS
+description: Especificidades da plataforma permitem que você consumir funcionalidade só está disponível em uma plataforma específica, sem implementar renderizadores personalizados ou efeitos. Este artigo explica como consumir a plataforma específica do iOS que controla se um ScrollView manipula um gesto de toque ou o passa para seu conteúdo.
 ms.prod: xamarin
 ms.assetid: 99F823DB-B379-40F0-A343-A9783C341120
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: 19a683fbd4aeb7060d97406a89c1e9308fb56b03
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: 154666cce4ad6c53949952fa93f5ad7dc89824ab
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65926002"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68651770"
 ---
-# <a name="scrollview-content-touches-on-ios"></a>ScrollView toques de conteúdo no iOS
+# <a name="scrollview-content-touches-on-ios"></a>O conteúdo do ScrollView se toca no iOS
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 Um temporizador implícito é disparado quando um gesto de toque começa em um [ `ScrollView` ](xref:Xamarin.Forms.ScrollView) no iOS e o `ScrollView` decide, com base na ação de usuário na extensão de timer, se ele deve tratar o gesto ou passá-lo ao seu conteúdo. Por padrão, o iOS `ScrollView` toques de conteúdo de atrasos, mas isso pode causar problemas em algumas circunstâncias com o `ScrollView` conteúdo não ganhando o gesto quando deveria. Portanto, esse controles específicos da plataforma se um `ScrollView` manipula um gesto de toque ou passá-lo ao seu conteúdo. Ele é consumido em XAML, definindo o `ScrollView.ShouldDelayContentTouches` anexado à propriedade um `boolean` valor:
 
@@ -61,6 +61,6 @@ O resultado é que um [ `ScrollView` ](xref:Xamarin.Forms.ScrollView) pode desab
 
 ## <a name="related-links"></a>Links relacionados
 
-- [PlatformSpecifics (amostra)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+- [PlatformSpecifics (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [Criação de itens específicos à plataforma](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
-- [iOSSpecific API](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)
+- [API iOSSpecific](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)

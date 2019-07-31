@@ -1,38 +1,38 @@
 ---
-title: Estrutura de notificações de usuário no xamarin. IOS
-description: Contém links para documentos que descrevem a estrutura de notificações do usuário e como usá-lo para enviar e receber notificações locais e remotas em um aplicativo xamarin. IOS.
+title: Estrutura de notificações do usuário no Xamarin. iOS
+description: Links para documentos que descrevem a estrutura de notificações de usuário e como usá-lo para enviar e receber notificações locais e remotas em um aplicativo Xamarin. iOS.
 ms.prod: xamarin
 ms.assetid: 223FCE25-A3E6-4255-BCFC-0E3136F4E987
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 09/01/2016
-ms.openlocfilehash: 3e9103b02dd17529d0084d6f7eb4ddcc7749659a
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 13fb48d5ee64c1d84926158381f0f69655fb2cf2
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61423312"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68651182"
 ---
-# <a name="user-notifications-framework-in-xamarinios"></a>Estrutura de notificações de usuário no xamarin. IOS
+# <a name="user-notifications-framework-in-xamarinios"></a>Estrutura de notificações do usuário no Xamarin. iOS
 
-Novo no iOS 10, a notificação do usuário framework permite a entrega e a manipulação de notificações locais e remotas. Usando essa estrutura, o aplicativo ou extensão do aplicativo pode agendar a entrega de notificações locais, especificando um conjunto de condições, como local ou a hora do dia.
+Novo no iOS 10, a estrutura de notificação de usuário permite a entrega e a manipulação de notificações locais e remotas. Usando essa estrutura, a extensão do aplicativo ou do aplicativo pode agendar a entrega de notificações locais, especificando um conjunto de condições, como local ou hora do dia.
 
-Além disso, o aplicativo ou a extensão pode receber (e potencialmente modificar) notificações locais e remotas conforme elas são entregues ao dispositivo iOS do usuário.
+Além disso, o aplicativo ou a extensão pode receber (e potencialmente modificar) as notificações locais e remotas à medida que elas são entregues ao dispositivo iOS do usuário.
 
-A nova estrutura de interface do usuário de notificação de usuário permite que o aplicativo ou extensão do aplicativo para personalizar a aparência de notificações locais e remotas quando eles são apresentados ao usuário.
+A nova estrutura de IU de notificação do usuário permite que a extensão do aplicativo ou do aplicativo Personalize a aparência de notificações locais e remotas quando elas são apresentadas ao usuário.
 
 ## <a name="enhanced-user-notificationsiosplatformuser-notificationsenhanced-user-notificationsmd"></a>[Notificações de usuário aprimoradas](~/ios/platform/user-notifications/enhanced-user-notifications.md)
 
-Este artigo apresenta todas as maneiras que as notificações do usuário foram aprimoradas para iOS 10 e apresenta uma breve introdução para implementá-las usando a nova estrutura de notificação do usuário.
+Este artigo apresenta todas as maneiras como as notificações de usuário foram aprimoradas para o iOS 10 e fornece uma breve introdução à implementação deles usando a nova estrutura de notificação de usuário.
 
 ## <a name="advanced-user-notificationsiosplatformuser-notificationsadvanced-user-notificationsmd"></a>[Notificações de usuário avançadas](~/ios/platform/user-notifications/advanced-user-notifications.md)
 
-Este artigo usa uma análise mais profunda sobre a nova estrutura de notificações do usuário e como tirar proveito em um aplicativo xamarin. IOS.
+Este artigo analisa mais detalhadamente a nova estrutura de notificações de usuário e como tirar o máximo proveito dela em um aplicativo Xamarin. iOS.
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Amostras do iOS 10](https://developer.xamarin.com/samples/ios/iOS10/)
-- [Referência de estrutura Usernotifications](https://developer.apple.com/reference/usernotifications)
+- [Amostras do iOS 10](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS10)
+- [Referência da estrutura do usernotifications](https://developer.apple.com/reference/usernotifications)
 - [UserNotificationsUI](https://developer.apple.com/reference/usernotificationsui)
 - [Guia de programação de notificação local e remota](https://developer.apple.com/library/prerelease/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/Introduction.html)

@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/12/2016
-ms.openlocfilehash: c4d73f131b8b20f17c5a3df13a3c4590f4ca926c
-ms.sourcegitcommit: 4f8dc5298a95d591a59e97cdd347fd82858a1019
+ms.openlocfilehash: 1e003a80b58f783829f5af3b74801fc3c91c88e9
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/03/2019
-ms.locfileid: "66469499"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68655612"
 ---
 # <a name="xamarinforms-cells"></a>Células do xamarin. Forms
 
-[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/FormsGallery/)
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery)
 
 _As células do xamarin. Forms podem ser adicionadas a ListViews e TableViews._
 
@@ -48,7 +48,7 @@ Xamarin. Forms dá suporte aos seguintes tipos de célula:
 
 |     |     |
 | --- | --- |
-| O [ `SwitchCell` ](xref:Xamarin.Forms.SwitchCell) contém o texto definido com o [ `Text` ](xref:Xamarin.Forms.SwitchCell.Text) propriedade e uma chave liga/desliga são definidos inicialmente com o valor booliano [ `On` ](xref:Xamarin.Forms.SwitchCell.On) propriedade. Lidar com o [ `OnChanged` ](xref:Xamarin.Forms.SwitchCell.OnChanged) evento a ser notificado quando o `On` alterações de propriedade.<br /><br />[Documentação da API](xref:Xamarin.Forms.SwitchCell) / [guia](~/xamarin-forms/user-interface/tableview.md#switchcell) | [![Exemplo de SwitchCell](cells-images/SwitchCell.png "exemplo SwitchCell")](cells-images/SwitchCell-Large.png#lightbox "SwitchCell exemplo")<br />[O código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/SwitchCellDemoPage.cs) / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/SwitchCellDemoPage.xaml) |
+| O [`SwitchCell`](xref:Xamarin.Forms.SwitchCell) texto Contains definido com a [`Text`](xref:Xamarin.Forms.SwitchCell.Text) Propriedade e uma opção on/off inicialmente definida com a propriedade [`On`](xref:Xamarin.Forms.SwitchCell.On) booliana. Lidar com o [ `OnChanged` ](xref:Xamarin.Forms.SwitchCell.OnChanged) evento a ser notificado quando o `On` alterações de propriedade.<br /><br />[Documentação da API](xref:Xamarin.Forms.SwitchCell) / [guia](~/xamarin-forms/user-interface/tableview.md#switchcell) | [![Exemplo de SwitchCell](cells-images/SwitchCell.png "exemplo SwitchCell")](cells-images/SwitchCell-Large.png#lightbox "SwitchCell exemplo")<br />[O código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/SwitchCellDemoPage.cs) / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/SwitchCellDemoPage.xaml) |
 |     |     |
 
 ### <a name="entrycell"></a>EntryCell
@@ -61,6 +61,6 @@ Xamarin. Forms dá suporte aos seguintes tipos de célula:
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Exemplo de xamarin. Forms FormsGallery](https://developer.xamarin.com/samples/xamarin-forms/FormsGallery/)
-- [Amostras do Xamarin.Forms](https://developer.xamarin.com/samples/xamarin-forms/all/)
+- [Exemplo de xamarin. Forms FormsGallery](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery)
+- [Amostras do Xamarin.Forms](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms)
 - [Documentação da API do Xamarin.Forms](https://docs.microsoft.com/dotnet/api/xamarin.forms?view=xamarin-forms)

@@ -1,36 +1,36 @@
 ---
-title: Introdução ao tvOS no Xamarin
-description: Este documento descreve como começar a criar aplicativos de tvOS com o Xamarin. Ele vincula a um guia de instalação e um guia de início rápido.
+title: Introdução com tvOS no Xamarin
+description: Este documento descreve como começar a criar aplicativos tvOS com o Xamarin. Ele é vinculado a um guia de instalação e um guia de início rápido.
 ms.prod: xamarin
 ms.assetid: 1A3D8211-A689-41D9-BCFE-AF8398992031
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/07/2016
-ms.openlocfilehash: 1d7f6f3939d79c9ad28701bb89eb75256503a977
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 1cf195438132d56d194438b9c922d1079d362f5b
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61398694"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656021"
 ---
-# <a name="getting-started-with-tvos-in-xamarin"></a>Introdução ao tvOS no Xamarin
+# <a name="getting-started-with-tvos-in-xamarin"></a>Introdução com tvOS no Xamarin
 
-Esta série apresenta os conceitos básicos do desenvolvimento do xamarin. tvos. Ele vai de instalando o suporte de tvOS para iniciar, projetar, codificar e executando um aplicativo. Ao longo do caminho, ele ensina as habilidades e o conjunto de ferramentas que serão necessários para trabalhar em qualquer aplicativo tvos.
+Esta série apresenta os conceitos básicos do desenvolvimento do Xamarin. tvOS. Ele vai da instalação do suporte do tvOS para iniciar, projetar, codificar e executar um aplicativo. Ao longo do caminho, ele ensina as habilidades e o conjunto de ferramentas que será necessário para trabalhar em qualquer aplicativo Xamarin. tvOS.
 
 ## <a name="installing-tvos-supportiostvosget-startedinstallationmd"></a>[Instalação do suporte de tvOS](~/ios/tvos/get-started/installation.md)
 
-Para compilar aplicativos de tvOS com o Xamarin, instale a versão estável mais recente do xamarin. IOS, que dá suporte ao tvOS 11 e watchOS 4.
+Para criar aplicativos tvOS com o Xamarin, instale a versão estável mais recente do Xamarin. iOS, que dá suporte a tvOS 11 e watchOS 4.
 
 ## <a name="hello-tvos-quick-start-guideiostvosget-startedhello-tvosmd"></a>[Guia de Início rápido Olá, tvOS](~/ios/tvos/get-started/hello-tvos.md)
 
-Este artigo fornece um início rápido para desenvolver aplicativos para tvOS, criando um simple aplicativo "Olá, tvOS". Ele aborda os conceitos básicos do dispositivo tvOS provisionamento, a criação da interface, de codificação para tvOS e testando no simulador tvOS e no hardware real tvOS.
+Este artigo fornece um início rápido para o desenvolvimento de aplicativos para o tvOS criando um aplicativo simples de "Olá, tvOS". Ele aborda os conceitos básicos do provisionamento de dispositivos tvOS, criação de interface, codificação para tvOS e testes no simulador de tvOS e em hardware real tvOS.
 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Amostras do tvOS](https://developer.xamarin.com/samples/tvos/all/)
+- [Amostras do tvOS](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
 - [tvOS](https://developer.apple.com/tvos/)
-- [Guias de Interface humana do tvOS](https://developer.apple.com/tvos/human-interface-guidelines/)
+- [Guias de interface humana do tvOS](https://developer.apple.com/tvos/human-interface-guidelines/)
 - [Guia de programação de aplicativo para tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)
-- [Criação de aplicativos para tvOS com o Xamarin (vídeo)](https://university.xamarin.com/lightninglectures/tvos-with-xamarin)
+- [Criando aplicativos para tvOS com Xamarin (vídeo)](https://university.xamarin.com/lightninglectures/tvos-with-xamarin)

@@ -1,65 +1,65 @@
 ---
-title: Trabalhando com exibições de coleção no Xamarin do tvOS
-description: Este documento descreve como trabalhar com exibições de coleção em um aplicativo tvOS criados com o Xamarin. Ele aborda a criação de células e modos de exibição suplementares, respondendo a eventos de usuário e muito mais, layouts de exibição de coleção.
+title: Trabalhando com exibições de coleção tvOS no Xamarin
+description: Este documento descreve como trabalhar com exibições de coleção em um aplicativo tvOS criado com o Xamarin. Ele aborda layouts de exibição de coleção, criação de células e exibições complementares, resposta a eventos de usuário e muito mais.
 ms.prod: xamarin
 ms.assetid: 5125C4C7-2DDF-4C19-A362-17BB2B079178
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: f815afa6b1abb15348019b0c53333b4acb054008
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 3246dcbf58a1b6dda6838b5eb81442fdbc429af5
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60933596"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68652345"
 ---
-# <a name="working-with-tvos-collection-views-in-xamarin"></a>Trabalhando com exibições de coleção no Xamarin do tvOS
+# <a name="working-with-tvos-collection-views-in-xamarin"></a>Trabalhando com exibições de coleção tvOS no Xamarin
 
-Exibições de coleção permitem um grupo de conteúdo a ser exibido usando layouts arbitrários. Usando o suporte interno, eles permitem os layouts de grade ou linear criação fácil e também dar suporte a layouts personalizados.
+As exibições de coleção permitem que um grupo de conteúdo seja exibido usando layouts arbitrários. Usando o suporte interno, eles permitem a criação fácil de layouts de grade ou lineares, além de oferecer suporte a layouts personalizados.
 
-[![](collection-views-images/collection01.png "Modo de exibição de coleção de exemplo")](collection-views-images/collection01.png#lightbox)
+[![](collection-views-images/collection01.png "Exibição de coleção de exemplo")](collection-views-images/collection01.png#lightbox)
 
-A exibição de coleção mantém uma coleção de itens usando um delegado e uma fonte de dados para fornecer a interação do usuário e o conteúdo da coleção. Como a exibição de coleção se baseia em um subsistema de Layout que é independente do modo de exibição em si, fornecer um Layout diferente pode alterar facilmente a apresentação de dados em interrupções do modo de exibição coleta.
+A exibição de coleção mantém uma coleção de itens usando um delegado e uma fonte de dados para fornecer interação do usuário e o conteúdo da coleção. Como o modo de exibição de coleção é baseado em um subsistema de layout que é independente da própria exibição, fornecer um layout diferente pode facilmente alterar a apresentação dos dados do modo de exibição de coleção.
 
 <a name="About-Collection-Views" />
 
 ## <a name="about-collection-views"></a>Sobre exibições de coleção
 
-Conforme mencionado acima, uma exibição de coleção (`UICollectionView`) gerencia uma coleção ordenada de itens e apresenta esses itens com layouts personalizáveis. Exibições de coleção funcionam de maneira semelhante às exibições de tabela (`UITableView`), exceto que eles podem usar layouts para itens presentes em mais do que apenas uma única coluna.
+Como mencionado acima, um modo de exibição`UICollectionView`de coleção () gerencia uma coleção ordenada de itens e apresenta esses itens com layouts personalizáveis. As exibições de coleção funcionam de maneira semelhante às exibições de tabela (`UITableView`), exceto pelo fato de poderem usar layouts para apresentar itens em mais do que apenas uma única coluna.
 
-Ao usar uma exibição de coleção em tvOS, seu aplicativo é responsável por fornecer os dados associados à coleção usando uma fonte de dados (`UICollectionViewDataSource`). Exibir dados de coleção podem, opcionalmente, organizados e apresentados em grupos diferentes (seções).
+Ao usar uma exibição de coleção no tvOS, seu aplicativo é responsável por fornecer os dados associados à coleção usando uma fonte de dados`UICollectionViewDataSource`(). Os dados de exibição de coleção podem, opcionalmente, ser organizados e apresentados em grupos diferentes (seções).
 
-A exibição de coleção apresenta os itens individuais na tela de uso de uma célula (`UICollectionViewCell`) que fornece a apresentação de uma determinada parte das informações da coleção (como uma imagem e seu título).
+A exibição de coleção apresenta os itens individuais na tela usando uma célula`UICollectionViewCell`() que fornece a apresentação de uma determinada informação da coleção (como uma imagem e seu título).
 
-Opcionalmente, modos de exibição suplementares podem ser adicionados a apresentação do modo de exibição de coleção para atuar como cabeçalhos e rodapés para as seções e células. Layout do modo de exibição de coleção é responsável por definir o posicionamento dessas exibições, juntamente com as células individuais.
+Opcionalmente, exibições suplementares podem ser adicionadas à apresentação da exibição de coleção para atuar como cabeçalho e rodapé para as seções e células. O layout da exibição de coleção é responsável por definir o posicionamento dessas exibições junto com as células individuais.
 
-A exibição de coleção pode responder à interação do usuário usando um delegado (`UICollectionViewDelegate`). Este delegado também é responsável por determinar se uma determinada célula pode obter foco, se uma célula tiver sido realçada ou se foi selecionada. Em alguns casos, o delegado determina o tamanho das células individuais.
+O modo de exibição de coleção pode responder à interação do usuário`UICollectionViewDelegate`usando um delegate (). Esse delegado também é responsável por determinar se uma determinada célula pode ser focalizada, se uma célula tiver sido realçada ou se uma tiver sido selecionada. Em alguns casos, o delegado determina o tamanho das células individuais.
 
 <a name="Collection-View-Layouts" />
 
 ## <a name="collection-view-layouts"></a>Layouts de exibição de coleção
 
-Um recurso importante de uma exibição de coleção é sua separação entre os dados que ela está apresentando e seu Layout. Um Layout de exibição de coleção (`UICollectionViewLayout`) é responsável por fornecer a organização e o local de células (e quaisquer exibições suplementares) com apresentação de na tela do modo de exibição de coleção.
+Um recurso importante de uma exibição de coleção é sua separação entre os dados que ele está apresentando e seu layout. Um layout de exibição de`UICollectionViewLayout`coleção () é responsável por fornecer a organização e o local das células (e quaisquer exibições complementares) com na apresentação na tela da exibição de coleção.
 
-As células individuais são criadas pela exibição de coleção da fonte de dados anexados e, em seguida, são organizadas e exibidas pelo Layout de exibição de coleção determinada.
+As células individuais são criadas pela exibição de coleção de sua fonte de dados anexada e, em seguida, são organizadas e exibidas pelo layout de exibição de coleção fornecido.
 
-O Layout de exibição de coleção normalmente é fornecido quando a exibição de coleção é criada. No entanto, você pode alterar o Layout de exibição de coleção a qualquer momento e a apresentação na tela de dados do modo de exibição de coleção será atualizada automaticamente usando o novo layout fornecido.
+O layout de exibição de coleção normalmente é fornecido quando a exibição de coleção é criada. No entanto, você pode alterar o layout da exibição de coleção a qualquer momento e a apresentação na tela dos dados da exibição de coleção será atualizada automaticamente usando o novo layout fornecido.
 
-O Layout de exibição de coleção fornece vários métodos que podem ser usados para animar a transição entre dois layouts diferentes (por padrão, que nenhuma animação é feita). Além disso, Layouts de exibição de coleção pode funcionar com reconhecedores de gestos para animar ainda mais a interação do usuário que resulta em uma alteração no layout.
+O layout de exibição de coleção fornece vários métodos que podem ser usados para animar a transição entre dois layouts diferentes (por padrão, nenhuma animação é feita). Além disso, os layouts de exibição de coleção podem funcionar com reconhecedores de gesto para animar ainda mais a interação do usuário que resulta em uma alteração no layout.
 
 <a name="Creating-Cells-and-Supplementary-Views" />
 
-## <a name="creating-cells-and-supplementary-views"></a>Criando células e exibições de suplementares
+## <a name="creating-cells-and-supplementary-views"></a>Criando células e exibições suplementares
 
-Fonte de dados de uma exibição da coleção não só é responsável por fornecer os dados fazendo a coleção de itens, mas também as células que são usadas para exibir o conteúdo.
+A fonte de dados de uma exibição de coleção não é apenas responsável por fornecer os dados de backup do item da coleção, mas também as células usadas para exibir o conteúdo.
 
-Como exibições de coleção foram projetadas para lidar com grandes coleções de itens, as células individuais podem ser removida da fila e reutilizadas para impedir que saturar limitações de memória. Há dois métodos diferentes para modos de exibição de retirar da fila:
+Como as exibições de coleção foram projetadas para lidar com grandes coleções de itens, as células individuais podem ser removidas da fila e reutilizadas para evitar a sobreexecução de limitações de memória. Há dois métodos diferentes para remover as exibições da fila:
 
-- `DequeueReusableCell` -Cria ou retorna uma célula do tipo em questão (conforme especificado no Storyboard do aplicativo).
-- `DequeueReusableSupplementaryView` -Cria ou retorna uma exibição suplementar do tipo em questão (conforme especificado no Storyboard do aplicativo).
+- `DequeueReusableCell`– Cria ou retorna uma célula do tipo fornecido (conforme especificado no storyboard do aplicativo).
+- `DequeueReusableSupplementaryView`-Cria ou retorna uma exibição suplementar do tipo fornecido (conforme especificado no storyboard do aplicativo).
 
-Antes de chamar qualquer um desses métodos, você deve registrar a classe Storyboard ou `.xib` arquivo usado para criar o modo de exibição da célula com a exibição de coleção. Por exemplo:
+Antes de chamar qualquer um desses métodos, você deve registrar a classe, o `.xib` storyboard ou o arquivo usado para criar a exibição da célula com o modo de exibição de coleção. Por exemplo:
 
 ```csharp
 public CityCollectionView (IntPtr handle) : base (handle)
@@ -70,127 +70,127 @@ public CityCollectionView (IntPtr handle) : base (handle)
 }
 ```
 
-Em que `typeof(CityCollectionViewCell)` fornece a classe que suporta a exibição e `CityViewDatasource.CardCellId` fornece a ID usada quando a célula (ou exibição) é removida da fila.
+Onde `typeof(CityCollectionViewCell)` fornece a classe que dá suporte à exibição `CityViewDatasource.CardCellId` e fornece a ID usada quando a célula (ou exibição) é removida da fila.
 
-Depois que a célula é removida da fila, você pode configurá-lo com os dados para o item que ele é que representa e retorna à exibição de coleção para exibição.
+Depois que a célula é removida da fila, você a configura com os dados do item que está representando e retorna à exibição de coleção para exibição.
 
 <a name="About-Collection-View-Controllers" />
 
-## <a name="about-collection-view-controllers"></a>Sobre controladores de exibição de coleção
+## <a name="about-collection-view-controllers"></a>Sobre os controladores de exibição de coleção
 
-Um controlador de exibição de coleção (`UICollectionViewController`) é um controlador de exibição especializados (`UIViewController`) que fornece o seguinte comportamento:
+Um controlador de exibição de`UICollectionViewController`coleção () é um controlador de`UIViewController`exibição especializado () que fornece o seguinte comportamento:
 
-- Ele é responsável por carregar a exibição de coleção do seu Storyboard ou `.xib` arquivo e instanciar o modo de exibição. Se criada no código, ele cria automaticamente uma exibição de coleção nova e não configurado.
-- Quando a exibição de coleção é carregada, o controlador tenta carregar sua fonte de dados e o delegado de Storyboard ou `.xib` arquivo. Se nenhuma estiver disponível, ele define, em si, como a origem de ambos.
-- Garante que os dados são carregados antes que a exibição de coleção é preenchida no primeiro exibido e recarrega e desmarque select em cada vídeo subsequente.
+- É responsável por carregar o modo de exibição de coleção de seu `.xib` storyboard ou arquivo e instanciar a exibição. Se criado no código, ele cria automaticamente uma nova exibição de coleção não configurada.
+- Quando o modo de exibição de coleção é carregado, o controlador tenta carregar sua fonte de dados e delegar `.xib` a partir do storyboard ou do arquivo. Se nenhum estiver disponível, ele se definirá como a origem de ambos.
+- Garante que os dados sejam carregados antes que a exibição de coleção seja preenchida na primeira exibição e recarrega e desmarque a seleção em cada exibição subsequente.
 
-Além disso, o controlador de exibição de coleção fornece métodos substituíveis que podem ser usados para gerenciar o ciclo de vida da exibição de coleção como `AwakeFromNib` e `ViewWillDisplay`.
+Além disso, o controlador de exibição de coleção fornece métodos substituíveis que podem ser usados para gerenciar o ciclo de vida `AwakeFromNib` da `ViewWillDisplay`exibição de coleção, como e.
 
 <a name="Collection-Views-and-Storyboards" />
 
 ## <a name="collection-views-and-storyboards"></a>Exibições de coleção e storyboards
 
-É a maneira mais fácil trabalhar com uma exibição de coleção em seu aplicativo tvos, adicionar uma ao seu Storyboard. Como um exemplo rápido, vamos criar um aplicativo de exemplo que apresenta uma imagem, título e um botão de seleção. Se o usuário clicar no botão Selecionar, uma exibição de coleção será exibida que permitem que o usuário escolha uma nova imagem. Quando uma imagem é escolhida, a exibição de coleção é fechada e a nova imagem e o título serão exibidos.
+A maneira mais fácil de trabalhar com uma exibição de coleção em seu aplicativo Xamarin. tvOS é adicionar uma a seu Storyboard. Como um exemplo rápido, vamos criar um aplicativo de exemplo que apresenta uma imagem, um título e um botão de seleção. Se o usuário clicar no botão Selecionar, será exibido um modo de exibição de coleção que permitirá que o usuário escolha uma nova imagem. Quando uma imagem é escolhida, a exibição de coleção é fechada e a nova imagem e o título serão exibidos.
 
 Vamos fazer o seguinte:
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
     
-1. Iniciar uma nova **aplicativo de modo de exibição único tvOS** no Visual Studio para Mac.
-1. No **Gerenciador de soluções**, clique duas vezes o `Main.storyboard` de arquivo e abri-lo no Designer do iOS.
-1. Adicionar um modo de exibição de imagem, um rótulo e um botão para o modo de exibição existente e configurá-los para a seguinte aparência: 
+1. Inicie um novo **aplicativo tvOS de exibição única** no Visual Studio para Mac.
+1. Na **Gerenciador de soluções**, clique duas vezes no arquivo `Main.storyboard` e abra-o no designer do Ios.
+1. Adicione um modo de exibição de imagem, um rótulo e um botão à exibição existente e configure-os para que se pareçam com o seguinte: 
 
     [![](collection-views-images/collection02.png "Layout de exemplo")](collection-views-images/collection02.png#lightbox)
-1. Atribuir uma **nome** para o modo de exibição de imagem e o rótulo na **guia de Widget** da **Gerenciador de propriedades**. Por exemplo: 
+1. Atribua um **nome** à exibição de imagem e o rótulo na **Guia Widget** do Gerenciador de **Propriedades**. Por exemplo: 
 
-    [![](collection-views-images/collection03.png "O nome da configuração")](collection-views-images/collection03.png#lightbox)
-1. Em seguida, arraste um controlador de exibição de coleção para o Storyboard: 
+    [![](collection-views-images/collection03.png "Definindo o nome")](collection-views-images/collection03.png#lightbox)
+1. Em seguida, arraste um controlador de exibição de coleção para o storyboard: 
 
     [![](collection-views-images/collection04.png "Um controlador de exibição de coleção")](collection-views-images/collection04.png#lightbox)
-1. Controle-arraste do botão para o controlador de exibição de coleção e selecione **Push** de pop-up: 
+1. Controle-arraste do botão para o controlador de exibição de coleção e selecione **Push** do Popup: 
 
-    [![](collection-views-images/collection05.png "Selecione o envio por Push de pop-up")](collection-views-images/collection05.png#lightbox)
-1. Quando o aplicativo é executado, isso tornará o modo de exibição de coleção ser show sempre que o usuário clica no botão.
-1. Selecione a exibição de coleção e insira os seguintes valores na **guia Layout** da **Gerenciador de propriedades**: 
+    [![](collection-views-images/collection05.png "Selecionar push do pop-up")](collection-views-images/collection05.png#lightbox)
+1. Quando o aplicativo for executado, isso fará com que o modo de exibição de coleção seja exibido sempre que o usuário clicar no botão.
+1. Selecione o modo de exibição de coleção e insira os seguintes valores na **guia layout** do **Gerenciador de propriedades**: 
 
     [![](collection-views-images/collection06.png "O Gerenciador de propriedades")](collection-views-images/collection06.png#lightbox)
-1. Isso controla o tamanho de células individuais e as bordas entre células e a borda externa da exibição de coleção.
-1. Selecione o controlador de exibição de coleção e defina sua classe como `CityCollectionViewController` no **guia de Widget**: 
+1. Isso controla o tamanho das células individuais e as bordas entre as células e a borda externa da exibição de coleção.
+1. Selecione o controlador de exibição de coleção e defina sua `CityCollectionViewController` classe como na **Guia do widget**: 
 
-    [![](collection-views-images/collection07.png "Defina a classe para CityCollectionViewController")](collection-views-images/collection07.png#lightbox)
-1. Selecione a exibição de coleção e defina sua classe como `CityCollectionView` no **guia de Widget**: 
+    [![](collection-views-images/collection07.png "Definir a classe como CityCollectionViewController")](collection-views-images/collection07.png#lightbox)
+1. Selecione o modo de exibição de coleção e defina `CityCollectionView` sua classe como na **Guia Widget**: 
 
-    [![](collection-views-images/collection08.png "Defina a classe para CityCollectionView")](collection-views-images/collection08.png#lightbox)
-1. Selecione a célula de exibição de coleção e defina sua classe como `CityCollectionViewCell` no **guia de Widget**: 
+    [![](collection-views-images/collection08.png "Definir a classe como CityCollectionView")](collection-views-images/collection08.png#lightbox)
+1. Selecione a célula de exibição de coleção e defina sua `CityCollectionViewCell` classe como na **Guia Widget**: 
 
-    [![](collection-views-images/collection09.png "Defina a classe para CityCollectionViewCell")](collection-views-images/collection09.png#lightbox)
-1. No **guia de Widget** Certifique-se de que o **Layout** é `Flow` e o **direção de rolagem** é `Vertical` para a exibição de coleção: 
+    [![](collection-views-images/collection09.png "Definir a classe como CityCollectionViewCell")](collection-views-images/collection09.png#lightbox)
+1. Na **Guia do widget** , verifique se o **layout** é `Flow` e se a direção da **rolagem** é `Vertical` para o modo de exibição de coleção: 
 
-    [![](collection-views-images/collection10.png "Na guia de Widget")](collection-views-images/collection10.png#lightbox)
-1. Selecione a célula de exibição de coleção e defina suas **identidade** para `CityCell` no **guia Widget**: 
+    [![](collection-views-images/collection10.png "A guia do widget")](collection-views-images/collection10.png#lightbox)
+1. Selecione a célula de exibição de coleção e defina sua `CityCell` identidade como na **Guia do widget**: 
 
-    [![](collection-views-images/collection11.png "Definir a identidade para CityCell")](collection-views-images/collection11.png#lightbox)
+    [![](collection-views-images/collection11.png "Defina a identidade como CityCell")](collection-views-images/collection11.png#lightbox)
 1. Salve as alterações.
     
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
     
-1. Iniciar uma nova **aplicativo de modo de exibição único tvOS** no Visual Studio.
-1. No **Gerenciador de soluções**, clique duas vezes o `Main.storyboard` de arquivo e abri-lo no Designer do iOS.
-1. Adicionar um modo de exibição de imagem, um rótulo e um botão para o modo de exibição existente e configurá-los para a seguinte aparência: 
+1. Inicie um novo **aplicativo tvOS de exibição única** no Visual Studio.
+1. Na **Gerenciador de soluções**, clique duas vezes no arquivo `Main.storyboard` e abra-o no designer do Ios.
+1. Adicione um modo de exibição de imagem, um rótulo e um botão à exibição existente e configure-os para que se pareçam com o seguinte: 
 
-    [![](collection-views-images/collection02vs.png "Configure o layout")](collection-views-images/collection02vs.png#lightbox)
-1. Atribuir uma **nome** para o modo de exibição de imagem e o rótulo na **guia de Widget** da **Gerenciador de propriedades**. Por exemplo: 
+    [![](collection-views-images/collection02vs.png "Configurar o layout")](collection-views-images/collection02vs.png#lightbox)
+1. Atribua um **nome** à exibição de imagem e o rótulo na **Guia Widget** do Gerenciador de **Propriedades**. Por exemplo: 
 
     [![](collection-views-images/collection03vs.png "O Gerenciador de propriedades")](collection-views-images/collection03vs.png#lightbox)
-1. Em seguida, arraste um controlador de exibição de coleção para o Storyboard: 
+1. Em seguida, arraste um controlador de exibição de coleção para o storyboard: 
 
     [![](collection-views-images/collection04vs.png "Um controlador de exibição de coleção")](collection-views-images/collection04vs.png#lightbox)
-1. Controle-arraste do botão para o controlador de exibição de coleção e selecione **Push** de pop-up: 
+1. Controle-arraste do botão para o controlador de exibição de coleção e selecione **Push** do Popup: 
 
-    [![](collection-views-images/collection05vs.png "Selecione o envio por Push de pop-up")](collection-views-images/collection05vs.png#lightbox)
-1. Quando o aplicativo é executado, isso tornará o modo de exibição de coleção ser show sempre que o usuário clica no botão.
-1. Selecione a exibição de coleção e, na **guia Layout** da **Gerenciador de propriedades** inserir o **largura** como _361_ e  **Altura** como _256_ 
-1. Isso controla o tamanho de células individuais e as bordas entre células e a borda externa da exibição de coleção.
-1. Selecione o controlador de exibição de coleção e defina sua classe como `CityCollectionViewController` no **guia de Widget**: 
+    [![](collection-views-images/collection05vs.png "Selecionar push do pop-up")](collection-views-images/collection05vs.png#lightbox)
+1. Quando o aplicativo for executado, isso fará com que o modo de exibição de coleção seja exibido sempre que o usuário clicar no botão.
+1. Selecione o modo de exibição de coleção e, na **guia layout** do **Gerenciador de propriedades** , insira a **largura** como _361_ e **altura** como _256_ 
+1. Isso controla o tamanho das células individuais e as bordas entre as células e a borda externa da exibição de coleção.
+1. Selecione o controlador de exibição de coleção e defina sua `CityCollectionViewController` classe como na **Guia do widget**: 
 
-    [![](collection-views-images/collection07vs.png "Defina a classe para CityCollectionViewController")](collection-views-images/collection07vs.png#lightbox)
-1. Selecione a exibição de coleção e defina sua classe como `CityCollectionView` no **guia de Widget**: 
+    [![](collection-views-images/collection07vs.png "Definir a classe como CityCollectionViewController")](collection-views-images/collection07vs.png#lightbox)
+1. Selecione o modo de exibição de coleção e defina `CityCollectionView` sua classe como na **Guia Widget**: 
 
-    [![](collection-views-images/collection08vs.png "Defina a classe para CityCollectionView")](collection-views-images/collection08vs.png#lightbox)
-1. Selecione a célula de exibição de coleção e defina sua classe como `CityCollectionViewCell` no **guia de Widget**: 
+    [![](collection-views-images/collection08vs.png "Definir a classe como CityCollectionView")](collection-views-images/collection08vs.png#lightbox)
+1. Selecione a célula de exibição de coleção e defina sua `CityCollectionViewCell` classe como na **Guia Widget**: 
 
-    [![](collection-views-images/collection09vs.png "Defina a classe para CityCollectionViewCell")](collection-views-images/collection09vs.png#lightbox)
-1. No **guia de Widget** Certifique-se de que o **Layout** é `Flow` e o **direção de rolagem** é `Vertical` para a exibição de coleção: 
+    [![](collection-views-images/collection09vs.png "Definir a classe como CityCollectionViewCell")](collection-views-images/collection09vs.png#lightbox)
+1. Na **Guia do widget** , verifique se o **layout** é `Flow` e se a direção da **rolagem** é `Vertical` para o modo de exibição de coleção: 
 
-    [![](collection-views-images/collection10vs.png "Guia de Widget tNão")](collection-views-images/collection10vs.png#lightbox)
-1. Selecione a célula de exibição de coleção e defina suas **identidade** para `CityCell` no **guia Widget**: 
+    [![](collection-views-images/collection10vs.png "Guia do widget Tnão")](collection-views-images/collection10vs.png#lightbox)
+1. Selecione a célula de exibição de coleção e defina sua `CityCell` identidade como na **Guia do widget**: 
 
-    [![](collection-views-images/collection11vs.png "Definir a identidade para CityCell")](collection-views-images/collection11vs.png#lightbox)
+    [![](collection-views-images/collection11vs.png "Defina a identidade como CityCell")](collection-views-images/collection11vs.png#lightbox)
 1. Salve as alterações.
     
 
 -----
 
-Se tivéssemos escolhido `Custom` para o modo de exibição de coleção **Layout**, podemos ter especificado um layout personalizado. A Apple fornece uma interna `UICollectionViewFlowLayout` e `UICollectionViewDelegateFlowLayout` que pode facilmente apresentar dados em um layout de grade (eles são usados pelo `flow` estilo de layout). 
+Se tivéssemos escolhido `Custom` o **layout**do modo de exibição de coleção, poderíamos ter especificado um layout personalizado. A Apple fornece um interno `UICollectionViewFlowLayout` e `UICollectionViewDelegateFlowLayout` que pode apresentar facilmente dados em um layout baseado em grade (eles são usados pelo estilo de `flow` layout). 
 
-Para obter mais informações sobre como trabalhar com Storyboards, consulte nosso [Olá, guia de início rápido do tvOS](~/ios/tvos/get-started/hello-tvos.md).
+Para obter mais informações sobre como trabalhar com storyboards, consulte nossa [Guia de início rápido Olá, tvOS](~/ios/tvos/get-started/hello-tvos.md).
 
 <a name="Providing-Data-for-the-Collection-View" />
 
-## <a name="providing-data-for-the-collection-view"></a>Fornece dados para a exibição de coleção
+## <a name="providing-data-for-the-collection-view"></a>Fornecendo dados para o modo de exibição de coleção
 
-Agora que temos nossa exibição de coleção (e controlador de exibição de coleção) adicionado ao nosso Storyboard, precisamos fornecer os dados para a coleção. 
+Agora que temos nossa exibição de coleção (e o controlador de exibição de coleção) adicionados ao nosso storyboard, precisamos fornecer os dados para a coleção. 
 
 <a name="The-Data-Model" />
 
 ### <a name="the-data-model"></a>O modelo de dados
 
-Primeiro, vamos criar um modelo para nossos dados que contém o nome do arquivo de imagem a ser exibida, o título e um sinalizador para permitir a cidade a ser selecionado.
+Primeiro, vamos criar um modelo para nossos dados que contêm o nome do arquivo para a imagem a ser exibida, o título e um sinalizador para permitir que a cidade seja selecionada.
 
-Criar um `CityInfo` de classe e torná-lo semelhante ao seguinte:
+Crie uma `CityInfo` classe e faça com que ela fique parecida com a seguinte:
 
 ```csharp
 using System;
@@ -220,7 +220,7 @@ namespace tvCollection
 
 ### <a name="the-collection-view-cell"></a>A célula de exibição de coleção
 
-Agora, precisamos definir como os dados serão apresentados para cada célula. Editar o `CityCollectionViewCell.cs` arquivo (criado para você automaticamente do seu arquivo de Storyboard) e torná-lo semelhante ao seguinte:
+Agora, precisamos definir como os dados serão apresentados para cada célula. Edite `CityCollectionViewCell.cs` o arquivo (criado para você automaticamente do seu arquivo de storyboard) e faça com que ele fique semelhante ao seguinte:
 
 ```csharp
 using System;
@@ -273,28 +273,28 @@ namespace tvCollection
 }
 ```
 
-Para nosso aplicativo tvOS, podemos exibirá uma imagem e um título opcional. Se determinada cidade não pode ser selecionada, podemos são esmaecimento a exibição de imagem usando o seguinte código:
+Para nosso aplicativo tvOS, exibiremos uma imagem e um título opcional. Se a cidade fornecida não puder ser selecionada, estamos desativando o modo de exibição de imagem usando o código a seguir:
 
 ```csharp
 CityView.Alpha = (City.CanSelect) ? 1.0f : 0.5f;
 ```
 
-Quando a célula que contém a imagem é colocada em foco pelo usuário, que desejamos usar interno efeito Parallax nele definindo a propriedade a seguir:
+Quando a célula que contém a imagem é colocada em foco pelo usuário, queremos usar o efeito interno de da Parallax em ti para definir a seguinte propriedade:
 
 ```csharp
 CityView.AdjustsImageWhenAncestorFocused = true;
 ```
 
-Para obter mais informações sobre navegação e fogo, consulte nosso [trabalhando com navegação e fogo](~/ios/tvos/app-fundamentals/navigation-focus.md) e [Siri remoto e controladores de Bluetooth](~/ios/tvos/platform/remote-bluetooth.md) documentação.
+Para obter mais informações sobre navegação e foco, consulte nossa documentação sobre [como trabalhar com navegação e foco](~/ios/tvos/app-fundamentals/navigation-focus.md) e [controladores de Siri remotos e Bluetooth](~/ios/tvos/platform/remote-bluetooth.md) .
 
 
 <a name="The-Collection-View-Data-Provider" />
 
-### <a name="the-collection-view-data-provider"></a>O provedor de dados de exibição de coleção
+### <a name="the-collection-view-data-provider"></a>O modo de exibição de coleção Provedor de Dados
 
-Com nosso modelo de dados criado e o layout de célula definida, vamos criar uma fonte de dados para nossa exibição de coleção. A fonte de dados será responsável por fornecer não somente os dados de backup, mas também retirar da fila as células para exibir as células individuais na tela.
+Com nosso modelo de dados criado e nosso layout de célula definido, vamos criar uma fonte de dados para nossa exibição de coleção. A fonte de dados será responsável por não apenas fornecer os dados de backup, mas também removerá a fila das células para exibir as células individuais na tela.
 
-Criar um `CityViewDatasource` de classe e torná-lo semelhante ao seguinte:
+Crie uma `CityViewDatasource` classe e faça com que ela fique parecida com a seguinte:
 
 ```csharp
 using System;
@@ -387,13 +387,13 @@ namespace tvCollection
 }
 ```
 
-Deixe de examinar essa classe em detalhes. Primeiro, estamos herdam `UICollectionViewDataSource` e fornecer um atalho para a ID de células (que são atribuídos no Designer do iOS):
+Vamos examinar essa classe detalhadamente. Primeiro, herdamos de `UICollectionViewDataSource` e fornecemos um atalho para a ID de células (que atribuímos no designer do IOS):
 
 ```csharp
 public static NSString CardCellId = new NSString ("CityCell");
 ```
 
-Em seguida, podemos fornecer armazenamento para nossos dados de coleção e fornecer uma classe para preencher os dados:
+Em seguida, fornecemos armazenamento para nossos dados de coleta e fornecemos uma classe para popular os dados:
 
 ```csharp
 public List<CityInfo> Cities { get; set; } = new List<CityInfo>();
@@ -411,7 +411,7 @@ public void PopulateCities() {
 }
 ```
 
-Em seguida, substituímos o `NumberOfSections` método e retornar o número de seções (grupos de itens) que exiba nossa coleção tem. Nesse caso, há apenas um:
+Em seguida, substituimos o `NumberOfSections` método e retornamos o número de seções (grupos de itens) que nossa exibição de coleção tem. Nesse caso, há apenas um:
 
 ```csharp
 public override nint NumberOfSections (UICollectionView collectionView)
@@ -429,7 +429,7 @@ public override nint GetItemsCount (UICollectionView collectionView, nint sectio
 }
 ```
 
-Por fim, podemos remover da fila uma célula reutilizável quando a exibição de coleção de solicitação com o código a seguir:
+Por fim, desenfileiramos uma célula reutilizável quando a solicitação de exibição de coleção com o seguinte código:
 
 ```csharp
 public override UICollectionViewCell GetCell (UICollectionView collectionView, NSIndexPath indexPath)
@@ -444,31 +444,31 @@ public override UICollectionViewCell GetCell (UICollectionView collectionView, N
 }
 ```
 
-Depois de recebermos uma célula de exibição de coleção de nosso `CityCollectionViewCell` tipo, podemos preenchê-lo com o item determinado.
+Depois de obtermos uma célula de exibição de `CityCollectionViewCell` coleção do nosso tipo, preenchemos isso com o item fornecido.
 
 <a name="Responding-to-User-Events" />
 
 ## <a name="responding-to-user-events"></a>Respondendo a eventos de usuário
 
-Como queremos que o usuário seja capaz de selecionar um item de nossa coleção, precisamos fornecer um delegado de modo de exibição de coleção para lidar com essa interação. E é necessário fornecer uma maneira para deixar a nossa exibição chamada saber qual item o usuário selecionou.
+Como queremos que o usuário seja capaz de selecionar um item da nossa coleção, precisamos fornecer um delegado de exibição de coleção para lidar com essa interação. E precisamos fornecer uma maneira de permitir que nossa exibição de chamada saiba qual item o usuário selecionou.
 
 <a name="The-App-Delegate" />
 
 ### <a name="the-app-delegate"></a>O representante do aplicativo
 
-Precisamos de uma maneira para relacionar o item atualmente selecionado na exibição de coleção de volta para o modo de exibição de chamada. Usaremos uma propriedade personalizada no nosso `AppDelegate`. Editar o `AppDelegate.cs` arquivo e adicione o código a seguir:
+Precisamos de uma maneira de relacionar o item atualmente selecionado da exibição de coleção de volta ao modo de exibição de chamada. Vamos usar uma propriedade personalizada em nosso `AppDelegate`. Edite `AppDelegate.cs` o arquivo e adicione o seguinte código:
 
 ```csharp
 public CityInfo SelectedCity { get; set;} = new CityInfo("City02.jpg", "Turning Circle", true);
 ```
 
-Isso define a propriedade e define a cidade de padrão que será exibida inicialmente. Posteriormente, podemos irá consumir essa propriedade para exibir a seleção do usuário e permitir que o select a ser alterado.
+Isso define a propriedade e define a cidade padrão que será mostrada inicialmente. Posteriormente, vamos consumir essa propriedade para exibir a seleção do usuário e permitir que o Select seja alterado.
 
 <a name="The-Collection-View-Delegate" />
 
-### <a name="the-collection-view-delegate"></a>O delegado de modo de exibição de coleção
+### <a name="the-collection-view-delegate"></a>O delegado de exibição de coleção
 
-Em seguida, adicione um novo `CityViewDelegate` classe ao projeto e que ela fique semelhante ao seguinte:
+Em seguida, adicione uma `CityViewDelegate` nova classe ao projeto e faça com que seja semelhante ao seguinte:
 
 
 ```csharp
@@ -523,9 +523,9 @@ namespace tvCollection
 }
 ```
 
-Vamos examinar mais detalhadamente essa classe. Primeiro, estamos herdam `UICollectionViewDelegateFlowLayout`. O motivo pelo qual estamos herdam dessa classe e não a `UICollectionViewDelegate` é que estamos usando o interno `UICollectionViewFlowLayout` para apresentar os itens e não um tipo de layout personalizado.
+Vamos examinar mais de perto essa classe. Primeiro, herdamos de `UICollectionViewDelegateFlowLayout`. O motivo pelo qual herdamos dessa classe e não `UICollectionViewDelegate` é que estamos usando o interno `UICollectionViewFlowLayout` para apresentar nossos itens e não um tipo de layout personalizado.
 
-Em seguida, retornamos o tamanho para os itens individuais usando este código:
+Em seguida, retornamos o tamanho dos itens individuais usando este código:
 
 ```csharp
 public override CGSize GetSizeForItem (UICollectionView collectionView, UICollectionViewLayout layout, NSIndexPath indexPath)
@@ -534,7 +534,7 @@ public override CGSize GetSizeForItem (UICollectionView collectionView, UICollec
 }
 ```
 
-Em seguida, podemos decidir se uma determinada célula pode obter o foco usando o seguinte código: 
+Em seguida, decidimos se uma determinada célula pode obter foco usando o seguinte código: 
 
 ```csharp
 public override bool CanFocusItem (UICollectionView collectionView, NSIndexPath indexPath)
@@ -548,9 +548,9 @@ public override bool CanFocusItem (UICollectionView collectionView, NSIndexPath 
 }
 ```
 
-Verificamos para ver se uma determinada parte dos dados de backup tem seu `CanSelect` sinalizador definido como `true` e retornam esse valor. Para obter mais informações sobre navegação e fogo, consulte nosso [trabalhando com navegação e fogo](~/ios/tvos/app-fundamentals/navigation-focus.md) e [Siri remoto e controladores de Bluetooth](~/ios/tvos/platform/remote-bluetooth.md) documentação.
+Verificamos se uma determinada parte dos dados de backup tem seu `CanSelect` sinalizador definido como `true` e retorna esse valor. Para obter mais informações sobre navegação e foco, consulte nossa documentação sobre [como trabalhar com navegação e foco](~/ios/tvos/app-fundamentals/navigation-focus.md) e [controladores de Siri remotos e Bluetooth](~/ios/tvos/platform/remote-bluetooth.md) .
 
-Por fim, podemos responder ao usuário selecionar um item com o código a seguir:
+Por fim, respondemos ao usuário selecionando um item com o seguinte código:
 
 ```csharp
 public override void ItemSelected (UICollectionView collectionView, NSIndexPath indexPath)
@@ -563,13 +563,13 @@ public override void ItemSelected (UICollectionView collectionView, NSIndexPath 
 }
 ```
 
-Aqui, definimos a `SelectedCity` propriedade do nosso `AppDelegate` para o item que o usuário selecionada e podemos fechar o controlador de exibição de coleção, retornando para o modo de exibição chamado conosco. Não definimos o `ParentController` propriedade nosso da exibição de coleção ainda, vamos fazer isto em seguida.
+Aqui, definimos `SelectedCity` a propriedade de `AppDelegate` nosso para o item selecionado pelo usuário e fechamos o controlador de exibição de coleção, retornando à exibição que nos chamou. Ainda não definimos `ParentController` a propriedade de nossa exibição de coleção, faremos isso em seguida.
 
 <a name="Configuring-the-Collection-View" />
 
-## <a name="configuring-the-collection-view"></a>Configurando a exibição de coleção
+## <a name="configuring-the-collection-view"></a>Configurando o modo de exibição de coleção
 
-Agora precisamos Editar nosso modo de exibição de coleção e atribuir nossa fonte de dados e o delegado. Editar o `CityCollectionView.cs` arquivo (criado para nós automaticamente do nosso Storyboard) e torná-lo semelhante ao seguinte:
+Agora, precisamos editar nossa exibição de coleção e atribuir nossa fonte de dados e delegar. Edite `CityCollectionView.cs` o arquivo (criado para nós automaticamente de nosso storyboard) e faça com que ele se pareça com o seguinte:
 
 ```csharp
 using System;
@@ -639,7 +639,7 @@ public static AppDelegate App {
 }
 ```
 
-Em seguida, fornecemos um atalho para fonte a exibição de coleção de dados e uma propriedade para acessar o controlador de exibição de coleção (usado pelo nosso delegado acima para fechar a coleção quando o usuário faz uma seleção):
+Em seguida, fornecemos um atalho para a fonte de dados da exibição de coleção e uma propriedade para acessar o controlador de exibição de coleção (usado pelo nosso delegado acima para fechar a coleção quando o usuário faz uma seleção):
 
 ```csharp
 public CityViewDatasource Source {
@@ -649,7 +649,7 @@ public CityViewDatasource Source {
 public CityCollectionViewController ParentController { get; set;}
 ```
 
-Em seguida, usamos o seguinte código para inicializar a exibição de coleção e atribuir a nossa classe de célula, a fonte de dados e o delegado:
+Em seguida, usamos o seguinte código para inicializar a exibição de coleção e atribuir nossa classe de célula, a fonte de dados e o delegado:
 
 ```csharp
 public CityCollectionView (IntPtr handle) : base (handle)
@@ -661,7 +661,7 @@ public CityCollectionView (IntPtr handle) : base (handle)
 }
 ```
 
-Por fim, queremos que o título abaixo da imagem para só ficará visível quando o usuário tem que ele realçados (em foco). Fazemos isso com o código a seguir:
+Por fim, queremos que o título sob a imagem fique visível apenas quando o usuário o tiver realçado (em foco). Fazemos isso com o código a seguir:
 
 ```csharp
 public override void DidUpdateFocus (UIFocusUpdateContext context, UIFocusAnimationCoordinator coordinator)
@@ -682,14 +682,14 @@ public override void DidUpdateFocus (UIFocusUpdateContext context, UIFocusAnimat
 }
 ```
 
-Definimos o transparence do item anterior perdendo o foco para zero (0) e o transparence do próximo item Obtenha o foco para 100%. Esses transição Introdução animada também.
+Definimos a transparência do item anterior que está perdendo o foco para zero (0) e a transparência do próximo item se concentrará em 100%. Essas transições também são animadas.
 
 
 ## <a name="configuring-the-collection-view-controller"></a>Configurando o controlador de exibição de coleção
 
-Agora precisamos fazer a configuração final na nossa exibição de coleção e permitir que o controlador definir a propriedade que definimos o modo de exibição de coleção pode ser fechada depois que o usuário faz uma seleção.
+Agora, precisamos fazer a configuração final em nossa exibição de coleção e permitir que o controlador defina a propriedade que definimos para que o modo de exibição de coleção possa ser fechado depois que o usuário fizer uma seleção.
 
-Editar o `CityCollectionViewController.cs` arquivo (criado automaticamente a partir de nossa Storyboard) e torná-lo semelhante ao seguinte:
+Edite `CityCollectionViewController.cs` o arquivo (criado automaticamente de nosso storyboard) e faça com que ele se pareça com o seguinte:
 
 ```csharp
 // This file has been autogenerated from a class added in the UI designer.
@@ -729,11 +729,11 @@ namespace tvCollection
 
 ```
 
-## <a name="putting-it-all-together"></a>Juntando as peças 
+## <a name="putting-it-all-together"></a>Juntando tudo 
 
-Agora que temos todas as partes juntar para popular e controlar a exibição de nossa coleção, precisamos faça as edições no finais para nossa exibição principal para reunir tudo.
+Agora que temos todas as partes reunidas para preencher e controlar nossa exibição de coleção, precisamos fazer as edições finais em nosso modo de exibição principal para reunir tudo.
 
-Editar o `ViewController.cs` arquivo (criado automaticamente a partir de nossa Storyboard) e torná-lo semelhante ao seguinte:
+Edite `ViewController.cs` o arquivo (criado automaticamente de nosso storyboard) e faça com que ele se pareça com o seguinte:
 
 ```csharp
 using System;
@@ -784,7 +784,7 @@ namespace MySingleView
 }
 ```
 
-O código a seguir exibe inicialmente o item selecionado dos `SelectedCity` propriedade do `AppDelegate` e exibe-o novamente quando o usuário tiver feito uma seleção de exibição de coleção:
+O código a seguir inicialmente exibe o item selecionado da `SelectedCity` propriedade `AppDelegate` do e o exibe novamente quando o usuário fez uma seleção na exibição de coleção:
 
 ```csharp
 public override void ViewWillAppear (bool animated)
@@ -802,40 +802,40 @@ public override void ViewWillAppear (bool animated)
 
 ## <a name="testing-the-app"></a>Testar o aplicativo
 
-Com tudo instalado, se você compilar e executa o aplicativo, o modo de exibição principal é exibido com a cidade de padrão:
+Com tudo em vigor, se você criar e executar o aplicativo, o modo de exibição principal será exibido com a cidade padrão:
 
 [![](collection-views-images/run01.png "A tela principal")](collection-views-images/run01.png#lightbox)
 
-Se o usuário clicar o **selecionar uma exibição** botão, a exibição de coleção será exibido:
+Se o usuário clicar no botão **selecionar uma exibição** , o modo de exibição de coleção será exibido:
 
-[![](collection-views-images/run02.png "A exibição de coleção")](collection-views-images/run02.png#lightbox)
+[![](collection-views-images/run02.png "O modo de exibição de coleção")](collection-views-images/run02.png#lightbox)
 
-Qualquer cidade que tem seu `CanSelect` propriedade definida como `false` será exibido esmaecido e o usuário não será capaz de definir o foco para ele. Quando o usuário realça um item (torná-lo em foco) o título é exibido e eles podem usar o efeito da Parallax para inclinação sutileza a imagem em 3D.
+Qualquer cidade que tenha sua `CanSelect` propriedade definida como `false` será exibida esmaecida e o usuário não poderá definir o foco para ela. Quando o usuário realça um item (torná-lo em foco), o título é exibido e eles podem usar o efeito de da Parallax para inclinar a imagem em 3D.
 
-Quando o usuário clica em uma seleção de imagem, a exibição de coleção é fechada e o modo de exibição principal é exibida novamente com a nova imagem:
+Quando o usuário clica em uma imagem de seleção, o modo de exibição de coleção é fechado e o modo de exibição principal é exibido novamente com a nova imagem:
 
 [![](collection-views-images/run03.png "Uma nova imagem na tela inicial")](collection-views-images/run03.png#lightbox)
 
 <a name="Creating-Custom-Layout-and-Reordering-Items" />
 
-## <a name="creating-custom-layout-and-reordering-items"></a>Criando o Layout personalizado e reordenação de itens
+## <a name="creating-custom-layout-and-reordering-items"></a>Criando layout personalizado e reordenando itens
 
-Um dos principais recursos do uso de uma exibição de coleção é a capacidade de criar layouts personalizados. Uma vez que herda do tvOS do iOS, o processo para criar um layout personalizado é o mesmo. Consulte nosso [Introdução às exibições de coleção](~/ios/user-interface/controls/uicollectionview.md) documentação para obter mais informações.
+Um dos principais recursos do uso de uma exibição de coleção é a capacidade de criar layouts personalizados. Como o tvOS é herdado do iOS, o processo de criação de um layout personalizado é o mesmo. Consulte nossa [introdução à](~/ios/user-interface/controls/uicollectionview.md) documentação de exibições de coleção para obter mais informações.
 
-Recentemente adicionada às exibições de coleção para iOS 9 foi a capacidade de permitir facilmente a reordenação de itens na coleção. Novamente, como tvOS 9 é um subconjunto do iOS 9, isso é feito-los mesma maneira. Consulte nosso [alterações de exibição de coleção](~/ios/user-interface/controls/uicollectionview.md) documento para obter mais detalhes.
+Recentemente adicionados às exibições de coleção para o iOS 9 foi a capacidade de permitir facilmente a reordenação de itens na coleção. Novamente, como o tvOS 9 é um subconjunto do iOS 9, isso é feito da mesma maneira. Consulte nosso documento de [alterações de exibição de coleção](~/ios/user-interface/controls/uicollectionview.md) para obter mais detalhes.
 
 
 <a name="Summary" />
 
 ## <a name="summary"></a>Resumo
 
-Este artigo cobriu criando e trabalhando com exibições de coleção dentro de um aplicativo xamarin. tvos. Primeiro, ele discutiu a todos os elementos que compõem a exibição de coleção. Em seguida, ele mostrou como projetar e implementar uma exibição de coleção usando um Storyboard. Por fim, é fornecido links para informações sobre como criar layouts personalizados e reordenação de itens.
+Este artigo abordou a criação e o trabalho com exibições de coleção dentro de um aplicativo Xamarin. tvOS. Primeiro, ele abordou todos os elementos que compõem o modo de exibição de coleção. Em seguida, ele mostrou como projetar e implementar uma exibição de coleção usando um Storyboard. Por fim, o recebe links para informações sobre a criação de layouts personalizados e a reordenação de itens.
 
 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Amostras do tvOS](https://developer.xamarin.com/samples/tvos/all/)
+- [Amostras do tvOS](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
 - [tvOS](https://developer.apple.com/tvos/)
-- [Guias de Interface humana do tvOS](https://developer.apple.com/tvos/human-interface-guidelines/)
+- [Guias de interface humana do tvOS](https://developer.apple.com/tvos/human-interface-guidelines/)
 - [Guia de programação de aplicativo para tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)

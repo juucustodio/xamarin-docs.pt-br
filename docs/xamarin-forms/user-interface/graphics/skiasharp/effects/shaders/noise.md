@@ -7,16 +7,16 @@ ms.assetid: 90C2D00A-2876-43EA-A836-538C3318CF93
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
-ms.openlocfilehash: 4801aa12acf8eca2384cc5b41d677f7cb0bdd90d
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: dea7f5e51a864922d56f7b65d19b21a889cbc650
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61292899"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656166"
 ---
 # <a name="skiasharp-noise-and-composing"></a>O ruído de SkiaSharp e compondo
 
-[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 Gráficos vetoriais simples costumam parecer artificial. As linhas retas, curvas suaves e cores sólidas não são semelhantes as imperfeições de objetos do mundo real. Ao trabalhar com os gráficos gerados pelo computador para o filme 1982 _Tron_, cientista da computação Ken Perlin começou a desenvolver algoritmos que usados processos aleatórios para fornecer essas imagens de texturas mais realistas. Em 1997, Ken Perlin ganhou um prêmio de Academy para avanços técnicos. Seu trabalho passou a ser conhecido como o ruído de Perlin, e é compatível com SkiaSharp. Veja um exemplo:
 
@@ -44,7 +44,7 @@ O `numOctaves` valor é um inteiro de 1 ou superior. Ele se relaciona com um fat
 
 O `seed` parâmetro é o ponto de partida para o gerador de número aleatório. Embora especificado como um valor de ponto flutuante, a fração será truncada antes que ele é usado, e 0 é o mesmo que 1.
 
-O **ruído de Perlin** página na [ **SkiaSharpFormsDemos**)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) amostra permite que você use vários valores da `baseFrequency` e `numOctaves` argumentos. Aqui está o arquivo XAML:
+O **ruído de Perlin** página na [ **SkiaSharpFormsDemos**)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) amostra permite que você use vários valores da `baseFrequency` e `numOctaves` argumentos. Aqui está o arquivo XAML:
 
 ```xaml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -399,4 +399,4 @@ O parâmetro final é um membro do `SKBlendMode` enumeração, uma enumeração 
 ## <a name="related-links"></a>Links relacionados
 
 - [APIs de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (amostra)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

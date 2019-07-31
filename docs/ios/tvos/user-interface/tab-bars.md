@@ -1,156 +1,156 @@
 ---
-title: Trabalhar com controladores de barra de guia no Xamarin do tvOS
-description: Este documento descreve como trabalhar com controladores de barra de guia em um aplicativo tvOS criados com o Xamarin. Ele fornece um alto nível sobre a exibição das barras de guia e discute os itens da barra de guia, integração de storyboard e itens da barra de guia.
+title: Trabalhando com controladores de barra de guias tvOS no Xamarin
+description: Este documento descreve como trabalhar com controladores de barra de guias em um aplicativo tvOS criado com o Xamarin. Ele fornece um alto nível de exibição de barras de guias e discute itens da barra de guias, integração do storyboard e itens da barra de guias.
 ms.prod: xamarin
 ms.assetid: 99A2D7C6-0324-4DE5-B6E9-D39D0BAD8370
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 7ac4d0effc1067b065bad114160dc8648e998dad
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: 236a64736bc5f92537c858b9cdf938410cf4b0f4
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67830787"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68649655"
 ---
-# <a name="working-with-tvos-tab-bar-controllers-in-xamarin"></a>Trabalhar com controladores de barra de guia no Xamarin do tvOS
+# <a name="working-with-tvos-tab-bar-controllers-in-xamarin"></a>Trabalhando com controladores de barra de guias tvOS no Xamarin
 
-Para muitos tipos de aplicativos do tvOS, navegação principal é apresentada como uma barra de guias, em execução na parte superior da tela. O usuário passa o dedo left e right em toda a lista de categorias possíveis e a área de conteúdo abaixo as alterações para refletir a seleção do usuário.
+Para muitos tipos de aplicativos tvOS, a navegação principal é apresentada como uma barra de guias em execução na parte superior da tela. O usuário passa o dedo para a esquerda e para a direita na lista de categorias possíveis e a área de conteúdo abaixo das alterações para refletir a seleção do usuário.
 
-[![](tab-bars-images/tab01.png "Exemplo de barra de guia")](tab-bars-images/tab01.png#lightbox)
+[![](tab-bars-images/tab01.png "Barra de guias de exemplo")](tab-bars-images/tab01.png#lightbox)
 
-A barra de guia é translúcida por padrão e sempre aparece na parte superior da tela. Quando estiver em foco, uma barra de guias abordará os principais 140 pixels da tela, mas será rapidamente deslizam quando o foco muda para a área de conteúdo abaixo.
+A barra de guias é translúcida por padrão e sempre aparece na parte superior da tela. Quando estiver em foco, uma barra de guias cobrirá os primeiros 140 pixels da tela, mas será rapidamente deslizar quando o foco mudar para a área de conteúdo abaixo.
 
 <a name="Tab-Bars-in-tvOS" />
 
-## <a name="tab-bars-in-tvos"></a>Barras de guia no tvOS
+## <a name="tab-bars-in-tvos"></a>Barras de guias no tvOS
 
-O `UITabViewController` funciona de maneira semelhante e serve a uma finalidade similar tvos como faz no iOS, com as seguintes diferenças principais:
+O `UITabViewController` funciona de maneira semelhante e serve a uma finalidade semelhante no tvOS como faz no Ios, com as seguintes diferenças principais:
 
-- Ao contrário de barra de guia no iOS, que aparece na parte inferior da tela, barras de guia no tvOS ocupam os 140 pixels superior da tela e são translúcidas por padrão.
-- Quando o foco deixar a barra de guia para a área de conteúdo abaixo, a barra de guia será rapidamente deslize da parte superior da tela e oculta. O usuário pode tocar no botão de Menu de uma vez ou passe o dedo para cima na [Siri remoto](~/ios/tvos/platform/remote-bluetooth.md#The-Siri-Remote) para mostrar a barra de guia novamente.
-- Deslizar para baixo no Siri remoto será move o foco para a área de conteúdo abaixo da barra de guia para a primeira [focalizável Item](~/ios/tvos/app-fundamentals/navigation-focus.md#Focus-and-Selection) no conteúdo que está sendo mostrado. Novamente, isso ocultará a barra de guia depois que o foco muda.
-- Clicar para selecionar uma categoria exibida na barra de guia será alternado para que conteúdo e o foco da categoria serão alternadas para o primeiro Item focalizável nessa exibição.
-- O número de categorias exibido na barra de guia deve ser corrigido e todas as categorias devem ser acessíveis em todos os momentos, uma determinada categoria nunca deve ser desabilitada.
-- Barras de guia não dão suporte a personalização do tvos. Além disso, eles não mostrarem o **mais** categoria (como o iOS) se não houver mais categorias que pode caber na barra de guias.
+- Ao contrário da barra de guias no iOS que aparece na parte inferior da tela, as barras de guias no tvOS ocupam os primeiros 140 pixels da tela e são translúcidas por padrão.
+- Quando o foco deixa a barra de guias para a área de conteúdo abaixo, a barra de guias deslizará rapidamente para a parte superior da tela e ficará oculta. O usuário pode tocar no botão de menu uma vez ou passar o dedo para cima no [Siri remoto](~/ios/tvos/platform/remote-bluetooth.md#The-Siri-Remote) para mostrar a barra de guias novamente.
+- Passar o dedo para baixo no Siri remoto moverá o foco para a área de conteúdo abaixo da barra de guias para o primeiro [Item focado](~/ios/tvos/app-fundamentals/navigation-focus.md#Focus-and-Selection) no conteúdo que está sendo mostrado. Novamente, isso ocultará a barra de guias quando o foco for deslocado.
+- Clicar para selecionar uma categoria exibida na barra de guias alternará para o conteúdo e o foco dessa categoria será alternado para o primeiro item focado nessa exibição.
+- O número de categorias exibidas na barra de guias deve ser fixo e todas as categorias devem estar acessíveis o tempo todo, uma determinada categoria nunca deve ser desabilitada.
+- As barras de guias não dão suporte à personalização em tvOS. Além disso, eles não mostrarão a categoria **mais** (como Ios) se houver mais categorias do que podem caber na barra de guias.
 
-Apple tem as sugestões a seguir para trabalhar com barras de guia:
+A Apple tem as seguintes sugestões para trabalhar com barras de tabulação:
 
-- **Use as barras de guia para organizar conteúdo logicamente** -Use a barra de guia para organizar logicamente o conteúdo que seu aplicativo tvOS funciona. Por exemplo, em destaque, gráficos da parte superior, comprado e pesquisa.
-- **Adicionar notificações para informar os usuários do novo conteúdo** -opcionalmente, você pode exibir uma notificação (uma elipse com um número em branco ou o ponto de exclamação vermelha) para informar ao usuário o novo conteúdo em uma categoria.
-- **Use notificações com moderação** - não sobrecarregar a barra de guia com notificações e apenas exibi-los em que eles fornecem informações críticas para o usuário.
-- **Limitar o número de categorias** - para reduzir a complexidade e mantê-lo aplicativo gerenciável, não sobrecarregar sua barra de guias com categorias e certifique-se de que todas as categorias são visíveis e não está cheia. Títulos curtos e simples funcionam melhor.
-- **Não desabilite a uma categoria** -todas as guias (categorias) deve ser sempre visível e habilitado em todos os momentos. Se uma determinada guia não tem nenhum conteúdo, fornece uma explicação para o usuário por que. Por exemplo, na guia de compras será vazia se o usuário não tenha feito nenhuma compras.
+- **Use as barras de guias para organizar o conteúdo logicamente** -use a barra de guias para organizar logicamente o conteúdo com o qual seu aplicativo tvOS funciona. Por exemplo, em destaque, gráficos superiores, comprados e pesquisados.
+- **Adicionar notificações para informar os usuários do novo conteúdo** -você pode, opcionalmente, exibir uma notificação (uma elipse vermelha com um número branco ou ponto de exclamação) para informar o usuário sobre o novo conteúdo em uma categoria.
+- **Use as notificações** com moderação-não obstruir a barra de guias com notificações e exibi-las somente onde elas fornecem informações críticas ao usuário.
+- **Limitar o número de categorias** – para reduzir a complexidade e manter seu aplicativo gerenciável, não sobrecarregar sua barra de guias com categorias e garantir que todas as categorias fiquem visíveis e não lotadas. Os títulos simples e curtos funcionam melhor.
+- **Não desabilitar uma categoria** – todas as guias (categorias) sempre devem estar visíveis e habilitadas em todos os momentos. Se uma determinada guia não tiver conteúdo, forneça uma explicação para o usuário. Por exemplo, a guia compras estará vazia se o usuário não tiver feito nenhuma compra.
 
 <a name="Tab-Bar-Items" />
 
-## <a name="tab-bar-items"></a>Itens de barra de guias
+## <a name="tab-bar-items"></a>Itens da barra de guias
 
-Cada categoria (guia) na barra de guia é representada por um Item da barra de guia (`UITabBarItem`). Apple tem as sugestões a seguir para trabalhar com itens da barra de guia:
+Cada categoria (guia) na barra de guias é representada por um item da barra de`UITabBarItem`guias (). A Apple tem as seguintes sugestões para trabalhar com itens de barra de guias:
 
-- **Usar texto com base em guias** -enquanto o Item da barra de guia a é capaz de ser representado como um ícone, Apple sugere o uso somente como um título conciso é mais fácil de interpretar que um ícone de texto.
-- **Use nomes significativos de curto ou verbos** -um Item da barra de guia claramente devem retransmitir o conteúdo que ele contém e funciona melhor quando ele é um substantivo simple (por exemplo, fotos, filmes ou músicas) ou verbos (como pesquisa ou reprodução).
+- **Usar guias baseadas em texto** -embora o item da barra de guias possa ser representado como um ícone, a Apple sugere usar texto somente porque um título conciso é mais fácil de interpretar do que um ícone.
+- **Usar substantivos ou verbos pequenos e significativos** -um item da barra de guias deve retransmitir claramente o conteúdo que ele contém e funciona melhor quando é um substantivo simples (como fotos, filmes ou música) ou verbos (como pesquisa ou reprodução).
 
 <a name="Tab-Bars-and-Storyboards" />
 
-## <a name="tab-bars-and-storyboards"></a>Barras de guia e Storyboards
+## <a name="tab-bars-and-storyboards"></a>Barras de tabulação e storyboards
 
-A maneira mais fácil trabalhar com barras de guia em um aplicativo xamarin. tvos é adicioná-los à interface de usuário do aplicativo usando o Designer do iOS.
+A maneira mais fácil de trabalhar com barras de guias em um aplicativo Xamarin. tvOS é adicioná-las à interface do usuário do aplicativo usando o designer do iOS.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
     
-1. Inicie um novo aplicativo xamarin. tvos e selecione **tvOS** > **App** > **aplicativo com guias**: 
+1. Inicie um novo aplicativo Xamarin. tvOS e selecione**aplicativo com guias**do**aplicativo** >  **tvOS** > : 
 
-    [![](tab-bars-images/tab02.png "Selecione o aplicativo com guias")](tab-bars-images/tab02.png#lightbox)
-1. Siga todos os prompts para criar uma nova solução xamarin. tvos.
-1. No **painel de soluções**, clique duas vezes o `Main.storyboard` de arquivo e abri-lo para edição.
-1. Para alterar o **ícone** ou **título** para uma determinada categoria, selecione o **Item da barra de guia** para o **controlador de exibição** no  **Estrutura de tópicos de documento**:
+    [![](tab-bars-images/tab02.png "Selecionar aplicativo com guias")](tab-bars-images/tab02.png#lightbox)
+1. Siga todos os prompts para criar uma nova solução Xamarin. tvOS.
+1. No **painel de soluções**, clique duas vezes no arquivo `Main.storyboard` e abra-o para edição.
+1. Para alterar o **ícone** ou o **título** de uma determinada categoria, selecione o **item de barra de guias** para o controlador de **exibição** no contorno do **documento**:
 
-    [![](tab-bars-images/tab03a.png "A barra de guia de Item para o controlador de exibição na estrutura de tópicos do documento")](tab-bars-images/tab03a.png#lightbox)
-1. Em seguida, defina as propriedades necessárias **guia Widget** da **Gerenciador de propriedades**: 
+    [![](tab-bars-images/tab03a.png "O item da barra de guias do controlador de exibição na estrutura de tópicos do documento")](tab-bars-images/tab03a.png#lightbox)
+1. Em seguida, defina as propriedades necessárias na **Guia Widget** do **Gerenciador de propriedades**: 
 
-    [![](tab-bars-images/tab03.png "Na guia de Widget")](tab-bars-images/tab03.png#lightbox)
-1. Para adicionar uma nova categoria (guia), soltar uma **controlador de exibição** para a superfície de design: 
+    [![](tab-bars-images/tab03.png "A guia do widget")](tab-bars-images/tab03.png#lightbox)
+1. Para adicionar uma nova categoria (guia), descarte um **controlador de exibição** na superfície de design: 
 
     [![](tab-bars-images/tab04.png "Um controlador de exibição")](tab-bars-images/tab04.png#lightbox)
-1. CTRL + clique e arraste a **controlador de exibição da guia** para a nova **controlador de exibição**.
-1. Na janela pop-up, selecione **exibir controladores** para adicionar o novo modo de exibição como uma guia (categoria): 
+1. Clique no botão de controle e arraste-o do **controlador de exibição de guia** para o novo controlador de **exibição**.
+1. No pop-up, selecione **Exibir controladores** para adicionar a nova exibição como uma guia (categoria): 
 
-    [![](tab-bars-images/tab05.png "Selecione a guia")](tab-bars-images/tab05.png#lightbox)
-1. Crie o layout da interface do usuário para cada área de conteúdo Caterogies como normal, com a adição de elementos de interface do usuário no Designer do iOS.
-1. Expor todos os eventos necessários para trabalhar com os controles de interface do usuário em C# código.
-1. Nomeie todos os controles da interface do usuário que você deseja expor no C# código.
+    [![](tab-bars-images/tab05.png "Selecionar guia")](tab-bars-images/tab05.png#lightbox)
+1. Projete o layout da interface do usuário para cada área de conteúdo do Caterogies como normal, adicionando elementos da interface do usuário no designer do iOS.
+1. Expor todos os eventos necessários para trabalhar com seus controles de C# interface do usuário no código.
+1. Nomeie os controles de interface do usuário que você deseja C# expor no código.
 1. Salve as alterações.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
     
-1. Inicie um novo aplicativo xamarin. tvos e selecione **tvOS** > **App** > **aplicativo com guias**: 
+1. Inicie um novo aplicativo Xamarin. tvOS e selecione**aplicativo com guias**do**aplicativo** >  **tvOS** > : 
 
-    [![](tab-bars-images/tab02vs.png "Selecione o aplicativo com guias")](tab-bars-images/tab02vs.png#lightbox)
-1. Siga todos os prompts para criar uma nova solução xamarin. tvos.
-1. No **Gerenciador de soluções**, clique duas vezes o `Main.storyboard` de arquivo e abri-lo para edição.
-1. Para alterar o **ícone** ou **título** para uma determinada categoria, selecione o **Item da barra de guia** para o **controlador de exibição** no  **Estrutura de tópicos de documento**:
+    [![](tab-bars-images/tab02vs.png "Selecionar aplicativo com guias")](tab-bars-images/tab02vs.png#lightbox)
+1. Siga todos os prompts para criar uma nova solução Xamarin. tvOS.
+1. No **Gerenciador de soluções**, clique duas vezes no arquivo `Main.storyboard` e abra-o para edição.
+1. Para alterar o **ícone** ou o **título** de uma determinada categoria, selecione o **item de barra de guias** para o controlador de **exibição** no contorno do **documento**:
 
     [![](tab-bars-images/tab03avs.png "O controlador de exibição na estrutura de tópicos do documento")](tab-bars-images/tab03avs.png#lightbox)
-1. Em seguida, defina as propriedades necessárias **guia Widget** da **Gerenciador de propriedades**: 
+1. Em seguida, defina as propriedades necessárias na **Guia Widget** do **Gerenciador de propriedades**: 
 
-    [![](tab-bars-images/tab03vs.png "Na guia de Widget")](tab-bars-images/tab03vs.png#lightbox)
-1. Para adicionar uma nova categoria (guia), arraste uma **controlador de exibição** da **caixa de ferramentas** e solte-o para a superfície de design: 
+    [![](tab-bars-images/tab03vs.png "A guia do widget")](tab-bars-images/tab03vs.png#lightbox)
+1. Para adicionar uma nova categoria (guia), arraste um **controlador de exibição** da **caixa de ferramentas** e solte-o na superfície de design: 
 
     [![](tab-bars-images/tab04vs.png "Um controlador de exibição")](tab-bars-images/tab04vs.png#lightbox)
-1. CTRL + clique e arraste a **controlador de exibição da guia** para a nova **controlador de exibição**.
-1. Na janela pop-up, selecione **exibir controladores** para adicionar o novo modo de exibição como uma guia (categoria): 
+1. Clique no botão de controle e arraste-o do **controlador de exibição de guia** para o novo controlador de **exibição**.
+1. No pop-up, selecione **Exibir controladores** para adicionar a nova exibição como uma guia (categoria): 
 
-    [![](tab-bars-images/tab05vs.png "Selecione a guia")](tab-bars-images/tab05vs.png#lightbox)
-1. Crie o layout da interface do usuário para cada área de conteúdo Caterogies como normal, com a adição de elementos de interface do usuário no Designer do iOS.
-1. Expor todos os eventos necessários para trabalhar com os controles de interface do usuário em C# código.
-1. Nomeie todos os controles da interface do usuário que você deseja expor no C# código.
+    [![](tab-bars-images/tab05vs.png "Selecionar guia")](tab-bars-images/tab05vs.png#lightbox)
+1. Projete o layout da interface do usuário para cada área de conteúdo do Caterogies como normal, adicionando elementos da interface do usuário no designer do iOS.
+1. Expor todos os eventos necessários para trabalhar com seus controles de C# interface do usuário no código.
+1. Nomeie os controles de interface do usuário que você deseja C# expor no código.
 1. Salve as alterações.
     
 -----
 
 > [!IMPORTANT]
-> Embora seja possível atribuir a eventos, como `TouchUpInside` a um elemento de interface do usuário (como um `UIButton`) no Designer do iOS, ele nunca será chamado como Apple TV não tem um toque de tela ou dar suporte a eventos de toque. Você sempre deve usar o `Primary Action` eventos durante a criação de manipuladores de eventos para tvOS elementos da interface do usuário.
+> Embora seja possível atribuir eventos como `TouchUpInside` , por exemplo, um elemento de interface do usuário (como um `UIButton`) no designer do IOS, ele nunca será chamado porque o Apple TV não tem uma tela sensível ao toque ou dá suporte a eventos de toque. Você sempre deve usar o `Primary Action` evento ao criar manipuladores de eventos para elementos da interface do usuário do tvOS.
 
-Para obter mais informações sobre como trabalhar com Storyboards, consulte nosso [Olá, guia de início rápido do tvOS](~/ios/tvos/get-started/hello-tvos.md). 
+Para obter mais informações sobre como trabalhar com storyboards, consulte nossa [Guia de início rápido Olá, tvOS](~/ios/tvos/get-started/hello-tvos.md). 
 
 <a name="Working-with-Tab-Bars" />
 
-## <a name="working-with-tab-bars"></a>Trabalhando com barras de guia
+## <a name="working-with-tab-bars"></a>Trabalhando com barras de tabulação
 
-Use o `Items` propriedade do `UITabBar` para acessar a coleção de `UITabBarItems` contém como uma matriz indexada zero (0). O `SelectedItem` propriedade retornará a guia selecionada no momento (categoria) como um `UITabBarItem`.
+Use a `Items` propriedade `UITabBar` do `UITabBarItems` para acessar a coleção que ela contém como uma matriz indexada zero (0). A `SelectedItem` propriedade retornará a guia selecionada no momento (categoria) como um `UITabBarItem`.
 
 
 <a name="Working-with-Tab-Bar-Items" />
 
-## <a name="working-with-tab-bar-items"></a>Trabalhando com itens de barra de guias
+## <a name="working-with-tab-bar-items"></a>Trabalhando com itens da barra de guias
 
-Para exibir uma notificação em uma guia determinada (uma elipse vermelha com texto em branco), use o seguinte código:
+Para exibir uma notificação em uma determinada guia (uma elipse vermelha com texto em branco), use o seguinte código:
 
 ```csharp
 // Display a badge
 TabBar.Items [2].BadgeValue = "10";
 ```
 
-Que produziria os seguintes resultados quando executado:
+O que produziria os seguintes resultados quando executado:
 
-[![](tab-bars-images/tab06.png "Um Item da barra de guia com notificação")](tab-bars-images/tab06.png#lightbox)
+[![](tab-bars-images/tab06.png "Um item da barra de guias com uma notificação")](tab-bars-images/tab06.png#lightbox)
 
-Use o `Title` propriedade do `UITabBarItem` para alterar o título e o `Image` propriedade para alterar o ícone.
+Use a `Title` propriedade `UITabBarItem` do para alterar o título e a `Image` propriedade para alterar o ícone.
 
 <a name="Summary" />
 
 ## <a name="summary"></a>Resumo
 
-Este artigo abordou a projetar e trabalhar com o controlador de barra de guia dentro de um aplicativo xamarin. tvos.
+Este artigo abordou a criação e o trabalho com o controlador da barra de guias dentro de um aplicativo Xamarin. tvOS.
 
 
 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Amostras do tvOS](https://developer.xamarin.com/samples/tvos/all/)
+- [Amostras do tvOS](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
 - [tvOS](https://developer.apple.com/tvos/)
-- [Guias de Interface humana do tvOS](https://developer.apple.com/tvos/human-interface-guidelines/)
+- [Guias de interface humana do tvOS](https://developer.apple.com/tvos/human-interface-guidelines/)
 - [Guia de programação de aplicativo para tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)

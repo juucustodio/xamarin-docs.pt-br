@@ -1,30 +1,30 @@
 ---
-title: Manipulação de toque em aplicativos xamarin. IOS
-description: Este documento leva a guias que descrevem como trabalhar com o toque, multitoque, gestos e toque 3D em um aplicativo xamarin. IOS.
+title: Lidando com o touch em aplicativos Xamarin. iOS
+description: Este documento contém links para guias que descrevem como trabalhar com toque, multitoque, gestos e toque 3D em um aplicativo Xamarin. iOS.
 ms.prod: xamarin
 ms.assetid: E3904713-6018-4755-A315-EB045DFB3500
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 01/23/2017
-ms.openlocfilehash: 5aabc3a3c2ffbcffc0e12379989f7eb43b03a902
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 8ed9ab164f6b14d794b29667ec96afab47e3fcde
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61399285"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68655167"
 ---
-# <a name="handling-touch-in-xamarinios-apps"></a>Manipulação de toque em aplicativos xamarin. IOS
+# <a name="handling-touch-in-xamarinios-apps"></a>Lidando com o touch em aplicativos Xamarin. iOS
 
-Como outras plataformas móveis, iOS tem várias maneiras de lidar com toque. Ele pode dar suporte a multitoque — muitos pontos de contato na tela — e gestos complexos. Este guia apresenta alguns dos conceitos, bem como os particularities da implementação de toque e gestos no iOS.
+Como outras plataformas móveis, o iOS tem várias maneiras de lidar com o Touch. Ele pode dar suporte a vários pontos de contato na tela – e gestos complexos. Este guia apresenta alguns dos conceitos, bem como as particularidades de implementação de toque e gestos no iOS.
 
-encapsula o toque de dados no iOS a `UITouch` classe, que está disponível para aplicativos por meio de uma série de `UIResponder` métodos. Aplicativos podem substituir esses métodos em subclasses `UIView` e `UIViewController`, que herdam de `UIResponder`.
+o `UITouch` Ios encapsula dados de toque na classe, que é disponibilizado para aplicativos por meio de uma `UIResponder` série de métodos. Os aplicativos podem substituir esses métodos em subclasses `UIView` de `UIViewController`e, ambos herdam de `UIResponder`.
 
-Além de capturar dados de toque, o iOS fornece meios para interpretar padrões de toques em gestos. Esses reconhecedores de gestos, por sua vez podem ser usados para interpretar os comandos específicos do aplicativo, como uma rotação de uma imagem ou um turno de uma página. iOS fornece um rico conjunto de classes para manipular gestos comuns com o código adicionado mínimo.
+Além de capturar dados de toque, o iOS fornece meios para interpretar padrões de toques em gestos. Esses reconhecedores de gesto podem, por sua vez, ser usados para interpretar comandos específicos do aplicativo, como uma rotação de uma imagem ou uma rodada de uma página. o iOS fornece uma rica coleção de classes para lidar com gestos comuns com o código mínimo adicionado.
 
-A escolha entre toques e reconhecedores de gestos pode ser um confuso. Este guia recomenda que em geral, preferência deve ser fornecida para reconhecedores de gestos. Reconhecedores de gestos são implementados como classes distintas, que fornecem maior separação de preocupações e melhor encapsulamento. Isso torna muito fácil compartilhar a lógica entre os diferentes modos de exibição, minimizando a quantidade de código escrito.
+A escolha entre os toques e os reconhecedores de gestos pode ser um tanto confuso. Este guia recomenda que, em geral, a preferência seja dada aos reconhecedores de gestos. Os reconhecedores de gesto são implementados como classes discretas, que fornecem maior separação de preocupações e melhor encapsulamento. Isso torna simples compartilhar a lógica entre diferentes exibições, minimizando a quantidade de código gravada.
 
-No entanto, há ocasiões em que você precisa para usar o processamento de toque de nível baixo e até mesmo controlar vários dedos, por exemplo, para criar um programa finger-paint.
+No entanto, há ocasiões em que você precisa usar o processamento de toque de baixo nível e até mesmo controlar vários dedos, por exemplo, para criar um programa de pintura a dedo.
 
 ## <a name="sections"></a>Seções
 
@@ -32,13 +32,13 @@ No entanto, há ocasiões em que você precisa para usar o processamento de toqu
 -  [Passo a passo: usando o toque no iOS](ios-touch-walkthrough.md)
 -  [Controle de multitoque](touch-tracking.md)
 
-Este guia serve como introdução ao toque no iOS. Para obter mais informações sobre como usar o 3D Touch e comentários Hápticos no iOS, que foram introduzido no iOS 9 e 10, respectivamente, consulte os guias específicos a seguir:
+Este guia serve como introdução ao toque no iOS. Para obter mais informações sobre como usar os comentários de toque e Haptic 3D no iOS, que foram introduzidos no iOS 9 e 10, respectivamente, consulte os guias específicos abaixo:
 
 * [3D Touch](~/ios/platform/3d-touch.md)
 * [Fornecer comentários hápticos](~/ios/user-interface/ios-ui/haptic-feedback.md)
 
 ## <a name="related-links"></a>Links relacionados
 
-- [iOS Touch iniciar (amostra)](https://developer.xamarin.com/samples/monotouch/ApplicationFundamentals/Touch_start)
-- [iOS toque Final (amostra)](https://developer.xamarin.com/samples/monotouch/ApplicationFundamentals/Touch_final)
-- [Pintura a dedo (amostra)](https://developer.xamarin.com/samples/monotouch/ApplicationFundamentals/FingerPaint)
+- [Início do iOS Touch (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/applicationfundamentals-touch-start)
+- [Final do iOS Touch (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/applicationfundamentals-touch-final)
+- [FingerPaint (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/applicationfundamentals-fingerpaint)

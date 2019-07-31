@@ -1,24 +1,24 @@
 ---
 title: Ícones de TabbedPage no Windows
-description: Especificidades da plataforma permitem que você consumir funcionalidade só está disponível em uma plataforma específica, sem implementar renderizadores personalizados ou efeitos. Este artigo explica como utilizar o Windows específicos da plataforma que permite que os ícones de página a ser exibido na barra de ferramentas TabbedPage.
+description: Especificidades da plataforma permitem que você consumir funcionalidade só está disponível em uma plataforma específica, sem implementar renderizadores personalizados ou efeitos. Este artigo explica como consumir a plataforma Windows específica que permite que os ícones de página sejam exibidos em uma barra de ferramentas do TabbedPage.
 ms.prod: xamarin
 ms.assetid: 7C5031A5-74EE-4469-994E-BEA7BA9D33CB
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: a2a0aa5c7d204a4dc135451a771c81b9739456fb
-ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
+ms.openlocfilehash: d755f2242b1af94ce5729b1004eb867217876ac6
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65971042"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656848"
 ---
 # <a name="tabbedpage-icons-on-windows"></a>Ícones de TabbedPage no Windows
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
-Essa plataforma específicas de plataforma Universal do Windows permite que os ícones de página a ser exibido em uma [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage) barra de ferramentas e fornece a capacidade de, opcionalmente, especificar o tamanho do ícone. Ele é consumido em XAML, definindo o [ `TabbedPage.HeaderIconsEnabled` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.TabbedPage.HeaderIconsEnabledProperty) anexado à propriedade `true`e, opcionalmente, definindo o [ `TabbedPage.HeaderIconsSize` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.TabbedPage.HeaderIconsSizeProperty) anexado à propriedade um [ `Size` ](xref:Xamarin.Forms.Size) valor:
+Essa plataforma universal do Windows específica à plataforma permite que os ícones de página sejam exibidos [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) em uma barra de ferramentas e fornece a capacidade de especificar opcionalmente o tamanho do ícone. Ele é consumido em XAML, definindo o [ `TabbedPage.HeaderIconsEnabled` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.TabbedPage.HeaderIconsEnabledProperty) anexado à propriedade `true`e, opcionalmente, definindo o [ `TabbedPage.HeaderIconsSize` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.TabbedPage.HeaderIconsSizeProperty) anexado à propriedade um [ `Size` ](xref:Xamarin.Forms.Size) valor:
 
 ```xaml
 <TabbedPage ...
@@ -75,6 +75,6 @@ O resultado é que essa página ícones podem ser exibidos em uma [ `TabbedPage`
 
 ## <a name="related-links"></a>Links relacionados
 
-- [PlatformSpecifics (amostra)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+- [PlatformSpecifics (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [Criação de itens específicos à plataforma](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
-- [WindowsSpecific API](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific)
+- [API WindowsSpecific](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific)

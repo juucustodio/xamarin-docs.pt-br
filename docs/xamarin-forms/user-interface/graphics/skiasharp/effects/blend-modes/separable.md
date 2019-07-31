@@ -7,16 +7,16 @@ ms.assetid: 66D1A537-A247-484E-B5B9-FBCB7838FBE9
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
-ms.openlocfilehash: 8c86782d5b8b8250049d0ae060ca7bd548c5a4ef
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 4fb5bd1e883adc3be89bde7cc0e1529e77165247
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61386974"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68655040"
 ---
 # <a name="the-separable-blend-modes"></a>Os modos do blend separáveis
 
-[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 Como você viu neste artigo [ **modos de mesclagem do SkiaSharp Porter-Duff**](porter-duff.md), os modos do blend Porter Duff geralmente executam operações de recorte. Os modos do blend separáveis são diferentes. Os modos de separáveis alteram os componentes de cor vermelho, verde e azul individual de uma imagem. Modos de mesclagem separáveis podem misturar a cor para demonstrar que a combinação de vermelho, verde e azul é, de fato, branca:
 
@@ -127,7 +127,7 @@ As capturas de tela da esquerda para direita mostram cada vez maiores `Slider` v
 
 [![Clarear e escurecer](separable-images/LightenAndDarken.png "clarear e escurecer")](separable-images/LightenAndDarken-Large.png#lightbox)
 
-Este programa demonstra da maneira normal em que os modos do blend separáveis são usados: O destino é uma imagem de algum tipo, com muita frequência um bitmap. A fonte é um retângulo exibido usando um `SKPaint` do objeto com seu `BlendMode` propriedade definida como modo de mesclagem separáveis. O retângulo pode ser uma cor sólida (como a seguir) ou um gradiente. A transparência é _não_ geralmente usada com os modos do blend separáveis.
+Este programa demonstra a maneira normal em que os modos de mesclagem separáveis são usados: O destino é uma imagem de algum tipo, geralmente um bitmap. A fonte é um retângulo exibido usando um `SKPaint` do objeto com seu `BlendMode` propriedade definida como modo de mesclagem separáveis. O retângulo pode ser uma cor sólida (como a seguir) ou um gradiente. A transparência é _não_ geralmente usada com os modos do blend separáveis.
 
 Ao testar com este programa, você descobrirá que esses modos de mesclagem de dois não clarear e escurecer a imagem de maneira uniforme. Em vez disso, o `Slider` parece definir um limite de algum tipo. Por exemplo, como você aumentar o `Slider` para o `Lighten` modo, as áreas mais escuras da imagem receber luz primeiro enquanto as áreas mais claras permanecem os mesmos.
 
@@ -149,9 +149,9 @@ A tabela a seguir mostra todos os modos do blend separáveis com breves explica�
 
 | Modo de mesclagem   | Nenhuma alteração | Operação |
 | ------------ | --------- | --------- |
-| `Plus`       | Preto     | Clareia adicionando cores: Sc + Dc |
-| `Modulate`   | Branco     | Escurece multiplicando cores: Sc·Dc | 
-| `Screen`     | Preto     | Complementa o produto de complementos: Sc + Dc &ndash; Sc·Dc |
+| `Plus`       | Preto     | Clareia adicionando cores: SC + DC |
+| `Modulate`   | Branco     | Escurece multiplicando as cores: SC Origem | 
+| `Screen`     | Preto     | Complementa o produto de Complementos: Sc + Dc &ndash; Sc·Dc |
 | `Overlay`    | Cinza      | Inverso da `HardLight` |
 | `Darken`     | Branco     | Mínimo de cores: min (Sc, o controlador de domínio) |
 | `Lighten`    | Preto     | Máximo de cores: max (Sc, o controlador de domínio) |
@@ -159,9 +159,9 @@ A tabela a seguir mostra todos os modos do blend separáveis com breves explica�
 | `ColorBurn`  | Branco     | Escurece com base na fonte de destino | 
 | `HardLight`  | Cinza      | Semelhante ao efeito de refletor de luz |
 | `SoftLight`  | Cinza      | Semelhante ao efeito de destaque reversível | 
-| `Difference` | Preto     | Subtrai a mais escura mais claras: Abs(Dc &ndash; Sc) | 
+| `Difference` | Preto     | Subtrai o mais escuro da mais clara: ABS (DC &ndash; SC) | 
 | `Exclusion`  | Preto     | Semelhante ao `Difference` contraste mais baixo, mas |
-| `Multiply`   | Branco     | Escurece multiplicando cores: Sc·Dc |
+| `Multiply`   | Branco     | Escurece multiplicando as cores: SC Origem |
 
 Os algoritmos mais detalhados podem ser encontrados no W3C [ **composição e a combinação do nível 1** ](https://www.w3.org/TR/compositing-1/) especificação e o Skia [ **SkBlendMode referência** ](https://skia.org/user/api/SkBlendMode_Reference), embora a notação nessas duas origens não é o mesmo. Tenha em mente que `Plus` geralmente é considerado como um modo de mesclagem Duff Porter, e `Modulate` não é parte da especificação do W3C.
 
@@ -428,4 +428,4 @@ O `Darken` modo também funciona para o mesmo efeito.
 ## <a name="related-links"></a>Links relacionados
 
 - [APIs de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (amostra)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

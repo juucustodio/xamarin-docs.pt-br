@@ -1,67 +1,67 @@
 ---
-title: Pesquisa com a marcação da Web no xamarin. IOS
-description: Este documento descreve como criar resultados de pesquisa baseado na web que têm links para um aplicativo xamarin. IOS. Ele aborda como habilitar o conteúdo da web de indexação, tornando o site do seu aplicativo detectáveis, usando faixas de aplicativos inteligentes, links universais e muito mais.
+title: Pesquisar com marcação da Web no Xamarin. iOS
+description: Este documento descreve como criar resultados de pesquisa baseados na Web que se vinculam de volta a um aplicativo Xamarin. iOS. Ele aborda como habilitar a indexação de conteúdo da Web, tornando o site do seu aplicativo detectável, usando faixas de aplicativos inteligentes, links universais e muito mais.
 ms.prod: xamarin
 ms.assetid: 876315BA-2EF9-4275-AE33-A3A494BBF7FD
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: a9cf3dab9c112bf7ff99cbc0dd9541c3c1e35142
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: bd4c09b7defcc3038919a4dea841d7bd1d02f39e
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67830133"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68654075"
 ---
-# <a name="search-with-web-markup-in-xamarinios"></a>Pesquisa com a marcação da Web no xamarin. IOS
+# <a name="search-with-web-markup-in-xamarinios"></a>Pesquisar com marcação da Web no Xamarin. iOS
 
-Para aplicativos que fornecem acesso a seu conteúdo por meio de um site da web (não apenas de dentro do aplicativo), conteúdo da web pode ser marcado com links especiais que serão rastreados pela Apple e fornecer vinculação profunda ao seu aplicativo no dispositivo iOS 9 do usuário.
+Para aplicativos que fornecem acesso ao seu conteúdo por meio de um site (não apenas de dentro do aplicativo), o conteúdo da Web pode ser marcado com links especiais que serão rastreados pela Apple e fornecerá uma vinculação profunda ao seu aplicativo no dispositivo iOS 9 do usuário.
 
-Se seu aplicativo iOS já oferece suporte a vinculação profunda móvel e seu site apresentados links profundos para conteúdos dentro do seu aplicativo, da Apple _Applebot_ rastreador da web será esse conteúdo de índice e automaticamente adicioná-lo ao seu índice de nuvem:
+Se seu aplicativo iOS já dá suporte à vinculação profunda móvel e seu site apresentou links profundos para o conteúdo em seu aplicativo, o rastreador da Web _Applebot_ da Apple indexará esse conteúdo e o adicionará automaticamente ao índice de nuvem deles:
 
 [![](web-markup-images/webmarkup01.png "Visão geral do índice de nuvem")](web-markup-images/webmarkup01.png#lightbox)
 
-Apple será superficial esses resultados nos resultados da pesquisa de destaque e pesquisa do Safari.
-Se o usuário toca em um desses resultados (e eles tiverem o aplicativo instalado) e em seguida, será levado para o conteúdo em seu aplicativo:
+A Apple fará a superfície desses resultados em pesquisa de destaque e nos resultados da pesquisa do Safari.
+Se o usuário toca em um desses resultados (e eles têm seu aplicativo instalado), eles serão levados ao conteúdo em seu aplicativo:
 
-[![](web-markup-images/webmarkup02.png "Vinculação de um site nos resultados da pesquisa profunda")](web-markup-images/webmarkup02.png#lightbox)
+[![](web-markup-images/webmarkup02.png "Vinculação profunda de um site nos resultados da pesquisa")](web-markup-images/webmarkup02.png#lightbox)
 
 ## <a name="enabling-web-content-indexing"></a>Habilitando a indexação de conteúdo da Web
 
-Há quatro etapas necessárias para fazer com que você conteúdo do aplicativo podem ser pesquisados usando a marcação da Web:
+Há quatro etapas necessárias para tornar o conteúdo do aplicativo pesquisável usando marcação da Web:
 
-1. Certifique-se de que a Apple pode descobrir e indexar o site do seu aplicativo definindo-o como o **suporte** ou **Marketing** site no iTunes Connect.
-2. Certifique-se de que o site do seu aplicativo contém a marcação necessária para implementar a vinculação profunda móvel. Consulte as seções abaixo para obter mais detalhes.
-3. Habilite o link profundo de tratamento em seu aplicativo iOS.
-4. Adicione a marcação para os dados estruturados exibidos pelo site do seu aplicativo para fornecer um resultado avançado e envolvente para o usuário final. Embora esta etapa não seja estritamente necessária, é altamente recomendável pela Apple.
+1. Verifique se a Apple pode descobrir e indexar o site do seu aplicativo definindo-o como o site de **suporte** ou **marketing** no iTunes Connect.
+2. Verifique se o site do seu aplicativo contém a marcação necessária para implementar a vinculação profunda móvel. Consulte as seções abaixo para obter mais detalhes.
+3. Habilite o tratamento de link profundo em seu aplicativo iOS.
+4. Adicione marcação para os dados estruturados na superfície do site do seu aplicativo para fornecer um resultado avançado e envolvente ao usuário final. Embora essa etapa não seja estritamente necessária, ela é altamente recomendável pela Apple.
 
-As seções a seguir apresentará essas etapas em detalhes.
+As seções a seguir abordarão essas etapas em detalhes.
 
-## <a name="make-your-apps-website-discoverable"></a>Tornar o site do seu aplicativo localizável
+## <a name="make-your-apps-website-discoverable"></a>Torne o site do seu aplicativo detectável
 
-A maneira mais fácil ter Apple encontrar o site do seu aplicativo é usá-lo como o **suporte** ou **Marketing** site quando você envia seu aplicativo para a Apple por meio do iTunes Connect.
+A maneira mais fácil de fazer o Apple encontrar o site do seu aplicativo é usá-lo como o site de **suporte** ou **marketing** quando você envia seu aplicativo para a Apple por meio do iTunes Connect.
 
 ## <a name="using-smart-app-banners"></a>Usando faixas de aplicativos inteligentes
 
-Forneça uma faixa de aplicativos inteligentes em seu site para apresentar um link criptografado em seu aplicativo. Se o aplicativo já não estiver instalado, o Safari automaticamente solicitará ao usuário para instalar seu aplicativo. Caso contrário, o uso pode tocar a **exibição** link para iniciar seu aplicativo do site. Por exemplo, para criar uma faixa de aplicativos inteligentes, você pode usar o código a seguir:
+Forneça uma faixa de aplicativo inteligente em seu site para apresentar um link limpo em seu aplicativo. Se o aplicativo ainda não estiver instalado, o Safari solicitará automaticamente que o usuário instale seu aplicativo. Caso contrário, o uso pode tocar no link de **exibição** para iniciar seu aplicativo no site. Por exemplo, para criar uma faixa de aplicativo inteligente, você pode usar o seguinte código:
 
 ```xml
 <meta name="AppName" content="app-id=123456, app-argument=http://company.com/AppName">
 ```
 
-Para obter mais informações, consulte da Apple [promover aplicativos com faixas de aplicativos inteligentes](https://developer.apple.com/library/ios/documentation/AppleApplications/Reference/SafariWebContent/PromotingAppswithAppBanners/PromotingAppswithAppBanners.html) documentação.
+Para obter mais informações, consulte a documentação promovendo aplicativos da Apple [com faixas de aplicativos inteligentes](https://developer.apple.com/library/ios/documentation/AppleApplications/Reference/SafariWebContent/PromotingAppswithAppBanners/PromotingAppswithAppBanners.html) .
 
-## <a name="using-universal-links"></a>Usando Links universais
+## <a name="using-universal-links"></a>Usando links universais
 
-Novo para o iOS 9, Links universais fornecem uma alternativa melhor para faixas de aplicativos inteligentes ou esquemas de URL personalizadas existentes, fornecendo o seguinte:
+Novo no iOS 9, os links universais fornecem uma alternativa melhor para faixas de aplicativos inteligentes ou esquemas de URL personalizados existentes fornecendo o seguinte:
 
-- **Exclusivo** – a mesma URL não pode ser exigida por mais de um site da Web.
-- **Proteger** – um certificado assinado é necessário para o site que garante que o site é de propriedade por você e devidamente vinculado ao seu aplicativo.
-- **Flexível** – o usuário final pode controlar se a URL inicia o site ou aplicativo.
-- **Universal** – a mesma URL pode ser usada para definir o conteúdo de seu site e seu aplicativo.
+- **Exclusivo** – a mesma URL não pode ser reivindicada por mais de um site.
+- **Seguro** – um certificado assinado é necessário para o site que garante que o site seja de sua propriedade e vinculado de forma válida ao seu aplicativo.
+- **Flexível** – o usuário final pode controlar se a URL inicia o site ou o aplicativo.
+- **Universal** – a mesma URL pode ser usada para definir o conteúdo do seu site e do seu aplicativo.
 
-## <a name="using-twitter-cards"></a>Uso de cartões do Twitter
+## <a name="using-twitter-cards"></a>Usando os cartões do Twitter
 
 Você pode fornecer links profundos para o conteúdo do seu aplicativo usando um cartão do Twitter. Por exemplo:
 
@@ -71,11 +71,11 @@ Você pode fornecer links profundos para o conteúdo do seu aplicativo usando um
 <meta name="twitter:app:url:iphone" content="AppNameURL">
 ```
 
-Para obter mais informações, consulte do Twitter [Twitter cartão protocolo](http://dev.twitter.com/cards/mobile) documentação.
+Para obter mais informações, consulte a documentação do [protocolo de cartão do Twitter](http://dev.twitter.com/cards/mobile) do Twitter.
 
-## <a name="using-facebook-app-links"></a>Usando Links de aplicativo do Facebook
+## <a name="using-facebook-app-links"></a>Usando links de aplicativo do Facebook
 
-Você pode fornecer links profundos para o conteúdo do seu aplicativo usando um Link de App do Facebook. Por exemplo:
+Você pode fornecer links profundos para o conteúdo do aplicativo usando um link de aplicativo do Facebook. Por exemplo:
 
 ```xml
 <meta property="al:ios:app_name" content="AppName">
@@ -83,11 +83,11 @@ Você pode fornecer links profundos para o conteúdo do seu aplicativo usando um
 <meta property="al:ios:url" content="AppNameURL">
 ```
 
-Para obter mais informações, consulte do Facebook [Links aplicativo](http://applinks.org) documentação.
+Para obter mais informações, consulte a documentação de [links de aplicativo](http://applinks.org) do Facebook.
 
-## <a name="opening-deep-links"></a>Abrir Links profundos
+## <a name="opening-deep-links"></a>Abrindo links profundos
 
-Você precisa adicionar suporte para abrir e exibir Links profundos em seu aplicativo xamarin. IOS. Editar o **AppDelegate.cs** do arquivo e substituir o `OpenURL` método para lidar com o formato de URL personalizado. Por exemplo:
+Você precisa adicionar suporte para abrir e exibir links profundos em seu aplicativo Xamarin. iOS. Edite o arquivo **AppDelegate.cs** e substitua `OpenURL` o método para manipular o formato de URL personalizado. Por exemplo:
 
 ```csharp
 public override bool OpenUrl (UIApplication application, NSUrl url, string sourceApplication, NSObject annotation)
@@ -113,15 +113,15 @@ public override bool OpenUrl (UIApplication application, NSUrl url, string sourc
 }
 ```
 
-No código acima, estamos procurando uma URL que contém `/appname` e passando o valor da `query` (`123` neste exemplo) para um controlador de exibição personalizada no nosso aplicativo para exibir o conteúdo solicitado ao usuário.
+No código acima, estamos procurando uma URL contendo `/appname` e passando o valor de `query` (`123` neste exemplo) para um controlador de exibição personalizado em nosso aplicativo para exibir o conteúdo solicitado ao usuário.
 
-## <a name="providing-rich-results-with-structured-data"></a>Fornecendo os resultados de Rich com dados estruturados
+## <a name="providing-rich-results-with-structured-data"></a>Fornecendo resultados avançados com dados estruturados
 
-Com a inclusão de marcação estruturado de dados, você pode fornecer os resultados da pesquisa avançada para o usuário final que vão além de simplesmente um título e uma descrição. Inclua imagens, dados específicos do aplicativo (por exemplo, classificações) e ações para os resultados usando a marcação de dados estruturados.
+Ao incluir marcação de dados estruturados, você pode fornecer resultados de pesquisa avançados para o usuário final que vão além de simplesmente um título e uma descrição. Incluir imagens, dados específicos do aplicativo (como classificações) e ações para resultados usando marcação de dados estruturados.
 
-Resultados de avançados são mais interessantes e podem ajudar a melhorar o índice de pesquisa com base em sua classificação na nuvem por atraentes aos usuários mais interagir com eles.
+Os resultados avançados são mais atraentes e podem ajudar a melhorar sua classificação no índice de pesquisa baseado em nuvem, convencendo mais usuários a interagir com eles.
 
-Uma opção para fornecer marcação estruturado de dados é por meio de Open Graph. Por exemplo:
+Uma opção para fornecer marcação de dados estruturado é usando o Open Graph. Por exemplo:
 
 ```xml
 <meta property="og:image" content="http://company.com/appname/icon.jpg">
@@ -129,9 +129,9 @@ Uma opção para fornecer marcação estruturado de dados é por meio de Open Gr
 <meta property="og:video" content="http://company.com/appname/tutorial.mp4">
 ```
 
-Para obter mais informações, consulte o [Open Graph](http://ogp.me) site.
+Para obter mais informações, consulte o site de [gráficos aberto](http://ogp.me) .
 
-Outro formato comum para marcação estruturado de dados é o formato de Microdados de schema.org. Por exemplo:
+Outro formato comum para marcação de dados estruturados é o formato de MicroData do esquema. org. Por exemplo:
 
 ```xml
 <div itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
@@ -141,7 +141,7 @@ Outro formato comum para marcação estruturado de dados é o formato de Microda
 
 ```
 
-As mesmas informações podem ser representadas no formato de JSON-LD do schema.org:
+As mesmas informações podem ser representadas no formato JSON-LD do esquema. org:
 
 ```xml
 <script type="application/ld+json">
@@ -152,32 +152,32 @@ As mesmas informações podem ser representadas no formato de JSON-LD do schema.
 </script>
 ```
 
-O exemplo a seguir mostra um exemplo de metadados do seu site que está fornecendo os resultados da pesquisa avançada para o usuário final:
+Veja a seguir um exemplo de metadados do seu site fornecendo resultados de pesquisa avançados para o usuário final:
 
-[![](web-markup-images/deeplink01.png "Pesquisa avançada de resultados por meio de marcação estruturado de dados")](web-markup-images/deeplink01.png#lightbox)
+[![](web-markup-images/deeplink01.png "Resultados de pesquisa avançados por meio de marcação de dados estruturados")](web-markup-images/deeplink01.png#lightbox)
 
-Apple atualmente suporta os seguintes tipos de esquema de schema.org:
+Atualmente, a Apple dá suporte aos seguintes tipos de esquema do schema.org:
 
 - AggregateRating
 - ImageObject
 - InteractionCount
-- Ofertas
-- Organização
+- Ofereça
+- Organizações
 - PriceRange
 - Receita
 - SearchAction
 
-Para obter mais informações sobre esses tipos de esquema, consulte [schema.org](http://schema.org).
+Para obter mais informações sobre esses tipos de esquema, consulte [Schema.org](http://schema.org).
 
-## <a name="providing-actions-with-structured-data"></a>Fornecendo ações com os dados estruturados
+## <a name="providing-actions-with-structured-data"></a>Fornecendo ações com dados estruturados
 
-Tipos específicos de dados estruturados permitirá que um resultado de pesquisa ser acionáveis pelo usuário final. Atualmente, há suporte para as seguintes ações:
+Tipos específicos de dados estruturados permitirão que um resultado de pesquisa seja acionável pelo usuário final. Atualmente, há suporte para as seguintes ações:
 
-- Discar um número de telefone.
-- Introdução a direção de mapa para um determinado endereço.
-- Execução de um arquivo de áudio ou vídeo.
+- Discando um número de telefone.
+- Obtendo a direção do mapa para um determinado endereço.
+- Reproduzir um arquivo de áudio ou de vídeo.
 
-Por exemplo, definir uma ação para discar um número de telefone pode parecer com o seguinte:
+Por exemplo, definir uma ação para discar um número de telefone pode ser semelhante ao seguinte:
 
 ```xml
 <div itemscope itemtype="http://schema.org/Organization">
@@ -186,9 +186,9 @@ Por exemplo, definir uma ação para discar um número de telefone pode parecer 
 
 ```
 
-Quando esse resultado de pesquisa é apresentado ao usuário final, um ícone pequeno do telefone será exibido no resultado. Se o usuário toca o ícone, o número especificado será chamado.
+Quando esse resultado de pesquisa for apresentado ao usuário final, um pequeno ícone de telefone será exibido no resultado. Se o usuário tocar no ícone, o número especificado será chamado.
 
-Adicione uma ação para reproduzir um arquivo de áudio do resultado da pesquisa o HTML a seguir:
+O HTML a seguir adicionaria uma ação para reproduzir um arquivo de áudio do resultado da pesquisa:
 
 ```xml
 <div itemscope itemtype="http://schema.org/AudioObject">
@@ -197,7 +197,7 @@ Adicione uma ação para reproduzir um arquivo de áudio do resultado da pesquis
 
 ```
 
-Por fim, o HTML a seguir seria adicionar uma ação para obter direções do resultado da pesquisa:
+Por fim, o HTML a seguir adicionaria uma ação para obter instruções do resultado da pesquisa:
 
 ```xml
 <div itemscope itemtype="http://schema.org/PostalAddress">
@@ -209,13 +209,13 @@ Por fim, o HTML a seguir seria adicionar uma ação para obter direções do res
 
 ```
 
-Para obter mais informações, consulte da Apple [Site do desenvolvedor do aplicativo de pesquisa](https://developer.apple.com/ios/search/).
+Para obter mais informações, consulte o [site do desenvolvedor de pesquisa de aplicativos](https://developer.apple.com/ios/search/)da Apple.
 
 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Amostras do iOS 9](https://developer.xamarin.com/samples/ios/iOS9/)
+- [Amostras do iOS 9](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS9)
 - [iOS 9 para desenvolvedores](https://developer.apple.com/ios/pre-release/)
 - [iOS 9.0](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)
-- [Guia de programação de aplicativo de pesquisa](https://developer.apple.com/library/prerelease/ios/documentation/General/Conceptual/AppSearch/index.html#//apple_ref/doc/uid/TP40016308)
+- [Guia de programação de pesquisa de aplicativo](https://developer.apple.com/library/prerelease/ios/documentation/General/Conceptual/AppSearch/index.html#//apple_ref/doc/uid/TP40016308)

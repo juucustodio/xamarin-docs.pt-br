@@ -1,24 +1,24 @@
 ---
-title: Atualizações de controle do Thread principal no iOS
-description: Especificidades da plataforma permitem que você consumir funcionalidade só está disponível em uma plataforma específica, sem implementar renderizadores personalizados ou efeitos. Este artigo explica como utilizar o iOS específicos da plataforma que permite controlar o layout e renderização de atualizações a serem executadas no thread principal.
+title: Principais atualizações de controle de thread no iOS
+description: Especificidades da plataforma permitem que você consumir funcionalidade só está disponível em uma plataforma específica, sem implementar renderizadores personalizados ou efeitos. Este artigo explica como consumir a plataforma do iOS específica que permite que o layout de controle e as atualizações de renderização sejam executadas no thread principal.
 ms.prod: xamarin
 ms.assetid: 945E711D-9BD2-4BF9-9FB3-CBE0D5B25A49
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: b9f39cd33d660999cfa00f2003edab7af731ca7c
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: 9603cccc1f08be057bc66012cdde75e1b7391f1a
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65925710"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68655276"
 ---
-# <a name="main-thread-control-updates-on-ios"></a>Atualizações de controle do Thread principal no iOS
+# <a name="main-thread-control-updates-on-ios"></a>Principais atualizações de controle de thread no iOS
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
-Este específicos da plataforma iOS permite controlar o layout e renderização de atualizações a serem executadas no thread principal, em vez de que está sendo executada em um thread em segundo plano. Ele deve ser raramente necessário, mas em alguns casos, pode impedir que falhas. Seu consumido em XAML, definindo o `Application.HandleControlUpdatesOnMainThread` para a propriedade associável `true`:
+Essa plataforma do iOS específica habilita o layout de controle e as atualizações de renderização a serem executadas no thread principal, em vez de serem executadas em um thread em segundo plano. Ele deve ser raramente necessário, mas em alguns casos, pode impedir que falhas. Seu consumido em XAML, definindo o `Application.HandleControlUpdatesOnMainThread` para a propriedade associável `true`:
 
 ```xaml
 <Application ...
@@ -42,6 +42,6 @@ O `Application.On<iOS>` método Especifica que este específicos da plataforma s
 
 ## <a name="related-links"></a>Links relacionados
 
-- [PlatformSpecifics (amostra)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+- [PlatformSpecifics (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [Criação de itens específicos à plataforma](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
-- [iOSSpecific API](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)
+- [API iOSSpecific](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)

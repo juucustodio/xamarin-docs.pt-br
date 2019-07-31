@@ -1,106 +1,106 @@
 ---
-title: Estilos de interface do usuário no Xamarin do tvOS
-description: Este artigo aborda a luz e temas escuro de interface do usuário que a Apple adicionado ao tvOS 10 e como implementá-los em um aplicativo xamarin. tvos.
+title: Estilos de interface do usuário tvOS no Xamarin
+description: Este artigo aborda os temas de interface do usuário leves e escuros que a Apple adicionou ao tvOS 10 e como implementá-los em um aplicativo Xamarin. tvOS.
 ms.prod: xamarin
 ms.assetid: 8BC37683-AD9E-45CD-BE40-96965618AD1D
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 2536ca5d3bff3f5b7962bc4fcf58b31a130fd03c
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: fc9a8acb2c04d805e7abc52b2996ec5546b0fb69
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61270802"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68657363"
 ---
-# <a name="tvos-user-interface-styles-in-xamarin"></a>Estilos de interface do usuário no Xamarin do tvOS
+# <a name="tvos-user-interface-styles-in-xamarin"></a>Estilos de interface do usuário tvOS no Xamarin
 
-_Este artigo aborda a luz e temas escuro de interface do usuário que a Apple adicionado ao tvOS 10 e como implementá-los em um aplicativo xamarin. tvos._
+_Este artigo aborda os temas de interface do usuário leves e escuros que a Apple adicionou ao tvOS 10 e como implementá-los em um aplicativo Xamarin. tvOS._
 
-tvOS 10 agora dá suporte a tema um escuro e a Interface do usuário de luz que todos o build no UIKit controles serão automaticamente adaptar, com base nas preferências do usuário. Além disso, o desenvolvedor pode ajustar manualmente os elementos de interface do usuário com base no tema que o usuário selecionou e pode substituir um determinado tema.
+o tvOS 10 agora dá suporte a um tema de interface do usuário escuro e leve que todos os controles de UIKit de compilação se adaptam automaticamente ao, com base nas preferências do usuário. Além disso, o desenvolvedor pode ajustar manualmente os elementos da interface do usuário com base no tema que ele selecionou e pode substituir um determinado tema.
 
 <a name="About-the-New-User-Interface-Styles" />
 
-## <a name="about-the-new-user-interface-styles"></a>Sobre os novos estilos de Interface do usuário
+## <a name="about-the-new-user-interface-styles"></a>Sobre os novos estilos de interface do usuário
 
-Como mencionado acima, tvOS 10 agora dá suporte a tema um escuro e a Interface do usuário de luz que todos o build no UIKit controles serão automaticamente adaptar, com base nas preferências do usuário.
+Como mencionado acima, o tvOS 10 agora dá suporte a um tema de interface do usuário escuro e leve que todos os controles de UIKit de compilação se adaptam automaticamente ao, com base nas preferências do usuário.
 
-O usuário pode alternar este tema indo até **as configurações** > **geral** > **aparência** e alternar entre **luz**  e **escuro**:
+O usuário pode mudar esse tema acessando **configurações** > **aparência** **geral** > e alternando entre **claro** e **escuro**:
 
-[![](user-interface-styles-images/theme01.png "O aplicativo de configurações")](user-interface-styles-images/theme01.png#lightbox)
+[![](user-interface-styles-images/theme01.png "O aplicativo configurações")](user-interface-styles-images/theme01.png#lightbox)
 
-Quando o **escuro** tema for selecionado, todos os elementos de Interface do usuário serão alternado para o texto claro em um plano de fundo escuro:
+Quando o tema **escuro** for selecionado, todos os elementos da interface do usuário mudarão para texto claro em um plano de fundo escuro:
 
 [![](user-interface-styles-images/theme02.png "O tema escuro")](user-interface-styles-images/theme02.png#lightbox)
 
-O usuário tem a opção de alternar o tema a qualquer momento e pode fazer isso com base na atividade atual, em que a Apple TV está localizado ou a hora do dia.
+O usuário tem a opção de alternar o tema a qualquer momento e pode fazer isso com base na atividade atual, onde a Apple TV está localizada ou na hora do dia.
 
-O tema de interface do usuário de luz é o tema padrão e quaisquer aplicativos existentes do tvOS ainda usar o tema claro, independentemente das preferências do usuário, a menos que eles são modificados para tvOS 10 podem aproveitar o tema escuro. Um aplicativo tvOS 10 também tem a capacidade de substituir o tema atual e sempre usar o tema claro ou escuro para alguns ou todos de sua interface do usuário.
+O tema da interface do usuário leve é o tema padrão, e todos os aplicativos tvOS existentes ainda usarão o tema claro, independentemente das preferências do usuário, a menos que sejam modificados para tvOS 10 para tirar proveito do tema escuro. Um aplicativo tvOS 10 também tem a capacidade de substituir o tema atual e sempre usar o tema claro ou escuro para algumas ou todas as suas interfaces do usuário.
 
 <a name="Adopting-the-Light-and-Dark-Themes" />
 
-## <a name="adopting-the-light-and-dark-themes"></a>Adotando os temas claras e escuros
+## <a name="adopting-the-light-and-dark-themes"></a>Adotando os temas claros e escuros
 
-Para dar suporte a esse recurso, a Apple adicionou uma nova API para o `UITraitCollection` classe e um aplicativo tvOS deverão participar para dar suporte a aparência escura (por meio de uma configuração no seu `Info.plist` arquivo).
+Para dar suporte a esse recurso, a Apple adicionou uma nova API `UITraitCollection` à classe e um aplicativo tvOS deve optar por dar suporte à aparência escura (por meio de uma configuração `Info.plist` em seu arquivo).
 
-Para aceitar o suporte de tema claro e escuro, faça o seguinte:
+Para aceitar o suporte a temas leves e escuros, faça o seguinte:
 
 1. No **Gerenciador de Soluções**, clique duas vezes no arquivo `Info.plist` para abri-lo para edição.
-2. Selecione o **origem** exibição (da parte inferior do editor).
-3. Adicione uma nova chave e chamá-lo `UIUserInterfaceStyle`: 
+2. Selecione o modo de exibição de **origem** (na parte inferior do editor).
+3. Adicione uma nova chave e chame- `UIUserInterfaceStyle`a: 
 
     [![](user-interface-styles-images/theme03.png "A chave UIUserInterfaceStyle")](user-interface-styles-images/theme03.png#lightbox)
 4. Deixe o tipo definido como `String` e insira um valor de `Automatic`: 
 
-    [![](user-interface-styles-images/theme04.png "Insira automático")](user-interface-styles-images/theme04.png#lightbox)
+    [![](user-interface-styles-images/theme04.png "Inserir automático")](user-interface-styles-images/theme04.png#lightbox)
 5. Salve as alterações no arquivo.
 
-Há três valores possíveis para o `UIUserInterfaceStyle` chave:
+Há três valores possíveis para a `UIUserInterfaceStyle` chave:
 
-- **Luz** -força a interface de usuário do aplicativo tvOS sempre usar o tema claro.
-- **Escuro** -força a interface de usuário do aplicativo tvOS sempre usar o tema escuro.
-- **Automático** -alterna entre o tema claro e escuro com base nas preferências do usuário nas configurações. Essa é a configuração preferencial.
+- **Leve** -força a interface do usuário do aplicativo tvOS a sempre usar o tema claro.
+- **Dark** -força a interface do usuário do aplicativo tvOS a sempre usar o tema escuro.
+- **Automático** – alterna entre o tema claro e escuro com base nas preferências do usuário em configurações. Essa é a configuração preferida.
 
 <a name="UIKit-Theme-Support" />
 
-### <a name="uikit-theme-support"></a>Suporte a temas de UIKit
+### <a name="uikit-theme-support"></a>Suporte ao tema do UIKit
 
-Se um aplicativo tvOS é usando o padrão e internos `UIView` com base em controles, eles serão automaticamente responder ao tema da interface do usuário sem qualquer intervenção do desenvolvedor.
+Se um aplicativo tvOS estiver usando controles internos `UIView` baseados em padrão, eles responderão automaticamente ao tema da interface do usuário sem qualquer intervenção do desenvolvedor.
 
-Além disso, `UILabel` e `UITextView` vai alterar automaticamente sua cor com base no tema da interface do usuário selecione:
+Além disso `UILabel` , `UITextView` e o alterará automaticamente sua cor com base no tema selecionar interface do usuário:
 
-- O texto será preto no tema no claro.
+- O texto será preto no tema claro.
 - O texto será branco no tema escuro.
 
-Se o desenvolvedor mudar a cor do texto manualmente (seja no código ou Storyboard), será responsáveis por manipular as alterações de cores com base no tema da interface do usuário.
+Se o desenvolvedor mudar a cor do texto manualmente (no storyboard ou no código), ele será responsável por manipular as alterações de cores com base no tema da interface do usuário.
 
 <a name="New-Blur-Effects" />
 
 ### <a name="new-blur-effects"></a>Novos efeitos de desfoque
 
-Para dar suporte a temas claro e escuro em um aplicativo tvOS 10, a Apple adicionou dois efeitos de desfoque novo. Esses novos efeitos ajustará automaticamente o desfoque com base no tema da interface do usuário que o usuário tiver selecionado da seguinte maneira:
+Para dar suporte aos temas claros e escuros em um aplicativo tvOS 10, a Apple adicionou dois novos efeitos de desfoque. Esses novos efeitos ajustarão automaticamente o desfoque com base no tema da interface de usuário que o usuário selecionou da seguinte maneira:
 
-- `UIBlurEffectStyleRegular` -Usa uma luz de desfoque no tema no claro e um escuro desfoque no tema escuro.
-- `UIBlurEffectStyleProminent` -Usa um desfoque extremamente claro no tema no claro e um desfoque extra escuro no tema escuro.
+- `UIBlurEffectStyleRegular`-Usa um desfoque claro no tema claro e um desfoque escuro no tema escuro.
+- `UIBlurEffectStyleProminent`-Usa um desfoque extra-claro no tema claro e um desfoque extra escuro no tema escuro.
 
 <a name="Working-with-Trait-Collections" />
 
-## <a name="working-with-trait-collections"></a>Trabalhar com coleções de característica
+## <a name="working-with-trait-collections"></a>Trabalhando com coleções de características
 
-O novo `UserInterfaceStyle` propriedade do `UITraitCollection` classe pode ser usado para obter o tema da interface do usuário selecionado no momento e será um `UIUserInterfaceStyle` enum de um dos seguintes valores:
+A nova `UserInterfaceStyle` propriedade `UITraitCollection` da classe pode ser usada para obter o tema da interface do usuário selecionado no momento e `UIUserInterfaceStyle` será uma enumeração de um dos seguintes valores:
 
-- **Luz** -tema a luz de interface do usuário está selecionado.
-- **Escuro** -tema a interface do usuário escuro for selecionado.
-- **Não especificado** -a exibição não foi exibida na tela ainda, portanto, o tema da interface do usuário atual é desconhecido.
+- **Claro** -o tema da interface do usuário leve está selecionado.
+- **Escuro** -o tema da interface do usuário escura está selecionado.
+- Não **especificado** -a exibição ainda não foi exibida para a tela, portanto, o tema da interface do usuário atual é desconhecido.
 
-Além disso, coleções de característica têm os seguintes recursos no tvOS 10:
+Além disso, as coleções de características têm os seguintes recursos no tvOS 10:
  
-- O proxy de aparência pode ser personalizado com base nas `UserInterfaceStyle` de um determinado `UITraitCollection` para alterar coisas como imagens ou item com base no tema de cores.
-- Um aplicativo tvOS pode lidar com a coleção de característica é alterado, substituindo o `TraitCollectionDidChange` método de um `UIView` ou `UIViewController` classe.
+- O proxy de aparência pode ser personalizado com base `UserInterfaceStyle` no de um `UITraitCollection` determinado para alterar itens como imagens ou cores de itens com base no tema.
+- Um aplicativo tvOS pode lidar com alterações de coleção de características `TraitCollectionDidChange` , substituindo `UIView` o `UIViewController` método de uma classe ou.
 
 > [!IMPORTANT]
-> O xamarin. tvos visualização prévia para tvOS 10 não oferece suporte completo `UIUserInterfaceStyle` para `UITraitCollection` ainda. Suporte completo será adicionado em uma versão futura.
+> A visualização antecipada do Xamarin. tvOS para o tvOS 10 `UIUserInterfaceStyle` não `UITraitCollection` oferece suporte completo para o ainda. O suporte completo será adicionado em uma versão futura.
 
 
 
@@ -109,7 +109,7 @@ Além disso, coleções de característica têm os seguintes recursos no tvOS 10
 
 ### <a name="customizing-appearance-based-on-theme"></a>Personalizando a aparência com base no tema
 
-Para elementos de Interface do usuário que dão suporte o proxy de aparência, sua aparência pode ser ajustada com base no tema da interface do usuário de sua coleção de característica. Portanto, para um determinado elemento de interface do usuário, o desenvolvedor pode especificar uma cor para o tema claro e outra cor para o tema escuro.
+Para elementos da interface do usuário que dão suporte ao proxy de aparência, sua aparência pode ser ajustada com base no tema da interface do usuário de sua coleção de características. Portanto, para um determinado elemento de interface do usuário, o desenvolvedor pode especificar uma cor para o tema claro e outra cor para o tema escuro.
 
 ```csharp
 button.SetTitleColor (UIColor.Red, UIControlState.Normal);
@@ -123,13 +123,13 @@ button.ForTraitCollection(dark).SetTitleColor (UIColor.White, UIControlState.Nor
 ```
 
 > [!IMPORTANT]
-> Infelizmente, a visualização de tvos para tvOS 10 não oferece suporte completo `UIUserInterfaceStyle` para `UITraitCollection`, portanto, esse tipo de personalização ainda não está disponível. Suporte completo será adicionado em uma versão futura.
+> Infelizmente, a versão prévia do Xamarin. tvOS para o tvOS 10 `UIUserInterfaceStyle` não `UITraitCollection`dá suporte total para o, portanto, esse tipo de personalização ainda não está disponível. O suporte completo será adicionado em uma versão futura.
 
 <a name="Responding-to-Theme-Changes-Directly" />
 
-### <a name="responding-to-theme-changes-directly"></a>Responder a alterações de tema diretamente
+### <a name="responding-to-theme-changes-directly"></a>Respondendo diretamente às alterações de tema
 
-O desenvolvedor requer maior controle sobre a aparência de um elemento de interface do usuário com base no tema da interface do usuário selecionado, eles podem substituir os `TraitCollectionDidChange` método de um `UIView` ou `UIViewController` classe.
+No desenvolvedor requer um controle mais profundo sobre a aparência de um elemento de interface do usuário com base no tema da interface do usuário `TraitCollectionDidChange` selecionado, eles `UIView` podem `UIViewController` substituir o método de uma classe ou.
 
 Por exemplo:
 
@@ -145,11 +145,11 @@ public override void TraitCollectionDidChange (UITraitCollection previousTraitCo
 
 <a name="Responding-to-Theme-Changes-Directly" />
 
-### <a name="overriding-a-trait-collection"></a>Substituindo uma coleção de característica
+### <a name="overriding-a-trait-collection"></a>Substituindo uma coleção de características
 
-Com base no design de um aplicativo tvOS, pode haver ocasiões em que o desenvolvedor precisa substituir a coleção de característica de um determinado elemento de Interface do usuário e fazer com que ele use sempre um tema específico da interface do usuário.
+Com base no design de um aplicativo tvOS, pode haver ocasiões em que o desenvolvedor precise substituir a coleção de características de um determinado elemento de interface do usuário e fazer com que ele sempre use um tema de interface de usuário específico.
 
-Isso pode ser feito usando o `SetOverrideTraitCollection` método no `UIViewController` classe. Por exemplo:
+Isso pode ser feito usando o `SetOverrideTraitCollection` método `UIViewController` na classe. Por exemplo:
 
 ```csharp
 // Create new trait and configure it
@@ -160,59 +160,59 @@ var trait = new UITraitCollection ();
 SetOverrideTraitCollection (trait, this);
 ```
 
-Para obter mais informações, consulte o [Traits](~/ios/user-interface/storyboards/unified-storyboards.md) e [substituindo características](~/ios/user-interface/storyboards/unified-storyboards.md) seções do nosso [Introduction to Storyboards unificados](~/ios/user-interface/storyboards/unified-storyboards.md) documentação.
+Para obter mais informações, consulte as seções [características](~/ios/user-interface/storyboards/unified-storyboards.md) e [substituição de características](~/ios/user-interface/storyboards/unified-storyboards.md) da nossa [introdução à](~/ios/user-interface/storyboards/unified-storyboards.md) documentação de storyboards unificadas.
 
 <a name="Trait-Collections-and-Storyboards" />
 
-### <a name="trait-collections-and-storyboards"></a>Coleções de característica e storyboards
+### <a name="trait-collections-and-storyboards"></a>Coleções de características e storyboards
 
-No tvOS 10, o Storyboard de um aplicativo pode ser definido para responder a característica de coleções e muitos elementos de interface do usuário podem ser informados tema claro e escuro. O atual do xamarin. tvos visualização prévia para tvOS 10 ainda não suporta esse recurso no Designer de Interface, portanto, o Storyboard precisará ser editado no Interface Builder do Xcode, como uma solução alternativa.
+No tvOS 10, o storyboard de um aplicativo pode ser definido para responder a coleções de características e muitos elementos da interface do usuário podem se tornar um reconhecimento claro e escuro do tema. A visualização antecipada atual do Xamarin. tvOS para o tvOS 10 não dá suporte a esse recurso no designer de interface ainda, portanto, o storyboard precisará ser editado no Interface Builder do Xcode como uma solução alternativa.
 
-Para habilitar o suporte de coleção de característica, faça o seguinte:
+Para habilitar o suporte à coleta de características, faça o seguinte:
 
-1. Clique com botão direito no arquivo de Storyboard na **Gerenciador de soluções** e selecione **abrir com** > **Xcode Interface Builder**: 
+1. Clique com o botão direito do mouse no arquivo de storyboard na **Gerenciador de soluções** e selecione **abrir com** > o**Xcode Interface Builder**: 
 
     [![](user-interface-styles-images/theme05.png "Abrir com o Xcode Interface Builder")](user-interface-styles-images/theme05.png#lightbox) 
-2. Para habilitar o suporte de coleção de característica, alterne para o **Inspetor de arquivo** e verifique o **variações de características de uso** propriedade no **documento do construtor de Interface** seção: 
+2. Para habilitar o suporte à coleta de características, alterne para o **Inspetor de arquivo** e marque a propriedade **usar variações de características** na seção **interface Builder documento** : 
 
-    [![](user-interface-styles-images/theme06.png "Habilitar o suporte de coleção de característica")](user-interface-styles-images/theme06.png#lightbox)
+    [![](user-interface-styles-images/theme06.png "Habilitar suporte à coleta de características")](user-interface-styles-images/theme06.png#lightbox)
 3. Confirme a alteração para usar variações de características: 
 
-    [![](user-interface-styles-images/theme07.png "O alerta de variações de características de uso")](user-interface-styles-images/theme07.png#lightbox)
-4. Salve as alterações no arquivo de Storyboard.
+    [![](user-interface-styles-images/theme07.png "O alerta usar variações de características")](user-interface-styles-images/theme07.png#lightbox)
+4. Salve as alterações no arquivo de storyboard.
 
-Apple adicionou as seguintes capacidades ao editar Storyboards do tvOS no Interface Builder:
+A Apple adicionou as seguintes habilidades ao editar storyboards tvOS no Interface Builder:
 
-* O desenvolvedor pode especificar diferentes variações de elementos de Interface do usuário com base no tema de interface do usuário na **Inspetor de atributo**:
+* O desenvolvedor pode especificar diferentes variações de elementos da interface do usuário com base no tema da interface do utilizador no **Inspetor de atributos**:
     
-    * Várias propriedades agora tem um **+** ao lado deles que pode ser clicado para adicionar uma versão específica do tema de interface do usuário: 
+    * Várias propriedades agora têm um **+** ao lado delas, que podem ser clicadas para adicionar uma versão específica de tema de interface do usuário: 
 
-        [![](user-interface-styles-images/theme08.png "Adicionar uma versão específica do tema de interface do usuário")](user-interface-styles-images/theme08.png#lightbox) 
+        [![](user-interface-styles-images/theme08.png "Adicionar uma versão específica de tema de interface do usuário")](user-interface-styles-images/theme08.png#lightbox) 
     
-    * O desenvolvedor pode especificar uma nova propriedade ou clique no **x** botão para removê-lo: 
+    * O desenvolvedor pode especificar uma nova propriedade ou clicar no botão **x** para removê-la: 
 
-        [![](user-interface-styles-images/theme09.png "Especifique uma nova propriedade ou clique no botão x para removê-lo")](user-interface-styles-images/theme09.png#lightbox)
-* O desenvolvedor pode visualizar um design de interface do usuário no tema claro ou escuro de dentro do Interface Builder:
+        [![](user-interface-styles-images/theme09.png "Especifique uma nova propriedade ou clique no botão x para removê-la")](user-interface-styles-images/theme09.png#lightbox)
+* O desenvolvedor pode visualizar um design de interface do usuário no tema claro ou escuro de dentro Interface Builder:
     
-    * A parte inferior da superfície de Design permite que o desenvolvedor alternar o tema da interface do usuário atual: 
+    * A parte inferior da Design Surface permite que o desenvolvedor Alterne o tema da interface do usuário atual: 
 
-        [![](user-interface-styles-images/theme10.png "A parte inferior da superfície de Design")](user-interface-styles-images/theme10.png#lightbox)
+        [![](user-interface-styles-images/theme10.png "A parte inferior da Design Surface")](user-interface-styles-images/theme10.png#lightbox)
         
-    * O novo tema será exibido na Interface Builder e os ajustes específicos da característica coleção serão exibidos: 
+    * O novo tema será exibido no Interface Builder e quaisquer ajustes específicos da coleção de características serão exibidos: 
 
-        [![](user-interface-styles-images/theme11.png "O tema exibido na Interface Builder")](user-interface-styles-images/theme11.png#lightbox)
+        [![](user-interface-styles-images/theme11.png "O tema exibido no Interface Builder")](user-interface-styles-images/theme11.png#lightbox)
 
-Além disso, o simulador tvOS agora tem um atalho de teclado para permitir que o desenvolvedor alterne rapidamente entre os temas claro e escuro ao depurar um aplicativo tvOS. Use o **comando-Shift-D** sequência para alternar entre claro e escuro do teclado.
+Além disso, o simulador tvOS agora tem um atalho de teclado para permitir que o desenvolvedor Alterne rapidamente entre os temas leves e escuros ao depurar um aplicativo tvOS. Use a sequência de teclado **Command-Shift-D** para alternar entre Light e Dark.
 
 <a name="Summary" />
 
 ## <a name="summary"></a>Resumo
 
-Este artigo abordou a luz e temas escuro de interface do usuário que a Apple adicionado ao tvOS 10 e como implementá-los em um aplicativo xamarin. tvos.
+Este artigo abordou os temas de interface do usuário leves e escuros que a Apple adicionou ao tvOS 10 e como implementá-los em um aplicativo Xamarin. tvOS.
 
 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Amostras do tvOS](https://developer.xamarin.com/samples/tvos/all/)
+- [Amostras do tvOS](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
 - [O que há de novo no tvOS 10](https://developer.apple.com/library/prerelease/content/releasenotes/General/WhatsNewinTVOS/Articles/tvOS10.html#//apple_ref/doc/uid/TP40017259-SW1)

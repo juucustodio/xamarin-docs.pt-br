@@ -7,16 +7,16 @@ ms.assetid: A0B8DD2D-7392-4EC5-BFB0-6209407AD650
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/14/2018
-ms.openlocfilehash: d525725b58a961afb9c4c5d80962d05f8d08b83e
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 407fe78618c5e5fcd8732d9ff3cea50561ca78f3
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60876826"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68655544"
 ---
 # <a name="touch-manipulations"></a>Manipulações de toque
 
-[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Transformações de matriz de uso para implementar o arrastar de toque, gestos de pinçar e rotação_
 
@@ -273,7 +273,7 @@ O **girar Bitmap** página permite que você use dois dedos de rotação ou dime
 
 A primeira grande diferença nesse programa é a lógica de teste de clique. Os programas anteriores usados os `Contains` método de `SKRect` para determinar se o ponto de toque é dentro do retângulo transformado que corresponde ao bitmap. Mas como o usuário manipula o bitmap, o bitmap pode ser girado, e `SKRect` corretamente não pode representar um retângulo girado. Você talvez tenha medo de que a lógica do teste de clique precisa implementar da geometria analítica complexa em vez disso, nesse caso.
 
-No entanto, um atalho está disponível: Determinar se um ponto está dentro dos limites de um retângulo transformado é igual a determinar se um ponto transformado inverso se encontra dentro dos limites do retângulo não transformado. Que é um cálculo muito mais fácil, e a lógica pode continuar a usar o conveniente `Contains` método:
+No entanto, um atalho está disponível: Determinar se um ponto está dentro dos limites de um retângulo transformado é o mesmo que determinar se um ponto transformador inverso está dentro dos limites do retângulo não convertido. Que é um cálculo muito mais fácil, e a lógica pode continuar a usar o conveniente `Contains` método:
 
 ```csharp
 public partial class BitmapRotationPage : ContentPage
@@ -703,7 +703,7 @@ class TouchManipulationBitmap
 
 No `Moved` e `Released` eventos, as chamadas de método `Manipulate`. Nesses momentos, o `touchDictionary` contém um ou mais `TouchManipulationInfo` objetos. Se o `touchDictionary` contém um item, é provável que o `PreviousPoint` e `NewPoint` valores são diferentes e representam a movimentação de um dedo. Se vários dedos tocam o bitmap, o dicionário contiver mais de um item, mas apenas um desses itens tem diferentes `PreviousPoint` e `NewPoint` valores. Todo o resto ter igual `PreviousPoint` e `NewPoint` valores.
 
-Isso é importante: O `Manipulate` método pode assumir que está processando a movimentação de um só dedo. No momento desta chamada nenhum dos outros dedos estão mudando e se eles realmente estão movendo (como é provável), esses movimentos serão processados em futuras chamadas para `Manipulate`.
+Isso é importante: O `Manipulate` método pode assumir que está processando a movimentação de apenas um dedo. No momento desta chamada nenhum dos outros dedos estão mudando e se eles realmente estão movendo (como é provável), esses movimentos serão processados em futuras chamadas para `Manipulate`.
 
 O `Manipulate` método primeiro copia o dicionário para uma matriz para sua conveniência. Ignora qualquer coisa que não sejam as duas primeiras entradas. Se mais de dois dedos estão tentando para manipular o bitmap, os outros são ignorados. `Manipulate` é o membro final do `TouchManipulationBitmap`:
 
@@ -1272,5 +1272,5 @@ Esse código efetivamente divide a área do bitmap em uma forma de losango inter
 ## <a name="related-links"></a>Links relacionados
 
 - [APIs de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (amostra)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 - [Invocação de eventos de efeitos](~/xamarin-forms/app-fundamentals/effects/touch-tracking.md)
