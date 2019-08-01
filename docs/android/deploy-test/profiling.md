@@ -8,12 +8,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/03/2018
-ms.openlocfilehash: 9ea2b3ddef731efb9e4bf291ec836248c13d6390
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 400075a1cbd2303f2ecddb9b1cc9465bbcbde32d
+ms.sourcegitcommit: f255aa286bd52e8a80ffa620c2e93c97f069f8ec
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50113125"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68680258"
 ---
 # <a name="profiling-android-apps"></a>Criação de perfil de aplicativos Android
 
@@ -38,7 +38,7 @@ O Android Studio 3.0 e posterior inclui uma ferramenta Android Profiler. Você p
 
 ### <a name="launching-a-xamarin-android-app-in-android-profiler"></a>Iniciar um aplicativo Xamarin Android no Android Profiler
 
-As etapas a seguir explicam como iniciar um aplicativo Xamarin Android na ferramenta Android Profiler do Android Studio. Nas capturas de tela de exemplo abaixo, o aplicativo [XamagonXuzzle](https://developer.xamarin.com/samples/mobile/LivePlayer/XamagonXuzzleLP/) do Xamarin Forms é criado e analisado usando o Android Profiler:
+As etapas a seguir explicam como iniciar um aplicativo Xamarin Android na ferramenta Android Profiler do Android Studio. Nas capturas de tela de exemplo abaixo, o aplicativo [XamagonXuzzle](https://docs.microsoft.com/samples/xamarin/mobile-samples/liveplayer-xamagonxuzzlelp/) do Xamarin Forms é criado e analisado usando o Android Profiler:
 
 1.  Nas opções de build do projeto do Android, desabilite **Usar Tempo de Execução Compartilhado**. Isso garante que o APK (pacote de aplicativo Android) seja compilado sem dependência do tempo de desenvolvimento compartilhado do tempo de execução Mono.
 
@@ -67,7 +67,7 @@ As etapas a seguir explicam como iniciar um aplicativo Xamarin Android na ferram
 
     [![Local do item de menu Abrir Configurações de Módulo](profiling-images/vswin/06-open-module-settings-sml.png)](profiling-images/vswin/06-open-module-settings.png#lightbox)
 
-8.  Navegue até **Configurações do Projeto > Módulos**, selecione o nó **-Assinado** do aplicativo e, em seguida, clique em **&lt;Sem SDK&gt;**:
+8.  Navegue até **Configurações do Projeto > Módulos**, selecione o nó **-Assinado** do aplicativo e, em seguida, clique em **&lt;Sem SDK&gt;** :
 
     [![Navegando até a configuração de SDK](profiling-images/vswin/07-project-settings-modules-sml.png)](profiling-images/vswin/07-project-settings-modules.png#lightbox)
 

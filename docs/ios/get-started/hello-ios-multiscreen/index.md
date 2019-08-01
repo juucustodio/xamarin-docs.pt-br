@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 10/05/2018
-ms.openlocfilehash: 8545afc9957f263104afa69359847d2b187e2558
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 0e5ec8fc009423b67070bbdffd4b44c36f00d916
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57669356"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68645617"
 ---
 # <a name="hello-ios-multiscreen"></a>Multitela Hello, iOS
 
@@ -27,6 +27,6 @@ A segunda parte deste documento explica o que foi criado e discute a arquitetura
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Hello, iOS (amostra)](https://developer.xamarin.com/samples/monotouch/Hello_iOS/)
+- [Hello, iOS (amostra)](https://docs.microsoft.com/samples/xamarin/ios-samples/hello-ios)
 - [Diretrizes da interface humana do iOS](https://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/Introduction/Introduction.html)
 - [Portal de provisionamento do iOS](https://developer.apple.com/ios/manage/overview/index.action)

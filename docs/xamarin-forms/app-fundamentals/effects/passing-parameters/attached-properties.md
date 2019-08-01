@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/05/2016
-ms.openlocfilehash: fbc5ccda4e798b818b4c21dd459bab6b467cba31
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: d40e1657eb39543023490892b8765ee1fe956ec4
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65925446"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68645367"
 ---
 # <a name="passing-effect-parameters-as-attached-properties"></a>Passando parâmetros de efeito como propriedades anexadas
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/Effects/ShadowEffectRuntimeChange/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-shadoweffectruntimechange)
 
 _Propriedades anexadas podem ser usadas para definir parâmetros de efeito que respondem a alterações de propriedade de tempo de execução. Este artigo demonstra o uso de propriedades anexadas para passar parâmetros para um efeito e a alteração de um parâmetro em tempo de execução._
 
@@ -318,7 +318,7 @@ namespace EffectsDemo.Droid
     }
 ```
 
-O método `OnAttached` chama métodos que recuperam os valores de propriedade anexada usando os getters `ShadowEffect` e chama um método que chama o método [`TextView.SetShadowLayer`](https://developer.xamarin.com/api/member/Android.Widget.TextView.SetShadowLayer/p/System.Single/System.Single/System.Single/Android.Graphics.Color/) para criar uma sombra usando os valores da propriedade. Essa funcionalidade é encapsulada em um bloco `try`/`catch` caso o controle a que o efeito está anexado não tenha as propriedades de `Control.Layer`. Nenhuma implementação é fornecida pelo método `OnDetached` porque nenhuma limpeza é necessária.
+O método `OnAttached` chama métodos que recuperam os valores de propriedade anexada usando os getters `ShadowEffect` e chama um método que chama o método [`TextView.SetShadowLayer`](xref:Android.Widget.TextView.SetShadowLayer*) para criar uma sombra usando os valores da propriedade. Essa funcionalidade é encapsulada em um bloco `try`/`catch` caso o controle a que o efeito está anexado não tenha as propriedades de `Control.Layer`. Nenhuma implementação é fornecida pelo método `OnDetached` porque nenhuma limpeza é necessária.
 
 #### <a name="responding-to-property-changes"></a>Respondendo a alterações de propriedade
 
@@ -440,4 +440,4 @@ Este artigo demonstrou o uso de propriedades anexadas para passar parâmetros pa
 - [Effect](xref:Xamarin.Forms.Effect)
 - [PlatformEffect](xref:Xamarin.Forms.PlatformEffect`2)
 - [RoutingEffect](xref:Xamarin.Forms.RoutingEffect)
-- [Efeito de sombra (amostra)](https://developer.xamarin.com/samples/xamarin-forms/Effects/ShadowEffectRuntimeChange/)
+- [Efeito de sombra (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-shadoweffectruntimechange)

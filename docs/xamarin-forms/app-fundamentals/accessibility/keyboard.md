@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/09/2019
-ms.openlocfilehash: 7f469dab92793eeaa38bd2b73e9d94b138495379
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: ba29e57008bfea420562d88ab1612c09f4460e85
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67830341"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68651068"
 ---
 # <a name="keyboard-accessibility-in-xamarinforms"></a>Acessibilidade do teclado no Xamarin.Forms
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Accessibility/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-accessibility)
 
 Os usuários que utilizam leitores de tela ou que tenham problemas de mobilidade podem ter dificuldade para usar aplicativos que não fornecem acesso apropriado por teclado. Os aplicativos Xamarin.Forms aceitam a especificação de uma ordem de tabulação a fim de melhorar a usabilidade e a acessibilidade. Especificar uma ordem de tabulação para os controles habilita a navegação por teclado, prepara as páginas do aplicativo para receber as entradas em uma ordem específica e possibilita aos leitores de tela a leitura de elementos focalizáveis para o usuário.
 
@@ -146,4 +146,4 @@ As propriedades `TabIndex` e `IsTapStop` têm suporte nos seguintes controles, q
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Acessibilidade (amostra)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Accessibility/)
+- [Acessibilidade (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-accessibility)

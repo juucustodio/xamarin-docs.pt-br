@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 5c67684f7d8cb763d4698de86c904e2887185361
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: 19da0de80819a48259a28b30e003c32923d37378
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65925177"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68650691"
 ---
 # <a name="highlighting-a-route-on-a-map"></a>Realçando uma rota em um mapa
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/Map/Polyline/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-map-polyline)
 
 _Este artigo explica como adicionar uma sobreposição de polilinha a um mapa. Uma sobreposição de polilinha é uma série de segmentos de linha conectados que normalmente são usados para mostrar uma rota em um mapa ou para formar qualquer forma que seja necessária._
 
@@ -304,6 +304,6 @@ Este artigo explicou como adicionar uma sobreposição de polilinha a um mapa, a
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Sobreposição de mapa de polilinha (amostra)](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/Map/Polyline/)
+- [Sobreposição de mapa de polilinha (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-map-polyline)
 - [Personalizar um Pin de mapa](~/xamarin-forms/app-fundamentals/custom-renderer/map/customized-pin.md)
 - [Xamarin.Forms.Maps](xref:Xamarin.Forms.Maps)

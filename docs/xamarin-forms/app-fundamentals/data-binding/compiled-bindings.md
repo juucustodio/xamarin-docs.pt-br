@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2018
-ms.openlocfilehash: a5273897539cdce4aeb0abde28a0912e8327284a
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 8effabc66b51b1cf32e3be455428c44eeea3f26d
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53052174"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656222"
 ---
 # <a name="xamarinforms-compiled-bindings"></a>Associações compiladas do Xamarin.Forms
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
 _Associações compiladas são resolvidas mais rapidamente do que associações clássicas, melhorando assim o desempenho da associação de dados em aplicativos do Xamarin.Forms._
 
@@ -175,4 +175,4 @@ Essas diferenças de desempenho podem aumentar em dispositivos móveis, dependen
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Demonstrações de associação de dados (amostra)](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
+- [Demonstrações de associação de dados (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)

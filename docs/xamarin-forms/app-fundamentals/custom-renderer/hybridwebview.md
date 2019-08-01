@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/07/2019
-ms.openlocfilehash: d09188373d11b33f3b3d78b92faa46bf754797f6
-ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
+ms.openlocfilehash: cd4bb8cae59e5d9cdcc36a58fb37e71e56d580b3
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67268992"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68650872"
 ---
 # <a name="implementing-a-hybridwebview"></a>Implementando um HybridWebView
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/HybridWebView/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-hybridwebview)
 
 _Controles de interfaces do usuário personalizadas do Xamarin.Forms devem derivar da classe View, que é usada para colocar os layouts e controles na tela. Este artigo demonstra como criar um renderizador personalizado para um controle personalizado HybridWebView, que demonstra como aprimorar os controles da Web específicos a uma plataforma para permitir que código C# seja invocado do JavaScript._
 
@@ -377,7 +377,7 @@ namespace CustomRenderer.Droid
 }
 ```
 
-A classe `HybridWebViewRenderer` carrega a página da Web especificada na propriedade `HybridWebView.Uri` em um controle [`WebView`](https://developer.xamarin.com/api/type/Android.Webkit.WebView/) nativo e a função de JavaScript `invokeCSharpAction` é injetada na página da Web, após a página da Web terminar de ser carregada, com a substituição `OnPageFinished` na classe `JavascriptWebViewClient`:
+A classe `HybridWebViewRenderer` carrega a página da Web especificada na propriedade `HybridWebView.Uri` em um controle [`WebView`](xref:Android.Webkit.WebView) nativo e a função de JavaScript `invokeCSharpAction` é injetada na página da Web, após a página da Web terminar de ser carregada, com a substituição `OnPageFinished` na classe `JavascriptWebViewClient`:
 
 ```csharp
 public class JavascriptWebViewClient : WebViewClient
@@ -401,10 +401,10 @@ Quando o usuário insere seu nome e clica no elemento HTML `button`, a função 
 
 - Desde que o renderizador personalizado esteja anexado a um novo elemento do Xamarin.Forms:
   - Desde que a propriedade `Control` seja `null`, as seguintes operações serão executadas:
-    - Uma instância de [`WebView`](https://developer.xamarin.com/api/type/Android.Webkit.WebView/) nativa é criada, o JavaScript é habilitado no controle e uma instância de `JavascriptWebViewClient` é definida como a implementação de `WebViewClient`.
-    - O método `SetNativeControl` é chamado para atribuir uma referência ao controle [`WebView`](https://developer.xamarin.com/api/type/Android.Webkit.WebView/) nativo à propriedade `Control`.
-  - O método [`WebView.AddJavascriptInterface`](https://developer.xamarin.com/api/member/Android.Webkit.WebView.AddJavascriptInterface/p/Java.Lang.Object/System.String/) injeta uma nova instância de `JSBridge` no quadro principal do contexto do JavaScript do WebView, denominando-a `jsBridge`. Isso permite que métodos na classe `JSBridge` sejam acessados do JavaScript.
-  - O método [`WebView.LoadUrl`](https://developer.xamarin.com/api/member/Android.Webkit.WebView.LoadUrl/p/System.String/) carrega o arquivo HTML que é especificado pela propriedade `HybridWebView.Uri`. O código especifica que o arquivo seja armazenado na pasta `Content` do projeto.
+    - Uma instância de [`WebView`](xref:Android.Webkit.WebView) nativa é criada, o JavaScript é habilitado no controle e uma instância de `JavascriptWebViewClient` é definida como a implementação de `WebViewClient`.
+    - O método `SetNativeControl` é chamado para atribuir uma referência ao controle [`WebView`](xref:Android.Webkit.WebView) nativo à propriedade `Control`.
+  - O método [`WebView.AddJavascriptInterface`](xref:Android.Webkit.WebView.AddJavascriptInterface*) injeta uma nova instância de `JSBridge` no quadro principal do contexto do JavaScript do WebView, denominando-a `jsBridge`. Isso permite que métodos na classe `JSBridge` sejam acessados do JavaScript.
+  - O método [`WebView.LoadUrl`](xref:Android.Webkit.WebView.LoadUrl*) carrega o arquivo HTML que é especificado pela propriedade `HybridWebView.Uri`. O código especifica que o arquivo seja armazenado na pasta `Content` do projeto.
   - Na classe `JavascriptWebViewClient`, a função de JavaScript `invokeCSharpAction` é injetada na página da Web depois que a página termina de ser carregada.
 - Quando o elemento a que o renderizador está anexado é alterado:
   - Recursos são liberados.
@@ -511,5 +511,5 @@ Este artigo demonstrou como criar um renderizador personalizado para um controle
 
 ## <a name="related-links"></a>Links relacionados
 
-- [CustomRendererHybridWebView (amostra)](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/HybridWebView/)
+- [CustomRendererHybridWebView (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-hybridwebview)
 - [Chamar C# do JavaScript](https://github.com/xamarin/recipes/tree/master/Recipes/android/controls/webview/call_csharp_from_javascript)

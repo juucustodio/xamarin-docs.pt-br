@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: 4594da09d48a0888a88cbce9ab135a007eb6f4cd
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 34b449aa358874f06a495ec52578dcca2dd13767
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53054325"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68654733"
 ---
 # <a name="xamarinforms-binding-value-converters"></a>Conversores de valor de associação do Xamarin.Forms
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
 Normalmente, associações de dados transferem dados de uma propriedade de origem para uma propriedade de destino e, em alguns casos, da propriedade de destino para a propriedade de origem. Essa transferência é simples quando as propriedades de origem e de destino são do mesmo tipo ou quando um tipo pode ser convertido para outro por meio de uma conversão implícita. Quando não é esse o caso, é necessário realizar uma conversão de tipo.
 
@@ -51,7 +51,7 @@ O método `ConvertBack` é chamado quando dados são passados do destino para a 
 
 Se a associação de dados também incluir uma configuração de `StringFormat`, o conversor de valor será invocado antes que o resultado seja formatado como uma cadeia de caracteres.
 
-A página **Habilitar Botões** no exemplo [**Demonstrações de Associação de Dados**](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/) demonstra como usar esse conversor de valor em uma associação de dados. É criada uma instância de `IntToBoolConverter` no dicionário de recursos da página. Em seguida, ele é referenciado com uma extensão de marcação `StaticResource` para definir a propriedade `Converter` nas duas associações de dados. É muito comum compartilhar conversores de dados entre várias associações de dados na página:
+A página **Habilitar Botões** no exemplo [**Demonstrações de Associação de Dados**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos) demonstra como usar esse conversor de valor em uma associação de dados. É criada uma instância de `IntToBoolConverter` no dicionário de recursos da página. Em seguida, ele é referenciado com uma extensão de marcação `StaticResource` para definir a propriedade `Converter` nas duas associações de dados. É muito comum compartilhar conversores de dados entre várias associações de dados na página:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -467,5 +467,5 @@ Este é o resultado:
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Demonstrações de associação de dados (amostra)](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
+- [Demonstrações de associação de dados (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 - [Capítulo de associação de dados do catálogo de Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)

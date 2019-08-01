@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/22/2019
-ms.openlocfilehash: 43f8b1185900ff20f8e4c53680c1adf62ac8316a
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: 5d3635ccc61a0be50e4a4b6d8bc44e60515cc21e
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67829691"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68509066"
 ---
 # <a name="build-process"></a>Processo de build
 
@@ -127,7 +127,7 @@ As [Propriedades de Assinatura](#Signing_Properties) também são relevantes ao 
 
     Apenas um projeto com `<AndroidApplication>True</AndroidApplication>` pode estar presente em um pacote Android. (Infelizmente isso é ainda não verificado, que pode resultar em erros sutis e bizarros relacionados aos recursos do Android.)
 
--   **AndroidApplicationJavaClass** &ndash; o nome de classe Java completo a ser usado no lugar de `android.app.Application` quando uma classe herda de [Android.App.Application](https://developer.xamarin.com/api/type/Android.App.Application/).
+-   **AndroidApplicationJavaClass** &ndash; o nome de classe Java completo a ser usado no lugar de `android.app.Application` quando uma classe herda de [Android.App.Application](xref:Android.App.Application).
 
     Geralmente, essa propriedade é definida por *outras* propriedades, como a propriedade `$(AndroidEnableMultiDex)` do MSBuild.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 11/10/2017
-ms.openlocfilehash: 808d7aa8f886dac38ed8ff5f274ca8f4a02c8dbf
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 76ce6cd3a78e56acb9d77c0c6a4b942e5bdc3f2e
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50112423"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656087"
 ---
 # <a name="xamarinmac-performance"></a>Desempenho do Xamarin.Mac
 
@@ -59,7 +59,7 @@ Aplicativos da área de trabalho geralmente processam grandes quantidades de dad
 
 Sempre que possível, use [async](~/cross-platform/platform/async.md) e threads para evitar o bloqueio da interface do usuário.
 
-Para operações de execução longa, considere o uso de [NSProgressIndicator](https://developer.xamarin.com/samples/mac/ProgressBarExample/) ou outras opções observadas no [HIG](https://developer.apple.com/macos/human-interface-guidelines/indicators/progress-indicators/) da Apple para notificar os usuários.
+Para operações de execução longa, considere o uso de [NSProgressIndicator](https://docs.microsoft.com/samples/xamarin/mac-samples/progressbarexample) ou outras opções observadas no [HIG](https://developer.apple.com/macos/human-interface-guidelines/indicators/progress-indicators/) da Apple para notificar os usuários.
 
 
 ## <a name="related-links"></a>Links relacionados

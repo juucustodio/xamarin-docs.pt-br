@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: 8e80016e33e8bebba715be4f02060e76086884fc
-ms.sourcegitcommit: 4b6e832d1db5616b657dc8540da67c509b28dc1d
+ms.openlocfilehash: 8df5b373fccdef93a8ffbc66fd53a94378f47a6e
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68386202"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68650827"
 ---
 # <a name="customizing-a-map-pin"></a>Personalizando um marcador de mapa
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/Map/Pin/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-map-pin)
 
 _Este artigo demonstra como criar um renderizador personalizado para o Controle de Mapeamento, que exibe um mapa nativo com um marcador personalizado e uma exibição personalizada dos dados de marcador em cada plataforma._
 
@@ -658,4 +658,4 @@ Para obter mais informações sobre como personalizar uma instância `MapControl
 - [Controle de mapas](~/xamarin-forms/user-interface/map.md)
 - [Mapas do iOS](~/ios/user-interface/controls/ios-maps/index.md)
 - [API de mapas](~/android/platform/maps-and-location/maps/maps-api.md)
-- [Marcador personalizado (amostra)](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/Map/Pin/)
+- [Marcador personalizado (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-map-pin)

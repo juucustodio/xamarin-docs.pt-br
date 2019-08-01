@@ -8,16 +8,16 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 01/22/2019
 ms.custom: video
-ms.openlocfilehash: d1759701708c337a804471167223ef68cc3f2910
-ms.sourcegitcommit: 2ee36611ef667affee7d417db947fbb614d75315
+ms.openlocfilehash: 8cec67ec582edad506aecb0945257b9baae3da90
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54479739"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68650343"
 ---
 # <a name="xamarinforms-basic-bindings"></a>Associações básicas do Xamarin.Forms
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
 A associação de dados do Xamarin.Forms vincula um par de propriedades entre dois objetos e pelo menos um deles geralmente é um objeto da interface do usuário. Esses dois objetos são chamados de *destino* e *origem*:
 
@@ -332,7 +332,7 @@ No [próximo artigo](binding-mode.md), você verá como o *modo de associação*
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Demonstrações de associação de dados (amostra)](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
+- [Demonstrações de associação de dados (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 - [Capítulo de associação de dados do catálogo de Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)
 
 ## <a name="related-video"></a>Vídeo relacionados

@@ -6,12 +6,12 @@ ms.assetid: 9ce61f18-22ac-4b93-91be-5b499677d661
 author: asb3993
 ms.author: amburns
 ms.date: 03/24/2017
-ms.openlocfilehash: 9377dcca1cd72b68a0e5b6a5ac5ac4d12d25d50c
-ms.sourcegitcommit: 41b44f2e9bde3b174e7c08605bff65aff594dcd6
+ms.openlocfilehash: 2665e45277eccaedbbbbd77f6c7c0ca47700d950
+ms.sourcegitcommit: c2bffcdee5a7c619280c6b9032ba90e4df8b63d9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67690917"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68533018"
 ---
 # <a name="cross-platform-performance"></a>Desempenho de plataforma cruzada
 
@@ -281,7 +281,7 @@ Para reduzir a pressão sobre o coletor de lixo, siga estas diretrizes:
 
 - Evite a coleta de lixo em loops apertados usando pools de objeto. Isso é particularmente relevante para jogos, que precisam criar a maioria de seus objetos com antecedência.
 - Libere explicitamente recursos como fluxos, conexões de rede, blocos grandes de memória e arquivos quando eles não forem mais necessários. Para obter mais informações, veja [Liberar recursos IDisposable](#idisposable).
-- Cancele o registro de manipuladores de eventos quando eles não forem mais necessários para tornar os objetos colecionáveis. Para obter mais informações, confira [Unsubscribe from Events](#events) (Cancelar assinatura de eventos).
+- Cancele o registro de manipuladores de eventos quando eles não forem mais necessários para tornar os objetos colecionáveis. Para obter mais informações, consulte [Unsubscribe from Events](#events) (Cancelar assinatura de eventos).
 
 <a name="linker" />
 
@@ -380,4 +380,3 @@ Esse artigo descreve e discute técnicas para aumentar o desempenho dos aplicati
 - [Desempenho do Xamarin.Forms](~/xamarin-forms/deploy-test/performance.md)
 - [Visão geral do suporte assíncrono](~/cross-platform/platform/async.md)
 - [IDisposable](xref:System.IDisposable)
-- [Como evitar armadilhas comuns em aplicativos Xamarin (vídeo)](https://university.xamarin.com/guestlectures/avoiding-common-pitfalls-in-xamarin-apps)

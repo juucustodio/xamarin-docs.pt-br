@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/11/2017
-ms.openlocfilehash: c547a851d9e042f0289ac5c3a2d20ff97f681551
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: 7308222e64d64efdbad218186bb9a6e4dca3b26e
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65926944"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68651919"
 ---
 # <a name="introduction-to-xamarinforms-data-templates"></a>Introdução a modelos de dados do Xamarin.Forms
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/Templates/DataTemplates/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/templates-datatemplates)
 
 _Os modelos de dados do Xamarin.Forms fornecem a capacidade de definir a apresentação de dados em controles compatíveis. Este artigo fornece uma introdução aos modelos de dados, examinando o motivo pelo qual eles são necessários._
 
@@ -138,5 +138,5 @@ Modelos de dados posicionados mais baixo na hierarquia de exibição têm preced
 ## <a name="related-links"></a>Links relacionados
 
 - [Aparência de célula](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md)
-- [Modelos de dados (amostra)](https://developer.xamarin.com/samples/xamarin-forms/Templates/DataTemplates/)
+- [Modelos de dados (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/templates-datatemplates)
 - [DataTemplate](xref:Xamarin.Forms.DataTemplate)

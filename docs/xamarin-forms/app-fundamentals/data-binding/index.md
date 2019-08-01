@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/23/2018
-ms.openlocfilehash: c607cecf6c7044fa4c8d0270a5b8d1471d3f9227
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: ace1129397251c02c5ffb682344ff2308a24c62a
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53059055"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68653361"
 ---
 # <a name="xamarinforms-data-binding"></a>Associação de dados do Xamarin.Forms
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
 _A associação de dados é a técnica de vinculação de propriedades de dois objetos para que as alterações em uma propriedade sejam automaticamente refletidas na outra propriedade. A associação de dados é parte integrante da arquitetura do aplicativo MVVM (Model-View-ViewModel)._
 
@@ -35,7 +35,7 @@ Um dos dois objetos envolvidos em uma associação de dados quase sempre é um e
 - Outro derivado de `View`, geralmente na mesma página.
 - Um objeto em um arquivo de código.
 
-Em programas de demonstração, tais como aqueles na amostra [**DataBindingDemos**](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/), associações de dados entre dois derivados de `View` geralmente são mostrados para fins de clareza e simplicidade. No entanto, os mesmos princípios podem ser aplicados às associações de dados entre um `View` e outros objetos. Quando um aplicativo é compilado usando a arquitetura MVVM (Model-View-ViewModel), a classe com os dados subjacentes é frequentemente chamada de um ViewModel.
+Em programas de demonstração, tais como aqueles na amostra [**DataBindingDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos), associações de dados entre dois derivados de `View` geralmente são mostrados para fins de clareza e simplicidade. No entanto, os mesmos princípios podem ser aplicados às associações de dados entre um `View` e outros objetos. Quando um aplicativo é compilado usando a arquitetura MVVM (Model-View-ViewModel), a classe com os dados subjacentes é frequentemente chamada de um ViewModel.
 
 Associações de dados são exploradas na seguinte série de artigos:
 
@@ -73,6 +73,6 @@ Use associações compiladas para melhorar o desempenho de associação de dados
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Demonstrações de associação de dados (amostra)](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
+- [Demonstrações de associação de dados (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 - [Capítulo de associação de dados do catálogo de Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)
 - [Extensões de marcação XAML](~/xamarin-forms/xaml/markup-extensions/index.md)

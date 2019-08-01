@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/14/2018
-ms.openlocfilehash: 9b5150eff0290ef5858198459108699be9f9b273
-ms.sourcegitcommit: cb484bd529bf2d8e48e5b3d086bdfc31895ec209
+ms.openlocfilehash: 87542bbd158b8c8ab0f48bb57fa0d19ce8f374c0
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53411759"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68651670"
 ---
 # <a name="invoking-events-from-effects"></a>Invocando eventos por meio de efeitos
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/effects/TouchTrackingEffectDemos/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-touchtrackingeffect/)
 
 _Um efeito pode definir e invocar um evento, sinalizando as alterações na exibição nativa subjacente. Este artigo mostra como implementar o acompanhamento de dedos multitoque de nível baixo e como gerar eventos que sinalizam a atividade de toque._
 
@@ -52,7 +52,7 @@ Por esse motivo, o efeito do acompanhamento de toque descrito neste artigo imple
 
 ## <a name="the-touch-tracking-effect-api"></a>A API de efeito do acompanhamento de toque
 
-A amostra [**Demonstrações do efeito de acompanhamento de toque**](https://developer.xamarin.com/samples/xamarin-forms/effects/TouchTrackingEffectDemos/) contém as classes (e uma enumeração) que implementam o acompanhamento de toque de nível baixo. Esses tipos pertencem ao namespace `TouchTracking` e começam com a palavra `Touch`. O projeto **TouchTrackingEffectDemos** da biblioteca do .NET Standard inclui a enumeração `TouchActionType` para o tipo de eventos de toque:
+A amostra [**Demonstrações do efeito de acompanhamento de toque**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-touchtrackingeffect/) contém as classes (e uma enumeração) que implementam o acompanhamento de toque de nível baixo. Esses tipos pertencem ao namespace `TouchTracking` e começam com a palavra `Touch`. O projeto **TouchTrackingEffectDemos** da biblioteca do .NET Standard inclui a enumeração `TouchActionType` para o tipo de eventos de toque:
 
 ```csharp
 public enum TouchActionType
@@ -359,7 +359,7 @@ Grande parte da estrutura desta classe `TouchRecognizer` é semelhante à classe
 
 ## <a name="putting-the-touch-effect-to-work"></a>Colocando o efeito de toque para funcionar
 
-O programa [**TouchTrackingEffectDemos**](https://developer.xamarin.com/samples/xamarin-forms/effects/TouchTrackingEffectDemos/) contém cinco páginas que testam o efeito de acompanhamento de toque para tarefas comuns.
+O programa [**TouchTrackingEffectDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-touchtrackingeffect/) contém cinco páginas que testam o efeito de acompanhamento de toque para tarefas comuns.
 
 A página **Arrastando BoxView** permite que você adicione elementos `BoxView` a um `AbsoluteLayout` e, em seguida, arraste-os na tela. O [arquivo XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffectDemos/TouchTrackingEffectDemos/TouchTrackingEffectDemos/BoxViewDraggingPage.xaml) cria uma instância de duas exibições `Button` para adicionar elementos `BoxView` ao `AbsoluteLayout` e desmarcar o `AbsoluteLayout`.
 
@@ -809,4 +809,4 @@ Este artigo demonstrou como invocar eventos em um efeito e como gravar e usar um
 
 - [Acompanhamento de dedo multitoque no iOS](~/ios/app-fundamentals/touch/touch-tracking.md)
 - [Acompanhamento de dedo multitoque no Android](~/android/app-fundamentals/touch/touch-tracking.md)
-- [Efeito de acompanhamento de toque (amostra)](https://developer.xamarin.com/samples/xamarin-forms/effects/TouchTrackingEffectDemos/)
+- [Efeito de acompanhamento de toque (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-touchtrackingeffect/)

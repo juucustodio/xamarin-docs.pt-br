@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/14/2018
-ms.openlocfilehash: 01bb3d19b5e79a6ce9942447b5ddd4afb04574cc
-ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
+ms.openlocfilehash: b1f2dbe87fed951223e731912b696c649d0b6edb
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "64978614"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68647185"
 ---
 # <a name="hierarchical-navigation"></a>Navegação hierárquica
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/Navigation/Hierarchical/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-hierarchical)
 
 _A classe NavigationPage oferece uma experiência de navegação hierárquica em que o usuário pode navegar pelas páginas para frente e para trás, conforme desejado. A classe implementa a navegação como uma pilha UEPS (último a entrar, primeiro a sair) de objetos de Página. Este artigo demonstra como usar a classe NavigationPage para executar a navegação em uma pilha de páginas._
 
@@ -310,7 +310,7 @@ Desde que as credenciais do usuário estejam corretas, a instância `MainPage` s
 
 Qualquer [`View`](xref:Xamarin.Forms.View) da Xamarin.Forms pode ser exibido na barra de navegação de uma [`NavigationPage`](xref:Xamarin.Forms.NavigationPage). Isso é feito definindo a propriedade anexada [`NavigationPage.TitleView`](xref:Xamarin.Forms.NavigationPage.TitleViewProperty) como um `View`. Essa propriedade anexada pode ser definida em qualquer [`Page`](xref:Xamarin.Forms.Page) e, quando a `Page` é enviada por push a uma `NavigationPage`, a `NavigationPage` respeitará o valor da propriedade.
 
-O exemplo a seguir, extraído do [Exemplo de Modo de Exibição de Título](https://developer.xamarin.com/samples/xamarin-forms/Navigation/TitleView/), mostra como definir a propriedade anexada [`NavigationPage.TitleView`](xref:Xamarin.Forms.NavigationPage.TitleViewProperty) do XAML:
+O exemplo a seguir, extraído do [Exemplo de Modo de Exibição de Título](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-titleview), mostra como definir a propriedade anexada [`NavigationPage.TitleView`](xref:Xamarin.Forms.NavigationPage.TitleViewProperty) do XAML:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -362,9 +362,9 @@ Como alternativa, é possível sugerir uma barra de navegação estendida coloca
 ## <a name="related-links"></a>Links relacionados
 
 - [Navegação da página](https://developer.xamarin.com/r/xamarin-forms/book/chapter24.pdf)
-- [Hierárquica (amostra)](https://developer.xamarin.com/samples/xamarin-forms/Navigation/Hierarchical/)
-- [PassingData (amostra)](https://developer.xamarin.com/samples/xamarin-forms/Navigation/PassingData/)
-- [LoginFlow (amostra)](https://developer.xamarin.com/samples/xamarin-forms/Navigation/LoginFlow/)
-- [TitleView (amostra)](https://developer.xamarin.com/samples/xamarin-forms/Navigation/TitleView/)
+- [Hierárquica (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-hierarchical)
+- [PassingData (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-passingdata)
+- [LoginFlow (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-loginflow)
+- [TitleView (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-titleview)
 - [Vídeo sobre como criar um fluxo de tela de entrada no Xamarin.Forms](https://university.xamarin.com/lightninglectures/how-to-create-a-sign-in-screen-flow-in-xamarinforms)
 - [NavigationPage](xref:Xamarin.Forms.NavigationPage)

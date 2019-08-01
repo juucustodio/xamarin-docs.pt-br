@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: 0c63e33309802f0945ad94a858af45f6b29b2cc4
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: b9658aa0a4222fb9d257299ea3c6fd69016abdb4
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53050773"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68646745"
 ---
 # <a name="xamarinforms-binding-path"></a>Caminho de associação do Xamarin.Forms
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
 Em todos os exemplos anteriores de associação de dados, a propriedade [`Path`](xref:Xamarin.Forms.Binding.Path) da classe `Binding` (ou a propriedade [`Path`](xref:Xamarin.Forms.Xaml.BindingExtension.Path) da extensão de marcação `Binding`) foi definida como uma única propriedade. Na verdade, é possível definir `Path` como uma *subpropriedade* (uma propriedade de uma propriedade) ou como um membro de uma coleção.
 
@@ -167,5 +167,5 @@ Se uma propriedade no caminho de associação não implementar `INotifyPropertyC
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Demonstrações de associação de dados (amostra)](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
+- [Demonstrações de associação de dados (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 - [Capítulo de associação de dados do catálogo de Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)

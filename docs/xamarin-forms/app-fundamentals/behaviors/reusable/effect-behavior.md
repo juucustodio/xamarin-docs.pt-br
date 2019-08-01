@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/06/2016
-ms.openlocfilehash: 840fa1b40858ccf3bff15f7027735ce98081d23c
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: 38ecd765b1c6bc81054b2c42426b6c15bb99b9d9
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65925131"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68650984"
 ---
 # <a name="reusable-effectbehavior"></a>EffectBehavior reutilizável
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/Behaviors/EffectBehavior/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-effectbehavior)
 
 _Os comportamentos são uma abordagem útil para adicionar um efeito a um controle, removendo o código de texto clichê de tratamento de efeito dos arquivos code-behind. Este artigo demonstra como criar e consumir um comportamento de Xamarin.Forms para adicionar um efeito a um controle._
 
@@ -32,7 +32,7 @@ As seguintes propriedades de comportamento precisam ser definidas para que o com
 Para obter mais informações sobre efeitos, confira [Efeitos](~/xamarin-forms/app-fundamentals/effects/index.md).
 
 > [!NOTE]
-> O `EffectBehavior` é uma classe personalizada que pode estar localizada no [exemplo de Comportamento de efeito](https://developer.xamarin.com/samples/xamarin-forms/Behaviors/EffectBehavior/), e não faz parte do Xamarin.Forms.
+> O `EffectBehavior` é uma classe personalizada que pode estar localizada no [exemplo de Comportamento de efeito](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-effectbehavior), e não faz parte do Xamarin.Forms.
 
 ## <a name="creating-the-behavior"></a>Criação do comportamento
 
@@ -169,6 +169,6 @@ Este artigo demonstrou o uso de um comportamento para adicionar um efeito a um c
 ## <a name="related-links"></a>Links relacionados
 
 - [Efeitos](~/xamarin-forms/app-fundamentals/effects/index.md)
-- [Comportamento de efeito (exemplo)](https://developer.xamarin.com/samples/xamarin-forms/Behaviors/EffectBehavior/)
+- [Comportamento de efeito (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-effectbehavior)
 - [Comportamento](xref:Xamarin.Forms.Behavior)
 - [Comportamento&lt;T&gt;](xref:Xamarin.Forms.Behavior`1)

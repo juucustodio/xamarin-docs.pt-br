@@ -7,20 +7,20 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/01/2018
-ms.openlocfilehash: 4583b703d6c6b15105d60a98e7a1064e6a2e9263
-ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
+ms.openlocfilehash: 20a6dab34f290c6e5f170d861183dabbfe382970
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "64977783"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68650219"
 ---
 # <a name="xamarinforms-binding-mode"></a>Modo de associação do Xamarin.Forms
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
 No [artigo anterior](basic-bindings.md), as páginas **Associação de código alternativa** e **Associação de XAML alternativa** apresentavam um `Label` com sua propriedade `Scale` associada à propriedade `Value` de um `Slider`. Como o valor inicial de `Slider` é 0, isso fez com que a propriedade `Scale` do `Label` fosse definida como 0 em vez de 1 e o `Label` desapareceu.
 
-Na amostra [**DataBindingDemos**](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/), a página **Associação inversa** é semelhante aos programas do artigo anterior, exceto que a associação de dados é definida no `Slider` em vez de no `Label`:
+Na amostra [**DataBindingDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos), a página **Associação inversa** é semelhante aos programas do artigo anterior, exceto que a associação de dados é definida no `Slider` em vez de no `Label`:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -684,5 +684,5 @@ No próximo artigo, você verá como especificar a [**Formatação da cadeia de 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Demonstrações de associação de dados (amostra)](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
+- [Demonstrações de associação de dados (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 - [Capítulo de associação de dados do catálogo de Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)

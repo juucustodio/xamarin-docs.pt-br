@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/14/2018
-ms.openlocfilehash: 2e28d3e7035eb570b2053d39cec8b8d91dada6f0
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: ae9b5eb5b768b50ddcbc199040074de855f220de
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53059412"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68649450"
 ---
 # <a name="adding-a-swipe-gesture-recognizer"></a>Adicionando um reconhecedor de gesto de passar o dedo
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithGestures/SwipeGesture/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithgestures-swipegesture)
 
-_Um gesto de passar o dedo ocorre quando um dedo é movido pela tela na direção horizontal ou vertical e geralmente é usado para iniciar a navegação pelo conteúdo. Os exemplos de código neste artigo são provenientes do exemplo [Gesto de passar o dedo](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithGestures/SwipeGesture/)._
+_Um gesto de passar o dedo ocorre quando um dedo é movido pela tela na direção horizontal ou vertical e geralmente é usado para iniciar a navegação pelo conteúdo. Os exemplos de código neste artigo são provenientes do exemplo [Gesto de passar o dedo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithgestures-swipegesture)._
 
 Para fazer com que um [`View`](xref:Xamarin.Forms.View) reconheça um gesto de passar o dedo, crie uma instância de [`SwipeGestureRecognizer`](xref:Xamarin.Forms.SwipeGestureRecognizer), defina a propriedade [`Direction`](xref:Xamarin.Forms.SwipeGestureRecognizer.Direction) como um valor de enumeração [`SwipeDirection`](xref:Xamarin.Forms.SwipeDirection) (`Left`, `Right`, `Up` ou `Down`), opcionalmente, defina a propriedade [`Threshold`](xref:Xamarin.Forms.SwipeGestureRecognizer.Threshold), manipule o evento [`Swiped`](xref:Xamarin.Forms.SwipeGestureRecognizer.Swiped) e adicione o novo reconhecedor de gestos à coleção [`GestureRecognizers`](xref:Xamarin.Forms.View.GestureRecognizers) na exibição. O exemplo de código a seguir mostra um `SwipeGestureRecognizer` anexado a um [`BoxView`](xref:Xamarin.Forms.BoxView):
 
@@ -207,6 +207,6 @@ Quando o [`BoxView`](xref:Xamarin.Forms.BoxView) recebe um gesto de passar o ded
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Gesto de passar o dedo (amostra)](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithGestures/SwipeGesture/)
+- [Gesto de passar o dedo (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithgestures-swipegesture)
 - [GestureRecognizer](xref:Xamarin.Forms.GestureRecognizer)
 - [SwipeGestureRecognizer](xref:Xamarin.Forms.SwipeGestureRecognizer)

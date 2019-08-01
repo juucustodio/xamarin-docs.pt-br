@@ -8,12 +8,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 09/02/2018
-ms.openlocfilehash: 9175c60c436f2e808f3658bae717a747e0401c28
-ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
+ms.openlocfilehash: 8f5be75c750a6ee7efc52300382ca2241b87ecd3
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58855309"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656933"
 ---
 # <a name="hello-mac-walkthrough"></a>Olá, Mac – passo a passo
 
@@ -277,7 +277,7 @@ A seção **Hierarquia de interface** permite que o desenvolvedor acesse facilme
 
 ### <a name="interface-editor"></a>Editor de interface
 
-A seção **Editor de interface** fornece a superfície em que a interface do usuário é disposta graficamente. Arrastar elementos da seção Biblioteca da seção **Propriedades e utilitários** para criar o design. Conforme elementos de interface do usuário (exibições) são adicionados à área de design, eles serão adicionados à seção **Hierarquia de interface** na ordem em que aparecem no **Editor de interface**.
+A seção **Editor de interface** fornece a superfície em que a interface do usuário é disposta graficamente. Arrastar elementos da seção **Biblioteca** da seção **Propriedades e utilitários** para criar o design. Conforme elementos de interface do usuário (exibições) são adicionados à área de design, eles serão adicionados à seção **Hierarquia de interface** na ordem em que aparecem no **Editor de interface**.
 
 ### <a name="properties--utilities"></a>Propriedades e utilitários
 
@@ -579,9 +579,9 @@ Após ter aprendido noções básicas de como trabalhar com um aplicativo Xamari
 - [Modos de exibição de conjuntos](~/mac/user-interface/collection-view.md) – este artigo aborda o trabalho com modos de exibição de conjuntos em um aplicativo Xamarin.Mac. Ele aborda as ações de criar e manter modos de exibição de coleção no Interface Builder e Xcode, como expor os itens de modos de exibição de coleção ao código usando saídas e ações, popular modos de exibição de coleção e, por fim, responder aos modos de exibição de coleção em código C#.
 - [Trabalhando com imagens](~/mac/app-fundamentals/image.md) – este artigo aborda o trabalho com imagens e ícones em um aplicativo Xamarin.Mac. Ele aborda a criação e manutenção das imagens necessárias para criar o ícone de um aplicativo e usar imagens tanto em código C# quanto no Interface Builder do Xcode.
 
-A [Galeria de Amostras do Mac](https://developer.xamarin.com/samples/mac/all/) contém exemplos de código prontos para uso para ajudar na aprendizagem do Xamarin.Mac.
+A [Galeria de Amostras do Mac](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Mac) contém exemplos de código prontos para uso para ajudar na aprendizagem do Xamarin.Mac.
 
-Um aplicativo Xamarin.Mac completo que inclui muitos dos recursos que o usuário espera encontrar em um aplicativo típico do Mac é o [Aplicativo de Exemplo SourceWriter](https://developer.xamarin.com/samples/mac/SourceWriter/). SourceWriter é um editor de código-fonte simples que dá suporte para a conclusão de código e realce de sintaxe simples.
+Um aplicativo Xamarin.Mac completo que inclui muitos dos recursos que o usuário espera encontrar em um aplicativo típico do Mac é o [Aplicativo de Exemplo SourceWriter](https://docs.microsoft.com/samples/xamarin/mac-samples/sourcewriter). SourceWriter é um editor de código-fonte simples que dá suporte para a conclusão de código e realce de sintaxe simples.
 
 O código do SourceWriter foi totalmente comentado e, quando disponível, foram fornecidos links de tecnologias-chave ou métodos para informações relevantes na documentação do Xamarin.Mac.
 
@@ -591,5 +591,5 @@ Este artigo abordou os conceitos básicos de um aplicativo Xamarin.Mac padrão. 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Hello, Mac (amostra)](https://developer.xamarin.com/samples/mac/Hello_Mac/)
+- [Hello, Mac (amostra)](https://docs.microsoft.com/samples/xamarin/mac-samples/hello-mac)
 - [Diretrizes de Interface Humana do macOS](https://developer.apple.com/design/human-interface-guidelines/macos/overview/themes/)

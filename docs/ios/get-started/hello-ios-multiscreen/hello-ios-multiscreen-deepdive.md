@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 10/05/2018
-ms.openlocfilehash: 953f626774c02a2861d0d9b3be1f1234f181c622
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 9ce29df9070ee99bb3de9579025f5b0f366d6331
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57670591"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68655898"
 ---
 # <a name="hello-ios-multiscreen--deep-dive"></a>Olá, iOS multitela – análise detalhada
 
@@ -28,11 +28,11 @@ No tutorial [Hello, iOS](~/ios/get-started/hello-ios/index.md), aprendemos que a
 
  [![](hello-ios-multiscreen-deepdive-images/08.png "Este diagrama ilustra a passagem de dados entre duas telas")](hello-ios-multiscreen-deepdive-images/08.png#lightbox)
 
-Em nosso exemplo, os dados foram coletados na primeira tela, passados do primeiro controlador de exibição para o segundo e exibidos pela segunda tela. Essa separação de telas, de controladores de exibição e de dados segue o padrão *MVC (Modelo, Exibição, Controlador)*. Nas próximas seções, discutimos os benefícios do padrão, seus componentes e como os utilizamos em nosso aplicativo Phoneword.
+Em nosso exemplo, os dados foram coletados na primeira tela, passados do primeiro controlador de exibição para o segundo e exibidos pela segunda tela. Essa separação de telas, de controladores de exibição e de dados segue o padrão *MVC (Modelo, Exibição, Controlador)* . Nas próximas seções, discutimos os benefícios do padrão, seus componentes e como os utilizamos em nosso aplicativo Phoneword.
 
 ### <a name="benefits-of-the-mvc-pattern"></a>Benefícios do padrão MVC
 
-Modelo-Exibição-Controlador é um *padrão de design* – uma solução de arquitetura reutilizável para um problema ou caso de uso comum no código. MVC é uma arquitetura de aplicativos com uma *GUI (Interface Gráfica do Usuário)*. Ele atribui aos objetos no aplicativo uma entre três funções: *Modelo* (lógica de dados ou aplicativo), *Exibição* (interface do usuário) e *Controlador* (code-behind). O diagrama a seguir ilustra as relações entre as três partes do padrão MVC e o usuário:
+Modelo-Exibição-Controlador é um *padrão de design* – uma solução de arquitetura reutilizável para um problema ou caso de uso comum no código. MVC é uma arquitetura de aplicativos com uma *GUI (Interface Gráfica do Usuário)* . Ele atribui aos objetos no aplicativo uma entre três funções: *Modelo* (lógica de dados ou aplicativo), *Exibição* (interface do usuário) e *Controlador* (code-behind). O diagrama a seguir ilustra as relações entre as três partes do padrão MVC e o usuário:
 
  [![](hello-ios-multiscreen-deepdive-images/00.png "Este diagrama ilustra as relações entre as três partes do padrão MVC e o usuário")](hello-ios-multiscreen-deepdive-images/00.png#lightbox)
 
@@ -205,6 +205,6 @@ Em seguida, vamos aprender a compilar aplicativos de plataforma cruzada com Xama
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Hello, iOS (amostra)](https://developer.xamarin.com/samples/monotouch/Hello_iOS/)
+- [Hello, iOS (amostra)](https://docs.microsoft.com/samples/xamarin/ios-samples/hello-ios)
 - [Diretrizes da interface humana do iOS](https://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/Introduction/Introduction.html)
 - [Portal de provisionamento do iOS](https://developer.apple.com/ios/manage/overview/index.action)

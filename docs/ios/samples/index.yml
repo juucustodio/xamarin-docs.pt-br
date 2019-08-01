@@ -5,7 +5,7 @@ metadata:
   description: Aplicativos de exemplo de Xamarin.iOS de plataforma cruzada para desenvolvedores móveis.
   author: conceptdev
   ms.author: crdun
-  ms.date: 02/17/2018
+  ms.date: 07/30/2019
   ms.topic: sample
 abstract:
   description: 'Aplicativos de exemplo de Xamarin.iOS e demonstrações de código para ajudar você a começar a compilar aplicativos móveis com C# e Xamarin.'
