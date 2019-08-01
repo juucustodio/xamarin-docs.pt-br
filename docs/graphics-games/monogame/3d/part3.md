@@ -6,12 +6,12 @@ ms.assetid: A4130995-48FD-4E2E-9C2B-ADCEFF35BE3A
 author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
-ms.openlocfilehash: f2e65439084d4e89ae529bda79c2cb2739f1529d
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: c44e6b76751096d817727df759ecbeca5bd5a8f3
+ms.sourcegitcommit: f255aa286bd52e8a80ffa620c2e93c97f069f8ec
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656208"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68680989"
 ---
 # <a name="3d-coordinates-in-monogame"></a>Coordenadas 3D em monojogo
 
@@ -37,7 +37,7 @@ Quando terminar, teremos um projeto com um robô movendo em um círculo e uma c�
 
 ## <a name="creating-a-project"></a>Criando um projeto
 
-Este tutorial explica como mover objetos no espaço 3D. Vamos começar com o projeto para renderizar modelos e matrizes de vértices [que podem ser encontrados aqui](https://developer.xamarin.com/samples/mobile/ModelsAndVertsMG/). Depois de baixado, descompacte e abra o projeto para verificar se ele é executado e devemos ver o seguinte:
+Este tutorial explica como mover objetos no espaço 3D. Vamos começar com o projeto para renderizar modelos e matrizes de vértices [que podem ser encontrados aqui](https://docs.microsoft.com/samples/xamarin/mobile-samples/modelsandvertsmg/). Depois de baixado, descompacte e abra o projeto para verificar se ele é executado e devemos ver o seguinte:
 
 ![](part3-images/image2.png "Depois de baixado, descompacte e abra o projeto para certificar-se de que ele é executado e esta exibição deve ser exibida")
 

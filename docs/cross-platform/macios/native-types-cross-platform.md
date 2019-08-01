@@ -6,12 +6,12 @@ ms.assetid: B9C56C3B-E196-4ADA-A1DE-AC10D1001C2A
 author: asb3993
 ms.author: amburns
 ms.date: 04/07/2016
-ms.openlocfilehash: deb4caa4d23d23b2997361cca161b218c1ff7b61
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: e400191b40775cef5d1ab1cba0bd6c4544f8c5fe
+ms.sourcegitcommit: f255aa286bd52e8a80ffa620c2e93c97f069f8ec
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68511298"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68680214"
 ---
 # <a name="working-with-native-types-in-cross-platform-apps"></a>Trabalhando com tipos nativos em aplicativos multiplataforma
 
@@ -251,4 +251,4 @@ Neste artigo, vimos quando usar os tipos de dados nativos em um aplicativo API U
 - [API Unificada](~/cross-platform/macios/unified/index.md)
 - [Tipos nativos](~/cross-platform/macios/nativetypes.md)
 - [Opções de código de compartilhamento](~/cross-platform/app-fundamentals/code-sharing.md)
-- [Exemplo de compartilhamento de código](https://developer.xamarin.com/samples/mobile/SharingCode/)
+- [Exemplo de compartilhamento de código](https://docs.microsoft.com/samples/xamarin/mobile-samples/sharingcode/)
