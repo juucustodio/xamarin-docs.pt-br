@@ -2,7 +2,7 @@
 documentType: LandingData
 title: Xamarin.Forms
 metadata:
-  description: 'O Xamarin.Forms expõe a um kit completo de ferramentas de interface do usuário entre plataformas para desenvolvedores de .NET para compilação de aplicativos para celular, tablet e área de trabalho.'
+  description: 'O Xamarin.Forms expõe um kit completo de ferramentas de interface do usuário multiplataforma para desenvolvedores de .NET para a compilação de aplicativos para celular, tablet e da área de trabalho.'
   author: conceptdev
   ms.author: crdun
   ms.date: 04/22/2019
@@ -57,7 +57,7 @@ sections:
         className: cardsB
         items:
           - href: ~/xamarin-forms/app-fundamentals/
-            html: 'Tudo o que você precisa saber para compilar aplicativos Xamarin.Forms, como trabalhar com arquivos, imagens, bancos de dados e muito mais.'
+            html: 'Tudo que você precisa saber para desenvolver aplicativos Xamarin.Forms, como navegação, gestos, associação de dados e mais.'
             image:
               src: ~/media/icons/i_app-build.svg
               href: ~/xamarin-forms/app-fundamentals/
