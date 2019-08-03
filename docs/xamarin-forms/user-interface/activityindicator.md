@@ -1,68 +1,68 @@
 ---
-title: Indicador de atividade no xamarin. Forms
-description: O controle ActivityIndicator indica aos usuários que o aplicativo está envolvido em uma atividade demorada, sem fornecer nenhuma indicação de progresso. Este artigo explica como usar um ActivityIndicator em XAML e código.
+title: Indicador de atividade no Xamarin. Forms
+description: O controle ActivityIndicator indica aos usuários que o aplicativo está envolvido em uma atividade demorada, sem dar qualquer indicação de progresso. Este artigo explica como usar um ActivityIndicator em XAML e código.
 ms.prod: xamarin
 ms.assetid: 4CEED02D-5CA3-4C3A-B7ED-3193FC272261
 ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 07/10/2019
-ms.openlocfilehash: abd8150e3aa4ec347c8d956004993340630208bf
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: e13a46e1022f4e33ace6f9f19bb5cea5d1ac784b
+ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67837056"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68739164"
 ---
-# <a name="xamarinforms-activityindicator"></a>Xamarin. Forms ActivityIndicator
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/ActivityIndicatorDemos)
+# <a name="xamarinforms-activityindicator"></a>ActivityIndicator Xamarin. Forms
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-activityindicatordemos/)
 
-O xamarin. Forms[ `ActivityIndicator` ](xref:Xamarin.Forms.ActivityIndicator) é um controle que exibe uma animação para mostrar que o aplicativo está envolvido em uma atividade demorada. Ao contrário do [ `ProgressBar` ](xref:Xamarin.Forms.ProgressBar), o `ActivityIndicator` não dá nenhuma indicação de progresso. O `ActivityIndicator` herda [ `View` ](xref:Xamarin.Forms.View).
+O Xamarin. Forms[`ActivityIndicator`](xref:Xamarin.Forms.ActivityIndicator) é um controle que exibe uma animação para mostrar que o aplicativo está envolvido em uma atividade demorada. Ao contrário [`ProgressBar`](xref:Xamarin.Forms.ProgressBar)do, `ActivityIndicator` o não fornece nenhuma indicação de progresso. O `ActivityIndicator` herda de [`View`](xref:Xamarin.Forms.View).
 
-A captura de tela a seguir mostra um `ActivityIndicator` controle no iOS e Android:
+A captura de tela a `ActivityIndicator` seguir mostra um controle no Ios e no Android:
 
-![Captura de tela de ActivityIndicator no iOS e Android](activityindicator-images/activityindicators-default.png "captura de tela de ActivityIndicator no iOS e Android")
+![Captura de tela de ActivityIndicator no Ios e Android](activityindicator-images/activityindicators-default.png "Captura de tela de ActivityIndicator no Ios e Android")
 
-O `ActivityIndicator` controle define as propriedades a seguir:
+O `ActivityIndicator` controle define as seguintes propriedades:
 
-* [`IsRunning`](xref:Xamarin.Forms.ActivityIndicator.IsRunning) é um `bool` valor que indica se o `ActivityIndicator` deve ser visível e animação ou oculto. Quando o valor for `false` o `ActivityIndicator` não ficará visível.
-* [`Color`](xref:Xamarin.Forms.ActivityIndicator.Color) é um `Color` valor que define a cor da tela do `ActivityIndicator`.
+* [`IsRunning`](xref:Xamarin.Forms.ActivityIndicator.IsRunning)é um `bool` valor que indica se o `ActivityIndicator` deve estar visível e animado ou oculto. Quando o valor for `false` o `ActivityIndicator` , não estará visível.
+* [`Color`](xref:Xamarin.Forms.ActivityIndicator.Color)é um `Color` valor que define a cor `ActivityIndicator`de exibição do.
 
-Essas propriedades têm o respaldo [ `BindableProperty` ](xref:Xamarin.Forms.BindableProperty) objetos, o que significa que o `ActivityIndicator` podem ser estilizados e ser o destino de vinculações de dados.
+Essas propriedades são apoiadas por [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objetos, o que significa que `ActivityIndicator` o pode ser estilizado e ser o destino de associações de dados.
 
 ## <a name="create-an-activityindicator"></a>Criar um ActivityIndicator
 
-Um `ActivityIndicator` pode ser instanciada em XAML. Seu `IsRunning` propriedade pode ser definida para determinar se o controle está visível e animação. Se o `IsRunning` propriedade não está definida, o padrão será `false` e o `ActivityIndicator` não ficará visível. O exemplo a seguir mostra como instanciar uma `ActivityIndicator` no XAML com opcional `IsRunning` conjunto de propriedades:
+Um `ActivityIndicator` pode ser instanciado em XAML. Sua `IsRunning` propriedade pode ser definida para determinar se o controle está visível e animando. Se a `IsRunning` propriedade não estiver definida, o padrão `false` será e o `ActivityIndicator` não será visível. O exemplo a seguir mostra como criar uma `ActivityIndicator` instância de em XAML com `IsRunning` o conjunto de propriedades opcional:
 
 ```xaml
 <ActivityIndicator IsRunning="true" />
 ```
 
-Um `ActivityIndicator` também podem ser criados no código:
+Um `ActivityIndicator` também pode ser criado no código:
 
 ```csharp
 ActivityIndicator activityIndicator = new ActivityIndicator { IsRunning = true };
 ```
 
-## <a name="activityindicator-appearance-properties"></a>Propriedades de aparência ActivityIndicator
+## <a name="activityindicator-appearance-properties"></a>Propriedades de aparência do ActivityIndicator
 
-O `Color` propriedade pode ser definida para definir o `ActivityIndicator` cor. O exemplo a seguir mostra como instanciar uma `ActivityIndicator` no XAML com o `Color` conjunto de propriedades:
+A `Color` propriedade pode ser definida para definir a `ActivityIndicator` cor. O exemplo a seguir mostra como criar uma `ActivityIndicator` instância de em XAML `Color` com o conjunto de propriedades:
 
 ```xaml
 <ActivityIndicator Color="Orange" />
 ```
 
-O `Color` propriedade também pode ser definida durante a criação de um `ActivityIndicator` no código:
+A `Color` Propriedade também pode ser definida ao criar um `ActivityIndicator` no código:
 
 ```csharp
 ActivityIndicator activityIndicator = new ActivityIndicator { Color = Color.Orange };
 ```
 
-A captura de tela a seguir mostra a `ActivityIndicator` com o `Color` propriedade definida como `Color.Orange` no iOS e Android:
+A captura de tela a `ActivityIndicator` seguir mostra `Color` o com a `Color.Orange` propriedade definida como em Ios e Android:
 
-![Captura de tela de ActivityIndicator com estilo definido no iOS e Android](activityindicator-images/activityindicators-styled.png "captura de tela de ActivityIndicator com estilo definido no iOS e Android")
+![Captura de tela de ActivityIndicator com estilo em Ios e Android](activityindicator-images/activityindicators-styled.png "Captura de tela de ActivityIndicator com estilo em Ios e Android")
 
 ## <a name="related-links"></a>Links relacionados
 
-* [Demonstrações de ActivityIndicator](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/ActivityIndicatorDemos)
+* [Demonstrações do ActivityIndicator](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-activityindicatordemos/)
 * [ProgressBar](~/xamarin-forms/user-interface/progressbar.md)

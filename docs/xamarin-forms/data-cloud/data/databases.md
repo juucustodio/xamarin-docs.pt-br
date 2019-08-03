@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/21/2018
-ms.openlocfilehash: 321448453ebe38bd7d43665a3c8bade4fe0f68c2
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 9ea105b27aacef9ca9d63af0c57de880d039ff53
+ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68645250"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68739174"
 ---
 # <a name="xamarinforms-local-databases"></a>Bancos de dados locais do Xamarin.Forms
 
@@ -24,7 +24,7 @@ _O Xamarin.Forms dá suporte a aplicativos controlados por banco de dados usando
 
 Os aplicativos Xamarin.Forms podem usar o pacote [NuGet SQLite.NET PCL](https://www.nuget.org/packages/sqlite-net-pcl/) para incorporar operações de banco de dados no código compartilhado referenciando as classes `SQLite` que acompanham o NuGet. As operações de banco de dados podem ser definidas no projeto de biblioteca do .NET Standard da solução Xamarin.Forms.
 
-O [aplicativo de exemplo](https://github.com/xamarin/xamarin-forms-samples/tree/master/Todo) que acompanha é um aplicativo simples de lista de tarefas. As capturas de tela a seguir mostram como o exemplo é exibido em cada plataforma:
+O [aplicativo de exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo) que acompanha é um aplicativo simples de lista de tarefas. As capturas de tela a seguir mostram como o exemplo é exibido em cada plataforma:
 
 [![Capturas de tela de exemplo do banco de dados Xamarin.Forms](databases-images/todo-list-sml.png "Capturas de tela da primeira página TodoList")](databases-images/todo-list.png#lightbox "Capturas de tela da primeira página TodoList")[![Capturas de tela de exemplo do banco de dados Xamarin.Forms](databases-images/todo-list-sml.png "Capturas de tela de exemplo do banco de dados Xamarin.Forms")](databases-images/todo-list.png#lightbox "Capturas de tela de exemplo do banco de dados Xamarin.Forms")
 
@@ -124,4 +124,3 @@ O foco deste artigo foi o **acesso** a um banco de dados SQLite que usa o Xamari
 
 - [Exemplo de tarefas pendentes](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo)
 - [Amostras do Xamarin.Forms](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms)
-

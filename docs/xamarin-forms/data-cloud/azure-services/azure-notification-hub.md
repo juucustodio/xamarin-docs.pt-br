@@ -1,78 +1,78 @@
 ---
-title: Enviar e receber notificações por push com Hubs de notificação do Azure e o xamarin. Forms
-description: Este artigo explica como usar os Hubs de notificação do Azure para enviar notificações por push de plataforma cruzada para aplicativos xamarin. Forms.
+title: Enviar e receber notificações por push com hubs de notificação do Azure e Xamarin. Forms
+description: Este artigo explica como usar os hubs de notificação do Azure para enviar notificações por push de plataforma cruzada para aplicativos Xamarin. Forms.
 ms.prod: xamarin
 ms.assetid: 07D13195-3A0D-4C95-ACF0-143A9084973C
 ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 05/23/2019
-ms.openlocfilehash: fb2f108ba115690ca181738486fd8310f26bb909
-ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
+ms.openlocfilehash: c4237e9315ccc095abc72fdec24d58ffe1faebdf
+ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67674513"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68739223"
 ---
-# <a name="send-and-receive-push-notifications-with-azure-notification-hubs-and-xamarinforms"></a>Enviar e receber notificações por push com Hubs de notificação do Azure e o xamarin. Forms
+# <a name="send-and-receive-push-notifications-with-azure-notification-hubs-and-xamarinforms"></a>Enviar e receber notificações por push com hubs de notificação do Azure e Xamarin. Forms
 
-[![Baixar exemplo](~/media/shared/download.png)baixar o exemplo](https://github.com/xamarin/xamarin-forms-samples/tree/master/WebServices/AzureNotificationHub)
+[![Baixar exemplo](~/media/shared/download.png)baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azurenotificationhub/)
 
-Envie notificações enviar informações de um sistema de back-end para um aplicativo móvel. Apple, Google e outras plataformas tem seu próprio serviço de notificação por Push (PNS). Os Hubs de notificação do Azure permitem que você centralize notificações entre plataformas para que seu aplicativo de back-end que possa se comunicar com um único hub cuida de distribuir as notificações para cada PNS específico da plataforma.
+As notificações por push entregam informações de um sistema de back-end para um aplicativo móvel. A Apple, o Google e outras plataformas têm seu próprio serviço de notificação por push (PNS). Os hubs de notificação do Azure permitem centralizar notificações entre plataformas para que seu aplicativo de back-end possa se comunicar com um único Hub, que cuida da distribuição das notificações para cada PNS específica da plataforma.
 
-Integre os Hubs de notificação do Azure em aplicativos móveis, seguindo estas etapas:
+Integre os hubs de notificação do Azure em aplicativos móveis seguindo estas etapas:
 
-1. [Configurar serviços de notificação por Push e o Hub de notificação do Azure](#set-up-push-notification-services-and-azure-notification-hub).
-1. [Entenda como usar marcas e modelos](#register-templates-and-tags-with-the-azure-notification-hub).
-1. [Criar um aplicativo do xamarin. Forms multiplataforma](#xamarinforms-application-functionality).
-1. [Configurar o projeto Android nativo para notificações por push](#configure-the-android-application-for-notifications).
-1. [Configurar o projeto do iOS nativo para notificações por push](#configure-ios-for-notifications).
+1. [Configure o Notification Services de envio por push e o Hub de notificação do Azure](#set-up-push-notification-services-and-azure-notification-hub).
+1. [Entenda como usar modelos e marcas](#register-templates-and-tags-with-the-azure-notification-hub).
+1. [Crie um aplicativo Xamarin. Forms de plataforma cruzada](#xamarinforms-application-functionality).
+1. [Configure o projeto nativo do Android para notificações por push](#configure-the-android-application-for-notifications).
+1. [Configure o projeto nativo do IOS para notificações por push](#configure-ios-for-notifications).
 1. [Testar as notificações usando o Hub de notificação do Azure](#test-notifications-in-the-azure-portal).
-1. [Criar um aplicativo de back-end para enviar notificações](#create-a-notification-dispatcher).
+1. [Crie um aplicativo de back-end para enviar notificações](#create-a-notification-dispatcher).
 
-## <a name="set-up-push-notification-services-and-azure-notification-hub"></a>Configurar serviços de notificação por Push e o Hub de notificação do Azure
+## <a name="set-up-push-notification-services-and-azure-notification-hub"></a>Configurar o Notification Services de envio por push e o Hub de notificação do Azure
 
-A integração dos Hubs de notificação do Azure com um aplicativo móvel do xamarin. Forms é semelhante ao integrar os Hubs de notificação do Azure com um aplicativo nativo do Xamarin. Configurar uma **aplicativo FCM** seguindo estas etapas de Console do Firebase em [notificações por Push para o xamarin. Android usando os Hubs de notificação do Azure](/azure/notification-hubs/xamarin-notification-hubs-push-notifications-android-gcm#create-a-firebase-project-and-enable-firebase-cloud-messaging). Conclua as etapas a seguir usando o tutorial do xamarin. Android:
+A integração dos hubs de notificação do Azure a um aplicativo móvel Xamarin. Forms é semelhante à integração dos hubs de notificação do Azure com um aplicativo nativo do Xamarin. Configure um **aplicativo FCM** seguindo as etapas do console firebase em [notificações por push para o Xamarin. Android usando os hubs de notificação do Azure](/azure/notification-hubs/xamarin-notification-hubs-push-notifications-android-gcm#create-a-firebase-project-and-enable-firebase-cloud-messaging). Conclua as etapas a seguir usando o tutorial do Xamarin. Android:
 
-1. Definir um nome de pacote do Android, como `com.xamarin.notifysample`, que é usado no exemplo.
-1. Baixe **google-Services. JSON** do console Firebase. Você adicionará esse arquivo ao seu aplicativo Android em uma etapa futura.
-1. Criar uma instância de Hub de notificação do Azure e dê a ele um nome. Neste artigo e exemplo, use `xdocsnotificationhub` como o nome do hub.
-1. Copie o FCM **chave do servidor** e salve-o como o **chave de API** sob **Google (GCM/FCM)** no Hub de notificação do Azure.
+1. Defina um nome de pacote do Android `com.xamarin.notifysample`, como, que é usado no exemplo.
+1. Baixe o **Google-Services. JSON** no console do firebase. Você adicionará esse arquivo ao seu aplicativo Android em uma etapa futura.
+1. Crie uma instância do hub de notificação do Azure e dê um nome a ela. Este artigo e o exemplo `xdocsnotificationhub` usam como o nome do Hub.
+1. Copie a **chave do servidor** FCM e salve-a como a **chave de API** no **Google (GCM/FCM)** em seu hub de notificação do Azure.
 
-Captura de tela a seguir mostra a configuração da plataforma Google no Hub de notificação do Azure:
+A captura de tela a seguir mostra a configuração da plataforma Google no Hub de notificação do Azure:
 
-![Captura de tela da configuração do Google de Hub de notificação do Azure](azure-notification-hub-images/fcm-notification-hub-config.png "configuração do Google de Hub de notificação do Azure")
+![Captura de tela da configuração do Google do hub de notificação do Azure](azure-notification-hub-images/fcm-notification-hub-config.png "Configuração do Google do hub de notificação do Azure")
 
-Você precisará de um computador macOS para concluir a configuração para dispositivos iOS. Configurar o APNS seguindo inicial etapas em [notificações por Push para o xamarin. IOS usando os Hubs de notificação do Azure](/azure/notification-hubs/xamarin-notification-hubs-ios-push-notification-apns-get-started#generate-the-certificate-signing-request-file). Conclua as etapas a seguir usando o tutorial do xamarin. IOS:
+Você precisará de uma máquina macOS para concluir a configuração para dispositivos iOS. Configure o APNS seguindo as etapas iniciais em [notificações por push para o Xamarin. Ios usando os hubs de notificação do Azure](/azure/notification-hubs/xamarin-notification-hubs-ios-push-notification-apns-get-started#generate-the-certificate-signing-request-file). Conclua as etapas a seguir usando o tutorial do Xamarin. iOS:
 
-1. Defina um identificador de pacote do iOS. Neste artigo e exemplo, use `com.xamarin.notifysample` como o identificador de pacote.
-1. Crie um arquivo de solicitação de assinatura de certificado (CSR) e usá-lo para gerar um certificado de notificação por push.
-1. Carregue o certificado de notificação por push sob **da Apple (APNS)** no Hub de notificação do Azure.
+1. Defina um identificador de pacote do iOS. Este artigo e o exemplo `com.xamarin.notifysample` usam como o identificador de pacote.
+1. Crie um arquivo CSR (solicitação de assinatura de certificado) e use-o para gerar um certificado de notificação por push.
+1. Carregue o certificado de notificação por push em **Apple (APNS)** em seu hub de notificação do Azure.
 
-Captura de tela a seguir mostra a configuração da plataforma da Apple no Hub de notificação do Azure:
+A captura de tela a seguir mostra a configuração da plataforma Apple no Hub de notificação do Azure:
 
-![Captura de tela da configuração da Apple de Hub de notificação do Azure](azure-notification-hub-images/apns-notification-hub-config.png "configuração da Apple de Hub de notificação do Azure")
+![Captura de tela da configuração da Apple do hub de notificação do Azure](azure-notification-hub-images/apns-notification-hub-config.png "Configuração da Apple do hub de notificação do Azure")
 
-## <a name="register-templates-and-tags-with-the-azure-notification-hub"></a>Registrar marcas e modelos com o Hub de notificação do Azure
+## <a name="register-templates-and-tags-with-the-azure-notification-hub"></a>Registrar modelos e marcas com o Hub de notificação do Azure
 
-O Hub de notificação do Azure requer aplicativos móveis para registrar com o hub, definir modelos e inscrever-se às marcas. Registro vincula um identificador PNS específico da plataforma para um identificador no Hub de notificação do Azure. Para saber mais sobre os registros, consulte [gerenciamento de registro](/azure/notification-hubs/notification-hubs-push-notification-registration-management).
+O Hub de notificação do Azure exige que os aplicativos móveis se registrem no Hub, definam modelos e assinem marcas. O registro vincula um identificador PNS específico à plataforma a um identificador no Hub de notificação do Azure. Para saber mais sobre os registros, consulte [Gerenciamento de registro](/azure/notification-hubs/notification-hubs-push-notification-registration-management).
 
-Modelos permitem que dispositivos especificar modelos de mensagem com parâmetros. Mensagens de entrada podem ser personalizadas por dispositivo, por marca. Para saber mais sobre modelos, consulte [modelos](/azure/notification-hubs/notification-hubs-templates-cross-platform-push-messages).
+Os modelos permitem que os dispositivos especifiquem modelos de mensagem com parâmetros. As mensagens de entrada podem ser personalizadas por dispositivo, por marca. Para saber mais sobre modelos, consulte [modelos](/azure/notification-hubs/notification-hubs-templates-cross-platform-push-messages).
 
-Marcas podem ser usadas para se inscrever em categorias de mensagem, como notícias, esportes e clima. Para simplificar, o aplicativo de exemplo define um modelo padrão com um parâmetro único chamado `messageParam` e uma única marca chamada `default`. Em sistemas mais complexos, marcas de usuário específicas podem ser usadas para a mensagem a um usuário em todos os dispositivos para notificações personalizadas. Para saber mais sobre marcas, consulte [expressões de marca e roteamento](/azure/notification-hubs/notification-hubs-tags-segment-push-message).
+As marcas podem ser usadas para assinar categorias de mensagens, como notícias, esportes e clima. Para simplificar, o aplicativo de exemplo define um modelo padrão com um único `messageParam` parâmetro chamado e uma única `default`marca chamada. Em sistemas mais complexos, as marcas específicas do usuário podem ser usadas para mensagens de um usuário em dispositivos para notificações personalizadas. Para saber mais sobre marcas, consulte [expressões de marca e de roteamento](/azure/notification-hubs/notification-hubs-tags-segment-push-message).
 
-Para receber com êxito mensagens, cada aplicativo nativo deve executar estas etapas:
+Para receber mensagens com êxito, cada aplicativo nativo deve executar estas etapas:
 
-1. Para obter um token ou indicador PNS da plataforma PNS.
+1. Obtenha um identificador ou token PNS da plataforma PNS.
 1. Registre o identificador PNS com o Hub de notificação do Azure.
-1. Especifique um modelo que contém os mesmos parâmetros que as mensagens de saída.
-1. Inscrever-se a marca direcionada por mensagens de saída.
+1. Especifique um modelo que contenha os mesmos parâmetros de mensagens de saída.
+1. Assine a marca direcionada por mensagens de saída.
 
-Essas etapas são descritas em mais detalhes para cada plataforma na [configurar o aplicativo Android para notificações](#configure-the-android-application-for-notifications) e [configurar notificações do iOS](#configure-ios-for-notifications) seções.
+Essas etapas são descritas em mais detalhes para cada plataforma nas seções [Configurar o aplicativo Android para notificações](#configure-the-android-application-for-notifications) e [Configurar o Ios para notificações](#configure-ios-for-notifications) .
 
-## <a name="xamarinforms-application-functionality"></a>Funcionalidade do aplicativo xamarin. Forms
+## <a name="xamarinforms-application-functionality"></a>Funcionalidade do aplicativo Xamarin. Forms
 
-O exemplo de aplicativo do xamarin. Forms exibe uma lista de mensagens de notificação por push. Isso é feito com o `AddMessage` método, que adiciona a mensagem de notificação por push especificada na interface do usuário. Esse método também impede que mensagens duplicadas sejam adicionados à interface do usuário e é executado no thread principal, de modo que ele possa ser chamado de qualquer thread. O seguinte código mostra o `AddMessage` método:
+O aplicativo Xamarin. Forms de exemplo exibe uma lista de mensagens de notificação por push. Isso é obtido com o `AddMessage` método, que adiciona a mensagem de notificação por push especificada à interface do usuário. Esse método também impede que mensagens duplicadas sejam adicionadas à interface do usuário e são executadas no thread principal para que possam ser chamadas de qualquer thread. O código a seguir mostra `AddMessage` o método:
 
 ```csharp
 public void AddMessage(string message)
@@ -97,7 +97,7 @@ public void AddMessage(string message)
 }
 ```
 
-O aplicativo de exemplo contém um **AppConstants.cs** arquivo, que define as propriedades usadas pelos projetos de plataforma. Esse arquivo precisa ser personalizado com os valores do Hub de notificação do Azure. O código a seguir mostra a **AppConstants.cs** arquivo:
+O aplicativo de exemplo contém um arquivo **AppConstants.cs** , que define as propriedades usadas pelos projetos da plataforma. Esse arquivo precisa ser personalizado com valores de seu hub de notificação do Azure. O código a seguir mostra o arquivo **AppConstants.cs** :
 
 ```csharp
 public static class AppConstants
@@ -112,36 +112,36 @@ public static class AppConstants
 }
 ```
 
-Personalizar os seguintes valores no `AppConstants` para conectar o aplicativo de exemplo para o Hub de notificação do Azure:
+Personalize os seguintes valores no `AppConstants` para conectar o aplicativo de exemplo ao Hub de notificação do Azure:
 
-* `NotificationHubName`: Use o nome do Hub de notificação do Azure criada no portal do Azure.
-* `ListenConnectionString`: Esse valor é encontrado no Hub de notificação do Azure sob **políticas de acesso**.
+* `NotificationHubName`: Use o nome do hub de notificação do Azure que você criou em seu portal do Azure.
+* `ListenConnectionString`: Esse valor é encontrado no Hub de notificação do Azure em **políticas de acesso**.
 
-A captura de tela a seguir mostra onde esses valores estão localizados no portal do Azure:
+A captura de tela a seguir mostra onde esses valores estão localizados na portal do Azure:
 
-![Captura de tela da política de acesso do Hub de notificação do Azure](azure-notification-hub-images/notification-hub-access-policy.png "política de acesso do Hub de notificação do Azure")
+![Captura de tela da política de acesso do hub de notificação do Azure](azure-notification-hub-images/notification-hub-access-policy.png "Política de acesso do hub de notificação do Azure")
 
 ## <a name="configure-the-android-application-for-notifications"></a>Configurar o aplicativo Android para notificações
 
-Conclua as seguintes etapas para configurar o aplicativo Android para receber e processar notificações:
+Conclua as etapas a seguir para configurar o aplicativo Android para receber e processar notificações:
 
-1. Configurar o Android **nome do pacote** para corresponder ao nome do pacote no console do Firebase.
-1. Instale os seguintes pacotes NuGet para interagir com o Google Play, Firebase e Hubs de notificação do Azure:
+1. Configure o **nome do pacote** do Android para corresponder ao nome do pacote no console do firebase.
+1. Instale os seguintes pacotes NuGet para interagir com os hubs de notificação Google Play, firebase e Azure:
     1. Xamarin.GooglePlayServices.Base.
     1. Xamarin.Firebase.Messaging.
     1. Xamarin.Azure.NotificationHubs.Android.
-1. Cópia de `google-services.json` arquivo que você baixou durante a instalação do FCM ao projeto e defina a Build Action `GoogleServicesJson`.
-1. [Configurar androidmanifest. XML para se comunicar com o Firebase](#configure-android-manifest).
-1. [Registrar o aplicativo com o Firebase e o Hub de notificação do Azure usando um `FirebaseInstanceIdService` ](#register-using-a-custom-firebaseinstanceidservice).
+1. Copie o `google-services.json` arquivo que você baixou durante a instalação do FCM para o projeto e defina a `GoogleServicesJson`ação de compilação como.
+1. [Configure o AndroidManifest. xml para se comunicar com o firebase](#configure-android-manifest).
+1. [Registre o aplicativo com o firebase e o Hub de notificação `FirebaseInstanceIdService`do Azure usando um ](#register-using-a-custom-firebaseinstanceidservice).
 1. [Processar mensagens com um `FirebaseMessagingService` ](#process-messages-with-a-firebasemessagingservice).
-1. [Adicionar notificações de entrada à interface do usuário do xamarin. Forms](#add-incoming-notifications-to-the-xamarinforms-ui).
+1. [Adicione notificações de entrada à interface do usuário do Xamarin. Forms](#add-incoming-notifications-to-the-xamarinforms-ui).
 
 > [!NOTE]
-> O **GoogleServicesJson** ação de compilação faz parte do **Xamarin.GooglePlayServices.Base** pacote do NuGet. 2019 do Visual Studio define as ações de Build disponíveis durante a inicialização. Se você não vir **GoogleServicesJson** como uma ação de compilação, reinicie 2019 do Visual Studio depois de instalar os pacotes do NuGet.
+> A ação de compilação **GoogleServicesJson** faz parte do pacote NuGet **Xamarin. GooglePlayServices. base** . O Visual Studio 2019 define as ações de compilação disponíveis durante a inicialização. Se você não vir **GoogleServicesJson** como uma ação de compilação, reinicie o Visual Studio 2019 depois de instalar os pacotes NuGet.
 
 ### <a name="configure-android-manifest"></a>Configurar o manifesto do Android
 
-O `receiver` elementos dentro de `application` elemento permitir que o aplicativo para se comunicar com o Firebase. O `uses-permission` elementos permitem que o aplicativo lidar com mensagens e registrar com o Hub de notificação do Azure. A conclusão **androidmanifest. XML** deve ser semelhante ao exemplo a seguir:
+Os `receiver` elementos dentro do `application` elemento permitem que o aplicativo se comunique com o firebase. Os `uses-permission` elementos permitem que o aplicativo manipule mensagens e registre-se no Hub de notificação do Azure. O **AndroidManifest. xml** completo deve ser semelhante ao exemplo abaixo:
 
 ```xml
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="YOUR_PACKAGE_NAME" android:installLocation="auto">
@@ -163,13 +163,13 @@ O `receiver` elementos dentro de `application` elemento permitir que o aplicativ
 </manifest>
 ```
 
-### <a name="register-using-a-custom-firebaseinstanceidservice"></a>Registrar-se usando um FirebaseInstanceIdService personalizado
+### <a name="register-using-a-custom-firebaseinstanceidservice"></a>Registrar usando um FirebaseInstanceIdService personalizado
 
-O firebase emite tokens que identificam exclusivamente um dispositivo em que o PNS. Tokens têm um tempo de vida longa, mas são atualizados ocasionalmente. Quando um token é emitido ou atualizado, o aplicativo precisa registrar seu novo token com o Hub de notificação do Azure. Registro é tratado por uma instância de uma classe que deriva de `FirebaseInstanceIdService`.
+Firebase emite tokens que identificam exclusivamente um dispositivo no PNS. Os tokens têm um longo tempo de vida, mas são ocasionalmente atualizados. Quando um token é emitido ou atualizado, o aplicativo precisa registrar seu novo token com o Hub de notificação do Azure. O registro é tratado por uma instância de uma classe derivada de `FirebaseInstanceIdService`.
 
-No aplicativo de exemplo, `FirebaseRegistrationService` classe herda de `FirebaseInstanceIdService`. Essa classe tem um `IntentFilter` que inclui `com.google.firebase.INSTANCE_ID_EVENT`, permitindo que o sistema operacional Android automaticamente chamar `OnTokenRefresh` quando um token é emitido pelo Firebase.
+No aplicativo de exemplo, `FirebaseRegistrationService` a classe é `FirebaseInstanceIdService`herdada de. Essa classe tem um `IntentFilter` que inclui `com.google.firebase.INSTANCE_ID_EVENT`, permitindo que o sistema operacional Android chame `OnTokenRefresh` automaticamente quando um token é emitido pelo firebase.
 
-O código a seguir mostra o personalizado `FirebaseInstanceIdService` do aplicativo de exemplo:
+O código a seguir mostra o `FirebaseInstanceIdService` personalizado do aplicativo de exemplo:
 
 ```csharp
 [Service]
@@ -209,13 +209,13 @@ public class FirebaseRegistrationService : FirebaseInstanceIdService
 }
 ```
 
-O `SendRegistrationToServer` método no `FirebaseRegistrationClass` registra o dispositivo com o Hub de notificação do Azure e assina marcas com um modelo. O aplicativo de exemplo define uma única marca denominada `default` e um modelo com um único parâmetro chamado `messageParam` na **AppConstants.cs** arquivo. Para obter mais informações sobre registro, marcas e modelos, consulte [registrar marcas e modelos com o Hub de notificação do Azure](#register-templates-and-tags-with-the-azure-notification-hub)
+O `SendRegistrationToServer` método`FirebaseRegistrationClass` no registra o dispositivo com o Hub de notificação do Azure e assina as marcas com um modelo. O aplicativo de exemplo define uma única marca `default` chamada e um modelo com um único parâmetro `messageParam` chamado no arquivo **AppConstants.cs** . Para obter mais informações sobre registro, marcas e modelos, consulte [registrar modelos e marcas com o Hub de notificação do Azure](#register-templates-and-tags-with-the-azure-notification-hub)
 
-### <a name="process-messages-with-a-firebasemessagingservice"></a>Processar as mensagens com um FirebaseMessagingService
+### <a name="process-messages-with-a-firebasemessagingservice"></a>Processar mensagens com um FirebaseMessagingService
 
-Mensagens de entrada são roteadas para um `FirebaseMessagingService` instância, onde pode ser convertidos em uma notificação de local. O projeto do Android no aplicativo de exemplo contém uma classe chamada `FirebaseService` que herda de `FirebaseMessagingService`. Essa classe tem um `IntentFilter` que inclui `com.google.firebase.MESSAGING_EVENT`, permitindo que o sistema operacional Android automaticamente chamar `OnMessageReceived` quando uma mensagem de notificação por push é recebida.
+As mensagens recebidas são roteadas para uma `FirebaseMessagingService` instância, onde podem ser convertidas em uma notificação local. O projeto do Android no aplicativo de exemplo contém uma classe `FirebaseService` chamada que herda `FirebaseMessagingService`de. Essa classe tem um `IntentFilter` que inclui `com.google.firebase.MESSAGING_EVENT`, permitindo que o SO Android chame `OnMessageReceived` automaticamente quando uma mensagem de notificação por push é recebida.
 
-A exemplo a seguir mostra o `FirebaseService` do aplicativo de exemplo:
+O exemplo a seguir mostra `FirebaseService` o do aplicativo de exemplo:
 
 ```csharp
 [Service]
@@ -276,16 +276,16 @@ public class FirebaseService : FirebaseMessagingService
 }
 ```
 
-Mensagens de entrada são convertidas em uma notificação local com o `SendLocalNotification` método. Esse método cria uma nova `Intent` e coloca a mensagem de conteúdo para o `Intent` como um `string` `Extra`. Quando o usuário toca a notificação local, se o aplicativo está em primeiro plano ou segundo plano, o `MainActivity` é iniciado e tem acesso ao conteúdo da mensagem por meio de `Intent` objeto.
+As mensagens de entrada são convertidas em uma `SendLocalNotification` notificação local com o método. Esse método cria um novo `Intent` e coloca o conteúdo da mensagem `Intent` no como um `string` `Extra`. Quando o usuário toca na notificação local, se o aplicativo está em primeiro plano ou em segundo plano, `MainActivity` o é iniciado e tem acesso ao conteúdo da mensagem por `Intent` meio do objeto.
 
-A notificação local e `Intent` exemplo exige que o usuário executar a ação de tocar na notificação. Isso é desejável quando o usuário deve agir antes das alterações de estado do aplicativo. No entanto, você talvez queira acessar os dados da mensagem sem a necessidade de uma ação do usuário em alguns casos. O exemplo anterior também envia a mensagem diretamente para o atual `MainPage` de instância com o `SendMessageToMainPage` método. Em produção, se você implementar os dois métodos para um tipo de mensagem único, o `MainPage` objeto receberá mensagens duplicadas, se o usuário toca na notificação.
+A notificação local e `Intent` o exemplo exigem que o usuário execute a ação de tocar na notificação. Isso é desejável quando o usuário deve executar uma ação antes que o estado do aplicativo seja alterado. No entanto, talvez você queira acessar os dados da mensagem sem a necessidade de uma ação do usuário em alguns casos. O exemplo anterior também envia a mensagem diretamente para a instância `MainPage` atual com o `SendMessageToMainPage` método. Em produção, se você implementar os dois métodos para um único tipo de mensagem `MainPage` , o objeto receberá mensagens duplicadas se o usuário tocar na notificação.
 
 > [!NOTE]
-> O aplicativo Android receberá notificações por push apenas se ele estiver em execução no plano de fundo ou primeiro plano. Para receber notificações por push ao principal `Activity` é não em execução, você deve implementar um serviço, que está além do escopo deste exemplo. Para obter mais informações, consulte [criando serviços do Android](/xamarin/android/app-fundamentals/services/)
+> O aplicativo Android receberá notificações por push somente se estiver em execução no plano de fundo ou em primeiro plano. Para receber notificações por push quando a `Activity` principal não está em execução, você deve implementar um serviço, que está além do escopo deste exemplo. Para obter mais informações, consulte [Creating Android Services](/xamarin/android/app-fundamentals/services/)
 
-### <a name="add-incoming-notifications-to-the-xamarinforms-ui"></a>Adicionar notificações de entrada na interface do usuário do xamarin. Forms
+### <a name="add-incoming-notifications-to-the-xamarinforms-ui"></a>Adicionar notificações de entrada à interface do usuário do Xamarin. Forms
 
-O `MainActivity` classe precisa obter permissão para lidar com notificações e gerenciar dados de mensagem de entrada. O código a seguir mostra todo `MainActivity` implementação:
+A `MainActivity` classe precisa obter permissão para lidar com notificações e gerenciar dados de mensagens de entrada. O código a seguir mostra a `MainActivity` implementação completa:
 
 ```csharp
 [Activity(Label = "NotificationHubSample", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation, LaunchMode = LaunchMode.SingleTop)]
@@ -356,28 +356,28 @@ public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompa
 }
 ```
 
-O `Activity` atributo define o aplicativo `LaunchMode` para `SingleTop`. Esse modo de inicialização informa o sistema operacional Android para permitir que somente uma única instância dessa atividade. Com esse modo de inicialização, entrado `Intent` os dados são roteados para o `OnNewIntent` método, que extrai dados de mensagem e o envia para o `MainPage` por meio da instância a `AddMessage` método. Se seu aplicativo usa um modo de inicialização diferente, ele deve tratar `Intent` dados de maneira diferente.
+O `Activity` atributo define o aplicativo `LaunchMode` como `SingleTop`. Esse modo de inicialização informa ao sistema operacional Android para permitir apenas uma única instância dessa atividade. Com esse modo de inicialização, `Intent` os dados de entrada são `OnNewIntent` roteados para o método, que extrai os dados da mensagem `MainPage` e os envia `AddMessage` para a instância por meio do método. Se seu aplicativo usa um modo de inicialização diferente, ele deve `Intent` tratar os dados de maneira diferente.
 
-O `OnCreate` método usa um método auxiliar chamado `IsPlayServiceAvailable` para garantir que o dispositivo dá suporte a Google Play Service. Emuladores ou dispositivos que não dão suporte a Google Play Service não podem receber notificações por push do Firebase.
+O `OnCreate` método usa um método auxiliar chamado `IsPlayServiceAvailable` para garantir que o dispositivo dê suporte ao serviço Google Play. Emuladores ou dispositivos que não dão suporte ao serviço Google Play não podem receber notificações por push de firebase.
 
-## <a name="configure-ios-for-notifications"></a>Configurar notificações do iOS
+## <a name="configure-ios-for-notifications"></a>Configurar o iOS para notificações
 
-O processo de configuração do aplicativo do iOS para receber notificações é:
+O processo para configurar o aplicativo iOS para receber notificações é:
 
-1. Configurar o **identificador de pacote** na **Info. plist** arquivo para coincidir com o valor usado no perfil de provisionamento.
-1. Adicione a **habilitar notificações por Push** opção para o **Entitlements. plist** arquivo.
-1. Adicione a **notificationhubs** pacote NuGet ao seu projeto.
-1. [Se registrar para notificações com o APNS](#register-for-notifications-with-apns).
-1. [Registrar o aplicativo com o Hub de notificação do Azure e inscrever-se às marcas](#register-with-azure-notification-hub-and-subscribe-to-tags).
-1. [Adicionar notificações do APNS à interface do usuário do xamarin. Forms](#add-apns-notifications-to-xamarinforms-ui).
+1. Configure o **identificador do pacote** no arquivo **info. plist** para corresponder ao valor usado no perfil de provisionamento.
+1. Adicione a opção **habilitar notificações por push** ao arquivo de **direitos. plist** .
+1. Adicione o pacote NuGet **Xamarin. Azure. NotificationHubs. Ios** ao seu projeto.
+1. [Registre-se para receber notificações com o APNS](#register-for-notifications-with-apns).
+1. [Registre o aplicativo com o Hub de notificação do Azure e assine as marcas](#register-with-azure-notification-hub-and-subscribe-to-tags).
+1. [Adicione notificações de APNS à interface do usuário do Xamarin. Forms](#add-apns-notifications-to-xamarinforms-ui).
 
-A captura de tela a seguir mostra a **habilitar notificações por Push** opção selecionada na **Entitlements. plist** arquivo dentro do Visual Studio:
+A captura de tela a seguir mostra a opção **habilitar notificações por push** selecionada no arquivo de **direitos. plist** no Visual Studio:
 
-![Captura de tela da qualificação de notificações por Push](azure-notification-hub-images/push-notification-entitlement.png "enviar por Push o direito de notificações")
+![Captura de tela do direito das notificações por push](azure-notification-hub-images/push-notification-entitlement.png "Direitos de notificações por push")
 
-### <a name="register-for-notifications-with-apns"></a>Registre-se para notificações com o APNS
+### <a name="register-for-notifications-with-apns"></a>Registrar-se para notificações com APNS
 
-O `FinishedLaunching` método na **AppDelegate.cs** arquivo precisa ser substituído para se registrar para notificações remotas. Registro é diferente dependendo da versão do iOS que está sendo usada no dispositivo. O projeto do iOS no aplicativo de exemplo substitui o `FinishedLaunching` método a ser chamado `RegisterForRemoteNotifications` conforme mostrado no exemplo a seguir:
+O `FinishedLaunching` método no arquivo **AppDelegate.cs** deve ser substituído para se registrar para notificações remotas. O registro difere dependendo da versão do iOS que está sendo usada no dispositivo. O projeto do Ios no aplicativo de exemplo substitui `FinishedLaunching` o método a `RegisterForRemoteNotifications` ser chamado, conforme mostrado no exemplo a seguir:
 
 ```csharp
 public override bool FinishedLaunching(UIApplication app, NSDictionary options)
@@ -423,16 +423,16 @@ void RegisterForRemoteNotifications()
 }
 ```
 
-### <a name="register-with-azure-notification-hub-and-subscribe-to-tags"></a>Registrar no Hub de notificação do Azure e inscrever-se às marcas
+### <a name="register-with-azure-notification-hub-and-subscribe-to-tags"></a>Registrar-se no Hub de notificação do Azure e assinar marcas
 
-Quando o dispositivo foi registrado com êxito para notificações remotas durante o `FinishedLaunching` método, o iOS chamará o `RegisteredForRemoteNotifications` método. Esse método deve ser substituído para executar as seguintes ações:
+Quando o dispositivo tiver se registrado com êxito para notificações remotas `FinishedLaunching` durante o método, o Ios `RegisteredForRemoteNotifications` chamará o método. Esse método deve ser substituído para executar as seguintes ações:
 
-1. Criar uma instância de `SBNotificationHub`.
-1. Cancelar o registro de todos os registros existentes.
-1. Registre o dispositivo com hub de notificação.
-1. Inscrever-se marcas específicas com um modelo.
+1. Crie uma `SBNotificationHub`instância do.
+1. Cancele o registro de quaisquer registros existentes.
+1. Registre o dispositivo no Hub de notificação.
+1. Assine marcas específicas com um modelo.
 
-Para obter mais informações sobre o registro do dispositivo, modelos e marcas, consulte [registrar marcas e modelos com o Hub de notificação do Azure](#register-templates-and-tags-with-the-azure-notification-hub). O código a seguir demonstra o registro do dispositivo e modelos:
+Para obter mais informações sobre o registro do dispositivo, modelos e marcas, consulte [registrar modelos e marcas com o Hub de notificação do Azure](#register-templates-and-tags-with-the-azure-notification-hub). O código a seguir demonstra o registro do dispositivo e dos modelos:
 
 ```csharp
 public override void RegisteredForRemoteNotifications(UIApplication application, NSData deviceToken)
@@ -473,11 +473,11 @@ public override void RegisteredForRemoteNotifications(UIApplication application,
 ```
 
 > [!NOTE]
-> Se registrar para notificações remotas pode falhar em situações como nenhuma conexão de rede. Você pode optar por substituir o `FailedToRegisterForRemoveNotifications` método para lidar com falha no registro.
+> O registro para notificações remotas pode falhar em situações como nenhuma conexão de rede. Você pode optar por substituir o `FailedToRegisterForRemoveNotifications` método para lidar com a falha de registro.
 
-### <a name="add-apns-notifications-to-xamarinforms-ui"></a>Adicionar notificações do APNS à interface do usuário do xamarin. Forms
+### <a name="add-apns-notifications-to-xamarinforms-ui"></a>Adicionar notificações de APNS à interface do usuário do Xamarin. Forms
 
-Quando um dispositivo recebe uma notificação remota, o iOS chama o `ReceivedRemoteNotification` método. Mensagem de entrada JSON é convertida em uma `NSDictionary` objeto e o `ProcessNotification` método extrai os valores do dicionário e as envia para o xamarin. Forms `MainPage` instância. O `ReceivedRemoteNotifications` método é substituído para chamar `ProcessNotification` conforme mostrado no código a seguir:
+Quando um dispositivo recebe uma notificação remota, o Ios chama `ReceivedRemoteNotification` o método. A mensagem de entrada JSON é convertida em um `NSDictionary` objeto, e o método extrai valores do dicionário e os `ProcessNotification` envia para a instância do `MainPage` Xamarin. Forms. O `ReceivedRemoteNotifications` método é substituído para chamar `ProcessNotification` , conforme mostrado no código a seguir:
 
 ```csharp
 public override void ReceivedRemoteNotification(UIApplication application, NSDictionary userInfo)
@@ -513,21 +513,21 @@ void ProcessNotification(NSDictionary options, bool fromFinishedLaunching)
 }
 ```
 
-## <a name="test-notifications-in-the-azure-portal"></a>Testar as notificações no portal do Azure
+## <a name="test-notifications-in-the-azure-portal"></a>Notificações de teste no portal do Azure
 
-Os Hubs de notificação do Azure permitem que você verificar que seu aplicativo pode receber mensagens de teste. O **envio de teste** seção no hub de notificação permite que você escolha a plataforma de destino e enviar uma mensagem. Definindo o **enviar a expressão de marca** à `default` enviarão mensagens para aplicativos que registraram um modelo para o `default` marca. Clicar a **enviar** botão gera um relatório que inclui o número de dispositivos atingido com a mensagem. Captura de tela a seguir mostra um teste de notificação do Android no portal do Azure:
+Os hubs de notificação do Azure permitem que você verifique se o aplicativo pode receber mensagens de teste. A seção de **envio de teste** no Hub de notificação permite que você escolha a plataforma de destino e envie uma mensagem. A configuração da **expressão enviar para marca** para `default` enviará mensagens a aplicativos que registraram um modelo para `default` a marca. Clicar no botão **Enviar** gera um relatório que inclui o número de dispositivos alcançados com a mensagem. A captura de tela a seguir mostra um teste de notificação do Android no portal do Azure:
 
-![Captura de tela de uma mensagem de teste do Hub de notificação do Azure](azure-notification-hub-images/azure-notification-hub-test-send.png "mensagem de teste do Hub de notificação do Azure")
+![Captura de tela de uma mensagem de teste do hub de notificação do Azure](azure-notification-hub-images/azure-notification-hub-test-send.png "Mensagem de teste do hub de notificação do Azure")
 
-### <a name="testing-tips"></a>Dicas de testes
+### <a name="testing-tips"></a>Dicas de teste
 
-1. Durante o teste que um aplicativo pode receber notificações por push, você deve usar um dispositivo físico. Dispositivos virtuais Android e iOS não podem ser configurados corretamente para receber notificações por push.
-1. O aplicativo Android de exemplo registra seu token e os modelos depois que o token de Firebase é emitido. Durante o teste, você precisará solicitar um novo token e registrar novamente com o Hub de notificação do Azure. A melhor maneira de forçar isso é limpar seu projeto, exclua o `bin` e `obj` pastas e desinstalar o aplicativo do dispositivo antes de recompilar e implantar.
-1. Muitas partes do fluxo de notificação por push são executadas de forma assíncrona. Isso pode resultar em pontos de interrupção não sendo visita ou atingido em uma ordem inesperada. Use o log de depuração ou de dispositivo para rastrear a execução sem interromper o fluxo do aplicativo. Filtre o log de dispositivo Android usando o `DebugTag` especificado no `Constants`.
+1. Ao testar se um aplicativo pode receber notificações por push, você deve usar um dispositivo físico. Os dispositivos virtuais Android e iOS podem não estar configurados corretamente para receber notificações por push.
+1. O aplicativo Android de exemplo registra seu token e modelos uma vez quando o token firebase é emitido. Durante os testes, talvez seja necessário solicitar um novo token e registrá-lo novamente com o Hub de notificação do Azure. A melhor maneira de forçar isso é limpar o projeto, excluir as `bin` pastas e `obj` e desinstalar o aplicativo do dispositivo antes de recompilar e implantar.
+1. Muitas partes do fluxo de notificação por push são executadas de forma assíncrona. Isso pode fazer com que os pontos de interrupção não sejam atingidos ou estejam sendo atingidos em uma ordem inesperada. Use o registro de dispositivo ou de depuração para rastrear a execução sem interromper o fluxo do aplicativo. Filtre o log do dispositivo Android usando `DebugTag` o especificado `Constants`em.
 
-## <a name="create-a-notification-dispatcher"></a>Criar um dispatcher de notificação
+## <a name="create-a-notification-dispatcher"></a>Criar um Dispatcher de notificação
 
-Os Hubs de notificação do Azure permitem que seu aplicativo de back-end enviar notificações para dispositivos entre plataformas. O exemplo demonstra a expedição de notificação com o **NotificationDispatcher** aplicativo de console. O aplicativo inclui o **DispatcherConstants.cs** arquivo, que define as propriedades a seguir:
+Os hubs de notificação do Azure permitem que seu aplicativo de back-end envie notificações para dispositivos entre plataformas. O exemplo demonstra a expedição de notificação com o aplicativo de console **NotificationDispatcher** . O aplicativo inclui o arquivo **DispatcherConstants.cs** , que define as seguintes propriedades:
 
 ```csharp
 public static class DispatcherConstants
@@ -538,11 +538,11 @@ public static class DispatcherConstants
 }
 ```
 
-Você deve configurar o **DispatcherConstants.cs** para corresponder à sua configuração de Hub de notificação do Azure. O valor da `SubscriptionTags` propriedade deve corresponder aos valores usados nos aplicativos do cliente. O `NotificationHubName` propriedade é o nome da sua instância do Hub de notificação do Azure. O `FullAccessConnectionString` propriedade é a chave de acesso encontrada em seu hub de notificação **políticas de acesso**. Captura de tela a seguir mostra o local do `NotificationHubName` e `FullAccessConnectionString` propriedades no portal do Azure:
+Você deve configurar o **DispatcherConstants.cs** para corresponder à configuração do hub de notificação do Azure. O valor da `SubscriptionTags` propriedade deve corresponder aos valores usados nos aplicativos cliente. A `NotificationHubName` propriedade é o nome da sua instância do hub de notificação do Azure. A `FullAccessConnectionString` propriedade é a chave de acesso encontrada nas políticas de **acesso**do hub de notificação. A captura de tela a seguir mostra o `NotificationHubName` local `FullAccessConnectionString` das propriedades e no portal do Azure:
 
-![Captura de tela do nome do Hub de notificação do Azure e FullAccessConnectionString](azure-notification-hub-images/notification-hub-full-access-policy.png "FullAccessConnectionString e nome do Hub de notificação do Azure")
+![Captura de tela do nome e FullAccessConnectionString do hub de notificação do Azure](azure-notification-hub-images/notification-hub-full-access-policy.png "Nome e FullAccessConnectionString do hub de notificação do Azure")
 
-O aplicativo de console executa loops em cada `SubscriptionTags` de valor e envia notificações para os assinantes usando uma instância da `NotificationHubClient` classe. O código a seguir mostra o aplicativo de console `Program` classe:
+O aplicativo de console executa um loop `SubscriptionTags` em cada valor e envia notificações aos assinantes usando uma `NotificationHubClient` instância da classe. O código a seguir mostra a classe `Program` de aplicativo de console:
 
 ``` csharp
 class Program
@@ -594,12 +594,12 @@ class Program
 }
 ```
 
-Quando o aplicativo de console de exemplo é executado, a barra de espaço pode ser pressionada para enviar mensagens. Dispositivos que executam o cliente de aplicativos devem receber notificações numeradas, fornecidos estão configurados corretamente.
+Quando o aplicativo de console de exemplo é executado, a barra de espaços pode ser pressionada para enviar mensagens. Os dispositivos que executam os aplicativos cliente devem receber notificações numeradas, desde que estejam configurados corretamente.
 
 ## <a name="related-links"></a>Links relacionados
 
-* [Modelos de notificação de push](/azure/notification-hubs/notification-hubs-templates-cross-platform-push-messages).
+* [Modelos de notificação por push](/azure/notification-hubs/notification-hubs-templates-cross-platform-push-messages).
 * [Gerenciamento de registro de dispositivo](/azure/notification-hubs/notification-hubs-push-notification-registration-management).
-* [Roteamento e expressões de marca](/azure/notification-hubs/notification-hubs-tags-segment-push-message).
-* [Tutorial de Hubs de notificação do Azure do xamarin. Android](/azure/notification-hubs/xamarin-notification-hubs-push-notifications-android-gcm).
-* [Tutorial de Hubs de notificação do Azure do xamarin. IOS](/azure/notification-hubs/xamarin-notification-hubs-ios-push-notification-apns-get-started).
+* [Expressões de marcação e de roteamento](/azure/notification-hubs/notification-hubs-tags-segment-push-message).
+* [Tutorial de hubs de notificação do Azure para Xamarin. Android](/azure/notification-hubs/xamarin-notification-hubs-push-notifications-android-gcm).
+* [Tutorial dos hubs de notificação do Azure para Xamarin. Ios](/azure/notification-hubs/xamarin-notification-hubs-ios-push-notification-apns-get-started).

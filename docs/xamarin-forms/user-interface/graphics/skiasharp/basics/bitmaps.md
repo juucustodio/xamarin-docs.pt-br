@@ -7,12 +7,12 @@ ms.assetid: 32C95DFF-9065-42D7-966C-D3DBD16906B3
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/17/2018
-ms.openlocfilehash: f43779fd0a61bd3ad04f3f7445faa6517fb9c989
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 47fd6323e309353446c707730679a191cb8e923c
+ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68645893"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68738890"
 ---
 # <a name="bitmap-basics-in-skiasharp"></a>Noções básicas de bitmap no SkiaSharp
 
@@ -22,7 +22,7 @@ _Carregar bitmaps de várias fontes e exibi-los._
 
 O suporte de bitmaps em SkiaSharp é muito extenso. Este artigo aborda apenas as Noções básicas &mdash; como carregar bitmaps e como exibi-los:
 
-![](bitmaps-images/bitmapssample.png "A exibição de dois bitmaps")
+![](bitmaps-images/basicbitmaps-small.png "A exibição de dois bitmaps")
 
 Uma exploração muito mais profunda de bitmaps pode ser encontrada na seção [SkiaSharp Bitmaps](../bitmaps/index.md).
 
@@ -98,7 +98,7 @@ protected override async void OnAppearing()
 
 O sistema operacional Android gera uma exceção ao usar o `Stream` retornado de `GetStreamAsync` no `SKBitmap.Decode` método porque ele está executando uma operação demorada em um thread principal. Por esse motivo, o conteúdo do arquivo de bitmap é copiado para um `MemoryStream` do objeto usando `CopyToAsync`.
 
-Estático `SKBitmap.Decode` método é responsável pela decodificação de arquivos de bitmap. Ele funciona com formatos de bitmap GIF, PNG e JPEG e armazena os resultados em um formato de SkiaSharp interno. Neste ponto, o `SKCanvasView` precisa ser invalidada para permitir que o `PaintSurface` manipulador para atualizar a exibição. 
+Estático `SKBitmap.Decode` método é responsável pela decodificação de arquivos de bitmap. Ele funciona com formatos de bitmap GIF, PNG e JPEG e armazena os resultados em um formato de SkiaSharp interno. Neste ponto, o `SKCanvasView` precisa ser invalidada para permitir que o `PaintSurface` manipulador para atualizar a exibição.
 
 ## <a name="loading-a-bitmap-resource"></a>Carregar um recurso de Bitmap
 

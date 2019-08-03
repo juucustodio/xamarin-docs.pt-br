@@ -9,12 +9,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/27/2018
-ms.openlocfilehash: c0e772e0207d2ccc9a94aefd9655dc1bb6776bba
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 997c9e023a743b8e5128ffc566e50da63652f945
+ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68653482"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68739012"
 ---
 # <a name="xamarinforms-quickstart-deep-dive"></a>Detalhamento do guia de início rápido do Xamarin. Forms
 
@@ -532,7 +532,7 @@ Como alternativa, veja [_Criando aplicativos móveis com Xamarin.Forms_](~/xamar
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Linguagem de marcação de aplicativo extensível (XAML)](~/xamarin-forms/xaml/index.md)
+- [Linguagem de marcação de aplicativo extensível (XAML)](~/xamarin-forms/xaml/index.yml)
 - [Associação de dados](~/xamarin-forms/app-fundamentals/data-binding/index.md)
 - [Referência de controles](~/xamarin-forms/user-interface/controls/index.md)
 - [Extensões de marcação XAML](~/xamarin-forms/xaml/markup-extensions/index.md)

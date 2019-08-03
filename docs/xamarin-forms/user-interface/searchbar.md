@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 07/12/2019
-ms.openlocfilehash: 66d947c8b80546e68c68915b960587a48bd2448d
-ms.sourcegitcommit: 25be5acf979f6b18b6d0e64392c9ab307259c032
+ms.openlocfilehash: 391820cf2e94c1131f4082798ee9efa05d8489b8
+ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68610486"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68739397"
 ---
 # <a name="xamarinforms-searchbar"></a>SearchBar Xamarin. Forms
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/SearchBar)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-searchbardemos/)
 
 O Xamarin. Forms [`SearchBar`](xref:Xamarin.Forms.SearchBar) é um controle de entrada do usuário que é usado para iniciar uma pesquisa. O `SearchBar` controle dá suporte a texto de espaço reservado, entrada de consulta, execução de pesquisa e cancelamento. A captura de tela a `SearchBar` seguir mostra uma consulta com os `ListView`resultados exibidos em um:
 
@@ -184,7 +184,7 @@ Para obter mais informações sobre `ICommand` a interface e associações, cons
 
 ## <a name="related-links"></a>Links relacionados
 
-* [Demonstrações do SearchBar](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/SearchBar)
+* [Demonstrações do SearchBar](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-searchbardemos/)
 * [Controles de texto Xamarin. Forms](~/xamarin-forms/user-interface/text/index.md)
 * [Fontes no Xamarin. Forms](~/xamarin-forms/user-interface/text/fonts.md)
 * [Associação de dados do Xamarin. Forms](~/xamarin-forms/app-fundamentals/data-binding/index.md)
