@@ -9,18 +9,18 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 10/05/2018
-ms.openlocfilehash: dcc60243957bb1a7720c08dc7a5ce51caf585ce8
-ms.sourcegitcommit: 56b2f5cda7c37874618736d6129f19a8976826f0
+ms.openlocfilehash: aab10d434461521825fd633369ffa3c6331e905b
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/21/2019
-ms.locfileid: "54418654"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68643972"
 ---
 # <a name="hello-android-multiscreen-quickstart"></a>Multitela Hello, Android: Guia de Início Rápido
 
 _Este guia de duas partes expande o aplicativo Phoneword para manipular uma segunda tela. Ao longo do caminho, Blocos de Construção do Aplicativo Android básicos são apresentados com um aprofundamento maior de uma arquitetura Android._
 
-Na seção de passo a passo deste guia, você adicionará uma segunda tela ao aplicativo [Phoneword](https://developer.xamarin.com/samples/monodroid/Phoneword/) para controlar o histórico de números convertidos usando o aplicativo. O [aplicativo final](https://developer.xamarin.com/samples/monodroid/PhonewordMultiscreen/) terá uma segunda tela exibindo os números que foram “convertidos”, conforme ilustrado pela captura de tela à direita:
+Na seção de passo a passo deste guia, você adicionará uma segunda tela ao aplicativo [Phoneword](https://docs.microsoft.com/samples/xamarin/monodroid-samples/phoneword) para controlar o histórico de números convertidos usando o aplicativo. O [aplicativo final](https://docs.microsoft.com/samples/xamarin/monodroid-samples/phonewordmultiscreen) terá uma segunda tela exibindo os números que foram “convertidos”, conforme ilustrado pela captura de tela à direita:
 
 [![Capturas de tela de aplicativo de exemplo](hello-android-multiscreen-quickstart-images/screenshot-sml.png)](hello-android-multiscreen-quickstart-images/screenshot.png#lightbox)
 
@@ -29,7 +29,7 @@ O [Aprofundamento](~/android/get-started/hello-android-multiscreen/hello-android
 ## <a name="requirements"></a>Requisitos
 
 Como este guia continua do ponto que o [Hello, Android](~/android/get-started/hello-android/index.md) parou, ele exige a conclusão do [Início Rápido do Hello, Android](~/android/get-started/hello-android/hello-android-quickstart.md).
-Caso queira pular diretamente para o passo a passo abaixo, é possível baixar a versão completa do [Phoneword](https://developer.xamarin.com/samples/monodroid/Phoneword/) (do Início Rápido do Hello, Android) e usá-lo para iniciar o passo a passo.
+Caso queira pular diretamente para o passo a passo abaixo, é possível baixar a versão completa do [Phoneword](https://docs.microsoft.com/samples/xamarin/monodroid-samples/phoneword) (do Início Rápido do Hello, Android) e usá-lo para iniciar o passo a passo.
 
 ## <a name="walkthrough"></a>Passo a passo
 
@@ -38,6 +38,11 @@ Neste passo a passo, você adicionará uma tela de **Histórico de Conversão** 
 ::: zone pivot="windows"
 
 Comece abrindo o aplicativo **Phoneword** no Visual Studio e edite o arquivo **Main.axml** do **Gerenciador de Soluções**.
+
+> [!TIP]
+> As versões mais recentes do Visual Studio dão suporte à abertura de arquivos .xml dentro do Android Designer.
+>
+> Tanto arquivos .axml quanto .xml são compatíveis com o Android Designer.
 
 ### <a name="updating-the-layout"></a>Atualizando o layout
 
@@ -178,6 +183,11 @@ Implante o aplicativo em um dispositivo ou emulador. As capturas de tela a segui
 
 Comece abrindo o projeto **Phoneword** no Visual Studio para Mac e edite o arquivo **Main.axml** no **Painel de Soluções**.
 
+> [!TIP]
+> As versões mais recentes do Visual Studio dão suporte à abertura de arquivos .xml dentro do Android Designer.
+>
+> Tanto arquivos .axml quanto .xml são compatíveis com o Android Designer.
+
 ### <a name="updating-the-layout"></a>Atualizando o layout
 
 Na **Caixa de Ferramentas**, arraste um **Botão** para a superfície de design e coloque-o abaixo do TextView **TranslatedPhoneWord**. No painel **Propriedades**, altere a **ID** do botão para `@+id/TranslationHistoryButton`:
@@ -313,5 +323,5 @@ Parabéns por concluir seu primeiro aplicativo Xamarin.Android de multitela! Ago
 ## <a name="related-links"></a>Links relacionados
 
 - [Ícones de aplicativo Xamarin e telas de inicialização (ZIP)](https://github.com/xamarin/monodroid-samples/blob/master/Phoneword/Resources/XamarinAndroidIcons.zip?raw=true)
-- [Phoneword (amostra)](https://developer.xamarin.com/samples/monodroid/Phoneword)
-- [PhonewordMultiscreen (amostra)](https://developer.xamarin.com/samples/monodroid/PhonewordMultiscreen)
+- [Phoneword (amostra)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/phoneword)
+- [PhonewordMultiscreen (amostra)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/phonewordmultiscreen)

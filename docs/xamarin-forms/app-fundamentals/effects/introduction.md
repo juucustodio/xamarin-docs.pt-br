@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: d3fa958e999a10832d5fa15e4190077955b0e6df
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 8fae741f308a8269facef5ca84d34adb48868aec
+ms.sourcegitcommit: c75c1d2132a4f46a7b38e454d5f24705165026bd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38997369"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68486019"
 ---
 # <a name="introduction-to-effects"></a>Introdução aos efeitos
 
@@ -54,7 +54,7 @@ Os efeitos não têm informações de tipo sobre o contêiner, o controle ou o e
 
 Cada classe `PlatformEffect` específica da plataforma expõe os métodos a seguir, que devem ser substituídos para implementar um efeito:
 
-- [`OnAttached`](xref:Xamarin.Forms.Effect.OnAttached) – chamado quando um efeito é anexado a um controle do Xamarin.Forms. Uma versão de substituição desse método, em cada classe de efeito específica da plataforma, é o lugar para realizar a personalização do controle, bem como a manipulação de exceções caso o efeito não possa ser aplicado ao controle do Xamarin.Forms especificado.
+- [`OnAttached`](xref:Xamarin.Forms.Effect.OnAttached) – chamado quando um efeito é anexado a um controle do Xamarin.Forms. Uma versão de substituição desse método, em cada classe de efeito específica da plataforma, é o lugar certo para realizar a personalização do controle, bem como a manipulação de exceções caso o efeito não possa ser aplicado ao controle do Xamarin.Forms especificado.
 - [`OnDetached`](xref:Xamarin.Forms.Effect.OnDetached) – chamado quando um efeito é desanexado de um controle do Xamarin.Forms. Uma versão de substituição deste método, em cada classe de efeito específica da plataforma, é o lugar para executar qualquer limpeza de efeito, como cancelar o registro de um manipulador de eventos.
 
 Além disso, o `PlatformEffect` expõe o método [`OnElementPropertyChanged`](xref:Xamarin.Forms.PlatformEffect`2.OnElementPropertyChanged(System.ComponentModel.PropertyChangedEventArgs)), que também pode ser substituído. Esse método é chamado quando uma propriedade do elemento foi alterada. Uma versão de substituição do método, em cada classe de efeito específica da plataforma, é o lugar para responder a alterações de propriedade vinculáveis sobre o controle do Xamarin.Forms. Uma verificação da propriedade alterada sempre deve ser feita, pois essa substituição pode ser chamada várias vezes.

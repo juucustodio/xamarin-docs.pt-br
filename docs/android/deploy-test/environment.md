@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/15/2018
-ms.openlocfilehash: f0ad51738e0bbe785773f653b06fe5f582527f0b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 722dfbb301d6698ee58d42029c8f6b82ecddc37b
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120873"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68508993"
 ---
 # <a name="xamarinandroid-environment"></a>Ambiente do Xamarin.Android
 
@@ -36,7 +36,7 @@ Os comentários são linhas que começam com `#`. Linhas em branco são ignorada
 
 Se a *chave* começa com uma letra maiúscula, *chave* é tratada como uma variável de ambiente e **setenv**(3) é usado para definir a variável de ambiente para o *valor* especificado durante a inicialização do processo.
 
-Se a *chave* começa com uma letra minúscula, a *chave* é tratada como uma propriedade do sistema Android e *valor* é o *valor padrão*: propriedades do sistema Android que controlam o comportamento de execução do Xamarin.Android são pesquisadas primeiro do repositório de propriedades do sistema Android e, se nenhum valor está presente, o valor especificado no arquivo de ambiente é usado. Isso é para permitir que `adb shell setprop` seja usado para substituir valores provenientes do arquivo de ambiente para fins de diagnóstico.
+Se a *chave* começar com uma letra minúscula, então a *chave* será tratada como uma propriedade do sistema Android e o *valor* será o *valor padrão*: as propriedades do sistema Android que controlam o comportamento de execução do Xamarin.Android são pesquisadas primeiro no repositório de propriedades do sistema Android e, se nenhum valor estiver presente, então o valor especificado no arquivo de ambiente será usado. Isso é para permitir que `adb shell setprop` seja usado para substituir valores provenientes do arquivo de ambiente para fins de diagnóstico.
 
 ## <a name="xamarinandroid-environment-variables"></a>Variáveis de ambiente do Xamarin.Android
 
@@ -49,7 +49,7 @@ O tipo qualificado por assembly que deve herdar de [HttpMessageHandler](https://
 
 No Xamarin.Android 6.1, essa variável de ambiente não é definida por padrão e [HttpClientHandler](https://docs.microsoft.com/dotnet/api/system.net.http.httpclienthandler?view=xamarinandroid-7.1) é usada.
 
-Como alternativa, o valor `Xamarin.Android.Net.AndroidClientHandler` pode ser especificado para usar [`java.net.URLConnection`](https://developer.xamarin.com/api/type/Java.Net.URLConnection/)
+Como alternativa, o valor `Xamarin.Android.Net.AndroidClientHandler` pode ser especificado para usar [`java.net.URLConnection`](xref:Java.Net.URLConnection)
 para acesso à rede, que *talvez* permita o uso do TLS 1.2 quando Android dá suporte a ele.
 
 Adicionado no Xamarin.Android 6.1.
@@ -91,11 +91,11 @@ Controla quais informações adicionais o Xamarin.Android registrará em `adb lo
 É uma cadeia de caracteres separada por vírgulas (`,`), que contém um dos seguintes valores:
 
 * `all`: imprimir *todas* as mensagens. Isso raramente é uma boa ideia, pois inclui mensagens `lref`.
-* `assembly`: imprimir mensagens de análise de assembly e `.apk`.
+* `assembly`: imprimir `.apk` e as mensagens de análise de assembly.
 * `gc`: imprimir mensagens relacionadas a GC.
-* `gref`: imprimir mensagens de referência global de JNI.
-* `lref`: imprimir mensagens de referência local de JNI.  
-    *Observação*: isso *realmente* enviará spam para `adb logcat`.  
+* `gref`: imprimir as mensagens de referência global da JNI.
+* `lref`: imprimir as mensagens de referência local da JNI.  
+    *Observação*: isso *realmente* enviará `adb logcat` como spam.  
     No Xamarin.Android 5.1, isso também criará um arquivo `.__override__/lrefs.txt`, que pode ficar *gigantesco*.  
     Evite isso.
 * `timing`: imprimir algumas informações de tempo de método. Isso também criará os arquivos `.__override__/methods.txt` e `.__override__/counters.txt`.
@@ -131,8 +131,8 @@ Em geral, a recomendação é *não usar*. O uso de rastreamento enviará a saí
 
 A propriedade do sistema `debug.mono.wref` permite substituir o mecanismo de referência fraca JNI padrão detectado. Há dois valores compatíveis:
 
-* `jni`: use referências fracas JNI, conforme criadas pelo `JNIEnv::NewWeakGlobalRef()` e destruídas por `JNIEnv::DeleteWeakGlobalREf()`.
-* `java`: use referências globais JNI que referenciam instâncias de `java.lang.WeakReference`.
+* `jni`: usar referências fracas da JNI, conforme criadas pelo `JNIEnv::NewWeakGlobalRef()` e destruídas por `JNIEnv::DeleteWeakGlobalREf()`.
+* `java`: usar referências globais da JNI que referenciam instâncias de `java.lang.WeakReference`.
 
 `java` é usado, por padrão, até a API-7 e na API-19 (Kit Kat) com ART habilitado. (A API-8 adicionou referências `jni` e o ART *interrompeu* `jni` referências.)
 

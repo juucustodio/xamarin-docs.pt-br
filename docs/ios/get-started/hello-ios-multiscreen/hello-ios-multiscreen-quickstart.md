@@ -9,16 +9,16 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 10/05/2018
-ms.openlocfilehash: 849c60507fe0ff7b8bf1743be5bbf89ca94b9d6f
-ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
+ms.openlocfilehash: 61bf1c99b90d21d701dd923dcca4a203c96b69a3
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67865570"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68657040"
 ---
 # <a name="hello-ios-multiscreen--quickstart"></a>Olá, iOS Multitela – Guia de Início Rápido
 
-Esta parte do passo a passo adicionará uma segunda tela ao aplicativo Phoneword que exibirá um histórico dos números de telefone chamados com o aplicativo. O aplicativo final terá uma segunda tela exibindo o histórico de chamadas, como ilustrado pela seguinte captura de tela:
+Esta parte do passo a passo adicionará uma segunda tela ao aplicativo Phoneword, que exibe um histórico dos números de telefone chamados com o aplicativo. O aplicativo final terá uma segunda tela exibindo o histórico de chamadas, como ilustrado pela seguinte captura de tela:
 
 [![](hello-ios-multiscreen-quickstart-images/00.png "O aplicativo final terá uma segunda tela que exibirá o histórico de chamadas, conforme ilustrado por esta captura de tela")](hello-ios-multiscreen-quickstart-images/00.png#lightbox)
 
@@ -26,7 +26,7 @@ O [Aprofundamento relacionado](~/ios/get-started/hello-ios-multiscreen/hello-ios
 
 ## <a name="requirements"></a>Requisitos
 
-Esta guia retoma no ponto em que o documento Hello, iOS parou e exige a conclusão do [Início rápido do Hello, iOS](~/ios/get-started/hello-ios/index.md). A versão completa do aplicativo Phoneword pode ser baixada do [exemplo Hello, iOS](https://developer.xamarin.com/samples/monotouch/Hello_iOS/).
+Esta guia retoma no ponto em que o documento Hello, iOS parou e exige a conclusão do [Início rápido do Hello, iOS](~/ios/get-started/hello-ios/index.md). Baixe a versão completa do aplicativo Phoneword do [exemplo Hello, iOS](https://docs.microsoft.com/samples/xamarin/ios-samples/hello-ios).
 
 ::: zone pivot="macos"
 
@@ -34,7 +34,7 @@ Esta guia retoma no ponto em que o documento Hello, iOS parou e exige a conclus�
 
 Este passo a passo adicionará uma tela de Histórico de Chamadas ao nosso aplicativo **Phoneword**.
 
-1. Abra o aplicativo **Phoneword** no Visual Studio para Mac. Se necessário, o aplicativo concluído Phoneword do guia de [Passo a passo do Hello, iOS](~/ios/get-started/hello-ios/index.md) pode ser baixado [aqui](https://developer.xamarin.com/samples/monotouch/Hello_iOS/).
+1. Abra o aplicativo **Phoneword** no Visual Studio para Mac. Se necessário, o aplicativo concluído Phoneword do guia de [Passo a passo do Hello, iOS](~/ios/get-started/hello-ios/index.md) pode ser baixado [aqui](https://docs.microsoft.com/samples/xamarin/ios-samples/hello-ios).
 
 2. Abra o arquivo **Main.storyboard** do **Painel de Solução**:
 
@@ -256,7 +256,7 @@ Em seguida, mova a cena **Phoneword** ao lado do **controlador de navegação**:
 
     Há alguns pontos a observar aqui:
 
-    - A variável `translatedNumber` foi movida do método `ViewDidLoad` para uma _variável no nível de classe_.
+    - A variável `translatedNumber` passou do método `ViewDidLoad` para uma _variável no nível de classe_.
     - O código **CallButton** foi modificado para adicionar números discados à lista de números de telefone chamando `PhoneNumbers.Add(translatedNumber)`.
     - O método `PrepareForSegue` foi adicionado.
 
@@ -275,7 +275,7 @@ Parabéns por concluir seu primeiro aplicativo Xamarin.iOS multitela!
 
 Este passo a passo adicionará uma tela de Histórico de Chamadas ao nosso aplicativo **Phoneword**.
 
-1. Abra o aplicativo **Phoneword** no Visual Studio. Se necessário, baixe o [aplicativo Phoneword completo](https://developer.xamarin.com/samples/monotouch/Hello_iOS/) do guia [Passo a passo do Hello, iOS](~/ios/get-started/hello-ios/index.md). Lembre-se de que é necessário conectar-se a um [Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md) para usar o Designer do iOS e o Simulador de iOS.
+1. Abra o aplicativo **Phoneword** no Visual Studio. Se necessário, baixe o [aplicativo Phoneword completo](https://docs.microsoft.com/samples/xamarin/ios-samples/hello-ios) do guia [Passo a passo do Hello, iOS](~/ios/get-started/hello-ios/index.md). Lembre-se de que é necessário conectar-se a um [Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md) para usar o Designer do iOS e o Simulador de iOS.
 
 2. Comece editando a interface do usuário. Abra o arquivo **Main.Storyboard** no **Gerenciador de Soluções**, certificando-se de que **Exibir como** esteja definido como _iPhone 6_:
 
@@ -517,6 +517,6 @@ Agora, o aplicativo pode lidar com navegação usando tanto segues de storyboard
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Hello, iOS (amostra)](https://developer.xamarin.com/samples/monotouch/Hello_iOS/)
+- [Hello, iOS (amostra)](https://docs.microsoft.com/samples/xamarin/ios-samples/hello-ios)
 - [Diretrizes da interface humana do iOS](https://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/Introduction/Introduction.html)
 - [Portal de provisionamento do iOS](https://developer.apple.com/ios/manage/overview/index.action)

@@ -9,18 +9,18 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 10/05/2018
-ms.openlocfilehash: 71343aa69cc7fa34fb716ea39454e6437a64169f
-ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
+ms.openlocfilehash: c9f9fb7eecd41c3aeffb7a28042f944c9d6a320b
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58855075"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68644067"
 ---
 # <a name="hello-android-quickstart"></a>Olá, Android: Guia de Início Rápido
 
 _Neste guia de duas partes, você criará seu primeiro aplicativo Xamarin.Android com o Visual Studio e passará a entender os fundamentos do desenvolvimento de aplicativos Android com Xamarin._
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://developer.xamarin.com/samples/monodroid/Phoneword/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/monodroid-samples/phoneword)
 
 Você criará um aplicativo que converte um número de telefone alfanumérico (inserido pelo usuário) em numérico e exibe o número de telefone numérico ao usuário. O aplicativo final tem esta aparência:
 
@@ -71,6 +71,11 @@ Na caixa de diálogo **Novo Aplicativo Android**, clique em **Aplicativo em Bran
 [![Selecione o modelo Aplicativo em Branco](hello-android-quickstart-images/vs/02-blank-app-w158-sml.png)](hello-android-quickstart-images/vs/02-blank-app-w158.png#lightbox)
 
 ## <a name="create-a-layout"></a>Criar um layout
+
+> [!TIP]
+> As versões mais recentes do Visual Studio dão suporte à abertura de arquivos .xml dentro do Android Designer.
+>
+> Tanto arquivos .axml quanto .xml são compatíveis com o Android Designer.
 
 Depois da criação do novo projeto, expanda a pasta **Recursos** e, em seguida, a pasta **Layout** no **Gerenciador de Soluções**.
 Clique duas vezes em **activity_main.axml** para abri-lo no Android Designer. Este é o arquivo de layout da tela do aplicativo:
@@ -290,6 +295,11 @@ Na caixa de diálogo **Configurar seu Aplicativo Android**, nomeie o novo aplica
 Na caixa de diálogo **Configurar seu novo Aplicativo Android**, deixe os nomes de Solução e Projeto definidos como `Phoneword` e clique em **Criar** para criar o projeto.
 
 ## <a name="create-a-layout"></a>Criar um layout
+
+> [!TIP]
+> As versões mais recentes do Visual Studio dão suporte à abertura de arquivos .xml dentro do Android Designer.
+>
+> Tanto arquivos .axml quanto .xml são compatíveis com o Android Designer.
 
 Depois de criar o novo projeto, expanda a pasta **Recursos** e, em seguida, a pasta **Layout** no painel **Solução**.
 Clique duas vezes em **Main.axml** para abri-lo no Android Designer. Este é o arquivo de layout da tela quando ele for exibido no Android Designer:
@@ -525,4 +535,4 @@ Agora é hora de dissecar as ferramentas e habilidades que você acabou de apren
 ## <a name="related-links"></a>Links relacionados
 
 - [Ícones de aplicativo do Xamarin Android (ZIP)](https://github.com/xamarin/monodroid-samples/blob/master/Phoneword/Resources/XamarinAndroidIcons.zip?raw=true)
-- [Phoneword (amostra)](https://developer.xamarin.com/samples/monodroid/Phoneword)
+- [Phoneword (amostra)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/phoneword)

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/13/2018
-ms.openlocfilehash: f3fb083457fa1fbf6590eb53eea504257e93ecc6
-ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
+ms.openlocfilehash: d59d4fc3ff9df3ea883ab4d5845da193e6cb8c51
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51617768"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68643783"
 ---
 # <a name="xamarin-for-java-developers"></a>Xamarin para Desenvolvedores Java
 
@@ -74,7 +74,7 @@ O C# oferece muitos recursos principais para Xamarin.Android que não estão atu
 
 -   [Propriedades](#properties) &ndash; com o sistema de propriedades do C#, você pode acessar variáveis de membro com segurança e de modo direto, sem precisar escrever os métodos setter e getter.
 
--   [Expressões Lambda](#lambdas) &ndash; no C# você pode usar métodos anônimos (também chamado de *lambdas*) para expressar sua funcionalidade de forma mais sucinta e com mais eficiência. Você pode evitar a sobrecarga de precisar gravar objetos que serão usados apenas uma vez, além de poder passar o estado local para um método sem a necessidade de adicionar parâmetros.
+-   [Expressões Lambda](#lambdas) &ndash; No C# você pode usar métodos anônimos (também chamado de *lambdas*) para expressar sua funcionalidade de forma mais sucinta e com mais eficiência. Você pode evitar a sobrecarga de precisar gravar objetos que serão usados apenas uma vez, além de poder passar o estado local para um método sem a necessidade de adicionar parâmetros.
 
 -   [Manipulação de eventos](#events) &ndash; o C# oferece suporte no nível de linguagem para *programação controlada por evento*, em que um objeto pode se registrar para ser notificado quando ocorre um evento de interesse. A palavra-chave `event` define um mecanismo de distribuição multicast que uma classe publicadora pode usar para notificar assinantes do evento.
 
@@ -174,7 +174,7 @@ Java e C# usam linguagens de programação orientada a objeto muito semelhantes:
 
 -   Todas as instâncias de classe são criadas no heap por meio do operador `new`.
 
--   Já que ambas as linguagens usam a coleta de lixo, é possível liberar explicitamente objetos não utilizados (ou seja, não há uma palavra-chave `delete`, assim como há em C++).
+-   Como ambas as linguagens usam a coleta de lixo, não é possível liberar explicitamente objetos não utilizados (ou seja, não há uma palavra-chave `delete`, como ocorre no C++).
 
 -   Você pode estender as classes por meio de herança, sendo que ambas as linguagens só permitem uma única classe base por tipo.
 
@@ -433,7 +433,7 @@ Para obter mais informações sobre o suporte de Xamarin de recursos de programa
 
 Muitas palavras-chave usadas em Java também são usadas em C#. Também há um número de palavras-chave do Java que têm uma contraparte equivalente, mas de nome diferente em C#, conforme listado nesta tabela:
 
-|Java|C#|Descrição|
+|Java|C#|DESCRIÇÃO|
 |---|---|---|
 |`boolean`|[bool](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/bool)|Usado para declarar os valores boolianos true e false.|
 |`extends`|`:`|Precede a classe e as interfaces das quais herdar.|
@@ -448,9 +448,9 @@ Muitas palavras-chave usadas em Java também são usadas em C#. Também há um n
 |`synchronized`|[lock](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/lock-statement)|Encapsula uma seção crítica do código com a aquisição e a liberação de bloqueio.|
 
 
-Além disso, há muitas palavras-chave que são exclusivas do C# e não têm uma correspondência no Java. O código do Xamarin.Android geralmente usa as seguintes palavras-chave do C# (esta tabela é útil para referência ao ler o [exemplo de código](https://developer.xamarin.com/samples/android/all/) do Xamarin.Android):
+Além disso, há muitas palavras-chave que são exclusivas do C# e não têm uma correspondência no Java. O código do Xamarin.Android geralmente usa as seguintes palavras-chave do C# (esta tabela é útil para referência ao ler o [exemplo de código](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Android) do Xamarin.Android):
 
-|C#|Descrição|
+|C#|DESCRIÇÃO|
 |---|---|
 |[as](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/as)|Executa conversões entre tipos de referência compatíveis ou tipos anuláveis.|
 |[async](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/async)|Especifica que uma expressão lambda ou método é assíncrono.|

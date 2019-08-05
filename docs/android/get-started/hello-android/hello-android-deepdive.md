@@ -9,12 +9,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 10/05/2018
-ms.openlocfilehash: 3d34ce3d5cb6e8e4931eafcc7cd82d141f5db8d7
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 2595ff23dcc0688c141f943d4ea61e13c970b7aa
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57670175"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68509574"
 ---
 # <a name="hello-android-deep-dive"></a>Olá, Android: Aprofundamento
 
@@ -32,7 +32,7 @@ Este guia citará os tópicos a seguir:
 
 - **Noções básicas de arquitetura e conceitos básicos de aplicativos** &ndash; introdução às atividades, ao manifesto do Android e ao desenvolvimento em Android em linhas gerais.
 
-- **IU (interface do usuário)** &ndash; criação de interfaces do usuário com o Designer Android.
+- **IU (interface do usuário)** &ndash; criação de interfaces do usuário com o Android Designer.
 
 - **Atividades e o ciclo de vida da atividade** &ndash; uma introdução ao ciclo de vida da atividade e à preparação da interface do usuário em código.
 
@@ -47,7 +47,7 @@ Este guia citará os tópicos a seguir:
 
 - **Noções básicas de arquitetura e conceitos básicos de aplicativos** &ndash; introdução às atividades, ao manifesto do Android e ao desenvolvimento em Android em linhas gerais.
 
-- **IU (interface do usuário)** &ndash; criação de interfaces do usuário com o Designer Android.
+- **IU (interface do usuário)** &ndash; criação de interfaces do usuário com o Android Designer.
 
 - **Atividades e o ciclo de vida da atividade** &ndash; uma introdução ao ciclo de vida da atividade e à preparação da interface do usuário em código.
 
@@ -120,12 +120,12 @@ Os itens estão resumidos na tabela abaixo:
 
 ::: zone pivot="windows"
 
-- **layout** &ndash; o diretório layout contém _arquivos do Designer do Android_ (.axml) que definem a interface do usuário para cada tela ou atividade. O modelo cria um layout padrão chamado **activity_main.axml**.
+- **layout**&ndash; o diretório layout contém _arquivos do Android Designer_ (.axml) que definem a interface do usuário para cada tela ou atividade. O modelo cria um layout padrão chamado **activity_main.axml**.
 
 ::: zone-end
 ::: zone pivot="macos"
 
-- **layout** &ndash; o diretório layout contém _arquivos do Designer do Android_ (.axml) que definem a interface do usuário para cada tela ou atividade. O modelo cria um layout padrão chamado **Main.axml**.
+- **layout**&ndash; o diretório layout contém _arquivos do Android Designer_ (.axml) que definem a interface do usuário para cada tela ou atividade. O modelo cria um layout padrão chamado **Main.axml**.
 
 ::: zone-end
 
@@ -153,6 +153,11 @@ As próximas seções exploram as relações entre as diversas partes do aplicat
 
 ## <a name="user-interface"></a>Interface do Usuário
 
+> [!TIP]
+> As versões mais recentes do Visual Studio dão suporte à abertura de arquivos .xml dentro do Android Designer.
+>
+> Tanto arquivos .axml quanto .xml são compatíveis com o Android Designer.
+
 ::: zone pivot="windows"
 
 **activity_main.axml** é o arquivo de layout de interface do usuário para a primeira tela do aplicativo. O .axml indica que este é um arquivo do Android Designer (AXML significa *XML Android*). O nome *Main* é arbitrário do ponto de vista do Android &ndash; o arquivo de layout poderia ter recebido qualquer outro nome. Quando você abre **activity_main.axml** no IDE, ele abre o editor visual de arquivos de layout do Android, chamado *Android Designer*:
@@ -168,7 +173,7 @@ No aplicativo **Phoneword**, a ID do **TranslateButton** é definida como `@+id/
 
 **Main.axml** é o arquivo de layout de interface do usuário para a primeira tela do aplicativo. O .axml indica que este é um arquivo do Android Designer (AXML significa *XML Android*). O nome *Main* é arbitrário do ponto de vista do Android &ndash; o arquivo de layout poderia ter recebido qualquer outro nome. Quando você abre **Main.axml** no IDE, ele abrirá o editor visual para arquivos de layout do Android chamado de *Android Designer*:
 
-[![Designer Android](hello-android-deepdive-images/xs/03-android-designer-sml.png)](hello-android-deepdive-images/xs/03-android-designer.png#lightbox)
+[![Android Designer](hello-android-deepdive-images/xs/03-android-designer-sml.png)](hello-android-deepdive-images/xs/03-android-designer.png#lightbox)
 
 No aplicativo **Phoneword**, a ID do **TranslateButton** é definida como `@+id/TranslateButton`:
 
@@ -176,7 +181,7 @@ No aplicativo **Phoneword**, a ID do **TranslateButton** é definida como `@+id/
 
 ::: zone-end
 
-Quando você define a propriedade `id` do **TranslateButton**, o Designer Android mapeia o controle **TranslateButton** para a classe `Resource` e atribui a ele a *ID de recurso* `TranslateButton`. Esse mapeamento de controle visual para classe torna possível localizar e usar o **TranslateButton** e outros controles no código do aplicativo. Isso será abordado em mais detalhes ao separar o código que acionar os controles. Tudo que você precisa saber por enquanto é que a representação de código de um controle está vinculada à representação visual do controle no designer pela propriedade `id`.
+Quando você define a propriedade `id` do **TranslateButton**, o Android Designer mapeia o controle **TranslateButton** para a classe `Resource` e atribui a ele a *ID de recurso*`TranslateButton`. Esse mapeamento de controle visual para classe torna possível localizar e usar o **TranslateButton** e outros controles no código do aplicativo. Isso será abordado em mais detalhes ao separar o código que acionar os controles. Tudo que você precisa saber por enquanto é que a representação de código de um controle está vinculada à representação visual do controle no designer pela propriedade `id`.
 
 ### <a name="source-view"></a>Exibição de fonte
 
@@ -193,7 +198,7 @@ Tudo que está definido na área de design é traduzido em XML para o Xamarin.An
 
 ::: zone-end
 
-Esse código-fonte XML deve conter os elementos **Texto (Grande)** , **Texto Sem Formatação** e dois elementos de **Botão**. Para fazer um tour mais detalhado sobre o Android Designer, consulte o guia [Visão geral do Designer](~/android/user-interface/android-designer/index.md) de Android do Xamarin.
+Esse código-fonte XML deve conter quatro elementos de controle: Dois elementos **TextView**, um elemento **EditText** e um elemento **Button**. Para fazer um tour mais detalhado sobre o Android Designer, consulte o guia [Visão geral do Designer](~/android/user-interface/android-designer/index.md) de Android do Xamarin.
 
 As ferramentas e os conceitos por trás da parte visual da interface do usuário foram agora abordados. Em seguida, é hora de se aprofundar no código que aciona a interface do usuário conforme as atividades e o ciclo de vida da atividade são explorados.
 
@@ -207,7 +212,7 @@ Esta seção apresenta a classe `Activity`, discute o ciclo de vida de atividade
 
 O aplicativo **Phoneword** tem apenas uma tela (Atividade). A classe que aciona a tela é chamada `MainActivity` e reside no arquivo **MainActivity.cs**. O nome `MainActivity` não tem nenhum significado especial no Android &ndash; embora a convenção seja nomear a primeira atividade em um aplicativo como `MainActivity`, não faz diferença para o Android se ela for nomeada diferentemente.
 
-Ao abrir **MainActivity.cs**, você pode ver que a classe `MainActivity` é uma *subclasse* da classe `Activity` e que a Atividade é adornada pelo atributo [Activity](https://developer.xamarin.com/api/type/Android.App.ActivityAttribute/):
+Ao abrir **MainActivity.cs**, você pode ver que a classe `MainActivity` é uma *subclasse* da classe `Activity` e que a Atividade é adornada pelo atributo [Activity](xref:Android.App.ActivityAttribute):
 
 ```csharp
 [Activity (Label = "Phone Word", MainLauncher = true)]

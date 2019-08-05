@@ -9,12 +9,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 10/05/2018
-ms.openlocfilehash: 7f40671cd37ba88834698dea8cdaba267c96600c
-ms.sourcegitcommit: c77d4257f8a35c8d931538b78a2ebc2aa48c0db9
+ms.openlocfilehash: 050f084086df02314faecaca42a93007e6cc5246
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58751258"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68647044"
 ---
 # <a name="hello-ios--deep-dive"></a>Hello, iOS – Aprofundamento
 
@@ -414,7 +414,7 @@ O Simulador iOS é uma maneira rápida de testar um aplicativo. O Simulador tem 
 Um dispositivo leva tempo para provisionar e requer uma Conta de Desenvolvedor Apple. O guia [Provisionamento de dispositivo](~/ios/get-started/installation/device-provisioning/index.md) fornece instruções completas de como preparar um dispositivo para o desenvolvimento.
 
 > [!NOTE]
-> Atualmente, devido a um requisito da Apple, é necessário ter um certificado de desenvolvimento ou _identidade de assinatura_ para compilar código para o dispositivo ou simulador. Siga as etapas no [guia Provisionamento de Dispositivo](~/ios/get-started/installation/device-provisioning/manual-provisioning.md) para configurar isso.
+> Atualmente, devido a um requisito da Apple, é necessário ter um certificado de desenvolvimento ou uma _identidade de assinatura_ para compilar o código para um dispositivo físico ou para o simulador. Siga as etapas no [guia Provisionamento de Dispositivo](~/ios/get-started/installation/device-provisioning/manual-provisioning.md) para configurar isso.
 
 Depois que o dispositivo é configurado você pode implantar para ele conectando-o, alterando o destino na barra de ferramentas de build para o dispositivo iOS e pressionando **Iniciar** ( **Reproduzir**) conforme ilustrado pela captura de tela a seguir:
 
@@ -458,10 +458,10 @@ Para obter mais informações sobre requisitos e tamanhos de imagem de inicializ
 ## <a name="summary"></a>Resumo
 
 Parabéns! Agora você tem uma compreensão sólida dos componentes de um aplicativo Xamarin.iOS, bem como das ferramentas usadas para criá-los.
-No [próximo tutorial na série Introdução](~/ios/get-started/hello-ios-multiscreen/index.md), você estenderá nosso aplicativo para lidar com várias telas. Ao longo do caminho você implementará um controlador de navegação, aprenderá sobre o storyboard Segues e introduzirá o modelo MVC (modelo, exibição, controlador) padrão como estender o aplicativo para tratar várias telas.
+No [próximo tutorial na série Introdução](~/ios/get-started/hello-ios-multiscreen/index.md), você estenderá nosso aplicativo para lidar com várias telas. Ao longo do caminho você implementará um controlador de navegação, aprenderá sobre o Storyboard Segues e introduzirá o padrão MVC (Model, View, Controller) à medida que estende o aplicativo para gerenciar várias telas.
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Hello, iOS (amostra)](https://developer.xamarin.com/samples/monotouch/Hello_iOS/)
+- [Hello, iOS (amostra)](https://docs.microsoft.com/samples/xamarin/ios-samples/hello-ios)
 - [Diretrizes da interface humana do iOS](https://developer.apple.com/design/human-interface-guidelines/ios/overview/themes/)
 - [Portal de provisionamento do iOS](https://developer.apple.com/account/#/overview)
