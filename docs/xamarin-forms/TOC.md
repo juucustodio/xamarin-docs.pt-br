@@ -23,7 +23,7 @@
 #### [Criação de extensões de marcação XAML](xaml/markup-extensions/creating.md)
 ### Ferramentas
 #### [Caixa de ferramentas do XAML](xaml/toolbox.md)
-#### [Pré-visualizador de XAML](xaml/xaml-previewer/index.md)
+#### [Visualizador de XAML](xaml/xaml-previewer/index.md)
 ##### [Dados do tempo de design](xaml/xaml-previewer/design-time-data.md)
 ##### [Controles personalizados](xaml/xaml-previewer/render-custom-controls.md)
 ### Namespaces
@@ -128,7 +128,8 @@
 ##### [Criação de modelo de dados](app-fundamentals/templates/data-templates/creating.md)
 ##### [Seleção de modelo de dados](app-fundamentals/templates/data-templates/selector.md)
 ### [Gatilhos](app-fundamentals/triggers.md)
-## [Interface do Usuário](user-interface/index.md)
+## Interface do Usuário
+### [Visão geral](user-interface/index.yml)
 ### [Indicador de atividade](user-interface/activityindicator.md)
 ### [Animação](user-interface/animation/index.md)
 #### [Animações simples](user-interface/animation/simple.md)
