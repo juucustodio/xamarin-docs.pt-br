@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/21/2016
-ms.openlocfilehash: 03b9c5f903cea67032a9560754a32ac552635e92
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 73e312a1af56091a7e579d3fcbcea810ee0efb1e
+ms.sourcegitcommit: 266e75fa6893d3732e4e2c0c8e79c62be2804468
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68653867"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68820970"
 ---
 # <a name="adding-a-pan-gesture-recognizer"></a>Adicionando um reconhecedor de gesto de panorâmica
 
@@ -48,9 +48,6 @@ void OnPanUpdated (object sender, PanUpdatedEventArgs e)
   // Handle the pan
 }
 ```
-
-> [!NOTE]
-> Para usar a panorâmica corretamente no Android, é necessário ter no mínimo o [Pacote NuGet 2.1.0-pre1 do Xamarin.Forms](https://www.nuget.org/packages/Xamarin.Forms/2.1.0.6501-pre1).
 
 ## <a name="creating-a-pan-container"></a>Criando um contêiner de panorâmica
 
@@ -147,7 +144,7 @@ Esse método atualiza o conteúdo visível do elemento de interface do usuário 
 Quando o movimento panorâmico no conteúdo de um elemento que não ocupa a tela inteira, a altura e a largura do visor podem ser obtidas das propriedades [`Height`](xref:Xamarin.Forms.VisualElement.Height) e [`Width`](xref:Xamarin.Forms.VisualElement.Width) do elemento.
 
 > [!NOTE]
-> Exibir imagens de alta resolução pode aumentar significativamente o volume de memória de um aplicativo. Portanto, elas só devem ser criadas quando necessário e devem ser liberadas assim que o aplicativo não precisar mais delas. Para saber mais, consulte [Otimizar recursos de imagem](~/xamarin-forms/deploy-test/performance.md#optimizeimages).
+> Exibir imagens de alta resolução pode aumentar significativamente o volume de memória de um aplicativo. Portanto, elas só devem ser criadas quando necessário e devem ser liberadas assim que o aplicativo não precisar mais delas. Para saber mais, consulte [Otimizar recursos de imagem](~/xamarin-forms/deploy-test/performance.md#optimize-image-resources).
 
 ## <a name="related-links"></a>Links relacionados
 

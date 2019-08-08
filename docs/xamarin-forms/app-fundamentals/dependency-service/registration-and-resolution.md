@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/05/2019
-ms.openlocfilehash: aab5f56594f9b9b81acb9c447eee238d151bd533
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: 0bbe4310a32c11da35e41b01693f8cb1a66fc39b
+ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67832190"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68739332"
 ---
 # <a name="xamarinforms-dependencyservice-registration-and-resolution"></a>Registro e resolução de DependencyService do Xamarin.Forms
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://github.com/xamarin/xamarin-forms-samples/tree/master/DependencyService)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/dependencyservice/)
 
 Ao usar o [`DependencyService`](xref:Xamarin.Forms.DependencyService) do Xamarin.Forms para invocar a funcionalidade de plataforma nativa, as implementações de plataforma devem ser registradas com o `DependencyService` e depois resolvidas do código compartilhado para invocá-las.
 
@@ -175,5 +175,5 @@ Para obter mais informações sobre como chamar o método `Dispose` de um objeto
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Demonstrações de DependencyService (exemplo)](https://github.com/xamarin/xamarin-forms-samples/tree/master/DependencyService)
+- [Demonstrações de DependencyService (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/dependencyservice/)
 - [Resolução de dependências no Xamarin.Forms](~/xamarin-forms/internals/dependency-resolution.md)
