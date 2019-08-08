@@ -1,55 +1,55 @@
 ---
-title: design da interface do usuário.Storyboard/.XIB-Less no xamarin. Mac
-description: Este artigo aborda a criação de interface do usuário de um aplicativo xamarin. MAC diretamente do C# código, sem os arquivos de storyboard, arquivos. XIB ou Interface Builder.
+title: . Storyboard/. xib-o design de interface do usuário menos no Xamarin. Mac
+description: Este artigo aborda a criação de uma interface do usuário do aplicativo Xamarin. C# Mac diretamente do código, sem arquivos. Storyboard, arquivos. xib ou Interface Builder.
 ms.prod: xamarin
 ms.assetid: 02310F58-DCF1-4589-9F4A-065DF64FC0E1
 ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 076c6464359a58c2b36d157d9620673b0644cd4a
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 1f49f3c24bc4c89edb005206b953176639214481
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61042231"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68647171"
 ---
-# <a name="storyboardxib-less-user-interface-design-in-xamarinmac"></a>design da interface do usuário.Storyboard/.XIB-Less no xamarin. Mac
+# <a name="storyboardxib-less-user-interface-design-in-xamarinmac"></a>. Storyboard/. xib-o design de interface do usuário menos no Xamarin. Mac
 
-_Este artigo aborda a criação de interface do usuário de um aplicativo xamarin. MAC diretamente do C# código, sem os arquivos de storyboard, arquivos. XIB ou Interface Builder._
+_Este artigo aborda a criação de uma interface do usuário do aplicativo Xamarin. C# Mac diretamente do código, sem arquivos. Storyboard, arquivos. xib ou Interface Builder._
 
 ## <a name="overview"></a>Visão geral
 
-Ao trabalhar com C# e do .NET em um aplicativo xamarin. Mac, você tem acesso para os mesmos elementos de interface do usuário e as ferramentas de que um desenvolvedor que trabalha *Objective-C* e *Xcode* faz. Normalmente, ao criar um aplicativo xamarin. Mac, você usará o Interface Builder do Xcode com arquivos. XIB ou de storyboard para criar e manter você a interface do usuário do aplicativo.
+Ao trabalhar com C# o e o .net em um aplicativo Xamarin. Mac, você tem acesso aos mesmos elementos e ferramentas da interface do usuário que um desenvolvedor que trabalha no *Objective-C* e no *Xcode* . Normalmente, ao criar um aplicativo Xamarin. Mac, você usará Interface Builder do Xcode com arquivos. Storyboard ou. xib para criar e manter a interface do usuário do aplicativo.
 
-Você também tem a opção de criação de algumas ou todas da interface do usuário do seu aplicativo xamarin. MAC diretamente no C# código. Neste artigo, abordaremos os fundamentos da criação de interfaces do usuário e elementos de interface do usuário no C# código.
+Você também tem a opção de criar parte ou toda a interface do usuário do aplicativo Xamarin. Mac diretamente C# no código. Neste artigo, abordaremos os conceitos básicos da criação de interfaces de usuário e elementos de C# interface do usuário no código.
 
-[![O Visual Studio para o editor de código do Mac](xibless-ui-images/intro01.png "do Visual Studio para o editor de código do Mac")](xibless-ui-images/intro01-large.png#lightbox)
+[![O editor de código Visual Studio para Mac](xibless-ui-images/intro01.png "O editor de código Visual Studio para Mac")](xibless-ui-images/intro01-large.png#lightbox)
 
 <a name="Switching_a_Window_to_use_Code" />
 
-## <a name="switching-a-window-to-use-code"></a>Alternar uma janela para usar o código
+## <a name="switching-a-window-to-use-code"></a>Alternando uma janela para usar código
 
-Quando você cria um novo aplicativo xamarin. Mac Cocoa, você obtém uma janela de padrão em branco, por padrão. Esse windows é definido em um **Main. Storyboard** (ou tradicionalmente um **MainWindow.xib**) automaticamente incluído no projeto do arquivo. Isso também inclui um **ViewController.cs** arquivo que gerencia o modo de exibição principal do aplicativo (ou tradicionalmente novamente uma **MainWindow.cs** e um **MainWindowController.cs** arquivo).
+Ao criar um novo aplicativo Xamarin. Mac Cocoa, você obtém uma janela padrão em branco, por padrão. Essas janelas são definidas em um arquivo **Main. Storyboard** (ou tradicionalmente um **MainWindow. xib**) incluído automaticamente no projeto. Isso também inclui um arquivo **ViewController.cs** que gerencia a exibição principal do aplicativo (ou novamente tradicionalmente um **MainWindow.cs** e um arquivo **MainWindowController.cs** ).
 
-Para alternar para uma janela de Xibless para um aplicativo, faça o seguinte:
+Para alternar para uma janela do Xibless para um aplicativo, faça o seguinte:
 
-1. Abra o aplicativo que você deseja parar de usar `.storyboard` ou arquivos. XIB para definir a interface do usuário no Visual Studio para Mac.
-2. No **painel de soluções**, clique com botão direito no **Main. Storyboard** ou **MainWindow.xib** arquivo e selecione **remover**: 
+1. Abra o aplicativo que você deseja interromper usando `.storyboard` arquivos ou. xib para definir a interface do usuário no Visual Studio para Mac.
+2. Na **painel de soluções**, clique com o botão direito do mouse no arquivo **Main. Storyboard** ou **MainWindow. xib** e selecione **remover**: 
 
-    ![Removendo o storyboard principal ou a janela](xibless-ui-images/switch01.png "removendo o storyboard principal ou a janela")
-3. Dos **caixa de diálogo Remover**, clique no **excluir** botão para remover completamente o storyboard ou. XIB do projeto: 
+    ![Removendo o storyboard ou a janela principal](xibless-ui-images/switch01.png "Removendo o storyboard ou a janela principal")
+3. Na **caixa de diálogo remover**, clique no botão **excluir** para remover o. Storyboard ou. xib completamente do projeto: 
 
-    ![Confirmar a exclusão](xibless-ui-images/switch02.png "confirmar a exclusão")
+    ![Confirmando a exclusão](xibless-ui-images/switch02.png "Confirmando a exclusão")
 
-Agora, precisamos modificar a **MainWindow.cs** arquivo para definir o layout da janela e modificar as **ViewController.cs** ou **MainWindowController.cs** arquivo para criar um instância do nosso `MainWindow` classe como não estamos usando o arquivo de storyboard ou. XIB.
+Agora, precisaremos modificar o arquivo **MainWindow.cs** para definir o layout da janela e modificar o arquivo **ViewController.cs** ou **MainWindowController.cs** para criar uma instância da nossa `MainWindow` classe, já que não estamos mais usando o. arquivo storyboard ou. xib.
 
-Aplicativos modernos do xamarin. MAC que usam Storyboards para sua interface do usuário não pode incluir automaticamente o **MainWindow.cs**, **ViewController.cs** ou **MainWindowController.cs** arquivos. Conforme necessário, basta adicionar um novo vazio C# classe ao projeto (**Add** > **arquivo novo...**   >  **Gerais** > **classe vazia**) e nomeie-o mesmo que o arquivo está faltando. 
+Os aplicativos Xamarin. Mac modernos que usam storyboards para a interface do usuário podem não incluir automaticamente os arquivos **MainWindow.cs**, **ViewController.cs** ou **MainWindowController.cs** . Conforme necessário, basta adicionar uma nova classe C# vazia ao projeto (**Adicionar** > **novo arquivo...** Classe vaziageral > ) e nomeie-o como o arquivo ausente.  >  
 
 
-### <a name="defining-the-window-in-code"></a>Definir a janela de código
+### <a name="defining-the-window-in-code"></a>Definindo a janela no código
 
-Em seguida, edite o **MainWindow.cs** de arquivo e torná-lo semelhante ao seguinte:
+Em seguida, edite o arquivo **MainWindow.cs** e faça parecer com o seguinte:
 
 ```csharp
 using System;
@@ -122,16 +122,16 @@ namespace MacXibless
 }
 ```
 
-Vamos falar sobre alguns dos principais elementos.
+Vamos discutir alguns dos elementos principais.
 
-Primeiro, adicionamos algumas _propriedades computadas_ que atuará como saídas (como se a janela foi criada em um arquivo de storyboard ou. XIB):
+Primeiro, adicionamos algumas _Propriedades_ computadas que funcionarão como saídas (como se a janela fosse criada em um arquivo. Storyboard ou. xib):
 
 ```csharp
 public NSButton ClickMeButton { get; set;}
 public NSTextField ClickMeLabel { get ; set;}
 ```
 
-Eles nos fornecerá acesso aos elementos da interface do usuário que vamos exibir na janela. Como a janela não estiver sendo inflada de um arquivo de storyboard ou. XIB, precisamos de uma maneira de criar uma instância dele (como veremos posteriormente no `MainWindowController` classe). É o que faz esse novo método de construtor:
+Eles fornecerão acesso aos elementos da interface do usuário que vamos exibir na janela. Como a janela não está sendo replanada de um arquivo. Storyboard ou. xib, precisamos de uma maneira de instanciá-la (como veremos mais `MainWindowController` adiante na classe). Isso é o que esse novo método de construtor faz:
 
 ```csharp
 public MainWindow(CGRect contentRect, NSWindowStyle aStyle, NSBackingStore bufferingType, bool deferCreation): base (contentRect, aStyle,bufferingType,deferCreation) {
@@ -139,13 +139,13 @@ public MainWindow(CGRect contentRect, NSWindowStyle aStyle, NSBackingStore buffe
 }
 ```
 
-Isso é onde podemos projetar o layout da janela e coloque quaisquer elementos de interface do usuário necessários para criar a interface do usuário necessária. Antes de podermos adicionar todos os elementos da interface do usuário para uma janela, ela precisa de um _exibição de conteúdo_ para conter os elementos:
+É aí que projetaremos o layout da janela e colocaremos todos os elementos da interface do usuário necessários para criar a interface necessária. Antes que possamos adicionar qualquer elemento de interface do usuário a uma janela, ele precisa de uma _exibição de conteúdo_ para conter os elementos:
 
 ```csharp
 ContentView = new NSView (Frame);
 ```
 
-Isso cria uma exibição de conteúdo que preencherá a janela. Agora vamos adicionar nosso primeiro elemento de interface do usuário, um `NSButton`, para a janela:
+Isso cria uma exibição de conteúdo que preencherá a janela. Agora, adicionamos nosso primeiro elemento de interface `NSButton`do usuário, um, à janela:
 
 ```csharp
 ClickMeButton = new NSButton (new CGRect (10, Frame.Height-70, 100, 30)){
@@ -154,13 +154,13 @@ ClickMeButton = new NSButton (new CGRect (10, Frame.Height-70, 100, 30)){
 ContentView.AddSubview (ClickMeButton);
 ```
 
-A primeira coisa a observar aqui é que, ao contrário do iOS, macOS usa notação matemática para definir seu sistema de coordenadas da janela. Portanto, o ponto de origem está no canto inferior esquerdo da janela, com valores crescentes direita e na direção do canto superior direito da janela. Quando criamos o novo `NSButton`, podemos levar isso em conta conforme definimos sua posição e tamanho na tela.
+A primeira coisa a observar aqui é que, ao contrário do iOS, o macOS usa notação matemática para definir seu sistema de coordenadas de janela. Portanto, o ponto de origem está no canto inferior esquerdo da janela, com valores crescentes à direita e em direção ao canto superior direito da janela. Quando criamos o novo `NSButton`, levamos isso em conta à medida que definimos sua posição e tamanho na tela.
 
-O `AutoresizingMask = NSViewResizingMask.MinYMargin` propriedade informa o botão que queremos que ela permaneça no mesmo local da parte superior da janela quando a janela é redimensionada verticalmente. Novamente, isso é necessário porque (0,0) está na parte inferior esquerda da janela.
+A `AutoresizingMask = NSViewResizingMask.MinYMargin` propriedade informa ao botão que queremos que ele permaneça no mesmo local da parte superior da janela quando a janela é redimensionada verticalmente. Novamente, isso é necessário porque (0, 0) está na parte inferior esquerda da janela.
 
-Por fim, o `ContentView.AddSubview (ClickMeButton)` método adiciona o `NSButton` para a exibição de conteúdo para que ela será exibida na tela quando o aplicativo é executado e a janela exibida.
+Por fim, `ContentView.AddSubview (ClickMeButton)` o método adiciona `NSButton` o ao modo de exibição de conteúdo para que ele seja exibido na tela quando o aplicativo é executado e a janela é exibida.
 
-Em seguida, um rótulo é adicionado à janela que exibirá o número de vezes que o `NSButton` foi clicado: 
+Em seguida, um rótulo é adicionado à janela que exibirá o número de vezes que `NSButton` o foi clicado: 
 
 ```csharp
 ClickMeLabel = new NSTextField (new CGRect (120, Frame.Height - 65, Frame.Width - 130, 20)) {
@@ -174,14 +174,14 @@ ClickMeLabel = new NSTextField (new CGRect (120, Frame.Height - 65, Frame.Width 
 ContentView.AddSubview (ClickMeLabel);
 ``` 
 
-Como o macOS não tem um determinado _rótulo_ elemento de interface do usuário, adicionamos um especialmente com estilo, não editável `NSTextField` para atuar como um rótulo. Assim como o botão antes, o tamanho e local leva em consideração esse (0,0) está na parte inferior esquerda da janela. O `AutoresizingMask = NSViewResizingMask.WidthSizable | NSViewResizingMask.MinYMargin` propriedade esteja usando o **ou** operador para combinar duas `NSViewResizingMask` recursos. Isso tornará o rótulo fique no mesmo local da parte superior da janela quando a janela é redimensionada verticalmente e reduzir e crescem em largura como a janela é redimensionada horizontalmente.
+Como o MacOS não tem um elemento de interface do usuário de _rótulo_ específico, adicionamos um estilo, não `NSTextField` editável, a atuar como um rótulo. Assim como o botão antes, o tamanho e o local levam em conta que (0,0) está na parte inferior esquerda da janela. A `AutoresizingMask = NSViewResizingMask.WidthSizable | NSViewResizingMask.MinYMargin` Propriedade está usando o operador **or** para combinar dois `NSViewResizingMask` recursos. Isso fará com que o rótulo permaneça no mesmo local da parte superior da janela quando a janela for redimensionada verticalmente, reduzida e aumenta em largura, uma vez que a janela é redimensionada horizontalmente.
 
-Novamente, o `ContentView.AddSubview (ClickMeLabel)` método adiciona o `NSTextField` para a exibição de conteúdo para que ela será exibida na tela quando o aplicativo é executado e a janela aberta.
+Novamente, o `ContentView.AddSubview (ClickMeLabel)` método adiciona o `NSTextField` ao modo de exibição de conteúdo para que ele seja exibido na tela quando o aplicativo é executado e a janela é aberta.
 
 
-### <a name="adjusting-the-window-controller"></a>Ajustando o controlador da janela
+### <a name="adjusting-the-window-controller"></a>Ajustando o controlador de janela
 
-Desde o design do `MainWindow` não está sendo carregado de um arquivo de storyboard ou. XIB, precisaremos fazer alguns ajustes para o controlador da janela. Editar o **MainWindowController.cs** de arquivo e torná-lo semelhante ao seguinte:
+Como o design do `MainWindow` não está mais sendo carregado a partir de um arquivo. Storyboard ou. xib, precisaremos fazer alguns ajustes no controlador da janela. Edite o arquivo **MainWindowController.cs** e faça parecer com o seguinte:
 
 ```csharp
 using System;
@@ -226,54 +226,54 @@ namespace MacXibless
 
 ```
 
-Permitir que abordam os principais elementos dessa modificação.
+Vamos discutir os principais elementos dessa modificação.
 
-Primeiro, definimos uma nova instância dos `MainWindow` de classe e atribuí-lo para o controlador de janela base `Window` propriedade:
+Primeiro, definimos uma nova instância da `MainWindow` classe e a atribuímos à propriedade do controlador da `Window` janela base:
 
 ```csharp
 CGRect contentRect = new CGRect (0, 0, 1000, 500);
 base.Window = new MainWindow(contentRect, (NSWindowStyle.Titled | NSWindowStyle.Closable | NSWindowStyle.Miniaturizable | NSWindowStyle.Resizable), NSBackingStore.Buffered, false);
 ```
 
-Podemos definir o local da janela de tela com um `CGRect`. Assim como o sistema de coordenadas da janela, a tela define (0,0) como o canto inferior esquerdo. Em seguida, definimos o estilo da janela usando o **ou** operador para combinar duas ou mais `NSWindowStyle` recursos:
+Definimos o local da janela da tela com um `CGRect`. Assim como o sistema de coordenadas da janela, a tela define (0, 0) como o canto inferior esquerdo. Em seguida, definimos o estilo da janela usando o operador **or** para combinar dois ou mais `NSWindowStyle` recursos:
 
 ```csharp
 ... (NSWindowStyle.Titled | NSWindowStyle.Closable | NSWindowStyle.Miniaturizable | NSWindowStyle.Resizable) ...
 ``` 
 
-O seguinte `NSWindowStyle` recursos estão disponíveis:
+Os seguintes `NSWindowStyle` recursos estão disponíveis:
 
-- **Sem borda** -a janela não terá nenhuma borda.
-- **Intitulado** -a janela terá uma barra de título.
-- **Closable** -a janela tem um botão de fechamento e pode ser fechada.
+- Sem **borda** -a janela não terá borda.
+- **Título** -a janela terá uma barra de título.
+- **Closable** -a janela tem um botão fechar e pode ser fechada.
 - **Miniaturizable** -a janela tem um botão Miniaturize e pode ser minimizada.
-- **Redimensionável** -janela terá um botão de redimensionar e ser redimensionável.
-- **Utilitário** -a janela é uma janela de estilo do utilitário (painel).
-- **DocModal** -se a janela é um painel, eles poderão ser Modal de documento, em vez de sistema Modal. 
-- **NonactivatingPanel** -se a janela é um painel, ele não será feito a janela principal.
+- Redimensionável-a janela terá um botão de redimensionamento e será redimensionável.
+- **Utilitário** – a janela é uma janela de estilo do utilitário (painel).
+- **DocModal** -se a janela for um painel, ela será modal de documento em vez de modal do sistema. 
+- **NonactivatingPanel** -se a janela for um painel, ela não se tornará a janela principal.
 - **TexturedBackground** -a janela terá um plano de fundo texturizado.
-- **Sem escala** -a janela não será redimensionada.
-- **UnifiedTitleAndToolbar** -áreas de título e a barra de ferramentas da janela serão associados.
-- **HUD** -a janela será exibida como um painel de exibição Heads-Up.
+- Não **dimensionado** – a janela não será dimensionada.
+- **UnifiedTitleAndToolbar** -as áreas de título e barra de ferramentas da janela serão Unidas.
+- **HUD** -a janela será exibida como um painel de exibição de cabeçalhos.
 - **FullScreenWindow** -a janela pode entrar no modo de tela inteira.
-- **FullSizeContentView** -exibição de conteúdo da janela está por trás do título e a área da barra de ferramentas.
+- **FullSizeContentView** -a exibição de conteúdo da janela está atrás da área de título e da barra de ferramentas.
 
-As duas últimas propriedades definem os _tipo de buffer_ para a janela e, se o desenho da janela será adiado. Para obter mais informações sobre `NSWindows`, consulte da Apple [Introdução ao Windows](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/WinPanel/Introduction.html#//apple_ref/doc/uid/10000031-SW1) documentação.
+As duas últimas propriedades definem o _tipo de buffer_ para a janela e se o desenho da janela será adiado. Para obter mais informações `NSWindows`, consulte [a introdução](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/WinPanel/Introduction.html#//apple_ref/doc/uid/10000031-SW1) da Apple à documentação do Windows.
 
-Por fim, como a janela não estiver sendo inflada de um arquivo de storyboard ou. XIB, precisamos simular isso em nossa **MainWindowController.cs** chamando o windows `AwakeFromNib` método:
+Por fim, como a janela não está sendo replanada de um arquivo. Storyboard ou. xib, precisamos simula-la em nosso **MainWindowController.cs** chamando o método `AwakeFromNib` do Windows:
 
 ```csharp
 Window.AwakeFromNib ();
 ```
 
-Isso permitirá que você codificar com base no janela apenas como uma janela padrão carregada de um arquivo de storyboard ou. XIB.
+Isso permitirá que você codifique na janela, assim como uma janela padrão carregada de um arquivo. Storyboard ou. xib.
 
 
-### <a name="displaying-the-window"></a>Exibição da janela
+### <a name="displaying-the-window"></a>Exibindo a janela
 
-Com o arquivo de storyboard ou. XIB removido e o **MainWindow.cs** e **MainWindowController.cs** arquivos modificados, você estará usando a janela como faria qualquer janela normal que haviam sido criada no Interface Builder do Xcode com um arquivo. XIB.
+Com o arquivo. Storyboard ou. xib removido e os arquivos **MainWindow.cs** e **MainWindowController.cs** modificados, você usará a janela da mesma forma que faria com qualquer janela normal que tivesse sido criada no interface Builder do Xcode com um arquivo. xib.
 
-A seguir criará uma nova instância da janela e seu controlador e exibir a janela na tela:
+O seguinte criará uma nova instância da janela e seu controlador e exibirá a janela na tela:
 
 ```csharp
 private MainWindowController mainWindowController;
@@ -283,23 +283,23 @@ mainWindowController = new MainWindowController ();
 mainWindowController.Window.MakeKeyAndOrderFront (this);
 ```
 
-Neste ponto, se o aplicativo é executado e o botão clicado algumas vezes, a seguinte mensagem será exibida:
+Neste ponto, se o aplicativo for executado e o botão tiver clicado duas vezes, será exibido o seguinte:
 
-![Um execução do aplicativo de exemplo](xibless-ui-images/run01.png "um execução do aplicativo de exemplo")
-
-
-## <a name="adding-a-code-only-window"></a>Adição de uma janela de código única
-
-Se quisermos adicionar um código apenas, a janela de xibless a um aplicativo existente do xamarin. Mac, clique com botão direito no projeto na **painel de soluções** e selecione **Add** > **novo arquivo...** . No **novo arquivo** caixa de diálogo Escolher **xamarin. Mac** > **janela do Cocoa com controlador**, conforme ilustrado abaixo:
-
-![Adicionando um novo controlador de janela](xibless-ui-images/add01.png "adicionando um novo controlador de janela") 
-
-Assim como antes, iremos excluir o arquivo de storyboard ou. XIB padrão do projeto (nesse caso **SecondWindow.xib**) e siga as etapas a [alternar uma janela para usar código](#Switching_a_Window_to_use_Code) seção acima para cobrir o definição da janela de código.
+![Uma execução de aplicativo de exemplo](xibless-ui-images/run01.png "Uma execução de aplicativo de exemplo")
 
 
-## <a name="adding-a-ui-element-to-a-window-in-code"></a>Adicionando um elemento de interface do usuário a uma janela de código
+## <a name="adding-a-code-only-window"></a>Adicionando uma janela somente código
 
-Se uma janela foi criada em código ou carregada de um arquivo de storyboard ou. XIB, pode haver ocasiões em que queremos adicionar um elemento de interface do usuário para uma janela do código. Por exemplo:
+Se quisermos adicionar apenas um código, xibless janela a um aplicativo Xamarin. Mac existente, clique com o botão direito do mouse no projeto na **painel de soluções** e selecione **Adicionar** > **novo arquivo..** . Na caixa de diálogo **novo arquivo** , escolha janela **Xamarin. Mac** > **Cocoa com controlador**, conforme ilustrado abaixo:
+
+![Adicionando um novo controlador de janela](xibless-ui-images/add01.png "Adicionando um novo controlador de janela") 
+
+Assim como antes, vamos excluir o arquivo default. Storyboard ou. xib do projeto (neste caso, **SecondWindow. xib**) e seguir as etapas na seção alternando [uma janela para usar código](#Switching_a_Window_to_use_Code) acima para cobrir a definição da janela para código.
+
+
+## <a name="adding-a-ui-element-to-a-window-in-code"></a>Adicionando um elemento de interface do usuário a uma janela no código
+
+Se uma janela foi criada no código ou carregada a partir de um arquivo. Storyboard ou. xib, pode haver ocasiões em que desejamos adicionar um elemento de interface do usuário a uma janela a partir do código. Por exemplo:
 
 ```csharp
 var ClickMeButton = new NSButton (new CGRect (10, 10, 100, 30)){
@@ -308,14 +308,14 @@ var ClickMeButton = new NSButton (new CGRect (10, 10, 100, 30)){
 MyWindow.ContentView.AddSubview (ClickMeButton);
 ```
 
-O código acima cria um novo `NSButton` e adiciona-o para o `MyWindow` instância para exibição da janela. Basicamente, qualquer elemento de interface do usuário que pode ser definido no Interface Builder do Xcode, em um arquivo de storyboard ou. XIB pode ser criado no código e exibido em uma janela.
+O código acima cria um novo `NSButton` e o `MyWindow` adiciona à instância de janela para exibição. Basicamente, qualquer elemento de interface do usuário que possa ser definido no Interface Builder do Xcode em um arquivo. Storyboard ou. xib pode ser criado no código e exibido em uma janela.
 
 
-## <a name="defining-the-menu-bar-in-code"></a>Definir a barra de menus no código
+## <a name="defining-the-menu-bar-in-code"></a>Definindo a barra de menus no código
 
-Devido às limitações atuais do xamarin. Mac, ele não é sugerido que você crie barras de Menu – do seu aplicativo xamarin. Mac`NSMenuBar`– no código, mas continuar a usar o **Main. Storyboard** ou **MainMenu.xib** arquivo para defini-lo. Dito isso, você pode adicionar e remover Menus e itens de Menu no C# código.
+Devido às limitações atuais no Xamarin. Mac, não é recomendável que você crie a barra de menus do aplicativo Xamarin. Mac`NSMenuBar`– em código, mas continue a usar o arquivo **Main. Storyboard** ou **MainMenu. xib** para defini-lo. Dito isso, você pode adicionar e remover menus e itens de menu C# no código.
 
-Por exemplo, edite o **AppDelegate.cs** do arquivo e verifique o `DidFinishLaunching` método são semelhantes ao seguinte:
+Por exemplo, edite o arquivo **AppDelegate.cs** e faça `DidFinishLaunching` com que o método fique semelhante ao seguinte:
 
 ```csharp
 public override void DidFinishLaunching (NSNotification notification)
@@ -357,18 +357,18 @@ public override void DidFinishLaunching (NSNotification notification)
 }
 ```
 
-As opções acima cria um menu da barra de Status do código e o exibe quando o aplicativo é iniciado. Para obter mais informações sobre como trabalhar com Menus, consulte nosso [Menus](~/mac/user-interface/menu.md) documentação.
+O acima cria um menu da barra de status a partir do código e o exibe quando o aplicativo é iniciado. Para obter mais informações sobre como trabalhar com menus, consulte a documentação de nossos [menus](~/mac/user-interface/menu.md) .
 
 
 ## <a name="summary"></a>Resumo
 
-Este artigo apresentou uma visão detalhada de criação de interface do usuário de um aplicativo xamarin. Mac no C# código em vez de usar o Interface Builder do Xcode com arquivos. XIB ou de storyboard.
+Este artigo fez uma visão detalhada da criação de uma interface do usuário do aplicativo Xamarin. Mac C# no código em oposição ao uso de interface Builder do Xcode com arquivos. Storyboard ou. xib.
 
 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [MacXibless (amostra)](https://developer.xamarin.com/samples/mac/MacXibless/)
+- [MacXibless (exemplo)](https://docs.microsoft.com/samples/xamarin/mac-samples/macxibless)
 - [Windows](~/mac/user-interface/window.md)
 - [Menus](~/mac/user-interface/menu.md)
 - [Diretrizes de Interface Humana do macOS](https://developer.apple.com/macos/human-interface-guidelines/overview/themes/)
