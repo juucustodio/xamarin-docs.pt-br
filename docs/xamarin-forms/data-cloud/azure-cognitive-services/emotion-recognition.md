@@ -1,5 +1,5 @@
 ---
-title: Reconhecimento de emoções usando a API de detecção facial
+title: Reconhecimento de emoções percebido usando o API de Detecção Facial
 description: API de detecção facial usa uma expressão facial em uma imagem como uma entrada e retorna dados que incluem os níveis de confiança entre um conjunto de emoções para cada face na imagem. Este artigo explica como usar a API de detecção facial para reconhecer emoções, a taxa de um aplicativo xamarin. Forms.
 ms.prod: xamarin
 ms.assetid: 19D36A7C-E8D8-43D1-BE80-48DE6C02879A
@@ -7,22 +7,20 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/10/2018
-ms.openlocfilehash: 6f03ae1030ef4a69b15c5e219785eee12c4e603b
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 05dfa69a70bcd43b66cf6b572aee7d5720a81d76
+ms.sourcegitcommit: 2e5a6b8bcd1a073b54604f51538fd108e1c2a8e5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656560"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68869388"
 ---
-# <a name="emotion-recognition-using-the-face-api"></a>Reconhecimento de emoções usando a API de detecção facial
+# <a name="perceived-emotion-recognition-using-the-face-api"></a>Reconhecimento de emoções percebido usando o API de Detecção Facial
 
-[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
 
-_API de detecção facial usa uma expressão facial em uma imagem como uma entrada e retorna dados que incluem os níveis de confiança entre um conjunto de emoções para cada face na imagem. Este artigo explica como usar a API de detecção facial para reconhecer emoções, a taxa de um aplicativo xamarin. Forms._
+O API de Detecção Facial pode executar a detecção de emoções para detectar raiva, con, aversão, medo, felicidade, neutro, tristeza e surpresa, em uma expressão facial baseada em anotações observadas por codificadores humanos. No entanto, é importante observar que as expressões faciais sozinhas podem não representar necessariamente os Estados internos das pessoas.
 
-## <a name="overview"></a>Visão geral
-
-API de detecção facial pode executar a detecção de emoções para detectar raiva, desdém, aversão, medo, felicidade, indiferença, tristeza e surpresa, em uma expressão facial. Essas emoções são universalmente e entre culturas comunicadas por meio das mesmas expressões faciais básicas. Bem como retornar um resultado de emoções para uma expressão facial, API de detecção facial pode também retorna uma caixa delimitadora para faces detectadas. Observe que uma chave de API deve ser obtida para usar a API de detecção facial. Isso pode ser obtido no [Experimente os serviços Cognitivos](https://azure.microsoft.com/try/cognitive-services/?api=face-api).
+Além de retornar um resultado de emoção para uma expressão facial, a API de Detecção Facial também pode retornar uma caixa delimitadora para faces detectadas. Observe que uma chave de API deve ser obtida para usar a API de detecção facial. Isso pode ser obtido no [Experimente os serviços Cognitivos](https://azure.microsoft.com/try/cognitive-services/?api=face-api).
 
 Reconhecimento de emoções pode ser executado por meio de uma biblioteca de cliente e por meio da API REST. Este artigo se concentra em fazer o reconhecimento de emoção por meio da API REST. Para obter mais informações sobre a API REST, consulte [API REST de detecção facial](https://westus.dev.cognitive.microsoft.com/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236).
 
@@ -44,7 +42,7 @@ public FaceRecognitionService()
 
 Falha ao passar uma chave de API válida para a API de detecção facial resultará em um erro de 401 resposta.
 
-## <a name="performing-emotion-recognition"></a>Executar o reconhecimento de emoções
+## <a name="perform-emotion-recognition"></a>Executar reconhecimento de emoções
 
 Reconhecimento de emoções é executado fazendo uma solicitação POST que contém uma imagem para o `detect` API em `https://[location].api.cognitive.microsoft.com/face/v1.0`, onde `[location]]` é a região que você usou para obter sua chave de API. Os parâmetros de solicitação opcionais são:
 
@@ -81,7 +79,7 @@ Esse método gera um URI de solicitação e, em seguida, envia a solicitação p
 > [!NOTE]
 > Você deve usar a mesma região em suas chamadas de API de detecção facial que você usou para obter as chaves de assinatura. Por exemplo, se você adquiriu suas chaves de assinatura do `westus` região, o ponto de extremidade de detecção de face será `https://westus.api.cognitive.microsoft.com/face/v1.0/detect`.
 
-### <a name="sending-the-request"></a>Enviar a solicitação
+### <a name="send-the-request"></a>Enviar a solicitação
 
 O `SendRequestAsync` método faz a solicitação POST para a API de detecção facial e retorna o resultado como um `Face` matriz:
 
@@ -132,7 +130,7 @@ A solicitação POST é enviada para `detect` API. A resposta é ler, desseriali
 
 O `detect` API enviará o código de status HTTP 200 (Okey) em resposta, fornecida que a solicitação é válida, que indica que a solicitação foi bem-sucedida e que as informações solicitadas estão na resposta. Para obter uma lista de possíveis respostas de erro, consulte [API REST de detecção facial](https://westus.dev.cognitive.microsoft.com/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236).
 
-### <a name="processing-the-response"></a>Processar a resposta
+### <a name="process-the-response"></a>Processar a resposta
 
 A resposta da API é retornada em formato JSON. Os dados JSON a seguir mostram uma mensagem de resposta bem-sucedida típico que fornece os dados solicitados pelo aplicativo de exemplo:
 
@@ -173,10 +171,6 @@ emotionResultLabel.Text = faces.FirstOrDefault().FaceAttributes.Emotion.ToRanked
 Captura de tela a seguir mostra o resultado do processo de reconhecimento de emoções no aplicativo de exemplo:
 
 ![](emotion-recognition-images/emotion-recognition.png "Reconhecimento de emoções")
-
-## <a name="summary"></a>Resumo
-
-Este artigo explicou como usar a API de detecção facial para reconhecer emoções, a taxa de um aplicativo xamarin. Forms. API de detecção facial usa uma expressão facial em uma imagem como uma entrada e retorna dados que inclui a confiança entre um conjunto de emoções para cada face na imagem.
 
 ## <a name="related-links"></a>Links relacionados
 
