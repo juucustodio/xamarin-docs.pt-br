@@ -101,7 +101,7 @@ sections:
             html: Saiba como criar propriedades anexadas e como consumi-las do XAML.
             image:
               src: 'https://docs.microsoft.com/media/common/i_code-samples.svg'
-              href: bindable-properties.md
+              href: attached-properties.md
             title: Propriedades anexadas
           - href: resource-dictionaries.md
             html: Saiba como criar recursos XAML e reutilizá-los em um aplicativo Xamarin.Forms.
