@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/12/2019
-ms.openlocfilehash: 71836021b29094911f9d1ad43639ed103fa18b73
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 8173ebcc174df6e34a53f226a43083bd28941031
+ms.sourcegitcommit: 2e5a6b8bcd1a073b54604f51538fd108e1c2a8e5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68652814"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68869385"
 ---
 # <a name="create-a-xamarinforms-visual-renderer"></a>Criar um renderizador Visual Xamarin. Forms
 
@@ -104,20 +104,23 @@ O `CustomVisual` tipo pode então ser registrado em relação às classes do pro
 
 ## <a name="register-the-ivisual-type"></a>Registrar o tipo IVisual
 
-Nos projetos da plataforma, decorar as classes do processador com `ExportRendererAttribute`o:
+Nos projetos da plataforma, decorar os namespaces do processador com `ExportRendererAttribute`o:
 
 ```csharp
 [assembly: ExportRenderer(typeof(Xamarin.Forms.Button), typeof(CustomButtonRenderer), new[] { typeof(CustomVisual) })]
-public class CustomButtonRenderer : ButtonRenderer
+namespace VisualDemos.iOS
 {
-    protected override void OnElementChanged(ElementChangedEventArgs<Button> e)
+    public class CustomButtonRenderer : ButtonRenderer
     {
-        ...
+        protected override void OnElementChanged(ElementChangedEventArgs<Button> e)
+        {
+            // ...
+        }
     }
 }
 ```
 
-`ExportRendererAttribute` Neste exemplo, o especifica que a `CustomButtonRenderer` classe será usada para renderizar objetos consumidos [`Button`](xref:Xamarin.Forms.Button) , com `IVisual` o tipo registrado como o terceiro argumento. Um renderizador que especifica `IVisual` um tipo, como parte de `ExportRendererAttribute`seu, será usado para renderizar os modos de exibição, em vez do renderizador padrão.
+Neste exemplo para o projeto `ExportRendererAttribute` da plataforma Ios, especifica que a `CustomButtonRenderer` classe será usada para renderizar objetos consumidos [`Button`](xref:Xamarin.Forms.Button) , com `IVisual` o tipo registrado como o terceiro argumento. Um renderizador que especifica `IVisual` um tipo, como parte de `ExportRendererAttribute`seu, será usado para renderizar os modos de exibição, em vez do renderizador padrão.
 
 ## <a name="consume-the-visual-renderer"></a>Consumir o processador Visual
 
