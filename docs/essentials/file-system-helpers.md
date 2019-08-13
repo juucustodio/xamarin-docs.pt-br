@@ -1,18 +1,18 @@
 ---
-title: 'Xamarin.Essentials: Auxiliares de sistema de arquivos'
+title: 'Xamarin.Essentials: Auxiliares do sistema de arquivos'
 description: A classe FileSystem no Xamarin.Essentials contém uma série de auxiliares para localizar o cache e os diretórios de dados do aplicativo e abrir arquivos dentro do pacote de aplicativos.
 ms.assetid: B3EC2DE0-EFC0-410C-AF71-7410AE84CF84
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 11/04/2018
-ms.openlocfilehash: 74089d55006555168d9774924c484cb8866cfb37
-ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
+ms.openlocfilehash: 5b155e4976a67bda36e66d2ca3565c9237fde3c6
+ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52898833"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68738858"
 ---
-# <a name="xamarinessentials-file-system-helpers"></a>Xamarin.Essentials: Auxiliares de sistema de arquivos
+# <a name="xamarinessentials-file-system-helpers"></a>Xamarin.Essentials: Auxiliares do sistema de arquivos
 
 A classe **FileSystem** contém uma série de auxiliares para localizar o cache e os diretórios de dados do aplicativo e abrir arquivos dentro do pacote de aplicativos.
 
@@ -28,7 +28,7 @@ Adicione uma referência ao Xamarin.Essentials na classe:
 using Xamarin.Essentials;
 ```
 
-Para fazer com que o diretório do aplicativo armazene **dados de cache**. Os dados de cache podem ser usados para quaisquer dados que precisem permanecer mais tempo do que os dados temporários, mas que não devem ser dados necessários para uma operação correta.
+Para fazer com que o diretório do aplicativo armazene **dados de cache**. Os dados de cache podem ser usados para quaisquer dados que precisem permanecer mais tempo do que os dados temporários, mas não devem ser dados necessários para uma operação correta, uma vez que o SO determina quando esse armazenamento é limpo.
 
 ```csharp
 var cacheDir = FileSystem.CacheDirectory;
