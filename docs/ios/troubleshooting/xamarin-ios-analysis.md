@@ -1,6 +1,6 @@
 ---
-title: Regras de análise do xamarin. IOS
-description: Este documento descreve um conjunto de regras de análise que verifique as configurações de projeto do xamarin. IOS para ajudar a determinar se mais/better-optimized configurações estarão disponíveis.
+title: Regras de análise do Xamarin. iOS
+description: Este documento descreve um conjunto de regras de análise que verificam as configurações do projeto Xamarin. iOS para ajudar a determinar se há configurações mais otimizadas e com otimização de melhor disponibilidade.
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: C29B69F5-08E4-4DCC-831E-7FD692AB0886
@@ -8,63 +8,70 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/06/2018
-ms.openlocfilehash: 8a4990ce7b2bcacbd4b97b214458531b3d94122e
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 5f968e01cc0b866f94f524728b4bba1e759e8bf8
+ms.sourcegitcommit: 9f37dc00c2adab958025ad1cdba9c37f0acbccd0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61416377"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69012391"
 ---
-# <a name="xamarinios-analysis-rules"></a>Regras de análise do xamarin. IOS
+# <a name="xamarinios-analysis-rules"></a>Regras de análise do Xamarin. iOS
 
-Análise de xamarin. IOS é um conjunto de regras que verificam as configurações do projeto para ajudá-lo a determinar se existem configurações de melhor/mais otimizadas.
+A análise do Xamarin. iOS é um conjunto de regras que verifica as configurações do seu projeto para ajudá-lo a determinar se há configurações melhores/mais otimizadas disponíveis.
 
-Execute as regras de análise sempre que possível para localizar possíveis melhorias desde o início e economizar tempo de desenvolvimento.
+Execute as regras de análise o mais frequentemente possível para encontrar possíveis aprimoramentos no início e economize tempo de desenvolvimento.
 
-Para executar as regras, no Visual Studio para o menu do Mac, selecione **Project > Executar análise de código**.
+Para executar as regras, no menu de Visual Studio para Mac, selecione **projeto > executar análise de código**.
 
 > [!NOTE]
-> Análise de xamarin. IOS só é executada em sua configuração selecionada no momento. É altamente recomendável executar a ferramenta de depuração **e** configurações de versão.
+> A análise do Xamarin. iOS é executada somente na configuração selecionada no momento. É altamente recomendável executar a ferramenta para configurações de depuração **e** versão.
 
 <a name="XIA0001" />
 
 ## <a name="xia0001-disabledlinkerrule"></a>XIA0001: DisabledLinkerRule
 
 - **Problema:** O vinculador está desabilitado no dispositivo para o modo de depuração.
-- **Correção:** Você deve tentar executar seu código com o vinculador a evitar quaisquer surpresas.
-Para configurá-lo, vá para o projeto > Build do iOS > comportamento do vinculador.
+- **Soluciona** Você deve tentar executar seu código com o vinculador para evitar surpresas.
+Para configurá-lo, vá para projeto > o comportamento do vinculador do > do iOS.
 
 <a name="XIA0002" />
 
 ## <a name="xia0002-testcloudagentreleaserule"></a>XIA0002: TestCloudAgentReleaseRule
 
-- **Problema:** Compilações de aplicativo que inicializam o agente de teste de nuvem serão rejeitadas pelo Apple quando enviado, que usam a API privada.
-- **Correção:** Adicionar ou corrigir o #if necessário e define no código.
+- **Problema:** As compilações de aplicativos que inicializam o agente de Test Cloud serão rejeitadas pela Apple quando enviadas, pois usam a API privada.
+- **Soluciona** Adicione ou corrija o #if necessário e define no código.
 
 <a name="XIA0003" />
 
 ## <a name="xia0003-ipadebugbuildsrule"></a>XIA0003: IPADebugBuildsRule
 
-- **Problema:** Configuração de depuração que usa chaves de assinatura de desenvolvedor não deve gerar um IPA, conforme ele é necessário apenas para distribuição, que agora usa o Assistente de publicação.
-- **Correção:** Desabilite a compilação de IPA nas opções de projeto para a configuração de depuração.
+- **Problema:** A configuração de depuração que usa chaves de assinatura do desenvolvedor não deve gerar um IPA, pois ele só é necessário para a distribuição, que agora usa o assistente de publicação.
+- **Soluciona** Desabilite a compilação IPA nas opções de projeto para a configuração de depuração.
 
 <a name="XIA0004" />
 
 ## <a name="xia0004-missing64bitsupportrule"></a>XIA0004: Missing64BitSupportRule
 
-- **Problema:** A arquitetura com suporte para a "versão | dispositivo"não é compatível, ausente ARM64 de 64 bits. Este é um problema, como Apple não aceita aplicativos iOS somente de 32 bits em que a loja de aplicativos.
-- **Correção:** Clique duas vezes em seu projeto do iOS, vá para a compilação > iOS Build e altere as arquiteturas com suporte para que ele tenha ARM64.
+- **Problema:** A arquitetura com suporte para "Release | dispositivo "não é compatível com 64 bits, ARM64 ausente. Isso é um problema, pois a Apple não aceita 32 bits somente aplicativos iOS no AppStore.
+- **Soluciona** Clique duas vezes no seu projeto do iOS, vá para compilar > Build do iOS e altere as arquiteturas com suporte para que ele tenha ARM64.
 
 <a name="XIA0005" />
 
 ## <a name="xia0005-float32rule"></a>XIA0005: Float32Rule
 
-- **Problema:** Não usando a opção float32 (– opções de aot e / S = = float32) leva a pesada o desempenho, especialmente em dispositivos móveis, onde a matemática de precisão dupla é consideravelmente mais lenta. Observe que .NET usa precisão dupla internamente, mesmo para float, portanto, a habilitação dessa opção afeta a precisão e, possivelmente, compatibilidade.
-- **Correção:** Clique duas vezes em seu projeto do iOS, vá para a compilação > iOS Build e desmarque o "Executar todas as operações de float de 32 bits como float de 64 bits".
+- **Problema:** Não usar a opção float32 (--AOT-Options =-O = float32) leva a pesada custo de desempenho, especialmente em dispositivos móveis em que a matemática de precisão dupla é melhorado mais lenta. Observe que o .NET usa a precisão dupla internamente, mesmo para float, portanto, habilitar essa opção afeta a precisão e, possivelmente, a compatibilidade.
+- **Soluciona** Clique duas vezes em seu projeto do iOS, vá para compilar > iOS Build e desmarque a operação "executar todas as operações float de 32 bits como 64-bit float".
 
 <a name="XIA0006" />
 
 ## <a name="xia0006-httpclientavoidmanaged"></a>XIA0006: HttpClientAvoidManaged
 
-- **Problema:** É recomendável usar o manipulador de HttpClient nativo em vez do gerenciado para melhorar o desempenho, tamanho do executável menor e para suportar facilmente padrões mais recentes.
-- **Correção:** Clique duas vezes em seu projeto do iOS, vá para a compilação > iOS Build e alterar a implementação de HttpClient NSUrlSession (iOS 7 +) ou CFNetwork para dar suporte à versão anterior do iOS 7.
+- **Problema:** É recomendável usar o manipulador HttpClient nativo em vez do gerenciado um para melhorar o desempenho, o tamanho do executável menor e para dar suporte fácil aos padrões mais recentes.
+- **Soluciona** Clique duas vezes no seu projeto do iOS, vá para compilar > Build do iOS e altere a implementação do HttpClient para NSUrlSession (iOS 7 +) ou CFNetwork para oferecer suporte à versão anterior ao iOS 7.
+
+<a name="XIA0007" />
+
+## <a name="xia0007-usellvmrule"></a>XIA0007: UseLLVMRule
+
+- **Problema:** Para o Release | configuração do iPhone, é recomendável habilitar o compilador LLVM, que gera um código mais rápido para ser executado às custas do tempo de compilação.
+- **Soluciona** Clique duas vezes no seu projeto do iOS, vá para compilar > Build do iOS e para versão | iPhone, verifique a opção LLVM optimizing compiler.

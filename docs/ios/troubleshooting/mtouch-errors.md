@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/06/2018
-ms.openlocfilehash: 3291589f4a61fad7d7465e0ac2bd4844ae4a0655
-ms.sourcegitcommit: 41a029c69925e3a9d2de883751ebfd649e8747cd
+ms.openlocfilehash: 736195182713eb35ad18fb1ae12c5cc7ddce0787
+ms.sourcegitcommit: 9f37dc00c2adab958025ad1cdba9c37f0acbccd0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68980731"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69012518"
 ---
 # <a name="xamarinios-errors"></a>Erros do Xamarin. iOS
 
@@ -30,7 +30,7 @@ Por exemplo, parâmetros, ambiente, ferramentas ausentes.
 
 ### <a name="mt0000-unexpected-error---please-fill-a-bug-report-at-httpsgithubcomxamarinxamarin-maciosissuesnew"></a>MT0000: Erro inesperado-preencha um relatório de bug em https://github.com/xamarin/xamarin-macios/issues/new
 
-Ocorreu uma condição de erro inesperada. Registre [um relatório de bugs](https://github.com/xamarin/xamarin-macios/issues/new) com o máximo de informações possível, incluindo:
+Ocorreu uma condição de erro inesperada. Registre um novo problema no [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) com o máximo de informações possível, incluindo:
 
 * Logs de compilação completos, com detalhes máximos ( `-v -v -v -v` por exemplo, nos **argumentos mTouch adicionais**);
 * Um caso de teste mínimo que reproduza o erro; e
@@ -94,7 +94,7 @@ Mais de um assembly raiz foi passado para mTouch, embora possa haver apenas um a
 
 ### <a name="mt0009-error-while-loading-assemblies-"></a>MT0009: Erro ao carregar assemblies: *.
 
-Ocorreu um erro ao carregar os assemblies referenciados pelo assembly raiz. Mais informações podem ser fornecidas na saída da compilação.
+Ocorreu um erro ao carregar os assemblies das referências do assembly raiz. Mais informações podem ser fornecidas na saída da compilação.
 
 <a name="MT0010" />
 
@@ -324,7 +324,7 @@ Nenhuma ação foi especificada para mTouch.
 
 ### <a name="mt0054-unable-to-canonicalize-the-path--"></a>MT0054: Não é possível padronizar o caminho ' * ': *
 
-Esse é um erro interno. Se você vir esse erro, registre um bug [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS).
+Esse é um erro interno. Se você vir esse erro, registre um novo problema no [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT0055" />
 
@@ -374,7 +374,7 @@ Este é um aviso informativo, explicando qual Xcode será usado, já que nenhum 
 
 Cada info. plist deve ter um executável (usando a entrada CFBundleExecutable), no entanto, uma entrada deve ser gerada automaticamente durante a compilação.
 
-Isso geralmente indica um bug no Xamarin. iOS; Registre um relatório de bugs em [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS) com um caso de teste.
+Isso geralmente indica um bug no Xamarin. iOS; Registre um novo problema no [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) com um caso de teste.
 
 <a name="MT0064" />
 
@@ -394,13 +394,13 @@ Atualize o destino de implantação no info. plist do projeto para 8,0 ou superi
 
 ### <a name="mt0066-invalid-build-registrar-assembly-"></a>MT0066: Assembly do registrador de compilação inválido: *
 
-Isso geralmente indica um bug no Xamarin. iOS; Registre um relatório de bugs em [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS) com um caso de teste.
+Isso geralmente indica um bug no Xamarin. iOS; Registre um novo problema no [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) com um caso de teste.
 
 <a name="MT0067" />
 
 ### <a name="mt0067-invalid-registrar-"></a>MT0067: Registrador inválido: *
 
-Isso geralmente indica um bug no Xamarin. iOS; Registre um relatório de bugs em [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS) com um caso de teste.
+Isso geralmente indica um bug no Xamarin. iOS; Registre um novo problema no [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) com um caso de teste.
 
 <a name="MT0068" />
 
@@ -422,13 +422,13 @@ Uma estrutura de destino inválida foi passada usando o argumento--Target-Framew
 
 ### <a name="mt0071-unknown-platform--this-usually-indicates-a-bug-in-xamarinios-please-file-a-bug-report-at-httpbugzillaxamarincom-with-a-test-case"></a>MT0071: Plataforma desconhecida: *. Isso geralmente indica um bug no Xamarin. iOS; Registre um relatório de bugs em http://bugzilla.xamarin.com com um caso de teste.
 
-Isso geralmente indica um bug no Xamarin. iOS; Registre um relatório de bugs em [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS) com um caso de teste.
+Isso geralmente indica um bug no Xamarin. iOS; Registre um novo problema no [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) com um caso de teste.
 
 <a name="MT0072" />
 
 ### <a name="mt0072-extensions-are-not-supported-for-the-platform-"></a>MT0072: Não há suporte para extensões para a plataforma ' * '.
 
-Isso geralmente indica um bug no Xamarin. iOS; Registre um relatório de bugs em [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS) com um caso de teste.
+Isso geralmente indica um bug no Xamarin. iOS; Registre um novo problema no [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) com um caso de teste.
 
 <a name="MT0073" />
 
@@ -454,19 +454,19 @@ Uma arquitetura inválida foi especificada. Verifique se a arquitetura é válid
 
 <a name="MT0076" />
 
-### <a name="mt0075-no-architecture-specified-using-the---abi-argument-an-architecture-is-required-for--projects"></a>MT0075: Nenhuma arquitetura especificada (usando o argumento--Abi). Uma arquitetura é necessária para * projetos.
+### <a name="mt0076-no-architecture-specified-using-the---abi-argument-an-architecture-is-required-for--projects"></a>MT0076: Nenhuma arquitetura especificada (usando o argumento--Abi). Uma arquitetura é necessária para * projetos.
 
-Isso geralmente indica um bug no Xamarin. iOS; Registre um relatório de bugs em [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS) com um caso de teste.
+Isso geralmente indica um bug no Xamarin. iOS; Registre um novo problema no [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) com um caso de teste.
 
 <a name="MT0077" />
 
-### <a name="mt0076-watchos-projects-must-be-extensions"></a>MT0076: Os projetos WatchOS devem ser extensões.
+### <a name="mt0077-watchos-projects-must-be-extensions"></a>MT0077: Os projetos WatchOS devem ser extensões.
 
-Isso geralmente indica um bug no Xamarin. iOS; Registre um relatório de bugs em [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS) com um caso de teste.
+Isso geralmente indica um bug no Xamarin. iOS; Registre um novo problema no [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) com um caso de teste.
 
 <a name="MT0078" />
 
-### <a name="mt0077-incremental-builds-are-enabled-with-a-deployment-target--80-currently--this-is-not-supported-the-resulting-application-will-not-launch-on-ios-9-so-the-deployment-target-will-be-set-to-80"></a>MT0077: As compilações incrementais são habilitadas com um destino de implantação < 8,0 (atualmente *). Isso não é suportado (o aplicativo resultante não será iniciado no iOS 9), portanto, o destino de implantação será definido como 8,0.
+### <a name="mt0078-incremental-builds-are-enabled-with-a-deployment-target--80-currently--this-is-not-supported-the-resulting-application-will-not-launch-on-ios-9-so-the-deployment-target-will-be-set-to-80"></a>MT0078: As compilações incrementais são habilitadas com um destino de implantação < 8,0 (atualmente *). Isso não é suportado (o aplicativo resultante não será iniciado no iOS 9), portanto, o destino de implantação será definido como 8,0.
 
 Este é um aviso informando que o destino da implantação foi definido como 8,0 para essa compilação para que as compilações incrementais funcionem corretamente.
 
@@ -474,7 +474,7 @@ As compilações incrementais só têm suporte quando o destino de implantação
 
 <a name="MT0079" />
 
-### <a name="mt0078-the-recommended-xcode-version-for-xamarinios--is-xcode--or-later-the-current-xcode-version-found-in--is-"></a>MT0078: A versão recomendada do Xcode para Xamarin. iOS * é o Xcode * ou posterior. A versão atual do Xcode (encontrada em *) é *.
+### <a name="mt0079-the-recommended-xcode-version-for-xamarinios--is-xcode--or-later-the-current-xcode-version-found-in--is-"></a>MT0079: A versão recomendada do Xcode para Xamarin. iOS * é o Xcode * ou posterior. A versão atual do Xcode (encontrada em *) é *.
 
 Este é um aviso informando que a versão atual do Xcode não é a versão recomendada do Xcode para esta versão do Xamarin. iOS.
 
@@ -512,7 +512,7 @@ O novo recurso Refcount agora é obrigatório para todos os projetos e, portanto
 
 ### <a name="mt0086-a-target-framework---target-framework-must-be-specified-when-building-for-tvos-or-watchos"></a>MT0086: Uma estrutura de destino (--Target-Framework) deve ser especificada ao compilar para TVOS ou WatchOS.
 
-Isso geralmente indica um bug no Xamarin. iOS; Registre um relatório de bugs em [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS) com um caso de teste.
+Isso indica um bug no Xamarin. iOS. Registre um novo problema no [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT0087" />
 
@@ -561,7 +561,7 @@ Uma solução Straw seria usar uma versão mais antiga do Xamarin. iOS, uma que 
 
 Essa mensagem de erro é relatada quando uma verificação de consistência interna no Xamarin. iOS falha.
 
-Isso indica um bug no Xamarin. iOS; Registre um relatório de bugs em [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS) com um caso de teste.
+Isso geralmente indica um bug no Xamarin. iOS; Registre um novo problema no [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) com um caso de teste.
 
 <a name="MT0100" />
 
@@ -569,7 +569,7 @@ Isso indica um bug no Xamarin. iOS; Registre um relatório de bugs em [http://bu
 
 Essa mensagem de erro é relatada quando uma verificação de consistência interna no Xamarin. iOS falha.
 
-Esse é sempre um bug no Xamarin. iOS; Registre um relatório de bugs em [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS) com um caso de teste.
+Isso geralmente indica um bug no Xamarin. iOS; Registre um novo problema no [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) com um caso de teste.
 
 <a name="MT0101" />
 
@@ -838,7 +838,19 @@ Para obter mais informações, consulte bug n º[52727](https://bugzilla.xamarin
 
 Ocorreu uma falha ao tocar um arquivo (que é feito para garantir que compilações parciais sejam feitas corretamente).
 
-Esse aviso pode provavelmente ser ignorado; no caso de problemas, anote um bug [https://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS) e ele será investigado.
+Esse aviso pode provavelmente ser ignorado; no caso de problemas, execute um novo problema no [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) e ele será investigado.
+
+<a name="MT0135" />
+
+### <a name="mt0135-did-not-link-system-framework-0-referenced-by-assembly-1-because-it-was-introduced-in-2-3-and-were-using-the-2-4-sdk"></a>MT0135: Não vinculou a estrutura do{0}sistema ' ' (referenciada{1}pelo assembly ' ') porque ela {2} foi introduzida no {3}e estamos {2} usando o {4} SDK.
+
+Para compilar seu aplicativo, o Xamarin. iOS deve vincular as bibliotecas do sistema, alguns dos quais dependem da versão do SDK especificada na mensagem de erro. Como você está usando uma versão mais antiga do SDK, as invocações para essas APIs podem falhar em tempo de execução.
+
+A maneira recomendada para corrigir esse erro é atualizar o Xcode para obter o SDK necessário. Se você tiver várias versões do Xcode instaladas ou quiser usar um Xcode em um local não padrão, certifique-se de definir o local do Xcode correto nas preferências do IDE.
+
+Como alternativa, habilite o [vinculador](https://docs.microsoft.com/en-us/xamarin/ios/deploy-test/linker) gerenciado para remover APIs não usadas, incluindo (na maioria dos casos) as novas que exigem a biblioteca especificada. No entanto, isso não funcionará se o seu projeto exigir APIs introduzidas em um SDK mais recente do que o que o Xcode fornece.
+
+Como uma solução Straw, use uma versão mais antiga do Xamarin. iOS que não exija que esses novos SDKs estejam presentes durante o processo de compilação.
 
 ## <a name="mt1xxx-project-related-error-messages"></a>MT1xxx: Mensagens de erro relacionadas ao projeto
 
@@ -864,6 +876,8 @@ Esse aviso pode provavelmente ser ignorado; no caso de problemas, anote um bug [
 <a name="MT1004" />
 
 ### <a name="mt1004-could-not-get-the-list-of-installed-applications"></a>MT1004: Não foi possível obter a lista de aplicativos instalados.
+
+## <a name="mt1xxx-project-related-error-messages"></a>MT1xxx: Mensagens de erro relacionadas ao projeto
 
 <a name="MT1005" />
 
@@ -901,7 +915,7 @@ Se isso ocorrer, tente a seguinte solução alternativa:
 sudo chmod 0644 /Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/*/*.mdb
 ```
 
-No entanto, como esse problema foi resolvido na versão mais recente do Xamarin. Ios, registre um novo bug em [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS) com suas informações de versão completas e crie a saída do log.
+No entanto, como esse problema foi resolvido na versão mais recente do Xamarin. iOS, registre um novo problema no [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) com suas informações de versão completas e crie a saída do log.
 
 <a name="MT1010" />
 
@@ -919,7 +933,7 @@ No entanto, como esse problema foi resolvido na versão mais recente do Xamarin.
 
 ### <a name="mt1013-dependency-tracking-error-no-files-to-compare-please-file-a-bug-report-at-httpbugzillaxamarincom-with-a-test-case"></a>MT1013: Erro de controle de dependência: nenhum arquivo a ser comparado. Registre um relatório de bugs em http://bugzilla.xamarin.com com um caso de teste.
 
-Isso indica um bug no Xamarin. iOS. Registre um bug em [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS) com um caes de teste.
+Isso indica um bug no Xamarin. iOS. Registre um novo problema no [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) com um caso de teste.
 
 <a name="MT1014" />
 
@@ -1565,7 +1579,7 @@ Não foi possível carregar o assembly raiz. Verifique se o caminho na mensagem 
 
 ### <a name="mt202x-binding-optimizer-failed-processing-"></a>MT202x: O processamento `...`da ligação do otimizador falhou.
 
-Ocorreu algo inesperado ao tentar otimizar o código de associação gerado. O elemento que está causando o problema é nomeado na mensagem de erro. Para corrigir esse problema, o assembly chamado (ou que contém o tipo ou o método nomeado) precisará ser fornecido em um [relatório de bug](http://bugzilla.xamarin.com) junto com um log de compilação completo com detalhes `-v -v -v -v` habilitados (ou seja, nos **argumentos mTouch adicionais**).
+Ocorreu algo inesperado ao tentar otimizar o código de associação gerado. O elemento que está causando o problema é nomeado na mensagem de erro. Para corrigir esse problema, o assembly chamado (ou que contém o tipo ou o método nomeado) precisará ser fornecido em um novo problema no [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) , juntamente com um log de compilação completo com detalhes `-v -v -v -v` habilitados (ou seja, nos **argumentos mTouch adicionais**).
 
 O último dígito `x` será:
 * `0`para um nome de assembly;
@@ -1576,7 +1590,7 @@ O último dígito `x` será:
 
 ### <a name="mt2030-remove-user-resources-failed-processing-"></a>MT2030: Remova o processamento `...`de recursos do usuário com falha.
 
-Ocorreu algo inesperado ao tentar remover os recursos do usuário. O assembly que está causando o problema é nomeado na mensagem de erro. Para corrigir esse problema, o assembly precisará ser fornecido em um [relatório de bug](http://bugzilla.xamarin.com) junto com um log de compilação completo com detalhes habilitados `-v -v -v -v` (ou seja, nos **argumentos mTouch adicionais**).
+Ocorreu algo inesperado ao tentar remover os recursos do usuário. O assembly que está causando o problema é nomeado na mensagem de erro. Para corrigir esse problema, o assembly precisará ser fornecido em um novo problema no [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) , juntamente com um log de compilação completo com detalhes habilitados `-v -v -v -v` (ou seja, nos **argumentos mTouch adicionais**).
 
 Os recursos do usuário são arquivos incluídos dentro de assemblies (como recursos) que precisam ser extraídos, no momento da compilação, para criar o pacote de aplicativos. Isso inclui:
 
@@ -1587,37 +1601,37 @@ Os recursos do usuário são arquivos incluídos dentro de assemblies (como recu
 
 ### <a name="mt2040-default-httpmessagehandler-setter-failed-processing-"></a>MT2040: Falha no processamento `...`do padrão HttpMessageHandler setter.
 
-Ocorreu algo inesperado ao tentar definir o `HttpMessageHandler` padrão para o aplicativo. Registre um [relatório de bug](http://bugzilla.xamarin.com) junto com um log de compilação completo com detalhes habilitados ( `-v -v -v -v` ou seja, nos **argumentos mTouch adicionais**).
+Ocorreu algo inesperado ao tentar definir o `HttpMessageHandler` padrão para o aplicativo. Registre um novo problema no [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) junto com um log de compilação completo com detalhes habilitados (ou `-v -v -v -v` seja, nos **argumentos mTouch adicionais**).
 
 <a name="MT2050" />
 
 ### <a name="mt2050-code-remover-failed-processing-"></a>MT2050: Falha no processamento `...`do removedor de código.
 
-Algo inesperado ocorreu ao tentar remover o código do envio de BCL com o aplicativo. Registre um [relatório de bug](http://bugzilla.xamarin.com) junto com um log de compilação completo com detalhes habilitados ( `-v -v -v -v` ou seja, nos **argumentos mTouch adicionais**).
+Algo inesperado ocorreu ao tentar remover o código do envio de BCL com o aplicativo. Registre um novo problema no [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) junto com um log de compilação completo com detalhes habilitados (ou `-v -v -v -v` seja, nos **argumentos mTouch adicionais**).
 
 <a name="MT2060" />
 
 ### <a name="mt2060-sealer-failed-processing-"></a>MT2060: Falha no processamento `...`do selo.
 
-Ocorreu algo inesperado ao tentar lacrar tipos ou métodos (final) ou ao desvirtualizar alguns métodos. O assembly que está causando o problema é nomeado na mensagem de erro. Para corrigir esse problema, o assembly precisará ser fornecido em um [relatório de bug](http://bugzilla.xamarin.com) junto com um log de compilação completo com detalhes habilitados `-v -v -v -v` (ou seja, nos **argumentos mTouch adicionais**).
+Ocorreu algo inesperado ao tentar lacrar tipos ou métodos (final) ou ao desvirtualizar alguns métodos. O assembly que está causando o problema é nomeado na mensagem de erro. Para corrigir esse problema, o assembly precisará ser fornecido em um novo problema no [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) , juntamente com um log de compilação completo com detalhes habilitados `-v -v -v -v` (ou seja, nos **argumentos mTouch adicionais**).
 
 <a name="MT2070" />
 
 ### <a name="mt2070-metadata-reducer-failed-processing-"></a>MT2070: Falha no processamento `...`de redutor de metadados.
 
-Ocorreu algo inesperado ao tentar reduzir os metadados do aplicativo. O assembly que está causando o problema é nomeado na mensagem de erro. Para corrigir esse problema, o assembly precisará ser fornecido em um [relatório de bug](http://bugzilla.xamarin.com) junto com um log de compilação completo com detalhes habilitados `-v -v -v -v` (ou seja, nos **argumentos mTouch adicionais**).
+Ocorreu algo inesperado ao tentar reduzir os metadados do aplicativo. O assembly que está causando o problema é nomeado na mensagem de erro. Para corrigir esse problema, o assembly precisará ser fornecido em um novo problema no [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) , juntamente com um log de compilação completo com detalhes habilitados `-v -v -v -v` (ou seja, nos **argumentos mTouch adicionais**).
 
 <a name="MT2080" />
 
 ### <a name="mt2080-marknsobjects-failed-processing-"></a>MT2080: Falha no processamento `...`de MarkNSObjects.
 
-Ocorreu algo inesperado ao tentar `NSObject` marcar subclasses a partir do aplicativo. O assembly que está causando o problema é nomeado na mensagem de erro. Para corrigir esse problema, o assembly precisará ser fornecido em um [relatório de bug](http://bugzilla.xamarin.com) junto com um log de compilação completo com detalhes habilitados `-v -v -v -v` (ou seja, nos **argumentos mTouch adicionais**).
+Ocorreu algo inesperado ao tentar `NSObject` marcar subclasses a partir do aplicativo. O assembly que está causando o problema é nomeado na mensagem de erro. Para corrigir esse problema, o assembly precisará ser fornecido em um novo problema no [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) , juntamente com um log de compilação completo com detalhes habilitados `-v -v -v -v` (ou seja, nos **argumentos mTouch adicionais**).
 
 <a name="MT2090" />
 
 ### <a name="mt2090-inliner-failed-processing-"></a>MT2090: Falha no processamento `...`do inlineer.
 
-Ocorreu algo inesperado ao tentar o código embutido do aplicativo. O assembly que está causando o problema é nomeado na mensagem de erro. Para corrigir esse problema, o assembly precisará ser fornecido em um relatório de [bug](https://bugzilla.xamarin.com) junto com um log de compilação completo com detalhes habilitados (ou `-v -v -v -v` seja, nos **argumentos mTouch adicionais**).
+Ocorreu algo inesperado ao tentar o código embutido do aplicativo. O assembly que está causando o problema é nomeado na mensagem de erro. Para corrigir esse problema, o assembly precisará ser fornecido em um novo problema no [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) , juntamente com um log de compilação completo com detalhes habilitados (ou `-v -v -v -v` seja, nos **argumentos mTouch adicionais**).
 
 <!-- MT21xx: more linker errors -->
 
@@ -1627,7 +1641,7 @@ Ocorreu algo inesperado ao tentar o código embutido do aplicativo. O assembly q
 
 ### <a name="mt2100-smart-enum-conversion-preserver-failed-processing-"></a>MT2100: Falha ao processar `...`o servidor de conversão de enumeração inteligente.
 
-Ocorreu algo inesperado ao tentar marcar os métodos de conversão para enums inteligentes do aplicativo. O assembly que está causando o problema é nomeado na mensagem de erro. Para corrigir esse problema, o assembly precisará ser fornecido em um relatório de [bug](https://bugzilla.xamarin.com) junto com um log de compilação completo com detalhes habilitados (ou `-v -v -v -v` seja, nos **argumentos mTouch adicionais**).
+Ocorreu algo inesperado ao tentar marcar os métodos de conversão para enums inteligentes do aplicativo. O assembly que está causando o problema é nomeado na mensagem de erro. Para corrigir esse problema, o assembly precisará ser fornecido em um novo problema no [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) , juntamente com um log de compilação completo com detalhes habilitados (ou `-v -v -v -v` seja, nos **argumentos mTouch adicionais**).
 
 <a name="MT2101" />
 
@@ -1635,7 +1649,7 @@ Ocorreu algo inesperado ao tentar marcar os métodos de conversão para enums in
 
 Foi encontrada uma referência de assembly inválida ao processar o método mencionado na mensagem de erro.
 
-O assembly que está causando o problema é nomeado na mensagem de erro. Para corrigir esse problema, o assembly precisará ser fornecido em um [relatório de bug](https://bugzilla.xamarin.com) junto com um log de compilação completo com detalhes habilitados `-v -v -v -v` (ou seja, nos **argumentos mTouch adicionais**).
+O assembly que está causando o problema é nomeado na mensagem de erro. Para corrigir esse problema, o assembly precisará ser fornecido em um novo problema no [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) , juntamente com um log de compilação completo com detalhes habilitados `-v -v -v -v` (ou seja, nos **argumentos mTouch adicionais**).
 
 <a name="MT2102" />
 
@@ -1643,7 +1657,7 @@ O assembly que está causando o problema é nomeado na mensagem de erro. Para co
 
 Ocorreu algo inesperado ao tentar marcar o método mencionado na mensagem de erro.
 
-O assembly que está causando o problema é nomeado na mensagem de erro. Para corrigir esse problema, o assembly precisará ser fornecido em um [relatório de bug](https://bugzilla.xamarin.com) junto com um log de compilação completo com detalhes habilitados `-v -v -v -v` (ou seja, nos **argumentos mTouch adicionais**).
+O assembly que está causando o problema é nomeado na mensagem de erro. Para corrigir esse problema, o assembly precisará ser fornecido em um novo problema no [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) , juntamente com um log de compilação completo com detalhes habilitados `-v -v -v -v` (ou seja, nos **argumentos mTouch adicionais**).
 
 <a name="MT2103" />
 
@@ -1651,7 +1665,7 @@ O assembly que está causando o problema é nomeado na mensagem de erro. Para co
 
 Ocorreu um erro inesperado ao processar um assembly.
 
-O assembly que está causando o problema é nomeado na mensagem de erro. Para corrigir esse problema, o assembly precisará ser fornecido em um relatório de [bug](https://bugzilla.xamarin.com) junto com um log de compilação completo com detalhes habilitados (ou `-v -v -v -v` seja, nos **argumentos mTouch adicionais**).
+O assembly que está causando o problema é nomeado na mensagem de erro. Para corrigir esse problema, o assembly precisará ser fornecido em um novo problema no [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) , juntamente com um log de compilação completo com detalhes habilitados `-v -v -v -v` (ou seja, nos **argumentos mTouch adicionais**).
 
 <a name="MT2104" />
 
@@ -1659,7 +1673,7 @@ O assembly que está causando o problema é nomeado na mensagem de erro. Para co
 
 Os assemblies de modo misto não podem ser processados pelo vinculador.
 
-Consulte https://msdn.microsoft.com/library/x0w2664k.aspx para obter mais informações sobre assemblies de modo misto.
+Consulte https://docs.microsoft.com/cpp/dotnet/mixed-native-and-managed-assemblies para obter mais informações sobre assemblies de modo misto.
 
 ## <a name="mt3xxx-aot-error-messages"></a>MT3xxx: Mensagens de erro do AOT
 
@@ -1672,7 +1686,7 @@ Consulte https://msdn.microsoft.com/library/x0w2664k.aspx para obter mais inform
 
 ### <a name="mt3001-could-not-aot-the-assembly-"></a>MT3001: Não foi possível AOT o assembly ' * '
 
-Isso geralmente indica um bug no compilador AOT. Registre um bug [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS) com um projeto que possa ser usado para reproduzir o erro.
+Isso geralmente indica um bug no compilador AOT. Registre um novo problema no [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) com um projeto que pode ser usado para reproduzir o erro.
 
 Às vezes, é possível contornar isso desabilitando compilações incrementais na opção de Build do iOS do projeto (mas ainda é um bug, portanto, informe-o de qualquer forma).
 
@@ -1734,13 +1748,13 @@ Desabilite o suporte do BitCode ou habilite o LLVM.
 
 ### <a name="mt4001-the-main-template-could-not-be-expanded-to-"></a>MT4001: Não foi possível expandir o modelo principal para `*`.
 
-Ocorreu um erro ao gerar Main. m. Registre um bug em [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS).
+Ocorreu um erro ao gerar `main.m`. Registre um novo problema no [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT4002" />
 
 ### <a name="mt4002-failed-to-compile-the-generated-code-for-pinvoke-methods-please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MT4002: Falha ao compilar o código gerado para métodos P/Invoke. Registre um relatório de bugs em http://bugzilla.xamarin.com
 
-Falha ao compilar o código gerado para métodos P/Invoke. Registre um relatório de bugs em [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS).
+Falha ao compilar o código gerado para métodos P/Invoke. Registre um novo problema no [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 ### <a name="mt41xx-registrar"></a>MT41xx: Registrador
 
@@ -1754,7 +1768,7 @@ Falha ao compilar o código gerado para métodos P/Invoke. Registre um relatóri
 
 Foi encontrado um tipo na API exportada que o tempo de execução não sabe como realizar marshaling de/para Objective-C.
 
-Se você acreditar que o Xamarin. iOS deve dar suporte ao tipo em questão, registre uma solicitação de [http://bugzilla.xamarin.com](http://bugzilla.xamarin.com)aprimoramento em.
+Se você acreditar que o Xamarin. iOS deve dar suporte ao tipo em questão, registre uma solicitação de aprimoramento no [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT4102" />
 
@@ -1774,13 +1788,13 @@ Isso ocorre quando o registrador encontra um tipo em uma assinatura com as carac
 
 Foi encontrado um tipo na API exportada que o tempo de execução não sabe como realizar marshaling de/para Objective-C.
 
-Se você acreditar que o Xamarin. iOS deve dar suporte ao tipo em questão, registre uma solicitação de [http://bugzilla.xamarin.com](http://bugzilla.xamarin.com)aprimoramento em.
+Se você acreditar que o Xamarin. iOS deve dar suporte ao tipo em questão, registre uma solicitação de aprimoramento no [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT4105" />
 
 ### <a name="mt4105-the-registrar-cannot-marshal-the-parameter-of-type--in-signature-for-method-"></a>MT4105: O registrador não pode realizar marshaling `*` do parâmetro do tipo `*`na assinatura para o método.
 
-Se você acreditar que o Xamarin. iOS deve dar suporte ao tipo em questão, registre uma solicitação de [http://bugzilla.xamarin.com](http://bugzilla.xamarin.com)aprimoramento em.
+Se você acreditar que o Xamarin. iOS deve dar suporte ao tipo em questão, registre uma solicitação de aprimoramento no [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT4106" />
 
@@ -1788,7 +1802,7 @@ Se você acreditar que o Xamarin. iOS deve dar suporte ao tipo em questão, regi
 
 Foi encontrado um tipo na API exportada que o tempo de execução não sabe como realizar marshaling de/para Objective-C.
 
-Se você acreditar que o Xamarin. iOS deve dar suporte ao tipo em questão, registre uma solicitação de [http://bugzilla.xamarin.com](http://bugzilla.xamarin.com)aprimoramento em.
+Se você acreditar que o Xamarin. iOS deve dar suporte ao tipo em questão, registre uma solicitação de aprimoramento no [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT4107" />
 
@@ -1796,7 +1810,7 @@ Se você acreditar que o Xamarin. iOS deve dar suporte ao tipo em questão, regi
 
 Foi encontrado um tipo na API exportada que o tempo de execução não sabe como realizar marshaling de/para Objective-C.
 
-Se você acreditar que o Xamarin. iOS deve dar suporte ao tipo em questão, registre uma solicitação de [http://bugzilla.xamarin.com](http://bugzilla.xamarin.com)aprimoramento em.
+Se você acreditar que o Xamarin. iOS deve dar suporte ao tipo em questão, registre uma solicitação de aprimoramento no [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT4108" />
 
@@ -1804,7 +1818,7 @@ Se você acreditar que o Xamarin. iOS deve dar suporte ao tipo em questão, regi
 
 Foi encontrado um tipo na API exportada que o tempo de execução não sabe como realizar marshaling de/para Objective-C.
 
-Se você acreditar que o Xamarin. iOS deve dar suporte ao tipo em questão, registre uma solicitação de [http://bugzilla.xamarin.com](http://bugzilla.xamarin.com)aprimoramento em.
+Se você acreditar que o Xamarin. iOS deve dar suporte ao tipo em questão, registre uma solicitação de aprimoramento no [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT4109" />
 
@@ -1812,7 +1826,7 @@ Se você acreditar que o Xamarin. iOS deve dar suporte ao tipo em questão, regi
 
 Falha ao compilar o código gerado para o registrador. O log de compilação conterá a saída do compilador nativo, explicando por que o código não está compilando.
 
-Esse é sempre um bug no Xamarin. iOS; Registre um relatório de bugs em [http://bugzilla.xamarin.com](http://bugzilla.xamarin.com) com seu projeto ou um caso de teste.
+Esse é sempre um bug no Xamarin. iOS; Registre um novo problema no [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) com seu projeto ou um caso de teste.
 
 <a name="MT4110" />
 
@@ -1854,7 +1868,7 @@ Esse é sempre um bug no Xamarin. iOS; Registre um relatório de bugs em [http:/
 
 ### <a name="mt4120-the-registrar-found-an-unknown-field-type--in-field--please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MT4120: O registrador encontrou um tipo de campo\*desconhecido ' ' no\*campo '. * '. Registre um relatório de bugs em http://bugzilla.xamarin.com
 
-Esse erro indica um bug no Xamarin. iOS. Registre um relatório de bugs em [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS).
+Esse erro indica um bug no Xamarin. iOS. Registre um novo problema no [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT4121" />
 
@@ -1872,7 +1886,7 @@ Esse erro indica um bug no Xamarin. iOS. Registre um relatório de bugs em [http
 
 ### <a name="mt4124-invalid--found-on--please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MT4124: Inválido * encontrado em ' * '. Registre um relatório de bugs em http://bugzilla.xamarin.com
 
-Esse erro indica um bug no Xamarin. iOS. Registre um relatório de bugs em [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS).
+Esse erro indica um bug no Xamarin. iOS. Registre um novo problema no [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT4125" />
 
@@ -1990,7 +2004,7 @@ Nesse caso, o `retain`Xamarin. Ios substituirá `release` e `dealloc` na `MyNSOb
 
 ### <a name="mt4144-cannot-register-the-method--since-it-does-not-have-an-associated-trampoline-please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MT4144: Não é possível registrar o método ' * ', pois ele não tem um trampoline associado. Registre um relatório de bugs em http://bugzilla.xamarin.com.
 
-Isso indica um bug no Xamarin. iOS. Registre um bug em [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS).
+Isso indica um bug no Xamarin. iOS. Registre um novo problema no [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT4145" />
 
@@ -2080,7 +2094,7 @@ Atualize o Xcode.
 
 ### <a name="mt4163-internal-error-in-the-registrar--please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MT4163: Erro interno no registrador (*). Registre um relatório de bugs em http://bugzilla.xamarin.com
 
-Esse erro indica um bug no Xamarin. iOS. Registre um relatório de bugs em [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS).
+Esse erro indica um bug no Xamarin. iOS. Registre um novo problema no [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT4164" />
 
@@ -2094,19 +2108,19 @@ Use um identificador Objective-C válido como seletores.
 
 ### <a name="mt4165-the-registrar-couldnt-find-the-type-systemvoid-in-any-of-the-referenced-assemblies"></a>MT4165: O registrador não pôde localizar o tipo ' System. void ' em nenhum dos assemblies referenciados.
 
-Esse erro provavelmente indica um bug no Xamarin. iOS. Registre um relatório de bugs em [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS).
+Esse erro provavelmente indica um bug no Xamarin. iOS. Registre um novo problema no [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT4166" />
 
 ### <a name="mt4166-cannot-register-the-method--because-the-signature-contains-a-type--that-isnt-a-reference-type"></a>MT4166: Não é possível registrar o\*método ' ' porque a assinatura contém um\*tipo () que não é um tipo de referência.
 
-Isso geralmente indica um bug no Xamarin. iOS; Registre um bug em [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS).
+Isso geralmente indica um bug no Xamarin. iOS. Registre um novo problema no [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT4167" />
 
 ### <a name="mt4167-cannot-register-the-method--because-the-signature-contains-a-generic-type--with-a-generic-argument-type-that-isnt-an-nsobject-subclass-"></a>MT4167: Não é possível registrar o\*método ' ' porque a assinatura contém um tipo\*genérico () com um tipo de argumento genérico que não é uma subclasse NSObject (*).
 
-Isso geralmente indica um bug no Xamarin. iOS; Registre um bug em [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS).
+Isso geralmente indica um bug no Xamarin. iOS. Registre um novo problema no [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT4168" />
 
@@ -2141,12 +2155,9 @@ Verifique se o tipo no atributo Binde corresponde ao tipo do membro ao qual ele 
 
 O registrador não oferece suporte à conversão entre os tipos mencionados.
 
-Esse é um bug no Xamarin. iOS se a API em questão for fornecida pelo Xamarin. iOS; Registre um bug em [http://bugzilla.xamarin.com][1].
+Esse é um bug no Xamarin. iOS se a API em questão for fornecida pelo Xamarin. iOS. Registre um novo problema no [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
-Se você encontrar isso ao desenvolver um projeto de associação para uma biblioteca nativa, estamos abertos para adicionar suporte a novas combinações de tipos. Se esse for o caso, registre uma solicitação de aprimoramento ([http://bugzilla.xamarin.com][2]) com um caso de teste e vamos avaliá-lo.
-
-[1]: https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS
-[2]: https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS&component=General&bug_severity=enhancement
+Se você encontrar isso ao desenvolver um projeto de associação para uma biblioteca nativa, estamos abertos para adicionar suporte a novas combinações de tipos. Se esse for o caso, registre uma solicitação de aprimoramento no [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) com um caso de teste e vamos avaliá-lo.
 
 ## <a name="mt5xxx-gcc-and-toolchain-error-messages"></a>MT5xxx: Mensagens de erro GCC e ferramentas
 
@@ -2179,7 +2190,7 @@ Se você encontrar isso ao desenvolver um projeto de associação para uma bibli
 
 ### <a name="mt5106-could-not-compile-the-files--please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MT5106: Não foi possível compilar os arquivos ' * '. Registre um relatório de bugs em http://bugzilla.xamarin.com
 
-Isso geralmente indica um bug no Xamarin. iOS; Registre um bug em [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS).
+Isso geralmente indica um bug no Xamarin. iOS; Registre um novo problema no [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 ### <a name="mt52xx-linking"></a>MT52xx: Vinculação
 
@@ -2338,7 +2349,7 @@ Esse é um aviso, indicando que um P/Invoke foi detectado para referenciar a bib
 
 Esse erro é relatado ao vincular a saída do compilador AOT.
 
-Esse erro provavelmente indica um bug no Xamarin. iOS. Registre um relatório de bugs em [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS).
+Esse erro provavelmente indica um bug no Xamarin. iOS. Registre um novo problema no [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT5217" />
 
@@ -2915,19 +2926,19 @@ Onde * pode ser:
 
 ### <a name="mt8008-the-loaded-version-of-xamariniosdll-was-compiled-for--bits-while-the-process-is--bits-please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8008: A versão carregada do Xamarin. iOS. dll foi compilada para * bits, enquanto o processo é * bits. Registre um bug em http://bugzilla.xamarin.com.
 
-Isso indica que algo está errado no processo de compilação. Registre um bug em [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS).
+Isso indica que algo está errado no processo de compilação. Registre um novo problema no [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT8009" />
 
 ### <a name="mt8009-unable-to-locate-the-block-to-delegate-conversion-method-for-the-method-s-parameter--please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8009: Não é possível localizar o bloco para delegar o método de conversão para o método *.* s parâmetro # *. Registre um bug em http://bugzilla.xamarin.com.
 
-Isso indica que uma API não foi associada corretamente. Se essa for uma API exposta pelo Xamarin, registre um bug em nosso Bugzilla ([http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS)), se for uma associação de terceiros, entre em contato com o fornecedor.
+Isso indica que uma API não foi associada corretamente. Se essa for uma API exposta pelo Xamarin, registre um novo problema no [GitHub](https://github.com/xamarin/xamarin-macios/issues/new). Se for uma associação de terceiros, entre em contato com o fornecedor.
 
 <a name="MT8010" />
 
 ### <a name="mt8010-native-type-size-mismatch-between-xamariniosmacdll-and-the-executing-architecture-xamariniosmacdll-was-built-for--bit-while-the-current-process-is--bit"></a>MT8010: Incompatibilidade de tamanho de tipo nativo entre Xamarin. [iOS | Mac]. dll e a arquitetura em execução. Xamarin. [iOS | O Mac]. dll foi criado para o * bit, enquanto o processo atual é de * bit.
 
-Isso indica que algo está errado no processo de compilação. Registre um bug em [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS).
+Isso indica que algo está errado no processo de compilação. Registre um novo problema no [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT8011" />
 
@@ -2935,7 +2946,7 @@ Isso indica que algo está errado no processo de compilação. Registre um bug e
 
 O Xamarin. iOS não pôde localizar um método necessário em tempo de execução (para converter um delegado em um bloco).
 
-Isso geralmente indica um bug no Xamarin. iOS; Registre um bug em [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS).
+Isso geralmente indica um bug no Xamarin. iOS. Registre um novo problema no [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT8012" />
 
@@ -2943,23 +2954,23 @@ Isso geralmente indica um bug no Xamarin. iOS; Registre um bug em [http://bugzil
 
 O atributo DelegateProxy do método em questão é inválido.
 
-Isso geralmente indica um bug no Xamarin. iOS; Registre um bug em [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS).
+Isso geralmente indica um bug no Xamarin. iOS. Registre um novo problema no [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT8013" />
 
 ### <a name="mt8013-invalid-delegateproxyattribute-for-the-return-value-for-the-method--delegatetype-2-specifies-a-type-without-a-handler-field-please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8013: DelegateProxyAttribute inválido para o valor de retorno do método *.* : Deleguetype{2}() especifica um tipo sem um campo ' Handler '. Registre um bug em http://bugzilla.xamarin.com.
 
-O atributo DelegateProxy do método em questão é inválido.
+O `[DelegateProxy]` atributo do método em questão é inválido.
 
-Isso geralmente indica um bug no Xamarin. iOS; Registre um bug em [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS).
+Isso geralmente indica um bug no Xamarin. iOS. Registre um novo problema no [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT8014" />
 
 ### <a name="mt8014-invalid-delegateproxyattribute-for-the-return-value-for-the-method--the-delegatetypes-2-handler-field-is-null-please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8014: DelegateProxyAttribute inválido para o valor de retorno do método *.* : O campo ' Handler '{2}do representante ' () é nulo. Registre um bug em http://bugzilla.xamarin.com.
 
-O atributo DelegateProxy do método em questão é inválido.
+O `[DelegateProxy]` atributo do método em questão é inválido.
 
-Isso geralmente indica um bug no Xamarin. iOS; Registre um bug em [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS).
+Isso geralmente indica um bug no Xamarin. iOS. Registre um novo problema no [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT8015" />
 
@@ -2967,15 +2978,15 @@ Isso geralmente indica um bug no Xamarin. iOS; Registre um bug em [http://bugzil
 
 O atributo DelegateProxy do método em questão é inválido.
 
-Isso geralmente indica um bug no Xamarin. iOS; Registre um bug em [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS).
+Isso geralmente indica um bug no Xamarin. iOS. Registre um novo problema no [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT8016" />
 
 ### <a name="mt8016-unable-to-convert-delegate-to-block-for-the-return-value-for-the-method--because-the-input-isnt-a-delegate-its-a--please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8016: Não é possível converter delegate para Block para o valor de retorno do método *.* , porque a entrada não é um delegado, é um *. Registre um bug em http://bugzilla.xamarin.com.
 
-O atributo DelegateProxy do método em questão é inválido.
+O `[DelegateProxy]` atributo do método em questão é inválido.
 
-Isso geralmente indica um bug no Xamarin. iOS; Registre um bug em [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS).
+Isso geralmente indica um bug no Xamarin. iOS. Registre um novo problema no [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <!-- 8017 is used by mmp -->
 
@@ -2983,40 +2994,40 @@ Isso geralmente indica um bug no Xamarin. iOS; Registre um bug em [http://bugzil
 
 ### <a name="mt8018-internal-consistency-error-please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MT8018: Erro de consistência interna. Registre um relatório de bugs em http://bugzilla.xamarin.com.
 
-Isso indica um bug no Xamarin. iOS. Registre um bug em [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS).
+Isso indica um bug no Xamarin. iOS. Registre um novo problema no [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT8019" />
 
 ### <a name="mt8019-could-not-find-the-assembly--in-the-loaded-assemblies"></a>MT8019: Não foi possível encontrar o assembly * nos assemblies carregados.
 
-Isso indica um bug no Xamarin. iOS. Registre um bug em [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS).
+Isso indica um bug no Xamarin. iOS. Registre um novo problema no [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT8020" />
 
 ### <a name="mt8020-could-not-find-the-module-with-metadatatoken--in-the-assembly-"></a>MT8020: Não foi possível encontrar o módulo com MetadataToken * no assembly *.
 
-Isso indica um bug no Xamarin. iOS. Registre um bug em [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS).
+Isso indica um bug no Xamarin. iOS. Registre um novo problema no [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT8021" />
 
 ### <a name="mt8021-unknown-implicit-token-type-"></a>MT8021: Tipo de token implícito desconhecido: *.
 
-Isso indica um bug no Xamarin. iOS. Registre um bug em [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS).
+Isso indica um bug no Xamarin. iOS. Registre um novo problema no [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT8022" />
 
 ### <a name="mt8022-expected-the-token-reference--to-be-a--but-its-a--please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MT8022: Espera-se que a referência de token * seja um *, mas é um *. Registre um relatório de bugs em http://bugzilla.xamarin.com.
 
-Isso indica um bug no Xamarin. iOS. Registre um bug em [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS).
+Isso indica um bug no Xamarin. iOS. Registre um novo problema no [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT8023" />
 
 ### <a name="mt8023-an-instance-object-is-required-to-construct-a-closed-generic-method-for-the-open-generic-method--token-reference--please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MT8023: Um objeto de instância é necessário para construir um método genérico fechado para o método genérico aberto: * (referência de token: *). Registre um relatório de bugs em http://bugzilla.xamarin.com.
 
-Isso indica um bug no Xamarin. iOS. Registre um bug em [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS).
+Isso indica um bug no Xamarin. iOS. Registre um novo problema no [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
 <a name="MT8024" />
 
 ### <a name="mt8024-could-not-find-a-valid-extension-type-for-the-smart-enum-smart_type-please-file-a-bug-at-httpsbugzillaxamarincom"></a>MT8024: Não foi possível encontrar um tipo de extensão válido para a enumeração inteligente ' {smart_type} '. Registre um bug em https://bugzilla.xamarin.com.
 
-Isso indica um bug no Xamarin. iOS. Registre um bug em [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS).
+Isso indica um bug no Xamarin. iOS. Registre um novo problema no [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
