@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/12/2019
-ms.openlocfilehash: 8173ebcc174df6e34a53f226a43083bd28941031
-ms.sourcegitcommit: 2e5a6b8bcd1a073b54604f51538fd108e1c2a8e5
+ms.openlocfilehash: bc95b9be0605c353ee9f914cb065f79711b9f92b
+ms.sourcegitcommit: 41a029c69925e3a9d2de883751ebfd649e8747cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68869385"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68978286"
 ---
 # <a name="create-a-xamarinforms-visual-renderer"></a>Criar um renderizador Visual Xamarin. Forms
 
@@ -104,7 +104,7 @@ O `CustomVisual` tipo pode então ser registrado em relação às classes do pro
 
 ## <a name="register-the-ivisual-type"></a>Registrar o tipo IVisual
 
-Nos projetos da plataforma, decorar os namespaces do processador com `ExportRendererAttribute`o:
+Nos projetos da plataforma, adicione o `ExportRendererAttribute` no nível do assembly:
 
 ```csharp
 [assembly: ExportRenderer(typeof(Xamarin.Forms.Button), typeof(CustomButtonRenderer), new[] { typeof(CustomVisual) })]

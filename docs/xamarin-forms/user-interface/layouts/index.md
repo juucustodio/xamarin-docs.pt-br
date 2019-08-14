@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/18/2018
-ms.openlocfilehash: 1889579a48364204a977d63bd9bdb875df37a2bf
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 7d63dafbb17a3757f5d15f65e977b4b0cb8bc44a
+ms.sourcegitcommit: 41a029c69925e3a9d2de883751ebfd649e8747cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68657029"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68980872"
 ---
 # <a name="layouts-in-xamarinforms"></a>Layouts no Xamarin.Forms
 
@@ -32,6 +32,7 @@ Cada controle de layout é descrito abaixo, bem como detalhes sobre como lidar c
 * **[RelativeLayout](relative-layout.md)** – usado para organizar as exibições definindo restrições relativas às dimensões de seu pai & posição.
 * **[Grade](grid.md)** – usada para organizar as exibições em uma grade. Linhas e colunas podem ser especificadas em termos de valores absolutos ou taxas.
 * **[FlexLayout](flex-layout.md)** – usado para organizar as exibições horizontal ou verticalmente com o encapsulamento.
+* **[Quadro](frame.md)** -usado para encapsular uma exibição com uma borda, ou quadro, que pode ser configurada com cores, arrastar sombra e muito mais.
 * **[ScrollView](scroll-view.md)** – usado para fornecer rolagem quando uma exibição não se ajusta totalmente dentro dos limites da tela.
 * **[Layoutoptions](layout-options.md)** – defina alinhamento e expansão para uma exibição, em relação ao seu pai.
 * **[Transparência de entrada](#input_transparency)** – especifica se um elemento recebe entrada.
@@ -179,6 +180,10 @@ Observe os seguintes aspectos de código acima:
 - Grades e colunas são especificadas explicitamente, não é inferido do conteúdo.
 - `Height` e `Width` valores podem ser definidos como estrelas, o que significa que a grade definirá esses valores para preencher o espaço disponível.
 - Posição de cada botão é especificada por `Grid.Row`  &  `Grid.Column` propriedades.
+
+### <a name="frameframemd"></a>[Quadro](frame.md)
+
+Um `Frame` layout é usado para criar uma borda personalizável em torno `View`de filho. Um `Frame` pode ser usado para colocar uma borda em torno de um controle como `Button` ou `Label` ou pode encapsular outros layouts para criar objetos de interface do usuário mais complexos, como um cartão.
 
 ### <a name="layoutoptionslayout-optionsmd"></a>[LayoutOptions](layout-options.md)
 

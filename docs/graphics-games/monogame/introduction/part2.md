@@ -6,12 +6,12 @@ ms.assetid: F0622A01-DE7F-451A-A51F-129876AB6FFD
 author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
-ms.openlocfilehash: 7c7b58266b4f5168fdb231258390fa64278963f8
-ms.sourcegitcommit: f255aa286bd52e8a80ffa620c2e93c97f069f8ec
+ms.openlocfilehash: 44ba9188a059cc28c7b4d89143cef1921a0b1701
+ms.sourcegitcommit: 41a029c69925e3a9d2de883751ebfd649e8747cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68680950"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68978479"
 ---
 # <a name="part-2--implementing-the-walkinggame"></a>Parte 2 – implementando o WalkingGame
 
@@ -28,7 +28,6 @@ As partes anteriores deste passo a passos mostraram como criar projetos monogame
 - Adicionando a primeira animação a CharacterEntity
 - Adicionando movimento ao caractere
 - Movimentação e animação correspondentes
-
 
 ## <a name="unzipping-our-game-content"></a>Descompactando nosso conteúdo do jogo
 
@@ -57,11 +56,11 @@ Precisamos criar uma `Texture2D` instância para usar ao renderizar nosso sprite
 
 Para adicionar o conteúdo do jogo, clique com o botão direito do mouse na pasta **conteúdo** e selecione **Adicionar > Adicionar arquivos...** Navegue até o local onde o arquivo Content. zip foi extraído e selecione o arquivo **charactersheet. png** . Se for perguntado sobre como adicionar o arquivo à pasta, devemos selecionar a opção de **cópia** :
 
-![](part2-images/image1.png "Se for perguntado sobre como adicionar o arquivo à pasta, selecione a opção de cópia")
+![Se for perguntado sobre como adicionar o arquivo à pasta, selecione a opção de cópia](part2-images/image1.png)
 
 A pasta de conteúdo agora contém o arquivo charactersheet. png:
 
-![](part2-images/image2.png "A pasta de conteúdo agora contém o arquivo charactersheet. png")
+![A pasta de conteúdo agora contém o arquivo charactersheet. png](part2-images/image2.png)
 
 Em seguida, vamos adicionar o código para carregar o arquivo charactersheet. png e criar `Texture2D`um. Para fazer isso, abra `Game1.cs` o arquivo e adicione o seguinte campo à classe Game1.cs:
 
@@ -117,7 +116,7 @@ protected override void Draw(GameTime gameTime)
 
 A execução do jogo agora mostra um único Sprite exibindo a textura criada em charactersheet. png:
 
-![](part2-images/image3.png "A execução do jogo agora mostra um único Sprite exibindo a textura criada em charactersheet. png")
+![A execução do jogo agora mostra um único Sprite exibindo a textura criada em charactersheet. png](part2-images/image3.png)
 
 ## <a name="creating-the-characterentity"></a>Criando o CharacterEntity
 
@@ -132,7 +131,6 @@ Um padrão comum para organizar o código de jogo é criar uma nova classe para 
 - Pode ser criado e destruído dinamicamente, como uma reinicialização que aparece e sendo coletada pelo jogador
 
 Os sistemas da organização da entidade podem ser complexos, e muitos mecanismos de jogo oferecem classes para ajudar a gerenciar entidades. Vamos implementar um sistema de entidades muito simples, portanto, vale a pena observar que os jogos completos geralmente exigem mais organização na parte do desenvolvedor.
-
 
 ### <a name="defining-the-characterentity"></a>Definindo o CharacterEntity
 
@@ -215,7 +213,6 @@ O `Draw` método conforme implementado acima usa um `SpriteBatch` argumento, mas
 
 O motivo disso é porque a renderização mais eficiente é possível quando `SpriteBatch` a mesma instância é usada para todas as `Draw` chamadas e quando todas `Draw` as chamadas estão sendo feitas entre um único conjunto de `Begin` chamadas `End` e. É claro que nosso jogo incluirá apenas uma única instância de entidade, mas jogos mais complicados se beneficiarão do padrão que permite que várias entidades `SpriteBatch` usem a mesma instância.
 
-
 ## <a name="adding-characterentity-to-the-game"></a>Adicionando CharacterEntity ao jogo
 
 Agora que adicionamos nosso `CharacterEntity` código para a renderização, podemos substituir o código em `Game1.cs` para usar uma instância dessa nova entidade. Para fazer isso, vamos substituir o `Texture2D` campo por um `CharacterEntity` campo em `Game1`:
@@ -278,7 +275,7 @@ protected override void Draw(GameTime gameTime)
 
 Se executarmos o jogo, agora veremos o caractere. Como X e Y padrão como 0, o caractere é posicionado no canto superior esquerdo da tela:
 
-![](part2-images/image4.png "Como X e Y padrão como 0, o caractere é posicionado no canto superior esquerdo da tela")
+![Como X e Y padrão como 0, o caractere é posicionado no canto superior esquerdo da tela](part2-images/image4.png)
 
 ## <a name="creating-the-animation-class"></a>Criando a classe Animation
 
@@ -286,11 +283,9 @@ Atualmente, `CharacterEntity` nosso exibe o arquivo **charactersheet. png** comp
 
 Criaremos a `Animation` classe para controlar a lógica e o estado da animação CharacterEntity. A classe Animation será uma classe geral que poderia ser usada para qualquer entidade, não apenas `CharacterEntity` para animações. Ultimate a `Animation` classe fornecerá um `Rectangle` que será `CharacterEntity` usado ao desenhar a si mesmo. Também criaremos uma `AnimationFrame` classe que será usada para definir a animação.
 
-
 ### <a name="defining-animationframe"></a>Definindo AnimationFrame
 
 `AnimationFrame`não conterá nenhuma lógica relacionada à animação. Vamos usá-lo somente para armazenar dados. Para adicionar a `AnimationFrame` classe, clique com o botão direito do mouse ou controle-clique no projeto compartilhado **WalkingGame** e selecione **Adicionar > novo arquivo....** Insira o nome **AnimationFrame** e clique no botão **novo** . Modificaremos o `AnimationFrame.cs` arquivo para que ele contenha o seguinte código:
-
 
 ```csharp
 using System;
@@ -504,7 +499,7 @@ protected override void Update(GameTime gameTime)
 
 Agora, `CharacterEntity` a `walkDown` animação será reproduzida:
 
-![](part2-images/image5.gif "Agora, o CharacterEntity executará sua animação walkDown")
+![Agora, o CharacterEntity executará sua animação walkDown](part2-images/image5.gif)
 
 ## <a name="adding-movement-to-the-character"></a>Adicionando movimento ao caractere
 
@@ -513,7 +508,6 @@ Em seguida, vamos adicionar movimento ao nosso caractere usando controles de toq
 ### <a name="defining-getdesiredvelocityfrominput"></a>Definindo GetDesiredVelocityFromInput
 
 Usaremos a classe do `TouchPanel` jogo, que fornece informações sobre o estado atual da tela sensível ao toque. Vamos adicionar um método que irá verificar o e `TouchPanel` retornar a velocidade desejada do caractere:
-
 
 ```csharp
 Vector2 GetDesiredVelocityFromInput()
@@ -552,7 +546,6 @@ O que vem a seguir é um pouco de matemática, o que manterá o caractere em mov
 
 A `if (desiredVelocity.X != 0 || desiredVelocity.Y != 0)` instrução está verificando se a velocidade é diferente de zero – em outras palavras, está verificando se o usuário não está se tocando no mesmo ponto que a posição atual do caractere. Caso contrário, precisamos definir a velocidade do caractere como constante, independentemente da distância do toque. Isso é feito normalizando o vetor de velocidade, que resulta em um comprimento de 1. Um vetor de velocidade de 1 significa que o caractere será movido em 1 pixel por segundo. Vamos acelerar isso multiplicando o valor pela velocidade desejada de 200.
 
-
 ### <a name="applying-velocity-to-position"></a>Aplicando a velocidade à posição
 
 A velocidade retornada de `GetDesiredVelocityFromInput` precisa ser aplicada aos valores dos `X` caracteres e `Y` para ter qualquer efeito no tempo de execução. Modificaremos o método `Update` da seguinte maneira:
@@ -578,7 +571,7 @@ O que implementamos aqui é chamado de movimentação *baseada em tempo* (em opo
 
 Se executarmos nosso jogo agora, veremos que o caractere está se movendo para o local do toque:
 
-![](part2-images/image6.gif "O caractere está sendo movido para o local de toque")
+![O caractere está sendo movido para o local de toque](part2-images/image6.gif)
 
 ## <a name="matching-movement-and-animation"></a>Movimentação e animação correspondentes
 
@@ -661,7 +654,6 @@ Devemos observar que o código acima foi adicionado ao `CharacterEntity` Constru
 
 Em seguida, ajustaremos a lógica para usar as animações de acordo com a direção em que o caractere está sendo movido ou de acordo com a última animação se o caractere acabou de ser interrompido. Para fazer isso, modificaremos o `Update` método:
 
-
 ```csharp
 public void Update(GameTime gameTime)
 {
@@ -736,7 +728,7 @@ Se o caractere não estiver sendo movido, queremos definir o caractere `currentA
 
 O resultado desse código é que o caractere será animado corretamente durante a movimentação e, em seguida, a última direção que ele estava acompanhando ao parar:
 
-![](part2-images/image7.gif "O resultado desse código é que o caractere será animado corretamente durante a movimentação e, em seguida, a última direção que ele estava acompanhando ao parar")
+![O resultado desse código é que o caractere será animado corretamente durante a movimentação e, em seguida, a última direção que ele estava acompanhando ao parar](part2-images/image7.gif)
 
 ## <a name="summary"></a>Resumo
 
