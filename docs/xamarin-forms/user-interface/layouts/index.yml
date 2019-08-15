@@ -1,0 +1,105 @@
+### YamlMime:YamlDocument
+documentType: LandingData
+title: Layouts do Xamarin.Forms
+metadata:
+  title: Layouts do Xamarin.Forms
+  description: Saiba mais sobre as classes e os recursos de layout no Xamarin.Forms.
+  ms.topic: landing-page
+  ms.prod: xamarin
+  ms.assetid: CF6BD41F-CD4B-4576-841D-B8A49A4EC754
+  author: davidbritch
+  ms.author: dabritch
+  ms.date: 08/14/2019
+abstract:
+  description: Saiba mais sobre as classes e os recursos de layout no Xamarin.Forms.
+sections:
+  - title: null
+    items:
+      - type: list
+        style: cards
+        className: cardsB
+        items:
+          - href: stack-layout.md
+            html: 'Saiba como organizar as exibições em uma pilha unidimensional, seja horizontal ou verticalmente.'
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
+              href: stack-layout.md
+            title: StackLayout
+          - href: grid.md
+            html: Saiba como organizar as exibições em linhas e colunas que podem ter tamanhos proporcionais ou absolutos.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
+              href: grid.md
+            title: Grade
+          - href: flex-layout.md
+            html: Saiba como organizar exibições na horizontal ou na vertical com encapsulamento.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
+              href: flex-layout.md
+            title: FlexLayout
+          - href: absolute-layout.md
+            html: 'Saiba como organizar exibições definindo valores de tamanho e de coordenadas, que podem ser proporcionais ou absolutos.'
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
+              href: absolute-layout.md
+            title: AbsoluteLayout
+          - href: relative-layout.md
+            html: Saiba como organizar exibições definindo restrições em relação às propriedades das exibições de layout ou de irmãos.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
+              href: absolute-layout.md
+            title: RelativeLayout
+          - href: scroll-view.md
+            html: Saiba como incluir rolagem quando uma exibição não se ajustar aos limites da tela.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
+              href: scroll-view.md
+            title: ScrollView
+          - href: frame.md
+            html: 'Saiba como encapsular uma exibição com um quadro que pode ser configurado com cores, sombras e outras opções.'
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
+              href: frame.md
+            title: Quadro
+          - href: layout-options.md
+            html: Saiba como definir o alinhamento de uma exibição dentro de seu layout pai.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
+              href: layout-options.md
+            title: LayoutOptions
+          - href: margin-and-padding.md
+            html: 'Saiba como controlar a distância entre um elemento e seus elementos adjacentes, bem como seus elementos filho.'
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
+              href: margin-and-padding.md
+            title: Margem e preenchimento
+          - href: device-orientation.md
+            html: Saiba como configurar as alterações de orientação do dispositivo e como responder a elas.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
+              href: device-orientation.md
+            title: Orientação do dispositivo
+          - href: tablet.md
+            html: Saiba como otimizar o layout para aplicativos para tablet e da área de trabalho.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
+              href: tablet.md
+            title: Layout para tablet e área de trabalho
+          - href: bindable-layouts.md
+            html: Saiba como habilitar as classes de layout a gerar conteúdo e como definir a aparência delas fazendo a associação a uma coleção de itens.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
+              href: bindable-layouts.md
+            title: Layouts associáveis
+          - href: layout-compression.md
+            html: Saiba como remover objetos específicos do layout da árvore visual para tentar melhorar o desempenho da renderização da página.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
+              href: layout-compression.md
+            title: Compactação de Layout
+          - href: custom.md
+            html: Saiba como criar uma classe de layout personalizada sensível à orientação.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
+              href: custom.md
+            title: Layout personalizado
