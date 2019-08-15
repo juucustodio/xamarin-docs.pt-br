@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/15/2017
-ms.openlocfilehash: 0ae5dd86341912354938a8509668c843d412367b
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: 25ebf101dfe0cc3d51e8411b7977e6dc0b061f2d
+ms.sourcegitcommit: 41a029c69925e3a9d2de883751ebfd649e8747cd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67832586"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68978400"
 ---
 # <a name="wallet-capabilities-in-xamarinios"></a>Recursos Wallet no Xamarin.iOS
 
@@ -65,6 +65,6 @@ A lista a seguir descreve as etapas adicionais que precisam ser executadas:
 
 * Use o namespace do framework em seu aplicativo.
 * Adicione os direitos necessários para seu aplicativo. As informações sobre os direitos necessários e como adicioná-los estão detalhadas no guia [Trabalhando com direitos](~/ios/deploy-test/provisioning/entitlements.md).
-* Na **Assinatura de Pacote do iOS** do Aplicativo, verifique se a opção **Direitos Personalizados** está definida como **Entitlements.plist**. Esta _não_ é a configuração padrão para builds de Depuração e do Simulador do iOS.
+* Na **Assinatura de Pacote do iOS** do aplicativo, certifique-se de que **Direitos Personalizados** está definido como **Entitlements.plist**. Esta _não_ é a configuração padrão para builds de depuração e do simulador do iOS.
 
 Se você encontrar problemas com serviços de aplicativos, consulte a seção [Solução de problemas](~/ios/deploy-test/provisioning/capabilities/index.md) do guia principal.

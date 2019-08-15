@@ -9,7 +9,7 @@ metadata:
   ms.assetid: 391B4A77-7CAC-42D2-9E77-BD8E170E9BE6
   author: davidbritch
   ms.author: dabritch
-  ms.date: 07/31/2019
+  ms.date: 08/07/2019
 abstract:
   description: Saiba mais sobre como criar interfaces de usuário com o Xamarin.Forms.
 sections:
@@ -115,6 +115,12 @@ sections:
               src: ~/media/icons/i_user-interface.svg
               href: map.md
             title: Mapas
+          - href: menuitem.md
+            html: Saiba como usar a classe MenuItem para adicionar itens ao menu de contexto de células ListView.
+            image:
+              src: ~/media/icons/i_user-interface.svg
+              href: menuitem.md
+            title: MenuItem
           - href: picker/index.md
             html: Saiba como usar o controle Picker para selecionar um item de texto em uma lista de dados.
             image:
@@ -169,12 +175,24 @@ sections:
               src: ~/media/icons/i_user-interface.svg
               href: text/index.md
             title: Texto
+          - href: theming.md
+            html: Saiba como criar temas para aplicativos Xamarin.Forms e alterar o tema em tempo de execução.
+            image:
+              src: ~/media/icons/i_user-interface.svg
+              href: theming.md
+            title: Temas
           - href: timepicker.md
             html: Saiba como usar um TimePicker para permitir que um horário seja selecionado.
             image:
               src: ~/media/icons/i_user-interface.svg
               href: timepicker.md
             title: TimePicker
+          - href: toolbaritem.md
+            html: Saiba como usar um ToolbarItem para adicionar botões à barra de navegação.
+            image:
+              src: ~/media/icons/i_user-interface.svg
+              href: toolbaritem.md
+            title: ToolbarItem
           - href: visual/index.md
             html: Saiba como usar o Visual Material do Xamarin.Forms para criar aplicativos que parecem idênticos ou amplamente idênticos no iOS e no Android.
             image:
