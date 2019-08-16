@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/03/2018
-ms.openlocfilehash: c5348ab754139dbd4012f6bfe9d22068ac16d12b
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: d5b3f084be7adc664dcb52342af617788f4dde48
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68509251"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69526227"
 ---
 # <a name="creating-a-service"></a>Criando um serviço
 
@@ -38,7 +38,7 @@ No momento da compilação, o Xamarin. Android registrará o serviço injetando 
 <service android:name="md5a0cbbf8da641ae5a4c781aaf35e00a86.DemoService" />
 ```
 
-É possível compartilhar um serviço com outros aplicativos Android exportando  -o. Isso é feito definindo a `Exported` propriedade `ServiceAttribute`no. Ao exportar um serviço, a `ServiceAttribute.Name` Propriedade também deve ser definida para fornecer um nome público significativo para o serviço. Este trecho de código demonstra como exportar e nomear um serviço:
+É possível compartilhar um serviço com outros aplicativos Android exportando -o. Isso é feito definindo a `Exported` propriedade `ServiceAttribute`no. Ao exportar um serviço, a `ServiceAttribute.Name` Propriedade também deve ser definida para fornecer um nome público significativo para o serviço. Este trecho de código demonstra como exportar e nomear um serviço:
 
 ```csharp
 [Service(Exported=true, Name="com.xamarin.example.DemoService")]
@@ -75,7 +75,7 @@ A próxima etapa é examinar como iniciar um serviço e, em seguida, prosseguir 
 
 A maneira mais básica de iniciar um serviço no Android é distribuir um `Intent` que contém metadados para ajudar a identificar qual serviço deve ser iniciado. Há dois estilos diferentes de intenções que podem ser usados para iniciar um serviço:
 
--   **Intenção explícita** Uma intenção explícita identificará exatamente qual serviço deve ser usado para concluir uma determinada ação.  &ndash; Uma intenção explícita pode ser considerada como uma letra que tem um endereço específico; O Android roteará a intenção para o serviço identificado explicitamente. Este trecho de código é um exemplo de uso de uma intenção explícita para iniciar `DownloadService`um serviço chamado:
+- **Intenção explícita** Uma intenção explícita identificará exatamente qual serviço deve ser usado para concluir uma determinada ação. &ndash; Uma intenção explícita pode ser considerada como uma letra que tem um endereço específico; O Android roteará a intenção para o serviço identificado explicitamente. Este trecho de código é um exemplo de uso de uma intenção explícita para iniciar `DownloadService`um serviço chamado:
 
     ```csharp
     // Example of creating an explicit Intent in an Android Activity
@@ -83,7 +83,7 @@ A maneira mais básica de iniciar um serviço no Android é distribuir um `Inten
     downloadIntent.data = Uri.Parse(fileToDownload);
     ```
 
--   **Intenção implícita** &ndash; Esse tipo de tentativa identifica livremente a ação que o usuário deseja executar, mas o serviço exato para concluir essa ação é desconhecido. Uma intenção implícita pode ser considerada como uma letra que é endereçada "a quem ele pode se preocupar...".
+- **Intenção implícita** &ndash; Esse tipo de tentativa identifica livremente a ação que o usuário deseja executar, mas o serviço exato para concluir essa ação é desconhecido. Uma intenção implícita pode ser considerada como uma letra que é endereçada "a quem ele pode se preocupar...".
     O Android examinará o conteúdo da intenção e determinará se há um serviço existente que corresponda à intenção.
 
     Um _filtro de intenção_ é usado para ajudar a corresponder a intenção implícita com um serviço registrado. Um filtro de intenção é um elemento XML que é adicionado a **AndroidManifest. xml** que contém os metadados necessários para ajudar a corresponder um serviço com uma intenção implícita.

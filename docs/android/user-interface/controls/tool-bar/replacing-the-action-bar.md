@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/27/2018
-ms.openlocfilehash: 19ac5a023b1f97b2e08bbe1821a2b9259280fc98
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: d59acaec36c63c62fe934f145d06bfbb78d11f6c
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68645149"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69522862"
 ---
 # <a name="replacing-the-action-bar"></a>Substituição da barra de ações
 
@@ -21,15 +21,15 @@ Um dos usos mais comuns para o `Toolbar` é substituir a barra de ação padrão
 
 Para substituir a barra de ação padrão de um aplicativo `Toolbar`por um: 
 
-1.  Crie um novo tema personalizado e modifique as propriedades do aplicativo para que ele use esse novo tema. 
+1. Crie um novo tema personalizado e modifique as propriedades do aplicativo para que ele use esse novo tema. 
 
-2.  Desabilite `windowActionBar` o atributo no tema personalizado e habilite `windowNoTitle` o atributo.
+2. Desabilite `windowActionBar` o atributo no tema personalizado e habilite `windowNoTitle` o atributo.
 
-3.  Defina um layout para o `Toolbar`.
+3. Defina um layout para o `Toolbar`.
 
-4.  Inclua o `Toolbar` layout no arquivo de layout **principal. axml** da atividade. 
+4. Inclua o `Toolbar` layout no arquivo de layout **principal. axml** da atividade. 
 
-5.  Adicione código ao método `OnCreate` da atividade para localizar o `Toolbar` e a chamada `SetActionBar` para instalar o `ToolBar` como a barra de ação.
+5. Adicione código ao método `OnCreate` da atividade para localizar o `Toolbar` e a chamada `SetActionBar` para instalar o `ToolBar` como a barra de ação.
 
 As seções a seguir explicam esse processo em detalhes. Um aplicativo simples é criado e sua barra de ação é substituída por `Toolbar`um personalizado. 
 
@@ -175,13 +175,13 @@ Nesta seção, os menus são adicionados ao `Toolbar`. A área superior direita 
 
 Para adicionar menus ao `Toolbar`: 
 
-1.  Adicione ícones de menu (se necessário) às `mipmap-` pastas do projeto de aplicativo. O Google fornece um conjunto de ícones de menu livres na página [ícones de material](https://design.google.com/icons/) . 
+1. Adicione ícones de menu (se necessário) às `mipmap-` pastas do projeto de aplicativo. O Google fornece um conjunto de ícones de menu livres na página [ícones de material](https://design.google.com/icons/) . 
 
-2.  Defina o conteúdo dos itens de menu adicionando um novo arquivo de recurso de menu em **recursos/menu**. 
+2. Defina o conteúdo dos itens de menu adicionando um novo arquivo de recurso de menu em **recursos/menu**. 
 
-3.  Implementar o `OnCreateOptionsMenu` método da atividade &ndash; esse método inplana os itens de menu. 
+3. Implementar o `OnCreateOptionsMenu` método da atividade &ndash; esse método inplana os itens de menu. 
 
-4.  Implementar o `OnOptionsItemSelected` método da atividade &ndash; esse método executa uma ação quando um item de menu é tocado. 
+4. Implementar o `OnOptionsItemSelected` método da atividade &ndash; esse método executa uma ação quando um item de menu é tocado. 
 
 As seções a seguir demonstram esse processo em detalhes adicionando os itens de menu **Editar** e **salvar** ao personalizado `Toolbar`. 
 
@@ -218,11 +218,11 @@ Crie um novo subdiretório de **menu** em **recursos**. No subdiretório do **me
 
 Esse XML cria três itens de menu:
 
--   Um item de menu de **edição** que `ic_action_content_create.png` usa o ícone (um lápis). 
+- Um item de menu de **edição** que `ic_action_content_create.png` usa o ícone (um lápis). 
 
--   Um item de menu **salvar** que usa `ic_action_content_save.png` o ícone (um disquete). 
+- Um item de menu **salvar** que usa `ic_action_content_save.png` o ícone (um disquete). 
 
--   Um item de menu de **preferências** que não tem um ícone.
+- Um item de menu de **preferências** que não tem um ícone.
 
 Os `showAsAction` atributos dos itens de menu **Editar** e **salvar** são definidos para `ifRoom` &ndash; essa configuração faz com que esses itens de menu sejam `Toolbar` exibidos no se houver espaço suficiente para serem exibidos. O item de menu de `showAsAction` preferências `never` define como &ndash; isso faz com que o menu de **preferências** apareça no menu de *estouro* (três pontos verticais). 
 

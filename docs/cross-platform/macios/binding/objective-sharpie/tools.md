@@ -1,28 +1,26 @@
 ---
-title: Comandos e ferramentas de Sharpie objetivo
-description: Este documento fornece uma visão geral das ferramentas incluídas com o objetivo Sharpie e os argumentos de linha de comando para usar com eles.
+title: Ferramentas de nitidez do objetivo & comandos
+description: Este documento fornece uma visão geral das ferramentas incluídas com a nitidez objetiva e os argumentos de linha de comando a serem usados com eles.
 ms.prod: xamarin
 ms.assetid: A84E209B-8932-4CC1-BAD1-7FD51F798A97
 author: asb3993
 ms.author: amburns
 ms.date: 10/05/2015
-ms.openlocfilehash: 51a0b81204b743824e24cfed83bd73308fa8d506
-ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
+ms.openlocfilehash: ddfe0f99991808214a6006c9504d267179adf2ab
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "64977659"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69521862"
 ---
-# <a name="objective-sharpie-tools--commands"></a>Comandos e ferramentas de Sharpie objetivo
+# <a name="objective-sharpie-tools--commands"></a>Ferramentas de nitidez do objetivo & comandos
 
-_Visão geral das ferramentas incluídas com o objetivo Sharpie e os argumentos de linha de comando para usá-los._
+_Visão geral das ferramentas incluídas com a nitidez do objetivo e os argumentos de linha de comando para usá-las._
 
-<style type="text/css"> .terminal-blue { color: rgb(10,96,254); } .terminal-green { color: rgb(12,156,26); } .terminal-magenta { color: rgb(152,12,103); } </style>
+Depois que a nitidez do objetivo for [instalada](~/cross-platform/macios/binding/objective-sharpie/get-started.md)com êxito, abra um terminal e familiarize-se com os *comandos* que a nitidez do objetivo tem a oferecer:
 
-
-Depois que o objetivo Sharpie é com êxito [instalados](~/cross-platform/macios/binding/objective-sharpie/get-started.md), abra um terminal e se familiarizar com as <em>comandos</em> objetivo Sharpie tem a oferecer:
-
-<pre>$ <b>sharpie -help</b>
+```
+$ sharpie -help
 usage: sharpie [OPTIONS] TOOL [TOOL_OPTIONS]
 
 Options:
@@ -48,22 +46,24 @@ Available Tools:
   bind               Create a Xamarin C# binding to Objective-C APIs
   update             Update to the latest release of Objective Sharpie
   verify-docs        Show cross reference documentation for [Verify] attributes
-  docs               Open the Objective Sharpie online documentation</pre>
+  docs               Open the Objective Sharpie online documentation
+```
 
-Objetivo Sharpie fornece as seguintes ferramentas:
+A nitidez do objetivo fornece as seguintes ferramentas:
 
 |Ferramenta|Descrição|
 |--- |--- |
-|**xcode**|Fornece informações sobre a instalação atual do Xcode e as versões do iOS e Mac SDKs que estão disponíveis. Vamos usar essas informações posteriormente ao gerarmos nosso associações.|
-|**pod**|Procura, configura, instala (em um diretório local) e associa o Objective-C [CocoaPod](https://cocoapods.org/) bibliotecas disponíveis do repositório principal Spec. Essa ferramenta avalia o CocoaPod instalado para deduzir automaticamente a entrada correta para passar para o `bind` abaixo da ferramenta. No 3.0!|
-|**bind**|Analisa os arquivos de cabeçalho (`*.h`) na biblioteca de Objective-C em inicial [ApiDefinition.cs e StructsAndEnums.cs](~/cross-platform/macios/binding/objective-sharpie/platform/apidefinitions-structsandenums.md) arquivos.|
-|**update**|Verifica se há versões mais recentes do objetivo Sharpie e baixa e inicia o instalador se houver uma disponível.|
+|**xcode**|Fornece informações sobre a instalação atual do Xcode e as versões dos SDKs do iOS e Mac que estão disponíveis. Usaremos essas informações posteriormente quando gerarmos nossas associações.|
+|**pod**|Procura, configura, instala (em um diretório local) e associa bibliotecas de [CocoaPod](https://cocoapods.org/) Objective-C disponíveis no repositório de especificações mestras. Essa ferramenta avalia o CocoaPod instalado para deduzir automaticamente a entrada correta para passar para a `bind` ferramenta abaixo. Novidade no 3,0!|
+|**bind**|Analisa os arquivos de cabeçalho (`*.h`) na biblioteca Objective-C nos arquivos [ApiDefinition.cs e StructsAndEnums.cs](~/cross-platform/macios/binding/objective-sharpie/platform/apidefinitions-structsandenums.md) iniciais.|
+|**update**|Verifica se há versões mais recentes de preversão e downloads de objetivo e inicia o instalador se houver um disponível.|
 |**verify-docs**|Mostra informações detalhadas sobre `[Verify]` atributos.|
-|**docs**|Navega para este documento no seu navegador da web padrão.|
+|**docs**|Navega para este documento no navegador da Web padrão.|
 
-Para obter ajuda sobre uma ferramenta Sharpie objetivo específica, insira o nome da ferramenta e o `-help` opção. Por exemplo, `sharpie xcode -help` retorna a seguinte saída:
+Para obter ajuda sobre uma ferramenta de nitidez de objetivo específica, insira o nome da ferramenta e a `-help` opção. Por exemplo, `sharpie xcode -help` retorna a seguinte saída:
 
-<pre>$ <b>sharpie xcode -help</b>
+```
+$ sharpie xcode -help
 usage: sharpie xcode [OPTIONS]
 
 Options:
@@ -71,17 +71,20 @@ Options:
   -v, -verbose     Be verbose with output
 
 Xcode Options:
-  -sdks            List all available Xcode SDKs. Pass -verbose for more details.</pre>
+  -sdks            List all available Xcode SDKs. Pass -verbose for more details.
+```
 
-Para que possamos começar o processo de associação, precisamos obter informações sobre nossos SDKs instalados atuais digitando o seguinte comando no Terminal `sharpie xcode -sdks`. A saída pode ser diferente dependendo de quais versões do Xcode instalada. Objetivo Sharpie procura SDKs instalados em qualquer `Xcode*.app` sob o `/Applications` diretório:
+Antes que possamos iniciar o processo de associação, precisamos obter informações sobre nossos SDKs instalados atuais digitando o seguinte comando no terminal `sharpie xcode -sdks`. A saída pode ser diferente dependendo de quais versões do Xcode você instalou. `Xcode*.app` A`/Applications` nitidez do objetivo procura SDKs instalados em qualquer um no diretório:
 
-<pre>$ <b>sharpie xcode -sdks</b>
-<span class="terminal-blue">sdk:</span> appletvos9.0    <span class="terminal-green">arch:</span> arm64
-<span class="terminal-blue">sdk:</span> iphoneos9.1     <span class="terminal-green">arch:</span> arm64   armv7
-<span class="terminal-blue">sdk:</span> iphoneos9.0     <span class="terminal-green">arch:</span> arm64   armv7
-<span class="terminal-blue">sdk:</span> iphoneos8.4     <span class="terminal-green">arch:</span> arm64   armv7
-<span class="terminal-blue">sdk:</span> macosx10.11     <span class="terminal-green">arch:</span> x86_64  i386
-<span class="terminal-blue">sdk:</span> macosx10.10     <span class="terminal-green">arch:</span> x86_64  i386
-<span class="terminal-blue">sdk:</span> watchos2.0      <span class="terminal-green">arch:</span> armv7</pre>
+```
+$ sharpie xcode -sdks
+sdk: appletvos9.0    arch: arm64
+sdk: iphoneos9.1     arch: arm64   armv7
+sdk: iphoneos9.0     arch: arm64   armv7
+sdk: iphoneos8.4     arch: arm64   armv7
+sdk: macosx10.11     arch: x86_64  i386
+sdk: macosx10.10     arch: x86_64  i386
+sdk: watchos2.0      arch: armv7
+```
 
-Acima, podemos ver que temos a `iphoneos9.1` SDK instalado na máquina e tem `arm64` suporte de arquitetura. Vamos usar esse valor para todos os exemplos nesta seção. Com essas informações em vigor, estamos prontos para analisar um arquivos de cabeçalho de biblioteca do Objective-C em inicial `ApiDefinition.cs` e `StructsAndEnums.cs` para o projeto de associação.
+A partir do acima, podemos ver que o `iphoneos9.1` SDK está instalado em nosso computador e tem `arm64` suporte à arquitetura. Usaremos esse valor para todos os exemplos nesta seção. Com essas informações em vigor, estamos prontos para analisar os arquivos de cabeçalho da biblioteca Objective-C na `ApiDefinition.cs` inicial `StructsAndEnums.cs` e no projeto de associação.

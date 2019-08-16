@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 09/05/2018
-ms.openlocfilehash: 383a49f9baa85d50c956efbdd2ce29e3d62977b4
-ms.sourcegitcommit: c75c1d2132a4f46a7b38e454d5f24705165026bd
+ms.openlocfilehash: ebe8f483e501c4e34295a889f0d9ae06df8ba1d9
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68485938"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69523705"
 ---
 # <a name="xamarinandroid-designer-basics"></a>Noções básicas do Xamarin. Designer Android
 
@@ -34,9 +34,9 @@ Da mesma forma, você pode adicionar um novo layout clicando com o botão direit
 Isso cria um novo arquivo de layout **. axml** e o carrega no designer.
 
 > [!TIP]
-> As versões mais recentes do Visual Studio dão suporte à abertura de arquivos. xml dentro do Designer Android.
+> As versões mais recentes do Visual Studio dão suporte à abertura de arquivos .xml dentro do Android Designer.
 >
-> Os arquivos. axml e. XML têm suporte no Designer Android.
+> Tanto arquivos .axml quanto .xml são compatíveis com o Android Designer.
 
 ## <a name="designer-features"></a>Recursos do designer
 
@@ -46,17 +46,17 @@ O designer é composto por várias seções que dão suporte a seus diversos rec
 
 Ao editar um layout no designer, você usa os seguintes recursos para criar e moldar seu design:
 
--   **Design Surface** &ndash; Facilita a construção visual da interface do usuário, fornecendo a você uma representação editável de como o layout aparecerá no dispositivo. O **design Surface** é exibido dentro do **painel de design** (com a **barra de ferramentas do designer** posicionada acima dele).
+- **Design Surface** &ndash; Facilita a construção visual da interface do usuário, fornecendo a você uma representação editável de como o layout aparecerá no dispositivo. O **design Surface** é exibido dentro do **painel de design** (com a **barra de ferramentas do designer** posicionada acima dele).
 
--   **Painel de origem** Fornece uma exibição da fonte XML subjacente que corresponde ao design apresentado no **design Surface.** &ndash;
+- **Painel de origem** Fornece uma exibição da fonte XML subjacente que corresponde ao design apresentado no **design Surface.** &ndash;
 
--   **Barra de ferramentas do designer** &ndash; Exibe uma lista de seletores: Configurações de **dispositivo**, **versão**, **tema**, configuração de layout e barra de ações. A **barra de ferramentas do designer** também inclui ícones para iniciar o editor de tema e habilitar a grade de design de material.
+- **Barra de ferramentas do designer** &ndash; Exibe uma lista de seletores: Configurações de **dispositivo**, **versão**, **tema**, configuração de layout e barra de ações. A **barra de ferramentas do designer** também inclui ícones para iniciar o editor de tema e habilitar a grade de design de material.
 
--   **Caixa de ferramentas** Fornece uma lista de widgets e layouts que você pode arrastar e soltar na **design Surface.** &ndash;
+- **Caixa de ferramentas** Fornece uma lista de widgets e layouts que você pode arrastar e soltar na **design Surface.** &ndash;
 
--   **Janela Propriedades** &ndash; Lista as propriedades do widget selecionado para exibição e edição.
+- **Janela Propriedades** &ndash; Lista as propriedades do widget selecionado para exibição e edição.
 
--   **Estrutura de tópicos do documento** &ndash; Exibe a árvore de widgets que compõem o layout. Você pode clicar em um item na árvore para fazer com que ele seja selecionado na **design Surface**. Além disso, clicar em um item na árvore carrega as propriedades do item na janela **Propriedades** .
+- **Estrutura de tópicos do documento** &ndash; Exibe a árvore de widgets que compõem o layout. Você pode clicar em um item na árvore para fazer com que ele seja selecionado na **design Surface**. Além disso, clicar em um item na árvore carrega as propriedades do item na janela **Propriedades** .
 
 ## <a name="design-surface"></a>A superfície de design
 
@@ -74,31 +74,31 @@ A **barra de ferramentas do designer** (posicionada acima da **design Surface**)
 
 A **barra de ferramentas do designer** fornece acesso aos seguintes recursos:
 
--   **Seletor de layout alternativo** &ndash; Permite que você selecione diferentes versões de layout.
+- **Seletor de layout alternativo** &ndash; Permite que você selecione diferentes versões de layout.
 
--   **Seletor de dispositivo** &ndash; Define um conjunto de qualificadores (como tamanho da tela, resolução e disponibilidade do teclado) associados a um dispositivo específico. Você também pode adicionar e excluir novos dispositivos.
+- **Seletor de dispositivo** &ndash; Define um conjunto de qualificadores (como tamanho da tela, resolução e disponibilidade do teclado) associados a um dispositivo específico. Você também pode adicionar e excluir novos dispositivos.
 
--   **Seletor de versão do Android** &ndash; A versão do Android para a qual o layout está sendo direcionado. O designer renderizará o layout de acordo com a versão do Android selecionada.
+- **Seletor de versão do Android** &ndash; A versão do Android para a qual o layout está sendo direcionado. O designer renderizará o layout de acordo com a versão do Android selecionada.
 
--   **Seletor de tema** &ndash; Seleciona o tema da interface do usuário para o layout.
+- **Seletor de tema** &ndash; Seleciona o tema da interface do usuário para o layout.
 
--   **Seletor de configuração** Seleciona a configuração do dispositivo, como *retrato* ou *paisagem.* &ndash;
+- **Seletor de configuração** Seleciona a configuração do dispositivo, como *retrato* ou *paisagem.* &ndash;
 
--   **Opções** do qualificador de recursosAbre uma caixa de diálogo que apresenta menus suspensos para seleção de idioma, modo de interface do usuário, modo noturno e opções de tela de ida e volta. &ndash;
+- **Opções** do qualificador de recursosAbre uma caixa de diálogo que apresenta menus suspensos para seleção de idioma, modo de interface do usuário, modo noturno e opções de tela de ida e volta. &ndash;
 
--   **Configurações da barra de ações** &ndash; Define as configurações da barra de ações para o layout.
+- **Configurações da barra de ações** &ndash; Define as configurações da barra de ações para o layout.
 
--   **Editor de tema** Abre o *Editor de tema*, o que torna possível personalizar elementos do tema selecionado. &ndash;
+- **Editor de tema** Abre o *Editor de tema*, o que torna possível personalizar elementos do tema selecionado. &ndash;
 
--   **Grade de design de material** Habilita ou desabilita a grade de *design do material.* &ndash; O item de menu suspenso adjacente à grade de design do material abre uma caixa de diálogo que permite que você personalize a grade.
+- **Grade de design de material** Habilita ou desabilita a grade de *design do material.* &ndash; O item de menu suspenso adjacente à grade de design do material abre uma caixa de diálogo que permite que você personalize a grade.
 
 Cada um desses recursos é explicado em mais detalhes nestes tópicos:
 
--   [Qualificadores de recursos e opções de visualização](~/android/user-interface/android-designer/resource-qualifiers.md) fornecem informações detalhadas sobre o seletor de **dispositivo**, seletor de **versão do Android**, seletor de **tema**, seletor de **configuração**, qualificações de **recursos Opções**e **configurações da barra de ações**.
+- [Qualificadores de recursos e opções de visualização](~/android/user-interface/android-designer/resource-qualifiers.md) fornecem informações detalhadas sobre o seletor de **dispositivo**, seletor de **versão do Android**, seletor de **tema**, seletor de **configuração**, qualificações de **recursos Opções**e **configurações da barra de ações**.
 
--   As exibições de [layout alternativo](~/android/user-interface/android-designer/alternative-layout-views.md) explicam como usar o seletor de **layout alternativo**.
+- As exibições de [layout alternativo](~/android/user-interface/android-designer/alternative-layout-views.md) explicam como usar o seletor de **layout alternativo**.
 
--   Os [recursos de design de material do Xamarin. designer Android](~/android/user-interface/android-designer/material-design-features.md) fornecem uma visão geral abrangente do editor de **tema** e da grade de **design do material**.
+- Os [recursos de design de material do Xamarin. designer Android](~/android/user-interface/android-designer/material-design-features.md) fornecem uma visão geral abrangente do editor de **tema** e da grade de **design do material**.
 
 ### <a name="context-menu-commands"></a>Comandos do menu de contexto
 
@@ -108,9 +108,9 @@ Um menu de contexto está disponível no **design Surface** e na estrutura de **
 
 Neste exemplo, clicar com o botão direito `TextView` do mouse em uma abre um menu de contexto que fornece várias opções:
 
--   **LinearLayout** abre um submenu para editar o `LinearLayout` pai do `TextView`. &ndash;
+- **LinearLayout** abre um submenu para editar o `LinearLayout` pai do `TextView`. &ndash;
 
--   **Exclua**, **Copie**e **recorte** &ndash; `TextView`as operações que se aplicam ao clique com o botão direito do mouse.
+- **Exclua**, **Copie**e **recorte** &ndash; `TextView`as operações que se aplicam ao clique com o botão direito do mouse.
 
 
 ### <a name="zoom-controls"></a>Controles de zoom
@@ -121,15 +121,15 @@ O **design Surface** dá suporte ao zoom por meio de vários controles, conforme
 
 Esses controles facilitam a visualização de determinadas áreas da interface do usuário no designer:
 
--   Realçar contêineres Realça os contêineres na design Surface para que sejam mais fáceis de localizar ao ampliar e reduzir. &ndash;
+- Realçar contêineres Realça os contêineres na design Surface para que sejam mais fáceis de localizar ao ampliar e reduzir. &ndash;
 
--   **Tamanho normal** &ndash; Renderiza o layout pixel-for-pixel para que você possa ver como o layout irá examinar a resolução do dispositivo selecionado.
+- **Tamanho normal** &ndash; Renderiza o layout pixel-for-pixel para que você possa ver como o layout irá examinar a resolução do dispositivo selecionado.
 
--   **Ajustar à janela** &ndash; Define o nível de zoom para que todo o layout fique visível no design Surface.
+- **Ajustar à janela** &ndash; Define o nível de zoom para que todo o layout fique visível no design Surface.
 
--   **Ampliar** &ndash; Amplia incrementalmente com cada clique, ampliando o layout.
+- **Ampliar** &ndash; Amplia incrementalmente com cada clique, ampliando o layout.
 
--   **Reduzir** &ndash; Reduz incrementalmente com cada clique, fazendo com que o layout pareça menor no design Surface.
+- **Reduzir** &ndash; Reduz incrementalmente com cada clique, fazendo com que o layout pareça menor no design Surface.
 
 Observe que a configuração de zoom escolhida não afeta a interface do usuário do aplicativo em tempo de execução.
 
@@ -141,17 +141,17 @@ Na faixa central entre os painéis **design** e **fonte** , há vários botões 
 
 Esses botões fazem o seguinte:
 
--   **Design** do Esse botão superior, **design**, seleciona o painel **Design.** &ndash; Quando esse botão é clicado, os painéis **caixa de ferramentas** e **Propriedades** são habilitados e a barra de ferramentas do **Editor de texto** não é exibida. Quando o botão **recolher** é clicado (veja abaixo), o painel **design** é apresentado sozinho sem o painel de **origem** .
+- **Design** do Esse botão superior, **design**, seleciona o painel **Design.** &ndash; Quando esse botão é clicado, os painéis **caixa de ferramentas** e **Propriedades** são habilitados e a barra de ferramentas do **Editor de texto** não é exibida. Quando o botão **recolher** é clicado (veja abaixo), o painel **design** é apresentado sozinho sem o painel de **origem** .
 
--   **Alternar painéis** Esse botão (que se assemelha a duas setas opostas) troca os painéis design e fonte para que o painel fonte fique à esquerda e o painel Design esteja à direita. &ndash; Clicar novamente alterna esses painéis de volta para seus locais originais.
+- **Alternar painéis** Esse botão (que se assemelha a duas setas opostas) troca os painéis design e fonte para que o painel fonte fique à esquerda e o painel Design esteja à direita. &ndash; Clicar novamente alterna esses painéis de volta para seus locais originais.
 
--   **Origem** do Esse botão (que se assemelha a dois colchetes angulares opostos) seleciona o painel **fonte.** &ndash; Quando esse botão é clicado, os painéis **caixa de ferramentas** e **Propriedades** são desabilitados e a barra de ferramentas do **Editor de texto** se torna visível na parte superior do Visual Studio. Quando o botão **recolher** é clicado (veja abaixo), clicar no botão **fonte** exibe o painel **fonte** em vez do painel **design** .
+- **Origem** do Esse botão (que se assemelha a dois colchetes angulares opostos) seleciona o painel **fonte.** &ndash; Quando esse botão é clicado, os painéis **caixa de ferramentas** e **Propriedades** são desabilitados e a barra de ferramentas do **Editor de texto** se torna visível na parte superior do Visual Studio. Quando o botão **recolher** é clicado (veja abaixo), clicar no botão **fonte** exibe o painel **fonte** em vez do painel **design** .
 
--   **Divisão vertical** Esse botão (que se assemelha a uma barra vertical), exibe os painéis **design** e fonte lado a lado. &ndash; Essa é a organização padrão.
+- **Divisão vertical** Esse botão (que se assemelha a uma barra vertical), exibe os painéis **design** e fonte lado a lado. &ndash; Essa é a organização padrão.
 
--   **Divisão horizontal** Esse botão (que se assemelha a uma barra horizontal), exibe o painel de **design** acima do painel de **origem.** &ndash; Os **painéis de permuta** podem ser clicados para posicionar o painel de **origem** acima do painel de **design** .
+- **Divisão horizontal** Esse botão (que se assemelha a uma barra horizontal), exibe o painel de **design** acima do painel de **origem.** &ndash; Os **painéis de permuta** podem ser clicados para posicionar o painel de **origem** acima do painel de **design** .
 
--   **Recolher painel** Esse botão (que se assemelha a dois colchetes de ângulo à direita) "recolhe" a exibição de painel duplo do **design** e da fonte em uma única exibição de um desses painéis. &ndash;
+- **Recolher painel** Esse botão (que se assemelha a dois colchetes de ângulo à direita) "recolhe" a exibição de painel duplo do **design** e da fonte em uma única exibição de um desses painéis. &ndash;
     Esse botão torna-se o botão **expandir painel** (semelhante a dois colchetes angulares à esquerda), que pode ser clicado para retornar a exibição de volta para o modo de exibição de painel duplo (**design** e **origem**).
 
 Quando o **painel recolher** é clicado, somente o painel **design** é exibido. No entanto, você pode clicar no botão **fonte** para exibir apenas o painel **origem** . Clique no botão **design** novamente para retornar ao painel **design** .
@@ -254,7 +254,7 @@ Se uma margem já tiver sido definida, as linhas pontilhadas serão exibidas, in
 
 ![Exemplo de linhas pontilhadas marcando espaço em um botão](designer-basics-images/vs/16-margins-set.png)
 
-### <a name="size"></a>Tamanho
+### <a name="size"></a>Size
 
 Conforme mencionado anteriormente, você pode alternar para o modo de edição de tamanho clicando em um widget enquanto ele já estiver selecionado. Clique no identificador triangular para definir o tamanho da dimensão indicada para `wrap_content`:
 
@@ -306,9 +306,9 @@ Da mesma forma, você pode adicionar um novo layout clicando com o botão direit
 Isso cria um novo arquivo. axml e o carrega no Design Surface.
 
 > [!TIP]
-> As versões mais recentes do Visual Studio dão suporte à abertura de arquivos. xml dentro do Designer Android.
+> As versões mais recentes do Visual Studio dão suporte à abertura de arquivos .xml dentro do Android Designer.
 >
-> Os arquivos. axml e. XML têm suporte no Designer Android.
+> Tanto arquivos .axml quanto .xml são compatíveis com o Android Designer.
 
 ## <a name="designer-features"></a>Recursos do designer
 
@@ -318,15 +318,15 @@ O designer é composto por várias seções que dão suporte a seus diversos rec
 
 Ao editar um layout no designer, você usa os seguintes recursos para criar e moldar seu design:
 
--   **Design Surface** &ndash; Facilita a construção visual da interface do usuário, fornecendo a você uma representação editável de como o layout aparecerá no dispositivo.
+- **Design Surface** &ndash; Facilita a construção visual da interface do usuário, fornecendo a você uma representação editável de como o layout aparecerá no dispositivo.
 
--   **Barra de ferramentas** &ndash; Exibe uma lista de seletores: Configurações de **dispositivo**, **versão**, **tema**, configuração de layout e barra de ações. A barra de ferramentas também inclui ícones para iniciar o editor de tema e habilitar a grade de design de material.
+- **Barra de ferramentas** &ndash; Exibe uma lista de seletores: Configurações de **dispositivo**, **versão**, **tema**, configuração de layout e barra de ações. A barra de ferramentas também inclui ícones para iniciar o editor de tema e habilitar a grade de design de material.
 
--   **Caixa de ferramentas** &ndash; Fornece uma lista de widgets e layouts que você pode arrastar e soltar na design Surface.
+- **Caixa de ferramentas** &ndash; Fornece uma lista de widgets e layouts que você pode arrastar e soltar na design Surface.
 
--   **Painel de propriedades** &ndash; Lista as propriedades do widget selecionado para exibição e edição.
+- **Painel de propriedades** &ndash; Lista as propriedades do widget selecionado para exibição e edição.
 
--   **Estrutura de tópicos do documento** &ndash; Exibe a árvore de widgets que compõem o layout. Você pode clicar em um item na árvore para fazer com que ele seja selecionado no designer. Além disso, clicar em um item na árvore carrega as propriedades do item no painel de propriedades.
+- **Estrutura de tópicos do documento** &ndash; Exibe a árvore de widgets que compõem o layout. Você pode clicar em um item na árvore para fazer com que ele seja selecionado no designer. Além disso, clicar em um item na árvore carrega as propriedades do item no painel de propriedades.
 
 ## <a name="toolbar"></a>Barra de ferramentas
 
@@ -336,23 +336,23 @@ A barra de ferramentas (posicionada acima da Design Surface) apresenta seletores
 
 A barra de ferramentas fornece acesso aos seguintes recursos:
 
--   **Seletor de layout alternativo** &ndash; Permite que você selecione diferentes versões de layout.
+- **Seletor de layout alternativo** &ndash; Permite que você selecione diferentes versões de layout.
 
--   **Seletor de dispositivo** &ndash; Define um conjunto de qualificadores associados a um dispositivo específico, como tamanho da tela, resolução e disponibilidade do teclado. Você também pode adicionar e excluir novos dispositivos.
+- **Seletor de dispositivo** &ndash; Define um conjunto de qualificadores associados a um dispositivo específico, como tamanho da tela, resolução e disponibilidade do teclado. Você também pode adicionar e excluir novos dispositivos.
 
--   **Seletor de versão do Android** &ndash; A versão do Android para a qual o layout está sendo direcionado. O designer renderizará o layout de acordo com a versão do Android selecionada.
+- **Seletor de versão do Android** &ndash; A versão do Android para a qual o layout está sendo direcionado. O designer renderizará o layout de acordo com a versão do Android selecionada.
 
--   **Seletor de tema** &ndash; Seleciona o tema da interface do usuário para o layout.
+- **Seletor de tema** &ndash; Seleciona o tema da interface do usuário para o layout.
 
--   **Seletor de configuração** Seleciona a configuração do dispositivo, como *retrato* ou *paisagem.* &ndash;
+- **Seletor de configuração** Seleciona a configuração do dispositivo, como *retrato* ou *paisagem.* &ndash;
 
--   **Opções** do qualificador de recursosAbre uma caixa de diálogo que apresenta menus suspensos para seleção de idioma, modo de interface do usuário, modo noturno e opções de tela de ida e volta. &ndash;
+- **Opções** do qualificador de recursosAbre uma caixa de diálogo que apresenta menus suspensos para seleção de idioma, modo de interface do usuário, modo noturno e opções de tela de ida e volta. &ndash;
 
--   **Configurações da barra de ações** &ndash; Define as configurações da barra de ações para o layout.
+- **Configurações da barra de ações** &ndash; Define as configurações da barra de ações para o layout.
 
--   **Editor de tema** Abre o *Editor de tema*, o que torna possível personalizar elementos do tema selecionado. &ndash;
+- **Editor de tema** Abre o *Editor de tema*, o que torna possível personalizar elementos do tema selecionado. &ndash;
 
--   **Grade de design de material** Habilita ou desabilita a grade de *design do material.* &ndash; O item de menu suspenso adjacente à grade de design do material abre uma caixa de diálogo que permite que você personalize a grade.
+- **Grade de design de material** Habilita ou desabilita a grade de *design do material.* &ndash; O item de menu suspenso adjacente à grade de design do material abre uma caixa de diálogo que permite que você personalize a grade.
 
 Cada um desses recursos é explicado em mais detalhes nestes tópicos:
 
@@ -378,9 +378,9 @@ Um menu de contexto está disponível no Design Surface e na estrutura de tópic
 
 Neste exemplo, clicar com o botão direito `Button` do mouse em uma abre um menu de contexto que fornece várias opções:
 
--   **LinearLayout** abre um submenu para editar o `LinearLayout` pai do `Button`. &ndash;
+- **LinearLayout** abre um submenu para editar o `LinearLayout` pai do `Button`. &ndash;
 
--   **Operações de recortar**, &ndash; copiar e excluir que se aplicam ao clique com o botão direito do mouse. `Button`
+- **Operações de recortar**, &ndash; copiar e excluir que se aplicam ao clique com o botão direito do mouse. `Button`
 
 ### <a name="zoom-controls"></a>Controles de zoom
 
@@ -390,15 +390,15 @@ O Design Surface dá suporte ao zoom por meio de vários controles, conforme mos
 
 Esses controles facilitam a visualização de determinadas áreas da interface do usuário no designer:
 
--   Realçar contêineres &ndash; Realça os contêineres na design Surface para que sejam mais fáceis de localizar ao ampliar e reduzir.
+- Realçar contêineres &ndash; Realça os contêineres na design Surface para que sejam mais fáceis de localizar ao ampliar e reduzir.
 
--   **Tamanho normal** &ndash; Renderiza o layout pixel-for-pixel para que você possa ver como o layout irá examinar a resolução do dispositivo selecionado.
+- **Tamanho normal** &ndash; Renderiza o layout pixel-for-pixel para que você possa ver como o layout irá examinar a resolução do dispositivo selecionado.
 
--   **Ajustar à janela** &ndash; Define o nível de zoom para que todo o layout fique visível no design Surface.
+- **Ajustar à janela** &ndash; Define o nível de zoom para que todo o layout fique visível no design Surface.
 
--   **Ampliar** &ndash; Amplia incrementalmente com cada clique, ampliando o layout.
+- **Ampliar** &ndash; Amplia incrementalmente com cada clique, ampliando o layout.
 
--   **Reduzir** &ndash; Reduz incrementalmente com cada clique, fazendo com que o layout pareça menor no design Surface.
+- **Reduzir** &ndash; Reduz incrementalmente com cada clique, fazendo com que o layout pareça menor no design Surface.
 
 Observe que a configuração de zoom escolhida não afeta a interface do usuário do aplicativo em tempo de execução.
 
@@ -412,15 +412,15 @@ O designer oferece suporte à edição de propriedades do widget por meio do **p
 
 O painel de propriedades é dividido em várias seções que agrupam propriedades &ndash; semelhantes, e isso facilita a localização das propriedades de interesse:
 
--   **Widget** Propriedades principais do widget, `id`como, `visibility` `text`, etc. &ndash; As propriedades para gerenciar o conteúdo do widget geralmente são colocadas aqui.
+- **Widget** Propriedades principais do widget, `id`como, `visibility` `text`, etc. &ndash; As propriedades para gerenciar o conteúdo do widget geralmente são colocadas aqui.
 
--   **Estilo** do Propriedades que alteram a aparência visual do widget, `font`como, `text color` `background`,, etc. &ndash;
+- **Estilo** do Propriedades que alteram a aparência visual do widget, `font`como, `text color` `background`,, etc. &ndash;
 
--   **Layout** do &ndash; Propriedades que definem o local e o tamanho do widget.
+- **Layout** do &ndash; Propriedades que definem o local e o tamanho do widget.
 
--   **Rolar** &ndash; Propriedades de rolagem.
+- **Rolar** &ndash; Propriedades de rolagem.
 
--   **Comportamento** do &ndash; Sinalizadores que definem a forma com que o widget se comporta.
+- **Comportamento** do &ndash; Sinalizadores que definem a forma com que o widget se comporta.
 
 ### <a name="default-values"></a>Valores padrão
 
@@ -483,7 +483,7 @@ Se uma margem já tiver sido definida, as linhas pontilhadas serão exibidas, in
 
 [![Exemplo de linhas pontilhadas marcando espaço em um botão](designer-basics-images/xs/17-margins-set-sml.png)](designer-basics-images/xs/17-margins-set.png#lightbox)
 
-### <a name="size"></a>Tamanho
+### <a name="size"></a>Size
 
 Conforme mencionado anteriormente, você pode alternar para o modo de edição de tamanho clicando em um widget enquanto ele já estiver selecionado. Clique no identificador triangular para definir o tamanho da dimensão indicada para `wrap_content`:
 
