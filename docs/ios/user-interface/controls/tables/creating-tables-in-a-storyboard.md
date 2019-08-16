@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: e73695046786e4d9949fd46bdbba665ff4f6cc72
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 46729df70d08b8d6d1b5b953d74f5619a5dc5858
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68645171"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528678"
 ---
 # <a name="working-with-tables-in-the-ios-designer"></a>Como trabalhar com tabelas no iOS Designer
 
@@ -58,9 +58,9 @@ A solução será aberta com alguns C# arquivos e um `Main.storyboard` arquivo j
 
 O storyboard será editado em três etapas:
 
--  Primeiro, o layout dos controladores de exibição necessários e a definição de suas propriedades.
--  Em segundo lugar, crie sua interface do usuário arrastando e soltando objetos no modo de exibição
--  Por fim, adicione a classe UIKit necessária a cada exibição e dê um nome a vários controles para que eles possam ser referenciados no código.
+- Primeiro, o layout dos controladores de exibição necessários e a definição de suas propriedades.
+- Em segundo lugar, crie sua interface do usuário arrastando e soltando objetos no modo de exibição
+- Por fim, adicione a classe UIKit necessária a cada exibição e dê um nome a vários controles para que eles possam ser referenciados no código.
 
 
 Quando o storyboard estiver completo, o código poderá ser adicionado para fazer tudo funcionar.
@@ -71,19 +71,19 @@ Quando o storyboard estiver completo, o código poderá ser adicionado para faze
 
 A primeira alteração no storyboard é excluir a exibição de detalhes existente e substituí-la por um UITableViewController. Siga estas etapas:
 
-1.  Selecione a barra na parte inferior do controlador de exibição e a exclua.
-2.  Arraste um **controlador de navegação** e um **controlador de exibição de tabela** para o storyboard da caixa de ferramentas. 
-3.  Crie um transição do controlador de exibição raiz para o segundo controlador de exibição de tabela que acabou de ser adicionado. Para criar o transição, controle + arraste *da célula de detalhes* para o UITableViewController recém-adicionado. Escolha a opção **Mostrar** em **transição seleção**. 
-4.  Selecione o novo transição que você criou e dê a ele um identificador para fazer referência a esse transição no código. Clique em transição e insira `TaskSegue` para o **identificador** no **painel de propriedades**, da seguinte maneira:    
+1. Selecione a barra na parte inferior do controlador de exibição e a exclua.
+2. Arraste um **controlador de navegação** e um **controlador de exibição de tabela** para o storyboard da caixa de ferramentas. 
+3. Crie um transição do controlador de exibição raiz para o segundo controlador de exibição de tabela que acabou de ser adicionado. Para criar o transição, controle + arraste *da célula de detalhes* para o UITableViewController recém-adicionado. Escolha a opção **Mostrar** em **transição seleção**. 
+4. Selecione o novo transição que você criou e dê a ele um identificador para fazer referência a esse transição no código. Clique em transição e insira `TaskSegue` para o **identificador** no **painel de propriedades**, da seguinte maneira:    
   [![Nomeando transição no painel de propriedades](creating-tables-in-a-storyboard-images/image16a-sml.png)](creating-tables-in-a-storyboard-images/image16a.png#lightbox) 
 
 5. Em seguida, configure os dois modos de exibição de tabela selecionando-os e usando o Painel de Propriedades. Certifique-se de selecionar Exibir e não exibir controlador – você pode usar a estrutura de tópicos do documento para ajudar com a seleção.
 
-6.  Altere o controlador de exibição raiz para **que ele seja conteúdo: Protótipos** dinâmicos (a exibição na design Surface será rotulada como **conteúdo de protótipo** ):
+6. Altere o controlador de exibição raiz para **que ele seja conteúdo: Protótipos** dinâmicos (a exibição na design Surface será rotulada como **conteúdo de protótipo** ):
 
     [![Definindo a propriedade Content como protótipos dinâmicos](creating-tables-in-a-storyboard-images/image17a.png)](creating-tables-in-a-storyboard-images/image17a.png#lightbox)
 
-7.  Altere o novo **UITableViewController** para que **seja conteúdo: Células**estáticas. 
+7. Altere o novo **UITableViewController** para que **seja conteúdo: Células**estáticas. 
 
 
 8. O novo UITableViewController deve ter seu nome de classe e o conjunto de identificadores. Selecione o controlador de exibição e digite _TaskDetailViewController_ para a **classe** no **painel de propriedades** – isso criará um novo `TaskDetailViewController.cs` arquivo na painel de soluções. Insira o **storyboardid** como _detalhe_, conforme ilustrado no exemplo a seguir. Isso será usado posteriormente para carregar esse modo de exibição C# no código:  
@@ -114,9 +114,9 @@ Em seguida, você precisará criar um botão que adicionará novas tarefas, conf
 
 Faça o seguinte: 
 
--  Arraste um **item de botão de barra** da caixa de ferramentas para o _lado direito da barra de navegação_.
--  Na **painel de propriedades**, em **item do botão** de barra **, selecione identificador: Adicionar** (para torná-lo *+* um botão de adição). 
--  Dê um nome a ele para que ele possa ser identificado no código em um estágio posterior. Observe que você precisará dar ao controlador de exibição raiz um nome de classe (por exemplo, **ItemViewController**) para permitir que você defina o nome do item do botão de barra.
+- Arraste um **item de botão de barra** da caixa de ferramentas para o _lado direito da barra de navegação_.
+- Na **painel de propriedades**, em **item do botão** de barra **, selecione identificador: Adicionar** (para torná-lo *+* um botão de adição). 
+- Dê um nome a ele para que ele possa ser identificado no código em um estágio posterior. Observe que você precisará dar ao controlador de exibição raiz um nome de classe (por exemplo, **ItemViewController**) para permitir que você defina o nome do item do botão de barra.
 
 
 #### <a name="taskdetail-view-controller"></a>Controlador de exibição TaskDetail
@@ -129,10 +129,10 @@ As etapas para criar o layout completo são:
 
 Selecione o modo de exibição de tabela e abra o **painel de propriedades**. Atualize as seguintes propriedades:
 
--  **Seções**: _2_ 
--  **Estilo**: _Agrupados_
--  Separador: _None_
--  **Seleção**: _Nenhuma seleção_
+- **Seções**: _2_ 
+- **Estilo**: _Agrupados_
+- Separador: _None_
+- **Seleção**: _Nenhuma seleção_
 
 Selecione a seção superior e, em **propriedades > seção exibição de tabela** , altere as **linhas** para _3_, conforme ilustrado abaixo:
 
@@ -141,16 +141,16 @@ Selecione a seção superior e, em **propriedades > seção exibição de tabela
 
 Para cada célula, abra o **painel de propriedades** e defina:
 
--  **Estilo**:  _Personalizado_
--  **Identificador**: Escolha um identificador exclusivo para cada célula (por exemplo, "_título_", "_notas_", "_concluído_").
--  Arraste os controles necessários para produzir o layout mostrado na captura de tela (Coloque **UILabel**, **UITextField** e **UISwitch** nas células corretas e defina os rótulos adequadamente, ou seja, o IE. Título, observações e concluídos).
+- **Estilo**:  _Personalizado_
+- **Identificador**: Escolha um identificador exclusivo para cada célula (por exemplo, "_título_", "_notas_", "_concluído_").
+- Arraste os controles necessários para produzir o layout mostrado na captura de tela (Coloque **UILabel**, **UITextField** e **UISwitch** nas células corretas e defina os rótulos adequadamente, ou seja, o IE. Título, observações e concluídos).
 
 
 Na segunda seção, defina **linhas** como _1_ e pegue a alça de redimensionamento inferior da célula para torná-la mais alta.
 
--  **Defina o identificador**: como um valor exclusivo (por exemplo, "salvar"). 
--  **Defina o plano de fundo**:  _Limpar cor_ .
--  Arraste dois botões para a célula e defina seus títulos adequadamente (ou seja, _salvar_ e _excluir_), conforme ilustrado abaixo:
+- **Defina o identificador**: como um valor exclusivo (por exemplo, "salvar"). 
+- **Defina o plano de fundo**:  _Limpar cor_ .
+- Arraste dois botões para a célula e defina seus títulos adequadamente (ou seja, _salvar_ e _excluir_), conforme ilustrado abaixo:
 
    [![definindo dois botões na seção inferior](creating-tables-in-a-storyboard-images/image30-sml.png)](creating-tables-in-a-storyboard-images/image30.png#lightbox)
 
@@ -160,11 +160,11 @@ Neste ponto, você também pode querer definir restrições em suas células e c
 
 Há algumas etapas finais na criação de nosso Storyboard. Primeiro, devemos dar a cada um de nossos controles um nome com **identidade > nome** para que possam ser usados em código posteriormente. Nomeie-os da seguinte maneira:
 
--  **UITextField do título** : _TitleText_
--  **Observações UITextField** : _NotesText_
--  **UISwitch** : _DoneSwitch_
--  **Excluir UIButton** : _DeleteButton_
--  **Salvar UIButton** : _SaveButton_
+- **UITextField do título** : _TitleText_
+- **Observações UITextField** : _NotesText_
+- **UISwitch** : _DoneSwitch_
+- **Excluir UIButton** : _DeleteButton_
+- **Salvar UIButton** : _SaveButton_
 
 
 <a name="Adding_Code" />
@@ -346,10 +346,10 @@ Isso conclui o exemplo de storyboard – o aplicativo concluído tem a seguinte 
 
 O exemplo demonstra:
 
--  Criando uma tabela com conteúdo de protótipo, em que as células são definidas para reutilização para exibir listas de dados. 
--  Criar uma tabela com conteúdo estático para criar um formulário de entrada. Isso inclui a alteração do estilo de tabela e a adição de seções, células e controles de interface do usuário. 
--  Como criar um transição e substituir o `PrepareForSegue` método para notificar a exibição de destino de todos os parâmetros necessários. 
--  Carregando exibições de storyboard diretamente `Storyboard.InstantiateViewController` com o método.
+- Criando uma tabela com conteúdo de protótipo, em que as células são definidas para reutilização para exibir listas de dados. 
+- Criar uma tabela com conteúdo estático para criar um formulário de entrada. Isso inclui a alteração do estilo de tabela e a adição de seções, células e controles de interface do usuário. 
+- Como criar um transição e substituir o `PrepareForSegue` método para notificar a exibição de destino de todos os parâmetros necessários. 
+- Carregando exibições de storyboard diretamente `Storyboard.InstantiateViewController` com o método.
 
 
 

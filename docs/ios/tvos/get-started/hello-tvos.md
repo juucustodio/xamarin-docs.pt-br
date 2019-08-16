@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 02/02/2018
-ms.openlocfilehash: 209d8a61e6505e34fdf714b94ba40465f7f6aa4b
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: a3ec307061c47736722c5dacef9a939518586ded
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68646368"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528807"
 ---
 # <a name="hello-tvos-quick-start-guide"></a>Olá, tvOS Guia de Início Rápido
 
@@ -38,10 +38,10 @@ Este artigo apresentará os principais conceitos necessários para criar um apli
 
 Abordaremos os seguintes conceitos:
 
--  **Visual Studio para Mac** – introdução ao Visual Studio para Mac e como criar aplicativos Xamarin. tvOS com ele.
--  **Anatomia de um aplicativo xamarin. tvOS** – o que é composto por um aplicativo Xamarin. tvOS.
--  **Criar uma interface do usuário** – como usar o para Xamarin designer para IOS para criar uma interface do usuário.
--  **Implantação e teste** – como executar e testar seu aplicativo no simulador de tvOS e no hardware tvOS real.
+- **Visual Studio para Mac** – introdução ao Visual Studio para Mac e como criar aplicativos Xamarin. tvOS com ele.
+- **Anatomia de um aplicativo xamarin. tvOS** – o que é composto por um aplicativo Xamarin. tvOS.
+- **Criar uma interface do usuário** – como usar o para Xamarin designer para IOS para criar uma interface do usuário.
+- **Implantação e teste** – como executar e testar seu aplicativo no simulador de tvOS e no hardware tvOS real.
 
 ## <a name="starting-a-new-xamarintvos-app-in-visual-studio-for-mac"></a>Iniciando um novo aplicativo Xamarin. tvOS no Visual Studio para Mac
 
@@ -77,12 +77,12 @@ Se você estiver familiarizado com a programação do iOS, observará muitas sem
 
 Vamos dar uma olhada nos arquivos no projeto:
 
--   `Main.cs` – isso contém o ponto de entrada principal do aplicativo. Quando o aplicativo é iniciado, ele contém a primeira classe e método que é executado.
--   `AppDelegate.cs`– Esse arquivo contém a classe de aplicativo principal que é responsável pela escuta de eventos do sistema operacional.
--   `Info.plist`– Esse arquivo contém propriedades de aplicativo, como o nome do aplicativo, ícones, etc.
--   `ViewController.cs`– Essa é a classe que representa a janela principal e controla o ciclo de vida dela.
--   `ViewController.designer.cs`– Esse arquivo contém um código de direcionamento que ajuda você a se integrar à interface do usuário da tela principal.
--  `Main.storyboard`– A interface do usuário para a janela principal. Esse arquivo pode ser criado e mantido pelo Xamarin Designer para iOS.
+- `Main.cs` – isso contém o ponto de entrada principal do aplicativo. Quando o aplicativo é iniciado, ele contém a primeira classe e método que é executado.
+- `AppDelegate.cs`– Esse arquivo contém a classe de aplicativo principal que é responsável pela escuta de eventos do sistema operacional.
+- `Info.plist`– Esse arquivo contém propriedades de aplicativo, como o nome do aplicativo, ícones, etc.
+- `ViewController.cs`– Essa é a classe que representa a janela principal e controla o ciclo de vida dela.
+- `ViewController.designer.cs`– Esse arquivo contém um código de direcionamento que ajuda você a se integrar à interface do usuário da tela principal.
+- `Main.storyboard`– A interface do usuário para a janela principal. Esse arquivo pode ser criado e mantido pelo Xamarin Designer para iOS.
 
 Nas seções a seguir, vamos dar uma olhada rápida em alguns desses arquivos. Vamos explorá-las mais detalhadamente mais tarde, mas é uma boa ideia entender suas noções básicas agora.
 
@@ -435,8 +435,8 @@ Com tudo em vigor, agora estamos prontos para criar e testar nosso aplicativo Xa
 
 Sempre que criamos um aplicativo, podemos escolher que tipo de compilação desejamos:
 
--   **Depuração** – uma compilação de depuração é compilada em um arquivo ' ' (aplicativo) com metadados extras que nos permite depurar o que está acontecendo enquanto o aplicativo está em execução.
--   **Versão** – uma compilação de versão também cria um arquivo ' ', mas não inclui informações de depuração, portanto, é menor e é executado mais rapidamente.  
+- **Depuração** – uma compilação de depuração é compilada em um arquivo ' ' (aplicativo) com metadados extras que nos permite depurar o que está acontecendo enquanto o aplicativo está em execução.
+- **Versão** – uma compilação de versão também cria um arquivo ' ', mas não inclui informações de depuração, portanto, é menor e é executado mais rapidamente.  
 
 Você pode selecionar o tipo de compilação no seletor de **configuração** no canto superior esquerdo da tela de Visual Studio para Mac:
 
@@ -452,9 +452,9 @@ Se não houver erros, você verá uma mensagem de **compilação bem-sucedida** 
 
 Para executar o aplicativo, temos três opções:
 
--  Pressione **⌘+Enter**.
--  No menu **Executar**, escolha **Depuração**.
--  Clique no botão **Reproduzir** na barra de ferramentas do Visual Studio para Mac (imediatamente acima do **Gerenciador de Soluções**).
+- Pressione **⌘+Enter**.
+- No menu **Executar**, escolha **Depuração**.
+- Clique no botão **Reproduzir** na barra de ferramentas do Visual Studio para Mac (imediatamente acima do **Gerenciador de Soluções**).
 
 O aplicativo será criado (se ainda não tiver sido criado), começar no modo de depuração, o simulador do tvOS será iniciado e o aplicativo será iniciado e exibirá a janela da interface principal:
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 360ea18de0c9d30988d63602ba3c17c3d00ed83a
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 33d0e87e8823db6bf0fd0bc5541f37bd41b6dcde
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68644088"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69526253"
 ---
 # <a name="running-android-services-in-remote-processes"></a>Executando serviços Android em processos remotos
 
@@ -83,7 +83,7 @@ Para executar um serviço seu próprio processo, a `Process` propriedade `Servic
 
 O tipo de processo no qual o serviço será executado depende do valor da `Process` propriedade. O Android identifica três tipos diferentes de processos:
 
--   **Processo privado** &ndash; Um processo privado é aquele que está disponível apenas para o aplicativo que o iniciou. Para identificar um processo como particular, seu nome deve começar com um **:** (ponto e vírgula). O serviço descrito no trecho de código anterior e captura de tela é um processo privado. O trecho de código a seguir é um exemplo `ServiceAttribute`de:
+- **Processo privado** &ndash; Um processo privado é aquele que está disponível apenas para o aplicativo que o iniciou. Para identificar um processo como particular, seu nome deve começar com um **:** (ponto e vírgula). O serviço descrito no trecho de código anterior e captura de tela é um processo privado. O trecho de código a seguir é um exemplo `ServiceAttribute`de:
 
     ```csharp
     [Service(Name = "com.xamarin.TimestampService",
@@ -91,7 +91,7 @@ O tipo de processo no qual o serviço será executado depende do valor da `Proce
              Exported=true)]
     ```
 
--   **Processo global** &ndash; Um serviço que é executado em um processo global pode ser acessado por todos os aplicativos em execução no dispositivo. Um processo global deve ser um nome de classe totalmente qualificado que começa com um caractere minúsculo.
+- **Processo global** &ndash; Um serviço que é executado em um processo global pode ser acessado por todos os aplicativos em execução no dispositivo. Um processo global deve ser um nome de classe totalmente qualificado que começa com um caractere minúsculo.
     (A menos que sejam executadas etapas para proteger o serviço, outros aplicativos podem associar e interagir com ele. A proteção do serviço contra uso não autorizado será discutida posteriormente neste guia.)
 
     ```csharp
@@ -100,7 +100,7 @@ O tipo de processo no qual o serviço será executado depende do valor da `Proce
              Exported=true)]
     ```
 
--   **Processo isolado** &ndash; Um processo isolado é um processo executado em sua própria área restrita, isolado do restante do sistema e sem nenhuma permissão especial. Para executar um serviço em um processo isolado, a `IsolatedProcess` propriedade `ServiceAttribute` de é definida `true` como conforme mostrado neste trecho de código:
+- **Processo isolado** &ndash; Um processo isolado é um processo executado em sua própria área restrita, isolado do restante do sistema e sem nenhuma permissão especial. Para executar um serviço em um processo isolado, a `IsolatedProcess` propriedade `ServiceAttribute` de é definida `true` como conforme mostrado neste trecho de código:
     
     ```csharp
     [Service(Name = "com.xamarin.TimestampService",
@@ -393,7 +393,7 @@ Como `signature` e`normal` as permissões são concedidas automaticamente no mom
 
 Há duas maneiras comuns de proteger um serviço com permissões do Android:
 
-1.  **Implementar segurança em nível de assinatura** &ndash; Segurança de nível de assinatura significa que a permissão é concedida automaticamente a esses aplicativos que são assinados com a mesma chave que foi usada para assinar o apk que contém o serviço. Essa é uma maneira simples para os desenvolvedores protegerem seus serviços, mantendo-os acessíveis de seus próprios aplicativos. As permissões `Permission` `signature`de nível de assinatura são declaradas definindo a propriedade do para:`ServiceAttribute`
+1. **Implementar segurança em nível de assinatura** &ndash; Segurança de nível de assinatura significa que a permissão é concedida automaticamente a esses aplicativos que são assinados com a mesma chave que foi usada para assinar o apk que contém o serviço. Essa é uma maneira simples para os desenvolvedores protegerem seus serviços, mantendo-os acessíveis de seus próprios aplicativos. As permissões `Permission` `signature`de nível de assinatura são declaradas definindo a propriedade do para:`ServiceAttribute`
 
     ```csharp
     [Service(Name = "com.xamarin.TimestampService",
@@ -404,7 +404,7 @@ Há duas maneiras comuns de proteger um serviço com permissões do Android:
     }
     ```
 
-2.  **Criar uma permissão personalizada** &ndash; É possível que o desenvolvedor do serviço crie uma permissão personalizada para o serviço. Isso é melhor para quando um desenvolvedor quiser compartilhar seus serviços com aplicativos de outros desenvolvedores. Uma permissão personalizada requer um pouco mais de esforço para implementar e será abordada abaixo.
+2. **Criar uma permissão personalizada** &ndash; É possível que o desenvolvedor do serviço crie uma permissão personalizada para o serviço. Isso é melhor para quando um desenvolvedor quiser compartilhar seus serviços com aplicativos de outros desenvolvedores. Uma permissão personalizada requer um pouco mais de esforço para implementar e será abordada abaixo.
 
 Um exemplo simplificado de criação de `normal` uma permissão personalizada será descrito na próxima seção. Para obter mais informações sobre as permissões do Android, consulte a documentação do Google para obter [as práticas recomendadas & segurança](https://developer.android.com/training/articles/security-tips.html). Para obter mais informações sobre permissões do Android, consulte a [seção permissões](https://developer.android.com/guide/topics/manifest/manifest-intro.html#perms) da documentação do Android para o manifesto do aplicativo para obter mais informações sobre as permissões do Android.
 

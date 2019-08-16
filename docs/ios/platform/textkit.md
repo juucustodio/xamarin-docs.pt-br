@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 4d4785d6e556c856b0f7b4db2accd87f5297e277
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 0bed0e272293d3462d32fe5134147112e38116f0
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655362"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528722"
 ---
 # <a name="textkit-in-xamarinios"></a>TextKit no Xamarin. iOS
 
@@ -20,17 +20,17 @@ TextKit é uma nova API que oferece recursos avançados de layout de texto e ren
 
 Para tornar os recursos do TextKit disponíveis para os controles padrão, vários controles de texto do iOS foram reimplementados para usar o TextKit, incluindo:
 
--  UITextView
--  UITextField
--  UILabel
+- UITextView
+- UITextField
+- UILabel
 
 ## <a name="architecture"></a>Arquitetura
 
 O TextKit fornece uma arquitetura em camadas que separa o armazenamento de texto do layout e da exibição, incluindo as seguintes classes:
 
--  `NSTextContainer`– Fornece o sistema de coordenadas e a geometria usada para layout de texto.
--  `NSLayoutManager`– Prepara o texto, virando o texto em glifos. 
--  `NSTextStorage`– Armazena os dados de texto, bem como manipula atualizações de propriedade de texto em lotes. Todas as atualizações do lote são enviadas ao Gerenciador de layout para o processamento real das alterações, como recalcular o layout e redesenhar o texto.
+- `NSTextContainer`– Fornece o sistema de coordenadas e a geometria usada para layout de texto.
+- `NSLayoutManager`– Prepara o texto, virando o texto em glifos. 
+- `NSTextStorage`– Armazena os dados de texto, bem como manipula atualizações de propriedade de texto em lotes. Todas as atualizações do lote são enviadas ao Gerenciador de layout para o processamento real das alterações, como recalcular o layout e redesenhar o texto.
 
 
 Essas três classes são aplicadas a uma exibição que renderiza texto. As `UITextView`exibições de manipulação de texto internas, como, `UITextField`e `UILabel` já as têm definidas, mas você também pode criá-las e aplicá- `UIView` las a qualquer instância.

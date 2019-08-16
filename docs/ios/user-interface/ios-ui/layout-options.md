@@ -7,19 +7,19 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: b825b0d7f9e18350514e3f84e70f901f5fcb6724
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 06d7ef896a560040f2e2820945264b92d9cf2ada
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655924"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528489"
 ---
 # <a name="layout-options-in-xamarinios"></a>Opções de layout no Xamarin. iOS
 
 Há dois mecanismos diferentes para controlar o layout quando uma exibição é redimensionada ou girada:
 
--  **Dimensionamento** automático – o Inspetor de autodimensionamento no designer fornece uma maneira de `AutoresizingMask` definir as propriedades. Isso permitirá que um controle seja ancorado às bordas de seu contêiner e/ou corrija seu tamanho. O dimensionamento automático funciona em todas as versões do iOS. Isso é descrito mais detalhadamente abaixo
--  **Layout automático** – um recurso, introduzido no Ios 6, que permite um controle refinado sobre as relações dos controles da interface do usuário. Ele permitirá o controle das posições de elementos em relação a outros elementos na superfície de design. Este tópico é abordado em mais detalhes no [layout automático com o guia de designer do Xamarin Ios](~/ios/user-interface/designer/designer-auto-layout.md) .
+- **Dimensionamento** automático – o Inspetor de autodimensionamento no designer fornece uma maneira de `AutoresizingMask` definir as propriedades. Isso permitirá que um controle seja ancorado às bordas de seu contêiner e/ou corrija seu tamanho. O dimensionamento automático funciona em todas as versões do iOS. Isso é descrito mais detalhadamente abaixo
+- **Layout automático** – um recurso, introduzido no Ios 6, que permite um controle refinado sobre as relações dos controles da interface do usuário. Ele permitirá o controle das posições de elementos em relação a outros elementos na superfície de design. Este tópico é abordado em mais detalhes no [layout automático com o guia de designer do Xamarin Ios](~/ios/user-interface/designer/designer-auto-layout.md) .
 
 ## <a name="autosizing"></a>Dimensionamento automático
 

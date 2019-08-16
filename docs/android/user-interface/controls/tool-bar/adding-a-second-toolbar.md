@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/15/2018
-ms.openlocfilehash: 5d2fec537f10ad3ef5300275c9851d4f57bc961d
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 4d9bf7b7a43c7c258bc60e9dfea1626e5c304b03
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68645162"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69522868"
 ---
 # <a name="adding-a-second-toolbar"></a>Adicionar uma segunda barra de ferramentas
 
@@ -86,13 +86,13 @@ Esta seção explica como adicionar itens de menu de edição à parte `Toolbar`
 
 Para adicionar itens de menu a um `Toolbar`secundário: 
 
-1.  Adicione ícones de menu às `mipmap-` pastas do projeto de aplicativo (se necessário).
+1. Adicione ícones de menu às `mipmap-` pastas do projeto de aplicativo (se necessário).
 
-2.  Defina o conteúdo dos itens de menu adicionando um arquivo de recurso de menu adicional para **recursos/menu**. 
+2. Defina o conteúdo dos itens de menu adicionando um arquivo de recurso de menu adicional para **recursos/menu**. 
 
-3.  No método da `OnCreate` atividade, localize o `Toolbar` (chamando `FindViewById`) e aumente os `Toolbar`menus do.
+3. No método da `OnCreate` atividade, localize o `Toolbar` (chamando `FindViewById`) e aumente os `Toolbar`menus do.
 
-4.  Implemente um manipulador de `OnCreate` cliques no para os novos itens de menu. 
+4. Implemente um manipulador de `OnCreate` cliques no para os novos itens de menu. 
 
 As seções a seguir demonstram esse processo em detalhes:Os itens de menu recortar, **copiar**e **colar** são adicionados à `Toolbar`parte inferior. 
 

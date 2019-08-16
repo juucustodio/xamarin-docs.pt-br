@@ -7,39 +7,40 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/25/2017
-ms.openlocfilehash: e439d39dd8591cad14485e64aabab2d6016a8e27
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 0c0b5e04bafc748b48ea007162cfd7277cc23752
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61345899"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528346"
 ---
 # <a name="can-i-update-the-xamarinforms-default-template-to-a-newer-nuget-package"></a>Posso atualizar o modelo padrão Xamarin.Forms para um pacote NuGet mais recente?
 
-Este guia usa o modelo de biblioteca xamarin. Forms .NET Standard como um exemplo, mas o mesmo método geral também funcionarão para o modelo de projeto compartilhado do xamarin. Forms. Este guia foi escrito com o exemplo de atualização do xamarin. Forms 1.5.1.6471 para 2.1.0.6529, mas as mesmas etapas são possíveis definir outras versões como o padrão em vez disso.
+Este guia usa o modelo de biblioteca Xamarin. Forms .NET Standard como um exemplo, mas o mesmo método geral também funcionará para o modelo de projeto compartilhado Xamarin. Forms. Este guia é escrito com o exemplo de atualização de Xamarin. Forms 1.5.1.6471 para 2.1.0.6529, mas as mesmas etapas são possíveis para definir outras versões como o padrão.
 
-1.  Copie o modelo original `.zip` de:
+1. Copie o modelo `.zip` original de:
 
     > `C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\Extensions\Xamarin\Xamarin\[Xamarin Version]\T\PT\Cross-Platform\Xamarin.Forms.PCL.zip`
 
-2.  Descompacte o `.zip` para um local temporário.
+2. Descompacte o `.zip` em um local temporário.
 
-3.  Altere todas as ocorrências da versão antiga do pacote de formulários para a nova versão que você deseja usar.
-    *   `FormsTemplate\FormsTemplate.vstemplate`
-    *   `FormsTemplate.Android\FormsTemplate.Android.vstemplate`
-    *   `FormsTemplate.iOS\FormsTemplate.iOS.vstemplate`
+3. Altere todas as ocorrências da versão antiga do pacote Xamarin. Forms para a nova versão que você gostaria de usar.
+    * `FormsTemplate\FormsTemplate.vstemplate`
+    * `FormsTemplate.Android\FormsTemplate.Android.vstemplate`
+    * `FormsTemplate.iOS\FormsTemplate.iOS.vstemplate`
 
-    Exemplo: `<package id="Xamarin.Forms" version="1.5.1.6471" />` -> `<package id="Xamarin.Forms" version="2.1.0.6529" />`
+    Exemplo`<package id="Xamarin.Forms" version="1.5.1.6471" />` -> `<package id="Xamarin.Forms" version="2.1.0.6529" />`
 
-4.  Altere o elemento "nome" da janela principal [arquivo de modelo multiprojeto](https://msdn.microsoft.com/library/ms185308.aspx) (`Xamarin.Forms.PCL.vstemplate`) para torná-lo exclusivo. Por exemplo:
-    > <Name>Aplicativo em branco (xamarin. Forms portátil) - 2.1.0.6529</Name>
+4. Altere o elemento "Name" do arquivo de [modelo de vários projetos](https://msdn.microsoft.com/library/ms185308.aspx) principal (`Xamarin.Forms.PCL.vstemplate`) para torná-lo exclusivo. Por exemplo:
 
-5.  Novamente, compacte a pasta de modelo inteiro. Certifique-se de corresponder à estrutura do arquivo original do `.zip` arquivo. O `Xamarin.Forms.PCL.vstemplate` arquivo deve estar na parte superior do `.zip` arquivo, não em todas as pastas.
+    > `<Name>Blank App (Xamarin.Forms Portable) - 2.1.0.6529</Name>`
 
-6.  Crie um subdiretório de "Aplicativos móveis" na sua pasta de modelos do Visual Studio por usuário:
+5. Recompacte toda a pasta de modelos. Certifique-se de corresponder à estrutura de arquivo original `.zip` do arquivo. O `Xamarin.Forms.PCL.vstemplate` arquivo deve estar na parte superior `.zip` do arquivo, não em nenhuma pasta.
+
+6. Crie um subdiretório "aplicativos móveis" em sua pasta de modelos do Visual Studio por usuário:
     > `%USERPROFILE%\Documents\Visual Studio 2013\Templates\ProjectTemplates\Visual C#\Mobile Apps`
 
-7.  Copie a nova pasta zipada modelo para o novo diretório de "Aplicativos móveis".
+7. Copie a nova pasta de modelo compactado para o novo diretório "aplicativos móveis".
 
-8.  Baixe o pacote do NuGet que corresponde à versão da etapa 3. Por exemplo, [ http://nuget.org/api/v2/package/Xamarin.Forms/2.1.0.6529 ](http://nuget.org/api/v2/package/Xamarin.Forms/2.1.0.6529) (Consulte também [ https://stackoverflow.com/questions/8597375/how-to-get-the-url-of-a-nupkg-file ](https://stackoverflow.com/questions/8597375/how-to-get-the-url-of-a-nupkg-file)) e copie-o para a subpasta apropriada da pasta de extensões do Xamarin para Visual Studio:
+8. Baixe o pacote NuGet que corresponde à versão da etapa 3. Por exemplo, [http://nuget.org/api/v2/package/Xamarin.Forms/2.1.0.6529](http://nuget.org/api/v2/package/Xamarin.Forms/2.1.0.6529) (Veja também [https://stackoverflow.com/questions/8597375/how-to-get-the-url-of-a-nupkg-file](https://stackoverflow.com/questions/8597375/how-to-get-the-url-of-a-nupkg-file)) e copie-o na subpasta apropriada da pasta de extensões do Xamarin Visual Studio:
     > `C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\Extensions\Xamarin\Xamarin\[Xamarin Version]\Packages`

@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 4878f2516e764f3ea01ac89569ab4dfdbdbd37e6
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 5e0f096e5f2c05452a285182db4e455769aa737b
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68647584"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69529026"
 ---
 # <a name="xib-files-in-xamarinmac"></a>arquivos. xib no Xamarin. Mac
 
@@ -79,14 +79,14 @@ Na seção **Propriedades** há 8 diferentes *guias de inspetor*, conforme mostr
 
 Da esquerda para a direita, essas guias são:
 
--   **Inspetor de Arquivo** – o Inspetor de Arquivo mostra informações do arquivo, como o nome do arquivo e o local do arquivo Xib que está sendo editado.
--   **Ajuda Rápida** – a guia Ajuda Rápida fornece ajuda contextual com base no que está selecionado no Xcode.
--   **Inspetor de Identidade** – o Inspetor de Identidade fornece informações sobre a exibição/controle selecionado.
--   **Inspetor de atributos** – o Inspetor de atributos permite que você personalize vários atributos do controle/exibição selecionado.
--   **Inspetor de tamanho** – o Inspetor de tamanho permite que você controle o tamanho e o comportamento de redimensionamento do controle/exibição selecionado.
--   **Inspetor de conexões** – o Inspetor de conexões mostra a tomada e as conexões de ação dos controles selecionados. Vamos examinar saídas e ações em um momento.
--   **Inspetor de associações** – o Inspetor de associações permite que você configure controles para que seus valores sejam associados automaticamente a modelos de dados.
--   **Inspetor de exibição de efeitos** – o Inspetor de efeitos de exibição permite que você especifique efeitos sobre os controles, como animações.
+- **Inspetor de Arquivo** – o Inspetor de Arquivo mostra informações do arquivo, como o nome do arquivo e o local do arquivo Xib que está sendo editado.
+- **Ajuda Rápida** – a guia Ajuda Rápida fornece ajuda contextual com base no que está selecionado no Xcode.
+- **Inspetor de Identidade** – o Inspetor de Identidade fornece informações sobre a exibição/controle selecionado.
+- **Inspetor de atributos** – o Inspetor de atributos permite que você personalize vários atributos do controle/exibição selecionado.
+- **Inspetor de tamanho** – o Inspetor de tamanho permite que você controle o tamanho e o comportamento de redimensionamento do controle/exibição selecionado.
+- **Inspetor de conexões** – o Inspetor de conexões mostra a tomada e as conexões de ação dos controles selecionados. Vamos examinar saídas e ações em um momento.
+- **Inspetor de associações** – o Inspetor de associações permite que você configure controles para que seus valores sejam associados automaticamente a modelos de dados.
+- **Inspetor de exibição de efeitos** – o Inspetor de efeitos de exibição permite que você especifique efeitos sobre os controles, como animações.
 
 Na seção **biblioteca** , você pode encontrar controles e objetos para colocá-los no designer a fim de criar graficamente sua interface do usuário:
 
@@ -271,8 +271,8 @@ Faça o seguinte:
 
 O que são saídas e ações? Na programação tradicional de interface do usuário do .NET, um controle na interface do usuário é exposto automaticamente como uma propriedade quando ele é adicionado. As coisas funcionam de modo diferente no Mac, simplesmente adicionar um controle a um modo de exibição não o torna acessível ao código. O desenvolvedor deve expor explicitamente o elemento de interface do usuário ao código. Para fazer isso, a Apple nos dá duas opções:
 
--  **Saídas** – saídas são análogas às propriedades. Se você conectar um controle a uma tomada, ele será exposto ao seu código por meio de uma propriedade, para que você possa fazer coisas como anexar manipuladores de eventos, chamar métodos nele, etc.
--  **Ações** – ações são análogas ao padrão de comando no WPF. Por exemplo, quando uma ação é executada em um controle, digamos que um clique de botão, o controle chamará automaticamente um método em seu código. As ações são poderosas e convenientes, pois você pode conectar muitos controles à mesma ação.
+- **Saídas** – saídas são análogas às propriedades. Se você conectar um controle a uma tomada, ele será exposto ao seu código por meio de uma propriedade, para que você possa fazer coisas como anexar manipuladores de eventos, chamar métodos nele, etc.
+- **Ações** – ações são análogas ao padrão de comando no WPF. Por exemplo, quando uma ação é executada em um controle, digamos que um clique de botão, o controle chamará automaticamente um método em seu código. As ações são poderosas e convenientes, pois você pode conectar muitos controles à mesma ação.
 
 No Xcode, saídas e ações são adicionadas diretamente no código por meio do *recurso de arrastar*. Mais especificamente, isso significa que, para criar uma tomada ou ação, você escolhe o elemento de controle que deseja adicionar uma tomada ou ação, mantém o botão de **controle** no teclado e arrasta esse controle diretamente para o seu código.
 

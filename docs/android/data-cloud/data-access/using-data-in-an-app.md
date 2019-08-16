@@ -1,42 +1,42 @@
 ---
-title: Usando dados em um aplicativo do Android
+title: Usando dados em um aplicativo Android
 ms.prod: xamarin
 ms.assetid: D5932AEB-0B6E-4F37-8B32-9BE4775AEE85
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/08/2018
-ms.openlocfilehash: 7d402e6f665baa8db68d571945490a8d1ae18881
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: 62e3e6944118e82cbd7712a80eb8098f3c6541fc
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67649562"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69525969"
 ---
 # <a name="using-data-in-an-app"></a>Usar dados em um aplicativo
 
-O **DataAccess_Adv** exemplo mostra um aplicativo funcional que permite a entrada do usuário e a funcionalidade de banco de dados CRUD (criar, ler, atualizar e excluir). O aplicativo consiste em duas telas: uma lista e um formulário de entrada de dados. Todo o código de acesso de dados é pode ser reutilizado no iOS e Android sem modificação.
+O exemplo **DataAccess_Adv** mostra um aplicativo de trabalho que permite a entrada de usuário e a funcionalidade de banco de dados CRUD (criar, ler, atualizar e excluir). O aplicativo consiste em duas telas: uma lista e um formulário de entrada de dados. Todo o código de acesso a dados é reutilizável no iOS e no Android sem modificação.
 
-Depois de adicionar alguns dados as telas do aplicativo esta aparência no Android:
+Depois de adicionar alguns dados, as telas de aplicativo têm esta aparência no Android:
 
-![Lista de exemplo do Android](using-data-in-an-app-images/image11.png "lista de exemplo do Android")
+![Lista de exemplos do Android](using-data-in-an-app-images/image11.png "Lista de exemplos do Android")
 
-![Detalhes de exemplo do Android](using-data-in-an-app-images/image12.png "detalhes de exemplo do Android")
+![Detalhes de exemplo do Android](using-data-in-an-app-images/image12.png "Detalhes de exemplo do Android")
 
-O projeto do Android é mostrado abaixo &ndash; o código mostrado nesta seção está contido dentro de **Orm** diretório:
+O projeto do Android é mostrado &ndash; abaixo, o código mostrado nesta seção está contido no diretório **ORM** :
 
-![Árvore de projeto do Android](using-data-in-an-app-images/image14.png "árvore de projeto do Android")
+![Árvore de projeto do Android](using-data-in-an-app-images/image14.png "Árvore de projeto do Android")
 
-O código nativo de interface do usuário para as atividades no Android está fora do escopo deste documento. Consulte a [Android ListViews e adaptadores](~/android/user-interface/layouts/list-view/index.md) guia para obter mais informações sobre os controles de interface do usuário.
+O código da interface do usuário nativa para as atividades no Android está fora do escopo deste documento. Consulte o guia de [ListViews e adaptadores do Android](~/android/user-interface/layouts/list-view/index.md) para obter mais informações sobre os controles da interface do usuário.
 
 ## <a name="read"></a>Ler
 
-Há duas operações de leitura no exemplo:
+Há algumas operações de leitura no exemplo:
 
--  A lista de leitura
--  Ler registros individuais
+- Lendo a lista
+- Lendo registros individuais
 
-Os dois métodos no `StockDatabase` classe são:
+Os dois métodos na `StockDatabase` classe são:
 
 ```csharp
 public IEnumerable<Stock> GetStocks ()
@@ -53,11 +53,11 @@ public Stock GetStock (int id)
 }
 ```
 
-Android processa os dados como um `ListView`.
+O Android renderiza os dados como um `ListView`.
 
 ## <a name="create-and-update"></a>Criar e atualizar
 
-Para simplificar o código do aplicativo, um único método de salvar é fornecido que faz uma inserção ou atualização, dependendo se o PrimaryKey tiver sido definido. Porque o `Id` propriedade é marcada com um `[PrimaryKey]` atributo que você não deve defini-lo em seu código. Esse método irá detectar se o valor tiver sido anterior salvo (Verificando a propriedade de chave primária) e inserir ou atualizar o objeto adequadamente:
+Para simplificar o código do aplicativo, é fornecido um único método de salvamento que faz uma inserção ou atualização, dependendo se a PrimaryKey foi definida. Como a `Id` propriedade é marcada com um `[PrimaryKey]` atributo, você não deve defini-la em seu código. Esse método detectará se o valor foi salvo anteriormente (verificando a propriedade de chave primária) e inserirá ou atualizará o objeto de acordo:
 
 ```csharp
 public int SaveStock (Stock item)
@@ -73,11 +73,11 @@ public int SaveStock (Stock item)
 }
 ```
 
-Aplicativos do mundo real geralmente exigirá algumas validações (como campos obrigatórios, comprimentos mínimo ou outras regras de negócios). Implementam bons aplicativos de plataforma cruzada como grande parte da validação lógica como possível em código compartilhado, passando os erros de validação de volta até a interface do usuário para exibição de acordo com os recursos da plataforma.
+Aplicativos do mundo real normalmente exigirão alguma validação (como campos obrigatórios, comprimentos mínimos ou outras regras de negócio). Bons aplicativos de plataforma cruzada implementam a maior parte possível da validação lógica no código compartilhado, passando erros de validação para a interface do usuário para exibição de acordo com os recursos da plataforma.
 
 ## <a name="delete"></a>Excluir
 
-Ao contrário do `Insert` e `Update` métodos, o `Delete<T>` método pode aceitar apenas o valor de chave primária em vez de uma completa `Stock` objeto. Neste exemplo uma `Stock` objeto é passado para o método, mas apenas a propriedade de Id é passada para o `Delete<T>` método.
+Ao contrário `Insert` dos `Update` métodos e, `Delete<T>` o método pode aceitar apenas o valor de chave primária em vez `Stock` de um objeto completo. Neste exemplo, um `Stock` objeto é passado para o método, mas apenas a propriedade ID é passada para o `Delete<T>` método.
 
 ```csharp
 public int DeleteStock(Stock stock)
@@ -90,15 +90,15 @@ public int DeleteStock(Stock stock)
 
 ## <a name="using-a-pre-populated-sqlite-database-file"></a>Usando um arquivo de banco de dados SQLite previamente preenchido
 
-Alguns aplicativos são fornecidos com um banco de dados já preenchido com dados. Você pode fazer isso facilmente no seu aplicativo móvel pelo envio de um arquivo de banco de dados SQLite existente com o seu aplicativo e copiá-lo para um diretório gravável para acessá-lo. Como o SQLite é um formato de arquivo padrão que é usado em muitas plataformas, existem várias ferramentas disponíveis para criar um arquivo de banco de dados SQLite:
+Alguns aplicativos são fornecidos com um banco de dados já populado com data. Você pode fazer isso facilmente em seu aplicativo móvel enviando um arquivo de banco de dados SQLite existente com seu aplicativo e copiando-o em um diretório gravável antes de acessá-lo. Como o SQLite é um formato de arquivo padrão usado em muitas plataformas, há várias ferramentas disponíveis para criar um arquivo de banco de dados do SQLite:
 
--   **Extensão do Firefox Manager SQLite** &ndash; funciona no Mac e Windows e produz arquivos que são compatíveis com iOS e Android.
+- **Extensão Firefox do Gerenciador SQLite** &ndash; Funciona no Mac e no Windows e produz arquivos que são compatíveis com Ios e Android.
 
--   **Linha de comando** &ndash; consulte [www.sqlite.org/sqlite.html](http://www.sqlite.org/sqlite.html) .
+- **Linha de comando** Consulte [www.sqlite.org/SQLite.html](http://www.sqlite.org/sqlite.html) . &ndash;
 
-Ao criar um arquivo de banco de dados de distribuição com seu aplicativo, tenha cuidado com a nomenclatura de tabelas e colunas para garantir que elas correspondam que espera seu código, especialmente se você estiver usando SQLite.NET que espera que os nomes para corresponder a suas propriedades e classes c# (ou o atributos personalizados associados).
+Ao criar um arquivo de banco de dados para distribuição com seu aplicativo, tome cuidado com a nomenclatura de tabelas e colunas para garantir que elas correspondam ao que o código espera, especialmente se você estiver usando SQLite.NET que C# esperará que os nomes correspondam às suas classes e Propriedades ( ou os atributos personalizados associados).
 
-Para garantir que algum código é executado antes de mais nada no seu aplicativo Android, você pode colocá-lo na primeira atividade para carregar ou criar um `Application` subclasse está carregado antes de todas as atividades. O código a seguir mostra uma `Application` subclasse que copia um arquivo de banco de dados existente **data.sqlite** fora dos **/recursos/Raw/** directory.
+Para garantir que algum código seja executado antes de qualquer outra coisa em seu aplicativo Android, você pode colocá-lo na primeira atividade para carregar ou você `Application` pode criar uma subclasse que é carregada antes de qualquer atividade. O código a seguir mostra `Application` uma subclasse que copia um arquivo de banco de **dados existente. sqlite** do diretório **/Resources/RAW/**
 
 ```csharp
 [Application]
@@ -137,7 +137,7 @@ public class YourAndroidApp : Application {
 
 ## <a name="related-links"></a>Links relacionados
 
-- [DataAccess Basic (exemplo)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Basic)
-- [DataAccess avançadas (amostra)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Advanced)
+- [DataAccess básico (exemplo)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Basic)
+- [DataAccess avançado (exemplo)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Advanced)
 - [Receitas de dados do Android](https://github.com/xamarin/recipes/tree/master/Recipes/android/data)
-- [Acesso a dados do xamarin. Forms](~/xamarin-forms/data-cloud/data/databases.md)
+- [Acesso a dados do Xamarin. Forms](~/xamarin-forms/data-cloud/data/databases.md)

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 12bb8fe6f8ed77ea9091c165d4656da292266679
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 9412012949cd012d572b65b7af6e2890160338dc
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656612"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69527937"
 ---
 # <a name="core-animation-in-xamarinios"></a>Animação de núcleo no Xamarin. iOS
 
@@ -40,9 +40,9 @@ O UIKit fornece vários recursos que facilitam a adição de animação a um apl
 
 Esta seção aborda os recursos de animação do UIKit, incluindo:
 
--  Transições entre controladores
--  Transições entre exibições
--  Exibir animação de propriedade
+- Transições entre controladores
+- Transições entre exibições
+- Exibir animação de propriedade
 
 
 ### <a name="view-controller-transitions"></a>Transições de controlador de exibição
@@ -59,9 +59,9 @@ SecondViewController vc2 = new SecondViewController {
 
 Nesse caso, uma `PartialCurl` animação é usada, embora várias outras estejam disponíveis, incluindo:
 
--  `CoverVertical`– Desliza para cima na parte inferior da tela
--  `CrossDissolve`– A exibição antiga esmaece & a nova exibição esmaece
--  `FlipHorizontal`-Uma inversão horizontal da direita para a esquerda. No descarte, a transição inverte da esquerda para a direita.
+- `CoverVertical`– Desliza para cima na parte inferior da tela
+- `CrossDissolve`– A exibição antiga esmaece & a nova exibição esmaece
+- `FlipHorizontal`-Uma inversão horizontal da direita para a esquerda. No descarte, a transição inverte da esquerda para a direita.
 
 
 Para animar a transição, `true` passe como o segundo argumento `PresentViewController`para:
@@ -100,12 +100,12 @@ A captura de tela abaixo mostra a transição animada entre as exibições de im
 
 O `UIView` UIKit dá suporte à animação de uma variedade de propriedades na classe gratuitamente, incluindo:
 
--  Quadro
--  Limites
--  Centralizado
--  Alfa
--  Transformar
--  Cor
+- Quadro
+- Limites
+- Centralizado
+- Alfa
+- Transformar
+- Cor
 
 
 Essas animações acontecem implicitamente especificando alterações de propriedade em um `NSAction` delegado passado para o método `UIView.Animate` estático. Por exemplo, o código a seguir anima o ponto central de um `UIImageView`:

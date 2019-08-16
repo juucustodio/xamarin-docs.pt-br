@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 143dd8c5ad2e762235641680e1217a11e1b48bb5
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: c707cb1afb774d73be7ea441695b88920489eb5f
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68651330"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528757"
 ---
 # <a name="push-notifications-in-ios"></a>Notificações por push no iOS
 
@@ -32,24 +32,24 @@ A Apple mantém dois ambientes de APNS: uma *área restrita* e um ambiente de *p
 
 A notificação por push deve observar as seguintes regras que são ditadas pela arquitetura do APNS:
 
--  **limite de mensagens de 256 bytes** -o tamanho completo da mensagem da notificação não deve exceder 256 bytes.
--  **Nenhuma confirmação** de confirmação-o APNS não fornece ao remetente nenhuma notificação de que uma mensagem o tenha feito para o destinatário pretendido. Se o dispositivo estiver inacessível e várias notificações sequenciais forem enviadas, todas as notificações, exceto as mais recentes, serão perdidas. Somente a notificação mais recente será entregue ao dispositivo.
--  **Cada aplicativo requer um certificado seguro** -a comunicação com o APNS deve ser feita em SSL.
+- **limite de mensagens de 256 bytes** -o tamanho completo da mensagem da notificação não deve exceder 256 bytes.
+- **Nenhuma confirmação** de confirmação-o APNS não fornece ao remetente nenhuma notificação de que uma mensagem o tenha feito para o destinatário pretendido. Se o dispositivo estiver inacessível e várias notificações sequenciais forem enviadas, todas as notificações, exceto as mais recentes, serão perdidas. Somente a notificação mais recente será entregue ao dispositivo.
+- **Cada aplicativo requer um certificado seguro** -a comunicação com o APNS deve ser feita em SSL.
 
 
 ## <a name="creating-and-using-certificates"></a>Criando e usando certificados
 
 Cada um dos ambientes mencionados na seção anterior requer seu próprio certificado. Esta seção explicará como criar um certificado, associá-lo a um perfil de provisionamento e obter um certificado de troca de informações pessoais para uso com o PushSharp.
 
-1.  Para criar certificados, vá para o portal de provisionamento do iOS no site da Apple, conforme mostrado na captura de tela a seguir (Observe o item de menu IDs do aplicativo à esquerda):
+1. Para criar certificados, vá para o portal de provisionamento do iOS no site da Apple, conforme mostrado na captura de tela a seguir (Observe o item de menu IDs do aplicativo à esquerda):
 
     [![](remote-notifications-in-ios-images/image5new.png "O portal de provisionamento do iOS no site do maçãs")](remote-notifications-in-ios-images/image5new.png#lightbox)
 
-2.  Em seguida, navegue até a seção da ID do aplicativo e crie uma nova ID do aplicativo, conforme mostrado na seguinte captura de tela:
+2. Em seguida, navegue até a seção da ID do aplicativo e crie uma nova ID do aplicativo, conforme mostrado na seguinte captura de tela:
 
     [![](remote-notifications-in-ios-images/image6new.png "Navegue até a seção IDs do aplicativo e crie uma nova ID do aplicativo")](remote-notifications-in-ios-images/image6new.png#lightbox)
 
-3.  Ao clicar no **+** botão, você poderá inserir a descrição e um identificador de pacote para a ID do aplicativo, conforme mostrado na próxima captura de tela:
+3. Ao clicar no **+** botão, você poderá inserir a descrição e um identificador de pacote para a ID do aplicativo, conforme mostrado na próxima captura de tela:
 
     [![](remote-notifications-in-ios-images/image7new.png "Insira a descrição e um identificador de pacote para a ID do aplicativo")](remote-notifications-in-ios-images/image7new.png#lightbox)
 
@@ -63,7 +63,7 @@ Cada um dos ambientes mencionados na seção anterior requer seu próprio certif
 
     [![](remote-notifications-in-ios-images/image9new.png "Confirme o registro da nova ID do aplicativo")](remote-notifications-in-ios-images/image9new.png#lightbox)
 
-7.  Em seguida, você deve criar o certificado para a ID do aplicativo. No painel de navegação à esquerda, navegue até **Certificados > todos** e selecione `+` o botão, conforme mostrado na seguinte captura de tela:
+7. Em seguida, você deve criar o certificado para a ID do aplicativo. No painel de navegação à esquerda, navegue até **Certificados > todos** e selecione `+` o botão, conforme mostrado na seguinte captura de tela:
 
     [![](remote-notifications-in-ios-images/image10new.png "Criar o certificado para a ID do aplicativo")](remote-notifications-in-ios-images/image8.png#lightbox)
 
@@ -75,24 +75,24 @@ Cada um dos ambientes mencionados na seção anterior requer seu próprio certif
 
     [![](remote-notifications-in-ios-images/image12new.png "Selecione a nova ID do aplicativo recém-criada")](remote-notifications-in-ios-images/image12new.png#lightbox)
 
-10.  Isso exibirá instruções que o guiarão pelo processo de criação de uma *solicitação de assinatura de certificado* usando o aplicativo de acesso do conjunto de **chaves** no seu Mac.
+10. Isso exibirá instruções que o guiarão pelo processo de criação de uma *solicitação de assinatura de certificado* usando o aplicativo de acesso do conjunto de **chaves** no seu Mac.
 
-11.  Agora que o certificado foi criado, ele deve ser usado como parte do processo de compilação para assinar o aplicativo para que ele possa se registrar no APNs. Isso requer a criação e a instalação de um perfil de provisionamento que usa o certificado.
+11. Agora que o certificado foi criado, ele deve ser usado como parte do processo de compilação para assinar o aplicativo para que ele possa se registrar no APNs. Isso requer a criação e a instalação de um perfil de provisionamento que usa o certificado.
 
-12.  Para criar um perfil de provisionamento de desenvolvimento, navegue até a seção **perfis de provisionamento** e siga as etapas para criá-lo, usando a ID do aplicativo que acabamos de criar.
+12. Para criar um perfil de provisionamento de desenvolvimento, navegue até a seção **perfis de provisionamento** e siga as etapas para criá-lo, usando a ID do aplicativo que acabamos de criar.
 
-13.  Depois de criar o perfil de provisionamento, abra o organizador do **Xcode** e atualize-o. Se o perfil de provisionamento criado não aparecer, talvez seja necessário baixar o perfil do portal de provisionamento do iOS e importá-lo manualmente. A captura de tela a seguir mostra um exemplo do organizador com o perfil de provisão adicionado:  
+13. Depois de criar o perfil de provisionamento, abra o organizador do **Xcode** e atualize-o. Se o perfil de provisionamento criado não aparecer, talvez seja necessário baixar o perfil do portal de provisionamento do iOS e importá-lo manualmente. A captura de tela a seguir mostra um exemplo do organizador com o perfil de provisão adicionado:  
     [![](remote-notifications-in-ios-images/image13new.png "Esta captura de tela mostra um exemplo do organizador com o perfil de provisionamento adicionado")](remote-notifications-in-ios-images/image13new.png#lightbox)
 
-14.  Neste ponto, precisamos configurar o projeto Xamarin. iOS para usar esse perfil de provisionamento criado recentemente. Isso é feito na caixa de diálogo **Opções do projeto** , na guia assinatura do **pacote do IOS** , conforme mostrado na seguinte captura de tela:  
+14. Neste ponto, precisamos configurar o projeto Xamarin. iOS para usar esse perfil de provisionamento criado recentemente. Isso é feito na caixa de diálogo **Opções do projeto** , na guia assinatura do **pacote do IOS** , conforme mostrado na seguinte captura de tela:  
     [![](remote-notifications-in-ios-images/image11.png "Configurar o projeto Xamarin. iOS para usar esse perfil de provisionamento recém-criado")](remote-notifications-in-ios-images/image11.png#lightbox)
 
 Neste ponto, o aplicativo está configurado para trabalhar com notificações por push. No entanto, ainda há mais algumas etapas necessárias com o certificado. Esse certificado está em formato DER que não é compatível com PushSharp, que requer um certificado de troca de informações pessoais (PKCS12). Para converter o certificado para que ele possa ser usado pelo PushSharp, execute estas etapas finais:
 
-1.  **Baixe o arquivo de certificado** -logon no portal de provisionamento do IOS, escolha a guia certificados, selecione o certificado associado ao perfil de provisionamento correto e escolha **baixar** .
-1.  **Abrir acesso** ao conjunto de chaves-este é um aplicativo da interface gráfica do sistema de gerenciamento de senhas no os X.
-1.  **Importar o certificado** -se o certificado ainda não estiver instalado, **arquivo... Importar itens** do menu acesso do conjunto de chaves. Navegue até o certificado que foi exportado acima e selecione-o.
-1.  **Exportar o certificado** -expanda o certificado para que a chave privada associada esteja visível, clique com o botão direito do mouse na chave e escolha exportar. Será solicitado um nome de arquivo e uma senha para o arquivo exportado.
+1. **Baixe o arquivo de certificado** -logon no portal de provisionamento do IOS, escolha a guia certificados, selecione o certificado associado ao perfil de provisionamento correto e escolha **baixar** .
+1. **Abrir acesso** ao conjunto de chaves-este é um aplicativo da interface gráfica do sistema de gerenciamento de senhas no os X.
+1. **Importar o certificado** -se o certificado ainda não estiver instalado, **arquivo... Importar itens** do menu acesso do conjunto de chaves. Navegue até o certificado que foi exportado acima e selecione-o.
+1. **Exportar o certificado** -expanda o certificado para que a chave privada associada esteja visível, clique com o botão direito do mouse na chave e escolha exportar. Será solicitado um nome de arquivo e uma senha para o arquivo exportado.
 
 Neste ponto, fizemos certificados. Criamos um certificado que será usado para assinar aplicativos iOS e converter esse certificado em um formato que possa ser usado com PushSharp em um aplicativo de servidor. Em seguida, vamos ver como os aplicativos iOS interagem com o APNS.
 

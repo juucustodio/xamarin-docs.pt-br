@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/06/2017
-ms.openlocfilehash: 0c4f7303d3620dcc2c829d732fe7a5f97f0e3883
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 83fa64ca207358b712341e1923a3a9a67a449e1f
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68643768"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69524728"
 ---
 # <a name="android-beam"></a>Beam do Android
 
@@ -23,9 +23,9 @@ O feixe do Android funciona enviando mensagens por meio de NFC quando dois dispo
 
 O Android dá suporte a duas maneiras de definir mensagens com o feixe do Android:
 
--   `SetNdefPushMessage`-Antes de o feixe do Android ser iniciado, um aplicativo pode chamar SetNdefPushMessage para especificar um NdefMessage a ser enviado por Push por meio de NFC e a atividade que o está enviando. Esse mecanismo é melhor usado quando uma mensagem não é alterada enquanto um aplicativo está em uso.
+- `SetNdefPushMessage`-Antes de o feixe do Android ser iniciado, um aplicativo pode chamar SetNdefPushMessage para especificar um NdefMessage a ser enviado por Push por meio de NFC e a atividade que o está enviando. Esse mecanismo é melhor usado quando uma mensagem não é alterada enquanto um aplicativo está em uso.
 
--   `SetNdefPushMessageCallback`-Quando o feixe do Android é iniciado, um aplicativo pode manipular um retorno de chamada para criar um NdefMessage. Esse mecanismo permite que a criação de mensagens seja atrasada até que os dispositivos estejam no intervalo. Ele dá suporte a cenários em que a mensagem pode variar com base no que está acontecendo no aplicativo.
+- `SetNdefPushMessageCallback`-Quando o feixe do Android é iniciado, um aplicativo pode manipular um retorno de chamada para criar um NdefMessage. Esse mecanismo permite que a criação de mensagens seja atrasada até que os dispositivos estejam no intervalo. Ele dá suporte a cenários em que a mensagem pode variar com base no que está acontecendo no aplicativo.
 
 
 Em ambos os casos, para enviar dados com o transmissão do Android, um `NdefMessage`aplicativo envia um, empacotando `NdefRecords`os dados em vários. Vamos dar uma olhada nos principais pontos que devem ser resolvidos antes que possamos disparar o feixe do Android. Primeiro, trabalharemos com o estilo de retorno de chamada para `NdefMessage`criar um.

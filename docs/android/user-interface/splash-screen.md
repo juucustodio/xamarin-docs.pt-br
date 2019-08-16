@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 09/06/2018
-ms.openlocfilehash: 30e471174d30e58b126c174fd4eacfdbe87d97b0
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 4d8f467b4dcc5e6c4628ed7afa43779cc48b7ef5
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68646055"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69522183"
 ---
 # <a name="splash-screen"></a>Splash Screen
 
@@ -25,11 +25,11 @@ Um aplicativo Android leva algum tempo para ser inicializado, especialmente dura
 
 Este guia aborda uma técnica para implementar uma tela inicial em um aplicativo Android. Ele aborda as seguintes etapas:
 
-1.  Criar um recurso que poderia ser desenhado para a tela inicial.
+1. Criar um recurso que poderia ser desenhado para a tela inicial.
 
-2.  Definir um novo tema que exibirá o recurso que poderá ser desenhado.
+2. Definir um novo tema que exibirá o recurso que poderá ser desenhado.
 
-3.  Adicionar uma nova atividade ao aplicativo que será usada como a tela inicial definida pelo tema criado na etapa anterior.
+3. Adicionar uma nova atividade ao aplicativo que será usada como a tela inicial definida pelo tema criado na etapa anterior.
 
 [![Tela inicial do logotipo do Xamarin de exemplo seguida pela tela do aplicativo](splash-screen-images/splashscreen-01-sml.png)](splash-screen-images/splashscreen-01.png#lightbox)
 
@@ -178,11 +178,11 @@ Para adicionar uma tela inicial para o modo paisagem, use as seguintes etapas:
     </layer-list>
     ```
 
-3.  Crie a pasta resources **/Values-Land** se ela ainda não existir.
+3. Crie a pasta resources **/Values-Land** se ela ainda não existir.
 
-4.  Adicione os arquivos **Colors. xml** e **Style. xml** a **Values-Land** (eles podem ser copiados e modificados dos arquivos **valores/Colors. xml** e **Values/Style. xml** existentes).
+4. Adicione os arquivos **Colors. xml** e **Style. xml** a **Values-Land** (eles podem ser copiados e modificados dos arquivos **valores/Colors. xml** e **Values/Style. xml** existentes).
 
-5.  Modifique **Values-Land/Style. xml** para que ele use a versão de paisagem do drawed for `windowBackground`. Neste exemplo, **splash_screen_land. xml** é usado:
+5. Modifique **Values-Land/Style. xml** para que ele use a versão de paisagem do drawed for `windowBackground`. Neste exemplo, **splash_screen_land. xml** é usado:
 
     ```xml
     <resources>
@@ -200,7 +200,7 @@ Para adicionar uma tela inicial para o modo paisagem, use as seguintes etapas:
     </resources>
     ```
 
-6.  Modifique **Values-Land/Colors. xml** para configurar as cores que você deseja usar para a versão de paisagem da tela inicial. Neste exemplo, a cor da tela de fundo inicial é alterada para azul para o modo paisagem:
+6. Modifique **Values-Land/Colors. xml** para configurar as cores que você deseja usar para a versão de paisagem da tela inicial. Neste exemplo, a cor da tela de fundo inicial é alterada para azul para o modo paisagem:
 
     ```xml
     <?xml version="1.0" encoding="utf-8"?>
@@ -213,7 +213,7 @@ Para adicionar uma tela inicial para o modo paisagem, use as seguintes etapas:
     </resources>
     ```
 
-7.  Compile e execute o aplicativo novamente. Gire o dispositivo para o modo paisagem enquanto a tela inicial ainda é exibida. A tela inicial muda para a versão de paisagem:
+7. Compile e execute o aplicativo novamente. Gire o dispositivo para o modo paisagem enquanto a tela inicial ainda é exibida. A tela inicial muda para a versão de paisagem:
 
     [![Rotação da tela inicial para o modo paisagem](splash-screen-images/landscape-splash-sml.png)](splash-screen-images/landscape-splash.png#lightbox)
 

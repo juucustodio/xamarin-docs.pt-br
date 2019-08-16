@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 01/03/2018
-ms.openlocfilehash: 95d71beff2bd5219712494deb43f1f9fb4b082ec
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 7c98686a1aa99e250b3fd1d0fcc6ae64d625a11f
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68646306"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69522401"
 ---
 # <a name="recyclerview"></a>RecyclerView
 
@@ -27,9 +27,9 @@ Muitos aplicativos precisam exibir coleções do mesmo tipo (como mensagens, con
 
 `RecyclerView`oferece dois recursos atraentes:
 
--  Ele tem uma arquitetura flexível que permite que você modifique seu comportamento conectando seus componentes preferenciais.
+- Ele tem uma arquitetura flexível que permite que você modifique seu comportamento conectando seus componentes preferenciais.
 
--  Ele é eficiente com grandes coleções porque reutiliza exibições de item e requer o uso de contentores de *exibição* para armazenar em cache referências de exibição.
+- Ele é eficiente com grandes coleções porque reutiliza exibições de item e requer o uso de contentores de *exibição* para armazenar em cache referências de exibição.
 
 Este guia explica como usar `RecyclerView` o em aplicativos xamarin. Android; ele explica como adicionar o `RecyclerView` pacote ao seu projeto xamarin. Android e descreve como `RecyclerView` o funciona em um aplicativo típico. Exemplos de código reais são fornecidos para mostrar como integrar `RecyclerView` em seu aplicativo, como implementar o clique de item-View e como atualizar `RecyclerView` quando seus dados subjacentes são alterados. Este guia pressupõe que você esteja familiarizado com o desenvolvimento do Xamarin. Android.
 
@@ -38,27 +38,27 @@ Este guia explica como usar `RecyclerView` o em aplicativos xamarin. Android; el
 
 Embora `RecyclerView` o esteja sempre associado à pirulito 5,0 do Android, ele é oferecido como uma &ndash; biblioteca `RecyclerView` de suporte funciona com aplicativos direcionados à API do nível 7 (Android 2,1) e posterior. O seguinte é necessário para usar `RecyclerView` em aplicativos baseados no Xamarin:
 
--  **Xamarin. Android** &ndash; xamarin. Android 4,20 ou posterior deve ser instalado e configurado com o Visual Studio ou Visual Studio para Mac.
+- **Xamarin. Android** &ndash; xamarin. Android 4,20 ou posterior deve ser instalado e configurado com o Visual Studio ou Visual Studio para Mac.
 
--  Seu projeto de aplicativo deve incluir o pacote **Xamarin. Android. support. v7. RecyclerView** . Para obter mais informações sobre a instalação de pacotes [do NuGet, consulte Walkthrough: Incluindo um NuGet em seu projeto](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough).
+- Seu projeto de aplicativo deve incluir o pacote **Xamarin. Android. support. v7. RecyclerView** . Para obter mais informações sobre a instalação de pacotes [do NuGet, consulte Walkthrough: Incluindo um NuGet em seu projeto](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough).
 
 
 ### <a name="overview"></a>Visão geral
 
 `RecyclerView`pode ser pensado como uma substituição para os `ListView` widgets e `GridView` no Android. Como seus predecessores, `RecyclerView` o é projetado para exibir um grande conjunto de dados em uma pequena janela `RecyclerView` , mas oferece mais opções de layout e é melhor otimizado para exibir grandes coleções. Se você estiver familiarizado com `ListView`o, há várias diferenças importantes entre `ListView` o `RecyclerView`e o:
 
--   `RecyclerView`é um pouco mais complexo de usar: você precisa escrever mais código para usar `RecyclerView` em comparação `ListView`com.
+- `RecyclerView`é um pouco mais complexo de usar: você precisa escrever mais código para usar `RecyclerView` em comparação `ListView`com.
 
--   `RecyclerView`não fornece um adaptador predefinido; Você deve implementar o código do adaptador que acessa sua fonte de dados. No entanto, o Android inclui vários adaptadores `ListView` predefinidos que funcionam com o e `GridView`o.
+- `RecyclerView`não fornece um adaptador predefinido; Você deve implementar o código do adaptador que acessa sua fonte de dados. No entanto, o Android inclui vários adaptadores `ListView` predefinidos que funcionam com o e `GridView`o.
 
--   `RecyclerView`não oferece um evento de clique de item quando um usuário toca em um item; em vez disso, eventos de clique de item são manipulados por classes auxiliares. Por outro lado `ListView` , o oferece um evento de clique de item.
+- `RecyclerView`não oferece um evento de clique de item quando um usuário toca em um item; em vez disso, eventos de clique de item são manipulados por classes auxiliares. Por outro lado `ListView` , o oferece um evento de clique de item.
 
--   `RecyclerView`melhora o desempenho por meio da reciclagem de exibições e pela imposição do padrão de suporte de exibição, o que elimina pesquisas desnecessárias de recursos de layout. O uso do padrão de detentor de exibição é opcional `ListView`no.
+- `RecyclerView`melhora o desempenho por meio da reciclagem de exibições e pela imposição do padrão de suporte de exibição, o que elimina pesquisas desnecessárias de recursos de layout. O uso do padrão de detentor de exibição é opcional `ListView`no.
 
--   `RecyclerView`o é baseado em um design modular que facilita a personalização. Por exemplo, você pode conectar uma política de layout diferente sem alterações significativas de código em seu aplicativo.
+- `RecyclerView`o é baseado em um design modular que facilita a personalização. Por exemplo, você pode conectar uma política de layout diferente sem alterações significativas de código em seu aplicativo.
     Por outro lado `ListView` , é relativamente monolítico na estrutura.
 
--   `RecyclerView`inclui animações internas para adicionar e remover itens. `ListView`as animações exigem um esforço adicional na parte do desenvolvedor do aplicativo.
+- `RecyclerView`inclui animações internas para adicionar e remover itens. `ListView`as animações exigem um esforço adicional na parte do desenvolvedor do aplicativo.
 
 
 ### <a name="sections"></a>Seções

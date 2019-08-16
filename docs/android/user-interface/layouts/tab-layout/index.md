@@ -1,39 +1,39 @@
 ---
 title: Layouts com guias
-description: Uma visão geral dos Layouts com guias no Android
+description: Uma visão geral dos layouts com guias no Android
 ms.prod: xamarin
 ms.assetid: 1CFF590A-AC86-C3B3-36CA-A70248BC7F97
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/08/2017
-ms.openlocfilehash: 32d1ce4e440a962e02fda052375171bea7676053
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 5f67ec30ce04993701634387f7c2023a0f92004f
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61303243"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69522355"
 ---
 # <a name="tabbed-layouts"></a>Layouts com guias
 
 
 ## <a name="overview"></a>Visão geral
 
-As guias são um padrão de interface do usuário populares em aplicativos móveis devido à sua simplicidade e a usabilidade. Eles fornecem uma maneira consistente e fácil de navegar entre várias telas em um aplicativo. O Android tem várias APIs para interfaces com guias: 
+As guias são um padrão popular de interface do usuário em aplicativos móveis devido à sua simplicidade e usabilidade. Eles fornecem uma maneira consistente e fácil de navegar entre várias telas em um aplicativo. O Android tem várias APIs para interfaces com guias: 
 
--   **ActionBar** &ndash; isso faz parte de um novo conjunto de API que foi introduzido no Android 3.0 (API nível 11) com o objetivo de fornecer uma consistente interface de alternar para modo de exibição e navegação. Ele foi movido volta para o Android 2.2 (API nível 8) com o [biblioteca de suporte ao Android v7](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/). 
+- **ActionBar** &ndash; Isso faz parte de um novo conjunto de APIs que foi introduzido no Android 3,0 (API nível 11) com o objetivo de fornecer uma interface consistente de navegação e de alternância de exibição. Foi feito o back Port para Android 2,2 (API nível 8) com a [biblioteca de suporte do Android v7](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/). 
 
--   **PagerTabStrip** &ndash; indica as páginas anteriores e posteriores de atual, de um `ViewPager`. `ViewPager` está disponível somente via [biblioteca de suporte ao Android v4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/).
-     Para obter mais informações sobre `PagerTabStrip`, consulte [ViewPager](~/android/user-interface/controls/view-pager/index.md).
+- **PagerTabStrip** Indica as páginas atual, próxima e anterior de a `ViewPager`. &ndash; `ViewPager`está disponível somente por meio da [biblioteca de suporte do Android v4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/).
+     Para obter mais informações `PagerTabStrip`sobre o, consulte [ViewPager](~/android/user-interface/controls/view-pager/index.md).
 
--   **Barra de ferramentas** &ndash; `Toolbar` é um componente de barra de ação mais recente e mais flexível que substitui `ActionBar`. `Toolbar` está disponível no Android 5.0 Lollipop ou posterior, e também está disponível para versões mais antigas do Android por meio de [biblioteca de suporte ao Android v7](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/) pacote do NuGet. 
-    `Toolbar` no momento é o componente de barra de ação recomendada para uso em aplicativos Android.
+- **Barra de ferramentas** é um componente de barra de ação mais novo e flexível `ActionBar`que substitui. &ndash; `Toolbar` `Toolbar`está disponível no Android 5,0 pirulito ou posterior, e também está disponível para versões mais antigas do Android por meio do pacote NuGet da [biblioteca de suporte do Android v7](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/) . 
+    `Toolbar`Atualmente é o componente de barra de ação recomendado a ser usado em aplicativos Android.
     Para obter mais informações, consulte [barra de ferramentas](~/android/user-interface/controls/tool-bar/index.md). 
 
 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Guias de Design de material -](https://material.io/guidelines/components/tabs.html)- [ActionBar](https://developer.android.com/guide/topics/ui/actionbar.html)
-- [Pacote do NuGet do suporte do Android biblioteca v7 AppCompat](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/)
-- [biblioteca de appcompat v7](https://developer.android.com/tools/support-library/features.html#v7-appcompat)
+- [Design de material-guias](https://material.io/guidelines/components/tabs.html)- [ActionBar](https://developer.android.com/guide/topics/ui/actionbar.html)
+- [Biblioteca de suporte do Android v7 AppCompat do pacote NuGet](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/)
+- [biblioteca do v7 AppCompat](https://developer.android.com/tools/support-library/features.html#v7-appcompat)

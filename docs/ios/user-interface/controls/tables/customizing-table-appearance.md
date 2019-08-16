@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: cad7378e3d569454606a9d472cf30c42956553e4
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 24f5ce0daddab090b5486af99eebc0d6e7a2b1dd
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68644938"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528673"
 ---
 # <a name="customizing-a-tables-appearance-in-xamarinios"></a>Personalizando a aparência de uma tabela no Xamarin. iOS
 
@@ -22,10 +22,10 @@ A maneira mais simples de alterar a aparência de uma tabela é usar um estilo d
 
 Há quatro estilos internos:
 
--  **Padrão** – dá suporte `UIImageView`a um.
--  **Subtítulo** – dá `UIImageView` suporte a um subtítulo e.
--  **Value1** – subtítulo alinhado à direita `UIImageView`, dá suporte a um.
--  **Value2** – o título é alinhado à direita e o subtítulo é alinhado à esquerda (mas nenhuma imagem).
+- **Padrão** – dá suporte `UIImageView`a um.
+- **Subtítulo** – dá `UIImageView` suporte a um subtítulo e.
+- **Value1** – subtítulo alinhado à direita `UIImageView`, dá suporte a um.
+- **Value2** – o título é alinhado à direita e o subtítulo é alinhado à esquerda (mas nenhuma imagem).
 
 
 Essas capturas de tela mostram como cada estilo é exibido:
@@ -53,10 +53,10 @@ cell.ImageView.Image = UIImage.FromFile("Images/" + tableItems[indexPath.Row].Im
 
 As células podem ter os seguintes acessórios adicionados à direita da exibição:
 
--   **Marca** de seleção – pode ser usada para indicar várias seleções em uma tabela.
--   **DetailButton** – responde ao toque independentemente do restante da célula, permitindo que ele execute uma função diferente para tocar a própria célula (como abrir um pop-up ou uma nova janela que não faz parte de uma `UINavigationController` pilha).
--   **DisclosureIndicator** – normalmente usado para indicar que tocar na célula abrirá outra exibição.
--   **DetailDisclosureButton** – uma combinação de `DetailButton` e. `DisclosureIndicator`
+- **Marca** de seleção – pode ser usada para indicar várias seleções em uma tabela.
+- **DetailButton** – responde ao toque independentemente do restante da célula, permitindo que ele execute uma função diferente para tocar a própria célula (como abrir um pop-up ou uma nova janela que não faz parte de uma `UINavigationController` pilha).
+- **DisclosureIndicator** – normalmente usado para indicar que tocar na célula abrirá outra exibição.
+- **DetailDisclosureButton** – uma combinação de `DetailButton` e. `DisclosureIndicator`
 
 
 Isso é o que eles parecem:
@@ -124,9 +124,9 @@ O exemplo CellCustomTable implementa uma `UITableViewCell` subclasse que define 
 
 A classe de célula Personalizada consiste em apenas três métodos:
 
--   **Construtor** – cria os controles da interface do usuário e define as propriedades de estilo personalizado (por exemplo, face da fonte, tamanho e cores).
--   **UpdateCell** – um método para `UITableView.GetCell` usar para definir as propriedades da célula.
--   **LayoutSubviews** – defina o local dos controles da interface do usuário. No exemplo, cada célula tem o mesmo layout, mas uma célula mais complexa (particularmente aquelas com tamanhos variados) pode precisar de diferentes posições de layout dependendo do conteúdo que está sendo exibido.
+- **Construtor** – cria os controles da interface do usuário e define as propriedades de estilo personalizado (por exemplo, face da fonte, tamanho e cores).
+- **UpdateCell** – um método para `UITableView.GetCell` usar para definir as propriedades da célula.
+- **LayoutSubviews** – defina o local dos controles da interface do usuário. No exemplo, cada célula tem o mesmo layout, mas uma célula mais complexa (particularmente aquelas com tamanhos variados) pode precisar de diferentes posições de layout dependendo do conteúdo que está sendo exibido.
 
 
 O código de exemplo completo no **CellCustomTable > CustomVegeCell.cs** segue:

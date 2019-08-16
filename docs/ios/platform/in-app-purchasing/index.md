@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 2320aa9a611a44d654bcbae18bb2664797054e50
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: fb8f4a8e62ea163dc58589382c31c4bf19973c36
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68647918"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528262"
 ---
 # <a name="in-app-purchasing-in-xamarinios"></a>Compras no aplicativo no Xamarin. iOS
 
@@ -20,11 +20,11 @@ os aplicativos iOS podem vender produtos ou serviços digitais usando o StoreKit
 
 Fornecer a funcionalidade de compra no aplicativo requer uma série de etapas:
 
--  **Configurando seu aplicativo** – o perfil de provisionamento do aplicativo deve ser configurado corretamente.
--  **Criando produtos** – as descrições e os preços do produto devem ser criados no portal do iTunes Connect.
--  **Implementando StoreKit** – a API StoreKit deve ser implementada de acordo com os tipos de produtos vendidos.
--  **Criando a interface do usuário e os próprios produtos** – os produtos devem ser implementados, incluindo mecanismos para controlar cada compra e fazer backup/restaurá-los, se apropriado.
--  **Monitorando vendas e recebendo fundos** – use as informações fornecidas pelo iTunes Connect para monitorar as tendências de vendas e acompanhar sua renda.
+- **Configurando seu aplicativo** – o perfil de provisionamento do aplicativo deve ser configurado corretamente.
+- **Criando produtos** – as descrições e os preços do produto devem ser criados no portal do iTunes Connect.
+- **Implementando StoreKit** – a API StoreKit deve ser implementada de acordo com os tipos de produtos vendidos.
+- **Criando a interface do usuário e os próprios produtos** – os produtos devem ser implementados, incluindo mecanismos para controlar cada compra e fazer backup/restaurá-los, se apropriado.
+- **Monitorando vendas e recebendo fundos** – use as informações fornecidas pelo iTunes Connect para monitorar as tendências de vendas e acompanhar sua renda.
 
 Este documento explica como concluir todas essas etapas para fornecer compras no aplicativo usando o Xamarin. iOS.
 
@@ -50,11 +50,11 @@ Para dar suporte à compra no aplicativo, você deve usar o Xamarin. iOS 5,0 ou 
 
 Este artigo introduziu o conceito de compra no aplicativo, descreveu como configurar seu aplicativo para tirar proveito dele e obter exemplos apresentados usando o Xamarin. iOS. Ele abordou:
 
--  **portal de provisionamento do IOS** – diretrizes para habilitar a funcionalidade de compra no aplicativo.
--  **iTunes Connect** – Configurando produtos para vender em seu aplicativo.
--  **Store kit** – explicação das classes usadas para criar recursos de compra no aplicativo.
--  **Codificação de seu aplicativo para compra** – exemplos de como criar compras no aplicativo em um aplicativo Xamarin. Ios.
--  **Relatório** – visão geral das estatísticas disponíveis por meio do iTunes Connect.
+- **portal de provisionamento do IOS** – diretrizes para habilitar a funcionalidade de compra no aplicativo.
+- **iTunes Connect** – Configurando produtos para vender em seu aplicativo.
+- **Store kit** – explicação das classes usadas para criar recursos de compra no aplicativo.
+- **Codificação de seu aplicativo para compra** – exemplos de como criar compras no aplicativo em um aplicativo Xamarin. Ios.
+- **Relatório** – visão geral das estatísticas disponíveis por meio do iTunes Connect.
 
 
 ## <a name="related-links"></a>Links relacionados

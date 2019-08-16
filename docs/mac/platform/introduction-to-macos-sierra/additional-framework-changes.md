@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: d48f7012d0389b262e2dfce560d4f8aa925c21d5
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 5c8b2b20d037edd35fd3c50d1418df2110cb8e4c
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655648"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528897"
 ---
 # <a name="additional-macos-sierra-framework-changes"></a>Alterações adicionais de estrutura do MacOS Serra
 
@@ -39,12 +39,12 @@ O aprimoramento a seguir foi feito para a estrutura AppKit para macOS Sierra:
 - A passagem de layout de exibição adiada foi otimizada e estendida.
 - A API do tipo "arrastar e soltar" agora inclui `NSFilePromiseProvider` as `NSFilePromiseReceiver` novas classes e para dar suporte ao arrastar pássaros.
 - Vários construtores de conveniência foram adicionados aos controles existentes:
-    -  `NSButton`inclui novos construtores para a criação de botões de push, caixas de seleção e botões de opção.
-    -  `NSTextField`inclui novos construtores para a criação de rótulos de quebra automática e sem encapsulamento, rótulos atribuídos e campos de texto editáveis.
-    -  `NSSegmentedControl`inclui novos construtores para a criação de controles segmentados de um grupo de rótulos ou imagens.
-    -  `NSSlider`inclui novos construtores para a criação de controles deslizantes lineares horizontais.
-    -  `NSImageView`inclui novos construtores para a criação de exibições de imagem não editáveis `NSImage`de um determinado.
--  O novo `NSGridView` foi adicionado para fazer o layout automático de uma coleção de subexibições em uma grade com linhas e colunas de tamanho variável que podem ser ocultadas ou exibidas dinamicamente.
+    - `NSButton`inclui novos construtores para a criação de botões de push, caixas de seleção e botões de opção.
+    - `NSTextField`inclui novos construtores para a criação de rótulos de quebra automática e sem encapsulamento, rótulos atribuídos e campos de texto editáveis.
+    - `NSSegmentedControl`inclui novos construtores para a criação de controles segmentados de um grupo de rótulos ou imagens.
+    - `NSSlider`inclui novos construtores para a criação de controles deslizantes lineares horizontais.
+    - `NSImageView`inclui novos construtores para a criação de exibições de imagem não editáveis `NSImage`de um determinado.
+- O novo `NSGridView` foi adicionado para fazer o layout automático de uma coleção de subexibições em uma grade com linhas e colunas de tamanho variável que podem ser ocultadas ou exibidas dinamicamente.
 
 <a name="AVFoundation-Framework-Enhancements" />
 

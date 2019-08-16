@@ -7,22 +7,22 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: d6ad088f9223dccb1966148fe8f53d76e85040a6
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: ff0773b3073221bead48439b7d99f1db993e3353
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68645599"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528595"
 ---
 # <a name="table-parts-and-functionality-in-xamarinios"></a>Partes de tabela e funcionalidade no Xamarin. iOS
 
 Um UITableView pode ter um estilo ' agrupado ' ou ' Plain ' e consiste nas seguintes partes:
 
--  [Cabeçalho da seção](#Section_Header)
--  [Células](#Cells) (ou linhas, se preferir)
--  [Rodapé da seção](#Section_Footer)
--  [Índice](#Index)
--  [Modo de edição](#Edit_Features) (inclui "passar o dedo para excluir" e arrastar identificadores para alterar a ordem das linhas) 
+- [Cabeçalho da seção](#Section_Header)
+- [Células](#Cells) (ou linhas, se preferir)
+- [Rodapé da seção](#Section_Footer)
+- [Índice](#Index)
+- [Modo de edição](#Edit_Features) (inclui "passar o dedo para excluir" e arrastar identificadores para alterar a ordem das linhas) 
 
 Essas capturas de tela mostram como as linhas de seção, os cabeçalhos, os rodapés, os controles de edição e o índice são exibidos.
 

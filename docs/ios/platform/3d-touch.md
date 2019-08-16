@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 209d70c2e158261ca671e6a889e979de39362d53
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 38d58350cf067a2d5f7813250590cc0715b6c9ea
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68647979"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69527401"
 ---
 # <a name="introduction-to-3d-touch-in-xamarinios"></a>Introdução ao toque 3D no Xamarin. iOS
 
@@ -179,7 +179,7 @@ O `CommitViewController` reutiliza o modo de exibição que criamos no **Peek** 
 
 ### <a name="registering-for-peek-and-pop"></a>Registrando para Peek e pop
 
-No controlador de exibição que queremos permitir que o usuário **Inspecione** e **exiba itens,** precisamos se registrar para esse serviço. No exemplo fornecido acima de um controlador de exibição de tabela`MasterViewController`(), usaremos o código a seguir:
+No controlador de exibição que queremos permitir que o usuário **Inspecione** e exiba itens , precisamos se registrar para esse serviço. No exemplo fornecido acima de um controlador de exibição de tabela`MasterViewController`(), usaremos o código a seguir:
 
 ```csharp
 public override void ViewDidLoad ()
@@ -274,11 +274,11 @@ Aqui estamos definindo dois itens de ação rápida estáticos com as seguintes 
   - `UIApplicationShortcutIconTypeTime`
   - `UIApplicationShortcutIconTypeUpdate`
 
-        ![](3d-touch-images/uiapplicationshortcuticontype.png "UIApplicationShortcutIconType imagery")
+  ![](3d-touch-images/uiapplicationshortcuticontype.png "Imagens de UIApplicationShortcutIconType")
 
-* `UIApplicationShortcutItemSubtitle`-Define o subtítulo do item.
-* `UIApplicationShortcutItemTitle`-Define o título do item.
-* `UIApplicationShortcutItemType`-É um valor de cadeia de caracteres que usaremos para identificar o item em nosso aplicativo. Consulte a seguinte seção para obter mais informações.
+- `UIApplicationShortcutItemSubtitle`-Define o subtítulo do item.
+- `UIApplicationShortcutItemTitle`-Define o título do item.
+- `UIApplicationShortcutItemType`-É um valor de cadeia de caracteres que usaremos para identificar o item em nosso aplicativo. Consulte a seguinte seção para obter mais informações.
 
 > [!IMPORTANT]
 > Itens de atalho de ação rápida que são definidos `Info.plist` no arquivo não podem ser acessados com a `Application.ShortcutItems` propriedade. Eles são passados apenas para o manipulador `HandleShortcutItem` de eventos.

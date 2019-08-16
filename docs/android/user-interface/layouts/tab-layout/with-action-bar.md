@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: 92278fb84cba6329c33ac8a972a686fff7186f67
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 4673b178512a886e5fdb154c57c8d659276bb392
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68647434"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69522331"
 ---
 # <a name="tabbed-layouts-with-the-actionbar"></a>Layouts com guias com o ActionBar
 
@@ -47,17 +47,17 @@ Quando o ActionBar não pode exibir todas as guias, ele irá configurar as guias
 
 Cada guia na barra de ação deve ser associada a um [*fragmento*](~/android/platform/fragments/index.md). Quando o usuário selecionar uma guia, o aplicativo exibirá o fragmento associado à guia. O ActionBar não é responsável por exibir o fragmento apropriado para o usuário. Em vez disso, o ActionBar notificará um aplicativo sobre as alterações de estado em uma guia por meio de uma classe que implementa a interface ActionBar. ITabListener. Essa interface fornece três métodos de retorno de chamada que o Android invocará quando o estado da guia for alterado: 
 
--  **OnTabSelected** -esse método é chamado quando o usuário seleciona a guia. Ele deve exibir o fragmento.
+- **OnTabSelected** -esse método é chamado quando o usuário seleciona a guia. Ele deve exibir o fragmento.
 
--  **OnTabReselected** -esse método é chamado quando a guia já está selecionada, mas é selecionada novamente pelo usuário. Esse retorno de chamada é normalmente usado para atualizar/atualizar o fragmento exibido.
+- **OnTabReselected** -esse método é chamado quando a guia já está selecionada, mas é selecionada novamente pelo usuário. Esse retorno de chamada é normalmente usado para atualizar/atualizar o fragmento exibido.
 
--  **OnTabUnselected** -esse método é chamado quando o usuário seleciona outra guia. Esse retorno de chamada é usado para salvar o estado no fragmento exibido antes de desaparecer.
+- **OnTabUnselected** -esse método é chamado quando o usuário seleciona outra guia. Esse retorno de chamada é usado para salvar o estado no fragmento exibido antes de desaparecer.
 
 O Xamarin. Android encapsula o `ActionBar.ITabListener` com eventos `ActionBar.Tab` na classe. Os aplicativos podem atribuir manipuladores de eventos a um ou mais desses eventos. Há três eventos (um para cada método em `ActionBar.ITabListener`) que uma guia de barra de ação irá gerar: 
 
--  TabSelected
--  TabReselected
--  TabUnselected
+- TabSelected
+- TabReselected
+- TabUnselected
 
 
 

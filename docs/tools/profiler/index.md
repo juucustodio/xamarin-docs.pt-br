@@ -6,12 +6,12 @@ ms.assetid: 3247fcee-6acc-470d-ab87-c1c511d67363
 author: lobrien
 ms.author: laobri
 ms.date: 06/03/2018
-ms.openlocfilehash: 2efc782386b8ec39ecca21aaf88738c813c260f0
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 4541a795d819c3738fffbb3224ef35dce5fc5521
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68511651"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69529051"
 ---
 # <a name="xamarin-profiler"></a>Criador de perfil do Xamarin
 
@@ -143,8 +143,8 @@ O Xamarin Profiler pode ser iniciado no IDE quando você estiver criando perfis 
 
 #### <a name="launching-from-visual-studio"></a>Iniciando do Visual Studio
 
-1.  Primeiro, verifique se o aplicativo foi carregado no Visual Studio e selecione a configuração de depuração (padrão), conforme especificado acima.
-2.  Navegue para **analisar > Xamarin Profiler** no Visual Studio, para abrir o criador de perfil, conforme demonstrado no diagrama a seguir:
+1. Primeiro, verifique se o aplicativo foi carregado no Visual Studio e selecione a configuração de depuração (padrão), conforme especificado acima.
+2. Navegue para **analisar > Xamarin Profiler** no Visual Studio, para abrir o criador de perfil, conforme demonstrado no diagrama a seguir:
 
 ![Iniciando o criador de perfil no Visual Studio](images/start-profiling-vs.png)
 
@@ -231,8 +231,8 @@ Há diferentes exibições de dados no instrumento de alocações, que permite a
 A exibição de inspetor para alocações fornece opções para filtrar e agrupar objetos, fornecer estatísticas sobre memória alocada e as principais alocações, bem como exibições para rastreamento de pilha e caminho para raiz.
 
 - **Árvore de chamadas** – exibe toda a árvore de chamadas de todos os threads no aplicativo e inclui informações sobre a memória alocada em cada nó. Quando um elemento é selecionado na lista, todos os nós irmãos aparecerão em cinza. Você pode expandir a árvore ou clicar duas vezes no elemento para fazer uma busca detalhada dele. Ao exibir essa exibição de dados, a exibição do Inspetor de configurações de exibição pode ser usada para alterar a maneira como ela é apresentada. Atualmente, há duas opções:
-    1.  **Árvore de chamada invertida** – considera o rastreamento de pilha de cima para baixo. Essa é uma opção de exibição conveniente, pois indica os métodos mais profundos em que a CPU está gastando seu tempo.
-    2.  **Separar por thread** – essa opção organiza a árvore de chamadas por thread.
+    1. **Árvore de chamada invertida** – considera o rastreamento de pilha de cima para baixo. Essa é uma opção de exibição conveniente, pois indica os métodos mais profundos em que a CPU está gastando seu tempo.
+    2. **Separar por thread** – essa opção organiza a árvore de chamadas por thread.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 

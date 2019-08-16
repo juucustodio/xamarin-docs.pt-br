@@ -7,12 +7,12 @@ ms.assetid: F4A37564-B18B-42FF-B841-9A1949895AB6
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/27/2018
-ms.openlocfilehash: 2417d6400faf80ad9b3b24a032046e7e867814f5
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 0ce718bf0380c47033129755d6ca9d40c1136e2c
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655482"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69529272"
 ---
 # <a name="part-3-xaml-markup-extensions"></a>Parte 3. Extensões de marcação XAML
 
@@ -441,9 +441,9 @@ O tamanho do resultante `BoxView` em relação à tela é dependente de platafor
 
 Várias extensões de marcação são intrínsecas para XAML e com suporte em arquivos XAML de xamarin. Forms. Alguns deles não são usadas com muita frequência, mas são essenciais quando precisar delas:
 
--  Se uma propriedade tiver um não - `null` valor por padrão, mas você deseja defini-lo como `null`, defina-a como o `{x:Null}` extensão de marcação.
--  Se uma propriedade é do tipo `Type`, você pode atribuí-la a um `Type` usando a extensão de marcação do objeto `{x:Type someClass}`.
--  Você pode definir matrizes em XAML usando o `x:Array` extensão de marcação. Esta extensão de marcação tem um atributo obrigatório chamado `Type` que indica o tipo dos elementos na matriz.
+- Se uma propriedade tiver um não - `null` valor por padrão, mas você deseja defini-lo como `null`, defina-a como o `{x:Null}` extensão de marcação.
+- Se uma propriedade é do tipo `Type`, você pode atribuí-la a um `Type` usando a extensão de marcação do objeto `{x:Type someClass}`.
+- Você pode definir matrizes em XAML usando o `x:Array` extensão de marcação. Esta extensão de marcação tem um atributo obrigatório chamado `Type` que indica o tipo dos elementos na matriz.
 - O `Binding` extensão de marcação é discutida em [parte 4. Noções básicas de vinculação de dados](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md).
 
 ## <a name="the-constraintexpression-markup-extension"></a>A extensão de marcação ConstraintExpression

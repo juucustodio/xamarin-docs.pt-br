@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017
-ms.openlocfilehash: d8052e00809b15f0858583ee2919c47cfd8af00b
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 7526349c1b4b61495af95dfc200a5055cea5650e
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68646564"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69529291"
 ---
 # <a name="part-2-essential-xaml-syntax"></a>Parte 2. Sintaxe XAML essencial
 
@@ -82,9 +82,9 @@ Essas duas maneiras para especificar o `TextColor` propriedade são funcionalmen
 
 Com essa nova sintaxe, terminologia úteis pode ser introduzida:
 
--  `Label` é um *elemento de objeto*. Ele é um objeto de xamarin. Forms expressado como um elemento XML.
--  `Text`, `VerticalOptions`, `FontAttributes` e `FontSize` são *atributos da propriedade*. Elas são expressadas como atributos XML de propriedades de xamarin. Forms.
--  Esse trecho de código final, `TextColor` tornou-se um *elemento de propriedade*. É uma propriedade de xamarin. Forms, mas agora é um elemento XML.
+- `Label` é um *elemento de objeto*. Ele é um objeto de xamarin. Forms expressado como um elemento XML.
+- `Text`, `VerticalOptions`, `FontAttributes` e `FontSize` são *atributos da propriedade*. Elas são expressadas como atributos XML de propriedades de xamarin. Forms.
+- Esse trecho de código final, `TextColor` tornou-se um *elemento de propriedade*. É uma propriedade de xamarin. Forms, mas agora é um elemento XML.
 
 
 A definição de propriedade elementos podem parecer a princípio ser uma violação da sintaxe XML, mas não é. O período não tem nenhum significado especial em XML. Um decodificador de XML, `Label.TextColor` é simplesmente um elemento filho normal.
@@ -176,13 +176,13 @@ Você acabou de ver que o `Grid` exige que os elementos de propriedade para o `R
 
 Dentro da marca para cada filho do `Grid` especifique a linha e coluna dos filho usando os seguintes atributos:
 
--  `Grid.Row`
--  `Grid.Column`
+- `Grid.Row`
+- `Grid.Column`
 
 Os valores padrão desses atributos são 0. Você também pode indicar se um filho abrange mais de uma linha ou coluna com esses atributos:
 
--  `Grid.RowSpan`
--  `Grid.ColumnSpan`
+- `Grid.RowSpan`
+- `Grid.ColumnSpan`
 
 Esses dois atributos têm valores padrão de 1.
 

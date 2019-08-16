@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/25/2018
-ms.openlocfilehash: 80ec7a2ae13b3c76bccae80d2c6956533b027047
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: e36a8e25c5924ac82356c0f1c3110d1596f81cbf
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68643248"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69523890"
 ---
 # <a name="how-to-use-google-maps-and-location-with-xamarinandroid"></a>Como usar o Google Maps e o local com o Xamarin. Android
 
@@ -22,9 +22,9 @@ _Este artigo discute como usar mapas e localização com o Xamarin. Android. Ele
 
 As tecnologias de mapeamento são um complemento onipresente aos dispositivos móveis. Computadores desktop e laptops não tendem a ter o reconhecimento de local interno. Por outro lado, os dispositivos móveis usam esses aplicativos para localizar dispositivos e para exibir informações de localização em alteração. O Android tem uma tecnologia integrada e avançada que exibe dados de localização em mapas usando o hardware de local que pode estar disponível no dispositivo. Este artigo aborda um espectro do que os aplicativos de mapas em Xamarin. Android têm a oferecer, incluindo: 
 
--  Usando o aplicativo de mapas interno para adicionar rapidamente a funcionalidade de mapeamento.
--  Trabalhar com a API Maps para controlar a exibição de um mapa.
--  Usando uma variedade de técnicas para adicionar sobreposições gráficas.
+- Usando o aplicativo de mapas interno para adicionar rapidamente a funcionalidade de mapeamento.
+- Trabalhar com a API Maps para controlar a exibição de um mapa.
+- Usando uma variedade de técnicas para adicionar sobreposições gráficas.
 
 Os tópicos desta seção abrangem uma ampla gama de recursos de mapeamento.
 Primeiro, eles explicam como aproveitar o aplicativo de mapas interno do Android e como exibir uma visão panorâmica de um local. Em seguida, eles abordam como usar a API Maps para incorporar recursos de mapeamento diretamente dentro de um aplicativo, cobrindo como controlar a posição e a exibição de um mapa, além de como adicionar sobreposições gráficas.

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/25/2018
-ms.openlocfilehash: 79f97382b6d8bd7875e4921c859f92cd6b321687
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 3817a6a111bb8a19248127d3be31a719fac68ba8
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68646315"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69522561"
 ---
 # <a name="xamarinandroid-listview"></a>ListView do Xamarin. Android
 
@@ -192,26 +192,26 @@ Execute o aplicativo. Você deve ver algo parecido com isso:
 
 Os tópicos restantes (vinculados abaixo) têm uma visão abrangente de como trabalhar `ListView` com a classe e os diferentes tipos de tipos de adaptadores que você pode usar com ele. A estrutura é a seguinte:
 
--   **Aparência visual** &ndash; Partes`ListView` do controle e como elas funcionam.
+- **Aparência visual** &ndash; Partes`ListView` do controle e como elas funcionam.
 
--   **Classes** do Visão geral das classes usadas para exibir um `ListView`. &ndash;
+- **Classes** do Visão geral das classes usadas para exibir um `ListView`. &ndash;
 
--   **Exibindo dados em um ListView** Como exibir uma lista simples de dados; como implementar `ListView's` recursos de usabilidade; como usar layouts de linha internos diferentes e como os adaptadores salvam a memória reutilizando exibições de linha. &ndash;
+- **Exibindo dados em um ListView** Como exibir uma lista simples de dados; como implementar `ListView's` recursos de usabilidade; como usar layouts de linha internos diferentes e como os adaptadores salvam a memória reutilizando exibições de linha. &ndash;
 
--   **Aparência personalizada** Alterar o estilo `ListView` do com layouts, fontes e cores personalizados. &ndash;
+- **Aparência personalizada** Alterar o estilo `ListView` do com layouts, fontes e cores personalizados. &ndash;
 
--   **Usando o SQLite** Como exibir dados de um banco de dados SQLite com `CursorAdapter`um. &ndash;
+- **Usando o SQLite** Como exibir dados de um banco de dados SQLite com `CursorAdapter`um. &ndash;
 
--   **Ciclo de vida da atividade** Considerações de design ao `ListView` implementar atividades, incluindo onde, no ciclo de vida, você deve preencher seus dados e quando liberar recursos. &ndash;
+- **Ciclo de vida da atividade** Considerações de design ao `ListView` implementar atividades, incluindo onde, no ciclo de vida, você deve preencher seus dados e quando liberar recursos. &ndash;
 
 A discussão (dividida em seis partes) começa com uma visão geral da `ListView` própria classe antes de introduzir exemplos progressivamente mais complexos de como usá-la.
 
--   [Partes e funcionalidade de ListView](~/android/user-interface/layouts/list-view/parts-and-functionality.md)
--   [Populando um ListView com dados](~/android/user-interface/layouts/list-view/populating.md)
--   [Personalizar a aparência de uma ListView](~/android/user-interface/layouts/list-view/customizing-appearance.md)
--   [Usar CursorAdapters](~/android/user-interface/layouts/list-view/cursor-adapters.md)
--   [Usar um ContentProvider](~/android/user-interface/layouts/list-view/content-provider.md)
--   [ListView e o ciclo de vida da atividade](~/android/user-interface/layouts/list-view/activity-lifecycle.md)
+- [Partes e funcionalidade de ListView](~/android/user-interface/layouts/list-view/parts-and-functionality.md)
+- [Populando um ListView com dados](~/android/user-interface/layouts/list-view/populating.md)
+- [Personalizar a aparência de uma ListView](~/android/user-interface/layouts/list-view/customizing-appearance.md)
+- [Usar CursorAdapters](~/android/user-interface/layouts/list-view/cursor-adapters.md)
+- [Usar um ContentProvider](~/android/user-interface/layouts/list-view/content-provider.md)
+- [ListView e o ciclo de vida da atividade](~/android/user-interface/layouts/list-view/activity-lifecycle.md)
 
 
 ## <a name="summary"></a>Resumo

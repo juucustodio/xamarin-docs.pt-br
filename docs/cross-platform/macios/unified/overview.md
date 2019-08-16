@@ -6,12 +6,12 @@ ms.assetid: 5F0CEC18-5EF6-4A99-9DCF-1A3B57EA157C
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: 9d36101c1416ea8ddf451f5677258972c4f34990
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 1e8723fd8cc2119c6d65ea760d514373d00ce1d2
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68511141"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69521815"
 ---
 # <a name="unified-api-overview"></a>Visão geral de API Unificada
 
@@ -40,8 +40,8 @@ Independentemente de quais aplicativos você está migrando, confira [estas dica
 
 A partir deste ponto, nossas APIs serão apresentadas de duas maneiras:
 
--  **API Clássica:** Limitado a 32 bits (somente) e expostos nos `monotouch.dll` assemblies e. `XamMac.dll`
--  **API Unificada:** Dê suporte ao desenvolvimento de `Xamarin.iOS.dll` 32 e 64 bits com uma única API disponível nos assemblies e. `Xamarin.Mac.dll`
+- **API Clássica:** Limitado a 32 bits (somente) e expostos nos `monotouch.dll` assemblies e. `XamMac.dll`
+- **API Unificada:** Dê suporte ao desenvolvimento de `Xamarin.iOS.dll` 32 e 64 bits com uma única API disponível nos assemblies e. `Xamarin.Mac.dll`
 
 Isso significa que para os desenvolvedores corporativos (não voltados a loja de aplicativos), você pode continuar usando as APIs clássicas existentes, pois continuaremos mantendo-as sempre, ou você pode atualizar para as novas APIs.
 
@@ -55,8 +55,8 @@ Estamos removendo o prefixo "MonoTouch" de nosso produto iOS e "MonoMac" de noss
 
 Isso simplifica o compartilhamento de código entre as plataformas Mac e iOS sem recorrer à compilação condicional e reduzirá o ruído na parte superior dos seus arquivos de código-fonte.
 
--  **API Clássica:** Namespaces usam `MonoTouch.` ou `MonoMac.` prefixo.
--  **API Unificada:** Nenhum prefixo de namespace
+- **API Clássica:** Namespaces usam `MonoTouch.` ou `MonoMac.` prefixo.
+- **API Unificada:** Nenhum prefixo de namespace
 
 ## <a name="runtime-defaults"></a>Padrões de tempo de execução
 
@@ -179,9 +179,9 @@ public static NSDate DateTimeToNSDate(this DateTime date)
 
 Dentro da API clássica do Xamarin. Ios (MonoTouch. dll `[Obsolete]` ), o atributo foi usado de duas maneiras diferentes:
 
--  **API do iOS substituída:** Isso é quando a Apple Dicas para interromper o uso de uma API, pois ela está sendo substituída por uma mais nova. A API Clássica ainda é bem e geralmente necessária (se você oferecer suporte à versão mais antiga do iOS).
+- **API do iOS substituída:** Isso é quando a Apple Dicas para interromper o uso de uma API, pois ela está sendo substituída por uma mais nova. A API Clássica ainda é bem e geralmente necessária (se você oferecer suporte à versão mais antiga do iOS).
  Essa API (e o `[Obsolete]` atributo) são incluídas nos novos assemblies do Xamarin. Ios.
--  **API incorreta** Algumas APIs tinham erros de digitação em seus nomes.
+- **API incorreta** Algumas APIs tinham erros de digitação em seus nomes.
 
 Para os assemblies originais (MonoTouch. dll e XamMac. dll), guardamos o código antigo disponível para compatibilidade, mas eles foram removidos dos assemblies de API Unificada (Xamarin. iOS. dll e Xamarin. Mac)
 
@@ -195,7 +195,9 @@ No clássico, esse era `public` um construtor. No entanto, foi fácil usar o uso
 
 Para evitar esses tipos de problemas, `IntPtr` os construtores agora `protected` estão na API unificada, para serem usados somente para subclasses. Isso garantirá que a API correta/segura seja usada para criar instância gerenciada de identificadores, ou seja,
 
-    var label = Runtime.GetNSObject<UILabel> (handle);
+```csharp
+var label = Runtime.GetNSObject<UILabel> (handle);
+```
 
 Essa API retornará uma instância gerenciada existente (se ela já existir) ou criará uma nova (quando necessário). Ele já está disponível na API clássica e unificada.
 
@@ -222,19 +224,21 @@ UITapGestureRecognizer singleTap = new UITapGestureRecognizer (() => ShowDropDow
 
 Anteriormente, isso seria um erro de compilador porque `Action` um não pode ser `NSAction`atribuído a, `UITapGestureRecognizer` mas, como `Action` agora leva um `NSAction` em vez de um, ele é válido nas APIs unificadas.
 
-### <a name="custom-delegates-replaced-with-actiont"></a>Delegados personalizados substituídos por ação<T>
+### <a name="custom-delegates-replaced-with-actiont"></a>Delegados personalizados substituídos por\<ação T >
 
-Em **um** simples (por exemplo, um parâmetro), os delegados do .NET `Action<T>`foram substituídos por. Por exemplo,
+Em um simples (por exemplo, um parâmetro), os delegados do .NET `Action<T>`foram substituídos por. Por exemplo,
 
-    public delegate void NSNotificationHandler (NSNotification notification);
+```csharp
+public delegate void NSNotificationHandler (NSNotification notification);
+```
 
 Agora pode ser usado como um `Action<NSNotification>`. Isso promove a reutilização de código e reduz a duplicação de código dentro do Xamarin. iOS e de seus próprios aplicativos.
 
-### <a name="taskbool-replaced-with-taskbooleannserror"></a>Tarefa<bool> substituída por Task < Boolean, NSError > >
+### <a name="taskbool-replaced-with-taskbooleannserror"></a>A\<tarefa bool > substituída por Task < Boolean, NSError > >
 
 No **clássico** , havia algumas APIs assíncronas retornando `Task<bool>`. No entanto, alguns deles são usados quando um `NSError` fazia parte da assinatura, ou seja, o `bool` já `true` era e você tinha que capturar uma exceção para obter o `NSError`.
 
-Como alguns erros são muito comuns e o valor de retorno não era útil, esse padrão foi  alterado em unificado para retornar um `Task<Tuple<Boolean,NSError>>`. Isso permite que você verifique o êxito e qualquer erro que possa ter ocorrido durante a chamada assíncrona.
+Como alguns erros são muito comuns e o valor de retorno não era útil, esse padrão foi alterado em unificado para retornar um `Task<Tuple<Boolean,NSError>>`. Isso permite que você verifique o êxito e qualquer erro que possa ter ocorrido durante a chamada assíncrona.
 
 ### <a name="nsstring-vs-string"></a>Cadeia de caracteres NSString vs
 
@@ -242,11 +246,15 @@ Em alguns casos, algumas constantes precisavam ser alteradas `string` de `NSStri
 
 **Clássico**
 
-    public virtual string ReuseIdentifier { get; }
+```csharp
+public virtual string ReuseIdentifier { get; }
+```
 
 **Unificada**
 
-    public virtual NSString ReuseIdentifier { get; }
+```csharp
+public virtual NSString ReuseIdentifier { get; }
+```
 
 Em geral, preferimos o `System.String` tipo .net. No entanto, apesar das diretrizes da Apple, algumas APIs nativas estão comparando ponteiros constantes (não a própria cadeia de caracteres) e `NSString`isso só pode funcionar quando expõemos as constantes como.
 
@@ -260,23 +268,31 @@ Essas limitações foram removidas e limpas nas APIs unificadas. A maioria das a
 
 **Clássico**
 
-    public virtual AVAssetResourceLoaderDelegate Delegate { get; }
+```csharp
+public virtual AVAssetResourceLoaderDelegate Delegate { get; }
+```
 
 **Unificada**
 
-    public virtual IAVAssetResourceLoaderDelegate Delegate { get; }
+```csharp
+public virtual IAVAssetResourceLoaderDelegate Delegate { get; }
+```
 
-O `I` prefixo significa  que a Unified expõe uma interface, em vez de um tipo específico, para o protocolo ObjC. Isso facilitará os casos em que você não deseja criar uma subclasse do tipo específico que o Xamarin. iOS forneceu.
+O `I` prefixo significa que a Unified expõe uma interface, em vez de um tipo específico, para o protocolo ObjC. Isso facilitará os casos em que você não deseja criar uma subclasse do tipo específico que o Xamarin. iOS forneceu.
 
 Ele também permitia que alguma API fosse mais precisa e fácil de usar, por exemplo:
 
 **Clássico**
 
-    public virtual void SelectionDidChange (NSObject uiTextInput);
+```csharp
+public virtual void SelectionDidChange (NSObject uiTextInput);
+```
 
 **Unificada**
 
-    public virtual void SelectionDidChange (IUITextInput uiTextInput);
+```csharp
+public virtual void SelectionDidChange (IUITextInput uiTextInput);
+```
 
 Essa API agora é mais fácil para nós, sem fazer referência à documentação, e a conclusão de seu código IDE fornecerá sugestões mais úteis com base no protocolo/interface.
 

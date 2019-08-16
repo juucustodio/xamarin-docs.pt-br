@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/09/2016
-ms.openlocfilehash: e4728d14e4fdb914fbfc950ffe38abee031b4c49
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: d25ad46b0d8797da8f14987f54006b63d2b8233d
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68649651"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69527585"
 ---
 # <a name="using-icloud-with-xamarinios"></a>Usando o iCloud com Xamarin. iOS
 
@@ -45,9 +45,9 @@ Os aplicativos devem ser configurados para usar o iCloud no [portal de provision
 
 Para configurar corretamente um aplicativo para acessar o iCloud:
 
--   **Localize seu TeamID** – faça logon no [Developer.Apple.com](https://developer.apple.com) e visite o **centro de membros > sua conta > Resumo da conta de desenvolvedor** para obter sua ID de equipe (ou ID individual para desenvolvedores únicos). Será uma cadeia de 10 caracteres ( **A93A5CM278** , por exemplo)-esta parte do "identificador do contêiner".
+- **Localize seu TeamID** – faça logon no [Developer.Apple.com](https://developer.apple.com) e visite o **centro de membros > sua conta > Resumo da conta de desenvolvedor** para obter sua ID de equipe (ou ID individual para desenvolvedores únicos). Será uma cadeia de 10 caracteres ( **A93A5CM278** , por exemplo)-esta parte do "identificador do contêiner".
 
--   **Criar uma nova ID do aplicativo** – para criar uma ID de aplicativo, siga as etapas descritas na [seção provisionamento para tecnologias de armazenamento do guia de provisionamento de dispositivos](~/ios/deploy-test/provisioning/capabilities/icloud-capabilities.md)e certifique-se de verificar o **icloud** como um serviço permitido:
+- **Criar uma nova ID do aplicativo** – para criar uma ID de aplicativo, siga as etapas descritas na [seção provisionamento para tecnologias de armazenamento do guia de provisionamento de dispositivos](~/ios/deploy-test/provisioning/capabilities/icloud-capabilities.md)e certifique-se de verificar o **icloud** como um serviço permitido:
 
  [![](introduction-to-icloud-images/icloud-sml.png "Verifique o iCloud como um serviço permitido")](introduction-to-icloud-images/icloud.png#lightbox)
 

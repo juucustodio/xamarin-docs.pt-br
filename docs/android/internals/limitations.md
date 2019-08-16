@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/25/2018
-ms.openlocfilehash: 18e6e82011460a51a96df4694f15b36c5ec94ab5
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 57d9d6a91f88d117f0889a8dba9e6198ec6b7f62
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68510705"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69524777"
 ---
 # <a name="limitations"></a>Limitações
 
@@ -90,7 +90,7 @@ class MyIntentService : IntentService {
 As C# classes genéricas são apenas parcialmente suportadas. As seguintes limitações existem:
 
 
--   Tipos genéricos não podem usar `[Export]` ou `[ExportField`]. Tentar fazer isso irá gerar um `XA4207` erro.
+- Tipos genéricos não podem usar `[Export]` ou `[ExportField`]. Tentar fazer isso irá gerar um `XA4207` erro.
 
     ```csharp
     public abstract class Parcelable<T> : Java.Lang.Object, IParcelable
@@ -103,7 +103,7 @@ As C# classes genéricas são apenas parcialmente suportadas. As seguintes limit
     }
     ```
 
--   Os métodos genéricos não podem `[Export]` usar `[ExportField]`ou:
+- Os métodos genéricos não podem `[Export]` usar `[ExportField]`ou:
 
     ```csharp
     public class Example : Java.Lang.Object
@@ -118,7 +118,7 @@ As C# classes genéricas são apenas parcialmente suportadas. As seguintes limit
     }
     ```
 
--   `[ExportField]`Não pode ser usado em métodos que retornam `void`:
+- `[ExportField]`Não pode ser usado em métodos que retornam `void`:
 
     ```csharp
     public class Example : Java.Lang.Object
@@ -131,7 +131,7 @@ As C# classes genéricas são apenas parcialmente suportadas. As seguintes limit
     }
     ```
 
--   Instâncias de tipos genéricos _não devem_ ser criadas a partir do código Java.
+- Instâncias de tipos genéricos _não devem_ ser criadas a partir do código Java.
     Eles só podem ser criados com segurança a partir de código gerenciado:
 
     ```csharp

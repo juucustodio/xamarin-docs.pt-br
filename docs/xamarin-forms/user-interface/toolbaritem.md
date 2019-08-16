@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 07/29/2019
-ms.openlocfilehash: dfc50defb6eafe705cc9c59b1b9793f1ce48c527
-ms.sourcegitcommit: 41a029c69925e3a9d2de883751ebfd649e8747cd
+ms.openlocfilehash: b42a300d9d76a18322891856486720116eb6a8d4
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68984298"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69522031"
 ---
 # <a name="xamarinforms-toolbaritem"></a>ToolbarItem Xamarin. Forms
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/en-us/samples/xamarin/xamarin-forms-samples/userinterface-toolbaritem/)
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/en-us/samples/xamarin/xamarin-forms-samples/userinterface-toolbaritem/)
 
 A classe Xamarin. [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem) Forms é um tipo especial de botão que pode ser adicionado à coleção `Page` de `ToolbarItems` um objeto. Cada `ToolbarItem` objeto será exibido como um botão na barra de navegação do aplicativo. Uma `ToolbarItem` instância pode ter um ícone e aparecer como um item de menu primário ou secundário. A `ToolbarItem` classe é herdada de [`MenuItem`](xref:Xamarin.Forms.MenuItem).
 
@@ -37,6 +37,9 @@ A `ToolbarItem` classe herda as seguintes propriedades normalmente usadas `MenuI
 * [`CommandParameter`](xref:Xamarin.Forms.MenuItem.CommandParameter)é um `object` que especifica o parâmetro que deve ser passado para o `SearchCommand`.
 
 Essas propriedades são apoiadas por [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objetos para que `ToolbarItem` uma instância possa ser o destino de associações de dados.
+
+> [!NOTE]
+> Uma alternativa para criar uma barra de [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem) ferramentas a partir de objetos [`NavigationPage.TitleView`](xref:Xamarin.Forms.NavigationPage.TitleViewProperty) é definir a propriedade anexada como uma classe de layout que contenha várias exibições. Para obter mais informações, consulte [exibindo modos de exibição na barra de navegação](~/xamarin-forms/app-fundamentals/navigation/hierarchical.md#displaying-views-in-the-navigation-bar).
 
 ## <a name="create-a-toolbaritem"></a>Criar um ToolbarItem
 

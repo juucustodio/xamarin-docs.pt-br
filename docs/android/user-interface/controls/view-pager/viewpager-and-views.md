@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: 15ff11c5100f697e1945793da0baca68add082be
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: a4e165f6156bf5224881327049b2c3ed48b5c2fe
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68646559"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69522753"
 ---
 # <a name="viewpager-with-views"></a>ViewPager com exibição
 
@@ -101,11 +101,11 @@ protected override void OnCreate(Bundle bundle)
 
 Esse código faz o seguinte:
 
-1.  Define a exibição do recurso de layout **Main. axml** .
+1. Define a exibição do recurso de layout **Main. axml** .
 
-2.  Recupera uma referência para o `ViewPager` do layout.
+2. Recupera uma referência para o `ViewPager` do layout.
 
-3.  Cria uma instância de `TreeCatalog` uma nova como a fonte de dados.
+3. Cria uma instância de `TreeCatalog` uma nova como a fonte de dados.
 
 Quando você cria e executa esse código, você deve ver uma exibição semelhante à captura de tela a seguir: 
 
@@ -120,13 +120,13 @@ Neste ponto, o `ViewPager` está vazio porque não há um adaptador para acessar
 
 Ao implementar um `PagerAdapter`, você deve substituir o seguinte:
 
--   **InstantiateItem** Cria a página (`View`) para uma determinada posição `ViewPager`e a adiciona à coleção de exibições. &ndash; 
+- **InstantiateItem** Cria a página (`View`) para uma determinada posição `ViewPager`e a adiciona à coleção de exibições. &ndash; 
 
--   **DestroyItem** &ndash; Remove uma página de uma determinada posição.
+- **DestroyItem** &ndash; Remove uma página de uma determinada posição.
 
--   **Contagem** de &ndash; Propriedade somente leitura que retorna o número de exibições (páginas) disponíveis. 
+- **Contagem** de &ndash; Propriedade somente leitura que retorna o número de exibições (páginas) disponíveis. 
 
--   **IsViewFromObject** &ndash; Determina se uma página está associada a um objeto de chave específico. (Esse objeto é criado pelo `InstantiateItem` método.) Neste exemplo, o objeto de chave é o `TreeCatalog` objeto de dados.
+- **IsViewFromObject** &ndash; Determina se uma página está associada a um objeto de chave específico. (Esse objeto é criado pelo `InstantiateItem` método.) Neste exemplo, o objeto de chave é o `TreeCatalog` objeto de dados.
 
 Adicione um novo arquivo chamado **TreePagerAdapter.cs** e substitua seu conteúdo pelo código a seguir: 
 
@@ -224,14 +224,14 @@ public override Java.Lang.Object InstantiateItem (View container, int position)
 
 Esse código faz o seguinte:
 
-1.  Instancia um novo `ImageView` para exibir a imagem de árvore na posição especificada. O aplicativo `MainActivity` é o contexto que será passado para o `ImageView` Construtor.
+1. Instancia um novo `ImageView` para exibir a imagem de árvore na posição especificada. O aplicativo `MainActivity` é o contexto que será passado para o `ImageView` Construtor.
 
-2.  Define o `ImageView` recurso para a `TreeCatalog` ID de recurso de imagem na posição especificada.
+2. Define o `ImageView` recurso para a `TreeCatalog` ID de recurso de imagem na posição especificada.
 
-3.  Converte o contêiner `View` passado em uma `ViewPager` referência.
+3. Converte o contêiner `View` passado em uma `ViewPager` referência.
     Observe que você deve usar `JavaCast<ViewPager>()` o para executar essa conversão corretamente (isso é necessário para que o Android execute uma conversão de tipo verificada em tempo de execução).
 
-4.  Adiciona a instanciada `ImageView` `ViewPager` ao e retorna o `ImageView` ao chamador.
+4. Adiciona a instanciada `ImageView` `ViewPager` ao e retorna o `ImageView` ao chamador.
 
 Quando o `ViewPager` exibe a imagem em `position`, ela é exibida `ImageView`. Inicialmente, `InstantiateItem` é chamado duas vezes para preencher as duas primeiras páginas com exibições. À medida que o usuário rola, ele é chamado novamente para manter exibições apenas atrás e à frente do item exibido no momento. 
 
@@ -253,11 +253,11 @@ public override void DestroyItem(View container, int position, Java.Lang.Object 
 
 Esse código faz o seguinte:
 
-1.  Converte o contêiner `View` passado em uma `ViewPager` referência.
+1. Converte o contêiner `View` passado em uma `ViewPager` referência.
 
-2.  Converte o`view`objeto Java passado () em um C# `View` (`view as View`);
+2. Converte o`view`objeto Java passado () em um C# `View` (`view as View`);
 
-3.  Remove a exibição do `ViewPager`. 
+3. Remove a exibição do `ViewPager`. 
 
 
 

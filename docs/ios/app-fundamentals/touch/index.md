@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 01/23/2017
-ms.openlocfilehash: 8ed9ab164f6b14d794b29667ec96afab47e3fcde
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: f11e72e433c443fbb9639b1f972ec4d87adf8b58
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655167"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69526908"
 ---
 # <a name="handling-touch-in-xamarinios-apps"></a>Lidando com o touch em aplicativos Xamarin. iOS
 
@@ -28,9 +28,9 @@ No entanto, há ocasiões em que você precisa usar o processamento de toque de 
 
 ## <a name="sections"></a>Seções
 
--  [Toque no iOS](touch-in-ios.md)
--  [Passo a passo: usando o toque no iOS](ios-touch-walkthrough.md)
--  [Controle de multitoque](touch-tracking.md)
+- [Toque no iOS](touch-in-ios.md)
+- [Passo a passo: usando o toque no iOS](ios-touch-walkthrough.md)
+- [Controle de multitoque](touch-tracking.md)
 
 Este guia serve como introdução ao toque no iOS. Para obter mais informações sobre como usar os comentários de toque e Haptic 3D no iOS, que foram introduzidos no iOS 9 e 10, respectivamente, consulte os guias específicos abaixo:
 

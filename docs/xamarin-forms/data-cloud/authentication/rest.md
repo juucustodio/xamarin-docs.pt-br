@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/22/2018
-ms.openlocfilehash: bf334c7fde8433b7bbe45c8caaf962705c39320d
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: 5a0e820c8a9f04b7ad9173893852285d53dbe7a6
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67650394"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69529208"
 ---
 # <a name="authenticate-a-restful-web-service"></a>Autenticar um serviço Web RESTful
 
@@ -35,7 +35,7 @@ Autenticação básica é o mecanismo de autenticação mais simples compatível
 ![](rest-images/basic-authentication-success.png "Após a autenticação básica")
 
 > [!NOTE]
-> Autenticação básica deve ser usada apenas ao longo de uma conexão HTTPS. Quando usado em uma conexão HTTP, o <code>Authorization</code> cabeçalho pode ser decodificado com facilidade se o tráfego HTTP é capturado por um invasor.
+> Autenticação básica deve ser usada apenas ao longo de uma conexão HTTPS. Quando usado em uma conexão HTTP, o `Authorization` cabeçalho pode ser decodificado com facilidade se o tráfego HTTP é capturado por um invasor.
 
 ## <a name="specifying-basic-authentication-in-a-web-request"></a>Especificar a autenticação básica em uma solicitação da Web
 
@@ -73,11 +73,11 @@ public class RestService : IRestService
 Em seguida, quando é feita uma solicitação para uma operação de serviço da web a solicitação é assinada com o `Authorization` cabeçalho, que indica se o usuário tem permissão para invocar a operação.
 
 > [!NOTE]
-> Embora esse código armazena as credenciais como constantes, eles não devem ser armazenados em um formato inseguro em um aplicativo publicado. O [Xamarith.Auth](https://www.nuget.org/packages/Xamarin.Auth/) NuGet fornece funcionalidade para armazenar com segurança as credenciais. Para obter mais informações, consulte [armazenando e recuperando informações da conta em dispositivos](~/xamarin-forms/data-cloud/authentication/oauth.md).
+> Embora esse código armazene credenciais como constantes, elas não devem ser armazenadas em um formato não seguro em um aplicativo publicado. O [Xamarith.Auth](https://www.nuget.org/packages/Xamarin.Auth/) NuGet fornece funcionalidade para armazenar com segurança as credenciais. Para obter mais informações, consulte [armazenando e recuperando informações da conta em dispositivos](~/xamarin-forms/data-cloud/authentication/oauth.md).
 
 ## <a name="processing-the-authorization-header-server-side"></a>Processamento do lado do servidor de cabeçalho de autorização
 
-O serviço REST deve decorar cada ação com o `[BasicAuthentication]` atributo. Esse atributo é usado para analisar a `Authorization` cabeçalho e determinar se as credenciais de codificada em base64 são válidas, comparando-os com base nos valores armazenados no *Web. config*. Embora essa abordagem é adequada para um serviço de exemplo, ele requer a extensão para um serviço da web voltados ao público.
+O serviço REST deve decorar cada ação com o `[BasicAuthentication]` atributo. Esse atributo é usado para analisar o `Authorization` cabeçalho e determinar se as credenciais codificadas em base64 são válidas comparando-as com os valores armazenados em *Web. config*. Embora essa abordagem seja adequada para um serviço de exemplo, ela requer a extensão de um serviço Web voltado ao público.
 
 O módulo de autenticação básica usada pelo IIS, os usuários são autenticados em relação às suas credenciais do Windows. Portanto, os usuários devem ter contas de domínio do servidor. No entanto, o modelo de autenticação básica pode ser configurado para permitir a autenticação personalizada, em que as contas de usuário são autenticadas em relação a uma fonte externa, como um banco de dados. Para obter mais informações, consulte [autenticação básica na API Web ASP.NET](http://www.asp.net/web-api/overview/security/basic-authentication) no site do ASP.NET.
 
@@ -86,5 +86,5 @@ O módulo de autenticação básica usada pelo IIS, os usuários são autenticad
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Consumir um serviço web RESTful](~/xamarin-forms/data-cloud/web-services/rest.md)
+- [Consumir um serviço Web RESTful](~/xamarin-forms/data-cloud/web-services/rest.md)
 - [HttpClient](https://msdn.microsoft.com/library/system.net.http.httpclient(v=vs.110).aspx)

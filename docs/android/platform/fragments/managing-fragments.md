@@ -6,25 +6,25 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/07/2018
-ms.openlocfilehash: 3e0430b8ed9c42030441021e71c3b08b1ddccc57
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 5b829b1c38007bbb070b643a355d70bffaef01a5
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61022187"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69524303"
 ---
 # <a name="managing-fragments"></a>Gerenciando fragmentos
 
-Para ajudar com o gerenciamento de fragmentos, o Android fornece o `FragmentManager` classe. Cada atividade tem uma instância de `Android.App.FragmentManager` que irá localizar ou alterar dinamicamente seus fragmentos. Cada conjunto dessas alterações é conhecido como um *transação*e é executado usando uma das APIs contidas na classe `Android.App.FragmentTransation`, que é gerenciado pelo `FragmentManager`. Uma atividade pode iniciar uma transação como este:
+Para ajudar no gerenciamento de fragmentos, o Android `FragmentManager` fornece a classe. Cada atividade tem uma instância do `Android.App.FragmentManager` que localizará ou alterará dinamicamente seus fragmentos. Cada conjunto dessas alterações é conhecido como uma *transação*e é executado usando uma das APIs contidas na classe `Android.App.FragmentTransation`, que `FragmentManager`é gerenciada pelo. Uma atividade pode iniciar uma transação como esta:
 
 ```csharp
 FragmentTransaction fragmentTx = this.FragmentManager.BeginTransaction();
 ```
 
-Essas alterações para os fragmentos são realizadas na `FragmentTransaction` instância usando os métodos, como `Add()`, `Remove(),` e `Replace().` as alterações são aplicadas usando `Commit()`. As alterações em uma transação não são executadas imediatamente.
-Em vez disso, eles são agendados para execução no thread de interface do usuário da atividade assim que possível.
+Essas alterações nos fragmentos são `FragmentTransaction` executadas na instância usando métodos `Add()`como, `Remove(),` e `Replace().` as alterações são aplicadas usando `Commit()`. As alterações em uma transação não são executadas imediatamente.
+Em vez disso, eles são agendados para serem executados no thread da interface do usuário da atividade assim que possível.
 
-O exemplo a seguir mostra como adicionar um fragmento para um contêiner existente:
+O exemplo a seguir mostra como adicionar um fragmento a um contêiner existente:
 
 ```csharp
 // Create a new fragment and a transaction.
@@ -38,11 +38,11 @@ fragmentTx.Add(Resource.Id.fragment_container, aDifferentDetailsFrag);
 fragmentTx.Commit();
 ```
 
-Se uma transação for confirmada depois `Activity.OnSaveInstanceState()` é chamado, uma exceção será gerada. Isso acontece porque quando a atividade salva seu estado, o Android também salva o estado de qualquer fragmentos hospedados. Se todas as transações de fragmento são confirmadas depois deste ponto, o estado dessas transações serão perdido quando a atividade é restaurada.
+Se uma transação for confirmada depois `Activity.OnSaveInstanceState()` que for chamada, uma exceção será lançada. Isso acontece porque, quando a atividade salva seu estado, o Android também salva o estado de quaisquer fragmentos hospedados. Se qualquer transação de fragmento for confirmada após esse ponto, o estado dessas transações será perdido quando a atividade for restaurada.
 
-É possível salvar as transações de fragmento da atividade [pilha voltar](https://developer.android.com/guide/topics/fundamentals/tasks-and-back-stack.html) fazendo uma chamada para `FragmentTransaction.AddToBackStack()`. Isso permite ao usuário navegar para trás por fragmento é alterado quando o **volta** é pressionado. Sem uma chamada para esse método, os fragmentos são removidos serão destruídos e não estará disponíveis se o usuário navega de volta por meio da atividade.
+É possível salvar as transações de fragmento na [pilha voltar](https://developer.android.com/guide/topics/fundamentals/tasks-and-back-stack.html) da atividade fazendo uma chamada para `FragmentTransaction.AddToBackStack()`. Isso permite que o usuário navegue para trás por meio de alterações de fragmento quando o botão **voltar** é pressionado. Sem uma chamada para esse método, os fragmentos removidos serão destruídos e não estarão disponíveis se o usuário navegar de volta pela atividade.
 
-O exemplo a seguir mostra como usar o `AddToBackStack` método de um `FragmentTransaction` para substituir um fragmento, enquanto preserva o estado do primeiro fragmento na pilha voltar:
+O exemplo a seguir mostra como usar o `AddToBackStack` método de um `FragmentTransaction` para substituir um fragmento, preservando o estado do primeiro fragmento na pilha voltar:
 
 ```csharp
 // Create a new fragment and a transaction.
@@ -62,15 +62,15 @@ fragmentTx.Commit();
 
 ## <a name="communicating-with-fragments"></a>Comunicando-se com fragmentos
 
-O *FragmentManager* sabe sobre todos os fragmentos que estão anexados a uma atividade e fornece dois métodos para ajudar a encontrar esses fragmentos:
+O *fragmentomanager* conhece todos os fragmentos anexados a uma atividade e fornece dois métodos para ajudar a encontrar esses fragmentos:
 
--   **FindFragmentById** &ndash; este método encontrará um fragmento usando a ID especificada no arquivo de layout ou a ID do contêiner quando o fragmento foi adicionado como parte de uma transação.
+- **FindFragmentById** &ndash; Esse método encontrará um fragmento usando a ID que foi especificada no arquivo de layout ou a ID do contêiner quando o fragmento foi adicionado como parte de uma transação.
 
--   **FindFragmentByTag** &ndash; esse método é usado para localizar um fragmento que tem uma marca que foi fornecido no arquivo de layout ou que foi adicionado em uma transação.
+- **FindFragmentByTag** &ndash; Esse método é usado para localizar um fragmento que tem uma marca que foi fornecida no arquivo de layout ou que foi adicionada em uma transação.
 
-Referência de fragmentos e atividades a `FragmentManager`, portanto, as mesmas técnicas são usadas para se comunicar e para trás entre eles. Um aplicativo pode encontrar uma referência do fragmento usando um destes dois métodos, converter essa referência para o tipo apropriado e, em seguida, chamar métodos diretamente no fragmento. O trecho a seguir fornece um exemplo:
+Os fragmentos e as atividades fazem `FragmentManager`referência ao, portanto, as mesmas técnicas são usadas para fazer a comunicação entre eles. Um aplicativo pode encontrar um fragmento de referência usando um desses dois métodos, converter essa referência para o tipo apropriado e, em seguida, chamar diretamente os métodos no fragmento. O trecho a seguir fornece um exemplo:
 
-Também é possível que a atividade para usar o `FragmentManager` para localizar os fragmentos:
+Também é possível que a atividade use o `FragmentManager` para localizar fragmentos:
 
 ```csharp
 var emailList = FragmentManager.FindFragmentById<EmailListFragment>(Resource.Id.email_list_fragment);
@@ -80,7 +80,7 @@ emailList.SomeCustomMethod(parameter1, parameter2);
 
 ### <a name="communicating-with-the-activity"></a>Comunicando-se com a atividade
 
-É possível que um fragmento usar o `Fragment.Activity` propriedade a referenciar seu host. Convertendo a atividade a um tipo mais específico, é possível que uma atividade para chamar métodos e propriedades em seu host, conforme mostrado no exemplo a seguir:
+É possível que um fragmento use a `Fragment.Activity` propriedade para referenciar seu host. Ao converter a atividade para um tipo mais específico, é possível que uma atividade Chame métodos e propriedades em seu host, conforme mostrado no exemplo a seguir:
 
 ```csharp
 var myActivity = (MyActivity) this.Activity;

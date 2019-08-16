@@ -6,68 +6,68 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
-ms.openlocfilehash: 6fb6235f35408cd1263f21da1f802ff0cf5a5cc6
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: 7e3f871d9d5992429c6f6619b2f5ff7059558045
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67649515"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69525952"
 ---
 # <a name="introduction"></a>Introdução
 
 ## <a name="when-to-use-a-database"></a>Quando usar um banco de dados
 
-Embora os recursos de armazenamento e processamento de dispositivos móveis estão aumentando, telefones e tablets ainda atrasar seus equivalentes de desktop e laptop. Por esse motivo é que vale a pena dedicar algum tempo para planejar a arquitetura de armazenamento de dados para seu aplicativo em vez de apenas supondo que um banco de dados é a resposta certa o tempo todo. Há várias opções diferentes que atendem a requisitos diferentes, tais como:
+Embora os recursos de armazenamento e processamento de dispositivos móveis estejam aumentando, os telefones e tablets ainda ficam atrasados por trás de suas contrapartes de desktop e laptop. Por esse motivo, vale a pena dedicar algum tempo para planejar a arquitetura de armazenamento de dados para seu aplicativo, em vez de apenas pressupor que um banco de dado é a resposta certa o tempo todo. Há várias opções diferentes que atendam a diferentes requisitos, como:
 
--  **Preferências** – Android oferece um mecanismo interno para armazenar pares chave-valor simples de dados. Se você estiver armazenando as configurações do usuário simples ou pequenos pedaços de dados (como informações de personalização), em seguida, use os recursos da plataforma nativa para armazenar esse tipo de informação.
--  **Arquivos de texto** – entrada do usuário ou os caches de conteúdo (por exemplo, baixado HTML) pode ser armazenado diretamente no sistema de arquivos. Use uma convenção de nomenclatura de arquivo apropriada para ajudar você a organizar os arquivos e localizar os dados.
--  **Serializado arquivos de dados** – objetos podem ser persistidos como XML ou JSON no sistema de arquivos. O .NET framework inclui bibliotecas que tornam serializando e desserializando objetos fácil. Use os nomes apropriados para organizar arquivos de dados.
--  **Banco de dados** – mecanismo de banco de dados o SQLite está disponível na plataforma Android e é estruturada úteis para armazenar dados que você precisa consultar, classificar ou manipulados de outra forma. Armazenamento de banco de dados é adequado para listas de dados com muitas propriedades.
--  **Arquivos de imagem** – Embora seja possível armazenar dados binários no banco de dados em um dispositivo móvel, é recomendável armazená-los diretamente no sistema de arquivos. Se necessário, você pode armazenar os nomes de arquivo em um banco de dados para associar a imagem com outros dados. Ao lidar com muitas imagens ou imagens grandes, é uma boa prática para planejar uma estratégia de cache que exclui arquivos que desnecessários para evitar o consumo de espaço de armazenamento de todas as do usuário.
+- **Preferências** – o Android oferece um mecanismo interno para armazenar pares chave-valor simples de dados. Se você estiver armazenando configurações de usuário simples ou pequenas partes de dados (como informações de personalização), use os recursos nativos da plataforma para armazenar esse tipo de informação.
+- **Arquivos de texto** – entrada do usuário ou caches de conteúdo baixado (por exemplo, HTML) pode ser armazenado diretamente no sistema de arquivos. Use uma Convenção de nomenclatura de arquivo apropriada para ajudá-lo a organizar os arquivos e localizar dados.
+- **Arquivos de dados serializados** – os objetos podem ser persistidos como XML ou JSON no sistema de arquivos. O .NET Framework inclui bibliotecas que facilitam a serialização e a desserialização de objetos. Use os nomes apropriados para organizar os arquivos de dados.
+- **Banco** de dados – o mecanismo de banco de dados SQLite está disponível na plataforma Android e é útil para armazenar dados estruturados que você precisa consultar, classificar ou manipular. O armazenamento de banco de dados é adequado para listas de dado com muitas propriedades.
+- **Arquivos de imagem** – embora seja possível armazenar dados binários em um dispositivo móvel, é recomendável armazená-los diretamente no sistema de arquivos. Se necessário, você pode armazenar os nomes de fileem um banco de dados para associar a imagem a outro dado. Ao lidar com imagens grandes ou muitas imagens, é uma boa prática planejar uma estratégia de cache que exclua os arquivos que você não precisa mais para evitar o consumo de todo o espaço de armazenamento do usuário.
 
-Se um banco de dados é o mecanismo de armazenamento adequada para seu aplicativo, o restante deste documento aborda como usar o SQLite na plataforma Xamarin.
+Se um banco de dados for o mecanismo de armazenamento certo para seu aplicativo, o restante deste documento discutirá como usar o SQLite na plataforma Xamarin.
 
 ## <a name="advantages-of-using-a-database"></a>Vantagens de usar um banco de dados
 
-Há uma série de vantagens ao uso de um banco de dados SQL no aplicativo móvel:
+Há várias vantagens em usar um banco de dados SQL em seu aplicativo móvel:
 
--  Bancos de dados SQL permitem que o armazenamento eficiente de dados estruturados.
--  Dados específicos podem ser extraídos com consultas complexas.
--  Os resultados da consulta podem ser classificados.
--  Os resultados da consulta podem ser agregados.
--  Os desenvolvedores com habilidades existentes de banco de dados podem utilizar seus dados de conhecimento para o código de acesso do banco de dados e de design.
--  O modelo de dados do componente de servidor de um aplicativo conectado pode ser reutilizado (no todo ou em parte) no aplicativo móvel.
-
-
-## <a name="sqlite-database-engine"></a>Mecanismo de banco de dados SQLite
-
-O SQLite é um mecanismo de banco de dados do código-fonte aberto que tem sido adotado pelo Google para sua plataforma móvel. O mecanismo de banco de dados SQLite é interno para ambos os sistemas operacionais, portanto, não há nenhum trabalho adicional para os desenvolvedores tirem proveito dele. SQLite é adequado para desenvolvimento móvel de plataforma cruzada, porque:
-
--  O mecanismo de banco de dados é pequeno, rápido e facilmente transportável.
--  Um banco de dados é armazenado em um único arquivo, que é fácil de gerenciar em dispositivos móveis.
--  O formato de arquivo é fácil de usar em plataformas: se 32 ou 64 bits e sistemas de big ou little-endian.
--  Ele implementa a maioria do SQL92 padrão.
+- Os bancos de dados SQL permitem o armazenamento eficiente do dado estruturado.
+- Dados específicos podem ser extraídos com consultas complexas.
+- Os resultados da consulta podem ser classificados.
+- Os resultados da consulta podem ser agregados.
+- Os desenvolvedores com habilidades de banco de dados existentes podem utilizar o seu conhecimento para criar o banco de dado e o código de acesso a data.
+- O modelo de dados do componente de servidor de um aplicativo conectado pode ser usado novamente (no todo ou em parte) no aplicativo móvel.
 
 
-Porque o SQLite é projetado para ser pequenos e rápidos, há algumas limitações sobre seu uso:
+## <a name="sqlite-database-engine"></a>Mecanismo de Banco de Dados SQLite
 
--  Não há suporte para algumas sintaxes de junção externa.
--  Somente a RENOMEAÇÃO de tabela e ADDCOLUMN têm suporte. Você não pode executar outras modificações no seu esquema.
--  Modos de exibição são somente leitura.
+O SQLite é um mecanismo de banco de dados de software livre que foi adotado pelo Google para sua plataforma móvel. O mecanismo de banco de dados SQLite é integrado aos dois sistemas operacionais para que não haja nenhum trabalho adicional para os desenvolvedores tirar proveito dele. O SQLite é adequado para o desenvolvimento móvel de plataforma cruzada porque:
+
+- O mecanismo de banco de dados é pequeno, rápido e fácil de ser portátil.
+- Um banco de dados é armazenado em um único arquivo, que é fácil de gerenciar em dispositivos móveis.
+- O formato de arquivo é fácil de usar entre plataformas: sejam os sistemas 32-ou 64 bits e Big-ou little-endian.
+- Ele implementa a maior parte do padrão SQL92.
 
 
-Você pode aprender mais sobre o SQLite no site - [SQLite.org](http://SQLite.org) – no entanto, todas as informações que você precisa usar o SQLite com o Xamarin estão contidas neste documento e associados exemplos. O mecanismo de banco de dados SQLite tem sido suportado no Android desde o Android 2.
-Embora não seja abordado neste capítulo, SQLite também está disponível para uso no Windows Phone e aplicativos do Windows.
+Como o SQLite foi projetado para ser pequeno e rápido, há algumas limitações em seu uso:
+
+- Não há suporte para algumas sintaxes de junção externa.
+- Somente a renomeação de tabela e a addcoluna têm suporte. Você não pode executar outras modificações em seu esquema.
+- As exibições são somente leitura.
+
+
+Você pode aprender mais sobre o SQLite no site- [SQLite.org](http://SQLite.org) -no entanto, todas as informações de que você precisa para usar o SQLite com o Xamarin estão contidas neste documento e em exemplos associados. O mecanismo de banco de dados SQLite tem suporte no Android desde o Android 2.
+Embora não seja abordado neste capítulo, o SQLite também está disponível para uso em aplicativos Windows Phone e Windows.
 
 ## <a name="windows-and-windows-phone"></a>Windows e Windows Phone
 
-SQLite também pode ser usado em plataformas Windows, embora essas plataformas não são abordadas neste documento.
-Leia mais na [Tasky](~/cross-platform/app-fundamentals/building-cross-platform-applications/case-study-tasky.md) e [Tasky Pro](~/cross-platform/app-fundamentals/building-cross-platform-applications/case-study-tasky.md) estudos de caso e, em seguida, examine [blog de Tim](http://timheuer.com/blog/archive/2012/06/28/seeding-your-metro-style-app-with-sqlite-database.aspx).
+O SQLite também pode ser usado em plataformas Windows, embora essas plataformas não sejam abordadas neste documento.
+Leia mais nos estudos de caso do [profissional](~/cross-platform/app-fundamentals/building-cross-platform-applications/case-study-tasky.md) de [tarefas](~/cross-platform/app-fundamentals/building-cross-platform-applications/case-study-tasky.md) e da tarefa e examine o [blog de Tim Heuer](http://timheuer.com/blog/archive/2012/06/28/seeding-your-metro-style-app-with-sqlite-database.aspx).
 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [DataAccess Basic (exemplo)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Basic)
-- [DataAccess avançadas (amostra)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Advanced)
+- [DataAccess básico (exemplo)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Basic)
+- [DataAccess avançado (exemplo)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Advanced)
 - [Receitas de dados do Android](https://github.com/xamarin/recipes/tree/master/Recipes/android/data)
-- [Acesso a dados do xamarin. Forms](~/xamarin-forms/data-cloud/data/databases.md)
+- [Acesso a dados do Xamarin. Forms](~/xamarin-forms/data-cloud/data/databases.md)

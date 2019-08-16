@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/21/2018
-ms.openlocfilehash: e22d1d8a1c2604c1bbe710fcaf1ba7793455e6f0
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 8c4050f439f3499289063c286afd255241bf0343
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68508857"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69521460"
 ---
 # <a name="understanding-android-api-levels"></a>Noções básicas sobre níveis da API do Android
 
@@ -23,11 +23,11 @@ _O Xamarin. Android tem várias configurações de nível de API do Android que 
 
 O Xamarin. Android expõe três configurações de projeto de nível de API do Android:
 
--   [Estrutura de destino](#framework) &ndash; Especifica qual estrutura usar na criação do aplicativo. Esse nível de API é usado no momento da *compilação* pelo Xamarin. Android.
+- [Estrutura de destino](#framework) &ndash; Especifica qual estrutura usar na criação do aplicativo. Esse nível de API é usado no momento da *compilação* pelo Xamarin. Android.
 
--   [Versão mínima do Android](#minimum) &ndash; Especifica a versão mais antiga do Android para a qual você deseja que seu aplicativo dê suporte. Esse nível de API é usado em tempo de *execução* pelo Android.
+- [Versão mínima do Android](#minimum) &ndash; Especifica a versão mais antiga do Android para a qual você deseja que seu aplicativo dê suporte. Esse nível de API é usado em tempo de *execução* pelo Android.
 
--   [Versão do Android de destino](#target) &ndash; Especifica a versão do Android na qual seu aplicativo se destina a ser executado. Esse nível de API é usado em tempo de *execução* pelo Android.
+- [Versão do Android de destino](#target) &ndash; Especifica a versão do Android na qual seu aplicativo se destina a ser executado. Esse nível de API é usado em tempo de *execução* pelo Android.
 
 Antes de configurar um nível de API para seu projeto, você deve instalar os componentes da plataforma SDK para esse nível de API. Para obter mais informações sobre como baixar e instalar SDK do Android componentes, consulte [SDK do Android setup](~/android/get-started/installation/android-sdk.md).
 
@@ -81,9 +81,9 @@ Se seu aplicativo oferecer suporte a várias versões do Android, seu código de
 
 Cada versão do Android passa por vários nomes:
 
--   A versão do Android, como **android 9,0**
--   Um nome de código (ou sobremesa), como _pizza_
--   Um nível de API correspondente, como **nível de API 28**
+- A versão do Android, como **android 9,0**
+- Um nome de código (ou sobremesa), como _pizza_
+- Um nível de API correspondente, como **nível de API 28**
 
 Um nome de código do Android pode corresponder a várias versões e níveis de API (como visto na tabela abaixo), mas cada versão do Android corresponde a exatamente um nível de API.
 
@@ -100,16 +100,16 @@ Cada dispositivo Android é executado em exatamente *um* nível &ndash; de API e
 
 Quando um aplicativo é compilado, ele contém as seguintes informações de nível de API:
 
--   O nível da API de *destino* do Android no qual o aplicativo foi criado para ser executado.
+- O nível da API de *destino* do Android no qual o aplicativo foi criado para ser executado.
 
--   O nível *mínimo* de API do Android que um dispositivo Android deve ter para executar seu aplicativo. 
+- O nível *mínimo* de API do Android que um dispositivo Android deve ter para executar seu aplicativo. 
 
 Essas configurações são usadas para garantir que a funcionalidade necessária para executar o aplicativo corretamente esteja disponível no dispositivo Android no momento da instalação. Caso contrário, o aplicativo será impedido de ser executado nesse dispositivo. Por exemplo, se o nível de API de um dispositivo Android for menor do que o nível mínimo de API que você especificar para seu aplicativo, o dispositivo Android impedirá que o usuário instale seu aplicativo.
 
 
 ## <a name="project-api-level-settings"></a>Configurações de nível de API do projeto
 
-As seções a seguir explicam como usar o Gerenciador do SDK para preparar seu ambiente de desenvolvimento para os níveis de API que você deseja direcionar, seguidos por explicações detalhadas de como configurar a *estrutura de destino*, a *versão mínima do Android*e Configurações de destino da versão do Android no Xamarin. Android.
+As seções a seguir explicam como usar o Gerenciador do SDK para preparar seu ambiente de desenvolvimento para os níveis de API que você deseja direcionar, seguidos por explicações detalhadas de como configurar a *estrutura de destino*, a *versão mínima do Android*eConfigurações de destino da versão do Android no Xamarin. Android.
 
 
 ### <a name="android-sdk-platforms"></a>Plataformas SDK do Android
@@ -263,9 +263,9 @@ Isso ocorre porque não há **compilação > página do aplicativo Android** :
 
 A versão mínima do Android e as configurações do Android de destino não estão disponíveis porque a biblioteca resultante não é um aplicativo &ndash; autônomo. a biblioteca pode ser executada em qualquer versão do Android, dependendo do aplicativo com o qual ele está empacotado. Você pode especificar como a biblioteca deve ser *compilada*, mas não pode prever em qual nível de API de plataforma a biblioteca será executada. Com isso em mente, as seguintes práticas recomendadas devem ser observadas ao consumir ou criar bibliotecas:
 
--   **Ao consumir uma biblioteca do Android** Se você estiver consumindo uma biblioteca do Android em seu aplicativo, certifique-se de definir a configuração da estrutura de destino do aplicativo como um nível de API que seja *pelo menos tão alto quanto* a configuração da estrutura de destino da biblioteca. &ndash;
+- **Ao consumir uma biblioteca do Android** Se você estiver consumindo uma biblioteca do Android em seu aplicativo, certifique-se de definir a configuração da estrutura de destino do aplicativo como um nível de API que seja *pelo menos tão alto quanto* a configuração da estrutura de destino da biblioteca. &ndash;
 
--   **Ao criar uma biblioteca do Android** &ndash; Se você estiver criando uma biblioteca do Android para uso por outros aplicativos, certifique-se de definir sua configuração de estrutura de destino como o nível mínimo de API que precisa para compilar.
+- **Ao criar uma biblioteca do Android** &ndash; Se você estiver criando uma biblioteca do Android para uso por outros aplicativos, certifique-se de definir sua configuração de estrutura de destino como o nível mínimo de API que precisa para compilar.
 
 Essas práticas recomendadas são recomendadas para ajudar a evitar a situação em que uma biblioteca tenta chamar uma API que não está disponível em tempo de execução (o que pode fazer com que o aplicativo falhe). Se você for um desenvolvedor de biblioteca, deverá se esforçar para restringir o uso de chamadas à API para um subconjunto pequeno e bem estabelecido da área total da superfície da API. Isso ajuda a garantir que sua biblioteca possa ser usada com segurança em uma grande variedade de versões do Android.
 

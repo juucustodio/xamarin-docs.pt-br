@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 2256e52e1b2a468ecbed97d5c7ed2d0a05f6cc4e
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: d1a96c81da8d71d92e3ce5acd9928b293f3cf3dd
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68510741"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69524709"
 ---
 # <a name="app-linking-in-android"></a>Vinculação de aplicativo no Android
 
@@ -159,7 +159,7 @@ https://digitalassetlinks.googleapis.com/v1/statements:list?source.web.site=
 
 Há dois testes que podem ser executados para garantir que os filtros de intenção tenham sido configurados corretamente e que o aplicativo esteja definido como o manipulador padrão para um URI:
 
-1.  O arquivo de ativo digital está adequadamente hospedado conforme descrito acima. O primeiro teste expedirá uma intenção que o Android deve redirecionar para o aplicativo móvel. O aplicativo do Android deve iniciar e exibir a atividade registrada para a URL. Em um prompt de comando, digite:
+1. O arquivo de ativo digital está adequadamente hospedado conforme descrito acima. O primeiro teste expedirá uma intenção que o Android deve redirecionar para o aplicativo móvel. O aplicativo do Android deve iniciar e exibir a atividade registrada para a URL. Em um prompt de comando, digite:
 
     ```shell
     $ adb shell am start -a android.intent.action.VIEW \
@@ -167,7 +167,7 @@ Há dois testes que podem ser executados para garantir que os filtros de intenç
         -d "http://<domain1>/recipe/scalloped-potato"
     ```
 
-2.  Exibe as políticas de tratamento de links existentes para os aplicativos instalados em um determinado dispositivo. O comando a seguir despejará uma lista de políticas de link para cada usuário no dispositivo com as informações a seguir. No prompt de comando, digite o seguinte comando:
+2. Exibe as políticas de tratamento de links existentes para os aplicativos instalados em um determinado dispositivo. O comando a seguir despejará uma lista de políticas de link para cada usuário no dispositivo com as informações a seguir. No prompt de comando, digite o seguinte comando:
 
     ```shell
     $ adb shell dumpsys package domain-preferred-apps

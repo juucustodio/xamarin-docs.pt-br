@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: dac81a40983ea8414ec730f10c4c1f17e4d9915c
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 0c606e001552f1c4267ffc29bd69b2f38f2ec971
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68653807"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69527935"
 ---
 # <a name="core-graphics-in-xamarinios"></a>Principais gráficos no Xamarin. iOS
 
@@ -24,10 +24,10 @@ O Core Graphics é uma estrutura gráfica 2D de baixo nível que permite o desen
 
 Os gráficos principais dão suporte ao desenho em vários cenários, incluindo:
 
--  [Desenho na tela por meio de `UIView` um](#Drawing_in_a_UIView_Subclass) .
--  [Desenhando imagens na memória ou na tela](#Drawing_Images_and_Text).
--  Criar e desenhar em um PDF.
--  Ler e desenhar um PDF existente.
+- [Desenho na tela por meio de `UIView` um](#Drawing_in_a_UIView_Subclass) .
+- [Desenhando imagens na memória ou na tela](#Drawing_Images_and_Text).
+- Criar e desenhar em um PDF.
+- Ler e desenhar um PDF existente.
 
 
 ## <a name="geometric-space"></a>Espaço geométrico
@@ -36,9 +36,9 @@ Independentemente do cenário, todo o desenho feito com gráficos de núcleo é 
 
 Há alguns benefícios para essa abordagem:
 
--  O código de desenho se torna dinâmico e, posteriormente, pode modificar gráficos em tempo de execução.
--  Reduzir a necessidade de imagens estáticas no pacote de aplicativos pode reduzir o tamanho do aplicativo.
--  Os elementos gráficos tornam-se mais resilientes a alterações de resolução entre dispositivos.
+- O código de desenho se torna dinâmico e, posteriormente, pode modificar gráficos em tempo de execução.
+- Reduzir a necessidade de imagens estáticas no pacote de aplicativos pode reduzir o tamanho do aplicativo.
+- Os elementos gráficos tornam-se mais resilientes a alterações de resolução entre dispositivos.
 
 <a name="Drawing_in_a_UIView_Subclass"/>
 
@@ -270,10 +270,10 @@ O texto resultante é exibido com a imagem, conforme mostrado abaixo:
 
 Além de desenhar para o contexto de gráficos de uma exibição, os gráficos principais dão suporte ao desenho de imagens com backup de memória, também conhecido como desenho fora da tela. Isso requer:
 
--  Criando um contexto de gráfico que é apoiado por um bitmap na memória
--  Definindo o estado de desenho e emitindo comandos de desenho
--  Obtendo a imagem do contexto
--  Removendo o contexto
+- Criando um contexto de gráfico que é apoiado por um bitmap na memória
+- Definindo o estado de desenho e emitindo comandos de desenho
+- Obtendo a imagem do contexto
+- Removendo o contexto
 
 
 Ao contrário `Draw` do método, no qual o contexto é fornecido pela exibição, neste caso, você cria o contexto de uma das duas maneiras:

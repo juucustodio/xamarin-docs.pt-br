@@ -8,12 +8,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/27/2018
-ms.openlocfilehash: d81435f7d693204a76249fc3fa6953766f7ab59a
-ms.sourcegitcommit: 9f37dc00c2adab958025ad1cdba9c37f0acbccd0
+ms.openlocfilehash: 16708ad1d26c9d7394ad95b2d449ca304534a2bd
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69012461"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528866"
 ---
 # <a name="xamarinmac-error-messages-mmp"></a>Mensagens de erro do Xamarin. Mac (MMP)
 
@@ -103,7 +103,7 @@ Ocorreu um erro ao carregar os assemblies das referências do assembly raiz. Mai
 
 <a name="MM0056" />
 
-#### <a name="mm0056-cannot-find-xcode-in-any-of-our-default-locations-please-install-xcode-or-pass-a-custom-path-using---sdkrootpath"></a>MM0056: Não é possível localizar o Xcode em nenhum de nossos locais padrão. Instale o Xcode ou passe um caminho personalizado usando--sdkroot =<path>
+#### <a name="mm0056-cannot-find-xcode-in-any-of-our-default-locations-please-install-xcode-or-pass-a-custom-path-using---sdkrootpath"></a>MM0056: Não é possível localizar o Xcode em nenhum de nossos locais padrão. Instale o Xcode ou passe um caminho personalizado usando--sdkroot =\<Path >
 
 <a name="MM0059" />
 
@@ -566,7 +566,7 @@ Consulte o [aviso de mTouch equivalente](~/ios/troubleshooting/mtouch-errors.md#
 
 <a name="MM5309" />
 
-#### <a name="mm5309-native-linking-failed-with-error-code-1--check-build-log-for-details"></a>MM5309: Falha na vinculação nativa com o código de erro 1.  Verifique o log de compilação para obter detalhes.
+#### <a name="mm5309-native-linking-failed-with-error-code-1-check-build-log-for-details"></a>MM5309: Falha na vinculação nativa com o código de erro 1. Verifique o log de compilação para obter detalhes.
 
 <a name="MM5310" />
 

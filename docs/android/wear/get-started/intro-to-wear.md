@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: a57273005df45c2f8035563efe9562c27cdfa732
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 6a9bb5fae84b6883943410d0c2585ce60a1208a4
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68648416"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69526444"
 ---
 # <a name="introduction-to-android-wear"></a>Introdução ao Android Wear
 
@@ -90,15 +90,15 @@ Cada aplicativo portátil é implantado com seu próprio arquivo APK inserido no
 
 A melhor maneira de se familiarizar com o desgaste do Android é criar e testar seu primeiro aplicativo. A lista a seguir fornece uma ordem de leitura recomendada para ajudá-lo a se familiarizar rapidamente:
 
-1.  Instalação [& a instalação](~/android/wear/get-started/installation.md) fornece instruções detalhadas para instalar e configurar seu ambiente de desenvolvimento para criar aplicativos de desgaste do Xamarin. Android. 
+1. Instalação [& a instalação](~/android/wear/get-started/installation.md) fornece instruções detalhadas para instalar e configurar seu ambiente de desenvolvimento para criar aplicativos de desgaste do Xamarin. Android. 
 
-2.  Depois de instalar os pacotes necessários e configurar um emulador ou dispositivo, consulte [Olá, desgaste](~/android/wear/get-started/hello-wear.md) para obter instruções passo a passo que explicam como criar um pequeno projeto de desgaste de Android que lida com cliques de botão e exibe um contador de clique no desgaste Vice. 
+2. Depois de instalar os pacotes necessários e configurar um emulador ou dispositivo, consulte [Olá, desgaste](~/android/wear/get-started/hello-wear.md) para obter instruções passo a passo que explicam como criar um pequeno projeto de desgaste de Android que lida com cliques de botão e exibe um contador de clique no desgaste Vice. 
 
-3.  O [teste de & de implantação](~/android/wear/deploy-test/index.md) fornece informações mais detalhadas sobre como configurar e implantar para emuladores e dispositivos, incluindo instruções sobre como implantar seu aplicativo em um dispositivo de desgaste via Bluetooth.
+3. O [teste de & de implantação](~/android/wear/deploy-test/index.md) fornece informações mais detalhadas sobre como configurar e implantar para emuladores e dispositivos, incluindo instruções sobre como implantar seu aplicativo em um dispositivo de desgaste via Bluetooth.
 
-4.  [Trabalhar com tamanhos de tela](~/android/wear/screen-sizes.md) explica como Visualizar e otimizar a interface do usuário para os vários tamanhos de tela disponíveis em dispositivos de desgaste. 
+4. [Trabalhar com tamanhos de tela](~/android/wear/screen-sizes.md) explica como Visualizar e otimizar a interface do usuário para os vários tamanhos de tela disponíveis em dispositivos de desgaste. 
 
-5.  [Trabalhar com empacotamento](~/android/wear/deploy-test/packaging.md) descreve as etapas para empacotar manualmente aplicativos de desgaste para distribuição em Google Play.
+5. [Trabalhar com empacotamento](~/android/wear/deploy-test/packaging.md) descreve as etapas para empacotar manualmente aplicativos de desgaste para distribuição em Google Play.
 
 Depois de criar seu primeiro aplicativo de desgaste, talvez você queira tentar criar uma face de inspeção personalizada para o desgaste do Android. 
 A [criação de uma face de inspeção](~/android/wear/platform/creating-a-watchface.md) fornece instruções passo a passo e código de exemplo para o desenvolvimento de um serviço de face de inspeção digital retirado, seguido por mais código que o aprimora para uma face de inspeção de estilo analógico com recursos adicionais. 
@@ -169,8 +169,8 @@ Os aplicativos do Android desgaste 2,0 podem trabalhar independentemente dos apl
 
 Gestos de pulso possibilitam que os usuários interajam com seu aplicativo sem usar a tela &ndash; sensível ao toque que os usuários podem responder ao aplicativo com uma única mão. Há suporte para dois gestos de pulso: 
 
--   Piscar o pulso
--   Pulso de piscar em
+- Piscar o pulso
+- Pulso de piscar em
 
 Para obter mais informações, consulte o tópico gestos de [punho](https://developer.android.com/wear/preview/features/gestures.html) do Android. 
 

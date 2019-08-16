@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/26/2018
-ms.openlocfilehash: 9307e440a780d60a8301c58d70ee882fbbdebab1
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: a2487fd0f7d90b70ec0dc1fb1978ca06a3108822
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68646395"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69522610"
 ---
 # <a name="customizing-a-listviews-appearance-with-xamarinandroid"></a>Personalizando a aparência de um ListView com o Xamarin. Android
 
@@ -164,17 +164,17 @@ As quatro exibições internas de linha são muito simples. Para exibir layouts 
 
 Este exemplo é diferente dos exemplos anteriores de várias maneiras:
 
--  Herda de `Activity` , não `ListActivity` . Você pode personalizar linhas para qualquer `ListView` , no entanto, outros controles também podem ser `Activity` incluídos em um layout (como um título, botões ou outros elementos da interface do usuário). Este exemplo adiciona um título acima do `ListView` a ilustrar.
+- Herda de `Activity` , não `ListActivity` . Você pode personalizar linhas para qualquer `ListView` , no entanto, outros controles também podem ser `Activity` incluídos em um layout (como um título, botões ou outros elementos da interface do usuário). Este exemplo adiciona um título acima do `ListView` a ilustrar.
 
--  Requer um arquivo de layout AXML para a tela; nos exemplos anteriores, o `ListActivity` não requer um arquivo de layout. Este AXML contém uma `ListView` declaração de controle.
+- Requer um arquivo de layout AXML para a tela; nos exemplos anteriores, o `ListActivity` não requer um arquivo de layout. Este AXML contém uma `ListView` declaração de controle.
 
--  Requer um arquivo de layout AXML para renderizar cada linha. Esse arquivo AXML contém os controles Text e Image com configurações de fonte e cor personalizadas.
+- Requer um arquivo de layout AXML para renderizar cada linha. Esse arquivo AXML contém os controles Text e Image com configurações de fonte e cor personalizadas.
 
--  Usa um arquivo XML seletor personalizado opcional para definir a aparência da linha quando ela é selecionada.
+- Usa um arquivo XML seletor personalizado opcional para definir a aparência da linha quando ela é selecionada.
 
--  A `Adapter` implementação retorna um layout personalizado `GetView` da substituição.
+- A `Adapter` implementação retorna um layout personalizado `GetView` da substituição.
 
--  `ItemClick`deve ser declarado de forma diferente (um manipulador de eventos `ListView.ItemClick` é anexado a em `OnListItemClick` vez `ListActivity`de uma substituição em).
+- `ItemClick`deve ser declarado de forma diferente (um manipulador de eventos `ListView.ItemClick` é anexado a em `OnListItemClick` vez `ListActivity`de uma substituição em).
 
 
 Essas alterações são detalhadas abaixo, começando com a criação da exibição da atividade e da exibição de linha personalizada e, em seguida, a cobertura das modificações ao adaptador e à atividade para renderizá-las.

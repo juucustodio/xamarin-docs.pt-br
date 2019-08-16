@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/22/2018
-ms.openlocfilehash: b44bb52dc69aae1d3d058a1eae7c3be13ec5dc53
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: f6bc5891e416d7cb6c9b80c0502a9cc5d2d911d1
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68643346"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69523994"
 ---
 # <a name="location-services-on-android"></a>Serviços de localização no Android
 
@@ -30,11 +30,11 @@ No Android, independentemente da API que você escolher para trabalhar com dados
 
 Várias tecnologias são usadas internamente para identificar o local do usuário. O hardware usado depende do tipo de *provedor de localização* selecionado para o trabalho de coleta de dados. O Android usa três provedores de local:
 
--   **Provedor de GPS** &ndash; O GPS fornece o local mais preciso, usa a mais potência e funciona melhor em todos os locais. Esse provedor usa uma combinação de GPS e[AGPS](https://en.wikipedia.org/wiki/Assisted_GPS)(GPS assistido), que retorna dados de GPS coletados pelo celular Towers.
+- **Provedor de GPS** &ndash; O GPS fornece o local mais preciso, usa a mais potência e funciona melhor em todos os locais. Esse provedor usa uma combinação de GPS e[AGPS](https://en.wikipedia.org/wiki/Assisted_GPS)(GPS assistido), que retorna dados de GPS coletados pelo celular Towers.
 
--   **Provedor de rede** &ndash; Fornece uma combinação de dados Wi-Fi e celular, incluindo dados AGPS coletados pela célula Towers. Ele usa menos energia do que o provedor GPS, mas retorna dados de localização de precisão variável.
+- **Provedor de rede** &ndash; Fornece uma combinação de dados Wi-Fi e celular, incluindo dados AGPS coletados pela célula Towers. Ele usa menos energia do que o provedor GPS, mas retorna dados de localização de precisão variável.
 
--   **Provedor passivo** &ndash; Uma opção "acumular" usando provedores solicitados por outros aplicativos ou serviços para gerar dados de localização em um aplicativo. Essa é uma opção menos confiável, mas de economia de energia ideal para aplicativos que não exigem atualizações de local constantes para funcionar.
+- **Provedor passivo** &ndash; Uma opção "acumular" usando provedores solicitados por outros aplicativos ou serviços para gerar dados de localização em um aplicativo. Essa é uma opção menos confiável, mas de economia de energia ideal para aplicativos que não exigem atualizações de local constantes para funcionar.
 
 Os provedores de localização nem sempre estão disponíveis. Por exemplo, talvez queiramos usar o GPS para nosso aplicativo, mas o GPS pode ser desativado nas configurações ou o dispositivo pode não ter nenhum GPS. Se um provedor específico não estiver disponível, escolher esse provedor poderá retornar `null`.
 
@@ -43,10 +43,10 @@ Os provedores de localização nem sempre estão disponíveis. Por exemplo, talv
 Um aplicativo com reconhecimento de local precisa acessar os sensores de hardware de um dispositivo para receber dados de GPS, Wi-Fi e celular. O acesso é controlado por meio de permissões apropriadas no manifesto do Android do aplicativo.
 Há duas permissões disponíveis &ndash; , dependendo dos requisitos do seu aplicativo e de sua escolha de API, você desejará permitir uma:
 
--   `ACCESS_FINE_LOCATION`&ndash; Permite que um aplicativo acesse o GPS.
+- `ACCESS_FINE_LOCATION`&ndash; Permite que um aplicativo acesse o GPS.
     Necessário para o *provedor GPS* e as opções do *provedor passivo* (o*provedor passivo precisa de permissão para acessar os dados do GPS coletados por outro aplicativo ou serviço*). Permissão opcional para o *provedor de rede*.
 
--   `ACCESS_COARSE_LOCATION`&ndash; Permite que um aplicativo acesse a rede celular e o local Wi-Fi. Necessário para o provedor de `ACCESS_FINE_LOCATION` *rede* se não estiver definido.
+- `ACCESS_COARSE_LOCATION`&ndash; Permite que um aplicativo acesse a rede celular e o local Wi-Fi. Necessário para o provedor de `ACCESS_FINE_LOCATION` *rede* se não estiver definido.
 
 Para aplicativos que são de API de destino versão 21 (Android 5,0 pirulito) ou superior, `ACCESS_FINE_LOCATION` você pode habilitar e ainda executar em dispositivos que não têm hardware de GPS. Se seu aplicativo requer hardware GPS, você deve adicionar explicitamente um `android.hardware.location.gps` `uses-feature` elemento ao manifesto do Android. Para obter mais informações, consulte a referência do elemento [use-Feature](https://developer.android.com/guide/topics/manifest/uses-feature-element.html) do Android.
 
@@ -175,7 +175,7 @@ await fusedLocationProviderClient.RequestLocationUpdatesAsync(locationRequest, l
 
 Esse método usa dois parâmetros:
 
--   **`Android.Gms.Location.LocationRequest`** &ndash; Um`LocationRequest` objeto é como um aplicativo Xamarin. Android passa os parâmetros de como o provedor de localização com fusível deve funcionar. O `LocationRequest` contém informações como as solicitações frequentes que devem ser feitas ou a importância de uma atualização de local precisa. Por exemplo, uma solicitação de localização importante fará com que o dispositivo use o GPS e, consequentemente, mais energia, ao determinar o local. Este trecho de código mostra como criar um `LocationRequest` para um local com alta precisão, verificando aproximadamente a cada cinco minutos para uma atualização de local (mas não antes de dois minutos entre solicitações). O provedor de localização com fusível usará um `LocationRequest` as diretrizes para qual provedor de localização usar ao tentar determinar o local do dispositivo:
+- **`Android.Gms.Location.LocationRequest`** &ndash; Um`LocationRequest` objeto é como um aplicativo Xamarin. Android passa os parâmetros de como o provedor de localização com fusível deve funcionar. O `LocationRequest` contém informações como as solicitações frequentes que devem ser feitas ou a importância de uma atualização de local precisa. Por exemplo, uma solicitação de localização importante fará com que o dispositivo use o GPS e, consequentemente, mais energia, ao determinar o local. Este trecho de código mostra como criar um `LocationRequest` para um local com alta precisão, verificando aproximadamente a cada cinco minutos para uma atualização de local (mas não antes de dois minutos entre solicitações). O provedor de localização com fusível usará um `LocationRequest` as diretrizes para qual provedor de localização usar ao tentar determinar o local do dispositivo:
 
     ```csharp
     LocationRequest locationRequest = new LocationRequest()
@@ -184,7 +184,7 @@ Esse método usa dois parâmetros:
                                       .SetFastestInterval(60 * 1000 * 2);
     ```
 
--   **`Android.Gms.Location.LocationCallback`** Para receber atualizações de local, um aplicativo Xamarin. Android deve subclassificar a `LocationProvider` classe abstrata. &ndash; Essa classe expôs dois métodos que talvez sejam invocados pelo provedor de localização com fusível para atualizar o aplicativo com informações de localização. Isso será discutido em mais detalhes abaixo.
+- **`Android.Gms.Location.LocationCallback`** Para receber atualizações de local, um aplicativo Xamarin. Android deve subclassificar a `LocationProvider` classe abstrata. &ndash; Essa classe expôs dois métodos que talvez sejam invocados pelo provedor de localização com fusível para atualizar o aplicativo com informações de localização. Isso será discutido em mais detalhes abaixo.
 
 Para notificar um aplicativo Xamarin. Android de uma atualização de local, o provedor de localização com `LocationCallBack.OnLocationResult(LocationResult result)`fusível invocará o. O `Android.Gms.Location.LocationResult` parâmetro conterá as informações de local de atualização.
 
@@ -233,10 +233,10 @@ O serviço de localização é um tipo especial de [serviço](https://developer.
 
 Para obter o local do usuário usando o serviço de localização do Android envolve várias etapas:
 
-1.  Obtenha uma referência para o `LocationManager` serviço.
-2.  Implemente `ILocationListener` a interface e manipule eventos quando o local for alterado.
-3.  Use o `LocationManager` para solicitar atualizações de local para um provedor especificado. O `ILocationListener` da etapa anterior será usado para receber retornos `LocationManager`de chamada do.
-4.  Pare as atualizações de local quando o aplicativo não for mais apropriado para receber atualizações.
+1. Obtenha uma referência para o `LocationManager` serviço.
+2. Implemente `ILocationListener` a interface e manipule eventos quando o local for alterado.
+3. Use o `LocationManager` para solicitar atualizações de local para um provedor especificado. O `ILocationListener` da etapa anterior será usado para receber retornos `LocationManager`de chamada do.
+4. Pare as atualizações de local quando o aplicativo não for mais apropriado para receber atualizações.
 
 ### <a name="location-manager"></a>Gerenciador de localização
 

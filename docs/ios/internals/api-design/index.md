@@ -1,144 +1,150 @@
 ---
-title: Xamarin.iOS API Design
-description: Este documento descreve alguns dos princípios de orientação usada para projetar as APIs de Xamarin.iOS e como eles se relacionam com Objective-C.
+title: Design de API do Xamarin. iOS
+description: Este documento descreve alguns dos princípios de orientação que usaram para arquitetar as APIs do Xamarin. iOS e como elas se relacionam com o Objective-C.
 ms.prod: xamarin
 ms.assetid: 322D2724-AF27-6FFE-BD21-AA1CFE8C0545
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: 5417050daa84197dd7dc2a270ae054a3a73fd3bc
-ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
+ms.openlocfilehash: 11d9c3d27fa9cf9ba830648d95ef8af9ed386afb
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67675075"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69526478"
 ---
-# <a name="xamarinios-api-design"></a>Xamarin.iOS API Design
+# <a name="xamarinios-api-design"></a>Design de API do Xamarin. iOS
 
-Além das bibliotecas de classes Base que fazem parte do Mono, principais [xamarin. IOS](http://www.xamarin.com/iOS) é fornecido com associações para várias APIs para permitir que os desenvolvedores criem aplicativos do iOS nativos com Mono do iOS.
+Além das principais bibliotecas de classes base que fazem parte do mono, o [Xamarin. Ios](http://www.xamarin.com/iOS) é fornecido com associações para várias APIs do IOS para permitir que os desenvolvedores criem aplicativos Ios nativos com o mono.
 
-A essência do xamarin. IOS, há um mecanismo de interoperabilidade que liga o mundo em c# com o mundo de Objective-C, bem como as associações para APIs baseadas em C, como CoreGraphics do iOS e [OpenGL ES](#OpenGLES).
+No núcleo do Xamarin. iOS, há um mecanismo de interoperabilidade que une C# o mundo com o mundo Objective-C, bem como associações para as APIs baseadas em Ios c, como CoreGraphics e [OpenGL ES](#OpenGLES).
 
-O tempo de execução de baixo nível para se comunicar com o código Objective-C está em [MonoTouch.ObjCRuntime](#MonoTouch.ObjCRuntime). Na parte superior, associações para [Foundation](#MonoTouch.Foundation), CoreFoundation, e [UIKit](#MonoTouch.UIKit) são fornecidos.
+O tempo de execução de baixo nível para se comunicar com o código Objective-C está em [MonoTouch. ObjCRuntime](#MonoTouch.ObjCRuntime). Além disso, são fornecidas associações para [Foundation](#MonoTouch.Foundation), CoreFoundation e [UIKit](#MonoTouch.UIKit) .
 
 ## <a name="design-principles"></a>Princípios de design
 
-Estes são alguns dos nossos princípios de design para as associações do xamarin. IOS (eles também se aplicam a xamarin. Mac, as associações Mono para Objective-C no macOS):
+Esses são alguns dos princípios de design para as associações do Xamarin. iOS (eles também se aplicam ao Xamarin. Mac, as associações mono para Objective-C no macOS):
 
-- Siga o [as diretrizes de Design do Framework](https://docs.microsoft.com/dotnet/standard/design-guidelines)
-- Permitir que os desenvolvedores classes subclasse Objective-C:
+- Siga as [diretrizes de design da estrutura](https://docs.microsoft.com/dotnet/standard/design-guidelines)
+- Permitir que os desenvolvedores criem classes Objective-C de subclasse:
 
   - Derivar de uma classe existente
-  - Chame o construtor de base para a cadeia
-  - Substituindo métodos deve ser feito com C#da substituição do sistema
-  - A criação de subclasses deve trabalhar com construções de linguagem c# padrão
+  - Chamar o construtor base para cadeia
+  - Métodos de substituição devem ser feitos C#com o sistema de substituição
+  - A subclasse deve funcionar com C# construções padrão
 
-- Não exponha os desenvolvedores a seletores de Objective-C
-- Fornecem um mecanismo para chamar arbitrárias bibliotecas de Objective-C
-- Tornam as tarefas comuns de Objective-C fácil e difícil possível de tarefas de Objective-C
-- Expor propriedades de Objective-C como propriedades do c#
+- Não expor os desenvolvedores aos seletores de Objective-C
+- Fornecer um mecanismo para chamar bibliotecas de Objective-C arbitrários
+- Tornar as tarefas comuns de Objective-C fáceis e rígidas-C possíveis
+- Expor propriedades Objective-C C# como propriedades
 - Expor uma API fortemente tipada:
 
-  - Aumentar a segurança de tipo
-  - Minimizar os erros de tempo de execução
+  - Aumentar a segurança do tipo
+  - Minimizar erros de tempo de execução
   - Obter o IntelliSense do IDE em tipos de retorno
-  - Permite a documentação de pop-up do IDE
+  - Permite documentação de popup do IDE
 
-- Incentive a explorar as APIs no IDE:
+- Incentive a exploração no IDE das APIs:
 
-  - Por exemplo, em vez de expor uma matriz com tipagem fraca como este:
+  - Por exemplo, em vez de expor uma matriz de tipo fraco como esta:
     
     ```objc
     NSArray *getViews
     ```
-    Expor um tipo forte, como este:
+    Expor um tipo forte, desta forma:
     
     ```csharp
     NSView [] Views { get; set; }
     ```
     
-    Isso oferece o Visual Studio para Mac a capacidade de fazer o preenchimento automático ao procurar a API, faz com que todos os `System.Array` operações disponíveis no valor retornado e permite que o valor de retorno participar de LINQ.
+    Isso dá Visual Studio para Mac a capacidade de fazer a conclusão automática ao navegar pela API, disponibilizar todas `System.Array` as operações no valor retornado e permitir que o valor de retorno participe no LINQ.
 
-- Tipos c# nativos:
+- Tipos C# nativos:
 
-  - [`NSString` torna-se `string`](~/ios/internals/api-design/nsstring.md)
-  - Transforme `int` e `uint` parâmetros que devem ter sido enums em c# enumerações e enumerações do c# com `[Flags]` atributos
-  - Em vez de tipo neutro `NSArray` expor de objetos, matrizes como matrizes fortemente tipada.
-  - Para eventos e notificações, dar aos usuários uma escolha entre:
+  - [`NSString`ficará`string`](~/ios/internals/api-design/nsstring.md)
+  - Ativar `int` C# e C# `[Flags]` parâmetros que devem ter sido enumerados em enumerações e enumerações com atributos `uint`
+  - Em vez de objetos de `NSArray` tipo neutro, expõem matrizes como matrizes fortemente tipadas.
+  - Para eventos e notificações, dê aos usuários uma opção entre:
 
-    - Uma versão fortemente tipada, por padrão
-    - Uma versão com tipagem fraca para casos de uso avançado
+    - Uma versão fortemente tipada por padrão
+    - Uma versão de tipo fraco para casos de uso avançados
 
-- Padrão de representante de suporte de Objective-C:
+- Suporte ao padrão delegado Objective-C:
 
-    - Sistema de eventos em C#
-    - Expor delegados c# (lambdas, métodos anônimos, e `System.Delegate`) às APIs do Objective-C como blocos
+    - C#sistema de eventos
+    - Expor C# delegados (lambdas, métodos anônimos e `System.Delegate`) para APIs de Objective-C como blocos
 
 ### <a name="assemblies"></a>Assemblies
 
-Xamarin. IOS inclui uma série de assemblies que constituem o *perfil do xamarin. IOS*. O [Assemblies](~/cross-platform/internals/available-assemblies.md) página tem mais informações.
+O xamarin. iOS inclui vários assemblies que constituem o *perfil do Xamarin. Ios*. A página [assemblies](~/cross-platform/internals/available-assemblies.md) tem mais informações.
 
-### <a name="major-namespaces"></a>Namespaces do principal 
+### <a name="major-namespaces"></a>Principais namespaces 
 
 <a name="MonoTouch.ObjCRuntime" />
 
 #### <a name="objcruntime"></a>ObjCRuntime
 
-O [ObjCRuntime](xref:ObjCRuntime) namespace permite que os desenvolvedores mundos entre c# e Objective-C.
-Isso é uma nova associação, projetada especificamente para o iOS, com base na experiência do Cocoa # e Gtk #.
+O namespace [ObjCRuntime](xref:ObjCRuntime) permite aos desenvolvedores ligar os mundos entre C# o e o Objective-C.
+Essa é uma nova associação, projetada especificamente para o iOS, com base na experiência do Cocoa # e do GTK #.
 
 <a name="MonoTouch.Foundation" />
 
-#### <a name="foundation"></a>Foundation
+#### <a name="foundation"></a>Fundamental
 
-O [Foundation](xref:Foundation) namespace fornece os tipos de dados básica é projetada para interoperar com a estrutura de base de Objective-C que faz parte do iOS e é a base para Objective-C. de programação orientada a objeto
+O namespace [Foundation](xref:Foundation) fornece os tipos de dados básicos projetados para interoperar com a estrutura objetiva-c Foundation que faz parte do IOS e é a base para a programação orientada a objeto em Objective-c.
 
-Xamarin. IOS espelha em c#, a hierarquia de classes do Objective-C. Por exemplo, a classe base Objective-C [NSObject](https://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSObject_Class/Reference/Reference.html) possam ser usados em c# via [Foundation.NSObject](xref:Foundation.NSObject).
+O Xamarin. iOS é C# espelhado na hierarquia de classes de Objective-C. Por exemplo, a classe base Objective-C [NSObject](https://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSObject_Class/Reference/Reference.html) é utilizável C# de via [Foundation. NSObject](xref:Foundation.NSObject).
 
-Embora esse namespace fornece associações para os tipos subjacentes do Foundation Objective-C, em alguns casos Mapeamos os tipos subjacentes para tipos .NET. Por exemplo:
+Embora esse namespace forneça associações para os tipos base Objective-C, em alguns casos, mapeamos os tipos subjacentes para tipos .NET. Por exemplo:
 
-- Em vez de tratar [NSString](https://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/Reference/NSString.html) e [NSArray](https://developer.apple.com/library/ios/#documentation/Cocoa/Reference/Foundation/Classes/NSArray_Class/NSArray.html), o tempo de execução expõe como c# [cadeia de caracteres](xref:System.String)s e fortemente tipada [matriz](xref:System.Array)s em toda a API.
+- Em vez de lidar [com NSString](https://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/Reference/NSString.html) e [NSArray](https://developer.apple.com/library/ios/#documentation/Cocoa/Reference/Foundation/Classes/NSArray_Class/NSArray.html), o tempo de execução C#expõe isso como [cadeia de caracteres](xref:System.String)s e [matrizes](xref:System.Array)com rigidez de tipos em toda a API.
 
-- APIs de vários auxiliares são apresentados para permitir que os desenvolvedores associar as APIs do Objective-C, outros iOS APIs ou APIs que não estejam atualmente ligadas por xamarin. IOS de terceiros.
+- Várias APIs auxiliares são expostas aqui para permitir que os desenvolvedores associem APIs Objective-C de terceiros, outras APIs do iOS ou APIs que atualmente não estão associadas ao Xamarin. iOS.
 
-Para obter mais detalhes sobre as APIs de associação, consulte o [gerador de associação do xamarin. IOS](~/cross-platform/macios/binding/binding-types-reference.md) seção.
+Para obter mais detalhes sobre APIs de associação, consulte a seção [gerador de associação do Xamarin. Ios](~/cross-platform/macios/binding/binding-types-reference.md) .
 
 
 ##### <a name="nsobject"></a>NSObject
 
-O [NSObject](xref:Foundation.NSObject) tipo é a base para todas as associações do Objective-C. Tipos de xamarin. IOS espelham duas classes de tipos do CocoaTouch APIs do iOS: os tipos de C (normalmente conhecidos como tipos de CoreFoundation) e os tipos de Objective-C (eles todos derivam da classe de NSObject).
+O tipo [NSObject](xref:Foundation.NSObject) é a base para todas as associações de Objective-C. Os tipos Xamarin. iOS espelham duas classes de tipos das APIs do iOS CocoaTouch: os tipos C (normalmente chamados de tipos CoreFoundation) e os tipos Objective-C (eles derivam da classe NSObject).
 
-Para cada tipo que espelha um tipo não gerenciado, é possível obter o objeto nativo por meio de [manipular](xref:Foundation.NSObject.Handle) propriedade.
+Para cada tipo que espelha um tipo não gerenciado, é possível obter o objeto nativo por meio da propriedade [Handle](xref:Foundation.NSObject.Handle) .
 
-Enquanto o Mono fornecerá a coleta de lixo para todos os seus objetos, o `Foundation.NSObject` implementa o [System. IDisposable](xref:System.IDisposable) interface. Isso significa que você pode liberar explicitamente os recursos de qualquer determinado NSObject sem ter de esperar o coletor de lixo para lançamento no. Isso é importante quando você estiver usando NSObjects pesada, por exemplo, UIImages que pode conter os ponteiros para blocos grandes de dados.
+Embora o mono forneça coleta de lixo para todos os seus objetos, `Foundation.NSObject` o implementa a interface [System. IDisposable](xref:System.IDisposable) . Isso significa que você pode liberar explicitamente os recursos de qualquer NSObject determinado sem precisar aguardar o coletor de lixo entrar. Isso é importante quando você está usando NSObjects pesadas, por exemplo, UIImages que pode conter ponteiros para grandes blocos de dados.
 
-Se seu tipo precisa executar finalização determinística, substituir os [NSObject.Dispose(bool) método](xref:Foundation.NSObject.Dispose(System.Boolean)) o parâmetro Dispose for "bool disposing", e se definido como true, ele significa que seu método Dispose está sendo chamado porque o usuário explicitamente chamado Dispose () no objeto. Se o valor for false, isso significa que seu método Dispose (bool disposing) está sendo chamado no finalizador no thread do finalizador.
+Se seu tipo precisa executar a finalização determinística, substitua o [método NSObject. Dispose (bool)](xref:Foundation.NSObject.Dispose(System.Boolean)) o parâmetro a ser descartado é "descarte de bool" e, se definido como verdadeiro, significa que o método Dispose está sendo chamado porque o usuário chamou explicitamente Dispose () no objeto. Se o valor for false, isso significa que o método Dispose (descartar bool) está sendo chamado do finalizador no thread do finalizador.
 
 
 ##### <a name="categories"></a>Categorias
 
-Começando com o xamarin. IOS 8.10 é possível criar categorias de Objective-C do c#.
+A partir do Xamarin. iOS 8,10, é possível criar categorias Objective-C C#de.
 
-Isso é feito usando o `Category` atributo, especificando o tipo a ser estendido como um argumento para o atributo. Por exemplo, o exemplo a seguir estenderá NSString.
+Isso é feito usando o `Category` atributo, especificando o tipo a ser estendido como um argumento para o atributo. O exemplo a seguir fará com que a instância estenda o NSString.
 
-    [Category (typeof (NSString))]
+```csharp
+[Category (typeof (NSString))]
+```
 
-Cada método de categoria é usando o mecanismo normal para a exportação de métodos para Objective-C usando o `Export` atributo:
+Cada método de categoria está usando o mecanismo normal para exportar métodos para Objective-C `Export` usando o atributo:
 
-    [Export ("today")]
-    public static string Today ()
-    {
-        return "Today";
-    }
+```csharp
+[Export ("today")]
+public static string Today ()
+{
+    return "Today";
+}
+```
 
-Todos os métodos de extensão gerenciada devem ser estáticos, mas é possível criar métodos de instância de Objective-C usando a sintaxe padrão para os métodos de extensão em c#:
+Todos os métodos de extensão gerenciados devem ser estáticos, mas é possível criar métodos de instância Objective-C usando a sintaxe padrão C#para métodos de extensão no:
 
-    [Export ("toUpper")]
-    public static string ToUpper (this NSString self)
-    {
-        return self.ToString ().ToUpper ();
-    }
+```csharp
+[Export ("toUpper")]
+public static string ToUpper (this NSString self)
+{
+    return self.ToString ().ToUpper ();
+}
+```
 
 e o primeiro argumento para o método de extensão será a instância na qual o método foi invocado.
 
@@ -156,7 +162,7 @@ public static class MyStringCategory
 }
 ```
 
-Este exemplo irá adicionar um método de instância toUpper nativo para a classe NSString, que pode ser chamada do Objective-C.
+Este exemplo adicionará um método de instância toUpper nativo à classe NSString, que pode ser invocado de Objective-C.
 
 ```csharp
 [Category (typeof (UIViewController))]
@@ -170,7 +176,7 @@ public static class MyViewControllerCategory
 }
 ```
 
-Um cenário em que isso é útil é adicionar um método para todo um conjunto de classes em sua base de código, por exemplo, isso seria fazer todas as `UIViewController` instâncias de relatório que pode girar:
+Um cenário em que isso é útil é adicionar um método a um conjunto inteiro de classes em sua base de código, por exemplo, fazer `UIViewController` com que todas as instâncias relatem que podem girar:
 
 ```csharp
 [Category (typeof (UINavigationController))]
@@ -184,81 +190,81 @@ class Rotation_IOS6 {
 ```
 
 
-##### <a name="preserveattribute"></a>PreserveAttribute
+##### <a name="preserveattribute"></a>Preservarattribute
 
-PreserveAttribute é um atributo personalizado que é usado para informar o mtouch – a ferramenta de implantação do xamarin. IOS – para preservar um tipo ou membro de um tipo, durante a fase de quando o aplicativo é processado para reduzir seu tamanho.
+Presirvaattribute é um atributo personalizado que é usado para informar mTouch – a ferramenta de implantação do Xamarin. iOS – para preservar um tipo, ou um membro de um tipo, durante a fase em que o aplicativo é processado para reduzir seu tamanho.
 
-Cada membro que não está vinculado estaticamente pelo aplicativo está sujeito a ser removido. Portanto, esse atributo é usado para marcar membros que não são referenciados estaticamente, mas que ainda são necessários para seu aplicativo.
+Cada membro que não está vinculado estaticamente pelo aplicativo está sujeito a ser removido. Portanto, esse atributo é usado para marcar Membros que não são referenciados estaticamente, mas que ainda são necessários para seu aplicativo.
 
 Por exemplo, se você cria uma instância de tipos dinamicamente, convém preservar o construtor padrão de seus tipos. Se você usar a serialização de XML, você talvez queira preservar as propriedades de seus tipos.
 
-Você pode aplicar esse atributo a todos os membros de um tipo ou ao tipo propriamente dito. Se você quiser preservar o tipo inteiro, você pode usar a sintaxe [preservar (AllMembers = true)] no tipo.
+Você pode aplicar esse atributo a todos os membros de um tipo ou ao tipo propriamente dito. Se você quiser preservar o tipo inteiro, poderá usar a sintaxe [preserve (mymembers = true)] no tipo.
 
 <a name="MonoTouch.UIKit" />
 
 #### <a name="uikit"></a>UIKit
 
-O [UIKit](xref:UIKit) namespace contém um mapeamento individual para todos os componentes de interface do usuário que compõem o CocoaTouch na forma de classes c#. A API foi modificada para seguir as convenções usadas na linguagem c#.
+O namespace [UIKit](xref:UIKit) contém um mapeamento de um para um para todos os componentes da interface do usuário que compõem Cocoatouch na forma de C# classes. A API foi modificada para seguir as convenções usadas no C# idioma.
 
-Delegados c# são fornecidos para operações comuns. Consulte a [delegados](#Delegates) seção para obter mais informações.
+C#os delegados são fornecidos para operações comuns. Consulte a seção [delegados](#Delegates) para obter mais informações.
 
 <a name="OpenGLES" />
 
 #### <a name="opengles"></a>OpenGLES
 
-Para OpenGLES, podemos distribuir uma [versão modificada](xref:OpenTK) da [OpenTK](http://www.opentk.com/) API, uma ligação orientada a objeto OpenGL foi modificado para usar estruturas e tipos de dados CoreGraphics, bem como expor somente o funcionalidade que está disponível no iOS.
+Para OpenGLs, distribuímos uma [versão modificada](xref:OpenTK) da API do [OpenTK](http://www.opentk.com/) , uma ligação orientada a objeto para OpenGL que foi modificada para usar tipos de dados e estruturas do CoreGraphics, bem como apenas expor a funcionalidade que está disponível no Ios.
 
-A funcionalidade de OpenGLES 1.1 está disponível por meio do tipo ES11.GL, documentado [aqui](xref:OpenTK.Graphics.ES11.GL) tipo.
+A funcionalidade do OpenGLs 1,1 está disponível por meio do tipo ES11.GL, documentado [aqui](xref:OpenTK.Graphics.ES11.GL) tipo.
 
-Funcionalidade OpenGLES 2.0 está disponível por meio do tipo ES20.GL, documentado [aqui](xref:OpenTK.Graphics.ES20.GL) tipo.
+A funcionalidade do OpenGLs 2,0 está disponível por meio do tipo ES20.GL, documentado [aqui](xref:OpenTK.Graphics.ES20.GL) tipo.
 
-Funcionalidade OpenGLES 3.0 está disponível por meio do tipo ES30.GL, documentado [aqui](xref:OpenTK.Graphics.ES30.GL) tipo.
+A funcionalidade do OpenGLs 3,0 está disponível por meio do tipo ES30.GL, documentado [aqui](xref:OpenTK.Graphics.ES30.GL) tipo.
 
 
 ### <a name="binding-design"></a>Design de associação
 
-Xamarin. IOS não é meramente uma associação para a plataforma subjacente do Objective-C. Ele estende o sistema de tipos do .NET e o sistema de expedição para melhor blend c# e Objective-C.
+O Xamarin. iOS não é meramente uma associação à plataforma Objective-C subjacente. Ele estende o sistema de tipos .NET e o sistema de expedição C# para melhor Blend e Objective-C.
 
-Assim como a P/Invoke é uma ferramenta útil para invocar as bibliotecas nativas no Windows e Linux, ou como IJW suporte pode ser usado para a interoperabilidade COM no Windows, xamarin. IOS estende o tempo de execução para dar suporte a c# objetos de associação a objetos de Objective-C.
+Assim como P/Invoke é uma ferramenta útil para invocar bibliotecas nativas no Windows e no Linux, ou como o suporte a IJW pode ser usado para interoperabilidade COM no Windows, o Xamarin C# . Ios estende o tempo de execução para dar suporte a objetos de associação para objetos Objective-C.
 
-A discussão nas próximas seções não é necessário para os usuários que estão criando aplicativos xamarin. IOS, mas ajudarão os desenvolvedores a entender como as coisas são feitas e irá ajudá-los durante a criação de aplicativos mais complicados.
+A discussão nas próximas seções não é necessária para os usuários que estão criando aplicativos Xamarin. iOS, mas ajudarão os desenvolvedores a entenderem como as coisas são feitas e irão auxiliá-las durante a criação de aplicativos mais complicados.
 
 
 
 #### <a name="types"></a>Tipos
 
-Tipos do c# em que fazia sentido, são expostos em vez de baixo nível tipos de base para o universo c#.  Isso significa que [a API usa o tipo "string" c# em vez de NSString](~/ios/internals/api-design/nsstring.md) e usa matrizes com rigidez de tipos do c# em vez de expor NSArray.
+Onde fazia sentido, C# os tipos são expostos em vez de tipos de base de nível baixo, C# para o universo.  Isso significa que [a API usa o C# tipo "String" em vez de NSString](~/ios/internals/api-design/nsstring.md) e usa matrizes C# com rigidez de tipos em vez de expor NSArray.
 
-Em geral, no design do xamarin. IOS e xamarin. Mac, subjacente `NSArray` objeto não é exposto. Em vez disso, o tempo de execução automaticamente converte `NSArray`s para matrizes com rigidez de tipos de alguns `NSObject` classe. Portanto, xamarin. IOS não expõe um método com tipagem fraca como GetViews para retornar um NSArray:
+Em geral, no design do xamarin. Ios e xamarin. Mac, o objeto `NSArray` subjacente não é exposto. Em vez disso, o tempo `NSArray`de execução converte automaticamente as s em `NSObject` matrizes fortemente tipadas de alguma classe. Portanto, o Xamarin. iOS não expõe um método de tipo fraco, como GetViews, para retornar um NSArray:
 
 ```csharp
 NSArray GetViews ();
 ```
 
-Em vez disso, a associação expõe um valor de retorno fortemente tipado, como este:
+Em vez disso, a associação expõe um valor de retorno fortemente tipado, desta forma:
 
 ```csharp
 UIView [] GetViews ();
 ```
 
-Há alguns dos métodos expostos na `NSArray`, para os casos de canto em que você talvez queira usar um `NSArray` diretamente, mas seu uso não é recomendado na associação de API.
+Há alguns métodos expostos no `NSArray`, para os casos de canto em que você pode querer usar um `NSArray` diretamente, mas seu uso é desencorajado na associação de API.
 
-Além disso, na **API clássica** em vez de expor `CGRect`, `CGPoint` e `CGSize` da API CoreGraphics, substituímos aqueles com o `System.Drawing` implementações `RectangleF`, `PointF`e `SizeF` pois elas seriam ajudam os desenvolvedores preservam código OpenGL existente que usa OpenTK. Ao usar o novo 64-bit **API unificada**, a API CoreGraphics deve ser usada.
+Além disso, na **API clássica** em vez de expor `CGRect`, `CGPoint` e `CGSize` `System.Drawing` da API `PointF` CoreGraphics, substituímos aquelas pelas implementações `RectangleF`e `SizeF`como eles ajudarão os desenvolvedores a preservar o código OpenGL existente que usa OpenTK. Ao usar o novo **API unificada**de 64 bits, a API CoreGraphics deve ser usada.
 
 <a name="Inheritance" />
 
 #### <a name="inheritance"></a>Herança
 
-O design de API do xamarin. IOS permite aos desenvolvedores estender tipos nativos do Objective-C da mesma forma que eles seriam estender um tipo c#, usando a palavra-chave "override" em uma classe derivada, bem como encadeamento de para a implementação base usando a palavra-chave "base" do c#.
+O design de API do Xamarin. iOS permite aos desenvolvedores estender os tipos de Objective-C nativos da mesma forma que C# eles estendem um tipo, usando a palavra-chave "override" em uma classe derivada, bem como encadeando a implementação de base C# usando a "base" chaves.
 
-Esse design permite que os desenvolvedores a evitar lidar com seletores de Objective-C como parte de seu processo de desenvolvimento, porque todo o sistema de Objective-C já é encapsulado dentro de bibliotecas do xamarin. IOS.
+Esse design permite que os desenvolvedores evitem lidar com seletores Objective-C como parte de seu processo de desenvolvimento, pois todo o sistema Objective-C já está encapsulado dentro das bibliotecas Xamarin. iOS.
 
 
 #### <a name="types-and-interface-builder"></a>Tipos e Interface Builder
 
-Quando você cria classes .NET que são instâncias de tipos criadas pelo construtor de Interface, você precisa fornecer um construtor que aceita um único `IntPtr` parâmetro.
-Isso é necessário para associar a instância do objeto gerenciado com o objeto não gerenciado.
-O código consiste em uma única linha, como este:
+Ao criar classes do .NET que são instâncias de tipos criadas por interface Builder, você precisa fornecer um construtor que aceite um único `IntPtr` parâmetro.
+Isso é necessário para associar a instância de objeto gerenciado ao objeto não gerenciado.
+O código consiste em uma única linha, como esta:
 
 ```csharp
 public partial class void MyView : UIView {
@@ -272,40 +278,40 @@ public partial class void MyView : UIView {
 
 #### <a name="delegates"></a>Delegados
 
-Objective-C e c# têm significados diferentes para o delegado do word em cada linguagem.
+Objective-C C# e tem significados diferentes para o delegado de palavra em cada idioma.
 
-No mundo do Objective-C e na documentação que você encontrará online sobre CocoaTouch, um delegado é normalmente uma instância de uma classe que irá responder a um conjunto de métodos. Isso é muito semelhante a uma interface c#, com a diferença é que os métodos nem sempre são obrigatórios.
+No mundo Objective-C e na documentação que você encontrará online sobre CocoaTouch, um delegado normalmente é uma instância de uma classe que responderá a um conjunto de métodos. Isso é muito semelhante a uma C# interface, com a diferença de que os métodos nem sempre são obrigatórios.
 
-Esses delegados desempenham um papel importante no UIKit e outras APIs CocoaTouch. Eles são usados para realizar diversas tarefas:
+Esses delegados desempenham um papel importante no UIKit e em outras APIs do CocoaTouch. Eles são usados para realizar várias tarefas:
 
--  Para fornecer notificações para seu código (assim como entrega de eventos em c# ou Gtk +).
--  Para implementar os modelos para controles de visualização de dados.
--  Para direcionar o comportamento de um controle.
+- Para fornecer notificações para seu código (semelhante à entrega de eventos C# no ou no GTK +).
+- Para implementar modelos para controles de visualização de dados.
+- Para orientar o comportamento de um controle.
 
 
-O padrão de programação foi projetado para minimizar a criação de classes derivadas para alterar o comportamento de um controle. Essa solução é semelhante no espírito ao longo dos anos têm feito outros kits de ferramentas de GUI: GTK sinais, slots de Qt, eventos de Winforms, WPF/Silverlight eventos e assim por diante. Para evitar ter centenas de interfaces (uma para cada ação) ou exigir que os desenvolvedores implementar muitos métodos que eles não precisam, Objective-C oferece suporte a definições de método opcional. Isso é diferente de interfaces do c# que exigem a todos os métodos a serem implementados.
+O padrão de programação foi projetado para minimizar a criação de classes derivadas para alterar o comportamento de um controle. Essa solução é semelhante em relação ao que os outros kits de tarefas de GUI fizeram ao longo dos anos: Sinais do GTK, slots Qt, eventos WinForms, eventos do WPF/Silverlight e assim por diante. Para evitar ter centenas de interfaces (uma para cada ação) ou exigir que os desenvolvedores implementem muitos métodos que não precisam, o Objective-C dá suporte a definições de métodos opcionais. Isso é diferente das C# interfaces que exigem a implementação de todos os métodos.
 
-Classes de Objective-C, você verá que as classes que usam esse padrão de programação expõem uma propriedade, geralmente chamada `delegate`, que é necessário para implementar partes obrigatórias da interface e partes de zero ou mais dos opcional.
+Nas classes Objective-C, você verá que as classes que usam esse padrão de programação expõem uma propriedade `delegate`, geralmente chamada, que é necessária para implementar as partes obrigatórias da interface e zero, ou mais, das partes opcionais.
 
-No xamarin. IOS três mecanismos mutuamente exclusivos para associar a esses delegados são oferecidos:
+No Xamarin. iOS, são oferecidos três mecanismos mutuamente exclusivos para associar a esses delegados:
 
-1.  [Por meio de eventos](#Via_Events).
-2.  [Com rigidez de tipos por meio de um `Delegate` propriedade](#StrongDelegate)
-3.  [Fracamente tipados por meio de um `WeakDelegate` propriedade](#WeakDelegate)
+1. [Por meio de eventos](#Via_Events).
+2. [Fortemente tipado por `Delegate` meio de uma propriedade](#StrongDelegate)
+3. [Com rigidez de tipos por `WeakDelegate` meio de uma propriedade](#WeakDelegate)
 
-Por exemplo, considere a [UIWebView](https://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebView_Class/Reference/Reference.html) classe. Isso expede para um [UIWebViewDelegate](https://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html) instância, que é atribuída para o [delegar](https://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebView_Class/Reference/Reference.html#//apple_ref/occ/instp/UIWebView/delegate) propriedade.
+Por exemplo, considere a classe [UIWebView](https://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebView_Class/Reference/Reference.html) . Isso é expedido para uma instância [UIWebViewDelegate](https://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html) , que é atribuída à propriedade [delegar](https://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebView_Class/Reference/Reference.html#//apple_ref/occ/instp/UIWebView/delegate) .
 
 <a name="Via_Events" />
 
 ##### <a name="via-events"></a>Por meio de eventos
 
-Para muitos tipos, o xamarin. IOS criará automaticamente um delegado apropriado que encaminharão os `UIWebViewDelegate` chamadas para eventos de c#. Para `UIWebView`:
+Para muitos tipos, o Xamarin. Ios criará automaticamente um delegado apropriado que encaminhará `UIWebViewDelegate` as C# chamadas para eventos. Para `UIWebView`:
 
--  O [webViewDidStartLoad](https://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html#//apple_ref/occ/intfm/UIWebViewDelegate/webViewDidStartLoad:) método é mapeado para o [UIWebView.LoadStarted](xref:UIKit.UIWebView.LoadStarted) eventos.
--  O [webViewDidFinishLoad](https://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html#//apple_ref/occ/intfm/UIWebViewDelegate/webViewDidFinishLoad:) método é mapeado para o [UIWebView.LoadFinished](xref:UIKit.UIWebView.LoadFinished) eventos.
--  O [webView:didFailLoadWithError](https://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html#//apple_ref/occ/intfm/UIWebViewDelegate/webView:didFailLoadWithError:) método é mapeado para o [UIWebView.LoadError](xref:UIKit.UIWebView.LoadError) eventos.
+- O método [webViewDidStartLoad](https://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html#//apple_ref/occ/intfm/UIWebViewDelegate/webViewDidStartLoad:) é mapeado para o evento [UIWebView.](xref:UIKit.UIWebView.LoadStarted) LoadStarted.
+- O método [webViewDidFinishLoad](https://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html#//apple_ref/occ/intfm/UIWebViewDelegate/webViewDidFinishLoad:) é mapeado para o evento [UIWebView.](xref:UIKit.UIWebView.LoadFinished) loadfinalized.
+- O método [WebView: didFailLoadWithError](https://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html#//apple_ref/occ/intfm/UIWebViewDelegate/webView:didFailLoadWithError:) é mapeado para o evento [UIWebView.](xref:UIKit.UIWebView.LoadError) LoadError.
 
-Por exemplo, esse simples programa registra as horas de início e término quando o carregamento de uma web exibe:
+Por exemplo, esse programa simples registra os horários de início e término ao carregar uma exibição da Web:
 
 ```csharp
 DateTime startTime, endTime;
@@ -317,11 +323,11 @@ web.LoadFinished += (o, e) => endTime = DateTime.Now;
 
 ##### <a name="via-properties"></a>Por meio de propriedades
 
-Eventos são úteis quando pode haver mais de um assinante para o evento. Além disso, os eventos são limitados a casos em que não há nenhum valor de retorno do código.
+Os eventos são úteis quando pode haver mais de um assinante para o evento. Além disso, os eventos são limitados a casos em que não há nenhum valor de retorno do código.
 
-Para casos em que o código deve retornar um valor, podemos optou por em vez disso, para propriedades. Isso significa que apenas um método pode ser definido em um determinado momento em um objeto.
+Para casos em que o código deve retornar um valor, optamos por propriedades. Isso significa que apenas um método pode ser definido em um determinado momento em um objeto.
 
-Por exemplo, você pode usar esse mecanismo para ignorar o teclado na tela sobre o manipulador para um `UITextField`:
+Por exemplo, você pode usar esse mecanismo para descartar o teclado na tela no manipulador de um `UITextField`:
 
 ```csharp
 void SetupTextField (UITextField tf)
@@ -333,15 +339,15 @@ void SetupTextField (UITextField tf)
 }
 ```
 
-O `UITextField`do `ShouldReturn` propriedade nesse caso é usada como argumento um delegado que retorna um valor bool e determina se o campo de texto deve fazer algo com o botão de retorno que está sendo pressionado. Em nosso método, retornamos *true* ao chamador, mas também removemos o teclado na tela (isso acontece quando o campo de texto chama `ResignFirstResponder`).
+Nesse `UITextField`caso `ShouldReturn` , a propriedade do usa como um argumento um delegado que retorna um valor bool e determina se o TextField deve fazer algo com o botão de retorno sendo pressionado. Em nosso método, retornamos *true* para o chamador, mas também removemos o teclado da tela (isso acontece quando TextField é chamado `ResignFirstResponder`).
 
 <a name="StrongDelegate"/>
 
-##### <a name="strongly-typed-via-a-delegate-property"></a>Com rigidez de tipos por meio de uma propriedade de delegado
+##### <a name="strongly-typed-via-a-delegate-property"></a>Fortemente tipado por meio de uma propriedade delegate
 
-Se você preferir não usar eventos, você pode fornecer seus próprios [UIWebViewDelegate](xref:UIKit.UIWebViewDelegate) subclasse e atribuí-lo para o [UIWebView.Delegate](xref:UIKit.UIWebView.Delegate) propriedade. Depois que tiver sido atribuído UIWebView.Delegate, o mecanismo de expedição de evento UIWebView deixará de funcionar e os métodos UIWebViewDelegate serão invocados quando ocorrem os eventos correspondentes.
+Se você preferir não usar eventos, poderá fornecer sua própria subclasse [UIWebViewDelegate](xref:UIKit.UIWebViewDelegate) e atribuí-la à propriedade [UIWebView. delegate](xref:UIKit.UIWebView.Delegate) . Depois que UIWebView. delegate tiver sido atribuído, o mecanismo de expedição do evento UIWebView não funcionará mais, e os métodos UIWebViewDelegate serão invocados quando os eventos correspondentes ocorrerem.
 
-Por exemplo, esse tipo simples registra o tempo necessário para carregar uma exibição da web:
+Por exemplo, esse tipo simples registra o tempo necessário para carregar uma exibição da Web:
 
 ```csharp
 class Notifier : UIWebViewDelegate  {
@@ -359,27 +365,27 @@ class Notifier : UIWebViewDelegate  {
 }
 ```
 
-As opções acima é usado no código como este:
+O exemplo acima é usado em um código como este:
 
 ```csharp
 var web = new UIWebView (new CGRect (0, 0, 200, 200));
 web.Delegate = new Notifier ();
 ```
 
-Acima criará um UIWebViewer e ele será instruí-lo para enviar mensagens a uma instância do notificador, uma classe que criamos para responder às mensagens.
+Acima, você criará um UIWebViewer e ele o instruirá a enviar mensagens para uma instância do notificador, uma classe que criamos para responder às mensagens.
 
-Esse padrão também é usado para controlar o comportamento de alguns controles, por exemplo, no caso UIWebView, o [UIWebView.ShouldStartLoad](xref:UIKit.UIWebView.ShouldStartLoad) propriedade permite que o `UIWebView` instância de controle se o `UIWebView` carregará um página ou não.
+Esse padrão também é usado para controlar o comportamento de determinados controles, por exemplo, no caso UIWebView, a propriedade [UIWebView. ShouldStartLoad](xref:UIKit.UIWebView.ShouldStartLoad) permite `UIWebView` que a instância controle se `UIWebView` o carregará ou não uma página.
 
-O padrão também é usado para fornecer os dados sob demanda para alguns controles. Por exemplo, o [UITableView](xref:UIKit.UITableView) é um poderoso controle de renderização de tabela – e a aparência e o conteúdo é orientado por uma instância de um [UITableViewDataSource](xref:UIKit.UITableViewDataSource)
+O padrão também é usado para fornecer os dados sob demanda para alguns controles. Por exemplo, o controle [UITableView](xref:UIKit.UITableView) é um poderoso controle de renderização de tabela – e a aparência e o conteúdo são controlados por uma instância de um [UITableViewDataSource](xref:UIKit.UITableViewDataSource)
 
 <a name="WeakDelegate"/>
 
-### <a name="loosely-typed-via-the-weakdelegate-property"></a>Fracamente tipados por meio da propriedade WeakDelegate
+### <a name="loosely-typed-via-the-weakdelegate-property"></a>Tipo flexível por meio da propriedade WeakDelegate
 
-Além da propriedade com rigidez de tipos, há também um delegado fraco tipado que permite que o desenvolvedor associar itens de forma diferente, se desejado.
-Em todos os lugares fortemente tipado `Delegate` propriedade é exposta na associação do xamarin. IOS, um correspondente `WeakDelegate` propriedade também é exposta.
+Além da propriedade fortemente tipada, há também um delegado tipado fraco que permite ao desenvolvedor associar as coisas de forma diferente, se desejado.
+Em qualquer lugar em `Delegate` que uma propriedade fortemente tipada é exposta na associação do Xamarin `WeakDelegate` . Ios, uma propriedade correspondente também é exposta.
 
-Ao usar o `WeakDelegate`, você é responsável por corretamente decorando a classe usando o [exportar](xref:Foundation.ExportAttribute) atributo para especificar o seletor. Por exemplo:
+Ao usar o `WeakDelegate`, você é responsável por decorar corretamente sua classe usando o atributo de [exportação](xref:Foundation.ExportAttribute) para especificar o seletor. Por exemplo:
 
 ```csharp
 class Notifier : NSObject  {
@@ -404,33 +410,33 @@ var web = new UIWebView (new CGRect (0, 0, 200, 200));
 web.WeakDelegate = new Notifier ();
 ```
 
-Observe que uma vez a `WeakDelegate` foi atribuída uma propriedade, o `Delegate` propriedade não será usada. Além disso, se você implementar o método em uma classe base herdada que você deseja [exportação], você deve tornar a ele um método público.
+Observe que depois que `WeakDelegate` a propriedade tiver sido atribuída, `Delegate` a propriedade não será usada. Além disso, se você implementar o método em uma classe base herdada que deseja [exportar], deverá torná-lo um método público.
 
 
-## <a name="mapping-of-the-objective-c-delegate-pattern-to-c35"></a>Mapeamento do Objective-C delegado padrão para o C&#35;
+## <a name="mapping-of-the-objective-c-delegate-pattern-to-c35"></a>Mapeamento do padrão de delegado Objective-C para C&#35;
 
-Quando você vir os exemplos de Objective-C que ter esta aparência:
+Quando você vir exemplos de Objective-C semelhantes a:
 
 ```csharp
 foo.delegate = [[SomethingDelegate] alloc] init]
 ```
 
-Isso instrui o idioma para criar, construir uma instância da classe "SomethingDelegate" e atribua o valor para a propriedade de delegado na variável de foo. Esse mecanismo é compatível com o xamarin. IOS e a sintaxe da linguagem c# é:
+Isso instrui o idioma a criar e construir uma instância da classe "SomethingDelegate" e atribuir o valor à propriedade delegate na variável foo. Esse mecanismo tem suporte do Xamarin. iOS e C# a sintaxe é:
 
 ```csharp
 foo.Delegate = new SomethingDelegate ();
 ```
 
-No xamarin. IOS nós fornecemos classes de representante de classes fortemente tipadas que são mapeados para o Objective-C. Para usá-las, você será criando subclasses e substituindo os métodos definidos pela implementação do xamarin. IOS. Para obter mais informações sobre como eles funcionam, consulte os seção "modelos" abaixo.
+No Xamarin. iOS, fornecemos classes fortemente tipadas que mapeiam para as classes delegadas Objective-C. Para usá-los, você estará subclasseando e substituindo os métodos definidos pela implementação do Xamarin. iOS. Para obter mais informações sobre como eles funcionam, consulte a seção "modelos" abaixo.
 
 
-##### <a name="mapping-delegates-to-c35"></a>Mapeamento de delegados para C&#35;
+##### <a name="mapping-delegates-to-c35"></a>Mapeando delegados para C&#35;
 
-Em geral, UIKit usa delegados de Objective-C em duas formas.
+UIKit em geral usa delegados de Objective-C em duas formas.
 
-O primeiro formulário fornece uma interface para o modelo de um componente. Por exemplo, como um mecanismo para fornecer dados sob demanda para uma exibição, como o recurso de armazenamento de dados para uma exibição de lista.  Nesses casos, você sempre deve criar uma instância da classe apropriada e atribua a variável.
+O primeiro formulário fornece uma interface para o modelo de um componente. Por exemplo, como um mecanismo para fornecer dados sob demanda para uma exibição, como o recurso de armazenamento de dados para uma exibição de lista.  Nesses casos, você sempre deve criar uma instância da classe apropriada e atribuir a variável.
 
-No exemplo a seguir, fornecemos o `UIPickerView` com uma implementação de um modelo que usa cadeias de caracteres:
+No exemplo a seguir, fornecemos o `UIPickerView` com uma implementação para um modelo que usa cadeias de caracteres:
 
 ```csharp
 public class SampleTitleModel : UIPickerViewTitleModel {
@@ -446,7 +452,7 @@ public class SampleTitleModel : UIPickerViewTitleModel {
 pickerView.Model = new MyPickerModel ();
 ```
 
-A segunda forma é fornecer uma notificação de eventos. Nesses casos, embora ainda expomos a API no formato descrito acima, nós também fornecemos c# eventos, que devem ser mais simples de usar para operações rápidas e integrado com delegados anônimos e expressões lambda em c#.
+O segundo formulário é fornecer notificação para eventos. Nesses casos, embora ainda exponhamos a API no formulário descrito acima, também fornecemos C# eventos, que devem ser mais simples de usar para operações rápidas e integrados com delegados anônimos e expressões lambda no. C#
 
 Por exemplo, você pode assinar `UIAccelerometer` eventos:
 
@@ -457,9 +463,9 @@ UIAccelerometer.SharedAccelerometer.Acceleration += (sender, args) => {
 }
 ```
 
-As duas opções estão disponíveis em que eles fazem sentido, mas como um programador, você deve escolher um ou outro. Se você criar sua própria instância de um Respondente/delegado com rigidez de tipos e atribuí-lo, os eventos do c# não estará funcionais. Se você usar os eventos em C#, os métodos em sua classe de delegado/Respondente nunca serão chamados.
+As duas opções estão disponíveis onde fazem sentido, mas como um programador, você deve escolher uma ou outra. Se você criar sua própria instância de um Respondente/delegado com rigidez de tipos e atribuí- C# la, os eventos não serão funcionais. Se você usar os C# eventos, os métodos em sua classe de respondente/delegado nunca serão chamados.
 
-O exemplo anterior que usado `UIWebView` podem ser escritos usando o c# 3.0 lambdas como este:
+O exemplo anterior que foi `UIWebView` usado pode ser escrito C# usando lambdas 3,0 como este:
 
 ```csharp
 var web = new UIWebView (new CGRect (0, 0, 200, 200));
@@ -470,13 +476,13 @@ web.LoadFinished += () => { endTime = DateTime.Now; }
 
 #### <a name="responding-to-events"></a>Respondendo a eventos
 
-No código de Objective-C, às vezes, manipuladores de eventos para vários controles e provedores de informações para vários controles, serão hospedados na mesma classe. Isso é possível porque classes respondem às mensagens, e desde que as classes respondem às mensagens, é possível vincular a objetos.
+No código Objective-C, às vezes, manipuladores de eventos para vários controles e provedores de informações para vários controles, serão hospedados na mesma classe. Isso é possível porque as classes respondem às mensagens e, desde que as classes respondam às mensagens, é possível vincular objetos juntos.
 
-Conforme anteriormente detalhado, xamarin. IOS dá suporte a ambos os o c# baseado em evento modelo de programação, e o padrão de delegado Objective-C, onde você pode criar uma nova classe que implementa o delegado e substitui os métodos desejados.
+Conforme detalhado anteriormente, o Xamarin. iOS dá suporte C# ao modelo de programação baseado em evento e ao padrão delegado Objective-C, no qual você pode criar uma nova classe que implementa o delegado e substitui os métodos desejados.
 
-Também é possível oferecer suporte ao padrão do Objective-C em que os respondentes para diversas operações diferentes são todos hospedados na mesma instância de uma classe. Para fazer isso no entanto, você terá que usar os recursos de baixo nível da associação do xamarin. IOS.
+Também é possível dar suporte ao padrão de Objective-C, onde respondentes para várias operações diferentes são hospedados na mesma instância de uma classe. Para fazer isso, você precisará usar recursos de baixo nível da associação do Xamarin. iOS.
 
-Por exemplo, se você quisesse que sua classe para responder a ambos os `UITextFieldDelegate.textFieldShouldClear`: mensagem e o `UIWebViewDelegate.webViewDidStartLoad`: na mesma instância de uma classe, você precisaria usar a declaração de atributo [exportação]:
+Por exemplo, se você quisesse que sua classe respondesse à `UITextFieldDelegate.textFieldShouldClear`: Message e a `UIWebViewDelegate.webViewDidStartLoad`: na mesma instância de uma classe, precisaria usar a declaração de atributo [Export]:
 
 ```csharp
 public class MyCallbacks : NSObject {
@@ -494,28 +500,28 @@ public class MyCallbacks : NSObject {
 }
 ```
 
-O C# os nomes de métodos não são importantes; tudo o que importa são as cadeias de caracteres passadas para o atributo [Export].
+Os C# nomes dos métodos não são importantes; Tudo o que importa são as cadeias de caracteres passadas para o atributo [Export].
 
-Ao usar esse estilo de programação, certifique-se de que os parâmetros do c# correspondem aos tipos reais que o mecanismo de tempo de execução passará.
+Ao usar esse estilo de programação, verifique se os C# parâmetros correspondem aos tipos reais que o mecanismo de tempo de execução irá passar.
 
 <a name="Models" />
 
 #### <a name="models"></a>Modelos
 
-Em instalações de armazenamento de UIKit, ou em respondentes que são implementados usando classes auxiliares, elas geralmente são chamadas no código Objective-C como delegados e eles são implementados como protocolos.
+Em instalações de armazenamento UIKit ou em respondentes que são implementados usando classes auxiliares, elas geralmente são referenciadas no código Objective-C como delegados e são implementadas como protocolos.
 
-Protocolos de Objective-C são como interfaces, mas eles oferecem suporte a métodos opcionais – ou seja, nem todos os métodos precisam ser implementados para o protocolo funcione.
+Os protocolos Objective-C são como interfaces, mas oferecem suporte a métodos opcionais – ou seja, nem todos os métodos precisam ser implementados para que o protocolo funcione.
 
-Há duas maneiras de implementar um modelo. Você pode implementá-lo manualmente ou usar as definições com rigidez de tipos existentes.
+Há duas maneiras de implementar um modelo. Você pode implementá-lo manualmente ou usar as definições de tipo forte existentes.
 
 
-O mecanismo manual é necessário quando você tenta implementar uma classe que não tenha sido associada com xamarin. IOS. É muito fácil fazer:
+O mecanismo manual é necessário quando você tenta implementar uma classe que não foi associada pelo Xamarin. iOS. É muito fácil:
 
--  Sinalizador de sua classe para o registro com o tempo de execução
--  Aplicar o atributo [Export] com o nome real do seletor em cada método que você deseja substituir
--  Instanciar a classe e passá-lo.
+- Sinalizar sua classe para o registro com o tempo de execução
+- Aplique o atributo [Export] com o nome do seletor real em cada método que você deseja substituir
+- Crie uma instância da classe e passe-a.
 
-Por exemplo, o seguinte implementa apenas um dos métodos opcionais na definição de protocolo UIApplicationDelegate:
+Por exemplo, as seguintes implementam apenas um dos métodos opcionais na definição do protocolo UIApplicationDelegate:
 
 ```csharp
 public class MyAppController : NSObject {
@@ -527,11 +533,11 @@ public class MyAppController : NSObject {
 }
 ```
 
-O nome do seletor de Objective-C ("applicationDidFinishLaunching:") é declarada com o atributo de exportação e a classe é registrada com o `[Register]` atributo.
+O nome do seletor Objective-C ("applicationDidFinishLaunching:") é declarado com o atributo de exportação e a classe `[Register]` é registrada com o atributo.
 
-Xamarin. IOS fornece com rigidez de tipos declarações, prontos para uso, que não exigem associação manual. Para dar suporte a esse modelo de programação, o tempo de execução do xamarin. IOS dá suporte ao atributo [Model] em uma declaração de classe. Isso informa ao tempo de execução que não devem conectar-se a todos os métodos na classe, a menos que os métodos são explicitamente é implementado.
+O Xamarin. iOS fornece declarações fortemente tipadas, prontas para uso, que não exigem associação manual. Para dar suporte a esse modelo de programação, o tempo de execução do Xamarin. iOS dá suporte ao atributo [Model] em uma declaração de classe. Isso informa ao tempo de execução que ele não deve conectar todos os métodos na classe, a menos que os métodos sejam explicitamente implementados.
 
-Isso significa que, no UIKit, as classes que representam um protocolo com métodos opcionais são gravadas como este:
+Isso significa que, em UIKit, as classes que representam um protocolo com métodos opcionais são escritas da seguinte maneira:
 
 ```csharp
 [Model]
@@ -544,9 +550,9 @@ public class SomeViewModel : NSObject {
 }
 ```
 
-Quando você deseja implementar um modelo que apenas implementa alguns métodos, tudo o que você precisa fazer é substituir os métodos que você está interessado e ignorar os outros métodos. O tempo de execução irá se conectar apenas os métodos substituídos, não os métodos originais para o mundo de Objective-C.
+Quando você deseja implementar um modelo que só implemente alguns dos métodos, tudo o que você precisa fazer é substituir os métodos nos quais está interessado e ignorar os outros métodos. O tempo de execução conectará apenas os métodos substituídos, não os métodos originais ao mundo Objective-C.
 
-É o equivalente ao exemplo anterior manual:
+O equivalente ao exemplo manual anterior é:
 
 ```csharp
 public class AppController : UIApplicationDelegate {
@@ -557,34 +563,34 @@ public class AppController : UIApplicationDelegate {
 }
 ```
 
-As vantagens são que não é necessário para examinar os arquivos de cabeçalho Objective-C para localizar o seletor, os tipos de argumentos, ou o mapeamento para c#, e que você obtém o intellisense do Visual Studio para Mac, juntamente com tipos fortes
+As vantagens são que não há necessidade de se aprofundar nos arquivos de cabeçalho Objective-C para localizar o seletor, os tipos dos argumentos ou o mapeamento C#para, e que você obtém o intellisense de Visual Studio para Mac, juntamente com tipos fortes
 
 
-#### <a name="xib-outlets-and-c35"></a>C e saídas XIB&#35;
+#### <a name="xib-outlets-and-c35"></a>XIB saídas e C&#35;
 
 > [!IMPORTANT]
-> Esta seção explica a integração de IDE com tomadas ao usar os arquivos XIB. Ao usar o Designer do Xamarin para iOS, isso é tudo substituído, inserindo um nome em **identidade > nome** na seção de propriedades do IDE, como mostrado abaixo:
+> Esta seção explica a integração do IDE com saídas ao usar arquivos XIB. Ao usar o Xamarin Designer para iOS, isso é substituído inserindo-se um nome em **identidade > nome** na seção de propriedades do IDE, conforme mostrado abaixo:
 >
-> [![](images/designeroutlet.png "Inserir um nome de item no iOS Designer")](images/designeroutlet.png#lightbox)
+> [![](images/designeroutlet.png "Inserindo um nome de item no designer do iOS")](images/designeroutlet.png#lightbox)
 >
->Para obter mais informações sobre o Designer do iOS, consulte a [Introdução ao Designer do iOS](~/ios/user-interface/designer/introduction.md#how-it-works) documento.
+>Para obter mais informações sobre o designer do iOS, consulte a [introdução ao documento do designer do IOS](~/ios/user-interface/designer/introduction.md#how-it-works) .
 
-Isso é uma descrição de nível baixo de como integram o tomadas com c# e é fornecido para usuários avançados do xamarin. IOS. Quando usando o Visual Studio para Mac o mapeamento é feito automaticamente em segundo plano usando gerado código sobre o voo para você.
+Esta é uma descrição de baixo nível de como as informações C# se integram ao e são fornecidas para usuários avançados do Xamarin. Ios. Ao usar Visual Studio para Mac o mapeamento é feito automaticamente em segundo plano usando o código gerado no vôo para você.
 
-Ao projetar sua interface do usuário com o Interface Builder, você estará criando apenas a aparência do aplicativo e estabelecerá algumas conexões padrão. Se você deseja buscar informações por meio de programação, alterar o comportamento de um controle em tempo de execução ou modificar o controle em tempo de execução, é necessário associar alguns dos controles ao seu código gerenciado.
+Ao projetar sua interface do usuário com Interface Builder, você só estará criando a aparência do aplicativo e estabelecerá algumas conexões padrão. Se você quiser obter informações programaticamente, alterar o comportamento de um controle em tempo de execução ou modificar o controle em tempo de execução, será necessário associar alguns dos controles ao seu código gerenciado.
 
 Isso é feito em algumas etapas:
 
-1.  Adicione a **declaração de saída** para seu **proprietário do arquivo**.
-1.  Conectar-se o controle para o **o proprietário do arquivo**.
-1.  Store as conexões em seu arquivo XIB/NIB além de interface do usuário.
-1.  Carrega o arquivo NIB em tempo de execução.
-1.  Acesse a variável de saída.
+1. Adicione a **declaração de tomada** ao **proprietário do arquivo**.
+1. Conecte seu controle ao **proprietário do arquivo**.
+1. Armazene a interface do usuário mais as conexões em seu arquivo XIB/NIB.
+1. Carregue o arquivo NIB em tempo de execução.
+1. Acesse a variável de tomada.
 
 
-As etapas (1) a (3) são abordadas na documentação da Apple para a criação de interfaces com o Interface Builder.
+As etapas (1) a (3) são abordadas na documentação da Apple para a criação de interfaces com Interface Builder.
 
-Ao usar o xamarin. IOS, seu aplicativo precisará criar uma classe que deriva de UIViewController. Ele é implementado ele como esta:
+Ao usar o Xamarin. iOS, seu aplicativo precisará criar uma classe derivada de UIViewController. Ele é implementado da seguinte maneira:
 
 ```csharp
 public class MyViewController : UIViewController {
@@ -596,13 +602,13 @@ public class MyViewController : UIViewController {
 }
 ```
 
-Em seguida, para carregar seu ViewController de um arquivo NIB, você fazer isso:
+Em seguida, para carregar o ViewController de um arquivo NIB, faça o seguinte:
 
 ```csharp
 var controller = new MyViewController ("HelloWorld", NSBundle.MainBundle, this);
 ```
 
-Isso carrega a interface do usuário da PONTA. Agora, para acessar as saídas, é necessário informar o tempo de execução que desejamos acessá-los. Para fazer isso, o `UIViewController` subclasse precisa declarar as propriedades e anotá-las com o atributo [Connect]. Assim:
+Isso carrega a interface do usuário do NIB. Agora, para acessar as saídas, é necessário informar ao tempo de execução que queremos acessá-las. Para fazer isso, a `UIViewController` subclasse precisa declarar as propriedades e anotá-las com o atributo [Connect]. Assim:
 
 ```csharp
 [Connect]
@@ -616,21 +622,21 @@ UITextField UserName {
 }
 ```
 
-A implementação de propriedade é aquele que, na verdade, busca e armazena o valor para o tipo nativo real.
+A implementação de propriedade é aquela que realmente busca e armazena o valor para o tipo nativo real.
 
-Você não precisa se preocupar sobre isso, ao usar o Visual Studio para Mac e InterfaceBuilder. O Visual Studio para Mac espelha automaticamente todos os as saídas declaradas com o código em uma classe parcial que é compilado como parte do seu projeto.
+Você não precisa se preocupar com isso ao usar Visual Studio para Mac e InterfaceBuilder. Visual Studio para Mac automaticamente espelha todas as saídas declaradas com código em uma classe parcial que é compilada como parte do seu projeto.
 
 #### <a name="selectors"></a>Seletores
 
-Um conceito central da programação Objective-C é seletores. Com frequência virão entre as APIs que exigem que você passe um seletor ou espera que seu código para responder a um seletor.
+Um conceito básico de programação Objective-C é seletores. Muitas vezes, você entrará em APIs que exigem que você passe um seletor ou espera que seu código responda a um seletor.
 
-Criando novos seletores no c# é muito fácil – basta você cria uma nova instância do `ObjCRuntime.Selector` de classe e usar o resultado em qualquer lugar na API que precisa dele. Por exemplo:
+Criar novos seletores no C# é muito fácil – basta criar uma nova instância da `ObjCRuntime.Selector` classe e usar o resultado em qualquer lugar na API que o exija. Por exemplo:
 
 ```csharp
 var selector_add = new Selector ("add:plus:");
 ```
 
-Para um c# responder de método a uma chamada de seletor, ela deve herdar do `NSObject` tipo e o método c# devem ser decoradas com o nome do seletor usando o `[Export]` atributo. Por exemplo:
+Para um C# método responder a uma chamada de seletor, ele deve herdar do `NSObject` tipo e o C# método deve ser decorado com o nome `[Export]` do seletor usando o atributo. Por exemplo:
 
 ```csharp
 public class MyMath : NSObject {
@@ -642,11 +648,11 @@ public class MyMath : NSObject {
 }
 ```
 
-Observe esse seletor nomes **deve** corresponder exatamente, incluindo todos os dois-pontos intermediários e à direita (":"), se estiver presente.
+Observe que os nomes de seletor **devem** corresponder exatamente, incluindo todos os dois-pontos intermediários e finais (":"), se estiverem presentes.
 
-#### <a name="nsobject-constructors"></a>Construtores de NSObject
+#### <a name="nsobject-constructors"></a>Construtores NSObject
 
-A maioria das classes no xamarin. IOS que derivam de `NSObject` irá expor construtores específicas para a funcionalidade do objeto, mas eles também irá expor vários construtores que não são imediatamente óbvios.
+A maioria das classes no Xamarin. Ios que `NSObject` derivam do irá expor construtores específicos à funcionalidade do objeto, mas eles também expõem vários construtores que não são imediatamente óbvios.
 
 Os construtores são usados da seguinte maneira:
 
@@ -654,47 +660,47 @@ Os construtores são usados da seguinte maneira:
 public Foo (IntPtr handle)
 ```
 
-Este construtor é usado para instanciar sua classe quando o tempo de execução precisa para mapear sua classe em uma classe não gerenciada. Isso acontece quando você carregar um arquivo XIB/NIB.  Neste ponto, o tempo de execução do Objective-C terá criado um objeto no mundo não gerenciado, e este construtor será chamado para inicializar o lado gerenciado.
+Esse construtor é usado para instanciar sua classe quando o tempo de execução precisa mapear sua classe para uma classe não gerenciada. Isso acontece quando você carrega um arquivo XIB/NIB.  Neste ponto, o tempo de execução do Objective-C criará um objeto no mundo não gerenciado, e esse construtor será chamado para inicializar o lado gerenciado.
 
-Normalmente, tudo o que você precisa fazer é chamar o construtor base com o parâmetro de identificação e no corpo, faça qualquer inicialização que é necessária.
+Normalmente, tudo o que você precisa fazer é chamar o construtor base com o parâmetro Handle e, no corpo, fazer qualquer inicialização necessária.
 
 ```csharp
 public Foo ()
 ```
 
-Este é o construtor padrão para uma classe e no xamarin. IOS fornecido classes, isso inicializa a classe Foundation.NSObject e todas as classes entre os dois e no final, encadeia isso o Objective-C `init` método na classe.
+Esse é o construtor padrão para uma classe e nas classes fornecidas pelo Xamarin. Ios, isso Inicializa a classe Foundation. NSObject e todas as classes entre e no final, encadeia isso para o método Objective-C `init` na classe.
 
 ```csharp
 public Foo (NSObjectFlag x)
 ```
 
-Este construtor é usado para inicializar a instância, mas impedir que o código de chamada ao método Objective-C "inicialização" no final. Você normalmente usa isso quando você já está registrado para a inicialização (quando você usa `[Export]` em seu construtor) ou quando você tiver feito sua inicialização por meio de outro média.
+Esse construtor é usado para inicializar a instância, mas impede que o código chame o método Objective-C "init" no final. Normalmente, você usa isso quando você já se registrou para inicialização (quando `[Export]` você usa em seu construtor) ou quando você já fez sua inicialização por outra média.
 
 ```csharp
 public Foo (NSCoder coder)
 ```
 
-Este construtor é fornecido para os casos em que o objeto está sendo inicializado de uma instância de NSCoding. Para obter mais informações, consulte da Apple [arquivos mortos e guia de programação de serialização.](https://developer.apple.com/mac/library/documentation/Cocoa/Conceptual/Archiving/index.html#//apple_ref/doc/uid/10000047i)
+Esse construtor é fornecido para os casos em que o objeto está sendo inicializado a partir de uma instância de NSCoding. Para obter mais informações, consulte [Guia de programação de arquivos e serialização](https://developer.apple.com/mac/library/documentation/Cocoa/Conceptual/Archiving/index.html#//apple_ref/doc/uid/10000047i) da Apple.
 
 #### <a name="exceptions"></a>Exceções
 
-O design de API do xamarin. IOS não gera exceções Objective-C como exceções em C#. O design impõe que nenhum lixo sejam enviadas para o mundo de Objective-C em primeiro lugar e que todas as exceções que devem ser produzidas são produzidas pela associação em si antes de dados inválidos nunca são passado para o mundo de Objective-C.
+O design da API do Xamarin. iOS não gera exceções de Objective C# -C como exceções. O design impõe que nenhum lixo seja enviado ao mundo Objective-C em primeiro lugar e que todas as exceções que devem ser produzidas sejam produzidas pela associação em si antes que dados inválidos sejam passados para o mundo Objective-C.
 
 #### <a name="notifications"></a>Notificações
 
-No iOS e nos X, os desenvolvedores podem assinar as notificações que são transmitidos pela plataforma subjacente. Isso é feito usando o `NSNotificationCenter.DefaultCenter.AddObserver` método. O `AddObserver` método utiliza dois parâmetros; um é a notificação de que você deseja assinar; a outra é o método a ser invocado quando a notificação é gerada.
+No iOS e no OS X, os desenvolvedores podem assinar as notificações que são transmitidas pela plataforma subjacente. Isso é feito usando o `NSNotificationCenter.DefaultCenter.AddObserver` método. O `AddObserver` método usa dois parâmetros; um é a notificação que você deseja assinar; o outro é o método a ser invocado quando a notificação é gerada.
 
-No xamarin. IOS e xamarin. Mac, as chaves de várias notificações são hospedadas na classe que dispara as notificações. Por exemplo, as notificações são gerados pelo `UIMenuController` forem hospedados como `static NSString` propriedades no `UIMenuController` classes que terminam com o nome "Notificação".
+No Xamarin. iOS e no Xamarin. Mac, as chaves para as várias notificações são hospedadas na classe que dispara as notificações. Por exemplo, as notificações geradas pelo `UIMenuController` são hospedadas `static NSString` como propriedades nas `UIMenuController` classes que terminam com o nome "notificação".
 
 ### <a name="memory-management"></a>Gerenciamento de memória
 
-Xamarin. IOS tem um coletor de lixo se encarregará de liberação de recursos para você quando eles não estão mais em uso. Além do coletor de lixo, todos os objetos que derivam `NSObject` implementar o `System.IDisposable` interface.
+O Xamarin. iOS tem um coletor de lixo que cuidará da liberação de recursos para você quando eles não estiverem mais em uso. Além do coletor de lixo, todos os objetos que derivam `NSObject` de implementam a `System.IDisposable` interface.
 
 #### <a name="nsobject-and-idisposable"></a>NSObject e IDisposable
 
-Expondo o `IDisposable` interface é uma maneira conveniente de auxiliar os desenvolvedores na liberação de objetos que podem encapsular grandes blocos de memória (por exemplo, um `UIImage` pode parecer com apenas um ponteiro inocente, mas poderia estar apontando para uma imagem de 2 MB ) e outros recursos importantes e finitos (como um buffer de decodificação de vídeo).
+Expor a `IDisposable` interface é uma maneira conveniente de auxiliar os desenvolvedores na liberação de objetos que podem encapsular grandes blocos de memória (por exemplo, um `UIImage` pode parecer apenas um ponteiro inocente, mas pode estar apontando para uma imagem de 2 megabytes ) e outros recursos importantes e finitos (como um buffer de decodificação de vídeo).
 
-NSObject implementa a interface IDisposable e também a [padrão de descarte de .NET](https://msdn.microsoft.com/library/fs2xkftw.aspx). Isso permite que os desenvolvedores que a subclasse NSObject para substituir o comportamento de Dispose e liberar seus próprios recursos sob demanda. Por exemplo, considere esse controlador de exibição que mantém em torno de uma porção de imagens:
+NSObject implementa a interface IDisposable e também o [padrão de descarte .net](https://msdn.microsoft.com/library/fs2xkftw.aspx). Isso permite aos desenvolvedores que a subclasse NSObject substitua o comportamento Dispose e libere seus próprios recursos sob demanda. Por exemplo, considere esse controlador de exibição que mantém um monte de imagens:
 
 ```csharp
 class MenuViewController : UIViewController {
@@ -712,7 +718,7 @@ class MenuViewController : UIViewController {
 }
 ```
 
-Quando um objeto gerenciado é descartado, ele não é mais útil. Você ainda pode ter uma referência a objetos, mas o objeto para todas as intenções e finalidades é inválido neste momento. Algumas APIs .NET garantir isso gerando um ObjectDisposedException se você tentar acessar quaisquer métodos em um objeto descartado, por exemplo:
+Quando um objeto gerenciado é Descartado, ele não é mais útil. Você ainda pode ter uma referência aos objetos, mas o objeto é para todas as intenções e finalidades inválidas neste ponto. Algumas APIs do .NET garantem isso lançando um ObjectDisposedException se você tentar acessar qualquer método em um objeto descartado, por exemplo:
 
 ```csharp
 var image = UIImage.FromFile ("demo.png");
@@ -720,21 +726,21 @@ image.Dispose ();
 image.XXX = false;  // this at this point is an invalid operation
 ```
 
-Mesmo se você ainda pode acessar a variável "image", é realmente uma referência inválida e não aponta para o objeto Objective-C que mantinha a imagem.
+Mesmo que você ainda possa acessar a variável "Image", ela é, na verdade, uma referência inválida e não aponta mais para o objeto Objective-C que ocupou a imagem.
 
-Mas o descarte um objeto na linguagem c# não significa que o objeto necessariamente será destruído. Tudo que você faz é liberar a referência de c# tinha para o objeto. É possível que o ambiente do Cocoa talvez manteve uma referência ao redor para seu próprio uso. Por exemplo, se você definir a propriedade de imagem de um UIImageView para uma imagem e, em seguida, descarte a imagem, o UIImageView subjacente que tinha pegado sua própria referência e manterá uma referência a esse objeto até que ela seja concluída usá-lo.
+Mas descartar um C# objeto no não significa que o objeto será necessariamente destruído. Tudo o que você faz é liberar a C# referência que tinha ao objeto. É possível que o ambiente Cocoa tenha mantido uma referência para seu próprio uso. Por exemplo, se você definir a propriedade Image de UIImageView como uma imagem e, em seguida, descartar a imagem, o UIImageView subjacente terá obtido sua própria referência e manterá uma referência a esse objeto até que ele seja concluído usando-o.
 
 #### <a name="when-to-call-dispose"></a>Quando chamar Dispose
 
-Você deve chamar Dispose quando precisar Mono nos livrar-se de seu objeto. Um caso de uso possível é quando Mono não tem nenhum conhecimento de que seu NSObject, na verdade, está mantendo uma referência a um recurso importante, como memória ou um pool de informações. Nesses casos, você deve chamar Dispose para liberar imediatamente a referência na memória, em vez de aguardar o Mono executar um ciclo de coleta de lixo.
+Você deve chamar Dispose Quando precisar de mono para livrar-se do seu objeto. Um possível caso de uso é quando o mono não tem conhecimento de que sua NSObject está realmente mantendo uma referência a um recurso importante, como memória, ou um pool de informações. Nesses casos, você deve chamar Dispose para liberar imediatamente a referência à memória, em vez de aguardar que o mono execute um ciclo de coleta de lixo.
 
-Internamente, quando cria Mono [NSString faz referência de cadeias de caracteres c#](~/ios/internals/api-design/nsstring.md), ele descartará-los imediatamente para reduzir a quantidade de trabalho que o coletor de lixo precisa fazer. Quanto menos objetos para lidar com, mais rápido, o GC serão executado.
+Internamente, quando o mono cria [referências NSString C# de cadeias de caracteres](~/ios/internals/api-design/nsstring.md), ele as descartará imediatamente para reduzir a quantidade de trabalho que o coletor de lixo precisa fazer. Quanto menos objetos forem abordados, mais rápido será a execução do GC.
 
-#### <a name="when-to-keep-references-to-objects"></a>Quando se deve manter referências a objetos
+#### <a name="when-to-keep-references-to-objects"></a>Quando manter referências a objetos
 
-Um efeito colateral com gerenciamento automático de memória é que o GC se livrar dos objetos não utilizados desde que nenhuma referência a eles. Isso às vezes, pode ter efeitos colaterais surpreendentes, por exemplo, se você criar uma variável local para armazenar seu controlador de exibição de nível superior, ou a janela de nível superior e, em seguida, acionando esses desaparecer por trás de seu backup.
+Um efeito colateral de que o gerenciamento automático de memória tem é que o GC se livrar de objetos não utilizados, desde que não haja nenhuma referência a eles. Isso às vezes pode ter efeitos colaterais surpreendentes, por exemplo, se você criar uma variável local para manter seu controlador de exibição de nível superior ou sua janela de nível superior e, em seguida, os desaparecerem por trás de volta.
 
-Se você não mantiver uma referência em seu estático ou variáveis de instância para seus objetos, Mono Felizmente chamará o método Dispose ()-los e eles vão lançar a referência ao objeto. Como isso pode ser a referência somente pendente, o tempo de execução do Objective-C destruirá o objeto para você.
+Se você não mantiver uma referência em suas variáveis estática ou de instância para seus objetos, o mono chamará o método Dispose () neles, e eles liberarão a referência ao objeto. Como essa pode ser a única referência pendente, o tempo de execução do Objective-C destruirá o objeto para você.
 
 ## <a name="related-links"></a>Links relacionados
 

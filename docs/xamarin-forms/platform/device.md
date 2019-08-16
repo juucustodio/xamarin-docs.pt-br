@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/12/2019
-ms.openlocfilehash: 1aacd9a29ca13335d14f66175b2d2a4ccb19c9dc
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 802f9ff60f74914a9369c7ef281cb2e70ca01d4b
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655965"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69529064"
 ---
 # <a name="xamarinforms-device-class"></a>Classe de dispositivo do xamarin. Forms
 
@@ -71,12 +71,12 @@ Como alternativa, o `OnPlatform` extensão de marcação pode ser usada em XAML 
 
 O `Device.Idiom` propriedade pode ser usada para alterar os layouts ou funcionalidade dependendo do dispositivo em que o aplicativo está em execução no. O [ `TargetIdiom` ](xref:Xamarin.Forms.TargetIdiom) enumeração contém os seguintes valores:
 
--  **Telefone** – iPhone, iPod touch e dispositivos Android mais estreitos do que 600 quedas ^
--  **Tablet** – iPad, dispositivos Windows e dispositivos Android mais de 600 quedas ^
--  **Área de trabalho** – somente retornado no [aplicativos da UWP](~/xamarin-forms/platform/windows/installation/index.md) em computadores desktop do Windows 10 (retorna `Phone` em dispositivos móveis do Windows, incluindo em cenários de continuidade)
--  **TV** – dispositivos Tizen TV
--  **Assista** – Tizen dispositivos de inspeção
--  **Não há suporte para** – não utilizados
+- **Telefone** – iPhone, iPod touch e dispositivos Android mais estreitos do que 600 quedas ^
+- **Tablet** – iPad, dispositivos Windows e dispositivos Android mais de 600 quedas ^
+- **Área de trabalho** – somente retornado no [aplicativos da UWP](~/xamarin-forms/platform/windows/installation/index.md) em computadores desktop do Windows 10 (retorna `Phone` em dispositivos móveis do Windows, incluindo em cenários de continuidade)
+- **TV** – dispositivos Tizen TV
+- **Assista** – Tizen dispositivos de inspeção
+- **Não há suporte para** – não utilizados
 
 *^ dips não é necessariamente a contagem de pixel físico*
 

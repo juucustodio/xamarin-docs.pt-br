@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: a27bc699d6c7a77c8a970e363ca55bf54751df66
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 32cb0e376646478ad01a6ea7784094d23529b0b4
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655634"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528613"
 ---
 # <a name="populating-a-table-with-data-in-xamarinios"></a>Populando uma tabela com dados no Xamarin. iOS
 
@@ -34,8 +34,8 @@ Uma `UITableViewSource` subclasse é atribuída a cada `UITableView`. A exibiç�
 
 Há apenas dois métodos obrigatórios necessários para fazer uma tabela exibir dados:
 
--   **RowsInSection** – retorna uma [`nint`](~/cross-platform/macios/nativetypes.md) contagem do número total de linhas de dados que a tabela deve exibir.
--   **GetCell** – retorna um `UITableCellView` populado com dados para o índice de linha correspondente passado para o método.
+- **RowsInSection** – retorna uma [`nint`](~/cross-platform/macios/nativetypes.md) contagem do número total de linhas de dados que a tabela deve exibir.
+- **GetCell** – retorna um `UITableCellView` populado com dados para o índice de linha correspondente passado para o método.
 
 
 O arquivo de exemplo Basictable **TableSource.cs** tem a implementação mais simples possível `UITableViewSource`do. Você pode ver no trecho de código abaixo que ele aceita uma matriz de cadeias de caracteres para exibir na tabela e retorna um estilo de célula padrão contendo cada cadeia de caracteres:
@@ -239,9 +239,9 @@ keys = indexedTableItems.Keys.ToArray ();
 
 A `UITableViewSource` subclasse, em seguida, precisa dos seguintes métodos adicionados ou modificados `Dictionary<>` para usar:
 
--   **NumberOfSections** – esse método é opcional, por padrão, a tabela pressupõe uma seção. Ao exibir um índice, esse método deve retornar o número de itens no índice (por exemplo, 26 se o índice contiver todas as letras do alfabeto em inglês).
--   **RowsInSection** – retorna o número de linhas em uma determinada seção.
--   **SectionIndexTitles** – retorna a matriz de cadeias de caracteres que será usada para exibir o índice. O código de exemplo retorna uma matriz de letras.
+- **NumberOfSections** – esse método é opcional, por padrão, a tabela pressupõe uma seção. Ao exibir um índice, esse método deve retornar o número de itens no índice (por exemplo, 26 se o índice contiver todas as letras do alfabeto em inglês).
+- **RowsInSection** – retorna o número de linhas em uma determinada seção.
+- **SectionIndexTitles** – retorna a matriz de cadeias de caracteres que será usada para exibir o índice. O código de exemplo retorna uma matriz de letras.
 
 
 Os métodos atualizados no arquivo de exemplo **BasicTableIndex/TableName. cs** têm a seguinte aparência:
@@ -275,8 +275,8 @@ O resultado terá a seguinte aparência:
 
 Para exibir cabeçalhos e rodapés, `UITableViewSource` a subclasse requer estes métodos adicionais:
 
--   **TitleForHeader** – retorna o texto a ser usado como o cabeçalho
--   **TitleForFooter** – retorna o texto a ser usado como o rodapé.
+- **TitleForHeader** – retorna o texto a ser usado como o cabeçalho
+- **TitleForFooter** – retorna o texto a ser usado como o rodapé.
 
 
 Os métodos atualizados no arquivo de exemplo **BasicTableHeaderFooter/Code/TableName. cs** têm a seguinte aparência:

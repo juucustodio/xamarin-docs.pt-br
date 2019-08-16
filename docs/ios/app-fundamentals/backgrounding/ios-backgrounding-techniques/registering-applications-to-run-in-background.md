@@ -1,54 +1,54 @@
 ---
-title: Registrar aplicativos do xamarin. IOS para execução em segundo plano
-description: Este documento descreve como registrar um aplicativo xamarin. IOS para ser executado em segundo plano. Ele aborda áudio aplicativos, VoIP aplicativos, Acessórios externos e bluetooth e muito mais.
+title: Registrando aplicativos Xamarin. iOS para serem executados em segundo plano
+description: Este documento descreve como registrar um aplicativo Xamarin. iOS para ser executado em segundo plano. Ele aborda aplicativos de áudio, aplicativos de VoIP, acessórios externos e Bluetooth e muito mais.
 ms.prod: xamarin
 ms.assetid: 8F89BE63-DDB5-4740-A69D-F60AEB21150D
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: a0a66571d0249ef6fd65ff382f14c38f48a8af37
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 67cc2028276b6e1415c88cb8957e2cd567fa5bae
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61393684"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69521268"
 ---
-# <a name="registering-xamarinios-apps-to-run-in-the-background"></a>Registrar aplicativos do xamarin. IOS para execução em segundo plano
+# <a name="registering-xamarinios-apps-to-run-in-the-background"></a>Registrando aplicativos Xamarin. iOS para serem executados em segundo plano
 
-Registrando tarefas individuais do plano de fundo privilégios funciona para alguns aplicativos, mas o que acontece se um aplicativo constantemente é chamado para executar tarefas importantes de longa, como obter direções para o usuário por meio do GPS? Aplicativos como esses em vez disso, devem ser registrados como aplicativos conhecidos do plano de fundo necessário.
+O registro de tarefas individuais para privilégios em segundo plano funciona para alguns aplicativos, mas o que acontece se um aplicativo é constantemente chamado para executar tarefas importantes e de execução longa, como obter direções para o usuário via GPS? Aplicativos como esses devem ser registrados como aplicativos necessários em segundo plano conhecidos.
 
-Ao registrar um aplicativo de sinais para iOS que o aplicativo deve ser emitido privilégios especiais necessários para executar tarefas em segundo plano.
+O registro de um aplicativo sinaliza para o iOS que o aplicativo deve receber privilégios especiais necessários para executar tarefas em segundo plano.
 
-## <a name="application-registration-categories"></a>Categorias de registro de aplicativo
+## <a name="application-registration-categories"></a>Categorias de registro do aplicativo
 
-Aplicativos registrados podem se enquadrar em várias categorias:
+Os aplicativos registrados podem se enquadrar em várias categorias:
 
--  **Áudio** -players de música e outros aplicativos que funcionam com o conteúdo de áudio podem ser registrados para continuar a reprodução de áudio, mesmo quando o aplicativo não está mais em primeiro plano. Se um aplicativo nessa categoria tenta fazer algo diferente de reproduzir áudio ou baixar enquanto estiver no plano de fundo, o iOS a encerrará.
--  **VoIP** -aplicativos de voz sobre IP (VoIP) get do mesmos privilégios concedidos a aplicativos de áudio ao manter processamento de áudio em segundo plano. Eles também têm permissão para responder conforme necessário para os serviços de VoIP que ativá-las para manter suas conexões ativas.
--  **Bluetooth e Acessórios externos** -reservada para aplicativos que precisam se comunicar com dispositivos Bluetooth e outros acessórios de hardware externo, registro sob essas categorias permite que o aplicativo permanecer conectado ao hardware.
--  **Newsstand** -aplicativo de um Newsstand pode continuar a sincronizar o conteúdo em segundo plano.
--  **Local** – aplicativos que fazem usam do GPS ou dados de local de rede podem enviar e receber atualizações de local em segundo plano.
--  **Busca (iOS 7 +)** : um aplicativo registrado para privilégios de busca em segundo plano podem verificar um provedor para o novo conteúdo em intervalos regulares, apresentando ao usuário a conteúdo atualizado quando eles retornarem ao aplicativo.
--  **Notificações remotas (iOS 7 +)** -aplicativos podem se registrar para receber notificações de um provedor e usar a notificação para disparar uma atualização antes do usuário abre o aplicativo. As notificações podem vêm na forma de notificações por push ou optar por ativar o aplicativo silenciosamente.
+- **Áudio** – players de música e outros aplicativos que funcionam com conteúdo de áudio podem ser registrados para continuar reproduzindo áudio mesmo quando o aplicativo não estiver mais em primeiro plano. Se um aplicativo nesta categoria tentar fazer algo diferente de reproduzir áudio ou baixar enquanto estiver em segundo plano, o iOS o encerrará.
+- **VoIP** -os aplicativos VoIP (Voice over Internet Protocol) obtêm os mesmos privilégios concedidos a aplicativos de áudio para manter o processamento de áudio em segundo plano. Eles também podem responder conforme necessário para os serviços de VoIP que os alimentam, para manter suas conexões ativas.
+- **Acessórios externos e Bluetooth** -reservado para aplicativos que precisam se comunicar com dispositivos Bluetooth e outros acessórios de hardware externo, o registro nessas categorias permite que o aplicativo permaneça conectado ao hardware.
+- **Newsstand** -um aplicativo Newsstand pode continuar a sincronizar conteúdo em segundo plano.
+- **Local** -os aplicativos que fazem uso de GPS ou dados de localização de rede podem enviar e receber atualizações de local em segundo plano.
+- **Fetch (Ios 7 +)** -um aplicativo registrado para privilégios de busca em segundo plano pode verificar um provedor em busca de conteúdo novo em intervalos regulares, apresentando ao usuário o conteúdo atualizado quando eles retornam ao aplicativo.
+- **Notificações remotas (Ios 7 +)** -os aplicativos podem se registrar para receber notificações de um provedor e usar a notificação para iniciar uma atualização antes que o usuário abra o aplicativo. As notificações podem vir na forma de notificações por Push ou optar por ativar o aplicativo silenciosamente.
 
 
-Aplicativos podem ser registrados, definindo o **modos de segundo plano necessários** propriedade na caixa de diálogo *Info. plist*. Um aplicativo pode registrar no tantas categorias quantas requer:
+Os aplicativos podem ser registrados definindo a propriedade de **modos de segundo plano necessária** no *info. plist*do aplicativo. Um aplicativo pode se registrar em quantas categorias forem necessárias:
 
- [![](registering-applications-to-run-in-background-images/bgmodes.png "Definir os modos em segundo plano")](registering-applications-to-run-in-background-images/bgmodes.png#lightbox)
+ [![](registering-applications-to-run-in-background-images/bgmodes.png "Configurando os modos de segundo plano")](registering-applications-to-run-in-background-images/bgmodes.png#lightbox)
 
-Para obter um guia passo a passo para registrar um aplicativo para atualizações de localização em segundo plano, consulte o [instruções passo a passo de localização do plano de fundo](~/ios/app-fundamentals/backgrounding/ios-backgrounding-walkthroughs/location-walkthrough.md).
+Para obter um guia passo a passo para registrar um aplicativo para atualizações de local de segundo plano, consulte o [passo a passos local do plano de fundo](~/ios/app-fundamentals/backgrounding/ios-backgrounding-walkthroughs/location-walkthrough.md).
 
-## <a name="application-does-not-run-in-background-property"></a>Aplicativo não é executado na propriedade de plano de fundo
+## <a name="application-does-not-run-in-background-property"></a>O aplicativo não é executado na propriedade de segundo plano
 
-Outra propriedade que pode ser definida em *Info. plist* é o *aplicativo não é executado em segundo plano*, ou `UIApplicationExitsOnSuspend` propriedade:
+Outra propriedade que pode ser definida em *info. plist* é o *aplicativo não é executado em segundo plano*ou `UIApplicationExitsOnSuspend` Propriedade:
 
- [![](registering-applications-to-run-in-background-images/plist.png "Desabilitando em segundo plano em execução")](registering-applications-to-run-in-background-images/plist.png#lightbox)
+ [![](registering-applications-to-run-in-background-images/plist.png "Desabilitando a execução em segundo plano")](registering-applications-to-run-in-background-images/plist.png#lightbox)
 
-Isso tem exatamente o mesmo efeito que definir a configuração de atualização de aplicativo em segundo plano a desativado no iOS 7 +, exceto que ele só pode ser alterado no lado do desenvolvedor e está disponível para iOS 4 e acima. O aplicativo será suspensa imediatamente depois de inserir o plano de fundo e não será capaz de fazer qualquer processamento.
+Isso tem exatamente o mesmo efeito que definir a configuração de atualização do aplicativo em segundo plano como off no iOS 7 +, exceto que só pode ser alterada no lado do desenvolvedor e está disponível para o iOS 4 e superior. O aplicativo será suspenso imediatamente após a inserção do plano de fundo e não poderá fazer nenhum processamento.
 
-Use essa propriedade se seu aplicativo não foi projetado para lidar com processamento em segundo plano, pois ela ajuda a evitar um comportamento inesperado.
+Use essa propriedade se seu aplicativo não for projetado para lidar com o processamento em segundo plano, pois ajuda a evitar um comportamento inesperado.
 
 ## <a name="background-fetch-and-remote-notifications"></a>Busca em segundo plano e notificações remotas
 
-Busca em segundo plano e notificações remotas são categorias de registro especial introduzidas no iOS 7. Essas categorias permitem que os aplicativos receber o novo conteúdo de um provedor e de atualização em segundo plano. A próxima seção explora a busca e notificações remotas mais detalhadamente e também apresenta reconhecimento de locais como meio para atualizar um aplicativo em segundo plano no iOS 6.
+A busca em segundo plano e as notificações remotas são categorias de registro especiais introduzidas no iOS 7. Essas categorias permitem que os aplicativos recebam novo conteúdo de um provedor e atualizem em segundo plano. A próxima seção explora as notificações de busca e remota com mais detalhes e também apresenta o reconhecimento de local como meio de atualizar um aplicativo em segundo plano no iOS 6.

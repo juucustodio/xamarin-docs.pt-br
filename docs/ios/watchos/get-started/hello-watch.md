@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 12/14/2016
-ms.openlocfilehash: 7bc728360c26321c16839c5d67b93a91d2593602
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 26c418355c83da807d6dfa514e58f9bf1675759f
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655507"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528419"
 ---
 # <a name="hello-watchos--walkthrough"></a>Olá, watchOS – Walkthrough
 
@@ -43,10 +43,10 @@ Você deve ser capaz de executar seu aplicativo Watch agora, mas como o arquivo 
 Clique duas vezes na interface. Storyboard em seu aplicativo Watch para iniciar o Xamarin iOS designer (se você estiver em um Mac, você também pode clicar com o botão direito do mouse e **abrir com > Xcode Interface Builder**)
 
 
-1.  Verifique se a **caixa de ferramentas** e os painéis de **Propriedades** estão visíveis,
-1.  Clique para selecionar o controlador de interface,
-1.  Defina o identificador e o título do controlador de interface como **interfaceController** e **Hi Watch**,
-1.  Verifique se a **classe** está definida como **InterfaceController**
+1. Verifique se a **caixa de ferramentas** e os painéis de **Propriedades** estão visíveis,
+1. Clique para selecionar o controlador de interface,
+1. Defina o identificador e o título do controlador de interface como **interfaceController** e **Hi Watch**,
+1. Verifique se a **classe** está definida como **InterfaceController**
 
     ![](hello-watch-images/interfacecontrollerattributes.png "Definir o identificador e o título do controlador de interface como interfaceController e Hi Watch")
 
@@ -54,10 +54,10 @@ Clique duas vezes na interface. Storyboard em seu aplicativo Watch para iniciar 
 
 Clique duas vezes na interface. Storyboard em seu aplicativo Watch para editar com o Xamarin iOS designer no Visual Studio:
 
-1.  Abra o painel Propriedades;
-1.  Altere a classe para **InterfaceController**;
-1.  Clique no controlador de interface; e
-1.  Defina o identificador e o título do controlador de interface como **interfaceController** e **Hi Watch**.
+1. Abra o painel Propriedades;
+1. Altere a classe para **InterfaceController**;
+1. Clique no controlador de interface; e
+1. Defina o identificador e o título do controlador de interface como **interfaceController** e **Hi Watch**.
 
     ![](hello-watch-images/vs-interfacecontrollerattributes.png "Definir o identificador e o título do controlador de interface como interfaceController e Hi Watch")
 

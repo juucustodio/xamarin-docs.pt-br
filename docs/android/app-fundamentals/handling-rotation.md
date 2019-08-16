@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: b1039dd433456731b775399ab42222fe0e4cc6d9
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 198d667ea52fcad4758c2845e5f2e935d1f74a0b
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68644365"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69521114"
 ---
 # <a name="handling-rotation"></a>Tratamento de rotação
 
@@ -25,9 +25,9 @@ Como os dispositivos móveis são facilmente girados, a rotação interna é um 
 
 Este guia examina os seguintes tópicos de orientação:
 
--   **Rotação de layout** declarativo &ndash; Como usar o sistema de recursos do Android para criar aplicativos com reconhecimento de orientação, incluindo como carregar layouts e drawables para orientações específicas.
+- **Rotação de layout** declarativo &ndash; Como usar o sistema de recursos do Android para criar aplicativos com reconhecimento de orientação, incluindo como carregar layouts e drawables para orientações específicas.
 
--   **Rotação de layout programática** &ndash; Como adicionar controles programaticamente e como tratar as alterações de orientação manualmente.
+- **Rotação de layout programática** &ndash; Como adicionar controles programaticamente e como tratar as alterações de orientação manualmente.
 
 
 ## <a name="handling-rotation-declaratively-with-layouts"></a>Tratamento de rotação declarativamente com layouts
@@ -35,9 +35,9 @@ Este guia examina os seguintes tópicos de orientação:
 Ao incluir arquivos em pastas que seguem convenções de nomenclatura, o Android carrega automaticamente os arquivos apropriados quando a orientação é alterada.
 Isso inclui suporte para:
 
--   *Recursos de layout* &ndash; Especificar quais arquivos de layout são desinflados para cada orientação.
+- *Recursos de layout* &ndash; Especificar quais arquivos de layout são desinflados para cada orientação.
 
--   *Recursos de desenho* &ndash; Especificar quais drawables são carregados para cada orientação.
+- *Recursos de desenho* &ndash; Especificar quais drawables são carregados para cada orientação.
 
 
 ### <a name="layout-resources"></a>Recursos de layout
@@ -133,12 +133,12 @@ Vamos supor ainda que uma versão diferente de **macaco. png** esteja incluída 
 
 Para adicionar controles programaticamente, um aplicativo precisa executar as seguintes etapas:
 
--  Crie um layout.
--  Definir parâmetros de layout.
--  Criar controles.
--  Definir parâmetros de layout de controle.
--  Adicione controles ao layout.
--  Defina o layout como a exibição de conteúdo.
+- Crie um layout.
+- Definir parâmetros de layout.
+- Criar controles.
+- Definir parâmetros de layout de controle.
+- Adicione controles ao layout.
+- Defina o layout como a exibição de conteúdo.
 
 Por exemplo, considere uma interface do usuário que consiste em um `TextView` único controle adicionado a `RelativeLayout`um, conforme mostrado no código a seguir.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: dd935e6feb14d9077c1ad98a2e7e10e67646dc4f
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: f77a4f2f31c72726515e33dc273616f175df2891
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68650112"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528532"
 ---
 # <a name="creating-user-interface-objects-in-xamarinios"></a>Criando objetos da interface do usuário no Xamarin. iOS
 
@@ -28,9 +28,9 @@ Todos os controles discutidos neste capítulo estão no namespace UIKit e cada n
 
 Você pode editar os controles e layouts da interface do usuário de três maneiras:
 
--  **[Xamarin Ios designer](~/ios/user-interface/designer/index.md)** – use o designer de layout interno do xamarin para criar telas. Clique duas vezes em arquivos storyboard ou XIB para editar com o designer interno.
--  **Interface Builder do Xcode** – arraste os controles para os layouts de tela com interface Builder. Abra o arquivo storyboard ou XIB no Xcode clicando com o botão direito do mouse no arquivo na **painel de soluções** e escolhendo **abrir com > Xcode Interface Builder**.
--  **O C# uso** de – controles também pode ser construído programaticamente com o código e adicionado à hierarquia de exibição.
+- **[Xamarin Ios designer](~/ios/user-interface/designer/index.md)** – use o designer de layout interno do xamarin para criar telas. Clique duas vezes em arquivos storyboard ou XIB para editar com o designer interno.
+- **Interface Builder do Xcode** – arraste os controles para os layouts de tela com interface Builder. Abra o arquivo storyboard ou XIB no Xcode clicando com o botão direito do mouse no arquivo na **painel de soluções** e escolhendo **abrir com > Xcode Interface Builder**.
+- **O C# uso** de – controles também pode ser construído programaticamente com o código e adicionado à hierarquia de exibição.
 
 Novos arquivos de storyboard e XIB podem ser adicionados clicando com o botão direito do mouse em um projeto do iOS e escolhendo **adicionar > novo arquivo...** .
 
@@ -92,12 +92,12 @@ Para obter mais informações sobre como o Interface Builder do Xcode se integra
 
 Se você decidir criar programaticamente um objeto de interface C# do usuário usando (em um modo de exibição ou controlador de exibição, por exemplo), siga estas etapas:
 
--  Declare um campo de nível de classe para o objeto da interface do usuário. Crie o próprio controle uma vez, `ViewDidLoad` em por exemplo. O objeto pode então ser referenciado em todos os métodos de ciclo de vida do controlador de exibição (por exemplo,
+- Declare um campo de nível de classe para o objeto da interface do usuário. Crie o próprio controle uma vez, `ViewDidLoad` em por exemplo. O objeto pode então ser referenciado em todos os métodos de ciclo de vida do controlador de exibição (por exemplo,
 `ViewWillAppear`).
--  Crie um `CGRect` que defina o quadro do controle (suas coordenadas X e Y na tela, bem como sua largura e altura). Você precisará certificar-se de ter uma `using CoreGraphics` diretiva para isso.
--  Chame o construtor para criar e atribuir o controle.
--  Defina quaisquer propriedades ou manipuladores de eventos.
--  Chame `Add()` para adicionar o controle à hierarquia de exibição.
+- Crie um `CGRect` que defina o quadro do controle (suas coordenadas X e Y na tela, bem como sua largura e altura). Você precisará certificar-se de ter uma `using CoreGraphics` diretiva para isso.
+- Chame o construtor para criar e atribuir o controle.
+- Defina quaisquer propriedades ou manipuladores de eventos.
+- Chame `Add()` para adicionar o controle à hierarquia de exibição.
 
 Aqui está um exemplo simples de criação de `UILabel` um em um controlador de C#exibição usando:
 

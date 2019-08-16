@@ -1,46 +1,46 @@
 ---
-title: Parâmetros de nomenclatura com Javadoc
-description: Este artigo explica como recuperar os nomes de parâmetro em um projeto de associação do Java usando o Javadoc gerado a partir do projeto Java.
+title: Nomeando parâmetros com Javadoc
+description: Este artigo explica como recuperar nomes de parâmetro em um projeto de associação Java usando o Javadoc gerado a partir do projeto Java.
 ms.prod: xamarin
 ms.assetid: 59E8EF16-1322-486A-BB16-353804B77356
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/20/2017
-ms.openlocfilehash: e394377043953a297afed36a3ce0747a3e6d1512
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 77cd5ac86a24769947eefb6941229c56efc3297b
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60955865"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69524569"
 ---
-# <a name="naming-parameters-with-javadoc"></a>Parâmetros de nomenclatura com Javadoc
+# <a name="naming-parameters-with-javadoc"></a>Nomeando parâmetros com Javadoc
 
-_Este artigo explica como recuperar os nomes de parâmetro em um projeto de associação do Java usando o Javadoc gerado a partir do projeto Java._
+_Este artigo explica como recuperar nomes de parâmetro em um projeto de associação Java usando o Javadoc gerado a partir do projeto Java._
 
 
 ## <a name="overview"></a>Visão geral
 
-Ao associar uma biblioteca Java existente, alguns metadados sobre a API associada serão perdido. Em particular os nomes dos parâmetros para métodos. Nomes de parâmetro aparecerá como `p0`, `p1`, etc. Isso ocorre porque o Java `.class` arquivos não preservam os nomes de parâmetros que foram usados no código-fonte Java. 
+Ao associar uma biblioteca Java existente, alguns metadados sobre a API associada são perdidos. Em particular, os nomes dos parâmetros para os métodos. Os nomes de parâmetro serão `p0`exibidos `p1`como, etc. Isso ocorre porque os arquivos `.class` Java não preservam os nomes de parâmetro que foram usados no código-fonte Java. 
 
-Um projeto de associação do xamarin. Android Java pode fornecer os nomes de parâmetro se ele tem acesso ao HTML Javadoc da biblioteca original. 
+Um projeto de associação Java do Xamarin. Android pode fornecer os nomes de parâmetro se ele tiver acesso ao HTML do Javadoc a partir da biblioteca original. 
 
-## <a name="integrating-javadoc-html-into-a-java-binding-project"></a>A integração do Javadoc HTML em um projeto de associação de Java
+## <a name="integrating-javadoc-html-into-a-java-binding-project"></a>Integrando o Javadoc HTML em um projeto de associação Java
 
-Integrar o Javadoc HTML em um projeto Java de associação é um processo manual que consiste das seguintes etapas: 
+A integração do HTML do Javadoc a um projeto de associação Java é um processo manual que consiste nas seguintes etapas: 
 
-1.  Baixe o Javadoc para a biblioteca
-2.  Editar o `.csproj` arquivo e adicione um `<JavaDocPaths>` propriedade:
-3.  Limpe e recompile o projeto
+1. Baixar o Javadoc para a biblioteca
+2. Edite `.csproj` o arquivo e adicione `<JavaDocPaths>` uma propriedade:
+3. Limpar e recompilar o projeto
 
-Depois que isso for feito, os nomes de parâmetro Java originais devem estar presentes nas APIs associadas por um projeto de associação de Java. 
+Depois que isso for feito, os nomes de parâmetro Java originais deverão estar presentes nas APIs associadas por um projeto de associação Java. 
 
 
 > [!NOTE]
-> Há uma grande quantidade de variação na saída do JavaDoc. A. Cadeia de ferramentas do JAR associação não dá suporte a cada permutação possíveis única e, consequentemente, alguns parâmetros podem não ser chamados corretamente.
+> Há uma grande quantidade de variação na saída do JavaDoc. Dos. A associação de JAR ferramentas não dá suporte a todas as permutações possíveis e, consequentemente, alguns parâmetros podem não ser nomeados corretamente.
 
 
 ## <a name="summary"></a>Resumo
 
-Este artigo abordado como usar o Javadoc em um projeto de associação de Java para fornecer nomes de parâmetro de significado para APIs associadas. 
+Este artigo abordou como usar o Javadoc em um projeto de associação Java para fornecer nomes de parâmetro para APIs associadas. 
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/25/2018
-ms.openlocfilehash: 0099414529027a9a6e52b79393cfa6f0f3bc24d6
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 1f6fa57bbe47bbc2fe97bbd0df7018fc1cd3897a
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68647797"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69522175"
 ---
 # <a name="setup-and-installation"></a>Instalação e Configuração
 
@@ -22,13 +22,13 @@ _Este artigo explica as etapas de instalação e os detalhes de configuração n
 
 O seguinte é necessário para criar aplicativos de desgaste do Android baseados em Xamarin:
 
--   **Visual Studio ou Visual Studio para Mac** &ndash; A Comunidade do Visual Studio 2017 ou posterior é necessária.
+- **Visual Studio ou Visual Studio para Mac** &ndash; A Comunidade do Visual Studio 2017 ou posterior é necessária.
 
--   **Xamarin. Android** &ndash; xamarin. Android 4,17 ou posterior deve ser instalado e configurado com o Visual Studio ou Visual Studio para Mac.
+- **Xamarin. Android** &ndash; xamarin. Android 4,17 ou posterior deve ser instalado e configurado com o Visual Studio ou Visual Studio para Mac.
 
--   O **SDK do Android** -SDK do Android 5.0.1 (API 21) ou posterior deve ser instalado por meio do gerenciador de SDK do Android.
+- O **SDK do Android** -SDK do Android 5.0.1 (API 21) ou posterior deve ser instalado por meio do gerenciador de SDK do Android.
 
--   **Java Developer Kit** O desenvolvimento do Xamarin Android requer o [JDK 1,8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) se você estiver desenvolvendo para o nível de API 24 ou superior (o JDK 1,8 também oferece suporte a níveis de API anteriores a 24). &ndash;
+- **Java Developer Kit** O desenvolvimento do Xamarin Android requer o [JDK 1,8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) se você estiver desenvolvendo para o nível de API 24 ou superior (o JDK 1,8 também oferece suporte a níveis de API anteriores a 24). &ndash;
 
 Você pode continuar a usar o [JDK 1,7](https://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html) se estiver desenvolvendo especificamente para o nível de API 23 ou anterior.
 
@@ -39,9 +39,9 @@ Você pode continuar a usar o [JDK 1,7](https://www.oracle.com/technetwork/java/
 
 Depois de instalar o Xamarin. Android, execute as seguintes etapas para que você esteja pronto para compilar e testar aplicativos de desgaste do Android: 
 
-1.  Instale o SDK do Android e as ferramentas necessárias.
-2.  Configurar um dispositivo de teste.
-3.  Crie seu primeiro aplicativo de desgaste do Android.
+1. Instale o SDK do Android e as ferramentas necessárias.
+2. Configurar um dispositivo de teste.
+3. Crie seu primeiro aplicativo de desgaste do Android.
 
 Essas etapas são descritas nas seções a seguir.
 

@@ -1,41 +1,41 @@
 ---
-title: Aplicativos empresariais testes de unidade
-description: Este capítulo explica como os testes de unidade é executada no aplicativo móvel do eShopOnContainers.
+title: Aplicativos empresariais de teste de unidade
+description: Este capítulo explica como o teste de unidade é executado no aplicativo móvel eShopOnContainers.
 ms.prod: xamarin
 ms.assetid: 4af82e52-f99b-4cad-b278-1745f190c240
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: d83cdce7076eac5a022863b583ecb01346ae440a
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: c631ca73d69ea630592920a32804512f89d5baaf
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67831092"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69529080"
 ---
-# <a name="unit-testing-enterprise-apps"></a>Aplicativos empresariais testes de unidade
+# <a name="unit-testing-enterprise-apps"></a>Aplicativos empresariais de teste de unidade
 
-Aplicativos móveis têm problemas exclusivos e área de trabalho e aplicativos baseados na web não precisam se preocupar sobre. Os usuários móveis diferirão de acordo com os dispositivos que eles usam, pela conectividade de rede, a disponibilidade de serviços e uma variedade de outros fatores. Portanto, os aplicativos móveis devem ser testados como eles serão usados no mundo real para melhorar sua qualidade, confiabilidade e desempenho. Há muitos tipos de testes que devem ser executados em um aplicativo, incluindo testes de unidade, testes de integração e testes, com testes que está sendo a forma mais comum de teste de unidade de interface do usuário.
+Os aplicativos móveis têm problemas exclusivos que os aplicativos baseados na área de trabalho e na Web não precisam se preocupar. Os usuários móveis serão diferentes pelos dispositivos que usam, por conectividade de rede, pela disponibilidade de serviços e uma variedade de outros fatores. Portanto, os aplicativos móveis devem ser testados, pois serão usados no mundo real para melhorar sua qualidade, confiabilidade e desempenho. Há muitos tipos de teste que devem ser executados em um aplicativo, incluindo testes de unidade, testes de integração e testes de interface do usuário, com o teste de unidade sendo a forma mais comum de teste.
 
-Um teste de unidade usa uma unidade pequena do aplicativo, normalmente um método, seja isolado do restante do código e verifica se ele se comporta conforme o esperado. Sua meta é verificar o que cada unidade de funcionalidade executa conforme o esperado, para que os erros não propagam em todo o aplicativo. Detectar um bug em que ele ocorre é mais eficiente do que observar o efeito de um bug indiretamente em um ponto secundário da falha.
+Um teste de unidade usa uma pequena unidade do aplicativo, normalmente um método, o isola do restante do código e verifica se ele se comporta conforme o esperado. Seu objetivo é verificar se cada unidade de funcionalidade é executada conforme o esperado, para que os erros não se propaguem por todo o aplicativo. Detectar um bug em que ele ocorre é mais eficiente, o que observa o efeito de um bug indiretamente em um ponto secundário de falha.
 
-Teste de unidade tem o maior efeito sobre a qualidade do código quando ele é parte integrante do fluxo de trabalho de desenvolvimento de software. Assim que um método foi escrito, testes de unidade devem ser escritos que verificam o comportamento do método em resposta a standard, limites e casos incorretos de dados de entrada e essa seleção suposições explícitas ou implícitas feitas pelo código. Como alternativa, com o desenvolvimento orientado por testes, testes de unidade são gravados antes do código. Nesse cenário, os testes de unidade atuam como documentação de design e as especificações funcionais.
+O teste de unidade tem o maior efeito na qualidade do código quando é parte integrante do fluxo de trabalho de desenvolvimento de software. Assim que um método é escrito, os testes de unidade devem ser escritos para verificar o comportamento do método em resposta a casos padrão, limites e incorretos de dados de entrada e que verificam quaisquer suposições explícitas ou implícitas feitas pelo código. Como alternativa, com o desenvolvimento controlado por teste, os testes de unidade são gravados antes do código. Nesse cenário, os testes de unidade atuam como documentação de design e especificações funcionais.
 
 > [!NOTE]
-> Testes de unidade são muito eficientes contra regressão – ou seja, a funcionalidade que costumava funcionar, mas tem sido afetada por uma atualização com falha.
+> Os testes de unidade são muito eficientes em relação à regressão – ou seja, a funcionalidade que costumava funcionar, mas foi incomodada por uma atualização com falha.
 
-Testes de unidade geralmente usam o padrão de organizar-act assert:
+Os testes de unidade normalmente usam o padrão Arrange-Act-Assert:
 
--   O *organizar* inicializa os objetos de seção do método de teste de unidade e define o valor dos dados que são passados para o método em teste.
--   O *atuar* seção invoca o método em teste com os argumentos necessários.
--   O *assert* seção verifica se a ação do método em teste se comporta conforme o esperado.
+- A seção *Arrange* do método de teste de unidade inicializa objetos e define o valor dos dados que são passados para o método em teste.
+- A seção *Act* invoca o método em teste com os argumentos necessários.
+- A seção *Assert* verifica se a ação do método em teste se comporta conforme o esperado.
 
-Seguindo esse padrão garante que os testes de unidade são legíveis e consistente.
+Seguir esse padrão garante que os testes de unidade sejam legíveis e consistentes.
 
-## <a name="dependency-injection-and-unit-testing"></a>Injeção de dependência e testes de unidade
+## <a name="dependency-injection-and-unit-testing"></a>Injeção de dependência e teste de unidade
 
-Uma das motivações para adotar uma arquitetura menos rígida é que ele facilita o teste de unidade. Um dos tipos registrados com o Autofac é o `OrderService` classe. O exemplo de código a seguir mostra uma estrutura de tópicos desta classe:
+Uma das motivações para adotar uma arquitetura com acoplamento flexível é que ela facilita o teste de unidade. Um dos tipos registrados com Autofac é a `OrderService` classe. O exemplo de código a seguir mostra um contorno desta classe:
 
 ```csharp
 public class OrderDetailViewModel : ViewModelBase  
@@ -50,34 +50,34 @@ public class OrderDetailViewModel : ViewModelBase
 }
 ```
 
-O `OrderDetailViewModel` classe tem uma dependência a `IOrderService` que o contêiner resolve quando ele cria uma instância de tipo um `OrderDetailViewModel` objeto. No entanto, em vez de criar uma `OrderService` objeto de teste de unidade de `OrderDetailViewModel` classe, em vez disso, substitua o `OrderService` objeto com uma simulação para fins de testes. Figura 10-1 ilustra essa relação.
+A `OrderDetailViewModel` classe tem uma dependência `IOrderService` no tipo que o contêiner resolve ao criar uma instância de um `OrderDetailViewModel` objeto. No entanto, em vez `OrderService` de criar um objeto para `OrderDetailViewModel` testar unidade na classe, substitua `OrderService` o objeto por uma simulação para fins dos testes. A Figura 10-1 ilustra essa relação.
 
 ![](unit-testing-images/unittesting.png "Classes que implementam a interface IOrderService")
 
 **Figura 10-1:** Classes que implementam a interface IOrderService
 
-Essa abordagem permite que o `OrderService` objeto a serem passados para o `OrderDetailViewModel` de classe no tempo de execução e em interesses da capacidade de teste, ele permite que o `OrderMockService` classe a serem passados para o `OrderDetailViewModel` classe no tempo de teste. A principal vantagem dessa abordagem é que ele permite que os testes de unidade a ser executado sem a necessidade de recursos complicados como serviços web ou bancos de dados.
+Essa abordagem permite que `OrderService` o objeto seja passado para a `OrderDetailViewModel` classe em tempo de execução e, nos interesses da capacidade de teste, ele `OrderMockService` permite que a classe seja passada `OrderDetailViewModel` para a classe no momento do teste. A principal vantagem dessa abordagem é que ela permite que os testes de unidade sejam executados sem a necessidade de recursos difíceis, como serviços Web ou bancos de dados.
 
 ## <a name="testing-mvvm-applications"></a>Testando aplicativos MVVM
 
-Teste de modelos e modelos de exibição de aplicativos MVVM é idêntico ao teste de outras classes e as mesmas ferramentas e técnicas – como o teste de unidade e de simulação, podem ser usadas. No entanto, há alguns padrões que são comuns ao modelo e classes de modelo de exibição, que podem se beneficiar das técnicas de teste de unidade específica.
+Os modelos de teste e os modelos de exibição dos aplicativos MVVM são idênticos ao teste de todas as outras classes, e as mesmas ferramentas e técnicas, como o teste de unidade e a simulação, podem ser usadas. No entanto, há alguns padrões típicos para modelar e exibir classes de modelo, que podem se beneficiar de técnicas de teste de unidade específicas.
 
 > [!TIP]
-> Uma coisa com cada teste de unidade de teste. Não fique tentado a fazer com que uma unidade de teste exercício mais de um aspecto do comportamento da unidade. Isso leva a testes que são difíceis de ler e atualizar. Ele também pode gerar confusão ao interpretar uma falha.
+> Teste uma coisa com cada teste de unidade. Não fique tentado a fazer um teste de unidade exercer mais de um aspecto do comportamento da unidade. Isso leva a testes que são difíceis de ler e atualizar. Ele também pode levar à confusão ao interpretar uma falha.
 
-Os usos de aplicativo móvel do eShopOnContainers [xUnit](https://xunit.github.io/) para executar testes de unidade, que dá suporte a dois tipos diferentes de testes de unidade:
+O aplicativo móvel eShopOnContainers usa o [xUnit](https://xunit.github.io/) para executar testes de unidade, que oferece suporte a dois tipos diferentes de testes de unidade:
 
--   Fatos são testes que sempre são verdadeiros, que testam condições invariáveis.
--   Teorias são testes que só são verdadeiros para um determinado conjunto de dados.
+- Os fatos são testes que são sempre verdadeiros, que testam condições invariáveis.
+- Teorias são testes que só são verdadeiros para um determinado conjunto de dados.
 
-Os testes de unidade incluídos com o aplicativo móvel do eShopOnContainers são testes de fato e, portanto, cada método de teste de unidade é decorado com o `[Fact]` atributo.
+Os testes de unidade incluídos no aplicativo móvel eShopOnContainers são testes de fato e, portanto, cada método de teste de unidade `[Fact]` é decorado com o atributo.
 
 > [!NOTE]
-> testes xUnit são executados por um executor de teste. Para executar o executor de teste, execute o projeto eShopOnContainers.TestRunner para plataforma necessária.
+> os testes de xUnit são executados por um executor de teste. Para executar o Test Runner, execute o projeto eShopOnContainers. TestRunner para a plataforma necessária.
 
-### <a name="testing-asynchronous-functionality"></a>Teste de funcionalidade assíncrona
+### <a name="testing-asynchronous-functionality"></a>Testando a funcionalidade assíncrona
 
-Ao implementar o padrão MVVM, modelos de exibição normalmente invocação operações em serviços, muitas vezes de forma assíncrona. Testes para código que invoca a essas operações normalmente usam objetos fictícios como substituições para os serviços reais. O exemplo de código a seguir demonstra o teste da funcionalidade assíncrona, passando um serviço fictício para um modelo de exibição:
+Ao implementar o padrão MVVM, os modelos de exibição normalmente invocam operações em serviços, geralmente de forma assíncrona. Testes para o código que invoca essas operações normalmente usam simulações como substituições para os serviços reais. O exemplo de código a seguir demonstra o teste de funcionalidade assíncrona passando um serviço fictício para um modelo de exibição:
 
 ```csharp
 [Fact]  
@@ -93,15 +93,15 @@ public async Task OrderPropertyIsNotNullAfterViewModelInitializationTest()
 }
 ```
 
-Esse teste de unidade verifica se o `Order` propriedade do `OrderDetailViewModel` instância terá um valor após o `InitializeAsync` método foi invocado. O `InitializeAsync` método é invocado quando o modo de exibição do modelo de exibição correspondente é navegado. Para obter mais informações sobre navegação, consulte [navegação](~/xamarin-forms/enterprise-application-patterns/navigation.md).
+Esse teste `Order` `InitializeAsync` de unidade verifica se a propriedade da instânciateráumvalordepoisqueométodoforinvocado.`OrderDetailViewModel` O `InitializeAsync` método é invocado quando a exibição correspondente do modelo de exibição é navegada para. Para obter mais informações sobre navegação, consulte [Navigation](~/xamarin-forms/enterprise-application-patterns/navigation.md).
 
-Quando o `OrderDetailViewModel` instância é criada, ela espera um `OrderService` instância a ser especificado como um argumento. No entanto, o `OrderService` recupera dados de um serviço web. Portanto, uma `OrderMockService` instância, que é uma versão fictícia do `OrderService` classe, é especificado como o argumento para o `OrderDetailViewModel` construtor. Então, quando o modelo de exibição `InitializeAsync` método é invocado, que invoca `IOrderService` operações, os dados fictícios são recuperado em vez de se comunicando com um serviço web.
+Quando a `OrderDetailViewModel` instância é criada, espera-se `OrderService` que uma instância seja especificada como um argumento. No entanto `OrderService` , o recupera dados de um serviço Web. Portanto, uma `OrderMockService` instância, que é uma versão fictícia `OrderService` da classe, é especificada como o argumento para o `OrderDetailViewModel` Construtor. Em seguida, quando o método do `InitializeAsync` modelo de exibição é invocado, `IOrderService` que invoca operações, os dados fictícios são recuperados em vez de se comunicar com um serviço Web.
 
-### <a name="testing-inotifypropertychanged-implementations"></a>Teste de implementações de INotifyPropertyChanged
+### <a name="testing-inotifypropertychanged-implementations"></a>Testando implementações INotifyPropertyChanged
 
-Implementando o `INotifyPropertyChanged` interface permite que os modos de exibição reagir a alterações originadas na exibição de modelos e modelos. Essas alterações não são limitadas aos dados mostrados em controles – eles também são usados para controlar o modo de exibição, como estados de exibição de modelo que fazem com que controles a ser desabilitado ou animações a serem iniciados.
+A implementação `INotifyPropertyChanged` da interface permite que as exibições reajam a alterações originadas em modelos de exibição e modelos. Essas alterações não são limitadas aos dados mostrados em controles – elas também são usadas para controlar a exibição, como exibir Estados de modelo que fazem com que as animações sejam iniciadas ou controles a serem desabilitados.
 
-Propriedades que podem ser atualizadas diretamente pelo teste de unidade podem ser testadas, anexando um manipulador de eventos para o `PropertyChanged` evento e verificando se o evento é gerado depois de definir um novo valor para a propriedade. O exemplo de código a seguir mostra esse teste:
+As propriedades que podem ser atualizadas diretamente pelo teste de unidade podem ser testadas anexando um manipulador `PropertyChanged` de eventos ao evento e verificando se o evento é gerado após a definição de um novo valor para a propriedade. O exemplo de código a seguir mostra um teste desse tipo:
 
 ```csharp
 [Fact]  
@@ -123,11 +123,11 @@ public async Task SettingOrderPropertyShouldRaisePropertyChanged()
 }
 ```
 
-Invoca esse teste de unidade do `InitializeAsync` método da `OrderViewModel` classe, que faz com que seu `Order` propriedade a ser atualizada. O teste de unidade passará, desde que o `PropertyChanged` é gerado para o `Order` propriedade.
+Esse teste `InitializeAsync` `Order` de unidade invoca o método da classe,oquefazcomquesuapropriedadesejaatualizada.`OrderViewModel` O teste de unidade será aprovado, desde que `PropertyChanged` o evento seja gerado para `Order` a propriedade.
 
 ### <a name="testing-message-based-communication"></a>Testando a comunicação baseada em mensagens
 
-Modelos de exibição que usam o [ `MessagingCenter` ](xref:Xamarin.Forms.MessagingCenter) classe para se comunicar entre classes flexível pode ser unidade testada ao assinar a mensagem sendo enviada pelo código em teste, conforme demonstrado no exemplo de código a seguir:
+Os modelos de exibição que [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) usam a classe para se comunicar entre classes livremente acopladas podem ser testados por unidade assinando a mensagem que está sendo enviada pelo código sob teste, conforme demonstrado no exemplo de código a seguir:
 
 ```csharp
 [Fact]  
@@ -148,11 +148,11 @@ public void AddCatalogItemCommandSendsAddProductMessageTest()
 }
 ```
 
-Esse teste de unidade verifica se o `CatalogViewModel` publica o `AddProduct` mensagem em resposta a sua `AddCatalogItemCommand` que está sendo executado. Porque o [ `MessagingCenter` ](xref:Xamarin.Forms.MessagingCenter) classe dá suporte a assinaturas de mensagem multicast, o teste de unidade pode assinar o `AddProduct` da mensagem e executar um delegado de retorno de chamada em resposta a recebê-lo. Esse delegado de retorno de chamada, especificado como uma expressão lambda, define uma `boolean` campo é usado pelo `Assert` instrução para verificar o comportamento do teste.
+Esse teste de unidade verifica se `CatalogViewModel` o publica a `AddProduct` mensagem em resposta à sua `AddCatalogItemCommand` execução. Como a [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) classe dá suporte a assinaturas de mensagens de multicast, o teste de unidade pode `AddProduct` assinar a mensagem e executar um delegado de retorno de chamada em resposta para o recebimento. Esse delegado de retorno de chamada, especificado como uma expressão lambda `boolean` , define um campo que é `Assert` usado pela instrução para verificar o comportamento do teste.
 
-### <a name="testing-exception-handling"></a>Teste de manipulação de exceção
+### <a name="testing-exception-handling"></a>Testando manipulação de exceção
 
-Testes de unidade também podem ser escritos nessa verificação geradas exceções específicas para ações inválidas ou entradas, como demonstrado no exemplo de código a seguir:
+Os testes de unidade também podem ser escritos para verificar se as exceções específicas são geradas para ações ou entradas inválidas, conforme demonstrado no exemplo de código a seguir:
 
 ```csharp
 [Fact]  
@@ -168,16 +168,16 @@ public void InvalidEventNameShouldThrowArgumentExceptionText()
 }
 ```
 
-Esse teste de unidade gerará uma exceção, porque o [ `ListView` ](xref:Xamarin.Forms.ListView) controle não tem um evento chamado `OnItemTapped`. O `Assert.Throws<T>` é um método genérico onde `T` é o tipo da exceção esperada. O argumento passado para o `Assert.Throws<T>` método é uma expressão lambda que lançará a exceção. Portanto, o teste de unidade passará desde que a expressão lambda lançar um `ArgumentException`.
+Este teste de unidade gerará uma exceção, pois [`ListView`](xref:Xamarin.Forms.ListView) o controle não tem um evento chamado `OnItemTapped`. O `Assert.Throws<T>` método é um método genérico em `T` que é o tipo da exceção esperada. O argumento passado para o `Assert.Throws<T>` método é uma expressão lambda que gerará a exceção. Portanto, o teste de unidade será aprovado desde que a expressão lambda gere `ArgumentException`um.
 
 > [!TIP]
-> Evite escrever testes de unidade que examinar cadeias de caracteres de mensagem de exceção. Cadeias de caracteres de mensagem de exceção pode ser alterado ao longo do tempo e, portanto, os testes de unidade que dependem de sua presença são consideradas como frágil.
+> Evite escrever testes de unidade que examinem cadeias de caracteres de mensagem de exceção. As cadeias de caracteres de mensagem de exceção podem mudar com o tempo e, portanto, os testes de unidade que dependem de sua presença são considerados frágeis.
 
-### <a name="testing-validation"></a>Teste de validação
+### <a name="testing-validation"></a>Testando a validação
 
-Há dois aspectos para testar a implementação de validação: teste de qualquer regra de validação sejam corretamente implementada e teste que o `ValidatableObject<T>` classe executa conforme o esperado.
+Há dois aspectos para testar a implementação da validação: testar se as regras de validação foram implementadas corretamente e testar se `ValidatableObject<T>` a classe é executada conforme o esperado.
 
-Lógica de validação é geralmente simple testar, porque geralmente é um processo independente de onde a saída depende de entrada. Deve haver testes nos resultados da invocação de `Validate` método em cada propriedade que tem pelo menos uma regra de validação associados, conforme demonstrado no exemplo de código a seguir:
+A lógica de validação é geralmente simples de testar, porque normalmente é um processo independente em que a saída depende da entrada. Deve haver testes nos resultados da invocação do `Validate` método em cada propriedade que tenha pelo menos uma regra de validação associada, conforme demonstrado no exemplo de código a seguir:
 
 ```csharp
 [Fact]  
@@ -193,9 +193,9 @@ public void CheckValidationPassesWhenBothPropertiesHaveDataTest()
 }
 ```
 
-Esse teste de unidade verificações de validação é bem-sucedida quando as duas `ValidatableObject<T>` propriedades no `MockViewModel` instância as duas têm dados.
+Esse teste de unidade verifica se a validação é realizada com `ValidatableObject<T>` sucesso quando as `MockViewModel` duas propriedades na instância têm dados.
 
-Bem como a verificação de validação for bem-sucedida, os testes de unidade de validação também devem verificar os valores da `Value`, `IsValid`, e `Errors` propriedade de cada `ValidatableObject<T>` instância, para verificar que a classe executa conforme o esperado. O exemplo de código a seguir demonstra um teste de unidade que faz isso:
+Além disso, verificando se a validação foi realizada com sucesso, os testes de unidade de validação `Value`também `IsValid`devem verificar os valores da `ValidatableObject<T>` Propriedade, e `Errors` de cada instância, para verificar se a classe é executada conforme o esperado. O exemplo de código a seguir demonstra um teste de unidade que faz isso:
 
 ```csharp
 [Fact]  
@@ -216,18 +216,18 @@ public void CheckValidationFailsWhenOnlyForenameHasDataTest()
 }
 ```
 
-Esse teste de unidade que verifica se a validação falhar quando o `Surname` propriedade do `MockViewModel` não tem quaisquer dados e o `Value`, `IsValid`, e `Errors` propriedade de cada `ValidatableObject<T>` instância estão definidas corretamente.
+Esse `Surname` teste `Errors` `Value` `IsValid`de unidade verifica se a validação falha quando a propriedade de `ValidatableObject<T>` nãotemnenhumdado,eapropriedade,edecadainstânciaestádefinidacorretamente.`MockViewModel`
 
 ## <a name="summary"></a>Resumo
 
-Um teste de unidade usa uma unidade pequena do aplicativo, normalmente um método, seja isolado do restante do código e verifica se ele se comporta conforme o esperado. Sua meta é verificar o que cada unidade de funcionalidade executa conforme o esperado, para que os erros não propagam em todo o aplicativo.
+Um teste de unidade usa uma pequena unidade do aplicativo, normalmente um método, o isola do restante do código e verifica se ele se comporta conforme o esperado. Seu objetivo é verificar se cada unidade de funcionalidade é executada conforme o esperado, para que os erros não se propaguem por todo o aplicativo.
 
-O comportamento de um objeto sob teste pode ser isolado, substituindo os objetos dependentes com objetos fictícios que simulam o comportamento dos objetos dependentes. Isso permite que os testes de unidade a ser executado sem a necessidade de recursos complicados como serviços web ou bancos de dados.
+O comportamento de um objeto em teste pode ser isolado por meio da substituição de objetos dependentes por objetos fictícios que simulam o comportamento dos objetos dependentes. Isso permite que os testes de unidade sejam executados sem a necessidade de recursos difíceis, como serviços Web ou bancos de dados.
 
-Teste de modelos e modelos de exibição de aplicativos MVVM é idêntico ao teste de outras classes e as mesmas ferramentas e técnicas podem ser usadas.
+Os modelos de teste e os modelos de exibição dos aplicativos MVVM são idênticos ao teste de todas as outras classes, e as mesmas ferramentas e técnicas podem ser usadas.
 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Baixe o livro eletrônico (PDF de 2Mb)](https://aka.ms/xamarinpatternsebook)
-- [eShopOnContainers (GitHub) (amostra)](https://github.com/dotnet-architecture/eShopOnContainers)
+- [Download do eBook (PDF de 2Mb)](https://aka.ms/xamarinpatternsebook)
+- [eShopOnContainers (GitHub) (exemplo)](https://github.com/dotnet-architecture/eShopOnContainers)

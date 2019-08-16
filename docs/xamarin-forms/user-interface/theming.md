@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2019
-ms.openlocfilehash: 644728d70946180f79523eeb98baabdb6daa1980
-ms.sourcegitcommit: 41a029c69925e3a9d2de883751ebfd649e8747cd
+ms.openlocfilehash: 3e0f508a9c980c02681f1be581846f9f2f25e2d0
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68984358"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69529281"
 ---
 # <a name="theming-a-xamarinforms-application"></a>Um aplicativo Xamarin. Forms
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-theming/)
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-theming/)
 
 Aplicativos Xamarin. Forms podem responder a alterações de estilo dinamicamente em tempo de execução `DynamicResource` usando a extensão de marcação. Essa extensão de marcação é semelhante à `StaticResource` extensão de marcação, pois ambas usam uma chave de dicionário para buscar um valor de [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary)a. No entanto, `StaticResource` enquanto a extensão de marcação executa uma única pesquisa `DynamicResource` de dicionário, a extensão de marcação mantém um link para a chave de dicionário. Portanto, se o valor associado à chave for substituído, a alteração será aplicada ao [`VisualElement`](xref:Xamarin.Forms.VisualElement). Isso permite que eles sejam implementados em aplicativos Xamarin. Forms.
 
@@ -89,7 +89,7 @@ Um aplicativo requer um tema padrão, para que os controles tenham valores para 
 </Application>
 ```
 
-Para obter mais informações sobre como mesclar dicionários de recursos, consulte [mesclando dicionários no Xamarin. Forms 3,0](~/xamarin-forms/xaml/resource-dictionaries.md#merging-dictionaries-in-xamarinforms-30).
+Para obter mais informações sobre como mesclar dicionários de recursos, consulte dicionários de [Recursos mesclados](~/xamarin-forms/xaml/resource-dictionaries.md#merged-resource-dictionaries).
 
 ## <a name="consume-theme-resources"></a>Consumir recursos de tema
 

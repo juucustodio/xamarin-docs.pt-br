@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/21/2017
-ms.openlocfilehash: abc7bb09791df115536f552979b48a3a12b4f443
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: e92aada7be8a296baeaa9eebfb18fe906b5c3b63
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68646340"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69522547"
 ---
 # <a name="populating-a-xamarinandroid-listview-with-data"></a>Populando um ListView do Xamarin. Android com dados
 
@@ -62,14 +62,14 @@ Agora, o usuário pode tocar em uma linha `Toast` e um alerta será exibido:
 `ArrayAdapter<string>`é ótimo devido à sua simplicidade, mas é extremamente limitado. No entanto, muitas vezes você tem uma coleção de entidades comerciais, em vez de apenas cadeias de caracteres que você deseja associar.
 Por exemplo, se seus dados consistem em uma coleção de classes Employee, talvez você queira que a lista exiba apenas os nomes de cada funcionário. Para personalizar o comportamento de um `ListView` para controlar quais dados são exibidos, você deve implementar uma subclasse de `BaseAdapter` substituindo os quatro itens a seguir:
 
--   **Contagem** de &ndash; Para informar ao controle quantas linhas estão nos dados.
+- **Contagem** de &ndash; Para informar ao controle quantas linhas estão nos dados.
 
--   **GetView** &ndash; Para retornar uma exibição para cada linha, preenchida com dados.
+- **GetView** &ndash; Para retornar uma exibição para cada linha, preenchida com dados.
     Esse método tem um parâmetro para que `ListView` o passe em uma linha existente não usada para reutilização.
 
--   Getitemid &ndash; Retornar um identificador de linha (normalmente o número da linha, embora possa ser qualquer valor longo que você desejar).
+- Getitemid &ndash; Retornar um identificador de linha (normalmente o número da linha, embora possa ser qualquer valor longo que você desejar).
 
--   Este indexador &ndash; **[int]** retorna os dados associados a um número de linha específico.
+- Este indexador &ndash; **[int]** retorna os dados associados a um número de linha específico.
 
 O código de exemplo em **BasicTableAdapter/HomeScreenAdapter. cs** demonstra como subclasse `BaseAdapter`:
 
@@ -159,11 +159,11 @@ Um índice de seção fornece comentários adicionais para os usuários quando e
 
 Para implementar `ISectionIndexer` , você precisa adicionar três métodos a um adaptador:
 
--   **Getseções** &ndash; Fornece a lista completa de títulos de índice de seção que podem ser exibidos. Esse método requer uma matriz de objetos Java para que o código precise criar um `Java.Lang.Object[]` de uma coleção .net. Em nosso exemplo, ele retorna uma lista dos caracteres iniciais da lista como `Java.Lang.String` .
+- **Getseções** &ndash; Fornece a lista completa de títulos de índice de seção que podem ser exibidos. Esse método requer uma matriz de objetos Java para que o código precise criar um `Java.Lang.Object[]` de uma coleção .net. Em nosso exemplo, ele retorna uma lista dos caracteres iniciais da lista como `Java.Lang.String` .
 
--   **GetPositionForSection** &ndash; Retorna a primeira posição de linha para um determinado índice de seção.
+- **GetPositionForSection** &ndash; Retorna a primeira posição de linha para um determinado índice de seção.
 
--   **GetSectionForPosition** &ndash; Retorna o índice de seção a ser exibido para uma determinada linha.
+- **GetSectionForPosition** &ndash; Retorna o índice de seção a ser exibido para uma determinada linha.
 
 
 O arquivo `SectionIndex/HomeScreenAdapter.cs` de exemplo implementa esses métodos e alguns códigos adicionais no construtor. O construtor cria o índice da seção fazendo um loop em cada linha e extraindo o primeiro caractere do título (os itens já devem estar classificados para que isso funcione).

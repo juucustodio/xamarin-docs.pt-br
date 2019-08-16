@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 03c18c50b15db05d26e1cec20e571367219f8643
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 818d5c734e8e662c271e20c26347e5e941ddad3e
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68643065"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69527864"
 ---
 # <a name="changes-to-storekit-in-ios-6"></a>Alterações no StoreKit no iOS 6
 
@@ -244,8 +244,8 @@ A criação de pacotes de conteúdo para produtos de compra no aplicativo atualm
 
 Nosso aplicativo de exemplo tem capítulos de livros para venda – cada pacote de conteúdo do capítulo conterá:
 
--  um arquivo de texto e
--  uma imagem para representar o capítulo.
+- um arquivo de texto e
+- uma imagem para representar o capítulo.
 
 
 Comece selecionando **arquivo > novo projeto** no menu e escolhendo **conteúdo de compra no aplicativo**:

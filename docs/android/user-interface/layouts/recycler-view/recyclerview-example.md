@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/30/2018
-ms.openlocfilehash: b40b2d2d5083f32edcb0fc08c8365096e6d4fda9
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 82423e48f844cde60bcd5e85c5bbe3cb8bc856b8
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68645360"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69522458"
 ---
 # <a name="a-basic-recyclerview-example"></a>Um exemplo de RecyclerView básico
 
@@ -171,11 +171,11 @@ public class PhotoAlbumAdapter : RecyclerView.Adapter
 
 O `mPhotoAlbum` membro contém a fonte de dados (o álbum de fotos) que é passada para o Construtor; o construtor copia o álbum de fotos nessa variável de membro. Os seguintes métodos `RecyclerView.Adapter` necessários são implementados:
 
--   **`OnCreateViewHolder`** &ndash; Instancia o arquivo de layout de item e o detentor da exibição.
+- **`OnCreateViewHolder`** &ndash; Instancia o arquivo de layout de item e o detentor da exibição.
 
--   **`OnBindViewHolder`** &ndash; Carrega os dados na posição especificada nas exibições cujas referências são armazenadas no espaço de exibição fornecido.
+- **`OnBindViewHolder`** &ndash; Carrega os dados na posição especificada nas exibições cujas referências são armazenadas no espaço de exibição fornecido.
 
--   **`ItemCount`** &ndash; Retorna o número de itens na fonte de dados.
+- **`ItemCount`** &ndash; Retorna o número de itens na fonte de dados.
 
 O Gerenciador de layout chama esses métodos enquanto está posicionando itens dentro `RecyclerView`do. A implementação desses métodos é examinada nas seções a seguir.
 

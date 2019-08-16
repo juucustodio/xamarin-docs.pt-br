@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/13/2018
-ms.openlocfilehash: 2bd694d903da9f30f8fffa5fea991c1f386752dd
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 9f8a092b63da413974f387aca02d81efef9c1625
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656380"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528325"
 ---
 # <a name="passkit-in-xamarinios"></a>PassKit no Xamarin. iOS
 
@@ -31,17 +31,17 @@ Os recursos do PassKit discutidos neste documento exigem o iOS 6 e o Xcode 4,5, 
 
 O principal problema que o PassKit resolve é a distribuição e o gerenciamento de códigos de barras. Alguns exemplos do mundo real de como os códigos de barras são usados no momento incluem:
 
--   **Comprando tíquetes de filmes online** – os clientes normalmente recebem um email de um código de barras que representa seus tíquetes. Esse código de barras é impresso e levado para o cinema a ser verificado quanto à entrada.
--   **Cartões de fidelidade** – os clientes carregam uma série de cartões específicos de repositório diferentes em sua carteira ou bolsa, para exibição e digitalização ao comprar mercadorias.
--   **Cupons** – os cupons são distribuídos por email, como páginas da Web imprimíveis, por meio de letterboxes e de códigos de barras em jornais e revistas. Os clientes os levam para uma loja para verificação, para receber bens, serviços ou descontos em retorno.
--   **Passagens de tabuleiro** – semelhante à compra de um tíquete de filme.
+- **Comprando tíquetes de filmes online** – os clientes normalmente recebem um email de um código de barras que representa seus tíquetes. Esse código de barras é impresso e levado para o cinema a ser verificado quanto à entrada.
+- **Cartões de fidelidade** – os clientes carregam uma série de cartões específicos de repositório diferentes em sua carteira ou bolsa, para exibição e digitalização ao comprar mercadorias.
+- **Cupons** – os cupons são distribuídos por email, como páginas da Web imprimíveis, por meio de letterboxes e de códigos de barras em jornais e revistas. Os clientes os levam para uma loja para verificação, para receber bens, serviços ou descontos em retorno.
+- **Passagens de tabuleiro** – semelhante à compra de um tíquete de filme.
 
 O PassKit oferece uma alternativa para cada um desses cenários:
 
--   **Tíquetes de filme** – após a compra, o cliente adiciona uma passagem de tíquete de evento (por email ou um link de site). Como o horário para o filme se aproxima, a passagem aparecerá automaticamente na tela de bloqueio como lembrete e, na chegada do cinema, a passagem será facilmente recuperada e exibida em carteira para verificação.
--   **Cartões de fidelidade** – em vez de (ou além de) fornecer um cartão físico, os armazenamentos podem emitir (por email ou depois de um logon de site) uma passagem de cartão de loja. A loja pode fornecer recursos adicionais, como a atualização do saldo da conta na passagem por meio de notificações por push e o uso de serviços de localização geográfica. a passagem pode aparecer automaticamente na tela de bloqueio quando o cliente está próximo de um local de armazenamento.
--   **Cupons** – as passagens de cupom podem ser facilmente geradas com características exclusivas para ajudar no rastreamento e distribuídas por email ou links de sites. Os cupons baixados podem aparecer automaticamente na tela de bloqueio quando o usuário está próximo a um local específico e/ou em uma determinada data (por exemplo, quando a data de expiração está se aproximando). Como os cupons são armazenados no telefone do usuário, eles são sempre úteis e não são colocados no local errado. Os cupons podem encorajar os clientes a baixar aplicativos complementares, pois os links da App Store podem ser incorporados ao Pass, aumentando o envolvimento com o cliente.
--   **Passagens de placa** – após um processo de check-in online, o cliente receberia sua passagem de tabuleiro por email ou um link. Um aplicativo complementar fornecido pelo provedor de transporte pode incluir o processo de check-in e também permitir que o cliente execute funções adicionais, como escolher sua estação ou refeição. O provedor de transporte pode usar notificações por push para atualizar a passagem se o transporte for atrasado ou cancelado. À medida que o tempo de integração se aproximar, a passagem aparecerá na tela de bloqueio como um lembrete e fornecerá acesso rápido à passagem.
+- **Tíquetes de filme** – após a compra, o cliente adiciona uma passagem de tíquete de evento (por email ou um link de site). Como o horário para o filme se aproxima, a passagem aparecerá automaticamente na tela de bloqueio como lembrete e, na chegada do cinema, a passagem será facilmente recuperada e exibida em carteira para verificação.
+- **Cartões de fidelidade** – em vez de (ou além de) fornecer um cartão físico, os armazenamentos podem emitir (por email ou depois de um logon de site) uma passagem de cartão de loja. A loja pode fornecer recursos adicionais, como a atualização do saldo da conta na passagem por meio de notificações por push e o uso de serviços de localização geográfica. a passagem pode aparecer automaticamente na tela de bloqueio quando o cliente está próximo de um local de armazenamento.
+- **Cupons** – as passagens de cupom podem ser facilmente geradas com características exclusivas para ajudar no rastreamento e distribuídas por email ou links de sites. Os cupons baixados podem aparecer automaticamente na tela de bloqueio quando o usuário está próximo a um local específico e/ou em uma determinada data (por exemplo, quando a data de expiração está se aproximando). Como os cupons são armazenados no telefone do usuário, eles são sempre úteis e não são colocados no local errado. Os cupons podem encorajar os clientes a baixar aplicativos complementares, pois os links da App Store podem ser incorporados ao Pass, aumentando o envolvimento com o cliente.
+- **Passagens de placa** – após um processo de check-in online, o cliente receberia sua passagem de tabuleiro por email ou um link. Um aplicativo complementar fornecido pelo provedor de transporte pode incluir o processo de check-in e também permitir que o cliente execute funções adicionais, como escolher sua estação ou refeição. O provedor de transporte pode usar notificações por push para atualizar a passagem se o transporte for atrasado ou cancelado. À medida que o tempo de integração se aproximar, a passagem aparecerá na tela de bloqueio como um lembrete e fornecerá acesso rápido à passagem.
 
 Em seu núcleo, o PassKit fornece uma maneira simples e conveniente de armazenar e exibir códigos de barras em seu dispositivo iOS. Com a integração de tela de bloqueio de tempo e local adicionais, as notificações por push e o aplicativo complementar integram ele oferece uma base para serviços de vendas, de tíquetes e de cobrança muito sofisticados.
 
@@ -53,11 +53,11 @@ O PassKit não é apenas uma API no CocoaTouch, em vez disso, ele faz parte de u
 
 Cada parte do ecossistema tem uma função claramente definida:
 
--   **Carteira** – aplicativo IOS interno da Apple que armazena e exibe passagens. Esse é o único lugar que as passagens são renderizadas para uso no mundo real (caso o código de barras seja exibido, juntamente com todos os dados localizados no passado).
--   **Aplicativos complementares** – aplicativos do IOS 6 criados por provedores de passagem para estender a funcionalidade dos passos que eles emitem, como adicionar valor a um cartão de loja, alterar o assento em uma passagem de tabuleiro ou outra função específica de negócios. Os aplicativos complementares não são necessários para que uma passagem seja útil.
--   **Seu servidor** – um servidor seguro em que as passagens podem ser geradas e assinadas para distribuição. Seu aplicativo complementar pode se conectar ao seu servidor para gerar novas passagens ou solicitar atualizações para os passos existentes. Opcionalmente, você pode implementar a API do serviço Web que a carteira chamaria para os passos de atualização.
--   **Servidores APNS** – o servidor tem a capacidade de notificar a carteira de atualizações a uma passagem em um determinado dispositivo usando o APNS. Envie uma notificação por push para carteira que, em seguida, entrará em contato com o servidor para obter detalhes da alteração. Os aplicativos complementares não precisam implementar o `PKPassLibraryDidChangeNotification` APNS para esse recurso (eles podem escutar).
--   **Aplicativos de canal** – os aplicativos que não manipulam diretamente os passos (como os aplicativos complementares), mas que podem melhorar seu utilitário reconhecendo as passagens e permitindo que elas sejam adicionadas à carteira. Os clientes de email, os navegadores de rede social e outros aplicativos de agregação de dados podem encontrar anexos ou links a serem aprovados.
+- **Carteira** – aplicativo IOS interno da Apple que armazena e exibe passagens. Esse é o único lugar que as passagens são renderizadas para uso no mundo real (caso o código de barras seja exibido, juntamente com todos os dados localizados no passado).
+- **Aplicativos complementares** – aplicativos do IOS 6 criados por provedores de passagem para estender a funcionalidade dos passos que eles emitem, como adicionar valor a um cartão de loja, alterar o assento em uma passagem de tabuleiro ou outra função específica de negócios. Os aplicativos complementares não são necessários para que uma passagem seja útil.
+- **Seu servidor** – um servidor seguro em que as passagens podem ser geradas e assinadas para distribuição. Seu aplicativo complementar pode se conectar ao seu servidor para gerar novas passagens ou solicitar atualizações para os passos existentes. Opcionalmente, você pode implementar a API do serviço Web que a carteira chamaria para os passos de atualização.
+- **Servidores APNS** – o servidor tem a capacidade de notificar a carteira de atualizações a uma passagem em um determinado dispositivo usando o APNS. Envie uma notificação por push para carteira que, em seguida, entrará em contato com o servidor para obter detalhes da alteração. Os aplicativos complementares não precisam implementar o `PKPassLibraryDidChangeNotification` APNS para esse recurso (eles podem escutar).
+- **Aplicativos de canal** – os aplicativos que não manipulam diretamente os passos (como os aplicativos complementares), mas que podem melhorar seu utilitário reconhecendo as passagens e permitindo que elas sejam adicionadas à carteira. Os clientes de email, os navegadores de rede social e outros aplicativos de agregação de dados podem encontrar anexos ou links a serem aprovados.
 
 Todo o ecossistema parece complexo e, portanto, vale a pena observar que alguns componentes são opcionais e muito mais simples são possíveis implementações de PassKit.
 
@@ -69,11 +69,11 @@ Uma passagem é uma coleção de dados que representa um tíquete, cupom ou cart
 
 Atualmente, os cinco tipos com suporte, que podem ser diferenciados no aplicativo de carteira pelo layout e pela borda superior da passagem:
 
--  **Tíquete de evento** – recorte semicircular pequeno.
--   **Aprovação de placa** – entalhes no lado, o ícone específico de transporte pode ser especificado (por exemplo, barramento, trem, avião).
--   **Cartão de loja** – arredondado para a parte superior, como um cartão de crédito ou débito.
--  **Cupom** – perfurado ao longo da parte superior.
--  **Genérico** – igual ao cartão da loja, arredondado para a parte superior.
+- **Tíquete de evento** – recorte semicircular pequeno.
+- **Aprovação de placa** – entalhes no lado, o ícone específico de transporte pode ser especificado (por exemplo, barramento, trem, avião).
+- **Cartão de loja** – arredondado para a parte superior, como um cartão de crédito ou débito.
+- **Cupom** – perfurado ao longo da parte superior.
+- **Genérico** – igual ao cartão da loja, arredondado para a parte superior.
 
 
 Os cinco tipos de passagem são mostrados nesta captura de tela (em ordem: cupom, genérico, cartão de loja, aprovação de placa e tíquete de evento):
@@ -84,13 +84,13 @@ Os cinco tipos de passagem são mostrados nesta captura de tela (em ordem: cupom
 
 Um arquivo de passagem é, na verdade, um arquivamento ZIP com uma extensão **. pkpass** , contendo alguns arquivos JSON específicos (obrigatórios), uma variedade de arquivos de imagem (opcional), bem como cadeias de caracteres localizadas (também opcional).
 
--   **Pass. JSON** – obrigatório. Contém todas as informações para a passagem.
--   **manifest. JSON** – obrigatório. Contém hashes SHA1 para cada arquivo na passagem, exceto o arquivo de assinatura e este arquivo (manifest. JSON).
--   **assinatura** – obrigatório. Criado assinando o `manifest.json` arquivo com o certificado gerado no portal de provisionamento do Ios.
--  **logo. png** – opcional.
--  **background. png** – opcional.
--  **Icon. png** – opcional.
--  **Arquivos de cadeia de caracteres localizáveis** – opcional.
+- **Pass. JSON** – obrigatório. Contém todas as informações para a passagem.
+- **manifest. JSON** – obrigatório. Contém hashes SHA1 para cada arquivo na passagem, exceto o arquivo de assinatura e este arquivo (manifest. JSON).
+- **assinatura** – obrigatório. Criado assinando o `manifest.json` arquivo com o certificado gerado no portal de provisionamento do Ios.
+- **logo. png** – opcional.
+- **background. png** – opcional.
+- **Icon. png** – opcional.
+- **Arquivos de cadeia de caracteres localizáveis** – opcional.
 
 A estrutura de diretório de um arquivo de passagem é mostrada abaixo (este é o conteúdo do arquivo ZIP):
 
@@ -100,9 +100,9 @@ A estrutura de diretório de um arquivo de passagem é mostrada abaixo (este é 
 
 JSON é o formato porque as passagens normalmente são criadas em um servidor – isso significa que o código de geração é independente da plataforma no servidor. As três principais informações em cada passagem são:
 
--   **teamIdentifier** – isso vincula todas as passagens que você gera para sua conta da loja de aplicativos. Esse valor é visível no portal de provisionamento do iOS.
--   **passTypeIdentifier** – Registre-se no portal de provisionamento para que os grupos passem juntos (se você produzir mais de um tipo). Por exemplo, um café pode criar um tipo de passagem de cartão de loja para permitir que seus clientes ganhem créditos de fidelidade, mas também um tipo de passagem de cupom separado para criar e distribuir cupons de desconto. Essa mesma cafeteria pode até mesmo manter eventos de música ao vivo e emitir passagens de tíquete de evento para eles.
--   **SerialNumber** – uma cadeia de caracteres exclusiva `passTypeidentifier` dentro dessa. O valor é opaco para carteira, mas é importante para o acompanhamento de passagens específicas ao se comunicar com o servidor.
+- **teamIdentifier** – isso vincula todas as passagens que você gera para sua conta da loja de aplicativos. Esse valor é visível no portal de provisionamento do iOS.
+- **passTypeIdentifier** – Registre-se no portal de provisionamento para que os grupos passem juntos (se você produzir mais de um tipo). Por exemplo, um café pode criar um tipo de passagem de cartão de loja para permitir que seus clientes ganhem créditos de fidelidade, mas também um tipo de passagem de cupom separado para criar e distribuir cupons de desconto. Essa mesma cafeteria pode até mesmo manter eventos de música ao vivo e emitir passagens de tíquete de evento para eles.
+- **SerialNumber** – uma cadeia de caracteres exclusiva `passTypeidentifier` dentro dessa. O valor é opaco para carteira, mas é importante para o acompanhamento de passagens específicas ao se comunicar com o servidor.
 
 Há um grande número de outras chaves JSON em cada passagem, um exemplo do que é mostrado abaixo:
 
@@ -199,10 +199,10 @@ A tradução de uma passagem em vários idiomas é semelhante à localização d
 
 As passagens são assinadas com um certificado privado que você gera no portal de provisionamento do iOS. As etapas para assinar a passagem são:
 
-1.  Calcule um hash SHA1 para cada arquivo no diretório Pass (não inclua o `manifest.json` arquivo ou `signature` , nenhum dos quais deve existir nesse estágio de qualquer maneira).
-1.  Escreva `manifest.json` como uma lista de chaves/valores JSON de cada nome de arquivo com seu hash.
-1.  Use o certificado para assinar o `manifest.json` arquivo e gravar o resultado em um arquivo chamado `signature` .
-1.  Compacte tudo e dê ao arquivo resultante uma `.pkpass` extensão de arquivo.
+1. Calcule um hash SHA1 para cada arquivo no diretório Pass (não inclua o `manifest.json` arquivo ou `signature` , nenhum dos quais deve existir nesse estágio de qualquer maneira).
+1. Escreva `manifest.json` como uma lista de chaves/valores JSON de cada nome de arquivo com seu hash.
+1. Use o certificado para assinar o `manifest.json` arquivo e gravar o resultado em um arquivo chamado `signature` .
+1. Compacte tudo e dê ao arquivo resultante uma `.pkpass` extensão de arquivo.
 
 
 Como sua chave privada é necessária para assinar a passagem, esse processo só deve ser feito em um servidor seguro que você controla. Não distribua suas chaves para tentar e gerar passagens em um aplicativo.
@@ -216,8 +216,8 @@ Esta seção contém instruções para ajudar a configurar seus detalhes de prov
 
 Para que uma passagem Insira a loja de aplicativos, ela deve ser vinculada a uma conta de desenvolvedor. Isso requer duas etapas:
 
-1.  A passagem deve ser registrada usando um identificador exclusivo, chamado de ID de tipo de passagem.
-1.  Um certificado válido deve ser gerado para assinar a passagem com a assinatura digital do desenvolvedor.
+1. A passagem deve ser registrada usando um identificador exclusivo, chamado de ID de tipo de passagem.
+1. Um certificado válido deve ser gerado para assinar a passagem com a assinatura digital do desenvolvedor.
 
 Para criar uma ID de tipo de passagem, faça o seguinte.
 
@@ -227,23 +227,23 @@ A primeira etapa é configurar uma ID de tipo de passagem para cada _tipo_ difer
 
 1. Na [seção certificados, identificadores e perfis do portal de provisionamento do IOS](https://developer.apple.com/account/overview.action), navegue até identificadores e selecione as IDs de **tipo de passagem** . Em seguida, **+** selecione o botão para criar um novo tipo de passagem: [![](passkit-images/passid.png "Criar um novo tipo de passagem")](passkit-images/passid.png#lightbox)
 
-2.   Forneça uma **Descrição** (nome) e um **identificador** (cadeia de caracteres exclusiva) para a passagem. Observe que todas as IDs de tipo de passagem devem começar `pass.` com a cadeia de caracteres `pass.com.xamarin.coupon.banana` neste exemplo que usamos: [![](passkit-images/register.png "Forneça uma descrição e um identificador")](passkit-images/register.png#lightbox)
+2. Forneça uma **Descrição** (nome) e um **identificador** (cadeia de caracteres exclusiva) para a passagem. Observe que todas as IDs de tipo de passagem devem começar `pass.` com a cadeia de caracteres `pass.com.xamarin.coupon.banana` neste exemplo que usamos: [![](passkit-images/register.png "Forneça uma descrição e um identificador")](passkit-images/register.png#lightbox)
 
 
-3.   Confirme a ID de passagem pressionando o botão **registrar** .
+3. Confirme a ID de passagem pressionando o botão **registrar** .
 
 #### <a name="generate-a-certificate"></a>Gerar um certificado
 
 Para criar um novo certificado para essa ID de tipo de passagem, faça o seguinte:
 
-1.  Selecione a ID de passagem criada recentemente na lista e clique em **Editar** : [![](passkit-images/pass-done.png "Selecione a nova ID de passagem na lista")](passkit-images/pass-done.png#lightbox)
+1. Selecione a ID de passagem criada recentemente na lista e clique em **Editar** : [![](passkit-images/pass-done.png "Selecione a nova ID de passagem na lista")](passkit-images/pass-done.png#lightbox)
 
     Em seguida, selecione **criar certificado...** :
 
     [![](passkit-images/cert-dist.png "Selecione criar certificado")](passkit-images/cert-dist.png#lightbox)
 
 
-2.  Siga as etapas para criar uma solicitação de assinatura de certificado (CSR).
+2. Siga as etapas para criar uma solicitação de assinatura de certificado (CSR).
   
 3. Pressione o botão **continuar** no portal do desenvolvedor e carregue o CSR para gerar seu certificado.
 
@@ -258,12 +258,12 @@ Para obter mais informações sobre o provisionamento de carteira, consulte o gu
 
 Agora que criamos o tipo Pass, podemos criar manualmente uma passagem para o teste no simulador ou em um dispositivo. As etapas para criar uma passagem são:
 
--  Crie um diretório para conter os arquivos aprovados.
--  Crie um arquivo Pass. JSON que contenha todos os dados necessários.
--  Incluir imagens na pasta (se necessário).
--  Calcule hashes SHA1 para cada arquivo na pasta e grave em Manifest. JSON.
--  Assine manifest. JSON com o arquivo. p12 do certificado baixado.
--  COMPACTe o conteúdo do diretório e renomeie com a extensão. pkpass.
+- Crie um diretório para conter os arquivos aprovados.
+- Crie um arquivo Pass. JSON que contenha todos os dados necessários.
+- Incluir imagens na pasta (se necessário).
+- Calcule hashes SHA1 para cada arquivo na pasta e grave em Manifest. JSON.
+- Assine manifest. JSON com o arquivo. p12 do certificado baixado.
+- COMPACTe o conteúdo do diretório e renomeie com a extensão. pkpass.
 
 
 Há alguns arquivos de origem no [código de exemplo](https://docs.microsoft.com/samples/xamarin/ios-samples/passkit) para este artigo que podem ser usados para gerar uma passagem. Use os arquivos no `CouponBanana.raw` diretório do diretório CreateAPassManually. Os seguintes arquivos estão presentes:
@@ -315,12 +315,12 @@ A carteira é a parte central do ecossistema PassKit. Esta captura de tela mostr
 
 Os recursos de carteira incluem:
 
--  É o único lugar que as passagens são renderizadas com seu código de barras para verificação.
--  O usuário pode alterar as configurações de atualizações. Se habilitada, as notificações por push podem disparar atualizações para os dados na passagem.
--  O usuário pode habilitar ou desabilitar a integração da tela de bloqueio. Se habilitada, isso permite que a passagem apareça automaticamente na tela de bloqueio, com base no tempo e nos dados de localização relevantes inseridos na passagem.
--  O lado inverso da passagem dá suporte a pull para atualização, se uma Web-Server-URL for fornecida no JSON Pass.
--  Os aplicativos complementares poderão ser abertos (ou baixados) se a ID do aplicativo for fornecida no JSON de passagem.
--  As passagens podem ser excluídas (com uma animação de destruição graciosos).
+- É o único lugar que as passagens são renderizadas com seu código de barras para verificação.
+- O usuário pode alterar as configurações de atualizações. Se habilitada, as notificações por push podem disparar atualizações para os dados na passagem.
+- O usuário pode habilitar ou desabilitar a integração da tela de bloqueio. Se habilitada, isso permite que a passagem apareça automaticamente na tela de bloqueio, com base no tempo e nos dados de localização relevantes inseridos na passagem.
+- O lado inverso da passagem dá suporte a pull para atualização, se uma Web-Server-URL for fornecida no JSON Pass.
+- Os aplicativos complementares poderão ser abertos (ou baixados) se a ID do aplicativo for fornecida no JSON de passagem.
+- As passagens podem ser excluídas (com uma animação de destruição graciosos).
 
 ## <a name="adding-passes-into-wallet"></a>Adicionando passagens em carteira
 
@@ -334,9 +334,9 @@ As passagens podem ser adicionadas à carteira das seguintes maneiras:
 
 Os aplicativos de canal são aplicativos intermediários que podem receber passagens em nome de um usuário e devem ser programados para reconhecer seu tipo de conteúdo e fornecer funcionalidade para adicionar à carteira. Exemplos de aplicativos de canal incluem:
 
--   **Email** – reconhece o anexo como uma passagem.
--   **Safari** – reconhece o tipo de conteúdo Pass quando um link de URL de passagem é clicado.
--   **Outros aplicativos personalizados** – qualquer aplicativo que receba anexos ou abra links (clientes de mídia social, leitores de email, etc.).
+- **Email** – reconhece o anexo como uma passagem.
+- **Safari** – reconhece o tipo de conteúdo Pass quando um link de URL de passagem é clicado.
+- **Outros aplicativos personalizados** – qualquer aplicativo que receba anexos ou abra links (clientes de mídia social, leitores de email, etc.).
 
 
 Esta captura de tela mostra como o **email** no Ios 6 reconhece um anexo Pass e as ofertas (quando tocadas) para **adicioná** -lo à carteira.
@@ -347,9 +347,9 @@ Esta captura de tela mostra como o **email** no Ios 6 reconhece um anexo Pass e 
 
 Se você estiver criando um aplicativo que pode ser um canal para passagens, eles podem ser reconhecidos pelo:
 
--  **Extensão de arquivo** -. pkpass
--  **Tipo de MIME** – application/vnd. Apple. pkpass
--  **UTI** – com. Apple. pkpass
+- **Extensão de arquivo** -. pkpass
+- **Tipo de MIME** – application/vnd. Apple. pkpass
+- **UTI** – com. Apple. pkpass
 
 
 A operação básica de um aplicativo de Conduit é recuperar o arquivo de passagem e chamar PassKit `PKAddPassesViewController` para dar ao usuário a opção de adicionar a passagem à sua carteira. A implementação desse controlador de exibição será abordada na próxima seção sobre **aplicativos complementares**.
@@ -419,10 +419,10 @@ em seguida `pass-type-identifiers` , a matriz de direitos está incorreta (ou n�
 
 As seguintes classes PassKit estão disponíveis para os aplicativos acessarem passagens:
 
--  **PKPass** – uma instância de uma passagem.
--  **PKPassLibrary** – fornece a API para acessar os passos no dispositivo.
--  **PKAddPassesViewController** – usado para exibir uma passagem para que o usuário salve em sua carteira.
--  **PKAddPassesViewControllerDelegate** – desenvolvedores do Xamarin. Ios
+- **PKPass** – uma instância de uma passagem.
+- **PKPassLibrary** – fornece a API para acessar os passos no dispositivo.
+- **PKAddPassesViewController** – usado para exibir uma passagem para que o usuário salve em sua carteira.
+- **PKAddPassesViewControllerDelegate** – desenvolvedores do Xamarin. Ios
 
 ## <a name="example"></a>Exemplo
 

@@ -7,18 +7,18 @@ ms.technology: xamarin-ios
 ms.date: 11/25/2015
 author: lobrien
 ms.author: laobri
-ms.openlocfilehash: 82320b069156828101d17e79ca48a8933b8a8777
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: ab7761071ef0795d054febbfb302702e09d80c53
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655076"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528469"
 ---
 # <a name="creating-a-xamarinios-application-using-the-elements-api"></a>Criando um aplicativo Xamarin. iOS usando a API de elementos
 
 _Este artigo se baseia nas informações apresentadas no artigo da caixa de diálogo introdução ao MonoTouch. Ele apresenta uma explicação que mostra como usar a caixa de diálogo MonoTouch. (MT. D) a API de elementos para começar a criar rapidamente um aplicativo com o MT. 3D._
 
-Neste tutorial, usaremos o MT. A API D Elements para criar um estilo de detalhes mestre do aplicativo que exibe uma lista de tarefas. Quando o usuário selecionar o <span class="ui">+</span> botão na barra de navegação, uma nova linha será adicionada à tabela para a tarefa. A seleção da linha navegará até a tela de detalhes que nos permite atualizar a descrição da tarefa e a data de vencimento, conforme ilustrado abaixo:
+Neste tutorial, usaremos o MT. A API D Elements para criar um estilo de detalhes mestre do aplicativo que exibe uma lista de tarefas. Quando o usuário selecionar o **+** botão na barra de navegação, uma nova linha será adicionada à tabela para a tarefa. A seleção da linha navegará até a tela de detalhes que nos permite atualizar a descrição da tarefa e a data de vencimento, conforme ilustrado abaixo:
 
  [![](elements-api-walkthrough-images/01-task-list-app.png "A seleção da linha navegará até a tela de detalhes que nos permite atualizar a descrição da tarefa e a data de vencimento")](elements-api-walkthrough-images/01-task-list-app.png#lightbox)
 
@@ -36,11 +36,11 @@ Para iniciar o processo de criação de tela, o MonoTouch. `DialogViewController
 
 Para criar um aplicativo de várias telas com MonoTouch. dialog, precisamos:
 
-1.  Criar um`UINavigationController.`
-1.  Criar um`DialogViewController.`
-1.  Adicione o `DialogViewController` como a raiz do`UINavigationController.` 
-1.  Adicione um `RootElement` ao`DialogViewController.`
-1.  Adicionar `Sections` e `Elements` ao`RootElement.` 
+1. Criar um`UINavigationController.`
+1. Criar um`DialogViewController.`
+1. Adicione o `DialogViewController` como a raiz do`UINavigationController.` 
+1. Adicione um `RootElement` ao`DialogViewController.`
+1. Adicionar `Sections` e `Elements` ao`RootElement.` 
 
 ### <a name="using-a-uinavigationcontroller"></a>Usando um UINavigationController
 
@@ -77,14 +77,14 @@ As seções são constituídas de elementos, outras seções ou até mesmo outra
 
 ### <a name="using-dialogviewcontroller"></a>Usando DialogViewController
 
-O `DialogViewController`, sendo uma `UITableViewController` subclasse, tem um `UITableView` como sua exibição. Neste exemplo, queremos adicionar itens à tabela cada vez que o <span class="ui">+</span> botão é tocado. Como o `DialogViewController` foi adicionado a um `UINavigationController`, podemos usar a `NavigationItem`Propriedade do `RightBarButton` para adicionar o <span class="ui">+</span> botão, como mostrado abaixo:
+O `DialogViewController`, sendo uma `UITableViewController` subclasse, tem um `UITableView` como sua exibição. Neste exemplo, queremos adicionar itens à tabela cada vez que o **+** botão é tocado. Como o `DialogViewController` foi adicionado a um `UINavigationController`, podemos usar a `NavigationItem`Propriedade do `RightBarButton` para adicionar o **+** botão, como mostrado abaixo:
 
 ```csharp
 _addButton = new UIBarButtonItem (UIBarButtonSystemItem.Add);
 _rootVC.NavigationItem.RightBarButtonItem = _addButton;
 ```
 
-Quando criamos o `RootElement` anterior, passamos a ele uma `Section` única instância para que possamos adicionar elementos à medida <span class="ui">+</span> que o botão é tocado pelo usuário. Podemos usar o código a seguir para fazer isso no manipulador de eventos para o botão:
+Quando criamos o `RootElement` anterior, passamos a ele uma `Section` única instância para que possamos adicionar elementos à medida **+** que o botão é tocado pelo usuário. Podemos usar o código a seguir para fazer isso no manipulador de eventos para o botão:
 
 ```csharp
 _addButton.Clicked += (sender, e) => {                

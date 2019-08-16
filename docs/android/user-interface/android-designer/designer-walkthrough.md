@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/25/2018
-ms.openlocfilehash: 9387b44419af87785d45a25ab254d3361a5615a3
-ms.sourcegitcommit: c75c1d2132a4f46a7b38e454d5f24705165026bd
+ms.openlocfilehash: 71784e18b9becf9851ad9ed9d4730a82d0ff94f7
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68485917"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69523657"
 ---
 # <a name="using-the-xamarinandroid-designer"></a>Usando o Xamarin. Designer Android
 
@@ -25,9 +25,9 @@ As interfaces de usuário do Android podem ser criadas declarativamente usando a
 Este artigo demonstra como usar o Xamarin. Designer Android para criar visualmente uma interface do usuário.
 
 > [!TIP]
-> As versões mais recentes do Visual Studio dão suporte à abertura de arquivos. xml dentro do Designer Android.
+> As versões mais recentes do Visual Studio dão suporte à abertura de arquivos .xml dentro do Android Designer.
 >
-> Os arquivos. axml e. XML têm suporte no Designer Android.
+> Tanto arquivos .axml quanto .xml são compatíveis com o Android Designer.
 
 ## <a name="walkthrough"></a>Passo a passo
 
@@ -105,11 +105,11 @@ Se os dois `textView` widgets não estiverem dentro `linearLayout1`do, você pod
 
 A próxima etapa é modificar a interface do usuário para exibir `ImageView` a à esquerda, com os dois `TextView` widgets empilhados `ImageView`à direita do.
 
-1.  Selecione o `ImageView`.
+1. Selecione o `ImageView`.
 
-2.  Na **janela Propriedades**, insira *largura* na caixa de pesquisa e localize a **largura do layout**.
+2. Na **janela Propriedades**, insira *largura* na caixa de pesquisa e localize a **largura do layout**.
 
-3.  Altere a configuração de **largura** do `wrap_content`layout para:
+3. Altere a configuração de **largura** do `wrap_content`layout para:
 
 ![Definir conteúdo de encapsulamento](designer-walkthrough-images/vs/15-wrap-content-w158.png)
 
@@ -121,7 +121,7 @@ Clicar no triângulo novamente retorna a `Width` configuração para `match_pare
 
 [![Selecionar LinearLayout raiz](designer-walkthrough-images/vs/16-root-linearlayout-w158-sml.png)](designer-walkthrough-images/vs/16-root-linearlayout-w158.png#lightbox)
 
-Com a raiz `LinearLayout` selecionada, retorne ao painel de **Propriedades** , digite *orientação* na caixa de pesquisa e localize a configuração de **orientação** . Altere  a orientação `horizontal`para:
+Com a raiz `LinearLayout` selecionada, retorne ao painel de **Propriedades** , digite *orientação* na caixa de pesquisa e localize a configuração de **orientação** . Altere a orientação `horizontal`para:
 
 ![Selecionar orientação horizontal](designer-walkthrough-images/vs/17-horizontal-orientation-w158.png)
 
@@ -153,11 +153,11 @@ Em seguida, ajuste a posição do `LinearLayout` widget que contém os dois `Tex
 
 Como o `ImageView` está sendo usado para exibir cores (em vez de imagens), a próxima etapa é remover a origem da imagem padrão adicionada pelo modelo.
 
-1.  Selecione o `ImageView` na **superfície do designer**.
+1. Selecione o `ImageView` na **superfície do designer**.
 
-2.  Em **Propriedades**, insira *src* na caixa de pesquisa.
+2. Em **Propriedades**, insira *src* na caixa de pesquisa.
 
-3.  Clique no pequeno quadrado à direita da configuração da propriedade **src** e selecione **Redefinir**:
+3. Clique no pequeno quadrado à direita da configuração da propriedade **src** e selecione **Redefinir**:
 
 [![Limpar a configuração de src ImageView](designer-walkthrough-images/vs/22-clear-img-src-w158-sml.png)](designer-walkthrough-images/vs/22-clear-img-src-w158.png#lightbox)
 
@@ -329,7 +329,7 @@ Como alternativa, você pode inserir *ImageView* na barra de pesquisa para local
 
 [![Pesquisa do ImageView](designer-walkthrough-images/xs/07-imageview-search-m75-sml.png)](designer-walkthrough-images/xs/07-imageview-search-m75.png#lightbox)
 
-Arraste-o `ImageView`  paraadesignSurface(issoseráusadoparaexibirumaamostradecornoaplicativodenavegadordecores`ImageView` ):
+Arraste-o `ImageView` paraadesignSurface(issoseráusadoparaexibirumaamostradecornoaplicativodenavegadordecores`ImageView` ):
 
 [![ImageView na tela](designer-walkthrough-images/xs/08-imageview-on-canvas-m75-sml.png)](designer-walkthrough-images/xs/08-imageview-on-canvas-m75.png#lightbox)
 
@@ -357,11 +357,11 @@ Se os dois `textView` widgets não estiverem dentro `linearLayout1`do, você pod
 
 A próxima etapa é modificar a interface do usuário para exibir `ImageView` a à esquerda, com os dois `TextView` widgets empilhados `ImageView`à direita do.
 
-1.  Com o `ImageView` selecionado, clique na guia **Propriedades** .
+1. Com o `ImageView` selecionado, clique na guia **Propriedades** .
 
-2.  Logo abaixo da guia **Propriedades** , clique em **layout**.
+2. Logo abaixo da guia **Propriedades** , clique em **layout**.
 
-3.  Role para baixo até o **modo** de exibição `Width` e altere `wrap_content`a configuração para:
+3. Role para baixo até o **modo** de exibição `Width` e altere `wrap_content`a configuração para:
 
 [![Definir conteúdo de encapsulamento](designer-walkthrough-images/xs/15-wrap-content-m75-sml.png)](designer-walkthrough-images/xs/15-wrap-content-m75.png#lightbox)
 
@@ -397,11 +397,11 @@ Em seguida, ajuste a posição do `LinearLayout` widget que contém os dois `Tex
 
 Como o `ImageView` está sendo usado para exibir cores (em vez de imagens), a próxima etapa é remover a origem da imagem padrão adicionada pelo modelo.
 
-1.  Selecione o `ImageView`.
+1. Selecione o `ImageView`.
 
-2.  Clique na guia **widget** em **Propriedades**.
+2. Clique na guia **widget** em **Propriedades**.
 
-3.  Desmarque `Src` a configuração para que ela fique em branco:
+3. Desmarque `Src` a configuração para que ela fique em branco:
 
 [![Limpar a configuração de src ImageView](designer-walkthrough-images/xs/23-clear-src-m75-sml.png)](designer-walkthrough-images/xs/23-clear-src-m75.png#lightbox)
 

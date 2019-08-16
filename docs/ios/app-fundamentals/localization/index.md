@@ -1,107 +1,107 @@
 ---
-title: Localização no xamarin. IOS
-description: Este documento descreve os recursos de localização de iOS e como usar esses recursos em aplicativos xamarin. IOS. Ele aborda o idioma, localidade, arquivos de cadeias de caracteres, imagens de inicialização e muito mais.
+title: Localização no Xamarin. iOS
+description: Este documento descreve os recursos de localização do iOS e como usar esses recursos em aplicativos Xamarin. iOS. Ele aborda linguagem, localidade, arquivos de cadeias de caracteres, imagens de inicialização e muito mais.
 ms.prod: xamarin
 ms.assetid: DFD9EB4A-E536-18E4-C8FD-679BA9C836D8
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 04/28/2017
-ms.openlocfilehash: 11926d3cf0c3954c97cdd1e92283626067c9623f
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 604313009129ad3c7133098d8e7880b0e07eef6e
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61248735"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69527115"
 ---
-# <a name="localization-in-xamarinios"></a>Localização no xamarin. IOS
+# <a name="localization-in-xamarinios"></a>Localização no Xamarin. iOS
 
 _Este documento aborda os recursos de localização do SDK do iOS e como acessá-los com o Xamarin._
 
-Consulte a [codificações de internacionalização](encodings.md) para obter instruções sobre a inclusão de páginas de código/conjuntos de caracteres em aplicativos que devem processar dados não-Unicode.
+Consulte as [codificações](encodings.md) de internacionalização para obter instruções sobre como incluir conjuntos de caracteres/páginas de código em aplicativos que devem processar dados não Unicode.
 
 ## <a name="ios-platform-features"></a>recursos da plataforma iOS
 
-Esta seção descreve alguns dos recursos de localização no iOS. Vá para o [próxima seção](#localization-basics-in-ios) para ver exemplos e código específicos.
+Esta seção descreve alguns dos recursos de localização no iOS. Pule para a [próxima seção](#localization-basics-in-ios) para ver o código e os exemplos específicos.
 
 ### <a name="language"></a>Idioma
 
-Os usuários escolher seu idioma na **configurações** aplicativo. Essa configuração afeta a cadeias de caracteres de idioma e as imagens exibidas pelo sistema operacional e nos aplicativos.
+Os usuários escolhem seu idioma no aplicativo **configurações** . Essa configuração afeta as cadeias de caracteres de idioma e as imagens exibidas pelo sistema operacional e em aplicativos.
 
-Para determinar o idioma que está sendo usado em um aplicativo, obter o primeiro elemento da `NSBundle.MainBundle.PreferredLocalizations`:
+Para determinar o idioma que está sendo usado em um aplicativo, obtenha o primeiro `NSBundle.MainBundle.PreferredLocalizations`elemento de:
 
 ```csharp
 var lang = NSBundle.MainBundle.PreferredLocalizations[0];
 ```
 
-Esse valor será um código de idioma, como `en` para inglês `es` para espanhol, `ja` para japonês, etc. O valor retornado é restrito a um entre as localizações com suporte do aplicativo (usando regras de fallback para determinar a melhor correspondência).
+Esse valor será um código `en` de idioma, como para inglês, `es` para espanhol, `ja` para japonês, etc. O valor retornado é restrito a uma das localizações com suporte pelo aplicativo (usando regras de fallback para determinar a melhor correspondência).
 
-O código do aplicativo não precisa sempre verificar esse valor – o Xamarin e ambos os iOS fornecem recursos que ajudam a fornecer automaticamente a cadeia de caracteres correta ou o recurso para o idioma do usuário. Esses recursos são descritos no restante deste documento.
+O código do aplicativo nem sempre precisa verificar esse valor – o Xamarin e o iOS fornecem recursos que ajudam a fornecer automaticamente a cadeia de caracteres ou o recurso correto para o idioma do usuário. Esses recursos são descritos no restante deste documento.
 
 > [!NOTE]
-> Use `NSLocale.PreferredLanguages` para determinar as preferências de idioma do usuário, independentemente de suas localizações com suporte no aplicativo. Os valores retornados por esse método alterado no iOS 9; ver [TN2418 de observação técnica](https://developer.apple.com/library/content/technotes/tn2418/_index.html) para obter detalhes.
+> Use `NSLocale.PreferredLanguages` para determinar as preferências de idioma do usuário, independentemente das localizações com suporte do aplicativo. Os valores retornados por esse método foram alterados no iOS 9; consulte a [Nota técnica TN2418](https://developer.apple.com/library/content/technotes/tn2418/_index.html) para obter detalhes.
 
 ### <a name="locale"></a>Localidade
 
-Os usuários escolhem a localidade na **configurações** aplicativo. Essa configuração afeta a maneira que as datas, horas, números e moeda são formatados.
+Os usuários escolhem sua localidade no aplicativo **configurações** . Essa configuração afeta a forma como as datas, as horas, os números e a moeda são formatados.
 
-Isso permite aos usuários escolher se eles veem os formatos de hora de 12 horas ou 24 horas, se seu separador decimal é uma vírgula ou um ponto e a ordem do dia, mês e ano na exibição de data.
+Isso permite que os usuários escolham se verão formatos de 12 horas ou de 24 horas, se o seu separador decimal for uma vírgula ou um ponto, e a ordem de dia, mês e ano na exibição de data.
 
-Com o Xamarin, você tem acesso às classes de iOS da Apple, ambos os (`NSNumberFormatter`), bem como as classes do .NET em System. Globalization. Os desenvolvedores devem avaliar qual é mais adequado às suas necessidades, pois há diferentes recursos disponíveis em cada. Em particular, se você estiver recuperando e exibindo os preços de compra no aplicativo usando StoreKit, você deve usar classes de formatação da Apple para obter as informações de preço retornadas.
+Com o Xamarin, você tem acesso às classes Ios da Apple`NSNumberFormatter`(), bem como às classes .net em System. Globalization. Os desenvolvedores devem avaliar o que é mais adequado às suas necessidades, pois há diferentes recursos disponíveis em cada um. Em particular, se você estiver recuperando e exibindo os preços de compra no aplicativo usando o StoreKit, deverá usar as classes de formatação da Apple para obter as informações de preço retornadas.
 
-A localidade atual pode ser consultada por qualquer uma das duas maneiras:
+A localidade atual pode ser consultada de uma das duas maneiras:
 
 - `NSLocale.CurrentLocale.LocaleIdentifier`
 - `NSLocale.AutoUpdatingCurrentLocale.LocaleIdentifier`
 
-O primeiro valor pode ser armazenados em cache pelo sistema operacional e então, talvez nem sempre reflete a localidade do usuário selecionada no momento. Use o segundo valor para obter a localidade selecionada no momento.
+O primeiro valor pode ser armazenado em cache pelo sistema operacional e, portanto, talvez nem sempre reflita a localidade atualmente selecionada do usuário. Use o segundo valor para obter a localidade selecionada no momento.
 
 > [!NOTE]
-> Mono (o tempo de execução .NET no qual se baseia o xamarin. IOS) e APIs do iOS da Apple não dão suporte a conjuntos idênticos de combinações de idioma/região.
-> Por isso, é possível selecionar uma combinação de idioma/região no iOS **configurações** aplicativo que não é mapeado para um valor válido em Mono. Por exemplo, a definição de idioma de um iPhone para inglês e sua região Espanha fará com que as seguintes APIs produzir valores diferentes:
+> Mono (o tempo de execução do .NET no qual o Xamarin. iOS é baseado) e as APIs do iOS da Apple não dão suporte a conjuntos idênticos de combinações de idiomas/regiões.
+> Por isso, é possível selecionar uma combinação de idioma/região no aplicativo de **configurações** do IOS que não é mapeado para um valor válido no mono. Por exemplo, definir o idioma de um iPhone como Inglês e sua região para a Espanha fará com que as seguintes APIs produzam valores diferentes:
 >
-> - `CurrentThead.CurrentCulture`: en-US (API do Mono)
-> - `CurrentThread.CurrentUICulture`: en-US (API do Mono)
+> - `CurrentThead.CurrentCulture`: en-US (API mono)
+> - `CurrentThread.CurrentUICulture`: en-US (API mono)
 > - `NSLocale.CurrentLocale.LocaleIdentifier`: en_ES (API da Apple)
 >
-> Como usa o Mono `CurrentThread.CurrentUICulture` para selecionar os recursos e `CurrentThread.CurrentCulture` para formatar datas e moedas, com base em Mono localização (por exemplo, com arquivos. resx) não pode produzir resultados esperados para essas combinações de idioma/região. Nessas situações, dependem das APIs da Apple para localizar conforme necessário.
+> Como o mono `CurrentThread.CurrentUICulture` usa para selecionar recursos `CurrentThread.CurrentCulture` e formatar datas e moedas, a localização baseada em mono (por exemplo, com arquivos. resx) pode não produzir resultados esperados para essas combinações de idioma/região. Nessas situações, dependem das APIs da Apple para localizar, conforme necessário.
 
 ### <a name="nscurrentlocaledidchangenotification"></a>NSCurrentLocaleDidChangeNotification
 
-iOS gera um `NSCurrentLocaleDidChangeNotification` quando o usuário atualiza sua localidade. Aplicativos podem ouvir para essa notificação enquanto eles estão em execução e podem fazer as alterações apropriadas na interface do usuário.
+o Ios gera `NSCurrentLocaleDidChangeNotification` um quando o usuário atualiza sua localidade. Os aplicativos podem escutar essa notificação enquanto estão em execução e podem fazer as alterações apropriadas na interface do usuário.
 
 ## <a name="localization-basics-in-ios"></a>Noções básicas de localização no iOS
 
-Os seguintes recursos do iOS serão facilmente utilizados no Xamarin para fornecer recursos localizados para exibição ao usuário. Consulte a [TaskyL10n exemplo](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10n) para ver como implementar essas ideias.
+Os seguintes recursos do iOS são facilmente aproveitados no Xamarin para fornecer recursos localizados para exibição para o usuário. Consulte o [exemplo de TaskyL10n](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10n) para ver como implementar essas ideias.
 
-### <a name="specifying-default-and-supported-languages-in-infoplist"></a>Especificando padrão e idiomas com suporte no Info. plist
+### <a name="specifying-default-and-supported-languages-in-infoplist"></a>Especificando idiomas padrão e com suporte no info. plist
 
-No [técnica p um QA1828: Como o iOS determina o idioma para seu aplicativo](https://developer.apple.com/library/content/qa/qa1828/_index.html), Apple descreve como o seleciona um idioma a ser usado em um aplicativo iOS. Os seguintes fatores afetam a linguagem que é exibida:
+Em [Q Technical & um QA1828: Como o Ios determina o idioma do seu](https://developer.apple.com/library/content/qa/qa1828/_index.html)aplicativo, a Apple descreve como o Ios seleciona um idioma a ser usado em um aplicativo. Os fatores a seguir afetam qual idioma é exibido:
 
-- Idiomas preferencial do usuário (encontrada na **configurações** app)
-- Entre as localizações agrupado com o aplicativo (.lproj pastas)
-- `CFBundleDevelopmentRegion` (**Info. plist** valor que especifica o idioma padrão para o aplicativo)
-- `CFBundleLocalizations` (**Info. plist** matriz especificando localizações todos com suporte)
+- Os idiomas preferenciais do usuário (encontrados no aplicativo de **configurações** )
+- As localizações agrupadas com o aplicativo (pastas. lproj)
+- `CFBundleDevelopmentRegion`(Valor**info. plist** especificando o idioma padrão para o aplicativo)
+- `CFBundleLocalizations`(Matriz**info. plist** especificando todas as localizações com suporte)
 
-Conforme indicado na técnica p e R, `CFBundleDevelopmentRegion` representa o idioma e região padrão de um aplicativo. Se o aplicativo não explicitamente dá suporte a qualquer um dos idiomas de preferência do usuário, ele usará o idioma especificado por esse campo.
+Conforme indicado no Q técnico & A, `CFBundleDevelopmentRegion` representa a região e o idioma padrão de um aplicativo. Se o aplicativo não der suporte explicitamente a qualquer um dos idiomas preferenciais de um usuário, ele usará o idioma especificado por esse campo.
 
 > [!IMPORTANT]
-> iOS 11 se aplica a esse mecanismo de seleção de idioma mais estritamente que foram a versões anteriores do sistema operacional. Por isso, qualquer aplicativo iOS 11 que não declara explicitamente suas localizações com suporte – incluindo .lproj pastas ou definindo um valor para `CFBundleLocalizations` – pode ser exibido um idioma diferente no iOS 11, do que tinha no iOS 10.
+> o iOS 11 aplica esse mecanismo de seleção de idioma mais estritamente do que as versões anteriores do sistema operacional. Por isso, qualquer aplicativo IOS 11 que não declare explicitamente suas localizações com suporte – seja incluindo pastas. lproj ou definindo um valor para `CFBundleLocalizations` – pode exibir um idioma diferente no Ios 11 do que no Ios 10.
 
-Se `CFBundleDevelopmentRegion` não foi especificado o **Info. plist** arquivo, as ferramentas de build do xamarin. IOS no momento, usam um valor padrão de `en_US`. Embora isso possa mudar em uma versão futura, isso significa que o idioma padrão é inglês.
+Se `CFBundleDevelopmentRegion` não tiver sido especificado no arquivo **info. plist** , as ferramentas de Build do Xamarin. Ios usarão atualmente um valor padrão `en_US`de. Embora isso possa ser alterado em uma versão futura, isso significa que o idioma padrão é inglês.
 
-Para garantir que seu aplicativo seleciona um idioma esperado, execute as seguintes etapas:
+Para garantir que seu aplicativo selecione um idioma esperado, execute as seguintes etapas:
 
-- Especifica um idioma padrão. Abra **Info. plist** e usar o **fonte** modo de exibição para definir um valor para o `CFBundleDevelopmentRegion` chave; no XML, ele deve ser semelhante ao seguinte:
+- Especifique um idioma padrão. Abra o **info. plist** e use a exibição de **código-fonte** para definir `CFBundleDevelopmentRegion` um valor para a chave; em XML, ele deve ser semelhante ao seguinte:
 
 ```xml
 <key>CFBundleDevelopmentRegion</key>
 <string>es</string>
 ```
 
-Este exemplo usa "es" para especificar que, quando nenhuma do usuário preferencial idiomas têm suporte, o padrão para o espanhol.
+Este exemplo usa "es" para especificar que, quando nenhum dos idiomas preferenciais de um usuário tiver suporte, o padrão será espanhol.
 
-- Declare suas localizações todos com suporte. Na **Info. plist**, use o **fonte** exibição para definir uma matriz para o `CFBundleLocalizations` chave; no XML, ele deve ser semelhante ao seguinte:
+- Declare todas as localizações com suporte. No **info. plist**, use a exibição de **origem** para definir uma matriz para `CFBundleLocalizations` a chave; em XML, ela deve ser semelhante ao seguinte:
 
 ```xml
 <key>CFBundleLocalizations</key>
@@ -112,44 +112,44 @@ Este exemplo usa "es" para especificar que, quando nenhuma do usuário preferenc
 </array>
 ```
 
-Aplicativos xamarin. IOS que foram localizados usando mecanismos de .NET, como arquivos. resx devem fornecer essas **Info. plist** valores também.
+Os aplicativos Xamarin. iOS que foram localizados usando mecanismos .NET como arquivos. resx também devem fornecer esses valores **info. plist** .
 
-Para obter mais informações sobre esses **Info. plist** chaves, dê uma olhada da Apple [referência de chave de lista de propriedades de informações](https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html).
+Para obter mais informações sobre essas chaves **info. plist** , dê uma olhada na [referência da chave da lista de propriedades de informações](https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html)da Apple.
 
-### <a name="getlocalizedstring-method"></a>Método GetLocalizedString
+### <a name="getlocalizedstring-method"></a>Método gettraduzistring
 
-O `NSBundle.MainBundle.GetLocalizedString` método procura texto localizado que foi armazenado no **.strings** arquivos no projeto. Esses arquivos são organizados por linguagem, nos diretórios especialmente nomeadas com um **.lproj** sufixo (Observe que a primeira letra da extensão é um "L" em letras minúsculas).
+O `NSBundle.MainBundle.GetLocalizedString` método pesquisa o texto localizado que foi armazenado em arquivos **. Strings** no projeto. Esses arquivos são organizados por idioma, em diretórios especialmente nomeados com um sufixo **. lproj** (Observe que a primeira letra da extensão é um "L" minúsculo).
 
-#### <a name="strings-file-locations"></a>locais de arquivo .strings
+#### <a name="strings-file-locations"></a>. locais de arquivo de cadeias de caracteres
 
-- **Base.lproj** é o diretório que contém recursos para o idioma padrão.
-  Ele geralmente está localizado na raiz do projeto (mas também pode ser colocado na **recursos** pasta).
-- **&lt;linguagem&gt;.lproj** diretórios são criados para cada idioma suportado, normalmente na **recursos** pasta.
+- **Base. lproj** é o diretório que contém recursos para o idioma padrão.
+  Geralmente, ele está localizado na raiz do projeto (mas também pode ser colocado na pasta de **recursos** ).
+- **&lt;os&gt;diretórios. lproj de idioma** são criados para cada idioma com suporte, geralmente na pasta de **recursos** .
 
-Pode haver um número de diferentes **.strings** arquivos em cada diretório de idioma:
+Pode haver vários arquivos **. Strings** diferentes em cada diretório de idioma:
 
-- **Localizable.strings** – lista principal de texto localizado.
-- **InfoPlist.strings** – determinadas chaves específicas são permitidas neste arquivo para converter as coisas, como o nome do aplicativo.
-- **< nome do storyboard > .strings** – arquivo opcional que contém traduções para elementos de interface do usuário em um storyboard.
+- **Inlocalizáveis. Strings** – a lista principal de texto localizado.
+- **InfoPlist. Strings** – determinadas chaves específicas são permitidas neste arquivo para converter itens como o nome do aplicativo.
+- **storyboard-Name >. Strings – arquivo opcional que contém traduções para elementos da interface do usuário em um Storyboard. \<**
 
-O **ação de compilação** para esses arquivos devem ser **recursos de pacote**.
+A **ação de Build** para esses arquivos deve ser **recurso de pacote**.
 
-#### <a name="strings-file-format"></a>formato de arquivo .strings
+#### <a name="strings-file-format"></a>formato de arquivo. Strings
 
-A sintaxe para valores de cadeia de caracteres localizada é:
+A sintaxe para valores de cadeia de caracteres localizados é:
 
 ```console
 /* comment */
 "key"="localized-value";
 ```
 
-Você deve escapar os seguintes caracteres em cadeias de caracteres:
+Você deve escapar os seguintes caracteres em Strings:
 
-* `\"` aspas
-* `\\` barra invertida
-* `\n` nova linha
+* `\"`citar
+* `\\`barra invertida
+* `\n`separados
 
-Este é um exemplo **es/Localizable.strings** (ie. Arquivo de espanhol) de exemplo:
+Este é um exemplo de **es/localizáveis. Strings** (isto é, Espanhol) do exemplo:
 
 ```console
 "<new task>" = "<new task>";
@@ -173,15 +173,15 @@ Para localizar uma imagem no iOS:
     UIImage.FromBundle("flag");
     ```
 
-2. Coloque o arquivo de imagem padrão **flag.png** na **Base.lproj** (o diretório de linguagem de desenvolvimento nativo).
+2. Coloque o arquivo de imagem padrão **Flag. png** em **base. lproj** (o diretório de linguagem de desenvolvimento nativo).
 
-3. Opcionalmente, coloque as versões localizadas da imagem no **.lproj** pastas para cada idioma (por exemplo. **es.lproj**, **ja.lproj**). Use o mesmo nome de arquivo **flag.png** em cada diretório de idioma.
+3. Opcionalmente, coloque as versões localizadas da imagem em pastas **. lproj** para cada idioma (por exemplo, **es.lproj**, **ja.lproj**). Use o mesmo sinalizador de nome de arquivo **. png** em cada diretório de idioma.
 
-Se não houver uma imagem de um idioma específico, o iOS o fallback para a pasta de linguagem nativa padrão e carregar a imagem a partir daí.
+Se uma imagem não estiver presente para um idioma específico, o iOS fará fallback para a pasta padrão de idioma nativo e carregará a imagem a partir daí.
 
 #### <a name="launch-images"></a>Imagens de inicialização
 
-Use as convenções de nomenclatura padrão para as imagens de inicialização (e o XIB ou Storyboard para modelos de iPhone 6) ao colocá-las na **.lproj** diretórios para cada idioma.
+Use as convenções de nomenclatura padrão para as imagens de inicialização (e o XIB ou Storyboard para modelos do iPhone 6) ao colocá-las nos diretórios **. lproj** para cada idioma.
 
 ```console
 Default.png
@@ -192,13 +192,13 @@ LaunchScreen.xib
 
 ### <a name="app-name"></a>Nome do aplicativo
 
-Colocando um **InfoPlist.strings** do arquivo em um **.lproj** diretório permite que você substitua alguns valores do aplicativo do **Info. plist**, incluindo o nome do aplicativo:
+Colocar um arquivo **InfoPlist. Strings** em um diretório **. lproj** permite que você substitua alguns valores do **info. plist**do aplicativo, incluindo o nome do aplicativo:
 
 ```console
 "CFBundleDisplayName" = "LeónTodo";
 ```
 
-Outras chaves que você pode usar para [localizar cadeias de caracteres específica do aplicativo](https://developer.apple.com/library/ios/documentation/MacOSX/Conceptual/BPInternational/LocalizingYourApp/LocalizingYourApp.html#//apple_ref/doc/uid/10000171i-CH5-SW21) são:
+Outras chaves que você pode usar para [Localizar cadeias de caracteres específicas do aplicativo](https://developer.apple.com/library/ios/documentation/MacOSX/Conceptual/BPInternational/LocalizingYourApp/LocalizingYourApp.html#//apple_ref/doc/uid/10000171i-CH5-SW21) são:
 
 - CFBundleName
 - CFBundleShortVersionString
@@ -206,9 +206,9 @@ Outras chaves que você pode usar para [localizar cadeias de caracteres específ
 
 ### <a name="dates-and-times"></a>Datas e horas
 
-Embora seja possível usar as funções internas de data e hora do .NET (juntamente com a atual `CultureInfo`) para formatar datas e horas para uma localidade, isso ignoraria usuário-configurações específicas à localidade (que podem ser definidas separadamente de linguagem).
+Embora seja possível usar as funções internas de data e hora do .net (junto com a atual `CultureInfo`) para formatar datas e horários para uma localidade, isso ignorará as configurações de usuário específicas de localidade (que podem ser definidas separadamente do idioma).
 
-Usar o iOS `NSDateFormatter` para produzir saída que corresponde à preferência de localidade do usuário. O código de exemplo a seguir demonstra a data básica e opções de formatação de hora:
+Use o Ios `NSDateFormatter` para produzir a saída que corresponde à preferência de localidade do usuário. O código de exemplo a seguir demonstra as opções básicas de formatação de data e hora:
 
 ```csharp
 var date = NSDate.Now;
@@ -224,7 +224,7 @@ df.TimeStyle = NSDateFormatterStyle.None;
 Debug.WriteLine ("Medium,None: " + df.StringFor(date));
 ```
 
-Resultados para inglês dos Estados Unidos:
+Resultados para inglês no Estados Unidos:
 
 ```console
 Full,Long: Friday, August 7, 2015 at 10:29:32 AM PDT
@@ -232,7 +232,7 @@ Short,Short: 8/7/15, 10:29 AM
 Medium,None: Aug 7, 2015
 ```
 
-Resultados para espanhol da Espanha:
+Resultados para espanhol na Espanha:
 
 ```console
 Full,Long: viernes, 7 de agosto de 2015, 10:26:58 GMT-7
@@ -240,43 +240,43 @@ Short,Short: 7/8/15 10:26
 Medium,None: 7/8/2015
 ```
 
-Consulte a maçã [formatadores data](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/DataFormatting/Articles/dfDateFormatting10_4.html) documentação para obter mais informações. Ao testar sensíveis à localidade formatação de data e hora, marque ambos **iPhone Language** e **região** configurações.
+Consulte a documentação de [formatadores de data](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/DataFormatting/Articles/dfDateFormatting10_4.html) da Apple para obter mais informações. Ao testar a formatação de data e hora sensível à localidade, verifique as configurações de idioma e **região** do **iPhone** .
 
 <a name="rtl" />
 
-### <a name="right-to-left-rtl-layout"></a>No layout para direita para esquerda (RTL)
+### <a name="right-to-left-rtl-layout"></a>Layout da direita para a esquerda (RTL)
 
-iOS fornece inúmeros recursos para ajudá-lo na criação de aplicativos com suporte a RTL:
+o iOS fornece uma série de recursos para ajudar na criação de aplicativos com reconhecimento de RTL:
 
-- Do layout do uso automático `leading` e `trailing` atributos para o alinhamento do controle (que corresponde à esquerda e direita para inglês, mas é revertido para idiomas RTL).
-  O [ `UIStackView` ](~/ios/user-interface/controls/uistackview.md) controle é particularmente útil para dispor controles a serem consideradas ao RTL.
-- Use `TextAlignment = UITextAlignment.Natural` para alinhamento de texto (que será deixado para a maioria das linguagens, mas logo para RTL).
-- `UINavigationController` Inverte o botão Voltar e inverte a direção de passar o dedo automaticamente.
+- Use layouts `leading` automáticos `trailing` e atributos para alinhamento de controle (que corresponde à esquerda e à direita para inglês, mas é invertido para idiomas RTL).
+  O [`UIStackView`](~/ios/user-interface/controls/uistackview.md) controle é particularmente útil para dispor controles que reconhecem a RTL.
+- Use `TextAlignment = UITextAlignment.Natural` para alinhamento de texto (que será deixado para a maioria dos idiomas, mas adequado para RTL).
+- `UINavigationController`inverte automaticamente o botão voltar e reverte a direção do dedo.
 
-As capturas de tela a seguir mostram os [localizado exemplo Tasky](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10n) em árabe e hebraico (embora foi inserido em inglês nos campos):
+As capturas de tela a seguir mostram o [exemplo de tarefa localizada](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10n) em árabe e Hebraico (embora o inglês tenha sido inserido nos campos):
 
 [![](images/rtl-ar-sml.png "Localização em árabe")](images/rtl-ar.png#lightbox "Arabic")
 
-[![](images/rtl-he-sml.png "Localização em hebraico")](images/rtl-he.png#lightbox "Hebrew")
+[![](images/rtl-he-sml.png "Localização em Hebraico")](images/rtl-he.png#lightbox "Hebrew")
 
-iOS é revertida automaticamente a `UINavigationController`, e os outros controles são posicionados dentro de `UIStackView` ou alinhado com Layout automático.
-Texto RTL é localizado usando **.strings** arquivos da mesma forma como o texto LTR.
+o Ios reverte automaticamente o `UINavigationController`, e os outros controles são colocados dentro `UIStackView` ou alinhados com o layout automático.
+O texto RTL é localizado usando arquivos **. Strings** da mesma forma que o texto ltr.
 
 <a name="code"/>
 
 ## <a name="localizing-the-ui-in-code"></a>Localizando a interface do usuário no código
 
-O [Tasky (localizado no código)](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10n) exemplo mostra como localizar um aplicativo em que a interface do usuário é criada no código (em vez de XIBs ou storyboards).
+O exemplo de [tarefa (localizada no código)](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10n) mostra como localizar um aplicativo no qual a interface do usuário é criada no código (em vez de XIBs ou storyboards).
 
 ### <a name="project-structure"></a>Estrutura do projeto
 
 ![](images/solution-code.png "Árvore de recursos")
 
-### <a name="localizablestrings-file"></a>Arquivo Localizable.strings
+### <a name="localizablestrings-file"></a>Arquivo. Strings localizável
 
-Conforme descrito acima, o **Localizable.strings** formato de arquivo consiste em pares chave-valor. A chave descreve a intenção da cadeia de caracteres e o valor é o texto traduzido para ser usado no aplicativo.
+Conforme descrito acima, o formato de arquivo **localizável. Strings** consiste em pares chave-valor. A chave descreve a intenção da cadeia de caracteres e o valor é o texto traduzido a ser usado no aplicativo.
 
-Espanhol (**es**) localizações para o exemplo são mostradas abaixo:
+As localizações do espanhol (**es**) para o exemplo são mostradas abaixo:
 
 ```console
 "<new task>" = "<new task>";
@@ -290,9 +290,9 @@ Espanhol (**es**) localizações para o exemplo são mostradas abaixo:
 "Delete" = "Eliminar";
 ```
 
-### <a name="performing-the-localization"></a>Executar a localização
+### <a name="performing-the-localization"></a>Executando a localização
 
-No código do aplicativo, onde quer que o texto de exibição da interface do usuário é definido (seja o texto do rótulo para um, ou o espaço reservado de uma entrada, etc) o código usa o iOS `GetLocalizedString` função para recuperar a tradução correta para exibir:
+No código do aplicativo, sempre que o texto de exibição de uma interface do usuário é definido (seja o texto de um rótulo ou o espaço reservado de uma entrada, etc), `GetLocalizedString` o código usa a função Ios para recuperar a tradução correta a ser exibida:
 
 ```csharp
 var localizedString = NSBundle.MainBundle.GetLocalizedString ("key", "optional");
@@ -301,38 +301,38 @@ someControl.Text = localizedString;
 
 <a name="storyboard"/>
 
-## <a name="localizing-storyboard-uis"></a>Localizando o storyboard interfaces do usuário
+## <a name="localizing-storyboard-uis"></a>Localizando as UIs do storyboard
 
-O exemplo [Tasky (localizada storyboard)](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10nStoryboard) mostra como localizar texto em controles em um storyboard.
+A tarefa de exemplo [(storyboard localizado)](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10nStoryboard) mostra como localizar texto em controles em um Storyboard.
 
 ### <a name="project-structure"></a>Estrutura do projeto
 
-O **Base.lproj** diretório contém o storyboard e também deve conter todas as imagens usadas no aplicativo.
+O diretório **base. lproj** contém o storyboard e também deve conter todas as imagens usadas no aplicativo.
 
-Contenham outros diretórios de linguagem uma **Localizable.strings** arquivo para quaisquer recursos de cadeia de caracteres referenciados no código, bem como um **MainStoryboard.strings** arquivo que contém traduções para texto no Storyboard.
+Os outros diretórios de linguagem contêm um arquivo **localizável. Strings** para qualquer recurso de cadeia de caracteres referenciado no código, bem como um arquivo **MainStoryboard. String** que contém traduções para texto no storyboard.
 
 ![](images/solution-storyboard.png "Árvore de recursos")
 
-Os diretórios de idioma devem conter uma cópia de todas as imagens que foram localizados, para substituir presente no **Base.lproj**.
+Os diretórios de idioma devem conter uma cópia de todas as imagens que foram localizadas, para substituir aquela presente em **base. lproj**.
 
-### <a name="object-id--localization-id"></a>ID de objeto / ID de localização
+### <a name="object-id--localization-id"></a>ID do objeto/ID da localização
 
-Durante a criação e edição de controles em um storyboard, selecione cada controle e verifique a ID a ser usado para localização:
+Ao criar e editar controles em um storyboard, selecione cada controle e verifique a ID a ser usada para localização:
 
-- No Visual Studio para Mac, ele está localizado na **painel de propriedades** e é chamado **ID de localização**.
-- No Xcode, ele é chamado **ID do objeto**.
+- No Visual Studio para Mac, ele está localizado na **painel de propriedades** e é chamado de **ID de localização**.
+- No Xcode, ele é chamado de **ID de objeto**.
 
-Geralmente, esse valor de cadeia de caracteres tem um formulário, como "NF3-h8-xmR", conforme mostrado na seguinte captura de tela:
+Esse valor de cadeia de caracteres geralmente tem um formato como "NF3-H8-xmR", conforme mostrado na seguinte captura de tela:
 
-![](images/xs-designer-localization-id.png "Modo de exibição do Xcode da localização de Storyboard")
+![](images/xs-designer-localization-id.png "Exibição do Xcode da localização do storyboard")
 
-Esse valor é usado na **.strings** arquivo para atribuir o texto traduzido automaticamente a cada controle.
+Esse valor é usado no arquivo **. Strings** para atribuir texto traduzido automaticamente a cada controle.
 
 ### <a name="mainstoryboardstrings"></a>MainStoryboard.strings
 
-O formato do arquivo de tradução de storyboard é semelhante para o **Localizable.strings** do arquivo, exceto que a chave (o valor à esquerda) não pode ser definido pelo usuário, mas em vez disso, deve ter um formato muito específico: `ObjectID.property`.
+O formato do arquivo de tradução do storyboard é semelhante ao arquivo **localizável. Strings** , exceto que a chave (o valor à esquerda) não pode ser definida pelo usuário, mas em vez disso, deve ter `ObjectID.property`um formato muito específico:.
 
-No exemplo **Mainstoryboard.strings** abaixo você pode ver `UITextField`s têm uma `placeholder` propriedade de texto que pode ser localizada; `UILabel`s têm uma `text` propriedade; e `UIButton`texto do padrão de s é definido usando `normalTitle`:
+No exemplo **Mainstoryboard. Strings** abaixo, você pode ver `UITextField`que s têm `placeholder` uma propriedade Text que pode ser localizada; s têm uma `text` Propriedade; e `UIButton`o texto padrão é definido usando `normalTitle`: `UILabel`
 
 ```console
 "SXg-TT-IwM.placeholder" = "nombre de la tarea";
@@ -345,27 +345,27 @@ No exemplo **Mainstoryboard.strings** abaixo você pode ver `UITextField`s têm 
 ```
 
 > [!IMPORTANT]
-> Usando um storyboard com classes de tamanho pode resultar em traduções que não aparecem no aplicativo. [Notas de versão do Xcode da Apple](https://developer.apple.com/library/content/releasenotes/DeveloperTools/RN-Xcode/Chapters/Introduction.html) indicam que um storyboard ou XIB vai não localizar corretamente se três itens forem verdadeiros: ele usa as classes de tamanho, a localização de base e o destino de build são definidos como Universal e o build direciona iOS 7.0. A correção é duplicar seu arquivo do storyboard cadeias de caracteres em dois arquivos idênticos: **MainStoryboard~iphone.strings** e **MainStoryboard~ipad.strings**, conforme mostrado na seguinte captura de tela:
+> Usar um storyboard com classes de tamanho pode resultar em traduções que não aparecem no aplicativo. As [notas de versão do Xcode da Apple](https://developer.apple.com/library/content/releasenotes/DeveloperTools/RN-Xcode/Chapters/Introduction.html) indicam que um storyboard ou XIB não será localizado corretamente se três coisas forem verdadeiras: ele usa classes de tamanho, a localização de base e o destino da compilação são definidos como universal, e a compilação se destina a Ios 7,0. A correção é duplicar o arquivo de cadeias de caracteres de storyboard em dois arquivos idênticos: **MainStoryboard ~ iPhone. Strings** e **MainStoryboard ~ iPad. Strings**, conforme mostrado na seguinte captura de tela:
 >
 > ![](images/xs-dup-strings.png "Arquivos de cadeias de caracteres")
 
 <a name="appstore" />
 
-## <a name="app-store-listing"></a>Listagem da App Store
+## <a name="app-store-listing"></a>Listagem da loja de aplicativos
 
-Segue FAQ da Apple [a localização de aplicativos Store](https://itunespartner.apple.com/en/apps/faq/App%20Store_Localization) Inserir traduções para cada país em que seu aplicativo está à venda. Observe seu aviso de que as traduções só aparecerá se o seu aplicativo também contém um localizada **.lproj** diretório para o idioma.
+Segue as perguntas frequentes da Apple sobre a [localização da loja de aplicativos](https://itunespartner.apple.com/en/apps/faq/App%20Store_Localization) para inserir traduções para cada país em que seu aplicativo está em venda. Observe seu aviso de que as traduções só serão exibidas se o aplicativo também contiver um diretório **. lproj** localizado para o idioma.
 
 ## <a name="summary"></a>Resumo
 
-Este artigo aborda os conceitos básicos de localização de aplicativos iOS usando os recursos de storyboard e manipulação de recursos internos.
+Este artigo aborda as noções básicas de localização de aplicativos iOS usando os recursos internos de controle de recursos e storyboard.
 
-Você pode aprender mais sobre i18n e L10n para aplicativos iOS, Android e plataforma cruzada (incluindo o xamarin. Forms) em [este guia de plataforma cruzada](~/cross-platform/app-fundamentals/localization.md).
+Você pode aprender mais sobre o i18n e o l10n para aplicativos iOS, Android e multiplataforma (incluindo Xamarin. Forms) neste [Guia de plataforma cruzada](~/cross-platform/app-fundamentals/localization.md).
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Tasky (localizado no código) (amostra)](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10n)
-- [Tasky (localizada storyboard) (amostra)](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10nStoryboard)
+- [Tarefa (localizada no código) (exemplo)](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10n)
+- [Tarefa (storyboard localizado) (exemplo)](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10nStoryboard)
 - [Guia de localização da Apple](https://developer.apple.com/library/ios/documentation/MacOSX/Conceptual/BPInternational/InternationalizingYourUserInterface/InternationalizingYourUserInterface.html)
-- [Visão geral de localização de plataforma cruzada](~/cross-platform/app-fundamentals/localization.md)
-- [Localização do xamarin. Forms](~/xamarin-forms/app-fundamentals/localization/index.md)
+- [Visão geral da localização entre plataformas](~/cross-platform/app-fundamentals/localization.md)
+- [Localização do Xamarin. Forms](~/xamarin-forms/app-fundamentals/localization/index.md)
 - [Localização no Android](~/android/app-fundamentals/localization.md)

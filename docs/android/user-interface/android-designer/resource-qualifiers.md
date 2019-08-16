@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/25/2018
-ms.openlocfilehash: d9f624084c83b318487f1162a9a2350f9e2cc409
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 750cf801d8ae9dfe63f9b2259d4a3f6a386a4404
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68510497"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69523243"
 ---
 # <a name="resource-qualifiers-and-visualization-options"></a>Qualificadores de recursos e opções de visualização
 
@@ -29,9 +29,9 @@ _Este tópico explica como definir recursos que serão usados somente quando alg
 
 Essa caixa de diálogo apresenta menus suspensos para os seguintes qualificadores de recursos:
 
--   **Idioma** do &ndash; Exibe recursos de idioma disponíveis e oferece uma opção para adicionar novos recursos de idioma/região.
+- **Idioma** do &ndash; Exibe recursos de idioma disponíveis e oferece uma opção para adicionar novos recursos de idioma/região.
 
--   **Modo de interface do usuário** Lista modos de exibição (como **encaixe de carro** e encaixe de mesa), bem como direções de layout.  &ndash;
+- **Modo de interface do usuário** Lista modos de exibição (como **encaixe de carro** e encaixe de mesa), bem como direções de layout. &ndash;
 
 Cada um desses menus suspensos abre novas caixas de diálogo em que você pode selecionar e configurar qualificadores de recursos (conforme explicado a seguir).
 
@@ -71,11 +71,11 @@ O ícone **configurações da barra de ações** está disponível à esquerda d
 
 Esse ícone abre uma caixa de diálogo popover que fornece uma maneira de selecionar um dos três modos de barra de ação:
 
--   **Padrão** &ndash; O consiste em um logotipo ou um texto de ícone e título com um subtítulo opcional.
+- **Padrão** &ndash; O consiste em um logotipo ou um texto de ícone e título com um subtítulo opcional.
 
--   **Lista** de &ndash; Modo de navegação de lista. Em vez de texto de título estático, esse modo apresenta um menu de lista para navegação dentro da atividade (ou seja, pode ser apresentado ao usuário como uma lista suspensa).
+- **Lista** de &ndash; Modo de navegação de lista. Em vez de texto de título estático, esse modo apresenta um menu de lista para navegação dentro da atividade (ou seja, pode ser apresentado ao usuário como uma lista suspensa).
 
--   **Guias** &ndash; Modo de navegação de guia. Em vez de texto de título estático, esse modo apresenta uma série de guias para navegação dentro da atividade.
+- **Guias** &ndash; Modo de navegação de guia. Em vez de texto de título estático, esse modo apresenta uma série de guias para navegação dentro da atividade.
 
 ## <a name="themes"></a>Temas
 
@@ -111,9 +111,9 @@ Para obter mais informações sobre tipos de recursos, consulte [recursos do And
 
 Essa caixa de diálogo apresenta menus suspensos para os seguintes qualificadores de recursos:
 
--   **Idioma** do &ndash; Exibe recursos de idioma disponíveis e oferece uma opção para adicionar novos recursos de idioma/região.
+- **Idioma** do &ndash; Exibe recursos de idioma disponíveis e oferece uma opção para adicionar novos recursos de idioma/região.
 
--   **Modo de interface do usuário** Lista modos de exibição (como **encaixe de carro** e encaixe de mesa), bem como direções de layout.  &ndash;
+- **Modo de interface do usuário** Lista modos de exibição (como **encaixe de carro** e encaixe de mesa), bem como direções de layout. &ndash;
 
 Cada um desses menus suspensos abre novas caixas de diálogo em que você pode selecionar e configurar qualificadores de recursos (conforme explicado a seguir).
 
@@ -153,11 +153,11 @@ O ícone **configurações da barra de ações** está disponível à esquerda d
 
 Esse ícone abre uma caixa de diálogo popover que fornece uma maneira de selecionar um dos três modos de barra de ação:
 
--   **Padrão** &ndash; O consiste em um logotipo ou ícone e texto de título com um subtítulo opcional.
+- **Padrão** &ndash; O consiste em um logotipo ou ícone e texto de título com um subtítulo opcional.
 
--   **Lista** de &ndash; Modo de navegação de lista. Em vez de texto de título estático, esse modo apresenta um menu de lista para navegação dentro da atividade (ou seja, pode ser apresentado ao usuário como uma lista suspensa).
+- **Lista** de &ndash; Modo de navegação de lista. Em vez de texto de título estático, esse modo apresenta um menu de lista para navegação dentro da atividade (ou seja, pode ser apresentado ao usuário como uma lista suspensa).
 
--   **Guias** &ndash; Modo de navegação de guia. Em vez de texto de título estático, esse modo apresenta uma série de guias para navegação dentro da atividade.
+- **Guias** &ndash; Modo de navegação de guia. Em vez de texto de título estático, esse modo apresenta uma série de guias para navegação dentro da atividade.
 
 ## <a name="themes"></a>Temas
 

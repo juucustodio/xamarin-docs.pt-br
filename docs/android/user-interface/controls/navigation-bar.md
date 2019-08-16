@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/01/2017
-ms.openlocfilehash: c017ab96bdd78a41b31a3305021c5bc1f8e472d0
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 3bb2b47623c03d335ae1edc4bf87881622823ea1
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68644920"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69522924"
 ---
 # <a name="xamarinandroid-navigation-bar"></a>Barra de navegação do Xamarin. Android
 
@@ -22,9 +22,9 @@ A captura de tela a seguir mostra a barra de navegação de um dispositivo princ
 
 Vários novos sinalizadores estão disponíveis que controlam a visibilidade da barra de navegação e de seus controles, bem como a visibilidade da barra do sistema que foi introduzida no Android 3. Os sinalizadores são definidos na `Android.View.View` classe e são listados abaixo:
 
--   `SystemUiFlagVisible`&ndash; Torna a barra de navegação visível. 
--   `SystemUiFlagLowProfile`&ndash; Escurece os controles na barra de navegação. 
--   `SystemUiFlagHideNavigation`&ndash; Oculta a barra de navegação. 
+- `SystemUiFlagVisible`&ndash; Torna a barra de navegação visível. 
+- `SystemUiFlagLowProfile`&ndash; Escurece os controles na barra de navegação. 
+- `SystemUiFlagHideNavigation`&ndash; Oculta a barra de navegação. 
 
 
 Esses sinalizadores podem ser aplicados a qualquer exibição na hierarquia de exibição, definindo a `SystemUiVisibility` propriedade. Se várias exibições tiverem essa propriedade definida, o sistema as combinará com uma operação ou e as aplicará, desde que a janela na qual os sinalizadores estejam definidos Mantenha o foco. Quando você remove uma exibição, todos os sinalizadores definidos também serão removidos.

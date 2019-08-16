@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/15/2017
-ms.openlocfilehash: 1f29f283207ed8c1382424b3680177886ad2c806
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: f68e192db0b7acceb325ad44f40dce9cb229a26a
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68653152"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528977"
 ---
 # <a name="colors-in-xamarinforms"></a>Cores no xamarin. Forms
 
@@ -24,12 +24,12 @@ Este artigo apresenta as várias maneiras do `Color` classe pode ser usada no xa
 
 O `Color` classe fornece vários métodos para criar uma instância de cor
 
--  **Chamado Colors** -uma coleção de comuns cores nomeadas, incluindo `Red`, `Green`, e `Blue`.
--  **FromHex** -valor de cadeia de caracteres semelhante à sintaxe usada em HTML, por exemplo, "00FF00". Alfa pode, opcionalmente, ser especificado como o primeiro par de caracteres ("CC00FF00").
--  **FromHsla** -matiz, saturação e luminosidade `double` valores, com valor de alfa opcional (0.0-1.0).
--  **FromRgb** -vermelho, verde e azul `int` valores (0 a 255).
--  **FromRgba** -vermelho, verde, azul e alfa `int` valores (0 a 255).
--  **FromUint** -definir uma única `double` valor que representa **argb**.
+- **Chamado Colors** -uma coleção de comuns cores nomeadas, incluindo `Red`, `Green`, e `Blue`.
+- **FromHex** -valor de cadeia de caracteres semelhante à sintaxe usada em HTML, por exemplo, "00FF00". Alfa pode, opcionalmente, ser especificado como o primeiro par de caracteres ("CC00FF00").
+- **FromHsla** -matiz, saturação e luminosidade `double` valores, com valor de alfa opcional (0.0-1.0).
+- **FromRgb** -vermelho, verde e azul `int` valores (0 a 255).
+- **FromRgba** -vermelho, verde, azul e alfa `int` valores (0 a 255).
+- **FromUint** -definir uma única `double` valor que representa **argb**.
 
 Eis aqui algumas cores de exemplo, atribuídos para o `BackgroundColor` de alguns rótulos usando diferentes variações da sintaxe permitido:
 
@@ -69,11 +69,11 @@ No iOS e Android desta instância é definida como uma cor contrastante que est�
 
 `Color` instâncias incluem métodos adicionais que podem ser usados para criar novas cores:
 
--  **AddLuminosity** -retorna uma nova cor, modificando a luminosidade pelo delta fornecido.
--  **WithHue** -retorna uma nova cor, substituindo o hue com o valor fornecido.
--  **WithLuminosity** -retorna uma nova cor, substituindo a luminosidade com o valor fornecido.
--  **WithSaturation** -retorna uma nova cor, substituindo a saturação com o valor fornecido.
--  **MultiplyAlpha** -retorna uma nova cor, modificando o alfa, multiplicá-lo pelo valor alfa fornecido.
+- **AddLuminosity** -retorna uma nova cor, modificando a luminosidade pelo delta fornecido.
+- **WithHue** -retorna uma nova cor, substituindo o hue com o valor fornecido.
+- **WithLuminosity** -retorna uma nova cor, substituindo a luminosidade com o valor fornecido.
+- **WithSaturation** -retorna uma nova cor, substituindo a saturação com o valor fornecido.
+- **MultiplyAlpha** -retorna uma nova cor, modificando o alfa, multiplicá-lo pelo valor alfa fornecido.
 
 ## <a name="implicit-conversions"></a>Conversões implícitas
 

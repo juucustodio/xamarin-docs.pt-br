@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/13/2017
-ms.openlocfilehash: 62ccaea83a3648c5d9b0a029b3a22d136c4f2cee
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 6890846a1cb5cd44429c9157b3aeb75c7a1f2f4b
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68649417"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69521433"
 ---
 # <a name="app-transport-security-in-xamarinios"></a>Segurança de transporte de aplicativo no Xamarin. iOS
 
@@ -175,7 +175,7 @@ Cada chave tem o seguinte tipo e significado:
 - **NSAllowsArbitraryLoads** (`Boolean`) – Se `YES` o ATS será desabilitado para qualquer domínio **não** listado `NSExceptionDomains`no. Para domínios listados, as configurações de segurança especificadas serão usadas.
 - **NSAllowsArbitraryLoadsInWebContent** (`Boolean`)-Se `YES` o permitirá que as páginas da Web sejam carregadas corretamente enquanto a proteção de ATS (segurança de transporte da Apple) ainda estiver habilitada para o restante do aplicativo.
 - **NSExceptionDomains** (`Dictionary`) – Uma coleção de domínios que e as configurações de segurança que a ATS deve usar para um determinado domínio.
-- **nome de domínio <-for-Exception-as-string >** (`Dictionary`) – Uma coleção de exceções para um determinado domínio (por exemplo, `www.xamarin.com`).
+- `Dictionary`  **Domain-Name-for-Exception-as-String>()–umacoleçãodeexceçõesparaumdeterminado\<** domínio (por exemplo, `www.xamarin.com`).
 - **NSExceptionMinimumTLSVersion** (`String`)-A versão mínima do TLS `TLSv1.0`como `TLSv1.1` ou `TLSv1.2` (que é o padrão).
 - **NSExceptionRequiresForwardSecrecy** (`Boolean`) – Se `NO` o domínio não precisar usar uma codificação com segurança de encaminhamento. O valor padrão é `YES`.
 - **NSExceptionAllowsInsecureHTTPLoads** (`Boolean`)-Se `NO` (o padrão) todas as comunicações com esse `HTTPS` domínio devem estar no protocolo.

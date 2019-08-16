@@ -1,119 +1,130 @@
 ---
-title: PhotoKit no xamarin. IOS
-description: Este documento descreve PhotoKit, discutir seus objetos de modelo, como dados de modelo de consulta e salvar as alterações para a biblioteca de fotos.
+title: PhotoKit no Xamarin. iOS
+description: Este documento descreve o PhotoKit, discutindo seus objetos de modelo, como consultar dados de modelo e salvar alterações na biblioteca de fotos.
 ms.prod: xamarin
 ms.assetid: 7FDEE394-3787-40FA-8372-76A05BF184B3
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/14/2017
-ms.openlocfilehash: 78646a0a420820218a8c61ea34ecc5db4438a91d
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: 5e5cc20e9fbeaf2b00e022ccdbf67286aed6d5ef
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67832732"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528818"
 ---
-# <a name="photokit-in-xamarinios"></a>PhotoKit no xamarin. IOS
+# <a name="photokit-in-xamarinios"></a>PhotoKit no Xamarin. iOS
 
-PhotoKit é uma nova estrutura que permite aos aplicativos consultar a biblioteca de imagens do sistema e criar interfaces do usuário personalizadas para exibir e modificar seu conteúdo. Ele inclui um número de classes que representam os ativos de vídeo e imagem, bem como coleções de ativos, como pastas e álbuns.
+PhotoKit é uma nova estrutura que permite que os aplicativos consultem a biblioteca de imagens do sistema e criem interfaces de usuário personalizadas para exibir e modificar seu conteúdo. Ele inclui várias classes que representam ativos de imagem e vídeo, bem como coleções de ativos, como álbuns e pastas.
 
 ## <a name="model-objects"></a>Objetos de modelo
 
-PhotoKit representa esses ativos no que chama objetos de modelo. Os objetos de modelo que representam as fotos e vídeos em si são do tipo `PHAsset`. Um `PHAsset` contém metadados, como o tipo de mídia do ativo e sua data de criação.
-Da mesma forma, o `PHAssetCollection` e `PHCollectionList` classes contêm metadados sobre coleções de ativo e listas de coleção, respectivamente. Coleções de ativos são grupos de ativos, como todas as fotos e vídeos para um determinado ano. Da mesma forma, as listas de coleção são grupos de coleções de ativos, como fotos e vídeos, agrupados por ano.
+PhotoKit representa esses ativos em que ele chama objetos de modelo. Os objetos de modelo que representam as fotos e os vídeos são do `PHAsset`tipo. Um `PHAsset` contém metadados, como o tipo de mídia do ativo e sua data de criação.
+Da mesma forma `PHAssetCollection` , `PHCollectionList` as classes e contêm metadados sobre coleções de ativos e listas de coleções, respectivamente. As coleções de ativos são grupos de ativos, como todas as fotos e vídeos de um determinado ano. Da mesma forma, as listas de coleta são grupos de coleções de ativos, como fotos e vídeos agrupados por ano.
 
-## <a name="querying-model-data"></a>Consultar dados do modelo
+## <a name="querying-model-data"></a>Consultando dados de modelo
 
-PhotoKit torna mais fácil para os dados de modelo de consulta por meio de uma variedade de métodos de busca. Por exemplo, para recuperar todas as imagens, você chamaria `PFAsset.Fetch`, passando o `PHAssetMediaType.Image` tipo de mídia.
+O PhotoKit facilita a consulta de dados de modelo por meio de uma variedade de métodos de busca. Por exemplo, para recuperar todas as imagens, você chamaria `PFAsset.Fetch`, passando o tipo de `PHAssetMediaType.Image` mídia.
 
-    PHFetchResult fetchResults = PHAsset.FetchAssets (PHAssetMediaType.Image, null);
+```csharp
+PHFetchResult fetchResults = PHAsset.FetchAssets (PHAssetMediaType.Image, null);
+```
 
-O `PHFetchResult` instância poderia conter todas as `PFAsset` instâncias que representam imagens. Para obter as imagens em si, você deve usar o `PHImageManager` (ou a versão de cache `PHCachingImageManager`) para fazer uma solicitação para a imagem chamando `RequestImageForAsset`. Por exemplo, o código a seguir recupera uma imagem para cada ativo em um `PHFetchResult` para exibir em uma célula de exibição de coleção:
+A `PHFetchResult` instância, então, conteria `PFAsset` todas as instâncias que representam imagens. Para obter as próprias imagens, use a `PHImageManager` (ou a `PHCachingImageManager`versão de cache) para fazer uma solicitação para a imagem chamando `RequestImageForAsset`. Por exemplo, o código a seguir recupera uma imagem para cada ativo em `PHFetchResult` um para exibir em uma célula de exibição de coleção:
 
-
-    public override UICollectionViewCell GetCell (UICollectionView collectionView, NSIndexPath indexPath)
-    {
-              var imageCell = (ImageCell)collectionView.DequeueReusableCell (cellId, indexPath);
-            imageMgr.RequestImageForAsset ((PHAsset)fetchResults [(uint)indexPath.Item], thumbnailSize,
-        PHImageContentMode.AspectFill, new PHImageRequestOptions (), (img, info) => {
+```csharp
+public override UICollectionViewCell GetCell (UICollectionView collectionView, NSIndexPath indexPath)
+{
+    var imageCell = (ImageCell)collectionView.DequeueReusableCell (cellId, indexPath);
+    imageMgr.RequestImageForAsset (
+        (PHAsset)fetchResults [(uint)indexPath.Item],
+        thumbnailSize,
+        PHImageContentMode.AspectFill, new PHImageRequestOptions (),
+        (img, info) => {
             imageCell.ImageView.Image = img;
-        });
-        return imageCell;
-    }
+        }
+    );
+    return imageCell;
+}
+```
 
 Isso resulta em uma grade de imagens, conforme mostrado abaixo:
 
-![](photokit-images/image4.png "O aplicativo em execução, exibindo uma grade de imagens")
- 
+![](photokit-images/image4.png "O aplicativo em execução exibindo uma grade de imagens")
+
 ## <a name="saving-changes-to-the-photo-library"></a>Salvando alterações na biblioteca de fotos
 
-Isso é como lidar com a consulta e leitura de dados. Você também pode escrever as alterações de volta para a biblioteca. Uma vez que vários aplicativos de interessados são capazes de interagir com a biblioteca de fotos do sistema, você pode registrar um observador para ser notificado de alterações usando um PhotoLibraryObserver. Em seguida, quando as alterações entram, seu aplicativo pode atualizar adequadamente. Por exemplo, aqui está uma implementação simples para recarregar a exibição de coleção acima:
+É assim que lida com a consulta e a leitura de dados. Você também pode gravar as alterações de volta na biblioteca. Como vários aplicativos interessados são capazes de interagir com a biblioteca de fotos do sistema, você pode registrar um observador para ser notificado sobre as alterações usando um PhotoLibraryObserver. Em seguida, quando as alterações chegam, seu aplicativo pode ser atualizado de acordo. Por exemplo, aqui está uma implementação simples para recarregar a exibição de coleção acima:
 
-    class PhotoLibraryObserver : PHPhotoLibraryChangeObserver
+```csharp
+class PhotoLibraryObserver : PHPhotoLibraryChangeObserver
+{
+    readonly PhotosViewController controller;
+    public PhotoLibraryObserver (PhotosViewController controller)
+
     {
-        readonly PhotosViewController controller;
-        public PhotoLibraryObserver (PhotosViewController controller)
-        
-        {
-            this.controller = controller;
-        }
-    
-        public override void PhotoLibraryDidChange (PHChange changeInstance)
-        {
-            DispatchQueue.MainQueue.DispatchAsync (() => {
-            var changes = changeInstance.GetFetchResultChangeDetails (controller.fetchResults);
-            controller.fetchResults = changes.FetchResultAfterChanges;
-            controller.CollectionView.ReloadData ();
-            });
-        }
+        this.controller = controller;
     }
-    
-Para realmente gravar alterações de volta do seu aplicativo, você deve criar uma solicitação de alteração. Cada uma das classes de modelo tem uma classe de solicitação de alteração associada. Por exemplo, para alterar um PHAsset, crie um PHAssetChangeRequest. As etapas para realizar as alterações que são gravadas de volta a biblioteca de fotos e enviadas para observadores como a mostrada acima são:
+
+    public override void PhotoLibraryDidChange (PHChange changeInstance)
+    {
+        DispatchQueue.MainQueue.DispatchAsync (() => {
+        var changes = changeInstance.GetFetchResultChangeDetails (controller.fetchResults);
+        controller.fetchResults = changes.FetchResultAfterChanges;
+        controller.CollectionView.ReloadData ();
+        });
+    }
+}
+```
+
+Para realmente escrever alterações de seu aplicativo, você cria uma solicitação de alteração. Cada uma das classes de modelo tem uma classe de solicitação de alteração associada. Por exemplo, para alterar um PHAsset, você cria um PHAssetChangeRequest. As etapas para executar alterações que são gravadas na biblioteca de fotos e enviadas aos observadores como a acima são:
 
 - Execute a operação de edição.
-- Salve os dados de imagem filtrada em uma instância de PHContentEditingOutput.
-- Fazer uma solicitação de alteração para publicar o formulário de alterações a saída de edição.
+- Salve os dados da imagem filtrada em uma instância do PHContentEditingOutput.
+- Faça uma solicitação de alteração para publicar as alterações que formam a saída de edição.
 
-Aqui está um exemplo que grava uma alteração de volta para uma imagem que aplica um filtro de noir imagem principal:
+Aqui está um exemplo que grava uma alteração em uma imagem que aplica um filtro de Noir de imagem principal:
 
-    void ApplyNoirFilter (object sender, EventArgs e)
-    {
-            
-            Asset.RequestContentEditingInput (new PHContentEditingInputRequestOptions (), (input, options) => {
-            
+```csharp
+void ApplyNoirFilter (object sender, EventArgs e)
+{
+
+    Asset.RequestContentEditingInput (new PHContentEditingInputRequestOptions (), (input, options) => {
+
         // perform the editing operation, which applies a noir filter in this case
-            var image = CIImage.FromUrl (input.FullSizeImageUrl);
-            image = image.CreateWithOrientation((CIImageOrientation)input.FullSizeImageOrientation);
-            var noir = new CIPhotoEffectNoir {
-                Image = image
-            };
-            var ciContext = CIContext.FromOptions (null);
-            var output = noir.OutputImage;
-            var uiImage = UIImage.FromImage (ciContext.CreateCGImage (output, output.Extent));
-            imageView.Image = uiImage;
+        var image = CIImage.FromUrl (input.FullSizeImageUrl);
+        image = image.CreateWithOrientation((CIImageOrientation)input.FullSizeImageOrientation);
+        var noir = new CIPhotoEffectNoir {
+            Image = image
+        };
+        var ciContext = CIContext.FromOptions (null);
+        var output = noir.OutputImage;
+        var uiImage = UIImage.FromImage (ciContext.CreateCGImage (output, output.Extent));
+        imageView.Image = uiImage;
         //
         // save the filtered image data to a PHContentEditingOutput instance
-            var editingOutput = new PHContentEditingOutput(input);
-            var adjustmentData = new PHAdjustmentData();
-            var data = uiImage.AsJPEG();
-            NSError error;
-            data.Save(editingOutput.RenderedContentUrl, false, out error);
-            editingOutput.AdjustmentData = adjustmentData;
+        var editingOutput = new PHContentEditingOutput(input);
+        var adjustmentData = new PHAdjustmentData();
+        var data = uiImage.AsJPEG();
+        NSError error;
+        data.Save(editingOutput.RenderedContentUrl, false, out error);
+        editingOutput.AdjustmentData = adjustmentData;
         //
         // make a change request to publish the changes form the editing output
-            PHPhotoLibrary.GetSharedPhotoLibrary.PerformChanges (() => {
-                PHAssetChangeRequest request = PHAssetChangeRequest.ChangeRequest(Asset);
-                request.ContentEditingOutput = editingOutput;
-          },
-          (ok, err) => Console.WriteLine ("photo updated successfully: {0}", ok));
-      });
-    }
-    
+        PHPhotoLibrary.GetSharedPhotoLibrary.PerformChanges (() => {
+            PHAssetChangeRequest request = PHAssetChangeRequest.ChangeRequest(Asset);
+            request.ContentEditingOutput = editingOutput;
+        },
+        (ok, err) => Console.WriteLine ("photo updated successfully: {0}", ok));
+    });
+}
+```
+
 Quando o usuário seleciona o botão, o filtro é aplicado:
 
-![](photokit-images/image5.png "Um exemplo de aplicação do filtro")
- 
-E graças à PHPhotoLibraryChangeObserver, a alteração será refletida na exibição de coleção quando o usuário navega de volta:
+![](photokit-images/image5.png "Um exemplo do filtro que está sendo aplicado")
 
-![](photokit-images/image6.png "A alteração será refletida na exibição de coleção quando o usuário navega de volta")
+Graças ao PHPhotoLibraryChangeObserver, a alteração é refletida na exibição de coleção quando o usuário navega de volta:
+
+![](photokit-images/image6.png "A alteração é refletida na exibição de coleção quando o usuário navega de volta")

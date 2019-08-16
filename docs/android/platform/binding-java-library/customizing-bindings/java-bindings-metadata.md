@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/09/2018
-ms.openlocfilehash: f0f15647e439381c2aa291234b444d668d1b63d0
-ms.sourcegitcommit: 2e5a6b8bcd1a073b54604f51538fd108e1c2a8e5
+ms.openlocfilehash: 05b8be21373930ae2b501c84757b7be11f794aa9
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68869351"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69524616"
 ---
 # <a name="java-bindings-metadata"></a>Metadados de associações de Java
 
@@ -55,21 +55,21 @@ Em vez disso, as alterações são registradas em arquivos XML especiais forneci
 
 Esses arquivos de mapeamento XML podem ser encontrados na pasta transformações do projeto:
 
--   O **Metadata. xml** &ndash; permite que as alterações sejam feitas na API final, como alterar o namespace da Associação gerada. 
+- O **Metadata. xml** &ndash; permite que as alterações sejam feitas na API final, como alterar o namespace da Associação gerada. 
 
--   **EnumFields. xml** &ndash; contém o mapeamento entre as `int` constantes Java C# `enums` e. 
+- **EnumFields. xml** &ndash; contém o mapeamento entre as `int` constantes Java C# `enums` e. 
 
--   O **EnumMethods. xml** &ndash; permite alterar os parâmetros do método e retornar `int` tipos de C# `enums` constantes Java para. 
+- O **EnumMethods. xml** &ndash; permite alterar os parâmetros do método e retornar `int` tipos de C# `enums` constantes Java para. 
 
 O arquivo **Metadata. xml** é a mais importação desses arquivos, pois permite alterações de uso geral na associação, como:
 
--   Renomeando namespaces, classes, métodos ou campos para que sigam as convenções .NET. 
+- Renomeando namespaces, classes, métodos ou campos para que sigam as convenções .NET. 
 
--   Removendo namespaces, classes, métodos ou campos que não são necessários. 
+- Removendo namespaces, classes, métodos ou campos que não são necessários. 
 
--   Movendo classes para namespaces diferentes. 
+- Movendo classes para namespaces diferentes. 
 
--   Adicionar classes de suporte adicionais para fazer o design da Associação seguir os padrões do .NET Framework. 
+- Adicionar classes de suporte adicionais para fazer o design da Associação seguir os padrões do .NET Framework. 
 
 Permite passar para discutir **Metadata. xml** mais detalhadamente.
 
@@ -103,13 +103,13 @@ Veja a seguir um exemplo de um arquivo **Metadata. xml** :
 
 Veja a seguir uma lista de alguns dos elementos XPath usados com mais frequência para as APIs do Java:
 
--   `interface`&ndash; Usado para localizar uma interface java. por exemplo,. `/interface[@name='AuthListener']`
+- `interface`&ndash; Usado para localizar uma interface java. por exemplo,. `/interface[@name='AuthListener']`
 
--   `class`&ndash; Usado para localizar uma classe. por exemplo,. `/class[@name='MapView']`
+- `class`&ndash; Usado para localizar uma classe. por exemplo,. `/class[@name='MapView']`
 
--   `method`&ndash; Usado para localizar um método em uma classe ou interface java. por exemplo,. `/class[@name='MapView']/method[@name='setTitleSource']`
+- `method`&ndash; Usado para localizar um método em uma classe ou interface java. por exemplo,. `/class[@name='MapView']/method[@name='setTitleSource']`
 
--   `parameter`&ndash; Identifique um parâmetro para um método. p.`/parameter[@name='p0']`
+- `parameter`&ndash; Identifique um parâmetro para um método. p.`/parameter[@name='p0']`
 
 
 

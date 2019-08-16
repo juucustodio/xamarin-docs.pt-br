@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 646a26b4c9b2d44595315a6a32b7294b18c42d7a
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 7dd3889e9fcbb2260165a96f32f56f437df15ade
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68648958"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528841"
 ---
 # <a name="working-with-tvos-stacked-views-in-xamarin"></a>Trabalhando com exibições empilhadas do tvOS no Xamarin
 
@@ -85,9 +85,9 @@ Se a `BaselineRelativeArrangement` propriedade for `true`, as subexibições ser
 Há vários tipos de layout que funcionam bem com controles de exibição de pilha. De acordo com a Apple, aqui estão alguns dos usos mais comuns:
 
 - **Defina o tamanho ao longo do eixo** – fixando ambas as bordas ao longo da `Axis` exibição da pilha e uma das bordas adjacentes para definir a posição, a exibição da pilha aumentará ao longo do eixo para se ajustar ao espaço definido por suas subexibições.
-*  **Definir a posição da subexibição** – ao fixar as bordas adjacentes da exibição de pilha à sua exibição pai, a exibição de pilha aumentará em ambas as dimensões para ajustá-la a ela contendo subexibições.
+- **Definir a posição da subexibição** – ao fixar as bordas adjacentes da exibição de pilha à sua exibição pai, a exibição de pilha aumentará em ambas as dimensões para ajustá-la a ela contendo subexibições.
 - **Definir o tamanho e a posição da pilha** – fixando todas as quatro bordas da exibição de pilha para a exibição pai, a exibição de pilha organiza as subexibições com base no espaço definido na exibição de pilha.
-*  **Defina o tamanho perpendicular ao eixo** – fixando ambas as bordas perpendiculares à exibição da `Axis` pilha e uma das bordas ao longo do eixo para definir a posição, a exibição da pilha aumentará perpendicular ao eixo para se ajustar ao espaço definido por suas subexibições.
+- **Defina o tamanho perpendicular ao eixo** – fixando ambas as bordas perpendiculares à exibição da `Axis` pilha e uma das bordas ao longo do eixo para definir a posição, a exibição da pilha aumentará perpendicular ao eixo para se ajustar ao espaço definido por suas subexibições.
 
 <a name="Stack-Views-and-Storyboards" />
 

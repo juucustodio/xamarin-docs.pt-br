@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/15/2017
-ms.openlocfilehash: 40a44b2748b29b21a1456c55cb75514f18506dd7
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: d4a3ba0ae860f2e6b42fc4cf349ec1bc8e83979e
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68648568"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69527069"
 ---
 # <a name="images-in-xamarinforms"></a>Imagens no xamarin. Forms
 
@@ -204,7 +204,7 @@ Para usar essa extensão de adicionar personalizado `xmlns` para XAML, usando os
 
 #### <a name="debugging-code"></a>Depurando código
 
-Porque, às vezes, é difícil entender por que um recurso de imagem em particular não está sendo carregado, o seguinte código de depuração pode ser adicionado temporariamente a um aplicativo para ajudar a confirmar que os recursos estão configurados corretamente. Ele terá como saída conhecidos todos os recursos incorporados no assembly fornecido para o <span class="UIItem">Console</span> para ajudar a depurar problemas de carregamento de recursos.
+Porque, às vezes, é difícil entender por que um recurso de imagem em particular não está sendo carregado, o seguinte código de depuração pode ser adicionado temporariamente a um aplicativo para ajudar a confirmar que os recursos estão configurados corretamente. Ele terá como saída conhecidos todos os recursos incorporados no assembly fornecido para o **Console** para ajudar a depurar problemas de carregamento de recursos.
 
 ```csharp
 using System.Reflection;

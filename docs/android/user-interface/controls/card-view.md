@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: 74d626fb1028c630b67888f84153adeb33ae32b9
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 6daead7962e472c3c7d0b117d545efdbd3c65886
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68644688"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69523097"
 ---
 # <a name="xamarinandroid-cardview"></a>CardView Xamarin. Android
 
@@ -32,11 +32,11 @@ Este guia explica como adicionar o `CardView` pacote ao seu projeto do Xamarin. 
 
 O seguinte é necessário para usar os novos recursos do Android 5,0 e posteriores (incluindo `CardView`) em aplicativos baseados no Xamarin:
 
--  **Xamarin. Android** &ndash; xamarin. Android 4,20 ou posterior deve ser instalado e configurado com o Visual Studio ou Visual Studio para Mac.
+- **Xamarin. Android** &ndash; xamarin. Android 4,20 ou posterior deve ser instalado e configurado com o Visual Studio ou Visual Studio para Mac.
 
--  **SDK do Android** &ndash; O Android 5,0 (API 21) ou posterior deve ser instalado por meio do Gerenciador de SDK do Android.
+- **SDK do Android** &ndash; O Android 5,0 (API 21) ou posterior deve ser instalado por meio do Gerenciador de SDK do Android.
 
--  **Java JDK 1,8** &ndash; O JDK 1,7 pode ser usado se você for especificamente voltados API nível 23 e anterior. O JDK 1,8 está disponível na [Oracle](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
+- **Java JDK 1,8** &ndash; O JDK 1,7 pode ser usado se você for especificamente voltados API nível 23 e anterior. O JDK 1,8 está disponível na [Oracle](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
 
 Seu aplicativo também deve incluir o `Xamarin.Android.Support.v7.CardView` pacote. Para adicionar o `Xamarin.Android.Support.v7.CardView` pacote no Visual Studio para Mac:
 
@@ -103,8 +103,8 @@ Você pode modificar os atributos `CardView` básicos para personalizar a aparê
 No próximo exemplo de layout, um personalizado `CardView` é usado para criar uma simulação de uma fotografia de impressão (um "instantâneo"). Um `ImageView` é adicionado `CardView` ao para exibir a imagem e um `TextView` está posicionado abaixo do `ImageView` para exibir o título da imagem.
 Neste exemplo de layout, o `CardView` tem as seguintes personalizações:
 
--  O `cardElevation` é aumentado para 4DP para converter uma sombra maior.
--  O `cardCornerRadius` é aumentado para 5dp para fazer com que os cantos sejam mais arredondados.
+- O `cardElevation` é aumentado para 4DP para converter uma sombra maior.
+- O `cardCornerRadius` é aumentado para 5dp para fazer com que os cantos sejam mais arredondados.
 
 Como `CardView` o é fornecido pela biblioteca de suporte do Android v7, seus atributos não estão disponíveis `android:` no namespace. Portanto, você deve definir seu próprio namespace XML e usar esse namespace como o `CardView` prefixo do atributo. No exemplo de layout abaixo, usaremos essa linha para definir um namespace chamado `cardview`:
 
@@ -180,15 +180,15 @@ Observe que esses atributos (exceto a cor do plano de fundo) aceitam um valor de
 
 Os atributos de preenchimento são explicados da seguinte maneira:
 
--  `contentPadding`Preenchimento interno entre as exibições filho `CardView` do e todas as bordas do cartão. &ndash;
+- `contentPadding`Preenchimento interno entre as exibições filho `CardView` do e todas as bordas do cartão. &ndash;
 
--  `contentPaddingBottom`Preenchimento interno entre as exibições filho `CardView` do e a borda inferior do cartão. &ndash;
+- `contentPaddingBottom`Preenchimento interno entre as exibições filho `CardView` do e a borda inferior do cartão. &ndash;
 
--  `contentPaddingLeft`Preenchimento interno entre as exibições filho `CardView` do e a borda esquerda do cartão. &ndash;
+- `contentPaddingLeft`Preenchimento interno entre as exibições filho `CardView` do e a borda esquerda do cartão. &ndash;
 
--  `contentPaddingRight`Preenchimento interno entre as exibições filho `CardView` do e a borda direita do cartão. &ndash;
+- `contentPaddingRight`Preenchimento interno entre as exibições filho `CardView` do e a borda direita do cartão. &ndash;
 
--  `contentPaddingTop`Preenchimento interno entre as exibições filho `CardView` do e a borda superior do cartão. &ndash;
+- `contentPaddingTop`Preenchimento interno entre as exibições filho `CardView` do e a borda superior do cartão. &ndash;
 
 Os atributos de preenchimento de conteúdo são relativos ao limite da área de conteúdo, e não a um determinado widget localizado na área de conteúdo.
 Por exemplo, se `contentPadding` fosse suficientemente aumentado no aplicativo de visualização de fotos, `CardView` o cortaria a imagem e o texto mostrado no cartão.
@@ -203,9 +203,9 @@ Por exemplo, se `contentPadding` fosse suficientemente aumentado no aplicativo d
 
 Os atributos de elevação são explicados da seguinte maneira:
 
--  `cardElevation`&ndash; A elevação`CardView` do (representa seu eixo Z).
+- `cardElevation`&ndash; A elevação`CardView` do (representa seu eixo Z).
 
--  `cardMaxElevation`O valor máximo `CardView`da elevação do. &ndash;
+- `cardMaxElevation`O valor máximo `CardView`da elevação do. &ndash;
 
 Valores maiores de `cardElevation` aumentar o tamanho da sombra para `CardView` que pareçam flutuar para cima acima do plano de fundo. O `cardElevation` atributo também determina a ordem de desenho de exibições sobrepostas; ou `CardView` seja, será desenhado em outra exibição sobreposta com uma configuração de elevação mais alta e acima de quaisquer exibições sobrepostas com uma configuração de elevação mais baixa.
 A `cardMaxElevation` configuração é útil para quando seu aplicativo altera a elevação &ndash; dinamicamente e impede que a sombra ultrapasse o limite definido com essa configuração.
@@ -219,9 +219,9 @@ A `cardMaxElevation` configuração é útil para quando seu aplicativo altera a
 
 Esses atributos são explicados da seguinte maneira:
 
--  `cardCornerRadius`O raio do canto de todos os cantos `CardView`do. &ndash;
+- `cardCornerRadius`O raio do canto de todos os cantos `CardView`do. &ndash;
 
--  `cardBackgroundColor`A cor do plano `CardView`de fundo do. &ndash;
+- `cardBackgroundColor`A cor do plano `CardView`de fundo do. &ndash;
 
 Neste diagrama, `cardCornerRadius` é definido como um 10DP mais arredondado e `cardBackgroundColor` é definido como `"#FFFFCC"` (amarelo claro).
 
@@ -233,15 +233,15 @@ No entanto, você deve `Xamarin.Android.Support.v7.CardView` instalar o pacote c
 
 `CardView`exibe um comportamento ligeiramente diferente nos dispositivos antes da pirulito (API nível 21):
 
--  `CardView`usa uma implementação de sombra programática que adiciona um preenchimento adicional.
+- `CardView`usa uma implementação de sombra programática que adiciona um preenchimento adicional.
 
--  `CardView`Não corta exibições filhas que interseccionam `CardView`com os cantos arredondados.
+- `CardView`Não corta exibições filhas que interseccionam `CardView`com os cantos arredondados.
 
 Para ajudar no gerenciamento dessas diferenças de compatibilidade `CardView` , o fornece vários atributos adicionais que podem ser configurados em seu layout:
 
--   `cardPreventCornerOverlap`Defina esse atributo como `true` para adicionar o preenchimento quando seu aplicativo estiver em execução em versões anteriores do Android (API nível 20 e anterior). &ndash; Essa configuração impede `CardView` que o conteúdo se cruze `CardView`com os cantos arredondados.
+- `cardPreventCornerOverlap`Defina esse atributo como `true` para adicionar o preenchimento quando seu aplicativo estiver em execução em versões anteriores do Android (API nível 20 e anterior). &ndash; Essa configuração impede `CardView` que o conteúdo se cruze `CardView`com os cantos arredondados.
 
--   `cardUseCompatPadding`Defina esse atributo como `true` para adicionar o preenchimento quando seu aplicativo estiver sendo executado em versões do Android em ou superior à API nível 21. &ndash; Se você quiser usar `CardView` em dispositivos de pré-autenticação e ele parecer o mesmo na pirulito (ou posterior), defina esse atributo como. `true` Quando esse atributo é habilitado, `CardView` o adiciona um preenchimento adicional para desenhar sombras quando ele é executado em dispositivos de pré-autenticação. Isso ajuda a superar as diferenças no preenchimento que são introduzidas quando implementações de sombra programática de pré-autenticação em vigor.
+- `cardUseCompatPadding`Defina esse atributo como `true` para adicionar o preenchimento quando seu aplicativo estiver sendo executado em versões do Android em ou superior à API nível 21. &ndash; Se você quiser usar `CardView` em dispositivos de pré-autenticação e ele parecer o mesmo na pirulito (ou posterior), defina esse atributo como. `true` Quando esse atributo é habilitado, `CardView` o adiciona um preenchimento adicional para desenhar sombras quando ele é executado em dispositivos de pré-autenticação. Isso ajuda a superar as diferenças no preenchimento que são introduzidas quando implementações de sombra programática de pré-autenticação em vigor.
 
 Para obter mais informações sobre como manter a compatibilidade com versões anteriores do Android, consulte [mantendo a compatibilidade](https://developer.android.com/training/material/compatibility.html).
 

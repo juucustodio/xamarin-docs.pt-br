@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: fe0f3c6904255284c01cbb3277086b01ec852d7b
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 54e910d0a4f3301ca441fd18ddb27da930e9415c
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68654049"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528777"
 ---
 # <a name="touch-id-in-xamarinios"></a>ID de toque no Xamarin. iOS
 
@@ -127,7 +127,7 @@ Então, vamos dar uma olhada na adição de uma autenticação de ID de toque ao
 3. Arraste um novo **controlador de exibição** da **caixa de ferramentas** para a **design Surface**. Defina como o **controlador de exibição raiz** por **Ctrl + arrastar** do **controlador de navegação**:
 
     [![](touchid-images/image4.png "Definir o controlador de exibição raiz")](touchid-images/image4.png#lightbox)
-4.  Nomeie o novo controlador `AuthenticationViewController`de exibição.
+4. Nomeie o novo controlador `AuthenticationViewController`de exibição.
 5. Em seguida, arraste um botão e coloque-o `AuthenticationViewController`no. Chame isso `AuthenticateButton`e dê a ele o texto `Add a Chore`.
 6. Crie um evento no `AuthenticateButton` chamado. `AuthenticateMe`
 7. Crie um transição manual do `AuthenticationViewController` clicando na barra preta na parte inferior e **Ctrl + arraste** da barra para a `MasterViewController` e escolhendo **enviar por push** (ou **Mostrar** se estiver usando classes de tamanho):

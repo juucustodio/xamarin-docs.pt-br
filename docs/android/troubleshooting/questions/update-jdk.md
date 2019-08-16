@@ -8,12 +8,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 09/07/2018
-ms.openlocfilehash: 02768bfcae9da06d8fd86ada63dd2d463245d254
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 193f9f92f112608908d2feb50f815a670d48b39c
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68510459"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69523407"
 ---
 # <a name="how-do-i-update-the-java-development-kit-jdk-version"></a>Como faço para atualizar a versão do JDK (Java Development Kit)?
 
@@ -27,19 +27,19 @@ Para atualizar para o Microsoft Mobile OpenJDK, consulte [Microsoft Mobile OpenJ
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-1.  Baixe o JDK 8 (1,8) do [site da Oracle](https://www.oracle.com/technetwork/java/javase/downloads/index.html):
+1. Baixe o JDK 8 (1,8) do [site da Oracle](https://www.oracle.com/technetwork/java/javase/downloads/index.html):
 
     ![Captura de tela da página de download do JDK no site da Oracle](update-jdk-images/image1.png)
 
-2.  Escolha a versão de 64 bits para permitir a renderização de [controles personalizados](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/vs/xamarin.vs_4/xamarin.vs_4.2/index.md#androiddesignercustomcontrols) no Xamarin Android designer:
+2. Escolha a versão de 64 bits para permitir a renderização de [controles personalizados](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/vs/xamarin.vs_4/xamarin.vs_4.2/index.md#androiddesignercustomcontrols) no Xamarin Android designer:
 
     ![Selecionando o pacote do JDK do Windows x64 a ser baixado na página de download do JDK](update-jdk-images/image2.png)
 
-3.  Execute o. exe e instale as **ferramentas de desenvolvimento**:
+3. Execute o. exe e instale as **ferramentas de desenvolvimento**:
 
     ![Instalando as ferramentas de desenvolvimento no instalador do JDK](update-jdk-images/image3.png)
 
-4.  Abra o Visual Studio e atualize o **local do Java Development Kit** para apontar para o novo JDK em **ferramentas > opções > Xamarin > configurações Android > local do Java Development Kit**:
+4. Abra o Visual Studio e atualize o **local do Java Development Kit** para apontar para o novo JDK em **ferramentas > opções > Xamarin > configurações Android > local do Java Development Kit**:
 
     [![Configuração de caminho para o JDK na página de configurações do Android](update-jdk-images/image4-sml.png)](update-jdk-images/image4.png#lightbox)
 
@@ -47,11 +47,11 @@ Certifique-se de reiniciar o Visual Studio depois de atualizar o local.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
-1.  Baixe o JDK 8 (1,8) do [site da Oracle](https://www.oracle.com/technetwork/java/javase/downloads/index.html):
+1. Baixe o JDK 8 (1,8) do [site da Oracle](https://www.oracle.com/technetwork/java/javase/downloads/index.html):
 
     ![Captura de tela da página de download do JDK no site da Oracle](update-jdk-images/image1.png)
 
-2.  Abra o arquivo. dmg e execute o instalador. pkg:
+2. Abra o arquivo. dmg e execute o instalador. pkg:
 
     ![Executando o instalador do JDK no macOS](update-jdk-images/image5.png)
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 07/13/2018
-ms.openlocfilehash: fb51d0d04c86274d43e23e4912ed16765b7cdc8b
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 7f1e61f9364a6a59f2bbacd1c773fe49cc338db9
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68657523"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528833"
 ---
 # <a name="displaying-images-with-xamarinios"></a>Exibindo imagens com Xamarin. iOS
 
@@ -48,8 +48,8 @@ A imagem será adicionada ao seu projeto e estará disponível para ser carregad
 
 Os arquivos colocados no diretório de **recursos** são tratados diferentemente de arquivos regulares – o conteúdo da pasta **recursos** é copiado para a raiz do aplicativo e pode ser referenciado a partir daí no seu código. Isso pode ser útil por vários motivos:
 
--  Armazenar as imagens configuradas nas propriedades do aplicativo, como as imagens de inicialização padrão e os ícones de aplicativo.
--  Armazenar outras imagens e arquivos separadamente do código para que eles sejam mais fáceis de gerenciar (os subdiretórios são preservados quando o conteúdo do diretório de recursos é copiado).
+- Armazenar as imagens configuradas nas propriedades do aplicativo, como as imagens de inicialização padrão e os ícones de aplicativo.
+- Armazenar outras imagens e arquivos separadamente do código para que eles sejam mais fáceis de gerenciar (os subdiretórios são preservados quando o conteúdo do diretório de recursos é copiado).
 
 
 O diretório de **recursos** é especialmente útil em um projeto de biblioteca, já que o código pode assumir que essas imagens serão copiadas para a raiz do aplicativo de consumo, facilitando a gravação de bibliotecas de código compartilhado que exigem imagem, som, vídeo, XML ou outros arquivos.

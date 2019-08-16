@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/13/2018
-ms.openlocfilehash: fd813427836b0250b84941eca54d6bbe6219518e
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: ea3bfccd9133f6bb4cdf2e2a72bd20a307fb80d1
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68645327"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69522497"
 ---
 # <a name="extending-the-recyclerview-example"></a>Estendendo o exemplo de RecyclerView
 
@@ -26,11 +26,11 @@ Quando um usuário toca um item no `RecyclerView`, um evento de clique de item �
 
 Para ilustrar como lidar com eventos de clique de item, as etapas a seguir explicam como o aplicativo básico de exibição de fotos é modificado para relatar qual fotografia foi tocada pelo usuário. Quando um evento de clique de item ocorre no aplicativo de exemplo, a sequência a seguir ocorre:
 
-1.  A fotografia `CardView` detecta o evento de clique do item e notifica o adaptador.
+1. A fotografia `CardView` detecta o evento de clique do item e notifica o adaptador.
 
-2.  O adaptador encaminha o evento (com informações de posição de item) para o manipulador de clique de item da atividade.
+2. O adaptador encaminha o evento (com informações de posição de item) para o manipulador de clique de item da atividade.
 
-3.  O manipulador de item-clique da atividade responde ao evento de clique do item.
+3. O manipulador de item-clique da atividade responde ao evento de clique do item.
 
 Primeiro, um membro do manipulador de `ItemClick` eventos chamado é adicionado `PhotoAlbumAdapter` à definição de classe:
 

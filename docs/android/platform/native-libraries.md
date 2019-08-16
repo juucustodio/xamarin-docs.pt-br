@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/09/2018
-ms.openlocfilehash: d3e5b36f2cbc48dac09b55bfba8c3613db12bbc8
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: fa0a3a75a4cc2cfd04b607f17206faa822af0474
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68643277"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69523634"
 ---
 # <a name="using-native-libraries"></a>Usar bibliotecas nativas
 
@@ -24,8 +24,8 @@ Para implantar uma biblioteca nativa com um projeto de biblioteca Xamarin. Andro
 Observe que, como o Android dá suporte a várias interfaces binárias de aplicativos (ABIs), o Xamarin. Android deve saber para qual ABI a biblioteca nativa é compilada.
 Há duas maneiras de fazer isso:
 
-1.  Caminho "farejando"
-1.  Usando um `AndroidNativeLibrary/Abi` elemento dentro do arquivo de projeto
+1. Caminho "farejando"
+1. Usando um `AndroidNativeLibrary/Abi` elemento dentro do arquivo de projeto
 
 
 Com a detecção de caminho, o nome do diretório pai da biblioteca nativa é usado para especificar a ABI usada como destino pela biblioteca. Portanto, se você adicionar `lib/armeabi/libfoo.so` ao projeto, a Abi será "sniffed" como. `armeabi`

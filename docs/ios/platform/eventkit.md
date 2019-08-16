@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 881590b7b2b7277a2f8f2cc17ce1c8bdff68c626
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: bb64a0457ad5228e32f233d630576da2836547c1
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655781"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528050"
 ---
 # <a name="eventkit-in-xamarinios"></a>Kit no Xamarin. iOS
 
@@ -22,8 +22,8 @@ A estrutura Kit fornece uma maneira de acessar osdados de calendários, *eventos
 
 Neste guia, vamos abordar:
 
--   **Noções básicas do kit** – isso apresentará as partes fundamentais de kit por meio das principais classes e fornecerá uma compreensão de seu uso. Esta seção é necessária para a leitura antes de lidar com a próxima parte do documento. 
--   **Tarefas comuns** – a seção tarefas comuns destina-se a ser uma referência rápida sobre como fazer coisas comuns, como; enumerar calendários, criar, salvar e recuperar eventos de calendário e lembretes, bem como usar os controladores internos para criar e modificar eventos de calendário. Esta seção não precisa ser lida de frente para trás, pois ela deve ser uma referência para tarefas específicas. 
+- **Noções básicas do kit** – isso apresentará as partes fundamentais de kit por meio das principais classes e fornecerá uma compreensão de seu uso. Esta seção é necessária para a leitura antes de lidar com a próxima parte do documento. 
+- **Tarefas comuns** – a seção tarefas comuns destina-se a ser uma referência rápida sobre como fazer coisas comuns, como; enumerar calendários, criar, salvar e recuperar eventos de calendário e lembretes, bem como usar os controladores internos para criar e modificar eventos de calendário. Esta seção não precisa ser lida de frente para trás, pois ela deve ser uma referência para tarefas específicas. 
 
 
 Todas as tarefas deste guia estão disponíveis no aplicativo de exemplo complementar:

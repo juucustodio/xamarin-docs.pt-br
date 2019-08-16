@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/29/2017
-ms.openlocfilehash: 0f2136aa4a07d289e1e8aecc6cb37460fdc5727c
-ms.sourcegitcommit: 157da886e1f304c6b482aa3f265ef7d78b696ab7
+ms.openlocfilehash: d6bcecd27e0380221febc34f787f71d20e0fcaf9
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69024526"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69526958"
 ---
 # <a name="create-a-custom-layout-in-xamarinforms"></a>Criar um layout personalizado no Xamarin. Forms
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-customlayout-wraplayout)
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-customlayout-wraplayout)
 
 _Xamarin. Forms define quatro classes de layout – StackLayout, AbsoluteLayout, RelativeLayout e grade, e cada organiza seus filhos de uma maneira diferente. No entanto, às vezes, é necessário para organizar o conteúdo da página usando um layout que não são fornecido pelo xamarin. Forms. Este artigo explica como escrever uma classe de layout personalizado e demonstra uma classe de WrapLayout sensíveis à orientação que organiza seus filhos horizontalmente pela página e, em seguida, ajusta a exibição dos filhos subsequentes em linhas adicionais._
 
@@ -428,6 +428,6 @@ O número de colunas em cada linha depende do tamanho da foto, a largura da tela
 - [WrapLayout (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-customlayout-wraplayout)
 - [Layouts personalizados](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter26.md)
 - [Criar Layouts personalizados no xamarin. Forms (vídeo)](https://evolve.xamarin.com/session/56e20f83bad314273ca4d81c)
-- [Layout<T>](xref:Xamarin.Forms.Layout`1)
+- [T\<> de layout](xref:Xamarin.Forms.Layout`1)
 - [Layout](xref:Xamarin.Forms.Layout)
 - [VisualElement](xref:Xamarin.Forms.VisualElement)

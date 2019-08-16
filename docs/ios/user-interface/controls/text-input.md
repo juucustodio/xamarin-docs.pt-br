@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: 2bcbdf437956ed2e03e91236125d5e050cf349be
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: edabddfeeac7f1c75df298cba6f885ec130972ba
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68642772"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528556"
 ---
 # <a name="text-input-in-xamarinios"></a>Entrada de texto no Xamarin. iOS
 
@@ -37,15 +37,15 @@ O `UITextField` controle é usado com mais frequência para aceitar uma única l
 
 Esses controles são explicados abaixo:
 
--  **Espaço reservado** – isso é opcional. Se definido, ele será exibido quando o campo de texto estiver vazio, geralmente para explicar ao usuário qual entrada é esperada.
--  **Botão limpar** – isso controla quando o botão limpar padrão (o círculo cinza com (X)) aparece no campo de texto, como uma maneira para o usuário limpar o texto rapidamente. Ele pode ser permanentemente oculto, visível permanentemente ou mostrado, dependendo se o campo está sendo editado ou não.
--  **Tamanho mínimo da fonte** e **ajustar para ajustar** – permite que o tamanho da fonte seja ajustado automaticamente para ajustar o texto mais longo e evitar truncamento, mas limitado a nenhum tamanho menor do que o especificado.
--  **Capitalização** – se as palavras, frases ou todas as entradas devem ser colocadas automaticamente em maiúsculas.
--  **Correção** – se a verificação ortográfica e as sugestões estão habilitadas.
--  **Teclado** – controla o estilo de teclado exibido para a entrada e, portanto, quais chaves estão disponíveis no teclado. Isso inclui o teclado numérico, o Phone pad, o email e a URL junto com outras opções.
--  **Aparência** – controla o estilo de aparência do teclado e será escuro ou leve.
--  **Chave de retorno** – altere o rótulo na chave de retorno para refletir melhor qual ação será tomada. Os valores com suporte incluem Go, junção, avançar, rota, concluído e pesquisa.
--  **Seguro** – identifica se a entrada é mascarada (por exemplo, para uma entrada de senha).
+- **Espaço reservado** – isso é opcional. Se definido, ele será exibido quando o campo de texto estiver vazio, geralmente para explicar ao usuário qual entrada é esperada.
+- **Botão limpar** – isso controla quando o botão limpar padrão (o círculo cinza com (X)) aparece no campo de texto, como uma maneira para o usuário limpar o texto rapidamente. Ele pode ser permanentemente oculto, visível permanentemente ou mostrado, dependendo se o campo está sendo editado ou não.
+- **Tamanho mínimo da fonte** e **ajustar para ajustar** – permite que o tamanho da fonte seja ajustado automaticamente para ajustar o texto mais longo e evitar truncamento, mas limitado a nenhum tamanho menor do que o especificado.
+- **Capitalização** – se as palavras, frases ou todas as entradas devem ser colocadas automaticamente em maiúsculas.
+- **Correção** – se a verificação ortográfica e as sugestões estão habilitadas.
+- **Teclado** – controla o estilo de teclado exibido para a entrada e, portanto, quais chaves estão disponíveis no teclado. Isso inclui o teclado numérico, o Phone pad, o email e a URL junto com outras opções.
+- **Aparência** – controla o estilo de aparência do teclado e será escuro ou leve.
+- **Chave de retorno** – altere o rótulo na chave de retorno para refletir melhor qual ação será tomada. Os valores com suporte incluem Go, junção, avançar, rota, concluído e pesquisa.
+- **Seguro** – identifica se a entrada é mascarada (por exemplo, para uma entrada de senha).
 
 
 Se um UITextField chamado `textfield1` tiver sido adicionado a uma tela com o designer, você poderá definir ou alterar suas propriedades no C# da seguinte maneira:
@@ -81,8 +81,8 @@ O `UITextView` controle pode ser usado para exibir texto somente leitura ou para
 
 As propriedades específicas incluem:
 
--  **Comportamento** – se o texto é editável ou somente leitura.
--  **Detecção** – detecta e converte os dados inseridos em elementos clicáveis, como números de telefone que podem disparar uma chamada, endereços que se tornam links para mapas, URLs que são abertas no Safari ou datas e horas que se tornam eventos no calendário.
+- **Comportamento** – se o texto é editável ou somente leitura.
+- **Detecção** – detecta e converte os dados inseridos em elementos clicáveis, como números de telefone que podem disparar uma chamada, endereços que se tornam links para mapas, URLs que são abertas no Safari ou datas e horas que se tornam eventos no calendário.
 
 
 Se um UITextView tiver sido adicionado a uma tela com o designer, você poderá definir ou alterar suas propriedades como esta:

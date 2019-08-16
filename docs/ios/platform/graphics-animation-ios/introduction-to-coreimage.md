@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: e4676314b361bac17b3c6df64631572e62f4d870
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 6960fe3db1ddf7d6d911fe8151e49b1a42388d26
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68653723"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69527846"
 ---
 # <a name="core-image-in-xamarinios"></a>Imagem principal no Xamarin. iOS
 
@@ -22,9 +22,9 @@ A imagem principal é uma nova estrutura introduzida no iOS 5 que fornece vário
 
 Este documento contém exemplos simples de:
 
--  Detecção facial.
--  Aplicando filtros a uma imagem
--  Listando os filtros disponíveis.
+- Detecção facial.
+- Aplicando filtros a uma imagem
+- Listando os filtros disponíveis.
 
 
 Esses exemplos devem ajudar a começar a incorporar recursos de imagem principal em seus aplicativos Xamarin. iOS.
@@ -49,12 +49,12 @@ CIFeature[] features = detector.FeaturesInImage(ciImage);
 
 A matriz de recursos será preenchida `CIFaceFeature` com objetos (se quaisquer faces forem detectadas). Há um `CIFaceFeature` para cada face. `CIFaceFeature`tem as seguintes propriedades:
 
--  HasMouthPosition – se uma boca foi detectada para essa face.
--  HasLeftEyePosition – se o olho à esquerda foi detectado para esta face.
--  HasRightEyePosition – se o olho certo foi detectado para essa face. 
--  MouthPosition – as coordenadas da boca para essa face.
--  LeftEyePosition – as coordenadas do olho à esquerda para essa face.
--  RightEyePosition – as coordenadas do olho certo para essa face.
+- HasMouthPosition – se uma boca foi detectada para essa face.
+- HasLeftEyePosition – se o olho à esquerda foi detectado para esta face.
+- HasRightEyePosition – se o olho certo foi detectado para essa face. 
+- MouthPosition – as coordenadas da boca para essa face.
+- LeftEyePosition – as coordenadas do olho à esquerda para essa face.
+- RightEyePosition – as coordenadas do olho certo para essa face.
 
 
 As coordenadas para todas essas propriedades têm sua origem no canto inferior esquerdo – ao contrário de UIKit, que usa o canto superior esquerdo como a origem. Ao usar as coordenadas `CIFaceFeature` , certifique-se de ' Inverter '. Essa exibição de imagem personalizada muito básica no CoreImage\CoreImageViewController.cs demonstra como desenhar triângulos de "indicador facial" na imagem (Observe o `FlipForBottomOrigin` método):

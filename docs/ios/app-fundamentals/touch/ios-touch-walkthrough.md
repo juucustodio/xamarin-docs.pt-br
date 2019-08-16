@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: f772bf1309330b41f9faea812e2cdcdba8e969cb
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 352a312d795ba292b47621ddb84540c2259ea10a
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68653133"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69527061"
 ---
 # <a name="walkthrough-using-touch-in-xamarinios"></a>Passo a passo: Usando o touch no Xamarin. iOS
 
@@ -181,8 +181,8 @@ Neste exemplo, demonstraremos algumas das APIs de toque. Siga estas etapas para 
 A [seção anterior](#Touch_Samples) demonstrou como arrastar um objeto pela tela usando eventos de toque.
 Nesta seção, vamos livrar-se dos eventos de toque e mostrar como usar os seguintes reconhecedores de gesto:
 
--  O `UIPanGestureRecognizer` para arrastar uma imagem pela tela.
--  O `UITapGestureRecognizer` para responder a toques duplos na tela.
+- O `UIPanGestureRecognizer` para arrastar uma imagem pela tela.
+- O `UITapGestureRecognizer` para responder a toques duplos na tela.
 
 Se você executar o [código de exemplo inicial](https://docs.microsoft.com/samples/xamarin/ios-samples/applicationfundamentals-touch-start) e clicar no botão de exemplos do reconhecedor de **gesto** , você deverá ver a seguinte tela:
 

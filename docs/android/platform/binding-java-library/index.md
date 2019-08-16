@@ -1,38 +1,38 @@
 ---
 title: Associação de uma biblioteca Java
-description: A comunidade do Android tem muitas bibliotecas de Java que você talvez queira usar em seu aplicativo. Este guia explica como incorporar bibliotecas Java em seu aplicativo xamarin. Android, criando uma biblioteca de associações.
+description: A Comunidade do Android tem muitas bibliotecas Java que você talvez queira usar em seu aplicativo; Este guia explica como incorporar bibliotecas Java em seu aplicativo Xamarin. Android criando uma biblioteca de associações.
 ms.prod: xamarin
 ms.assetid: B39FF1D5-69C3-8A76-D268-C227A23C9485
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/01/2017
-ms.openlocfilehash: 016ac7269f334f6df7fba9635897b9608f459284
-ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
+ms.openlocfilehash: 4c01022e01c5ba6a9099b88e99558bd7d7ce728d
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65970212"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69524549"
 ---
 # <a name="binding-a-java-library"></a>Associação de uma biblioteca Java
 
-_A comunidade do Android tem muitas bibliotecas de Java que você talvez queira usar em seu aplicativo. Este guia explica como incorporar bibliotecas Java em seu aplicativo xamarin. Android, criando uma biblioteca de associações._
+_A Comunidade do Android tem muitas bibliotecas Java que você talvez queira usar em seu aplicativo; Este guia explica como incorporar bibliotecas Java em seu aplicativo Xamarin. Android criando uma biblioteca de associações._
 
 ## <a name="overview"></a>Visão geral
 
-O ecossistema de bibliotecas de terceiros para o Android é enorme. Por isso, com frequência faz sentido usar uma biblioteca Android existente que to, crie um novo. Xamarin. Android oferece duas maneiras de usar essas bibliotecas:
+O ecossistema de biblioteca de terceiros para Android é maciço. Por isso, geralmente faz sentido usar uma biblioteca Android existente do que criar uma nova. O Xamarin. Android oferece duas maneiras de usar essas bibliotecas:
 
--   Criar um *biblioteca de associações* que ajusta automaticamente a biblioteca com C# código de wrappers para que você pode invocar o Java por meio de C# chamadas.
+- Crie uma *biblioteca de associações* que encapsula automaticamente a biblioteca com C# wrappers para que você possa invocar o código C# Java por meio de chamadas.
 
--   Use o *Interface nativa Java* (*JNI*) para invocar chamadas no código de biblioteca Java diretamente. JNI é uma estrutura de programação que permite que o código Java chamar e ser chamados por aplicativos nativos ou bibliotecas.
+- Use a *interface nativa do Java* (*JNI*) para invocar chamadas diretamente no código da biblioteca Java. JNI é uma estrutura de programação que permite que o código Java chame e seja chamado por aplicativos nativos ou bibliotecas.
 
-Este guia explica a primeira opção: como criar uma *biblioteca de associações* que envolve uma ou mais bibliotecas Java existentes em um assembly que você pode vincular a em seu aplicativo. Para obter mais informações sobre como usar JNI, consulte [trabalhar com JNI](~/android/platform/java-integration/working-with-jni.md).
+Este guia explica a primeira opção: como criar uma *biblioteca de associações* que encapsula uma ou mais bibliotecas Java existentes em um assembly ao qual você pode vincular em seu aplicativo. Para obter mais informações sobre como usar o JNI, consulte [trabalhando com JNI](~/android/platform/java-integration/working-with-jni.md).
 
-Xamarin. Android implementa associações usando *gerenciados Callable Wrappers* (*MCW*). MCW é uma ponte JNI que é usada quando o código gerenciado deve invocar o código Java. Callable wrappers do gerenciados também fornecem suporte para tipos Java da subclasse e para substituir métodos virtuais em tipos Java. Da mesma forma, sempre que o código de tempo de execução Android (arte) deseja invocar código gerenciado, isso é feito por meio de outra ponte JNI conhecido como Android Callable Wrappers (ACW). Isso [arquitetura](~/android/internals/architecture.md) é ilustrado no diagrama a seguir:
+O Xamarin. Android implementa associações usando o*MCW*( *wrappers callable* ) gerenciados. A MCW é uma ponte JNI que é usada quando o código gerenciado precisa invocar o código Java. Wrappers callable gerenciados também oferecem suporte para a subclasse de tipos Java e para substituir métodos virtuais em tipos Java. Da mesma forma, sempre que o código do tempo de execução do Android (ART) quiser invocar o código gerenciado, ele faz isso por meio de outra ponte JNI conhecida como ACW (Android callable wrappers). Essa [arquitetura](~/android/internals/architecture.md) é ilustrada no diagrama a seguir:
 
-[![Arquitetura de ponte JNI Android](images/architecture.png)](images/architecture.png#lightbox)
+[![Arquitetura de ponte do Android JNI](images/architecture.png)](images/architecture.png#lightbox)
 
-Uma biblioteca de associações é um assembly que contém o gerenciado Callable Wrappers para tipos Java. Por exemplo, aqui está um tipo de Java, `MyClass`, que desejamos encapsular em uma biblioteca de associações:
+Uma biblioteca de associações é um assembly que contém wrappers callable gerenciados para tipos Java. Por exemplo, aqui está um tipo Java, `MyClass`, que desejamos encapsular uma biblioteca de associações:
 
 ```java
 package com.xamarin.mycode;
@@ -43,7 +43,7 @@ public class MyClass
 }
 ```
 
-Depois que podemos gerar uma biblioteca de associações para o **. jar** que contém `MyClass`, podemos criar uma instância dela e chamar métodos de C#:
+Depois de gerarmos uma biblioteca de associações para o **. jar** que `MyClass`contém, podemos criar uma instância dele e chamar métodos nele C#:
 
 ```csharp
 var instance = new MyClass ();
@@ -51,99 +51,99 @@ var instance = new MyClass ();
 string result = instance.MyMethod (42);
 ```
 
-Para criar a biblioteca de associações, use o xamarin. Android *biblioteca de associações de Java* modelo. O projeto resultante da associação cria um assembly .NET com as classes de MCW **. jar** arquivo (s) e recursos para projetos de biblioteca Android inseridos nele. Você também pode criar bibliotecas de associações de arquivo morto do Android (. Arquivos AAR) e projetos de biblioteca Android do Eclipse. Ao referenciar o assembly resultante da DLL da biblioteca de associações, você pode reutilizar uma biblioteca Java existente em seu projeto xamarin. Android.
+Para criar essa biblioteca de associações, use o modelo de biblioteca de *associações Java* do Xamarin. Android. O projeto de associação resultante cria um assembly .NET com as classes MCW, os arquivos **. jar** e os recursos para projetos de biblioteca do Android inseridos nele. Você também pode criar bibliotecas de associações para o arquivo morto do Android (. AAR) arquivos e projetos de biblioteca do Android do eclipse. Ao referenciar o assembly de DLL de biblioteca de associações resultante, você pode reutilizar uma biblioteca Java existente em seu projeto Xamarin. Android.
 
-Ao referenciar tipos em sua biblioteca de ligação, você deve usar o namespace da sua biblioteca de ligação. Normalmente, você adiciona uma `using` diretiva na parte superior do seu C# arquivos de origem que é a versão do .NET namespace do nome do pacote de Java. Por exemplo, se o pacote Java Nomeie seu limite **. jar** é o seguinte:
+Ao referenciar tipos em sua biblioteca de associação, você deve usar o namespace da sua biblioteca de associação. Normalmente, você adiciona uma `using` diretiva na parte superior dos arquivos C# de origem que é a versão do namespace do .net do nome do pacote Java. Por exemplo, se o nome do pacote Java para seu Bound **. jar** for o seguinte:
 
 ```csharp
 com.company.package
 ```
 
-Em seguida, você poderia colocar o seguinte `using` instrução na parte superior do seu C# arquivos de origem para acessar os tipos em que o limite **. jar** arquivo:
+Em seguida, você colocaria `using` a seguinte instrução na parte superior C# dos seus arquivos de origem para acessar tipos no arquivo **. jar** associado:
 
 ```csharp
 using Com.Company.Package;
 ```
 
 
-Ao associar uma biblioteca Android existente, é necessário ter os seguintes pontos em mente:
+Ao associar uma biblioteca Android existente, é necessário manter os seguintes pontos em mente:
 
-* **Há dependências externas para a biblioteca?** &ndash; Quaisquer dependências de Java exigidas pela biblioteca do Android devem ser incluídas no projeto xamarin. Android como um **ReferenceJar** ou como um **EmbeddedReferenceJar**. Todos os assemblies nativos devem ser adicionados ao projeto de associação como uma **EmbeddedNativeLibrary**.  
+* **Há alguma dependência externa para a biblioteca?** &ndash;Todas as dependências de Java exigidas pela biblioteca do Android devem ser incluídas no projeto Xamarin. Android como um **ReferenceJar** ou como um **EmbeddedReferenceJar**. Todos os assemblies nativos devem ser adicionados ao projeto de associação como um **EmbeddedNativeLibrary**.  
 
-* **Qual versão da API do Android faz o Android destino biblioteca?** &ndash; Não é possível fazer o "downgrade" nível de API do Android; Certifique-se de que o projeto de associação do xamarin. Android está direcionando a mesma API nível (ou superior) como a biblioteca Android.
+* **Qual versão da API do Android é o destino da biblioteca do Android?** &ndash;Não é possível "fazer downgrade" do nível da API do Android; Verifique se o projeto de associação Xamarin. Android está direcionado ao mesmo nível de API (ou superior) que a biblioteca do Android.
 
-* **Qual versão do JDK foi usado para compilar a biblioteca?** &ndash; Erros de associação podem ocorrer se a biblioteca Android foi criada com uma versão diferente do JDK que em uso pelo xamarin. Android. Se possível, recompile a biblioteca do Android usando a mesma versão do JDK que é usado pela sua instalação do xamarin. Android.
+* **Qual versão do JDK foi usada para compilar a biblioteca?** &ndash;Erros de associação podem ocorrer se a biblioteca do Android foi criada com uma versão diferente do JDK do que em uso pelo Xamarin. Android. Se possível, recompile a biblioteca do Android usando a mesma versão do JDK que é usada pela sua instalação do Xamarin. Android.
 
 
 ## <a name="build-actions"></a>Ações de Build
 
-Quando você cria uma biblioteca de associações, você definir *ações de build* sobre o **. jar** ou. Arquivos AAR que você incorporar em seu projeto de biblioteca de associações &ndash; cada ação de compilação determina como o **. jar** ou. Arquivo AAR será incorporado (ou referenciado pelo) sua biblioteca de associações. A lista a seguir resume essas ações de construção:
+Ao criar uma biblioteca de associações, você define as *ações de compilação* no **. jar** ou. Arquivos AAR que você incorpora em seu projeto &ndash; de biblioteca de associações cada ação de Build determina como o **. jar** ou. O arquivo AAR será inserido em (ou referenciado por) sua biblioteca de associações. A lista a seguir resume essas ações de compilação:
 
-* `EmbeddedJar` &ndash; Insere o **. jar** a DLL de biblioteca de associações resultante como um recurso inserido. Isso é o mais simples e a maioria dos ação de compilação usados. Use esta opção quando desejar que o **. jar** automaticamente compilados em código de byte e empacotados na biblioteca de associações.
+* `EmbeddedJar`Insere o **. jar** na biblioteca de associações resultante dll como um recurso incorporado. &ndash; Essa é a ação de Build mais simples e mais comumente usada. Use essa opção quando desejar que o **. jar** seja compilado automaticamente no código de bytes e empacotado na biblioteca de associações.
 
-* `InputJar` &ndash; Não insere o **. jar** para a biblioteca de associações resultante. DLL. Sua biblioteca de associações. DLL têm uma dependência nessa **. jar** em tempo de execução. Use essa opção quando você não deseja incluir o **. jar** em sua biblioteca de associações (por exemplo, por motivos de licenciamento). Se você usar essa opção, você deve garantir que a entrada **. jar** está disponível no dispositivo que executa seu aplicativo.
+* `InputJar`Não incorpora o **. jar** à biblioteca de associações resultante. &ndash; DLL. Sua biblioteca de associações. A DLL terá uma dependência nesse **. jar** no tempo de execução. Use essa opção quando não desejar incluir o **. jar** em sua biblioteca de associações (por exemplo, por motivos de licenciamento). Se você usar essa opção, deverá garantir que o Input **. jar** esteja disponível no dispositivo que executa seu aplicativo.
 
-* `LibraryProjectZip` &ndash; Insere um. Arquivo AAR para a biblioteca de associações resultante. DLL. Isso é semelhante ao EmbeddedJar, exceto que você pode acessar recursos (bem como código) em que o limite. Arquivo AAR. Use essa opção quando quiser inserir um. AAR em sua biblioteca de associações.
+* `LibraryProjectZip`&ndash; Insere um. AAR o arquivo na biblioteca de associações resultante. DLL. Isso é semelhante a EmbeddedJar, exceto pelo fato de que você pode acessar recursos (bem como código) na associação. Arquivo AAR. Use essa opção quando desejar inserir um. AAR na biblioteca de associações.
 
-* `ReferenceJar` &ndash; Especifica uma referência **. jar**: uma referência **. jar** é um **. jar** que um dos seu limite **. jar** ou. Arquivos AAR depende. Esta referência **. jar** é usado apenas para satisfazer as dependências de tempo de compilação. Quando você usa essa ação de compilação, C# associações não são criadas para a referência **. jar** e ele não será inserido na biblioteca de associações resultante. DLL. Use essa opção quando você fará uma biblioteca de associações para a referência **. jar** , mas não tiver feito isso ainda. Essa ação de compilação é útil para empacotar vários **. jar**s (e/ou. AARs) em várias bibliotecas de associações interdependentes.
+* `ReferenceJar`Especifica um Reference. jar: uma Reference. jar é um. jar que um de seus. jar ou. &ndash; Os arquivos AAR dependem de. Esse Reference **. jar** é usado somente para satisfazer as dependências de tempo de compilação. Quando você usa essa ação de compilação C# , as associações não são criadas para o Reference **. jar** e não são inseridas na biblioteca de associações resultante. DLL. Use essa opção quando você criar uma biblioteca de associações para o Reference **. jar** , mas ainda não tiver feito isso. Essa ação de compilação é útil para empacotar vários s **. jar**(e/ou. AARs) em várias bibliotecas de associações interdependentes.
 
-* `EmbeddedReferenceJar` &ndash; Insere uma referência **. jar** para a biblioteca de associações resultante. DLL. Use essa ação de compilação quando você deseja criar C# associações de entrada para o **. jar** (ou). AAR) e todos os seu referência **. jar**(s) em sua biblioteca de associações.
+* `EmbeddedReferenceJar`Insere um Reference **. jar** na biblioteca de associações resultante. &ndash; DLL. Use essa ação de compilação quando desejar criar C# associações para o Input **. jar** (ou. AAR) e todos os seus **. jar**(s) de referência em sua biblioteca de associações.
 
-* `EmbeddedNativeLibrary` &ndash; Insere um nativo **. SO** na vinculação. Essa ação de compilação é usada para **. SO** arquivos que são necessários para o **. jar** do arquivo que está sendo associada. Talvez seja necessário carregar manualmente os **. SO** biblioteca antes de executar o código da biblioteca de Java. Isso é descrito abaixo.
+* `EmbeddedNativeLibrary`Insere um nativo **. assim,** na associação. &ndash; Essa ação de compilação é usada para arquivos **. so** que são exigidos pelo arquivo **. jar** que está sendo associado. Pode ser necessário carregar manualmente a biblioteca **. portanto,** antes de executar o código da biblioteca Java. Isso é descrito abaixo.
 
-Essas ações são explicadas em mais detalhes nos seguintes guias de compilação.
+Essas ações de compilação são explicadas com mais detalhes nos guias a seguir.
 
-Além disso, as seguintes ações de build são usadas para ajudar a importação de documentação da API do Java e convertê-los em C# documentação XML:
+Além disso, as seguintes ações de compilação são usadas para ajudar a importar a documentação da API C# do Java e convertê-las na documentação XML:
 
-* `JavaDocJar` é usado para apontar para o arquivo Jar do Javadoc para uma biblioteca de Java que está em conformidade com um estilo de pacote do Maven (geralmente `FOOBAR-javadoc**.jar**`).
-* `JavaDocIndex` é usado para apontar para `index.html` arquivo dentro a documentação de referência de API HTML.
-* `JavaSourceJar` é usado para complementar `JavaDocJar`, para gerar primeiro JavaDoc de fontes e, em seguida, trate os resultados como `JavaDocIndex`, para uma biblioteca de Java que está em conformidade com um Maven estilo de pacote (geralmente `FOOBAR-sources**.jar**`).
+* `JavaDocJar`é usado para apontar para o Jar de arquivo de Javadoc para uma biblioteca Java que está em conformidade com um estilo de `FOOBAR-javadoc**.jar**`pacote Maven (geralmente).
+* `JavaDocIndex`é usado para apontar para `index.html` arquivo dentro do HTML de documentação de referência de API.
+* `JavaSourceJar`é usado para complementar `JavaDocJar`, para primeiro gerar Javadoc de fontes e, em seguida, tratar `JavaDocIndex`os resultados como, para uma biblioteca Java que esteja de acordo com um estilo de `FOOBAR-sources**.jar**`pacote Maven (geralmente).
 
-A documentação da API deve ser o doclet padrão de Java8, Java7 ou o SDK Java6 (estão todos diferente formato), ou o estilo de DroidDoc.
+A documentação da API deve ser a doclet padrão de Java8, Java7 ou Java6 SDK (são todos os formatos diferentes) ou o estilo DroidDoc.
 
 ## <a name="including-a-native-library-in-a-binding"></a>Incluindo uma biblioteca nativa em uma associação
 
-Talvez seja necessário incluir um **. SO** biblioteca em um projeto de associação do xamarin. Android como parte de uma biblioteca Java de associação. Quando executa o código encapsulado do Java, xamarin. Android não consegue fazer a chamada JNI e a mensagem de erro _java.lang.UnsatisfiedLinkError: Método nativo não encontrado:_ será exibido o logcat-out para o aplicativo.
+Pode ser necessário incluir uma biblioteca **. portanto** em um projeto de associação do Xamarin. Android como parte da Associação de uma biblioteca Java. Quando o código Java encapsulado é executado, o Xamarin. Android não fará a chamada JNI e a mensagem _de erro Java. lang. UnsatisfiedLinkError: Método nativo não encontrado:_ aparecerá no logcat para o aplicativo.
 
-A correção para isso é para carregar manualmente os **. SO** biblioteca com uma chamada para `Java.Lang.JavaSystem.LoadLibrary`. Por exemplo, supondo que um projeto xamarin. Android tem biblioteca compartilhada **libpocketsphinx_jni.so** incluído no projeto de associação com uma ação de build **EmbeddedNativeLibrary**, o trecho a seguir (executado antes de usar a biblioteca compartilhada) carregará o **. SO** biblioteca:
+A correção para isso é carregar manualmente a biblioteca **. portanto** com uma chamada para `Java.Lang.JavaSystem.LoadLibrary`. Por exemplo, supondo que um projeto Xamarin. Android tenha uma biblioteca compartilhada **libpocketsphinx_jni. portanto** , incluído no projeto de associação com uma ação de compilação de **EmbeddedNativeLibrary**, o trecho a seguir (executado antes de usar a biblioteca compartilhada) carregará a biblioteca **. so** :
 
 ```csharp
 Java.Lang.JavaSystem.LoadLibrary("pocketsphinx_jni");
 ```
 
-## <a name="adapting-java-apis-to-ceparsl"></a>Adaptação de acordo com as APIs de Java para o C&eparsl;
+## <a name="adapting-java-apis-to-ceparsl"></a>Adaptando APIs Java para C&eparsl;
 
-O gerador de associação do xamarin. Android será alterado algumas linguagens Java e padrões para corresponder aos padrões de .NET. A lista a seguir descreve como o Java é mapeado para C#/.NET:
+O gerador de associação do Xamarin. Android alterará algumas linguagens e padrões de Java para corresponder aos padrões do .NET. A lista a seguir descreve como o Java é C#mapeado para/.net:
 
--   _Os métodos Getter/setter_ em Java estão _propriedades_ no .NET.
+- Os _métodos setter/getter_ em Java são _Propriedades_ no .net.
 
--   _Campos_ em Java estão _propriedades_ no .NET.
+- Os _campos_ em Java são _Propriedades_ no .net.
 
--   _Interfaces de ouvinte/ouvintes_ em Java estão _eventos_ no .NET. Os parâmetros de métodos em interfaces de retorno de chamada serão representados por um `EventArgs` subclasse.
+- _Ouvintes/interfaces_ de ouvinte em Java são _eventos_ no .net. Os parâmetros dos métodos nas interfaces de retorno de chamada serão representados `EventArgs` por uma subclasse.
 
--   Um _classe aninhada estáticos_ no Java é um _classes aninhadas_ no .NET.
+- Uma _classe aninhada estática_ em Java é uma _classe aninhada_ no .net.
 
--   Uma _classe interna_ no Java é um _classes aninhadas_ com um construtor de instância no C#.
+- Uma _classe interna_ em Java é uma _classe aninhada_ com um construtor de C#instância no.
 
 
 
 ## <a name="binding-scenarios"></a>Cenários de associação
 
-Os guias de cenário de associação a seguir podem ajudar você a vincular uma biblioteca Java (ou bibliotecas) para incorporação em seu aplicativo:
+Os guias de cenário de ligação a seguir podem ajudá-lo a associar uma biblioteca Java (ou bibliotecas) para a Incorporation em seu aplicativo:
 
--   [Associando um. JAR](~/android/platform/binding-java-library/binding-a-jar.md) é um passo a passo para a criação de bibliotecas de associações para **. jar** arquivos.
+- [Associação a. JAR](~/android/platform/binding-java-library/binding-a-jar.md) é uma explicação para a criação de bibliotecas de associações para arquivos **. jar** .
 
--   [Associando um. AAR](~/android/platform/binding-java-library/binding-an-aar.md) um passo a passo para a criação de bibliotecas de associações para. Arquivos AAR. Leia este passo a passo para saber como associar a bibliotecas do Android Studio.
+- [Associação a. AAR](~/android/platform/binding-java-library/binding-an-aar.md) é uma instrução para criar bibliotecas de associações para o. Arquivos AAR. Leia este passo a passos para saber como associar bibliotecas de Android Studio.
 
--   [Associação de um projeto de biblioteca do Eclipse](~/android/platform/binding-java-library/binding-a-library-project.md) um passo a passo para criar bibliotecas de associação de projetos de biblioteca Android. Leia este passo a passo para saber como associar projetos de biblioteca Android do Eclipse.
+- A [Associação de um projeto de biblioteca do eclipse](~/android/platform/binding-java-library/binding-a-library-project.md) é um passo a passos para criar bibliotecas de associação de projetos de biblioteca do Android. Leia este passo a passos para saber como associar projetos de biblioteca do Android do eclipse.
 
--   [Personalização de associações](~/android/platform/binding-java-library/customizing-bindings/index.md) explica como fazer modificações manuais para a associação para resolver erros de compilação e a API resultante da forma para que ele seja mais "C#-como".
+- A [personalização de associações](~/android/platform/binding-java-library/customizing-bindings/index.md) explica como fazer modificações manuais na associação para resolver erros de compilação e moldar a API resultante para que ela seja mais "C#-semelhante".
 
--   [Solução de problemas de associações](~/android/platform/binding-java-library/troubleshooting-bindings.md) lista cenários comuns de erro de associação, explica as causas possíveis e oferece sugestões para resolver esses erros.
+- [Solucionar problemas de associações](~/android/platform/binding-java-library/troubleshooting-bindings.md) lista cenários de erro de associação comuns, explica possíveis causas e oferece sugestões para resolver esses erros.
 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Trabalhar com JNI](~/android/platform/java-integration/working-with-jni.md)
-- [Metadados GAPI](https://www.mono-project.com/docs/gui/gtksharp/gapi/#metadata)
+- [Trabalhando com JNI](~/android/platform/java-integration/working-with-jni.md)
+- [Metadados do GAPI](https://www.mono-project.com/docs/gui/gtksharp/gapi/#metadata)
 - [Usar bibliotecas nativas](~/android/platform/native-libraries.md)

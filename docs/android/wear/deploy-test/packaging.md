@@ -1,69 +1,69 @@
 ---
-title: Empacotando aplicativos de desgaste
+title: Aplicativos de desgaste de pacotes
 ms.prod: xamarin
 ms.assetid: E32DD855-78DD-46F8-B234-4EAC0756BDA2
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/02/2018
-ms.openlocfilehash: 585c276b327a9092bdd13fa633307477017558c5
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: bca29089a61ed1f3400458f4b102c61023f47247
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61276767"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69522107"
 ---
-# <a name="packaging-wear-apps"></a>Empacotando aplicativos de desgaste
+# <a name="packaging-wear-apps"></a>Aplicativos de desgaste de pacotes
 
-Aplicativos do Android Wear são empacotados com um aplicativo Android completo para a distribuição no Google Play. 
+Os aplicativos Android desgaste são empacotados com um aplicativo Android completo para distribuição em Google Play. 
 
-## <a name="automatic-packaging"></a>Empacotamento automática
+## <a name="automatic-packaging"></a>Empacotamento automático
 
-Começando com o Xamarin Android 5.0, seu aplicativo de desgaste está automaticamente em um recurso em seu aplicativo mão quando você cria uma referência de projeto do projeto portátil para o projeto de desgaste. Você pode usar as etapas a seguir para criar essa associação: 
+A partir do Xamarin Android 5,0, seu aplicativo de desgaste é empacotado automaticamente como um recurso em seu aplicativo portátil quando você cria uma referência de projeto do projeto portátil para o projeto de desgaste. Você pode usar as seguintes etapas para criar essa associação: 
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-1. Se seu aplicativo de desgaste não ainda faz parte de sua solução de bolso, com o botão direito no nó da solução e selecione **Adicionar > Adicionar projeto existente...** .
+1. Se seu aplicativo de desgaste ainda não fizer parte de sua solução de portátil, clique com o botão direito do mouse no nó da solução e selecione **adicionar > Adicionar projeto existente...** .
 
-2. Navegue até a **. csproj** arquivo do seu aplicativo de desgaste, selecione-o e clique em **abrir**. O projeto de aplicativo de desgaste agora deve estar visível em sua solução portátil.
+2. Navegue até o arquivo **. csproj** do seu aplicativo de desgaste, selecione-o e clique em **abrir**. O projeto de aplicativo de desgaste agora deve estar visível em sua solução de portátil.
 
-3. Clique com botão direito do **referências** nó e selecione **adicionar referência**.
+3. Clique com o botão direito do mouse no nó **referências** e selecione **Adicionar referência**.
 
-4. No **Gerenciador de referências** caixa de diálogo, permitem que seu projeto de desgaste (clique para adicionar uma marca de seleção), em seguida, clique em **Okey**.
+4. Na caixa de diálogo **Gerenciador de referências** , habilite seu projeto de desgaste (clique para adicionar uma marca de seleção) e clique em **OK**.
 
-5. Alterar o nome do pacote para o seu projeto de desgaste para que corresponda o nome do pacote do projeto portátil (o nome do pacote pode ser alterado em **Propriedades > manifesto do Android**).
+5. Altere o nome do pacote para seu projeto de desgaste para que ele corresponda ao nome do pacote do projeto portátil (o nome do pacote pode ser alterado em **propriedades > manifesto do Android**).
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
-1. Se seu aplicativo de desgaste não ainda faz parte de sua solução de bolso, com o botão direito no nó da solução e selecione **Adicionar > Adicionar projeto existente...** .
+1. Se seu aplicativo de desgaste ainda não fizer parte de sua solução de portátil, clique com o botão direito do mouse no nó da solução e selecione **adicionar > Adicionar projeto existente...** .
 
-2. Navegue até a **. csproj** arquivo do seu aplicativo de desgaste, selecione-o e clique em **abrir**. O projeto de aplicativo de desgaste agora deve estar visível em sua solução portátil.
+2. Navegue até o arquivo **. csproj** do seu aplicativo de desgaste, selecione-o e clique em **abrir**. O projeto de aplicativo de desgaste agora deve estar visível em sua solução de portátil.
 
-3. Clique com botão direito no nó do projeto portátil na solução e clique em **Editar referências...** .
+3. Clique com o botão direito do mouse no nó do projeto portátil na solução e clique em **Editar referências..** ..
 
-4. No **Editar referências** caixa de diálogo, permitem que seu projeto de desgaste (clique para adicionar uma marca de seleção), em seguida, clique em **Okey**.
+4. Na caixa de diálogo **Editar referências** , habilite seu projeto de desgaste (clique para adicionar uma marca de seleção) e clique em **OK**.
 
-5. Alterar o nome do pacote para o seu projeto de desgaste para que corresponda o nome do pacote do projeto portátil (o nome do pacote pode ser alterado em **opções de projeto > aplicativo Android**).
+5. Altere o nome do pacote para seu projeto de desgaste para que ele corresponda ao nome do pacote do projeto portátil (o nome do pacote pode ser alterado em **Opções do projeto > aplicativo Android**).
 
 -----
 
 
-Observe que você obterá um **XA5211** erro se o nome do pacote do aplicativo Wear não coincide com o nome do pacote do aplicativo portátil. Por exemplo:
+Observe que você receberá um erro **XA5211** se o nome do pacote do aplicativo de desgaste não corresponder ao nome do pacote do aplicativo portátil. Por exemplo:
 
 ```shell
 Error XA5211: Embedded wear app package name differs from handheld 
 app package name (com.companyname.mywearapp != com.companyname.myapp). (XA5211)
 ```
 
-Para corrigir esse erro, altere o nome do pacote do aplicativo Wear para que corresponda o nome do pacote do aplicativo portátil.
+Para corrigir esse erro, altere o nome do pacote do aplicativo de desgaste para que ele corresponda ao nome do pacote do aplicativo portátil.
 
-Quando você clica em **compilar > compilar tudo**, essa associação dispara automática empacotamento do projeto desgaste ao projeto principal do Handheld (telefone). O aplicativo de desgaste é automaticamente criado e incluído como um recurso no aplicativo portátil.
+Quando você clica em **compilar > compilar tudo**, essa associação dispara o empacotamento automático do projeto de desgaste no projeto de telefone principal (Phone). O aplicativo de desgaste é criado e incluído automaticamente como um recurso no aplicativo portátil.
 
-O assembly que o projeto de aplicativo de desgaste gera não é usado como uma referência de assembly no projeto Handheld (telefone). Em vez disso, o processo de compilação faz o seguinte:
+O assembly que o projeto de aplicativo de desgaste gera não é usado como uma referência de assembly no projeto de handheld (telefone). Em vez disso, o processo de compilação faz o seguinte:
 
--   Verifica se o pacote de nomes de correspondência. 
+- Verifica se os nomes de pacote correspondem. 
 
--   Gera XML e o adiciona ao projeto portátil para associá-lo com o aplicativo de desgaste. Por exemplo: 
+- Gera o XML e o adiciona ao projeto de portátil para associá-lo ao aplicativo de desgaste. Por exemplo: 
 
     ```xml
     <!-- Handheld (Phone) Project.csproj -->
@@ -74,20 +74,20 @@ O assembly que o projeto de aplicativo de desgaste gera não é usado como uma r
     </ProjectReference>
     ```
 
--   Adiciona o aplicativo de desgaste como uma **brutos** recursos ao projeto portátil. 
+- Adiciona o aplicativo de desgaste como um recurso **bruto** ao projeto portátil. 
 
 
 ## <a name="manual-packaging"></a>Empacotamento manual
 
-Você pode escrever aplicativos do Android Wear no xamarin. Android antes da versão 5.0, mas você deve seguir estas instruções de empacotamento manual para distribuir o aplicativo: 
+Você pode gravar aplicativos de desgaste do Android no Xamarin. Android antes da versão 5,0, mas deve seguir estas instruções de empacotamento manual para distribuir o aplicativo: 
 
-1. Certifique-se de que seu projeto portáteis e projetos Handheld (telefone) têm o mesmo nome de pacote e o número de versão.
+1. Verifique se o projeto portátil e os projetos de handheld (telefone) têm o mesmo número de versão e nome de pacote.
 
-2. Criar manualmente o projeto portáteis como uma **versão** build.
+2. Crie manualmente o projeto portátil como uma compilação de **versão** .
 
-3. Adicionar manualmente a versão **. APK** da etapa (2) para o **recursos/bruto** diretório do projeto Handheld (telefone).
+3. Adicione a versão manualmente **. APK** da etapa (2) no diretório de **recursos/bruto** do projeto de mão (telefone).
 
-4. Adicionar manualmente um novo recurso XML **Resources/xml/wearable_app_desc.xml** no projeto portátil que se refere ao dispositivo portátil **APK** da etapa (3):
+4. Adicione manualmente um novo recurso XML **recursos/XML/wearable_app_desc. xml** no projeto portátil que se refere a portátil **apk** da etapa (3):
 
     ```xml
     <wearableApp package="wearable.app.package.name">
@@ -97,12 +97,12 @@ Você pode escrever aplicativos do Android Wear no xamarin. Android antes da ver
     </wearableApp>
     ```
 
-5. Adicionar manualmente uma `<meta-data />` elemento para o projeto portátil **androidmanifest. XML** `<application>` elemento refere-se para o novo recurso XML:
+5. Adicione manualmente um `<meta-data />` elemento ao elemento **AndroidManifest. xml** `<application>` do projeto de portátil que se refere ao novo recurso XML:
 
     ```xml
     <meta-data android:name="com.google.android.wearable.beta.app"
         android:resource="@xml/wearable_app_desc"/>
     ```
 
-Consulte também o site de desenvolvedor do Android [packging manual instruções](https://developer.android.com/training/wearables/apps/packaging.html#PackageManually).
+Consulte também as [instruções do packging manual](https://developer.android.com/training/wearables/apps/packaging.html#PackageManually)do site para desenvolvedores do Android.
 
