@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/28/2019
-ms.openlocfilehash: de77be818abbe1250946ee2ce1599235b79d8c01
-ms.sourcegitcommit: 0fd04ea3af7d6a6d6086525306523a5296eec0df
-ms.translationtype: MT
+ms.openlocfilehash: 329f7dc9cc43582f630a4895fba452a8496bae9a
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67512983"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656169"
 ---
 # <a name="fonts-in-xamarinforms"></a>Fontes no xamarin. Forms
 
-[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithFonts/)
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithfonts)
 
-Este artigo descreve como o xamarin. Forms permite especificar atributos de fonte (incluindo o tamanho e peso) em controles que exibem texto. Informações de fonte podem ser [especificado no código](#Setting_Font_in_Code) ou [especificado no XAML](#Setting_Font_in_Xaml). Ele tem ' também é possível usar um [fonte personalizada](#Using_a_Custom_Font), e [exibir ícones de fonte](#display-font-icons).
+Este artigo descreve como o xamarin. Forms permite especificar atributos de fonte (incluindo o tamanho e peso) em controles que exibem texto. Informações de fonte podem ser [especificado no código](#Setting_Font_in_Code) ou [especificado no XAML](#Setting_Font_in_Xaml). Também é possível usar uma [fonte personalizada](#Using_a_Custom_Font)e [exibir ícones de fonte](#display-font-icons).
 
 <a name="Setting_Font_in_Code" />
 
@@ -50,7 +50,7 @@ O `FontSize` propriedade pode ser definida como um valor duplo, por exemplo:
 label.FontSize = 24;
 ```
 
-Xamarin. Forms também define os campos na [ `NamedSize` ](xref:Xamarin.Forms.NamedSize) enumeração que representam os tamanhos de fonte específica. Para obter mais informações sobre tamanhos de fonte nomeados, consulte [chamado tamanhos de fonte](#named-font-sizes).
+O Xamarin. Forms também define campos na [`NamedSize`](xref:Xamarin.Forms.NamedSize) enumeração que representam tamanhos de fonte específicos. Para obter mais informações sobre tamanhos de fonte nomeados, consulte [tamanhos de fonte nomeados](#named-font-sizes).
 
 <a name="FontAttributes" />
 
@@ -68,7 +68,7 @@ O `FontAttribute` enumeração pode ser usada da seguinte maneira (você pode es
 label.FontAttributes = FontAttributes.Bold | FontAttributes.Italic;
 ```
 
-### <a name="set-font-info-per-platform"></a>Informações de fonte do conjunto por plataforma
+### <a name="set-font-info-per-platform"></a>Definir informações de fonte por plataforma
 
 Como alternativa, o `Device.RuntimePlatform` propriedade pode ser usada para definir os nomes de fontes diferentes em cada plataforma, conforme demonstrado neste código:
 
@@ -92,7 +92,7 @@ Xamarin. Forms controla esse texto de exibição todas têm um `FontSize` propri
 <Label Text="Instructions" FontSize="Small"/>
 ```
 
-Não há um conversor interno para o `FontSize` propriedade que permite que todas as configurações de fonte a ser expressa como um valor de cadeia de caracteres em XAML. Além disso, o `FontAttributes` propriedade pode ser usada para especificar atributos de fonte:
+Não há um conversor interno para o `FontSize` propriedade que permite que todas as configurações de fonte a ser expressa como um valor de cadeia de caracteres em XAML. Além disso, a `FontAttributes` propriedade pode ser usada para especificar atributos de fonte:
 
 ```xaml
 <Label Text="Italics are supported" FontAttributes="Italic" />
@@ -116,16 +116,16 @@ Não há um conversor interno para o `FontSize` propriedade que permite que toda
 
 Ao especificar uma face de fonte personalizado, é sempre uma boa ideia usar `OnPlatform`, que é difícil encontrar uma fonte que está disponível em todas as plataformas.
 
-## <a name="named-font-sizes"></a>Tamanhos de fonte nomeada
+## <a name="named-font-sizes"></a>Tamanhos de fonte nomeados
 
-Xamarin. Forms define os campos na [ `NamedSize` ](xref:Xamarin.Forms.NamedSize) enumeração que representam os tamanhos de fonte específica. A tabela a seguir mostra o `NamedSize` membros e seus tamanhos padrão no iOS, Android e Universal Windows Platform (UWP):
+O Xamarin. Forms define os [`NamedSize`](xref:Xamarin.Forms.NamedSize) campos na enumeração que representam tamanhos de fonte específicos. A tabela a seguir mostra `NamedSize` os membros e seus tamanhos padrão no Ios, no Android e no plataforma universal do Windows (UWP):
 
 | Membro | iOS | Android | UWP |
 | --- | --- | --- | --- |
 | `Default` | 16 | 14 | 14 |
-| `Micro` | 11 | 10 | 15.667 |
-| `Small` | 13 | 14 | 18.667 |
-| `Medium` | 16 | 17 | 22.667 |
+| `Micro` | 11 | 10 | 15,667 |
+| `Small` | 13 | 14 | 18,667 |
+| `Medium` | 16 | 17 | 22,667 |
 | `Large` | 20 | 22 | 32 |
 | `Body` | 17 | 16 | 14 |
 | `Header` | 17 | 96 | 46 |
@@ -133,14 +133,14 @@ Xamarin. Forms define os campos na [ `NamedSize` ](xref:Xamarin.Forms.NamedSize)
 | `Subtitle` | 22 | 16 | 20 |
 | `Caption` | 12 | 12 | 12 |
 
-Tamanhos de fonte nomeada podem ser definidos por meio de XAML e código. Além disso, o `Device.GetNamedSize` método pode ser chamado para retornar um `double` que representa o tamanho de fonte nomeada:
+Os tamanhos de fonte nomeados podem ser definidos por meio de XAML e código. Além disso, o `Device.GetNamedSize` método pode ser chamado para retornar um `double` que represente o tamanho da fonte nomeada:
 
 ```csharp
 label.FontSize = Device.GetNamedSize(NamedSize.Small, typeof(Label));
 ```
 
 > [!NOTE]
-> No iOS e Android, tamanhos de fonte nomeada serão o dimensionamento automático com base nas opções de acessibilidade do sistema operacional. Esse comportamento pode ser desabilitado no iOS com uma plataforma específica. Para obter mais informações, consulte [acessibilidade colocação em escala para tamanhos de fonte chamado no iOS](~/xamarin-forms/platform/ios/named-font-size-scaling.md).
+> No iOS e no Android, os tamanhos de fonte nomeados serão dimensionamento automático com base nas opções de acessibilidade do sistema operacional. Esse comportamento pode ser desabilitado no iOS com uma plataforma específica. Para obter mais informações, consulte [dimensionamento de acessibilidade para tamanhos de fonte nomeados no Ios](~/xamarin-forms/platform/ios/named-font-size-scaling.md).
 
 <a name="Using_a_Custom_Font" />
 
@@ -157,7 +157,7 @@ As etapas necessárias para cada plataforma são descritas abaixo. Ao incluir ar
 É possível exibir uma fonte personalizada primeiro garantir que ele é carregado e, em seguida, fazendo referência a ele por nome usando o xamarin. Forms `Font` métodos.
 Siga as instruções em [esta postagem de blog](https://blog.xamarin.com/custom-fonts-in-ios/):
 
-1. Adicione o arquivo de fonte com **ação de compilação: BundleResource**, e
+1. Adicione o arquivo de fonte **com a ação de compilação: BundleResource**e
 2. Atualização do **Info. plist** arquivo (**fontes fornecidas pelo aplicativo**, ou `UIAppFonts`, key), em seguida,
 3. Fazer referência a ele por nome sempre que você definir uma fonte no xamarin. Forms!
 
@@ -171,7 +171,7 @@ new Label
 
 ### <a name="android"></a>Android
 
-Xamarin. Forms para Android pode fazer referência a uma fonte personalizada que foi adicionada ao projeto seguindo um padrão de nomenclatura específico. Primeiro, adicione o arquivo de fonte para o **ativos** pasta no projeto de aplicativo e defina *ação de compilação: AndroidAsset*. Em seguida, use o caminho completo e *nome da fonte* separados por um hash (#) como o nome da fonte no xamarin. Forms, como o trecho de código a seguir demonstra:
+Xamarin. Forms para Android pode fazer referência a uma fonte personalizada que foi adicionada ao projeto seguindo um padrão de nomenclatura específico. Primeiro, adicione o arquivo de fonte à pasta **ativos** no projeto de aplicativo e *defina a ação de compilação: AndroidAsset*. Em seguida, use o caminho completo e *nome da fonte* separados por um hash (#) como o nome da fonte no xamarin. Forms, como o trecho de código a seguir demonstra:
 
 ```csharp
 new Label
@@ -216,19 +216,19 @@ Você também pode usar [ `Device.RuntimePlatform` ](~/xamarin-forms/platform/de
 
 ## <a name="display-font-icons"></a>Exibir ícones de fonte
 
-Ícones de fonte podem ser exibidos por aplicativos xamarin. Forms, especificando os dados do ícone de fonte em um `FontImageSource` objeto. Essa classe, que deriva de [ `ImageSource` ](xref:Xamarin.Forms.ImageSource) de classe, tem as seguintes propriedades:
+Os ícones de fonte podem ser exibidos por aplicativos Xamarin. Forms especificando os dados de ícone de `FontImageSource` fonte em um objeto. Essa classe, que deriva da [`ImageSource`](xref:Xamarin.Forms.ImageSource) classe, tem as seguintes propriedades:
 
-- `Glyph` – o valor do caractere unicode do ícone de fonte, especificado como um `string`.
-- `Size` – um `double` valor que indica o tamanho, em unidades independentes de dispositivo, do ícone de fonte renderizada. O valor padrão é 30.
-- `FontFamily` – um `string` que representa a família de fontes ao qual pertence o ícone de fonte.
-- `Color` – um recurso opcional [ `Color` ](xref:Xamarin.Forms.Color) valor a ser usado ao exibir o ícone de fonte.
+- `Glyph`– o valor do caractere Unicode do ícone de fonte, especificado como `string`um.
+- `Size`– um `double` valor que indica o tamanho, em unidades independentes de dispositivo, do ícone de fonte renderizado. O valor padrão é 30.
+- `FontFamily`– a `string` que representa a família de fontes à qual o ícone de fonte pertence.
+- `Color`– um valor [`Color`](xref:Xamarin.Forms.Color) opcional a ser usado ao exibir o ícone de fonte.
 
-Esses dados são usados para criar um arquivo PNG, que pode ser exibido por qualquer exibição que pode exibir um `ImageSource`. Essa abordagem permite que os ícones de fonte, como emojis, a ser exibido por vários modos de exibição, em vez de limitar a exibição do ícone de fonte para um único texto apresentando o modo de exibição, como um [ `Label` ](xref:Xamarin.Forms.Label).
+Esses dados são usados para criar um PNG, que pode ser exibido por qualquer exibição que possa exibir um `ImageSource`. Essa abordagem permite que ícones de fonte, como emojis, sejam exibidos por várias exibições, em vez de limitar a exibição do ícone de fonte a uma exibição de apresentação de [`Label`](xref:Xamarin.Forms.Label)texto único, como um.
 
 > [!IMPORTANT]
-> Ícones de fonte no momento somente podem ser especificados por sua representação de caractere unicode.
+> Os ícones de fonte só podem ser especificados por sua representação de caractere Unicode.
 
-O exemplo XAML a seguir tem um ícone de fonte única que está sendo exibido por um [ `Image` ](xref:Xamarin.Forms.Image) exibição:
+O exemplo XAML a seguir tem um único ícone de fonte sendo exibido [`Image`](xref:Xamarin.Forms.Image) por uma exibição:
 
 ```xaml
 <Image BackgroundColor="#D1D1D1">
@@ -240,7 +240,7 @@ O exemplo XAML a seguir tem um ícone de fonte única que está sendo exibido po
 </Image>
 ```
 
-Esse código exibe um ícone do XBox, da família de fonte Ionicons, em um [ `Image` ](xref:Xamarin.Forms.Image) exibição. Observe que, enquanto o unicode, para esse ícone é de caractere `\uf30c`, ele tem que ser substituídos no XAML e portanto se torna `&#xf30c;`. O código C# equivalente é:
+Esse código exibe um ícone do Xbox, da família de fontes Ionicons, em [`Image`](xref:Xamarin.Forms.Image) uma exibição. Observe que, embora o caractere Unicode para esse ícone `\uf30c`seja, ele deve ser ignorado em XAML e, portanto `&#xf30c;`, se torna. O código C# equivalente é:
 
 ```csharp
 Image image = new Image { BackgroundColor = Color.FromHex("#D1D1D1") };
@@ -252,13 +252,13 @@ image.Source = new FontImageSource
 };
 ```
 
-Capturas de tela as seguir, do [Layouts associável](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/BindableLayouts/) de exemplo, mostrar vários ícones de fonte que está sendo exibidos por um layout associável:
+As capturas de tela a seguir, do exemplo de [layouts vinculáveis](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-bindablelayouts), mostram vários ícones de fonte sendo exibidos por um layout vinculável:
 
-![Captura de tela de ícones de fonte que está sendo exibidos, no iOS e Android](fonts-images/font-image-source.png "ícones de fonte que está sendo exibidos em uma exibição de imagem")
+![Captura de tela dos ícones de fonte que estão sendo exibidos, no Ios e no Android](fonts-images/font-image-source.png "Ícones de fonte sendo exibidos em uma exibição de imagem")
 
 ## <a name="related-links"></a>Links relacionados
 
-- [FontsSample](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithFonts/)
-- [Texto (exemplo)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Text/)
-- [Layouts associáveis (amostra)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/BindableLayouts/)
+- [FontsSample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithfonts)
+- [Texto (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
+- [Layouts vinculáveis (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-bindablelayouts)
 - [Layouts Associáveis](~/xamarin-forms/user-interface/layouts/bindable-layouts.md)

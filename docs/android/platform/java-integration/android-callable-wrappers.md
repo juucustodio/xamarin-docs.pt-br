@@ -1,46 +1,46 @@
 ---
-title: Callable Wrappers do Android
+title: Wrappers que podem ser chamados pelo Android para Xamarin. Android
 ms.prod: xamarin
 ms.assetid: C33E15FA-1E2B-819A-C656-CA588D611492
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/15/2018
-ms.openlocfilehash: 7edbdaa5a690a641523cb5baad7909ed01992aa5
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
-ms.translationtype: MT
+ms.openlocfilehash: a8bd3f11698260b944bd29fcd9551825cb76e506
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61090842"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68511185"
 ---
-# <a name="android-callable-wrappers"></a>Callable Wrappers do Android
+# <a name="android-callable-wrappers-for-xamarinandroid"></a>Wrappers que podem ser chamados pelo Android para Xamarin. Android
 
-Callable Wrappers do Android (ACWs) são necessárias sempre que o tempo de execução do Android invoca código gerenciado. Esses wrappers são necessárias porque não há nenhuma maneira de registrar as classes com arte (o tempo de execução Android) em tempo de execução. (Especificamente, o [JNI DefineClass() função](http://docs.oracle.com/javase/1.5.0/docs/guide/jni/spec/functions.html#wp15986) não é compatível com o tempo de execução do Android.} Callable Wrappers do Android, portanto, fazer a falta de suporte ao registro de tipo de tempo de execução. 
+Os ACWs (Android callable wrappers) são necessários sempre que o tempo de execução do Android invoca o código gerenciado. Esses wrappers são necessários porque não há como registrar classes com arte (o tempo de execução do Android) em tempo de execução. (Especificamente, a [função JNI DefineClass ()](http://docs.oracle.com/javase/1.5.0/docs/guide/jni/spec/functions.html#wp15986) não é suportada pelo tempo de execução do Android.} Os wrappers que podem ser chamados pelo Android, portanto, constituem a falta de suporte ao registro de tipo de tempo de execução. 
 
-*Sempre que* código do Android precisa executar uma `virtual` ou método que é de interface `overridden` ou implementados em código gerenciado, xamarin. Android deve fornecer um proxy de Java para que esse método é expedido para o tipo gerenciado apropriado. Esses tipos de proxy do Java são código Java que tem a classe base "mesmo" e a lista de interface de Java como o tipo gerenciado, os mesmos construtores de implementação e declarar qualquer classe base substituído e métodos de interface. 
+*Toda vez* O código do Android precisa executar `virtual` um método de interface ou `overridden` que seja ou implementado em código gerenciado, o Xamarin. Android deve fornecer um proxy Java para que esse método seja expedido para o tipo gerenciado apropriado. Esses tipos de proxy Java são código Java que tem a "mesma" classe base e a lista de interface java como o tipo gerenciado, implementando os mesmos construtores e declarando qualquer classe base substituída e métodos de interface. 
 
-Callable wrappers do Android são gerados pelo **monodroid.exe** de programa durante a [processo de compilação](~/android/deploy-test/building-apps/build-process.md): eles são gerados para todos os tipos que herdam (direta ou indiretamente) [ Java.Lang.Object](https://developer.xamarin.com/api/type/Java.Lang.Object/). 
+Os wrappers que podem ser chamados pelo Android são gerados pelo programa **monodroid. exe** durante o [processo de compilação](~/android/deploy-test/building-apps/build-process.md): eles são gerados para todos os tipos que (direta ou indiretamente) herdam [Java. lang. Object](xref:Java.Lang.Object). 
 
 
 
-## <a name="android-callable-wrapper-naming"></a>Nomenclatura do Android Callable Wrapper
+## <a name="android-callable-wrapper-naming"></a>Nomenclatura do wrapper callable do Android
 
-Nomes de pacote para Callable Wrappers do Android se baseiam os MD5SUM do nome qualificado pelo assembly do tipo que está sendo exportado. Essa técnica de nomenclatura torna possível para o mesmo nome de tipo totalmente qualificado ser disponibilizado por assemblies diferentes sem introduzir um erro de empacotamento. 
+Os nomes de pacote para wrappers que podem ser chamados pelo Android são baseados no MD5SUM do nome qualificado pelo assembly do tipo que está sendo exportado. Essa técnica de nomenclatura possibilita que o mesmo nome de tipo totalmente qualificado seja disponibilizado por diferentes assemblies sem introduzir um erro de empacotamento. 
 
-Devido a esse esquema de nomenclatura MD5SUM, você não pode acessar diretamente seus tipos por nome. Por exemplo, a seguinte `adb` comando não funcionará porque o nome do tipo `my.ActivityType` não é gerado por padrão: 
+Devido a esse esquema de nomenclatura MD5SUM, você não pode acessar diretamente seus tipos por nome. Por exemplo, o comando `adb` a seguir não funcionará porque o nome `my.ActivityType` do tipo não é gerado por padrão: 
 
 ```shell
 adb shell am start -n My.Package.Name/my.ActivityType
 ```
 
-Além disso, você poderá ver erros, como o seguinte se você tentar fazer referência a um tipo por nome:
+Além disso, você poderá ver erros como o seguinte se tentar fazer referência a um tipo por nome:
 
 ```shell
 java.lang.ClassNotFoundException: Didn't find class "com.company.app.MainActivity"
 on path: DexPathList[[zip file "/data/app/com.company.App-1.apk"] ...
 ```
 
-Se você *fazer* exigem acesso aos tipos por nome, você pode declarar um nome para esse tipo em uma declaração de atributo. Por exemplo, aqui está o código que declara uma atividade com o nome totalmente qualificado `My.ActivityType`:
+Se você *precisar de* acesso a tipos por nome, poderá declarar um nome para esse tipo em uma declaração de atributo. Por exemplo, aqui está o código que declara uma atividade com o nome `My.ActivityType`totalmente qualificado:
 
 ```csharp
 namespace My {
@@ -51,7 +51,7 @@ namespace My {
 }
 ```
 
-O `ActivityAttribute.Name` propriedade pode ser definida para declarar explicitamente o nome dessa atividade: 
+A `ActivityAttribute.Name` propriedade pode ser definida para declarar explicitamente o nome dessa atividade: 
 
 ```csharp
 namespace My {
@@ -62,23 +62,23 @@ namespace My {
 }
 ```
 
-Depois que a configuração dessa propriedade é adicionada, `my.ActivityType` pode ser acessado pelo nome do código externo e de `adb` scripts. O `Name` atributo pode ser definido para muitos tipos diferentes incluindo `Activity`, `Application`, `Service`, `BroadcastReceiver`, e `ContentProvider`: 
+Depois que essa configuração de propriedade é `my.ActivityType` adicionada, pode ser acessada pelo nome de `adb` código externo e de scripts. O `Name` atributo pode ser definido para muitos tipos diferentes, `Activity`incluindo `Application`, `Service` `BroadcastReceiver`,, e `ContentProvider`: 
 
--   [ActivityAttribute.Name](https://developer.xamarin.com/api/property/Android.App.ActivityAttribute.Name/)
--   [ApplicationAttribute.Name](https://developer.xamarin.com/api/property/Android.App.ApplicationAttribute.Name/)
--   [ServiceAttribute.Name](https://developer.xamarin.com/api/property/Android.App.ServiceAttribute.Name/)
--   [BroadcastReceiverAttribute.Name](https://developer.xamarin.com/api/property/Android.Content.BroadcastReceiverAttribute.Name/)
--   [ContentProviderAttribute.Name](https://developer.xamarin.com/api/property/Android.Content.ContentProviderAttribute.Name/)
+-   [ActivityAttribute.Name](xref:Android.App.ActivityAttribute.Name)
+-   [ApplicationAttribute.Name](xref:Android.App.ApplicationAttribute.Name)
+-   [ServiceAttribute.Name](xref:Android.App.ServiceAttribute.Name)
+-   [BroadcastReceiverAttribute.Name](xref:Android.Content.BroadcastReceiverAttribute.Name)
+-   [ContentProviderAttribute.Name](xref:Android.Content.ContentProviderAttribute.Name)
 
-Com base em MD5SUM ACW nomenclatura foi introduzido no xamarin. Android 5.0. Para obter mais informações sobre a nomeação de atributo, consulte [RegisterAttribute](https://developer.xamarin.com/api/type/Android.Runtime.RegisterAttribute/). 
+A nomenclatura de ACW baseada em MD5SUM foi introduzida no Xamarin. Android 5,0. Para obter mais informações sobre a nomenclatura de atributo, consulte [RegisterAttribute](xref:Android.Runtime.RegisterAttribute). 
 
 
 
 ## <a name="implementing-interfaces"></a>Implementando interfaces
 
-Há momentos em que talvez você precise implementar uma interface Android, tal como [Android.Content.IComponentCallbacks](https://developer.xamarin.com/api/type/Android.Content.IComponentCallbacks/). Uma vez que todas as classes do Android e interface estendem o [Android.Runtime.IJavaObject](https://developer.xamarin.com/api/type/Android.Runtime.IJavaObject/) surge do interface, a pergunta: como podemos implementar `IJavaObject`? 
+Há ocasiões em que talvez seja necessário implementar uma interface do Android, como [Android. Content. IComponentCallbacks](xref:Android.Content.IComponentCallbacks). Como todas as classes e interfaces do Android estendem a interface [Android. Runtime. IJavaObject](xref:Android.Runtime.IJavaObject) , a questão surge: como `IJavaObject`implementamos? 
 
-A pergunta foi respondida acima: o motivo pelo qual todos os tipos de Android precisam implementar `IJavaObject` é para que o xamarin. Android tem um callable wrapper do Android para fornecer ao Android, ou seja, um proxy de Java para o tipo fornecido. Uma vez que **monodroid.exe** procura apenas `Java.Lang.Object` subclasses, e `Java.Lang.Object` implementa `IJavaObject,` a resposta será óbvia: subclasse `Java.Lang.Object`: 
+A pergunta foi respondida acima: o motivo pelo qual todos os tipos `IJavaObject` Android precisam ser implementados é que o Xamarin. Android tem um wrapper callable Android para fornecer ao Android, ou seja, um proxy Java para o tipo fornecido. Como **monodroid. exe** só procura por `Java.Lang.Object` subclasses e `Java.Lang.Object` implementa `IJavaObject,` a resposta é óbvia: subclasse `Java.Lang.Object`: 
 
 ```csharp
 class MyComponentCallbacks : Java.Lang.Object, Android.Content.IComponentCallbacks {
@@ -98,9 +98,9 @@ class MyComponentCallbacks : Java.Lang.Object, Android.Content.IComponentCallbac
 
 ## <a name="implementation-details"></a>Detalhes da implementação
 
-*O restante desta página fornece detalhes de implementação, sujeito a alterações sem aviso prévio* (e é apresentada aqui apenas porque os desenvolvedores ficarão curiosos sobre o que está acontecendo). 
+*O restante desta página fornece detalhes de implementação sujeitos a alterações sem aviso prévio* (e é apresentado aqui somente porque os desenvolvedores estarão curiosos sobre o que está acontecendo). 
 
-Por exemplo, considerando o seguinte C# código-fonte:
+Por exemplo, considerando a seguinte C# fonte:
 
 ```csharp
 using System;
@@ -120,7 +120,7 @@ namespace Mono.Samples.HelloWorld
 }
 ```
 
-O **mandroid.exe** programa irá gerar o Android Callable Wrapper a seguir: 
+O programa **mandroid. exe** irá gerar o seguinte wrapper do Android callable: 
 
 ```java
 package mono.samples.helloWorld;
@@ -155,4 +155,4 @@ public class HelloAndroid
 }
 ```
 
-Observe que a classe base é preservada, e `native` declarações de método são fornecidas para cada método que é substituído no código gerenciado. 
+Observe que a classe base é preservada e `native` declarações de método são fornecidas para cada método que é substituído no código gerenciado. 

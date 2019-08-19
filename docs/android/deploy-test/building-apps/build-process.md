@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/22/2019
-ms.openlocfilehash: 5d3635ccc61a0be50e4a4b6d8bc44e60515cc21e
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: ffa462ed7cfdc45357f0ac62cae23d307cdb92b7
+ms.sourcegitcommit: 9f37dc00c2adab958025ad1cdba9c37f0acbccd0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68509066"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69012452"
 ---
 # <a name="build-process"></a>Processo de build
 
@@ -72,6 +72,28 @@ Os destinos de build a seguir são definidos para projetos de Xamarin.Android:
 
 -   **UpdateAndroidResources** &ndash; atualiza o arquivo `Resource.designer.cs`. Esse destino geralmente é chamado pelo IDE quando novos recursos são adicionados ao projeto.
 
+## <a name="build-extension-points"></a>Criar pontos de extensão
+
+O sistema de build Xamarin.Android expõe alguns pontos de extensão públicos para os usuários que desejam se conectar ao nosso processo de build. Para usar um desses pontos de extensão, você precisará adicionar seu destino personalizado à propriedade apropriada do MSBuild em um `PropertyGroup`. Por exemplo:
+
+```xml
+<PropertyGroup>
+   <AfterGenerateAndroidManifest>
+      $(AfterGenerateAndroidManifest);
+      YourTarget;
+   </AfterGenerateAndroidManifest>
+</PropertyGroup>
+```
+
+Uma palavra de cautela sobre a extensão do processo de build: Se não forem gravadas corretamente, as extensões de build poderão afetar seu desempenho de build, especialmente se forem executadas em todos os builds. É altamente recomendável que você leia a [documentação](https://docs.microsoft.com/visualstudio/msbuild/msbuild) do MSBuild antes de implementar essas extensões.
+
+-   **AfterGenerateAndroidManifest** &ndash; Os destinos listados nesta propriedade serão executados diretamente após o destino `_GenerateJavaStubs` interno. É aqui que o arquivo `AndroidManifest.xml` é gerado no `$(IntermediateOutputPath)`. Portanto, se quiser fazer alguma modificação no arquivo `AndroidManifest.xml` gerado, você poderá fazê-lo usando esse ponto de extensão.
+
+    Adicionado no Xamarin.Android 9.4.
+
+-   **BeforeGenerateAndroidManifest** &ndash; Os destinos listados nesta propriedade serão executados diretamente antes de `_GenerateJavaStubs`.
+
+    Adicionado no Xamarin.Android 9.4.
 
 ## <a name="build-properties"></a>Propriedades de build
 
@@ -113,13 +135,19 @@ Propriedades de instalação controlam o comportamento dos destinos `Install` e 
 Propriedades de empacotamento controlam a criação do pacote Android e são usadas pelos destinos `Install` e `SignAndroidPackage`.
 As [Propriedades de Assinatura](#Signing_Properties) também são relevantes ao empacotar aplicativos de Versão.
 
+-   **AndroidApkDigestAlgorithm** &ndash; Um valor de cadeia de caracteres que especifica o algoritmo digest para usar com `jarsigner -digestalg`.
+
+    O valor padrão é `SHA1` para APKs e `SHA-256` para lotes de aplicativos.
+
+    Adicionado no Xamarin.Android 9.4.
+
 -   **AndroidApkSignerAdditionalArguments** &ndash; Uma propriedade de cadeia de caracteres que permite ao desenvolvedor fornecer argumentos adicionais à ferramenta `apksigner`.
 
     Adicionado no Xamarin.Android 8.2.
 
 -   **AndroidApkSigningAlgorithm** &ndash; Um valor de cadeia de caracteres que especifica o algoritmo de assinatura para usar com `jarsigner -sigalg`.
 
-    O valor padrão é `md5withRSA`.
+    O valor padrão é `md5withRSA` para APKs e `SHA256withRSA` para lotes de aplicativos.
 
     Adicionado no Xamarin.Android 8.2.
 
@@ -147,6 +175,10 @@ As [Propriedades de Assinatura](#Signing_Properties) também são relevantes ao 
 
 -   **AndroidEnableDesugar** &ndash; uma propriedade booliana que determina se `desugar` está habilitado. O Android não é compatível com todos os recursos de Java 8 no momento, e a cadeia de ferramentas padrão implementa novos recursos de linguagem ao executar transformações de código de bytes, chamadas `desugar`, na saída do compilador `javac`. O padrão será `False` se `AndroidDexTool=dx` for usado e será `True` se `AndroidDexTool=d8` for usado.
 
+-   **AndroidEnableGooglePlayStoreChecks** &ndash; Uma propriedade bool que permite aos desenvolvedores desabilitar as seguintes verificações da Google Play Store: XA1004, XA1005 e XA1006. Isso é útil para os desenvolvedores que não pretendem trabalhar com a Google Play Store e não desejam executar essas verificações.
+
+    Adicionado no Xamarin.Android 9.4.
+
 -   **AndroidEnableMultiDex** &ndash; uma propriedade booliana que determina se o suporte a Multi-Dex será usado no `.apk` final.
 
     O suporte para essa propriedade foi adicionado no Xamarin.Android 5.1.
@@ -166,6 +198,14 @@ As [Propriedades de Assinatura](#Signing_Properties) também são relevantes ao 
     Por padrão, o valor será definido como `True`.
 
     Adicionado no Xamarin.Android 9.2.
+
+-   **AndroidEnableProfiledAot** &ndash; Uma propriedade booliana que determina se os perfis AOT são – ou não – usados durante a compilação Ahead of Time.
+
+    Os perfis são listados no grupo de itens `AndroidAotProfile`. Este ItemGroup contém perfis padrão. Ele pode ser substituído removendo os perfis existentes e adicionando seus próprios perfis AOT.
+
+    O suporte para essa propriedade foi adicionado no Xamarin.Android 9.4.
+
+    Essa propriedade é `False` por padrão.
 
 -   **AndroidEnableSGenConcurrent** &ndash; uma propriedade booliana que determina se o [coletor de GC simultâneo](https://www.mono-project.com/docs/about-mono/releases/4.8.0/#concurrent-sgen) do Mono será ou não usado.
 
@@ -238,11 +278,23 @@ As [Propriedades de Assinatura](#Signing_Properties) também são relevantes ao 
     Adicionado no Xamarin.Android 9.2.
 
 -   **AndroidHttpClientHandlerType** &ndash; Controla a implementação padrão `System.Net.Http.HttpMessageHandler` que será usada pelo construtor padrão `System.Net.Http.HttpClient`. O valor é um nome de tipo qualificado pelo assembly de uma subclasse `HttpMessageHandler`, adequado para usar com [`System.Type.GetType(string)`](https://docs.microsoft.com/dotnet/api/system.type.gettype?view=netcore-2.0#System_Type_GetType_System_String_).
+    Os valores mais comuns para essa propriedade são:
 
-    O valor padrão é `System.Net.Http.HttpClientHandler, System.Net.Http`.
+    -   `Xamarin.Android.Net.AndroidClientHandler`: Use as APIs Java do Android para executar solicitações de rede. Isso permite acessar as URLs TLS 1.2 quando a versão do Android subjacente dá suporte ao TLS 1.2. Somente versões Android 5.0 e posteriores fornecem suporte confiável ao TLS 1.2 por meio de Java.
 
-    Isso pode ser substituído para que contenha `Xamarin.Android.Net.AndroidClientHandler`, que usa as APIs Java para Android para executar solicitações de rede. Isso permite acessar as URLs TLS 1.2 quando a versão do Android subjacente dá suporte ao TLS 1.2.  
-    Somente versões Android 5.0 e posteriores fornecem suporte confiável ao TLS 1.2 por meio de Java.
+        Isso corresponde à opção do **Android** nas páginas de propriedades do Visual Studio e à opção **AndroidClientHandler** nas páginas de propriedades de Visual Studio para Mac.
+
+        O novo assistente de projeto seleciona essa opção para novos projetos quando a **Versão mínima do Android** está configurada como **Android 5.0 (Lollipop)** ou versão mais recente no Visual Studio ou quando o campo **Plataformas de destino** está definido como **Melhor e mais recente** no Visual Studio para Mac.
+
+    -   Não definido/a cadeia de caracteres está vazia: Isso é equivalente a `System.Net.Http.HttpClientHandler, System.Net.Http`
+
+        Isso corresponde à opção **Padrão** nas páginas de propriedades do Visual Studio.
+
+        O novo assistente de projeto seleciona essa opção para novos projetos quando a **Versão mínima do Android** está configurada como **Android 4.4.87** ou versão mais antiga no Visual Studio ou quando o campo **Plataformas de destino** está definido como **Desenvolvimento Moderno** ou **Máxima compatibilidade** no Visual Studio para Mac.
+
+    -  `System.Net.Http.HttpClientHandler, System.Net.Http`: Use o `HttpMessageHandler` gerenciado.
+
+       Isso corresponde à opção **Gerenciado** nas páginas de propriedades do Visual Studio.
 
     *Observação*: Se o suporte a TLS 1.2 for necessário nas versões do Android anteriores à 5.0 *ou* com o `System.Net.WebClient` e as APIs relacionadas, o `$(AndroidTlsProvider)` deverá ser usado.
 
@@ -314,6 +366,17 @@ As [Propriedades de Assinatura](#Signing_Properties) também são relevantes ao 
 
     Adicionado no Xamarin.Android 8.3.
 
+-   **AndroidPackageFormat** &ndash; Uma propriedade em estilo de enumeração com os valores válidos `apk` ou `aab`. Isso indica se você deseja empacotar o aplicativo Android como um [arquivo APK][apk] ou um [Lote de Aplicativo do Android][bundle]. Os Lote de Aplicativo são um novo formato para builds de `Release` destinados ao envio no Google Play. Atualmente, este valor assume o padrão `apk`.
+
+    Quando `$(AndroidPackageFormat)` é definido como `aab`, outras propriedades do MSBuild são definidas, que são necessárias para os Lote de Aplicativo do Android:
+
+    * `$(AndroidUseAapt2)` é `True`.
+    * `$(AndroidUseApkSigner)` é `False`.
+    * `$(AndroidCreatePackagePerAbi)` é `False`.
+
+[apk]: https://en.wikipedia.org/wiki/Android_application_package
+[bundle]: https://developer.android.com/platform/technology/app-bundle
+
 -   **AndroidR8JarPath** &ndash; o caminho para `r8.jar` a ser usado com o compilador dex r8 e o redutor. O padrão é um caminho na instalação do Xamarin.Android. Para obter mais informações, confira nossa documentação sobre o [D8 e R8][d8-r8].
 
 -   **AndroidSdkBuildToolsVersion** &ndash; o pacote de ferramentas de build do Android SDK fornece as ferramentas **aapt** e **zipalign**, entre outras. Várias versões diferentes do pacote de ferramentas de build podem ser instaladas simultaneamente. O pacote de ferramentas de build escolhido para empacotamento é criado procurando e usando uma versão de ferramentas de build "preferencial", se uma está presente; se a versão "preferencial" *não* está presente, o pacote de ferramentas de build com a versão mais alta entre os instalados é usado.
@@ -331,19 +394,27 @@ As [Propriedades de Assinatura](#Signing_Properties) também são relevantes ao 
 
 -   **AndroidTlsProvider** &ndash; um valor de cadeia de caracteres que especifica qual provedor TLS deve ser usado em um aplicativo. Os possíveis valores são:
 
+    -   Não definido/a cadeia de caracteres está vazia: no Xamarin.Android 7.3 (ou versão mais recente), isso é equivalente a `btls`.
+
+        no Xamarin.Android 7.1, isso é equivalente a `legacy`.
+
+        Isso corresponde à configuração **Padrão** nas páginas de propriedades do Visual Studio.
+
     -   `btls`: use [Boring SSL](https://boringssl.googlesource.com/boringssl) para a comunicação TLS com [HttpWebRequest](xref:System.Net.HttpWebRequest).
+
         Isso permite usar o TLS 1.2 em todas as versões do Android.
+
+        Isso corresponde à configuração **TLS Nativo 1.2+** nas páginas de propriedades do Visual Studio.
 
     -   `legacy`: use a implementação SSL gerenciada histórica para interação na rede. Isso *não* é compatível com a TLS 1.2.
 
-    -   `default`: permitir *Mono* para escolher o provedor TLS padrão.
-        Isto é equivalente a `legacy`, mesmo no Xamarin.Android 7.3.  
-        *Observação*: é improvável que esse valor apareça nos valores de `.csproj`, pois o valor "Padrão" do IDE resulta na *remoção* da propriedade `$(AndroidTlsProvider)`.
+        Isso corresponde à configuração **TLS Gerenciado 1.0** nas páginas de propriedades do Visual Studio.
 
-    -   Não definido/a cadeia de caracteres está vazia: no Xamarin.Android 7.1, isso é equivalente a `legacy`.  
-        No In Xamarin.Android 7.3, isso é equivalente a `btls`.
+    -   `default`: é improvável que esse valor seja usado em projetos do Xamarin.Android. Em vez disso, o valor recomendado a ser usado é a cadeia de caracteres vazia, que corresponde à configuração **padrão** nas páginas de propriedades do Visual Studio.
 
-    O valor padrão é a cadeia de caracteres vazia.
+        O valor `default` não é oferecido nas páginas de propriedades do Visual Studio.
+
+        Atualmente, isso é equivalente a `legacy`.
 
     Adicionado no Xamarin.Android 7.1.
 

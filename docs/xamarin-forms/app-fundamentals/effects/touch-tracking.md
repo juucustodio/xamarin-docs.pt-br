@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/14/2018
-ms.openlocfilehash: 87542bbd158b8c8ab0f48bb57fa0d19ce8f374c0
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 94a10213f8ae42d6e8f3407b18051021d92be5bc
+ms.sourcegitcommit: 41a029c69925e3a9d2de883751ebfd649e8747cd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68651670"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68978558"
 ---
 # <a name="invoking-events-from-effects"></a>Invocando eventos por meio de efeitos
 
@@ -40,7 +40,7 @@ No Android, a classe `View` define um método substituível chamado `OnTouchEven
 
 No UWP (Plataforma Universal do Windows), a classe `UIElement` define eventos chamados `PointerPressed`, `PointerMoved` e `PointerReleased`. Eles são descritos no artigo [Manipular a entrada de ponteiro no MSDN](/windows/uwp/input-and-devices/handle-pointer-input/) e na documentação da API para a classe [`UIElement`](/uwp/api/windows.ui.xaml.uielement/).
 
-A API do `Pointer` na Plataforma Universal do Windows se destina a unificar o mouse, o toque e a entrada à caneta. Por esse motivo, o evento `PointerMoved` é invocado quando o mouse se move entre um elemento, mesmo quando um botão do mouse não é pressionado. O objeto `PointerRoutedEventArgs` que acompanha esses eventos tem uma propriedade chamada `Pointer` que tem uma propriedade chamada `IsInContact`, indicando se um botão do mouse é pressionado ou um dedo está em contato com a tela.
+A API do `Pointer` na Plataforma Universal do Windows se destina a unificar o mouse, o toque e a entrada à caneta. Por esse motivo, o evento `PointerMoved` é invocado quando o cursor do mouse passa sobre um elemento, mesmo que o botão do mouse não seja pressionado. O objeto `PointerRoutedEventArgs` que acompanha esses eventos tem uma propriedade chamada `Pointer` que tem uma propriedade chamada `IsInContact`, indicando se um botão do mouse é pressionado ou um dedo está em contato com a tela.
 
 Além disso, o UWP define mais dois eventos chamados `PointerEntered` e `PointerExited`. Eles indicam quando um mouse ou o dedo e move de um elemento para outro. Por exemplo, considere dois elementos adjacentes, chamados A e B. Ambos os elementos têm manipuladores instalados para os eventos de ponteiro. Quando um dedo pressiona A, o evento `PointerPressed` é invocado. Conforme o dedo se move, A invoca eventos `PointerMoved`. Se o dedo se move de A para B, A invoca um evento `PointerExited` e B invoca um evento `PointerEntered`. Se o dedo é então liberado, B invoca um evento `PointerReleased`.
 

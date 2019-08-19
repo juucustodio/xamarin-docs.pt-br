@@ -1,71 +1,71 @@
 ---
-title: Altura da linha de dimensionamento automático no xamarin. IOS
-description: Este documento descreve como adicionar a aplicativos xamarin. IOS linhas de exibição da tabela cujas alturas variam com base no conteúdo. Ele aborda o layout da célula no iOS Designer e a habilitação de altura redimensionamento automático.
+title: Dimensionamento automático da altura da linha no Xamarin. iOS
+description: Este documento descreve como adicionar à tabela de aplicativos Xamarin. iOS exibindo linhas cujas alturas variam com base no conteúdo. Ele discute o layout de célula no designer do iOS e habilita a altura de redimensionamento automático.
 ms.prod: xamarin
 ms.assetid: CE45A385-D40A-482A-90A0-E8382C2BFFB9
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: e4446abc73817eb0672cd10a69ff6f738de0c1e1
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 025c3ee6fc176df02f72e78395b880153d6b841d
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61029018"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68655723"
 ---
-# <a name="auto-sizing-row-height-in-xamarinios"></a>Altura da linha de dimensionamento automático no xamarin. IOS
+# <a name="auto-sizing-row-height-in-xamarinios"></a>Dimensionamento automático da altura da linha no Xamarin. iOS
 
-Começando com o iOS 8, Apple adicionada a capacidade de criar uma exibição de tabela (`UITableView`) que pode automaticamente aumentar ou diminuir a altura de uma determinada linha com base no tamanho do seu conteúdo usando o Layout automático, as Classes de tamanho e restrições.
+A partir do IOS 8, a Apple adicionou a capacidade de criar uma exibição`UITableView`de tabela () que pode aumentar e reduzir automaticamente a altura de uma determinada linha com base no tamanho de seu conteúdo usando layout automático, classes de tamanho e restrições.
 
-iOS 11 adicionou a capacidade de linhas expandir automaticamente. Cabeçalhos, rodapés e células podem agora ser automaticamente dimensionadas com base em seu conteúdo. No entanto, se sua tabela é criada no Designer do iOS, Interface Builder, ou se ele tiver corrigido as alturas das linhas você deve habilitar manualmente auto dimensionamento células, conforme descrito neste guia.
+o iOS 11 adicionou a capacidade de linhas a serem expandidas automaticamente. Cabeçalhos, rodapés e células agora podem ser dimensionados automaticamente com base em seu conteúdo. No entanto, se a tabela for criada no designer do iOS, Interface Builder ou se ela tiver alturas de linha fixas, você deverá habilitar manualmente as células de dimensionamento automático, conforme descrito neste guia.
 
-## <a name="cell-layout-in-the-ios-designer"></a>Layout da célula no iOS Designer
+## <a name="cell-layout-in-the-ios-designer"></a>Layout de célula no designer do iOS
 
-Abra o storyboard para o modo de exibição de tabela que você deseja ter o redimensionamento automático da linha no iOS Designer, selecione a célula *protótipo* e criar o layout da célula. Por exemplo:
+Abra o storyboard do modo de exibição de tabela para o qual você deseja que o redimensionamento automático da linha seja no designer do iOS, selecione o *protótipo* da célula e projete o layout da célula. Por exemplo:
 
-[![](autosizing-row-height-images/table01.png "Design de protótipo da célula")](autosizing-row-height-images/table01.png#lightbox)
+[![](autosizing-row-height-images/table01.png "O design do protótipo da célula")](autosizing-row-height-images/table01.png#lightbox)
 
-Para cada elemento no protótipo, adicione restrições para manter os elementos na posição correta, como o modo de exibição de tabela é redimensionado para rotação ou iOS diferentes tamanhos de tela do dispositivo. Por exemplo, fixar os `Title` à parte superior, esquerda e à direita da célula *exibição de conteúdo*:
+Para cada elemento no protótipo, adicione restrições para manter os elementos na posição correta, pois o modo de exibição de tabela é redimensionado para rotação ou tamanhos de tela de dispositivo iOS diferentes. Por exemplo, fixar o `Title` na parte superior, esquerda e direita da *exibição de conteúdo*da célula:
 
-[![](autosizing-row-height-images/table02.png "Fixar o título para a parte superior, esquerda e direita do modo de exibição de conteúdo de células")](autosizing-row-height-images/table02.png#lightbox)
+[![](autosizing-row-height-images/table02.png "Fixando o título na parte superior, esquerda e direita da exibição de conteúdo das células")](autosizing-row-height-images/table02.png#lightbox)
 
-No caso de nossa tabela de exemplo, os pequenos `Label` (sob o `Title`) é o campo que pode reduzir e expandir para aumentar ou diminuir a altura da linha. Para obter esse efeito, adicione as seguintes restrições para fixar à esquerda, direita, superior e inferior do rótulo:
+No caso de nossa tabela de exemplo, o pequeno `Label` (abaixo do `Title`) é o campo que pode reduzir e aumentar para aumentar ou diminuir a altura da linha. Para obter esse efeito, adicione as seguintes restrições para fixar a esquerda, direita, superior e inferior do rótulo:
 
-[![](autosizing-row-height-images/table03.png "Essas restrições para fixar à esquerda, direita, superior e inferior do rótulo")](autosizing-row-height-images/table03.png#lightbox)
+[![](autosizing-row-height-images/table03.png "Essas restrições para fixar a esquerda, direita, superior e inferior do rótulo")](autosizing-row-height-images/table03.png#lightbox)
 
-Agora que podemos ter totalmente restrito os elementos na célula, precisamos esclarecer qual elemento deve ser esticado. Para fazer isso, defina as **conteúdo prioridade abraços** e **prioridade de resistência a compactação de conteúdo** conforme necessário na **Layout** seção do painel de propriedades:
+Agora que restringimos totalmente os elementos na célula, precisamos esclarecer qual elemento deve ser alongado. Para fazer isso, defina o **conteúdo hugging prioridade** e a **prioridade de resistência** à compactação de conteúdo conforme necessário na seção **layout** do painel de propriedades:
 
-[![](autosizing-row-height-images/table03a.png "A seção de Layout do painel de propriedades")](autosizing-row-height-images/table03a.png#lightbox)
+[![](autosizing-row-height-images/table03a.png "A seção de layout do Painel de Propriedades")](autosizing-row-height-images/table03a.png#lightbox)
 
-Definir o elemento que você deseja expandir para ter uma **inferior** o valor de prioridade abraços e uma **inferior** valor de prioridade de resistência de compactação.
+Defina o elemento que você deseja expandir para ter um valor de prioridade **mais baixo** hugging e um valor de prioridade de resistência de compactação **menor** .
 
-Em seguida, precisamos selecionar o protótipo de célula e dê a ele um exclusivo **identificador**:
+Em seguida, precisamos selecionar o protótipo de célula e dar a ele um **identificador**exclusivo:
 
-[![](autosizing-row-height-images/table04.png "Dando o protótipo de célula de um identificador exclusivo")](autosizing-row-height-images/table04.png#lightbox)
+[![](autosizing-row-height-images/table04.png "Dando ao protótipo de célula um identificador exclusivo")](autosizing-row-height-images/table04.png#lightbox)
 
-No caso do nosso exemplo, `GrowCell`. Vamos usar este valor posteriormente quando podemos popular a tabela.
+No caso do nosso exemplo, `GrowCell`. Usaremos esse valor posteriormente quando preenchermos a tabela.
 
 > [!IMPORTANT]
-> Se sua tabela contiver mais de um tipo de célula (**protótipo**), você precisa garantir que cada tipo tem sua própria exclusivo `Identifier` para o redimensionamento de linha automático funcione.
+> Se a tabela contiver mais de um tipo de célula (**protótipo**), você precisará garantir que cada tipo tenha `Identifier` seu próprio exclusivo para que o redimensionamento automático de linha funcione.
 
-Para cada elemento de nossos protótipos de célula, atribua uma **nome** para expô-lo para C# código. Por exemplo:
+Para cada elemento do nosso protótipo de célula, atribua um **nome** para expô- C# lo ao código. Por exemplo:
 
-[![](autosizing-row-height-images/table05.png "Atribua um nome para expô-lo para C# código")](autosizing-row-height-images/table05.png#lightbox)
+[![](autosizing-row-height-images/table05.png "Atribuir um nome para expô-lo ao código C#")](autosizing-row-height-images/table05.png#lightbox)
 
-Em seguida, adicione uma classe personalizada para o `UITableViewController`, o `UITableView` e o `UITableCell` (Prototype). Por exemplo: 
+Em seguida, adicione uma classe personalizada para `UITableViewController`o, `UITableView` o e `UITableCell` o (protótipo). Por exemplo: 
 
-[![](autosizing-row-height-images/table06.png "Adicionando uma classe personalizada para o UITableViewController, o UITableView e o UITableCell")](autosizing-row-height-images/table06.png#lightbox)
+[![](autosizing-row-height-images/table06.png "Adicionar uma classe personalizada para UITableViewController, UITableView e UITableCell")](autosizing-row-height-images/table06.png#lightbox)
 
-Por fim, para garantir que todos os esperados conteúdo é exibido em nosso rótulo, defina as **linhas** propriedade `0`:
+Por fim, para certificar-se de que todo o conteúdo esperado seja exibido em nosso rótulo, defina `0`a propriedade linhas como:
 
-[![](autosizing-row-height-images/table06.png "A propriedade de linhas é definido como 0")](autosizing-row-height-images/table06a.png#lightbox)
+[![](autosizing-row-height-images/table06.png "A propriedade Lines definida como 0")](autosizing-row-height-images/table06a.png#lightbox)
 
-Com a interface do usuário definida, vamos adicionar o código para permitir o redimensionamento de altura de linha automaticamente.
+Com a interface do usuário definida, vamos adicionar o código para habilitar o redimensionamento automático da altura da linha.
 
 ## <a name="enabling-auto-resizing-height"></a>Habilitando a altura de redimensionamento automático
 
-Em qualquer um de fonte de dados de exibição de nossa tabela (`UITableViewDatasource`) ou fonte de (`UITableViewSource`), quando estamos remoção da fila em uma célula, precisamos usar o `Identifier` que definimos no designer. Por exemplo:
+Em nossa tabela de código fonte (`UITableViewDatasource`) ou origem (`UITableViewSource`), quando desenfileiramos uma célula, precisamos usar o `Identifier` que definimos no designer. Por exemplo:
 
 ```csharp
 public string CellID {
@@ -87,7 +87,7 @@ public override UITableViewCell GetCell (UITableView tableView, Foundation.NSInd
 }
 ```
 
-Por padrão, o modo de exibição de tabela será definido para redimensionamento automático a altura da linha. Para garantir isso, o `RowHeight` propriedade deve ser definida como `UITableView.AutomaticDimension`. Também precisamos definir a `EstimatedRowHeight` propriedade na nossa `UITableViewController`. Por exemplo:
+Por padrão, a exibição de tabela será definida para redimensionamento automático da altura da linha. Para garantir isso, a `RowHeight` propriedade deve ser definida como `UITableView.AutomaticDimension`. Também precisamos definir a `EstimatedRowHeight` Propriedade em nosso. `UITableViewController` Por exemplo:
 
 ```csharp
 public override void ViewWillAppear (bool animated)
@@ -103,13 +103,13 @@ public override void ViewWillAppear (bool animated)
 }
 ```
 
-Essa estimativa não precisa ser exato, apenas uma estimativa aproximada da altura da média de cada linha na exibição de tabela.
+Essa estimativa não precisa ser exata, apenas uma estimativa aproximada da altura média de cada linha na exibição de tabela.
 
-Com esse código, quando o aplicativo é executado, cada linha será reduzido e crescer com base na altura do último rótulo no protótipo da célula. Por exemplo:
+Com esse código em vigor, quando o aplicativo for executado, cada linha será reduzida e crescerá com base na altura do último rótulo no protótipo de célula. Por exemplo:
 
-[![](autosizing-row-height-images/table07.png "Uma tabela de exemplo executar")](autosizing-row-height-images/table07.png#lightbox)
+[![](autosizing-row-height-images/table07.png "Uma execução de tabela de exemplo")](autosizing-row-height-images/table07.png#lightbox)
 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [GrowRowTable (amostra)](https://developer.xamarin.com/samples/monotouch/GrowRowTable/)
+- [GrowRowTable (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/growrowtable)

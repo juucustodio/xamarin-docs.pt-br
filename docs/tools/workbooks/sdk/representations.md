@@ -1,33 +1,33 @@
 ---
 title: Representações em Xamarin Workbooks
-description: Este documento descreve o pipeline de representação de pastas de trabalho do Xamarin, que permite o processamento de resultados avançados para qualquer código que retorna um valor.
+description: Este documento descreve o pipeline de representação de Xamarin Workbooks, que permite a renderização de resultados avançados para qualquer código que retorna um valor.
 ms.prod: xamarin
 ms.assetid: 5C7A60E3-1427-47C9-A022-720F25ECB031
 author: lobrien
 ms.author: laobri
 ms.date: 03/30/2017
-ms.openlocfilehash: d9aafbe13e06875b6577a4d2308e419932fd1589
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: b61452fc21d81f427249825decee4f119c50abf0
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61382107"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68511504"
 ---
 # <a name="representations-in-xamarin-workbooks"></a>Representações em Xamarin Workbooks
 
 ## <a name="representations"></a>Representações
 
-Dentro de uma pasta de trabalho ou o Inspetor de sessão, código que é executado e produz um resultado (por exemplo, um método que retorna um valor ou o resultado de uma expressão) é processado pelo pipeline de representação no agente. Todos os objetos, com exceção dos primitivos como inteiros, serão refletidos para gerar grafos de membro interativo e passarão por um processo para fornecer representações alternativas que o cliente pode renderizar mais avançada. Objetos de qualquer tamanho e profundidade têm suporte com segurança (incluindo ciclos e enumeráveis infinito) devido à comunicação remota e reflexão lenta e interativa.
+Em uma pasta de trabalho ou sessão de Inspetor, o código que é executado e produz um resultado (por exemplo, um método que retorna um valor ou o resultado de uma expressão) é processado por meio do pipeline de representação no agente. Todos os objetos, com exceção de primitivos como inteiros, serão refletidos para produzir grafos de membro interativos e passarão por um processo para fornecer representações alternativas que o cliente pode renderizar de forma mais rica. Os objetos de qualquer tamanho e profundidade têm suporte seguro (incluindo ciclos e enumeráveis infinitos) devido à reflexão e à comunicação remota lentas e interativas.
 
-Xamarin Workbooks fornece alguns tipos comuns a todos os agentes e os clientes que permitem a avançados de renderização dos resultados. [`Color`][xir-color] é um exemplo desse tipo, onde por exemplo, no iOS, o agente é responsável por converter `CGColor` ou `UIColor` objetos em um `Xamarin.Interactive.Representations.Color` objeto.
+Xamarin Workbooks fornece alguns tipos comuns a todos os agentes e clientes que permitem a renderização avançada de resultados. `Color`é um exemplo desse tipo, em que, por exemplo, no Ios, o agente é responsável por `CGColor` Converter `UIColor` ou objetos em `Xamarin.Interactive.Representations.Color` um objeto.
 
-Além de representações comuns, a integração do SDK do fornece APIs para serialização representações personalizadas no agente e renderização representações no cliente.
+Além de representações comuns, o SDK de integração fornece APIs para serializar representações personalizadas no agente e representações de renderização no cliente.
 
 ## <a name="external-representations"></a>Representações externas
 
-[`Xamarin.Interactive.IAgent.RepresentationManager`][repman] fornece a capacidade de registrar um [ `RepresentationProvider` ] [ repp], que uma integração deve implementar para converter de um objeto arbitrário para um formulário independente para processar. Esses formulários independentes devem implementar o [ `ISerializableObject` ] [ serobj] interface.
+`Xamarin.Interactive.IAgent.RepresentationManager`fornece a capacidade de registrar um `RepresentationProvider`, que uma integração deve implementar para converter de um objeto arbitrário para um formulário independente a ser renderizado. Esses formulários independentes devem implementar a `ISerializableObject` interface.
 
-Implementando o `ISerializableObject` interface adiciona um método de serialização que precisamente controla como os objetos são serializados. O `Serialize` método espera que um desenvolvedor exatamente especificará quais propriedades devem ser serializadas, e qual será o nome final. Examinando os `Person` do objeto em nossa [`KitchenSink` exemplo] [exemplo], podemos ver como isso funciona:
+A implementação `ISerializableObject` da interface adiciona um método Serialize que controla precisamente como os objetos são serializados. O `Serialize` método espera que um desenvolvedor Especifique exatamente quais propriedades devem ser serializadas e qual será o nome final. Observando o `Person` objeto em nosso [`KitchenSink` exemplo] [amostra], podemos ver como isso funciona:
 
 ```csharp
 public sealed class Person : ISerializableObject
@@ -41,7 +41,7 @@ public sealed class Person : ISerializableObject
 }
 ```
 
-Se quiséssemos fornecer um superconjunto ou subconjunto de propriedades do objeto original, é possível fazer isso com `Serialize`. Por exemplo, podemos pode fazer algo assim para fornecer um pré-calculado `Age` propriedade `Person`:
+Se quiséssemos fornecer um superconjunto ou subconjunto de propriedades do objeto original, podemos fazer isso com `Serialize`. Por exemplo, podemos fazer algo assim para fornecer uma `Age` Propriedade previamente calculada em: `Person`
 
 ```csharp
 public sealed class Person : ISerializableObject
@@ -65,15 +65,15 @@ public sealed class Person : ISerializableObject
 ```
 
 > [!NOTE]
-> As APIs que produzem `ISerializableObject` objetos diretamente não precisam ser tratadas por um `RepresentationProvider`. Se o objeto que você deseja exibir for **não** um `ISerializableObject`, você vai querer manipular encapsulá-lo no seu `RepresentationProvider`.
+> As APIs que `ISerializableObject` produzem objetos diretamente não precisam ser tratadas por um `RepresentationProvider`. Se o objeto que você deseja exibir **não** for um `ISerializableObject`, você desejará manipular o encapsulamento no `RepresentationProvider`seu.
 
-### <a name="rendering-a-representation"></a>Uma representação de renderização
+### <a name="rendering-a-representation"></a>Renderizando uma representação
 
-Os renderizadores são implementados em JavaScript e terá acesso a uma versão do JavaScript do objeto representado por meio de `ISerializableObject`. A cópia de JavaScript também terá uma `$type` propriedade string que indica o nome do tipo .NET.
+Os renderizadores são implementados em JavaScript e terão acesso a uma versão JavaScript do objeto representado por `ISerializableObject`meio do. A cópia JavaScript também terá uma `$type` propriedade de cadeia de caracteres que indica o nome do tipo .net.
 
-É recomendável usar o TypeScript para o código de integração de cliente, que obviamente é compilado em JavaScript comum. De qualquer forma, o SDK fornece [digitações] [ typings] que podem ser referenciados diretamente pelo TypeScript ou chamado simplesmente manualmente se escrevendo baunilha JavaScript é preferencial.
+É recomendável usar o TypeScript para o código de integração do cliente, que é, naturalmente, compilado no JavaScript da baunilha. De qualquer forma, o SDK fornece [digitações][typings] que podem ser referenciadas diretamente pelo TypeScript ou simplesmente referenciadas manualmente se for preferível escrever JavaScript de baunilha.
 
-O ponto de integração principal para a renderização é `xamarin.interactive.RendererRegistry`:
+O principal ponto de integração para renderização `xamarin.interactive.RendererRegistry`é:
 
 ```js
 xamarin.interactive.RendererRegistry.registerRenderer(
@@ -85,10 +85,6 @@ xamarin.interactive.RendererRegistry.registerRenderer(
 );
 ```
 
-Aqui, `PersonRenderer` implementa o `Renderer` interface. Consulte a [digitações] [ typings] para obter mais detalhes.
+Aqui, `PersonRenderer` implementa a `Renderer` interface. Consulte as [digitações][typings] para obter mais detalhes.
 
 [typings]: https://github.com/xamarin/Workbooks/blob/master/SDK/typings/xamarin-interactive.d.ts
-[xir-color]: https://developer.xamarin.com/api/type/Xamarin.Interactive.Representations.Color/
-[repman]: https://developer.xamarin.com/api/type/Xamarin.Interactive.Representations.IRepresentationManager/
-[repp]: https://developer.xamarin.com/api/type/Xamarin.Interactive.Representations.RepresentationProvider/
-[serobj]: https://developer.xamarin.com/api/type/Xamarin.Interactive.Serialization.ISerializableObject/
