@@ -1,68 +1,68 @@
 ---
-title: Introdução do xamarin. Forms CollectionView
-description: O CollectionView é uma exibição flexível e de alto desempenho para apresentações de listas de dados usando as especificações de layout diferente.
+title: Introdução de CollectionView do Xamarin. Forms
+description: CollectionView é uma exibição flexível e de alto desempenho para apresentar listas de dados usando diferentes especificações de layout.
 ms.prod: xamarin
 ms.assetid: 5C08F687-B9E6-4CE4-8726-F287F6D0B6A7
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/06/2019
-ms.openlocfilehash: 456c83808ff685a8c2199cf80c96d63b9334675e
-ms.sourcegitcommit: 0fd04ea3af7d6a6d6086525306523a5296eec0df
+ms.openlocfilehash: 25e2d9bad11614cf594980480db14ddc18125a96
+ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67512725"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68738901"
 ---
-# <a name="xamarinforms-collectionview-introduction"></a>Introdução do xamarin. Forms CollectionView
+# <a name="xamarinforms-collectionview-introduction"></a>Introdução de CollectionView do Xamarin. Forms
 
 ![](~/media/shared/preview.png "Esta API está atualmente em pré-lançamento")
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/CollectionViewDemos/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView) é um modo de exibição para apresentar as listas de dados usando as especificações de layout diferente. Tem como objetivo fornecer uma mais flexível e alternativa de alto desempenho para o [ `ListView` ](xref:Xamarin.Forms.ListView). Por exemplo, capturas de tela as seguir mostram um `CollectionView` que usa uma grade vertical de duas colunas, e que permite que a seleção múltipla:
+[`CollectionView`](xref:Xamarin.Forms.CollectionView)é uma exibição para apresentar listas de dados usando especificações de layout diferentes. Ele visa fornecer uma alternativa mais flexível e de alto desempenho para [`ListView`](xref:Xamarin.Forms.ListView)o. Por exemplo, as capturas de tela a `CollectionView` seguir mostram um que usa uma grade vertical de duas colunas e que permite seleção múltipla:
 
-[![Captura de tela de um layout de grade vertical CollectionView, no iOS e Android](introduction-images/verticalgrid-multipleselection.png "CollectionView layout de grade vertical com seleção múltipla")](introduction-images/verticalgrid-multipleselection-large.png#lightbox "CollectionView layout de grade vertical com seleção múltipla")
+[ ![Captura de tela de um layout de grade vertical CollectionView, em layout de](introduction-images/verticalgrid-multipleselection.png "grade vertical CollectionView") para IOS e Android com seleção múltipla] (introduction-images/verticalgrid-multipleselection-large.png#lightbox "Layout de grade vertical CollectionView com seleção múltipla")
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView) está disponível no xamarin. Forms 4.0. No entanto, ele é atualmente experimental e só pode ser usado, adicionando a seguinte linha de código para seus `AppDelegate` classe no iOS, ou para seus `MainActivity` classe no Android, antes de chamar `Forms.Init`:
+[`CollectionView`](xref:Xamarin.Forms.CollectionView)está disponível no Xamarin. Forms 4,0. No entanto, ele é experimental e só pode ser usado adicionando a linha de código a seguir à `AppDelegate` sua classe no Ios ou à sua `MainActivity` classe no Android, antes de `Forms.Init`chamar:
 
 ```csharp
 Forms.SetFlags("CollectionView_Experimental");
 ```
 
 > [!IMPORTANT]
-> [`CollectionView`](xref:Xamarin.Forms.CollectionView) está disponível no iOS e Android, mas é apenas parcialmente disponível na plataforma Universal do Windows.
+> [`CollectionView`](xref:Xamarin.Forms.CollectionView)está disponível no iOS e no Android, mas está disponível apenas parcialmente no Plataforma Universal do Windows.
 
 ## <a name="collectionview-and-listview-differences"></a>Diferenças de CollectionView e ListView
 
-Enquanto o [ `CollectionView` ](xref:Xamarin.Forms.CollectionView) e [ `ListView` ](xref:Xamarin.Forms.ListView) APIs são semelhantes, existem algumas diferenças importantes:
+Embora as [`CollectionView`](xref:Xamarin.Forms.CollectionView) APIs [`ListView`](xref:Xamarin.Forms.ListView) e sejam semelhantes, há algumas diferenças notáveis:
 
-- [`CollectionView`](xref:Xamarin.Forms.CollectionView) tem um modelo de layout flexível que permite que os dados a ser apresentado verticalmente ou horizontalmente, em uma lista ou uma grade.
-- [`CollectionView`](xref:Xamarin.Forms.CollectionView) dá suporte a única e seleção múltipla.
-- [`CollectionView`](xref:Xamarin.Forms.CollectionView) não tem nenhum conceito de células. Em vez disso, um modelo de dados é usado para definir a aparência de cada item de dados na lista.
-- [`CollectionView`](xref:Xamarin.Forms.CollectionView) utiliza automaticamente a virtualização fornecida pelos controles nativos subjacentes.
-- [`CollectionView`](xref:Xamarin.Forms.CollectionView) reduz a superfície de API do [ `ListView` ](xref:Xamarin.Forms.ListView). Muitas propriedades e eventos do [ `ListView` ](xref:Xamarin.Forms.ListView) não estão presentes no `CollectionView`.
-- [`CollectionView`](xref:Xamarin.Forms.CollectionView) não inclui separadores internos.
+- [`CollectionView`](xref:Xamarin.Forms.CollectionView)tem um modelo de layout flexível, que permite que os dados sejam apresentados vertical ou horizontalmente, em uma lista ou em uma grade.
+- [`CollectionView`](xref:Xamarin.Forms.CollectionView)dá suporte à seleção única e múltipla.
+- [`CollectionView`](xref:Xamarin.Forms.CollectionView)Não tem conceito de células. Em vez disso, um modelo de dados é usado para definir a aparência de cada item de dados na lista.
+- [`CollectionView`](xref:Xamarin.Forms.CollectionView)utiliza automaticamente a virtualização fornecida pelos controles nativos subjacentes.
+- [`CollectionView`](xref:Xamarin.Forms.CollectionView)reduz a superfície de API [`ListView`](xref:Xamarin.Forms.ListView)do. Muitas propriedades e eventos do [`ListView`](xref:Xamarin.Forms.ListView) não estão presentes no `CollectionView`.
+- [`CollectionView`](xref:Xamarin.Forms.CollectionView)Não inclui separadores internos.
 
 ## <a name="move-from-listview-to-collectionview"></a>Mover de ListView para CollectionView
 
-[`ListView`](xref:Xamarin.Forms.ListView) implementações em implementações existentes do xamarin. Forms podem ser migradas para [ `CollectionView` ](xref:Xamarin.Forms.CollectionView) implementações com a Ajuda da tabela a seguir:
+[`ListView`](xref:Xamarin.Forms.ListView)implementações em implementações existentes do Xamarin. Forms podem ser [`CollectionView`](xref:Xamarin.Forms.CollectionView) migradas para implementações com a ajuda da seguinte tabela:
 
 | Conceito | API de ListView | CollectionView |
 |---|---|---|
-| Dados | `ItemsSource` | Um [ `CollectionView` ](xref:Xamarin.Forms.CollectionView) é preenchida com dados, definindo seu `ItemsSource` propriedade. Para obter mais informações, consulte [popular um CollectionView de dados](populate-data.md#populate-a-collectionview-with-data). |
-| Aparência do item | `ItemTemplate` | A aparência de cada item em uma [ `CollectionView` ](xref:Xamarin.Forms.CollectionView) pode ser definida ao configurar o `ItemTemplate` propriedade a um [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate). Para obter mais informações, consulte [definem a aparência do item](populate-data.md#define-item-appearance). |
-| Células | `TextCell`, `ImageCell`, `ViewCell` | [`CollectionView`](xref:Xamarin.Forms.CollectionView) não tem nenhum conceito de células. Em vez disso, um modelo de dados é usado para definir a aparência de cada item de dados na lista. |
-| Separadores de linha | `SeparatorColor`, `SeparatorVisibility` | [`CollectionView`](xref:Xamarin.Forms.CollectionView) não inclui separadores internos. Eles podem ser fornecidos, se desejado, no modelo de item. |
-| Seleção | `SelectionMode`, `SelectedItem` | [`CollectionView`](xref:Xamarin.Forms.CollectionView) dá suporte a única e seleção múltipla. Para obter mais informações, consulte [xamarin. Forms CollectionView seleção](selection.md). |
-| Altura da linha | `HasUnevenRows`, `RowHeight` | Em um `CollectionView`, a altura da linha de cada item é determinada pelo `ItemSizingStrategy` propriedade. Para obter mais informações, consulte [dimensionamento Item](layout.md#item-sizing).|
-| Cache | `CachingStrategy` | [`CollectionView`](xref:Xamarin.Forms.CollectionView) usa automaticamente a virtualização fornecida pelos controles nativos subjacentes. |
-| Cabeçalhos e rodapés | `Header`, `HeaderElement`, `HeaderTemplate`, `Footer`, `FooterElement`, `FooterTemplate` | Cabeçalhos e rodapés não são atualmente suportados no `CollectionView`, mas será adicionado em uma versão futura.|
-| Agrupamento | `GroupDisplayBinding`, `GroupHeaderTemplate`, `GroupShortNameBinding`, `IsGroupingEnabled` | Agrupamento não é suportado atualmente no `CollectionView`, mas será adicionado em uma versão futura. |
-| Deslizar para atualizar | `IsPullToRefreshEnabled`, `IsRefreshing`, `RefreshAllowed`, `RefreshCommand`, `RefreshControlColor`, `BeginRefresh()`, `EndRefresh()` | Deslizar para atualizar não é suportado atualmente no `CollectionView`, mas será adicionado em uma versão futura. |
-| Ações de contexto | `ContextActions` | Ações de contexto não têm suporte no momento no `CollectionView`, mas será adicionado em uma versão futura. |
-| Rolagem | `ScrollTo()` | [`CollectionView`](xref:Xamarin.Forms.CollectionView) define `ScrollTo` métodos, que rolagem os itens na exibição. Para obter mais informações, consulte [rolagem](scrolling.md). |
+| Dados | `ItemsSource` | Um [`CollectionView`](xref:Xamarin.Forms.CollectionView) é preenchido com dados definindo sua `ItemsSource` propriedade. Para obter mais informações, consulte [popular um CollectionView com dados](populate-data.md#populate-a-collectionview-with-data). |
+| Aparência do item | `ItemTemplate` | A aparência de cada item em um [`CollectionView`](xref:Xamarin.Forms.CollectionView) pode ser definida definindo a `ItemTemplate` Propriedade como [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)a. Para obter mais informações, consulte [definir a aparência do item](populate-data.md#define-item-appearance). |
+| Células | `TextCell`, `ImageCell`, `ViewCell` | [`CollectionView`](xref:Xamarin.Forms.CollectionView)Não tem conceito de células. Em vez disso, um modelo de dados é usado para definir a aparência de cada item de dados na lista. |
+| Separadores de linha | `SeparatorColor`, `SeparatorVisibility` | [`CollectionView`](xref:Xamarin.Forms.CollectionView)Não inclui separadores internos. Eles podem ser fornecidos, se desejado, no modelo de item. |
+| Seleção | `SelectionMode`, `SelectedItem` | [`CollectionView`](xref:Xamarin.Forms.CollectionView)dá suporte à seleção única e múltipla. Para obter mais informações, consulte [seleção de CollectionView do Xamarin. Forms](selection.md). |
+| Altura da linha | `HasUnevenRows`, `RowHeight` | Em um `CollectionView`, a altura da linha de cada item é determinada `ItemSizingStrategy` pela propriedade. Para obter mais informações, consulte dimensionamento de [Item](layout.md#item-sizing).|
+| Cache | `CachingStrategy` | [`CollectionView`](xref:Xamarin.Forms.CollectionView)usa automaticamente a virtualização fornecida pelos controles nativos subjacentes. |
+| Cabeçalhos e rodapés | `Header`, `HeaderElement`, `HeaderTemplate`, `Footer`, `FooterElement`, `FooterTemplate` | Atualmente, não há suporte para cabeçalhos e rodapés `CollectionView`no, mas eles serão adicionados em uma versão futura.|
+| Agrupamento | `GroupDisplayBinding`, `GroupHeaderTemplate`, `GroupShortNameBinding`, `IsGroupingEnabled` | O agrupamento não tem suporte no momento `CollectionView`no, mas será adicionado em uma versão futura. |
+| Efetuar pull para atualizar | `IsPullToRefreshEnabled`, `IsRefreshing`, `RefreshAllowed`, `RefreshCommand`, `RefreshControlColor`, `BeginRefresh()`, `EndRefresh()` | O pull para a atualização não tem suporte no `CollectionView`momento no, mas será adicionado em uma versão futura. |
+| Ações de contexto | `ContextActions` | No momento, não há suporte para ações `CollectionView`de contexto no, mas elas serão adicionadas em uma versão futura. |
+| Rolagem | `ScrollTo()` | [`CollectionView`](xref:Xamarin.Forms.CollectionView)define `ScrollTo` métodos, que rolam itens para exibição. Para obter mais informações, consulte [rolagem](scrolling.md). |
 
 ## <a name="related-links"></a>Links relacionados
 
-- [CollectionView (amostra)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/CollectionViewDemos/)
+- [CollectionView (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
