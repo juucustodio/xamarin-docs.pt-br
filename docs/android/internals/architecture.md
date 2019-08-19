@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/25/2018
-ms.openlocfilehash: 2b8e524d95fb60c8eb45b3dd5b64b68469d97ad1
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
-ms.translationtype: HT
+ms.openlocfilehash: ec93083ee3d99dbf748309b23248e982b793ce13
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68510740"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69524845"
 ---
 # <a name="architecture"></a>Arquitetura
 
@@ -33,12 +33,11 @@ Para obter mais informações sobre como as classes do Android se comunicam com 
 
 Os pacotes de aplicativos Android são contêineres ZIP com uma extensão de arquivo *. apk* . Os pacotes de aplicativos Xamarin. Android têm a mesma estrutura e layout que os pacotes Android normais, com as seguintes adições:
 
--   Os assemblies de aplicativo (contendo IL) são *armazenados* sem compactação na pasta *assemblies* . Durante a inicialização do processo na versão, compila o *. apk* é *mmap ()* Ed no processo e os assemblies são carregados da memória. Isso permite a inicialização de aplicativo mais rápida, pois os assemblies não precisam ser extraídos antes da execução.  
--   *Observação:* Informações de localização do assembly, como [assembly. Location](xref:System.Reflection.Assembly.Location) e [assembly. CodeBase](xref:System.Reflection.Assembly.CodeBase)
-    *não pode ser confiável* em builds de versão. Eles não existem como entradas de sistema de arquivos distintas e não têm nenhum local utilizável.
+- Os assemblies de aplicativo (contendo IL) são *armazenados* sem compactação na pasta *assemblies* . Durante a inicialização do processo na versão, compila o *. apk* é *mmap ()* Ed no processo e os assemblies são carregados da memória. Isso permite a inicialização de aplicativo mais rápida, pois os assemblies não precisam ser extraídos antes da execução.  
+- *Observação:* Informações de localização do assembly, como [assembly. Location](xref:System.Reflection.Assembly.Location) e [assembly. CodeBase](xref:System.Reflection.Assembly.CodeBase) *não pode ser confiável* em builds de versão. Eles não existem como entradas de sistema de arquivos distintas e não têm nenhum local utilizável.
 
 
--   As bibliotecas nativas que contêm o tempo de execução do mono estão presentes dentro de *. apk* . Um aplicativo Xamarin. Android deve conter bibliotecas nativas para as arquiteturas do Android desejadas/direcionadas, por exemplo, *ARMEABI* , *ARMEABI-v7a* , *x86* . Os aplicativos Xamarin. Android não podem ser executados em uma plataforma a menos que contenham as bibliotecas de tempo de execução apropriadas.
+- As bibliotecas nativas que contêm o tempo de execução do mono estão presentes dentro de *. apk* . Um aplicativo Xamarin. Android deve conter bibliotecas nativas para as arquiteturas do Android desejadas/direcionadas, por exemplo, *ARMEABI* , *ARMEABI-v7a* , *x86* . Os aplicativos Xamarin. Android não podem ser executados em uma plataforma a menos que contenham as bibliotecas de tempo de execução apropriadas.
 
 
 Os aplicativos Xamarin. Android também contêm wrappers que podem ser *chamados pelo Android* para permitir que o Android chame código gerenciado.
@@ -94,23 +93,23 @@ Isso tem suporte instanciando uma instância LogTextBox por meio do construtor [
 
 Ordem dos eventos:
 
-1.  O layout XML é carregado em um [ContentView](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Text/LogTextBox1.cs#L41).
+1. O layout XML é carregado em um [ContentView](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Text/LogTextBox1.cs#L41).
 
-2.  O Android instancia o grafo do objeto de layout e cria uma instância de *monodroid. apidemo. LogTextBox* , a ACW para *LogTextBox* .
+2. O Android instancia o grafo do objeto de layout e cria uma instância de *monodroid. apidemo. LogTextBox* , a ACW para *LogTextBox* .
 
-3.  O construtor *monodroid. apidemo. LogTextBox* executa o construtor [Android. widget. TextView](https://developer.android.com/reference/android/widget/TextView.html#TextView%28android.content.Context,%20android.util.AttributeSet%29) .
+3. O construtor *monodroid. apidemo. LogTextBox* executa o construtor [Android. widget. TextView](https://developer.android.com/reference/android/widget/TextView.html#TextView%28android.content.Context,%20android.util.AttributeSet%29) .
 
-4.  O construtor *TextView* invoca *monodroid. apidemo. LogTextBox. getDefaultMovementMethod ()* .
+4. O construtor *TextView* invoca *monodroid. apidemo. LogTextBox. getDefaultMovementMethod ()* .
 
-5.  *monodroid. apidemo. LogTextBox. getDefaultMovementMethod ()* invoca *LogTextBox. n_getDefaultMovementMethod ()* , que invoca *TextView. n_getDefaultMovementMethod ()* , que invoca [Java. lang. Object. GetObject&lt; TextView&gt; (Handle, JniHandleOwnership. DoNotTransfer)](xref:Java.Lang.Object.GetObject*) .
+5. *monodroid. apidemo. LogTextBox. getDefaultMovementMethod ()* invoca *LogTextBox. n_getDefaultMovementMethod ()* , que invoca *TextView. n_getDefaultMovementMethod ()* , que invoca [Java. lang. Object. GetObject&lt; TextView&gt; (Handle, JniHandleOwnership. DoNotTransfer)](xref:Java.Lang.Object.GetObject*) .
 
-6.  *Java. lang. Object. GetObject&lt;TextView&gt;()* verifica se já existe uma instância correspondente C# para o *identificador* . Se houver, ele será retornado. Nesse cenário, não há, portanto, *Object. GetObject&lt;t&gt;()* deve criar um.
+6. *Java. lang. Object. GetObject&lt;TextView&gt;()* verifica se já existe uma instância correspondente C# para o *identificador* . Se houver, ele será retornado. Nesse cenário, não há, portanto, *Object. GetObject&lt;t&gt;()* deve criar um.
 
-7.  *Object. GetObject&lt;T&gt;()* procura o construtor *LogTextBox (IntPtr, JniHandleOwneship)* , invoca-o, cria um mapeamento entre o *identificador* e a instância criada e retorna a instância criada.
+7. *Object. GetObject&lt;T&gt;()* procura o construtor *LogTextBox (IntPtr, JniHandleOwneship)* , invoca-o, cria um mapeamento entre o *identificador* e a instância criada e retorna a instância criada.
 
-8.  *TextView. n_GetDefaultMovementMethod ()* invoca o getter da propriedade *LogTextBox. DefaultMovementMethod* .
+8. *TextView. n_GetDefaultMovementMethod ()* invoca o getter da propriedade *LogTextBox. DefaultMovementMethod* .
 
-9.  O controle retorna para o construtor *Android. widget. TextView* , que conclui a execução.
+9. O controle retorna para o construtor *Android. widget. TextView* , que conclui a execução.
 
 10. O construtor *monodroid. apidemo. LogTextBox* é executado, invocando o *tipo. Activate ()* .
 

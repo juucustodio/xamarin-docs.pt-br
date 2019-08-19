@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/28/2019
-ms.openlocfilehash: 329f7dc9cc43582f630a4895fba452a8496bae9a
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
-ms.translationtype: HT
+ms.openlocfilehash: c18c4e63831a03cbe28accfe10f4c7da31130803
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656169"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69529313"
 ---
 # <a name="fonts-in-xamarinforms"></a>Fontes no xamarin. Forms
 
@@ -58,9 +58,9 @@ O Xamarin. Forms também define campos na [`NamedSize`](xref:Xamarin.Forms.Named
 
 Estilos de fonte, como **negrito** e *itálico* podem ser definidos na `FontAttributes` propriedade. Atualmente, há suporte para os seguintes valores:
 
--  **Nenhum**
--  **Negrito**
--  **Itálico**
+- **Nenhum**
+- **Negrito**
+- **Itálico**
 
 O `FontAttribute` enumeração pode ser usada da seguinte maneira (você pode especificar um único atributo ou `OR` -los juntos):
 
@@ -100,7 +100,7 @@ Não há um conversor interno para o `FontSize` propriedade que permite que toda
 <Label Text="Use size 72" FontSize="72" />
 ```
 
-[`Device.RuntimePlatform`](~/xamarin-forms/platform/device.md#providing-platform-specific-values) também pode ser usado em XAML para renderizar uma fonte diferente em cada plataforma. O exemplo a seguir usa uma face de fonte personalizada no iOS (<span style="font-family:MarkerFelt-Thin">MarkerFelt-finos</span>) e especifica o tamanho/atributos somente em outras plataformas:
+[`Device.RuntimePlatform`](~/xamarin-forms/platform/device.md#providing-platform-specific-values) também pode ser usado em XAML para renderizar uma fonte diferente em cada plataforma. O exemplo a seguir usa uma face de fonte personalizada no iOS (MarkerFelt-fino) e especifica apenas o tamanho/atributos nas outras plataformas:
 
 ```xaml
 <Label Text="Hello Forms with XAML">
@@ -183,7 +183,7 @@ new Label
 
 ### <a name="windows"></a>Windows
 
-Xamarin. Forms para plataformas do Windows pode fazer referência a uma fonte personalizada que foi adicionada ao projeto seguindo um padrão de nomenclatura específico. Primeiro, adicione o arquivo de fonte para o **/Assets/fontes/** pasta no projeto de aplicativo e defina as <span class="UIItem">compilar: conteúdo da ação</span>. Em seguida, use a fonte e o caminho do nome de arquivo completo, seguido por um hash (#) e o <span class="UIItem">nome da fonte</span>, como o trecho de código a seguir demonstra:
+Xamarin. Forms para plataformas do Windows pode fazer referência a uma fonte personalizada que foi adicionada ao projeto seguindo um padrão de nomenclatura específico. Primeiro, adicione o arquivo de fonte para o **/Assets/fontes/** pasta no projeto de aplicativo e defina as **compilar: conteúdo da ação**. Em seguida, use a fonte e o caminho do nome de arquivo completo, seguido por um hash (#) e o **nome da fonte**, como o trecho de código a seguir demonstra:
 
 ```csharp
 new Label

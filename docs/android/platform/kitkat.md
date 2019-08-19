@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: efb55b060243950640978ae2cfc3fe6998efdb87
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
-ms.translationtype: HT
+ms.openlocfilehash: 3e68ac0a39d3268ce7c84f583c64b247e9f82362
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68643471"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69524190"
 ---
 # <a name="kitkat-features"></a>Recursos do KitKat
 
@@ -22,13 +22,13 @@ _O Android 4,4 (KitKat) vem carregado com um infinidade de recursos para usuári
 
 O Android 4,4 (API nível 19), também conhecido como "KitKat", foi lançado no final de 2013. O KitKat oferece uma variedade de novos recursos e aprimoramentos, incluindo:
 
--  [Experiência do usuário](#user_experience) &ndash; Animações fáceis com a estrutura de transição, as barras de status e de navegação translúcidas e o modo de imersão em tela inteira ajudam a criar uma experiência melhor para o usuário.
+- [Experiência do usuário](#user_experience) &ndash; Animações fáceis com a estrutura de transição, as barras de status e de navegação translúcidas e o modo de imersão em tela inteira ajudam a criar uma experiência melhor para o usuário.
 
--  [Conteúdo do usuário](#user_content) &ndash; O gerenciamento de arquivos do usuário simplificado com a estrutura de acesso de armazenamento; imprimir imagens, sites e outros conteúdos é mais fácil com APIs de impressão aprimoradas.
+- [Conteúdo do usuário](#user_content) &ndash; O gerenciamento de arquivos do usuário simplificado com a estrutura de acesso de armazenamento; imprimir imagens, sites e outros conteúdos é mais fácil com APIs de impressão aprimoradas.
 
--  [Hardware](#hardware) do Transforme qualquer aplicativo em um cartão NFC com emulação de placa baseada em host NFC; execute sensores de baixa energia `SensorManager` com o. &ndash;
+- [Hardware](#hardware) do Transforme qualquer aplicativo em um cartão NFC com emulação de placa baseada em host NFC; execute sensores de baixa energia `SensorManager` com o. &ndash;
 
--  [Ferramentas para desenvolvedores](#developer_tools) &ndash; Aplicativos de screencast em ação com o cliente Android Debug Bridge, disponível como parte do SDK do Android.
+- [Ferramentas para desenvolvedores](#developer_tools) &ndash; Aplicativos de screencast em ação com o cliente Android Debug Bridge, disponível como parte do SDK do Android.
 
 
 Este guia fornece diretrizes para migrar um aplicativo Xamarin. Android existente para o KitKat, bem como uma visão geral de alto nível do KitKat para desenvolvedores do Xamarin. Android.
@@ -79,11 +79,11 @@ e exigir que os alarmes exatos funcionem agora, será necessário disparar cada 
 
 O armazenamento externo agora está dividido em dois tipos – armazenamento exclusivo para seu aplicativo e dados compartilhados por vários aplicativos. Ler e gravar no local específico do seu aplicativo no armazenamento externo não requer permissões especiais. A interação com dados no armazenamento compartilhado agora requer a `READ_EXTERNAL_STORAGE` permissão `WRITE_EXTERNAL_STORAGE` ou. Os dois tipos podem ser classificados da seguinte forma:
 
--  Se você estiver obtendo um caminho de arquivo ou diretório chamando um método em `Context` -por exemplo,[`GetExternalFilesDir`](xref:Android.Content.Context.GetExternalFilesDir*)
+- Se você estiver obtendo um caminho de arquivo ou diretório chamando um método em `Context` -por exemplo,[`GetExternalFilesDir`](xref:Android.Content.Context.GetExternalFilesDir*)
    or[`GetExternalCacheDirs`](xref:Android.Content.Context.GetExternalCacheDirs)
    - seu aplicativo não requer permissões adicionais.
 
--  Se você estiver obtendo um arquivo ou caminho de diretório acessando uma propriedade ou chamando um `Environment` método em, como[`GetExternalStorageDirectory`](xref:Android.OS.Environment.ExternalStorageDirectory)
+- Se você estiver obtendo um arquivo ou caminho de diretório acessando uma propriedade ou chamando um `Environment` método em, como[`GetExternalStorageDirectory`](xref:Android.OS.Environment.ExternalStorageDirectory)
    or[`GetExternalStoragePublicDirectory`](xref:Android.OS.Environment.GetExternalStoragePublicDirectory*)
    , seu aplicativo requer a `READ_EXTERNAL_STORAGE` permissão `WRITE_EXTERNAL_STORAGE` ou.
 
@@ -284,11 +284,11 @@ TransitionManager.Go (scene1, transition);
 
 O KitKat oferece mais controle sobre a ti de seu aplicativo com barras de status e de navegação opcionais. Você pode alterar o translucency dos elementos da interface do usuário do sistema no mesmo arquivo XML usado para definir seu tema do Android. KitKat apresenta as seguintes propriedades:
 
--  `windowTranslucentStatus`-Quando definido como true, torna a barra de status superior translúcida.
+- `windowTranslucentStatus`-Quando definido como true, torna a barra de status superior translúcida.
 
--  `windowTranslucentNavigation`-Quando definido como true, torna a barra de navegação inferior translúcida.
+- `windowTranslucentNavigation`-Quando definido como true, torna a barra de navegação inferior translúcida.
 
--  `fitsSystemWindows`-Definir a barra superior ou inferior como transcluent desloca o conteúdo sob os elementos da interface do usuário transparente por padrão. Definir essa propriedade como `true` é uma maneira simples de impedir que o conteúdo se sobreponha aos elementos da interface do usuário do sistema translúcida.
+- `fitsSystemWindows`-Definir a barra superior ou inferior como transcluent desloca o conteúdo sob os elementos da interface do usuário transparente por padrão. Definir essa propriedade como `true` é uma maneira simples de impedir que o conteúdo se sobreponha aos elementos da interface do usuário do sistema translúcida.
 
 
 O código a seguir define um tema com status translúcida e barras de navegação:
@@ -537,9 +537,9 @@ HCE requer que tanto o recurso HCE quanto a `Nfc` permissão sejam registrados c
 
 Para funcionar, o HCE precisa ser executado em segundo plano e precisa iniciar quando o usuário faz uma transação NFC, mesmo que o aplicativo que usa o HCE não esteja em execução. Podemos fazer isso escrevendo o código HCE como um `Service`. Um serviço HCE implementa a `HostApduService` interface, que implementa os seguintes métodos:
 
--  *ProcessCommandApdu* -uma APDU (unidade de dados de protocolo de aplicativo) é o que é enviado entre o leitor NFC e o serviço HCE. Esse método consome um ADPU do leitor e retorna uma unidade de dados em resposta.
+- *ProcessCommandApdu* -uma APDU (unidade de dados de protocolo de aplicativo) é o que é enviado entre o leitor NFC e o serviço HCE. Esse método consome um ADPU do leitor e retorna uma unidade de dados em resposta.
 
--  OnActivated – o `HostAdpuService` será desativado quando o serviço HCE não estiver mais se comunicando com o leitor NFC.
+- OnActivated – o `HostAdpuService` será desativado quando o serviço HCE não estiver mais se comunicando com o leitor NFC.
 
 
 Um serviço HCE também precisa ser registrado com o manifesto do aplicativo e decorado com as permissões apropriadas, o filtro de intenção e os metadados. O código a seguir é um exemplo de `HostApduService` um registrado com o manifesto do Android `Service` usando o atributo (para obter mais informações sobre atributos, consulte o guia de manifesto do Xamarin [trabalhando com Android](~/android/platform/android-manifest.md) ):
@@ -591,9 +591,9 @@ O `SensorManager` permite que o sistema operacional Agende a entrega de informa�
 
 O KitKat também é fornecido com dois novos tipos de sensor para acompanhar as etapas do usuário. Elas se baseiam no acelerômetro e incluem:
 
--  *StepDetector* -o aplicativo é notificado/ativados quando o usuário executa uma etapa e o detector fornece um valor de tempo para quando a etapa ocorreu.
+- *StepDetector* -o aplicativo é notificado/ativados quando o usuário executa uma etapa e o detector fornece um valor de tempo para quando a etapa ocorreu.
 
--  *StepCounter* -controla o número de etapas que o usuário levou desde que o sensor foi registrado *até a próxima reinicialização do dispositivo*.
+- *StepCounter* -controla o número de etapas que o usuário levou desde que o sensor foi registrado *até a próxima reinicialização do dispositivo*.
 
 A captura de tela abaixo descreve o contador de etapas em ação:
 
@@ -678,29 +678,29 @@ Você pode encontrar seu vídeo em seu dispositivo-ele aparecerá na Galeria qua
 
 Além das alterações descritas acima, o KitKat permite que você:
 
--  *Use a tela inteira* -KitKat introduz um novo [modo de imersão](https://developer.android.com/reference/android/view/View.html#setSystemUiVisibility(int)) para procurar conteúdo, jogar e executar outros aplicativos que podem se beneficiar de uma experiência de tela inteira.
+- *Use a tela inteira* -KitKat introduz um novo [modo de imersão](https://developer.android.com/reference/android/view/View.html#setSystemUiVisibility(int)) para procurar conteúdo, jogar e executar outros aplicativos que podem se beneficiar de uma experiência de tela inteira.
 
--  *Personalizar notificações* -Obtenha detalhes adicionais sobre as notificações do sistema com o[`NotificationListenerService`](xref:Android.Service.Notification.NotificationListenerService)
+- *Personalizar notificações* -Obtenha detalhes adicionais sobre as notificações do sistema com o[`NotificationListenerService`](xref:Android.Service.Notification.NotificationListenerService)
    . Isso permite que você apresente as informações de uma maneira diferente dentro do seu aplicativo.
 
--  *Recursos* de espelhamento de espelho-os recursos de desenho têm um novo[`autoMirrored`](https://developer.android.com/reference/android/R.attr.html#autoMirrored)
+- *Recursos* de espelhamento de espelho-os recursos de desenho têm um novo[`autoMirrored`](https://developer.android.com/reference/android/R.attr.html#autoMirrored)
    o atributo que diz ao sistema para criar uma versão espelhada para imagens que exigem inversão para layouts da esquerda para a direita.
 
--  *Pausar animações* – pausar e retomar animações criadas com o[`Animator`](xref:Android.Animation.Animator)
+- *Pausar animações* – pausar e retomar animações criadas com o[`Animator`](xref:Android.Animation.Animator)
    .
 
--  *Ler texto de alteração dinâmica* – denotam partes da interface do usuário que são atualizadas dinamicamente com o novo texto como "regiões dinâmicas" com o novo[`accessibilityLiveRegion`](https://developer.android.com/reference/android/R.attr.html#accessibilityLiveRegion)
+- *Ler texto de alteração dinâmica* – denotam partes da interface do usuário que são atualizadas dinamicamente com o novo texto como "regiões dinâmicas" com o novo[`accessibilityLiveRegion`](https://developer.android.com/reference/android/R.attr.html#accessibilityLiveRegion)
    o atributo, portanto, o novo texto será lido automaticamente no modo de acessibilidade.
 
--  *Aprimore a experiência de áudio* -torne as trilhas mais alto com o[`LoudnessEnhancer`](xref:Android.Media.Audiofx.LoudnessEnhancer)
+- *Aprimore a experiência de áudio* -torne as trilhas mais alto com o[`LoudnessEnhancer`](xref:Android.Media.Audiofx.LoudnessEnhancer)
    , localize o pico e o RMS de um fluxo de áudio com o[`Visualizer`](xref:Android.Media.Audiofx.Visualizer.MeasurementModePeakRms)
    e obter informações de um carimbo de [data/hora de áudio](xref:Android.Media.AudioTimestamp) para ajudar com a sincronização de vídeo em áudio.
 
--  *Sincronizar ContentResolver retornem no intervalo personalizado* -o KitKat adiciona certa variabilidade à hora em que uma solicitação de sincronização é executada. Sincronize um `ContentResolver` em hora ou intervalo personalizado chamando `ContentResolver.RequestSync` e passando um `SyncRequest`.
+- *Sincronizar ContentResolver retornem no intervalo personalizado* -o KitKat adiciona certa variabilidade à hora em que uma solicitação de sincronização é executada. Sincronize um `ContentResolver` em hora ou intervalo personalizado chamando `ContentResolver.RequestSync` e passando um `SyncRequest`.
 
--  *Distinguir entre controladores* -no KitKat, os controladores recebem identificadores inteiros exclusivos que podem ser acessados por meio `ControllerNumber` da Propriedade do dispositivo. Isso facilita a separação de jogadores em um jogo.
+- *Distinguir entre controladores* -no KitKat, os controladores recebem identificadores inteiros exclusivos que podem ser acessados por meio `ControllerNumber` da Propriedade do dispositivo. Isso facilita a separação de jogadores em um jogo.
 
--  *Controle remoto* -com algumas alterações no lado do hardware e do software, o KitKat permite que você transforme um dispositivo com um transmissor de ir em um controle remoto usando o `ConsumerIrService`e interaja com dispositivos periféricos com o novo[`RemoteController`](xref:Android.Media.RemoteController)
+- *Controle remoto* -com algumas alterações no lado do hardware e do software, o KitKat permite que você transforme um dispositivo com um transmissor de ir em um controle remoto usando o `ConsumerIrService`e interaja com dispositivos periféricos com o novo[`RemoteController`](xref:Android.Media.RemoteController)
    API.
 
 Para obter mais informações sobre as alterações de API acima, consulte a visão geral das APIs do Google [Android 4,4](https://developer.android.com/about/versions/android-4.4.html) .

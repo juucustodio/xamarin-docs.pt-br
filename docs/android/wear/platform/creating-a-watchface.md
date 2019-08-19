@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/23/2018
-ms.openlocfilehash: 52891a11dcc271497031658d0eff9f98a01d3555
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
-ms.translationtype: HT
+ms.openlocfilehash: a3b38a77f045c17b66c65a14eda32f5a7fcd5fc5
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68647876"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69522245"
 ---
 # <a name="creating-a-watch-face"></a>Como criar um mostrador de relógio
 
@@ -35,9 +35,9 @@ Observe que os serviços de face são agrupados e instalados como parte de um ap
 
 Para implementar um serviço Watch face, é necessário o seguinte:
 
--   Android 5,0 (nível de API 21) ou superior no dispositivo ou emulador de desgaste.
+- Android 5,0 (nível de API 21) ou superior no dispositivo ou emulador de desgaste.
 
--   As [bibliotecas de suporte a desgaste do Xamarin Android](https://www.nuget.org/packages/Xamarin.Android.Wear) devem ser adicionadas ao projeto Xamarin. Android.
+- As [bibliotecas de suporte a desgaste do Xamarin Android](https://www.nuget.org/packages/Xamarin.Android.Wear) devem ser adicionadas ao projeto Xamarin. Android.
 
 Embora o Android 5,0 seja o nível mínimo de API para implementar um serviço Watch face, o Android 5,1 ou posterior é recomendado. Dispositivos Android que executam o Android 5,1 (API 22) ou superior permitem que aplicativos de desgaste controlem o que é exibido na tela enquanto o dispositivo está no modo de *ambiente* de baixa energia. Quando o dispositivo deixa o modo de *ambiente* de baixa energia, ele está no modo *interativo* . Para obter mais informações sobre esses modos, consulte [mantendo seu aplicativo visível](https://developer.android.com/training/wearables/apps/always-on.html).
 
@@ -127,17 +127,17 @@ Não mostrado neste diagrama é um `Canvas` que `CanvasWatchFaceService` o usa p
 
 Nas seções a seguir, um serviço de face de inspeção personalizado será criado seguindo estas etapas:
 
-1.  Defina uma classe chamada `MyWatchFaceService` derivada de. `CanvasWatchFaceService`
+1. Defina uma classe chamada `MyWatchFaceService` derivada de. `CanvasWatchFaceService`
 
-2.  No `MyWatchFaceService`, crie uma classe aninhada `MyWatchFaceEngine` chamada derivada de `CanvasWatchFaceService.Engine`.
+2. No `MyWatchFaceService`, crie uma classe aninhada `MyWatchFaceEngine` chamada derivada de `CanvasWatchFaceService.Engine`.
 
-3.  No `MyWatchFaceService`, implemente `CreateEngine` um método que instancia `MyWatchFaceEngine` e o retorna.
+3. No `MyWatchFaceService`, implemente `CreateEngine` um método que instancia `MyWatchFaceEngine` e o retorna.
 
-4.  No `MyWatchFaceEngine`, implemente `OnCreate` o método para criar o estilo facial de inspeção e executar outras tarefas de inicialização.
+4. No `MyWatchFaceEngine`, implemente `OnCreate` o método para criar o estilo facial de inspeção e executar outras tarefas de inicialização.
 
-5.  Implemente `OnDraw` o método `MyWatchFaceEngine`de. Esse método é chamado sempre que a face de inspeção precisa ser redesenhada (ouseja, invalidada). `OnDraw`é o método que desenha (e redesenha) inspecionar elementos de face, como hora, minuto e segundo, mãos.
+5. Implemente `OnDraw` o método `MyWatchFaceEngine`de. Esse método é chamado sempre que a face de inspeção precisa ser redesenhada (ouseja, invalidada). `OnDraw`é o método que desenha (e redesenha) inspecionar elementos de face, como hora, minuto e segundo, mãos.
 
-6.  Implemente `OnTimeTick` o método `MyWatchFaceEngine`de.
+6. Implemente `OnTimeTick` o método `MyWatchFaceEngine`de.
     `OnTimeTick`é chamado pelo menos uma vez por minuto (nos modos de ambiente e interativo) ou quando a data/hora foi alterada.
 
 Para obter mais informações `CanvasWatchFaceService`sobre o, consulte a documentação da API do Android [CanvasWatchFaceService](https://developer.android.com/reference/android/support/wearable/watchface/CanvasWatchFaceService.html) .
@@ -222,11 +222,11 @@ public override void OnCreate(ISurfaceHolder holder)
 
 A chamada para `SetWatchFaceStyle` faz o seguinte:
 
-1.  Define o *modo* de `PeekModeShort`inspeção como, que faz com que as notificações apareçam como pequenos cartões de "Peek" na tela.
+1. Define o *modo* de `PeekModeShort`inspeção como, que faz com que as notificações apareçam como pequenos cartões de "Peek" na tela.
 
-2.  Define a visibilidade em segundo `Interruptive`plano como, o que faz com que o plano de fundo de um cartão de Peek seja mostrado apenas brevemente se ele representar uma notificação de interrupção.
+2. Define a visibilidade em segundo `Interruptive`plano como, o que faz com que o plano de fundo de um cartão de Peek seja mostrado apenas brevemente se ele representar uma notificação de interrupção.
 
-3.  Desabilita o tempo de interface do usuário do sistema padrão de ser desenhado na face de inspeção para que a face de inspeção personalizada possa exibir a hora em vez disso.
+3. Desabilita o tempo de interface do usuário do sistema padrão de ser desenhado na face de inspeção para que a face de inspeção personalizada possa exibir a hora em vez disso.
 
 Para obter mais informações sobre essas e outras opções de estilo facial de inspeção, consulte a documentação da API do Android [WatchFaceStyle. Builder](https://developer.android.com/reference/android/support/wearable/watchface/WatchFaceStyle.Builder.html) .
 
@@ -296,13 +296,13 @@ Para obter mais informações sobre `OnTimeTick` o método, consulte a documenta
 
 Esse XML faz o seguinte:
 
-1.  Define a `android.permission.BIND_WALLPAPER` permissão. Essa permissão dá permissão ao serviço Watch face para alterar o papel de parede do sistema no dispositivo. Observe que essa permissão deve ser definida na `<service>` seção em vez de na seção externa. `<application>`
+1. Define a `android.permission.BIND_WALLPAPER` permissão. Essa permissão dá permissão ao serviço Watch face para alterar o papel de parede do sistema no dispositivo. Observe que essa permissão deve ser definida na `<service>` seção em vez de na seção externa. `<application>`
 
-2.  Define um `watch_face` recurso. Esse recurso é um arquivo XML curto que declara um `wallpaper` recurso (esse arquivo será criado na próxima seção).
+2. Define um `watch_face` recurso. Esse recurso é um arquivo XML curto que declara um `wallpaper` recurso (esse arquivo será criado na próxima seção).
 
-3.  Declara uma imagem desenháa chamada `preview` que será exibida pela tela de seleção do seletor de inspeção.
+3. Declara uma imagem desenháa chamada `preview` que será exibida pela tela de seleção do seletor de inspeção.
 
-4.  Inclui um `intent-filter` para permitir que o Android `MyWatchFaceService` saiba que exibirá uma face de inspeção.
+4. Inclui um `intent-filter` para permitir que o Android `MyWatchFaceService` saiba que exibirá uma face de inspeção.
 
 Isso conclui o código para o exemplo básico `WatchFace` . A próxima etapa é adicionar os recursos necessários.
 
@@ -338,17 +338,17 @@ Instale-o em **recursos/empates/Preview. png**. Certifique-se de adicionar esse 
 
 Crie e implante o aplicativo no dispositivo de desgaste. Você deve ver a tela de aplicativo de desgaste aparecer como antes. Faça o seguinte para habilitar a nova face de inspeção:
 
-1.  Passe o dedo para a direita até ver o plano de fundo da tela de observação.
+1. Passe o dedo para a direita até ver o plano de fundo da tela de observação.
 
-2.  Toque e segure em qualquer lugar do plano de fundo da tela por dois segundos.
+2. Toque e segure em qualquer lugar do plano de fundo da tela por dois segundos.
 
-3.  Passe o dedo da esquerda para a direita para navegar pelas várias faces de inspeção.
+3. Passe o dedo da esquerda para a direita para navegar pelas várias faces de inspeção.
 
-4.  Selecione a face de inspeção de **exemplo do Xamarin** (mostrada à direita):
+4. Selecione a face de inspeção de **exemplo do Xamarin** (mostrada à direita):
 
     [![Seletor de Watchface](creating-a-watchface-images/11-watchface-picker.png "Passe o dedo para localizar o rosto de inspeção de exemplo do Xamarin")](creating-a-watchface-images/11-watchface-picker.png#lightbox)
 
-5.  Toque na face de inspeção de **exemplo do Xamarin** para selecioná-la.
+5. Toque na face de inspeção de **exemplo do Xamarin** para selecioná-la.
 
 Isso altera a face do relógio do dispositivo de desgaste para usar o serviço de face de inspeção personalizado implementado até o momento:
 
@@ -364,15 +364,15 @@ Na próxima seção, essa face de inspeção será atualizada para uma implement
 
 No restante deste passo a passos, `MyWatchFaceService` o é atualizado para exibir uma face de inspeção de estilo analógico e é estendido para dar suporte a mais recursos. Os seguintes recursos serão adicionados para criar o rosto de inspeção atualizado:
 
-1.  Indica a hora com as mãos de hora, minuto e segundo analógicas.
+1. Indica a hora com as mãos de hora, minuto e segundo analógicas.
 
-2.  Reage a alterações na visibilidade.
+2. Reage a alterações na visibilidade.
 
-3.  Responde a alterações entre o modo de ambiente e o modo interativo.
+3. Responde a alterações entre o modo de ambiente e o modo interativo.
 
-4.  Lê as propriedades do dispositivo de desgaste subjacente.
+4. Lê as propriedades do dispositivo de desgaste subjacente.
 
-5.  Atualiza automaticamente a hora em que ocorre uma alteração de fuso horário.
+5. Atualiza automaticamente a hora em que ocorre uma alteração de fuso horário.
 
 Antes de implementar as alterações de código abaixo, baixe [drawed. zip](https://github.com/xamarin/monodroid-samples/blob/master/wear/WatchFace/Resources/drawable.zip?raw=true), descompacte-o e mova os arquivos. png descompactados para **recursos/desenháveis** (substitua a **visualização anterior. png**). Adicione os novos arquivos. png ao `WatchFace` projeto.
 
@@ -387,13 +387,13 @@ Esta versão do **MyWatchFaceService.cs** adiciona mais código aos métodos exi
 
 O método **OnCreate** atualizado configura o estilo facial de inspeção como antes, mas inclui algumas etapas adicionais:
 
-1.  Define a imagem de plano de fundo para o recurso **xamarin_background** que reside em Resources **/Drawable-hdpi/xamarin_background. png**.
+1. Define a imagem de plano de fundo para o recurso **xamarin_background** que reside em Resources **/Drawable-hdpi/xamarin_background. png**.
 
-2.  Inicializa `Paint` objetos para desenhar a hora, o minuto e a segunda mão.
+2. Inicializa `Paint` objetos para desenhar a hora, o minuto e a segunda mão.
 
-3.  Inicializa um `Paint` objeto para desenhar os tiques de hora ao lado da borda da face de inspeção.
+3. Inicializa um `Paint` objeto para desenhar os tiques de hora ao lado da borda da face de inspeção.
 
-4.  Cria um temporizador que chama `Invalidate` o método (redesenhar) para que a segunda mão seja redesenhada a cada segundo. Observe que esse temporizador é necessário `OnTimeTick` porque `Invalidate` as chamadas são apenas uma vez a cada minuto.
+4. Cria um temporizador que chama `Invalidate` o método (redesenhar) para que a segunda mão seja redesenhada a cada segundo. Observe que esse temporizador é necessário `OnTimeTick` porque `Invalidate` as chamadas são apenas uma vez a cada minuto.
 
 Este exemplo inclui apenas uma imagem **xamarin_background. png** ; no entanto, talvez você queira criar uma imagem de plano de fundo diferente para cada densidade de tela que sua face de inspeção personalizada dará suporte.
 
@@ -401,17 +401,17 @@ Este exemplo inclui apenas uma imagem **xamarin_background. png** ; no entanto, 
 
 O método **OnDraw** atualizado desenha uma face de inspeção de estilo analógico usando as seguintes etapas:
 
-1.  Obtém a hora atual, que agora é mantida em um `time` objeto.
+1. Obtém a hora atual, que agora é mantida em um `time` objeto.
 
-2.  Determina os limites da superfície de desenho e seu centro.
+2. Determina os limites da superfície de desenho e seu centro.
 
-3.  Desenha o plano de fundo, dimensionado para caber no dispositivo quando o plano de fundo é desenhado.
+3. Desenha o plano de fundo, dimensionado para caber no dispositivo quando o plano de fundo é desenhado.
 
-4.  Desenha doze *tiques* em frente ao relógio (correspondendo às horas no rosto do relógio).
+4. Desenha doze *tiques* em frente ao relógio (correspondendo às horas no rosto do relógio).
 
-5.  Calcula o ângulo, a rotação e o comprimento de cada inspeção.
+5. Calcula o ângulo, a rotação e o comprimento de cada inspeção.
 
-6.  Desenha cada mão na superfície de inspeção. Observe que a segunda mão não será desenhada se a inspeção estiver no modo ambiente.
+6. Desenha cada mão na superfície de inspeção. Observe que a segunda mão não será desenhada se a inspeção estiver no modo ambiente.
 
 
 #### <a name="onpropertieschanged"></a>Onpropertieschanged

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/28/2018
-ms.openlocfilehash: eda75041add4b5fc9f7998f426aab42ed2618c4b
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
-ms.translationtype: HT
+ms.openlocfilehash: 91e49c387818ca4d7472325efa665a5c2bfd9e64
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68508806"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69522045"
 ---
 # <a name="activity-lifecycle"></a>Ciclo de vida de atividade
 
@@ -29,9 +29,9 @@ O ciclo de vida da atividade é implementado como uma coleção de métodos que 
 
 Este capítulo examina o ciclo de vida da atividade em detalhes, incluindo:
 
--  Estados de atividade
--  Métodos de ciclo de vida
--  Retendo o estado de um aplicativo
+- Estados de atividade
+- Métodos de ciclo de vida
+- Retendo o estado de um aplicativo
 
 
 Esta seção também inclui uma [explicação](~/android/app-fundamentals/activity-lifecycle/saving-state.md) que fornece exemplos práticos sobre como salvar com eficiência o estado durante o ciclo de vida da atividade. Ao final deste capítulo, você deve ter uma compreensão do ciclo de vida da atividade e de como dar suporte a ele em um aplicativo Android.
@@ -48,14 +48,14 @@ O sistema operacional Android arbitra atividades com base em seu estado. Isso aj
 
 Esses Estados podem ser divididos em quatro grupos principais da seguinte maneira:
 
-1.  *Ativo ou em execução* &ndash; As atividades são consideradas ativas ou em execução se estiverem em primeiro plano, também conhecidas como a parte superior da pilha de atividades. Essa é considerada a atividade de prioridade mais alta no Android e, como tal, só será eliminada pelo sistema operacional em situações extremas, como se a atividade tentar usar mais memória do que está disponível no dispositivo, pois isso pode fazer com que a interface do usuário não responda.
+1. *Ativo ou em execução* &ndash; As atividades são consideradas ativas ou em execução se estiverem em primeiro plano, também conhecidas como a parte superior da pilha de atividades. Essa é considerada a atividade de prioridade mais alta no Android e, como tal, só será eliminada pelo sistema operacional em situações extremas, como se a atividade tentar usar mais memória do que está disponível no dispositivo, pois isso pode fazer com que a interface do usuário não responda.
 
-1.  Em *pausa* &ndash; Quando o dispositivo passa para o estado de suspensão ou uma atividade ainda é visível, mas parcialmente ocultada por uma atividade nova, não de tamanho máximo ou transparente, a atividade é considerada pausada. As atividades em pausa ainda estão ativas, ou seja, elas mantêm todas as informações de estado e membro e permanecem anexadas ao Gerenciador de janelas. Essa é considerada a segunda atividade de prioridade mais alta no Android e, como tal, só será eliminada pelo sistema operacional se a eliminação dessa atividade atender aos requisitos de recursos necessários para manter a atividade ativa/em execução estável e responsiva.
+1. Em *pausa* &ndash; Quando o dispositivo passa para o estado de suspensão ou uma atividade ainda é visível, mas parcialmente ocultada por uma atividade nova, não de tamanho máximo ou transparente, a atividade é considerada pausada. As atividades em pausa ainda estão ativas, ou seja, elas mantêm todas as informações de estado e membro e permanecem anexadas ao Gerenciador de janelas. Essa é considerada a segunda atividade de prioridade mais alta no Android e, como tal, só será eliminada pelo sistema operacional se a eliminação dessa atividade atender aos requisitos de recursos necessários para manter a atividade ativa/em execução estável e responsiva.
 
-1.  *Parado/em segundo plano* &ndash; As atividades que são completamente obscurecidas por outra atividade são consideradas interrompidas ou em segundo plano.
+1. *Parado/em segundo plano* &ndash; As atividades que são completamente obscurecidas por outra atividade são consideradas interrompidas ou em segundo plano.
     As atividades interrompidas ainda tentam reter suas informações de estado e membro pelo tempo máximo possível, mas as atividades interrompidas são consideradas como a prioridade mais baixa dos três Estados e, como tal, o sistema operacional eliminará as atividades nesse estado primeiro para atender ao recurso requisitos de atividades de prioridade mais alta.
 
-1.  *Reiniciado* &ndash; É possível que uma atividade que seja colocada em pausa seja interrompida no ciclo de vida para ser removida da memória pelo Android. Se o usuário navega de volta para a atividade, ele deve ser reiniciado, restaurado para o estado salvo anteriormente e, em seguida, exibido para o usuário.
+1. *Reiniciado* &ndash; É possível que uma atividade que seja colocada em pausa seja interrompida no ciclo de vida para ser removida da memória pelo Android. Se o usuário navega de volta para a atividade, ele deve ser reiniciado, restaurado para o estado salvo anteriormente e, em seguida, exibido para o usuário.
 
 
 ### <a name="activity-re-creation-in-response-to-configuration-changes"></a>Recriação de atividade em resposta a alterações de configuração
@@ -116,11 +116,11 @@ Uma `OnCreate` vez concluído, o Android chamará `OnStart`.
 O sistema chama [onresume](xref:Android.App.Activity.OnResume) quando a atividade está pronta para começar a interagir com o usuário.
 As atividades devem substituir esse método para executar tarefas como:
 
--  Taxas de quadros de aumento de escala (uma tarefa comum no desenvolvimento de jogos)
--  Iniciando animações
--  Ouvindo atualizações de GPS
--  Exibir alertas ou caixas de diálogo relevantes
--  Conectar manipuladores de eventos externos
+- Taxas de quadros de aumento de escala (uma tarefa comum no desenvolvimento de jogos)
+- Iniciando animações
+- Ouvindo atualizações de GPS
+- Exibir alertas ou caixas de diálogo relevantes
+- Conectar manipuladores de eventos externos
 
 
 Por exemplo, o trecho de código a seguir mostra como inicializar a câmera:
@@ -143,15 +143,15 @@ public void OnResume()
 
 [Onpaus](xref:Android.App.Activity.OnPause) é chamado quando o sistema está prestes a colocar a atividade em segundo plano ou quando a atividade se torna parcialmente obscurecida. As atividades devem substituir esse método se precisarem:
 
--   Confirmar alterações não salvas em dados persistentes
+- Confirmar alterações não salvas em dados persistentes
 
--   Destruir ou limpar outros objetos que consomem recursos
+- Destruir ou limpar outros objetos que consomem recursos
 
--   Taxas de quadros de rampa e pausar animações
+- Taxas de quadros de rampa e pausar animações
 
--   Cancelar o registro de manipuladores de eventos externos ou manipuladores de notificação (ou seja, aqueles que estão vinculados a um serviço). Isso deve ser feito para evitar vazamentos de memória de atividade.
+- Cancelar o registro de manipuladores de eventos externos ou manipuladores de notificação (ou seja, aqueles que estão vinculados a um serviço). Isso deve ser feito para evitar vazamentos de memória de atividade.
 
--   Da mesma forma, se a atividade tiver exibido quaisquer caixas de diálogo ou alertas, eles deverão ser limpos `.Dismiss()` com o método.
+- Da mesma forma, se a atividade tiver exibido quaisquer caixas de diálogo ou alertas, eles deverão ser limpos `.Dismiss()` com o método.
 
 Por exemplo, o trecho de código a seguir liberará a câmera, pois a atividade não poderá usá-la enquanto estiver em pausa:
 
@@ -171,17 +171,17 @@ public void OnPause()
 
 Há dois métodos de ciclo de vida possíveis que serão chamados `OnPause`após:
 
-1.  `OnResume`será chamado se a atividade for retornada para o primeiro plano.
-1.  `OnStop`será chamado se a atividade estiver sendo colocada em segundo plano.
+1. `OnResume`será chamado se a atividade for retornada para o primeiro plano.
+1. `OnStop`será chamado se a atividade estiver sendo colocada em segundo plano.
 
 
 #### <a name="onstop"></a>OnStop
 
 [OnStop](xref:Android.App.Activity.OnStop) é chamado quando a atividade não está mais visível para o usuário. Isso acontece quando ocorre uma das seguintes situações:
 
--  Uma nova atividade está sendo iniciada e está cobrindo essa atividade.
--  Uma atividade existente está sendo trazida para o primeiro plano.
--  A atividade está sendo destruída.
+- Uma nova atividade está sendo iniciada e está cobrindo essa atividade.
+- Uma atividade existente está sendo trazida para o primeiro plano.
+- A atividade está sendo destruída.
 
 
 `OnStop`Nem sempre pode ser chamado em situações de pouca memória, como quando o Android está sem problemas para recursos e não pode fazer o plano de fundo da atividade corretamente. Por esse motivo, é melhor não confiar na `OnStop` chamada ao preparar uma atividade para destruição. Os próximos métodos de ciclo de vida que podem ser chamados depois disso `OnDestroy` serão se a atividade estiver desaparecendo `OnRestart` ou se a atividade voltar a interagir com o usuário.
@@ -330,11 +330,11 @@ Para obter um exemplo de como salvar o `Bundle`estado usando um, consulte a expl
 
 Embora `OnSaveInstanceState` o facilite o salvamento de dados transitórios, ele tem algumas limitações:
 
--   Ele não é chamado em todos os casos. Por exemplo, pressionar **Home** ou **voltar** para sair de uma atividade não resultará `OnSaveInstanceState` em chamada.
+- Ele não é chamado em todos os casos. Por exemplo, pressionar **Home** ou **voltar** para sair de uma atividade não resultará `OnSaveInstanceState` em chamada.
 
--   O pacote transmitido `OnSaveInstanceState` não foi projetado para objetos grandes, como imagens. No caso de objetos grandes, é preferível salvar o objeto de [OnRetainNonConfigurationInstance](xref:Android.App.Activity.OnRetainNonConfigurationInstance) , conforme discutido abaixo.
+- O pacote transmitido `OnSaveInstanceState` não foi projetado para objetos grandes, como imagens. No caso de objetos grandes, é preferível salvar o objeto de [OnRetainNonConfigurationInstance](xref:Android.App.Activity.OnRetainNonConfigurationInstance) , conforme discutido abaixo.
 
--   Os dados salvos usando o pacote são serializados, o que pode levar a atrasos.
+- Os dados salvos usando o pacote são serializados, o que pode levar a atrasos.
 
 O estado do pacote é útil para dados simples que não usam muita memória, enquanto *dados de instância que não* são de configuração são úteis para dados mais complexos, ou dados que são caros de recuperar, como de uma chamada de serviço da Web ou uma consulta de banco de dado complicada. Os dados da instância sem configuração são salvos em um objeto, conforme necessário. A próxima seção apresenta `OnRetainNonConfigurationInstance` uma maneira de preservar tipos de dados mais complexos por meio de alterações de configuração.
 
@@ -343,9 +343,9 @@ O estado do pacote é útil para dados simples que não usam muita memória, enq
 
 Além de persistir dados no pacote, o Android também dá suporte ao salvamento de dados, substituindo [OnRetainNonConfigurationInstance](xref:Android.App.Activity.OnRetainNonConfigurationInstance) e retornando `Java.Lang.Object` uma instância de um que contém os dados a serem persistidos. Há dois benefícios principais do uso `OnRetainNonConfigurationInstance` do para salvar o estado:
 
--   O objeto retornado de `OnRetainNonConfigurationInstance` funciona bem com tipos de dados maiores e mais complexos porque a memória retém esse objeto.
+- O objeto retornado de `OnRetainNonConfigurationInstance` funciona bem com tipos de dados maiores e mais complexos porque a memória retém esse objeto.
 
--   O `OnRetainNonConfigurationInstance` método é chamado sob demanda e somente quando necessário. Isso é mais econômico do que usar um cache manual.
+- O `OnRetainNonConfigurationInstance` método é chamado sob demanda e somente quando necessário. Isso é mais econômico do que usar um cache manual.
 
 O `OnRetainNonConfigurationInstance` uso do é adequado para cenários em que é caro recuperar os dados várias vezes, como em chamadas de serviço Web. Por exemplo, considere o código a seguir que pesquisa o Twitter:
 

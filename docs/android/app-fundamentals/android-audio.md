@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/28/2018
-ms.openlocfilehash: 256871fd225808af1fdebf14c4eb2b43e575e105
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
-ms.translationtype: HT
+ms.openlocfilehash: 960b4eb058209547c65a3b438bed541c3ade257c
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68644349"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69521258"
 ---
 # <a name="android-audio"></a>Áudio do Android
 
@@ -25,13 +25,13 @@ Os dispositivos móveis modernos adotaram uma funcionalidade que, anteriormente,
 
 O Android fornece amplo suporte para multimídia. Este artigo examina o trabalho com áudio no Android e aborda os tópicos a seguir
 
-1.  **Reproduzindo áudio com o MediaPlayer** Usar a `MediaPlayer` classe interna para reproduzir áudio, incluindo arquivos de áudio locais e arquivos de áudio em fluxo com a `AudioTrack` classe. &ndash;
+1. **Reproduzindo áudio com o MediaPlayer** Usar a `MediaPlayer` classe interna para reproduzir áudio, incluindo arquivos de áudio locais e arquivos de áudio em fluxo com a `AudioTrack` classe. &ndash;
 
-2.  **Gravando áudio** Usando a `MediaRecorder` classe interna para gravar áudio. &ndash;
+2. **Gravando áudio** Usando a `MediaRecorder` classe interna para gravar áudio. &ndash;
 
-3.  **Trabalhando com notificações de áudio** &ndash; Usar notificações de áudio para criar aplicativos bem comportados que respondem corretamente a eventos (como chamadas telefônicas de entrada), suspendendo ou cancelando suas saídas de áudio.
+3. **Trabalhando com notificações de áudio** &ndash; Usar notificações de áudio para criar aplicativos bem comportados que respondem corretamente a eventos (como chamadas telefônicas de entrada), suspendendo ou cancelando suas saídas de áudio.
 
-4.  **Trabalhando com áudio de baixo nível** Reprodução de áudio usando `AudioTrack` a classe gravando diretamente nos buffers de memória. &ndash; Gravar áudio usando a `AudioRecord` classe e ler diretamente dos buffers de memória.
+4. **Trabalhando com áudio de baixo nível** Reprodução de áudio usando `AudioTrack` a classe gravando diretamente nos buffers de memória. &ndash; Gravar áudio usando a `AudioRecord` classe e ler diretamente dos buffers de memória.
 
 
 ## <a name="requirements"></a>Requisitos
@@ -228,15 +228,15 @@ Quando o aplicativo terminar de usar os recursos de áudio, ele chamará o `Aban
 
 As etapas necessárias para solicitar os recursos de áudio do dispositivo são as seguintes:
 
-1.  Obtenha um identificador para o `AudioManager` serviço do sistema.
+1. Obtenha um identificador para o `AudioManager` serviço do sistema.
 
-2.  Crie uma instância da classe de retorno de chamada.
+2. Crie uma instância da classe de retorno de chamada.
 
-3.  Solicite os recursos de áudio do dispositivo chamando o `RequestAudioFocus` método `AudioManager` no. Os parâmetros são o objeto de retorno de chamada, o tipo de fluxo (música, chamada de voz, anel, etc.) e o tipo de direito de acesso que está sendo solicitado (os recursos de áudio podem ser requeridos momentaneamente ou por um período indefinido, por exemplo).
+3. Solicite os recursos de áudio do dispositivo chamando o `RequestAudioFocus` método `AudioManager` no. Os parâmetros são o objeto de retorno de chamada, o tipo de fluxo (música, chamada de voz, anel, etc.) e o tipo de direito de acesso que está sendo solicitado (os recursos de áudio podem ser requeridos momentaneamente ou por um período indefinido, por exemplo).
 
-4.  Se a solicitação for concedida, o `playMusic` método será invocado imediatamente e o áudio começará a reproduzir.
+4. Se a solicitação for concedida, o `playMusic` método será invocado imediatamente e o áudio começará a reproduzir.
 
-5.  Se a solicitação for negada, nenhuma ação adicional será executada. Nesse caso, o áudio só será tocado se a solicitação for concedida posteriormente.
+5. Se a solicitação for negada, nenhuma ação adicional será executada. Nesse caso, o áudio só será tocado se a solicitação for concedida posteriormente.
 
 
 O exemplo de código abaixo mostra estas etapas:
@@ -267,11 +267,11 @@ Quando a reprodução da faixa é concluída, o `AbandonFocus` método ativado `
 
 As APIs de áudio de baixo nível fornecem um maior controle sobre a reprodução e a gravação de áudio, pois interagem diretamente com buffers de memória em vez de usar URIs de arquivo. Há alguns cenários em que essa abordagem é preferível. Esses cenários incluem:
 
-1.  Ao reproduzir de arquivos de áudio criptografados.
+1. Ao reproduzir de arquivos de áudio criptografados.
 
-2.  Ao reproduzir uma sucessão de clipes curtos.
+2. Ao reproduzir uma sucessão de clipes curtos.
 
-3.  Streaming de áudio.
+3. Streaming de áudio.
 
 
 ### <a name="audiotrack-class"></a>Classe AudioTrack
@@ -283,17 +283,17 @@ A classe [AudioTrack](xref:Android.Media.AudioTrack) usa as APIs de áudio de ba
 
 Para reproduzir áudio, uma nova instância do `AudioTrack` deve ser instanciada. A lista de argumentos passada para o [Construtor](xref:Android.Media.AudioTrack) especifica como reproduzir o exemplo de áudio contido no buffer. Os argumentos são:
 
-1.  Tipo &ndash; de fluxo Voice, toque, música, sistema ou alarme.
+1. Tipo &ndash; de fluxo Voice, toque, música, sistema ou alarme.
 
-2.  Frequência &ndash; a taxa de amostragem expressa em Hz.
+2. Frequência &ndash; a taxa de amostragem expressa em Hz.
 
-3.  Configuração &ndash; de canal mono ou estéreo.
+3. Configuração &ndash; de canal mono ou estéreo.
 
-4.  Codificação do &ndash; formato de áudio de 8 bits ou 16 bits.
+4. Codificação do &ndash; formato de áudio de 8 bits ou 16 bits.
 
-5.  Tamanho &ndash; do buffer em bytes.
+5. Tamanho &ndash; do buffer em bytes.
 
-6.  Streaming de &ndash; modo de buffer ou estático.
+6. Streaming de &ndash; modo de buffer ou estático.
 
 
 Após a construção, o método [play](xref:Android.Media.AudioTrack.Play) do `AudioTrack` é invocado para configurá-lo para iniciar a reprodução. Gravar o buffer `AudioTrack` de áudio no inicia a reprodução:
@@ -354,17 +354,17 @@ A classe [AudioRecord](xref:Android.Media.AudioRecord) é o equivalente de `Audi
 
 A primeira etapa é construir um novo objeto [AudioRecord](xref:Android.Media.AudioRecord) . A lista de argumentos passada para o [Construtor](xref:Android.Media.AudioRecord) fornece todas as informações necessárias para a gravação. Diferentemente `AudioTrack`do no, onde os argumentos são amplamente enumerações, os argumentos equivalentes no `AudioRecord` são inteiros. Elas incluem:
 
-1.  Fonte de entrada de áudio de hardware, como microfone.
+1. Fonte de entrada de áudio de hardware, como microfone.
 
-2.  Tipo &ndash; de fluxo Voice, toque, música, sistema ou alarme.
+2. Tipo &ndash; de fluxo Voice, toque, música, sistema ou alarme.
 
-3.  Frequência &ndash; a taxa de amostragem expressa em Hz.
+3. Frequência &ndash; a taxa de amostragem expressa em Hz.
 
-4.  Configuração &ndash; de canal mono ou estéreo.
+4. Configuração &ndash; de canal mono ou estéreo.
 
-5.  Codificação do &ndash; formato de áudio de 8 bits ou 16 bits.
+5. Codificação do &ndash; formato de áudio de 8 bits ou 16 bits.
 
-6.  Tamanho do buffer-em bytes
+6. Tamanho do buffer-em bytes
 
 
 Depois que `AudioRecord` o é construído, seu método [StartRecording](xref:Android.Media.AudioRecord.StartRecording) é invocado. Agora ele está pronto para começar a gravar. O `AudioRecord` lê continuamente o buffer de áudio para entrada e grava essa entrada em um arquivo de áudio.
