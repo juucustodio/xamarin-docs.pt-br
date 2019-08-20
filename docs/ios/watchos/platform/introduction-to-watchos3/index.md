@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 10/07/2017
-ms.openlocfilehash: 8f1e77d112eae951f3441484df94772da1b0f303
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 5abd28dc9a6fc2a0dca5fa31908731a5496ce5fa
+ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655529"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69621040"
 ---
 # <a name="introduction-to-watchos-3"></a>Introdução ao watchOS 3
 
@@ -21,17 +21,17 @@ _Este artigo apresenta todas as APIs e recursos novos e modificados disponíveis
 Este documento abordará os seguintes tópicos:
 
 - [O que há de novo no watchOS 3](#Whats-New-in-watchOS-3)
-    - Os aprimoramentos de [Apple Pay](#Apple-Pay-Enhancements) adicionam suporte para pagamentos no aplicativo no Apple Watch.
-    - As [tarefas em segundo plano](#Background-Tasks) fornecem ao aplicativo a capacidade de atualizar suas informações em segundo plano para que ela esteja pronta quando o usuário precisar.
-    - [Aprimoramentos de complicações](#Complications-Enhancements) foram feitos para watchOS 3 que fornecem novos recursos para os aplicativos.
-    - As [estruturas disponíveis recentemente](#Newly-Available-Frameworks) foram expostas para os aplicativos watchOS.
-    - As [sugestões](#Proactive-Suggestions) proativas permitem que o aplicativo mostre informações ao usuário de forma proativa.
-    * Vários [aprimoramentos de segurança e privacidade](#Security-and-Privacy-Enhancements) foram feitos no watchOS 3.
-    - [Instantâneos e Dock](#Snapshots-and-Dock) fornecem ao usuário acesso rápido aos aplicativos watchOS de aplicativo.
-    - As [notificações do usuário](#User-Notifications) fornecem notificações locais e remotas ao usuário.
-    * Vários [aprimoramentos da estrutura de conectividade do Watch](#Watch-Connectivity-Framework-Enhancements) foram feitos no watchOS 3.
-    * Vários [aprimoramentos do WatchKit Framework](#WatchKit-Framework-Enhancements) foram feitos no watchOS 3.
-    - Os aprimoramentos do [aplicativo de treinamento](#Workout-App-Enhancements) oferecem novas capacidades para os aplicativos de Apple Watch relacionados ao treinamento.
+  - Os aprimoramentos de [Apple Pay](#Apple-Pay-Enhancements) adicionam suporte para pagamentos no aplicativo no Apple Watch.
+  - As [tarefas em segundo plano](#Background-Tasks) fornecem ao aplicativo a capacidade de atualizar suas informações em segundo plano para que ela esteja pronta quando o usuário precisar.
+  - [Aprimoramentos de complicações](#Complications-Enhancements) foram feitos para watchOS 3 que fornecem novos recursos para os aplicativos.
+  - As [estruturas disponíveis recentemente](#Newly-Available-Frameworks) foram expostas para os aplicativos watchOS.
+  - As [sugestões](#Proactive-Suggestions) proativas permitem que o aplicativo mostre informações ao usuário de forma proativa.
+  - Vários [aprimoramentos de segurança e privacidade](#Security-and-Privacy-Enhancements) foram feitos no watchOS 3.
+  - [Instantâneos e Dock](#Snapshots-and-Dock) fornecem ao usuário acesso rápido aos aplicativos watchOS de aplicativo.
+  - As [notificações do usuário](#User-Notifications) fornecem notificações locais e remotas ao usuário.
+  - Vários [aprimoramentos da estrutura de conectividade do Watch](#Watch-Connectivity-Framework-Enhancements) foram feitos no watchOS 3.
+  - Vários [aprimoramentos do WatchKit Framework](#WatchKit-Framework-Enhancements) foram feitos no watchOS 3.
+  - Os aprimoramentos do [aplicativo de treinamento](#Workout-App-Enhancements) oferecem novas capacidades para os aplicativos de Apple Watch relacionados ao treinamento.
 - [Alterações de estrutura adicionais](#Additional-Framework-Changes) foram feitas em todo o watchOS 3.
 - [APIs](#Deprecated-APIs) preteridas no watchOS 3.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 733f50954c7ea6bd4ada7468eb14443f4f3b1f1d
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 69a599b6a7534cb77dd9e023d937f10a6b0523fb
+ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68654424"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69620665"
 ---
 # <a name="introduction-to-ios-9"></a>Introdução ao iOS 9
 
@@ -124,12 +124,12 @@ Com o iOS 9, a Apple está estendendo o suporte à extensão fornecendo vários 
 - **Novo ponto de extensão de unidade de áudio** – Use esse ponto de extensão para fornecer efeitos de áudio, instrumentos musicais, geradores de som, etc. para uso em outros aplicativos de host de unidade de áudio (como GarageBand). Esse ponto de extensão também permite que você venda _unidades de áudio_ (plug-ins de áudio) na loja de aplicativos.
 - **Novo ponto de extensão de manutenção de índice** — Use esse ponto de extensão para dar suporte à reindexação de dados de aplicativo sem a necessidade de uma reinicialização do aplicativo.
 - **Novos pontos de extensão de rede** (eles exigem permissão especial da Apple):
-    - **Extensão do provedor de proxy de aplicativo** — Use esse ponto de extensão para implementar um proxy de rede transparente do lado do cliente.
-    - **Filtrar provedor de dados/extensão do provedor de controle de filtro** -use estes pontos de extensão para implementar a filtragem de conteúdo de rede dinâmica no dispositivo.
-    - **Extensão do provedor de túnel de pacotes** — Use esse ponto de extensão para implementar um cliente de protocolo de encapsulamento VPN personalizado.
+  - **Extensão do provedor de proxy de aplicativo** — Use esse ponto de extensão para implementar um proxy de rede transparente do lado do cliente.
+  - **Filtrar provedor de dados/extensão do provedor de controle de filtro** -use estes pontos de extensão para implementar a filtragem de conteúdo de rede dinâmica no dispositivo.
+  - **Extensão do provedor de túnel de pacotes** — Use esse ponto de extensão para implementar um cliente de protocolo de encapsulamento VPN personalizado.
 - **Novos pontos de extensão do Safari**:
-    - **Extensão de bloqueio de conteúdo** — Use esse ponto de extensão para definir uma lista de conteúdo bloqueado que não será exibida quando o usuário estiver navegando na Web.
-    - **Extensão de links compartilhados** — Use este ponto de extensão para habilitar a exibição do conteúdo do aplicativo nos links compartilhados do Safari.
+  - **Extensão de bloqueio de conteúdo** — Use esse ponto de extensão para definir uma lista de conteúdo bloqueado que não será exibida quando o usuário estiver navegando na Web.
+  - **Extensão de links compartilhados** — Use este ponto de extensão para habilitar a exibição do conteúdo do aplicativo nos links compartilhados do Safari.
 
 Para obter mais informações, consulte nossa [introdução às extensões e a](~/ios/platform/extensions.md) documentação do [Guia de programação de extensões de aplicativo](https://developer.apple.com/library/prerelease/ios/documentation/General/Conceptual/ExtensibilityPG/index.html#//apple_ref/doc/uid/TP40014214) da Apple.
 

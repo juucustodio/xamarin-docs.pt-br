@@ -6,12 +6,12 @@ ms.assetid: D8B87C4F-178E-48D9-BE43-85066C46F05C
 author: asb3993
 ms.author: amburns
 ms.date: 07/24/2018
-ms.openlocfilehash: c6c279a31b6081f7e20b4047e2a8e82c79aeac23
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: d822a4dc50d3f33ba4c217b8fcc557acc2bfdb3e
+ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69521810"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69621029"
 ---
 # <a name="building-html-views-using-razor-templates"></a>Criando exibições HTML usando modelos do Razor
 
@@ -167,7 +167,7 @@ em seguida, defina o cliente na exibição da Web:
 webView.SetWebViewClient (new HybridWebViewClient ());
 ```
 
-### <a name="calling-javascript-from-c"></a>Chamando JavaScript deC#
+### <a name="calling-javascript-from-c"></a>Chamando JavaScript a partir de C\#
 
 Além de informar uma exibição da Web para carregar uma nova página HTML, C# o código também pode executar JavaScript na página atualmente exibida. Blocos de código JavaScript inteiros podem ser criados C# usando cadeias de caracteres e executados, ou você pode criar chamadas de método para o JavaScript `script` já disponível na página por meio de marcas.
 
@@ -465,7 +465,7 @@ var parameters = System.Web.HttpUtility.ParseQueryString(resources[1]);
 
 Depois de manipular a URL, o método anula a navegação para que a exibição da Web não tente terminar de navegar para a URL personalizada.
 
-#### <a name="manipulating-the-template-from-c"></a>Manipulando o modelo deC#
+#### <a name="manipulating-the-template-from-c"></a>Manipulando o modelo a partir de C\#
 
 A comunicação com uma exibição da Web HTML C# renderizada a partir do é feita chamando JavaScript na exibição da Web. No Ios, isso é feito chamando `EvaluateJavascript` o UIWebView:
 

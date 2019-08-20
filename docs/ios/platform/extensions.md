@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: 4137ce7542a213a0a4c27b6a66b38828e4646520
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: dbc0802b39e8fa736ec3b71dc23f488d08fd8a42
+ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68653464"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69621088"
 ---
 # <a name="ios-extensions-in-xamarinios"></a>extensões do iOS no Xamarin. iOS
 
@@ -29,11 +29,11 @@ Todas as extensões são instaladas em conjunto com um aplicativo de contêiner 
 
 |Tipo|Descrição|Ponto de extensão|Aplicativo host|
 |--- |--- |--- |--- |
-|Ação|Editor ou Visualizador especializado para um tipo de mídia específico|`com.apple.ui-services`|Qualquer|
+|Ação|Editor ou Visualizador especializado para um tipo de mídia específico|`com.apple.ui-services`|Any|
 |Provedor de documentos|Permite que o aplicativo use um repositório de documentos remoto|`com.apple.fileprovider-ui`|Aplicativos usando um [UIDocumentPickerViewController](xref:UIKit.UIDocumentPickerViewController)|
-|Teclado|Teclados alternativos|`com.apple.keyboard-service`|Qualquer|
+|Teclado|Teclados alternativos|`com.apple.keyboard-service`|Any|
 |Edição de fotos|Manipulação e edição de fotos|`com.apple.photo-editing`|Editor de photos. app|
-|Compartilhar|Compartilha dados com redes sociais, serviços de mensagens, etc.|`com.apple.share-services`|Qualquer|
+|Compartilhar|Compartilha dados com redes sociais, serviços de mensagens, etc.|`com.apple.share-services`|Any|
 |Hoje|"Widgets" que aparecem na tela atual ou no centro de notificações|`com.apple.widget-extensions`|Hoje e centro de notificações|
 
 [Pontos de extensão adicionais](~/ios/platform/introduction-to-ios10/index.md#app-extensions) foram adicionados no Ios 10.
@@ -91,13 +91,13 @@ Além disso, o projeto da extensão tem os seguintes requisitos:
 
 - Ele deve ter um identificador de pacote que começa com o identificador de pacote do seu aplicativo de contêiner. Por exemplo, se o aplicativo de contêiner tiver um identificador de pacote `com.myCompany.ContainerApp`de, o identificador da extensão poderá `com.myCompany.ContainerApp.MyExtension`ser: 
 
-    ![](extensions-images/bundleidentifiers.png) 
+  ![](extensions-images/bundleidentifiers.png) 
 - Ele deve definir a chave `NSExtensionPointIdentifier`, com um valor apropriado (por `com.apple.widget-extension` exemplo, para um widget da central de notificações **atual** ) `Info.plist` , em seu arquivo.
-- Ele também *deve definir a* `NSExtensionMainStoryboard` chave ou a `NSExtensionPrincipalClass` chave em seu `Info.plist` arquivo com um valor apropriado:
-    - Use a `NSExtensionMainStoryboard` chave para especificar o nome do Storyboard que apresenta a interface do usuário principal para a extensão ( `.storyboard`menos). Por exemplo, `Main` para o `Main.storyboard` arquivo.
-    - Use a `NSExtensionPrincipalClass` chave para especificar a classe que será inicializada quando a extensão for iniciada. O valor deve corresponder ao valor de **registro** de `UIViewController`seu: 
+- Ele também deve definir a `NSExtensionMainStoryboard` chave ou a `NSExtensionPrincipalClass` chave em seu `Info.plist` arquivo com um valor apropriado:
+  - Use a `NSExtensionMainStoryboard` chave para especificar o nome do Storyboard que apresenta a interface do usuário principal para a extensão ( `.storyboard`menos). Por exemplo, `Main` para o `Main.storyboard` arquivo.
+  - Use a `NSExtensionPrincipalClass` chave para especificar a classe que será inicializada quando a extensão for iniciada. O valor deve corresponder ao valor de **registro** de `UIViewController`seu: 
 
-    ![](extensions-images/registerandprincipalclass.png)
+  ![](extensions-images/registerandprincipalclass.png)
 
 Tipos específicos de extensões podem ter requisitos adicionais. Por exemplo, uma classe principal da extensão do **centro de notificação** ou de **hoje** deve implementar [INCWidgetProviding](xref:NotificationCenter.INCWidgetProviding).
 
@@ -182,28 +182,28 @@ using CoreGraphics;
 
 namespace DaysRemaining
 {
-    [Register("CodeBasedViewController")]
-    public class CodeBasedViewController : UIViewController, INCWidgetProviding
+  [Register("CodeBasedViewController")]
+  public class CodeBasedViewController : UIViewController, INCWidgetProviding
+  {
+    public CodeBasedViewController ()
     {
-        public CodeBasedViewController ()
-        {
-        }
-
-        public override void ViewDidLoad ()
-        {
-            base.ViewDidLoad ();
-
-            // Add label to view
-            var TodayMessage = new UILabel (new CGRect (0, 0, View.Frame.Width, View.Frame.Height)) {
-                TextAlignment = UITextAlignment.Center
-            };
-
-            View.AddSubview (TodayMessage);
-            
-            // Insert code to power extension here...
-
-        }
     }
+
+    public override void ViewDidLoad ()
+    {
+      base.ViewDidLoad ();
+
+      // Add label to view
+      var TodayMessage = new UILabel (new CGRect (0, 0, View.Frame.Width, View.Frame.Height)) {
+        TextAlignment = UITextAlignment.Center
+      };
+
+      View.AddSubview (TodayMessage);
+
+      // Insert code to power extension here...
+
+    }
+  }
 }
 ```
 
@@ -216,19 +216,19 @@ Com a interface do usuário criada, abra o `TodayViewController.cs` ou o `CodeBa
 ```csharp
 public override void ViewDidLoad ()
 {
-    base.ViewDidLoad ();
+  base.ViewDidLoad ();
 
-    // Calculate the values
-    var dayOfYear = DateTime.Now.DayOfYear;
-    var leapYearExtra = DateTime.IsLeapYear (DateTime.Now.Year) ? 1 : 0;
-    var daysRemaining = 365 + leapYearExtra - dayOfYear;
+  // Calculate the values
+  var dayOfYear = DateTime.Now.DayOfYear;
+  var leapYearExtra = DateTime.IsLeapYear (DateTime.Now.Year) ? 1 : 0;
+  var daysRemaining = 365 + leapYearExtra - dayOfYear;
 
-    // Display the message
-    if (daysRemaining == 1) {
-        TodayMessage.Text = String.Format ("Today is day {0}. There is one day remaining in the year.", dayOfYear);
-    } else {
-        TodayMessage.Text = String.Format ("Today is day {0}. There are {1} days remaining in the year.", dayOfYear, daysRemaining);
-    }
+  // Display the message
+  if (daysRemaining == 1) {
+    TodayMessage.Text = String.Format ("Today is day {0}. There is one day remaining in the year.", dayOfYear);
+  } else {
+    TodayMessage.Text = String.Format ("Today is day {0}. There are {1} days remaining in the year.", dayOfYear, daysRemaining);
+  }
 }
 ```
 

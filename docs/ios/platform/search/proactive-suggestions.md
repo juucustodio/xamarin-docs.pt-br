@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: fe3dc38d632d921ebd636ead381babbba448d62e
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 49e1b382d711f3486782e9e8747ef422c6853979
+ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68654137"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69620987"
 ---
 # <a name="introduction-to-proactive-suggestions-in-xamarinios"></a>Introdução às sugestões proativas no Xamarin. iOS
 
@@ -346,54 +346,54 @@ using Intents;
 
 namespace MonkeyNotification
 {
-    public class DonateInteraction
+  public class DonateInteraction
+  {
+    #region Constructors
+    public DonateInteraction ()
     {
-        #region Constructors
-        public DonateInteraction ()
-        {
-        }
-        #endregion
-
-        #region Public Methods
-        public void SendMessageIntent (string text, INPerson from, INPerson[] to)
-        {
-
-            // Create App Activity
-            var activity = new NSUserActivity ("com.xamarin.message");
-
-            // Define details
-            var info = new NSMutableDictionary ();
-            info.Add (new NSString ("message"), new NSString (text));
-
-            // Populate Activity
-            activity.Title = "Sent MonkeyChat Message";
-            activity.UserInfo = info;
-
-            // Enable capabilities
-            activity.EligibleForSearch = true;
-            activity.EligibleForHandoff = true;
-            activity.EligibleForPublicIndexing = true;
-
-            // Inform system of Activity
-            activity.BecomeCurrent ();
-
-            // Create message Intent
-            var intent = new INSendMessageIntent (to, text, "", "MonkeyChat", from);
-
-            // Create Intent Reaction
-            var response = new INSendMessageIntentResponse (INSendMessageIntentResponseCode.Success, activity);
-
-            // Create interaction
-            var interaction = new INInteraction (intent, response);
-
-            // Donate interaction to the system
-            interaction.DonateInteraction ((err) => {
-                // Handle donation error
-                ...
-            });
-        }
-        #endregion
     }
+    #endregion
+
+    #region Public Methods
+    public void SendMessageIntent (string text, INPerson from, INPerson[] to)
+    {
+
+      // Create App Activity
+      var activity = new NSUserActivity ("com.xamarin.message");
+
+      // Define details
+      var info = new NSMutableDictionary ();
+      info.Add (new NSString ("message"), new NSString (text));
+
+      // Populate Activity
+      activity.Title = "Sent MonkeyChat Message";
+      activity.UserInfo = info;
+
+      // Enable capabilities
+      activity.EligibleForSearch = true;
+      activity.EligibleForHandoff = true;
+      activity.EligibleForPublicIndexing = true;
+
+      // Inform system of Activity
+      activity.BecomeCurrent ();
+
+      // Create message Intent
+      var intent = new INSendMessageIntent (to, text, "", "MonkeyChat", from);
+
+      // Create Intent Reaction
+      var response = new INSendMessageIntentResponse (INSendMessageIntentResponseCode.Success, activity);
+
+      // Create interaction
+      var interaction = new INInteraction (intent, response);
+
+      // Donate interaction to the system
+      interaction.DonateInteraction ((err) => {
+        // Handle donation error
+        ...
+      });
+    }
+    #endregion
+  }
 }
 ```
 
@@ -420,8 +420,8 @@ Por fim, o sistema é uma notificação da interação:
 ```csharp
 // Donate interaction to the system
 interaction.DonateInteraction ((err) => {
-    // Handle donation error
-    ...
+  // Handle donation error
+  ...
 });
 ```
 
@@ -453,25 +453,25 @@ Os esquemas são organizados em uma árvore como estrutura, em que tipos especí
 
 Por exemplo, se a página da Web incluía os seguintes dados:
 
-```xml
-<script type="application/ld+json>
+```html
+<script type="application/ld+json">
 {
-    "@context":"http://schema.org",
-    "@type":"Restaurant",
-    "telephone":"(415) 781-1111",
-    "url":"https://www.yanksing.com",
-    "address":{
-        "@type":"PostalAddress",
-        "streetAddress":"101 Spear St",
-        "addressLocality":"San Francisco",
-        "postalCode":"94105",
-        "addressRegion":"CA"
-    },
-    "aggregateRating":{
-        "@type":"AggregateRating",
-        "ratingValue":"3.5",
-        "reviewCount":"2022"
-    }
+  "@context":"http://schema.org",
+  "@type":"Restaurant",
+  "telephone":"(415) 781-1111",
+  "url":"https://www.yanksing.com",
+  "address":{
+    "@type":"PostalAddress",
+    "streetAddress":"101 Spear St",
+    "addressLocality":"San Francisco",
+    "postalCode":"94105",
+    "addressRegion":"CA"
+  },
+  "aggregateRating":{
+    "@type":"AggregateRating",
+    "ratingValue":"3.5",
+    "reviewCount":"2022"
+  }
 }
 </script>
 ```
@@ -544,29 +544,29 @@ using CoreLocation;
 
 namespace MonkeyChat
 {
-    [Register ("AppDelegate")]
-    public class AppDelegate : UIApplicationDelegate, IUISplitViewControllerDelegate
+  [Register ("AppDelegate")]
+  public class AppDelegate : UIApplicationDelegate, IUISplitViewControllerDelegate
+  {
+    ...
+    
+    public override bool OpenUrl (UIApplication app, NSUrl url, NSDictionary options)
     {
-        ...
-        
-        public override bool OpenUrl (UIApplication app, NSUrl url, NSDictionary options)
-        {
-            if (MKDirectionsRequest.IsDirectionsRequestUrl (url)) {
-                var request = new MKDirectionsRequest (url);
-                var coordinate = request.Destination?.Placemark.Location?.Coordinate;
-                var address = request.Destination.Placemark.AddressDictionary;
-                if (coordinate.IsValid()) {
-                    var geocoder = new CLGeocoder ();
-                    geocoder.GeocodeAddress (address, (place, err) => {
-                        // Handle the display of the address
+      if (MKDirectionsRequest.IsDirectionsRequestUrl (url)) {
+        var request = new MKDirectionsRequest (url);
+        var coordinate = request.Destination?.Placemark.Location?.Coordinate;
+        var address = request.Destination.Placemark.AddressDictionary;
+        if (coordinate.IsValid()) {
+          var geocoder = new CLGeocoder ();
+          geocoder.GeocodeAddress (address, (place, err) => {
+            // Handle the display of the address
 
-                    });
-                }
-            }
-
-            return true;
+          });
         }
-    }       
+      }
+
+      return true;
+    }
+  }    
 }
 ```
 
@@ -587,8 +587,8 @@ Novo no iOS 10, o aplicativo pode ser enviado um endereço que não tem coordena
 ```csharp
 var geocoder = new CLGeocoder();
 geocoder.GeocodeAddress(address, (place, err)=> {
-    // Handle the display of the address
-    
+  // Handle the display of the address
+  
 });
 
 ```
@@ -602,9 +602,9 @@ Para aplicativos que lidam com mídia, o iOS dá suporte aos seguintes comportam
 - o iOS promove aplicativos que o usuário provavelmente usará com base em seu comportamento anterior.
 - As sugestões relacionadas ao aplicativo serão apresentadas em destaque e na exibição atual.
 - Se o aplicativo atender a um dos seguintes gatilhos, ele poderá ser elevado a uma sugestão de tela de bloqueio:
-    - Depois de conectar os fones de ouvido ou um dispositivo Bluetooth, faça uma conexão.
-    - Depois de entrar em um carro.
-    - Depois de chegar em casa ou trabalho. 
+  - Depois de conectar os fones de ouvido ou um dispositivo Bluetooth, faça uma conexão.
+  - Depois de entrar em um carro.
+  - Depois de chegar em casa ou trabalho. 
 
 Ao incluir uma chamada de API simples no iOS 10, o desenvolvedor pode criar uma experiência de tela de bloqueio mais atraente para os usuários do aplicativo de mídia. Usando a `MPPlayableContentManager` classe para gerenciar a reprodução de mídia, os controles de mídia completos (como os apresentados pelo aplicativo de música) serão apresentados na tela de bloqueio do aplicativo.
 
@@ -616,66 +616,66 @@ using UIKit;
 
 namespace MonkeyPlayer
 {
-    public class PlayableContentDelegate : MPPlayableContentDelegate
+  public class PlayableContentDelegate : MPPlayableContentDelegate
+  {
+    #region Constructors
+    public PlayableContentDelegate ()
     {
-        #region Constructors
-        public PlayableContentDelegate ()
-        {
-        }
-        #endregion
-
-        #region Override methods
-        public override void InitiatePlaybackOfContentItem (MPPlayableContentManager contentManager, Foundation.NSIndexPath indexPath, Action<Foundation.NSError> completionHandler)
-        {
-            // Access the media item to play
-            var item = LoadMediaItem (indexPath);
-
-            // Populate the lock screen
-            PopulateNowPlayingItem (item);
-
-            // Prep item to be played
-            var status = PreparePlayback (item);
-
-            // Call completion handler
-            completionHandler (null);
-        }
-        #endregion
-
-        #region Public Methods
-        public MPMediaItem LoadMediaItem (Foundation.NSIndexPath indexPath)
-        {
-            var item = new MPMediaItem ();
-
-            // Load item from media store
-            ...
-
-            return item;
-        }
-
-        public void PopulateNowPlayingItem (MPMediaItem item)
-        {
-            // Get Info Center and album art
-            var infoCenter = MPNowPlayingInfoCenter.DefaultCenter;
-            var albumArt = (item.Artwork == null) ? new MPMediaItemArtwork (UIImage.FromFile ("MissingAlbumArt.png")) : item.Artwork;
-
-            // Populate Info Center
-            infoCenter.NowPlaying.Title = item.Title;
-            infoCenter.NowPlaying.Artist = item.Artist;
-            infoCenter.NowPlaying.AlbumTitle = item.AlbumTitle;
-            infoCenter.NowPlaying.PlaybackDuration = item.PlaybackDuration;
-            infoCenter.NowPlaying.Artwork = albumArt;
-        }
-
-        public bool PreparePlayback (MPMediaItem item)
-        {
-            // Prepare media item for playback
-            ...
-
-            // Return results
-            return true;
-        }
-        #endregion
     }
+    #endregion
+
+    #region Override methods
+    public override void InitiatePlaybackOfContentItem (MPPlayableContentManager contentManager, Foundation.NSIndexPath indexPath, Action<Foundation.NSError> completionHandler)
+    {
+      // Access the media item to play
+      var item = LoadMediaItem (indexPath);
+
+      // Populate the lock screen
+      PopulateNowPlayingItem (item);
+
+      // Prep item to be played
+      var status = PreparePlayback (item);
+
+      // Call completion handler
+      completionHandler (null);
+    }
+    #endregion
+
+    #region Public Methods
+    public MPMediaItem LoadMediaItem (Foundation.NSIndexPath indexPath)
+    {
+      var item = new MPMediaItem ();
+
+      // Load item from media store
+      ...
+
+      return item;
+    }
+
+    public void PopulateNowPlayingItem (MPMediaItem item)
+    {
+      // Get Info Center and album art
+      var infoCenter = MPNowPlayingInfoCenter.DefaultCenter;
+      var albumArt = (item.Artwork == null) ? new MPMediaItemArtwork (UIImage.FromFile ("MissingAlbumArt.png")) : item.Artwork;
+
+      // Populate Info Center
+      infoCenter.NowPlaying.Title = item.Title;
+      infoCenter.NowPlaying.Artist = item.Artist;
+      infoCenter.NowPlaying.AlbumTitle = item.AlbumTitle;
+      infoCenter.NowPlaying.PlaybackDuration = item.PlaybackDuration;
+      infoCenter.NowPlaying.Artwork = albumArt;
+    }
+
+    public bool PreparePlayback (MPMediaItem item)
+    {
+      // Prepare media item for playback
+      ...
+
+      // Return results
+      return true;
+    }
+    #endregion
+  }
 }
 ```
 

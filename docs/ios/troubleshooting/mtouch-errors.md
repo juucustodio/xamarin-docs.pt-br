@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/06/2018
-ms.openlocfilehash: 77174070b227bf8cba94078b1ed1f0a6a8fcf1f8
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 588c46274aa0b4d77742d004bf1fbe91e56a42c6
+ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528704"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69620600"
 ---
 # <a name="xamarinios-errors"></a>Erros do Xamarin. iOS
 
@@ -24,7 +24,7 @@ Por exemplo, parâmetros, ambiente, ferramentas ausentes.
 <!--
  MT0xxx mtouch itself, e.g. parameters, environment (e.g. missing tools)
  https://github.com/xamarin/xamarin-macios/blob/master/tools/mtouch/error.cs
-    -->
+  -->
 
 <a name="MT0000" />
 
@@ -1975,14 +1975,14 @@ Isso ocorre ao subclasse de um tipo de estrutura e ao tentar implementar um mét
 ```csharp
 class MyNSObject : NSObject
 {
-    [Export ("retain")]
-    new void Retain () {}
+  [Export ("retain")]
+  new void Retain () {}
 
-    [Export ("release")]
-    new void Release () {}
+  [Export ("release")]
+  new void Release () {}
 
-    [Export ("dealloc")]
-    new void Dealloc () {}
+  [Export ("dealloc")]
+  new void Dealloc () {}
 }
 ```
 
@@ -1995,14 +1995,14 @@ class MyNSObject : NSObject
 
 class MyCustomNSObject : MyNSObject
 {
-    [Export ("retain")]
-    new void Retain () {}
+  [Export ("retain")]
+  new void Retain () {}
 
-    [Export ("release")]
-    new void Release () {}
+  [Export ("release")]
+  new void Release () {}
 
-    [Export ("dealloc")]
-    new void Dealloc () {}
+  [Export ("dealloc")]
+  new void Dealloc () {}
 }
 ```
 
@@ -2414,8 +2414,8 @@ O argumento `--ignore-dynamic-symbol=symbol` de linha de comando foi passado, ma
 Há dois motivos principais para isso:
 
 * O nome do símbolo está incorreto.
-    * Não coloque um sublinhado no nome do símbolo.
-    * O símbolo para as classes Objective- `OBJC_CLASS_$_<classname>`C é.
+  * Não coloque um sublinhado no nome do símbolo.
+  * O símbolo para as classes Objective- `OBJC_CLASS_$_<classname>`C é.
 * O símbolo está correto, mas é um símbolo que já é preservado por meios normais (algumas opções de compilação fazem com que a lista exata de símbolos dinâmicos varie).
 
 ### <a name="mt53xx-other-tools"></a>MT53xx: Outras ferramentas

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: 1e3e1a2165c9acee127a543301f00262aa4bdc4f
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 2bd704b17f5aff1b4d3f2da1813d1eb19ef29e59
+ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69529089"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69620676"
 ---
 # <a name="the-model-view-viewmodel-pattern"></a>O padrão Model-View-ViewModel
 
@@ -284,7 +284,7 @@ Os comportamentos permitem que a funcionalidade seja adicionada aos controles da
 
 Um comportamento que é anexado a um controle por meio de propriedades anexadas é conhecido como um *comportamento anexado*. O comportamento pode então usar a API exposta do elemento ao qual ele está anexado para adicionar funcionalidade a esse controle, ou outros controles, na árvore visual da exibição. O aplicativo móvel eShopOnContainers contém a `LineColorBehavior` classe, que é um comportamento anexado. Para obter mais informações sobre esse comportamento, consulte [exibindo erros de validação](~/xamarin-forms/enterprise-application-patterns/validation.md#displaying_validation_errors).
 
-Um comportamento do Xamarin. Forms é uma classe derivada da [`Behavior`](xref:Xamarin.Forms.Behavior) classe ou [`Behavior<T>`](xref:Xamarin.Forms.Behavior`1) , em que `T `é o tipo do controle ao qual o comportamento deve ser aplicado. Essas classes fornecem `OnAttachedTo` métodos `OnDetachingFrom` e, que devem ser substituídos para fornecer lógica que será executada quando o comportamento for anexado e desanexado dos controles.
+Um comportamento do Xamarin. Forms é uma classe derivada da [`Behavior`](xref:Xamarin.Forms.Behavior) classe ou [`Behavior<T>`](xref:Xamarin.Forms.Behavior`1) , em que `T` é o tipo do controle ao qual o comportamento deve ser aplicado. Essas classes fornecem `OnAttachedTo` métodos `OnDetachingFrom` e, que devem ser substituídos para fornecer lógica que será executada quando o comportamento for anexado e desanexado dos controles.
 
 No aplicativo móvel eShopOnContainers, a `BindableBehavior<T>` classe deriva [`Behavior<T>`](xref:Xamarin.Forms.Behavior`1) da classe. A finalidade da `BindableBehavior<T>` classe é fornecer uma classe base para comportamentos do Xamarin. Forms que exijam que [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) o comportamento seja definido para o controle anexado.
 

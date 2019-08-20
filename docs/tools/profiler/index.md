@@ -6,12 +6,12 @@ ms.assetid: 3247fcee-6acc-470d-ab87-c1c511d67363
 author: lobrien
 ms.author: laobri
 ms.date: 06/03/2018
-ms.openlocfilehash: 4541a795d819c3738fffbb3224ef35dce5fc5521
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: ac77977f3832b0ab7ba440a2c795037e8fcf5f2e
+ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69529051"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69620989"
 ---
 # <a name="xamarin-profiler"></a>Criador de perfil do Xamarin
 
@@ -68,21 +68,21 @@ Atualmente, o Xamarin Profiler pode ser usado para testar aplicativos Xamarin. A
 O suporte para o Xamarin Profiler está disponível nas seguintes plataformas:
 
 - Visual Studio para Mac (macOS, com licença Enterprise)
-    - Android
-        - Dispositivo e emulador
-    - iOS
-        - Dispositivo e simulador
-    - tvOS (não há suporte para o instrumento de tempo)
-        - Dispositivo e simulador
-    - Mac
+  - Android
+    - Dispositivo e emulador
+  - iOS
+    - Dispositivo e simulador
+  - tvOS (não há suporte para o instrumento de tempo)
+    - Dispositivo e simulador
+  - Mac
 
 - Visual Studio (somente versão **Enterprise** )
-    - Android
-        - Dispositivo e emulador
-    - iOS [experimental]
-        - Dispositivo e simulador
-    - tvOS
-        - Dispositivo e simulador
+  - Android
+    - Dispositivo e emulador
+  - iOS [experimental]
+    - Dispositivo e simulador
+  - tvOS
+    - Dispositivo e simulador
 
 Observe que você **só** pode criar o perfil de configurações de **depuração** .
 

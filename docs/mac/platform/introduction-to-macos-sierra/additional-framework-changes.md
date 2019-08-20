@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 5c8b2b20d037edd35fd3c50d1418df2110cb8e4c
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: b382b7dd66722df6acb4bb7c90e401e5895c0947
+ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528897"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69620900"
 ---
 # <a name="additional-macos-sierra-framework-changes"></a>Alterações adicionais de estrutura do MacOS Serra
 
@@ -33,17 +33,17 @@ O aprimoramento a seguir foi feito na estrutura de aceleração para macOS Sierr
 O aprimoramento a seguir foi feito para a estrutura AppKit para macOS Sierra:
 
 - Vários aprimoramentos para `NSCollectionView` , como:
-    - **Seções recolhíveis** – permite que o usuário recolha uma seção de exibição de coleção em uma única linha horizontal.
-    - **Cabeçalhos flutuantes** -cabeçalhos e rodapés agora podem ser flutuados (em um layout de fluxo) usando a mesma API que [UICollectionView](https://developer.apple.com/reference/uikit/uicollectionview) no Ios.
-    - **Exibições em segundo plano roláveis** – um plano de fundo de exibições de coleção agora pode ser definido para rolar junto com o conteúdo.
+  - **Seções recolhíveis** – permite que o usuário recolha uma seção de exibição de coleção em uma única linha horizontal.
+  - **Cabeçalhos flutuantes** -cabeçalhos e rodapés agora podem ser flutuados (em um layout de fluxo) usando a mesma API que [UICollectionView](https://developer.apple.com/reference/uikit/uicollectionview) no Ios.
+  - **Exibições em segundo plano roláveis** – um plano de fundo de exibições de coleção agora pode ser definido para rolar junto com o conteúdo.
 - A passagem de layout de exibição adiada foi otimizada e estendida.
 - A API do tipo "arrastar e soltar" agora inclui `NSFilePromiseProvider` as `NSFilePromiseReceiver` novas classes e para dar suporte ao arrastar pássaros.
 - Vários construtores de conveniência foram adicionados aos controles existentes:
-    - `NSButton`inclui novos construtores para a criação de botões de push, caixas de seleção e botões de opção.
-    - `NSTextField`inclui novos construtores para a criação de rótulos de quebra automática e sem encapsulamento, rótulos atribuídos e campos de texto editáveis.
-    - `NSSegmentedControl`inclui novos construtores para a criação de controles segmentados de um grupo de rótulos ou imagens.
-    - `NSSlider`inclui novos construtores para a criação de controles deslizantes lineares horizontais.
-    - `NSImageView`inclui novos construtores para a criação de exibições de imagem não editáveis `NSImage`de um determinado.
+  - `NSButton`inclui novos construtores para a criação de botões de push, caixas de seleção e botões de opção.
+  - `NSTextField`inclui novos construtores para a criação de rótulos de quebra automática e sem encapsulamento, rótulos atribuídos e campos de texto editáveis.
+  - `NSSegmentedControl`inclui novos construtores para a criação de controles segmentados de um grupo de rótulos ou imagens.
+  - `NSSlider`inclui novos construtores para a criação de controles deslizantes lineares horizontais.
+  - `NSImageView`inclui novos construtores para a criação de exibições de imagem não editáveis `NSImage`de um determinado.
 - O novo `NSGridView` foi adicionado para fazer o layout automático de uma coleção de subexibições em uma grade com linhas e colunas de tamanho variável que podem ser ocultadas ou exibidas dinamicamente.
 
 <a name="AVFoundation-Framework-Enhancements" />

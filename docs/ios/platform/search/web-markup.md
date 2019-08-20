@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: bd4c09b7defcc3038919a4dea841d7bd1d02f39e
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 77d526fd49ac62788bea1ab885cb1248ffc5697e
+ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68654075"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69620955"
 ---
 # <a name="search-with-web-markup-in-xamarinios"></a>Pesquisar com marcação da Web no Xamarin. iOS
 
@@ -46,7 +46,7 @@ A maneira mais fácil de fazer o Apple encontrar o site do seu aplicativo é us�
 
 Forneça uma faixa de aplicativo inteligente em seu site para apresentar um link limpo em seu aplicativo. Se o aplicativo ainda não estiver instalado, o Safari solicitará automaticamente que o usuário instale seu aplicativo. Caso contrário, o uso pode tocar no link de **exibição** para iniciar seu aplicativo no site. Por exemplo, para criar uma faixa de aplicativo inteligente, você pode usar o seguinte código:
 
-```xml
+```html
 <meta name="AppName" content="app-id=123456, app-argument=http://company.com/AppName">
 ```
 
@@ -65,7 +65,7 @@ Novo no iOS 9, os links universais fornecem uma alternativa melhor para faixas d
 
 Você pode fornecer links profundos para o conteúdo do seu aplicativo usando um cartão do Twitter. Por exemplo:
 
-```xml
+```html
 <meta name="twitter:app:name:iphone" content="AppName">
 <meta name="twitter:app:id:iphone" content="AppNameID">
 <meta name="twitter:app:url:iphone" content="AppNameURL">
@@ -77,7 +77,7 @@ Para obter mais informações, consulte a documentação do [protocolo de cartã
 
 Você pode fornecer links profundos para o conteúdo do aplicativo usando um link de aplicativo do Facebook. Por exemplo:
 
-```xml
+```html
 <meta property="al:ios:app_name" content="AppName">
 <meta property="al:ios:app_store_id" content="AppNameID">
 <meta property="al:ios:url" content="AppNameURL">
@@ -93,23 +93,23 @@ Você precisa adicionar suporte para abrir e exibir links profundos em seu aplic
 public override bool OpenUrl (UIApplication application, NSUrl url, string sourceApplication, NSObject annotation)
 {
 
-    // Handling a URL in the form http://company.com/appname/?123
-    try {
-        var components = new NSUrlComponents(url,true);
-        var path = components.Path;
-        var query = components.Query;
+  // Handling a URL in the form http://company.com/appname/?123
+  try {
+    var components = new NSUrlComponents(url,true);
+    var path = components.Path;
+    var query = components.Query;
 
-        // Is this a known format?
-        if (path == "/appname") {
-            // Display the view controller for the content
-            // specified in query (123)
-            return ContentViewController.LoadContent(query);
-        }
-    } catch {
-        // Ignore issue for now
+    // Is this a known format?
+    if (path == "/appname") {
+      // Display the view controller for the content
+      // specified in query (123)
+      return ContentViewController.LoadContent(query);
     }
+  } catch {
+    // Ignore issue for now
+  }
 
-    return false;
+  return false;
 }
 ```
 
@@ -123,7 +123,7 @@ Os resultados avançados são mais atraentes e podem ajudar a melhorar sua class
 
 Uma opção para fornecer marcação de dados estruturado é usando o Open Graph. Por exemplo:
 
-```xml
+```html
 <meta property="og:image" content="http://company.com/appname/icon.jpg">
 <meta property="og:audio" content="http://company.com/appname/theme.m4a">
 <meta property="og:video" content="http://company.com/appname/tutorial.mp4">
@@ -133,22 +133,20 @@ Para obter mais informações, consulte o site de [gráficos aberto](http://ogp.
 
 Outro formato comum para marcação de dados estruturados é o formato de MicroData do esquema. org. Por exemplo:
 
-```xml
+```html
 <div itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
-    <span itemprop="ratingValue">4** stars -
-    <span itemprop="reviewCount">255** reviews
-
-
+  <span itemprop="ratingValue">4** stars -
+  <span itemprop="reviewCount">255** reviews
 ```
 
 As mesmas informações podem ser representadas no formato JSON-LD do esquema. org:
 
-```xml
+```html
 <script type="application/ld+json">
-    "@content":"http://schema.org",
-    "@type":"AggregateRating",
-    "ratingValue":"4",
-    "reviewCount":"255"
+  "@content":"http://schema.org",
+  "@type":"AggregateRating",
+  "ratingValue":"4",
+  "reviewCount":"255"
 </script>
 ```
 
@@ -179,34 +177,28 @@ Tipos específicos de dados estruturados permitirão que um resultado de pesquis
 
 Por exemplo, definir uma ação para discar um número de telefone pode ser semelhante ao seguinte:
 
-```xml
+```html
 <div itemscope itemtype="http://schema.org/Organization">
-    <span itemprop="telephone">(408) 555-1212**
-
-
+  <span itemprop="telephone">(408) 555-1212**
 ```
 
 Quando esse resultado de pesquisa for apresentado ao usuário final, um pequeno ícone de telefone será exibido no resultado. Se o usuário tocar no ícone, o número especificado será chamado.
 
 O HTML a seguir adicionaria uma ação para reproduzir um arquivo de áudio do resultado da pesquisa:
 
-```xml
+```html
 <div itemscope itemtype="http://schema.org/AudioObject">
-    <span itemprop="contentUrl">http://company.com/appname/greeting.m4a**
-
-
+  <span itemprop="contentUrl">http://company.com/appname/greeting.m4a**
 ```
 
 Por fim, o HTML a seguir adicionaria uma ação para obter instruções do resultado da pesquisa:
 
-```xml
+```html
 <div itemscope itemtype="http://schema.org/PostalAddress">
-    <span itemprop="streetAddress">1 Infinite Loop**
-    <span itemprop="addressLocality">Cupertino**
-    <span itemprop="addressRegion">CA**
-    <span itemprop="postalCode">95014**
-
-
+  <span itemprop="streetAddress">1 Infinite Loop**
+  <span itemprop="addressLocality">Cupertino**
+  <span itemprop="addressRegion">CA**
+  <span itemprop="postalCode">95014**
 ```
 
 Para obter mais informações, consulte o [site do desenvolvedor de pesquisa de aplicativos](https://developer.apple.com/ios/search/)da Apple.

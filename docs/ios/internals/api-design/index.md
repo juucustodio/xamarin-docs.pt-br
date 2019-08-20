@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: 11d9c3d27fa9cf9ba830648d95ef8af9ed386afb
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 5fe0c4d02dbe6cc5b3768ea92179b3781ef09aa9
+ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69526478"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69620853"
 ---
 # <a name="xamarinios-api-design"></a>Design de API do Xamarin. iOS
 
@@ -48,16 +48,16 @@ Esses são alguns dos princípios de design para as associações do Xamarin. iO
 - Incentive a exploração no IDE das APIs:
 
   - Por exemplo, em vez de expor uma matriz de tipo fraco como esta:
-    
+
     ```objc
     NSArray *getViews
     ```
     Expor um tipo forte, desta forma:
-    
+
     ```csharp
     NSView [] Views { get; set; }
     ```
-    
+
     Isso dá Visual Studio para Mac a capacidade de fazer a conclusão automática ao navegar pela API, disponibilizar todas `System.Array` as operações no valor retornado e permitir que o valor de retorno participe no LINQ.
 
 - Tipos C# nativos:
@@ -72,8 +72,8 @@ Esses são alguns dos princípios de design para as associações do Xamarin. iO
 
 - Suporte ao padrão delegado Objective-C:
 
-    - C#sistema de eventos
-    - Expor C# delegados (lambdas, métodos anônimos e `System.Delegate`) para APIs de Objective-C como blocos
+  - C#sistema de eventos
+  - Expor C# delegados (lambdas, métodos anônimos e `System.Delegate`) para APIs de Objective-C como blocos
 
 ### <a name="assemblies"></a>Assemblies
 

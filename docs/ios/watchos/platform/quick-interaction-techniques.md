@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: 83b8b6b443a794b1001c581f45299dbd22133c80
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: ddefae8ad24b74a3c9ed05bf46b54430c00beaea
+ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656423"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69620517"
 ---
 # <a name="quick-interaction-techniques-for-watchos-3-in-xamarin"></a>Técnicas de interação rápida para watchOS 3 no Xamarin
 
@@ -47,12 +47,12 @@ Devido à natureza resumida dos aplicativos Apple Watch, a Apple sugere que o co
 A Apple adicionou vários novos recursos e APIs para WatchKit para auxiliar o desenvolvedor na adição de interações rápidas aos seus aplicativos Apple Watch:
 
 - o watchOS 3 fornece acesso a novos tipos de entrada do usuário, como:
-    - Reconhecedores de gesto
-    - Rotação de Digital Crown 
+  - Reconhecedores de gesto
+  - Rotação de Digital Crown 
 - o watchOS 3 fornece novas maneiras de exibir e atualizar informações, como:
-    - Navegação de tabela avançada
-    - Novo suporte à estrutura de notificação de usuário
-    - Integração de SpriteKit e SceneKit
+  - Navegação de tabela avançada
+  - Novo suporte à estrutura de notificação de usuário
+  - Integração de SpriteKit e SceneKit
 
 Ao implementar esses novos recursos, o desenvolvedor pode garantir que seu aplicativo watchOS 3 seja resumido, acionável e responsivo.
 
@@ -63,11 +63,11 @@ Se o desenvolvedor tiver implementado os reconhecedores de gestos no iOS, eles d
 o watchOS 3 dará suporte aos quatro reconhecedores de gestos a seguir:
 
 - Tipos de gestos discretos:
-    - Gesto de passar o dedo`WKSwipeGestureRecognizer`().
-    - O gesto de toque`WKTapGestureRecognizer`().
+  - Gesto de passar o dedo`WKSwipeGestureRecognizer`().
+  - O gesto de toque`WKTapGestureRecognizer`().
 - Tipos de gestos contínuos:
-    - O gesto de panorâmica`WKPanGestureRecognizer`().
-    - O gesto de pressionamento longo`WKLongPressGestureRecognizer`().
+  - O gesto de panorâmica`WKPanGestureRecognizer`().
+  - O gesto de pressionamento longo`WKLongPressGestureRecognizer`().
 
 Para implementar um dos novos reconhecedores de gesto, basta arrastá-lo para uma superfície de design no designer do iOS em Visual Studio para Mac e configurar suas propriedades.
 
@@ -96,8 +96,8 @@ A Apple sugere o seguinte ao trabalhar com reconhecedores de gestos no watchOS 3
 - Adicione os reconhecedores de gestos para agrupar elementos em vez de controles individuais. Como o Apple Watch tem um tamanho de tela física menor, os elementos de grupo tendem a ser alvos maiores e mais fáceis para o usuário chegar. Além disso, os reconhecedores de gestos podem entrar em conflito com gestos internos já existentes nos controles de interface do usuário nativos.
 - Defina relações de dependência no storyboard do aplicativo de inspeção.
 - Alguns gestos têm precedência sobre outros tipos de gestos, como:
-    - Rolagem
-    - Force Touch
+  - Rolagem
+  - Force Touch
  
 ### <a name="digital-crown-rotation"></a>Rotação de Digital Crown
 
@@ -137,28 +137,28 @@ using Foundation;
 
 namespace MonkeyWatch.MonkeySeeExtension
 {
-    public class CrownDelegate : WKCrownDelegate
+  public class CrownDelegate : WKCrownDelegate
+  {
+    #region Computed Properties
+    public double AccumulatedRotations { get; set;}
+    #endregion
+
+    #region Constructors
+    public CrownDelegate ()
     {
-        #region Computed Properties
-        public double AccumulatedRotations { get; set;}
-        #endregion
-
-        #region Constructors
-        public CrownDelegate ()
-        {
-        }
-        #endregion
-
-        #region Override Methods
-        public override void CrownDidRotate (WKCrownSequencer crownSequencer, double rotationalDelta)
-        {
-            base.CrownDidRotate (crownSequencer, rotationalDelta);
-
-            // Accumulate rotations
-            AccumulatedRotations += rotationalDelta;
-        }
-        #endregion
     }
+    #endregion
+
+    #region Override Methods
+    public override void CrownDidRotate (WKCrownSequencer crownSequencer, double rotationalDelta)
+    {
+      base.CrownDidRotate (crownSequencer, rotationalDelta);
+
+      // Accumulate rotations
+      AccumulatedRotations += rotationalDelta;
+    }
+    #endregion
+  }
 }
 ```
 
@@ -225,8 +225,8 @@ Há várias maneiras pelas quais um usuário pode responder à notificação:
 - Para uma notificação bem definida e apresentada, o usuário não fará nada e simplesmente descartará a notificação.
 - Eles também podem tocar na notificação para iniciar o aplicativo watchOS.
 - Para uma notificação que dá suporte a ações personalizadas, o usuário pode selecionar uma das ações personalizadas. Eles podem ser:
-    - **Ações de primeiro plano** -essas iniciam o aplicativo para executar a ação.
-    - **Ações em segundo plano** -foram sempre roteadas para o iPhone no watchOS 2, mas podem ser roteadas para o WatchApp no watchOS 3.
+  - **Ações de primeiro plano** -essas iniciam o aplicativo para executar a ação.
+  - **Ações em segundo plano** -foram sempre roteadas para o iPhone no watchOS 2, mas podem ser roteadas para o WatchApp no watchOS 3.
 
 Novo para watchOS 3:
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 75affbdb6e919c15c644a68ae45e7ff657a53f6a
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: afaba327299461af6b71846a39eb6c455125feae
+ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68652271"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69620381"
 ---
 # <a name="introduction-to-storyboards-in-xamarinmac"></a>Introdução aos storyboards no Xamarin. Mac
 
@@ -79,9 +79,9 @@ Ao usar a apresentação continuações, você pode substituir `PrepareForSegue`
 Em tempo de design (ao definir o layout da interface do usuário no Interface Builder do Xcode), cada elemento da interface do usuário do aplicativo é dividido nos itens constituintes:
 
 - **Cenas** – que são compostas por:
-    - **Exibir controlador** – que definem as relações entre exibições e os dados que dão suporte a eles.
-    - **Exibições e** subexibições – os elementos reais que compõem a interface do usuário.
-    - **Continuações** de contenção – que definem as relações pai-filho entre cenas.
+  - **Exibir controlador** – que definem as relações entre exibições e os dados que dão suporte a eles.
+  - **Exibições e** subexibições – os elementos reais que compõem a interface do usuário.
+  - **Continuações** de contenção – que definem as relações pai-filho entre cenas.
 - **Continuações de apresentação** -que define modos de apresentação individuais. 
 
 Ao definir cada elemento dessa forma, ele permite o carregamento lento de cada elemento apenas conforme necessário durante o tempo de execução. No macOS, todo o processo foi projetado para permitir que o desenvolvedor criasse interfaces de usuário complexas e flexíveis que exigem um mínimo de suporte de código para fazer com que funcionem, tudo isso enquanto fosse eficiente com os recursos do sistema como possível.

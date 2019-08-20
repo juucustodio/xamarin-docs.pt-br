@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/27/2016
-ms.openlocfilehash: ebaf5bf2fcb82dd98147819ea9e089dcd427affc
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: e2d3a3590e8006c745d28026f3a359350f7ce940
+ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68644446"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69621073"
 ---
-# <a name="native-views-in-c"></a>Exibições nativas em c#
+# <a name="native-views-in-c"></a>Exibições nativas em C\#
 
-[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-nativeembedding)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-nativeembedding)
 
 _Exibições nativas do iOS, Android e UWP podem ser referenciadas diretamente das páginas do xamarin. Forms criadas usando a linguagem c#. Este artigo demonstra como adicionar exibições nativas para um layout de xamarin. Forms criado usando a linguagem c# e como substituir o layout dos modos de exibição personalizados para corrigir seu uso da API de medição._
 

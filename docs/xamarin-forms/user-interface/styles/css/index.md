@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/11/2019
-ms.openlocfilehash: 5d4d7358ca6188f2528ea200f901823f04324ba3
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: ed9a376da0fcfebffd707e2e93919237adfef87b
+ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68647476"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69620832"
 ---
 # <a name="styling-xamarinforms-apps-using-cascading-style-sheets-css"></a>Aplicar estilo a aplicativos xamarin. Forms usando folhas de estilo em cascata (CSS)
 
@@ -129,7 +129,7 @@ Como alternativa, uma folha de estilos pode ser carregada e analisada com o [ `S
 
 Para obter mais informações sobre dicionários de recursos, consulte [dicionários de recursos](~/xamarin-forms/xaml/resource-dictionaries.md).
 
-### <a name="c"></a>C#
+### <a name="c"></a>C\#
 
 No C#, uma folha de estilos pode ser carregada como um recurso inserido e adicionada a um [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary):
 
