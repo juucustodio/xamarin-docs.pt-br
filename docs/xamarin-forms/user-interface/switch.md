@@ -7,20 +7,20 @@ ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 07/03/2019
-ms.openlocfilehash: 58755c54ce2afe80a8bf43adc25a0cf2d90a0bb5
-ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
+ms.openlocfilehash: 825561c6106ba2ab8e5886df64c3ff850750587b
+ms.sourcegitcommit: 9178e2e689f027212ea3e623b556b312985d79fe
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68739463"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69658040"
 ---
 # <a name="xamarinforms-switch"></a>Opção Xamarin. Forms
 
 [![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-switchdemos/)
 
-O Xamarin. Forms [`Switch`](xref:Xamarin.Forms.Switch) é um botão de alternância horizontal que pode ser manipulado pelo usuário para alternar entre os Estados ligado e desligado, que são representados `boolean` por um valor. A `Switch` classe é herdada de [`View`](xref:Xamarin.Forms.View).
+O controle Xamarin. [`Switch`](xref:Xamarin.Forms.Switch) Forms é um botão de alternância horizontal que pode ser manipulado pelo usuário para alternar entre os Estados ligado e desligado, que são representados `boolean` por um valor. A `Switch` classe é herdada de [`View`](xref:Xamarin.Forms.View).
 
-A captura de tela a `Switch` seguir mostra um controle em seus Estados de alternância **on** e **off** no Ios e Android:
+As capturas de tela a `Switch` seguir mostram um controle em seus Estados de alternância **on** e **off** no Ios e no Android:
 
 ![Captura de tela de interruptores em Estados de ligado e off, no Ios e no Android](switch-images/switch-states-default.png "Comutadores no Ios e no Android")
 
@@ -44,7 +44,7 @@ Um `Switch` pode ser instanciado em XAML. Sua `IsToggled` propriedade pode ser d
 Um `Switch` também pode ser criado no código:
 
 ```csharp
-Switch switch = new Switch { IsToggled = true };
+Switch switchControl = new Switch { IsToggled = true };
 ```
 
 ### <a name="switch-style-properties"></a>Alternar Propriedades de estilo
@@ -58,10 +58,10 @@ A `OnColor` propriedade pode ser definida para definir a `Switch` cor quando ela
 A `OnColor` Propriedade também pode ser definida ao criar um `Switch` no código:
 
 ```csharp
-Switch switch = new Switch { OnColor = Color.Orange };
+Switch switchControl = new Switch { OnColor = Color.Orange };
 ```
 
-A captura de tela a `Switch` seguir mostra o **em seus Estados** de alternância liga e `OnColor` **desliga** , com `Color.Orange` a propriedade definida como on Ios e Android:
+As capturas de tela a `Switch` seguir mostram os Estados de alternância **ligado** e **desligado** , `OnColor` com a propriedade `Color.Orange` definida como on Ios e Android:
 
 ![Captura de tela de interruptores em Estados de ligado e off, no Ios e no Android](switch-images/switch-states-oncolor.png "Comutadores no Ios e no Android")
 
@@ -87,8 +87,8 @@ O `sender` argumento no manipulador de eventos é o `Switch` responsável por ac
 O `Toggled` manipulador de eventos também pode ser atribuído no código:
 
 ```csharp
-Switch switch = new Switch {...};
-switch.Toggled += (sender, e) =>
+Switch switchControl = new Switch {...};
+switchControl.Toggled += (sender, e) =>
 {
     // Perform an action after examining e.Value
 }

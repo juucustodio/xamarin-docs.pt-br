@@ -7,22 +7,22 @@ ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 07/12/2019
-ms.openlocfilehash: 391820cf2e94c1131f4082798ee9efa05d8489b8
-ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
+ms.openlocfilehash: 41bb9e082f042e7ca2933d72b4b71a4ff6c4fef4
+ms.sourcegitcommit: 9178e2e689f027212ea3e623b556b312985d79fe
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68739397"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69658031"
 ---
 # <a name="xamarinforms-searchbar"></a>SearchBar Xamarin. Forms
 
 [![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-searchbardemos/)
 
-O Xamarin. Forms [`SearchBar`](xref:Xamarin.Forms.SearchBar) é um controle de entrada do usuário que é usado para iniciar uma pesquisa. O `SearchBar` controle dá suporte a texto de espaço reservado, entrada de consulta, execução de pesquisa e cancelamento. A captura de tela a `SearchBar` seguir mostra uma consulta com os `ListView`resultados exibidos em um:
+O Xamarin. Forms [`SearchBar`](xref:Xamarin.Forms.SearchBar) é um controle de entrada do usuário usado para iniciar uma pesquisa. O `SearchBar` controle dá suporte a texto de espaço reservado, entrada de consulta, execução de pesquisa e cancelamento. A captura de tela a `SearchBar` seguir mostra uma consulta com os `ListView`resultados exibidos em um:
 
 [ ![Captura de tela de Searchbar em Ios e Android](searchbar-images/device-searchbars-cropped.png "Searchbar no Ios e Android") ] (searchbar-images/device-searchbars.png#lightbox "Searchbar no Ios e Android")
 
-O `SearchBar` define as seguintes propriedades:
+A `SearchBar` classe define as seguintes propriedades:
 
 * [`CancelButtonColor`](xref:Xamarin.Forms.SearchBar.CancelButtonColor)é um `Color` que define a cor do botão de cancelamento.
 * [`FontAttributes`](xref:Xamarin.Forms.SearchBar.FontAttributes)é um `FontAttributes` valor de enumeração que determina se `SearchBar` a fonte é negrito, itálico ou nenhuma.
@@ -66,7 +66,7 @@ O `SearchBar` controle define muitas propriedades que personalizam a aparência 
            FontAttributes="Italic" />
 ```
 
-Essas propriedades também podem ser especificadas ao criar um `SearchBar` no código:
+Essas propriedades também podem ser especificadas ao criar um `SearchBar` objeto no código:
 
 ```csharp
 SearchBar searchBar = new SearchBar
@@ -80,7 +80,7 @@ SearchBar searchBar = new SearchBar
 };
 ```
 
-A captura de tela a seguir `SearchBar`mostra o resultado:
+A captura de tela a seguir `SearchBar` mostra o controle resultante:
 
 [ ![Captura de tela de Searchbar personalizado no Ios e Android](searchbar-images/device-searchbars-styled-cropped.png "Searchbar personalizado no Ios e no Android") ] (searchbar-images/device-searchbars-styled.png#lightbox "Searchbar personalizado no Ios e no Android")
 
