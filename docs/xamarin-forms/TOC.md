@@ -169,6 +169,7 @@
 #### [AbsoluteLayout](user-interface/layouts/absolute-layout.md)
 #### [RelativeLayout](user-interface/layouts/relative-layout.md)
 #### [ScrollView](user-interface/layouts/scroll-view.md)
+#### [ContentView](user-interface/layouts/contentview.md)
 #### [Quadro](user-interface/layouts/frame.md)
 #### [LayoutOptions](user-interface/layouts/layout-options.md)
 #### [Margem e preenchimento](user-interface/layouts/margin-and-padding.md)
