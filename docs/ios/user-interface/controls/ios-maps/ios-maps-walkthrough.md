@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: dba8fc3c239a8c20795913d6d1e5409a478c4072
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 64b666e8e8621019da4f2acb71ab5b3bf22fad3a
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68642732"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69889770"
 ---
 # <a name="annotations-and-overlays-in-xamarinios"></a>Anotações e sobreposições no Xamarin. iOS
 
@@ -178,6 +178,7 @@ Vamos começar criando um novo projeto do **Ios vazio**e dando a ele um nome rel
     
     map.AddOverlay (hotelOverlay);  
     ```
+
 Isso conclui o código em `ViewDidLoad`. Agora precisamos implementar nossa `MapDelegate` classe para tratar da criação das exibições de anotação e de sobreposição, respectivamente.
 
 
@@ -192,6 +193,7 @@ Isso conclui o código em `ViewDidLoad`. Agora precisamos implementar nossa `Map
         ...
     }
     ```
+
     Temos apenas uma anotação aqui para que o código de reutilização não seja estritamente necessário, mas é uma boa prática incluí-lo.
 
 1. Implemente `GetViewForAnnotation` o método para retornar um modo de `ConferenceAnnotation` exibição para o usando a imagem **Conference. png** incluída neste passo a passos:
@@ -261,6 +263,7 @@ Isso conclui o código em `ViewDidLoad`. Agora precisamos implementar nossa `Map
         }
     }
     ```
+
     Agora temos o código para a anotação em vigor. Tudo o que resta é adicionar código ao `MapDelegate` para criar a exibição para a sobreposição do hotel.
 
 1. Adicione a seguinte implementação do `GetViewForOverlay` `MapDelegate`ao:
