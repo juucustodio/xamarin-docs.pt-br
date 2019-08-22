@@ -1,31 +1,31 @@
 ---
-title: Configuração personalizada do vinculador
+title: Configuração personalizada do Linker
 description: Este documento descreve um arquivo XML que pode ser usado para configurar o vinculador garantindo explicitamente que o código necessário não seja eliminado do aplicativo vinculado.
 ms.prod: xamarin
 ms.assetid: F8A99E3F-2197-4399-AC81-F1DBAB5729C9
 author: asb3993
 ms.author: amburns
 ms.date: 03/22/2017
-ms.openlocfilehash: caf43e6cb975b65240f5c0f8538b9be175978eac
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: bf934d50c90efaba266cbfac00aa5140ea92009b
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34780454"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69526677"
 ---
-# <a name="custom-linker-configuration"></a>Configuração personalizada do vinculador
+# <a name="custom-linker-configuration"></a>Configuração personalizada do Linker
 
 Se o conjunto padrão de opções não for o suficiente, faça o processo de vinculação com um arquivo XML que descreve o que você deseja do vinculador.
 
 Você pode fornecer definições extras para o vinculador para garantir que o tipo, os métodos e/ou os campos não sejam eliminados do seu aplicativo. Em seu próprio código, o modo preferido é usar o atributo personalizado `[Preserve]`, conforme discutido nos guias [Vinculação no iOS](~/ios/deploy-test/linker.md) e [Vinculação no Android](~/android/deploy-test/linker.md).
 No entanto, se você precisar de algumas definições dos assemblies do SDK ou do produto, a melhor solução para você poderá ser usar um arquivo XML (em vez de adicionar código que garantirá que o vinculador não eliminará itens de que você precise).
 
-Para fazer isso, você define um arquivo XML com o elemento de nível superior <linker>, que contém nós de *assembly* que, por sua vez, contêm nós de *tipo* que, por sua vez, contêm nós de *método* e de *campo*.
+Para fazer isso, você define um arquivo XML com o elemento de nível superior `<linker>`, que contém nós de *assembly* que, por sua vez, contêm nós de *tipo* que, por sua vez, contêm nós de *método* e de *campo*.
 
 Quando você tiver esse arquivo de descrição de vinculador, adicione-o ao seu projeto e:
 
--  **Para o Android**: defina a **Ação de Build** para **LinkDescription**
--  **Para o iOS**: defina a **Ação de Build** para **LinkDescription**
+- **Para o Android**: defina a **Ação de Build** para **LinkDescription**
+- **Para o iOS**: defina a **Ação de Build** para **LinkDescription**
 
 
 O exemplo a seguir mostra a aparência do arquivo XML:

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: aac558f52423132bef53f1754307e743c69f6f22
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 1b3bc6874a8584b60b15d1d373ad97fde565dfc4
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50121198"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69527121"
 ---
 # <a name="compiling-for-different-devices-in-xamarinios"></a>Compilar para diferentes dispositivos no Xamarin.iOS
 
@@ -128,8 +128,8 @@ Se você quer que seu projeto aproveite alguns dos recursos das versões mais re
 
 Para fazer isso, você deve realizar as seguintes etapas:
 
--  Abra as **Opções do Projeto** e navegue até o painel **Build do iOS**.
--  Adicione `'-gcc_flags "-weak_framework iAd"'` às **Opções Adicionais** para cada configuração que você deseja vincular de modo fraco em:
+- Abra as **Opções do Projeto** e navegue até o painel **Build do iOS**.
+- Adicione `'-gcc_flags "-weak_framework iAd"'` às **Opções Adicionais** para cada configuração que você deseja vincular de modo fraco em:
 
 
 [![](compiling-for-different-devices-images/image3.png "Opções Adicionais")](compiling-for-different-devices-images/image3.png#lightbox)

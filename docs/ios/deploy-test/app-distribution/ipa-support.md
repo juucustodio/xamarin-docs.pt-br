@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 100b98d12d45713b0d5f6dfb435f3aa879e7da9f
-ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
+ms.openlocfilehash: c430d7771d443b80bec2a3e8a79565e2a7994a8b
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52899116"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69887585"
 ---
 # <a name="ipa-support-in-xamarinios"></a>Suporte de IPA no Xamarin.iOS
 
@@ -91,7 +91,7 @@ Observe que, para os builds não da App Store, o arquivo **iTunesMetadata.plist*
 Para assinar seu aplicativo e prepará-lo para distribuição:
 
 
-1. Selecione o botão **Assinar e Distribuir...**, como ilustrado abaixo:
+1. Selecione o botão **Assinar e Distribuir...** , como ilustrado abaixo:
 
     ![](ipa-support-images/buildxs04new.png "Selecione Assinar e Distribuir...")
 
@@ -117,7 +117,7 @@ Para assinar seu aplicativo e prepará-lo para distribuição:
 Em determinados casos, como em um ambiente de CI, pode ser necessário compilar o IPA via linha de comando. Siga as etapas abaixo para fazer isso:
 
 
-1. Marque **Opções de Projeto > Opções de IPA do iOS > Incluir imagens do iTunesArtwork** e marque **Compilar pacote ad hoc/empresarial (IPA)**:
+1. Marque **Opções de Projeto > Opções de IPA do iOS > Incluir imagens do iTunesArtwork** e marque **Compilar pacote ad hoc/empresarial (IPA)** :
 
     ![](ipa-support-images/imagexs04.png "Incluir imagens do iTunesArtwork e Criar IPA do pacote ad-hoc/empresarial estão marcados")
 
@@ -128,7 +128,7 @@ Em determinados casos, como em um ambiente de CI, pode ser necessário compilar 
     <IpaIncludeArtwork>false</IpaIncludeArtwork>
     ```
 
-1. Se estiver incluindo um arquivo **iTunesMetadata.plist** opcional, clique no botão **...**, selecione-o na lista e clique no botão **OK**:
+1. Se estiver incluindo um arquivo **iTunesMetadata.plist** opcional, clique no botão **...** , selecione-o na lista e clique no botão **OK**:
 
      ![](ipa-support-images/imagexs03.png "Selecione iTunesMetadata.plist na lista")
 
@@ -153,7 +153,7 @@ Após o perfil de provisionamento ser criado e selecionado, o arquivo **iTunesMe
     > [!NOTE]
     > Uma configuração ad hoc pode não estar disponível para projetos do Xamarin.iOS mais recentes. Se não estiver disponível, selecione a configuração de **Versão**.
 
-3. Se estiver incluindo um arquivo **iTunesMetadata.plist** opcional, clique no botão **...**, selecione-o na lista e clique no botão **Abrir**:
+3. Se estiver incluindo um arquivo **iTunesMetadata.plist** opcional, clique no botão **...** , selecione-o na lista e clique no botão **Abrir**:
 
     ![](ipa-support-images/imagevs03.png "Selecione iTunesMetadata.plist na lista")
 
@@ -164,7 +164,7 @@ Após o perfil de provisionamento ser criado e selecionado, o arquivo **iTunesMe
     ![](ipa-support-images/imagevs05.png "Selecione Ad Hoc na lista suspensa Configuração de Build")
 
 7. Compile o projeto para criar o pacote IPA.
-8. O IPA será compilado na pasta **Bin > iOS Device > Ad Hoc (ou Versão)**:
+8. O IPA será compilado na pasta **Bin > iOS Device > Ad Hoc (ou Versão)** :
 
     ![](ipa-support-images/imagevs06.png "O IPA no explorador de arquivos")
 
@@ -219,6 +219,7 @@ Um exemplo completo que usa essa abordagem pode ser semelhante ao seguinte no Wi
 ```bash
 msbuild /p:Configuration="Release" /p:Platform="iPhone" /p:ServerAddress="192.168.1.3" /p:ServerUser="macuser" /p:IpaPackageDir="%USERPROFILE%\Builds" /t:Build SingleViewIphone1.sln
 ```
+
 Ou semelhante ao seguinte no Mac:
 
 ```bash

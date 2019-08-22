@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 27fd8cac85cdf139278d3824ebf71e54cdc7d140
-ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
+ms.openlocfilehash: 5729c32ca671a4fcc309d235a34929dcba6a3d03
+ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67865576"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69621109"
 ---
 # <a name="using-testflight-to-distribute-xamarinios-apps"></a>Usando TestFlight para distribuir aplicativos Xamarin.iOS
 
@@ -55,21 +55,21 @@ O fluxo de trabalho a seguir descreve as etapas necessárias para começar a usa
 3. Gerencie Testes Beta:
     - Adicione Metadados.
     - Adicione Usuários Internos:
-        - Máximo de 25 Usuários.
+      - Máximo de 25 Usuários.
     - Adicione Usuários Externos:
-        - Máximo de 1.000 Usuários.
-        - Requer uma análise de teste beta, que exige a conformidade com as diretrizes da Apple.
+      - Máximo de 1.000 Usuários.
+      - Requer uma análise de teste beta, que exige a conformidade com as diretrizes da Apple.
 4. Receba Comentários de usuários, aja com base neles e retorne para a etapa 2.
 
 ## <a name="create-an-itunes-connect-record"></a>Criar um registro do iTunes Connect
 
-1.  Faça logon no [Portal do iTunes Connect](https://itunesconnect.apple.com/) usando suas credenciais de desenvolvedor da Apple.
-2.  Selecione **Meus Aplicativos**:
+1. Faça logon no [Portal do iTunes Connect](https://itunesconnect.apple.com/) usando suas credenciais de desenvolvedor da Apple.
+2. Selecione **Meus Aplicativos**:
 
     [![](testflight-images/my-apps.png "Selecionar Meus aplicativos")](testflight-images/my-apps.png#lightbox)
 
 
-3.  Na tela **Meus aplicativos**, clique no botão **+** no canto superior esquerdo da tela para adicionar um novo aplicativo. Se você tiver contas de desenvolvedor Mac e iOS, escolha o tipo do novo aplicativo aqui.
+3. Na tela **Meus aplicativos**, clique no botão **+** no canto superior esquerdo da tela para adicionar um novo aplicativo. Se você tiver contas de desenvolvedor Mac e iOS, escolha o tipo do novo aplicativo aqui.
 
 Você verá a janela de envio **Novo aplicativo do iOS**, que deverá conter exatamente as mesmas informações que Info.plist do seu aplicativo
 
@@ -84,12 +84,12 @@ O formulário deve refletir exatamente as informações no arquivo Info.plist do
 [![](testflight-images/infoplist.png "O Info.plist do aplicativo")](testflight-images/infoplist.png#lightbox)
 [ ![](testflight-images/newiosapp.png "O formulário no iTunes Connect")](testflight-images/newiosapp.png#lightbox)
 
--  **Nome** – o nome descritivo usado ao configurar o Pacote de Aplicativo. Deve ser uma correspondência exata da entrada de **Nome do aplicativo** em seu `Info.plist`.
--  **Idioma primário** – o idioma de base usado no aplicativo. Geralmente é qualquer idioma que você fale.
--  **ID do pacote** – um menu suspenso listando todas as IDs do Aplicativo criadas em sua conta de desenvolvedor.
-    *   **Sufixo da ID do Pacote** – se você tiver uma ID do Pacote curinga (ou seja, terminando com um *, como no exemplo acima), uma caixa adicional será exibida solicitando o sufixo da ID do Pacote. No exemplo, a **ID do Pacote** é `mobi.chkn.*`, o sufixo é **PageView**. Juntos, eles formam o **Identificador do Pacote** em nosso `Info.plist`.
--  **Versão** – número de versão do aplicativo que está sendo carregado. Ele é escolhido pelo desenvolvedor.
--  **SKU** – SKU é uma ID exclusiva para seu aplicativo, que não será vista pelos usuários. Pode ser considerada de maneira semelhante a uma ID do produto. No exemplo acima, escolhi a data junto com um número de versão para essa data.
+- **Nome** – o nome descritivo usado ao configurar o Pacote de Aplicativo. Deve ser uma correspondência exata da entrada de **Nome do aplicativo** em seu `Info.plist`.
+- **Idioma primário** – o idioma de base usado no aplicativo. Geralmente é qualquer idioma que você fale.
+- **ID do pacote** – um menu suspenso listando todas as IDs do Aplicativo criadas em sua conta de desenvolvedor.
+  - **Sufixo da ID do Pacote** – se você tiver uma ID do Pacote curinga (ou seja, terminando com um *, como no exemplo acima), uma caixa adicional será exibida solicitando o sufixo da ID do Pacote. No exemplo, a **ID do Pacote** é `mobi.chkn.*`, o sufixo é **PageView**. Juntos, eles formam o **Identificador do Pacote** em nosso `Info.plist`.
+- **Versão** – número de versão do aplicativo que está sendo carregado. Ele é escolhido pelo desenvolvedor.
+- **SKU** – SKU é uma ID exclusiva para seu aplicativo, que não será vista pelos usuários. Pode ser considerada de maneira semelhante a uma ID do produto. No exemplo acima, escolhi a data junto com um número de versão para essa data.
 
 
 ## <a name="upload-your-app"></a>Carregar seu aplicativo
@@ -190,9 +190,9 @@ O teste pode ser desativado a qualquer momento.
 
 Testadores Internos são membros de sua equipe de desenvolvimento atribuídos a uma das funções a seguir no iTunes Connect:
 
--  **Administrador** – um administrador é responsável por adicionar e gerenciar novos usuários no iTunes Connect.
--  **Legal** – o Agente de Equipe é o único usuário administrativo que terá a função Legal atribuída. Isso permite que ele assine contratos legais.
--  **Técnico** – um usuário técnico pode alterar a maioria das propriedades em relação a um aplicativo. Por exemplo, editar informações do aplicativo, carregar um binário e enviar um aplicativo para análise.
+- **Administrador** – um administrador é responsável por adicionar e gerenciar novos usuários no iTunes Connect.
+- **Legal** – o Agente de Equipe é o único usuário administrativo que terá a função Legal atribuída. Isso permite que ele assine contratos legais.
+- **Técnico** – um usuário técnico pode alterar a maioria das propriedades em relação a um aplicativo. Por exemplo, editar informações do aplicativo, carregar um binário e enviar um aplicativo para análise.
 
 Cada build pode ser compartilhado com um máximo de 25 membros.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: e1792eb9150aa92b04b873ae18ccd89723722529
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 8236dc01f31141544bef88011d87a457f18072e8
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108035"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69526570"
 ---
 # <a name="fastlane-for-ios--cert"></a>fastlane para iOS – cert
 
@@ -53,11 +53,15 @@ O cert fornece uma interface de terminal que cria novas identidades de assinatur
 
 Para usar o utilitário de certificado, digite o seguinte comando no terminal CLI:
 
-    fastlane cert
+```
+fastlane cert
+```
 
 Por padrão, isso criará um certificado de distribuição. Para criar um certificado de desenvolvimento, passe o sinalizador `--development`:
 
-    fastlane cert --development
+```
+fastlane cert --development
+```
 
 O cert solicitará sua Apple ID e senha, então insira:
 
@@ -68,7 +72,9 @@ O cert solicitará sua Apple ID e senha, então insira:
 
 A Apple ID também pode ser passada como um argumento usando o seguinte comando:
 
-    fastlane cert -u myemailadress@domain.com
+```
+fastlane cert -u myemailadress@domain.com
+```
 
 Se sua Apple ID estiver conectada a várias equipes, elas serão exibidas aqui. Selecione o número que corresponde à equipe que você deseja usar:
 
@@ -76,7 +82,9 @@ Se sua Apple ID estiver conectada a várias equipes, elas serão exibidas aqui. 
 
 A ID da equipe também pode ser passada usando o seguinte sinalizador:
 
-    fastlane cert -l 2TU993NY9J
+```
+fastlane cert -l 2TU993NY9J
+```
 
 O fastlane verificará se um dos certificados de autenticação disponíveis está instalado no computador local e, se estiver, ele o usará.
 
@@ -99,12 +107,15 @@ As opções a seguir podem ser usadas para dar suporte adicional ao usar o certi
 
 - Use o sinalizador `-–help` para obter uma lista de todos os comandos disponíveis:
 
-        fastlane cert --help
+    ```
+    fastlane cert --help
+    ```
 
 - Use o sinalizador `-–verbose` para aumentar os detalhes da saída
 
-        fastlane cert --development --verbose
-
+    ```
+    fastlane cert --development --verbose
+    ```
 
 ## <a name="related-links"></a>Links relacionados
 

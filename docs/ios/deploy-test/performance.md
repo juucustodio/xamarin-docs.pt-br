@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 01/29/2016
-ms.openlocfilehash: 4954b83b75618128f32b0e5fceed2f04df183433
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 47211f60d55f1f355a92307eff53ed9af754eda2
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68511481"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69527404"
 ---
 # <a name="xamarinios-performance"></a>Desempenho do Xamarin.iOS
 
@@ -62,10 +62,10 @@ O objeto `MyView` não gerenciado terá um `GCHandle` apontando para o objeto ge
 
 Em casos nos quais um objeto contido mantém um link para seu contêiner, há várias opções disponíveis para lidar com a referência circular:
 
--  Interrompa manualmente o ciclo ao definir o link para o contêiner para `null`.
--  Remova manualmente o objeto contido do contêiner.
--  Chame `Dispose` nos objetos.
--  Evite que a referência circular mantenha uma referência fraca ao contêiner. Para obter mais informações sobre referências fracas.
+- Interrompa manualmente o ciclo ao definir o link para o contêiner para `null`.
+- Remova manualmente o objeto contido do contêiner.
+- Chame `Dispose` nos objetos.
+- Evite que a referência circular mantenha uma referência fraca ao contêiner. Para obter mais informações sobre referências fracas.
 
 ### <a name="using-weakreferences"></a>Usando WeakReferences
 

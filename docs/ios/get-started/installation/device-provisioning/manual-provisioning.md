@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
 ms.date: 07/15/2017
-ms.openlocfilehash: ce48296ab6e979241630fe8d039ba6b284eed5dc
-ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
+ms.openlocfilehash: 993588a46c8d7048c7494908d6f59a5bbe2ddda6
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67865889"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69526624"
 ---
 # <a name="manual-provisioning-for-xamarinios"></a>Provisionamento manual para o Xamarin.iOS
 
@@ -193,14 +193,14 @@ Após o perfil de provisionamento ter sido criado com êxito, pode ser necessár
 
 Certificados e perfis de provisionamento que foram criados no Portal de Desenvolvedores da Apple podem não aparecer automaticamente no Xcode. Portanto, talvez seja necessário baixá-los para que possam ser acessados pelo Visual Studio para Mac e pelo Visual Studio. Para atualizar e baixar qualquer certificado criado no Portal de Desenvolvedores da Apple, faça o seguinte:
 
-1.   Saia do Visual Studio para Mac ou Visual Studio.
-2.   Inicie o Xcode.
-3.   Escolha **Menu do Xcode > Preferências...**
-4.   Clique na guia **Contas**.
-5.   Selecione uma equipe e clique no botão **Baixar perfis manuais**: [![](manual-provisioning-images/selectteam1.png "Baixar perfis manuais")](manual-provisioning-images/selectteam1.png#lightbox)
+1. Saia do Visual Studio para Mac ou Visual Studio.
+2. Inicie o Xcode.
+3. Escolha **Menu do Xcode > Preferências...**
+4. Clique na guia **Contas**.
+5. Selecione uma equipe e clique no botão **Baixar perfis manuais**:  [![](manual-provisioning-images/selectteam1.png "Baixar perfis manuais")](manual-provisioning-images/selectteam1.png#lightbox)
 
-6.   Feche o Xcode.
-7.  Inicie o Visual Studio para Mac ou Visual Studio.
+6. Feche o Xcode.
+7. Inicie o Visual Studio para Mac ou Visual Studio.
 
 Os novos certificados ou perfis de provisionamento estarão disponíveis no Visual Studio para Mac ou Visual Studio e prontos para uso.
 

@@ -6,12 +6,12 @@ ms.assetid: 9ce61f18-22ac-4b93-91be-5b499677d661
 author: asb3993
 ms.author: amburns
 ms.date: 03/24/2017
-ms.openlocfilehash: 2665e45277eccaedbbbbd77f6c7c0ca47700d950
-ms.sourcegitcommit: c2bffcdee5a7c619280c6b9032ba90e4df8b63d9
+ms.openlocfilehash: 75bc540ee518a1f5cfef29886d968648ea5769ed
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68533018"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69526709"
 ---
 # <a name="cross-platform-performance"></a>Desempenho de plataforma cruzada
 
@@ -262,9 +262,9 @@ Linguagens gerenciadas como o C# usam a coleta de lixo para recuperar a memória
 
 SGen utiliza um dos três heaps para alocar espaço para objetos:
 
--  **O Berçário** – é onde os novos objetos pequenos são alocados. Quando o berçário ficar sem espaço, ocorrerá uma coleta de lixo secundária. Todos os objetos ativos serão movidos para o heap principal.
--  **Heap Principal** – é aqui que são mantidos os objetos de execução longa. Se não houver memória suficiente no heap principal, uma coleta de lixo principal ocorrerá. Se uma coleta de lixo principal falhar liberar em memória suficiente, o SGen solicitará mais memória ao sistema.
--  **Espaço de objeto grande** – aqui são mantidos os objetos que exigem mais de 8.000 bytes. Objetos grandes não começarão no berçário, mas em vez disso serão alocados nesse heap.
+- **O Berçário** – é onde os novos objetos pequenos são alocados. Quando o berçário ficar sem espaço, ocorrerá uma coleta de lixo secundária. Todos os objetos ativos serão movidos para o heap principal.
+- **Heap Principal** – é aqui que são mantidos os objetos de execução longa. Se não houver memória suficiente no heap principal, uma coleta de lixo principal ocorrerá. Se uma coleta de lixo principal falhar liberar em memória suficiente, o SGen solicitará mais memória ao sistema.
+- **Espaço de objeto grande** – aqui são mantidos os objetos que exigem mais de 8.000 bytes. Objetos grandes não começarão no berçário, mas em vez disso serão alocados nesse heap.
 
 Uma das vantagens de SGen é que o tempo necessário para executar uma coleta de lixo secundária é proporcional ao número de novos objetos ativos que foram criados desde a última coleta de lixo secundária. Isso reduzirá o impacto de coleta de lixo sobre o desempenho de um aplicativo, porque essas coletas de lixo secundárias levarão menos tempo do que uma coleta de lixo principal. Coletas de lixo principais ainda ocorrem, mas com menos frequência.
 
@@ -307,16 +307,16 @@ A captura de tela a seguir mostra as opções do vinculador no Visual Studio par
 
 O vinculador fornece três diferentes configurações para controlar seu comportamento:
 
--  **Não vincular** – nenhum método nem tipo não utilizado será removido pelo vinculador. Por motivos de desempenho, essa é a configuração padrão para builds de depuração.
--  **Vincular somente Assemblies de SDKs/SDK da Estrutura** – essa configuração reduzirá o tamanho apenas dos assemblies que são enviados via Xamarin. O código do usuário não será afetado.
--  **Vincular Todos os Assemblies** – essa é uma otimização mais agressiva que tem como destino o código do usuário e assemblies do SDK. Para associações, isso removerá os campos de suporte não utilizados e tornará cada instância (ou objetos associados) mais leves, consumindo menos memória.
+- **Não vincular** – nenhum método nem tipo não utilizado será removido pelo vinculador. Por motivos de desempenho, essa é a configuração padrão para builds de depuração.
+- **Vincular somente Assemblies de SDKs/SDK da Estrutura** – essa configuração reduzirá o tamanho apenas dos assemblies que são enviados via Xamarin. O código do usuário não será afetado.
+- **Vincular Todos os Assemblies** – essa é uma otimização mais agressiva que tem como destino o código do usuário e assemblies do SDK. Para associações, isso removerá os campos de suporte não utilizados e tornará cada instância (ou objetos associados) mais leves, consumindo menos memória.
 
 O *Vincular Todos os Assemblies* deve ser usado com cuidado, pois pode interromper o aplicativo de maneiras inesperadas. A análise estática realizada pelo vinculador pode não identificar corretamente todo o código que é necessário, resultando na remoção de uma quantidade excessiva de código do aplicativo compilado. Essa situação se manifestará somente em tempo de execução quando o aplicativo falhar. Por isso, é importante testar um aplicativo depois de alterar o comportamento do vinculador.
 
 Se o teste revelar que o vinculador removeu incorretamente uma classe ou método, será possível marcar tipos ou métodos que não são referenciados estaticamente, mas são exigidos pelo aplicativo pelo uso de um dos seguintes atributos:
 
--  `Xamarin.iOS.Foundation.PreserveAttribute` – esse atributo é para projetos Xamarin.iOS.
--  `Android.Runtime.PreserveAttribute` – esse atributo é para projetos Xamarin.Android.
+- `Xamarin.iOS.Foundation.PreserveAttribute` – esse atributo é para projetos Xamarin.iOS.
+- `Android.Runtime.PreserveAttribute` – esse atributo é para projetos Xamarin.Android.
 
 Por exemplo, pode ser necessário preservar os construtores padrão de tipos que são instanciados dinamicamente. Além disso, o uso da serialização XML pode exigir que as propriedades de tipos sejam preservadas.
 

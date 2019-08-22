@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/05/2018
-ms.openlocfilehash: a6fe5cc3a126cc42c07f38b89c5d1de308b3c0dc
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 9bff233b5507e3456ba3620315bd967d0ac7018d
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50109907"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69525784"
 ---
 # <a name="application-package-size"></a>Tamanho dos pacotes de aplicativos
 
@@ -63,17 +63,17 @@ A opção de build *Implantação de Assembly Rápida* pode ser usada para reduz
 
 Para habilitar a *Implantação de Assembly Rápida*, faça o seguinte:
 
-1.  Clique com o botão direito do mouse no Projeto do Android no Gerenciador de Soluções e selecione **Opções**.
+1. Clique com o botão direito do mouse no Projeto do Android no Gerenciador de Soluções e selecione **Opções**.
 
-2.  Na caixa de diálogo Opções de Projeto, selecione **Build do Android**:  
+2. Na caixa de diálogo Opções de Projeto, selecione **Build do Android**:  
 
     ![Opções do Projeto Build do Android](app-package-size-images/fastdev0.png)
 
-3.  Marque as caixas de seleção **Usar tempo de execução Mono compartilhado** e **Implantação de Assembly Rápida**:  
+3. Marque as caixas de seleção **Usar tempo de execução Mono compartilhado** e **Implantação de Assembly Rápida**:  
 
     ![Caixas de seleção selecionadas na guia Empacotamento](app-package-size-images/fastdev.png)
 
-4.  Clique no botão **OK** para salvar as alterações e fechar a caixa de diálogo Opções de Projeto.
+4. Clique no botão **OK** para salvar as alterações e fechar a caixa de diálogo Opções de Projeto.
 
 
 Na próxima vez que o aplicativo for compilado para depuração, os assemblies serão instalados diretamente no dispositivo (se já não tiverem sido) e um pacote do aplicativo menor (que não inclua os assemblies) será instalado no dispositivo. Isso reduzirá o tempo necessário para deixar as alterações ao aplicativo funcionando e prontas para serem testadas.

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 864c801597f251940e55232e8c59d3a6ea19c392
-ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
+ms.openlocfilehash: 5722a3a208942e8ecef6e5b3c092ac6c9825395f
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67865801"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69890158"
 ---
 # <a name="connection-troubleshooting-for-a-xamarinios-build-host"></a>Solução de problemas de conexão de um host de build do Xamarin.iOS
 
@@ -83,6 +83,7 @@ O Host de Build do Xamarin das versões anteriores do Xamarin.iOS não é mais n
     ```bash
     ssh amyb@10.1.8.95
     ```
+
     <a name="stepnine" />
 
 9. Se **a etapa 8 for bem-sucedida**, você poderá tentar executar um comando simples, como o `ls` através da conexão:
@@ -218,7 +219,7 @@ Essa mensagem pode ser ignorada se o Mac estiver executando o OS X 10.11 (El Cap
 
 Essa mensagem pode ser ignorada, a menos que você observe que a caixa de diálogo de conexão não exibe o endereço IP do host de build do Mac. Se o endereço IP _está_ ausente nessa caixa de diálogo, você ainda poderá [adicionar manualmente o Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md#manually-add-a-mac).
 
-#### <a name="invalid-user-a-from-101895-and-inputuserauthrequest-invalid-user-a-preauth"></a>"Usuário inválido a de 10.1.8.95" e "input\_userauth\_request: usuário inválido a [preauth]"
+#### <a name="invalid-user-a-from-101895-and-input_userauth_request-invalid-user-a-preauth"></a>"Usuário inválido a de 10.1.8.95" e "input\_userauth\_request: usuário inválido a [preauth]"
 
 Você pode observar essas mensagens ao examinar o **sshd.log**. Essas mensagens fazem parte do processo normal de conexão. Elas aparecem porque o Xamarin usa o nome de usuário **a** temporariamente ao recuperar a _Impressão digital de SSH_.
 

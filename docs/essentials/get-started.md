@@ -6,12 +6,12 @@ author: jamesmontemagno
 ms.author: jamont
 ms.custom: video
 ms.date: 07/10/2019
-ms.openlocfilehash: fd4c51714cea370f1d62457931a5820d5f1a5b97
-ms.sourcegitcommit: 0845ed2daa65468b6fe12ac4e9386f3315d72f4d
+ms.openlocfilehash: d120b9420061ac0c3c4e2ccda3021320d29a547d
+ms.sourcegitcommit: 3434624a36a369986b6aeed7959dae60f7112a14
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67850933"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69629594"
 ---
 # <a name="get-started-with-xamarinessentials"></a>Introdução ao Xamarin.Essentials
 
@@ -30,6 +30,7 @@ O Xamarin.Essentials está disponível como um pacote NuGet que pode ser adicion
 
 3. Adicione o pacote NuGet [**Xamarin.Essentials**](https://www.nuget.org/packages/Xamarin.Essentials/) a cada projeto:
 
+    <!--markdownlint-disable MD023 -->
     # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
     No painel do Gerenciador de Soluções, clique com o botão direito do mouse no nome da solução e escolha **Gerenciar pacotes NuGet**. Pesquise **Xamarin.Essentials** e instale o pacote em **TODOS** os projetos, incluindo bibliotecas do Android, iOS, UWP e .NET Standard.

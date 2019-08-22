@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 10/05/2018
-ms.openlocfilehash: 9ce29df9070ee99bb3de9579025f5b0f366d6331
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 9c7572c3d3a785264e9f26c17e74c41ee28e8af6
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655898"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69526527"
 ---
 # <a name="hello-ios-multiscreen--deep-dive"></a>Olá, iOS multitela – análise detalhada
 
@@ -72,17 +72,17 @@ O controlador de navegação é comum em aplicativos iOS e fornece navegação p
 
 O controlador de navegação atende a três funções principais:
 
--  **Fornece Ganchos para Navegação de Avanço** – o controlador de navegação usa uma metáfora de navegação hierárquica na qual Hierarquias de Exibição de Conteúdo são *enviadas por push* para uma *pilha de navegação*. Você pode pensar em uma pilha de navegação como uma pilha de cartas de baralho, em que apenas a carta superior está visível, conforme ilustra o diagrama a seguir:  
+- **Fornece Ganchos para Navegação de Avanço** – o controlador de navegação usa uma metáfora de navegação hierárquica na qual Hierarquias de Exibição de Conteúdo são *enviadas por push* para uma *pilha de navegação*. Você pode pensar em uma pilha de navegação como uma pilha de cartas de baralho, em que apenas a carta superior está visível, conforme ilustra o diagrama a seguir:  
 
     [![](hello-ios-multiscreen-deepdive-images/02.png "Este diagrama ilustra a navegação como uma pilha de cartas")](hello-ios-multiscreen-deepdive-images/02.png#lightbox)
 
 
--  **Opcionalmente, fornece um botão Voltar** – quando fazemos o push de um novo item para a pilha de navegação, a barra de título pode exibir automaticamente um *botão Voltar* que permite ao usuário retornar na navegação. Pressionar o botão Voltar abre em *pop-up* o controlador de exibição atual pilha de navegação e carrega a hierarquia de Exibição de Conteúdo anterior na Janela:  
+- **Opcionalmente, fornece um botão Voltar** – quando fazemos o push de um novo item para a pilha de navegação, a barra de título pode exibir automaticamente um *botão Voltar* que permite ao usuário retornar na navegação. Pressionar o botão Voltar abre em *pop-up* o controlador de exibição atual pilha de navegação e carrega a hierarquia de Exibição de Conteúdo anterior na Janela:  
 
     [![](hello-ios-multiscreen-deepdive-images/03.png "Este diagrama ilustra a retirada de uma carta da pilha")](hello-ios-multiscreen-deepdive-images/03.png#lightbox)
 
 
--  **Fornece uma Barra de Título** – a parte superior do controlador de navegação é chamada de *Barra de Título*. Ele é responsável por exibir o título do controlador de exibição, conforme ilustrado pelo diagrama a seguir:  
+- **Fornece uma Barra de Título** – a parte superior do controlador de navegação é chamada de *Barra de Título*. Ele é responsável por exibir o título do controlador de exibição, conforme ilustrado pelo diagrama a seguir:  
 
     [![](hello-ios-multiscreen-deepdive-images/04.png "A Barra de Título é responsável por exibir o título do controlador de exibição")](hello-ios-multiscreen-deepdive-images/04.png#lightbox)
 
@@ -191,9 +191,9 @@ CallHistoryButton.TouchUpInside += (object sender, EventArgs e) => {
 
 O aplicativo Phoneword introduziu vários conceitos não abordados neste guia. Esses conceitos incluem:
 
--  **Criação automática de controladores de exibição** – quando inserimos um nome de classe para o controlador de exibição no **Painel de Propriedades**, o designer do iOS verifica se a classe existe e, em seguida, gera a classe de apoio do controlador de exibição para nós. Para saber mais sobre este e outros recursos de designer do iOS, consulte o guia de [Introdução ao iOS Designer](~/ios/user-interface/designer/introduction.md).
--  **Controlador de exibição de tabela** – o `CallHistoryController` é um Controlador de exibição de tabela. Um Controlador de exibição de tabela contém uma Exibição de Tabela, o layout mais comum e a ferramenta de exibição de dados no iOS. Tabelas estão além do escopo deste guia. Para saber mais sobre Controladores de exibição de tabela, veja o guia [Trabalhando com Tabelas e Células](~/ios/user-interface/controls/tables/index.md).
--   **ID do Storyboard** – Definir a ID do Storyboard cria uma classe de controlador de exibição em Objective-C, que contém o code-behind para o controlador de exibição no Storyboard. Usamos a ID do Storyboard para localizar a classe Objective-C e instanciar o controlador de exibição no Storyboard. Para saber mais sobre IDs de Storyboard, consulte o guia [Introduction to Storyboards](~/ios/user-interface/storyboards/index.md) (Introdução a Storyboards).
+- **Criação automática de controladores de exibição** – quando inserimos um nome de classe para o controlador de exibição no **Painel de Propriedades**, o designer do iOS verifica se a classe existe e, em seguida, gera a classe de apoio do controlador de exibição para nós. Para saber mais sobre este e outros recursos de designer do iOS, consulte o guia de [Introdução ao iOS Designer](~/ios/user-interface/designer/introduction.md).
+- **Controlador de exibição de tabela** – o `CallHistoryController` é um Controlador de exibição de tabela. Um Controlador de exibição de tabela contém uma Exibição de Tabela, o layout mais comum e a ferramenta de exibição de dados no iOS. Tabelas estão além do escopo deste guia. Para saber mais sobre Controladores de exibição de tabela, veja o guia [Trabalhando com Tabelas e Células](~/ios/user-interface/controls/tables/index.md).
+- **ID do Storyboard** – Definir a ID do Storyboard cria uma classe de controlador de exibição em Objective-C, que contém o code-behind para o controlador de exibição no Storyboard. Usamos a ID do Storyboard para localizar a classe Objective-C e instanciar o controlador de exibição no Storyboard. Para saber mais sobre IDs de Storyboard, consulte o guia [Introduction to Storyboards](~/ios/user-interface/storyboards/index.md) (Introdução a Storyboards).
 
 ## <a name="summary"></a>Resumo
 

@@ -6,24 +6,24 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 3c00f074e2f002d82795e9bd445fdf617275089f
-ms.sourcegitcommit: 19b37f33b0eb9a927633a3198574b779374775ff
+ms.openlocfilehash: d20ec990253ff86e7b426baad8da5a919a91ef6c
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50301260"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69525012"
 ---
 # <a name="manually-signing-the-apk"></a>Assinando manualmente o APK
 
 
 Depois de o aplicativo ser compilado para liberação, o APK deverá ser assinado antes da distribuição para que ele possa ser executado em um dispositivo Android. Normalmente, esse processo é tratado no IDE, no entanto, há algumas situações em que é necessário assinar o APK manualmente, na linha de comando. As seguintes etapas estão envolvidas com a assinatura de um APK:
 
-1.   **Criar uma Chave Privada** &ndash; Esta etapa deve ser executada apenas uma vez. Uma chave privada é necessária para assinar digitalmente o APK.
+1. **Criar uma Chave Privada** &ndash; Esta etapa deve ser executada apenas uma vez. Uma chave privada é necessária para assinar digitalmente o APK.
     Depois que a chave privada foi preparada, essa etapa pode ser ignorada para compilações de versão futuras.
 
-2.   **Efetuar o Zipalign no APK** &ndash; *Zipalign* é um processo de otimização que é executado em um aplicativo. Ele permite que o Android interaja de forma mais eficiente com o APK no tempo de execução. O Xamarin.Android realiza uma verificação no tempo de execução e não permitirá que o aplicativo seja executado se o APK não teve o zipalign efetuado.
+2. **Efetuar o Zipalign no APK** &ndash; *Zipalign* é um processo de otimização que é executado em um aplicativo. Ele permite que o Android interaja de forma mais eficiente com o APK no tempo de execução. O Xamarin.Android realiza uma verificação no tempo de execução e não permitirá que o aplicativo seja executado se o APK não teve o zipalign efetuado.
 
-3.  **Assinar o APK** &ndash; essa etapa envolve usar o **apksigner** por meio do SDK do Android e assinar o APK com a chave privada criada na etapa anterior. Aplicativos desenvolvidos com versões das ferramentas de build do SDK do Android anteriores à v24.0.3 usarão o aplicativo **jarsigner** por meio do JDK. Ambas as ferramentas serão abordadas em mais detalhes abaixo. 
+3. **Assinar o APK** &ndash; essa etapa envolve usar o **apksigner** por meio do SDK do Android e assinar o APK com a chave privada criada na etapa anterior. Aplicativos desenvolvidos com versões das ferramentas de build do SDK do Android anteriores à v24.0.3 usarão o aplicativo **jarsigner** por meio do JDK. Ambas as ferramentas serão abordadas em mais detalhes abaixo. 
 
 A ordem das etapas é importante e depende de qual ferramenta é usada para assinar o APK. Ao usar **apksigner**, é importante primeiro usar **zipalign** no aplicativo e, em seguida, assiná-lo com **apksigner**.  Caso seja necessário usar **jarsigner** para assinar o APK, é importante primeiro assinar o APK e, em seguida, executar **zipalign**. 
 

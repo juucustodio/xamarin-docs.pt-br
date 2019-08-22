@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/23/2017
-ms.openlocfilehash: 8b3782554615c5ce3350294fc3300e3c369f8af7
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: e6f7ec4fe018181b6f470de4201d5e5a3f90d4da
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67831515"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69527628"
 ---
 # <a name="app-store-distribution"></a>Distribuição da App Store
 
@@ -64,11 +64,11 @@ Você pode selecionar a mesma **ID do Aplicativo** e os mesmos **Dispositivos** 
 
 Também é possível solicitar um Certificado usando a caixa de diálogo Preferências no Xcode. Para fazer isso, siga as etapas abaixo:
 
-1.   Selecione sua equipe e clique em **Gerenciar certificados…** : [![](images/selectteam.png "Selecione a equipe e os Detalhes da Exibição")](images/selectteam.png#lightbox)
+1. Selecione sua equipe e clique em **Gerenciar certificados…** :  [![](images/selectteam.png "Selecione a equipe e os Detalhes da Exibição")](images/selectteam.png#lightbox)
 
-2.   Em seguida, clique no botão **Criar** próximo ao **Certificado de Distribuição iOS**: [![](images/selectcert.png "Crie um Certificado de Distribuição iOS")](images/selectcert.png#lightbox)
+2. Em seguida, clique no botão **Criar** próximo ao **Certificado de Distribuição iOS**:  [![](images/selectcert.png "Crie um Certificado de Distribuição iOS")](images/selectcert.png#lightbox)
 
-3.   Dependendo dos privilégios de sua equipe, a identidade de assinatura será gerada conforme mostrado abaixo ou talvez você precise aguardar até um agente de equipe ou administrador aprová-la: [![](images/generated.png "A identidade de assinatura será gerada e uma caixa de diálogo será exibida")](images/generated.png#lightbox)
+3. Dependendo dos privilégios de sua equipe, a identidade de assinatura será gerada conforme mostrado abaixo ou talvez você precise aguardar até um agente de equipe ou administrador aprová-la:  [![](images/generated.png "A identidade de assinatura será gerada e uma caixa de diálogo será exibida")](images/generated.png#lightbox)
 
 
 <a name="creatingprofile" />

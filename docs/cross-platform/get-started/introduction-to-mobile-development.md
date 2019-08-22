@@ -6,12 +6,12 @@ ms.assetid: 33C83E13-F3E5-17B4-6512-207F3D3C5AB6
 author: conceptdev
 ms.author: crdun
 ms.date: 07/16/2019
-ms.openlocfilehash: f958e53a2468263898ffedf0ca2ab6afc42d2923
-ms.sourcegitcommit: 32c7cf8b0d00464779e4b0ea43e2fd996632ebe0
+ms.openlocfilehash: 372aee9d48866ac49f34b9550fdfa37b7cc0b646
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68290119"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69526671"
 ---
 # <a name="what-is-xamarin"></a>O que é o Xamarin?
 
@@ -29,12 +29,12 @@ O Xamarin permite o desenvolvimento em linguagem C#, com uma biblioteca de class
 
 O Xamarin combina toda a capacidade das plataformas nativas e adiciona vários recursos eficientes próprios, entre eles:
 
-1.   **Associação completa para os SDKs subjacentes** – Xamarin contém associações para praticamente toda plataforma subjacente SDKs no iOS e Android. Além disso, essas associações são fortemente tipadas, o que significa que são fáceis de navegar e usar e oferecem uma verificação de tipo de tempo de build e durante o desenvolvimento. Isso resulta em menos erros de tempo de execução e aplicativos de qualidade mais alta.
-1.   **Objective-C, Java, C e C++ Interop** – o Xamarin oferece recursos para invocar diretamente bibliotecas Objective-C, Java, C e C++, permitindo que você use uma ampla gama de código de terceiros já criado. Isso permite aproveitar as bibliotecas do iOS e Android existentes escritas em Objective-C, Java ou C/C++. Além disso, o Xamarin oferece projetos de associação que permitem associar facilmente bibliotecas Objective-C e Java nativas usando uma sintaxe declarativa.
-1.   **Construções de Linguagem Moderna** – os aplicativos Xamarin são escritos em C#, uma linguagem moderna que inclui aprimoramentos significativos com relação a Objective-C e Java, como *Recursos de Linguagem Dinâmica, *Construções Funcionais* como *Lambdas, *LINQ, recursos de *Programação Paralela*, *Genéricos sofisticados e muito mais.
-1.   **BCL (Biblioteca de Classes Base) Incrível** – aplicativos Xamarin usam a BCL do .NET, uma grande coleção de classes com recursos abrangente e simplificados, como suporte eficiente a XML, Banco de Dados, Serialização, E/S, Cadeia de Caracteres e Rede, e muito mais. O código C# existente pode ser compilado para uso em um aplicativo, que fornece acesso a milhares de bibliotecas que permitem fazer coisas que não são abordadas na BCL.
-1.   **IDE (Ambiente de Desenvolvimento Integrado) Moderno** – o Xamarin usa o Visual Studio para Mac no macOS e Visual Studio no Windows. Ambos são IDEs modernos que incluem recursos como preenchimento automático de código, um sofisticado sistema de gerenciamento de Projeto e Solução, uma biblioteca de modelos de projeto abrangente, controle do código-fonte integrado e muitos outros.
-1.   **Suporte para Plataforma Cruzada Móvel**: o Xamarin oferece suporte sofisticado para plataforma cruzada para as três principais plataformas móveis: iOS, Android e Windows. Os aplicativos podem ser escritos para compartilhar até 90% de seu código e nossa biblioteca Xamarin.Mobile oferece uma API unificada para acessar recursos comuns em todas as três plataformas. Isso pode reduzir significativamente os custos de desenvolvimento e o tempo para colocação no mercado para desenvolvedores móveis almejam as três plataformas móveis mais populares.
+1. **Associação completa para os SDKs subjacentes** – Xamarin contém associações para praticamente toda plataforma subjacente SDKs no iOS e Android. Além disso, essas associações são fortemente tipadas, o que significa que são fáceis de navegar e usar e oferecem uma verificação de tipo de tempo de build e durante o desenvolvimento. Isso resulta em menos erros de tempo de execução e aplicativos de qualidade mais alta.
+1. **Objective-C, Java, C e C++ Interop** – o Xamarin oferece recursos para invocar diretamente bibliotecas Objective-C, Java, C e C++, permitindo que você use uma ampla gama de código de terceiros já criado. Isso permite aproveitar as bibliotecas do iOS e Android existentes escritas em Objective-C, Java ou C/C++. Além disso, o Xamarin oferece projetos de associação que permitem associar facilmente bibliotecas Objective-C e Java nativas usando uma sintaxe declarativa.
+1. **Construções de Linguagem Moderna** – os aplicativos Xamarin são escritos em C#, uma linguagem moderna que inclui aprimoramentos significativos com relação a Objective-C e Java, como *Recursos de Linguagem Dinâmica, *Construções Funcionais* como *Lambdas, *LINQ, recursos de *Programação Paralela*, *Genéricos sofisticados e muito mais.
+1. **BCL (Biblioteca de Classes Base) Incrível** – aplicativos Xamarin usam a BCL do .NET, uma grande coleção de classes com recursos abrangente e simplificados, como suporte eficiente a XML, Banco de Dados, Serialização, E/S, Cadeia de Caracteres e Rede, e muito mais. O código C# existente pode ser compilado para uso em um aplicativo, que fornece acesso a milhares de bibliotecas que permitem fazer coisas que não são abordadas na BCL.
+1. **IDE (Ambiente de Desenvolvimento Integrado) Moderno** – o Xamarin usa o Visual Studio para Mac no macOS e Visual Studio no Windows. Ambos são IDEs modernos que incluem recursos como preenchimento automático de código, um sofisticado sistema de gerenciamento de Projeto e Solução, uma biblioteca de modelos de projeto abrangente, controle do código-fonte integrado e muitos outros.
+1. **Suporte para Plataforma Cruzada Móvel**: o Xamarin oferece suporte sofisticado para plataforma cruzada para as três principais plataformas móveis: iOS, Android e Windows. Os aplicativos podem ser escritos para compartilhar até 90% de seu código e nossa biblioteca Xamarin.Mobile oferece uma API unificada para acessar recursos comuns em todas as três plataformas. Isso pode reduzir significativamente os custos de desenvolvimento e o tempo para colocação no mercado para desenvolvedores móveis almejam as três plataformas móveis mais populares.
 
 Devido ao conjunto de recursos eficiente e abrangente do Xamarin, ele fecha uma lacuna para desenvolvedores de aplicativos que desejam usar uma linguagem e plataforma modernas para desenvolver aplicativos móveis de plataforma cruzada.
 
