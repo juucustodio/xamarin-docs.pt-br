@@ -6,13 +6,13 @@ ms.assetid: E44F5D0F-DB8E-46C7-8789-114F1652A6C5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 03/29/2019
-ms.openlocfilehash: a56764771f3106f73809a51616e90fa30692a4d4
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.date: 07/19/2019
+ms.openlocfilehash: 65bcd9f534685a8a953d217d3573f5fe4b0b7400
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656262"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69887925"
 ---
 # <a name="xamarinforms-webview"></a>WebView do xamarin. Forms
 
@@ -409,6 +409,9 @@ Os navegadores da web populares agora adotam tecnologias, como a compilação de
 // Opt-in to using WkWebView instead of UIWebView.
 [assembly: ExportRenderer(typeof(WebView), typeof(Xamarin.Forms.Platform.iOS.WkWebViewRenderer))]
 ```
+
+> [!NOTE]
+> No Ios, o `WkWebViewRenderer` tem uma sobrecarga de construtor que aceita `WkWebViewConfiguration` um argumento. Isso permite que o renderizador seja configurado na criação.
 
 `WebView` no Android por padrão é tão rápido quanto o navegador interno.
 

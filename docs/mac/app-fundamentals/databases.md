@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: febfa23ecb2f1536631b3009d6ddc614fa355f01
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 3e6bc829ec947f8f3c01c7ef9679a5feadf4a42a
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656494"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69887370"
 ---
 # <a name="databases-in-xamarinmac"></a>Bancos de dados no Xamarin. Mac
 
@@ -612,6 +612,7 @@ for (nuint n = 0; n < People.Count; ++n) {
     Person.Update (conn);
 }
 ```
+
 #### <a name="loading-a-record"></a>Carregando um registro
 
 O código a seguir foi adicionado para carregar um registro existente do banco de dados SQLite:
@@ -1971,6 +1972,7 @@ Primeiro, incluímos SQLite.net (`using Sqlite`) e, em seguida, expõemos vária
 [PrimaryKey, AutoIncrement]
 public int ID { get; set; }
 ```
+
 ### <a name="initializing-the-database"></a>Inicializando o banco de dados
 
 Com as alterações em nosso modelo de dados in-loco para dar suporte à leitura e gravação no banco de dados, precisamos abrir uma conexão com o banco de dado e inicializá-lo na primeira execução. Vamos adicionar o seguinte código:

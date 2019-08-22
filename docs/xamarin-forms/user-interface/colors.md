@@ -6,13 +6,13 @@ ms.assetid: 22288ABF-57BE-47A9-ACC3-AC604D787C46
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 08/15/2017
-ms.openlocfilehash: f68e192db0b7acceb325ad44f40dce9cb229a26a
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.date: 07/18/2019
+ms.openlocfilehash: 2a17b037803d1ca6e54000ea7ba3f05c8ce6034f
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528977"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69888466"
 ---
 # <a name="colors-in-xamarinforms"></a>Cores no xamarin. Forms
 
@@ -20,9 +20,9 @@ ms.locfileid: "69528977"
 
 _Xamarin. Forms fornece uma classe flexível de cor de plataforma cruzada._
 
-Este artigo apresenta as várias maneiras do `Color` classe pode ser usada no xamarin. Forms.
+Este artigo apresenta as várias maneiras como [`Color`](xref:Xamarin.Forms.Color) a classe pode ser usada no Xamarin. Forms.
 
-O `Color` classe fornece vários métodos para criar uma instância de cor
+A [`Color`](xref:Xamarin.Forms.Color) classe fornece vários métodos para criar uma instância de cor:
 
 - **Chamado Colors** -uma coleção de comuns cores nomeadas, incluindo `Red`, `Green`, e `Blue`.
 - **FromHex** -valor de cadeia de caracteres semelhante à sintaxe usada em HTML, por exemplo, "00FF00". Alfa pode, opcionalmente, ser especificado como o primeiro par de caracteres ("CC00FF00").
@@ -67,13 +67,14 @@ No iOS e Android desta instância é definida como uma cor contrastante que est�
 
 ## <a name="additional-methods"></a>Métodos adicionais
 
-`Color` instâncias incluem métodos adicionais que podem ser usados para criar novas cores:
+[`Color`](xref:Xamarin.Forms.Color)as instâncias incluem os seguintes métodos adicionais:
 
-- **AddLuminosity** -retorna uma nova cor, modificando a luminosidade pelo delta fornecido.
-- **WithHue** -retorna uma nova cor, substituindo o hue com o valor fornecido.
-- **WithLuminosity** -retorna uma nova cor, substituindo a luminosidade com o valor fornecido.
-- **WithSaturation** -retorna uma nova cor, substituindo a saturação com o valor fornecido.
-- **MultiplyAlpha** -retorna uma nova cor, modificando o alfa, multiplicá-lo pelo valor alfa fornecido.
+- **Addluminosidade** -retorna um `Color` modificando a luminosidade pelo Delta fornecido.
+- **MultiplyAlpha** -retorna um `Color` modificando o alfa, multiplicando-o pelo valor alfa fornecido.
+- **ToHex** – retorna uma representação `string` hexadecimal de um `Color`.
+- **WithHue** -retorna um `Color`, substituindo o matiz pelo valor fornecido.
+- **WithLuminosity** -retorna um `Color`, substituindo a luminosidade pelo valor fornecido.
+- **WithSaturation** -retorna um `Color`, substituindo a saturação pelo valor fornecido.
 
 ## <a name="implicit-conversions"></a>Conversões implícitas
 
@@ -104,7 +105,7 @@ ActivityIndicator activityIndicator = new ActivityIndicator
 
 ## <a name="using-from-xaml"></a>Usando do XAML
 
-Cores também podem ser facilmente referenciadas em XAML usando os nomes de cor definidos ou as representações hexa mostradas aqui:
+As cores também podem ser referenciadas em XAML usando os nomes de cor definidos ou as representações hexadecimais mostradas aqui:
 
 ```xaml
 <Label Text="Sea color" BackgroundColor="Aqua" />
@@ -115,12 +116,7 @@ Cores também podem ser facilmente referenciadas em XAML usando os nomes de cor 
 ```
 
 > [!NOTE]
-> Ao usar a compilação de XAML, nomes de cores diferenciam maiusculas de minúsculas e, portanto, podem ser escritos em letras minúsculas. Para obter mais informações sobre a compilação de XAML, consulte [compilação XAML](~/xamarin-forms/xaml/xamlc.md).
-
-## <a name="summary"></a>Resumo
-
-O xamarin. Forms `Color` classe é usada para criar referências de cores de reconhecimento de plataforma. Ele pode ser usado no código compartilhado e XAML.
-
+> Ao usar a compilação de XAML, nomes de cores diferenciam maiusculas de minúsculas e, portanto, podem ser escritos em letras minúsculas. Para obter mais informações sobre a compilação de XAML, confira [Compilação de XAML](~/xamarin-forms/xaml/xamlc.md).
 
 ## <a name="related-links"></a>Links relacionados
 

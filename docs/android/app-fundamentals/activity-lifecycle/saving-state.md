@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: 9fafc6965c5d2dec79f440579a5cf3746a545bae
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: febb9b297712a97c03613468b79ca583ec300e77
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68644389"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69887719"
 ---
 # <a name="walkthrough---saving-the-activity-state"></a>Passo a passo: salvar o estado da atividade
 
@@ -60,6 +60,7 @@ Quando clicamos no botão **voltar** , a *atividade B* é destruída e *A ativid
 [ActivityLifecycle.SecondActivity] Activity B - OnStop
 [ActivityLifecycle.SecondActivity] Activity B - OnDestroy
 ```
+
 ### <a name="adding-a-click-counter"></a>Adicionando um contador de clique
 
 Em seguida, vamos alterar o aplicativo para que tenhamos um botão que conta e exiba o número de vezes que ele é clicado. Primeiro, vamos adicionar uma `_counter` variável de instância a: `MainActivity`

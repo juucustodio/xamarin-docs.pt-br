@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/29/2018
-ms.openlocfilehash: 729daef1a7a003613bebc4f82067bc267dab8e00
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: de63a0f3f6564671a50594c66b55ed095329c95c
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522851"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69887631"
 ---
 # <a name="xamarinandroid-ratingbar"></a>RatingBar Xamarin. Android
 
@@ -26,13 +26,14 @@ Um RatingBar é um widget de interface do usuário que exibe uma classificação
 1. Abra o arquivo **Resource/layout/Main. axml** e adicione o[`RatingBar`](xref:Android.Widget.RatingBar)
    elemento (dentro do [`LinearLayout`](xref:Android.Widget.LinearLayout)):
 
-    ```xml
-    <RatingBar android:id="@+id/ratingbar"
+   ```xml
+   <RatingBar android:id="@+id/ratingbar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:numStars="5"
             android:stepSize="1.0"/>
-    ```
+   ```
+
    O `android:numStars` atributo define o número de estrelas a serem exibidas para a barra de classificação. O `android:stepSize` atributo define a granularidade de cada estrela (por exemplo, um valor de permitirá classificações de `0.5` meia estrela).
 
 2. Para fazer algo quando uma nova classificação tiver sido definida, adicione o seguinte código ao final do[`OnCreate()`](xref:Android.App.Activity.OnCreate*)

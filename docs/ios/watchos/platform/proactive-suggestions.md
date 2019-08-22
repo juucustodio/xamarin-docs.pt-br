@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: 7f5c205f73d29c3751acc351294e3ef66c23bb22
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 8593ef34922fca076aa13c70faa4289824f94374
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656392"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69889512"
 ---
 # <a name="watchos-proactive-suggestions-in-xamarin"></a>Sugestões proativas do watchOS no Xamarin
 
@@ -275,6 +275,7 @@ Por fim, o aplicativo pode indicar se a instância é adequada para navegação 
 attributes.SupportsPhoneCalls = true;
 attributes.SupportsNavigation = true;
 ```
+
 ## <a name="activities-best-practices"></a>Práticas recomendadas de atividades
 
 A Apple sugere as seguintes práticas recomendadas ao trabalhar com atividades:

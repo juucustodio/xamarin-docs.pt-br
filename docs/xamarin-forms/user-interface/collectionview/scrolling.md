@@ -6,13 +6,13 @@ ms.assetid: 2ED719AF-33D2-434D-949A-B70B479C9BA5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/06/2019
-ms.openlocfilehash: 89bbe402f056b875a7dadd96527364847ad470e8
-ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
+ms.date: 08/13/2019
+ms.openlocfilehash: 303266f44664f7f57aeaf36869a3a06c8eb91870
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68738935"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69888645"
 ---
 # <a name="xamarinforms-collectionview-scrolling"></a>Rolagem de CollectionView do Xamarin. Forms
 
@@ -24,7 +24,50 @@ ms.locfileid: "68738935"
 
 [`CollectionView`](xref:Xamarin.Forms.CollectionView)define um [`ScrollToRequested`](xref:Xamarin.Forms.ItemsView.ScrollToRequested) evento que é acionado quando um [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) dos métodos é invocado. O [`ScrollToRequestedEventArgs`](xref:Xamarin.Forms.ScrollToRequestedEventArgs) objeto que acompanha o `ScrollToRequested` evento tem muitas `ScrollToPosition` `IsAnimated` `Index`Propriedades, incluindo, ,e.`Item` Essas propriedades são definidas a partir dos argumentos especificados nas `ScrollTo` chamadas de método.
 
+Além disso, [`CollectionView`](xref:Xamarin.Forms.CollectionView) o define `Scrolled` um evento que é acionado para indicar que a rolagem ocorreu. O `ItemsViewScrolledEventArgs` objeto que acompanha o `Scrolled` evento tem muitas propriedades. Para obter mais informações, consulte [detectar rolagem](#detect-scrolling).
+
+[`CollectionView`](xref:Xamarin.Forms.CollectionView)também define uma `ItemsUpdatingScrollMode` propriedade que representa o comportamento `CollectionView` de rolagem do quando novos itens são adicionados a ele. Para obter mais informações sobre essa propriedade, consulte [controlar posição de rolagem quando novos itens forem adicionados](#control-scroll-position-when-new-items-are-added).
+
 Quando um usuário passa o dedo para iniciar uma rolagem, a posição final da rolagem pode ser controlada para que os itens sejam totalmente exibidos. Esse recurso é conhecido como encaixe, pois os itens se ajustam à posição quando a rolagem é interrompida. Para obter mais informações, consulte [snap Points](#snap-points).
+
+[`CollectionView`](xref:Xamarin.Forms.CollectionView)também pode carregar dados de forma incremental à medida que o usuário rola. Para obter mais informações, consulte [carregar dados incrementalmente](populate-data.md#load-data-incrementally).
+
+## <a name="detect-scrolling"></a>Detectar rolagem
+
+[`CollectionView`](xref:Xamarin.Forms.CollectionView)define um `Scrolled` evento que é acionado para indicar que a rolagem ocorreu. O exemplo de XAML a seguir `CollectionView` mostra um que define um manipulador de `Scrolled` eventos para o evento:
+
+```xaml
+<CollectionView Scrolled="OnCollectionViewScrolled">
+    ...
+</CollectionView>
+```
+
+O código C# equivalente é:
+
+```csharp
+CollectionView collectionView = new CollectionView();
+collectionView.Scrolled += OnCollectionViewScrolled;
+```
+
+Neste exemplo de código, o `OnCollectionViewScrolled` manipulador de eventos é executado quando `Scrolled` o evento é disparado:
+
+```csharp
+void OnCollectionViewScrolled(object sender, ItemsViewScrolledEventArgs e)
+{
+    Debug.WriteLine("HorizontalDelta: " + e.HorizontalDelta);
+    Debug.WriteLine("VerticalDelta: " + e.VerticalDelta);
+    Debug.WriteLine("HorizontalOffset: " + e.HorizontalOffset);
+    Debug.WriteLine("VerticalOffset: " + e.VerticalOffset);
+    Debug.WriteLine("FirstVisibleItemIndex: " + e.FirstVisibleItemIndex);
+    Debug.WriteLine("CenterItemIndex: " + e.CenterItemIndex);
+    Debug.WriteLine("LastVisibleItemIndex: " + e.LastVisibleItemIndex);
+}
+```
+
+O `OnCollectionViewScrolled` manipulador de eventos gera os valores `ItemsViewScrolledEventArgs` do objeto que acompanha o evento.
+
+> [!IMPORTANT]
+> O `Scrolled` evento é acionado para rolagens iniciadas pelo usuário e para rolagens programáticas.
 
 ## <a name="scroll-an-item-at-an-index-into-view"></a>Rolar um item em um índice para a exibição
 
@@ -33,6 +76,9 @@ A primeira [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) sobrecarga do m�
 ```csharp
 collectionView.ScrollTo(12);
 ```
+
+> [!NOTE]
+> O [`ScrollToRequested`](xref:Xamarin.Forms.ItemsView.ScrollToRequested) evento é acionado quando [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) o método é invocado.
 
 ## <a name="scroll-an-item-into-view"></a>Rolar um item para a exibição
 
@@ -43,6 +89,17 @@ MonkeysViewModel viewModel = BindingContext as MonkeysViewModel;
 Monkey monkey = viewModel.Monkeys.FirstOrDefault(m => m.Name == "Proboscis Monkey");
 collectionView.ScrollTo(monkey);
 ```
+
+> [!NOTE]
+> O [`ScrollToRequested`](xref:Xamarin.Forms.ItemsView.ScrollToRequested) evento é acionado quando [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) o método é invocado.
+
+## <a name="scroll-bar-visibility"></a>Visibilidade da barra de rolagem
+
+[`CollectionView`](xref:Xamarin.Forms.CollectionView)define `HorizontalScrollBarVisibility` e`VerticalScrollBarVisibility` Propriedades, que são apoiadas por propriedades vinculáveis. Essas propriedades obtêm ou definem um valor de [`ScrollBarVisibility`](xref:Xamarin.Forms.ScrollBarVisibility) enumeração que representa quando a barra de rolagem horizontal ou vertical é visível. A enumeração `ScrollBarVisibility` define os seguintes membros:
+
+- [`Default`](xref:Xamarin.Forms.ScrollBarVisibility)indica o comportamento da barra de rolagem padrão para a plataforma e é o valor padrão `HorizontalScrollBarVisibility` para `VerticalScrollBarVisibility` as propriedades e.
+- [`Always`](xref:Xamarin.Forms.ScrollBarVisibility)indica que as barras de rolagem estarão visíveis, mesmo quando o conteúdo couber na exibição.
+- [`Never`](xref:Xamarin.Forms.ScrollBarVisibility)indica que as barras de rolagem não estarão visíveis, mesmo se o conteúdo não couber na exibição.
 
 ## <a name="control-scroll-position"></a>Posição de rolagem de controle
 
@@ -105,6 +162,31 @@ Uma animação de rolagem é exibida ao rolar um item para a exibição. No enta
 
 ```csharp
 collectionView.ScrollTo(monkey, animate: false);
+```
+
+## <a name="control-scroll-position-when-new-items-are-added"></a>Controlar a posição de rolagem quando novos itens forem adicionados
+
+[`CollectionView`](xref:Xamarin.Forms.CollectionView)define uma `ItemsUpdatingScrollMode` Propriedade, que é apoiada por uma propriedade vinculável. Essa propriedade Obtém ou define um `ItemsUpdatingScrollMode` valor de enumeração que representa o comportamento `CollectionView` de rolagem do quando novos itens são adicionados a ele. A enumeração `ItemsUpdatingScrollMode` define os seguintes membros:
+
+- `KeepItemsInView`ajusta o deslocamento de rolagem para manter o primeiro item visível exibido quando novos itens são adicionados.
+- `KeepScrollOffset`mantém o deslocamento de rolagem relativo ao início da lista quando novos itens são adicionados.
+- `KeepLastItemInView`ajusta o deslocamento de rolagem para manter o último item visível quando novos itens são adicionados.
+
+O valor padrão da `ItemsUpdatingScrollMode` propriedade é. `KeepItemsInView` Portanto, quando novos itens forem adicionados a um [`CollectionView`](xref:Xamarin.Forms.CollectionView) primeiro item visível na lista, permanecerão exibidos. Para garantir que itens recém-adicionados sempre fiquem visíveis na parte inferior da lista, a `ItemsUpdatingScrollMode` propriedade deve ser definida como: `KeepLastItemInView`
+
+```xaml
+<CollectionView ItemsUpdatingScrollMode="KeepLastItemInView">
+    ...
+</CollectionView>
+```
+
+O código C# equivalente é:
+
+```csharp
+CollectionView collectionView = new CollectionView
+{
+    ItemsUpdatingScrollMode = ItemsUpdatingScrollMode.KeepLastItemInView
+};
 ```
 
 ## <a name="snap-points"></a>Pontos de ajuste

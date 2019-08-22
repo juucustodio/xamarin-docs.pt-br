@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/22/2018
-ms.openlocfilehash: cb569a425bf636a51dd6d132f6efa539e74443a0
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 9b99421755b1ad979b4beed279bef6e194659ab7
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68644573"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69888866"
 ---
 # <a name="consume-a-restful-web-service"></a>Consumir um serviço Web RESTful
 
@@ -173,6 +173,7 @@ public async Task SaveTodoItemAsync (TodoItem item, bool isNewItem = false)
   ...
 }
 ```
+
 A operação do `PutAsync` método é idêntico de `PostAsync` método que é usado para a criação de dados no serviço web. No entanto, as respostas possíveis enviadas do serviço web são diferentes.
 
 O serviço REST envia um código de status HTTP no `HttpResponseMessage.IsSuccessStatusCode` propriedade para indicar se a solicitação HTTP foi bem-sucedida ou falhou. As respostas comuns para essa operação são:

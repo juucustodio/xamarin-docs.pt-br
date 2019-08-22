@@ -1,70 +1,71 @@
 ---
-title: Problemas conhecidos e soluções alternativas
-description: Este documento descreve problemas conhecidos e soluções alternativas para pastas de trabalho do Xamarin. Ele aborda problemas de CultureInfo, problemas JSON e muito mais.
+title: Problemas conhecidos & soluções alternativas
+description: Este documento descreve problemas conhecidos e soluções alternativas para Xamarin Workbooks. Ele aborda problemas de CultureInfo, problemas de JSON e muito mais.
 ms.prod: xamarin
 ms.assetid: 495958BA-C9C2-4910-9BAD-F48A425208CF
 author: lobrien
 ms.author: laobri
 ms.date: 03/30/2017
-ms.openlocfilehash: 221ed97db17da62f513448b6c85d4df205a7cbaf
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 21f61b4504367dafc2907fd6471af333f636b521
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61268865"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69889398"
 ---
-# <a name="known-issues--workarounds"></a>Problemas conhecidos e soluções alternativas
+# <a name="known-issues--workarounds"></a>Problemas conhecidos & soluções alternativas
 
-## <a name="persistence-of-cultureinfo-across-cells"></a>Persistência de CultureInfo nas células
+## <a name="persistence-of-cultureinfo-across-cells"></a>Persistência de CultureInfo entre células
 
-Definindo `System.Threading.CurrentThread.CurrentCulture` ou `System.Globalization.CultureInfo.CurrentCulture` não persistem entre as células da pasta de trabalho em destinos de pastas de trabalho baseados em Mono (Mac, iOS e Android) devido a um [bug no Mono `AppContext.SetSwitch` ] [ appcontext-bug] implementação .
+A `System.Threading.CurrentThread.CurrentCulture` configuração `System.Globalization.CultureInfo.CurrentCulture` ou não persiste nas células da pasta de trabalho em destinos de pastas de trabalho baseadas em mono (Mac, Ios e Android) devido a um [bug `AppContext.SetSwitch` na implementação do mono][appcontext-bug] .
 
 ### <a name="workarounds"></a>Soluções alternativas
 
-* Defina o local de aplicativo-domínio `DefaultThreadCurrentCulture`:
+* Definir o aplicativo-domínio-local `DefaultThreadCurrentCulture`:
+
 ```csharp
 using System.Globalization;
 CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("de-DE")
 ```
 
-* Ou então, a atualização para pastas de trabalho 1.2.1 ou mais recente, que irá regravar atribuições às `System.Threading.CurrentThread.CurrentCulture` e `System.Globalization.CultureInfo.CurrentCulture` para fornecer o comportamento desejado (trabalhando para resolver o bug Mono).
+* Ou atualize para as pastas de trabalho 1.2.1 ou mais recentes, que reescreverão `System.Threading.CurrentThread.CurrentCulture` atribuições para e `System.Globalization.CultureInfo.CurrentCulture` para fornecer o comportamento desejado (Configurando o erro de mono).
 
-## <a name="unable-to-use-newtonsoftjson"></a>Não é possível usar o newtonsoft. JSON
+## <a name="unable-to-use-newtonsoftjson"></a>Não é possível usar Newtonsoft. JSON
 
 ### <a name="workaround"></a>Solução alternativa
 
-* Atualizar para pastas de trabalho 1.2.1, que instalarão o newtonsoft. JSON 9.0.1.
-  1.3, as pastas de trabalho atualmente no canal alfa, dá suporte às versões 10 e mais recentes.
+* Atualize para as pastas de trabalho 1.2.1, que instalarão o Newtonsoft. JSON 9.0.1.
+  As pastas de trabalho 1,3, atualmente no canal alfa, dão suporte às versões 10 e mais recentes.
 
 ### <a name="details"></a>Detalhes
 
-Newtonsoft. JSON 10 foi lançado que esbarrar à Microsoft. CSharp que está em conflito com as pastas de trabalho de versão é fornecido para dar suporte à sua dependência `dynamic`. Isso é resolvido na versão de visualização de pastas de trabalho 1.3, mas por enquanto, trabalhamos com base nisso por fixação newtonsoft. JSON especificamente para a versão 9.0.1.
+O Newtonsoft. JSON 10 foi lançado, o que redutou sua dependência em Microsoft. CSharp, que está em conflito com `dynamic`as pastas de trabalho de versão fornecida para dar suporte ao. Isso é abordado na versão de visualização das pastas de trabalho 1,3, mas, por enquanto, trabalhamos com isso fixando Newtonsoft. JSON especificamente para a versão 9.0.1.
 
-Pacotes do NuGet explicitamente dependendo do newtonsoft. JSON 10 ou mais recente têm suporte apenas em pastas de trabalho 1.3, atualmente no canal alfa.
+Os pacotes NuGet explicitamente, dependendo do Newtonsoft. JSON 10 ou mais recente, têm suporte apenas nas pastas de trabalho 1,3, atualmente no canal alfa.
 
-## <a name="code-tooltips-are-blank"></a>Dicas de ferramenta de código estiver em branco
+## <a name="code-tooltips-are-blank"></a>As dicas de ferramentas de código estão em branco
 
-Há um [bug no editor Monaco] [ monaco-bug] no Safari/WebKit, que é usado no aplicativo pastas de trabalho Mac, que resulta na renderização de dicas de ferramenta de código sem texto.
+Há um [bug no editor Mônaco][monaco-bug] no Safari/WebKit, que é usado no aplicativo de pastas de trabalho do Mac, que resulta na renderização de dicas de ferramenta de código sem texto.
 
 ![](general-images/monaco-signature-help-bug.png)
 
 ### <a name="workaround"></a>Solução alternativa
 
-* Clicar na dica de ferramenta depois que ele for exibido forçará o texto a ser renderizado.
+* Clicar na dica de ferramenta depois que ela for exibida forçará o texto a renderizar.
 
-* Ou atualizar para pastas de trabalho 1.2.1 ou mais recente
+* Ou atualizar para pastas de trabalho 1.2.1 ou mais recentes
 
 [appcontext-bug]: https://bugzilla.xamarin.com/show_bug.cgi?id=54448
 [monaco-bug]: https://github.com/Microsoft/monaco-editor/issues/408
 
-## <a name="skiasharp-renderers-are-missing-in-workbooks-13"></a>Renderizadores de SkiaSharp estão ausentes na versão 1.3 de pastas de trabalho
+## <a name="skiasharp-renderers-are-missing-in-workbooks-13"></a>Os renderizadores SkiaSharp estão ausentes nas pastas de trabalho 1,3
 
-A partir de pastas de trabalho 1.3, removemos os renderizadores de SkiaSharp que lançamos em pastas de trabalho 0.99.0, em favor de SkiaSharp fornecendo os renderizadores a mesmo, usando nossa [SDK](~/tools/workbooks/sdk/index.md).
+A partir das pastas de trabalho 1,3, removemos os renderizadores SkiaSharp que enviamos nas pastas de trabalho 0.99.0, em favor do SkiaSharp fornecendo os próprios renderizadores, usando nosso [SDK](~/tools/workbooks/sdk/index.md).
 
 ### <a name="workaround"></a>Solução alternativa
 
-* Atualize SkiaSharp para a versão mais recente no NuGet. No momento da escrita, isso é 1.57.1.
+* Atualize SkiaSharp para a versão mais recente no NuGet. No momento da gravação, isso é 1.57.1.
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Relatório de Bugs](~/tools/workbooks/install.md#reporting-bugs)
+- [Relatando bugs](~/tools/workbooks/install.md#reporting-bugs)
