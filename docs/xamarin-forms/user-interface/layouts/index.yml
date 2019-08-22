@@ -19,6 +19,12 @@ sections:
         style: cards
         className: cardsB
         items:
+          - href: choose-layout.md
+            html: Saiba mais sobre como as principais classes do Xamarin.Forms posicionam e dimensionam os seus filhos.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
+              href: choose-layout.md
+            title: Escolha um layout
           - href: stack-layout.md
             html: 'Saiba como organizar as exibições em uma pilha unidimensional, seja horizontal ou verticalmente.'
             image:
@@ -37,18 +43,18 @@ sections:
               src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
               href: flex-layout.md
             title: FlexLayout
-          - href: absolute-layout.md
-            html: 'Saiba como organizar exibições definindo valores de tamanho e de coordenadas, que podem ser proporcionais ou absolutos.'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
-              href: absolute-layout.md
-            title: AbsoluteLayout
           - href: relative-layout.md
             html: Saiba como organizar exibições definindo restrições em relação às propriedades das exibições de layout ou de irmãos.
             image:
               src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
               href: absolute-layout.md
             title: RelativeLayout
+          - href: absolute-layout.md
+            html: 'Saiba como organizar exibições definindo valores de tamanho e de coordenadas, que podem ser proporcionais ou absolutos.'
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
+              href: absolute-layout.md
+            title: AbsoluteLayout
           - href: scroll-view.md
             html: Saiba como incluir rolagem quando uma exibição não se ajustar aos limites da tela.
             image:
@@ -60,7 +66,7 @@ sections:
             image:
               src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
               href: contentview.md
-            title: Quadro
+            title: ContentView
           - href: frame.md
             html: 'Saiba como encapsular uma exibição com um quadro que pode ser configurado com cores, sombras e outras opções.'
             image:
