@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 08/14/2019
-ms.openlocfilehash: 379791d4dda676140425d79eca696cdca94cd55b
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: 2dde7415f40c9db205351a81d63d273fc211ed2b
+ms.sourcegitcommit: 1341f2950b775a4daa7d0548a51fdef759afd6e3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69888426"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69976593"
 ---
 # <a name="xamarinforms-contentview"></a>ContentView Xamarin. Forms
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/en-us/samples/xamarin/xamarin-forms-samples/userinterface-cardview/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-contentview/)
 
 A classe Xamarin. [`ContentView`](xref:Xamarin.Forms.ContentView) Forms é um `Layout` tipo que contém um único elemento filho e é normalmente usado para criar controles personalizados e reutilizáveis. A `ContentView` classe é herdada de [`TemplatedView`](xref:Xamarin.Forms.TemplatedView). Este artigo e um exemplo associado explicam como criar um controle personalizado `CardView` com base `ContentView` na classe.
 
@@ -205,7 +205,7 @@ Para obter mais informações sobre modelos de controle, consulte [Xamarin. Form
 
 ## <a name="related-links"></a>Links relacionados
 
-* [Aplicativo de exemplo CardView](https://docs.microsoft.com/en-us/samples/xamarin/xamarin-forms-samples/userinterface-cardview/)
+* [Aplicativo de exemplo ContentView](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-contentview/)
 * [Associação de dados do Xamarin. Forms](~/xamarin-forms/app-fundamentals/data-binding/index.md)
 * [Propriedades vinculáveis](~/xamarin-forms/xaml/bindable-properties.md).
 * [Modelos de controle do Xamarin. Forms](~/xamarin-forms/app-fundamentals/templates/control-templates/index.md)

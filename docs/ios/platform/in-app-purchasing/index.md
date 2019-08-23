@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: fb8f4a8e62ea163dc58589382c31c4bf19973c36
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 2445645012e54b1818b1ec72116a85d8b985ead3
+ms.sourcegitcommit: 1341f2950b775a4daa7d0548a51fdef759afd6e3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528262"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69976464"
 ---
 # <a name="in-app-purchasing-in-xamarinios"></a>Compras no aplicativo no Xamarin. iOS
 
@@ -59,7 +59,7 @@ Este artigo introduziu o conceito de compra no aplicativo, descreveu como config
 
 ## <a name="related-links"></a>Links relacionados
 
-- [InAppPurchaseSample](https://docs.microsoft.com/en-us/samples/xamarin/ios-samples/storekit/)
+- [InAppPurchaseSample](https://docs.microsoft.com/samples/xamarin/ios-samples/storekit/)
 - [Guia de programação de compra no aplicativo](https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/StoreKitGuide/Introduction.html)
 - [Guia do Desenvolvedor do iTunes Connect](https://developer.apple.com/library/ios/documentation/LanguagesUtilities/Conceptual/iTunesConnect_Guide/iTunesConnect_Guide.pdf)
 - [Referência da estrutura do kit de repositório](https://developer.apple.com/library/ios/documentation/StoreKit/Reference/StoreKit_Collection/StoreKit_Collection.pdf)

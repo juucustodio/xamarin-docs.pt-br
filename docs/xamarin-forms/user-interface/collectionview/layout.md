@@ -6,13 +6,13 @@ ms.assetid: 5FE78207-1BD6-4706-91EF-B13932321FC9
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 08/12/2019
-ms.openlocfilehash: e22b79fada5582adfec05ce7c5ebeddd6fe7e5d2
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.date: 08/22/2019
+ms.openlocfilehash: ac32e340212dd42c373a39df138436e7ee313958
+ms.sourcegitcommit: 1341f2950b775a4daa7d0548a51fdef759afd6e3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69888662"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69976532"
 ---
 # <a name="xamarinforms-collectionview-layout"></a>Layout CollectionView do Xamarin. Forms
 
@@ -319,9 +319,6 @@ Por padrão, um horizontal [`GridItemsLayout`](xref:Xamarin.Forms.GridItemsLayou
 
 Essas propriedades são apoiadas por [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objetos, o que significa que as propriedades podem ser destinos de associações de dados.
 
-> [!IMPORTANT]
-> Atualmente, há suporte para cabeçalhos e rodapés apenas no Android.
-
 Quando um cabeçalho é adicionado a um layout que cresce horizontalmente, da esquerda para a direita, o cabeçalho é exibido à esquerda da lista. Da mesma forma, quando um rodapé é adicionado a um layout que cresce horizontalmente, da esquerda para a direita, o rodapé é exibido à direita da lista.
 
 ### <a name="display-strings-in-the-header-and-footer"></a>Exibir cadeias de caracteres no cabeçalho e no rodapé
@@ -346,6 +343,10 @@ CollectionView collectionView = new CollectionView
 };
 collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
 ```
+
+Esse código resulta nas seguintes capturas de tela, com o cabeçalho mostrado na captura de tela do iOS e o rodapé mostrado na captura de tela do Android:
+
+[ ![Captura de tela de um cabeçalho e rodapé de cadeia de caracteres CollectionView, no](layout-images/header-footer-string.png "cabeçalho e rodapé de cadeia de caracteres de CollectionView") do Android e Ios] (layout-images/header-footer-string-large.png#lightbox "Cabeçalho e rodapé da cadeia de caracteres CollectionView")
 
 ### <a name="display-views-in-the-header-and-footer"></a>Exibir exibições no cabeçalho e no rodapé
 
@@ -395,6 +396,10 @@ CollectionView collectionView = new CollectionView
 };
 collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
 ```
+
+Esse código resulta nas seguintes capturas de tela, com o cabeçalho mostrado na captura de tela do iOS e o rodapé mostrado na captura de tela do Android:
+
+[ ![Captura de tela de um cabeçalho e rodapé CollectionView usando exibições, em](layout-images/header-footer-view.png "cabeçalho e rodapé de exibição CollectionView") do Android e Ios] (layout-images/header-footer-view-large.png#lightbox "Cabeçalho e rodapé da exibição CollectionView")
 
 ### <a name="display-a-templated-header-and-footer"></a>Exibir um cabeçalho e um rodapé de modelo
 
@@ -446,6 +451,10 @@ collectionView.SetBinding(ItemsView.HeaderProperty, ".");
 collectionView.SetBinding(ItemsView.FooterProperty, ".");
 collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
 ```
+
+Esse código resulta nas seguintes capturas de tela, com o cabeçalho mostrado na captura de tela do iOS e o rodapé mostrado na captura de tela do Android:
+
+[ ![Captura de tela de um cabeçalho e rodapé CollectionView usando modelos, no](layout-images/header-footer-template.png "cabeçalho e no rodapé do modelo CollectionView") de Android e Ios] (layout-images/header-footer-template-large.png#lightbox "Cabeçalho e rodapé do modelo CollectionView")
 
 ## <a name="item-spacing"></a>Espaçamento de item
 

@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 08/06/2019
-ms.openlocfilehash: 329edf455a4778efa5f6fbd1ec88cfb274c5cb49
-ms.sourcegitcommit: 41a029c69925e3a9d2de883751ebfd649e8747cd
+ms.openlocfilehash: 619b29a9d65594b1badd805c3361fe1a174d7174
+ms.sourcegitcommit: 1341f2950b775a4daa7d0548a51fdef759afd6e3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68984418"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69976498"
 ---
 # <a name="xamarinforms-frame"></a>Quadro do Xamarin. Forms
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/en-us/samples/xamarin/xamarin-forms-samples/userinterface-frame/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-frame/)
 
 A classe Xamarin. [`Frame`](xref:Xamarin.Forms.Frame) Forms é um layout usado para encapsular uma exibição com uma borda que pode ser configurada com cores, sombra e outras opções. Quadros geralmente são usados para criar bordas em torno de controles, mas podem ser usados para criar uma interface do usuário mais complexa. Para obter mais informações, consulte [uso avançado de quadro](#advanced-frame-usage).
 
@@ -193,5 +193,5 @@ A imagem em **áreas de. jpg** deve ser adicionada a cada projeto de plataforma 
 
 ## <a name="related-links"></a>Links relacionados
 
-* [Demonstrações de quadros](https://docs.microsoft.com/en-us/samples/xamarin/xamarin-forms-samples/userinterface-frame/)
+* [Demonstrações de quadros](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-frame/)
 * [Imagens no Xamarin. Forms](~/xamarin-forms/user-interface/images.md)
