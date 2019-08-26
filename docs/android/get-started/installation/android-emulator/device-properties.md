@@ -8,12 +8,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/30/2018
-ms.openlocfilehash: 9007157cfd96b82a5781b3bdc3ffb4fe63f4e422
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: a1906d8c5c001c2328a0dbdce58f92092454e2c0
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50119612"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69525087"
 ---
 # <a name="editing-android-virtual-device-properties"></a>Editar propriedades do Dispositivo Virtual Android
 
@@ -31,15 +31,15 @@ Ao selecionar uma propriedade, uma descrição detalhada é exibida à direita. 
 
 É possível alterar as propriedades usando as seguintes diretrizes:
 
--   Para alterar uma propriedade booliana, clique na marca de seleção à direita dela:
+- Para alterar uma propriedade booliana, clique na marca de seleção à direita dela:
 
     ![Alterar uma propriedade booliana](device-properties-images/win/02-boolean-value.png)
 
--   Para alterar uma propriedade *enum* (enumerada), clique na seta para baixo à direita da propriedade e escolha um novo valor.
+- Para alterar uma propriedade *enum* (enumerada), clique na seta para baixo à direita da propriedade e escolha um novo valor.
 
     ![Alterar uma propriedade de enumeração](device-properties-images/win/04-enum-value.png)
 
--   Para alterar uma propriedade de cadeia de caracteres ou inteiro, clique duas vezes na configuração da cadeia de caracteres ou inteiro atual na coluna valor e insira um novo valor.
+- Para alterar uma propriedade de cadeia de caracteres ou inteiro, clique duas vezes na configuração da cadeia de caracteres ou inteiro atual na coluna valor e insira um novo valor.
 
     ![Alterar uma propriedade de inteiro](device-properties-images/win/03-integer-value.png)
 
@@ -56,15 +56,15 @@ Ao selecionar uma propriedade, uma descrição detalhada é exibida à direita. 
 
 É possível alterar as propriedades usando as seguintes diretrizes:
 
--   Para alterar uma propriedade booliana, clique na marca de seleção à direita dela:
+- Para alterar uma propriedade booliana, clique na marca de seleção à direita dela:
 
     ![Alterar uma propriedade booliana](device-properties-images/mac/02-boolean-value.png)
 
--   Para alterar uma propriedade *enum* (enumerada), clique no menu suspenso à direita da propriedade e escolha um novo valor.
+- Para alterar uma propriedade *enum* (enumerada), clique no menu suspenso à direita dela e escolha um novo valor.
 
     ![Alterar uma propriedade de enumeração](device-properties-images/mac/04-enum-value.png)
 
--   Para alterar uma propriedade de cadeia de caracteres ou inteiro, clique duas vezes na configuração da cadeia de caracteres ou inteiro atual na coluna valor e insira um novo valor.
+- Para alterar uma propriedade de cadeia de caracteres ou inteiro, clique duas vezes na configuração da cadeia de caracteres ou inteiro atual na coluna valor e insira um novo valor.
 
     ![Alterar uma propriedade de inteiro](device-properties-images/mac/03-integer-value.png)
 

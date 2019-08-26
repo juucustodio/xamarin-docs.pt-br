@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: e65030092b1f59b1111bc521a8613cfe8a9160ee
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 430f4fedc8e988c89826e3ae023fc25b7b798727
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118689"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69525343"
 ---
 # <a name="publishing-to-the-amazon-app-store"></a>Publicação na Amazon App Store
 
@@ -22,15 +22,15 @@ O Programa de distribuição de aplicativos móveis da Amazon permite que desenv
 O Amazon não limita o tamanho de APKs. No entanto, se um APK for maior que 30 MB, usará o FTP para distribuição, em vez do Portal de distribuição de aplicativos móveis da Amazon.
 
 
-## <a name="submitting-apps-binary-info"></a>Envio de aplicativos: informações binárias
+## <a name="submitting-apps-binary-info"></a>Enviando aplicativos: Informações binárias
 
 O envio de um aplicativo para a Amazon App Store é um processo semelhante ao envio de um aplicativo para o Google Play. Aplicativos distribuídos pela Amazon requerem os seguintes ativos: 
 
--   **Ícone** &ndash; Este é um arquivo .png de 114 x 114 com uma tela de fundo transparente. É obrigatório.
--   **Miniatura** &ndash; Esta é uma versão maior do ícone acima. Tem 512 x 512 pixels com uma tela de fundo transparente. Esse ícone também é obrigatório.
--   **Capturas de tela** &ndash; O Amazon requer um mínimo de três e um máximo de 10 capturas de tela. As capturas de tela devem ser 1024w x 600h pixels ou 800w x 480h pixels. Ambos os formatos .png e .jpg são aceitáveis.
--   **Imagem promocional** &ndash; Para que um aplicativo seja apresentado em canais promocionais, como a home page, uma imagem promocional pode ser opcionalmente enviada. Pode ser um arquivo .png ou .jpg, de 1024w x 500h pixels, em orientação paisagem. Ele não pode ter nenhuma animação.
--  Podem ser fornecidas atualizações para cinco vídeos.
+- **Ícone** &ndash; Este é um arquivo .png de 114 x 114 com uma tela de fundo transparente. É obrigatório.
+- **Miniatura** &ndash; Esta é uma versão maior do ícone acima. Tem 512 x 512 pixels com uma tela de fundo transparente. Esse ícone também é obrigatório.
+- **Capturas de tela** &ndash; O Amazon requer um mínimo de três e um máximo de 10 capturas de tela. As capturas de tela devem ser 1024w x 600h pixels ou 800w x 480h pixels. Ambos os formatos .png e .jpg são aceitáveis.
+- **Imagem promocional** &ndash; Para que um aplicativo seja apresentado em canais promocionais, como a home page, uma imagem promocional pode ser opcionalmente enviada. Pode ser um arquivo .png ou .jpg, de 1024w x 500h pixels, em orientação paisagem. Ele não pode ter nenhuma animação.
+- Podem ser fornecidas atualizações para cinco vídeos.
 
 
 

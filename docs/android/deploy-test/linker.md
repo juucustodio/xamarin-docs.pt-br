@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/30/2018
-ms.openlocfilehash: a79dcf14ddefd13d17e218602030a6467a3f1448
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 4e9a7df9ef418eb9a671979da6d61f7afe03a49f
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68643834"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69525423"
 ---
 # <a name="linking-on-android"></a>Vinculação no Android
 
@@ -55,9 +55,9 @@ public class MyActivity {
 
 O mecanismo principal para controlar o vinculador é a lista suspensa **Comportamento do vinculador** (*Vinculação* no Visual Studio) dentro da caixa de diálogo **Opções de Projeto**. Há três opções:
 
-1.  **Não Vincular** (*Nenhum* no Visual Studio)
-1.  **Vincular os Assemblies do SDK** (*Somente os Assemblies do SDK*)
-1.  **Vincular Todos os Assemblies** (*Assemblies de SDK e de Usuário*)
+1. **Não Vincular** (*Nenhum* no Visual Studio)
+1. **Vincular os Assemblies do SDK** (*Somente os Assemblies do SDK*)
+1. **Vincular Todos os Assemblies** (*Assemblies de SDK e de Usuário*)
 
 
 A opção **Não Vincular** desliga o vinculador; o exemplo de tamanho de aplicativo "Versão sem Vinculação" acima usava esse comportamento. Isso é útil para solucionar problemas de falhas de tempo de execução, para ver se o vinculador é responsável. Essa configuração geralmente não é recomendada para builds de produção.
@@ -92,11 +92,11 @@ E/mono    (17755):   at (wrapper dynamic-method) object:95bb4fbe-bef8-4e5b-8e99-
 
 Às vezes, o vinculador removerá código que você deseja preservar. Por exemplo:
 
--   Talvez exista código que você chame dinamicamente via `System.Reflection.MemberInfo.Invoke`.
+- Talvez exista código que você chame dinamicamente via `System.Reflection.MemberInfo.Invoke`.
 
--   Se você cria uma instância de tipos dinamicamente, convém preservar o construtor padrão de seus tipos.
+- Se você cria uma instância de tipos dinamicamente, convém preservar o construtor padrão de seus tipos.
 
--   Se você usar a serialização de XML, você talvez queira preservar as propriedades de seus tipos.
+- Se você usar a serialização de XML, você talvez queira preservar as propriedades de seus tipos.
 
 Nesses casos, você pode usar o atributo [Android.Runtime.Preserve](xref:Android.Runtime.PreserveAttribute). Cada membro que não está vinculado estaticamente pelo aplicativo está sujeito a ser removido, então esse atributo pode ser usado para marcar membros que não estão referenciados estaticamente, mas ainda são necessários para seu aplicativo. Você pode aplicar esse atributo a todos os membros de um tipo ou ao tipo propriamente dito.
 
@@ -198,27 +198,27 @@ arquivo. Arquivos de configuração de vinculador personalizados podem ser neces
 
 Quando um assembly é vinculado, os seguintes tipos de atributo personalizados serão removidos de todos os membros:
 
--  System.ObsoleteAttribute
--  System.MonoDocumentationNoteAttribute
--  System.MonoExtensionAttribute
--  System.MonoInternalNoteAttribute
--  System.MonoLimitationAttribute
--  System.MonoNotSupportedAttribute
--  System.MonoTODOAttribute
--  System.Xml.MonoFIXAttribute
+- System.ObsoleteAttribute
+- System.MonoDocumentationNoteAttribute
+- System.MonoExtensionAttribute
+- System.MonoInternalNoteAttribute
+- System.MonoLimitationAttribute
+- System.MonoNotSupportedAttribute
+- System.MonoTODOAttribute
+- System.Xml.MonoFIXAttribute
 
 
 Quando um assembly é vinculado, os seguintes tipos de atributo personalizados serão removidos de todos os builds de versão:
 
--  System.Diagnostics.DebuggableAttribute
--  System.Diagnostics.DebuggerBrowsableAttribute
--  System.Diagnostics.DebuggerDisplayAttribute
--  System.Diagnostics.DebuggerHiddenAttribute
--  System.Diagnostics.DebuggerNonUserCodeAttribute
--  System.Diagnostics.DebuggerStepperBoundaryAttribute
--  System.Diagnostics.DebuggerStepThroughAttribute
--  System.Diagnostics.DebuggerTypeProxyAttribute
--  System.Diagnostics.DebuggerVisualizerAttribute
+- System.Diagnostics.DebuggableAttribute
+- System.Diagnostics.DebuggerBrowsableAttribute
+- System.Diagnostics.DebuggerDisplayAttribute
+- System.Diagnostics.DebuggerHiddenAttribute
+- System.Diagnostics.DebuggerNonUserCodeAttribute
+- System.Diagnostics.DebuggerStepperBoundaryAttribute
+- System.Diagnostics.DebuggerStepThroughAttribute
+- System.Diagnostics.DebuggerTypeProxyAttribute
+- System.Diagnostics.DebuggerVisualizerAttribute
 
 
 ## <a name="related-links"></a>Links relacionados

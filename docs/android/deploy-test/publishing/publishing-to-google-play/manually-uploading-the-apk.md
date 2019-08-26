@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/15/2018
-ms.openlocfilehash: 76292dac6281837ee48b3bb76a362255108bd62c
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 3852e2a1460cb5659cf5a00dcc17fb9a6e9c26a8
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57667497"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69525305"
 ---
 # <a name="manually-uploading-the-apk"></a>Carregando o APK Manualmente
 
@@ -99,15 +99,15 @@ Todos os aplicativos no Google Play devem ser classificados de acordo com o sist
 
 A seguir estão listados os quatro níveis do sistema de classificação do Google Play e são fornecidas algumas diretrizes, como os recursos ou conteúdo que exigem ou impõem o nível de classificação: 
 
--   **Todos** &ndash; Não pode acessar, publicar nem compartilhar dados de localização. Não pode hospedar nenhum conteúdo gerado pelo usuário. Não pode habilitar a comunicação entre usuários. 
+- **Todos** &ndash; Não pode acessar, publicar nem compartilhar dados de localização. Não pode hospedar nenhum conteúdo gerado pelo usuário. Não pode habilitar a comunicação entre usuários. 
 
--   **Maturidade baixa** &ndash; Aplicativos que acessam, mas não compartilham, os dados de localização. Representações de violência leve ou animada. 
+- **Maturidade baixa** &ndash; Aplicativos que acessam, mas não compartilham, os dados de localização. Representações de violência leve ou animada. 
 
--   **Maturidade média** &ndash; Referências a drogas, álcool ou tabaco. Temas de jogos de azar ou jogos de azar simulados. Conteúdo inflamatório. Profanidade ou humor grosseiro. Referências sugestivas ou sexuais. 
+- **Maturidade média** &ndash; Referências a drogas, álcool ou tabaco. Temas de jogos de azar ou jogos de azar simulados. Conteúdo inflamatório. Profanidade ou humor grosseiro. Referências sugestivas ou sexuais. 
     Violência intensa fantasiosa. Violência realista. Permite que os usuários localizem uns aos outros. Permite que os usuários se comuniquem entre si. 
     Compartilhamento dos dados de localização de um usuário. 
 
--   **Maturidade alta** &ndash; Um foco no consumo ou na venda de álcool, tabaco ou drogas. Um foco em referências sugestivas ou sexuais. Violência gráfica. 
+- **Maturidade alta** &ndash; Um foco no consumo ou na venda de álcool, tabaco ou drogas. Um foco em referências sugestivas ou sexuais. Violência gráfica. 
 
 Os itens na lista de maturidade média são subjetivos, de modo que é possível que uma diretriz que pareça ditar uma classificação de maturidade média seja suficientemente intensa para merecer uma classificação de maturidade alta. 
 
@@ -155,36 +155,36 @@ Para obter mais informações sobre como publicar seu aplicativo no Google Play,
 
 Quando os usuários buscam por aplicativos no site do Google Play, eles podem pesquisar todos os aplicativos publicados. Quando os usuários navegam no Google Play de um dispositivo Android, os resultados variam um pouco. Os resultados serão filtrados de acordo com a compatibilidade com o dispositivo que está sendo usado. Por exemplo, se um aplicativo tiver que enviar mensagens SMS, o Google Play não mostrará tal aplicativo para nenhum dispositivo que não possa enviar mensagens SMS. Os filtros que são aplicados a uma pesquisa são criados:
 
-1.  Da configuração de hardware do dispositivo.
-2.  Das declarações no arquivo de manifesto dos aplicativos.
-3.  Da operadora utilizada (se houver).
-4.  Do local do dispositivo.
+1. Da configuração de hardware do dispositivo.
+2. Das declarações no arquivo de manifesto dos aplicativos.
+3. Da operadora utilizada (se houver).
+4. Do local do dispositivo.
 
 É possível adicionar elementos ao manifesto do aplicativo para ajudar a controlar como o aplicativo é filtrado na Google Play Store. A seguir estão listados os elementos e atributos do manifesto que podem ser usados para filtrar aplicativos:
 
--   [supports-screen](https://developer.android.com/guide/topics/manifest/supports-screens-element.html)&ndash; O Google Play usará os atributos para determinar se um aplicativo poderá ser implantado em um dispositivo com base no tamanho da tela. 
+- [supports-screen](https://developer.android.com/guide/topics/manifest/supports-screens-element.html)&ndash; O Google Play usará os atributos para determinar se um aplicativo poderá ser implantado em um dispositivo com base no tamanho da tela. 
     O Google Play pressupõe que o Android pode adaptar um layout menor a telas maiores, mas não vice-versa. Desse modo, um aplicativo que declara o suporte para telas normais aparecerá em pesquisas por telas grandes, mas não em pesquisas por telas pequenas. Se um aplicativo Xamarin.Android não fornecer um elemento `<supports-screen>` no arquivo de manifesto, o Google Play presumirá que todos os atributos têm valor true e que o aplicativo dá suporte a todos os tamanhos de tela. Esse elemento deve ser adicionado manualmente ao **AndroidManifest.xml**. 
 
--   [uses-configuration](https://developer.android.com/guide/topics/manifest/uses-configuration-element.html)&ndash; Este elemento de manifesto é usado para solicitar determinados recursos de hardware, como o tipo de teclado, dispositivos de navegação, uma tela sensível ao toque, etc. Esse elemento deve ser adicionado manualmente ao **AndroidManifest.xml**. 
+- [uses-configuration](https://developer.android.com/guide/topics/manifest/uses-configuration-element.html)&ndash; Este elemento de manifesto é usado para solicitar determinados recursos de hardware, como o tipo de teclado, dispositivos de navegação, uma tela sensível ao toque etc. Esse elemento deve ser adicionado manualmente ao **AndroidManifest.xml**. 
 
--   [uses-feature](https://developer.android.com/guide/topics/manifest/uses-feature-element.html)&ndash; Este elemento de manifesto declara os recursos de hardware ou software que um dispositivo deve ter para que o aplicativo funcione. Esse atributo é apenas informativo. O Google Play não exibirá o aplicativo em dispositivos que não satisfaçam esse filtro. Ainda é possível instalar o aplicativo por outros meios (manualmente ou baixando). Esse elemento deve ser adicionado manualmente ao **AndroidManifest.xml**. 
+- [uses-feature](https://developer.android.com/guide/topics/manifest/uses-feature-element.html)&ndash; Este elemento de manifesto declara os recursos de hardware ou software que um dispositivo deve ter para que o aplicativo funcione. Esse atributo é apenas informativo. O Google Play não exibirá o aplicativo em dispositivos que não satisfaçam esse filtro. Ainda é possível instalar o aplicativo por outros meios (manualmente ou baixando). Esse elemento deve ser adicionado manualmente ao **AndroidManifest.xml**. 
 
--   [uses-library](https://developer.android.com/guide/topics/manifest/uses-library-element.html)&ndash; Este elemento especifica que certas bibliotecas compartilhadas devem estar presentes no dispositivo, por exemplo, Google Maps. Esse elemento também pode ser especificado com o `Android.App.UsesLibraryAttribute`. Por exemplo: 
+- [uses-library](https://developer.android.com/guide/topics/manifest/uses-library-element.html)&ndash; Este elemento especifica que certas bibliotecas compartilhadas devem estar presentes no dispositivo, por exemplo, Google Maps. Esse elemento também pode ser especificado com o `Android.App.UsesLibraryAttribute`. Por exemplo: 
 
     ```csharp
     [assembly: UsesLibrary("com.google.android.maps", true)]
     ```
 
--   [uses-permission](https://developer.android.com/guide/topics/manifest/uses-permission-element.html)&ndash; Este elemento é usado para inferir determinados recursos de hardware necessários para a execução do aplicativo e que talvez não tenham sido adequadamente declarados com um elemento `<uses-feature>`. Por exemplo, se um aplicativo solicitar permissão para usar a câmera, o Google Play presumirá que os dispositivos devem ter uma câmera, mesmo se não houver nenhum elemento `<uses-feature>` declarando a câmera. Esse elemento pode ser definido com o `Android.App.UsesPermissionsAttribute`. Por exemplo: 
+- [uses-permission](https://developer.android.com/guide/topics/manifest/uses-permission-element.html)&ndash; Este elemento é usado para inferir determinados recursos de hardware necessários para a execução do aplicativo e que talvez não tenham sido adequadamente declarados com um elemento `<uses-feature>`. Por exemplo, se um aplicativo solicitar permissão para usar a câmera, o Google Play presumirá que os dispositivos devem ter uma câmera, mesmo se não houver nenhum elemento `<uses-feature>` declarando a câmera. Esse elemento pode ser definido com o `Android.App.UsesPermissionsAttribute`. Por exemplo: 
 
     ```csharp
     [assembly: UsesPermission(Manifest.Permission.Camera)]
     ```
 
--   [uses-sdk](https://developer.android.com/guide/topics/manifest/uses-sdk-element.html)&ndash; O elemento é usado para declarar o nível mínimo necessário de API do Android para o aplicativo. Esse elemento pode ser definido nas opções de um projeto Xamarin.Android. 
+- [uses-sdk](https://developer.android.com/guide/topics/manifest/uses-sdk-element.html)&ndash; O elemento é usado para declarar o nível mínimo necessário de API do Android para o aplicativo. Esse elemento pode ser definido nas opções de um projeto Xamarin.Android. 
 
--   [compatible-screens](https://developer.android.com/guide/topics/manifest/compatible-screens-element.html)&ndash; Este elemento é usado para filtrar os aplicativos que não correspondem nem à densidade, nem ao tamanho da tela especificados por este elemento. A maioria dos aplicativos não deve usar este filtro. Ele destina-se a jogos de alto desempenho ou aplicativos específicos que exigiram controles estritos na distribuição do aplicativo. O atributo `<support-screen>` mencionado acima é preferível. 
+- [compatible-screens](https://developer.android.com/guide/topics/manifest/compatible-screens-element.html)&ndash; Este elemento é usado para filtrar os aplicativos que não correspondem nem à densidade, nem ao tamanho da tela especificados por este elemento. A maioria dos aplicativos não deve usar este filtro. Ele destina-se a jogos de alto desempenho ou aplicativos específicos que exigiram controles estritos na distribuição do aplicativo. O atributo `<support-screen>` mencionado acima é preferível. 
 
--   [supports-gl-texture](https://developer.android.com/guide/topics/manifest/supports-gl-texture-element.html)&ndash; Este elemento é usado para declarar as formações de compactação de textura GL que o aplicativo exige. A maioria dos aplicativos não deve usar este filtro. Ele destina-se a jogos de alto desempenho ou aplicativos específicos que exigiram controles estritos na distribuição do aplicativo. 
+- [supports-gl-texture](https://developer.android.com/guide/topics/manifest/supports-gl-texture-element.html)&ndash; Este elemento é usado para declarar as formações de compactação de textura GL que o aplicativo exige. A maioria dos aplicativos não deve usar este filtro. Ele destina-se a jogos de alto desempenho ou aplicativos específicos que exigiram controles estritos na distribuição do aplicativo. 
 
 Para obter mais informações sobre como configurar o manifesto do aplicativo, confira o tópico sobre o [Manifesto do Aplicativo](https://developer.android.com/guide/topics/manifest/manifest-intro.html) do Android.

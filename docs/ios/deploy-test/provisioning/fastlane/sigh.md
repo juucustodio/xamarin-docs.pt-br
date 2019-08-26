@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 88cc4899956b03d7236d7aa5c2bd30a5f6880507
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: bb2fd504cccb7aa81831288762ba623824e52554
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50119508"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69526515"
 ---
 # <a name="fastlane-for-ios-sigh"></a>fastlane para iOS – sigh
 
@@ -50,7 +50,7 @@ Para saber mais sobre como instalar o fastlane, consulte o guia Introdução ao 
 
 ## <a name="what-is-sigh"></a>O que é o sigh
 
-O sigh fornece uma interface de terminal que permite que você crie e renove perfis de provisionamento para todas as configurações: Desenvolvimento, Distribuição de loja de aplicativos, Distribuição Ad Hoc e Distribuição corporativa. Além disso, ele fornece uma maneira simples de baixar e reparar os perfis de provisionamento.
+O sigh oferece uma interface de terminal que permite criar e renovar perfis de provisionamento para todas as configurações: Desenvolvimento, Distribuição da App Store, Distribuição Ad Hoc e Distribuição Enterprise. Além disso, ele fornece uma maneira simples de baixar e reparar os perfis de provisionamento.
 
 <a name="appid" />
 
@@ -58,7 +58,9 @@ O sigh fornece uma interface de terminal que permite que você crie e renove per
 
 Uma ID do aplicativo pode ser criada com o seguinte comando:
 
-    fastlane produce -u your@appleid.com -a com.company.appname --skip_itc
+```
+fastlane produce -u your@appleid.com -a com.company.appname --skip_itc
+```
 
 Em que `com.company.appname` é a ID do pacote do aplicativo, que está localizada no arquivo Info.plist do aplicativo do Xamarin.iOS, conforme ilustrado abaixo:
 

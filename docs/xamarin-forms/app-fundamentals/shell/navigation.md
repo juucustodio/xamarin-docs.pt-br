@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/06/2019
-ms.openlocfilehash: 4c0fc5edd309d5ed8103c5fc3e33817001049241
-ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
+ms.openlocfilehash: c65a1aed79199106d2a754329dd38d87feda66a2
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68739264"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69888964"
 ---
 # <a name="xamarinforms-shell-navigation"></a>Navegação do Shell do Xamarin.Forms
 
@@ -91,7 +91,7 @@ about
 Para navegar até o objeto `ShellContent` para a rota `dogs`, o URI da rota absoluta é `//animals/domestic/dogs`. Da mesma forma, para navegar até o objeto `ShellContent` para a rota `about`, o URI da rota absoluta é `//about`.
 
 > [!IMPORTANT]
-> Nomes duplicados de rota são permitidos. No entanto, rotas duplicadas não são. Uma `ArgumentException` será lançada na inicialização do aplicativo se uma rota duplicada for detectada.
+> Uma `ArgumentException` será lançada na inicialização do aplicativo se uma rota duplicada for detectada. Essa exceção também será gerada se duas ou mais rotas do mesmo nível na hierarquia compartilharem um nome.
 
 #### <a name="register-page-routes"></a>Registrar rotas de página
 
@@ -123,7 +123,7 @@ Routing.RegisterRoute("elephants/details", typeof(ElephantDetailPage));
 Este exemplo habilita a navegação de páginas contextuais, onde a navegação até a rota `details` partindo da página para a rota `monkeys` exibe o `MonkeyDetailPage`. Da mesma forma, a navegação até a rota `details` partindo da página para a rota `elephants` exibe o `ElephantDetailPage`.
 
 > [!IMPORTANT]
-> Atualmente, os nomes de rota duplicados são permitidos ao usar o método `Routing.RegisterRoute`, com o registro duplicado substituindo o registro anterior.
+> Um `ArgumentException` será lançado se o método `Routing.RegisterRoute` tentar registrar a mesma rota em dois ou mais tipos diferentes.
 
 ## <a name="perform-navigation"></a>Realizar navegação
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/22/2018
-ms.openlocfilehash: edd6fc92603783dc9de64b10304e8d48f97bdef3
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: fd28143a2d4678a240d9d6f9f1cc3b1c5da80222
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68509217"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69525701"
 ---
 # <a name="android-debug-log"></a>Log de depuração do Android
 
@@ -22,8 +22,8 @@ Um truque muito comum que os desenvolvedores usam para depurar seus aplicativos 
 
 A ferramenta **Log de Depuração** fornece uma maneira de visualizar a saída do log durante a depuração de um aplicativo através do Visual Studio. O log de depuração suporta os seguintes dispositivos:
 
--   acessórios, tablets e telefones Android físicos.
--   Um dispositivo Virtual Android em execução no Android Emulator. 
+- acessórios, tablets e telefones Android físicos.
+- Um dispositivo Virtual Android em execução no Android Emulator. 
 
 > [!NOTE]
 > A ferramenta **Log de Depuração** não funciona com o Xamarin Live Player.
@@ -41,24 +41,24 @@ Para abrir a ferramenta **Log do Dispositivo**, clique no ícone **Log do Dispos
 
 Como alternativa, inicie a ferramenta **Log do Dispositivo** por meio de uma das seguintes seleções de menu:
 
--   **Exibir -> Outras Janelas -> Log do Dispositivo**
--   **Ferramentas -> Android -> Log do Dispositivo**
+- **Exibir -> Outras Janelas -> Log do Dispositivo**
+- **Ferramentas -> Android -> Log do Dispositivo**
 
 A captura de tela a seguir ilustra as várias partes da janela **Ferramenta de Depuração**:
 
 [![Partes da janela Ferramenta de Depuração](android-debug-log-images/vswin-03-features-sml.png)](android-debug-log-images/vswin-03-features.png#lightbox)
 
--   **Seletor de Dispositivo** &ndash; Seleciona qual dispositivo físico ou emulador em execução monitorar.
+- **Seletor de Dispositivo** &ndash; Seleciona qual dispositivo físico ou emulador em execução monitorar.
 
--   **Entradas de Log** &ndash; Uma tabela de mensagens de log de logcat.
+- **Entradas de Log** &ndash; Uma tabela de mensagens de log de logcat.
 
--   **Limpar Entradas de Log** &ndash; Limpa todas as entradas de log atuais da tabela.
+- **Limpar Entradas de Log** &ndash; Limpa todas as entradas de log atuais da tabela.
 
--   **Reproduzir/Pausar** &ndash; Alterna entre atualizar ou pausar a exibição de novas entradas de log.
+- **Reproduzir/Pausar** &ndash; Alterna entre atualizar ou pausar a exibição de novas entradas de log.
 
--   **Parar** &ndash; Interrompe a exibição de novas entradas de log.
+- **Parar** &ndash; Interrompe a exibição de novas entradas de log.
 
--   **Caixa de Pesquisa** &ndash; Insira as strings de pesquisa nessa caixa para filtrar um subconjunto de entradas de log.
+- **Caixa de Pesquisa** &ndash; Insira as cadeias de caracteres de pesquisa nessa caixa para filtrar um subconjunto de entradas de log.
 
 
 Quando a janela da ferramenta **Log de Depuração** for exibida, use o menu suspenso do dispositivo para escolher o dispositivo Android a ser monitorado:
@@ -78,23 +78,23 @@ A captura de tela a seguir ilustra as várias partes da janela **Ferramenta de D
 
 [![Recursos da janela Ferramenta de Depuração](android-debug-log-images/vsmac-03-features-sml.png)](android-debug-log-images/vsmac-03-features.png#lightbox)
 
--   **Seletor de Dispositivo** &ndash; Seleciona qual dispositivo físico ou emulador em execução monitorar.
+- **Seletor de Dispositivo** &ndash; Seleciona qual dispositivo físico ou emulador em execução monitorar.
 
--   **Entradas de Log** &ndash; Uma tabela de mensagens de log de logcat.
+- **Entradas de Log** &ndash; Uma tabela de mensagens de log de logcat.
 
--   **Limpar Entradas de Log** &ndash; Limpa todas as entradas de log atuais da tabela.
+- **Limpar Entradas de Log** &ndash; Limpa todas as entradas de log atuais da tabela.
 
--   **Caixa de Pesquisa** &ndash; Insira as strings de pesquisa nessa caixa para filtrar um subconjunto de entradas de log.
+- **Caixa de Pesquisa** &ndash; Insira as cadeias de caracteres de pesquisa nessa caixa para filtrar um subconjunto de entradas de log.
 
--   **Mostrar Mensagens** &ndash; Alterna a exibição de mensagens informativas.
+- **Mostrar Mensagens** &ndash; Alterna a exibição de mensagens informativas.
 
--   **Mostrar Avisos** &ndash; Alterna a exibição de mensagens de aviso (mensagens de aviso são exibidas em amarelo).
+- **Mostrar Avisos** &ndash; Alterna a exibição de mensagens de aviso (mensagens de aviso são exibidas em amarelo).
 
--   **Mostrar Erros** &ndash; Alterna a exibição de mensagens de erro (mensagens de erro são exibidas em vermelho).
+- **Mostrar Erros** &ndash; Alterna a exibição de mensagens de erro (mensagens de erro são exibidas em vermelho).
 
--   **Reconectar** &ndash; Reconecta ao dispositivo e atualiza a exibição da entrada do log.
+- **Reconectar** &ndash; Reconecta ao dispositivo e atualiza a exibição da entrada do log.
 
--   **Adicionar Marcador** &ndash; Insere uma mensagem de marcador (como `--- Marker N ---`) após a última entrada de log, onde _N_ é um contador que começa em 1 e é incrementado em 1 conforme novos marcadores são adicionados.
+- **Adicionar Marcador** &ndash; Insere uma mensagem de marcador (como `--- Marker N ---`) após a última entrada de log, em que _N_ é um contador que começa em 1 e é incrementado em 1 conforme novos marcadores são adicionados.
 
 Quando a janela da ferramenta Log de Depuração for exibida, use o menu suspenso do dispositivo para escolher o dispositivo Android a ser monitorado:
 

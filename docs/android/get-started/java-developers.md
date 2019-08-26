@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/13/2018
-ms.openlocfilehash: d59d4fc3ff9df3ea883ab4d5845da193e6cb8c51
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 5edde7cff0867161394270250a8fe622e8e03ee3
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68643783"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69524906"
 ---
 # <a name="xamarin-for-java-developers"></a>Xamarin para Desenvolvedores Java
 
@@ -27,17 +27,17 @@ Se você estiver familiarizado com Java, você se sentirá instantaneamente em c
 
 Muitas das principais características do Java podem ser encontradas em C#:
 
--   Programação orientada a objeto baseada em classe
+- Programação orientada a objeto baseada em classe
 
--   Tipagem forte
+- Tipagem forte
 
--   Suporte para interfaces
+- Suporte para interfaces
 
--   Genéricos
+- Genéricos
 
--   Coleta de lixo
+- Coleta de lixo
 
--   Compilação de tempo de execução
+- Compilação de tempo de execução
 
 Java e C# são compilados em uma linguagem intermediária que é executada em um ambiente de execução gerenciado. C# e Java são estaticamente tipados e ambas as linguagens tratam cadeias de caracteres como tipos imutáveis.
 As duas linguagens usam uma hierarquia de classes de raiz única. Assim como o Java, o C# é compatível somente com a herança única e não permite métodos globais.
@@ -45,40 +45,40 @@ Em ambas as linguagens, os objetos são criados no heap usando a palavra-chave `
 
 No entanto, há várias diferenças entre Java e C#. Por exemplo:
 
--   Java não é compatível com a variáveis locais de tipo implícito (C# é compatível com a palavra-chave `var`).
+- O Java não é compatível com a variáveis locais de tipo implícito (C# é compatível com a palavra-chave `var`).
 
--   Em Java, você pode passar parâmetros somente por valor, enquanto, em C#, você pode passá-los por referência e também por valor. (C# fornece as palavras-chave `ref` e `out` para passar parâmetros por referência; não há nenhum equivalente a elas em Java).
+- Em Java, você pode passar parâmetros somente por valor, enquanto, em C#, você pode passá-los por referência e também por valor. (C# fornece as palavras-chave `ref` e `out` para passar parâmetros por referência; não há nenhum equivalente a elas em Java).
 
--   O Java não é compatível com diretivas de pré-processador como `#define`.
+- O Java não é compatível com diretivas de pré-processador como `#define`.
 
--   O Java não é compatível com tipos de inteiro sem sinal, enquanto o C# oferece tipos de inteiro sem sinal como `ulong`, `uint`, `ushort` e `byte`.
+- O Java não é compatível com tipos de inteiro sem sinal, enquanto o C# oferece tipos de inteiro sem sinal como `ulong`, `uint`, `ushort` e `byte`.
 
--   O Java não é compatível com a sobrecarga de operador; no C#, você pode sobrecarregar operadores e conversões.
+- O Java não é compatível com a sobrecarga de operador; no C#, você pode sobrecarregar operadores e conversões.
 
--   Em uma instrução `switch` do Java, o código pode passar para a próxima seção da opção, mas em C#, o final de cada seção `switch` deve terminar a opção (o final de cada seção deve ser fechado com uma instrução `break`).
+- Em uma instrução `switch` do Java, o código pode passar para a próxima seção da opção, mas em C#, o final de cada seção `switch` deve terminar a opção (o final de cada seção deve ser fechado com uma instrução `break`).
 
--   Em Java, você especifica as exceções geradas por um método com a palavra-chave `throws`, mas o C# não tem nenhum conceito de exceções verificadas &ndash; a palavra-chave `throws` não é compatível com o C#.
+- Em Java, você especifica as exceções lançadas por um método com a palavra-chave `throws`, mas o C# não tem nenhum conceito de exceções verificadas &ndash; a palavra-chave `throws` não é compatível com o C#.
 
--   O C# é compatível com LINQ (consulta integrada à linguagem), que permite que você use as palavras reservadas `from`, `select` e `where` para gravar consultas a coleções de uma maneira semelhante às consultas de banco de dados.
+- O C# é compatível com LINQ (consulta integrada à linguagem), o que permite usar as palavras reservadas `from`, `select` e `where` para gravar consultas em coleções de uma maneira semelhante às consultas de banco de dados.
 
 
 É claro, há muitas outras diferenças entre C# e Java que podem ser abordadas neste artigo. Além disso, Java e C# continuam a evoluir (por exemplo, Java 8, que ainda não está na cadeia de ferramentas do Android, é compatível com expressões lambda no estilo C#), então essas diferenças sofrerão alterações ao longo do tempo. São descritas aqui apenas as diferenças mais importantes encontradas atualmente por desenvolvedores Java não familiarizados com o Xamarin.Android.
 
--   [Desde Java até desenvolvimento em C#](#fundamentals) fornece uma introdução às diferenças fundamentais entre C# e Java.
+- [Do Java ao desenvolvimento em C#](#fundamentals) é uma introdução às diferenças fundamentais entre C# e Java.
 
--   [Recursos de programação orientada a objeto](#oopfeatures) descreve as diferenças mais importantes nos recursos orientados a objeto entre as duas linguagens.
+- [Recursos de Programação Orientada a Objeto](#oopfeatures) descreve as diferenças mais importantes nos recursos orientados a objeto entre as duas linguagens.
 
--   [Diferenças de palavra-chave](#keywords) fornece uma tabela de equivalentes de palavra-chave úteis, palavras-chave somente para C# e links para definições de palavra-chave do C#.
+- [Diferenças de palavra-chave](#keywords) fornece uma tabela de equivalentes de palavra-chave úteis, palavras-chave somente para C# e links para definições de palavra-chave do C#.
 
 O C# oferece muitos recursos principais para Xamarin.Android que não estão atualmente disponíveis para desenvolvedores de Java no Android. Esses recursos podem ajudar a escrever código melhor em menos tempo:
 
--   [Propriedades](#properties) &ndash; com o sistema de propriedades do C#, você pode acessar variáveis de membro com segurança e de modo direto, sem precisar escrever os métodos setter e getter.
+- [Propriedades](#properties) &ndash; Com o sistema de propriedades do C#, você pode acessar variáveis de membro com segurança e de modo direto, sem precisar escrever os métodos setter e getter.
 
--   [Expressões Lambda](#lambdas) &ndash; No C# você pode usar métodos anônimos (também chamado de *lambdas*) para expressar sua funcionalidade de forma mais sucinta e com mais eficiência. Você pode evitar a sobrecarga de precisar gravar objetos que serão usados apenas uma vez, além de poder passar o estado local para um método sem a necessidade de adicionar parâmetros.
+- [Expressões Lambda](#lambdas) &ndash; No C# você pode usar métodos anônimos (também chamado de *lambdas*) para expressar sua funcionalidade de forma mais sucinta e com mais eficiência. Você pode evitar a sobrecarga de precisar gravar objetos que serão usados apenas uma vez, além de poder passar o estado local para um método sem a necessidade de adicionar parâmetros.
 
--   [Manipulação de eventos](#events) &ndash; o C# oferece suporte no nível de linguagem para *programação controlada por evento*, em que um objeto pode se registrar para ser notificado quando ocorre um evento de interesse. A palavra-chave `event` define um mecanismo de distribuição multicast que uma classe publicadora pode usar para notificar assinantes do evento.
+- [Manipulação de eventos](#events) &ndash; o C# oferece suporte no nível de linguagem para *programação controlada por evento*, em que um objeto pode se registrar para ser notificado quando ocorre um evento de interesse. A palavra-chave `event` define um mecanismo de distribuição multicast que uma classe publicadora pode usar para notificar assinantes do evento.
 
--   [Programação assíncrona](#async) &ndash; os recursos de programação assíncrona do C# (`async`/`await`) mantêm os aplicativos responsivos.
+- [Programação assíncrona](#async) &ndash; os recursos de programação assíncrona do C# (`async`/`await`) mantêm os aplicativos responsivos.
     O suporte no nível de linguagem desse recurso torna a programação assíncrona fácil de implementar e menos propensa a erros.
 
 
@@ -166,31 +166,31 @@ Observe que há algumas limitações no suporte de Xamarin.Android para classes 
 
 Java e C# usam linguagens de programação orientada a objeto muito semelhantes:
 
--   Todas as classes são, em última análise, derivadas de um objeto de raiz única &ndash; todos os objetos Java derivam de `java.lang.Object`, enquanto todos os objetos C# derivam de `System.Object`.
+- Todas as classes são, em última análise, derivadas de um objeto de raiz única &ndash; todos os objetos Java derivam de `java.lang.Object`, enquanto todos os objetos C# derivam de `System.Object`.
 
--   Instâncias de classes são tipos de referência.
+- Instâncias de classes são tipos de referência.
 
--   Quando você acessa as propriedades e métodos de uma instância, você usa o operador "<code>.</code>".
+- Quando você acessa as propriedades e os métodos de uma instância, você usa o operador "`.`".
 
--   Todas as instâncias de classe são criadas no heap por meio do operador `new`.
+- Todas as instâncias de classe são criadas no heap por meio do operador `new`.
 
--   Como ambas as linguagens usam a coleta de lixo, não é possível liberar explicitamente objetos não utilizados (ou seja, não há uma palavra-chave `delete`, como ocorre no C++).
+- Como ambas as linguagens usam a coleta de lixo, não é possível liberar explicitamente objetos não utilizados (ou seja, não há uma palavra-chave `delete`, como ocorre no C++).
 
--   Você pode estender as classes por meio de herança, sendo que ambas as linguagens só permitem uma única classe base por tipo.
+- Você pode estender as classes por meio de herança, sendo que ambas as linguagens só permitem uma única classe base por tipo.
 
--   Você pode definir as interfaces e uma classe pode herdar de (ou seja, implementar) várias definições de interface.
+- É possível definir as interfaces e uma classe pode herdar de (ou seja, implementar) várias definições de interface.
 
 No entanto, também há algumas diferenças importantes:
 
--   O Java tem dois recursos avançados com os quais o C# não é compatível com: classes anônimas e internas. (No entanto, o C# permite o aninhamento de definições de classe &ndash; as classes aninhadas do C# são como classes aninhadas estáticas do Java.)
+- O Java tem dois recursos avançados com os quais o C# não é compatível com: classes anônimas e internas. (No entanto, o C# permite o aninhamento de definições de classe &ndash; as classes aninhadas do C# são como classes aninhadas estáticas do Java.)
 
--   O C# é compatível com tipos de estrutura de estilo C (`struct`), enquanto o Java não.
+- O C# é compatível com tipos de estrutura de estilo C (`struct`), enquanto o Java não.
 
--   No C#, você pode implementar uma definição de classe em arquivos de origem separados por meio da palavra-chave `partial`.
+- No C#, você pode implementar uma definição de classe em arquivos de origem separados por meio da palavra-chave `partial`.
 
--   Interfaces C# não podem declarar campos.
+- Interfaces C# não podem declarar campos.
 
--   O C# usa a sintaxe do destruidor de estilo C++ para expressar finalizadores. A sintaxe é diferente do método `finalize` do Java, mas a semântica é praticamente a mesma. (Observe que em C#, os destruidores chamam automaticamente o destruidor da classe base &ndash;, enquanto no Java, utiliza-se uma chamada explícita para `super.finalize`.)
+- O C# usa a sintaxe do destruidor de estilo C++ para expressar finalizadores. A sintaxe é diferente do método `finalize` do Java, mas a semântica é praticamente a mesma. (Observe que em C#, os destruidores chamam automaticamente o destruidor da classe base &ndash;, enquanto no Java, utiliza-se uma chamada explícita para `super.finalize`.)
 
 
 
@@ -286,9 +286,9 @@ Nesse caso, o método `OnCreate` definido pela classe derivada (`MainActivity`) 
 
 Java e C# dão suporte aos modificadores de acesso `public`, `private` e `protected`. No entanto, o C# é compatível com dois modificadores de acesso adicionais:
 
--   **`internal`** &ndash; O membro de classe é acessível somente dentro do assembly atual.
+- **`internal`** &ndash; O membro de classe é acessível somente dentro do assembly atual.
 
--   **`protected internal`** &ndash; O membro de classe é acessível dentro do assembly de definição, da classe de definição e de classes derivadas (tanto as classes derivadas dentro do assembly quanto as derivadas fora dele têm acesso).
+- **`protected internal`** &ndash; O membro de classe é acessível dentro do assembly de definição, da classe de definição e de classes derivadas (tanto as classes derivadas dentro do assembly quanto as derivadas fora dele têm acesso).
 
 Para obter mais informações sobre os modificadores de acesso do C#, veja o tópico [Modificadores de acesso](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/access-modifiers).
 
@@ -301,11 +301,11 @@ Assim como o Java, o C# é compatível com classes e métodos `abstract`.
 
 No entanto, há algumas diferenças entre o Java e o C# no modo de declarar métodos virtuais e substituí-los:
 
--   No C#, os métodos são não virtuais por padrão. Classes pai devem identificar explicitamente quais métodos devem ser substituídos usando a palavra-chave `virtual`. Por outro lado, todos os métodos no Java são métodos virtuais por padrão.
+- No C#, os métodos são não virtuais por padrão. Classes pai devem identificar explicitamente quais métodos devem ser substituídos usando a palavra-chave `virtual`. Por outro lado, todos os métodos no Java são métodos virtuais por padrão.
 
--   Para impedir que um método que seja substituído no C#, você simplesmente omite a palavra-chave `virtual`. Por outro lado, o Java usa a palavra-chave `final` para marcar um método com "substituição não permitida".
+- Para impedir que um método que seja substituído no C#, você simplesmente omite a palavra-chave `virtual`. Por outro lado, o Java usa a palavra-chave `final` para marcar um método com "substituição não permitida".
 
--   Classes derivadas de C# devem usar a palavra-chave `override` para indicar explicitamente que um método de classe base virtual está sendo substituído.
+- Classes derivadas de C# devem usar a palavra-chave `override` para indicar explicitamente que um método de classe base virtual está sendo substituído.
 
 Para obter mais informações sobre o suporte do C# para polimorfismo, veja o tópico [Polimorfismo](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/polymorphism).
 
@@ -357,9 +357,9 @@ No Xamarin.Android, os eventos são geralmente usados para notificar os objetos 
 
 Para assinar um evento:
 
-1.  Crie um objeto delegado que se refere ao método que você deseja que seja invocado quando o evento ocorre.
+1. Crie um objeto delegado que faz referência ao método que você quer que seja invocado quando o evento ocorre.
 
-2.  Use o operador `+=` para anexar o delegado ao evento que você está assinando.
+2. Use o operador `+=` para anexar o delegado ao evento que você está assinando.
 
 O exemplo a seguir define um delegado (com um uso explícito da palavra-chave `delegate`) para assinar para cliques de botão.
 Este manipulador de cliques de botão inicia uma nova atividade:
@@ -483,9 +483,9 @@ Além disso, há muitas palavras-chave que são exclusivas do C# e não têm uma
 
 Se você tem a funcionalidade existente do Java que não deseja converter em C#, você pode reutilizar as bibliotecas Java existentes em aplicativos Xamarin.Android por meio de duas técnicas:
 
--  **Criar uma biblioteca de associações de Java** &ndash; usando essa abordagem, você usa ferramentas Xamarin para gerar wrappers C# em torno de tipos Java. Esses wrappers são chamados *associações*. Como resultado, seu aplicativo xamarin pode usar o arquivo *.jar* chamando esses wrappers.
+- **Criar uma biblioteca de associações de Java** &ndash; usando essa abordagem, você usa ferramentas Xamarin para gerar wrappers C# em torno de tipos Java. Esses wrappers são chamados *associações*. Como resultado, seu aplicativo xamarin pode usar o arquivo *.jar* chamando esses wrappers.
 
--  **Interface nativa Java** &ndash; a JNI (*Interface nativa Java*) é uma estrutura que permite que aplicativos C# chamem ou sejam chamados por código Java.
+- **Interface nativa Java** &ndash; A JNI (*Interface Nativa Java*) é uma estrutura que permite que aplicativos C# chamem ou sejam chamados por código Java.
 
 Para obter mais informações sobre essas técnicas, consulte [Visão geral da integração Java](~/android/platform/java-integration/index.md).
 

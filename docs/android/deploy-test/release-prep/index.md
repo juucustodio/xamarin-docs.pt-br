@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2018
-ms.openlocfilehash: 605db1c2e0dc0cf41288f9d6c9252582ce91d525
-ms.sourcegitcommit: 64d6da88bb6ba222ab2decd2fdc8e95d377438a6
+ms.openlocfilehash: 4ddae1ae4f49c01220b2f5ce78dc19122b3015a0
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58071054"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69525279"
 ---
 # <a name="preparing-an-application-for-release"></a>Preparar um aplicativo para lançamento
 
@@ -19,19 +19,19 @@ Depois que um aplicativo tiver sido codificado e testado, será necessário prep
 
 Use as seguintes etapas para criar o aplicativo para versão:
 
--   **[Especificar o Ícone do Aplicativo](#Specify_the_Application_Icon)** &ndash; Cada aplicativo Xamarin.Android deve ter um ícone do aplicativo especificado. Embora não seja tecnicamente necessário, alguns mercados, como Google Play, exigem isso.
+- **[Especificar o Ícone do Aplicativo](#Specify_the_Application_Icon)** &ndash; Cada aplicativo Xamarin.Android deve ter um ícone do aplicativo especificado. Embora não seja tecnicamente necessário, alguns mercados, como Google Play, exigem isso.
 
--   **[Controlar a versão do aplicativo](#Versioning)** &ndash; Essa etapa envolve a inicialização ou atualização das informações de controle de versão. Isso é importante para atualizações futuras de aplicativos e para garantir que os usuários saibam qual versão do aplicativo foi instalada.
+- **[Controlar a versão do aplicativo](#Versioning)** &ndash; Essa etapa envolve a inicialização ou atualização das informações de controle de versão. Isso é importante para atualizações futuras de aplicativos e para garantir que os usuários saibam qual versão do aplicativo foi instalada.
 
--   **[Reduzir o APK](#shrink_apk)** &ndash; O tamanho do APK final pode ser reduzido significativamente usando o vinculador do Xamarin.Android no código gerenciado e o ProGuard no código de bytes Java.
+- **[Reduzir o APK](#shrink_apk)** &ndash; O tamanho do APK final pode ser reduzido significativamente usando o vinculador do Xamarin.Android no código gerenciado e o ProGuard no código de bytes Java.
 
--   **[Proteger o Aplicativo](#protect_app)** &ndash; Impeça que usuários ou invasores depurem, adulterem ou façam engenharia reversa do aplicativo, desabilitando a depuração, ofuscando o código gerenciado, adicionando a antidepuração e antiadulteração e usando compilação nativa.
+- **[Proteger o Aplicativo](#protect_app)** &ndash; Impeça que usuários ou invasores depurem, adulterem ou façam engenharia reversa do aplicativo, desabilitando a depuração, ofuscando o código gerenciado, adicionando a antidepuração e antiadulteração e usando compilação nativa.
 
--   **[Definir propriedades de empacotamento](#Set_Packaging_Properties)** &ndash; Propriedades de empacotamento controlam a criação do pacote APK (Pacote de Aplicativo Android). Esta etapa otimiza o APK, protege seus ativos e modula o empacotamento conforme necessário.
+- **[Definir propriedades de empacotamento](#Set_Packaging_Properties)** &ndash; Propriedades de empacotamento controlam a criação do pacote APK (Pacote de Aplicativo Android). Esta etapa otimiza o APK, protege seus ativos e modula o empacotamento conforme necessário.
 
--   **[Compilar](#Compile)** &ndash; Esta etapa compila o código e os ativos para verificar se ele é compilado no modo Versão.
+- **[Compilar](#Compile)** &ndash; Esta etapa compila o código e os ativos para verificar se ele é compilado no modo Versão.
 
--   **[Arquivamento para Publicação](#archive)** &ndash; Esta etapa compila o aplicativo e coloca-o em um arquivo para assinatura e publicação.
+- **[Arquivamento para Publicação](#archive)** &ndash; Esta etapa compila o aplicativo e coloca-o em um arquivo para assinatura e publicação.
 
 Cada uma dessas etapas é descrita abaixo em mais detalhes.
 
@@ -69,9 +69,9 @@ Normalmente, `using Android.App` é declarado na parte superior de **AssemblyInf
 
 Controle de versão é importante para a distribuição e manutenção de aplicativos Android. Sem algum tipo de controle de versão em vigor, é difícil determinar se ou como um aplicativo deve ser atualizado. Para ajudar no controle de versão, o Android reconhece dois tipos diferentes de informação: 
 
--   **Número de versão** &ndash; Um valor inteiro (usado internamente pelo Android e o aplicativo) que representa a versão do aplicativo. A maioria dos aplicativos começa com esse valor é definido como 1 e, em seguida, ele é incrementado a cada build. Esse valor não tem relação ou afinidade com o atributo de nome de versão (veja abaixo). Aplicativos e serviços de publicação não devem exibir esse valor para os usuários. Esse valor é armazenado no arquivo **AndroidManifest.xml** como `android:versionCode`. 
+- **Número de versão** &ndash; Um valor inteiro (usado internamente pelo Android e o aplicativo) que representa a versão do aplicativo. A maioria dos aplicativos começa com esse valor é definido como 1 e, em seguida, ele é incrementado a cada build. Esse valor não tem relação ou afinidade com o atributo de nome de versão (veja abaixo). Aplicativos e serviços de publicação não devem exibir esse valor para os usuários. Esse valor é armazenado no arquivo **AndroidManifest.xml** como `android:versionCode`. 
 
--   **Nome da versão** &ndash; Uma cadeia de caracteres usada apenas para comunicação de informações ao usuário sobre a versão do aplicativo (como instalado em um dispositivo específico). O nome da versão será exibido aos usuários ou no Google Play. Essa cadeia de caracteres não é usada internamente pelo Android. O nome da versão pode ser qualquer valor de cadeia de caracteres que ajude um usuário a identificar o build instalado no dispositivo. Esse valor é armazenado no arquivo **AndroidManifest.xml** como `android:versionName`. 
+- **Nome da versão** &ndash; Uma cadeia de caracteres usada apenas para comunicação de informações ao usuário sobre a versão do aplicativo (como instalado em um dispositivo específico). O nome da versão será exibido aos usuários ou no Google Play. Essa cadeia de caracteres não é usada internamente pelo Android. O nome da versão pode ser qualquer valor de cadeia de caracteres que ajude um usuário a identificar o build instalado no dispositivo. Esse valor é armazenado no arquivo **AndroidManifest.xml** como `android:versionName`. 
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
@@ -98,9 +98,9 @@ APKs do Xamarin.Android podem ficar menores por meio de uma combinação do vinc
 
 O modo Versão desativa o tempo de execução compartilhado e ativa a vinculação para que o aplicativo seja fornecido apenas com as partes necessárias do Xamarin.Android em tempo de execução. O *vinculador* no Xamarin.Android usa análise estática para determinar quais assemblies, tipos e membros de tipo são usados ou referenciados por um aplicativo Xamarin.Android. O vinculador, em seguida, descarta todos os assemblies, tipos e membros que não são usados (ou referenciados). Isso pode resultar em uma redução significativa no tamanho do pacote. Considere o exemplo [HelloWorld](~/android/deploy-test/linker.md), que apresenta uma redução 83% no tamanho final de seu APK: 
 
--   Configuração: Nenhum &ndash; Xamarin.Android 4.2.5 Tamanho = 17,4 MB.
+- Configuração: Nenhum &ndash; Xamarin.Android 4.2.5 Tamanho = 17,4 MB.
 
--   Configuração: Somente Assemblies do SDK &ndash; Xamarin.Android 4.2.5 Tamanho = 3.0 MB.
+- Configuração: Somente Assemblies do SDK &ndash; Xamarin.Android 4.2.5 Tamanho = 3.0 MB.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
@@ -110,12 +110,12 @@ Defina opções de vinculador por meio da seção **Opções do Android** das **
 
 O menu suspenso **Vinculação** fornece as seguintes opções para controlar o vinculador:
 
--   **Nenhum** &ndash; Isso desativa o vinculador; nenhuma vinculação será executada.
+- **Nenhum** &ndash; Isso desativa o vinculador; nenhuma vinculação será executada.
 
--   **Apenas Assemblies do SDK** &ndash; Isso vinculará apenas os assemblies [exigidos pelo Xamarin.Android](~/cross-platform/internals/available-assemblies.md). 
+- **Apenas Assemblies do SDK** &ndash; Isso vinculará apenas os assemblies [exigidos pelo Xamarin.Android](~/cross-platform/internals/available-assemblies.md). 
     Outros assemblies não serão vinculados.
 
--   **Assemblies de Usuário e do SDK** &ndash; Isso vinculará todos os assemblies exigidos pelo aplicativo e não apenas os exigidos pelo Xamarin.Android.
+- **Assemblies de SDK e de Usuário** &ndash; Isso vinculará todos os assemblies exigidos pelo aplicativo, e não apenas os exigidos pelo Xamarin.Android.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
@@ -125,11 +125,11 @@ Defina as opções do vinculador por meio da guia **Vinculador** na seção **Bu
 
 As opções para controlar o vinculador são as seguintes:
 
--   **Não vincular** &ndash; Isso desativa o vinculador; nenhuma vinculação será executada.
+- **Não vincular** &ndash; Isso desativa o vinculador; nenhuma vinculação será executada.
 
--   **Vincular apenas assemblies do SDK** &ndash; Isso vinculará apenas os assemblies [exigidos pelo Xamarin.Android](~/cross-platform/internals/available-assemblies.md). Outros assemblies não serão vinculados.
+- **Vincular apenas assemblies do SDK** &ndash; Isso vinculará apenas os assemblies [exigidos pelo Xamarin.Android](~/cross-platform/internals/available-assemblies.md). Outros assemblies não serão vinculados.
 
--   **Vincular todos os assemblies** &ndash; Isso vinculará todos os assemblies exigidos pelo aplicativo e não apenas os exigidos pelo Xamarin.Android.
+- **Vincular todos os assemblies** &ndash; Isso vinculará todos os assemblies exigidos pelo aplicativo, e não apenas os exigidos pelo Xamarin.Android.
 
 -----
 
@@ -165,7 +165,7 @@ Para obter mais informações sobre como usar a ferramenta do ProGuard, consulte
 
 ### <a name="disable-debugging"></a>Desabilitar a depuração
 
-Durante o desenvolvimento de um aplicativo Android, a depuração é realizada com o uso do JDWP *(Java Debug Wire Protocol)*. Esta é uma tecnologia que permite que ferramentas como **adb** se comuniquem com uma JVM para fins de depuração. O JDWP é ativado por padrão para compilações de depuração de um aplicativo Xamarin.Android. Embora JDWP seja importante durante o desenvolvimento, pode representar um problema de segurança em aplicativos lançados. 
+Durante o desenvolvimento de um aplicativo Android, a depuração é realizada com o uso do JDWP *(Java Debug Wire Protocol)* . Esta é uma tecnologia que permite que ferramentas como **adb** se comuniquem com uma JVM para fins de depuração. O JDWP é ativado por padrão para compilações de depuração de um aplicativo Xamarin.Android. Embora JDWP seja importante durante o desenvolvimento, pode representar um problema de segurança em aplicativos lançados. 
 
 > [!IMPORTANT]
 > Sempre desabilite o estado de depuração em um aplicativo lançado na medida do possível (via JDWP) para obter acesso completo ao processo de Java e executar código arbitrário no contexto do aplicativo se esse estado de depuração não estiver desabilitado.
@@ -291,7 +291,7 @@ Depois de concluir todas as etapas acima, compile o aplicativo (selecione **Comp
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-Para começar o processo de publicação, clique com o botão direito do mouse no projeto no **Gerenciador de Soluções** e selecione o item de menu de contexto **Arquivar...**:
+Para começar o processo de publicação, clique com o botão direito do mouse no projeto no **Gerenciador de Soluções** e selecione o item de menu de contexto **Arquivar...** :
 
 [![Arquivar aplicativo](images/vs/07-archive-for-publishing-sml.png)](images/vs/07-archive-for-publishing.png#lightbox)
 
@@ -299,11 +299,11 @@ Para começar o processo de publicação, clique com o botão direito do mouse n
 
 [![Gerenciador de Arquivo Morto](images/vs/08-archive-manager-sml.png)](images/vs/08-archive-manager.png#lightbox)
 
-Outra maneira de criar um arquivo morto é clicar com o botão direito do mouse na Solução no **Gerenciador de Soluções** e selecionar **Arquivar Tudo...**, que compila a solução e arquiva todos os projetos do Xamarin que podem gerar um arquivo morto:
+Outra maneira de criar um arquivo morto é clicar com o botão direito do mouse na Solução no **Gerenciador de Soluções** e selecionar **Arquivar Tudo...** , que compila a solução e arquiva todos os projetos do Xamarin que podem gerar um arquivo morto:
 
 [![Arquivar Tudo](images/vs/09-archive-all-sml.png)](images/vs/09-archive-all.png#lightbox)
 
-Tanto **Arquivar** quanto **Arquivar Tudo** inicializam automaticamente o **Gerenciador de Arquivo Morto**. Para iniciar o **Gerenciador de Arquivo Morto** diretamente, clique no item de menu **Ferramentas > Gerenciador de Arquivo Morto...**:
+Tanto **Arquivar** quanto **Arquivar Tudo** inicializam automaticamente o **Gerenciador de Arquivo Morto**. Para iniciar o **Gerenciador de Arquivo Morto** diretamente, clique no item de menu **Ferramentas > Gerenciador de Arquivo Morto...** :
 
 [![Iniciar o Gerenciador de Arquivo Morto](images/vs/10-launch-archive-manager-sml.png)](images/vs/10-launch-archive-manager.png#lightbox)
 
@@ -333,7 +333,7 @@ O **Painel de Detalhes** exibe informações adicionais sobre cada arquivo morto
 
 ### <a name="distribution"></a>Distribuição
 
-Quando uma versão arquivada do aplicativo estiver pronta para publicação, selecione o arquivo morto no **Gerenciador de Arquivo Morto** e clique no botão **Distribuir...**:
+Quando uma versão arquivada do aplicativo estiver pronta para publicação, selecione o arquivo morto no **Gerenciador de Arquivo Morto** e clique no botão **Distribuir...** :
 
 [![Botão Distribuir](images/vs/13-distribute-sml.png)](images/vs/13-distribute.png#lightbox)
 
@@ -363,10 +363,10 @@ Neste exemplo, o **Gerenciador de Arquivo Morto** lista somente um aplicativo ar
 
 Aqui, é possível selecionar o canal de distribuição:
 
--   **Ad Hoc** &ndash; Salva um APK assinado no disco de modo que possa ser feito seu sideload para dispositivos Android. Prossiga para a [Assinatura do Pacote do Aplicativo](~/android/deploy-test/signing/index.md) para aprender a criar um identidade de assinatura do Android, criar um novo certificado de autenticação para aplicativos Android e publicar uma versão &ldquo;ad hoc&rdquo; do aplicativo no disco. Essa é uma boa maneira de criar um APK para teste.
+- **Ad Hoc** &ndash; Salva um APK assinado no disco de modo que possa ser feito seu sideload para dispositivos Android. Prossiga para a [Assinatura do Pacote do Aplicativo](~/android/deploy-test/signing/index.md) para aprender a criar um identidade de assinatura do Android, criar um novo certificado de autenticação para aplicativos Android e publicar uma versão &ldquo;ad hoc&rdquo; do aplicativo no disco. Essa é uma boa maneira de criar um APK para teste.
 
 
--   O **Google Play** &ndash; publica um APK assinado para o Google Play.
+- O **Google Play** &ndash; publica um APK assinado para o Google Play.
     Prossiga para [Publicar no Google Play](~/android/deploy-test/publishing/publishing-to-google-play/index.md) para saber como assinar e publicar um APK na Google Play Store.
 
 -----

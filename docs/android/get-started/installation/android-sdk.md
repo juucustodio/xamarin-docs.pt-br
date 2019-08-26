@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/09/2018
-ms.openlocfilehash: 3be28815441b65df101ac9722a665e01503e1b5c
-ms.sourcegitcommit: 4b6e832d1db5616b657dc8540da67c509b28dc1d
+ms.openlocfilehash: 54b57097c7742cb5c09f97b40c68c72b6f9c3bf1
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68386216"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69525113"
 ---
 # <a name="setting-up-the-android-sdk-for-xamarinandroid"></a>Configurando o SDK do Android para o Xamarin.Android
 
@@ -41,11 +41,11 @@ Para usar o Gerenciador de SDK do Android do Xamarin, serão necessários:
 
 O Gerenciador de SDK do Xamarin Android também requer o Java Development Kit (que é instalado automaticamente com o Xamarin.Android). Existem várias alternativas de JDK disponíveis:
 
--   Por padrão, o Xamarin.Android usa o [JDK 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html), que é necessário quando você está desenvolvendo para o nível de API 24 ou superior (o JDK 8 também é compatível com níveis de API anteriores ao 24).
+- Por padrão, o Xamarin.Android usa o [JDK 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html), que é necessário quando você está desenvolvendo para o nível da API 24 ou superior (o JDK 8 também é compatível com níveis de API anteriores ao 24).
 
--   Você poderá continuar usando o [JDK 7](https://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html) se estiver desenvolvendo especificamente para o nível de API 23 ou anterior.
+- Você poderá continuar usando o [JDK 7](https://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html) se estiver desenvolvendo especificamente para o nível de API 23 ou anterior.
 
--   Se estiver usando o Visual Studio 15.8 Versão Prévia 5 ou posterior, você poderá tentar usar a [Distribuição do OpenJDK Móvel da Microsoft](openjdk.md) (atualmente em versão prévia) em vez do JDK 8.
+- Se estiver usando o Visual Studio 15.8 Versão Prévia 5 ou posterior, você poderá tentar usar a [Distribuição do OpenJDK Móvel da Microsoft](openjdk.md) (atualmente em versão prévia) em vez do JDK 8.
 
 > [!IMPORTANT]
 > O Xamarin.Android não é compatível com o JDK 9.
@@ -134,15 +134,15 @@ Para voltar a usar o repositório compatível de plataformas e ferramentas, cliq
 
 Para usar o Gerenciador de SDK do Android do Xamarin, serão necessários:
 
--   Visual Studio para Mac 7.5 (ou posterior).
+- Visual Studio para Mac 7.5 (ou posterior).
 
 O Gerenciador de SDK do Xamarin Android também requer o Java Development Kit (que é instalado automaticamente com o Xamarin.Android). Existem várias alternativas de JDK disponíveis:
 
--   Por padrão, o Xamarin.Android usa o [JDK 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html), que é necessário quando você está desenvolvendo para o nível de API 24 ou superior (o JDK 8 também é compatível com níveis de API anteriores ao 24).
+- Por padrão, o Xamarin.Android usa o [JDK 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html), que é necessário quando você está desenvolvendo para o nível da API 24 ou superior (o JDK 8 também é compatível com níveis de API anteriores ao 24).
 
--   Você poderá continuar usando o [JDK 7](https://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html) se estiver desenvolvendo especificamente para o nível de API 23 ou anterior.
+- Você poderá continuar usando o [JDK 7](https://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html) se estiver desenvolvendo especificamente para o nível de API 23 ou anterior.
 
--   Se estiver usando o Visual Studio para Mac 7.7 ou posterior, você poderá tentar usar a [Distribuição do OpenJDK Móvel da Microsoft](openjdk.md) (atualmente em versão prévia) em vez do JDK 8.
+- Se estiver usando o Visual Studio para Mac 7.7 ou posterior, você poderá tentar usar a [Distribuição do OpenJDK Móvel da Microsoft](openjdk.md) (atualmente em versão prévia) em vez do JDK 8.
 
 > [!IMPORTANT]
 > O Xamarin.Android não é compatível com o JDK 9.

@@ -6,13 +6,13 @@ ms.assetid: FEDE51EB-577E-4B3E-9890-B7C1A5E52516
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/23/2019
-ms.openlocfilehash: 9f2aecf1bcac8f9603db40e3562f49123e924bfc
-ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
+ms.date: 07/19/2019
+ms.openlocfilehash: eaa29138f91fb8215e2c7c4e651baaf8e311f713
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68739297"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69889190"
 ---
 # <a name="xamarinforms-shell-flyout"></a>Submenu Shell do Xamarin.Forms
 
@@ -130,6 +130,32 @@ O exemplo a seguir mostra como recolher o cabeçalho do submenu à medida que o 
     ...
 </Shell>
 ```
+
+## <a name="flyout-background-image"></a>Imagem da tela de fundo do submenu
+
+O submenu pode ter uma imagem de tela de fundo opcional, que aparece sob o cabeçalho do submenu e atrás de quaisquer itens do submenu e do menu. A imagem da tela de fundo pode ser especificada definindo a propriedade associável `FlyoutBackgroundImage`, do tipo [`ImageSource`](xref:Xamarin.Forms.ImageSource), para um arquivo, recurso inserido, URI ou fluxo.
+
+A taxa de proporção da imagem da tela de fundo pode ser configurada definindo a propriedade associável `FlyoutBackgroundImageAspect`, do tipo [`Aspect`](xref:Xamarin.Forms.Aspect) para um dos membros da enumeração `Aspect`:
+
+- [`AspectFill`](xref:Xamarin.Forms.Aspect.AspectFill) – Recorta a imagem para que preencha a área de exibição e preserve a taxa de proporção.
+- [`AspectFit`](xref:Xamarin.Forms.Aspect.AspectFit) – Coloca a imagem em um formato letterbox, se necessário, para que ela caiba na área de exibição, e adiciona um espaço em branco à parte superior/inferior ou aos lados, de acordo com a largura ou a altura da imagem.
+- [`Fill`](xref:Xamarin.Forms.Aspect.Fill) – Alonga a imagem para preencher a área de exibição de modo completo e exato. Isso pode resultar em distorção de imagem.
+
+A propriedade de `FlyoutBackgroundImageAspect` é definida por padrão como `AspectFit`.
+
+O exemplo a seguir mostra a definição dessas propriedades:
+
+```xaml
+<Shell ...
+       FlyoutBackgroundImage="photo.jpg"
+       FlyoutBackgroundImageAspect="AspectFill">
+    ...
+</Shell>
+```
+
+Isso resulta em uma imagem de tela de fundo que aparece no submenu:
+
+![Captura de tela de uma imagem da tela de fundo do submenu](flyout-images/flyout-backgroundimage.png "Imagem da tela de fundo do submenu")
 
 ## <a name="flyout-items"></a>Itens de submenu
 

@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 8ba0d14fff22d38d9e1a1d062fcce3f9ace88dea
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: fc14c2279fd8ca7e1d67dcf58f98af33a5e4d87f
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57668849"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69525473"
 ---
 # <a name="publishing-to-google-play"></a>Publicando no Google Play
 
@@ -36,19 +36,19 @@ O Google Play não está disponível globalmente. Alguns locais podem não ter s
 
 Para publicar aplicativos no Google Play, é necessário ter uma conta de editor. Para inscrever-se em uma conta de editor siga estas etapas:
 
-1.  Visite o [Console de desenvolvedor do Google Play](https://play.google.com/apps/publish).
-1.  Insira as informações básicas sobre sua identidade de desenvolvedor.
-1.  Leia e aceite o Contrato de Distribuição do Desenvolvedor para a sua localidade.
-1.  Pague a taxa de registro de US$ 25.
-1.  Confirme a verificação por email.
-1.  Depois que a conta foi criada, é possível publicar aplicativos usando o Google Play.
+1. Visite o [Console de desenvolvedor do Google Play](https://play.google.com/apps/publish).
+1. Insira as informações básicas sobre sua identidade de desenvolvedor.
+1. Leia e aceite o Contrato de Distribuição do Desenvolvedor para a sua localidade.
+1. Pague a taxa de registro de US$ 25.
+1. Confirme a verificação por email.
+1. Depois que a conta foi criada, é possível publicar aplicativos usando o Google Play.
 
 
 O Google Play não oferece suporte a todos os países do mundo. A lista mais atualizada de países pode ser encontrada nos seguintes links:
 
-1.  [Locais com suporte para Desenvolvedor &amp; Registro de Comerciante](https://support.google.com/googleplay/android-developer/bin/answer.py?hl=en&amp;answer=150324) &ndash; esta é uma lista de todos os países em que os desenvolvedores podem se registrar como comerciantes e vender aplicativos pagos.
+1. [Locais com suporte para Desenvolvedor &amp; Registro de Comerciante](https://support.google.com/googleplay/android-developer/bin/answer.py?hl=en&amp;answer=150324) &ndash; esta é uma lista de todos os países em que os desenvolvedores podem se registrar como comerciantes e vender aplicativos pagos.
 
-1.  [Locais com suporte para distribuição aos usuários do Google Play](https://support.google.com/googleplay/android-developer/bin/answer.py?hl=en&amp;answer=138294) &ndash; esta é uma lista de todos os países em que os aplicativos podem ser distribuídos.
+1. [Locais com suporte para distribuição aos usuários do Google Play](https://support.google.com/googleplay/android-developer/bin/answer.py?hl=en&amp;answer=138294) &ndash; esta é uma lista de todos os países em que os aplicativos podem ser distribuídos.
 
 
 
@@ -62,21 +62,21 @@ Para promover e anunciar efetivamente um aplicativo no Google Play, o Google per
 
 Um *Ícone de inicializador* é um gráfico que representa um aplicativo. Cada ícone de inicializador deve ser um arquivo PNG de 32 bits com um canal alfa para transparência. Um aplicativo deve ter ícones para todas as densidades de tela generalizadas, conforme descrito na lista abaixo:
 
--   **ldpi** (120 dpi) &ndash; 36 x 36 px
--   **mdpi** (160 dpi) &ndash; 48 x 48 px
--   **hdpi** (240 dpi) &ndash; 72 x 72 px
--   **hxdpi** (320 dpi) &ndash; 96 x 96 px
+- **ldpi** (120 dpi) &ndash; 36 x 36 px
+- **mdpi** (160 dpi) &ndash; 48 x 48 px
+- **hdpi** (240 dpi) &ndash; 72 x 72 px
+- **hxdpi** (320 dpi) &ndash; 96 x 96 px
 
 
 Os ícones de inicializador são as primeiras coisas vistas por um usuário nos aplicativos no Google Play, portanto tome cuidado para que os ícones de inicializador sejam visualmente atraentes e significativos.
 
 Dicas de ícones de inicializador:
 
-1.  **Simples e organizado** &ndash; ícones de inicializador devem ser mantidos simples e organizados. Por isso, deve-se excluir o nome do aplicativo do ícone. Será mais fácil lembrar dos ícones mais simples e de os distinguir em tamanhos menores.
+1. **Simples e organizado** &ndash; ícones de inicializador devem ser mantidos simples e organizados. Por isso, deve-se excluir o nome do aplicativo do ícone. Será mais fácil lembrar dos ícones mais simples e de os distinguir em tamanhos menores.
 
-1.  **Ícones não devem ser finos** &ndash; ícones excessivamente finos não se destacarão bem em todos os planos de fundo.
+1. **Ícones não devem ser finos** &ndash; Ícones excessivamente finos não se destacarão bem em todas as telas de fundo.
 
-1.  **Use o canal alfa**&ndash; ícones devem usar o canal alfa e não devem ser imagens de quadro completo de.
+1. **Use o canal alfa**&ndash; Ícones devem usar o canal alfa e não devem ser imagens de quadro completo.
 
 
 
@@ -84,9 +84,9 @@ Dicas de ícones de inicializador:
 
 Os aplicativos no Google Play requerem uma versão de alta fidelidade do ícone do aplicativo. Ela só é usada pelo Google Play e não substitui o ícone do lançador de aplicativo. As especificações para o ícone de alta resolução são:
 
-1.  PNG de 32 bits com um canal alfa
-1.  512 x 512 pixels
-1.  Tamanho máximo de 1024 KB
+1. PNG de 32 bits com um canal alfa
+1. 512 x 512 pixels
+1. Tamanho máximo de 1024 KB
 
 O [Android Asset Studio](https://romannurik.github.io/AndroidAssetStudio/) é uma ferramenta útil para a criação de ícones de inicializador adequados e para a criação do ícone do aplicativo de alta resolução.
 
@@ -98,8 +98,8 @@ O Google play requer no mínimo duas e no máximo oito capturas de tela de um ap
 
 As especificações das capturas de tela são:
 
-1.  24 bits, PNG ou JPG, sem canal alfa
-1.  320w x 480h ou 480w x 800h ou 480w x 854h. Imagens em orientação paisagem serão cortadas.
+1. 24 bits, PNG ou JPG, sem canal alfa
+1. 320w x 480h ou 480w x 800h ou 480w x 854h. Imagens em orientação paisagem serão cortadas.
 
 
 
@@ -107,8 +107,8 @@ As especificações das capturas de tela são:
 
 Esta é uma imagem opcional usada pelo Google Play:
 
-1.  É uma imagem de 180w x 120h, de 24 bits, PNG ou JPG, sem canal alfa.
-1.  Sem borda na arte.
+1. É uma imagem de 180w x 120h, de 24 bits, PNG ou JPG, sem canal alfa.
+1. Sem borda na arte.
 
 
 
@@ -116,9 +116,9 @@ Esta é uma imagem opcional usada pelo Google Play:
 
 Usado pela seção em destaque do Google Play. Este elemento gráfico pode ser exibido sozinho sem um ícone do aplicativo.
 
-1.  1024w x 500h, PNG ou JPG, sem canal alfa e sem transparência.
-1.  Todo o conteúdo importante deve estar em um quadro de 924x500. Os pixels fora desse quadro podem ser recortados para fins estilísticos.
-1.  Este elemento gráfico pode ser reduzido: usar texto grande e manter os elementos gráficos simples.
+1. 1024w x 500h, PNG ou JPG, sem canal alfa e sem transparência.
+1. Todo o conteúdo importante deve estar em um quadro de 924x500. Os pixels fora desse quadro podem ser recortados para fins estilísticos.
+1. Este elemento gráfico pode ser reduzido: usar texto grande e manter os elementos gráficos simples.
 
 
 
@@ -299,13 +299,13 @@ Na caixa de diálogo **Conta do Google Play**, selecione uma conta do Google e u
 
 O Google Play oferece quatro controles possíveis para carregar o seu aplicativo:
 
--   **Alpha** &ndash; usado para carregar uma versão inicial do aplicativo para uma pequena lista de testadores.
+- **Alpha** &ndash; usado para carregar uma versão inicial do aplicativo para uma pequena lista de testadores.
 
--   **Beta** &ndash; usado para carregar uma versão inicial do aplicativo para uma lista maior de testadores.
+- **Beta** &ndash; usado para carregar uma versão inicial do aplicativo para uma lista maior de testadores.
 
--   **Distribuição** &ndash; permite que um percentual de usuários receba uma versão atualizada do aplicativo; isso possibilita o aumento gradual do percentual de usuários de, digamos, 10% de usuários para 100% dos usuários, enquanto você resolve os bugs.
+- **Distribuição** &ndash; permite que um percentual de usuários receba uma versão atualizada do aplicativo; isso possibilita o aumento gradual do percentual de usuários de, digamos, 10% de usuários para 100% dos usuários, enquanto você resolve os bugs.
 
--   **Produção** &ndash; selecione este controle quando o aplicativo estiver pronto para a distribuição completa no repositório do Google Play.
+- **Produção** &ndash; selecione este controle quando o aplicativo estiver pronto para a distribuição completa no repositório do Google Play.
 
 Para obter mais informações sobre o teste e as distribuições em estágios do Google Play, consulte [Configurar testes alpha/beta](https://support.google.com/googleplay/android-developer/answer/3131213?hl=en).
 
