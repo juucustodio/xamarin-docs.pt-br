@@ -1,6 +1,6 @@
 ---
 title: 'Olá, Android: Aprofundamento'
-description: Neste guia de duas partes, você criará seu primeiro aplicativo Xamarin.Android e passará a entender os fundamentos de desenvolvimento de aplicativos Android com Xamarin. Ao longo do caminho, serão apresentaremos ferramentas, conceitos e etapas necessários para criar e implantar um aplicativo Xamarin.Android.
+description: Neste guia de duas partes, você criará seu primeiro aplicativo Xamarin.Android e passará a entender os fundamentos de desenvolvimento de aplicativos Android com Xamarin. Ao longo do caminho, serão apresentados conceitos, ferramentas e etapas necessários para criar e implantar um aplicativo Xamarin.Android.
 zone_pivot_groups: platform
 ms.topic: quickstart
 ms.prod: xamarin
@@ -18,7 +18,7 @@ ms.locfileid: "68509574"
 ---
 # <a name="hello-android-deep-dive"></a>Olá, Android: Aprofundamento
 
-_Neste guia de duas partes, você criará seu primeiro aplicativo Xamarin.Android e passará a entender os fundamentos de desenvolvimento de aplicativos Android com Xamarin. Ao longo do caminho, serão apresentaremos ferramentas, conceitos e etapas necessários para criar e implantar um aplicativo Xamarin.Android._
+_Neste guia de duas partes, você criará seu primeiro aplicativo Xamarin.Android e passará a entender os fundamentos de desenvolvimento de aplicativos Android com Xamarin. Ao longo do caminho, serão apresentados conceitos, ferramentas e etapas necessários para criar e implantar um aplicativo Xamarin.Android._
 
 Em [Início rápido do Hello, Android](~/android/get-started/hello-android-multiscreen/hello-android-multiscreen-quickstart.md), você compilou e executou seu primeiro aplicativo Xamarin.Android. Agora é hora de desenvolver uma compreensão mais profunda de como funcionam os aplicativos Android para que você possa criar programas mais sofisticados. Este guia examina as etapas que você seguiu no passo a passo Hello, Android, para que você possa entender o que você fez e comece a desenvolver um entendimento fundamental do desenvolvimento de aplicativos Android.
 
