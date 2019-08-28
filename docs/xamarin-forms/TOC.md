@@ -154,6 +154,7 @@
 #### [Layouts](user-interface/controls/layouts.md)
 #### [Exibições](user-interface/controls/views.md)
 #### [Células](user-interface/controls/cells.md)
+#### [Propriedades comuns, métodos e eventos](user-interface/controls/common-properties.md)
 #### [Controles de terceiros](user-interface/controls/thirdparty.md)
 ### [DataPages](user-interface/datapages/index.md)
 #### [Introdução](user-interface/datapages/get-started.md)
@@ -324,6 +325,7 @@
 ### [Conversores de unidade](~/essentials/unit-converters.md?context=xamarin/xamarin-forms)
 ### [Monitoramento de versões](~/essentials/version-tracking.md?context=xamarin/xamarin-forms)
 ### [Vibrar](~/essentials/vibrate.md?context=xamarin/xamarin-forms)
+### [Notas sobre a versão do Xamarin.Essentials](https://docs.microsoft.com/xamarin/essentials/release-notes/)
 ### [Solução de problemas](~/essentials/troubleshooting.md?context=xamarin/xamarin-forms)
 
 ## Dados e Serviços de Nuvem do Azure
@@ -379,7 +381,7 @@
 #### [Por que o designer XAML do Visual Studio não funciona para arquivos XAML do Xamarin.Forms?](troubleshooting/questions/forms-xaml-designer.md)
 #### [Erro de build do Android: The "LinkAssemblies" task failed unexpectedly](troubleshooting/questions/android-linkassemblies-error.md)
 #### [Por que meu projeto Android Xamarin.Forms.Maps falha com COMPILETODALVIK: UNEXPECTED TOP-LEVEL ERROR?](troubleshooting/questions/maps-compiletodalvik-error.md)
-## [Notas de Versão](https://docs.microsoft.com/xamarin/xamarin-forms/release-notes/)
+## [Notas sobre a versão](https://docs.microsoft.com/xamarin/xamarin-forms/release-notes/)
 ## [Amostras](samples/index.yml)
 ## [Criação de aplicativos móveis com Xamarin.Forms Book](creating-mobile-apps-xamarin-forms/index.md)
 ## [Livro eletrônico Padrões de aplicativo empresarial](enterprise-application-patterns/index.md)
