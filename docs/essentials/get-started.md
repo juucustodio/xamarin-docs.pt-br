@@ -86,7 +86,7 @@ O Xamarin.Essentials está disponível como um pacote NuGet que pode ser adicion
 
     -----
 
-6. Siga os [guias do Xamarin.Essentials](index.md) que permitem copiar e colar os trechos de código para cada recurso.
+6. Siga os [guias do Xamarin.Essentials](index.md) que permitem copiar e colar os snippets de código para cada recurso.
 
 ## <a name="xamarinessentials---cross-platform-apis-for-mobile-apps-video"></a>Xamarin.Essentials – APIs multiplataforma para aplicativos móveis (vídeo)
 

@@ -28,7 +28,7 @@ O mecanismo interno para localização de usos de aplicativos .NET [arquivos RES
 
 Há dois exemplos associados a este documento:
 
-* [UsingResxLocalization](https://github.com/xamarin/xamarin-forms-samples/tree/master/UsingResxLocalization) é uma demonstração muito simples dos conceitos explicados. Todos os trechos de código mostrados abaixo são provenientes deste exemplo.
+* [UsingResxLocalization](https://github.com/xamarin/xamarin-forms-samples/tree/master/UsingResxLocalization) é uma demonstração muito simples dos conceitos explicados. Todos os snippets de código mostrados abaixo são provenientes deste exemplo.
 * [TodoLocalized](https://github.com/xamarin/xamarin-forms-samples/tree/master/TodoLocalized) é um aplicativo de trabalho básico que usa essas técnicas de localização.
 
 #### <a name="shared-projects-are-not-recommended"></a>Não é recomendado o uso de Projetos compartilhados
