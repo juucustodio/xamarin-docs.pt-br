@@ -4,13 +4,13 @@ description: A classe Email no Xamarin.Essentials permite que um aplicativo abra
 ms.assetid: 5FBB6FF0-0E7B-4C29-8F06-91642AF12629
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 04/02/2019
-ms.openlocfilehash: f2c275260625fe3842b4473e404f49c71d1d28ae
-ms.sourcegitcommit: 9f37dc00c2adab958025ad1cdba9c37f0acbccd0
+ms.date: 08/20/2019
+ms.openlocfilehash: cccbe5f539e2807e749433623e938438e67965e8
+ms.sourcegitcommit: 9a46ee759ec4a738da348e8f8904d0f482ef0f25
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69012486"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70060088"
 ---
 # <a name="xamarinessentials-email"></a>Xamarin.Essentials: Email
 
@@ -62,18 +62,9 @@ public class EmailTest
 }
 ```
 
-
 ## <a name="file-attachments"></a>Anexos de Arquivo
 
-![Versão prévia do recurso](~/media/shared/preview.png)
-
-O envio de arquivos por email está disponível como uma versão prévia experimental no Xamarin.Essentials versão 1.1.0. Esse recurso permite que um aplicativo envie arquivos por email em clientes de email no dispositivo. Para habilitar esse recurso, defina a propriedade a seguir no código de inicialização do aplicativo:
-
-```csharp
-ExperimentalFeatures.Enable(ExperimentalFeatures.EmailAttachments);
-```
-
-Depois de habilitar o recurso, qualquer arquivo poderá ser enviado por email. O Xamarin.Essentials detectará automaticamente o tipo de arquivo (MIME) e solicitará que o arquivo seja adicionado como um anexo. Cada cliente de email é diferente poderá ser compatível somente com extensões de arquivo específicas ou até mesmo não ser com nenhuma.
+Esse recurso permite que um aplicativo envie arquivos por email em clientes de email no dispositivo. O Xamarin.Essentials detectará automaticamente o tipo de arquivo (MIME) e solicitará que o arquivo seja adicionado como um anexo. Cada cliente de email é diferente poderá ser compatível somente com extensões de arquivo específicas ou até mesmo não ser com nenhuma.
 
 Aqui está um exemplo de como gravar texto no disco e adicioná-lo como um anexo de email:
 

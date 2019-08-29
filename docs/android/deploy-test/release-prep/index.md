@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2018
-ms.openlocfilehash: 4ddae1ae4f49c01220b2f5ce78dc19122b3015a0
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 3560c58c6fbb9920cfaf9c3830cd442bca443571
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69525279"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70119625"
 ---
 # <a name="preparing-an-application-for-release"></a>Preparar um aplicativo para lançamento
 
@@ -319,15 +319,15 @@ O **Gerenciador de Arquivo Morto** é composto por um painel de **Lista de Solu�
 
 A **Lista de Soluções** exibe todas as soluções que têm pelo menos um projeto arquivado. A **Lista de Soluções** inclui as seguintes seções:
 
-* **Solução Atual** &ndash; Exibe a solução atual. Observe que essa área poderá estar vazia se a solução atual não tiver um arquivo morto existente.
-* **Todos os Arquivos Mortos** &ndash; exibe todas as soluções que têm um arquivo morto.
-* Caixa de texto **Pesquisar** (na parte superior) &ndash; Filtra as soluções listadas em **Todos os Arquivos Mortos** de acordo com a cadeia de caracteres de pesquisa digitada na caixa de texto.
+- **Solução Atual** &ndash; Exibe a solução atual. Observe que essa área poderá estar vazia se a solução atual não tiver um arquivo morto existente.
+- **Todos os Arquivos Mortos** &ndash; exibe todas as soluções que têm um arquivo morto.
+- Caixa de texto **Pesquisar** (na parte superior) &ndash; Filtra as soluções listadas em **Todos os Arquivos Mortos** de acordo com a cadeia de caracteres de pesquisa digitada na caixa de texto.
 
 O **Lista de Arquivos Mortos** exibe a lista de todos os arquivos mortos para a solução selecionada. O **Lista de Arquivos Mortos** inclui as seguintes seções:
 
-* **Nome da solução selecionada** &ndash; Exibe o nome da solução selecionada na **Lista de Soluções**. Todas as informações mostradas na **Lista Arquivos Mortos** refere-se a essa solução selecionada.
-* **Filtro de Plataformas** &ndash; Esse campo torna possível filtrar arquivos por tipo de plataforma (por exemplo, iOS ou Android).
-* **Itens do Arquivo Morto** &ndash; Lista de arquivos mortos para a solução selecionada. Cada item da lista inclui o nome do projeto, a data de criação e a plataforma. Também pode mostrar informações adicionais, como o progresso quando um item está sendo arquivado ou publicado.
+- **Nome da solução selecionada** &ndash; Exibe o nome da solução selecionada na **Lista de Soluções**. Todas as informações mostradas na **Lista Arquivos Mortos** refere-se a essa solução selecionada.
+- **Filtro de Plataformas** &ndash; Esse campo torna possível filtrar arquivos por tipo de plataforma (por exemplo, iOS ou Android).
+- **Itens do Arquivo Morto** &ndash; Lista de arquivos mortos para a solução selecionada. Cada item da lista inclui o nome do projeto, a data de criação e a plataforma. Também pode mostrar informações adicionais, como o progresso quando um item está sendo arquivado ou publicado.
 
 O **Painel de Detalhes** exibe informações adicionais sobre cada arquivo morto. Também permite que o usuário iniciar o fluxo de trabalho de distribuição ou abra a pasta na qual a distribuição foi criada. A seção **Comentários de Build** torna possível incluir comentários de build no arquivo morto.
 
@@ -343,9 +343,9 @@ A caixa de diálogo **Canal de Distribuição** mostra informações sobre o apl
 
 É possível escolher um dos seguintes canais de distribuição:
 
-* **Ad Hoc** &ndash; Salva um APK assinado no disco cujo sideload pode ser feito para dispositivos Android. Prossiga para a [Assinatura do Pacote do Aplicativo](~/android/deploy-test/signing/index.md) para aprender a criar um identidade de assinatura do Android, criar um novo certificado de autenticação para aplicativos Android e publicar uma versão _ad hoc_ do aplicativo no disco. Essa é uma boa maneira de criar um APK para teste.
+- **Ad Hoc** &ndash; Salva um APK assinado no disco cujo sideload pode ser feito para dispositivos Android. Prossiga para a [Assinatura do Pacote do Aplicativo](~/android/deploy-test/signing/index.md) para aprender a criar um identidade de assinatura do Android, criar um novo certificado de autenticação para aplicativos Android e publicar uma versão _ad hoc_ do aplicativo no disco. Essa é uma boa maneira de criar um APK para teste.
 
-* O **Google Play** &ndash; publica um APK assinado para o Google Play. Prossiga para [Publicar no Google Play](~/android/deploy-test/publishing/publishing-to-google-play/index.md) para saber como assinar e publicar um APK na Google Play Store.
+- O **Google Play** &ndash; publica um APK assinado para o Google Play. Prossiga para [Publicar no Google Play](~/android/deploy-test/publishing/publishing-to-google-play/index.md) para saber como assinar e publicar um APK na Google Play Store.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 

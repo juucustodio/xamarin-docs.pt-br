@@ -4,14 +4,14 @@ description: A classe Share no Xamarin.Essentials permite que um aplicativo comp
 ms.assetid: B7B01D55-0129-4C87-B515-89F8F4E94665
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 04/02/2019
+ms.date: 08/20/2019
 ms.custom: video
-ms.openlocfilehash: 1a9a7b008773255d9d7743a4fcb21f02feb3e116
-ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
+ms.openlocfilehash: b889573c0cefbd692b1e879c1612a143d4bb7c99
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58869371"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70120758"
 ---
 # <a name="xamarinessentials-share"></a>Xamarin.Essentials: Compartilhar
 
@@ -59,35 +59,9 @@ Interface do usuário para compartilhar com aplicativo externo exibida quando um
 
 ![Compartilhar](images/share.png)
 
-## <a name="platform-differences"></a>Diferenças entre plataformas
-
-# <a name="androidtabandroid"></a>[Android](#tab/android)
-
-* A propriedade `Subject` é usada para o assunto desejado de uma mensagem.
-
-# <a name="iostabios"></a>[iOS](#tab/ios)
-
-* `Subject` não usado.
-* `Title` não usado.
-
-# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
-
-* `Title` assumirá o padrão de Nome do Aplicativo se não for definido.
-* `Subject` não usado.
-
------
-
 ## <a name="files"></a>Arquivos
 
-![Versão prévia do recurso](~/media/shared/preview.png)
-
-O compartilhamento de arquivos está disponível como uma versão prévia experimental no Xamarin.Essentials versão 1.1.0. Esse recurso permite que um aplicativo compartilhe arquivos com outros aplicativos no dispositivo. Para habilitar esse recurso, defina a propriedade a seguir no código de inicialização do aplicativo:
-
-```csharp
-ExperimentalFeatures.Enable(ExperimentalFeatures.ShareFileRequest);
-```
-
-Depois de habilitar o recurso, qualquer arquivo poderá ser compartilhado. O Xamarin.Essentials detectará automaticamente o tipo de arquivo (MIME) e solicitará um compartilhamento. Cada plataforma poderá ser compatível somente com extensões de arquivo específicas.
+Esse recurso permite que um aplicativo compartilhe arquivos com outros aplicativos no dispositivo. O Xamarin.Essentials detectará automaticamente o tipo de arquivo (MIME) e solicitará um compartilhamento. Cada plataforma poderá ser compatível somente com extensões de arquivo específicas.
 
 Veja um exemplo de como gravar texto no disco e compartilhá-lo com outros aplicativos:
 
@@ -102,6 +76,25 @@ await Share.RequestAsync(new ShareFileRequest
     File = new ShareFile(file)
 });
 ```
+
+## <a name="platform-differences"></a>Diferenças entre plataformas
+
+# <a name="androidtabandroid"></a>[Android](#tab/android)
+
+- A propriedade `Subject` é usada para o assunto desejado de uma mensagem.
+
+# <a name="iostabios"></a>[iOS](#tab/ios)
+
+- `Subject` não usado.
+- `Title` não usado.
+
+# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
+
+- `Title` assumirá o padrão de Nome do Aplicativo se não for definido.
+- `Subject` não usado.
+
+-----
+
 
 ## <a name="api"></a>API
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/15/2017
-ms.openlocfilehash: 86b077c95bfe1cb32731c92c0c1cfec451295c12
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: ef36e79254a6d07ae6d23de7e86f6a43b2140b09
+ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67831342"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70065528"
 ---
 # <a name="icloud-capabilities-in-xamarinios"></a>Recursos iCloud no Xamarin.iOS
 
@@ -97,9 +97,9 @@ Agora esta ID do aplicativo pode ser usada para gerar, ou gerar novamente, um no
 
 Para obter mais informações sobre como usar o iCloud, consulte os seguintes guias:
 
-*   [Introdução ao iCloud](~/ios/data-cloud/introduction-to-icloud.md)
-*   [Introdução ao CloudKit](~/ios/data-cloud/intro-to-cloudkit.md)
-*   [Introdução ao Seletor de Documentos](~/ios/platform/document-picker.md)
+* [Introdução ao iCloud](~/ios/data-cloud/introduction-to-icloud.md)
+* [Introdução ao CloudKit](~/ios/data-cloud/intro-to-cloudkit.md)
+* [Introdução ao Seletor de Documentos](~/ios/platform/document-picker.md)
 
 ## <a name="next-steps"></a>Próximas etapas
  

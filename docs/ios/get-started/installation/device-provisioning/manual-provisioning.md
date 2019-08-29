@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
 ms.date: 07/15/2017
-ms.openlocfilehash: 993588a46c8d7048c7494908d6f59a5bbe2ddda6
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 0702241b5dbc744bf40c59928103d92a73a4c462
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69526624"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70121222"
 ---
 # <a name="manual-provisioning-for-xamarinios"></a>Provisionamento manual para o Xamarin.iOS
 
@@ -222,9 +222,9 @@ Os novos certificados ou perfis de provisionamento estarão disponíveis no Visu
 
 A Apple fornece uma seleção de serviços de aplicativos especiais, também chamada de recursos, que podem ser ativados para o aplicativo Xamarin.iOS. Esses serviços de aplicativos devem ser configurados tanto no Portal de Provisionamento iOS, quando a **ID do aplicativo** é criada, quanto no arquivo **Entitlements.plist**, que é parte do projeto do aplicativo Xamarin.iOS. Para obter informações sobre como adicionar serviços de aplicativo no seu aplicativo, consulte os guias [Introdução aos recursos](~/ios/deploy-test/provisioning/capabilities/index.md) e [Trabalhando com direitos](~/ios/deploy-test/provisioning/entitlements.md).
 
-* Crie uma ID do aplicativo com os serviços de aplicativo necessários.
-* Crie um novo [perfil de provisionamento](#provisioningprofile) que contenha essa ID do aplicativo.
-* Definir direitos no projeto Xamarin.iOS
+- Crie uma ID do aplicativo com os serviços de aplicativo necessários.
+- Crie um novo [perfil de provisionamento](#provisioningprofile) que contenha essa ID do aplicativo.
+- Definir direitos no projeto Xamarin.iOS
 
 ## <a name="deploying-to-a-device"></a>Implantando em um dispositivo
 

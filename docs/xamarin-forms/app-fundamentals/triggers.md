@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/01/2016
-ms.openlocfilehash: e21ae2c335a1ffe410317ef8870ee074a3a5ebe2
-ms.sourcegitcommit: 3434624a36a369986b6aeed7959dae60f7112a14
+ms.openlocfilehash: d9e3055130a66fe240bf378ad2f63679e71bec14
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69629624"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70121146"
 ---
 # <a name="xamarinforms-triggers"></a>Gatilhos do Xamarin.Forms
 
@@ -24,13 +24,13 @@ Você pode atribuir um gatilho diretamente a um controle ou adicioná-lo a um di
 
 Há quatro tipos de gatilho:
 
-* [Gatilho de propriedade](#property) – ocorre quando uma propriedade em um controle é definida como um valor específico.
+- [Gatilho de propriedade](#property) – ocorre quando uma propriedade em um controle é definida como um valor específico.
 
-* [Gatilho de dados](#data) – usa associação de dados para disparar com base nas propriedades de outro controle.
+- [Gatilho de dados](#data) – usa associação de dados para disparar com base nas propriedades de outro controle.
 
-* [Gatilho de evento](#event) – ocorre quando acontece um evento no controle.
+- [Gatilho de evento](#event) – ocorre quando acontece um evento no controle.
 
-* [Gatilho múltiplo](#multi) – permite que várias condições de gatilho sejam definidas antes que uma ação ocorra.
+- [Gatilho múltiplo](#multi) – permite que várias condições de gatilho sejam definidas antes que uma ação ocorra.
 
 <a name="property" />
 
@@ -52,15 +52,15 @@ Este exemplo mostra um gatilho que altera uma cor da tela de fundo `Entry` quand
 
 As partes importantes da declaração do gatilho são:
 
-* **TargetType** – o tipo de controle ao qual o gatilho se aplica.
+- **TargetType** – o tipo de controle ao qual o gatilho se aplica.
 
-* **Propriedade** – a propriedade no controle que é monitorado.
+- **Propriedade** – a propriedade no controle que é monitorado.
 
-* **Valor** – o valor, quando ele ocorre para a propriedade monitorada, que faz o gatilho ativar.
+- **Valor** – o valor, quando ele ocorre para a propriedade monitorada, que faz o gatilho ativar.
 
-* **Setter** – uma coleção de elementos `Setter` pode ser adicionada quando a condição do gatilho for atendida. Você deve especificar `Property` e `Value` para definir.
+- **Setter** – uma coleção de elementos `Setter` pode ser adicionada quando a condição do gatilho for atendida. Você deve especificar `Property` e `Value` para definir.
 
-* **EnterActions e ExitActions** (não mostrado) – são escritos em código e podem ser usados em (ou em vez de) elementos `Setter`. Eles são [descritos abaixo](#enterexit).
+- **EnterActions e ExitActions** (não mostrado) – são escritos em código e podem ser usados em (ou em vez de) elementos `Setter`. Eles são [descritos abaixo](#enterexit).
 
 ### <a name="applying-a-trigger-using-a-style"></a>Aplicação de um gatilho usando um estilo
 
@@ -140,11 +140,11 @@ A classe em si implementa `TriggerAction`, o que significa que ela deve fornecer
 
 Uma implementação de ação do gatilho deve:
 
-* Implementar a classe `TriggerAction<T>` genérica com o parâmetro genérico correspondente com o tipo de controle ao qual o gatilho será aplicado. É possível usar superclasses, como `VisualElement`, para gravar ações de gatilho que funcionam com uma variedade de controles ou especificar um tipo de controle, como `Entry`.
+- Implementar a classe `TriggerAction<T>` genérica com o parâmetro genérico correspondente com o tipo de controle ao qual o gatilho será aplicado. É possível usar superclasses, como `VisualElement`, para gravar ações de gatilho que funcionam com uma variedade de controles ou especificar um tipo de controle, como `Entry`.
 
-* Substituir o método `Invoke` – isso é chamado sempre que os critérios do gatilho forem atendidos.
+- Substituir o método `Invoke` – isso é chamado sempre que os critérios do gatilho forem atendidos.
 
-* Outra opção é expor propriedades que podem ser definidas no XAML quando o gatilho é declarado (como `Anchor`, `Scale` e `Length` neste exemplo).
+- Outra opção é expor propriedades que podem ser definidas no XAML quando o gatilho é declarado (como `Anchor`, `Scale` e `Length` neste exemplo).
 
 ```csharp
 public class NumericValidationTriggerAction : TriggerAction<Entry>
@@ -236,9 +236,9 @@ Para usar esse conversor em um gatilho múltiplo, primeiro adicione-o ao dicion�
 
 O XAML é mostrado abaixo. Observe as seguintes diferenças do primeiro exemplo de gatilho múltiplo:
 
-* O botão tem `IsEnabled="false"` definido por padrão.
-* As condições de gatilho múltiplo usam o conversor para transformar o valor `Text.Length` em um `boolean`.
-* Quando todas as condições forem `true`, o setter transformará o `IsEnabled` do botão na propriedade `true`.
+- O botão tem `IsEnabled="false"` definido por padrão.
+- As condições de gatilho múltiplo usam o conversor para transformar o valor `Text.Length` em um `boolean`.
+- Quando todas as condições forem `true`, o setter transformará o `IsEnabled` do botão na propriedade `true`.
 
 ```xaml
 <Entry x:Name="user" Text="" Placeholder="user name" />

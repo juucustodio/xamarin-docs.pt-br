@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 59df461c52cd01187ca3a9fc25fe741342910061
-ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
+ms.openlocfilehash: e5f322ece2775f975ab3737eb20ebbd854afa6c4
+ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58854529"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70064840"
 ---
 # <a name="debugging-xamarinios-apps"></a>Depurando aplicativos Xamarin.iOS
 
@@ -108,11 +108,11 @@ Para definir um ponto de interrupção condicional, acesse a **janela Propriedad
 
 - Para adicionar um novo ponto de interrupção condicional, clique com o botão direito do mouse na margem do editor, à esquerda do número de linha para o código para o qual deseja definir um ponto de interrupção e selecione o novo ponto de interrupção:
 
-    [![](debugging-in-xamarin-ios-images/image4.png "Selecionar Novo ponto de interrupção")](debugging-in-xamarin-ios-images/image4.png#lightbox)
+  [![](debugging-in-xamarin-ios-images/image4.png "Selecionar Novo ponto de interrupção")](debugging-in-xamarin-ios-images/image4.png#lightbox)
 
 - Para adicionar uma condição a um ponto de interrupção existente, clique com o botão direito do mouse no ponto de interrupção e selecione **Propriedades de Ponto de Interrupção** ou, no **painel Pontos de Interrupção**, selecione o botão de propriedades ilustrado abaixo:
 
-    [![](debugging-in-xamarin-ios-images/image5.png "O painel de Pontos de interrupção")](debugging-in-xamarin-ios-images/image5.png#lightbox)
+  [![](debugging-in-xamarin-ios-images/image5.png "O painel de Pontos de interrupção")](debugging-in-xamarin-ios-images/image5.png#lightbox)
 
 
 Então você pode inserir a condição sob a qual você deseja que o ponto de interrupção ocorra:

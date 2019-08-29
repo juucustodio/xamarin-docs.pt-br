@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: fc14c2279fd8ca7e1d67dcf58f98af33a5e4d87f
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: b976f540fb5b9aa7ea86cabb5b50276e53bed9a6
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69525473"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70119806"
 ---
 # <a name="publishing-to-google-play"></a>Publicando no Google Play
 
@@ -246,10 +246,10 @@ Depois de clicar em **Permitir**, o navegador informa _Código de verificação 
 
 Em seguida, a caixa de diálogo **Controle do Google Play** será apresentada. O Google Play oferece quatro controles possíveis para carregar o seu aplicativo:
 
-* **Alpha** &ndash; usado para carregar uma versão inicial do aplicativo para uma pequena lista de testadores.
-* **Beta** &ndash; usado para carregar uma versão inicial do aplicativo para uma lista maior de testadores.
-* **Distribuição** &ndash; permite que um percentual de usuários receba uma versão atualizada do aplicativo; isso possibilita o aumento gradual do percentual de usuários de, digamos, 10% de usuários para 100% dos usuários, enquanto você resolve os bugs.
-* **Produção** &ndash; selecione este controle quando o aplicativo estiver pronto para a distribuição completa no repositório do Google Play.
+- **Alpha** &ndash; usado para carregar uma versão inicial do aplicativo para uma pequena lista de testadores.
+- **Beta** &ndash; usado para carregar uma versão inicial do aplicativo para uma lista maior de testadores.
+- **Distribuição** &ndash; permite que um percentual de usuários receba uma versão atualizada do aplicativo; isso possibilita o aumento gradual do percentual de usuários de, digamos, 10% de usuários para 100% dos usuários, enquanto você resolve os bugs.
+- **Produção** &ndash; selecione este controle quando o aplicativo estiver pronto para a distribuição completa no repositório do Google Play.
 
 Escolha qual controle do Google Play será usado para fazer upload do aplicativo e clique em **Carregar**. Se você selecionar **Distribuição**, verifique se inseriu um valor de percentual:
 

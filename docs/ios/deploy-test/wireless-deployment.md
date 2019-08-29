@@ -8,12 +8,12 @@ author: lobrien
 ms.author: laobri
 ms.custom: video
 ms.date: 01/22/2019
-ms.openlocfilehash: 0e7516f030955c9b0f89db6db11b93afd9b358de
-ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
+ms.openlocfilehash: ac4ae1d8b247a709307841be1ffa1fee2afbf68f
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67865498"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70121485"
 ---
 # <a name="wireless-deployment-for-xamarinios-and-tvos-apps"></a>Implantação sem fio para aplicativos Xamarin.iOS e tvOS
 
@@ -95,9 +95,9 @@ A depuração sem fio é habilitada automaticamente após a implantação sem fi
 
 2. Se o dispositivo não aparecer no Visual Studio, verifique a janela **Dispositivos e Simuladores** do Xcode. 
 
-    * Se o Xcode **não** mostrar o dispositivo como conectado, tente [emparelhar](#pair) o dispositivo novamente.
+    - Se o Xcode **não** mostrar o dispositivo como conectado, tente [emparelhar](#pair) o dispositivo novamente.
 
-    * Se o Xcode mostrar o dispositivo como conectado, tente reiniciar o Visual Studio e o dispositivo.
+    - Se o Xcode mostrar o dispositivo como conectado, tente reiniciar o Visual Studio e o dispositivo.
 
 3. Se você ainda não tiver feito isso, será preciso [provisionar](~/ios/get-started/installation/device-provisioning/index.md) o dispositivo.
 

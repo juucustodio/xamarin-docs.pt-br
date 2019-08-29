@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: afb4da5e424fd86a386b85d8b64bd2a126af6add
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 14d4f5de500c8e8ced6cbeb67019f9152ed63df3
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69521109"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70118907"
 ---
 # <a name="contributing"></a>Contribuição
 
@@ -12,7 +12,7 @@ Obrigado por seu interesse em contribuir para a documentação do Xamarin!
 
 Esta página aborda o processo básico para atualizar o conteúdo da [documentação do Xamarin](https://docs.microsoft.com/xamarin).
 
-* [Contrato de Licença do Colaborador](LICENSE)
+- [Contrato de Licença do Colaborador](LICENSE)
 
 ## <a name="process-for-contributing"></a>Processo de contribuição
 

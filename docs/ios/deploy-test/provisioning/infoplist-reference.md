@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 01/18/2017
-ms.openlocfilehash: 654eca1098f9486e0c41fd296b3f8d381ac7ea34
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 2a61a4a313fa23b5cdc629279bee39f1eed792cc
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105370"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70120496"
 ---
 # <a name="infoplist-reference-for-xamarinios"></a>Referência de Info.plist para Xamarin.iOS
 
@@ -22,8 +22,8 @@ Para obter mais informações sobre como trabalhar com chaves Info.Plist, veja o
 
 O acesso ao local do usuário também requer modificações em Info.plist. As seguintes chaves relacionadas a dados locais devem ser definidas: 
 
-* **NSLocationWhenInUseUsageDescription** – para acessar o local do usuário enquanto eles estiverem interagindo com seu aplicativo. 
-* **NSLocationAlwaysUsageDescription** – para quando o aplicativo acessa o local do usuário em segundo plano.
+- **NSLocationWhenInUseUsageDescription** – para acessar o local do usuário enquanto eles estiverem interagindo com seu aplicativo. 
+- **NSLocationAlwaysUsageDescription** – para quando o aplicativo acessa o local do usuário em segundo plano.
 
 ## <a name="photos"></a>Fotos 
 

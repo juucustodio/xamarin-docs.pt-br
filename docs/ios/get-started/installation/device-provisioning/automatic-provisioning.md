@@ -8,12 +8,12 @@ author: asb3993
 ms.author: amburns
 ms.custom: video
 ms.date: 01/22/2019
-ms.openlocfilehash: 796c196b5c8ebcd70a0529112189cea6116a9ab0
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: 4f5c28c4ad9b673ac50b404e7d34f718366bd11d
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69890095"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70121460"
 ---
 # <a name="automatic-provisioning-for-xamarinios"></a>Provisionamento automático para o Xamarin.iOS
 
@@ -100,11 +100,11 @@ Para assinar seu aplicativo automaticamente para implantação em um dispositivo
 
 Quando a assinatura automática tiver sido habilitada, o Visual Studio para Mac atualizará esses artefatos, se necessário, quando qualquer uma das seguintes ações ocorrem:
 
-* Um dispositivo iOS é conectado ao seu Mac
+- Um dispositivo iOS é conectado ao seu Mac
     - Isso verifica automaticamente se o dispositivo está registrado no Portal do Desenvolvedor da Apple. Se ele não estiver, será adicionado, e um novo perfil de provisionamento que o contenha será gerado.
-* A ID do Pacote do seu aplicativo é alterada
+- A ID do Pacote do seu aplicativo é alterada
     - Isso atualiza a ID do aplicativo. É criado um novo perfil de provisionamento que contém esta ID do aplicativo.
-* Uma funcionalidade compatível é habilitada no arquivo Entitlements.plist.
+- Uma funcionalidade compatível é habilitada no arquivo Entitlements.plist.
     - Essa funcionalidade será adicionada à ID do aplicativo, e um novo perfil de provisionamento com a ID do aplicativo atualizada será gerado.
     - Nem todas as funcionalidades são compatíveis no momento. Para obter mais informações sobre as compatíveis, confira o guia [Trabalhando com funcionalidades](~/ios/deploy-test/provisioning/capabilities/index.md).
 

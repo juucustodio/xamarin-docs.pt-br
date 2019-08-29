@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/15/2017
-ms.openlocfilehash: 25ebf101dfe0cc3d51e8411b7977e6dc0b061f2d
-ms.sourcegitcommit: 41a029c69925e3a9d2de883751ebfd649e8747cd
+ms.openlocfilehash: 8cb5d1cb29f5668194d15102c0b2fb4118388e94
+ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68978400"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70065470"
 ---
 # <a name="wallet-capabilities-in-xamarinios"></a>Recursos Wallet no Xamarin.iOS
 
@@ -22,11 +22,11 @@ Wallet é um aplicativo que armazena e exibe códigos de barras e outros conteú
 
 Os desenvolvedores podem trabalhar com o Wallet de várias maneiras:
 
-*   Para criar um passe, um aplicativo não precisa ser criado. Um Passfile é um arquivo compactado que contém alguns arquivos JSON e arquivos de metadados opcionais. Para prepará-lo, são necessários uma [ID de Tipo de Passe](~/ios/platform/passkit.md) e um [Certificado de passe](~/ios/platform/passkit.md). Em seguida, essas informações são declaradas em um arquivo JSON. Mais informações de como provisionar um Passfile podem ser encontradas no guia [Introdução ao PassKit](~/ios/platform/passkit.md).
+* Para criar um passe, um aplicativo não precisa ser criado. Um Passfile é um arquivo compactado que contém alguns arquivos JSON e arquivos de metadados opcionais. Para prepará-lo, são necessários uma [ID de Tipo de Passe](~/ios/platform/passkit.md) e um [Certificado de passe](~/ios/platform/passkit.md). Em seguida, essas informações são declaradas em um arquivo JSON. Mais informações de como provisionar um Passfile podem ser encontradas no guia [Introdução ao PassKit](~/ios/platform/passkit.md).
 
-*   Aplicativos complementares são gravados para distribuir passes. Eles também têm a funcionalidade de criar, editar e atualizar passes e, em seguida, adicioná-los no aplicativo Wallet. Um bom exemplo desse tipo de aplicativo seria um aplicativo de cinema. Quando um usuário compra um tíquete usando o aplicativo, esse tíquete pode ser adicionado diretamente do aplicativo ao Wallet. Para usar um aplicativo complementar, o perfil de provisionamento deve incluir uma ID do aplicativo com os recursos do Wallet, que podem ser definidos seguindo as etapas abaixo. Seu aplicativo também deve incluir os direitos necessários.
+* Aplicativos complementares são gravados para distribuir passes. Eles também têm a funcionalidade de criar, editar e atualizar passes e, em seguida, adicioná-los no aplicativo Wallet. Um bom exemplo desse tipo de aplicativo seria um aplicativo de cinema. Quando um usuário compra um tíquete usando o aplicativo, esse tíquete pode ser adicionado diretamente do aplicativo ao Wallet. Para usar um aplicativo complementar, o perfil de provisionamento deve incluir uma ID do aplicativo com os recursos do Wallet, que podem ser definidos seguindo as etapas abaixo. Seu aplicativo também deve incluir os direitos necessários.
 
-*   Aplicativos de canal são aplicativos que não manipulam passes diretamente. Eles têm uma interação mínima com o passe além de recebê-lo e dar ao usuário a opção de adicioná-lo ao Wallet. Esses aplicativos não precisam de nenhum provisionamento ou direito especial, mas usam alguns métodos do PassKit Framework.
+* Aplicativos de canal são aplicativos que não manipulam passes diretamente. Eles têm uma interação mínima com o passe além de recebê-lo e dar ao usuário a opção de adicioná-lo ao Wallet. Esses aplicativos não precisam de nenhum provisionamento ou direito especial, mas usam alguns métodos do PassKit Framework.
 
 ## <a name="developer-center"></a>Developer Center
 
@@ -57,7 +57,7 @@ Agora esta ID do aplicativo pode ser usada para gerar, ou gerar novamente, um no
 
 Para obter mais informações de como usar o Wallet, consulte os seguintes guias:
 
-*   [Introdução ao PassKit](~/ios/platform/passkit.md)
+* [Introdução ao PassKit](~/ios/platform/passkit.md)
  
 ## <a name="next-steps"></a>Próximas etapas
  

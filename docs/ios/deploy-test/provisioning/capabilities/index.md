@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
 ms.date: 05/06/2018
-ms.openlocfilehash: 7249b699a5f692269d124550a9e7d291f4315903
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: 7bb4e142a8b7bd0cf0691da381729dc226028193
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67832177"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70121365"
 ---
 # <a name="working-with-capabilities-in-xamarinios"></a>Trabalhando com recursos no Xamarin.iOS
 
@@ -21,28 +21,28 @@ _A adição de funcionalidades a um aplicativo geralmente requer uma configuraç
 A Apple fornece _capacidades_ aos desenvolvedores, geralmente conhecidas como _serviços de aplicativos_, como uma forma de estender as funcionalidades e ampliar o escopo daquilo que os aplicativos iOS podem fazer. As capacidades permitem que os desenvolvedores adicionem uma integração mais profunda dos recursos de plataforma em seus aplicativo, como: a capacidade de realizar transações monetárias iniciadas no aplicativo, serviços de dispositivo adicionais como Siri e muito mais.
 Essas capacidades podem ser usadas com projetos Xamarin.iOS. A lista completa de serviços está descrita abaixo:
 
-* Grupos de Aplicativos
-* Domínios Associados
-* Proteção de Dados
-* Game Center
-* HealthKit
-* HomeKit
-* Configuração de Acessório sem Fio
-* iCloud
-* Compras no Aplicativo
-* Áudio entre aplicativos
-* Apple Pay
-* Carteira
-* Notificação por Push
-* VPN pessoal
-* Siri
-* Mapas
-* Modos em tela de fundo
-* Compartilhamento de conjunto de chaves
-* Extensões de rede
-* Configuração de hotspot
-* Múltiplos caminhos
-* Leitura da marca NFC
+- Grupos de Aplicativos
+- Domínios Associados
+- Proteção de Dados
+- Game Center
+- HealthKit
+- HomeKit
+- Configuração de Acessório sem Fio
+- iCloud
+- Compras no Aplicativo
+- Áudio entre aplicativos
+- Apple Pay
+- Carteira
+- Notificação por Push
+- VPN pessoal
+- Siri
+- Mapas
+- Modos em tela de fundo
+- Compartilhamento de conjunto de chaves
+- Extensões de rede
+- Configuração de hotspot
+- Múltiplos caminhos
+- Leitura da marca NFC
 
 As funcionalidades podem ser habilitadas por meio do Visual Studio para Mac e do Visual Studio 2019 ou manualmente no Portal do Desenvolvedor da Apple. Determinadas capacidades, como Wallet, Apple Pay e iCloud, exigem a configuração adicional das IDs do aplicativo.
 
@@ -57,16 +57,16 @@ Esta seção explica como usar o provisionamento automático do Visual Studio ou
 > [!IMPORTANT]
 > Nem todas as funcionalidades podem ser adicionadas e gerenciadas com o Provisionamento Automático. A lista a seguir contém os recursos compatíveis:
 >
->* HealthKit 
->* HomeKit 
->* VPN pessoal 
->* Configuração de Acessório sem Fio 
->* Áudio entre aplicativos 
->* SiriKit 
->* Ponto de acesso 
->* Extensões de rede 
->* Leitura da marca NFC
->* Multipath 
+>- HealthKit 
+>- HomeKit 
+>- VPN pessoal 
+>- Configuração de Acessório sem Fio 
+>- Áudio entre aplicativos 
+>- SiriKit 
+>- Ponto de acesso 
+>- Extensões de rede 
+>- Leitura da marca NFC
+>- Multipath 
 >
 >No momento, as funcionalidades Notificações por push, Game Center, Compra no aplicativo, Mapas, Compartilhamento de conjunto de chaves, Domínios associados e Proteção de dados não são compatíveis. Para adicionar essas funcionalidades, use o provisionamento manual e siga as etapas na seção [Central de Desenvolvedores](#devcenter).
 
@@ -85,8 +85,8 @@ Os recursos são adicionados ao **Entitlements.plist** no Visual Studio para Mac
     ![Adicionar funcionalidades ao arquivo entitlements.plist](images/image17.png)
 
     Selecionar uma funcionalidade faz duas coisas:
-    * Adiciona esse recurso à ID do aplicativo
-    * Adiciona o par chave-valor do direito ao arquivo Entitlements.plist.
+    - Adiciona esse recurso à ID do aplicativo
+    - Adiciona o par chave-valor do direito ao arquivo Entitlements.plist.
 
     O Visual Studio para Mac informará quando essas tarefas tiverem sido realizadas exibindo a seguinte mensagem de êxito:
 
@@ -108,8 +108,8 @@ As funcionalidades são adicionadas ao arquivo **Entitlements.plist**. Para adic
 
     O salvamento do arquivo **Entitlement.plist** tem dois resultados:
 
-    * Adiciona esse recurso à ID do aplicativo
-    * Adiciona o par chave-valor do direito ao arquivo Entitlements.plist.
+    - Adiciona esse recurso à ID do aplicativo
+    - Adiciona o par chave-valor do direito ao arquivo Entitlements.plist.
 
 -----
 
@@ -196,8 +196,8 @@ Agora, crie um perfil de provisionamento que contenha essa ID do aplicativo. Sig
 
 Quando uma capacidade tiver sido habilitada no lado do servidor, ainda haverá trabalho a ser feito para permitir que seu aplicativo use a funcionalidade. A lista a seguir descreve as etapas adicionais que precisam ser executadas:
 
-*   Use o namespace do framework em seu aplicativo.
-*   Adicione os direitos necessários para seu aplicativo. As informações sobre os direitos necessários e como adicioná-los estão detalhadas no guia [Introdução aos direitos](~/ios/deploy-test/provisioning/entitlements.md).
+- Use o namespace do framework em seu aplicativo.
+- Adicione os direitos necessários para seu aplicativo. As informações sobre os direitos necessários e como adicioná-los estão detalhadas no guia [Introdução aos direitos](~/ios/deploy-test/provisioning/entitlements.md).
 
 <a name="troubleshooting" />
 
