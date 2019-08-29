@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: a3273b4bed13c3982b9d9b4df874e4ad2ee30e3f
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 39c77b4016027171a4e76bc4fb15c77d733cf5ba
+ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68645917"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70065362"
 ---
 # <a name="watchos-notifications-in-xamarin"></a>watchOS notificações no Xamarin
 
@@ -37,7 +37,7 @@ Depois que você tiver personalizado o controlador, ele poderá parecer com este
 
 Há dois tipos de notificação:
 
-- **Aparência curto** -não rolável exibição estática definida pelo sistema.
+- Exibição estática de **aparência curta** não rolável definida pelo sistema.
 
 - **A consulta longa** - rolável, visão personalizada definida por você! Uma versão mais simples e estática e uma versão dinâmica mais complexa podem ser especificados.
 
@@ -99,21 +99,21 @@ Você *deve* fornecem uma carga JSON de teste quando o modo de notificação de 
 
 O Visual Studio para Mac exibirá as opções adicionais quando uma extensão de inspeção é definida como o **projeto de inicialização**.
 Clique com botão direito no projeto de extensão de inspeção e escolha **executar com > parâmetros personalizados...** :
-    
+
 [![](notifications-images/runwith-customparams-sml.png "Executando com propriedades personalizadas")](notifications-images/runwith-customparams.png#lightbox)
-    
+
 Isso abre o **argumentos de execução** janela que contém uma **WatchKit** guia. Selecione **notificação** e forneça uma carga JSON, em seguida, pressione **Execute** para iniciar o aplicativo watch no simulador:
-    
+
 [![](notifications-images/runwith-execargs-sml.png "Selecione o padrão de carga de notificação")](notifications-images/runwith-execargs.png#lightbox)
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Para definir a carga de notificação de teste no atalho do Visual Studio na extensão de inspeção para editar a **propriedades do projeto**. Vá para o **depurar** seção e selecione um arquivo JSON de notificações na lista (ele listará automaticamente todos os arquivos JSON incluídos no projeto).
-    
+
 [![](notifications-images/runwith-execargs-sml-vs.png "Selecione um arquivo JSON de notificações")](notifications-images/runwith-execargs-vs.png#lightbox)
 
 Quando a extensão de inspeção de variáveis é o **projeto de inicialização**, Visual Studio exibirá as opções adicionais, conforme mostrado abaixo. Escolha uma da **notificação** opções para iniciar o aplicativo watch no **notificação** modo (usando o arquivo JSON selecionado na janela Propriedades):
-    
+
 ![](notifications-images/runwith-vs.png "Menu do dispositivo")
 
 -----
@@ -128,7 +128,7 @@ Também é possível usar o [linha de comando](~/ios/watchos/troubleshooting.md#
 
 No [catálogo do Kit de inspeção](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog) existe amostra é um exemplo de arquivo JSON de carga **NotificationPayload.json** (listados abaixo).
 
-```csharp
+```json
 {
     "aps": {
         "alert": "Test message content",

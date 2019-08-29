@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 352a312d795ba292b47621ddb84540c2259ea10a
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
-ms.translationtype: MT
+ms.openlocfilehash: 1e1bba499a14b92965a5fb544ccf321b0e453894
+ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69527061"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70065449"
 ---
 # <a name="walkthrough-using-touch-in-xamarinios"></a>Passo a passo: Usando o touch no Xamarin. iOS
 
@@ -37,7 +37,7 @@ Neste exemplo, demonstraremos algumas das APIs de toque. Siga estas etapas para 
 
 
 1. Abra o projeto **Touch_Start**. Primeiro, execute o projeto para verificar se tudo está OK e toque no botão **amostras de toque** . Você verá uma tela semelhante à seguinte (embora nenhum dos botões funcione):
-    
+
     [![](ios-touch-walkthrough-images/image4.png "Aplicativo de exemplo executado com botões que não são de trabalho")](ios-touch-walkthrough-images/image4.png#lightbox)
 
 
@@ -164,11 +164,11 @@ Neste exemplo, demonstraremos algumas das APIs de toque. Siga estas etapas para 
         touchStartedInside = false;
     }
     ```
-    
+
     Ambos os métodos redefinirão o `touchStartedInside` sinalizador como false. `TouchesEnded`também será exibido `TouchesEnded` na tela.
 
 1. Neste ponto, a tela de exemplos de toque é concluída. Observe como a tela muda à medida que você interage com cada uma das imagens, conforme mostrado na seguinte captura:
-        
+
     [![](ios-touch-walkthrough-images/image4.png "A tela inicial do aplicativo")](ios-touch-walkthrough-images/image4.png#lightbox)
     
     [![](ios-touch-walkthrough-images/image5.png "A tela depois que o usuário arrasta um botão")](ios-touch-walkthrough-images/image5.png#lightbox)

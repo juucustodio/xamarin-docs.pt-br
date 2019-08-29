@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/08/2019
-ms.openlocfilehash: dfc6c71a252b57bb39b464425b89fe8f5bda7d3e
-ms.sourcegitcommit: 1341f2950b775a4daa7d0548a51fdef759afd6e3
+ms.openlocfilehash: f3aa8249b0e94721b8e35437997b74b24e31f689
+ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69976510"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70065255"
 ---
 # <a name="controls-reference"></a>Referência de Controles
 
@@ -30,6 +30,9 @@ Os quatro grupos principais de controle usados para criar a interface do usuári
 Geralmente, uma página do xamarin. Forms ocupa a tela inteira. A página normalmente contém um layout, que contém exibições e possivelmente outros layouts. As células são componentes especializados usados na conexão com [ `TableView` ](views.md#tableView) e [ `ListView` ](views.md#listView). Um diagrama de classe que mostra a hierarquia de tipos que normalmente são usados para criar uma interface do usuário no Xamarin. Forms pode ser encontrado na [hierarquia de classes de controles xamarin. Forms](~/xamarin-forms/internals/class-hierarchy.md).
 
 Nos quatro artigos sobre [ **páginas**](pages.md), [ **Layouts**](layouts.md), [ **exibições** ](views.md), e [ **células**](cells.md), cada tipo de controle é descrito com links para documentação da API, um artigo que descreve seu uso (se houver) e um ou mais programas de exemplo (se existirem). Cada tipo de controle também acompanha uma captura de tela mostrando uma página do exemplo [**FormsGallery**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery) em execução em dispositivos IOS e Android. Cada captura de tela abaixo estão os links para o código-fonte para a página em C#, a página XAML equivalente e (quando apropriado) o arquivo de code-behind do C# para a página XAML.
+
+> [!NOTE]
+> Páginas, layouts e exibições derivam da `VisualElement` classe. A `VisualElement` classe fornece uma variedade de propriedades, métodos e eventos que são úteis na derivação de classes. Para obter mais informações, consulte [Propriedades, métodos e eventos](common-properties.md)do visualelement.
 
 Além dos controles fornecidos com o Xamarin. Forms, os controles de terceiros estão disponíveis. Para obter mais informações, consulte [controles](thirdparty.md)de terceiros.
 

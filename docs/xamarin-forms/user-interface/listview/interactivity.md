@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/27/2019
-ms.openlocfilehash: 833e6d3fc06ceeb5f8f63cb8b8b255b2a940098c
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
-ms.translationtype: MT
+ms.openlocfilehash: 180ffa7cf723d841021a8bf7d1f1a285c882c103
+ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68653885"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70065544"
 ---
 # <a name="listview-interactivity"></a>Interatividade do ListView
 
@@ -75,7 +75,7 @@ Ações de contexto são criadas usando `MenuItem`s. Eventos de toque para MenuI
 
 Por padrão, um MenuItem não tem nenhuma maneira de saber qual célula pertence. `CommandParameter` está disponível em `MenuItem` para armazenar objetos, como o objeto por trás ViewCell de MenuItem. `CommandParameter` pode ser definido em XAML e C#.
 
-### <a name="c"></a>C#  
+### <a name="c"></a>C\#
 
 Ações de contexto podem ser implementadas em qualquer `Cell` subclasse (contanto que ele não está sendo usado como um cabeçalho de grupo), criando `MenuItem`s e adicioná-los para o `ContextActions` coleção para a célula. Você tem as seguintes propriedades podem ser configuradas para a ação de contexto:
 
