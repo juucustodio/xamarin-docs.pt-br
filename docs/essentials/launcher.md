@@ -4,17 +4,17 @@ description: A classe Launcher no Xamarin.Essentials permite que um aplicativo a
 ms.assetid: BABF40CC-8BEE-43FD-BE12-6301DF27DD33
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 11/04/2018
-ms.openlocfilehash: 26ab3687e9bcfecbd003ddd0a97f3e46a0cd92b2
-ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
+ms.date: 08/20/2019
+ms.openlocfilehash: 276e4d9bc1294984a73ef2214cf9c1fd6c3bb89b
+ms.sourcegitcommit: 9a46ee759ec4a738da348e8f8904d0f482ef0f25
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58870047"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70060109"
 ---
 # <a name="xamarinessentials-launcher"></a>Xamarin.Essentials: Inicializador
 
-A classe **Launcher** permite que um aplicativo abra um URI pelo sistema. Isso geralmente é utilizado quando a vinculação profunda é usada em esquemas de URI personalizados de outro aplicativo. Se quiser abrir o navegador em um site, confira a API do **[Browser](open-browser.md)**.
+A classe **Launcher** permite que um aplicativo abra um URI pelo sistema. Isso geralmente é utilizado quando a vinculação profunda é usada em esquemas de URI personalizados de outro aplicativo. Se quiser abrir o navegador em um site, confira a API do **[Browser](open-browser.md)** .
 
 ## <a name="get-started"></a>Introdução
 
@@ -40,6 +40,35 @@ public class LauncherTest
             await Launcher.OpenAsync("lyft://ridetype?id=lyft_line");
     }
 }
+```
+
+Isso pode ser combinado em uma única chamada com `TryOpenAsync`, que verifica se o parâmetro pode ser aberto e, em caso afirmativo, abre-o.
+
+```csharp
+public class LauncherTest
+{
+    public async Task<bool> OpenRideShareAsync()
+    {
+        return await Launcher.TryOpenAsync("lyft://ridetype?id=lyft_line");
+    }
+}
+```
+
+## <a name="files"></a>Arquivos
+
+Esse recurso permite que um aplicativo solicite que outros aplicativos abram e exibam um arquivo. O Xamarin.Essentials detectará automaticamente o tipo de arquivo (MIME) e solicitará que o arquivo seja aberto.
+
+Veja um exemplo de como gravar texto no disco e solicitar que ele seja aberto:
+
+```csharp
+var fn = "File.txt";
+var file = Path.Combine(FileSystem.CacheDirectory, fn);
+File.WriteAllText(file, "Hello World");
+
+await Launcher.OpenAsync(new OpenFileRequest
+{
+    File = new ReadOnlyFile(file)
+});
 ```
 
 ## <a name="platform-differences"></a>Diferenças entre plataformas

@@ -5,12 +5,12 @@ ms.assetid: F3091D93-E779-41BA-8696-23D296F2F6F5
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 11/04/2018
-ms.openlocfilehash: f1fceaef93e7ac30bbbe0f13da7dde3cde5275fd
-ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
+ms.openlocfilehash: 5423872da7966bc7e4bb88e278d76b709f114158
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52898653"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70120709"
 ---
 # <a name="xamarinessentials-orientationsensor"></a>Xamarin.Essentials: OrientationSensor
 
@@ -98,13 +98,13 @@ Estes são sistemas de coordenadas à direita, portanto, com o polegar da mão d
 
 Exemplos:
 
-* Os dois sistemas de coordenadas estarão alinhados quando o dispositivo estiver em uma mesa com a tela voltada para cima e a parte superior do dispositivo (no modo retrato) estiver apontando para norte. O valor `Quaternion` representa o quatérnio da identidade (0, 0, 0, 1). Todas as rotações podem ser analisadas em relação a essa posição.
+- Os dois sistemas de coordenadas estarão alinhados quando o dispositivo estiver em uma mesa com a tela voltada para cima e a parte superior do dispositivo (no modo retrato) estiver apontando para norte. O valor `Quaternion` representa o quatérnio da identidade (0, 0, 0, 1). Todas as rotações podem ser analisadas em relação a essa posição.
 
-* O valor `Quaternion` será (0, 0, 0.707, 0.707) quando dispositivo estiver em uma mesa com a tela voltada para cima e a parte superior do dispositivo (no modo retrato) estiver apontando para oeste. O dispositivo girou 90 graus em torno do eixo Z da Terra.
+- O valor `Quaternion` será (0, 0, 0.707, 0.707) quando dispositivo estiver em uma mesa com a tela voltada para cima e a parte superior do dispositivo (no modo retrato) estiver apontando para oeste. O dispositivo girou 90 graus em torno do eixo Z da Terra.
 
-* O dispositivo terá girado 90 graus ao redor do eixo X quando for colocado na posição vertical de modo que a parte superior (no modo retrato) aponte para o céu e a parte de trás do dispositivo fique voltada para norte. O valor `Quaternion` é (0.707, 0, 0, 0.707).
+- O dispositivo terá girado 90 graus ao redor do eixo X quando for colocado na posição vertical de modo que a parte superior (no modo retrato) aponte para o céu e a parte de trás do dispositivo fique voltada para norte. O valor `Quaternion` é (0.707, 0, 0, 0.707).
 
-* O dispositivo terá sido girado &ndash;90 graus ao redor do eixo Y (ou 90 graus ao redor do eixo negativo Y) se ele estiver posicionado de forma que sua borda esquerda esteja sobre uma mesa e os pontos superiores ao norte. O valor `Quaternion` é (0, -0.707, 0, 0.707).
+- O dispositivo terá sido girado &ndash;90 graus ao redor do eixo Y (ou 90 graus ao redor do eixo negativo Y) se ele estiver posicionado de forma que sua borda esquerda esteja sobre uma mesa e os pontos superiores ao norte. O valor `Quaternion` é (0, -0.707, 0, 0.707).
 
 [!include[](~/essentials/includes/sensor-speed.md)]
 

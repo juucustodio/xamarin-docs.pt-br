@@ -1,18 +1,18 @@
 ---
-title: 'Xamarin.Essentials: Barometer'
+title: 'Xamarin.Essentials: Barômetro'
 description: A classe Barometer no Xamarin.Essentials permite que você monitore o sensor do barômetro do dispositivo. Esse sensor mede a pressão.
 ms.assetid: DA4F968A-D988-41F5-8745-1BEE693660A1
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 11/04/2018
-ms.openlocfilehash: 342ae1b64fefebaa4b3fa82e9f48c6e9a58d4751
-ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
+ms.openlocfilehash: 5a496fc06732be1cf104cfbaffa8ff4b68c8f564
+ms.sourcegitcommit: 1341f2950b775a4daa7d0548a51fdef759afd6e3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52899038"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69976433"
 ---
-# <a name="xamarinessentials-barometer"></a>Xamarin.Essentials: Barometer
+# <a name="xamarinessentials-barometer"></a>Xamarin.Essentials: Barômetro
 
 A classe **Barometer** permite que você monitore o sensor do barômetro do dispositivo. Esse sensor mede a pressão.
 
@@ -82,6 +82,8 @@ Sem detalhes da implementação específica da plataforma.
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
 Essa API usa [CMAltimeter](https://developer.apple.com/documentation/coremotion/cmaltimeter#//apple_ref/occ/cl/CMAltimeter) para monitorar as alterações de pressão. Esse recurso de hardware foi adicionado ao iPhone 6 e dispositivos mais recentes. Uma `FeatureNotSupportedException` será gerada em dispositivos que não suportam o altímetro.
+
+`SensorSpeed` não é usado, pois não é compatível com o iOS.
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 

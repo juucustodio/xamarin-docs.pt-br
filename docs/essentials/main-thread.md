@@ -4,13 +4,13 @@ description: A classe MainThread permite que os aplicativos executem o código n
 ms.assetid: CD6D51E7-D933-4FE7-A7F7-392EF27812E1
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 11/04/2018
-ms.openlocfilehash: 7ec1420d87c898f63614eb6d980c28834e980afd
-ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
+ms.date: 08/20/2019
+ms.openlocfilehash: 9109e7bff4cfe60479e711240d290d77b60a9af6
+ms.sourcegitcommit: 9a46ee759ec4a738da348e8f8904d0f482ef0f25
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52898999"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70060121"
 ---
 # <a name="xamarinessentials-mainthread"></a>Xamarin.Essentials: MainThread
 
@@ -93,6 +93,18 @@ else
 Você pode suspeitar que essa verificação possa melhorar o desempenho se o bloco de código já estiver em execução no thread principal.
 
 _No entanto, essa verificação não é necessária._ As implementações da plataforma de `BeginInvokeOnMainThread` verificam se a chamada é feita no thread principal. A perda de desempenho é pouca se você chamar `BeginInvokeOnMainThread` quando não for realmente necessário.
+
+## <a name="additional-methods"></a>Métodos adicionais
+
+A classe `MainThread` inclui os seguintes métodos `static` adicionais que podem ser usados para interagir com elementos da interface do usuário dos threads em segundo plano:
+
+| Método | Arguments | Retorna | Finalidade |
+|---|---|---|---|
+| `InvokeOnMainThreadAsync<T>` | `Func<T>` | `Task<T>` | Invoca um `Func<T>` no thread principal e aguarda sua conclusão. |
+| `InvokeOnMainThreadAsync` | `Action` | `Task` | Invoca um `Action` no thread principal e aguarda sua conclusão. |
+| `InvokeOnMainThreadAsync<T>`| `Func<Task<T>>` | `Task<T>` | Invoca um `Func<Task<T>>` no thread principal e aguarda sua conclusão. |
+| `InvokeOnMainThreadAsync` | `Func<Task>` | `Task` | Invoca um `Func<Task>` no thread principal e aguarda sua conclusão. |
+| `GetMainThreadSynchronizationContextAsync` | | `Task<SynchronizationContext>` | Retorna o `SynchronizationContext` para o thread principal. |
 
 ## <a name="api"></a>API
 
