@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: b5ffa884def5acb01dc07ce39a2189e2570209c3
-ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
+ms.openlocfilehash: 09e4ca561f962e46dfe4eccbaf1cf284f4bb2827
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69620583"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70120826"
 ---
 # <a name="table-views-in-xamarinmac"></a>Exibições de tabela no Xamarin. Mac
 
@@ -40,8 +40,8 @@ O comportamento de uma exibição de tabela pode ser personalizado fornecendo um
 
 Ao criar exibições de tabela, a Apple sugere o seguinte:
 
-* Permita que o usuário classifique a tabela clicando em um cabeçalho de coluna.
-* Crie cabeçalhos de coluna que sejam substantivos ou frases substantivo curtas que descrevam os dados que estão sendo mostrados nessa coluna.
+- Permita que o usuário classifique a tabela clicando em um cabeçalho de coluna.
+- Crie cabeçalhos de coluna que sejam substantivos ou frases substantivo curtas que descrevam os dados que estão sendo mostrados nessa coluna.
 
 Para obter mais informações, consulte a seção exibições de [conteúdo](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/ControlsView.html#//apple_ref/doc/uid/20000957-CH52-SW1) das [diretrizes de interface humana do os X](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)da Apple.
 

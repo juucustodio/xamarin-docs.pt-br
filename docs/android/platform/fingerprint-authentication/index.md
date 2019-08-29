@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: b865f08c9f6506996b5303bb80677977f1d0fa21
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: ac373d20cbe08719fd7aa8e3888bbd608d8549c7
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68643557"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70119517"
 ---
 # <a name="fingerprint-authentication"></a>Autenticação de impressão digital
 
@@ -27,9 +27,9 @@ As APIs de impressões digitais direcionam dispositivos com um scanner de impres
 
 O [fingerprintid](https://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.html) (e seu equivalente da biblioteca de suporte, [FingerprintManagerCompat](https://developer.android.com/reference/android/support/v4/hardware/fingerprint/FingerprintManagerCompat.html)) é a classe principal para usar o hardware de verificação de impressão digital. Essa classe é um wrapper SDK do Android em volta do serviço de nível do sistema que gerencia as interações com o próprio hardware. Ele é responsável por iniciar o scanner de impressão digital e responder aos comentários do verificador. Essa classe tem uma interface razoavelmente simples com apenas três membros:
 
-* **`Authenticate`** &ndash; Esse método inicializará o scanner de hardware e iniciará o serviço em segundo plano, aguardando que o usuário examine sua impressão digital.
-* **`EnrolledFingerprints`** Essa propriedade retornará `true` se o usuário tiver registrado uma ou mais impressões digitais com o dispositivo. &ndash;
-* **`HardwareDetected`** &ndash; Essa propriedade é usada para determinar se o dispositivo dá suporte à verificação de impressão digital.
+- **`Authenticate`** &ndash; Esse método inicializará o scanner de hardware e iniciará o serviço em segundo plano, aguardando que o usuário examine sua impressão digital.
+- **`EnrolledFingerprints`** Essa propriedade retornará `true` se o usuário tiver registrado uma ou mais impressões digitais com o dispositivo. &ndash;
+- **`HardwareDetected`** &ndash; Essa propriedade é usada para determinar se o dispositivo dá suporte à verificação de impressão digital.
 
 O `FingerprintManager.Authenticate` método é usado por um aplicativo Android para iniciar o scanner de impressão digital. O trecho a seguir é um exemplo de como chamá-lo usando as APIs de compatibilidade de biblioteca de suporte:
 

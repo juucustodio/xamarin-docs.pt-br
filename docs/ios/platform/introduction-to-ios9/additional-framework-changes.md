@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 886a6145851720c088e39818b3a6e42a7b66e4bb
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: eaae0859ddce1c7601b0429381c8643c0884c3ac
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68654400"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70121386"
 ---
 # <a name="additional-ios-9-frameworks-changes"></a>Alterações adicionais em estruturas do iOS 9
 
@@ -78,8 +78,8 @@ A Apple incluiu as seguintes alterações na estrutura base do iOS 9:
 
 As seguintes alterações foram feitas na classe [NSBundle](xref:Foundation.NSBundle) para IOS 9:
 
-* `GetPreservationPriorityForTag (NSString tag)`-Obtém a prioridade de preservação atual para recursos com a marca fornecida. Os valores válidos estão no intervalo `0.0` para `1.0`, os recursos com a menor prioridade serão limpos primeiro.
-* `SetPreservationPriorityForTag (double priority, NSSet tags)`-Define a prioridade de preservação atual para recursos com as marcações fornecidas. Os valores válidos estão no intervalo `0.0` para `1.0`, os recursos com a menor prioridade serão limpos primeiro.
+- `GetPreservationPriorityForTag (NSString tag)`-Obtém a prioridade de preservação atual para recursos com a marca fornecida. Os valores válidos estão no intervalo `0.0` para `1.0`, os recursos com a menor prioridade serão limpos primeiro.
+- `SetPreservationPriorityForTag (double priority, NSSet tags)`-Define a prioridade de preservação atual para recursos com as marcações fornecidas. Os valores válidos estão no intervalo `0.0` para `1.0`, os recursos com a menor prioridade serão limpos primeiro.
 
 Para obter mais informações, consulte a [referência do NSBundle](https://developer.apple.com/library/prerelease/ios/documentation/Cocoa/Reference/Foundation/Classes/NSBundle_Class/index.html#//apple_ref/occ/cl/NSBundle)da Apple.
 
@@ -145,7 +145,7 @@ As seguintes alterações foram feitas na classe [LAContext](xref:LocalAuthentic
 - **MaxBiometryFailures** -foi depreciado no Ios 9.
 - **TouchIdAuthenticationAllowableReuseDuration** Obtém ou define a quantidade de tempo que uma autenticação de ID de toque pode ser reutilizada.
 - **EvaluateAccessControl** – avalia de forma assíncrona uma política de autenticação.
-- **Invalidar – invalida** uma determinada autenticação de ID de toque.
+- Invalidar – invalida uma determinada autenticação de ID de toque.
 - Iscredentialset – retorna `true` se as credenciais estão definidas no momento.
 - Setcredentialtype Define o tipo de credencial fornecido.
 

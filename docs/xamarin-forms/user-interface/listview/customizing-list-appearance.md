@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/13/2018
-ms.openlocfilehash: 49bb3f901f2b1f8ed4ae26650cb0509aabfd2369
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 1355f65a192cf8f7f119a2ee77f334c115650578
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68647615"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70121631"
 ---
 # <a name="customizing-listview-appearance"></a>Personalizando a aparência de ListView
 
@@ -214,8 +214,8 @@ Para criar um cabeçalho personalizado e um rodapé, defina os modos de exibiç�
 ## <a name="row-separators"></a>Separadores de linha
 As linhas do separador são exibidas entre `ListView` elementos por padrão no iOS e Android. Se você desejar ocultar as linhas de separador no iOS e Android, defina o `SeparatorVisibility` propriedade em sua ListView. As opções para `SeparatorVisibility` são:
 
-* **Padrão** -mostra uma linha separadora no iOS e Android.
-* **Nenhum** -oculta o separador em todas as plataformas.
+- **Padrão** -mostra uma linha separadora no iOS e Android.
+- **Nenhum** -oculta o separador em todas as plataformas.
 
 Visibilidade do padrão:
 

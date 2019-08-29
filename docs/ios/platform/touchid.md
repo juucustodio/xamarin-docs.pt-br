@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: 0f92dca71f74266e1408cd65c842f729a9a648ce
-ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
-ms.translationtype: HT
+ms.openlocfilehash: cb71fc75b01621ed381f42b41df68fc80309f22c
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 08/28/2019
-ms.locfileid: "70065661"
+ms.locfileid: "70121297"
 ---
 # <a name="touch-id-in-xamarinios"></a>ID de toque no Xamarin. iOS
 
@@ -102,15 +102,15 @@ No assunto da segurança, também é extremamente importante saber que não há 
 
 Para usar o Touch ID sem o conjunto de chaves aproveitando a API de autenticação local, há algumas funções que podemos usar. Eles são detalhados abaixo:
 
-* `CanEvaluatePolicy`– Isso simplesmente verificará se o dispositivo é capaz de aceitar a ID de toque.
-* `EvaluatePolicy`– Isso inicia a operação de autenticação e exibe a interface do usuário e `true` retorna `false` uma resposta ou.
-* `DeviceOwnerAuthenticationWithBiometrics`– Esta é a política que pode ser usada para mostrar a tela de ID de toque. Vale a pena observar que não há nenhum mecanismo de fallback de senha aqui. em vez disso, você deve implementar esse fallback em seu aplicativo para permitir que os usuários ignorem a autenticação de ID de toque.
+- `CanEvaluatePolicy`– Isso simplesmente verificará se o dispositivo é capaz de aceitar a ID de toque.
+- `EvaluatePolicy`– Isso inicia a operação de autenticação e exibe a interface do usuário e `true` retorna `false` uma resposta ou.
+- `DeviceOwnerAuthenticationWithBiometrics`– Esta é a política que pode ser usada para mostrar a tela de ID de toque. Vale a pena observar que não há nenhum mecanismo de fallback de senha aqui. em vez disso, você deve implementar esse fallback em seu aplicativo para permitir que os usuários ignorem a autenticação de ID de toque.
 
 Há algumas limitações com o uso da autenticação local, que estão listadas abaixo:
 
-* Assim como acontece com o conjunto de chaves, ele só pode ser executado em primeiro plano. Chamá-lo em um thread em segundo plano fará com que ele falhe.
-* Tenha em mente que a avaliação da política pode falhar. Um botão de senha precisará ser implementado como um retorno.
-* Você deve fornecer um `localizedReason` para explicar por que a autenticação é necessária. Isso ajuda a criar confiança com o usuário.
+- Assim como acontece com o conjunto de chaves, ele só pode ser executado em primeiro plano. Chamá-lo em um thread em segundo plano fará com que ele falhe.
+- Tenha em mente que a avaliação da política pode falhar. Um botão de senha precisará ser implementado como um retorno.
+- Você deve fornecer um `localizedReason` para explicar por que a autenticação é necessária. Isso ajuda a criar confiança com o usuário.
 
 Em seguida, na seção abaixo, veremos como implementar a API levando essas advertências em consideração.
 

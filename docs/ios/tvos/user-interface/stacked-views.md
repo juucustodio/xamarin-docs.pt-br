@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 7dd3889e9fcbb2260165a96f32f56f437df15ade
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 9dbcecf40c742de6e9f3a5c8458dcae3f347501d
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528841"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70120735"
 ---
 # <a name="working-with-tvos-stacked-views-in-xamarin"></a>Trabalhando com exibições empilhadas do tvOS no Xamarin
 
@@ -61,16 +61,16 @@ Embora o modo de exibição de pilha tenha controle total sobre o layout de qual
 
 Em geral, isso significa fixar pelo menos duas bordas da exibição de pilha para expandir e contratar, definindo, portanto, sua posição. Sem restrições adicionais, o modo de exibição de pilha será redimensionado automaticamente para se ajustar a todas as suas subexibições da seguinte maneira:
 
-* O tamanho ao longo `Axis` de sua será a soma de todos os tamanhos de subexibição, além de qualquer espaço que tenha sido definido entre cada subexibição.
-* Se a `LayoutMarginsRelativeArrangement` propriedade for `true`, o tamanho das exibições da pilha também incluirá espaço para as margens.
-* O tamanho perpendicular ao `Axis` será definido como a maior subexibição na coleção.
+- O tamanho ao longo `Axis` de sua será a soma de todos os tamanhos de subexibição, além de qualquer espaço que tenha sido definido entre cada subexibição.
+- Se a `LayoutMarginsRelativeArrangement` propriedade for `true`, o tamanho das exibições da pilha também incluirá espaço para as margens.
+- O tamanho perpendicular ao `Axis` será definido como a maior subexibição na coleção.
 
 Além disso, você pode especificar restrições para a **altura** e a **largura**da exibição de pilha. Nesse caso, as subexibições serão dispostas (dimensionadas) para preencher o espaço especificado pela exibição de pilha conforme determinado pelas `Distribution` Propriedades e. `Alignment`
 
 Se a `BaselineRelativeArrangement` propriedade for `true`, as subexibições serão dispostas com base na primeira ou na última linha de base da subexibição, em vez de usar a posição **superior**, **inferior** ou **central*- **Y** . Eles são calculados no conteúdo da exibição de pilha da seguinte maneira:
 
-* Uma exibição de pilha vertical retornará a primeira subexibição para a primeira linha de base e a última para a última. Se qualquer uma dessas subexibições estiver em modo de exibição de pilha, a primeira ou a última linha de base será usada.
-* Uma exibição de pilha horizontal usará sua subexibição mais alta para a primeira e a última linha de base. Se a exibição mais alta também for uma exibição de pilha, ela usará a subexibição mais alta que a linha de base.
+- Uma exibição de pilha vertical retornará a primeira subexibição para a primeira linha de base e a última para a última. Se qualquer uma dessas subexibições estiver em modo de exibição de pilha, a primeira ou a última linha de base será usada.
+- Uma exibição de pilha horizontal usará sua subexibição mais alta para a primeira e a última linha de base. Se a exibição mais alta também for uma exibição de pilha, ela usará a subexibição mais alta que a linha de base.
 
 > [!IMPORTANT]
 > O alinhamento de linha de base não funciona em tamanhos de subexibições ampliados ou compactados, pois a linha de base será calculada para a posição incorreta. Para alinhamento de linha de base, verifique se a **altura** da subexibição corresponde à **altura**do modo de exibição de conteúdo intrínseco.

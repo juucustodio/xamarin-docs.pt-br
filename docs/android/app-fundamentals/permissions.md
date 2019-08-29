@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/09/2018
-ms.openlocfilehash: 1426054b60d182f7f40bf3c4b0bf69b2287ad57e
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: ef73b8e1cf9747c9ba426894f37aab620ac0095f
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68509402"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70119148"
 ---
 # <a name="permissions-in-xamarinandroid"></a>Permissões no Xamarin. Android
 
@@ -22,15 +22,15 @@ Os aplicativos Android são executados em sua própria área restrita e, por mot
 
 As permissões são declaradas no **AndroidManifest. xml** pelo desenvolvedor do aplicativo quando o aplicativo é desenvolvido. O Android tem dois fluxos de trabalho diferentes para obter o consentimento do usuário para essas permissões:
  
-* Para aplicativos direcionados para Android 5,1 (API nível 22) ou inferior, a solicitação de permissão ocorreu quando o aplicativo foi instalado. Se o usuário não tiver concedido as permissões, o aplicativo não será instalado. Depois que o aplicativo é instalado, não é possível revogar as permissões, exceto desinstalando o aplicativo.
-* A partir do Android 6,0 (nível 23 da API), os usuários receberam mais controle sobre as permissões; Eles podem conceder ou revogar permissões, desde que o aplicativo esteja instalado no dispositivo. Esta captura de tela mostra as configurações de permissão para o aplicativo Google Contacts. Ele lista as várias permissões e permite que o usuário habilite ou desabilite as permissões:
+- Para aplicativos direcionados para Android 5,1 (API nível 22) ou inferior, a solicitação de permissão ocorreu quando o aplicativo foi instalado. Se o usuário não tiver concedido as permissões, o aplicativo não será instalado. Depois que o aplicativo é instalado, não é possível revogar as permissões, exceto desinstalando o aplicativo.
+- A partir do Android 6,0 (nível 23 da API), os usuários receberam mais controle sobre as permissões; Eles podem conceder ou revogar permissões, desde que o aplicativo esteja instalado no dispositivo. Esta captura de tela mostra as configurações de permissão para o aplicativo Google Contacts. Ele lista as várias permissões e permite que o usuário habilite ou desabilite as permissões:
 
 ![Tela de permissões de exemplo](permissions-images/01-permissions-check.png) 
 
 Os aplicativos Android devem verificar em tempo de execução para ver se eles têm permissão para acessar um recurso protegido. Se o aplicativo não tiver permissão, ele deverá fazer solicitações usando as novas APIs fornecidas pelo SDK do Android para que o usuário conceda as permissões. As permissões são divididas em duas categorias:
 
-* **Permissões normais** &ndash; Essas são permissões que representam pouco risco de segurança à segurança ou privacidade do usuário. O Android 6,0 concederá automaticamente permissões normais no momento da instalação. Consulte a documentação do Android para obter uma [lista completa das permissões normais](https://developer.android.com/guide/topics/permissions/normal-permissions.html).
-* **Permissões perigosas** &ndash; Ao contrário das permissões normais, as permissões perigosas são aquelas que protegem a segurança ou a privacidade do usuário. Eles devem ser explicitamente concedidos pelo usuário. Enviar ou receber uma mensagem SMS é um exemplo de uma ação que requer uma permissão perigosa.
+- **Permissões normais** &ndash; Essas são permissões que representam pouco risco de segurança à segurança ou privacidade do usuário. O Android 6,0 concederá automaticamente permissões normais no momento da instalação. Consulte a documentação do Android para obter uma [lista completa das permissões normais](https://developer.android.com/guide/topics/permissions/normal-permissions.html).
+- **Permissões perigosas** &ndash; Ao contrário das permissões normais, as permissões perigosas são aquelas que protegem a segurança ou a privacidade do usuário. Eles devem ser explicitamente concedidos pelo usuário. Enviar ou receber uma mensagem SMS é um exemplo de uma ação que requer uma permissão perigosa.
 
 > [!IMPORTANT]
 > A categoria à qual uma permissão pertence pode mudar ao longo do tempo.  É possível que uma permissão que foi categorizada como uma permissão "normal" possa ser elevada em níveis futuros de API para uma permissão perigosa.
@@ -121,8 +121,8 @@ Para aplicativos direcionados para Android 5.1 (API nível 22) ou inferior, não
 
 O `ContextCompat.CheckSelfPermission` método (disponível com a biblioteca de suporte do Android) é usado para verificar se uma permissão específica foi concedida. Esse método retornará um [`Android.Content.PM.Permission`](xref:Android.Content.PM.Permission) enum que tem um dos dois valores:
 
-* **`Permission.Granted`** &ndash; A permissão especificada foi concedida.
-* **`Permission.Denied`** &ndash; A permissão especificada não foi concedida.
+- **`Permission.Granted`** &ndash; A permissão especificada foi concedida.
+- **`Permission.Denied`** &ndash; A permissão especificada não foi concedida.
 
 Este trecho de código é um exemplo de como verificar a permissão da câmera em uma atividade: 
 
@@ -145,9 +145,9 @@ O `ActivityCompat.ShouldShowRequestPermissionRationale` método é usado para de
 
 Se o usuário conceder a permissão, o `ActivityCompat.RequestPermissions(Activity activity, string[] permissions, int requestCode)` método deverá ser chamado. Esse método requer os seguintes parâmetros:
 
-* **atividade** do &ndash; Essa é a atividade que está solicitando as permissões e deve ser informada pelo Android dos resultados.
-* **permissões** do &ndash; Uma lista das permissões que estão sendo solicitadas.
-* **requestCode** Um valor inteiro que é usado para corresponder os resultados da solicitação de permissão a uma `RequestPermissions` chamada. &ndash; Esse valor deve ser maior que zero.
+- **atividade** do &ndash; Essa é a atividade que está solicitando as permissões e deve ser informada pelo Android dos resultados.
+- **permissões** do &ndash; Uma lista das permissões que estão sendo solicitadas.
+- **requestCode** Um valor inteiro que é usado para corresponder os resultados da solicitação de permissão a uma `RequestPermissions` chamada. &ndash; Esse valor deve ser maior que zero.
 
 Esse trecho de código é um exemplo dos dois métodos que foram discutidos. Primeiro, é feita uma verificação para determinar se a lógica de permissão deve ser mostrada. Se a lógica for mostrada, um snackbar será exibido com a lógica. Se o usuário clicar em **OK** no snackbar, o aplicativo solicitará as permissões. Se o usuário não aceitar a lógica, o aplicativo não deverá continuar solicitando permissões. Se a lógica não for mostrada, a atividade solicitará a permissão:
 

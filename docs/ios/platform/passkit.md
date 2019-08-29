@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/13/2018
-ms.openlocfilehash: 9f8a092b63da413974f387aca02d81efef9c1625
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: c434c39c12403bfc61e146041eb2a0780f29eb3e
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528325"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70119183"
 ---
 # <a name="passkit-in-xamarinios"></a>PassKit no Xamarin. iOS
 
@@ -326,9 +326,9 @@ Os recursos de carteira incluem:
 
 As passagens podem ser adicionadas à carteira das seguintes maneiras:
 
-* **Aplicativos de canal** – esses não manipulam as passagens diretamente, eles simplesmente carregam arquivos de passagem e apresentam ao usuário a opção de adicioná-los à carteira. 
+- **Aplicativos de canal** – esses não manipulam as passagens diretamente, eles simplesmente carregam arquivos de passagem e apresentam ao usuário a opção de adicioná-los à carteira. 
 
-* **Aplicativos complementares** – eles são escritos por provedores para distribuir passagens e oferecem funcionalidade adicional para procurá-los ou editá-los. Os aplicativos Xamarin. iOS têm acesso completo à API do PassKit para criar e manipular passagens. As passagens podem ser adicionadas à carteira usando `PKAddPassesViewController`o. Esse processo é descrito mais detalhadamente na seção **aplicativos complementares** deste documento.
+- **Aplicativos complementares** – eles são escritos por provedores para distribuir passagens e oferecem funcionalidade adicional para procurá-los ou editá-los. Os aplicativos Xamarin. iOS têm acesso completo à API do PassKit para criar e manipular passagens. As passagens podem ser adicionadas à carteira usando `PKAddPassesViewController`o. Esse processo é descrito mais detalhadamente na seção **aplicativos complementares** deste documento.
 
 ### <a name="conduit-applications"></a>Aplicativos de canal
 

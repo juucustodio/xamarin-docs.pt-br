@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/27/2019
-ms.openlocfilehash: 180ffa7cf723d841021a8bf7d1f1a285c882c103
-ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
-ms.translationtype: HT
+ms.openlocfilehash: 3949dd85492a8181ee53e23b3ba2e986e59f8f47
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 08/28/2019
-ms.locfileid: "70065544"
+ms.locfileid: "70121622"
 ---
 # <a name="listview-interactivity"></a>Interatividade do ListView
 
@@ -79,9 +79,9 @@ Por padrão, um MenuItem não tem nenhuma maneira de saber qual célula pertence
 
 Ações de contexto podem ser implementadas em qualquer `Cell` subclasse (contanto que ele não está sendo usado como um cabeçalho de grupo), criando `MenuItem`s e adicioná-los para o `ContextActions` coleção para a célula. Você tem as seguintes propriedades podem ser configuradas para a ação de contexto:
 
-* **Texto** &ndash; a cadeia de caracteres que aparece no item de menu.
-* **Clicado** &ndash; o evento quando o item é clicado.
-* **IsDestructive** &ndash; (opcional) quando for verdadeiro o item será renderizado da maneira diferente, no iOS.
+- **Texto** &ndash; a cadeia de caracteres que aparece no item de menu.
+- **Clicado** &ndash; o evento quando o item é clicado.
+- **IsDestructive** &ndash; (opcional) quando for verdadeiro o item será renderizado da maneira diferente, no iOS.
 
 Várias ações de contexto podem ser adicionadas a uma célula, no entanto, somente um deve ter `IsDestructive` definido como `true`. O código a seguir demonstra como as ações de contexto seriam adicionadas a um `ViewCell`:
 

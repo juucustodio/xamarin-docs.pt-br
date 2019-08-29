@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/09/2018
-ms.openlocfilehash: 05b8be21373930ae2b501c84757b7be11f794aa9
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: d6cb1e407740fa4c182639a77e3725baec4286ac
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69524616"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70119852"
 ---
 # <a name="java-bindings-metadata"></a>Metadados de associações de Java
 
@@ -79,9 +79,9 @@ Permite passar para discutir **Metadata. xml** mais detalhadamente.
 Como já aprendimos, o arquivo **Metadata. xml** é usado pelo gerador de associações para influenciar a criação do assembly de associação.
 O formato de metadados usa a sintaxe [XPath](https://www.w3.org/TR/xpath/) e é quase idêntico aos *metadados GAPI* descritos no guia de [metadados do GAPI](https://www.mono-project.com/docs/gui/gtksharp/gapi/#metadata) . Essa implementação é quase uma implementação completa do XPath 1,0 e, portanto, dá suporte a itens no padrão 1,0. Esse arquivo é um poderoso mecanismo baseado em XPath para alterar, adicionar, ocultar ou mover qualquer elemento ou atributo no arquivo de API. Todos os elementos de regra na especificação de metadados incluem um atributo de caminho para identificar o nó ao qual a regra deve ser aplicada. As regras são aplicadas na seguinte ordem:
 
-* **adicionar nó** &ndash; Anexa um nó filho ao nó especificado pelo atributo Path.
-* **attr** &ndash; Define o valor de um atributo do elemento especificado pelo atributo Path.
-* **remover nó** &ndash; Remove os nós que correspondem a um XPath especificado.
+- **adicionar nó** &ndash; Anexa um nó filho ao nó especificado pelo atributo Path.
+- **attr** &ndash; Define o valor de um atributo do elemento especificado pelo atributo Path.
+- **remover nó** &ndash; Remove os nós que correspondem a um XPath especificado.
 
 Veja a seguir um exemplo de um arquivo **Metadata. xml** :
 
@@ -248,8 +248,8 @@ Altera o tipo de retorno de um método. Isso não altera o atributo de retorno (
 
 As ferramentas que ofuscam as bibliotecas Java podem interferir no gerador de associação do Xamarin. Android e sua C# capacidade de gerar classes de wrapper. As características das classes ofuscadas incluem: 
 
-* O nome da classe inclui **$** um, ou seja, **uma classe $.**
-* O nome da classe está totalmente comprometido com caracteres minúsculos, ou seja, **a. Class**
+- O nome da classe inclui **$** um, ou seja, **uma classe $.**
+- O nome da classe está totalmente comprometido com caracteres minúsculos, ou seja, **a. Class**
 
 Este trecho de código é um exemplo de como gerar um tipo "não ofuscado C# ":
 

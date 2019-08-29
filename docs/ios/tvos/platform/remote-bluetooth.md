@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 2def6280a159203fd2c8d3db01a8e66c9ae61688
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 1e1e86c6301214c7117b8f3b21b19554499d7fbd
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68657392"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70121438"
 ---
 # <a name="siri-remote-and-bluetooth-controllers-for-tvos-in-xamarin"></a>Controladores remotos e Bluetooth Siri para tvOS no Xamarin
 
@@ -58,10 +58,10 @@ A superfície de toque do Siri remoto é capaz de detectar uma variedade de gest
 
 A Apple fornece as seguintes sugestões para trabalhar com gestos de superfície de toque:
 
-* **Diferenciar entre cliques e toques** -clicar é uma ação intencional pelo usuário e é bem adequado para seleção, ativação e o botão principal de um jogo. Tocar é mais sutil e deve ser usado com moderação porque o usuário geralmente está mantendo o Siri remoto em sua mão e pode acidentalmente ativar um evento Tap facilmente.
-* **Não redefina gestos padrão** -o usuário tem uma expectativa de que gestos específicos executam ações específicas, você não deve redefinir o significado ou a função desses gestos em seu aplicativo. A única exceção é um aplicativo de jogos durante o jogo ativo.
-* **Definir novos gestos** de forma moderada de novo, o usuário tem uma expectativa de que gestos específicos executam ações específicas. Você deve evitar a definição de gestos personalizados para executar ações padrão. E novamente, os jogos são a exceção mais comum em que os gestos personalizados podem adicionar diversão, reprodução de imersão ao jogo.
-* **Se apropriado, responder a toques de quadro d** – levemente tocando nas bordas de canto da superfície de toque reagirá como um painel D em um controlador de jogo movendo o foco ou a direção para cima, para baixo, para a esquerda ou para a direita. Se apropriado, você deve responder a esses gestos em seu aplicativo ou jogo.
+- **Diferenciar entre cliques e toques** -clicar é uma ação intencional pelo usuário e é bem adequado para seleção, ativação e o botão principal de um jogo. Tocar é mais sutil e deve ser usado com moderação porque o usuário geralmente está mantendo o Siri remoto em sua mão e pode acidentalmente ativar um evento Tap facilmente.
+- **Não redefina gestos padrão** -o usuário tem uma expectativa de que gestos específicos executam ações específicas, você não deve redefinir o significado ou a função desses gestos em seu aplicativo. A única exceção é um aplicativo de jogos durante o jogo ativo.
+- **Definir novos gestos** de forma moderada de novo, o usuário tem uma expectativa de que gestos específicos executam ações específicas. Você deve evitar a definição de gestos personalizados para executar ações padrão. E novamente, os jogos são a exceção mais comum em que os gestos personalizados podem adicionar diversão, reprodução de imersão ao jogo.
+- **Se apropriado, responder a toques de quadro d** – levemente tocando nas bordas de canto da superfície de toque reagirá como um painel D em um controlador de jogo movendo o foco ou a direção para cima, para baixo, para a esquerda ou para a direita. Se apropriado, você deve responder a esses gestos em seu aplicativo ou jogo.
 
 <a name="Siri-Remote-Buttons" />
 

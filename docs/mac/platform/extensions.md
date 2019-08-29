@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 5138062cec6ee71f1db17d0118001b59dd7bc02c
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 58250770b925c20b912b71e5591b1d0e252c801a
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68642950"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70119031"
 ---
 # <a name="xamarinmac-extension-support"></a>Suporte à extensão de Xamarin.Mac
 
@@ -28,9 +28,9 @@ No Xamarin. Mac 2,10, o suporte foi adicionado para vários pontos de extensão 
 
 A seguir estão as limitações e os problemas conhecidos que podem ocorrer ao desenvolver extensões no Xamarin. Mac:
 
-* No momento, não há suporte para depuração no Visual Studio para Mac. Toda a depuração precisará ser feita via **NSLog** e o **console**. Consulte a seção dicas abaixo para obter detalhes.
-* As extensões devem estar contidas em um aplicativo host, que, quando executado uma vez com o registro com o sistema. Eles devem ser habilitados na seção **extensão** de **preferências do sistema**. 
-* Algumas falhas de extensão podem desestabilizar o aplicativo host e causar um comportamento estranho. Em particular, o **Finder** e a seção de **hoje** do **centro de notificação** podem se tornar "obstruídos" e deixar de responder. Isso também foi observado em projetos de extensão no Xcode e, no momento, parece não relacionado ao Xamarin. Mac. Geralmente, isso pode ser visto no log do sistema (por meio do **console**do, consulte Dicas para obter detalhes) imprimindo mensagens de erro repetidas. A reinicialização do macOS parece corrigir isso.
+- No momento, não há suporte para depuração no Visual Studio para Mac. Toda a depuração precisará ser feita via **NSLog** e o **console**. Consulte a seção dicas abaixo para obter detalhes.
+- As extensões devem estar contidas em um aplicativo host, que, quando executado uma vez com o registro com o sistema. Eles devem ser habilitados na seção **extensão** de **preferências do sistema**. 
+- Algumas falhas de extensão podem desestabilizar o aplicativo host e causar um comportamento estranho. Em particular, o **Finder** e a seção de **hoje** do **centro de notificação** podem se tornar "obstruídos" e deixar de responder. Isso também foi observado em projetos de extensão no Xcode e, no momento, parece não relacionado ao Xamarin. Mac. Geralmente, isso pode ser visto no log do sistema (por meio do **console**do, consulte Dicas para obter detalhes) imprimindo mensagens de erro repetidas. A reinicialização do macOS parece corrigir isso.
 
 <a name="Tips" />
 

@@ -1,118 +1,118 @@
 ---
-title: Solução de problemas de Xamarin Live Player
-description: Este documento descreve problemas conhecidos com o Xamarin Live Player e possíveis correções. Ele aborda problemas de conexão, problemas de configuração e muito mais.
+title: Solução de problemas Xamarin Live Player
+description: Este documento descreve os problemas conhecidos com o Xamarin Live Player e as possíveis correções. Ele aborda problemas de conexão, problemas de configuração e muito mais.
 ms.prod: xamarin
 ms.assetid: 29A97ADA-80E0-40A1-8B26-C68FFABE7D26
 author: lobrien
 ms.author: laobri
 ms.date: 06/13/2019
-ms.openlocfilehash: bf0186b55b14d9797397b98390f4d825d669d0f4
-ms.sourcegitcommit: 93b1e2255d59c8ca6674485938f26bd425740dd1
+ms.openlocfilehash: 56ffa280481ba6331b01ff27c6fd5bc3ab585f53
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67157689"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70121588"
 ---
-# <a name="troubleshooting-xamarin-live-player"></a>Solução de problemas de Xamarin Live Player
+# <a name="troubleshooting-xamarin-live-player"></a>Solução de problemas Xamarin Live Player
 
 ![Versão prévia do recurso](~/media/shared/preview.png)
 
 > [!WARNING]
-> O Xamarin Live Player visualização foi encerrada. O aplicativo não está mais disponível. As instruções a seguir são fornecidas para clientes que continuam a usar a visualização com o Visual Studio 2017...
+> A visualização do Xamarin Live Player foi encerrada. O aplicativo não está mais disponível. As instruções a seguir são fornecidas para os clientes que continuam a usar a visualização com o Visual Studio 2017.
 
 > [!TIP]
-> Você pode usar o [XAML pré-visualizador](~/xamarin-forms/xaml/xaml-previewer/index.md) no 2019 do Visual Studio ou Visual Studio para Mac para exibir seus designs de tela, conforme você editá-los.
+> Você pode usar o [Visualizar XAML](~/xamarin-forms/xaml/xaml-previewer/index.md) no Visual Studio 2019 ou Visual Studio para Mac para exibir os designs de tela ao editá-los.
 
 Este artigo explica as limitações do Live Player e alguns problemas comuns com as etapas para corrigi-los.
 
-## <a name="limitations-of-xamarin-live-player"></a>Limitações do Xamarin Live Player
+## <a name="limitations-of-xamarin-live-player"></a>Limitações de Xamarin Live Player
 
 ### <a name="ide-requirements"></a>Requisitos de IDE
 
-Visualização Live Player só está disponível no Visual Studio 2017.
+A visualização do Live Player está disponível apenas no Visual Studio 2017.
 
 ### <a name="device-requirements"></a>Requisitos do dispositivo
 
 O aplicativo Xamarin Live Player dá suporte aos seguintes dispositivos Android:
 
-- Android 4.2 ou posterior.
-- ARM-v7a, v8a ARM, ARM64-v8a, x86 ou processador x86_64.
+- Android 4,2 ou posterior.
+- ARM-v7a, ARM-V8A, ARM64-V8A, x86 ou x86_64 Processor.
 
 ### <a name="ios-limitations"></a>limitações do iOS
 
-Live Player não está disponível para iOS.
+O Live Player não está disponível para iOS.
 
-### <a name="xamarinforms-limitations"></a>Limitações do xamarin. Forms
+### <a name="xamarinforms-limitations"></a>Limitações do Xamarin. Forms
 
-- Renderizadores personalizados não têm suporte.
-- Efeitos não têm suporte.
+- Não há suporte para renderizadores personalizados.
+- Não há suporte para efeitos.
 - Não há suporte para controles personalizados com propriedades vinculáveis personalizadas.
-- Não há suporte para recursos inseridos (ie. inserção de imagens ou outros recursos em uma PCL).
-- Estruturas MVVM de terceiros não têm suporte (ie. O Prism, Mvvm cruzada, o Mvvm Light, etc.).
+- Não há suporte para recursos inseridos (ou seja, inserir imagens ou outros recursos em um PCL).
+- Não há suporte para estruturas MVVM de terceiros (por ex. Prism, MVVM Cross, MVVM Light, etc.).
 
 ### <a name="other-project-type-limitations"></a>Outras limitações de tipo de projeto
 
-- Live Player não se destina a projetos do Android nativos (que usam o XML do Android para a interface do usuário).
+- O Live Player não se destina a projetos nativos do Android (que usam o Android XML para a interface do usuário).
 
-### <a name="miscellaneous-limitations"></a>Limitações de diversas
+### <a name="miscellaneous-limitations"></a>Limitações diversas
 
-- Suporte limitado para reflexão (atualmente afeta alguns NuGets populares, como o SQLite e Json.NET). Outros NuGets ainda podem ter suporte.
-- Algumas classes de sistema não podem ser substituídos (por exemplo, você não pode implementar uma subclasse).
-- Alguns recursos de plataforma que exigem o provisionamento não funcionam no aplicativo do Xamarin Live Player (no entanto ele foi configurado para operações comuns, como acesso de galeria de fotos).
-- Destinos personalizados e etapas de compilação são ignoradas. Por exemplo, ferramentas como o Fody, Refit, AutoFac e AutoMapper não podem ser incorporadas.
+- Suporte limitado para reflexão (atualmente afeta alguns NuGets populares, como SQLite e Json.NET). Outros NuGets ainda podem ter suporte.
+- Algumas classes do sistema não podem ser substituídas (por exemplo, você não pode implementar uma subclasse).
+- Alguns recursos de plataforma que exigem provisionamento não podem funcionar no aplicativo Xamarin Live Player (no entanto, ele foi configurado para operações comuns, como acesso à galeria de fotos).
+- Os destinos personalizados e as etapas de compilação são ignorados. Por exemplo, ferramentas como Fody, refit, AutoFac e AutoMapper não podem ser incorporadas.
 - F#Não há suporte para projetos
-- Cenários avançados com interfaces e classes genéricas personalizadas podem não ter suporte.
+- Cenários avançados com classes e interfaces genéricas personalizadas podem não ter suporte.
 
-## <a name="mobile-device-does-not-connect-after-scanning-barcode-or-entering-code"></a>Não se conectar a dispositivos móveis após a verificação de código de barras (ou inserindo código)
+## <a name="mobile-device-does-not-connect-after-scanning-barcode-or-entering-code"></a>O dispositivo móvel não se conecta após a verificação do código de barras (ou a inserção de códigos)
 
-Ocorre quando o dispositivo móvel em execução Xamarin Live Player não está na mesma rede que o computador que executa o IDE. Confira o seguinte:
+Ocorre quando o dispositivo móvel que executa o Xamarin Live Player não está na mesma rede que o computador que está executando o IDE. Confira o seguinte:
 
 - Confirme se o dispositivo e o computador estão na mesma rede Wi-Fi.
-  - Se o computador também é conectado a uma rede com fio, tente a operação de desconectar a conexão com fio.
-- A rede pode ser totalmente protegida (por exemplo, algumas redes corporativas) bloqueando as portas necessárias pelo Xamarin Live Player.
-- Feche o aplicativo Xamarin Live Player e reiniciá-lo.
+  - Se o computador também estiver conectado a uma rede com fio, tente desconectar a conexão com fio.
+- A rede pode estar firmemente segura (como algumas redes corporativas), bloqueando as portas necessárias para Xamarin Live Player.
+- Feche o aplicativo Xamarin Live Player e reinicie-o.
 
-## <a name="error-while-trying-to-deploy-message-in-ide"></a>Mensagem "Erro ao tentar implantar" no IDE
+## <a name="error-while-trying-to-deploy-message-in-ide"></a>Mensagem "erro ao tentar implantar" no IDE
 
-**"IOException: não é possível ler dados de conexão de transporte: Operação em um soquete sem bloqueio bloquearia"**
+**"IOException: não é possível ler dados da conexão de transporte: A operação no soquete sem bloqueio bloquearia "**
 
-Esse erro geralmente está ocorrendo quando o dispositivo móvel em execução Xamarin Live Player não está na mesma rede que o computador executando o Visual Studio; Isso geralmente ocorre ao se conectar a um dispositivo que anteriormente foi emparelhado com êxito.
+Esse erro costuma ocorrer quando o dispositivo móvel que executa o Xamarin Live Player não está na mesma rede que o computador que executa o Visual Studio; Isso geralmente acontece ao se conectar a um dispositivo que foi emparelhado anteriormente com êxito.
 
-* Verifique se o dispositivo e o computador estão na mesma rede Wi-Fi.
-* A rede pode ser totalmente protegida (por exemplo, algumas redes corporativas) bloqueando as portas necessárias pelo Xamarin Live Player. As seguintes portas são necessárias para o Xamarin Live Player:
-  * 37847 – acesso à rede interno 
-  * 8090 – acesso à rede externo
+- Verifique se o dispositivo e o computador estão na mesma rede Wi-Fi.
+- A rede pode estar firmemente segura (como algumas redes corporativas), bloqueando as portas necessárias para Xamarin Live Player. As seguintes portas são necessárias para o Xamarin Live Player:
+  - 37847 – acesso à rede interna 
+  - 8090 – acesso externo à rede
 
-## <a name="manually-configure-device"></a>Configurar manualmente o dispositivo
+## <a name="manually-configure-device"></a>Configurar o dispositivo manualmente
 
-Se você não pode conectar seu dispositivo por Wi-Fi que você pode tentar configurar manualmente seu dispositivo por meio do arquivo de configuração, com as seguintes etapas:
+Se você não puder se conectar ao seu dispositivo por Wi-Fi, poderá tentar configurar manualmente seu dispositivo por meio do arquivo de configuração, com as seguintes etapas:
 
 **Etapa 1: Abrir arquivo de configuração**
 
 Vá para a pasta de dados do aplicativo:
 
-* Windows: **%userprofile%\AppData\Roaming**
-* macOS: **~/Users/$USER/.config**
+- Windows: **%USERPROFILE%\AppData\Roaming**
+- macOS: **~/Users/$USER/.config**
 
-Essa pasta, você encontrará **PlayerDeviceList.xml** se não existir, você precisará criá-lo.
+Nesta pasta, você encontrará **PlayerDeviceList. xml** se ele não existir, será necessário criar um.
 
-**Etapa 2: Obter o endereço IP**
+**Etapa 2: Obter endereço IP**
 
-No aplicativo do Xamarin Live Player, vá para **sobre > teste de Conexão > Iniciar o teste de Conexão**.
+No aplicativo Xamarin Live Player, acesse **sobre > teste de conexão > iniciar o teste de conexão**.
 
-Tome nota do endereço IP, será necessário o endereço IP listado quando você configura seu dispositivo.
+Anote o endereço IP, você precisará do endereço IP listado ao configurar o dispositivo.
 
-**Etapa 3: Obtenha o código de emparelhamento**
+**Etapa 3: Obter código de emparelhamento**
 
-Dentro do programa tap Xamarin Live Player **par** ou **par novamente**, em seguida, pressione **inserir manualmente**. Um código numérico será exibido, que você precisará atualizar o arquivo de configuração.
+Dentro do Xamarin Live Player toque em **emparelhar** ou **emparelhar novamente**e pressione **Enter manualmente**. Um código numérico será exibido, que será necessário para atualizar o arquivo de configuração.
 
 **Etapa 4: Gerar GUID**
 
-Vá para: https://www.guidgenerator.com/online-guid-generator.aspx e gerar um novo guid e certifique-se letras maiusculas em.
+Vá para: https://www.guidgenerator.com/online-guid-generator.aspx e gere um novo GUID e verifique se a letra maiúscula está ativada.
 
 **Etapa 5: Configurar dispositivo**
 
-Abra o **PlayerDeviceList.xml** backup em um editor como o Visual Studio ou Visual Studio Code. Você precisa configurar seu dispositivo manualmente neste arquivo. Por padrão, o arquivo deve conter a seguinte esvaziar `Devices` elemento XML:
+Abra o **PlayerDeviceList. xml** em um editor como o Visual Studio ou Visual Studio Code. Você precisa configurar seu dispositivo manualmente neste arquivo. Por padrão, o arquivo deve conter o seguinte elemento `Devices` XML vazio:
 
 ```xml
 <DeviceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
@@ -122,7 +122,7 @@ Abra o **PlayerDeviceList.xml** backup em um editor como o Visual Studio ou Visu
 </DeviceList>
 ```
 
-**Adicione um dispositivo Android:**
+**Adicionar dispositivo Android:**
 
 ```xml
 <PlayerDevice>
@@ -140,28 +140,28 @@ Abra o **PlayerDeviceList.xml** backup em um editor como o Visual Studio ou Visu
 </PlayerDevice>
 ```
 
-**Feche e reabra o Visual Studio.** Seu dispositivo deve aparecer na lista.
+**Feche e abra novamente o Visual Studio.** Seu dispositivo deve aparecer na lista.
 
-## <a name="type-or-namespace-cannot-be-found-message-in-ide"></a>Mensagem "namespace ou tipo não encontrada" no IDE
+## <a name="type-or-namespace-cannot-be-found-message-in-ide"></a>Mensagem "tipo ou namespace não encontrado" no IDE
 
-Verifique se você tiver selecionado um **projeto de inicialização** que corresponde ao seu tipo de dispositivo (por exemplo. Android) e a configuração corresponde a esse tipo de dispositivo (por exemplo. **Depurar** para Android).
+Verifique se você selecionou um **projeto de inicialização** que corresponde ao seu tipo de dispositivo (por exemplo, Android) e que a configuração corresponde a esse tipo de dispositivo (por exemplo, **Depurar** para Android).
 
-## <a name="constructor-on-type-interpretedxamarinformsbutton-not-found-message-in-player"></a>Mensagem "Construtor no tipo 'InterpretedXamarin.Forms.Button' não encontrada" no Player
+## <a name="constructor-on-type-interpretedxamarinformsbutton-not-found-message-in-player"></a>"Construtor no tipo ' InterpretedXamarin. Forms. Button ' não encontrado" no Player
 
-Por exemplo, algumas classes de sistema não podem ser substituídas:
+Algumas classes do sistema não podem ser substituídas, por exemplo:
 
 ```csharp
 public class SomeCustomButton : Xamarin.Forms.Button { ... }
 ```
 
-## <a name="mainactivitycs-resourcelayout-does-not-contain-a-definition-for-main"></a>"MainActivity.cs: "Resource.Layout' não contém uma definição para 'Main'"
+## <a name="mainactivitycs-resourcelayout-does-not-contain-a-definition-for-main"></a>"MainActivity.cs: ' Resource. layout ' não contém uma definição para ' Main ' "
 
-Esse erro ocorre para projetos do Android com interfaces de usuário definidas nos arquivos AXML.
-Arquivos AXML atualmente não têm suporte no Xamarin Live Player.
+Esse erro ocorre para projetos Android com interfaces de usuário definidas em arquivos AXML.
+Atualmente, não há suporte para arquivos AXML no Xamarin Live Player.
 
-### <a name="android-toolbar-and-tabs-render-incorrectly-using-xamarinforms"></a>Android barra de ferramentas e guias renderizam incorretamente usando xamarin. Forms
+### <a name="android-toolbar-and-tabs-render-incorrectly-using-xamarinforms"></a>As guias e a barra de ferramentas do Android são renderizadas incorretamente usando o Xamarin. Forms
 
-Projetos do Android do xamarin. Forms devem usar "Toolbar.axml" e "Tabbar.axml" para os nomes dos arquivos de layout relevantes. O modelo padrão usa esses nomes; renomeá-los causará problemas de renderização.
+Os projetos Android do Xamarin. Forms devem usar "Toolbar. axml" e "Tabbar. axml" para os nomes dos arquivos de layout relevantes. O modelo padrão usa esses nomes; renomeá-los causará problemas de renderização.
 
 ## <a name="related-links"></a>Links relacionados
 

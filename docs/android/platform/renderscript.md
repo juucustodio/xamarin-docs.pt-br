@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: 9f15ef73e51a2e94e1a1174134f3e69d2cb2c4a3
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 14fb3740f558b006d507ff6875fd2cfc81a04298
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68511434"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70119727"
 ---
 # <a name="an-introduction-to-renderscript"></a>Uma introdução ao renderscript
 
@@ -22,11 +22,11 @@ _Este guia apresenta o renderscript e explica como usar as APIs intrínsecas do 
 
 Renderscript é uma estrutura de programação criada pelo Google com a finalidade de melhorar o desempenho de aplicativos Android que exigem recursos computacionais extensivos. É uma API de nível baixo e de alto desempenho baseada em [C99](https://en.wikipedia.org/wiki/C99). Como é uma API de nível baixo que será executada em CPUs, GPUs ou DSPs, o renderscript é adequado para aplicativos Android que talvez precisem executar qualquer um dos seguintes:
 
-* Gráficos
-* Processamento de imagens
-* Criptografia
-* Processamento de sinais
-* Rotinas matemáticas
+- Gráficos
+- Processamento de imagens
+- Criptografia
+- Processamento de sinais
+- Rotinas matemáticas
 
 O renderscript usará `clang` e compilará os scripts para o código de byte LLVM, que é agrupado no apk. Quando o aplicativo é executado pela primeira vez, o código de byte LLVM será compilado no código do computador para os processadores no dispositivo. Essa arquitetura permite que um aplicativo Android Explore as vantagens do código do computador sem que os próprios desenvolvedores precisem escrevê-lo para cada processador no próprio dispositivo.
 
@@ -44,7 +44,7 @@ Há três conceitos importantes para usar o Renderscripts em um aplicativo Andro
 
 1. **Um contexto** &ndash; Uma API gerenciada fornecida pelo SDK do Android que aloca recursos para renderscript e permite que o aplicativo Android passe e receba dados do renderscript.
 
-2. **Um _kernel de computação_**  Também conhecido como kernel _raiz_ ou kernel, essa é uma rotina que faz o trabalho.  &ndash; O kernel é muito semelhante a uma função C; é uma rotina paralelizáveis que será executada em todos os dados na memória alocada.
+2. **Um _kernel de computação_**  Também conhecido como kernel _raiz_ ou kernel, essa é uma rotina que faz o trabalho. &ndash; O kernel é muito semelhante a uma função C; é uma rotina paralelizáveis que será executada em todos os dados na memória alocada.
 
 3. **Memória alocada** Os dados são passados de e para um kernel por meio de uma _[alocação.](xref:Android.Renderscripts.Allocation)_ &ndash; Um kernel pode ter uma entrada e/ou uma alocação de saída.
 

@@ -6,21 +6,21 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/06/2017
-ms.openlocfilehash: cb4933695d34a0805be4139c7b345f7a70f33613
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: f1fc484931ba7a574ac660b4856f20b1cb1e08a3
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69524329"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70119591"
 ---
 # <a name="responding-to-authentication-callbacks"></a>Responder a chamadas de autenticação
 
 O scanner de impressão digital é executado em segundo plano em seu próprio thread e, quando concluído, ele relatará os resultados da verificação invocando um método `FingerprintManager.AuthenticationCallback` de no thread da interface do usuário. Um aplicativo Android deve fornecer seu próprio manipulador que estende essa classe abstrata, implementando todos os seguintes métodos:
 
-* **`OnAuthenticationError(int errorCode, ICharSequence errString)`** &ndash; Chamado quando há um erro irrecuperável. Não há nada mais que um aplicativo ou usuário possa fazer para corrigir a situação, exceto possivelmente tente novamente.
-* **`OnAuthenticationFailed()`** &ndash; Esse método é invocado quando uma impressão digital é detectada, mas não é reconhecida pelo dispositivo.
-* **`OnAuthenticationHelp(int helpMsgId, ICharSequence helpString)`** &ndash; Chamado quando há um erro recuperável, como o dedo que está sendo transdedodo para o rápido no scanner.
-* **`OnAuthenticationSucceeded(FingerprintManagerCompati.AuthenticationResult result)`** &ndash; Isso é chamado quando uma impressão digital é reconhecida.
+- **`OnAuthenticationError(int errorCode, ICharSequence errString)`** &ndash; Chamado quando há um erro irrecuperável. Não há nada mais que um aplicativo ou usuário possa fazer para corrigir a situação, exceto possivelmente tente novamente.
+- **`OnAuthenticationFailed()`** &ndash; Esse método é invocado quando uma impressão digital é detectada, mas não é reconhecida pelo dispositivo.
+- **`OnAuthenticationHelp(int helpMsgId, ICharSequence helpString)`** &ndash; Chamado quando há um erro recuperável, como o dedo que está sendo transdedodo para o rápido no scanner.
+- **`OnAuthenticationSucceeded(FingerprintManagerCompati.AuthenticationResult result)`** &ndash; Isso é chamado quando uma impressão digital é reconhecida.
 
 Se um `CryptoObject` foi usado ao chamar `Authenticate`, é recomendável chamar `Cipher.DoFinal` em `OnAuthenticationSuccessful`.
 `DoFinal`gerará uma exceção se a codificação tiver sido violada ou inicializada incorretamente, indicando que o resultado do scanner de impressão digital pode ter sido adulterado fora do aplicativo.

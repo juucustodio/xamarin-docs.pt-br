@@ -6,26 +6,26 @@ ms.assetid: 870F0C18-A794-4C5D-881B-64CC78759E30
 author: lobrien
 ms.author: laobri
 ms.date: 03/28/2018
-ms.openlocfilehash: df29a7f595973a0447899666838e21418ff69330
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: d1d05c75b8026112e8b81c91144361b65ad3a8e0
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68650082"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70120031"
 ---
 # <a name="getting-started-with-android"></a>Introdução ao Android
 
 Além dos requisitos do guia de [introdução ao Java](~/tools/dotnet-embedding/get-started/java/index.md) , você também precisará de:
 
-* [Xamarin. Android 7,5](https://visualstudio.microsoft.com/xamarin/) ou posterior
-* [Android Studio 3. x](https://developer.android.com/studio/index.html) com Java 1,8
+- [Xamarin. Android 7,5](https://visualstudio.microsoft.com/xamarin/) ou posterior
+- [Android Studio 3. x](https://developer.android.com/studio/index.html) com Java 1,8
 
 Como uma visão geral, iremos:
 
-* Criar um C# projeto de biblioteca do Android
-* Instalar a inserção do .NET via NuGet
-* Executar a inserção do .NET no assembly da biblioteca do Android
-* Usar o arquivo AAR gerado em um projeto Java no Android Studio
+- Criar um C# projeto de biblioteca do Android
+- Instalar a inserção do .NET via NuGet
+- Executar a inserção do .NET no assembly da biblioteca do Android
+- Usar o arquivo AAR gerado em um projeto Java no Android Studio
 
 ## <a name="create-an-android-library-project"></a>Criar um projeto de biblioteca do Android
 
@@ -159,17 +159,17 @@ Após iniciar seu aplicativo:
 
 Observe o que aconteceu aqui:
 
-* Temos uma C# classe, `HelloActivity`, que subclasses Java
-* Temos arquivos de recurso do Android
-* Nós os usamos do Java em Android Studio
+- Temos uma C# classe, `HelloActivity`, que subclasses Java
+- Temos arquivos de recurso do Android
+- Nós os usamos do Java em Android Studio
 
 Para que este exemplo funcione, todos os itens a seguir são configurados no APK final:
 
-* O Xamarin. Android está configurado no início do aplicativo
-* Assemblies .NET incluídos em **ativos/assemblies**
-* Modificações de **AndroidManifest. xml** para C# suas atividades, etc.
-* Recursos e ativos do Android de bibliotecas do .NET
-* Wrappers que podem ser chamados `Java.Lang.Object` pelo [Android](~/android/platform/java-integration/android-callable-wrappers.md) para qualquer subclasse
+- O Xamarin. Android está configurado no início do aplicativo
+- Assemblies .NET incluídos em **ativos/assemblies**
+- Modificações de **AndroidManifest. xml** para C# suas atividades, etc.
+- Recursos e ativos do Android de bibliotecas do .NET
+- Wrappers que podem ser chamados `Java.Lang.Object` pelo [Android](~/android/platform/java-integration/android-callable-wrappers.md) para qualquer subclasse
 
 Se você estiver procurando por um passo a passos adicional, confira o vídeo a seguir, que demonstra a inserção de [demonstração de FingerPaint](https://docs.microsoft.com/samples/xamarin/monodroid-samples/applicationfundamentals-fingerpaint) de Charles Petzold em um projeto Android Studio:
 
@@ -223,8 +223,8 @@ public class ViewSubclass : TextView
 }
 ```
 
-* `[Register]`é necessário para mapear para um nome de pacote Java desejado
-* `[Export]`é necessário para tornar um método visível para Java
+- `[Register]`é necessário para mapear para um nome de pacote Java desejado
+- `[Export]`é necessário para tornar um método visível para Java
 
 Podemos usar `ViewSubclass` em Java da seguinte forma:
 
@@ -243,18 +243,18 @@ A inserção de um único assembly é simples; no entanto, é muito mais prováv
 
 Isso causa um dilema, já que a incorporação do .NET precisa incluir muitos tipos de arquivos no AAR final, como:
 
-* Ativos do Android
-* Recursos do Android
-* Bibliotecas nativas do Android
-* Origem do Android Java
+- Ativos do Android
+- Recursos do Android
+- Bibliotecas nativas do Android
+- Origem do Android Java
 
 É mais provável que você não queira incluir esses arquivos da biblioteca de suporte do Android ou Google Play Services em seu AAR, mas usará a versão oficial do Google no Android Studio.
 
 Esta é a abordagem recomendada:
 
-* Passe o .NET inserindo qualquer assembly que você possui (tem fonte para) e deseja chamar de Java
-* Passe o .NET incorporando qualquer assembly que você precise de ativos do Android, bibliotecas nativas ou recursos de
-* Adicionar dependências Java como a biblioteca de suporte do Android ou Google Play Services no Android Studio
+- Passe o .NET inserindo qualquer assembly que você possui (tem fonte para) e deseja chamar de Java
+- Passe o .NET incorporando qualquer assembly que você precise de ativos do Android, bibliotecas nativas ou recursos de
+- Adicionar dependências Java como a biblioteca de suporte do Android ou Google Play Services no Android Studio
 
 Portanto, o comando pode ser:
 
@@ -277,11 +277,11 @@ dependencies {
 
 ## <a name="further-reading"></a>Leitura adicional
 
-* [Retornos de chamada no Android](~/tools/dotnet-embedding/android/callbacks.md)
-* [Pesquisa do Android preliminar](~/tools/dotnet-embedding/android/index.md)
-* [Limitações de incorporação do .NET](~/tools/dotnet-embedding/limitations.md)
-* [Contribuindo para o projeto de código-fonte aberto](https://github.com/mono/Embeddinator-4000/blob/master/Contributing.md)
-* [Códigos de erro e descrições](~/tools/dotnet-embedding/errors.md)
+- [Retornos de chamada no Android](~/tools/dotnet-embedding/android/callbacks.md)
+- [Pesquisa do Android preliminar](~/tools/dotnet-embedding/android/index.md)
+- [Limitações de incorporação do .NET](~/tools/dotnet-embedding/limitations.md)
+- [Contribuindo para o projeto de código-fonte aberto](https://github.com/mono/Embeddinator-4000/blob/master/Contributing.md)
+- [Códigos de erro e descrições](~/tools/dotnet-embedding/errors.md)
 
 ## <a name="related-links"></a>Links relacionados
 

@@ -6,12 +6,12 @@ ms.assetid: 8DD34D21-342C-48E9-97AA-1B649DD8B61F
 ms.date: 03/29/2017
 author: asb3993
 ms.author: amburns
-ms.openlocfilehash: c0e4152574cf400f5b77b504955b248dd8477a7c
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 2b82de58b9d2f9e8acb8996f484845f9a71b6e80
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68509506"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70120306"
 ---
 # <a name="tips-for-updating-code-to-the-unified-api"></a>Dicas para atualizar o código para a API unificada
 
@@ -55,43 +55,43 @@ Salve o arquivo, reinicialize Visual Studio para Mac e faça uma recompilação 
 Depois de usar a ferramenta de migração, você ainda poderá obter alguns erros de compilador que exigem intervenção manual.
 Algumas coisas que podem precisar ser corrigidas manualmente incluem:
 
-* Comparar `enum`s pode exigir uma `(int)` conversão.
+- Comparar `enum`s pode exigir uma `(int)` conversão.
 
-* `NSDictionary.IntValue`agora retorna um `nint`, há um `Int32Value` que pode ser usado em seu lugar.
+- `NSDictionary.IntValue`agora retorna um `nint`, há um `Int32Value` que pode ser usado em seu lugar.
 
-* `nfloat`os `nint` tipos e não podem `const`ser marcados;   `static readonly nint` é uma alternativa razoável.
+- `nfloat`os `nint` tipos e não podem `const`ser marcados;   `static readonly nint` é uma alternativa razoável.
 
-* As coisas que costumavam estar diretamente no `MonoTouch.` namespace agora estão geralmente `ObjCRuntime.` no namespace (por exemplo: `MonoTouch.Constants.Version` é agora `ObjCRuntime.Constants.Version`).
+- As coisas que costumavam estar diretamente no `MonoTouch.` namespace agora estão geralmente `ObjCRuntime.` no namespace (por exemplo: `MonoTouch.Constants.Version` é agora `ObjCRuntime.Constants.Version`).
 
-* O código que serializa objetos pode ser interrompido ao tentar serializar `nint` e `nfloat` digitar. Certifique-se de verificar se o código de serialização funciona conforme o esperado após a migração.
+- O código que serializa objetos pode ser interrompido ao tentar serializar `nint` e `nfloat` digitar. Certifique-se de verificar se o código de serialização funciona conforme o esperado após a migração.
 
-* Às vezes, a ferramenta automatizada `#if #else` perde o código dentro das diretivas de compilador condicional. Nesse caso, você precisará fazer as correções manualmente (consulte os erros comuns abaixo).
+- Às vezes, a ferramenta automatizada `#if #else` perde o código dentro das diretivas de compilador condicional. Nesse caso, você precisará fazer as correções manualmente (consulte os erros comuns abaixo).
 
-* Os métodos exportados manualmente usando `[Export]` o não podem ser corrigidos automaticamente pela ferramenta de migração, por exemplo, neste código snippert você deve atualizar manualmente o tipo de retorno para: `nfloat`
+- Os métodos exportados manualmente usando `[Export]` o não podem ser corrigidos automaticamente pela ferramenta de migração, por exemplo, neste código snippert você deve atualizar manualmente o tipo de retorno para: `nfloat`
 
     ```csharp
     [Export("tableView:heightForRowAtIndexPath:")]
     public nfloat HeightForRow(UITableView tableView, NSIndexPath indexPath)
     ```
 
-* O API Unificada não fornece uma conversão implícita entre NSDate e DateTime .NET porque não é uma conversão sem perdas. Para evitar erros relacionados à `DateTimeKind.Unspecified` conversão do .NET `DateTime` em local ou UTC antes da conversão `NSDate`para.
+- O API Unificada não fornece uma conversão implícita entre NSDate e DateTime .NET porque não é uma conversão sem perdas. Para evitar erros relacionados à `DateTimeKind.Unspecified` conversão do .NET `DateTime` em local ou UTC antes da conversão `NSDate`para.
 
-* Os métodos de categoria Objective-C agora são gerados como métodos de extensão no API Unificada. Por exemplo, o código usado `UIView.DrawString` anteriormente agora faria referência `NSString.DrawString` no API unificada.
+- Os métodos de categoria Objective-C agora são gerados como métodos de extensão no API Unificada. Por exemplo, o código usado `UIView.DrawString` anteriormente agora faria referência `NSString.DrawString` no API unificada.
 
-* O código usando classes AVFoundation `VideoSettings` com deve ser alterado para `WeakVideoSettings` usar a propriedade. Isso requer um `Dictionary`, que está disponível como uma propriedade nas classes de configurações, por exemplo:
+- O código usando classes AVFoundation `VideoSettings` com deve ser alterado para `WeakVideoSettings` usar a propriedade. Isso requer um `Dictionary`, que está disponível como uma propriedade nas classes de configurações, por exemplo:
 
     ```csharp
     vidrec.WeakVideoSettings = new AVVideoSettings() { ... }.Dictionary;
     ```
 
-* O construtor `.ctor(IntPtr)` NSObject foi alterado de Public para Protected ([para impedir o uso impróprio](~/cross-platform/macios/unified/overview.md#NSObject_ctor)).
+- O construtor `.ctor(IntPtr)` NSObject foi alterado de Public para Protected ([para impedir o uso impróprio](~/cross-platform/macios/unified/overview.md#NSObject_ctor)).
 
-* `NSAction`foi [substituído](~/cross-platform/macios/unified/overview.md#NSAction) pelo .NET `Action`padrão. Alguns delegados simples (parâmetro único) também foram substituídos por `Action<T>`.
+- `NSAction`foi [substituído](~/cross-platform/macios/unified/overview.md#NSAction) pelo .NET `Action`padrão. Alguns delegados simples (parâmetro único) também foram substituídos por `Action<T>`.
 
 Por fim, consulte as [diferenças clássicas do v API unificada](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/ios/api_changes/classic-vs-unified-8.6.0/index.md) para pesquisar alterações em APIs em seu código. Pesquisar [esta página](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/ios/api_changes/classic-vs-unified-8.6.0/index.md) ajudará a encontrar APIs clássicas e para que elas foram atualizadas.
 
 > [!NOTE]
-> O `MonoTouch.Dialog` namespace permanece o mesmo após a migração. Se seu código usa **MonoTouch. caixa de diálogo** você deve continuar a usar esse namespace-não `MonoTouch.Dialog` Altere `Dialog` *para* !
+> O `MonoTouch.Dialog` namespace permanece o mesmo após a migração. Se seu código usa **MonoTouch. caixa de diálogo** você deve continuar a usar esse namespace -não `MonoTouch.Dialog` Altere `Dialog`para!
 
 ## <a name="common-compiler-errors"></a>Erros comuns do compilador
 
@@ -107,7 +107,7 @@ Soluciona Exclua o componente que está causando esse erro e adicione-o novament
 
 **Erro CS0234: O nome de tipo ou namespace ' Foundation ' não existe no namespace ' MonoTouch '. Está faltando uma referência de assembly?**
 
-Soluciona A ferramenta de migração automatizada  no Visual Studio para Mac deve `MonoTouch.Foundation` atualizar todas `Foundation`as referências para, no entanto, em algumas instâncias, elas precisarão ser atualizadas manualmente. Erros semelhantes podem aparecer para os outros namespaces anteriormente contidos no `MonoTouch`, `UIKit`como.
+Soluciona A ferramenta de migração automatizada no Visual Studio para Mac deve `MonoTouch.Foundation` atualizar todas `Foundation`as referências para, no entanto, em algumas instâncias, elas precisarão ser atualizadas manualmente. Erros semelhantes podem aparecer para os outros namespaces anteriormente contidos no `MonoTouch`, `UIKit`como.
 
 **Erro CS0266: Não é possível converter implicitamente o tipo ' Double ' em ' System. float '**
 
@@ -152,13 +152,13 @@ public override nint NumberOfSections (UITableView tableView)
 
 Soluciona Corrija a ortografia `AddEllipseInRect`para. Outras alterações de nome incluem:
 
-* Altere ' Color. Black ' para `NSColor.Black`.
-* Altere MapKit ' AddAnnotation ' para `AddAnnotations`.
-* Altere AVFoundation ' DataUsingEncoding ' para `Encode`.
-* Altere AVFoundation ' AVMetadataObject. TypeQRCode ' para `AVMetadataObjectType.QRCode`.
-* Altere AVFoundation ' VideoSettings ' para `WeakVideoSettings`.
-* Altere PopViewControllerAnimated para `PopViewController`.
-* Altere CoreGraphics ' CGBitmapContext. SetRGBFillColor ' para `SetFillColor`.
+- Altere ' Color. Black ' para `NSColor.Black`.
+- Altere MapKit ' AddAnnotation ' para `AddAnnotations`.
+- Altere AVFoundation ' DataUsingEncoding ' para `Encode`.
+- Altere AVFoundation ' AVMetadataObject. TypeQRCode ' para `AVMetadataObjectType.QRCode`.
+- Altere AVFoundation ' VideoSettings ' para `WeakVideoSettings`.
+- Altere PopViewControllerAnimated para `PopViewController`.
+- Altere CoreGraphics ' CGBitmapContext. SetRGBFillColor ' para `SetFillColor`.
 
 **Erro CS0546: não é possível substituir porque ' MapKit. MKAnnotation. Coordinate ' não tem um acessador set substituível (CS0546)**
 
@@ -166,10 +166,10 @@ Ao criar uma anotação personalizada por meio de subclasses MKAnnotation, o cam
 
 [Correção](https://forums.xamarin.com/discussion/comment/109505/#Comment_109505):
 
-* Adicionar um campo para acompanhar a coordenada
-* retornar este campo no getter da propriedade Coordinate
-* Substituir o método setcoordinate e definir seu campo
-* Chamar setcoordinate em seu construtor com o parâmetro de coordenado passado
+- Adicionar um campo para acompanhar a coordenada
+- retornar este campo no getter da propriedade Coordinate
+- Substituir o método setcoordinate e definir seu campo
+- Chamar setcoordinate em seu construtor com o parâmetro de coordenado passado
 
 Ele deve ser semelhante ao seguinte:
 

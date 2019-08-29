@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: ca3580648d357d2c943274717af66ad5d825ce75
-ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
-ms.translationtype: HT
+ms.openlocfilehash: f4004b4b9cdc8f8c6555be82cf1da5b92a83d45c
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 08/28/2019
-ms.locfileid: "70065587"
+ms.locfileid: "70120053"
 ---
 # <a name="tvos-user-interface-styles-in-xamarin"></a>Estilos de interface do usuário tvOS no Xamarin
 
@@ -183,22 +183,22 @@ Para habilitar o suporte à coleta de características, faça o seguinte:
 
 A Apple adicionou as seguintes habilidades ao editar storyboards tvOS no Interface Builder:
 
-* O desenvolvedor pode especificar diferentes variações de elementos da interface do usuário com base no tema da interface do utilizador no **Inspetor de atributos**:
+- O desenvolvedor pode especificar diferentes variações de elementos da interface do usuário com base no tema da interface do utilizador no **Inspetor de atributos**:
 
-  * Várias propriedades agora têm um **+** ao lado delas, que podem ser clicadas para adicionar uma versão específica de tema de interface do usuário:
+  - Várias propriedades agora têm um **+** ao lado delas, que podem ser clicadas para adicionar uma versão específica de tema de interface do usuário:
 
     [![](user-interface-styles-images/theme08.png "Adicionar uma versão específica de tema de interface do usuário")](user-interface-styles-images/theme08.png#lightbox)
 
-  * O desenvolvedor pode especificar uma nova propriedade ou clicar no botão **x** para removê-la:
+  - O desenvolvedor pode especificar uma nova propriedade ou clicar no botão **x** para removê-la:
 
     [![](user-interface-styles-images/theme09.png "Especifique uma nova propriedade ou clique no botão x para removê-la")](user-interface-styles-images/theme09.png#lightbox)
-* O desenvolvedor pode visualizar um design de interface do usuário no tema claro ou escuro de dentro Interface Builder:
+- O desenvolvedor pode visualizar um design de interface do usuário no tema claro ou escuro de dentro Interface Builder:
 
-  * A parte inferior da Design Surface permite que o desenvolvedor Alterne o tema da interface do usuário atual:
+  - A parte inferior da Design Surface permite que o desenvolvedor Alterne o tema da interface do usuário atual:
 
     [![](user-interface-styles-images/theme10.png "A parte inferior da Design Surface")](user-interface-styles-images/theme10.png#lightbox)
 
-  * O novo tema será exibido no Interface Builder e quaisquer ajustes específicos da coleção de características serão exibidos:
+  - O novo tema será exibido no Interface Builder e quaisquer ajustes específicos da coleção de características serão exibidos:
 
     [![](user-interface-styles-images/theme11.png "O tema exibido no Interface Builder")](user-interface-styles-images/theme11.png#lightbox)
 

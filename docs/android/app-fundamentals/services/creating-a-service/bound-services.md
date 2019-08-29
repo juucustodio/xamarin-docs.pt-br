@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/04/2018
-ms.openlocfilehash: 6b585783f21cc18112ef766819c9851baac96ef1
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: ae1e8332f1d62a4690863a97f63c0c1bef1ee127
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68644198"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70119081"
 ---
 # <a name="bound-services-in-xamarinandroid"></a>Serviços vinculados no Xamarin. Android
 
@@ -22,9 +22,9 @@ _Os serviços vinculados são serviços Android que fornecem uma interface de cl
 
 Os serviços que fornecem uma interface de cliente-servidor para que os clientes interajam diretamente com o serviço são chamados de _serviços associados_.  Pode haver vários clientes conectados a uma única instância de um serviço ao mesmo tempo. O serviço ligado e o cliente são isolados uns dos outros. Em vez disso, o Android fornece uma série de objetos intermediários que gerenciam o estado da conexão entre os dois. Esse estado é mantido por um objeto que implementa a [`Android.Content.IServiceConnection`](xref:Android.Content.IServiceConnection) interface.  Esse objeto é criado pelo cliente e passado como um parâmetro para o [`BindService`](xref:Android.Content.Context.BindService*) método. O `BindService` está disponível em qualquer [`Android.Content.Context`](xref:Android.Content.Context) objeto (como uma atividade). É uma solicitação para o sistema operacional Android iniciar o serviço e associar um cliente a ele. Há três maneiras de um cliente ser associado a um serviço usando o `BindService` método:
 
-* **Um associador de serviço** Um associador de serviço é uma classe que [`Android.OS.IBinder`](xref:Android.OS.IBinder) implementa a interface. &ndash; A maioria dos aplicativos não implementará essa interface diretamente, em vez disso [`Android.OS.Binder`](xref:Android.OS.Binder) , elas vão estender a classe. Essa é a abordagem mais comum e é adequada para quando o serviço e o cliente existem no mesmo processo.
-* **Usando um Messenger** &ndash; Essa técnica é adequada para quando o serviço pode existir em um processo separado. Em vez disso, as solicitações de serviço são marshalled entre o cliente [`Android.OS.Messenger`](xref:Android.OS.Messenger)e o serviço por meio de um. Um [`Android.OS.Handler`](xref:Android.OS.Handler) é criado no serviço que processará as `Messenger` solicitações. Isso será abordado em outro guia.
-* **Usando AIDL (linguagem de definição de interface) do Android** &ndash; [AIDL](https://developer.android.com/guide/components/aidl) é uma técnica avançada que não será abordada neste guia.
+- **Um associador de serviço** Um associador de serviço é uma classe que [`Android.OS.IBinder`](xref:Android.OS.IBinder) implementa a interface. &ndash; A maioria dos aplicativos não implementará essa interface diretamente, em vez disso [`Android.OS.Binder`](xref:Android.OS.Binder) , elas vão estender a classe. Essa é a abordagem mais comum e é adequada para quando o serviço e o cliente existem no mesmo processo.
+- **Usando um Messenger** &ndash; Essa técnica é adequada para quando o serviço pode existir em um processo separado. Em vez disso, as solicitações de serviço são marshalled entre o cliente [`Android.OS.Messenger`](xref:Android.OS.Messenger)e o serviço por meio de um. Um [`Android.OS.Handler`](xref:Android.OS.Handler) é criado no serviço que processará as `Messenger` solicitações. Isso será abordado em outro guia.
+- **Usando AIDL (linguagem de definição de interface) do Android** &ndash; [AIDL](https://developer.android.com/guide/components/aidl) é uma técnica avançada que não será abordada neste guia.
 
 Depois que um cliente tiver sido associado a um serviço, a comunicação entre os dois ocorrerá por meio `Android.OS.IBinder` do objeto.  Esse objeto é responsável pela interface que permitirá que o cliente interaja com o serviço. Não é necessário que cada aplicativo Xamarin. Android Implemente essa interface do zero, o SDK do Android fornece a [`Android.OS.Binder`](xref:Android.OS.Binder) classe que cuida da maior parte do código necessário com a Marshalling do objeto entre o cliente e o serviço.
 
@@ -53,10 +53,10 @@ Cada uma dessas etapas será discutida nas seções a seguir mais detalhadamente
 
 Para criar um serviço usando o Xamarin. Android, é necessário para `Service` subclasse e adornar a classe com o. [`ServiceAttribute`](xref:Android.App.ServiceAttribute) O atributo é usado pelas ferramentas de Build do Xamarin. Android para registrar corretamente o serviço no arquivo **AndroidManifest. xml** do aplicativo de forma muito semelhante a uma atividade, um serviço associado tem seus próprios métodos de ciclo de vida e de retorno de chamada associados aos eventos significativos no é ciclo de vida. A lista a seguir é um exemplo de alguns dos métodos de retorno de chamada mais comuns que um serviço irá implementar:
 
-* `OnCreate`&ndash; Esse método é invocado pelo Android, pois ele está instanciando o serviço. Ele é usado para inicializar variáveis ou objetos que são exigidos pelo serviço durante o tempo de vida. Esse método é opcional.
-* `OnBind`&ndash; Esse método deve ser implementado por todos os serviços associados. Ele é invocado quando o primeiro cliente tenta se conectar ao serviço. Retornará uma instância do `IBinder` para que o cliente possa interagir com o serviço. Desde que o serviço esteja em execução, o `IBinder` objeto será usado para atender a quaisquer solicitações futuras do cliente para associar ao serviço.
-* `OnUnbind`&ndash; Esse método é chamado quando todos os clientes associados estão desvinculados. Ao retornar `true` desse método, o serviço será chamado `OnRebind` posteriormente `OnUnbind` com a intenção passada ao quando novos clientes se associarem a ele. Você faria isso quando um serviço continuar a ser executado depois que ele tiver sido desassociado. Isso aconteceria se o serviço recentemente desvinculado fosse também um serviço iniciado, e `StopService` ou `StopSelf` não tivesse sido chamado. Nesse cenário, `OnRebind` permite que a intenção seja recuperada. O padrão retorna `false` , o que não faz nada. Opcional.
-* `OnDestroy`&ndash; Esse método é chamado quando o Android está destruindo o serviço. Qualquer limpeza necessária, como liberar recursos, deve ser executada nesse método. Opcional.
+- `OnCreate`&ndash; Esse método é invocado pelo Android, pois ele está instanciando o serviço. Ele é usado para inicializar variáveis ou objetos que são exigidos pelo serviço durante o tempo de vida. Esse método é opcional.
+- `OnBind`&ndash; Esse método deve ser implementado por todos os serviços associados. Ele é invocado quando o primeiro cliente tenta se conectar ao serviço. Retornará uma instância do `IBinder` para que o cliente possa interagir com o serviço. Desde que o serviço esteja em execução, o `IBinder` objeto será usado para atender a quaisquer solicitações futuras do cliente para associar ao serviço.
+- `OnUnbind`&ndash; Esse método é chamado quando todos os clientes associados estão desvinculados. Ao retornar `true` desse método, o serviço será chamado `OnRebind` posteriormente `OnUnbind` com a intenção passada ao quando novos clientes se associarem a ele. Você faria isso quando um serviço continuar a ser executado depois que ele tiver sido desassociado. Isso aconteceria se o serviço recentemente desvinculado fosse também um serviço iniciado, e `StopService` ou `StopSelf` não tivesse sido chamado. Nesse cenário, `OnRebind` permite que a intenção seja recuperada. O padrão retorna `false` , o que não faz nada. Opcional.
+- `OnDestroy`&ndash; Esse método é chamado quando o Android está destruindo o serviço. Qualquer limpeza necessária, como liberar recursos, deve ser executada nesse método. Opcional.
 
 Os eventos de ciclo de vida da chave de um serviço associado são mostrados neste diagrama:
 
@@ -232,9 +232,9 @@ O `OnServiceDisconnected` método é invocado somente quando a conexão entre um
 
 Para usar um serviço associado, um cliente (como uma atividade) deve criar uma instância de um objeto `Android.Content.IServiceConnection` que implementa e `BindService` invoca o método. `BindService`retornará `true` se o serviço estiver associado, `false` se não for. O `BindService` método usa três parâmetros:
 
-* **Uma`Intent`** intenção&ndash; deve identificar explicitamente a qual serviço se conectar.
-* **Um`IServiceConnection`**  objeto&ndash; esse objeto é um intermediário que fornece métodos de retorno de chamada para notificar o cliente quando o serviço ligado é iniciado e interrompido.
-* enum este parâmetro é um conjunto de sinalizadores que é usado pelo sistema para quando associar o objeto. **[`Android.Content.Bind`](xref:Android.Content.Bind)** &ndash; O valor mais comumente usado é [`Bind.AutoCreate`](xref:Android.Content.Bind.AutoCreate), que iniciará automaticamente o serviço se ele ainda não estiver em execução.
+- **Uma`Intent`** intenção&ndash; deve identificar explicitamente a qual serviço se conectar.
+- **Um`IServiceConnection`**  objeto&ndash; esse objeto é um intermediário que fornece métodos de retorno de chamada para notificar o cliente quando o serviço ligado é iniciado e interrompido.
+- enum este parâmetro é um conjunto de sinalizadores que é usado pelo sistema para quando associar o objeto. **[`Android.Content.Bind`](xref:Android.Content.Bind)** &ndash; O valor mais comumente usado é [`Bind.AutoCreate`](xref:Android.Content.Bind.AutoCreate), que iniciará automaticamente o serviço se ele ainda não estiver em execução.
 
 O trecho de código a seguir é um exemplo de como iniciar um serviço associado em uma atividade usando uma intenção explícita:
 

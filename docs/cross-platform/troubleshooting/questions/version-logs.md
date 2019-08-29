@@ -7,12 +7,12 @@ ms.assetid: CF386485-EAB0-4B9E-AA17-CB1B6462E505
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: 1977da75e430e72bee151814abc4502ee090b40c
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: b421378f8aa99728fa13f104e284b9c410abe2b3
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69521499"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70119959"
 ---
 # <a name="where-can-i-find-my-version-information-and-logs"></a>Onde posso encontrar informações e logs da minha versão?
 
@@ -182,9 +182,9 @@ Consulte também a página [log de depuração do Android](~/android/deploy-test
 
 ### <a name="a-idios-simulator-logs-nameios-simulator-logs-ios-simulator-logs-on-mac"></a><a id="ios-simulator-logs" name="ios-simulator-logs" />logs do simulador do iOS (no Mac)
 
-* Para acessar o log do sistema, selecione **depurar > abrir log do sistema...** no aplicativo do simulador de Ios.
+- Para acessar o log do sistema, selecione **depurar > abrir log do sistema...** no aplicativo do simulador de Ios.
 
-* Para exibir relatórios de falhas do simulador, abra o console. app e `~/Library/Logs > DiagnosticReports`navegue até.
+- Para exibir relatórios de falhas do simulador, abra o console. app e `~/Library/Logs > DiagnosticReports`navegue até.
 
 ### <a name="a-idios-device-logs-nameios-device-logs-ios-device-logs-on-mac"></a><a id="ios-device-logs" name="ios-device-logs" />logs de dispositivo iOS (no Mac)
 

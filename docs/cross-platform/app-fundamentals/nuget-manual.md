@@ -1,40 +1,40 @@
 ---
-title: Criação manual de pacotes do NuGet para Xamarin
-description: Este documento contém dicas para ajudar a criar pacotes do NuGet que se destinam a plataforma Xamarin. Ele descreve os perfis de Xamarin de pacote do NuGet, PCL NuGets com dependências de plataforma e links para vários exemplos de código-fonte aberto.
+title: Criando manualmente pacotes NuGet para o Xamarin
+description: Este documento contém dicas para ajudar a criar pacotes NuGet direcionados para a plataforma Xamarin. Ele descreve os perfis do Xamarin Package do NuGet, PCL NuGets com dependências de plataforma e links para vários exemplos de código-fonte aberto.
 ms.prod: xamarin
 ms.assetid: a5964686-5fc6-4280-b087-7ba27cc1c8bf
 author: asb3993
 ms.author: amburns
 ms.date: 03/22/2017
-ms.openlocfilehash: 2f66d8a3960741643013a1010162f52d283026d6
-ms.sourcegitcommit: afe9d93373d66eb45d82cabefca83b5733969634
+ms.openlocfilehash: cf694b54c8d2cdb33fd480d89d32b439f036ddc5
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67855703"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70119444"
 ---
-# <a name="manually-creating-nuget-packages-for-xamarin"></a>Criação manual de pacotes do NuGet para Xamarin
+# <a name="manually-creating-nuget-packages-for-xamarin"></a>Criando manualmente pacotes NuGet para o Xamarin
 
-_Esta página contém algumas dicas para ajudar a criar pacotes do NuGet que se destinam a plataforma Xamarin._
+_Esta página contém algumas dicas para ajudar a criar pacotes NuGet direcionados para a plataforma Xamarin._
 
 > [!NOTE]
-> Xamarin Studio 6.2 (e o Visual Studio para Mac) incluem a capacidade _automaticamente_ gerar pacotes do NuGet de PCL, .NET Standard ou projetos compartilhados. Consulte a [bibliotecas de multiplataforma para o compartilhamento de código](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/index.md) guia para obter mais detalhes.
+> Xamarin Studio 6,2 (e Visual Studio para Mac) inclui a capacidade de gerar _automaticamente_ pacotes do NuGet por meio de projetos PCL, .net Standard ou compartilhados. Consulte o guia de [compartilhamento de bibliotecas multiplataforma para o código](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/index.md) para obter mais detalhes.
 
-## <a name="nuget-package-xamarin-profiles"></a>Perfis de Xamarin de pacote do NuGet
+## <a name="nuget-package-xamarin-profiles"></a>Perfis do Xamarin Package do NuGet
 
-O site do NuGet [que dão suporte a várias versões do .NET Framework e perfis](https://docs.nuget.org/create/enforced-package-conventions) discute como dar suporte a diferentes estruturas da Microsoft e perfis, mas não inclui os nomes de estrutura de destino usados pelo Xamarin.
+O suporte do site do NuGet para [várias versões e perfis de .NET Framework](https://docs.nuget.org/create/enforced-package-conventions) discute como dar suporte a diferentes estruturas e perfis da Microsoft, mas não inclui os nomes de estrutura de destino usados pelo Xamarin.
 
-As estruturas de destino principais do Xamarin em uso atualmente são:
+As principais estruturas de destino do Xamarin em uso hoje são:
 
-* **MonoAndroid** -xamarin. Android
-* **Xamarin. IOS** -xamarin. IOS [API unificada](~/cross-platform/macios/unified/index.md) (dá suporte a 64 bits)
-* **Xamarin. Mac** -perfil móvel do xamarin. Mac, que é equivalente à superfície de API de xamarin. Android e xamarin. IOS.
+- **Monoandroid** -Xamarin. Android
+- **Xamarin. Ios** -Xamarin. Ios [API unificada](~/cross-platform/macios/unified/index.md) (dá suporte a 64 bits)
+- **Xamarin. Mac** – o perfil móvel do Xamarin. Mac, que é equivalente à superfície da API do Xamarin. Ios e Xamarin. Android.
 
-Também é um destino para o iOS mais antigas [API clássica](~/cross-platform/macios/unified/index.md):
+Também há um destino para o [API clássica](~/cross-platform/macios/unified/index.md)do Ios mais antigo:
 
-* **MonoTouch** -iOS API clássica
+- API clássica do MonoTouch – Ios
 
-Um **. NuSpec** arquivo que o destino todos esses seria algo parecido com:
+Um arquivo **. nuspec** direcionado a todos eles teria uma aparência semelhante a:
 
 ```xml
 <files>
@@ -45,39 +45,39 @@ Um **. NuSpec** arquivo que o destino todos esses seria algo parecido com:
 </files>
 ```
 
-As opções acima ignora todas as bibliotecas de classes portátil.
+O acima ignora todas as bibliotecas de classes portáteis.
 
-A maioria dos **. NuSpec** arquivos especificam o número de versão do framework de destino, mas é opcional se o seu assembly funciona com todas as versões dessa estrutura de destino. Portanto, se o destino foi **lib\MonoAndroid** isso significaria que ele funciona com qualquer versão do xamarin. Android.
+Os arquivos mais **. nuspec** especificam o número de versão da estrutura de destino, mas é opcional se o assembly funcionar com todas as versões da estrutura de destino. Portanto, se o seu destino foi **lib\MonoAndroid** isso significa que ele funciona com qualquer versão do Xamarin. Android.
 
-Você pode especificar a versão com um conjunto de números sem um ponto decimal, ou você pode especificá-lo usando pontos decimais. Sem o ponto decimal NuGet apenas será levar cada número e transformá-lo em uma versão com a inserção de um '.' entre cada dígito.
+Você pode especificar a versão com um conjunto de números sem um ponto decimal ou pode especificá-la usando pontos decimais. Sem o ponto decimal, o NuGet simplesmente pegará cada número e o transformará em uma versão inserindo um '. ' entre cada dígito.
 
-Na acima "MonoAndroid10" significa "Android 1.0". Isso apenas significa que o projeto [estrutura de destino](~/android/app-fundamentals/android-api-levels.md) precisa ser MonoAndroid versão 1.0 ou superior. A versão é especificada no `<TargetFrameworkVersion>` elemento no arquivo de projeto.
+Na acima, "MonoAndroid10" significa "Android 1,0". Isso apenas significa que a [estrutura de destino](~/android/app-fundamentals/android-api-levels.md) do projeto precisa ser o monoandroid versão 1,0 ou superior. A versão é especificada no `<TargetFrameworkVersion>` elemento no arquivo de projeto.
 
 Para esclarecer:
 
-- **MonoAndroid403** corresponde ao Android 4.0.3 e mais recente (ie API nível 15)
-- **Xamarin.iOS10** corresponde ao xamarin. IOS 1.0 e mais recentes
-- **Xamarin.iOS1.0** também corresponde ao xamarin. IOS 1.0 e mais recentes
+- **MonoAndroid403** corresponde ao Android 4.0.3 e mais recente (API do IE nível 15)
+- O **xamarin. iOS10** corresponde ao Xamarin. Ios 1,0 e mais recente
+- O **xamarin. Ios 1.0** também corresponde ao Xamarin. Ios 1,0 e mais recente
 
 ## <a name="pcl-nugets-with-platform-dependencies"></a>NuGets PCL com dependências de plataforma
 
-Os perfis de PCL estão limitados nas quais APIs eles podem acessar do .NET framework, e certamente não poderão acessar o código específico da plataforma. Esses links 3ª parte discutem diferentes abordagens para a criação de pacotes do NuGet que usam o PCL e APIs nativas para fornecer compatibilidade para Xamarin e outras plataformas:
+Os perfis PCL são limitados em quais APIs do .NET Framework eles podem acessar e certamente não podem acessar o código específico da plataforma. Esses links de terceiros abordam abordagens diferentes para a criação de pacotes NuGet que usam o PCL e APIs nativas para fornecer compatibilidade com o Xamarin e outras plataformas:
 
-- [Como fazer as bibliotecas de classes portáteis trabalharem para você](http://blogs.msdn.com/b/dsplaisted/archive/2012/08/27/how-to-make-portable-class-libraries-work-for-you.aspx)
-- [O truque PCL de isca](http://log.paulbetts.org/the-bait-and-switch-pcl-trick/)
-- [Criando uma PCL do NuGet que funciona com xamarin. IOS](http://www.jimbobbennett.io/creating-a-nuget-pcl-that-works-with-xamarin-ios/)
+- [Como tornar as bibliotecas de classes portáteis funcionam para você](http://blogs.msdn.com/b/dsplaisted/archive/2012/08/27/how-to-make-portable-class-libraries-work-for-you.aspx)
+- [O truque Bait e switch PCL](http://log.paulbetts.org/the-bait-and-switch-pcl-trick/)
+- [Criando uma PCL do NuGet que funciona com o Xamarin. iOS](http://www.jimbobbennett.io/creating-a-nuget-pcl-that-works-with-xamarin-ios/)
 
-Este externo [lista de perfis de PCL com seu nome de destino do NuGet](http://embed.plnkr.co/03ck2dCtnJogBKHJ9EjY) também é uma referência útil.
+Essa [lista externa de perfis PCL com o nome de destino do NuGet](http://embed.plnkr.co/03ck2dCtnJogBKHJ9EjY) também é uma referência útil.
 
 ## <a name="examples"></a>Exemplos
 
-Alguns exemplos de código-fonte aberto que você pode fazer referência a:
+Alguns exemplos de código-fonte aberto para os quais você pode se referir:
 
-- [**ModernHttpClient** ](https://www.nuget.org/packages/modernhttpclient/) – gravar seu aplicativo usando HTTP, mas remova essa biblioteca e ele irá drasticamente mais rápido (modo de exibição [origem](https://github.com/paulcbetts/ModernHttpClient)).
-- [**Splat** ](https://www.nuget.org/packages/Splat/) – uma biblioteca para tornar as coisas de plataforma cruzada que deve ser (modo de exibição [origem](https://github.com/paulcbetts/Splat)).
-- [**NGraphics** ](https://www.nuget.org/packages/NGraphics/) -uma biblioteca de plataforma cruzada para a renderização de gráficos vetoriais no .NET (modo de exibição [origem](https://github.com/praeclarum/NGraphics/blob/master/NGraphics.nuspec)).
+- [**ModernHttpClient**](https://www.nuget.org/packages/modernhttpclient/) – escreva seu aplicativo usando System .net. http, mas remova essa biblioteca no e ela será drasticamente mais rápida (Exibir [fonte](https://github.com/paulcbetts/ModernHttpClient)).
+- [**Fragmentação**](https://www.nuget.org/packages/Splat/) – uma biblioteca para tornar as coisas entre plataformas que devem ser (Exibir [fonte](https://github.com/paulcbetts/Splat)).
+- [**NGraphics**](https://www.nuget.org/packages/NGraphics/) -uma biblioteca de plataforma cruzada para renderizar gráficos vetoriais no .net (Exibir [fonte](https://github.com/praeclarum/NGraphics/blob/master/NGraphics.nuspec)).
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Nugetizer 3000 automatizada de criação do Nuget](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/index.md)       
+- [Criação automatizada de NuGet Nugetizer-3000](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/index.md)       
 - [Incluindo um NuGet em seu projeto](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough)

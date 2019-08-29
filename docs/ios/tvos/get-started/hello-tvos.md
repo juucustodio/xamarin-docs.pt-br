@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 02/02/2018
-ms.openlocfilehash: a3ec307061c47736722c5dacef9a939518586ded
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 59019e08c279a9910281de98fe64db798379e1a4
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528807"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70119159"
 ---
 # <a name="hello-tvos-quick-start-guide"></a>Olá, tvOS Guia de Início Rápido
 
@@ -327,8 +327,8 @@ Agora que temos a interface do usuário criada, precisamos expor os itens da int
 
 Há duas maneiras principais de acessar os controles que você adicionou no designer do iOS a partir do código:
 
-* Criando um manipulador de eventos em um controle.
-* Dar um nome ao controle para que possamos referenciá-lo posteriormente.
+- Criando um manipulador de eventos em um controle.
+- Dar um nome ao controle para que possamos referenciá-lo posteriormente.
 
 Quando qualquer um deles for adicionado, a classe parcial dentro do `ViewController.designer.cs` será atualizada para refletir as alterações. Isso permitirá que você acesse os controles no controlador de exibição.
 

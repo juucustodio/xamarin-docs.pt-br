@@ -1,5 +1,5 @@
 ---
-title: Trabalhando com o watchOS ícones no Xamarin
+title: Trabalhando com ícones watchOS no Xamarin
 description: Este documento descreve os vários ícones necessários para um aplicativo watchOS e como configurar uma solução para incluir esses ícones.
 ms.prod: xamarin
 ms.assetid: EE3D45BD-8091-4C04-BA83-371371D8BEB9
@@ -7,83 +7,83 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 07/26/2018
-ms.openlocfilehash: 75b5d1f941921a84d96579a4b0d0666ae0c2522d
-ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
+ms.openlocfilehash: f65d4faa0e006517366ab6aacf3f596b18385ccb
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67864979"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70120513"
 ---
-# <a name="working-with-watchos-icons-in-xamarin"></a>Trabalhando com o watchOS ícones no Xamarin
+# <a name="working-with-watchos-icons-in-xamarin"></a>Trabalhando com ícones watchOS no Xamarin
 
-Soluções de Apple Watch exigem dois conjuntos de ícones:
+Apple Watch soluções exigem dois conjuntos de ícones:
 
-* Os ícones de aplicativo do iOS que serão exibido no iPhone.
-* Ícones de Apple Watch que serão renderizados em um círculo no menu de inspeção em telas de notificação. O ícone do aplicativo watch também aparece na [Apple Watch](~/ios/watchos/app-fundamentals/settings.md) aplicativo iOS.
+- Os ícones do aplicativo iOS que serão exibidos no iPhone.
+- Apple Watch ícones que serão renderizados em um círculo no menu Watch e nas telas de notificação. O ícone inspecionar aplicativo também aparece no aplicativo [Apple Watch](~/ios/watchos/app-fundamentals/settings.md) Ios.
 
 ## <a name="apple-watch-icons"></a>Ícones de Apple Watch
 
 | | | |
 |-|-|-|
-|Ícone de aplicativo do iOS|É exibida no iPhone e inicia o aplicativo pai|![ícone do aplicativo iOS](icons-images/icon-ios.png)|
-|Ícone do aplicativo de inspeção|É exibida na tela inicial do Apple Watch|![ícone do aplicativo watchOS](icons-images/icon-home.png)|
-||É exibido em notificações de inspeção|![ícone de notificação do watchOS](icons-images/notification-icon.png)|
-||Aparece no [Apple Watch aplicativo iOS](~/ios/watchos/app-fundamentals/settings.md)|![ícone do aplicativo de inspeção de iOS](icons-images/watch-app-sml.png)|
+|Ícone do aplicativo iOS|Aparece no iPhone e inicia o aplicativo pai|![ícone do aplicativo iOS](icons-images/icon-ios.png)|
+|Ícone do aplicativo Watch|Aparece na tela inicial do Apple Watch|![ícone do aplicativo watchOS](icons-images/icon-home.png)|
+||Aparece em notificações de inspeção|![ícone de notificação do watchOS](icons-images/notification-icon.png)|
+||Aparece no [aplicativo Apple Watch do IOS](~/ios/watchos/app-fundamentals/settings.md)|![ícone do aplicativo de inspeção do iOS](icons-images/watch-app-sml.png)|
 
-## <a name="configuring-your-solution"></a>Configurar sua solução
+## <a name="configuring-your-solution"></a>Configurando sua solução
 
-Para garantir que seu aplicativo iOS e o aplicativo de inspeção mostram o nome correto e o ícone, siga estas instruções para cada projeto:
+Para garantir que o aplicativo iOS e o aplicativo de inspeção mostrem o nome e o ícone corretos, siga estas instruções para cada projeto:
 
 ### <a name="ios-app"></a>Aplicativo iOS
 
-Consulte a [orientar os ícones do aplicativo iOS](~/ios/app-fundamentals/images-icons/app-icons.md) para garantir que os ícones do aplicativo iOS que estão configurados corretamente.
+Consulte o [Guia de ícones do aplicativo IOS](~/ios/app-fundamentals/images-icons/app-icons.md) para garantir que os ícones do aplicativo IOS estejam configurados corretamente.
 
 #### <a name="infoplist"></a>Info.plist
 
-A cadeia de caracteres que aparece ao lado de seu aplicativo de inspeção na [aplicativo de configurações do Apple Watch](~/ios/watchos/app-fundamentals/settings.md) é configurado na **Info. plist do aplicativo iOS**.
+A cadeia de caracteres que aparece ao lado do aplicativo Watch no [aplicativo de configurações de Apple Watch](~/ios/watchos/app-fundamentals/settings.md) é configurada no **info. plist do aplicativo IOS**.
 
-Confirme se sua **Info. plist** tem um `CFBundleName` chave e valor (Observação: isso é diferente para o `CFBundleDisplayName`, você pode ter ambas):
+Confirme se seu **info. plist** tem uma `CFBundleName` chave e um valor (Observação: isso é diferente para `CFBundleDisplayName`o, você pode ter ambos):
 
 ```xml
 <key>CFBundleName</key>
 <string>Your App Name</string>
 ```
 
-### <a name="apple-watch-app"></a>Aplicativo de Apple Watch
+### <a name="apple-watch-app"></a>Apple Watch aplicativo
 
-Uma vez sua [aplicativo pai](~/ios/watchos/app-fundamentals/parent-app.md) tem configurado seus ícones, você precisa adicionar um catálogo de ativos de ícone do aplicativo para o aplicativo watch.
+Depois que seu [aplicativo pai](~/ios/watchos/app-fundamentals/parent-app.md) tiver seus ícones configurados, você precisará adicionar um catálogo de ativos de ícone de aplicativo ao aplicativo Watch.
 
-1. Clique com botão direito no projeto de aplicativo de inspeção e selecione **arquivo > Adicionar > novo arquivo... > iOS > Catálogo de ativos** para adicionar um catálogo de ativos para o projeto.
+1. Clique com o botão direito do mouse no projeto do aplicativo de inspeção e selecione **arquivo > adicionar > novo arquivo... > o catálogo de ativos do iOS >** para adicionar um catálogo de ativos ao projeto.
 
-    ![](icons-images/newasset.png "Adicionar um catálogo de ativos para o projeto")
+    ![](icons-images/newasset.png "Adicionar um catálogo de ativos ao projeto")
 
-2. Clique duas vezes no **AppIcon.appiconset/Contents.json** arquivo
+2. Clique duas vezes no arquivo **appIcon. appiconset/Contents. JSON**
 
-    ![](icons-images/xcassets-iconset-sml.png "O conteúdo de AppIcon")
+    ![](icons-images/xcassets-iconset-sml.png "O conteúdo do AppIcon")
 
-3. Adicione todas as imagens do watchOS, conforme mostrado nesta captura de tela:
+3. Adicione todas as imagens watchOS, conforme mostrado nesta captura de tela:
 
-    [![](icons-images/appicons-sml.png "Adicione todas as imagens do watchOS, conforme mostrado nesta captura de tela")](icons-images/appicons.png#lightbox)
+    [![](icons-images/appicons-sml.png "Adicionar todas as imagens watchOS, conforme mostrado nesta captura de tela")](icons-images/appicons.png#lightbox)
 
-    Consulte a [diretrizes do ícone da Apple](https://developer.apple.com/design/human-interface-guidelines/watchos/icons-and-images/menu-icons/) para os tamanhos necessários (as dimensões também são mostradas na tela). Lembre-se de que esses ícones serão recortados automaticamente para renderizar em um círculo.
+    Consulte as [diretrizes de ícone da Apple](https://developer.apple.com/design/human-interface-guidelines/watchos/icons-and-images/menu-icons/) para obter os tamanhos necessários (as dimensões também são mostradas na tela). Lembre-se de que esses ícones serão recortados automaticamente para renderização em um círculo.
 
-    Sua lista de ícone deve ter esta aparência:
+    Sua lista de ícones deve ser semelhante a esta:
 
-    ![](icons-images/xcassets-complete-sml.png "A lista de ícones no Gerenciador de soluções")
+    ![](icons-images/xcassets-complete-sml.png "A lista de ícones na Gerenciador de Soluções")
 
-4. Para garantir que o catálogo de ativos está incluído no aplicativo, adicione a seguinte chave e o valor para o **Info. plist do aplicativo Watch**:
+4. Para garantir que o catálogo de ativos seja incluído no aplicativo, adicione a chave e o valor a seguir para o **info. plist do aplicativo de inspeção**:
 
     ```xml
     <key>XSAppIconAssets</key>
     <string>Images.xcassets/AppIcon.appiconset</string>
     ```
 
-Você pode verificar os ícones são configurados correto verificando o [aplicativo de configurações do Apple Watch](~/ios/watchos/app-fundamentals/settings.md) no simulador, iPhone ou gerando uma [notificação](~/ios/watchos/platform/notifications.md) e confirmar o ícone é exibido na notificação tela.
+Você pode verificar se os ícones estão configurados corretamente verificando o [aplicativo configurações de Apple Watch](~/ios/watchos/app-fundamentals/settings.md) no simulador de iPhone ou gerando uma [notificação](~/ios/watchos/platform/notifications.md) e confirmando o ícone aparece na tela de notificação.
 
 > [!NOTE]
-> Ícones não podem ter um canal alfa (o aplicativo será rejeitado durante o envio da App Store se houver um canal alfa). Você pode verificar se um canal alfa existe e removê-lo [usando o aplicativo de visualização no Mac OS X](~/ios/watchos/troubleshooting.md#noalpha).
+> Os ícones não podem ter um canal alfa (o aplicativo será rejeitado durante o envio da loja de aplicativos se um canal alfa estiver presente). Você pode verificar se existe um canal alfa e removê-lo [usando o aplicativo de visualização no Mac os X](~/ios/watchos/troubleshooting.md#noalpha).
 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Guia do ícone & imagens watchOS da Apple](https://developer.apple.com/design/human-interface-guidelines/watchos/icons-and-images/)
+- [Ícone de watchOS de imagem da Apple & Guia de imagens](https://developer.apple.com/design/human-interface-guidelines/watchos/icons-and-images/)

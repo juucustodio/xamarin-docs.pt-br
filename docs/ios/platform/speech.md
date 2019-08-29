@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: fe871985700c5a40db2736ded78588b0b7d4f616
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 65644673bde426fff92530a7a36812d1c95b5995
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655399"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70121281"
 ---
 # <a name="speech-recognition-in-xamarinios"></a>Reconhecimento de fala no Xamarin. iOS
 
@@ -89,8 +89,8 @@ Há quatro etapas principais que o desenvolvedor deve adotar para adotar o recon
 - Forneça uma descrição de uso no arquivo do `Info.plist` aplicativo usando a `NSSpeechRecognitionUsageDescription` chave. Por exemplo, um aplicativo de câmera pode incluir a seguinte descrição: _"isso permite que você tire uma foto apenas dizendo a palavra" queijo "._
 - Solicite autorização chamando o `SFSpeechRecognizer.RequestAuthorization` método para apresentar uma explicação (fornecida `NSSpeechRecognitionUsageDescription` na chave acima) de por que o aplicativo deseja acesso de reconhecimento de fala ao usuário em uma caixa de diálogo e permitir que eles aceitem ou recusem.
 - Criar uma solicitação de reconhecimento de fala:
-    * Para áudio previamente gravado em disco, use a `SFSpeechURLRecognitionRequest` classe.
-    * Para áudio ao vivo (ou áudio da memória), use `SFSPeechAudioBufferRecognitionRequest` a classe.
+    - Para áudio previamente gravado em disco, use a `SFSpeechURLRecognitionRequest` classe.
+    - Para áudio ao vivo (ou áudio da memória), use `SFSPeechAudioBufferRecognitionRequest` a classe.
 - Passe a solicitação de reconhecimento de fala para um reconhecedor de fala (`SFSpeechRecognizer`) para iniciar o reconhecimento. O aplicativo pode, opcionalmente, manter o `SFSpeechRecognitionTask` retorno para monitorar e acompanhar os resultados de reconhecimento.
 
 Essas etapas serão abordadas em detalhes abaixo.

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 08/21/2019
-ms.openlocfilehash: c487442af7df4e4b8dc8860dcea4cd6065087a7f
-ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
-ms.translationtype: HT
+ms.openlocfilehash: 6d10e665c6461655440ddfb2c524cb56a14337f6
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 08/28/2019
-ms.locfileid: "70075652"
+ms.locfileid: "70121355"
 ---
 # <a name="xamarinforms-common-control-properties-methods-and-events"></a>Propriedades, métodos e eventos de controle comum do Xamarin. Forms
 
@@ -80,11 +80,15 @@ A `IsVisible` propriedade é um `bool` valor que determina se o controle é rend
 
 ### [`MinimumHeightRequest`](xref:Xamarin.Forms.VisualElement.MinimumHeightRequest)
 
-A `MinimumHeightRequest` propriedade é um `double` valor que determina a menor altura desejada do controle. Para obter mais informações, consulte [Propriedades da solicitação](#request-properties).
+A `MinimumHeightRequest` propriedade é um `double` valor que determina como o estouro é tratado quando dois elementos estão competindo por um espaço limitado. A definição `MinimumHeightRequest` da propriedade permite que o processo de layout dimensione o elemento para baixo até a dimensão mínima solicitada. Se não `MinimumHeightRequest` for especificado, o valor padrão será-1 e o processo de layout `HeightRequest` considerará que será o valor mínimo. Isso significa que elementos `MinimumHeightRequest` sem valor não terão altura escalonável.
+
+Para obter mais informações, consulte [mínimo de propriedades de solicitação](#minimum-request-properties).
 
 ### [`MinimumWidthRequest`](xref:Xamarin.Forms.VisualElement.MinimumWidthRequest)
 
-A `MinimumWidthRequest` propriedade é um `double` valor que determina a menor largura desejada do controle. Para obter mais informações, consulte [Propriedades da solicitação](#request-properties).
+A `MinimumWidthRequest` propriedade é um `double` valor que determina como o estouro é tratado quando dois elementos estão competindo por um espaço limitado. A definição `MinimumWidthRequest` da propriedade permite que o processo de layout dimensione o elemento para baixo até a dimensão mínima solicitada. Se não `MinimumWidthRequest` for especificado, o valor padrão será-1 e o processo de layout `WidthRequest` considerará que será o valor mínimo. Isso significa que elementos `MinimumWidthRequest` sem valor não terão largura escalonável.
+
+Para obter mais informações, consulte [mínimo de propriedades de solicitação](#minimum-request-properties).
 
 ### [`Opacity`](xref:Xamarin.Forms.VisualElement.Opacity)
 
@@ -229,6 +233,35 @@ As plataformas Android, iOS e UWP têm unidades de medida diferentes que podem v
 ## <a name="request-properties"></a>Propriedades de solicitação
 
 Propriedades cujos nomes contêm "solicitação" definem um valor desejado, que pode não corresponder ao valor real renderizado. Por exemplo, `HeightRequest` pode ser definido como 150, mas se o layout permitir apenas espaço para 100 unidades, o `Height` processamento do controle será apenas 100. O tamanho renderizado é afetado pelo espaço disponível e pelos componentes contidos.
+
+## <a name="minimum-request-properties"></a>Propriedades de solicitação mínimas
+
+As propriedades de solicitação `MinimumHeightRequest` mínimas incluem e `MinimumWidthRequest`e destinam-se a permitir um controle mais preciso sobre como os elementos manipulam o estouro em relação uns aos outros. No entanto, o comportamento de layout relacionado a essas propriedades tem algumas considerações importantes.
+
+### <a name="unspecified-minimum-property-values"></a>Valores mínimos de propriedade não especificados
+
+Se um valor mínimo não for definido, a propriedade Minimum definirá como padrão-1. O processo de layout ignora esse valor e considera o valor absoluto como o mínimo. A consequência prática desse comportamento é que um elemento sem nenhum valor mínimo especificado **não será** reduzido. Um elemento com um valor mínimo especificado **será** reduzido.
+
+O XAML a seguir mostra `BoxView` dois elementos em uma `StackLayout`horizontal:
+
+```xaml
+<StackLayout Orientation="Horizontal">
+    <BoxView HeightRequest="100" BackgroundColor="Purple" WidthRequest="500"></BoxView>
+    <BoxView HeightRequest="100" BackgroundColor="Green" WidthRequest="500" MinimumWidthRequest="250"></BoxView>
+</StackLayout>
+```
+
+A primeira `BoxView` instância solicita uma largura de 500 e não especifica uma largura mínima. A segunda `BoxView` instância solicita uma largura de 500 e uma largura mínima de 250. Se o elemento `StackLayout` pai não for grande o suficiente para conter os dois componentes na largura solicitada, `BoxView` a primeira instância será considerada pelo processo de layout para ter uma largura mínima de 500, pois nenhum outro mínimo válido será especificado. A segunda `BoxView` instância tem permissão para reduzir para 250 e será reduzida para se ajustar até que sua largura atinja 250 unidades.
+
+Se o comportamento desejado for para a primeira `BoxView` instância reduzir verticalmente sem largura mínima, o `MinimumWidthRequest` deverá ser definido como um valor válido, como 0.
+
+### <a name="minimum-and-absolute-property-values"></a>Valores de propriedade mínimo e absoluto
+
+O comportamento é indefinido quando o valor mínimo é maior que o valor absoluto. Por exemplo, se `MinimumWidthRequest` for definido como 100, a `WidthRequest` Propriedade nunca deverá exceder 100. Ao especificar um valor mínimo de propriedade, você sempre deve especificar um valor absoluto para garantir que o valor absoluto seja maior que o valor mínimo.
+
+### <a name="minimum-properties-within-a-grid"></a>Propriedades mínimas em uma grade
+
+`Grid`os layouts têm seu próprio sistema para o dimensionamento relativo de linhas e colunas. Usar `MinimumWidthRequest` `Grid` ou `MinimumHeightRequest` dentro de um layout não terá efeito. Para obter mais informações, consulte a [grade Xamarin. Forms](~/xamarin-forms/user-interface/layouts/grid.md).
 
 ## <a name="related-links"></a>Links relacionados
 

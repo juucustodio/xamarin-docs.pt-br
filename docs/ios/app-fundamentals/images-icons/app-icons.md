@@ -7,20 +7,20 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/22/2017
-ms.openlocfilehash: 0f20e7dafaa855e3610595886537ee4910b09d2e
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: dd712940ff6e7000ffd9181f808a8ab32093b38d
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68643056"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70121469"
 ---
 # <a name="application-icons-in-xamarinios"></a>Ícones de aplicativo no Xamarin. iOS
 
 Os tópicos a seguir serão abordados em detalhes:
 
-* [Ícones de aplicativo, Spotlight e configurações](#icon-types) -os diferentes tipos de ícones necessários para um aplicativo Ios.
-* [Gerenciando ícones com catálogos de ativos](#managing) -Gerenciando ícones de aplicativos usando catálogos de ativos.
-* [trabalho artístico do iTunes](#itunes) -fornecendo a arte-final do iTunes necessária para o método ad hoc de entregar seu aplicativo.
+- [Ícones de aplicativo, Spotlight e configurações](#icon-types) -os diferentes tipos de ícones necessários para um aplicativo Ios.
+- [Gerenciando ícones com catálogos de ativos](#managing) -Gerenciando ícones de aplicativos usando catálogos de ativos.
+- [trabalho artístico do iTunes](#itunes) -fornecendo a arte-final do iTunes necessária para o método ad hoc de entregar seu aplicativo.
 
 <a name="icon-types" />
 

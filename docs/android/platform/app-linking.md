@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: d1a96c81da8d71d92e3ce5acd9928b293f3cf3dd
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 9ca14ff360fb3f1d7fdc8df277a93b0d30c4394c
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69524709"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70119689"
 ---
 # <a name="app-linking-in-android"></a>Vinculação de aplicativo no Android
 
@@ -55,12 +55,12 @@ A configuração de links de aplicativo no Android 6,0 envolve duas etapas princ
 
 É necessário configurar um filtro de intenção que mapeia um URI (ou um conjunto de URIs) de um site para uma atividade em um aplicativo Android. No Xamarin. Android, essa relação é estabelecida com a adornação de uma atividade com o [IntentFilterAttribute](xref:Android.App.IntentFilterAttribute). O filtro de intenção deve declarar as seguintes informações:
 
-* **`Intent.ActionView`** &ndash; Isso registrará o filtro de intenção para responder às solicitações para exibir informações
-* **`Categories`** O filtro de intenção deve registrar tanto o **[intuito. CategoryBrowsable](xref:Android.Content.Intent.CategoryBrowsable)** quanto o **[intuito. CategoryDefault](xref:Android.Content.Intent.CategoryDefault)** para poder lidar corretamente com o URI da Web. &ndash;
-* **`DataScheme`** O filtro de intenção deve `http` declarar e/ `https`ou. &ndash; Esses são os únicos dois esquemas válidos.
-* **`DataHost`** &ndash; Esse é o domínio do qual os URIs serão originados.
-* **`DataPathPrefix`** &ndash; Esse é um caminho opcional para os recursos no site.
-* **`AutoVerify`** &ndash; O`autoVerify` atributo informa ao Android para verificar a relação entre o aplicativo e o site. Isso será discutido mais abaixo.
+- **`Intent.ActionView`** &ndash; Isso registrará o filtro de intenção para responder às solicitações para exibir informações
+- **`Categories`** O filtro de intenção deve registrar tanto o **[intuito. CategoryBrowsable](xref:Android.Content.Intent.CategoryBrowsable)** quanto o **[intuito. CategoryDefault](xref:Android.Content.Intent.CategoryDefault)** para poder lidar corretamente com o URI da Web. &ndash;
+- **`DataScheme`** O filtro de intenção deve `http` declarar e/ `https`ou. &ndash; Esses são os únicos dois esquemas válidos.
+- **`DataHost`** &ndash; Esse é o domínio do qual os URIs serão originados.
+- **`DataPathPrefix`** &ndash; Esse é um caminho opcional para os recursos no site.
+- **`AutoVerify`** &ndash; O`autoVerify` atributo informa ao Android para verificar a relação entre o aplicativo e o site. Isso será discutido mais abaixo.
 
 O exemplo a seguir mostra como usar o [IntentFilterAttribute](xref:Android.App.IntentFilterAttribute) para manipular links de `https://www.recipe-app.com/recipes` e `http://www.recipe-app.com/recipes`para:
 
@@ -90,9 +90,9 @@ O arquivo é colocado pelo webmaster do domínio no local **https://domain/.well
 
 O arquivo de ativo digital contém os metadados necessários para que o Android Verifique a associação. Um arquivo **assetlinks. JSON** tem os seguintes pares de chave-valor:
 
-* `namespace`&ndash; o namespace do aplicativo Android.
-* `package_name`&ndash; o nome do pacote do aplicativo Android (declarado no manifesto do aplicativo).
-* `sha256_cert_fingerprints`&ndash; as impressões digitais SHA256 do aplicativo assinado. Consulte o guia localizando a [assinatura MD5 ou SHA1 do repositório de chaves](~/android/deploy-test/signing/keystore-signature.md) para obter mais informações sobre como obter a impressão digital SHA1 de um aplicativo.
+- `namespace`&ndash; o namespace do aplicativo Android.
+- `package_name`&ndash; o nome do pacote do aplicativo Android (declarado no manifesto do aplicativo).
+- `sha256_cert_fingerprints`&ndash; as impressões digitais SHA256 do aplicativo assinado. Consulte o guia localizando a [assinatura MD5 ou SHA1 do repositório de chaves](~/android/deploy-test/signing/keystore-signature.md) para obter mais informações sobre como obter a impressão digital SHA1 de um aplicativo.
 
 O trecho a seguir é um exemplo de **assetlinks. JSON** com um único aplicativo listado:
 
@@ -173,9 +173,9 @@ Há dois testes que podem ser executados para garantir que os filtros de intenç
     $ adb shell dumpsys package domain-preferred-apps
     ```
 
-    * **`Package`** &ndash; O nome do pacote do aplicativo.
-    * **`Domain`** &ndash; Os domínios (separados por espaços) cujos links da Web serão manipulados pelo aplicativo
-    * **`Status`** &ndash; Este é o status atual de tratamento de links para o aplicativo. Um valor de **sempre** significa que o aplicativo `android:autoVerify=true` declarou e passou na verificação do sistema. Ele é seguido por um número hexadecimal que representa o registro do sistema Android da preferência.
+    - **`Package`** &ndash; O nome do pacote do aplicativo.
+    - **`Domain`** &ndash; Os domínios (separados por espaços) cujos links da Web serão manipulados pelo aplicativo
+    - **`Status`** &ndash; Este é o status atual de tratamento de links para o aplicativo. Um valor de **sempre** significa que o aplicativo `android:autoVerify=true` declarou e passou na verificação do sistema. Ele é seguido por um número hexadecimal que representa o registro do sistema Android da preferência.
 
     Por exemplo:
 

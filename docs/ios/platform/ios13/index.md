@@ -1,51 +1,51 @@
 ---
 title: Introdução ao iOS 13
-description: Este documento fornece uma descrição detalhada de algumas APIs do iOS 13 para visualização do Xamarin, qual versão fornece C# associações.
+description: Este documento fornece uma descrição de alto nível de algumas APIs do iOS 13 para as quais a versão de C# visualização do Xamarin fornece associações.
 ms.prod: xamarin
 ms.assetid: AB486B2F-6E3B-4E0B-ABB8-58F5804D56D2
 ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 07/01/2019
-ms.openlocfilehash: eaa479f220c9cd0115fd2d4496fbfb1202fb3aa0
-ms.sourcegitcommit: 8ecfa339d0f3e7687977bfe4fc96448942690183
+ms.openlocfilehash: ea7ebdf5e589f3c24f8c607d1464e86678012f23
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67558717"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70120626"
 ---
 # <a name="introduction-to-ios-13"></a>Introdução ao iOS 13
 
 ![Versão prévia do recurso](~/media/shared/preview.png)
 
-Siga estas [instruções](~/ios/platform/ios13/get-started.md) para começar a usar.
+Siga estas [instruções](~/ios/platform/ios13/get-started.md) para começar.
 
-## <a name="dark-mode"></a>Modo escuro
+## <a name="dark-modedark-modemd"></a>[Modo escuro](dark-mode.md)
 
-iOS 13 apresenta um novo modo escuro, que fornece aos desenvolvedores os meios para permitir facilmente seus aplicativos para se ajustar no. Novas ferramentas permitem que você simultaneamente projetar seus aplicativos com temas claras e escuros.
+o iOS 13 apresenta um novo modo escuro que fornece aos desenvolvedores os meios para permitir que seus aplicativos caibam facilmente. As novas ferramentas permitem que você projete seus aplicativos simultaneamente com temas claros e escuros.
 
 ## <a name="augmented-reality"></a>Realidade aumentada
 
-Realidade aumentada no iOS 13 agora tem mais recursos, incluindo uma nova função de "Pessoas oclusão" que permite que AR aplicativos conteúdo respeitar a presença de seres humanos e movê-los adequadamente.
+A realidade aumentada no iOS 13 agora tem mais recursos, incluindo uma nova função "People oclusão", que permite que o conteúdo do AR dos aplicativos respeite a presença de seres humanos e se movimente de forma adequada.
 
 ## <a name="siri"></a>Siri
 
-Siri foi expandido para permitir a manipulação do conteúdo de áudio, bem como a melhor manipulação dos atalhos por meio de atalhos do aplicativo.
+O Siri foi expandido para permitir o tratamento de conteúdo de áudio, bem como a melhor manipulação de atalhos por meio do aplicativo de atalhos.
 
 ## <a name="machine-learning"></a>Machine Learning
 
-Core ML 3 torna possível para treinar modelos de ML usando os recursos de hardware de seus dispositivos com facilidade.
+O Core ML 3 torna possível treinar facilmente modelos de ML usando os recursos de hardware de seus dispositivos.
 
 ## <a name="ipados"></a>iPadOS
 
-iPadOS é uma expansão do iOS criados especificamente com o iPad em mente.
+o iPadOS é uma expansão do iOS criado especificamente com o iPad em mente.
 
-Com iPadOS, você pode usar mais o lápis Apple usando PencilKit com novos gestos, permitir o uso de várias janelas e vários conteúdos de arrastar e soltar entre aplicativos. iPadOS também pode permitir que aplicativos fornecer fontes de todo o sistema.
+Com o iPadOS, você pode fazer maior uso do lápis Apple usando o PencilKit com novos gestos, permitir o uso de várias janelas e arrastar e soltar vários conteúdos entre aplicativos. o iPadOS também pode permitir que os aplicativos forneçam fontes em todo o sistema.
 
 ## <a name="privacy-and-security"></a>Privacidade e segurança
 
-iOS 13 fornece novas funcionalidades para entrar em aplicativos que usam entrar com dispositivos da Apple, permitindo que você tenha mais confiança que suas informações pessoais não está sendo roubadas ou estão coletados de forma alguma, tirando proveito dos 2FA e um conjunto restrito de fornecido informações.
+o iOS 13 fornece uma nova funcionalidade para entrar em aplicativos usando o entrar com dispositivos Apple, permitindo que você tenha mais confiança de que suas informações pessoais não sejam roubadas ou coletadas de nenhuma forma, aproveitando o 2FA e um conjunto restrito de fornecidos divulgação.
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Notas de versão de visualização do xamarin. IOS](/xamarin/ios/release-notes/12/12.99)
+- [Notas de versão de visualização do Xamarin. iOS](/xamarin/ios/release-notes/12/12.99)

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: ddefae8ad24b74a3c9ed05bf46b54430c00beaea
-ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
+ms.openlocfilehash: e04b6be1547183869fb49955703245e19365bdb3
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69620517"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70120164"
 ---
 # <a name="quick-interaction-techniques-for-watchos-3-in-xamarin"></a>Técnicas de interação rápida para watchOS 3 no Xamarin
 
@@ -230,16 +230,16 @@ Há várias maneiras pelas quais um usuário pode responder à notificação:
 
 Novo para watchOS 3:
 
-* A notificação usa uma API semelhante em todas as plataformas (iOS, watchOS, tvOS e macOS).
-* A notificação local pode ser agendada na Apple Watch.
-* A notificação em segundo plano será roteada para a extensão do aplicativo se ela estiver agendada na Apple Watch.
+- A notificação usa uma API semelhante em todas as plataformas (iOS, watchOS, tvOS e macOS).
+- A notificação local pode ser agendada na Apple Watch.
+- A notificação em segundo plano será roteada para a extensão do aplicativo se ela estiver agendada na Apple Watch.
 
 #### <a name="notification-scheduling-and-delivery"></a>Agendamento e entrega de notificações
 
 A notificação do iPhone do usuário será encaminhada para a Apple Watch quando ocorrer o seguinte:
 
-* A tela do iPhone está desligada.
-* O Apple Watch está sendo gasto e foi desbloqueado.
+- A tela do iPhone está desligada.
+- O Apple Watch está sendo gasto e foi desbloqueado.
 
 No watchOS 3, as notificações locais podem ser agendadas na Apple Watch e são fornecidas apenas na inspeção. É o desenvolvedor agendar uma notificação do iPhone correspondente se for exigido pelo aplicativo.
 

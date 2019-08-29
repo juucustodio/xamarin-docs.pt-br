@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/06/2018
-ms.openlocfilehash: 588c46274aa0b4d77742d004bf1fbe91e56a42c6
-ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
+ms.openlocfilehash: d75f46f8b06ef0e743218d5f42d5b2732b6e4158
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69620600"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70120970"
 ---
 # <a name="xamarinios-errors"></a>Erros do Xamarin. iOS
 
@@ -32,9 +32,9 @@ Por exemplo, parâmetros, ambiente, ferramentas ausentes.
 
 Ocorreu uma condição de erro inesperada. Registre um novo problema no [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) com o máximo de informações possível, incluindo:
 
-* Logs de compilação completos, com detalhes máximos ( `-v -v -v -v` por exemplo, nos **argumentos mTouch adicionais**);
-* Um caso de teste mínimo que reproduza o erro; e
-* Todas as informações de versão
+- Logs de compilação completos, com detalhes máximos ( `-v -v -v -v` por exemplo, nos **argumentos mTouch adicionais**);
+- Um caso de teste mínimo que reproduza o erro; e
+- Todas as informações de versão
 
 A maneira mais fácil de obter informações exatas sobre a versão é usar o menu **Visual Studio para Mac** , **sobre Visual Studio para Mac** item, mostrar o botão **detalhes** e copiar/colar a versão informações (você pode usar o botão **copiar informações** ) .
 
@@ -130,8 +130,8 @@ O SGen (--SGen) deve ser habilitado se a criação de perfil (--profiling) estiv
 
 Isso pode acontecer nas seguintes circunstâncias:
 
-* O ARMv6 está habilitado e o Xcode 4,5 ou posterior está instalado.
-* O ARMv7s está habilitado e o Xcode 4,4 ou anterior está instalado.
+- O ARMv6 está habilitado e o Xcode 4,5 ou posterior está instalado.
+- O ARMv7s está habilitado e o Xcode 4,4 ou anterior está instalado.
 
 Verifique se a versão instalada do Xcode dá suporte às arquiteturas selecionadas.
 
@@ -673,15 +673,15 @@ Para obter mais informações, consulte bug n º[51634](https://bugzilla.xamarin
 
 Há várias razões pelas quais o compartilhamento de código pode ser desabilitado:
 
-* Porque o destino de implantação do aplicativo de contêiner é anterior ao iOS 8,0 (é *)).
+- Porque o destino de implantação do aplicativo de contêiner é anterior ao iOS 8,0 (é *)).
 
 O compartilhamento de código nativo requer iOS 8,0 porque o compartilhamento de código nativo é implementado usando estruturas de usuário, que foi introduzida com o iOS 8,0.
 
-* como o aplicativo de contêiner inclui assemblies de I18N (*).
+- como o aplicativo de contêiner inclui assemblies de I18N (*).
 
 O compartilhamento de código nativo não tem suporte no momento se o aplicativo de contêiner incluir assemblies de I18N.
 
-* Porque o aplicativo de contêiner tem definições XML personalizadas para o vinculador gerenciado (*).
+- Porque o aplicativo de contêiner tem definições XML personalizadas para o vinculador gerenciado (*).
 
 O compartilhamento de código nativo requer não tem suporte para projetos que usam definições XML personalizadas para o vinculador gerenciado.
 
@@ -689,59 +689,59 @@ O compartilhamento de código nativo requer não tem suporte para projetos que u
 
 ### <a name="mt0113-native-code-sharing-has-been-disabled-for-the-extension--because-"></a>MT0113: O compartilhamento de código nativo foi desabilitado para a extensão ' * ' porque *.
 
-* Porque as opções BitCode diferem entre o aplicativo\*de contêiner () e\*a extensão ().
+- Porque as opções BitCode diferem entre o aplicativo\*de contêiner () e\*a extensão ().
 
   O compartilhamento de código nativo requer que as opções BitCode correspondam entre os projetos que compartilham o código.
 
-* como as opções--assembly-Build-Target são diferentes entre o aplicativo de contêiner\*() e a extensão\*().
+- como as opções--assembly-Build-Target são diferentes entre o aplicativo de contêiner\*() e a extensão\*().
 
   O compartilhamento de código nativo requer que as opções--assembly-Build-Target sejam idênticas entre os projetos que compartilham o código.
 
   Essa condição pode ocorrer se as compilações incrementais não estiverem habilitadas ou desabilitadas em todos os projetos.
 
-* Porque os assemblies de i18n são diferentes entre o aplicativo de\*contêiner () e a\*extensão ().
+- Porque os assemblies de i18n são diferentes entre o aplicativo de\*contêiner () e a\*extensão ().
 
   O compartilhamento de código nativo não tem suporte atualmente para extensões que incluem assemblies de I18N.
 
-* como os argumentos para o compilador de AOT são diferentes entre o aplicativo de\*contêiner () e a\*extensão ().
+- como os argumentos para o compilador de AOT são diferentes entre o aplicativo de\*contêiner () e a\*extensão ().
 
   O compartilhamento de código nativo requer que os argumentos para o compilador AOT não sejam diferentes entre projetos que compartilham código.
 
-* como os outros argumentos para o compilador de AOT são diferentes entre o aplicativo de\*contêiner () e a\*extensão ().
+- como os outros argumentos para o compilador de AOT são diferentes entre o aplicativo de\*contêiner () e a\*extensão ().
 
   O compartilhamento de código nativo requer que os argumentos para o compilador AOT não sejam diferentes entre projetos que compartilham código.
 
   Essa condição ocorre se o ' executar todas as operações float de 32 bits como 64-bit float ' diferir entre projetos.
 
-* como LLVM não está habilitado ou desabilitado no aplicativo de contêiner (\*) e na extensão (\*).
+- como LLVM não está habilitado ou desabilitado no aplicativo de contêiner (\*) e na extensão (\*).
 
   O compartilhamento de código nativo requer que o LLVM seja habilitado ou desabilitado para todos os projetos que compartilham código.
 
-* Porque as configurações do vinculador gerenciados são diferentes entre o aplicativo\*de contêiner () e\*a extensão ().
+- Porque as configurações do vinculador gerenciados são diferentes entre o aplicativo\*de contêiner () e\*a extensão ().
 
   O compartilhamento de código nativo requer que as configurações do vinculador gerenciados sejam idênticas para todos os projetos que compartilham código.
 
-* Porque os assemblies ignorados para o vinculador gerenciado são diferentes entre o aplicativo de contêiner\*() e a extensão\*().
+- Porque os assemblies ignorados para o vinculador gerenciado são diferentes entre o aplicativo de contêiner\*() e a extensão\*().
 
   O compartilhamento de código nativo requer que as configurações do vinculador gerenciados sejam idênticas para todos os projetos que compartilham código.
 
-* Porque a extensão tem definições XML personalizadas para o vinculador gerenciado (*).
+- Porque a extensão tem definições XML personalizadas para o vinculador gerenciado (*).
 
   O compartilhamento de código nativo requer não tem suporte para projetos que usam definições XML personalizadas para o vinculador gerenciado.
 
-* Porque o aplicativo de contêiner não é compilado para a ABI * (enquanto a extensão está compilando para essa ABI).
+- Porque o aplicativo de contêiner não é compilado para a ABI * (enquanto a extensão está compilando para essa ABI).
 
   O compartilhamento de código nativo requer que o aplicativo de contêiner seja criado para todas as arquiteturas que qualquer extensão de aplicativo compila.
 
   Por exemplo: essa condição ocorre quando uma extensão é compilada para ARM64 + ARMv7, mas o aplicativo de contêiner é compilado apenas para ARM64.
 
-* Porque o aplicativo de contêiner está criando para a \*Abi, que não é compatível com a Abi (\*) da extensão.
+- Porque o aplicativo de contêiner está criando para a \*Abi, que não é compatível com a Abi (\*) da extensão.
 
   O compartilhamento de código nativo requer que todos os projetos sejam compilados para exatamente a mesma API.
 
   Por exemplo: essa condição ocorre quando uma extensão é compilada para ARMv7 + LLVM + thumb2, mas o aplicativo de contêiner é compilado somente para ARMv7 + LLVM.
 
-* Porque o aplicativo de contêiner está referenciando o\*assembly ' '\*de ' ', enquanto a extensão faz referência a uma versão diferente de ' * '.
+- Porque o aplicativo de contêiner está referenciando o\*assembly ' '\*de ' ', enquanto a extensão faz referência a uma versão diferente de ' * '.
 
   O compartilhamento de código nativo requer que todos os projetos que compartilham o código usem as mesmas versões para todos os assemblies.
 
@@ -973,11 +973,11 @@ Remova o diretório `NOTICE` do projeto.
 
 Isso pode acontecer se:
 
-* Seu aplicativo tem direitos para os quais o perfil de provisionamento atual não oferece suporte.
+- Seu aplicativo tem direitos para os quais o perfil de provisionamento atual não oferece suporte.
   Soluções possíveis:
   - Especifique um perfil de provisionamento diferente que dê suporte aos direitos de que seu aplicativo precisa.
   - Remova os direitos sem suporte no perfil de provisionamento atual.
-* O dispositivo que você está tentando implantar não está incluído no perfil de provisionamento que você está usando.
+- O dispositivo que você está tentando implantar não está incluído no perfil de provisionamento que você está usando.
   Soluções possíveis:
   - Crie um novo aplicativo com base em um modelo no Xcode, selecione o mesmo perfil de provisionamento e implante no mesmo dispositivo. Às vezes, o Xcode pode atualizar automaticamente os perfis de provisionamento com novos dispositivos (em outros casos, o Xcode perguntará o que fazer).
   -Vá para o centro de desenvolvimento do iOS e atualize o perfil de provisionamento com o novo dispositivo e baixe o perfil de provisionamento atualizado em seu computador.
@@ -1008,10 +1008,10 @@ Ocorreu um erro ao tentar Pesquisar um aplicativo no dispositivo.
 
 Coisas para tentar resolver isso:
 
-* Exclua o aplicativo do dispositivo e tente novamente.
-* Desconecte o dispositivo e reconecte-o.
-* Reinicialize o dispositivo.
-* Reinicialize o Mac.
+- Exclua o aplicativo do dispositivo e tente novamente.
+- Desconecte o dispositivo e reconecte-o.
+- Reinicialize o dispositivo.
+- Reinicialize o Mac.
 
 <a name="MT1024" />
 
@@ -1029,11 +1029,11 @@ Ocorreu um erro ao tentar listar os relatórios de falhas no dispositivo.
 
 Coisas para tentar resolver isso:
 
-* Exclua o aplicativo do dispositivo e tente novamente.
-* Desconecte o dispositivo e reconecte-o.
-* Reinicialize o dispositivo.
-* Reinicialize o Mac.
-* Sincronize o dispositivo com o iTunes (isso removerá todos os relatórios de falha do dispositivo).
+- Exclua o aplicativo do dispositivo e tente novamente.
+- Desconecte o dispositivo e reconecte-o.
+- Reinicialize o dispositivo.
+- Reinicialize o Mac.
+- Sincronize o dispositivo com o iTunes (isso removerá todos os relatórios de falha do dispositivo).
 
 <a name="MT1026" />
 
@@ -1043,11 +1043,11 @@ Ocorreu um erro ao tentar baixar os relatórios de falha do dispositivo.
 
 Coisas para tentar resolver isso:
 
-* Exclua o aplicativo do dispositivo e tente novamente.
-* Desconecte o dispositivo e reconecte-o.
-* Reinicialize o dispositivo.
-* Reinicialize o Mac.
-* Sincronize o dispositivo com o iTunes (isso removerá todos os relatórios de falha do dispositivo).
+- Exclua o aplicativo do dispositivo e tente novamente.
+- Desconecte o dispositivo e reconecte-o.
+- Reinicialize o dispositivo.
+- Reinicialize o Mac.
+- Sincronize o dispositivo com o iTunes (isso removerá todos os relatórios de falha do dispositivo).
 
 <a name="MT1027" />
 
@@ -1259,9 +1259,9 @@ Isso geralmente indica um problema com o Xcode.
 
 Coisas para tentar corrigir isso:
 
-* Use o simulador uma vez no Xcode.
-* Passe uma versão do SDK explícita usando o- \<-SDK versão >.
-* Reinstale o Xcode.
+- Use o simulador uma vez no Xcode.
+- Passe uma versão do SDK explícita usando o- \<-SDK versão >.
+- Reinstale o Xcode.
 
 <a name="MT1221" />
 
@@ -1323,11 +1323,11 @@ Ocorreu um erro ao tentar acessar relatórios de falha do dispositivo.
 
 Coisas para tentar resolver isso:
 
-* Exclua o aplicativo do dispositivo e tente novamente.
-* Desconecte o dispositivo e reconecte-o.
-* Reinicialize o dispositivo.
-* Reinicialize o Mac.
-* Sincronize o dispositivo com o iTunes (isso removerá todos os relatórios de falha do dispositivo).
+- Exclua o aplicativo do dispositivo e tente novamente.
+- Desconecte o dispositivo e reconecte-o.
+- Reinicialize o dispositivo.
+- Reinicialize o Mac.
+- Sincronize o dispositivo com o iTunes (isso removerá todos os relatórios de falha do dispositivo).
 
 <a name="MT1401" />
 
@@ -1337,11 +1337,11 @@ Ocorreu um erro ao tentar acessar relatórios de falha do dispositivo.
 
 Coisas para tentar resolver isso:
 
-* Exclua o aplicativo do dispositivo e tente novamente.
-* Desconecte o dispositivo e reconecte-o.
-* Reinicialize o dispositivo.
-* Reinicialize o Mac.
-* Sincronize o dispositivo com o iTunes (isso removerá todos os relatórios de falha do dispositivo).
+- Exclua o aplicativo do dispositivo e tente novamente.
+- Desconecte o dispositivo e reconecte-o.
+- Reinicialize o dispositivo.
+- Reinicialize o Mac.
+- Sincronize o dispositivo com o iTunes (isso removerá todos os relatórios de falha do dispositivo).
 
 <a name="MT1402" />
 
@@ -1351,11 +1351,11 @@ Ocorreu um erro ao tentar acessar relatórios de falha do dispositivo.
 
 Coisas para tentar resolver isso:
 
-* Exclua o aplicativo do dispositivo e tente novamente.
-* Desconecte o dispositivo e reconecte-o.
-* Reinicialize o dispositivo.
-* Reinicialize o Mac.
-* Sincronize o dispositivo com o iTunes (isso removerá todos os relatórios de falha do dispositivo).
+- Exclua o aplicativo do dispositivo e tente novamente.
+- Desconecte o dispositivo e reconecte-o.
+- Reinicialize o dispositivo.
+- Reinicialize o Mac.
+- Sincronize o dispositivo com o iTunes (isso removerá todos os relatórios de falha do dispositivo).
 
 <a name="MT1403" />
 
@@ -1365,11 +1365,11 @@ Ocorreu um erro ao tentar acessar relatórios de falha do dispositivo.
 
 Coisas para tentar resolver isso:
 
-* Exclua o aplicativo do dispositivo e tente novamente.
-* Desconecte o dispositivo e reconecte-o.
-* Reinicialize o dispositivo.
-* Reinicialize o Mac.
-* Sincronize o dispositivo com o iTunes (isso removerá todos os relatórios de falha do dispositivo).
+- Exclua o aplicativo do dispositivo e tente novamente.
+- Desconecte o dispositivo e reconecte-o.
+- Reinicialize o dispositivo.
+- Reinicialize o Mac.
+- Sincronize o dispositivo com o iTunes (isso removerá todos os relatórios de falha do dispositivo).
 
 <a name="MT1404" />
 
@@ -1379,11 +1379,11 @@ Ocorreu um erro ao tentar acessar relatórios de falha do dispositivo.
 
 Coisas para tentar resolver isso:
 
-* Exclua o aplicativo do dispositivo e tente novamente.
-* Desconecte o dispositivo e reconecte-o.
-* Reinicialize o dispositivo.
-* Reinicialize o Mac.
-* Sincronize o dispositivo com o iTunes (isso removerá todos os relatórios de falha do dispositivo).
+- Exclua o aplicativo do dispositivo e tente novamente.
+- Desconecte o dispositivo e reconecte-o.
+- Reinicialize o dispositivo.
+- Reinicialize o Mac.
+- Sincronize o dispositivo com o iTunes (isso removerá todos os relatórios de falha do dispositivo).
 
 <a name="MT1405" />
 
@@ -1393,11 +1393,11 @@ Ocorreu um erro ao tentar acessar relatórios de falha do dispositivo.
 
 Coisas para tentar resolver isso:
 
-* Exclua o aplicativo do dispositivo e tente novamente.
-* Desconecte o dispositivo e reconecte-o.
-* Reinicialize o dispositivo.
-* Reinicialize o Mac.
-* Sincronize o dispositivo com o iTunes (isso removerá todos os relatórios de falha do dispositivo).
+- Exclua o aplicativo do dispositivo e tente novamente.
+- Desconecte o dispositivo e reconecte-o.
+- Reinicialize o dispositivo.
+- Reinicialize o Mac.
+- Sincronize o dispositivo com o iTunes (isso removerá todos os relatórios de falha do dispositivo).
 
 <a name="MT1406" />
 
@@ -1407,11 +1407,11 @@ Ocorreu um erro ao tentar acessar relatórios de falha do dispositivo.
 
 Coisas para tentar resolver isso:
 
-* Exclua o aplicativo do dispositivo e tente novamente.
-* Desconecte o dispositivo e reconecte-o.
-* Reinicialize o dispositivo.
-* Reinicialize o Mac.
-* Sincronize o dispositivo com o iTunes (isso removerá todos os relatórios de falha do dispositivo).
+- Exclua o aplicativo do dispositivo e tente novamente.
+- Desconecte o dispositivo e reconecte-o.
+- Reinicialize o dispositivo.
+- Reinicialize o Mac.
+- Sincronize o dispositivo com o iTunes (isso removerá todos os relatórios de falha do dispositivo).
 
 <!--- 1407 used by mmp -->
 
@@ -1598,9 +1598,9 @@ Não foi possível carregar o assembly raiz. Verifique se o caminho na mensagem 
 Ocorreu algo inesperado ao tentar otimizar o código de associação gerado. O elemento que está causando o problema é nomeado na mensagem de erro. Para corrigir esse problema, o assembly chamado (ou que contém o tipo ou o método nomeado) precisará ser fornecido em um novo problema no [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) , juntamente com um log de compilação completo com detalhes `-v -v -v -v` habilitados (ou seja, nos **argumentos mTouch adicionais**).
 
 O último dígito `x` será:
-* `0`para um nome de assembly;
-* `1`para um nome de tipo;
-* `3`para um nome de método;
+- `0`para um nome de assembly;
+- `1`para um nome de tipo;
+- `3`para um nome de método;
 
 <a name="MT2030" />
 
@@ -1610,8 +1610,8 @@ Ocorreu algo inesperado ao tentar remover os recursos do usuário. O assembly qu
 
 Os recursos do usuário são arquivos incluídos dentro de assemblies (como recursos) que precisam ser extraídos, no momento da compilação, para criar o pacote de aplicativos. Isso inclui:
 
-* `__monotouch_content_*`e `__monotouch_pages_*` recursos; e
-* Bibliotecas nativas inseridas dentro de um assembly de associação;
+- `__monotouch_content_*`e `__monotouch_pages_*` recursos; e
+- Bibliotecas nativas inseridas dentro de um assembly de associação;
 
 <a name="MT2040" />
 
@@ -2238,7 +2238,7 @@ Isso geralmente indica um bug no Xamarin. iOS; Registre um novo problema no [Git
 
 Isso acontece quando o vinculador nativo não consegue encontrar um símbolo que é referenciado em algum lugar. Há vários motivos pelos quais isso pode ocorrer:
 
-* Uma associação de terceiros requer uma estrutura, mas a associação não especifica isso em seu `[LinkWith]` atributo. Soluções
+- Uma associação de terceiros requer uma estrutura, mas a associação não especifica isso em seu `[LinkWith]` atributo. Soluções
   - Se você for o autor da Associação de terceiros ou tiver acesso à sua fonte, modifique o atributo da `[LinkWith]` Associação para incluir a estrutura necessária:
 
     ```csharp
@@ -2246,11 +2246,11 @@ Isso acontece quando o vinculador nativo não consegue encontrar um símbolo que
     ```
 
   - Se não for possível modificar a associação de terceiros, você poderá vincular manualmente com a estrutura necessária passando `-gcc_flags '-framework SystemFramework'` para `mtouch` (isso é feito modificando os argumentos adicionais de mTouch na página de opções de Build do IOS do projeto. Lembre-se de que isso deve ser feito para cada configuração de projeto.
-* Em alguns casos, uma associação gerenciada é composta por várias bibliotecas nativas, e todas devem ser incluídas nas associações. É possível ter mais de uma biblioteca nativa em cada projeto de associação, portanto, a solução é apenas adicionar todas as bibliotecas nativas necessárias ao projeto de associação.</li>
-* Uma associação gerenciada refere-se a símbolos nativos que não existem na biblioteca nativa.
+- Em alguns casos, uma associação gerenciada é composta por várias bibliotecas nativas, e todas devem ser incluídas nas associações. É possível ter mais de uma biblioteca nativa em cada projeto de associação, portanto, a solução é apenas adicionar todas as bibliotecas nativas necessárias ao projeto de associação.</li>
+- Uma associação gerenciada refere-se a símbolos nativos que não existem na biblioteca nativa.
     Isso geralmente acontece quando uma associação existe por algum tempo, e o código nativo foi modificado durante esse tempo para que uma classe nativa específica tenha sido removida ou renomeada, enquanto a associação não foi atualizada.
-* P/Invoke refere-se a um símbolo nativo que não existe. A partir do Xamarin. iOS 7,4, um erro <a href="#MT5214">MT5214</a> será relatado para esse caso (consulte MT5214 para obter mais informações).
-* Uma associação/biblioteca de terceiros foi criada usando C++, mas a associação não especifica isso em seu `[LinkWith]` atributo. Isso geralmente é razoavelmente fácil de reconhecer, pois os símbolos têm C++ símbolos configurados (um exemplo comum é `__ZNKSt9exception4whatEv`).
+- P/Invoke refere-se a um símbolo nativo que não existe. A partir do Xamarin. iOS 7,4, um erro <a href="#MT5214">MT5214</a> será relatado para esse caso (consulte MT5214 para obter mais informações).
+- Uma associação/biblioteca de terceiros foi criada usando C++, mas a associação não especifica isso em seu `[LinkWith]` atributo. Isso geralmente é razoavelmente fácil de reconhecer, pois os símbolos têm C++ símbolos configurados (um exemplo comum é `__ZNKSt9exception4whatEv`).
   - Se você for o autor da Associação de terceiros ou tiver acesso à sua fonte, modifique o atributo da `[LinkWith]` Associação para definir o `IsCxx` sinalizador:
 
     ```csharp
@@ -2265,7 +2265,7 @@ Isso acontece quando o vinculador nativo não consegue encontrar um símbolo que
 
 Isso acontece quando o vinculador nativo não consegue encontrar uma classe Objective-C que é referenciada em algum lugar. Há vários motivos pelos quais isso pode ocorrer: o mesmo que para [MT5210](#MT5210) e, além disso:
 
-* Uma associação de terceiros associada a um protocolo Objective-C, mas não o anotava com o `[Protocol]` atributo em sua definição de API. Soluções
+- Uma associação de terceiros associada a um protocolo Objective-C, mas não o anotava com o `[Protocol]` atributo em sua definição de API. Soluções
   - Adicione o atributo `[Protocol]` ausente:
 
     ```csharp
@@ -2282,9 +2282,9 @@ Isso acontece quando o vinculador nativo não consegue encontrar uma classe Obje
 
 Isso acontece quando o vinculador nativo encontra símbolos duplicados entre todas as bibliotecas nativas. Após esse erro, pode haver um ou mais erros [MT5213](#MT5213) com o local para cada ocorrência do símbolo. Possíveis motivos para esse erro:
 
-* A mesma biblioteca nativa é incluída duas vezes.
-* Duas bibliotecas nativas distintas acontecem para definir os mesmos símbolos.
-* Uma biblioteca nativa não está compilada corretamente e contém o mesmo símbolo mais de uma vez.
+- A mesma biblioteca nativa é incluída duas vezes.
+- Duas bibliotecas nativas distintas acontecem para definir os mesmos símbolos.
+- Uma biblioteca nativa não está compilada corretamente e contém o mesmo símbolo mais de uma vez.
   Você pode confirmar isso usando o seguinte conjunto de comandos de um terminal (substitua i386 por x86_64/ARMv7/armv7s/arm64 de acordo com a arquitetura que você está compilando):
 
   ```
@@ -2391,19 +2391,19 @@ Normalmente, o Xamarin. Ios solicitará que o vinculador nativo Mantenha esses s
 
 Há algumas fontes possíveis para esses símbolos dinâmicos:
 
-* P/invoca para métodos em bibliotecas estaticamente vinculadas (onde o nome da dll está `__Internal` no atributo `[DllImport ("__Internal")]`DllImport).
-* Referências de campo para locais de memória em bibliotecas estaticamente vinculadas de projetos`[Field]` de associação (atributos).
-* Classes Objective-C referenciadas em bibliotecas estaticamente vinculadas de projetos de associação (ao usar compilações incrementais ou quando não estiver usando o registrador estático).
+- P/invoca para métodos em bibliotecas estaticamente vinculadas (onde o nome da dll está `__Internal` no atributo `[DllImport ("__Internal")]`DllImport).
+- Referências de campo para locais de memória em bibliotecas estaticamente vinculadas de projetos`[Field]` de associação (atributos).
+- Classes Objective-C referenciadas em bibliotecas estaticamente vinculadas de projetos de associação (ao usar compilações incrementais ou quando não estiver usando o registrador estático).
 
 Soluções possíveis:
 
-* Habilite o vinculador gerenciado (se possível para todos os assemblies em vez de apenas assemblies do SDK). Isso pode remover o suficiente das fontes de símbolos dinâmicos para que a linha de comando do vinculador não exceda o máximo.
-* Reduza o número de P/Invokes, referências de campo e/ou classes Objective-C.
-* Reescreva os símbolos dinâmicos para ter nomes mais curtos.
-* Passe `-dlsym:false` como um argumento mTouch adicional nas opções de Build do IOS do projeto. Com essa opção, o Xamarin. iOS gerará uma referência nativa no código compilado por AOT e não precisará solicitar que o vinculador mantenha esse símbolo. No entanto, isso só funciona para compilações de dispositivo e causará erros de vinculador se houver P/Invokes para funções que não existem na biblioteca estática.
-* Passe `--dynamic-symbol-mode=code` como um argumento mTouch adicional nas opções de Build do IOS do projeto. Com essa opção, o Xamarin. iOS gerará código nativo adicional que faz referência a esses símbolos em vez de solicitar que o vinculador nativo Mantenha esses símbolos usando argumentos de linha de comando. A desvantagem dessa abordagem é que ela aumentará o tamanho do executável de alguma forma.
-* Habilite o registrador estático `--registrar:static` passando como um argumento mTouch adicional nas opções de Build do IOS do projeto (para compilações do simulador, como o registrador estático já é o padrão para compilações de dispositivo). O registrador estático gerará um código que referencie as classes Objective-C estaticamente, portanto, não há necessidade de solicitar que o vinculador nativo Mantenha essas classes.
-* Desabilite compilações incrementais (para Builds de dispositivos). Quando as compilações incrementais estão habilitadas, o código gerado pelo registrador estático não será considerado pelo vinculador nativo, o que significa que o Xamarin. iOS ainda deve solicitar que o vinculador Mantenha as classes Objective-C referenciadas. Assim, desabilitar compilações incrementais evitará essa necessidade.
+- Habilite o vinculador gerenciado (se possível para todos os assemblies em vez de apenas assemblies do SDK). Isso pode remover o suficiente das fontes de símbolos dinâmicos para que a linha de comando do vinculador não exceda o máximo.
+- Reduza o número de P/Invokes, referências de campo e/ou classes Objective-C.
+- Reescreva os símbolos dinâmicos para ter nomes mais curtos.
+- Passe `-dlsym:false` como um argumento mTouch adicional nas opções de Build do IOS do projeto. Com essa opção, o Xamarin. iOS gerará uma referência nativa no código compilado por AOT e não precisará solicitar que o vinculador mantenha esse símbolo. No entanto, isso só funciona para compilações de dispositivo e causará erros de vinculador se houver P/Invokes para funções que não existem na biblioteca estática.
+- Passe `--dynamic-symbol-mode=code` como um argumento mTouch adicional nas opções de Build do IOS do projeto. Com essa opção, o Xamarin. iOS gerará código nativo adicional que faz referência a esses símbolos em vez de solicitar que o vinculador nativo Mantenha esses símbolos usando argumentos de linha de comando. A desvantagem dessa abordagem é que ela aumentará o tamanho do executável de alguma forma.
+- Habilite o registrador estático `--registrar:static` passando como um argumento mTouch adicional nas opções de Build do IOS do projeto (para compilações do simulador, como o registrador estático já é o padrão para compilações de dispositivo). O registrador estático gerará um código que referencie as classes Objective-C estaticamente, portanto, não há necessidade de solicitar que o vinculador nativo Mantenha essas classes.
+- Desabilite compilações incrementais (para Builds de dispositivos). Quando as compilações incrementais estão habilitadas, o código gerado pelo registrador estático não será considerado pelo vinculador nativo, o que significa que o Xamarin. iOS ainda deve solicitar que o vinculador Mantenha as classes Objective-C referenciadas. Assim, desabilitar compilações incrementais evitará essa necessidade.
 
 <a name="MT5218" />
 
@@ -2413,10 +2413,10 @@ O argumento `--ignore-dynamic-symbol=symbol` de linha de comando foi passado, ma
 
 Há dois motivos principais para isso:
 
-* O nome do símbolo está incorreto.
-  * Não coloque um sublinhado no nome do símbolo.
-  * O símbolo para as classes Objective- `OBJC_CLASS_$_<classname>`C é.
-* O símbolo está correto, mas é um símbolo que já é preservado por meios normais (algumas opções de compilação fazem com que a lista exata de símbolos dinâmicos varie).
+- O nome do símbolo está incorreto.
+  - Não coloque um sublinhado no nome do símbolo.
+  - O símbolo para as classes Objective- `OBJC_CLASS_$_<classname>`C é.
+- O símbolo está correto, mas é um símbolo que já é preservado por meios normais (algumas opções de compilação fazem com que a lista exata de símbolos dinâmicos varie).
 
 ### <a name="mt53xx-other-tools"></a>MT53xx: Outras ferramentas
 

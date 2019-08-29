@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 3df0d8f686ec521a55948a9eb4632d77e5c3691f
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 42749bf07f3b0239a550e66247fc0377fdc1a0b4
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68652329"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70121380"
 ---
 # <a name="working-with-tvos-table-views-in-xamarin"></a>Trabalhando com exibições de tabela tvOS no Xamarin
 
@@ -883,8 +883,8 @@ namespace tvTable
 
 Novamente, essa classe apenas define alguns atalhos para facilitar a comunicação entre os dois lados do controlador de exibição de divisão:
 
-* `SplitView`-É um link para o controlador de exibição de`MainSpiltViewController`divisão () ao qual o controlador de exibição de navegação pertence.
-* `TableController`-Obtém o controlador de exibição de`AttractionTableViewController`tabela () que é apresentado como o modo de exibição superior no controlador de exibição de navegação.
+- `SplitView`-É um link para o controlador de exibição de`MainSpiltViewController`divisão () ao qual o controlador de exibição de navegação pertence.
+- `TableController`-Obtém o controlador de exibição de`AttractionTableViewController`tabela () que é apresentado como o modo de exibição superior no controlador de exibição de navegação.
 
 <a name="The-Split-View-Controller" />
 

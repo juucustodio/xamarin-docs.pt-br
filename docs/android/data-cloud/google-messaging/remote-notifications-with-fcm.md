@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/31/2018
-ms.openlocfilehash: df13c1080be5fd466c4875ed8a3bdc2012a70df0
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: a7276b6a3269c012ad57e13510b6479266c43209
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69526165"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70119792"
 ---
 # <a name="remote-notifications-with-firebase-cloud-messaging"></a>Notificações remotas com o firebase Cloud Messaging
 
@@ -731,9 +731,9 @@ Como resultado dessas alterações, `SendNotification` o será executado sempre 
 
 Quando um aplicativo está em segundo plano, a [carga da mensagem](https://firebase.google.com/docs/cloud-messaging/concept-options#notifications_and_data_messages) determinará como a mensagem é tratada:
 
-* **Notificação** do as mensagens serão enviadas para a **bandeja do sistema.** &ndash; Uma notificação local aparecerá lá. Quando o usuário toca na notificação, o aplicativo será iniciado.
-* **Dados** do as mensagens serão tratadas `OnMessageReceived`pelo. &ndash;
-* **Ambos** &ndash; mensagens com carga de dados e notificação serão entregues à bandeja do sistema. Quando o aplicativo for iniciado, a carga de dados aparecerá `Extras` no `Intent` do que foi usado para iniciar o aplicativo.
+- **Notificação** do as mensagens serão enviadas para a **bandeja do sistema.** &ndash; Uma notificação local aparecerá lá. Quando o usuário toca na notificação, o aplicativo será iniciado.
+- **Dados** do as mensagens serão tratadas `OnMessageReceived`pelo. &ndash;
+- **Ambos** &ndash; mensagens com carga de dados e notificação serão entregues à bandeja do sistema. Quando o aplicativo for iniciado, a carga de dados aparecerá `Extras` no `Intent` do que foi usado para iniciar o aplicativo.
 
 Neste exemplo, se o aplicativo estiver em segundo plano, `SendNotification` será executado se a mensagem tiver uma carga de dados. Caso contrário, será iniciada uma notificação em segundo plano (ilustrada anteriormente neste guia).
 

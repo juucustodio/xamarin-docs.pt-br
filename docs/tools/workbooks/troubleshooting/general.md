@@ -6,12 +6,12 @@ ms.assetid: 495958BA-C9C2-4910-9BAD-F48A425208CF
 author: lobrien
 ms.author: laobri
 ms.date: 03/30/2017
-ms.openlocfilehash: 21f61b4504367dafc2907fd6471af333f636b521
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: 3701a2a111c5c18f694def241b1e888fa6f4ce19
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69889398"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70120325"
 ---
 # <a name="known-issues--workarounds"></a>Problemas conhecidos & soluções alternativas
 
@@ -21,20 +21,20 @@ A `System.Threading.CurrentThread.CurrentCulture` configuração `System.Globali
 
 ### <a name="workarounds"></a>Soluções alternativas
 
-* Definir o aplicativo-domínio-local `DefaultThreadCurrentCulture`:
+- Definir o aplicativo-domínio-local `DefaultThreadCurrentCulture`:
 
 ```csharp
 using System.Globalization;
 CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("de-DE")
 ```
 
-* Ou atualize para as pastas de trabalho 1.2.1 ou mais recentes, que reescreverão `System.Threading.CurrentThread.CurrentCulture` atribuições para e `System.Globalization.CultureInfo.CurrentCulture` para fornecer o comportamento desejado (Configurando o erro de mono).
+- Ou atualize para as pastas de trabalho 1.2.1 ou mais recentes, que reescreverão `System.Threading.CurrentThread.CurrentCulture` atribuições para e `System.Globalization.CultureInfo.CurrentCulture` para fornecer o comportamento desejado (Configurando o erro de mono).
 
 ## <a name="unable-to-use-newtonsoftjson"></a>Não é possível usar Newtonsoft. JSON
 
 ### <a name="workaround"></a>Solução alternativa
 
-* Atualize para as pastas de trabalho 1.2.1, que instalarão o Newtonsoft. JSON 9.0.1.
+- Atualize para as pastas de trabalho 1.2.1, que instalarão o Newtonsoft. JSON 9.0.1.
   As pastas de trabalho 1,3, atualmente no canal alfa, dão suporte às versões 10 e mais recentes.
 
 ### <a name="details"></a>Detalhes
@@ -51,9 +51,9 @@ Há um [bug no editor Mônaco][monaco-bug] no Safari/WebKit, que é usado no apl
 
 ### <a name="workaround"></a>Solução alternativa
 
-* Clicar na dica de ferramenta depois que ela for exibida forçará o texto a renderizar.
+- Clicar na dica de ferramenta depois que ela for exibida forçará o texto a renderizar.
 
-* Ou atualizar para pastas de trabalho 1.2.1 ou mais recentes
+- Ou atualizar para pastas de trabalho 1.2.1 ou mais recentes
 
 [appcontext-bug]: https://bugzilla.xamarin.com/show_bug.cgi?id=54448
 [monaco-bug]: https://github.com/Microsoft/monaco-editor/issues/408
@@ -64,7 +64,7 @@ A partir das pastas de trabalho 1,3, removemos os renderizadores SkiaSharp que e
 
 ### <a name="workaround"></a>Solução alternativa
 
-* Atualize SkiaSharp para a versão mais recente no NuGet. No momento da gravação, isso é 1.57.1.
+- Atualize SkiaSharp para a versão mais recente no NuGet. No momento da gravação, isso é 1.57.1.
 
 ## <a name="related-links"></a>Links relacionados
 

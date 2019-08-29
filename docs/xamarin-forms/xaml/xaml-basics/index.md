@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017
-ms.openlocfilehash: d8b522ce75b2b594242dca167242ad0362f6cbfc
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: a7e98f64672788f13b247aa6cbba8adca84bb319
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528312"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70121542"
 ---
 # <a name="xamarinforms-xaml-basics"></a>Noções básicas de XAML de xamarin. Forms
 
@@ -22,12 +22,12 @@ XAML (eXtensible Application Markup Language) permite que os desenvolvedores def
 
 ## <a name="xaml-basics-contents"></a>Conteúdo de Noções básicas XAML
 
-* [Visão geral](#Overview)
-* [Parte 1. Introdução ao XAML](~/xamarin-forms/xaml/xaml-basics/get-started-with-xaml.md)
-* [Parte 2. Sintaxe essencial de XAML](~/xamarin-forms/xaml/xaml-basics/essential-xaml-syntax.md)
-* [Parte 3. Extensões de Marcação XAML](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
-* [Parte 4. Conceitos básicos da associação de dados](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)
-* [Parte 5. De associação de dados a MVVM](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md)
+- [Visão geral](#Overview)
+- [Parte 1. Introdução ao XAML](~/xamarin-forms/xaml/xaml-basics/get-started-with-xaml.md)
+- [Parte 2. Sintaxe essencial de XAML](~/xamarin-forms/xaml/xaml-basics/essential-xaml-syntax.md)
+- [Parte 3. Extensões de Marcação XAML](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
+- [Parte 4. Conceitos básicos da associação de dados](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)
+- [Parte 5. De associação de dados a MVVM](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md)
 
 Além desses artigos Noções básicas de XAML, você pode baixar capítulos do livro [criação de aplicativos móveis com xamarin. Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md):
 
