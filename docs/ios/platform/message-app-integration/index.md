@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/29/2016
-ms.openlocfilehash: 7cb079beac7fd97072333bccf3ff387a9e8c5465
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 8f029084982237d7dd16c8f3e5e5ae46f5d0223c
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68654313"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70198985"
 ---
 # <a name="message-app-integration-in-xamarinios"></a>Integração de aplicativos de mensagens no Xamarin. iOS
 
@@ -20,7 +20,6 @@ _Esses artigos mostram como incluir uma extensão de aplicativo de mensagem em u
 
 Novo no iOS 10, uma extensão de aplicativo de mensagem se integra ao aplicativo de **mensagens** e apresenta uma nova funcionalidade ao usuário. A extensão pode enviar texto, adesivos, arquivos de mídia e mensagens interativas.
 
-    
 ## <a name="message-app-extension-basicsiosplatformmessage-app-integrationintro-to-message-app-extensionsmd"></a>[Noções básicas de extensão do aplicativo de mensagens](~/ios/platform/message-app-integration/intro-to-message-app-extensions.md)
 
 Este artigo mostra como incluir uma extensão de aplicativo de mensagem em uma solução Xamarin. iOS que se integra ao aplicativo de **mensagens** e apresenta a nova funcionalidade para o usuário.

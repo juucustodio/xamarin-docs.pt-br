@@ -1,61 +1,61 @@
 ---
-title: Nova referência de contagem de sistema no xamarin. IOS
-description: Este documento descreve o sistema, habilitado em todos os aplicativos xamarin. IOS, por padrão de contagem de referência aprimorada do Xamarin.
+title: Novo sistema de contagem de referência no Xamarin. iOS
+description: Este documento descreve o sistema de contagem de referência aprimorada do Xamarin, habilitado em todos os aplicativos Xamarin. iOS por padrão.
 ms.prod: xamarin
 ms.assetid: 0221ED8C-5382-4C1C-B182-6C3F3AA47DB1
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 11/25/2015
-ms.openlocfilehash: 8c7b1a88284156cb5d4261f18d5659ed66dfaf64
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 221c3a3bb82b5b46f4afea5ec43fcdd5c00b0556
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61037146"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70199331"
 ---
-# <a name="new-reference-counting-system-in-xamarinios"></a>Nova referência de contagem de sistema no xamarin. IOS
+# <a name="new-reference-counting-system-in-xamarinios"></a>Novo sistema de contagem de referência no Xamarin. iOS
 
-Xamarin. IOS 9.2.1 introduziu a contagem de sistema para todos os aplicativos por padrão de referência aprimorada. Ele pode ser usado para eliminar muitos problemas de memória que eram difíceis de rastrear e corrigir em versões anteriores do xamarin. IOS.
+O Xamarin. iOS 9.2.1 introduziu o sistema de contagem de referência aprimorado para todos os aplicativos por padrão. Ele pode ser usado para eliminar muitos problemas de memória que eram difíceis de rastrear e corrigir em versões anteriores do Xamarin. iOS.
 
-## <a name="enabling-the-new-reference-counting-system"></a>Habilitando a sistema de contagem de referência novos
+## <a name="enabling-the-new-reference-counting-system"></a>Habilitando o novo sistema de contagem de referência
 
-A partir do Xamarin 9.2.1 ref novo sistema de contagem está habilitada para **todos os** aplicativos por padrão.
+A partir do Xamarin 9.2.1, o novo sistema de contagem de referência é habilitado para **todos os** aplicativos por padrão.
 
-Se você estiver desenvolvendo um aplicativo existente, você pode verificar o arquivo. csproj para garantir que todas as ocorrências de `MtouchUseRefCounting` são definidos como `true`, como abaixo:
+Se você estiver desenvolvendo um aplicativo existente, poderá verificar o arquivo. csproj para garantir que todas as ocorrências de `MtouchUseRefCounting` estejam definidas como `true`, como abaixo:
 
 ```xml
 <MtouchUseRefCounting>true</MtouchUseRefCounting>
 ```
 
-Se ele for definido como `false` seu aplicativo não estará usando as novas ferramentas.
+Se ele estiver definido como `false` seu aplicativo não estará usando as novas ferramentas.
 
 ### <a name="using-older-versions-of-xamarin"></a>Usando versões mais antigas do Xamarin
 
-Xamarin. IOS 7.2.1 e acima apresenta uma visualização avançada de nosso sistema de contagem de referência novos.
+O Xamarin. iOS 7.2.1 e superior apresenta uma visualização aprimorada do nosso novo sistema de contagem de referência.
 
-**API clássica:**
+**API Clássica:**
 
-Para habilitar esse novo sistema de contagem de referência, verifique as **usar a extensão de contagem de referência** caixa de seleção encontrado na **avançado** guia do seu projeto **opções de Build do iOS** , conforme mostrado abaixo: 
+Para habilitar esse novo sistema de contagem de referência, marque a caixa de seleção **usar a extensão de contagem de referência** encontrada na guia **avançado** das **Opções de Build do IOS**do seu projeto, conforme mostrado abaixo: 
 
 [![](newrefcount-images/image1.png "Habilitar o novo sistema de contagem de referência")](newrefcount-images/image1.png#lightbox)
 
 Observe que essas opções foram removidas em versões mais recentes do Visual Studio para Mac.
 
- **[API unificada:](~/cross-platform/macios/unified/index.md)**
+ **[API Unificada:](~/cross-platform/macios/unified/index.md)**
 
- A nova extensão de contagem de referência é necessária para a API unificada e deve ser habilitada por padrão. Versões mais antigas do seu IDE podem não ter esse valor verificado automaticamente e você terá que colocar uma verificação por ele.
+ A nova extensão de contagem de referência é necessária para o API Unificada e deve ser habilitada por padrão. As versões mais antigas do IDE podem não ter esse valor marcado automaticamente e talvez você precise fazer uma verificação por conta própria.
 
-    
+
 > [!IMPORTANT]
-> Depois de uma versão anterior desse recurso em torno do que o MonoTouch 5.2, mas só estava disponível para **sgen** como uma versão prévia experimental. Essa versão nova e aprimorada agora também está disponível para o **Boehm** coletor de lixo.
+> Uma versão anterior desse recurso já existe desde o MonoTouch 5,2, mas só estava disponível para o **SGen** como uma visualização experimental. Essa nova versão aprimorada agora também está disponível para o coletor de lixo **Boehm** .
 
 
-Historicamente tem havido dois tipos de objetos gerenciados pelo xamarin. IOS: aqueles que foram simplesmente um wrapper em torno de um objeto nativo (objetos de ponto a ponto) e aquelas que estendido ou incorporado a nova funcionalidade (objetos derivados) - normalmente, mantendo o estado na memória extra. Anteriormente, era possível que podemos pode incrementar um objeto de ponto a ponto com estado (por exemplo, adicionando um C# manipulador de eventos), mas que deixamos o objeto vá não referenciadas e, em seguida, coletados. Isso poderia causar uma falha posteriormente (por exemplo, se o tempo de execução do Objective-C chamado de volta para o objeto gerenciado).
+Historicamente, houve dois tipos de objetos gerenciados pelo Xamarin. iOS: aqueles que eram meramente um wrapper em um objeto nativo (objetos pares) e aqueles que ampliaram ou incorporaram novas funcionalidades (objetos derivados) – geralmente mantendo o estado de memória extra. Anteriormente, era possível aumentar um objeto de mesmo nível com o estado (por exemplo, adicionando um C# manipulador de eventos), mas que permitimos que o objeto passasse sem referência e, em seguida, coletado. Isso pode causar uma falha posteriormente (por exemplo, se o tempo de execução de Objective-C tiver sido chamado de volta para o objeto gerenciado).
 
-O novo sistema atualiza automaticamente objetos pares em objetos que são gerenciados pelo tempo de execução quando eles armazenam qualquer informação extra.
+O novo sistema atualiza automaticamente os objetos pares em objetos que são gerenciados pelo tempo de execução quando armazenam informações adicionais.
 
-Isso resolve várias falhas que ocorreram em situações como essa:
+Isso resolve várias falhas que ocorreram em situações como esta:
 
 ```csharp
 class MyTableSource : UITableViewSource {
@@ -73,10 +73,10 @@ class MyTableSource : UITableViewSource {
 }
 ```
 
-Sem a extensão de contagem de referência, esse código falharia porque `cell` torna-se na coleção e, portanto, seu `TouchDown` delegar, que se traduzirá em um ponteiro pendentes.
+Sem a extensão de contagem de referência, esse código `cell` falharia porque se tornasse `TouchDown` uma coleção e, portanto, seu delegado, que será convertido em um ponteiro pendente.
 
-A extensão de contagem de referência garante que o objeto gerenciado fica ativo e impede que sua coleção, desde que o objeto nativo é mantido pelo código nativo.
+A extensão de contagem de referência garante que o objeto gerenciado permaneça ativo e impeça sua coleção, desde que o objeto nativo seja retido pelo código nativo.
 
-O novo sistema também elimina a necessidade de *a maioria dos* particular de campos usados em associações - que é a abordagem padrão para manter a instância ativa de backup. O vinculador gerenciado é inteligente o suficiente para remover todos os *desnecessários* extensão de contagem de campos de aplicativos usando a nova referência.
+O novo sistema também elimina a necessidade de *mais* campos particulares de backup usados em associações – que é a abordagem padrão para manter a instância ativa. O vinculador gerenciado é inteligente o suficiente para remover todos os campos desnecessários dos aplicativos que usam a nova extensão de contagem de referência.
 
-Isso significa que cada instância de objeto gerenciado consome menos memória do que antes. Ele também resolve um problema relacionado em que alguns campos de suporte seriam manter referências que não foram necessárias mais pelo tempo de execução Objective-C, tornando difícil recuperar memória.
+Isso significa que cada instância de objeto gerenciado consome menos memória do que antes. Ele também resolve um problema relacionado em que alguns campos de apoio poderiam manter referências que não eram mais necessárias pelo tempo de execução Objective-C, dificultando a recuperação de alguma memória.

@@ -1,24 +1,24 @@
 ---
-title: Compactação de arquivo no xamarin. IOS
-description: Este documento descreve como trabalhar com a API libcompression no xamarin. IOS. Ele aborda deflating, aumentando, e suporte a diferentes algoritmos.
+title: Compactação de arquivo no Xamarin. iOS
+description: Este documento descreve como trabalhar com a API libcompression no Xamarin. iOS. Ele aborda os diferentes algoritmos de replanação, de replanação e com suporte.
 ms.prod: xamarin
 ms.assetid: 94D05DAB-01E8-4C62-9CEF-9D6417EEA8EB
 ms.technology: xamarin-ios
 author: mandel-macaque
 ms.author: mandel
 ms.date: 03/04/2019
-ms.openlocfilehash: f7a1df65047fd8040dd40e9f7f057d6bfe6dea61
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: bcc63aa4e1926f5502d571bf47c83b0c8ea7e429
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61403025"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70199527"
 ---
-# <a name="file-compression-in-xamarinios"></a>Compactação de arquivo no xamarin. IOS
+# <a name="file-compression-in-xamarinios"></a>Compactação de arquivo no Xamarin. iOS
 
-Aplicativos Xamarin direcionado para o iOS 9.0 ou macOS 10.11 (e mais recente) podem usar o _Framework compactação_ para compactar (codificar) e descompactar (decodificação) dados. Xamarin. IOS fornece essa estrutura seguindo a API do Stream. A estrutura de compactação permite aos desenvolvedores interagir com a compactar e descompactar dados como se fossem fluxos normais sem a necessidade de usar retornos de chamada ou delegados.
+Os aplicativos Xamarin destinados ao iOS 9,0 ou ao macOS 10,11 (e mais recente) podem usar a _estrutura_ de compactação para compactar (codificar) e descompactar (decodificar) dados. O Xamarin. iOS fornece essa estrutura após a API de fluxo. A estrutura de compactação permite que os desenvolvedores interajam com os dados compactados e descompactados como se fossem fluxos normais sem a necessidade de usar retornos de chamada ou delegados.
 
-O framework de compactação fornece suporte para os seguintes algoritmos:
+A estrutura de compactação fornece suporte para os seguintes algoritmos:
 
 * LZ4
 * LZ4 bruto
@@ -26,11 +26,11 @@ O framework de compactação fornece suporte para os seguintes algoritmos:
 * Lzma
 * Zlib
 
-Usando a estrutura de compactação permite aos desenvolvedores executar operações de compactação sem NuGets ou bibliotecas de terceiros. Isso reduz as dependências externas e garante que as operações de compactação terá suporte em todas as plataformas (desde que eles atendem aos requisitos mínimos de sistema operacional).
+O uso da estrutura de compactação permite que os desenvolvedores realizem operações de compactação sem nenhuma biblioteca ou NuGets de terceiros. Isso reduz as dependências externas e garante que as operações de compactação terão suporte em todas as plataformas (desde que atendam aos requisitos mínimos do sistema operacional).
 
-## <a name="general-file-decompression"></a>Descompactação de arquivos gerais
+## <a name="general-file-decompression"></a>Descompactação de arquivo geral
 
-A estrutura de compactação usa uma API de transmissão no xamarin. IOS e xamarin. Mac. Essa API significa que, para compactar os dados, o desenvolvedor pode usar os padrões normais usados em outras APIs de e/s do .NET. O exemplo a seguir mostra como descompactar dados com a estrutura de compactação, que é semelhante para a API encontrada no `System.IO.Compression.DeflateStream` API:
+A estrutura de compactação usa uma API de fluxo em Xamarin. iOS e Xamarin. Mac. Essa API significa que, para compactar dados, o desenvolvedor pode usar os padrões normais usados em outras APIs de e/s no .NET. O exemplo a seguir mostra como descompactar dados com a estrutura de compactação, que é semelhante à API encontrada `System.IO.Compression.DeflateStream` na API:
 
 ```csharp
 // sample zlib data
@@ -45,11 +45,11 @@ using (var reader = new StreamReader (decompressing))
 }
 ```
 
-O `CompressionStream` implementa o `IDisposable` interface, como outro `System.IO.Streams`, portanto, os desenvolvedores devem garantir que os recursos são liberados depois que eles não são mais necessários.
+O `CompressionStream` implementa a `IDisposable` interface, como a `System.IO.Streams`outra, para que os desenvolvedores devam garantir que os recursos sejam liberados quando não forem mais necessários.
 
-## <a name="general-file-compression"></a>Compactação de arquivos gerais
+## <a name="general-file-compression"></a>Compactação de arquivo geral
 
-A API de compactação também permite que os desenvolvedores compactar os dados a seguir a mesma API. Dados podem ser compactados usando um dos algoritmos fornecidos indicados no `CompressionAlgorithm` enumerador.
+A API de compactação também permite que os desenvolvedores compactem dados seguindo a mesma API. Os dados podem ser compactados usando um dos algoritmos fornecidos indicados no `CompressionAlgorithm` enumerador.
 
 ```csharp
 // sample method that copies the data from the source stream to the destination stream
@@ -85,4 +85,4 @@ static void CompressExample ()
 
 ## <a name="async-support"></a>Suporte assíncrono
 
-O `CompressionStream` dá suporte a todas as operações assíncronas que são compatíveis com o `System.IO.DeflateStream`, que significa que os desenvolvedores podem usar a palavra-chave async para executar as operações de compactar/descompactar sem bloquear o thread de interface do usuário.
+O `CompressionStream` oferece suporte a todas as operações assíncronas com `System.IO.DeflateStream`suporte do, o que significa que os desenvolvedores podem usar a palavra-chave Async para executar as operações de compactação/descompactação sem bloquear o thread da interface do usuário.

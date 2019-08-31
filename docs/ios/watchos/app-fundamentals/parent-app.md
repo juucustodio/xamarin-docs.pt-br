@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: 0dc3c8e4c8b4db99b07114e855910ccfe5fe180f
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 05dfb419834c2eee94f98d023df3a3fe8d6eee90
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68654561"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70198122"
 ---
 # <a name="working-with-the-watchos-parent-application-in-xamarin"></a>Trabalhando com o aplicativo pai no Xamarin watchOS
 
@@ -22,11 +22,11 @@ ms.locfileid: "68654561"
 
 Há diferentes maneiras de se comunicar entre o aplicativo de inspeção e o aplicativo iOS que ele é fornecido com:
 
-- Assista extensões can [chamar um método](#code) contra o aplicativo pai que é executado em segundo plano no iPhone.
+- As extensões de inspeção podem [chamar um método](#code) em relação ao aplicativo pai que é executado em segundo plano no iPhone.
 
 - Assista extensões can [compartilhar um local de armazenamento](#storage) com o aplicativo de iPhone pai.
 
-- Usando entrega para passar dados de uma visão rápida ou a notificação para o aplicativo de inspeção, enviar o usuário para um controlador de interface específica no aplicativo.
+- Usando a entrega para passar dados de uma visão geral ou de uma notificação para o aplicativo Watch, enviar o usuário para um controlador de interface específico no aplicativo.
 
 O aplicativo pai, às vezes, também é conhecido como o aplicativo de contêiner.
 

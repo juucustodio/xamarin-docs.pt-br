@@ -6,12 +6,12 @@ ms.assetid: 8A832A76-A770-1A7C-24BA-B3E6F57617A0
 author: conceptdev
 ms.author: crdun
 ms.date: 03/06/2018
-ms.openlocfilehash: 36b5ace881ba8f7fb45fef9d0350ffca67e0c951
-ms.sourcegitcommit: 21182d07d4bbddc26cd36f1c5b86b79011f6984a
+ms.openlocfilehash: df90bc764200434e8d546a1ebf61e039498517bb
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70169264"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70199402"
 ---
 # <a name="binding-objective-c-libraries"></a>Associando bibliotecas de Objective-C
 
@@ -378,23 +378,23 @@ Para cada definição `MyProtocol` de protocolo em Objective-C, agora há `IMyPr
 Qualquer definição que contenha [`[Protocol]`](~/cross-platform/macios/binding/binding-types-reference.md#ProtocolAttribute) o atributo gerará, na verdade, três classes de suporte que melhoram a maneira de consumir protocolos:
 
 ```csharp
-    // Full method implementation, contains all methods
-    class MyProtocol : IMyProtocol {
-        public void Say (string msg);
-        public void Listen (string msg);
-    }
+// Full method implementation, contains all methods
+class MyProtocol : IMyProtocol {
+    public void Say (string msg);
+    public void Listen (string msg);
+}
 
-    // Interface that contains only the required methods
-    interface IMyProtocol: INativeObject, IDisposable {
-        [Export ("say:")]
-        void Say (string msg);
-    }
+// Interface that contains only the required methods
+interface IMyProtocol: INativeObject, IDisposable {
+    [Export ("say:")]
+    void Say (string msg);
+}
 
-    // Extension methods
-    static class IMyProtocol_Extensions {
-        public static void Optional (this IMyProtocol this, string msg);
-        }
+// Extension methods
+static class IMyProtocol_Extensions {
+    public static void Optional (this IMyProtocol this, string msg);
     }
+}
 ```
 
 A **implementação de classe** fornece uma classe abstrata completa que você pode substituir métodos individuais do e obter segurança de tipo completo.  Mas, devido C# à não compatibilidade com várias heranças, há situações em que talvez seja necessário ter uma classe base diferente, mas você ainda deseja implementar uma interface, ou seja, onde o

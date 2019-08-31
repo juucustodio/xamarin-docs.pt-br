@@ -6,12 +6,12 @@ ms.assetid: B5237770-0FC3-4B01-9E22-766B35C9A952
 author: asb3993
 ms.author: amburns
 ms.date: 01/25/2016
-ms.openlocfilehash: 9d43bbdb49fe4ab1ff909f709a37f979c360ceb9
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 6b6a7b8bb2efdd099d7fde6bb5397e6330258bcc
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68509586"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70199394"
 ---
 # <a name="native-types-for-ios-and-macos"></a>Tipos nativos para iOS e macOS
 
@@ -45,9 +45,9 @@ Operadores de conversões implícitas são fornecidos quando não há possibilid
 
 Operadores de conversões explícitas são fornecidos quando há um potencial para perda de dados (o valor de 64 bits está sendo armazenado em um local de armazenamento 32 ou potencialmente 32).
 
- `int`, `uint` `nint`e `float` são todos conversíveis implicitamente para `nuint` , `nfloat` e como 32 bits se ajustarão sempre em 32 ou 64 bits.
+`int`, `uint` `nint`e `float` são todos conversíveis implicitamente para `nuint` , `nfloat` e como 32 bits se ajustarão sempre em 32 ou 64 bits.
 
- `nint`, `nuint` `long`e `nfloat` são todos conversíveis implicitamente para `ulong` , `double` e como os valores de bits 32 ou 64 serão sempre ajustados no armazenamento de 64 bits.
+`nint`, `nuint` `long`e `nfloat` são todos conversíveis implicitamente para `ulong` , `double` e como os valores de bits 32 ou 64 serão sempre ajustados no armazenamento de 64 bits.
 
 Você deve usar conversões explícitas de `nint` `nuint` e `nfloat` para `int`, `uint` e `float` como os tipos nativos podem conter 64 bits de armazenamento.
 
@@ -57,7 +57,7 @@ Você deve usar conversões explícitas de `long` `ulong` e `double` para `nint`
 
 Os tipos de dados ponto, tamanho e retângulo que são usados com CoreGraphics usam 32 ou 64 bits, dependendo do dispositivo em que estão sendo executados.  Quando vinculamos originalmente as APIs de iOS e Mac, usamos as estruturas de dados existentes que ocorreram para corresponder os tamanhos da plataforma de host ( `System.Drawing`os tipos de dados no).
 
-Ao mudar para unificado, você precisará substituir instâncias `System.Drawing` do por `CoreGraphics` suas contrapartes, conforme mostrado na tabela a seguir:
+Ao mudar paraunificado, você precisará substituir instâncias `System.Drawing` do por `CoreGraphics` suas contrapartes, conforme mostrado na tabela a seguir:
 
 |Tipo antigo no sistema. Drawing|Novo tipo de dados CoreGraphics|Descrição|
 |--- |--- |--- |

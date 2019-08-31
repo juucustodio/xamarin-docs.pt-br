@@ -6,12 +6,12 @@ ms.assetid: 26673CC5-C1E5-4BAC-BEF4-9A386B296FD5
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: dc23aed074360a06fcef6ad540d91aa98a19318b
-ms.sourcegitcommit: 9912e57ff6124c583600f9460ebfa3f7f7525960
+ms.openlocfilehash: a6d245e60a0d163c054fd74e0fb64780225da031
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69560294"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70197813"
 ---
 # <a name="updating-existing-mac-apps"></a>Atualizando aplicativos Mac existentes
 
@@ -118,7 +118,7 @@ Até esse momento, assim como os componentes, você precisará alternar qualquer
 ## <a name="enabling-64-bit-builds-of-xamarinmac-apps"></a>Habilitando Builds de 64 bits de aplicativos Xamarin. Mac
 
 Para um aplicativo Xamarin. Mac Mobile que foi convertido no API Unificada, o desenvolvedor ainda precisa habilitar a criação do aplicativo para computadores de 64 bits a partir das opções do aplicativo. Consulte a seção **habilitando as compilações de 64 bits de aplicativos Xamarin. Mac** do documento [Considerações sobre plataforma de 32/64 bits](~/cross-platform/macios/32-and-64/index.md) para obter instruções detalhadas sobre como habilitar as compilações de 64 bits.
-    
+
 ## <a name="finishing-up"></a>Concluindo
 
 Se você optar por usar ou não o método automático ou manual para converter seu aplicativo Xamarin. Mac do clássico para as APIs unificadas, haverá várias instâncias que exigirão mais intervenção manual. Confira nossas [dicas para atualizar o código para o documento API unificada](~/cross-platform/macios/unified/updating-tips.md) para problemas conhecidos e contornar.

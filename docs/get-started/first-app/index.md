@@ -9,12 +9,12 @@ ms.custom: video
 author: conceptdev
 ms.author: crdun
 ms.date: 05/23/2019
-ms.openlocfilehash: 245b41eea556ef36c81b337b57ce58d922e4e8fd
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 2c50ffb37f0fd1d7b0d9fad063c4d6195d6b1f08
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68653676"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70199780"
 ---
 # <a name="build-your-first-xamarinforms-app"></a>Compilar seu primeiro aplicativo Xamarin.Forms
 
@@ -48,15 +48,37 @@ Siga estas etapas em conjunto com o vídeo acima:
 
 5. Aguarde até que os pacotes do NuGet sejam restaurados (a mensagem "Restauração concluída" será exibida na barra de status).
 
-6. Inicie o Android Emulator pressionando o botão de depuração (ou o item de menu **Depurar > Iniciar Depuração**).
+6. As novas instalações do Visual Studio 2019 não terão um emulador do Android configurado. Clique na seta suspensa no botão **depurar** e escolha **criar Android Emulator** para iniciar a tela de criação do emulador:
 
-7. Edite **MainPage.xaml**, adicionando este XAML antes do final de `</StackLayout>`:
+    ![Criar Android Emulator suspensa](images/win-2019/debug-dropdown.png)
+
+7. Na tela de criação do emulador, use as configurações padrão e clique no botão **criar** :
+
+    [![Tela de criação do emulador do Android](images/win-2019/create-emulator-sml.png)](images/win-2019/create-emulator.png#lightbox)
+
+8. A criação de um emulador retornará à janela de Device Manager. Clique no botão **Iniciar** para iniciar o novo emulador:
+
+    ![Emulador do Android no Device Manager](images/win-2019/start-emulator.png)
+
+9. O Visual Studio 2019 agora deve mostrar o nome do novo emulador no botão **depurar** :
+
+    ![Nome do emulador do Android no botão de depuração](images/win-2019/debug-emulator-name.png)
+
+10. Clique no botão **depurar** para compilar e implantar o aplicativo no emulador do Android:
+
+    ![Emulador do Android exibindo o aplicativo](images/win-2019/android-emulator.png)
+
+## <a name="customize-the-application"></a>Personalizar o aplicativo
+
+O aplicativo pode ser personalizado para adicionar funcionalidade interativa. Execute as seguintes etapas para adicionar a interação do usuário ao aplicativo:
+
+1. Edite **MainPage.xaml**, adicionando este XAML antes do final de `</StackLayout>`:
 
     ```xaml
     <Button Text="Click Me" Clicked="Button_Clicked" />
     ```
 
-8. Edite **MainPage.xaml.cs**, adicionando este código ao final da classe:
+2. Edite **MainPage.xaml.cs**, adicionando este código ao final da classe:
 
     ```csharp
     int count = 0;
@@ -67,14 +89,16 @@ Siga estas etapas em conjunto com o vídeo acima:
     }
     ```
 
-9. Depure o aplicativo no Android:
+3. Depure o aplicativo no Android:
 
     ![Aplicativo Android](images/win/07-sml.png)
 
-    > [!TIP]
-    > É possível compilar e depurar o aplicativo iOS no Visual Studio com um computador Mac em rede. Veja as [instruções de instalação](~/ios/get-started/installation/windows/index.md) para obter mais informações.
+> [!NOTE]
+> O aplicativo de exemplo inclui a funcionalidade interativa adicional que não é abordada no vídeo.
 
 ## <a name="build-an-ios-app-in-visual-studio-2019"></a>Compilar um aplicativo iOS no Visual Studio 2019
+
+É possível criar e depurar o aplicativo iOS do Visual Studio com um computador Mac em rede. Veja as [instruções de instalação](~/ios/get-started/installation/windows/index.md) para obter mais informações.
 
 Este vídeo aborda o processo de criação e teste de um aplicativo iOS usando o Visual Studio 2019 no Windows:
 

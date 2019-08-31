@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 12/14/2016
-ms.openlocfilehash: 26c418355c83da807d6dfa514e58f9bf1675759f
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: dba84c32390be8017952206de9e23facd58931fe
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528419"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70199041"
 ---
 # <a name="hello-watchos--walkthrough"></a>Olá, watchOS – Walkthrough
 
@@ -39,7 +39,7 @@ Você deve ser capaz de executar seu aplicativo Watch agora, mas como o arquivo 
 -----
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
-    
+
 Clique duas vezes na interface. Storyboard em seu aplicativo Watch para iniciar o Xamarin iOS designer (se você estiver em um Mac, você também pode clicar com o botão direito do mouse e **abrir com > Xcode Interface Builder**)
 
 

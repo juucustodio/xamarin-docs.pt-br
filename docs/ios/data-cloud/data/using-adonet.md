@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 4f2d16ca2ff258da1b65bf7c7174c989ead7782c
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 09c20b776f2c5d4ddd36e8b515f5bcbf6d92d7a4
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69527358"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70199709"
 ---
 # <a name="using-adonet-with-xamarinios"></a>Usando o ADO.NET com Xamarin. iOS
 
@@ -56,7 +56,7 @@ Usaremos a `Mono.Data.Sqlite.SqliteConnection` classe para criar um arquivo de b
     ```
 
     Como mencionado anteriormente, uma conexão nunca deve ser reutilizada em threads diferentes. Em caso de dúvida, crie a conexão conforme necessário e feche-a quando terminar; Mas lembre-se de fazer isso com mais frequência do que o necessário.
-    
+
 3. **Criando e executando um comando de banco de dados** -uma vez que temos uma conexão, podemos executar comandos SQL arbitrários nele. O código a seguir mostra uma instrução CREATE TABLE que está sendo executada.
 
     ```csharp

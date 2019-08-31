@@ -6,34 +6,34 @@ ms.assetid: D61CC966-1D4A-49A5-8A6F-41572E28329B
 author: asb3993
 ms.author: amburns
 ms.date: 05/08/2018
-ms.openlocfilehash: 7cb802dd60d4e4879a260ff56d4f94ea5acb2965
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 49f0e57af1ad6b6e0f322eb9865ba99db4dd47ec
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61356884"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70199900"
 ---
 # <a name="missing-packages-error-after-updating-nuget-packages"></a>Erro de pacotes ausentes após atualizar os pacotes do Nuget
 
-Esse problema foi relatado principalmente em soluções de aplicativo de exemplo do xamarin. Forms, mas o potencial para esse problema pode ocorrer em qualquer projeto que usa pacotes do NuGet. 
+Esse problema foi relatado principalmente em soluções de aplicativo de exemplo do Xamarin. Forms, mas o potencial para esse problema pode ocorrer em qualquer projeto que usa pacotes NuGet.
 
-Se depois de atualizar pacotes do Nuget em seu projeto ou solução, você verá um erro que referencia os números de versão do pacote antigo, tais como:
+Se depois de atualizar os pacotes do NuGet em seu projeto ou solução, você verá um erro que faz referência aos números de versão do pacote antigo, como:
 
 ```csharp
 Error: This project references NuGet package(s) that are missing on this computer.
-Enable NuGet Package Restore to download them.  
+Enable NuGet Package Restore to download them.
 For more information, see http://go.microsoft.com/fwlink/?LinkID=322105
 
 The missing file is ../../packages/Xamarin.Forms.1.3.1.6296/build/portable-win+net45+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Xamarin.Forms.targets. (FormsGallery)
 ```
 
-Neste exemplo *Xamarin.Forms.1.3.1.6296* é o número de versão antiga que foi removido com a atualização de pacote do Nuget.
+Neste exemplo, *Xamarin. Forms. 1.3.1.6296* é o número de versão antigo que foi removido com a atualização do pacote NuGet.
 
-Isso pode acontecer se os elementos XML no arquivo. csproj que referenciam o número de versão do pacote antigo tinham adicionados manualmente ou editados, o Nuget não remover ou atualizá-los se eles tivessem sido adicionadas/editado manualmente, para que o projeto agora está procurando por pacotes que foram excluído. 
+Isso pode acontecer se os elementos XML no arquivo. csproj que fazem referência ao número de versão do pacote antigo tiverem sido adicionados ou editados manualmente, o NuGet não os removerá ou atualizará se tiverem sido adicionados/editados manualmente, portanto, o projeto está procurando pacotes que foram excluí.
 
-Para corrigir esse problema, edite os arquivos. csproj manualmente e excluir todos os elementos que fazem referência o número da versão antiga. 
+Para corrigir esse problema, edite manualmente os arquivos. csproj e exclua todos os elementos que fazem referência ao número de versão antigo.
 
-Elementos de exemplo para remover (se eles têm o número de versão do pacote antigo):
+Elementos de exemplo a serem removidos (se tiverem o número de versão do pacote antigo):
 
 ```xml
 <Reference Include="Xamarin.Forms.Maps">

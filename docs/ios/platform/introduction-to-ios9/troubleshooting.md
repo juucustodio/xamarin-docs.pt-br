@@ -1,98 +1,98 @@
 ---
-title: Xamarin. IOS 9 – solução de problemas
-description: Este artigo fornece várias dicas de solução de problemas para trabalhar com iOS 9 no xamarin. IOS. Dicas de abordam a análise de XML, simuladores, restrições de layout, problemas de rede e muitos outros tópicos.
+title: Xamarin. iOS 9 – solução de problemas
+description: Este artigo fornece várias dicas de solução de problemas para trabalhar com o iOS 9 no Xamarin. iOS. As dicas abordam a análise de XML, simuladores, restrições de layout, problemas de rede e muitos outros tópicos.
 ms.prod: xamarin
 ms.assetid: DCE83E36-CBD9-4D96-8E7F-384CB8A54563
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: f8fae79af654339b54a8df0d2ea32eef38f34adb
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: e6e264d9f1cd959c95a27597649d2ec23d832b1c
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61425168"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70200070"
 ---
-# <a name="xamarinios-9--troubleshooting"></a>Xamarin. IOS 9 – solução de problemas
+# <a name="xamarinios-9--troubleshooting"></a>Xamarin. iOS 9 – solução de problemas
 
-_Este artigo fornece várias dicas de solução de problemas para trabalhar com iOS 9 em aplicativos xamarin. IOS._
+_Este artigo fornece várias dicas de solução de problemas para trabalhar com o iOS 9 em aplicativos Xamarin. iOS._
 
 ## <a name="there-was-a-problem-parsing-the-xml"></a>Houve um problema ao analisar o XML
 
-O Designer do iOS Xamarin ainda não dá suporte para recursos do Xcode 7. Storyboards não carregarão no designer com _"Ocorreu um problema ao analisar o XML"_ ao tentar usar o novo iOS 9 (Xcode 7) elementos de designer, como StackView.
+O Xamarin iOS designer ainda não dá suporte aos recursos do Xcode 7. Os storyboards não serão carregados no designer com _"ocorreu um problema ao analisar o XML"_ ao tentar usar novos elementos do designer do IOS 9 (Xcode 7), como StackView.
 
-suporte para recursos do Xcode 7 do Designer do iOS é direcionado para a próxima versão do recurso de 6 de ciclo. A versão prévia do ciclo de 6 está disponível atualmente no canal alfa e tem suporte limitado para os novos recursos do Xcode 7.
+o suporte ao designer do iOS para recursos do Xcode 7 destina-se à próxima versão do recurso do ciclo 6. A versão de visualização do ciclo 6 está disponível no canal alfa e tem suporte limitado para os novos recursos do Xcode 7.
 
-Solução alternativa parcial para o Visual Studio para Mac: O storyboard com o botão direito e escolha **abrir com** > **Xcode Interface Builder**.
+Solução alternativa parcial para Visual Studio para Mac: Clique com o botão direito do mouse no storyboard e escolha **abrir com** > o**Xcode Interface Builder**.
 
-## <a name="where-are-the-ios-8-simulators"></a>Onde estão o iOS 8 simuladores?
+## <a name="where-are-the-ios-8-simulators"></a>Onde estão os simuladores do iOS 8?
 
-Se você tiver instalado o Xcode 7 (ou superior)-lo automaticamente substituirá todos os simuladores de iOS 8 com simuladores de iOS 9 por padrão. Se você ainda precisa testar no iOS 8, você pode iniciar o Xcode, em seguida, baixe e instale os simuladores de iOS 8.
+Se você tiver instalado o Xcode 7 (ou superior), ele substituirá automaticamente todos os simuladores do iOS 8 pelos simuladores do iOS 9 por padrão. Se você ainda precisar testar no iOS 8, poderá iniciar o Xcode, baixar e instalar os simuladores do iOS 8.
 
-No Xcode, selecione a **Xcode** menu, em seguida, **preferências...**   >  **Downloads**:
+No Xcode, selecione o menu do **Xcode** e, em seguida, **preferências...**  >  **Downloads**:
 
-[![](troubleshooting-images/ios8.png "Downloads de simuladores de iOS 8")](troubleshooting-images/ios8.png#lightbox)
+[![](troubleshooting-images/ios8.png "Downloads de simuladores do iOS 8")](troubleshooting-images/ios8.png#lightbox)
 
-Clique o **verificar e instalar agora** botão reinstalar os simuladores de iOS 8.
+Clique no botão **verificar e instalar agora** para reinstalar os simuladores do IOS 8.
 
-## <a name="layout-constraint-with-leftright-attribute-errors"></a>Restrição de layout com erros de atributo de esquerda/direita
+## <a name="layout-constraint-with-leftright-attribute-errors"></a>Restrição de layout com erros de atributo esquerdo/direito
 
-No iOS 8 (e anterior), elementos de interface do usuário em Storyboards poderia usar uma mistura de ambos **direita** & **esquerda** atributos (`NSLayoutAttributeRight` & `NSLayoutAttributeLeft`) e  **Levando** & **à direita** atributos (`NSLayoutAttributeLeading` & `NSLayoutAttributeTrailing`) no mesmo layout.
+No Ios 8 (e anteriores), os elementos da interface do usuário em storyboards poderiam usar uma combinação de atributos`NSLayoutAttributeRight`à **direita** & **à esquerda** ( & `NSLayoutAttributeLeft`) e os **principais** & atributos**à direita** ( )nomesmolayout`NSLayoutAttributeLeading`.  &  `NSLayoutAttributeTrailing`
 
-Se o Storyboard mesmo em executar no iOS 9, isso resultará em uma exceção no seguinte formato:
+Se o mesmo storyboard em execução no iOS 9, ele resultará em uma exceção no seguinte formato:
 
-> Encerrando o aplicativo devido a exceção não percebida 'NSInvalidArgumentException', motivo: ' * * * + [NSLayoutConstraint constraintWithItem:attribute:relatedBy:toItem:attribute:multiplier:constant:]: Uma restrição não pode ser feita entre um atributo à esquerda/direita e um atributo de direita/esquerda. Use à esquerda/direita para ambos ou nenhum dos dois.'
+> Encerrando o aplicativo devido à exceção não percebida ' NSInvalidArgumentException ', motivo: ' * * * + [NSLayoutConstraint constraintWithItem: atributo: relatedBy: toitem: atributo: multiplicador: Constant:]: Uma restrição não pode ser feita entre um atributo à esquerda/à direita e um atributo à direita/esquerda. Use à esquerda/à direita para ambos ou nenhum deles.
 
-iOS 9 impõe layouts para usar um **direita** & **esquerda** _ou_ **levando**  &   **À direita** atributos, mas *não* ambos. Para corrigir esse problema, altere todas as restrições de layout para usar o mesmo atributo definido dentro do arquivo do Storyboard.
+o Ios 9 impõe layouts para usar os atributos à **direita** & **esquerdo** _ou_ & à direita, mas *não* ambos. Para corrigir esse problema, altere todas as restrições de layout para usar o mesmo conjunto de atributos dentro de seu arquivo de storyboard.
 
-Para obter mais informações, consulte o [erro de restrição do iOS 9](https://stackoverflow.com/questions/32692841/ios-9-constraint-error) discussão de Stack Overflow.
+Para obter mais informações, consulte o [erro de restrição do IOS 9](https://stackoverflow.com/questions/32692841/ios-9-constraint-error) Stack Overflow discussão.
 
-## <a name="error-itms-90535-unexpected-cfbundleexecutable-key"></a>ERROR ITMS-90535: Chave de CFBundleExecutable inesperado
+## <a name="error-itms-90535-unexpected-cfbundleexecutable-key"></a>ERROR ITMS-90535: Chave CFBundleExecutable inesperada
 
-Depois de alternar para o iOS 9, de um aplicativo usa componentes de terceiros 3ª (especificamente nosso componente Google Maps existente) que foi compilado e executado no iOS 8 (ou anterior), ao tentar enviar a nova compilação para o iTunes Connect, você pode receber um erro no formulário:
+Depois de alternar para o iOS 9, de um aplicativo usa componentes de terceiros (especificamente nosso componente existente do Google Maps) que foi compilado e executado no iOS 8 (ou anterior), ao tentar enviar a nova compilação ao iTunes Connect, você pode obter um erro no formulário:
 
-> ERROR ITMS-90535: Chave de CFBundleExecutable inesperado. O pacote no 'Payload/app-name.app/component.bundle' não contém um executável do pacote...
+> ERROR ITMS-90535: Chave CFBundleExecutable inesperada. O pacote em ' Payload/app-Name. app/Component. Bundle ' não contém um executável de pacote...
 
-Esse problemas podem geralmente ser resolvido, localizando o pacote nomeado no projeto e em seguida, - editado assim como a mensagem de erro sugere - a `Info.plist` que está no grupo, removendo o `CFBundleExecutable` chave. O `CFBundlePackageType` chave deve ser definida como `BNDL` também.
+Normalmente, esses problemas podem ser resolvidos encontrando o pacote nomeado no projeto, assim como a mensagem de erro sugere-editou `Info.plist` o que está no pacote removendo a `CFBundleExecutable` chave. A `CFBundlePackageType` chave também deve ser `BNDL` definida como.
 
-Depois de fazer essas alterações, fazer uma limpeza e recompile o projeto inteiro. Você deve ser capaz de enviar para o iTunes Connect sem problemas depois de fazer essas alterações.
+Depois de fazer essas alterações, faça uma limpeza e reconstrua o projeto inteiro. Você deve ser capaz de enviar para o iTunes Connect sem problemas depois de fazer essas alterações.
 
-Para obter mais informações, consulte este [Stack Overflow](https://stackoverflow.com/questions/32096130/unexpected-cfbundleexecutable-key) discussão.
+Para obter mais informações, consulte esta discussão [Stack Overflow](https://stackoverflow.com/questions/32096130/unexpected-cfbundleexecutable-key) .
 
-## <a name="cfnetwork-sslhandshake-failed--9824-error"></a>Falha de CFNetwork SSLHandshake erro (-9824)
+## <a name="cfnetwork-sslhandshake-failed--9824-error"></a>CFNetwork SSLHandshake falhou (-9824) erro
 
-Ao tentar se conectar à internet, seja diretamente ou de uma exibição da web no iOS 9, você poderá receber um erro no formulário:
+Ao tentar se conectar à Internet, seja diretamente ou de uma exibição da Web no iOS 9, você pode receber um erro no formato:
 
 ```csharp
 2015-09-04 14:38:05.757 FormsWebViewiOS[2553:30362] CFNetwork SSLHandshake failed (-9824)
 2015-09-04 14:38:05.758 FormsWebViewiOS[2553:30363] NSURLSession/NSURLConnection HTTP load failed (kCFStreamErrorDomainSSL, -9824)
 ```
 
-Ou, no formato:
+Ou no formato:
 
 ```csharp
 2015-09-04 14:39:17.881 FormsWebViewiOS[2568:30974] App Transport Security has blocked a cleartext HTTP (http://) resource load since it is insecure.
 Temporary exceptions can be configured via your app's Info.plist file.
 ```
 
-IOS9, segurança de transporte de aplicativo (ATS) impõe a conexões seguras entre recursos da internet (como o servidor de back-end do aplicativo) e seu aplicativo. Além disso, o ATS requer comunicação usando o `HTTPS` protocolo e a comunicação de alto nível API a ser criptografado usando TLS versão 1.2 com sigilo.
+No iOS9, a ATS (segurança de transporte de aplicativo) impõe conexões seguras entre os recursos da Internet (como o servidor back-end do aplicativo) e seu aplicativo. Além disso, o ATS exige a `HTTPS` comunicação usando o protocolo e a comunicação de API de alto nível para ser criptografada usando TLS versão 1,2 com sigilo de encaminhamento.
 
-Uma vez que o ATS é habilitado por padrão nos aplicativos criados para o iOS 9 e OS X 10.11 (El Capitan), todas as conexões usando `NSURLConnection`, `CFURL` ou `NSURLSession` estará sujeito aos requisitos de segurança ATS. Se suas conexões não atenderem a esses requisitos, ele falhará com uma exceção.
+Como o ATS está habilitado por padrão em aplicativos criados para IOS 9 e os X 10,11 (El Capitan), todas as `NSURLConnection`conexões `CFURL` que `NSURLSession` usam ou estarão sujeitas a requisitos de segurança de ATS. Se suas conexões não atenderem a esses requisitos, elas falharão com uma exceção.
 
-Consulte a [Opting-Out de ATS](~/ios/app-fundamentals/ats.md) seção do nosso [segurança de transporte de aplicativo](~/ios/app-fundamentals/ats.md) guia para obter informações sobre como resolver esse problema.
+Consulte a seção [recusando o ATS](~/ios/app-fundamentals/ats.md) do nosso guia de [segurança do transporte de aplicativo](~/ios/app-fundamentals/ats.md) para obter informações sobre como resolver esse problema.
 
 ## <a name="my-existing-apps-dont-run-on-ios-9"></a>Meus aplicativos existentes não são executados no iOS 9
 
-Consulte nosso [informações de compatibilidade do iOS 9](~/ios/platform/introduction-to-ios9/ios9.md) para obter instruções sobre como recompilar e reimplantar os aplicativos existentes ser executado no iOS 9.
+Consulte nossas [informações de compatibilidade do IOS 9](~/ios/platform/introduction-to-ios9/ios9.md) para obter instruções sobre como criar novamente e reimplantar seus aplicativos existentes para execução no Ios 9.
 
 <a name="UICollectionViewCell.ContentView-is-null-in-constructors" />
 
-## <a name="uicollectionviewcellcontentview-is-null-in-constructors"></a>UICollectionViewCell.ContentView é Null em construtores
+## <a name="uicollectionviewcellcontentview-is-null-in-constructors"></a>UICollectionViewCell. ContentView é nulo em construtores
 
-**Motivo:** No iOS 9 a `initWithFrame:` construtor agora é necessária devido a alterações de comportamento no iOS 9, como o [UICollectionView documentação declara](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UICollectionView_class/#//apple_ref/occ/instm/UICollectionView/dequeueReusableCellWithReuseIdentifier:forIndexPath). Se você registrou uma classe para o identificador especificado e deve ser criada uma nova célula, a célula agora é inicializada chamando seu `initWithFrame:` método.
+**Falha** No Ios 9, `initWithFrame:` o Construtor agora é necessário, devido a alterações de comportamento no Ios 9 como os [Estados de documentação do UICollectionView](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UICollectionView_class/#//apple_ref/occ/instm/UICollectionView/dequeueReusableCellWithReuseIdentifier:forIndexPath). Se você registrou uma classe para o identificador especificado e uma nova célula deve ser criada, a célula agora é inicializada chamando `initWithFrame:` seu método.
 
-**Correção:** Adicionar o `initWithFrame:` construtor como este:
+**Soluciona** Adicione o `initWithFrame:` Construtor da seguinte maneira:
 
 ```csharp
 [Export ("initWithFrame:")]
@@ -102,15 +102,15 @@ public YourCellClassName (CGRect frame) : base (frame)
 }
 ```
 
-Amostras relacionadas: [MotionGraph](https://github.com/xamarin/monotouch-samples/commit/3c1b7a4170c001e7290db9babb2b7a6dddeb8bcb), [TextKitDemo](https://github.com/xamarin/monotouch-samples/commit/23ea01b37326963b5ebf68bbcc1edd51c66a28d6)
+Exemplos relacionados: [MotionGraph](https://github.com/xamarin/monotouch-samples/commit/3c1b7a4170c001e7290db9babb2b7a6dddeb8bcb), [TextKitDemo](https://github.com/xamarin/monotouch-samples/commit/23ea01b37326963b5ebf68bbcc1edd51c66a28d6)
 
 <a name="UIView-fails-to-Init-with-Coder-when-Loading-a-View-from-a-Xib/Nib" />
 
-## <a name="uiview-fails-to-init-with-coder-when-loading-a-view-from-a-xibnib"></a>UIView Falha ao Init com o codificador ao carregar um modo de exibição de um Xib/Nib
+## <a name="uiview-fails-to-init-with-coder-when-loading-a-view-from-a-xibnib"></a>UIView falha ao iniciar com codificador ao carregar uma exibição de um XIB/NIB
 
-**Motivo:** O `initWithCoder:` construtor é a chamada quando o carregamento de um modo de exibição de um arquivo Xib do construtor de Interface. Se esse construtor não é exportado o código não gerenciado não é possível chamar nossa versão gerenciada dele. Anteriormente (por exemplo. no iOS 8) o `IntPtr` construtor foi invocado para inicializar o modo de exibição.
+**Falha** O `initWithCoder:` Construtor é o chamado ao carregar uma exibição de um arquivo interface Builder xib. Se esse construtor não for exportado, o código não gerenciado não poderá chamar nossa versão gerenciada dele. Anteriormente (por exemplo, no Ios 8), `IntPtr` o Construtor foi invocado para inicializar a exibição.
 
-**Correção:** Criar e exportar o `initWithCoder:` construtor como este:
+**Soluciona** Crie e exporte `initWithCoder:` o construtor da seguinte maneira:
 
 ```csharp
 [Export ("initWithCoder:")]
@@ -120,80 +120,80 @@ public YourClassName (NSCoder coder) : base (coder)
 }
 ```
 
-Exemplo relacionado: [Chat](https://github.com/xamarin/monotouch-samples/commit/7b81138d52e5f3f1aa3769fcb08f46122e9b6a88)
+Exemplo relacionado: [Com](https://github.com/xamarin/monotouch-samples/commit/7b81138d52e5f3f1aa3769fcb08f46122e9b6a88)
 
-## <a name="dyld-message-no-cache-image-with-name"></a>Mensagem Dyld: Nenhuma imagem de Cache com o nome...
+## <a name="dyld-message-no-cache-image-with-name"></a>Mensagem de dyld: Nenhuma imagem de cache com o nome...
 
-Você pode enfrentar uma falha com as seguintes informações no log:
+Você pode encontrar uma falha com as seguintes informações no log:
 
 ```csharp
 Dyld Error Message:
 Dyld Message: no cach image with name (/System/Library/PrivateFrameworks/JavaScriptCore.framework/JavaScriptCore)
 ```
 
-**Motivo:** Este é um bug no vinculador nativo da Apple, que acontece quando eles fizerem uma estrutura privada pública (JavaScriptCore se tornou público no iOS 7, antes que ele era uma estrutura privada), e o destino da implantação do aplicativo é para uma versão iOS quando o framework era privado. Nesse caso, vinculador da Apple será vinculada à versão particular do framework em vez da versão pública.
+**Falha** Esse é um bug no vinculador nativo da Apple, que acontece quando eles tornam uma estrutura privada pública (JavaScriptCore se tornou pública no iOS 7, antes de ser uma estrutura privada), e o destino de implantação do aplicativo é para uma versão do iOS quando a estrutura era privada. Nesse caso, o vinculador da Apple vinculará a versão particular da estrutura em vez da versão pública.
 
-**Correção:** Isso será abordado para iOS 9, mas não há uma solução fácil aplicar por conta própria nesse: apenas uma versão iOS posterior em seu projeto (você pode tentar iOS 7 neste caso) de destino. Outras estruturas podem apresentar problemas semelhantes, por exemplo o framework do WebKit se tornou público no iOS 8 (e para direcionamento ao iOS 7 irá resultar nesse erro; você deve ter como destino o iOS 8 para usar WebKit em seu aplicativo).
+**Soluciona** Isso será abordado para o iOS 9, mas há uma solução alternativa fácil que você pode se aplicar nesse meio tempo: Basta direcionar para uma versão mais recente do iOS no seu projeto (você pode tentar o iOS 7 nesse caso). Outras estruturas podem apresentar problemas semelhantes, por exemplo, a estrutura WebKit tornou-se pública no iOS 8 (e, portanto, direcionar para o iOS 7 resultará nesse erro; você deve direcionar o iOS 8 para usar WebKit em seu aplicativo).
 
-## <a name="untrusted-enterprise-developer"></a>Desenvolvedor corporativo não confiável
+## <a name="untrusted-enterprise-developer"></a>Desenvolvedor empresarial não confiável
 
-Ao tentar executar a versão do iOS 9 do seu aplicativo xamarin. IOS em hardware de iOS reais, você poderá receber uma mensagem informando que sua conta de desenvolvedor não tem sido confiável no dispositivo. Por exemplo:
+Ao tentar executar a versão iOS 9 do seu aplicativo Xamarin. iOS em um hardware iOS real, você poderá receber uma mensagem informando que sua conta de desenvolvedor não é confiável no dispositivo. Por exemplo:
 
-[![](troubleshooting-images/untrusted01.png "Alerta de desenvolvedor corporativo não confiável")](troubleshooting-images/untrusted01.png#lightbox)
+[![](troubleshooting-images/untrusted01.png "Alerta de desenvolvedor empresarial não confiável")](troubleshooting-images/untrusted01.png#lightbox)
 
 Para resolver esse problema, faça o seguinte:
 
-1. Inicie o Xcode (a versão beta mais recente) sobre o desenvolvimento do Mac.
-2. Selecione **dispositivos** da **janela** menu para abrir a janela de dispositivos: 
+1. Inicie o Xcode (a versão beta mais recente) no Mac de desenvolvimento.
+2. Selecione **dispositivos** no menu **janela** para abrir a janela dispositivos: 
 
-    [![](troubleshooting-images/untrusted02.png "A janela de dispositivos")](troubleshooting-images/untrusted02.png#lightbox)
-3. Sob o **dispositivos** do lado do painel, selecione seu dispositivo, o botão direito do mouse e selecione **Mostrar perfis de provisionamento...** : 
+    [![](troubleshooting-images/untrusted02.png "A janela dispositivos")](troubleshooting-images/untrusted02.png#lightbox)
+3. No painel do lado dos **dispositivos** , selecione seu dispositivo, clique com o botão direito do mouse e selecione **Mostrar perfis de provisionamento...** : 
 
-    [![](troubleshooting-images/untrusted03.png "Perfis de provisionamento SShow")](troubleshooting-images/untrusted03.png#lightbox)
-4. Selecione cada perfil de provisionamento no momento no dispositivo e clique no **-** botão para excluí-lo: 
+    [![](troubleshooting-images/untrusted03.png "Perfis de provisionamento do SShow")](troubleshooting-images/untrusted03.png#lightbox)
+4. Selecione cada perfil de provisionamento atualmente no dispositivo e clique no **-** botão para excluí-lo: 
 
-    [![](troubleshooting-images/untrusted04.png "Excluir um perfil de provisionamento")](troubleshooting-images/untrusted04.png#lightbox)
-5. Dos **Xcode** menu, selecione **preferências...**  e **contas**: 
+    [![](troubleshooting-images/untrusted04.png "Excluindo um perfil de provisionamento")](troubleshooting-images/untrusted04.png#lightbox)
+5. No menu do **Xcode** , selecione **preferências...** e **contas**: 
 
     [![](troubleshooting-images/untrusted05.png "Preferências de conta do Xcode")](troubleshooting-images/untrusted05.png#lightbox)
-6. Clique o **exibir detalhes...**  e clique em de **baixar todos os** botão: 
+6. Clique no botão **Exibir detalhes...** e, em seguida, clique no botão **baixar tudo** : 
 
     [![](troubleshooting-images/untrusted06.png "Baixar todos os perfis")](troubleshooting-images/untrusted06.png#lightbox)
-7. Quando a lista concluiu a atualização, clique no **feito** botão e fechar a janela de preferências.
-8. Remova a versão existente do aplicativo xamarin. IOS que você está tentando testar do dispositivo iOS.
-9. Retorne ao Visual Studio para Mac, siga uma compilação limpa e tente executar novamente o aplicativo no dispositivo.
+7. Quando a atualização da lista for concluída, clique no botão **concluído** e feche a janela preferências.
+8. Remova a versão existente do aplicativo Xamarin. iOS que você estava tentando testar do dispositivo iOS.
+9. Retorne ao Visual Studio para Mac, faça uma compilação limpa e tente executar novamente o aplicativo no dispositivo.
 
-Você terá que parar e reiniciar o Visual Studio para Mac antes de novos perfis de provisionamento carregados pelo Xcode são vistos. Você talvez precise ajustar as **assinatura do pacote iOS** opções para seu aplicativo xamarin. IOS selecionar os novos perfis de provisionamento.
+Talvez seja necessário parar e reiniciar Visual Studio para Mac antes que os novos perfis de provisionamento carregados pelo Xcode sejam vistos. Você também pode precisar ajustar as opções de **assinatura do pacote do IOS** para seu aplicativo Xamarin. Ios para selecionar os novos perfis de provisionamento.
 
-## <a name="launch-screen-issues"></a>Inicie os problemas de tela
+## <a name="launch-screen-issues"></a>Problemas de tela de inicialização
 
-Agora, o iOS 9 impõe os requisitos de tela de inicialização para que a mesma imagem de inicialização não pode ser reutilizada para dar suporte a orientações de interface diferente. Consulte da Apple [UILanchImage referência](https://developer.apple.com/library/prerelease/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/iPhoneOSKeys.html#//apple_ref/doc/uid/TP40009252-SW28) para obter mais informações.
+Agora, o iOS 9 impõe os requisitos da tela de inicialização para que a mesma imagem de inicialização não possa mais ser reutilizada para dar suporte a orientações de interface diferentes. Consulte a [referência do UILanchImage](https://developer.apple.com/library/prerelease/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/iPhoneOSKeys.html#//apple_ref/doc/uid/TP40009252-SW28) da Apple para obter mais informações.
 
-Opcionalmente, você pode usar um arquivo de storyboard para apresentar a tela de inicialização do seu aplicativo em vez de usar um conjunto de **PNG** arquivos de imagem. Isso é agora Apple preferencial apresentar as telas de inicialização. Consulte nosso [Introdução ao Storyboards unificados](~/ios/user-interface/storyboards/unified-storyboards.md) guia para obter mais informações.
+Opcionalmente, você pode usar um arquivo de storyboard para apresentar a tela de inicialização do seu aplicativo em vez de usar um conjunto de arquivos de imagem **. png** . Agora, essa é a maneira preferida da Apple de apresentar telas de inicialização. Consulte nosso guia [de introdução ao storyboards](~/ios/user-interface/storyboards/unified-storyboards.md) unificados para obter mais informações.
 
-Por fim, seu aplicativo deve usar um arquivo de storyboard para sua tela de inicialização e dar suporte a todas as orientações de interface de quatro (retrato, retrato de cabeça para baixo, esquerda paisagem e paisagem direita) para ser considerado para em execução em um Slide sobre painel ou no modo de exibição de divisão. Para obter mais informações sobre as novas capacidades de multitarefa do iOS 9, consulte nosso [multitarefa para iPad](~/ios/platform/multitasking.md) guia.
+Por fim, seu aplicativo deve usar um arquivo de storyboard para sua tela de inicialização e dar suporte a todas as quatro orientações de interface (retrato, retrato de cabeça para baixo, paisagem para a esquerda e paisagem para a direita) a serem consideradas para execução em um slide sobre o painel ou no modo de exibição de divisão. Para saber mais sobre as novas capacidades de multitarefa do iOS 9, consulte nosso guia [multitarefa para iPad](~/ios/platform/multitasking.md) .
 
 ## <a name="nsinternalinconsistencyexception-exception"></a>Exceção NSInternalInconsistencyException
 
-Ao compilar e executar um aplicativo existente do xamarin. IOS para iOS 9, você poderá receber um erro no formulário:
+Ao compilar e executar um aplicativo Xamarin. iOS existente para iOS 9, você pode receber um erro no formato:
 
-> Exceção Objective-C é gerada.  Nome: NSInternalInconsistencyException motivo: Janelas de aplicativos devem ter um controlador de exibição de raiz no final do aplicativo Iniciar
+> Exceção de Objective-C lançada.  Nome: Motivo do NSInternalInconsistencyException: Espera-se que as janelas de aplicativo tenham um controlador de exibição raiz no final da inicialização do aplicativo
 
-Isso é o erro está sendo gerado porque o aplicativo Windows devem ter um controlador de exibição de raiz no final da inicialização do aplicativo e não de seu aplicativo existente.
+Esse erro está sendo gerado porque espera-se que as janelas de aplicativo tenham um controlador de exibição raiz no final da inicialização do aplicativo e seu aplicativo existente não.
 
-Há pelo menos duas soluções possíveis para esse problema:
+Há pelo menos duas soluções alternativas possíveis para esse problema:
 
-1. Atualizar o aplicativo para usar o arquivo de storyboard, em vez de `xib` arquivos para definir sua Interface do usuário. Este requer muito tempo, dependendo do tamanho do seu aplicativo e o conhecimento de como usar o iOS Designer (ou Interface Builder do Xcode) aos storyboards de layout. Para obter mais informações, consulte nosso [Introdução ao Storyboards unificados](~/ios/user-interface/storyboards/unified-storyboards.md) documentação.
-2. Programa de instalação `RootViewController` propriedade da janela do aplicativo no `FinishedLaunching` método na `AppDelegate` classe para apontar para um controlador de exibição na interface de usuário do seu aplicativo.
+1. Atualize o aplicativo para usar o arquivo de `xib` storyboard em vez de arquivos para definir sua interface do usuário. Isso requer muito tempo, dependendo do tamanho do seu aplicativo e do conhecimento de como usar o designer do iOS (ou o Interface Builder do Xcode) para o layout de storyboards. Para obter mais informações, consulte nossa [introdução à documentação de storyboards](~/ios/user-interface/storyboards/unified-storyboards.md) unificados.
+2. A `RootViewController` propriedade de configuração da janela `FinishedLaunching` do aplicativo `AppDelegate` no método na classe para apontar para um controlador de exibição na interface do usuário do seu aplicativo.
 
 ## <a name="when-to-initialize-views-and-view-controllers"></a>Quando inicializar exibições e controladores de exibição
 
-É possível fazer a inicialização do modo de exibição ou controlador de exibição dentro dos construtores que são chamados quando algo é exposto em código gerenciado, mas ele interrompe o design do iOS com xamarin. IOS.
+Com o Xamarin. iOS, é possível tornar a inicialização do controlador View ou View dentro de construtores que são chamados quando algo é exposto em código gerenciado, mas quebra o design do iOS.
 
-Em geral você deve inicializar tudo o que pode retornar a chamada código Objective-C do construtor, pois você não pode ter certeza de quando ele será chamado. Isso também significa que há um melhores locais (outras ctor) ou chamadas para substituir (como Objective-C não tiver eventos) em que essa inicialização deve ser feita.
+Em geral, você não deve inicializar nada que possa chamar o código de Objective-C do Construtor, uma vez que não é possível ter certeza de que ele será chamado. Isso também significa que há um local melhor (outro. ctor) ou chamadas a serem substituídas (já que Objective-C não tem eventos) em que essa inicialização deve ser feita.
 
 ## <a name="related-links"></a>Links relacionados
 
 - [iOS 9 para desenvolvedores](https://developer.apple.com/ios/pre-release/)
-- [O que há de novo no iOS 9.0](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)
-- [Atualizar seus aplicativos xamarin. IOS para iOS9 (vídeo)](https://university.xamarin.com/lightninglectures/Updating-your-XamariniOS-apps-to-iOS9)
+- [O que há de novo no iOS 9,0](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)
+- [Atualizando seus aplicativos Xamarin. iOS para iOS9 (vídeo)](https://university.xamarin.com/lightninglectures/Updating-your-XamariniOS-apps-to-iOS9)

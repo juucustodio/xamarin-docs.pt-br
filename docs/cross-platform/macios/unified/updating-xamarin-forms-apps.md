@@ -6,12 +6,12 @@ ms.assetid: C2F0D1D1-256D-44A4-AAC9-B06A0CB41E70
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: d119d96a3ce8389a71726e1359e064efe1fbb1ae
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: dee3b04630ae9fc94548becdcc294427f9deb433
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68509446"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70199213"
 ---
 # <a name="updating-existing-xamarinforms-apps"></a>Atualizando aplicativos Xamarin. Forms existentes
 
@@ -53,7 +53,7 @@ Clique no projeto do iOS para que ele seja selecionado e escolha **projeto > mig
 Isso irá automaticamente:
 
 - Altere o tipo de projeto para dar suporte à API unificada de 64 bits.
-- Altere a referência de estrutura para **Xamarin. Ios** (substituindo  a referência MonoTouch antiga).
+- Altere a referência de estrutura para **Xamarin. Ios** (substituindo a referência MonoTouch antiga).
 - Altere as referências de namespace no código para remover o `MonoTouch` prefixo.
 - Atualize o arquivo **csproj** para usar os destinos de compilação corretos para o API unificada.
 

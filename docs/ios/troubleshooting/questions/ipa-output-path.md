@@ -7,32 +7,32 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: 8b0686a91f18b41aa8e2e7db071123c0d96723a0
-ms.sourcegitcommit: 32c7cf8b0d00464779e4b0ea43e2fd996632ebe0
+ms.openlocfilehash: 6a51529e5a8c2878e46946608455f409ece9e43a
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68290109"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70200219"
 ---
 # <a name="can-i-change-the-output-path-of-the-ipa-file"></a>Posso alterar o caminho de saída do arquivo IPA?
 
-## <a name="for-cycle-7-and-higher"></a>Para o ciclo de 7 e superior
-Sim, você pode usar destinos personalizados do MSBuild para fazer isso. A opção mais fácil é provavelmente copiar o `.ipa` arquivo após ele ter sido compilado.
+## <a name="for-cycle-7-and-higher"></a>Para o ciclo 7 e superior
+Sim, você pode usar destinos do MSBuild personalizados para conseguir isso. A opção mais fácil é provavelmente copiar o `.ipa` arquivo depois que ele tiver sido compilado.
 
-Essas etapas funcionará para qualquer projeto do iOS que usa o mecanismo de build do MSBuild no Mac ou Windows. (Observação: todos os projetos de API unificada usam o mecanismo de build do MSBuild.)
+Essas etapas funcionarão para qualquer projeto iOS que usa o mecanismo de compilação do MSBuild no Mac ou no Windows. (Observação: todos os projetos de API Unificada usam o mecanismo de compilação do MSBuild.)
 
-1. Abra o `.csproj` do arquivo para o projeto de aplicativo do iOS em um editor de texto e, em seguida, adicione as seguintes linhas ao final (imediatamente antes do fechamento `</Project>` marca):
-    
-    ```
+1. Abra o `.csproj` arquivo para o projeto de aplicativo Ios em um editor de texto e, em seguida, adicione as seguintes linhas no final ( `</Project>` imediatamente antes da marca de fechamento):
+
+    ```xml
     <PropertyGroup>
-           <CreateIpaDependsOn>
-           $(CreateIpaDependsOn);
-            CopyIpa
-           </CreateIpaDependsOn>
+        <CreateIpaDependsOn>
+        $(CreateIpaDependsOn);
+        CopyIpa
+        </CreateIpaDependsOn>
     </PropertyGroup>
     
     <Target Name="CopyIpa"
-        Condition="'$(OutputType)' == 'Exe'
+            Condition="'$(OutputType)' == 'Exe'
             And '$(ComputedPlatform)' == 'iPhone'
             And '$(BuildIpa)' == 'true'">
         <Copy
@@ -42,31 +42,31 @@ Essas etapas funcionará para qualquer projeto do iOS que usa o mecanismo de bui
     </Target>
     ```
 
-2. Defina o DestinationFolder para a pasta de saída desejada. Como de costume, você pode usar propriedades do MSBuild (como $(OutputPath)) dentro desse argumento se desejar.
+2. Defina o DestinationFolder para a pasta de saída desejada. Como de costume, você pode usar as propriedades do MSBuild (como $ (OutputPath)) nesse argumento, se desejar.
 
 ## <a name="notes"></a>Observações
-- O `CreateIpaDependsOn` propriedade está definida no `Xamarin.iOS.Common.targets` arquivo que é parte do xamarin. IOS. Ele se comporta conforme descrito na [substituindo destinos predefinidos](https://docs.microsoft.com/visualstudio/msbuild/how-to-extend-the-visual-studio-build-process#overriding-predefined-targets) seção do artigo [como: Estender o processo de compilação do Visual Studio](https://docs.microsoft.com/visualstudio/msbuild/how-to-extend-the-visual-studio-build-process).
+- A `CreateIpaDependsOn` propriedade é definida `Xamarin.iOS.Common.targets` no arquivo que faz parte do Xamarin. Ios. Ele se comporta conforme descrito na seção [substituindo destinos](https://docs.microsoft.com/visualstudio/msbuild/how-to-extend-the-visual-studio-build-process#overriding-predefined-targets) predefinidos do artigo [como: Estenda o processo](https://docs.microsoft.com/visualstudio/msbuild/how-to-extend-the-visual-studio-build-process)de compilação do Visual Studio.
 
-- Você pode usar um **mover** tarefa em vez de uma **cópia** tarefa se a sua preferência. Se você escolher a opção e você estiver compilando no Windows, você precisará usar o nome totalmente qualificado tarefas `<Microsoft.Build.Tasks.Move>` para evitar ambiguidade com o XamarinVS as tarefas de compilação.
+- Você pode usar uma tarefa de **movimentação** em vez de uma tarefa de **cópia** , se preferir. Se você escolher essa opção e estiver criando no Windows, será necessário usar o nome `<Microsoft.Build.Tasks.Move>` de tarefa totalmente qualificado para evitar uma ambiguidade com as tarefas de compilação XamarinVS.
 
-## <a name="for-versions-before-xamarin-studio-6005174--xamarin-for-visual-studio-410530"></a>Para versões anteriores do Xamarin Studio 6.0.0.5174 | Xamarin para Visual Studio 4.1.0.530
+## <a name="for-versions-before-xamarin-studio-6005174--xamarin-for-visual-studio-410530"></a>Para versões anteriores a Xamarin Studio 6.0.0.5174 | Xamarin para Visual Studio 4.1.0.530
 
-Sim, você pode usar destinos personalizados do MSBuild para fazer isso. A opção mais fácil é provavelmente copiar o `.ipa` arquivo após ele ter sido compilado.
+Sim, você pode usar destinos do MSBuild personalizados para conseguir isso. A opção mais fácil é provavelmente copiar o `.ipa` arquivo depois que ele tiver sido compilado.
 
-Essas etapas funcionará para qualquer projeto do iOS que usa o mecanismo de build do MSBuild no Mac ou Windows. (Observação: todos os projetos de API unificada usam o mecanismo de build do MSBuild.)
+Essas etapas funcionarão para qualquer projeto iOS que usa o mecanismo de compilação do MSBuild no Mac ou no Windows. (Observação: todos os projetos de API Unificada usam o mecanismo de compilação do MSBuild.)
 
-1. Abra o `.csproj` do arquivo para o projeto de aplicativo do iOS em um editor de texto e, em seguida, adicione as seguintes linhas ao final (imediatamente antes do fechamento `</Project>` marca).
+1. Abra o `.csproj` arquivo para o projeto de aplicativo Ios em um editor de texto e, em seguida, adicione as seguintes linhas no final ( `</Project>` imediatamente antes da marca de fechamento).
 
-    ```csharp
+    ```xml
     <PropertyGroup>
         <CreateIpaDependsOn>
             $(CreateIpaDependsOn);
             CopyIpa
         </CreateIpaDependsOn>
     </PropertyGroup>
-    
+
     <Target Name="CopyIpa"
-        Condition="'$(OutputType)' == 'Exe'
+            Condition="'$(OutputType)' == 'Exe'
             And '$(ComputedPlatform)' == 'iPhone'
             And '$(BuildIpa)' == 'true'">
         <Copy
@@ -76,9 +76,9 @@ Essas etapas funcionará para qualquer projeto do iOS que usa o mecanismo de bui
     </Target>
     ```
 
-2. Defina o `DestinationFolder` para a pasta de saída desejada. Como de costume, você pode usar as propriedades do MSBuild (como `$(OutputPath)`) dentro desse argumento se desejar.
+2. Defina o `DestinationFolder` para a pasta de saída desejada. Como de costume, você pode usar as propriedades `$(OutputPath)`do MSBuild (como) nesse argumento, se desejar.
 
 ## <a name="notes"></a>Observações
-- O `CreateIpaDependsOn` propriedade está definida no `Xamarin.iOS.Common.targets` arquivo que é parte do xamarin. IOS. t se comporta conforme descrito na [substituindo destinos predefinidos](https://docs.microsoft.com/visualstudio/msbuild/how-to-extend-the-visual-studio-build-process#overriding-predefined-targets) seção do artigo [como: Estender o processo de compilação do Visual Studio](https://docs.microsoft.com/visualstudio/msbuild/how-to-extend-the-visual-studio-build-process).
+- A `CreateIpaDependsOn` propriedade é definida `Xamarin.iOS.Common.targets` no arquivo que faz parte do Xamarin. Ios. t se comporta conforme descrito na seção [substituindo destinos](https://docs.microsoft.com/visualstudio/msbuild/how-to-extend-the-visual-studio-build-process#overriding-predefined-targets) predefinidos do artigo [como: Estenda o processo](https://docs.microsoft.com/visualstudio/msbuild/how-to-extend-the-visual-studio-build-process)de compilação do Visual Studio.
 
-- Você pode usar um **mover** tarefa em vez de uma **cópia** tarefa se a sua preferência. Se você escolher a opção e você estiver compilando no Windows, você precisará usar o nome totalmente qualificado tarefas `<Microsoft.Build.Tasks.Move>` para evitar ambiguidade com o XamarinVS as tarefas de compilação.
+- Você pode usar uma tarefa de **movimentação** em vez de uma tarefa de **cópia** , se preferir. Se você escolher essa opção e estiver criando no Windows, será necessário usar o nome `<Microsoft.Build.Tasks.Move>` de tarefa totalmente qualificado para evitar uma ambiguidade com as tarefas de compilação XamarinVS.

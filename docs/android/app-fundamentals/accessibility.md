@@ -6,24 +6,24 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/28/2018
-ms.openlocfilehash: d004b753c89f3995e8dc511877bd115a894396fc
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: f32f32e56ff4869c003b142f9ad67b0e54cfa353
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61018614"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70197684"
 ---
 # <a name="accessibility-on-android"></a>Acessibilidade no Android
 
-Esta página descreve como usar APIs de acessibilidade do Android para criar aplicativos de acordo com o [lista de verificação de acessibilidade](~/cross-platform/app-fundamentals/accessibility.md).
-Consulte a [iOS acessibilidade](~/ios/app-fundamentals/accessibility.md) e [acessibilidade dos X](~/mac/app-fundamentals/accessibility.md) páginas para outras APIs da plataforma.
+Esta página descreve como usar as APIs de acessibilidade do Android para compilar aplicativos de acordo com a [lista de verificação de acessibilidade](~/cross-platform/app-fundamentals/accessibility.md).
+Consulte as páginas de acessibilidade do [Ios](~/ios/app-fundamentals/accessibility.md) e de acessibilidade do [os X](~/mac/app-fundamentals/accessibility.md) para outras APIs de plataforma.
 
 
-## <a name="describing-ui-elements"></a>Que descreve os elementos de interface do usuário
+## <a name="describing-ui-elements"></a>Descrevendo elementos da interface do usuário
 
-O Android fornece um `ContentDescription` propriedade que é usada por APIs de leitura de tela para fornecer uma descrição acessível da finalidade do controle.
+O Android fornece `ContentDescription` uma propriedade usada por APIs de leitura de tela para fornecer uma descrição acessível da finalidade do controle.
 
-A descrição do conteúdo pode ser definida no C# ou no arquivo de layout AXML.
+A descrição do conteúdo pode ser definida em C# ou no arquivo de layout AXML.
 
 **C#**
 
@@ -33,9 +33,9 @@ A descrição pode ser definida no código para qualquer cadeia de caracteres (o
 saveButton.ContentDescription = "Save data";
 ```
 
-**Layout AXML**
+**Layout de AXML**
 
-No XML de layouts de usam o `android:contentDescription` atributo:
+Em layouts XML, use `android:contentDescription` o atributo:
 
 ```xml
 <ImageButton
@@ -44,22 +44,22 @@ No XML de layouts de usam o `android:contentDescription` atributo:
     android:contentDescription="Save data" />
 ```
 
-### <a name="use-hint-for-textview"></a>Use a dica para TextView
+### <a name="use-hint-for-textview"></a>Usar dica para TextView
 
-Para `EditText` e `TextView` controles de entrada de dados, use o `Hint` propriedade para fornecer uma descrição de quais entrada é esperada (em vez de `ContentDescription`).
-Quando algum texto foi inserido, o próprio texto serão "lidos", em vez da dica.
+Para `EditText` controles `TextView` e para entrada de dados, use `Hint` a propriedade para fornecer uma descrição de qual entrada é esperada ( `ContentDescription`em vez de).
+Quando algum texto tiver sido inserido, o texto em si será "lido" em vez da dica.
 
 **C#**
 
-Defina o `Hint` propriedade no código:
+Defina a `Hint` Propriedade no código:
 
 ```csharp
 someText.Hint = "Enter some text"; // displays (and is "read") when control is empty
 ```
 
-**Layout AXML**
+**Layout de AXML**
 
-No XML de arquivos de layout usam o `android:hint` atributo:
+Em arquivos de layout XML, `android:hint` use o atributo:
 
 ```xml
 <EditText
@@ -68,13 +68,13 @@ No XML de arquivos de layout usam o `android:hint` atributo:
 ```
 
 
-### <a name="labelfor-links-input-fields-with-labels"></a>Campos com rótulos de entrada de LabelFor links
+### <a name="labelfor-links-input-fields-with-labels"></a>LabelFor vincula campos de entrada com rótulos
 
-Para associar um rótulo com um controle de entrada de dados, use o `LabelFor` propriedade
+Para associar um rótulo a um controle de entrada de dados, `LabelFor` use a propriedade para
 
 **C#**
 
-No C#, defina o `LabelFor` propriedade para a ID do recurso de controle que descreve este conteúdo (normalmente essa propriedade é definida em um rótulo e faz referência a um outro controle de entrada):
+No C#, defina a `LabelFor` propriedade para a ID de recurso do controle que este conteúdo descreve (normalmente essa propriedade é definida em um rótulo e faz referência a algum outro controle de entrada):
 
 ```csharp
 EditText edit = FindViewById<EditText> (Resource.Id.editFirstName);
@@ -82,9 +82,9 @@ TextView tv = FindViewById<TextView> (Resource.Id.labelFirstName);
 tv.LabelFor = Resource.Id.editFirstName;
 ```
 
-**Layout AXML**
+**Layout de AXML**
 
-No uso do XML de layout a `android:labelFor` propriedade a referenciar o identificador do controle para outro:
+Em XML de layout, `android:labelFor` use a propriedade para fazer referência ao identificador de outro controle:
 
 ```xml
 <TextView
@@ -96,11 +96,11 @@ No uso do XML de layout a `android:labelFor` propriedade a referenciar o identif
     android:hint="Enter some text" />
 ```
 
-### <a name="announce-for-accessibility"></a>Anunciar para acessibilidade
+### <a name="announce-for-accessibility"></a>Anúncio para acessibilidade
 
-Use o `AnnounceForAccessibility` controle para se comunicar uma alteração de status ou evento aos usuários quando é habilitado na acessibilidade de exibição do método em qualquer um. Esse método não é necessário para a maioria das operações em que a narração interna fornece comentários suficientes, mas deve ser usada, quais informações adicionais pode ser útil para o usuário.
+Use o `AnnounceForAccessibility` método em qualquer controle de exibição para comunicar um evento ou uma alteração de status para os usuários quando a acessibilidade estiver habilitada. Esse método não é necessário para a maioria das operações em que a narração interna fornece comentários suficientes, mas deve ser usada onde informações adicionais seriam úteis para o usuário.
 
-O código a seguir mostra uma chamada de exemplo simples `AnnounceForAccessibility`:
+O código a seguir mostra um exemplo simples `AnnounceForAccessibility`chamando:
 
 ```csharp
 button.Click += delegate {
@@ -111,30 +111,30 @@ button.Click += delegate {
 
 ## <a name="changing-focus-settings"></a>Alterando as configurações de foco
 
-Navegação acessível se baseia em controles que têm o foco para ajudar o usuário a compreender quais operações estão disponíveis. O Android fornece um `Focusable` propriedade que pode marcar controles como especificamente capaz de receber o foco durante a navegação.
+A navegação acessível depende de controles com foco para ajudar o usuário a entender quais operações estão disponíveis. O Android fornece `Focusable` uma propriedade que pode marcar controles como especificamente capazes de receber o foco durante a navegação.
 
 **C#**
 
-Para impedir que um controle ganhando o foco com C#, defina o `Focusable` propriedade a ser `false`:
+Para impedir que um controle fique em foco C#, defina a `Focusable` Propriedade como `false`:
 
 ```csharp
 label.Focusable = false;
 ```
 
-**Layout AXML**
+**Layout de AXML**
 
-Conjunto de arquivos do XML no layout de `android:focusable` atributo:
+Em arquivos XML de layout, `android:focusable` defina o atributo:
 
 ```xml
 <android:focusable="false" />
 ```
 
-Você também pode controlar a ordem de foco com o `nextFocusDown`, `nextFocusLeft`, `nextFocusRight`, `nextFocusUp` atributos, normalmente é definidos no layout AXML. Use esses atributos para garantir que o usuário pode navegar facilmente por meio de controles na tela.
+Você também pode controlar a ordem de foco `nextFocusDown`com `nextFocusLeft`os `nextFocusRight` `nextFocusUp` atributos,,, normalmente definidos no layout AXML. Use esses atributos para garantir que o usuário possa navegar facilmente pelos controles na tela.
 
 
 ## <a name="accessibility-and-localization"></a>Acessibilidade e localização
 
-Nos exemplos acima são a descrição da dica e o conteúdo definido diretamente como o valor de exibição. É preferível usar valores em uma **strings. XML** arquivo, como este:
+Nos exemplos acima, a dica e a descrição do conteúdo são definidas diretamente para o valor de exibição. É preferível usar valores em um arquivo **Strings. xml** , como este:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -144,11 +144,11 @@ Nos exemplos acima são a descrição da dica e o conteúdo definido diretamente
 </resources>
 ```
 
-Usando o texto de um arquivo de cadeias de caracteres é mostrado abaixo em C# e arquivos de layout AXML:
+O uso de texto de um arquivo de cadeia de C# caracteres é mostrado abaixo nos arquivos de layout do e AXML:
 
 **C#**
 
-Em vez de usar literais de cadeia de caracteres no código, pesquisar valores traduzidos de arquivos de cadeias de caracteres com `Resources.GetText`:
+Em vez de usar literais de cadeia de caracteres no código, pesquise valores traduzidos `Resources.GetText`de arquivos de cadeias de caracteres com:
 
 ```csharp
 someText.Hint = Resources.GetText (Resource.String.enter_info);
@@ -157,7 +157,7 @@ saveButton.ContentDescription = Resources.GetText (Resource.String.save_info);
 
 **AXML**
 
-No XML de layout, como atributos de acessibilidade `hint` e `contentDescription` pode ser definido como um identificador de cadeia de caracteres:
+Em atributos de acessibilidade XML de `hint` layout `contentDescription` como e podem ser definidos como um identificador de cadeia de caracteres:
 
 ```xml
 <TextView
@@ -169,14 +169,14 @@ No XML de layout, como atributos de acessibilidade `hint` e `contentDescription`
     android:contentDescription="@string/save_info" />
 ```
 
-O benefício de armazenar texto em um arquivo separado é que várias traduções de idioma do arquivo podem ser fornecidas em seu aplicativo. Consulte a [guia de localização Android](~/android/app-fundamentals/localization.md) para saber como adicionar arquivos de cadeia de caracteres localizada para um projeto de aplicativo.
+O benefício de armazenar texto em um arquivo separado é que várias traduções de idioma do arquivo podem ser fornecidas em seu aplicativo. Consulte o [Guia de localização do Android](~/android/app-fundamentals/localization.md) para saber como adicionar arquivos de cadeia de caracteres localizados a um projeto de aplicativo.
 
 
 ## <a name="testing-accessibility"></a>Testando a acessibilidade
 
-Siga [essas etapas](https://developer.android.com/training/accessibility/testing.html#how-to) para habilitar o TalkBack e explorar por toque testar a acessibilidade em dispositivos Android.
+Siga [estas etapas](https://developer.android.com/training/accessibility/testing.html#how-to) para habilitar o Talkback e explorar por toque para testar a acessibilidade em dispositivos Android.
 
-Talvez você precise instalar [TalkBack](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback) no Google Play, se ele não aparecer na **Configurações > acessibilidade**.
+Talvez seja necessário instalar o [Talkback](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback) de Google Play se ele não aparecer em **Configurações > acessibilidade**.
 
 
 ## <a name="related-links"></a>Links relacionados

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: f7290d8284f90db4f53a38dc89f7b5a1a10213c0
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 376f046769e27586d9611d634aef89811c7b3be8
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655530"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70200377"
 ---
 # <a name="walkthrough---using-local-notifications-in-xamarinios"></a>Walkthrough – usando notificações locais no Xamarin. iOS
 
@@ -62,29 +62,28 @@ Permita criar um aplicativo simples que mostrará notificações locais em açã
 
     ```csharp
     if (UIDevice.CurrentDevice.CheckSystemVersion (8, 0)) {
-            var notificationSettings = UIUserNotificationSettings.GetSettingsForTypes (
-                UIUserNotificationType.Alert | UIUserNotificationType.Badge | UIUserNotificationType.Sound, null
-            );
+        var notificationSettings = UIUserNotificationSettings.GetSettingsForTypes (
+            UIUserNotificationType.Alert | UIUserNotificationType.Badge | UIUserNotificationType.Sound, null
+        );
 
-            application.RegisterUserNotificationSettings (notificationSettings);
-        }
+        application.RegisterUserNotificationSettings (notificationSettings);
+    }
     ```
 
 1. Ainda em `AppDelegate.cs`, adicione o seguinte método que será chamado quando uma notificação for recebida:
 
     ```csharp
     public override void ReceivedLocalNotification(UIApplication application, UILocalNotification notification)
-            {
-                // show an alert
-                UIAlertController okayAlertController = UIAlertController.Create(notification.AlertAction, notification.AlertBody, UIAlertControllerStyle.Alert);
-                okayAlertController.AddAction(UIAlertAction.Create("OK", UIAlertActionStyle.Default, null));
+    {
+        // show an alert
+        UIAlertController okayAlertController = UIAlertController.Create(notification.AlertAction, notification.AlertBody, UIAlertControllerStyle.Alert);
+        okayAlertController.AddAction(UIAlertAction.Create("OK", UIAlertActionStyle.Default, null));
 
-                UIApplication.SharedApplication.KeyWindow.RootViewController.PresentViewController(okayAlertController, true, null);
+        UIApplication.SharedApplication.KeyWindow.RootViewController.PresentViewController(okayAlertController, true, null);
 
-                // reset our badge
-                UIApplication.SharedApplication.ApplicationIconBadgeNumber = 0;
-            }
-
+        // reset our badge
+        UIApplication.SharedApplication.ApplicationIconBadgeNumber = 0;
+    }
     ```
 
 1. Precisamos lidar com o caso em que a notificação foi iniciada devido a uma notificação local. Edite o `FinishedLaunching` método `AppDelegate` no para incluir o seguinte trecho de código:
@@ -111,7 +110,6 @@ Permita criar um aplicativo simples que mostrará notificações locais em açã
             }
         }
     }
-
     ```
 
 1. Por fim, execute o aplicativo. No iOS 8, você será solicitado a permitir notificações. Clique em **OK** e, em seguida, clique no botão **Adicionar notificação** . Após uma breve pausa, você deverá ver a caixa de diálogo de alerta, conforme mostrado nas capturas de tela a seguir:

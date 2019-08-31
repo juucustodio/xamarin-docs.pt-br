@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 236a64736bc5f92537c858b9cdf938410cf4b0f4
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 64b114cad16095a2afd80b690a4654b91b2aa203
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68649655"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70199941"
 ---
 # <a name="working-with-tvos-tab-bar-controllers-in-xamarin"></a>Trabalhando com controladores de barra de guias tvOS no Xamarin
 
@@ -59,7 +59,7 @@ Cada categoria (guia) na barra de guias é representada por um item da barra de`
 A maneira mais fácil de trabalhar com barras de guias em um aplicativo Xamarin. tvOS é adicioná-las à interface do usuário do aplicativo usando o designer do iOS.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
-    
+
 1. Inicie um novo aplicativo Xamarin. tvOS e selecione**aplicativo com guias**do**aplicativo** >  **tvOS** > : 
 
     [![](tab-bars-images/tab02.png "Selecionar aplicativo com guias")](tab-bars-images/tab02.png#lightbox)
@@ -84,7 +84,7 @@ A maneira mais fácil de trabalhar com barras de guias em um aplicativo Xamarin.
 1. Salve as alterações.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
-    
+
 1. Inicie um novo aplicativo Xamarin. tvOS e selecione**aplicativo com guias**do**aplicativo** >  **tvOS** > : 
 
     [![](tab-bars-images/tab02vs.png "Selecionar aplicativo com guias")](tab-bars-images/tab02vs.png#lightbox)
@@ -107,7 +107,7 @@ A maneira mais fácil de trabalhar com barras de guias em um aplicativo Xamarin.
 1. Expor todos os eventos necessários para trabalhar com seus controles de C# interface do usuário no código.
 1. Nomeie os controles de interface do usuário que você deseja C# expor no código.
 1. Salve as alterações.
-    
+
 -----
 
 > [!IMPORTANT]
