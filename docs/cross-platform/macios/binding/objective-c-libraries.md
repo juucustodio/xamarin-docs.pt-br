@@ -6,12 +6,12 @@ ms.assetid: 8A832A76-A770-1A7C-24BA-B3E6F57617A0
 author: conceptdev
 ms.author: crdun
 ms.date: 03/06/2018
-ms.openlocfilehash: 667a3726a2d214c9e33e20a73f629c9ca532eab1
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 36b5ace881ba8f7fb45fef9d0350ffca67e0c951
+ms.sourcegitcommit: 21182d07d4bbddc26cd36f1c5b86b79011f6984a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70120472"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70169264"
 ---
 # <a name="binding-objective-c-libraries"></a>Associando bibliotecas de Objective-C
 
@@ -325,7 +325,7 @@ IntPtr Constructor (CGRect frame);
 
 ### <a name="binding-protocols"></a>Protocolos de associação
 
-Conforme descrito no documento de design de API, na seção [discutindo modelos e protocolos](~/ios/internals/api-design/index.md#Models), o Xamarin. Ios mapeia os protocolos Objective-C em classes que foram sinalizadas com o[`[Model]`](~/cross-platform/macios/binding/binding-types-reference.md#ModelAttribute)
+Conforme descrito no documento de design de API, na seção [discutindo modelos e protocolos](~/ios/internals/api-design/index.md#models), o Xamarin. Ios mapeia os protocolos Objective-C em classes que foram sinalizadas com o[`[Model]`](~/cross-platform/macios/binding/binding-types-reference.md#ModelAttribute)
 Attribute. Normalmente, isso é usado ao implementar classes delegate Objective-C.
 
 A grande diferença entre uma classe vinculada regular e uma classe delegate é que a classe delegate pode ter um ou mais métodos opcionais.
@@ -1404,4 +1404,3 @@ Historicamente, precisávamos copiar o protocolo para cada implementação, mas 
 ## <a name="related-links"></a>Links relacionados
 
 - [Exemplo de associação](https://docs.microsoft.com/samples/xamarin/ios-samples/bindingsample/)
- 
