@@ -7,19 +7,19 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 9fcd4820b5e22254356250ef2d26714dc32a59f4
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 5c818cac3b26e94710a64938a80690b8d4946320
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655215"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70200206"
 ---
 # <a name="ios-security-and-privacy-features"></a>Recursos de privacidade e segurança do iOS
 
 _Este artigo aborda como trabalhar com segurança e privacidade no iOS e como eles afetam um aplicativo Xamarin. iOS._
 
 A Apple fez vários aprimoramentos na segurança e na privacidade no iOS 10 (e superior) que ajudarão o desenvolvedor a melhorar a segurança de seus aplicativos e garantir a privacidade do usuário final. Este artigo abordará a implementação desses recursos em um aplicativo Xamarin. iOS.
-    
+
 <a name="General-Enhancements" />
 
 ## <a name="general-enhancements"></a>Aprimoramentos gerais
@@ -51,9 +51,9 @@ As seguintes chaves relacionadas à privacidade estão disponíveis:
 - **Privacidade – descrição do uso da atualização de integridade** (`NSHealthUpdateUsageDescription`) – Permite que o desenvolvedor descreva por que o aplicativo deseja editar os dados de integridade do usuário. Para obter mais informações, consulte a [referência de classe HKHealthStore](https://developer.apple.com/reference/healthkit/hkhealthstore)da Apple.
 - **Privacidade – descrição do uso do homekit** (`NSHomeKitUsageDescription`) – Permite que o desenvolvedor descreva por que o aplicativo deseja acessar os dados de configuração do homekit do usuário.
 - **Privacidade – descrição de uso de sempre local** (`NSLocationAlwaysUsageDescription`) – Permite que o desenvolvedor descreva por que o aplicativo deseja sempre ter acesso ao local do usuário.
-- Preterido **Privacidade – descrição do uso do local** (`NSLocationUsageDescription`) – Permite que o desenvolvedor descreva por que o aplicativo deseja acessar o local do usuário. *ANOTAÇÕES Essa chave foi preterida no iOS 8 (e superior). Use `NSLocationAlwaysUsageDescription` ou`NSLocationWhenInUseUsageDescription` em vez disso.*
+- Preterido **Privacidade – descrição do uso do local** (`NSLocationUsageDescription`) – Permite que o desenvolvedor descreva por que o aplicativo deseja acessar o local do usuário. *OBSERVAÇÃO: Essa chave foi preterida no iOS 8 (e superior). Use `NSLocationAlwaysUsageDescription` ou`NSLocationWhenInUseUsageDescription` em vez disso.*
 - **Privacidade – localização na descrição de uso em uso** (`NSLocationWhenInUseUsageDescription`) – Permite que o desenvolvedor descreva por que o aplicativo deseja acessar o local do usuário enquanto ele está em execução.
-- Preterido **Privacidade – descrição do uso da biblioteca de mídia** – permite que o desenvolvedor descreva por que o aplicativo deseja acessar a biblioteca de mídia do usuário. *ANOTAÇÕES Essa chave foi preterida no iOS 8 (e superior). Use `NSAppleMusicUsageDescription` em vez disso.*
+- Preterido **Privacidade – descrição do uso da biblioteca de mídia** – permite que o desenvolvedor descreva por que o aplicativo deseja acessar a biblioteca de mídia do usuário. *OBSERVAÇÃO: Essa chave foi preterida no iOS 8 (e superior). Use `NSAppleMusicUsageDescription` em vez disso.*
 - **Privacidade – descrição do uso do microfone** (`NSMicrophoneUsageDescription`) – Permite que o desenvolvedor descreva por que o aplicativo deseja acessar o microfone dos dispositivos.
 - **Privacidade – descrição do uso de movimento** (`NSMotionUsageDescription`) – Permite que o desenvolvedor descreva por que o aplicativo deseja acessar o acelerômetro do dispositivo.
 - **Privacidade – descrição de uso da biblioteca de fotos** (`NSPhotoLibraryUsageDescription`) – Permite que o desenvolvedor descreva por que o aplicativo deseja acessar a biblioteca de fotos do usuário.
@@ -70,24 +70,24 @@ Para obter mais informações sobre como trabalhar com chaves **info. plist** , 
 
 Veja o exemplo a seguir de como acessar homekit no Ios 10 (e superior), o desenvolvedor precisará adicionar `NSHomeKitUsageDescription` a chave ao arquivo **info. plist** do aplicativo e fornecer uma cadeia de caracteres declarando por que o aplicativo deseja acessar o banco de dados homekit do usuário. Essa cadeia de caracteres será apresentada ao usuário na primeira vez em que executar o aplicativo:
 
-![Um alerta de exemplo do NSHomeKitUsageDescription](security-privacy-images/info01.png "Um alerta de exemplo do NSHomeKitUsageDescription")
+![Um alerta de exemplo do NSHomeKitUsageDescription] (security-privacy-images/info01.png "Um alerta de exemplo do NSHomeKitUsageDescription")
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 O Xamarin. iOS para Visual Studio atualmente não oferece suporte à edição das chaves de privacidade **info. plist** de dentro do editor de manifesto do IOS padrão. Em vez disso, você precisará usar o editor do PList genérico, portanto, faça o seguinte:
 
-1. Clique com o botão direito do mouse no arquivo **info. plist** na **Gerenciador de soluções** e selecione **abrir com...** .
+1. Clique com o botão direito do mouse no arquivo **info. plist** na **Gerenciador de soluções** e selecione **abrir com...**.
 2. Selecione o **Editor do PList genérico** na lista de programas para abrir o arquivo e clique em **OK**.
 
-    ![Selecione o editor do PList genérico](security-privacy-images/InfoEditorSelectionVs.png "Selecione o editor do PList genérico")
+    ![Selecione o editor do PList genérico] (security-privacy-images/InfoEditorSelectionVs.png "Selecione o editor do PList genérico")
 3. Clique no **+** botão na última linha no editor para adicionar uma nova entrada à lista. Isso será chamado de "propriedade personalizada", com o tipo definido como `String` e um valor vazio.
 4. Clique no nome da propriedade e uma lista suspensa será exibida.
 5. Na lista suspensa, selecione uma chave de privacidade (como **privacidade – descrição do uso do homekit**): 
 
-    ![Selecione uma chave de privacidade](security-privacy-images/InfoPListEditorSelectKey.png "Selecione uma chave de privacidade")
+    ![Selecione uma chave de privacidade] (security-privacy-images/InfoPListEditorSelectKey.png "Selecione uma chave de privacidade")
 6. Insira uma descrição na coluna valor para o motivo pelo qual o aplicativo deseja acessar o recurso ou as informações de usuário determinadas: 
 
-    ![Insira uma descrição](security-privacy-images/InfoPListSetValue.png "Insira uma descrição")
+    ![Insira uma descrição] (security-privacy-images/InfoPListSetValue.png "Insira uma descrição")
 7. Salve as alterações no arquivo.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
@@ -99,10 +99,10 @@ Para definir qualquer uma das chaves de privacidade, faça o seguinte:
 3. Adicione uma nova **entrada** à lista.
 4. Na lista suspensa, selecione uma chave de privacidade (como **privacidade – descrição do uso do homekit**): 
 
-    ![Selecione uma chave de privacidade](security-privacy-images/info02.png "Selecione uma chave de privacidade")
+    ![Selecione uma chave de privacidade] (security-privacy-images/info02.png "Selecione uma chave de privacidade")
 5. Insira uma descrição para o motivo pelo qual o aplicativo deseja acessar o recurso ou as informações do usuário fornecidas: 
 
-    ![Insira uma descrição](security-privacy-images/info03.png "Insira uma descrição")
+    ![Insira uma descrição] (security-privacy-images/info03.png "Insira uma descrição")
 6. Salve as alterações no arquivo.
 
 -----
