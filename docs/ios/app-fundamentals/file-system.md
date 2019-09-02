@@ -4,15 +4,15 @@ description: Este documento descreve como trabalhar com o sistema de arquivos no
 ms.prod: xamarin
 ms.assetid: 37DF2F38-901E-8F8E-269A-5EE0CCD28C08
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 11/12/2018
-ms.openlocfilehash: e52f9abb31090f3acc361eb5a3f9ae2e12600b36
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: daa9625ccbac3661d3678889d4efd6319e0bd424
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68653523"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70198135"
 ---
 # <a name="file-system-access-in-xamarinios"></a>Acesso ao sistema de arquivos no Xamarin. iOS
 
@@ -292,7 +292,7 @@ O backup de uma grande quantidade de dados pode levar muito tempo. Se você deci
 
 A Apple introduziu a funcionalidade de *backup do icloud* com iOS 5. Quando o backup do icloud está habilitado, todos os arquivos no diretório base do aplicativo (excluindo os diretórios que normalmente não são incluídos no backup, por exemplo, o `Caches`pacote de `tmp`aplicativo, e) são submetidos a backup em servidores icloud. Esse recurso fornece ao usuário um backup completo caso seu dispositivo seja perdido, roubado ou danificado.
 
-Como o iCloud fornece apenas 5 GB de espaço "livre" para cada usuário e para evitar o uso desnecessário de largura de banda, a Apple espera que os aplicativos apenas faça backup de dados essenciais gerados pelo usuário. Para obedecer às diretrizes de armazenamento de dados do iOS, você deve limitar a quantidade de dados que são submetidos a backup ao aderir aos seguintes itens:
+Como o iCloud fornece apenas 5 GB de espaço livre para cada usuário e para evitar o uso desnecessário de largura de banda, a Apple espera que os aplicativos apenas faça backup de dados essenciais gerados pelo usuário. Para obedecer às diretrizes de armazenamento de dados do iOS, você deve limitar a quantidade de dados que são submetidos a backup ao aderir aos seguintes itens:
 
 - Armazene somente dados gerados pelo usuário ou dados que não podem ser recriados, no diretório documentos (cujo backup é feito).
 - Armazene quaisquer outros dados que possam ser facilmente recriados ou rebaixados `Library/Caches` no `tmp` ou no (cujo backup não é feito e pode ser ' limpo ').
