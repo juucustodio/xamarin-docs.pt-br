@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 8379b9c9575c5a4f24f6c35c37cf8682e53b78ec
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 5c697ebc4621fa8287bd001bcc4b44bb23fc163e
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70121135"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227247"
 ---
 # <a name="sandboxing-a-xamarinmac-app"></a>Área restrita de um aplicativo Xamarin. Mac
 
@@ -68,24 +68,24 @@ Verificaremos se o aplicativo está na verdade em área restrita e saiba como so
 Vamos fazer o seguinte para criar nosso projeto de exemplo:
 
 1. Inicie o Visual Studio para Mac e clique na **nova solução..** .
-2. Na caixa de diálogo **novo projeto** , selecione aplicativo >  **Mac** > **Cocoa aplicativo**: 
+2. Na caixa de diálogo **novo projeto** , selecione aplicativo >  **Mac** > **Cocoa aplicativo**:
 
     [![Criando um novo aplicativo Cocoa](sandboxing-images/sample01.png "Criando um novo aplicativo Cocoa")](sandboxing-images/sample01-large.png#lightbox)
-3. Clique no botão **Avançar** , insira `MacSandbox` para o nome do projeto e clique no botão **criar** : 
+3. Clique no botão **Avançar** , insira `MacSandbox` para o nome do projeto e clique no botão **criar** :
 
     [![Inserindo o nome do aplicativo](sandboxing-images/sample02.png "Inserindo o nome do aplicativo")](sandboxing-images/sample02-large.png#lightbox)
-4. No **painel de soluções**, clique duas vezes no arquivo **Main. Storyboard** para abri-lo para edição no Xcode: 
+4. No **painel de soluções**, clique duas vezes no arquivo **Main. Storyboard** para abri-lo para edição no Xcode:
 
     [![Editando o storyboard principal](sandboxing-images/sample03.png "Editando o storyboard principal")](sandboxing-images/sample03-large.png#lightbox)
-5. Arraste uma **exibição da Web** para a janela, dimensione-a para preencher a área de conteúdo e defina-a para aumentar e reduzir com a janela: 
+5. Arraste uma **exibição da Web** para a janela, dimensione-a para preencher a área de conteúdo e defina-a para aumentar e reduzir com a janela:
 
     [![Adicionando uma exibição da Web](sandboxing-images/sample04.png "Adicionando uma exibição da Web")](sandboxing-images/sample04-large.png#lightbox)
-6. Crie uma tomada para a exibição da Web `webView`chamada: 
+6. Crie uma tomada para a exibição da Web `webView`chamada:
 
     [![Criando uma nova tomada](sandboxing-images/sample05.png "Criando uma nova tomada")](sandboxing-images/sample05-large.png#lightbox)
 7. Volte para Visual Studio para Mac e clique duas vezes no arquivo **ViewController.cs** no **painel de soluções** para abri-lo para edição.
 8. Adicione a seguinte instrução Using:`using WebKit;`
-9. Faça com `ViewDidLoad` que o método se pareça com o seguinte: 
+9. Faça com `ViewDidLoad` que o método se pareça com o seguinte:
 
     ```csharp
     public override void AwakeFromNib ()
@@ -109,34 +109,34 @@ Antes que possamos habilitar a área restrita do aplicativo, primeiro precisamos
 
 Faça o seguinte:
 
-1. Faça logon no portal do desenvolvedor da Apple: 
+1. Faça logon no portal do desenvolvedor da Apple:
 
     [![Fazendo logon no portal do desenvolvedor da Apple](sandboxing-images/sign01.png "Fazendo logon no portal do desenvolvedor da Apple")](sandboxing-images/sign01-large.png#lightbox)
-2. Selecione **certificados, identificadores & perfis**: 
+2. Selecione **certificados, identificadores & perfis**:
 
     [![Selecionar certificados, identificadores e perfis](sandboxing-images/sign02.png "Selecionar certificados, identificadores e perfis")](sandboxing-images/sign02-large.png#lightbox)
-3. Em **aplicativos Mac**, selecione **identificadores**: 
+3. Em **aplicativos Mac**, selecione **identificadores**:
 
     [![Selecionando identificadores](sandboxing-images/sign03.png "Selecionando identificadores")](sandboxing-images/sign03-large.png#lightbox)
-4. Crie uma nova ID para o aplicativo: 
+4. Crie uma nova ID para o aplicativo:
 
     [![Criando uma nova ID do aplicativo](sandboxing-images/sign04.png "Criando uma nova ID do aplicativo")](sandboxing-images/sign04-large.png#lightbox)
-5. Em **perfis de provisionamento**, selecione **desenvolvimento**: 
+5. Em **perfis de provisionamento**, selecione **desenvolvimento**:
 
     [![Selecionando desenvolvimento](sandboxing-images/sign05.png "Selecionando desenvolvimento")](sandboxing-images/sign05-large.png#lightbox)
-6. Crie um novo perfil e selecione **desenvolvimento de aplicativo Mac**: 
+6. Crie um novo perfil e selecione **desenvolvimento de aplicativo Mac**:
 
     [![Criando um novo perfil](sandboxing-images/sign06.png "Criando um novo perfil")](sandboxing-images/sign06-large.png#lightbox)
-7. Selecione a ID do aplicativo que criamos acima: 
+7. Selecione a ID do aplicativo que criamos acima:
 
     [![Selecionando a ID do aplicativo](sandboxing-images/sign07.png "Selecionando a ID do aplicativo")](sandboxing-images/sign07-large.png#lightbox)
-8. Selecione os desenvolvedores para este perfil: 
+8. Selecione os desenvolvedores para este perfil:
 
     [![Adicionando desenvolvedores](sandboxing-images/sign08.png "Adicionando desenvolvedores")](sandboxing-images/sign08-large.png#lightbox)
-9. Selecione os computadores para este perfil: 
+9. Selecione os computadores para este perfil:
 
     [![Selecionando os computadores permitidos](sandboxing-images/sign09.png "Selecionando os computadores permitidos")](sandboxing-images/sign09-large.png#lightbox)
-10. Dê um nome ao perfil: 
+10. Dê um nome ao perfil:
 
     [![Dando um nome ao perfil](sandboxing-images/sign10.png "Dando um nome ao perfil")](sandboxing-images/sign10-large.png#lightbox)
 11. Clique no botão **concluído** .
@@ -146,10 +146,10 @@ Faça o seguinte:
 
 Em seguida, precisamos carregar a nova ID e o perfil do aplicativo no computador de desenvolvimento. Vamos fazer o seguinte:
 
-1. Inicie o Xcode e selecione **preferências** no menu do **Xcode** : 
+1. Inicie o Xcode e selecione **preferências** no menu do **Xcode** :
 
     ![Editando contas no Xcode](sandboxing-images/sign11.png "Editando contas no Xcode")
-2. Clique no botão **Exibir detalhes...** : 
+2. Clique no botão **Exibir detalhes...** :
 
     ![Clicando no botão Exibir detalhes](sandboxing-images/sign12.png "Clicando no botão Exibir detalhes")
 3. Clique no botão **Atualizar** (no canto inferior esquerdo).
@@ -158,17 +158,17 @@ Em seguida, precisamos carregar a nova ID e o perfil do aplicativo no computador
 Em seguida, precisamos selecionar a nova ID do aplicativo e o perfil de provisionamento em nosso projeto Xamarin. Mac. Vamos fazer o seguinte:
 
 1. No **painel de soluções**, clique duas vezes no arquivo **info. plist** para abri-lo para edição.
-2. Verifique se o **identificador do pacote** corresponde à nossa ID do aplicativo que criamos `com.appracatappra.MacSandbox`acima (exemplo:): 
+2. Verifique se o **identificador do pacote** corresponde à nossa ID do aplicativo que criamos `com.appracatappra.MacSandbox`acima (exemplo:):
 
     [![Editando o identificador de pacote](sandboxing-images/sign13.png "Editando o identificador de pacote")](sandboxing-images/sign13-large.png#lightbox)
-3. Em seguida, clique duas vezes no arquivo **. plist de direitos** e garanta que o **repositório de chave-valor do icloud** e os contêineres do **icloud** correspondam à nossa ID `com.appracatappra.MacSandbox`do aplicativo que criamos acima (exemplo:): 
+3. Em seguida, clique duas vezes no arquivo **. plist de direitos** e garanta que o **repositório de chave-valor do icloud** e os contêineres do **icloud** correspondam à nossa ID `com.appracatappra.MacSandbox`do aplicativo que criamos acima (exemplo:):
 
     [![Editando o arquivo. plist de direitos](sandboxing-images/sign17.png "Editando o arquivo. plist de direitos")](sandboxing-images/sign17-large.png#lightbox)
 4. Salve as alterações.
-5. No **painel de soluções**, clique duas vezes no arquivo de projeto para abrir suas opções de edição:  
+5. No **painel de soluções**, clique duas vezes no arquivo de projeto para abrir suas opções de edição:
 
     ![Editign as opções da solução](sandboxing-images/sign14.png "Editign as opções da solução")
-6. Selecione **assinatura do Mac**e, em seguida, marque **o pacote do aplicativo** e **assine-o**. Em **perfil de provisionamento**, selecione aquele que criamos acima: 
+6. Selecione **assinatura do Mac**e, em seguida, marque **o pacote do aplicativo** e **assine-o**. Em **perfil de provisionamento**, selecione aquele que criamos acima:
 
     ![Configurando o perfil de provisionamento](sandboxing-images/sign15.png "Configurando o perfil de provisionamento")
 7. Clique no botão **concluído** .
@@ -195,7 +195,7 @@ No caso de um problema, corrija o problema no portal do desenvolvedor da Apple, 
 Você habilita a área restrita do aplicativo marcando uma caixa de seleção em suas opções de projetos. Faça o seguinte:
 
 1. No **painel de soluções**, clique duas vezes no arquivo pretitles **. plist** para abri-lo para edição.
-2. Marque ambos **habilitar direitos** e habilitar a **área restrita do aplicativo**: 
+2. Marque ambos **habilitar direitos** e habilitar a **área restrita do aplicativo**:
 
     [![Editando direitos e habilitando a área restrita](sandboxing-images/sign17.png "Editando direitos e habilitando a área restrita")](sandboxing-images/sign17-large.png#lightbox)
 3. Salve as alterações.
@@ -208,25 +208,25 @@ Neste ponto, você habilitou a área restrita do aplicativo, mas não forneceu o
 
 Além do comportamento de bloqueio de recursos, há três maneiras principais de saber se um aplicativo Xamarin. Mac foi protegido com êxito:
 
-1. No Finder, verifique o conteúdo da `~/Library/Containers/` pasta – se o aplicativo estiver na área restrita, haverá uma pasta chamada como o identificador do pacote do aplicativo (exemplo: `com.appracatappra.MacSandbox`): 
+1. No Finder, verifique o conteúdo da `~/Library/Containers/` pasta – se o aplicativo estiver na área restrita, haverá uma pasta chamada como o identificador do pacote do aplicativo (exemplo: `com.appracatappra.MacSandbox`):
 
     [![Abrindo o pacote do aplicativo](sandboxing-images/sample09.png "Abrindo o pacote do aplicativo")](sandboxing-images/sample09-large.png#lightbox)
 2. O sistema vê o aplicativo como área restrita no monitor de atividade:
-    - Inicie o monitor de atividade `/Applications/Utilities`(em). 
+    - Inicie o monitor de atividade `/Applications/Utilities`(em).
     - Escolha **Exibir** > **colunas** e verifique se o item de menu **área restrita** está marcado.
-    - Verifique se a coluna sandbox lê `Yes` para seu aplicativo: 
+    - Verifique se a coluna sandbox lê `Yes` para seu aplicativo:
 
     [![Verificando o aplicativo no monitor de atividade](sandboxing-images/sample10.png "Verificando o aplicativo no monitor de atividade")](sandboxing-images/sample10-large.png#lightbox)
 3. Verifique se o binário do aplicativo está em área restrita:
     - Inicie o aplicativo de terminal.
     - Navegue até o diretório `bin` de aplicativos.
-    - Emita este comando: `codesign -dvvv --entitlements :- executable_path` (em `executable_path` que é o caminho para seu aplicativo): 
+    - Emita este comando: `codesign -dvvv --entitlements :- executable_path` (em `executable_path` que é o caminho para seu aplicativo):
 
     [![Verificando o aplicativo na linha de comando](sandboxing-images/sample11.png "Verificando o aplicativo na linha de comando")](sandboxing-images/sample11-large.png#lightbox)
 
 ### <a name="debugging-a-sandboxed-app"></a>Depurando um aplicativo em área restrita
 
-O depurador se conecta a aplicativos Xamarin. Mac por meio de TCP, o que significa que, por padrão, quando você habilita a área restrita, ele não consegue se conectar ao aplicativo, portanto, se você tentar executar o aplicativo sem as permissões apropriadas habilitadas, você receberá um erro *"não é possível se conectar ao depurador"* . 
+O depurador se conecta a aplicativos Xamarin. Mac por meio de TCP, o que significa que, por padrão, quando você habilita a área restrita, ele não consegue se conectar ao aplicativo, portanto, se você tentar executar o aplicativo sem as permissões apropriadas habilitadas, você receberá um erro *"não é possível se conectar ao depurador"* .
 
 [![Definindo as opções necessárias](sandboxing-images/debug01.png "Definindo as opções necessárias")](sandboxing-images/debug01-large.png#lightbox)
 
@@ -246,7 +246,7 @@ Faça o seguinte:
 
 1. Compile o aplicativo em questão e execute-o em Visual Studio para Mac.
 2. Abra o aplicativo de **console** ( `/Applications/Utilties/`de).
-3. Selecione **todas as mensagens** na barra lateral e `sandbox` insira na pesquisa: 
+3. Selecione **todas as mensagens** na barra lateral e `sandbox` insira na pesquisa:
 
     [![Um exemplo de um problema de área restrita no console](sandboxing-images/resolve01.png "Um exemplo de um problema de área restrita no console")](sandboxing-images/resolve01-large.png#lightbox)
 
@@ -259,7 +259,7 @@ Agora que vimos como encontrar violações de área restrita do aplicativo, veja
 Faça o seguinte:
 
 1. No **painel de soluções**, clique duas vezes no arquivo pretitles **. plist** para abri-lo para edição.
-2. Na seção **direitos** , marque a caixa de seleção **permitir conexões de rede de saída (cliente)** : 
+2. Na seção **direitos** , marque a caixa de seleção **permitir conexões de rede de saída (cliente)** :
 
     [![Editando os direitos](sandboxing-images/sign17.png "Editando os direitos")](sandboxing-images/sign17-large.png#lightbox)
 3. Salve as alterações no aplicativo.
@@ -280,7 +280,7 @@ Ao projetar para a área restrita do aplicativo, você está projetando para um 
 
 Como vimos acima, um aplicativo Xamarin. Mac que não foi colocado na área restrita recebe os direitos totais e o acesso do usuário que está executando o aplicativo. Se comprometido por código mal-intencionado, um aplicativo não protegido pode atuar como um agente para o comportamento hostil, com um grande potencial para causar danos.
 
-Ao habilitar a área restrita do aplicativo, você remove todos, exceto um conjunto mínimo de privilégios, que você reabilita de acordo com a necessidade somente usando os direitos do aplicativo Xamarin. Mac. 
+Ao habilitar a área restrita do aplicativo, você remove todos, exceto um conjunto mínimo de privilégios, que você reabilita de acordo com a necessidade somente usando os direitos do aplicativo Xamarin. Mac.
 
 Você modifica os recursos de área restrita do aplicativo de seus aplicativos editando seu arquivo Rights **. plist** e verificando ou selecionando os direitos necessários nas caixas suspensas de editores:
 
@@ -356,13 +356,13 @@ Além disso, o sistema automaticamente permite o seguinte a um aplicativo em ár
 - Abrir arquivos escolha pelo usuário no menu **abrir recente** .
 - Use copiar & colar entre outros aplicativos.
 - Leia os arquivos dos seguintes locais legíveis para o mundo:
-    - `/bin`
-    - `/sbin`
-    - `/usr/bin`
-    - `/usr/lib`
-    - `/usr/sbin`
-    - `/usr/share`
-    - `/System`
+  - `/bin`
+  - `/sbin`
+  - `/usr/bin`
+  - `/usr/lib`
+  - `/usr/sbin`
+  - `/usr/share`
+  - `/System`
 - Ler e gravar arquivos nos diretórios criados pelo `NSTemporaryDirectory`.
 
 Por padrão, os arquivos abertos ou salvos por um aplicativo Xamarin. Mac em área restrita permanecem acessíveis até que o aplicativo seja encerrado (a menos que o arquivo ainda esteja aberto quando o aplicativo for encerrado). Os arquivos abertos serão automaticamente restaurados para a área restrita do aplicativo por meio do recurso de retomada do macOS na próxima vez em que o aplicativo for iniciado.
@@ -401,10 +401,10 @@ Usando _indicadores com escopo de segurança_, um aplicativo Xamarin. Mac em ár
 
 Ao trabalhar com indicadores de escopo de segurança e acesso de recursos persistentes, há dois casos de uso Sistine:
 
-- **Um indicador no escopo do aplicativo fornece acesso persistente a um arquivo ou pasta especificado pelo usuário.** 
+- **Um indicador no escopo do aplicativo fornece acesso persistente a um arquivo ou pasta especificado pelo usuário.**
 
     Por exemplo, se o aplicativo Xamarin. Mac em área restrita permitir que o use o para abrir um documento externo para edição `NSOpenPanel`(usando um), o aplicativo poderá criar um indicador no escopo do aplicativo para que ele possa acessar o mesmo arquivo novamente no futuro.
-- **Um indicador com escopo de documento fornece um acesso persistente de documento específico a um subarquivo.** 
+- **Um indicador com escopo de documento fornece um acesso persistente de documento específico a um subarquivo.**
 
 Por exemplo, um aplicativo de edição de vídeo que cria um arquivo de projeto que tem acesso a imagens individuais, clipes de vídeo e arquivos de som que posteriormente serão combinados em um único filme.
 
@@ -432,7 +432,7 @@ Depois que você ceder o acesso a um recurso, precisará retornar para a etapa 4
 
 ### <a name="the-app-sandbox-and-code-signing"></a>A área restrita do aplicativo e a assinatura de código
 
-Depois de habilitar a área restrita do aplicativo e habilitar os requisitos específicos para seu aplicativo Xamarin. Mac (por meio de direitos), você deve assinar o código para que a área restrita entre em vigor. Você deve executar a assinatura de código porque os direitos necessários para a área restrita do aplicativo estão vinculados à assinatura do aplicativo. 
+Depois de habilitar a área restrita do aplicativo e habilitar os requisitos específicos para seu aplicativo Xamarin. Mac (por meio de direitos), você deve assinar o código para que a área restrita entre em vigor. Você deve executar a assinatura de código porque os direitos necessários para a área restrita do aplicativo estão vinculados à assinatura do aplicativo.
 
 o macOS impõe um link entre o contêiner de um aplicativo e sua assinatura de código, dessa forma nenhum outro aplicativo pode acessar esse contêiner, mesmo que ele esteja falsificando a ID do pacote de aplicativos. Esse mecanismo funciona da seguinte maneira:
 
@@ -529,7 +529,7 @@ Aqui estão alguns problemas comuns e coisas que você pode fazer para solucion�
 - **Manter o acesso aos recursos do sistema de arquivos** -se o aplicativo Xamarin. Mac depender do acesso persistente aos recursos fora de seu contêiner, use indicadores de escopo de segurança para manter o acesso.
 - **Criar um item de logon para um aplicativo** -com a área restrita do aplicativo, você não pode criar `LSSharedFileList` um item de logon usando o nem pode manipular o `LSRegisterURL`estado dos serviços de inicialização usando o. Use a `SMLoginItemSetEnabled` função conforme descrito em maçãs [adicionando itens de logon usando a documentação do Service Management Framework](https://developer.apple.com/library/prerelease/mac/documentation/MacOSX/Conceptual/BPSystemStartup/Chapters/CreatingLoginItems.html#//apple_ref/doc/uid/10000172i-SW5-SW1) .
 - **Acessando dados do usuário** – se você estiver usando funções `getpwuid` POSIX, como para obter o diretório base do usuário de serviços de diretório, considere o uso de símbolos Cocoa ou Core Foundation, como. `NSHomeDirectory`
-- **Acessando as preferências de outros aplicativos** – como a área restrita do aplicativo direciona APIs que localizam caminhos para o contêiner do aplicativo, a modificação de preferências ocorre dentro desse contêiner e o acesso a outras preferências de aplicativos não é permitido. 
+- **Acessando as preferências de outros aplicativos** – como a área restrita do aplicativo direciona APIs que localizam caminhos para o contêiner do aplicativo, a modificação de preferências ocorre dentro desse contêiner e o acesso a outras preferências de aplicativos não é permitido.
 - **Usando o vídeo inserido do HTML5 em exibições da Web** – se o aplicativo Xamarin. Mac usar WebKit para reproduzir vídeos HTML5 incorporados, você também deverá vincular o aplicativo à estrutura do AV Foundation. Caso contrário, a área restrita do aplicativo impedirá que o CoreMedia reproduza esses vídeos.
 
 ### <a name="applying-required-app-sandbox-entitlements"></a>Aplicando os direitos necessários de área restrita do aplicativo
@@ -555,7 +555,7 @@ Para obter mais informações, consulte o guia de programação [criando serviç
 
 ### <a name="implement-a-migration-strategy"></a>Implementar uma estratégia de migração
 
-Se você estiver lançando uma nova versão em área restrita de um aplicativo Xamarin. Mac que não estava anteriormente em área restrita, você precisará garantir que os usuários atuais tenham um caminho de atualização suave. 
+Se você estiver lançando uma nova versão em área restrita de um aplicativo Xamarin. Mac que não estava anteriormente em área restrita, você precisará garantir que os usuários atuais tenham um caminho de atualização suave.
 
  Para obter detalhes sobre como implementar um manifesto de migração de contêiner, leia [a documentação migrando um aplicativo da Apple para uma área restrita](https://developer.apple.com/library/prerelease/mac/documentation/Security/Conceptual/AppSandboxDesignGuide/MigratingALegacyApp/MigratingAnAppToASandbox.html#//apple_ref/doc/uid/TP40011183-CH6-SW1) .
 
