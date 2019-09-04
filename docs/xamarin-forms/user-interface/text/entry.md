@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/26/2018
-ms.openlocfilehash: decdcc451927d5e9e1889558bfc9150c98fecf91
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: e712f0b69f87659499f7eab4955a9f943716f5b5
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68650270"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227984"
 ---
 # <a name="xamarinforms-entry"></a>Entrada do xamarin. Forms
 
@@ -105,7 +105,7 @@ No C#:
 var MyEntry = new Entry { IsPassword = true };
 ```
 
-![](entry-images/password.png "Exemplo de entrada de IsPassword")
+![Exemplo de IsPassword de entrada](entry-images/password.png)
 
 Os espaços reservados podem ser usados com instâncias de `Entry` que são configurados como campos de senha:
 
@@ -121,7 +121,7 @@ No C#:
 var MyEntry = new Entry { IsPassword = true, Placeholder = "Password" };
 ```
 
-![](entry-images/passwordplaceholder.png "Exemplo de espaço reservado e IsPassword de entrada")
+![Exemplo de IsPassword e PlaceHolder de entrada](entry-images/passwordplaceholder.png)
 
 ### <a name="setting-the-cursor-position-and-text-selection-length"></a>Definindo a posição do Cursor e o comprimento da seleção de texto
 
@@ -294,7 +294,7 @@ var entry = new Entry();
 entry.TextColor = Color.Green;
 ```
 
-![](entry-images/textcolor.png "Exemplo de entrada de TextColor")
+![Exemplo de TextColor de entrada](entry-images/textcolor.png)
 
 Observe que o espaço reservado não é afetado pela especificado `TextColor`.
 
@@ -311,7 +311,7 @@ var entry = new Entry();
 entry.BackgroundColor = Color.FromHex("#2c3e50");
 ```
 
-![](entry-images/textbackgroundcolor.png "Exemplo de entrada de BackgroundColor")
+![Exemplo de BackgroundColor de entrada](entry-images/textbackgroundcolor.png)
 
 Tenha cuidado para certificar-se de que as cores de plano de fundo e texto que você escolher podem ser usados em cada plataforma e não ocultam qualquer texto de espaço reservado.
 

@@ -7,12 +7,12 @@ ms.assetid: 95167D1F-A718-405A-AFCC-90E596D422F3
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/29/2017
-ms.openlocfilehash: e0af5188dd34e76b419b4cd5bf8d604fb059b7d3
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: f43c4dac1811a54ee0ceeb70e2b2b1835a5ca030
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68642760"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70228248"
 ---
 # <a name="path-effects-in-skiasharp"></a>Efeitos de caminho em SkiaSharp
 
@@ -22,7 +22,7 @@ _Descobrir os diversos efeitos de caminho que permitem que os caminhos a ser usa
 
 Um *efeito de caminho* é uma instância das [ `SKPathEffect` ](xref:SkiaSharp.SKPathEffect) classe que é criado com um dos oito métodos de criação estáticos definidos pela classe. O `SKPathEffect` objeto é definido como o [ `PathEffect` ](xref:SkiaSharp.SKPaint.PathEffect) propriedade de um [ `SKPaint` ](xref:SkiaSharp.SKPaint) objeto para uma variedade de efeitos interessantes, por exemplo, traçar uma linha com um pequeno caminho replicado :
 
-![](effects-images/patheffectsample.png "O exemplo de cadeia vinculado")
+![O exemplo de cadeia vinculada](effects-images/patheffectsample.png)
 
 Efeitos de caminho permitem que você:
 
@@ -51,7 +51,7 @@ As extremidades dos traços são afetadas pela `StrokeCap` propriedade de `SKPai
 
 O **animada texto pontilhado** página é semelhante ao **texto contornado** página descrita no artigo [ **a integração do texto e elementos gráficos** ](~/xamarin-forms/user-interface/graphics/skiasharp/basics/text.md) em que ele exibe descritas caracteres de texto, definindo o `Style` propriedade do `SKPaint` do objeto para `SKPaintStyle.Stroke`. Além disso, **animada texto pontilhado** usa `SKPathEffect.CreateDash` para dar uma aparência pontilhada essa estrutura de tópicos e o programa também anima a `phase` argumento do `SKPathEffect.CreateDash` método para fazer com que os pontos parecem viagem ao redor do texto caracteres. Aqui está a página no modo paisagem:
 
-[![](effects-images/animateddottedtext-small.png "Tripla captura de tela da página de texto animado de pontilhado")](effects-images/animateddottedtext-large.png#lightbox "tripla captura de tela da página de texto animado de pontilhado")
+[![Captura de tela tripla da página de texto pontilhada animada](effects-images/animateddottedtext-small.png)](effects-images/animateddottedtext-large.png#lightbox)
 
 O [ `AnimatedDottedTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/DotDashMorphPage.cs) classe começa definindo algumas constantes e também substitui o `OnAppearing` e `OnDisappearing` métodos para a animação:
 
@@ -159,7 +159,7 @@ Você também observará que como o círculo pontos animado em torno de caracter
 
 O **Dot / traço Morph** programa anima padrão de tracejado em si, de modo que os traços parecem se dividir em pontos, que são combinados para traços de formulário novamente:
 
-[![](effects-images/dotdashmorph-small.png "Captura de tela da página ponto Dash Morph tripla")](effects-images/dotdashmorph-large.png#lightbox "tripla captura de tela da página Morph de traço ponto")
+[![Captura de tela tripla da página do ponto traço Morph](effects-images/dotdashmorph-small.png)](effects-images/dotdashmorph-large.png#lightbox)
 
 O [ `DotDashMorphPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/DotDashMorphPage.cs) substituições de classe a `OnAppearing` e `OnDisappearing` métodos exatamente como fez o programa anterior, mas a classe define o `SKPaint` objeto como um campo:
 
@@ -398,7 +398,7 @@ public partial class OneDimensionalPathEffectPage : ContentPage
 
 O `PaintSurface` manipulador cria uma curva de Bézier que executa um loop em torno de si mesmo e, em seguida, acessa o seletor para determinar qual `PathEffect` deve ser usado para traçar a ele. As três opções — `Translate`, `Rotate`, e `Morph` — são exibidos da esquerda para direita:
 
-[![](effects-images/1dpatheffect-small.png "Captura de tela da página 1-D caminho efeito tripla")](effects-images/1dpatheffect-large.png#lightbox "tripla captura de tela da página 1-D caminho efeito")
+[![Captura de tela tripla da página de efeito do caminho 1D](effects-images/1dpatheffect-small.png)](effects-images/1dpatheffect-large.png#lightbox)
 
 O caminho especificado no `SKPathEffect.Create1DPath` método sempre é preenchido. O caminho especificado na `DrawPath` método sempre é traçado se o `SKPaint` objeto tem seu `PathEffect` propriedade definida como um efeito de caminho 1D. Observe que o `pathPaint` objeto não tem nenhum `Style` configuração, que normalmente tem como padrão para `Fill`, mas o caminho é traçado independentemente.
 
@@ -410,7 +410,7 @@ A forma de retângulo na `Morph` exemplo é de 50 pixels de largura com um `adva
 
 Se o `advance` argumento for menor que o tamanho do caminho, em seguida, os caminhos replicados podem se sobrepor. Isso pode resultar em alguns efeitos interessantes. O **vinculado cadeia** página exibe uma série de círculos que parecem ser semelhante a uma cadeia de vinculado, que trava na forma de um catenary diferenciada de sobreposição:
 
-[![](effects-images/linkedchain-small.png "Tripla captura de tela da página cadeia vinculada")](effects-images/linkedchain-large.png#lightbox "tripla captura de tela da página cadeia vinculado")
+[![Captura de tela tripla da página cadeia vinculada](effects-images/linkedchain-small.png)](effects-images/linkedchain-large.png#lightbox)
 
 Procurar muito perto e você verá que esses não são realmente círculos. Cada link na cadeia é dois arcos, dimensionado e posicionado para que eles parecem se conectar com links adjacente.
 
@@ -549,7 +549,7 @@ Este programa define o caminho usado no `Create1DPath` ter seus (0, 0) no centro
 
 O **Esteira** página cria um caminho que se assemelha a uma esteira alongada com uma curva superior e inferior é dimensionado para as dimensões da janela. Esse caminho é traçado com um simples `SKPaint` 20 pixels de largura e cor cinza de objeto e traçados novamente com outra `SKPaint` do objeto com um `SKPathEffect` objeto fazendo referência a um caminho que se assemelha a um bucket pouco:
 
-[![](effects-images/conveyorbelt-small.png "Captura de tela da página Esteira tripla")](effects-images/conveyorbelt-large.png#lightbox "tripla captura de tela da página Esteira")
+[![Captura de tela tripla da página da correia do esteira](effects-images/conveyorbelt-small.png)](effects-images/conveyorbelt-large.png#lightbox)
 
 A (0, 0) ponto do caminho do bucket é o identificador, portanto, quando o `phase` argumento é animado, os buckets parecem giram em torno a Esteira talvez escopo backup água na parte inferior e despejar-out na parte superior.
 
@@ -798,7 +798,7 @@ Se você examinar cuidadosamente os resultados, você verá que as linhas de hac
 
 O `PaintSurface` manipulador conclui com uma chamada para simplesmente traçar o retângulo arredondado, para que você possa ver a discrepância com as linhas de hachura de vermelho e azul:
 
-[![](effects-images/hatchfill-small.png "Captura de tela da página hachura preenchimento tripla")](effects-images/hatchfill-large.png#lightbox "tripla captura de tela da página de hachura de preenchimento")
+[![Captura de tela tripla da página preenchimento de hachura](effects-images/hatchfill-small.png)](effects-images/hatchfill-large.png#lightbox)
 
 A tela do Android não tem a seguinte aparência: O dimensionamento da captura de tela fez com que as linhas vermelhas finas e os espaços finos essolidem em linhas vermelhas mais largas e espaços mais largos.
 
@@ -852,7 +852,7 @@ public class PathTileFillPage : ContentPage
 
 No `PaintSurface` manipulador, o `SKPathEffect.Create2DPath` chamadas define o espaçamento horizontal e vertical para 64 para fazer com que os blocos de 80 pixels quadrados se sobreponham. Felizmente, o caminho é semelhante a uma parte do quebra-cabeça, criar malhas muito bem com adjacente blocos:
 
-[![](effects-images/pathtilefill-small.png "Tripla captura de tela da página de preenchimento do caminho lado a lado")](effects-images/pathtilefill-large.png#lightbox "tripla captura de tela da página de preenchimento do caminho lado a lado")
+[![Captura de tela tripla da página de preenchimento do bloco caminho](effects-images/pathtilefill-small.png)](effects-images/pathtilefill-large.png#lightbox)
 
 A colocação em escala na captura de tela original faz com que alguns distorção, particularmente na tela do Android.
 
@@ -927,7 +927,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Você pode usar esse efeito com traçar ou preencher com base nas `Style` propriedade do `SKPaint` objeto. Aqui ele está em execução:
 
-[![](effects-images/anotherroundedheptagon-small.png "Tripla captura de tela da página outro Heptágono arredondado")](effects-images/anotherroundedheptagon-large.png#lightbox "tripla captura de tela da página outro Heptágono arredondado")
+[![Captura de tela tripla da outra página de heptagon arredondada](effects-images/anotherroundedheptagon-small.png)](effects-images/anotherroundedheptagon-large.png#lightbox)
 
 Você verá que esse arredondado Heptágono é idêntico ao programa anterior. Se você precisar convencer mais que o raio do canto é verdadeiramente 100 em vez dos 50 especificado no `SKPathEffect.CreateCorner` chamada, você pode remover o comentário a instrução final no programa e consulte um círculo de raio de 100 sobreposta no canto.
 
@@ -946,7 +946,7 @@ O argumento final é uma semente usada para gerar a sequência pseudoaleatória 
 
 O **tremulação experimentar** página lhe permite fazer experiências com valores diferentes nas traçar um retângulo:
 
-[![](effects-images/jitterexperiment-small.png "Captura de tela da página de teste de tremulação tripla")](effects-images/jitterexperiment-large.png#lightbox "Triple screenshot of the JitterExperiment page")
+[![Captura de tela tripla da página JitterExperiment](effects-images/jitterexperiment-small.png)](effects-images/jitterexperiment-large.png#lightbox)
 
 O programa é simples. O [ **JitterExperimentPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/JitterExperimentPage.xaml) arquivo instancia dois `Slider` elementos e um `SKCanvasView`:
 
@@ -1072,7 +1072,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Aqui ele está em execução no modo paisagem:
 
-[![](effects-images/jittertext-small.png "Captura de tela da página de texto de Tremulação de tripla")](effects-images/jittertext-large.png#lightbox "Triple screenshot of the JitterText page")
+[![Captura de tela tripla da página JitterText](effects-images/jittertext-small.png)](effects-images/jittertext-large.png#lightbox)
 
 ## <a name="path-outlining"></a>Caminho de estrutura de tópicos
 
@@ -1086,7 +1086,7 @@ public Boolean GetFillPath (SKPath src, SKPath dst, SKRect cullRect, Single resS
 
 Somente os primeiros dois argumentos são necessários. O método acessa o caminho referenciado pela `src` argumento, modifica os dados de caminho com base nas propriedades de traço na `SKPaint` objeto (incluindo o `PathEffect` propriedade) e, em seguida, grava os resultados no `dst` caminho. O `resScale` parâmetro permite reduzir a precisão para criar um caminho de destino menor e o `cullRect` argumento pode eliminar delimitações fora de um retângulo.
 
-Um uso básico desse método não envolve efeitos de caminho: Se o `SKPaint` objeto tiver sua `Style` propriedade definida como `SKPaintStyle.Stroke` *e não tiver seu* `PathEffect` conjunto, o criaráumcaminhoquerepresentaumcontornodocaminhodeorigemcomosetivessesidotraçado`GetFillPath` pelo Propriedades de pintura.
+Um uso básico desse método não envolve efeitos de caminho: Se o `SKPaint` objeto tiver sua `Style` propriedade definida como `SKPaintStyle.Stroke` `PathEffect`enão tiver seu conjunto, o criaráumcaminhoquerepresentaumcontornodocaminhodeorigemcomosetivessesidotraçado`GetFillPath` pelo Propriedades de pintura.
 
 Por exemplo, se o `src` caminho é um círculo simples do radius 500 e o `SKPaint` objeto Especifica a largura do traço de 100, então o `dst` caminho se torne dois círculos concêntricos, uma com um raio de 450 e outra com um raio de 550. O método é chamado `GetFillPath` porque preencher esse `dst` caminho é o mesmo que traça o `src` caminho. Mas você também pode traçar o `dst` caminho para ver os contornos do caminho.
 
@@ -1173,11 +1173,11 @@ public partial class TapToOutlineThePathPage : ContentPage
 
 O círculo é preenchido e traçado conforme o esperado:
 
-[![](effects-images/taptooutlinethepathnormal-small.png "Captura de tela da página de toque para o caminho do contorno normal tripla")](effects-images/taptooutlinethepathnormal-large.png#lightbox "tripla captura de tela da página normal de toque para o caminho do contorno")
+[![Captura de tela tripla do toque normal para descrever a página do caminho](effects-images/taptooutlinethepathnormal-small.png)](effects-images/taptooutlinethepathnormal-large.png#lightbox)
 
 Quando você toca a tela `outlineThePath` é definido como `true`e o `PaintSurface` manipulador cria uma nova `SKPath` do objeto e a usará como o caminho de destino em uma chamada para `GetFillPath` no `redThickStroke` objeto de pintura. Esse caminho de destino, em seguida, é preenchido e traçado com `redThinStroke`, resultando no seguinte:
 
-[![](effects-images/taptooutlinethepathoutlined-small.png "Captura de tela da página de toque para o caminho do contorno da estrutura de tópicos tripla")](effects-images/taptooutlinethepathoutlined-large.png#lightbox "tripla captura de tela da página de toque para o caminho do contorno da estrutura de tópicos")
+[![Captura de tela tripla do toque para descrever a página do caminho](effects-images/taptooutlinethepathoutlined-small.png)](effects-images/taptooutlinethepathoutlined-large.png#lightbox)
 
 Os dois círculos vermelhos indicam claramente que o caminho circular original foi convertido em dois contornos circulares.
 
@@ -1241,7 +1241,7 @@ Você já viu como o `GetFillPath` método de `SKPaint` pode converter um caminh
 
 Um uso óbvio `CreateSum` é definir um `SKPaint` objeto que preenche um demarcador com efeito de um caminho e traçados o caminho com outro efeito de caminho. Isso é demonstrado na **gatos no quadro** exemplo, que exibe uma matriz de gatos dentro de um quadro com bordas-recorte:
 
-[![](effects-images/catsinframe-small.png "Captura de tela da página gatos no quadro tripla")](effects-images/catsinframe-large.png#lightbox "tripla captura de tela da página gatos no quadro")
+[![Captura de tela tripla da página de gatos no quadro](effects-images/catsinframe-small.png)](effects-images/catsinframe-large.png#lightbox)
 
 O [ `CatsInFramePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/CatsInFramePage.cs) classe começa definindo vários campos. Você pode reconhecer o primeiro campo do [ `PathDataCatPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PathDataCatPage.cs) classe os [ **dados de caminho SVG** ](~/xamarin-forms/user-interface/graphics/skiasharp/curves/path-data.md) artigo. O segundo caminho se baseia em uma linha e um arco para o padrão de Guirlanda do quadro:
 
@@ -1409,7 +1409,7 @@ public class DashedHatchLinesPage : ContentPage
 
 Como você já descobriu, as linhas de hachura não são precisamente restritas ao interior da área e, neste exemplo, eles sempre começam na parte esquerda com um traço inteiro:
 
-[![](effects-images/dashedhatchlines-small.png "Captura de tela da página linhas de hachura tracejadas tripla")](effects-images/dashedhatchlines-large.png#lightbox "tripla captura de tela da página linhas de hachura tracejado")
+[![Captura de tela tripla da página linhas de hachura tracejada](effects-images/dashedhatchlines-small.png)](effects-images/dashedhatchlines-large.png#lightbox)
 
 Agora que você já viu que variam de simples pontos e traços a combinações estranhas para efeitos de caminho, use sua imaginação e veja o que você pode criar.
 

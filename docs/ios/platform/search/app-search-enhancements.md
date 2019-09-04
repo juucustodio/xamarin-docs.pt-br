@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/15/2017
-ms.openlocfilehash: 27eff717fd1390f54a177cc7636e7d107b69cd24
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: ec7523ac2adc3a6b4ba18a7b8a0fe21749bd7856
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656278"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227415"
 ---
 # <a name="app-search-enhancements-in-xamarinios"></a>Aprimoramentos de pesquisa de aplicativo no Xamarin. iOS
 
@@ -44,13 +44,13 @@ Para obter mais informações sobre como implementar a vinculação profunda em 
 
 Ao implementar a nova classe [CSSearchQuery](https://developer.apple.com/reference/corespotlight/cssearchquery) , um aplicativo pode fornecer a pesquisa de destaque e a tecnologia de regra de correspondência para localizar conteúdo dentro de si, sem que o usuário precise sair do aplicativo (semelhante a como o aplicativo de email, mensagens e anotações funciona).
 
-Normalmente, os aplicativos que `CSSearchQuery` oferecem suporte não precisarão manter seu próprio índice de pesquisa separado. 
+Normalmente, os aplicativos que `CSSearchQuery` oferecem suporte não precisarão manter seu próprio índice de pesquisa separado.
 
 ## <a name="search-continuation"></a>Continuação da pesquisa
 
 No Ios 9, a Apple introduziu as APIs de pesquisa (como o `NSUserActivity` destaque principal e a marcação da Web) para fornecer uma preferência de conteúdo em um aplicativo para permitir que os usuários pesquisem esse conteúdo usando as interfaces de pesquisa do Spotlight e do Safari. Consulte nossa documentação de [novas APIs de pesquisa](~/ios/platform/search/index.md) para obter mais detalhes.
 
-No iOS 10, a Apple se baseia nesse recurso, permitindo que o usuário inicie uma pesquisa em destaque ou Safari e continue a pesquisa quando abrir um aplicativo. 
+No iOS 10, a Apple se baseia nesse recurso, permitindo que o usuário inicie uma pesquisa em destaque ou Safari e continue a pesquisa quando abrir um aplicativo.
 
 Para implementar esse recurso, edite o arquivo `Info.plist` do aplicativo, adicione `CoreSpotlightContinuation` a chave do tipo booliano e defina seu `YES`valor como:
 

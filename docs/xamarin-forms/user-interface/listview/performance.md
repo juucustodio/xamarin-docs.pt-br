@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/11/2017
-ms.openlocfilehash: a1fae280f42f91fce4b4fe28c3f728cf14c7a21c
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: dabbd21a2ad2ef3c77017ea92704ccdf69f7b36c
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528909"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70228207"
 ---
 # <a name="listview-performance"></a>Desempenho de ListView
 
@@ -173,9 +173,9 @@ Há muitas técnicas para melhorar o desempenho de um `ListView`:
 - Evite hierarquias de layout profundamente aninhadas. Use `AbsoluteLayout` ou `Grid` para ajudar a reduzir o aninhamento.
 - Evite específico `LayoutOptions` diferente de `Fill` (preenchimento é o mais barato de computação).
 - Evite colocar uma `ListView` dentro de um `ScrollView` pelos seguintes motivos:
-    - O `ListView` implementa seu próprio rolagem.
-    - O `ListView` não receberão qualquer gestos, como eles serão manipulados pelo pai `ScrollView`.
-    - O `ListView` pode apresentar um cabeçalho personalizado e um rodapé que rola com os elementos da lista, oferecendo potencialmente a funcionalidade que o `ScrollView` foi usado para. Para obter mais informações, consulte [cabeçalhos e rodapés](~/xamarin-forms/user-interface/listview/customizing-list-appearance.md#Headers_and_Footers).
+  - O `ListView` implementa seu próprio rolagem.
+  - O `ListView` não receberão qualquer gestos, como eles serão manipulados pelo pai `ScrollView`.
+  - O `ListView` pode apresentar um cabeçalho personalizado e um rodapé que rola com os elementos da lista, oferecendo potencialmente a funcionalidade que o `ScrollView` foi usado para. Para obter mais informações, consulte [cabeçalhos e rodapés](~/xamarin-forms/user-interface/listview/customizing-list-appearance.md#Headers_and_Footers).
 - Considere um renderizador personalizado se você precisar de um design muito específico e complexo, apresentado em suas células.
 
 `AbsoluteLayout` tem o potencial para executar layouts sem uma chamada única medida. Isso torna muito poderoso para desempenho. Se `AbsoluteLayout` não pode ser usado, considere [ `RelativeLayout` ](xref:Xamarin.Forms.RelativeLayout). Se usando `RelativeLayout`, passar as restrições diretamente será consideravelmente mais rápido do que usar a API de expressão. Isso ocorre porque a API de expressão usa JIT e no iOS a árvore tem deve ser interpretado, que é mais lento. A expressão de API é adequada para layouts de página em que ele apenas necessário layout inicial e a rotação, mas em `ListView`, onde ele é executado constantemente durante a rolagem, ele reduz o desempenho.

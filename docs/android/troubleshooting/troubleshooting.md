@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/15/2018
-ms.openlocfilehash: 5fccc07d35eda1ba420f48a8058d8d2a00b18fd9
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 6a5c06d64a06d8b1a7bcbf32e99905494cd06180
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69523204"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70225486"
 ---
 # <a name="troubleshooting-tips"></a>Dicas de solução de problemas
 
@@ -95,24 +95,24 @@ O Xamarin. Android dá suporte às seguintes propriedades do sistema:
 
 - *debug.mono.env*: Uma lista separada por pipe ( *|* ' ') de variáveis de ambiente para exportar durante a inicialização do aplicativo, *antes que* o mono tenha sido inicializado. Isso permite definir variáveis de ambiente que controlam o log mono.
 
-    - *Observação*: Como o valor é ' *|* ' separado, o valor deve ter um nível extra de quoting, pois o \`comando do *shell* \` do ADB removerá um conjunto de aspas.
+  - *Observação*: Como o valor é ' *|* ' separado, o valor deve ter um nível extra de quoting, pois o \`comando do *shell* \` do ADB removerá um conjunto de aspas.
 
-    - *Observação*: Os valores de Propriedade do sistema Android não podem ter mais de 92 caracteres de comprimento.
+  - *Observação*: Os valores de Propriedade do sistema Android não podem ter mais de 92 caracteres de comprimento.
 
-    - Exemplo:
+  - Exemplo:
 
-      ```
-      adb shell setprop debug.mono.env "'MONO_LOG_LEVEL=info|MONO_LOG_MASK=asm'"
-      ```
+    ```
+    adb shell setprop debug.mono.env "'MONO_LOG_LEVEL=info|MONO_LOG_MASK=asm'"
+    ```
 
 - *debug.mono.log*: Uma lista separada por vírgulas (' *,* ') de componentes que devem imprimir mensagens adicionais no log de depuração do Android. Por padrão, nada é definido. Os componentes incluem:
 
-    - *todos*: Imprimir todas as mensagens
-    - *gc*: Imprimir mensagens relacionadas ao GC.
-    - *gref*: Impressão (fraca, global) referenciar mensagens de alocação e desalocação.
-    - *lref*: Imprimir mensagens de alocação e desalocação de referência local.
+  - *todos*: Imprimir todas as mensagens
+  - *gc*: Imprimir mensagens relacionadas ao GC.
+  - *gref*: Impressão (fraca, global) referenciar mensagens de alocação e desalocação.
+  - *lref*: Imprimir mensagens de alocação e desalocação de referência local.
 
-    *Observação*: eles são *extremamente* detalhados. Não habilite a menos que você realmente precise.
+  *Observação*: eles são *extremamente* detalhados. Não habilite a menos que você realmente precise.
 
 - *debug.mono.trace*: Permite definir a configuração de [rastreamento](http://docs.go-mono.com/?link=man%3amono(1)) `=PROPERTY_VALUE` mono.
 
@@ -348,14 +348,14 @@ Certifique-se de usar o nome do simulador correto, ou seja, [o nome usado ao con
 Os nomes de pacote do Android *devem* conter um ponto (' *.* '). Edite o nome do pacote para que ele contenha um ponto.
 
 - No Visual Studio:
-    - Clique com o botão direito do mouse no projeto > Propriedades
-    - Clique na guia manifesto do Android à esquerda.
-    - Atualize o campo nome do pacote.
-        - Se você vir a mensagem &ldquo;nenhum AndroidManifest. xml foi encontrado. Clique para adicionar um. &rdquo;, clique no link e, em seguida, atualize o campo nome do pacote.
+  - Clique com o botão direito do mouse no projeto > Propriedades
+  - Clique na guia manifesto do Android à esquerda.
+  - Atualize o campo nome do pacote.
+    - Se você vir a mensagem &ldquo;nenhum AndroidManifest. xml foi encontrado. Clique para adicionar um. &rdquo;, clique no link e, em seguida, atualize o campo nome do pacote.
 - Dentro do Visual Studio para Mac:
-    - Clique com o botão direito do mouse no projeto > opções.
-    - Navegue até a seção Build/aplicativo Android.
-    - Altere o campo nome do pacote para conter um '. '.
+  - Clique com o botão direito do mouse no projeto > opções.
+  - Navegue até a seção Build/aplicativo Android.
+  - Altere o campo nome do pacote para conter um '. '.
 
 
 
@@ -690,7 +690,7 @@ Para usar o\# C Dynamic em seu aplicativo ou biblioteca, você precisa adicionar
 
 - É provável que seu projeto de aplicativo não tenha referências a System. Core. dll, Microsoft. CSharp. dll ou mono. CSharp. dll. Verifique se esses assemblies são referenciados.
 
-    - Tenha em mente que o código dinâmico sempre custa. Se você precisar de um código eficiente, considere não usar código dinâmico.
+  - Tenha em mente que o código dinâmico sempre custa. Se você precisar de um código eficiente, considere não usar código dinâmico.
 
 - Na primeira visualização, esses assemblies foram excluídos, a menos que os tipos em cada assembly sejam usados explicitamente pelo código do aplicativo. Consulte o seguinte para obter uma solução alternativa:[http://lists.ximian.com/pipermail/mo...il/009798.html](http://lists.ximian.com/pipermail/monodroid/2012-April/009798.html)
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: c989481c1235429091c2a196a66e4abd2c12fb52
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: 157f797ebb19de1ae00a00328a9c63b051c7224f
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69887482"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70226452"
 ---
 # <a name="maps-in-xamarinios"></a>Mapas no Xamarin. iOS
 
@@ -36,7 +36,7 @@ View = map;
 
 `MKMapView`dá suporte a três estilos diferentes de mapas. Para aplicar um estilo `MapType` `MKMapType` de mapa, basta definir a propriedade como um valor da enumeração:
 
-```
+```csharp
 map.MapType = MKMapType.Standard; //road map
 map.MapType = MKMapType.Satellite;
 map.MapType = MKMapType.Hybrid;
@@ -87,7 +87,7 @@ map.ShowsUserLocation = true;
 ```
 
  ![](images/02-location-alert.png "O alerta de permissão de acesso ao local")
- 
+
 ## <a name="annotations"></a>Anotações
 
  `MKMapView`também dá suporte à exibição de imagens, conhecidas como anotações, em um mapa. Elas podem ser imagens personalizadas ou Pins definidos pelo sistema de várias cores. Por exemplo, a captura de tela a seguir mostra um mapa com um PIN e uma imagem personalizada:
@@ -250,7 +250,7 @@ var searchResultsController = new SearchResultsViewController (map);
 //Creates a search controller updater
 var searchUpdater = new SearchResultsUpdator ();
 searchUpdater.UpdateSearchResults += searchResultsController.Search;
-            
+
 //add the search controller
 searchController = new UISearchController (searchResultsController) {
                 SearchResultsUpdater = searchUpdater
@@ -264,7 +264,7 @@ searchController.SearchBar.Placeholder = "Enter a search query";
 //the search bar is contained in the navigation bar, so it should be visible
 searchController.HidesNavigationBarDuringPresentation = false;
 
-//Ensure the searchResultsController is presented in the current View Controller 
+//Ensure the searchResultsController is presented in the current View Controller
 DefinesPresentationContext = true;
 
 //Set the search bar in the navigation bar
@@ -279,7 +279,7 @@ Vamos dar uma olhada em como implementar o `searchResultsController` e o `search
 Isso resulta em uma barra de pesquisa exibida sobre o mapa, conforme mostrado abaixo:
 
  ![](images/07-searchbar.png "Uma barra de pesquisa exibida sobre o mapa")
- 
+
 
 
 ### <a name="displaying-the-search-results"></a>Exibindo os resultados da pesquisa
@@ -358,7 +358,7 @@ public class SearchResultsViewController : UITableViewController
 
 ### <a name="updating-the-search-results"></a>Atualizando os resultados da pesquisa
 
-O `SearchResultsUpdater` atua como um mediador entre a `searchController`barra de pesquisa do e os resultados da pesquisa. 
+O `SearchResultsUpdater` atua como um mediador entre a `searchController`barra de pesquisa do e os resultados da pesquisa.
 
 Neste exemplo, precisamos criar primeiro o método Search no `SearchResultsViewController`. Para fazer isso, devemos criar um `MKLocalSearch` objeto e usá-lo para emitir uma pesquisa de `MKLocalSearchRequest`um, os resultados são recuperados em um retorno de `Start` chamada passado `MKLocalSearch` para o método do objeto. Os resultados são retornados em um `MKLocalSearchResponse` objeto que contém uma matriz de `MKMapItem` objetos:
 
@@ -403,7 +403,7 @@ public class SearchResultsUpdator : UISearchResultsUpdating
 A implementação acima adiciona uma anotação ao mapa quando um item é selecionado nos resultados, conforme mostrado abaixo:
 
  ![](images/08-search-results.png "Uma anotação adicionada ao mapa quando um item é selecionado nos resultados")
- 
+
 > [!IMPORTANT]
 > `UISearchController`foi implementado no iOS 8. Se você quiser dar suporte a dispositivos anteriores a isso, será necessário usar `UISearchDisplayController`o.
 

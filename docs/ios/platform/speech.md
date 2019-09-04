@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: 65644673bde426fff92530a7a36812d1c95b5995
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 40aa36fa8a89eacd8be7914020c06f3fec75baff
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70121281"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227334"
 ---
 # <a name="speech-recognition-in-xamarinios"></a>Reconhecimento de fala no Xamarin. iOS
 
@@ -89,8 +89,8 @@ Há quatro etapas principais que o desenvolvedor deve adotar para adotar o recon
 - Forneça uma descrição de uso no arquivo do `Info.plist` aplicativo usando a `NSSpeechRecognitionUsageDescription` chave. Por exemplo, um aplicativo de câmera pode incluir a seguinte descrição: _"isso permite que você tire uma foto apenas dizendo a palavra" queijo "._
 - Solicite autorização chamando o `SFSpeechRecognizer.RequestAuthorization` método para apresentar uma explicação (fornecida `NSSpeechRecognitionUsageDescription` na chave acima) de por que o aplicativo deseja acesso de reconhecimento de fala ao usuário em uma caixa de diálogo e permitir que eles aceitem ou recusem.
 - Criar uma solicitação de reconhecimento de fala:
-    - Para áudio previamente gravado em disco, use a `SFSpeechURLRecognitionRequest` classe.
-    - Para áudio ao vivo (ou áudio da memória), use `SFSPeechAudioBufferRecognitionRequest` a classe.
+  - Para áudio previamente gravado em disco, use a `SFSpeechURLRecognitionRequest` classe.
+  - Para áudio ao vivo (ou áudio da memória), use `SFSPeechAudioBufferRecognitionRequest` a classe.
 - Passe a solicitação de reconhecimento de fala para um reconhecedor de fala (`SFSpeechRecognizer`) para iniciar o reconhecimento. O aplicativo pode, opcionalmente, manter o `SFSpeechRecognitionTask` retorno para monitorar e acompanhar os resultados de reconhecimento.
 
 Essas etapas serão abordadas em detalhes abaixo.
@@ -380,8 +380,8 @@ RecognitionTask.Cancel ();
 A Apple impõe as seguintes limitações ao trabalhar com o reconhecimento de fala em um aplicativo iOS:
 
 - O reconhecimento de fala é gratuito para todos os aplicativos, mas seu uso não é ilimitado:
-    - Dispositivos iOS individuais têm um número limitado de reconhecimentos que podem ser executados por dia.
-    - Os aplicativos serão limitados globalmente em uma base de solicitação por dia.
+  - Dispositivos iOS individuais têm um número limitado de reconhecimentos que podem ser executados por dia.
+  - Os aplicativos serão limitados globalmente em uma base de solicitação por dia.
 - O aplicativo deve estar preparado para lidar com as falhas de conexão de rede e de limite de taxa de uso do reconhecimento de fala.
 - O reconhecimento de fala pode ter um alto custo tanto no desgaste da bateria quanto no alto tráfego de rede no dispositivo iOS do usuário, por isso, a Apple impõe um limite de duração de áudio estrito de aproximadamente um minuto de fala máx.
 

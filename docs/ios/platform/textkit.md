@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 0bed0e272293d3462d32fe5134147112e38116f0
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: c0ee125090a2bb817f09a18c34033a1f8a788569
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528722"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227287"
 ---
 # <a name="textkit-in-xamarinios"></a>TextKit no Xamarin. iOS
 
@@ -29,7 +29,7 @@ Para tornar os recursos do TextKit disponíveis para os controles padrão, vári
 O TextKit fornece uma arquitetura em camadas que separa o armazenamento de texto do layout e da exibição, incluindo as seguintes classes:
 
 - `NSTextContainer`– Fornece o sistema de coordenadas e a geometria usada para layout de texto.
-- `NSLayoutManager`– Prepara o texto, virando o texto em glifos. 
+- `NSLayoutManager`– Prepara o texto, virando o texto em glifos.
 - `NSTextStorage`– Armazena os dados de texto, bem como manipula atualizações de propriedade de texto em lotes. Todas as atualizações do lote são enviadas ao Gerenciador de layout para o processamento real das alterações, como recalcular o layout e redesenhar o texto.
 
 
@@ -160,7 +160,7 @@ TextContainer.ExclusionPaths = new UIBezierPath[] { bezierPath };
 
 A captura de tela a seguir ilustra como o layout de texto muda para o fluxo ao redor do caminho desenhado:
 
-<!-- ![](textkit-images/exclusionpath1.png "This screenshot illustrates how the text layout changes to flow around the drawn path")--> 
+<!-- ![](textkit-images/exclusionpath1.png "This screenshot illustrates how the text layout changes to flow around the drawn path")-->
 ![](textkit-images/exclusionpath2.png "Esta captura de tela ilustra como o layout de texto muda para o fluxo ao redor do caminho desenhado")
 
 Observe que a propriedade do `AllowsNonContiguousLayout` Gerenciador de layout está definida como false nesse caso. Isso faz com que o layout seja recalculado para todos os casos em que o texto é alterado. Definir isso como verdadeiro pode beneficiar o desempenho ao evitar uma atualização de layout completo, especialmente no caso de documentos grandes. No entanto `AllowsNonContiguousLayout` , definir como true impediria que o caminho de exclusão atualizasse o layout em algumas circunstâncias, por exemplo, se o texto for inserido em tempo de execução sem um retorno de carro à direita antes do caminho que está sendo definido.

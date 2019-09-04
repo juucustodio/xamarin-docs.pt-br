@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: beb063d423c860958948751d162af661040004b7
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 0816afe7831338348f7612576041623abe8ba283
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69529005"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227260"
 ---
 # <a name="data-binding-and-key-value-coding-in-xamarinmac"></a>Vinculação de dados e codificação de chave-valor no Xamarin. Mac
 
@@ -36,7 +36,7 @@ Talvez você queira dar uma olhada na seção [expondo C# classes/métodos para 
 
 A KVC (codificação de valor chave) é um mecanismo para acessar as propriedades de um objeto indiretamente, usando chaves (cadeias de caracteres especialmente formatadas) para identificar Propriedades em vez de acessá-las por meio de variáveis de instância ou métodos de acessador (`get/set`). Ao implementar acessadores compatíveis com codificação de chave-valor em seu aplicativo Xamarin. Mac, você obterá acesso a outros recursos macOS (anteriormente conhecidos como OS X), como KVO (observação de valor-chave), vinculação de dados, dados principais, associações Cocoa e scripts.
 
-Usando a codificação de valor chave e técnicas de vinculação de dados em seu aplicativo Xamarin. Mac, você pode diminuir muito a quantidade de código que você precisa escrever e manter para popular e trabalhar com elementos de interface do usuário. Você também tem o benefício de desacoplar ainda mais os dados de backup (_modelo de dados_) da sua interface do usuário de front-end (_Model-View-Controller_), levando a um design de aplicativo mais fácil de manter e mais flexível. 
+Usando a codificação de valor chave e técnicas de vinculação de dados em seu aplicativo Xamarin. Mac, você pode diminuir muito a quantidade de código que você precisa escrever e manter para popular e trabalhar com elementos de interface do usuário. Você também tem o benefício de desacoplar ainda mais os dados de backup (_modelo de dados_) da sua interface do usuário de front-end (_Model-View-Controller_), levando a um design de aplicativo mais fácil de manter e mais flexível.
 
 Por exemplo, vamos examinar a seguinte definição de classe de um objeto compatível com KVC:
 
@@ -50,7 +50,7 @@ namespace MacDatabinding
     public class PersonModel : NSObject
     {
         private string _name = "";
-        
+
         [Export("Name")]
         public string Name {
             get { return _name; }
@@ -60,7 +60,7 @@ namespace MacDatabinding
                 DidChangeValue ("Name");
             }
         }
-        
+
         public PersonModel ()
         {
         }
@@ -68,7 +68,7 @@ namespace MacDatabinding
 }
 ```
 
-Primeiro, o `[Register("PersonModel")]` atributo registra a classe e a expõe para Objective-C. Em seguida, a classe precisa herdar `NSObject` de (ou uma subclasse herdada de `NSObject`), que adiciona vários métodos de base que permitem que a classe seja compatível com KVC. Em seguida, `[Export("Name")]` o atributo expõe `Name` a propriedade e define o valor da chave que posteriormente será usado para acessar a propriedade por meio de técnicas KVC e KVO. 
+Primeiro, o `[Register("PersonModel")]` atributo registra a classe e a expõe para Objective-C. Em seguida, a classe precisa herdar `NSObject` de (ou uma subclasse herdada de `NSObject`), que adiciona vários métodos de base que permitem que a classe seja compatível com KVC. Em seguida, `[Export("Name")]` o atributo expõe `Name` a propriedade e define o valor da chave que posteriormente será usado para acessar a propriedade por meio de técnicas KVC e KVO.
 
 Por fim, para ser capaz de ser o valor-chave observado nas alterações do valor da propriedade, o acessador deve encapsular `WillChangeValue` as `DidChangeValue` alterações em seu valor no e nas chamadas de `Export` método (especificando a mesma chave que o atributo).  Por exemplo:
 
@@ -103,7 +103,7 @@ namespace MacDatabinding
     {
         private string _name = "";
         private PersonModel _child = new PersonModel();
-        
+
         [Export("Name")]
         public string Name {
             get { return _name; }
@@ -113,7 +113,7 @@ namespace MacDatabinding
                 DidChangeValue ("Name");
             }
         }
-        
+
         [Export("Child")]
         public PersonModel Child {
             get { return _child; }
@@ -123,7 +123,7 @@ namespace MacDatabinding
                 DidChangeValue ("Child");
             }
         }
-        
+
         public PersonModel ()
         {
         }
@@ -138,11 +138,11 @@ O caminho da chave para o nome do filho seria `self.Child.Name` ou simplesmente 
 O `ValueForKey` método retorna o valor para a chave especificada (como um `NSString`), em relação à instância da classe KVC que recebe a solicitação. Por exemplo, se `Person` for uma instância `PersonModel` da classe definida acima:
 
 ```csharp
-// Read value 
+// Read value
 var name = Person.ValueForKey (new NSString("Name"));
 ```
 
-Isso retornará o valor da `Name` propriedade para essa instância do. `PersonModel` 
+Isso retornará o valor da `Name` propriedade para essa instância do. `PersonModel`
 
 ### <a name="setting-values-using-key-value-coding"></a>Definindo valores usando codificação de valor-chave
 
@@ -169,7 +169,7 @@ Person.AddObserver ("Name", NSKeyValueObservingOptions.New, (sender) => {
 });
 ```
 
-Agora, sempre que a `Name` propriedade `Person` da instância da `PersonModel` classe for modificada, o novo valor será gravado no console. 
+Agora, sempre que a `Name` propriedade `Person` da instância da `PersonModel` classe for modificada, o novo valor será gravado no console.
 
 Para obter mais informações, consulte [introdução à Apple no guia de programação de observação de valor-chave](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/KeyValueObserving/KeyValueObserving.html#//apple_ref/doc/uid/10000177i).
 
@@ -391,7 +391,7 @@ public NSImage Icon {
         }
     }
 }
-``` 
+```
 
 Para corrigir isso, usamos o seguinte código:
 
@@ -419,7 +419,7 @@ Vamos usar o `PersonModel` modelo de dados no restante deste artigo.
 
 Com nosso modelo de dados definido, vamos dar uma olhada em um exemplo simples de vinculação de dados no Interface Builder do Xcode. Por exemplo, vamos adicionar um formulário ao nosso aplicativo Xamarin. Mac que pode ser usado para editar o `PersonModel` que definimos acima. Vamos adicionar alguns campos de texto e uma caixa de seleção para exibir e editar as propriedades de nosso modelo.
 
-Primeiro, vamos adicionar um novo **controlador de exibição** ao nosso arquivo **Main. Storyboard** em interface Builder e nomear sua `SimpleViewController`classe: 
+Primeiro, vamos adicionar um novo **controlador de exibição** ao nosso arquivo **Main. Storyboard** em interface Builder e nomear sua `SimpleViewController`classe:
 
 [![Adicionando um novo controlador de exibição](databinding-images/simple01.png "Adicionando um novo controlador de exibição")](databinding-images/simple01-large.png#lightbox)
 
@@ -466,23 +466,23 @@ Agora, precisamos criar nosso formulário, clicar duas vezes no arquivo **Main. 
 Para associar os dados ao formulário `PersonModel` que expunhamos por meio da `Person` chave, faça o seguinte:
 
 1. Selecione o campo de texto **nome do funcionário** e alterne para o **Inspetor de associações**.
-2. Marque a caixa **associar a** e selecione **controlador de exibição simples** na lista suspensa. Em seguida `self.Person.Name` , insira para o **caminho da chave**: 
+2. Marque a caixa **associar a** e selecione **controlador de exibição simples** na lista suspensa. Em seguida `self.Person.Name` , insira para o **caminho da chave**:
 
     [![Inserindo o caminho da chave](databinding-images/simple03.png "Inserindo o caminho da chave")](databinding-images/simple03-large.png#lightbox)
-3. Selecione o campo de texto **profissão** e marque a caixa **associar a** e selecione **controlador de exibição simples** no menu suspenso. Em seguida `self.Person.Occupation` , insira para o **caminho da chave**:  
+3. Selecione o campo de texto **profissão** e marque a caixa **associar a** e selecione **controlador de exibição simples** no menu suspenso. Em seguida `self.Person.Occupation` , insira para o **caminho da chave**:
 
     [![Inserindo o caminho da chave](databinding-images/simple04.png "Inserindo o caminho da chave")](databinding-images/simple04-large.png#lightbox)
-4. Selecione o **funcionário é uma** caixa de seleção de gerente e marque a caixa **associar a** e selecione **controlador de exibição simples** no menu suspenso. Em seguida `self.Person.isManager` , insira para o **caminho da chave**:  
+4. Selecione o **funcionário é uma** caixa de seleção de gerente e marque a caixa **associar a** e selecione **controlador de exibição simples** no menu suspenso. Em seguida `self.Person.isManager` , insira para o **caminho da chave**:
 
     [![Inserindo o caminho da chave](databinding-images/simple05.png "Inserindo o caminho da chave")](databinding-images/simple05-large.png#lightbox)
-5. Selecione o campo **de texto número de funcionários gerenciados** e marque a caixa **associar a** e selecione **controlador de exibição simples** no menu suspenso. Em seguida `self.Person.NumberOfEmployees` , insira para o **caminho da chave**:  
+5. Selecione o campo **de texto número de funcionários gerenciados** e marque a caixa **associar a** e selecione **controlador de exibição simples** no menu suspenso. Em seguida `self.Person.NumberOfEmployees` , insira para o **caminho da chave**:
 
     [![Inserindo o caminho da chave](databinding-images/simple06.png "Inserindo o caminho da chave")](databinding-images/simple06-large.png#lightbox)
 6. Se o funcionário não for um gerente, queremos ocultar o número de funcionários gerenciados rótulo e campo de texto.
-7. Selecione o **número de funcionários gerenciados** rótulo, expanda o Turndown **oculto** e marque a caixa **associar a** e selecione **controlador de exibição simples** no menu suspenso. Em seguida `self.Person.isManager` , insira para o **caminho da chave**:  
+7. Selecione o **número de funcionários gerenciados** rótulo, expanda o Turndown **oculto** e marque a caixa **associar a** e selecione **controlador de exibição simples** no menu suspenso. Em seguida `self.Person.isManager` , insira para o **caminho da chave**:
 
     [![Inserindo o caminho da chave](databinding-images/simple07.png "Inserindo o caminho da chave")](databinding-images/simple07-large.png#lightbox)
-8. Selecione `NSNegateBoolean` na lista suspensa **valor** do transformador:  
+8. Selecione `NSNegateBoolean` na lista suspensa **valor** do transformador:
 
     ![Selecionando a transformação chave NSNegateBoolean](databinding-images/simple08.png "Selecionando a transformação chave NSNegateBoolean")
 9. Isso informa à ligação de dados que o rótulo ficará oculto se o valor da `isManager` propriedade for `false`.
@@ -576,34 +576,34 @@ Agora, precisamos criar nossa exibição de tabela, clicar duas vezes no arquivo
 
 Precisamos adicionar um controlador de **matriz** para fornecer dados associados à nossa tabela, faça o seguinte:
 
-1. Arraste um **controlador de matriz** do **Inspetor de biblioteca** para o **Editor de interface**:  
+1. Arraste um **controlador de matriz** do **Inspetor de biblioteca** para o **Editor de interface**:
 
     ![Selecionando um controlador de matriz da biblioteca](databinding-images/table03.png "Selecionando um controlador de matriz da biblioteca")
-2. Selecione **controlador de matriz** na **hierarquia de interface** e alterne para o **Inspetor de atributo**:  
+2. Selecione **controlador de matriz** na **hierarquia de interface** e alterne para o **Inspetor de atributo**:
 
     [![Selecionando o Inspetor de atributos](databinding-images/table04.png "Selecionando o Inspetor de atributos")](databinding-images/table04-large.png#lightbox)
-3. Insira `PersonModel` para o **nome da classe**, clique no botão de **adição** e adicione três chaves. Nomeie- `Name`os `Occupation` e `isManager`:  
+3. Insira `PersonModel` para o **nome da classe**, clique no botão de **adição** e adicione três chaves. Nomeie- `Name`os `Occupation` e `isManager`:
 
     ![Adicionando os caminhos de chave necessários](databinding-images/table05.png "Adicionando os caminhos de chave necessários")
 4. Isso informa ao controlador da matriz o que está gerenciando uma matriz e quais propriedades ele deve expor (via chaves).
-5. Alterne para o **Inspetor de associações** e, **em matriz de conteúdo** , selecione **associar a** e **controlador de exibição de tabela**. Insira um **caminho de chave** de `self.personModelArray`modelo de:  
+5. Alterne para o **Inspetor de associações** e, **em matriz de conteúdo** , selecione **associar a** e **controlador de exibição de tabela**. Insira um **caminho de chave** de `self.personModelArray`modelo de:
 
     ![Inserindo um caminho de chave](databinding-images/table06.png "Inserindo um caminho de chave")
 6. Isso vincula o controlador de matriz à matriz de `PersonModels` que expostos em nosso controlador de exibição.
 
 Agora precisamos associar o modo de exibição de tabela ao controlador da matriz, faça o seguinte:
 
-1. Selecione o modo de exibição de tabela e o **Inspetor de associação**:  
+1. Selecione o modo de exibição de tabela e o **Inspetor de associação**:
 
     [![Selecionando o Inspetor de associação](databinding-images/table07.png "Selecionando o Inspetor de associação")](databinding-images/table07-large.png#lightbox)
-2. Na Turndown **conteúdo da tabela** , selecione **associar a** e **controlador de matriz**. Insira `arrangedObjects` para o campo **chave do controlador** :  
+2. Na Turndown **conteúdo da tabela** , selecione **associar a** e **controlador de matriz**. Insira `arrangedObjects` para o campo **chave do controlador** :
 
     ![Definindo a chave do controlador](databinding-images/table08.png "Definindo a chave do controlador")
-3. Selecione a **célula exibição de tabela** na coluna **funcionário** . No **Inspetor de associações** sob o **valor** Turndown, selecione **a exibição associar à** **célula da tabela**. Insira `objectValue.Name` para o **caminho de chave do modelo**:  
+3. Selecione a **célula exibição de tabela** na coluna **funcionário** . No **Inspetor de associações** sob o **valor** Turndown, selecione **a exibição associar à** **célula da tabela**. Insira `objectValue.Name` para o **caminho de chave do modelo**:
 
     [![Definindo o caminho de chave do modelo](databinding-images/table09.png "Definindo o caminho de chave do modelo")](databinding-images/table09-large.png#lightbox)
 4. `objectValue`é o atual `PersonModel` na matriz que está sendo gerenciada pelo controlador da matriz.
-5. Selecione a **célula exibição de tabela** na coluna **ocupação** . No **Inspetor de associações** sob o **valor** Turndown, selecione **a exibição associar à** **célula da tabela**. Insira `objectValue.Occupation` para o **caminho de chave do modelo**:  
+5. Selecione a **célula exibição de tabela** na coluna **ocupação** . No **Inspetor de associações** sob o **valor** Turndown, selecione **a exibição associar à** **célula da tabela**. Insira `objectValue.Occupation` para o **caminho de chave do modelo**:
 
     [![Definindo o caminho de chave do modelo](databinding-images/table10.png "Definindo o caminho de chave do modelo")](databinding-images/table10-large.png#lightbox)
 6. Salve as alterações e retorne ao Visual Studio para Mac para sincronizar com o Xcode.
@@ -618,7 +618,7 @@ Se executarmos o aplicativo, a tabela será populada com nossa matriz `PersonMod
 
 a vinculação de dados em um modo de exibição de estrutura de tópicos é muito semelhante à de uma exibição de tabela. A principal diferença é que usaremos um **controlador de árvore** em vez de um **controlador de matriz** para fornecer os dados associados ao modo de exibição de estrutura de tópicos. Para obter mais informações sobre como trabalhar com exibições de estrutura de tópicos, consulte a documentação de exibições de [estrutura de tópicos](~/mac/user-interface/outline-view.md) .
 
-Primeiro, vamos adicionar um novo **controlador de exibição** ao nosso arquivo **Main. Storyboard** em interface Builder e nomear sua `OutlineViewController`classe: 
+Primeiro, vamos adicionar um novo **controlador de exibição** ao nosso arquivo **Main. Storyboard** em interface Builder e nomear sua `OutlineViewController`classe:
 
 [![Adicionando um novo controlador de exibição](databinding-images/outline01.png "Adicionando um novo controlador de exibição")](databinding-images/outline01-large.png#lightbox)
 
@@ -694,38 +694,38 @@ Agora, precisamos criar nossa exibição de estrutura de tópicos, clicar duas v
 
 Precisamos adicionar um controlador de **árvore** para fornecer dados associados à nossa estrutura de tópicos, faça o seguinte:
 
-1. Arraste um **controlador de árvore** do **Inspetor de biblioteca** para o **Editor de interface**:  
+1. Arraste um **controlador de árvore** do **Inspetor de biblioteca** para o **Editor de interface**:
 
     ![Selecionando um controlador de árvore na biblioteca](databinding-images/outline03.png "Selecionando um controlador de árvore na biblioteca")
-2. Selecione **controlador de árvore** na **hierarquia de interface** e alterne para o **Inspetor de atributo**:  
+2. Selecione **controlador de árvore** na **hierarquia de interface** e alterne para o **Inspetor de atributo**:
 
     [![Selecionando o Inspetor de atributo](databinding-images/outline04.png "Selecionando o Inspetor de atributo")](databinding-images/outline04-large.png#lightbox)
-3. Insira `PersonModel` para o **nome da classe**, clique no botão de **adição** e adicione três chaves. Nomeie- `Name`os `Occupation` e `isManager`:  
+3. Insira `PersonModel` para o **nome da classe**, clique no botão de **adição** e adicione três chaves. Nomeie- `Name`os `Occupation` e `isManager`:
 
     ![Adicionando os caminhos de chave necessários](databinding-images/outline05.png "Adicionando os caminhos de chave necessários")
 4. Isso informa ao controlador de árvore o que está gerenciando uma matriz e quais propriedades ele deve expor (via chaves).
-5. Na seção **controlador de árvore** , insira `personModelArray` para **filhos**, insira `NumberOfEmployees` sob a **contagem** e insira `isEmployee` em **folha**:  
+5. Na seção **controlador de árvore** , insira `personModelArray` para **filhos**, insira `NumberOfEmployees` sob a **contagem** e insira `isEmployee` em **folha**:
 
     ![Definindo os caminhos de chave do controlador de árvore](databinding-images/outline05.png "Definindo os caminhos de chave do controlador de árvore")
 6. Isso informa ao controlador de árvore onde encontrar todos os nós filho, quantos nós filhos existem e se o nó atual tem nós filho.
-7. Alterne para o **Inspetor de associações** e, **em matriz de conteúdo** , selecione **associar ao** **proprietário do arquivo**. Insira um **caminho de chave** de `self.personModelArray`modelo de:  
+7. Alterne para o **Inspetor de associações** e, **em matriz de conteúdo** , selecione **associar ao** **proprietário do arquivo**. Insira um **caminho de chave** de `self.personModelArray`modelo de:
 
     ![Editando o caminho da chave](databinding-images/outline06.png "Editando o caminho da chave")
 8. Isso vincula o controlador de árvore à matriz de `PersonModels` que expostos em nosso controlador de exibição.
 
 Agora precisamos associar nossa exibição de estrutura de tópicos ao controlador de árvore, faça o seguinte:
 
-1. Selecione o modo de exibição de estrutura de tópicos e, no **Inspetor de associação** , selecione:  
+1. Selecione o modo de exibição de estrutura de tópicos e, no **Inspetor de associação** , selecione:
 
     [![Selecionando o Inspetor de associação](databinding-images/outline07.png "Selecionando o Inspetor de associação")](databinding-images/outline07-large.png#lightbox)
-2. Sob o **tópico exibir conteúdo** Turndown, selecione **associar a** e **controlador de árvore**. Insira `arrangedObjects` para o campo **chave do controlador** :  
+2. Sob o **tópico exibir conteúdo** Turndown, selecione **associar a** e **controlador de árvore**. Insira `arrangedObjects` para o campo **chave do controlador** :
 
     ![Definindo a chave do controlador](databinding-images/outline08.png "Definindo a chave do controlador")
-3. Selecione a **célula exibição de tabela** na coluna **funcionário** . No **Inspetor de associações** sob o **valor** Turndown, selecione **a exibição associar à** **célula da tabela**. Insira `objectValue.Name` para o **caminho de chave do modelo**:  
+3. Selecione a **célula exibição de tabela** na coluna **funcionário** . No **Inspetor de associações** sob o **valor** Turndown, selecione **a exibição associar à** **célula da tabela**. Insira `objectValue.Name` para o **caminho de chave do modelo**:
 
     [![Inserindo o caminho de chave do modelo](databinding-images/outline09.png "Inserindo o caminho de chave do modelo")](databinding-images/outline09-large.png#lightbox)
 4. `objectValue`é o atual `PersonModel` na matriz que está sendo gerenciada pelo controlador de árvore.
-5. Selecione a **célula exibição de tabela** na coluna **ocupação** . No **Inspetor de associações** sob o **valor** Turndown, selecione **a exibição associar à** **célula da tabela**. Insira `objectValue.Occupation` para o **caminho de chave do modelo**:  
+5. Selecione a **célula exibição de tabela** na coluna **ocupação** . No **Inspetor de associações** sob o **valor** Turndown, selecione **a exibição associar à** **célula da tabela**. Insira `objectValue.Occupation` para o **caminho de chave do modelo**:
 
     [![Inserindo o caminho de chave do modelo](databinding-images/outline10.png "Inserindo o caminho de chave do modelo")](databinding-images/outline10-large.png#lightbox)
 6. Salve as alterações e retorne ao Visual Studio para Mac para sincronizar com o Xcode.
@@ -743,7 +743,7 @@ A associação de dados com uma exibição de coleção é muito semelhante à a
 
 <!--KKM 012/16/2015 - Once Apple fixes the issue with Xcode and Collection Views in Storyboards, we can uncomment this section.
 
-First, let's add a new **View Controller** to our **Main.storyboard** file in Interface Builder and name its class `CollectionViewController`: 
+First, let's add a new **View Controller** to our **Main.storyboard** file in Interface Builder and name its class `CollectionViewController`:
 
 ![](databinding-images/collection01.png)
 

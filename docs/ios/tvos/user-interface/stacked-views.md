@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 9dbcecf40c742de6e9f3a5c8458dcae3f347501d
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: be4d10eceb4ddf7da44409815f3e9c08117a06f7
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70120735"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227221"
 ---
 # <a name="working-with-tvos-stacked-views-in-xamarin"></a>Trabalhando com exibições empilhadas do tvOS no Xamarin
 
@@ -24,7 +24,7 @@ O layout de todas as subexibições anexadas a uma exibição de pilha é gerenc
 
 Ao usar um `UIStackView` em um aplicativo Xamarin. tvOS, o desenvolvedor pode definir as subexibições dentro de um storyboard no designer do Ios ou adicionando e removendo subexibições no C# código.
 
-## <a name="about-stacked-view-controls"></a>Sobre controles de exibição empilhados 
+## <a name="about-stacked-view-controls"></a>Sobre controles de exibição empilhados
 
 O `UIStackView` é projetado como uma exibição de contêiner que não é de renderização e, como tal, não é desenhado para a tela como outras subclasses de `UIView`. Definir propriedades como `BackgroundColor` ou substituir `DrawRect` não terá nenhum efeito visual.
 
@@ -98,21 +98,21 @@ A maneira mais fácil de trabalhar com exibições de pilha em um aplicativo Xam
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 1. Na **painel de soluções**, clique duas vezes no arquivo `Main.storyboard` e abra-o para edição.
-1. Projete o layout de seus elementos individuais que você vai adicionar à exibição de pilha: 
+1. Projete o layout de seus elementos individuais que você vai adicionar à exibição de pilha:
 
     [![](stacked-views-images/layout01.png "Exemplo de layout de elemento")](stacked-views-images/layout01.png#lightbox)
 1. Adicione todas as restrições necessárias aos elementos para garantir que elas sejam dimensionadas corretamente. Esta etapa é importante quando o elemento é adicionado à exibição de pilha.
-1. Faça o número necessário de cópias (quatro, neste caso): 
+1. Faça o número necessário de cópias (quatro, neste caso):
 
     [![](stacked-views-images/layout02.png "O número necessário de cópias")](stacked-views-images/layout02.png#lightbox)
-1. Arraste uma **exibição de pilha** da **caixa de ferramentas** e solte-a na exibição: 
+1. Arraste uma **exibição de pilha** da **caixa de ferramentas** e solte-a na exibição:
 
     [![](stacked-views-images/layout03.png "Uma exibição de pilha")](stacked-views-images/layout03.png#lightbox)
-1. Selecione o modo de exibição de pilha, na **Guia Widget** do **painel de propriedades** selecione **preencher** para o **alinhamento**, **preencha igualmente** para a **distribuição** e `25` insira para o **espaçamento**: 
+1. Selecione o modo de exibição de pilha, na **Guia Widget** do **painel de propriedades** selecione **preencher** para o **alinhamento**, **preencha igualmente** para a **distribuição** e `25` insira para o **espaçamento**:
 
     [![](stacked-views-images/layout04.png "A guia do widget")](stacked-views-images/layout04.png#lightbox)
 1. Posicione o modo de exibição de pilha na tela onde você deseja e adicione restrições para mantê-lo no local necessário.
-1. Selecione os elementos individuais e arraste-os para a exibição de pilha: 
+1. Selecione os elementos individuais e arraste-os para a exibição de pilha:
 
     [![](stacked-views-images/layout05.png "Os elementos individuais na exibição de pilha")](stacked-views-images/layout05.png#lightbox)
 1. O layout será ajustado e os elementos serão organizados no modo de exibição de pilha com base nos atributos definidos acima.
@@ -122,21 +122,21 @@ A maneira mais fácil de trabalhar com exibições de pilha em um aplicativo Xam
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. Na **Gerenciador de soluções**, clique duas vezes no arquivo `Main.storyboard` e abra-o para edição.
-1. Projete o layout de seus elementos individuais que você vai adicionar à exibição de pilha: 
+1. Projete o layout de seus elementos individuais que você vai adicionar à exibição de pilha:
 
     [![](stacked-views-images/layout01.png "Exemplo de layout de elemento")](stacked-views-images/layout01.png#lightbox)
 1. Adicione todas as restrições necessárias aos elementos para garantir que elas sejam dimensionadas corretamente. Esta etapa é importante quando o elemento é adicionado à exibição de pilha.
-1. Faça o número necessário de cópias (quatro, neste caso): 
+1. Faça o número necessário de cópias (quatro, neste caso):
 
     [![](stacked-views-images/layout02.png "O número necessário de cópias")](stacked-views-images/layout02.png#lightbox)
-1. Arraste uma **exibição de pilha** da **caixa de ferramentas** e solte-a na exibição: 
+1. Arraste uma **exibição de pilha** da **caixa de ferramentas** e solte-a na exibição:
 
     [![](stacked-views-images/layout03-vs.png "Uma exibição de pilha")](stacked-views-images/layout03-vs.png#lightbox)
-1. Selecione o modo de exibição de pilha, na **Guia Widget** do **Gerenciador de propriedades** , selecione **preenchimento** para o **alinhamento**, **preencha igualmente** para a `25` **distribuição** e insira para o **espaçamento**: 
+1. Selecione o modo de exibição de pilha, na **Guia Widget** do **Gerenciador de propriedades** , selecione **preenchimento** para o **alinhamento**, **preencha igualmente** para a `25` **distribuição** e insira para o **espaçamento**:
 
     [![](stacked-views-images/layout04-vs.png "A guia do widget")](stacked-views-images/layout04-vs.png#lightbox)
 1. Posicione o modo de exibição de pilha na tela onde você deseja e adicione restrições para mantê-lo no local necessário.
-1. Selecione os elementos individuais e arraste-os para a exibição de pilha: 
+1. Selecione os elementos individuais e arraste-os para a exibição de pilha:
 
     [![](stacked-views-images/layout05-vs.png "Os elementos individuais na exibição de pilha")](stacked-views-images/layout05-vs.png#lightbox)
 1. O layout será ajustado e os elementos serão organizados no modo de exibição de pilha com base nos atributos definidos acima.

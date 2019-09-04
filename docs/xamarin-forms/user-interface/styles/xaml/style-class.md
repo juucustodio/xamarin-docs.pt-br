@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/30/2019
-ms.openlocfilehash: 438d3462c123cc9c9a8730405bb64a5e9492bfdf
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 4a353d64f0e7e29da6c64f93b8554c3661f4d389
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68645548"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70228134"
 ---
 # <a name="xamarinforms-style-classes"></a>Classes de estilo Xamarin. Forms
 
@@ -203,7 +203,7 @@ O exemplo a seguir mostra [`BoxView`](xref:Xamarin.Forms.BoxView) três instânc
 
 Neste exemplo, o primeiro [`BoxView`](xref:Xamarin.Forms.BoxView) é estilizado para ser um separador de linha, enquanto o terceiro `BoxView` é circular. O segundo `BoxView` tem duas classes Style aplicadas a ela, que dá a ela cantos arredondados e gira 45 graus:
 
-![](style-class-images/boxviews.png "BoxViews estilo com classes de estilo")
+![BoxViews estilo com classes de estilo](style-class-images/boxviews.png)
 
 > [!IMPORTANT]
 > Várias classes de estilo podem ser aplicadas a um controle porque [`StyleClass`](xref:Xamarin.Forms.NavigableElement.StyleClass) a propriedade é do `IList<string>`tipo. Quando isso ocorre, as classes de estilo são aplicadas em ordem de lista crescente. Portanto, quando várias classes de estilo definem propriedades idênticas, a propriedade na classe Style que está na posição da lista mais alta terá precedência.

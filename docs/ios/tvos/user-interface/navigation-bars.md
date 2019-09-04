@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 8bde37c907d2cad327dd2a72f26ee357a4391c43
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 14fbbd72d3ec80d15d2dcae5938f8df28923ca4c
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68649055"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70226612"
 ---
 # <a name="working-with-tvos-navigation-bars-in-xamarin"></a>Trabalhando com barras de navegação do tvOS no Xamarin
 
@@ -34,16 +34,16 @@ A maneira mais fácil de trabalhar com barras de navegação em um aplicativo Xa
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 1. Na **painel de soluções**, clique `Main.storyboard` duas vezes no arquivo e abra-o para edição.
-1. Arraste uma **barra de navegação** da **caixa de ferramentas** e solte-a na exibição na parte superior da tela: 
+1. Arraste uma **barra de navegação** da **caixa de ferramentas** e solte-a na exibição na parte superior da tela:
 
     [![](navigation-bars-images/navbar02.png "Uma barra de navegação")](navigation-bars-images/navbar02.png#lightbox)
-1. Clique duas vezes na **barra de navegação** para selecionar o **item de navegação**. Na guia **widget** da **painel de propriedades**, você pode definir o **título**: 
+1. Clique duas vezes na **barra de navegação** para selecionar o **item de navegação**. Na guia **widget** da **painel de propriedades**, você pode definir o **título**:
 
     [![](navigation-bars-images/navbar03.png "Definir o título")](navigation-bars-images/navbar03.png#lightbox)
-1. Em seguida, você pode adicionar um ou mais **itens de botão de barra** para qualquer fim da barra: 
+1. Em seguida, você pode adicionar um ou mais **itens de botão de barra** para qualquer fim da barra:
 
     [![](navigation-bars-images/navbar04.png "Um item de botão de barra")](navigation-bars-images/navbar04.png#lightbox)
-1. Por fim, conecte os **itens do botão de barra** a ações na guia **eventos** do **Gerenciador de propriedades**: 
+1. Por fim, conecte os **itens do botão de barra** a ações na guia **eventos** do **Gerenciador de propriedades**:
 
     [![](navigation-bars-images/navbar05.png "Uma ação de item de botão de barra")](navigation-bars-images/navbar05.png#lightbox)
 1. Salve as alterações.
@@ -53,16 +53,16 @@ A maneira mais fácil de trabalhar com barras de navegação em um aplicativo Xa
 
 
 1. Na **Gerenciador de soluções**, clique `Main.storyboard` duas vezes no arquivo e abra-o para edição.
-1. Arraste uma **barra de navegação** da **caixa de ferramentas** e solte-a na exibição na parte superior da tela: 
+1. Arraste uma **barra de navegação** da **caixa de ferramentas** e solte-a na exibição na parte superior da tela:
 
     [![](navigation-bars-images/navbar02-vs.png "Uma barra de navegação")](navigation-bars-images/navbar02-vs.png#lightbox)
-1. Clique duas vezes na **barra de navegação** para selecionar o **item de navegação**. Na guia **widget** do Gerenciador de **Propriedades**, você pode definir o **título**: 
+1. Clique duas vezes na **barra de navegação** para selecionar o **item de navegação**. Na guia **widget** do Gerenciador de **Propriedades**, você pode definir o **título**:
 
     [![](navigation-bars-images/navbar03-vs.png "Definir o título")](navigation-bars-images/navbar03-vs.png#lightbox)
-1. Em seguida, você pode adicionar um ou mais **itens de botão de barra** para qualquer fim da barra: 
+1. Em seguida, você pode adicionar um ou mais **itens de botão de barra** para qualquer fim da barra:
 
     [![](navigation-bars-images/navbar04-vs.png "Itens de botão de barra")](navigation-bars-images/navbar04-vs.png#lightbox)
-1. Por fim, conecte os **itens do botão de barra** a ações na guia **eventos** do **Gerenciador de propriedades**: 
+1. Por fim, conecte os **itens do botão de barra** a ações na guia **eventos** do **Gerenciador de propriedades**:
 
     [![](navigation-bars-images/navbar05-vs.png "Ações de item de botão de barra")](navigation-bars-images/navbar05-vs.png#lightbox)
 1. Salve as alterações.
@@ -126,7 +126,7 @@ namespace MySingleView
 
 Desde que a propriedade de `Enabled` um botão seja `true` e não seja coberta por outro controle ou exibição, ela pode se tornar o item em foco usando o Siri remoto.
 
-Para obter mais informações sobre como trabalhar com storyboards, consulte nossa [Guia de início rápido Olá, tvOS](~/ios/tvos/get-started/hello-tvos.md). 
+Para obter mais informações sobre como trabalhar com storyboards, consulte nossa [Guia de início rápido Olá, tvOS](~/ios/tvos/get-started/hello-tvos.md).
 
 <a name="Summary" />
 

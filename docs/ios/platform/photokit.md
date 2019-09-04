@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/14/2017
-ms.openlocfilehash: 5e5cc20e9fbeaf2b00e022ccdbf67286aed6d5ef
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 3920445c234344fe7f2a1cdd93ed7f4f6405727d
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528818"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70226582"
 ---
 # <a name="photokit-in-xamarinios"></a>PhotoKit no Xamarin. iOS
 
@@ -25,13 +25,13 @@ Da mesma forma `PHAssetCollection` , `PHCollectionList` as classes e contêm met
 
 ## <a name="querying-model-data"></a>Consultando dados de modelo
 
-O PhotoKit facilita a consulta de dados de modelo por meio de uma variedade de métodos de busca. Por exemplo, para recuperar todas as imagens, você chamaria `PFAsset.Fetch`, passando o tipo de `PHAssetMediaType.Image` mídia.
+O PhotoKit facilita a consulta de dados de modelo por meio de uma variedade de métodos de busca. Por exemplo, para recuperar todas as imagens, você chamaria `PHAsset.Fetch`, passando o tipo de `PHAssetMediaType.Image` mídia.
 
 ```csharp
 PHFetchResult fetchResults = PHAsset.FetchAssets (PHAssetMediaType.Image, null);
 ```
 
-A `PHFetchResult` instância, então, conteria `PFAsset` todas as instâncias que representam imagens. Para obter as próprias imagens, use a `PHImageManager` (ou a `PHCachingImageManager`versão de cache) para fazer uma solicitação para a imagem chamando `RequestImageForAsset`. Por exemplo, o código a seguir recupera uma imagem para cada ativo em `PHFetchResult` um para exibir em uma célula de exibição de coleção:
+A `PHFetchResult` instância, então, conteria `PHAsset` todas as instâncias que representam imagens. Para obter as próprias imagens, use a `PHImageManager` (ou a `PHCachingImageManager`versão de cache) para fazer uma solicitação para a imagem chamando `RequestImageForAsset`. Por exemplo, o código a seguir recupera uma imagem para cada ativo em `PHFetchResult` um para exibir em uma célula de exibição de coleção:
 
 ```csharp
 public override UICollectionViewCell GetCell (UICollectionView collectionView, NSIndexPath indexPath)

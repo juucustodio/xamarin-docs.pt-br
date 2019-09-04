@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2019
-ms.openlocfilehash: b13ee05f6d0e17287254b7c30c07b5a4a3c70638
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 9113ff728c382a26d0f0b5c0a6e40575cb8e776f
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70198294"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227944"
 ---
 # <a name="xamarinforms-webview"></a>WebView do xamarin. Forms
 
@@ -20,7 +20,7 @@ ms.locfileid: "70198294"
 
 [`WebView`](xref:Xamarin.Forms.WebView) é um modo de exibição da web e o conteúdo HTML em seu aplicativo. Diferentemente `OpenUri`, que leva o usuário para o navegador da web no dispositivo, `WebView` exibe o conteúdo HTML dentro de seu aplicativo.
 
-![](webview-images/in-app-browser.png "No navegador do aplicativo")
+![No navegador de aplicativos](webview-images/in-app-browser.png)
 
 ## <a name="content"></a>Conteúdo
 
@@ -105,7 +105,7 @@ htmlSource.Html = @"<html><body>
 browser.Source = htmlSource;
 ```
 
-![](webview-images/html-string.png "Cadeia de caracteres do WebView exibir HTML")
+![WebView exibindo cadeia de caracteres HTML](webview-images/html-string.png)
 
 No código acima, `@` é usado para marcar o HTML como uma cadeia de caracteres literal, o que significa que todos os caracteres de escape comuns são ignorados.
 
@@ -147,7 +147,7 @@ Para exibição local conteúdo usando um `WebView`, você precisará abrir o ar
 
 As capturas de tela a seguir mostram o resultado de exibição de conteúdo local em cada plataforma:
 
-![](webview-images/local-content.png "Exibindo conteúdo Local do WebView")
+![Exibição da Web exibindo conteúdo local](webview-images/local-content.png)
 
 Embora a primeira página é carregada, o `WebView` não tem conhecimento de onde veio o HTML. Isso é um problema ao lidar com páginas que fazem referência a recursos locais. Quando o link de páginas locais aos outros, uma página faz uso de um arquivo JavaScript separado ou uma página contém links para uma folha de estilos CSS são exemplos de quando isso pode acontecer.  
 
@@ -176,11 +176,11 @@ No iOS, o conteúdo da web deve estar localizado no diretório raiz do projeto o
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-![](webview-images/ios-vs.png "Arquivos locais no iOS")
+![Arquivos locais no iOS](webview-images/ios-vs.png)
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
-![](webview-images/ios-xs.png "Arquivos locais no iOS")
+![Arquivos locais no iOS](webview-images/ios-xs.png)
 
 -----
 
@@ -206,11 +206,11 @@ No Android, coloque o HTML, CSS e imagens na pasta ativos com a ação de build 
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-![](webview-images/android-vs.png "Arquivos locais no Android")
+![Arquivos locais no Android](webview-images/android-vs.png)
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
-![](webview-images/android-xs.png "Arquivos locais no Android")
+![Arquivos locais no Android](webview-images/android-xs.png)
 
 -----
 
@@ -328,9 +328,9 @@ public partial class InAppBrowserXaml : ContentPage
 
 É só isso!
 
-![](webview-images/in-app-browser.png "Botões de navegação do WebView")
+![Botões de navegação do WebView](webview-images/in-app-browser.png)
 
-## <a name="events"></a>Eventos
+## <a name="events"></a>Events
 
 WebView aciona os eventos a seguir para ajudá-lo a responder a alterações no estado:
 
@@ -383,11 +383,11 @@ void webviewNavigated(object sender, WebNavigatedEventArgs e)
 
 Isso resulta na seguinte saída (Carregando):
 
-![](webview-images/loading-start.png "Exemplo de evento de navegação do WebView")
+![Exemplo de evento de navegação do WebView](webview-images/loading-start.png)
 
 Carregamento concluído:
 
-![](webview-images/loading-end.png "Exemplo de evento de navegação do WebView")
+![Exemplo de evento de navegação do WebView](webview-images/loading-end.png)
 
 ## <a name="reloading-content"></a>Recarregar conteúdo
 

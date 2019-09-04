@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: d32b96cd489f84ea93e7ada9b6458272d0dea1c0
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 3ae18a2009ee3c34498a2e7586b561c525e76d45
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69524867"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70225548"
 ---
 # <a name="xamarinandroid-api-design-principles"></a>Princípios de design da API do Xamarin. Android
 
@@ -42,21 +42,21 @@ Estes são alguns dos princípios de design para a associação do Xamarin. Andr
 
 - Expor uma API fortemente tipada:
 
-    - Aumente a segurança do tipo.
+  - Aumente a segurança do tipo.
 
-    - Minimize os erros de tempo de execução.
+  - Minimize os erros de tempo de execução.
 
-    - Obter o IntelliSense do IDE em tipos de retorno.
+  - Obter o IntelliSense do IDE em tipos de retorno.
 
-    - Permite documentação de popup do IDE.
+  - Permite documentação de popup do IDE.
 
 - Incentive a exploração no IDE das APIs:
 
-    - Utilize alternativas de estrutura para minimizar a exposição do Java classlib.
+  - Utilize alternativas de estrutura para minimizar a exposição do Java classlib.
 
-    - Exponha C# delegados (lambdas, métodos anônimos e System. Delegate) em vez de interfaces de método único quando apropriado e aplicável.
+  - Exponha C# delegados (lambdas, métodos anônimos e System. Delegate) em vez de interfaces de método único quando apropriado e aplicável.
 
-    - Forneça um mecanismo para chamar bibliotecas Java arbitrárias ( [Android. Runtime. JNIEnv](xref:Android.Runtime.JNIEnv)).
+  - Forneça um mecanismo para chamar bibliotecas Java arbitrárias ( [Android. Runtime. JNIEnv](xref:Android.Runtime.JNIEnv)).
 
 
 ## <a name="assemblies"></a>Assemblies
@@ -198,17 +198,17 @@ Uma derivação de exemplo de uma classe interna é CubeWallpaper. CubeEngine:
 
 ```csharp
 class CubeWallpaper : WallpaperService {
-        public override WallpaperService.Engine OnCreateEngine ()
-        {
-                return new CubeEngine (this);
-        }
+    public override WallpaperService.Engine OnCreateEngine ()
+    {
+        return new CubeEngine (this);
+    }
 
-        class CubeEngine : WallpaperService.Engine {
-                public CubeEngine (CubeWallpaper s)
-                        : base (s)
-                {
-                }
+    class CubeEngine : WallpaperService.Engine {
+        public CubeEngine (CubeWallpaper s)
+                : base (s)
+        {
         }
+    }
 }
 ```
 

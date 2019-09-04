@@ -7,12 +7,12 @@ ms.assetid: F4A37564-B18B-42FF-B841-9A1949895AB6
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/27/2018
-ms.openlocfilehash: 0ce718bf0380c47033129755d6ca9d40c1136e2c
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 620a986ea9c5a6792d321b0c89dae936ffa256da
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69529272"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227916"
 ---
 # <a name="part-3-xaml-markup-extensions"></a>Parte 3. Extensões de marcação XAML
 
@@ -297,7 +297,7 @@ Aqui está o arquivo XAML completo final com três botões acessando seis valore
 
 Verifique se as capturas de tela, o estilo consistentes e o estilo de dependente de plataforma:
 
-[![](xaml-markup-extensions-images/sharedresources.png "Controles com estilo")](xaml-markup-extensions-images/sharedresources-large.png#lightbox "controles com estilo")
+[![Controles com estilo](xaml-markup-extensions-images/sharedresources.png)](xaml-markup-extensions-images/sharedresources-large.png#lightbox)
 
 Embora seja mais comum para definir a `Resources` coleção na parte superior da página, tenha em mente que o `Resources` propriedade é definida por `VisualElement`, e você pode ter `Resources` coleções em outros elementos na página. Por exemplo, tente adicionar um para o `StackLayout` neste exemplo:
 
@@ -435,7 +435,7 @@ As duas declarações de namespace esses estão incluídas na **StaticConstantsP
 
 O tamanho do resultante `BoxView` em relação à tela é dependente de plataforma:
 
- [![](xaml-markup-extensions-images/staticconstants.png "Controles usando a extensão de marcação X:Static")](xaml-markup-extensions-images/staticconstants-large.png#lightbox "controles usando a extensão de marcação X:Static")
+[![Controles usando a extensão de marcação x:Static](xaml-markup-extensions-images/staticconstants.png)](xaml-markup-extensions-images/staticconstants-large.png#lightbox)
 
 ## <a name="other-standard-markup-extensions"></a>Outras extensões de marcação padrão
 
@@ -551,7 +551,7 @@ Talvez a lição mais importante que você deve seguir neste exemplo seja a sint
 
 Aqui está o programa em execução:
 
-[![](xaml-markup-extensions-images/relativelayout.png "Usando restrições de Layout relativa")](xaml-markup-extensions-images/relativelayout-large.png#lightbox "usando restrições de Layout relativo")
+[![Layout relativo usando restrições](xaml-markup-extensions-images/relativelayout.png)](xaml-markup-extensions-images/relativelayout-large.png#lightbox)
 
 ## <a name="summary"></a>Resumo
 

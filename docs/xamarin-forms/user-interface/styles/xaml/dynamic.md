@@ -8,12 +8,12 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 05/28/2019
 ms.custom: video
-ms.openlocfilehash: 1b4732e87fb09a4846bfe12b7a476dfef2d6f4f9
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 9a26532d13b843b812da94739be071c7accac212
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68647223"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70228199"
 ---
 # <a name="dynamic-styles-in-xamarinforms"></a>Estilos dinâmicos no xamarin. Forms
 
@@ -82,10 +82,10 @@ public partial class DynamicStylesPage : ContentPage
 }
 ```
 
-Quando o `OnButtonClicked` manipulador de eventos é executado, `searchBarStyle` alternará entre `blueSearchBarStyle` e `greenSearchBarStyle`. Isso resulta na exibição mostrada nas capturas de tela seguir:
+Quando o `OnButtonClicked` manipulador de eventos é executado, `searchBarStyle` alternará entre `blueSearchBarStyle` e `greenSearchBarStyle`. Isso resulta na aparência mostrada nas capturas de tela seguir:
 
-[![](dynamic-images/dynamic-style-blue.png "Estilo dinâmico de exemplo de azul")](dynamic-images/dynamic-style-blue-large.png#lightbox "azul estilo dinâmico de exemplo")
-[![](dynamic-images/dynamic-style-green.png "verde estilo dinâmico de exemplo") ] (dynamic-images/dynamic-style-green-large.png#lightbox "Verde estilo dinâmico de exemplo")
+[![](dynamic-images/dynamic-style-blue.png)](dynamic-images/dynamic-style-blue-large.png#lightbox)Exemplo de estilo dinâmico azul exemplo de estilo dinâmico verde
+[![](dynamic-images/dynamic-style-green.png)](dynamic-images/dynamic-style-green-large.png#lightbox)
 
 O exemplo de código a seguir demonstra a página equivalente em C#:
 
@@ -161,10 +161,10 @@ O exemplo de código a seguir demonstra *dinâmico* herança de estilo em uma p�
 
 O [ `SearchBar` ](xref:Xamarin.Forms.SearchBar) instâncias de uso de `StaticResource` extensão de marcação para fazer referência a um [ `Style` ](xref:Xamarin.Forms.Style) chamado `tealSearchBarStyle`. Isso `Style` define algumas propriedades adicionais e usa o [ `BaseResourceKey` ](xref:Xamarin.Forms.Style.BaseResourceKey) propriedade a referenciar `searchBarStyle`. O `DynamicResource` extensão de marcação não é necessária porque `tealSearchBarStyle` não será alterado, exceto para o `Style` deriva. Portanto, `tealSearchBarStyle` mantém um link para `searchBarStyle` e é alterado quando o estilo de base é alterado.
 
-No arquivo code-behind, o construtor cria um [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) entrada com a chave `searchBarStyle`, de acordo com o exemplo anterior que demonstrou estilos dinâmicos. Quando o `OnButtonClicked` manipulador de eventos é executado, `searchBarStyle` alternará entre `blueSearchBarStyle` e `greenSearchBarStyle`. Isso resulta na exibição mostrada nas capturas de tela seguir:
+No arquivo code-behind, o construtor cria um [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) entrada com a chave `searchBarStyle`, de acordo com o exemplo anterior que demonstrou estilos dinâmicos. Quando o `OnButtonClicked` manipulador de eventos é executado, `searchBarStyle` alternará entre `blueSearchBarStyle` e `greenSearchBarStyle`. Isso resulta na aparência mostrada nas capturas de tela seguir:
 
-[![](dynamic-images/dynamic-style-inheritance-blue.png "Exemplo de herança de estilo dinâmica de azul")](dynamic-images/dynamic-style-inheritance-blue-large.png#lightbox "azul exemplo de herança de estilo dinâmica")
-[![](dynamic-images/dynamic-style-inheritance-green.png "verde estilos dinâmica Exemplo de herança")](dynamic-images/dynamic-style-inheritance-green-large.png#lightbox "verde de exemplo de herança de estilo dinâmica")
+[![](dynamic-images/dynamic-style-inheritance-blue.png)](dynamic-images/dynamic-style-inheritance-blue-large.png#lightbox)
+Exemplo de herança de estilo[![dinâmico azul exemplo de herança de estilo dinâmico verde](dynamic-images/dynamic-style-inheritance-green.png)](dynamic-images/dynamic-style-inheritance-green-large.png#lightbox)
 
 O exemplo de código a seguir demonstra a página equivalente em C#:
 

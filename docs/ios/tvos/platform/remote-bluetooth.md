@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 1e1e86c6301214c7117b8f3b21b19554499d7fbd
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 99fafe0ae0186ac68609ebe22dabe64e588ee5e0
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70121438"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70226679"
 ---
 # <a name="siri-remote-and-bluetooth-controllers-for-tvos-in-xamarin"></a>Controladores remotos e Bluetooth Siri para tvOS no Xamarin
 
@@ -67,7 +67,7 @@ A Apple fornece as seguintes sugestões para trabalhar com gestos de superfície
 
 ## <a name="siri-remote-buttons"></a>Botões remotos do Siri
 
-Além dos gestos na superfície de toque, seu aplicativo pode responder ao usuário clicando na superfície de toque ou pressionando o botão reproduzir/pausar. Se você estiver acessando o Siri Remote usando a estrutura do controlador de jogo, também poderá detectar o botão de menu que está sendo pressionado. 
+Além dos gestos na superfície de toque, seu aplicativo pode responder ao usuário clicando na superfície de toque ou pressionando o botão reproduzir/pausar. Se você estiver acessando o Siri Remote usando a estrutura do controlador de jogo, também poderá detectar o botão de menu que está sendo pressionado.
 
 Além disso, os pressionamentos de botão de menu podem ser detectados usando um `UIKit` reconhecedor de gesto com elementos padrão. Se você interceptar o botão de menu que está sendo pressionado, será responsável por fechar a exibição atual e o controlador de exibição e retornar para o anterior.
 
@@ -83,14 +83,14 @@ A maneira mais fácil de trabalhar com o remoto Siri em seu aplicativo Xamarin. 
 Para adicionar um reconhecedor de gestos, faça o seguinte:
 
 1. Na **Gerenciador de soluções**, clique duas vezes no `Main.storyboard` arquivo e abra-o para editar o designer de interface.
-2. Arraste um reconhecedor de gestos de **toque** da **biblioteca** e solte-o na exibição: 
+2. Arraste um reconhecedor de gestos de **toque** da **biblioteca** e solte-o na exibição:
 
     [![](remote-bluetooth-images/storyboard01.png "Um reconhecedor de gestos Tap")](remote-bluetooth-images/storyboard01.png#lightbox)
-3. Marque **selecionar** na seção de **botão** do **Inspetor de atributo**: 
+3. Marque **selecionar** na seção de **botão** do **Inspetor de atributo**:
 
     [![](remote-bluetooth-images/storyboard02.png "Selecionar seleção")](remote-bluetooth-images/storyboard02.png#lightbox)
 4. **Select** significa que o gesto responderá ao usuário clicando na **superfície de toque** no Siri remoto. Você também tem a opção de responder aos botões **menu**, **reproduzir/pausar**, para **cima**, **para baixo, para**a **esquerda** e para a **direita** .
-5. Em seguida, conecte uma **ação** do reconhecedor de **gestos Tap** e `TouchSurfaceClicked`chame-a: 
+5. Em seguida, conecte uma **ação** do reconhecedor de **gestos Tap** e `TouchSurfaceClicked`chame-a:
 
     [![](remote-bluetooth-images/storyboard03.png "Uma ação do reconhecedor de gestos Tap")](remote-bluetooth-images/storyboard03.png#lightbox)
 6. Salve as alterações e retorne ao Visual Studio para Mac.
@@ -142,7 +142,7 @@ namespace tvRemote
         #region Override Methods
         public override void ViewDidLoad ()
         {
-            base.ViewDidLoad ();    
+            base.ViewDidLoad ();
 
             // Wire-up gestures
             var upGesture = new UISwipeGestureRecognizer (() => {
@@ -186,9 +186,9 @@ namespace tvRemote
 
 ## <a name="low-level-event-handling"></a>Manipulação de eventos de baixo nível
 
-Se você estiver criando um tipo personalizado com base `UIKit` em seu aplicativo Xamarin. tvOS (por exemplo `UIView`,), também terá a capacidade de fornecer manipulação de baixo nível de pressionamento de `UIPress` botão por eventos. 
+Se você estiver criando um tipo personalizado com base `UIKit` em seu aplicativo Xamarin. tvOS (por exemplo `UIView`,), também terá a capacidade de fornecer manipulação de baixo nível de pressionamento de `UIPress` botão por eventos.
 
-Um `UIPress` evento é tvOS o que um `UITouch` evento é para IOS, exceto `UIPress` retorna informações sobre pressionamentos de botão no Siri remoto ou em outros dispositivos Bluetooth conectados (como um controlador de jogo). `UIPress`eventos descrevem o botão que está sendo pressionado e seu estado (iniciado, cancelado, alterado ou encerrado). 
+Um `UIPress` evento é tvOS o que um `UITouch` evento é para IOS, exceto `UIPress` retorna informações sobre pressionamentos de botão no Siri remoto ou em outros dispositivos Bluetooth conectados (como um controlador de jogo). `UIPress`eventos descrevem o botão que está sendo pressionado e seu estado (iniciado, cancelado, alterado ou encerrado).
 
 Para botões analógicos em dispositivos como controladores de jogos `UIPress` Bluetooth, o também retorna a quantidade de força que está sendo aplicada ao botão. A `Type` propriedade`UIPress` do evento define qual botão físico mudou de estado, enquanto o restante das propriedades descreve a alteração que ocorreu.
 
@@ -211,7 +211,7 @@ namespace tvRemote
         }
         #endregion
 
-        #region 
+        #region
         public EventView (IntPtr handle) : base (handle)
         {
         }

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/22/2017
-ms.openlocfilehash: b639a7fdefb8fca67d833b07ef9aa1a85da67ef6
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 3fe189c0ef524a44dcbb71c883b57063748a06e3
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68642890"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70228014"
 ---
 # <a name="xamarinforms-text-styles"></a>Estilos de texto do xamarin. Forms
 
@@ -48,7 +48,7 @@ No c#, os estilos internos são selecionados de `Device.Styles`:
 label.Style = Device.Styles.TitleStyle;
 ```
 
-![](styles-images/builtinstyles.png "Exemplo de estilos de dispositivo")
+![Exemplo de estilos de dispositivo](styles-images/builtinstyles.png)
 
 <a name="Custom_Styles" />
 
@@ -90,7 +90,7 @@ No XAML:
 
 Observe que os recursos (incluindo todos os estilos) são definidos dentro `ContentPage.Resources`, que é um irmão de mais familiar `ContentPage.Content` elemento.
 
-![](styles-images/customstyle.png "Exemplo de estilos personalizados")
+![Exemplo de estilos personalizados](styles-images/customstyle.png)
 
 <a name="Applying_Styles" />
 
@@ -137,11 +137,11 @@ Considere o exemplo a seguir da mesma página de modos de exibição estilizada 
 
 Desabilitado:
 
-![](styles-images/pre-access.png "Estilos de dispositivo com acessibilidade desabilitado")
+![Estilos de dispositivo com acessibilidade desabilitada](styles-images/pre-access.png)
 
 Habilitado:
 
-![](styles-images/post-access.png "Estilos de dispositivo com acessibilidade habilitado")
+![Estilos de dispositivo com acessibilidade habilitada](styles-images/post-access.png)
 
 Para garantir a acessibilidade, certifique-se de que os estilos internos são usados como base para todos os estilos relacionada ao texto dentro de seu aplicativo e que você está usando estilos de forma consistente. Ver [estilos](~/xamarin-forms/user-interface/styles/index.md) para obter mais detalhes sobre a extensão e trabalhar com estilos, em geral.
 

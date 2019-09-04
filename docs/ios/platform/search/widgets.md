@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: f2ac37676dbdfc96c853c9bc679e79c2aae1adb1
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 71c58baee5e98efcfb38b75ffed2b85c90f8a131
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656244"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227357"
 ---
 # <a name="search-and-home-screen-widget-enhancements-in-ios-10"></a>Aprimoramentos no widget de pesquisa e na tela inicial no iOS 10
 
@@ -71,7 +71,7 @@ var vibrancy2 = UIVibrancyEffect.CreateSecondaryVibrancyEffectForNotificationCen
 
 Novo no iOS 10, os widgets agora contêm uma propriedade [NCWidgetDisplayMode](https://developer.apple.com/reference/notificationcenter/ncwidgetdisplaymode) que permite ao desenvolvedor descrever a quantidade de conteúdo disponível e permite que o usuário expanda e recolha o conteúdo.
 
-Quando um widget é mostrado inicialmente, ele está em um estado recolhido. Um widget recolhido tem uma altura de aproximadamente duas e uma metade de linhas da tabela do iOS padrão. O desenvolvedor pode solicitar o tamanho de um widget expandido, mas, idealmente, deve ser menor que a altura da tela. 
+Quando um widget é mostrado inicialmente, ele está em um estado recolhido. Um widget recolhido tem uma altura de aproximadamente duas e uma metade de linhas da tabela do iOS padrão. O desenvolvedor pode solicitar o tamanho de um widget expandido, mas, idealmente, deve ser menor que a altura da tela.
 
 No estado recolhido, o widget deve mostrar somente informações essenciais e autônomas. Quando expandido, o widget deve mostrar informações complementares que aprimoram o conteúdo primário mostrado no estado recolhido. Por exemplo, o aplicativo meteorológico mostra as condições do clima atual quando recolhido e adiciona a previsão por hora quando expandida.
 

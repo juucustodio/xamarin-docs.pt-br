@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: a57363ef0fec4668fe35e1d7198372a543d672e7
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 3b045d18d66463a1464e446847cb5dbfd531bbf3
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655344"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227878"
 ---
 # <a name="outline-views-in-xamarinmac"></a>Exibições de estrutura de tópicos no Xamarin. Mac
 
@@ -87,10 +87,10 @@ Selecione o modo de exibição de estrutura de tópicos na **hierarquia de inter
 - **Cor da grade** – define a cor da borda da célula.
 - **Plano** de fundo – define a cor do plano de fundo da célula.
 - **Seleção** – permitir que você controle como o usuário pode selecionar células na tabela como:
-    - **Multiple** -If `true`, o usuário pode selecionar várias linhas e colunas.
-    - **Coluna** -se `true`, o usuário pode selecionar colunas.
-    - **Digite Select** -If `true`, o usuário pode digitar um caractere para selecionar uma linha.
-    - **Empty** -se `true`, o usuário não precisa selecionar uma linha ou coluna, a tabela não permite nenhuma seleção.
+  - **Multiple** -If `true`, o usuário pode selecionar várias linhas e colunas.
+  - **Coluna** -se `true`, o usuário pode selecionar colunas.
+  - **Digite Select** -If `true`, o usuário pode digitar um caractere para selecionar uma linha.
+  - **Empty** -se `true`, o usuário não precisa selecionar uma linha ou coluna, a tabela não permite nenhuma seleção.
 - **AutoSalvar** – o nome no qual o formato das tabelas é salvo automaticamente.
 - **Informações da coluna** - `true`se, a ordem e a largura das colunas serão salvas automaticamente.
 - **Quebras de linha** – selecione como a célula lida com quebras de linha.
@@ -157,14 +157,14 @@ Assim como qualquer outro controle de interface do usuário do Cocoa, precisamos
 
 O processo é o mesmo para qualquer elemento de exibição de estrutura de tópicos que desejamos expor:
 
-1. Alterne para o **Editor do assistente** e verifique se `ViewController.h` o arquivo está selecionado: 
+1. Alterne para o **Editor do assistente** e verifique se `ViewController.h` o arquivo está selecionado:
 
     [![](outline-view-images/edit11.png "Selecionando o arquivo. h correto")](outline-view-images/edit11.png#lightbox)
 2. Selecione o modo de exibição de estrutura de tópicos na **hierarquia de interface**, clique no `ViewController.h` botão de controle e arraste-o para o arquivo.
-3. Crie uma **tomada** para o modo de exibição `ProductOutline`de estrutura de tópicos chamado: 
+3. Crie uma **tomada** para o modo de exibição `ProductOutline`de estrutura de tópicos chamado:
 
     [![](outline-view-images/edit13.png "Configurando uma tomada")](outline-view-images/edit13.png#lightbox)
-4. Crie **saídas** para as colunas de tabelas também chamadas `ProductColumn` e: `DetailsColumn` 
+4. Crie **saídas** para as colunas de tabelas também chamadas `ProductColumn` e: `DetailsColumn`
 
     [![](outline-view-images/edit14.png "Configurando uma tomada")](outline-view-images/edit14.png#lightbox)
 5. Salve as alterações e retorne ao Visual Studio para Mac para sincronizar com o Xcode.
@@ -263,7 +263,7 @@ namespace MacOutlines
             } else {
                 return ((Product)item).Products [childIndex];
             }
-                
+
         }
 
         public override bool ItemExpandable (NSOutlineView outlineView, NSObject item)
@@ -273,7 +273,7 @@ namespace MacOutlines
             } else {
                 return ((Product)item).IsProductGroup;
             }
-        
+
         }
         #endregion
     }
@@ -298,7 +298,7 @@ namespace MacOutlines
 {
     public class ProductOutlineDelegate : NSOutlineViewDelegate
     {
-        #region Constants 
+        #region Constants
         private const string CellIdentifier = "ProdCell";
         #endregion
 
@@ -519,7 +519,7 @@ Se você quiser permitir que o usuário Arraste colunas de reordenação no modo
 
 [![](outline-view-images/reorder01.png "O Inspetor de atributo")](outline-view-images/reorder01.png#lightbox)
 
-Se fornecermos um valor para a **Propriedade** autosave e verificar o campo de **informações da coluna** , as alterações feitas no layout da tabela serão salvas automaticamente para nós e restauradas na próxima vez em que o aplicativo for executado.
+Se fornecermos um valor para a Propriedade autosave e verificar o campo de **informações da coluna** , as alterações feitas no layout da tabela serão salvas automaticamente para nós e restauradas na próxima vez em que o aplicativo for executado.
 
 Salve as alterações e retorne ao Visual Studio para Mac para sincronizar com o Xcode.
 
@@ -578,7 +578,7 @@ public override NSView GetView (NSOutlineView outlineView, NSTableColumn tableCo
             break;
         case "Details":
             prod.Description = view.StringValue;
-            break; 
+            break;
         }
     };
 
@@ -649,7 +649,7 @@ public override NSView GetView (NSOutlineView outlineView, NSTableColumn tableCo
             break;
         case "Details":
             prod.Description = view.TextField.StringValue;
-            break; 
+            break;
         }
     };
 

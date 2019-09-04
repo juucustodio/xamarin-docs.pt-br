@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 885cf4b77d4eac0668a2e70c57187e9b23a91dd1
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 962f06367542cc0e5d0d17f3261411c96f215e44
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69527561"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227481"
 ---
 # <a name="introduction-to-ios-7"></a>Introdução ao iOS 7
 
@@ -36,14 +36,14 @@ O código a seguir produz um efeito de mola quando o centro da exibição de ima
 
 ```csharp
 void AnimateWithSpring ()
-{ 
+{
     float springDampingRatio = 0.25f;
     float initialSpringVelocity = 1.0f;
-    
+
     UIView.AnimateNotify (3.0, 0.0, springDampingRatio, initialSpringVelocity, 0, () => {
-    
-        imageView.Center = new CGPoint (imageView.Center.X, 400);   
-            
+
+        imageView.Center = new CGPoint (imageView.Center.X, 400);
+
     }, null);
 }
 ```
@@ -67,11 +67,11 @@ void AnimateViewWithKeyframes ()
     // can now use keyframes directly on UIView without needing to drop directly into Core Animation
 
     UIView.AnimateKeyframes (2.0, 0, UIViewKeyframeAnimationOptions.Autoreverse, () => {
-        UIView.AddKeyframeWithRelativeStartTime (0.0, 0.5, () => { 
+        UIView.AddKeyframeWithRelativeStartTime (0.0, 0.5, () => {
             imageView.Center = new CGPoint (200, 200);
         });
 
-        UIView.AddKeyframeWithRelativeStartTime (0.5, 0.5, () => { 
+        UIView.AddKeyframeWithRelativeStartTime (0.5, 0.5, () => {
             imageView.Transform = CGAffineTransform.MakeRotation ((float)Math.PI / 2);
         });
     }, (finished) => {
@@ -156,7 +156,7 @@ dynAnimator.AddBehavior (gravity);
 
 Isso resulta na animação de imagem abaixo com gravidade, conforme ilustrado abaixo:
 
-![](images/gravity2.png "O local") 
+![](images/gravity2.png "O local")
 ![](images/gravity3.png "da imagem inicial do local da imagem final")
 
 Como não há nada restringindo os limites da tela, a exibição da imagem simplesmente fica fora da parte inferior. Para restringir a exibição de forma que a imagem colide com as bordas da tela, podemos adicionar um `UICollisionBehavior`. Abordaremos isso na próxima seção.

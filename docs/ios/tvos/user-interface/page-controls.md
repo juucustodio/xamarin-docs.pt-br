@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: bb53c11612cf492cda39067db861c1d67e0d3e16
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: decbbdab09b514bd49784f6ba45575ae845c547f
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68648988"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70226479"
 ---
 # <a name="working-with-tvos-page-controls-in-xamarin"></a>Trabalhando com controles de página tvOS no Xamarin
 
@@ -35,37 +35,37 @@ A maneira mais fácil de trabalhar com controles de página em um aplicativo Xam
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
-    
+
 1. No **painel de soluções**, clique duas vezes no arquivo `Main.storyboard` e abra-o para edição.
-1. Arraste um **controle de página** da **caixa de ferramentas** e solte-o na exibição: 
+1. Arraste um **controle de página** da **caixa de ferramentas** e solte-o na exibição:
 
     [![](page-controls-images/page02.png "Um controle de página")](page-controls-images/page02.png#lightbox)
-1. Na **Guia Widget** da **painel de propriedades**, você pode ajustar várias propriedades do controle de página, como a **página atual** e o **número de páginas**: 
+1. Na **Guia Widget** da **painel de propriedades**, você pode ajustar várias propriedades do controle de página, como a **página atual** e o **número de páginas**:
 
     [![](page-controls-images/page03.png "A guia do widget")](page-controls-images/page03.png#lightbox)
 1. Em seguida, adicione controles ou gestos à exibição para voltar e avançar pela coleção de páginas.
-1. Por fim, atribua **nomes** aos controles para que você possa respondê-los no C# código. Por exemplo: 
+1. Por fim, atribua **nomes** aos controles para que você possa respondê-los no C# código. Por exemplo:
 
     [![](page-controls-images/page04.png "Nomear o controle")](page-controls-images/page04.png#lightbox)
 1. Salve as alterações.
-    
+
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-    
+
 1. No **Gerenciador de soluções**, clique duas vezes no arquivo `Main.storyboard` e abra-o para edição.
-1. Arraste um **controle de página** da **caixa de ferramentas** e solte-o na exibição: 
+1. Arraste um **controle de página** da **caixa de ferramentas** e solte-o na exibição:
 
     [![](page-controls-images/page02-vs.png "Um controle de página")](page-controls-images/page02-vs.png#lightbox)
-1. Na **Guia Widget** do Gerenciador de **Propriedades**, você pode ajustar várias propriedades do controle de página, como a **página atual** e o **número de páginas**: 
+1. Na **Guia Widget** do Gerenciador de **Propriedades**, você pode ajustar várias propriedades do controle de página, como a **página atual** e o **número de páginas**:
 
     [![](page-controls-images/page03-vs.png "A guia do widget")](page-controls-images/page03-vs.png#lightbox)
 1. Em seguida, adicione controles ou gestos à exibição para voltar e avançar pela coleção de páginas.
-1. Por fim, atribua **nomes** aos controles para que você possa respondê-los no C# código. Por exemplo: 
+1. Por fim, atribua **nomes** aos controles para que você possa respondê-los no C# código. Por exemplo:
 
     [![](page-controls-images/page04-vs.png "Nomear o controle")](page-controls-images/page04-vs.png#lightbox)
 1. Salve as alterações.
-    
+
 
 -----
 
@@ -160,7 +160,7 @@ PageView.CurrentPage = PageNumber;
 
 A `CurrentPage` propriedade é zero (0) com base, portanto, a primeira página será zero e a última será uma menos a quantidade máxima de páginas.
 
-Para obter mais informações sobre como trabalhar com storyboards, consulte nossa [Guia de início rápido Olá, tvOS](~/ios/tvos/get-started/hello-tvos.md). 
+Para obter mais informações sobre como trabalhar com storyboards, consulte nossa [Guia de início rápido Olá, tvOS](~/ios/tvos/get-started/hello-tvos.md).
 
 <a name="Summary" />
 

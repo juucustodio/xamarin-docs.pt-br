@@ -7,38 +7,38 @@ ms.assetid: CF386485-EAB0-4B9E-AA17-CB1B6462E505
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: b421378f8aa99728fa13f104e284b9c410abe2b3
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: cd7a2026a4d1d1458455733a6f2710364cc7fec7
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70119959"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70226778"
 ---
 # <a name="where-can-i-find-my-version-information-and-logs"></a>Onde posso encontrar informações e logs da minha versão?
 
 ## <a name="outline"></a>Contorno
 
 - [Informações de versão](#version-information)
-    - Informações de versão do Windows
-    - Informações de versão do Mac
-    - Android SDK Tools, plataforma-ferramentas, compilação-ferramentas
+  - Informações de versão do Windows
+  - Informações de versão do Mac
+  - Android SDK Tools, plataforma-ferramentas, compilação-ferramentas
 - [Logs do IDE e do instalador](#ide-and-installer-logs)
-    - [Logs do Windows](#windows-logs)
-        - Xamarin Studio
-        - Xamarin para Visual Studio
-        - Instalador universal do Xamarin
-        - Instaladores individuais `.msi` , logs detalhados
-        - Inicialização do Visual Studio, logs detalhados
-    - [Logs do Mac](#mac-logs)
-        - Host de compilação
-    - Visual Studio para Mac
-        - Xamarin Studio
-        - Instalador do Xamarin
+  - [Logs do Windows](#windows-logs)
+    - Xamarin Studio
+    - Xamarin para Visual Studio
+    - Instalador universal do Xamarin
+    - Instaladores individuais `.msi` , logs detalhados
+    - Inicialização do Visual Studio, logs detalhados
+  - [Logs do Mac](#mac-logs)
+    - Host de compilação
+  - Visual Studio para Mac
+    - Xamarin Studio
+    - Instalador do Xamarin
 - [Saída de compilação detalhada](#verbose-build-output-logs)
 - [Logs de depuração para aplicativos Xamarin. Android e Xamarin. iOS](#debug-logs-for-xamarin-apps)
-    - Logs `adb` de logcat do Android
-    - logs do simulador do iOS (no Mac)
-    - logs de dispositivo iOS (no Mac)
+  - Logs `adb` de logcat do Android
+  - logs do simulador do iOS (no Mac)
+  - logs de dispositivo iOS (no Mac)
 
 ## <a name="a-idversion-information-nameversion-information-version-information"></a><a id="version-information" name="version-information" />Informações de versão
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 3f1761df5c2b638c5777e6384f4c0c06e9b3071f
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: de7c8918ff500cb2353214fd84eaa4c97713493e
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68657297"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227271"
 ---
 # <a name="working-with-tvos-alerts-in-xamarin"></a>Trabalhando com alertas do tvOS no Xamarin
 
@@ -34,7 +34,7 @@ Conforme mencionado acima, os alertas são usados para obter a atenção do usu�
 
 A Apple tem as seguintes sugestões para trabalhar com alertas:
 
-- **Usar alertas** com moderação-alertas interrompe o fluxo do usuário com o aplicativo e interrompe a experiência do usuário e, como tal, deve ser usado apenas para situações importantes, como notificações de erro, compras no aplicativo e ações destrutivas. 
+- **Usar alertas** com moderação-alertas interrompe o fluxo do usuário com o aplicativo e interrompe a experiência do usuário e, como tal, deve ser usado apenas para situações importantes, como notificações de erro, compras no aplicativo e ações destrutivas.
 - **Fornece opções úteis** – se o alerta apresentar opções para o usuário, você deve garantir que cada opção ofereça informações críticas e forneça ações úteis para o usuário tomar.
 
 <a name="Alert-Titles-and-Messages" />
@@ -44,7 +44,7 @@ A Apple tem as seguintes sugestões para trabalhar com alertas:
 A Apple tem as seguintes sugestões para apresentar o título e a mensagem opcional de um alerta:
 
 - **Usar títulos** de várias palavras – o título de um alerta deve obter o ponto da situação com clareza, embora ainda permaneça simples. Um título de palavra única raramente fornece informações suficientes.
-- **Use títulos descritivos que não exigem uma mensagem** -sempre que possível, considere tornar o título do alerta descritivo o suficiente para que o texto opcional da mensagem não seja necessário. 
+- **Use títulos descritivos que não exigem uma mensagem** -sempre que possível, considere tornar o título do alerta descritivo o suficiente para que o texto opcional da mensagem não seja necessário.
 - **Transforme a mensagem uma frase curta e completa** -se a mensagem opcional for necessária para obter o ponto do alerta, mantenha-a tão simples quanto possível e torne-a uma frase completa com maiúsculas e minúsculas corretas.
 
 <a name="Alert-Buttons" />
@@ -70,15 +70,15 @@ const string acceptButtonTitle = "OK";
 const string cancelButtonTitle = "Cancel";
 const string deleteButtonTitle = "Delete";
 ...
-        
+
 var alertController = UIAlertController.Create (title, message, UIAlertControllerStyle.Alert);
 
 // Create the action.
-var acceptAction = UIAlertAction.Create (acceptButtonTitle, UIAlertActionStyle.Default, _ => 
+var acceptAction = UIAlertAction.Create (acceptButtonTitle, UIAlertActionStyle.Default, _ =>
     Console.WriteLine ("The \"OK/Cancel\" alert's other action occurred.")
 );
 
-var cancelAction = UIAlertAction.Create (cancelButtonTitle, UIAlertActionStyle.Cancel, _ => 
+var cancelAction = UIAlertAction.Create (cancelButtonTitle, UIAlertActionStyle.Cancel, _ =>
     Console.WriteLine ("The \"OK/Cancel\" alert's other action occurred.")
 );
 
@@ -97,7 +97,7 @@ UIAlertController.Create (title, message, UIAlertControllerStyle.Alert)
 Em seguida, para cada botão que desejamos exibir no alerta, criamos uma ação que define o título do botão, seu estilo e a ação que desejamos tomar se o botão for pressionado:
 
 ```csharp
-UIAlertAction.Create ("Button Title", UIAlertActionStyle.Default, _ => 
+UIAlertAction.Create ("Button Title", UIAlertActionStyle.Default, _ =>
     // Do something when the button is pressed
     ...
 );

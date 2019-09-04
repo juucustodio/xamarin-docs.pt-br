@@ -7,12 +7,12 @@ ms.assetid: 8022FBF9-2208-43DB-94D8-0A4E9A5DA07F
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/16/2017
-ms.openlocfilehash: 8978bd386ec2f2ea0f9960f079ce82750941cfad
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 133d7ffdeafdced3f909c21cf08f2241666015fa
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655947"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70228263"
 ---
 # <a name="clipping-with-paths-and-regions"></a>Recorte com caminhos de regiões
 
@@ -22,7 +22,7 @@ _Use caminhos para gráficos de clipe para áreas específicas e para criar regi
 
 Às vezes, é necessário restringir a renderização de gráficos para uma determinada área. Isso é conhecido como *recorte*. Você pode usar o recorte de efeitos especiais, como essa imagem de um monkey visto por meio de um buraco de fechadura:
 
-![](clipping-images/clippingsample.png "Monkey por meio de um buraco de fechadura")
+![Macaco por meio de um Keyhole](clipping-images/clippingsample.png)
 
 O *área de recorte* é a área da tela na qual os gráficos são renderizados. Tudo o que é exibido fora da área de recorte não é renderizado. A área de recorte normalmente é definida por um retângulo ou um [ `SKPath` ](xref:SkiaSharp.SKPath) objeto, mas você também pode definir uma área de recorte usando um [ `SKRegion` ](xref:SkiaSharp.SKRegion) objeto. Esses dois tipos de objetos no parecem a princípio relacionados porque você pode criar uma região de um caminho. No entanto, você não pode criar um caminho de uma região e eles são muito diferentes internamente: Um caminho consiste em uma série de linhas e curvas, enquanto uma região é definida por uma série de linhas de varredura horizontais.
 
@@ -100,7 +100,7 @@ canvas.ClipPath(keyholePath);
 
 O `PaintSurface` manipulador, em seguida, redefine as transformações com uma chamada para `ResetMatrix` e desenha o bitmap para estender até a altura total da tela. Esse código supõe que o bitmap é quadrado, que é esse bitmap específico. O bitmap é renderizado somente na área definida pelo caminho de recorte:
 
-[![](clipping-images/monkeythroughkeyhole-small.png "Captura de tela tripla do Monkey por meio da página de buraco de fechadura")](clipping-images/monkeythroughkeyhole-large.png#lightbox "tripla captura de tela do Monkey por meio da página de buraco de fechadura")
+[![Captura de tela tripla do macaco por meio da página Keyhole](clipping-images/monkeythroughkeyhole-small.png)](clipping-images/monkeythroughkeyhole-large.png#lightbox)
 
 O caminho de recorte é sujeito às transformações quando na verdade o `ClipPath` método é chamado, e não para as transformações em vigor quando um objeto gráfico (por exemplo, um bitmap) é exibido. O caminho de recorte é parte do estado da tela é salva com o `Save` método e podem ser restaurados com o `Restore` método.
 
@@ -167,7 +167,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 O que resta é a interseção dessas quatro círculos:
 
-[![](clipping-images//fourcircleintersectclip-small.png "Tripla captura de tela da página Clip quatro do círculo se cruzam")](clipping-images/fourcircleintersectclip-large.png#lightbox "tripla captura de tela da página quatro clipes de interseção de círculo")
+[![Captura de tela tripla da página de clipe com interseção de quatro círculos](clipping-images//fourcircleintersectclip-small.png)](clipping-images/fourcircleintersectclip-large.png#lightbox)
 
 O [ `SKClipOperation` ](xref:SkiaSharp.SKClipOperation) enumeração tem apenas dois membros:
 
@@ -177,13 +177,13 @@ O [ `SKClipOperation` ](xref:SkiaSharp.SKClipOperation) enumeração tem apenas 
 
 Se você substituir os quatro `SKClipOperation.Intersect` argumentos em de `FourCircleIntersectClipPage` classe com `SKClipOperation.Difference`, você verá o seguinte:
 
-[![](clipping-images//fourcircledifferenceclip-small.png "Captura de tela da página Clip quatro do círculo se interseccionam com a operação de diferença tripla")](clipping-images/fourcircledifferenceclip-large.png#lightbox "tripla captura de tela da página Clip quatro do círculo se interseccionam com a operação de diferença")
+[![Captura de tela tripla da página de clipe com interseção de quatro círculos com a operação de diferença](clipping-images//fourcircledifferenceclip-small.png)](clipping-images/fourcircledifferenceclip-large.png#lightbox)
 
 Quatro círculos sobrepostos foram removidos da área de recorte.
 
 O **operações de recorte** página ilustra a diferença entre essas duas operações com apenas um par de círculos. O círculo primeiro à esquerda é adicionado à área de recorte com a operação de recorte de padrão de `Intersect`, enquanto o segundo círculo no lado direito é adicionado à área de recorte com a operação de recorte indicada pelo rótulo de texto:
 
-[![](clipping-images//clipoperations-small.png "Tripla captura de tela da página de operações de recorte")](clipping-images/clipoperations-large.png#lightbox "tripla captura de tela da página de operações de recorte")
+[![Captura de tela tripla da página de operações do clipe](clipping-images//clipoperations-small.png)](clipping-images/clipoperations-large.png#lightbox)
 
 O [ `ClipOperationsPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/ClipOperationsPage.cs) classe define dois `SKPaint` objetos como campos e, em seguida, divide a tela para cima em duas áreas retangulares. Essas áreas são diferentes dependendo se o telefone está no modo retrato ou paisagem. O `DisplayClipOp` classe, em seguida, exibe o texto e chamadas `ClipPath` com os caminhos de dois círculo para ilustrar cada operação recortar:
 
@@ -282,7 +282,7 @@ public void ClipRegion(SKRegion region, SKClipOperation operation = SKClipOperat
 
 Captura de tela a seguir mostra as áreas de recorte baseadas nas operações de seis região. O círculo à esquerda é a região que o `Op` método é chamado em e o círculo à direita é a região passada para o `Op` método:
 
-[![](clipping-images//regionoperations-small.png "Captura de tela da página de operações de região tripla")](clipping-images/regionoperations-large.png#lightbox "tripla captura de tela da página de operações de região")
+[![Captura de tela tripla da página de operações de região](clipping-images//regionoperations-small.png)](clipping-images/regionoperations-large.png#lightbox)
 
 São esses todas as possibilidades de combinar esses dois círculos? Considere a imagem resultante como uma combinação de três componentes, que por si só é vista na `Difference`, `Intersect`, e `ReverseDifference` operações. O número total de combinações é duas à terceira potência ou oito. Os dois que faltam são a região original (que resulta da chamada não `Op` em todos os) e uma região totalmente vazia.
 
@@ -423,7 +423,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 O `DrawRegion` chamada preenche a região em laranja, enquanto o `DrawPath` chamada traçados o caminho original em azul para comparação:
 
-[![](clipping-images//regionpaint-small.png "Tripla captura de tela da página região Paint")](clipping-images/regionpaint-large.png#lightbox "tripla captura de tela da página de pintura de região")
+[![Captura de tela tripla da página de pintura da região](clipping-images//regionpaint-small.png)](clipping-images/regionpaint-large.png#lightbox)
 
 A região é claramente uma série de coordenadas discretas.
 
@@ -509,7 +509,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Ele realmente não parece um trevo de folha quatro – mas é uma imagem que pode ser difícil de renderização sem distorção:
 
-[![](clipping-images//fourleafclover-small.png "Captura de tela da página quatro – folha Jetelové tripla")](clipping-images/fourleafclover-large.png#lightbox "tripla captura de tela da página quatro – folha Jetelové")
+[![Captura de tela tripla da página de trevo folhas de quatro folhas](clipping-images//fourleafclover-small.png)](clipping-images/fourleafclover-large.png#lightbox)
 
 
 ## <a name="related-links"></a>Links relacionados

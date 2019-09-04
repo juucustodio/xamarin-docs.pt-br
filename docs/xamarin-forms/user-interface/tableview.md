@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/14/2018
-ms.openlocfilehash: fc3837cd0d69d49b9939b04da667010aac919fe2
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 195ed82325ed681f31f9963d5ff0ca0a7fef48ab
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68657116"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70228143"
 ---
 # <a name="xamarinforms-tableview"></a>Modo de tabela do xamarin. Forms
 
@@ -20,7 +20,7 @@ ms.locfileid: "68657116"
 
 [`TableView`](xref:Xamarin.Forms.TableView)é uma exibição para exibir listas roláveis de dados ou opções em que há linhas que não compartilham o mesmo modelo. Ao contrário de [ListView](~/xamarin-forms/user-interface/listview/index.md), `TableView` não tem o conceito de `ItemsSource`um, portanto, os itens devem ser adicionados manualmente como filhos.
 
-![](tableview-images/tableview-all-sml.png "Exemplo de modo de tabela")
+![Exemplo de TableView](tableview-images/tableview-all-sml.png)
 
 <a name="Use_Cases" />
 
@@ -106,7 +106,7 @@ Todas essas propriedades são vinculáveis.
 
 [`SwitchCell`](xref:Xamarin.Forms.SwitchCell)também expõe o `OnChanged` evento, permitindo que você responda às alterações no estado da célula.
 
-![](tableview-images/switch-cell.png "Exemplo de SwitchCell")
+![Exemplo de SwitchCell](tableview-images/switch-cell.png)
 
 <a name="entrycell" />
 
@@ -123,7 +123,7 @@ Todas essas propriedades são vinculáveis.
 
 [`EntryCell`](xref:Xamarin.Forms.EntryCell)também expõe o `Completed` evento, que é disparado quando o usuário pressiona o botão "Done" no teclado ao editar o texto.
 
-![](tableview-images/entry-cell.png "Exemplo de EntryCell")
+![Exemplo de EntryCell](tableview-images/entry-cell.png)
 
 <a name="Custom_Cells" />
 
@@ -135,7 +135,7 @@ Todas as células personalizadas devem derivar de [ `ViewCell` ](xref:Xamarin.Fo
 
 Este é um exemplo de uma célula personalizada:
 
-![](tableview-images/custom-cell.png "Exemplo de célula personalizado")
+![Exemplo de célula Personalizada](tableview-images/custom-cell.png)
 
 O exemplo a seguir mostra o XAML usado para criar [`TableView`](xref:Xamarin.Forms.TableView) o nas capturas de tela acima:
 
@@ -252,11 +252,11 @@ O `OnViewCellTapped` manipulador de eventos mostra ou oculta a segunda [ `Label`
 
 As capturas de tela a seguir mostram a célula antes da que está sendo tocado após:
 
-![](tableview-images/cell-beforeresize.png "ViewCell antes que está sendo redimensionada")
+![ViewCell antes de ser redimensionado](tableview-images/cell-beforeresize.png)
 
 Capturas de tela as seguir mostram a célula depois sendo tocado após:
 
-![](tableview-images/cell-afterresize.png "ViewCell depois que está sendo redimensionada")
+![ViewCell depois de ser redimensionado](tableview-images/cell-afterresize.png)
 
 > [!IMPORTANT]
 > Há uma grande possibilidade de degradação do desempenho se esse recurso está sendo usado em excesso.

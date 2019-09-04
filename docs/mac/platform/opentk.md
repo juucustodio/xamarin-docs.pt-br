@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: eb6eff59ccb44d9954139c294592fafcba1f08e0
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: 806f58ae6a79f935916008e93deed0136920951a
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69889533"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227821"
 ---
 # <a name="introduction-to-opentk-in-xamarinmac"></a>Introdução ao OpenTK no Xamarin. Mac
 
@@ -237,7 +237,7 @@ Game.Resize += (sender, e) =>
 
 ### <a name="the-updateframe-event"></a>O evento UpdateFrame
 
-O `UpdateFrame` evento é usado para lidar com a entrada do usuário, atualizar posições de objeto, executar cálculos de física ou de ia. Para nosso aplicativo de teste simples, não estamos usando o evento `UpdateFrame` , mas o incluímos para referência: 
+O `UpdateFrame` evento é usado para lidar com a entrada do usuário, atualizar posições de objeto, executar cálculos de física ou de ia. Para nosso aplicativo de teste simples, não estamos usando o evento `UpdateFrame` , mas o incluímos para referência:
 
 ```csharp
 Game.UpdateFrame += (sender, e) =>
@@ -253,7 +253,7 @@ Game.UpdateFrame += (sender, e) =>
 
 ### <a name="the-renderframe-event"></a>O evento RenderFrame
 
-O `RenderFrame` evento contém o código usado para renderizar (desenhar) seus elementos gráficos. Para nosso aplicativo de exemplo, estamos preenchendo a exibição do jogo com um triângulo simples: 
+O `RenderFrame` evento contém o código usado para renderizar (desenhar) seus elementos gráficos. Para nosso aplicativo de exemplo, estamos preenchendo a exibição do jogo com um triângulo simples:
 
 ```csharp
 Game.RenderFrame += (sender, e) =>

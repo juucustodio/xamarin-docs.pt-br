@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/13/2017
-ms.openlocfilehash: 6890846a1cb5cd44429c9157b3aeb75c7a1f2f4b
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 67fbd3fb7fb9c7bf1e326404d0d63bc42a3fd8ed
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69521433"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227675"
 ---
 # <a name="app-transport-security-in-xamarinios"></a>Segurança de transporte de aplicativo no Xamarin. iOS
 
@@ -41,7 +41,7 @@ O ATS irá impor os seguintes requisitos para todas as conexões com a Internet:
 - O protocolo TLS deve ser a versão 1,2 ou superior.
 - Pelo menos uma impressão digital SHA256 com uma chave RSA de 2048 bits ou maior, ou uma chave de 256 bits ou mais de alta curva elíptica (ECC) deve ser usada para todos os certificados.
 
-Novamente, como o ATS está habilitado por padrão no iOS 9, qualquer tentativa de estabelecer uma conexão que não atenda a esses requisitos resultará em uma exceção sendo gerada. 
+Novamente, como o ATS está habilitado por padrão no iOS 9, qualquer tentativa de estabelecer uma conexão que não atenda a esses requisitos resultará em uma exceção sendo gerada.
 
 <a name="ATS-Compatible-Ciphers" />
 
@@ -132,7 +132,7 @@ Prós
 Contras
 
 - Requer o iOS 7 ou posterior.
-- Alguns recursos e opções do HttpClient não estão disponíveis. 
+- Alguns recursos e opções do HttpClient não estão disponíveis.
 
 ## <a name="diagnosing-ats-issues"></a>Diagnosticando problemas de ATS
 
@@ -153,7 +153,7 @@ A Apple também fornece o [aplicativo de exemplo TLSTool](https://developer.appl
 
 Você pode configurar vários dos recursos do ATS definindo valores para chaves específicas no arquivo **info. plist** do seu aplicativo. As seguintes chaves estão disponíveis para controlar a ATS (_recuada para mostrar como elas são aninhadas_):
 
-```csharp
+```
 NSAppTransportSecurity
     NSAllowsArbitraryLoads
     NSAllowsArbitraryLoadsInWebContent

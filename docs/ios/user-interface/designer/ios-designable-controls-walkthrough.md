@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: 448bc60891a44d8cd5eea0480031d692b4fb5d31
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 65b6f11662cdb8e1814e1146faf70cd01b2c11bc
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68657473"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227090"
 ---
 # <a name="using-custom-controls-with-the-ios-designer"></a>Como usar controles personalizados com o iOS Designer
 
@@ -44,7 +44,7 @@ Este guia pressupõe familiaridade com o conteúdo abordado nos [guias de introd
     using CoreGraphics;
     using Foundation;
     using UIKit;
-    
+
     namespace ScratchTicket
     {
         [Register("ScratchTicketView"), DesignTimeVisible(true)]
@@ -55,7 +55,7 @@ Este guia pressupõe familiaridade com o conteúdo abordado nos [guias de introd
             CGPoint latestPoint;
             bool startNewPath = false;
             UIImage image;
-    
+
             [Export("Image"), Browsable(true)]
             public UIImage Image
             {
@@ -66,18 +66,18 @@ Este guia pressupõe familiaridade com o conteúdo abordado nos [guias de introd
                     SetNeedsDisplay();
                 }
             }
-    
+
             public ScratchTicketView(IntPtr p)
                 : base(p)
             {
                 Initialize();
             }
-    
+
             public ScratchTicketView()
             {
                 Initialize();
             }
-    
+
             void Initialize()
             {
                 initialPoint = CGPoint.Empty;
@@ -87,42 +87,42 @@ Este guia pressupõe familiaridade com o conteúdo abordado nos [guias de introd
                 path = new CGPath();
                 SetNeedsDisplay();
             }
-    
+
             public override void TouchesBegan(NSSet touches, UIEvent evt)
             {
                 base.TouchesBegan(touches, evt);
-    
+
                 var touch = touches.AnyObject as UITouch;
-    
+
                 if (touch != null)
                 {
                     initialPoint = touch.LocationInView(this);
                 }
             }
-    
+
             public override void TouchesMoved(NSSet touches, UIEvent evt)
             {
                 base.TouchesMoved(touches, evt);
-    
+
                 var touch = touches.AnyObject as UITouch;
-    
+
                 if (touch != null)
                 {
                     latestPoint = touch.LocationInView(this);
                     SetNeedsDisplay();
                 }
             }
-    
+
             public override void TouchesEnded(NSSet touches, UIEvent evt)
             {
                 base.TouchesEnded(touches, evt);
                 startNewPath = true;
             }
-    
+
             public override void Draw(CGRect rect)
             {
                 base.Draw(rect);
-    
+
                 using (var g = UIGraphics.GetCurrentContext())
                 {
                     if (image != null)
@@ -130,13 +130,13 @@ Este guia pressupõe familiaridade com o conteúdo abordado nos [guias de introd
                     else
                         g.SetFillColor(UIColor.LightGray.CGColor);
                     g.FillRect(rect);
-    
+
                     if (!initialPoint.IsEmpty)
                     {
                         g.SetLineWidth(20);
                         g.SetBlendMode(CGBlendMode.Clear);
                         UIColor.Clear.SetColor();
-    
+
                         if (path.IsEmpty || startNewPath)
                         {
                             path.AddLines(new CGPoint[] { initialPoint, latestPoint });
@@ -146,9 +146,9 @@ Este guia pressupõe familiaridade com o conteúdo abordado nos [guias de introd
                         {
                             path.AddLineToPoint(latestPoint);
                         }
-    
+
                         g.SetLineCap(CGLineCap.Round);
-                        g.AddPath(path);        
+                        g.AddPath(path);
                         g.DrawPath(CGPathDrawingMode.Stroke);
                     }
                 }
@@ -159,7 +159,7 @@ Este guia pressupõe familiaridade com o conteúdo abordado nos [guias de introd
 
 
 1. Adicione os `FillTexture.png` `FillTexture2.png` arquivos e`Monkey.png` (disponíveis [no GitHub](https://github.com/xamarin/ios-samples/blob/master/ScratchTicket/Resources/images.zip?raw=true)) à pasta **recursos** .
-    
+
 1. Clique duas vezes no `Main.storyboard` arquivo para abri-lo no designer:
 
     [![](ios-designable-controls-walkthrough-images/03new.png "O designer do iOS")](ios-designable-controls-walkthrough-images/03new.png#lightbox)
@@ -174,7 +174,7 @@ Este guia pressupõe familiaridade com o conteúdo abordado nos [guias de introd
 
     [![](ios-designable-controls-walkthrough-images/05new.png "Definindo a propriedade Image View Image como macaco. png")](ios-designable-controls-walkthrough-images/05new.png#lightbox)
 
-    
+
 1. Como estamos usando classes de tamanho, precisaremos restringir essa exibição de imagem. Clique na imagem duas vezes para colocá-la no modo de restrição. Vamos restringi-lo ao centro clicando no identificador de fixação central e alinhando-o vertical e horizontalmente:
 
     [![](ios-designable-controls-walkthrough-images/06new.png "Centralizando a imagem")](ios-designable-controls-walkthrough-images/06new.png#lightbox)
@@ -215,12 +215,12 @@ Adicione o seguinte código à `ScratchTicketView` classe para a propriedade:
 
 ```csharp
 [Export("Image"), Browsable(true)]
-public UIImage Image 
+public UIImage Image
 {
     get { return image; }
-    set { 
+    set {
             image = value;
-            SetNeedsDisplay ();
+              SetNeedsDisplay ();
         }
 }
 ```
@@ -238,7 +238,7 @@ public override void Draw(CGRect rect)
             g.SetFillColor ((UIColor.FromPatternImage (image).CGColor));
         else
             g.SetFillColor (UIColor.LightGray.CGColor);
-            
+
         g.FillRect(rect);
 
         if (!initialPoint.IsEmpty)
@@ -258,7 +258,7 @@ public override void Draw(CGRect rect)
              }
 
              g.SetLineCap(CGLineCap.Round);
-             g.AddPath(path);       
+             g.AddPath(path);
              g.DrawPath(CGPathDrawingMode.Stroke);
         }
     }

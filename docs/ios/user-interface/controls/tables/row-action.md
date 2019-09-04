@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 09/25/2017
-ms.openlocfilehash: 41aabb5e8b6d3eb46a92ee194c6b6b5e3ca51943
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: e90e108e6b02055a585129b6412641a726afaab4
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655627"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70226300"
 ---
 # <a name="working-with-row-actions-in-xamarinios"></a>Trabalhando com ações de linha no Xamarin. iOS
 
@@ -22,7 +22,7 @@ _Este guia demonstra como criar ações de passar o dedo personalizadas para lin
 
 o IOS fornece duas maneiras de executar ações em uma tabela `UISwipeActionsConfiguration` : `UITableViewRowAction`e.
 
-`UISwipeActionsConfiguration`foi introduzido no iOS 11 e é usado para definir um conjunto de ações que devem ocorrer quando o usuário passa _em qualquer direção_ em uma linha em uma exibição de tabela. Esse comportamento é semelhante ao do Native mail. app 
+`UISwipeActionsConfiguration`foi introduzido no iOS 11 e é usado para definir um conjunto de ações que devem ocorrer quando o usuário passa _em qualquer direção_ em uma linha em uma exibição de tabela. Esse comportamento é semelhante ao do Native mail. app
 
 A `UITableViewRowAction` classe é usada para definir uma ação que ocorrerá quando o usuário passar horizontalmente para a esquerda em uma linha em uma exibição de tabela.
 Por exemplo, ao editar uma tabela, o passar o dedo para a esquerda em uma linha exibe um botão **excluir** por padrão. Ao anexar várias instâncias da `UITableViewRowAction` classe a uma `UITableView`, várias ações personalizadas podem ser definidas, cada uma com seu próprio texto, formatação e comportamento.
@@ -32,7 +32,7 @@ Por exemplo, ao editar uma tabela, o passar o dedo para a esquerda em uma linha 
 
 Há três etapas necessárias para implementar ações de passar o dedo com `UISwipeActionsConfiguration`:
 
-1. Substituir `GetLeadingSwipeActionsConfiguration` e/ou `GetTrailingSwipeActionsConfiguration` métodos. Esses métodos retornam `UISwipeActionsConfiguration`um. 
+1. Substituir `GetLeadingSwipeActionsConfiguration` e/ou `GetTrailingSwipeActionsConfiguration` métodos. Esses métodos retornam `UISwipeActionsConfiguration`um.
 2. Instanciar `UISwipeActionsConfiguration` o a ser retornado. Essa classe usa uma matriz de `UIContextualAction`.
 3. Criará um `UIContextualAction`.
 
@@ -40,7 +40,7 @@ Eles são explicados com mais detalhes nas seções a seguir.
 
 ### <a name="1-implementing-the-swipeactionsconfigurations-methods"></a>1. Implementando os métodos SwipeActionsConfigurations
 
-`UITableViewController`(e também `UITableViewSource` e `UITableViewDelegate`) contêm dois métodos: `GetLeadingSwipeActionsConfiguration` e `GetTrailingSwipeActionsConfiguration`, que são usados para implementar um conjunto de ações de passar o dedo em uma linha de exibição de tabela. A ação de passar o dedo à esquerda refere-se a um dedo do lado esquerdo da tela em um idioma da esquerda para a direita e do lado direito da tela em um idioma da direita para a esquerda. 
+`UITableViewController`(e também `UITableViewSource` e `UITableViewDelegate`) contêm dois métodos: `GetLeadingSwipeActionsConfiguration` e `GetTrailingSwipeActionsConfiguration`, que são usados para implementar um conjunto de ações de passar o dedo em uma linha de exibição de tabela. A ação de passar o dedo à esquerda refere-se a um dedo do lado esquerdo da tela em um idioma da esquerda para a direita e do lado direito da tela em um idioma da direita para a esquerda.
 
 O exemplo a seguir (do exemplo [TableSwipeActions](https://docs.microsoft.com/samples/xamarin/ios-samples/tableswipeactions) ) demonstra a implementação da configuração do dedo à esquerda. Duas ações são criadas a partir das ações contextuais, que são explicadas [abaixo](#create-uicontextualaction). Essas ações são passadas para uma inicializada [`UISwipeActionsConfiguration`](#create-uiswipeactionsconfigurations)recentemente, que é usada como o valor de retorno.
 
@@ -54,11 +54,11 @@ public override UISwipeActionsConfiguration GetLeadingSwipeActionsConfiguration(
 
     //UISwipeActionsConfiguration
     var leadingSwipe = UISwipeActionsConfiguration.FromActions(new UIContextualAction[] { flagAction, definitionAction });
-    
+
     leadingSwipe.PerformsFirstActionWithFullSwipe = false;
-    
+
     return leadingSwipe;
-}  
+}
 ```
 
 <a name="create-uiswipeactionsconfigurations" />
@@ -99,10 +99,10 @@ public UIContextualAction ContextualFlagAction(int row)
                         "Flag",
                         (FlagAction, view, success) => {
                             var alertController = UIAlertController.Create($"Report {words[row]}?", "", UIAlertControllerStyle.Alert);
-                            alertController.AddAction(UIAlertAction.Create("Cancel", UIAlertActionStyle.Cancel, null)); 
+                            alertController.AddAction(UIAlertAction.Create("Cancel", UIAlertActionStyle.Cancel, null));
                             alertController.AddAction(UIAlertAction.Create("Yes", UIAlertActionStyle.Destructive, null));
                             PresentViewController(alertController, true, null);
-                            
+
                             success(true);
                         });
 

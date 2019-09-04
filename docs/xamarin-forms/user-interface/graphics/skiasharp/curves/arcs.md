@@ -7,12 +7,12 @@ ms.assetid: F1DA55E4-0182-4388-863C-5C340213BF3C
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/10/2017
-ms.openlocfilehash: 97c168460b091b9ada954cacd895a670c31805b2
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: ada7ce8fc9365ab4133ddf439353e97e640f39d6
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655190"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70228118"
 ---
 # <a name="three-ways-to-draw-an-arc"></a>Três formas de desenhar um arco
 
@@ -22,7 +22,7 @@ _Saiba como usar SkiaSharp definir arcos de três maneiras diferentes_
 
 Um arco é uma curva na circunferência de uma elipse, como as partes arredondadas deste sinal infinito:
 
-![](arcs-images/arcsample.png "Entrada de infinito")
+![Sinal de infinito](arcs-images/arcsample.png)
 
 Apesar da simplicidade dessa definição, não há nenhuma maneira para definir uma função de desenho do arco que atende a todas as necessidades e, portanto, não há um consenso entre sistemas gráficos da melhor maneira de desenhar um arco. Por esse motivo, o `SKPath` classe não se restringe a apenas uma abordagem.
 
@@ -42,21 +42,21 @@ Esses métodos são idênticos aos métodos [`AddArc`](xref:Android.Graphics.Pat
 
 Ambos os métodos começam com um `SKRect` valor que define o local e o tamanho de uma elipse:
 
-![](arcs-images/anglearcoval.png "A elipse que começa um arco de ângulo")
+![A elipse que começa um arco angular](arcs-images/anglearcoval.png)
 
 O arco é uma parte entre a circunferência dessa elipse.
 
 O `startAngle` argumento é um ângulo no sentido horário em graus em relação a uma linha horizontal desenhada do centro da elipse à direita. O `sweepAngle` argumento é relativo a `startAngle`. Aqui estão `startAngle` e `sweepAngle` valores de 60 graus e 100 graus, respectivamente:
 
-![](arcs-images/anglearcangles.png "Os ângulos que definem um arco de ângulo")
+![Os ângulos que definem um arco angular](arcs-images/anglearcangles.png)
 
 O arco começa o ângulo inicial. Seu comprimento é regido pelo ângulo de flecha. O arco é mostrado aqui em vermelho:
 
-![](arcs-images/anglearchighlight.png "O arco ângulo realçado")
+![O arco de ângulo realçado](arcs-images/anglearchighlight.png)
 
 A curva adicionada ao caminho com o `AddArc` ou `ArcTo` método é simplesmente essa parte da circunferência da elipse:
 
-![](arcs-images/anglearc.png "O arco ângulo por si só")
+![O arco de ângulo por si só](arcs-images/anglearc.png)
 
 Os `startAngle` argumentos `sweepAngle` ou podem ser negativos: O arco é no sentido horário para valores `sweepAngle` positivos e no sentido anti-horário para valores negativos.
 
@@ -103,7 +103,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Como você pode ver, o ângulo inicial e o ângulo de flecha podem assumir valores negativos:
 
-[![](arcs-images/anglearc-small.png "Tripla captura de tela da página ângulo arco")](arcs-images/anglearc-large.png#lightbox "tripla captura de tela da página ângulo arco")
+[![Captura de tela tripla da página de arco do ângulo](arcs-images/anglearc-small.png)](arcs-images/anglearc-large.png#lightbox)
 
 Essa abordagem para gerar um arco é algoritmicamente a mais simples e é fácil derivar equações paramétricas que descrevem o arco. Sabendo o tamanho e local da elipse e os ângulos de início e de varredura, os pontos inicial e final do arco pode ser calculados usando trigonometria simple:
 
@@ -208,11 +208,11 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Um novo `SKPath` objeto é criado para cada fatia da pizza. O caminho consiste em uma linha do centro, então um `ArcTo` para desenhar o arco e outra linha de volta para os resultados do centro do `Close` chamar. Este programa exibe as fatias da pizza "destacado", movendo-os todos no centro da x 50 pixels. Essa tarefa requer um vetor na direção do ponto central do ângulo de flecha de cada fatia:
 
-[![](arcs-images/explodedpiechart-small.png "Captura de tela da página de gráfico de pizza destacada tripla")](arcs-images/explodedpiechart-large.png#lightbox "tripla captura de tela da página gráfico de pizza destacada")
+[![Captura de tela tripla da página do gráfico de pizza destacada](arcs-images/explodedpiechart-small.png)](arcs-images/explodedpiechart-large.png#lightbox)
 
 Para ver sua aparência sem a explosão de"", simplesmente comente o `Translate` chamar:
 
-[![](arcs-images/explodedpiechartunexploded-small.png "Captura de tela da página sem a explosão de gráfico de pizza destacada tripla")](arcs-images/explodedpiechartunexploded-large.png#lightbox "tripla captura de tela da página sem a explosão de gráfico de pizza destacada")
+[![Captura de tela tripla da página do gráfico de pizza destacada sem a explosão](arcs-images/explodedpiechartunexploded-small.png)](arcs-images/explodedpiechartunexploded-large.png#lightbox)
 
 ## <a name="the-tangent-arc"></a>O arco tangente
 
@@ -234,31 +234,31 @@ O `ArcTo` método envolve três pontos:
 - O primeiro argumento de ponto para o `ArcTo` método, chamado de *ponto de canto*
 - O segundo argumento de ponto `ArcTo`, chamado de *ponto de destino*:
 
-![](arcs-images/tangentarcthreepoints.png "Três pontos que começam um arco tangente")
+![Três pontos que começam um arco tangente](arcs-images/tangentarcthreepoints.png)
 
 Esses três pontos definem duas linhas conectadas:
 
-![](arcs-images/tangentarcconnectinglines.png "Linhas que conectam os três pontos de um arco tangente")
+![Linhas conectando os três pontos de um arco tangente](arcs-images/tangentarcconnectinglines.png)
 
 Se os três pontos são colinear &mdash; ou seja, se eles residem na mesma linha reta &mdash; nenhum arco será desenhado.
 
 O `ArcTo` método também inclui um `radius` parâmetro. Isso define o raio de um círculo:
 
-![](arcs-images/tangentarccircle.png "O círculo de um arco tangente")
+![O círculo de um arco tangente](arcs-images/tangentarccircle.png)
 
 Não, o arco tangente é generalizado para uma elipse.
 
 Se as duas linhas atendem em qualquer ângulo, esse círculo pode ser inserido entre essas linhas para que ele fique tangente para as duas linhas:
 
-![](arcs-images/tangentarctangentcircle.png "O círculo do arco tangente entre as duas linhas")
+![O círculo de arco tangente entre as duas linhas](arcs-images/tangentarctangentcircle.png)
 
 A curva que é adicionada para a delimitação não toca em qualquer um dos pontos especificados no `ArcTo` método. Ele consiste em uma linha reta do ponto atual para o primeiro ponto de tangente e um arco que termina no segundo ponto de tangente, mostrado aqui em vermelho:
 
-![](arcs-images/tangentarchighlight.png "O arco tangente realçado entre as duas linhas")
+![O arco tangente realçado entre as duas linhas](arcs-images/tangentarchighlight.png)
 
 Aqui está a linha reta final e o arco é adicionado para a delimitação:
 
-![](arcs-images/tangentarc.png "O arco tangente realçado entre as duas linhas")
+![O arco tangente realçado entre as duas linhas](arcs-images/tangentarc.png)
 
 É possível continuar a delimitação do segundo ponto de tangente.
 
@@ -416,7 +416,7 @@ public partial class TangentArcPage : InteractivePage
 
 Aqui está o **arco tangente** página em execução:
 
-[![](arcs-images/tangentarc-small.png "Captura de tela da página arco tangente tripla")](arcs-images/tangentarc-large.png#lightbox "tripla captura de tela da página do arco tangente")
+[![Captura de tela tripla da página de arco tangente](arcs-images/tangentarc-small.png)](arcs-images/tangentarc-large.png#lightbox)
 
 O arco tangente é ideal para criar cantos arredondados, como um retângulo arredondado. Porque `SKPath` já inclui um `AddRoundedRect` método, o **arredondada Heptágono** página demonstra como usar `ArcTo` para arredondar os cantos de um polígono sete face. (O código é generalizado para qualquer polígono regular).
 
@@ -491,7 +491,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Aqui está o programa em execução:
 
-[![](arcs-images/roundedheptagon-small.png "Captura de tela da página Heptágono arredondado tripla")](arcs-images/roundedheptagon-large.png#lightbox "tripla captura de tela da página Heptágono arredondado")
+[![Captura de tela tripla da página arredondada heptagon](arcs-images/roundedheptagon-small.png)](arcs-images/roundedheptagon-large.png#lightbox)
 
 ## <a name="the-elliptical-arc"></a>O arco elíptico
 
@@ -507,31 +507,31 @@ O arco elíptico é consistente com o [arco elíptico](http://www.w3.org/TR/SVG1
 
 Esses `ArcTo` métodos de desenham um arco entre dois pontos, que são o ponto atual da delimitação, e o último parâmetro para o `ArcTo` método (o `xy` parâmetro ou separada `x` e `y` parâmetros):
 
-![](arcs-images/ellipticalarcpoints.png "Os dois pontos que definiu um arco elíptico")
+![Os dois pontos que definiram um arco elíptico](arcs-images/ellipticalarcpoints.png)
 
 O primeiro parâmetro de ponto para o `ArcTo` método (`r`, ou `rx` e `ry`) não é um ponto em todos os, mas em vez disso, especifica o raio horizontal e vertical de uma elipse;
 
-![](arcs-images/ellipticalarcellipse.png "A elipse que definiu um arco elíptico")
+![A elipse que definiu um arco elíptico](arcs-images/ellipticalarcellipse.png)
 
 O `xAxisRotate` parâmetro é o número de graus no sentido horário para girar essa elipse:
 
-![](arcs-images/ellipticalarctiltedellipse.png "A elipse inclinada que definiu um arco elíptico")
+![A elipse inclinada que definiu um arco elíptico](arcs-images/ellipticalarctiltedellipse.png)
 
 Se essa elipse inclinada é posicionado, em seguida, para que ele aborda os dois pontos, os pontos são conectados por dois arcos diferentes:
 
-![](arcs-images/ellipticalarcellipse1.png "O primeiro conjunto de arcos elípticos")
+![O primeiro conjunto de arcos elípticos](arcs-images/ellipticalarcellipse1.png)
 
 Esses dois arcos podem ser diferenciados de duas maneiras: O arco superior é maior que o arco inferior e, como o arco é desenhado da esquerda para a direita, o arco superior é desenhado em uma direção horária enquanto o arco inferior é desenhado em uma direção no sentido anti-horário.
 
 Também é possível ajustar a elipse entre os dois pontos de outra forma:
 
-![](arcs-images/ellipticalarcellipse2.png "O segundo conjunto de arcos elípticos")
+![O segundo conjunto de arcos elípticos](arcs-images/ellipticalarcellipse2.png)
 
 Agora há um arco menor na parte superior, o que é desenhado no sentido horário e um arco maior na parte inferior que é desenhado no sentido anti-horário.
 
 Esses dois pontos, portanto, podem ser conectados por um arco definido por uma elipse inclinada em um total de quatro maneiras:
 
-![](arcs-images/ellipticalarccolors.png "Todos os quatro arcos elípticos")
+![Todos os quatro arcos elípticos](arcs-images/ellipticalarccolors.png)
 
 Esses quatro arcos são diferenciados por quatro combinações do [ `SKPathArcSize` ](xref:SkiaSharp.SKPathArcSize) e [ `SKPathDirection` ](xref:SkiaSharp.SKPathDirection) argumentos de tipo de enumeração para o `ArcTo` método:
 
@@ -586,21 +586,21 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Aqui ele está em execução:
 
-[![](arcs-images/ellipticalarc-small.png "Captura de tela da página arco elíptico tripla")](arcs-images/ellipticalarc-large.png#lightbox "tripla captura de tela da página do arco elíptico")
+[![Captura de tela tripla da página de arco elíptico](arcs-images/ellipticalarc-small.png)](arcs-images/ellipticalarc-large.png#lightbox)
 
 O **arco infinito** página usa o arco elíptico para desenhar um sinal de infinito. O símbolo de infinito se baseia em dois círculos com raios de 100 unidades separadas por unidades de 100:
 
-![](arcs-images/infinitycircles.png "Dois círculos")
+![Dois círculos](arcs-images/infinitycircles.png)
 
 Duas linhas Cruzando entre si são tangente para os dois círculos:
 
-![](arcs-images/infinitycircleslines.png "Dois círculos com linhas tangentes")
+![Dois círculos com linhas tangentes](arcs-images/infinitycircleslines.png)
 
 O símbolo de infinito é uma combinação de partes destes círculos e as duas linhas. Para usar o arco elíptico para desenhar o símbolo de infinito, as coordenadas onde as duas linhas são tangente para os círculos devem ser determinadas.
 
 Construa um retângulo à direita em um dos círculos:
 
-![](arcs-images/infinitytriangle.png "Dois círculos com linhas tangentes e círculo incorporado")
+![Dois círculos com linhas tangentes e círculo incorporado](arcs-images/infinitytriangle.png)
 
 O raio do círculo é de 100 unidades e a hipotenusa do triângulo é 150 unidades, portanto, o ângulo α é o arco seno (seno inverso) de 100 dividido por 150 ou 41.8 graus. O comprimento do lado do triângulo é 150 vezes o cosseno de 41.8 graus ou 112, que também pode ser calculado pelo Teorema de Pitágoras.
 
@@ -612,7 +612,7 @@ As coordenadas do ponto de tangente, em seguida, podem ser calculadas usando ess
 
 Os quatro pontos tangentes são tudo o que é necessário para desenhar um sinal de infinito centralizado no ponto (0, 0) com o raio do círculo de 100:
 
-![](arcs-images/infinitycoordinates.png "Dois círculos com coordenadas e linhas tangentes")
+![Dois círculos com linhas e coordenadas da tangente](arcs-images/infinitycoordinates.png)
 
 O `PaintSurface` manipulador na [ `ArcInfinityPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/ArcInfinityPage.cs) classe posiciona o símbolo de infinito, de modo que a (0, 0) ponto é posicionado no centro da página e dimensiona o caminho para o tamanho da tela:
 
@@ -654,7 +654,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 O código usa o `Bounds` propriedade de `SKPath` para determinar as dimensões do seno infinito para dimensioná-lo para o tamanho da tela:
 
-[![](arcs-images/arcinfinity-small.png "Captura de tela da página arco infinito tripla")](arcs-images/arcinfinity-large.png#lightbox "tripla captura de tela da página infinito de arco")
+[![Captura de tela tripla da página de infinito do arco](arcs-images/arcinfinity-small.png)](arcs-images/arcinfinity-large.png#lightbox)
 
 O resultado parecerá um pouco pequeno, o que sugere que o `Bounds` propriedade de `SKPath` está relatando um tamanho maior que o caminho.
 
@@ -662,7 +662,7 @@ Internamente, Skia aproxima o arco usando várias curvas de Bézier quadráticas
 
 Para obter um ajuste mais rigoroso, use o `TightBounds` propriedade, que exclui os pontos de controle. Este é o programa em execução no modo paisagem e usando o `TightBounds` propriedade para obter os limites de caminho:
 
-[![](arcs-images/arcinfinitytightbounds-small.png "Tripla captura de tela da página infinito arco com limites rígidos")](arcs-images/arcinfinitytightbounds-large.png#lightbox "tripla captura de tela da página com limites rígidos infinito de arco")
+[![Captura de tela tripla da página de infinito do arco com limites apertados](arcs-images/arcinfinitytightbounds-small.png)](arcs-images/arcinfinitytightbounds-large.png#lightbox)
 
 Embora as conexões entre os arcos e linhas retas são matematicamente suaves, a alteração do arco linear pode parecer um pouco abrupta. Um sinal de infinito melhor é apresentado no próximo artigo sobre [ **tipos de três das curvas de Bézier**](beziers.md).
 

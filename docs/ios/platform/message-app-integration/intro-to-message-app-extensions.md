@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/02/2017
-ms.openlocfilehash: 7004c4692158be2e51eca93dece349da2a735bab
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 92b16e4a802411c70bef7d5810a161dbdfedfa09
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68654389"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227486"
 ---
 # <a name="message-app-extension-basics-in-xamarinios"></a>Noções básicas da extensão do aplicativo de mensagens no Xamarin. iOS
 
@@ -118,14 +118,14 @@ Para criar uma experiência de adesivo personalizada, faça o seguinte:
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 1. Iniciar Visual Studio para Mac.
-2. Abra a solução para adicionar uma extensão de aplicativo de mensagem. 
-3. Selecione > **extensões** do IOS IMessage extensão e clique no botão Avançar: >  
+2. Abra a solução para adicionar uma extensão de aplicativo de mensagem.
+3. Selecione > **extensões** do IOS IMessage extensão e clique no botão Avançar: > 
 
     [![](intro-to-message-app-extensions-images/message01.png "Selecione a extensão iMessage")](intro-to-message-app-extensions-images/message01.png#lightbox)
-4. Insira um **nome de extensão** e clique no botão **Avançar** : 
+4. Insira um **nome de extensão** e clique no botão **Avançar** :
 
     [![](intro-to-message-app-extensions-images/message02.png "Insira um nome de extensão")](intro-to-message-app-extensions-images/message02.png#lightbox)
-5. Clique no botão **criar** para criar a extensão: 
+5. Clique no botão **criar** para criar a extensão:
 
     [![](intro-to-message-app-extensions-images/message03.png "Clique no botão criar")](intro-to-message-app-extensions-images/message03.png#lightbox)
 
@@ -158,7 +158,7 @@ Faça o seguinte:
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 1. Na **painel de soluções**, clique com o botão direito do mouse no nome do projeto da extensão e selecione **Adicionar** > **novo arquivo...**  >  **Ios |** AppleWatch > **controlador de interface**.
-2. Insira `StickerBrowserViewController` para o **nome** e clique no botão **novo** : 
+2. Insira `StickerBrowserViewController` para o **nome** e clique no botão **novo** :
 
     [![](intro-to-message-app-extensions-images/browser01.png "Insira StickerBrowserViewController para o nome")](intro-to-message-app-extensions-images/browser01.png#lightbox)
 3. Abra o `StickerBrowserViewController.cs` arquivo para edição.
@@ -166,7 +166,7 @@ Faça o seguinte:
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. Na **Gerenciador de soluções**, clique com o botão direito do mouse no nome do projeto da extensão e selecione **Adicionar** > **novo arquivo...**  >  **Ios |** AppleWatch > **controlador de interface**.
-2. Insira `StickerBrowserViewController` para o **nome** e clique no botão **novo** : 
+2. Insira `StickerBrowserViewController` para o **nome** e clique no botão **novo** :
 
     [![](intro-to-message-app-extensions-images/browser01.w157-sml.png "Insira StickerBrowserViewController para o nome")](intro-to-message-app-extensions-images/browser01.w157.png#lightbox)
 3. Abra o `StickerBrowserViewController.cs` arquivo para edição.
@@ -537,7 +537,7 @@ namespace MessageExtension
                 MessagesAppViewController.AddStickerToCollection (NewSticker);
             };
             View.AddSubview (doneButton);
-            
+
             ...
         }
         #endregion
@@ -702,7 +702,7 @@ public override void DidTransition (MSMessagesAppPresentationStyle presentationS
         break;
     }
 }
-``` 
+```
 
 ## <a name="summary"></a>Resumo
 

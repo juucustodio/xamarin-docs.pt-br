@@ -7,18 +7,18 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: a5587d5a4ed5201b8f09dfa3b4d2d292abd008d3
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: 36b0526f549e0439543d762cd9390b72ce93825f
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69889838"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70225998"
 ---
 # <a name="core-graphics-in-xamarinios"></a>Principais gráficos no Xamarin. iOS
 
 _Este artigo discute as principais estruturas de gráficos do iOS. Ele mostra como usar gráficos de núcleo para desenhar geometria, imagens e PDFs._
 
-o iOS inclui a estrutura [*gráfica básica*](https://developer.apple.com/library/prerelease/ios/documentation/CoreGraphics/Reference/CoreGraphics_Framework/index.html) para fornecer suporte a desenhos de baixo nível. Essas estruturas são o que habilita os recursos gráficos avançados no UIKit. 
+o iOS inclui a estrutura [*gráfica básica*](https://developer.apple.com/library/prerelease/ios/documentation/CoreGraphics/Reference/CoreGraphics_Framework/index.html) para fornecer suporte a desenhos de baixo nível. Essas estruturas são o que habilita os recursos gráficos avançados no UIKit.
 
 O Core Graphics é uma estrutura gráfica 2D de baixo nível que permite o desenho de gráficos independentes de dispositivo. Todo desenho de 2D no UIKit usa gráficos de núcleo internamente.
 
@@ -77,7 +77,7 @@ Por exemplo, considere o seguinte trecho de código:
 ```csharp
 //get graphics context
 using (CGContext g = UIGraphics.GetCurrentContext ()) {
-            
+
     //set up drawing attributes
     g.SetLineWidth (10);
     UIColor.Blue.SetFill ();
@@ -88,13 +88,13 @@ using (CGContext g = UIGraphics.GetCurrentContext ()) {
 
     path.AddLines (new CGPoint[]{
     new CGPoint (100, 200),
-    new CGPoint (160, 100), 
+    new CGPoint (160, 100),
     new CGPoint (220, 200)});
 
     path.CloseSubpath ();
 
     //add geometry to graphics context and draw it
-    g.AddPath (path);       
+    g.AddPath (path);
     g.DrawPath (CGPathDrawingMode.FillStroke);
 }
 ```
@@ -113,7 +113,7 @@ Com essa linha, primeiro ele obtém o contexto gráfico atual a ser usado para d
 g.SetLineWidth (10);
 UIColor.Blue.SetFill ();
 UIColor.Red.SetStroke ();
-``` 
+```
 
 Depois de obter um contexto de gráficos, o código configura alguns atributos para usar ao desenhar, mostrados acima. Nesse caso, as cores de largura, borda e preenchimento da linha são definidas. Qualquer desenho subsequente usará esses atributos, pois eles serão mantidos no estado do contexto de gráficos.
 
@@ -124,11 +124,11 @@ var path = new CGPath ();
 
 path.AddLines (new CGPoint[]{
 new CGPoint (100, 200),
-new CGPoint (160, 100), 
+new CGPoint (160, 100),
 new CGPoint (220, 200)});
 
 path.CloseSubpath ();
-``` 
+```
 
 Depois que o caminho é criado, ele é adicionado ao contexto de gráficos para que `AddPath` a `DrawPath` chamada e, respectivamente, possa desenhá-lo.
 
@@ -159,9 +159,9 @@ Definir o caminho atual como o caminho de recorte restringe todo o desenho subse
 
 // draw a linear gradient
     g.DrawLinearGradient (
-        gradient, 
-        new CGPoint (path.BoundingBox.Left, path.BoundingBox.Top), 
-        new CGPoint (path.BoundingBox.Right, path.BoundingBox.Bottom), 
+        gradient,
+        new CGPoint (path.BoundingBox.Left, path.BoundingBox.Top),
+        new CGPoint (path.BoundingBox.Right, path.BoundingBox.Bottom),
         CGGradientDrawingOptions.DrawsBeforeStartLocation);
     }
 ```
@@ -182,7 +182,7 @@ g.SetLineDash (0, new nfloat[] { 10, 4 * (nfloat)Math.PI });
 A adição desse código antes de qualquer operação de desenho resulta em traços tracejados de 10 unidades, com 4 unidades de espaçamento entre traços, conforme mostrado abaixo:
 
  ![](core-graphics-images/02-dashed-stroke.png "Adicionar este código antes de qualquer operação de desenho resultar em traços tracejados")
- 
+
 Observe que, ao usar o API unificada no Xamarin. Ios, o tipo de matriz precisa ser `nfloat`um e também precisa ser convertido explicitamente em Math. PI.
 
 <a name="Drawing_Images_and_Text"/>
@@ -214,14 +214,14 @@ O contexto de gráficos tem métodos auxiliares para transformar o CTM. Nesse ca
 public override void Draw (CGRect rect)
 {
     base.Draw (rect);
-    
+
     using (CGContext g = UIGraphics.GetCurrentContext ()) {
 
         // scale and translate the CTM so the image appears upright
         g.ScaleCTM (1, -1);
         g.TranslateCTM (0, -Bounds.Height);
         g.DrawImage (rect, UIImage.FromFile ("MyImage.png").CGImage);
-}   
+}
 ```
 
 A imagem resultante é exibida verticalmente:
@@ -239,7 +239,7 @@ Assim como acontece com caminhos e imagens, o texto de desenho com gráficos de 
 public override void Draw (RectangleF rect)
 {
     base.Draw (rect);
-    
+
     // image drawing code omitted for brevity ...
 
     // translate the CTM by the font size so it displays on screen
@@ -308,7 +308,7 @@ UIImage DrawTriangle ()
 
         path.AddLines(new CGPoint[]{
             new CGPoint(100,200),
-            new CGPoint(160,100), 
+            new CGPoint(160,100),
             new CGPoint(220,200)});
 
         path.CloseSubpath();
@@ -320,7 +320,7 @@ UIImage DrawTriangle ()
         //get a UIImage from the context
         triangleImage = UIGraphics.GetImageFromCurrentImageContext ();
     }
-    
+
     return triangleImage;
 }
 ```
@@ -358,7 +358,7 @@ public class PDFView : UIView
         //create a CGPDFDocument from file.pdf included in the main bundle
         pdfDoc = CGPDFDocument.FromFile ("file.pdf");
     }
-  
+
      public override void Draw (Rectangle rect)
     {
         ...
@@ -372,21 +372,21 @@ Em `Draw` seguida, o método pode `CGPDFDocument` usar o `CGPDFPage` para ler um
 public override void Draw (CGRect rect)
 {
     base.Draw (rect);
-        
+
     //flip the CTM so the PDF will be drawn upright
     using (CGContext g = UIGraphics.GetCurrentContext ()) {
         g.TranslateCTM (0, Bounds.Height);
         g.ScaleCTM (1, -1);
-        
+
         // render the first page of the PDF
         using (CGPDFPage pdfPage = pdfDoc.GetPage (1)) {
-            
+
         //get the affine transform that defines where the PDF is drawn
         CGAffineTransform t = pdfPage.GetDrawingTransform (CGPDFBox.Crop, rect, 0, true);
-        
+
         //concatenate the pdf transform with the CTM for display in the view
         g.ConcatCTM (t);
-        
+
         //draw the pdf page
         g.DrawPDFPage (pdfPage);
         }
@@ -409,14 +409,14 @@ UIGraphics.BeginPDFContext (data, CGRect.Empty, null);
 
 //start a PDF page
 UIGraphics.BeginPDFPage ();
-       
+
 using (CGContext g = UIGraphics.GetCurrentContext ()) {
     g.ScaleCTM (1, -1);
-    g.TranslateCTM (0, -25);      
+    g.TranslateCTM (0, -25);
     g.SelectFont ("Helvetica", 25, CGTextEncoding.MacRoman);
     g.ShowText ("Hello Core Graphics");
     }
-    
+
 //complete a PDF page
 UIGraphics.EndPDFContent ();
 ```

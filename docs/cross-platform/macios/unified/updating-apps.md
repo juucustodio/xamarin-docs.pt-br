@@ -6,12 +6,12 @@ ms.assetid: 8A654C95-5DCA-4BB5-A582-F96C2BECC81C
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: 61562eed8867b7a2e12b3d2e96feed28d957696b
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 021139c817d2b0eb430a6c8fe09dbd07b7c17813
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68511196"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70226157"
 ---
 # <a name="updating-existing-apps-to-the-unified-api"></a>Atualizando aplicativos existentes para o API Unificada
 
@@ -40,7 +40,7 @@ Os aplicativos Xamarin. iOS existentes podem ser atualizados para o API Unificad
 
 Os aplicativos Xamarin. Mac existentes podem ser atualizados para o API Unificada usando a ferramenta de migração automatizada interna para Visual Studio para Mac. Algumas correções adicionais podem ser necessárias, conforme explicado nestas [instruções](~/cross-platform/macios/unified/updating-mac-apps.md) e [dicas](~/cross-platform/macios/unified/updating-tips.md).
 
-### <a name="xamarinforms-appscross-platformmaciosunifiedupdating-xamarin-forms-appsmd"></a>[Aplicativos Xamarin. Forms](~/cross-platform/macios/unified/updating-xamarin-forms-apps.md)
+### <a name="xamarinforms-appscross-platformmaciosunifiedupdating-xamarin-forms-appsmd"></a>[Aplicativos do Xamarin.Forms](~/cross-platform/macios/unified/updating-xamarin-forms-apps.md)
 
 Siga estas instruções para atualizar uma solução Xamarin. Forms existente com um projeto do iOS para usar o API Unificada. API Unificada suporte só está disponível no Xamarin. Forms 1,3 e posterior, portanto, [as instruções](~/cross-platform/macios/unified/updating-xamarin-forms-apps.md) também explicam como atualizar seu aplicativo Xamarin. Forms para a versão 1,3. Essas [dicas](~/cross-platform/macios/unified/updating-tips.md) podem ajudar a atualizar qualquer código nativo do Ios em renderizadores personalizados ou serviços de dependência.
 

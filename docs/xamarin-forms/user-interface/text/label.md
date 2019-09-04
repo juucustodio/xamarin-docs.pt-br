@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/26/2019
-ms.openlocfilehash: 5c12b5a5c0e558403362bd12baddfb8201f40759
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 24ab8f4b988277cbbf1162a08e5641332a58bd81
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68642929"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70228154"
 ---
 # <a name="xamarinforms-label"></a>Rótulo do xamarin. Forms
 
@@ -48,7 +48,7 @@ var bothLabel = new Label { Text = "This is underlined text with strikethrough."
 
 As capturas de tela a seguir mostram os `TextDecorations` aplicados a membros da enumeração [ `Label` ](xref:Xamarin.Forms.Label) instâncias:
 
-![](label-images/label-textdecorations.png "Rótulos com as decorações de texto")
+![Rótulos com decorações de texto](label-images/label-textdecorations.png)
 
 > [!NOTE]
 > Decorações de texto também podem ser aplicadas a [ `Span` ](xref:Xamarin.Forms.Span) instâncias. Para obter mais informações sobre o `Span` classe, consulte [texto formatado em](#Formatted_Text).
@@ -91,7 +91,7 @@ public partial class LabelPage : ContentPage
 
 As capturas de tela a seguir mostram o resultado da configuração de `TextColor` propriedade:
 
-![](label-images/textcolor.png "Exemplo de TextColor de rótulo")
+![Exemplo de TextColor de rótulo](label-images/textcolor.png)
 
 Para obter mais informações sobre as cores, consulte [cores](~/xamarin-forms/user-interface/colors.md).
 
@@ -140,7 +140,7 @@ var label =
 
 As capturas de tela a seguir mostram o resultado da configuração de `MaxLines` propriedade como 2, quando o texto é longo o suficiente para ocupar mais de 2 linhas:
 
-![](label-images/label-maxlines.png "Exemplo de MaxLines de rótulo")
+![Exemplo de MaxLines de rótulo](label-images/label-maxlines.png)
 
 <a name="Formatted_Text" />
 
@@ -223,7 +223,7 @@ Observe que um [ `Span` ](xref:Xamarin.Forms.Span) também pode responder a qual
 
 As capturas de tela a seguir mostram o resultado da configuração de `FormattedString` propriedade para três `Span` instâncias:
 
-![](label-images/formattedtext.png "Exemplo de FormattedText do rótulo")
+![Exemplo de FormattedText de rótulo](label-images/formattedtext.png)
 
 ## <a name="line-height"></a>Altura da linha
 
@@ -254,7 +254,7 @@ var label =
 
 As capturas de tela a seguir mostram o resultado da configuração de [ `Label.LineHeight` ](xref:Xamarin.Forms.Label.LineHeight) propriedade para o 1.8:
 
-![](label-images/label-lineheight.png "Exemplo de LineHeight de rótulo")
+![Exemplo de LineHeight de rótulo](label-images/label-lineheight.png)
 
 O exemplo XAML a seguir demonstra a configuração de [ `LineHeight` ](xref:Xamarin.Forms.Span.LineHeight) propriedade em uma [ `Span` ](xref:Xamarin.Forms.Span):
 
@@ -294,7 +294,7 @@ var label = new Label
 
 As capturas de tela a seguir mostram o resultado da configuração de [ `Span.LineHeight` ](xref:Xamarin.Forms.Span.LineHeight) propriedade para o 1.8:
 
-![](label-images/span-lineheight.png "Exemplo de SPAN LineHeight")
+![Exemplo de span LineHeight](label-images/span-lineheight.png)
 
 ## <a name="hyperlinks"></a>Hiperlinks
 

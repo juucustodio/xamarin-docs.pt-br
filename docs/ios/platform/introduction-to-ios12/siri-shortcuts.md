@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/08/2018
-ms.openlocfilehash: 4fa15e73575e20541df7ee8f606b01ec6e3d875a
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: f0927a6d6d5e3b9db6f203f779fbd50a026ce7e8
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656713"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70226572"
 ---
 # <a name="siri-shortcuts-in-xamarinios"></a>Atalhos do Siri no Xamarin. iOS
 
@@ -264,19 +264,19 @@ Para criar a biblioteca estática e gerar C# definições de associações para 
 
 - Configure seu sistema para usar as ferramentas de linha de comando do Xcode 10:
 
-    > [!WARNING]
-    > A atualização das ferramentas de linha de comando selecionadas afeta todas as versões instaladas do Xcode no seu sistema. Quando você terminar de usar o aplicativo de exemplo do chefe de sopa, certifique-se de reverter essa configuração para sua configuração original.
+  > [!WARNING]
+  > A atualização das ferramentas de linha de comando selecionadas afeta todas as versões instaladas do Xcode no seu sistema. Quando você terminar de usar o aplicativo de exemplo do chefe de sopa, certifique-se de reverter essa configuração para sua configuração original.
 
-    - No Xcode, escolha **Xcode > preferências > locais** e defina **ferramentas de linha de comando** para a instalação mais recente do Xcode 10 disponível no sistema.
+  - No Xcode, escolha **Xcode > preferências > locais** e defina **ferramentas de linha de comando** para a instalação mais recente do Xcode 10 disponível no sistema.
 
 - No terminal, `cd` para o diretório **OrderSoupIntentStaticLib**
 
 - Tipo `make`, que compila:
 
-    - A biblioteca estática, **libOrderSoupIntentStaticLib. a**
-    - No diretório de saída de Bo C# , definições de associações:
-        - **ApiDefinitions.cs**
-        - **StructsAndEnums.cs**
+  - A biblioteca estática, **libOrderSoupIntentStaticLib. a**
+  - No diretório de saída de Bo C# , definições de associações:
+    - **ApiDefinitions.cs**
+    - **StructsAndEnums.cs**
 
 O projeto **OrderSoupIntentBindings** , que se baseia nessa biblioteca estática e suas definições de associações associadas, compila esses itens automaticamente.
 No entanto, a execução manual por meio do processo acima garantirá que ele seja criado conforme o esperado.
@@ -647,14 +647,14 @@ Na seção **certificados, IDs & perfis** do portal do [desenvolvedor da Apple](
 
 - Crie três IDs de aplicativo: uma para o aplicativo em si, uma para a extensão de intenções e outra para a extensão de interface do usuário de tentativas. Por exemplo:
 
-    - Aplicativo: **com. Yourcompanyname pela. SoupChef**
-        - Para essa ID do aplicativo, atribua os recursos SiriKit e **grupos de aplicativos** .
+  - Aplicativo: **com. Yourcompanyname pela. SoupChef**
+    - Para essa ID do aplicativo, atribua os recursos SiriKit e **grupos de aplicativos** .
 
-    - Extensão de tentativas: **com. Yourcompanyname pela. SoupChef. intenções**
-        - Para essa ID de aplicativo, atribua a capacidade de **grupos de aplicativos** .
+  - Extensão de tentativas: **com. Yourcompanyname pela. SoupChef. intenções**
+    - Para essa ID de aplicativo, atribua a capacidade de **grupos de aplicativos** .
 
-    - Extensão da interface do usuário de tentativas: **com. Yourcompanyname pela. SoupChef. Intentsui**
-        - Esta ID de aplicativo não precisa de funcionalidades especiais.
+  - Extensão da interface do usuário de tentativas: **com. Yourcompanyname pela. SoupChef. Intentsui**
+    - Esta ID de aplicativo não precisa de funcionalidades especiais.
 
 - Depois de criar as IDs de aplicativo acima, edite a funcionalidade de **grupos de aplicativos** atribuída ao aplicativo e a extensão de tentativas, especificando o grupo de aplicativos específico criado acima.
 
@@ -668,16 +668,16 @@ No Visual Studio para Mac ou no Visual Studio 2017, faça o seguinte:
 
 - Atualize os vários arquivos **info. plist** na solução. Defina o **identificador do pacote** do aplicativo, a extensão de tentativas e a extensão da interface do usuário de tentativas para as IDs de aplicativo definidas acima:
 
-    - Aplicativo: **com. Yourcompanyname pela. SoupChef**
-    - Extensão de tentativas: **com. Yourcompanyname pela. SoupChef. intenções**
-    - Extensão da interface do usuário de tentativas: **com. Yourcompanyname pela. SoupChef. Intentsui**
+  - Aplicativo: **com. Yourcompanyname pela. SoupChef**
+  - Extensão de tentativas: **com. Yourcompanyname pela. SoupChef. intenções**
+  - Extensão da interface do usuário de tentativas: **com. Yourcompanyname pela. SoupChef. Intentsui**
 
 - Atualize o arquivo **. plist de direitos** para o projeto **SoupChef** :
-    - Para o recurso de **grupos de aplicativos** , defina o grupo para o novo grupo de aplicativos criado acima (no exemplo acima, era **Group. com. Yourcompanyname pela. SoupChef**).
-    - Verifique se o **SiriKit** está habilitado.
+  - Para o recurso de **grupos de aplicativos** , defina o grupo para o novo grupo de aplicativos criado acima (no exemplo acima, era **Group. com. Yourcompanyname pela. SoupChef**).
+  - Verifique se o **SiriKit** está habilitado.
 
 - Atualize o arquivo **. plist de direitos** para o projeto **SoupChefIntents** :
-    - Para o recurso de **grupos de aplicativos** , defina o grupo para o novo grupo de aplicativos criado acima (no exemplo acima, era **Group. com. Yourcompanyname pela. SoupChef**).
+  - Para o recurso de **grupos de aplicativos** , defina o grupo para o novo grupo de aplicativos criado acima (no exemplo acima, era **Group. com. Yourcompanyname pela. SoupChef**).
 
 - Por fim, abra **NSUserDefaultsHelper.cs**. Defina a `AppGroup` variável para o valor do novo grupo de aplicativos (por exemplo, defina-a `group.com.yourcompanyname.SoupChef`como).
 

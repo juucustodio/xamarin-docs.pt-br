@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 1f49f3c24bc4c89edb005206b953176639214481
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: d51e1b20e1409d228db2f38e6c31ad1165897654
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68647171"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70226900"
 ---
 # <a name="storyboardxib-less-user-interface-design-in-xamarinmac"></a>. Storyboard/. xib-o design de interface do usuário menos no Xamarin. Mac
 
@@ -35,16 +35,16 @@ Ao criar um novo aplicativo Xamarin. Mac Cocoa, você obtém uma janela padrão 
 Para alternar para uma janela do Xibless para um aplicativo, faça o seguinte:
 
 1. Abra o aplicativo que você deseja interromper usando `.storyboard` arquivos ou. xib para definir a interface do usuário no Visual Studio para Mac.
-2. Na **painel de soluções**, clique com o botão direito do mouse no arquivo **Main. Storyboard** ou **MainWindow. xib** e selecione **remover**: 
+2. Na **painel de soluções**, clique com o botão direito do mouse no arquivo **Main. Storyboard** ou **MainWindow. xib** e selecione **remover**:
 
     ![Removendo o storyboard ou a janela principal](xibless-ui-images/switch01.png "Removendo o storyboard ou a janela principal")
-3. Na **caixa de diálogo remover**, clique no botão **excluir** para remover o. Storyboard ou. xib completamente do projeto: 
+3. Na **caixa de diálogo remover**, clique no botão **excluir** para remover o. Storyboard ou. xib completamente do projeto:
 
     ![Confirmando a exclusão](xibless-ui-images/switch02.png "Confirmando a exclusão")
 
 Agora, precisaremos modificar o arquivo **MainWindow.cs** para definir o layout da janela e modificar o arquivo **ViewController.cs** ou **MainWindowController.cs** para criar uma instância da nossa `MainWindow` classe, já que não estamos mais usando o. arquivo storyboard ou. xib.
 
-Os aplicativos Xamarin. Mac modernos que usam storyboards para a interface do usuário podem não incluir automaticamente os arquivos **MainWindow.cs**, **ViewController.cs** ou **MainWindowController.cs** . Conforme necessário, basta adicionar uma nova classe C# vazia ao projeto (**Adicionar** > **novo arquivo...** Classe vaziageral > ) e nomeie-o como o arquivo ausente.  >  
+Os aplicativos Xamarin. Mac modernos que usam storyboards para a interface do usuário podem não incluir automaticamente os arquivos **MainWindow.cs**, **ViewController.cs** ou **MainWindowController.cs** . Conforme necessário, basta adicionar uma nova classe C# vazia ao projeto (**Adicionar** > **novo arquivo...** Classe vaziageral > ) e nomeie-o como o arquivo ausente.  > 
 
 
 ### <a name="defining-the-window-in-code"></a>Definindo a janela no código
@@ -160,7 +160,7 @@ A `AutoresizingMask = NSViewResizingMask.MinYMargin` propriedade informa ao bot�
 
 Por fim, `ContentView.AddSubview (ClickMeButton)` o método adiciona `NSButton` o ao modo de exibição de conteúdo para que ele seja exibido na tela quando o aplicativo é executado e a janela é exibida.
 
-Em seguida, um rótulo é adicionado à janela que exibirá o número de vezes que `NSButton` o foi clicado: 
+Em seguida, um rótulo é adicionado à janela que exibirá o número de vezes que `NSButton` o foi clicado:
 
 ```csharp
 ClickMeLabel = new NSTextField (new CGRect (120, Frame.Height - 65, Frame.Width - 130, 20)) {
@@ -172,7 +172,7 @@ ClickMeLabel = new NSTextField (new CGRect (120, Frame.Height - 65, Frame.Width 
     StringValue = "Button has not been clicked yet."
 };
 ContentView.AddSubview (ClickMeLabel);
-``` 
+```
 
 Como o MacOS não tem um elemento de interface do usuário de _rótulo_ específico, adicionamos um estilo, não `NSTextField` editável, a atuar como um rótulo. Assim como o botão antes, o tamanho e o local levam em conta que (0,0) está na parte inferior esquerda da janela. A `AutoresizingMask = NSViewResizingMask.WidthSizable | NSViewResizingMask.MinYMargin` Propriedade está usando o operador **or** para combinar dois `NSViewResizingMask` recursos. Isso fará com que o rótulo permaneça no mesmo local da parte superior da janela quando a janela for redimensionada verticalmente, reduzida e aumenta em largura, uma vez que a janela é redimensionada horizontalmente.
 
@@ -239,7 +239,7 @@ Definimos o local da janela da tela com um `CGRect`. Assim como o sistema de coo
 
 ```csharp
 ... (NSWindowStyle.Titled | NSWindowStyle.Closable | NSWindowStyle.Miniaturizable | NSWindowStyle.Resizable) ...
-``` 
+```
 
 Os seguintes `NSWindowStyle` recursos estão disponíveis:
 
@@ -249,7 +249,7 @@ Os seguintes `NSWindowStyle` recursos estão disponíveis:
 - **Miniaturizable** -a janela tem um botão Miniaturize e pode ser minimizada.
 - Redimensionável-a janela terá um botão de redimensionamento e será redimensionável.
 - **Utilitário** – a janela é uma janela de estilo do utilitário (painel).
-- **DocModal** -se a janela for um painel, ela será modal de documento em vez de modal do sistema. 
+- **DocModal** -se a janela for um painel, ela será modal de documento em vez de modal do sistema.
 - **NonactivatingPanel** -se a janela for um painel, ela não se tornará a janela principal.
 - **TexturedBackground** -a janela terá um plano de fundo texturizado.
 - Não **dimensionado** – a janela não será dimensionada.
@@ -292,7 +292,7 @@ Neste ponto, se o aplicativo for executado e o botão tiver clicado duas vezes, 
 
 Se quisermos adicionar apenas um código, xibless janela a um aplicativo Xamarin. Mac existente, clique com o botão direito do mouse no projeto na **painel de soluções** e selecione **Adicionar** > **novo arquivo..** . Na caixa de diálogo **novo arquivo** , escolha janela **Xamarin. Mac** > **Cocoa com controlador**, conforme ilustrado abaixo:
 
-![Adicionando um novo controlador de janela](xibless-ui-images/add01.png "Adicionando um novo controlador de janela") 
+![Adicionando um novo controlador de janela](xibless-ui-images/add01.png "Adicionando um novo controlador de janela")
 
 Assim como antes, vamos excluir o arquivo default. Storyboard ou. xib do projeto (neste caso, **SecondWindow. xib**) e seguir as etapas na seção alternando [uma janela para usar código](#Switching_a_Window_to_use_Code) acima para cobrir a definição da janela para código.
 

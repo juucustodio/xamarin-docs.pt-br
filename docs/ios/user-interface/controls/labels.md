@@ -1,60 +1,60 @@
 ---
-title: Rótulos no xamarin. IOS
-description: Este documento discute como usar os rótulos no xamarin. IOS. Ele descreve como criar etiquetas de forma programática e com o Designer do iOS.
+title: Rótulos no Xamarin. iOS
+description: Este documento discute como usar rótulos no Xamarin. iOS. Ele descreve como criar rótulos programaticamente e com o designer do iOS.
 ms.prod: xamarin
 ms.assetid: 54DA1221-13E4-4D45-B263-5F22A0AC7B53
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 07/11/2017
-ms.openlocfilehash: cca74ac74e5077822193f6dd97a69f8d9b823561
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 41cd0eb93cee216311ea42f7ca027a1556b322e6
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61227766"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227078"
 ---
-# <a name="labels-in-xamarinios"></a>Rótulos no xamarin. IOS
+# <a name="labels-in-xamarinios"></a>Rótulos no Xamarin. iOS
 
-O `UILabel` controle é usado para a exibição única e multilinha, ler somente texto. 
+O `UILabel` controle é usado para exibir texto único e de várias linhas, somente leitura.
 
 ## <a name="implementing-a-label"></a>Implementando um rótulo
 
-Criar um novo rótulo é uma instância de um [ `UILabel` ](xref:UIKit.UILabel):
+Um novo rótulo é criado instanciando-se [`UILabel`](xref:UIKit.UILabel)um:
 
 ```csharp
 UILabel label = new UILabel();
 ```
 
-### <a name="labels-and-storyboards"></a>Rótulos e Storyboards
+### <a name="labels-and-storyboards"></a>Rótulos e storyboards
 
-Você também pode adicionar um rótulo para a interface do usuário ao usar o Designer do iOS. Pesquise **etiqueta** na **caixa de ferramentas** e arraste-o para o modo de exibição:
+Você também pode adicionar um rótulo à sua interface do usuário ao usar o designer do iOS. Procure **rótulo** na caixa de **ferramentas** e arraste-o para sua exibição:
 
-![Na caixa de ferramentas de rótulo](labels-images/image3.png)
+![Rótulo na caixa de ferramentas](labels-images/image3.png)
 
 As propriedades a seguir podem ser ajustadas no painel de propriedades:
 
 ![Painel de propriedades do rótulo](labels-images/image2.png)
 
-- **Contexto de texto** – sem formatação ou atribuído. Texto sem formatação, permite que você defina as [atributos de formatação](#Formatting_Text_and_Label) na cadeia de caracteres inteira. Textos atribuídos permite que você defina a formatação para diferentes caracteres ou palavras na cadeia de caracteres.
+- **Contexto de texto** – simples ou atribuído. Texto sem formatação permite que você defina os [atributos de formatação](#Formatting_Text_and_Label) na cadeia de caracteres inteira. Os textos atribuídos permitem que você defina a formatação para diferentes caracteres ou palavras na cadeia de caracteres.
 - **Cor, fonte, alinhamento** – atributos de formatação que podem ser aplicados ao rótulo.
-- **Linhas** – define o número de linhas que pode se estender o rótulo. Defina isso como 0 para permitir que o rótulo usar tantas linhas conforme necessário.
-- **Comportamento** – pode ser definido como ativado ou realçada. Habilitado é definido por padrão, o texto desabilitado será exibido em uma cor mais clara. Realçado é desabilitado por padrão e permite que o rótulo a ser redesenhado com um estado realçado quando ele é selecionado por um usuário.
-- **Quebra de linha e de Baselane** – 
-    - Basline determina como o texto será posicionado se os tamanhos de fonte é diferente do especificado.
-    - As quebras de linha determinam como uma cadeia de caracteres será encapsulada ou truncada se ele tiver mais de uma única linha.
-- **Redução automática** – determina como a fonte em tamanho será minimizada dentro de um rótulo, se necessário.
-- **Realçado, sombra, deslocamento** – permite que você defina a cor de sombra e realçado e o deslocamento de sombra.
+- **Linhas** – define o número de linhas que o rótulo pode abranger. Defina como 0 para permitir que o rótulo use quantas linhas forem necessárias.
+- **Comportamento** – pode ser definido como habilitado ou realçado. Habilitado é definido por padrão, o texto desabilitado será exibido em uma cor cinza mais clara. Realçado está desabilitado por padrão e permite que o rótulo seja redesenhado com um estado realçado quando ele é selecionado por um usuário.
+- **Baselane e quebra de linha** –
+  - Da linha determina como o texto será posicionado se os tamanhos de fonte forem diferentes do especificado.
+  - Quebras de linha determinam como uma cadeia de caracteres será encapsulada ou truncada se for maior que uma única linha.
+- **Redução** automática – determina como o tamanho da fonte será minimizado dentro de um rótulo, se necessário.
+- **Realçado, sombra, deslocamento** – permite que você defina o realçado e a cor da sombra e o deslocamento da sombra.
 
-## <a name="truncating-and-wrapping"></a>Truncando e encapsulamento
+## <a name="truncating-and-wrapping"></a>Truncamento e disposição
 
-Para obter informações sobre como usar a linha de quebra no iOS, consulte a [truncar e quebrar o texto](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/labels/uilabel-truncate-wrap-text) receita.
+Para obter informações sobre como usar as quebras de linha no iOS, consulte a receita [truncar e quebrar texto](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/labels/uilabel-truncate-wrap-text) .
 
 <a name="Formatting_Text_and_Label"/>
 
 ## <a name="formatting-text-and-label"></a>Formatando texto e rótulo
 
-Para formatar a cadeia de caracteres que você usa em um rótulo você pode definir atributos em toda a cadeia de formatação ou você pode usar cadeias de caracteres atribuídas. Os exemplos a seguir mostram como implementá-los:
+Para formatar a cadeia de caracteres que você usa em um rótulo, você pode definir atributos de formatação na cadeia de caracteres inteira ou pode usar cadeias de caracteres atribuídas. Os exemplos a seguir mostram como implementá-los:
 
 ```csharp
 label = new UILabel(){
@@ -74,19 +74,19 @@ label.AttributedText = new NSAttributedString(
             );
 ```
 
-Para obter mais informações sobre como usar o estilo de texto `NSAttributedString` consulte o [estilo do texto](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/text_field/style_text) receita.
+Para obter mais informações sobre como estilizar o texto usando `NSAttributedString` , consulte a receita de texto de [estilo](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/text_field/style_text) .
 
-Por padrão, rótulos de tem o `Enabled` definido como true, mas é possível defini-lo como desativado para dar ao usuário uma dica de que um determinado controle está desabilitado:
+Por padrão, os rótulos `Enabled` têm o conjunto como verdadeiro, mas é possível defini-lo como desabilitado para dar ao usuário uma dica de que um determinado controle está desabilitado:
 
 ```csharp
 label.Enabled = false;
 ```
 
-Isso define o rótulo para uma cor cinza clara, conforme ilustrado na imagem de exemplo da tela de restrições no iOS:
+Isso define o rótulo para uma cor cinza-claro, conforme ilustrado na imagem de exemplo a seguir da tela de restrições no iOS:
 
 ![Botão desabilitado no iOS](labels-images/image1.png)
 
-Você também pode definir as cores de realce e sombra do texto para o texto do rótulo para efeitos adicionais:
+Você também pode definir as cores de texto de realce e sombra para o texto do rótulo para efeitos adicionais:
 
 ```csharp
 label.Highlighted = true;
@@ -96,11 +96,11 @@ label.ShadowColor = UIColor.Black;
 label.ShadowOffset = new CoreGraphics.CGSize(1.0f, 1.0f);
 ```
 
-Que exibe o texto como esta:
+Que exibe o texto como este:
 
-![Realce e sombra definidas em texto](labels-images/image4.png)
+![Realce e conjunto de sombras no texto](labels-images/image4.png)
 
-Para obter mais informações sobre como alterar a fonte de um UILabel, consulte o [alterar a fonte](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/labels/change_the_font) receita.
+Para obter mais informações sobre como alterar a fonte de um UILabel, consulte [alterar a](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/labels/change_the_font) receita da fonte.
 
 
 

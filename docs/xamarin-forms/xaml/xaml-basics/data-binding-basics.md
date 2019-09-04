@@ -7,12 +7,12 @@ ms.assetid: 342288C3-BB4C-4924-B178-72E112D777BA
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017
-ms.openlocfilehash: f5c5f0449962dec45a521112b2de92cddefe453f
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 3fdc251d3ed24c96d7d3fa9620e483ad47a8491e
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655249"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227935"
 ---
 # <a name="part-4-data-binding-basics"></a>Parte 4. Noções básicas de vinculação de dados
 
@@ -102,7 +102,7 @@ Text="{Binding Value, StringFormat='The angle is {0:F0} degrees'}"
 
 Aqui está o programa em execução:
 
-[![](data-binding-basics-images/sliderbinding.png "Associações de exibição para exibição")](data-binding-basics-images/sliderbinding-large.png#lightbox "associações de exibição para exibição ")
+[![Associações de exibição para exibição](data-binding-basics-images/sliderbinding.png)](data-binding-basics-images/sliderbinding-large.png#lightbox)
 
 ## <a name="the-binding-mode"></a>O modo de ligação
 
@@ -201,7 +201,7 @@ As associações em três da `Slider` modos de exibição são `OneWayToSource`,
 
 No entanto, a associação para o `Scale` é de propriedade `TwoWay`. Isso ocorre porque o `Scale` propriedade tem um valor padrão de 1 e usando um `TwoWay` associação faz com que o `Slider` inicial do valor a ser definido em 1 em vez de 0. Se essa associação foram `OneWayToSource`, o `Scale` propriedade inicialmente seria definida como 0 do `Slider` valor padrão. O `Label` não seria visível e que pode causar alguma confusão ao usuário.
 
- [![](data-binding-basics-images/slidertransforms.png "Com versões anteriores associações")](data-binding-basics-images/slidertransforms-large.png#lightbox "com versões anteriores associações")
+ [![Associações anteriores](data-binding-basics-images/slidertransforms.png)](data-binding-basics-images/slidertransforms-large.png#lightbox)
 
  > [!NOTE]
  > O [ `VisualElement` ](xref:Xamarin.Forms.VisualElement) classe também tem [ `ScaleX` ](xref:Xamarin.Forms.VisualElement.ScaleX) e [ `ScaleY` ](xref:Xamarin.Forms.VisualElement.ScaleY) propriedades, que dimensionarem o `VisualElement` no eixo x e y respectivamente.
@@ -234,7 +234,7 @@ Configuração estática `NamedColor.All` propriedade para o `ItemsSource` de um
 
 A exibição resultante estabelece que os itens são realmente do tipo `XamlSamples.NamedColor`:
 
-[![](data-binding-basics-images/listview1.png "Associando a uma coleção")](data-binding-basics-images/listview1-large.png#lightbox "associando a uma coleção")
+[![Associação a uma coleção](data-binding-basics-images/listview1.png)](data-binding-basics-images/listview1-large.png#lightbox)
 
 Não é o máximo de informações, mas o `ListView` é rolável e selecionável.
 
@@ -259,7 +259,7 @@ Para definir um modelo para os itens, você desejará separar a `ItemTemplate` a
 
 O `Label` é definido como o `View` propriedade do `ViewCell`. (O `ViewCell.View` marcas não são necessárias porque o `View` é a propriedade de conteúdo do `ViewCell`.) Essa marcação exibe a `FriendlyName` propriedade de cada `NamedColor` objeto:
 
-[![](data-binding-basics-images/listview2.png "Associando a uma coleção com um DataTemplate")](data-binding-basics-images/listview2-large.png#lightbox "associando a uma coleção com um DataTemplate")
+[![Associando a uma coleção com um DataTemplate](data-binding-basics-images/listview2.png)](data-binding-basics-images/listview2-large.png#lightbox)
 
 Muito melhor. Agora tudo o que precisamos é aprimorar o modelo de item com mais informações e a cor real. Para dar suporte a esse modelo, alguns valores e os objetos foram definidos no dicionário de recursos da página:
 
@@ -396,7 +396,7 @@ Associações de dados de três fazer referência a essa única instância. Obse
 
 Aqui está o resultado:
 
-[![](data-binding-basics-images/listview3.png "Associando a uma coleção com um DataTemplate e conversores")](data-binding-basics-images/listview3-large.png#lightbox "para uma coleção com um DataTemplate e conversores de associação")
+[![Associação a uma coleção com DataTemplate e conversores](data-binding-basics-images/listview3.png)](data-binding-basics-images/listview3-large.png#lightbox)
 
 O `ListView` é bastante sofisticados em lidar com alterações que podem ocorrer dinamicamente nos dados subjacentes, mas somente se você seguir etapas específicas. Se a coleção de itens atribuídos à `ItemsSource` propriedade do `ListView` alterações durante o tempo de execução — que, se itens podem ser adicionados a ou removido da coleção — use um `ObservableCollection` classe para esses itens. `ObservableCollection` implementa o `INotifyCollectionChanged` interface, e `ListView` instalará um manipulador para o `CollectionChanged` eventos.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/26/2018
-ms.openlocfilehash: 3e30e3d4ea3bf0ec58aff842ffee68885a47d44a
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 7b7cd9445ec9f28211037608ab04ffc45bec705c
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656186"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227977"
 ---
 # <a name="text-in-xamarinforms"></a>Texto no xamarin. Forms
 
@@ -34,7 +34,7 @@ Aparência do texto pode ser alterada usando internas ou personalizadas [estilos
 
 O `Label` exibição é usada para exibir o texto. Ele pode mostrar várias linhas de texto ou uma única linha de texto. `Label` pode apresentar texto com várias opções de formatação usadas em embutido. O modo de exibição do rótulo pode encapsular ou truncar o texto quando ela não couber em uma única linha.
 
-![](images/label.png "Exemplo de rótulo")
+![Exemplo de rótulo](images/label.png)
 
 Consulte a [rótulo](label.md) do artigo para obter mais informações.
 
@@ -46,7 +46,7 @@ Para obter informações sobre como personalizar a fonte usada em um rótulo, co
 
 `Entry` é usado para aceitar a entrada de texto de linha única. `Entry` controle de ofertas sobre fontes e cores. `Entry` tem um modo de senha e pode mostrar o texto de espaço reservado até que o texto é inserido.
 
-![](images/entry.png "Exemplo de entrada")
+![Exemplo de entrada](images/entry.png)
 
 Consulte a [entrada](entry.md) artigo para obter mais informações.
 
@@ -58,7 +58,7 @@ Observe que, diferentemente `Label`, `Entry` não pode ter configurações de fo
 
 `Editor` é usado para aceitar a entrada de texto de várias linhas. `Editor` controle de ofertas sobre fontes e cores.
 
-![](images/editor.png "Exemplo de editor")
+![Exemplo de editor](images/editor.png)
 
 Consulte a [Editor](editor.md) artigo para obter mais informações.
 

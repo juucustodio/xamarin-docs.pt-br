@@ -7,12 +7,12 @@ ms.assetid: 79BD3266-D457-4E50-BDDF-33450035FA0F
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/17/2018
-ms.openlocfilehash: 68d6cb1df8557b6055feb81b21ed5513592c71c4
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 1e2b50a260ed5f5bbbbfc3c4ba55a33075262f25
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70198151"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70228107"
 ---
 # <a name="creating-and-drawing-on-skiasharp-bitmaps"></a>Criando e desenho em bitmaps de SkiaSharp
 
@@ -24,7 +24,7 @@ Você viu como um aplicativo pode carregar bitmaps da Web, de recursos do aplica
 SKBitmap bitmap = new SKBitmap(width, height);
 ```
 
-O `width` e `height` parâmetros são inteiros e especificar as dimensões de pixel do bitmap. Este construtor cria um bitmap colorido com quatro bytes por pixel: um byte cada para vermelho, verde, azul e os componentes alfa (opacity). 
+O `width` e `height` parâmetros são inteiros e especificar as dimensões de pixel do bitmap. Este construtor cria um bitmap colorido com quatro bytes por pixel: um byte cada para vermelho, verde, azul e os componentes alfa (opacity).
 
 Depois de criar um novo bitmap, você precisa obter algo na superfície do bitmap. Você geralmente pode fazer isso de duas maneiras:
 
@@ -56,7 +56,7 @@ using (SKCanvas canvas = new SKCanvas(bitmap))
 
 O bitmap pode ser exibido. Em um momento posterior, o programa pode criar um novo `SKCanvas` objeto com base no mesmo de bitmap e desenhar nele mais alguns.
 
-O **Bitmap Hello** página de **[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** aplicativo grava o texto "Olá, Bitmap!" em um bitmap e, em seguida, exibe o bitmap várias vezes.  
+O **Bitmap Hello** página de **[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** aplicativo grava o texto "Olá, Bitmap!" em um bitmap e, em seguida, exibe o bitmap várias vezes.
 
 O construtor do `HelloBitmapPage` começa criando um `SKPaint` objeto para exibir o texto. Ele determina as dimensões de uma cadeia de caracteres de texto e cria um bitmap com essas dimensões. Em seguida, ele cria um `SKCanvas` objeto baseado nesse bitmap, chamadas `Clear`e, em seguida, chama `DrawText`. É sempre uma boa ideia chamar `Clear` com um novo bitmap porque um bitmap criado recentemente pode conter dados aleatórios.
 
@@ -88,7 +88,7 @@ public partial class HelloBitmapPage : ContentPage
             }
         }
 
-        // Create SKCanvasView to view result 
+        // Create SKCanvasView to view result
         SKCanvasView canvasView = new SKCanvasView();
         canvasView.PaintSurface += OnCanvasViewPaintSurface;
         Content = canvasView;
@@ -123,7 +123,7 @@ A exibição do **Bitmap Hello** página demonstra que o programa criado será t
 
 A documentação dos `Clear` métodos de `SKCanvas` descreve-os com a instrução: "Substitui todos os pixels no clipe atual da tela." O uso da palavra "substitui" revela uma característica importante desses métodos: Todos os métodos de desenho `SKCanvas` de adicionar algo à superfície de exibição existente. O `Clear` métodos _substituir_ o que já está lá.
 
-`Clear` existe em duas versões diferentes: 
+`Clear` existe em duas versões diferentes:
 
 - O [ `Clear` ](xref:SkiaSharp.SKCanvas.Clear(SkiaSharp.SKColor)) método com um `SKColor` parâmetro substitui os pixels da superfície de exibição com pixels dessa cor.
 
@@ -167,7 +167,7 @@ O `SKColorType` enumeração tem 9 membros. Cada um desses membros descreve uma 
 - `Gray8` &mdash; cada pixel é de 8 bits que representa um tom de cinza de preto para branco
 - `RgbaF16` &mdash; cada pixel é de 64 bits, com vermelho, verde, azul e alfa em um formato de ponto flutuante de 16 bits
 
-Os dois formatos em que cada pixel é 32 pixels (4 bytes) são chamados _colorida_ formatos. Muitos dos outra data de formatos de uma hora de quando o vídeo exibe em si não eram capazes de quatro cores. Bitmaps da cor limitado eram adequadas para estes vídeos e permitido bitmaps ocupar menos espaço na memória. 
+Os dois formatos em que cada pixel é 32 pixels (4 bytes) são chamados _colorida_ formatos. Muitos dos outra data de formatos de uma hora de quando o vídeo exibe em si não eram capazes de quatro cores. Bitmaps da cor limitado eram adequadas para estes vídeos e permitido bitmaps ocupar menos espaço na memória.
 
 Hoje em dia, os programadores quase sempre usam bitmaps colorida e não se preocupe com outros formatos. A exceção é o `RgbaF16` formato, o que permite a resolução de cor maior do que até mesmo os formatos de quatro cores. No entanto, esse formato é usado para fins especializados, como imagens médicas e não faz muito sentido quando usadas com exibições de quatro cores padrão.
 
@@ -197,7 +197,7 @@ Essa melhoria de desempenho é por isso `SkiaSharp` bitmaps por padrão são cri
 
 ## <a name="drawing-on-existing-bitmaps"></a>Desenho de bitmaps existente
 
-Não é necessário criar um novo bitmap para desenhar nele. Você também pode desenhar em um bitmap existente. 
+Não é necessário criar um novo bitmap para desenhar nele. Você também pode desenhar em um bitmap existente.
 
 O **Monkey moustache (bigode)** página usa seu construtor para carregar o **MonkeyFace.png** imagem. Em seguida, ele cria um `SKCanvas` objeto baseado nesse bitmap e usa `SKPaint` e `SKPath` objetos para desenhar um moustache (bigode) nele:
 
@@ -236,7 +236,7 @@ public partial class MonkeyMoustachePage : ContentPage
             }
         }
 
-        // Create SKCanvasView to view result 
+        // Create SKCanvasView to view result
         SKCanvasView canvasView = new SKCanvasView();
         canvasView.PaintSurface += OnCanvasViewPaintSurface;
         Content = canvasView;
@@ -268,7 +268,7 @@ O bitmap seguir incluído com o **[SkiaSharpFormsDemos](https://docs.microsoft.c
 
 ![Mountain Climbers](drawing-images/MountainClimbers.jpg "Climbers Mountain")
 
-Suponha que você ainda não recebeu permissão de publicar essa fotografia monkey à esquerda. Uma solução é obscurecer a face do monkey usando uma técnica chamada _pixelization_. Os pixels da face são substituídos por blocos de cor para que você não pode fazer os recursos. Os blocos de cor geralmente são derivados da imagem original pela média entre as cores dos pixels correspondentes a esses blocos. Mas você não precisa realizar essa média. Ela ocorre automaticamente quando você copia um bitmap em uma dimensão de pixel menor. 
+Suponha que você ainda não recebeu permissão de publicar essa fotografia monkey à esquerda. Uma solução é obscurecer a face do monkey usando uma técnica chamada _pixelization_. Os pixels da face são substituídos por blocos de cor para que você não pode fazer os recursos. Os blocos de cor geralmente são derivados da imagem original pela média entre as cores dos pixels correspondentes a esses blocos. Mas você não precisa realizar essa média. Ela ocorre automaticamente quando você copia um bitmap em uma dimensão de pixel menor.
 
 Face do esquerdo monkey ocupa aproximadamente 72 pixels área quadrada com um canto superior esquerdo no ponto (112, 238). Vamos substituir essa área de 72 pixels quadrada com uma matriz de 9 por 9 de blocos coloridos, cada um deles é 8 por 8 pixels quadrados.
 
@@ -312,7 +312,7 @@ public class PixelizedImagePage : ContentPage
             canvas.DrawBitmap(originalBitmap, new SKPoint());
 
             // Draw tiny bitmap to cover face
-            canvas.DrawBitmap(faceBitmap, 
+            canvas.DrawBitmap(faceBitmap,
                               new SKRect(112, 238, 184, 310));  // destination
         }
 
@@ -369,7 +369,7 @@ using (SKCanvas canvas = new SKCanvas(rotatedBitmap))
     canvas.RotateDegrees(90);
     canvas.DrawBitmap(bitmap, new SKPoint());
 }
-```                        
+```
 
 E aqui está uma função semelhante para girar 90 graus no sentido anti-horário:
 
@@ -402,7 +402,7 @@ using (SKCanvas canvas = new SKCanvas(rotatedBitmap))
 }
 ```
 
-No entanto, em geral, essa lógica será cortar os cantos do bitmap invertido. Uma abordagem melhor é calcular o tamanho do bitmap invertido usando trigonometria para incluir os cantos. 
+No entanto, em geral, essa lógica será cortar os cantos do bitmap invertido. Uma abordagem melhor é calcular o tamanho do bitmap invertido usando trigonometria para incluir os cantos.
 
 Este trigonometria é mostrada na **Bitmap rotor** página. O arquivo XAML instancia uma `SKCanvasView` e uma `Slider` que pode variar de 0 a 360 graus com um `Label` mostrando o valor atual:
 
@@ -436,7 +436,7 @@ O arquivo code-behind carrega um recurso de bitmap e o salva como um campo somen
 ```csharp
 public partial class BitmapRotatorPage : ContentPage
 {
-    static readonly SKBitmap originalBitmap = 
+    static readonly SKBitmap originalBitmap =
         BitmapExtensions.LoadBitmapResource(typeof(BitmapRotatorPage),
             "SkiaSharpFormsDemos.Media.Banana.jpg");
 
@@ -514,7 +514,7 @@ O **palheta de Bitmap** página de **[SkiaSharpFormsDemos](https://docs.microsof
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
-        
+
         <skia:SKCanvasView x:Name="canvasView"
                            Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
                            PaintSurface="OnCanvasViewPaintSurface" />
@@ -532,7 +532,7 @@ O **palheta de Bitmap** página de **[SkiaSharpFormsDemos](https://docs.microsof
 </ContentPage>
 ```
 
-O arquivo code-behind implementa essas duas operações no `Clicked` manipuladores para os botões: 
+O arquivo code-behind implementa essas duas operações no `Clicked` manipuladores para os botões:
 
 ```csharp
 public partial class BitmapFlipperPage : ContentPage
@@ -588,7 +588,7 @@ public partial class BitmapFlipperPage : ContentPage
 }
 ```
 
-A inversão vertical é realizada por uma transformação de escala com um fator de escala horizontal de &ndash;1. O Centro de colocação em escala é o centro vertical do bitmap. A inversão horizontal é uma transformação de escala com um fator de escala vertical de &ndash;1. 
+A inversão vertical é realizada por uma transformação de escala com um fator de escala horizontal de &ndash;1. O Centro de colocação em escala é o centro vertical do bitmap. A inversão horizontal é uma transformação de escala com um fator de escala vertical de &ndash;1.
 
 Como você pode ver na mortas invertida na camisa do monkey, inversão não é igual a rotação. Mas, como demonstra a captura de tela UWP à direita, tanto a inversão horizontal e verticalmente é o mesmo que a rotação de 180 graus:
 

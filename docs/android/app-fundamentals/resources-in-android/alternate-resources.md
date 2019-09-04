@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/13/2018
-ms.openlocfilehash: 7c48244e316854b04234ec8dee4eebeb55a4f119
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 05c3816d0cc01beb3ed99994788b58e5f187171a
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69526386"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70225783"
 ---
 # <a name="alternate-resources"></a>Recursos alternativos
 
@@ -73,52 +73,52 @@ Os qualificadores possíveis estão listados abaixo para referência:
 
 - **Densidade de pixel da tela (DPI)** &ndash; O número de pixels em uma determinada área na tela física. Normalmente expressos como pontos por polegada (DPI). Os possíveis valores são:
 
-    - `ldpi`&ndash; Telas de baixa densidade.
+  - `ldpi`&ndash; Telas de baixa densidade.
 
-    - `mdpi`&ndash; Telas de densidade média
+  - `mdpi`&ndash; Telas de densidade média
 
-    - `hdpi`&ndash; Telas de alta densidade
+  - `hdpi`&ndash; Telas de alta densidade
 
-    - `xhdpi`&ndash; Telas de alta densidade extra
+  - `xhdpi`&ndash; Telas de alta densidade extra
 
-    - `nodpi`&ndash; Recursos que não devem ser dimensionados
+  - `nodpi`&ndash; Recursos que não devem ser dimensionados
 
-    - `tvdpi`&ndash; Introduzido no nível de API 13 (Android 3,2) para telas entre mdpi e hdpi.
+  - `tvdpi`&ndash; Introduzido no nível de API 13 (Android 3,2) para telas entre mdpi e hdpi.
 
 - **Tipo de tela touch** &ndash; Especifica o tipo de tela Touch que um dispositivo pode ter. Os valores possíveis `notouch` são (sem tela sensível ao `stylus` toque), (um resistive tela de toque adequada para uma `finger` caneta) e (um toque).
 
 - **Disponibilidade do teclado** &ndash; Especifica que tipo de teclado está disponível. Isso pode ser alterado durante o tempo de vida &ndash; de um aplicativo, por exemplo, quando um usuário abre um teclado de hardware. Os possíveis valores são:
 
-    - `keysexposed`&ndash; O dispositivo tem um teclado disponível. Se não houver nenhum teclado de software habilitado, isso só será usado quando o teclado de hardware for aberto.
+  - `keysexposed`&ndash; O dispositivo tem um teclado disponível. Se não houver nenhum teclado de software habilitado, isso só será usado quando o teclado de hardware for aberto.
 
-    - `keyshidden`&ndash; O dispositivo tem um teclado de hardware, mas está oculto e nenhum teclado de software está habilitado.
+  - `keyshidden`&ndash; O dispositivo tem um teclado de hardware, mas está oculto e nenhum teclado de software está habilitado.
 
-    - `keyssoft`&ndash; o dispositivo tem um teclado de software habilitado.
+  - `keyssoft`&ndash; o dispositivo tem um teclado de software habilitado.
 
 - **Método de entrada de texto primário** &ndash; Use para especificar quais tipos de chaves de hardware estão disponíveis para entrada. Os possíveis valores são:
 
-    - `nokeys`&ndash; Não há chaves de hardware para entrada.
+  - `nokeys`&ndash; Não há chaves de hardware para entrada.
 
-    - `qwerty`&ndash; Há um teclado de QWERTY disponível.
+  - `qwerty`&ndash; Há um teclado de QWERTY disponível.
 
-    - `12key`&ndash; Há um teclado de hardware de 12 teclas
+  - `12key`&ndash; Há um teclado de hardware de 12 teclas
 
 
 - **Disponibilidade da chave de navegação** &ndash; Para quando a navegação de 5 vias ou d-Pad (direcional-pad) estiver disponível. Isso pode ser alterado durante o tempo de vida do seu aplicativo. Os possíveis valores são:
 
-    - `navexposed`&ndash; as chaves de navegação estão disponíveis para o usuário
+  - `navexposed`&ndash; as chaves de navegação estão disponíveis para o usuário
 
-    - `navhidden`&ndash; as chaves de navegação não estão disponíveis.
+  - `navhidden`&ndash; as chaves de navegação não estão disponíveis.
 
 - **Método de navegação não toque primário** &ndash; O tipo de navegação disponível no dispositivo. Os possíveis valores são:
 
-    - `nonav`&ndash; a única instalação de navegação disponível é a tela sensível ao toque
+  - `nonav`&ndash; a única instalação de navegação disponível é a tela sensível ao toque
 
-    - `dpad`&ndash; um d-Pad (direcional-pad) está disponível para navegação
+  - `dpad`&ndash; um d-Pad (direcional-pad) está disponível para navegação
 
-    - `trackball`&ndash; o dispositivo tem um trackball para navegação
+  - `trackball`&ndash; o dispositivo tem um trackball para navegação
 
-    - `wheel`&ndash; o cenário incomum em que há uma ou mais rodas direcionais disponíveis
+  - `wheel`&ndash; o cenário incomum em que há uma ou mais rodas direcionais disponíveis
 
 - **Versão da plataforma (nível de API)** O nível de API com suporte do dispositivo no formato v*N*, em que N é o nível de API que está sendo direcionado. &ndash; Por exemplo, v11 se destinará a um dispositivo de nível de API 11 (Android 3,0).
 
