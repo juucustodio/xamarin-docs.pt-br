@@ -5,15 +5,15 @@ ms.prod: xamarin
 ms.assetid: 0F2266D7-21FF-404D-A148-0CFDE76B12AA
 ms.technology: xamarin-ios
 ms.custom: xamu-video
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/20/2017
-ms.openlocfilehash: c3f0130e96ae61838b9a7abcd68ccd219a327d4d
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 87de42504081374f830a4fe286476ad822eeed99
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70198487"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70280154"
 ---
 # <a name="multitasking-for-ipad-in-xamarinios"></a>Multitarefa para iPad no Xamarin. iOS
 
@@ -33,7 +33,7 @@ Há várias coisas a serem consideradas ao [oferecer suporte a multitarefas em s
 - [Atalhos de teclado de hardware personalizados](#Custom-Hardware-Keyboard-Shortcuts)
 - [Gerenciamento de recursos](#Resource-Management-Considerations)
 
-Como desenvolvedor de aplicativos, você também pode [recusar](#Opting-Out-of-Multitasking)a multitarefa, incluindo desabilitar a [reprodução de vídeo Pip](#Disabling-PIP-Video-Playback).
+Como desenvolvedor de aplicativos, você também pode [recusar a multitarefa](#Opting-Out-of-Multitasking), incluindo [desabilitar a reprodução de vídeo Pip](#Disabling-PIP-Video-Playback).
 
 Este artigo abordará as etapas necessárias para garantir que seu aplicativo Xamarin. iOS seja executado corretamente em um ambiente multitarefa ou como recusar multitarefas se não for uma boa opção para seu aplicativo.
 
@@ -57,7 +57,7 @@ Para dar suporte à exibição de **slides** ou de **divisão** , seu aplicativo
 
 ## <a name="about-multitasking-for-ipad"></a>Sobre multitarefas para iPad
 
-o iOS 9 oferece novos recursos de multitarefa no iPad com a introduçãodo deslizamento, _modo divisão_ (iPad Air 2, iPad mini 4 e iPad pro somente) e _imagem no Picture_. Vamos examinar mais detalhadamente esses recursos nas seções a seguir.
+o iOS 9 oferece novos recursos de multitarefa no iPad com a introdução do _deslizamento_, _modo divisão_ (iPad Air 2, iPad mini 4 e iPad pro somente) e _imagem no Picture_. Vamos examinar mais detalhadamente esses recursos nas seções a seguir.
 
 <a name="Slide-Over" />
 
@@ -69,7 +69,7 @@ O recurso deslizar sobre permite que o usuário escolha um segundo aplicativo e 
 
 O principal a ser lembrado é que o usuário decide quais dois aplicativos serão executados lado a lado e que o desenvolvedor não tem controle sobre esse processo. Como resultado, há algumas coisas que você precisará fazer para garantir que seu aplicativo Xamarin. iOS seja executado corretamente em um slide ao longo do painel:
 
-- **Usar classes de tamanho e AutoLayout** — como seu aplicativo Xamarin. Ios agora pode ser executado no painel lateral de deslizamento, você não pode mais depender do dispositivo, seu tamanho de tela ou sua orientação para fazer o layout da interface do usuário. Para garantir que seu aplicativo dimensione sua interface corretamente, você precisará usar classes de tamanho e AutoLayout. Para obter mais informações, consulte nossa [introdução à documentação de storyboards](~/ios/user-interface/storyboards/unified-storyboards.md) unificados.
+- **Usar classes de tamanho e AutoLayout** — como seu aplicativo Xamarin. Ios agora pode ser executado no painel lateral de deslizamento, você não pode mais depender do dispositivo, seu tamanho de tela ou sua orientação para fazer o layout da interface do usuário. Para garantir que seu aplicativo dimensione sua interface corretamente, você precisará usar classes de tamanho e AutoLayout. Para obter mais informações, consulte nossa [introdução à documentação de storyboards unificados](~/ios/user-interface/storyboards/unified-storyboards.md) .
 - **Use recursos com eficiência** — como seu aplicativo agora pode estar compartilhando o sistema com outro aplicativo em execução, é essencial que seu aplicativo use recursos do sistema com eficiência. Quando a memória se torna esparsa, o sistema encerra automaticamente o aplicativo que está consumindo mais memória. Consulte [Guia de eficiência de energia da Apple para aplicativos Ios](https://developer.apple.com/library/prerelease/ios/documentation/Performance/Conceptual/EnergyGuide-iOS/index.html#//apple_ref/doc/uid/TP40015243) para obter mais detalhes.
 
 O deslizamento está disponível apenas em um iPad pro, iPad Air, iPad Air 2, iPad mini 2, iPad mini 3 ou iPad mini 4. Para saber mais sobre como preparar seu aplicativo para o slide, consulte a documentação da Apple [adotando aprimoramentos de multitarefa no iPad](https://developer.apple.com/library/prerelease/ios/documentation/WindowsViews/Conceptual/AdoptingMultitaskingOniPad/index.html#//apple_ref/doc/uid/TP40015145) .
@@ -84,7 +84,7 @@ Em hardware do iPad com suporte (iPad Air 2, iPad mini 4 e iPad pro somente), o 
 
 Como deslizar, o usuário decide quais dois aplicativos serão executados lado a lado e, novamente, o desenvolvedor não tem controle sobre esse processo. Como resultado, o modo de exibição de divisão coloca requisitos semelhantes em um aplicativo Xamarin. iOS:
 
-- **Usar classes de tamanho e AutoLayout** — como seu aplicativo Xamarin. Ios agora pode ser executado em um modo de tela de divisão no tamanho especificado do usuário, você não pode mais depender do dispositivo, seu tamanho de tela ou sua orientação para fazer o layout da interface do usuário. Para garantir que seu aplicativo dimensione sua interface corretamente, você precisará usar classes de tamanho e AutoLayout. Para obter mais informações, consulte nossa [introdução à documentação de storyboards](~/ios/user-interface/storyboards/unified-storyboards.md) unificados.
+- **Usar classes de tamanho e AutoLayout** — como seu aplicativo Xamarin. Ios agora pode ser executado em um modo de tela de divisão no tamanho especificado do usuário, você não pode mais depender do dispositivo, seu tamanho de tela ou sua orientação para fazer o layout da interface do usuário. Para garantir que seu aplicativo dimensione sua interface corretamente, você precisará usar classes de tamanho e AutoLayout. Para obter mais informações, consulte nossa [introdução à documentação de storyboards unificados](~/ios/user-interface/storyboards/unified-storyboards.md) .
 - **Use recursos com eficiência** — como seu aplicativo agora pode estar compartilhando o sistema com outro aplicativo em execução, é essencial que seu aplicativo use recursos do sistema com eficiência. Quando a memória se torna esparsa, o sistema encerra automaticamente o aplicativo que está consumindo mais memória. Consulte [Guia de eficiência de energia da Apple para aplicativos Ios](https://developer.apple.com/library/prerelease/ios/documentation/Performance/Conceptual/EnergyGuide-iOS/index.html#//apple_ref/doc/uid/TP40015243) para obter mais detalhes.
 
 Para saber mais sobre como preparar seu aplicativo para o modo de exibição de divisão, consulte a documentação da Apple [adotando aprimoramentos de multitarefa no iPad](https://developer.apple.com/library/prerelease/ios/documentation/WindowsViews/Conceptual/AdoptingMultitaskingOniPad/index.html#//apple_ref/doc/uid/TP40015145) .
@@ -107,7 +107,7 @@ A imagem na imagem está disponível apenas em um iPad pro, iPad Air, iPad Air 2
 
 ## <a name="supporting-multitasking-in-your-app"></a>Suporte a multitarefas em seu aplicativo
 
-Para qualquer aplicativo Xamarin. iOS existente, o suporte para multitarefas é uma tarefa transparente, desde que seu aplicativo já siga os guias de design da Apple e as práticas recomendadas para o iOS 8. Isso significa que o aplicativo deve usar storyboards com classes de tamanho e AutoLayout para seus layouts de interface do usuário (consulte nossa [introdução aos storyboards](~/ios/user-interface/storyboards/unified-storyboards.md) unificados para obter mais informações).
+Para qualquer aplicativo Xamarin. iOS existente, o suporte para multitarefas é uma tarefa transparente, desde que seu aplicativo já siga os guias de design da Apple e as práticas recomendadas para o iOS 8. Isso significa que o aplicativo deve usar storyboards com classes de tamanho e AutoLayout para seus layouts de interface do usuário (consulte nossa [introdução aos storyboards unificados](~/ios/user-interface/storyboards/unified-storyboards.md) para obter mais informações).
 
 Para esses aplicativos, pouca ou nenhuma alteração é necessária para dar suporte a multitarefas e se comportar bem dentro dela. Se a interface do usuário do seu aplicativo foi criada usando outros métodos, como posicionar e dimensionar diretamente C# os elementos da interface do usuário no código ou se ele depender de tamanhos ou orientações de tela específicos do dispositivo, ele precisará de uma modificação significativa para dar suporte à multitarefa do IOS 9 corretamente.
 
@@ -139,7 +139,7 @@ Se o mesmo aplicativo for executado em um slide sobre o painel, ele será aprese
 
 [![](multitasking-images/sizeclasses04.png "Somente a lista apresentada quando o dispositivo é horizontal")](multitasking-images/sizeclasses04.png#lightbox)
 
-Para garantir que seu aplicativo se comporta corretamente nessas situações, você deve adotar coleções de características junto com as classes de tamanho e estar `IUIContentContainer` em `IUITraitEnvironment` conformidade com as interfaces e. Consulte a [referência de classe UITraitCollection](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UITraitCollection_ClassReference/index.html#//apple_ref/doc/uid/TP40014202) da Apple e nosso guia [introdução ao storyboards](~/ios/user-interface/storyboards/unified-storyboards.md) unificado para obter mais informações.
+Para garantir que seu aplicativo se comporta corretamente nessas situações, você deve adotar coleções de características junto com as classes de tamanho e estar `IUIContentContainer` em `IUITraitEnvironment` conformidade com as interfaces e. Consulte a [referência de classe UITraitCollection](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UITraitCollection_ClassReference/index.html#//apple_ref/doc/uid/TP40014202) da Apple e nosso guia [introdução ao storyboards unificado](~/ios/user-interface/storyboards/unified-storyboards.md) para obter mais informações.
 
 Além disso, você não pode mais contar com os limites da tela de dispositivos para definir a área visível do aplicativo. você precisará usar os limites de janela do aplicativo em vez disso. Como os limites de janela estão totalmente sob o controle do usuário, não é possível ajustá-los programaticamente ou impedir que o usuário altere esses limites.
 
@@ -216,7 +216,7 @@ Considere as seguintes ações do usuário e suas implicações:
 Para garantir que seu aplicativo esteja usando recursos com eficiência, você deve fazer o seguinte:
 
 - **Criar perfil do aplicativo com instrumentos** -Verifique se há vazamentos de memória, uso excessivo da CPU e áreas em que o aplicativo pode estar bloqueando o thread principal.
-- **Responder a métodos** de transições de estado – em sua substituição de arquivo **AppDelegate.cs** e resposta a métodos de alteração de estado, como o aplicativo entrando ou retornando do plano de fundo. Libere quaisquer ativos não necessários, como imagens, dados ou exibições e controlador de exibição.
+- **Responder a métodos de transições de estado** – em sua substituição de arquivo **AppDelegate.cs** e resposta a métodos de alteração de estado, como o aplicativo entrando ou retornando do plano de fundo. Libere quaisquer ativos não necessários, como imagens, dados ou exibições e controlador de exibição.
 - **Teste lado a lado com aplicativos com uso intensivo de memória** – execute seu aplicativo usando a exibição deslizante e divisão em hardware físico do IOS com um aplicativo com uso intensivo de memória, como mapas (no modo de exibição satélite) e teste se ambos os aplicativos permanecem responsivos e não falham.
 
 Consulte o [Guia de eficiência de energia da Apple para aplicativos Ios](https://developer.apple.com/library/prerelease/ios/documentation/Performance/Conceptual/EnergyGuide-iOS/index.html#//apple_ref/doc/uid/TP40015243) para obter mais informações sobre o gerenciamento de recursos.

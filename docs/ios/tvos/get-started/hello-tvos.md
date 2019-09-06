@@ -4,15 +4,15 @@ description: Este guia orienta a criação do seu primeiro aplicativo Xamarin. t
 ms.prod: xamarin
 ms.assetid: 6E0AFE58-A13B-492F-861E-D5D73EB1C4A3
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 02/02/2018
-ms.openlocfilehash: 59019e08c279a9910281de98fe64db798379e1a4
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 30fcf586a280688834e1ae9af61630c2611964a5
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70119159"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70281814"
 ---
 # <a name="hello-tvos-quick-start-guide"></a>Olá, tvOS Guia de Início Rápido
 
@@ -438,7 +438,7 @@ Sempre que criamos um aplicativo, podemos escolher que tipo de compilação dese
 - **Depuração** – uma compilação de depuração é compilada em um arquivo ' ' (aplicativo) com metadados extras que nos permite depurar o que está acontecendo enquanto o aplicativo está em execução.
 - **Versão** – uma compilação de versão também cria um arquivo ' ', mas não inclui informações de depuração, portanto, é menor e é executado mais rapidamente.  
 
-Você pode selecionar o tipo de compilação no seletor de **configuração** no canto superior esquerdo da tela de Visual Studio para Mac:
+Você pode selecionar o tipo de compilação no **seletor de configuração** no canto superior esquerdo da tela de Visual Studio para Mac:
 
 [![](hello-tvos-images/run01.png "Selecione o tipo de compilação")](hello-tvos-images/run01.png#lightbox)
 

@@ -4,15 +4,15 @@ description: Este artigo discute o suporte para tvOS no Xcode 9 e Xamarin. iOS 1
 ms.prod: xamarin
 ms.assetid: 0819DC93-A46B-49DC-A566-8E27CAE1B829
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 02/02/2018
-ms.openlocfilehash: 04ba792cd1381c3f0dbda63fd7e3e3cabdc978f1
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: b814fdb05b3eaba6feb47f6969519a5b99fcdad4
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68650149"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70283624"
 ---
 # <a name="installing-tvos-support-in-xamarin"></a>Instalando o suporte do tvOS no Xamarin
 

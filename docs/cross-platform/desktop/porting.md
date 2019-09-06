@@ -2,15 +2,15 @@
 ms.assetid: 814857C5-D54E-469F-97ED-EE1CAA0156BB
 title: Diretrizes de portabilidade de aplicativos para desktop
 description: Uma explicação simples de como desacoplar aplicativos Windows Forms ou WPF existentes para criar aplicativos de plataforma cruzada para serem executados no macOS, iOS, Android, bem como UWP/Windows 10.
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 04/26/2017
-ms.openlocfilehash: bdea1c472d95c86037056a2905679b43e12e0468
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 2a678c2b1880cb69b1bece85ed558309aa611a62
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70120386"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290339"
 ---
 # <a name="desktop-app-porting-guidance"></a>Diretrizes de portabilidade de aplicativos para desktop
 
@@ -28,7 +28,7 @@ Para aplicativos Windows Forms e WPF escritos com C# (ou Visual Basic.net), uma 
 
 O Visual Studio 2017 e versões posteriores dão suporte ao [.net Portability Analyzer](https://docs.microsoft.com/dotnet/articles/standard/portability-analyzer) ([download para Windows](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer)), que pode examinar seus aplicativos existentes e informar a quantidade de código que pode ser transportada "no estado em que se encontra" para outras plataformas. Você pode aprender mais sobre isso neste [vídeo do Channel 9](https://channel9.msdn.com/Blogs/Seth-Juarez/A-Brief-Look-at-the-NET-Portability-Analyzer).
 
-Também há uma ferramenta de linha de comando que pode ser baixada do analisador de [portabilidade no GitHub](https://github.com/Microsoft/dotnet-apiport) e usada para fornecer os mesmos relatórios.
+Também há uma ferramenta de linha de comando que pode ser baixada do [analisador de portabilidade no GitHub](https://github.com/Microsoft/dotnet-apiport) e usada para fornecer os mesmos relatórios.
 
 ## <a name="x-of-my-code-is-portable-what-next"></a>"x% do meu código é portátil. O que vem a seguir? "
 
