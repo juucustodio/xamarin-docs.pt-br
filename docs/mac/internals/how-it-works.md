@@ -1,30 +1,30 @@
 ---
 title: Como o Xamarin.Mac funciona
-description: Este documento descreve o funcionamento interno do xamarin. Mac. Em particular, ele examina construtores, gerenciamento de memória, à frente de compilação de tempo e o registrador.
+description: Este documento descreve o funcionamento interno do Xamarin. Mac. Em particular, ele analisa os construtores, o gerenciamento de memória, antecipadamente a compilação do tempo e o registrador.
 ms.prod: xamarin
 ms.assetid: C2053ABB-6DBF-4233-AEEA-B72FC6A81FE1
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 05/25/2017
-ms.openlocfilehash: 0635e110cb2aa7bc00234d3d06df57e0fd6f966e
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 3a2ba8f56604dcf42604c2cb653931d0397a0d82
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61033825"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70287726"
 ---
 # <a name="how-xamarinmac-works"></a>Como o Xamarin.Mac funciona
 
-Na maioria das vezes, o desenvolvedor nunca precisará se preocupar sobre o interno "mágica" do xamarin. Mac, no entanto, ter uma compreensão aproximada de como as coisas funciona nos bastidores ajudará em ambos os interpretação documentação existente com um C# lente e depuração problemas quando eles surgem.
+Na maioria das vezes, o desenvolvedor nunca precisará se preocupar com a "mágica" interna do Xamarin. Mac, no entanto, ter uma compreensão aproximada de como as coisas funcionam nos bastidores ajudará a interpretar a C# documentação existente com uma lente e uma depuração problemas quando surgem.
 
-No xamarin. Mac, um aplicativo preenche dois mundos: Não há tempo de execução com base em Objective-C que contém instâncias de classes nativas (`NSString`, `NSApplication`, etc) e não há o C# classes gerenciadas do tempo de execução que contém instâncias de (`System.String`, `HttpClient`, etc). Entre esses dois mundos, o xamarin. Mac cria uma ponte de duas maneiras para que um aplicativo pode chamar métodos (seletores) em Objective-C (como `NSApplication.Init`) e Objective-C pode chamar o aplicativo C# métodos de volta (como métodos em um representante do aplicativo). Em geral, chamadas em Objective-C são manipuladas de forma transparente por meio **P/Invokes** e algum código de tempo de execução, o Xamarin fornece.
+No Xamarin. Mac, um aplicativo se une a dois mundos: Há o tempo de execução baseado em Objective-C contendo instâncias de`NSString`classes `NSApplication`nativas (, etc.) C# e há o tempo de execução que`System.String`contém `HttpClient`instâncias de classes gerenciadas (, etc.). Entre esses dois mundos, o Xamarin. Mac cria uma ponte de duas vias para que um aplicativo possa chamar métodos (seletores) em Objective-c `NSApplication.Init`(como) e Objective-C pode chamar C# os métodos do aplicativo de volta (como métodos em um delegado de aplicativo). Em geral, as chamadas para Objective-C são manipuladas de forma transparente por meio de **P/Invokes** e um código de tempo de execução que o Xamarin oferece.
 
 <a name="exposing-classes" />
 
-## <a name="exposing-c-classes--methods-to-objective-c"></a>Expondo C# classes / métodos para Objective-C
+## <a name="exposing-c-classes--methods-to-objective-c"></a>Expondo C# classes/métodos para Objective-C
 
-No entanto, para Objective-C para o retorno de chamada em um aplicativo C# objetos, eles precisam ser expostos de forma que o Objective-C pode entender. Isso é feito por meio de `Register` e `Export` atributos. Veja o exemplo a seguir:
+No entanto, para o Objective-C chamar de volta C# para os objetos de um aplicativo, eles precisam ser expostos de uma forma que o Objective-c possa entender. Isso é feito por meio `Register` dos `Export` atributos e. Veja o exemplo a seguir:
 
 ```csharp
 [Register ("MyClass")]
@@ -42,13 +42,13 @@ public class MyClass : NSObject
 }
 ```
 
-Neste exemplo, o tempo de execução do Objective-C agora saberá sobre uma classe chamada `MyClass` com seletores chamados `init` e `run`.
+Neste exemplo, o tempo de execução do Objective-C agora saberá sobre `MyClass` uma classe chamada com `init` seletores chamados e `run`.
 
-Na maioria dos casos, isso é um detalhe de implementação que o desenvolvedor pode ignorar, pois a maioria dos retornos de chamada de um aplicativo recebe será por meio de métodos substituídos nos `base` classes (como `AppDelegate`, `Delegates`, `DataSources`) ou no  **Ações** passada para APIs. Em todos esses casos `Export` atributos não são necessários no C# código.
+Na maioria dos casos, esse é um detalhe de implementação que o desenvolvedor pode ignorar, pois a maioria dos retornos de chamada que um aplicativo recebe `base` será por meio de `AppDelegate`métodos `Delegates`substituídos em classes (como,, `DataSources`) ou em **ações** passadas para as APIs. Em todos esses casos, `Export` os atributos não são necessários no C# código.
 
-## <a name="constructor-runthrough"></a>Resumo do construtor
+## <a name="constructor-runthrough"></a>Resumo do Construtor
 
-Em muitos casos, o desenvolvedor precisa expor o aplicativo C# API de construção de classes para o tempo de execução do Objective-C para que possa ser instanciado de locais, por exemplo, quando chamado no Storyboard ou XIB arquivos. Aqui estão cinco construtores mais comuns usados em aplicativos xamarin. Mac:
+Em muitos casos, o desenvolvedor precisará expor a API de construção C# de classes do aplicativo para o tempo de execução Objective-C para que possa ser instanciada de locais como quando chamado em arquivos storyboard ou xib. Aqui estão os cinco construtores mais comuns usados em aplicativos Xamarin. Mac:
 
 ```csharp
 // Called when created from unmanaged code
@@ -81,83 +81,83 @@ public CustomView () : base (NSObjectFlag.Empty)
 }
 ```
 
-Em geral, o desenvolvedor deve deixar o `IntPtr` e `NSCoder` construtores que são gerados durante a criação de alguns tipos como personalizado `NSViews` sozinho. Se precisar de xamarin. Mac para chamar um desses construtores em resposta a uma solicitação de tempo de execução do Objective-C e removê-lo, o aplicativo falhará em código nativo e pode ser difícil descobrir exatamente o problema.
+Em geral, o desenvolvedor deve deixar os `IntPtr` construtores `NSCoder` e que são gerados ao criar alguns tipos, como somente personalizado `NSViews` . Se o Xamarin. Mac precisar chamar um desses construtores em resposta a uma solicitação de tempo de execução Objective-C e você o tiver removido, o aplicativo falhará dentro do código nativo e poderá ser difícil descobrir exatamente o problema.
 
-## <a name="memory-management-and-cycles"></a>Ciclos e gerenciamento de memória
+## <a name="memory-management-and-cycles"></a>Gerenciamento e ciclos de memória
 
-Gerenciamento de memória no xamarin. MAC é de várias maneiras muito semelhantes ao xamarin. IOS. Também é um tópico complexo, um além do escopo deste documento. Leia as [práticas recomendadas de desempenho e de memória](~/cross-platform/deploy-test/memory-perf-best-practices.md).
+O gerenciamento de memória no Xamarin. Mac é de muitas maneiras muito semelhante ao Xamarin. iOS. Ele também é um tópico complexo, um além do escopo deste documento. Leia as [práticas recomendadas de memória e desempenho](~/cross-platform/deploy-test/memory-perf-best-practices.md).
 
-## <a name="ahead-of-time-compilation"></a>À frente da compilação de tempo
+## <a name="ahead-of-time-compilation"></a>Compilação antecipada de tempo
 
-Normalmente, os aplicativos .NET não são compilados em código de máquina, quando eles são criados, em vez disso, eles são compilados para uma camada intermediária, chamada de código de IL que obtém _Just-In-Time_ (JIT) compilados para código de computador quando o aplicativo é iniciado.
+Normalmente, os aplicativos .NET não se compilam no código do computador quando são criados, em vez de serem compilados em uma camada intermediária chamada código de IL que obtém JIT ( _just-in-time_ ) compilado para código do computador quando o aplicativo é iniciado.
 
-O tempo que leva o tempo de execução mono para JIT compilar esse código de máquina pode diminuir o lançamento de um aplicativo xamarin. MAC em até 20%, pois demora para o código de máquina necessário a ser gerado.
+O tempo que demora o tempo de execução do mono para compilar JIT esse código de computador pode retardar a inicialização de um aplicativo Xamarin. Mac em até 20%, pois leva tempo para que o código de computador necessário seja gerado.
 
-Devido a limitações impostas pela Apple iOS, compilação JIT do código de IL não está disponível para xamarin. IOS. Como resultado, todos os aplicativos xamarin. IOS estão cheios _Ahead Of Time_ (AOT) compilados para código de computador durante o ciclo de build.
+Devido às limitações impostas pela Apple no iOS, a compilação JIT do código IL não está disponível para o Xamarin. iOS. Como resultado, todo o aplicativo Xamarin. iOS é compilado na AOT (vida _útil_ completa) para o código do computador durante o ciclo de compilação.
 
-Novo para xamarin. MAC é a capacidade de AOT o código de IL durante o ciclo de build do aplicativo, assim como pode fazer xamarin. IOS. Xamarin. Mac usa um _híbrida_ abordagem AOT que compila a maioria do código de máquina necessário, mas permite que o tempo de execução compilar trampolines necessários e a flexibilidade para continuar a dar suporte a Reflection. Emit (e outros usos casos Atualmente, funciona no xamarin. Mac).
+Novo no Xamarin. Mac é a capacidade de AOT o código de IL durante o ciclo de compilação do aplicativo, assim como o Xamarin. iOS pode. O Xamarin. Mac usa uma abordagem AOT _híbrida_ que compila a maioria do código de máquina necessário, mas permite que o tempo de execução compile o trampolines necessário e a flexibilidade para continuar a dar suporte a Reflection. Emit (e outros casos de uso que funcionam no momento Xamarin. Mac).
 
-Há duas áreas principais que AOT pode ajudar um aplicativo xamarin. Mac:
+Há duas áreas principais em que a AOT pode ajudar um aplicativo Xamarin. Mac:
 
-- **Melhor os logs de falha "nativo"** - em caso de falha de um aplicativo xamarin. Mac no código nativo, que é a ocorrência comum ao fazer chamadas inválidas em APIs Cocoa (como enviar um `null` em um método que não a aceita) nativo os logs com o JIT de falha os quadros são difíceis de analisar. Uma vez que os quadros JIT não tem informações de depuração, haverá várias linhas com deslocamentos hexadecimais e nenhuma pista, o que estava acontecendo. AOT gera quadros nomeados "real" e os rastreamentos são muito mais fácil de ler. Isso também significa que o aplicativo de xamarin. Mac irá interagir melhor com ferramentas nativas como **lldb** e **instrumentos**.
-- **Inicie o melhor desempenho em tempo de** - para aplicativos xamarin. Mac grandes, com um várias segundo tempo de inicialização, todo o código de compilação do JIT podem levar uma quantidade significativa de tempo. AOT faz esse trabalho antecipadamente.
+- **Melhores logs de falhas "nativos"** – se um aplicativo Xamarin. Mac falhar no código nativo, que é ocorrência comum ao fazer chamadas inválidas em APIs Cocoa (como `null` enviar um para um método que não o aceita), logs de falhas nativos com quadros JIT são difíceis de analisar. Como os quadros JIT não têm informações de depuração, haverá várias linhas com deslocamentos hexadecimais e nenhuma pista sobre o que estava acontecendo. A AOT gera quadros nomeados "reais" e os rastreamentos são muito mais fáceis de ler. Isso também significa que o aplicativo Xamarin. Mac irá interagir melhor com ferramentas nativas como **lldb** e **instrumentos**.
+- **Melhor desempenho do tempo de inicialização** -para aplicativos Xamarin. Mac grandes, com um tempo de inicialização de vários segundos, a compilação JIT de todo o código pode levar um tempo significativo. A AOT faz isso funcionar antecipadamente.
 
 ### <a name="enabling-aot-compilation"></a>Habilitando a compilação AOT
 
-AOT é habilitado no xamarin. Mac clicando duas vezes o **nome do projeto** na **Gerenciador de soluções**, a navegação para **Build do Mac** e adicionando `--aot:[options]` para o  **Argumentos mmp adicionais:** campo (onde `[options]` é uma ou mais opções para controlar o tipo AOT, consulte abaixo). Por exemplo:
+A AOT está habilitada no Xamarin. Mac clicando duas vezes **no nome do projeto** no **Gerenciador de soluções**, navegando para o Build do **Mac** e adicionando `--aot:[options]` ao campo **MMP Arguments adicionais:** (em que `[options]` é um ou mais opções para controlar o tipo de AOT, veja abaixo). Por exemplo:
 
-![Adicionando AOT a argumentos mmp adicionais](how-it-works-images/aot01.png "AOT adicionando para argumentos mmp adicionais")
+![Adicionando a AOT a argumentos MMP adicionais](how-it-works-images/aot01.png "Adicionando a AOT a argumentos MMP adicionais")
 
 > [!IMPORTANT]
-> Habilitar a AOT compilação aumenta drasticamente o tempo de compilação, às vezes, até vários minutos, mas pode melhorar os tempos de inicialização do aplicativo por uma média de 20%. Como resultado, compilação AOT deve ser habilitada apenas na **versão** compilações de um aplicativo xamarin. Mac.
+> A habilitação da compilação AOT aumenta drasticamente o tempo de compilação, às vezes, até vários minutos, mas pode melhorar os tempos de inicialização do aplicativo em uma média de 20%. Como resultado, a compilação AOT só deve ser habilitada em compilações de **versão** de um aplicativo Xamarin. Mac.
 
 ### <a name="aot-compilation-options"></a>Opções de compilação AOT
 
-Há várias opções diferentes que podem ser ajustadas ao habilitar a compilação de AOT em um aplicativo xamarin. Mac:
+Há várias opções diferentes que podem ser ajustadas ao habilitar a compilação AOT em um aplicativo Xamarin. Mac:
 
-- `none` -Sem compilação AOT. Essa é a configuração padrão.
-- `all` -AOT compila cada assembly em que o MonoBundle.
-- `core` -AOT compila as `Xamarin.Mac`, `System` e `mscorlib` assemblies.
-- `sdk` -AOT compila o `Xamarin.Mac` e assemblies de bibliotecas de classe Base (BCL).
-- `|hybrid` -Adicionar isso a uma das opções acima habilita o AOT que permite a remoção de IL híbrido, mas será resultam em mais tempos de compilação.
-- `+` – Inclui um único arquivo de compilação AOT.
-- `-` – Remove um único arquivo de compilação AOT.
+- `none`-Sem compilação AOT. Essa é a configuração padrão.
+- `all`-AOT compila cada assembly no grupo de monoconjunto.
+- `core`-AOT compila os `Xamarin.Mac` `System` assemblies e `mscorlib` .
+- `sdk`-AOT compila o e os `Xamarin.Mac` assemblies da BCL (biblioteca de classes base).
+- `|hybrid`-Adicionar isso a uma das opções acima habilita a AOT híbrida, que permite a remoção de IL, mas resultará em tempos de compilação mais longos.
+- `+`-Inclui um único arquivo para compilação AOT.
+- `-`-Remove um único arquivo da compilação AOT.
 
-Por exemplo, `--aot:all,-MyAssembly.dll` permitiria que a compilação AOT em todos os assemblies no MonoBundle _exceto_ `MyAssembly.dll` e `--aot:core|hybrid,+MyOtherAssembly.dll,-mscorlib.dll` habilitaria híbrido, código AOT incluem o `MyOtherAssembly.dll` e excluindo o `mscorlib.dll`.
+Por exemplo, `--aot:all,-MyAssembly.dll` habilitaria a compilação AOT em todos os assemblies no grupo de monopacote _, exceto_ `MyAssembly.dll` e `--aot:core|hybrid,+MyOtherAssembly.dll,-mscorlib.dll` permitiria híbrido, o código `MyOtherAssembly.dll` AOT incluiria `mscorlib.dll`e excluindo o.
 
-## <a name="partial-static-registrar"></a>Registrador estático parcial
+## <a name="partial-static-registrar"></a>Registrador parcialmente estático
 
-Ao desenvolver um aplicativo xamarin. Mac, minimizando o tempo entre a conclusão de uma alteração e testá-lo pode se tornar importante para o cumprimento de prazos de desenvolvimento. Estratégias, como a modularização de bases de código e testes de unidade podem ajudar a diminuir o tempo de compilação, pois eles reduzem o número de vezes que um aplicativo exigirá uma recompilação completa cara.
+Ao desenvolver um aplicativo Xamarin. Mac, minimizar o tempo entre a conclusão de uma alteração e o teste pode se tornar importante para atender aos prazos de desenvolvimento. Estratégias como a modularidade de bases de código e testes de unidade podem ajudar a diminuir os tempos de compilação, pois reduzem o número de vezes que um aplicativo exigirá uma recompilação completa cara.
 
-Além disso, novos para xamarin. Mac e _registrador estático parcial_ (como foi a pioneira em xamarin. IOS) pode reduzir drasticamente os tempos de inicialização de um aplicativo xamarin. MAC na **depurar** configuração. Noções básicas sobre como usar o registrador estático parcial pode ser compactado horizontalmente um quase uma melhoria de 5 vezes na inicialização de depuração levará um pouco de Conhecimento sobre o que é o registrador, qual é a diferença entre estático e dinâmico e o que faz essa versão de "static parcial".
+Além disso, e novo no Xamarin. Mac, o _registrador parcial_ (como pioneiro pelo Xamarin. Ios) pode reduzir drasticamente os tempos de inicialização de um aplicativo Xamarin. Mac na configuração de **depuração** . Entender como usar o registrador estático parcial pode ter um aperfeiçoamento quase uma melhoria de 5x na inicialização de depuração levará um pouco de fundo sobre o que o registrador é, qual é a diferença entre estático e dinâmico e o que essa versão "estática parcial" faz.
 
 ### <a name="about-the-registrar"></a>Sobre o registrador
 
-Nos bastidores do qualquer xamarin. Mac aplicativo encontra-se a estrutura do Cocoa da Apple e o tempo de execução do Objective-C. Criar uma ponte entre esse "mundo nativo" e "mundo gerenciado" do C# é a principal responsabilidade do xamarin. Mac. Parte dessa tarefa é tratada pelo registrador, que é executado dentro de `NSApplication.Init ()` método. Esse é um motivo requer que qualquer uso de APIs Cocoa no xamarin. Mac `NSApplication.Init` a ser chamado pela primeira vez.
+Nos bastidores de qualquer aplicativo Xamarin. Mac está a estrutura Cocoa da Apple e do tempo de execução do Objective-C. Criar uma ponte entre esse "mundo nativo" e o "mundo gerenciado" do C# é a principal responsabilidade do Xamarin. Mac. Parte dessa tarefa é tratada pelo registrador, que é executado dentro `NSApplication.Init ()` do método. Essa é uma razão pela qual qualquer uso de APIs Cocoa no Xamarin. Mac `NSApplication.Init` precisa ser chamado primeiro.
 
-Trabalho do registrador é informar o tempo de execução do Objective-C da existência do aplicativo C# classes que derivam de classes, como `NSApplicationDelegate`, `NSView`, `NSWindow`, e `NSObject`. Isso requer uma verificação de todos os tipos no aplicativo para determinar o que precisa registrar e quais elementos em cada tipo de relatório.
+O trabalho do registrador é informar o tempo de execução do Objective-C da existência das C# classes do aplicativo que derivam de `NSApplicationDelegate`classes `NSView`como `NSWindow`,, `NSObject`e. Isso requer uma verificação de todos os tipos no aplicativo para determinar o que precisa de registro e quais elementos em cada tipo relatar.
 
-Essa verificação pode ser feita tanto **dinamicamente**, na inicialização do aplicativo com a reflexão, ou **estaticamente**, como uma etapa de tempo de compilação. Ao escolher um tipo de registro, o desenvolvedor deve estar ciente das seguintes opções:
+Essa verificação pode ser feita **dinamicamente**, na inicialização do aplicativo com reflexão ou **estaticamente**, como uma etapa de tempo de compilação. Ao escolher um tipo de registro, o desenvolvedor deve estar ciente do seguinte:
 
-- Registro estático pode reduzir drasticamente os tempos de inicialização, mas pode significativamente mais lento tempos de compilações (double normalmente mais de tempo de compilação de depuração). Esse será o padrão para **versão** compilações de configuração.
-- Registro dinâmico atrasa a esse trabalho até que o aplicativo Iniciar e ignora a geração de código, mas esse trabalho adicional pode criar uma pausa perceptível (pelo menos dois segundos) na inicialização do aplicativo. Isso é particularmente perceptível em compilações de configuração de depuração, que assume como padrão para o registro dinâmico e cujo reflexão é mais lento.
+- O registro estático pode reduzir drasticamente os tempos de inicialização, mas pode retardar as compilações de forma significativa (normalmente mais do que o tempo de compilação de depuração dupla). Esse será o padrão para compilações de configuração de **versão** .
+- O registro dinâmico atrasa esse trabalho até que o aplicativo seja iniciado e ignore a geração de código, mas esse trabalho adicional pode criar uma pausa perceptível (pelo menos dois segundos) na inicialização do aplicativo. Isso é especialmente perceptível em compilações de configuração de depuração, que assume o padrão de registro dinâmico e cuja reflexão é mais lenta.
 
-Registro estático parcial, introduzido pela primeira vez no xamarin. IOS 8.13, oferece ao desenvolvedor o melhor de ambas as opções. Computando previamente as informações de registro de cada elemento em `Xamarin.Mac.dll` e enviar essas informações com o xamarin. MAC em uma biblioteca estática (que só precisa ser vinculado ao tempo de compilação), a Microsoft removeu a maioria do tempo reflexão da dinâmica registrador sem afetar o tempo de compilação.
+O registro estático parcial, introduzido pela primeira vez no Xamarin. iOS 8,13, oferece ao desenvolvedor o melhor das duas opções. Ao pré-testar previamente as informações de registro de cada elemento no `Xamarin.Mac.dll` e no envio dessas informações com o Xamarin. Mac em uma biblioteca estática (que só precisa ser vinculada no momento da compilação), a Microsoft removeu a maior parte do tempo de reflexão do dinâmico registrador enquanto não estiver afetando o tempo de compilação.
 
 ### <a name="enabling-the-partial-static-registrar"></a>Habilitando o registrador estático parcial
 
-O registrador estático parcial está habilitado no xamarin. Mac clicando duas vezes o **nome do projeto** na **Gerenciador de soluções**, a navegação para **Build do Mac** e adicionando `--registrar:static` para o **argumentos mmp adicionais:** campo. Por exemplo:
+O registrador de estática parcial está habilitado no Xamarin. Mac clicando duas vezes **no nome do projeto** no **Gerenciador de soluções**, navegando para o Build `--registrar:static` do **Mac** e adicionando ao campo **argumentos adicionais do MMP:** . Por exemplo:
 
-![Adicionando o registrador estático parcial a argumentos mmp adicionais](how-it-works-images/psr01.png "adicionando o registrador estático parcial a argumentos mmp adicionais")
+![Adicionando o registrador estático parcial a argumentos MMP adicionais](how-it-works-images/psr01.png "Adicionando o registrador estático parcial a argumentos MMP adicionais")
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
-Aqui estão algumas explicações mais detalhadas sobre como as coisas funcionam internamente:
+Aqui estão algumas explicações mais detalhadas de como as coisas funcionam internamente:
 
 - [Seletores de Objective-C](~/ios/internals/objective-c-selectors.md)
 - [Registrar](~/ios/internals/registrar.md)
-- [API unificada do Xamarin para iOS e OS X](~/cross-platform/macios/unified/index.md)
-- [Conceitos básicos de theading](~/ios/app-fundamentals/threading.md)
-- [Eventos, protocolos e delegados](~/ios/app-fundamentals/delegates-protocols-and-events.md)
-- [Sobre `newrefcount`](~/ios/internals/newrefcount.md)
+- [API Unificada Xamarin para iOS e OS X](~/cross-platform/macios/unified/index.md)
+- [Conceitos básicos do theading](~/ios/app-fundamentals/threading.md)
+- [Delegados, protocolos e eventos](~/ios/app-fundamentals/delegates-protocols-and-events.md)
+- [Pensar`newrefcount`](~/ios/internals/newrefcount.md)
 

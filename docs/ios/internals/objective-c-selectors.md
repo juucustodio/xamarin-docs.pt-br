@@ -1,32 +1,32 @@
 ---
-title: Seletores de Objective-C no xamarin. IOS
-description: Este documento discute como interagir com os seletores de Objective-C do c#. Ele descreve como invocar seletores e considerações técnicas que devem ser levadas em conta ao fazer isso.
+title: Seletores de Objective-C no Xamarin. iOS
+description: Este documento discute como interagir com os seletores Objective-C de C#. Ele descreve como invocar seletores e considerações técnicas que devem ser levadas em conta ao fazer isso.
 ms.prod: xamarin
 ms.assetid: A80904C4-6A89-389B-0487-057AFEB70989
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 07/12/2017
-ms.openlocfilehash: 15db59945f482728f760006095e294bc5628c8bd
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 17b845345175d80237bcfdb171461f2c763c364e
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61036329"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291848"
 ---
-# <a name="objective-c-selectors-in-xamarinios"></a>Seletores de Objective-C no xamarin. IOS
+# <a name="objective-c-selectors-in-xamarinios"></a>Seletores de Objective-C no Xamarin. iOS
 
-A linguagem do Objective-C é baseada no *seletores*. Um seletor é uma mensagem que pode ser enviada a um objeto ou uma *classe*. [Xamarin. IOS](~/ios/internals/api-design/index.md) mapas seletores para métodos de instância da instância e seletores para métodos estáticos de classes.
+A linguagem Objective-C se baseia nos *seletores*. Um seletor é uma mensagem que pode ser enviada a um objeto ou uma *classe*. O [Xamarin. Ios](~/ios/internals/api-design/index.md) mapeia seletores de instância para métodos de instância e seletores de classe para métodos estáticos.
 
-Ao contrário das funções de C normais (e, como funções de membro de C++), você não pode invocar diretamente usando um seletor [P/Invoke](https://www.mono-project.com/docs/advanced/pinvoke/) em vez disso, os seletores são enviadas para uma classe de Objective-C ou instância usando o [`objc_msgSend`](https://developer.apple.com/documentation/objectivec/1456712-objc_msgsend)
-função.
+Ao contrário das funções C normais ( C++ e como funções de membro), você não pode invocar diretamente um seletor usando [P/Invoke](https://www.mono-project.com/docs/advanced/pinvoke/) em vez disso, os seletores são enviados para uma classe ou instância Objective-C usando o[`objc_msgSend`](https://developer.apple.com/documentation/objectivec/1456712-objc_msgsend)
+funcionamento.
 
-Para obter mais informações sobre mensagens em Objective-C, dê uma olhada da Apple [trabalhando com objetos](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/WorkingwithObjects/WorkingwithObjects.html#//apple_ref/doc/uid/TP40011210-CH4-SW2) guia.
+Para obter mais informações sobre as mensagens em Objective-C, confira o guia [trabalhando com objetos](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/WorkingwithObjects/WorkingwithObjects.html#//apple_ref/doc/uid/TP40011210-CH4-SW2) da Apple.
 
 ## <a name="example"></a>Exemplo
 
-Suponha que você deseja invocar o [`sizeWithFont:forWidth:lineBreakMode:`](https://developer.apple.com/documentation/foundation/nsstring/1619914-sizewithfont)
-seletor de [ `NSString` ](https://developer.apple.com/documentation/foundation/nsstring).
+Suponha que você deseja invocar o[`sizeWithFont:forWidth:lineBreakMode:`](https://developer.apple.com/documentation/foundation/nsstring/1619914-sizewithfont)
+seletor [`NSString`](https://developer.apple.com/documentation/foundation/nsstring)ativado.
 A declaração (da documentação da Apple) é:
 
 ```objc
@@ -35,13 +35,13 @@ A declaração (da documentação da Apple) é:
 
 Essa API tem as seguintes características:
 
-- O tipo de retorno é `CGSize` para a API unificada.
-- O `font` parâmetro é um [UIFont](xref:UIKit.UIFont) (e um tipo derivado (indiretamente) de [NSObject](xref:Foundation.NSObject)e é mapeado para [System. IntPtr](xref:System.IntPtr).
-- O `width` parâmetro, uma `CGFloat`, é mapeado para `nfloat`.
-- O `lineBreakMode` parâmetro, uma [ `UILineBreakMode` ](https://developer.apple.com/documentation/uikit/uilinebreakmode?language=objc), já foi associado no xamarin. IOS como o [`UILineBreakMode`](xref:UIKit.UILineBreakMode)
+- O tipo de retorno `CGSize` é para o API unificada.
+- O `font` parâmetro é um [UIFont](xref:UIKit.UIFont) (e um tipo (indiretamente) derivado de [NSObject](xref:Foundation.NSObject)e é mapeado para [System. IntPtr](xref:System.IntPtr).
+- O `width` parâmetro `nfloat`, a, é mapeado para. `CGFloat`
+- O `lineBreakMode` parâmetro, a [`UILineBreakMode`](https://developer.apple.com/documentation/uikit/uilinebreakmode?language=objc), já foi associado ao Xamarin. Ios como o[`UILineBreakMode`](xref:UIKit.UILineBreakMode)
 Enumeração.
 
-Juntando as peças, a `objc_msgSend` deve corresponder a declaração:
+Juntando tudo isso, a `objc_msgSend` declaração deve corresponder:
 
 ```csharp
 CGSize objc_msgSend(
@@ -53,7 +53,7 @@ CGSize objc_msgSend(
 );
 ```
 
-Declará-la da seguinte maneira:
+Declare-o da seguinte maneira:
 
 ```csharp
 [DllImport (Constants.ObjectiveCLibrary, EntryPoint="objc_msgSend")]
@@ -66,7 +66,7 @@ static extern CGSize cgsize_objc_msgSend_IntPtr_float_int (
 );
 ```
 
-Para chamar esse método, use o código como o seguinte:
+Para chamar esse método, use um código como o seguinte:
 
 ```csharp
 NSString target = ...
@@ -84,7 +84,7 @@ CGSize size = cgsize_objc_msgSend_IntPtr_float_int(
 );
 ```
 
-O valor retornado foi uma estrutura que foi menor que 8 bytes de tamanho (como o mais antigo `SizeF` usado antes de alternar para as APIs unificadas), o código acima teria executado no simulador, mas com falha no dispositivo. Para chamar um seletor que retorna um valor menor que 8 bits de tamanho, declare o `objc_msgSend_stret` função:
+Se o valor retornado fosse uma estrutura com menos de 8 bytes de tamanho (como a antiga `SizeF` usada antes de alternar para as APIs unificadas), o código acima teria sido executado no simulador, mas travou no dispositivo. Para chamar um seletor que retorna um valor menor que 8 bits, declare a `objc_msgSend_stret` função:
 
 ```csharp
 [DllImport (MonoTouch.Constants.ObjectiveCLibrary, EntryPoint="objc_msgSend_stret")]
@@ -98,7 +98,7 @@ static extern void cgsize_objc_msgSend_stret_IntPtr_float_int (
 );
 ```
 
-Para chamar esse método, use o código como o seguinte:
+Para chamar esse método, use um código como o seguinte:
 
 ```csharp
 NSString      target = ...
@@ -127,46 +127,46 @@ else
     );
 ```
 
-## <a name="invoking-a-selector"></a>Invocar um seletor
+## <a name="invoking-a-selector"></a>Invocando um seletor
 
 Invocar um seletor tem três etapas:
 
-1. Obtenha o destino do seletor.
-2. Obtenha o nome do seletor.
-3. Chamar `objc_msgSend` com os argumentos apropriados.
+1. Obter o destino do seletor.
+2. Obter o nome do seletor.
+3. Chame `objc_msgSend` com os argumentos apropriados.
 
 ### <a name="selector-targets"></a>Destinos do seletor
 
-Um destino do seletor é uma instância do objeto ou uma classe de Objective-C. Se o destino é uma instância e veio de um tipo associado do xamarin. IOS, use o [ `ObjCRuntime.INativeObject.Handle` ](xref:ObjCRuntime.INativeObject.Handle) propriedade.
+Um destino de seletor é uma instância de objeto ou uma classe Objective-C. Se o destino for uma instância e vier de um tipo Xamarin. Ios associado, use a [`ObjCRuntime.INativeObject.Handle`](xref:ObjCRuntime.INativeObject.Handle) propriedade.
 
-Se o destino é uma classe, use [ `ObjCRuntime.Class` ](xref:ObjCRuntime.Class) para obter uma referência à instância de classe, em seguida, use o [ `Class.Handle` ](xref:ObjCRuntime.Class.Handle) propriedade.
+Se o destino for uma classe, use [`ObjCRuntime.Class`](xref:ObjCRuntime.Class) para obter uma referência à instância de classe e, em seguida [`Class.Handle`](xref:ObjCRuntime.Class.Handle) , use a propriedade.
 
-### <a name="selector-names"></a>Nomes do seletor
+### <a name="selector-names"></a>Nomes de seletor
 
-Nomes de seletor são listados na documentação da Apple. Por exemplo, [ `NSString` ](https://developer.apple.com/documentation/foundation/nsstring?language=objc) inclui [ `sizeWithFont:` ](https://developer.apple.com/documentation/foundation/nsstring/1619917-sizewithfont?language=objc) e [ `sizeWithFont:forWidth:lineBreakMode:` ](https://developer.apple.com/documentation/foundation/nsstring/1619914-sizewithfont?language=objc) seletores. Os dois-pontos à direita e inseridos são parte do nome do seletor e não podem ser omitidos.
+Os nomes de seletor são listados na documentação da Apple. Por exemplo, [`NSString`](https://developer.apple.com/documentation/foundation/nsstring?language=objc) inclui [`sizeWithFont:`](https://developer.apple.com/documentation/foundation/nsstring/1619917-sizewithfont?language=objc) e [`sizeWithFont:forWidth:lineBreakMode:`](https://developer.apple.com/documentation/foundation/nsstring/1619914-sizewithfont?language=objc) seletores. Os dois-pontos inseridos e finais fazem parte do nome do seletor e não podem ser omitidos.
 
-Quando você tiver um nome de seletor, você pode criar uma [ `ObjCRuntime.Selector` ](xref:ObjCRuntime.Selector) instância para ele.
+Quando você tiver um nome de seletor, poderá criar [`ObjCRuntime.Selector`](xref:ObjCRuntime.Selector) uma instância para ele.
 
-### <a name="calling-objcmsgsend"></a>Chamar objc_msgSend
+### <a name="calling-objc_msgsend"></a>Chamando objc_msgSend
 
-`objc_msgSend` envia uma mensagem (seletor) para um objeto. Essa família de funções leva pelo menos dois argumentos necessários: o destino do seletor (uma instância ou classe manipular), o seletor de si mesmo e quaisquer argumentos necessários para o seletor. Os argumentos de instância e o seletor devem ser `System.IntPtr`, e todos os argumentos restantes devem corresponder ao tipo que o seletor de espera, por exemplo uma `nint` para um `int`, ou uma `System.IntPtr` para todos os `NSObject`-tipos derivados. Use o [`NSObject.Handle`](xref:Foundation.NSObject.Handle)
-propriedade para obter um `IntPtr` para uma instância do tipo Objective-C.
+`objc_msgSend`envia uma mensagem (seletor) para um objeto. Essa família de funções usa pelo menos dois argumentos obrigatórios: o destino do seletor (uma instância ou um identificador de classe), o próprio seletor e todos os argumentos necessários para o seletor. Os argumentos de instância e seletor `System.IntPtr`devem ser, e todos os argumentos restantes devem corresponder ao tipo que o seletor `nint` espera, por exemplo, `System.IntPtr` um para `NSObject`um `int`ou um para todos os tipos derivados. Use o[`NSObject.Handle`](xref:Foundation.NSObject.Handle)
+Propriedade para obter um `IntPtr` para uma instância do tipo Objective-C.
 
-Há mais de um `objc_msgSend` função:
+Há mais de uma `objc_msgSend` função:
 
-- Use [ `objc_msgSend_stret` ](https://developer.apple.com/documentation/objectivec/1456730-objc_msgsend_stret?language=objc) para seletores que retornam um struct. No ARM, isso inclui o retorno de todos os tipos que não é uma enumeração ou qualquer um dos tipos internos C (`char`, `short`, `int`, `long`, `float`, `double`). Em x86 (o simulador), esse método precisa ser usado para todas as estruturas maiores que 8 bytes de tamanho (`CGSize` é de 8 bytes e não usar `objc_msgSend_stret` no simulador). 
-- Use [ `objc_msgSend_fpret` ](https://developer.apple.com/documentation/objectivec/1456697-objc_msgsend_fpret?language=objc) para valor de ponto de seletores que retornam flutuante em x86 somente. Essa função não precisa ser usado no ARM; em vez disso, use `objc_msgSend`. 
-- A principal [objc_msgSend](https://developer.apple.com/documentation/objectivec/1456712-objc_msgsend) função é usada para todos os outros seletores.
+- Use [`objc_msgSend_stret`](https://developer.apple.com/documentation/objectivec/1456730-objc_msgsend_stret?language=objc) para seletores que retornam uma struct. No ARM, isso inclui todos os tipos de retorno que não são uma enumeração ou qualquer um dos tipos internos de C`char`( `short` `int`, `long` `float`,,, `double`,). No x86 (o simulador), esse método precisa ser usado para todas as estruturas com mais de 8 bytes de`CGSize` tamanho (é de 8 bytes `objc_msgSend_stret` e não é usado no simulador). 
+- Use [`objc_msgSend_fpret`](https://developer.apple.com/documentation/objectivec/1456697-objc_msgsend_fpret?language=objc) para seletores que retornam um valor de ponto flutuante somente em x86. Esta função não precisa ser usada no ARM; em vez disso `objc_msgSend`, use. 
+- A função principal [objc_msgSend](https://developer.apple.com/documentation/objectivec/1456712-objc_msgsend) é usada para todos os outros seletores.
 
-Depois de decidir qual `objc_msgSend` funções, você precisará chamar (dispositivo e simulador podem exigir um método diferente), você pode usar um normal [ `[DllImport]` ](xref:System.Runtime.InteropServices.DllImportAttribute) método declarar a função para invocação posterior.
+Depois de decidir quais `objc_msgSend` funções você precisa chamar (o simulador e o dispositivo podem exigir um método diferente), você pode usar um método normal [`[DllImport]`](xref:System.Runtime.InteropServices.DllImportAttribute) para declarar a função para invocação posterior.
 
-Um conjunto de pré-criado `objc_msgSend` declarações podem ser encontradas no `ObjCRuntime.Messaging`.
+Um conjunto de `objc_msgSend` declarações predefinidas pode ser encontrado em `ObjCRuntime.Messaging`.
 
-## <a name="different-invocations-on-simulator-and-device"></a>Invocações diferentes no simulador e dispositivo
+## <a name="different-invocations-on-simulator-and-device"></a>Invocações diferentes no simulador e no dispositivo
 
-Conforme descrito acima, Objective-C tem três tipos de `objc_msgSend` métodos: um para invocações regulares, uma para invocações que retornam valores de ponto flutuante (somente x86) e outro para invocações que retornam valores de struct. O último inclui o sufixo `_stret` em `ObjCRuntime.Messaging`.
+Conforme descrito acima, o Objective-C tem três `objc_msgSend` tipos de métodos: um para invocações regulares, um para invocações que retornam valores de ponto flutuante (somente x86) e outro para invocações que retornam valores de struct. O último inclui o sufixo `_stret` em `ObjCRuntime.Messaging`.
 
-Se você estiver chamando um método que irá retornar determinadas estruturas (regras descritas abaixo), você deve chamar o método com o valor retornado como o primeiro parâmetro como um `out` valor:
+Se você estiver invocando um método que retornará determinadas estruturas (regras descritas abaixo), você deverá invocar o método com o valor de retorno como o primeiro parâmetro como `out` um valor:
 
 ```csharp
 // The following returns a PointF structure:
@@ -174,8 +174,8 @@ PointF ret;
 Messaging.PointF_objc_msgSend_stret_PointF_IntPtr (out ret, this.Handle, selConvertPointFromWindow.Handle, point, window.Handle);
 ```
 
-A regra para quando usar o `_stret_` método difere em x86 e ARM.
-Se você quiser que suas ligações para trabalhar no simulador e no dispositivo, adicione o código como o seguinte:
+A regra para quando usar o `_stret_` método difere no x86 e no ARM.
+Se você quiser que suas associações funcionem no simulador e no dispositivo, adicione um código como o seguinte:
 
 ```csharp
 if (Runtime.Arch == Arch.DEVICE)
@@ -190,18 +190,18 @@ else
 }
 ```
 
-### <a name="using-the-objcmsgsendstret-method"></a>Usando o método objc_msgSend_stret
+### <a name="using-the-objc_msgsend_stret-method"></a>Usando o método objc_msgSend_stret
 
-Ao compilar para ARM, use o [`objc_msgSend_stret`](https://developer.apple.com/documentation/objectivec/1456730-objc_msgsend_stret?language=objc)
-para qualquer tipo de valor que não é uma enumeração ou qualquer um dos tipos de base para uma enumeração (`int`, `byte`, `short`, `long`, `double`, `float`).
+Ao compilar para ARM, use o[`objc_msgSend_stret`](https://developer.apple.com/documentation/objectivec/1456730-objc_msgsend_stret?language=objc)
+para qualquer tipo de valor que não seja uma enumeração ou qualquer um dos tipos base para uma enumeração`int`( `byte`, `short`, `long` `double`,, `float`,).
 
-Ao compilar para x86, use [`objc_msgSend_stret`](https://developer.apple.com/documentation/objectivec/1456730-objc_msgsend_stret?language=objc)
-para qualquer tipo de valor que não é uma enumeração ou qualquer um dos tipos de base para uma enumeração (`int`, `byte`, `short`, `long`, `double`, `float`) e cujo tamanho nativo é maior que 8 bytes.
+Ao compilar para x86, use[`objc_msgSend_stret`](https://developer.apple.com/documentation/objectivec/1456730-objc_msgsend_stret?language=objc)
+para qualquer tipo de valor que não seja uma enumeração ou qualquer um dos tipos base para uma enumeração`int`( `byte`, `short`, `long` `double`,, `float`,) e cujo tamanho nativo seja maior que 8 bytes.
 
 ### <a name="creating-your-own-signatures"></a>Criando suas próprias assinaturas
 
-O seguinte [gist](https://gist.github.com/rolfbjarne/981b778a99425a6e630c) pode ser usado para criar suas próprias assinaturas, se necessário.
+O seguinte [deve](https://gist.github.com/rolfbjarne/981b778a99425a6e630c) ser usado para criar suas próprias assinaturas, se necessário.
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Seletores de Objective-C](https://developer.xamarin.com/samples/mac-ios/Objective-C/) exemplo
+- Exemplo [de seletores de Objective-C](https://developer.xamarin.com/samples/mac-ios/Objective-C/)

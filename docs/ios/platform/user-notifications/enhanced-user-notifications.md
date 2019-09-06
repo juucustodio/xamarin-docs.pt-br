@@ -4,15 +4,15 @@ description: Este artigo descreve a estrutura de notificações do usuário intr
 ms.prod: xamarin
 ms.assetid: 4E1FF652-28F0-4566-B383-9D12664401A4
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 05/02/2017
-ms.openlocfilehash: ccb10829f10ddd76fe7402143d66a32949daccc1
-ms.sourcegitcommit: 41a029c69925e3a9d2de883751ebfd649e8747cd
+ms.openlocfilehash: adabf66e008dc2f49d7787d62ebad8aadf263ac7
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68980797"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290580"
 ---
 # <a name="enhanced-user-notifications-in-xamarinios"></a>Notificações de usuário aprimoradas no Xamarin. iOS
 
@@ -77,7 +77,7 @@ Alguns exemplos de notificações remotas incluem:
 
 Há dois tipos de notificações remotas disponíveis para um aplicativo iOS:
 
-- Voltado para o **usuário** -eles são exibidos para o usuário no dispositivo.
+- **Voltado** para o usuário-eles são exibidos para o usuário no dispositivo.
 - **Atualizações silenciosas** -fornecem um mecanismo para atualizar o conteúdo de um aplicativo Ios em segundo plano. Quando uma atualização silenciosa é recebida, o aplicativo pode entrar em contato com os servidores remotos para extrair o conteúdo mais recente.
 
 Para obter mais informações, consulte a documentação do [Guia de programação de notificação local e remota](https://developer.apple.com/documentation/usernotifications) da Apple.
@@ -113,7 +113,7 @@ A nova estrutura de notificação de usuário fornece uma API de notificação u
 - **tvOS** -adiciona a capacidade de crachá de ícones de aplicativos para notificações locais e remotas.
 - **watchOS** -adiciona a capacidade de encaminhar notificações do dispositivo IOS emparelhado do usuário para seus Apple Watch e dá aos aplicativos de inspeção a capacidade de fazer notificações locais diretamente no próprio relógio.
 
-Para obter mais informações, consulte a [referência da estrutura](https://developer.apple.com/reference/usernotifications) usernotifications da Apple e a documentação do [UserNotificationsUI](https://developer.apple.com/reference/usernotificationsui) .
+Para obter mais informações, consulte a [referência da estrutura Usernotifications](https://developer.apple.com/reference/usernotifications) da Apple e a documentação do [UserNotificationsUI](https://developer.apple.com/reference/usernotificationsui) .
 
 ## <a name="preparing-for-notification-delivery"></a>Preparando para entrega de notificação
 
@@ -210,7 +210,7 @@ Com o aplicativo totalmente registrado e as permissões necessárias solicitadas
 
 ### <a name="providing-notification-content"></a>Fornecendo conteúdo de notificação
 
-Novo no iOS 10, todas as notificações contêm um **título** e um subtítulo que serão sempre exibidos com o **corpo** do conteúdo da notificação. Além disso, o é a capacidade de adicionar **anexos de mídia** ao conteúdo da notificação.
+Novo no iOS 10, todas as notificações contêm um **título** e um **subtítulo** que serão sempre exibidos com o **corpo** do conteúdo da notificação. Além disso, o é a capacidade de adicionar **anexos de mídia** ao conteúdo da notificação.
 
 Para criar o conteúdo de uma notificação local, use o seguinte código:
 
@@ -537,7 +537,7 @@ Para implementar uma extensão de serviço em um aplicativo Xamarin. iOS, faça 
 
 1. Abra a solução do aplicativo no Visual Studio para Mac.
 2. Clique com o botão direito do mouse no nome da solução na **painel de soluções** e selecione **Adicionar** > **Adicionar novo projeto**.
-3.  > Selecione extensões do**serviço de notificação** extensões do **Ios** > e clique no botão **Avançar** : 
+3. Selecione**extensões do** > **serviço de notificação** extensões do **Ios** > e clique no botão **Avançar** : 
 
     [![](enhanced-user-notifications-images/extension02.png "Selecionar extensões do serviço de notificação")](enhanced-user-notifications-images/extension02.png#lightbox)
 4. Insira um **nome** para a extensão e clique no botão **Avançar** : 

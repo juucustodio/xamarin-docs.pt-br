@@ -5,15 +5,15 @@ ms.prod: xamarin
 ms.assetid: 3DEB3D43-3E4A-4099-8331-93C1E7A77095
 ms.technology: xamarin-ios
 ms.custom: xamu-video
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: dbc0802b39e8fa736ec3b71dc23f488d08fd8a42
-ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
+ms.openlocfilehash: 5995ba06873b2fb5f75c593fbc7136806e50d982
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69621088"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290599"
 ---
 # <a name="ios-extensions-in-xamarinios"></a>extensões do iOS no Xamarin. iOS
 
@@ -69,13 +69,13 @@ Uma extensão pode ser tão simples quanto uma única [UIViewController](xref:UI
 
 Se eles escolherem uma das extensões do seu aplicativo, `UIViewController` ele será instanciado e iniciará o ciclo de vida do controlador de exibição normal. No entanto, ao contrário de um aplicativo normal, que são suspensos, mas que não são geralmente encerrados quando o usuário termina de interagir com eles, as extensões são carregadas, executadas e encerradas repetidamente.
 
-As extensões podem se comunicar com seus aplicativos host por meio de um objeto [NSExtensionContext](xref:Foundation.NSExtensionContext) . Algumas extensões têm operações que recebem retornos de chamada assíncronos com os resultados. Esses retornos de chamada serão executados em threads em segundo plano e a extensão deverá levar isso em consideração; por exemplo, usando [NSObject. InvokeOnMainThread](xref:Foundation.NSObject.InvokeOnMainThread*) se desejar atualizar a interface do usuário. Consulte a seção comunicando- [se com o aplicativo host](#communicating-with-the-host-app) abaixo para obter mais detalhes.
+As extensões podem se comunicar com seus aplicativos host por meio de um objeto [NSExtensionContext](xref:Foundation.NSExtensionContext) . Algumas extensões têm operações que recebem retornos de chamada assíncronos com os resultados. Esses retornos de chamada serão executados em threads em segundo plano e a extensão deverá levar isso em consideração; por exemplo, usando [NSObject. InvokeOnMainThread](xref:Foundation.NSObject.InvokeOnMainThread*) se desejar atualizar a interface do usuário. Consulte a seção [comunicando-se com o aplicativo host](#communicating-with-the-host-app) abaixo para obter mais detalhes.
 
-Por padrão, as extensões e seus aplicativos de contêiner não podem se comunicar, apesar de serem instalados juntos. Em alguns casos, o aplicativo de contêiner é essencialmente um contêiner de "envio" vazio cuja finalidade é servida quando a extensão é instalada. No entanto, se as circunstâncias ditarem, o aplicativo de contêiner e a extensão poderão compartilhar recursos de uma área comum. Além disso, uma **extensão de hoje** pode solicitar que seu aplicativo de contêiner abra uma URL. Esse comportamento é mostrado no [widget contagem](https://github.com/xamarin/ios-samples/tree/master/intro-to-extensions)regressiva de eventos.
+Por padrão, as extensões e seus aplicativos de contêiner não podem se comunicar, apesar de serem instalados juntos. Em alguns casos, o aplicativo de contêiner é essencialmente um contêiner de "envio" vazio cuja finalidade é servida quando a extensão é instalada. No entanto, se as circunstâncias ditarem, o aplicativo de contêiner e a extensão poderão compartilhar recursos de uma área comum. Além disso, uma **extensão de hoje** pode solicitar que seu aplicativo de contêiner abra uma URL. Esse comportamento é mostrado no [widget contagem regressiva de eventos](https://github.com/xamarin/ios-samples/tree/master/intro-to-extensions).
 
 ## <a name="creating-an-extension"></a>Criando uma extensão
 
-As extensões (e seus aplicativos de contêiner) devem ser binários de 64 bits e criados usando as [APIs](~/cross-platform/macios/unified/index.md)unificadas do Xamarin. Ios. Ao desenvolver uma extensão, suas soluções conterão pelo menos dois projetos: o aplicativo de contêiner e um projeto para cada extensão que o contêiner fornece.
+As extensões (e seus aplicativos de contêiner) devem ser binários de 64 bits e criados usando as [APIs unificadas](~/cross-platform/macios/unified/index.md)do Xamarin. Ios. Ao desenvolver uma extensão, suas soluções conterão pelo menos dois projetos: o aplicativo de contêiner e um projeto para cada extensão que o contêiner fornece.
 
 ### <a name="container-app-project-requirements"></a>Requisitos de projeto de aplicativo de contêiner
 
@@ -93,7 +93,7 @@ Além disso, o projeto da extensão tem os seguintes requisitos:
 
   ![](extensions-images/bundleidentifiers.png) 
 - Ele deve definir a chave `NSExtensionPointIdentifier`, com um valor apropriado (por `com.apple.widget-extension` exemplo, para um widget da central de notificações **atual** ) `Info.plist` , em seu arquivo.
-- Ele também deve definir a `NSExtensionMainStoryboard` chave ou a `NSExtensionPrincipalClass` chave em seu `Info.plist` arquivo com um valor apropriado:
+- Ele também `NSExtensionMainStoryboard` deve definir *a chave ou a* `NSExtensionPrincipalClass` chave em seu `Info.plist` arquivo com um valor apropriado:
   - Use a `NSExtensionMainStoryboard` chave para especificar o nome do Storyboard que apresenta a interface do usuário principal para a extensão ( `.storyboard`menos). Por exemplo, `Main` para o `Main.storyboard` arquivo.
   - Use a `NSExtensionPrincipalClass` chave para especificar a classe que será inicializada quando a extensão for iniciada. O valor deve corresponder ao valor de **registro** de `UIViewController`seu: 
 

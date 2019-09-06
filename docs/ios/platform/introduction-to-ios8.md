@@ -4,15 +4,15 @@ description: Com o iOS 8, a Apple forneceu uma infinidade de novas estruturas e 
 ms.prod: xamarin
 ms.assetid: 33AD66C0-3743-49FE-9DCE-88ED3A16BA63
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 06/14/2017
-ms.openlocfilehash: 592eff29e7c12741975dda0d602f5850071c1f45
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 1b3c1af480db2c5642ef0b16aed795d2bb43290f
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68644809"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292401"
 ---
 # <a name="introduction-to-ios-8"></a>Introdução ao iOS 8
 
@@ -77,7 +77,7 @@ A caixa de diálogo novo projeto fornece sete novos modelos de projeto para a cr
 - **Ação** – permite que os desenvolvedores criem botões de ação personalizados exclusivos, permitindo que os usuários executem determinadas tarefas
 - **Teclado personalizado** – isso permite que os desenvolvedores adicionem à variedade de placas inseridas da Apple adicionando seu próprio personalizado. O teclado popular, Swype usa isso para trazer o teclado para o iOS.
 - **Seletor de documento** – contém um controlador de exibição de seletor de documento que permite aos usuários acessar arquivos fora da área restrita do aplicativo.
-- **Provedor de arquivos** do seletor de documento – fornece armazenamento seguro para arquivos usando o seletor de documento.
+- **Provedor de arquivos do seletor de documento** – fornece armazenamento seguro para arquivos usando o seletor de documento.
 - **Edição de fotos** – isso se expande sobre os filtros e as ferramentas de edição já fornecidos pela Apple no aplicativo de fotos para dar aos usuários mais opções de controle e mais informações ao editar suas fotos.
 - **Hoje** , isso oferece aos aplicativos a capacidade de exibir widgets na seção atual do centro de notificações.
 
@@ -93,7 +93,7 @@ Em primeiro lugar, ele ajuda os serviços de conjunto de chaves existentes por m
 
 Em segundo lugar, o LocalAuthentication fornece dois métodos para autenticar seu aplicativo localmente. Os desenvolvedores devem `CanEvaluatePolicy` usar o para determinar se o dispositivo é capaz de aceitar a ID de `EvaluatePolicy` toque e, em seguida, iniciar a operação de autenticação.
 
-Para obter mais informações sobre o Touch ID e saber como integrá-lo a um aplicativo Xamarin. iOS, consulte a [introdução aos](~/ios/platform/touchid.md) guias touchid.
+Para obter mais informações sobre o Touch ID e saber como integrá-lo a um aplicativo Xamarin. iOS, consulte a [introdução aos guias touchid](~/ios/platform/touchid.md) .
 
 ### <a name="document-picker"></a>Seletor de documentos
 
@@ -123,7 +123,7 @@ Se os dois conceitos forem usados juntos, o resultado será uma grade 2 x 2 que 
 
 ![](introduction-to-ios8-images/image3.png "Um diagrama que representa a grade 2 x 2 que define os diferentes tamanhos possíveis que podem ser usados nas orientações diferentes")
  
-Para obter mais informações sobre classes de tamanho, consulte a [introdução aos storyboards](~/ios/user-interface/storyboards/unified-storyboards.md)unificados.
+Para obter mais informações sobre classes de tamanho, consulte a [introdução aos storyboards unificados](~/ios/user-interface/storyboards/unified-storyboards.md).
 
 ## <a name="photo-kit"></a>Kit de fotos
 O Photo kit é uma nova estrutura que permite que os aplicativos consultem a biblioteca de imagens do sistema e criem interfaces de usuário personalizadas para exibir e modificar seu conteúdo. Ele inclui várias classes que representam ativos de imagem e vídeo, bem como coleções de ativos, como álbuns e pastas.
@@ -157,7 +157,7 @@ Além das principais alterações no iOS 8 descritas acima, a Apple também atua
 Com todos os aprimoramentos feitos no iOS 8, várias APIs foram preteridas. Alguns deles são detalhados abaixo.
 
 - **[UIApplication](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIApplication_Class/index.html#//apple_ref/occ/cl/UIApplication)** – os métodos e as propriedades usados para registrar notificações remotas foram preteridos. Esses são registerForRemoteNotificationTypes e enabledRemoteNotificationTypes.
-- **[UIViewController](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIViewController_Class/index.html#//apple_ref/occ/cl/UIViewController)** – as classes de características e de tamanho substituiram os métodos e as propriedades usados para descrever a orientação da interface. Consulte a [introdução aos storyboards](~/ios/user-interface/storyboards/unified-storyboards.md) unificados para obter mais informações sobre como usá-los.
+- **[UIViewController](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIViewController_Class/index.html#//apple_ref/occ/cl/UIViewController)** – as classes de características e de tamanho substituiram os métodos e as propriedades usados para descrever a orientação da interface. Consulte a [introdução aos storyboards unificados](~/ios/user-interface/storyboards/unified-storyboards.md) para obter mais informações sobre como usá-los.
 
 - **[UISearchDisplayController](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UISearchDisplayController_Class/index.html#//apple_ref/occ/cl/UISearchDisplayController)** – isso foi substituído por UISearchController no iOS8.
 

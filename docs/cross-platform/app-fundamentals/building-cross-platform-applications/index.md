@@ -3,15 +3,15 @@ title: Compilando aplicativos multiplataforma
 description: Esta seção aborda, em um resumo, mais seis partes, como criar aplicativos usando a plataforma de desenvolvimento do Xamarin – desde entender como o Xamarin funciona para criar aplicativos móveis e, em seguida, testar e implantar em várias lojas de aplicativos.
 ms.prod: xamarin
 ms.assetid: 442FC40A-84DD-A218-0D15-EAD86594B6D7
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 01/28/2016
-ms.openlocfilehash: 4485f25ac2f81747132ccd92d73c52118f70e545
-ms.sourcegitcommit: f255aa286bd52e8a80ffa620c2e93c97f069f8ec
+ms.openlocfilehash: 2c630e58ff5a1221ec9e95099df4781041ecf2b4
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68680923"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70288050"
 ---
 # <a name="building-cross-platform-applications"></a>Compilando aplicativos multiplataforma
 

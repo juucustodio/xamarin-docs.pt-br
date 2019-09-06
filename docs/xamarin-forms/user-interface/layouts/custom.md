@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/29/2017
-ms.openlocfilehash: d6bcecd27e0380221febc34f787f71d20e0fcaf9
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 0828d780ed075a6e3b18ba5020f5908fb8c06189
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69526958"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292583"
 ---
 # <a name="create-a-custom-layout-in-xamarinforms"></a>Criar um layout personalizado no Xamarin. Forms
 
-[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-customlayout-wraplayout)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-customlayout-wraplayout)
 
 _Xamarin. Forms define quatro classes de layout – StackLayout, AbsoluteLayout, RelativeLayout e grade, e cada organiza seus filhos de uma maneira diferente. No entanto, às vezes, é necessário para organizar o conteúdo da página usando um layout que não são fornecido pelo xamarin. Forms. Este artigo explica como escrever uma classe de layout personalizado e demonstra uma classe de WrapLayout sensíveis à orientação que organiza seus filhos horizontalmente pela página e, em seguida, ajusta a exibição dos filhos subsequentes em linhas adicionais._
 
@@ -74,8 +74,8 @@ O processo para criar um layout personalizado é da seguinte maneira:
 1. Substituir a [ `OnMeasure` ](xref:Xamarin.Forms.VisualElement.OnMeasure(System.Double,System.Double)) método para invocar o [ `Measure` ](xref:Xamarin.Forms.VisualElement.Measure(System.Double,System.Double,Xamarin.Forms.MeasureFlags)) método em todo o layout filhos e retornar um tamanho solicitado para o layout. Para obter mais informações, consulte [substituindo o método OnMeasure](#onmeasure).
 1. Substituir o [ `LayoutChildren` ](xref:Xamarin.Forms.Layout.LayoutChildren(System.Double,System.Double,System.Double,System.Double)) método para invocar o [ `Layout` ](xref:Xamarin.Forms.VisualElement.Layout(Xamarin.Forms.Rectangle)) filhos do todos os o layout método. Falha ao invocar o [ `Layout` ](xref:Xamarin.Forms.VisualElement.Layout(Xamarin.Forms.Rectangle)) método em cada filho em um layout resultará na filho nunca receber um tamanho correto ou posição e, portanto, o filho não se tornará visível na página. Para obter mais informações, consulte [substituindo o método LayoutChildren](#layoutchildren).
 
-  > [!NOTE]
->  Ao enumerar os filhos na [ `OnMeasure` ](xref:Xamarin.Forms.VisualElement.OnMeasure(System.Double,System.Double)) e [ `LayoutChildren` ](xref:Xamarin.Forms.Layout.LayoutChildren(System.Double,System.Double,System.Double,System.Double)) substituições, ignore qualquer filho cujo [ `IsVisible` ](xref:Xamarin.Forms.VisualElement.IsVisible) estiver definida como `false`. Isso garantirá que o layout personalizado não deixar espaço para os filhos invisíveis.
+    > [!NOTE]
+    > Ao enumerar os filhos na [ `OnMeasure` ](xref:Xamarin.Forms.VisualElement.OnMeasure(System.Double,System.Double)) e [ `LayoutChildren` ](xref:Xamarin.Forms.Layout.LayoutChildren(System.Double,System.Double,System.Double,System.Double)) substituições, ignore qualquer filho cujo [ `IsVisible` ](xref:Xamarin.Forms.VisualElement.IsVisible) estiver definida como `false`. Isso garantirá que o layout personalizado não deixar espaço para os filhos invisíveis.
 
 1. [*opcional*] substituir a [ `InvalidateLayout` ](xref:Xamarin.Forms.Layout.InvalidateLayout) método a ser notificado quando os filhos são adicionados ou removidos do layout. Para obter mais informações, consulte [substituindo o método InvalidateLayout](#invalidatelayout).
 1. [*opcional*] substituir a [ `OnChildMeasureInvalidated` ](xref:Xamarin.Forms.Layout.OnChildMeasureInvalidated) método a ser notificado quando um dos filhos do layout muda de tamanho. Para obter mais informações, consulte [substituindo o método OnChildMeasureInvalidated](#onchildmeasureinvalidated).

@@ -4,15 +4,15 @@ description: Esta seção aborda os tópicos usados para testar um aplicativo, b
 ms.prod: xamarin
 ms.assetid: DA4B4BD7-DC09-4F61-BC07-36727AF52BA2
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: 7e5c15e8f23082060e85f400ee4eef304a34a43a
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 12a2acf3310a9df7ef7856dbf2ff8e17241b029e
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68649078"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70279407"
 ---
 # <a name="deploying-and-testing-tvos-apps-in-xamarin"></a>Implantando e testando aplicativos tvOS no Xamarin
 

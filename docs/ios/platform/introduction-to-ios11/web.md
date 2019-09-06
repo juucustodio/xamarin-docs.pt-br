@@ -1,50 +1,50 @@
 ---
-title: Alterações WebKit e Safari no iOS 11
-description: Este documento aborda as alterações feitas em WebKit e a estrutura de serviços do Safari no iOS 11. Ele descreve como trabalhar com atualizações em ter o SFSafariViewController e novos recursos no WKWebView de definição de estilo.
+title: O WebKit e o Safari são alterados no iOS 11
+description: Este documento discute as alterações feitas no WebKit e na estrutura de serviços do Safari no iOS 11. Ele descreve como trabalhar com atualizações de estilo em SFSafariViewController e novos recursos no WKWebView.
 ms.prod: xamarin
 ms.assetid: C74B2E94-177C-43D4-8D6C-9B528773C120
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 09/12/2017
-ms.openlocfilehash: 5ced73b1f3f5b8207ae1258dcb01a78c94df217d
-ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
+ms.openlocfilehash: b90673559d0b8a3728898b7d8dbc3207bb22520b
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67268922"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70280076"
 ---
-# <a name="webkit-and-safari-changes-in-ios-11"></a>Alterações WebKit e Safari no iOS 11
+# <a name="webkit-and-safari-changes-in-ios-11"></a>O WebKit e o Safari são alterados no iOS 11
 
-iOS 11 introduz uma nova versão do navegador da web Safari – Safari 11.0 – que inclui alterações WebKit e SafariServices. Este guia explora essas alterações.
+o iOS 11 apresenta uma nova versão do navegador da Web do safari – Safari 11,0 – que inclui alterações em WebKit e Safariservices. Este guia explora essas alterações.
 
-## <a name="safariservices"></a>SafariServices
+## <a name="safariservices"></a>Safariservices
 
-`SFSafariViewController` foi introduzido no iOS 9 como uma opção para exibir o conteúdo da web ou autenticação de usuários do seu aplicativo. Obter mais informações sobre seus recursos podem ser encontradas na [modos de exibição Web](~/ios/user-interface/controls/uiwebview.md#safariviewcontroller) guia.
+`SFSafariViewController`foi introduzido no iOS 9 como uma opção para exibir o conteúdo da Web ou autenticar usuários do seu aplicativo. Mais informações sobre seus recursos podem ser encontradas no guia de [modos de exibição da Web](~/ios/user-interface/controls/uiwebview.md#safariviewcontroller) .
 
-iOS 11 introduziu as atualizações de estilo para o controlador de exibição do Safari, dando a seus usuários uma experiência mais dinâmica entre um aplicativo e a web. Por exemplo, a remoção da barra agora oferece o controlador de exibição do Safari a sensação de um navegador no aplicativo, em vez de um mininavegador de endereços. Você também pode personalizar o esquema de cores para estar de acordo com o esquema de cores do seu aplicativo definindo o `preferredBarTintColor` e `PreferredControlTintColor` propriedades:
+o iOS 11 introduziu atualizações de estilo para o controlador de exibição do Safari, dando a seus usuários uma experiência mais direta entre um aplicativo e a Web. Por exemplo, a remoção da barra de endereços agora dá ao controlador de exibição do Safari a sensação de um navegador no aplicativo, em vez de um mini-navegador. Você também pode personalizar o esquema de cores para se ajustar ao esquema de cores do seu aplicativo definindo as `preferredBarTintColor` propriedades `PreferredControlTintColor` e:
 
 ```csharp
 sfViewController.PreferredControlTintColor = UIColor.White;
 sfViewController.PreferredBarTintColor = UIColor.Purple;
 ```
 
-O trecho de código a seguir renderiza as barras em roxo e em branco, conforme exibido na imagem a seguir:
+O trecho de código a seguir renderiza as barras em roxo e branco, conforme exibido na imagem a seguir:
 
-![Barras de ter o SFSafariViewController processadas em roxo e em branco](web-images/image1.png)
+![Barras SFSafariViewController renderizadas em roxo e branco](web-images/image1.png)
 
-O botão Descartar apresentado no controlador de exibição Safari também pode ser alterado definindo a `DismissButtonStyle` propriedade para um `Done`, `Close`, ou `Cancel`:
+O botão ignorar apresentado no controlador de exibição do Safari também pode ser alterado definindo a `DismissButtonStyle` propriedade `Done`como, `Close`ou `Cancel`:
 
 ```csharp
 sfViewController.DismissButtonStyle = SFSafariViewControllerDismissButtonStyle.Close;
 ```
 
-![Ignorar a alteração de texto do botão](web-images/image2.png)
+![Ignorar texto do botão alterado](web-images/image2.png)
 
 Esse valor pode ser alterado enquanto `SFSafariViewController` é apresentado.
 
 
-Dependendo do conteúdo que é exibido dentro de um controlador de exibição do Safari, pode ser necessário garantir que as barras de menu não recolher como o usuário rolar. Isso é habilitado pela definição da nova `BarCollapsedEnabled` propriedade para `false`:
+Dependendo do conteúdo exibido dentro de um controlador de exibição do Safari, pode ser necessário garantir que as barras de menu não sejam recolhidas à medida que o usuário rola. Isso é habilitado definindo a nova `BarCollapsedEnabled` Propriedade como: `false`
 
 ```csharp
 var config = new SFSafariViewControllerConfiguration();
@@ -53,28 +53,28 @@ config.BarCollapsingEnabled = false;
 var sfViewController = new SFSafariViewController(url, config);
 ```
 
-![Barra de recolhimento desabilitado](web-images/image3.png)
+![Recolhido de barra desabilitado](web-images/image3.png)
 
-Apple também fez atualizações à privacidade no controlador de exibição Safari no iOS 11. Agora, dados de navegação, como o armazenamento local e os cookies só existem em uma base por aplicativo, em vez de em todas as instâncias do controlador de exibição do Safari. Isso mantém a atividade de navegação do usuário privada dentro de seu aplicativo.
+A Apple também fez atualizações de privacidade no controlador de exibição do Safari no iOS 11. Agora, a navegação de dados como cookies e armazenamento local existe somente em uma base por aplicativo, em vez de em todas as instâncias do controlador de exibição do Safari. Isso mantém a atividade de navegação do usuário privada em seu aplicativo.
 
-Recursos adicionais, como arraste e solte o suporte para URLs e suporte para `window.open()` também foram adicionados ao `SFSafariViewController` no iOS 11. Você pode encontrar mais informações sobre esses novos recursos no [documentação de ter o SFSafariViewController da Apple](https://developer.apple.com/documentation/safariservices/sfsafariviewcontroller?changes=latest_minor).
+Recursos adicionais como arrastar e soltar suporte para URLs e suporte para `window.open()` também foram adicionados ao `SFSafariViewController` no Ios 11. Você pode encontrar mais informações sobre esses novos recursos na [documentação do SFSafariViewController da Apple](https://developer.apple.com/documentation/safariservices/sfsafariviewcontroller?changes=latest_minor).
 
 
 ## <a name="webkit"></a>WebKit
 
-`WKWebView` foi introduzido como parte do WebKit no iOS 8 como um meio de exibir o conteúdo da web ao seu usuário. Ele é muito mais personalizável do `SFSafariViewController`, permitindo que você crie sua própria interface do usuário e navegação.
+`WKWebView`foi introduzido como parte do WebKit no iOS 8 como um meio de exibir o conteúdo da Web para o usuário. É muito mais personalizável do que `SFSafariViewController`permitir que você crie sua própria navegação e interface do usuário.
 
-Apple introduziu três principais melhorias para `WKWebView` com o iOS 11: 
+A Apple introduziu três aprimoramentos `WKWebView` principais para o com o Ios 11: 
 
 - A capacidade de gerenciar cookies
 - Filtragem de conteúdo
 - Carregamento de recursos personalizados. 
 
-Gerenciamento de cookie é feito por meio da nova [ `WKHttpCookieStore` ](https://developer.apple.com/documentation/webkit/wkhttpcookiestore) classe, que lhe permite adicionar e excluir cookies, para obter todos os cookies armazenados em um WKWebView e observar o cookie armazenar para que as alterações.
+O gerenciamento de cookies é feito por [`WKHttpCookieStore`](https://developer.apple.com/documentation/webkit/wkhttpcookiestore) meio da nova classe, que permite adicionar e Excluir cookies, obter todos os cookies armazenados em um WKWebView e observar o repositório de cookies para alterações.
 
-Conteúdo de filtragem permite que você gerencie o tipo de conteúdo que o usuário verá, permitindo que você verifique se ele é seguro, família amigável e, se necessário, disponível apenas para um grupo seleto de usuários. Isso é implementado por meio da nova [ `WKContentRuleList` ](https://developer.apple.com/documentation/webkit/wkcontentrulelist) classe, fornecendo pares de gatilhos e ações em JSON. Para obter mais informações sobre esses gatilhos e ações podem ser encontradas da Apple [regras de bloqueio de conteúdo](https://developer.apple.com/library/content/documentation/Extensions/Conceptual/ContentBlockingRules/Introduction/Introduction.html) guia.
+A filtragem de conteúdo permite que você gerencie o tipo de conteúdo que o usuário verá, permitindo garantir que ele seja seguro, amigável para a família e, se necessário, disponível somente para um grupo de usuários selecionado. Isso é implementado por meio da [`WKContentRuleList`](https://developer.apple.com/documentation/webkit/wkcontentrulelist) nova classe, fornecendo pares de gatilhos e ações em JSON. Mais informações sobre esses gatilhos e ações podem ser encontradas no guia de [regras de bloqueio de conteúdo](https://developer.apple.com/library/content/documentation/Extensions/Conceptual/ContentBlockingRules/Introduction/Introduction.html) da Apple.
 
-iOS 11 agora permite que você personalize `WKWebView` com carregamento para o conteúdo da web de recursos personalizados. Isso é implementado por meio de `IWKUrlSchemeHandler` interface, que permite que você manipule esquemas de URL que não são nativas Kit da Web. Essa interface tem um método de início e parada que deve ser implementado:
+Agora, o Ios 11 permite que `WKWebView` você personalize com o carregamento de recursos personalizados para seu conteúdo da Web. Isso é implementado por meio `IWKUrlSchemeHandler` da interface, que permite que você manipule esquemas de URL que não são nativos do kit da Web. Essa interface tem um método Start e Stop que deve ser implementado:
 
 ```csharp
 public class MyHandler : NSObject, IWKUrlSchemeHandler {
@@ -97,7 +97,7 @@ public class MyHandler : NSObject, IWKUrlSchemeHandler {
 }
 ``` 
 
-Depois que o manipulador tiver sido implementado, usá-lo para definir a `SetUrlSchemeHandler` propriedade no `WKWebViewConfiguration`. Em seguida, carregue a URL de algo que usa o esquema personalizado:
+Depois que o manipulador tiver sido implementado, use-o para `SetUrlSchemeHandler` definir a propriedade `WKWebViewConfiguration`no. Em seguida, carregue a URL de algo que usa o esquema personalizado:
 
 ```csharp
 var config = new WKWebViewConfiguration();

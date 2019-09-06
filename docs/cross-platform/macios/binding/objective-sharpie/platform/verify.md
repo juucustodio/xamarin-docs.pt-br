@@ -1,41 +1,41 @@
 ---
-title: Objetivo Sharpie verificar atributos
-description: Este documento descreve o atributo [verificar] gerado pelo Sharpie objetivo. O atributo [verificar] destaca aos desenvolvedores onde eles devem verificar saída do objetivo Sharpie manualmente.
+title: Atributos de verificação de nitidez do objetivo
+description: Este documento descreve o atributo [Verify] gerado pela nitidez objetiva. O atributo [Verify] realça para os desenvolvedores onde eles devem verificar manualmente a saída de nitidez do objetivo.
 ms.prod: xamarin
 ms.assetid: 107FBCEA-266B-4295-B7AA-40A881B82B7B
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 01/15/2016
-ms.openlocfilehash: 96e5bafc14c2d3aba03ccc137151a83ee8afeef9
-ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
+ms.openlocfilehash: b13164b7125e04b3e92a4ae0c0c0afd428f325af
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "64977858"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70278929"
 ---
-# <a name="objective-sharpie-verify-attributes"></a>Objetivo Sharpie verificar atributos
+# <a name="objective-sharpie-verify-attributes"></a>Atributos de verificação de nitidez do objetivo
 
-Você descobrirá com frequência que associações produzidas pelo Sharpie objetivo serão ser anotadas com o `[Verify]` atributo. Esses atributos indicam que você deva _verificar_ que o objetivo Sharpie fez a coisa correta, comparando a ligação com a declaração do C/Objective-C original (que será fornecida em um comentário acima da declaração associada).
+Muitas vezes, você descobrirá que as associações produzidas pela nitidez objetiva serão anotadas com `[Verify]` o atributo. Esses atributos indicam que você deve _verificar_ se a nitidez objetiva fez a coisa correta comparando a associação com a declaração c/Objective-c original (que será fornecida em um comentário acima da declaração associada).
 
-Verificação é recomendada para _todos os_ associado declarações, mas é mais provável _necessária_ para declarações anotados com o `[Verify]` atributo. Isso ocorre porque, em muitas situações, não há metadados suficientes no código nativo de origem original para inferir como melhor produzir uma associação. Você talvez precise fazer referência a documentação ou comentários de código dentro dos arquivos de cabeçalho para tomar a melhor decisão de associação.
+A verificação é recomendada para _todas as_ declarações associadas, mas é provavelmente _necessária_ para declarações anotadas com `[Verify]` o atributo. Isso ocorre porque, em muitas situações, não há metadados suficientes no código-fonte nativo original para inferir como produzir melhor uma associação. Talvez seja necessário fazer referência a documentação ou comentários de código dentro dos arquivos de cabeçalho para tomar a melhor decisão de ligação.
 
-Uma vez que você verificou que a associação é corrigir ou corrigiram-o para correto, _remova_ o `[Verify]` atributo da associação.
+Depois de verificar se a associação está correta ou corrigi-la para estar correta, _remova_ o `[Verify]` atributo da associação.
 
 > [!IMPORTANT]
-> `[Verify]` atributos causam intencionalmente C# erros de compilação para que você é forçado para verificar a associação. Você deve remover o `[Verify]` quando você tiver revisado (e possivelmente corrigido) o código do atributo.
+> `[Verify]`os atributos causam C# intencionalmente erros de compilação para que você seja forçado a verificar a associação. Você deve remover o `[Verify]` atributo quando tiver revisado (e, possivelmente, corrigido) o código.
 
-## <a name="verify-hints-reference"></a>Verificar a referência de dicas
+## <a name="verify-hints-reference"></a>Verificar referência de dicas
 
-O argumento de dica fornecido para o atributo pode ser cruzado referenciada com a documentação a seguir. Documentação para qualquer produzido `[Verify]` atributos serão fornecidos no console também após a associação de dados.
+O argumento de dica fornecido para o atributo pode ser referenciado cruzado com a documentação abaixo. A documentação para todos `[Verify]` os atributos produzidos será fornecida no console também após a conclusão da associação.
 
-|`[Verify]` Dica|Descrição|
+|`[Verify]`Hint|Descrição|
 |---|---|
-|InferredFromPreceedingTypedef|O nome dessa declaração foi inferido pela convenção comum dos imediatamente anterior `typedef` no código nativo de origem original. Verifique se o nome deduzido está correto, como essa convenção é ambígua.|
-|ConstantsInterfaceAssociation|Não há nenhuma maneira de prova para determinar com qual interface Objective-C, uma declaração de variável externa pode ser associada. Essas instâncias são associadas como `[Field]` propriedades em uma interface parcial em uma interface quase-by, concreto, para produzir uma API mais intuitiva, possivelmente eliminando as constantes de interface completamente.|
-|MethodToProperty|Um método de Objective-C foram associado como uma C# propriedade devido a convenção como pegar sem parâmetros e retornar um valor (retorno não nulo). Geralmente os métodos como esses devem ser associados como propriedades à tona uma API mais agradável, mas, às vezes, os falsos positivos podem ocorrer e a associação, na verdade, deve ser um método.|
-|StronglyTypedNSArray|Um nativo `NSArray*` foram associados como `NSObject[]`. Pode ser possível para o tipo mais forte a matriz na associação com base nas expectativas definidas por meio de documentação da API (por exemplo, os comentários no arquivo de cabeçalho) ou examinando o conteúdo da matriz por meio de testes. Por exemplo, um NSArray * contendo apenas NSNumber * instancescan ser associado como `NSNumber[]` em vez de `NSObject[]`.|
+|InferredFromPreceedingTypedef|O nome dessa declaração foi inferido por convenção comum do anterior `typedef` imediatamente no código-fonte nativo original. Verifique se o nome inferido está correto, pois essa Convenção é ambígua.|
+|ConstantsInterfaceAssociation|Não há nenhuma maneira de ser possível determinar com qual interface Objective-C uma declaração de variável externa pode ser associada. As instâncias desses são associadas como `[Field]` Propriedades em uma interface parcial em uma interface de proximidade e concreta para produzir uma API mais intuitiva, possivelmente eliminando totalmente a interface ' Constants '.|
+|MethodToProperty|Um método Objective-C foi associado como C# uma propriedade devido a uma convenção como não usar nenhum parâmetro e retornar um valor (retorno não nulo). Geralmente, métodos como esses devem ser associados como propriedades para trazer uma API mais agradável, mas às vezes os falsos positivos podem ocorrer e a associação deve realmente ser um método.|
+|StronglyTypedNSArray|Um nativo `NSArray*` foi associado como `NSObject[]`. Pode ser possível digitar mais fortemente a matriz na associação com base nas expectativas definidas por meio da documentação da API (por exemplo, comentários no arquivo de cabeçalho) ou examinando o conteúdo da matriz por meio de testes. Por exemplo, um NSArray * contendo apenas NSNumber * instancescan ser associado como `NSNumber[]` em vez `NSObject[]`de.|
 
-Você pode receber também rapidamente a documentação para usar uma dica de `sharpie verify-docs` ferramenta, por exemplo:
+Você também pode receber rapidamente a documentação para obter uma dica `sharpie verify-docs` usando a ferramenta, por exemplo:
 
 ```csharp
 sharpie verify-docs InferredFromPreceedingTypedef

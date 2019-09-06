@@ -4,15 +4,15 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 65E04188-185D-493D-BA3C-A89711CB6CAF
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: 101e27d3ebb26295418c63c1be703976091e50d6
-ms.sourcegitcommit: 2e5a6b8bcd1a073b54604f51538fd108e1c2a8e5
+ms.openlocfilehash: 57908027c6e9215504f410c0f9c989d6fbe3adad
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68869338"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290514"
 ---
 # <a name="ios-frequently-asked-questions"></a>Perguntas frequentes sobre o iOS
 
@@ -74,7 +74,7 @@ Essa mensagem de erro ocorre quando o projeto em questão está procurando crede
 As alterações de API no iOS 9 exigem que um construtor de retorno de chamada seja usado ao chamar código não gerenciado, pois a API subjacente agora o espera.
 
 ### <a name="runtime-error-the-assembly-mscorlibdll-was-not-found-or-could-not-be-loadederror-mscorlib-not-foundmd"></a>[Erro de tempo de execução: The assembly mscorlib.dll was not found or could not be loaded](error-mscorlib-not-found.md)
-Esse problema ocorre quando as `.monotouch-32` pastas e `.monotouch-64` ocultas estão ausentes `.xcarchive` na criação de assinatura/IPA, disparando o erro de tempo de execução.
+Esse problema ocorre quando as pastas e `.monotouch-64` *ocultas* `.monotouch-32` estão ausentes `.xcarchive` na criação de assinatura/IPA, disparando o erro de tempo de execução.
 
 ### <a name="compile-error-can-not-encode-offset-x-in-resulting-scattered-relocationerror-encode-offset-scattered-relocationmd"></a>[Erro de compilação: Não é possível codificar o deslocamento X na realocação de dispersão resultante](error-encode-offset-scattered-relocation.md)
 Esse problema ocorre durante a compilação de arquiteturas de 32 bits, como ARMv7, quando o binário final é muito grande para o ferramentas nativo.

@@ -4,15 +4,15 @@ description: Este artigo aborda como trabalhar com exibições de estrutura de t
 ms.prod: xamarin
 ms.assetid: 043248EE-11DA-4E96-83A3-08824A4F2E01
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 3b045d18d66463a1464e446847cb5dbfd531bbf3
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 16a37c7544f7ea364c13789fdc7bb42d89a74f5c
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227878"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70287249"
 ---
 # <a name="outline-views-in-xamarinmac"></a>Exibições de estrutura de tópicos no Xamarin. Mac
 
@@ -26,7 +26,7 @@ Um modo de exibição de estrutura de tópicos é um tipo de tabela que permite 
 
 Neste artigo, abordaremos as noções básicas de como trabalhar com exibições de estrutura de tópicos em um aplicativo Xamarin. Mac. É altamente recomendável que você trabalhe pelo artigo [Hello, Mac](~/mac/get-started/hello-mac.md) primeiro, especificamente a [introdução às seções Xcode e Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) e [ações](~/mac/get-started/hello-mac.md#outlets-and-actions) , pois ela aborda os principais conceitos e técnicas que usaremos em Este artigo.
 
-Talvez você queira dar uma olhada na seção [expondo C# classes/métodos para Objective-C](~/mac/internals/how-it-works.md) do documento [interno do Xamarin. Mac](~/mac/internals/how-it-works.md) também, explica `Register` os comandos e `Export` usados para conectar suas C# classes ao Objetos Objective-C e elementos de interface do usuário.
+Talvez você queira dar uma olhada na seção [expondo C# classes/métodos para Objective-C](~/mac/internals/how-it-works.md) do documento [interno do Xamarin. Mac](~/mac/internals/how-it-works.md) também, explica os `Register` comandos e `Export` usados para conectar suas C# classes ao Objetos Objective-C e elementos de interface do usuário.
 
 <a name="Introduction_to_Outline_Views" />
 
@@ -42,7 +42,7 @@ Um modo de exibição de estrutura de tópicos não armazena seus próprios dado
 
 Um comportamento de exibição de estrutura de tópicos pode ser personalizado fornecendo uma subclasse do delegado da exibição de`NSOutlineViewDelegate`estrutura de tópicos () para dar suporte ao gerenciamento de coluna de estrutura de tópicos, tipo para selecionar funcionalidade, seleção de linha e edição, acompanhamento personalizado e exibições personalizadas para indivíduo colunas e linhas.
 
-Como uma exibição de estrutura de tópicos compartilha grande parte do comportamento e da funcionalidade com uma exibição de tabela, talvez você queira percorrer nossa documentação de exibições de [tabela](~/mac/user-interface/table-view.md) antes de continuar com este artigo.
+Como uma exibição de estrutura de tópicos compartilha grande parte do comportamento e da funcionalidade com uma exibição de tabela, talvez você queira percorrer nossa documentação de [exibições de tabela](~/mac/user-interface/table-view.md) antes de continuar com este artigo.
 
 <a name="Creating_and_Maintaining_Outline_Views_in_Xcode" />
 
@@ -72,13 +72,13 @@ Selecione o modo de exibição de estrutura de tópicos na **hierarquia de inter
 - **Coluna de estrutura de tópicos de salvamento automático** -se `true`, a coluna de estrutura de tópicos será automaticamente salva e restaurada entre as execuções do aplicativo.
 - **Recuo** -o valor para recuar colunas em um item expandido.
 - O **recuo segue as células** - `true`se, o sinal de recuo será recuado junto com as células.
-- **AutoSalvar itens** expandidos `true`-se, o estado expandido/recolhido dos itens será automaticamente salvo e restaurado entre as execuções do aplicativo.
+- **AutoSalvar itens expandidos** -se `true`, o estado expandido/recolhido dos itens será automaticamente salvo e restaurado entre as execuções do aplicativo.
 - **Modo de conteúdo** – permite que você use views`NSView`() ou Cells (`NSCell`) para exibir os dados nas linhas e colunas. A partir do macOS 10,7, você deve usar exibições.
 - **Flutua linhas de grupo** – se `true`, a exibição de tabela desenhará células agrupadas como se elas estivessem flutuantes.
 - **Colunas** – define o número de colunas exibidas.
 - **Cabeçalhos** -se `true`, as colunas terão cabeçalhos.
-- Reordenando-se `true`, o usuário poderá arrastar para reordenar as colunas na tabela.
-- Redimensionamento `true`– se, o usuário poderá arrastar cabeçalhos de coluna para redimensionar colunas.
+- **Reordenando** -se `true`, o usuário poderá arrastar para reordenar as colunas na tabela.
+- **Redimensionamento** – se `true`, o usuário poderá arrastar cabeçalhos de coluna para redimensionar colunas.
 - **Dimensionamento de coluna** – controla como a tabela dimensionará automaticamente as colunas.
 - **Highlight** -controla o tipo de realce que a tabela usa quando uma célula é selecionada.
 - **Linhas alternativas** -se `true`, em qualquer outra linha terá uma cor de plano de fundo diferente.
@@ -109,7 +109,7 @@ Selecione uma coluna de tabela na **hierarquia de interface** e as seguintes pro
 - **Chave de classificação** -é a chave usada para classificar dados na coluna. Deixe em branco se o usuário não puder classificar esta coluna.
 - **Selector** – a **ação** usada para executar a classificação. Deixe em branco se o usuário não puder classificar esta coluna.
 - **Order** – a ordem de classificação para os dados das colunas.
-- Redimensionamento – seleciona o tipo de redimensionamento para a coluna.
+- **Redimensionamento** – seleciona o tipo de redimensionamento para a coluna.
 - **Editable** -If `true`, o usuário pode editar células em uma tabela baseada em célula.
 - **Hidden** -If `true`, a coluna fica oculta.
 
@@ -400,7 +400,7 @@ Se expandirmos um nó no modo de exibição de estrutura de tópicos, ele será 
 
 ## <a name="sorting-by-column"></a>Classificando por coluna
 
-Vamos permitir que o usuário classifique os dados no contorno clicando em um cabeçalho de coluna. Primeiro, clique duas vezes no `Main.storyboard` arquivo para abri-lo para edição no interface Builder. Selecione a `Product` coluna, insira `Title` para a **chave**de classificação `compare:` , para o seletor `Ascending` e selecione para a **ordem**:
+Vamos permitir que o usuário classifique os dados no contorno clicando em um cabeçalho de coluna. Primeiro, clique duas vezes no `Main.storyboard` arquivo para abri-lo para edição no interface Builder. Selecione a `Product` coluna, insira `Title` para a **chave**de classificação `compare:` , para o **seletor** e selecione `Ascending` para a **ordem**:
 
 [![](outline-view-images/sort01.png "Definindo a ordem de chave de classificação")](outline-view-images/sort01.png#lightbox)
 
@@ -515,11 +515,11 @@ O `GetNextTypeSelectMatch` método usa o dado `searchString` e retorna o item do
 
 ## <a name="reordering-columns"></a>Reordenando colunas
 
-Se você quiser permitir que o usuário Arraste colunas de reordenação no modo de exibição de estrutura de tópicos `Main.storyboard` , clique duas vezes no arquivo para abri-lo para edição no interface Builder. Selecione o modo de exibição de estrutura de tópicos na **hierarquia de interface** e marque a caixa de seleção reordenar no **Inspetor de atributo**:
+Se você quiser permitir que o usuário Arraste colunas de reordenação no modo de exibição de estrutura de tópicos `Main.storyboard` , clique duas vezes no arquivo para abri-lo para edição no interface Builder. Selecione o modo de exibição de estrutura de tópicos na **hierarquia de interface** e marque a caixa de seleção **Reordenar** no **Inspetor de atributo**:
 
 [![](outline-view-images/reorder01.png "O Inspetor de atributo")](outline-view-images/reorder01.png#lightbox)
 
-Se fornecermos um valor para a Propriedade autosave e verificar o campo de **informações da coluna** , as alterações feitas no layout da tabela serão salvas automaticamente para nós e restauradas na próxima vez em que o aplicativo for executado.
+Se fornecermos um valor para a **Propriedade** autosave e verificar o campo de **informações da coluna** , as alterações feitas no layout da tabela serão salvas automaticamente para nós e restauradas na próxima vez em que o aplicativo for executado.
 
 Salve as alterações e retorne ao Visual Studio para Mac para sincronizar com o Xcode.
 

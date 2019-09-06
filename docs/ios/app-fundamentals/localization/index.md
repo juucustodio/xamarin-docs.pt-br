@@ -4,21 +4,21 @@ description: Este documento descreve os recursos de localização do iOS e como 
 ms.prod: xamarin
 ms.assetid: DFD9EB4A-E536-18E4-C8FD-679BA9C836D8
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 04/28/2017
-ms.openlocfilehash: 70e9f403e40cff8e1af536acf3a5efc3d12ad20b
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: e394b5487b240f98310ab223371466d62a3bdf23
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70121399"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70278879"
 ---
 # <a name="localization-in-xamarinios"></a>Localização no Xamarin. iOS
 
 _Este documento aborda os recursos de localização do SDK do iOS e como acessá-los com o Xamarin._
 
-Consulte as [codificações](encodings.md) de internacionalização para obter instruções sobre como incluir conjuntos de caracteres/páginas de código em aplicativos que devem processar dados não Unicode.
+Consulte as [codificações de internacionalização](encodings.md) para obter instruções sobre como incluir conjuntos de caracteres/páginas de código em aplicativos que devem processar dados não Unicode.
 
 ## <a name="ios-platform-features"></a>recursos da plataforma iOS
 

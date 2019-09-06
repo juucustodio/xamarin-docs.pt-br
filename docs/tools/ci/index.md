@@ -1,17 +1,17 @@
 ---
 title: Introdução à integração contínua com o Xamarin
-description: Este documento leva a guias que descrevem a integração contínua com o Xamarin. Conteúdo vinculado fornece uma visão geral da integração contínua e discute a compilação do App Center, TeamCity e Jenkins.
+description: Este documento contém links para guias que descrevem a integração contínua com o Xamarin. Conteúdo vinculado fornece uma visão geral da integração contínua e discute App Center Build, TeamCity e Jenkins.
 ms.prod: xamarin
 ms.assetid: 99484E96-DC69-4697-8BBB-1B44C5CBB5ED
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 10/23/2018
-ms.openlocfilehash: 073fc5abace2e0cb923394a359437528f703f338
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 6e1d90152fa47fef0638c93777f1e7179e97e387
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61371073"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292547"
 ---
 # <a name="continuous-integration-with-xamarin"></a>Integração contínua com o Xamarin
 
@@ -19,26 +19,26 @@ ms.locfileid: "61371073"
 
 ## <a name="introduction-to-continuous-integrationtoolsciintro-to-cimd"></a>[Introdução à integração contínua](~/tools/ci/intro-to-ci.md)
 
-Esta seção aborda os diferentes componentes envolvidos com a integração contínua e suas relações. Ele descreve os ambientes de integração contínua são discutidos nas seções específicas a seguir.
+Esta seção aborda os diferentes componentes envolvidos na integração contínua e suas relações. Ele descreve os ambientes de integração contínua que são discutidos nas seções específicas abaixo.
 
 ## <a name="devops-with-xamarintoolscidevopsmd"></a>[DevOps com o Xamarin](~/tools/ci/devops.md)
 
-Esta seção identifica quais recursos de DevOps no Azure e o Visual Studio, você pode esperar que funcionem bem com um projeto Xamarin.
+Esta seção identifica quais recursos do DevOps no Azure e no Visual Studio você pode esperar funcionar bem com um projeto do Xamarin.
 
 ## <a name="working-with-continuous-integration-environments"></a>Trabalhando com ambientes de integração contínua
 
-### <a name="build-xamarin-apps-with-azure-pipelineshttpsdocsmicrosoftcomazuredevopspipelineslanguagesxamarin"></a>[Compilar aplicativos Xamarim com Pipelines do Azure](https://docs.microsoft.com/azure/devops/pipelines/languages/xamarin/)
+### <a name="build-xamarin-apps-with-azure-pipelineshttpsdocsmicrosoftcomazuredevopspipelineslanguagesxamarin"></a>[Compilar aplicativos Xamarin com Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines/languages/xamarin/)
 
-Use Pipelines do Azure para criar automaticamente os aplicativos Xamarin para Android e iOS.
+Use Azure Pipelines para criar automaticamente aplicativos Xamarin para Android e iOS.
 
-### <a name="build-xamarin-apps-using-app-centerhttpsdocsmicrosoftcomappcenterbuildxamarin"></a>[Crie aplicativos do Xamarin usando o App Center](https://docs.microsoft.com/appcenter/build/xamarin/)
+### <a name="build-xamarin-apps-using-app-centerhttpsdocsmicrosoftcomappcenterbuildxamarin"></a>[Compilar aplicativos Xamarin usando App Center](https://docs.microsoft.com/appcenter/build/xamarin/)
 
-Crie soluções xamarin. IOS e xamarin. Android com o App Center, diretamente do GitHub, Bitbucket ou do DevOps do Azure.
+Crie soluções Xamarin. iOS e Xamarin. Android com App Center, diretamente do GitHub, do Azure DevOps ou do bitbucket.
 
-### <a name="build-xamarin-apps-with-teamcitytoolsciteamcitymd"></a>[Compilar aplicativos Xamarim com TeamCity](~/tools/ci/teamcity.md)
+### <a name="build-xamarin-apps-with-teamcitytoolsciteamcitymd"></a>[Compilar aplicativos Xamarin com TeamCity](~/tools/ci/teamcity.md)
 
-Este guia aborda as etapas envolvidas com o uso TeamCity para compilar aplicativos móveis e, em seguida, enviá-los ao teste do App Center.
+Este guia discute as etapas envolvidas no uso do TeamCity para compilar aplicativos móveis e, em seguida, enviá-los para App Center teste.
 
-### <a name="build-xamarin-apps-with-jenkinstoolscijenkins-walkthroughmd"></a>[Compilar aplicativos Xamarim com Jenkins](~/tools/ci/jenkins-walkthrough.md)
+### <a name="build-xamarin-apps-with-jenkinstoolscijenkins-walkthroughmd"></a>[Compilar aplicativos Xamarin com Jenkins](~/tools/ci/jenkins-walkthrough.md)
 
-Este guia mostra como configurar o Jenkins como um servidor de integração contínua e automatizar a compilação de aplicativos móveis criados com Xamarin. Ele descreve como instalar o Jenkins nos X, configurá-lo e configurar os trabalhos para compilar aplicativos xamarin. IOS e xamarin. Android quando as alterações são confirmadas no sistema de controle de versão.
+Este guia ilustra como configurar o Jenkins como um servidor de integração contínua e automatizar a compilação de aplicativos móveis criados com o Xamarin. Ele descreve como instalar o Jenkins no OS X, configurá-lo e configurar trabalhos para compilar aplicativos Xamarin. iOS e Xamarin. Android quando as alterações são confirmadas no sistema de controle de versão.

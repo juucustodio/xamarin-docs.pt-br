@@ -4,15 +4,15 @@ description: Este documento descreve como substituir as referências de componen
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 9E6C986F-3FBA-4599-8367-FB0C565C0ADE
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 04/18/2018
-ms.openlocfilehash: 270d02fb5045e322b167101d82de9a61c64ce836
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 7feec9f2fa136b96d81a54e4b2650918c53b5832
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70118953"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70281604"
 ---
 # <a name="updating-component-references-to-nuget"></a>Atualizando referências de componente para o NuGet
 

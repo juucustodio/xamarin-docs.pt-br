@@ -4,15 +4,15 @@ description: Este documento descreve as etapas necessárias para implementar o s
 ms.prod: xamarin
 ms.assetid: 20FFB981-EB10-48BA-BF79-40F37F0291EB
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 05/03/2018
-ms.openlocfilehash: 78d39b080a136f66c81b48d6cceb5fbdd9d24c11
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 5c891943d0d23c24169a6d226a10f83964c9257a
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68654935"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290645"
 ---
 # <a name="implementing-sirikit-in-xamarinios"></a>Implementando SiriKit no Xamarin. iOS
 
@@ -39,7 +39,7 @@ MonkeyChat mantém seu próprio livro de contatos dos amigos do usuário, cada u
 
 ## <a name="extending-the-app-with-sirikit"></a>Estendendo o aplicativo com SiriKit
 
-Conforme mostrado no guia de conceitos do Understanding [SiriKit](~/ios/platform/sirikit/understanding-sirikit.md) , há três partes principais envolvidas na extensão de um aplicativo com o SiriKit:
+Conforme mostrado no guia de [conceitos do Understanding SiriKit](~/ios/platform/sirikit/understanding-sirikit.md) , há três partes principais envolvidas na extensão de um aplicativo com o SiriKit:
 
 [![](implementing-sirikit-images/elements01.png "Estendendo o aplicativo com o diagrama SiriKit")](implementing-sirikit-images/elements01.png#lightbox)
 
@@ -84,7 +84,7 @@ Faça o seguinte:
 
     [![](implementing-sirikit-images/prep05.png "Verifique o projeto MonkeyChatCommon")](implementing-sirikit-images/prep05.png#lightbox)
 6. Na **Gerenciador de soluções**, arraste o código compartilhado comum do aplicativo principal para a biblioteca nativa.
-7. No caso do MonkeyChat, arraste as pastas datamodels e **processadores** do aplicativo principal para a biblioteca nativa: 
+7. No caso do MonkeyChat, arraste as pastas **Datamodels** e **processadores** do aplicativo principal para a biblioteca nativa: 
 
     [![](implementing-sirikit-images/prep06.png "As pastas datamodels e processadores no Gerenciador de Soluções")](implementing-sirikit-images/prep06.png#lightbox)
 
@@ -100,7 +100,7 @@ Faça o seguinte:
 
     [![](implementing-sirikit-images/prep05w.png "Verifique o projeto MonkeyChatCommon")](implementing-sirikit-images/prep05w.png#lightbox)
 6. Na **Gerenciador de soluções**, arraste o código compartilhado comum do aplicativo principal para o projeto compartilhado.
-7. No caso do MonkeyChat, arraste as pastas datamodels e **processadores** do aplicativo principal para a biblioteca nativa.
+7. No caso do MonkeyChat, arraste as pastas **Datamodels** e **processadores** do aplicativo principal para a biblioteca nativa.
 
 -----
 

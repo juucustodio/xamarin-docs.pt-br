@@ -1,65 +1,65 @@
 ---
-title: Linguagens no xamarin. Mac e padrões comuns
-description: Este documento descreve os padrões de design comuns usados na criação de aplicativos xamarin. Mac. Ele aborda o padrão model-view-controller, padrões de dados de origem e de delegado e protocolos.
+title: Padrões e linguagens comuns no Xamarin. Mac
+description: Este documento descreve os padrões de design comuns usados durante a criação de aplicativos Xamarin. Mac. Ele aborda o padrão Model-View-Controller, a fonte de dados e os padrões de representante e os protocolos.
 ms.prod: xamarin
 ms.assetid: BF0A3517-17D8-453D-87F7-C8A34BEA8FF5
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 06/17/2016
-ms.openlocfilehash: b4266582ce0cec522e207cd06987f2d0eeff8b2d
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 188bc8a04b62c97e9d6f80669fe50da1bf4d9340
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61090840"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70289546"
 ---
-# <a name="common-patterns-and-idioms-in-xamarinmac"></a>Linguagens no xamarin. Mac e padrões comuns
+# <a name="common-patterns-and-idioms-in-xamarinmac"></a>Padrões e linguagens comuns no Xamarin. Mac
 
-Ao longo da Apple APIs expostas por meio do c#, determinadas linguagens e padrões surgem repetidamente. Se você tiver experiência com programação com xamarin. IOS, elas podem parecer familiares. Documentação geralmente fará referência a essas linguagens e padrões repetidamente, portanto, ter uma compreensão sólida deles ajudará você a dar sentido a documentação que você encontrar.
+Em todas as APIs da Apple C#expostas por meio de, determinados idiomas e padrões surgem repetidamente. Se você tiver experiência com programação com Xamarin. iOS, elas podem parecer familiares. A documentação geralmente se referirá a esses padrões e idiomas repetidamente, então ter um entendimento sólido deles ajudará você a compreender a documentação que encontrar.
 
-## <a name="mvc---model-view-controller"></a>MVC - Model View Controller
+## <a name="mvc---model-view-controller"></a>MVC-controlador de exibição de modelo
 
-Model View Controller, ou MVC para abreviar, é um padrão muito comum encontrado em todo o Cocoa. Uma discussão detalhada está além do escopo deste documento, mas em resumo é uma maneira de estruturar seu aplicativo em componentes:
+O controlador de exibição de modelo, ou MVC, é um padrão muito comum encontrado em todo o Cocoa. Uma discussão detalhada está além do escopo deste documento, mas, em suma, é uma maneira de estruturar seu aplicativo em componentes:
 
-- **Modelo** objetos representam dados subjacente sendo exibido e manipulado (como endereços em um catálogo de endereços)
-- **Modo de exibição** objetos lidar com o desenho de um determinado objeto na tela e manipular a interação do usuário (um campo de texto mostrando o endereço na tela)
-- **Controlador** objetos manipular a interação entre o modelo e o modo de exibição. Aplicar alterações no modelo de "Ascensão" para atualizar a exibição e enviar por push "para baixo" alterações da exibição quando os usuários a fazer alterações na interface do usuário.
+- Objetos de **modelo** representam os dados subjacentes sendo exibidos e manipulados (como endereços em um catálogo de endereços)
+- Os objetos de **exibição** manipulam o desenho de um determinado objeto na tela e manipulam a interação do usuário (um campo de texto mostrando o endereço na tela)
+- Os objetos do **controlador** manipulam a interação entre o modelo e a exibição. Eles enviam as alterações de modelo "para cima" para atualizar a exibição e enviar por push as alterações de "para baixo" da exibição quando os usuários fizerem alterações na interface do usuário.
 
-Se você estiver familiarizado com o MVVM (Model-View-ViewModel) de outras bibliotecas, como o WPF, o controlador age de forma semelhante ao ViewModel, mas geralmente é mais de perto associado aos elementos da interface do usuário específicos.
+Se você estiver familiarizado com o MVVM (Model View ViewModel) de outras bibliotecas, como o WPF, o controlador age de forma semelhante ao ViewModel, mas muitas vezes está mais intimamente associado aos elementos específicos da interface do usuário.
 
 Mais detalhes podem ser encontrados aqui:
 
-- [Aprendizado do MVC no site da Apple](https://developer.apple.com/library/ios/documentation/general/conceptual/devpedia-cocoacore/MVC.html)
+- [Aprendendo o MVC no site da Apple](https://developer.apple.com/library/ios/documentation/general/conceptual/devpedia-cocoacore/MVC.html)
 
-- [Model View Controller em Objective-C](https://developer.apple.com/library/ios/documentation/general/conceptual/CocoaEncyclopedia/Model-View-Controller/Model-View-Controller.html)
+- [Controlador de exibição de modelo em Objective-C](https://developer.apple.com/library/ios/documentation/general/conceptual/CocoaEncyclopedia/Model-View-Controller/Model-View-Controller.html)
 - [Trabalhando com o Windows](~/mac/user-interface/window.md)
 
-## <a name="data-source--delegate--subclassing"></a>Fonte de dados / delegar / subclasses
+## <a name="data-source--delegate--subclassing"></a>Fonte de dados/delegar/subclasse
 
-Outro padrão muito comum em Cocoa lida com a fornecer dados para elementos de interface do usuário e a reagir às interações do usuário. Usando `NSTableView` como exemplo, você precisa fornecer alguma forma, os dados para cada linha, alguns definidos de elementos de interface do usuário que representam essa linha, alguns conjunto de comportamentos para reagir às interações do usuário e, possivelmente, alguma quantidade de personalização. Os padrões de código-fonte e o delegado de dados permitem que você lidar com a maioria dos casos sem precisar recorrer à criação de subclasses `NSTableView` por conta própria.
+Outro padrão muito comum no Cocoa lida com o fornecimento de dados para elementos de interface do usuário e a reagindo para interações de usuários. Usando `NSTableView` como exemplo, você precisa fornecer de alguma forma os dados para cada linha, alguns conjuntos de elementos da interface do usuário que representam essa linha, algum conjunto de comportamentos para reagir a interações do usuário e, possivelmente, alguma quantidade de personalização. A fonte de dados e os padrões de representante permitem lidar com a maioria dos casos sem precisar recorrer a uma subclasse `NSTableView` .
 
-- O `DataSource` é atribuído a uma instância de uma subclasse personalizada da propriedade `NSTableViewDataSource` que é chamado para popular a tabela com dados (via `GetRowCount` e `GetObjectValue`).
+- A `DataSource` propriedade é atribuída a uma instância de uma `NSTableViewDataSource` subclasse personalizada, que é chamada para popular a tabela com dados (via `GetRowCount` e `GetObjectValue`).
 
-- O `Delegate` é atribuído a uma instância de uma subclasse personalizada da propriedade `NSTableViewDelegate` que fornece o modo de exibição para um objeto de modelo fornecido (via `GetViewForItem`) e manipula as interações de interface do usuário (por meio `DidClickTableColumn`, `MouseDownInHeaderOfTableColumn`, etc).
+- A `Delegate` propriedade é atribuída a uma instância de uma `NSTableViewDelegate` subclasse personalizada que fornece a exibição de um determinado objeto de modelo (via `GetViewForItem`) e manipula as interações de `DidClickTableColumn`interface `MouseDownInHeaderOfTableColumn`do usuário (via, etc.).
 
-Em alguns casos, convém personalizar um controle de uma maneira além os ganchos fornecido na fonte de dados ou delegado e você pode organizar em subclasses a exibição diretamente. Tenha cuidado no entanto, em muitos casos, substituindo padrão de comportamento, em seguida, exigirá que você trate todos esse comportamento (como personalizar o comportamento de seleção pode exigir a implementar todos os comportamentos de seleção).
+Em alguns casos, você desejará personalizar um controle de uma maneira além dos ganchos fornecidos no delegado ou na fonte de dados e você pode criar uma subclasse do modo de exibição diretamente. No entanto, tenha cuidado, em muitos casos, substituir o comportamento padrão exigirá que você manipule todo esse comportamento por conta própria (personalizar o comportamento de seleção pode exigir que você implemente todos os comportamentos de seleção por conta própria).
 
-No xamarin. IOS, algumas APIs, como `UITableView` foram estendidos com uma propriedade que implementa o delegado e a fonte de dados (`UITableViewSource`). -La para contornar a limitação comum que um único C# classe pode ter somente uma classe base, e nosso identificando dos protocolos é feita por meio de classes base.
+No Xamarin. Ios, algumas APIs, `UITableView` como foram estendidas com uma propriedade que implementa o delegado e a fonte de dados (`UITableViewSource`). Isso para contornar a limitação comum de que uma única C# classe só pode ter uma classe base, e nosso identificando de protocolos é feito por meio de classes base.
 
-Para obter mais informações sobre como trabalhar com modos de exibição de tabela em um aplicativo xamarin. Mac, consulte nosso [exibição de tabela](~/mac/user-interface/table-view.md) documentação.
+Para obter mais informações sobre como trabalhar com exibições de tabela em um aplicativo Xamarin. Mac, consulte nossa documentação de [exibição de tabela](~/mac/user-interface/table-view.md) .
 
 ## <a name="protocols"></a>Protocolos
 
-Protocolos em Objective-C podem ser comparados para interfaces em C#e em muitos casos, são usados em situações semelhantes. Por exemplo o `NSTableView` exemplo acima, o delegado e a fonte de dados são, na verdade, os protocolos. Xamarin. Mac expõe como classes base com métodos virtuais, que você pode substituir. A principal diferença entre C# interfaces e protocolos de Objective-C é que alguns métodos em um protocolo podem ser opcionais para implementar. Você precisará examinar a documentação e/ou a definição de uma API para determinar o que é opcional.
+Os protocolos em Objective-C podem ser comparados a interfaces no C#e, em muitos casos, são usados em situações semelhantes. Por exemplo, `NSTableView` o exemplo acima, o delegado e a fonte de dados são realmente protocolos. O Xamarin. Mac os expõe como classes base com métodos virtuais que você pode substituir. A principal diferença entre C# interfaces e protocolos Objective-C é que alguns métodos em um protocolo podem ser opcionais para implementar. Você precisará examinar a documentação e/ou a definição de uma API para determinar o que é opcional.
 
-Obter mais informações, consulte nosso [eventos, protocolos e delegados](~/ios/app-fundamentals/delegates-protocols-and-events.md) documentação.
+Para obter mais informações, consulte nossa documentação [de delegados, protocolos e eventos](~/ios/app-fundamentals/delegates-protocols-and-events.md) .
 
 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Modos de exibição de tabela](~/mac/user-interface/table-view.md)
-- [Trabalhando com o windows](~/mac/user-interface/window.md)
-- [Eventos, protocolos e delegados](~/ios/app-fundamentals/delegates-protocols-and-events.md)
+- [Exibições de tabela](~/mac/user-interface/table-view.md)
+- [Trabalhando com o Windows](~/mac/user-interface/window.md)
+- [Delegados, protocolos e eventos](~/ios/app-fundamentals/delegates-protocols-and-events.md)
 - [Model-View-Controller](https://developer.apple.com/library/ios/documentation/general/conceptual/CocoaEncyclopedia/Model-View-Controller/Model-View-Controller.html)

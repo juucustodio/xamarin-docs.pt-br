@@ -1,135 +1,135 @@
 ---
-title: Testes em dispositivos do Apple Watch
-description: Este documento descreve como implantar um aplicativo do watchOS criado com o Xamarin para teste em um Apple Watch real. Ele discute dispositivos, perfis, teste, o provisionamento e fornece algumas dicas de solução de problemas.
+title: Testando em dispositivos Apple Watch
+description: Este documento descreve como implantar um aplicativo watchOS criado com o Xamarin para teste em um Apple Watch real. Ele aborda os dispositivos, Provisionando perfis, testando e fornece algumas dicas de solução de problemas.
 ms.prod: xamarin
 ms.assetid: A72A7D38-FAE8-4DD2-843D-54B74C5078D7
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: 9c15e9205b96a02caa182e47b71c6d36c8bff1aa
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 4b1e232259d7b1816e64298b5c0b8853d8385c20
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61282821"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70283865"
 ---
-# <a name="testing-on-apple-watch-devices"></a>Testes em dispositivos do Apple Watch
+# <a name="testing-on-apple-watch-devices"></a>Testando em dispositivos Apple Watch
 
-Depois de ter seguido as [etapas de implantação](~/ios/watchos/deploy-test/index.md) para criar IDs do aplicativo e grupos de aplicativos (se necessário), use as instruções nesta página para:
+Depois de seguir as [etapas de implantação](~/ios/watchos/deploy-test/index.md) para criar IDs de aplicativo e grupos de aplicativos (se necessário), use as instruções nesta página para:
 
-- [Configure seus dispositivos](#devices) no Centro de desenvolvimento da Apple, e
-- [Criar perfis de provisionamento de desenvolvimento](#profiles), em seguida,
+- [Configure seus dispositivos](#devices) no centro de desenvolvimento da Apple e
+- [Criar perfis de provisionamento de desenvolvimento](#profiles)e, em seguida,
 - [Implantar e testar](#testing) em um Apple Watch.
 
 <a name="devices" />
 
 ## <a name="devices"></a>Dispositivos
 
-Testando aplicativos iOS em um real iPhone ou iPad sempre exigiu o dispositivo a ser registrado no Centro de desenvolvimento. A lista de dispositivos se parece com isso (clique no sinal de adição **+** para adicionar um novo dispositivo):
+Testar aplicativos iOS em um iPhone ou iPad real sempre exigiu que o dispositivo fosse registrado no centro de desenvolvimento. A lista de dispositivos tem esta aparência (clique no sinal **+** de adição para adicionar um novo dispositivo):
 
-![](device-images/devices-sml.png "A lista de dispositivos se parece com isso")
+![](device-images/devices-sml.png "A lista de dispositivos é parecida com esta")
 
-Relógios não são diferentes - agora você precisa adicionar seu dispositivo da Apple Watch antes de implantar aplicativos para ele. Localizar o watch usando o UDID **Xcode** (**Windows > dispositivos** lista). Quando o telefone emparelhado é conectado informações da inspeção também serão exibidas:
+Os Watches não são diferentes-agora você precisa adicionar seu dispositivo de Apple Watch antes de implantar aplicativos nele. Localize o UDID do Watch usando a lista de dispositivos do **Xcode** (**Windows >** ). Quando o telefone emparelhado estiver conectado, as informações do observador também serão exibidas:
 
-[![](device-images/xcode-devices-sml.png "Informações de Watch emparelhado")](device-images/xcode-devices.png#lightbox)
+[![](device-images/xcode-devices-sml.png "Informações de inspeção emparelhadas")](device-images/xcode-devices.png#lightbox)
 
-Quando você sabe que a inspeção UDID, adicioná-lo à lista de dispositivos no Centro de desenvolvimento:
+Quando você souber o UDID da inspeção, adicione-o à lista de dispositivos no centro de desenvolvimento:
 
-![](device-images/devices-watch-sml.png "A inspeção UDID na lista de dispositivos")
+![](device-images/devices-watch-sml.png "O UDID da inspeção na lista de dispositivos")
 
-Após a adição de dispositivo de inspeção, certifique-se de que ela está selecionada em qualquer desenvolvimento de novo ou existente ou criar os perfis de provisionamento do ad-hoc:
+Depois que o dispositivo observado tiver sido adicionado, certifique-se de que ele esteja selecionado em qualquer desenvolvimento novo ou existente ou perfis de provisionamento ad-hoc que você criar:
 
 ![](device-images/devices-provisioning.png "Lista de dispositivos disponíveis")
 
-Não se esqueça de se você editar um perfil de provisionamento existente para baixar e instalá-la novamente!
+Não se esqueça de editar um perfil de provisionamento existente para baixar e reinstalar o!
 
 <a name="profiles" />
 
 ## <a name="development-provisioning-profiles"></a>Perfis de provisionamento de desenvolvimento
 
-Para compilar para testes em seu dispositivo, você precisará criar uma **perfil de provisionamento de desenvolvimento** para cada ID do aplicativo em sua solução.
+Para criar testes em seu dispositivo, você precisa criar um **perfil de provisionamento de desenvolvimento** para cada ID de aplicativo em sua solução.
 
-Se você tiver um ID do aplicativo curinga *somente um perfil de provisionamento será necessário*; mas se você tiver uma ID de aplicativo separada para cada projeto, você precisará de um perfil de provisionamento para cada ID do aplicativo:
+Se você tiver uma ID de aplicativo curinga, *somente um perfil de provisionamento será necessário*; Mas se você tiver uma ID de aplicativo separada para cada projeto, precisará de um perfil de provisionamento para cada ID de aplicativo:
 
 ![](device-images/provisioningprofile-development.png "O perfil de provisionamento de desenvolvimento")
 
-Depois de criar todos os três perfis, eles aparecerão na lista. Lembre-se baixar e instalar cada um deles:
+Depois de criar todos os três perfis, eles aparecerão na lista. Lembre-se de baixar e instalar cada uma delas:
 
 ![](device-images/provisioningprofiles.png "Os perfis de provisionamento de desenvolvimento disponíveis")
 
-Você pode verificar se o perfil de provisionamento a **opções de projeto** selecionando o **compilar > assinatura do pacote iOS** tela e selecionando o **versão** ou **Depurar iPhone** configuração.
+Você pode verificar o perfil de provisionamento nas opções do **projeto** selecionando a tela **Build > assinatura de pacote do IOS** e selecionando a configuração **versão** ou **depurar iPhone** .
 
-O **perfil de provisionamento** lista mostrará todos os perfis de correspondência – você deverá ver os perfis de correspondência que você criou na lista suspensa:
+A lista de **perfis de provisionamento** mostrará todos os perfis de correspondência – você deverá ver os perfis de correspondência criados nesta lista suspensa:
 
 ![](device-images/options-selectprofile.png "A lista de perfis de provisionamento")
 
 
 <a name="testing" />
 
-## <a name="testing-on-a-watch-device"></a>Teste em um dispositivo de inspeção
+## <a name="testing-on-a-watch-device"></a>Testando em um dispositivo de inspeção
 
-Quando você tiver configurado seu dispositivo, as IDs do aplicativo e perfis de provisionamento, você está pronto para testar.
+Depois de configurar seu dispositivo, as IDs de aplicativo e os perfis de provisionamento, você estará pronto para testar.
 
-1. Verifique se seu iPhone está conectado e a inspeção já está emparelhada com o iPhone.
+1. Verifique se o iPhone está conectado e se o relógio já está emparelhado com o iPhone.
 
-2. Verifique se a configuração é definida como **Release** ou **depurar**.
+2. Verifique se a configuração está definida como **liberar** ou **depurar**.
 
-3. Certifique-se de que o dispositivo iPhone conectada for selecionado na lista de destino.
+3. Verifique se o dispositivo iPhone conectado está selecionado na lista destino.
 
-4. Clique com botão direito no projeto de aplicativo do iOS (não a inspeção ou extensão) e escolha **definir como projeto de inicialização**.
+4. Clique com o botão direito do mouse no projeto do aplicativo iOS (não na inspeção ou extensão) e escolha **definir como projeto de inicialização**.
 
-5. Clique no **executados** botão (ou escolha um **iniciar** opção o **executar** menu).
+5. Clique no botão **executar** (ou escolha uma opção **Iniciar** no menu **executar** ).
 
-6. A solução será criado e será implantado o aplicativo do iOS para iPhone.
-  Se o aplicativo iOS ou o provisionamento de extensão de inspeção não está definido corretamente a implantação para o iPhone falhará.
+6. A solução será criada e o aplicativo iOS será implantado no iPhone.
+  Se o aplicativo iOS ou o provisionamento de extensão de inspeção não estiver definido corretamente, a implantação para o iPhone falhará.
 
-7. Se a implantação for concluída com êxito, o iPhone tentará automaticamente enviar o aplicativo de inspeção para o Watch emparelhado. O ícone do aplicativo será exibido na tela de inspeção com circular *instalando* indicador de progresso.
+7. Se a implantação for concluída com êxito, o iPhone tentará enviar automaticamente o aplicativo Watch para o relógio emparelhado. O ícone do aplicativo será exibido na tela de inspeção com um indicador de progresso de *instalação* circular.
 
-8. Se o aplicativo watch é instalado com êxito, o ícone permanecerá na tela watch - tocá-lo para começar a testar seu aplicativo!
+8. Se o aplicativo Watch for instalado com êxito, o ícone permanecerá na tela Watch – toque-o para começar a testar seu aplicativo!
 
 
 ## <a name="troubleshooting"></a>Solução de problemas
 
-Se ocorrer um erro durante o uso de implantação do **Exibir > Pads > Log do dispositivo** para obter mais informações sobre o erro. Alguns erros e suas causas estão listadas abaixo:
+Se ocorrer um erro durante a implantação, use a **exibição > Pads > log do dispositivo** para ver mais informações sobre o erro. Alguns erros e suas causas são listados abaixo:
 
-### <a name="error-mt3001-could-not-aot-the-assembly"></a>Error MT3001: Poderia AOT o assembly
+### <a name="error-mt3001-could-not-aot-the-assembly"></a>Erro MT3001: Não foi possível AOT o assembly
 
-Isso pode ocorrer ao compilar no modo de depuração para implantar em um dispositivo Apple Watch.
+Isso pode ocorrer ao criar no modo de depuração para implantar em um dispositivo Apple Watch.
 
-Para *temporariamente* contornar esse problema, desabilite **compilações incrementais** na extensão de inspeção **opções de projeto > Build > Build do watchOS** janela:
+Para contornar *temporariamente* esse problema, desabilite as **compilações incrementais** nas opções de projeto de extensão de inspeção **> compilar > janela de compilação watchOS** :
 
-[![](device-images/disable-incremental-sml.png "A caixa de seleção de Builds incrementais")](device-images/disable-incremental.png#lightbox)
+[![](device-images/disable-incremental-sml.png "A caixa de seleção compilações incrementais")](device-images/disable-incremental.png#lightbox)
 
-Isso será corrigido em uma versão futura, após o qual os builds incrementais podem ser habilitados novamente para tirar proveito dos tempos mais rápidos de build.
-
-
-### <a name="watch-app-fails-to-start-while-debugging-on-device"></a>Aplicativo Watch não pode ser iniciado durante a depuração no dispositivo
-
-Quando aparecer a tentativa de depurar um aplicativo de inspeção em um dispositivo físico, apenas o ícone & controle giratório de carregamento (e, eventualmente, tempo limite). Isso será corrigido em uma versão futura; uma solução alternativa é executar um build de versão (que não permitirá que a depuração).
+Isso será corrigido em uma versão futura, após a qual as compilações incrementais podem ser habilitadas novamente para aproveitar os tempos de compilação mais rápidos.
 
 
-### <a name="invalid-application-executable-or-application-verification-failed"></a>Falha na verificação do aplicativo ou executável de aplicativo inválido
+### <a name="watch-app-fails-to-start-while-debugging-on-device"></a>Falha ao iniciar o aplicativo de inspeção durante a depuração no dispositivo
+
+Ao tentar depurar um aplicativo Watch em um dispositivo físico, somente o ícone & carregamento de controle giratório aparece (e eventualmente o tempo limite). Isso será abordado em uma versão futura; uma solução alternativa é executar uma compilação de versão (que não permitirá a depuração).
+
+
+### <a name="invalid-application-executable-or-application-verification-failed"></a>Falha de verificação de aplicativo ou executável de aplicativo inválido
 
 ```csharp
 Failed to install [APPNAME]
 Invalid executable/Application Verification Failed
 ```
 
-![](device-images/invalid-application-executable.png "Alerta do executável de aplicativo inválida")
+![](device-images/invalid-application-executable.png "Alerta de executável de aplicativo inválido")
 
-Se essas mensagens aparecem *na tela de inspeção* depois que o aplicativo tentou instalar, pode haver alguns problemas:
+Se essas mensagens aparecerem *na tela Watch* depois que o aplicativo tentar instalar, pode haver alguns problemas:
 
-- O dispositivo de inspeção em si não foi adicionado como um dispositivo no Centro de desenvolvimento da Apple. Siga as instruções para [configurar corretamente os dispositivos](#devices).
+- O próprio dispositivo de observação não foi adicionado como um dispositivo no centro de desenvolvimento da Apple. Siga as instruções para [configurar os dispositivos corretamente](#devices).
 
-- Os perfis de provisionamento de desenvolvimento que está sendo usados para teste não tinha o dispositivo de inspeção incluído; ou, depois que o relógio foi adicionado para os perfis de provisionamento, eles não foram baixados novamente e reinstalados. Siga as instruções para [configurar os perfis de provisionamento corretamente](#profiles).
+- Os perfis de provisionamento de desenvolvimento que estão sendo usados para teste não tinham o dispositivo de observação incluído; ou depois que o relógio foi adicionado aos perfis de provisionamento, eles não foram rebaixados e reinstalados. Siga as instruções para [configurar os perfis de provisionamento corretamente](#profiles).
 
-- Se o **Log do dispositivo do iOS** contém `The system version is lower than the minimum OS version specified for bundle...Have 8.2; need 8.3` do, em seguida, o aplicativo de inspeção **Info. plist** tem incorretos **MinimumOSVersion** valor.
-  Isso deve ser **8.2** – se você tiver instalado o 6.3 Xcode que talvez você precise editar manualmente a origem para inserção defini-lo como 8.2.
+- Se o **log do dispositivo IOS** contiver `The system version is lower than the minimum OS version specified for bundle...Have 8.2; need 8.3` , o **info. plist** do aplicativo de inspeção terá o valor de **MinimumOSVersion** errado.
+  Isso deve ser **8,2** -se você tiver instalado o Xcode 6,3, talvez seja necessário editar manualmente a origem para inserir defini-la como 8,2.
 
-- O aplicativo de inspeção **Entitlements. plist** incorretamente um direito habilitou (como grupos de aplicativos) que ele não deve ter.
+- Os direitos do aplicativo Watch **. o plist** tem um direito habilitado (como grupos de aplicativos) que ele não deveria ter.
 
-- O aplicativo de inspeção **ID do aplicativo** incorretamente tem um direito habilitado (por exemplo, grupos de aplicativos) no Centro de desenvolvimento que ele não deve ter.
+- A **ID do aplicativo** do aplicativo de inspeção incorretamente tem um direito habilitado (como grupos de aplicativos) no centro de desenvolvimento que não deveria ter.
 
 
 
@@ -139,21 +139,21 @@ Se essas mensagens aparecem *na tela de inspeção* depois que o aplicativo tent
 SPErrorGizmoInstallNeverFinishedErrorMessage
 ```
 
-Esse erro pode indicar chaves desnecessárias (e inválidas) no aplicativo de inspeção **Info. plist** arquivo. Você não deve incluir as chaves para a extensão de inspeção ou aplicativo do iOS no aplicativo de inspeção.
+Esse erro pode indicar chaves desnecessárias (e inválidas) no arquivo **info. plist** do aplicativo Watch. Você não deve incluir chaves destinadas ao aplicativo iOS ou à extensão Watch no aplicativo Watch.
 
 <!--eg. NSLocationAlwaysUsageDescription -->
 
 
-### <a name="waiting-for-debugger-to-connect"></a>"aguardando o depurador conectar-se"
+### <a name="waiting-for-debugger-to-connect"></a>"aguardando o depurador se conectar"
 
-Se o **saída do aplicativo** janela fica preso mostrando
+Se a janela **saída do aplicativo** ficar presa, mostrando
 
 ```csharp
 waiting for debugger to connect
 ```
 
-Verifique se qualquer um dos NuGets que foram incluídos em seu projeto tem uma dependência **Microsoft.Bcl.Build**. Isso é adicionado automaticamente com algumas bibliotecas publicadas pela Microsoft, incluindo o popular [bibliotecas de cliente Http Microsoft](https://www.nuget.org/packages/Microsoft.Net.Http/).
+Verifique se qualquer um dos NuGets que foram incluídos no seu projeto tem uma dependência em **Microsoft. BCL. Build**. Isso é adicionado automaticamente com algumas bibliotecas publicadas pela Microsoft, incluindo as populares [bibliotecas de clientes http da Microsoft](https://www.nuget.org/packages/Microsoft.Net.Http/).
 
-O **Microsoft.Bcl.Build.targets** arquivo que é adicionado para o **. csproj** pode interferir com o empacotamento de extensões do iOS durante a implantação. Você pode acompanhar o [bug](https://bugzilla.xamarin.com/show_bug.cgi?id=29912).
-Uma solução alternativa é possível editar o arquivo. csproj e mover manualmente o **Microsoft.Bcl.Build.targets** para ser o último elemento.
+O arquivo **Microsoft. BCL. Build. targets** que é adicionado ao **. csproj** pode interferir no empacotamento de extensões do IOS durante a implantação. Você pode acompanhar o [bug](https://bugzilla.xamarin.com/show_bug.cgi?id=29912).
+Uma possível solução alternativa é editar o arquivo. csproj e mover manualmente o **Microsoft. BCL. Build. targets** para ser o último elemento.
 

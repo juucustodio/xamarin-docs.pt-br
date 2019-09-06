@@ -4,15 +4,15 @@ description: Este documento descreve vários meios de armazenamento de dados em 
 ms.prod: xamarin
 ms.assetid: B1994468-FD06-4FD9-96B3-FCEBB13A972A
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 10/11/2016
-ms.openlocfilehash: 375144804fceb473ec4642dbcf451497c55bcba7
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 71a1b4df1d57d489efd7f3171a8c36aac1017cca
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69527321"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70281710"
 ---
 # <a name="introduction-to-data-storage-in-xamarinios-apps"></a>Introdução ao armazenamento de dados em aplicativos Xamarin. iOS
 

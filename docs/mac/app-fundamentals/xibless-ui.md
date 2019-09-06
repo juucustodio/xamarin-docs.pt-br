@@ -4,15 +4,15 @@ description: Este artigo aborda a criação de uma interface do usuário do apli
 ms.prod: xamarin
 ms.assetid: 02310F58-DCF1-4589-9F4A-065DF64FC0E1
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: d51e1b20e1409d228db2f38e6c31ad1165897654
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 5776855039120b0c856a76a31334420ded2a2d65
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70226900"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70283324"
 ---
 # <a name="storyboardxib-less-user-interface-design-in-xamarinmac"></a>. Storyboard/. xib-o design de interface do usuário menos no Xamarin. Mac
 
@@ -124,7 +124,7 @@ namespace MacXibless
 
 Vamos discutir alguns dos elementos principais.
 
-Primeiro, adicionamos algumas _Propriedades_ computadas que funcionarão como saídas (como se a janela fosse criada em um arquivo. Storyboard ou. xib):
+Primeiro, adicionamos algumas _Propriedades computadas_ que funcionarão como saídas (como se a janela fosse criada em um arquivo. Storyboard ou. xib):
 
 ```csharp
 public NSButton ClickMeButton { get; set;}
@@ -247,7 +247,7 @@ Os seguintes `NSWindowStyle` recursos estão disponíveis:
 - **Título** -a janela terá uma barra de título.
 - **Closable** -a janela tem um botão fechar e pode ser fechada.
 - **Miniaturizable** -a janela tem um botão Miniaturize e pode ser minimizada.
-- Redimensionável-a janela terá um botão de redimensionamento e será redimensionável.
+- **Redimensionável** -a janela terá um botão de redimensionamento e será redimensionável.
 - **Utilitário** – a janela é uma janela de estilo do utilitário (painel).
 - **DocModal** -se a janela for um painel, ela será modal de documento em vez de modal do sistema.
 - **NonactivatingPanel** -se a janela for um painel, ela não se tornará a janela principal.
@@ -294,7 +294,7 @@ Se quisermos adicionar apenas um código, xibless janela a um aplicativo Xamarin
 
 ![Adicionando um novo controlador de janela](xibless-ui-images/add01.png "Adicionando um novo controlador de janela")
 
-Assim como antes, vamos excluir o arquivo default. Storyboard ou. xib do projeto (neste caso, **SecondWindow. xib**) e seguir as etapas na seção alternando [uma janela para usar código](#Switching_a_Window_to_use_Code) acima para cobrir a definição da janela para código.
+Assim como antes, vamos excluir o arquivo default. Storyboard ou. xib do projeto (neste caso, **SecondWindow. xib**) e seguir as etapas na seção [alternando uma janela para usar código](#Switching_a_Window_to_use_Code) acima para cobrir a definição da janela para código.
 
 
 ## <a name="adding-a-ui-element-to-a-window-in-code"></a>Adicionando um elemento de interface do usuário a uma janela no código

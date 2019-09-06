@@ -4,15 +4,15 @@ description: Este documento descreve o sistema de contagem de referência aprimo
 ms.prod: xamarin
 ms.assetid: 0221ED8C-5382-4C1C-B182-6C3F3AA47DB1
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 11/25/2015
-ms.openlocfilehash: 221c3a3bb82b5b46f4afea5ec43fcdd5c00b0556
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 8b1b82a1707a4aa58ef1e3dadbaeb79ada1ad6a1
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70199331"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291880"
 ---
 # <a name="new-reference-counting-system-in-xamarinios"></a>Novo sistema de contagem de referência no Xamarin. iOS
 
@@ -77,6 +77,6 @@ Sem a extensão de contagem de referência, esse código `cell` falharia porque 
 
 A extensão de contagem de referência garante que o objeto gerenciado permaneça ativo e impeça sua coleção, desde que o objeto nativo seja retido pelo código nativo.
 
-O novo sistema também elimina a necessidade de *mais* campos particulares de backup usados em associações – que é a abordagem padrão para manter a instância ativa. O vinculador gerenciado é inteligente o suficiente para remover todos os campos desnecessários dos aplicativos que usam a nova extensão de contagem de referência.
+O novo sistema também elimina a necessidade de *mais* campos particulares de backup usados em associações – que é a abordagem padrão para manter a instância ativa. O vinculador gerenciado é inteligente o suficiente para remover todos os campos *desnecessários* dos aplicativos que usam a nova extensão de contagem de referência.
 
 Isso significa que cada instância de objeto gerenciado consome menos memória do que antes. Ele também resolve um problema relacionado em que alguns campos de apoio poderiam manter referências que não eram mais necessárias pelo tempo de execução Objective-C, dificultando a recuperação de alguma memória.

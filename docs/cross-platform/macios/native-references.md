@@ -3,15 +3,15 @@ title: Projetos do iOS, Mac e bindings de referências nativas
 description: Referências nativas fornecem a capacidade de inserir uma estrutura nativa em um projeto Xamarin. iOS, Xamarin. Mac ou Binding.
 ms.prod: xamarin
 ms.assetid: E53185FB-CEF5-4AB5-94F9-CC9B57C52300
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: e5e232ffa8a41f7adbffae595b85341a10d8667a
-ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
+ms.openlocfilehash: de34dcdd194bd3777214d23fded7e5f42ec5141c
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70065267"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70287548"
 ---
 # <a name="native-references-in-ios-mac-and-bindings-projects"></a>Referências nativas em projetos do iOS, Mac e bindings
 
@@ -26,7 +26,7 @@ Desde o iOS 8,0, é possível criar uma estrutura inserida para compartilhar có
 
 ## <a name="terminology"></a>Terminologia
 
-No iOS 8 (e posterior), as **estruturas inseridas** podem ser estruturas incorporadas estaticamente e vinculadas dinamicamente. Para distribuí-los corretamente, você deve torná-los em estruturas "Fat" que incluíam todas as suas fatias para cada arquitetura de dispositivo para a qual você deseja dar suporte com seu aplicativo.
+No iOS 8 (e posterior), as **estruturas inseridas** podem ser estruturas incorporadas estaticamente e vinculadas dinamicamente. Para distribuí-los corretamente, você deve torná-los em estruturas "Fat" que incluíam todas as suas _fatias_ para cada arquitetura de dispositivo para a qual você deseja dar suporte com seu aplicativo.
 
 <a name="Static-vs-Dynamic-Frameworks" />
 

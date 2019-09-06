@@ -4,15 +4,15 @@ description: Este documento descreve como trabalhar com notificações por push 
 ms.prod: xamarin
 ms.assetid: 64B3BE6A-A3E2-4B1B-95ED-02D27A8FDAAC
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: c707cb1afb774d73be7ea441695b88920489eb5f
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: ee2c54f2369682571520370e09d6d39c2cd86fa5
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528757"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290586"
 ---
 # <a name="push-notifications-in-ios"></a>Notificações por push no iOS
 
@@ -81,7 +81,7 @@ Cada um dos ambientes mencionados na seção anterior requer seu próprio certif
 
 12. Para criar um perfil de provisionamento de desenvolvimento, navegue até a seção **perfis de provisionamento** e siga as etapas para criá-lo, usando a ID do aplicativo que acabamos de criar.
 
-13. Depois de criar o perfil de provisionamento, abra o organizador do **Xcode** e atualize-o. Se o perfil de provisionamento criado não aparecer, talvez seja necessário baixar o perfil do portal de provisionamento do iOS e importá-lo manualmente. A captura de tela a seguir mostra um exemplo do organizador com o perfil de provisão adicionado:  
+13. Depois de criar o perfil de provisionamento, abra o **organizador do Xcode** e atualize-o. Se o perfil de provisionamento criado não aparecer, talvez seja necessário baixar o perfil do portal de provisionamento do iOS e importá-lo manualmente. A captura de tela a seguir mostra um exemplo do organizador com o perfil de provisão adicionado:  
     [![](remote-notifications-in-ios-images/image13new.png "Esta captura de tela mostra um exemplo do organizador com o perfil de provisionamento adicionado")](remote-notifications-in-ios-images/image13new.png#lightbox)
 
 14. Neste ponto, precisamos configurar o projeto Xamarin. iOS para usar esse perfil de provisionamento criado recentemente. Isso é feito na caixa de diálogo **Opções do projeto** , na guia assinatura do **pacote do IOS** , conforme mostrado na seguinte captura de tela:  

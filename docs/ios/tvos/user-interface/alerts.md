@@ -4,15 +4,15 @@ description: Este documento descreve como trabalhar com alertas do tvOS no Xamar
 ms.prod: xamarin
 ms.assetid: F969BB28-FF2C-4A7D-88CA-F8076AD48538
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: de7c8918ff500cb2353214fd84eaa4c97713493e
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 8ab832028d4474bbb3c34805b245638695eae75e
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227271"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291120"
 ---
 # <a name="working-with-tvos-alerts-in-xamarin"></a>Trabalhando com alertas do tvOS no Xamarin
 
@@ -34,7 +34,7 @@ Conforme mencionado acima, os alertas são usados para obter a atenção do usu�
 
 A Apple tem as seguintes sugestões para trabalhar com alertas:
 
-- **Usar alertas** com moderação-alertas interrompe o fluxo do usuário com o aplicativo e interrompe a experiência do usuário e, como tal, deve ser usado apenas para situações importantes, como notificações de erro, compras no aplicativo e ações destrutivas.
+- **Usar alertas com moderação** -alertas interrompe o fluxo do usuário com o aplicativo e interrompe a experiência do usuário e, como tal, deve ser usado apenas para situações importantes, como notificações de erro, compras no aplicativo e ações destrutivas.
 - **Fornece opções úteis** – se o alerta apresentar opções para o usuário, você deve garantir que cada opção ofereça informações críticas e forneça ações úteis para o usuário tomar.
 
 <a name="Alert-Titles-and-Messages" />

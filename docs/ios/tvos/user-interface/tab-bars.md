@@ -4,15 +4,15 @@ description: Este documento descreve como trabalhar com controladores de barra d
 ms.prod: xamarin
 ms.assetid: 99A2D7C6-0324-4DE5-B6E9-D39D0BAD8370
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: 64b114cad16095a2afd80b690a4654b91b2aa203
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 799dd40caae0323b71cae2c6715bf8cd16f78356
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70199941"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70283978"
 ---
 # <a name="working-with-tvos-tab-bar-controllers-in-xamarin"></a>Trabalhando com controladores de barra de guias tvOS no Xamarin
 
@@ -39,7 +39,7 @@ A Apple tem as seguintes sugestões para trabalhar com barras de tabulação:
 
 - **Use as barras de guias para organizar o conteúdo logicamente** -use a barra de guias para organizar logicamente o conteúdo com o qual seu aplicativo tvOS funciona. Por exemplo, em destaque, gráficos superiores, comprados e pesquisados.
 - **Adicionar notificações para informar os usuários do novo conteúdo** -você pode, opcionalmente, exibir uma notificação (uma elipse vermelha com um número branco ou ponto de exclamação) para informar o usuário sobre o novo conteúdo em uma categoria.
-- **Use as notificações** com moderação-não obstruir a barra de guias com notificações e exibi-las somente onde elas fornecem informações críticas ao usuário.
+- **Use as notificações com moderação** -não obstruir a barra de guias com notificações e exibi-las somente onde elas fornecem informações críticas ao usuário.
 - **Limitar o número de categorias** – para reduzir a complexidade e manter seu aplicativo gerenciável, não sobrecarregar sua barra de guias com categorias e garantir que todas as categorias fiquem visíveis e não lotadas. Os títulos simples e curtos funcionam melhor.
 - **Não desabilitar uma categoria** – todas as guias (categorias) sempre devem estar visíveis e habilitadas em todos os momentos. Se uma determinada guia não tiver conteúdo, forneça uma explicação para o usuário. Por exemplo, a guia compras estará vazia se o usuário não tiver feito nenhuma compra.
 
@@ -65,7 +65,7 @@ A maneira mais fácil de trabalhar com barras de guias em um aplicativo Xamarin.
     [![](tab-bars-images/tab02.png "Selecionar aplicativo com guias")](tab-bars-images/tab02.png#lightbox)
 1. Siga todos os prompts para criar uma nova solução Xamarin. tvOS.
 1. No **painel de soluções**, clique duas vezes no arquivo `Main.storyboard` e abra-o para edição.
-1. Para alterar o **ícone** ou o **título** de uma determinada categoria, selecione o **item de barra de guias** para o controlador de **exibição** no contorno do **documento**:
+1. Para alterar o **ícone** ou o **título** de uma determinada categoria, selecione o **item de barra de guias** para o controlador de **exibição** no **contorno do documento**:
 
     [![](tab-bars-images/tab03a.png "O item da barra de guias do controlador de exibição na estrutura de tópicos do documento")](tab-bars-images/tab03a.png#lightbox)
 1. Em seguida, defina as propriedades necessárias na **Guia Widget** do **Gerenciador de propriedades**: 
@@ -90,7 +90,7 @@ A maneira mais fácil de trabalhar com barras de guias em um aplicativo Xamarin.
     [![](tab-bars-images/tab02vs.png "Selecionar aplicativo com guias")](tab-bars-images/tab02vs.png#lightbox)
 1. Siga todos os prompts para criar uma nova solução Xamarin. tvOS.
 1. No **Gerenciador de soluções**, clique duas vezes no arquivo `Main.storyboard` e abra-o para edição.
-1. Para alterar o **ícone** ou o **título** de uma determinada categoria, selecione o **item de barra de guias** para o controlador de **exibição** no contorno do **documento**:
+1. Para alterar o **ícone** ou o **título** de uma determinada categoria, selecione o **item de barra de guias** para o controlador de **exibição** no **contorno do documento**:
 
     [![](tab-bars-images/tab03avs.png "O controlador de exibição na estrutura de tópicos do documento")](tab-bars-images/tab03avs.png#lightbox)
 1. Em seguida, defina as propriedades necessárias na **Guia Widget** do **Gerenciador de propriedades**: 

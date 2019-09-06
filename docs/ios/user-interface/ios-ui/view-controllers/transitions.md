@@ -4,15 +4,15 @@ description: Este documento descreve como personalizar transições animadas ent
 ms.prod: xamarin
 ms.assetid: CB3AC8E2-8A47-4839-AFA5-AE33047BB26C
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 06/14/2017
-ms.openlocfilehash: fd3cd2bb62fdb378ed62c53c01130ebeaff74d2a
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 45d9580899ac42dba300086b5d5694c07d177871
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70226378"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70287828"
 ---
 # <a name="view-controller-transitions-in-xamarinios"></a>Exibir transições do controlador no Xamarin. iOS
 

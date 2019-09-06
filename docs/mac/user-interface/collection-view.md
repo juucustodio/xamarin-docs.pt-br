@@ -4,15 +4,15 @@ description: Este artigo descreve como trabalhar com exibições de coleção em
 ms.prod: xamarin
 ms.assetid: 6EE32256-5948-4AE4-8133-6D0B3F4173E8
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 05/24/2017
-ms.openlocfilehash: ee1b3043033ea1d6e024619e6a176947733e9f24
-ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
+ms.openlocfilehash: a3673f017a5dd50e5cc3ae44790bf359c2871440
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70065479"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70279632"
 ---
 # <a name="collection-views-in-xamarinmac"></a>Exibições de coleção no Xamarin. Mac
 
@@ -26,7 +26,7 @@ Um `NSCollectionView` exibe uma grade de subexibições organizadas usando `NSCo
 
 Este artigo aborda as noções básicas de como trabalhar com exibições de coleção em um aplicativo Xamarin. Mac. É altamente recomendável que você trabalhe pelo artigo [Hello, Mac](~/mac/get-started/hello-mac.md) primeiro, especificamente a [introdução às seções Xcode e Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) e [ações](~/mac/get-started/hello-mac.md#outlets-and-actions) , pois ela aborda os principais conceitos e técnicas que são usados ao longo deste artigo.
 
-Talvez você queira dar uma olhada na seção [expondo C# classes/métodos para Objective-C](~/mac/internals/how-it-works.md) do documento [interno do Xamarin. Mac](~/mac/internals/how-it-works.md) também, explica `Register` os comandos e `Export` usados para conectar suas C# classes ao Objetos Objective-C e elementos de interface do usuário.
+Talvez você queira dar uma olhada na seção [expondo C# classes/métodos para Objective-C](~/mac/internals/how-it-works.md) do documento [interno do Xamarin. Mac](~/mac/internals/how-it-works.md) também, explica os `Register` comandos e `Export` usados para conectar suas C# classes ao Objetos Objective-C e elementos de interface do usuário.
 
 <a name="About_Collection_Views"/>
 
@@ -582,7 +582,7 @@ Faça o seguinte:
 3. Com o modo de exibição de coleção selecionado, use o editor de restrição para fixá-lo na exibição quando ele for redimensionado:
 
     ![Adicionando restrições](collection-view-images/collection02.png)
-4. Verifique se a exibição de coleção está selecionada na **design Surface** (e não na **exibição** de rolagem com borda ou na **exibição de clipe** que a contém), alterne para o **Editor do assistente** e crie uma **tomada** para a exibição de coleção:
+4. Verifique se a exibição de coleção está selecionada na **design Surface** (e não na **exibição de rolagem com borda** ou na **exibição de clipe** que a contém), alterne para o **Editor do assistente** e crie uma **tomada** para a exibição de coleção:
 
     ![Adicionando restrições](collection-view-images/collection03.png)
 5. Salve as alterações e retorne ao Visual Studio para sincronização.

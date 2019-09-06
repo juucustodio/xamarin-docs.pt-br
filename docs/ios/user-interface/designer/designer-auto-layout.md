@@ -4,15 +4,15 @@ description: Este guia apresenta o layout automático do iOS e descreve como usa
 ms.prod: xamarin
 ms.assetid: CAC7A715-55BB-45E2-BB6D-2168D36D428F
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: 5e70a34fe4381b7c6d636448501a03d4e61039d7
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: f931397f50b6b7aece099efb775a6dda560bf0eb
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70198971"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70279997"
 ---
 # <a name="auto-layout-with-the-xamarin-designer-for-ios"></a>Layout automático com o Xamarin Designer para iOS
 
@@ -71,7 +71,7 @@ Na seção anterior, aprendemos a adicionar restrições padrão e remover restr
 
 ### <a name="creating-constraints"></a>Criando restrições
 
-A ferramenta de designer do iOS oferece dois tipos de controles para manipular elementos na superfície de design. *Arrastando controles* e *fixando controles*de espaçamento, conforme ilustrado na imagem a seguir:
+A ferramenta de designer do iOS oferece dois tipos de controles para manipular elementos na superfície de design. *Arrastando controles* e *fixando controles de espaçamento*, conforme ilustrado na imagem a seguir:
 
 ![Exibir controles](designer-auto-layout-images/controls.png)
 

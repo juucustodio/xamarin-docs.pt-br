@@ -4,15 +4,15 @@ description: Este artigo descreve como usar gestos de toque 3D introduzidos com 
 ms.prod: xamarin
 ms.assetid: 806D051E-3791-40F7-9776-4E4D3E56F7F3
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: 784638e2796f12cb338fb3583b62a376e16dcf60
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 46db28dab32f14fa476b9fbb42b788feb669aa74
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70199735"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291861"
 ---
 # <a name="introduction-to-3d-touch-in-xamarinios"></a>Introdução ao toque 3D no Xamarin. iOS
 
@@ -179,7 +179,7 @@ O `CommitViewController` reutiliza o modo de exibição que criamos no **Peek** 
 
 ### <a name="registering-for-peek-and-pop"></a>Registrando para Peek e pop
 
-No controlador de exibição que queremos permitir que o usuário **Inspecione** e exiba itens , precisamos se registrar para esse serviço. No exemplo fornecido acima de um controlador de exibição de tabela`MasterViewController`(), usaremos o código a seguir:
+No controlador de exibição que queremos permitir que o usuário **Inspecione** e **exiba itens,** precisamos se registrar para esse serviço. No exemplo fornecido acima de um controlador de exibição de tabela`MasterViewController`(), usaremos o código a seguir:
 
 ```csharp
 public override void ViewDidLoad ()

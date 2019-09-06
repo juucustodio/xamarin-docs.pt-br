@@ -4,15 +4,15 @@ description: Este documento descreve a entrada de texto em um aplicativo Xamarin
 ms.prod: xamarin
 ms.assetid: 03A7F1DC-017D-4501-91FD-82C78272CDB1
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: edabddfeeac7f1c75df298cba6f885ec130972ba
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: ef9067f3a0694c66d21d6614277e8543aebbc299
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528556"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70279350"
 ---
 # <a name="text-input-in-xamarinios"></a>Entrada de texto no Xamarin. iOS
 

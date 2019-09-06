@@ -4,15 +4,15 @@ description: Este artigo apresenta todas as APIs e recursos novos e modificados 
 ms.prod: xamarin
 ms.assetid: CB9C1EC8-6008-43AD-977E-976AE7C73DD8
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: 1b362d91e14d85499099a0fed3637fb128474ef9
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 114d00b0d79b497201b3185a1443b8c8f9699c31
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68657422"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70283554"
 ---
 # <a name="introduction-to-tvos-10"></a>Introdução ao tvOS 10
 
@@ -40,7 +40,7 @@ A Apple fez vários aprimoramentos na segurança e na privacidade no tvOS 10, qu
 
 Como resultado, os aplicativos executados no watchOS 3 (ou posterior) devem declarar estaticamente sua intenção de acessar recursos específicos ou informações do usuário inserindo uma ou mais chaves de privacidade específicas em `Info.plist` seus arquivos que explicam ao usuário por que o aplicativo deseja obter acesso.
 
-Como o tvOS 10 compartilha essas alterações com o iOS 10, consulte nosso guia de aprimoramentos de [segurança e privacidade](~/ios/app-fundamentals/security-privacy.md) do IOS 10 para obter mais informações.
+Como o tvOS 10 compartilha essas alterações com o iOS 10, consulte nosso guia de [aprimoramentos de segurança e privacidade](~/ios/app-fundamentals/security-privacy.md) do IOS 10 para obter mais informações.
 
 ## <a name="video-subscriber-account"></a>Conta do assinante de vídeo
 

@@ -3,15 +3,15 @@ title: Atualizando aplicativos iOS existentes
 description: Este documento descreve as etapas que devem ser seguidas para atualizar um aplicativo Xamarin. iOS da API Clássica para a API Unificada.
 ms.prod: xamarin
 ms.assetid: 303C36A8-CBF4-48C0-9412-387E95024CAB
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: b0999ff6fc3b3042827f11ae1e127ef7bb9fedfe
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: c74efef96a15a950122041eb52dc09835bb8940b
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68509611"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70279557"
 ---
 # <a name="updating-existing-ios-apps"></a>Atualizando aplicativos iOS existentes
 
@@ -47,7 +47,7 @@ Novamente, depois que os avisos forem corrigidos, siga estas etapas para atualiz
 
 ### <a name="1-update-project-type--build-target"></a>1. Atualizar o tipo de projeto & destino da compilação
 
-Altere o tipo de projeto em  seus arquivos csproj `6BC8ED88-2882-458C-8E55-DFD12B67127B` de `FEACFBD2-3405-455C-9665-78FE426C6842`para. Edite o arquivo **csproj** em um editor de texto, substituindo o primeiro `<ProjectTypeGuids>` item no elemento, conforme mostrado:
+Altere o tipo de projeto em seus arquivos csproj `6BC8ED88-2882-458C-8E55-DFD12B67127B` de `FEACFBD2-3405-455C-9665-78FE426C6842`para. Edite o arquivo **csproj** em um editor de texto, substituindo o primeiro `<ProjectTypeGuids>` item no elemento, conforme mostrado:
 
 ![](updating-ios-apps-images/csproj.png "Edite o arquivo csproj em um editor de texto, substituindo o primeiro item no elemento ProjectTypeGuids, conforme mostrado")
 
@@ -61,7 +61,7 @@ Expanda o nó **referências** do projeto de aplicativo Ios. Inicialmente, ele m
 
 ![](updating-ios-apps-images/references.png "Inicialmente, ele mostrará uma referência MonoTouch quebrada semelhante a esta captura de tela, pois o tipo de projeto foi alterado")
 
-Clique com o botão direito do mouse no projeto de aplicativo iOS para **Editar referências**e  clique na referência do MonoTouch e exclua-a usando o botão vermelho "X".
+Clique com o botão direito do mouse no projeto de aplicativo iOS para **Editar referências**e clique na referência do **MonoTouch** e exclua-a usando o botão vermelho "X".
 
 ![](updating-ios-apps-images/references-delete-monotouch-sml.png "Clique com o botão direito do mouse no projeto de aplicativo iOS para editar referências e, em seguida, clique na referência do MonoTouch e exclua-a usando o botão X vermelho")
 
@@ -73,7 +73,7 @@ Pressione **OK** para salvar as alterações de referências do projeto.
 
 ### <a name="3-remove-monotouch-from-namespaces"></a>3. Remover o MonoTouch dos namespaces
 
-Remova o  prefixo MonoTouch dos namespaces em `using` instruções ou sempre que um ClassName tiver sido totalmente qualificado (por exemplo, `MonoTouch.UIKit`se torna `UIKit`apenas).
+Remova o prefixo **MonoTouch** dos namespaces em `using` instruções ou sempre que um ClassName tiver sido totalmente qualificado (por exemplo, `MonoTouch.UIKit`se torna `UIKit`apenas).
 
 ### <a name="4-remap-types"></a>4. Tipos de remapeamento
 

@@ -4,15 +4,15 @@ description: Este artigo mostra como incluir uma extensão de aplicativo de mens
 ms.prod: xamarin
 ms.assetid: 0CFB494C-376C-449D-B714-9E82644F9DA3
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 05/02/2017
-ms.openlocfilehash: 92b16e4a802411c70bef7d5810a161dbdfedfa09
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 1d6edb9107c3d6ae04c91ebcf874fb92a7f911b3
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227486"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70280035"
 ---
 # <a name="message-app-extension-basics-in-xamarinios"></a>Noções básicas da extensão do aplicativo de mensagens no Xamarin. iOS
 
@@ -29,7 +29,7 @@ Como mencionado acima, uma extensão de aplicativo de mensagem se integra ao apl
 
 As extensões de aplicativos de mensagens fornecem três tipos de conteúdo principais:
 
-- **Mensagens** interativas – são um tipo de conteúdo de mensagem personalizada que um aplicativo gera, quando o usuário toca na mensagem, o aplicativo será iniciado em primeiro plano.
+- **Mensagens interativas** – são um tipo de conteúdo de mensagem personalizada que um aplicativo gera, quando o usuário toca na mensagem, o aplicativo será iniciado em primeiro plano.
 - **Adesivos** -são imagens geradas pelo aplicativo que podem ser incluídas nas mensagens enviadas entre os usuários.
 - **Outro conteúdo com suporte** -o aplicativo pode fornecer conteúdo como fotos, vídeos, texto ou links para qualquer outro tipo de conteúdo que sempre tenha sido suportado pelo aplicativo de mensagens.
 
@@ -493,7 +493,7 @@ namespace MessageExtension
 }
 ```
 
-O `AddStickerViewController` manipulará a exibição de adesivo expandida e será semelhante ao seguinte:
+O `AddStickerViewController` manipulará a exibição de adesivo **expandida** e será semelhante ao seguinte:
 
 ```csharp
 using System;

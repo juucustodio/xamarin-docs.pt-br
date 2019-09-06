@@ -4,15 +4,15 @@ description: Este documento descreve como trabalhar com storyboards no Xamarin. 
 ms.prod: xamarin
 ms.assetid: DF4DF7C2-DDD7-4A32-B375-5C5446301EC5
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 2f3bdc70928dc06719bf7cfb775bf70fae9695a4
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 6aca181b2942bbde854df41c8f9741106cda6776
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227870"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70279306"
 ---
 # <a name="working-with-storyboards-in-xamarinmac"></a>Trabalhando com storyboards no Xamarin. Mac
 
@@ -84,7 +84,7 @@ E, assim, eles são conectados para receber e responder a eventos, como seleçõ
 
 ### <a name="containment"></a>Confinamento
 
-Em storyboards, os controladores de exibição (como o controlador de exibição de divisão e o controlador de exibição deguia) agora podem implementar o confinamento, de modo que eles podem "conter" outros controladores de subexibição:
+Em storyboards, os controladores de exibição (como o controlador de exibição de divisão e o controlador de exibição de guia) agora podem implementar o _confinamento_, de modo que eles podem "conter" outros controladores de subexibição:
 
 [![Um exemplo de contenção do controlador de exibição](indepth-images/vc02.png)](indepth-images/vc02.png#lightbox)
 

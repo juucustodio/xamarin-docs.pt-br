@@ -4,15 +4,15 @@ description: Nesta seção, vamos examinar como usar as notificações locais em
 ms.prod: xamarin
 ms.assetid: 32B9C6F0-2BB3-4295-99CB-A75418969A62
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: 376f046769e27586d9611d634aef89811c7b3be8
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: a012d8f166a287dfde4247a2df6d1e82091d9d70
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70200377"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290452"
 ---
 # <a name="walkthrough---using-local-notifications-in-xamarinios"></a>Walkthrough – usando notificações locais no Xamarin. iOS
 

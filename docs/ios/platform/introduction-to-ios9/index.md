@@ -4,15 +4,15 @@ description: Este artigo apresenta todas as APIs e recursos novos e modificados 
 ms.prod: xamarin
 ms.assetid: 4D71BBD9-B948-4B59-9AF5-F199C51CBEB3
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: 69a599b6a7534cb77dd9e023d937f10a6b0523fb
-ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
+ms.openlocfilehash: c162912d6762ac1ee9d2896f96bbb35e9fef06f4
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69620665"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70285201"
 ---
 # <a name="introduction-to-ios-9"></a>Introdução ao iOS 9
 
@@ -74,7 +74,7 @@ A pesquisa foi expandida no iOS 9 para fornecer excelentes maneiras novas de ace
 
 Além disso, as novas APIs de pesquisa facilitam a integração da pesquisa em seu aplicativo sem a experiência de implementação anterior da pesquisa. Por isso, a Apple alega que normalmente leva algumas horas para fazer com que o conteúdo de um aplicativo iOS 9 seja pesquisado universalmente usando a pesquisa de aplicativos.
 
-Para obter mais informações, consulte nossa documentação de aprimoramentos de [pesquisa](~/ios/platform/search/index.md) .
+Para obter mais informações, consulte nossa documentação de [aprimoramentos de pesquisa](~/ios/platform/search/index.md) .
 
 ## <a name="new-stack-view"></a>Nova exibição de pilha
 
@@ -99,7 +99,7 @@ Com o iOS 9, a Apple fez várias melhorias tecnológicas nas APIs de jogos que f
 
 Isso inclui GameplayKit, ReplayKit, modelo de e/s, MetalKit e sombreadores de desempenho de metal juntamente com novos recursos aprimorados de metal, SceneKit e SpriteKit.
 
-Para obter mais informações, consulte a documentação de aprimoramentos de [jogos](~/ios/platform/gaming/index.md) .
+Para obter mais informações, consulte a documentação de [aprimoramentos de jogos](~/ios/platform/gaming/index.md) .
 
 ## <a name="homekit-framework-changes"></a>Alterações na estrutura do HomeKit
 
@@ -113,7 +113,7 @@ Para obter mais informações, consulte nossa [introdução ao homekit](~/ios/pl
 
 A entrega (também conhecida como continuidade) foi introduzida pela Apple no iOS 8 e no OS X Yosemite (10,10) como uma maneira para o usuário iniciar uma atividade em um de seus dispositivos (iOS ou Mac) e continuar a mesma atividade em outro de seus dispositivos (conforme identificado pelo iClou do usuário Conta d).
 
-A entrega foi expandida no iOS 9 para oferecer também suporte a novos recursos de pesquisa aprimorados. Para obter mais informações, consulte nossa documentação de aprimoramentos de [pesquisa](~/ios/platform/search/index.md) . Para obter mais informações sobre como usar a entrega, consulte nossa [introdução à documentação de entrega](~/ios/platform/handoff.md) .
+A entrega foi expandida no iOS 9 para oferecer também suporte a novos recursos de pesquisa aprimorados. Para obter mais informações, consulte nossa documentação de [aprimoramentos de pesquisa](~/ios/platform/search/index.md) . Para obter mais informações sobre como usar a entrega, consulte nossa [introdução à documentação de entrega](~/ios/platform/handoff.md) .
 
 ## <a name="new-extension-points"></a>Novos pontos de extensão
 
@@ -186,7 +186,7 @@ A Apple preteriu as seguintes APIs e funções no iOS 9:
 - **FetchAllChanges** -a `FetchAllChanges` da `CKFetchRecordChangesOperation` classe foi depreciada e será removida no Ios 9.
 - **Player de mídia** -a estrutura do Media Player foi preterida no Ios 9. Em vez disso, use as APIs AVKit ou AV Foundation.
 
-Para obter uma lista completa de substituições de API específicas, consulte a documentação de diffs da [API do iOS 9,0](https://developer.apple.com/library/prerelease/ios/releasenotes/General/iOS90APIDiffs/index.html#//apple_ref/doc/uid/TP40016222) da Apple.
+Para obter uma lista completa de substituições de API específicas, consulte a documentação de [diffs da API do iOS 9,0](https://developer.apple.com/library/prerelease/ios/releasenotes/General/iOS90APIDiffs/index.html#//apple_ref/doc/uid/TP40016222) da Apple.
 
 ## <a name="ios-9-sample-apps"></a>Aplicativos de exemplo do iOS 9
 

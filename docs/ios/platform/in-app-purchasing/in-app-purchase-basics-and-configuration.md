@@ -4,15 +4,15 @@ description: Este documento descreve as compras no aplicativo no Xamarin. iOS, d
 ms.prod: xamarin
 ms.assetid: 11FB7F02-41B3-2B34-5A4F-69F12897FE10
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: 0c24c0f3a57847a7ecf1a1410a1745419517e0c6
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 9347a801c939fd715101253c6953eeec840af47d
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70198863"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70288583"
 ---
 # <a name="in-app-purchase-basics-and-configuration-in-xamarinios"></a>Noções básicas de compra no aplicativo e configuração no Xamarin. iOS
 
@@ -65,7 +65,7 @@ Sua conta de desenvolvedor deve ter um contrato de **aplicativos pagos do IOS** 
 
  [![](in-app-purchase-basics-and-configuration-images/image3.png "Sua conta de desenvolvedor deve ter um contrato de aplicativos pagos do iOS em vigor")](in-app-purchase-basics-and-configuration-images/image3.png#lightbox)
 
-Você não poderá testar nenhuma funcionalidade StoreKit até ter um contrato de **aplicativos pagos do IOS** – as chamadas do StoreKit em seu código falharão até que a Apple tenha processado seus **contratos, impostos e** informações bancárias.
+Você não poderá testar nenhuma funcionalidade StoreKit até ter um contrato de **aplicativos pagos do IOS** – as chamadas do StoreKit em seu código falharão até que a Apple tenha processado seus **contratos, impostos e informações bancárias** .
 
 ### <a name="ios-provisioning-portal"></a>Portal de provisionamento do iOS
 

@@ -4,15 +4,15 @@ description: Links para documentos que descrevem a estrutura de notificações d
 ms.prod: xamarin
 ms.assetid: 223FCE25-A3E6-4255-BCFC-0E3136F4E987
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 09/01/2016
-ms.openlocfilehash: 13fb48d5ee64c1d84926158381f0f69655fb2cf2
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: b0a9714a1231ad9565a987460e5a378f3da8655a
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68651182"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290553"
 ---
 # <a name="user-notifications-framework-in-xamarinios"></a>Estrutura de notificações do usuário no Xamarin. iOS
 

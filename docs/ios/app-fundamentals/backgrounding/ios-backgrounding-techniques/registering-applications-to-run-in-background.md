@@ -4,15 +4,15 @@ description: Este documento descreve como registrar um aplicativo Xamarin. iOS p
 ms.prod: xamarin
 ms.assetid: 8F89BE63-DDB5-4740-A69D-F60AEB21150D
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: 67cc2028276b6e1415c88cb8957e2cd567fa5bae
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 044ae7e4a77abb77e766df58b9cda5938ce8fe7b
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69521268"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290609"
 ---
 # <a name="registering-xamarinios-apps-to-run-in-the-background"></a>Registrando aplicativos Xamarin. iOS para serem executados em segundo plano
 

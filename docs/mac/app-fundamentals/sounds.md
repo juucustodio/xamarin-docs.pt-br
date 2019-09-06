@@ -1,38 +1,38 @@
 ---
-title: Reproduzir som com AVAudioPlayer no xamarin. Mac
-description: Este documento descreve como reproduzir um som com AVAudioPlayer em um aplicativo xamarin. Mac. Ele aborda AVAudioPlayer em um alto nível e links para outros documentos que explora a ele mais detalhadamente.
+title: Reprodução de som com AVAudioPlayer no Xamarin. Mac
+description: Este documento descreve como reproduzir som com AVAudioPlayer em um aplicativo Xamarin. Mac. Ele aborda o AVAudioPlayer em um alto nível e links para outras documentações que o exploram mais completamente.
 ms.prod: xamarin
 ms.assetid: 4A683A94-F75D-4EAF-8497-E9443653250B
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 10/19/2016
-ms.openlocfilehash: 9aeb7bbfc2fddef1f690b5299ec060c475ea1ce7
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: b4a5ead3e3c02fbdd2ae5486a6ac637defeb5abd
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61234837"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70283299"
 ---
-# <a name="playing-sound-with-avaudioplayer-in-xamarinmac"></a>Reproduzir som com AVAudioPlayer no xamarin. Mac
+# <a name="playing-sound-with-avaudioplayer-in-xamarinmac"></a>Reprodução de som com AVAudioPlayer no Xamarin. Mac
 
 ## <a name="about-the-avaudioplayer"></a>Sobre o AVAudioPlayer
 
-O `AVAudioPlayer` classe é usada para dados de áudio de reprodução de memória ou um arquivo. Apple recomenda o uso dessa classe para reproduzir áudio no seu aplicativo, a menos que você estiver fazendo streaming de rede ou exige e/s de áudio de baixa latência.
+A `AVAudioPlayer` classe é usada para reproduzir dados de áudio de memória ou de um arquivo. A Apple recomenda usar essa classe para reproduzir áudio em seu aplicativo, a menos que você esteja fazendo streaming de rede ou exija e/s de áudio de baixa latência.
 
-Você pode usar o `AVAudioPlayer` classe para fazer o seguinte:
+Você pode usar a `AVAudioPlayer` classe para fazer o seguinte:
 
-- Reproduzir sons de qualquer duração de repetição opcional.
-- Reproduzir sons vários ao mesmo tempo com a sincronização opcional.
-- Controlar o volume, velocidade de reprodução e posicionamento estéreo para cada reprodução de sons.
-- Suporte a recursos como Avançar ou retroceder.
+- Jogue sons de qualquer duração com loop opcional.
+- Jogue vários sons ao mesmo tempo com a sincronização opcional.
+- Volume de controle, taxa de reprodução e posicionamento de estéreo para cada som em execução.
+- Suporte a recursos como avançar ou retroceder.
 - Obter dados de medição de nível de reprodução.
 
-`AVAudioPlayer` dá suporte a sons em qualquer formato de áudio fornecido pelo iOS, tvOS e macOS, como. AIF,. wav ou. mp3.
+`AVAudioPlayer`dá suporte a sons em qualquer formato de áudio fornecido pelo iOS, tvOS e macOS, como. aif,. wav ou. mp3.
 
-## <a name="playing-sounds-in-macos"></a>Reprodução de sons no macOS
+## <a name="playing-sounds-in-macos"></a>Tocando sons no macOS
 
-Como o macOS suporta as mesmas classes de caixa de ferramentas de áudio como iOS, consulte nosso iOS [tocando som com AVAudioPlayer](https://github.com/xamarin/recipes/tree/master/Recipes/ios/media/sound/avaudioplayer) documentação para os detalhes completos de reprodução de áudio em um aplicativo xamarin. Mac.
+Como o macOS dá suporte às mesmas classes de caixa de ferramentas de áudio que o iOS, consulte nosso [som de reprodução](https://github.com/xamarin/recipes/tree/master/Recipes/ios/media/sound/avaudioplayer) de Ios com a documentação do AVAudioPlayer para obter os detalhes completos da reprodução de áudio em um aplicativo Xamarin. Mac.
 
 ## <a name="related-links"></a>Links relacionados
 

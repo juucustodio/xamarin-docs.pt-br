@@ -1,75 +1,75 @@
 ---
-title: Cores amplas no xamarin. IOS
-description: Este documento discute as cores de largura e como ele pode ser usado em um aplicativo xamarin. IOS ou xamarin. Mac.
+title: Cor larga no Xamarin. iOS
+description: Este documento discute toda a cor e como ela pode ser usada em um aplicativo Xamarin. iOS ou Xamarin. Mac.
 ms.prod: xamarin
 ms.assetid: 576E978A-F182-489A-83E4-D8CDC6890B24
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: 523aa1a97e1c536b5afbdb66c52f605382fa338d
-ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
+ms.openlocfilehash: a1f5301d0c5c0674e162b3d7689c83bbb4f6ae90
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67268799"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290542"
 ---
-# <a name="wide-color-in-xamarinios"></a>Cores amplas no xamarin. IOS
+# <a name="wide-color-in-xamarinios"></a>Cor larga no Xamarin. iOS
 
-_Este artigo aborda as cores de largura e como ele pode ser usado em um aplicativo xamarin. IOS ou xamarin. Mac._
+_Este artigo aborda toda a cor e como ela pode ser usada em um aplicativo Xamarin. iOS ou Xamarin. Mac._
 
-iOS 10 e o macOS Sierra aprimora o suporte para formatos de pixel de intervalo estendido e espaços de cores de toda a gama de cores em todo o sistema, incluindo estruturas como elementos gráficos principais, imagem principal, Metal e AVFoundation. Suporte para dispositivos com telas de cores adicional é facilitado por fornecendo esse comportamento em toda a pilha inteira de gráficos.
+o iOS 10 e o macOS Sierra aprimoram o suporte para formatos de pixel de intervalo estendido e espaços de cores de ampla gama em todo o sistema, incluindo estruturas como gráficos principais, imagem principal, metal e AVFoundation. O suporte para dispositivos com monitores largos de cores é mais facilitou, fornecendo esse comportamento em toda a pilha gráfica.
 
 ## <a name="asset-catalogs"></a>Catálogos de ativos
 
-### <a name="supporting-wide-color-with-asset-catalogs"></a>Suporte a cores com catálogos de ativos
+### <a name="supporting-wide-color-with-asset-catalogs"></a>Suporte a cores largos com catálogos de ativos
 
-No iOS 10 e no macOS Sierra, Apple expandiu os catálogos de ativo usado para incluir e categorizar o conteúdo de imagem estática no pacote do aplicativo para dar suporte a cores de largura.
+No iOS 10 e macOS Sierra, a Apple expandiu os catálogos de ativos usados para incluir e categorizar o conteúdo da imagem estática no pacote do aplicativo para dar suporte a cores amplas.
 
-Usando catálogos de ativos oferecem os seguintes benefícios para um aplicativo:
+O uso de catálogos de ativos fornece os seguintes benefícios para um aplicativo:
 
 - Eles fornecem a melhor opção de implantação para ativos de imagem estática.
-- Eles oferecem suporte a correção de cor automática.
-- Eles dão suporte a otimização de formato de pixel automáticas.
-- Eles oferecem suporte a divisão do aplicativo e diminuir o aplicativo que garante que somente o conteúdo que é relevante get entregue ao dispositivo do usuário final.
+- Eles dão suporte à correção automática de cores.
+- Eles dão suporte à otimização automática de formato de pixel.
+- Eles dão suporte à divisão de aplicativos e à Finamento de aplicativos, o que garante que apenas o conteúdo relevante seja entregue ao dispositivo do usuário final.
 
-Apple tornou os seguintes aprimoramentos para catálogos de ativos para suporte a cores de largura:
+A Apple fez os seguintes aprimoramentos aos catálogos de ativos para obter suporte a cores largos:
 
-- Eles oferecem suporte a conteúdo de origem de 16 bits (por canal de cor).
-- Eles oferecem suporte a conteúdo de catalogação por gama de exibição. Conteúdo pode ser marcado para o monitor P3 gamas ou sRGB.
+- Eles dão suporte ao conteúdo de origem de 16 bits (por canal de cores).
+- Eles dão suporte à catalogação de conteúdo por gama de exibições. O conteúdo pode ser marcado para o sRGB ou para exibir as cores P3.
 
-O desenvolvedor tem três opções para dar suporte a conteúdo de cores em seus aplicativos:
+O desenvolvedor tem três opções para dar suporte ao conteúdo de cores largos em seus aplicativos:
 
-1. **Não faça nada** -uma vez que o conteúdo de cores amplas só deve ser usado em situações em que o aplicativo precisa para exibir cores vivas (onde eles serão aprimorar a experiência do usuário), o conteúdo fora esse requisito deve ser deixado como-está. Ele continuará a ser renderizado corretamente em todas as situações de hardware.
-2. **Atualizar o conteúdo existente para o monitor P3** -isso exige que o desenvolvedor substitua o conteúdo de imagem existente em seu catálogo de ativos com um arquivo novo e atualizado no formato P3 e marcá-lo como tal no Editor ativo. No momento da compilação, uma imagem de derivativos sRGB será gerada a partir desses ativos.
-3. **Fornecer conteúdo de ativos com otimização de** -nessa situação, o desenvolvedor fornecerá um sRGB de 8 bits e uma visão de monitor P3 de 16 bits de cada imagem no catálogo de ativos (corretamente marcados no editor ativo).
+1. **Não fazer nada** -como o conteúdo de cores largos só deve ser usado em situações em que o aplicativo precise exibir cores vivas (onde eles aprimorarão a experiência do usuário), o conteúdo fora desse requisito deverá ser deixado como está. Ele continuará a ser renderizado corretamente em todas as situações de hardware.
+2. **Atualizar conteúdo existente para exibir P3** -isso exige que o desenvolvedor substitua o conteúdo da imagem existente em seu catálogo de ativos por um novo arquivo atualizado no formato P3 e marque-o como tal no editor de ativos. No momento da compilação, uma imagem derivada do sRGB será gerada a partir desses ativos.
+3. **Fornecer conteúdo de ativo otimizado** -nessa situação, o desenvolvedor fornecerá um sRGB de 8 bits e uma visão de exibição P3 de 16 bits de cada imagem no catálogo de ativos (corretamente marcado no editor de ativos).
 
 ### <a name="asset-catalog-deployment"></a>Implantação do catálogo de ativos
 
-O seguinte ocorrerá quando o desenvolvedor envia um aplicativo para a Store do aplicativo com catálogos de ativos que incluem o conteúdo da imagem de cores:
+O seguinte ocorrerá quando o desenvolvedor enviar um aplicativo para a loja de aplicativos com catálogos de ativos que incluem conteúdo de imagem de cor ampla:
 
-- Quando o aplicativo é implantado para o usuário final, aplicativo de divisão garantirá que apenas a variante de conteúdo apropriada é entregue ao dispositivo do usuário.
-- No dispositivo que não dão suporte a cores amplas, não há nenhum custo de carga para incluir o conteúdo de cores, pois ele nunca é enviado ao dispositivo.
-- `NSImage` no macOS Sierra (e posterior) selecionará automaticamente a melhor representação de conteúdo para exibição do hardware.
-- O conteúdo exibido será atualizado automaticamente quando ou se o hardware de dispositivos exibir características de alteração.
+- Quando o aplicativo for implantado no usuário final, a fatia do aplicativo garantirá que apenas a variante de conteúdo apropriada seja entregue ao dispositivo do usuário.
+- No dispositivo que não oferece suporte a cores amplas, não há nenhum custo de carga para incluir o conteúdo de cores largos, pois ele nunca é enviado para o dispositivo.
+- `NSImage`em macOS Sierra (e posterior), o selecionará automaticamente a melhor representação de conteúdo para a exibição do hardware.
+- O conteúdo exibido será atualizado automaticamente quando ou se as características de exibição de hardware dos dispositivos forem alteradas.
 
-### <a name="asset-catalog-storage"></a>Armazenamento de catálogo de ativos
+### <a name="asset-catalog-storage"></a>Armazenamento do catálogo de ativos
 
-Armazenamento de catálogo ativo tem as propriedades e as implicações para um aplicativo a seguir:
+O armazenamento do catálogo de ativos tem as seguintes propriedades e implicações para um aplicativo:
 
-- No momento da compilação, o Apple tenta otimizar o armazenamento do conteúdo de imagem por meio de conversões de imagem de alta qualidade.
-- 16 bits são usados por um canal de cor para o conteúdo de cores.
-- Compactação de conteúdo de imagem dependente é usada para reduzir os tamanhos de conteúdo do produto. Compressões "com perdas" novos foram adicionados para otimizar ainda mais os tamanhos de conteúdo.
+- No momento da compilação, a Apple tenta otimizar o armazenamento do conteúdo da imagem por meio de conversões de imagem de alta qualidade.
+- 16 bits são usados por canal de cor para o conteúdo de cores largos.
+- A compactação de imagem dependente de conteúdo é usada para reduzir os tamanhos de conteúdo de entrega. Novas compactação "com perdas" foram adicionadas para otimizar ainda mais os tamanhos de conteúdo.
 
 ## <a name="rendering-off-screen-images-in-app"></a>Renderizando imagens fora da tela no aplicativo
 
-Com base no tipo de aplicativo que está sendo criado, ele pode permitir que o usuário incluir o conteúdo da imagem que coletaram da internet ou criar conteúdo de imagem diretamente dentro do aplicativo (como um vetor de aplicativo de desenho por exemplo).
+Com base no tipo de aplicativo que está sendo criado, ele pode permitir que o usuário inclua conteúdo de imagem coletado da Internet ou Crie conteúdo de imagem diretamente dentro do aplicativo (como um aplicativo de desenho vetorial, por exemplo).
 
-Em ambos os casos, o aplicativo pode processar as imagens necessárias fora da tela ampla cor usando os recursos aprimorados adicionados para iOS e macOS.
+Em ambos os casos, o aplicativo pode renderizar as imagens necessárias fora da tela na cor larga usando recursos avançados adicionados ao iOS e ao macOS.
 
-### <a name="drawing-wide-color-in-ios"></a>Cores amplas de desenho no iOS
+### <a name="drawing-wide-color-in-ios"></a>Desenho de cores largos no iOS
 
-Antes de discutir como corretamente desenhar uma imagem de cores de largura no iOS 10, vejamos o código de desenho de iOS comuns seguintes:
+Antes de discutir como desenhar corretamente uma imagem em larga cor no iOS 10, examine o seguinte código de desenho do iOS comum:
 
 ```csharp
 public UIImage DrawWideColorImage ()
@@ -84,13 +84,13 @@ public UIImage DrawWideColorImage ()
     }
 ```
 
-Há problemas com o código padrão que precisam ser abordadas _antes de_ pode ser usado para desenhar uma imagem de cores. O `UIGraphics.BeginImageContext (size)` método usado para iniciar o desenho da imagem de iOS tem as seguintes limitações:
+Há problemas com o código padrão que precisará ser resolvido _antes_ que ele possa ser usado para desenhar uma imagem de cor ampla. O `UIGraphics.BeginImageContext (size)` método usado para iniciar o desenho de imagem Ios tem as seguintes limitações:
 
-- Ele não é possível criar os contextos de imagem com mais de 8 bits por canal de cor.
-- Ele não pode representar cores em que o espaço de cores sRGB de intervalo estendido.
-- Ele não tem a capacidade de fornecer uma interface para criar os contextos em um espaço de cor não sRGB devido a rotinas C baixo nível que está sendo chamadas em segundo plano.
+- Ele não pode criar contextos de imagem com mais de 8 bits por canal de cor.
+- Ele não pode representar cores no espaço de cores sRGB de intervalo estendido.
+- Ele não tem a capacidade de fornecer uma interface para criar contextos em um espaço de cores não sRGB devido às rotinas de baixo nível C sendo chamadas em segundo plano.
 
-Para lidar com essas limitações e desenhar uma imagem de cores de largura no iOS 10, use o código a seguir:
+Para lidar com essas limitações e desenhar uma imagem em larga cor no iOS 10, use o código a seguir em vez disso:
 
 ```csharp
 public UIImage DrawWideColorImage ()
@@ -118,22 +118,22 @@ public UIImage DrawWideColorImage ()
 }
 ```
 
-O novo `UIGraphicsImageRenderer` classe cria um novo contexto de imagem que é capaz de lidar com o espaço de cores sRGB de intervalo estendido e tem os seguintes recursos:
+A nova `UIGraphicsImageRenderer` classe cria um novo contexto de imagem que é capaz de manipular o espaço de cores sRGB de intervalo estendido e tem os seguintes recursos:
 
-- Ele é totalmente gerenciado pelo padrão de cor.
-- Ele oferece suporte para o espaço de cores sRGB de intervalo estendido por padrão.
-- -Lo de maneira inteligente decide se ele deve renderizar na sRGB ou sRGB de intervalo estendido o espaço de cores com base nos recursos do dispositivo iOS que o aplicativo está sendo executado.
-- Ele totalmente e automaticamente gerencia o contexto de imagem (`CGContext`) tempo de vida para que o desenvolvedor não precisa se preocupar sobre como chamar begin e end comandos de contexto.
+- Por padrão, ele é totalmente gerenciado por cores.
+- Ele dá suporte ao espaço de cores sRGB de intervalo estendido por padrão.
+- Ele decide de forma inteligente se deve ser renderizado no espaço de cores sRGB ou de intervalo estendido sRGB com base nos recursos do dispositivo iOS em que o aplicativo está sendo executado.
+- Ele gerencia totalmente e automaticamente o tempo de vida`CGContext`do contexto da imagem () para que o desenvolvedor não precise se preocupar em chamar comandos de contexto Begin e end.
 - Ele é compatível com o `UIGraphics.GetCurrentContext()` método.
 
-O `CreateImage` método da `UIGraphicsImageRenderer` classe é chamado para criar uma imagem de cores e passado com o contexto de imagem para desenhar em um manipulador de conclusão. Tudo o desenho é feito dentro este manipulador de conclusão da seguinte maneira:
+O `CreateImage` método`UIGraphicsImageRenderer` da classe é chamado para criar uma imagem de cor larga e passou um manipulador de conclusão com o contexto de imagem para o qual desenhar. Todo o desenho é feito dentro desse manipulador de conclusão da seguinte maneira:
 
-- O `UIColor.FromDisplayP3` método cria uma nova cor vermelha totalmente saturada no espaço de cor P3 exibição ampla variedade e ele é usado para desenhar na primeira metade do retângulo. 
-- A segunda metade do retângulo é desenhado no sRGB normal totalmente saturado cor vermelha para comparação.
+- O `UIColor.FromDisplayP3` método cria uma nova cor vermelha totalmente saturada no espaço de cor de uma grande gama de cores e é usada para desenhar a primeira metade do retângulo. 
+- A segunda metade do retângulo é desenhada na cor vermelha totalmente saturada do sRGB para comparação.
 
-### <a name="drawing-wide-color-in-macos"></a>Cores amplas de desenho no macOS
+### <a name="drawing-wide-color-in-macos"></a>Desenho de cores largos no macOS
 
-O `NSImage` classe foi expandido no macOS Sierra para dar suporte ao desenho de imagens coloridas ampla. Por exemplo:
+A `NSImage` classe foi expandida em MacOS Sierra para dar suporte ao desenho de imagens de cores largos. Por exemplo:
 
 ```csharp
 var size = CGSize(250,250);
@@ -151,13 +151,13 @@ var wideColorImage = new NSImage(size, false, (drawRect) =>{
 });
 ```
 
-## <a name="rendering-on-screen-images-in-app"></a>Na tela de renderização de imagens no aplicativo
+## <a name="rendering-on-screen-images-in-app"></a>Renderizando imagens na tela no aplicativo
 
-Para renderizar imagens com cores ampla na tela, o processo funciona de forma semelhante ao desenho de uma imagem de fora da tela de cores amplas para macOS e iOS apresentada acima.
+Para renderizar imagens de cores amplas na tela, o processo funciona de forma semelhante a desenhar uma imagem de cor de toda a tela para macOS e iOS apresentados acima.
 
-### <a name="rendering-on-screen-in-ios"></a>Na tela de renderização no iOS
+### <a name="rendering-on-screen-in-ios"></a>Renderização na tela no iOS
 
-Quando o aplicativo precisa renderizar uma imagem de cores na tela no iOS, substituir os `Draw` método da `UIView` em questão como de costume. Por exemplo:
+Quando o aplicativo precisar renderizar uma imagem em uma cor larga na tela no Ios, substitua o `Draw` método `UIView` de em questão como de costume. Por exemplo:
 
 ```csharp
 using System;
@@ -183,23 +183,23 @@ namespace MonkeyTalk
 }
 ```
 
-Como o iOS 10 com o `UIGraphicsImageRenderer` classe mostrada acima, de maneira inteligente decide se ele deve renderizar na sRGB ou sRGB de intervalo estendido o espaço de cores com base nos recursos do dispositivo iOS que o aplicativo está sendo executado quando o `Draw` método é chamado. Além disso, o `UIImageView` tem sido cor gerenciado desde o iOS 9.3.
+Como o Ios 10 faz com `UIGraphicsImageRenderer` a classe mostrada acima, ele decide de forma inteligente se ele deve ser renderizado no espaço de cores sRGB ou de intervalo estendido sRGB com base nos recursos do dispositivo IOS em que `Draw` o aplicativo está sendo executado quando o método é chamado. Além disso, `UIImageView` o tem sido gerenciado por cores desde o Ios 9,3 também.
 
-Se o aplicativo precisa saber como o processamento está sendo feito em um `UIView` ou `UIViewController`, ele pode verificar o novo `DisplayGamut` propriedade o `UITraitCollection` classe. Esse valor será uma `UIDisplayGamut` enum das seguintes opções:
+Se o aplicativo precisar saber como a renderização está sendo feita em um `UIView` ou `UIViewController`, ela poderá verificar `UITraitCollection` a nova `DisplayGamut` propriedade da classe. Esse valor será uma `UIDisplayGamut` enumeração do seguinte:
 
 - P3
-- Srgb
+- SRGB
 - Não especificado
 
-Se o aplicativo deseja controle qual espaço de cores é usado para desenhar uma imagem, pode usar um novo `ContentsFormat` propriedade do `CALayer` para especificar o espaço de cor desejado. Esse valor pode ser um `CAContentsFormat` enum das seguintes opções:
+Se o aplicativo quiser controlar qual espaço de cores é usado para desenhar uma imagem, ele poderá usar uma nova `ContentsFormat` propriedade `CALayer` do para especificar o espaço de cores desejado. Esse valor pode ser uma `CAContentsFormat` enumeração do seguinte:
 
 - Gray8Uint
 - Rgba16Float
 - Rgba8Uint
 
-### <a name="rendering-on-screen-in-macos"></a>Na tela de renderização no macOS
+### <a name="rendering-on-screen-in-macos"></a>Renderização na tela no macOS
 
-Quando o aplicativo precisa renderizar uma imagem de cores na tela no macOS, substituir os `DrawRect` método da `NSView` em questão como de costume. Por exemplo:
+Quando o aplicativo precisa renderizar uma imagem em cores largas na tela no MacOS, substitua o `DrawRect` método `NSView` de em questão como de costume. Por exemplo:
 
 ```csharp
 using System;
@@ -226,9 +226,9 @@ namespace MonkeyTalkMac
 }
 ```
 
-Novamente, ela de maneira inteligente decide se ele deve renderizar na sRGB ou sRGB de intervalo estendido o espaço de cores com base nos recursos de hardware Mac que o aplicativo está sendo executado quando o `DrawRect` método é chamado.
+Novamente, ele decide de forma inteligente se ele deve ser renderizado no espaço de cores sRGB ou de intervalo estendido sRGB com base nos recursos do hardware do Mac em que o `DrawRect` aplicativo está sendo executado quando o método é chamado.
 
-Se o aplicativo deseja controle qual espaço de cores é usado para desenhar uma imagem, pode usar um novo `DepthLimit` propriedade do `NSWindow` classe para especificar o espaço de cor desejado. Esse valor pode ser um `NSWindowDepth` enum das seguintes opções:
+Se o aplicativo quiser controlar qual espaço de cores é usado para desenhar uma imagem, ele poderá usar uma nova `DepthLimit` propriedade `NSWindow` da classe para especificar o espaço de cores desejado. Esse valor pode ser uma `NSWindowDepth` enumeração do seguinte:
 
 - OneHundredTwentyEightBitRgb
 - SixtyfourBitRgb

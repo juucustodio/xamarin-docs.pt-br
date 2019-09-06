@@ -4,15 +4,15 @@ description: Este artigo aborda como trabalhar com imagens e ícones em um aplic
 ms.prod: xamarin
 ms.assetid: C6B539C2-FC6A-4C38-B839-32BFFB9B16A7
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/15/2017
-ms.openlocfilehash: bdd4ba57dfce96e469639e4b90b06c73c339b0f0
-ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
+ms.openlocfilehash: b014c84a7bb23e723fbfbb7ead5e8dc9d9fdc549
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70065393"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70281702"
 ---
 # <a name="images-in-xamarinmac"></a>Imagens no Xamarin. Mac
 
@@ -45,13 +45,13 @@ Ao adicionar uma imagem para uso em um aplicativo Xamarin. Mac, há vários loca
 - **Árvore de projeto principal [preterido]** -as imagens podem ser adicionadas diretamente à árvore de projetos. Ao chamar imagens armazenadas na árvore de projeto principal do código, nenhum local de pasta é especificado. Por exemplo: `NSImage image = NSImage.ImageNamed("tags.png");`. 
 - **Pasta de recursos [preterido]** – a pasta de **recursos** especiais é para qualquer arquivo que se tornará parte do pacote do aplicativo, como ícone, tela de inicialização ou imagens gerais (ou qualquer outra imagem ou arquivo que o desenvolvedor deseja adicionar). Ao chamar imagens armazenadas na pasta de **recursos** do código, assim como as imagens armazenadas na árvore de projeto principal, nenhum local de pasta é especificado. Por exemplo: `NSImage.ImageNamed("tags.png")`.
 - **Pasta personalizada ou subpasta [preterido]** -o desenvolvedor pode adicionar uma pasta personalizada à árvore de origem de projetos e armazenar as imagens nela. O local onde o arquivo é adicionado pode ser aninhado em uma subpasta para ajudar a organizar o projeto. Por exemplo, se o desenvolvedor adicionou uma `Card` pasta ao projeto e uma subpasta do `Hearts` a essa pasta, armazene um conector de imagem **. png** na `Hearts` pasta, `NSImage.ImageNamed("Card/Hearts/Jack.png")` carregaria a imagem em tempo de execução.
-- **Conjuntos de imagens do catálogo de ativos [preferencial]** -adicionado no os X El Capitan, os **conjuntos de imagens** de catálogos de ativos contêm todas as versões ou representações de uma imagem que são necessárias para dar suporte a vários dispositivos e fatores de escala para seu aplicativo. Em vez de depender do nome de arquivo de ativos **@1x** de **@2x** imagem (,).
+- **Conjuntos de imagens do catálogo de ativos [preferencial]** -adicionado no os X El Capitan, os **conjuntos de imagens de catálogos de ativos** contêm todas as versões ou representações de uma imagem que são necessárias para dar suporte a vários dispositivos e fatores de escala para seu aplicativo. Em vez de depender do nome de arquivo de ativos **@1x** de **@2x** imagem (,).
 
 <a name="asset-catalogs" />
 
 ### <a name="adding-images-to-an-asset-catalog-image-set"></a>Adicionando imagens a um conjunto de imagens do catálogo de ativos
 
-Como mencionado acima, os **conjuntos de imagens** de catálogos de ativos contêm todas as versões ou representações de uma imagem que são necessárias para dar suporte a vários dispositivos e fatores de escala para seu aplicativo. Em vez de contar com o nome de arquivo de ativos de imagem (consulte as imagens independentes de resolução e a imagem nomenclatura acima), os **conjuntos de imagens** usam o editor de ativos para especificar qual imagem pertence a qual dispositivo e/ou resolução.
+Como mencionado acima, os **conjuntos de imagens de catálogos de ativos** contêm todas as versões ou representações de uma imagem que são necessárias para dar suporte a vários dispositivos e fatores de escala para seu aplicativo. Em vez de contar com o nome de arquivo de ativos de imagem (consulte as imagens independentes de resolução e a imagem nomenclatura acima), os **conjuntos de imagens** usam o editor de ativos para especificar qual imagem pertence a qual dispositivo e/ou resolução.
 
 1. No **painel de soluções**, clique duas vezes no arquivo **assets. xcassets** para abri-lo para edição: 
 
@@ -154,7 +154,7 @@ Quando o aplicativo Xamarin. Mac é executado em um Mac, o _ImageName_ **.** o _
 
 ## <a name="using-images-in-interface-builder"></a>Usando imagens no Interface Builder
 
-Qualquer recurso de imagem que você adicionou à pasta Resources em seu projeto Xamarin. Mac e definiu a ação de Build como **BundleResource** será automaticamente exibido em interface Builder e poderá ser selecionado como parte de um elemento de interface do usuário (se ele manipular imagens).
+Qualquer recurso de imagem que você adicionou à pasta **Resources** em seu projeto Xamarin. Mac e definiu a ação de Build como **BundleResource** será automaticamente exibido em interface Builder e poderá ser selecionado como parte de um elemento de interface do usuário (se ele manipular imagens).
 
 Para usar uma imagem no construtor de interface, faça o seguinte:
 
@@ -339,7 +339,7 @@ Saída de exemplo:
 
 [![Um exemplo de exibição de uma imagem em um aplicativo](image-images/tables01.png "Um exemplo de exibição de uma imagem em um aplicativo")](image-images/tables01-large.png#lightbox)
 
-Para obter mais informações sobre como trabalhar com exibições de tabela, consulte a documentação de exibições de [tabela](~/mac/user-interface/table-view.md) .
+Para obter mais informações sobre como trabalhar com exibições de tabela, consulte a documentação de [exibições de tabela](~/mac/user-interface/table-view.md) .
 
 <a name="Using_Images_with_Outline_Views" />
 
@@ -442,7 +442,7 @@ Saída de exemplo:
 
 [![Um exemplo de uma imagem sendo exibida em um modo de exibição de estrutura de tópicos](image-images/outline01.png "Um exemplo de uma imagem sendo exibida em um modo de exibição de estrutura de tópicos")](image-images/outline01-large.png#lightbox)
 
-Para obter mais informações sobre como trabalhar com exibições de estrutura de tópicos, consulte a documentação de exibições de [estrutura de tópicos](~/mac/user-interface/outline-view.md) .
+Para obter mais informações sobre como trabalhar com exibições de estrutura de tópicos, consulte a documentação de [exibições de estrutura de tópicos](~/mac/user-interface/outline-view.md) .
 
 
 ## <a name="summary"></a>Resumo

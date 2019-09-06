@@ -3,15 +3,15 @@ title: Introdução ao Android
 description: Este documento descreve como começar a usar a inserção do .NET com o Android. Ele aborda a instalação da inserção do .NET, a criação de um projeto de biblioteca do Android, o uso de uma saída gerada em um projeto Android Studio e outras considerações.
 ms.prod: xamarin
 ms.assetid: 870F0C18-A794-4C5D-881B-64CC78759E30
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/28/2018
-ms.openlocfilehash: d1d05c75b8026112e8b81c91144361b65ad3a8e0
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 9b0da6f5b195ecef5fd4e5e2b4585b660573a5be
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70120031"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70278570"
 ---
 # <a name="getting-started-with-android"></a>Introdução ao Android
 
@@ -169,7 +169,7 @@ Para que este exemplo funcione, todos os itens a seguir são configurados no APK
 - Assemblies .NET incluídos em **ativos/assemblies**
 - Modificações de **AndroidManifest. xml** para C# suas atividades, etc.
 - Recursos e ativos do Android de bibliotecas do .NET
-- Wrappers que podem ser chamados `Java.Lang.Object` pelo [Android](~/android/platform/java-integration/android-callable-wrappers.md) para qualquer subclasse
+- [Wrappers](~/android/platform/java-integration/android-callable-wrappers.md) que podem ser chamados `Java.Lang.Object` pelo Android para qualquer subclasse
 
 Se você estiver procurando por um passo a passos adicional, confira o vídeo a seguir, que demonstra a inserção de [demonstração de FingerPaint](https://docs.microsoft.com/samples/xamarin/monodroid-samples/applicationfundamentals-fingerpaint) de Charles Petzold em um projeto Android Studio:
 

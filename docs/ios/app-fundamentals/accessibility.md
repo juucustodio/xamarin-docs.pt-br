@@ -1,33 +1,33 @@
 ---
 title: Acessibilidade no iOS
-description: Este documento descreve a acessibilidade no iOS, abordando diversas propriedades e recursos que podem ser usados para tornar seu aplicativo utilizável por tantos usuários quanto possível.
+description: Este documento descreve a acessibilidade no iOS, discutindo várias propriedades e recursos que podem ser usados para tornar seu aplicativo utilizável com o máximo de usuários possível.
 ms.prod: xamarin
 ms.assetid: 88D59B36-05A3-4356-AE29-EC2B69CE7162
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 05/18/2016
-ms.openlocfilehash: aa3e15797ae1dac621ea8a78345044be1387ebaa
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 4a04f0ed4cbb336e331528c3d8265efb31388328
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61179502"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70289525"
 ---
 # <a name="accessibility-on-ios"></a>Acessibilidade no iOS
 
-Esta página descreve como usar as APIs de acessibilidade do iOS para criar aplicativos de acordo com o [lista de verificação de acessibilidade](~/cross-platform/app-fundamentals/accessibility.md).
-Consulte a [Android acessibilidade](~/android/app-fundamentals/accessibility.md) e [acessibilidade dos X](~/mac/app-fundamentals/accessibility.md) páginas para outras APIs da plataforma.
+Esta página descreve como usar as APIs de acessibilidade do iOS para compilar aplicativos de acordo com a [lista de verificação de acessibilidade](~/cross-platform/app-fundamentals/accessibility.md).
+Consulte as páginas de acessibilidade do [Android e acessibilidade](~/android/app-fundamentals/accessibility.md) do [os X](~/mac/app-fundamentals/accessibility.md) para outras APIs de plataforma.
 
-## <a name="describing-ui-elements"></a>Que descreve os elementos de interface do usuário
+## <a name="describing-ui-elements"></a>Descrevendo elementos da interface do usuário
 
-iOS fornece o `AccessibilityLabel` e `AccessibilityHint` leitor para que os controles mais acessível de tela de propriedades para os desenvolvedores adicionar texto descritivo que pode ser usado pelo VoiceOver. Controles também podem ser marcados com um ou mais características que fornecem contexto adicional nos modos acessíveis.
+o IOS fornece `AccessibilityLabel` as `AccessibilityHint` Propriedades e para que os desenvolvedores adicionem texto descritivo que pode ser usado pelo leitor de tela do VoiceOver para tornar os controles mais acessíveis. Os controles também podem ser marcados com uma ou mais características que fornecem contexto adicional em modos acessíveis.
 
-Alguns controles talvez não precise ser acessível (por exemplo, um rótulo em uma entrada de texto ou uma imagem que seja puramente decorativa) – o `IsAccessibilityElement` é fornecido para desabilitar a acessibilidade nesses casos.
+Alguns controles talvez não precisem ser acessíveis (por exemplo, um rótulo em uma entrada de texto ou uma imagem puramente decorativa) – o `IsAccessibilityElement` é fornecido para desabilitar a acessibilidade nesses casos.
 
 **Designer de interface do usuário**
 
-O **painel de propriedades** contém uma seção de acessibilidade que permite que essas configurações sejam editados quando um controle é selecionado no Designer de interface do usuário do iOS:
+O **painel de propriedades** contém uma seção de acessibilidade que permite que essas configurações sejam editadas quando um controle é selecionado no designer de interface do usuário do IOS:
 
 ![](accessibility-images/ios-designer-sml.png "Configurações de acessibilidade")
 
@@ -42,21 +42,21 @@ someLabel.IsAccessibilityElement = false;
 displayOnlyText.AccessibilityTraits = UIAccessibilityTrait.Header | UIAccessibilityTrait.Selected;
 ```
 
-### <a name="what-is-accessibilityidentifier"></a>O que é AccessibilityIdentifier?
+### <a name="what-is-accessibilityidentifier"></a>O que é o AccessibilityIdentifier?
 
-O `AccessibilityIdentifier` é usado para definir uma chave exclusiva que pode ser usada para se referir a elementos de interface do usuário por meio da API de automação da IU.
+O `AccessibilityIdentifier` é usado para definir uma chave exclusiva que pode ser usada para fazer referência a elementos da interface do usuário por meio da API automação da IU.
 
-O valor de `AccessibilityIdentifier` nunca é falada nem exibidos ao usuário.
+O valor de `AccessibilityIdentifier` nunca é falado ou exibido para o usuário.
 
 <a name="postnotification" />
 
-## <a name="postnotification"></a>PostNotification
+## <a name="postnotification"></a>Notificação por
 
-O `UIAccessibility.PostNotification` método permite que os eventos a serem gerados ao usuário fora de interação direta (por exemplo, quando eles interagem com um controle específico).
+O `UIAccessibility.PostNotification` método permite que os eventos sejam gerados para o usuário fora da interação direta (por exemplo, quando eles interagem com um controle específico).
 
-### <a name="announcement"></a>Comunicado
+### <a name="announcement"></a>Nascimento
 
-Um anúncio pode ser enviado de código para informar ao usuário que algum estado alterado (como uma operação em segundo plano foi concluída). Isso pode ser acompanhado por uma indicação visual na interface do usuário:
+Um comunicado pode ser enviado do código para informar ao usuário que algum estado foi alterado (como uma operação em segundo plano concluída). Isso pode ser acompanhado por uma indicação visual na interface do usuário:
 
 ```csharp
 UIAccessibility.PostNotification (
@@ -64,7 +64,7 @@ UIAccessibility.PostNotification (
     new NSString(@"Item was saved"));
 ```
 
-### <a name="layoutchanged"></a>LayoutChanged
+### <a name="layoutchanged"></a>Layoutchanged
 
 O `LayoutChanged` comunicado é usado quando o layout da tela:
 
@@ -77,11 +77,11 @@ UIAccessibility.PostNotification (
 
 ## <a name="accessibility-and-localization"></a>Acessibilidade e localização
 
-Propriedades de acessibilidade, como o rótulo e dica de podem ser localizados apenas como outro texto na interface do usuário.
+As propriedades de acessibilidade, como o rótulo e a dica, podem ser localizadas da mesma forma que outro texto na interface do usuário.
 
 **MainStoryboard.strings**
 
-Se a interface do usuário é disposta em um storyboard, você pode fornecer traduções para propriedades de acessibilidade da mesma forma que as outras propriedades. No exemplo a seguir, uma `UITextField` tem uma **ID de localização** de `Pqa-aa-ury` e duas propriedades de acessibilidade, que está sendo definidas em espanhol:
+Se a interface do usuário for disposta em um storyboard, você poderá fornecer traduções para propriedades de acessibilidade da mesma maneira que outras propriedades. No exemplo a seguir, um `UITextField` tem uma **ID** de localização `Pqa-aa-ury` e duas propriedades de acessibilidade sendo definidas em espanhol:
 
 ```csharp
 /* Accessibility */
@@ -89,11 +89,11 @@ Se a interface do usuário é disposta em um storyboard, você pode fornecer tra
 "Pqa-aa-ury.accessibilityHint" = "escriba más información";
 ```
 
-Esse arquivo seria colocado na **es.lproj** diretório para o conteúdo de espanhol.
+Esse arquivo seria colocado no diretório **es. lproj** para conteúdo espanhol.
 
 **Localizable.strings**
 
-Como alternativa, as traduções podem ser adicionadas para o **Localizable.strings** arquivo no (por exemplo, o diretório de conteúdo localizado **es.lproj** para espanhol):
+Como alternativa, as traduções podem ser adicionadas ao arquivo **localizável. Strings** no diretório de conteúdo localizado (por exemplo, **es. lproj** para espanhol):
 
 ```csharp
 /* Accessibility */
@@ -101,45 +101,45 @@ Como alternativa, as traduções podem ser adicionadas para o **Localizable.stri
 "Provide more information" = "escriba más información";
 ```
 
-Essas traduções podem ser usadas em C# por meio de `LocalizedString` método:
+Essas traduções podem ser usadas C# no por `LocalizedString` meio do método:
 
 ```csharp
 notesText.AccessibilityLabel = NSBundle.MainBundle.LocalizedString ("Notes", "");
 notesText.AccessibilityHint = NSBundle.MainBundle.LocalizedString ("Provide more information", "");
 ```
 
-Consulte a [guia de localização do iOS](~/ios/app-fundamentals/localization/index.md) para obter mais detalhes sobre a localização de conteúdo.
+Consulte o [Guia de localização do IOS](~/ios/app-fundamentals/localization/index.md) para obter mais detalhes sobre como localizar conteúdo.
 
 <a name="testing" />
 
 ## <a name="testing-accessibility"></a>Testando a acessibilidade
 
-VoiceOver está habilitada no **as configurações** aplicativo navegando para **geral > Acessibilidade > VoiceOver**:
+O VoiceOver está habilitado no aplicativo **configurações** navegando para **geral > acessibilidade > VoiceOver**:
 
-![](accessibility-images/settings-sml.png "Definir a taxa de fala")
+![](accessibility-images/settings-sml.png "Definindo a taxa de fala")
 
-O **acessibilidade** tela também fornece as configurações de zoom, tamanho do texto, opções de cor e contraste, as configurações de fala e outras opções de configuração.
+A tela de **acessibilidade** também fornece configurações de zoom, tamanho do texto, cor & opções de contraste, configurações de fala e outras opções de configuração.
 
-Siga estas [instruções VoiceOver](https://developer.apple.com/library/ios/technotes/TestingAccessibilityOfiOSApps/TestAccessibilityonYourDevicewithVoiceOver/TestAccessibilityonYourDevicewithVoiceOver.html) para testar a acessibilidade em dispositivos iOS.
+Siga estas [instruções do VoiceOver](https://developer.apple.com/library/ios/technotes/TestingAccessibilityOfiOSApps/TestAccessibilityonYourDevicewithVoiceOver/TestAccessibilityonYourDevicewithVoiceOver.html) para testar a acessibilidade em dispositivos IOS.
 
 
-## <a name="simulator-testing"></a>Testes do simulador
+## <a name="simulator-testing"></a>Testes de simulador
 
-Ao testar no simulador, o **Inspetor de acessibilidade** está disponível para ajudar a verificar eventos e propriedades de acessibilidade estão configurados corretamente. Ativar o Inspetor do **as configurações** aplicativo navegando para **geral > Acessibilidade > Inspetor de acessibilidade**:
+Ao testar no simulador, o **Inspetor de acessibilidade** está disponível para ajudar a verificar se as propriedades de acessibilidade e os eventos estão configurados corretamente. Ative o Inspetor no aplicativo **configurações** navegando para **geral > acessibilidade > Inspetor de acessibilidade**:
 
-![](accessibility-images/settings-inspector-sml.png "Habilitar o Inspector de acessibilidade")
+![](accessibility-images/settings-inspector-sml.png "Habilitar Inspetor de acessibilidade")
 
-Uma vez habilitada, a janela Inspetor passa o mouse sobre a tela do iOS em todos os momentos.
-Aqui está um exemplo da saída quando uma linha do modo de exibição de tabela é selecionada – Observe a **rótulo** contém uma frase que fornece o conteúdo da linha e também que ele é "concluído" (ie. a escala é visível):
+Uma vez habilitada, a janela do Inspetor focaliza a tela do iOS em todos os momentos.
+Aqui está um exemplo da saída quando uma linha de exibição de tabela é selecionada – Observe que o **rótulo** contém uma sentença que fornece o conteúdo da linha e também que é "Done" (ou seja, o tique é visível):
 
 ![](accessibility-images/tableview-a11y-sml.png "Usando o Inspetor de acessibilidade")
 
-Enquanto o Inspetor está visível, use o ícone "X" no canto superior esquerdo para temporariamente mostrar e ocultar a sobreposição e habilitar/desabilitar as configurações de acessibilidade.
+Enquanto o Inspetor estiver visível, use o ícone "X" na parte superior esquerda para mostrar temporariamente e ocultar a sobreposição e habilitar/desabilitar as configurações de acessibilidade.
 
 
 
 ## <a name="related-links"></a>Links relacionados
 
 - [Acessibilidade multiplataforma](~/cross-platform/app-fundamentals/accessibility.md)
-- [iOS acessibilidade (Apple)](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/iPhoneAccessibility/Accessibility_on_iPhone/Accessibility_on_iPhone.html)
+- [Acessibilidade do iOS (Apple)](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/iPhoneAccessibility/Accessibility_on_iPhone/Accessibility_on_iPhone.html)
 - [iOS VoiceOver](http://www.apple.com/accessibility/ios/voiceover/)

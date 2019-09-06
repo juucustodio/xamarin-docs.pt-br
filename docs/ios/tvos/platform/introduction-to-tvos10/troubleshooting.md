@@ -4,15 +4,15 @@ description: Este artigo fornece várias dicas de solução de problemas para tr
 ms.prod: xamarin
 ms.assetid: EA5564BB-C415-49A2-B70C-3DBF5E0F3FAB
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: 54a4bf2a6f575a55ce9dde8ec87c93e0d56acf9c
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: c734bfdd1baaf89cf25d687657e5f14bdbc7834c
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68657408"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70283447"
 ---
 # <a name="troubleshooting-tvos-10-apps-built-with-xamarin"></a>Solução de problemas de aplicativos do tvOS 10 criados com o Xamarin
 

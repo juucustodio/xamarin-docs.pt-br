@@ -4,15 +4,15 @@ description: Este artigo mostra técnicas avançadas para trabalhar com extensõ
 ms.prod: xamarin
 ms.assetid: 394A1FDA-AF70-4493-9B2C-4CFE4BE791B6
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: e55e6d908bbeb9b4b42ccbcad8121a1b410b79af
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 4e488f43f966ca8efd58de4d2bb8f16997d1322e
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70200135"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290951"
 ---
 # <a name="advanced-message-app-extensions-in-xamarinios"></a>Extensões avançadas do aplicativo de mensagens no Xamarin. iOS
 
@@ -30,7 +30,7 @@ Como mencionado acima, uma extensão de aplicativo de mensagem se integra ao apl
 
 As extensões de aplicativos de mensagens fornecem três tipos de conteúdo principais:
 
-- **Mensagens** interativas – são um tipo de conteúdo de mensagem personalizada que um aplicativo gera, quando o usuário toca na mensagem, o aplicativo será iniciado em primeiro plano.
+- **Mensagens interativas** – são um tipo de conteúdo de mensagem personalizada que um aplicativo gera, quando o usuário toca na mensagem, o aplicativo será iniciado em primeiro plano.
 - **Adesivos** -são imagens geradas pelo aplicativo que podem ser incluídas nas mensagens enviadas entre os usuários. Veja nosso aplicativo de exemplo de [Ice de gelo](https://docs.microsoft.com/samples/xamarin/ios-samples/ios10-icecreambuilder) para obter um exemplo de implementação de um aplicativo de pacote de adesivo.
 - **Outro conteúdo com suporte** -o aplicativo pode fornecer conteúdo como fotos, vídeos, texto ou links do tipo que sempre tenha sido suportado pelo aplicativo de mensagens.
 
@@ -173,7 +173,7 @@ Além disso, a extensão pode enviar diferentes tipos de dados para a conversa, 
 
 - **Texto** - `ActiveConversation.InsertText ("Message", (error) => {...});`
 - **Anexos** - `ActiveConversation.InsertAttachment (new NSUrl ("path"), "filename", (error) => {...});`
--  -  Adesivos ondeé`sticker` um .`MSSticker``ActiveConversation.InsertSticker (sticker, (obj) => {...});`
+- **Adesivos**  -  onde`ActiveConversation.InsertSticker (sticker, (obj) => {...});` éum`MSSticker`. `sticker`
 
 Depois que o novo conteúdo estiver no campo de entrada, o usuário poderá enviar a mensagem tocando no botão azul **Send** (da mesma forma que faria com qualquer mensagem típica). Não há como a extensão do aplicativo de mensagem enviar conteúdo automaticamente, esse processo está totalmente sob o controle do usuário.
 

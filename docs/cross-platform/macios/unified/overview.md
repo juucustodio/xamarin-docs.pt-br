@@ -3,15 +3,15 @@ title: Visão geral de API Unificada
 description: O API Unificada do Xamarin torna possível compartilhar código entre Mac e iOS e dar suporte a aplicativos de 32 e 64 bits com o mesmo binário.
 ms.prod: xamarin
 ms.assetid: 5F0CEC18-5EF6-4A99-9DCF-1A3B57EA157C
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: 99347ccc2490361bedda926b25076158a12e39bf
-ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
+ms.openlocfilehash: 75177daa2f8bd1faa271940713ff8543db3b97c0
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70065169"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70287384"
 ---
 # <a name="unified-api-overview"></a>Visão geral de API Unificada
 
@@ -83,7 +83,7 @@ Para obter uma lista completa de alterações ao alternar do clássico para o AP
 
 ## <a name="updating-to-unified"></a>Atualizando para unificado
 
-Várias APIs antigas/desfeitas/preteridas no **clássico** não estão disponíveis na API unificada. Pode ser mais fácil corrigir os `CS0616` avisos antes de iniciar a atualização (manual ou automatizada), já que você terá a `[Obsolete]` mensagem de atributo (parte do aviso) para orientá-lo na API correta.
+Várias APIs antigas/desfeitas/preteridas no **clássico** não estão disponíveis na API **unificada** . Pode ser mais fácil corrigir os `CS0616` avisos antes de iniciar a atualização (manual ou automatizada), já que você terá a `[Obsolete]` mensagem de atributo (parte do aviso) para orientá-lo na API correta.
 
 Observe que estamos publicando uma [*comparação*](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/ios/api_changes/classic-vs-unified-8.6.0/index.md) das alterações de API clássicas vs unificadas que podem ser usadas antes ou depois das atualizações do projeto. Ainda assim, a correção das chamadas obsoletas no clássico será uma economia de tempo (menos pesquisas de documentação).
 
@@ -193,7 +193,7 @@ Cada `NSObject` subclasse tem um construtor que aceita um `IntPtr`. É assim que
 
 No clássico, esse era `public` um construtor. No entanto, foi fácil usar o uso indevido desse recurso no código do usuário, por exemplo, criando várias instâncias gerenciadas para uma única instância de ObjC *ou* criando uma instância gerenciada que não teria o estado gerenciado esperado (para subclasses).
 
-Para evitar esses tipos de problemas, `IntPtr` os construtores agora `protected` estão na API unificada, para serem usados somente para subclasses. Isso garantirá que a API correta/segura seja usada para criar instância gerenciada de identificadores, ou seja,
+Para evitar esses tipos de problemas, `IntPtr` os construtores agora `protected` estão na API **unificada** , para serem usados somente para subclasses. Isso garantirá que a API correta/segura seja usada para criar instância gerenciada de identificadores, ou seja,
 
 ```csharp
 var label = Runtime.GetNSObject<UILabel> (handle);
@@ -227,7 +227,7 @@ Anteriormente, isso seria um erro de compilador porque `Action` um não pode ser
 
 ### <a name="custom-delegates-replaced-with-actiont"></a>Delegados personalizados substituídos por\<ação T >
 
-Em um simples (por exemplo, um parâmetro), os delegados do .NET `Action<T>`foram substituídos por. Por exemplo,
+Em **um** simples (por exemplo, um parâmetro), os delegados do .NET `Action<T>`foram substituídos por. Por exemplo,
 
 ```csharp
 public delegate void NSNotificationHandler (NSNotification notification);
@@ -239,7 +239,7 @@ Agora pode ser usado como um `Action<NSNotification>`. Isso promove a reutiliza�
 
 No **clássico** , havia algumas APIs assíncronas retornando `Task<bool>`. No entanto, alguns deles são usados quando um `NSError` fazia parte da assinatura, ou seja, o `bool` já `true` era e você tinha que capturar uma exceção para obter o `NSError`.
 
-Como alguns erros são muito comuns e o valor de retorno não era útil, esse padrão foi alterado em unificado para retornar um `Task<Tuple<Boolean,NSError>>`. Isso permite que você verifique o êxito e qualquer erro que possa ter ocorrido durante a chamada assíncrona.
+Como alguns erros são muito comuns e o valor de retorno não era útil, esse padrão foi alterado em **unificado** para retornar um `Task<Tuple<Boolean,NSError>>`. Isso permite que você verifique o êxito e qualquer erro que possa ter ocorrido durante a chamada assíncrona.
 
 ### <a name="nsstring-vs-string"></a>Cadeia de caracteres NSString vs
 
@@ -279,7 +279,7 @@ public virtual AVAssetResourceLoaderDelegate Delegate { get; }
 public virtual IAVAssetResourceLoaderDelegate Delegate { get; }
 ```
 
-O `I` prefixo significa que a Unified expõe uma interface, em vez de um tipo específico, para o protocolo ObjC. Isso facilitará os casos em que você não deseja criar uma subclasse do tipo específico que o Xamarin. iOS forneceu.
+O `I` prefixo significa que a **Unified** expõe uma interface, em vez de um tipo específico, para o protocolo ObjC. Isso facilitará os casos em que você não deseja criar uma subclasse do tipo específico que o Xamarin. iOS forneceu.
 
 Ele também permitia que alguma API fosse mais precisa e fácil de usar, por exemplo:
 

@@ -4,15 +4,15 @@ description: A ATS (segurança de transporte de aplicativo) impõe conexões seg
 ms.prod: xamarin
 ms.assetid: F8C5E444-2D05-4D9B-A2EF-EB052CD6F007
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 06/13/2017
-ms.openlocfilehash: 67fbd3fb7fb9c7bf1e326404d0d63bc42a3fd8ed
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: dc435f486d0020ab339ebd8f537f749f44493fe0
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227675"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70289492"
 ---
 # <a name="app-transport-security-in-xamarinios"></a>Segurança de transporte de aplicativo no Xamarin. iOS
 
@@ -69,17 +69,17 @@ Para obter mais informações sobre como trabalhar com classes de comunicação 
 
 Como o ATS está habilitado por padrão no iOS 9 e no OS X El Capitan, se seu aplicativo Xamarin. iOS ou qualquer biblioteca ou serviço que estiver usando fizer a conexão com a Internet, você precisará executar alguma ação ou suas conexões resultarão em uma exceção sendo gerada.
 
-Para um aplicativo existente, a Apple sugere que você `HTTPS` ofereça suporte ao protocolo assim que possível. Se você não puder porque você está se conectando a um serviço Web de terceiros que `HTTPS` não dá suporte `HTTPS` a ou se o suporte for inviável, você poderá recusar o ATS. Consulte a seção recusando o [ATS](#optout) abaixo para obter mais detalhes.
+Para um aplicativo existente, a Apple sugere que você `HTTPS` ofereça suporte ao protocolo assim que possível. Se você não puder porque você está se conectando a um serviço Web de terceiros que `HTTPS` não dá suporte `HTTPS` a ou se o suporte for inviável, você poderá recusar o ATS. Consulte a seção [recusando o ATS](#optout) abaixo para obter mais detalhes.
 
 Para um novo aplicativo Xamarin. Ios, você deve usar `HTTPS` exclusivamente ao se comunicar com recursos da Internet. Novamente, pode haver situações (como usar um serviço Web de terceiros) em que isso não é possível e você precisará recusar o ATS.
 
-Além disso, o ATS impõe a comunicação de API de alto nível para ser criptografada usando TLS versão 1,2 com sigilo de encaminhamento. Consulte as seções [requisitos de conexão de ATS](#ats-connection-requirements) e codificações [compatíveis com ATS](#ats-compatible-ciphers) acima para obter mais detalhes.
+Além disso, o ATS impõe a comunicação de API de alto nível para ser criptografada usando TLS versão 1,2 com sigilo de encaminhamento. Consulte as seções [requisitos de conexão de ATS](#ats-connection-requirements) e [codificações compatíveis com ATS](#ats-compatible-ciphers) acima para obter mais detalhes.
 
 Embora você talvez não esteja familiarizado com o TLS ([Transport Layer Security](https://en.wikipedia.org/wiki/Transport_Layer_Security)), ele é o sucessor do SSL ([Secure Socket Layer](https://en.wikipedia.org/wiki/Transport_Layer_Security)) e fornece uma coleção de protocolos de criptografia para impor segurança em conexões de rede.
 
 O nível de TLS é controlado pelo serviço Web que você está consumindo e, portanto, fora do controle do aplicativo. O `HttpClient` e o `ModernHttpClient` devem usar automaticamente o nível mais alto de criptografia TLS com suporte do servidor.
 
-Dependendo do servidor no qual você está conversando (especialmente se for um serviço de terceiros), talvez seja necessário desabilitar o sigilo de encaminhamento ou selecionar um nível de TLS inferior. Consulte a seção Configurando [Opções de ATS](#configuring-ats-options) abaixo para obter mais detalhes.
+Dependendo do servidor no qual você está conversando (especialmente se for um serviço de terceiros), talvez seja necessário desabilitar o sigilo de encaminhamento ou selecionar um nível de TLS inferior. Consulte a seção [Configurando opções de ATS](#configuring-ats-options) abaixo para obter mais detalhes.
 
 > [!IMPORTANT]
 > A segurança de transporte de aplicativo não se aplica a aplicativos Xamarin usando **implementações HttpClient gerenciadas**. Ele se aplica a conexões usando **implementações CFNetwork HttpClient** ou **implementações NSURLSession HttpClient** apenas.

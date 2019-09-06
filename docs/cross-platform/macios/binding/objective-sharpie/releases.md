@@ -3,15 +3,15 @@ title: Histórico de lançamento de nitidez do objetivo
 description: Este documento descreve o histórico de versões de nitidez objetiva, a ferramenta usada para automatizar a criação de C# associações para o código Objective-C.
 ms.prod: xamarin
 ms.assetid: 1F4A1BE1-7205-43F4-89D0-6C8672F52598
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 10/11/2017
-ms.openlocfilehash: 86c9f46064b66dc31f805e830309cb061a78a2c8
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: b5362c0a809423e2782ee60faa96658cf132d752
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68509642"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290865"
 ---
 # <a name="objective-sharpie-release-history"></a>Histórico de lançamento de nitidez do objetivo
 
@@ -29,7 +29,7 @@ ms.locfileid: "68509642"
 
 * Suporte para Xcode 8 Beta 4, iOS 10, macOS 10,12, tvOS 10 e watchOS 3.
 * Atualizado para a compilação mestra mais recente do Clang (2016-08-02)
-* [Persista as opções](https://twitter.com/Symbiatch/status/760373403878559744) de `sharpie pod bind` envio `sharpie bind`de telemetria de para.
+* [Persista as opções de envio de telemetria](https://twitter.com/Symbiatch/status/760373403878559744) de `sharpie pod bind` para `sharpie bind`.
 
 ## <a name="32-june-14-2016"></a>3,2 (14 de junho de 2016)
 

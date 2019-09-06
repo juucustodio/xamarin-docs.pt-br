@@ -4,15 +4,15 @@ description: Este documento descreve os principais conceitos necessários para t
 ms.prod: xamarin
 ms.assetid: 99EC5C1E-484F-4371-8555-58C9F60DE37F
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 05/02/2017
-ms.openlocfilehash: bce2c1e543084ea80908946b1e37e43cf53c1676
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 797bc4199b79944c7b2b6e9c939e2584bb21246a
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227352"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292563"
 ---
 # <a name="understanding-sirikit-concepts"></a>Noções básicas sobre os conceitos de SiriKit
 
@@ -21,7 +21,7 @@ _Este artigo aborda os principais conceitos que serão necessários para trabalh
 
 Novo no iOS 10, o SiriKit permite que um aplicativo Xamarin. iOS forneça serviços que são acessíveis para o usuário usando o Siri e o aplicativo Maps em um dispositivo iOS. Essa funcionalidade é fornecida em uma ou mais extensões de aplicativo usando as novas estruturas de **interface do usuário** de **tentativas** e intenções.
 
-O SiriKit permite que um aplicativo iOS forneça serviços que podem ser acessados pelo usuário usando o Siri e o aplicativo Maps em um dispositivo iOS usando extensões de aplicativo e as novas estruturas de **interface do usuário** de intenções e intenções.
+O SiriKit permite que um aplicativo iOS forneça serviços que podem ser acessados pelo usuário usando o Siri e o aplicativo Maps em um dispositivo iOS usando extensões de aplicativo e **as novas estruturas** de **interface do usuário** de intenções e intenções.
 
 O Siri trabalha com o conceito de **domínios**, grupos de ações conhecidas para tarefas relacionadas. Cada interação que o aplicativo tem com siri deve se enquadrar em um de seus domínios de serviço conhecidos da seguinte maneira:
 
@@ -182,7 +182,7 @@ A resposta de resolução mais comum do aplicativo será **bem-sucedida**, o que
 
 Pode haver ocasiões em que o aplicativo precisa confirmar que uma determinada solicitação corresponde à informação correta que ele sabe. Nesses casos, ele enviará uma resposta **ConfirmationRequired** para fazer uma pergunta Sim ou não para o usuário, como *"Enviar mensagem para bobo o ótimo?"*
 
-Pode haver outros casos em que o aplicativo exigirá que o usuário escolha uma lista curta de opções. Nesse caso, o aplicativo fornecerá uma resposta de desambiguidade com uma lista de duas a dez opções para que o usuário escolha, como:
+Pode haver outros casos em que o aplicativo exigirá que o usuário escolha uma lista curta de opções. Nesse caso, o aplicativo fornecerá uma resposta de **desambiguidade** com uma lista de duas a dez opções para que o usuário escolha, como:
 
 ```csharp
 Who do you want to message?
@@ -221,7 +221,7 @@ Assim como fazia no estágio Confirm, o aplicativo precisa fornecer o máximo po
 
 Pode haver ocasiões em que o aplicativo pode exigir tempo extra para processar uma determinada solicitação, como atrasos de chamada de rede ou se uma pessoa ao vivo precisa atender à solicitação (como concluir e enviar um pedido ou direcionar um carro para o local do usuário). Quando Siri estiver aguardando uma resposta do aplicativo, ele exibirá uma interface de usuário em espera para o usuário informando que o aplicativo está processando a solicitação.
 
-O ideal é que o aplicativo forneça uma resposta para Siri dentro de dois a três segundos. Se o aplicativo sabe que uma determinada resposta levará mais tempo para ser processada, ele precisa enviar um código de resposta de InProgress para Siri. O Siri, em seguida, informará ao usuário que o aplicativo está processando a solicitação em segundo plano e continuará a fazer isso mesmo que deixe o ambiente Siri.
+O ideal é que o aplicativo forneça uma resposta para Siri dentro de dois a três segundos. Se o aplicativo sabe que uma determinada resposta levará mais tempo para ser processada, ele precisa enviar um código de resposta de **InProgress** para Siri. O Siri, em seguida, informará ao usuário que o aplicativo está processando a solicitação em segundo plano e continuará a fazer isso mesmo que deixe o ambiente Siri.
 
 ## <a name="adding-sirikit-to-the-app"></a>Adicionando SiriKit ao aplicativo
 

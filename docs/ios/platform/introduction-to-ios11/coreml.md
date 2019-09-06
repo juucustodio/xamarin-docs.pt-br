@@ -4,15 +4,15 @@ description: Este documento descreve o do coreml, que habilita o aprendizado de 
 ms.prod: xamarin
 ms.assetid: BE1E2CA1-E3AE-4C90-914C-CFDBD1DCB82B
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 08/30/2017
-ms.openlocfilehash: c2747b24c47e826e0d832faa36ddb93d8aa06f37
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 96ea328901beede663c9ed3d8d42979544b041ea
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70121513"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292642"
 ---
 # <a name="introduction-to-coreml-in-xamarinios"></a>Introdução ao do coreml no Xamarin. iOS
 
@@ -92,7 +92,7 @@ var result = outFeatures.GetFeatureValue("theResult").DoubleValue; // eg. 622702
 
 O do coreml também pode ser usado em conjunto com o Vision Framework para executar operações na imagem, como reconhecimento de forma, identificação de objeto e outras tarefas.
 
-As etapas a seguir descrevem como a do coreml e a visão são usadas juntas no [exemplo de CoreMLVision](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-coremlvision). O exemplo combina o [reconhecimento](~/ios/platform/introduction-to-ios11/vision.md#rectangles) de retângulos da estrutura de visão com o modelo _MNINSTClassifier_ do coreml para identificar um dígito manuscrito em uma fotografia.
+As etapas a seguir descrevem como a do coreml e a visão são usadas juntas no [exemplo de CoreMLVision](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-coremlvision). O exemplo combina o [reconhecimento de retângulos](~/ios/platform/introduction-to-ios11/vision.md#rectangles) da estrutura de visão com o modelo _MNINSTClassifier_ do coreml para identificar um dígito manuscrito em uma fotografia.
 
 ![Reconhecimento de imagem do número 3](coreml-images/vision3.png) ![Reconhecimento de imagem do número 5](coreml-images/vision5.png)
 

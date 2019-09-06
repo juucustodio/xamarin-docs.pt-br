@@ -1,83 +1,84 @@
 ---
-title: Atualizações de Design visual no iOS 11
-description: Este documento descreve o design visual atualizações apresentado no iOS 11. Ele aborda as alterações nas barras de navegação, controladores de pesquisa, margens, conteúdo de tela inteira e modos de exibição de tabela.
+title: Atualizações de Design Visual no iOS 11
+description: Este documento descreve as atualizações de Design Visual introduzidas no iOS 11. Ele aborda as alterações nas barras de navegação, controladores de pesquisa, margens, conteúdo de tela inteira e exibições de tabela.
 ms.prod: xamarin
 ms.assetid: 7C300B94-0FAF-492E-A326-877419A1824B
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 09/13/2016
-ms.openlocfilehash: c6351f2c25f8e31181c761aea1b471315a8a05e8
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: aa99d50295e214b7926d0655ea434c851b3ba099
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61400162"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70286315"
 ---
-# <a name="visual-design-updates-in-ios-11"></a>Atualizações de Design visual no iOS 11
+# <a name="visual-design-updates-in-ios-11"></a>Atualizações de Design Visual no iOS 11
 
-No iOS 11, a Apple introduziu novas alterações visual, incluindo atualizações para a barra de navegação, barra de pesquisa e modos de exibição de tabela. Além de melhorias foram feitas para permitir mais flexibilidade sobre as margens e o conteúdo de tela inteira. Essas alterações são abordadas neste guia. 
+No iOS 11, a Apple introduziu novas alterações visuais, incluindo atualizações na barra de navegação, na barra de pesquisa e nos modos de exibição de tabela. Além disso, foram feitas melhorias para permitir mais flexibilidade em relação às margens e ao conteúdo de tela inteira. Essas alterações são abordadas neste guia. 
 
-Para obter informações específicas sobre o desenvolvimento para iPhone X, assista da Apple [projetar para iPhone X](https://developer.apple.com/videos/play/fall2017/801/) vídeo.
+Para obter informações especificamente sobre como projetar para iPhone X, Assista [à criação de vídeo da Apple para iPhone x](https://developer.apple.com/videos/play/fall2017/801/) .
 
 ## <a name="uikit"></a>UIKit
 
-Barras de UIKit, foram adaptadas no iOS 11 para torná-los mais acessível para usuários finais.
+As barras de UIKit foram adaptadas no iOS 11 para torná-las mais acessíveis para os usuários finais.
 
-Uma alteração é uma nova exibição HUD que aparece quando pressionamentos longa de um usuário em uma barra de item. Para habilitar isso, defina as `largeContentSizeImage` propriedade na `UIBarItem` e adicione uma imagem maior por meio de um [catálogo de ativos](~/ios/app-fundamentals/images-icons/displaying-an-image.md):
+Uma dessas alterações é uma nova exibição de HUD que aparece quando um usuário se pressiona em um item de barra. Para habilitar isso, defina a `largeContentSizeImage` Propriedade em `UIBarItem` e adicione uma imagem maior por meio de um [Catálogo de ativos](~/ios/app-fundamentals/images-icons/displaying-an-image.md):
 
 ```csharp
 barItem.LargeContentSizeImage = UIImage.FromBundle("AccessibleImage");
 ```
 
 ### <a name="navigation-bar"></a>Barra de navegação
-iOS 11 introduziu novas funcionalidades para facilitar a leitura de títulos da barra de navegação. Os aplicativos podem exibir esse título maior por meio da atribuição de `PrefersLargeTitles` propriedade como true:
+o iOS 11 introduziu uma nova funcionalidade para facilitar a leitura dos títulos das barras de navegação. Os aplicativos podem exibir esse título maior atribuindo a `PrefersLargeTitles` Propriedade a true:
 
 ```csharp
 NavigationController.NavigationBar.PrefersLargeTitles = true;
 ```
 
-Títulos maiores de configuração em seu aplicativo faz _todos os_ títulos de barras de navegação em seu aplicativo pareçam maiores, conforme ilustrado na seguinte captura de tela:
+Definir títulos maiores em seu aplicativo faz com que _todos os_ títulos das barras de navegação em seu aplicativo pareçam maiores, conforme ilustrado na seguinte captura de tela:
 
-![Título da navegação grande](visual-design-images/image7.png)
+![Título de navegação grande](visual-design-images/image7.png)
 
-Para controlar quando um título grande for exibido em uma barra de navegação, defina as `LargeTitleDisplayMode` no item de navegação para `Always`, `Never`, ou `Automatic`.
+Para controlar quando um título grande é exibido em uma barra de navegação, defina `LargeTitleDisplayMode` o no item de navegação `Always`como `Never`, ou `Automatic`.
 
 ### <a name="search-controller"></a>Controlador de pesquisa
 
-iOS 11 fez mais fácil de adicionar um controlador de pesquisa diretamente à barra de navegação. Depois de criar um controlador de pesquisa, adicioná-lo à sua barra de navegação com o `SearchController` propriedade:
+o iOS 11 facilitou a adição de um controlador de pesquisa diretamente à barra de navegação. Depois de criar um controlador de pesquisa, adicione-o à sua barra de navegação `SearchController` com a propriedade:
 
 ```csharp
 NavigationItem.SearchController = searchController;
 ```
 
-[![Título da navegação grandes com a barra de pesquisa](visual-design-images/image8-sml.png)](visual-design-images/image8-sml.png#lightbox)
+[![Título de navegação grande com barra de pesquisa](visual-design-images/image8-sml.png)](visual-design-images/image8-sml.png#lightbox)
 
-Dependendo da funcionalidade do seu aplicativo, você pode querer ou não a barra de pesquisa para ocultar quando um usuário percorre uma lista. Você pode ajustar isso usando o `HidesSearchBarWhenScrolling` propriedade.
+Dependendo da funcionalidade do seu aplicativo, você pode ou não desejar que a barra de pesquisa seja ocultada quando um usuário rolar por uma lista. Você pode ajustar isso usando a `HidesSearchBarWhenScrolling` propriedade.
 
 ## <a name="margins"></a>Margens
 
-A Apple criou uma nova propriedade – `directionalLayoutMargins` – que pode ser usado para definir o espaço entre as exibições e subexibições. Use `directionalLayoutMargins` com `leading` ou `trailing` inserções. Independentemente se o sistema é um idioma da esquerda para a direita ou da direita para esquerda, o espaçamento em seu aplicativo está definido corretamente pelo iOS.
+A Apple criou uma nova propriedade – `directionalLayoutMargins` , que pode ser usada para definir o espaço entre exibições e subexibições. Use `directionalLayoutMargins` with `leading` ou`trailing` indefines. Independentemente de o sistema ser um idioma da esquerda para a direita ou da direita para a esquerda, o espaçamento em seu aplicativo é definido adequadamente pelo iOS.
 
-No iOS 10 e antes de todas as exibições tinham um tamanho de margem mínima à qual eles seriam se alinham. iOS 11 introduziu a opção para substituir isso usando `ViewRespectsSystemMinimumLayoutMargins`. Por exemplo, definir essa propriedade como false permite que você ajuste seu inserções de borda como zero:
+No iOS 10 e anterior, todas as exibições tinham um tamanho de margem mínimo para o qual elas se alinhariam. o iOS 11 introduziu a opção de substituir `ViewRespectsSystemMinimumLayoutMargins`isso usando. Por exemplo, definir essa propriedade como false permite que você ajuste suas indefinições de borda para zero:
 
 ```csharp
 ViewRespectsSystemMinimumLayoutMargins = false;
 View.LayoutMargins = UIEdgeInsets.Zero;
 ```
-![Margem da imagem que mostra com zero baixo-relevo no ios 11](visual-design-images/image9.png)
+
+![Imagem mostrando margem com inserção zero no Ios 11](visual-design-images/image9.png)
 
 <a name="fullscreen" />
 
 ## <a name="full-screen-content"></a>Conteúdo de tela inteira
 
-iOS 7 [introduzidos](~/ios/platform/introduction-to-ios7/ios7-ui.md#fullscreen) `topLayoutGuide` e `bottomLayoutGuide` como uma maneira de restringir seus modos de exibição para que eles não estiverem ocultas por barras de UIKit e estão em uma área visível da tela. Elas foram substituídas no iOS 11 em favor do _área segura_.
+o Ios 7 [introduziu](~/ios/platform/introduction-to-ios7/ios7-ui.md#fullscreen) `topLayoutGuide` e `bottomLayoutGuide` como uma forma de restringir suas exibições para que elas não sejam ocultadas por barras de UIKit e estejam em uma área visível da tela. Eles foram preteridos no iOS 11 em favor da _área de segurança_.
 
-Área de segurança é uma nova maneira de pensar sobre o espaço visível do seu aplicativo e como as restrições são adicionadas entre um modo de exibição e uma exibição super. Por exemplo, considere a imagem a seguir:
+A área segura é uma nova maneira de pensar sobre o espaço visível do seu aplicativo e como as restrições são adicionadas entre uma exibição e uma superexibição. Por exemplo, considere a imagem a seguir:
 
-[![Área segura vs superior e o guia do layout inferior](visual-design-images/image10-sml.png)](visual-design-images/image10.png#lightbox)
+[![Guia de layout de área segura vs. superior e inferior](visual-design-images/image10-sml.png)](visual-design-images/image10.png#lightbox)
 
-Anteriormente, se você tivesse adicionado a um modo de exibição e queria que ele fique visível na área de verde acima, você deve restringir-o para o _inferior_ da `TopLayoutGuide` e o _superior_ do `BottomLayoutGuide`. No iOS 11, você faria em vez disso, restringi-lo para o _superior_ e o _inferior_ da área de segurança. Segue um exemplo:
+Anteriormente, se você adicionou uma exibição e queria que ela estivesse visível na área verde acima, você a restringiria na _parte inferior_ do `TopLayoutGuide` e `BottomLayoutGuide`na _parte superior_ do. No iOS 11, você seria restringi-lo na _parte superior_ e na _parte inferior_ da área de segurança. Segue um exemplo:
 
 ```csharp
 var safeGuide = View.SafeAreaLayoutGuide;
@@ -87,11 +88,11 @@ safeGuide.BottomAnchor.ConstraintEqualTo(imageView.BottomAnchor).Active = true;
 
 ## <a name="table-view"></a>Exibição de tabela
 
-O UITableView teve um número de alterações pequenas, mas significativas, no iOS 11.
+O UITableView tinha uma série de alterações pequenas, mas significativas, no iOS 11.
 
-Por padrão, cabeçalhos, rodapés e células são agora automaticamente dimensionadas com base em seu conteúdo. Para recusar esse conjunto de comportamento de dimensionamento automático a `EstimatedRowHeight`, `EstimatedSectionHeaderHeight`, ou `EstimatedSectionFooterHeight` como zero.
+Por padrão, os cabeçalhos, os rodapés e as células agora são dimensionados automaticamente com base no seu conteúdo. Para recusar esse comportamento de dimensionamento automático `EstimatedRowHeight`, defina, `EstimatedSectionHeaderHeight`ou `EstimatedSectionFooterHeight` como zero.
 
-No entanto, em algumas circunstâncias (por exemplo, quando adicionar UITableViewController no iOS Designer ou ao usar Storboards existente no Interface Builder) talvez seja necessário habilitar manualmente o dimensionamento automático de células. Para fazer isso, certifique-se de que você definiu as seguintes propriedades na exibição de tabela de células, cabeçalhos e rodapés, respectivamente:
+No entanto, em algumas circunstâncias (por exemplo, ao adicionar UITableViewController no designer do iOS ou ao usar o Storboards existente no Interface Builder), talvez seja necessário habilitar manualmente as células de dimensionamento automático. Para fazer isso, verifique se você definiu as seguintes propriedades no modo de exibição de tabela para células, cabeçalhos e rodapés, respectivamente:
 
 ```csharp
 // Cells
@@ -108,15 +109,15 @@ TableView.EstimatedSectionFooterHeight = 40f;
 
 ```
 
-iOS 11 expandiu a funcionalidade de ações de linha. `UISwipeActionsConfiguration` foi introduzido para definir um conjunto de ações que deve ocorrer quando o usuário passa o dedo em qualquer direção, em uma linha em uma exibição de tabela. Esse comportamento é semelhante do Mail nativo. Para obter mais informações, consulte o [ações de linha](~/ios/user-interface/controls/tables/row-action.md) guia.
+o iOS 11 expandiu a funcionalidade das ações de linha. `UISwipeActionsConfiguration`foi introduzido para definir um conjunto de ações que devem ocorrer quando o usuário passa em qualquer direção em uma linha em uma exibição de tabela. Esse comportamento é semelhante ao do mail. app nativo. Para obter mais informações, consulte o guia de [ações de linha](~/ios/user-interface/controls/tables/row-action.md) .
 
-Modos de exibição de tabela têm suporte para arrastar e soltar no iOS 11. Para obter mais informações, consulte o [arrastar e soltar](~/ios/platform/introduction-to-ios11/drag-and-drop.md#uitableview) guia.
+As exibições de tabela têm suporte para arrastar e soltar no iOS 11. Para obter mais informações, consulte a guia de [arrastar e soltar](~/ios/platform/introduction-to-ios11/drag-and-drop.md#uitableview) .
 
 
 ## <a name="related-links"></a>Links relacionados
 
 - [O que há de novo no iOS 11 (Apple)](https://developer.apple.com/ios/)
-- [Página de Store de aplicativo atualizado do produto (Apple)](https://developer.apple.com/app-store/product-page/)
-- [Design para iPhone X (Apple) (vídeo)](https://developer.apple.com/videos/play/fall2017/801/)
-- [Atualizar seu aplicativo para iOS 11 (WWDC) (vídeo)](https://developer.apple.com/videos/play/wwdc2017/204/)
+- [Página de produto da App Store atualizada (Apple)](https://developer.apple.com/app-store/product-page/)
+- [Projetando para iPhone X (Apple) (vídeo)](https://developer.apple.com/videos/play/fall2017/801/)
+- [Atualizando seu aplicativo para iOS 11 (WWDC) (vídeo)](https://developer.apple.com/videos/play/wwdc2017/204/)
 

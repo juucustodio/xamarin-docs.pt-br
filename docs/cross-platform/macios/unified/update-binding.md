@@ -3,15 +3,15 @@ title: Migrar uma associação para a API unificada
 description: Este artigo aborda as etapas necessárias para atualizar um projeto de associação do Xamarin existente para dar suporte às APIs unificadas para aplicativos Xamarin. IOS e Xamarin. Mac.
 ms.prod: xamarin
 ms.assetid: 5E2A3251-D17F-4F9C-9EA0-6321FEBE8577
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: 90ef47d4e105dc401369c92e9196111c060314e3
-ms.sourcegitcommit: 1341f2950b775a4daa7d0548a51fdef759afd6e3
+ms.openlocfilehash: dcee5c6d5324be11f424739a20ba673817553e36
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69976416"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70287374"
 ---
 # <a name="migrating-a-binding-to-the-unified-api"></a>Migrar uma associação para a API unificada
 
@@ -34,9 +34,9 @@ Os projetos de associação não têm suporte no Visual Studio em um computador 
 
 ## <a name="modify-the-using-statements"></a>Modificar as instruções using
 
-As APIs unificadas facilitam ainda mais o compartilhamento de código entre Mac e iOS, além de permitir que você dê suporte a aplicativos de 32 e 64 bits com o mesmo binário. Ao descartar os prefixos _MonoMac_ e MonoTouch dos namespaces, o compartilhamento mais simples é obtido em projetos de aplicativos Xamarin. Mac e xamarin. Ios.
+As APIs unificadas facilitam ainda mais o compartilhamento de código entre Mac e iOS, além de permitir que você dê suporte a aplicativos de 32 e 64 bits com o mesmo binário. Ao descartar os prefixos _MonoMac_ e _MonoTouch_ dos namespaces, o compartilhamento mais simples é obtido em projetos de aplicativos Xamarin. Mac e xamarin. Ios.
 
-Como resultado, precisaremos modificar qualquer um dos nossos contratos de ligação (e outros `.cs` arquivos em nosso projeto de associação) para remover os prefixos _MonoMac_ e MonoTouch `using` de nossas instruções.
+Como resultado, precisaremos modificar qualquer um dos nossos contratos de ligação (e outros `.cs` arquivos em nosso projeto de associação) para remover os prefixos _MonoMac_ e _MonoTouch_ de nossas `using` instruções.
 
 Por exemplo, considerando as seguintes instruções using em um contrato de associação:
 

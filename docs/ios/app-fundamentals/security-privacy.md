@@ -4,15 +4,15 @@ description: Este documento descreve os recursos de segurança e privacidade do 
 ms.prod: xamarin
 ms.assetid: 718C8721-C359-4650-878A-D68E159A3F53
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: 5c818cac3b26e94710a64938a80690b8d4946320
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 7847148551c20dbcf49bcc263bdc50716a6ef14e
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70200206"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70283166"
 ---
 # <a name="ios-security-and-privacy-features"></a>Recursos de privacidade e segurança do iOS
 
@@ -70,24 +70,24 @@ Para obter mais informações sobre como trabalhar com chaves **info. plist** , 
 
 Veja o exemplo a seguir de como acessar homekit no Ios 10 (e superior), o desenvolvedor precisará adicionar `NSHomeKitUsageDescription` a chave ao arquivo **info. plist** do aplicativo e fornecer uma cadeia de caracteres declarando por que o aplicativo deseja acessar o banco de dados homekit do usuário. Essa cadeia de caracteres será apresentada ao usuário na primeira vez em que executar o aplicativo:
 
-![Um alerta de exemplo do NSHomeKitUsageDescription] (security-privacy-images/info01.png "Um alerta de exemplo do NSHomeKitUsageDescription")
+![Um alerta de exemplo do NSHomeKitUsageDescription](security-privacy-images/info01.png "Um alerta de exemplo do NSHomeKitUsageDescription")
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 O Xamarin. iOS para Visual Studio atualmente não oferece suporte à edição das chaves de privacidade **info. plist** de dentro do editor de manifesto do IOS padrão. Em vez disso, você precisará usar o editor do PList genérico, portanto, faça o seguinte:
 
-1. Clique com o botão direito do mouse no arquivo **info. plist** na **Gerenciador de soluções** e selecione **abrir com...**.
+1. Clique com o botão direito do mouse no arquivo **info. plist** na **Gerenciador de soluções** e selecione **abrir com...** .
 2. Selecione o **Editor do PList genérico** na lista de programas para abrir o arquivo e clique em **OK**.
 
-    ![Selecione o editor do PList genérico] (security-privacy-images/InfoEditorSelectionVs.png "Selecione o editor do PList genérico")
+    ![Selecione o editor do PList genérico](security-privacy-images/InfoEditorSelectionVs.png "Selecione o editor do PList genérico")
 3. Clique no **+** botão na última linha no editor para adicionar uma nova entrada à lista. Isso será chamado de "propriedade personalizada", com o tipo definido como `String` e um valor vazio.
 4. Clique no nome da propriedade e uma lista suspensa será exibida.
 5. Na lista suspensa, selecione uma chave de privacidade (como **privacidade – descrição do uso do homekit**): 
 
-    ![Selecione uma chave de privacidade] (security-privacy-images/InfoPListEditorSelectKey.png "Selecione uma chave de privacidade")
+    ![Selecione uma chave de privacidade](security-privacy-images/InfoPListEditorSelectKey.png "Selecione uma chave de privacidade")
 6. Insira uma descrição na coluna valor para o motivo pelo qual o aplicativo deseja acessar o recurso ou as informações de usuário determinadas: 
 
-    ![Insira uma descrição] (security-privacy-images/InfoPListSetValue.png "Insira uma descrição")
+    ![Insira uma descrição](security-privacy-images/InfoPListSetValue.png "Insira uma descrição")
 7. Salve as alterações no arquivo.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
@@ -99,10 +99,10 @@ Para definir qualquer uma das chaves de privacidade, faça o seguinte:
 3. Adicione uma nova **entrada** à lista.
 4. Na lista suspensa, selecione uma chave de privacidade (como **privacidade – descrição do uso do homekit**): 
 
-    ![Selecione uma chave de privacidade] (security-privacy-images/info02.png "Selecione uma chave de privacidade")
+    ![Selecione uma chave de privacidade](security-privacy-images/info02.png "Selecione uma chave de privacidade")
 5. Insira uma descrição para o motivo pelo qual o aplicativo deseja acessar o recurso ou as informações do usuário fornecidas: 
 
-    ![Insira uma descrição] (security-privacy-images/info03.png "Insira uma descrição")
+    ![Insira uma descrição](security-privacy-images/info03.png "Insira uma descrição")
 6. Salve as alterações no arquivo.
 
 -----
