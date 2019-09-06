@@ -4,15 +4,15 @@ description: Este documento descreve o iCloud e seu uso em aplicativos Xamarin. 
 ms.prod: xamarin
 ms.assetid: C6F3B87C-C195-4434-EF14-D66E63894F09
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 06/09/2016
-ms.openlocfilehash: d25ad46b0d8797da8f14987f54006b63d2b8233d
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 364775ae8e8874d87022b5e45bd23ea29e82382d
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69527585"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292418"
 ---
 # <a name="using-icloud-with-xamarinios"></a>Usando o iCloud com Xamarin. iOS
 

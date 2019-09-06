@@ -4,15 +4,15 @@ description: Exibições de coleção permitem que o conteúdo seja exibido usan
 ms.prod: xamarin
 ms.assetid: F4B85F25-0CB5-4FEA-A3B5-D22FCDC81AE4
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/20/2017
-ms.openlocfilehash: 8557a3efca1336f70c0feef2ac4dc9c462eedbf5
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: ae909827df5cc8f4ed5192d88ad067a5e69ce5d4
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69889890"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70282858"
 ---
 # <a name="collection-views-in-xamarinios"></a>Exibições de coleção no Xamarin. iOS
 
@@ -452,7 +452,7 @@ Neste artigo, vamos dar uma olhada na implementação de arrastar para reordenar
 Como mencionado acima, uma das alterações mais significativas no modo de exibição de coleção no iOS 9 foi a adição de uma funcionalidade fácil de arrastar para reordenar pronta para uso.
 
 No iOS 9, a maneira mais rápida de adicionar reordenação a uma exibição de coleção é usar um `UICollectionViewController`.
-O controlador de exibição de coleção agora `InstallsStandardGestureForInteractiveMovement` tem uma propriedade, que adiciona um reconhecedor de *gestos* padrão que oferece suporte ao arrastar para reordenar itens na coleção.
+O controlador de exibição de coleção agora `InstallsStandardGestureForInteractiveMovement` tem uma propriedade, que adiciona um *reconhecedor de gestos* padrão que oferece suporte ao arrastar para reordenar itens na coleção.
 Como o valor padrão é `true`, você só precisa implementar o `MoveItem` método da `UICollectionViewDataSource` classe para dar suporte a "arrastar para reordenar". Por exemplo:
 
 ```csharp
@@ -494,7 +494,7 @@ No **painel de propriedades** para o _CollectionViewCell_ e defina a **classe** 
 
 [![](uicollectionview-images/quick05.png "Definir a classe como TextCollectionViewCell")](uicollectionview-images/quick05.png#lightbox)
 
-Defina a **exibição** reutilizável da `Cell`coleção como:
+Defina a **exibição reutilizável** da `Cell`coleção como:
 
 [![](uicollectionview-images/quick06.png "Definir a exibição reutilizável da coleção como célula")](uicollectionview-images/quick06.png#lightbox)
 

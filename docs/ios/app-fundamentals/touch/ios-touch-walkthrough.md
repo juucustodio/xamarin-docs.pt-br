@@ -4,23 +4,23 @@ description: Este documento descreve como lidar com o toque em aplicativos Xamar
 ms.prod: xamarin
 ms.assetid: 13F8289B-7A80-4959-AF3F-57874D866DCA
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: bd6f40a117734712941585b6ce0d630105e54693
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: d78363bf7d38f19a14f689c2825ea9c9934653e4
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70121034"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70280246"
 ---
 # <a name="walkthrough-using-touch-in-xamarinios"></a>Passo a passo: Usando o touch no Xamarin. iOS
 
 Este tutorial demonstra como escrever código que responde a diferentes tipos de eventos de toque. Cada exemplo está contido em uma tela separada:
 
 - [Exemplos de toque](#Touch_Samples) – como responder a eventos de toque.
-- [Exemplos](#Gesture_Recognizer_Samples) de reconhecedor de gestos – como usar reconhecedores de gestos internos.
-- [Exemplo](#Custom_Gesture_Recognizer) de reconhecedor de gestor personalizado – como criar um reconhecedor de gestos personalizado.
+- [Exemplos de reconhecedor de gestos](#Gesture_Recognizer_Samples) – como usar reconhecedores de gestos internos.
+- [Exemplo de reconhecedor de gestor personalizado](#Custom_Gesture_Recognizer) – como criar um reconhecedor de gestos personalizado.
 
 Cada seção contém instruções para escrever o código do zero.
 O [código de exemplo inicial](https://docs.microsoft.com/samples/xamarin/ios-samples/applicationfundamentals-touch-start) já inclui uma tela completa de storyboard e de menu:
@@ -184,7 +184,7 @@ Nesta seção, vamos livrar-se dos eventos de toque e mostrar como usar os segui
 - O `UIPanGestureRecognizer` para arrastar uma imagem pela tela.
 - O `UITapGestureRecognizer` para responder a toques duplos na tela.
 
-Se você executar o [código de exemplo inicial](https://docs.microsoft.com/samples/xamarin/ios-samples/applicationfundamentals-touch-start) e clicar no botão de exemplos do reconhecedor de **gesto** , você deverá ver a seguinte tela:
+Se você executar o [código de exemplo inicial](https://docs.microsoft.com/samples/xamarin/ios-samples/applicationfundamentals-touch-start) e clicar no botão de **exemplos do reconhecedor de gesto** , você deverá ver a seguinte tela:
 
  [![](ios-touch-walkthrough-images/image6.png "Clicar no botão amostras do reconhecedor de gestos mostra esta tela")](ios-touch-walkthrough-images/image6.png#lightbox)
 

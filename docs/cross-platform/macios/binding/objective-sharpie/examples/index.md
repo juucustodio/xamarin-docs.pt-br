@@ -1,28 +1,28 @@
 ---
-title: Exemplos de Sharpie objetivo
-description: Este documento contém links para vários guias que descrevem como usar a ferramenta de Sharpie objetivo, que é usada para automatizar o processo de criação de C# associações a código Objective-C.
+title: Exemplos de nitidez do objetivo
+description: Este documento contém links para vários guias que descrevem como usar a ferramenta de nitidez objetiva, que é usada para automatizar o processo de criação C# de associações para o código Objective-C.
 ms.prod: xamarin
 ms.assetid: 1ACB0935-6D5F-4A5F-BE28-08DA1B675F0E
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: c3232282b788edbc401f889f5277d0227a1572b8
-ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
+ms.openlocfilehash: b2b595187ec8d011f45e26ea5139c253beb5c453
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "64977737"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290689"
 ---
-# <a name="objective-sharpie-examples"></a>Exemplos de Sharpie objetivo
+# <a name="objective-sharpie-examples"></a>Exemplos de nitidez do objetivo
 
-Execute esses exemplos para entender melhor como funciona o Sharpie objetivo:
+Siga estes exemplos para entender melhor como a nitidez do objetivo funciona:
 
 - [**Xcode**](xcode.md)
 - [**Cocoapod**](cocoapod.md)
-- [**Avançado (manual)**](advanced.md)
+- [**Avançado (manual)** ](advanced.md)
 
-O [passo a passo completo para iOS](~/ios/platform/binding-objective-c/walkthrough.md) fornece um conjunto de passo a passo mais detalhado de instruções a seguir.
+A [explicação completa do IOS](~/ios/platform/binding-objective-c/walkthrough.md) fornece um conjunto passo a passo mais detalhado de instruções a serem seguidas.
 
-## <a name="completed-ios-bindings"></a>Associações do iOS concluído
+## <a name="completed-ios-bindings"></a>Associações do iOS concluídas
 
-Um número de associações concluídos pode ser exibido ou baixado dos [repositório do Github associações monotouch](https://github.com/mono/monotouch-bindings/).
+Várias associações concluídas podem ser exibidas ou baixadas no [repositório GitHub de associações MonoTouch](https://github.com/mono/monotouch-bindings/).

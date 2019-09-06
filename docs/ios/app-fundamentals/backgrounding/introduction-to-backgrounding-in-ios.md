@@ -4,15 +4,15 @@ description: 'Este documento descreve o plano de fundo em iOS: Estados de aplica
 ms.prod: xamarin
 ms.assetid: E214F2C7-E74E-46C7-B5BA-080B30D61250
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 07/24/2018
-ms.openlocfilehash: 1899ee225d0ea285a38ba7b4d341e5d3a4452639
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 9fe508d5b0f8d15a26f02b110763cc8e3f4a2e25
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69521392"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292139"
 ---
 # <a name="introduction-to-backgrounding-in-ios"></a>Introdução à operação em segundo plano no iOS
 
@@ -39,7 +39,7 @@ O ciclo de vida do aplicativo iOS é uma coleção de Estados e métodos do apli
 - **Retornar para não em execução/término (raro)** – ocasionalmente, o processo do aplicativo é destruído e o aplicativo retorna para o estado *não em execução* . Isso ocorre em situações de pouca memória ou se o usuário finalizar o aplicativo manualmente.
 
 
-Desde a introdução do suporte multitarefas, o iOS raramente encerra os aplicativos ociosos e, em vez disso, mantém seus processos suspensos na memória. Manter o Process Alive de um aplicativo garante que o aplicativo seja iniciado rapidamente na próxima vez que o usuário o abrir. Isso também significa que os aplicativos podem se mover livremente do estado *suspenso* de volta para o estado *em segundo plano* sem desenhar recursos do sistema. o iOS 7 explora esse recurso com novas APIs que permitem que os aplicativos pausem tarefas em segundo plano quando o dispositivo entra em suspensão, atualiza o conteúdo diretamente do plano de fundo sem interação do usuário e muito mais. Abordaremos as novas APIs em [técnicas de plano de fundo do IOS](~/ios/app-fundamentals/backgrounding/ios-backgrounding-techniques/index.md).
+Desde a introdução do suporte multitarefas, o iOS raramente encerra os aplicativos ociosos e, em vez disso, mantém seus processos *suspensos* na memória. Manter o Process Alive de um aplicativo garante que o aplicativo seja iniciado rapidamente na próxima vez que o usuário o abrir. Isso também significa que os aplicativos podem se mover livremente do estado *suspenso* de volta para o estado *em segundo plano* sem desenhar recursos do sistema. o iOS 7 explora esse recurso com novas APIs que permitem que os aplicativos pausem tarefas em segundo plano quando o dispositivo entra em suspensão, atualiza o conteúdo diretamente do plano de fundo sem interação do usuário e muito mais. Abordaremos as novas APIs em [técnicas de plano de fundo do IOS](~/ios/app-fundamentals/backgrounding/ios-backgrounding-techniques/index.md).
 
 ## <a name="application-lifecycle-methods"></a>Métodos de ciclo de vida do aplicativo
 

@@ -3,19 +3,19 @@ title: Segurança de camada de transporte (TLS) 1,2
 description: Este documento descreve como habilitar o TLS 1,2 para projetos Xamarin. iOS, Xamarin. Android e Xamarin. Mac. Ele demonstra como fazer isso no Visual Studio 2019 e Visual Studio para Mac.
 ms.prod: xamarin
 ms.assetid: 399F71C6-16A4-4ABC-B30D-AF17D066A5FA
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 04/20/2018
-ms.openlocfilehash: 31069199e8ebc89da76b63e58651adea82db6882
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 6175725ae3eea805680b4da81aa0458aa3f8a68c
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69526772"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70280350"
 ---
 # <a name="transport-layer-security-tls-12"></a>Segurança de camada de transporte (TLS) 1,2
 
-Usar a versão mais recente do protocolo TLS é importante para garantir que as comunicações de rede [ do](https://en.wikipedia.org/wiki/Transport_Layer_Security) aplicativo sejam seguras.
+Usar a versão mais recente [ _do protocolo_ TLS](https://en.wikipedia.org/wiki/Transport_Layer_Security) é importante para garantir que as comunicações de rede do aplicativo sejam seguras.
 
 > [!WARNING]
 > **Abril de 2018** – devido a requisitos de segurança maiores, incluindo a conformidade com PCI, os principais provedores de nuvem e servidores Web devem parar de dar suporte a versões de TLS anteriores a 1,2. Os projetos do Xamarin criados em versões anteriores do Visual Studio usam o padrão para usar versões mais antigas do TLS.
@@ -101,7 +101,7 @@ As opções de projeto do Android também permitem que você escolha a implement
 Os novos projetos do Xamarin são padronizados para a implementação nativa que dá suporte a TLS 1,2 (que é recomendado para todos os projetos), no entanto, você pode alternar de volta para o código gerenciado, se necessário por motivos de compatibilidade.
 
 > [!IMPORTANT]
-> A opção **mono/Managed** foi removida [das opções de projeto do IOS e do Mac](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/ios/xamarin.ios_10/xamarin.ios_10.8.md) .
+> A opção **mono/Managed** foi [removida das opções de projeto do IOS e do Mac](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/ios/xamarin.ios_10/xamarin.ios_10.8.md) .
 >
 > A opção nativa é sempre usada em plataformas iOS e Mac.
 

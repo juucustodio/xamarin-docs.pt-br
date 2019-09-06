@@ -4,15 +4,15 @@ description: Este artigo aborda como trabalhar com arquivos. xib criados no Inte
 ms.prod: xamarin
 ms.assetid: 6AF3D216-448D-4B2D-9026-74E4FFF5923A
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: bdb27d42e872bff4004e8f43d13019dbc8bfeab9
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: f0889ecc428c595509fb23710bf3110c1bacad4e
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227856"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290284"
 ---
 # <a name="xib-files-in-xamarinmac"></a>arquivos. xib no Xamarin. Mac
 
@@ -31,7 +31,7 @@ Um arquivo. xib é usado pelo macOS para definir elementos da interface do usuá
 
 Neste artigo, abordaremos as noções básicas de como trabalhar com arquivos. xib em um aplicativo Xamarin. Mac. É altamente recomendável que você trabalhe primeiro com o artigo [Hello, Mac](~/mac/get-started/hello-mac.md) , pois ele aborda os principais conceitos e técnicas que usaremos neste artigo.
 
-Talvez você queira dar uma olhada na seção [expondo C# classes/métodos para Objective-C](~/mac/internals/how-it-works.md) do documento [interno do Xamarin. Mac](~/mac/internals/how-it-works.md) também, explica `Register` os atributos e `Export` usados para conectar suas C# classes ao Objetos Objective-C e elementos de interface do usuário.
+Talvez você queira dar uma olhada na seção [expondo C# classes/métodos para Objective-C](~/mac/internals/how-it-works.md) do documento [interno do Xamarin. Mac](~/mac/internals/how-it-works.md) também, explica os `Register` atributos e `Export` usados para conectar suas C# classes ao Objetos Objective-C e elementos de interface do usuário.
 
 
 ## <a name="introduction-to-xcode-and-interface-builder"></a>Introdução ao Interface Builder e ao Xcode
@@ -227,7 +227,7 @@ Por exemplo:
 8. Na **caixa dimensionamento** automático, clique no **colchete vermelho Dim** à direita e na **seta horizontal vermelha Dim** no centro:
 
     ![Editando as propriedades de dimensionamento] automático (xib-images/xcode14.png "Editando as propriedades de dimensionamento") automático
-9. Isso garante que o rótulo será ampliado para aumentar e diminuir à medida que a janela for redimensionada no aplicativo em execução. Os **colchetes vermelhos** e a parte superior e esquerda da caixa da **caixa** de dimensionamento automático dizem ao rótulo que está preso a seus locais X e Y.
+9. Isso garante que o rótulo será ampliado para aumentar e diminuir à medida que a janela for redimensionada no aplicativo em execução. Os **colchetes vermelhos** e a parte superior e esquerda da caixa da **caixa de dimensionamento** automático dizem ao rótulo que está preso a seus locais X e Y.
 10. Salve as alterações na interface do usuário
 
 Como você estava redimensionando e movendo controles, deve ter notado que Interface Builder fornece dicas de ajuste úteis baseadas nas diretrizes de [interface humana do os X](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/). Essas diretrizes ajudarão você a criar aplicativos de alta qualidade que terão uma aparência familiar para os usuários do Mac.
@@ -486,7 +486,7 @@ Para adicionar uma nova exibição, faça o seguinte:
 
     ![Adicionando uma nova exibição](xib-images/view01.png "Adicionando uma nova exibição")
 3. Digite `SubviewTable` para o **Nome** e clique no botão **Novo**.
-4. Clique duas vezes no arquivo subviewtable **. xib** para abri-lo para edição no interface Builder e criar a interface do usuário:
+4. Clique duas vezes no arquivo **subviewtable. xib** para abri-lo para edição no interface Builder e criar a interface do usuário:
 
     [![Criando a nova exibição no Xcode](xib-images/view02.png "Criando a nova exibição no Xcode")](xib-images/view02-large.png#lightbox)
 5. Conecte todas as ações e saídas necessárias.

@@ -3,15 +3,15 @@ title: Atualizando aplicativos Xamarin. Forms existentes
 description: Este documento descreve as etapas que devem ser seguidas para atualizar um aplicativo Xamarin. Forms do API Clássica para a API Unificada.
 ms.prod: xamarin
 ms.assetid: C2F0D1D1-256D-44A4-AAC9-B06A0CB41E70
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: dee3b04630ae9fc94548becdcc294427f9deb433
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 1820dfa1fb756ede6076fb61ad5eb4f6c9926fe8
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70199213"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70280716"
 ---
 # <a name="updating-existing-xamarinforms-apps"></a>Atualizando aplicativos Xamarin. Forms existentes
 
@@ -53,7 +53,7 @@ Clique no projeto do iOS para que ele seja selecionado e escolha **projeto > mig
 Isso irá automaticamente:
 
 - Altere o tipo de projeto para dar suporte à API unificada de 64 bits.
-- Altere a referência de estrutura para **Xamarin. Ios** (substituindo a referência MonoTouch antiga).
+- Altere a referência de estrutura para **Xamarin. Ios** (substituindo a referência **MonoTouch** antiga).
 - Altere as referências de namespace no código para remover o `MonoTouch` prefixo.
 - Atualize o arquivo **csproj** para usar os destinos de compilação corretos para o API unificada.
 

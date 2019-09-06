@@ -4,15 +4,15 @@ description: Este artigo aborda o conceito de foco e como ele é usado para apre
 ms.prod: xamarin
 ms.assetid: DD72E95F-AE9B-47D2-B132-5FA5FBD8026E
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: 96b35764da1922ae1810a78e760e8ed39a8a8a3b
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: fdf675e37bec07ef03576313befbaa9309ab9349
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70199629"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291581"
 ---
 # <a name="working-with-tvos-navigation-and-focus-in-xamarin"></a>Trabalhando com navegação e foco do tvOS no Xamarin
 
@@ -25,7 +25,7 @@ Este artigo aborda o conceito de [foco](#Focus-and-Selection) e como ele é usad
 
 Em seguida, vamos dar uma olhada em como o foco pode ser usado com [da Parallax](#Focus-and-Parallax) e *imagens em camadas* para fornecer pistas visuais para o estado de navegação atual para o usuário final.
 
-Por fim, veremos como trabalhar com o [foco](#Working-with-Focus), [as atualizações de foco](#Working-with-Focus-Updates), os guias de [foco](#Working-with-Focus-Guides), o [foco em coleções](#Working-with-Focus-in-Collections) e a habilitação de [da Parallax](#enabling-parallax) em exibições de imagem em seus aplicativos Xamarin. tvOS.
+Por fim, veremos como trabalhar com o [foco](#Working-with-Focus), [as atualizações de foco](#Working-with-Focus-Updates), os guias de [foco](#Working-with-Focus-Guides), o [foco em coleções](#Working-with-Focus-in-Collections) e a [habilitação de da Parallax](#enabling-parallax) em exibições de imagem em seus aplicativos Xamarin. tvOS.
 
 <a name="Navigation" />
 
@@ -37,7 +37,7 @@ Um aplicativo tvOS bem-sucedido implementa a navegação de forma a dar suporte 
 
 [![](navigation-focus-images/nav01.png "O aplicativo de configurações do tvOS")](navigation-focus-images/nav01.png#lightbox)
 
-Ao usar uma Apple TV, o usuário normalmente navega por um conjunto empilhado de telas, cada uma apresentando um determinado conjunto de conteúdo. Por sua vez, cada nova tela pode levar a uma ou mais subtelas de conteúdo usando controles padrão da interface do usuário, como [botões](~/ios/tvos/user-interface/buttons.md), [barras de guias](~/ios/tvos/user-interface/tab-bars.md), tabelas, exibições de [coleção](~/ios/tvos/user-interface/collection-views.md) ou [exibições divididas](~/ios/tvos/user-interface/split-views.md).
+Ao usar uma Apple TV, o usuário normalmente navega por um conjunto empilhado de telas, cada uma apresentando um determinado conjunto de conteúdo. Por sua vez, cada nova tela pode levar a uma ou mais subtelas de conteúdo usando controles padrão da interface do usuário, como [botões](~/ios/tvos/user-interface/buttons.md), [barras de guias](~/ios/tvos/user-interface/tab-bars.md), tabelas, [exibições de coleção](~/ios/tvos/user-interface/collection-views.md) ou [exibições divididas](~/ios/tvos/user-interface/split-views.md).
 
 Com cada nova tela de dados, o usuário navega mais profundamente nessa pilha de telas. Usando o botão de **menu** no Siri remoto, eles podem navegar para trás pela pilha para retornar a uma tela anterior ou menu principal.
 
@@ -47,7 +47,7 @@ A Apple sugere o seguinte em mente ao criar a navegação para seu aplicativo tv
 - **Crie uma interface fluida usando o Touch** -certifique-se de que um usuário pode se mover entre _itens com foco_ com o mínimo de conflito usando o menor número de gestos possíveis.
 - **Design com foco em mente** -como o usuário está interagindo com conteúdo pela sala, eles precisam mover o foco para um item de interface do usuário antes de interagir com ele usando o Siri remoto. Os usuários ficarão frustrados com seu aplicativo se exigirem muitos gestos para que atinjam suas metas.
 - **Fornecer navegação para trás por meio do botão de menu** – para criar uma experiência fácil e familiar, permita que os usuários naveguem para trás usando o botão de **menu** do Siri Remote. Pressionar o botão de **menu** sempre deve retornar à tela anterior ou retornar ao menu principal do aplicativo. No nível superior do aplicativo, pressionar o botão de **menu** deve retornar para a tela inicial da Apple TV.
-- **Normalmente, evite exibir um botão voltar** – porque pressionar o botão de **menu** no Siri remoto navega para trás pela pilha de tela, evite exibir um controle extra que duplique esse comportamento. Uma exceção a essa regra é para telas de compra ou telas com ações destrutivas (como excluir conteúdo) em que um botão de cancelamento também deve ser exibido.
+- **Normalmente, evite exibir um botão voltar** – porque pressionar o botão de **menu** no Siri remoto navega para trás pela pilha de tela, evite exibir um controle extra que duplique esse comportamento. Uma exceção a essa regra é para telas de compra ou telas com ações destrutivas (como excluir conteúdo) em que um botão de **cancelamento** também deve ser exibido.
 - **Mostre grandes coleções em uma única tela, em vez de muitos** – o Siri Remote foi projetado para fazer a movimentação por uma grande coleção de conteúdo de forma rápida e fácil usando gestos. Se seu aplicativo funciona com uma grande coleção de itens focados, considere mantê-los em uma única tela, em vez de dividi-los em várias telas que exigem mais navegação na parte do usuário.
 - **Use controles padrão para navegação** novamente, para criar uma experiência do usuário fácil e familiar, sempre que possível, use `UIKit` controles internos como controles de página, barras de tabulação, controles segmentados, exibições de tabela, exibições de coleção e exibições divididas para a navegação do aplicativo. Como o usuário já está familiarizado com esses elementos, eles poderão, de forma intuitiva, navegar no seu aplicativo.
 - **Favorecer a navegação horizontal de conteúdo** -por causa da natureza da Apple TV, passar da esquerda para a direita na Siri remota é mais natural do que para cima e para baixo. Considere essa opção ao criar layouts de conteúdo para seu aplicativo.
@@ -71,7 +71,7 @@ A Apple tem as seguintes sugestões para trabalhar com o foco e a seleção:
 - **Usar controles de interface do usuário internos para efeitos de movimento** – `UIKit` usando o e a API de foco em sua interface do usuário, o modelo de foco aplicará automaticamente os efeitos visuais e o movimento padrão aos elementos da interface de usuário. Isso faz com que seu aplicativo se sinta nativo e familiar para os usuários da plataforma Apple TV e permite uma movimentação fluida e intuitiva entre os itens com foco.
 - **Mover o foco em direções esperadas** – na Apple TV, quase todos os elementos usam a manipulação indireta. Por exemplo, o usuário usa o Siri Remote para mover o foco e o sistema rola automaticamente a interface para manter o item atualmente focalizado. Se seu aplicativo implementar esse tipo de interação, certifique-se de que o foco se mova na direção do gesto do usuário. Portanto, se o usuário passar o dedo para a direita no Siri, o foco remoto deverá ser movido para a direita (o que pode fazer com que a tela role para a esquerda). A única exceção a essa regra são os itens de tela inteira que usam a manipulação direta (onde o dedo para cima move o elemento para cima).
 - **Verifique se o item focado é óbvio** – como os usuários estão interagindo com os elementos da interface do usuário do Afar, é essencial que o item atualmente focalizado se destaque. Normalmente, isso será manipulado automaticamente por `UIKit` elementos internos. Para controles personalizados, use recursos como tamanho do item ou sombra para mostrar o foco.
-- **Use da Parallax para fazer** com que itens focados respondam a pequenos gestos circulares no resultado remoto Siri em AdaBoost, movimento em tempo real do item focado. Esse [efeito de da Parallax](#Focus-and-Parallax) é incorporado `UIKit` em _imagens em camadas_ para dar ao usuário uma noção de conexão com o item focado.
+- **Use da Parallax para fazer com que itens focados respondam** a pequenos gestos circulares no resultado remoto Siri em AdaBoost, movimento em tempo real do item focado. Esse [efeito de da Parallax](#Focus-and-Parallax) é incorporado `UIKit` em _imagens em camadas_ para dar ao usuário uma noção de conexão com o item focado.
 - **Criar itens com foco do tamanho apropriado** -itens grandes com espaçamento amplo são mais fáceis de selecionar e navegar do que itens menores.
 - **Criar elemento de interface do usuário para parecer bom focado ou sem foco** – normalmente, a Apple TV representa o item focado aumentando seu tamanho. Verifique se os elementos da interface do usuário de seus aplicativos parecem ótimos em qualquer tamanho de apresentação e, se necessário, forneça ativos para elementos de tamanho maiores.
 - **Represente as alterações de foco** de forma fluida-use a animação para esmaecer suavemente entre um estado de itens **focalizado** e sem **foco** para manter as transições de dissonante.

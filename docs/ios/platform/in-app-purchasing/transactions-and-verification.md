@@ -4,15 +4,15 @@ description: Este documento descreve como permitir a restauração de compras pa
 ms.prod: xamarin
 ms.assetid: 84EDD2B9-3FAA-B3C7-F5E8-C1E5645B7C77
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: 2a0d0e1ab7272094d55dff7fa083e61ee9c3286c
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 537d804f1fa7e6ac95cb86a16849ed9fbc006507
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69527595"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290195"
 ---
 # <a name="transactions-and-verification-in-xamarinios"></a>Transações e verificação no Xamarin. iOS
 

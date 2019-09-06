@@ -3,15 +3,15 @@ title: Trabalhando com tipos nativos em aplicativos multiplataforma
 description: Este artigo aborda o uso dos novos tipos nativos do iOS API Unificada (Nint, nuint, nfloat) em um aplicativo de plataforma cruzada em que o código é compartilhado com dispositivos não iOS, como Android ou Windows Phone sistemas operacionais.
 ms.prod: xamarin
 ms.assetid: B9C56C3B-E196-4ADA-A1DE-AC10D1001C2A
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 04/07/2016
-ms.openlocfilehash: 9018c3e3c976ef7623835055ee989dfd86dc25e1
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: dde5b2429622c967fa4419700ce8fe9860afbb10
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70226229"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290844"
 ---
 # <a name="working-with-native-types-in-cross-platform-apps"></a>Trabalhando com tipos nativos em aplicativos multiplataforma
 
@@ -238,7 +238,7 @@ O seguinte é necessário para usar o Xamarin. Forms para UIs de plataforma cruz
 
 Como em um aplicativo de plataforma cruzada padrão, os tipos de dados existentes de 32 bits devem ser usados em qualquer código compartilhado e de plataforma cruzada para a maioria das situações. Os novos tipos de dados nativos só devem ser usados ao fazer uma chamada para uma API Mac ou iOS, onde o suporte para tipos com reconhecimento de arquitetura é necessário.
 
-Para obter mais detalhes, consulte nossa documentação atualizando os [aplicativos Xamarin. Forms existentes](~/cross-platform/macios/unified/updating-xamarin-forms-apps.md) .
+Para obter mais detalhes, consulte nossa documentação [atualizando os aplicativos Xamarin. Forms existentes](~/cross-platform/macios/unified/updating-xamarin-forms-apps.md) .
 
 ## <a name="summary"></a>Resumo
 

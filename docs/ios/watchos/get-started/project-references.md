@@ -4,21 +4,21 @@ description: Este documento descreve a relação entre um aplicativo iOS, um apl
 ms.prod: xamarin
 ms.assetid: C366E062-C33D-406A-B3FF-CBE82E5D1E7E
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 09/13/2016
-ms.openlocfilehash: 9108f83d76e07d12d70b400075142d9c73519716
-ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
+ms.openlocfilehash: 72a1fe3541eb4ece67dd137ebcd33f8e81ae9553
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70065603"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292260"
 ---
 # <a name="watchos-project-references-in-xamarin"></a>Referências de projeto watchOS no Xamarin
 
 _Explicação da relação entre o aplicativo iOS, o aplicativo de inspeção e a extensão de inspeção._
 
-Os três projetos em uma solução watchOS são *automaticamente* configurados para referenciar uns aos outros de uma maneira específica para que os aplicativos watchOS 3 sejam compilados e agrupados corretamente. Essas referências de projeto e as configurações de identificador de pacote são descritas abaixo para referência.
+Os três projetos em uma solução watchOS são *automaticamente configurados* para referenciar uns aos outros de uma maneira específica para que os aplicativos watchOS 3 sejam compilados e agrupados corretamente. Essas referências de projeto e as configurações de identificador de pacote são descritas abaixo para referência.
 
 ## <a name="project-references"></a>Referências de Projeto
 
@@ -28,7 +28,7 @@ Exiba as referências clicando duas vezes nos nós de referências para cada pro
 
   ![](project-references-images/catalog-reference1.png "Aplicativo de observação de referências de aplicativo do iPhone")
 
-- Inspecionar referências de **aplicativo** **inspecionar extensão de aplicativo**
+- **Inspecionar** referências de aplicativo **inspecionar extensão de aplicativo**
 
   ![](project-references-images/catalog-reference2.png "Aplicativo de observação de referências de aplicativo do iPhone")
 
@@ -41,7 +41,7 @@ Exiba as referências clicando duas vezes nos nós de referências para cada pro
 
 ## <a name="bundle-identifiers"></a>Identificadores de pacote
 
-Você também precisa ter certeza de que seus identificadores de **pacote** estão corretos.
+Você também precisa ter certeza de que seus **identificadores de pacote** estão corretos.
 Todos os três projetos devem ter o *mesmo* prefixo de identificador, com os dois projetos de inspeção com `watchkitextension` extensões `watchkitapp`predefinidas de e, da seguinte maneira (para o exemplo de **WatchKitCatalog** ):
 
 - Projeto unificado do Xamarin. iOS-`com.xamarin.WatchKitCatalog`

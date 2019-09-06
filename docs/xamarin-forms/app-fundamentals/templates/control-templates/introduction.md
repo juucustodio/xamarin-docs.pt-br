@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: 6b7a6c6d9c9c541e1d5e821fc2dac202e98bec62
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
-ms.translationtype: HT
+ms.openlocfilehash: 676523e461737d7820278ca8c319794d3347088d
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38994419"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70289799"
 ---
 # <a name="introduction-to-xamarinforms-control-templates"></a>Introdução aos modelos de controle do Xamarin.Forms
 
@@ -38,7 +38,7 @@ Um [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) pode ser aplicado aos
 Quando um [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) é criado e atribuído a esses tipos, qualquer aparência existente é substituída pela aparência definida no `ControlTemplate`. Ademais, além de definir a aparência usando a propriedade `ControlTemplate`, os modelos de controle também podem ser aplicados usando estilos para expandir ainda mais a capacidade do tema.
 
 > [!NOTE]
->  *O que são os tipos `TemplatedPage` e `TemplatedView`?* `TemplatedPage` é a classe base para `ContentPage` e é o tipo de página mais básico fornecido pelo Xamarin.Forms. Diferentemente de `ContentPage`, `TemplatedPage` não tem uma propriedade `Content`. Portanto, o conteúdo não pode ser diretamente adicionado a uma instância `TemplatedPage`. Em vez disso, o conteúdo é adicionado, definindo o modelo de controle para a instância `TemplatedPage`. De maneira semelhante, `TemplatedView` é a classe base para `ContentView`. Diferentemente de `ContentView`, `TemplatedView` não tem uma propriedade `Content`. Portanto, o conteúdo não pode ser diretamente adicionado a uma instância `TemplatedView`. Em vez disso, o conteúdo é adicionado, definindo o modelo de controle para a instância `TemplatedView`.
+> *O que são os tipos `TemplatedPage` e `TemplatedView`?* `TemplatedPage` é a classe base para `ContentPage` e é o tipo de página mais básico fornecido pelo Xamarin.Forms. Diferentemente de `ContentPage`, `TemplatedPage` não tem uma propriedade `Content`. Portanto, o conteúdo não pode ser diretamente adicionado a uma instância `TemplatedPage`. Em vez disso, o conteúdo é adicionado, definindo o modelo de controle para a instância `TemplatedPage`. De maneira semelhante, `TemplatedView` é a classe base para `ContentView`. Diferentemente de `ContentView`, `TemplatedView` não tem uma propriedade `Content`. Portanto, o conteúdo não pode ser diretamente adicionado a uma instância `TemplatedView`. Em vez disso, o conteúdo é adicionado, definindo o modelo de controle para a instância `TemplatedView`.
 
 Os modelos de controle podem ser criados em XAML e em C#:
 

@@ -3,15 +3,15 @@ title: Acessar a API do Graph
 description: Este documento descreve como adicionar Azure Active Directory autenticação a um aplicativo móvel criado com o Xamarin.
 ms.prod: xamarin
 ms.assetid: F94A9FF4-068E-4B71-81FE-46920745380D
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/23/2017
-ms.openlocfilehash: 74072a48e190478af79ec06ca8e5048d2cb61e36
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 96e0991bb0805e61dfbf91e8479cbf1c9943f212
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70198575"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70287756"
 ---
 # <a name="accessing-the-graph-api"></a>Acessar a API do Graph
 
@@ -46,7 +46,7 @@ public static string graphApiVersion = "2013-11-08";
 AuthenticationResult authResult = null;
 ```
 
-Uma coisa a ser observada `commonAuthority`aqui é. Quando o ponto de extremidade `common`de autenticação é, seu aplicativo se torna multilocatário, o que significa que qualquer usuário pode usar o logon com suas credenciais de Active Directory. Após a autenticação, esse usuário funcionará no contexto de seus próprios Active Directory – ou seja, eles verão detalhes relacionados ao seu Active Directory.
+Uma coisa a ser observada `commonAuthority`aqui é. Quando o ponto de extremidade `common`de autenticação é, seu aplicativo se torna **multilocatário**, o que significa que qualquer usuário pode usar o logon com suas credenciais de Active Directory. Após a autenticação, esse usuário funcionará no contexto de seus próprios Active Directory – ou seja, eles verão detalhes relacionados ao seu Active Directory.
 
 ### <a name="write-method-to-acquire-access-token"></a>Método Write para adquirir token de acesso
 

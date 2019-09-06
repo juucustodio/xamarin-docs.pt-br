@@ -4,15 +4,15 @@ description: Este artigo apresenta todas as APIs e recursos novos e modificados 
 ms.prod: xamarin
 ms.assetid: FB91DFFE-CF5E-4253-92CB-78A6371259D9
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: edc585364df2e0b2129135e7bf5977c33a77a6e0
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 465c8df864669ad47acd47ae380574e247a0acd6
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68647418"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292861"
 ---
 # <a name="introduction-to-ios-10"></a>Introdução ao iOS 10
 
@@ -52,7 +52,7 @@ Além disso, as extensões de aplicativo de teclado de terceiros têm os seguint
 - A nova `DocumentInputMode` propriedade `UITextDocumentProxy` da classe pode determinar o idioma de entrada de um documento e permitir que a extensão do teclado se alinhe com esse idioma.
 - O novo `HandleInputModeList` método permite que a extensão do teclado exiba o menu do seletor de teclado do sistema em resposta à tecla do globo que está sendo tocado.
 
-Para obter mais informações, consulte nossa [introdução às extensões](~/ios/platform/extensions.md), [integração de aplicativos de mensagens](~/ios/platform/message-app-integration/index.md), [introdução a sugestões](~/ios/platform/search/proactive-suggestions.md)proativas, [introdução ao SiriKit](~/ios/platform/sirikit/index.md), [introdução às notificações de usuário](~/ios/platform/user-notifications/index.md) e à Apple [ Guia de programação de extensão de aplicativo](https://developer.apple.com/library/prerelease/content/documentation/General/Conceptual/ExtensibilityPG/index.html#//apple_ref/doc/uid/TP40014214).
+Para obter mais informações, consulte nossa [introdução às extensões](~/ios/platform/extensions.md), [integração de aplicativos de mensagens](~/ios/platform/message-app-integration/index.md), [introdução a sugestões proativas](~/ios/platform/search/proactive-suggestions.md), [introdução ao SiriKit](~/ios/platform/sirikit/index.md), [introdução às notificações de usuário](~/ios/platform/user-notifications/index.md) e à Apple [ Guia de programação de extensão de aplicativo](https://developer.apple.com/library/prerelease/content/documentation/General/Conceptual/ExtensibilityPG/index.html#//apple_ref/doc/uid/TP40014214).
 
 ## <a name="app-search-enhancements"></a>Aperfeiçoamentos na pesquisa de aplicativo
 
@@ -143,7 +143,7 @@ A Apple fez vários aprimoramentos na segurança e na privacidade no iOS 10, que
 
 Como resultado, os aplicativos em execução no Ios 10 (ou posterior) devem declarar estaticamente sua intenção de acessar recursos específicos ou informações do usuário inserindo uma ou mais chaves específicas de privacidade `Info.plist` em seus arquivos que explicam ao usuário por que o aplicativo deseja obter acesso.
 
-Para saber mais, confira nosso guia de aprimoramentos de [segurança e privacidade](~/ios/app-fundamentals/security-privacy.md) .
+Para saber mais, confira nosso guia de [aprimoramentos de segurança e privacidade](~/ios/app-fundamentals/security-privacy.md) .
 
 ## <a name="sirikit"></a>SiriKit
 

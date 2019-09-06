@@ -3,15 +3,15 @@ title: Criando visão geral de aplicativos de plataforma cruzada
 description: Este documento fornece uma visão geral de alto nível da criação de aplicativos de plataforma cruzada. Ele aborda o valor de, C#padrões de design, como MVC/MVVM e UIs nativas.
 ms.prod: xamarin
 ms.assetid: E442EEFB-FA9C-40E9-9668-5A3F915C8400
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/23/2017
-ms.openlocfilehash: c97cfda836f59d4cdbcd234744f723eb9429ace4
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: e129a8c37e6b8780a57636730c072b230354b8b8
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69526852"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70288377"
 ---
 # <a name="building-cross-platform-applications-overview"></a>Criando visão geral de aplicativos de plataforma cruzada
 

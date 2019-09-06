@@ -4,15 +4,15 @@ description: Este artigo descreve como trabalhar com os controladores de jogos S
 ms.prod: xamarin
 ms.assetid: BDB9894A-236B-424B-9032-ACD12A6C5720
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: 99fafe0ae0186ac68609ebe22dabe64e588ee5e0
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 32deee1ea1e47438f4f671ac3ccaa09f4218a88b
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70226679"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290749"
 ---
 # <a name="siri-remote-and-bluetooth-controllers-for-tvos-in-xamarin"></a>Controladores remotos e Bluetooth Siri para tvOS no Xamarin
 
@@ -22,7 +22,7 @@ Se seu aplicativo for um jogo, você poderá, opcionalmente, criar suporte para 
 
 [![](remote-bluetooth-images/intro01.png "O controlador de jogo e remoto do Bluetooth")](remote-bluetooth-images/intro01.png#lightbox)
 
-Este artigo descreve os botões [remotos Siri](#The-Siri-Remote), gestos de [superfície de toque](#Touch-Surface-Gestures) e [Siri remoto](#Siri-Remote-Buttons) e mostra como trabalhar com eles por meio de [gestos e storyboards](#Gestures-and-Storyboards), gestos [e código](#Gestures-and-Code) e [manipulação de eventos de baixo nível](#Low-Level-Event-Handling). Por fim, ele aborda o [trabalho com controladores de jogo](#Working-with-Game-Controllers) em um aplicativo Xamarin. tvOS.
+Este artigo descreve os botões [remotos Siri](#The-Siri-Remote), [gestos de superfície de toque](#Touch-Surface-Gestures) e [Siri remoto](#Siri-Remote-Buttons) e mostra como trabalhar com eles por meio de [gestos e storyboards](#Gestures-and-Storyboards), [gestos e código](#Gestures-and-Code) e [manipulação de eventos de baixo nível](#Low-Level-Event-Handling). Por fim, ele aborda o [trabalho com controladores de jogo](#Working-with-Game-Controllers) em um aplicativo Xamarin. tvOS.
 
 <a name="The-Siri-Remote" />
 
@@ -60,7 +60,7 @@ A Apple fornece as seguintes sugestões para trabalhar com gestos de superfície
 
 - **Diferenciar entre cliques e toques** -clicar é uma ação intencional pelo usuário e é bem adequado para seleção, ativação e o botão principal de um jogo. Tocar é mais sutil e deve ser usado com moderação porque o usuário geralmente está mantendo o Siri remoto em sua mão e pode acidentalmente ativar um evento Tap facilmente.
 - **Não redefina gestos padrão** -o usuário tem uma expectativa de que gestos específicos executam ações específicas, você não deve redefinir o significado ou a função desses gestos em seu aplicativo. A única exceção é um aplicativo de jogos durante o jogo ativo.
-- **Definir novos gestos** de forma moderada de novo, o usuário tem uma expectativa de que gestos específicos executam ações específicas. Você deve evitar a definição de gestos personalizados para executar ações padrão. E novamente, os jogos são a exceção mais comum em que os gestos personalizados podem adicionar diversão, reprodução de imersão ao jogo.
+- **Definir novos gestos de forma moderada** de novo, o usuário tem uma expectativa de que gestos específicos executam ações específicas. Você deve evitar a definição de gestos personalizados para executar ações padrão. E novamente, os jogos são a exceção mais comum em que os gestos personalizados podem adicionar diversão, reprodução de imersão ao jogo.
 - **Se apropriado, responder a toques de quadro d** – levemente tocando nas bordas de canto da superfície de toque reagirá como um painel D em um controlador de jogo movendo o foco ou a direção para cima, para baixo, para a esquerda ou para a direita. Se apropriado, você deve responder a esses gestos em seu aplicativo ou jogo.
 
 <a name="Siri-Remote-Buttons" />
@@ -83,14 +83,14 @@ A maneira mais fácil de trabalhar com o remoto Siri em seu aplicativo Xamarin. 
 Para adicionar um reconhecedor de gestos, faça o seguinte:
 
 1. Na **Gerenciador de soluções**, clique duas vezes no `Main.storyboard` arquivo e abra-o para editar o designer de interface.
-2. Arraste um reconhecedor de gestos de **toque** da **biblioteca** e solte-o na exibição:
+2. Arraste um **reconhecedor de gestos de toque** da **biblioteca** e solte-o na exibição:
 
     [![](remote-bluetooth-images/storyboard01.png "Um reconhecedor de gestos Tap")](remote-bluetooth-images/storyboard01.png#lightbox)
 3. Marque **selecionar** na seção de **botão** do **Inspetor de atributo**:
 
     [![](remote-bluetooth-images/storyboard02.png "Selecionar seleção")](remote-bluetooth-images/storyboard02.png#lightbox)
 4. **Select** significa que o gesto responderá ao usuário clicando na **superfície de toque** no Siri remoto. Você também tem a opção de responder aos botões **menu**, **reproduzir/pausar**, para **cima**, **para baixo, para**a **esquerda** e para a **direita** .
-5. Em seguida, conecte uma **ação** do reconhecedor de **gestos Tap** e `TouchSurfaceClicked`chame-a:
+5. Em seguida, conecte uma **ação** do **reconhecedor de gestos Tap** e `TouchSurfaceClicked`chame-a:
 
     [![](remote-bluetooth-images/storyboard03.png "Uma ação do reconhecedor de gestos Tap")](remote-bluetooth-images/storyboard03.png#lightbox)
 6. Salve as alterações e retorne ao Visual Studio para Mac.
@@ -310,7 +310,7 @@ Conforme mencionado acima, além do Siri remoto padrão que acompanha a Apple TV
 Se seu aplicativo exigir entrada de controlador de baixo nível, você poderá usar a [estrutura de Game Controller](https://developer.apple.com/library/prerelease/tvos/documentation/ServicesDiscovery/Conceptual/GameControllerPG/Introduction/Introduction.html#//apple_ref/doc/uid/TP40013276) da Apple, que tem as seguintes modificações para tvOS:
 
 - O perfil do micro Game Controller`GCMicroGamepad`() foi adicionado para direcionar o Siri remoto.
-- A nova `GCEventViewController` classe pode ser usada para rotear eventos do controlador de jogo por meio de seu aplicativo. Consulte a seção determinando a [entrada do controlador de jogo](#determining-game-controller-input) abaixo para obter mais detalhes.
+- A nova `GCEventViewController` classe pode ser usada para rotear eventos do controlador de jogo por meio de seu aplicativo. Consulte a seção [determinando a entrada do controlador de jogo](#determining-game-controller-input) abaixo para obter mais detalhes.
 
 <a name="Game-Controller-Support-Requirements" />
 

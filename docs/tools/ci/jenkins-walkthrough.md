@@ -3,15 +3,15 @@ title: Usando Jenkins com Xamarin
 description: Este documento descreve como usar o Jenkins para integração contínua com aplicativos Xamarin. Ele aborda como instalar, configurar e usar o Jenkins.
 ms.prod: xamarin
 ms.assetid: 1E6825DF-1254-4FCB-B94D-ADD33D1B5309
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/23/2017
-ms.openlocfilehash: d44e7232529386b7cb6b3db5fbb8bc4a285972fb
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 40f3443fb7c6fc6240e016106d9b6bbe0e0b666d
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69529119"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290818"
 ---
 # <a name="using-jenkins-with-xamarin"></a>Usando Jenkins com Xamarin
 
@@ -114,7 +114,7 @@ Isso exibirá a página **Jenkins Plugin Manager** . Se você clicar na guia dis
 Rolar por todos os plugins de 600 para encontrar alguns pode ser entediante e propenso a erros. Jenkins fornece um campo de pesquisa de filtro no canto superior direito da interface. Usar esse campo de filtro para pesquisa simplificará a localização e instalação de um ou todos os seguintes plug-ins:
 
 - **Plug-in do MSBuild do Jenkins** – esse plug-in possibilita a criação de soluções do Visual Studio e Visual Studio para Mac (. sln) e projetos (. csproj).
-- **Plug-in** de injetador de ambiente – esse é um plug-in opcional, mas útil que possibilita definir variáveis de ambiente no nível de trabalho e de compilação. Ele também oferece proteção extra para variáveis como as senhas usadas para assinar o código do aplicativo. Às vezes, é abreviado como o *plug-in EnvInject* .
+- **Plug-in de injetador de ambiente** – esse é um plug-in opcional, mas útil que possibilita definir variáveis de ambiente no nível de trabalho e de compilação. Ele também oferece proteção extra para variáveis como as senhas usadas para assinar o código do aplicativo. Às vezes, é abreviado como o *plug-in EnvInject* .
 - **Plug-in Team Foundation Server** – esse é um plug-in opcional que só é necessário se você estiver usando o Team Foundation Server ou Team Foundation Services para controle do código-fonte.
 
 O Jenkins dá suporte ao git sem nenhum plug-in extra.
@@ -175,7 +175,7 @@ Na página **Configurar segurança global** , marque a caixa de seleção **habi
 
 [![](jenkins-walkthrough-images/image19.png "Na página Configurar segurança global, marque a caixa de seleção Habilitar segurança e o formulário controle de acesso deve aparecer, semelhante a esta captura de tela")](jenkins-walkthrough-images/image19.png#lightbox)
 
-Alterne o botão de opção do **próprio banco de dados de usuário do Jenkins** na **seção realm de segurança**e verifique se a opção permitir que **os usuários se** inscrevam também está marcada, conforme ilustrado na captura de tela a seguir:
+Alterne o botão de opção do **próprio banco de dados de usuário do Jenkins** na **seção realm de segurança**e verifique se a opção permitir que **os usuários se inscrevam** também está marcada, conforme ilustrado na captura de tela a seguir:
 
 [![](jenkins-walkthrough-images/image20.png "Alterne o botão de opção do banco de dados de usuário do Jenkins próprio na seção realm de segurança e verifique se a opção permitir que os usuários se inscrevam também está marcada")](jenkins-walkthrough-images/image20.png#lightbox)
 

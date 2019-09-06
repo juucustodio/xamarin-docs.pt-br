@@ -4,15 +4,15 @@ description: Este documento descreve como trabalhar com exibições de coleção
 ms.prod: xamarin
 ms.assetid: 5125C4C7-2DDF-4C19-A362-17BB2B079178
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: 616b20872a01b4df6c3f27c636ce7b8ee912414e
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: c9980dff866a176d4a4a1f1f6bc1bd8c92bd7097
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70200344"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70280216"
 ---
 # <a name="working-with-tvos-collection-views-in-xamarin"></a>Trabalhando com exibições de coleção tvOS no Xamarin
 
@@ -125,7 +125,7 @@ Vamos fazer o seguinte:
 1. Selecione a célula de exibição de coleção e defina sua `CityCollectionViewCell` classe como na **Guia Widget**: 
 
     [![](collection-views-images/collection09.png "Definir a classe como CityCollectionViewCell")](collection-views-images/collection09.png#lightbox)
-1. Na **Guia do widget** , verifique se o **layout** é `Flow` e se a direção da **rolagem** é `Vertical` para o modo de exibição de coleção: 
+1. Na **Guia do widget** , verifique se o layout `Flow` é e se a direção `Vertical` da **rolagem** é para o modo de exibição de coleção: 
 
     [![](collection-views-images/collection10.png "A guia do widget")](collection-views-images/collection10.png#lightbox)
 1. Selecione a célula de exibição de coleção e defina sua `CityCell` identidade como na **Guia do widget**: 
@@ -163,7 +163,7 @@ Vamos fazer o seguinte:
 1. Selecione a célula de exibição de coleção e defina sua `CityCollectionViewCell` classe como na **Guia Widget**: 
 
     [![](collection-views-images/collection09vs.png "Definir a classe como CityCollectionViewCell")](collection-views-images/collection09vs.png#lightbox)
-1. Na **Guia do widget** , verifique se o **layout** é `Flow` e se a direção da **rolagem** é `Vertical` para o modo de exibição de coleção: 
+1. Na **Guia do widget** , verifique se o layout `Flow` é e se a direção `Vertical` da **rolagem** é para o modo de exibição de coleção: 
 
     [![](collection-views-images/collection10vs.png "Guia do widget Tnão")](collection-views-images/collection10vs.png#lightbox)
 1. Selecione a célula de exibição de coleção e defina sua `CityCell` identidade como na **Guia do widget**: 
@@ -820,7 +820,7 @@ Quando o usuário clica em uma imagem de seleção, o modo de exibição de cole
 
 ## <a name="creating-custom-layout-and-reordering-items"></a>Criando layout personalizado e reordenando itens
 
-Um dos principais recursos do uso de uma exibição de coleção é a capacidade de criar layouts personalizados. Como o tvOS é herdado do iOS, o processo de criação de um layout personalizado é o mesmo. Consulte nossa [introdução à](~/ios/user-interface/controls/uicollectionview.md) documentação de exibições de coleção para obter mais informações.
+Um dos principais recursos do uso de uma exibição de coleção é a capacidade de criar layouts personalizados. Como o tvOS é herdado do iOS, o processo de criação de um layout personalizado é o mesmo. Consulte nossa [introdução à documentação de exibições de coleção](~/ios/user-interface/controls/uicollectionview.md) para obter mais informações.
 
 Recentemente adicionados às exibições de coleção para o iOS 9 foi a capacidade de permitir facilmente a reordenação de itens na coleção. Novamente, como o tvOS 9 é um subconjunto do iOS 9, isso é feito da mesma maneira. Consulte nosso documento de [alterações de exibição de coleção](~/ios/user-interface/controls/uicollectionview.md) para obter mais detalhes.
 

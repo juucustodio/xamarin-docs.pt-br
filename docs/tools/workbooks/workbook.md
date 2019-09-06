@@ -1,71 +1,71 @@
 ---
 title: Pastas de trabalho interativas
-description: Este documento descreve como usar o Xamarin Workbooks para criar documentos em tempo real que contém C# código para experimentar, ensinar, treinamento ou explorando.
+description: Este documento descreve como usar Xamarin Workbooks para criar documentos em tempo real C# contendo código para experimentar, ensinar, treinar ou explorar.
 ms.prod: xamarin
 ms.assetid: B79E5DE9-5389-4691-9AA3-FF4336CE294E
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/30/2017
-ms.openlocfilehash: a900d427ad6ac2a0e211ef4f00d2f014b13e5d1c
-ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
+ms.openlocfilehash: 7b3c356460d9427821843dc084b3f306c026ffa0
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67674414"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70293081"
 ---
 # <a name="interactive-workbooks"></a>Pastas de trabalho interativas
 
-Você pode usar pastas de trabalho como um aplicativo autônomo, separado do seu IDE.
+Você pode usar pastas de trabalho como um aplicativo autônomo, separado do IDE.
 
-Para começar a criar uma nova pasta de trabalho, execute o aplicativo de pastas de trabalho. Se você ainda não tiver isso já instalado, visite o [instalação](~/tools/workbooks/install.md#install) página. Você será solicitado a criar uma pasta de trabalho em sua plataforma de preferência, que irá se conectar automaticamente a um aplicativo de agente, permitindo que você visualize seu documento em tempo real.
+Para começar a criar uma nova pasta de trabalho, execute o aplicativo de pastas de trabalho. Se ainda não tiver instalado isso, visite a página [instalação](~/tools/workbooks/install.md#install) . Você será solicitado a criar uma pasta de trabalho na plataforma de sua escolha, que se conectará automaticamente a um aplicativo do Agent, permitindo que você visualize o documento em tempo real.
 
-Se o aplicativo pastas de trabalho já está em execução, você pode criar um novo documento, navegando até **arquivo > novo**.
+Se o aplicativo de pastas de trabalho já estiver em execução, você poderá criar um novo documento navegando até **arquivo > novo**.
 
-Pastas de trabalho podem ser salvo e abertas novamente mais tarde no aplicativo. Em seguida, você pode compartilhá-los com outras pessoas para demonstrar ideias, explore as novas APIs ou ensinar os novos conceitos.
+As pastas de trabalho podem ser salvas e abertas novamente mais tarde no aplicativo. Você pode compartilhá-los com outras pessoas para demonstrar ideias, explorar novas APIs ou ensinar novos conceitos.
 
 ## <a name="code-editing"></a>Edição de código
 
-O janela de edição de código fornece conclusão de código, colorização de sintaxe, embutido live-diagnostics e suporte à instrução de várias linhas.
+A janela de edição de código fornece a conclusão de código, a coloração de sintaxe, o diagnóstico ao vivo embutido e o suporte a instruções de várias linhas.
 
-[![](workbook-images/inspector-0.6.0-repl-small.png "O janela de edição de código fornece conclusão de código, colorização de sintaxe, embutido live-diagnostics e suporte à instrução de várias linhas")](workbook-images/inspector-0.6.0-repl.png#lightbox)
+[![](workbook-images/inspector-0.6.0-repl-small.png "A janela de edição de código fornece a conclusão de código, a coloração de sintaxe, o diagnóstico ao vivo embutido e o suporte a instruções de várias linhas")](workbook-images/inspector-0.6.0-repl.png#lightbox)
 
-Xamarin Workbooks são salvas em um `.workbook` arquivo, que é um arquivo CommonMark com alguns metadados na parte superior (consulte [tipos de arquivo de pastas de trabalho](#workbooks-files-types) para obter mais detalhes sobre como as pastas de trabalho podem ser salvas).
+Xamarin Workbooks são salvas em `.workbook` um arquivo, que é um arquivo CommonMark com alguns metadados na parte superior (consulte os [tipos de arquivo de pastas de trabalho](#workbooks-files-types) para obter mais detalhes sobre como as pastas de trabalho podem ser salvas).
 
-### <a name="nuget-package-support"></a>Suporte de pacote do NuGet
+### <a name="nuget-package-support"></a>Suporte ao pacote NuGet
 
-Muitos pacotes do NuGet populares têm suporte diretamente em pastas de trabalho do Xamarin. Você pode procurar pacotes, navegando até **arquivo > Adicionar pacote**. Adicionando um pacote levará automaticamente no `#r` instruções que referenciam os assemblies do pacote, permitindo que você usá-los imediatamente.
+Muitos pacotes NuGet populares têm suporte diretamente no Xamarin Workbooks. Você pode procurar pacotes navegando até o **arquivo > adicionar pacote**. A adição de um pacote trará `#r` automaticamente instruções que fazem referência a assemblies de pacote, permitindo que você os use imediatamente.
 
-Quando você salva uma pasta de trabalho com referências de pacote, essas referências são salvos também. Se você compartilhar a pasta de trabalho com outra pessoa, ele baixa automaticamente os pacotes referenciados.
+Quando você salva uma pasta de trabalho com referências de pacote, essas referências também são salvas. Se você compartilhar a pasta de trabalho com outra pessoa, ela baixará automaticamente os pacotes referenciados.
 
-Há algumas limitações conhecidas com suporte de pacote do NuGet em pastas de trabalho:
+Há algumas limitações conhecidas com o suporte a pacotes NuGet em pastas de trabalho:
 
-- Bibliotecas nativas são suportados apenas no iOS e somente quando vinculado com a biblioteca gerenciada.
-- Pacotes que dependem do `.targets` arquivos ou scripts do PowerShell provavelmente não funcionará conforme o esperado.
-- Para remover ou modificar uma dependência de pacote, edite o manifesto da pasta de trabalho com um editor de texto. Gerenciamento de pacotes apropriado está sendo enviado.
+- As bibliotecas nativas têm suporte apenas no iOS e somente quando vinculadas à biblioteca gerenciada.
+- Os pacotes que dependem `.targets` de arquivos ou scripts do PowerShell provavelmente não funcionarão conforme o esperado.
+- Para remover ou modificar uma dependência de pacote, edite o manifesto da pasta de trabalho com um editor de texto. O gerenciamento de pacotes adequado está a caminho.
 
-### <a name="xamarinforms-support"></a>Suporte de xamarin. Forms
+### <a name="xamarinforms-support"></a>Suporte para Xamarin. Forms
 
-Se você referenciar o pacote NuGet do xamarin. Forms em sua pasta de trabalho, o aplicativo de pasta de trabalho será alterado sua exibição principal para ser baseados em xamarin. Forms. Você pode acessá-lo por meio de `Xamarin.Forms.Application.Current.MainPage`.
+Se você referenciar o pacote NuGet do Xamarin. Forms em sua pasta de trabalho, o aplicativo de pasta de trabalho alterará sua exibição principal para o Xamarin. Forms baseado. Você pode acessá- `Xamarin.Forms.Application.Current.MainPage`lo por meio do.
 
-A guia do Inspetor de exibição também tem suporte especial para mostrar a hierarquia de exibição do xamarin. Forms para ajudá-lo a entender seus layouts.
+A guia Inspetor de exibição também tem suporte especial para mostrar a hierarquia de exibição Xamarin. Forms para ajudá-lo a entender seus layouts.
 
-## <a name="rich-text-editing"></a>Edição de texto avançada
+## <a name="rich-text-editing"></a>Edição de Rich Text
 
-Você pode editar o texto em torno de seu código usando o editor de rich text incluído, conforme ilustrado abaixo:
+Você pode editar o texto em todo o seu código usando o editor de Rich Text incluído, conforme ilustrado abaixo:
 
-![](workbook-images/inspector-0.6.2-editing.gif "Editar o texto ao redor do código usando o editor de texto avançado interno")
+![](workbook-images/inspector-0.6.2-editing.gif "Editar o texto em volta do código usando o editor de Rich Text interno")
 
-### <a name="markdown-authoring"></a>Criação de markdown
+### <a name="markdown-authoring"></a>Redução da criação
 
-Os autores de pasta de trabalho podem, às vezes, achar mais fácil editar diretamente o CommonMark "origem" da pasta de trabalho com seu editor favorito.
+Às vezes, os autores da pasta de trabalho podem achar mais fácil editar diretamente a "origem" do CommonMark da pasta de trabalho com seu editor favorito.
 
-Lembre-se de que, se você, em seguida, editar e salva sua pasta de trabalho do cliente de pastas de trabalho, seu texto CommonMark pode ser reformatado.
+Lembre-se de que, se você editar e salvar sua pasta de trabalho no cliente de pastas de trabalho, seu texto CommonMark poderá ser reformatado.
 
-Observe que, devido à extensão CommonMark, podemos usar habilitar YAML metadados em arquivos de pasta de trabalho, `---` é reservado para essa finalidade. Se você deseja criar [quebras temáticas](http://spec.commonmark.org/0.27/#thematic-break) em seu texto, você deve usar `***` ou `___` em vez disso. Essas quebras devem ser evitadas em pastas de trabalho 1.2 e anteriormente devido a um bug durante o salvamento.
+Observe que, devido à extensão CommonMark que usamos para habilitar metadados YAML em arquivos de pasta de `---` trabalho, é reservada para essa finalidade. Se você quiser criar [quebras de temática](http://spec.commonmark.org/0.27/#thematic-break) no texto, deverá usar `***` ou `___` em vez disso. Essas interrupções devem ser evitadas nas pastas de trabalho 1,2 e anteriores devido a um bug durante o salvamento.
 
-### <a name="improvements-in-workbooks-13"></a>Melhorias em pastas de trabalho 1.3
+### <a name="improvements-in-workbooks-13"></a>Melhorias nas pastas de trabalho 1,3
 
-Também ampliamos a sintaxe de aspas do bloco de Markdown ligeiramente para melhorar a apresentação. Adicionando um emoji como o primeiro caractere em seu citação em bloco, você pode influenciar a cor do plano de fundo da cotação:
+Também estendemos ligeiramente a sintaxe de redução de aspas de blocos para melhorar a apresentação. Ao adicionar um Emoji como o primeiro caractere em sua citação de bloco, você pode influenciar a cor do plano de fundo da citação:
 
 - `> [!NOTE]`
     > será renderizado como uma anotação com um plano de fundo azul
@@ -74,73 +74,73 @@ Também ampliamos a sintaxe de aspas do bloco de Markdown ligeiramente para melh
 - `> [!WARNING]`
     > será renderizado como um problema com um plano de fundo vermelho
 
-Você também pode vincular aos cabeçalhos do documento de pasta de trabalho. Podemos gerar as âncoras para cada cabeçalho, com a ID da âncora sendo o texto do cabeçalho, processado da seguinte maneira:
+Você também pode vincular a cabeçalhos no documento da pasta de trabalho. Geramos âncoras para cada cabeçalho, com a ID de âncora sendo o texto do cabeçalho, processado da seguinte maneira:
 
-1. O cabeçalho é em minúsculas.
-1. Todos os caracteres, exceto caracteres alfanuméricos e traços são removidos.
+1. O cabeçalho está em letras minúsculas.
+1. Todos os caracteres, exceto os alfanuméricos e traços, são removidos.
 1. Todos os espaços são substituídos por traços.
 
-Isso significa que um cabeçalho como "Importante Header" obtém uma id de `important-header` e pode ser vinculado a inserindo um link para `#important-header` na pasta de trabalho.
+Isso significa que um cabeçalho como "cabeçalho importante" Obtém uma ID `important-header` e que pode ser vinculado ao inserir um link para `#important-header` na pasta de trabalho.
 
 ## <a name="document-structure"></a>Estrutura do documento
 
-### <a name="cell"></a>célula
+### <a name="cell"></a>CÉL
 
-Uma unidade separada de conteúdo, que representa o código executável ou markdown. Uma célula de código é composta de até quatro subcomponentes:
+Uma unidade discreta de conteúdo, que representa o código executável ou a redução. Uma célula de código é composta de até quatro subcomponentes:
 
 - Editor
-  - buffer
+  - Buffer
 - Diagnóstico do compilador
 - Saída do console
 - Resultados da execução
 
 ### <a name="editor"></a>Editor
 
-O componente de texto interativa de uma célula. Para células de código, este é o editor de código real com realce de sintaxe, etc. Para células de markdown, este é um editor de conteúdo de rich text com uma formatação sensível ao contexto e a barra de ferramentas de criação.
+O componente de texto interativo de uma célula. Para células de código, esse é o editor de código real com realce de sintaxe, etc. Para as células de redução, este é um editor de conteúdo de Rich Text com uma barra de ferramentas de criação e formatação contextual.
 
-### <a name="buffer"></a>buffer
+### <a name="buffer"></a>Buffer
 
-O conteúdo de um editor de texto real.
+O conteúdo de texto real de um editor.
 
 ### <a name="compiler-diagnostics"></a>Diagnóstico do compilador
 
-Qualquer diagnóstico produzido durante a compilação de código, processado somente quando for solicitada a execução explícita. Exibido imediatamente abaixo do editor de célula.
+Qualquer diagnóstico produzido durante a compilação do código, será renderizado somente quando a execução explícita for solicitada. Exibido imediatamente abaixo do editor de célula.
 
 ### <a name="console-output"></a>Saída do console
 
-Nenhuma saída foi gravada para saída padrão ou erro padrão durante a execução da célula. Saída padrão será renderizada em texto preto e erro padrão será renderizado em texto vermelho.
+Qualquer saída gravada no erro padrão ou padrão durante a execução da célula. O padrão de saída será renderizado em texto preto e o erro padrão será renderizado em texto vermelho.
 
 ### <a name="execution-results"></a>Resultados da execução
 
-Ricas e interativas potencialmente representações de resultados de uma célula serão renderizadas na compilação bem-sucedida, desde um resultado, na verdade, é produzido pela execução. As exceções são consideradas resultados nesse contexto, uma vez que eles são produzidos como resultado da execução, na verdade, a compilação.
+Representações avançadas e potencialmente interativas dos resultados de uma célula serão renderizados após a compilação bem-sucedida, desde que um resultado seja realmente produzido pela execução. As exceções são consideradas resultados neste contexto, pois elas são produzidas como resultado da execução da compilação.
 
 ## <a name="workbooks-files-types"></a>Tipos de arquivos de pastas de trabalho
 
 ### <a name="plain-files"></a>Arquivos simples
 
-Por padrão, uma pasta de trabalho salva como um texto sem formatação `.workbook` arquivo que contém o texto formatado em CommonMark.
+Por padrão, uma pasta de trabalho é salva como `.workbook` um arquivo de texto sem formatação que contém texto formatado em CommonMark.
 
 ### <a name="packages"></a>Pacotes
 
-Um pacote de pasta de trabalho é um diretório que é nomeado com o `.workbook` extensão.
-No Finder do Mac e na caixa de diálogo Abrir pastas de trabalho do Xamarin e o menu de arquivos recentes, esse diretório será reconhecido como se fosse um arquivo.
+Um pacote de pasta de trabalho é um diretório que é `.workbook` nomeado com a extensão.
+No localizador do Mac e no menu Xamarin Workbooks abrir caixa de diálogo e arquivos recentes, esse diretório será reconhecido como se fosse um arquivo.
 
-O diretório deve conter um `index.workbook` arquivo, que é a pasta de trabalho de texto sem formatação que será carregada no Xamarin Workbooks. O diretório também pode conter recursos exigidos pelo `index.workbook`, incluindo imagens ou outros arquivos.
+O diretório deve conter um `index.workbook` arquivo, que é a pasta de trabalho de texto sem formatação real que será carregada no Xamarin Workbooks. O diretório também pode conter recursos exigidos `index.workbook`pelo, incluindo imagens ou outros arquivos.
 
-Se um texto sem formatação `.workbook` que faz referência a recursos do mesmo diretório de arquivo é aberto em pastas de trabalho 0.99.3 ou posterior, quando ele for salvo, ele será convertido em um `.workbook` pacote. Isso é verdadeiro no Mac e Windows.
+Se um arquivo de `.workbook` texto sem formatação que faz referência a recursos de seu mesmo diretório for aberto nas pastas de trabalho 0.99.3 ou posterior, quando ele for salvo, ele `.workbook` será convertido em um pacote. Isso é verdadeiro no Mac e no Windows.
 
 > [!NOTE]
-> Os usuários do Windows abrirá o `package.workbook\index.workbook` diretamente do arquivo, mas caso contrário, o pacote se comportará como no Mac.
+> Os usuários do Windows abrirão o `package.workbook\index.workbook` arquivo diretamente, mas o pacote se comportará do mesmo modo que no Mac.
 
-### <a name="archives"></a>Arquivos mortos
+### <a name="archives"></a>Zip
 
-Pacotes de pasta de trabalho, que está sendo diretórios, podem ser difícil distribuir facilmente pela internet. A solução é arquivos de pasta de trabalho. Um arquivo de pasta de trabalho é um pacote compactado por zip pasta de trabalho, nomeado com o `.workbook` extensão.
+Os pacotes de pastas de trabalho, sendo diretórios, podem ser difíceis de distribuir facilmente pela Internet. A solução é arquivamento de pastas de trabalho. Um arquivo de pasta de trabalho é um pacote de pasta de trabalho compactado zip, chamado com a `.workbook` extensão.
 
-A partir 1.1 de pastas de trabalho, ao salvar um pacote da pasta de trabalho, a caixa de diálogo Salvar oferece a opção de salvar como arquivo morto em vez disso. Pastas de trabalho 1.0 não tinham nenhum modo interno de criar ou salvar arquivos mortos.
+A partir das pastas de trabalho 1,1, ao salvar um pacote de pasta de trabalho, a caixa de diálogo Salvar oferece a opção de salvar como um arquivo morto. As pastas de trabalho 1,0 não tinham uma maneira interna de criar ou salvar arquivos mortos.
 
-Em pastas de trabalho 1.0, quando um arquivo de pasta de trabalho foi aberto, transparente, ele foi convertido em um pacote da pasta de trabalho e o arquivo zip foi perdido. 1\.1 de pastas de trabalho, o arquivo zip permanece. Quando o usuário salva o arquivo morto, ele será substituído por um novo arquivo zip.
+Nas pastas de trabalho 1,0, quando um arquivo de pasta de trabalho foi aberto, ele foi convertido de forma transparente em um pacote de pasta de trabalho e o arquivo zip foi perdido. Nas pastas de trabalho 1,1, o arquivo zip permanece. Quando o usuário salva o arquivo, ele é substituído por um novo arquivo zip.
 
-Você pode criar um arquivo de pasta de trabalho manualmente clicando duas vezes um pacote da pasta de trabalho e selecionando **compactar** no Mac, ou **enviar para > pasta compactada (zipada)** no Windows. Renomeie o arquivo zip para ter um `.workbook` extensão de arquivo. Isso só funciona com os pacotes de pasta de trabalho, arquivos de pasta de trabalho não sem formatação.
+Você pode criar um arquivo morto de pasta de trabalho manualmente clicando com o botão direito do mouse em um pacote de pasta de trabalho e selecionando **compactar** no Mac ou **Enviar para > pasta compactada (zipada)** no Windows. Em seguida, renomeie o arquivo `.workbook` zip para ter uma extensão de arquivo. Isso só funciona com pacotes de pasta de trabalho, não com arquivos de pasta de trabalho simples.
 
 ## <a name="related-links"></a>Links relacionados
 

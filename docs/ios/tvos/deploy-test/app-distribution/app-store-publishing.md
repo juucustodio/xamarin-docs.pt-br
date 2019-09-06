@@ -4,15 +4,15 @@ description: Este documento descreve como publicar um aplicativo na loja de apli
 ms.prod: xamarin
 ms.assetid: 52448C93-DC19-40FA-BF8C-608AE680FF49
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: aaffaf3d66bb51d467c40bc3e5707a149154c0a7
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 350cd7e2d0dd79b876a6c1277d40a9c96d97c102
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528736"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70282712"
 ---
 # <a name="publishing-to-the-apple-tv-app-store"></a>Como publicar na Apple TV App Store
 
@@ -33,7 +33,7 @@ Neste artigo, abordaremos todas as etapas necessárias para provisionar, compila
 ## <a name="before-you-submit-an-application"></a>Antes de enviar um aplicativo
 
 Depois de enviar um aplicativo para publicação na loja de aplicativos da Apple TV, ele passa por um processo de revisão da Apple para garantir que ele atenda às diretrizes da Apple para qualidade e conteúdo. Se o aplicativo não atender a essas diretrizes, a Apple o rejeitará e, em seguida, você precisará resolver as não conformidades citadas pela Apple e reenviar o aplicativo.
-Portanto, você terá mais chance de fazê-lo passar pela análise da Apple ao familiarizar-se com essas diretrizes e tentar adaptar seu aplicativo a elas. As diretrizes da Apple estão disponíveis em [diretrizes de revisão da loja de aplicativos](https://developer.apple.com/appstore/resources/approval/guidelines.html) e preparam o [envio de seu aplicativo para a nova Apple TV](https://developer.apple.com/tvos/submit/).
+Portanto, você terá mais chance de fazê-lo passar pela análise da Apple ao familiarizar-se com essas diretrizes e tentar adaptar seu aplicativo a elas. As diretrizes da Apple estão disponíveis em [diretrizes de revisão da loja de aplicativos](https://developer.apple.com/appstore/resources/approval/guidelines.html) e [preparam o envio de seu aplicativo para a nova Apple TV](https://developer.apple.com/tvos/submit/).
 
 Algumas coisas a observar ao enviar um aplicativo:
 
@@ -56,7 +56,7 @@ Faça o seguinte:
 3. Selecione um **Sale Price (Preço de venda)** ou especifique que o aplicativo será liberado gratuitamente.
 4. Forneça um **ícone de loja de aplicativos** (ícone grande) e capturas de tela do seu aplicativo em ação, nos dispositivos Apple TV aos quais ele dá suporte. Veja nosso guia de [trabalho com ícones e imagens](~/ios/tvos/app-fundamentals/icons-images.md) para obter mais detalhes.
 5. Forneça uma **Descrição** clara e sucinta do aplicativo, incluindo seus recursos e benefícios para o usuário final.
-6. Forneça **categorias**,subcategorias e **palavras-chave** para ajudar o usuário a localizar seu aplicativo na loja de aplicativos da Apple TV.
+6. Forneça **categorias**, **subcategorias**e **palavras-chave** para ajudar o usuário a localizar seu aplicativo na loja de aplicativos da Apple TV.
 7. Forneça URLs de **Contact (Contato)** e **Support (Suporte)** para o seu site exigido pela Apple.
 8. Defina a **classificação**do aplicativo, que é usada pelos controles dos pais na loja de aplicativos da Apple TV.
 9. Configure tecnologias opcionais da App Store, como **Game Center** e **In-App Purchase (Compra no aplicativo)** .

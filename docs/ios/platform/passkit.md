@@ -4,15 +4,15 @@ description: O aplicativo de carteira permite que os usuários do iOS armazenem 
 ms.prod: xamarin
 ms.assetid: 74B9973B-C1E8-B727-3F6D-59C1F98BAB3A
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 06/13/2018
-ms.openlocfilehash: c434c39c12403bfc61e146041eb2a0780f29eb3e
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 8039482175465a67867f3c70f17518dee8b9500b
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70119183"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70277862"
 ---
 # <a name="passkit-in-xamarinios"></a>PassKit no Xamarin. iOS
 
@@ -225,7 +225,7 @@ Para criar uma ID de tipo de passagem, faça o seguinte.
 
 A primeira etapa é configurar uma ID de tipo de passagem para cada _tipo_ diferente de pass a ser suportado. A ID de passagem (ou o identificador de tipo de passagem) cria um identificador exclusivo para a passagem. Usaremos essa ID para vincular a passagem à sua conta de desenvolvedor usando um certificado.
 
-1. Na [seção certificados, identificadores e perfis do portal de provisionamento do IOS](https://developer.apple.com/account/overview.action), navegue até identificadores e selecione as IDs de **tipo de passagem** . Em seguida, **+** selecione o botão para criar um novo tipo de passagem: [![](passkit-images/passid.png "Criar um novo tipo de passagem")](passkit-images/passid.png#lightbox)
+1. Na [seção certificados, identificadores e perfis do portal de provisionamento do IOS](https://developer.apple.com/account/overview.action), navegue até **identificadores** e selecione as IDs de **tipo de passagem** . Em seguida, **+** selecione o botão para criar um novo tipo de passagem: [![](passkit-images/passid.png "Criar um novo tipo de passagem")](passkit-images/passid.png#lightbox)
 
 2. Forneça uma **Descrição** (nome) e um **identificador** (cadeia de caracteres exclusiva) para a passagem. Observe que todas as IDs de tipo de passagem devem começar `pass.` com a cadeia de caracteres `pass.com.xamarin.coupon.banana` neste exemplo que usamos: [![](passkit-images/register.png "Forneça uma descrição e um identificador")](passkit-images/register.png#lightbox)
 
@@ -389,7 +389,7 @@ A opção padrão é para seu aplicativo permitir todos os tipos de passagem. No
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-Clique duas vezes no arquivo pretitles **. plist** para abrir o arquivo de origem XML.
+Clique duas vezes no arquivo **pretitles. plist** para abrir o arquivo de origem XML.
 
 Para adicionar o direito de carteira, defina a **Propriedade** `Passbook Identifiers` como no menu suspenso, que definirá automaticamente o **tipo** `Array`. Em seguida, defina o **valor** da `$(TeamIdentifierPrefix)*`cadeia de caracteres como:
 

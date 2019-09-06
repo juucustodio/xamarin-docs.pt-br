@@ -4,15 +4,15 @@ description: Este artigo aborda os aprimoramentos que a Apple fez para testar ap
 ms.prod: xamarin
 ms.assetid: F1D19635-A738-43E5-9873-1FC1BA44EEDF
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: 9a8c047305d4e91ac588f503eaa98d8bddb4a8a8
-ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
+ms.openlocfilehash: 57aab95e29911722fc3ad4a56c5486218e07242d
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69620746"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292847"
 ---
 # <a name="watchos-workout-apps-in-xamarin"></a>Aplicativos de treinamento do watchOS no Xamarin
 
@@ -649,7 +649,7 @@ Veja como esse processo funciona:
 3. Usando a configuração de treinamento passada, o aplicativo watchOS 3 inicia uma nova sessão de treinamento`HKWorkoutSession`().
 
 > [!IMPORTANT]
-> Para que o aplicativo pai do iPhone inicie um treinamento na Apple Watch, o aplicativo watchOS 3 deve ter a execução em segundo plano habilitada. Consulte Habilitando a [execução de segundo plano](#enabling-background-running) acima para obter mais detalhes.
+> Para que o aplicativo pai do iPhone inicie um treinamento na Apple Watch, o aplicativo watchOS 3 deve ter a execução em segundo plano habilitada. Consulte [habilitando a execução de segundo plano](#enabling-background-running) acima para obter mais detalhes.
 
 Esse processo é muito semelhante ao processo de iniciar uma sessão de treinamento no aplicativo watchOS 3 diretamente. No iPhone, use o seguinte código:
 

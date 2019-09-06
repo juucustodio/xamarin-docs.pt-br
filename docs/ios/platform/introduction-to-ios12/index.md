@@ -1,83 +1,83 @@
 ---
 title: Introdução ao iOS 12
-description: Este documento fornece uma descrição detalhada de algumas APIs do iOS 12 para visualização do Xamarin, qual versão fornece associações c#.
+description: Este documento fornece uma descrição de alto nível de algumas APIs do iOS 12 para as quais a versão de C# visualização do Xamarin fornece associações.
 ms.prod: xamarin
 ms.assetid: 99EA7090-315D-493C-87D3-26AB73D9E1A9
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 07/08/2018
-ms.openlocfilehash: 5ac19571bc1f1163539a48ea2689c743445d8047
-ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
+ms.openlocfilehash: b3f3db32e87d83ea4e076d439df3342e5ca2ed50
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67268864"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70284632"
 ---
 # <a name="introduction-to-ios-12"></a>Introdução ao iOS 12
 
-Este documento fornece uma descrição detalhada de algumas APIs do iOS 12 para visualização do Xamarin, qual versão fornece associações c#.
+Este documento fornece uma descrição de alto nível de algumas APIs do iOS 12 para as quais a versão de C# visualização do Xamarin fornece associações.
 
-Para começar a criar aplicativos iOS 12 com Xamarin, consulte o [guia de Introdução](get-started.md)
+Para começar a criar aplicativos iOS 12 com o Xamarin, consulte o [Guia de introdução](get-started.md)
 
 ## <a name="arkit-2arkit2md"></a>[ARKit 2](arkit2.md)
 
-ARKit é a estrutura de realidade aumentada incluída com o iOS. ARKit 2 permite que vários usuários interajam entre si em uma cena de realidade aumentada, torna possível persistir objetos no espaço e retornar a elas em um momento posterior e fornece reconhecimento de imagens 2D e 3D e controle de reconhecimento de objeto. iOS 12 também fornece AR rápido olhar, uma maneira de renderizar usdz modelos de AR em seus aplicativos.
+ARKit é a estrutura de realidade aumentada incluída no iOS. O ARKit 2 permite que vários usuários interajam entre si em uma cena de realidade aumentada, possibilita a persistência de objetos no espaço e retorne a eles posteriormente e fornece reconhecimento de imagem 2D e rastreamento de objetos 3D. o iOS 12 também oferece uma visão rápida do AR, uma maneira de renderizar modelos usdz AR em seus aplicativos.
 
-## <a name="siri-shortcutssiri-shortcutsmd"></a>[Atalhos da Siri](siri-shortcuts.md)
+## <a name="siri-shortcutssiri-shortcutsmd"></a>[Atalhos do Siri](siri-shortcuts.md)
 
-Siri atalhos permitem aos desenvolvedores mais profundamente integrar seus aplicativos com Siri. Com Siri atalhos, os usuários podem usar comandos de voz para abrir o conteúdo ou iniciar tarefas em segundo plano ou eles podem iniciar as mesmas tarefas por meio de atalhos que Siri sugere na tela de bloqueio.
+Os atalhos do Siri permitem que os desenvolvedores integrem mais profundamente seus aplicativos com o Siri. Com atalhos do Siri, os usuários podem usar comandos de voz para abrir conteúdo ou iniciar tarefas em segundo plano, ou podem iniciar essas mesmas tarefas por meio de atalhos que o Siri sugere na tela de bloqueio.
 
 ## <a name="core-ml-2coremlmd"></a>[Core ML 2](coreml.md)
 
-Core ML 2 reduz o tamanho do aplicativo por meio de quantização de modelo e modelos flexíveis, melhora o desempenho de aplicativos com uma nova API de previsão em lotes e usa modelos personalizados para dar suporte a avanços no aprendizado de máquina.
+O Core ML 2 reduz o tamanho do aplicativo por meio de quantificação de modelo e modelos flexíveis, melhora o desempenho do aplicativo com uma nova API de previsão de lote e usa modelos personalizados para dar suporte a avanços no aprendizado de máquina.
 
-## <a name="notification-improvementsnotificationsindexmd"></a>[Aprimoramentos na notificação](notifications/index.md)
+## <a name="notification-improvementsnotificationsindexmd"></a>[Aprimoramentos de notificação](notifications/index.md)
 
-No iOS 12, notificações agrupadas possibilitam que as notificações de usuário presente no aplicativo ou agrupamentos de thread. Texto de resumo fornece mais informações sobre um grupo de notificação.
+No iOS 12, as notificações agrupadas possibilitam apresentar notificações de usuário em agrupamentos relacionados ao aplicativo ou ao thread. O texto de resumo fornece mais informações sobre um grupo de notificações.
 
-Permitem extensões de conteúdo de notificação no iOS 12 para interfaces do usuário personalizadas e botões de ação dinâmicos.
+As extensões de conteúdo de notificação no iOS 12 permitem interfaces de usuário personalizadas e botões de ação dinâmicas.
 
 ## <a name="natural-language-frameworknatural-languagemd"></a>[Estrutura de linguagem natural](natural-language.md)
 
-A estrutura de linguagem Natural permite que os aplicativos executar vários tipos de análise de linguagem. Por exemplo, ele pode identificar partes da fala e determinar o idioma representado por um bloco de texto.
+A estrutura de linguagem natural permite que os aplicativos executem vários tipos de análise de linguagem. Por exemplo, ele pode identificar partes de fala e determinar o idioma representado por um bloco de texto.
 
-## <a name="vision-frameworkiosplatformintroduction-to-ios11visionmd"></a>[Estrutura Vision](~/ios/platform/introduction-to-ios11/vision.md)
+## <a name="vision-frameworkiosplatformintroduction-to-ios11visionmd"></a>[Estrutura de visão](~/ios/platform/introduction-to-ios11/vision.md)
 
-A estrutura de visão inclui um detector de face aprimorados que pode detectar faces em várias orientações. Além disso, revisões de solicitação podem selecionar a revisão de algoritmo de framework visão específica.
+A estrutura de visão inclui um detector facial aprimorado que pode detectar rostos em várias orientações. Além disso, as revisões de solicitação podem selecionar revisão de algoritmo do Vision Framework específica.
 
-## <a name="photo-and-video-apis"></a>Foto e as APIs do vídeo
+## <a name="photo-and-video-apis"></a>APIs de foto e vídeo
 
-No iOS 12, a segmentação de retrato API retorna um fosco de efeitos de retrato – uma máscara linear que delineia o primeiro plano do plano de fundo de uma imagem retrato e é útil para criar diversos efeitos de imagem. iOS 12 torna também é possível usar dados de profundidade da câmera TrueDepth para efeitos de vídeo em tempo real.
+No iOS 12, a API de segmentação retrato retorna um efeito de retrato matte – uma máscara linear que delineia o primeiro plano do plano de fundo de uma imagem retrato e é útil na criação de vários efeitos de imagem. o iOS 12 também torna possível usar dados de profundidade da câmera TrueDepth para efeitos de vídeo em tempo real.
 
-## <a name="passwords"></a>Senhas
+## <a name="passwords"></a>Suas
 
-iOS 12 torna mais fácil para os usuários e desenvolvedores trabalhem com senhas:
+o iOS 12 torna mais fácil para os usuários e desenvolvedores trabalhar com senhas:
 
-- Preenchimento automático de senha e senhas fortes automática tornam possível gerar, armazenar e usar senhas fortes em aplicativos do iOS ao inscrever-se e registro em log em um aplicativo automaticamente.
-- Preenchimento automático de código de segurança torna possível usar códigos de autenticação com base em SMS sem corte manual e colá-lo ou memorização.
-- O `ASWebAuthenticationSession` classe simplifica o processo de trabalhar com os serviços de autenticação federada.
-- Extensões de provedor de credenciais de preenchimento automático possibilitam que os aplicativos de terceiros senha fornecer o nome de usuário e senhas para os campos de logon.
+- O AutoPreenchimento de senha e senhas fortes automáticas possibilitam gerar, armazenar e usar senhas fortes automaticamente em aplicativos iOS ao se inscrever e fazer logon em um aplicativo.
+- O preenchimento automático de código de segurança possibilita o uso de códigos de autenticação baseados em SMS sem recorte manual e colagem ou memorização.
+- A `ASWebAuthenticationSession` classe simplifica o processo de trabalho com serviços de autenticação federada.
+- As extensões do provedor de credenciais de preenchimento automático possibilitam que aplicativos de senha de terceiros forneçam nome de usuário e senhas aos campos de logon.
 
-## <a name="healthkit-updates"></a>Atualizações de HealthKit
+## <a name="healthkit-updates"></a>Atualizações do HealthKit
 
-iOS 11.3 introduzido [registros de saúde](https://www.apple.com/healthcare/health-records/), que permite aos usuários baixar sua integridade registre informações de diversas instituições de saúde e exibi-lo em seus dispositivos iOS. iOS 12 adiciona APIs que permitem que aplicativos de terceiros acessem esses dados.
+o iOS 11,3 introduziu [registros de integridade](https://www.apple.com/healthcare/health-records/), o que permite que os usuários baixem suas informações de registro de integridade de várias instituições de saúde e as exibam em seus dispositivos IOS. o iOS 12 adiciona APIs que permitem que aplicativos de terceiros acessem esses dados com segurança.
 
-## <a name="imessage-app-presentation-contexts"></a>iMessage contextos de apresentação do aplicativo
+## <a name="imessage-app-presentation-contexts"></a>contextos de apresentação do aplicativo iMessage
 
-No iOS 12, os aplicativos de iMessage dão suporte a contextos de apresentação, que permitem que os aplicativos executados como um aplicativo iMessage normal ou no contexto de uma foto ou um efeito de vídeo.
+No iOS 12, os aplicativos iMessage dão suporte a contextos de apresentação, que permitem que os aplicativos sejam executados como um aplicativo iMessage normal ou no contexto de um efeito de foto ou vídeo.
 
 ## <a name="network-framework"></a>Estrutura de rede
 
-Pilha de rede de estrutura de rede subjacente a `URLSession` APIs comumente usadas em aplicativos do iOS, agora está disponível como uma estrutura autônoma, tornando mais fácil trabalhar com TCP, UDP, TLS, IPv4/IPv6 e muito mais.
+A estrutura de rede, a pilha de `URLSession` rede subjacente às APIs normalmente usadas em aplicativos Ios, agora está disponível como uma estrutura autônoma, facilitando o trabalho com TCP, UDP, TLS, IPv4/IPv6 e muito mais.
 
 ## <a name="carplay"></a>CarPlay
 
-No iOS 12, aplicativos de terceiros podem fornecer mapas e instruções de navegação de folheio de curva em CarPlay usando a nova estrutura de CarPlay.
+No iOS 12, aplicativos de terceiros podem entregar mapas e ativar instruções de navegação em CarPlay usando a nova estrutura CarPlay.
 
 ## <a name="deprecations"></a>Substituições
 
 Com o iOS 12, a Apple preteriu:
 
-- OpenGL ES [encoraja os desenvolvedores](https://developer.apple.com/ios/whats-new/) adotar Bare Metal.
-- [`UIWebView`](xref:UIKit.UIWebView), [em favor da `WKWebView` ](https://developer.apple.com/documentation/webkit/wkwebview?language=objc).
+- OpenGL ES, [incentivando os desenvolvedores](https://developer.apple.com/ios/whats-new/) a adotar o metal.
+- [`UIWebView`](xref:UIKit.UIWebView), [em favor do `WKWebView` ](https://developer.apple.com/documentation/webkit/wkwebview?language=objc).

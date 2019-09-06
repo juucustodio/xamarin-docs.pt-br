@@ -4,15 +4,15 @@ description: Este artigo aborda como trabalhar com as novas estruturas de interf
 ms.prod: xamarin
 ms.assetid: 7b6fb66a-5e19-4a5a-9ed2-f6b02af099af
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/20/2017
-ms.openlocfilehash: 8b551a17fc54ec1557cd385b4c91b33720316879
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 96dbb60b8754223203394745bc86af2297cb5ff3
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70225966"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70278534"
 ---
 # <a name="contacts-and-contactsui-in-xamarinios"></a>Contatos e ContactsUI no Xamarin. iOS
 
@@ -146,7 +146,7 @@ var predicate = CNContact.GetPredicateForContacts("Appleseed");
 > [!IMPORTANT]
 > Os predicados genérico e composto não são suportados pela estrutura de contatos.
 
-Por exemplo, para limitar a busca apenas às propriedades de determinadoname e familyName do contato, use o seguinte código:
+Por exemplo, para limitar a busca apenas às propriedades de **determinadoname** e **familyName** do contato, use o seguinte código:
 
 ```csharp
 // Define fields to be searched
@@ -194,7 +194,7 @@ if (!contact.IsKeyAvailable(CNContactOption.PostalAddresses)) {
 
 ### <a name="unified-contacts"></a>Contatos unificados
 
-Um usuário pode ter fontes diferentes de informações de contato para uma única pessoa em seu banco de dados de contatos (como iCloud, Facebook ou Google mail). Nos aplicativos iOS e OS X, essas informações de contato serão automaticamente vinculadas e exibidas ao usuário como um único _contato_unificado:
+Um usuário pode ter fontes diferentes de informações de contato para uma única pessoa em seu banco de dados de contatos (como iCloud, Facebook ou Google mail). Nos aplicativos iOS e OS X, essas informações de contato serão automaticamente vinculadas e exibidas ao usuário como um único _contato unificado_:
 
 [![](contacts-images/unified01.png "Visão geral dos contatos unificados")](contacts-images/unified01.png#lightbox)
 
@@ -263,7 +263,7 @@ Os contatos de um usuário podem existir localmente no dispositivo do usuário o
 
 [![](contacts-images/containers01.png "Visão geral de contêineres e grupos")](contacts-images/containers01.png#lightbox)
 
-Alguns contêineres permitem que os contatos sejam organizados em um ou mais _grupos_ ou subgrupos. Esse comportamento é dependente do armazenamento de backup para um determinado contêiner. Por exemplo, o iCloud tem apenas um contêiner, mas pode ter muitos grupos (mas não subgrupos). O Microsoft Exchange, por outro lado, não oferece suporte a grupos, mas pode ter vários contêineres (um para cada pasta do Exchange).
+Alguns contêineres permitem que os contatos sejam organizados em um ou mais _grupos_ ou _subgrupos_. Esse comportamento é dependente do armazenamento de backup para um determinado contêiner. Por exemplo, o iCloud tem apenas um contêiner, mas pode ter muitos grupos (mas não subgrupos). O Microsoft Exchange, por outro lado, não oferece suporte a grupos, mas pode ter vários contêineres (um para cada pasta do Exchange).
 
 [![](contacts-images/containers02.png "Sobreposição em contêineres e grupos")](contacts-images/containers02.png#lightbox)
 

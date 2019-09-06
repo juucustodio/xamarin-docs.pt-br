@@ -4,15 +4,15 @@ description: Este documento descreve como trabalhar com exibições de divisão 
 ms.prod: xamarin
 ms.assetid: 21248CFB-5A94-4C19-B223-C72E0DC5F1D5
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: 7735f53d96977041f518a0ee56fb103a449e6cba
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 9f770eaf3fcb68c17a7692e5b6433081234951e6
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70198192"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70286371"
 ---
 # <a name="working-with-tvos-split-view-controllers-in-xamarin"></a>Trabalhando com controladores de exibição de divisão tvOS no Xamarin
 
@@ -38,7 +38,7 @@ A Apple tem as seguintes sugestões para trabalhar com controladores de exibiç�
 
 - **Usar a porcentagem de divisão correta** – por padrão, o controlador de exibição de divisão usa um terço da tela para o controlador de modo de exibição mestre e dois terços para o controlador de exibição de detalhes. Opcionalmente, você pode usar uma divisão 50/50. Escolha a porcentagem correta para fazer com que seu conteúdo pareça balanceado na tela.
 - **Persistir a seleção principal** -embora o conteúdo no modo de exibição de detalhes possa mudar seja resposta à seleção de um usuário no modo de exibição mestre, o conteúdo do modo de exibição mestre deve ser corrigido. Além disso, você deve mostrar claramente o item atualmente selecionado no modo de exibição mestre.
-- **Use um único título** unificado – normalmente, você desejará usar um único título centralizado na exibição de detalhes, em vez de um título no modo de exibição de detalhes e mestre.
+- **Use um único título unificado** – normalmente, você desejará usar um único título centralizado na exibição de detalhes, em vez de um título no modo de exibição de detalhes e mestre.
 
 <a name="Split-View-Controllers-and-Storyboards" />
 

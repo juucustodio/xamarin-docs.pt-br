@@ -5,15 +5,15 @@ ms.prod: xamarin
 ms.assetid: 20246E87-2A49-438A-9BD7-756A1B50A617
 ms.technology: xamarin-ios
 ms.custom: xamu-video
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/20/2017
-ms.openlocfilehash: 6f9fd193bda16e3b5e048faf5ec7c5eb09b58bcf
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: a3adbf18e18e4f2a42ed3c89162455040a9fe699
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70199151"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70282694"
 ---
 # <a name="stack-views-in-xamarinios"></a>Exibições de pilha no Xamarin. iOS
 

@@ -4,15 +4,15 @@ description: Este documento fornece uma visão geral do StoreKit. Ele descreve a
 ms.prod: xamarin
 ms.assetid: FC21192E-6325-4389-C060-E92DBB5EBD87
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: 64ad867dca0bbbf27d39b69dc7a1acba73728ca2
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 4a68526187271c00332548764850783531391c73
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69527806"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292182"
 ---
 # <a name="storekit-overview-and-retrieving-product-info-in-xamarinios"></a>Visão geral do StoreKit e recuperação das informações do produto no Xamarin. iOS
 
@@ -35,7 +35,7 @@ A implementação de compras no aplicativo requer as seguintes classes da estrut
 - **SKPaymentQueue** – solicitações de pagamento enfileiradas a serem enviadas à Apple. As notificações são disparadas como resultado de cada pagamento sendo processado. 
 - **SKPaymentTransaction** – representa uma transação concluída (uma solicitação de compra que foi processada pela loja de aplicativos e enviada de volta para seu aplicativo por meio de StoreKit). A transação pode ser comprada, restaurada ou falhou. 
 - **SKPaymentTransactionObserver** – subclasse personalizada que responde a eventos gerados pela fila de pagamentos do StoreKit. 
-- **As operações StoreKit são** assíncronas – depois que um SKProductRequest é iniciado ou um SKPayment é adicionado à fila, o controle é retornado ao seu código. StoreKit chamará métodos em sua subclasse SKProductsRequestDelegate ou SKPaymentTransactionObserver quando receber dados dos servidores da Apple. 
+- **As operações StoreKit são assíncronas** – depois que um SKProductRequest é iniciado ou um SKPayment é adicionado à fila, o controle é retornado ao seu código. StoreKit chamará métodos em sua subclasse SKProductsRequestDelegate ou SKPaymentTransactionObserver quando receber dados dos servidores da Apple. 
 
 
 O diagrama a seguir mostra as relações entre as várias classes StoreKit (classes abstratas devem ser implementadas em seu aplicativo):   
@@ -201,7 +201,7 @@ public void RequestProductData (List<string> productIds)
 }
 ```
 
-o iOS roteará automaticamente a solicitação para a versão "sandbox" ou "produção" da loja de aplicativos, dependendo do perfil de provisionamento com o qual o aplicativo está sendo executado – então, quando você estiver desenvolvendo ou testando seu aplicativo, a solicitação terá acesso a todos os produtos configurado no iTunes Connect (mesmo aqueles que ainda não foram enviados ou aprovados pela Apple). Quando seu aplicativo estiver em produção, as solicitações de StoreKit retornarão apenas informações para produtos aprovados.   
+o iOS roteará automaticamente a solicitação para a versão "sandbox" ou "produção" da loja de aplicativos, dependendo do perfil de provisionamento com o qual o aplicativo está sendo executado – então, quando você estiver desenvolvendo ou testando seu aplicativo, a solicitação terá acesso a todos os produtos configurado no iTunes Connect (mesmo aqueles que ainda não foram enviados ou aprovados pela Apple). Quando seu aplicativo estiver em produção, as solicitações de StoreKit retornarão apenas informações para produtos **aprovados** .   
    
    
    
@@ -244,7 +244,7 @@ Um `SKProductsRequest` também pode retornar uma lista de IDs de produto inváli
    
    
    
- A **ID do produto** foi digitada intipadamente – somente IDs de produto válidas são aceitas.   
+ A **ID do produto foi digitada intipadamente** – somente IDs de produto válidas são aceitas.   
    
  O **produto não foi aprovado** – durante o teste, todos os produtos limpos para venda devem ser retornados por um `SKProductsRequest`; no entanto, em produção somente produtos aprovados são retornados.   
    

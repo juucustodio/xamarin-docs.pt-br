@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/05/2016
-ms.openlocfilehash: d13246ddae3f505d04db2a866f785a9f60ce3979
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 2ae78d535edd17d3968d0784194bb7295bb7e889
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68652036"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292684"
 ---
 # <a name="search-data-with-azure-search-and-xamarinforms"></a>Pesquisar dados com Azure Search e Xamarin. Forms
 
@@ -60,7 +60,7 @@ var searchClient =
 O `SearchServiceClient` sobrecarga de construtor aceita um nome de serviço de pesquisa e uma `SearchCredentials` como argumentos, o objeto com o `SearchCredentials` disposição do objeto a *chave de administração* para o serviço de Azure Search. O *chave de administração* é necessária para criar um índice.
 
 > [!NOTE]
->  Um único `SearchServiceClient` instância deve ser usada em um aplicativo para evitar abrir um número excessivo de conexões para o Azure Search.
+> Um único `SearchServiceClient` instância deve ser usada em um aplicativo para evitar abrir um número excessivo de conexões para o Azure Search.
 
 Um índice é definido pelo `Index` do objeto, conforme demonstrado no exemplo de código a seguir:
 

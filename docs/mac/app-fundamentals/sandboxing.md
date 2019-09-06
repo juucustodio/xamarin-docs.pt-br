@@ -4,15 +4,15 @@ description: Este artigo aborda a área restrita de um aplicativo Xamarin. Mac p
 ms.prod: xamarin
 ms.assetid: 06A2CA8D-1E46-410F-8C31-00EA36F0735D
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 5c697ebc4621fa8287bd001bcc4b44bb23fc163e
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 052d81ccaefe123eb375ddcd92bee0b1f2a395e2
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227247"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290311"
 ---
 # <a name="sandboxing-a-xamarinmac-app"></a>Área restrita de um aplicativo Xamarin. Mac
 
@@ -26,7 +26,7 @@ Ao trabalhar com C# o e o .net em um aplicativo Xamarin. Mac, você tem a mesma 
 
 Neste artigo, abordaremos as noções básicas de como trabalhar com a área restrita em um aplicativo Xamarin. Mac e todos os elementos que vão para a área restrita: diretórios de contêiner, direitos, permissões determinadas pelo usuário, separação de privilégios e imposição de kernel. É altamente recomendável que você trabalhe pelo artigo [Hello, Mac](~/mac/get-started/hello-mac.md) primeiro, especificamente a [introdução às seções Xcode e Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) e [ações](~/mac/get-started/hello-mac.md#outlets-and-actions) , pois ela aborda os principais conceitos e técnicas que usaremos em Este artigo.
 
-Talvez você queira dar uma olhada na seção [expondo C# classes/métodos para Objective-C](~/mac/internals/how-it-works.md) do documento [interno do Xamarin. Mac](~/mac/internals/how-it-works.md) também, explica `Register` os atributos e `Export` usados para conectar suas C# classes ao Objetos Objective-C e elementos de interface do usuário.
+Talvez você queira dar uma olhada na seção [expondo C# classes/métodos para Objective-C](~/mac/internals/how-it-works.md) do documento [interno do Xamarin. Mac](~/mac/internals/how-it-works.md) também, explica os `Register` atributos e `Export` usados para conectar suas C# classes ao Objetos Objective-C e elementos de interface do usuário.
 
 ## <a name="about-the-app-sandbox"></a>Sobre a área restrita do aplicativo
 
@@ -68,7 +68,7 @@ Verificaremos se o aplicativo está na verdade em área restrita e saiba como so
 Vamos fazer o seguinte para criar nosso projeto de exemplo:
 
 1. Inicie o Visual Studio para Mac e clique na **nova solução..** .
-2. Na caixa de diálogo **novo projeto** , selecione aplicativo >  **Mac** > **Cocoa aplicativo**:
+2. Na caixa de diálogo **novo projeto** ,**selecione aplicativo** >  **Mac** > **Cocoa aplicativo**:
 
     [![Criando um novo aplicativo Cocoa](sandboxing-images/sample01.png "Criando um novo aplicativo Cocoa")](sandboxing-images/sample01-large.png#lightbox)
 3. Clique no botão **Avançar** , insira `MacSandbox` para o nome do projeto e clique no botão **criar** :
@@ -161,7 +161,7 @@ Em seguida, precisamos selecionar a nova ID do aplicativo e o perfil de provisio
 2. Verifique se o **identificador do pacote** corresponde à nossa ID do aplicativo que criamos `com.appracatappra.MacSandbox`acima (exemplo:):
 
     [![Editando o identificador de pacote](sandboxing-images/sign13.png "Editando o identificador de pacote")](sandboxing-images/sign13-large.png#lightbox)
-3. Em seguida, clique duas vezes no arquivo **. plist de direitos** e garanta que o **repositório de chave-valor do icloud** e os contêineres do **icloud** correspondam à nossa ID `com.appracatappra.MacSandbox`do aplicativo que criamos acima (exemplo:):
+3. Em seguida, clique duas vezes no arquivo **. plist de direitos** e garanta que o **repositório de chave-valor do icloud** e os **contêineres do icloud** correspondam à nossa ID `com.appracatappra.MacSandbox`do aplicativo que criamos acima (exemplo:):
 
     [![Editando o arquivo. plist de direitos](sandboxing-images/sign17.png "Editando o arquivo. plist de direitos")](sandboxing-images/sign17-large.png#lightbox)
 4. Salve as alterações.
@@ -194,7 +194,7 @@ No caso de um problema, corrija o problema no portal do desenvolvedor da Apple, 
 
 Você habilita a área restrita do aplicativo marcando uma caixa de seleção em suas opções de projetos. Faça o seguinte:
 
-1. No **painel de soluções**, clique duas vezes no arquivo pretitles **. plist** para abri-lo para edição.
+1. No **painel de soluções**, clique duas vezes no arquivo **pretitles. plist** para abri-lo para edição.
 2. Marque ambos **habilitar direitos** e habilitar a **área restrita do aplicativo**:
 
     [![Editando direitos e habilitando a área restrita](sandboxing-images/sign17.png "Editando direitos e habilitando a área restrita")](sandboxing-images/sign17-large.png#lightbox)
@@ -258,7 +258,7 @@ Agora que vimos como encontrar violações de área restrita do aplicativo, veja
 
 Faça o seguinte:
 
-1. No **painel de soluções**, clique duas vezes no arquivo pretitles **. plist** para abri-lo para edição.
+1. No **painel de soluções**, clique duas vezes no arquivo **pretitles. plist** para abri-lo para edição.
 2. Na seção **direitos** , marque a caixa de seleção **permitir conexões de rede de saída (cliente)** :
 
     [![Editando os direitos](sandboxing-images/sign17.png "Editando os direitos")](sandboxing-images/sign17-large.png#lightbox)
@@ -291,7 +291,7 @@ Você modifica os recursos de área restrita do aplicativo de seus aplicativos e
 Quando seu aplicativo Xamarin. Mac adota a área restrita do aplicativo, ele tem acesso aos seguintes locais:
 
 - **O diretório do contêiner de aplicativo** -na primeira execução, o sistema operacional cria um _diretório de contêiner_ especial em que todos os seus recursos vão, que somente ele pode acessar. O aplicativo terá acesso completo de leitura/gravação a esse diretório.
-- **Diretórios de contêiner do grupo de aplicativos** – seu aplicativo pode receber acesso a um ou mais contêineres de _grupo_ que são compartilhados entre aplicativos no mesmo grupo.
+- **Diretórios de contêiner do grupo de aplicativos** – seu aplicativo pode receber acesso a um ou mais _contêineres de grupo_ que são compartilhados entre aplicativos no mesmo grupo.
 - **Arquivos especificados pelo usuário** – seu aplicativo obtém automaticamente o acesso a arquivos que são explicitamente abertos ou arrastados e descartados no aplicativo pelo usuário.
 - **Itens relacionados** -com os direitos apropriados, seu aplicativo pode ter acesso a um arquivo com o mesmo nome, mas com uma extensão diferente. Por exemplo, um documento que foi salvo como um `.txt` arquivo e um. `.pdf`
 - **Diretórios temporários, diretórios de ferramenta de linha de comando e locais específicos legíveis** para o mundo – seu aplicativo tem graus variados de acesso a arquivos em outros locais bem definidos, conforme especificado pelo sistema.
@@ -528,7 +528,7 @@ Aqui estão alguns problemas comuns e coisas que você pode fazer para solucion�
 - **Abrindo, salvando e acompanhando documentos** – se você estiver gerenciando documentos usando qualquer `NSDocument`tecnologia diferente de, deverá alternar para ele por causa do suporte interno para a área restrita do aplicativo. `NSDocument`o funcionará automaticamente com o PowerBox e fornecerá suporte para manter documentos na área restrita se o usuário movê-los no Finder.
 - **Manter o acesso aos recursos do sistema de arquivos** -se o aplicativo Xamarin. Mac depender do acesso persistente aos recursos fora de seu contêiner, use indicadores de escopo de segurança para manter o acesso.
 - **Criar um item de logon para um aplicativo** -com a área restrita do aplicativo, você não pode criar `LSSharedFileList` um item de logon usando o nem pode manipular o `LSRegisterURL`estado dos serviços de inicialização usando o. Use a `SMLoginItemSetEnabled` função conforme descrito em maçãs [adicionando itens de logon usando a documentação do Service Management Framework](https://developer.apple.com/library/prerelease/mac/documentation/MacOSX/Conceptual/BPSystemStartup/Chapters/CreatingLoginItems.html#//apple_ref/doc/uid/10000172i-SW5-SW1) .
-- **Acessando dados do usuário** – se você estiver usando funções `getpwuid` POSIX, como para obter o diretório base do usuário de serviços de diretório, considere o uso de símbolos Cocoa ou Core Foundation, como. `NSHomeDirectory`
+- **Acessando dados do usuário** – se você estiver usando funções `getpwuid` POSIX, como para obter o diretório base do usuário de serviços de diretório, considere o uso de símbolos `NSHomeDirectory`Cocoa ou Core Foundation, como.
 - **Acessando as preferências de outros aplicativos** – como a área restrita do aplicativo direciona APIs que localizam caminhos para o contêiner do aplicativo, a modificação de preferências ocorre dentro desse contêiner e o acesso a outras preferências de aplicativos não é permitido.
 - **Usando o vídeo inserido do HTML5 em exibições da Web** – se o aplicativo Xamarin. Mac usar WebKit para reproduzir vídeos HTML5 incorporados, você também deverá vincular o aplicativo à estrutura do AV Foundation. Caso contrário, a área restrita do aplicativo impedirá que o CoreMedia reproduza esses vídeos.
 

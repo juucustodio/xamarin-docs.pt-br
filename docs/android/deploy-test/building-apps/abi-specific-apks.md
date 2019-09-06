@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/15/2018
-ms.openlocfilehash: 4a3ba970f8ca32f0bfa2e5297e8052f3eb572ed0
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
-ms.translationtype: HT
+ms.openlocfilehash: e7c8721254157565461e00657a3ee8a786e3ea00
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69525724"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70225757"
 ---
 # <a name="building-abi-specific-apks"></a>Compilação de APKs específicos para ABI
 
@@ -26,7 +26,7 @@ Em algumas situações, pode ser vantajoso para um aplicativo ter vários APKs �
 
 - **Reduzir o tamanho do APK** – o Google Play impõe um limite de tamanho de 100 MB para arquivos APK. A criação de APKs específicos de um dispositivo pode reduzir o tamanho do APK, pois você só precisa fornecer um subconjunto de ativos e recursos para o aplicativo.
 
-- **Compatível com diferentes arquiteturas de CPU** – Se o aplicativo tem bibliotecas compartilhadas para CPUs específicas, você pode distribuir apenas as bibliotecas compartilhadas para essa CPU.
+- **Dar suporte a diferentes arquiteturas de CPU** – se seu aplicativo tem bibliotecas compartilhadas para CPUs específicas, você pode distribuir apenas as compartilhadas para uma determinada CPU.
 
 
 Vários APKs podem complicar a distribuição – um problema que é abordado pelo Google Play. O Google Play garantirá que o APK correto seja entregue a um dispositivo com base no código da versão do aplicativo e outros metadados contidos em **AndroidManifest.XML**. Para obter detalhes específicos e restrições no modo como o Google Play é compatível com vários APKs para um aplicativo, consulte a [Documentação do Google sobre o suporte a vários APKs](https://developer.android.com/google/play/publishing/multiple-apks.html).
@@ -49,17 +49,17 @@ O Google recomenda um algoritmo específico para o código de versão, que usa u
 Expandindo esse esquema de código da versão de oito dígitos, será possível incluir, no código de versão, algumas informações de ABI que garantirão que o Google Play distribuirá o APK correto para um dispositivo. A lista a seguir explica este formato de código de versão de oito dígitos (indexado da esquerda para a direita):
 
 - **Índice 0** (vermelho no diagrama abaixo) &ndash; um inteiro para a ABI:
-    - 1 &ndash; `armeabi`
-    - 2 &ndash; `armeabi-v7a`
-    - 6 &ndash; `x86`
+  - 1 &ndash; `armeabi`
+  - 2 &ndash; `armeabi-v7a`
+  - 6 &ndash; `x86`
 
 - **Índice 1-2** (laranja no diagrama abaixo) &ndash; o nível da API mínimo compatível com o aplicativo.
 
 - **Índice 3-4** (azul no diagrama abaixo) &ndash; os tamanhos de tela compatíveis:
-    - 1 &ndash; pequeno
-    - 2 &ndash; normal
-    - 3 &ndash; grande
-    - 4 &ndash; xlarge
+  - 1 &ndash; pequeno
+  - 2 &ndash; normal
+  - 3 &ndash; grande
+  - 4 &ndash; xlarge
 
 - **Índice 5-7** (verde no diagrama abaixo) &ndash; um número exclusivo para o código de versão. 
     Ele é definido pelo desenvolvedor. Ele deve aumentar a cada versão pública do aplicativo.
@@ -112,7 +112,7 @@ A lista a seguir explica cada parâmetro de linha de comando:
 
 - `/p:IntermediateOutputPath=obj.<TARGET_ABI>/` &ndash; Este é o diretório que conterá os arquivos intermediários que são criados como parte do build. Se necessário, o Xamarin.Android criará um diretório com o nome da ABI, tal como `obj.armeabi-v7a`. É recomendável usar uma pasta para cada ABI, pois isso impede problemas resultantes do "vazamento" de arquivos de um build para o outro. Observe que esse valor é encerrado com um separador de diretório (um `/` no caso de OS X).
 
-- `/p:AndroidManifest` &ndash; Essa propriedade especifica o caminho para o arquivo **AndroidManifest.XML** que será usado durante o build.
+- `/p:AndroidManifest` &ndash; Essa propriedade especifica o caminho para o arquivo **AndroidManifest.XML**, que será usado durante o build.
 
 - `/p:OutputPath=bin.<TARGET_ABI>` &ndash; Este é o diretório que conterá o APK final. O Xamarin.Android criará um diretório com o nome da ABI, por exemplo, `bin.armeabi-v7a`.
 

@@ -4,15 +4,15 @@ description: Este artigo aborda a criação e o trabalho com exibições de tabe
 ms.prod: xamarin
 ms.assetid: D8F80FA9-6400-4DB7-AFC9-A28A54AD04E8
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: 0d93978d6f7b3dff6d0d7ebf7c9f9afbe3572079
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 28dfdbd7837f87d003e5b949ea3f7421613997f7
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70199914"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70288298"
 ---
 # <a name="working-with-tvos-table-views-in-xamarin"></a>Trabalhando com exibições de tabela tvOS no Xamarin
 
@@ -57,7 +57,7 @@ A Apple tem as seguintes sugestões para trabalhar com células de exibição de
 
 - **Evitar recorte de texto** – Mantenha as linhas individuais de texto de forma abreviada para que elas não acabem truncadas. Palavras ou frases truncadas são difíceis para o usuário analisar de toda a sala.
 - **Considere o estado de linha focalizado** – como uma linha se torna maior, com mais cantos arredondados quando em foco, você precisa testar a aparência da célula em todos os Estados. Imagens ou texto podem ser recortados ou parecer incorretos no estado focalizado.
-- **Usar tabelas editáveis** com moderação, mover ou excluir linhas de tabela é mais demorado em tvOS do que Ios. Você precisará decidir com cuidado se esse recurso será adicionado ou distraido do seu aplicativo tvOS.
+- **Usar tabelas editáveis com moderação** , mover ou excluir linhas de tabela é mais demorado em tvOS do que Ios. Você precisará decidir com cuidado se esse recurso será adicionado ou distraido do seu aplicativo tvOS.
 - **Crie tipos de célula personalizados quando apropriado** – embora os tipos de célula de exibição de tabela internos sejam ótimos para muitas situações, considere a criação de tipos de células personalizadas para informações não padrão para fornecer maior controle e apresentar melhor as informações para o usuário.
 
 <a name="Working-With-Table-Views" />

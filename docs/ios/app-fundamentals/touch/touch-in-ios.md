@@ -4,15 +4,15 @@ description: Este documento descreve como trabalhar com eventos de toque, multit
 ms.prod: xamarin
 ms.assetid: DA666DC9-446E-4CD1-B5A0-C6FFBC7E53AD
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: 70c46282c9eebfed45bbdae75fdb2216e7f4c889
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 492682b1f7647201f15678a5162281e0a7a916d6
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69526607"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70280090"
 ---
 # <a name="touch-events-and-gestures-in-xamarinios"></a>Eventos de toque e gestos no Xamarin. iOS
 
@@ -129,13 +129,13 @@ O Xamarin. IOS fornece a `UIGestureRecognizer` classe como uma classe base para 
 
 O padrão básico para usar um reconhecedor de gestos é o seguinte:
 
-1. **Criar uma instância do reconhecedor de** gestos `UIGestureRecognizer` – primeiro, crie uma instância de uma subclasse. O objeto que é instanciado será associado a uma exibição e será coletado como lixo quando a exibição for descartada de. Não é necessário criar essa exibição como uma variável de nível de classe.
+1. **Criar uma instância do reconhecedor de gestos** – primeiro, crie uma instância de uma `UIGestureRecognizer` subclasse. O objeto que é instanciado será associado a uma exibição e será coletado como lixo quando a exibição for descartada de. Não é necessário criar essa exibição como uma variável de nível de classe.
 1. **Definir as configurações de gesto** – a próxima etapa é configurar o reconhecedor de gestos. Consulte a documentação do Xamarin `UIGestureRecognizer` em e suas subclasses para obter uma lista de propriedades que podem ser definidas para controlar o comportamento `UIGestureRecognizer` de uma instância do.
 1. **Configurar o destino** – devido à sua herança de Objective-C, o Xamarin. Ios não gera eventos quando um reconhecedor de gestos corresponde a um gesto.  `UIGestureRecognizer`tem um método – `AddTarget` que pode aceitar um delegado anônimo ou um seletor de Objective-C com o código a ser executado quando o reconhecedor de gestos faz uma correspondência.
-1. **Habilitar** reconhecedor de gestos – assim como ocorre com eventos de toque, os gestos só serão reconhecidos se as interações de toque estiverem habilitadas.
+1. **Habilitar reconhecedor de gestos** – assim como ocorre com eventos de toque, os gestos só serão reconhecidos se as interações de toque estiverem habilitadas.
 1. **Adicione o reconhecedor de gestos à exibição** – a etapa final é adicionar o gesto a uma exibição chamando `View.AddGestureRecognizer` e passando um objeto de reconhecedor de gesto.
 
-Consulte os exemplos do reconhecedor de [gesto](~/ios/app-fundamentals/touch/ios-touch-walkthrough.md#Gesture_Recognizer_Samples) para obter mais informações sobre como implementá-los no código.
+Consulte os [exemplos do reconhecedor de gesto](~/ios/app-fundamentals/touch/ios-touch-walkthrough.md#Gesture_Recognizer_Samples) para obter mais informações sobre como implementá-los no código.
 
 Quando o destino do gesto for chamado, será passado uma referência para o gesto que ocorreu. Isso permite que o destino do gesto Obtenha informações sobre o gesto que ocorreu. A extensão das informações disponíveis depende do tipo de reconhecedor de gesto que foi usado. Consulte a documentação do Xamarin para obter informações sobre os dados disponíveis para `UIGestureRecognizer` cada subclasse.
 
@@ -158,7 +158,7 @@ Os reconhecedores de gestos existem em um dos seguintes Estados:
 - *Possível* – este é o estado inicial de todos os reconhecedores de gesto. Esse é o valor padrão da propriedade State.
 - *Iniciado* – quando um gesto contínuo é reconhecido pela primeira vez, o estado é definido como iniciado. Isso permite que os assinantes diferenciem entre quando o reconhecimento do gesto é iniciado e quando ele é alterado.
 - *Alterado* – depois que um gesto contínuo for iniciado, mas não tiver terminado, o estado será definido como alterado sempre que um toque for movido ou alterado, desde que ainda esteja dentro dos parâmetros esperados do gesto.
-- Cancelado – esse Estado será definido se o reconhecedor tiver iniciado a alteração e os toques forem alterados de forma que não caibam mais no padrão do gesto.
+- *Cancelado* – esse Estado será definido se o reconhecedor tiver iniciado a alteração e os toques forem alterados de forma que não caibam mais no padrão do gesto.
 - *Reconhecido* – o estado será definido quando o reconhecedor de gestos corresponder a um conjunto de toques e informará ao Assinante que o gesto foi concluído.
 - *Concluído* – este é um alias para o estado reconhecido.
 - *Falha* – quando o reconhecedor de gestos não pode mais corresponder aos toques que está ouvindo, o estado será alterado para falha.

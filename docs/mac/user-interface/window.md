@@ -4,15 +4,15 @@ description: Este artigo aborda como trabalhar com janelas e painéis em um apli
 ms.prod: xamarin
 ms.assetid: 4F6C67E9-BBFF-44F7-B29E-AB47D7F44287
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 6d766e74f99e3c69259a41ce13501de80cf0231a
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: b6b370ebbcad04dfe829379685a3a9c5a6b5662b
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68653109"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291532"
 ---
 # <a name="windows-in-xamarinmac"></a>Windows no Xamarin. Mac
 
@@ -33,7 +33,7 @@ Os painéis são um tipo especial de janela (uma subclasse da classe base `NSWin
 
 Neste artigo, abordaremos as noções básicas de como trabalhar com janelas e painéis em um aplicativo Xamarin. Mac. É altamente recomendável que você trabalhe pelo artigo [Hello, Mac](~/mac/get-started/hello-mac.md) primeiro, especificamente a [introdução às seções Xcode e Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) e [ações](~/mac/get-started/hello-mac.md#outlets-and-actions) , pois ela aborda os principais conceitos e técnicas que usaremos em Este artigo.
 
-Talvez você queira dar uma olhada na seção [expondo C# classes/métodos para Objective-C](~/mac/internals/how-it-works.md) do documento [interno do Xamarin. Mac](~/mac/internals/how-it-works.md) também, explica `Register` os comandos e `Export` usados para conectar suas C# classes ao Objetos Objective-C e elementos de interface do usuário.
+Talvez você queira dar uma olhada na seção [expondo C# classes/métodos para Objective-C](~/mac/internals/how-it-works.md) do documento [interno do Xamarin. Mac](~/mac/internals/how-it-works.md) também, explica os `Register` comandos e `Export` usados para conectar suas C# classes ao Objetos Objective-C e elementos de interface do usuário.
 
 <a name="Introduction_to_Windows" />
 
@@ -57,7 +57,7 @@ Para obter mais informações, consulte a seção [sobre o Windows](https://deve
 
 O Windows em um aplicativo Xamarin. Mac pode parecer e se comportar de forma diferente com base em como o usuário está interagindo atualmente com eles. A janela do documento ou do aplicativo principal que está em foco no momento da atenção do usuário é chamada de _janela principal_. Na maioria das instâncias, essa janela também será a _janela de chave_ (a janela que está atualmente aceitando a entrada do usuário). Mas isso nem sempre é o caso, por exemplo, um seletor de cor pode ser aberto e ser a janela de chave com a qual o usuário está interagindo para alterar o estado de um item na janela do documento (que ainda seria a janela principal).
 
-As janelas principal e chave (se forem separadas) são sempre ativas, _janelas_ inativas são janelas abertas que não estão em primeiro plano. Por exemplo, um aplicativo de editor de texto poderia ter mais de um documento aberto por vez, somente a janela principal estaria ativa, todos os outros seriam inativos. 
+As janelas principal e chave (se forem separadas) são sempre ativas, _janelas inativas_ são janelas abertas que não estão em primeiro plano. Por exemplo, um aplicativo de editor de texto poderia ter mais de um documento aberto por vez, somente a janela principal estaria ativa, todos os outros seriam inativos. 
 
 Para obter mais informações, consulte a seção [sobre o Windows](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/WindowAppearanceBehavior.html#//apple_ref/doc/uid/20000957-CH33-SW1) das [diretrizes de interface humana do os X](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/) da Apple
 
@@ -110,7 +110,7 @@ A Apple sugere as seguintes diretrizes:
 
 #### <a name="inspectors"></a>Inspector
 
-A maioria dos aplicativos macOS modernos apresenta controles auxiliares e opções que afetam o documento ativo ou seleção como inspetores que fazem parte da janela principal (como o aplicativo de **páginas** mostrado abaixo), em vez de usar janelas de painel:
+A maioria dos aplicativos macOS modernos apresenta controles auxiliares e opções que afetam o documento ativo ou seleção como _inspetores_ que fazem parte da janela principal (como o aplicativo de **páginas** mostrado abaixo), em vez de usar janelas de painel:
 
 [![](window-images/panel02.png "Um inspetor de exemplo")](window-images/panel02.png#lightbox)
 
@@ -133,10 +133,10 @@ No **Inspetor de atributo**, há várias propriedades que você pode usar para d
 - **Título** -este é o texto que será exibido na TitleBar da janela.
 - **Salvamento automático** – essa é a _chave_ que será usada para ID da janela quando for a posição e as configurações forem salvas automaticamente.
 - **Barra de título** – a janela exibe uma barra de título.
-- **Título e barra de ferramentas** unificados – se a janela incluir uma barra de ferramentas, ela deverá ser parte da barra de título.
+- **Título e barra de ferramentas unificados** – se a janela incluir uma barra de ferramentas, ela deverá ser parte da barra de título.
 - **Exibição de conteúdo de tamanho completo** – permite que a área de conteúdo da janela fique sob a barra de título.
 - **Sombra** – a janela tem uma sombra.
-- As janelas com textura texturizada podem usar efeitos (como Vibrancy) e podem ser movidas arrastando-se em qualquer lugar no corpo.
+- As janelas com textura **texturizada** podem usar efeitos (como Vibrancy) e podem ser movidas arrastando-se em qualquer lugar no corpo.
 - **Close** -a janela tem um botão fechar.
 - **Minimizar** – a janela tem um botão minimizar.
 - **Redimensionar** – a janela tem um controle de redimensionamento.

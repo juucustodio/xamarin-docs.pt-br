@@ -4,15 +4,15 @@ description: Este documento descreve as alterações de estrutura adicionais int
 ms.prod: xamarin
 ms.assetid: CFDE1FC4-9327-402B-95A0-581D4AA0E9D5
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: c3f140affe3d539eb07d06f50a031cd7ef469728
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 706efdd9cb39db63ab0c7b9cd4404b7b84f4c14b
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70197754"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292412"
 ---
 # <a name="additional-ios-9-frameworks-changes"></a>Alterações adicionais em estruturas do iOS 9
 
@@ -145,9 +145,9 @@ As seguintes alterações foram feitas na classe [LAContext](xref:LocalAuthentic
 - **MaxBiometryFailures** -foi depreciado no Ios 9.
 - **TouchIdAuthenticationAllowableReuseDuration** Obtém ou define a quantidade de tempo que uma autenticação de ID de toque pode ser reutilizada.
 - **EvaluateAccessControl** – avalia de forma assíncrona uma política de autenticação.
-- Invalidar – invalida uma determinada autenticação de ID de toque.
-- Iscredentialset – retorna `true` se as credenciais estão definidas no momento.
-- Setcredentialtype Define o tipo de credencial fornecido.
+- Invalidar – invalida uma determinada **autenticação de ID** de toque.
+- **Iscredentialset** – retorna `true` se as credenciais estão definidas no momento.
+- **Setcredentialtype** Define o tipo de credencial fornecido.
 
 Consulte a referência do [LAContext](https://developer.apple.com/library/prerelease/ios/documentation/LocalAuthentication/Reference/LAContext_Class/index.html#//apple_ref/occ/instm/LAContext/evaluatePolicy:localizedReason:reply:) da Apple para obter mais detalhes.
 
@@ -159,7 +159,7 @@ A Apple incluiu as seguintes alterações na estrutura [MapKit](xref:MapKit) no 
 - Os resultados da pesquisa retornados por MapKit e a classe [CLGeocoder](xref:CoreLocation.CLGeocoder) também podem fornecer o fuso horário do resultado.
 - Agora você pode personalizar totalmente as anotações de mapa apresentadas por seu aplicativo IOS usando `DetailCalloutAccessoryView` a propriedade da classe [MKAnnotationView](xref:MapKit.MKAnnotationView) .
 
-Confira nossos [mapas do IOS](~/ios/user-interface/controls/ios-maps/index.md) e as [anotações e sobreposições que exploram a](~/ios/user-interface/controls/ios-maps/ios-maps-walkthrough.md) documentação do MapKit para obter mais informações sobre como trabalhar com mapas e anotações no Xamarin. Ios e na referência do [CLGeocoder](https://developer.apple.com/library/prerelease/ios/documentation/CoreLocation/Reference/CLGeocoder_class/index.html#//apple_ref/occ/cl/CLGeocoder) da Apple para obter mais informações.
+Confira nossos [mapas do IOS](~/ios/user-interface/controls/ios-maps/index.md) e as [anotações e sobreposições que exploram a](~/ios/user-interface/controls/ios-maps/ios-maps-walkthrough.md) documentação do MapKit para obter mais informações sobre como trabalhar com mapas e anotações no Xamarin. Ios e na [referência do CLGeocoder](https://developer.apple.com/library/prerelease/ios/documentation/CoreLocation/Reference/CLGeocoder_class/index.html#//apple_ref/occ/cl/CLGeocoder) da Apple para obter mais informações.
 
 ## <a name="passkit-framework-additions"></a>Adições da estrutura PassKit
 
@@ -224,7 +224,7 @@ A nova `NSDataAsset` classe permite que um aplicativo Xamarin. Ios busque conte�
 
 As classes `NSLayoutAnchor` de `NSLayoutDimension` âncora New e layout funcionam com as novas propriedades de âncora da classe [UIView](xref:UIKit.UIView) ( `LeadingAnchor` como e `WidthAnchor`) para facilitar o layout no Ios 9.
 
-Consulte nossa [introdução à](~/ios/user-interface/storyboards/unified-storyboards.md) documentação de storyboards unificadas para obter mais informações sobre como trabalhar com classes de tamanho e AutoLayout em um aplicativo Xamarin. Ios e [referência de NSLayoutAnchor](https://developer.apple.com/library/prerelease/ios/documentation/AppKit/Reference/NSLayoutAnchor_ClassReference/index.html#//apple_ref/occ/cl/NSLayoutAnchor)da Apple, [referência de NSLayoutDimension](https://developer.apple.com/library/prerelease/ios/documentation/AppKit/Reference/NSLayoutDimension_ClassReference/index.html#//apple_ref/occ/cl/NSLayoutDimension) e [ UIView referência](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIView_Class/index.html#//apple_ref/occ/cl/UIView) para obter mais informações.
+Consulte nossa [introdução à documentação de storyboards unificadas](~/ios/user-interface/storyboards/unified-storyboards.md) para obter mais informações sobre como trabalhar com classes de tamanho e AutoLayout em um aplicativo Xamarin. Ios e [referência de NSLayoutAnchor](https://developer.apple.com/library/prerelease/ios/documentation/AppKit/Reference/NSLayoutAnchor_ClassReference/index.html#//apple_ref/occ/cl/NSLayoutAnchor)da Apple, [referência de NSLayoutDimension](https://developer.apple.com/library/prerelease/ios/documentation/AppKit/Reference/NSLayoutDimension_ClassReference/index.html#//apple_ref/occ/cl/NSLayoutDimension) e [ UIView referência](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIView_Class/index.html#//apple_ref/occ/cl/UIView) para obter mais informações.
 
 ### <a name="new-readable-content-margins"></a>Novas margens de conteúdo legíveis
 
@@ -256,7 +256,7 @@ Antes do iOS 9, os controles [UIPickerView](xref:UIKit.UIPickerView) e [UIDatePi
 
 No iOS 9, esse redimensionamento automático não ocorrerá mais e os controles serão renderizados com uma largura de ponto de 320 em todos os dispositivos iOS, independentemente do tamanho e da orientação da tela.
 
-Para corrigir essa situação, use o layout automático e as classes de tamanho para fixar a largura do controle nas bordas do contêiner pai (exibição) e especifique a altura necessária. Consulte nossa [introdução à](~/ios/user-interface/storyboards/unified-storyboards.md) documentação de storyboards unificadas para obter mais informações sobre como trabalhar com classes de layout e tamanho automático em um aplicativo Xamarin. Ios.
+Para corrigir essa situação, use o layout automático e as classes de tamanho para fixar a largura do controle nas bordas do contêiner pai (exibição) e especifique a altura necessária. Consulte nossa [introdução à documentação de storyboards unificadas](~/ios/user-interface/storyboards/unified-storyboards.md) para obter mais informações sobre como trabalhar com classes de layout e tamanho automático em um aplicativo Xamarin. Ios.
 
 ### <a name="new-uitextinputassistantitem-class"></a>Nova classe UITextInputAssistantItem
 

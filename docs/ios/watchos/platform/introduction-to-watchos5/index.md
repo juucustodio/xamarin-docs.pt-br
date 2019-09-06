@@ -1,47 +1,47 @@
 ---
 title: Introdução ao watchOS 5
-description: Este documento fornece uma descrição detalhada de alguns watchOS 5 APIs para Xamarin.
+description: Este documento fornece uma descrição de alto nível de algumas APIs do watchOS 5 para o Xamarin.
 ms.prod: xamarin
 ms.assetid: 775BE4E4-F408-4620-AED9-2B48C7B27F38
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 10/05/2018
-ms.openlocfilehash: 5df751f683c530ee9f7ec58d9d6393d9f089314d
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: e873d476e38c91bad0db805d53e2c396f4ffb9dd
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61222852"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70282038"
 ---
 # <a name="introduction-to-watchos-5"></a>Introdução ao watchOS 5
 
-Este documento fornece uma descrição detalhada de alguns watchOS 5 APIs.
+Este documento fornece uma descrição de alto nível de algumas APIs do watchOS 5.
 
-Para começar a criar aplicativos watchOS 5 com o Xamarin, consulte o [guia de Introdução](~/ios/platform/introduction-to-ios12/get-started.md)
+Para começar a criar aplicativos watchOS 5 com o Xamarin, consulte o [Guia de introdução](~/ios/platform/introduction-to-ios12/get-started.md)
 
-## <a name="workout-improvements"></a>Aprimoramentos de ginástica
+## <a name="workout-improvements"></a>Melhorias de treinamento
 
-A APIs de ginástica no watchOS 5 fornece novos recursos para coleta de dados de treinamento, salvando exercícios físicos HealthKit, continuando automaticamente uma ginástica depois que um aplicativo falhar e trabalhar com uma série de dados relacionados de quantidade.
+As APIs de treinamento no watchOS 5 fornecem novos recursos para a coleta de dados de treinamento, salvamento de exercícios no HealthKit, continuação automática de um treinamento após a falha de um aplicativo e trabalho com uma série de dados de quantidade relacionados.
 
-## <a name="siri-shortcuts"></a>Atalhos da Siri
+## <a name="siri-shortcuts"></a>Atalhos do Siri
 
-No watchOS 5, Siri Mostrador mostra atalhos esse conteúdo de superfície do aplicativo e a funcionalidade para os usuários em horários adequados. Siri aprende ao longo do tempo para mostrar os atalhos relevantes quando eles são mais prováveis de serem utilizados.
+No watchOS 5, a face do Siri Watch mostra atalhos que superfície o conteúdo e a funcionalidade do aplicativo para os usuários em momentos convenientes. O Siri aprende ao longo do tempo para mostrar os atalhos relevantes quando eles têm mais probabilidade de serem usados.
 
 ## <a name="background-audio-mode"></a>Modo de áudio em segundo plano
 
-watchOS 5 torna possível para aplicativos de terceiros reproduzir áudio em segundo plano por meio da estrutura de AV Foundation.
+o watchOS 5 torna possível que aplicativos de terceiros reproduzam áudio em segundo plano por meio da estrutura do AV Foundation.
 
-## <a name="movement-disorder-api"></a>Movimentação desordem API
+## <a name="movement-disorder-api"></a>API desordem de movimento
 
-A API de uma desordem de movimentação, parte do framework CoreMotion no watchOS 5, permite que aplicativos watchOS monitor, registro e consulta tremor e dyskinesia sintomas relacionadas ao Parkinson da doença.
+A API desordem de movimentação, parte da estrutura CoreMotion no watchOS 5, permite que os aplicativos watchOS monitorem, registrem e consultem tremor e Dyskinesia sintomas relacionados à doença de Parkinson.
 
 ## <a name="natural-language-framework"></a>Estrutura de linguagem natural
 
-A estrutura de linguagem Natural permite que os aplicativos executar vários tipos de análise de linguagem. Por exemplo, ele pode ser usado para identificar partes da fala e determinar o idioma representado por um bloco de texto.
+A estrutura de linguagem natural permite que os aplicativos executem vários tipos de análise de linguagem. Por exemplo, ele pode ser usado para identificar partes de fala e determinar o idioma representado por um bloco de texto.
 
 ## <a name="related-links"></a>Links relacionados
 
-- [watchOS – o desenvolvedor da Apple (Apple)](https://developer.apple.com/watchOS/)
+- [watchOS – desenvolvedor da Apple (Apple)](https://developer.apple.com/watchOS/)
 - [O que há de novo no watchOS (Apple) (vídeo)](https://developer.apple.com/videos/play/wwdc2018/206/)
 - [Inspeção (Apple)](https://www.apple.com/watch/)

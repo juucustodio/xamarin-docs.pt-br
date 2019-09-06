@@ -4,15 +4,15 @@ description: Este artigo aborda o uso das novas APIs de pesquisa de aplicativo f
 ms.prod: xamarin
 ms.assetid: 7323EB3D-A78F-4BF0-9990-3160C7E83CF0
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/20/2017
-ms.openlocfilehash: 344bc8f46ecad250c5021be4682f02489aa5cb96
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: eb88f7c1de12eee59ea4c2a271079e6b96c29b09
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70198458"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70286594"
 ---
 # <a name="search-apis-in-xamarinios"></a>Pesquisar APIs no Xamarin. iOS
 

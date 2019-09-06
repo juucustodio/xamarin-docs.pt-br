@@ -4,15 +4,15 @@ description: Este documento descreve como usar os controles de tabela watchOS no
 ms.prod: xamarin
 ms.assetid: 7C14126D-9591-4387-A588-3C4521F11C55
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: f3e991550cd58f20d52bebb208eedec4d8f7e41e
-ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
+ms.openlocfilehash: d1e5602643ba5578c4bc2a26e6db2d9f49033469
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70065677"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291687"
 ---
 # <a name="watchos-table-controls-in-xamarin"></a>Controles de tabela watchOS no Xamarin
 
@@ -147,12 +147,12 @@ for (var i = 0; i < rows.Count; i++) {
 
 o watchOS 3 introduziu um novo recurso para tabelas: a capacidade de percorrer as páginas de detalhes relacionadas a cada linha, sem precisar voltar para a tabela e escolher outra linha. As telas de detalhes podem ser roladas passando o dedo para cima e para baixo, ou usando o Digital Crown.
 
-![]Exemplo de paginação de (table-images/table-scroll-sml.png "detalhes vertical")![](table-images/table-detail-sml.png)
+![](table-images/table-scroll-sml.png "Exemplo de paginação de detalhes vertical")![](table-images/table-detail-sml.png)
 
 > [!IMPORTANT]
 > Atualmente, esse recurso só está disponível com a edição do storyboard no Xcode Interface Builder.
 
-Para habilitar esse recurso, selecione o `WKInterfaceTable` na superfície de design e marque a opção de paginação de **detalhes vertical** :
+Para habilitar esse recurso, selecione o `WKInterfaceTable` na superfície de design e marque a opção de **paginação de detalhes vertical** :
 
 ![](table-images/vertical-detail-paging-sml.png "Selecionando a opção de paginação de detalhes vertical")
 

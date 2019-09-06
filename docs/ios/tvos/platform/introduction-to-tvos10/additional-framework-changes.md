@@ -4,15 +4,15 @@ description: Este documento descreve pequenas alterações e aprimoramentos feit
 ms.prod: xamarin
 ms.assetid: F771640A-F92E-4954-82D5-2D720434971E
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: 230da58bba68b9411b67baacd53b534ae832510d
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 88039da5faf911386232d2b189b27a2921f8144c
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68657431"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70289571"
 ---
 # <a name="additional-tvos-10-frameworks-changes"></a>Alterações adicionais do tvOS 10 frameworks
 
@@ -118,7 +118,7 @@ Os aprimoramentos a seguir foram feitos na estrutura GameplayKit no tvOS 10:
 
 Os aprimoramentos a seguir foram feitos na estrutura de metal no tvOS 10:
 
-- os aplicativos e jogos 3D agora podem usar o mosaico para renderizar com eficiência cenas e geometria complexas por meio da GPU.
+- os aplicativos e jogos 3D agora podem usar o _mosaico_ para renderizar com eficiência cenas e geometria complexas por meio da GPU.
 - Use a especialização de função para criar uma coleção altamente otimizada de funções de combinação de material e leve para uma cena.
 - Forneça um controle refinado de alocação de recursos para otimizar o desempenho de aplicativos baseados em metal usando heaps de recursos e destinos de renderização sem memória.
 

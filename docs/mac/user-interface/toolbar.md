@@ -4,15 +4,15 @@ description: Este artigo descreve como trabalhar com barras de ferramentas em um
 ms.prod: xamarin
 ms.assetid: C8D228CE-C860-47E1-85FD-69864BF91F20
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: b2008b93f208d73af06c12fa493232fd56ddd64f
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: de0db40fb678bf88a18c6be42d89644d41583b99
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68644743"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70280100"
 ---
 # <a name="toolbars-in-xamarinmac"></a>Barras de ferramentas no Xamarin. Mac
 
@@ -26,7 +26,7 @@ Este artigo aborda as noções básicas de como trabalhar com barras de ferramen
 
 Antes de continuar, leia o artigo [Olá, Mac](~/mac/get-started/hello-mac.md) – especificamente a [introdução às seções Xcode e Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) e [ações](~/mac/get-started/hello-mac.md#outlets-and-actions) , pois ela aborda os principais conceitos e técnicas que serão usados em todo este guia.
 
-Veja também a seção expondo [ C# classes/métodos para Objective-C](~/mac/internals/how-it-works.md) do documento interno do [Xamarin. Mac](~/mac/internals/how-it-works.md) . Ele explica os `Register` atributos `Export` e usados para conectar C# classes às classes Objective-C.
+Veja também a seção [ C# expondo classes/métodos para Objective-C](~/mac/internals/how-it-works.md) do documento interno do [Xamarin. Mac](~/mac/internals/how-it-works.md) . Ele explica os `Register` atributos `Export` e usados para conectar C# classes às classes Objective-C.
 
 ## <a name="introduction-to-toolbars"></a>Introdução às barras de ferramentas
 
@@ -113,11 +113,11 @@ As seguintes propriedades estão disponíveis:
 1. **Exibir** -controla se a barra de ferramentas exibe ícones, texto ou ambos
 2. **Visível em Iniciar** – se selecionado, a barra de ferramentas ficará visível por padrão.
 3. **Personalizável** -se selecionado, os usuários podem editar e personalizar a barra de ferramentas.
-4. Separador-se selecionado, uma linha horizontal fina separa a barra de ferramentas do conteúdo da janela.
+4. **Separador** -se selecionado, uma linha horizontal fina separa a barra de ferramentas do conteúdo da janela.
 5. **Tamanho** – define o tamanho da barra de ferramentas
 6. **Salvamento automático** – se selecionado, o aplicativo manterá as alterações de configuração da barra de ferramentas de um usuário nas inicializações do aplicativo.
 
-Selecione a opção AutoSalvar e deixe todas as outras propriedades em suas configurações padrão. 
+Selecione a opção **AutoSalvar** e deixe todas as outras propriedades em suas configurações padrão. 
 
 Depois de abrir a barra de ferramentas na **hierarquia de interface**, abra a caixa de diálogo de personalização selecionando um item da barra de ferramentas:
 
@@ -132,7 +132,7 @@ Os seguintes itens da barra de ferramentas podem ser adicionados:
 - **Item da barra de ferramentas de imagem** -um item da barra de ferramentas com uma imagem personalizada como um ícone.
 - **Item da barra de ferramentas de espaço flexível** -espaço flexível usado para justificar itens subsequentes na barra de ferramentas. Por exemplo, um ou mais itens da barra de ferramentas seguidos por um item de barra de ferramentas de espaço flexível e outro item da barra de ferramentas fixaria o último item no lado direito da barra de ferramentas.
 - **Item da barra de ferramentas de espaço** – espaço fixo entre os itens na barra de ferramentas
-- **Item da barra de ferramentas** separadora-um separador visível entre dois ou mais itens da barra de ferramentas, para agrupamento
+- **Item da barra de ferramentas separadora** -um separador visível entre dois ou mais itens da barra de ferramentas, para agrupamento
 - **Personalizar item da barra de ferramentas** – permite que os usuários personalizem a barra de ferramentas
 - **Imprimir item da barra de ferramentas** – permite que os usuários imprimam o documento aberto
 - **Mostrar item da barra de ferramentas cores** – exibe o seletor de cores do sistema padrão: 
@@ -223,7 +223,7 @@ Usando um **item da barra de ferramentas de imagem**, qualquer imagem de bitmap 
 
     ![Definindo o rótulo do item da barra de ferramentas e o rótulo da paleta](toolbar-images/edit16.png "Definindo o rótulo do item da barra de ferramentas e o rótulo da paleta")
 
-9. Arraste um **item da barra de ferramentas** separador do **Inspetor de biblioteca** para a área de itens da **barra de ferramentas permitida** da barra de ferramentas 
+9. Arraste um **item da barra de ferramentas separador** do **Inspetor de biblioteca** para a área de **itens da barra de ferramentas permitida** da barra de ferramentas 
 
     [![Um item da barra de ferramentas do separador adicionado à área itens da barra de ferramentas permitidos](toolbar-images/edit17.png "Um item da barra de ferramentas do separador adicionado à área itens da barra de ferramentas permitidos")](toolbar-images/edit17-large.png#lightbox)
 

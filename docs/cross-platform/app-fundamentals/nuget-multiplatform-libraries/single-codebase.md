@@ -1,80 +1,80 @@
 ---
 title: Criando uma nova biblioteca multiplataforma para NuGet
-description: Este documento descreve como criar uma biblioteca multiplataforma para uso com o NuGet. Essa técnica é adequada para a lógica de negócios e algoritmos que podem ser expressos inteiramente na biblioteca de classes de Base do .NET e, portanto, serão executado em todas as plataformas de destino sem código específico da plataforma.
+description: Este documento descreve como criar uma biblioteca multiplataforma para uso com o NuGet. Essa técnica é adequada para algoritmos e lógica de negócios que podem ser expressas inteiramente na biblioteca de classes base .NET e, portanto, serão executadas em todas as plataformas de destino sem código específico à plataforma.
 ms.prod: xamarin
 ms.assetid: E7B55354-9BBE-4122-BCE3-3506B79090DD
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/23/2017
-ms.openlocfilehash: 6371c2af15eab9c5124212eefd9cf70d07b945d4
-ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
+ms.openlocfilehash: 966d7a21da0112383c08e862a357c3c1d4fb9c22
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67864727"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70289730"
 ---
 # <a name="creating-a-new-multiplatform-library-for-nuget"></a>Criando uma nova biblioteca multiplataforma para NuGet
 
-Criando um projeto de biblioteca multiplataforma que usa o PCL ou .NET Standard significa que o NuGet resultante pode ser adicionado a qualquer projeto do .NET que suporta o perfil de destino, incluindo projetos do ASP.NET ou aplicativos da área de trabalho usando o WinForms, WPF ou UWP.
+Criar um projeto de biblioteca multiplataforma que usa PCL ou .NET Standard significa que o NuGet resultante pode ser adicionado a qualquer projeto .NET que ofereça suporte ao perfil de destino, incluindo projetos ASP.NET ou aplicativos de área de trabalho usando WinForms, WPF ou UWP.
 
-A biblioteca só pode conter código com suporte pelo perfil selecionado de PCL ou .NET Standard, bem como outros NuGets que são adicionados.
-Isso é adequado para a lógica de negócios e algoritmos que podem ser expressos inteiramente na base class library do .NET.
+A biblioteca pode conter apenas o código suportado pelo perfil PCL ou .NET Standard selecionado, bem como qualquer outro NuGets que seja adicionado.
+Isso é adequado à lógica de negócios e aos algoritmos que podem ser expressos inteiramente na biblioteca de classes base do .NET.
 
-Um único assembly é criado e compilado em um pacote do NuGet.
+Um único assembly é criado e compilado em um pacote NuGet.
 
-Se você precisar da funcionalidade de específico da plataforma, mais tarde [podem ser adicionados a projetos específicos da plataforma](#add-platforms).
+Se você precisar mais tarde da funcionalidade específica da plataforma, os [projetos específicos da plataforma poderão ser adicionados](#add-platforms).
 
-## <a name="steps-to-create-a-multiplatform-library-nuget"></a>Etapas para criar um NuGet biblioteca multiplataforma
+## <a name="steps-to-create-a-multiplatform-library-nuget"></a>Etapas para criar um NuGet de biblioteca multiplataforma
 
-1. Selecione **arquivo > nova solução** (ou clique com botão direito de uma solução existente e escolha **Adicionar > Novo projeto**).
+1. Selecione **arquivo > nova solução** (ou clique com o botão direito do mouse em uma solução existente e escolha **Adicionar > novo projeto**).
 
-2. Escolher **biblioteca multiplataforma** da **multiplataforma > biblioteca** seção:
+2. Escolha **biblioteca multiplataforma** na seção **biblioteca de > de várias plataformas** :
 
-   [![](single-codebase-images/mulitplatform-library-sml.png "Configurar a biblioteca multiplataforma para uma única base de código")](single-codebase-images/mulitplatform-library.png#lightbox)
+   [![](single-codebase-images/mulitplatform-library-sml.png "Configurar a biblioteca de várias plataformas para uma única base de código")](single-codebase-images/mulitplatform-library.png#lightbox)
 
-3. Insira um **nome** e **descrição**e escolha **único para todas as plataformas**:
+3. Insira um **nome** e uma **Descrição**e escolha **único para todas as plataformas**:
 
-   [![](single-codebase-images/single-configure-sml.png "Configurar a biblioteca multiplataforma para uma única base de código")](single-codebase-images/single-configure.png#lightbox)
+   [![](single-codebase-images/single-configure-sml.png "Configurar a biblioteca de várias plataformas para uma única base de código")](single-codebase-images/single-configure.png#lightbox)
 
-4. Conclua o assistente. Um projeto de biblioteca único é criado na solução.
+4. Conclua o assistente. Um único projeto de biblioteca é criado na solução.
 
-5. Clique com botão direito no novo projeto de biblioteca e, em seguida, selecione **opções**. O **Build > geral** seção permite que o **estrutura de destino** a ser definido – escolha um perfil de PCL portátil do .NET ou uma versão do .NET Standard:
+5. Clique com o botão direito do mouse no novo projeto de biblioteca e selecione **Opções**. A seção **Build > geral** permite que a **estrutura de destino** seja definida – escolha um perfil PCL portátil do .net ou uma versão .net Standard:
 
-   [![](single-codebase-images/single-choose-type-sml.png "Escolha o PCL ou .NET Standard para o tipo de biblioteca")](single-codebase-images/single-choose-type.png#lightbox)
+   [![](single-codebase-images/single-choose-type-sml.png "Escolher PCL ou .NET Standard para o tipo de biblioteca")](single-codebase-images/single-choose-type.png#lightbox)
 
-6. Além disso, no **opções de projeto** janela, abra o **pacote do NuGet > metadados** seção e insira o [metadados necessários](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/metadata.md) (bem como quaisquer metadados opcionais):
+6. Também na janela **Opções do projeto** , abra a seção de **metadados > pacote NuGet** e insira os [metadados necessários](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/metadata.md) (bem como os metadados opcionais):
 
-   [![](single-codebase-images/single-metadata-sml.png "Insira os metadados necessários")](single-codebase-images/single-metadata.png#lightbox)
+   [![](single-codebase-images/single-metadata-sml.png "Inserir metadados necessários")](single-codebase-images/single-metadata.png#lightbox)
 
-7. Clique com botão direito no projeto de biblioteca e escolha **criar pacote do NuGet** (ou compilar ou implantar a solução) e o **. nupkg** serão salvas no arquivo de pacote do NuGet a **/bin/** pasta (Debug ou Release, dependendo da configuração):
+7. Clique com o botão direito do mouse no projeto de biblioteca e escolha **criar pacote NuGet** (ou compilar ou implantar a solução) e o arquivo de pacote NuGet **. nupkg** será salvo na pasta **/bin/** (debug ou Release, dependendo da configuração):
 
-   ![](single-codebase-images/create-nuget-package.png "O arquivo de pacote do NuGet será salvo na pasta bin Debug ou Release, dependendo da configuração")
+   ![](single-codebase-images/create-nuget-package.png "O arquivo de pacote NuGet será salvo na pasta bin Debug ou Release, dependendo da configuração")
 
 
 ## <a name="verifying-the-output"></a>Verificando a saída
 
-Pacotes do NuGet também são arquivos ZIP, portanto, é possível inspecionar a estrutura interna do pacote gerado.
+Os pacotes NuGet também são arquivos ZIP, portanto, é possível inspecionar a estrutura interna do pacote gerado.
 
-Esta captura de tela mostra o conteúdo de um NuGet baseado em PCL – um único assembly PCL é incluído:
+Esta captura de tela mostra o conteúdo de um NuGet baseado em PCL – apenas um único assembly PCL está incluído:
 
 ![](single-codebase-images/nuget-output.png "Arquivos contidos no pacote NuGet")
 
 <a name="add-platforms" />
 
-## <a name="adding-platform-specific-code"></a>Adicionar código específico da plataforma
+## <a name="adding-platform-specific-code"></a>Adicionando código específico da plataforma
 
-Projetos baseados em PCL e projetos baseados em .NET Standard não podem conter referências específicas da plataforma (por exemplo, iOS ou Android funcionalidade).
+Projetos baseados em PCL e projetos baseados em .NET Standard não podem conter referências específicas à plataforma (como a funcionalidade iOS ou Android).
 
-Se um projeto PCL existente ou o projeto do .NET Standard precisa ser expandido para incluir o código específico da plataforma, isso pode ser feito clicando com botão direito no projeto e selecionando **Adicionar > Adicionar a implementação de plataforma...** :
+Se um projeto PCL ou .NET Standard projeto existente precisar ser expandido para incluir o código específico da plataforma, isso poderá ser feito clicando com o botão direito do mouse no projeto e selecionando **adicionar > adicionar a implementação da plataforma...** :
 
 [![](single-codebase-images/add-later-sml.png "Adicionar menu de implementação de plataforma")](single-codebase-images/add-later.png#lightbox)
 
-Um ou mais projetos de plataforma podem ser adicionados à solução e a biblioteca PCL ou .NET Standard existente, opcionalmente, pode ser convertida em um projeto compartilhado:
+Um ou mais projetos de plataforma podem ser adicionados à solução, e a biblioteca PCL ou .NET Standard existente pode, opcionalmente, ser convertida em um projeto compartilhado:
 
-[![](single-codebase-images/add-later-platforms-sml.png "Adicionar opções de plataformas como iOS, Android e projeto compartilhado")](single-codebase-images/add-later-platforms-sml.png#lightbox)
+[![](single-codebase-images/add-later-platforms-sml.png "Adicionar opções de plataforma, como iOS, Android e projeto compartilhado")](single-codebase-images/add-later-platforms-sml.png#lightbox)
 
-Depois de converter um projeto compartilhado, visite o **opções de projeto > pacote do NuGet > Assemblies de referência**
-[seção](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/platform-specific.md) e garanta que nenhum perfil selecionado (para que o NuGet continua a ser compatível com projetos que foi usada anteriormente na).
+Depois de converter em um projeto compartilhado, visite a[seção](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/platform-specific.md) **Opções do projeto > pacote NuGet > assemblies**
+de referência e verifique se todos os perfis necessários estão selecionados (para que o NuGet continue a ser compatível com os projetos Ele foi usado anteriormente em).
 
 
 ## <a name="related-links"></a>Links relacionados

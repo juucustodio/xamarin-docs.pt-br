@@ -1,52 +1,52 @@
 ---
 title: Limitações de incorporação do .NET
-description: Este documento descreve as limitações de incorporação do .NET, a ferramenta que permite que você consuma o código .NET em outras linguagens de programação.
+description: Este documento descreve as limitações da inserção do .NET, a ferramenta que permite que você consuma o código .NET em outras linguagens de programação.
 ms.prod: xamarin
 ms.assetid: EBBBB886-1CEF-4DF4-AFDD-CA96049F878E
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 11/14/2017
-ms.openlocfilehash: 7a162d632c98b4e412fa1b7b0c0c40ac945ff09f
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: cf431d4e3d30ac2ec06bfebc9cebe101411faa1c
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60945773"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292705"
 ---
 # <a name="net-embedding-limitations"></a>Limitações de incorporação do .NET
 
-Este documento explica as limitações de incorporação do .NET e, sempre que possível, fornece soluções alternativas para eles.
+Este documento explica as limitações da incorporação do .NET e, sempre que possível, fornece soluções alternativas para elas.
 
 ## <a name="general"></a>Geral
 
 ### <a name="use-more-than-one-embedded-library-in-a-project"></a>Usar mais de uma biblioteca incorporada em um projeto
 
-Não é possível ter dois tempos de execução Mono coexistam no mesmo aplicativo. Isso significa que você não pode usar duas bibliotecas diferentes incorporação do .NET gerados dentro do mesmo aplicativo.
+Não é possível ter dois tempos de execução do mono coexistentes dentro do mesmo aplicativo. Isso significa que você não pode usar duas bibliotecas diferentes geradas na inserção do .NET dentro do mesmo aplicativo.
 
 **Solução alternativa:** Você pode usar o gerador para criar uma única biblioteca que inclui vários assemblies (de projetos diferentes).
 
-### <a name="subclassing"></a>Criando subclasses
+### <a name="subclassing"></a>Subclasses
 
-Incorporação do .NET facilita a integração do tempo de execução Mono dentro de aplicativos, expondo um conjunto de APIs prontos para uso para o idioma de destino e plataforma.
+A incorporação do .NET facilita a integração do tempo de execução mono dentro de aplicativos expondo um conjunto de APIs prontas para uso para a plataforma e o idioma de destino.
 
-No entanto, isso não é uma integração bidirecional, por exemplo, você não pode subclasse um tipo gerenciado e esperar que o código gerenciado chame dentro do código nativo, desde que seu código gerenciado desconhece esse coexistência.
+No entanto, essa não é uma integração bidirecional, por exemplo, você não pode fazer uma subclasse de um tipo gerenciado e esperar que o código gerenciado chame de volta dentro de seu código nativo, já que seu código gerenciado não está ciente dessa coexistência.
 
-Dependendo das suas necessidades, pode ser possível às partes da solução alternativa essa limitação, por exemplo
+Dependendo de suas necessidades, pode ser possível fazer parte da solução alternativa dessa limitação, por exemplo,
 
-* o código gerenciado pode p/invoke em seu código nativo. Isso exige a personalização de seu código gerenciado para permitir a personalização do código nativo;
+* seu código gerenciado pode p/Invoke em seu código nativo. Isso exige a personalização do código gerenciado para permitir a personalização do código nativo;
 
-* Use produtos como o xamarin. IOS e expor uma biblioteca gerenciada que permitiria a que Objective-C (neste caso) a subclasse alguns gerenciados NSObject subclasses.
+* use produtos como o Xamarin. iOS e expor uma biblioteca gerenciada que permitiria o Objective-C (nesse caso) para a subclasse de algumas subclasses NSObject gerenciadas.
 
-## <a name="objective-c-generated-code"></a>Código gerado do Objective-C
+## <a name="objective-c-generated-code"></a>Código gerado pelo Objective-C
 
-### <a name="nullability"></a>nulidade
+### <a name="nullability"></a>Nulidade
 
-Não há nenhum metadado no .NET que conte-nos se uma referência nula é aceitável ou não para uma API. A maioria das APIs lançarão `ArgumentNullException` se eles não podem lidar com um `null` argumento. Isso é problemático, como Objective-C de tratamento de exceções é algo melhor evitado.
+Não há nenhum metadado no .NET que nos informe se uma referência nula é aceitável ou não para uma API. A maioria das APIs `ArgumentNullException` gerará se elas não conseguirem lidar com um `null` argumento. Isso é problemático, pois o tratamento de exceções Objective-C é algo melhor evitado.
 
-Uma vez que estamos não é possível gerar anotações de nulidade precisas nos arquivos de cabeçalho e deseja minimizar exceções gerenciadas o padrão para argumentos não nulos (`NS_ASSUME_NONNULL_BEGIN`) e adicionar alguns específicos, quando a precisão for possível, as anotações de nulidade.
+Como não podemos gerar anotações de nulidade precisas nos arquivos de cabeçalho e deseja minimizar as exceções gerenciadas, por padrão, os argumentos não nulos (`NS_ASSUME_NONNULL_BEGIN`) e adicionariam algum específico, quando a precisão é possível, anotações de nulidade.
 
-### <a name="bitcode-ios"></a>Bitcode (iOS)
+### <a name="bitcode-ios"></a>BitCode (iOS)
 
-Atualmente, a incorporação de .NET não oferece suporte bitcode no iOS, que é habilitado para alguns modelos de projeto do Xcode. Isso precisará ser desabilitado para estruturas de link gerado com êxito.
+Atualmente, a inserção do .NET não dá suporte a BitCode no iOS, que está habilitado para alguns modelos de projeto do Xcode. Isso terá que ser desabilitado para vincular as estruturas geradas com êxito.
 
-![Opção de Bitcode](images/ios-bitcode-option.png)
+![Opção BitCode](images/ios-bitcode-option.png)

@@ -4,15 +4,15 @@ description: Com o iOS 12, é possível agrupar notificações no centro de noti
 ms.prod: xamarin
 ms.assetid: C6FA7C25-061B-4FD7-8E55-88597D512F3C
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 09/04/2018
-ms.openlocfilehash: 3edaabe287bc2b37d2ec5a759ada9f59441c6d3a
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 12d60a193385593bb3ec22186b54a4a809370e2d
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68652572"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291260"
 ---
 # <a name="grouped-notifications-in-xamarinios"></a>Notificações agrupadas no Xamarin. iOS
 
@@ -132,7 +132,7 @@ O aplicativo de exemplo usa o autor da mensagem como o argumento de resumo. Usan
 
 ## <a name="unthreaded-notifications"></a>Notificações não segmentadas
 
-Cada toque do botão de lembrete de **compromissos** do aplicativo de exemplo envia uma das várias notificações de lembrete de compromissos. Como esses lembretes não são segmentados, eles aparecem no grupo de notificação no nível do aplicativo na tela de bloqueio e no centro de notificações.
+Cada toque do botão de **lembrete de compromissos** do aplicativo de exemplo envia uma das várias notificações de lembrete de compromissos. Como esses lembretes não são segmentados, eles aparecem no grupo de notificação no nível do aplicativo na tela de bloqueio e no centro de notificações.
 
 Para enviar uma notificação não threaded, o método do aplicativo `ScheduleUnthreadedNotification` de exemplo usa um código semelhante como acima.
 No entanto, ele não define `ThreadIdentifier` o `UNMutableNotificationContent` no objeto.

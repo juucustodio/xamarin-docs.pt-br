@@ -4,15 +4,15 @@ description: Este artigo fornece várias dicas de solução de problemas para tr
 ms.prod: xamarin
 ms.assetid: DCE83E36-CBD9-4D96-8E7F-384CB8A54563
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/20/2017
-ms.openlocfilehash: e6e264d9f1cd959c95a27597649d2ec23d832b1c
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: c624dc9be86161305fddba56e58ae5b99d674770
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70200070"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292925"
 ---
 # <a name="xamarinios-9--troubleshooting"></a>Xamarin. iOS 9 – solução de problemas
 
@@ -44,7 +44,7 @@ Se o mesmo storyboard em execução no iOS 9, ele resultará em uma exceção no
 
 > Encerrando o aplicativo devido à exceção não percebida ' NSInvalidArgumentException ', motivo: ' * * * + [NSLayoutConstraint constraintWithItem: atributo: relatedBy: toitem: atributo: multiplicador: Constant:]: Uma restrição não pode ser feita entre um atributo à esquerda/à direita e um atributo à direita/esquerda. Use à esquerda/à direita para ambos ou nenhum deles.
 
-o Ios 9 impõe layouts para usar os atributos à **direita** & **esquerdo** _ou_ & à direita, mas *não* ambos. Para corrigir esse problema, altere todas as restrições de layout para usar o mesmo conjunto de atributos dentro de seu arquivo de storyboard.
+o Ios 9 impõe layouts para usar**os atributos à**  &  **direita** & **esquerdo** _ou_ **à direita,** mas *não* ambos. Para corrigir esse problema, altere todas as restrições de layout para usar o mesmo conjunto de atributos dentro de seu arquivo de storyboard.
 
 Para obter mais informações, consulte o [erro de restrição do IOS 9](https://stackoverflow.com/questions/32692841/ios-9-constraint-error) Stack Overflow discussão.
 
@@ -169,7 +169,7 @@ Talvez seja necessário parar e reiniciar Visual Studio para Mac antes que os no
 
 Agora, o iOS 9 impõe os requisitos da tela de inicialização para que a mesma imagem de inicialização não possa mais ser reutilizada para dar suporte a orientações de interface diferentes. Consulte a [referência do UILanchImage](https://developer.apple.com/library/prerelease/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/iPhoneOSKeys.html#//apple_ref/doc/uid/TP40009252-SW28) da Apple para obter mais informações.
 
-Opcionalmente, você pode usar um arquivo de storyboard para apresentar a tela de inicialização do seu aplicativo em vez de usar um conjunto de arquivos de imagem **. png** . Agora, essa é a maneira preferida da Apple de apresentar telas de inicialização. Consulte nosso guia [de introdução ao storyboards](~/ios/user-interface/storyboards/unified-storyboards.md) unificados para obter mais informações.
+Opcionalmente, você pode usar um arquivo de storyboard para apresentar a tela de inicialização do seu aplicativo em vez de usar um conjunto de arquivos de imagem **. png** . Agora, essa é a maneira preferida da Apple de apresentar telas de inicialização. Consulte nosso guia [de introdução ao storyboards unificados](~/ios/user-interface/storyboards/unified-storyboards.md) para obter mais informações.
 
 Por fim, seu aplicativo deve usar um arquivo de storyboard para sua tela de inicialização e dar suporte a todas as quatro orientações de interface (retrato, retrato de cabeça para baixo, paisagem para a esquerda e paisagem para a direita) a serem consideradas para execução em um slide sobre o painel ou no modo de exibição de divisão. Para saber mais sobre as novas capacidades de multitarefa do iOS 9, consulte nosso guia [multitarefa para iPad](~/ios/platform/multitasking.md) .
 
@@ -183,7 +183,7 @@ Esse erro está sendo gerado porque espera-se que as janelas de aplicativo tenha
 
 Há pelo menos duas soluções alternativas possíveis para esse problema:
 
-1. Atualize o aplicativo para usar o arquivo de `xib` storyboard em vez de arquivos para definir sua interface do usuário. Isso requer muito tempo, dependendo do tamanho do seu aplicativo e do conhecimento de como usar o designer do iOS (ou o Interface Builder do Xcode) para o layout de storyboards. Para obter mais informações, consulte nossa [introdução à documentação de storyboards](~/ios/user-interface/storyboards/unified-storyboards.md) unificados.
+1. Atualize o aplicativo para usar o arquivo de `xib` storyboard em vez de arquivos para definir sua interface do usuário. Isso requer muito tempo, dependendo do tamanho do seu aplicativo e do conhecimento de como usar o designer do iOS (ou o Interface Builder do Xcode) para o layout de storyboards. Para obter mais informações, consulte nossa [introdução à documentação de storyboards unificados](~/ios/user-interface/storyboards/unified-storyboards.md) .
 2. A `RootViewController` propriedade de configuração da janela `FinishedLaunching` do aplicativo `AppDelegate` no método na classe para apontar para um controlador de exibição na interface do usuário do seu aplicativo.
 
 ## <a name="when-to-initialize-views-and-view-controllers"></a>Quando inicializar exibições e controladores de exibição

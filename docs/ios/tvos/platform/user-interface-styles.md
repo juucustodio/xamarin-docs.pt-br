@@ -4,15 +4,15 @@ description: Este artigo aborda os temas de interface do usuário leves e escuro
 ms.prod: xamarin
 ms.assetid: 8BC37683-AD9E-45CD-BE40-96965618AD1D
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: f4004b4b9cdc8f8c6555be82cf1da5b92a83d45c
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 4df67221c367386cddd485fcd1853523d77158e0
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70120053"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290674"
 ---
 # <a name="tvos-user-interface-styles-in-xamarin"></a>Estilos de interface do usuário tvOS no Xamarin
 
@@ -160,7 +160,7 @@ var trait = new UITraitCollection ();
 SetOverrideTraitCollection (trait, this);
 ```
 
-Para obter mais informações, consulte as seções [características](~/ios/user-interface/storyboards/unified-storyboards.md) e [substituição de características](~/ios/user-interface/storyboards/unified-storyboards.md) da nossa [introdução à](~/ios/user-interface/storyboards/unified-storyboards.md) documentação de storyboards unificadas.
+Para obter mais informações, consulte as seções [características](~/ios/user-interface/storyboards/unified-storyboards.md) e [substituição de características](~/ios/user-interface/storyboards/unified-storyboards.md) da nossa introdução à documentação de [storyboards unificadas](~/ios/user-interface/storyboards/unified-storyboards.md) .
 
 <a name="Trait-Collections-and-Storyboards" />
 

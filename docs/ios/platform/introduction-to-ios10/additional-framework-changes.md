@@ -4,15 +4,15 @@ description: Este documento descreve pequenas alterações e aprimoramentos feit
 ms.prod: xamarin
 ms.assetid: 0E2217F1-FC96-4D0A-ABAB-D40AD8F96502
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: 85dad3bdd46401b1acf9a1cb5acc206508cd611f
-ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
+ms.openlocfilehash: 620b89ba4682d65552fa5555c978b7eb5f437714
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69620721"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290767"
 ---
 # <a name="additional-ios-10-frameworks-changes"></a>Alterações adicionais em estruturas do iOS 10
 
@@ -122,7 +122,7 @@ Consulte nossa [introdução à](~/ios/platform/homekit.md) documentação do ho
 
 Os aprimoramentos a seguir foram feitos na estrutura de metal no iOS 10:
 
-- os aplicativos e jogos 3D agora podem usar o mosaico para renderizar com eficiência cenas e geometria complexas por meio da GPU.
+- os aplicativos e jogos 3D agora podem usar o _mosaico_ para renderizar com eficiência cenas e geometria complexas por meio da GPU.
 - Forneça um controle refinado de alocação de recursos para otimizar o desempenho de aplicativos baseados em metal usando heaps de recursos e destinos de renderização sem memória.
 - Use a especialização de função para criar uma coleção altamente otimizada de funções de combinação de material e leve para uma cena.
 

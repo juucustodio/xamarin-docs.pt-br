@@ -4,15 +4,15 @@ description: Este documento descreve como exibir alertas no Xamarin. iOS usando 
 ms.prod: xamarin
 ms.assetid: 61C671E9-3757-4052-86E4-28640025A34A
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: b8ffeb996783d7a3b1a385265b14f37f36126e8f
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: ec2a35a33682ec7bda2840cfb4bc6b4908fc65b0
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70119057"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292382"
 ---
 # <a name="displaying-alerts-in-xamarinios"></a>Exibindo alertas no Xamarin. iOS
 

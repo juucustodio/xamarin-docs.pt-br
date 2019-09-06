@@ -4,15 +4,15 @@ description: Este documento descreve como usar atalhos do Siri no iOS 12. Ele di
 ms.prod: xamarin
 ms.assetid: 86424F79-3A7D-436E-927D-9A3267DA333B
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 08/08/2018
-ms.openlocfilehash: f0927a6d6d5e3b9db6f203f779fbd50a026ce7e8
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: a2ae80946cb94b6c81b87a88c91cd9bf1706186f
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70226572"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291765"
 ---
 # <a name="siri-shortcuts-in-xamarinios"></a>Atalhos do Siri no Xamarin. iOS
 
@@ -56,7 +56,7 @@ O aplicativo de exemplo demonstra como:
 
 ## <a name="infoplist-and-entitlementsplist"></a>Info. plist e direitos. plist
 
-Antes de se aprofundar no código do chefe de sopa, dê uma olhada em seus arquivos **info. plist** e intitulados **. plist** .
+Antes de se aprofundar no código do chefe de sopa, dê uma olhada em seus arquivos **info. plist** e **intitulados. plist** .
 
 ### <a name="infoplist"></a>Info.plist
 
@@ -309,13 +309,13 @@ Observe que o projeto **SoupChef** contém uma referência a **OrderSoupIntentBi
 
 ### <a name="adding-the-intentdefinition-file-to-your-solution"></a>Adicionando o arquivo. intentdefinition à sua solução
 
-C# Na solução **SoupChef** , o projeto **SoupKit** contém o código compartilhado entre o aplicativo e suas extensões. O **arquivo retenções. intentdefinition** foi colocado no diretório **base. lproj** de **SoupKit**e tem uma **ação de compilação** de **conteúdo**. O processo de compilação copia esse arquivo para o grupo de aplicativos de sopa do meio-chefe, onde é necessário que o aplicativo funcione corretamente.
+C# Na solução **SoupChef** , o projeto **SoupKit** contém o código compartilhado entre o aplicativo e suas extensões. O arquivo **retenções. intentdefinition** foi colocado no diretório **base. lproj** de **SoupKit**e tem uma **ação de compilação** de **conteúdo**. O processo de compilação copia esse arquivo para o grupo de aplicativos de sopa do meio-chefe, onde é necessário que o aplicativo funcione corretamente.
 
 ### <a name="donating-an-intent"></a>Doação de uma intenção
 
 Para que o Siri sugira um atalho, ele deve primeiro entender quando o atalho é relevante.
 
-Para dar a Siri essa compreensão, a sopa chefe donate é uma intenção de Siri cada vez que o usuário coloca um pedido de sopa. Com base nessa doação – quando foi donate, em que foi donate, os parâmetros que ele contém – Siri aprende quando sugerir o atalho no futuro.
+Para dar a Siri essa compreensão, a sopa chefe _donate_ é uma intenção de Siri cada vez que o usuário coloca um pedido de sopa. Com base nessa doação – quando foi donate, em que foi donate, os parâmetros que ele contém – Siri aprende quando sugerir o atalho no futuro.
 
 **SoupChef** usa a `SoupOrderDataManager` classe para inserir doações.
 Quando chamado para colocar uma ordem de sopa para um usuário, `PlaceOrder` o método, por [`DonateInteraction`](xref:Intents.INInteraction.DonateInteraction*)sua vez, chama:

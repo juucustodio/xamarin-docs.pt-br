@@ -3,15 +3,15 @@ title: Etapa 1. Registrar um aplicativo para usar Azure Active Directory
 description: Este documento descreve como registrar um aplicativo do Azure com o Azure Active Directory para que ele possa ser acessado com segurança por clientes móveis.
 ms.prod: xamarin
 ms.assetid: 0B17991A-4573-4F6C-9E86-D4B9D1A47E4D
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/23/2017
-ms.openlocfilehash: 732c1ee241b39a4bb1422b8c27820631bf8c6b0c
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 2811297e24aac726ae3c91e5354675499d4b9ddb
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70199055"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290085"
 ---
 # <a name="step-1-register-an-app-to-use-azure-active-directory"></a>Etapa 1. Registrar um aplicativo para usar Azure Active Directory
 
@@ -30,7 +30,7 @@ ms.locfileid: "70199055"
 
    ![](register-images/03.-app-name.jpg "Certifique-se de selecionar aplicativo cliente nativo como o tipo de aplicativo")
 
-5. Na tela final, forneça um*URI* de redirecionamento * que seja exclusivo para seu aplicativo, pois ele retornará a esse URI quando a autenticação for concluída.
+5. Na tela final, forneça um URI de*redirecionamento* * que seja exclusivo para seu aplicativo, pois ele retornará a esse URI quando a autenticação for concluída.
 
    ![](register-images/04.-app-redirect.jpg "Na tela final, forneça um URI de redirecionamento que seja exclusivo para seu aplicativo, pois ele retornará a esse URI quando a autenticação for concluída")
 

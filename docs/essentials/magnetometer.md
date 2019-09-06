@@ -5,12 +5,12 @@ ms.assetid: 64DD0D41-03E2-40DD-9EC8-101CA0ED852B
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 11/04/2018
-ms.openlocfilehash: bfc4916c40b47b715357692308d6b5dfa9db57bf
-ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
-ms.translationtype: HT
+ms.openlocfilehash: 7682afd26bc09e467c5badbea25c9d478c7bb842
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52898710"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70226803"
 ---
 # <a name="xamarinessentials-magnetometer"></a>Xamarin.Essentials: Magnetômetro
 
@@ -71,7 +71,7 @@ public class MagnetometerTest
 }
 ```
 
-Todos os dados são retornados em µ (microteslas).
+Todos os dados são retornados em μT (microteslas).
 
 [!include[](~/essentials/includes/sensor-speed.md)]
 

@@ -3,19 +3,19 @@ title: Gerenciamento de contas da Apple
 description: Este documento descreve como usar os recursos de gerenciamento de conta da Apple no Visual Studio para Mac e no Visual Studio 2019.
 ms.prod: xamarin
 ms.assetid: 71388B83-699B-4E42-8CBF-8557A4A3CABF
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 05/06/2018
-ms.openlocfilehash: bb51550518c723a72a29637ad8972cb61c687c6b
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 9629d775b45951279178dffa3600e7cd5073dd38
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70118970"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290624"
 ---
 # <a name="apple-account-management"></a>Gerenciamento de contas da Apple
 
-A interface de gerenciamento de conta da Apple fornece uma maneira de exibir todas as equipes de desenvolvimento associadas a uma ID da Apple. Ele também permite que você exiba mais detalhes sobre cada equipe, exibindo uma lista de identidades de _assinatura_ e _perfis de provisionamento_ que estão instalados em seu computador.
+A interface de gerenciamento de conta da Apple fornece uma maneira de exibir todas as equipes de desenvolvimento associadas a uma ID da Apple. Ele também permite que você exiba mais detalhes sobre cada equipe, exibindo uma lista de _identidades de assinatura_ e _perfis de provisionamento_ que estão instalados em seu computador.
 
 A autenticação da sua ID da Apple é executada na linha de comando com [Fastlane](https://fastlane.tools/). o Fastlane deve ser instalado em seu computador para que você seja autenticado com êxito. Mais informações sobre o Fastlane e como instalá-lo são detalhadas nos guias do [Fastlane](~/ios/deploy-test/provisioning/fastlane/index.md) .
 

@@ -4,15 +4,15 @@ description: Este documento descreve as atualizações do core ML disponíveis c
 ms.prod: xamarin
 ms.assetid: 408E752C-2C78-4B20-8B43-A6B89B7E6D1B
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 08/15/2018
-ms.openlocfilehash: 4fc72e855101f110310a46145c577b272a647ac3
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 7e22a095a51c2dca749cb1b17807a061d066d0c4
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68645711"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290298"
 ---
 # <a name="core-ml-2-in-xamarinios"></a>Principal ML 2 no Xamarin. iOS
 

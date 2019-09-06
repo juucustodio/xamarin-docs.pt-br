@@ -3,15 +3,15 @@ title: Criador de perfil do Xamarin
 description: Este guia explora os principais recursos do Xamarin Profiler. Ele examina os profileres, a criação de perfil e quando eles devem ser usados e em um fluxo de trabalho padrão para a criação de perfil de aplicativos Xamarin.
 ms.prod: xamarin
 ms.assetid: 3247fcee-6acc-470d-ab87-c1c511d67363
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 06/03/2018
-ms.openlocfilehash: b62c8453049a1e014cd75cbee562c8f1a2c16c31
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: ca26edc0311de2028af529dc43ea1ffde2383cf4
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227889"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70283660"
 ---
 # <a name="xamarin-profiler"></a>Criador de perfil do Xamarin
 
@@ -19,7 +19,7 @@ _Este guia explora os principais recursos do Xamarin Profiler. Ele examina os pr
 
 O sucesso de um aplicativo depende da experiência do usuário final. Como desenvolvedor, você pode ter implementado alguns recursos realmente impressionantes em seu aplicativo, mas se o aplicativo estiver lento ou cheio de falhas, o usuário provavelmente se livrará dele.
 
-Historicamente, o mono apresentou um criador de perfil de linha de comando poderoso para coletar informações sobre programas em execução no tempo de execução mono chamado de [log](https://www.mono-project.com/docs/debug+profile/profile/profiler/)Profiler mono. O Xamarin Profiler uma interface gráfica para o criador de perfil de log do mono e dá suporte à criação de perfil de aplicativos Android, iOS, tvOS e Mac em aplicativos Mac e Android, iOS e tvOS no Windows.
+Historicamente, o mono apresentou um criador de perfil de linha de comando poderoso para coletar informações sobre programas em execução no tempo de execução mono chamado de [log Profiler](https://www.mono-project.com/docs/debug+profile/profile/profiler/)mono. O Xamarin Profiler uma interface gráfica para o criador de perfil de log do mono e dá suporte à criação de perfil de aplicativos Android, iOS, tvOS e Mac em aplicativos Mac e Android, iOS e tvOS no Windows.
 
 O Xamarin Profiler tem um número de instrumentos disponíveis para criação de perfil — alocações, ciclos e criador de perfil de tempo. Este guia explora o que esses instrumentos medem e como eles analisam seu aplicativo e esclarecem o significado dos dados apresentados em cada tela.
 
@@ -57,7 +57,7 @@ Atualmente, o Xamarin Profiler pode ser usado para testar aplicativos Xamarin. i
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-Atualmente, o Xamarin Profiler pode ser usado para testar aplicativos Xamarin. Android no Windows (por meio do Visual Studio e Visual Studio para Mac). O criador de perfil é um processo separado do IDE e, assim, além de iniciar do Visual Studio, ele pode ser usado como um aplicativo autônomo para examinar. exe e `.mlpd` os arquivos que foram produzidos no log profiler do [mono](https://www.mono-project.com/docs/debug+profile/profile/profiler/).
+Atualmente, o Xamarin Profiler pode ser usado para testar aplicativos Xamarin. Android no Windows (por meio do Visual Studio e Visual Studio para Mac). O criador de perfil é um processo separado do IDE e, assim, além de iniciar do Visual Studio, ele pode ser usado como um aplicativo autônomo para examinar. exe e `.mlpd` os arquivos que foram produzidos no [log profiler do mono](https://www.mono-project.com/docs/debug+profile/profile/profiler/).
 
 -----
 
@@ -194,7 +194,7 @@ O Xamarin Profiler é composto de cinco seções, conforme ilustrado abaixo:
 
 - **Barra de ferramentas** – localizada na parte superior do criador de perfil, isso oferece opções para iniciar/parar a criação de perfil, selecionar um processo de destino, exibir o tempo de execução do aplicativo e selecionar as exibições divididas que compõem o aplicativo Profiler.
 - **Lista de instrumentos** – lista todos os instrumentos carregados para a sessão de criação de perfil.
-- **Gráfico** de plotagem – esses gráficos se relacionam horizontalmente aos instrumentos relevantes na lista de instrumentos. Um controle deslizante (mostrado abaixo do time Profiler) pode ser usado para alterar a escala.
+- **Gráfico de plotagem** – esses gráficos se relacionam horizontalmente aos instrumentos relevantes na lista de instrumentos. Um controle deslizante (mostrado abaixo do time Profiler) pode ser usado para alterar a escala.
 - **Área de detalhes do instrumento** -contém dados exibidos pela exibição selecionada do instrumento atual. Veremos essas exibições mais detalhadamente na seção abaixo.
 - **Exibição de Inspetor** – contém seções que podem ser selecionadas pelo controle segmentado. As seções são dependentes do instrumento selecionado e incluem: Definições de configuração, estatísticas, informações de rastreamento de pilha e caminho para raízes.
 

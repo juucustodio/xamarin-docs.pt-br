@@ -4,15 +4,15 @@ description: Este documento descreve como a estrutura AVFoundation do iOS pode s
 ms.prod: xamarin
 ms.assetid: 56340225-5F3C-4BFC-9A79-61496D7FE5B5
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: 6f60b52d4fd29aacf319f9de94051e28c9876e33
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 6b7868475426b7e8536030ce9e35812db828b175
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70226702"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70288701"
 ---
 # <a name="manual-camera-controls-in-xamarinios"></a>Controles de câmera manuais no Xamarin. iOS
 
@@ -516,7 +516,7 @@ Antes de discutir os detalhes de controlar a exposição em um aplicativo IOS 8.
 
 Os três elementos básicos que vêm juntos para controlar a exposição são:
 
-- **Velocidade** do obturador – esse é o período de tempo que o obturador está aberto para permitir a luz do sensor de câmera. Quanto menor o tempo que o obturador está aberto, a menor luz é deixá-in e a imagem é mais nítida (menos desfoque de movimento). Quanto mais longo o obturador estiver aberto, mais claro será deixar em e quanto mais desfoque de movimento ocorrer.
+- **Velocidade do obturador** – esse é o período de tempo que o obturador está aberto para permitir a luz do sensor de câmera. Quanto menor o tempo que o obturador está aberto, a menor luz é deixá-in e a imagem é mais nítida (menos desfoque de movimento). Quanto mais longo o obturador estiver aberto, mais claro será deixar em e quanto mais desfoque de movimento ocorrer.
 - **Mapeamento ISO** – esse é um termo emprestado de fotografia de filmes e refere-se à sensibilidade das químicas no filme à luz. Valores ISO baixos em filme têm uma reprodução de cor menos granular e mais fina; valores ISO baixos em sensores digitais têm menos ruído de sensor, mas menos brilho. Quanto maior o valor ISO, mais brilhante a imagem, mas com mais ruído de sensor. "ISO" em um sensor digital é uma medida de [lucro eletrônico](https://en.wikipedia.org/wiki/Gain), não um recurso físico.
 - **Abertura de lentes** – esse é o tamanho da abertura da lente. Em todos os dispositivos iOS, a abertura da lente é fixa, portanto, os dois únicos valores que podem ser usados para ajustar a exposição são velocidade do obturador e ISO.
 

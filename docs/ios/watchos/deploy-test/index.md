@@ -4,15 +4,15 @@ description: Este documento descreve como implantar e testar aplicativos watchOS
 ms.prod: xamarin
 ms.assetid: 98257399-E9B3-4BAB-9204-0E89117DEA6D
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: d950ceb18bd13378ced06ec7257300fc5bf4504b
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: af6d32808e2847c99c4f8a2d90e7dc2d3955ae03
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70120175"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70284669"
 ---
 # <a name="deploying-and-testing-watchos-apps-with-xamarin"></a>Implantando e testando aplicativos watchOS com o Xamarin
 
@@ -28,7 +28,7 @@ Se você estiver implantando em uma inspeção de teste ou carregando para a loj
 - Em sua solução:
 
   - Verifique se as [IDs de pacote e as referências de projeto](~/ios/watchos/get-started/installation.md) estão definidas.
-  - Verifique se os ícones estão configurados [corretamente](~/ios/watchos/app-fundamentals/icons.md).
+  - Verifique se os ícones estão [configurados corretamente](~/ios/watchos/app-fundamentals/icons.md).
   - Verifique se os números de versão do pacote correspondem em todos os projetos.
   - Configure os **direitos. plist** para grupos de aplicativos (se necessário).
 
@@ -74,7 +74,7 @@ Você pode usar um grupo de aplicativos para compartilhar dados entre seu aplica
 
 - Configurado o **grupo de aplicativos** na seção certificados do portal do desenvolvedor Apple **, identificadores & perfis** .
 
-- Os **grupos de aplicativos** habilitados (e forneceram a ID do **grupo de aplicativos**) no aplicativo Ios e a ID do **aplicativo** da extensão de inspeção e os **direitos. plist**.
+- Os **grupos de aplicativos** habilitados (e forneceram a **ID do grupo de aplicativos**) no aplicativo Ios e a ID do **aplicativo** da extensão de inspeção e os **direitos. plist**.
 
 ### <a name="certificates-identifiers--profiles"></a>Certificados, identificadores & perfis
 
@@ -90,7 +90,7 @@ Depois que o grupo é criado, ele pode ser referenciado em sua configuração de
 
 ![Configurações disponíveis](images/appgroups-sml.png)
 
-Não habilite grupos de aplicativos na ID do aplicativo Apple Watch. Não é necessário habilitá-lo no próprio relógio.
+Não **habilite** grupos de aplicativos na ID do aplicativo Apple Watch. Não é necessário habilitá-lo no próprio relógio.
 
 ### <a name="entitlementsplist"></a>Entitlements.plist
 
@@ -102,7 +102,7 @@ Clique duas vezes para editar o arquivo **. plist de direitos** nesses projetos:
 
 .![O editor de direitos. plist](images/entitlements-plist-sml.png)
 
-Não habilite direitos no projeto de aplicativo Watch. Não é necessário habilitá-lo no próprio relógio.
+Não **habilite** direitos no projeto de aplicativo Watch. Não é necessário habilitá-lo no próprio relógio.
 
 ## <a name="related-links"></a>Links relacionados
 

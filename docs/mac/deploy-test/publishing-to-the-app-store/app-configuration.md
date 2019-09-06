@@ -4,15 +4,15 @@ description: Este documento descreve como configurar um aplicativo Xamarin.Mac p
 ms.prod: xamarin
 ms.assetid: fea66a34-1581-4cd6-b714-3fbff215a542
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 04/12/2017
-ms.openlocfilehash: 1f88a429d58a09b54bb2383dbb77a3768ce64152
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: HT
+ms.openlocfilehash: 6134cbfabb342750ec68b676dd06388f4fb8f035
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50115088"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70283025"
 ---
 # <a name="mac-app-configuration"></a>Configuração do aplicativo Mac
 
@@ -20,7 +20,7 @@ ms.locfileid: "50115088"
 
 Clique com botão direito do mouse no projeto do aplicativo Mac no Visual Studio para Mac e escolha **Opções**.
 
-### <a name="application-settings"></a>Configurações de aplicativo
+### <a name="application-settings"></a>Configurações do aplicativo
 
 Para alterar as configurações de aplicativo de um aplicativo Xamarin.Mac, clique duas vezes no arquivo **Info.plist** no **Painel de Soluções**:
 

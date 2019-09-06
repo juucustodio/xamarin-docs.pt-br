@@ -4,15 +4,15 @@ description: Este artigo aborda várias dicas, recursos e técnicas que um desen
 ms.prod: xamarin
 ms.assetid: F20EE590-246E-40EB-B309-D9D8C090C7F1
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 914afe63136323e3506bb40d4759869f97fb264c
-ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
+ms.openlocfilehash: 04bcf1012800ef2883fef80580bcec869bd8e5a3
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70065690"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291478"
 ---
 # <a name="building-modern-macos-apps"></a>Compilando aplicativos macOS modernos
 
@@ -756,7 +756,7 @@ Usando o `ContentInsets` desenvolvedor, é possível ajustar o início da exibi�
 
 A Apple incluiu várias tecnologias no Xcode que permitem ao desenvolvedor criar facilmente um aplicativo macOS internacionalizado. Agora, o Xcode permite que o desenvolvedor separe o texto voltado para o usuário do design da interface do usuário do aplicativo em seus arquivos de storyboard e fornece ferramentas para manter essa separação se a interface do usuário for alterada.
 
-Para obter mais informações, consulte o guia de internacionalização [e localização](https://developer.apple.com/library/content/documentation/MacOSX/Conceptual/BPInternational/InternationalizingYourUserInterface/InternationalizingYourUserInterface.html)da Apple.
+Para obter mais informações, consulte o [Guia de internacionalização e localização](https://developer.apple.com/library/content/documentation/MacOSX/Conceptual/BPInternational/InternationalizingYourUserInterface/InternationalizingYourUserInterface.html)da Apple.
 
 <a name="Implementing-Base-Internationalization" />
 
@@ -781,9 +781,9 @@ A Apple sugere o seguinte:
 - **Remover restrições de largura fixa** -todas as exibições baseadas em texto devem ter permissão para redimensionar com base em seu conteúdo. A exibição de largura fixa pode cortar seu conteúdo em idiomas específicos.
 - **Usar tamanhos de conteúdo intrínsecos** -por padrão, as exibições baseadas em texto serão dimensionadas automaticamente para ajustar seu conteúdo. Para exibição baseada em texto que não está dimensionando corretamente, selecione-as no interface Builder do Xcode e escolha **Editar** > **tamanho para ajustar o conteúdo**.
 - **Aplicar atributos à esquerda e à direita** – como a direção do texto pode ser alterada com base no idioma do usuário, use os `Leading` atributos `Trailing` novo e de restrição, em oposição `Right` aos `Left` existentes e atributos. `Leading`e `Trailing` será ajustado automaticamente com base na direção dos idiomas.
-- **Fixar exibições** nas exibições adjacentes – isso permite que as exibições sejam reposicionadas e redimensionadas à medida que as exibições relacionadas a elas são alteradas em resposta ao idioma selecionado.
+- **Fixar exibições nas exibições adjacentes** – isso permite que as exibições sejam reposicionadas e redimensionadas à medida que as exibições relacionadas a elas são alteradas em resposta ao idioma selecionado.
 - **Não defina os tamanhos mínimo e/ou máximo do Windows** – permita que o Windows altere o tamanho conforme o idioma selecionado redimensiona suas áreas de conteúdo.
-- **Alterações no layout de teste constantemente** -durante o desenvolvimento no aplicativo devem ser testadas constantemente em idiomas diferentes. Consulte a documentação de teste da Apple em [seu aplicativo](https://developer.apple.com/library/content/documentation/MacOSX/Conceptual/BPInternational/TestingYourInternationalApp/TestingYourInternationalApp.html#//apple_ref/doc/uid/10000171i-CH7-SW1) internacionalizado para obter mais detalhes.
+- **Alterações no layout de teste constantemente** -durante o desenvolvimento no aplicativo devem ser testadas constantemente em idiomas diferentes. Consulte a documentação de teste da Apple em [seu aplicativo internacionalizado](https://developer.apple.com/library/content/documentation/MacOSX/Conceptual/BPInternational/TestingYourInternationalApp/TestingYourInternationalApp.html#//apple_ref/doc/uid/10000171i-CH7-SW1) para obter mais detalhes.
 - **Usar NSStackViews para fixar exibições em conjunto**  -  `NSStackViews` permite que seu conteúdo seja deslocado e cresça de maneiras previsíveis e o tamanho da alteração de conteúdo com base no idioma selecionado.
 
 <a name="Localizing-in-Xcodes-Interface-Builder" />

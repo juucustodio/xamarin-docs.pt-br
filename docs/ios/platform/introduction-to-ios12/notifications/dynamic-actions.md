@@ -4,15 +4,15 @@ description: Com o iOS 12, uma extensão de conteúdo de notificação pode adic
 ms.prod: xamarin
 ms.assetid: 6B34AD78-5117-42D0-B6E7-C8B4B453EAFF
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 09/04/2018
-ms.openlocfilehash: 1a4380e321035b8948f9b40bdce052161025d5f3
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 5be233e9b07069dc7c9842a3ddd00e7d46d9c22f
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68652582"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291282"
 ---
 # <a name="dynamic-notification-action-buttons-in-xamarinios"></a>Botões de ação de notificação dinâmica no Xamarin. iOS
 
@@ -141,7 +141,7 @@ No aplicativo de exemplo, o controlador de exibição da extensão de conteúdo 
 > - `DismissAndForwardAction`indica que a interface de notificação deve ser ignorada e que o aplicativo principal também deve lidar com o toque do botão.
 > - `DoNotDismiss`indica que a interface de notificação não deve ser ignorada e que o aplicativo principal não precisa manipular o toque do botão.
 
-O método da `DidReceiveNotificationResponse` extensão de conteúdo determina qual botão de ação foi tocado, gira a imagem na interface da notificação e mostra ou oculta um botão de ação de redefinição:
+O método da `DidReceiveNotificationResponse` extensão de conteúdo determina qual botão de ação foi tocado, gira a imagem na interface da notificação e mostra ou oculta um botão de ação de **redefinição** :
 
 ```csharp
 [Export("didReceiveNotificationResponse:completionHandler:")]

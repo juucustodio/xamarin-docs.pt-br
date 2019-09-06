@@ -4,15 +4,15 @@ description: Este documento explora as alterações na loja de aplicativos no iO
 ms.prod: xamarin
 ms.assetid: 4A7A03FD-B4F2-4969-8676-A17260730FD6
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 09/13/2016
-ms.openlocfilehash: 4a66cd4979e244e6b0a51e7a7a981dcd64446589
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: fa44ba260a62a6e0bd036c08c62371734b38d82d
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70225886"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70286580"
 ---
 # <a name="app-store-changes-in-ios-11"></a>Alterações na loja de aplicativos no iOS 11
 
@@ -37,7 +37,7 @@ O estreitamento do aplicativo garante que esse catálogo de ativos adicional nã
 
 ## <a name="in-app-purchases-promoted-in-the-app-store"></a>Compras no aplicativo promovidas na loja de aplicativos
 
-A Apple fez compras no aplicativo mais detectáveis na loja de aplicativos. Agora você pode adicionar até 20 compras de aplicativo promovidas no aplicativo que agora podem ser encontradas na página de aplicativos, na página do produto do seu aplicativo ou pesquisando.
+A Apple fez compras no aplicativo mais detectáveis na loja de aplicativos. Agora você pode adicionar até 20 compras de aplicativo _promovidas_ no aplicativo que agora podem ser encontradas na página de aplicativos, na página do produto do seu aplicativo ou pesquisando.
 
 Para que suas compras no aplicativo sejam exibidas na loja de aplicativos, você deve incluir os seguintes dados:
 
@@ -53,7 +53,7 @@ Para disponibilizar suas compras no aplicativo para promover, abra seu aplicativ
 
 Você também precisa adicionar o `ShouldAddStorePayment` método `SKPaymentTransactionObserver` ao protocolo em seu aplicativo.
 
-Para obter mais informações sobre promoções de compra no aplicativo, consulte a página promovendo [compras no aplicativo](https://developer.apple.com/app-store/promoting-in-app-purchases/) da Apple.
+Para obter mais informações sobre promoções de compra no aplicativo, consulte [a página promovendo compras no aplicativo](https://developer.apple.com/app-store/promoting-in-app-purchases/) da Apple.
 
 ## <a name="redesigned-product-page"></a>Página do produto reprojetado
 

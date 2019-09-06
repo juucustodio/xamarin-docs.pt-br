@@ -1,38 +1,38 @@
 ---
-title: Etapa 2. Configurar o acesso ao serviço de aplicativo móvel
-description: Este documento descreve como fornecer um aplicativo Xamarin com acesso a um aplicativo do Azure protegido pelo Azure Active Directory.
+title: Etapa 2. Configurar o acesso ao serviço para o aplicativo móvel
+description: Este documento descreve como fornecer um aplicativo Xamarin com acesso a um aplicativo do Azure protegido por Azure Active Directory.
 ms.prod: xamarin
 ms.assetid: 8A14A457-F72E-4B08-B4B6-801F7619F893
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/23/2017
-ms.openlocfilehash: e0015316b7be3462982ee0959862250c0c27dc74
-ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
+ms.openlocfilehash: 1f0cdec005dc210600977d5c8f5606cff6570989
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67864653"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290020"
 ---
-# <a name="step-2-configure-service-access-for-mobile-application"></a>Etapa 2. Configurar o acesso ao serviço de aplicativo móvel
+# <a name="step-2-configure-service-access-for-mobile-application"></a>Etapa 2. Configurar o acesso ao serviço para o aplicativo móvel
 
-Sempre que qualquer recurso, por exemplo, o aplicativo web, o serviço web, etc. precisa ser protegido pelo Azure Active Directory, ele precisa ser registrado. Todos os serviços ou aplicativos seguros que podem ser vistos sob **aplicativos** guia. Aqui você pode selecionar o aplicativo que precisa ser acessado de aplicativos móveis e conceder acesso a ele.
+Sempre que qualquer recurso, por exemplo, aplicativo Web, serviço Web, etc. precisa ser protegido pelo Azure Active Directory, ele precisa ser registrado. Todos os aplicativos ou serviços seguros podem ser vistos na guia **aplicativos** . Aqui você pode selecionar o aplicativo que precisa ser acessado do aplicativo móvel e conceder acesso a ele.
 
-1. Sobre o **configurar** guia, localize **permissões para outros aplicativos** seção:
+1. Na guia **Configurar** , localize **a seção permissões para outros aplicativos** :
 
    ![](configure-images/2.1-configure.png "Na guia Configurar, localize a seção permissões para outros aplicativos")
 
-2. Clique em **Adicionar aplicativo** botão. Na próxima tela pop-up, você verá a lista de todos os aplicativos que são protegidos pelo Azure Active Directory. Selecione os aplicativos que precisam ser acessados a partir do aplicativo móvel.
+2. Clique no botão **Adicionar aplicativo** . Na próxima tela pop-up, você deverá ver a lista de todos os aplicativos que são protegidos pelo Azure Active Directory. Selecione os aplicativos que precisam ser acessados do aplicativo móvel.
 
-   ![](configure-images/2.2-add-application.png "Selecione os aplicativos que precisam ser acessados a partir do aplicativo móvel")
+   ![](configure-images/2.2-add-application.png "Selecione os aplicativos que precisam ser acessados do aplicativo móvel")
 
-3. Depois de selecionar o aplicativo, selecione novamente o aplicativo recentemente adicionado no **permissões para outros aplicativos** seção e conceder os direitos apropriados.
+3. Depois de selecionar o aplicativo, mais uma vez, selecione o aplicativo recém-adicionado na seção **permissões para outros aplicativos** e forneça os direitos apropriados.
 
-   ![](configure-images/2.3-permissions.png "Depois de selecionar o aplicativo, mais uma vez selecione o aplicativo recentemente adicionado na seção permissões para outros aplicativos e conceder os direitos apropriados")
+   ![](configure-images/2.3-permissions.png "Depois de selecionar o aplicativo, mais uma vez, selecione o aplicativo recém-adicionado na seção permissões para outros aplicativos e dê direitos apropriados")
 
-4. Por fim, **salvar** a configuração. Esses serviços agora devem estar disponíveis em aplicativos móveis!
+4. Por fim, **salve** a configuração. Esses serviços agora devem estar disponíveis em aplicativos móveis!
 
 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Exemplo de Microsoft NativeClient](https://github.com/AzureADSamples/NativeClient-MultiTarget-DotNet)
+- [Exemplo do Microsoft NativeClient](https://github.com/AzureADSamples/NativeClient-MultiTarget-DotNet)

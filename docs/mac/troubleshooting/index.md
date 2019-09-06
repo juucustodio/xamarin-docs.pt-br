@@ -1,29 +1,29 @@
 ---
-title: Solução de problemas do xamarin. Mac
-description: Este documento leva a um guia que descreve dicas de solução de problemas gerais de desenvolvimento do xamarin. Mac e outra guia que lista os erros gerados por mmp, a ferramenta que empacota os assemblies em um aplicativo do Mac.
+title: Solução de problemas do Xamarin. Mac
+description: Este documento contém links para um guia que descreve as dicas de solução de problemas gerais para o desenvolvimento do Xamarin. Mac e outro guia que lista os erros gerados pelo MMP, a ferramenta que empacota os assemblies em um aplicativo Mac.
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: EB81B998-6931-4CD3-8BB0-4679D5B5F39A
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/27/2018
-ms.openlocfilehash: e2868828b7c4fce29413d136db6e9b02b74c10ee
-ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
+ms.openlocfilehash: 341689e53d6654cb68316c17e2f263062cfc1fd5
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67865812"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292690"
 ---
-# <a name="xamarinmac-troubleshooting"></a>Solução de problemas do xamarin. Mac 
+# <a name="xamarinmac-troubleshooting"></a>Solução de problemas do Xamarin. Mac 
 
-_Documentos nesta seção abordam recursos específicos à solução de problemas com o xamarin. Mac._
+_Os documentos nesta seção abrangem recursos específicos para a solução de problemas com o Xamarin. Mac._
 
 ## <a name="troubleshooting-tipsmactroubleshootingtroubleshootingmd"></a>[Dicas de solução de problemas](~/mac/troubleshooting/troubleshooting.md)
 
 Dicas e truques de solução de problemas.
 
-## <a name="errors-messages-mmpmactroubleshootingmmp-errorsmd"></a>[Mensagens de erro (mmp)](~/mac/troubleshooting/mmp-errors.md)
+## <a name="errors-messages-mmpmactroubleshootingmmp-errorsmd"></a>[Mensagens de erro (MMP)](~/mac/troubleshooting/mmp-errors.md)
 
-Um erros guia de referência, que mostra os erros mais comuns que podem ocorrer ao criar aplicativos xamarin. Mac.
+Um guia de referência de erros, mostrando os erros mais comuns que você pode enfrentar ao criar aplicativos Xamarin. Mac.
 

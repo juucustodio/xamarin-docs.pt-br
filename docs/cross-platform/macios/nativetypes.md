@@ -3,15 +3,15 @@ title: Tipos nativos para iOS e macOS
 description: Este documento descreve como o API Unificada do Xamarin mapeia tipos .NET para tipos nativos de 32 bits e 64 bits, conforme necessário com base na arquitetura de destino da compilação.
 ms.prod: xamarin
 ms.assetid: B5237770-0FC3-4B01-9E22-766B35C9A952
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 01/25/2016
-ms.openlocfilehash: 6b6a7b8bb2efdd099d7fde6bb5397e6330258bcc
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: f370bc816fa72f94af8dae32ac295448f858dbb8
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70199394"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290802"
 ---
 # <a name="native-types-for-ios-and-macos"></a>Tipos nativos para iOS e macOS
 
@@ -57,7 +57,7 @@ Você deve usar conversões explícitas de `long` `ulong` e `double` para `nint`
 
 Os tipos de dados ponto, tamanho e retângulo que são usados com CoreGraphics usam 32 ou 64 bits, dependendo do dispositivo em que estão sendo executados.  Quando vinculamos originalmente as APIs de iOS e Mac, usamos as estruturas de dados existentes que ocorreram para corresponder os tamanhos da plataforma de host ( `System.Drawing`os tipos de dados no).
 
-Ao mudar paraunificado, você precisará substituir instâncias `System.Drawing` do por `CoreGraphics` suas contrapartes, conforme mostrado na tabela a seguir:
+Ao mudar para **unificado**, você precisará substituir instâncias `System.Drawing` do por `CoreGraphics` suas contrapartes, conforme mostrado na tabela a seguir:
 
 |Tipo antigo no sistema. Drawing|Novo tipo de dados CoreGraphics|Descrição|
 |--- |--- |--- |

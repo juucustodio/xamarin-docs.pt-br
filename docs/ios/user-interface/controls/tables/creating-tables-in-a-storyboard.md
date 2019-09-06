@@ -4,15 +4,15 @@ description: Nas seções anteriores, exploramos o desenvolvimento usando tabela
 ms.prod: xamarin
 ms.assetid: D8416E10-481A-0B6E-4081-B146E6358004
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: 46729df70d08b8d6d1b5b953d74f5619a5dc5858
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 58e57f9406642a3bb0ff108bffa89d77c3f2cebb
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528678"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291379"
 ---
 # <a name="working-with-tables-in-the-ios-designer"></a>Como trabalhar com tabelas no iOS Designer
 
@@ -131,7 +131,7 @@ Selecione o modo de exibição de tabela e abra o **painel de propriedades**. At
 
 - **Seções**: _2_ 
 - **Estilo**: _Agrupados_
-- Separador: _None_
+- **Separador**: _None_
 - **Seleção**: _Nenhuma seleção_
 
 Selecione a seção superior e, em **propriedades > seção exibição de tabela** , altere as **linhas** para _3_, conforme ilustrado abaixo:

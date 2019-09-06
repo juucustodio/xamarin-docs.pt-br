@@ -8,12 +8,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/27/2018
-ms.openlocfilehash: 6f5a5512cef6ad870f60bca397404df450775de3
-ms.sourcegitcommit: ec99e64ee346adc3c338db13e93100bafee75460
-ms.translationtype: HT
+ms.openlocfilehash: 230c72539388028aaf8f05d200d8779105102644
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56331877"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70225628"
 ---
 # <a name="hardware-acceleration-for-emulator-performance-hyper-v--haxm"></a>Aceleração de hardware para o desempenho do emulador (Hyper-V e HAXM)
 
@@ -36,9 +36,9 @@ As tecnologias de virtualização a seguir estão disponíveis para acelerar o A
 
 Para atingir o desempenho ideal, é recomendável que você use o Hyper-V para acelerar o Android Emulator. Se o Hyper-V não estiver disponível em seu computador, o HAXM poderá ser usado. A aceleração de hardware será usada automaticamente pelo Android Emulator se os seguintes critérios forem atendidos:
 
-- A aceleração de hardware está disponível e habilitada no computador de desenvolvimento.
+- A aceleração de hardware está disponível e habilitada no seu computador de desenvolvimento.
 
-- O emulador está executando uma imagem do sistema criada para um dispositivo virtual com base em **x86**.
+- O emulador está executando uma imagem do sistema criada para um dispositivo virtual baseado em **x86**.
 
 > [!IMPORTANT]
 > Não é possível executar um emulador acelerado por VM dentro de outra VM, como uma VM hospedada por VirtualBox, VMWare ou Docker. Execute o Android Emulator [diretamente no hardware do sistema](https://developer.android.com/studio/run/emulator-acceleration.html#extensions).
@@ -58,23 +58,23 @@ O Hyper-V é executado na Plataforma de Hipervisor do Windows. Para usar o Andro
 
 - O hardware do computador deve atender aos seguintes requisitos:
 
-    - Uma CPU Intel ou AMD Ryzen de 64 bits com SLAT (Conversão de Endereços de Segundo Nível).
-    - Suporte de CPU para a extensão do modo de monitor da VM (VT-c em CPUs Intel).
-    - Mínimo de 4 GB de memória.
+  - Uma CPU Intel ou AMD Ryzen de 64 bits com SLAT (Conversão de Endereços de Segundo Nível).
+  - Suporte de CPU para a extensão do modo de monitor da VM (VT-c em CPUs Intel).
+  - Mínimo de 4 GB de memória.
 
 - Na BIOS do computador, os itens a seguir devem estar habilitados:
 
-    - Tecnologia de virtualização (pode ter um rótulo diferente dependendo do fabricante da placa-mãe).
-    - Prevenção de Execução de Dados Baseada em Hardware.
+  - Tecnologia de virtualização (pode ter um rótulo diferente dependendo do fabricante da placa-mãe).
+  - Prevenção de Execução de Dados Baseada em Hardware.
 
-- O computador deve estar atualizado para com a atualização do Windows 10 de abril de 2018 (build 1803) ou posterior. Você pode verificar sua versão do Windows está atualizada executando as seguintes etapas: 
+- O computador deve estar atualizado para com a atualização do Windows 10 de abril de 2018 (build 1803) ou posterior. Você pode verificar sua versão do Windows está atualizada executando as seguintes etapas:
 
-    1. Na caixa de pesquisa do Windows, digite **Sobre**. 
-    2. Selecione **Sobre seu PC** nos resultados da pesquisa. 
-    3. Role a caixa de diálogo **Sobre** para baixo até a seção **Especificações do Windows**. 
-    4. Verifique se a **versão** é, pelo menos, a 1803:
+  1. Na caixa de pesquisa do Windows, digite **Sobre**.
+  2. Selecione **Sobre seu PC** nos resultados da pesquisa.
+  3. Role a caixa de diálogo **Sobre** para baixo até a seção **Especificações do Windows**.
+  4. Verifique se a **versão** é, pelo menos, a 1803:
 
-        [![Especificações do Windows](hardware-acceleration-images/win/01-about-windows-w10-sml.png)](hardware-acceleration-images/win/01-about-windows-w10.png#lightbox)
+      [![Especificações do Windows](hardware-acceleration-images/win/01-about-windows-w10-sml.png)](hardware-acceleration-images/win/01-about-windows-w10.png#lightbox)
 
 Para verificar se o hardware e o software do computador são compatíveis com Hyper-V, abra um prompt de comando e digite o seguinte comando:
 
@@ -159,17 +159,17 @@ As tecnologias de virtualização a seguir estão disponíveis para acelerar o A
 1. **Framework de Hipervisor da Apple**.
    O [Hipervisor](https://developer.apple.com/documentation/hypervisor) é um recurso do macOS 10.10 e de versões posteriores que possibilita executar máquinas virtuais em um Mac.
 
-2. **HAXM (Hardware Accelerated Execution Manager) da Intel**. 
+2. **HAXM (Hardware Accelerated Execution Manager) da Intel**.
    O [HAXM](https://software.intel.com/articles/intel-hardware-accelerated-execution-manager-intel-haxm) é um mecanismo de virtualização para computadores que executam CPUs Intel.
 
 Para atingir o desempenho ideal, é recomendável que você use o Framework de Hipervisor para acelerar o Android Emulator. Se o Framework de Hipervisor não estiver disponível em seu Mac, o HAXM poderá ser usado. A aceleração de hardware será usada automaticamente pelo Android Emulator se os seguintes critérios forem atendidos:
 
 - A aceleração de hardware está disponível e habilitada no computador de desenvolvimento.
 
-- O emulador está executando uma imagem do sistema criada para um dispositivo virtual com base em **x86**.
+- O emulador está executando uma imagem do sistema criada para um dispositivo virtual baseado em **x86**.
 
 > [!IMPORTANT]
-> 
+>
 > Não é possível executar um emulador acelerado por VM dentro de outra VM, como uma VM hospedada por VirtualBox, VMWare ou Docker. Execute o Android Emulator [diretamente no hardware do sistema](https://developer.android.com/studio/run/emulator-acceleration.html#extensions).
 
 Para obter informações sobre lançamento e depuração com o Android Emulator, confira [Depurando no Android Emulator](~/android/deploy-test/debugging/debug-on-emulator.md).

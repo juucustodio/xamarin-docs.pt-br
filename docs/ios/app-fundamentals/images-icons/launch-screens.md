@@ -4,15 +4,15 @@ description: Este artigo explica como criar uma tela de inicialização de aplic
 ms.prod: xamarin
 ms.assetid: 31A489CA-756B-4B9B-B386-4BADF18EDD33
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 05/02/2018
-ms.openlocfilehash: 43c9ee599fe96c107bf10996834d9bcf60847603
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: d0d5452c2b79fb674e473efd50aaf587d64c4544
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70200112"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290245"
 ---
 # <a name="launch-screens-for-xamarinios-apps"></a>Iniciar telas para aplicativos Xamarin. iOS
 
@@ -120,11 +120,11 @@ No iOS 8 (e posterior), o desenvolvedor pode criar um storyboard unificado espec
 
 5. Adicione uma imagem a um catálogo de ativos no projeto para que ele esteja disponível para uso na tela de inicialização:
 
-    - Na **Gerenciador de soluções**, clique com o botão direito do mouse em catálogos de **ativos** e selecione **Adicionar Catálogo de ativos**. Nomeie os novos **ativos**do catálogo de ativos:
+    - Na **Gerenciador de soluções**, clique com o botão direito do mouse em **catálogos de ativos** e selecione **Adicionar Catálogo de ativos**. Nomeie os novos **ativos**do catálogo de ativos:
 
     ![A janela Adicionar novo item, com o catálogo de ativos selecionado](launch-screens-images/launch05.w157.png)
 
-    - Adicione uma nova imagem definida ao catálogo de ativos de **ativos** , conforme descrito na seção [adicionando imagens a um conjunto de imagens do catálogo de ativos](~/ios/app-fundamentals/images-icons/displaying-an-image.md) do guia exibindo [uma imagem](~/ios/app-fundamentals/images-icons/displaying-an-image.md) .
+    - Adicione uma nova imagem definida ao catálogo de ativos de **ativos** , conforme descrito na seção [adicionando imagens a um conjunto de imagens do catálogo de ativos](~/ios/app-fundamentals/images-icons/displaying-an-image.md) do guia [exibindo uma imagem](~/ios/app-fundamentals/images-icons/displaying-an-image.md) .
 
 6. Abra **LaunchScreen. Storyboard** para edição clicando duas vezes nele no **Gerenciador de soluções**.
 
@@ -183,7 +183,7 @@ No iOS 8 (e posterior), o desenvolvedor pode criar um storyboard unificado espec
 > [!NOTE]
 > Um storyboard usado como uma tela de inicialização _deve_ incluir apenas elementos de interface do usuário simples e internos e **não pode** fazer cálculos ou derivar de uma classe personalizada.
 
-Para obter mais informações sobre como criar uma tela de inicialização com um storyboard unificado, consulte a seção [telas de inicialização dinâmica](~/ios/user-interface/storyboards/unified-storyboards.md#dynamic-launch-screens) do guia de [storyboards](~/ios/user-interface/storyboards/unified-storyboards.md) unificados.
+Para obter mais informações sobre como criar uma tela de inicialização com um storyboard unificado, consulte a seção [telas de inicialização dinâmica](~/ios/user-interface/storyboards/unified-storyboards.md#dynamic-launch-screens) do guia de [storyboards unificados](~/ios/user-interface/storyboards/unified-storyboards.md) .
 
 ## <a name="migrating-to-launch-screen-storyboards"></a>Migrando para iniciar storyboards da tela
 

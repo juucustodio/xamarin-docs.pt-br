@@ -4,15 +4,15 @@ description: Este documento descreve o seletor de documentos do iOS e discute co
 ms.prod: xamarin
 ms.assetid: 89539D79-BC6E-4A3E-AEC6-69D9A6CC6818
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 06/05/2017
-ms.openlocfilehash: 6982f02860db2e89f83b4002d6acb5b28bae906b
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 67ee8f1ef7f254eb77cfb186a478993b6fd3847c
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70200369"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70280031"
 ---
 # <a name="document-picker-in-xamarinios"></a>Seletor de documento no Xamarin. iOS
 
@@ -915,7 +915,7 @@ Aqui está um exemplo de como o código acima exibiria um seletor de documento q
 1. O usuário toca no botão de **ação** na parte superior da tela e é solicitado a selecionar um **provedor de documento** na lista de provedores disponíveis:   
  
     [![](document-picker-images/image34.png "Selecione um provedor de documentos na lista de provedores disponíveis")](document-picker-images/image34.png#lightbox)
-1. O **controlador de exibição** do seletor de documentos é exibido para o **provedor de documentos**selecionado:   
+1. O **controlador de exibição do seletor de documentos** é exibido para o **provedor de documentos**selecionado:   
  
     [![](document-picker-images/image35.png "O controlador de exibição do seletor de documento é exibido")](document-picker-images/image35.png#lightbox)
 1. O usuário toca em uma **pasta de documento** para exibir seu conteúdo:   
@@ -1064,7 +1064,7 @@ O usuário pode selecionar um desses locais de armazenamento alternativos no sel
 
 Isso é implementado usando duas extensões diferentes:
 
-- **Extensão** de seletor de documento `UIViewController` – fornece uma subclasse que fornece uma interface gráfica para o usuário escolher um documento de um local de armazenamento alternativo. Essa subclasse será exibida como parte do controlador de exibição do seletor de documento.
+- **Extensão de seletor** de documento `UIViewController` – fornece uma subclasse que fornece uma interface gráfica para o usuário escolher um documento de um local de armazenamento alternativo. Essa subclasse será exibida como parte do controlador de exibição do seletor de documento.
 - **Extensão de fornecimento de arquivo** – essa é uma extensão que não é da interface do usuário que lida com o conteúdo dos arquivos. Essas extensões são fornecidas por meio da coordenação `NSFileCoordinator` de arquivos (). Esse é outro caso importante em que a coordenação de arquivos é necessária.
 
 

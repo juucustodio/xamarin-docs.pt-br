@@ -4,15 +4,15 @@ description: Este documento descreve como trabalhar com ícones e imagens em um 
 ms.prod: xamarin
 ms.assetid: A2DA4347-0563-4C72-A8D7-5B9DE9E28712
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: 4c3739f7d1583966a58ebf102a3d3b2a0a9f93ab
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: f3a0525a42a59edfe08e5b478bf6af801008ef05
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68653203"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70277848"
 ---
 # <a name="working-with-tvos-icons-and-images-in-xamarin"></a>Trabalhando com ícones e imagens do tvOS no Xamarin
 
@@ -108,7 +108,7 @@ Sempre que possível, você sempre deve usar os `UIKit` controles internos para 
 o tvOS funciona com imagens em camadas nos seguintes formatos:
 
 - **Arquivos de carros** – este é um formato de catálogo de ativos proprietário criado pela Apple. Você não cria arquivos de carro diretamente, eles são criados no momento da compilação a partir de qualquer arquivo LSR e incluídos em seu pacote de aplicativo.
-- **Imagens LSR** -este é um formato de imagem proprietário criado pela Apple. Use o [plug-in Adobe Photoshop](https://itunespartner.apple.com/assets/downloads/ParallaxExporter_Apps.zip) do exportador da Parallax ou o previsor [da Parallax](http://itunespartner.apple.com/assets/downloads/Parallax%20Previewer.dmg) para criar e visualizar imagens em camadas no formato LSR.
+- **Imagens LSR** -este é um formato de imagem proprietário criado pela Apple. Use o [plug-in Adobe Photoshop do exportador da Parallax](https://itunespartner.apple.com/assets/downloads/ParallaxExporter_Apps.zip) ou o [previsor da Parallax](http://itunespartner.apple.com/assets/downloads/Parallax%20Previewer.dmg) para criar e visualizar imagens em camadas no formato LSR.
 - **Assets. xcassets** -de duas (2) a cinco (5) `.png` imagens formatadas padrão incluídas em um catálogo de ativos que serão compiladas em uma imagem em camadas formatada por carro ou LSR em tempo de compilação.
 - **Arquivos de LCR** – esse é um formato de arquivo proprietário criado pela Apple. Os arquivos de LCR destinam-se a serem usados como conteúdo adicional baixado de um dos seus servidores de conteúdo. O arquivo de LCR nunca deve ser incluído no seu pacote de aplicativo. Os arquivos de LCR são gerados a partir de arquivos LSR `layerutil` ou Photoshop usando a ferramenta de linha de comando incluída no Xcode.
 
@@ -138,7 +138,7 @@ Cada aplicativo deve fornecer uma versão pequena e uma grande de seu ícone de 
 
 |Ícone pequeno||Ícone grande||
 |---|---|---|---|
-|Tamanho real|400x240px|Tamanho|1280x768px|
+|Tamanho real|400x240px|Size|1280x768px|
 |Tamanho da zona segura|370x222px|||
 |Tamanho não focalizado|300x180px|||
 |Tamanho focado|370x222px|||

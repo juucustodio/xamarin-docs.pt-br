@@ -4,15 +4,15 @@ description: Este documento apresenta o editor de lista de Propriedades (. plist
 ms.prod: xamarin
 ms.assetid: 5E687043-0443-377C-9A12-9C5A05958646
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: ca3622e01d6c7b616dc115b89ffcccf64022b1a1
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: ac1ded56137cf85ec5852358f75240176dbc7671
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69527133"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70286788"
 ---
 # <a name="working-with-property-lists-in-xamarinios"></a>Trabalhando com listas de propriedades no Xamarin. iOS
 
@@ -118,7 +118,7 @@ Consulte a documentação sobre como [registrar os tipos de arquivo aos quais se
 
  [![](property-lists-images/uti.png "Editor de UTIs")](property-lists-images/uti.png#lightbox)
 
-Da mesma forma que o tipo exportado UTIs especifica UTIs personalizado específico para seu aplicativo, `UIImportedTypeDeclarations` o tipo importado *UTIs* (chave) especifica os tipos personalizados com suporte, mas não pertencentes ao seu aplicativo.
+Da mesma forma que o tipo exportado UTIs especifica UTIs personalizado específico para seu aplicativo, `UIImportedTypeDeclarations` o *tipo importado UTIs* (chave) especifica os tipos personalizados com suporte, mas não pertencentes ao seu aplicativo.
 
 Para obter mais informações sobre como usar o UTIs personalizado, consulte [os tipos de arquivo de registro da Apple que seu aplicativo dá suporte](https://developer.apple.com/library/ios/documentation/FileManagement/Conceptual/understanding_utis/understand_utis_declare/understand_utis_declare.html#//apple_ref/doc/uid/TP40001319-CH204-SW1) ao guia.
 

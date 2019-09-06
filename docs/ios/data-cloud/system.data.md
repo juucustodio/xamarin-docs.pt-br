@@ -4,15 +4,15 @@ description: Este documento descreve como usar System. Data e mono. Data. sqlite
 ms.prod: xamarin
 ms.assetid: F10C0C57-7BDE-A3F3-B011-9839949D15C8
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 11/25/2015
-ms.openlocfilehash: 060dcef28f50b3368f126b4b5b6996d9b52bc260
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 36eeb517fee69742f900a0cf18e1d19d093dfc52
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69526573"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290123"
 ---
 # <a name="systemdata-in-xamarinios"></a>System. Data no Xamarin. iOS
 
@@ -147,7 +147,7 @@ A funcionalidade ausente em **System. Data. dll** consiste em:
 - [System. Data. Common. DbProviderFactories](xref:System.Data.Common.DbProviderFactories) (depende do suporte a arquivo de configuração XML)
 - [System.Data.OleDb](xref:System.Data.OleDb)
 - [System.Data.Odbc](xref:System.Data.Odbc)
-- A `System.EnterpriseServices.dll` dependência foi removida `System.Data.dll` do, resultando na remoção do método [SqlConnection. EnlistDistributedTransaction (ITransaction)](xref:System.Data.SqlClient.SqlConnection.EnlistDistributedTransaction*) .
+- A `System.EnterpriseServices.dll` dependência foi *removida* do `System.Data.dll` , resultando na remoção do método [SqlConnection. EnlistDistributedTransaction (ITransaction)](xref:System.Data.SqlClient.SqlConnection.EnlistDistributedTransaction*) .
 
 
 <a name="Mono.Data.Sqlite" />
@@ -163,7 +163,7 @@ A versão mais antiga do iOS é fornecida com as seguintes versões do SQLite:
 - **iOS 5** -versão 3.7.7.
 - **IOS 4** -versão 3.6.22.
 
-Os problemas mais comuns parecem estar relacionados à consulta de esquema de banco de dados, por exemplo, determinando em tempo de execução quais colunas existem em `Mono.Data.Sqlite.SqliteConnection.GetSchema` uma determinada tabela, como ( `Mono.Data.Sqlite.SqliteDataReader.GetSchemaTable` substituindo [DbConnection. GetSchema](xref:System.Data.Common.DbConnection.GetSchema) e (substituindo [ DbDataReader.](xref:System.Data.Common.DbDataReader.GetSchemaTable)Getesquematable. Em suma, parece que algo que usa [DataTable](xref:System.Data.DataTable) provavelmente não funcionará.
+Os problemas mais comuns parecem estar relacionados à consulta de esquema de banco de dados, por exemplo, determinando em tempo de execução quais colunas existem em `Mono.Data.Sqlite.SqliteConnection.GetSchema` uma determinada tabela, como ( `Mono.Data.Sqlite.SqliteDataReader.GetSchemaTable` substituindo [DbConnection. GetSchema](xref:System.Data.Common.DbConnection.GetSchema) e (substituindo [ DbDataReader. getesquematable](xref:System.Data.Common.DbDataReader.GetSchemaTable). Em suma, parece que algo que usa [DataTable](xref:System.Data.DataTable) provavelmente não funcionará.
 
 <a name="Data_Binding" />
 

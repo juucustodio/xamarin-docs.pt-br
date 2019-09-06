@@ -4,15 +4,15 @@ description: Este documento descreve como indexar um NSUserActivity, tornando-o 
 ms.prod: xamarin
 ms.assetid: 0B28B284-C7C9-4C0D-A782-D471FBBC4CAE
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/20/2017
-ms.openlocfilehash: 0b673128d675d825d4c0564929dbd3896c09b0c5
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 314b341b7cfb40c62a5d6469ca22d2889f5a8057
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70198500"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291762"
 ---
 # <a name="search-with-nsuseractivity-in-xamarinios"></a>Pesquisar com NSUserActivity no Xamarin. iOS
 
@@ -29,7 +29,7 @@ As seguintes propriedades do `NSUserActivity` são usadas para dar suporte à pe
 
 - `EligibleForHandoff`– Se `true`, essa atividade pode ser usada em uma operação de entrega.
 - `EligibleForSearch`– Se `true`, essa atividade será adicionada ao índice no dispositivo e apresentada nos resultados da pesquisa.
-- `EligibleForPublicIndexing`– Se `true`, essa atividade será adicionada ao índice baseado na nuvem da Apple e apresentada aos usuários (por meio de pesquisa) que ainda não instalaram seu aplicativo em seu dispositivo IOS. Consulte a seção indexação de [pesquisa pública](#public-search-indexing) abaixo para obter mais detalhes.
+- `EligibleForPublicIndexing`– Se `true`, essa atividade será adicionada ao índice baseado na nuvem da Apple e apresentada aos usuários (por meio de pesquisa) que ainda não instalaram seu aplicativo em seu dispositivo IOS. Consulte a seção [indexação de pesquisa pública](#public-search-indexing) abaixo para obter mais detalhes.
 - `Title`– Fornece um título para sua atividade e é exibido nos resultados da pesquisa. Os usuários também podem pesquisar o texto do título em si.
 - `Keywords`– É uma matriz de cadeias de caracteres usada para descrever sua atividade que será indexada e tornada pesquisável pelo usuário final.
 - `ContentAttributeSet`– É `CSSearchableItemAttributeSet` usado para descrever ainda mais sua atividade em detalhes e fornecer conteúdo avançado nos resultados da pesquisa.

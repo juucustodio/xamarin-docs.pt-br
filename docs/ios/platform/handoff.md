@@ -4,15 +4,15 @@ description: Este artigo aborda como trabalhar com a entrega em um aplicativo Xa
 ms.prod: xamarin
 ms.assetid: 405F966A-4085-4621-AA15-33D663AD15CD
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: 28c5086833ceb1dc8550e513b120f7355aa9bebe
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 9fa0d51e02382458535b065377af55542d87913a
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656572"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290751"
 ---
 # <a name="handoff-in-xamarinios"></a>Entrega no Xamarin. iOS
 
@@ -28,7 +28,7 @@ Este artigo fará uma rápida visão geral de como habilitar o compartilhamento 
 
 A entrega (também conhecida como continuidade) foi introduzida pela Apple no iOS 8 e no OS X Yosemite (10,10) como uma maneira para o usuário iniciar uma atividade em um de seus dispositivos (iOS ou Mac) e continuar a mesma atividade em outro de seus dispositivos (conforme identificado pelo iClou do usuário Conta d).
 
-A entrega foi expandida no iOS 9 para oferecer também suporte a novos recursos de pesquisa aprimorados. Para obter mais informações, consulte nossa documentação de aprimoramentos de [pesquisa](~/ios/platform/search/index.md) .
+A entrega foi expandida no iOS 9 para oferecer também suporte a novos recursos de pesquisa aprimorados. Para obter mais informações, consulte nossa documentação de [aprimoramentos de pesquisa](~/ios/platform/search/index.md) .
 
 Por exemplo, o usuário pode iniciar um email em seu iPhone e continuar diretamente o email em seu Mac, com todas as mesmas informações de mensagem preenchidas e o cursor no mesmo local em que elas foram deixadas no iOS.
 
@@ -102,7 +102,7 @@ Seu aplicativo `AppDelegate` é seu ponto de entrada principal ao lidar com uma 
 
 A `NSUserActivity` instância é entregue quando `ContinueUserActivity` o `AppDelegate`método é chamado. Neste ponto, você deve configurar a interface do usuário do aplicativo e continuar a atividade especificada.
 
-Consulte a seção implementando a [entrega](#implementing-handoff) abaixo para obter mais informações.
+Consulte a seção [implementando a entrega](#implementing-handoff) abaixo para obter mais informações.
 
 ## <a name="enabling-handoff-in-a-xamarin-app"></a>Habilitando a entrega em um aplicativo Xamarin
 
@@ -112,7 +112,7 @@ Faça o seguinte:
 
 1. Faça logon no [portal do desenvolvedor da Apple](https://developer.apple.com).
 2. Clique em **certificados, identificadores & perfis**.
-3. Se você ainda não tiver feito isso, clique em identificadores e crie uma ID para seu aplicativo (por `com.company.appname`exemplo,), caso contrário, edite sua ID existente.
+3. Se você ainda não tiver feito isso, clique em **identificadores** e crie uma ID para seu aplicativo (por `com.company.appname`exemplo,), caso contrário, edite sua ID existente.
 4. Verifique se o serviço **icloud** foi verificado para a ID fornecida:
 
     [![](handoff-images/provision01.png "Habilitar o serviço iCloud para a ID fornecida")](handoff-images/provision01.png#lightbox)
@@ -132,7 +132,7 @@ Faça o seguinte:
     [![](handoff-images/provision05.png "Habilitar os modos de segundo plano necessários")](handoff-images/provision05.png#lightbox)
 11. Salve as alterações em todos os arquivos.
 
-Com essas configurações em vigor, o aplicativo agora está pronto para acessar as APIs da estrutura de entrega. Para obter informações detalhadas sobre o provisionamento, consulte nosso [provisionamento de dispositivos](~/ios/get-started/installation/device-provisioning/index.md) e provisionando [seus guias de aplicativo](~/ios/get-started/installation/device-provisioning/index.md) .
+Com essas configurações em vigor, o aplicativo agora está pronto para acessar as APIs da estrutura de entrega. Para obter informações detalhadas sobre o provisionamento, consulte nosso [provisionamento de dispositivos](~/ios/get-started/installation/device-provisioning/index.md) e [Provisionando seus guias de aplicativo](~/ios/get-started/installation/device-provisioning/index.md) .
 
 ## <a name="implementing-handoff"></a>Implementando a entrega
 

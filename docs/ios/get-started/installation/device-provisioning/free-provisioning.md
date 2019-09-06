@@ -4,15 +4,15 @@ description: Este documento descreve como os desenvolvedores do Xamarin.iOS pode
 ms.prod: xamarin
 ms.assetid: A5CE2ECF-8057-49ED-8393-EB0C5977FE4C
 ms.technology: xamarin-ios
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 07/16/2018
-ms.openlocfilehash: 533ab09a73116402e39da65933f26b8f3065357c
-ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
-ms.translationtype: HT
+ms.openlocfilehash: 8279487fc5effd5c2c019bffa5ceb820d2240400
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58855062"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291430"
 ---
 # <a name="free-provisioning-for-xamarinios-apps"></a>Provisionamento gratuito para aplicativos Xamarin.iOS
 
@@ -54,7 +54,7 @@ Siga as etapas abaixo para testar seu aplicativo Xamarin.iOS com o provisionamen
 4. Feche as preferências do Xcode.
 5. Conecte o dispositivo iOS no qual gostaria de implantar o aplicativo.
 6. No Xcode, crie um novo projeto. Escolha **Arquivo > Novo > Projeto** e selecione **Aplicativo de Exibição Única**.
-7. Na caixa de diálogo do novo projeto, defina **Equipe** como a ID da Apple que você acabou de adicionar. Na lista suspensa, ela deve ser semelhante a **Seu nome (Equipe pessoal)**:
+7. Na caixa de diálogo do novo projeto, defina **Equipe** como a ID da Apple que você acabou de adicionar. Na lista suspensa, ela deve ser semelhante a **Seu nome (Equipe pessoal)** :
 
     ![Criar um novo aplicativo](free-provisioning-images/launchapp2.png "Criar um novo aplicativo")
 

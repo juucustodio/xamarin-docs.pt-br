@@ -4,14 +4,14 @@ description: 'Estudo de caso de PCL: como posso resolver problemas relacionados 
 ms.prod: xamarin
 ms.assetid: 7986A556-382D-4D00-ACCF-3589B4029DE8
 ms.date: 04/17/2018
-author: asb3993
-ms.author: amburns
-ms.openlocfilehash: 09aef14efdce93e28326deb78292da98f1969ea1
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+author: conceptdev
+ms.author: crdun
+ms.openlocfilehash: e3ced3c989a88c6e759a5bc497147128b0a79868
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69521554"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70288200"
 ---
 # <a name="pcl-case-study-how-can-i-resolve-problems-related-to-systemdiagnosticstracing-for-the-microsoft-tpl-dataflow-nuget-package"></a>Estudo de caso de PCL: como posso resolver problemas relacionados a System.Diagnostics.Tracing para o pacote NuGet de Fluxo de Dados de TPL da Microsoft?
 
@@ -21,7 +21,7 @@ ms.locfileid: "69521554"
 
 ## <a name="summary"></a>Resumo
 
-O xamarin. iOS e o Xamarin. Android não implementam 100% de cada perfil PCL que eles permitem como referências. Para conveniência prática no Visual Studio para Mac, no Visual Studio e no Gerenciador de pacotes NuGet, os projetos do Xamarin permitem o uso de vários perfis que têm apenas implementações incompletas. Por exemplo, nem Xamarin. iOS nem Xamarin. Android atualmente incluem uma implementação completa dos tipos no namespace PCL "System. Diagnostics. Tracing". Essa limitação leva a três camadas de erros ao tentar usar a versão padrão `portable-net45+win8+wpa81` do pacote NuGet do Microsoft TPL Dataflow.
+O xamarin. iOS e o Xamarin. Android não implementam 100% de cada perfil PCL que eles permitem como referências. Para conveniência prática no Visual Studio para Mac, no Visual Studio e no Gerenciador de pacotes NuGet, os projetos do Xamarin permitem o uso de vários perfis que têm apenas implementações _incompletas_ . Por exemplo, nem Xamarin. iOS nem Xamarin. Android atualmente incluem uma implementação completa dos tipos no namespace PCL "System. Diagnostics. Tracing". Essa limitação leva a três camadas de erros ao tentar usar a versão padrão `portable-net45+win8+wpa81` do pacote NuGet do Microsoft TPL Dataflow.
 
 ## <a name="workaround-switch-the-app-project-to-reference-the-portable-net45win8wp8wpa81-version-of-the-tpl-dataflow-library"></a>Solução alternativa: Alternar o projeto de aplicativo para referenciar a `portable-net45+win8+wp8+wpa81` versão da biblioteca de fluxo de aplicativos TPL
 
@@ -43,7 +43,7 @@ O xamarin. iOS e o Xamarin. Android não implementam 100% de cada perfil PCL que
 
 ### <a name="explanation"></a>Explicação
 
-A `portable-net45+win8+wp8+wpa81` versão da biblioteca não faz referência a **System. Diagnostics. Tracing. dll**, por isso evita completamente todas as três camadas de problemas.
+A `portable-net45+win8+wp8+wpa81` versão da biblioteca não faz referência a **System. Diagnostics. Tracing. dll** _, por_isso evita completamente todas as três camadas de problemas.
 
 ### <a name="limitations"></a>Limitações
 

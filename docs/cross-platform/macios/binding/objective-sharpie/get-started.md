@@ -1,60 +1,60 @@
 ---
-title: Introdução ao objetivo Sharpie
-description: Este documento fornece uma visão geral do objetivo Sharpie, a ferramenta usada para automatizar a criação de C# associações a código Objective-C.
+title: Introdução com nitidez objetiva
+description: Este documento fornece uma visão geral de alto nível da nitidez do objetivo, a ferramenta usada para automatizar a criação C# de associações para o código Objective-C.
 ms.prod: xamarin
 ms.assetid: 577512BF-1A90-41E5-89DE-9E056C478678
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 10/11/2017
-ms.openlocfilehash: 4fb5e503a82a2b666bf6f8d7d7166475e94546e7
-ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
+ms.openlocfilehash: c34a6c09bf1298fd710e3e39a244294821a714ae
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "64978401"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290729"
 ---
-# <a name="getting-started-with-objective-sharpie"></a>Introdução ao objetivo Sharpie
+# <a name="getting-started-with-objective-sharpie"></a>Introdução com nitidez objetiva
 
 > [!IMPORTANT]
-> Objetivo Sharpie é uma ferramenta para desenvolvedores experientes do Xamarin com conhecimento avançado de Objective-C (e, por extensão, C). Antes de tentar associar uma biblioteca Objective-C, você deve ter um conhecimento sólido sobre como criar a biblioteca nativa na linha de comando (e uma boa compreensão de como funciona a biblioteca nativa).
+> A nitidez objetiva é uma ferramenta para desenvolvedores experientes do Xamarin com conhecimento avançado de Objective-C (e por extensão, C). Antes de tentar associar uma biblioteca Objective-C, você deve ter um conhecimento sólido de como criar a biblioteca nativa na linha de comando (e uma boa compreensão de como a biblioteca nativa funciona).
 
 <a name="installing" />
 
-## <a name="installing-objective-sharpie"></a>Instalando Sharpie objetivo
+## <a name="installing-objective-sharpie"></a>Instalando a nitidez do objetivo
 
-Objetivo Sharpie atualmente é uma ferramenta de linha de comando autônoma para o Mac OS X 10.10 e versões mais recentes e é _não é um produto Xamarin totalmente compatível com_. Ele só deve ser usado por desenvolvedores experientes para ajudá-lo na criação de um projeto de associação para uma 3ª biblioteca Objective-C de terceiros.
+A nitidez objetiva é atualmente uma ferramenta de linha de comando autônoma para o Mac OS X 10,10 e mais recente e _não é um produto Xamarin com suporte completo_. Ele só deve ser usado por desenvolvedores avançados para auxiliar na criação de um projeto de associação a uma biblioteca de Objective-C de terceiros.
 
-Objetivo Sharpie pode ser baixado como um instalador de pacote padrão dos X.
-Execute o instalador e siga todos os prompts na tela do Assistente de instalação:
+A nitidez do objetivo pode ser baixada como um instalador de pacote do OS X padrão.
+Execute o instalador e siga todos os prompts na tela do assistente de instalação:
 
-- **Versão atual: 3.4**
-  - [Baixe a versão mais recente](https://dl.xamarin.com/objective-sharpie/ObjectiveSharpie.pkg)
-  - [Comunicado de Fórum](https://forums.xamarin.com/discussion/104800/objective-sharpie-3-4)
+- **Versão atual: 3,4**
+  - [Baixar a versão mais recente](https://dl.xamarin.com/objective-sharpie/ObjectiveSharpie.pkg)
+  - [Comunicado do fórum](https://forums.xamarin.com/discussion/104800/objective-sharpie-3-4)
 
 > [!TIP]
 > Use o `sharpie update` comando para atualizar para a versão mais recente.
 
-## <a name="basic-walkthrough"></a>Instruções passo a passo básica
+## <a name="basic-walkthrough"></a>Explicação básica
 
-Objetivo Sharpie é uma ferramenta de linha de comando fornecida pelo Xamarin que ajuda a criar as definições necessárias para associar uma biblioteca de Objective-C de terceiros 3ª para C#.
-Mesmo ao usar Sharpie objetivo, o desenvolvedor *serão* precisa modificar os arquivos gerados após a conclusão do objetivo Sharpie para solucionar problemas que não pôde ser tratados automaticamente pela ferramenta.
+A Sharpde objetiva é uma ferramenta de linha de comando fornecida pelo Xamarin que ajuda a criar as definições necessárias para associar uma biblioteca de Objective- C#C de terceiros ao.
+Mesmo ao usar a nitidez do objetivo, o *desenvolvedor* precisará modificar os arquivos gerados após a conclusão do objetivo para resolver os problemas que não puderam ser manipulados automaticamente pela ferramenta.
 
-Sempre que possível, o objetivo Sharpie será anotar APIs com o qual ele tem alguma dúvida sobre como vincular corretamente (muitas construções em código nativo são ambíguas).
-Essas anotações aparecerá como [ `[Verify]` atributos](~/cross-platform/macios/binding/objective-sharpie/platform/verify.md).
+Sempre que possível, a nitidez do objetivo anotará as APIs com as quais ele tem alguma dúvida sobre como ligar corretamente (muitas construções no código nativo são ambíguas).
+Essas anotações serão exibidas como [ `[Verify]` atributos](~/cross-platform/macios/binding/objective-sharpie/platform/verify.md).
 
-A saída do objetivo Sharpie é um par de arquivos - [ `ApiDefinition.cs` e `StructsAndEnums.cs` ](~/cross-platform/macios/binding/objective-sharpie/platform/apidefinitions-structsandenums.md) -que pode ser usado para criar um projeto de associação que compila em uma biblioteca que você pode usar em aplicativos Xamarin.
+A saída da nitidez do objetivo é um par de arquivos- [ `ApiDefinition.cs` e `StructsAndEnums.cs` ](~/cross-platform/macios/binding/objective-sharpie/platform/apidefinitions-structsandenums.md) -que pode ser usado para criar um projeto de associação que é compilado em uma biblioteca que você pode usar em aplicativos Xamarin.
 
 > [!IMPORTANT]
-> Objetivo Sharpie vem com uma **principais** regra para o uso correto: você absolutamente necessário transmitir a ela os argumentos de linha de comando do compilador clang corretos para garantir a análise adequada. Isso ocorre porque o Sharpie de objetivo de fase de análise é simplesmente uma ferramenta [implementados com relação o API do libtooling clang](http://clang.llvm.org/docs/LibTooling.html).
+> A nitidez do objetivo vem com uma regra **principal** para uso adequado: você deve fazer com que seja absolutamente necessário passar os argumentos de linha de comando do compilador Clang corretos para garantir a análise apropriada. Isso ocorre porque a fase de análise de nitidez objetiva é simplesmente uma ferramenta [implementada em relação à API Clang libtooling](http://clang.llvm.org/docs/LibTooling.html).
 
-Isso significa que o objetivo Sharpie tem todo o poder do Clang (o compilador C/Objective-C/C++ que, na verdade, compila a biblioteca nativa, que você deve vincular) e todo o seu conhecimento interno dos arquivos de cabeçalho para a associação.
-Em vez de converter o analisado [AST](https://en.wikipedia.org/wiki/Abstract_syntax_tree) para o código de objeto, objetivo Sharpie converte o AST para um C# associação "criar o scaffolding" adequado para a entrada para o `bmac` e `btouch` ferramentas de ligação do Xamarin.
+Isso significa que a nitidez do objetivo tem todo o poder do Clang (o compilador C/objec-C++ C/que realmente compila a biblioteca nativa que você vincularia) e todo o seu conhecimento interno dos arquivos de cabeçalho para associação.
+Em vez de traduzir a [AST](https://en.wikipedia.org/wiki/Abstract_syntax_tree) analisada para o código do objeto, a nitidez do objetivo traduz a AST para C# uma associação "Scaffold" adequada para entrada para `bmac` as `btouch` ferramentas de associação do e do Xamarin.
 
-Se objetivo Sharpie erros durante a análise, isso significa que clang apresentaram durante sua análise na fase de tentativa de construir a AST e você precisa descobrir o porquê.
+Se os erros de nitidez objetivarem durante a análise, isso significa que o Clang erro durante sua fase de análise tentando construir a AST, e você precisa descobrir o porquê.
 
-**NOVO!** tentativas de versão 3.0 abordar algumas dessa complexidade, oferecendo suporte a projetos do Xcode diretamente. Se uma biblioteca nativa tem um projeto válido do Xcode, objetivo Sharpie pode avaliar o projeto para uma configuração para deduzir os arquivos de cabeçalho de entrada necessárias e os sinalizadores de compilador e de destino especificado.
+**NOVO!** as tentativas da versão 3,0 abordam algumas dessas complexidades dando suporte diretamente a projetos do Xcode. Se uma biblioteca nativa tiver um projeto Xcode válido, a nitidez do objetivo poderá avaliar o projeto para um destino e uma configuração especificados para deduzir os arquivos de cabeçalho de entrada necessários e os sinalizadores do compilador.
 
-Se nenhum projeto do Xcode estiver disponível, você precisará estar mais familiarizados com o projeto por deduzir os arquivos de cabeçalho de entrada corretos, caminhos de pesquisa do arquivo de cabeçalho e outros sinalizadores de compilador necessárias. É importante perceber que os sinalizadores de compilador usados para criar a biblioteca nativa são as mesmas que deve ser passado para o objetivo Sharpie. Isso é um processo mais manual e que exigem um pouco de familiaridade com a compilação de código nativo na linha de comando com a cadeia de ferramentas Clang.
+Se nenhum projeto do Xcode estiver disponível, você precisará estar mais familiarizado com o projeto deduzindondo os arquivos de cabeçalho de entrada corretos, os caminhos de pesquisa de arquivo de cabeçalho e outros sinalizadores de compilador necessários. É importante perceber que os sinalizadores do compilador usados para criar a biblioteca nativa são os mesmos que devem ser passados para a nitidez objetiva. Esse é um processo mais manual e um que exige um pouco de familiaridade com a compilação de código nativo na linha de comando com o Clang ferramentas.
 
-**NOVO!** versão 3.0 também apresenta uma ferramenta para associar facilmente [CocoaPods](https://cocoapods.org) por meio de `sharpie pod` comando.
-Se a biblioteca que você está interessado está disponível como um CocoaPod, recomendamos que você comece pela tentativa de associar o CocoaPod com objetivo Sharpie (em vez de tentar vincular com relação à fonte diretamente).
+**NOVO!** a versão 3,0 também apresenta uma ferramenta para associar facilmente [CocoaPods](https://cocoapods.org) por `sharpie pod` meio do comando.
+Se a biblioteca em que você está interessado estiver disponível como um CocoaPod, recomendamos que você comece tentando associar o CocoaPod à nitidez do objetivo (em vez de tentar associar-se diretamente à fonte).

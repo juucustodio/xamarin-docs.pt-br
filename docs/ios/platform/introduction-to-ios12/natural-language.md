@@ -4,15 +4,15 @@ description: Este documento descreve a estrutura de linguagem natural. Introduzi
 ms.prod: xamarin
 ms.assetid: 126C8764-F873-4EB9-98A3-D82AB5689111
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 08/20/2018
-ms.openlocfilehash: 235628b512a63ee2f7ec4de2176ab0b90ad65487
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 7b0d07f2153a0395146506a371631e0bcf75ebef
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68652607"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292921"
 ---
 # <a name="using-the-natural-language-framework-with-xamarinios"></a>Usando a estrutura de linguagem natural com o Xamarin. iOS
 
@@ -33,7 +33,7 @@ Este aplicativo de exemplo demonstra como usar a estrutura de idioma natural par
 
 ## <a name="recognizing-languages"></a>Reconhecendo idiomas
 
-A guia Recognizer do aplicativo de exemplo demonstra como usar um[`NLLanguageRecognizer`](xref:NaturalLanguage.NLLanguageRecognizer)
+A guia **Recognizer** do aplicativo de exemplo demonstra como usar um[`NLLanguageRecognizer`](xref:NaturalLanguage.NLLanguageRecognizer)
 para determinar o idioma de um bloco de texto.
 
 > [!NOTE]

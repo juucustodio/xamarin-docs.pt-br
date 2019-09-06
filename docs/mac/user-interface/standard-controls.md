@@ -4,15 +4,15 @@ description: Este artigo aborda como trabalhar com os controles padrão do AppKi
 ms.prod: xamarin
 ms.assetid: d2593883-d255-431f-9781-75f04d8cecea
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: e5868e2cfe9a054e84eeb67432a01c2d98b1c3e6
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 2701b1f8bf343c653da33fd587c9da3302f52335
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68648342"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292243"
 ---
 # <a name="standard-controls-in-xamarinmac"></a>Controles padrão no Xamarin. Mac
 
@@ -26,7 +26,7 @@ Os controles AppKit são os elementos da interface do usuário que são usados p
 
 Neste artigo, abordaremos as noções básicas de como trabalhar com controles AppKit em um aplicativo Xamarin. Mac. É altamente recomendável que você trabalhe pelo artigo [Hello, Mac](~/mac/get-started/hello-mac.md) primeiro, especificamente a [introdução às seções Xcode e Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) e [ações](~/mac/get-started/hello-mac.md#outlets-and-actions) , pois ela aborda os principais conceitos e técnicas que usaremos em Este artigo.
 
-Talvez você queira dar uma olhada na seção [expondo C# classes/métodos para Objective-C](~/mac/internals/how-it-works.md) do documento [interno do Xamarin. Mac](~/mac/internals/how-it-works.md) também, explica `Register` os comandos e `Export` usados para conectar suas C# classes ao Objetos Objective-C e elementos de interface do usuário.
+Talvez você queira dar uma olhada na seção [expondo C# classes/métodos para Objective-C](~/mac/internals/how-it-works.md) do documento [interno do Xamarin. Mac](~/mac/internals/how-it-works.md) também, explica os `Register` comandos e `Export` usados para conectar suas C# classes ao Objetos Objective-C e elementos de interface do usuário.
 
 <a name="Introduction_to_Controls_and_Views" />
 
@@ -53,11 +53,11 @@ Há um subconjunto de controles AppKit que incluem um estilo de exibição que p
 
 [![](standard-controls-images/mailapp.png "Um quadro de janela Mac")](standard-controls-images/mailapp.png#lightbox)
 
-- **Botão de textura** arredondada `NSButton` -A com um `NSTexturedRoundedBezelStyle`estilo de.
-- **Controle segmentado** com arredondado texturizado `NSSegmentedControl` -a com um `NSSegmentStyleTexturedRounded`estilo de.
-- **Controle segmentado** com arredondado texturizado `NSSegmentedControl` -a com um `NSSegmentStyleSeparated`estilo de.
-- **Menu pop-up de textura** arredondada `NSPopUpButton` -A com um `NSTexturedRoundedBezelStyle`estilo de.
-- **Menu suspenso de textura** arredondada-A `NSPopUpButton` com um estilo de `NSTexturedRoundedBezelStyle`.
+- **Botão de textura arredondada** -A `NSButton` com um `NSTexturedRoundedBezelStyle`estilo de.
+- **Controle segmentado com arredondado texturizado** -a `NSSegmentedControl` com um `NSSegmentStyleTexturedRounded`estilo de.
+- **Controle segmentado com arredondado texturizado** -a `NSSegmentedControl` com um `NSSegmentStyleSeparated`estilo de.
+- **Menu pop-up de textura arredondada** -A `NSPopUpButton` com um `NSTexturedRoundedBezelStyle`estilo de.
+- **Menu suspenso de textura arredondada** -A `NSPopUpButton` com um estilo de `NSTexturedRoundedBezelStyle`.
 - **Barra de pesquisa** - `NSSearchField`a.
 
 A Apple sugere as seguintes diretrizes ao trabalhar com controles AppKit em um quadro de janela:
@@ -93,7 +93,7 @@ Depois que um controle tiver sido incluído na interface do usuário, use o **Ed
 
 [![](standard-controls-images/edit04.png "Definindo as restrições")](standard-controls-images/edit04.png#lightbox)
 
-Use as **transmissões vermelhas** em torno do exterior da caixa de redimensionamento para _fixar_ um controle em um determinado local (x, y). Por exemplo: 
+Use as **transmissões vermelhas** em torno do exterior da caixa de **redimensionamento** para _fixar_ um controle em um determinado local (x, y). Por exemplo: 
 
 [![](standard-controls-images/edit05.png "Editando uma restrição")](standard-controls-images/edit05.png#lightbox)
 
@@ -193,7 +193,7 @@ namespace AppKit
 }
 ```
 
-Em que `[Register("SourceListView")]` a instrução expõe `SourceListView` a classe para Objective-C para que possa ser usada em interface Builder. Para obter mais informações, consulte a seção [expondo C# classes/métodos para Objective-C](~/mac/internals/how-it-works.md) do documento [interno do Xamarin. Mac](~/mac/internals/how-it-works.md) , ele explica os `Register` comandos `Export` e usados para conectar suas C# classes ao Objetos Objective-C e elementos de interface do usuário.
+Em que `[Register("SourceListView")]` a instrução expõe `SourceListView` a classe para Objective-C para que possa ser usada em interface Builder. Para obter mais informações, consulte a seção [ C# expondo classes/métodos para Objective-C](~/mac/internals/how-it-works.md) do documento [interno do Xamarin. Mac](~/mac/internals/how-it-works.md) , ele explica os `Register` comandos e `Export` usados para conectar suas C# classes ao Objetos Objective-C e elementos de interface do usuário.
 
 Com o código acima em vigor, você pode arrastar um controle AppKit, do tipo base que você está estendendo, para a superfície de design (no exemplo abaixo, uma **lista de origem**), alterne para o Inspetor de **identidade** e defina a **classe personalizada** como o nome que você expôs ao Objective-C `SourceListView`(exemplo):
 
@@ -473,7 +473,7 @@ partial void ItemOne (Foundation.NSObject sender) {
 }
 ```
 
-Para obter mais informações sobre como trabalhar com menus e controles de menu, consulte nossos [menus](~/mac/user-interface/menu.md) e o [botão pop-up e a](~/mac/user-interface/menu.md) documentação de listas suspensas.
+Para obter mais informações sobre como trabalhar com menus e controles de menu, consulte nossos [menus](~/mac/user-interface/menu.md) e o [botão pop-up e a documentação de listas suspensas](~/mac/user-interface/menu.md) .
 
 <a name="Working_with_Selection_Controls" />
 
@@ -587,7 +587,7 @@ O código do SourceWriter foi totalmente comentado e, quando disponível, foram 
 
 ## <a name="working-with-content-views"></a>Trabalhando com exibições de conteúdo
 
-O AppKit fornece vários tipos de exibições de conteúdo que podem ser usados no design da interface do usuário. Para obter mais informações, consulte a seção exibições de [conteúdo](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/ControlsView.html#//apple_ref/doc/uid/20000957-CH52-SW1) das [diretrizes de interface humana do os X](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)da Apple.
+O AppKit fornece vários tipos de exibições de conteúdo que podem ser usados no design da interface do usuário. Para obter mais informações, consulte a seção [exibições de conteúdo](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/ControlsView.html#//apple_ref/doc/uid/20000957-CH52-SW1) das [diretrizes de interface humana do os X](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)da Apple.
 
 [![](standard-controls-images/content01.png "Um exemplo de exibição de conteúdo")](standard-controls-images/content01.png#lightbox)
 

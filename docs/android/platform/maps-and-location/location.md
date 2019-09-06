@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/22/2018
-ms.openlocfilehash: f6bc5891e416d7cb6c9b80c0502a9cc5d2d911d1
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 8366796af47e8915bf0bd9ba680e6144e1cfaebc
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69523994"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70280602"
 ---
 # <a name="location-services-on-android"></a>Serviços de localização no Android
 
@@ -336,15 +336,15 @@ else
 ```
 
 > [!NOTE]
->  Se o usuário tiver desabilitado todos os provedores `GetBestProvider` de local `null`, o retornará. Para ver como esse código funciona em um dispositivo real, certifique-se de habilitar GPS, Wi-Fi e redes de celular em **configurações do Google > modo de > de local** , conforme mostrado nesta captura de tela:
-
-[![Tela do modo de localização de configurações em um telefone Android](location-images/location-02.png)](location-images/location-02.png#lightbox)
-
-A captura de tela abaixo demonstra o aplicativo de `GetBestProvider`localização em execução usando:
-
-[![Aplicativo getbestprovider exibindo latitude, longitude e provedor](location-images/location-03.png)](location-images/location-03.png#lightbox)
-
-Tenha em mente que `GetBestProvider` não altera o provedor dinamicamente. Em vez disso, ele determina o melhor provedor disponível uma vez durante o ciclo de vida da atividade. Se o status do provedor for alterado depois de definido, `ILocationListener` o aplicativo exigirá código adicional nos métodos &ndash; &ndash; `OnProviderEnabled`, `OnProviderDisabled`e `OnStatusChanged` para manipular cada possibilidade relacionada ao comutador do provedor.
+> Se o usuário tiver desabilitado todos os provedores `GetBestProvider` de local `null`, o retornará. Para ver como esse código funciona em um dispositivo real, certifique-se de habilitar GPS, Wi-Fi e redes de celular em **configurações do Google > modo de > de local** , conforme mostrado nesta captura de tela:
+>
+> [![Tela do modo de localização de configurações em um telefone Android](location-images/location-02.png)](location-images/location-02.png#lightbox)
+>
+> A captura de tela abaixo demonstra o aplicativo de `GetBestProvider`localização em execução usando:
+>
+> [![Aplicativo getbestprovider exibindo latitude, longitude e provedor](location-images/location-03.png)](location-images/location-03.png#lightbox)
+>
+> Tenha em mente que `GetBestProvider` não altera o provedor dinamicamente. Em vez disso, ele determina o melhor provedor disponível uma vez durante o ciclo de vida da atividade. Se o status do provedor for alterado depois de definido, `ILocationListener` o aplicativo exigirá código adicional nos métodos &ndash; &ndash; `OnProviderEnabled`, `OnProviderDisabled`e `OnStatusChanged` para manipular cada possibilidade relacionada ao comutador do provedor.
 
 ## <a name="summary"></a>Resumo
 

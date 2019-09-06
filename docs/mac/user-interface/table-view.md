@@ -4,15 +4,15 @@ description: Este artigo aborda como trabalhar com exibições de tabela em um a
 ms.prod: xamarin
 ms.assetid: 3B55B858-4769-4331-966A-7F53B3B7C720
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 09e4ca561f962e46dfe4eccbaf1cf284f4bb2827
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 758134b0c5171e46c47ff6fd8071b13a44d5789b
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70120826"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291616"
 ---
 # <a name="table-views-in-xamarinmac"></a>Exibições de tabela no Xamarin. Mac
 
@@ -26,7 +26,7 @@ Uma exibição de tabela exibe dados em um formato tabular contendo uma ou mais 
 
 Neste artigo, abordaremos as noções básicas de como trabalhar com exibições de tabela em um aplicativo Xamarin. Mac. É altamente recomendável que você trabalhe pelo artigo [Hello, Mac](~/mac/get-started/hello-mac.md) primeiro, especificamente a [introdução às seções Xcode e Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) e [ações](~/mac/get-started/hello-mac.md#outlets-and-actions) , pois ela aborda os principais conceitos e técnicas que usaremos em Este artigo.
 
-Talvez você queira dar uma olhada na seção [expondo C# classes/métodos para Objective-C](~/mac/internals/how-it-works.md) do documento [interno do Xamarin. Mac](~/mac/internals/how-it-works.md) também, explica `Register` os comandos e `Export` usados para conectar suas C# classes ao Objetos Objective-C e elementos de interface do usuário.
+Talvez você queira dar uma olhada na seção [expondo C# classes/métodos para Objective-C](~/mac/internals/how-it-works.md) do documento [interno do Xamarin. Mac](~/mac/internals/how-it-works.md) também, explica os `Register` comandos e `Export` usados para conectar suas C# classes ao Objetos Objective-C e elementos de interface do usuário.
 
 <a name="Introduction_to_Table_Views" />
 
@@ -43,7 +43,7 @@ Ao criar exibições de tabela, a Apple sugere o seguinte:
 - Permita que o usuário classifique a tabela clicando em um cabeçalho de coluna.
 - Crie cabeçalhos de coluna que sejam substantivos ou frases substantivo curtas que descrevam os dados que estão sendo mostrados nessa coluna.
 
-Para obter mais informações, consulte a seção exibições de [conteúdo](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/ControlsView.html#//apple_ref/doc/uid/20000957-CH52-SW1) das [diretrizes de interface humana do os X](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)da Apple.
+Para obter mais informações, consulte a seção [exibições de conteúdo](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/ControlsView.html#//apple_ref/doc/uid/20000957-CH52-SW1) das [diretrizes de interface humana do os X](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)da Apple.
 
 <a name="Creating-and-Maintaining-Table-Views-in-Xcode" />
 
@@ -73,8 +73,8 @@ Selecione o modo de exibição de tabela na **hierarquia de interface** e as seg
 - **Flutua linhas de grupo** – se `true`, a exibição de tabela desenhará células agrupadas como se elas estivessem flutuantes.
 - **Colunas** – define o número de colunas exibidas.
 - **Cabeçalhos** -se `true`, as colunas terão cabeçalhos.
-- Reordenando-se `true`, o usuário poderá arrastar para reordenar as colunas na tabela.
-- Redimensionamento `true`– se, o usuário poderá arrastar cabeçalhos de coluna para redimensionar colunas.
+- **Reordenando** -se `true`, o usuário poderá arrastar para reordenar as colunas na tabela.
+- **Redimensionamento** – se `true`, o usuário poderá arrastar cabeçalhos de coluna para redimensionar colunas.
 - **Dimensionamento de coluna** – controla como a tabela dimensionará automaticamente as colunas.
 - **Highlight** -controla o tipo de realce que a tabela usa quando uma célula é selecionada.
 - **Linhas alternativas** -se `true`, em qualquer outra linha terá uma cor de plano de fundo diferente.
@@ -105,7 +105,7 @@ Selecione uma coluna de tabela na **hierarquia de interface** e as seguintes pro
 - **Chave de classificação** -é a chave usada para classificar dados na coluna. Deixe em branco se o usuário não puder classificar esta coluna.
 - **Selector** – a **ação** usada para executar a classificação. Deixe em branco se o usuário não puder classificar esta coluna.
 - **Order** – a ordem de classificação para os dados das colunas.
-- Redimensionamento – seleciona o tipo de redimensionamento para a coluna.
+- **Redimensionamento** – seleciona o tipo de redimensionamento para a coluna.
 - **Editable** -If `true`, o usuário pode editar células em uma tabela baseada em célula.
 - **Hidden** -If `true`, a coluna fica oculta.
 
@@ -339,11 +339,11 @@ Se executarmos o aplicativo, o seguinte será exibido:
 
 ## <a name="sorting-by-column"></a>Classificando por coluna
 
-Vamos permitir que o usuário classifique os dados na tabela clicando em um cabeçalho de coluna. Primeiro, clique duas vezes no `Main.storyboard` arquivo para abri-lo para edição no interface Builder. Selecione a `Product` coluna, insira `Title` para a **chave**de classificação `compare:` , para o seletor `Ascending` e selecione para a **ordem**:
+Vamos permitir que o usuário classifique os dados na tabela clicando em um cabeçalho de coluna. Primeiro, clique duas vezes no `Main.storyboard` arquivo para abri-lo para edição no interface Builder. Selecione a `Product` coluna, insira `Title` para a **chave**de classificação `compare:` , para o **seletor** e selecione `Ascending` para a **ordem**:
 
 [![](table-view-images/sort01.png "Definindo a chave de classificação")](table-view-images/sort01.png#lightbox)
 
-Selecione a `Details` coluna, insira `Description` para a **chave**de classificação `compare:` , para o seletor `Ascending` e selecione para a **ordem**:
+Selecione a `Details` coluna, insira `Description` para a **chave**de classificação `compare:` , para o **seletor** e selecione `Ascending` para a **ordem**:
 
 [![](table-view-images/sort02.png "Definindo a chave de classificação")](table-view-images/sort02.png#lightbox)
 
@@ -498,11 +498,11 @@ Se executarmos o aplicativo e digitarmos um caractere, uma linha será seleciona
 
 ## <a name="reordering-columns"></a>Reordenando colunas
 
-Se você quiser permitir que o usuário Arraste colunas de reordenação na exibição de tabela, clique duas vezes `Main.storyboard` no arquivo para abri-lo para edição no interface Builder. Selecione o modo de exibição de tabela na **hierarquia de interface** e marque a caixa de seleção reordenar no Inspetor de **atributo**:
+Se você quiser permitir que o usuário Arraste colunas de reordenação na exibição de tabela, clique duas vezes `Main.storyboard` no arquivo para abri-lo para edição no interface Builder. Selecione o modo de exibição de tabela na **hierarquia de interface** e marque a caixa de seleção **Reordenar** no **Inspetor de atributo**:
 
 [![](table-view-images/reorder01.png "O Inspetor de atributo")](table-view-images/reorder01.png#lightbox)
 
-Se fornecermos um valor para a Propriedade autosave e verificar o campo de **informações da coluna** , as alterações feitas no layout da tabela serão salvas automaticamente para nós e restauradas na próxima vez em que o aplicativo for executado.
+Se fornecermos um valor para a **Propriedade** autosave e verificar o campo de **informações da coluna** , as alterações feitas no layout da tabela serão salvas automaticamente para nós e restauradas na próxima vez em que o aplicativo for executado.
 
 Salve as alterações e retorne ao Visual Studio para Mac para sincronizar com o Xcode.
 

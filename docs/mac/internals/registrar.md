@@ -1,47 +1,47 @@
 ---
-title: Registrador de xamarin. Mac
-description: Este documento descreve a finalidade do registrador de xamarin. Mac e seu static parcial, estático e dinâmico (híbrido) configurações de uso.
+title: Registrador do Xamarin. Mac
+description: Este documento descreve a finalidade do registrador Xamarin. Mac e suas configurações de uso estático dinâmico, estático e parcial (híbrido).
 ms.prod: xamarin
 ms.assetid: 7CAAA6B7-D654-4AD3-BAEC-9DD01210978A
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 11/10/2017
-ms.openlocfilehash: 21e1a2c6ae5a9ad8b6acf520851ea92a340da887
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: d44f445b0c3bcc6fd498372f6cdf3e20be39d5b5
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61032491"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290092"
 ---
-# <a name="xamarinmac-registrar"></a>Registrador de xamarin. Mac
+# <a name="xamarinmac-registrar"></a>Registrador do Xamarin. Mac
 
-_Este documento descreve a finalidade do registrador de xamarin. Mac e suas configurações de uso diferentes._
+_Este documento descreve a finalidade do registrador Xamarin. Mac e suas configurações de uso diferentes._
 
 ## <a name="overview"></a>Visão geral
 
-Xamarin. Mac preenche a lacuna entre o mundo gerenciado (.NET) e o tempo de execução do Cocoa, permitindo que as classes gerenciadas chamar a classes não gerenciadas de Objective-C e ser chamado novamente quando ocorrem eventos. O trabalho necessário para realizar essa "mágica" é tratado pelo registrador de e está, em geral, oculta da exibição.
+O Xamarin. Mac preenche a lacuna entre o mundo gerenciado (.NET) e o tempo de execução do Cocoa, permitindo que classes gerenciadas chamem classes Objective-C não gerenciadas e sejam chamadas de volta quando ocorrerem eventos. O trabalho necessário para realizar essa "mágica" é tratado pelo registrador e, em geral, oculto da exibição.
 
-Há implicações de desempenho do registro, especificamente na inicialização do aplicativo, o tempo e compreender um pouco do que está acontecendo "nos bastidores" às vezes, pode ser útil.
+Há implicações de desempenho desse registro, especificamente sobre o tempo de inicialização do aplicativo, e a compreensão de um pouco do que acontece "nos bastidores" às vezes pode ser útil.
 
 ## <a name="configurations"></a>Configurações
 
-Fundamentalmente, trabalho do registrador durante a inicialização pode ser separado em duas categorias:
+Fundamentalmente, o trabalho do registrador na inicialização pode ser separado em dois categorias:
 
-- Verificar todas as classes gerenciadas para aqueles derivando de NSObject e coletar uma lista de itens a serem expostos ao tempo de execução Objective-C.
-- Registre essas informações com o tempo de execução do Objective-C.
+- Verifique cada classe gerenciada para as derivações de NSObject e colete uma lista de itens a serem expostos para o tempo de execução Objective-C.
+- Registre essas informações com o tempo de execução Objective-C.
 
-Ao longo do tempo, três configurações diferentes de registrador foram criadas para abranger os casos de uso diferentes. Cada um tem compilação diferente e as consequências de tempo de execução:
+Com o tempo, três configurações de registrador diferentes foram criadas para cobrir diferentes casos de uso. Cada um tem consequências de tempo de execução e de compilação diferentes:
 
-- **Registrador dinâmico** – durante a inicialização, usar a reflexão do .NET para examinar todos os tipos carregados, determinar a lista de itens relevantes e informar o tempo de execução nativo. Essa opção adiciona o tempo de zero para a compilação, mas é muito cara de computar durante a inicialização (até vários segundos).
-- **Registrador estático** – durante a compilação, o conjunto de itens a ser registrado e gerar código Objective-C para lidar com o registro de computação. Esse código é invocado durante a inicialização para registrar rapidamente todos os itens. Adiciona que uma pausa significativa para compilação, mas pode recorta uma quantidade significativa de tempo de inicialização do aplicativo.
-- **Estáticos "Parcial"** – uma abordagem de "híbrida" mais recente que leva a maioria das vantagens de ambos. Desde as exportações sejam **xamarin** são constantes, salve uma biblioteca pré-computadas para lidar com seu registro e vinculá-lo no. Use reflexão para lidar com bibliotecas de usuário, mas como bibliotecas de usuário exportar muito menos tipos que as associações de plataforma isso geralmente é bastante rápido. Um neglectable impacto no tempo de compilação e reduz a vasta maioria das "custo" dinâmico.
+- **Registrador dinâmico** – durante a inicialização, use a reflexão do .net para verificar cada tipo carregado, determinar a lista de itens relevantes e informar o tempo de execução nativo. Essa opção adiciona um tempo zero para a compilação, mas é muito cara para computar durante a inicialização (até vários segundos).
+- **Registrador estático** – durante a compilação, COMPUTE o conjunto de itens a serem registrados e gere o código Objective-C para lidar com o registro. Esse código é invocado durante a inicialização para registrar rapidamente todos os itens. Adiciona uma pausa significativa para compilar, mas pode cortar uma quantidade significativa de tempo desde o início do aplicativo.
+- **"Parcial" estática** – uma abordagem "híbrida" mais recente que traz a maioria das vantagens de ambos. Como as exportações de **Xamarin. Mac. dll** são constantes, salve uma biblioteca em computação para lidar com seu registro e vincule-a. Use a reflexão para lidar com as bibliotecas de usuários, mas como as bibliotecas de usuários exportam muito menos tipos que a plataforma vincula a isso é, muitas vezes, rápida. Um impacto inativo no tempo de compilação e reduz a grande parte do "custo" do dinâmico.
 
-Hoje em dia estático parcial é o padrão para configuração de depuração e estático é o padrão para as configurações de versão.
+Hoje, o estático parcial é o padrão para configuração de depuração e estático é o padrão para as configurações de versão.
 
-Existem alguns cenários:
+Há alguns cenários:
 
 - Plug-ins carregados após a inicialização com classes derivadas de NSObject
-- Criado dinamicamente instâncias de classe derivado de NSObject
+- Instâncias de classe criadas dinamicamente derivando de NSObject
 
-onde o registrador é impossível saber que ele precisa registrar algum tipo de início. O `ObjCRuntime.Runtime.RegisterAssembly` método é fornecido para informar o registrador que ele tenha tipos adicionais a serem considerados.
+onde o registrador não consegue saber que precisa registrar algum tipo no início. O `ObjCRuntime.Runtime.RegisterAssembly` método é fornecido para informar ao registrador que ele tem tipos adicionais a serem considerados.

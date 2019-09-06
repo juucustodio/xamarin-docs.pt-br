@@ -4,15 +4,15 @@ description: Este documento descreve pequenas alterações e aprimoramentos em e
 ms.prod: xamarin
 ms.assetid: CA701269-D11E-4DE3-89C1-58EF8993A482
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: b382b7dd66722df6acb4bb7c90e401e5895c0947
-ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
+ms.openlocfilehash: 1de3a0a67fb6abbd4423435b38d7712f583ab74d
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69620900"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70284448"
 ---
 # <a name="additional-macos-sierra-framework-changes"></a>Alterações adicionais de estrutura do MacOS Serra
 
@@ -125,7 +125,7 @@ O aprimoramento a seguir foi feito para a estrutura GamePlayKit para macOS Sierr
 
 O aprimoramento a seguir foi feito na estrutura de metal para macOS Sierra:
 
-- os aplicativos e jogos 3D agora podem usar o mosaico para renderizar com eficiência cenas e geometria complexas por meio da GPU.
+- os aplicativos e jogos 3D agora podem usar o _mosaico_ para renderizar com eficiência cenas e geometria complexas por meio da GPU.
 - Use a especialização de função para criar uma coleção altamente otimizada de funções de combinação de material e leve para uma cena.
 - Forneça um controle refinado de alocação de recursos para otimizar o desempenho de aplicativos baseados em metal usando heaps de recursos e destinos de renderização sem memória.
 

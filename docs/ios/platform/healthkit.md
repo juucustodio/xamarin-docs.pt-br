@@ -4,15 +4,15 @@ description: Este documento descreve o HealthKit, uma estrutura introduzida no i
 ms.prod: xamarin
 ms.assetid: E3927A21-507C-43BA-A2AD-957716BA9B52
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: 6446bd7ef196fadae25c0e4dc18542d269424d6d
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 7e8230af1e9d4eef43b4142834afc0e90973c768
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70200277"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70288664"
 ---
 # <a name="healthkit-in-xamarinios"></a>HealthKit no Xamarin. iOS
 
@@ -345,7 +345,7 @@ Observe que sempre que esses eventos são acionados, isso é feito `NSObject.Inv
 
 O código específico do kit de `HeartRateModel` integridade no está nas duas `HeartRateInBeatsPerMinute()` funções `StoreHeartRate()`e. 
 
-`HeartRateInBeatsPerMinute()`converte seu argumento em um kit `HKQuantity`de integridade fortemente tipado. O tipo da `HKQuantityTypeIdentifierKey.HeartRate` quantidade é especificado pelo e as unidades da quantidade são `HKUnit.Count` divididas por `HKUnit.Minute` (em outras palavras, a unidade é de batidas *por minuto*). 
+`HeartRateInBeatsPerMinute()`converte seu argumento em um kit `HKQuantity`de integridade fortemente tipado. O tipo da `HKQuantityTypeIdentifierKey.HeartRate` quantidade é especificado pelo e as unidades da quantidade são `HKUnit.Count` divididas por `HKUnit.Minute` (em outras palavras, a unidade é de *batidas por minuto*). 
 
 A `StoreHeartRate()` função usa um `HKQuantity` (no aplicativo de exemplo, um criado por `HeartRateInBeatsPerMinute()` ). Para validar seus dados, ele usa o `HKQuantity.IsCompatible()` método, que retorna `true` se as unidades do objeto podem ser convertidas nas unidades do argumento. Se a quantidade foi criada com `HeartRateInBeatsPerMinute()` isso, obviamente retornará `true`, mas também retornará `true` se a quantidade tiver sido criada como, por exemplo, de *batidas por hora*. Mais comumente, `HKQuantity.IsCompatible()` pode ser usado para validar a massa, a distância e a energia que o usuário ou um dispositivo pode inserir ou exibir em um sistema de medida (como unidades Imperial), mas que podem ser armazenados em outro sistema (como unidades métricas). 
 

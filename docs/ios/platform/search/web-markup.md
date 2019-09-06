@@ -4,15 +4,15 @@ description: Este documento descreve como criar resultados de pesquisa baseados 
 ms.prod: xamarin
 ms.assetid: 876315BA-2EF9-4275-AE33-A3A494BBF7FD
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/20/2017
-ms.openlocfilehash: 77d526fd49ac62788bea1ab885cb1248ffc5697e
-ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
+ms.openlocfilehash: 87037c8c3797c7c305ce2689172bda1babbc26bd
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69620955"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291713"
 ---
 # <a name="search-with-web-markup-in-xamarinios"></a>Pesquisar com marcação da Web no Xamarin. iOS
 
@@ -50,7 +50,7 @@ Forneça uma faixa de aplicativo inteligente em seu site para apresentar um link
 <meta name="AppName" content="app-id=123456, app-argument=http://company.com/AppName">
 ```
 
-Para obter mais informações, consulte a documentação promovendo aplicativos da Apple [com faixas de aplicativos inteligentes](https://developer.apple.com/library/ios/documentation/AppleApplications/Reference/SafariWebContent/PromotingAppswithAppBanners/PromotingAppswithAppBanners.html) .
+Para obter mais informações, consulte a documentação [promovendo aplicativos da Apple com faixas de aplicativos inteligentes](https://developer.apple.com/library/ios/documentation/AppleApplications/Reference/SafariWebContent/PromotingAppswithAppBanners/PromotingAppswithAppBanners.html) .
 
 ## <a name="using-universal-links"></a>Usando links universais
 

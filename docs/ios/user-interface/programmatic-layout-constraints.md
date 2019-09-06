@@ -4,15 +4,15 @@ description: Este guia apresenta o trabalho com restrições de layout automáti
 ms.prod: xamarin
 ms.assetid: 119C8365-B470-4CD4-85F7-086F0A46DCBB
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: c26e064a32762dcb1d088e614830a7a9632f9b1b
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 1c8cc9d810a7555626cb00ab0a05dfe03896c94a
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70120720"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292998"
 ---
 # <a name="programmatic-layout-constraints-in-xamarinios"></a>Restrições de layout programáticos no Xamarin. iOS
 
@@ -30,7 +30,7 @@ Este guia mostrará como criar e trabalhar com restrições usando C# código em
 
 Como mencionado acima, normalmente você trabalhará com restrições de layout automático no designer do iOS. Para os horários em que você precisa criar suas restrições programaticamente, você tem três opções para escolher:
 
-- [Âncoras de layout](#Layout-Anchors) -essa API fornece acesso às propriedades de âncora `TopAnchor`( `BottomAnchor` como ou `HeightAnchor`) dos itens da interface do usuário que estão sendo restringidos.
+- [Âncoras de layout](#Layout-Anchors) -essa API fornece acesso às propriedades de âncora ( `TopAnchor` `BottomAnchor` como ou `HeightAnchor`) dos itens da interface do usuário que estão sendo restringidos.
 - [Restrições de layout](#Layout-Constraints) -você pode criar restrições diretamente usando `NSLayoutConstraint` a classe.
 - [Linguagem de formatação visual](#Visual-Format-Language) – fornece uma arte ASCII como método para definir suas restrições.
 

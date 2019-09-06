@@ -2,15 +2,15 @@
 ms.assetid: 77F12838-DBB1-48AC-ACF8-B934998B6EC8
 title: Exemplos de área de trabalho entre plataformas
 description: Este documento contém links para vários aplicativos de exemplo que foram portados para execução como aplicativos de plataforma cruzada com o Xamarin.
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 04/26/2017
-ms.openlocfilehash: 7af820e1c73c3b41e58ef8a9ee8ab5ea3a601834
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 3363fe8c1835db18dae47559f0c07ddaa4cc7594
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68647554"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290349"
 ---
 # <a name="cross-platform-desktop-samples"></a>Exemplos de área de trabalho entre plataformas
 

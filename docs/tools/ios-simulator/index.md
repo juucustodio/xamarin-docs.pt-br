@@ -1,69 +1,74 @@
 ---
 title: Simulador remoto de iOS para Windows
-description: O simulador para Windows de iOS remoto permite que você teste seus aplicativos em um simulador de iOS exibido no Windows, junto com o Visual Studio de 2019.
+description: O iOS Simulator remoto para Windows permite que você teste seus aplicativos em um simulador de iOS exibido no Windows juntamente com o Visual Studio 2019.
 ms.prod: xamarin
 ms.assetid: 63c50190-7e54-4140-a30d-1a0e577c47d7
-author: lobrien
-ms.author: laobri
-ms.date: 04/02/2019
-ms.openlocfilehash: b962390d5a5a365ada93d1778e3efb65839f41c5
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+author: conceptdev
+ms.author: crdun
+ms.date: 04/26/2019
+ms.openlocfilehash: 3067493315c62c46f44fb94aa61a919e1449080b
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61188788"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70289703"
 ---
 # <a name="remoted-ios-simulator-for-windows"></a>Simulador remoto de iOS para Windows
 
-O simulador para Windows de iOS remoto permite que você teste seus aplicativos em um simulador de iOS exibido no Windows, juntamente com 2019 do Visual Studio e Visual Studio 2017.
+O iOS Simulator remoto para Windows permite que você teste seus aplicativos em um simulador de iOS exibido no Windows juntamente com o Visual Studio 2019 e o Visual Studio 2017.
 
-[![simulador de iOS em execução no Windows](images/hero-sml.png "simulador de iOS em execução no Windows")](images/hero.png#lightbox)
+[![simulador do Ios em execução no Windows](images/hero-sml.png "simulador do Ios em execução no Windows")](images/hero.png#lightbox)
 
 ## <a name="getting-started"></a>Introdução
 
-O simulador de iOS remoto para Windows é instalado automaticamente como parte do Xamarin no Visual Studio de 2019 e Visual Studio 2017. Para usá-lo, siga estas etapas:
+O iOS Simulator remoto para Windows é instalado automaticamente como parte do Xamarin no Visual Studio 2019 e no Visual Studio 2017. Para usá-lo, siga estas etapas:
 
-1. [Emparelhe o Visual de 2019 para um host de Build do Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
-2. No Visual Studio, inicie a depuração de um projeto do iOS ou tvOS. O simulador de iOS remoto para Windows aparecerá em seu computador Windows.
+1. [Emparelhe o Visual 2019 em um host de Build do Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
+2. No Visual Studio, inicie a depuração de um projeto iOS ou tvOS. O iOS Simulator remoto para Windows será exibido no computador Windows.
 
-Assista [este vídeo](deploy.md) para obter um guia passo a passo.
+Assista [a este vídeo](deploy.md) para obter um guia passo a passo.
 
 ## <a name="simulator-window"></a>Janela do simulador
 
-Barra de ferramentas na parte superior da janela do simulador contém um número de botões úteis:
+A barra de ferramentas na parte superior da janela do simulador contém vários botões úteis:
 
-- **Página inicial** – simula o botão página inicial em um dispositivo iOS.
-- **Bloqueio** – bloqueia o simulador (passar o dedo para desbloquear).
-- **Captura de tela** – salva uma captura de tela do simulador (armazenado no **Pictures\Xamarin\iOS Simulator\\**).
-- [**As configurações** ](#settings) – exibe o teclado, local e outras configurações.
-- [**Outras opções** ](#other-options) – traz várias opções de simulador, como rotação, shake gestos e ID de toque.
+- **Página inicial** – simula o botão página inicial em um dispositivo IOS.
+- **Bloquear** – bloqueia o simulador (passe o dedo para desbloquear).
+- **Captura de tela** – salva uma captura de tela do simulador (armazenado no **Pictures\Xamarin\iOS Simulator\\** ).
+- [**Configurações**](#settings) – exibe o teclado, o local e outras configurações.
+- [**Outras opções**](#other-options) – exibe várias opções de simulador, como rotação, gestos de agitar e Touch ID.
 
-    [![simulador de iOS de exemplo é mapeado](images/maps-app-sml.png "simulador de iOS mapeia de exemplo")](images/maps-app.png#lightbox)
+    [![exemplo de mapas do simulador do IOS](images/maps-app-sml.png "exemplo de mapas do simulador do IOS")](images/maps-app.png#lightbox)
 
 ## <a name="settings"></a>Configurações
 
-Clicar no ícone da barra de ferramentas engrenagem abre o **configurações** janela:
+Clicar no ícone de engrenagem da barra de ferramentas abre a janela **configurações** :
 
-[![as configurações do iOS simulator](images/settings-sml.png "configurações do simulador de iOS")](images/settings.png#lightbox)
+[![configurações do simulador do IOS](images/settings-sml.png "configurações do simulador do IOS")](images/settings.png#lightbox)
 
-Essas configurações permitem que você habilite o teclado de hardware, escolha um local que o dispositivo deve relatório (estáticos e em movimento locais têm suporte), habilitar o Touch ID e redefinir o conteúdo e configurações para o simulador.
+Essas configurações permitem que você habilite o teclado de hardware, escolha um local que o dispositivo deve relatar (os locais estáticos e em movimento têm suporte), habilite a ID de toque e redefina o conteúdo e as configurações do simulador.
 
 ## <a name="other-options"></a>Outras opções
 
-Botão de reticências da barra de ferramentas revela as outras opções, como rotação, shake gestos e reinicializar. Essas mesmas opções podem ser exibidas como uma lista clicando em qualquer lugar na janela do simulador:
+O botão de reticências da barra de ferramentas revela outras opções, como rotação, agitar gestos e reinicialização. Essas mesmas opções podem ser exibidas como uma lista clicando com o botão direito do mouse em qualquer lugar na janela do simulador:
 
-[![configurações adicionais do iOS simulator](images/more-sml.png "configurações adicionais do simulador de iOS")](images/more.png#lightbox)
+[![configurações adicionais do simulador do IOS](images/more-sml.png "configurações adicionais do simulador do IOS")](images/more.png#lightbox)
 
-## <a name="touchscreen-support"></a>Suporte de tela sensível ao toque
+## <a name="touchscreen-support"></a>Suporte à tela touch
 
-Computadores mais modernos do Windows possuem telas sensíveis ao toque. Como o simulador para Windows de iOS remoto oferece suporte a interações de toque, você pode testar seu aplicativo com a mesma situação de emergência, passe o dedo e gestos de toque de vários dedos que você usa com dispositivos iOS físicos.
+A maioria dos computadores Windows modernos tem telas de toque. Como o iOS Simulator remoto para Windows dá suporte a interações de toque, você pode testar seu aplicativo com os mesmos gestos de toque, passar o dedo e vários dedos que você usa com dispositivos iOS físicos.
 
-Da mesma forma, o simulador para Windows de iOS remoto trata entrada de caneta do Windows como entrada de lápis de Apple.
+Da mesma forma, o iOS Simulator remoto para Windows trata a entrada da caneta do Windows como entrada do Apple lápis.
 
-## <a name="disabling-the-remoted-ios-simulator-for-windows"></a>Desabilitando o simulador para Windows de iOS remoto
+## <a name="sound-handling"></a>Manipulação de som
 
-Para desabilitar o simulador para Windows de iOS remoto, navegue até **Ferramentas > Opções > Xamarin > configurações do iOS** e desmarque **Simulator remoto para Windows**.
+Os sons reproduzidos pelo simulador serão provenientes dos alto-falantes do Mac do host.
+os sons do iOS não são ouvidos no computador com Windows.
+
+## <a name="disabling-the-remoted-ios-simulator-for-windows"></a>Desabilitando o simulador do iOS remoto para Windows
+
+Para desabilitar o simulador do iOS remoto para Windows, navegue até **ferramentas > opções > Xamarin > Ios configurações** e desmarque **simulador remoto para Windows**.
 
 [![caixa de seleção para usar o simulador](images/options-sml.png "caixa de seleção para usar o simulador")](images/options.png#lightbox)
 
-Com essa opção desabilitada, depuração abre o simulador de iOS no Mac conectado host de build.
+Com essa opção desabilitada, a depuração abre o simulador de iOS no host de Build do Mac conectado.

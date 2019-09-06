@@ -3,15 +3,15 @@ title: Criando exibições HTML usando modelos do Razor
 description: " Usar uma página da Web de tela inteira para renderizar HTML pode ser uma maneira simples e eficaz de processar formatação complexa em uma forma de plataforma cruzada, especialmente se você já tiver o HTML, JavaScript e CSS de um projeto de site."
 ms.prod: xamarin
 ms.assetid: D8B87C4F-178E-48D9-BE43-85066C46F05C
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 07/24/2018
-ms.openlocfilehash: d822a4dc50d3f33ba4c217b8fcc557acc2bfdb3e
-ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
+ms.openlocfilehash: ccad60f749732ae2d0bf8e9852859b13af3a629e
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69621029"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70284915"
 ---
 # <a name="building-html-views-using-razor-templates"></a>Criando exibições HTML usando modelos do Razor
 
@@ -58,7 +58,7 @@ var html = "<html><h1>Hello</h1><p>World</p></html>";
 webView.LoadDataWithBaseURL("file:///android_asset/", html, "text/html", "UTF-8", null);
 ```
 
-Consulte as receitas da WebView do [Android](http://docs.xamarin.com/recipes/android/controls/webview/) para obter mais detalhes sobre como usar o controle WebView.
+Consulte as receitas da [WebView do Android](http://docs.xamarin.com/recipes/android/controls/webview/) para obter mais detalhes sobre como usar o controle WebView.
 
 ### <a name="specifying-the-base-directory"></a>Especificando o diretório base
 

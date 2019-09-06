@@ -4,15 +4,15 @@ description: Este guia descreve como usar o Emparelhar com Mac para conectar o V
 ms.prod: xamarin
 ms.assetid: 39DD7B3F-3E69-4E2A-B743-4C26AF613025
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 05/29/2018
-ms.openlocfilehash: e77a5d7863428d743c536b5aa7b2bb88d12cffc0
-ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
-ms.translationtype: HT
+ms.openlocfilehash: 5889859543deaecccb72740fccbc2b3343a8297f
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "64978321"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292121"
 ---
 # <a name="pair-to-mac-for-xamarinios-development"></a>Emparelhar com o Mac para desenvolvimento no Xamarin.iOS
 
@@ -39,12 +39,12 @@ O Emparelhar com Mac permite o seguinte fluxo de trabalho de desenvolvimento:
 - É possível usar a linha de comando do Windows para criar aplicativos iOS.
 
 > [!NOTE]
-> 
+>
 > Antes de seguir as instruções neste guia, conclua as seguintes etapas:
-> 
+>
 > - Em um computador Windows, [instale o Visual Studio 2019](~/get-started/installation/windows.md)
 > - Em um Mac, [instale o Xcode](https://itunes.apple.com/us/app/xcode/id497799835?mt=12) e o [Visual Studio para Mac](https://docs.microsoft.com/visualstudio/mac/installation)
->    - _Você deve abrir o Xcode manualmente após a instalação_ para que ele inclua componentes adicionais.
+>   - _Você deve abrir o Xcode manualmente após a instalação_ para que ele inclua componentes adicionais.
 >
 > Se preferir não instalar o Visual Studio para Mac, o Visual Studio 2019 poderá configurar automaticamente o host de build do Mac com Xamarin.iOS e Mono.
 > Ainda será necessário instalar e executar o Xcode.
@@ -74,28 +74,28 @@ Agora que o acesso remoto está habilitado, conecte o Visual Studio 2019 ao Mac.
 
 1. No Visual Studio 2019, abra um projeto existente do iOS ou crie um escolhendo **Arquivo > Novo > Projeto** e, em seguida, selecione um modelo de projeto do iOS.
 
-2. Abra a caixa de diálogo **Emparelhar com Mac**. 
+2. Abra a caixa de diálogo **Emparelhar com Mac**.
 
     - Use o botão **Emparelhar com Mac** na barra de ferramentas do iOS:
 
-        ![A barra de ferramentas do iOS com o botão Emparelhar com Mac realçado](images/ios-toolbar.png "A barra de ferramentas do iOS com o botão Emparelhar com Mac realçado")
+      ![A barra de ferramentas do iOS com o botão Emparelhar com Mac realçado](images/ios-toolbar.png "A barra de ferramentas do iOS com o botão Emparelhar com Mac realçado")
 
     - Ou selecione **Ferramentas > iOS > Emparelhar com Mac**.
 
     - A caixa de diálogo **Emparelhar com Mac** exibe uma lista de todos os hosts de build disponíveis do Mac conectados anteriormente e atualmente:
 
-        ![A caixa de diálogo Emparelhar com Mac](images/pairtomac.png "A caixa de diálogo Emparelhar com Mac")
+      ![A caixa de diálogo Emparelhar com Mac](images/pairtomac.png "A caixa de diálogo Emparelhar com Mac")
 
-3. Selecione um Mac na lista. Clique em **Conectar**. 
+3. Selecione um Mac na lista. Clique em **Conectar**.
 
 4. Insira o nome de usuário e a senha.
 
     - Na primeira vez que se conectar a um Mac, você precisará inserir seu nome de usuário e senha do computador:
 
-        ![Inserir um nome de usuário e uma senha para o Mac](images/auth.png "Inserir um nome de usuário e uma senha para o Mac")
+      ![Inserir um nome de usuário e uma senha para o Mac](images/auth.png "Inserir um nome de usuário e uma senha para o Mac")
 
-        > [!TIP]
-        > Ao fazer logon, use seu nome de usuário do sistema em vez do nome completo.
+      > [!TIP]
+      > Ao fazer logon, use seu nome de usuário do sistema em vez do nome completo.
 
     - O Emparelhar com Mac usa essas credenciais para criar uma conexão SSH com o Mac. Se tiver êxito, uma chave será adicionada ao arquivo **authorized_keys** no Mac. As conexões subsequentes com o mesmo Mac farão logon automaticamente.
 
@@ -107,12 +107,12 @@ Agora que o acesso remoto está habilitado, conecte o Visual Studio 2019 ao Mac.
 
     - Quando o Visual Studio 2019 é conectado a um Mac, o item do Mac na caixa de diálogo **Emparelhar com Mac** exibe um ícone que indica que ele está conectado no momento:
 
-        ![Um Mac conectado](images/connected.png "Um Mac conectado")
+      ![Um Mac conectado](images/connected.png "Um Mac conectado")
 
       Pode haver apenas um Mac conectado por vez.
 
       > [!TIP]
-      > Clicar com o botão direito do mouse em qualquer Mac na lista **Emparelhar com Mac** exibe um menu de contexto que permite **Conectar...**, **Esquecer este Mac** ou **Desconectar**:
+      > Clicar com o botão direito do mouse em qualquer Mac na lista **Emparelhar com Mac** exibe um menu de contexto que permite **Conectar...** , **Esquecer este Mac** ou **Desconectar**:
       >
       > ![Os menus de contexto do Emparelhar com Mac](images/contextmenu.png "Os menus de contexto do Emparelhar com Mac")
       >
@@ -126,22 +126,22 @@ Se ainda não tiver feito o emparelhamento com um Mac, tente [adicionar manualme
 
 Se não vir um Mac específico listado na caixa de diálogo **Emparelhar com Mac**, adicione-o manualmente:
 
-1. Localize o endereço IP do Mac. 
+1. Localize o endereço IP do Mac.
 
     - Abra **Preferências do Sistema > Compartilhamento > Acesso Remoto** no seu Mac:
 
-        [![O endereço IP do Mac em Preferências do Sistema > Compartilhamento](images/sharing-ipaddress.png "O endereço IP do Mac em Preferências do Sistema > Compartilhamento")](images/sharing.png#lightbox)
+      [![O endereço IP do Mac em Preferências do Sistema > Compartilhamento](images/sharing-ipaddress.png "O endereço IP do Mac em Preferências do Sistema > Compartilhamento")](images/sharing.png#lightbox)
 
-    - Como alternativa, use a linha de comando. No Terminal, execute este comando: 
+    - Como alternativa, use a linha de comando. No Terminal, execute este comando:
 
-        ```bash
-        $ ipconfig getifaddr en0
-        196.168.1.8
-        ```
+      ```bash
+      $ ipconfig getifaddr en0
+      196.168.1.8
+      ```
 
       Dependendo de sua configuração de rede, talvez seja necessário usar um nome de interface diferente de `en0`. Por exemplo: `en1`, `en2`, etc.
 
-2. Na caixa de diálogo **Emparelhar com Mac** do Visual Studio 2019, selecione **Adicionar Mac...**:
+2. Na caixa de diálogo **Emparelhar com Mac** do Visual Studio 2019, selecione **Adicionar Mac...** :
 
     [![O botão Adicionar Mac na caixa de diálogo Emparelhar com Mac](images/addtomac.png "O botão Adicionar Mac na caixa de diálogo Emparelhar com Mac")](images/addtomac-large.png#lightbox)
 
@@ -171,7 +171,7 @@ O Emparelhar com Mac executa instalações/atualizações de software necessári
 
 ### <a name="mono"></a>Mono
 
-O Emparelhar com Mac fará a verificação para certificar-se de que o Mono está instalado. Se não estiver instalado, o Emparelhar com Mac baixará e instalará a versão estável mais recente do Mono no Mac. 
+O Emparelhar com Mac fará a verificação para certificar-se de que o Mono está instalado. Se não estiver instalado, o Emparelhar com Mac baixará e instalará a versão estável mais recente do Mono no Mac.
 
 O progresso é indicado por vários prompts, conforme mostrado pelas seguintes capturas de tela (clique para ampliar):
 

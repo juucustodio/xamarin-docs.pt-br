@@ -4,15 +4,15 @@ description: Este documento descreve como ler seletores Objective-C e como local
 ms.prod: xamarin
 ms.assetid: 9F7451FA-E07E-4C7B-B5CF-27AFC157ECDA
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/02/2017
-ms.openlocfilehash: 9dfc2b6602baf6965a8cdfddf2ca8050262ff83b
-ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
+ms.openlocfilehash: c7dfa87d2fa4e3e5b917029451a081640a552cce
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69620586"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70280998"
 ---
 # <a name="macos-apis-for-xamarinmac-developers"></a>APIs do macOS para desenvolvedores do Xamarin. Mac
 

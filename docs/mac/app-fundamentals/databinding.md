@@ -4,15 +4,15 @@ description: Este artigo aborda o uso da codificação de valor-chave e da obser
 ms.prod: xamarin
 ms.assetid: 72594395-0737-4894-8819-3E1802864BE7
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 0816afe7831338348f7612576041623abe8ba283
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: ab5355459f12c8b3cb7fa5f262f015bfd64d3e08
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227260"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290156"
 ---
 # <a name="data-binding-and-key-value-coding-in-xamarinmac"></a>Vinculação de dados e codificação de chave-valor no Xamarin. Mac
 
@@ -28,7 +28,7 @@ Usando a codificação de valor chave e técnicas de vinculação de dados em se
 
 Neste artigo, abordaremos as noções básicas de como trabalhar com codificação de chave-valor e vinculação de dados em um aplicativo Xamarin. Mac. É altamente recomendável que você trabalhe pelo artigo [Hello, Mac](~/mac/get-started/hello-mac.md) primeiro, especificamente a [introdução às seções Xcode e Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) e [ações](~/mac/get-started/hello-mac.md#outlets-and-actions) , pois ela aborda os principais conceitos e técnicas que usaremos em Este artigo.
 
-Talvez você queira dar uma olhada na seção [expondo C# classes/métodos para Objective-C](~/mac/internals/how-it-works.md) do documento [interno do Xamarin. Mac](~/mac/internals/how-it-works.md) também, explica `Register` os atributos e `Export` usados para conectar suas C# classes ao Objetos Objective-C e elementos de interface do usuário.
+Talvez você queira dar uma olhada na seção [expondo C# classes/métodos para Objective-C](~/mac/internals/how-it-works.md) do documento [interno do Xamarin. Mac](~/mac/internals/how-it-works.md) também, explica os `Register` atributos e `Export` usados para conectar suas C# classes ao Objetos Objective-C e elementos de interface do usuário.
 
 <a name="What_is_Key-Value_Coding" />
 
@@ -317,7 +317,7 @@ namespace MacDatabinding
 }
 ```
 
-A maioria dos recursos dessa classe foi abordada na seção [o que é codificação de chave-valor](#What_is_Key-Value_Coding) acima. No entanto, vamos dar uma olhada em alguns elementos específicos e algumas adições feitas para permitir que essa classe atue como um modelo de dados para **controladores de matriz** e controladores de **árvore** (que usaremos posteriormente para exibições de **árvore**de ligação de dados, exibições de estrutura de **Tópicos** e **exibições de coleção**).
+A maioria dos recursos dessa classe foi abordada na seção [o que é codificação de chave-valor](#What_is_Key-Value_Coding) acima. No entanto, vamos dar uma olhada em alguns elementos específicos e algumas adições feitas para permitir que essa classe atue como um modelo de dados para **controladores de matriz** e controladores de **árvore** (que usaremos posteriormente para **exibições de árvore**de ligação de dados, **exibições de estrutura de tópicos** e **exibições de coleção**).
 
 Primeiro, como um funcionário pode ser um gerente, usamos um `NSArray` (especificamente um `NSMutableArray` para que os valores possam ser modificados) para permitir que os funcionários que eles gerenciaram sejam anexados a eles:
 
@@ -333,7 +333,7 @@ public NSArray People {
 
 Duas coisas a serem observadas aqui:
 
-1. Usamos um `NSMutableArray` em vez de uma matriz C# ou coleção padrão, pois isso é um requisito para associar dados a controles AppKit, como exibições de **tabela**, exibições de **estrutura de tópicos** e **coleções**.
+1. Usamos um `NSMutableArray` em vez de uma matriz C# ou coleção padrão, pois isso é um requisito para associar dados a controles AppKit, como **exibições de tabela**, **exibições de estrutura de tópicos** e **coleções**.
 2. Nós exportamos a matriz de funcionários, convertendo `NSArray` -o em um para fins de C# vinculação de dados `People`e alteramos seu nome formatado,, `personModelArray` para um que a vinculação de dados espera, na matriz do formato **{class_name}** (Observe que o primeiro o caractere foi tornado em letras minúsculas).
 
 Em seguida, precisamos adicionar alguns métodos públicos de nome especialmente para dar suporte a **controladores de matriz** e de **árvore**:
@@ -482,7 +482,7 @@ Para associar os dados ao formulário `PersonModel` que expunhamos por meio da `
 7. Selecione o **número de funcionários gerenciados** rótulo, expanda o Turndown **oculto** e marque a caixa **associar a** e selecione **controlador de exibição simples** no menu suspenso. Em seguida `self.Person.isManager` , insira para o **caminho da chave**:
 
     [![Inserindo o caminho da chave](databinding-images/simple07.png "Inserindo o caminho da chave")](databinding-images/simple07-large.png#lightbox)
-8. Selecione `NSNegateBoolean` na lista suspensa **valor** do transformador:
+8. Selecione `NSNegateBoolean` na lista suspensa **valor do transformador** :
 
     ![Selecionando a transformação chave NSNegateBoolean](databinding-images/simple08.png "Selecionando a transformação chave NSNegateBoolean")
 9. Isso informa à ligação de dados que o rótulo ficará oculto se o valor da `isManager` propriedade for `false`.
@@ -501,7 +501,7 @@ Todas as alterações que os usuários fizerem no formulário serão gravadas no
 
 ### <a name="table-view-data-binding"></a>Vinculação de dados de exibição de tabela
 
-Agora que temos os conceitos básicos da ligação de dados do caminho, vamos examinar uma tarefa de ligação de dados mais complexa usando um controlador de _matriz_ e uma ligação de dados para uma exibição de tabela. Para obter mais informações sobre como trabalhar com exibições de tabela, consulte a documentação de exibições de [tabela](~/mac/user-interface/table-view.md) .
+Agora que temos os conceitos básicos da ligação de dados do caminho, vamos examinar uma tarefa de ligação de dados mais complexa usando um controlador de _matriz_ e uma ligação de dados para uma exibição de tabela. Para obter mais informações sobre como trabalhar com exibições de tabela, consulte a documentação de [exibições de tabela](~/mac/user-interface/table-view.md) .
 
 Primeiro, vamos adicionar um novo **controlador de exibição** ao nosso arquivo **Main. Storyboard** em interface Builder e nomear sua `TableViewController`classe:
 
@@ -616,7 +616,7 @@ Se executarmos o aplicativo, a tabela será populada com nossa matriz `PersonMod
 
 ### <a name="outline-view-data-binding"></a>modo de exibição da Estrutura do Código Associação de dados
 
-a vinculação de dados em um modo de exibição de estrutura de tópicos é muito semelhante à de uma exibição de tabela. A principal diferença é que usaremos um **controlador de árvore** em vez de um **controlador de matriz** para fornecer os dados associados ao modo de exibição de estrutura de tópicos. Para obter mais informações sobre como trabalhar com exibições de estrutura de tópicos, consulte a documentação de exibições de [estrutura de tópicos](~/mac/user-interface/outline-view.md) .
+a vinculação de dados em um modo de exibição de estrutura de tópicos é muito semelhante à de uma exibição de tabela. A principal diferença é que usaremos um **controlador de árvore** em vez de um **controlador de matriz** para fornecer os dados associados ao modo de exibição de estrutura de tópicos. Para obter mais informações sobre como trabalhar com exibições de estrutura de tópicos, consulte a documentação de [exibições de estrutura de tópicos](~/mac/user-interface/outline-view.md) .
 
 Primeiro, vamos adicionar um novo **controlador de exibição** ao nosso arquivo **Main. Storyboard** em interface Builder e nomear sua `OutlineViewController`classe:
 
@@ -739,7 +739,7 @@ Se executarmos o aplicativo, o contorno será preenchido com nossa matriz de `Pe
 A associação de dados com uma exibição de coleção é muito semelhante à associação com uma exibição de tabela, uma vez que um controlador de matriz é usado para fornecer dados para a coleção. Como a exibição de coleção não tem um formato de exibição predefinido, mais trabalho é necessário para fornecer comentários de interação do usuário e para rastrear a seleção do usuário.
 
 > [!IMPORTANT]
-> Devido a um problema no Xcode 7 e no macOS 10,11 (e superior), as exibições de coleção não podem ser usadas dentro de um arquivo de storyboard (. Storyboard). Como resultado, você precisará continuar a usar arquivos. xib para definir suas exibições de coleção para seus aplicativos Xamarin. Mac. Consulte a documentação de exibições de [coleção](~/mac/user-interface/collection-view.md) para obter mais informações.
+> Devido a um problema no Xcode 7 e no macOS 10,11 (e superior), as exibições de coleção não podem ser usadas dentro de um arquivo de storyboard (. Storyboard). Como resultado, você precisará continuar a usar arquivos. xib para definir suas exibições de coleção para seus aplicativos Xamarin. Mac. Consulte a documentação de [exibições de coleção](~/mac/user-interface/collection-view.md) para obter mais informações.
 
 <!--KKM 012/16/2015 - Once Apple fixes the issue with Xcode and Collection Views in Storyboards, we can uncomment this section.
 

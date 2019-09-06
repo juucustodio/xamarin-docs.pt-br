@@ -3,15 +3,15 @@ title: Parte 4 – Lidar com várias plataformas
 description: Este documento descreve como lidar com a divergência de aplicativos com base na plataforma ou no recurso. Ele discute o tamanho da tela, metáforas de navegação, toque e gestos, notificações por push e paradigmas de interface, como listas e guias.
 ms.prod: xamarin
 ms.assetid: BBE47BA8-78BC-6A2B-63BA-D1A45CB1D3A5
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/23/2017
-ms.openlocfilehash: 993a455ff0d376f213c403a55df71b3ac52d0d4b
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: fb01d0ca56365fa95aa563ca99394dea39dc7d31
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69887666"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70288891"
 ---
 # <a name="part-4---dealing-with-multiple-platforms"></a>Parte 4 – Lidar com várias plataformas
 
@@ -44,7 +44,7 @@ Além dos elementos básicos que existem em todas as plataformas, você precisar
 
 - **Tamanhos de tela** – algumas plataformas (como Ios e versões de Windows Phone anteriores) têm tamanhos de tela padronizados que são relativamente simples de direcionar. Os dispositivos Android têm uma grande variedade de dimensões de tela, que exigem mais esforço para dar suporte ao seu aplicativo.
 - **Metáforas de navegação** – diferem entre plataformas (por exemplo, botão "voltar" do hardware, controle de interface do usuário do panorama) e em plataformas (Android 2 e 4, iPhone vs iPad).
-- Teclados – alguns dispositivos Android têm placas físicas, enquanto outras têm apenas um Keyboard de software. O código que detecta quando um teclado suave está ocultando parte da tela precisa ser sensível a essas diferenças.
+- **Teclados – alguns** dispositivos Android têm placas físicas, enquanto outras têm apenas um Keyboard de software. O código que detecta quando um teclado suave está ocultando parte da tela precisa ser sensível a essas diferenças.
 - **Toque e gestos** – o suporte do sistema operacional para reconhecimento de gestos varia, especialmente em versões mais antigas de cada sistema operacional. As versões anteriores do Android têm suporte muito limitado para operações de toque, o que significa que o suporte a dispositivos mais antigos pode exigir código separado
 - **Notificações por push** – há diferentes recursos/implementações em cada plataforma (por exemplo, Blocos dinâmicos no Windows).
 

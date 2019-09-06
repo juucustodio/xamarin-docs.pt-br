@@ -4,15 +4,15 @@ description: Este documento fornece uma introdução rápida à criação de int
 ms.prod: xamarin
 ms.assetid: 20719B5D-8147-4E8A-A23C-8D575C7ACCEE
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 05/02/2017
-ms.openlocfilehash: b93cc584a58d864e6dc7477dc7f76d4f59844d48
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 498f73d6e5942fe305dc19effc83b9d976d86ac5
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68652405"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291912"
 ---
 # <a name="storyboards-in-xamarinmac-quick-start"></a>Storyboards no Xamarin. Mac – Início Rápido
 

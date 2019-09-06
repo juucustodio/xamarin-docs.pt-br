@@ -4,15 +4,15 @@ description: 'Este documento descreve como trabalhar com vários ícones de apli
 ms.prod: xamarin
 ms.assetid: B7791574-4A0F-4CB6-8C18-36D40B5C91EB
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 05/22/2017
-ms.openlocfilehash: dd712940ff6e7000ffd9181f808a8ab32093b38d
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: a44f0921b959c6b8fd6f076fd119ea52345f821f
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70121469"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70282649"
 ---
 # <a name="application-icons-in-xamarinios"></a>Ícones de aplicativo no Xamarin. iOS
 

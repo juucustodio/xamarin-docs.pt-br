@@ -4,15 +4,15 @@ description: Este documento descreve o comando match do fastlane, que é usado p
 ms.prod: xamarin
 ms.assetid: C4A2A67E-0643-4CED-B1A9-79D65054F3CA
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: 92631fa50dc4826e70df4333bb55f7f69937d053
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
-ms.translationtype: HT
+ms.openlocfilehash: 8991ddc55069fad8c5f023f35ece0926f0f7e5b8
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69526551"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70285722"
 ---
 # <a name="fastlane-for-ios---match"></a>fastlane para iOS - match
 

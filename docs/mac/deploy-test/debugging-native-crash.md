@@ -4,15 +4,15 @@ description: Este documento descreve como depurar exceções originadas no tempo
 ms.prod: xamarin
 ms.assetid: B0C0CE31-2737-4969-8EA5-D39D3333E9C2
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 10/19/2016
-ms.openlocfilehash: 4a80b14aeb1517bac1e0d994a606ac4e74b2a94a
-ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
-ms.translationtype: HT
+ms.openlocfilehash: bb33d9f85dfc1215e91caa20fab3800645e13111
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70065633"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70282181"
 ---
 # <a name="debugging-a-native-crash-in-a-xamarinmac-app"></a>Depuração de uma falha nativa em um aplicativo Xamarin.Mac
 
@@ -179,7 +179,7 @@ new System.Threading.Thread (() =>
 
 Isso forçará o aplicativo a executar o coletor de lixo a cada segundo. Execute novamente o seu aplicativo e tente reproduzir o bug. Se você falha imediatamente ou consistentemente em vez de aleatoriamente, isso significa que você está no caminho certo.
 
-### <a name="reporting"></a>Relatórios
+### <a name="reporting"></a>Relatório
 
 A próxima etapa é relatar o problema para o Xamarin para que a associação possa ser corrigida para versões futuras. Se você for o proprietário da licença Enterprise ou comercial, abra um tíquete em 
 

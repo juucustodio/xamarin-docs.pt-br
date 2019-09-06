@@ -4,20 +4,20 @@ description: Este documento descreve como o Xamarin. iOS gera código para mapea
 ms.prod: xamarin
 ms.assetid: 365991A8-E07A-0420-D28E-BC4D32065E1A
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: 280802adbb5326854b4d47045bbb1569dd123f30
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 367f0b6a44482762f8609eb959e154c942ff14f5
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69527334"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291827"
 ---
 # <a name="xib-code-generation-in-xamarinios"></a>. xib geração de código no Xamarin. iOS
 
 > [!IMPORTANT]
->  Este documento explica a integração de Visual Studio para Mac com o Interface Builder do Xcode apenas, pois as ações e as saídas não são usadas no Xamarin Designer para iOS. Para obter mais informações sobre o designer do iOS, consulte o documento do [designer do IOS](~/ios/user-interface/designer/index.md) .
+> Este documento explica a integração de Visual Studio para Mac com o Interface Builder do Xcode apenas, pois as ações e as saídas não são usadas no Xamarin Designer para iOS. Para obter mais informações sobre o designer do iOS, consulte o documento do [designer do IOS](~/ios/user-interface/designer/index.md) .
 
 A Apple Interface Builder Tool ("IB") pode ser usada para criar interfaces de usuário visualmente. As definições de interface criadas pelo IB são salvas em arquivos **. xib** . Widgets e outros objetos em arquivos **. xib** podem receber uma "identidade de classe", que pode ser um tipo personalizado definido pelo usuário. Isso permite que você personalize o comportamento dos widgets e escreva os widgets personalizados.
 

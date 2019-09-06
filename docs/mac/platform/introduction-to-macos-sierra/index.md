@@ -4,15 +4,15 @@ description: Este artigo apresenta todas as APIs e recursos novos e modificados 
 ms.prod: xamarin
 ms.assetid: 71A8A737-F310-4320-BD23-743AA1E9033C
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 7d758d4cb9906542d388f3ced185a0d0bcba5fcd
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: b452d4b0a75a64349692c633a8c1bee6a8770256
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68651538"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290932"
 ---
 # <a name="introduction-to-macos-sierra"></a>Introdução ao macOS Sierra
 
@@ -93,7 +93,7 @@ A Apple fez vários aprimoramentos na segurança e na privacidade em macOS Sierr
 
 Além disso, os aplicativos em execução no MacOS Sierra (ou posterior) devem declarar estaticamente sua intenção de acessar recursos específicos ou informações do usuário inserindo uma ou mais chaves de `Info.plist` privacidade específicas em seus arquivos que explicam ao usuário por que o aplicativo deseja obter às.
 
-Como o macOS Sierra compartilha essas alterações com o iOS 10, consulte nosso guia de aprimoramentos de [segurança e privacidade](~/ios/app-fundamentals/security-privacy.md) do IOS 10 para obter mais informações.
+Como o macOS Sierra compartilha essas alterações com o iOS 10, consulte nosso guia de [aprimoramentos de segurança e privacidade](~/ios/app-fundamentals/security-privacy.md) do IOS 10 para obter mais informações.
 
 <a name="Smart-Card-Driver-Extension-Support" />
 
@@ -149,7 +149,7 @@ As seguintes APIs foram preteridas no macOS Sierra:
 
 - Não há mais suporte para o sistema de arquivos padrão HFS.
 
-Consulte a documentação de diffs da [API do MacOS v 10.12](https://developer.apple.com/library/archive/releasenotes/General/APIDiffsMacOS10_12/index.html) da Apple para obter uma lista completa de substituições e alterações.
+Consulte a documentação de [diffs da API do MacOS v 10.12](https://developer.apple.com/library/archive/releasenotes/General/APIDiffsMacOS10_12/index.html) da Apple para obter uma lista completa de substituições e alterações.
 
 ## <a name="related-links"></a>Links relacionados
 

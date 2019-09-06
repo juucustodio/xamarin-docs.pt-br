@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 0a3238d614ee655bdf883f30adbc7969346fdfa7
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
-ms.translationtype: HT
+ms.openlocfilehash: d7d6bf128d3814917633bdd69e3c9c54c8d6a20c
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68508895"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70197507"
 ---
 # <a name="xamarinandroid-performance"></a>Desempenho do Xamarin.Android
 

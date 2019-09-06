@@ -1,27 +1,27 @@
 ---
-title: Trabalhando com grupos de aplicativos no Xamarin do watchOS
-description: Este documento descreve os grupos de aplicativos e seu uso em um aplicativo do watchOS. Ele aborda como configurar um grupo de aplicativos, implantação, Entitlements. plist considerações e requisitos de provisionamento.
+title: Trabalhando com grupos de aplicativos watchOS no Xamarin
+description: Este documento descreve os grupos de aplicativos e seu uso em um aplicativo watchOS. Ele discute como configurar um grupo de aplicativos, requisitos de provisionamento, considerações de direitos. plist e implantação.
 ms.prod: xamarin
 ms.technology: xamarin-ios
 ms.assetid: 6968606B-C287-424F-A321-2492E12BC0BB
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: 78f6c03f73f0e4d8a74f826dd7bc25bbe325d545
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: c75db8bd29b7a57c46610abdd5e4024938fc9e1b
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61411665"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70280324"
 ---
-# <a name="working-with-watchos-app-groups-in-xamarin"></a>Trabalhando com grupos de aplicativos no Xamarin do watchOS
+# <a name="working-with-watchos-app-groups-in-xamarin"></a>Trabalhando com grupos de aplicativos watchOS no Xamarin
 
 
 Um grupo de aplicativos permite que diferentes aplicativos (ou um aplicativo e suas extensões) acessem um local de armazenamento de arquivo compartilhado. Grupos de aplicativo podem ser usados para dados como:
 
-- Apple Watch [configurações](~/ios/watchos/app-fundamentals/settings.md).
-- Compartilhado [NSUserDefaults](~/ios/watchos/app-fundamentals/parent-app.md#nsuserdefaults).
-- Compartilhado [arquivos](~/ios/watchos/app-fundamentals/parent-app.md#files).
+- [Configurações](~/ios/watchos/app-fundamentals/settings.md)de Apple Watch.
+- [NSUserDefaults](~/ios/watchos/app-fundamentals/parent-app.md#nsuserdefaults)compartilhados.
+- [Arquivos](~/ios/watchos/app-fundamentals/parent-app.md#files)compartilhados.
 
 ## <a name="configure-an-app-group"></a>Configurar um grupo de aplicativos
 
@@ -29,20 +29,20 @@ O local compartilhado é configurado usando um [grupo de aplicativos](https://de
 
 ### <a name="provisioning"></a>Provisionamento
 
-O grupo de aplicativos terá um identificador, que normalmente é sua ID do pacote com um `group.` prefixo. Por exemplo, poderíamos usar a ID do pacote `com.xamarin.WatchSettings` e o grupo de aplicativos `group.com.xamarin.WatchSettings`.
+O grupo de aplicativos terá um identificador, que normalmente é a ID do pacote com `group.` um prefixo. Por exemplo, poderíamos usar a ID `com.xamarin.WatchSettings` do pacote e o grupo `group.com.xamarin.WatchSettings`de aplicativos.
 
-[![](app-groups-images/app-group-sml.png "Use com.xamarin.WatchSettings a ID do pacote e o group.com.xamarin.WatchSettings de grupo do aplicativo")](app-groups-images/app-group.png#lightbox)
+[![](app-groups-images/app-group-sml.png "Use a ID do pacote com. xamarin. WatchSettings e o grupo de grupos de aplicativos. com. xamarin. WatchSettings")](app-groups-images/app-group.png#lightbox)
 
 ### <a name="entitlementsplist"></a>Entitlements.plist
 
-Bem como configurar o perfil de provisionamento **habilitar grupos de aplicativos** na **Entitlements. plist** e insira a ID que você escolheu:
+Além de configurar o perfil de provisionamento, **habilite grupos de aplicativos** no **intitulars. plist** e insira a ID que você escolheu:
 
-[![](app-groups-images/entitlements-sml.png "Configurar o plist e insira a ID")](app-groups-images/entitlements.png#lightbox)
+[![](app-groups-images/entitlements-sml.png "Configurar o plist e inserir a ID")](app-groups-images/entitlements.png#lightbox)
 
 
 ### <a name="deployment"></a>Implantação
 
-Certifique-se de configurar o grupo de aplicativo corretamente em seu [implantação](~/ios/watchos/deploy-test/index.md#App_Groups) provisionamento.
+Certifique-se de configurar o grupo de aplicativos corretamente em seu provisionamento de [implantação](~/ios/watchos/deploy-test/index.md#App_Groups) .
 
 
 Para obter mais informações, consulte o [recursos do grupo de aplicativo](~/ios/deploy-test/provisioning/capabilities/app-groups-capabilities.md) documentação.

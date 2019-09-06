@@ -4,15 +4,15 @@ description: A biblioteca NuGet do SQLite.NET PCL fornece um mecanismo de acesso
 ms.prod: xamarin
 ms.assetid: 79813B09-42D7-47DD-AE71-A605E6B9EF24
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 04/18/2018
-ms.openlocfilehash: 0416aed671c9675e7c2c990eb59a7a4d8cab7888
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 6711a16ba0035190d10687ef821831559c07b797
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70199619"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70289835"
 ---
 # <a name="using-sqlitenet-with-xamarinios"></a>Usando o SQLite.NET com Xamarin. iOS
 
@@ -196,7 +196,7 @@ Você pode verificar o `rowcount` para confirmar quantas linhas foram afetadas (
 
 ## <a name="using-sqlitenet-with-multiple-threads"></a>Usando SQLite.NET com vários threads
 
-O SQLite dá suporte a três modos de Threading diferentes: *Thread único*, *vários threads*e serializados. Se você quiser acessar o banco de dados de vários threads sem restrições, poderá configurar o SQLite para usar o modo de Threading **serializado** . É importante definir esse modo no início do aplicativo (por exemplo, no início do `OnCreate` método).
+O SQLite dá suporte a três modos de Threading diferentes: *Thread único*, *vários threads*e *serializados*. Se você quiser acessar o banco de dados de vários threads sem restrições, poderá configurar o SQLite para usar o modo de Threading **serializado** . É importante definir esse modo no início do aplicativo (por exemplo, no início do `OnCreate` método).
 
 Para alterar o modo de Threading, chame `SqliteConnection.SetConfig` que está `Mono.Data.Sqlite` no namespace. Por exemplo, esta linha de código configura o SQLite para o modo **serializado** :
 

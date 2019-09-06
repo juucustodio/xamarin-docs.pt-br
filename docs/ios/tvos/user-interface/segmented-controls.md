@@ -4,15 +4,15 @@ description: Este documento descreve como trabalhar com controles segmentados tv
 ms.prod: xamarin
 ms.assetid: 23AD94CC-E93A-40B1-8E2B-ECD21FA355BE
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: 622960f73c96209c1a67a08a4f0abe27656331bf
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 9ca931058f15c2ff6f1b46810196d9ea2bb964e0
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70200256"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291392"
 ---
 # <a name="working-with-tvos-segmented-controls-in-xamarin"></a>Trabalhando com controles segmentados tvOS no Xamarin
 
@@ -43,8 +43,8 @@ Você não pode misturar texto e ícones em um determinado segmento e deve evita
 A Apple faz as seguintes sugestões para trabalhar com o texto do segmento:
 
 - **Usar substantivos curtos e significativos** -o título do segmento deve declarar claramente o tipo de conteúdo que o usuário deve esperar ao selecionar o segmento fornecido. Por exemplo: Música ou vídeos.
-- **Usar capitalização** de maiúsculas e minúsculas – cada palavra do título dos segmentos deve ser capitalizada, exceto artigos, conconjuntos e preposições de menos de quatro (4) caracteres.
-- **Usar títulos curtos** e focados – Mantenha os títulos, curtos e focados no tipo de conteúdo a ser esperado quando o segmento for selecionado.
+- **Usar capitalização de maiúsculas e minúsculas** – cada palavra do título dos segmentos deve ser capitalizada, exceto artigos, conconjuntos e preposições de menos de quatro (4) caracteres.
+- **Usar títulos curtos e focados** – Mantenha os títulos, curtos e focados no tipo de conteúdo a ser esperado quando o segmento for selecionado.
 
 Novamente, você não pode misturar texto e ícones em um determinado segmento e deve evitar misturar ícones e texto em um único controle segmentado.
 

@@ -4,14 +4,14 @@ description: Este documento discute erros comuns e várias dicas úteis ao atual
 ms.prod: xamarin
 ms.assetid: 8DD34D21-342C-48E9-97AA-1B649DD8B61F
 ms.date: 03/29/2017
-author: asb3993
-ms.author: amburns
-ms.openlocfilehash: 844730d2ace717b951df2d80b2add6d1094fe997
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+author: conceptdev
+ms.author: crdun
+ms.openlocfilehash: 0d1f09f8318f1292f6c9b65627d9b659f8fc466b
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70226104"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70280779"
 ---
 # <a name="tips-for-updating-code-to-the-unified-api"></a>Dicas para atualizar o código para a API unificada
 
@@ -91,7 +91,7 @@ Algumas coisas que podem precisar ser corrigidas manualmente incluem:
 Por fim, consulte as [diferenças clássicas do v API unificada](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/ios/api_changes/classic-vs-unified-8.6.0/index.md) para pesquisar alterações em APIs em seu código. Pesquisar [esta página](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/ios/api_changes/classic-vs-unified-8.6.0/index.md) ajudará a encontrar APIs clássicas e para que elas foram atualizadas.
 
 > [!NOTE]
-> O `MonoTouch.Dialog` namespace permanece o mesmo após a migração. Se seu código usa **MonoTouch. caixa de diálogo** você deve continuar a usar esse namespace -não `MonoTouch.Dialog` Altere `Dialog`para!
+> O `MonoTouch.Dialog` namespace permanece o mesmo após a migração. Se seu código usa **MonoTouch. caixa de diálogo** você deve continuar a usar esse namespace-não `MonoTouch.Dialog` Altere `Dialog` *para* !
 
 ## <a name="common-compiler-errors"></a>Erros comuns do compilador
 

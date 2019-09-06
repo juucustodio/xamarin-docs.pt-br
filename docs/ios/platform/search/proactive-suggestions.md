@@ -4,15 +4,15 @@ description: Este artigo mostra como usar sugestões proativas no aplicativo Xam
 ms.prod: xamarin
 ms.assetid: 8DDD084A-0D1E-4DF7-B686-6309DCEFF5D3
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: 294616e7766a6613a014495e5f9d124f74465072
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: ecc31fa6aab9e2be1c33f16d2f424b397f4a9a73
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70121419"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291734"
 ---
 # <a name="introduction-to-proactive-suggestions-in-xamarinios"></a>Introdução às sugestões proativas no Xamarin. iOS
 
@@ -84,10 +84,10 @@ E tem suporte no aplicativo implementando o seguinte:
 
 - A **entrega** - `NSUserActivity` foiadicionadanoIos8paradarsuporteàentrega,quepermiteaodesenvolvedoriniciarumaatividadeemumdispositivoe,emseguida,continuaremoutra(consulte[Introduçãoàentrega](~/ios/platform/handoff.md)).
 - **Pesquisa de destaque** -o Ios 9 adicionou a capacidade de promover o conteúdo do aplicativo de dentro dos `NSUserActivity` resultados da pesquisa de destaque usando (consulte [Pesquisar com o destaque de núcleo](~/ios/platform/search/corespotlight.md)).
-- Os lembretes de **Siri contextuais** -no Ios `NSUserActivity` 10, foram expandidos para permitir que o Siri faça um lembrete rapidamente para exibir o conteúdo que o usuário está visualizando no aplicativo no momento posteriormente.
+- Os **lembretes de Siri contextuais** -no Ios `NSUserActivity` 10, foram expandidos para permitir que o Siri faça um lembrete rapidamente para exibir o conteúdo que o usuário está visualizando no aplicativo no momento posteriormente.
 - **Sugestões de localização** -o Ios 10 `NSUserActivity` aprimora os locais de captura exibidos no aplicativo e os promove em vários lugares em todo o sistema.
 - **As**  -  solicitações`NSUserActivity` Siri contextuais fornecem o contexto para as informações apresentadas dentro do aplicativo para Siri para que o usuário possa obter direções ou fazer uma chamada que esteja invocando Siri de dentro do aplicativo.
-- **Entre em contato com** as interações- `NSUserActivity` novas no Ios 10, permite que os aplicativos de comunicação sejam promovidos de um cartão de contato (no aplicativo de contatos) como um método de comunicação alternativo.
+- **Entre em contato com as interações** - `NSUserActivity` novas no Ios 10, permite que os aplicativos de comunicação sejam promovidos de um cartão de contato (no aplicativo de contatos) como um método de comunicação alternativo.
 
 Todos esses recursos têm uma coisa em comum, todos eles usam `NSUserActivity` em uma forma ou em outra para fornecer sua funcionalidade. 
 
@@ -115,7 +115,7 @@ Para obter mais informações sobre a pesquisa de entrega e destaque, consulte n
 
 ### <a name="creating-an-activity"></a>Criando uma atividade
 
-Antes de criar uma atividade, um identificador de tipo de atividade precisará ser criado para identificá-lo. O identificador de tipo de atividade é uma cadeia de caracteres `NSUserActivityTypes` curta adicionada à matriz do `Info.plist` arquivo do aplicativo usado para identificar exclusivamente um determinado tipo de atividade de usuário. Haverá uma entrada na matriz para cada atividade que o aplicativo suporta e expõe para a pesquisa de aplicativo. Consulte nossa [referência](~/ios/platform/search/nsuseractivity.md) de identificadores de tipo de atividade de criação para obter mais detalhes.
+Antes de criar uma atividade, um identificador de tipo de atividade precisará ser criado para identificá-lo. O identificador de tipo de atividade é uma cadeia de caracteres `NSUserActivityTypes` curta adicionada à matriz do `Info.plist` arquivo do aplicativo usado para identificar exclusivamente um determinado tipo de atividade de usuário. Haverá uma entrada na matriz para cada atividade que o aplicativo suporta e expõe para a pesquisa de aplicativo. Consulte nossa [referência de identificadores de tipo de atividade de criação](~/ios/platform/search/nsuseractivity.md) para obter mais detalhes.
 
 Veja um exemplo de uma atividade:
 
@@ -318,7 +318,7 @@ Novidades no iOS 10, os aplicativos de comunicação estão profundamente integr
 
 Se um aplicativo de terceiros for selecionado, ele poderá ser lembrado e apresentado como a maneira padrão de mensagens da pessoa em questão na próxima vez que o usuário quiser contatá-las.
 
-As interações de contato são implementadas `NSUserActivity` no aplicativo usando o e a nova estrutura de tentativas introduzida no Ios 10. Para obter mais detalhes sobre como trabalhar com tentativas, consulte nossos conceitos de entendendo o [SiriKit](~/ios/platform/sirikit/understanding-sirikit.md) e implementando os guias de [SiriKit](~/ios/platform/sirikit/implementing-sirikit.md) .
+As interações de contato são implementadas `NSUserActivity` no aplicativo usando o e a nova estrutura de tentativas introduzida no Ios 10. Para obter mais detalhes sobre como trabalhar com tentativas, consulte nossos [conceitos de entendendo o SiriKit](~/ios/platform/sirikit/understanding-sirikit.md) e [implementando](~/ios/platform/sirikit/implementing-sirikit.md) os guias de SiriKit.
 
 #### <a name="donating-interactions"></a>Doando interações
 

@@ -3,15 +3,15 @@ title: Visão geral do suporte assíncrono
 description: Este documento descreve a programação com o Async e o Await, C# conceitos introduzidos em 5 para facilitar a gravação de código assíncrono.
 ms.prod: xamarin
 ms.assetid: F87BF587-AB64-4C60-84B1-184CAE36ED65
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: a9297d9a19ef56d658e983c38329b1aa400ffd05
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 90c391f79d7aa0ffdee0072c84cbdba0c504d551
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69521710"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70280625"
 ---
 # <a name="async-support-overview"></a>Visão geral do suporte assíncrono
 
@@ -151,7 +151,7 @@ Notas:
 - O delegado anônimo tem o prefixo de palavra-chave Async.
 - O método assíncrono DownloadHomepage retorna uma tarefa\<int > que é armazenada na variável sizeTask.
 - O código aguarda na variável sizeTask.  *Esse* é o local em que o método é suspenso e o controle é retornado para o código de chamada até que a tarefa assíncrona seja concluída em seu próprio thread.
-- A execução não pausa quando a tarefa é criada na primeira linha do método, apesar da tarefa que está sendo criada lá. A palavra-chave Await significa o local em que a execução está em pausa.
+- A execução *não pausa quando* a tarefa é criada na primeira linha do método, apesar da tarefa que está sendo criada lá. A palavra-chave Await significa o local em que a execução está em pausa.
 - Quando a tarefa assíncrona é concluída, a intresult é definida e a execução continua no thread original, da linha Await.
 
 

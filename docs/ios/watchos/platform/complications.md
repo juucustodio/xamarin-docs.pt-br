@@ -4,15 +4,15 @@ description: Este documento descreve como trabalhar com complicações de watchO
 ms.prod: xamarin
 ms.assetid: 7ACD9A2B-CF69-46EA-B0C8-10E7D81216E8
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 07/03/2017
-ms.openlocfilehash: 7e2b3e93baaeac85267c9db2f414793610521f2e
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 6831fa9a660a55eccd8584dccb1f81ae9953aee5
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70200031"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70282342"
 ---
 # <a name="watchos-complications-in-xamarin"></a>Complicações watchOSs no Xamarin
 

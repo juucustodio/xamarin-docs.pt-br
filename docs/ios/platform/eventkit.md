@@ -4,21 +4,21 @@ description: Este documento descreve o kit e como usá-lo no Xamarin. iOS. Ele a
 ms.prod: xamarin
 ms.assetid: 00E88629-357D-1FCD-4FCE-1330D5D9D32C
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: bb64a0457ad5228e32f233d630576da2836547c1
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 638840bafd43961cdce6ebe0fa2fb6cbe8b33e16
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528050"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291530"
 ---
 # <a name="eventkit-in-xamarinios"></a>Kit no Xamarin. iOS
 
 o iOS tem dois aplicativos relacionados a calendário internos: o aplicativo de calendário e o aplicativo de lembretes. É bastante simples entender como o aplicativo de calendário gerencia dados de calendário, mas o aplicativo lembretes é menos óbvio. Os lembretes podem realmente ter datas associadas a eles em termos de quando eles estão vencidos, quando eles são concluídos etc. Dessa forma, o iOS armazena todos os dados de calendário, sejam eles eventos de calendário ou lembretes, em um local, chamado de banco de dados de *calendário*.
 
-A estrutura Kit fornece uma maneira de acessar osdados de calendários, *eventos de calendário*e *lembretes* que o banco de dados de calendário armazena. O acesso aos calendários e eventos de calendário está disponível desde o iOS 4, mas o acesso a lembretes é novo no iOS 6.
+A estrutura Kit fornece uma maneira de acessar os dados de *calendários*, *eventos de calendário*e *lembretes* que o banco de dados de calendário armazena. O acesso aos calendários e eventos de calendário está disponível desde o iOS 4, mas o acesso a lembretes é novo no iOS 6.
 
 Neste guia, vamos abordar:
 

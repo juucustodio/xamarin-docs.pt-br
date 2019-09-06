@@ -4,15 +4,15 @@ description: HomeKit é a estrutura da Apple para controlar dispositivos de auto
 ms.prod: xamarin
 ms.assetid: 90C0C553-916B-46B1-AD52-1E7332792283
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: e8acec18785ff5017aa012a646f40f8a866070f8
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: f98cd3110719827d8cfeceef4dc9e73776c79f3f
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656624"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292720"
 ---
 # <a name="homekit-in-xamarinios"></a>HomeKit no Xamarin. iOS
 
@@ -54,7 +54,7 @@ Faça o seguinte:
 
 1. Faça logon no [portal do desenvolvedor da Apple](https://developer.apple.com).
 2. Clique em **certificados, identificadores & perfis**.
-3. Se você ainda não tiver feito isso, clique em identificadores e crie uma ID para seu aplicativo (por `com.company.appname`exemplo,), caso contrário, edite sua ID existente.
+3. Se você ainda não tiver feito isso, clique em **identificadores** e crie uma ID para seu aplicativo (por `com.company.appname`exemplo,), caso contrário, edite sua ID existente.
 4. Verifique se o serviço **homekit** foi verificado para a ID fornecida: 
 
     [![](homekit-images/provision01.png "Habilitar o serviço HomeKit para a ID fornecida")](homekit-images/provision01.png#lightbox)
@@ -74,14 +74,14 @@ Faça o seguinte:
     [![](homekit-images/provision05.png "Habilitar o direito de HomeKit")](homekit-images/provision05.png#lightbox)
 11. Salve as alterações em todos os arquivos.
 
-Com essas configurações em vigor, o aplicativo agora está pronto para acessar as APIs do HomeKit Framework. Para obter informações detalhadas sobre o provisionamento, consulte nosso [provisionamento de dispositivos](~/ios/get-started/installation/device-provisioning/index.md) e provisionando [seus guias de aplicativo](~/ios/get-started/installation/device-provisioning/index.md) .
+Com essas configurações em vigor, o aplicativo agora está pronto para acessar as APIs do HomeKit Framework. Para obter informações detalhadas sobre o provisionamento, consulte nosso [provisionamento de dispositivos](~/ios/get-started/installation/device-provisioning/index.md) e [Provisionando seus guias de aplicativo](~/ios/get-started/installation/device-provisioning/index.md) .
 
 > [!IMPORTANT]
 > O teste de um aplicativo habilitado para HomeKit requer um dispositivo iOS real que tenha sido provisionado corretamente para desenvolvimento. HomeKit não pode ser testado a partir do simulador de iOS.
 
 ## <a name="the-homekit-accessory-simulator"></a>O simulador de acessório do HomeKit
 
-Para fornecer uma maneira de testar todos os dispositivos e serviços de automação inicial, sem precisar ter um dispositivo físico, a Apple criou o simulador de _acessório homekit_. Usando esse simulador, você pode instalar e configurar dispositivos HomeKit virtuais.
+Para fornecer uma maneira de testar todos os dispositivos e serviços de automação inicial, sem precisar ter um dispositivo físico, a Apple criou o _simulador de acessório homekit_. Usando esse simulador, você pode instalar e configurar dispositivos HomeKit virtuais.
 
 ### <a name="installing-the-simulator"></a>Instalando o simulador
 
@@ -454,7 +454,7 @@ A `HMCharacteristicType` enumeração fornece um conjunto de valores de metadado
 - TargetTemperature
 - TargetVerticalTilt
 - TemperatureUnits
-- Versão
+- Version
 
 ### <a name="working-with-a-characteristics-value"></a>Trabalhando com o valor de uma característica
 
@@ -667,7 +667,7 @@ Deve alterar o estado da luz no simulador de acessório do HomeKit. Se o valor n
 Este artigo abordou os recursos básicos necessários para trabalhar com acessórios do HomeKit em um aplicativo Xamarin. iOS. No entanto, há vários recursos avançados do HomeKit que não são abordados nesta introdução:
 
 - **Salas** – os acessórios habilitados para homekit podem ser organizados opcionalmente em salas pelo usuário final. Isso permite que o HomeKit apresente acessórios de uma maneira que seja fácil de entender e trabalhar com o usuário. Para obter mais informações sobre como criar e manter salas, consulte a documentação do [HMRoom](https://developer.apple.com/library/prerelease/ios/documentation/HomeKit/Reference/HMRoom_Class/index.html#//apple_ref/occ/cl/HMRoom) da Apple.
-- **Zonas** -as salas podem, opcionalmente, ser organizadas em zonas pelo usuário final. Uma zona refere-se a uma coleção de salas que o usuário pode tratar como uma única unidade. Por exemplo:  Upescadas, cybercafé ou porão. Novamente, isso permite que o HomeKit apresente e trabalhe com acessórios de uma maneira que faça sentido para o usuário final. Para obter mais informações sobre como criar e manter zonas, consulte a documentação do [HMZone](https://developer.apple.com/library/prerelease/ios/documentation/HomeKit/Reference/HMZone_Class/index.html#//apple_ref/occ/cl/HMZone) da Apple.
+- **Zonas** -as salas podem, opcionalmente, ser organizadas em zonas pelo usuário final. Uma zona refere-se a uma coleção de salas que o usuário pode tratar como uma única unidade. Por exemplo: Upescadas, cybercafé ou porão. Novamente, isso permite que o HomeKit apresente e trabalhe com acessórios de uma maneira que faça sentido para o usuário final. Para obter mais informações sobre como criar e manter zonas, consulte a documentação do [HMZone](https://developer.apple.com/library/prerelease/ios/documentation/HomeKit/Reference/HMZone_Class/index.html#//apple_ref/occ/cl/HMZone) da Apple.
 - **Ações e conjuntos** de ações – ações modificam características do serviço de acessório e podem ser agrupadas em conjuntos. Os conjuntos de ações agem como scripts para controlar um grupo de acessórios e coordenar suas ações. Por exemplo, um script "assistir à TV" pode fechar o blinds, esmaecer as luzes e ligar a televisão e seu sistema de som. Para obter mais informações sobre como criar e manter ações e conjuntos de ação, consulte a documentação do [HMAction](https://developer.apple.com/library/prerelease/ios/documentation/HomeKit/Reference/HMAction_Class/index.html#//apple_ref/occ/cl/HMAction) e do [HMActionSet](https://developer.apple.com/library/prerelease/ios/documentation/HomeKit/Reference/HMActionSet_Class/index.html#//apple_ref/occ/cl/HMActionSet) da Apple.
 - **Gatilhos** – um gatilho pode ativar um ou mais conjuntos de ações quando um determinado conjunto de condições for atendido. Por exemplo, ative a luz portch e bloqueie todas as portas externas quando ela ficar escura fora do. Para obter mais informações sobre como criar e manter gatilhos, consulte a documentação do [HMTrigger](https://developer.apple.com/library/prerelease/ios/documentation/HomeKit/Reference/HMTrigger_Class/index.html#//apple_ref/occ/cl/HMTrigger) da Apple.
 
@@ -691,7 +691,7 @@ A Apple fez as seguintes alterações e inclusões no HomeKit para iOS 9:
 - **Identificadores persistentes** – todas as classes homekit relevantes agora `UniqueIdentifier` incluem uma propriedade para identificar exclusivamente um determinado item em aplicativos habilitados para homekit (ou instâncias do mesmo aplicativo).
 - **Gerenciamento de usuários** – adicionado um controlador de exibição interno para fornecer ao gerenciamento de usuários os que têm acesso aos dispositivos homekit na página inicial do usuário primário.
 - **Recursos do usuário** -os usuários do homekit agora têm um conjunto de privilégios que controlam quais funções eles são capazes de usar nos acessórios do homekit e do homekit habilitados. Seu aplicativo deve exibir apenas recursos relevantes para o usuário atual. Por exemplo, somente um administrador deve ser capaz de manter outros usuários.
-- **Cenas** predefinidas-as cenas predefinidas foram criadas para quatro eventos comuns que ocorrem para o usuário homekit médio: Obter, sair, retornar, ir para cama. Essas cenas predefinidas não podem ser excluídas de uma página inicial.
+- **Cenas predefinidas** -as cenas predefinidas foram criadas para quatro eventos comuns que ocorrem para o usuário homekit médio: Obter, sair, retornar, ir para cama. Essas cenas predefinidas não podem ser excluídas de uma página inicial.
 - Os **bastidores e o Siri** -Siri têm suporte mais profundo para cenas no Ios 9 e podem reconhecer o nome de qualquer cena definida em homekit. Um usuário pode executar uma cena simplesmente falando com seu nome para Siri.
 - **Categorias de acessório** – um conjunto de categorias predefinidas foi adicionado a todos os acessórios e ajuda a identificar o tipo de acessório que está sendo adicionado a um início ou trabalhado de dentro de seu aplicativo. Essas novas categorias estão disponíveis durante a configuração do acessório.
 - **Apple Watch suporte** -homekit agora está disponível para watchOS e o Apple Watch poderá controlar os dispositivos habilitados para homekit sem um iPhone perto do relógio. O HomeKit para watchOS dá suporte aos seguintes recursos: Exibição de residências, controle de acessórios e execução de cenas.

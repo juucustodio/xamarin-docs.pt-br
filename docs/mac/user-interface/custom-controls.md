@@ -4,15 +4,15 @@ description: Este documento descreve como criar controles personalizados no Xama
 ms.prod: xamarin
 ms.assetid: 004534B1-5AEE-452C-BBBE-8C2673FD49B7
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 537816213208ed6e71f0986558c9a94a327759e2
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 24e4113f0437c626ba93f12c1124407c472fef8d
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227910"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70284950"
 ---
 # <a name="creating-custom-controls-in-xamarinmac"></a>Criando controles personalizados no Xamarin. Mac
 
@@ -24,7 +24,7 @@ Embora o macOS forneça uma infinidade de controles de usuário internos, pode h
 
 Neste artigo, abordaremos as noções básicas da criação de um controle de interface do usuário personalizada reutilizável em um aplicativo Xamarin. Mac. É altamente recomendável que você trabalhe pelo artigo [Hello, Mac](~/mac/get-started/hello-mac.md) primeiro, especificamente a [introdução às seções Xcode e Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) e [ações](~/mac/get-started/hello-mac.md#outlets-and-actions) , pois ela aborda os principais conceitos e técnicas que usaremos em Este artigo.
 
-Talvez você queira dar uma olhada na seção [expondo C# classes/métodos para Objective-C](~/mac/internals/how-it-works.md) do documento [interno do Xamarin. Mac](~/mac/internals/how-it-works.md) também, explica `Register` os comandos e `Export` usados para conectar suas C# classes ao Objetos Objective-C e elementos de interface do usuário.
+Talvez você queira dar uma olhada na seção [expondo C# classes/métodos para Objective-C](~/mac/internals/how-it-works.md) do documento [interno do Xamarin. Mac](~/mac/internals/how-it-works.md) também, explica os `Register` comandos e `Export` usados para conectar suas C# classes ao Objetos Objective-C e elementos de interface do usuário.
 
 <a name="Introduction-to-Outline-Views" />
 
@@ -212,10 +212,10 @@ Ajustaremos a representação visual do controle quando seu estado for alterado 
 
 ### <a name="responding-to-user-input"></a>Respondendo à entrada do usuário
 
-Há duas maneiras básicas de adicionar a entrada do usuário ao nosso controle personalizado: **Substitua as rotinas de manipulação do mouse** ou os reconhecedores de **gesto**. Qual método que usamos, será baseado na funcionalidade exigida por nosso controle.
+Há duas maneiras básicas de adicionar a entrada do usuário ao nosso controle personalizado: **Substitua as rotinas de manipulação do mouse** ou os **reconhecedores de gesto**. Qual método que usamos, será baseado na funcionalidade exigida por nosso controle.
 
 > [!IMPORTANT]
-> Para qualquer controle personalizado que você criar, você deve usar os **métodos de substituição** _ou_ os reconhecedores de **gesto**, mas não ambos ao mesmo tempo que eles podem entrar em conflito entre si.
+> Para qualquer controle personalizado que você criar, você deve usar os **métodos de substituição** _ou_ os **reconhecedores de gesto**, mas não ambos ao mesmo tempo que eles podem entrar em conflito entre si.
 
 <a name="Summary" />
 

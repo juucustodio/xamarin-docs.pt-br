@@ -4,15 +4,15 @@ description: Este guia explora a configuração do ambiente do Xamarin. iOS para
 ms.prod: xamarin
 ms.assetid: A25AE660-B145-465F-9CCE-8D82BFD614C6
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 06/05/2017
-ms.openlocfilehash: cd5293e90caef81c875c0b06b9e5db06cd562655
-ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
+ms.openlocfilehash: 1cf28f83302d5035652df05aee26a6646df29fc0
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69620522"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291807"
 ---
 # <a name="apple-pay-in-xamarinios"></a>Apple Pay no Xamarin. iOS
 

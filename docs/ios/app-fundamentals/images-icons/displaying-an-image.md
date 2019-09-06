@@ -4,15 +4,15 @@ description: Este artigo aborda a inclusão de um ativo de imagem em um aplicati
 ms.prod: xamarin
 ms.assetid: 60288B12-49E3-4E87-8690-D04A5EC7A664
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 04/24/2018
-ms.openlocfilehash: 8082fc6ab2625e68d64ee9d42a9b630f885d9002
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 8e06b03e0acb129f1eb0c3c793d0b4a05c11ce2b
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227752"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70282383"
 ---
 # <a name="displaying-an-image-in-xamarinios"></a>Exibindo uma imagem no Xamarin. iOS
 
@@ -22,11 +22,11 @@ _Este artigo aborda a inclusão de um ativo de imagem em um aplicativo Xamarin. 
 
 Ao adicionar uma imagem para uso em um aplicativo Xamarin. iOS, o desenvolvedor usará um _Catálogo de ativos_ para dar suporte a cada dispositivo IOS e à resolução exigida por um aplicativo.
 
-Adicionados no iOS 7, os **conjuntos de imagens** de catálogos de ativos contêm todas as versões ou representações de uma imagem que são necessárias para dar suporte a vários dispositivos e fatores de escala para um aplicativo. Em vez de depender do nome de arquivo de ativos de imagem, os **conjuntos de imagens** usam um arquivo JSON para especificar qual imagem pertence a qual dispositivo e/ou resolução. Essa é a maneira preferida de gerenciar e dar suporte a imagens no iOS (do iOS 9 ou superior).
+Adicionados no iOS 7, os **conjuntos de imagens de catálogos de ativos** contêm todas as versões ou representações de uma imagem que são necessárias para dar suporte a vários dispositivos e fatores de escala para um aplicativo. Em vez de depender do nome de arquivo de ativos de imagem, os **conjuntos de imagens** usam um arquivo JSON para especificar qual imagem pertence a qual dispositivo e/ou resolução. Essa é a maneira preferida de gerenciar e dar suporte a imagens no iOS (do iOS 9 ou superior).
 
 ## <a name="adding-images-to-an-asset-catalog-image-set"></a>Adicionando imagens a um conjunto de imagens do catálogo de ativos
 
-Como mencionado acima, os **conjuntos de imagens** de catálogos de ativos contêm todas as versões ou representações de uma imagem que são necessárias para dar suporte a vários dispositivos e fatores de escala para um aplicativo. Em vez de depender do nome de arquivo de ativos de imagem, os **conjuntos de imagens** usam um arquivo JSON para especificar qual imagem pertence a qual dispositivo e/ou resolução.
+Como mencionado acima, os **conjuntos de imagens de catálogos de ativos** contêm todas as versões ou representações de uma imagem que são necessárias para dar suporte a vários dispositivos e fatores de escala para um aplicativo. Em vez de depender do nome de arquivo de ativos de imagem, os **conjuntos de imagens** usam um arquivo JSON para especificar qual imagem pertence a qual dispositivo e/ou resolução.
 
 Para criar um novo conjunto de imagens e adicionar imagens a ele, faça o seguinte:
 
@@ -178,7 +178,7 @@ Para adicionar um novo catálogo de ativos ao projeto:
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-1. Na Gerenciador de Soluções, clique com o botão direito do mouse na pasta catálogos de **ativos** e selecione **Adicionar > novo catálogo de ativos**.
+1. Na Gerenciador de Soluções, clique com o botão direito do mouse na pasta **catálogos de ativos** e selecione **Adicionar > novo catálogo de ativos**.
 2. Dê um nome a ele e clique em **Adicionar**:
 
     ![](displaying-an-image-images/asset1.png "Criando um novo catálogo de ativos")

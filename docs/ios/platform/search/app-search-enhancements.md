@@ -4,15 +4,15 @@ description: Este artigo aborda os aprimoramentos que a Apple fez na pesquisa de
 ms.prod: xamarin
 ms.assetid: 30124DB6-6A02-4F66-A2D9-BBC8008E6B48
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/15/2017
-ms.openlocfilehash: ec7523ac2adc3a6b4ba18a7b8a0fe21749bd7856
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 2a2475bcc5eea48584c4aa128aafeeb326e41f8d
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227415"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70280368"
 ---
 # <a name="app-search-enhancements-in-xamarinios"></a>Aprimoramentos de pesquisa de aplicativo no Xamarin. iOS
 
@@ -36,7 +36,7 @@ As seções a seguir abordarão esses tópicos mais detalhadamente.
 
 o iOS 10 fornece um mecanismo para contar a frequência com que links detalhados populares em um aplicativo são seguidos pelo usuário e usam essas informações para melhorar a classificação do conteúdo de um aplicativo nos resultados da pesquisa, enquanto ainda protege a identidade do usuário usando *diferencial Privacidade*.
 
-Para o aplicativo que usa `NSUserActivity` objetos para fornecer URLs de link profundo e ter a `EligibleForPublicIndexing` propriedade definida como `true`, o Ios 10 envia um subconjunto de hashes de *privacidade diferencial* para os servidores da Apple. Essas informações são usadas para promover conteúdo popular no aplicativo nos resultados da pesquisa.
+Para o aplicativo que usa `NSUserActivity` objetos para fornecer URLs de link profundo e ter a `EligibleForPublicIndexing` propriedade definida como `true`, o Ios 10 envia um subconjunto de *hashes de privacidade diferencial* para os servidores da Apple. Essas informações são usadas para promover conteúdo popular no aplicativo nos resultados da pesquisa.
 
 Para obter mais informações sobre como implementar a vinculação profunda em um aplicativo Xamarin. iOS, consulte nossa [pesquisa com a](~/ios/platform/search/nsuseractivity.md) documentação do NSUserActivity.
 
@@ -52,7 +52,7 @@ No Ios 9, a Apple introduziu as APIs de pesquisa (como o `NSUserActivity` destaq
 
 No iOS 10, a Apple se baseia nesse recurso, permitindo que o usuário inicie uma pesquisa em destaque ou Safari e continue a pesquisa quando abrir um aplicativo.
 
-Para implementar esse recurso, edite o arquivo `Info.plist` do aplicativo, adicione `CoreSpotlightContinuation` a chave do tipo booliano e defina seu `YES`valor como:
+Para implementar esse recurso, edite o arquivo `Info.plist` do aplicativo, adicione `CoreSpotlightContinuation` a chave do tipo **booliano** e defina seu `YES`valor como:
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 

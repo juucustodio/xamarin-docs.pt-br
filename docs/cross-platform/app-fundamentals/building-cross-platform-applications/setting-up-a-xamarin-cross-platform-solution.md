@@ -3,15 +3,15 @@ title: Parte 3-Configurando uma solução de plataforma cruzada do Xamarin
 description: Este documento descreve como configurar uma solução de plataforma cruzada no Xamarin. Ele aborda várias estratégias de compartilhamento de código, como projetos compartilhados e .NET Standard.
 ms.prod: xamarin
 ms.assetid: 4139A6C2-D477-C563-C1AB-98CCD0D10A93
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/27/2017
-ms.openlocfilehash: a33c924df3da8642f4b765868f213e6e196f7866
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: f8b8f13f323f404554ca73c3e75c23713e0fbe35
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69526815"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70288843"
 ---
 # <a name="part-3---setting-up-a-xamarin-cross-platform-solution"></a>Parte 3-Configurando uma solução de plataforma cruzada do Xamarin
 
@@ -134,7 +134,7 @@ Exemplos específicos de como os projetos devem ser estruturados são fornecidos
  <a name="Build_Action" />
 
 
-### <a name="build-action"></a>Ação de Build
+### <a name="build-action"></a>Ação de compilação
 
 É importante definir a ação de compilação correta para determinados tipos de arquivo. Esta lista mostra a ação de Build para alguns tipos de arquivo comuns:
 

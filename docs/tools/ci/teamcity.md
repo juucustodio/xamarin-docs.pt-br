@@ -3,15 +3,15 @@ title: Usando a cidade da equipe com o Xamarin
 description: Este guia abordará as etapas envolvidas no uso do TeamCity para compilar aplicativos móveis e, em seguida, enviá-los para Xamarin Test Cloud.
 ms.prod: xamarin
 ms.assetid: AC2626CB-28A7-4808-B2A9-789D67899546
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/23/2017
-ms.openlocfilehash: 2880fcbc3366079955945c4780af2be82afe5a4a
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 6ffd1c3e42dbaf0a82b07cd9e0a00228c5fa0604
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68511944"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70293134"
 ---
 # <a name="using-team-city-with-xamarin"></a>Usando a cidade da equipe com o Xamarin
 

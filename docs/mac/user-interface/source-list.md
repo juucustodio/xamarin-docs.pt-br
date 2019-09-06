@@ -4,15 +4,15 @@ description: Este artigo aborda como trabalhar com listas de origem em um aplica
 ms.prod: xamarin
 ms.assetid: 651A3649-5AA8-4133-94D6-4873D99F7FCC
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 499edcb1420b311c519f1665b4d2effd9088e9e7
-ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
+ms.openlocfilehash: 63ce931abfbe7a39108ae3f8210209b7d43827ed
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70065375"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70278551"
 ---
 # <a name="source-lists-in-xamarinmac"></a>Listas de origem no Xamarin. Mac
 
@@ -26,7 +26,7 @@ Uma lista de origem é um tipo especial de exibição de estrutura de tópicos u
 
 Neste artigo, abordaremos as noções básicas de como trabalhar com listas de origem em um aplicativo Xamarin. Mac. É altamente recomendável que você trabalhe pelo artigo [Hello, Mac](~/mac/get-started/hello-mac.md) primeiro, especificamente a [introdução às seções Xcode e Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) e [ações](~/mac/get-started/hello-mac.md#outlets-and-actions) , pois ela aborda os principais conceitos e técnicas que usaremos em Este artigo.
 
-Talvez você queira dar uma olhada na seção [expondo C# classes/métodos para Objective-C](~/mac/internals/how-it-works.md) do documento [interno do Xamarin. Mac](~/mac/internals/how-it-works.md) também, explica `Register` os comandos e `Export` usados para conectar suas C# classes ao Objetos Objective-C e elementos de interface do usuário.
+Talvez você queira dar uma olhada na seção [expondo C# classes/métodos para Objective-C](~/mac/internals/how-it-works.md) do documento [interno do Xamarin. Mac](~/mac/internals/how-it-works.md) também, explica os `Register` comandos e `Export` usados para conectar suas C# classes ao Objetos Objective-C e elementos de interface do usuário.
 
 <a name="Introduction_to_Outline_Views" />
 
@@ -40,7 +40,7 @@ Uma lista de origem não armazena seus próprios dados, em vez disso, ela se bas
 
 O comportamento de uma lista de origem pode ser personalizado fornecendo-se uma subclasse do delegado da exibição`NSOutlineViewDelegate`de estrutura de tópicos () para dar suporte ao tipo de estrutura de tópicos para selecionar funcionalidade, seleção de itens e edição, acompanhamento personalizado e exibições personalizadas para itens individuais.
 
-Como uma lista de origem compartilha grande parte do comportamento e da funcionalidade com uma exibição de tabela e uma exibição de estrutura de tópicos, talvez você queira percorrer as exibições de [tabela](~/mac/user-interface/table-view.md) e a documentação de exibições de [Tópicos](~/mac/user-interface/outline-view.md) antes de continuar com este artigo.
+Como uma lista de origem compartilha grande parte do comportamento e da funcionalidade com uma exibição de tabela e uma exibição de estrutura de tópicos, talvez você queira percorrer as [exibições de tabela](~/mac/user-interface/table-view.md) e a documentação de [exibições de tópicos](~/mac/user-interface/outline-view.md) antes de continuar com este artigo.
 
 <a name="Working_with_Source_Lists" />
 
