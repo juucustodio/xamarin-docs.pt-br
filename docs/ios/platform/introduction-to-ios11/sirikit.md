@@ -4,15 +4,15 @@ description: Este documento descreve como trabalhar com o SiriKit no iOS 11. Em 
 ms.prod: xamarin
 ms.assetid: 8F75300B-B591-42ED-9D17-001992A5C381
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 09/07/2017
-ms.openlocfilehash: 7aa3b430af28a85cb8b774baa9538306cb9dd673
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: d4fab992121ad6a2b272012f7249df5ed8427513
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656404"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70286736"
 ---
 # <a name="sirikit-updates-in-ios-11"></a>Atualizações do SiriKit no iOS 11
 

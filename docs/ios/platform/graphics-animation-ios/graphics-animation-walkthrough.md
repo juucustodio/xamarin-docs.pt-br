@@ -4,15 +4,15 @@ description: Este artigo demonstra passo a passo como criar um aplicativo que us
 ms.prod: xamarin
 ms.assetid: 4B96D5CD-1BF5-4520-AAA6-2B857C83815C
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: badb65ace8d2ab68e102c9be127abe998a602091
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: cae0196fc29944ba8ae87fe43d256da090942f3a
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70225859"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70286111"
 ---
 # <a name="using-core-graphics-and-core-animation-in-xamarinios"></a>Usando gráficos principais e animações de núcleo no Xamarin. iOS
 
@@ -82,7 +82,7 @@ Antes de começarmos a baixar o exemplo de *GraphicsDemo* que acompanha este gui
 
     `SetNeedsDisplay`será chamado cada vez que o toque for movido para `Draw` que seja chamado na próxima etapa de loop de execução.
 
-4. Adicionaremos linhas ao caminho no `Draw` método e usamos uma linha tracejada vermelha para desenhar. [ `Draw` Implemente](~/ios/platform/graphics-animation-ios/core-graphics.md) com o código mostrado abaixo:
+4. Adicionaremos linhas ao caminho no `Draw` método e usamos uma linha tracejada vermelha para desenhar. [Implemente `Draw` ](~/ios/platform/graphics-animation-ios/core-graphics.md) com o código mostrado abaixo:
 
     ```csharp
     public override void Draw (CGRect rect){

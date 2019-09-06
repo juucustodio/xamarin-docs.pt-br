@@ -4,15 +4,15 @@ description: Este documento descreve como trabalhar com botões em um aplicativo
 ms.prod: xamarin
 ms.assetid: DA6EF400-A4E3-4245-A0D4-F2398CAE2C9B
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/07/2017
-ms.openlocfilehash: c53344d2e2e9458585439fd90a1f71a4869026be
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: aa1dd0b503dd59a89f526fef53d7d7756a3883de
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70200188"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291105"
 ---
 # <a name="working-with-tvos-buttons-in-xamarin"></a>Trabalhando com botões tvOS no Xamarin
 
@@ -34,7 +34,7 @@ A Apple tem as seguintes sugestões para trabalhar com botões:
 
 - **Use um título ou um ícone** , enquanto que um ícone e um título podem ser incluídos em um botão, o espaço é limitado, portanto, tente não combinar ambos.
 - **Marque claramente os botões destrutivos** – se o botão executar uma ação destrutiva (como excluir um arquivo), marque-o claramente como usando o texto e/ou o ícone. As ações destrutivas sempre devem apresentar um [alerta](~/ios/tvos/user-interface/alerts.md) solicitando que o usuário confinasse a ação.
-- **Não use os botões voltar** – o botão de menu no Siri remoto é usado para retornar à tela anterior. A única exceção a essa regra é para compras no aplicativo ou ações destrutivas em que um botão de cancelamento deve ser exibido.
+- **Não use os botões voltar** – o botão de menu no Siri remoto é usado para retornar à tela anterior. A única exceção a essa regra é para compras no aplicativo ou ações destrutivas em que um botão de **cancelamento** deve ser exibido.
 
 Para obter mais informações sobre como trabalhar com foco e navegação, consulte nossa documentação [trabalhando com navegação e foco](~/ios/tvos/app-fundamentals/navigation-focus.md) .
 
@@ -52,7 +52,7 @@ A Apple tem as seguintes sugestões ao criar os títulos para seus botões:
 
 - **Mostrar texto descritivo abaixo dos botões ícones** – sempre que possível, coloque um texto descritivo claro abaixo dos botões ícone para obter mais informações sobre o objetivo do botão.
 - **Use verbos ou frases de verbo para o título** – declare claramente a ação que ocorrerá quando o usuário clicar no botão.
-- **Use** a capitalização no estilo de título-com a exceção de artigos, conjunçãos ou preposições (quatro letras ou menos), todas as palavras do título do botão devem ser colocadas em maiúsculas.
+- **Use a capitalização no estilo de título** -com a exceção de artigos, conjunçãos ou preposições (quatro letras ou menos), todas as palavras do título do botão devem ser colocadas em maiúsculas.
 - **Use um título curto e ponto-a** -passo, use o argumentação mais curto possível para descrever a ação do botão.
 
 <a name="Buttons-and-Storyboards" />
@@ -221,7 +221,7 @@ E você pode ajustar a sombra do título usando o `SetTitleShadowColor`. Por exe
 button.SetTitleShadowColor(UIColor.Black, UIControlState.Normal);
 ```
 
-Você pode definir a sombra do título para mudar de *baixo para baixo* para relevo quando o botão for realçado usando o seguinte código:
+Você pode definir a sombra do título para mudar de *baixo para baixo* para *relevo* quando o botão for realçado usando o seguinte código:
 
 ```csharp
 button.ReverseTitleShadowWhenHighlighted = true;

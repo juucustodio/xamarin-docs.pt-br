@@ -4,15 +4,15 @@ description: Este artigo aborda o uso da codificação de valor-chave e da obser
 ms.prod: xamarin
 ms.assetid: 44FAFDA8-612A-4E0F-8BB4-5C92A3F4D552
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 893a3f76fe21bfe831ae81ffcd64c1538d9f05e1
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 3bcf52d33ebfaba6117a2089419673e0152cbe88
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70200174"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70289116"
 ---
 # <a name="databases-in-xamarinmac"></a>Bancos de dados no Xamarin. Mac
 
@@ -33,7 +33,7 @@ Neste artigo, abordaremos as noções básicas de como trabalhar com codificaç�
 
 Como usaremos a vinculação de dados e a codificação de chave-valor, trabalhe por meio da [ligação de dados e da codificação de valor de chave](~/mac/app-fundamentals/databinding.md) primeiro, já que as técnicas e conceitos principais serão abordados que serão usados nesta documentação e seu aplicativo de exemplo.
 
-Talvez você queira dar uma olhada na seção [expondo C# classes/métodos para Objective-C](~/mac/internals/how-it-works.md) do documento [interno do Xamarin. Mac](~/mac/internals/how-it-works.md) também, explica `Register` os atributos e `Export` usados para conectar suas C# classes ao Objetos Objective-C e elementos de interface do usuário.
+Talvez você queira dar uma olhada na seção [expondo C# classes/métodos para Objective-C](~/mac/internals/how-it-works.md) do documento [interno do Xamarin. Mac](~/mac/internals/how-it-works.md) também, explica os `Register` atributos e `Export` usados para conectar suas C# classes ao Objetos Objective-C e elementos de interface do usuário.
 
 ## <a name="direct-sqlite-access"></a>Acesso direto ao SQLite
 
@@ -476,7 +476,7 @@ public bool isManager {
 }
 ```
 
-Todas as alterações feitas nas propriedades **Name**, **profissão** ou ismanager serão enviadas para o banco de dados se eles tiverem sido salvos lá antes (por exemplo, se `_conn` a variável não `null`for). Em seguida, vamos examinar os métodos que adicionamos para **criar**, **Atualizar**, **carregar** e **excluir** pessoas do banco de dados.
+Todas as alterações feitas nas propriedades **Name**, **profissão** ou **ismanager** serão enviadas para o banco de dados se eles tiverem sido salvos lá antes (por exemplo, se `_conn` a variável não `null`for). Em seguida, vamos examinar os métodos que adicionamos para **criar**, **Atualizar**, **carregar** e **excluir** pessoas do banco de dados.
 
 #### <a name="create-a-new-record"></a>Criar um novo registro
 
@@ -1022,7 +1022,7 @@ Por exemplo, edite o exemplo de associação simples acima em Interface Builder,
 
 [![Expondo uma tomada de caixa de combinação](databases-images/combo01.png "Expondo uma tomada de caixa de combinação")](databases-images/combo01-large.png#lightbox)
 
-No **Inspetor de atributos**, verifique os **preenchimentos automáticos** e usa propriedades da fonte de **dados** :
+No **Inspetor de atributos**, verifique os **preenchimentos automáticos** e usa propriedades da **fonte de dados** :
 
 ![Configurando os atributos da caixa de combinação](databases-images/combo02.png "Configurando os atributos da caixa de combinação")
 

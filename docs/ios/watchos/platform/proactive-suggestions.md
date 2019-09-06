@@ -4,15 +4,15 @@ description: Este artigo mostra como usar sugestões proativas em um aplicativo 
 ms.prod: xamarin
 ms.assetid: 10CC9F16-963C-44F1-8B98-F09FB2310DFF
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: 95e0eb77719a9bcc642dfb1385d7371652943155
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 68ba09ce74f161c728f0a58276a0b0d98fec7d8c
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70198809"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70281284"
 ---
 # <a name="watchos-proactive-suggestions-in-xamarin"></a>Sugestões proativas do watchOS no Xamarin
 
@@ -51,7 +51,7 @@ As sugestões proativas funcionam com os aplicativos de três maneiras principai
 
 E tem suporte no aplicativo implementando o seguinte:
 
-- Os lembretes de **Siri contextuais** -no Ios `NSUserActivity` 10, foram expandidos para permitir que o Siri faça um lembrete rapidamente para exibir o conteúdo que ele está exibindo no aplicativo em uma data posterior.
+- Os **lembretes de Siri contextuais** -no Ios `NSUserActivity` 10, foram expandidos para permitir que o Siri faça um lembrete rapidamente para exibir o conteúdo que ele está exibindo no aplicativo em uma data posterior.
 - **Sugestões de localização** -o Ios 10 `NSUserActivity` aprimora os locais de captura exibidos no aplicativo e os promove em vários lugares em todo o sistema.
 - **As**  -  solicitações`NSUserActivity` Siri contextuais fornecem o contexto para as informações apresentadas dentro do aplicativo para Siri para que o usuário possa obter direções ou fazer uma chamada que esteja invocando Siri de dentro do aplicativo.
 
@@ -81,7 +81,7 @@ Para obter mais informações sobre a pesquisa de entrega e destaque, consulte n
 
 ### <a name="creating-an-activity"></a>Criando uma atividade
 
-Antes de criar uma atividade, um identificador de tipo de atividade precisará ser criado para identificá-lo. O identificador de tipo de atividade é uma cadeia de caracteres `NSUserActivityTypes` curta adicionada à matriz do `Info.plist` arquivo do aplicativo usado para identificar exclusivamente um determinado tipo de atividade de usuário. Haverá uma entrada na matriz para cada atividade que o aplicativo suporta e expõe para a pesquisa de aplicativo. Consulte nossa [referência](~/ios/platform/search/nsuseractivity.md) de identificadores de tipo de atividade de criação para obter mais detalhes.
+Antes de criar uma atividade, um identificador de tipo de atividade precisará ser criado para identificá-lo. O identificador de tipo de atividade é uma cadeia de caracteres `NSUserActivityTypes` curta adicionada à matriz do `Info.plist` arquivo do aplicativo usado para identificar exclusivamente um determinado tipo de atividade de usuário. Haverá uma entrada na matriz para cada atividade que o aplicativo suporta e expõe para a pesquisa de aplicativo. Consulte nossa [referência de identificadores de tipo de atividade de criação](~/ios/platform/search/nsuseractivity.md) para obter mais detalhes.
 
 Veja um exemplo de uma atividade:
 

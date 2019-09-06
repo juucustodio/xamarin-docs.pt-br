@@ -4,15 +4,15 @@ description: Este artigo aborda as técnicas de interação rápida que a Apple 
 ms.prod: xamarin
 ms.assetid: 26697F68-AF7E-4A36-988F-85E2674A4DD1
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: e04b6be1547183869fb49955703245e19365bdb3
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: a0719dce3b7f5484168dc5679237b01286f5de78
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70120164"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70286754"
 ---
 # <a name="quick-interaction-techniques-for-watchos-3-in-xamarin"></a>Técnicas de interação rápida para watchOS 3 no Xamarin
 
@@ -195,7 +195,7 @@ Novo no watchOS 3, o desenvolvedor pode habilitar a paginação vertical em seus
 
 [![](quick-interaction-techniques-images/quick05.png "Movendo entre uma tabela e a exibição de detalhes e passando o dedo para cima e para baixo para se mover entre as outras linhas")](quick-interaction-techniques-images/quick05.png#lightbox)
 
-Para habilitar esse modo, abra o storyboard do aplicativo watchOS no Xcode para edição, selecione a exibição de tabela e marque a caixa de seleção de paginação de **detalhes vertical** :
+Para habilitar esse modo, abra o storyboard do aplicativo watchOS no Xcode para edição, selecione a exibição de tabela e marque a caixa de seleção de **paginação de detalhes vertical** :
 
 [![](quick-interaction-techniques-images/quick06.png "Marque a caixa de seleção de paginação de detalhes vertical")](quick-interaction-techniques-images/quick06.png#lightbox)
 
@@ -299,7 +299,7 @@ Além disso, SpriteKit e SceneKit podem ser misturados com os elementos da inter
 
 ## <a name="simple-navigation"></a>Navegação simples
 
-o watchOS 3 apresenta várias maneiras pelas quais um desenvolvedor pode simplificar a navegação dentro de seus aplicativos watchOS, como a nova paginação [vertical](#vertical-paging), o [suporte](#gesture-recognizer-support) do reconhecedor de gestos e os recursos de [rotação de digital Crown](#digital-crown-rotation) apresentados acima.
+o watchOS 3 apresenta várias maneiras pelas quais um desenvolvedor pode simplificar a navegação dentro de seus aplicativos watchOS, como a nova [paginação vertical](#vertical-paging), o [suporte do reconhecedor de gestos](#gesture-recognizer-support) e os recursos de [rotação de digital Crown](#digital-crown-rotation) apresentados acima.
 
 O Digital Crown é exclusivo para o Apple Watch e pode ser usado de várias maneiras diferentes para simplificar a navegação. Por exemplo, um aplicativo de timer pode usar o Digital Crown para depurar por meio de comprimentos de temporizador disponíveis.
 

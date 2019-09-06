@@ -4,15 +4,15 @@ description: Este artigo fornece uma explicação prática de como criar uma ass
 ms.prod: xamarin
 ms.assetid: D3F6FFA0-3C4B-4969-9B83-B6020B522F57
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 05/02/2017
-ms.openlocfilehash: b73f00eb704d80da6b0bab3a34f08f2d1cb70a16
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: b53799f4b1c8d9299ab23191f6a702c2ec0983fb
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68646170"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70285759"
 ---
 # <a name="walkthrough-binding-an-ios-objective-c-library"></a>Passo a passo: Como associar uma biblioteca Objective-C do iOS
 
@@ -22,9 +22,9 @@ Ao trabalhar no iOS, você pode encontrar casos em que deseja consumir uma bibli
 
 Geralmente, no ecossistema do iOS, você pode encontrar bibliotecas em 3 tipos:
 
-* Como um arquivo de biblioteca estática pré-compilado com `.a` extensão junto com seus cabeçalhos (arquivos. h). Por exemplo, [biblioteca de análise do Google](https://developers.google.com/analytics/devguides/collection/ios/v3/sdk-download?hl=es#download_sdk)
-* Como uma estrutura pré-compilada. Essa é apenas uma pasta que contém a biblioteca estática, os cabeçalhos e, às `.framework` vezes, recursos adicionais com extensão. Por exemplo, a [biblioteca o AdMob do Google](https://developers.google.com/admob/ios/download).
-* Como apenas arquivos de código-fonte. Por exemplo, uma biblioteca que contém `.m` arquivos `.h` apenas e Objective C.
+- Como um arquivo de biblioteca estática pré-compilado com `.a` extensão junto com seus cabeçalhos (arquivos. h). Por exemplo, [biblioteca de análise do Google](https://developers.google.com/analytics/devguides/collection/ios/v3/sdk-download?hl=es#download_sdk)
+- Como uma estrutura pré-compilada. Essa é apenas uma pasta que contém a biblioteca estática, os cabeçalhos e, às `.framework` vezes, recursos adicionais com extensão. Por exemplo, a [biblioteca o AdMob do Google](https://developers.google.com/admob/ios/download).
+- Como apenas arquivos de código-fonte. Por exemplo, uma biblioteca que contém `.m` arquivos `.h` apenas e Objective C.
 
 No primeiro e segundo cenário, já haverá uma biblioteca estática CocoaTouch precompilada, portanto, neste artigo, nos concentraremos no terceiro cenário. Lembre-se, antes de começar a criar uma associação, sempre verifique a licença fornecida com a biblioteca para garantir que você esteja livre para associá-la.
 
@@ -45,10 +45,10 @@ O aplicativo de exemplo demonstrará como usar um delegado forte para a comunica
 
 Este artigo pressupõe que você tenha alguma familiaridade com o Xcode e com a linguagem Objective-C e tenha lido nossa documentação [de Binding Objective-c](~/cross-platform/macios/binding/index.md) . Além disso, é necessário o seguinte para concluir as etapas apresentadas:
 
--  O **Xcode e o SDK do IOS** – o Xcode da Apple e a mais recente API do IOS precisam ser instalados e configurados no computador do desenvolvedor.
--  **[Ferramentas de linha de comando do Xcode](#Installing_the_Xcode_Command_Line_Tools)** – as ferramentas de linha de comando do Xcode devem ser instaladas para a versão atualmente instalada do Xcode (veja abaixo os detalhes da instalação).
--  **Visual Studio para Mac ou Visual Studio** -a versão mais recente do Visual Studio para Mac ou do Visual Studio deve ser instalada e configurada no computador de desenvolvimento. Um Apple Mac é necessário para desenvolver um aplicativo Xamarin. iOS e, ao usar o Visual Studio, você deve estar conectado a [um host de Build do xamarin. Ios](~/ios/get-started/installation/windows/connecting-to-mac/index.md)
--  **A última versão do objetivo de Objective** -uma cópia atual da ferramenta de nitidez objetiva baixada [daqui.](~/cross-platform/macios/binding/objective-sharpie/get-started.md) Se você já tiver a nitidez do objetivo instalada, poderá atualizá-la para a versão mais recente usando o`sharpie update`
+- O **Xcode e o SDK do IOS** – o Xcode da Apple e a mais recente API do IOS precisam ser instalados e configurados no computador do desenvolvedor.
+- **[Ferramentas de linha de comando do Xcode](#Installing_the_Xcode_Command_Line_Tools)** – as ferramentas de linha de comando do Xcode devem ser instaladas para a versão atualmente instalada do Xcode (veja abaixo os detalhes da instalação).
+- **Visual Studio para Mac ou Visual Studio** -a versão mais recente do Visual Studio para Mac ou do Visual Studio deve ser instalada e configurada no computador de desenvolvimento. Um Apple Mac é necessário para desenvolver um aplicativo Xamarin. iOS e, ao usar o Visual Studio, você deve estar conectado a [um host de Build do xamarin. Ios](~/ios/get-started/installation/windows/connecting-to-mac/index.md)
+- **A última versão do objetivo de Objective** -uma cópia atual da ferramenta de nitidez objetiva baixada [daqui.](~/cross-platform/macios/binding/objective-sharpie/get-started.md) Se você já tiver a nitidez do objetivo instalada, poderá atualizá-la para a versão mais recente usando o`sharpie update`
 
 <a name="Installing_the_Xcode_Command_Line_Tools"/>
 
@@ -74,16 +74,16 @@ Você precisará usar um dos seguintes métodos para instalar as ferramentas:
 
 - **Instalar o Xcode** – quando você instala o Xcode, ele vem em conjunto com todas as suas ferramentas de linha de comando. Em shims do os X 10,9 (instalados `/usr/bin`em), o pode mapear qualquer `/usr/bin` ferramenta incluída no para a ferramenta correspondente dentro do Xcode. Por exemplo, o `xcrun` comando, que permite localizar ou executar qualquer ferramenta dentro do Xcode na linha de comando.
 - **Aplicativo de terminal** -do aplicativo de terminal, você pode instalar as ferramentas de linha de comando executando `xcode-select --install` o comando:
-    - Inicie o aplicativo de terminal.
-    - Digite `xcode-select --install` e pressione **Enter**, por exemplo:
+  - Inicie o aplicativo de terminal.
+  - Digite `xcode-select --install` e pressione **Enter**, por exemplo:
 
-    ```bash
-    Europa:~ kmullins$ xcode-select --install
-    ```
+  ```bash
+  Europa:~ kmullins$ xcode-select --install
+  ```
 
-    - Você será solicitado a instalar as ferramentas de linha de comando, clicar no botão **instalar** :   [![](walkthrough-images/xcode01.png "Instalando as ferramentas de linha de comando")](walkthrough-images/xcode01.png#lightbox)
+  - Você será solicitado a instalar as ferramentas de linha de comando, clicar no botão **instalar** : [![](walkthrough-images/xcode01.png "Instalando as ferramentas de linha de comando")](walkthrough-images/xcode01.png#lightbox)
 
-    - As ferramentas serão baixadas e instaladas nos servidores da Apple:   [![](walkthrough-images/xcode02.png "Baixando as ferramentas")](walkthrough-images/xcode02.png#lightbox)
+  - As ferramentas serão baixadas e instaladas nos servidores da Apple: [![](walkthrough-images/xcode02.png "Baixando as ferramentas")](walkthrough-images/xcode02.png#lightbox)
 
 - **Downloads para desenvolvedores da Apple** – o pacote de ferramentas de linha de comando está disponível a página [downloads para desenvolvedores da Apple](https://developer.apple.com/downloads/index.action) . Faça logon com sua ID da Apple e procure e baixe as ferramentas de linha de comando: [![](walkthrough-images/xcode03.png "Encontrando as ferramentas de linha de comando")](walkthrough-images/xcode03.png#lightbox)
 
@@ -186,7 +186,8 @@ Embora essas três etapas sejam bem simples, pode ser necessário repeti-las no 
 
 Há muitas ferramentas disponíveis para automatizar tarefas – um script de Shell, [Rake](http://rake.rubyforge.org/), [xbuild](https://www.mono-project.com/docs/tools+libraries/tools/xbuild/)e [Make](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/make.1.html). Quando as ferramentas de linha de comando do Xcode `make` são instaladas, o também é instalado, portanto, é o sistema de compilação que será usado para este passo a passos. Aqui está um **makefile** que você pode usar para criar uma biblioteca compartilhada com várias arquiteturas que funcionará em um dispositivo IOS e o simulador para qualquer biblioteca:
 
-```bash
+<!--markdownlint-disable MD010 -->
+```makefile
 XBUILD=/Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild
 PROJECT_ROOT=./YOUR-PROJECT-NAME
 PROJECT=$(PROJECT_ROOT)/YOUR-PROJECT-NAME.xcodeproj
@@ -212,6 +213,7 @@ lib$(TARGET).a: lib$(TARGET)-i386.a lib$(TARGET)-armv7.a lib$(TARGET)-arm64.a
 clean:
     -rm -f *.a *.dll
 ```
+<!--markdownlint-enable MD010 -->
 
 Insira os comandos **makefile** no editor de texto sem formatação de sua escolha e atualize as seções com **seu-Project-Name** com o nome do seu projeto. Também é importante garantir que você cole as instruções acima exatamente, com as guias dentro das instruções preservadas.
 
@@ -488,6 +490,7 @@ Abra esses dois arquivos no projeto de associação que criamos acima. Copie o c
 [BaseType(typeof(NSObject))]
 [Model]
 ```
+
 Para que a definição seja parecida com:
 
 [![](walkthrough-images/os11.png "A definição")](walkthrough-images/os11.png#lightbox)
@@ -622,21 +625,21 @@ using UIKit;
 
 namespace InfColorPickerSample
 {
-    public class ColorSelectedDelegate:InfColorPickerControllerDelegate
+  public class ColorSelectedDelegate:InfColorPickerControllerDelegate
+  {
+    readonly UIViewController parent;
+
+    public ColorSelectedDelegate (UIViewController parent)
     {
-        readonly UIViewController parent;
-
-        public ColorSelectedDelegate (UIViewController parent)
-        {
-            this.parent = parent;
-        }
-
-        public override void ColorPickerControllerDidFinish (InfColorPickerController controller)
-        {
-            parent.View.BackgroundColor = controller.ResultColor;
-            parent.DismissViewController (false, null);
-        }
+      this.parent = parent;
     }
+
+    public override void ColorPickerControllerDidFinish (InfColorPickerController controller)
+    {
+      parent.View.BackgroundColor = controller.ResultColor;
+      parent.DismissViewController (false, null);
+    }
+  }
 }
 ```
 
@@ -653,11 +656,12 @@ ColorSelectedDelegate selector;
 ```csharp
 public override void ViewDidLoad ()
 {
-    base.ViewDidLoad ();
-    ChangeColorButton.TouchUpInside += HandleTouchUpInsideWithStrongDelegate;
-    selector = new ColorSelectedDelegate (this);
+  base.ViewDidLoad ();
+  ChangeColorButton.TouchUpInside += HandleTouchUpInsideWithStrongDelegate;
+  selector = new ColorSelectedDelegate (this);
 }
 ```
+
 **Implemente o método HandleTouchUpInsideWithStrongDelegate** -Next implemente o manipulador de eventos para quando o usuário tocar em **ColorChangeButton**. Edite `ViewController`e adicione o seguinte método:
 
 ```csharp
@@ -696,6 +700,7 @@ private void HandleTouchUpInsideWithWeakDelegate (object sender, EventArgs e)
     picker.PresentModallyOverViewController (this);
 }
 ```
+
 **Atualizar ViewDidLoad** -devemos alterar `ViewDidLoad` para que ele use o manipulador de eventos que acabamos de criar. Edite `ViewController` e `ViewDidLoad` altere para se parecer com o seguinte trecho de código:
 
 

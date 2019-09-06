@@ -4,15 +4,15 @@ description: Este documento discute como usar rótulos no Xamarin. iOS. Ele desc
 ms.prod: xamarin
 ms.assetid: 54DA1221-13E4-4D45-B263-5F22A0AC7B53
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 07/11/2017
-ms.openlocfilehash: 41cd0eb93cee216311ea42f7ca027a1556b322e6
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 0447bd643f359b21ec58bb8bdd79f8482fdb8955
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227078"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70286310"
 ---
 # <a name="labels-in-xamarinios"></a>Rótulos no Xamarin. iOS
 

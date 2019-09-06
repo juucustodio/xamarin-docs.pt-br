@@ -3,15 +3,15 @@ title: Solução de problemas Xamarin Workbooks no Android
 description: Este documento fornece dicas de solução de problemas para trabalhar com o Xamarin Workbooks no Android. Ele aborda o suporte do emulador, pastas de trabalho que não serão carregadas e outros tópicos.
 ms.prod: xamarin
 ms.assetid: F1BD293B-4EB7-4C18-A699-718AB2844DFB
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/30/2017
-ms.openlocfilehash: 0d04b42a8d9f230c48bb09059296eb3740336dc6
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 04f02e6136d9d489a36e994575519e579770ac3d
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68511843"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291166"
 ---
 # <a name="troubleshooting-xamarin-workbooks-on-android"></a>Solução de problemas Xamarin Workbooks no Android
 

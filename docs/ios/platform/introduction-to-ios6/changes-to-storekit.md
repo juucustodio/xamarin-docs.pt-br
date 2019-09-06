@@ -4,15 +4,15 @@ description: 'o iOS 6 apresenta duas alterações na API do kit de loja: a capac
 ms.prod: xamarin
 ms.assetid: 253D37D7-44C7-D012-3641-E15DC41C2699
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: 818d5c734e8e662c271e20c26347e5e941ddad3e
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 4197dfb38ac6118d20da2b87d0c686558d77b0f6
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69527864"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70281568"
 ---
 # <a name="changes-to-storekit-in-ios-6"></a>Alterações no StoreKit no iOS 6
 
@@ -369,7 +369,7 @@ As seguintes classes foram adicionadas ou alteradas para dar suporte ao conteúd
 Detalhes da nova `SKDownload` classe:
 
 - **Progresso** – um valor entre 0-1 que você pode usar para exibir um indicador de porcentagem concluída para o usuário. Não use Progress = = 1 para detectar se o download está concluído, verifique o estado = = concluído.
-- Timecontinueing – estimativa do tempo de download restante, em segundos. -1 significa que ainda está calculando a estimativa.
+- **Timecontinueing** – estimativa do tempo de download restante, em segundos. -1 significa que ainda está calculando a estimativa.
 - **Estado** – ativo, aguardando, concluído, falha, pausado, cancelado.
 - **ContentURL** – local do arquivo em que o conteúdo foi colocado no disco, `Cache` no diretório. Preenchido apenas depois que o download for concluído.
 - **Erro** – Verifique essa propriedade se o estado falhar.

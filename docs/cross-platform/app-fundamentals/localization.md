@@ -1,194 +1,194 @@
 ---
-title: Localização de Interface de usuário do aplicativo
-description: Este documento descreve os conceitos de plataforma cruzada de internacionalização e localização e examina como elas afetam o design do aplicativo.
+title: Localização da interface do usuário do aplicativo
+description: Este documento descreve os conceitos de plataforma cruzada de internacionalização e localização e examina como eles afetam o design do aplicativo.
 ms.prod: xamarin
 ms.assetid: CC6847B2-23FB-4EDE-9F7E-EF29DD46A5C5
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: a1218d836aad827390d9f5e70de189a869b7c6b8
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: 8ecc0cf0ed1fe77f55044d44ecdfc43d6cb6b448
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67830995"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70289112"
 ---
 # <a name="localization"></a>Localização
 
-Este guia apresenta os conceitos por trás *internacionalização* e *localização* e links para obter instruções sobre como produzir aplicativos móveis Xamarin com esses conceitos.
+Este guia apresenta os conceitos por trás da *internacionalização* e *localização* e links para instruções sobre como produzir aplicativos móveis do Xamarin usando esses conceitos.
 
-Se você quiser pular diretamente para os detalhes técnicos de localização de aplicativos Xamarin, comece com um dos seguintes artigos de instruções específicas da plataforma:
+Se você quiser pular diretamente para os detalhes técnicos da localização de aplicativos do Xamarin, comece com um destes artigos de instruções específicos da plataforma:
 
-- [**Xamarin. Forms** ](~/xamarin-forms/app-fundamentals/localization/index.md) localização de plataforma cruzada usando arquivos RESX.
-- [**Xamarin. IOS** ](~/ios/app-fundamentals/localization/index.md) localização de plataforma nativa.
-- [**Xamarin. Android** ](~/android/app-fundamentals/localization.md) localização de plataforma nativa.
+- Localização entre plataformas do [**Xamarin. Forms**](~/xamarin-forms/app-fundamentals/localization/index.md) usando arquivos resx.
+- Localização da plataforma nativa do [**Xamarin. Ios**](~/ios/app-fundamentals/localization/index.md) .
+- Localização da plataforma nativa do [**Xamarin. Android**](~/android/app-fundamentals/localization.md) .
 
-## <a name="i18n-and-l10n"></a>I18N e L10n
+## <a name="i18n-and-l10n"></a>i18n e l10n
 
-*Internacionalização* é o processo de tornar seu código capaz de exibir diferentes idiomas e adaptar sua exibição para localidades diferentes (como número e formatação de data). Isso é também conhecido como *globalização*.
+A *internacionalização* é o processo de tornar seu código capaz de exibir diferentes idiomas e adaptar sua exibição para localidades diferentes (como formatação de número e de data). Isso também é conhecido como *globalização*.
 
-*Localização* é a etapa seguinte – criação de recursos (como cadeias de caracteres e imagens) para cada idioma e agrupá-las com o aplicativo internacionalizar.
+A *localização* é a etapa a seguir – criando recursos (como cadeias de caracteres e imagens) para cada idioma e agrupando-os com o aplicativo internacionalizar.
 
-Internacionalização que é muitas vezes abreviada para i18n – uma abreviação para 18 letras entre "i" e "n". Localização da mesma forma é abreviada para L10n – para 10 letras entre "L" e "n".
+A internacionalização geralmente é reduzida para i18n – abreviação de 18 letras entre "i" e "n". A localização é, de forma semelhante, reduzida para l10n – por 10 letras entre "L" e "n".
 
 ## <a name="overview"></a>Visão geral
 
-Este documento apresenta os conceitos associados à internacionalização e localização, e como elas se aplicam em geral ao desenvolvimento de aplicativos móveis.
-Ao projetar e criar um aplicativo, as coisas que você pode ter anteriormente embutidos em código mas que deve ser parametrizado para localização incluem:
+Este documento apresenta os conceitos associados à internacionalização e à localização e como eles se aplicam ao desenvolvimento de aplicativos móveis em geral.
+Ao projetar e criar um aplicativo, as coisas que você pode ter inserido anteriormente, mas que devem ser parametrizadas para localização, incluem:
 
-- Layouts de tela e texto,
+- Texto e layouts de tela,
 - Ícones, gráficos e cores,
-- Arquivos de som e vídeo
-- Texto dinâmico e a formatação de texto (como números, moeda e datas),
-- As alterações de layout para idiomas do direita para esquerda (RTL), e
+- Arquivos de vídeo e som,
+- Texto dinâmico e formatação de texto (como números, moeda e datas),
+- Alterações de layout para idiomas RTL (da direita para a esquerda) e
 - Classificação de dados.
 
-Independentemente de qual plataformas móveis, seu aplicativo for destinado a estas dicas ajudarão você compilar um aplicativo localizado de alta qualidade.
+Independentemente de quais plataformas móveis seu aplicativo se destina a essas dicas ajudará você a criar um aplicativo localizado de alta qualidade.
 
 
 ## <a name="design-considerations"></a>Considerações de design
 
-Arquitetura de um aplicativo para que seja possível localizar seu conteúdo é chamado de internacionalização. Fazendo a internacionalização corretamente é mais do que apenas permitindo para idiomas diferentes cadeias de caracteres a ser carregado no tempo de execução – um aplicativo bem projetado deve permitir todos os recursos a ser alterada com base no idioma e localidade (incluindo imagens, sons e vídeos) e pode se adaptar formatação e layout para lidar com diferentes dimensionada cadeias de caracteres.
+Arquitetar um aplicativo para que seja possível localizar seu conteúdo é chamado de internacionalização. Fazer a internacionalização corretamente é mais do que apenas permitir que diferentes cadeias de caracteres de idioma sejam carregadas em tempo de execução – um aplicativo bem projetado deve permitir que todos os recursos sejam alterados com base no idioma e na localidade (incluindo imagens, sons e vídeos) e possam adaptar-se formatação e layout para lidar com diferentes cadeias de caracteres de tamanho.
 
-Esta seção aborda algumas considerações de design para ser levadas em conta ao criar um aplicativo internacionalizado.
+Esta seção aborda algumas considerações de design a serem levadas em conta ao criar um aplicativo internacionalizado.
 
 ### <a name="layouts-and-string-length"></a>Layouts e comprimento da cadeia de caracteres
 
-Cadeias de caracteres do chinês e japonês podem ser muito curtas – às vezes, um ou dois caracteres podem ser significativos para um rótulo de campo de entrada.
+As cadeias de caracteres chinês e japonês podem ser muito curtas – às vezes, um ou dois personagens podem ser significativos o suficiente para um rótulo de campo de entrada.
 
-Alemãs cadeias de caracteres (por exemplo) podem ser muito longos; às vezes, uma palavra relativamente curta em inglês se torna muito longa em outros idiomas – ou se tornando recortadas ou outra coisa inesperadamente refluxo de seu layout.
+As cadeias de caracteres do alemão (por exemplo) podem ser muito longas; às vezes, uma palavra relativamente curta em inglês se torna muito longa em outras linguagens, ficando recortada ou refluindo de forma inesperada o layout.
 
 Compare os comprimentos de cadeia de caracteres para alguns itens na tela inicial do iOS em inglês, alemão e japonês:
 
-[![](localization-images/language-compare-sml.png "Comprimento da cadeia de caracteres japoneses vs alemão")](localization-images/language-compare.png#lightbox)
+[![](localization-images/language-compare-sml.png "Tamanho da cadeia de caracteres alemão versus japonês")](localization-images/language-compare.png#lightbox)
 
-Observe que **configurações** em inglês (8 caracteres) requer 13 caracteres para a tradução para o alemão, mas só 2 caracteres em japonês.
+Observe que **as configurações** em inglês (8 caracteres) exigem 13 caracteres para a tradução do alemão, mas apenas 2 caracteres em Japonês.
 
-Layouts de onde o rótulo de exibição e o campo de entrada estão lado a lado são difíceis de trabalhar com quando o tamanho do rótulo pode variar significativamente. Geralmente, um layout no qual o rótulo é exibido acima de um campo é fácil de localizar porque a largura total da tela está disponível para o rótulo e a entrada.
+Os layouts onde o rótulo de exibição e o campo de entrada são lado a lado são difíceis de trabalhar com quando o comprimento do rótulo pode variar muito. Geralmente, um layout em que o rótulo é exibido acima de um campo é mais fácil de localizar porque a largura total da tela está disponível tanto para o rótulo quanto para a entrada.
 
-Como regra geral, se você estiver criando layouts fixos (especialmente a elementos de lado a lado) que pelo menos 50% mais largura de suas cadeias de caracteres em inglês exigem para rótulos e texto. Isso não resolve todos os problemas, mas fornecerá um buffer que funcionará em muitos casos.
+Como regra geral, se você estiver criando layouts fixos (especialmente elementos lado a lado), permita pelo menos 50% mais largura do que suas cadeias de caracteres em inglês exigem para rótulos e texto. Isso não resolverá todos os problemas, mas fornecerá um buffer que funcionará em muitos casos.
 
 ### <a name="input-validation"></a>Validação de entrada
 
-Tenha cuidado com as suposições ao escrever as regras de validação. Pode parecer válido para exigir que um campo de texto de entrada para "require" pelo menos três caracteres em inglês, como uma única letra muito raramente tem qualquer significado. Em chinês e japonês no entanto, um único caractere pode ser uma entrada válida e uma validação de mensagem "pelo menos 3 caracteres é necessária" não faz sentido para esses idiomas.
+Cuidado com as suposições ao escrever regras de validação. Pode parecer válido exigir uma entrada de campo de texto para "exigir" pelo menos três caracteres em inglês, uma vez que uma única letra raramente tem qualquer significado. Em chinês e japonês, no entanto, um único caractere pode ser uma entrada válida e uma mensagem de validação "pelo menos 3 caracteres é necessária" não faz sentido para esses idiomas.
 
-Outras tarefas aparentemente simples, como validar um endereço de email ou URL do site se tornar mais complicada com os caracteres não está limitado ao subconjunto ASCII.
+Outras tarefas aparentemente simples, como validar um endereço de email ou URL do site, se tornam mais complicadas com os caracteres não são limitados ao subconjunto ASCII.
 
-Escreva suas regras de validação com internacionalização, lembre-se – escolha as regras de menos restritivas, ou escrever a lógica para que ele funcione de maneira diferente para cada idioma.
+Escreva suas regras de validação com internacionalização em mente – escolha as regras menos restritivas ou grave a lógica para que ela funcione de forma diferente para cada idioma.
 
 ### <a name="images-and-color"></a>Imagens e cores
 
-Nem toda imagem precisa ser alterado com base na preferência de idioma do usuário. Vários ícones ou fotos será adequado para todos os usuários, não importa qual linguagem que elas falam.
-Alguns recursos fazem sentido para localizar no entanto, tais como:
+Nem toda imagem precisa ser alterada com base na escolha de idioma de um usuário. Muitos ícones ou fotos serão adequados para todos os usuários, não importa qual linguagem eles falam.
+No entanto, alguns recursos fazem sentido localizar, como:
 
-- Imagens que descrevam as pessoas ou locais específicos – seu aplicativo pode se sentir mais relevante para os usuários se ele mostra o local de pessoas/locais.
-- Ícones – alguns iconografia pode ser específicas da cultura e você pode tornar mais fácil de usar Localizando as imagens para refletir o local Noções básicas sobre seu aplicativo.
-- Cores – algumas culturas entender as cores de forma diferente – vermelho pode significar aviso em uma região, mas a boa sorte em outro. Verifique com alto-falantes nativos ao projetar seu aplicativo para determinar se você deve criar um mecanismo para localizar as cores.
+- Imagens que descrevem pessoas ou locais específicos – seu aplicativo pode se sentir mais relevante para os usuários se ele mostrar pessoas/locais locais.
+- Ícones – alguns iconografia podem ser específicos de cultura e você pode facilitar o uso do seu aplicativo localizando as imagens para refletir a compreensão local.
+- Cores – algumas culturas entendem cores de forma diferente – vermelho pode significar um aviso em uma região, mas boa sorte em outra. Verifique com alto-falantes nativos ao projetar seu aplicativo para determinar se você deve criar um mecanismo para localizar cores.
 
 
 ### <a name="videos-and-sound"></a>Vídeos e som
 
-Vídeos e som desafios especiais presentes na localização de um aplicativo, porque embora seja relativamente fácil de obter cadeias de caracteres convertidas, registrar vários voiceover controla ou clipes de vídeo pode ser caro e difícil.
+Vídeos e sons apresentam desafios especiais ao localizar um aplicativo, porque embora seja relativamente fácil obter cadeias de caracteres convertidas, gravar várias faixas de voz ou clipes de vídeo pode ser caro e difícil.
 
-Várias cópias dos arquivos de som e vídeos significativamente também podem aumentar o tamanho do seu aplicativo (especialmente se você estiver localizando em um grande número de idiomas ou tiver muitos arquivos de mídia). Você pode considerar baixando somente os ativos de idiomas necessários depois que o usuário instalou em seu aplicativo, mas isso também pode resultar em uma experiência ruim para o usuário em redes lentas.
+Várias cópias de arquivos de vídeo e de som também podem aumentar significativamente o tamanho do seu aplicativo (especialmente se você estiver localizando em um grande número de idiomas ou tiver muitos arquivos de mídia). Você pode considerar baixar apenas os ativos de idioma necessários depois que o usuário tiver instalado seu aplicativo, mas isso também pode resultar em uma experiência de usuário ruim em redes lentas.
 
-Frequentemente, há várias maneiras de solucionar problemas de localização – a coisa mais importante é considerá-las inicial e garantir que seu aplicativo foi projetado para cuidar deles.
+Muitas vezes, há várias maneiras de resolver problemas de localização – o mais importante é considerá-los antecipadamente e garantir que seu aplicativo tenha sido projetado para cuidar deles.
 
 
 ### <a name="dates-times-numbers-and-currency"></a>Datas, horas, números e moeda
 
-Se você estiver usando funções de formatação do .NET, lembre-se de especificar a cultura para que os separadores decimais são analisados corretamente (e evitar exceções de conversão que está sendo lançadas). Por exemplo, 1.99 e 1,99 são representações decimais válidas, dependendo de sua localidade.
+Se você estiver usando funções de formatação do .NET, lembre-se de especificar a cultura para que separadores decimais sejam analisados corretamente (e evite que exceções de conversão sejam lançadas). Por exemplo, 1,99 e 1, 99 são representações decimais válidas dependendo da sua localidade.
 
-Quando os dados forem provenientes de uma fonte conhecida (ie. de seu próprio código ou um serviço web que você controle) você pode codificar um identificador de cultura que corresponda à formatação, como InvariantCulture que funcionará para formatação de idioma do inglês padrão.
+Quando os dados são provenientes de uma fonte conhecida (ou seja, do seu próprio código ou de um serviço Web que você controla), você pode codificar um identificador de cultura que corresponda à formatação, como InvariantCulture, que funcionará para a formatação padrão do idioma inglês.
 
 ```csharp
 double.Parse("1,999.99", CultureInfo.InvariantCulture);
 ```
 
-Se a dados está sendo inseridos pelo usuário do aplicativo, analisá-lo usando uma instância CultureInfo que reflete a localidade a:
+Se os dados estiverem sendo inseridos pelo usuário do aplicativo, analise-os usando uma instância CultureInfo que reflete sua localidade:
 
 ```csharp
 double.Parse("1 999,99", CultureInfo.CreateSpecificCulture("fr-FR"));
 ```
 
-Consulte a [Analisando cadeias de caracteres numéricas](https://msdn.microsoft.com/library/xbtzcc4w(v=vs.110).aspx) e [Analisando cadeias de data e hora](https://msdn.microsoft.com/library/2h3syy57(v=vs.110).aspx) artigos do MSDN para obter mais informações.
+Consulte os artigos [analisando cadeias de caracteres numéricas](https://msdn.microsoft.com/library/xbtzcc4w(v=vs.110).aspx) e [data e hora de análise](https://msdn.microsoft.com/library/2h3syy57(v=vs.110).aspx) do MSDN para obter informações adicionais.
 
 <a name="rtl" />
 
-### <a name="right-to-left-rtl-languages"></a>Idiomas da direita para esquerda (RTL)
+### <a name="right-to-left-rtl-languages"></a>Idiomas da direita para a esquerda (RTL)
 
-Algumas linguagens, como árabe, hebraico e Urdu (por exemplo), são lidos da direita para esquerda.
-Os aplicativos que dão suporte a esses idiomas devem usar designs de tela que se adaptam para os leitores da direita para esquerda, por exemplo:
+Algumas linguagens, como árabe, Hebraico e urdu (por exemplo), são lidas da direita para a esquerda.
+Os aplicativos que dão suporte a esses idiomas devem usar designs de tela que se adaptem a leitores da direita para a esquerda, por exemplo:
 
-- Texto deve ser alinhado à direita.
-- Rótulos devem aparecer à direita dos campos de entrada.
-- Posicionamento de botão padrão geralmente é revertido.
-- Passar o dedo Navegação hierárquica e animação (e outros metáforas de navegação e animações) que usam a direção de contexto também deve ser invertido.
+- O texto deve estar alinhado à direita.
+- Os rótulos devem aparecer à direita dos campos de entrada.
+- O posicionamento do botão padrão geralmente é invertido.
+- O toque e a animação de navegação hierárquica (e outras metáforas de navegação e animações) que usam a direção para o contexto também devem ser revertidos.
 
-IOS e Android dão suporte a layouts da direita para esquerda e a renderização da fonte, com recursos internos que ajudam a fazer os ajustes acima. Automaticamente no momento, o xamarin. Forms não oferece suporte para a renderização de RTL.
+O iOS e o Android dão suporte a layouts da direita para a esquerda e à renderização de fontes, com recursos internos que ajudam a fazer os ajustes acima. O Xamarin. Forms não oferece suporte automaticamente à renderização RTL.
 
 ### <a name="sorting"></a>Classificação
 
-Idiomas diferentes definem a ordem de classificação dos seus alfabetos diferente, mesmo quando eles usam o mesmo conjunto de caracteres.
+Diferentes idiomas definem a ordem de classificação de seus alfabetos de forma diferente, mesmo quando usam o mesmo conjunto de caracteres.
 
-Consulte a [detalhes de comparação de cadeia de caracteres](https://msdn.microsoft.com/library/dd465121(v=vs.110).aspx#the_details_of_string_comparison) na [práticas recomendadas para usar cadeias de caracteres no .NET Framework](https://msdn.microsoft.com/library/dd465121(v=vs.110).aspx) para obter um exemplo em que o idioma (CultureInfo) afeta a ordem de classificação.
+Consulte os [detalhes da comparação de cadeias de caracteres](https://msdn.microsoft.com/library/dd465121(v=vs.110).aspx#the_details_of_string_comparison) nas [práticas recomendadas para usar cadeias no .NET Framework](https://msdn.microsoft.com/library/dd465121(v=vs.110).aspx) para obter um exemplo em que Language (CultureInfo) afeta a ordem de classificação.
 
-É improvável que os recursos internos do banco de dados em plataformas móveis dará suporte a ordenação para que você talvez precise implementar código adicional em sua lógica de negócios de classificação de idioma específico.
+É improvável que os recursos de banco de dados internos nas plataformas móveis ofereçam suporte à ordenação de classificação específica de idioma, para que você possa ser solicitado a implementar código adicional em sua lógica de negócios.
 
 ### <a name="text-search"></a>Pesquisa de texto
 
-Verifique se você escrever e testar seu algoritmo de pesquisa com vários idiomas em mente. Pontos a serem considerados incluem:
+Certifique-se de escrever e testar seu algoritmo de pesquisa com vários idiomas em mente. As coisas a serem consideradas incluem:
 
-- Preenchimento automático – se você tiver criado uma função de preenchimento automático garantem a fontes de sugestões relevantes para o idioma do usuário.
-- A consulta correspondente aos dados – pesquisará consultas inseridas em uma determinada linguagem ser executadas em relação ao conteúdo apenas, escritos nessa linguagem, ou em relação a todo o conteúdo em seu aplicativo?
-- Lematização – se a pesquisa é criada para procurar palavras semelhantes, raízes do word e outras otimizações de pesquisa, é essas otimizações criadas para todos os idiomas que você oferece suporte?
-- Classificação – Verifique se os resultados são classificados corretamente (consulte acima).
+- Preenchimento automático – se você tiver criado uma função de preenchimento automático, certifique-se de que as fontes de origem sejam sugestões relevantes para o idioma do usuário.
+- Consulta de correspondência para dados – as consultas de pesquisa inseridas em um idioma específico serão executadas em apenas conteúdo escrito nesse idioma ou em relação a todo o conteúdo em seu aplicativo?
+- Lematização – se sua pesquisa for criada para pesquisar palavras semelhantes, raízes do Word e outras otimizações de pesquisa, serão essas otimizações criadas para todos os idiomas aos quais você dá suporte?
+- Classificação – Verifique se os resultados estão classificados corretamente (veja acima).
 
 
 ### <a name="data-from-external-sources"></a>Dados de fontes externas
 
-Muitos aplicativos baixar dados de fontes externas, do Twitter e RSS feeds ao clima, notícias ou preços de ações. Ao exibir isso a um usuário, você precisa considerar a possibilidade de que exibirá uma tela de informações irrelevantes ou ilegíveis para eles.
+Muitos aplicativos baixam dados de fontes externas, do Twitter e RSS feeds para o clima, notícias ou preços de ações. Ao exibi-lo para um usuário, você precisa considerar a possibilidade de exibir uma tela de informações irrelevantes ou ilegíveis.
 
-Há algumas estratégias que você pode usar para tentar e garantir que seu aplicativo exibe os dados relevantes para o usuário:
+Há algumas estratégias que você pode usar para tentar e garantir que seu aplicativo exiba os dados relevantes para o usuário:
 
-- Fontes diferentes – seu aplicativo pode baixar os dados de uma fonte diferente dependendo do idioma ou localidade do usuário. Preços de notícias, clima e estoque de localidade podem fazer mais sentido que algo baixado de um feed na América do Norte.
-- Modo de exibição localizado – se você estiver exibindo um Twitter ou uma foto do feed, você deve exibir os metadados (como o tempo gasto) em seu próprio idioma, mesmo se o conteúdo em si permanece no idioma original.
-- Tradução – você pode criar uma opção de conversão em seu aplicativo faça uma tradução de dados de entrada. Isso pode ser automático ou a critério do usuário – não se esqueça de notificar o usuário se isso estiver ocorrendo, já que as traduções de máquina nunca são perfeitas!
+- Fontes diferentes – seu aplicativo pode baixar os dados de uma fonte diferente dependendo do idioma ou da localidade do usuário. Notícias de localidade, os preços de clima e de estoque podem fazer mais sentido do que algo baixado de um feed norte-americano.
+- Exibição localizada – se você estiver exibindo um Twitter ou um feed de fotos, deverá exibir os metadados (como o tempo gasto) em seu próprio idioma, mesmo que o próprio conteúdo permaneça no idioma original.
+- Tradução – você pode criar uma opção de conversão em seu aplicativo para fazer uma tradução automática dos dados de entrada. Isso pode ser automático ou a critério do usuário – apenas lembre-se de notificar o usuário se isso estiver ocorrendo, já que as traduções da máquina nunca são perfeitos!
 
-Isso também pode afetar os links externos para faixas de áudio ou vídeos – ao projetar seu aplicativo não se esqueça de planejar com antecedência para fornecimento traduzida conteúdo ou garantir que os usuários serão informados adequadamente pela interface do usuário quando o conteúdo não aparecerá na sua idioma.
+Isso também pode afetar links externos para faixas de áudio ou vídeos – ao projetar seu aplicativo, não se esqueça de planejar antecipadamente o conteúdo traduzido ou garantir que os usuários sejam adequadamente informados pela interface do usuário quando o conteúdo não for apresentado em seus idioma.
 
 
-### <a name="dont-over-translate"></a>Não se convertem em excesso
+### <a name="dont-over-translate"></a>Não sobretraduzir
 
-Algumas cadeias de caracteres em seu aplicativo podem não precisar converter ou na pior das hipóteses precisam de atenção especial pelo conversor. Os exemplos podem incluir:
+Algumas cadeias de caracteres em seu aplicativo podem não precisar de tradução ou, na pior das hipóteses, precisam de atenção especial pelo tradutor. Os exemplos podem incluir:
 
-- URLs – se você listar uma URL, ele pode ou talvez não precise ser ajustado por idioma. Por exemplo, facebook.com não requer conversão ele detecta automaticamente o idioma no site principal. Outros sites possuem conteúdo específico da localidade e você talvez queira oferecer uma URL diferente, como yahoo.com versus yahoo.fr ou yahoo.it.
-- Números de telefone – especialmente aqueles com códigos de país diferentes ou números para chamadores que falam um determinado idioma.
+- URLs – se você listar uma URL, ela poderá ou não precisar ser ajustada por idioma. Por exemplo, facebook.com não requer tradução, ele detecta automaticamente a linguagem no site principal. Outros sites têm conteúdo específico de localidade e talvez você queira oferecer uma URL diferente, como yahoo.com versus yahoo.fr ou yahoo.it.
+- Números de telefone – especialmente aqueles com códigos de país ou números diferentes para chamadores que falam um idioma específico.
 - Detalhes de contato – endereços e outras informações podem variar por idioma ou localidade.
-- Marcas comerciais e nomes de produto – algumas cadeias de caracteres não é necessário converter porque eles sempre são escritos no mesmo idioma.
+- Marcas comerciais & nomes de produtos – algumas cadeias de caracteres não precisam ser traduzidas porque são sempre escritas na mesma linguagem.
 
-Por fim, certifique-se de incluir instruções detalhadas para o conversor, se determinadas cadeias de caracteres exigem tratamento especial.
+Por fim, não se esqueça de incluir instruções detalhadas para o tradutor se determinadas cadeias de caracteres exigirem tratamento especial.
 
 
 ### <a name="formatted-text"></a>Texto formatado
 
-Não costumam ser um problema com aplicativos móveis porque cadeias de caracteres geralmente ricamente não estão formatadas. No entanto se RTF (como a formatação em negrito ou itálico) é necessária em seu aplicativo garantir que o tradutor sabe como para a formatação de entrada, os arquivos de cadeias de caracteres armazená-lo corretamente e está formatado corretamente antes de serem exibidos ao usuário (ie. não deixe acidentalmente os códigos de formatação em si ser apresentada ao usuário).
+Geralmente não é um problema com aplicativos móveis porque cadeias de caracteres geralmente não são formatadas de forma avançada. No entanto, se o Rich Text (como formatação em negrito ou itálico) for necessário em seu aplicativo, verifique se o tradutor sabe como inserir a formatação, se os arquivos de cadeias de caracteres o armazenam corretamente e se estão formatados corretamente antes de serem exibidos para o usuário (ou seja, não deixe acidentalmente os próprios códigos de formatação são apresentados ao usuário).
 
 
 
 ## <a name="translation-tips"></a>Dicas de tradução
 
-Converter as cadeias de caracteres usadas por um aplicativo é considerado parte do processo de localização. Normalmente essa tarefa será terceirizada para um serviço de tradução e executada pela equipe multilíngue que talvez não saiba seu aplicativo ou seus negócios.
+A tradução das cadeias de caracteres usadas por um aplicativo é considerada parte do processo de localização. Normalmente, essa tarefa será terceirizada para um serviço de tradução e executada por uma equipe multilíngue que pode não conhecer seu aplicativo ou sua empresa.
 
-As dicas a seguir o ajudará a produzir cadeias de caracteres que são mais fáceis de traduzir com precisão e, portanto, melhorar a qualidade dos seus aplicativos localizados.
+As dicas a seguir ajudarão você a produzir cadeias de caracteres mais fáceis de serem traduzidas com precisão e, portanto, melhorar a qualidade dos seus aplicativos localizados.
 
 
 
-### <a name="localize-complete-strings-not-words"></a>Localizar cadeias de caracteres completas, e não de palavras
+### <a name="localize-complete-strings-not-words"></a>Localizar cadeias de caracteres completas, não palavras
 
-Às vezes, os desenvolvedores tirar a abordagem de tentativa de especificar palavras individuais ou a frase 'trechos de código' para que eles podem usá-los novamente em todo o aplicativo. Por exemplo, para o texto "você tem 5 mensagens." eles podem especificar seguintes cadeias de caracteres para tradução
+Às vezes, os desenvolvedores tomam a abordagem de tentar especificar palavras únicas ou "trechos de código" para que possam usá-las novamente em todo o aplicativo. Por exemplo, para o texto "você tem 5 mensagens". Eles podem especificar as seguintes cadeias de caracteres para tradução
 
-**Ruim**:
+**Inadequado**:
 
 ```csharp
 "You have"
@@ -197,42 +197,42 @@ As dicas a seguir o ajudará a produzir cadeias de caracteres que são mais fác
 "messages"
 ```
 
-e, em seguida, tentar criar frase correta dinamicamente no código usando a concatenação de cadeia de caracteres:
+e tente criar a frase correta imediatamente no código usando a concatenação de cadeia de caracteres:
 
-**Ruim**:
+**Inadequado**:
 
 ```csharp
 "You have" + " " + numMsgs + " " + "messages"
 "You have" + " no " + "messages"
 ```
 
-**Isso não é recomendável** porque ele não necessariamente funcionará para todos os idiomas e será difícil para o conversor compreender o contexto de cada segmento curto. Isso também leva a reutilização de cadeias de caracteres traduzidas, que podem causar problemas posteriormente se eles são usados em contextos diferentes (e, em seguida, são atualizados).
+**Isso não é recomendado** porque ele não funciona necessariamente para todas as linguagens e será difícil para o tradutor entender o contexto de cada segmento curto. Ele também leva a reutilização de cadeias de caracteres traduzidas, o que poderá causar problemas posteriormente se eles forem usados em diferentes contextos (e depois forem atualizados).
 
 
-### <a name="allow-for-parameter-re-ordering"></a>Permitir a reordenação de parâmetro
+### <a name="allow-for-parameter-re-ordering"></a>Permitir reordenação de parâmetro
 
-Algumas linguagens de programação exigem sintaxe extra para especificar a ordem dos parâmetros em uma cadeia de caracteres, no entanto, .NET já suporta o conceito de espaços reservados numerados, portanto
+Algumas linguagens de programação exigem sintaxe extra para especificar a ordem dos parâmetros em uma cadeia de caracteres, no entanto, o .NET já dá suporte ao conceito de espaços reservados numerados, portanto
 
-**Boa**:
+**Bom**:
 
 ```csharp
 "a {0} b {1} cde {3}"
 ```
 
-pode ser convertida a seguir (em que a posição e a ordem dos espaços reservados é alterada)
+pode ser traduzido o seguinte (onde a posição e a ordem dos espaços reservados são alteradas)
 
 ```csharp
 "{2} {3} f g h {0}"
 ```
 
-e os tokens serão ordenados como o conversor que se destina. Certifique-se de incluir uma explicação do que contém cada espaço reservado ao enviar a cadeia de caracteres para um tradutor.
+e os tokens serão ordenados como o tradutor pretendido. Certifique-se de incluir uma explicação do que cada espaço reservado contém ao enviar a cadeia de caracteres para um tradutor.
 
 
-### <a name="use-multiple-strings-for-cardinality"></a>Usar várias cadeias de caracteres de cardinalidade
+### <a name="use-multiple-strings-for-cardinality"></a>Usar várias cadeias de caracteres para cardinalidade
 
-Evite cadeias de caracteres como `"You have {0} message/s."` usar cadeias de caracteres específicas para cada estado para proporcionar uma melhor experiência de usuário:
+Evite cadeias `"You have {0} message/s."` de caracteres como usar cadeias de caracteres específicas para cada Estado para fornecer uma melhor experiência do usuário:
 
-**Boa**:
+**Bom**:
 
 ```csharp
 "You have no messages."
@@ -241,16 +241,16 @@ Evite cadeias de caracteres como `"You have {0} message/s."` usar cadeias de car
 "You have {0} messages."
 ```
 
-Você precisará escrever código em seu aplicativo para avaliar o número que está sendo exibido e escolha a cadeia de caracteres apropriada. Algumas plataformas (incluindo iOS e Android) tem recursos internos para escolher automaticamente a cadeia de caracteres no plural práticas com base nas preferências de idioma/localidade atual.
+Você precisará escrever código em seu aplicativo para avaliar o número que está sendo exibido e escolher a cadeia de caracteres apropriada. Algumas plataformas (incluindo iOS e Android) têm recursos internos para escolher automaticamente a melhor cadeia de caracteres do plural com base nas preferências do idioma/localidade atual.
 
 
-### <a name="allowing-for-gender"></a>Permitindo sexo
+### <a name="allowing-for-gender"></a>Permitindo o gênero
 
-Às vezes, idiomas latinos usam palavras diferentes, dependendo do gênero do assunto. Se seu aplicativo sabe sobre sexo, você deve permitir que as cadeias de caracteres traduzidas refletir isso.
+As linguagens baseadas em latim às vezes usam palavras diferentes, dependendo do gênero do assunto. Se seu aplicativo sabe sobre o gênero, você deve permitir que as cadeias de caracteres traduzidas reflitam isso.
 
-Também é o caso mais óbvio até mesmo em inglês, em que as cadeias de caracteres se referem a uma pessoa específica ou o usuário de seu aplicativo. Por exemplo, alguns sites mostram mensagens como `"Bob commented on his post"` para que você precisa de cadeias de caracteres para um sexo Masculino, feminino e não binários ou desconhecido:
+Também há um caso mais óbvio, até mesmo em inglês, em que as cadeias de caracteres referem-se a uma pessoa ou usuário específico do seu aplicativo. Por exemplo, alguns sites mostram mensagens como `"Bob commented on his post"` , portanto, você precisa de cadeias de caracteres para um sexo masculino, fêmea e não binário ou desconhecido:
 
-**Boa**:
+**Bom**:
 
 ```csharp
 "{0} commented on his post"
@@ -258,59 +258,59 @@ Também é o caso mais óbvio até mesmo em inglês, em que as cadeias de caract
 "{0} commented on their post"
 ```
 
-### <a name="dont-reuse-strings"></a>Não reutilize cadeias de caracteres
+### <a name="dont-reuse-strings"></a>Não reutilizar cadeias de caracteres
 
-Ou, mais precisamente, não reutilize cadeias de caracteres apenas porque elas são semelhantes quando a cadeia de caracteres em si tem uma finalidade diferente ou significado.
+Ou com mais precisão, não reutilize cadeias de caracteres apenas porque elas são semelhantes quando a cadeia de caracteres tem uma finalidade ou significado diferente.
 
-Por exemplo: imagine que você tem uma chave liga/desliga em seu aplicativo e o controle de switch precisa o texto para 'on' e 'off' deve ser localizado. Você também exibir o valor dessa configuração em outro lugar no aplicativo em um rótulo de texto. Você deve usar cadeias de caracteres diferentes para a exibição do comutador em comparação com o status da opção (mesmo se eles forem a mesma cadeia de caracteres em seu idioma padrão) – por exemplo:
+Por exemplo: Imagine que você tenha uma opção liga/desliga em seu aplicativo e o controle switch precise que o texto para ' on ' e ' off ' seja localizado. Você também exibe o valor dessa configuração em outro lugar no aplicativo em um rótulo de texto. Você deve usar cadeias de caracteres diferentes para a exibição de comutador em comparação com o status do comutador (mesmo se eles forem a mesma cadeia de caracteres no idioma padrão) – por exemplo:
 
-- "Ligado" – exibido no comutador em si
-- "Off" – exibidas no comutador em si
-- "Ligado" – exibido em um rótulo
-- "Off" – exibidas em um rótulo
+- "On" – exibido no próprio comutador
+- "Off" – exibido no próprio comutador
+- "On" – exibido em um rótulo
+- "Off" – exibido em um rótulo
 
-Isso fornece flexibilidade máxima para a tradução:
+Isso fornece a máxima flexibilidade para o Tradutor:
 
-- Por motivos de design, talvez a própria opção Use letras minúsculas de "on" e "desativado", mas o rótulo de exibição usa letras maiusculas "On" e "Desativado".
-- Algumas linguagens talvez seja necessário que o valor da opção deve ser abreviado para caber no controle de interface do usuário, enquanto a completar palavra (traduzida) pode aparecer no rótulo.
-- Como alternativa, para alguns idiomas a renderização de seu comutador pode ser usar "I" e "O" para cultura familiaridade, mas você ainda poderá ser necessário o rótulo a ser lido "On" ou "Desativado".
+- Por motivos de design, talvez o comutador em si use "on" e "off", mas o rótulo de exibição use maiúsculas e minúsculas "on" e "off".
+- Algumas linguagens podem precisar que o valor da opção seja abreviado para caber no controle de interface do usuário, enquanto a palavra completa (traduzida) pode aparecer no rótulo.
+- Como alternativa, para alguns idiomas, a renderização do comutador pode ser usar "I" e "O" para uma familiaridade cultural, mas você ainda pode querer que o rótulo Leia "ligado" ou "desativado".
 
 ### <a name="translation-services"></a>Serviços de tradução
 
 #### <a name="machine-translation"></a>Tradução automática
 
-Para criar recursos de tradução em seu aplicativo, considere a [Azure API de tradução de texto](https://azure.microsoft.com/services/cognitive-services/translator-text-api/).
+Para criar recursos de tradução em seu aplicativo, considere o [API de tradução de texto do Azure](https://azure.microsoft.com/services/cognitive-services/translator-text-api/).
 
-Para fins de teste, você pode usar uma das diversas ferramentas de tradução online para incluir algum texto localizado em seu aplicativo durante o desenvolvimento:
+Para fins de teste, você pode usar uma das muitas ferramentas de tradução online para incluir algum texto localizado em seu aplicativo durante o desenvolvimento:
 
-- [Bing Translator](https://www.bing.com/translator/)
-- [Google Translate](http://translate.google.com/)
+- [Tradutor do Bing](https://www.bing.com/translator/)
+- [Tradução do Google](http://translate.google.com/)
 
-Há muitos outros disponíveis. A qualidade da tradução automática geralmente não é considerada bom o suficiente lançar um aplicativo sem primeiro o que está sendo revisado e testado por tradutores profissionais ou alto-falantes nativos.
+Há muitos outros disponíveis. A qualidade da tradução automática geralmente não é considerada boa o suficiente para liberar um aplicativo sem primeiro ser revisado e testado por tradutores profissionais ou palestrantes nativos.
 
 #### <a name="professional-translation"></a>Tradução profissional
 
-Também há serviços de tradução profissional que usem suas cadeias de caracteres e distribuí-los aos seus próprios conversores, fornecendo a você terminar de traduções para uma taxa.
+Também há serviços profissionais de tradução que utilizarão suas cadeias de caracteres e as distribuirão para seus próprios tradutores, fornecendo a você traduções concluídas por uma taxa.
 
-Um dos mais famosos serviços é [LionBridge](http://www.lionbridge.com/). Serviços profissionais mais suportam a todos os tipos de arquivo comuns incluindo cadeias de caracteres, XML, RESX e POT/OC.
+Um dos melhores serviços conhecidos é o [Lionbridge](http://www.lionbridge.com/). A maioria dos serviços profissionais oferece suporte a todos os tipos de arquivo comuns, incluindo cadeias de caracteres, XML, RESX e POT/PO.
 
 
 ## <a name="summary"></a>Resumo
 
-Este artigo apresentou alguns dos conceitos que você deve estar familiarizado antes de internacionalização de seu aplicativo e, em seguida, a localização de seus recursos e também abordou como alterar as preferências de idioma para cada plataforma.
+Este artigo introduziu alguns dos conceitos com os quais você deve estar familiarizado antes de internacionalizar seu aplicativo e, em seguida, localizar seus recursos e também abordou como alterar as preferências de idioma de cada plataforma.
 
-Esses conceitos podem ser aplicados às várias técnicas de internacionalização específicos da plataforma e de plataforma cruzada que são possíveis com o Xamarin.
+Esses conceitos podem ser aplicados às várias técnicas específicas de plataforma e de internacionalização entre plataformas que são possíveis com o Xamarin.
 
-Continue a ler os detalhes técnicos para a plataforma que você está interessado:
+Continue lendo os detalhes técnicos da plataforma em que você está interessado:
 
-- [Xamarin. Forms](~/xamarin-forms/app-fundamentals/localization/index.md) localização de plataforma cruzada usando arquivos RESX.
-- [Xamarin. IOS](~/ios/app-fundamentals/localization/index.md) localização de plataforma nativa.
-- [Xamarin. Android](~/android/app-fundamentals/localization.md) localização de plataforma nativa.
+- Localização entre plataformas do [Xamarin. Forms](~/xamarin-forms/app-fundamentals/localization/index.md) usando arquivos resx.
+- Localização da plataforma nativa do [Xamarin. Ios](~/ios/app-fundamentals/localization/index.md) .
+- Localização da plataforma nativa do [Xamarin. Android](~/android/app-fundamentals/localization.md) .
 
 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Visão geral de localização da Apple](https://developer.apple.com/internationalization/)
+- [Visão geral da localização da Apple](https://developer.apple.com/internationalization/)
 - [Lista de verificação de localização do Android](https://developer.android.com/distribute/tools/localization-checklist.html)
-- [Práticas recomendadas para o desenvolvimento de aplicativos do mundo (MSDN)](https://msdn.microsoft.com/library/w7x1y988%28v=vs.90%29.aspx)
+- [Práticas recomendadas para o desenvolvimento de aplicativos preparados para o mundo (MSDN)](https://msdn.microsoft.com/library/w7x1y988%28v=vs.90%29.aspx)

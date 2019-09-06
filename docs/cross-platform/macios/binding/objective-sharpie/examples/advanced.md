@@ -1,23 +1,23 @@
 ---
-title: Exemplo do mundo Real (manual) avançado
-description: Este documento descreve como usar a saída do xcodebuild como entrada para o objetivo Sharpie, que fornece informações sobre o que o objetivo Sharpie faz nos bastidores.
+title: Exemplo avançado (manual) do mundo real
+description: Este documento descreve como usar a saída de xcodebuild como a entrada para a nitidez objetiva, que fornece informações sobre qual é a nitidez do objetivo nos bastidores.
 ms.prod: xamarin
 ms.assetid: 044FF669-0B81-4186-97A5-148C8B56EE9C
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: e820a0c208907a95dda4a50427bb4dac27b88964
-ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
+ms.openlocfilehash: a4a6df4916ae5dcc2a0f826d2f0ab9d09167ba5f
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "64977899"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290041"
 ---
-# <a name="advanced-manual-real-world-example"></a>Exemplo do mundo Real (manual) avançado
+# <a name="advanced-manual-real-world-example"></a>Exemplo avançado (manual) do mundo real
 
-**Este exemplo usa o [biblioteca de POP do Facebook](https://github.com/facebook/pop).**
+**Este exemplo usa a [biblioteca pop do Facebook](https://github.com/facebook/pop).**
 
-Esta seção aborda uma abordagem mais avançada para associação, onde usaremos da Apple `xcodebuild` ferramenta para primeiro Compile o projeto POP e deduzem a entrada para o objetivo Sharpie manualmente. Essencialmente, isso abrange o que Sharpie objetivo está fazendo nos bastidores na seção anterior.
+Esta seção aborda uma abordagem mais avançada de associação, na qual usaremos a ferramenta da `xcodebuild` Apple para primeiro criar o projeto pop e, em seguida, deduzir manualmente a entrada para a nitidez objetiva. Basicamente, isso aborda o que a nitidez do objetivo está fazendo nos bastidores da seção anterior.
 
 ```
  $ git clone https://github.com/facebook/pop.git
@@ -27,7 +27,7 @@ Cloning into 'pop'...
 $ cd pop
 ```
 
-Como a biblioteca POP tem um projeto do Xcode (`pop.xcodeproj`), podemos simplesmente usar `xcodebuild` para criar um POP. Esse processo por sua vez pode gerar arquivos de cabeçalho que talvez seja necessário analisar Sharpie objetivo. É por isso criando antes de associação é importante. Quando a criação via `xcodebuild` Verifique se você passar o mesmo identificador do SDK e arquitetura que você pretende passar para o objetivo Sharpie (e lembre-se de que objetivo Sharpie 3.0 geralmente pode fazer isso para você!):
+Como a biblioteca pop tem um projeto do Xcode`pop.xcodeproj`(), podemos usar `xcodebuild` apenas para criar pop. Esse processo pode, por sua vez, gerar arquivos de cabeçalho que podem ser analisados pelo objetivo de nitidez. É por isso que a criação antes da associação é importante. Ao criar por `xcodebuild` meio do, certifique-se de que você passe o mesmo identificador e arquitetura do SDK que pretende passar para a nitidez objetiva (e lembre-se de que a nitidez do objetivo 3,0 pode fazer isso para você!):
 
 ```
 $ xcodebuild -sdk iphoneos9.0 -arch arm64
@@ -50,9 +50,9 @@ CpHeader pop/POPAnimationTracer.h build/Headers/POP/POPAnimationTracer.h
 ** BUILD SUCCEEDED **
 ```
 
-Haverá muita saída de informações de compilação no console do como parte do `xcodebuild`. Como exibido acima, podemos ver que um destino de "CpHeader" foi executado no qual os arquivos de cabeçalho foram copiados para um diretório de saída de compilação. Isso é geralmente o caso e facilita a vinculação: como parte da compilação da biblioteca nativa, os arquivos de cabeçalho geralmente são copiados para um local consumível "publicamente" que pode tornar mais fácil de análise de associação. Nesse caso, nós sabemos que os arquivos de cabeçalho do POP estão no `build/Headers` directory.
+Haverá muitas saídas de informações de compilação no console como parte do `xcodebuild`. Como exibido acima, podemos ver que um destino "CpHeader" foi executado onde os arquivos de cabeçalho foram copiados para um diretório de saída de compilação. Esse geralmente é o caso e facilita a associação: como parte da compilação da biblioteca nativa, os arquivos de cabeçalho são frequentemente copiados para um local de consumo "publicamente", o que pode facilitar a análise da associação. Nesse caso, sabemos que os arquivos de cabeçalho do pop estão no `build/Headers` diretório.
 
-Agora estamos prontos para associar o POP. Sabemos que queremos criar para o SDK `iphoneos8.1` com o `arm64` arquitetura, e que os arquivos de cabeçalho que nos interessa estejam na `build/Headers` sob o check-out de git POP. Se verificarmos o `build/Headers` diretório, vamos ver um número de arquivos de cabeçalho:
+Agora estamos prontos para associar o POP. Sabemos que desejamos criar para o SDK `iphoneos8.1` com a `arm64` arquitetura e que os arquivos de cabeçalho `build/Headers` nos quais nos preocupamos estão sob a retirada do git pop. Se olharmos no `build/Headers` diretório, veremos vários arquivos de cabeçalho:
 
 ```
 $ ls build/Headers/POP/
@@ -64,7 +64,7 @@ POPAnimationExtras.h     POPCustomAnimation.h     POPSpringAnimation.h
 POPAnimationPrivate.h    POPDecayAnimation.h
 ```
 
-Se observarmos `POP.h`, podemos ver é o arquivo de cabeçalho de nível superior da biblioteca principal `#import`s outros arquivos. Por isso, só precisamos passar `POP.h` para Sharpie objetivo, e clang fará o resto em segundo plano:
+Se observarmos `POP.h`, podemos ver que ele é o principal arquivo de cabeçalho de nível superior da biblioteca, `#import`que s outros arquivos. Por isso, precisamos apenas passar `POP.h` para a nitidez objetiva, e Clang fará o restante nos bastidores:
 
 ```
 $ sharpie bind -output Binding -sdk iphoneos8.1 \
@@ -122,18 +122,18 @@ Submitting usage data to Xamarin...
 Done.
 ```
 
-Você observará que passamos um `-scope build/Headers` argumento Sharpie objetivo. Porque as bibliotecas de Objective-C e C devem `#import` ou `#include` outros arquivos de cabeçalho que são os detalhes de implementação da biblioteca e não API que você deseja associar, o `-scope` argumento informa ao objetivo Sharpie para ignorar qualquer API que não está definido em um arquivo em algum lugar dentro do `-scope` directory.
+Você observará que passamos um `-scope build/Headers` argumento para a nitidez objetiva. Como as bibliotecas C e Objective- `#import` C `#include` devem ou outros arquivos de cabeçalho que são detalhes de implementação da biblioteca e não da API que você `-scope` deseja associar, o argumento informa a nitidez do objetivo de ignorar qualquer API que não esteja definida em um arquivo em algum lugar `-scope` dentro do diretório.
 
-Você encontrará o `-scope` argumento geralmente é opcional para as bibliotecas de implementada corretamente, embora não haja nenhum problema em explicitamente fornecendo a ele.
+Você descobrirá que `-scope` o argumento é geralmente opcional para bibliotecas implementadas de forma limpa, no entanto, não há nenhum dano em fornecer explicitamente.
 
-Além disso, especificamos `-c -Ibuild/headers`. Em primeiro lugar, o `-c` argumento informa ao objetivo Sharpie para parar a interpretar os argumentos de linha de comando e passar argumentos subsequentes _diretamente para o compilador clang_. Portanto, `-Ibuild/Headers` é um argumento de compilador clang que instrui o clang para procurar inclui sob `build/Headers`, que é onde os cabeçalhos do POP ao vivo. Sem esse argumento, clang não saberia onde localizar os arquivos que `POP.h` é `#import`ing. _Quase todos os "problemas" com o uso de objetivo Sharpie se resumem a imaginar o que passar para clang_.
+Além disso, especificamos `-c -Ibuild/headers`. Em primeiro lugar `-c` , o argumento informa a nitidez do objetivo para interromper a interpretação de argumentos de linha de comando e passar quaisquer argumentos subsequentes _diretamente para o compilador Clang_. Portanto, `-Ibuild/Headers` é um argumento de compilador Clang que instrui o Clang a procurar por `build/Headers`inclusões, que é onde os cabeçalhos pop residem. Sem esse argumento, Clang não saberá onde localizar os arquivos que `POP.h` é `#import`ing. _Quase todos os "problemas" com o uso de nitidez objetiva se resumem para descobrir o que passar para o Clang_.
 
 ### <a name="completing-the-binding"></a>Concluindo a associação
 
-Objetivo Sharpie gerou `Binding/ApiDefinitions.cs` e `Binding/StructsAndEnums.cs` arquivos.
+A nitidez do objetivo agora gerou `Binding/ApiDefinitions.cs` e `Binding/StructsAndEnums.cs` arquivos.
 
-Esses são básica no primeiro passo do objetivo Sharpie da associação e, em alguns casos pode ser tudo o que você precisa. Como mencionado acima, no entanto, o desenvolvedor geralmente será necessário modificar manualmente os arquivos gerados após a conclusão do objetivo Sharpie para [corrigir quaisquer problemas](~/cross-platform/macios/binding/objective-sharpie/platform/apidefinitions-structsandenums.md) que não pôde ser automaticamente tratada pela ferramenta.
+Essas são as primeiras passagens básicas do objetivo inicial da ligação e, em alguns casos, pode ser tudo o que você precisa. Como mencionado acima, no entanto, o desenvolvedor geralmente precisará modificar manualmente os arquivos gerados após a conclusão do objetivo de ajuste de nitidez para [corrigir quaisquer problemas](~/cross-platform/macios/binding/objective-sharpie/platform/apidefinitions-structsandenums.md) que não puderam ser manipulados automaticamente pela ferramenta.
 
-Depois que as atualizações forem concluídas, esses dois arquivos agora podem ser adicionados a um projeto de associação no Visual Studio para Mac ou ser passados diretamente para o `btouch` ou `bmac` ferramentas para produzir a ligação final.
+Depois que as atualizações forem concluídas, esses dois arquivos agora poderão ser adicionados a um projeto de associação no Visual Studio para Mac ou serem passados `btouch` diretamente `bmac` para as ferramentas ou para produzir a associação final.
 
-Para obter uma descrição completa do processo de associação, consulte nosso [instruções passo a passo completo](~/ios/platform/binding-objective-c/walkthrough.md).
+Para obter uma descrição completa do processo de associação, consulte nossas [instruções completas sobre explicação](~/ios/platform/binding-objective-c/walkthrough.md).

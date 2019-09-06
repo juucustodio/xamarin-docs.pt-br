@@ -4,15 +4,15 @@ description: Este documento fornece uma visão geral das técnicas de distribui�
 ms.prod: xamarin
 ms.assetid: D5E0F446-C083-4E21-9788-FC84D32D00C4
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: df3a3462923ab396037f9267194588ffcb03f9e5
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 0ea96eb3808daeb9f8764695d1b4b3d432727ff2
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655232"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292490"
 ---
 # <a name="tvos-app-distribution-overview"></a>Visão geral da distribuição de aplicativos tvOS
 
@@ -60,7 +60,7 @@ Depois de concluir todas as etapas listadas acima, consulte nosso [aplicativo co
 
 Se você estiver tendo problemas para enviar seu aplicativo Xamarin. tvOS para a loja de aplicativos da Apple TV, consulte nosso guia de [solução de problemas](~/ios/tvos/troubleshooting.md) . Ele contém vários problemas conhecidos que você pode encontrar e como solucioná-los no Xamarin. tvOS.
 
-Para obter mais informações, visite o guia publicando na [loja de aplicativos da Apple TV](~/ios/tvos/deploy-test/app-distribution/app-store-publishing.md) .
+Para obter mais informações, visite o guia [publicando na loja de aplicativos da Apple TV](~/ios/tvos/deploy-test/app-distribution/app-store-publishing.md) .
 
 <a name="In-House-Distribution" />
 

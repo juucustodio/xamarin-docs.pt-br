@@ -4,15 +4,15 @@ description: Este artigo aborda os novos aprimoramentos de jogos fornecidos pelo
 ms.prod: xamarin
 ms.assetid: 958D38FD-9240-482E-9A42-D6671ED8F2B0
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/20/2017
-ms.openlocfilehash: e647169a9059edab3593ec2986e16358b4e574aa
-ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
+ms.openlocfilehash: fa78a596495b22ebb2c8b148aadb76261845ccdc
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70065559"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70281256"
 ---
 # <a name="ios-gaming-apis-in-xamarinios"></a>APIs de jogos do iOS no Xamarin. iOS
 

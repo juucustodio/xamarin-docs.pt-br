@@ -4,15 +4,15 @@ description: Este documento descreve como trabalhar com o CloudKit no Xamarin. i
 ms.prod: xamarin
 ms.assetid: 66B207F2-FAA0-4551-B43B-3DB9F620C397
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 05/11/2016
-ms.openlocfilehash: af0765adb7e059bdc80c0b851b4bdcad8be0e3e4
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 09275517a1d081073ab471d1e8c993dc232a4385
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227834"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292452"
 ---
 # <a name="cloudkit-in-xamarinios"></a>CloudKit no Xamarin. iOS
 
@@ -58,7 +58,7 @@ Antes que um aplicativo Xamarin possa utilizar a estrutura CloudKit, o aplicativ
 
     [![](intro-to-cloudkit-images/image26a.png "Insira o identificador do pacote")](intro-to-cloudkit-images/image26a-orig.png#lightbox "Info.plist file displaying Bundle Identifier")
 
-3. Role para baixo até a parte inferior do arquivo **info. plist** e selecione **modos de segundo plano habilitados**, atualizações de **local** e **notificações remotas**:
+3. Role para baixo até a parte inferior do arquivo **info. plist** e selecione **modos de segundo plano habilitados**, **atualizações de local** e **notificações remotas**:
 
     [![](intro-to-cloudkit-images/image27a.png "Selecionar modos de segundo plano habilitados, atualizações de local e notificações remotas")](intro-to-cloudkit-images/image27a-orig.png#lightbox "Info.plist file displaying background modes")
 4. Clique com o botão direito do mouse no projeto do iOS na solução e selecione **Opções**.
@@ -233,7 +233,7 @@ As referências fornecem relações entre registros relacionados em um determina
 
  [![](intro-to-cloudkit-images/image37.png "As referências fornecem relações entre registros relacionados em um determinado banco de dados")](intro-to-cloudkit-images/image37.png#lightbox)
 
-No exemplo acima, os pais têm filhos para que o filho seja um registro filho do registro pai. A relação passa do registro filho para o registro pai e é referenciada como *referência*regressiva.
+No exemplo acima, os pais têm filhos para que o filho seja um registro filho do registro pai. A relação passa do registro filho para o registro pai e é referenciada como *referência regressiva*.
 
 As referências são expostas na estrutura CloudKit `CKReference` por meio da classe. Eles são uma maneira de permitir que o servidor iCloud entenda a relação entre os registros.
 
@@ -455,7 +455,7 @@ Quanto mais popular um aplicativo se torna, mais dados no banco e o menos viáve
 
 - **Mantenha os grandes dados na nuvem – o** CloudKit foi projetado para lidar com grandes volumes de dados com eficiência.
 - O **cliente só deve exibir uma fatia desses dados** – desative o mínimo de dados necessários para lidar com qualquer tarefa em um determinado momento.
-- As exibições de **cliente podem** ser alteradas – como cada usuário tem preferências diferentes, a fatia de dados que está sendo exibida pode ser alterada de usuário para usuário e a exibição individual de qualquer fatia específica do usuário pode ser diferente.
+- As **exibições de cliente podem ser alteradas** – como cada usuário tem preferências diferentes, a fatia de dados que está sendo exibida pode ser alterada de usuário para usuário e a exibição individual de qualquer fatia específica do usuário pode ser diferente.
 - **O cliente usa consultas para concentrar o ponto de vista** – as consultas permitem que o usuário exiba um pequeno subconjunto de um conjunto de um maior que existe na nuvem.
 
 

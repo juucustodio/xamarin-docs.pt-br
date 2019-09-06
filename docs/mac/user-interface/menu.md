@@ -4,15 +4,15 @@ description: Este artigo aborda como trabalhar com menus em um aplicativo Xamari
 ms.prod: xamarin
 ms.assetid: 5D367F8E-3A76-4995-8A89-488530FAD802
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 0879fcc529e72e03df4eaba7790a534ace38856f
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 27eb5679bbc4825ab2bf0e1990b00d97ab207619
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68657337"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292430"
 ---
 # <a name="menus-in-xamarinmac"></a>Menus no Xamarin. Mac
 
@@ -32,7 +32,7 @@ Os menus são parte integrante da experiência do usuário de um aplicativo Mac 
 
 Neste artigo, abordaremos as noções básicas de como trabalhar com barras de menu Cocoa, menus e itens de menu em um aplicativo Xamarin. Mac. É altamente recomendável que você trabalhe pelo artigo [Hello, Mac](~/mac/get-started/hello-mac.md) primeiro, especificamente a [introdução às seções Xcode e Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) e [ações](~/mac/get-started/hello-mac.md#outlets-and-actions) , pois ela aborda os principais conceitos e técnicas que usaremos em Este artigo.
 
-Talvez você queira dar uma olhada na seção [expondo C# classes/métodos para Objective-C](~/mac/internals/how-it-works.md) do documento [interno do Xamarin. Mac](~/mac/internals/how-it-works.md) também, explica `Register` os atributos e `Export` usados para conectar suas C# classes ao Objetos Objective-C e elementos de interface do usuário.
+Talvez você queira dar uma olhada na seção [expondo C# classes/métodos para Objective-C](~/mac/internals/how-it-works.md) do documento [interno do Xamarin. Mac](~/mac/internals/how-it-works.md) também, explica os `Register` atributos e `Export` usados para conectar suas C# classes ao Objetos Objective-C e elementos de interface do usuário.
 
 ## <a name="the-applications-menu-bar"></a>A barra de menus do aplicativo 
 
@@ -108,7 +108,7 @@ Salve as alterações no design da interface do usuário e volte para a Visual S
 
 ![Os itens de menu são automaticamente habilitados/desabilitados](menu-images/appmenu07.png "Os itens de menu são automaticamente habilitados/desabilitados")
 
-Observe como ositens recortar, **copiar**e **colar** são automaticamente habilitados e totalmente funcionais, tudo sem escrever uma única linha de código. 
+Observe como os itens **recortar**, **copiar**e **colar** são automaticamente habilitados e totalmente funcionais, tudo sem escrever uma única linha de código. 
 
 O que está acontecendo aqui? Lembre-se das ações internas de predefinição que vêm conectadas aos itens de menu padrão (como apresentado acima), a maioria dos elementos da interface do usuário Cocoa que fazem parte do macOS tem ganchos internos para ações específicas `copy:`(como). Assim, quando eles são adicionados a uma janela, ativa e selecionada, o item de menu correspondente ou os itens anexados a essa ação são automaticamente habilitados. Se o usuário selecionar esse item de menu, a funcionalidade interna ao elemento de interface do usuário será chamada e executada, tudo isso sem intervenção do desenvolvedor.
 
@@ -805,7 +805,7 @@ private void AssembleMenu(NSMenu menu, List<LanguageFormatCommand> commands) {
 }
 ``` 
 
-Para qualquer `LanguageFormatCommand` objeto que tenha uma propriedade `Title` em branco, essa rotina cria um **item de menu** separador (uma linha cinza fina) entre seções de menu:
+Para qualquer `LanguageFormatCommand` objeto que tenha uma propriedade `Title` em branco, essa rotina cria um **item de menu separador** (uma linha cinza fina) entre seções de menu:
 
 ```csharp
 menuItem = NSMenuItem.SeparatorItem;

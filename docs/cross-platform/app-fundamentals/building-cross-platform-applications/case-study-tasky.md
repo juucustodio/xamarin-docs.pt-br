@@ -3,15 +3,15 @@ title: 'Estudo de caso do aplicativo de plataforma cruzada: Tasky'
 description: Este documento descreve como o aplicativo de exemplo portátil de tarefas foi projetado e criado como um aplicativo móvel de plataforma cruzada. Ele aborda os requisitos, a interface, o modelo de dados, a funcionalidade principal, a implementação e muito mais do aplicativo.
 ms.prod: xamarin
 ms.assetid: B581B2D0-9890-C383-C654-0B0E12DAD5A6
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/23/2017
-ms.openlocfilehash: 38f4e079529bec0dfc721d0c37686a6d90533b7e
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 798dd1b5df2ea05eb428c9465e996d606c22009b
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69527026"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70281204"
 ---
 # <a name="cross-platform-app-case-study-tasky"></a>Estudo de caso do aplicativo de plataforma cruzada: Tasky
 
@@ -332,7 +332,7 @@ A tela inicial é uma `MonoTouch.Dialog` tela que exibe uma lista de tarefas do 
 
 Os dois métodos principais relacionados à exibição e interação com a lista de tarefas são:
 
-1. Populable – usa o método da `TaskManager.GetTasks` camada de negócios para recuperar uma `TaskItem` coleção de objetos a serem exibidos.
+1. **Populable** – usa o método da `TaskManager.GetTasks` camada de negócios para recuperar uma `TaskItem` coleção de objetos a serem exibidos.
 2. **Selecionado** – quando uma linha é tocada, o exibe a tarefa em uma nova tela.
 
  <a name="Task_Details_Screen" />

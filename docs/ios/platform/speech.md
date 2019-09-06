@@ -4,15 +4,15 @@ description: Este artigo apresenta o novo Speech API e mostra como implementá-l
 ms.prod: xamarin
 ms.assetid: 64FED50A-6A28-4833-BEAE-63CEC9A09010
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: 40aa36fa8a89eacd8be7914020c06f3fec75baff
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: b846d034c31069c02e3c97fba0ac0d68e6df2e23
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227334"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292528"
 ---
 # <a name="speech-recognition-in-xamarinios"></a>Reconhecimento de fala no Xamarin. iOS
 
@@ -49,7 +49,7 @@ A Apple lançou as seguintes estatísticas de ditado de teclado (coletadas desde
 
 O ditado de teclado é extremamente fácil de usar, pois não requer nenhum esforço na parte do desenvolvedor, além de usar um elemento de interface TextKit no design da interface do usuário do aplicativo. O ditado de teclado também tem a vantagem de não exigir nenhuma solicitação de privilégio especial do aplicativo antes de poder ser usado.
 
-Os aplicativos que usam as novas APIs de reconhecimento de fala exigirão permissões especiais para serem concedidas pelo usuário, pois o reconhecimento de fala requer a transmissão e o armazenamento temporário de dados nos servidores da Apple. Consulte nossa documentação de aprimoramentos de [segurança e privacidade](~/ios/app-fundamentals/security-privacy.md) para obter detalhes.
+Os aplicativos que usam as novas APIs de reconhecimento de fala exigirão permissões especiais para serem concedidas pelo usuário, pois o reconhecimento de fala requer a transmissão e o armazenamento temporário de dados nos servidores da Apple. Consulte nossa documentação de [aprimoramentos de segurança e privacidade](~/ios/app-fundamentals/security-privacy.md) para obter detalhes.
 
 Embora o ditado de teclado seja fácil de implementar, ele vem com várias limitações e desvantagens:
 
@@ -80,7 +80,7 @@ A Apple incluiu uma API de disponibilidade para determinar se um determinado idi
 
 Conforme observado acima na seção ditado do teclado, o reconhecimento de fala requer a transmissão e o armazenamento temporário de dados nos servidores da Apple pela Internet e, dessa forma, o aplicativo _deve_ solicitar a permissão do usuário para executar o reconhecimento, incluindo a `NSSpeechRecognitionUsageDescription` chave em seu `Info.plist` arquivo e a chamada `SFSpeechRecognizer.RequestAuthorization` do método. 
 
-Com base na origem do áudio que está sendo usado para reconhecimento de fala, outras alterações no arquivo `Info.plist` do aplicativo podem ser necessárias. Consulte nossa documentação de aprimoramentos de [segurança e privacidade](~/ios/app-fundamentals/security-privacy.md) para obter detalhes.
+Com base na origem do áudio que está sendo usado para reconhecimento de fala, outras alterações no arquivo `Info.plist` do aplicativo podem ser necessárias. Consulte nossa documentação de [aprimoramentos de segurança e privacidade](~/ios/app-fundamentals/security-privacy.md) para obter detalhes.
 
 ## <a name="adopting-speech-recognition-in-an-app"></a>Adoção do reconhecimento de fala em um aplicativo
 

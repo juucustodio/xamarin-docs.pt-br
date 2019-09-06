@@ -4,15 +4,15 @@ description: Este documento descreve como trabalhar com campos de pesquisa e tex
 ms.prod: xamarin
 ms.assetid: 9EE63CA6-2F31-4EE0-AAE5-82E18CFAC06C
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: b1f4712e87762acb81a366700174db33e0c557bf
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 2d62651f85aab49c8e28b54053aba4882961c35b
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70226682"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292493"
 ---
 # <a name="working-with-tvos-text-and-search-fields-in-xamarin"></a>Trabalhando com campos de pesquisa e texto tvOS no Xamarin
 
@@ -46,7 +46,7 @@ Quando o usuário move o [foco](~/ios/tvos/app-fundamentals/navigation-focus.md)
 
 A Apple tem as seguintes sugestões para trabalhar com campos de texto:
 
-- **Use a entrada de texto** com moderação devido à natureza do teclado na tela, inserindo seções longas de texto ou preenchendo vários campos de texto é entediante ao usuário. Uma solução melhor é limitar a quantidade de entrada de texto usando [botões](~/ios/tvos/user-interface/buttons.md)ou listas de seleção.
+- **Use a entrada de texto com moderação** devido à natureza do teclado na tela, inserindo seções longas de texto ou preenchendo vários campos de texto é entediante ao usuário. Uma solução melhor é limitar a quantidade de entrada de texto usando [botões](~/ios/tvos/user-interface/buttons.md)ou listas de seleção.
 - **Usar dicas para comunicar** o campo de texto de finalidade pode exibir o espaço reservado "dicas" quando estiver vazio. Quando aplicável, use dicas para descrever a finalidade do campo de texto em vez de um rótulo separado.
 - **Selecione o tipo de teclado padrão apropriado-o** tvOS fornece vários tipos de teclado diferentes para fins criados que você pode especificar para o campo de texto. Por exemplo, o teclado de endereço de email pode facilitar a entrada permitindo que o usuário selecione em uma lista de endereços inseridos recentemente.
 - **Quando apropriado, use campos de texto seguro** – um campo de texto seguro apresenta os caracteres inseridos como pontos (em vez das letras reais). Sempre use um campo de texto seguro ao reunir informações confidenciais, como senhas.
@@ -108,7 +108,7 @@ Faça o seguinte:
 1. Na seção **campo de texto** , você pode definir elementos como a dica de **espaço reservado** e o **valor**padrão:
 
     [![](text-fields-and-search-images/text04.png "A seção de campo de texto")](text-fields-and-search-images/text04.png#lightbox)
-1. Role para baixo para definir propriedades, como **verificação ortográfica**, maiúsculas e **minúsculas** , tipo de **teclado**padrão:
+1. Role para baixo para definir propriedades, como **verificação ortográfica**, **maiúsculas e minúsculas** , **tipo de teclado**padrão:
 
     [![](text-fields-and-search-images/text05.png "Verificação ortográfica, capitalização e tipo de teclado padrão")](text-fields-and-search-images/text05.png#lightbox)
 1. Salve as alterações em seu Storyboard.
@@ -125,7 +125,7 @@ Faça o seguinte:
 1. Na seção **campo de texto** , você pode definir elementos como a dica de **espaço reservado** e o **valor**padrão:
 
     [![](text-fields-and-search-images/text04-vs.png "A seção de campo de texto")](text-fields-and-search-images/text04-vs.png#lightbox)
-1. Role para baixo para definir propriedades, como **verificação ortográfica**, maiúsculas e **minúsculas** , tipo de **teclado**padrão:
+1. Role para baixo para definir propriedades, como **verificação ortográfica**, **maiúsculas e minúsculas** , **tipo de teclado**padrão:
 
     [![](text-fields-and-search-images/text05-vs.png "Verificação ortográfica, capitalização e tipo de teclado padrão")](text-fields-and-search-images/text05-vs.png#lightbox)
 1. Salve as alterações em seu Storyboard.

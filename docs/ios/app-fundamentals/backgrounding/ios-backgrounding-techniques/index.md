@@ -4,15 +4,15 @@ description: 'Este documento contém links para guias que descrevem várias téc
 ms.prod: xamarin
 ms.assetid: 011A8D48-1CDC-486A-A2B0-C4946118E7A9
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: e438ed1a2367dee722a0129fce2e44f5083b757a
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: a21ce124e20a421be40d41af5f066e611152317b
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69521291"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70281116"
 ---
 # <a name="ios-backgrounding-techniques"></a>Técnicas de operação em segundo plano no iOS
 

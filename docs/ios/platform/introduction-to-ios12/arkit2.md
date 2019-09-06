@@ -4,15 +4,15 @@ description: Este documento descreve as atualizações do ARKit no iOS 12. Ele s
 ms.prod: xamarin
 ms.assetid: af758092-1523-4ab7-aa53-c37a81fb156a
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 08/22/2018
-ms.openlocfilehash: 4af5e7ea9c1d744cd3b5ea5444312ba68bfcea11
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 17995f61d92856a88769e2cd7ac8ed7445cf9782
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70120447"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70281134"
 ---
 # <a name="arkit-2-in-xamarinios"></a>ARKit 2 no Xamarin. iOS
 
@@ -243,7 +243,7 @@ internal partial class ThresholdRotationGestureRecognizer : UIRotationGestureRec
 }
 ```
 
-A segunda coisa interessante que está sendo feita em relação a gestos é a maneira como a caixa delimitadora é movida em relação aos planos do mundo real detectados. Esse aspecto é abordado nesta postagem no [blog do Xamarin](https://blog.xamarin.com/exploring-new-ios-12-arkit-capabilities-with-xamarin/).
+A segunda coisa interessante que está sendo feita em relação a gestos é a maneira como a caixa delimitadora é movida em relação aos planos do mundo real detectados. Esse aspecto é abordado nesta [postagem no blog do Xamarin](https://blog.xamarin.com/exploring-new-ios-12-arkit-capabilities-with-xamarin/).
 
 ## <a name="other-new-features-in-arkit-2"></a>Outros novos recursos no ARKit 2
 
@@ -361,7 +361,7 @@ var configuration = new ARWorldTrackingConfiguration
 };
 ```
 
-O `ARWorldMap` só contém dados de acompanhamento mundial não visíveis e os [`ARAnchor`](xref:ARKit.ARAnchor) objetos, não contém ativos digitais. Para compartilhar geometria ou imagens, você precisará desenvolver sua própria estratégia apropriada ao seu caso de uso (talvez armazenando/transmitindo apenas o local e a orientação da geometria e aplicando-o a `SCNGeometry` estático ou talvez armazenando/transmitindo objetos serializados). O benefício do `ARWorldMap` é que os ativos, uma vez colocados em relação a `ARAnchor`um compartilhado, aparecerão consistentemente entre os dispositivos ou as sessões.
+O `ARWorldMap` só contém dados de acompanhamento mundial não visíveis e os [`ARAnchor`](xref:ARKit.ARAnchor) objetos, _não contém ativos_ digitais. Para compartilhar geometria ou imagens, você precisará desenvolver sua própria estratégia apropriada ao seu caso de uso (talvez armazenando/transmitindo apenas o local e a orientação da geometria e aplicando-o a `SCNGeometry` estático ou talvez armazenando/transmitindo objetos serializados). O benefício do `ARWorldMap` é que os ativos, uma vez colocados em relação a `ARAnchor`um compartilhado, aparecerão consistentemente entre os dispositivos ou as sessões.
 
 ### <a name="universal-scene-description-file-format"></a>Formato de arquivo de descrição de cena universal
 

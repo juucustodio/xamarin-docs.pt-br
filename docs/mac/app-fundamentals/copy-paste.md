@@ -4,15 +4,15 @@ description: Este artigo aborda como trabalhar com a área de trabalho para forn
 ms.prod: xamarin
 ms.assetid: 7E9C99FB-B7B4-4C48-B20F-84CB48543083
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 43da869cfdb4ccbf5fcd8836a6fa5ca5ca732bfa
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 42ac6c9c729498ad4b70e1e209d63c1ec2e11f8d
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70199882"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291229"
 ---
 # <a name="copy-and-paste-in-xamarinmac"></a>Copiar e colar no Xamarin. Mac
 
@@ -31,7 +31,7 @@ Neste artigo, abordaremos as duas maneiras principais de usar a área de entrada
 
 Neste artigo, abordaremos as noções básicas de como trabalhar com a área de trabalho em um aplicativo Xamarin. Mac para dar suporte a operações de copiar e colar. É altamente recomendável que você trabalhe pelo artigo [Hello, Mac](~/mac/get-started/hello-mac.md) primeiro, especificamente a [introdução às seções Xcode e Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) e [ações](~/mac/get-started/hello-mac.md#outlets-and-actions) , pois ela aborda os principais conceitos e técnicas que usaremos em Este artigo.
 
-Talvez você queira dar uma olhada na seção [expondo C# classes/métodos para Objective-C](~/mac/internals/how-it-works.md) do documento [interno do Xamarin. Mac](~/mac/internals/how-it-works.md) também, explica `Register` os atributos e `Export` usados para conectar suas C# classes ao Objetos Objective-C e elementos de interface do usuário.
+Talvez você queira dar uma olhada na seção [expondo C# classes/métodos para Objective-C](~/mac/internals/how-it-works.md) do documento [interno do Xamarin. Mac](~/mac/internals/how-it-works.md) também, explica os `Register` atributos e `Export` usados para conectar suas C# classes ao Objetos Objective-C e elementos de interface do usuário.
 
 ## <a name="getting-started-with-the-pasteboard"></a>Introdução à área de ti
 
@@ -48,7 +48,7 @@ Primeiro, vamos criar um novo documento com base no aplicativo Xamarin. Mac ao q
 Faça o seguinte:
 
 1. Inicie Visual Studio para Mac e clique no link **novo projeto...** .
-2. Selecione **aplicativo Mac** > Cocoa app e, em seguida, clique no botão Avançar: >  
+2. Selecione**aplicativo** **Mac** >  Cocoa app e, em seguida, clique no botão Avançar: >  
 
     [![Criando um novo projeto de aplicativo Cocoa](copy-paste-images/sample01.png "Criando um novo projeto de aplicativo Cocoa")](copy-paste-images/sample01-large.png#lightbox)
 3. Insira `MacCopyPaste` para o **nome do projeto** e mantenha tudo o mais como padrão. Clique em Avançar: 
@@ -462,7 +462,7 @@ partial void PasteImage (Foundation.NSObject sender) {
 
 ### <a name="enabling-the-file-and-edit-menus"></a>Habilitando os menus arquivo e editar
 
-A última coisa que precisamos fazer é habilitar o **novo** item de menu no menu **arquivo** (para criar novas instâncias de nossa janela principal) e habilitar os itens demenu recortar, **copiar** e **colar** no menu **Editar** .
+A última coisa que precisamos fazer é habilitar o **novo** item de menu no menu **arquivo** (para criar novas instâncias de nossa janela principal) e habilitar os itens de menu **recortar**, **copiar** e **colar** no menu **Editar** .
 
 Para habilitar o **novo** item de menu, edite o arquivo **AppDelegate.cs** e adicione o seguinte código:
 
@@ -486,7 +486,7 @@ void NewDocument (NSObject sender) {
 
 Para obter mais informações, consulte a seção [trabalhando com vários Windows](~/mac/user-interface/window.md) de nossa documentação do [Windows](~/mac/user-interface/window.md) .
 
-Para habilitar ositens de menu recortar, **copiar** e **colar** , edite o arquivo **AppDelegate.cs** e adicione o seguinte código:
+Para habilitar os itens de menu **recortar**, **copiar** e **colar** , edite o arquivo **AppDelegate.cs** e adicione o seguinte código:
 
 ```csharp
 [Export("copy:")]
@@ -547,7 +547,7 @@ A partir daí, chamamos `ImageDocument` a instância da classe dessa janela para
 window.Document.CopyImage (sender);
 ```
 
-Só queremos queos itens de menu recortar, **copiar** e **colar** fiquem acessíveis se houver dados de imagem na área de transferência padrão ou na imagem bem da janela ativa atual.
+Só queremos que os itens de menu **recortar**, **copiar** e **colar** fiquem acessíveis se houver dados de imagem na área de transferência padrão ou na imagem bem da janela ativa atual.
 
 Vamos adicionar um arquivo **EditMenuDelegate.cs** ao projeto Xamarin. Mac e fazê-lo parecer o seguinte:
 
@@ -645,7 +645,7 @@ No MacOS (anteriormente conhecido como os X), a área`NSPasteboard`de () fornece
 
 A `NSPasteboard` classe fornece um mecanismo padronizado para troca de informações entre aplicativos ou dentro de um determinado aplicativo. A principal função de uma área de colagem é o tratamento de operações de copiar e colar:
 
-1. Quando o usuário seleciona um item em um aplicativo e usa o item de menu recortar ou **copiar** , uma ou mais representações do item selecionado são colocadas na área de transferência.
+1. Quando o usuário seleciona um item em um aplicativo e usa o item de menu **recortar** ou **copiar** , uma ou mais representações do item selecionado são colocadas na área de transferência.
 2. Quando o usuário usa o item de menu **colar** (dentro do mesmo aplicativo ou outro), a versão dos dados que ele pode manipular é copiada da área de os e adicionada ao aplicativo.
 
 As utilizações de área de armazenamento menos óbvias incluem localizar, arrastar, arrastar e soltar e operações de serviços de aplicativos:
@@ -659,9 +659,9 @@ Em sua forma mais simples, pasteboards são usados para mover dados dentro de um
 
 Uma área de ti pode ser pública ou privada e pode ser usada para uma variedade de finalidades em um aplicativo ou entre vários aplicativos. o macOS fornece vários pasteboards padrão, cada um com um uso específico e bem definido:
 
-- `NSGeneralPboard`-A área de transferênciapadrão para operações de recortar, **copiar** e **colar** .
-- `NSRulerPboard`– Dásuporte a operações de recortar, **copiar** e **colar** em **réguas**.
-- `NSFontPboard`– Dásuporte a operações de recortar, `NSFont` **copiar** e **colar** em objetos.
+- `NSGeneralPboard`-A área de transferência padrão para operações de **recortar**, **copiar** e **colar** .
+- `NSRulerPboard`– Dá suporte a operações de **recortar**, **copiar** e **colar** em **réguas**.
+- `NSFontPboard`– Dá suporte a operações de **recortar**, `NSFont` **copiar** e **colar** em objetos.
 - `NSFindPboard`– Dá suporte a painéis de localização específicos do aplicativo que podem compartilhar texto de pesquisa.
 - `NSDragPboard`– Dá suporte a operações de **arrastar & soltar** .
 
@@ -949,7 +949,7 @@ public string ImageType { get; set; }
 
 Estamos expondo os dois campos de dados que essa classe conterá: o nome da imagem e seu tipo (jpg, png, etc.). 
 
-Para obter mais informações, consulte a seção [expondo C# classes/métodos para Objective-C](~/mac/internals/how-it-works.md) da documentação [interna do Xamarin. Mac](~/mac/internals/how-it-works.md) , ele explica `Register` os `Export` atributos e usados para conectar suas C# classes ao Objetos Objective-C e elementos de interface do usuário.
+Para obter mais informações, consulte a seção [ C# expondo classes/métodos para Objective-C](~/mac/internals/how-it-works.md) da documentação [interna do Xamarin. Mac](~/mac/internals/how-it-works.md) , ele explica `Register` os `Export` atributos e usados para conectar suas C# classes ao Objetos Objective-C e elementos de interface do usuário.
 
 #### <a name="constructors"></a>Construtores
 
