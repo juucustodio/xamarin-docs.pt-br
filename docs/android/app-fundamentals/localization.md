@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: 15f5705fcf625d7c9aa6901cc919cea399f252e9
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 08d12a58b4a0d8a8f757df965bd9dfb73f1639b1
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70197703"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755381"
 ---
 # <a name="android-localization"></a>Localização do Android
 
@@ -153,7 +153,7 @@ var cancelText = Resources.GetText (Resource.String.taskcancel);
 
 #### <a name="quantity-strings"></a>Cadeias de caracteres de quantidade
 
-Recursos de cadeia de caracteres do Android também permitem criar cadeias de caracteres de *quantidade* que permitem que os tradutores forneçam traduções diferentes para diferentes quantidades, como:
+Recursos de cadeia de caracteres do Android também permitem criar *cadeias* de caracteres de quantidade que permitem que os tradutores forneçam traduções diferentes para diferentes quantidades, como:
 
 - "Há 1 tarefa restante".
 - "Há duas tarefas ainda pendentes."
@@ -198,10 +198,9 @@ Imagens localizadas seguem as mesmas regras que os arquivos de cadeias de caract
 
 As imagens específicas de localidade devem ser colocadas em pastas desenhadas qualificadas, como **Drawable-es** ou **Drawable-ja** (os especificadores de DPI também podem ser adicionados).
 
-Nesta captura de tela, quatro imagens são salvas no diretório desenhável, mas apenas uma, **Flag. png**, tem cópias localizadas em outros diretórios.
+Nesta captura de tela, quatro imagens são salvas no diretório **desenhável** , mas apenas uma, **Flag. png**, tem cópias localizadas em outros diretórios.
 
 ![Captura de tela de várias pastas desenháveis, cada uma contendo um ou mais arquivos. png localizados](localization-images/drawable.png)
-
 
 #### <a name="other-resource-types"></a>Outros tipos de recursos
 
@@ -210,7 +209,6 @@ Você também pode fornecer outros tipos de recursos alternativos específicos d
 O Android 4,2 introduziu o suporte para [idiomas da direita para a esquerda (RTL)](http://android-developers.blogspot.fr/2013/03/native-rtl-support-in-android-42.html) se `android:supportsRtl="true"`você definir a configuração do aplicativo. O qualificador `"ldrtl"` de recursos pode ser incluído em um nome de diretório para conter layouts personalizados que são criados para exibição DPE.
 
 Para obter mais informações sobre a nomenclatura e o fallback do diretório de recursos, consulte os documentos do Android para [fornecer recursos alternativos](https://developer.android.com/guide/topics/resources/providing-resources.html#AlternativeResources).
-
 
 ### <a name="app-name"></a>Nome do aplicativo
 
@@ -256,12 +254,9 @@ Para testar um dispositivo, altere o idioma no aplicativo **configurações** .
 > [!TIP]
 > Anote os ícones e o local dos itens de menu para que você possa reverter o idioma para a configuração original.
 
-
 ## <a name="summary"></a>Resumo
 
 Este artigo aborda as noções básicas de localização de aplicativos Android usando a manipulação interna de recursos. Você pode aprender mais sobre o i18n e o l10n para aplicativos iOS, Android e multiplataforma (incluindo Xamarin. Forms) neste [Guia de plataforma cruzada](~/cross-platform/app-fundamentals/localization.md).
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

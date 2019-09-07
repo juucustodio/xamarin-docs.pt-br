@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: 58621701d832660b125d7589762cc033811eb69b
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: b9982f9102166aa6892be0819615f329a65fffbb
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70281848"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70756436"
 ---
 # <a name="ipa-support-in-xamarinios"></a>Suporte de IPA no Xamarin.iOS
 
@@ -66,7 +66,6 @@ Antes de começar a criar um IPA para uma solução de plataforma cruzada, selec
 
 Para compilar um IPA, é preciso criar um _arquivo morto_ de um build de versão de nosso aplicativo. Este Arquivo Morto contém nosso aplicativo e informações de identificação sobre ele.
 
-
 1. Selecione a configuração **Versão | Dispositivo** no Visual Studio para Mac: !
 
     ![](ipa-support-images/buildxs01new.png "Selecione a versão | Configuração do dispositivo")
@@ -79,7 +78,6 @@ Para compilar um IPA, é preciso criar um _arquivo morto_ de um build de versão
 
     ![](ipa-support-images/buildxs03new.png "O modo de exibição de Arquivo morto será exibido")
 
-
 ### <a name="sign-and-distribute-your-app"></a>Assinar e distribuir seu aplicativo
 
 Sempre que você compilar seu aplicativo para o Arquivo Morto, ele abrirá automaticamente a **Exibição de Arquivos Mortos**, exibindo todos os projetos arquivados, agrupados por solução. Por padrão essa exibição mostra apenas a solução atual aberta. Para ver todas as soluções que têm arquivos, clique na opção **Mostrar todos os arquivos mortos**.
@@ -89,7 +87,6 @@ Sempre que você compilar seu aplicativo para o Arquivo Morto, ele abrirá autom
 Observe que, para os builds não da App Store, o arquivo **iTunesMetadata.plist** e o conjunto de arte do iTunes serão incluídos automaticamente no IPA se forem encontrados no arquivo morto.
 
 Para assinar seu aplicativo e prepará-lo para distribuição:
-
 
 1. Selecione o botão **Assinar e Distribuir...** , como ilustrado abaixo:
 
@@ -111,11 +108,9 @@ Para assinar seu aplicativo e prepará-lo para distribuição:
 
     ![](ipa-support-images/distribute04.png "Salve o IPA no computador")
 
-
 ### <a name="building-via-the-command-line-on-mac"></a>Criação via linha de comando (em Mac)
 
 Em determinados casos, como em um ambiente de CI, pode ser necessário compilar o IPA via linha de comando. Siga as etapas abaixo para fazer isso:
-
 
 1. Marque **Opções de Projeto > Opções de IPA do iOS > Incluir imagens do iTunesArtwork** e marque **Compilar pacote ad hoc/empresarial (IPA)** :
 
@@ -251,7 +246,6 @@ O usuário agora pode sincronizar o iTunes com seu dispositivo para instalar o n
 ## <a name="summary"></a>Resumo
 
 Este artigo abordou a configuração necessária para preparar um aplicativo Xamarin.iOS para um build fora da App Store. Ele mostrou como criar um Pacote IPA e como instalar o aplicativo iOS resultante no dispositivo iOS do usuário final para teste ou Distribuição Interna.
-
 
 ## <a name="related-links"></a>Links relacionados
 

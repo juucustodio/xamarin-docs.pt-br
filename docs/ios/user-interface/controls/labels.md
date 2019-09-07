@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 07/11/2017
-ms.openlocfilehash: 0447bd643f359b21ec58bb8bdd79f8482fdb8955
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 275acd02e6cece0842344d8e5833c23af1014a0f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70286310"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768944"
 ---
 # <a name="labels-in-xamarinios"></a>Rótulos no Xamarin. iOS
 
@@ -101,8 +101,3 @@ Que exibe o texto como este:
 ![Realce e conjunto de sombras no texto](labels-images/image4.png)
 
 Para obter mais informações sobre como alterar a fonte de um UILabel, consulte [alterar a](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/labels/change_the_font) receita da fonte.
-
-
-
-
-

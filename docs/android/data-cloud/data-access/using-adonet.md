@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/08/2018
-ms.openlocfilehash: 76a66b4dbde65a3fc44d3490e0147ff66b088466
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: ff29b51cec6f612f4dac497e75eddba4dbd4c1e2
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69525972"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70754462"
 ---
 # <a name="using-adonet-with-android"></a>Usando o ADO.NET com o Android
 
@@ -30,7 +30,6 @@ Para usar o Access SQLite por meio do ADO.NET `System.Data` , `Mono.Data.Sqlite`
 ![Referências do Android no Visual Studio para Mac](using-adonet-images/image5.png "Referências do Android no Visual Studio para Mac") 
 
 -----
-
 
 Clique com o botão direito do mouse em **referências > editar referências...** em seguida, clique para selecionar os assemblies necessários.
 
@@ -151,7 +150,6 @@ Como o SQLite permite que comandos SQL arbitrários sejam executados em relaçã
 
 - **ExecuteScalar** &ndash; Recupera um único valor (por exemplo, uma agregação).
 
-
 ### <a name="executenonquery"></a>EXECUTENONQUERY
 
 `INSERT`as `UPDATE`instruções, `DELETE` e retornarão o número de linhas afetadas. Todas as outras instruções SQL retornarão-1.
@@ -199,7 +197,6 @@ O método `ExecuteReader` retorna um objeto `SqliteDataReader`. Além do `Read` 
 
 - **HasRows** &ndash; Se alguma linha foi retornada.
 
-
 ### <a name="executescalar"></a>EXECUTESCALAR
 
 Use isso para `SELECT` instruções que retornam um único valor (como uma agregação).
@@ -212,8 +209,6 @@ using (var contents = connection.CreateCommand ()) {
 ```
 
 O `ExecuteScalar` tipo de retorno do método `object` é &ndash; que você deve converter o resultado dependendo da consulta de banco de dados. O resultado pode ser um inteiro de uma `COUNT` consulta ou uma cadeia de caracteres de uma `SELECT` consulta de coluna única. Observe que isso é diferente para outros `Execute` métodos que retornam um objeto leitor ou uma contagem do número de linhas afetadas.
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

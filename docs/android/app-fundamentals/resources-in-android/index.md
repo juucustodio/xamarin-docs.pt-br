@@ -7,17 +7,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/01/2018
-ms.openlocfilehash: d23b29b7e49c210dc44163e41735fa96b55d12f2
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: ec1cb6fcce320ed5ea9154b42d0a5361940c1015
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69526318"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755008"
 ---
 # <a name="android-resources"></a>Recursos do Android
 
 _Este artigo apresenta o conceito de recursos do Android no Xamarin. Android e documentará como usá-los. Ele aborda como usar recursos em seu aplicativo Android para dar suporte à localização de aplicativos e vários dispositivos, incluindo diferentes tamanhos de tela e densidades._
-
 
 ## <a name="overview"></a>Visão geral
 
@@ -39,21 +38,21 @@ Quando um novo projeto Xamarin. Android é iniciado, um diretório especial cham
 
 ![Conteúdo e pasta de recursos](images/resources-folder-vs.png)
 
-Na imagem acima, os recursos do aplicativo são organizados de acordo com seu tipo nesses subdiretórios: as imagens vão para o diretório desenhável; as exibições vão para o subdiretório de **layout** , etc.
- 
+Na imagem acima, os recursos do aplicativo são organizados de acordo com seu tipo nesses subdiretórios: as imagens vão para o diretório **desenhável** ; as exibições vão para o subdiretório de **layout** , etc.
+
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 ![Conteúdo e pasta de recursos](images/resources-folder-xs.png)
 
 Na imagem acima, os recursos do aplicativo são organizados de acordo com seu tipo nesses subdiretórios: as imagens vão para o diretório **mipmap** ; as exibições vão para o subdiretório de **layout** , etc.
- 
+
 -----
 
-Há duas maneiras de acessar esses recursos em um aplicativo Xamarin. Android: programaticamente no código e *declarativamente* em XML usando uma sintaxe XML especial.
+Há duas maneiras de acessar esses recursos em um aplicativo Xamarin. Android: *programaticamente* no código e *declarativamente* em XML usando uma sintaxe XML especial.
 
 Esses recursos são chamados de *recursos padrão* e são usados por todos os dispositivos, a menos que uma correspondência mais específica seja especificada. Além disso, cada tipo de recurso pode opcionalmente ter *recursos alternativos* que o Android pode usar para direcionar dispositivos específicos. Por exemplo, os recursos podem ser fornecidos para direcionar a localidade do usuário, o tamanho da tela ou se o dispositivo for girado 90 graus de retrato para paisagem, etc. Em cada um desses casos, o Android carregará os recursos para uso pelo aplicativo sem qualquer esforço de codificação extra pelo desenvolvedor.
 
-Recursos alternativos são especificados pela adição de uma cadeia de caracteres curta, chamada de qualificador, ao final do diretório que contém um determinado tipo de recursos.
+Recursos alternativos são especificados pela adição de uma cadeia de caracteres curta, chamada de *qualificador*, ao final do diretório que contém um determinado tipo de recursos.
 
 Por exemplo, os **recursos/desenhar-de** especificarão as imagens para dispositivos que são definidos como uma localidade alemã, enquanto os **recursos/desenháveis-fr** armazenarão imagens para dispositivos definidos como uma localidade francesa. Um exemplo de como fornecer recursos alternativos pode ser visto na imagem abaixo, onde o mesmo aplicativo está sendo executado apenas com a localidade do dispositivo que está sendo alterada:
 
@@ -66,7 +65,6 @@ Este artigo usará uma visão abrangente de como usar recursos e abordará os se
 - **Configurações específicas do dispositivo** &ndash; Suporte a diferentes resoluções de tela e densidades em um aplicativo.
 
 - **Localização** &ndash; Usando recursos para dar suporte a regiões diferentes, um aplicativo pode ser usado.
-
 
 ## <a name="related-links"></a>Links relacionados
 

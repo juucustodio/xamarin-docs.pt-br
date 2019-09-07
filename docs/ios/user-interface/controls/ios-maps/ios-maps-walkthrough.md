@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: 94ab5ca9fa34487457b93758dfac0ab514e702c8
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 2091e710352b25167b740e409955787ffec99e1c
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70286281"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768958"
 ---
 # <a name="annotations-and-overlays-in-xamarinios"></a>Anotações e sobreposições no Xamarin. iOS
 
@@ -25,7 +25,6 @@ Você pode encontrar o código concluído no [exemplo do Maps de mapas](https://
 Vamos começar criando um novo projeto do **Ios vazio**e dando a ele um nome relevante. Vamos começar adicionando o código ao nosso controlador de exibição para exibir o MapView e, em seguida, criará novas classes para nosso MapDelegate e as anotações personalizadas. Siga as etapas abaixo para fazer isso:
 
 ## <a name="viewcontroller"></a>ViewController
-
 
 1. Adicione os seguintes namespaces ao `ViewController`:
 
@@ -110,9 +109,7 @@ Vamos começar criando um novo projeto do **Ios vazio**e dando a ele um nome rel
 
     `Maps Walkthrough Docs Sample`.
 
-
 ## <a name="conferenceannotationcs--a-class-for-custom-annotations"></a>ConferenceAnnotation.cs – uma classe para anotações personalizadas
-
 
 1. Vamos usar uma classe personalizada para a anotação chamada `ConferenceAnnotation`. Adicione a seguinte classe ao projeto:
 
@@ -180,7 +177,6 @@ Vamos começar criando um novo projeto do **Ios vazio**e dando a ele um nome rel
     ```
 
 Isso conclui o código em `ViewDidLoad`. Agora precisamos implementar nossa `MapDelegate` classe para tratar da criação das exibições de anotação e de sobreposição, respectivamente.
-
 
 ## <a name="mapdelegate"></a>MapDelegate
 
@@ -287,7 +283,6 @@ Execute o aplicativo. Agora temos um mapa interativo com uma anotação personal
 ## <a name="summary"></a>Resumo
 
 Neste artigo, examinamos como adicionar uma anotação a um mapa, bem como adicionar uma sobreposição para um polígono especificado. Também demonstramos como adicionar suporte de toque à anotação para animar uma imagem em um mapa.
-
 
 ## <a name="related-links"></a>Links relacionados
 

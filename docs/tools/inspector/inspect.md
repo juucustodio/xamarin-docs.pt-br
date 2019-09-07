@@ -6,12 +6,12 @@ ms.assetid: 91B3206E-B2A5-4660-A6E5-B924B8FE69A7
 author: conceptdev
 ms.author: crdun
 ms.date: 06/19/2018
-ms.openlocfilehash: 2ce4b0366e85580b6d9d816bd91f9ced93997b63
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 2ccf6966e85eddaa10b5651e1b0b48dec9203b28
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291484"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70772209"
 ---
 # <a name="inspecting-live-applications"></a>Inspecionando aplicativos ativos
 
@@ -52,4 +52,3 @@ A árvore visual ativa também é muito útil. Representa o instantâneo atual d
 - A edição da grade de propriedades não está disponível para Mac e no Windows está limitada a alguns tipos de dados. Use o REPL para uma edição mais potente.
 - Desde que o suplemento/extensão do Inspetor esteja instalado e habilitado no seu IDE, estamos injetando o código em seu aplicativo sempre que ele for iniciado no modo de depuração. Se você notar algum comportamento estranho em seu aplicativo, tente desabilitar ou desinstalar o suplemento/extensão do Inspetor, reiniciar o IDE e verificar novamente. E registre [bugs](~/tools/inspector/install.md#reporting-bugs) para nos informar!
 - Se inspecionar um elemento de interface do usuário faz com que ele seja alterado de qualquer forma, informe- [nos](~/tools/inspector/install.md#reporting-bugs), pois isso pode indicar um bug.
-

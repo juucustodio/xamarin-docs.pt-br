@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/31/2018
-ms.openlocfilehash: 186dab1d48d928426d223c8961ce21846c351107
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 575235569351d0856c7fbffbf38a981ede1a35ce
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69523084"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70762434"
 ---
 # <a name="auto-complete-for-xamarinandroid"></a>Preenchimento automático para o Xamarin. Android
 
@@ -47,7 +47,6 @@ o widget que fornece sugestões para um nome de país.
 
 O [`TextView`](xref:Android.Widget.TextView) é um rótulo que apresenta o[`AutoCompleteTextView`](xref:Android.Widget.AutoCompleteTextView)
 Widget.
-
 
 ## <a name="tutorial"></a>Tutorial
 
@@ -166,8 +165,6 @@ Execute o aplicativo. Conforme você digita, você deve ver algo assim:
 
 [![Captura de tela de preenchimento automático listando nomes que contêm "CA"](auto-complete-images/helloautocomplete.png)](auto-complete-images/helloautocomplete.png#lightbox)
 
-
-
 ## <a name="more-information"></a>Mais informações
 
 Observe que o uso de uma matriz de cadeia de caracteres embutida em código não é uma prática de design recomendada porque o código do aplicativo deve se concentrar no comportamento, não no conteúdo. O conteúdo do aplicativo, como cadeias de caracteres, deve ser externo do código para facilitar modificações no conteúdo e facilitar a localização do conteúdo. As cadeias de caracteres embutidas em código são usadas neste tutorial apenas para simplificar e se concentrar no[`AutoCompleteTextView`](xref:Android.Widget.AutoCompleteTextView)
@@ -195,7 +192,6 @@ linha do construtor com o seguinte:
 string[] countries = Resources.GetStringArray (Resource.array.countries_array);
 var adapter = new ArrayAdapter<String> (this, Resource.layout.list_item, countries);
 ```
-
 
 ### <a name="references"></a>Referências
 

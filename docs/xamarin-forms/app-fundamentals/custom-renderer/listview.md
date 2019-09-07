@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 959b2091e88adde5bb3f64c2cdb5d5b0748aa0be
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
-ms.translationtype: HT
+ms.openlocfilehash: 384ad20cc1456f3de01ddbe241bf2d8b58de387f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68650815"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771927"
 ---
 # <a name="customizing-a-listview"></a>Personalizando uma ListView
 
@@ -563,7 +563,6 @@ O método preenche novamente o controle `ListView` nativo com os dados alterados
 ## <a name="summary"></a>Resumo
 
 Este artigo demonstrou como criar um renderizador personalizado que encapsula os controles de lista e layouts de célula nativa específicos a uma plataforma, permitindo mais controle sobre o desempenho do controle de lista nativo.
-
 
 ## <a name="related-links"></a>Links relacionados
 

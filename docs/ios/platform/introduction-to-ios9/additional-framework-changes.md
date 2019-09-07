@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: 706efdd9cb39db63ab0c7b9cd4404b7b84f4c14b
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: cb16ad3889453f866f3dc9e66f5bcc8860bd094a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292412"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70751991"
 ---
 # <a name="additional-ios-9-frameworks-changes"></a>Alterações adicionais em estruturas do iOS 9
 
@@ -55,9 +55,6 @@ A nova estrutura de _Serviços Web do CloudKit_ fornece uma biblioteca JavaScrip
 
 > [!IMPORTANT]
 > Antes de poder acessar, apresentar ou atualizar o conteúdo de um banco de dados CloudKit usando o CloudKit JS, você deve ter definido anteriormente o esquema do banco de dados.
-
-
-
 
 Para obter mais informações, consulte os seguintes documentos:
 
@@ -261,8 +258,6 @@ Para corrigir essa situação, use o layout automático e as classes de tamanho 
 ### <a name="new-uitextinputassistantitem-class"></a>Nova classe UITextInputAssistantItem
 
 Use os grupos `UITextInputAssistantItem` de botões nova classe para barra de layout em uma _barra de atalhos_. A barra de atalhos é uma nova área que está disponível no teclado flexível para fornecer atalhos de digitação.
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

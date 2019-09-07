@@ -6,12 +6,12 @@ ms.assetid: C6B99E44-00C1-4139-A1B7-FCFBE8749AB1
 author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
-ms.openlocfilehash: 367f44104b0d6049b8d65ab6e3b3f38c703cdb3f
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: aa43513154499a39c27f5ad35fce9584ce7827f8
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70198716"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70763525"
 ---
 # <a name="creating-a-monogame-uwp-project"></a>Criando um projeto UWP para monojogo
 
@@ -40,7 +40,7 @@ Os jogos do Xbox One podem ser desenvolvidos em um hardware do Xbox de varejo um
 Depois que todos os recursos necessários tiverem sido instalados e o modo de desenvolvedor tiver sido habilitado no computador com Windows 10, podemos criar um novo projeto de monojogo usando o Visual Studio seguindo estas etapas:
 
 1. Selecione **arquivo** > novoprojeto >  **...**
-1. Selecione a > categoriamodelos > instalados do**C#Visual** monogames: > 
+1. Selecione a > categoriamodelos > instalados do**C#Visual** monogames:  > 
 
     ![](uwp-images/image1.png "Categoria de monojogo")
 
@@ -56,7 +56,6 @@ Depois que o Visual Studio terminar de criar o modelo, podemos executá-lo para 
 ![](uwp-images/image3.png "Depois que o Visual Studio terminar de criar o modelo, execute-o para ver o projeto vazio em execução")
 
 Os números nos cantos fornecem informações de diagnóstico. Essas informações podem ser removidas com a exclusão `App.xaml.cs` do código `DEBUG` no no bloco `OnLaunched` no método:
-
 
 ```csharp
 protected override void OnLaunched(LaunchActivatedEventArgs e)
@@ -90,7 +89,7 @@ O modelo de monojogo para o Xbox um considera a área segura e a renderiza como 
 
 ## <a name="referencing-content-in-uwp-projects"></a>Fazendo referência ao conteúdo em projetos UWP
 
-O conteúdo em projetos de monojogo pode ser referenciado diretamente do arquivo ou por meio do [pipeline de conteúdo](https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/content-pipeline/introduction.md)de monojogo. Pequenos projetos de jogos podem se beneficiar da simplicidade de carregar do arquivo. Projetos maiores se beneficiarão do uso do pipeline de conteúdo para otimizar o conteúdo a fim de reduzir o tamanho e os tempos de carregamento. Ao contrário do XNA no Xbox 360, `System.IO.File` a classe está disponível em aplicativos do Xbox One UWP.
+O conteúdo em projetos de monojogo pode ser referenciado diretamente do arquivo ou por meio do [pipeline de conteúdo de monojogo](https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/content-pipeline/introduction.md). Pequenos projetos de jogos podem se beneficiar da simplicidade de carregar do arquivo. Projetos maiores se beneficiarão do uso do pipeline de conteúdo para otimizar o conteúdo a fim de reduzir o tamanho e os tempos de carregamento. Ao contrário do XNA no Xbox 360, `System.IO.File` a classe está disponível em aplicativos do Xbox One UWP.
 
 Para obter mais informações sobre como carregar conteúdo usando o pipeline de conteúdo, consulte o [Guia de pipeline de conteúdo](https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/content-pipeline/introduction.md).
 

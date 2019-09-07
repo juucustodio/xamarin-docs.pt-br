@@ -6,12 +6,12 @@ ms.assetid: 46E0578A-7EB9-C105-ABB0-A043E501F36B
 author: conceptdev
 ms.author: crdun
 ms.date: 03/23/2017
-ms.openlocfilehash: 049f01d47d303f07edd57c659361d9a123993ede
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 0e513ecb67f5b902afd91546b1de6720cb0369c1
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70288650"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70761978"
 ---
 # <a name="part-6---testing-and-app-store-approvals"></a>Parte 6 – Teste e aprovações da app store
 
@@ -39,7 +39,6 @@ Ao testar aplicativos dentro de sua organização ou gerenciar um programa beta 
 
 - **Distribuição** – gerenciar o processo de provisionamento (especialmente para dispositivos IOS) e obter versões atualizadas do software para os testadores.
 - **Comentários** – coleta de informações sobre o uso do aplicativo e informações detalhadas sobre quaisquer erros que possam ocorrer.
-
 
 Há vários serviços que ajudam a resolver esses problemas, fornecendo a infraestrutura incorporada ao seu aplicativo para coletar e relatar o uso e os erros, além de simplificar o processo de provisionamento para ajudar a inscrever e gerenciar testadores e seus dispositivos .
 

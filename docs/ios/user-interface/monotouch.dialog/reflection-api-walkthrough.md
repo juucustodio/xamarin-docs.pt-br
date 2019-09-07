@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 ms.date: 11/25/2015
 author: conceptdev
 ms.author: crdun
-ms.openlocfilehash: 27f025d80b3259da32581811ae6c900358a07e4e
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 7acd43597d033b4c6daac59016a9bdf41ade6f68
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70278509"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768136"
 ---
 # <a name="creating-a-xamarinios-application-using-the-reflection-api"></a>Criando um aplicativo Xamarin. iOS usando a API de reflexão
 
@@ -29,7 +29,6 @@ Usar a API de reflexão é tão simples quanto:
 1. Criando uma classe decorada com MT. Atributos de D.
 1. Criar uma `BindingContext` instância, passando uma instância da classe acima. 
 1. Criando um `DialogViewController` , passando-o `BindingContext’s` para o `RootElement` . 
-
 
 Vejamos um exemplo para ilustrar como usar a API de reflexão. Neste exemplo, criaremos uma tela simples de entrada de dados, conforme mostrado abaixo:
 
@@ -138,11 +137,9 @@ Selecionar os resultados da linha no aplicativo navegando para uma nova tela com
 
  <a name="Summary" />
 
-
 ## <a name="summary"></a>Resumo
 
 Este artigo apresentou uma explicação da API de reflexão. Mostramos como adicionar atributos a uma classe para controlar o que é exibido. Também discutimos como usar um `BindingContext` para associar dados de uma classe à hierarquia de elementos que é criada, bem como usar o Mt. D com um `UINavigationController`.
-
 
 ## <a name="related-links"></a>Links relacionados
 

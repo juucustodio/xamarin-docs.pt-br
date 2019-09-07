@@ -7,12 +7,12 @@ ms.technology: xamarin-skiasharp
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: f326a2ef449b7c807be150a002a4afc600d9908d
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: f635e6e20a4cec9b8cc735bc733b678263cd024a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68652700"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70759171"
 ---
 # <a name="polylines-and-parametric-equations"></a>Polilinhas e equações paramétricas
 
@@ -120,7 +120,6 @@ O resultado também é chamado de um *espiral aritmético* porque o deslocamento
 [![](polylines-images/archimedeanspiral-small.png "Captura de tela da página Archimedean espiral tripla")](polylines-images/archimedeanspiral-large.png#lightbox "tripla captura de tela da página Archimedean espiral")
 
 Observe que o `SKPath` é criado em um `using` bloco. Isso `SKPath` consome mais memória do que o `SKPath` objetos nos programas do anteriores, o que sugere que um `using` bloco é mais apropriado para descartar todos os recursos não gerenciados.
-
 
 ## <a name="related-links"></a>Links relacionados
 

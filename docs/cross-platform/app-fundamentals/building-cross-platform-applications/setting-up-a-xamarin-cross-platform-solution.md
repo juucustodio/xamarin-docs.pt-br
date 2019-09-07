@@ -6,30 +6,26 @@ ms.assetid: 4139A6C2-D477-C563-C1AB-98CCD0D10A93
 author: conceptdev
 ms.author: crdun
 ms.date: 03/27/2017
-ms.openlocfilehash: f8b8f13f323f404554ca73c3e75c23713e0fbe35
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: acec74585487e9f0a0a13a80c5da49a187a4042f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70288843"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70758151"
 ---
 # <a name="part-3---setting-up-a-xamarin-cross-platform-solution"></a>Parte 3-Configurando uma solução de plataforma cruzada do Xamarin
 
 Independentemente de quais plataformas estão sendo usadas, os projetos do Xamarin usam o mesmo formato de arquivo de solução (o formato de arquivo **. sln** do Visual Studio). As soluções podem ser compartilhadas entre ambientes de desenvolvimento, mesmo quando projetos individuais não podem ser carregados (como um projeto do Windows no Visual Studio para Mac).
 
-
-
 Ao criar um novo aplicativo de plataforma cruzada, a primeira etapa é criar uma solução em branco. Esta seção explica o que acontece em seguida: Configurando os projetos para criar aplicativos móveis de plataforma cruzada.
 
  <a name="Sharing_Code" />
-
 
 ## <a name="sharing-code"></a>Compartilhando código
 
 Consulte o documento [Opções de compartilhamento de código](~/cross-platform/app-fundamentals/code-sharing.md) para obter uma descrição detalhada de como implementar o compartilhamento de código entre plataformas.
 
  <a name="Shared_Asset_Projects" />
-
 
 ### <a name="shared-projects"></a>Projetos compartilhados
 
@@ -39,7 +35,6 @@ Esse método permite que você compartilhe o mesmo código em diferentes projeto
 
  <a name="Portable_Class_Libraries" />
 
-
 ### <a name="portable-class-libraries-pcl"></a>PCL (Bibliotecas de classe portáteis)
 
 Historicamente, um arquivo de projeto .NET (e o assembly resultante) foi direcionado a uma versão específica do Framework. Isso impede que o projeto ou o assembly seja compartilhado por diferentes estruturas.
@@ -48,17 +43,13 @@ Uma PCL (biblioteca de classes portátil) é um tipo especial de projeto que pod
 
 Você pode ler mais sobre o suporte do Xamarin [para bibliotecas de classes portáteis](~/cross-platform/app-fundamentals/pcl.md) e seguir as instruções para ver como o [exemplo TaskyPortable](https://github.com/xamarin/mobile-samples/tree/master/TaskyPortable) funciona.
 
-
 ### <a name="net-standard"></a>.NET Standard
 
 Introduzido em 2016, os projetos [.net Standard](~/cross-platform/app-fundamentals/net-standard.md) fornecem uma maneira fácil de compartilhar código entre plataformas, produzindo assemblies que podem ser usados em todas as plataformas Windows, Xamarin (Ios, Android, Mac) e Linux.
 
 .NET Standard bibliotecas podem ser criadas e usadas como PCLs, exceto que as APIs disponíveis em cada versão (de 1,0 a 1,6) são descobertas mais facilmente e cada versão é compatível com versões anteriores com números de versão menores.
 
-
-
  <a name="Populating_the_Solution" />
-
 
 ## <a name="populating-the-solution"></a>Populando a solução
 
@@ -68,9 +59,7 @@ A abordagem do Xamarin é agrupar o código em dois tipos de projeto:
 - **Projeto principal** – escreva código reutilizável em um só lugar, para ser compartilhado entre diferentes plataformas. Use os princípios de encapsulamento para ocultar detalhes de implementação sempre que possível.
 - **Projetos de aplicativos específicos da plataforma** – consuma o código reutilizável com o mínimo de acoplamento possível. Os recursos específicos da plataforma são adicionados nesse nível, criados em componentes expostos no projeto principal.
 
-
  <a name="Core_Project" />
-
 
 ### <a name="core-project"></a>Projeto principal
 
@@ -83,9 +72,7 @@ Projetos compartilhados devem implementar o máximo possível de funcionalidades
 - **Camada de acesso ao serviço** – uma camada opcional para fornecer serviços de nuvem para o aplicativo. Contém o código que acessa recursos de rede remota (serviços Web, downloads de imagens, etc.) e, possivelmente, Caching dos resultados.
 - **Camada de negócios** – definição das classes de modelo e das classes de fachada ou gerente que expõem a funcionalidade para os aplicativos específicos da plataforma.
 
-
  <a name="Platform-Specific_Application_Projects" />
-
 
 ### <a name="platform-specific-application-projects"></a>Projetos de aplicativos específicos da plataforma
 
@@ -96,9 +83,7 @@ Os projetos específicos da plataforma devem implementar:
 - **Camada de aplicativo** – funcionalidade específica da plataforma e vinculação/conversão entre os objetos da camada de negócios e a interface do usuário.
 - **Camada de interface do usuário** – telas, controles de interface do usuário personalizados, apresentação da lógica de validação.
 
-
 <a name="Example" />
-
 
 ### <a name="example"></a>Exemplo
 
@@ -110,9 +95,7 @@ Esta captura de tela mostra uma configuração de solução com os projetos de p
 
  ![](setting-up-a-xamarin-cross-platform-solution-images/core-solution-example.png "O projeto compartilhado contém código relacionado a cada uma das camadas de arquitetura (código comercial, de serviço, de dados e de acesso a dados)")
 
-
  <a name="Project_References" />
-
 
 ## <a name="project-references"></a>Referências de Projeto
 
@@ -123,16 +106,13 @@ O aplicativo projeta cada projeto compartilhado de referência e contém o códi
 
 ![](setting-up-a-xamarin-cross-platform-solution-images/solution-android.png "O aplicativo projeta cada referência de projeto compartilhado") ![](setting-up-a-xamarin-cross-platform-solution-images/solution-ios.png "cada referência de projeto compartilhado de projetos de aplicativo")
 
-
 Exemplos específicos de como os projetos devem ser estruturados são fornecidos nos estudos de caso.
 
  <a name="Adding_Files" />
 
-
 ## <a name="adding-files"></a>Adicionando arquivos
 
  <a name="Build_Action" />
-
 
 ### <a name="build-action"></a>Ação de compilação
 
@@ -145,11 +125,9 @@ Exemplos específicos de como os projetos devem ser estruturados são fornecidos
 - **Arquivos XAML em projetos do Windows** – ação de compilação: Página
 - **Arquivos XAML do Xamarin. Forms** – ação de compilação: EmbeddedResource
 
-
 Geralmente, o IDE detectará o tipo de arquivo e sugerirá a ação de compilação correta.
 
  <a name="Case_Sensitivity" />
-
 
 ### <a name="case-sensitivity"></a>Diferenciação de maiúsculas e minúsculas
 

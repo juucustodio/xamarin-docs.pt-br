@@ -7,12 +7,12 @@ ms.assetid: 8022FBF9-2208-43DB-94D8-0A4E9A5DA07F
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/16/2017
-ms.openlocfilehash: 133d7ffdeafdced3f909c21cf08f2241666015fa
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 1daf4822dd7debe98aabd58d42cb6ed29f95b90d
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70228263"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70759356"
 ---
 # <a name="clipping-with-paths-and-regions"></a>Recorte com caminhos de regiões
 
@@ -56,7 +56,6 @@ public class MonkeyThroughKeyholePage : ContentPage
 ```
 
 Embora o `keyholePath` objeto descreve o contorno de um buraco de fechadura, as coordenadas são completamente arbitrárias e refletem o que era prático quando os dados do caminho foi desenvolvidos. Por esse motivo, o `PaintSurface` manipulador obtém os limites desse caminho e chamadas `Translate` e `Scale` para mover o caminho para o centro da tela e transformá-la quase tão alto quanto a tela:
-
 
 ```csharp
 public class MonkeyThroughKeyholePage : ContentPage
@@ -510,7 +509,6 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 Ele realmente não parece um trevo de folha quatro – mas é uma imagem que pode ser difícil de renderização sem distorção:
 
 [![Captura de tela tripla da página de trevo folhas de quatro folhas](clipping-images//fourleafclover-small.png)](clipping-images/fourleafclover-large.png#lightbox)
-
 
 ## <a name="related-links"></a>Links relacionados
 

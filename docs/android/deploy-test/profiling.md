@@ -8,12 +8,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/03/2018
-ms.openlocfilehash: d2999a21debefb05e5aa3cdaace56cb4f3ac2d81
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
-ms.translationtype: HT
+ms.openlocfilehash: 44bed11e4d2ccf7baa39734a1b20e49b9ecf5f10
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69525571"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70753986"
 ---
 # <a name="profiling-android-apps"></a>Criação de perfil de aplicativos Android
 
@@ -24,14 +24,13 @@ Antes de implantar seu aplicativo em uma loja de aplicativos, é importante iden
 
 Este guia apresenta o Xamarin Profiler e fornece informações detalhadas para começar a usar o Android Profiler.
 
- 
 ## <a name="xamarin-profiler"></a>Criador de perfil do Xamarin
 
 O Xamarin Profiler é um aplicativo autônomo integrado com o Visual Studio e o Visual Studio para Mac para criação de perfil de aplicativos Xamarin no IDE. Para obter mais informações sobre o uso do Xamarin Profiler, veja [Xamarin Profiler](~/tools/profiler/index.md).
 
 > [!NOTE]
 > Você deve ser um assinante do [Visual Studio Enterprise](https://visualstudio.microsoft.com/vs/compare/) para desbloquear o recurso do Xamarin Profiler no Visual Studio Enterprise no Windows ou no Visual Studio para Mac.
- 
+
 ## <a name="android-studio-profiler"></a>Criador de perfil do Android Studio
 
 O Android Studio 3.0 e posterior inclui uma ferramenta Android Profiler. Você pode usar o Android Profiler para medir o desempenho de um aplicativo Xamarin Android criado com o Visual Studio &ndash; sem a necessidade de uma licença do Visual Studio Enterprise. No entanto, ao contrário do Xamarin Profiler, o Android Profiler não é integrado com o Visual Studio e só pode ser usado para criar o perfil de um APK (pacote de aplicativo Android) que foi previamente criado e importado para o Android Profiler.
@@ -100,7 +99,6 @@ As etapas a seguir explicam como iniciar um aplicativo Xamarin Android na ferram
 15. Se você tocar no botão **RANDOMIZE** no **XamagonXuzzle** (fazendo com que ele mude e embaralhe os blocos), você verá o uso da CPU aumentar durante o intervalo do embaralhamento do aplicativo:
 
     [![Uso da CPU quando o botão RANDOMIZE é tocado](profiling-images/vswin/14-tap-randomize-sml.png)](profiling-images/vswin/14-tap-randomize.png#lightbox)
-
 
 ### <a name="using-the-android-profiler"></a>Usando o Android Profiler
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 42ac6c9c729498ad4b70e1e209d63c1ec2e11f8d
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: cf6835b99ea70c3922dd68bc21af3e44815cc92e
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291229"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769931"
 ---
 # <a name="copy-and-paste-in-xamarinmac"></a>Copiar e colar no Xamarin. Mac
 
@@ -603,7 +603,7 @@ namespace MacCopyPaste
 Novamente, obtemos a janela atual e a mais alta e `ImageDocument` usamos sua instância de classe para ver se os dados de imagem necessários existem. Em seguida, usamos `MenuWillHighlightItem` o método para habilitar ou desabilitar cada item com base nesse estado.
 
 Edite o arquivo **AppDelegate.cs** e faça `DidFinishLaunching` com que o método se pareça com o seguinte:
- 
+
 ```csharp
 public override void DidFinishLaunching (NSNotification notification)
 {
@@ -1275,8 +1275,6 @@ if (ok) {
 ## <a name="summary"></a>Resumo
 
 Este artigo deu uma visão detalhada de como trabalhar com a área de trabalho em um aplicativo Xamarin. Mac para dar suporte a operações de cópia e colagem. Primeiro, ele introduziu um exemplo simples para familiarizar-se com as operações padrão do pasteboards. Em seguida, precisou de uma visão detalhada da área de dados e de como ler e gravar os dados dela. Por fim, ele examinou o uso de um tipo de dados personalizado para dar suporte à cópia e colagem de tipos de dados complexos em um aplicativo.
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

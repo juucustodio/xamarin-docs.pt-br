@@ -7,12 +7,12 @@ ms.assetid: FDD16186-E3B7-4FF6-9BC2-8A2974BFF616
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/20/2017
-ms.openlocfilehash: 0592f80b7d7352463ba22d7d371cc1b18ac3e0be
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: bfc1bec06c773039529cd85aac604a9a9031cb54
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655575"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70773026"
 ---
 # <a name="the-skew-transform"></a>A transformação de distorção
 
@@ -249,7 +249,6 @@ canvas.Translate(-xText, -yText - textBounds.Bottom);
 Agora, a sombra estende da parte inferior dos descendentes:
 
 [![](skew-images/skewshadowtext3-small.png "Captura de tela da página de texto de sombra distorcer com ajustes para os descendentes tripla")](skew-images/skewshadowtext3-large.png#lightbox "tripla captura de tela da página de texto de sombra distorcer com ajustes para os descendentes")
-
 
 ## <a name="related-links"></a>Links relacionados
 

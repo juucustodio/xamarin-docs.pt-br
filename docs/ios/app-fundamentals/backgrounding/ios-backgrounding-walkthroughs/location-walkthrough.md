@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: b95f60676a1c58463fc6e384ea3738122a1c76fe
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 9f4708b56b8cf8a243785816440c63b743059cf5
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70286821"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70756271"
 ---
 # <a name="walkthrough---background-location-in-xamarinios"></a>Walkthrough-local do plano de fundo no Xamarin. iOS
 
@@ -21,7 +21,6 @@ Neste exemplo, vamos criar um aplicativo de local do iOS que imprime informaçõ
 Este guia explica alguns conceitos importantes de plano de fundo, incluindo o registro de um aplicativo como um aplicativo necessário em segundo plano, a suspensão de atualizações da interface do usuário quando o aplicativo `WillEnterBackground` é `WillEnterForeground` em segundo plano e o trabalho com os métodos e `AppDelegate` .
 
 ## <a name="application-set-up"></a>Configuração do aplicativo
-
 
 1. Primeiro, crie um novo **aplicativo iOS > > aplicativo de exibição únicaC#()** . Ligue para o _local_ e verifique se o iPad e o iPhone foram selecionados.
 
@@ -84,7 +83,6 @@ Este guia explica alguns conceitos importantes de plano de fundo, incluindo o re
 1. Adicione uma chave `NSLocationAlwaysUsageDescription` ou `NSLocationWhenInUseUsageDescription` com uma cadeia de caracteres que será exibida para o usuário no alerta que solicita acesso a dados de local.
 
 1. o Ios 9 requer que, `AllowsBackgroundLocationUpdates` ao usar o **info. plist** , `UIBackgroundModes` inclua a chave `location`com o valor. Se você concluiu a etapa 2 deste passo a passos, ele já deve estar em seu arquivo info. plist.
-
 
 1. Dentro da `LocationManager` classe, crie um método chamado `StartLocationUpdates` com o código a seguir. Esse código mostra como começar a receber atualizações de local do `CLLocationManager`:
 
@@ -202,7 +200,6 @@ public override void ViewDidLoad ()
 }
 ```
 
-
 Agora, quando o aplicativo for executado, ele deverá ser semelhante a este:
 
 [![](location-walkthrough-images/image5.png "Uma execução de aplicativo de exemplo")](location-walkthrough-images/image5.png#lightbox)
@@ -278,7 +275,6 @@ UIApplication.Notifications.ObserveDidBecomeActive ((sender, args) => {
 Agora, a interface do usuário começará a ser atualizada quando o aplicativo for iniciado pela primeira vez e retomará a atualização sempre que o aplicativo voltar ao primeiro plano.
 
 Neste tutorial, criamos um aplicativo iOS com reconhecimento de plano de fundo bem comparado que imprime dados de localização na janela de saída do aplicativo e na tela.
-
 
 ## <a name="related-links"></a>Links relacionados
 

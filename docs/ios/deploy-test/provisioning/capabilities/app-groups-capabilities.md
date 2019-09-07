@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/15/2017
-ms.openlocfilehash: cf79f586e5b0ff71c109ea9664d3cb7a6aa91a02
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 72e0c27502c10fe3522d80c6345a847ca424d49f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292370"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70762783"
 ---
 # <a name="app-group-capabilities-in-xamarinios"></a>Recursos de grupo de aplicativo no Xamarin.iOS
 
@@ -73,7 +73,7 @@ Faça o seguinte:
 12. Repita essas etapas para todos os aplicativos (ou extensões) que usarão o grupo de aplicativos.
 
 ## <a name="next-steps"></a>Próximas etapas
- 
+
 A lista a seguir descreve as etapas adicionais que precisam ser executadas:
 
 * Use o namespace do framework em seu aplicativo.

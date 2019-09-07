@@ -6,12 +6,12 @@ ms.assetid: 2176DB2D-E84A-3757-CFAB-04A586068D50
 author: conceptdev
 ms.author: crdun
 ms.date: 03/27/2017
-ms.openlocfilehash: 7657985ce14633140adb0e63a9817ddd0e48841d
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: e1b1a98bf06bbd03b382f0b7263e6965d4efad15
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70284577"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70762113"
 ---
 # <a name="part-2---architecture"></a>Parte 2 – Arquitetura
 
@@ -21,11 +21,9 @@ Uma filosofia importante da criação de aplicativos de plataforma cruzada é cr
 - **Separação de responsabilidades** – garanta que cada componente (em arquitetura e nível de classe) tenha uma finalidade clara e bem definida. Cada componente deve executar apenas suas tarefas definidas e expor essa funcionalidade por meio de uma API que seja acessível para as outras classes que precisam usá-la.
 - **Polimorfismo** – a programação para uma interface (ou classe abstrata) que dá suporte a várias implementações significa que o código principal pode ser escrito e compartilhado entre plataformas, enquanto ainda interage com recursos específicos da plataforma.
 
-
 O resultado natural é um aplicativo modelado após entidades do mundo real ou abstratas com camadas lógicas separadas. Separar o código em camadas torna os aplicativos mais fáceis de entender, testar e manter. É recomendável que o código em cada camada seja fisicamente separado (em diretórios ou até mesmo projetos separados para aplicativos muito grandes), bem como separados logicamente (usando namespaces).
 
  <a name="Typical_Application_Layers" />
-
 
 ## <a name="typical-application-layers"></a>Camadas de aplicativo típicas
 
@@ -38,11 +36,9 @@ Ao longo deste documento e dos estudos de caso, nos referimos às seis camadas d
 - **Camada de aplicativo** – código que normalmente é específico da plataforma (geralmente não compartilhada entre plataformas) ou código que é específico para o aplicativo (geralmente não reutilizável). Um bom teste de colocação do código na camada de aplicativo versus a camada da interface do usuário é (a) para determinar se a classe tem algum controle de exibição real ou (b) se ele pode ser compartilhado entre várias telas ou dispositivos (por exemplo, iPhone e iPad).
 - **Camada de interface do usuário (IU)** – a camada voltada para o usuário, contém telas, widgets e controladores que os gerenciam.
 
-
 Um aplicativo pode não conter necessariamente todas as camadas – por exemplo, a camada de acesso ao serviço não existirá em um aplicativo que não acesse recursos de rede. Um aplicativo muito simples pode mesclar a camada de dados e a camada de acesso a dados porque as operações são extremamente básicas.
 
  <a name="Common_Mobile_Software_Patterns" />
-
 
 ## <a name="common-mobile-software-patterns"></a>Padrões comuns de software móvel
 
@@ -54,6 +50,5 @@ Padrões são uma maneira estabelecida de capturar soluções recorrentes para p
 - **Singleton** – o padrão singleton fornece uma maneira na qual apenas uma única instância de um objeto específico pode existir. Por exemplo, ao usar o SQLite em aplicativos móveis, você sempre desejará uma instância do banco de dados. Usar o padrão singleton é uma maneira simples de garantir isso.
 - **Provedor** – um padrão cunhado pela Microsoft (possivelmente semelhante à estratégia ou injeção de dependência básica) para incentivar o reuso de código nos aplicativos Silverlight, WPF e WinForms. O código compartilhado pode ser escrito em uma interface ou classe abstrata, e implementações concretas específicas da plataforma são escritas e passadas quando o código é usado.
 - **Async** – não deve ser confundido com a palavra-chave Async, o padrão assíncrono é usado quando o trabalho de execução longa precisa ser executado sem manter a interface do usuário ou o processamento atual. Em sua forma mais simples, o padrão assíncrono simplesmente descreve que tarefas de longa execução devem ser iniciadas em outro thread (ou abstração de thread semelhante, como uma tarefa), enquanto o thread atual continua a processar e escuta uma resposta do processo em segundo plano e, em seguida, atualiza a interface do usuário quando os dados e o estado são retornados.
-
 
 Cada um dos padrões será examinado em mais detalhes, pois seu uso prático é ilustrado nos estudos de caso. A Wikipédia tem descrições mais detalhadas dos padrões [MVVM](https://en.wikipedia.org/wiki/Model–view–viewmodel), [MVC](https://en.wikipedia.org/wiki/Model–view–controller), [fachada](https://en.wikipedia.org/wiki/Facade_pattern), [singleton](https://en.wikipedia.org/wiki/Singleton_pattern), [estratégia](https://en.wikipedia.org/wiki/Strategy_pattern) e [provedor](https://en.wikipedia.org/wiki/Provider_model) (e de [padrões de design](https://en.wikipedia.org/wiki/Design_Patterns) geralmente).

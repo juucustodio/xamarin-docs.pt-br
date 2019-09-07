@@ -1,18 +1,18 @@
 ---
 title: Resumo do capítulo 14. Layout absoluto
-description: 'Criando aplicativos móveis com xamarin. Forms: Resumo do capítulo 14. Layout absoluto'
+description: 'Criando aplicativos móveis com Xamarin. Forms: Resumo do capítulo 14. Layout absoluto'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 88882A48-3226-42D1-96ED-241250B64A84
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
-ms.openlocfilehash: 7371f134944d7492e51aa2d02247c0ab48345a47
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: c489bf244396cf180ed8e1272308048a14b67300
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61334256"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771127"
 ---
 # <a name="summary-of-chapter-14-absolute-layout"></a>Resumo do capítulo 14. Layout absoluto
 
@@ -98,8 +98,6 @@ O [ **DotMatrixClock** ](https://github.com/xamarin/xamarin-forms-book-samples/t
 [![Captura de tela tripla de relógio de matriz de ponto](images/ch14fg08-small.png "matricial relógio")](images/ch14fg08-large.png#lightbox "matricial relógio")
 
 O [ **BouncingText** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter14/BouncingText) programa anima dois `Label` objetos a serem Elástico horizontalmente e verticalmente na tela.
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

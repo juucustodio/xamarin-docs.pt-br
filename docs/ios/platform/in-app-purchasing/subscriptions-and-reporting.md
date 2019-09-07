@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: 7f455d2164573d68db0a9c764f2b2cef5cc6d739
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 81e8f5c1beafeaafcf0d5dcbcc3bf4d66ee05a66
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70284033"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70752670"
 ---
 # <a name="subscriptions-and-reporting-in-xamarinios"></a>Assinaturas e relatórios no Xamarin. iOS
 
@@ -28,7 +28,6 @@ Principais diferenças entre assinaturas não renovadas e outros tipos de produt
 - Visão geral da implementação
 - Assinaturas não renovadas normalmente devem ser implementadas usando o fluxo de trabalho fornecido pelo servidor e gerenciadas como produtos consumíveis. 
 
-
 ## <a name="about-free-subscriptions"></a>Sobre assinaturas gratuitas
 
 As assinaturas gratuitas permitem que os desenvolvedores coloquem conteúdo gratuito em aplicativos Newsstand (não podem ser usados em aplicativos não Newsstand). Depois que uma assinatura gratuita for iniciada, ela estará disponível em todos os dispositivos do usuário. As assinaturas gratuitas nunca expiram; Eles somente terminam quando o aplicativo é desinstalado.
@@ -36,7 +35,6 @@ As assinaturas gratuitas permitem que os desenvolvedores coloquem conteúdo grat
 ### <a name="implementation-overview"></a>Visão geral da implementação
 
 As assinaturas gratuitas se comportam de forma muito semelhante às assinaturas renováveis automaticamente. O aplicativo deve ter um produto de assinatura gratuito disponível para ' compra ' no iTunes Connect. Quando adquirido pelo usuário, a compra de assinatura gratuita deve ser validada como um produto de assinatura autorenovável. As transações de assinatura gratuitas podem ser restauradas.
-
 
 ## <a name="about-auto-renewable-subscriptions"></a>Sobre assinaturas renováveis automaticamente
 
@@ -53,7 +51,7 @@ O segredo compartilhado de compra no aplicativo deve ser usado na solicitação 
 No iTunes Connect home page selecione **meus aplicativos**:   
    
  [![](subscriptions-and-reporting-images/image2.png "Selecionar Meus aplicativos")](subscriptions-and-reporting-images/image2.png#lightbox)  
- 
+
 Selecione um aplicativo e clique na guia **compras no aplicativo** :
 
 [![](subscriptions-and-reporting-images/image6.png "Clique na guia compras no aplicativo")](subscriptions-and-reporting-images/image6.png#lightbox)
@@ -63,10 +61,8 @@ Na parte inferior da página, selecione **Exibir ou gerar um segredo compartilha
  [![](subscriptions-and-reporting-images/image40.png "Selecione Exibir ou gerar um segredo compartilhado")](subscriptions-and-reporting-images/image40.png#lightbox)
 
  [![](subscriptions-and-reporting-images/image41.png "Gerar um segredo compartilhado")](subscriptions-and-reporting-images/image41.png#lightbox)   
-   
-   
-   
- Para usar o segredo compartilhado, inclua-o no conteúdo JSON que é enviado aos servidores da Apple ao validar uma confirmação de compra no aplicativo para uma assinatura renovável automaticamente, desta forma:
+
+Para usar o segredo compartilhado, inclua-o no conteúdo JSON que é enviado aos servidores da Apple ao validar uma confirmação de compra no aplicativo para uma assinatura renovável automaticamente, desta forma:
 
 ```csharp
 {
@@ -95,10 +91,8 @@ Se o status for zero, a assinatura ainda será válida e os outros campos armaze
 #### <a name="restoring-auto-renewable-subscriptions"></a>Restaurando assinaturas renováveis automaticamente
 
 Você receberá várias transações – a transação de compra original mais uma transação separada para cada período de tempo em que a assinatura foi renovada. Você precisa acompanhar as datas de início e os termos para entender qual é o período de validade.   
-   
-   
-   
- O objeto SKPaymentTransaction não inclui o termo de assinatura – você deve usar uma ID de produto diferente para cada termo e escrever código que possa extrapolar o período de assinatura da data de compra da transação.
+
+O objeto SKPaymentTransaction não inclui o termo de assinatura – você deve usar uma ID de produto diferente para cada termo e escrever código que possa extrapolar o período de assinatura da data de compra da transação.
 
 #### <a name="testing-auto-renewal"></a>Testando renovação automática
 

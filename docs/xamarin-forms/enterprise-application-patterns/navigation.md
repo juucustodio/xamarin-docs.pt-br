@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: 3ca06ae6fb26fce87f14b9cdb34a700ef49655e1
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 0f523c7149366cff85164f26f3f47b87801002cb
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528391"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770757"
 ---
 # <a name="enterprise-app-navigation"></a>Navegação de aplicativo empresarial
 
@@ -305,7 +305,6 @@ Um aplicativo pode precisar interagir com o usuário durante uma operação de n
 O Xamarin. Forms inclui suporte para a navegação de página, que normalmente resulta da interação do usuário com a interface ou do próprio aplicativo, como resultado de alterações de estado controladas pela lógica interna. No entanto, a navegação pode ser complexa para ser implementada em aplicativos que usam o padrão MVVM.
 
 Este capítulo apresentou uma `NavigationService` classe, que é usada para executar o modelo de exibição-primeira navegação de modelos de exibição. Colocar a lógica de navegação em classes de modelo de exibição significa que a lógica pode ser exercitada por meio de testes automatizados. Além disso, o modelo de exibição pode então implementar a lógica para controlar a navegação a fim de garantir que determinadas regras de negócio sejam impostas.
-
 
 ## <a name="related-links"></a>Links relacionados
 

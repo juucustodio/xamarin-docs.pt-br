@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/10/2018
-ms.openlocfilehash: 056ab7a9fe4bcb7f07a9a7cd7c841a3d9f7574b6
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 4c3c0e51348d2435ce5042485b214e6e5fe159b2
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68648019"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70758420"
 ---
 # <a name="hello-wear"></a>Olá, Wear
 
@@ -38,7 +38,6 @@ Criar um novo **aplicativo de desgaste do Android**:
 
 -----
 
-
 Esse modelo inclui automaticamente o NuGet (e as dependências) da **biblioteca portátil do Xamarin Android** para que você tenha acesso a widgets específicos de desgaste. Se você não vir o modelo de desgaste, examine o guia de [instalação e instalação](~/android/wear/get-started/installation.md) para verificar se você instalou um SDK do Android com suporte. 
 
 ### <a name="2-choose-the-correct-target-framework"></a>2. Escolha a **estrutura de destino** correta
@@ -58,7 +57,6 @@ Verifique se a estrutura de destino está definida como **Android 5,0 (pirulito)
 -----
 
 Para obter mais informações sobre como definir a estrutura de destino, consulte [noções básicas sobre níveis de API do Android](~/android/app-fundamentals/android-api-levels.md).
-
 
 ### <a name="3-edit-the-mainaxml-layout"></a>3. Editar o layout **Main. axml**
 
@@ -137,7 +135,6 @@ Se você não tiver um dispositivo de desgaste do Android, como um SmartWatch de
 
 Se você tiver um dispositivo de desgaste do Android, como um SmartWatch de desgaste do Android, poderá executar o aplicativo no dispositivo em vez de usar um emulador. Para obter mais informações sobre a depuração em um dispositivo de desgaste, consulte [Depurar em um dispositivo de desgaste](~/android/wear/deploy-test/debug-on-device.md).
 
-
 ### <a name="6-run-the-android-wear-app"></a>6. Executar o aplicativo Android desgaste
 
 O dispositivo Android desgaste deve aparecer no menu suspenso dispositivo. Certifique-se de escolher o dispositivo de desgaste do Android ou o AVD correto antes de iniciar a depuração. Depois de selecionar o dispositivo, clique no botão reproduzir para implantar o aplicativo no emulador ou dispositivo.
@@ -166,13 +163,11 @@ Toque **em ME comigo!** na face do dispositivo de desgaste e veja o incremento d
 
 [![Captura de tela do aplicativo de desgaste após três cliques](hello-wear-images/mainactivity-counts.png)](hello-wear-images/mainactivity-counts.png#lightbox)
 
-
 ## <a name="next-steps"></a>Próximas etapas
 
 Confira os [exemplos de desgaste](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Android+wear) , incluindo aplicativos de desgaste do Android com aplicativos de telefone complementares.
 
 Quando você estiver pronto para distribuir seu aplicativo, consulte [trabalhando com empacotamento](~/android/wear/deploy-test/packaging.md).
-
 
 ## <a name="related-links"></a>Links relacionados
 

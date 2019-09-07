@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: c162912d6762ac1ee9d2896f96bbb35e9fef06f4
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 3ce1c802fb276e271cddc75e8ebabd2237d84d39
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70285201"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70752003"
 ---
 # <a name="introduction-to-ios-9"></a>Introdução ao iOS 9
 
@@ -67,7 +67,6 @@ Essas estruturas novas e orientadas a objeto fornecem o seguinte:
 
 Para obter mais informações, consulte a documentação [da interface do usuário contatos e contatos](~/ios/platform/contacts.md) .
 
-
 ## <a name="new-search-apis"></a>Novas APIs de pesquisa
 
 A pesquisa foi expandida no iOS 9 para fornecer excelentes maneiras novas de acessar informações dentro do seu aplicativo Xamarin. iOS. Usando as novas APIs de pesquisa, você pode tornar o conteúdo do aplicativo pesquisável por meio de resultados da pesquisa do Spotlight e do Safari, lembretes e sugestões de entrega e Siri. Isso permite que os usuários acessem rapidamente as atividades e informações mais profundas em seu aplicativo.
@@ -83,7 +82,6 @@ O controle de exibição de pilha ([UIStackView](xref:UIKit.UIStackView) aprovei
 Usando o controle de exibição de pilha, a quantidade de trabalho necessária para o layout de uma interface do usuário é bastante reduzida. O layout de todas as subexibições anexadas a uma exibição de pilha é gerenciado automaticamente com base nas propriedades definidas pelo desenvolvedor, como eixo, distribuição, alinhamento e espaçamento.
 
 Para obter mais informações, consulte nossa documentação [de introdução à exibição de pilha](~/ios/user-interface/controls/uistackview.md) .
-
 
 ## <a name="collection-view-changes"></a>Alterações de exibição de coleção
 
@@ -145,7 +143,6 @@ No iOS 9, a Apple aprimorou o conjunto de chaves para fornecer um novo tipo de c
 
 Para obter mais informações, consulte nossa [introdução à documentação do touch ID](~/ios/platform/touchid.md) .
 
-
 ## <a name="right-to-left-language-support"></a>Suporte de idiomas da direita para a esquerda
 
 No iOS 9, a Apple tornou uma interface do usuário invertida mais fácil do que nunca, fornecendo suporte completo para idiomas da direita para a esquerda. Isso inclui o seguinte:
@@ -155,8 +152,6 @@ No iOS 9, a Apple tornou uma interface do usuário invertida mais fácil do que 
 - A capacidade de virar uma imagem programaticamente usando a propriedade [FlipsForRightToLeftLayoutDirection](xref:UIKit.UIImage.FlipsForRightToLeftLayoutDirection) da classe [UIImage](xref:UIKit.UIImage) .
 
 Para obter mais informações, consulte a documentação de [idiomas da direita para a esquerda com suporte](https://developer.apple.com/library/prerelease/ios/documentation/MacOSX/Conceptual/BPInternational/SupportingRight-To-LeftLanguages/SupportingRight-To-LeftLanguages.html#//apple_ref/doc/uid/10000171i-CH17) da Apple.
-
-
 
 ## <a name="additional-framework-changes"></a>Alterações de estrutura adicionais
 
@@ -205,8 +200,6 @@ Confira também as partes do iOS desses exemplos (versões do Companion Mac OS X
 
 - [AgentsCatalog](https://github.com/xamarin/mac-ios-samples/tree/master/AgentsCatalog)
 - [MetalKitEssentials](https://github.com/xamarin/mac-ios-samples/tree/master/MetalKitEssentials)
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

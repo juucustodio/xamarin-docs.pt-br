@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/18/2017
-ms.openlocfilehash: 79183963e59a7ca167ffbc3c0cc4b3628595389e
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 60752760415bd416d339cc2a3729075b4fca0d32
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522655"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70764470"
 ---
 # <a name="xamarinandroid-layouts"></a>Layouts do Xamarin. Android
 
@@ -49,4 +49,3 @@ Os layouts são usados para organizar os elementos que compõem a interface de i
 - [Layouts com guias](~/android/user-interface/layouts/tab-layout/index.md) são um padrão popular de interface do usuário em aplicativos móveis devido à sua simplicidade e usabilidade. Eles fornecem uma maneira consistente e fácil de navegar entre várias telas em um aplicativo.
 
     ![Exemplo de layout com guias](images/tabbed-layout.png)
- 

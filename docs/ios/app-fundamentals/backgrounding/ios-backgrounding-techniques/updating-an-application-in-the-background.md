@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: 2e0bb4fc0468f938e7a4403513fe101db2282561
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 1d5a227f4acdba319eefc91b4991dead5a036eb9
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70286984"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70756325"
 ---
 # <a name="updating-a-xamarinios-app-in-the-background"></a>Atualizando um aplicativo Xamarin. iOS em segundo plano
 
@@ -22,7 +22,6 @@ A atualização em segundo plano é o processo de ativar um aplicativo que está
 1. *Busca em segundo plano (Ios 7 +)* – uma abordagem temporal para atualizar conteúdo *não crítico* que é atualizada *com frequência* .
 1. *Notificações remotas (Ios 7 +)* -os aplicativos que recebem notificações por push podem usar as notificações para disparar atualizações de conteúdo em segundo plano. Esse método pode ser usado para atualizar com conteúdo *importante e sensível ao tempo* que é atualizado *esporadicamente* .
 
-
 As seções a seguir abordam as noções básicas dessas opções.
 
 ## <a name="region-monitoring-and-significant-location-changes"></a>Monitoramento de região e alterações de local significativas
@@ -31,7 +30,6 @@ o iOS fornece duas APIs com reconhecimento de local com recursos de plano de fun
 
 1. O *monitoramento de região* é o processo de configurar regiões com limites e ativar o dispositivo quando o usuário insere ou sai de uma região. As regiões são circulares e podem ter tamanho variável. Quando o usuário ultrapassar um limite de região, o dispositivo será ativado para lidar com o evento, normalmente acionando uma notificação ou iniciarndo uma tarefa. O monitoramento de região requer GPS e aumenta o uso de bateria e de dados.
 1. O *serviço de alterações de local significativo* é uma opção mais simples, que reserva a energia disponível para dispositivos com rádios de celular. Um aplicativo que escuta alterações significativas no local será notificado quando o dispositivo alternar a célula Towers. Esse serviço pode ser usado para ativar um aplicativo suspenso ou encerrado e fornece uma oportunidade para verificar o novo conteúdo em segundo plano. A atividade em segundo plano é limitada a cerca de 10 segundos, a menos que emparelhada com uma [tarefa em segundo plano](~/ios/app-fundamentals/backgrounding/ios-backgrounding-techniques/ios-backgrounding-with-tasks.md) .
-
 
 Um aplicativo não precisa do local `UIBackgroundMode` para usar essas APIs com reconhecimento de local. Como o iOS não rastreia os tipos de tarefas que podem ser executados quando o dispositivo é ativadosdo por alterações no local do usuário, essas APIs fornecem uma solução alternativa para atualizar o conteúdo em segundo plano no iOS 6. *Lembre-se de que o disparo de atualizações em segundo plano com APIs baseadas em local será desenhado nos recursos do dispositivo e pode confundir os usuários que não entendem por que um aplicativo requer acesso ao local*. Use o critério ao implementar o monitoramento de região ou alterações significativas no local para processamento em segundo plano em aplicativos que ainda não estão usando as APIs de localização.
 
@@ -76,12 +74,10 @@ Quando concluímos a atualização do conteúdo, permitimos que o sistema operac
 1. `UIBackgroundFetchResult.NoData`-Chamado quando a busca de novo conteúdo foi enviada, mas nenhum conteúdo está disponível.
 1. `UIBackgroundFetchResult.Failed`-Útil para tratamento de erros, isso é chamado quando a busca não conseguiu passar.
 
-
 Os aplicativos que usam a busca em segundo plano podem fazer chamadas para atualizar a interface do usuário em segundo plano. Quando o usuário abrir o aplicativo, a interface do usuário estará atualizada e exibirá o novo conteúdo. Isso também atualizará o instantâneo do seletor de aplicativo do aplicativo, para que o usuário possa ver quando o aplicativo tem conteúdo novo.
 
 > [!IMPORTANT]
 > Uma `PerformFetch` vez chamado, o aplicativo tem aproximadamente 30 segundos para iniciar o download do novo conteúdo e chamar o bloco do manipulador de conclusão. Se isso levar muito tempo, o aplicativo será encerrado. Considere o uso da busca em segundo plano com o _serviço de transferência em segundo plano_ ao baixar mídia ou outros arquivos grandes.
-
 
 ### <a name="backgroundfetchinterval"></a>BackgroundFetchInterval
 
@@ -91,13 +87,11 @@ No código de exemplo acima, permitimos que o sistema operacional decida com que
 1. `BackgroundFetchIntervalMinimum`-Permita que o sistema decida com que frequência buscar com base nos padrões do usuário, na vida útil da bateria, no uso de dados e nas necessidades de outros aplicativos.
 1. `BackgroundFetchIntervalCustom`-Se você souber com que frequência o conteúdo de um aplicativo é atualizado, poderá especificar um intervalo de "suspensão" após cada busca, durante o qual o aplicativo será impedido de buscar um novo conteúdo. Quando esse intervalo estiver ativo, o sistema determinará quando buscar conteúdo.
 
-
 Ambos `BackgroundFetchIntervalMinimum` e`BackgroundFetchIntervalCustom` contam com o sistema para agendar buscas. Esse intervalo é dinâmico, adaptando-se às necessidades do dispositivo, bem como aos hábitos do usuário individual. Por exemplo, se um usuário verifica um aplicativo todas as manhãs e outra verificação a cada hora, o iOS garantirá que o conteúdo seja atualizado para ambos os usuários sempre que abrirem o aplicativo.
 
 A busca em segundo plano deve ser usada para aplicativos que são atualizados com frequência com conteúdo não crítico. Para aplicativos com atualizações críticas, devem ser usadas notificações remotas. As notificações remotas são baseadas na busca em segundo plano e compartilham o mesmo manipulador de conclusão. Vamos nos aprofundar nas notificações remotas.
 
  <a name="remote_notifications" />
-
 
 ## <a name="remote-notifications-ios-7-and-greater"></a>Notificações remotas (iOS 7 e superior)
 
@@ -135,7 +129,6 @@ As notificações remotas devem ser usadas para atualizações frequentes com co
 > [!IMPORTANT]
 > Como o mecanismo de atualização nas notificações remotas se baseia na busca em segundo plano, o aplicativo deve disparar o download do novo conteúdo e chamar o bloco do manipulador de conclusão dentro de 30 segundos após o recebimento da notificação, ou o iOS encerrará o aplicativo. Considere emparelhar notificações remotas com o _serviço de transferência em segundo plano_ ao baixar mídia ou outros arquivos grandes em segundo plano.
 
-
 ### <a name="silent-remote-notifications"></a>Notificações remotas silenciosas
 
 As notificações remotas são uma maneira simples de notificar aplicativos de atualizações e iniciar a busca de novo conteúdo, mas há casos em que não precisamos notificar o usuário de que algo mudou. Por exemplo, se um usuário sinalizar um arquivo para sincronização, não precisaremos notificá-los sempre que o arquivo for atualizado. A sincronização de arquivos não é um evento surpreendente, nem exige a atenção imediata do usuário. Os usuários esperam que o arquivo seja atualizado quando o abrem.
@@ -158,7 +151,6 @@ No entanto, o APNs deixará as notificações silenciosas "acumuladas" junto com
 
 > [!IMPORTANT]
 > A Apple incentiva os desenvolvedores a enviar notificações por push silenciosas sempre que o aplicativo exigir e permitir que o APNs agende sua entrega.
-
 
 Nesta seção, abordamos as várias opções para atualizar o conteúdo em segundo plano para executar tarefas que não se ajustam a uma categoria necessária para o plano de fundo. Agora, vamos ver algumas dessas APIs em ação.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: f0caa2dd2c2b675fe85000a73e5d58ce7e277488
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: e9c87b76dc6845962450b8cb6fab921ea1748832
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70281465"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768323"
 ---
 # <a name="working-with-watchos-screen-sizes-in-xamarin"></a>Trabalhando com tamanhos de tela watchOS no Xamarin
 
@@ -39,7 +39,6 @@ Use o menu tamanho para editar e visualizar o storyboard em qualquer um dos tama
 Às vezes, o tamanho de tela maior renderizará o conteúdo que seria truncado/oculto na tela menor.
 Certifique-se de testar ambos os tamanhos.
 
-
 ### <a name="interface-design"></a>Design de interface
 
 Seu aplicativo deve exibir o mesmo conteúdo na tela, independentemente do tamanho, e deve expandir ou contratar elementos conforme apropriado. No designer de Visual Studio para Mac, no Inspetor de atributo, você deve usar **relativo ao contêiner** ou **tamanho para ajustar o conteúdo** em preferência a tamanhos fixos.
@@ -48,13 +47,11 @@ Seu aplicativo deve exibir o mesmo conteúdo na tela, independentemente do taman
 
 Como a tela Watch está circundada por uma tampa preta, não é recomendável fornecer preenchimento em direção à sua interface. Permita que os elementos entrem na borda da tela e deixe o painel formar uma borda natural em torno do aplicativo.
 
-
 ## <a name="watchos-simulator"></a>Simulador de watchOS
 
 Ao testar o simulador, você pode alternar facilmente entre os dois tamanhos de tela usando o menu de **dispositivo de > de hardware** .
 
 ![](screen-sizes-images/simulator.png "O simulador pode alternar entre os dois tamanhos de tela usando o menu de dispositivo de hardware")
-
 
 ## <a name="image-resources"></a>Recursos de imagem
 
@@ -80,8 +77,6 @@ using (var image = UIImage.FromBundle (large ? "42mm-Walkway" : "38mm-Walkway"))
 ```
 
 Leia mais sobre como usar o [controle imagem](~/ios/watchos/user-interface/image.md).
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

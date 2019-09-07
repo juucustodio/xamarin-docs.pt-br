@@ -6,12 +6,12 @@ ms.assetid: 70B3C2AB-CB4D-420C-9CFA-20CCFA0E3C78
 author: conceptdev
 ms.author: crdun
 ms.date: 03/23/2017
-ms.openlocfilehash: f51c6af9ed38910f44db2c0886c474deafa096d7
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: b28fcea37d991879df0231609d09eeb2eca49505
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70289986"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70766345"
 ---
 # <a name="azure-active-directory"></a>Active Directory do Azure
 
@@ -32,12 +32,9 @@ Entre os exemplos de serviços diferentes que você pode acessar estão:
 - API Web
 - Office365
 
-
 ## <a name="conclusion"></a>Conclusão
 
 Usando as etapas acima, você pode autenticar seus aplicativos móveis em Azure Active Directory. O Biblioteca de Autenticação do Active Directory (ADAL) torna muito mais fácil com menos linhas de código, ao mesmo tempo em que mantém a maioria do código o mesmo e, portanto, torna-o compartilhável entre plataformas.
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: 9dc34f412549c4be6099b373ddae7cbd2e8d21c8
-ms.sourcegitcommit: 41a029c69925e3a9d2de883751ebfd649e8747cd
+ms.openlocfilehash: 1dc62066b71842e1d3b07495912fa35a549c0f1e
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68980779"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70759679"
 ---
 # <a name="xamarinforms-datapages"></a>Páginas de DataPages do Xamarin. Forms
 
@@ -45,7 +45,6 @@ A visualização tem algumas fontes de dados predefinidas disponíveis para uso:
 
 Consulte o [Guia de introdução](get-started.md) para obter um exemplo usando `JsonDataSource`um.
 
-
 ### <a name="pages--controls"></a>Controles de & de páginas
 
 As páginas e os controles a seguir estão incluídos para permitir a ligação fácil com as fontes de dados fornecidas:
@@ -58,9 +57,7 @@ As páginas e os controles a seguir estão incluídos para permitir a ligação 
 * **HeroImage** – uma exibição de renderização de imagem.
 * **ListItem** – uma exibição pré-criada com um layout semelhante aos itens nativos de lista de Ios e Android.
 
-Consulte a [referência de controles](controls.md) de DataPages para obter exemplos.
-
-
+Consulte a [referência de controles de DataPages](controls.md) para obter exemplos.
 
 ### <a name="under-the-hood"></a>Nos bastidores
 

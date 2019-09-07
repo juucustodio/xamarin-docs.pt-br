@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: 91003f9a23c667b38028a9852b28dba656ba13db
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 56372bb643cab545529d6a4a89c804471f3344bc
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68510331"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70762454"
 ---
 # <a name="togglebutton"></a>ToggleButton
 
@@ -23,7 +23,7 @@ Um exemplo de um **ToggleButton** pode ser visto no par de imagens à esquerda, 
 
 O controle que um aplicativo usa é uma questão de estilo. Ambos os widgets são funcionalmente equivalentes.
 
-Abra o arquivo Resources **/layout/Main. axml** e [`ToggleButton`](xref:Android.Widget.ToggleButton) adicione o elemento ( [`LinearLayout`](xref:Android.Widget.LinearLayout)dentro do):
+Abra o arquivo **Resources/layout/Main. axml** e [`ToggleButton`](xref:Android.Widget.ToggleButton) adicione o elemento ( [`LinearLayout`](xref:Android.Widget.LinearLayout)dentro do):
 
 Para fazer algo quando o estado for alterado, adicione o seguinte código ao final do[`OnCreate()`](xref:Android.App.Activity.OnCreate*)
 forma
@@ -46,12 +46,10 @@ Observe que o [`ToggleButton`](xref:Android.Widget.ToggleButton) manipula sua pr
 
 Execute o aplicativo.
 
-
 > [!TIP]
 > Se você precisar alterar o estado por conta própria (por exemplo, ao carregar [`CheckBoxPreference`](xref:Android.Preferences.CheckBoxPreference)um salvo), use o[`Checked`](xref:Android.Widget.CompoundButton.Checked)
 > setter de propriedade ou[`Toggle()`](xref:Android.Widget.CompoundButton.Toggle)
 > método.
-
 
 ## <a name="related-links"></a>Links relacionados
 

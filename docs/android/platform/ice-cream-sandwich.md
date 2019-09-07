@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/09/2018
-ms.openlocfilehash: f8d9841deff485a67919aea9fede75044541ba5f
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 8cbb7c9c3da92b1ea5140e6f85accf53dab0bf80
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69524203"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70761457"
 ---
 # <a name="ice-cream-sandwich-features"></a>Recursos do sanduíche de sorvete
 
@@ -27,7 +27,6 @@ O Android OS versão 4,0 (API nível 14) representa um grande retrabalho do sist
 - **Novas APIs de dados** – há um novo acesso a dados que não foram oficialmente disponibilizados anteriormente, como dados de calendário e o perfil de usuário do proprietário do dispositivo. 
 - O **compartilhamento de dados do aplicativo** – o compartilhamento de dados entre aplicativos e dispositivos agora é mais fácil do `ShareActionProvider` que nunca por meio de tecnologias como o, que facilita a criação de uma ação de compartilhamento de uma barra de ação e a *transmissão do Android* para um *campo próximo A comunicação (NFC)* , que o torna um ajuste para compartilhar dados entre dispositivos de perto uns dos outros. 
 
-
 Neste artigo, vamos explorar esses recursos e outras alterações que foram feitas na API do Android 4,0, e explicaremos como usar cada recurso com o Xamarin. Android.
 
 ## <a name="user-interface-features"></a>Recursos da interface do usuário
@@ -38,7 +37,6 @@ Uma variedade de novas tecnologias de interface do usuário estão disponíveis 
 - **[Alternar widget](~/android/user-interface/controls/switch.md)** – permite alternar entre ativar ou desativar. 
 - **[TextureView](~/android/user-interface/controls/texture-view.md)** – habilita o conteúdo de vídeo e OpenGL em uma exibição. 
 - **[Barra de navegação](~/android/user-interface/controls/navigation-bar.md)** – contém botões virtuais para voltar, iniciar e realizar várias tarefas. 
-
 
 Além disso, outros elementos da interface do usuário foram aprimorados `<a href"/guides/android/user_interface/popup_menus">PopupMenu</a>`, como o, que agora é mais fácil de trabalhar e guias, que têm uma aparência mais elegante.
 
@@ -59,8 +57,6 @@ O ICS ainda não dá suporte ao desenvolvimento com um emulador x86. os emulador
 
 Este artigo abordou uma variedade das novas tecnologias que agora estão disponíveis com o Android 4. Examinamos novos recursos de interface do usuário, como o widget *GridLayout*, *PopupMenu*e *switch* . Também vimos alguns dos novos suporte para controlar a interface do usuário do sistema, bem como trabalhar com o *TextureView*. Em seguida, discutimos uma variedade de novas tecnologias de compartilhamento. Abordamos como o *feixe do Android* permite que você compartilhe informações em dispositivos que usam a *NFC*, DISCUTIu a nova *API de calendário*e também mostrou como usar o *ShareActionProvider*interno.
 Por fim, examinamos como usar o provedor *ContactsContract* para acessar os dados de perfil do usuário.
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

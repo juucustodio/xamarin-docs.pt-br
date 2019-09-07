@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 06/05/2017
-ms.openlocfilehash: 67ee8f1ef7f254eb77cfb186a478993b6fd3847c
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 11c022298cbac60b86f4ef549e30cef3aa4d4660
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70280031"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70753414"
 ---
 # <a name="document-picker-in-xamarinios"></a>Seletor de documento no Xamarin. iOS
 
@@ -202,7 +202,6 @@ No diagrama acima:
 1. O aplicativo cria um novo arquivo no contêiner do aplicativo.
 1. Há um atraso antes `NSMetadataQuery` de ver a modificação no contêiner do aplicativo e criar o registro necessário. `NSMetadata`
 
-
 Devido ao atraso na criação do `NSMetadata` registro, o aplicativo tinha que ter duas fontes de dados abertas: uma para as alterações de arquivo local e outra para as alterações baseadas em nuvem.
 
 ### <a name="stitching"></a>Junção
@@ -218,14 +217,10 @@ Usando costura no diagrama acima:
 1. Um gancho no contêiner do aplicativo vê a modificação e as `NSMetadataQuery` chamadas para criar o `NSMetadata` registro necessário.
 1. O `NSMetadata` registro é criado diretamente após o arquivo e é disponibilizado para o aplicativo.
 
-
 O uso de costura no aplicativo não precisa mais abrir uma fonte de dados para monitorar alterações de arquivos locais e na nuvem. Agora o aplicativo pode depender `NSMetadataQuery` diretamente.
 
 > [!IMPORTANT]
 > A junção só funcionará se o aplicativo estiver usando a coordenação de arquivos, conforme apresentado na seção acima. Se a coordenação de arquivos não estiver sendo usada, as APIs utilizarão como padrão o comportamento anterior ao iOS 8.
-
-
-
 
 ### <a name="new-ios-8-metadata-features"></a>Novos recursos de metadados do iOS 8
 
@@ -236,12 +231,10 @@ Os novos recursos a seguir foram adicionados ao `NSMetadataQuery` no Ios 8:
 - Há uma nova `NSUrl_PromisedItems` API que vai acessar os atributos de arquivo de arquivos que podem ou não ter seu conteúdo disponível localmente.
 - Use o `GetPromisedItemResourceValue` método para obter informações sobre um determinado arquivo ou use o `GetPromisedItemResourceValues` método para obter informações sobre mais de um arquivo de cada vez.
 
-
 Dois novos sinalizadores de coordenação de arquivo foram adicionados para lidar com metadados:
 
 - `NSFileCoordinatorReadImmediatelyAvailableMetadataOnly` 
 - `NSFileCoordinatorWriteContentIndependentMetadataOnly` 
-
 
 Com os sinalizadores acima, o conteúdo do arquivo de documento não precisa estar disponível localmente para ser usado.
 
@@ -256,7 +249,6 @@ using Foundation;
 using UIKit;
 using ObjCRuntime;
 using System.IO;
-
 
 #region Static Properties
 public const string TestFilename = "test.txt"; 
@@ -439,7 +431,6 @@ A maneira mais fácil de salvar uma miniatura é usar `UIDocument`. Ao chamar o 
 
 Com as noções básicas de como trabalhar com documentos baseados no iCloud, juntamente com as modificações feitas na API existente, estamos prontos para implementar o controlador de exibição do seletor de documentos em um aplicativo móvel do Xamarin iOS 8.
 
-
 ## <a name="enabling-icloud-in-xamarin"></a>Habilitando o iCloud no Xamarin
 
 Antes que o seletor de documento possa ser usado em um aplicativo Xamarin. iOS, o suporte do iCloud precisa ser habilitado em seu aplicativo e por meio da Apple. 
@@ -451,8 +442,6 @@ As etapas a seguir explicam o processo de provisionamento para o iCloud.
 3. Crie um perfil de provisionamento que inclua essa ID de aplicativo.
 
 O guia [trabalhando com recursos](~/ios/deploy-test/provisioning/capabilities/icloud-capabilities.md) percorre as duas primeiras etapas. Para criar um perfil de provisionamento, siga as etapas no guia de [perfil de provisionamento](~/ios/get-started/installation/device-provisioning/index.md#provisioning-your-device) .
-
-
 
 As etapas a seguir explicam o processo de configuração do aplicativo para o iCloud:
 
@@ -539,7 +528,6 @@ namespace DocPicker
             Query.StartQuery ();
             Console.WriteLine ("Querying: {0}", Query.IsGathering);
         }
-
 
         [Export("queryDidFinishGathering:")]
         public void DidFinishGathering (NSNotification notification) {
@@ -833,7 +821,6 @@ Vamos dar uma olhada no acesso a um documento externo antes do iOS 8:
 1. O documento é selecionado e o `UIDocumentInteractionController` é usado para enviar o documento para o novo aplicativo.
 1. Por fim, uma cópia do documento original é colocada no contêiner do novo aplicativo.
 
-
 A partir daí, o documento está disponível para o segundo aplicativo abrir e editar.
 
 ### <a name="discovering-documents-outside-of-an-apps-container"></a>Descobrindo documentos fora do contêiner de um aplicativo
@@ -910,20 +897,19 @@ if (presentationPopover!=null) {
 Aqui está um exemplo de como o código acima exibiria um seletor de documento quando executado em um dispositivo iPhone:
 
 1. O usuário inicia o aplicativo e a interface principal é exibida:   
- 
+
     [![](document-picker-images/image33.png "A interface principal é exibida")](document-picker-images/image33.png#lightbox)
 1. O usuário toca no botão de **ação** na parte superior da tela e é solicitado a selecionar um **provedor de documento** na lista de provedores disponíveis:   
- 
+
     [![](document-picker-images/image34.png "Selecione um provedor de documentos na lista de provedores disponíveis")](document-picker-images/image34.png#lightbox)
 1. O **controlador de exibição do seletor de documentos** é exibido para o **provedor de documentos**selecionado:   
- 
+
     [![](document-picker-images/image35.png "O controlador de exibição do seletor de documento é exibido")](document-picker-images/image35.png#lightbox)
 1. O usuário toca em uma **pasta de documento** para exibir seu conteúdo:   
- 
+
     [![](document-picker-images/image36.png "O conteúdo da pasta do documento")](document-picker-images/image36.png#lightbox)
 1. O usuário seleciona um **documento** e o **seletor de documento** é fechado.
 1. A interface principal é exibida novamente, o **documento** é carregado do contêiner externo e seu conteúdo exibido.
-
 
 A exibição real do controlador de exibição do seletor de documentos depende dos provedores de documentos que o usuário instalou no dispositivo e do modo de seleção de documento que foi implementado. O exemplo acima está usando o modo de abertura, os outros tipos de modo serão discutidos em detalhes abaixo.
 
@@ -1021,13 +1007,12 @@ if (Bookmark != null) {
 O controlador de exibição do seletor de documentos apresenta dois modos diferentes de operação:
 
 1. **Modo aberto** – nesse modo, quando o usuário seleciona e documento externo, o selecionador de documento criará um indicador com escopo de segurança no contêiner do aplicativo.   
- 
+
     [![](document-picker-images/image37.png "Um indicador com escopo de segurança no contêiner do aplicativo")](document-picker-images/image37.png#lightbox)
 1. **Modo de importação** – nesse modo, quando o usuário seleciona um documento externo, o seletor de documento não cria um indicador, mas, em vez disso, copia o arquivo em um local temporário e fornece o acesso do aplicativo ao documento neste local:   
- 
+
     [![](document-picker-images/image38.png "O seletor de documento copiará o arquivo em um local temporário e fornecerá o acesso do aplicativo ao documento neste local")](document-picker-images/image38.png#lightbox)   
  Quando o aplicativo termina por qualquer motivo, o local temporário é esvaziado e o arquivo é removido. Se o aplicativo precisar manter o acesso ao arquivo, ele deverá fazer uma cópia e colocá-lo em seu contêiner de aplicativo.
-
 
 O modo aberto é útil quando o aplicativo deseja colaborar com outro aplicativo e compartilhar as alterações feitas no documento com esse aplicativo. O modo de importação é usado quando o aplicativo não deseja compartilhar suas modificações em um documento com outros aplicativos.
 
@@ -1042,7 +1027,6 @@ Para mover um documento para um local externo, faça o seguinte:
 1. Abra um novo controlador de exibição do selecionador de documentos `NSUrl` e passe-o `MoveToService` com o modo de. 
 1. Depois que o usuário escolher um novo local, o documento será movido de seu local atual para o novo local.
 1. Um documento de referência será gravado no contêiner do aplicativo do aplicativo para que o arquivo ainda possa ser acessado pelo aplicativo de criação.
-
 
 O código a seguir pode ser usado para mover um documento para um local externo:`var picker = new UIDocumentPickerViewController (srcURL, UIDocumentPickerMode.MoveToService);`
 
@@ -1067,7 +1051,6 @@ Isso é implementado usando duas extensões diferentes:
 - **Extensão de seletor** de documento `UIViewController` – fornece uma subclasse que fornece uma interface gráfica para o usuário escolher um documento de um local de armazenamento alternativo. Essa subclasse será exibida como parte do controlador de exibição do seletor de documento.
 - **Extensão de fornecimento de arquivo** – essa é uma extensão que não é da interface do usuário que lida com o conteúdo dos arquivos. Essas extensões são fornecidas por meio da coordenação `NSFileCoordinator` de arquivos (). Esse é outro caso importante em que a coordenação de arquivos é necessária.
 
-
 O diagrama a seguir mostra o fluxo de dados típico ao trabalhar com extensões de provedor de documento:
 
  [![](document-picker-images/image39.png "Este diagrama mostra o fluxo de dados típico ao trabalhar com extensões de provedor de documentos")](document-picker-images/image39.png#lightbox)
@@ -1082,7 +1065,6 @@ O seguinte processo ocorre:
 1. O coordenador de arquivo chama a extensão do provedor de arquivo personalizado para recuperar o arquivo.
 1. O conteúdo do arquivo é retornado para o coordenador de arquivos.
 1. O conteúdo do arquivo é retornado para o aplicativo.
-
 
 ### <a name="security-and-bookmarks"></a>Segurança e indicadores
 
@@ -1108,7 +1090,6 @@ O seguinte processo ocorre:
 1. `NSUrl`chama a extensão do provedor de arquivos com a URL do arquivo.
 1. O provedor de extensão de arquivo acessa o arquivo e retorna o local do arquivo para `NSUrl` .
 1. O local do arquivo é agrupado com informações de segurança e retornado ao aplicativo.
-
 
 A partir daqui, o aplicativo pode acessar o arquivo e trabalhar com ele normalmente.
 

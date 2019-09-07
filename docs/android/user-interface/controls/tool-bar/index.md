@@ -7,18 +7,17 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: 065c68ce6fbe816e503ace0ab42b3e86aa6916a7
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: a0ca1aa42d9173abbc86a38ae26b14bfb4865a58
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522838"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70764615"
 ---
 # <a name="toolbar"></a>Barra de ferramentas
 
 _A barra de ferramentas é um componente da barra de ação que fornece mais flexibilidade do que a barra de ação padrão: ela pode ser colocada em qualquer lugar no aplicativo, seu tamanho pode ser alterado e pode usar um esquema de cores diferente do tema do aplicativo. Além disso, cada tela de aplicativo pode ter várias barras de ferramentas._
 
- 
 ## <a name="overview"></a>Visão geral
 
 Um elemento-chave de design de qualquer atividade do Android é uma *barra de ação*. A barra de ação é o componente da interface do usuário que é usado para navegação, pesquisa, menus e identidade visual em um aplicativo Android. Em versões do Android antes do Android 5,0 pirulito, a barra de ação (também conhecida como a *barra de aplicativos*) era o componente recomendado para fornecer essa funcionalidade. 
@@ -69,15 +68,10 @@ Este guia aborda os cenários mais comumente usados `Toolbar` :
 
 - Usando a biblioteca de suporte do Android da biblioteca **v7 AppCompat** (conhecida como *AppCompat* no restante deste guia) para implantar `Toolbar` em versões anteriores do Android. 
 
- 
- 
 ## <a name="requirements"></a>Requisitos
 
 `Toolbar`está disponível no Android 5,0 pirulito (API 21) e posterior. Ao direcionar as versões do Android anteriores ao Android 5,0, use a [biblioteca de suporte do Android v7 AppCompat](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/), que fornece `Toolbar` suporte compatível com versões posteriores em um pacote NuGet. 
 [Compatibilidade de barra de ferramentas](~/android/user-interface/controls/tool-bar/toolbar-compatibility.md) explica como usar essa biblioteca. 
-
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

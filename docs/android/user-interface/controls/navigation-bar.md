@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/01/2017
-ms.openlocfilehash: 3bb2b47623c03d335ae1edc4bf87881622823ea1
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: cf57142f0896b42c5c8ba726db723527e0e61452
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522924"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70762379"
 ---
 # <a name="xamarinandroid-navigation-bar"></a>Barra de navegação do Xamarin. Android
 
@@ -25,7 +25,6 @@ Vários novos sinalizadores estão disponíveis que controlam a visibilidade da 
 - `SystemUiFlagVisible`&ndash; Torna a barra de navegação visível. 
 - `SystemUiFlagLowProfile`&ndash; Escurece os controles na barra de navegação. 
 - `SystemUiFlagHideNavigation`&ndash; Oculta a barra de navegação. 
-
 
 Esses sinalizadores podem ser aplicados a qualquer exibição na hierarquia de exibição, definindo a `SystemUiVisibility` propriedade. Se várias exibições tiverem essa propriedade definida, o sistema as combinará com uma operação ou e as aplicará, desde que a janela na qual os sinalizadores estejam definidos Mantenha o foco. Quando você remove uma exibição, todos os sinalizadores definidos também serão removidos.
 
@@ -64,8 +63,6 @@ tv.SystemUiVisibilityChange +=
         tv.Text = String.Format ("Visibility = {0}", e.Visibility);
   };
 ```
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

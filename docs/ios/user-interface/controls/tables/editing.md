@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: 90ef335bd3683028d5f9951cdf2ca341158209b9
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 9960167e2f71531e5ffeaecac94aede5d5ea3340
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70284208"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768897"
 ---
 # <a name="editing-tables-with-xamarinios"></a>Editando tabelas com Xamarin. iOS
 
@@ -30,7 +30,6 @@ Há três substituições de método que afetam o gesto de passar o dedo para mo
 - **CommitEditingStyle** – a origem da tabela detecta se esse método é substituído e habilita automaticamente o gesto de passar para a exclusão. A implementação do método deve chamar `DeleteRows` `UITableView` on para fazer com que as células desapareçam e também remover os dados subjacentes do modelo (por exemplo, uma matriz, um dicionário ou um banco de dados). 
 - **CanEditRow** – se CommitEditingStyle é substituído, todas as linhas são consideradas editáveis. Se esse método for implementado e retornar false (para algumas linhas específicas ou para todas as linhas), o gesto de passar para a exclusão não estará disponível nessa célula. 
 - **TitleForDeleteConfirmation** – opcionalmente, especifica o texto para o botão de **exclusão** . Se esse método não for implementado, o texto do botão será "Delete". 
-
 
 Esses métodos são implementados na `TableSource` classe a seguir:
 
@@ -61,7 +60,6 @@ public override string TitleForDeleteConfirmation (UITableView tableView, NSInde
 
 Para este exemplo, `UITableViewSource` o foi atualizado para usar um `List<TableItem>` (em vez de uma matriz de cadeia de caracteres) como a fonte de dados, pois ele dá suporte à adição e exclusão de itens da coleção.
 
-
 ## <a name="edit-mode"></a>Modo de edição
 
 Quando uma tabela está no modo de edição, o usuário vê um widget "Stop" vermelho em cada linha, que revela um botão de exclusão quando tocado. A tabela também exibe um ícone de ' identificador ' para indicar que a linha pode ser arrastada para alterar a ordem.
@@ -75,7 +73,6 @@ Há vários métodos `UITableViewSource` diferentes que afetam o comportamento d
 - **CanMoveRow** – retorna true para habilitar a movimentação ' Handle ' ou false para evitar a movimentação. 
 - **EditingStyleForRow** – quando a tabela está no modo de edição, o valor de retorno desse método determina se a célula exibe o ícone de exclusão vermelha ou o ícone de adição verde. Retorna `UITableViewCellEditingStyle.None` se a linha não deve ser editável. 
 - **MoveRow** – chamado quando uma linha é movida para que a estrutura de dados subjacente possa ser modificada para corresponder aos dados conforme eles são exibidos na tabela. 
-
 
 A implementação dos três primeiros métodos é relativamente direta – a menos que você queira usar o `indexPath` para alterar o comportamento de linhas específicas, basta codificar os valores retornados para a tabela inteira.
 
@@ -128,7 +125,6 @@ e quando o usuário terminar de editar, o botão **concluído** deverá desativa
 table.SetEditing (false, true);
 ```
 
-
 ## <a name="row-insertion-editing-style"></a>Estilo de edição de inserção de linha
 
 A inserção de linha de dentro da tabela é uma interface de usuário incomum – o exemplo principal nos aplicativos iOS padrão é a tela **Editar contato** . Esta captura de tela mostra como a funcionalidade de inserção de linha funciona – no modo de edição, há uma linha adicional que (quando clicado) insere linhas adicionais nos dados. Quando a edição for concluída, a linha temporária **(Adicionar nova)** será removida.
@@ -141,12 +137,10 @@ Há vários métodos `UITableViewSource` diferentes que afetam o comportamento d
 - **CustomizeMoveTarget** – enquanto o usuário está movendo uma célula, o valor de retorno desse método opcional pode substituir sua escolha de local. Isso significa que você pode impedi-los de ' descartar ' a célula em determinadas posições – como neste exemplo que impede que qualquer linha seja movida após a linha **(Adicionar nova)** . 
 - **CanMoveRow** – retorna true para habilitar a movimentação ' Handle ' ou false para evitar a movimentação. No exemplo, a última linha tem a movimentação ' identificador ' oculta porque ela se destina ao servidor somente como um botão de inserção. 
 
-
 Também adicionamos dois métodos personalizados para adicionar a linha ' Insert ' e, em seguida, removê-lo novamente quando não for mais necessário. Eles são chamados a partir dos botões **Editar** e **concluídos** :
 
 - **WillBeginTableEditing** – quando o botão de **edição** é tocado, `SetEditing` ele chama para colocar a tabela no modo de edição. Isso dispara o método WillBeginTableEditing em que exibimos a linha **(Adicionar novo)** no final da tabela para atuar como um ' botão de inserção '. 
 - **DidFinishTableEditing** – quando o botão Done é tocado `SetEditing` , é chamado novamente para desligar o modo de edição. O código de exemplo remove a linha **(Adicionar nova)** da tabela quando a edição não é mais necessária. 
-
 
 Essas substituições de método são implementadas no arquivo de exemplo **TableEditModeAdd/Code/TableName. cs**:
 
@@ -219,7 +213,6 @@ edit = new UIBarButtonItem(UIBarButtonSystemItem.Edit, (s,e)=>{
 ```
 
 Esse padrão de interface de usuário de inserção de linha não é usado com muita frequência, `UITableView.BeginUpdates` no `EndUpdates` entanto, você também pode usar os métodos e para animar a inserção ou remoção de células em qualquer tabela. A regra para usar esses métodos é que a diferença no valor retornado por `RowsInSection` entre as `BeginUpdates` chamadas `EndUpdates` e deve corresponder ao número líquido de células adicionadas/excluídas `InsertRows` com `DeleteRows` os métodos e. Se a fonte de base subjacente não for alterada para corresponder às inserções/exclusões no modo de exibição de tabela, ocorrerá um erro.
-
 
 ## <a name="related-links"></a>Links relacionados
 

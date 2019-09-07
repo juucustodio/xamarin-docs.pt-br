@@ -6,12 +6,12 @@ ms.assetid: F87BF587-AB64-4C60-84B1-184CAE36ED65
 author: conceptdev
 ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: 90c391f79d7aa0ffdee0072c84cbdba0c504d551
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 8b88d6c33671f36d2d4106f45a267322320639c7
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70280625"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70765332"
 ---
 # <a name="async-support-overview"></a>Visão geral do suporte assíncrono
 
@@ -124,7 +124,6 @@ Observe estes pontos:
 - O tipo de retorno `Task<int>` é, portanto, o código `int` de chamada pode acessar o valor calculado nesse método.
 - A instrução Return é `return exampleInt;` um objeto inteiro – o fato de que o método retorna `Task<int>` faz parte das melhorias de idioma.
 
-
 ### <a name="calling-an-async-method-1"></a>Chamando um método assíncrono 1
 
 Esse manipulador de eventos de clique no botão pode ser encontrado no aplicativo de exemplo do Android para chamar o método discutido acima:
@@ -153,7 +152,6 @@ Notas:
 - O código aguarda na variável sizeTask.  *Esse* é o local em que o método é suspenso e o controle é retornado para o código de chamada até que a tarefa assíncrona seja concluída em seu próprio thread.
 - A execução *não pausa quando* a tarefa é criada na primeira linha do método, apesar da tarefa que está sendo criada lá. A palavra-chave Await significa o local em que a execução está em pausa.
 - Quando a tarefa assíncrona é concluída, a intresult é definida e a execução continua no thread original, da linha Await.
-
 
 ### <a name="calling-an-async-method-2"></a>Chamando um método assíncrono 2
 
@@ -185,14 +183,11 @@ Alguns pontos importantes:
 - O código `await` `DownloadHomepage` s no método diretamente em uma atribuição a uma variável ( `intResult` ), ao contrário do exemplo anterior, em que usamos `Task<int>` uma variável intermediária para fazer referência à tarefa.  *Esse* é o local onde o controle é retornado para o chamador até que o método assíncrono seja concluído em outro thread.
 - Quando o método assíncrono é concluído e retorna, a execução é retomada no `await` que significa que o resultado inteiro é retornado e, em seguida, renderizado em um widget de interface do usuário.
 
-
 ## <a name="summary"></a>Resumo
 
 Usar Async e Await simplifica bastante o código necessário para gerar operações de longa execução em threads em segundo plano sem bloquear o thread principal. Eles também facilitam o acesso aos resultados quando a tarefa é concluída.
 
 Este documento forneceu uma visão geral das novas palavras-chave de linguagem e exemplos para Xamarin. iOS e Xamarin. Android.
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

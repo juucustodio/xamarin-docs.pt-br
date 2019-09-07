@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: 4b1e232259d7b1816e64298b5c0b8853d8385c20
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 6d3756f4215174e17ec45518f430dc38270e3289
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70283865"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768695"
 ---
 # <a name="testing-on-apple-watch-devices"></a>Testando em dispositivos Apple Watch
 
@@ -64,7 +64,6 @@ A lista de **perfis de provisionamento** mostrará todos os perfis de correspond
 
 ![](device-images/options-selectprofile.png "A lista de perfis de provisionamento")
 
-
 <a name="testing" />
 
 ## <a name="testing-on-a-watch-device"></a>Testando em um dispositivo de inspeção
@@ -88,7 +87,6 @@ Depois de configurar seu dispositivo, as IDs de aplicativo e os perfis de provis
 
 8. Se o aplicativo Watch for instalado com êxito, o ícone permanecerá na tela Watch – toque-o para começar a testar seu aplicativo!
 
-
 ## <a name="troubleshooting"></a>Solução de problemas
 
 Se ocorrer um erro durante a implantação, use a **exibição > Pads > log do dispositivo** para ver mais informações sobre o erro. Alguns erros e suas causas são listados abaixo:
@@ -103,11 +101,9 @@ Para contornar *temporariamente* esse problema, desabilite as **compilações in
 
 Isso será corrigido em uma versão futura, após a qual as compilações incrementais podem ser habilitadas novamente para aproveitar os tempos de compilação mais rápidos.
 
-
 ### <a name="watch-app-fails-to-start-while-debugging-on-device"></a>Falha ao iniciar o aplicativo de inspeção durante a depuração no dispositivo
 
 Ao tentar depurar um aplicativo Watch em um dispositivo físico, somente o ícone & carregamento de controle giratório aparece (e eventualmente o tempo limite). Isso será abordado em uma versão futura; uma solução alternativa é executar uma compilação de versão (que não permitirá a depuração).
-
 
 ### <a name="invalid-application-executable-or-application-verification-failed"></a>Falha de verificação de aplicativo ou executável de aplicativo inválido
 
@@ -131,8 +127,6 @@ Se essas mensagens aparecerem *na tela Watch* depois que o aplicativo tentar ins
 
 - A **ID do aplicativo** do aplicativo de inspeção incorretamente tem um direito habilitado (como grupos de aplicativos) no centro de desenvolvimento que não deveria ter.
 
-
-
 ### <a name="install-never-finished"></a>Instalação nunca concluída
 
 ```csharp
@@ -142,7 +136,6 @@ SPErrorGizmoInstallNeverFinishedErrorMessage
 Esse erro pode indicar chaves desnecessárias (e inválidas) no arquivo **info. plist** do aplicativo Watch. Você não deve incluir chaves destinadas ao aplicativo iOS ou à extensão Watch no aplicativo Watch.
 
 <!--eg. NSLocationAlwaysUsageDescription -->
-
 
 ### <a name="waiting-for-debugger-to-connect"></a>"aguardando o depurador se conectar"
 
@@ -156,4 +149,3 @@ Verifique se qualquer um dos NuGets que foram incluídos no seu projeto tem uma 
 
 O arquivo **Microsoft. BCL. Build. targets** que é adicionado ao **. csproj** pode interferir no empacotamento de extensões do IOS durante a implantação. Você pode acompanhar o [bug](https://bugzilla.xamarin.com/show_bug.cgi?id=29912).
 Uma possível solução alternativa é editar o arquivo. csproj e mover manualmente o **Microsoft. BCL. Build. targets** para ser o último elemento.
-

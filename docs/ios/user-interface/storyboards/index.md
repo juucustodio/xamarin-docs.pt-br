@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: 145c616cc0af8156f10b9db1d3fa36264cecd18b
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: cf181cf6c27476b7073073467ef186c352645e39
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70284325"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768885"
 ---
 # <a name="introduction-to-storyboards-in-xamarinios"></a>Introdução aos storyboards no Xamarin. iOS
 
@@ -21,7 +21,6 @@ Neste guia, explicaremos o que é um storyboard e examinaremos alguns dos princi
 Antes de o formato de arquivo de storyboard ter sido introduzido pela Apple como uma representação visual da interface do usuário de um aplicativo iOS, os desenvolvedores criaram arquivos XIB para cada controlador de exibição e programaram a navegação entre cada exibição manualmente.  O uso de um storyboard permite que o desenvolvedor defina ambos os controladores de exibição e a navegação entre eles em uma superfície de design e ofereça edição WYSIWYG da interface do usuário do aplicativo.
 
 Um storyboard pode ser criado, aberto e editado com o Xamarin iOS designer. Este guia também explica como usar o designer para criar seus storyboards ao usar C# o para programar a navegação.
-
 
 ## <a name="requirements"></a>Requisitos
 
@@ -77,7 +76,7 @@ Há diferentes tipos de transições, cada uma dando controle sobre como um novo
 ### <a name="adaptive-segue-types"></a>Tipos de transição adaptável
 
  o iOS 8 introduziu [classes de tamanho](~/ios/user-interface/storyboards/unified-storyboards.md#size-classes) para permitir que um arquivo de storyboard do IOS funcione com todos os tamanhos de tela disponíveis, permitindo que os desenvolvedores criem uma interface do usuário para todos os dispositivos IOS. Por padrão, todos os novos aplicativos Xamarin. iOS usarão classes de tamanho. Para usar classes de tamanho de um projeto mais antigo, consulte o guia [introdução ao storyboards unificados](~/ios/user-interface/storyboards/unified-storyboards.md) . 
- 
+
 Qualquer aplicativo usando classes de tamanho também usará o novo [*continuações adaptável*](~/ios/user-interface/storyboards/unified-storyboards.md). Ao usar classes de tamanho, lembre-se de que não estamos especificando diretamente se estamos usando um iPhone ou iPad. Em outras palavras, estamos criando uma interface do usuário que sempre terá a mesma aparência, independentemente da quantidade de espaço real com a qual precisa trabalhar. O continuações Adaptive funciona por julgamento o ambiente e determinando a melhor maneira de apresentar conteúdo. Os continuações adaptáveis são mostrados abaixo: 
 
 [![](images/adaptivesegue.png "A lista suspensa continuações adaptável")](images/adaptivesegue.png#lightbox)
@@ -92,7 +91,6 @@ Qualquer aplicativo usando classes de tamanho também usará o novo [*continuaç
 ### <a name="transferring-data-with-segues"></a>Transferindo dados com continuações
 
 Os benefícios de um transição não terminam com transições. Eles também podem ser usados para gerenciar a transferência de dados entre controladores de exibição. Isso é obtido substituindo o `PrepareForSegue` método no controlador de exibição inicial e manipulando os dados por si mesmos. Quando o transição é disparado – por exemplo, com um pressionamento de botão – o aplicativo chamará esse método, fornecendo uma oportunidade de preparar o novo controlador de exibição *antes que* ocorra qualquer navegação. O código a seguir, do exemplo [Phoneword](https://docs.microsoft.com/samples/xamarin/ios-samples/hello-ios) , demonstra isso: 
-
 
 ```csharp
 public override void PrepareForSegue (UIStoryboardSegue segue, 
@@ -252,7 +250,6 @@ public MainViewController (IntPtr handle) : base (handle)
 }
 ```
 
-
 Ao criar um storyboard usando o designer, o IDE adicionará automaticamente o atributo [[Register]](xref:Foundation.RegisterAttribute) na parte superior da `designer.cs` classe e passará um identificador de cadeia de caracteres, que é idêntico à ID do storyboard especificado na etapa anterior. Isso vinculará o C# à cena relevante no storyboard.
 
 Em algum momento, talvez você queira adicionar uma classe existente que **não** foi criada no designer. Nesse caso, você registraria essa classe como normal:
@@ -340,7 +337,6 @@ Antes de começar, siga as etapas 1 a 8 acima. Nestas etapas, criamos nosso stor
 3. Clique no transição e dê a ele o *identificador* `SegueToPink`:
 
     [![](images/namesegue.png "Clique no transição e dê a ele o identificador SegueToPink")](images/namesegue.png#lightbox)  
-    
 
 4. Por fim, adicione o seguinte método ShouldPerformSegue à `MainViewController` classe:
 
@@ -489,8 +485,6 @@ Quando o aplicativo é executado e o usuário clica no elemento da interface do 
 ## <a name="summary"></a>Resumo
 
 Este artigo apresenta o conceito de storyboards e como eles podem ser benéficos no desenvolvimento de aplicativos iOS. Ele aborda cenas, exibir controladores, exibições e exibir hierarquias e como os bastidores são vinculados junto com tipos diferentes de continuações.  Ele também explora a instanciação de controladores de exibição manualmente de um storyboard e a criação de continuações condicional.
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

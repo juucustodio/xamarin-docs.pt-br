@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/01/2017
-ms.openlocfilehash: b795a53fc78adee19e1e2d1c57c9c4344aa4281b
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: e829c953278d8edeb697d27da8e3707ee1c91784
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70119639"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70757592"
 ---
 # <a name="binding-a-java-library"></a>Associação de uma biblioteca Java
 
@@ -28,7 +28,7 @@ O ecossistema de biblioteca de terceiros para Android é maciço. Por isso, gera
 
 Este guia explica a primeira opção: como criar uma *biblioteca de associações* que encapsula uma ou mais bibliotecas Java existentes em um assembly ao qual você pode vincular em seu aplicativo. Para obter mais informações sobre como usar o JNI, consulte [trabalhando com JNI](~/android/platform/java-integration/working-with-jni.md).
 
-O Xamarin. Android implementa associações usando o*MCW*( *wrappers callable* ) gerenciados. A MCW é uma ponte JNI que é usada quando o código gerenciado precisa invocar o código Java. Wrappers callable gerenciados também oferecem suporte para a subclasse de tipos Java e para substituir métodos virtuais em tipos Java. Da mesma forma, sempre que o código do tempo de execução do Android (ART) quiser invocar o código gerenciado, ele faz isso por meio de outra ponte JNI conhecida como ACW (Android callable wrappers). Essa [arquitetura](~/android/internals/architecture.md) é ilustrada no diagrama a seguir:
+O Xamarin. Android implementa associações usando o*MCW*( *wrappers callable) gerenciados* . A MCW é uma ponte JNI que é usada quando o código gerenciado precisa invocar o código Java. Wrappers callable gerenciados também oferecem suporte para a subclasse de tipos Java e para substituir métodos virtuais em tipos Java. Da mesma forma, sempre que o código do tempo de execução do Android (ART) quiser invocar o código gerenciado, ele faz isso por meio de outra ponte JNI conhecida como ACW (Android callable wrappers). Essa [arquitetura](~/android/internals/architecture.md) é ilustrada no diagrama a seguir:
 
 [![Arquitetura de ponte do Android JNI](images/architecture.png)](images/architecture.png#lightbox)
 
@@ -65,7 +65,6 @@ Em seguida, você colocaria `using` a seguinte instrução na parte superior C# 
 using Com.Company.Package;
 ```
 
-
 Ao associar uma biblioteca Android existente, é necessário manter os seguintes pontos em mente:
 
 - **Há alguma dependência externa para a biblioteca?** &ndash;Todas as dependências de Java exigidas pela biblioteca do Android devem ser incluídas no projeto Xamarin. Android como um **ReferenceJar** ou como um **EmbeddedReferenceJar**. Todos os assemblies nativos devem ser adicionados ao projeto de associação como um **EmbeddedNativeLibrary**.  
@@ -73,7 +72,6 @@ Ao associar uma biblioteca Android existente, é necessário manter os seguintes
 - **Qual versão da API do Android é o destino da biblioteca do Android?** &ndash;Não é possível "fazer downgrade" do nível da API do Android; Verifique se o projeto de associação Xamarin. Android está direcionado ao mesmo nível de API (ou superior) que a biblioteca do Android.
 
 - **Qual versão do JDK foi usada para compilar a biblioteca?** &ndash;Erros de associação podem ocorrer se a biblioteca do Android foi criada com uma versão diferente do JDK do que em uso pelo Xamarin. Android. Se possível, recompile a biblioteca do Android usando a mesma versão do JDK que é usada pela sua instalação do Xamarin. Android.
-
 
 ## <a name="build-actions"></a>Ações de Build
 
@@ -119,13 +117,11 @@ O gerador de associação do Xamarin. Android alterará algumas linguagens e pad
 
 - Os _campos_ em Java são _Propriedades_ no .net.
 
-- _Ouvintes/interfaces_ de ouvinte em Java são _eventos_ no .net. Os parâmetros dos métodos nas interfaces de retorno de chamada serão representados `EventArgs` por uma subclasse.
+- _Ouvintes/interfaces de ouvinte_ em Java são _eventos_ no .net. Os parâmetros dos métodos nas interfaces de retorno de chamada serão representados `EventArgs` por uma subclasse.
 
 - Uma _classe aninhada estática_ em Java é uma _classe aninhada_ no .net.
 
 - Uma _classe interna_ em Java é uma _classe aninhada_ com um construtor de C#instância no.
-
-
 
 ## <a name="binding-scenarios"></a>Cenários de associação
 
@@ -140,7 +136,6 @@ Os guias de cenário de ligação a seguir podem ajudá-lo a associar uma biblio
 - A [personalização de associações](~/android/platform/binding-java-library/customizing-bindings/index.md) explica como fazer modificações manuais na associação para resolver erros de compilação e moldar a API resultante para que ela seja mais "C#-semelhante".
 
 - [Solucionar problemas de associações](~/android/platform/binding-java-library/troubleshooting-bindings.md) lista cenários de erro de associação comuns, explica possíveis causas e oferece sugestões para resolver esses erros.
-
 
 ## <a name="related-links"></a>Links relacionados
 

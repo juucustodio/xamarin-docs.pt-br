@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/09/2015
-ms.openlocfilehash: dccae3b3da4ab84c8ba14f204263e4230f31e833
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: d988be9163c0a6e12735425a139c03d9641fa95c
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656784"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70772758"
 ---
 # <a name="device-orientation"></a>Orientação do dispositivo
 
@@ -225,7 +225,6 @@ Observe o seguinte:
 
 - `outerStack` é ajustado para apresentar os controles e a imagem como uma pilha horizontal ou vertical, dependendo da orientação, para aproveitar melhor o espaço disponível.
 
-
 ### <a name="absolutelayout"></a>AbsoluteLayout
 
 Considere o aplicativo a seguir, exibido em Retrato:
@@ -277,7 +276,6 @@ Observe o seguinte:
 
 - Por causa da maneira que a página foi disposta, não é necessário para o código procedural introduzir a capacidade de resposta.
 - O `ScrollView` está sendo usado para permitir que o rótulo fique visível, mesmo quando a altura da tela é menor que a soma das alturas dos botões e a imagem fixas.
-
 
 ### <a name="relativelayout"></a>RelativeLayout
 
@@ -471,7 +469,6 @@ protected override void OnSizeAllocated (double width, double height){
 Observe o seguinte:
 
 - Por causa da maneira que a página foi disposta, há um método para alterar o posicionamento de grade dos controles.
-
 
 ## <a name="related-links"></a>Links relacionados
 

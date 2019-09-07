@@ -6,15 +6,14 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: d20ec990253ff86e7b426baad8da5a919a91ef6c
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
-ms.translationtype: HT
+ms.openlocfilehash: 3be55c2149aa58bf6d8462e5c1ff24166078355f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69525012"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755893"
 ---
 # <a name="manually-signing-the-apk"></a>Assinando manualmente o APK
-
 
 Depois de o aplicativo ser compilado para liberação, o APK deverá ser assinado antes da distribuição para que ele possa ser executado em um dispositivo Android. Normalmente, esse processo é tratado no IDE, no entanto, há algumas situações em que é necessário assinar o APK manualmente, na linha de comando. As seguintes etapas estão envolvidas com a assinatura de um APK:
 
@@ -27,15 +26,11 @@ Depois de o aplicativo ser compilado para liberação, o APK deverá ser assinad
 
 A ordem das etapas é importante e depende de qual ferramenta é usada para assinar o APK. Ao usar **apksigner**, é importante primeiro usar **zipalign** no aplicativo e, em seguida, assiná-lo com **apksigner**.  Caso seja necessário usar **jarsigner** para assinar o APK, é importante primeiro assinar o APK e, em seguida, executar **zipalign**. 
 
-
-
 ## <a name="prerequisites"></a>Pré-requisitos
 
 Este guia se concentrará no uso do **apksigner** usando as ferramentas de build do SDK de Android v24.0.3 ou superior. Ele pressupõe que um APK já foi compilado.
 
 Aplicativos compilados usando uma versão anterior das Ferramentas de Build do SDK de Android devem usar **jarsigner** conforme descrito em [Assinar o APK com jarsigner](#Sign_the_APK_with_jarsigner) abaixo.
-
-
 
 ## <a name="create-a-private-keystore"></a>Criar um Repositório de Chaves Privado
 
@@ -48,8 +43,6 @@ Por esse motivo, um repositório de chaves privado deve ser criado e usado para 
 
 É importante proteger esse repositório de chaves. Se ele for perdido, não será possível publicar atualizações no aplicativo com o Google Play.
 A única solução para o problema causado por um repositório de chaves perdido seria criar um novo repositório de chaves, assinar novamente o APK com a nova chave e, em seguida, enviar um novo aplicativo. Em seguida, o aplicativo antigo teria que ser removido do Google Play. Da mesma forma, quando esse novo repositório de chaves é comprometido ou distribuído publicamente, é possível que versões não oficiais ou mal-intencionadas de um aplicativo sejam distribuídas.
-
-
 
 ### <a name="create-a-new-keystore"></a>Criar um Novo Repositório de Chaves
 
@@ -95,7 +88,6 @@ Para listar as chaves armazenadas em um repositório de chaves, use o **keytool*
 $ keytool -list -keystore xample.keystore
 ```
 
-
 ## <a name="zipalign-the-apk"></a>Efetuar o zipalign no APK
 
 Antes de assinar um APK com **apksigner**, é importante primeiro otimizar o arquivo usando a ferramenta **zipalign** no SDK do Android. A ferramenta **zipalign** reestruturará os recursos em um APK junto com limites de 4 bytes. Esse alinhamento permite que o Android carregue rapidamente os recursos por meio do APK, aumentando o desempenho do aplicativo e potencialmente reduzindo o uso de memória. O Xamarin.Android realizará uma verificação de tempo de execução para determinar se o APK teve o zipalign efetuado. Se o APK não tiver o zipalign efetuado, o aplicativo não será executado.
@@ -105,7 +97,6 @@ O comando a seguir usará o APK assinado e produzirá um sinal, o APK com zipali
 ```shell
 $ zipalign -f -v 4 mono.samples.helloworld-unsigned.apk helloworld.apk
 ```
-
 
 ## <a name="sign-the-apk"></a>Assinar o APK
 
@@ -129,7 +120,6 @@ Consulte a [documentação do Google](https://developer.android.com/studio/comma
 > [!NOTE]
 > De acordo com o [problema do Google 62696222](https://issuetracker.google.com/issues/62696222), **apksigner** está "ausente" no SDK do Android. A solução para isso é instalar as ferramentas de build do SDK do Android v25.0.3 e usar essa versão do **apksigner**.  
 
-
 <a name="Sign_the_APK_with_jarsigner" />
 
 ### <a name="sign-the-apk-with-jarsigner"></a>Assinar o APK com jarsigner
@@ -147,8 +137,6 @@ $ jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore xample.keysto
 
 > [!NOTE]
 > Ao usar **jarsigner**, é importante assinar o APK _primeiro_ e, depois, usar o **zipalign**.  
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

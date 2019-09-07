@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: a43a2ed4498be76a99ab4b6b54d3048f2f80af5c
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: 107fcd39a64ef1d7758d211ab47a07e1ece52f4e
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69887652"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70757234"
 ---
 # <a name="how-can-i-manually-install-the-android-support-libraries-required-by-the-xamarinandroidsupport-packages"></a>Como posso instalar manualmente as bibliotecas de suporte do Android exigidas pelos pacotes Xamarin.Android.Support?
 
@@ -127,7 +127,6 @@ O número de versão do subdiretório (**23.4.0.0** neste exemplo) não é exata
 
 -----
 
-
 ## <a name="additional-references"></a>Referências adicionais
 
 - [Bug 43245](https://bugzilla.xamarin.com/show_bug.cgi?id=43245) – inexato "falha no download. Baixe {0} e coloque-o {1} no diretório. " e "Instale o pacote: '{0}' disponível no instalador do SDK" mensagens de erro relacionadas aos pacotes Xamarin. Android. support
@@ -137,4 +136,3 @@ O número de versão do subdiretório (**23.4.0.0** neste exemplo) não é exata
 Este documento discute o comportamento atual a partir de agosto de 2016. A técnica descrita neste documento não faz parte do pacote de testes estável para o Xamarin, portanto, ele pode ser interrompido no futuro.
 
 Para obter mais assistência, entrar em contato conosco ou, se esse problema permanecer mesmo depois de utilizar as informações acima, consulte [quais opções de suporte estão disponíveis para o Xamarin?](~/cross-platform/troubleshooting/support-options.md) para obter informações sobre opções de contato, sugestões, bem como como arquivar um novo bug, se necessário .
-

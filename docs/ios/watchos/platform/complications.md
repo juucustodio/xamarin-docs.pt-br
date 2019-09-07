@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 07/03/2017
-ms.openlocfilehash: 6831fa9a660a55eccd8584dccb1f81ae9953aee5
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: a4d96b9a092dfc534f40e3e62737af2a3a0004f5
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70282342"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768621"
 ---
 # <a name="watchos-complications-in-xamarin"></a>Complicações watchOSs no Xamarin
 
@@ -179,7 +179,6 @@ public class ComplicationController : CLKComplicationDataSource
 }
 ```
 
-
 <a name="templates" />
 
 ## <a name="complication-templates"></a>Modelos de complicação
@@ -234,8 +233,6 @@ Esses nomes de classe de modelo são todos prefixados com `CLKComplicationTempla
 
 Há apenas um modelo para esse estilo de complicação `CLKComplicationTemplateUtilitarianLargeFlat`:.
 Ele exibe uma única imagem e algum texto, tudo em uma única linha.
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

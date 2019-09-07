@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 4fe1bd4dda9a54eb3a1692f07d1069adb39345cb
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: d5edb5f4e2ce1ca39ba27a1de1a51760ea167e8b
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69523285"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70757138"
 ---
 # <a name="what-version-of-xamarinandroid-added-lollipop-support"></a>Qual versão do Xamarin.Android adicionou suporte ao Lollipop?
 
@@ -47,7 +47,7 @@ Há algumas soluções alternativas para esse problema:
 3. Fazer downgrade temporário de volta para a API do Android nível 21 "L" Preview [1]:
 
     1. Exclua **as\\plataformas\\\\%LocalAppData%AndroidAndroid-\\SDK Android-21** 
-    2. Extraia [1] **em C\\:\\Users&lt;nome_do_usuário\\&gt;AppData\\local\\Android-\\SDK plataformas para criar\\** uma pasta do **Android-L** .
+    2. Extraia [1] em **C\\:\\Users\\\\nome_do_usuário\\&lt;&gt;AppDatalocal\\Android-SDK\\plataformas** para criar uma pasta do **Android-L** .
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
@@ -74,6 +74,5 @@ Há algumas soluções alternativas para esse problema:
     2. Extraia [1] em **/Users/username/library/Developer/Xamarin/Android-SDK-MacOSX** para criar uma pasta do **Android-L** .
 
 -----
-
 
 [1] - [https://dl-ssl.google.com/android/repository/android-L_r04.zip](https://dl-ssl.google.com/android/repository/android-L_r04.zip)

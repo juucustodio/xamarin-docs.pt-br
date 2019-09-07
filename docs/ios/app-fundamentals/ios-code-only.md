@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 05/03/2018
-ms.openlocfilehash: d1464ca3accf53a9362d00e279ff9e158d7e34d4
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 4b829cf3f440b1c94c5232d258c86b6ea4b0f181
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70281641"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70767522"
 ---
 # <a name="creating-ios-user-interfaces-in-code-in-xamarinios"></a>Criando interfaces do usuário do iOS no código no xamarin. IOS
 
@@ -59,16 +59,13 @@ O modelo de projeto vazio adiciona 4 arquivos ao projeto:
 1. **Info. plist** -arquivo de lista de propriedade que contém informações de configuração do aplicativo.
 1. **Entitlements. plist** – arquivo de lista de propriedade que contém informações sobre os recursos e as permissões do aplicativo.
 
-
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 ## <a name="ios-templates"></a>modelos de iOS
 
-
 O Visual Studio para Mac não fornece um modelo vazio. Todos os modelos são fornecidos com o suporte a Storyboard, que a Apple recomenda como a principal maneira de criar uma interface do usuário. No entanto, é possível criar sua interface do usuário completamente no código.
 
 As etapas a seguir explicarão como remover o Storyboard de um aplicativo:
-
 
 1. Use o modelo de aplicativo de exibição única para criar um novo projeto do iOS:
 

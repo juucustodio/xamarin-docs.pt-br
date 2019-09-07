@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: 350cd7e2d0dd79b876a6c1277d40a9c96d97c102
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 4dface536504b0a79d376ab0979443a5ed19e901
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70282712"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769241"
 ---
 # <a name="publishing-to-the-apple-tv-app-store"></a>Como publicar na Apple TV App Store
 
@@ -24,7 +24,6 @@ O processo de envio de um aplicativo para a loja de aplicativos da Apple TV envo
 2. Criar um *Perfil de provisionamento de distribuição.*
 3. Usando esse perfil para compilar seu aplicativo.
 4. Enviando seu aplicativo por meio do *iTunes Connect*.
-
 
 Neste artigo, abordaremos todas as etapas necessárias para provisionar, compilar e enviar um aplicativo para a distribuição da loja de aplicativos da Apple TV.
 
@@ -39,7 +38,6 @@ Algumas coisas a observar ao enviar um aplicativo:
 
 1. Verifique se a descrição do aplicativo corresponde à funcionalidade incluída no aplicativo.
 2. Testar para ver se o aplicativo não falha em uso normal. Isso inclui o uso em todos os dispositivos de TV da Apple aos quais você dá suporte.
-
 
 A Apple também mantém uma lista de dicas de envio da loja de aplicativos da Apple TV. Você pode ler essas dicas em [Distribuindo na App Store](https://developer.apple.com/appstore/resources/submission/tips.html).
 
@@ -121,7 +119,6 @@ O provisionamento envolve as seguintes etapas usando o Portal de provisionamento
 
 Para obter instruções detalhadas, consulte [Criando um perfil de distribuição](~/ios/deploy-test/app-distribution/app-store-distribution/index.md#creatingprofile) e [Selecionando um perfil de distribuição em um projeto Xamarin.iOS](~/ios/deploy-test/app-distribution/app-store-distribution/index.md#selectprofile). Novamente, esses dois documentos são específicos do iOS, mas a mesma técnica é usada para aplicativos tvOS.
 
-
 <a name="Setting_the_Build_Configuration_for_your_Application" />
 
 ### <a name="setting-the-build-configuration-for-your-application"></a>Definindo a configuração de build para o seu aplicativo
@@ -137,7 +134,6 @@ Faça o seguinte:
 5. A Apple também exigiu que os aplicativos tvOS usem o BitCode. Novamente na configuração da **versão** , adicione `--bitcode=asmonly` à caixa **argumentos adicionais do mTouch** .
 6. A caixa de seleção **otimizar arquivos de imagem png para IOS** deve ser marcada, pois isso ajudará a diminuir ainda mais o tamanho de entrega do aplicativo.
 7. A depuração *não* deve ser habilitada, pois deixará o build desnecessariamente maior.
-
 
 <a name="Building_and_Submitting_the_Distributable" />
 
@@ -189,7 +185,6 @@ Com a compilação de distribuição criada e arquivada, agora você está pront
 
 Com a compilação de distribuição concluída, você está pronto para enviar o seu aplicativo iOS para a Apple para análise e lançamento na App Store.
 
-
 O fluxo de trabalho de arquivamento no Visual Studio para Mac abrirá o carregador de aplicativos automaticamente `.ipa`depois que você salvar o:
 
 1. Selecione *Entregar seu aplicativo* e clique no botão *Escolher*:
@@ -225,7 +220,6 @@ Se você estiver tendo problemas para enviar seu aplicativo Xamarin. tvOS para a
 ## <a name="summary"></a>Resumo
 
 Este artigo apresentou um guia passo a passo para configurar, compilar e enviar um aplicativo para publicação da loja de aplicativos da Apple TV. Primeiro, ele abordou as etapas necessárias para criar e instalar um perfil de provisionamento de distribuição. Em seguida, ele analisou como usar Visual Studio para Mac para criar uma compilação de distribuição. Por fim, ele mostrou como usar o iTunes Connect e a ferramenta de arquivamento Xcode para enviar um aplicativo para a loja de aplicativos da Apple TV.
-
 
 ## <a name="related-links"></a>Links relacionados
 

@@ -7,12 +7,12 @@ ms.assetid: 785F4D13-7430-492E-B24E-3B45C560E9F1
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/14/2017
-ms.openlocfilehash: f526be2156c4d74cf695b6b11706e3bbb7f355bb
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: eb7057d40e6ff0c48c6dc1b5dc38af2eb92de2e0
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68642994"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70772774"
 ---
 # <a name="non-affine-transforms"></a>Transformações não afins
 
@@ -468,7 +468,6 @@ L e representam a largura e altura do bitmap. A primeira transformação `S` sim
 O `a` e `b` são calculadas para que a terceira transformação é afim. O código obtém o inverso da transformação afim e, em seguida, usa para mapear o canto inferior direito. Esse é o ponto (a, b).
 
 Outro uso de transformações não afins é imitar a elementos gráficos tridimensionais. No próximo artigo [ **rotações 3D** ](3d-rotation.md) você verá como girar um elemento de gráfico bidimensional no espaço 3D.
-
 
 ## <a name="related-links"></a>Links relacionados
 

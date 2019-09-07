@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 10/19/2016
-ms.openlocfilehash: bb33d9f85dfc1215e91caa20fab3800645e13111
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 7340df1d65768363f39c6f080a5d50e2ac250400
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70282181"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769879"
 ---
 # <a name="debugging-a-native-crash-in-a-xamarinmac-app"></a>Depuração de uma falha nativa em um aplicativo Xamarin.Mac
 
@@ -251,4 +251,3 @@ Você nunca deve permitir que uma exceção do C# "vaze" código gerenciado para
 Sem perder muito tempo explicando os motivos técnicos disto, configurar a infraestrutura para capturar exceções gerenciadas em cada limite gerenciado/nativo é algo especialmente caro e há _muitas_ transições que acontecem em várias operações comuns. Várias operações, especialmente aquelas envolvendo o thread de interface do usuário, deverão ser concluídas rapidamente, ou o seu aplicativo falhará e terá características de desempenho inaceitáveis. Muitos desses retornos de chamada fazem coisas muito simples, que raramente têm a possibilidade de gerar exceções; portanto, essa sobrecarga seria cara e também desnecessária nesses casos.
 
 Assim, nós não configuraríamos esses blocos try/catch para você. Para os locais em que o código faz coisas não triviais (digamos, além de retornar boolianos ou matemática simples), você pode definir os blocos try/catch por conta própria. 
-

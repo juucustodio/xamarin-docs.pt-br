@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/11/2017
-ms.openlocfilehash: 6cb828f59505159c972d40905f22995055f207df
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
-ms.translationtype: HT
+ms.openlocfilehash: 5d130a6644af4e5831263c6de137513c021e0b6a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68646852"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70760796"
 ---
 # <a name="xamarinforms-data-templates"></a>Modelos de dados do Xamarin.Forms
 
@@ -31,7 +31,6 @@ Modelos de dados podem ser criados embutidos, em um [`ResourceDictionary`](xref:
 ## <a name="creating-a-datatemplateselectorselectormd"></a>[Criando um DataTemplateSelector](selector.md)
 
 Um [`DataTemplateSelector`](xref:Xamarin.Forms.DataTemplateSelector) pode ser usado para escolher um [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) em tempo de execução com base no valor de uma propriedade associada a dados. Isso permite que várias instâncias de `DataTemplate` sejam aplicadas ao mesmo tipo de objeto, para personalizar a aparência de objetos específicos. Este artigo demonstra como criar e consumir um `DataTemplateSelector`.
-
 
 ## <a name="related-links"></a>Links relacionados
 

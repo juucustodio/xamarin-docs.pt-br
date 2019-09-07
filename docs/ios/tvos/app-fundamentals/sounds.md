@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: b34c769eaa3aef5bf47a9bfa891859289b195f03
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 57892689eeb5eef9747e19fa167b8598569f3cd1
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70283778"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769201"
 ---
 # <a name="playing-sound-in-tvos-with-avaudioplayer-in-xamarin"></a>Reprodução de som em tvOS com AVAudioPlayer no Xamarin
 
@@ -33,8 +33,6 @@ Você pode usar o `AVAudioPlayer` para fazer o seguinte:
 ## <a name="playing-sounds-in-tvos"></a>Tocando sons em tvOS
 
 Como o tvOS dá suporte às mesmas classes de caixa de ferramentas de áudio que o iOS, consulte nosso [som de reprodução](https://github.com/xamarin/recipes/tree/master/Recipes/ios/media/sound/avaudioplayer) de Ios com a documentação do AVAudioPlayer para obter os detalhes completos da reprodução de áudio em um aplicativo Xamarin. tvOS.
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

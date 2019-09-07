@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 06/05/2018
-ms.openlocfilehash: 22bc1184bba93ac03be55db4f948603b6fbfc718
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 7ef5a693adac7e81474a473d4dadd14b939378fc
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291078"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769302"
 ---
 # <a name="where-can-i-set-my-ios-sdk-locations"></a>Onde posso definir meus locais do SDK do iOS?
 
@@ -30,4 +30,3 @@ O Xamarin. iOS & o SDK da Apple (Xcode) terá o local padrão quando a caixa loc
 
 - Xcode`/Applications/Xcode.app`
 - Xamarin. iOS (Visual Studio para Mac):`/Library/Frameworks/Xamarin.iOS.framework/Versions/Current`
-

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 9ca14ff360fb3f1d7fdc8df277a93b0d30c4394c
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: d65e8fabff88489571bba9d03379ff605a6ed0fe
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70119689"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70757725"
 ---
 # <a name="app-linking-in-android"></a>Vinculação de aplicativo no Android
 
@@ -22,7 +22,7 @@ _Este guia discutirá como o Android 6,0 dá suporte à vinculação de aplicati
 
 Os aplicativos móveis não ficam mais ativos em &ndash; um silo em muitos casos, eles são componentes importantes de suas empresas, juntamente com seus sites. É desejável que as empresas conectem diretamente seus aplicativos móveis e de presença na Web, com links em um site que inicia aplicativos móveis e exibem conteúdo relevante no aplicativo móvel. *Vinculação de aplicativo* (também conhecido como *vinculação profunda*) é uma técnica que permite que um dispositivo móvel responda a um URI e inicie um aplicativo móvel que corresponda a esse URI.
 
-O Android lida com a vinculação de aplicativos por meio do *sistema* &ndash; de intenção quando o usuário clica em um link em um navegador móvel, o navegador móvel irá despachar uma intenção que o Android delegará a um aplicativo registrado. Por exemplo, clicar em um link em um site de culinária abriria um aplicativo móvel associado a esse site e exibirá uma receita específica para o usuário. Se houver mais de um aplicativo registrado para lidar com essa intenção, o Android gerará o que é conhecido como uma *caixa de diálogo* de desambiguidade que solicitará a um usuário qual aplicativo selecionar o aplicativo que deve lidar com a intenção, por exemplo:
+O Android lida com a vinculação de aplicativos por meio do *sistema* &ndash; de intenção quando o usuário clica em um link em um navegador móvel, o navegador móvel irá despachar uma intenção que o Android delegará a um aplicativo registrado. Por exemplo, clicar em um link em um site de culinária abriria um aplicativo móvel associado a esse site e exibirá uma receita específica para o usuário. Se houver mais de um aplicativo registrado para lidar com essa intenção, o Android gerará o que é conhecido como uma *caixa de diálogo de desambiguidade* que solicitará a um usuário qual aplicativo selecionar o aplicativo que deve lidar com a intenção, por exemplo:
 
 ![Captura de tela de exemplo de uma caixa de diálogo de desambiguidade](app-linking-images/01-disambiguation-dialog.png)
 
@@ -40,7 +40,7 @@ Este guia discutirá como configurar um aplicativo Android 6,0 e como criar e pu
 
 Este guia requer o Xamarin. Android 6,1 e um aplicativo que tem como alvo o Android 6,0 (API nível 23) ou superior.
 
-A vinculação de aplicativo é possível em versões anteriores do Android usando o [pacote NuGet](https://www.nuget.org/packages/Rivets/) de rebites da loja de componentes do Xamarin. O pacote de rebites não é compatível com a vinculação de aplicativo no Android 6,0; Ele não dá suporte à vinculação de aplicativos Android 6,0.
+A vinculação de aplicativo é possível em versões anteriores do Android usando o [pacote NuGet de rebites](https://www.nuget.org/packages/Rivets/) da loja de componentes do Xamarin. O pacote de rebites não é compatível com a vinculação de aplicativo no Android 6,0; Ele não dá suporte à vinculação de aplicativos Android 6,0.
 
 ## <a name="configuring-app-linking-in-android-60"></a>Configurando a vinculação de aplicativos no Android 6,0
 
@@ -92,7 +92,7 @@ O arquivo de ativo digital contém os metadados necessários para que o Android 
 
 - `namespace`&ndash; o namespace do aplicativo Android.
 - `package_name`&ndash; o nome do pacote do aplicativo Android (declarado no manifesto do aplicativo).
-- `sha256_cert_fingerprints`&ndash; as impressões digitais SHA256 do aplicativo assinado. Consulte o guia localizando a [assinatura MD5 ou SHA1 do repositório de chaves](~/android/deploy-test/signing/keystore-signature.md) para obter mais informações sobre como obter a impressão digital SHA1 de um aplicativo.
+- `sha256_cert_fingerprints`&ndash; as impressões digitais SHA256 do aplicativo assinado. Consulte o guia [localizando a assinatura MD5 ou SHA1 do repositório de chaves](~/android/deploy-test/signing/keystore-signature.md) para obter mais informações sobre como obter a impressão digital SHA1 de um aplicativo.
 
 O trecho a seguir é um exemplo de **assetlinks. JSON** com um único aplicativo listado:
 
@@ -191,7 +191,6 @@ Há dois testes que podem ser executados para garantir que os filtros de intenç
 ## <a name="summary"></a>Resumo
 
 Este guia abordou como a vinculação de aplicativos funciona no Android 6,0. Em seguida, ele abordou como configurar um aplicativo Android 6,0 para dar suporte e responder a links de aplicativo. Ele também abordou como testar a vinculação de aplicativos em um aplicativo Android.
-
 
 ## <a name="related-links"></a>Links relacionados
 

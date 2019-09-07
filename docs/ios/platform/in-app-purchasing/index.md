@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: 63530595d9892ed99b7eace3d248e1bc0d0b37d4
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: f0cc04896b5c6e9b620b24c84d5c9d2a09b9cf4a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70288400"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70752634"
 ---
 # <a name="in-app-purchasing-in-xamarinios"></a>Compras no aplicativo no Xamarin. iOS
 
@@ -55,7 +55,6 @@ Este artigo introduziu o conceito de compra no aplicativo, descreveu como config
 - **Store kit** – explicação das classes usadas para criar recursos de compra no aplicativo.
 - **Codificação de seu aplicativo para compra** – exemplos de como criar compras no aplicativo em um aplicativo Xamarin. Ios.
 - **Relatório** – visão geral das estatísticas disponíveis por meio do iTunes Connect.
-
 
 ## <a name="related-links"></a>Links relacionados
 

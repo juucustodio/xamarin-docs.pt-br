@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: 430f4fedc8e988c89826e3ae023fc25b7b798727
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
-ms.translationtype: HT
+ms.openlocfilehash: 818b6afef395b081768f8bdd6538d5a8ecbad178
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69525343"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70753734"
 ---
 # <a name="publishing-to-the-amazon-app-store"></a>Publicação na Amazon App Store
 
@@ -20,7 +20,6 @@ O Programa de distribuição de aplicativos móveis da Amazon permite que desenv
 [ ![Tela do Amazon App Store](publishing-to-amazon-images/amazon-app-store.png)](publishing-to-amazon-images/amazon-app-store.png#lightbox)
 
 O Amazon não limita o tamanho de APKs. No entanto, se um APK for maior que 30 MB, usará o FTP para distribuição, em vez do Portal de distribuição de aplicativos móveis da Amazon.
-
 
 ## <a name="submitting-apps-binary-info"></a>Enviando aplicativos: Informações binárias
 
@@ -31,8 +30,6 @@ O envio de um aplicativo para a Amazon App Store é um processo semelhante ao en
 - **Capturas de tela** &ndash; O Amazon requer um mínimo de três e um máximo de 10 capturas de tela. As capturas de tela devem ser 1024w x 600h pixels ou 800w x 480h pixels. Ambos os formatos .png e .jpg são aceitáveis.
 - **Imagem promocional** &ndash; Para que um aplicativo seja apresentado em canais promocionais, como a home page, uma imagem promocional pode ser opcionalmente enviada. Pode ser um arquivo .png ou .jpg, de 1024w x 500h pixels, em orientação paisagem. Ele não pode ter nenhuma animação.
 - Podem ser fornecidas atualizações para cinco vídeos.
-
-
 
 ## <a name="approval-process"></a>Processo de aprovação
 

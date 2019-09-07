@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 09/09/2018
-ms.openlocfilehash: 1d0341af35d3c580141c5bfc76e9f170cd7ff4c5
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 4d91ba7b71f2eb61d003700269675c785cbfb0c8
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70119098"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755035"
 ---
 # <a name="fonts"></a>Fontes
 
@@ -60,7 +60,7 @@ Este guia primeiro discutirá como usar fontes como um recurso do Android e, em 
 
 ## <a name="fonts-as-a-resource"></a>Fontes como um recurso
 
-Empacotar uma fonte em um APK Android garante que ela esteja sempre disponível para o aplicativo. Um arquivo de fonte (um. TTF ou a. Arquivo OTF) é adicionado a um aplicativo Xamarin. Android, assim como qualquer outro recurso, copiando arquivos para um subdiretório na pasta Resources de um projeto Xamarin. Android. Os recursos de fontes são mantidos em um subdiretório de **fontes** da pasta de **recursos** do projeto.
+Empacotar uma fonte em um APK Android garante que ela esteja sempre disponível para o aplicativo. Um arquivo de fonte (um. TTF ou a. Arquivo OTF) é adicionado a um aplicativo Xamarin. Android, assim como qualquer outro recurso, copiando arquivos para um subdiretório na pasta **Resources** de um projeto Xamarin. Android. Os recursos de fontes são mantidos em um subdiretório de **fontes** da pasta de **recursos** do projeto.
 
 > [!NOTE]
 > As fontes devem ter uma **ação de compilação** de **AndroidResource** ou não serão empacotadas no apk final. A ação de compilação deve ser definida automaticamente pelo IDE.
@@ -164,7 +164,7 @@ Quando é feita uma solicitação para baixar uma fonte, o aplicativo não consu
 O Android 8,0 dá suporte ao download de fontes de duas maneiras diferentes:
 
 1. **Declarar fontes que podem ser baixadas como um recurso** &ndash; Um aplicativo pode declarar fontes para download no Android por meio de arquivos de recurso XML. Esses arquivos conterão todos os metadados que o Android precisa para baixar de forma assíncrona as fontes quando o aplicativo for iniciado e armazená-las em cache no dispositivo.
-2. Programaticamente &ndash; As APIs no nível 26 da API do Android permitem que um aplicativo Baixe as fontes programaticamente, enquanto o aplicativo está em execução. Os aplicativos criarão `FontRequest` um objeto para uma determinada fonte e passarão esse objeto para `FontsContract` a classe. O `FontsContract` pega o `FontRequest` e recupera a fonte de um _provedor de fontes_. O Android baixará a fonte de forma síncrona. Um exemplo de criação de `FontRequest` um será mostrado posteriormente neste guia.
+2. **Programaticamente** &ndash; As APIs no nível 26 da API do Android permitem que um aplicativo Baixe as fontes programaticamente, enquanto o aplicativo está em execução. Os aplicativos criarão `FontRequest` um objeto para uma determinada fonte e passarão esse objeto para `FontsContract` a classe. O `FontsContract` pega o `FontRequest` e recupera a fonte de um _provedor de fontes_. O Android baixará a fonte de forma síncrona. Um exemplo de criação de `FontRequest` um será mostrado posteriormente neste guia.
 
 Independentemente da abordagem usada, os arquivos de recursos devem ser adicionados ao aplicativo Xamarin. Android antes que as fontes possam ser baixadas. Primeiro, as fontes devem ser declaradas em um arquivo XML no diretório de **recursos/fontes** como parte de uma família de fontes. Este trecho de código é um exemplo de como baixar fontes da [coleção de fonte aberta de fontes do Google](https://fonts.google.com) usando o provedor de fontes padrão fornecido com o Android 8,0 (ou a biblioteca de suporte V26):
 
@@ -197,7 +197,7 @@ Depois que as fontes são definidas, pode ser necessário fornecer informações
 
 Se o provedor de fontes não estiver pré-instalado no dispositivo ou se o aplicativo estiver usando a `Xamarin.Android.Support.Compat` biblioteca, o Android exigirá os certificados de segurança do provedor de fontes. Esses certificados serão listados em um arquivo de recurso de matriz que é mantido no diretório de **recursos/valores** .
 
-Por exemplo, o XML a seguir é denominado Resources **/Values/fonts_cert. xml** e armazena os certificados para o provedor de fontes do Google:
+Por exemplo, o XML a seguir é denominado **Resources/Values/fonts_cert. xml** e armazena os certificados para o provedor de fontes do Google:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -234,7 +234,7 @@ Ao listar as fontes que podem ser baixadas no **AndroidManifest. xml**, o Androi
 </resources>
 ```
 
-Para baixar essas fontes, elas precisam ser declaradas em **AndroidManifest. xml** adicionando `meta-data` como `application` um filho do elemento. Por exemplo, se as fontes que podem ser baixadas forem declaradas em um arquivo de recurso em Resources **/Values/downloadable_fonts. xml**, esse trecho teria que ser adicionado ao manifesto:
+Para baixar essas fontes, elas precisam ser declaradas em **AndroidManifest. xml** adicionando `meta-data` como `application` um filho do elemento. Por exemplo, se as fontes que podem ser baixadas forem declaradas em um arquivo de recurso em **Resources/Values/downloadable_fonts. xml**, esse trecho teria que ser adicionado ao manifesto:
 
 ```xml
 <meta-data android:name="downloadable_fonts" android:resource="@array/downloadable_fonts" />
@@ -278,7 +278,6 @@ public class FontDownloadHelper : FontsContractCompat.FontRequestCallback
     {
         // just an empty delegate to avoid null reference exceptions.  
     };
-
 
     public void DownloadFonts(Context context)
     {

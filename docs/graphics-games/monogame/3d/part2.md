@@ -6,12 +6,12 @@ ms.assetid: 932AF5C2-884D-46E1-9455-4C359FD7C092
 author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
-ms.openlocfilehash: 8bdef9bff975365172a4c215b21cbb07a37e8492
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 1f2fce14f1839e3d9aff4c68dc0dffc0e8059e6c
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227729"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70766810"
 ---
 # <a name="drawing-3d-graphics-with-vertices-in-monogame"></a>Desenho de gráficos 3D com vértices em monojogo
 
@@ -117,7 +117,6 @@ Agora que temos as posições para nossa geometria definida, podemos escrever no
 
 Primeiro, precisaremos definir uma `BasicEffect` instância que conterá parâmetros para renderização, como posição e iluminação. Para fazer isso, adicione um `BasicEffect` membro `Game1` à classe abaixo, em que `floorVerts` o campo é definido:
 
-
 ```csharp
 ...
 VertexPositionTexture[] floorVerts;
@@ -168,7 +167,6 @@ void DrawGround()
 
     effect.Projection = Matrix.CreatePerspectiveFieldOfView(
         fieldOfView, aspectRatio, nearClipPlane, farClipPlane);
-
 
     foreach (var pass in effect.CurrentTechnique.Passes)
     {
@@ -246,7 +244,6 @@ Texture2D checkerboardTexture;
 
 Modifique `Game1.LoadContent` da seguinte maneira:
 
-
 ```csharp
 protected override void LoadContent()
 {
@@ -306,7 +303,6 @@ void DrawGround()
 
 Por fim, precisamos modificar o `Game1.Initialize` método para também atribuir coordenadas de textura em nossos vértices:
 
-
 ```csharp
 protected override void Initialize ()
 {
@@ -349,7 +345,6 @@ As coordenadas de textura normalizadas permitem o redimensionamento de textura s
 
 Podemos alterar a atribuição de coordenadas de textura para usar uma única variável para o número de repetições:
 
-
 ```csharp
 protected override void Initialize ()
 {
@@ -382,7 +377,6 @@ protected override void Initialize ()
 Isso resulta na repetição da textura 20 vezes:
 
 ![](part2-images/image10.png "Isso resulta na repetição da textura 20 vezes")
-
 
 ## <a name="rendering-vertices-with-models"></a>Renderizando vértices com modelos
 

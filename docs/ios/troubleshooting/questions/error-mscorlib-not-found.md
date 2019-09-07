@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 04/03/2018
-ms.openlocfilehash: 4a8e3827deadd5c5d183c61c53cbe8346949759b
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: a1c6c5357c62d0421376930ea04c4755fae59d04
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290496"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769347"
 ---
 # <a name="runtime-error-the-assembly-mscorlibdll-was-not-found-or-could-not-be-loaded"></a>Erro de tempo de execução: O assembly mscorlib. dll não foi encontrado ou não pôde ser carregado
 
@@ -23,4 +23,3 @@ ms.locfileid: "70290496"
 ```
 
 Esse problema ocorre quando as pastas e `.monotouch-64` *ocultas* `.monotouch-32` estão ausentes `.xcarchive` na criação de assinatura/IPA, disparando o erro de tempo de execução.
-

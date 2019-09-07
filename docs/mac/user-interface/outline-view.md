@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 16a37c7544f7ea364c13789fdc7bb42d89a74f5c
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: e4f1f1333c35a72e7243e892e7aac8d98603c973
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70287249"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70772596"
 ---
 # <a name="outline-views-in-xamarinmac"></a>Exibições de estrutura de tópicos no Xamarin. Mac
 
@@ -447,7 +447,6 @@ Se você quiser permitir que o usuário selecione uma única linha, clique duas 
 
 Salve as alterações e retorne ao Visual Studio para Mac para sincronizar com o Xcode.
 
-
 Em seguida, edite o `ProductOutlineDelegate.cs` arquivo e adicione o seguinte método:
 
 ```csharp
@@ -469,7 +468,6 @@ Se você quiser permitir que o usuário selecione várias linhas, clique duas ve
 [![](outline-view-images/select02.png "O Inspetor de atributo")](outline-view-images/select02.png#lightbox)
 
 Salve as alterações e retorne ao Visual Studio para Mac para sincronizar com o Xcode.
-
 
 Em seguida, edite o `ProductOutlineDelegate.cs` arquivo e adicione o seguinte método:
 

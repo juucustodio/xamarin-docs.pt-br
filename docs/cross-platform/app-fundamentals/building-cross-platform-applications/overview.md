@@ -6,12 +6,12 @@ ms.assetid: E442EEFB-FA9C-40E9-9668-5A3F915C8400
 author: conceptdev
 ms.author: crdun
 ms.date: 03/23/2017
-ms.openlocfilehash: e129a8c37e6b8780a57636730c072b230354b8b8
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: c7673e7cd79844130117963bc56fd6e1b3c2b5c7
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70288377"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70758102"
 ---
 # <a name="building-cross-platform-applications-overview"></a>Criando visão geral de aplicativos de plataforma cruzada
 
@@ -45,11 +45,9 @@ Para aumentar a quantidade de reutilização de código, você pode adotar compo
 1. [Pacotes NuGet](https://nuget.org) que são compatíveis com projetos do Xamarin, como [JSON.net](https://www.nuget.org/packages/Newtonsoft.Json/),
 1. Usando recursos do .NET Framework para rede, serviços Web, e/s e muito mais.
 
-
 Alguns desses componentes são implementados no estudo de caso de *tarefa* .
 
  <a name="Separate_Reusable_Code_into_a_Core_Library" />
-
 
 ## <a name="separate-reusable-code-into-a-core-library"></a>Separar código reutilizável em uma biblioteca principal
 
@@ -58,7 +56,6 @@ Seguindo o princípio de separação de responsabilidade, colocando em camadas a
  ![](overview-images/layers2.png "Seguindo o princípio de separação de responsabilidade, colocando em camadas a arquitetura do aplicativo e, em seguida, movendo a funcionalidade principal que é independente da plataforma em uma biblioteca principal reutilizável, você pode maximizar o compartilhamento de código entre plataformas")
 
  <a name="Case_Studies" />
-
 
 ## <a name="case-studies"></a>Estudos de caso
 

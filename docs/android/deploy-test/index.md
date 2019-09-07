@@ -7,17 +7,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/25/2018
-ms.openlocfilehash: 86447c2338b8dd43e37170fa547883e47cbf6b4c
-ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
-ms.translationtype: HT
+ms.openlocfilehash: ff2b481fda34bc7a75c88c72a5e30f00c4b70d9d
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67864205"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70754008"
 ---
 # <a name="deployment-and-testing"></a>Implantação e Teste
 
 Os guias desta seção explicam como testar um aplicativo, otimizar seu desempenho, prepará-lo para lançamento, assiná-lo com um certificado e publicá-lo em uma loja de aplicativos.
-
 
 ## <a name="application-package-sizesapp-package-sizemd"></a>[Tamanho dos pacotes de aplicativos](app-package-size.md)
 
@@ -62,7 +61,6 @@ Há várias técnicas para aumentar o desempenho dos aplicativos criados com o X
 ## <a name="profiling-android-appsandroiddeploy-testprofilingmd"></a>[Criação de perfil de aplicativos Android](~/android/deploy-test/profiling.md)
 
 Este guia explica como usar ferramentas de criação de perfil para examinar o desempenho e o uso de memória de um aplicativo Android.
-
 
 ## <a name="preparing-an-application-for-releaseandroiddeploy-testrelease-prepindexmd"></a>[Preparar um Aplicativo para Lançamento](~/android/deploy-test/release-prep/index.md)
 

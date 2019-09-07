@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/19/2017
-ms.openlocfilehash: 12f34e7bc77fd3978ccfdfb57cc95747123c5603
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 3bc001c048129851a3604752fdfbd45d72d4c3d3
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68657239"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70760491"
 ---
 # <a name="authenticate-users-with-an-identity-provider"></a>Autenticar usuários com um provedor de identidade
 
@@ -263,7 +263,6 @@ O `FindAccountsForService` método retorna um `IEnumerable` coleção de `Accoun
 ## <a name="summary"></a>Resumo
 
 Este artigo explicou como usar auth para gerenciar o processo de autenticação em um aplicativo xamarin. Forms. AUTH fornece o `OAuth2Authenticator` e `OAuth2Request` classes que são usadas por aplicativos do xamarin. Forms para consumir provedores de identidade, como Google, Microsoft, Facebook e Twitter.
-
 
 ## <a name="related-links"></a>Links relacionados
 

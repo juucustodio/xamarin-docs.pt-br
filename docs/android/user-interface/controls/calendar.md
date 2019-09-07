@@ -6,32 +6,28 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: 610f9be346b761c4d20e4bbf97ecfcda74c0bee0
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 63796fc46b126c1e7f99cd1754b58e28f5e36767
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69523056"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70762422"
 ---
 # <a name="xamarinandroid-calendar"></a>Calendário do Xamarin. Android
-
 
 ## <a name="calendar-api"></a>API de calendário
 
 Um novo conjunto de APIs de calendário introduzidas no Android 4 dá suporte a aplicativos projetados para ler ou gravar dados no provedor de calendário. Essas APIs oferecem suporte a uma infinidade de opções de interação com dados de calendário, incluindo a capacidade de ler e gravar eventos, participantes e lembretes. Usando o provedor de calendário em seu aplicativo, os dados que você adicionar por meio da API aparecerão no aplicativo de calendário interno fornecido com o Android 4.
 
-
 ## <a name="adding-permissions"></a>Adicionando permissões
 
 Ao trabalhar com as novas APIs de calendário em seu aplicativo, a primeira coisa que você precisa fazer é adicionar as permissões apropriadas ao manifesto do Android. As permissões que você precisa adicionar são `android.permisson.READ_CALENDAR` e `android.permission.WRITE_CALENDAR`, dependendo se você está lendo e/ou gravando dados de calendário.
-
 
 ## <a name="using-the-calendar-contract"></a>Usando o contrato de calendário
 
 Depois de definir as permissões, você pode interagir com os dados do calendário usando `CalendarContract` a classe. Essa classe fornece um modelo de dados que os aplicativos podem usar quando interagem com o provedor de calendário. O `CalendarContract` permite que os aplicativos resolvam os URIs para entidades de calendário, como calendários e eventos. Ele também fornece uma maneira de interagir com vários campos em cada entidade, como o nome e a ID de um calendário, ou a data de início e de término de um evento.
 
 Vejamos um exemplo que usa a API de calendário. Neste exemplo, examinaremos como enumerar calendários e seus eventos, bem como adicionar um novo evento a um calendário.
-
 
 ## <a name="listing-calendars"></a>Listando calendários
 
@@ -119,8 +115,6 @@ No código acima, o adaptador pega as colunas especificadas na `sourceColumns` m
 Aqui está uma captura de tela mostrando o resultado final, com as informações de calendário `ListView`exibidas no:
 
 [![CalendarDemo em execução no emulador, exibindo duas entradas de calendário](calendar-images/11-calendar.png)](calendar-images/11-calendar.png#lightbox)
-
-
 
 ## <a name="listing-calendar-events"></a>Listando eventos de calendário
 
@@ -218,8 +212,6 @@ Isso exibe uma lista de eventos, conforme mostrado abaixo:
 
 [![Captura de tela do aplicativo de exemplo exibindo três eventos de calendário](calendar-images/12-events.png)](calendar-images/12-events.png#lightbox)
 
-
-
 ## <a name="adding-a-calendar-event"></a>Adicionando um evento de calendário
 
 Vimos como ler os dados do calendário. Agora, vamos ver como adicionar um evento a um calendário. Para que isso funcione, não se esqueça de incluir `android.permission.WRITE_CALENDAR` a permissão mencionada anteriormente. Para adicionar um evento a um calendário, iremos:
@@ -228,7 +220,6 @@ Vimos como ler os dados do calendário. Agora, vamos ver como adicionar um event
 1. Use as chaves da `CalendarContract.Events.InterfaceConsts` classe para popular a `ContentValues` instância.
 1. Defina os fusos horários para as horas de início e término do evento.
 1. Use um `ContentResolver` para inserir os dados do evento no calendário.
-
 
 O código a seguir ilustra estas etapas:
 
@@ -281,7 +272,6 @@ Se abrirmos o aplicativo de calendário, veremos que o evento também é escrito
 [![Captura de tela do aplicativo de calendário exibindo o evento de calendário selecionado](calendar-images/14.png)](calendar-images/14.png#lightbox)
 
 Como você pode ver, o Android permite um acesso poderoso e fácil para recuperar e persistir dados de calendário, permitindo que os aplicativos integrem diretamente os recursos de calendário.
-
 
 ## <a name="related-links"></a>Links relacionados
 

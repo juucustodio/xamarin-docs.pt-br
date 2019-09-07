@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017
-ms.openlocfilehash: b55c9d8a65dbb4e44605295043d1b302295030ce
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: f79a07a04eddeea1441f7938fdef210a37fb920a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70228067"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70772882"
 ---
 # <a name="part-2-essential-xaml-syntax"></a>Parte 2. Sintaxe XAML essencial
 
@@ -85,7 +85,6 @@ Com essa nova sintaxe, terminologia úteis pode ser introduzida:
 - `Label` é um *elemento de objeto*. Ele é um objeto de xamarin. Forms expressado como um elemento XML.
 - `Text`, `VerticalOptions`, `FontAttributes` e `FontSize` são *atributos da propriedade*. Elas são expressadas como atributos XML de propriedades de xamarin. Forms.
 - Esse trecho de código final, `TextColor` tornou-se um *elemento de propriedade*. É uma propriedade de xamarin. Forms, mas agora é um elemento XML.
-
 
 A definição de propriedade elementos podem parecer a princípio ser uma violação da sintaxe XML, mas não é. O período não tem nenhum significado especial em XML. Um decodificador de XML, `Label.TextColor` é simplesmente um elemento filho normal.
 

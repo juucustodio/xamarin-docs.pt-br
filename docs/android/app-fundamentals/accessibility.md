@@ -6,18 +6,17 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/28/2018
-ms.openlocfilehash: f32f32e56ff4869c003b142f9ad67b0e54cfa353
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 982d5b81a22d6e69227081420a5947aed4d3aab1
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70197684"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755676"
 ---
 # <a name="accessibility-on-android"></a>Acessibilidade no Android
 
 Esta página descreve como usar as APIs de acessibilidade do Android para compilar aplicativos de acordo com a [lista de verificação de acessibilidade](~/cross-platform/app-fundamentals/accessibility.md).
 Consulte as páginas de acessibilidade do [Ios](~/ios/app-fundamentals/accessibility.md) e de acessibilidade do [os X](~/mac/app-fundamentals/accessibility.md) para outras APIs de plataforma.
-
 
 ## <a name="describing-ui-elements"></a>Descrevendo elementos da interface do usuário
 
@@ -66,7 +65,6 @@ Em arquivos de layout XML, `android:hint` use o atributo:
     android:id="@+id/someText"
     android:hint="Enter some text" />
 ```
-
 
 ### <a name="labelfor-links-input-fields-with-labels"></a>LabelFor vincula campos de entrada com rótulos
 
@@ -131,7 +129,6 @@ Em arquivos XML de layout, `android:focusable` defina o atributo:
 
 Você também pode controlar a ordem de foco `nextFocusDown`com `nextFocusLeft`os `nextFocusRight` `nextFocusUp` atributos,,, normalmente definidos no layout AXML. Use esses atributos para garantir que o usuário possa navegar facilmente pelos controles na tela.
 
-
 ## <a name="accessibility-and-localization"></a>Acessibilidade e localização
 
 Nos exemplos acima, a dica e a descrição do conteúdo são definidas diretamente para o valor de exibição. É preferível usar valores em um arquivo **Strings. xml** , como este:
@@ -171,13 +168,11 @@ Em atributos de acessibilidade XML de `hint` layout `contentDescription` como e 
 
 O benefício de armazenar texto em um arquivo separado é que várias traduções de idioma do arquivo podem ser fornecidas em seu aplicativo. Consulte o [Guia de localização do Android](~/android/app-fundamentals/localization.md) para saber como adicionar arquivos de cadeia de caracteres localizados a um projeto de aplicativo.
 
-
 ## <a name="testing-accessibility"></a>Testando a acessibilidade
 
 Siga [estas etapas](https://developer.android.com/training/accessibility/testing.html#how-to) para habilitar o Talkback e explorar por toque para testar a acessibilidade em dispositivos Android.
 
 Talvez seja necessário instalar o [Talkback](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback) de Google Play se ele não aparecer em **Configurações > acessibilidade**.
-
 
 ## <a name="related-links"></a>Links relacionados
 

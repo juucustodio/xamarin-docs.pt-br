@@ -7,17 +7,16 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: fdf675e37bec07ef03576313befbaa9309ab9349
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: b84150c8fdca04a9b21c28d126d221d2a9bc5a3f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291581"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769263"
 ---
 # <a name="working-with-tvos-navigation-and-focus-in-xamarin"></a>Trabalhando com navegação e foco do tvOS no Xamarin
 
 _Este artigo aborda o conceito de foco e como ele é usado para apresentar e tratar a navegação dentro de um aplicativo Xamarin. tvOS._
-
 
 Este artigo aborda o conceito de [foco](#Focus-and-Selection) e como ele é usado para manipular a [navegação](#Navigation) em uma interface do usuário do aplicativo Xamarin. tvOS. Vamos examinar como os controles de navegação internos do tvOS usam o foco, o realce e a seleção para fornecer a navegação da interface do usuário do seu aplicativo Xamarin. tvOS.
 
@@ -125,9 +124,6 @@ Para solicitar que o mecanismo de foco mova o foco de `PreferredFocusedView` vol
 > [!IMPORTANT]
 > A `SetNeedsUpdateFocus` chamada só terá efeito se o controlador de exibição ao qual ele está sendo chamado contiver a exibição que tem o foco no momento.
 
-
-
-
 <a name="Working-with-Focus-Guides" />
 
 ### <a name="working-with-focus-guides"></a>Trabalhando com guias de foco
@@ -139,7 +135,7 @@ No entanto, pode haver ocasiões, devido à necessidades de seu design de interf
 Veja o seguinte layout de interface do usuário para obter um exemplo:
 
  [![](navigation-focus-images/guide01.png "Exemplo de trabalho com guias de foco")](navigation-focus-images/guide01.png#lightbox)
- 
+
 Como o botão **mais informações** não se enquadra em uma grade horizontal e vertical com o botão **comprar** , ele estaria inacessível ao usuário. No entanto, isso pode ser facilmente corrigido usando um _Guia de foco_ para fornecer dicas de movimentação para o mecanismo de foco. 
 
 Um guia de foco`UIFocusGuide`() expõe uma área não visível da exibição como de foco para o mecanismo de foco, permitindo que o foco seja redirecionado para outra exibição.
@@ -277,9 +273,6 @@ Com essa propriedade definida como `true`, o modo de exibição de imagem automa
 ## <a name="summary"></a>Resumo
 
 Este artigo abordou o conceito de foco e como ele é usado para manipular a navegação em uma interface do usuário do aplicativo Xamarin. tvOS. Ele examina como os controles de navegação internos do tvOS usam foco, realce e seleção para fornecer navegação. Em seguida, vimos como o foco pode ser usado com da Parallax e imagens em camadas para fornecer pistas visuais para o estado de navegação atual para o usuário final. Por fim, ele examinou o trabalho com o foco, as atualizações de foco, o foco em coleções e a habilitação de da Parallax.
-
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

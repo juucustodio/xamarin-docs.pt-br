@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 06/05/2017
-ms.openlocfilehash: 437db399d1a8cafb19dbc57d7f2ea4141900d8db
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 9b2cb44dff7712953454a9add71f092956e3c759
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292356"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70762781"
 ---
 # <a name="using-mtouch-to-bundle-xamarinios-apps"></a>Usando mtouch para o agrupar aplicativos Xamarin.iOS
 
@@ -49,7 +49,6 @@ O comando `mtouch` pode compilar o código de três maneiras diferentes:
 - Compilar para implantação no dispositivo.
 - Implante o executável no dispositivo.
 
-
 ### <a name="building-for-the-simulator"></a>Compilar para o simulador
 
 Quando você começar, o cenário de uso mais comum será testar o aplicativo no simulador, de modo que você usará o `mtouch -sim` para compilar o código em um pacote do simulador. Isso é feito da seguinte maneira:
@@ -70,9 +69,7 @@ Nesse caso específico, estamos usando o certificado "Desenvolvedor de iPhone: M
 
  <a name="Running_your_Application" />
 
-
 ## <a name="running-your-application"></a>Executar o aplicativo
-
 
 ### <a name="launching-on-the-simulator"></a>Iniciar no simulador
 
@@ -95,8 +92,6 @@ PID: 98460
 Press enter to terminate the application
 ```
 
-
-
 É altamente recomendável que você também mantenha um log dos arquivos de saída padrão e de erro padrão para ajudar na depuração. A saída de `Console.WriteLine` vai para `stdout`, enquanto a saída de `Console.Error.WriteLine` e eventuais outras mensagens de erro de tempo de execução vai para `stderr`.
 
 Para fazer isso, use os sinalizadores `--stdout` e `--stderr`:
@@ -106,7 +101,6 @@ Para fazer isso, use os sinalizadores `--stdout` e `--stderr`:
 ```
 
 Se o aplicativo falhar, você poderá ver a saída e o erro para diagnosticar o problema.
-
 
 ### <a name="deploying-to-a-device"></a>Implantação em um dispositivo
 
@@ -125,8 +119,6 @@ Essas etapas são normalmente executadas pelo Visual Studio para Mac.
 ## <a name="reference"></a>Referência
 
 Consulte a página de manual do [mtouch(1)](http://docs.go-mono.com/?link=man%3amtouch(1)) para obter detalhes sobre as outras opções de linha de comando.
-
-
 
 ## <a name="related-links"></a>Links relacionados
 
