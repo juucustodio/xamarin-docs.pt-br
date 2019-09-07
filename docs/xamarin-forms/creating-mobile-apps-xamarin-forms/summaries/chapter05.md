@@ -1,18 +1,18 @@
 ---
 title: Resumo do capítulo 5. Lidando com tamanhos
-description: 'Criando aplicativos móveis com xamarin. Forms: Resumo do capítulo 5. Lidando com tamanhos'
+description: 'Criando aplicativos móveis com Xamarin. Forms: Resumo do capítulo 5. Lidando com tamanhos'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 486800E9-C09F-4B95-9AC2-C0F8FE563BCF
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
-ms.openlocfilehash: fd6694de756938ff564bed0923427fe62153116a
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: c082bdb10732e42b37511cf050e50f46990a5b5b
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61334298"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771150"
 ---
 # <a name="summary-of-chapter-5-dealing-with-sizes"></a>Resumo do capítulo 5. Lidando com tamanhos
 
@@ -80,15 +80,13 @@ O [ **FitToSizeClock** ](https://github.com/xamarin/xamarin-forms-book-samples/t
 
 ## <a name="accessibility-issues"></a>Problemas de acessibilidade
 
-O **EstimatedFontSize** programa e o **FitToSizeClock** os dois programas contêm uma falha sutil: Se o usuário altera as configurações de acessibilidade do telefone no Android ou Windows 10 Mobile, o programa não é mais possível estimar quanto o texto é renderizado com base no tamanho da fonte. O [ **AccessibilityTest** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05/AccessibilityTest) que demonstra esse problema.
+O programa **EstimatedFontSize** e o programa **FitToSizeClock** contêm uma falha sutil: Se o usuário alterar as configurações de acessibilidade do telefone no Android ou no Windows 10 Mobile, o programa não poderá mais estimar o tamanho de processamento do texto com base na fonte. O [ **AccessibilityTest** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05/AccessibilityTest) que demonstra esse problema.
 
 ## <a name="empirically-fitting-text"></a>Empiricamente ajustando o texto
 
 Outra maneira de ajustar o texto a um retângulo é empiricamente calcular o tamanho do texto renderizado e ajustá-lo para cima ou para baixo. O programa nas chamadas de livro [ `GetSizeRequest` ](xref:Xamarin.Forms.VisualElement.GetSizeRequest(System.Double,System.Double)) em um elemento visual para obter o tamanho do elemento desejado. Que método foi substituído e programas em vez disso, devem chamar [ `Measure` ](xref:Xamarin.Forms.VisualElement.Measure(System.Double,System.Double,Xamarin.Forms.MeasureFlags)).
 
 Para um `Label`, o primeiro argumento deve ser a largura do contêiner (para permitir o encapsulamento), enquanto o segundo argumento deve ser definido para `Double.PositiveInfinity` para tornar a altura irrestrita. O [ **EmpiricalFontSize** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05/EmpiricalFontSize) que demonstra essa técnica.
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

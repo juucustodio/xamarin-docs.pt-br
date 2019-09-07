@@ -7,12 +7,12 @@ ms.assetid: 846B59D3-F66A-48F3-A78C-84217697194E
 author: conceptdev
 ms.author: crdun
 ms.date: 09/25/2017
-ms.openlocfilehash: 6da32e22fbdb3b5b7d96d7ee93c2f25bba84cd78
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: c7a9d359842dde916fc14ffea5ec6e3f453dfee0
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70286618"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70752424"
 ---
 # <a name="core-nfc-in-xamarinios"></a>Básico NFC no Xamarin. iOS
 
@@ -141,7 +141,6 @@ Os parâmetros para o `NFCNdefReaderSession` Construtor são os seguintes:
 - `queue`– A fila em que os retornos de chamada são tratados. Pode ser `null`, nesse caso, não se esqueça de usar o `DispatchQueue.MainQueue` ao atualizar os controles da interface do usuário (conforme mostrado no exemplo).
 - `invalidateAfterFirstRead`– Quando `true`, a verificação para após a primeira verificação bem-sucedida; quando `false` a verificação continuará e vários resultados forem retornados até que a verificação seja cancelada ou o tempo limite de 60 segundos seja atingido.
 
-
 ### <a name="3-cancel-the-scanning-session"></a>3. Cancelar a sessão de verificação
 
 O usuário pode cancelar a sessão de verificação por meio de um botão fornecido pelo sistema na interface do usuário:
@@ -159,7 +158,6 @@ Em ambos os casos, o método `DidInvalidate` do delegado será chamado.
 ## <a name="summary"></a>Resumo
 
 O CoreNFC permite que seu aplicativo leia dados de marcas NFC. Ele dá suporte à leitura de uma variedade de formatos de marca (NDEF tipos de 1 a 5), mas não oferece suporte a gravação ou formatação.
-
 
 ## <a name="related-links"></a>Links relacionados
 

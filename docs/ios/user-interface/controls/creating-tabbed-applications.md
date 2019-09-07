@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: 005f858408ec4d10563e3d945cadb0f1af65a407
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: dd9d93572ac10622345b1dff4145b737baf8aaae
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292977"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769011"
 ---
 # <a name="tab-bars-and-tab-bar-controllers-in-xamarinios"></a>Barras de guia e controladores de barra de guias no xamarin. IOS
 
@@ -28,7 +28,6 @@ O `UITabBarController` dá suporte a com guias de desenvolvimento de aplicativos
 
 - Permitindo que vários controladores a ser adicionado a ele.
 - Fornecendo uma interface com guias do usuário por meio de `UITabBar` classe, para permitir que um usuário alterne entre controladores e as exibições. 
-
 
 Controladores serão adicionados à `UITabBarController` por meio de seu `ViewControllers` propriedade, que é um `UIViewController` matriz. O `UITabBarController` em si lida com o controlador apropriado de carregamento e apresentando sua exibição com base no guia selecionada.
 
@@ -46,7 +45,6 @@ Embora já existe um modelo de aplicativo com guias disponíveis no Visual Studi
 
  <a name="Creating_the_Application" />
 
-
 ### <a name="creating-the-application"></a>Criando o aplicativo
 
 Vamos começar criando um novo aplicativo.
@@ -56,8 +54,6 @@ Selecione o **arquivo > Novo > solução** item de menu no Visual Studio para Ma
 [![](creating-tabbed-applications-images/newsolution1.png "Selecione o modelo de projeto vazio")](creating-tabbed-applications-images/newsolution1.png#lightbox)
 
 [![](creating-tabbed-applications-images/newsolution2.png "Nomeie o projeto TabbedApplication")](creating-tabbed-applications-images/newsolution2.png#lightbox)
-
-
 
 ### <a name="adding-the-uitabbarcontroller"></a>Adicionando o UITabBarController
 
@@ -72,7 +68,6 @@ Para implementar o `UITabBarController` que precisamos fazer o seguinte:
 1. Definir a classe base `TabController` para `UITabBarController` . 
 1. Crie `UIViewController` instâncias devem ser adicionadas para o `TabController` . 
 1. Adicionar o `UIViewController` instâncias para uma matriz atribuída para o `ViewControllers` propriedade do `TabController` . 
-
 
 Adicione o seguinte código para o `TabController` classe para obter estas etapas:
 
@@ -146,13 +141,11 @@ Se executarmos o aplicativo agora, o `UITabBarController` será carregado com a 
 
  <a name="Modifying_TabBarItems" />
 
-
 ### <a name="modifying-tabbaritems"></a>Modificando TabBarItems
 
 Agora que temos um execução guia aplicativo, vamos modificar o `TabBarItem` para alterar a imagem e texto que é exibido, bem como para adicionar uma notificação para uma das guias.
 
  <a name="Setting_a_System_Item" />
-
 
 #### <a name="setting-a-system-item"></a>Definir um Item do sistema
 
@@ -167,7 +160,6 @@ Ao criar o `UITabBarItem` usando um `UITabBarSystemItem`, o título e a imagem s
  ![](creating-tabbed-applications-images/04a-tabimage.png "A primeira guia com um ícone de estrela")
 
  <a name="Setting_the_Title_and_Image" />
-
 
 #### <a name="setting-the-title-and-image"></a>Definindo o título e a imagem
 
@@ -201,7 +193,6 @@ Ao executarmos o aplicativo agora, a segunda guia mostra nosso título personali
 
  <a name="Setting_the_Badge_Value" />
 
-
 #### <a name="setting-the-badge-value"></a>Definindo o valor de notificação
 
 Uma guia também pode exibir uma notificação. Por exemplo, adicione a seguinte linha de código para definir uma notificação na terceira guia:
@@ -222,13 +213,11 @@ tab3.TabBarItem.BadgeValue = null;
 
  <a name="Tabs_in_Non-RootViewController_Scenarios" />
 
-
 ## <a name="tabs-in-non-rootviewcontroller-scenarios"></a>Guias em cenários de não-RootViewController
 
 No exemplo acima, mostramos como trabalhar com um `UITabBarController` quando ele é o `RootViewController` da janela. Neste exemplo, vamos examinar como usar um `UITabBarController` quando não é o `RootViewController` e mostram como isso é criado usar Storyboards.
 
  <a name="Initial_Screen_Example" />
-
 
 ### <a name="initial-screen-example"></a>Exemplo da tela inicial
 
@@ -237,7 +226,6 @@ Para este cenário, a tela inicial é carregada de um controlador que não seja 
 [![](creating-tabbed-applications-images/inital-screen-application.png "Esta captura de tela mostra o fluxo do aplicativo")](creating-tabbed-applications-images/inital-screen-application.png#lightbox)
 
 Vamos começar um novo aplicativo para este exemplo. Novamente, vamos usar o **iPhone > aplicativo > projeto vazio (C#)** modelo, desta vez de nomear o projeto `InitialScreenDemo`.
-
 
 Neste exemplo, precisaremos de um Storyboard para manter nossos controladores de exibição. Para adicionar um Storyboard:
 
@@ -251,7 +239,6 @@ Vamos chamar esse novo Storyboard **MainStoryboard** , conforme ilustrado abaixo
 
 Há algumas etapas importantes a observar ao adicionar um Storyboard em um arquivo anteriormente não são do storyboard, que são abordados os [Introdução ao Storyboards](~/ios/user-interface/storyboards/index.md) guia. Elas são:
 
- 
 1. Adicionar seu nome do Storyboard para o **Interface principal** seção o `Info.plist`:
 
     [![](creating-tabbed-applications-images/project-options.png "Definir a Interface principal para MainStoryboard")](creating-tabbed-applications-images/project-options.png#lightbox)
@@ -276,7 +263,6 @@ O Visual Studio para Mac gerará automaticamente as classes e os arquivos de des
 
  <a name="Creating_the_UI" />
 
-
 #### <a name="creating-the-ui"></a>Criando a interface do usuário
 
 Em seguida, vamos criar uma interface do usuário simples para cada um dos modos de exibição do ViewController, usando o Designer do iOS Xamarin.
@@ -285,7 +271,6 @@ Queremos arrastar uma `Label` e uma `Button` em ViewController1 do **caixa de fe
 
 - **Rótulo** : `Text` = **One**
 - **Botão** : `Title` = **O usuário executa alguma ação inicial**
-
 
 Podemos estar controlando a visibilidade do nosso botão em um `TouchUpInside` precisa de evento e podemos fazer referência a ele no code-behind. Vamos identificá-lo com o **nome** `aButton` no painel de propriedades, conforme ilustrado na captura de tela a seguir:
 
@@ -329,7 +314,7 @@ Exclua esses novos controladores de exibição selecionando a barra preta na par
 No nosso Storyboard, podemos usar transições para lidar com as transições entre a TabBarController e nossos controladores de exibição. Depois de interagir com a exibição inicial, queremos carregá-lo no TabBarController apresentada ao usuário. Vamos configurar isso no designer.
 
 **CTRL + clique** e **arraste** do botão para o TabBarController. Sobre o mouse para cima, será exibido um menu de contexto. Queremos usar um segue modal. 
- 
+
 Para configurar cada um dos nossos guias **Ctrl + clique** do TabBarController a cada um dos nossos controladores de exibição de ordem de um a três e selecione a relação **guia** no menu de contexto, conforme ilustrado abaixo:
 
 [![](creating-tabbed-applications-images/context-menu.png "Selecione a guia relação")](creating-tabbed-applications-images/context-menu.png#lightbox)
@@ -366,7 +351,6 @@ Quando o aplicativo é executado e o usuário toca no botão na primeira tela, o
 ## <a name="summary"></a>Resumo
 
 Este artigo abordou como usar um `UITabBarController` em um aplicativo. Percorremos como carregar controladores em cada guia, bem como definir propriedades nas guias tais título, imagem e notificação. Em seguida, examinamos, uso de storyboards, como carregar um `UITabBarController` em tempo de execução quando não for o `RootViewController` da janela.
-
 
 ## <a name="related-links"></a>Links relacionados
 

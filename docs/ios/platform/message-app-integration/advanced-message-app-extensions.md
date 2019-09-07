@@ -7,17 +7,16 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: 4e488f43f966ca8efd58de4d2bb8f16997d1322e
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: bf6853ef94ff0be5382bab02192070a20884c31e
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290951"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769691"
 ---
 # <a name="advanced-message-app-extensions-in-xamarinios"></a>Extensões avançadas do aplicativo de mensagens no Xamarin. iOS
 
 _Este artigo mostra técnicas avançadas para trabalhar com extensões de aplicativo de mensagens em uma solução Xamarin. iOS que se integra ao aplicativo de mensagens e apresenta novas funcionalidades para o usuário._
-
 
 Novo no iOS 10, uma extensão de aplicativo de mensagem se integra ao aplicativo de **mensagens** e apresenta uma nova funcionalidade ao usuário. A extensão pode enviar texto, adesivos, arquivos de mídia e mensagens interativas.
 
@@ -55,7 +54,6 @@ As mensagens interativas apresentam uma bolha de mensagem personalizada e são f
 O usuário receptor pode responder a uma mensagem interativa tocando em sua bolha de mensagem no histórico de mensagens para carregar a extensão do aplicativo de mensagens que a criou. A extensão será iniciada em tela inteira e permitirá que o usuário redija uma resposta e envie-a de volta para o usuário de origem.
 
 [![](advanced-message-app-extensions-images/interactive02.png "A extensão é iniciada em tela inteira")](advanced-message-app-extensions-images/interactive02.png#lightbox)
-
 
 Os tópicos a seguir serão abordados em detalhes abaixo:
 
@@ -427,7 +425,6 @@ using Foundation;
 using Messages;
 using UIKit;
 
-
 namespace MessageExtension
 {
     public partial class MessagesViewController : MSMessagesAppViewController
@@ -605,7 +602,6 @@ Eles serão entregues em um formato de fallback como duas mensagens separadas:
 ## <a name="summary"></a>Resumo
 
 Este artigo apresentou técnicas avançadas para trabalhar com extensões de aplicativo de mensagens em uma solução Xamarin. iOS que se integra ao aplicativo de **mensagens** e apresenta novas funcionalidades para o usuário.
-
 
 ## <a name="related-links"></a>Links relacionados
 

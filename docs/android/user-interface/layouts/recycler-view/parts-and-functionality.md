@@ -7,15 +7,14 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/13/2018
-ms.openlocfilehash: 89b7f70ae69987edbd465d669f1bac17ddebc7c8
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: bea058a1f275d6f02fe4cbdf70f8e47a11d1cf8e
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522450"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70764119"
 ---
 # <a name="recyclerview-parts-and-functionality"></a>Partes e funcionalidades do RecyclerView
-
 
 `RecyclerView`manipula algumas tarefas internamente (como a rolagem e reciclagem de exibições), mas é essencialmente um gerente que coordena classes auxiliares para exibir uma coleção. `RecyclerView`delega tarefas para as seguintes classes auxiliares:
 
@@ -51,7 +50,6 @@ Além disso, você pode, opcionalmente, estender as seguintes classes para alter
 
 Se você não estender `ItemDecoration` e `ItemAnimator`, `RecyclerView` o usará as implementações padrão. Este guia não explica como criar `ItemDecoration` classes e `ItemAnimator` personalizadas; para obter mais informações sobre essas classes, consulte [RecyclerView. dodecoração](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.ItemDecoration.html) e [RecyclerView. ItemAnimator](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.ItemAnimator.html).
 
-
 <a name="recycling" />
 
 ### <a name="how-view-recycling-works"></a>Como funciona a reciclagem de exibição
@@ -74,8 +72,6 @@ Se você não estender `ItemDecoration` e `ItemAnimator`, `RecyclerView` o usar�
 6. A exibição reciclada é exibida na tela enquanto o usuário rola `RecyclerView` para o próximo item da lista. Enquanto isso, outra exibição rola de visão e é reciclada de acordo com as etapas acima.
 
 Além da reutilização de modo de exibição `RecyclerView` de item, o também usa outra otimização de eficiência: exibir os contentores. Um *detentor de exibição* é uma classe simples que armazena em cache referências de exibição. Cada vez que o adaptador inplana um arquivo de layout de item, ele também cria um detentor de exibição correspondente. O detentor da exibição `FindViewById` usa para obter referências às exibições dentro do arquivo de layout de item inplano. Essas referências são usadas para carregar novos dados nas exibições toda vez que o layout é reciclado para mostrar novos dados.
- 
-
 
 ### <a name="the-layout-manager"></a>O Gerenciador de layout
 
@@ -96,7 +92,6 @@ Para especificar o Gerenciador de layout, crie uma instância do Gerenciador de 
 
 Para obter mais informações sobre o Gerenciador de layout, consulte a [referência de classe RecyclerView. LayoutManager](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.LayoutManager.html).
 
-
 ### <a name="the-view-holder"></a>O detentor da exibição
 
 O detentor da exibição é uma classe que você define para as referências de exibição de cache. O adaptador usa essas referências de exibição para associar cada exibição ao seu conteúdo. Cada item no `RecyclerView` tem uma instância do detentor de exibição associada que armazena em cache as referências de exibição para esse item. Para criar um detentor da exibição, use as etapas a seguir para definir uma classe para manter o conjunto exato de exibições por item:
@@ -107,7 +102,6 @@ O detentor da exibição é uma classe que você define para as referências de 
 
 Um exemplo detalhado de uma `ViewHolder` implementação é apresentado em [um exemplo de RecyclerView básico](~/android/user-interface/layouts/recycler-view/recyclerview-example.md).
 Para obter mais informações `RecyclerView.ViewHolder`sobre, consulte a [referência de classe RecyclerView. ViewHolder](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.ViewHolder.html).
-
 
 ### <a name="the-adapter"></a>O adaptador
 
@@ -131,8 +125,6 @@ Ao implementar um adaptador, você deve substituir os seguintes `RecyclerView.Ad
 
 O Gerenciador de layout chama esses métodos enquanto está posicionando itens dentro `RecyclerView`do. 
 
-
-
 ### <a name="notifying-recyclerview-of-data-changes"></a>Notificando RecyclerView de alterações de dados
 
 `RecyclerView`Não atualiza automaticamente sua exibição quando o conteúdo de sua fonte de dados é alterado; o adaptador deve notificar `RecyclerView` quando há uma alteração no conjunto de dados. O conjunto de dados pode ser alterado de várias maneiras; por exemplo, o conteúdo dentro de um item pode ser alterado ou a estrutura geral dos dados pode ser alterada.
@@ -155,7 +147,6 @@ O Gerenciador de layout chama esses métodos enquanto está posicionando itens d
 Se você souber exatamente como o conjunto de dados foi alterado, poderá chamar os métodos apropriados acima para atualizar `RecyclerView` da maneira mais eficiente. Se você não souber exatamente como o conjunto de dados foi alterado, poderá chamar `NotifyDataSetChanged`, o que é muito menos eficiente, pois `RecyclerView` o deve atualizar todas as exibições visíveis para o usuário. Para obter mais informações sobre esses métodos, consulte [RecyclerView. Adapter](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.Adapter.html).
 
 No próximo tópico, [um exemplo de RecyclerView básico](~/android/user-interface/layouts/recycler-view/recyclerview-example.md), um aplicativo de exemplo é implementado para demonstrar exemplos de código reais das partes e funcionalidades descritas acima.
-
 
 ## <a name="related-links"></a>Links relacionados
 

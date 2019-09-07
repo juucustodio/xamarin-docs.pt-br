@@ -6,12 +6,12 @@ ms.assetid: F8A99E3F-2197-4399-AC81-F1DBAB5729C9
 author: conceptdev
 ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: f0d51d9aa5cde17498124b74cc35011a6d942fae
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 230fe0f168b5718c2bc91cff6dbdc078b0e6834d
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70284838"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70765925"
 ---
 # <a name="custom-linker-configuration"></a>Configuração personalizada do Linker
 
@@ -26,7 +26,6 @@ Quando você tiver esse arquivo de descrição de vinculador, adicione-o ao seu 
 
 - **Para o Android**: defina a **Ação de Build** para **LinkDescription**
 - **Para o iOS**: defina a **Ação de Build** para **LinkDescription**
-
 
 O exemplo a seguir mostra a aparência do arquivo XML:
 
@@ -60,8 +59,6 @@ Observe que os nomes de método getter e/ou setter devem ser usados, pois o vinc
 A segunda seção, para `My.Own.Assembly.dll`, garantirá que o tipo `Foo` preservará todos os seus campos (ou seja, o atributo `preserve="fields"`) e todos os seus construtores (ou seja, todos os métodos chamados `.ctor` em IL). O tipo `Bar` preservará assinaturas específicas (não nomes) para um construtor (que aceita um único parâmetro de cadeia de caracteres) e para um campo de cadeia de caracteres específica `_blah`.
 O namespace `My.Own.Namespace` preservará todos os tipos que ele contém.
 Por fim, qualquer tipo cujo nome completo (incluindo o namespace) corresponda ao padrão de curinga "My.Other\*" preservará todos os seus campos e métodos. O caractere curinga `*` pode ser incluído várias vezes dentro de um padrão "tipo nomecompleto".
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

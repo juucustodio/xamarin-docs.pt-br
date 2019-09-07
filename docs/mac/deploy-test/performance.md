@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 11/10/2017
-ms.openlocfilehash: 48e5e71a9d4435852f72eb9be21f2e80cd124bfd
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 12a2152424fac4024d8b83adb0c80c2499ec8b1d
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291089"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770100"
 ---
 # <a name="xamarinmac-performance"></a>Desempenho do Xamarin.Mac
 
@@ -60,7 +60,6 @@ Aplicativos da área de trabalho geralmente processam grandes quantidades de dad
 Sempre que possível, use [async](~/cross-platform/platform/async.md) e threads para evitar o bloqueio da interface do usuário.
 
 Para operações de execução longa, considere o uso de [NSProgressIndicator](https://docs.microsoft.com/samples/xamarin/mac-samples/progressbarexample) ou outras opções observadas no [HIG](https://developer.apple.com/macos/human-interface-guidelines/indicators/progress-indicators/) da Apple para notificar os usuários.
-
 
 ## <a name="related-links"></a>Links relacionados
 

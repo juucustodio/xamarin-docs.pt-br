@@ -1,27 +1,26 @@
 ---
 title: Notificações de serviço
-description: Este guia aborda como um serviço do Android pode usar notificações locais para enviar informações para um usuário.
+description: Este guia discute como um serviço Android pode usar notificações locais para enviar informações a um usuário.
 ms.prod: xamarin
 ms.assetid: 6C06FDE7-6385-40EF-AC7C-8EFB54E29F45
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: d56f67254a9eae334fa8ac3f08d3ef270800c309
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 5d25604db1f88702f4c24df21b3ebba6c9c2fc95
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61012266"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70754823"
 ---
 # <a name="service-notifications"></a>Notificações de serviço
 
-_Este guia aborda como um serviço do Android pode usar notificações locais para enviar informações para um usuário._
+_Este guia discute como um serviço Android pode usar notificações locais para enviar informações a um usuário._
 
+## <a name="service-notifications-overview"></a>Visão geral das notificações de serviço
 
-## <a name="service-notifications-overview"></a>Visão geral de notificações de serviço
-
-Notificações de serviço permitem que um aplicativo para exibir informações ao usuário, mesmo se o aplicativo Android não está em primeiro plano. É possível que uma notificação fornecer ações do usuário, como a exibição de uma atividade de um aplicativo. O exemplo de código a seguir demonstra como um serviço pode enviar uma notificação a um usuário:
+As notificações de serviço permitem que um aplicativo exiba informações para o usuário, mesmo que o aplicativo do Android não esteja em primeiro plano. É possível que uma notificação forneça ações para o usuário, como exibir uma atividade de um aplicativo. O exemplo de código a seguir demonstra como um serviço pode enviar uma notificação para um usuário:
 
 ```csharp
 [Service]
@@ -46,18 +45,17 @@ public class MyService: Service
 }
 ```
 
-Esta captura de tela é um exemplo de notificação que é exibido:
+Esta captura de tela é um exemplo da notificação que é exibida:
 
-[![Ícone de notificação exibida na barra de status](service-notifications-images/01-notification-sml.png)](service-notifications-images/01-notification.png#lightbox)
+[![Ícone de notificação exibido na barra de status](service-notifications-images/01-notification-sml.png)](service-notifications-images/01-notification.png#lightbox)
 
-Quando os slides do usuário para baixo a tela de notificação na parte superior, a notificação completa é exibida:
+Quando o usuário desliza para baixo na tela de notificação na parte superior, a notificação completa é exibida:
 
-![Notificação para exibido na bandeja de notificação](service-notifications-images/02-fullnotification.png)
-
+![Exibição exibida na bandeja de notificação](service-notifications-images/02-fullnotification.png)
 
 ## <a name="updating-a-notification"></a>Atualizando uma notificação
 
-Para atualizar uma notificação, o serviço será republicar a notificação usando a mesma ID de notificação. Android exibirá ou atualizar a notificação na barra de status conforme necessário.
+Para atualizar uma notificação, o serviço republicará a notificação usando a mesma ID de notificação. O Android exibirá ou atualizará a notificação na barra de status, conforme necessário.
 
 ```csharp 
 void UpdateNotification(string content)
@@ -79,8 +77,7 @@ Notification GetNotification(string content, PendingIntent intent)
 }
 ```
 
-Para obter mais informações sobre notificações estão disponíveis na [notificações locais](~/android/app-fundamentals/notifications/local-notifications.md) seção o [notificações do Android](~/android/app-fundamentals/notifications/index.md) guia.
-
+Mais informações sobre notificações estão disponíveis na seção [notificações locais](~/android/app-fundamentals/notifications/local-notifications.md) do guia de [notificações do Android](~/android/app-fundamentals/notifications/index.md) .
 
 ## <a name="related-links"></a>Links relacionados
 

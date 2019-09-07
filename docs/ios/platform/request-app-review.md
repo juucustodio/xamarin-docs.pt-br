@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: 146dc66974f6e0c6e6a8f7bf9f46b570025eaead
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: f8dc533d1428d622d9b01b8b8dd879653f78fd56
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70280383"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769513"
 ---
 # <a name="request-app-review-in-xamarinios"></a>Solicitar revisão do aplicativo no Xamarin. iOS
 
@@ -68,8 +68,6 @@ Além do novo `RequestReview` método, o desenvolvedor ainda pode fornecer um li
 ## <a name="summary"></a>Resumo
 
 Este artigo abordou o método RequestReview que a Apple adicionou ao iOS 10 e como implementá-lo no Xamarin. iOS.
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

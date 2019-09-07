@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: 9ca931058f15c2ff6f1b46810196d9ea2bb964e0
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: deac7c5eee4ac0276c9d1a67cbfede8fc41378d6
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291392"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769057"
 ---
 # <a name="working-with-tvos-segmented-controls-in-xamarin"></a>Trabalhando com controles segmentados tvOS no Xamarin
 
@@ -232,8 +232,6 @@ Em que a `UIControlState` primeira especifica o estado do segmento à esquerda d
 ## <a name="summary"></a>Resumo
 
 Este artigo abordou a criação e o trabalho com controle segmentado dentro de um aplicativo Xamarin. tvOS.
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

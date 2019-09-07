@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: 1c477f030dc69394ba601b31d71a772f5037af48
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 0e09bf2364df9b672a9612829eaa7a8ba343b0e9
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522302"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70758393"
 ---
 # <a name="xamarinandroid-tablelayout"></a>TableLayout Xamarin. Android
 
@@ -21,7 +21,7 @@ elementos em linhas e colunas.
 
 Inicie um novo projeto chamado **HelloTableLayout**.
 
-Abra o arquivo Resources **/layout/Main. axml** e insira o seguinte:
+Abra o arquivo **Resources/layout/Main. axml** e insira o seguinte:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -118,13 +118,11 @@ protected override void OnCreate (Bundle savedInstanceState)
 }
 ```
 
-O [`SetContentView(int)`](xref:Android.App.Activity.SetContentView*)método) carrega o arquivo de layout para [`Activity`](xref:Android.App.Activity)o, especificado pela ID &mdash; `Resource.Layout.Main` do recurso refere-se ao arquivo de layout Resources **/layout/Main. axml** .
+O [`SetContentView(int)`](xref:Android.App.Activity.SetContentView*)método) carrega o arquivo de layout para [`Activity`](xref:Android.App.Activity)o, especificado pela ID &mdash; `Resource.Layout.Main` do recurso refere-se ao arquivo de layout **Resources/layout/Main. axml** .
 
 Execute o aplicativo. Você deve ver o seguinte:
 
 [![Captura de tela de exemplo do aplicativo TableLayout exibindo várias linhas da tabela](table-layout-images/helloviews3.png)](table-layout-images/helloviews3.png#lightbox)
-
-
 
 ## <a name="references"></a>Referências
 

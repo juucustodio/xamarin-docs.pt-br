@@ -6,19 +6,19 @@ ms.assetid: E53185FB-CEF5-4AB5-94F9-CC9B57C52300
 author: conceptdev
 ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: de34dcdd194bd3777214d23fded7e5f42ec5141c
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 1ad7a98b92c34cf956e50ebc7a6cec73580f8f04
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70287548"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70765498"
 ---
 # <a name="native-references-in-ios-mac-and-bindings-projects"></a>Referências nativas em projetos do iOS, Mac e bindings
 
 _Referências nativas fornecem a capacidade de inserir uma estrutura nativa em um projeto do Xamarin. iOS ou Xamarin. Mac ou um projeto de associação._
 
 Desde o iOS 8,0, é possível criar uma estrutura inserida para compartilhar código entre extensões de aplicativo e o aplicativo principal no Xcode. Usando o recurso de referência nativa, será possível consumir essas estruturas inseridas (criadas com o Xcode) no Xamarin. iOS.
- 
+
 > [!IMPORTANT]
 > Não será possível criar estruturas inseridas de qualquer tipo de projetos Xamarin. iOS ou Xamarin. Mac, as referências nativas permitem apenas o consumo de estruturas nativas (Objective-C) existentes.
 
@@ -98,4 +98,3 @@ Aplicativos que não têm extensões e aplicativos destinados ao iOS
 ## <a name="summary"></a>Resumo
 
 Este artigo deu uma olhada detalhada na inserção de uma estrutura nativa em um aplicativo Xamarin. iOS ou Xamarin. Mac.
-

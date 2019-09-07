@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/06/2016
-ms.openlocfilehash: 54a1f32d4e2102654a6111dc1fb27bc1ba9aabcc
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
-ms.translationtype: HT
+ms.openlocfilehash: 8e347d5d0c80f7aaac121ca1e68eec618ff2ff88
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70119110"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70760990"
 ---
 # <a name="localization"></a>Localização
 
@@ -77,7 +77,6 @@ Por padrão, quando são geradas referências fortemente tipadas a cadeias de ca
 
 Selecione o arquivo **AppResources.resx** e mostre o painel **Propriedades** para ver onde a ferramenta de build está configurada. A captura de tela abaixo mostra a **Ferramenta Personalizada: ResXFileCodeGenerator**.
 
-
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 [![](text-images/vs-resx-internal-sml.png "Janela Propriedades de AppResources.resx")](text-images/vs-resx-internal.png#lightbox)
@@ -90,7 +89,6 @@ Selecione o arquivo **AppResources.resx** e mostre o painel **Propriedades** par
 
 Para tornar as propriedades `public` da cadeia de caracteres fortemente tipadas, você deve alterar manualmente a configuração da **Ferramenta Personalizada: PublicResXFileCodeGenerator**, como mostrado na captura de tela abaixo:
 
-
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 [![](text-images/vs-resx-public-sml.png "Janela Propriedades de AppResources.resx")](text-images/vs-resx-public.png#lightbox)
@@ -98,7 +96,6 @@ Para tornar as propriedades `public` da cadeia de caracteres fortemente tipadas,
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 [![](text-images/xs-resx-internal-sml.png "Painel de Propriedades de AppResources.resx")](text-images/xs-resx-internal.png#lightbox)
-
 
 [![](text-images/xs-resx-public-sml.png "Painel de Propriedades de AppResources.resx")](text-images/xs-resx-public.png#lightbox)
 

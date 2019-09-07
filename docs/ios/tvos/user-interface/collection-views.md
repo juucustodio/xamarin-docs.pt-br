@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: c9980dff866a176d4a4a1f1f6bc1bd8c92bd7097
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 8fcedd4f7dca4527b37c6b83fbd205014cffcaaf
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70280216"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769126"
 ---
 # <a name="working-with-tvos-collection-views-in-xamarin"></a>Trabalhando com exibições de coleção tvOS no Xamarin
 
@@ -96,7 +96,6 @@ Vamos fazer o seguinte:
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
-    
 1. Inicie um novo **aplicativo tvOS de exibição única** no Visual Studio para Mac.
 1. Na **Gerenciador de soluções**, clique duas vezes no arquivo `Main.storyboard` e abra-o no designer do Ios.
 1. Adicione um modo de exibição de imagem, um rótulo e um botão à exibição existente e configure-os para que se pareçam com o seguinte: 
@@ -132,11 +131,9 @@ Vamos fazer o seguinte:
 
     [![](collection-views-images/collection11.png "Defina a identidade como CityCell")](collection-views-images/collection11.png#lightbox)
 1. Salve as alterações.
-    
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-    
 1. Inicie um novo **aplicativo tvOS de exibição única** no Visual Studio.
 1. Na **Gerenciador de soluções**, clique duas vezes no arquivo `Main.storyboard` e abra-o no designer do Ios.
 1. Adicione um modo de exibição de imagem, um rótulo e um botão à exibição existente e configure-os para que se pareçam com o seguinte: 
@@ -170,7 +167,6 @@ Vamos fazer o seguinte:
 
     [![](collection-views-images/collection11vs.png "Defina a identidade como CityCell")](collection-views-images/collection11vs.png#lightbox)
 1. Salve as alterações.
-    
 
 -----
 
@@ -286,7 +282,6 @@ CityView.AdjustsImageWhenAncestorFocused = true;
 ```
 
 Para obter mais informações sobre navegação e foco, consulte nossa documentação sobre [como trabalhar com navegação e foco](~/ios/tvos/app-fundamentals/navigation-focus.md) e [controladores de Siri remotos e Bluetooth](~/ios/tvos/platform/remote-bluetooth.md) .
-
 
 <a name="The-Collection-View-Data-Provider" />
 
@@ -469,7 +464,6 @@ Isso define a propriedade e define a cidade padrão que será mostrada inicialme
 ### <a name="the-collection-view-delegate"></a>O delegado de exibição de coleção
 
 Em seguida, adicione uma `CityViewDelegate` nova classe ao projeto e faça com que seja semelhante ao seguinte:
-
 
 ```csharp
 using System;
@@ -684,7 +678,6 @@ public override void DidUpdateFocus (UIFocusUpdateContext context, UIFocusAnimat
 
 Definimos a transparência do item anterior que está perdendo o foco para zero (0) e a transparência do próximo item se concentrará em 100%. Essas transições também são animadas.
 
-
 ## <a name="configuring-the-collection-view-controller"></a>Configurando o controlador de exibição de coleção
 
 Agora, precisamos fazer a configuração final em nossa exibição de coleção e permitir que o controlador defina a propriedade que definimos para que o modo de exibição de coleção possa ser fechado depois que o usuário fizer uma seleção.
@@ -824,14 +817,11 @@ Um dos principais recursos do uso de uma exibição de coleção é a capacidade
 
 Recentemente adicionados às exibições de coleção para o iOS 9 foi a capacidade de permitir facilmente a reordenação de itens na coleção. Novamente, como o tvOS 9 é um subconjunto do iOS 9, isso é feito da mesma maneira. Consulte nosso documento de [alterações de exibição de coleção](~/ios/user-interface/controls/uicollectionview.md) para obter mais detalhes.
 
-
 <a name="Summary" />
 
 ## <a name="summary"></a>Resumo
 
 Este artigo abordou a criação e o trabalho com exibições de coleção dentro de um aplicativo Xamarin. tvOS. Primeiro, ele abordou todos os elementos que compõem o modo de exibição de coleção. Em seguida, ele mostrou como projetar e implementar uma exibição de coleção usando um Storyboard. Por fim, o recebe links para informações sobre a criação de layouts personalizados e a reordenação de itens.
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

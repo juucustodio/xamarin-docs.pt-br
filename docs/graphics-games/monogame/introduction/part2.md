@@ -6,12 +6,12 @@ ms.assetid: F0622A01-DE7F-451A-A51F-129876AB6FFD
 author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
-ms.openlocfilehash: 44ba9188a059cc28c7b4d89143cef1921a0b1701
-ms.sourcegitcommit: 41a029c69925e3a9d2de883751ebfd649e8747cd
+ms.openlocfilehash: 2c290ac7d66147342087342bda5e5a19b4e6e6f7
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68978479"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70763627"
 ---
 # <a name="part-2--implementing-the-walkinggame"></a>Parte 2 – implementando o WalkingGame
 
@@ -151,7 +151,6 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input.Touch;
 
-
 namespace WalkingGame
 {
     public class CharacterEntity
@@ -255,7 +254,6 @@ Vale a pena observar que, apesar de seu nome `LoadContent` , o método não é o
 
 Por fim, podemos modificar o método Draw da seguinte maneira:
 
-
 ```csharp
 protected override void Draw(GameTime gameTime)
 {
@@ -312,7 +310,6 @@ A `Animation` classe conterá um `List<AnimationFrame>` , bem como a lógica par
 
 Para adicionar a `Animation` classe, clique com o botão direito do mouse ou controle-clique no projeto compartilhado **WalkingGame** e selecione **Adicionar > novo arquivo...** . Insira a **animação** de nome e clique no botão **novo** . Modificaremos o `Animation.cs` arquivo para que ele contenha o seguinte código:
 
-
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -355,7 +352,6 @@ namespace WalkingGame
         {
             double secondsIntoAnimation = 
                 timeIntoAnimation.TotalSeconds + gameTime.ElapsedGameTime.TotalSeconds;
-
 
             double remainder = secondsIntoAnimation % Duration.TotalSeconds;
 
@@ -461,7 +457,6 @@ public CharacterEntity (GraphicsDevice graphicsDevice)
 ```
 
 Como mencionado anteriormente, precisamos chamar `Animation.Update` a reprodução de animações baseadas em tempo. Também precisamos atribuir o `currentAnimation`. Por enquanto, atribuíremos o `currentAnimation` para `walkDown`, mas vamos substituir esse código posteriormente quando implementarmos nossa lógica de movimentação. Vamos adicionar o `Update` método ao `CharacterEntity` da seguinte maneira:
-
 
 ```csharp
 public void Update(GameTime gameTime)
@@ -661,7 +656,6 @@ public void Update(GameTime gameTime)
 
     this.X += velocity.X * (float)gameTime.ElapsedGameTime.TotalSeconds;
     this.Y += velocity.Y * (float)gameTime.ElapsedGameTime.TotalSeconds;
-
 
     if (velocity != Vector2.Zero)
     {

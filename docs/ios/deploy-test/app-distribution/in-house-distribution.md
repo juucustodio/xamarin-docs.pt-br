@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: f81e5a24957d4af1cd2ce27b39d1f398797cce73
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: a27536585cbd320a5595d71b156459e25a1fa7a9
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70289882"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70763059"
 ---
 # <a name="in-house-distribution-for-xamarinios-apps"></a>Distribuição interna para aplicativos Xamarin.iOS
 
@@ -94,7 +94,6 @@ Também é possível solicitar um Certificado usando a caixa de diálogo Prefer�
 
 Como com qualquer outro Perfil de Provisionamento que você criar, uma ID do Aplicativo será necessária para identificar o Aplicativo que você distribuirá para o dispositivo do usuário. Se ainda não tiver criado uma, siga as etapas abaixo para criá-la:
 
-
 1. No [Apple Developer Center (Centro de Desenvolvedores da Apple)](https://developer.apple.com/account/overview.action), navegue até a seção *Certificate, Identifiers and Profiles (Certificados, Identificadores e Perfis)* . Selecione **App IDs (IDs do Aplicativo)** em **Identifiers (Identificadores)** .
 2. Clique no botão **+** e forneça um **Name (Nome)** que o identificará no Portal.
 3. O prefixo do aplicativo já deve estar definido como sua ID de Equipe e não pode ser alterado. Selecione uma ID do Aplicativo Explícita ou Curinga e insira uma ID de Pacote no formato DNS inverso, como: **Explicit (Explícita)** : com.[NomeDeDomínio].[NomeDeAplicativo] **Wildcard (Curinga)** :com.[NomeDeDomínio].*
@@ -150,13 +149,11 @@ Seu aplicativo pode ser distribuído com segurança usando uma variedade de form
 
 Para distribuir seu aplicativo em qualquer uma das seguintes maneiras, você deve primeiro criar um arquivo IPA, conforme explicado na próxima seção.
 
-
 ### <a name="creating-an-ipa-for-in-house-deployment"></a>Criando um IPA para Implantação Interna
 
 Depois de provisionados, aplicativos podem ser empacotados em um arquivo conhecido como um *IPA*. Este é um arquivo zip que contém o aplicativo, juntamente com metadados adicionais e ícones. O IPA é usado para adicionar um aplicativo localmente no iTunes para que ele pode ser sincronizado diretamente em um dispositivo que está incluído no perfil de provisionamento.
 
 Para obter mais informações sobre como criar um IPA, consulte [Suporte do IPA](~/ios/deploy-test/app-distribution/ipa-support.md).
-
 
 ## <a name="summary"></a>Resumo
 

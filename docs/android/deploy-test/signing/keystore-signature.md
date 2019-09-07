@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: d32b2a20fee6b2bb007ee620e0ae4203e950bb98
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: HT
+ms.openlocfilehash: 6cada2c7426cc50723321d77e21852a92fe64d63
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50112439"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755790"
 ---
 # <a name="finding-your-keystores-signature"></a>Encontrar a assinatura de seu repositório de chaves
 
@@ -59,13 +59,11 @@ Certificate fingerprints:
          Version: 3
 ```
 
-
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 Localize o arquivo **debug.keystore** do Xamarin que é usado para assinar o aplicativo. Por padrão, o repositório de chaves que é usado para assinar as versões de depuração de um aplicativo Xamarin.Android pode ser encontrado no seguinte local:
 
 **~/.local/share/Xamarin/Mono for Android/debug.keystore**
-
 
 Informações sobre um repositório de chaves são obtidas executando o comando **keytool** no JDK. Essa ferramenta normalmente é encontrada no seguinte local:
 
@@ -126,7 +124,6 @@ Por exemplo, se você seguiu as etapas em [Criar um Novo Certificado](~/android/
 
 Para obter mais informações sobre como assinar um aplicativo Xamarin.Android, consulte [Assinatura do Pacote de Aplicativo Android](~/android/deploy-test/signing/index.md).
 
-
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 Quando o Assistente **Assinar e distribuir...** do Visual Studio para Mac assinar seu aplicativo, o repositório de chaves resultante estará no seguinte local:
@@ -138,6 +135,5 @@ Por exemplo, se você seguiu as etapas em [Criar um Novo Certificado](~/android/
 **~/Library/Developer/Xamarin/Keystore/chimp/chimp.keystore**
 
 Para obter mais informações sobre como assinar um aplicativo Xamarin.Android, consulte [Assinatura do Pacote de Aplicativo Android](~/android/deploy-test/signing/index.md).
-
 
 -----

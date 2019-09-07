@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: ef7e0e0e0874857786196452de83d7532b80c347
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
-ms.translationtype: HT
+ms.openlocfilehash: 8cd3861093d4548c5252150cb3c74921c6217b25
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61079104"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70775819"
 ---
 |ID de gênero|Nome de gênero|
 |---|---|
@@ -87,4 +87,3 @@ Subgêneros de banca de jornal (6021):
 |13028|Adolescentes|
 |13029|Viagens e regionais|
 |13030|Interesse de mulheres|
-

@@ -1,18 +1,18 @@
 ---
 title: Resumo do capítulo 24. Navegação da página
-description: 'Criando aplicativos móveis com xamarin. Forms: Resumo do capítulo 24. Navegação da página'
+description: 'Criando aplicativos móveis com Xamarin. Forms: Resumo do capítulo 24. Navegação da página'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: DDCDB49C-6008-4F72-B095-463EE21D7C23
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: ce56c30cd631e87d39c9c5bda101b67252a0762a
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: 340aa8c7327ba75986b960d5e0f6bda66c116fc5
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65926899"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770923"
 ---
 # <a name="summary-of-chapter-24-page-navigation"></a>Resumo do capítulo 24. Navegação da página
 
@@ -170,8 +170,6 @@ O [ **StackRestoreDemo** ](https://github.com/xamarin/xamarin-forms-book-samples
 ### <a name="something-like-a-real-life-app"></a>Algo como um aplicativo da vida real
 
 O [ **NoteTaker** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter24/NoteTaker) exemplo também usa `MultiPageRestorableApp` e permite a inserção e a edição de anotações são salvos no `Properties` dicionário.
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

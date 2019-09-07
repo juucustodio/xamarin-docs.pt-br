@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 01/18/2017
-ms.openlocfilehash: 22c3217eec1b2e531ad4534fc1cb35a701a06e34
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: a9d239140cee9eb600414a1bfb0733c9af6488bc
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69524076"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70761418"
 ---
 # <a name="java-integration-with-xamarinandroid"></a>Integração do Java com o Xamarin. Android
 
@@ -38,12 +38,9 @@ A segunda técnica, usando JNI, funciona em um nível muito mais baixo, mas pode
 
 A terceira técnica é radicalmente diferente das duas anteriores: portando o código de Java para C#. A portabilidade do código de um idioma para outro pode ser um processo muito trabalhoso, mas é possível reduzir esse esforço com a ajuda de uma ferramenta chamada *nitidez*. A nitidez é uma ferramenta de código aberto que é Java-toC# -converter. 
 
-
-
 ## <a name="summary"></a>Resumo
 
 Este documento forneceu uma visão geral de alto nível de algumas das diferentes maneiras pelas quais as bibliotecas do Java podem ser reutilizadas em um aplicativo Xamarin. Android. Ele introduziu os conceitos de associações e wrappers chamáveis gerenciados e abordou opções para portar código C#Java para. 
-
 
 ## <a name="related-links"></a>Links relacionados
 

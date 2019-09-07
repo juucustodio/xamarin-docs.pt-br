@@ -7,17 +7,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/05/2018
-ms.openlocfilehash: c0a35414cce6ff9981ad7825c8158a2f6f707585
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: cb7e8aaca13405aedd422288421d497653ddbfe8
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70119502"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70761198"
 ---
 # <a name="firebase-job-dispatcher"></a>Dispatcher de trabalho do Firebase
 
 _Este guia discute como agendar o trabalho em segundo plano usando a biblioteca do Dispatcher de trabalhos do firebase do Google._
-
 
 ## <a name="overview"></a>Visão geral
 
@@ -66,7 +65,6 @@ Para começar a usar o Dispatcher do trabalho firebase, primeiro adicione o [pac
 
 Depois de adicionar a biblioteca do dispatcher do trabalho do `JobService` firebase, crie uma classe e, em seguida, agende- `FirebaseJobDispatcher`a para ser executada com uma instância do.
 
-
 ### <a name="creating-a-jobservice"></a>Criando um JobService
 
 Todo o trabalho executado pela biblioteca do dispatcher do trabalho firebase deve ser feito em um tipo que `Firebase.JobDispatcher.JobService` estende a classe abstrata. Criar um `JobService` é muito semelhante a criar um `Service` com a estrutura do Android: 
@@ -108,7 +106,7 @@ public class DemoJob : JobService
 ### <a name="creating-a-firebasejobdispatcher"></a>Criando um FirebaseJobDispatcher
 
 Antes que qualquer trabalho possa ser agendado, é necessário criar um `Firebase.JobDispatcher.FirebaseJobDispatcher` objeto. O `FirebaseJobDispatcher` é responsável por agendar `JobService`um. O trecho de código a seguir é uma maneira de criar uma instância `FirebaseJobDispatcher`do: 
- 
+
  ```csharp
 // This is the "Java" way to create a FirebaseJobDispatcher object
 IDriver driver = new GooglePlayDriver(context);
@@ -163,7 +161,7 @@ O valor retornado por `FirebaseJobDispatcher.Schedule` será um dos seguintes va
 - `FirebaseJobDispatcher.ScheduleResultNoDriverAvailable`Um inválido `IDriver` foi usado ou o `IDriver` estava de alguma forma indisponível. &ndash; 
 - `FirebaseJobDispatcher.ScheduleResultUnsupportedTrigger`Não há suporte para o `Trigger`. &ndash;
 - `FirebaseJobDispatcher.ScheduleResultBadService`&ndash; O serviço não está configurado corretamente ou não está disponível.
- 
+
 ### <a name="configuring-a-job"></a>Configurando um trabalho
 
 É possível personalizar um trabalho. Exemplos de como um trabalho pode ser personalizado incluem o seguinte:
@@ -242,8 +240,8 @@ O padrão `JobTrigger` para um trabalho é representado pelo valor `Trigger.Now`
 
 #### <a name="setting-a-retrystrategy"></a>Configurando um RetryStrategy
 
-O `Firebase.JobDispatcher.RetryStrategy` é usado para especificar a quantidade de atraso que um dispositivo deve usar antes de tentar executar novamente um trabalho com falha. Um `RetryStrategy` tem uma _política_, que define qual algoritmo de base de tempo será usado para reagendar o trabalho com falha e uma janela de execução que especifica uma janela na qual o trabalho deve ser agendado. Essa _janela_ de reagendamento é definida por dois valores. O primeiro valor é o número de segundos a aguardar antes de reagendar o trabalho (o valor _inicial de retirada_ ) e o segundo número é o número máximo de segundos antes que o trabalho deva ser executado (o valor _máximo de retirada_ ). 
- 
+O `Firebase.JobDispatcher.RetryStrategy` é usado para especificar a quantidade de atraso que um dispositivo deve usar antes de tentar executar novamente um trabalho com falha. Um `RetryStrategy` tem uma _política_, que define qual algoritmo de base de tempo será usado para reagendar o trabalho com falha e uma janela de execução que especifica uma janela na qual o trabalho deve ser agendado. Essa _janela de reagendamento_ é definida por dois valores. O primeiro valor é o número de segundos a aguardar antes de reagendar o trabalho (o valor _inicial de retirada_ ) e o segundo número é o número máximo de segundos antes que o trabalho deva ser executado (o valor _máximo de retirada_ ). 
+
 Os dois tipos de políticas de repetição são identificados por esses valores int:
 
 - `RetryStrategy.RetryPolicyExponential`Uma política de _retirada exponencial_ aumentará o valor inicial da retirada exponencialmente após cada falha. &ndash; Na primeira vez que um trabalho falhar, a biblioteca aguardará o intervalo de _initial especificado antes de reagendar &ndash; o exemplo de trabalho 30 segundos. Na segunda vez em que o trabalho falhar, a biblioteca aguardará pelo menos 60 segundos antes de tentar executar o trabalho. Após a terceira tentativa com falha, a biblioteca aguardará 120 segundos e assim por diante. O padrão `RetryStrategy` para a biblioteca do dispatcher do trabalho firebase é representado `RetryStrategy.DefaultExponential` pelo objeto. Ele tem uma retirada inicial de 30 segundos e uma retirada máxima de 3600 segundos.
@@ -286,7 +284,6 @@ Qualquer um dos métodos retornará um valor inteiro:
 ## <a name="summary"></a>Resumo
 
 Este guia abordou como usar o Dispatcher de trabalhos do firebase para realizar o trabalho de forma inteligente em segundo plano. Ele abordou como encapsular o trabalho a ser executado como um `JobService` e como usar o para `FirebaseJobDispatcher` agendar esse trabalho, especificando os critérios com um `JobTrigger` e como as falhas devem ser tratadas `RetryStrategy`com um.
-
 
 ## <a name="related-links"></a>Links relacionados
 

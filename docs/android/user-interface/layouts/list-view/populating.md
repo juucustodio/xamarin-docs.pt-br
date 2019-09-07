@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/21/2017
-ms.openlocfilehash: e92aada7be8a296baeaa9eebfb18fe906b5c3b63
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: e934dd0f35b7c734228d637fe646d0e2c20e9dad
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522547"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70758634"
 ---
 # <a name="populating-a-xamarinandroid-listview-with-data"></a>Populando um ListView do Xamarin. Android com dados
 
@@ -37,7 +37,6 @@ public class HomeScreen : ListActivity {
 }
 ```
 
-
 ### <a name="handling-row-clicks"></a>Manipulando cliques de linha
 
 Geralmente, `ListView` um também permitirá que o usuário toque em uma linha para executar alguma ação (como reproduzir uma música ou chamar um contato ou mostrar outra tela). Para responder aos toques do usuário, é necessário que haja mais um método implementado `ListActivity` da &ndash; `OnListItemClick` &ndash; seguinte maneira:
@@ -56,7 +55,6 @@ Agora, o usuário pode tocar em uma linha `Toast` e um alerta será exibido:
 
 [![Captura de tela de notificação do sistema que aparece quando uma linha é retocada](populating-images/basictable2.png)](populating-images/basictable2.png#lightbox)
 
-
 ## <a name="implementing-a-listadapter"></a>Implementando um ListAdapter
 
 `ArrayAdapter<string>`é ótimo devido à sua simplicidade, mas é extremamente limitado. No entanto, muitas vezes você tem uma coleção de entidades comerciais, em vez de apenas cadeias de caracteres que você deseja associar.
@@ -67,7 +65,7 @@ Por exemplo, se seus dados consistem em uma coleção de classes Employee, talve
 - **GetView** &ndash; Para retornar uma exibição para cada linha, preenchida com dados.
     Esse método tem um parâmetro para que `ListView` o passe em uma linha existente não usada para reutilização.
 
-- Getitemid &ndash; Retornar um identificador de linha (normalmente o número da linha, embora possa ser qualquer valor longo que você desejar).
+- **Getitemid** &ndash; Retornar um identificador de linha (normalmente o número da linha, embora possa ser qualquer valor longo que você desejar).
 
 - Este indexador &ndash; **[int]** retorna os dados associados a um número de linha específico.
 
@@ -102,7 +100,6 @@ public class HomeScreenAdapter : BaseAdapter<string> {
 }
 ```
 
-
 ### <a name="using-a-custom-adapter"></a>Usando um adaptador personalizado
 
 O uso do adaptador personalizado é semelhante ao interno `ArrayAdapter`, passando um `context` e o `string[]` de valores a serem exibidos:
@@ -112,7 +109,6 @@ ListAdapter = new HomeScreenAdapter(this, items);
 ```
 
 Como este exemplo usa o mesmo layout de linha`SimpleListItem1`(), o aplicativo resultante parecerá idêntico ao exemplo anterior.
-
 
 ### <a name="row-view-re-use"></a>Reutilização de exibição de linha
 
@@ -137,7 +133,6 @@ Implementações de adaptador personalizado *sempre* devem reutilizar `convertVi
 
 Algumas implementações de adaptador (como `CursorAdapter`, por exemplo, `GetView` ) não têm um método, em vez `NewView` de `BindView` exigirem dois métodos diferentes e que impõem a reutilização `GetView` de linha separando as responsabilidades de em duas maneiras. Há um `CursorAdapter` exemplo mais adiante no documento.
 
-
 ## <a name="enabling-fast-scrolling"></a>Habilitando a rolagem rápida
 
 A rolagem rápida ajuda o usuário a rolar por listas longas fornecendo um "identificador" adicional que atua como uma barra de rolagem para acessar diretamente uma parte da lista. Esta captura de tela mostra o identificador de rolagem rápida:
@@ -149,7 +144,6 @@ Fazer com que o identificador de rolagem rápida apareça seja tão simples quan
 ```csharp
 ListView.FastScrollEnabled = true;
 ```
-
 
 ### <a name="adding-a-section-index"></a>Adicionando um índice de seção
 
@@ -164,7 +158,6 @@ Para implementar `ISectionIndexer` , você precisa adicionar três métodos a um
 - **GetPositionForSection** &ndash; Retorna a primeira posição de linha para um determinado índice de seção.
 
 - **GetSectionForPosition** &ndash; Retorna o índice de seção a ser exibido para uma determinada linha.
-
 
 O arquivo `SectionIndex/HomeScreenAdapter.cs` de exemplo implementa esses métodos e alguns códigos adicionais no construtor. O construtor cria o índice da seção fazendo um loop em cada linha e extraindo o primeiro caractere do título (os itens já devem estar classificados para que isso funcione).
 
@@ -213,8 +206,6 @@ public int GetSectionForPosition(int position)
 
 Seus títulos de índice de seção não precisam mapear 1:1 para suas seções reais. É por isso que `GetPositionForSection` o método existe.
 `GetPositionForSection`oferece a oportunidade de mapear quaisquer índices que estejam em sua lista de índice para quaisquer seções no modo de exibição de lista. Por exemplo, você pode ter um "z" no índice, mas talvez não tenha uma seção de tabela para cada letra, portanto, em vez do mapeamento "z" para 26, ele pode ser mapeado para 25 ou 24, ou qualquer índice de seção "z" deve mapear para.
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

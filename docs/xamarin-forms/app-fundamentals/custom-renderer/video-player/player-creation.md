@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: e14008341e531844851452daeee4c730565a2843
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
-ms.translationtype: HT
+ms.openlocfilehash: 177a7f9017559daad528885da90edbc8a0760920
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68650489"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771782"
 ---
 # <a name="creating-the-platform-video-players"></a>Criando os players de vídeo de plataforma
 
@@ -155,7 +155,6 @@ Do Xamarin.Forms 2.5 em diante, os renderizadores do Android devem incluir um co
 
 A substituição `OnElementChanged` cria a `VideoView` e o `RelativeLayout` e define os parâmetros de layout para a `VideoView`, a fim de centralizá-la dentro do `RelativeLayout`.
 
-
 ```csharp
 namespace FormsVideoLibrary.Droid
 {
@@ -284,7 +283,6 @@ Os dois manipuladores de eventos são desanexados no evento `Dispose` para o ren
 Todos os players de vídeo incluídos nas plataformas dão suporte a um conjunto padrão de controles de transporte que incluem botões para reproduzir e pausar, bem como uma barra para indicar a posição atual no vídeo e para mover para uma nova posição.
 
 A classe `VideoPlayer` define uma propriedade chamada `AreTransportControlsEnabled` e define o valor padrão como `true`:
-
 
 ```csharp
 namespace FormsVideoLibrary
@@ -463,7 +461,6 @@ namespace FormsVideoLibrary.UWP
 ```
 
 Mais uma propriedade é necessária para iniciar a reprodução do vídeo: Essa é a propriedade `Source` crucial que faz referência a um arquivo de vídeo. A implementação da propriedade `Source` é descrita no próximo artigo, [Reproduzindo um vídeo da Web](web-videos.md).
-
 
 ## <a name="related-links"></a>Links relacionados
 

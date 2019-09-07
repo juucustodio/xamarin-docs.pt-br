@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 04/18/2018
-ms.openlocfilehash: 6711a16ba0035190d10687ef821831559c07b797
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 45205859a55974414ee865b2141d2bb127e85bcc
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70289835"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70763138"
 ---
 # <a name="using-sqlitenet-with-xamarinios"></a>Usando o SQLite.NET com Xamarin. iOS
 
@@ -136,7 +136,6 @@ Os atributos comuns que você pode aplicar às suas classes para controlar como 
 - **[Ignorar]** – faz com que o SQLite.net ignore essa propriedade. Isso é particularmente útil para propriedades que têm um tipo que não pode ser armazenado no banco de dados ou propriedades que modelam coleções que não podem ser resolvidas automaticamente são SQLite.
 - **[Unique]** – garante que os valores na coluna banco de dados subjacente sejam exclusivos.
 
-
 A maioria desses atributos são opcionais, o SQLite usará valores padrão para nomes de tabela e coluna. Você sempre deve especificar uma chave primária de inteiro para que as consultas seleção e exclusão possam ser executadas com eficiência em seus dados.
 
 ## <a name="more-complex-queries"></a>Consultas mais complexas
@@ -149,7 +148,6 @@ Os seguintes métodos em `SQLiteConnection` podem ser usados para executar outra
 - **Excluir** – exclui um objeto usando sua chave primária.
 - **Consulta\<T >** -executar uma consulta SQL que retorna um número de linhas (como objetos).
 - **Execute** – Use este método (e não `Query` ) quando você não espera linhas do SQL (como instruções INSERT, Update e Delete).
-
 
 ### <a name="getting-an-object-by-the-primary-key"></a>Obtendo um objeto pela chave primária
 

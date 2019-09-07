@@ -1,18 +1,18 @@
 ---
 title: Resumo do capítulo 20. E/s assíncrona e de arquivo
-description: 'Criando aplicativos móveis com xamarin. Forms: Resumo do capítulo 20. E/s assíncrona e de arquivo'
+description: 'Criando aplicativos móveis com Xamarin. Forms: Resumo do capítulo 20. E/s assíncrona e de arquivo'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: D595862D-64FD-4C0D-B0AD-C1F440564247
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/18/2018
-ms.openlocfilehash: cf870cebfdd29e679b767728d1bea723f9310b17
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: 283273e6ee28cc5cd1a61169f38bfcd1dd1726d8
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67650458"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771046"
 ---
 # <a name="summary-of-chapter-20-async-and-file-io"></a>Resumo do capítulo 20. E/s assíncrona e de arquivo
 
@@ -166,8 +166,6 @@ O [ **MandelbrotXF** ](https://github.com/xamarin/xamarin-forms-book-samples/tre
 ## <a name="back-to-the-web"></a>Volta para a web
 
 O [ `WebRequest` ](xref:System.Net.WebRequest) classe usado em alguns exemplos de usa um protocolo assíncrono antigo, chamado de modelo de programação assíncrona ou APM. Você pode converter essa classe para o protocolo de toque modernos usando um dos `FromAsync` métodos em de [ `TaskFactory` ](xref:System.Threading.Tasks.TaskFactory`1) classe. O [ **ApmToTap** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter20/ApmToTap) demonstra isso.
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

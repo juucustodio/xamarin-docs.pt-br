@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: 6daead7962e472c3c7d0b117d545efdbd3c65886
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 2051c7c904dedf8b41f405d3ec7b9c1a003b7fd5
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69523097"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70758789"
 ---
 # <a name="xamarinandroid-cardview"></a>CardView Xamarin. Android
 
@@ -54,9 +54,8 @@ Para adicionar o `Xamarin.Android.Support.v7.CardView` pacote no Visual Studio:
 
 3. Quando a **biblioteca de suporte do Xamarin v7 CardView** for exibida, clique em **instalar**.
 
-Para saber como configurar um projeto de aplicativo do Android 5,0, consulte Configurando [um projeto do android 5,0](~/android/platform/lollipop.md).
+Para saber como configurar um projeto de aplicativo do Android 5,0, consulte [Configurando um projeto do android 5,0](~/android/platform/lollipop.md).
 Para obter mais informações sobre a instalação de pacotes [do NuGet, consulte Walkthrough: Incluindo um NuGet em seu projeto](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough).
-
 
 ## <a name="introducing-cardview"></a>Apresentando o CardView
 
@@ -94,7 +93,6 @@ Este exemplo de layout cria um `CardView` padrão com uma única linha de texto,
 [![Captura de tela de CardView com plano de fundo branco e linha de texto](card-view-images/02-basic-cardview-sml.png)](card-view-images/02-basic-cardview.png#lightbox)
 
 Neste exemplo, o estilo do aplicativo é definido como o tema do material claro`Theme.Material.Light`() para que `CardView` as sombras e bordas sejam mais fáceis de ver. Para obter mais informações sobre os aplicativos do Android 5,0, consulte [material Theme](~/android/user-interface/material-theme.md). Na próxima seção, aprenderemos a Personalizar `CardView` o para um aplicativo.
-
 
 ## <a name="customizing-cardview"></a>Personalizando o CardView
 
@@ -161,7 +159,6 @@ Essa captura de tela é obtida do aplicativo de exemplo [RecyclerViewer](https:/
 
 Observe que um `CardView` pode exibir mais de uma exibição filho em sua área de conteúdo. Por exemplo, no exemplo de aplicativo de exibição de fotos acima, a área de conteúdo é composta `ListView` de um que `ImageView` contém um `TextView`e um. Embora `CardView` as instâncias geralmente sejam organizadas verticalmente, você também pode organizá-las horizontalmente (consulte [criando um estilo de exibição personalizado](~/android/user-interface/material-theme.md#customview) para um exemplo de captura de tela).
 
-
 ### <a name="cardview-layout-options"></a>Opções de layout CardView
 
 `CardView`os layouts podem ser personalizados definindo um ou mais atributos que afetam seu preenchimento, elevação, raio de canto e cor de plano de fundo:
@@ -170,7 +167,6 @@ Observe que um `CardView` pode exibir mais de uma exibição filho em sua área 
 
 Cada atributo também pode ser alterado dinamicamente chamando-se um `CardView` método correspondente (para obter mais `CardView` informações sobre métodos, consulte a [referência de classe CardView](https://developer.android.com/reference/android/support/v7/widget/CardView.html)).
 Observe que esses atributos (exceto a cor do plano de fundo) aceitam um valor de dimensão, que é um número decimal seguido pela unidade. Por exemplo, `11.5dp` especifica 11,5 pixels independentes de densidade.
-
 
 #### <a name="padding"></a>Enchimento
 
@@ -193,8 +189,6 @@ Os atributos de preenchimento são explicados da seguinte maneira:
 Os atributos de preenchimento de conteúdo são relativos ao limite da área de conteúdo, e não a um determinado widget localizado na área de conteúdo.
 Por exemplo, se `contentPadding` fosse suficientemente aumentado no aplicativo de visualização de fotos, `CardView` o cortaria a imagem e o texto mostrado no cartão.
 
-
-
 #### <a name="elevation"></a>Elevação
 
 `CardView`oferece dois atributos de elevação para controlar sua elevação e, como resultado, o tamanho de sua sombra:
@@ -210,7 +204,6 @@ Os atributos de elevação são explicados da seguinte maneira:
 Valores maiores de `cardElevation` aumentar o tamanho da sombra para `CardView` que pareçam flutuar para cima acima do plano de fundo. O `cardElevation` atributo também determina a ordem de desenho de exibições sobrepostas; ou `CardView` seja, será desenhado em outra exibição sobreposta com uma configuração de elevação mais alta e acima de quaisquer exibições sobrepostas com uma configuração de elevação mais baixa.
 A `cardMaxElevation` configuração é útil para quando seu aplicativo altera a elevação &ndash; dinamicamente e impede que a sombra ultrapasse o limite definido com essa configuração.
 
-
 #### <a name="corner-radius-and-background-color"></a>Raio do canto e cor do plano de fundo
 
 `CardView`oferece atributos que você pode usar para controlar seu raio de canto e sua cor de plano de fundo. Essas duas propriedades permitem alterar o estilo geral do `CardView`:
@@ -224,7 +217,6 @@ Esses atributos são explicados da seguinte maneira:
 - `cardBackgroundColor`A cor do plano `CardView`de fundo do. &ndash;
 
 Neste diagrama, `cardCornerRadius` é definido como um 10DP mais arredondado e `cardBackgroundColor` é definido como `"#FFFFCC"` (amarelo claro).
-
 
 ## <a name="compatibility"></a>Compatibilidade
 
@@ -245,11 +237,9 @@ Para ajudar no gerenciamento dessas diferenças de compatibilidade `CardView` , 
 
 Para obter mais informações sobre como manter a compatibilidade com versões anteriores do Android, consulte [mantendo a compatibilidade](https://developer.android.com/training/material/compatibility.html).
 
-
 ## <a name="summary"></a>Resumo
 
 Este guia introduziu o `CardView` novo widget incluído no Android 5,0 (pirulito). Ele demonstrou a aparência `CardView` padrão e explicou como personalizar `CardView` alterando sua elevação, arredondamento de canto, preenchimento de conteúdo e cor de plano de fundo. Ele listou `CardView` os atributos de layout (com diagramas de referência) e explicou `CardView` como usar dispositivos Android anteriores ao Android 5,0 pirulito. Para obter mais informações `CardView`sobre o, consulte a [referência de classe CardView](https://developer.android.com/reference/android/support/v7/widget/CardView.html).
-
 
 ## <a name="related-links"></a>Links relacionados
 

@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/30/2017
-ms.openlocfilehash: 799e117e3a4cb6e3071680da90e6432f389c6682
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 2857033c5cd69e9696d2ce82feaf8212300da2c5
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68642564"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70764808"
 ---
 # <a name="xamarinandroid-textureview"></a>TextureView Xamarin. Android
 
@@ -70,8 +70,6 @@ O código acima cria uma `TextureView` instância no método da `OnCreate` ativi
 [![Exemplo do aplicativo em execução em um dispositivo, exibindo uma imagem](texture-view-images/17-textureviewdemo.png)](texture-view-images/17-textureviewdemo.png#lightbox)
 
 Para usar o `TextureView`, a aceleração de hardware deve ser habilitada, que será por padrão a partir do nível de API 14. Além disso, como este exemplo usa a câmera, a `android.permission.CAMERA` permissão e o `android.hardware.camera` recurso devem ser definidos no **AndroidManifest. xml**.
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: 9492c90274e28f14dee0e8cbcb2aaa1a55de2420
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 866ebd2a66557cda5372c5bc3d7a909e18c762d7
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70282740"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70756097"
 ---
 # <a name="profiling-xamarinios-applications-with-instruments"></a>Analisar aplicativos Xamarin.iOS com o Instrumentos
 
@@ -32,7 +32,6 @@ Selecione o dispositivo e execute o aplicativo Instrumentos:
 3. Conecte um dispositivo iOS ao computador.
 4. No menu **Executar**, selecione **Carregar no Dispositivo**. Agora o aplicativo será compilado e carregado no dispositivo.
 5. No menu **Ferramentas**, selecione **Inicializar Instrumentos**.
-
 
 O Instrumentos será aberto e exibirá a caixa de diálogo a seguir:
 

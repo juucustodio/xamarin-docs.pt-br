@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/25/2018
-ms.openlocfilehash: 77b0bc28bc4156092cb2b12d0c8b234d3f021239
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 67755baf18ad5277e7c2fe8be705522a9b668ff3
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69523439"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70756819"
 ---
 # <a name="xamarinandroid-designer-material-design-features"></a>Recursos de design de material do Xamarin. Designer Android
 
@@ -58,7 +58,6 @@ Para adicionar um novo KEYLINE, insira um novo valor de deslocamento na caixa **
 
 Quando você altera esses valores de configuração, eles são salvos no arquivo XML de layout e reutilizados quando você abre o layout novamente.
 
-
 ## <a name="theme-editor"></a>Editor de tema
 
 O **Editor de tema** permite que você personalize informações de cores para um subconjunto de atributos de tema. Para abrir o **Editor de tema**, clique no ícone de pincel na barra de ferramentas:
@@ -94,7 +93,7 @@ Para obter mais informações sobre herança de estilo, consulte [estilos e tema
 
 ### <a name="color-picker"></a>Seletor de Cor
 
-A captura de tela a seguir ilustra o seletor de **cores**:
+A captura de tela a seguir ilustra o **seletor de cores**:
 
 [![Seletor de cores](material-design-features-images/vs/07-color-picker-w158-sml.png)](material-design-features-images/vs/07-color-picker-w158.png#lightbox)
 
@@ -145,7 +144,7 @@ Quando um recurso de cor é alterado, uma mensagem é exibida com a mensagem; *o
 
 A cor do **plano de fundo** no designer foi alterada para a nova seleção de cor, mas essa alteração ainda não foi salva. Neste ponto, você pode executar um dos seguintes procedimentos:
 
-- Clique em descartar **alterações** para descartar a nova opção de cor (ou opções) e reverter o tema para seu estado original.
+- Clique em **descartar alterações** para descartar a nova opção de cor (ou opções) e reverter o tema para seu estado original.
 
 - Pressione <kbd>Ctrl + S</kbd> para salvar as alterações no tema atual.
 
@@ -157,9 +156,6 @@ No exemplo a seguir, <kbd>Ctrl + S</kbd> foi pressionado para que as alteraçõe
 
 Este tópico descreveu os recursos de design de material disponíveis no Xamarin. Designer Android. Ele explicou como habilitar e configurar a grade de design de material e explicou como usar o editor de tema para criar novos temas personalizados que estão em conformidade com as diretrizes de design de material.
 Para obter mais informações sobre o suporte do Xamarin. Android para o design de material, consulte [material Theme](~/android/user-interface/material-theme.md).
-
-
-
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
@@ -275,10 +271,9 @@ Para obter mais informações sobre herança de estilo, consulte [estilos e tema
 
 ### <a name="color-picker"></a>Seletor de Cor
 
-A captura de tela a seguir ilustra o seletor de **cores**:
+A captura de tela a seguir ilustra o **seletor de cores**:
 
 [![Seletor de cores](material-design-features-images/xs/14-color-picker-sml.png)](material-design-features-images/xs/14-color-picker.png#lightbox)
-
 
 Neste exemplo, a cor do **plano de fundo** pode ser alterada para qualquer valor por meio de vários meios:
 
@@ -316,17 +311,15 @@ Quando um recurso de cor é alterado, uma mensagem é exibida com a mensagem; *o
 
 A alteração de cor no designer foi feita, mas essa alteração ainda não foi salva. Neste ponto, você pode executar um dos seguintes procedimentos:
 
-- Clique em descartar **alterações** para descartar a nova opção de cor (ou opções) e reverter o tema para seu estado original.
+- Clique em **descartar alterações** para descartar a nova opção de cor (ou opções) e reverter o tema para seu estado original.
 
 - Pressione  **&#8984; + S** para salvar as alterações em um novo tema chamado **personalizado**.
-
 
 ## <a name="summary"></a>Resumo
 
 Este tópico descreveu os recursos de design de material disponíveis no Xamarin. Designer Android. Ele explicou como habilitar e configurar a grade de design de material, como usar a paleta de cores de design de material para editar propriedades de cores e como usar o seletor de escala tipográfica para configurar propriedades de texto. Ele também demonstrou como usar o editor de tema para criar novos temas personalizados que estão em conformidade com as diretrizes de design de material. Para obter mais informações sobre o suporte do Xamarin. Android para o design de material, consulte [material Theme](~/android/user-interface/material-theme.md).
 
 -----
-
 
 ## <a name="related-links"></a>Links relacionados
 

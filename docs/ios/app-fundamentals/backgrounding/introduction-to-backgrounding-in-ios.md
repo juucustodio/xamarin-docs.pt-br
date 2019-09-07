@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 07/24/2018
-ms.openlocfilehash: 9fe508d5b0f8d15a26f02b110763cc8e3f4a2e25
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 9ae1860d127ea87e4db830d8a9d299a66fdd0f67
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292139"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70766588"
 ---
 # <a name="introduction-to-backgrounding-in-ios"></a>Introdução à operação em segundo plano no iOS
 
@@ -21,7 +21,6 @@ o iOS regula o processamento em segundo plano de forma muito rígida e oferece t
 - **Registrar uma tarefa em segundo plano** – se um aplicativo precisar concluir uma tarefa importante, ele poderá pedir ao Ios para não interromper a tarefa quando o aplicativo mudar para o plano de fundo. Por exemplo, um aplicativo pode precisar concluir o registro em log de um usuário ou concluir o download de um arquivo grande.
 - **Registrar-se como um aplicativo necessário** para o plano de fundo – um aplicativo pode ser registrado como um tipo específico de aplicativo que tem requisitos de plano de fundo específicos, como *áudio* , *VoIP* , *acessório externo* , *Newsstand* , e o *local* . Esses aplicativos recebem privilégios contínuos de processamento em segundo plano, contanto que estejam executando tarefas que estejam dentro dos parâmetros do tipo de aplicativo registrado.
 - **Habilitar atualizações em segundo plano** – os aplicativos podem disparar atualizações em segundo plano com *monitoramento de região* ou ouvindo *alterações significativas no local* . A partir do iOS 7, os aplicativos também podem se registrar para atualizar o conteúdo em segundo plano usando *busca em segundo plano* ou *notificações remotas* .
-
 
 ## <a name="application-states-and-application-delegate-methods"></a>Estados do aplicativo e métodos de representante do aplicativo
 
@@ -38,7 +37,6 @@ O ciclo de vida do aplicativo iOS é uma coleção de Estados e métodos do apli
 - **Suspenso** – se o aplicativo não tiver nenhum código para ser executado em segundo plano ou se todo o código tiver sido concluído, o aplicativo será *suspenso* pelo sistema operacional. Um processo do aplicativo suspenso é mantido ativo, mas o aplicativo não pode executar nenhum código nesse estado.
 - **Retornar para não em execução/término (raro)** – ocasionalmente, o processo do aplicativo é destruído e o aplicativo retorna para o estado *não em execução* . Isso ocorre em situações de pouca memória ou se o usuário finalizar o aplicativo manualmente.
 
-
 Desde a introdução do suporte multitarefas, o iOS raramente encerra os aplicativos ociosos e, em vez disso, mantém seus processos *suspensos* na memória. Manter o Process Alive de um aplicativo garante que o aplicativo seja iniciado rapidamente na próxima vez que o usuário o abrir. Isso também significa que os aplicativos podem se mover livremente do estado *suspenso* de volta para o estado *em segundo plano* sem desenhar recursos do sistema. o iOS 7 explora esse recurso com novas APIs que permitem que os aplicativos pausem tarefas em segundo plano quando o dispositivo entra em suspensão, atualiza o conteúdo diretamente do plano de fundo sem interação do usuário e muito mais. Abordaremos as novas APIs em [técnicas de plano de fundo do IOS](~/ios/app-fundamentals/backgrounding/ios-backgrounding-techniques/index.md).
 
 ## <a name="application-lifecycle-methods"></a>Métodos de ciclo de vida do aplicativo
@@ -50,7 +48,6 @@ Quando um aplicativo muda de estado, o Ios notifica o aplicativo por meio de mé
 - `DidEnterBackground`– Chamado quando o aplicativo entra no estado em segundo plano, esse método dá a um aplicativo cerca de cinco segundos para se preparar para o encerramento possível. Use esse tempo para salvar dados e tarefas do usuário e remover informações confidenciais da tela.
 - `WillEnterForeground`-Quando um usuário retorna para um aplicativo em segundo plano ou suspenso e o inicia em primeiro plano, `WillEnterForeground` é chamado. Esse é o momento de preparar o aplicativo para levar o primeiro plano por reidratar qualquer estado salvo `DidEnterBackground` durante.  `OnActivated`será chamado imediatamente depois que esse método for concluído.
 - `WillTerminate`-O aplicativo é desligado e seu processo é destruído. Esse método só será chamado se a multitarefa não estiver disponível no dispositivo ou na versão do sistema operacional, se a memória estiver baixa ou se o usuário encerrar manualmente um aplicativo em segundo plano. Observe que os aplicativos suspensos que são encerrados `WillTerminate` não serão chamados.
-
 
 O diagrama a seguir ilustra como os Estados do aplicativo e os métodos de ciclo de vida se ajustam:
 
@@ -71,8 +68,6 @@ Usando o alternador de aplicativo, os usuários podem rolar por instantâneos de
 > [!IMPORTANT]
 > O alternador de aplicativo não mostra uma diferença entre aplicativos em segundo plano e suspensos.
 
-
-
 ### <a name="background-app-refresh-settings"></a>Configurações de atualização do aplicativo em segundo plano
 
 o iOS 7 aumenta o controle de usuário sobre o ciclo de vida do aplicativo, permitindo que os usuários optem por aplicativos [registrados para processamento em segundo plano](~/ios/app-fundamentals/backgrounding/ios-backgrounding-techniques/registering-applications-to-run-in-background.md). *Isso não impede que os aplicativos executem tarefas em segundo plano*.
@@ -84,4 +79,3 @@ Os usuários podem alterar essa configuração navegando até **configurações 
 Os desenvolvedores podem verificar o status do aplicativo de atualização `BackgroundRefreshStatus` em segundo plano com a API. Para obter um exemplo, consulte a [receita verificar a configuração de atualização em segundo plano](https://github.com/xamarin/recipes/tree/master/Recipes/ios/multitasking/check_background_refresh_setting).
 
 Nós abordamos os conceitos básicos do ciclo de vida do aplicativo iOS e os recursos para controlar o ciclo de vida do aplicativo. Em seguida, vamos ver o ciclo de vida do aplicativo iOS em ação.
-

@@ -6,22 +6,21 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/09/2018
-ms.openlocfilehash: ef73b8e1cf9747c9ba426894f37aab620ac0095f
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 550883de571951bb05f0634632fd6b7688e1ab8c
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70119148"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755292"
 ---
 # <a name="permissions-in-xamarinandroid"></a>Permissões no Xamarin. Android
-
 
 ## <a name="overview"></a>Visão geral
 
 Os aplicativos Android são executados em sua própria área restrita e, por motivos de segurança, não têm acesso a determinados recursos do sistema ou hardware no dispositivo. O usuário deve conceder explicitamente permissão ao aplicativo para poder usar esses recursos. Por exemplo, um aplicativo não pode acessar o GPS em um dispositivo sem permissão explícita do usuário. O Android emitirá `Java.Lang.SecurityException` um se um aplicativo tentar acessar um recurso protegido sem permissão.
 
 As permissões são declaradas no **AndroidManifest. xml** pelo desenvolvedor do aplicativo quando o aplicativo é desenvolvido. O Android tem dois fluxos de trabalho diferentes para obter o consentimento do usuário para essas permissões:
- 
+
 - Para aplicativos direcionados para Android 5,1 (API nível 22) ou inferior, a solicitação de permissão ocorreu quando o aplicativo foi instalado. Se o usuário não tiver concedido as permissões, o aplicativo não será instalado. Depois que o aplicativo é instalado, não é possível revogar as permissões, exceto desinstalando o aplicativo.
 - A partir do Android 6,0 (nível 23 da API), os usuários receberam mais controle sobre as permissões; Eles podem conceder ou revogar permissões, desde que o aplicativo esteja instalado no dispositivo. Esta captura de tela mostra as configurações de permissão para o aplicativo Google Contacts. Ele lista as várias permissões e permite que o usuário habilite ou desabilite as permissões:
 
@@ -47,17 +46,14 @@ A biblioteca de suporte do Android reporta algumas das novas APIs para obter per
 
 Este documento explicará como adicionar permissões a um aplicativo Xamarin. Android e como os aplicativos destinados ao Android 6,0 (API nível 23) ou superior devem executar uma verificação de permissão em tempo de execução.
 
-
 > [!NOTE]
 > É possível que as permissões para hardware possam afetar a forma como o aplicativo é filtrado por Google Play. Por exemplo, se o aplicativo exigir permissão para a câmera, Google Play não mostrará o aplicativo no Google Play Store em um dispositivo que não tem uma câmera instalada.
-
 
 <a name="requirements" />
 
 ## <a name="requirements"></a>Requisitos
 
 É altamente recomendável que os projetos Xamarin. Android incluam o pacote NuGet [xamarin. Android. support. compat](https://www.nuget.org/packages/Xamarin.Android.Support.Compat/) . Esse pacote irá backport as APIs específicas de permissão para versões mais antigas do Android, fornecendo uma interface comum sem a necessidade de verificar constantemente a versão do Android em que o aplicativo está sendo executado.
-
 
 ## <a name="requesting-system-permissions"></a>Solicitando permissões do sistema
 
@@ -67,7 +63,6 @@ Os aplicativos destinados ao Android 6,0 ou superior não podem pressupor que, c
 
 > [!NOTE]
 > Os aplicativos devem solicitar apenas as permissões que eles necessitam.
-
 
 ### <a name="declaring-permissions-in-the-manifest"></a>Declarando permissões no manifesto
 
@@ -115,7 +110,6 @@ As permissões são adicionadas ao **AndroidManifest. xml** com `uses-permission
 O Xamarin. Android adicionará automaticamente algumas permissões no momento da compilação para Depurar compilações. Isso facilitará a depuração do aplicativo. Em particular, duas permissões notáveis `INTERNET` são `READ_EXTERNAL_STORAGE`e. Essas permissões definidas automaticamente não parecerão estar habilitadas na lista de **permissões necessárias** . As compilações de versão, no entanto, usam apenas as permissões definidas explicitamente na lista de **permissões necessárias** . 
 
 Para aplicativos direcionados para Android 5.1 (API nível 22) ou inferior, não há nada mais que precise ser feito. Os aplicativos que serão executados no Android 6,0 (API 23 nível 23) ou superior devem passar para a próxima seção sobre como executar verificações de permissão de tempo de execução. 
-
 
 ### <a name="runtime-permission-checks-in-android-60"></a>Verificações de permissão em tempo de execução no Android 6,0
 
@@ -209,11 +203,9 @@ public override void OnRequestPermissionsResult(int requestCode, string[] permis
 }
 ```  
 
-
 ## <a name="summary"></a>Resumo
 
 Este guia abordou como adicionar e verificar permissões em um dispositivo Android. As diferenças em como as permissões funcionam entre aplicativos Android antigos (nível de API < 23) e novos aplicativos Android (nível de API > 22). Ele abordou como executar verificações de permissão em tempo de execução no Android 6,0.
-
 
 ## <a name="related-links"></a>Links relacionados
 

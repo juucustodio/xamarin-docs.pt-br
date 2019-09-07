@@ -7,18 +7,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/13/2018
-ms.openlocfilehash: ea3bfccd9133f6bb4cdf2e2a72bd20a307fb80d1
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 2fc2eabb26a9635b569cc6d3a51195fb554ca950
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522497"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70758605"
 ---
 # <a name="extending-the-recyclerview-example"></a>Estendendo o exemplo de RecyclerView
 
-
 O aplicativo básico descrito em [um exemplo de RecyclerView básico](~/android/user-interface/layouts/recycler-view/recyclerview-example.md) realmente não faz &ndash; muito, simplesmente rola e exibe uma lista fixa de itens de fotografia para facilitar a navegação. Em aplicativos do mundo real, os usuários esperam ser capazes de interagir com o aplicativo tocando em itens na exibição. Além disso, a fonte de dados subjacente pode alterar (ou ser alterada pelo aplicativo) e o conteúdo da exibição deve permanecer consistente com essas alterações. Nas seções a seguir, você aprenderá a lidar com eventos de clique de item e `RecyclerView` atualizar quando a fonte de dados subjacente for alterada.
-
 
 ### <a name="handling-item-click-events"></a>Manipulando eventos de clique de item
 
@@ -70,7 +68,7 @@ void OnClick (int position)
 }
 ```
 
-Esse `OnClick` método é o ouvinte do adaptador para eventos de clique de item das exibições de item. Antes que esse ouvinte possa ser registrado com um modo de exibição de item (por meio do espaço de `PhotoViewHolder` exibição do modo de exibição de item), o construtor deve ser modificado para `OnClick` aceitar esse método como `Click` um argumento adicional e registrar com o evento de exibição de item.
+Esse `OnClick` método é o *ouvinte* do adaptador para eventos de clique de item das exibições de item. Antes que esse ouvinte possa ser registrado com um modo de exibição de item (por meio do espaço de `PhotoViewHolder` exibição do modo de exibição de item), o construtor deve ser modificado para `OnClick` aceitar esse método como `Click` um argumento adicional e registrar com o evento de exibição de item.
 Este é o construtor `PhotoViewHolder` modificado:
 
 ```csharp
@@ -164,7 +162,6 @@ Agora, quando o botão de **seleção aleatória** é tocado `RecyclerView` , o 
 [![Primeira captura de tela antes da permuta, segunda captura de tela após permuta](extending-the-example-images/02-random-pick-sml.png)](extending-the-example-images/02-random-pick.png#lightbox)
 
 É claro `NotifyDataSetChanged` que poderia ter sido chamado em vez de fazer as duas `NotifyItemChanged`chamadas, mas isso forçaria `RecyclerView` a atualizar toda a coleção, embora apenas dois itens da coleção tivessem mudado. Chamar `NotifyItemChanged` é significativamente mais eficiente do que `NotifyDataSetChanged`chamar.
-
 
 ## <a name="related-links"></a>Links relacionados
 

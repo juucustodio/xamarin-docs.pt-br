@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: 07bf50bdee9243141d1f266a88f82770d9503969
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 9bde1140f6590daa4b1d40a8b56edec314bfc66d
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69529104"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70760233"
 ---
 # <a name="introduction-to-enterprise-app-development"></a>Introdução ao desenvolvimento de aplicativos empresariais
 
@@ -42,7 +42,7 @@ No entanto, há muitos problemas que devem ser resolvidos ao particionar um apli
 - Decidindo como navegar entre páginas, incluindo como invocar a navegação e onde a lógica de navegação deve residir. Para obter mais informações, veja [Navegação](~/xamarin-forms/enterprise-application-patterns/navigation.md).
 - Determinando como validar a entrada do usuário para exatidão. A decisão deve incluir como validar a entrada do usuário e como notificar o usuário sobre erros de validação. Para obter mais informações, consulte [validação](~/xamarin-forms/enterprise-application-patterns/validation.md).
 - Decidindo como realizar a autenticação e como proteger recursos com autorização. Para obter mais informações, consulte [autenticação e autorização](~/xamarin-forms/enterprise-application-patterns/authentication-and-authorization.md).
-- Determinando como acessar dados remotos de serviços da Web, incluindo como recuperar dados de maneira confiável e como armazenar dados em cache. Para obter mais informações, consulte Acessando [dados remotos](~/xamarin-forms/enterprise-application-patterns/accessing-remote-data.md).
+- Determinando como acessar dados remotos de serviços da Web, incluindo como recuperar dados de maneira confiável e como armazenar dados em cache. Para obter mais informações, consulte [acessando dados remotos](~/xamarin-forms/enterprise-application-patterns/accessing-remote-data.md).
 - Decidindo como testar o aplicativo. Para obter mais informações, consulte [testes de unidade](~/xamarin-forms/enterprise-application-patterns/unit-testing.md).
 
 Este guia fornece orientação sobre esses problemas e se concentra nos padrões básicos e na arquitetura para criar um aplicativo empresarial multiplataforma usando o Xamarin. Forms. As diretrizes visam ajudar a produzir código adaptável, passível de manutenção e de teste, abordando cenários comuns de desenvolvimento de aplicativos empresariais Xamarin. Forms e separando as preocupações de apresentação, lógica de apresentação e entidades por meio de suporte para o Padrão Model-View-ViewModel (MVVM).
@@ -81,7 +81,7 @@ O aplicativo de exemplo inclui os seguintes serviços de back-end:
 - Um microserviço de pedidos, que é um serviço orientado por domínio que usa padrões de design controlados por domínio.
 - Um microserviço de cesta, que é um serviço CRUD controlado por dados que usa o cache Redis.
 
-Esses serviços de back-end são implementados como microservices usando ASP.NET Core MVC e são implantados como contêineres exclusivos em um único host do Docker. Coletivamente, esses serviços de back-end são chamados de aplicativo de referência eShopOnContainers. Os aplicativos cliente se comunicam com os serviços de back-end por meio de uma interface da Web de transferência de estado de reapresentação (REST). Para obter mais informações sobre os microserviços e o Docker, consulte microservices em [contêineres](~/xamarin-forms/enterprise-application-patterns/containerized-microservices.md).
+Esses serviços de back-end são implementados como microservices usando ASP.NET Core MVC e são implantados como contêineres exclusivos em um único host do Docker. Coletivamente, esses serviços de back-end são chamados de aplicativo de referência eShopOnContainers. Os aplicativos cliente se comunicam com os serviços de back-end por meio de uma interface da Web de transferência de estado de reapresentação (REST). Para obter mais informações sobre os microserviços e o Docker, consulte [microservices em contêineres](~/xamarin-forms/enterprise-application-patterns/containerized-microservices.md).
 
 Para obter informações sobre a implementação dos serviços de back- [end, consulte microservices do .net: Arquitetura para aplicativos .NET em contêineres](https://aka.ms/microservicesebook).
 
@@ -163,7 +163,6 @@ Os projetos de plataforma contêm implementações de efeito, implementações d
 As ferramentas e plataformas de desenvolvimento de aplicativo móvel de plataforma cruzada do Xamarin fornecem uma solução abrangente para aplicativos cliente móveis B2E, B2B e B2C, fornecendo a capacidade de compartilhar código em todas as plataformas de destino (iOS, Android e Windows) e ajudar a reduzir o custo total de propriedade. Os aplicativos podem compartilhar sua interface do usuário e o código da lógica do aplicativo, mantendo a aparência da plataforma nativa.
 
 Os desenvolvedores de aplicativos empresariais enfrentam vários desafios que podem alterar a arquitetura do aplicativo durante o desenvolvimento. Portanto, é importante criar um aplicativo para que ele possa ser modificado ou estendido ao longo do tempo. A criação de tal adaptabilidade pode ser difícil, mas normalmente envolve o particionamento de um aplicativo em componentes discretos e livremente acoplados que podem ser facilmente integrados em um aplicativo.
-
 
 ## <a name="related-links"></a>Links relacionados
 

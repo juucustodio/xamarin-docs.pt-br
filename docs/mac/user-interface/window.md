@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: b6b370ebbcad04dfe829379685a3a9c5a6b5662b
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: df623efcc1da617ac6b700b42d3ac058dea817ca
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291532"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70772651"
 ---
 # <a name="windows-in-xamarinmac"></a>Windows no Xamarin. Mac
 
@@ -747,7 +747,6 @@ No **Inspetor de atributo**, você tem as seguintes opções específicas para o
 - **Estilo** -permite ajustar o estilo do painel de: Painel normal (parece uma janela padrão), painel do utilitário (tem uma barra de título menor), painel HUD (é translúcida e a barra de título faz parte do plano de fundo).
 - **Não ativa** -determina no painel se torna a janela de chave.
 - **Documento modal** – se o documento for modal, o painel só flutuará acima das janelas do aplicativo, caso contrário, ele flutuará acima de todos.
-
 
 Para adicionar um novo painel, faça o seguinte:
 

@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/03/2018
-ms.openlocfilehash: 63f815cc974315735220a99fd4cce2af408a8c2f
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 4cec06287963fb607ba2f523c6f47e56c08e655f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70119053"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70754903"
 ---
 # <a name="creating-a-service"></a>Criando um serviço
 
@@ -38,7 +38,7 @@ No momento da compilação, o Xamarin. Android registrará o serviço injetando 
 <service android:name="md5a0cbbf8da641ae5a4c781aaf35e00a86.DemoService" />
 ```
 
-É possível compartilhar um serviço com outros aplicativos Android exportando -o. Isso é feito definindo a `Exported` propriedade `ServiceAttribute`no. Ao exportar um serviço, a `ServiceAttribute.Name` Propriedade também deve ser definida para fornecer um nome público significativo para o serviço. Este trecho de código demonstra como exportar e nomear um serviço:
+É possível compartilhar um serviço com outros aplicativos Android _exportando_ -o. Isso é feito definindo a `Exported` propriedade `ServiceAttribute`no. Ao exportar um serviço, a `ServiceAttribute.Name` Propriedade também deve ser definida para fornecer um nome público significativo para o serviço. Este trecho de código demonstra como exportar e nomear um serviço:
 
 ```csharp
 [Service(Exported=true, Name="com.xamarin.example.DemoService")]
@@ -104,7 +104,6 @@ Sempre que possível, os aplicativos devem usar tentativas explícitas para inic
 
 A forma como a intenção é distribuída depende do tipo de serviço e será discutida em mais detalhes posteriormente nos guias específicos de cada tipo de serviço.
 
-
 ### <a name="creating-an-intent-filter-for-implicit-intents"></a>Criando um filtro de intenção para intenções implícitas
 
 Para associar um serviço a uma intenção implícita, um aplicativo Android deve fornecer alguns metadados para identificar os recursos do serviço. Esses metadados são fornecidos por filtros de _intenção_. Os filtros de intenção contêm algumas informações, como uma ação ou um tipo de dados, que devem estar presentes em uma intenção de iniciar um serviço. No Xamarin. Android, o filtro de intenção é registrado em **AndroidManifest. xml** decorando um serviço com [`IntentFilterAttribute`](xref:Android.App.IntentFilterAttribute)o. Por exemplo, o código a seguir adiciona um filtro de intenção com uma ação `com.xamarin.DemoService`associada de:
@@ -128,7 +127,6 @@ Isso resulta em uma entrada incluída no arquivo &ndash; **AndroidManifest. xml*
 ```
 
 Com os conceitos básicos de um serviço Xamarin. Android fora do caminho, vamos examinar os diferentes subtipos de serviços com mais detalhes.
-
 
 ## <a name="related-links"></a>Links relacionados
 

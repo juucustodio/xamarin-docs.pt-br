@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: 14fb3740f558b006d507ff6875fd2cfc81a04298
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: fee63906d30f68d397b60a465a87bd96d4106d14
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70119727"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70757428"
 ---
 # <a name="an-introduction-to-renderscript"></a>Uma introdução ao renderscript
 
@@ -63,7 +63,6 @@ O mecanismo renderscript executará uma verificação de tempo de execução par
 
 Todos os kernels renderscript serão encapsulados por um tipo que é um descendente do[`Android.Renderscripts.Script`](xref:Android.Renderscripts.Script)
 . A `Script` classe é usada para definir parâmetros para um renderscript, definir o apropriado `Allocations`e executar o renderscript. Há duas `Script` subclasses na SDK do Android:
-
 
 - **`Android.Renderscripts.ScriptIntrinsic`** Algumas das tarefas de renderscript mais comuns são agrupadas na SDK do Android e podem ser acessadas por uma subclasse da classe [ScriptIntrinsic.](xref:Android.Renderscripts.ScriptIntrinsic) &ndash; Não há necessidade de um desenvolvedor realizar etapas adicionais para usar esses scripts em seu aplicativo, pois eles já foram fornecidos.
 
@@ -148,13 +147,11 @@ blurScript.SetRadius(25);  // Set a pamaeter
 blurScript.ForEach(outputAllocation);
 ```
 
-Talvez você queira conferir o desfoque de [uma imagem com a receita renderscript](https://github.com/xamarin/recipes/tree/master/Recipes/android/other_ux/drawing/blur_an_image_with_renderscript) , é um exemplo completo de como usar um script intrínseco no Xamarin. Android.
+Talvez você queira conferir o [Desfoque de uma imagem com a receita renderscript](https://github.com/xamarin/recipes/tree/master/Recipes/android/other_ux/drawing/blur_an_image_with_renderscript) , é um exemplo completo de como usar um script intrínseco no Xamarin. Android.
 
 ## <a name="summary"></a>Resumo
 
 Este guia introduziu o renderscript e como usá-lo em um aplicativo Xamarin. Android. Ele discutiu brevemente o que é o renderscript e como ele funciona em um aplicativo Android. Ele descreveu alguns dos principais componentes em renderscript e a diferença entre _scripts de usuário_ e _scripts instrinsic_. Por fim, este guia abordou as etapas de uso de um script intrínseco em um aplicativo Xamarin. Android.
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

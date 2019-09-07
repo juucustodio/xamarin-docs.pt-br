@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017
-ms.openlocfilehash: f81a9d232e1702d112e837a80d35403162e3adca
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 116225165b8ee27b896d3de8598f8fbf39400f52
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69529336"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70767524"
 ---
 # <a name="part-5-from-data-bindings-to-mvvm"></a>Parte 5. De associações de dados a MVVM
 
@@ -707,7 +707,6 @@ private async void OnListViewItemSelected(object sender, SelectedItemChangedEven
 ## <a name="summary"></a>Resumo
 
 XAML é uma ferramenta poderosa para a definição de interfaces do usuário em aplicativos xamarin. Forms, especialmente quando a associação de dados e MVVM são usados. O resultado é uma representação limpa, elegante e potencialmente editável de uma interface do usuário com todo o suporte de plano de fundo no código.
-
 
 ## <a name="related-links"></a>Links relacionados
 

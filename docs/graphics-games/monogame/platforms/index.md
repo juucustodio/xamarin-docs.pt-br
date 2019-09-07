@@ -1,21 +1,20 @@
 ---
-title: Considerações específicas da plataforma de MonoGame
-description: Este documento leva a um guia que descreve como usar o MonoGame na UWP. O guia vinculado aborda como configurar um aplicativo, executá-lo no Xbox One, conteúdo de referência e muito mais.
+title: Considerações específicas da plataforma monogame
+description: Este documento contém links para um guia que descreve como usar monojogo no UWP. O guia vinculado discute como configurar um aplicativo, executá-lo no Xbox One, no conteúdo de referência e muito mais.
 ms.prod: xamarin
 ms.assetid: 36EF35F2-882C-4DCF-A95D-A36EFA47BCCC
 author: conceptdev
 ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: 113ea7fe2224d311d854076847e8e933f11551a2
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 6df63449a4b5ea5382e70c5146f5d724b729183e
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61161004"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70766618"
 ---
-# <a name="monogame-platform-specific-considerations"></a>Considerações específicas da plataforma de MonoGame
+# <a name="monogame-platform-specific-considerations"></a>Considerações específicas da plataforma monogame
 
-## <a name="monogame-on-universal-windows-platform-uwpgraphics-gamesmonogameplatformsuwpmd"></a>[MonoGame na plataforma Universal do Windows (UWP)](~/graphics-games/monogame/platforms/uwp.md)
+## <a name="monogame-on-universal-windows-platform-uwpgraphics-gamesmonogameplatformsuwpmd"></a>[Plataforma Universal do Windows de jogos (UWP)](~/graphics-games/monogame/platforms/uwp.md)
 
-Este passo a passo aborda a criação do projeto de MonoGame Universal Windows Platform (UWP) e o carregamento de conteúdo. Aplicativos UWP podem ser executados em todos os dispositivos Windows 10, incluindo desktops, tablets, telefones do Windows e Xbox One.
-
+Este tutorial aborda a criação e o carregamento de conteúdo do UWP (monogame Plataforma Universal do Windows). Os aplicativos UWP podem ser executados em todos os dispositivos Windows 10, incluindo desktops, tablets, Windows phones e Xbox One.

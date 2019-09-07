@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 06/13/2018
-ms.openlocfilehash: 8039482175465a67867f3c70f17518dee8b9500b
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 150a4e3c1deafbabea892d5adb786374c3d97d12
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70277862"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769588"
 ---
 # <a name="passkit-in-xamarinios"></a>PassKit no Xamarin. iOS
 
@@ -74,7 +74,6 @@ Atualmente, os cinco tipos com suporte, que podem ser diferenciados no aplicativ
 - **Cartão de loja** – arredondado para a parte superior, como um cartão de crédito ou débito.
 - **Cupom** – perfurado ao longo da parte superior.
 - **Genérico** – igual ao cartão da loja, arredondado para a parte superior.
-
 
 Os cinco tipos de passagem são mostrados nesta captura de tela (em ordem: cupom, genérico, cartão de loja, aprovação de placa e tíquete de evento):
 
@@ -204,10 +203,8 @@ As passagens são assinadas com um certificado privado que você gera no portal 
 1. Use o certificado para assinar o `manifest.json` arquivo e gravar o resultado em um arquivo chamado `signature` .
 1. Compacte tudo e dê ao arquivo resultante uma `.pkpass` extensão de arquivo.
 
-
 Como sua chave privada é necessária para assinar a passagem, esse processo só deve ser feito em um servidor seguro que você controla. Não distribua suas chaves para tentar e gerar passagens em um aplicativo.
 
- 
 ## <a name="configuration-and-setup"></a>Configuração e configuração
 
 Esta seção contém instruções para ajudar a configurar seus detalhes de provisionamento e criar sua primeira passagem.
@@ -229,7 +226,6 @@ A primeira etapa é configurar uma ID de tipo de passagem para cada _tipo_ difer
 
 2. Forneça uma **Descrição** (nome) e um **identificador** (cadeia de caracteres exclusiva) para a passagem. Observe que todas as IDs de tipo de passagem devem começar `pass.` com a cadeia de caracteres `pass.com.xamarin.coupon.banana` neste exemplo que usamos: [![](passkit-images/register.png "Forneça uma descrição e um identificador")](passkit-images/register.png#lightbox)
 
-
 3. Confirme a ID de passagem pressionando o botão **registrar** .
 
 #### <a name="generate-a-certificate"></a>Gerar um certificado
@@ -242,13 +238,11 @@ Para criar um novo certificado para essa ID de tipo de passagem, faça o seguint
 
     [![](passkit-images/cert-dist.png "Selecione criar certificado")](passkit-images/cert-dist.png#lightbox)
 
-
 2. Siga as etapas para criar uma solicitação de assinatura de certificado (CSR).
   
 3. Pressione o botão **continuar** no portal do desenvolvedor e carregue o CSR para gerar seu certificado.
 
 4. Baixe o certificado e clique duas vezes nele para instalá-lo em seu conjunto de chaves.
-
 
 Agora que criamos um certificado para essa ID de tipo Pass, a próxima seção descreve como criar uma passagem manualmente.
 
@@ -264,7 +258,6 @@ Agora que criamos o tipo Pass, podemos criar manualmente uma passagem para o tes
 - Calcule hashes SHA1 para cada arquivo na pasta e grave em Manifest. JSON.
 - Assine manifest. JSON com o arquivo. p12 do certificado baixado.
 - COMPACTe o conteúdo do diretório e renomeie com a extensão. pkpass.
-
 
 Há alguns arquivos de origem no [código de exemplo](https://docs.microsoft.com/samples/xamarin/ios-samples/passkit) para este artigo que podem ser usados para gerar uma passagem. Use os arquivos no `CouponBanana.raw` diretório do diretório CreateAPassManually. Os seguintes arquivos estão presentes:
 
@@ -338,7 +331,6 @@ Os aplicativos de canal são aplicativos intermediários que podem receber passa
 - **Safari** – reconhece o tipo de conteúdo Pass quando um link de URL de passagem é clicado.
 - **Outros aplicativos personalizados** – qualquer aplicativo que receba anexos ou abra links (clientes de mídia social, leitores de email, etc.).
 
-
 Esta captura de tela mostra como o **email** no Ios 6 reconhece um anexo Pass e as ofertas (quando tocadas) para **adicioná** -lo à carteira.
 
  [![](passkit-images/image22.png "Esta captura de tela mostra como o email no iOS 6 reconhece uma passagem de anexo")](passkit-images/image22.png#lightbox)
@@ -350,7 +342,6 @@ Se você estiver criando um aplicativo que pode ser um canal para passagens, ele
 - **Extensão de arquivo** -. pkpass
 - **Tipo de MIME** – application/vnd. Apple. pkpass
 - **UTI** – com. Apple. pkpass
-
 
 A operação básica de um aplicativo de Conduit é recuperar o arquivo de passagem e chamar PassKit `PKAddPassesViewController` para dar ao usuário a opção de adicionar a passagem à sua carteira. A implementação desse controlador de exibição será abordada na próxima seção sobre **aplicativos complementares**.
 
@@ -383,7 +374,6 @@ Clique duas vezes no arquivo **retitles. plist** na painel de soluções para ab
 Na seção carteira, selecione a opção **habilitar carteira**
 
 ![](passkit-images/image32.png "Habilitar direitos de carteira")
-
 
 A opção padrão é para seu aplicativo permitir todos os tipos de passagem. No entanto, é possível restringir seu aplicativo e permitir apenas um subconjunto de tipos de passagem de equipe. Para habilitar isso, selecione o **subconjunto de tipos de aprovação de equipe** e insira o identificador de tipo de passagem do subconjunto que você deseja permitir.
 

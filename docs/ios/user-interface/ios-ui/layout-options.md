@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: eb20c73ab66af5ca07bf2efb31d631d9fa9776dc
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 335c385b5be77736f0e19852eb71f2a2329eb9a2
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70287038"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768257"
 ---
 # <a name="layout-options-in-xamarinios"></a>Opções de layout no Xamarin. iOS
 
@@ -40,7 +40,6 @@ textfield1.Frame = new RectangleF(15, 277, 79, 27);
 textfield1.AutoresizingMask = UIViewAutoresizing.FlexibleRightMargin | UIViewAutoresizing.FlexibleBottomMargin;
 ```
 
-
 Para testar as configurações de dimensionamento automático, habilite diferentes **orientações de dispositivo com suporte** nas opções do projeto:
 
  [![](layout-options-images/image43a.png "Configurações de dimensionamento automático")](layout-options-images/image43a.png#lightbox)
@@ -53,7 +52,6 @@ textfield1.AutoresizingMask = UIViewAutoresizing.FlexibleWidth;
 imageview1.AutoresizingMask = UIViewAutoresizing.FlexibleTopMargin | UIViewAutoresizing.FlexibleLeftMargin;
 ```
 
-
 Também podemos ajustar os controles usando o designer. A seleção dos Struts como exibido abaixo fará com que a imagem permaneça alinhada à direita sem ser recortada na parte inferior da exibição:
 
  [![](layout-options-images/autoresize.png "Autorotação")](layout-options-images/autoresize.png#lightbox)
@@ -63,10 +61,6 @@ Essas capturas de tela mostram como os controles redimensionam ou se reposiciona
  [![](layout-options-images/image44a.png "Autorotação")](layout-options-images/image44a.png#lightbox)
 
 Observe que a exibição de texto e o campo de texto são esticados para manter as mesmas margens esquerda e direita, `FlexibleWidth` devido à configuração. A imagem tem a margem superior e esquerda flexível, o que significa que preserva as margens inferior e direita – mantendo a imagem na exibição quando a tela é girada. Layouts complexos normalmente exigem uma combinação dessas configurações em todos os controles visíveis para manter a interface do usuário consistente e impedir que os controles se sobreponham quando os limites da exibição são alterados (devido a rotação ou outro evento de redimensionamento).
-
-
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

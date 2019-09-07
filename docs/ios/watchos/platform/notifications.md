@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: 9ca50171e43ef98e5b4e5fbd7bd236f74d35da8f
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: ae6a4fb45eb53c514c888d671780a5ceaeba6624
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70286771"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768605"
 ---
 # <a name="watchos-notifications-in-xamarin"></a>watchOS notificações no Xamarin
 
@@ -34,7 +34,6 @@ Depois que você tiver personalizado o controlador, ele poderá parecer com este
 
 ![](notifications-images/notifications-segue.png "As propriedades de notificação")
 
-
 Há dois tipos de notificação:
 
 - Exibição estática de **aparência curta** não rolável definida pelo sistema.
@@ -46,7 +45,6 @@ Há dois tipos de notificação:
 A interface do usuário de aparência curto consiste apenas o ícone do aplicativo, o nome do aplicativo e a cadeia de caracteres do título de notificação.
 
 Se o usuário não ignorar a notificação, o sistema automaticamente alternará para uma notificação de aparência longa que fornece mais informações.
-
 
 ### <a name="long-look-notification-controller"></a>Controlador de notificação de análise longa
 
@@ -63,7 +61,6 @@ O modo de exibição estático deve ser simples e rápida de exibir.
 O modo de exibição dinâmico pode exibir mais dados e fornecer mais interatividade.
 
 ![](notifications-images/notification-dynamic.png "O modo de exibição dinâmico")
-
 
 ## <a name="generating-notifications"></a>Gerar notificações
 
@@ -146,8 +143,6 @@ No [catálogo do Kit de inspeção](https://docs.microsoft.com/samples/xamarin/i
         "customKey": "Use this file to define a testing payload for your notifications. The aps dictionary specifies the category, alert text and title. The WatchKit Simulator Actions array can provide info for one or more action buttons in addition to the standard Dismiss button. Any other top level keys are custom payload. If you have multiple such JSON files in your project, you'll be able to choose between them in when selecting to debug the notification interface of your Watch App."
     }
 ```
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

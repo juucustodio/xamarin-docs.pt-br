@@ -6,12 +6,12 @@ ms.assetid: 7b9aa8d9-c181-4c33-8ab0-2f56e4dbfc04
 author: conceptdev
 ms.author: crdun
 ms.date: 10/09/2017
-ms.openlocfilehash: 0979a0b65cc3d5b4944dadaf67aaa14cf1b3cf73
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 11a98b61d958e2e0d0fb226ba4eb05c458b5bbf2
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70287595"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70766096"
 ---
 # <a name="microsoft-azure-and-xamarin"></a>Microsoft Azure e Xamarin
 
@@ -40,7 +40,6 @@ Os aplicativos podem então acessar serviços adicionais como o Office 365.
 A API Web da Microsoft expõe uma interface do tipo REST que pode ser facilmente consumida por aplicativos Xamarin.
 Você pode facilmente girar um [site do Azure](https://trywebsites.azurewebsites.net/) e criar um aplicativo baseado em WebAPI para se conectar a aplicativos Xamarin.
 
-
 ### <a name="introduction-to-web-servicescross-platformdata-cloudweb-servicesindexmd"></a>[Introdução aos serviços Web](~/cross-platform/data-cloud/web-services/index.md)
 
 Este tutorial apresenta como integrar tecnologias REST, WCF e serviço Web SOAP com aplicativos móveis Xamarin. Ele examina várias implementações de serviço, avalia as ferramentas e bibliotecas disponíveis para integrá-las e fornece padrões de exemplo para o consumo de dados de serviço. Por fim, ele fornece uma visão geral básica da criação de um serviço Web RESTful para consumo com um aplicativo do Xamarin Mobile.
@@ -56,7 +55,6 @@ Além dos exemplos de [documentação](https://github.com/xamarin/mobile-samples
 
 - [eshop](https://github.com/dotnet-architecture/eShopOnContainers) – exemplo para a [série de arquitetura](https://www.microsoft.com/net/learn/architecture) de livros eletrônicos.
 - [Mydirigir](https://azure.microsoft.com/campaigns/mydriving/) – exemplo do Azure + IOT do Build 2016.
-
 
 ## <a name="related-links"></a>Links relacionados
 

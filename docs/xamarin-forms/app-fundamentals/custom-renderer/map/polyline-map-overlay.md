@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 19da0de80819a48259a28b30e003c32923d37378
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
-ms.translationtype: HT
+ms.openlocfilehash: af6e491725ac3dad843238c1adb547ac76a9c9ea
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68650691"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771863"
 ---
 # <a name="highlighting-a-route-on-a-map"></a>Realçando uma rota em um mapa
 
@@ -300,7 +300,6 @@ Esse método executa as seguintes operações, desde que o renderizador personal
 ## <a name="summary"></a>Resumo
 
 Este artigo explicou como adicionar uma sobreposição de polilinha a um mapa, a fim de mostrar uma rota em um mapa ou de criar qualquer forma necessária.
-
 
 ## <a name="related-links"></a>Links relacionados
 

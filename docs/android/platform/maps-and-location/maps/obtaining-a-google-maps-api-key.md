@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/25/2018
-ms.openlocfilehash: 6cb001a42f0cc98d0054523dffa0772b29188d73
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: a56405aaed84be5015e5d58ef9a13ba8e270ea58
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69523826"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70757532"
 ---
 # <a name="obtaining-a-google-maps-api-key"></a>Obter uma chave de API do Google Maps
 
@@ -23,7 +23,6 @@ A obtenção de uma chave de API de mapas v2 envolve as seguintes etapas:
 1. Recupere a impressão digital SHA-1 do keystore que é usada para assinar o aplicativo.
 2. Crie um projeto no console de APIs do Google.
 3. Obtendo a chave de API.
-
 
 ## <a name="obtaining-your-signing-key-fingerprint"></a>Obtendo a impressão digital da chave de assinatura
 
@@ -52,7 +51,6 @@ Informações sobre um repositório de chaves são obtidas executando o comando 
 
 -----
 
-
 Execute keytool usando o seguinte comando (usando os caminhos de arquivo mostrados acima):
 
 ```shell
@@ -76,7 +74,6 @@ keytool -list -v -keystore /Users/[USERNAME]/.local/share/Xamarin/Mono\ for\ And
 ```
 
 -----
-
 
 ### <a name="production-keys"></a>Chaves de produção
 

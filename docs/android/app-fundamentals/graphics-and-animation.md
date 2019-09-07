@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 0a9921706acc4da076e98b1c42c0624c7f56e62f
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: ea713b2b56f18c435f3ec676b42d0aa4802abc6a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69521196"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755427"
 ---
 # <a name="android-graphics-and-animation"></a>Gráficos e animação do Android
 
@@ -43,11 +43,9 @@ Além dessas técnicas de gráficos 2D, o Android também fornece várias maneir
 
 - **Animações de propriedade** O Android 3,0 introduziu um novo conjunto de APIs de animação conhecido como *animações de propriedade.* &ndash; Essas novas APIs introduziram um sistema extensível e flexível que pode ser usado para animar as propriedades de qualquer objeto, não apenas exibir objetos. Essa flexibilidade permite que as animações sejam encapsuladas em classes distintas, o que facilitará o compartilhamento de código.
 
-
 As animações de exibição são mais adequadas para aplicativos que devem dar suporte às APIs anteriores do Android 3,0 (API nível 11). Caso contrário, os aplicativos devem usar as APIs de animação de propriedade mais recentes pelos motivos mencionados acima.
 
 Todas essas estruturas são opções viáveis, no entanto, sempre que possível, a preferência deve ser dada às animações de propriedade, pois é uma API mais flexível com a qual trabalhar. As animações de propriedade permitem que a lógica de animação seja encapsulada em classes distintas que facilitam o compartilhamento de código e simplifica a manutenção do código.
-
 
 ## <a name="accessibility"></a>Acessibilidade
 
@@ -58,8 +56,6 @@ Os aplicativos são mais utilizáveis nessas situações se tiverem sido projeta
 
 Consulte o [Guia de acessibilidade do Google](https://developer.android.com/guide/topics/ui/accessibility/) para obter mais informações sobre como utilizar as APIs de acessibilidade do Android.
 
-
-
 ## <a name="2d-graphics"></a>Gráficos 2D
 
 Os recursos desenháveis são uma técnica popular em aplicativos Android. Assim como ocorre com outros recursos, os recursos desenháveis são declarativos &ndash; que são definidos em arquivos XML. Essa abordagem permite uma separação limpa do código dos recursos. Isso pode simplificar o desenvolvimento e a manutenção, pois não é necessário alterar o código para atualizar ou alterar os elementos gráficos em um aplicativo Android. No entanto, embora os recursos desenháveis sejam úteis para muitos requisitos gráficos simples e comuns, eles não têm a potência e o controle da API Canvas.
@@ -67,7 +63,6 @@ Os recursos desenháveis são uma técnica popular em aplicativos Android. Assim
 A outra técnica, usando o objeto [Canvas](xref:Android.Graphics.Canvas) , é muito semelhante a outras estruturas de API tradicionais, como o desenho principal System. Drawing ou Ios. O uso do objeto Canvas fornece o maior controle de como os gráficos 2D são criados. É apropriado para situações em que um recurso que desenha não funcionará ou será difícil de trabalhar com ele. Por exemplo, pode ser necessário desenhar um controle Slider personalizado cuja aparência será alterada com base nos cálculos relacionados ao valor do controle deslizante.
 
 Vamos examinar os recursos desenháveis primeiro. Elas são mais simples e abrangem os casos de desenho personalizados mais comuns.
-
 
 ### <a name="drawable-resources"></a>Recursos de desenho
 
@@ -148,7 +143,6 @@ Para ver como isso seria, execute o projeto *AnimationsDemo* e selecione o item 
 
 Para obter mais detalhes sobre os elementos XML e a sintaxe de recursos de desenho, consulte a [documentação do Google](https://developer.android.com/guide/topics/resources/drawable-resource.html#Shape).
 
-
 ### <a name="using-the-canvas-drawing-api"></a>Usando a API de desenho de tela
 
 Drawables são poderosas, mas têm suas limitações. Certas coisas não são possíveis ou muito complexas (por exemplo: aplicação de um filtro a uma imagem que foi tomada por uma câmera no dispositivo). Seria muito difícil aplicar a redução de olhos vermelhos usando um recurso que pode ser desenhado.
@@ -209,7 +203,6 @@ Esse código acima cria primeiro uma pintura vermelha e um objeto de pintura ver
 
 ![Tela com objetos de pintura vermelha e pintura verde](graphics-and-animation-images/image3.png)
 
-
 ## <a name="animation"></a>Animação
 
 Usuários como coisas que se movem em seus aplicativos. As animações são uma ótima maneira de melhorar a experiência do usuário de um aplicativo e ajudá-lo a se destacar. As melhores animações são aquelas que os usuários não percebem porque se sentem naturais. O Android fornece as três seguintes APIs para animações:
@@ -222,11 +215,10 @@ Usuários como coisas que se movem em seus aplicativos. As animações são uma 
 
 Em geral, a animação de propriedade é o sistema preferencial a ser usado, pois é mais flexível e oferece mais recursos.
 
-
 ### <a name="view-animations"></a>Exibir animações
 
 As animações de exibição são limitadas a exibições e só podem executar animações em valores como pontos de início e fim, tamanho, rotação e transparência.
-Esses tipos de animações são normalmente chamados de *animações*de interpolação. As animações de exibição podem ser definidas &ndash; de duas maneiras programaticamente no código ou usando arquivos XML. Os arquivos XML são a maneira preferida de declarar animações de exibição, pois elas são mais legíveis e mais fáceis de manter.
+Esses tipos de animações são normalmente chamados de *animações de interpolação*. As animações de exibição podem ser definidas &ndash; de duas maneiras programaticamente no código ou usando arquivos XML. Os arquivos XML são a maneira preferida de declarar animações de exibição, pois elas são mais legíveis e mais fáceis de manter.
 
 Os arquivos XML de animação serão armazenados no `/Resources/anim` diretório de um projeto Xamarin. Android. Esse arquivo deve ter um dos seguintes elementos como o elemento raiz:
 
@@ -242,14 +234,13 @@ Os arquivos XML de animação serão armazenados no `/Resources/anim` diretório
 
 Por padrão, todas as animações em um arquivo XML serão aplicadas simultaneamente. Para fazer as animações ocorrerem em sequência, `android:startOffset` defina o atributo em um dos elementos definidos acima.
 
-É possível afetar a taxa de alteração em uma animação usando um interpolador. Um interpolador possibilita que os efeitos da animação sejam acelerados, repetidos ou desacelerados. A estrutura do Android fornece vários interpoladores prontos para uso, como (mas não se limitando a):
+É possível afetar a taxa de alteração em uma animação usando um *interpolador*. Um interpolador possibilita que os efeitos da animação sejam acelerados, repetidos ou desacelerados. A estrutura do Android fornece vários interpoladores prontos para uso, como (mas não se limitando a):
 
 - `AccelerateInterpolator`Esses interpoladores aumentam ou diminuem a taxa de alteração em uma animação. / `DecelerateInterpolator` &ndash;
 
 - `BounceInterpolator`&ndash; a alteração salta no final.
 
 - `LinearInterpolator`&ndash; a taxa de alterações é constante.
-
 
 O XML a seguir mostra um exemplo de um arquivo de animação que combina alguns desses elementos:
 
@@ -308,7 +299,6 @@ myImage.StartAnimation(myAnimation);
 
 Agora que temos uma compreensão fundamental de como exibir animações funcionam, vamos mudar para animações de propriedade.
 
-
 ### <a name="property-animations"></a>Animações de propriedade
 
 A propriedade Animators é uma nova API que foi introduzida no Android 3,0.
@@ -322,8 +312,7 @@ Todas as animações de propriedade são criadas por instâncias da subclasse [A
 
 - [Animaçãoset](xref:Android.Animation.AnimatorSet) &ndash; Essa classe é responsável por orquestrar como as animações são executadas em relação uma à outra. As animações podem ser executadas simultaneamente, sequencialmente ou com um atraso especificado entre elas.
 
-
-Os avaliadores são classes especiais que são usadas pelo Animators para calcular os novos valores durante uma animação. Para uso pronto, o Android fornece os seguintes avaliadores:
+Os *avaliadores* são classes especiais que são usadas pelo Animators para calcular os novos valores durante uma animação. Para uso pronto, o Android fornece os seguintes avaliadores:
 
 - [IntEvaluator](xref:Android.Animation.IntEvaluator) &ndash; Calcula valores para propriedades de inteiro.
 
@@ -385,7 +374,6 @@ animator.Start();
 
 Como você pode ver no trecho de código anterior, `ObjectAnimator` o pode reduzir e simplificar o código necessário para animar um objeto.
 
-
 ### <a name="drawable-animations"></a>Animações desenháveis
 
 A API de animação final é a API de animação desenhável. Animações desenháveis carregam uma série de recursos desenháveis um após o outro e os exibem sequencialmente, semelhante a um desenho de inversão de ti.
@@ -429,12 +417,9 @@ protected override void OnCreate(Bundle bundle)
 
 Neste ponto, abordamos as bases das APIs de animação disponíveis em um aplicativo Android.
 
-
 ## <a name="summary"></a>Resumo
 
 Este artigo apresentou muitos conceitos e APIs novos para ajudar a adicionar alguns elementos gráficos a um aplicativo Android. Primeiro, discutiu as várias APIs de gráficos 2D e demonstrou como o Android permite que os aplicativos desenhem diretamente na tela usando um objeto Canvas. Também vimos algumas técnicas alternativas que permitem que os gráficos sejam criados declarativamente usando arquivos XML. Em seguida, fizemos uma discussão sobre as APIs antigas e novas para a criação de animações no Android.
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

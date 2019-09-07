@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/30/2019
-ms.openlocfilehash: 16e805488969aadb0d0b8aa5c892248b7fa403c9
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 59047b8564db6415ea3c47d7dcb72b5d0c66d1dd
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69521212"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755583"
 ---
 # <a name="cpu-architectures"></a>Arquitetura de CPU
 
@@ -21,8 +21,7 @@ _O Xamarin. Android dá suporte a várias arquiteturas de CPU, incluindo disposi
 ## <a name="cpu-architectures-overview"></a>Visão geral das arquiteturas de CPU
 
 Ao preparar seu aplicativo para a versão, você deve especificar as arquiteturas de CPU de plataforma às quais seu aplicativo dá suporte. Um único APK pode conter código de computador para dar suporte a várias arquiteturas diferentes. Cada coleção de código específico à arquitetura é associada a uma Abi ( *interface binária de aplicativo* ). Cada ABI define como é esperado que esse código de computador interaja com o Android em tempo de execução.
-Para obter mais informações sobre como isso funciona, consulte [dispositivos &amp; com vários núcleos Xamarin. Android](~/android/deploy-test/multicore-devices.md).
-
+Para obter mais informações sobre como isso funciona, consulte [ &amp; dispositivos com vários núcleos Xamarin. Android](~/android/deploy-test/multicore-devices.md).
 
 ## <a name="how-to-specify-supported-architectures"></a>Como especificar as arquiteturas com suporte
 
@@ -30,7 +29,7 @@ Para obter mais informações sobre como isso funciona, consulte [dispositivos &
 
 Normalmente, você seleciona explicitamente uma arquitetura (ou arquiteturas) quando seu aplicativo está configurado para **liberação**. Quando seu aplicativo está configurado para **depuração**, as opções **usar tempo de execução compartilhado** e **usar implantação rápida** estão habilitadas, o que desabilita a seleção de arquitetura explícita.
 
-No Visual Studio, clique com o botão direito do mouse em seu projeto na **Gerenciador de soluções** e selecione **Propriedades**. Na página **Opções do Android** , verifique a seção **Propriedades** de empacotamento e verifique se **usar tempo de execução compartilhado** está desabilitado (desativar essa opção permite que você selecione explicitamente a qual abis o suporte). Clique no botão **avançado** e, em **arquiteturas com suporte**, verifique as arquiteturas para as quais você deseja oferecer suporte:
+No Visual Studio, clique com o botão direito do mouse em seu projeto na **Gerenciador de soluções** e selecione **Propriedades**. Na página **Opções do Android** , verifique a seção **Propriedades de empacotamento** e verifique se **usar tempo de execução compartilhado** está desabilitado (desativar essa opção permite que você selecione explicitamente a qual abis o suporte). Clique no botão **avançado** e, em **arquiteturas com suporte**, verifique as arquiteturas para as quais você deseja oferecer suporte:
 
 [![Selecionando ARMEABI e ARMEABI-v7a](cpu-architectures-images/vs/01-abi-selections-sml.png)](cpu-architectures-images/vs/01-abi-selections.png#lightbox)
 
@@ -43,7 +42,6 @@ Em Visual Studio para Mac, localize seu projeto no painel de **solução** , cli
 [![Selecionando ARMEABI e ARMEABI-v7a](cpu-architectures-images/xs/01-abi-selections-sml.png)](cpu-architectures-images/xs/01-abi-selections.png#lightbox)
 
 -----
-
 
 O Xamarin.Android é compatível com as seguintes arquiteturas:
 
@@ -64,7 +62,7 @@ O Xamarin. Android usa como `armeabi-v7a` padrão para compilações de **versã
 
 ## <a name="targeting-multiple-platforms"></a>Direcionando várias plataformas
 
-Para direcionar várias arquiteturas de CPU, você pode selecionar mais de uma ABI (às custas de maior tamanho de arquivo APK). Você pode usar a opção **gerar um pacote (. apk) por Abi selecionada** (descrita em [definir propriedades](~/android/deploy-test/release-prep/index.md#Set_Packaging_Properties)de empacotamento) para criar um apk separado para cada arquitetura com suporte.
+Para direcionar várias arquiteturas de CPU, você pode selecionar mais de uma ABI (às custas de maior tamanho de arquivo APK). Você pode usar a opção **gerar um pacote (. apk) por Abi selecionada** (descrita em [definir propriedades de empacotamento](~/android/deploy-test/release-prep/index.md#Set_Packaging_Properties)) para criar um apk separado para cada arquitetura com suporte.
 
 Você não precisa selecionar **arm64-V8A** ou **x86_64** para direcionar dispositivos de 64 bits; o suporte a 64 bits não é necessário para executar seu aplicativo no hardware de 64 bits. Por exemplo, dispositivos ARM de 64 bits (como o [Nexus 9](http://www.google.com/nexus/9/)) podem executar aplicativos configurados `armeabi-v7a`para o. A principal vantagem de habilitar o suporte a 64 bits é possibilitar que seu aplicativo resolva mais memória.
 

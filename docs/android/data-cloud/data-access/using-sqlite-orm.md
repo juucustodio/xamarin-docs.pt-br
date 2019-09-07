@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/18/2018
-ms.openlocfilehash: c684efe9bcb292869eb25b36067fcaa42b546a04
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 65c8466e2649c6d48cf5651f25d14c073dbcf5e3
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69525928"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70754425"
 ---
 # <a name="using-sqlitenet-with-android"></a>Usando o SQLite.NET com o Android
 
@@ -61,7 +61,6 @@ Depois de disponibilizar a biblioteca SQLite.NET, siga estas três etapas para u
 ## <a name="basic-data-access-sample"></a>Exemplo de acesso a dados básico
 
 O código de exemplo *DataAccess_Basic* para este documento é semelhante ao executado no Android. O código ilustra como executar operações SQLite.NET simples e mostra os resultados em como texto na janela principal do aplicativo.
-
 
 **Android**
 
@@ -140,7 +139,6 @@ Os atributos comuns que você pode aplicar às suas classes para controlar como 
 
 - **[Exclusivo]** &ndash; Garante que os valores na coluna banco de dados subjacente sejam exclusivos.
 
-
 A maioria desses atributos são opcionais, o SQLite usará valores padrão para nomes de tabela e coluna. Você sempre deve especificar uma chave primária de inteiro para que as consultas seleção e exclusão possam ser executadas com eficiência em seus dados.
 
 ## <a name="more-complex-queries"></a>Consultas mais complexas
@@ -158,7 +156,6 @@ Os seguintes métodos em `SQLiteConnection` podem ser usados para executar outra
 - **A&lt;consultaT&gt;**  executa&ndash; uma consulta SQL que retorna um número de linhas (como objetos).
 
 - **Executar** Use esse método (e não `Query`) quando não esperar linhas do SQL (como instruções INSERT, Update e Delete). &ndash;
-
 
 ### <a name="getting-an-object-by-the-primary-key"></a>Obtendo um objeto pela chave primária
 
@@ -205,7 +202,7 @@ Você pode verificar o `rowcount` para confirmar quantas linhas foram afetadas (
 
 ## <a name="using-sqlitenet-with-multiple-threads"></a>Usando SQLite.NET com vários threads
 
-O SQLite dá suporte a três modos de Threading diferentes: *Thread único*, *vários threads*e serializados. Se você quiser acessar o banco de dados de vários threads sem restrições, poderá configurar o SQLite para usar o modo de Threading **serializado** . É importante definir esse modo no início do aplicativo (por exemplo, no início do `OnCreate` método).
+O SQLite dá suporte a três modos de Threading diferentes: *Thread único*, *vários threads*e *serializados*. Se você quiser acessar o banco de dados de vários threads sem restrições, poderá configurar o SQLite para usar o modo de Threading **serializado** . É importante definir esse modo no início do aplicativo (por exemplo, no início do `OnCreate` método).
 
 Para alterar o modo de Threading, chame `SqliteConnection.SetConfig`. Por exemplo, esta linha de código configura o SQLite para o modo **serializado** :
 

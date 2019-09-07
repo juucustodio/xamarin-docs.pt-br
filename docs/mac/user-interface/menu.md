@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 27eb5679bbc4825ab2bf0e1990b00d97ab207619
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 7a19b2e70ff18ae43cb65804c6c125890fa1851b
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292430"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770982"
 ---
 # <a name="menus-in-xamarinmac"></a>Menus no Xamarin. Mac
 
@@ -1071,7 +1071,6 @@ Você pode criar e trabalhar com listas suspensas exatamente da mesma maneira qu
 ## <a name="summary"></a>Resumo
 
 Este artigo deu uma visão detalhada de como trabalhar com menus e itens de menu em um aplicativo Xamarin. Mac. Primeiro, examinamos a barra de menus do aplicativo e examinamos a criação de menus contextuais. em seguida, examinamos os menus de barra de status e os menus de encaixe personalizados. Por fim, abordamos os menus pop-up e as listas suspensas.
-
 
 ## <a name="related-links"></a>Links relacionados
 

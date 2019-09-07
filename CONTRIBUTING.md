@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 14d4f5de500c8e8ced6cbeb67019f9152ed63df3
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: dffa9c202d42cfb12ed67e219b4e3155e4e554d0
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70118907"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70751916"
 ---
 # <a name="contributing"></a>Contribuição
 
@@ -32,10 +32,8 @@ Para fazer correções e atualizações pequenas você pode clicar no botão **E
 
 6. Os mantenedores mesclarão sua PR depois que os comentários forem aplicados e sua alteração estiver boa. Ela será exibida no site docs.microsoft.com logo depois.
 
-
 > [!NOTE]
 > Se a PR estiver resolvendo um problema existente, adicione a palavra-chave `Fixes #Issue_Number` à mensagem de confirmação ou à descrição da PR para que o problema possa ser encerrado automaticamente quando a PR for mesclada. Para obter mais informações, confira [Closing issues via commit messages](https://help.github.com/articles/closing-issues-via-commit-messages/) (Encerrando problemas por meio de mensagens de confirmação).
-
 
 ### <a name="big-changes-or-new-content"></a>Grandes alterações ou novo conteúdo
 
@@ -80,5 +78,3 @@ Abaixo, há uma lista curta de regras de orientação que você deve considerar 
 
 > [!NOTE]
 > Você poderá observar que, no momento, alguns dos tópicos não estão seguindo todas as diretrizes especificadas aqui e também no [guia de estilo](contributing-guidelines/template.md). Estamos trabalhando para atingir a consistência em todo o site. 
-
-

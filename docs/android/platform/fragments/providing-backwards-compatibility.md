@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/12/2017
-ms.openlocfilehash: f1f886f0e4c14f2da29342a2a651f91ed510fd25
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 838f8bdcf3bd82a31bf0d033eee628bd19ad1c30
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69524270"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70757544"
 ---
 # <a name="providing-backwards-compatibility-with-the-android-support-package"></a>Fornecendo compatibilidade com versões anteriores com o pacote de suporte do Android
 
@@ -19,7 +19,6 @@ A utilidade dos fragmentos seria limitada sem compatibilidade com versões anter
 
 > [!NOTE]
 > Somente o `ListFragment` e o `DialogFragment` estão disponíveis por meio do pacote de suporte do Android. Nenhuma das outras subclasses de fragmento, como o `PreferenceFragment,` , tem suporte no pacote de suporte do Android. Eles não funcionarão em aplicativos anteriores ao Android 3,0. 
-
 
 ## <a name="adding-the-support-package"></a>Adicionando o pacote de suporte
 
@@ -47,7 +46,6 @@ fragmentTx.Commit();
 ```
 
 Com essas alterações em vigor, será possível executar um aplicativo baseado em fragmento no Android 1,6 ou 2. x, bem como no Honeycomb e no sanduíche de sorvete. 
-
 
 ## <a name="related-links"></a>Links relacionados
 

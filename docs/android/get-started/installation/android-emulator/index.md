@@ -7,17 +7,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/27/2018
-ms.openlocfilehash: 6ce8f633cdc0fd4616673eb047d640a8703b3a30
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: HT
+ms.openlocfilehash: cb8dc64a8c40496aaf2ea23a834effb58436618a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50102523"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70759084"
 ---
 # <a name="android-emulator-setup"></a>Instalação do Android Emulator
 
 _Este guia explica como preparar o Android Emulator para testar seu aplicativo._
-
 
 ## <a name="overview"></a>Visão geral
 
@@ -45,7 +44,5 @@ Neste artigo, são descritas as mensagens de aviso e os problemas mais comuns qu
 
 Após configurar o Android Emulator, consulte [Depurando no Android Emulator](~/android/deploy-test/debugging/debug-on-emulator.md) para obter informações de como iniciar o emulador e usá-lo para testar e depurar seu aplicativo.
 
-
 > [!NOTE]
 > Desde o Android SDK Tools versão **26.0.1** e posterior, o Google removeu o suporte para gerenciadores de AVD/SDK existentes em favor de suas novas ferramentas de CLI (interface de linha de comando). Por causa dessa alteração de preterimento, os Gerenciadores de Dispositivos/SDK do Xamarin agora são usados no lugar dos Gerenciadores de Dispositivos/SDK do Google nas Android Tools 26.0.1 e posterior. Para saber mais sobre o Gerenciador de SDK do Xamarin, consulte [Configurando o SDK do Android para Xamarin.Android](~/android/get-started/installation/android-sdk.md).
-

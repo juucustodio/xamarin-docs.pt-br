@@ -1,12 +1,12 @@
 ---
-ms.openlocfilehash: c81cc7ff176ab4863498a03169a2c6a3711a0ded
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
-ms.translationtype: HT
+ms.openlocfilehash: b505f4a4f7a8f50a6044d01a327eef76a7b1ce3b
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69525102"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70758038"
 ---
-|Propriedade|DESCRIÇÃO|Opções|
+|Propriedade|Descrição|Opções|
 |--- |--- |--- |
 |`abi.type`|**Tipo de ABI** &ndash; especifica o tipo de ABI (interface binária de aplicativo) do dispositivo emulado. A opção **x86** é para o conjunto de instruções normalmente chamado de "x86" ou "IA-32". A opção **x86_64** é para o conjunto de instruções x86 de 64 bits. A opção **armeabi-v7a** é para o conjunto de instruções ARM com extensões ARM v7-a. A opção **arm64-v8a** é para o conjunto de instruções ARM que oferece suporte a AArch64.|x86, x86_64, armeabi-v7a, arm64-v8a|
 |`disk.cachePartition`|**Partição de cache** &ndash; determina se o dispositivo emulado usará uma partição de **/cache** no dispositivo. A partição de **/cache** (que inicialmente é vazia) é o local em que o Android armazena os dados acessados com frequência e os componentes de aplicativo. Se definida como **não**, o emulador não usará uma partição de **/cache**, e as outras configurações de `disk.cache` serão ignoradas.|sim, não|
@@ -65,4 +65,3 @@ ms.locfileid: "69525102"
 |`skin.name`|**Nome de capa** &ndash; o nome de uma capa de Android Emulator. Uma capa é uma coleção de arquivos que define o visual e os elementos de controle de uma exibição de emulador. Ela descreve a aparência da janela do AVD no computador de desenvolvimento. Uma capa descreve o tamanho de tela, os botões e o design geral, mas não afeta a operação do aplicativo.||
 |`skin.path`|**Caminho de capa** &ndash; caminho para o diretório que contém os arquivos de aparências do emulador especificados em skin.name. Esse diretório contém arquivos de layout hardware.ini e arquivos de imagem para os elementos de exibição da capa.||
 |`skin.dynamic`|**Dinâmica de capa** &ndash; se a capa é dinâmica ou não. A capa do emulador é uma capa dinâmica se o emulador criar uma capa de um determinado tamanho com base na altura e largura especificada.|no|
-

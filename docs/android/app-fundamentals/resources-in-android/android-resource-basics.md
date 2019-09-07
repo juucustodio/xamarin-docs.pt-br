@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/01/2018
-ms.openlocfilehash: 1df10c4b8eaa30ce417feb2abae7f52b2494edf6
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: c248949024d0e13a24863368e88aa559fa496806
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69526374"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755252"
 ---
 # <a name="android-resource-basics"></a>Noções básicas sobre o recurso do Android
 
@@ -20,11 +20,11 @@ Quase todos os aplicativos Android terão algum tipo de recurso neles; no mínim
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ![Arquivos de recursos](android-resource-basics-images/01-resource-files-vs.png)
- 
+
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 ![Arquivos de recursos](android-resource-basics-images/01-resource-files-xs.png)
- 
+
 -----
 
 Os cinco arquivos que compõem os recursos padrão foram criados na pasta de recursos:
@@ -39,7 +39,6 @@ Os cinco arquivos que compõem os recursos padrão foram criados na pasta de rec
 
 - Resource.designer.cs&ndash; esse arquivo é gerado automaticamente e mantido pelo Xamarin. Android e mantém a ID exclusiva atribuída a cada recurso. Isso é muito semelhante e idêntico à finalidade do arquivo R. Java que um aplicativo Android escrito em Java teria. Ele é criado automaticamente pelas ferramentas Xamarin. Android e será regenerado de tempos em tempos.
 
-
 ## <a name="creating-and-accessing-resources"></a>Criando e acessando recursos
 
 A criação de recursos é tão simples quanto adicionar arquivos ao diretório para o tipo de recurso em questão. A captura de tela abaixo mostra recursos de cadeia de caracteres para localidades alemãs foram adicionadas a um projeto. Quando o **Strings. xml** foi adicionado ao arquivo, a **ação de compilação** foi definida automaticamente como **AndroidResource** pelas ferramentas Xamarin. Android:
@@ -47,20 +46,18 @@ A criação de recursos é tão simples quanto adicionar arquivos ao diretório 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ![Ação de Build para cadeias de caracteres. xml definida como AndroidResource](android-resource-basics-images/02-build-action-vs.png)
- 
+
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 ![Ação de Build para cadeias de caracteres. xml definida como AndroidResource](android-resource-basics-images/02-build-action-xs.png)
- 
+
 -----
- 
 
 Isso permite que as ferramentas do Xamarin. Android compilem e insiram corretamente os recursos no arquivo APK. Se por algum motivo a **ação de compilação** não estiver definida como **recurso Android**, os arquivos serão excluídos do APK e qualquer tentativa de carregar ou acessar os recursos resultará em um erro de tempo de execução e o aplicativo falhará.
 
 Além disso, é importante observar que, embora o Android dê suporte apenas a nomes de fileminúsculas para itens de recursos, o Xamarin. Android é um pouco mais tolerante; Ele dará suporte a nomes de filemaiúsculos e minúsculos. A Convenção de nomes de imagem é usar letras minúsculas com sublinhados como separadores (por **exemplo\_,\_meu Image Name. png**). Observe que os nomes de recursos não poderão ser processados se forem usados traços ou espaços como separadores.
 
 Depois que os recursos tiverem sido adicionados a um projeto, há duas maneiras de usá-los em &ndash; um aplicativo programaticamente (dentro do código) ou em arquivos XML.
-
 
 ## <a name="referencing-resources-programmatically"></a>Referenciando recursos programaticamente
 
@@ -105,7 +102,6 @@ Ao referenciar recursos programaticamente (no código), eles podem ser acessados
 - **ResourceType** &ndash; Esse é o tipo de recurso aninhado que está dentro da classe de recurso descrita acima.
 
 - **Nome do recurso** &ndash; esse é o nome de arquivo do recurso (sem a extensão) ou o valor do atributo Android: Name para recursos que estão em um elemento XML.
-
 
 ## <a name="referencing-resources-from-xml"></a>Referenciando recursos de XML
 

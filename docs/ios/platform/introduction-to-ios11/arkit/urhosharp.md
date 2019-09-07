@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 08/01/2017
-ms.openlocfilehash: 4c23caade91a1a46d6b2b9bb2425a5bdead40030
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 7f53108460c4e0799ab6c4078d8bb26788b0bf6e
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70289240"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70752540"
 ---
 # <a name="using-arkit-with-urhosharp-in-xamarinios"></a>Usando ARKit com UrhoSharp no Xamarin. iOS
 
@@ -114,14 +114,12 @@ A maneira mais simples de fazer isso é inserir um `RenderPathCommand` no princi
 
 No entanto, enfrentamos dois problemas para misturar esses dois mundos:
 
-
 1. No iOS, as texturas de GPU devem ter uma resolução que seja uma potência de dois, mas os quadros que obteremos da câmera não têm resolução que sejam uma potência de dois, por exemplo: 1280x720.
 2. Os quadros são codificados no formato [YUV](https://en.wikipedia.org/wiki/YUV) , representados por duas imagens-Luma e croma.
 
 Os quadros YUV vêm em duas resoluções diferentes.  uma imagem 1280x720 que representa a luminância (basicamente uma imagem de escala cinza) e 640 x 360 muito menores para o componente crominância:
 
 ![Imagem que demonstra a combinação de componentes Y e UV](urhosharp-images/image3.png)
-
 
 Para desenhar uma imagem colorida completa usando OpenGL ES, temos que escrever um sombreador pequeno que usa a luminância (componente Y) e crominância (planos UV) dos slots de textura.  Em UrhoSharp, eles têm nomes-"sDiffMap" e "sNormalMap" e os convertem em formato RGB:
 
@@ -165,7 +163,6 @@ CameraNode.Position = new Vector3(row.X, row.Y, -row.Z);
 ```
 
 `-row.Z` Usamos porque o ARKit usa um sistema de coordenadas à direita.
-
 
 ### <a name="plane-detection"></a>Detecção de plano
 
@@ -217,7 +214,6 @@ O UrhoSharp [é executado em todos os principais sistemas operacionais](~/graphi
 O HoloLens é uma das plataformas mais empolgantes em que ele é executado.   Isso significa que você pode alternar facilmente entre iOS e HoloLens para criar aplicativos de realidade aumentada incríveis usando o UrhoSharp.
 
 Você pode encontrar a fonte MutantDemo em [github.com/EgorBo/ARKitXamarinDemo](https://github.com/EgorBo/ARKitXamarinDemo).
-
 
 ## <a name="related-links"></a>Links relacionados
 

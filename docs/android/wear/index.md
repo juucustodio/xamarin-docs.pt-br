@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2018
-ms.openlocfilehash: 13a9a02984828781cc6402e982a4b5151c077c52
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 5768a8fb402304d399e619ddb111aea24d975daf
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68648339"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70758328"
 ---
 # <a name="android-wear"></a>Android Wear
 
@@ -42,8 +42,6 @@ Explica como implantar seu aplicativo de desgaste do Android em um dispositivo d
 
 O site do desenvolvedor do Android fornece informações detalhadas sobre as principais APIs de desgaste, como [atividade de portátil](https://developer.android.com/reference/android/support/wearable/activity/package-summary.html), [intenções](https://developer.android.com/reference/com/google/android/wearable/intent/package-summary.html), [autenticação](https://developer.android.com/reference/android/support/wearable/authentication/package-summary.html), [complicações](https://developer.android.com/reference/android/support/wearable/complications/package-summary.html), [renderização de complicações](https://developer.android.com/reference/android/support/wearable/complications/rendering/package-summary.html), [notificações](https://developer.android.com/reference/android/support/wearable/notifications/package-summary.html), [ Exibições](https://developer.android.com/reference/android/support/wearable/view/package-summary.html)e [WatchFace](https://developer.android.com/reference/android/support/wearable/watchface/package-summary.html).
 
-
-
 ## <a name="samples"></a>Exemplos
 
 Você pode encontrar vários [exemplos](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Android+wear) usando o desgaste do Android (ou vá diretamente para o [GitHub](https://github.com/xamarin/monodroid-samples/tree/master/wear)).
@@ -57,7 +55,6 @@ Você pode encontrar vários [exemplos](https://docs.microsoft.com/samples/brows
 |[GridViewPager](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-gridviewpager)|GridViewPager implementa o padrão de navegação 2D, no qual o usuário passa verticalmente e horizontalmente para navegar pelas opções e conteúdo.|![Captura de tela de GridViewPager](images/gridviewpager.png)|
 |[WatchFace](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-watchface)|WatchFace é uma face de inspeção personalizada com as mãos de hora, minuto e segundo do estilo analógico. Este exemplo demonstra como criar um serviço Watch facial que desenha a hora atual e lida com o modo de ambiente e os eventos de alteração de visibilidade. Ele inclui um receptor de difusão que escuta as alterações de fuso horário e atualiza automaticamente o tempo de acordo.|![Captura de tela de WatchFace](images/gridviewpager.png)|
 
-
 ## <a name="videos"></a>Vídeos
 
 Confira estes links de vídeo que discutem o Xamarin. Android com suporte de desgaste:
@@ -67,7 +64,6 @@ Confira estes links de vídeo que discutem o Xamarin. Android com suporte de des
 |[Android L e muito mais](https://blog.xamarin.com/webinar-recording-android-l-and-so-much-more/) &ndash; O Android L Developer Preview introduziu uma infinidade de novas APIs para que os desenvolvedores tirem proveito do, incluindo design de material, notificações e novas animações, para citar alguns.|![Captura de tela de vídeo da apresentação](images/video-android-l.png)|
 |[C#está em meus ouvidos e nos meus olhos: A computação de portátil de](https://www.youtube.com/watch?v=80H8tXByZQc) desgaste &ndash; do Google Glass e Android pode parecer algo do futuro (ou de um episódio do gadget do Inspetor), mas muitas pessoas já estão adotando o futuro hoje! C#os desenvolvedores sabem disso e já têm as ferramentas e habilidades para aproveitar o poder dos dispositivos portátil (de evoluir 2014).|![Captura de tela de vídeo da apresentação](images/video-eyes-ears.png)|
 |[O que há de novo no Xamarin. Android](https://www.youtube.com/watch?v=Gpqc2XZIQfU) &ndash; Android L, Android desgaste, Android TV, Android auto, design de material e arte; o que isso significa para você como desenvolvedor do Xamarin? de evoluir 2014.|![Captura de tela de vídeo da apresentação](Images/video-whats-new.png)|
-
 
 <!--
 

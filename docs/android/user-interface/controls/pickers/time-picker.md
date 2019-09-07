@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: dfee003ba327b199974ae277a93cb1ca55a81b0d
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 1f55e5d97058d07926233e8b116663e6674a441c
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522886"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70764951"
 ---
 # <a name="android-time-picker"></a>Seletor de tempo do Android
 
@@ -59,7 +59,7 @@ Este exemplo usará a terceira técnica, que requer que a atividade forneça um 
 
 Inicie um novo projeto Android chamado **TimePickerDemo** (se você não estiver familiarizado com a criação de projetos Xamarin. Android, consulte [Olá, Android](~/android/get-started/hello-android/hello-android-quickstart.md) para saber como criar um novo projeto).
 
-Edite Resources **/layout/Main. axml** e substitua seu conteúdo pelo XML a seguir:
+Edite **Resources/layout/Main. axml** e substitua seu conteúdo pelo XML a seguir:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -213,7 +213,6 @@ Essa `TimePickerFragment` classe é dividida em partes menores e explicada na pr
         DateTime currentTime = DateTime.Now;
         DateTime selectedTime = new DateTime(currentTime.Year, currentTime.Month, currentTime.Day, hourOfDay, minute, 0);
     ```
-
 
 - Esse `DateTime` objeto é passado para o `timeSelectedHandler` que é registrado com o `TimePickerFragment` objeto no momento da criação. `OnTimeSet`invoca esse manipulador para atualizar a exibição do tempo da atividade para a hora selecionada (esse manipulador é implementado na próxima seção):
 

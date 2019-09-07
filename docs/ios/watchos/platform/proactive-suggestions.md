@@ -7,20 +7,18 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: 68ba09ce74f161c728f0a58276a0b0d98fec7d8c
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 42284ded0bbb5dab36470b7d2f291df64c6df264
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70281284"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70767773"
 ---
 # <a name="watchos-proactive-suggestions-in-xamarin"></a>Sugestões proativas do watchOS no Xamarin
 
 _Este artigo mostra como usar sugestões proativas em um aplicativo watchOS 3 para impulsionar o envolvimento, permitindo que o sistema apresente informações úteis de forma proativa automaticamente para o usuário._
 
-
 Novidade no watchOS 3, as sugestões proativas apresentam notícias sobre como os usuários podem se envolver com um aplicativo Xamarin. iOS proativamente apresenta informações úteis automaticamente para o usuário em momentos apropriados.
-
 
 ## <a name="about-proactive-suggestions"></a>Sobre sugestões proativas
 
@@ -300,7 +298,6 @@ Esta seção configurará as sugestões de localização diretamente de dentro d
 
 Quando o aplicativo é iniciado com um objeto `MKDirectionsRequest` MapKit, ele deve começar automaticamente a fornecer instruções ao usuário para o local solicitado, ou apresentar uma interface do usuário que torna mais fácil para o usuário começar a obter direções. Por exemplo:
 
-
 ```csharp
 using System;
 using Foundation;
@@ -362,7 +359,6 @@ geocoder.GeocodeAddress(address, (place, err)=> {
 ## <a name="summary"></a>Resumo
 
 Este artigo abordou as sugestões proativas e mostrou como o desenvolvedor pode usá-las para direcionar o tráfego para um aplicativo Xamarin. iOS para watchOS. Ele abordou a etapa de implementar sugestões proativas e as diretrizes de uso apresentadas.
-
 
 ## <a name="related-links"></a>Links relacionados
 

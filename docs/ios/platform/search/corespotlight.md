@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/20/2017
-ms.openlocfilehash: 845257bc11d24865a01a992e99d39ad6c578b42c
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 00a973e670ff5100a44ba158fe50f134781a97e2
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291454"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769501"
 ---
 # <a name="search-with-core-spotlight-in-xamarinios"></a>Pesquisar com o principal Spotlight no Xamarin. iOS
 
@@ -132,8 +132,6 @@ O destaque principal tem os seguintes recursos que ajudam a manter o índice pre
 - **Suporte à atualização em lotes** – se seu aplicativo precisar criar ou modificar um grande grupo de índices ao mesmo tempo, todo o lote poderá ser enviado para o `Index` método da `CSSearchableIndex` classe em uma chamada.
 - **Responder a alterações de índice** – usar `CSSearchableIndexDelegate` o aplicativo pode responder a alterações e notificações do índice pesquisável.
 - **Aplicar a proteção de dados** – usando as classes de proteção de dados, você pode implementar a segurança nos itens que você adiciona ao índice pesquisável usando o destaque principal.
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

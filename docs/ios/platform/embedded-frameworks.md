@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 06/05/2018
-ms.openlocfilehash: 6287dca8660c1147455beb22304b7f8637ac7fa5
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: ba3be4fea9999698c5a81faf5b07bec99fb1aa46
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292754"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70753235"
 ---
 # <a name="embedded-frameworks-in-xamarinios"></a>Estruturas inseridas no Xamarin. iOS
 
@@ -74,4 +74,3 @@ Esse comportamento pode ser substituído pelo desenvolvedor do aplicativo, adici
 - `--mono:framework`: Links com o tempo de execução mono como uma estrutura.
 
 Um cenário para vincular com o tempo de execução do mono como uma estrutura mesmo para aplicativos sem extensões é diminuir o tamanho do executável para superar as restrições de tamanho que a Apple impõe no executável. Para referência, o tempo de execução do mono adiciona aproximadamente 1.7 MB por arquitetura (a partir do Xamarin. iOS 8,12, mas seu varia entre as versões e até mesmo entre aplicativos). A estrutura mono adiciona aproximadamente 2,3 MB por arquitetura, o que significa que, para um aplicativo de arquitetura única sem qualquer extensão, fazer com que o link do aplicativo com o tempo de execução mono como uma estrutura reduzirá o executável em aproximadamente 1.7 MB, mas adicionará uma estrutura de ~ 2,3 MB, resultando em em um aplicativo maior de 0,6 MB, junte-se.
-

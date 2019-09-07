@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: 044ae7e4a77abb77e766df58b9cda5938ce8fe7b
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 6466d4c7edf6fde38fd3e9e8a6aaa48c2e5f9b4a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290609"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70757686"
 ---
 # <a name="registering-xamarinios-apps-to-run-in-the-background"></a>Registrando aplicativos Xamarin. iOS para serem executados em segundo plano
 
@@ -31,7 +31,6 @@ Os aplicativos registrados podem se enquadrar em várias categorias:
 - **Local** -os aplicativos que fazem uso de GPS ou dados de localização de rede podem enviar e receber atualizações de local em segundo plano.
 - **Fetch (Ios 7 +)** -um aplicativo registrado para privilégios de busca em segundo plano pode verificar um provedor em busca de conteúdo novo em intervalos regulares, apresentando ao usuário o conteúdo atualizado quando eles retornam ao aplicativo.
 - **Notificações remotas (Ios 7 +)** -os aplicativos podem se registrar para receber notificações de um provedor e usar a notificação para iniciar uma atualização antes que o usuário abra o aplicativo. As notificações podem vir na forma de notificações por Push ou optar por ativar o aplicativo silenciosamente.
-
 
 Os aplicativos podem ser registrados definindo a propriedade de **modos de segundo plano necessária** no *info. plist*do aplicativo. Um aplicativo pode se registrar em quantas categorias forem necessárias:
 

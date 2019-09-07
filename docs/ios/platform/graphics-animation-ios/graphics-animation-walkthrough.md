@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: cae0196fc29944ba8ae87fe43d256da090942f3a
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 919eff45e11f60db51109904269addeec1038558
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70286111"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70752872"
 ---
 # <a name="using-core-graphics-and-core-animation-in-xamarinios"></a>Usando gráficos principais e animações de núcleo no Xamarin. iOS
 
@@ -25,7 +25,6 @@ A captura de tela a seguir mostra o aplicativo concluído:
 Antes de começarmos a baixar o exemplo de *GraphicsDemo* que acompanha este guia. Ele pode ser baixado [aqui](https://docs.microsoft.com/samples/xamarin/ios-samples/graphicsandanimation) e está localizado dentro do diretório **GraphicsWalkthrough** inicie o projeto chamado **GraphicsDemo_starter** clicando duas vezes nele e abre a `DemoView` classe.
 
 ## <a name="drawing-a-path"></a>Desenhando um caminho
-
 
 1. Em `DemoView` adicionar uma `CGPath` variável à classe e instanciá-la no construtor. Além disso, `CGPoint` declare duas `initialPoint` variáveis `latestPoint`, e que usaremos para capturar o ponto de toque do qual construímos o caminho:
 
@@ -179,7 +178,6 @@ Agora que implementamos o código para permitir que os usuários desenhem o cami
 ## <a name="summary"></a>Resumo
 
 Neste artigo, apresentamos um exemplo de conceitos gráficos e animações vinculados juntos. Primeiro, mostramos como usar gráficos de núcleo para desenhar um caminho em uma `UIView` resposta ao toque do usuário. Em seguida, mostramos como usar a animação de núcleo para fazer uma imagem viajar ao longo desse caminho.
-
 
 ## <a name="related-links"></a>Links relacionados
 

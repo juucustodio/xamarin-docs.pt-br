@@ -7,17 +7,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/09/2018
-ms.openlocfilehash: d6cb1e407740fa4c182639a77e3725baec4286ac
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 046c392709f2c94664120e9fac3f4198e9f50dbf
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70119852"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70756599"
 ---
 # <a name="java-bindings-metadata"></a>Metadados de associações de Java
 
 _C#o código no Xamarin. Android chama bibliotecas Java por meio de associações, que são um mecanismo que abstrai os detalhes de nível baixo que são especificados na interface nativa Java (JNI). O Xamarin. Android fornece uma ferramenta que gera essas associações. Essas ferramentas permitem que o desenvolvedor controle como uma associação é criada usando metadados, que permite procedimentos como a modificação de namespaces e a renomeação de membros. Este documento discute como os metadados funcionam, resume os atributos aos quais os metadados dão suporte e explica como resolver problemas de ligação modificando esses metadados._
-
 
 ## <a name="overview"></a>Visão geral
 
@@ -53,7 +52,7 @@ Em muitos casos, a assistência humana é necessária para fazer com que a API J
 Essas alterações não são obtidas modificando o **API. xml** diretamente.
 Em vez disso, as alterações são registradas em arquivos XML especiais fornecidos pelo modelo de biblioteca de associação Java. Ao compilar o assembly de associação do Xamarin. Android, o gerador de associações será influenciado por esses arquivos de mapeamento ao criar o assembly de associação
 
-Esses arquivos de mapeamento XML podem ser encontrados na pasta transformações do projeto:
+Esses arquivos de mapeamento XML podem ser encontrados na pasta **transformações** do projeto:
 
 - O **Metadata. xml** &ndash; permite que as alterações sejam feitas na API final, como alterar o namespace da Associação gerada. 
 
@@ -72,7 +71,6 @@ O arquivo **Metadata. xml** é a mais importação desses arquivos, pois permite
 - Adicionar classes de suporte adicionais para fazer o design da Associação seguir os padrões do .NET Framework. 
 
 Permite passar para discutir **Metadata. xml** mais detalhadamente.
-
 
 ## <a name="metadataxml-transform-file"></a>Arquivo de transformação Metadata. xml
 
@@ -111,8 +109,6 @@ Veja a seguir uma lista de alguns dos elementos XPath usados com mais frequênci
 
 - `parameter`&ndash; Identifique um parâmetro para um método. p.`/parameter[@name='p0']`
 
-
-
 ### <a name="adding-types"></a>Adicionando tipos
 
 O `add-node` elemento informará ao projeto de associação Xamarin. Android para adicionar uma nova classe wrapper a **API. xml**. Por exemplo, o trecho a seguir direcionará o gerador de associação para criar uma classe com um construtor e um único campo:
@@ -125,7 +121,6 @@ O `add-node` elemento informará ao projeto de associação Xamarin. Android par
     </class>
 </add-node>
 ```
-
 
 ### <a name="removing-types"></a>Removendo tipos
 
@@ -167,7 +162,7 @@ Para alterar corretamente o nome gerenciado de um tipo encapsulado (ou método),
 
 #### <a name="renaming-eventarg-wrapper-classes"></a>Renomeando `EventArg` classes de wrapper
 
-Quando o gerador de associação do Xamarin. Android `onXXX` identifica um método setter para um _tipo_de C# ouvinte `EventArgs` , um evento e uma subclasse serão gerados para dar suporte a uma API .net flavoured para o padrão de ouvinte baseado em Java. Como exemplo, considere a classe Java e o método a seguir:
+Quando o gerador de associação do Xamarin. Android `onXXX` identifica um método setter para um _tipo de ouvinte_, um evento e C# `EventArgs` uma subclasse serão gerados para dar suporte a uma API .net flavoured para o padrão de ouvinte baseado em Java. Como exemplo, considere a classe Java e o método a seguir:
 
 ```xml
 com.someapp.android.mpa.guidance.NavigationManager.on2DSignNextManuever(NextManueverListener listener);
@@ -180,7 +175,7 @@ NavigationManager.2DSignNextManueverEventArgs
 ```
 
 Este não é um nome C# de classe legal. Para corrigir esse problema, o autor da associação deve usar `argsType` o atributo e fornecer um C# nome válido para `EventArgs` a subclasse:
- 
+
 ```xml
 <attr path="/api/package[@name='com.someapp.android.mpa.guidance']/
     interface[@name='NavigationManager.Listener']/
@@ -188,20 +183,18 @@ Este não é um nome C# de classe legal. Para corrigir esse problema, o autor da
     name="argsType">NavigationManager.TwoDSignNextManueverEventArgs</attr>
 ```
 
- 
-
 ## <a name="supported-attributes"></a>Atributos com suporte
 
 As seções a seguir descrevem alguns dos atributos para transformar APIs Java.
 
 ### <a name="argstype"></a>argsType
 
-Esse atributo é colocado em métodos setter para nomear `EventArg` a subclasse que será gerada para dar suporte a ouvintes Java. Isso é descrito em mais detalhes abaixo na seção renomeando as [classes de wrapper eventArg](#Renaming_EventArg_Wrapper_Classes) posteriormente neste guia.
+Esse atributo é colocado em métodos setter para nomear `EventArg` a subclasse que será gerada para dar suporte a ouvintes Java. Isso é descrito em mais detalhes abaixo na seção [renomeando as classes de wrapper eventArg](#Renaming_EventArg_Wrapper_Classes) posteriormente neste guia.
 
 ### <a name="eventname"></a>eventName
 
 Especifica um nome para um evento. Se estiver vazio, ele inibe a geração de eventos.
-Isso é descrito mais detalhadamente na seção título renomeando [classes de wrapper eventArg](#Renaming_EventArg_Wrapper_Classes).
+Isso é descrito mais detalhadamente na seção título [renomeando classes de wrapper eventArg](#Renaming_EventArg_Wrapper_Classes).
 
 ### <a name="managedname"></a>managedname
 
@@ -339,12 +332,9 @@ Com todas essas alterações em vigor, você pode usar o código a seguir no Xam
 realReachSettings.MeasurementUnit = SKMeasurementUnit.Second;
 ```
 
-
 ## <a name="summary"></a>Resumo
 
 Este artigo abordou como o Xamarin. Android usa metadados para transformar uma definição de API do formato *Google* *AOSP*. Depois de abranger as alterações que são possíveis usando *Metadata. xml*, ele examinou as limitações encontradas ao renomear Membros e apresentou a lista de atributos XML com suporte, descrevendo quando cada atributo deve ser usado.
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

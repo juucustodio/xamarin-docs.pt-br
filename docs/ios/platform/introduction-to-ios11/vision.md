@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 08/31/2017
-ms.openlocfilehash: b0f6647ff92c8d8d0b8d2769c85aa24572d1464e
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: efe3f2d4c79dc6e5e2a7f13408de52e05006e10a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70285736"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70752272"
 ---
 # <a name="vision-framework-in-xamarinios"></a>Estrutura de visão no Xamarin. iOS
 
@@ -102,7 +102,6 @@ Exiba a [origem do exemplo](https://docs.microsoft.com/samples/xamarin/ios-sampl
 
 A detecção de retângulo geralmente é apenas a primeira etapa em uma cadeia de operações, como com [Este exemplo de CoreMLVision](~/ios/platform/introduction-to-ios11/coreml.md#coremlvision), em que os retângulos são passados para um modelo do coreml para analisar os dígitos manuscritos.
 
-
 <a name="faces" />
 
 ## <a name="face-detection"></a>Detecção Facial
@@ -175,7 +174,6 @@ Exiba a [origem do exemplo](https://docs.microsoft.com/samples/xamarin/ios-sampl
 ### <a name="5-further-processing"></a>5. Processamento adicional
 
 O Vision Framework inclui recursos adicionais para detectar recursos faciais, como os olhos e a boca. Use o `VNDetectFaceLandmarksRequest` tipo, que retornará `VNFaceObservation` resultados como na etapa 3 acima, mas com dados adicionais `VNFaceLandmark` .
-
 
 ## <a name="related-links"></a>Links relacionados
 

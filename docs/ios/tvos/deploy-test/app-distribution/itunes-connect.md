@@ -7,17 +7,16 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: 92f028a632a32392a349c06c0b7ab8e15b308b9f
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: ef3d25974f61bb1ac763831ab9a1f6b62d11abbe
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70279528"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769674"
 ---
 # <a name="configure-your-tvos-app-in-itunes-connect"></a>Configurar seu aplicativo tvOS no iTunes Connect
 
 _Este artigo fornece um guia suplementar para o iOS configurar seu aplicativo no iTunes Connect para as configurações específicas do tvOS._
-
 
 Além das configurações e configuração que você precisará fazer seguindo o guia [configurar seu aplicativo no iTunes Connect](~/ios/deploy-test/app-distribution/app-store-distribution/itunesconnect.md) , este documento aborda as configurações específicas que serão necessárias para liberar um aplicativo Xamarin. TvOS no aplicativo da Apple TV Armazenadas.
 
@@ -78,8 +77,6 @@ Quando você finalmente estiver pronto para enviar seu aplicativo Xamarin. tvOS 
 ## <a name="summary"></a>Resumo
 
 Este artigo forneceu uma visão geral da configuração específica do tvOS necessária no iTunes Connect para liberar um aplicativo tvOS para a loja de aplicativos da Apple TV.
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

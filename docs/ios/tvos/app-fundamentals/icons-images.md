@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: f3a0525a42a59edfe08e5b478bf6af801008ef05
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 7eca637e546324f9282aedcac48dacffa72bf246
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70277848"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769270"
 ---
 # <a name="working-with-tvos-icons-and-images-in-xamarin"></a>Trabalhando com ícones e imagens do tvOS no Xamarin
 
@@ -79,9 +79,6 @@ As imagens em camadas contêm de duas (2) a cinco (5) camadas separadas que são
 > [!IMPORTANT]
 > As imagens em camadas são necessárias para os ícones do seu aplicativo e são opcionais para outros [itens com foco](~/ios/tvos/app-fundamentals/navigation-focus.md#Focus-and-Selection) (como a imagem de prateleira superior). No entanto, a Apple sugere o uso de imagens em camadas para qualquer imagem que possa ficar em foco em seu aplicativo.
 
-
-
-
 A Apple faz as seguintes sugestões para projetar suas imagens em camadas:
 
 - **Tornar a camada de plano de fundo opaca** -sua camada de plano de fundo (camada 1) **deve** ser opaca ou você receberá um erro ao tentar usar a imagem em camadas na Apple TV. Todas as outras camadas podem conter vários níveis de transparência para melhorar o efeito 3D.
@@ -145,9 +142,6 @@ Cada aplicativo deve fornecer uma versão pequena e uma grande de seu ícone de 
 
 > [!IMPORTANT]
 > Os ícones do aplicativo devem ser fornecidos como **imagens em camadas**. Consulte a seção [imagem em camadas](#Layered-Images) acima para obter mais detalhes.
-
-
-
 
 A Apple fornece as seguintes sugestões para criar os ícones do aplicativo:
 

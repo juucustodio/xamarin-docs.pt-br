@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/13/2017
-ms.openlocfilehash: b01fbbe813b778d3c2e1cabeba620ed48a46ecac
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 0e0336e65532c4487e3ec8c1984b132544b5b547
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70287150"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768656"
 ---
 # <a name="watchos-background-tasks-in-xamarin"></a>Tarefas em segundo plano do watchOS no Xamarin
 
@@ -109,7 +109,6 @@ O `WKApplicationRefreshBackgroundTask` é uma tarefa genérica que pode ser agen
 
 Dentro do tempo de execução da tarefa, o aplicativo pode fazer qualquer tipo de processamento local, como atualizar uma linha do tempo de complicação ou buscar `NSUrlSession`alguns dados necessários com um.
 
-
 <a name="WKURLSessionRefreshBackgroundTask" />
 
 ### <a name="wkurlsessionrefreshbackgroundtask"></a>WKURLSessionRefreshBackgroundTask
@@ -142,9 +141,6 @@ Quando o aplicativo marcar a `WKSnapshotRefreshBackgroundTask` conclusão, o sis
 
 > [!IMPORTANT]
 > É importante sempre agendar um `WKSnapshotRefreshBackgroundTask` depois que o aplicativo receber novos dados e atualizado sua interface do usuário, ou o usuário não verá as informações modificadas.
-
-
-
 
 Além disso, quando o usuário recebe uma notificação do aplicativo e a toca para colocar o aplicativo em primeiro plano, o instantâneo precisa estar atualizado, pois também está agindo como a tela de inicialização:
 
@@ -700,8 +696,6 @@ A Apple tem as seguintes sugestões:
 ## <a name="summary"></a>Resumo
 
 Este artigo abordou os aprimoramentos que a Apple fez no watchOS e como eles podem ser usados para manter um aplicativo observado atualizado. Primeiro, ele abordou toda a nova tarefa em segundo plano que a Apple adicionou no watchOS 3. Em seguida, ele abordou o ciclo de vida da API de segundo plano e como implementar tarefas em segundo plano em um aplicativo Xamarin watchOS. Por fim, ele abordou como o agendamento funciona e deu algumas práticas recomendadas.
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

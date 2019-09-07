@@ -7,17 +7,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/09/2018
-ms.openlocfilehash: 2533ad80571e2c8fe94cb4a2dcb0ec0ff0dd68cb
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 3dd321840c4be0729b843897ad51cf5bd2b61196
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68643595"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70758912"
 ---
 # <a name="intro-to-contentproviders"></a>Introdução ao ContentProviders
 
 _O sistema operacional Android usa provedores de conteúdo para facilitar o acesso a dados compartilhados, como arquivos de mídia, contatos e informações de calendário. Este artigo apresenta a classe ContentProvider e fornece dois exemplos de como usá-la._
-
 
 ## <a name="content-providers-overview"></a>Visão geral dos provedores de conteúdo
 
@@ -40,8 +39,6 @@ A estrutura desta seção é a seguinte:
 Personalizado `ContentProviders` são uma maneira conveniente de empacotar seus dados para uso dentro de seu próprio aplicativo ou para uso por outros aplicativos (incluindo usos especiais, como pesquisa personalizada e copiar/colar).
 
 Os tópicos nesta seção fornecem alguns exemplos simples de consumo e gravação `ContentProvider` de código.
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

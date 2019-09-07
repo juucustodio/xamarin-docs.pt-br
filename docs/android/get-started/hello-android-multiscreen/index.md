@@ -8,12 +8,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 12/02/2016
-ms.openlocfilehash: 170bd30d65b9f5947bdb9d23d3100a8048f73ac7
-ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
-ms.translationtype: HT
+ms.openlocfilehash: 4bbfbaf2b7efc7e1d2f75a7462d6a2559ed7a9c0
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67864065"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755707"
 ---
 # <a name="hello-android-multiscreen"></a>Multitela Hello, Android
 
@@ -26,7 +26,6 @@ Na primeira parte deste guia, você adicionará uma segunda tela ao aplicativo P
 ## <a name="part-2-deep-diveandroidget-startedhello-android-multiscreenhello-android-multiscreen-deepdivemd"></a>[Parte 2: Aprofundamento](~/android/get-started/hello-android-multiscreen/hello-android-multiscreen-deepdive.md)
 
 Na segunda parte deste documento, você examinará o que você compilou e discutirá a arquitetura, navegação e outros novos conceitos Android encontrados ao longo do caminho.
-
 
 ## <a name="related-links"></a>Links relacionados
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 052d81ccaefe123eb375ddcd92bee0b1f2a395e2
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 4558a9bd19810f8759010861d8a2e4b8cab09c56
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290311"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770293"
 ---
 # <a name="sandboxing-a-xamarinmac-app"></a>Área restrita de um aplicativo Xamarin. Mac
 
@@ -562,8 +562,6 @@ Se você estiver lançando uma nova versão em área restrita de um aplicativo X
 ## <a name="summary"></a>Resumo
 
 Este artigo fez uma visão detalhada da área restrita de um aplicativo Xamarin. Mac. Primeiro, criamos um aplicativo somente Xamarin. Mac para mostrar os conceitos básicos da área restrita do aplicativo. Em seguida, mostramos como resolver violações de área restrita. Em seguida, analisamos detalhadamente a área restrita do aplicativo e, por fim, examinamos a criação de um aplicativo Xamarin. Mac para a área restrita do aplicativo.
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

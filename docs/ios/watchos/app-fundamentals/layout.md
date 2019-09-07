@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: 5272921cade2b9dadd24a4c917e6251ac591e178
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 0f9f8981325785d69d36ccd9d4de1cd69956a155
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292318"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768745"
 ---
 # <a name="working-with-watchos-layout-in-xamarin"></a>Trabalhando com o watchOS Layout no Xamarin
 
@@ -34,7 +34,6 @@ O ponto principal é: tornar sua interface do usuário, legível e pode ser util
 
 - Use o [ `Menu` controle](~/ios/watchos/user-interface/menu.md) à funcionalidade de expor com menos frequência usada para manter o design de seu aplicativo claro e conciso.
 
-
 ## <a name="implementation"></a>Implementação
 
 Assista o que Kit inclui os seguintes controles para ajudar você a criar layouts de aplicativos de inspeção atraente:
@@ -55,7 +54,6 @@ Quando o tamanho é definido como **relativo ao contêiner** você pode fornecer
 
 ![](layout-images/button-attributes.png "Forneça um valor proporcional e um deslocamento de ajuste")
 
-
 ### <a name="group"></a>Grupo
 
 `WKInterfaceGroup` é um contêiner de layout simples que pode ser configurado para a pilha controla vertical ou horizontalmente. Ele inclui o espaçamento entre cada controle por padrão, mas você pode modificar o espaçamento (e inserções) na **atributos** Inspetor.
@@ -65,7 +63,6 @@ Quando o tamanho é definido como **relativo ao contêiner** você pode fornecer
 Grupos podem em si ser dimensionados e posicionados em relação os controles ao redor deles, e os grupos podem ser aninhados para criar layouts complexos.
 
 ![](layout-images/group-scene.png "Grupos podem ser aninhados para criar layouts complexos")
-
 
 ### <a name="separator"></a>Separador
 
@@ -79,8 +76,6 @@ Observe que os separadores de azuis e verdes que não usam a largura total da te
 
 Não há nenhum layout estaria completa sem o `Label`, `Image`, `Button`, `Switch`, `Slider`, `Map`, e [outros controles](~/ios/watchos/user-interface/index.md).
 Eles podem ser posicionados em seus layouts usando **grupos** ou as configurações de posição e o tamanho em cada controle.
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

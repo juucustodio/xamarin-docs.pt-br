@@ -7,17 +7,16 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 05/02/2017
-ms.openlocfilehash: 797bc4199b79944c7b2b6e9c939e2584bb21246a
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 3b99e4485bfb621b32fa001a49d75038b2072775
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292563"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769460"
 ---
 # <a name="understanding-sirikit-concepts"></a>Noções básicas sobre os conceitos de SiriKit
 
 _Este artigo aborda os principais conceitos que serão necessários para trabalhar com SiriKit em um aplicativo Xamarin. iOS._
-
 
 Novo no iOS 10, o SiriKit permite que um aplicativo Xamarin. iOS forneça serviços que são acessíveis para o usuário usando o Siri e o aplicativo Maps em um dispositivo iOS. Essa funcionalidade é fornecida em uma ou mais extensões de aplicativo usando as novas estruturas de **interface do usuário** de **tentativas** e intenções.
 
@@ -461,9 +460,6 @@ Sinta-se à vontade para que as conversas com Siri (em nome do aplicativo) sejam
 ## <a name="summary"></a>Resumo
 
 Este artigo abordou os principais conceitos necessários para usar o SiriKit e mostrar que ele pode interagir com os aplicativos Xamarin. iOS para fornecer serviços que podem ser acessados pelo usuário usando o Siri e o aplicativo Maps em um dispositivo iOS.
-
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/25/2018
-ms.openlocfilehash: 57d9d6a91f88d117f0889a8dba9e6198ec6b7f62
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 7f98f2f75a106ad3a9f62256a7145ac746c4b1c8
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69524777"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70757781"
 ---
 # <a name="limitations"></a>Limitações
 
@@ -21,11 +21,11 @@ Essas são as limitações do Xamarin. Android em comparação com o mono da ár
 
 ## <a name="limited-dynamic-language-support"></a>Suporte limitado a linguagens dinâmicas
 
- Os wrappers que podem ser [chamados pelo Android](~/android/platform/java-integration/android-callable-wrappers.md) são necessários sempre que o tempo de execução do Android precisa invocar o código gerenciado. Os wrappers que podem ser chamados pelo Android são gerados no momento da compilação, com base na análise estática de IL. O resultado final disso: você *não pode* usar linguagens dinâmicas (IronPython, IronRuby, etc.) em qualquer cenário em que a subclasse de tipos Java é necessária (incluindo a subclasse indireta), pois não há como extrair esses tipos dinâmicos no momento da compilação para gerar os wrappers que podem ser chamados pelo Android necessários.
+ Os [wrappers](~/android/platform/java-integration/android-callable-wrappers.md) que podem ser chamados pelo Android são necessários sempre que o tempo de execução do Android precisa invocar o código gerenciado. Os wrappers que podem ser chamados pelo Android são gerados no momento da compilação, com base na análise estática de IL. O resultado final disso: você *não pode* usar linguagens dinâmicas (IronPython, IronRuby, etc.) em qualquer cenário em que a subclasse de tipos Java é necessária (incluindo a subclasse indireta), pois não há como extrair esses tipos dinâmicos no momento da compilação para gerar os wrappers que podem ser chamados pelo Android necessários.
 
 ## <a name="limited-java-generation-support"></a>Suporte à geração de Java limitado
 
-Os wrappers que podem ser [chamados pelo Android](~/android/platform/java-integration/android-callable-wrappers.md) precisam ser gerados para que o código Java chame código gerenciado. *Por padrão, os*wrappers que podem ser chamados pelo Android conterão apenas (determinados) construtores declarados e métodos que substituem um método [`RegisterAttribute`](xref:Android.Runtime.RegisterAttribute)Java Virtual (ou seja, ele tem) ou implementam um método de interface java (a interface da mesma forma tem `Attribute`).
+Os [wrappers](~/android/platform/java-integration/android-callable-wrappers.md) que podem ser chamados pelo Android precisam ser gerados para que o código Java chame código gerenciado. *Por padrão, os*wrappers que podem ser chamados pelo Android conterão apenas (determinados) construtores declarados e métodos que substituem um método [`RegisterAttribute`](xref:Android.Runtime.RegisterAttribute)Java Virtual (ou seja, ele tem) ou implementam um método de interface java (a interface da mesma forma tem `Attribute`).
   
 Antes da versão 4,1, nenhum método adicional poderia ser declarado. Com a versão 4,1, [os `Export` atributos `ExportField` personalizados e podem ser usados para declarar os métodos e os campos do Java no wrapper que pode ser chamado pelo Android](~/android/platform/java-integration/working-with-jni.md).
 
@@ -84,11 +84,9 @@ class MyIntentService : IntentService {
 }
 ```
 
-
 ### <a name="generic-c-classes"></a>Classes C# genéricas
 
 As C# classes genéricas são apenas parcialmente suportadas. As seguintes limitações existem:
-
 
 - Tipos genéricos não podem usar `[Export]` ou `[ExportField`]. Tentar fazer isso irá gerar um `XA4207` erro.
 

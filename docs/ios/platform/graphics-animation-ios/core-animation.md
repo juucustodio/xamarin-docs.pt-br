@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: 366932e32443a7284f15f51a7a9a437d4b177438
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 730359824ec5a51a53261fbfc9519ac8560a77f5
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70286248"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70753070"
 ---
 # <a name="core-animation-in-xamarinios"></a>Animação de núcleo no Xamarin. iOS
 
@@ -44,7 +44,6 @@ Esta seção aborda os recursos de animação do UIKit, incluindo:
 - Transições entre exibições
 - Exibir animação de propriedade
 
-
 ### <a name="view-controller-transitions"></a>Transições de controlador de exibição
 
  `UIViewController`fornece suporte interno para fazer a transição entre os controladores de exibição por `PresentViewController` meio do método. Ao usar `PresentViewController`o, a transição para o segundo controlador pode, opcionalmente, ser animada.
@@ -62,7 +61,6 @@ Nesse caso, uma `PartialCurl` animação é usada, embora várias outras estejam
 - `CoverVertical`– Desliza para cima na parte inferior da tela
 - `CrossDissolve`– A exibição antiga esmaece & a nova exibição esmaece
 - `FlipHorizontal`-Uma inversão horizontal da direita para a esquerda. No descarte, a transição inverte da esquerda para a direita.
-
 
 Para animar a transição, `true` passe como o segundo argumento `PresentViewController`para:
 
@@ -106,7 +104,6 @@ O `UIView` UIKit dá suporte à animação de uma variedade de propriedades na c
 - Alfa
 - Transformar
 - Cor
-
 
 Essas animações acontecem implicitamente especificando alterações de propriedade em um `NSAction` delegado passado para o método `UIView.Animate` estático. Por exemplo, o código a seguir anima o ponto central de um `UIImageView`:
 
@@ -233,7 +230,7 @@ Esse código altera o `Position` da camada criando um caminho que é usado para 
 As capturas de tela a seguir mostram a camada que contém a animação da imagem por meio do caminho especificado:
 
  ![](core-animation-images/12-explicit-animation.png "Esta captura de tela mostra a camada que contém a animação da imagem por meio do caminho especificado")
- 
+
 ## <a name="summary"></a>Resumo
 
 Neste artigo, examinamos os recursos de animação fornecidos por meio das estruturas de *animação de núcleo* . Examinamos a animação principal, mostrando como ele alimenta animações em UIKit e como ela pode ser usada diretamente para controle de animação de nível inferior.

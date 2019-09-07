@@ -7,17 +7,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: 2166cbbb3d15cde1af83b3071a0d83a1e8f51071
-ms.sourcegitcommit: 9912e57ff6124c583600f9460ebfa3f7f7525960
-ms.translationtype: HT
+ms.openlocfilehash: e5c8e02397e778cf3e71a0c8b4aa544074521cac
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69560270"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755931"
 ---
 # <a name="proguard"></a>ProGuard
 
 _O Xamarin.Android ProGuard é um redutor, otimizador e pré-verificador de arquivo de classe Java. Ele detecta e remove o código não utilizado, analisa e otimiza o código de bytes. Este guia explica como funciona o ProGuard, como habilitá-lo em seu projeto e como configurá-lo. Ele também fornece vários exemplos de configurações do ProGuard._
-
 
 ## <a name="overview"></a>Visão geral
 
@@ -36,8 +35,6 @@ O ProGuard processa o APK de entrada usando as seguintes etapas:
 
 Cada uma dessas etapas é *opcional*. Como será explicado na próxima seção, o ProGuard no Xamarin.Android usa apenas um subconjunto dessas etapas. 
 
-
-
 ## <a name="proguard-in-xamarinandroid"></a>ProGuard no Xamarin.Android
 
 A configuração do ProGuard no Xamarin.Android não ofusca o APK. Na verdade, não é possível habilitar a ofuscação pelo ProGuard (mesmo com o uso de arquivos de configuração personalizada). Portanto, ProGuard no Xamarin.Android executa apenas as etapas de **redução** e **otimização**: 
@@ -52,8 +49,6 @@ A configuração do ProGuard no Xamarin.Android não ofusca o APK. Na verdade, n
 
 Cada uma dessas etapas é descrita abaixo.
 
-
-
 ### <a name="linker-step"></a>Etapa do vinculador
 
 O vinculador do Xamarin.Android emprega análise estática do seu aplicativo para determinar o seguinte: 
@@ -66,19 +61,13 @@ O vinculador do Xamarin.Android emprega análise estática do seu aplicativo par
 
 O vinculador sempre será executado antes da etapa do ProGuard. Por isso, o vinculador pode retirar um assembly/tipo/membro no qual você poderia esperar que o ProGuard fosse executado. (Para obter mais informações sobre a vinculação no Xamarin.Android, consulte [Vinculação no Android](~/android/deploy-test/linker.md).)
 
-
-
 ### <a name="proguard-step"></a>Etapa do ProGuard
 
 Depois que a etapa de vinculador é concluída com êxito, o ProGuard é executado para remover o código de bytes Java não utilizado. Esta é a etapa que otimiza o APK. 
 
-
-
 ## <a name="using-proguard"></a>Uso do ProGuard
 
 Para usar o ProGuard em seu projeto de aplicativo, você deve primeiro habilitar o ProGuard. Em seguida, você pode deixar que o processo de compilação do Xamarin.Android use um arquivo de configuração padrão do ProGuard ou você pode criar seu próprio arquivo de configuração personalizado para uso pelo ProGuard. 
-
-
 
 ### <a name="enabling-proguard"></a>Habilitação do ProGuard
 
@@ -150,13 +139,11 @@ Neste exemplo, `MyClass` é definido como o nome real da classe que você deseja
 
 Você também pode registrar seus próprios nomes com anotações do `[Register]` e usar esses nomes para personalizar as regras ProGuard. Você pode registrar nomes de Adapters, Views, BroadcastReceivers, Services, ContentProviders, Activities e Fragments. Para saber mais sobre como usar o atributo personalizado `[Register]`, confira [Trabalhar com JNI](~/android/platform/java-integration/working-with-jni.md).
 
-
 ### <a name="proguard-options"></a>Opções do ProGuard
 
 O ProGuard oferece várias opções que podem ser configuradas para fornecer um melhor controle sobre sua operação. O [Manual do ProGuard](https://stuff.mit.edu/afs/sipb/project/android/sdk/android-sdk-linux/tools/proguard/docs/index.html#manual/introduction.html) fornece uma documentação de referência completa para o uso de ProGuard. 
 
 O Xamarin.Android dá suporte às seguintes opções do ProGuard: 
-
 
 - [Opções de entrada/saída](https://stuff.mit.edu/afs/sipb/project/android/sdk/android-sdk-linux/tools/proguard/docs/manual/usage.html#iooptions)
 
@@ -188,8 +175,6 @@ As seguintes opções estão *ignoradas* pelo Xamarin.Android:
 
 - [Opções de pré-verificação](https://stuff.mit.edu/afs/sipb/project/android/sdk/android-sdk-linux/tools/proguard/docs/manual/usage.html#preverificationoptions)
 
-
-
 ## <a name="proguard-and-android-nougat"></a>ProGuard e Android Nougat
 
 Se você estiver tentando usar o ProGuard no Android 7.0 ou posterior, você deverá baixar uma versão mais recente do ProGuard porque o SDK do Android não é fornecido com uma nova versão que é compatível com o JDK 1.8.
@@ -197,8 +182,6 @@ Se você estiver tentando usar o ProGuard no Android 7.0 ou posterior, você dev
 Você pode usar esse [pacote do NuGet](https://www.nuget.org/packages/name.atsushieno.proguard.facebook/5.3.0) para instalar uma versão mais recente do `proguard.jar`. Para obter mais informações sobre como atualizar o SDK do Android padrão `proguard.jar`, consulte esta discussão sobre [Stack Overflow](https://stackoverflow.com/questions/39514518/xamarin-android-proguard-unsupported-class-version-number-52-0/39514706#39514706).
 
 Você pode encontrar todas as versões do ProGuard na [página do SourceForge](https://sourceforge.net/projects/proguard/files/). 
-
-
 
 ## <a name="example-proguard-configurations"></a>Exemplos de configurações do ProGuard
 
@@ -271,7 +254,6 @@ public static <fields>;
 
 As seções a seguir explicam como o ProGuard é executado durante um build de **Versão** do Xamarin.Android.
 
-
 ### <a name="what-command-is-proguard-running"></a>Qual comando o ProGuard está executando?
 
 O ProGuard é simplesmente um `.jar` fornecido com o SDK do Android. Portanto, ele é invocado em um comando: 
@@ -342,16 +324,13 @@ Para evitar esse problema, salve o arquivo de configuração personalizado por m
 
 -----
 
-
 ### <a name="other-issues"></a>Outros Problemas
 
 A página de [Solução de problemas](https://stuff.mit.edu/afs/sipb/project/android/sdk/android-sdk-linux/tools/proguard/docs/index.html#manual/troubleshooting.html) do ProGuard aborda problemas comuns que podem ocorrer (e soluções) ao usar o ProGuard.
 
-
 ## <a name="summary"></a>Resumo
 
 Este guia explicou como o ProGuard funciona no Xamarin.Android, como habilitá-lo em seu projeto de aplicativo e como configurá-lo. Ele forneceu configurações de exemplo do ProGuard e descreveu soluções para problemas comuns. Para saber mais sobre a ferramenta ProGuard e Android, consulte [Reduza seus códigos e recursos](https://developer.android.com/tools/help/proguard.html). 
-
 
 ## <a name="related-links"></a>Links relacionados
 

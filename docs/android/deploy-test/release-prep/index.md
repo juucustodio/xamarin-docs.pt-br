@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2018
-ms.openlocfilehash: 3560c58c6fbb9920cfaf9c3830cd442bca443571
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
-ms.translationtype: HT
+ms.openlocfilehash: b3e34022af4e83b172b7ae7cedfb13e95e92beba
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70119625"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70756114"
 ---
 # <a name="preparing-an-application-for-release"></a>Preparar um aplicativo para lançamento
 
@@ -92,7 +92,6 @@ Esses valores podem ser definidos na seção **Compilar > Aplicativo Android** e
 ## <a name="shrink-the-apk"></a>Reduzir o APK
 
 APKs do Xamarin.Android podem ficar menores por meio de uma combinação do vinculador Xamarin.Android, que remove código *gerenciado* desnecessário e a ferramenta *ProGuard* do SDK do Android, que remove *código de bytes Java* não utilizado. O processo de build primeiro usa o vinculador do Xamarin.Android para otimizar o aplicativo no nível do código gerenciado (C#) e posteriormente usa o ProGuard (se habilitado) para otimizar o APK no nível do código de bytes Java.
-
 
 ### <a name="configure-the-linker"></a>Configurar o vinculador
 
@@ -229,7 +228,6 @@ A opção **Compilação AOT** requer uma licença Enterprise ou superior. **Com
 
 O _compilador de otimização LLVM_ criará código compilado mais rápido e menor e converterá os assemblies compilados AOT em código nativo, mas às custas de tempos de compilação mais lentos. O compilador LLVM é desabilitado por padrão. Para usar o compilador LLVM, a opção **Compilação AOT** deve ser habilitada primeiro (na página [Propriedades de Empacotamento](#Set_Packaging_Properties)).
 
-
 > [!NOTE]
 > A opção **Compilador de otimização LLVM** requer uma licença Enterprise.  
 
@@ -364,7 +362,6 @@ Neste exemplo, o **Gerenciador de Arquivo Morto** lista somente um aplicativo ar
 Aqui, é possível selecionar o canal de distribuição:
 
 - **Ad Hoc** &ndash; Salva um APK assinado no disco de modo que possa ser feito seu sideload para dispositivos Android. Prossiga para a [Assinatura do Pacote do Aplicativo](~/android/deploy-test/signing/index.md) para aprender a criar um identidade de assinatura do Android, criar um novo certificado de autenticação para aplicativos Android e publicar uma versão &ldquo;ad hoc&rdquo; do aplicativo no disco. Essa é uma boa maneira de criar um APK para teste.
-
 
 - O **Google Play** &ndash; publica um APK assinado para o Google Play.
     Prossiga para [Publicar no Google Play](~/android/deploy-test/publishing/publishing-to-google-play/index.md) para saber como assinar e publicar um APK na Google Play Store.

@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 11/10/2017
-ms.openlocfilehash: e1f1e2e1e5dbec7dc8f2310b3f9565d0bc209c00
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 6797428596fddb0361fb307240bf8237a1e8554d
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70283686"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769826"
 ---
 # <a name="xamarinmac-ahead-of-time-compilation"></a>O Xamarin. Mac antes da compilação do tempo
 
@@ -58,7 +58,6 @@ As opções de AOT serão adicionadas ao painel de Build do Mac em uma atualiza�
                             --aot:all,-MyAssembly.dll
                             --aot:core,+MyOtherAssembly.dll,-mscorlib.dll
 ```
-
 
 ## <a name="hybrid-aot"></a>AOT híbrida
 

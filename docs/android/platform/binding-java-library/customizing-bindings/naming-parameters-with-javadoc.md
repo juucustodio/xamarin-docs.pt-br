@@ -7,17 +7,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/20/2017
-ms.openlocfilehash: 77cd5ac86a24769947eefb6941229c56efc3297b
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: fa1fb0656384455322a2d0a3562fc0ee3ca52397
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69524569"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70757596"
 ---
 # <a name="naming-parameters-with-javadoc"></a>Nomeando parâmetros com Javadoc
 
 _Este artigo explica como recuperar nomes de parâmetro em um projeto de associação Java usando o Javadoc gerado a partir do projeto Java._
-
 
 ## <a name="overview"></a>Visão geral
 
@@ -35,12 +34,9 @@ A integração do HTML do Javadoc a um projeto de associação Java é um proces
 
 Depois que isso for feito, os nomes de parâmetro Java originais deverão estar presentes nas APIs associadas por um projeto de associação Java. 
 
-
 > [!NOTE]
 > Há uma grande quantidade de variação na saída do JavaDoc. Dos. A associação de JAR ferramentas não dá suporte a todas as permutações possíveis e, consequentemente, alguns parâmetros podem não ser nomeados corretamente.
-
 
 ## <a name="summary"></a>Resumo
 
 Este artigo abordou como usar o Javadoc em um projeto de associação Java para fornecer nomes de parâmetro para APIs associadas. 
-

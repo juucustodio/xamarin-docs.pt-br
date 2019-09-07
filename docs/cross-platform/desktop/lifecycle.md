@@ -5,12 +5,12 @@ description: Este documento compara as semelhanças e diferenças entre o ciclo 
 author: conceptdev
 ms.author: crdun
 ms.date: 04/26/2017
-ms.openlocfilehash: 8c009c079842a6a110212693a56489ca2ad5d263
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 1d1c207672baf37c91d39fca1d9f628d85971577
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290385"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70765900"
 ---
 # <a name="wpf-vs-xamarinforms-app-lifecycle"></a>WPF vs. Ciclo de vida do aplicativo no Xamarin.Forms
 
@@ -87,7 +87,6 @@ O Xamarin. Forms é orientado principalmente em cenários móveis. Assim, os apl
 |Suspender/perder foco|Janela. OnActivated|Page.OnSleep|
 |Ativado/obtido com foco|Window.OnActivated|Page.OnResume|
 |Closed|Janela. onfechando + janela. oncloseed|N/D|
-
 
 Ambos dão suporte à ocultação/exibição de controles filho também, no WPF, é uma propriedade `IsVisible` de três Estados (visível, oculta e recolhida). No Xamarin. Forms, ele está apenas visível ou oculto pela `IsVisible` propriedade.
 

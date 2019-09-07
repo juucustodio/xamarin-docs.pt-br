@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: 07bb1f7024f3518e0e547563d1bd611b2a37d474
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: dc71da512519cdd7fcc56df1ff987ffbc1354663
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69529168"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70760400"
 ---
 # <a name="containerized-microservices"></a>Microsserviços em contêineres
 
-O desenvolvimento de aplicativos cliente-servidor resultou em um foco na criação de aplicativos em camadas que usam tecnologias específicas em cada camada. Esses aplicativos costumam ser chamados de aplicativos monolíticos e empacotados em hardware previamente dimensionado para picos de carga. As principais desvantagens dessa abordagem de desenvolvimento são o acoplamento rígido entre os componentes de cada camada, que os componentes individuais não podem ser dimensionados com facilidade e o custo do teste. Uma atualização simples pode ter efeitos imprevistos no restante da camada e, portanto, uma alteração em um componente de aplicativo requer que sua camada inteira seja testada novamente e reimplantada.
+O desenvolvimento de aplicativos cliente-servidor resultou em um foco na criação de aplicativos em camadas que usam tecnologias específicas em cada camada. Esses aplicativos costumam ser chamados de aplicativos *monolíticos* e empacotados em hardware previamente dimensionado para picos de carga. As principais desvantagens dessa abordagem de desenvolvimento são o acoplamento rígido entre os componentes de cada camada, que os componentes individuais não podem ser dimensionados com facilidade e o custo do teste. Uma atualização simples pode ter efeitos imprevistos no restante da camada e, portanto, uma alteração em um componente de aplicativo requer que sua camada inteira seja testada novamente e reimplantada.
 
 Especialmente em relação à idade da nuvem, é que os componentes individuais não podem ser facilmente dimensionados. Um aplicativo monolítico contém funcionalidade específica de domínio e normalmente é dividido por camadas funcionais, como front-end, lógica de negócios e armazenamento de dados. Um aplicativo monolítico é dimensionado com a clonagem de todo o aplicativo em vários computadores, como ilustrado na Figura 8-1.
 
@@ -78,7 +78,7 @@ Os principais conceitos ao criar e trabalhar com contêineres são:
 - Imagem de contêiner: Uma imagem consiste em uma União de sistemas de fileem camadas empilhados um em cima do outro e é a base de um contêiner. Uma imagem não tem estado e nunca muda conforme é implantada em ambientes diferentes.
 - Container Um contêiner é uma instância de tempo de execução de uma imagem.
 - Imagem do sistema operacional do contêiner: Os contêineres são implantados a partir de imagens. A imagem do sistema operacional do contêiner é a primeira camada em potencialmente muitas camadas de imagem que compõem um contêiner. Um sistema operacional de contêiner é imutável e não pode ser modificado.
-- Repositório do contêiner: Cada vez que uma imagem de contêiner é criada, a imagem e suas dependências são armazenadas em um repositório local. Essas imagens podem ser reutilizadas muitas vezes no host do contêiner. As imagens de contêiner também podem ser armazenadas em um registro público ou privado, como o [Hub](https://hub.docker.com/)do Docker, para que possam ser usadas em diferentes hosts de contêiner.
+- Repositório do contêiner: Cada vez que uma imagem de contêiner é criada, a imagem e suas dependências são armazenadas em um repositório local. Essas imagens podem ser reutilizadas muitas vezes no host do contêiner. As imagens de contêiner também podem ser armazenadas em um registro público ou privado, como o [Hub do Docker](https://hub.docker.com/), para que possam ser usadas em diferentes hosts de contêiner.
 
 As empresas estão cada vez mais adotando contêineres ao implementar aplicativos baseados em microserviço, e o Docker se tornou a implementação de contêiner padrão que foi adotada pela maioria das plataformas de software e fornecedores de nuvem.
 
@@ -90,7 +90,7 @@ O aplicativo de referência eShopOnContainers usa o Docker para hospedar quatro 
 
 A arquitetura dos serviços de back-end no aplicativo de referência é decomposta em vários subsistemas autônomos na forma de colaboração de microserviços e contêineres. Cada microserviço fornece uma única área de funcionalidade: um serviço de identidade, um serviço de catálogo, um serviço de pedidos e um serviço de cesta.
 
-Cada Microservice tem seu próprio banco de dados, permitindo que ele seja totalmente dissociado dos outros microservices. Quando necessário, a consistência entre os bancos de dados de diferentes microservices é obtida usando eventos de nível de aplicativo. Para obter mais informações, consulte [comunicação entre](#communication_between_microservices)os microserviços.
+Cada Microservice tem seu próprio banco de dados, permitindo que ele seja totalmente dissociado dos outros microservices. Quando necessário, a consistência entre os bancos de dados de diferentes microservices é obtida usando eventos de nível de aplicativo. Para obter mais informações, consulte [comunicação entre os microserviços](#communication_between_microservices).
 
 Para obter mais informações sobre o aplicativo de referência [, consulte microservices do .net: Arquitetura para aplicativos .NET em contêineres](https://aka.ms/microservicesebook).
 
@@ -149,7 +149,6 @@ Para obter informações sobre a implementação do barramento de [evento, consu
 Os microserviços oferecem uma abordagem ao desenvolvimento e à implantação de aplicativos adequados para os requisitos de agilidade, escala e confiabilidade dos aplicativos de nuvem modernos. Uma das principais vantagens dos microserviços é que eles podem ser expandidos de forma independente, o que significa que uma área funcional específica pode ser dimensionada para exigir mais capacidade de processamento ou largura de banda de rede para dar suporte à demanda, sem áreas de dimensionamento desnecessariamente de o aplicativo que não está sofrendo maior demanda.
 
 Um contêiner é um ambiente operacional isolado, controlado por recursos e portátil, onde um aplicativo pode ser executado sem tocar nos recursos de outros contêineres ou no host. As empresas estão cada vez mais adotando contêineres ao implementar aplicativos baseados em microserviço, e o Docker se tornou a implementação de contêiner padrão que foi adotada pela maioria das plataformas de software e fornecedores de nuvem.
-
 
 ## <a name="related-links"></a>Links relacionados
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 09/13/2016
-ms.openlocfilehash: fa44ba260a62a6e0bd036c08c62371734b38d82d
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 0ac9b486defb74cac7ccd946d2b35b283e6aeca5
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70286580"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70752322"
 ---
 # <a name="app-store-changes-in-ios-11"></a>Alterações na loja de aplicativos no iOS 11
 
@@ -33,7 +33,6 @@ A loja de aplicativos remodelada tem as seguintes seções:
 Os ícones da loja (ou ícones de marketing) não são mais gerenciados no iTunes Connect e, em vez disso, devem estar contidos como um [Catálogo de ativos](~/ios/app-fundamentals/images-icons/app-icons.md) em seu binário de aplicativo, semelhante aos ícones do aplicativo. Um ícone de armazenamento 1024 x 1024 no formato PNG deve ser incluído em um catálogo de ativos para envio bem-sucedido de aplicativos do iOS 11.
 
 O estreitamento do aplicativo garante que esse catálogo de ativos adicional não aumente o tamanho do aplicativo.
-
 
 ## <a name="in-app-purchases-promoted-in-the-app-store"></a>Compras no aplicativo promovidas na loja de aplicativos
 
@@ -96,7 +95,6 @@ As versões em fases são habilitadas no iTunes Connect. Clique em seu aplicativ
 ![Opção mostrando a versão em fases para atualizações automáticas](app-store-changes-images/image6.png)
 
 Sua atualização está disponível imediatamente para download na guia Atualizações da loja de aplicativos. As versões em fases só estão disponíveis para usuários que têm Downloads automáticos selecionados.
-
 
 ## <a name="related-links"></a>Links relacionados
 

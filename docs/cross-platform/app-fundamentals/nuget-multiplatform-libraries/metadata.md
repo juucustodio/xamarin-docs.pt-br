@@ -6,12 +6,12 @@ ms.assetid: 147BA370-67A7-4E6C-BF17-AA7C536C0A48
 author: conceptdev
 ms.author: crdun
 ms.date: 03/23/2017
-ms.openlocfilehash: bf8efad28c7ec6acfd0e43403e8db14639a3c755
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 125412ec229f07c4515f42e4df7996d90f87a67b
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70289403"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70766551"
 ---
 # <a name="editing-nuget-metadata"></a>Editando metadados do NuGet
 
@@ -50,7 +50,6 @@ Consulte a [referência de elementos opcionais](https://docs.microsoft.com/nuget
 
 > [!NOTE]
 > Se o pacote NuGet estiver sendo distribuído no [NuGet.org](https://www.nuget.org) , é recomendável fornecer o máximo possível de informações.
-
 
 ## <a name="related-links"></a>Links relacionados
 

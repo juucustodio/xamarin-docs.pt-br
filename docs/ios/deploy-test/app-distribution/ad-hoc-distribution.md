@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: 35596d5231f7e485cf8217e35a5641277dcab11d
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: ca524e9ff3c1d3c938905093f55a6482ea085963
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70285592"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70763204"
 ---
 # <a name="ad-hoc-distribution-for-xamarinios-apps"></a>Distribuição Ad Hoc para aplicativos Xamarin.iOS
 
@@ -44,7 +44,6 @@ A próxima seção descreverá como configurar com um Certificado de Distribuiç
 <a name="createcertificate" />
 
 ## <a name="create-a-distribution-certificate"></a>Criar um certificado de distribuição
-
 
 1. Navegue até a seção *Certificates, Identifiers & Profiles (Certificados, Identificadores e Perfis)* do Apple Developer Member Center (Central de Associados do Desenvolvedor da Apple).
 2. Em *Certificates (Certificados)* , selecione **Production (Produção)** .
@@ -79,7 +78,6 @@ Também é possível solicitar um Certificado usando a caixa de diálogo Prefer�
 
 ### <a name="create-an-app-id"></a>Criar uma ID do aplicativo
 Como com qualquer outro Perfil de Provisionamento que você criar, uma ID do Aplicativo será necessária para identificar o Aplicativo que você distribuirá para o dispositivo do usuário. Se ainda não tiver criado uma, siga as etapas abaixo para criá-la:
-
 
 1. No [Apple Developer Center (Centro de Desenvolvedores da Apple)](https://developer.apple.com/account/overview.action), navegue até a seção *Certificate, Identifiers and Profiles (Certificados, Identificadores e Perfis)* . Selecione **App IDs (IDs do Aplicativo)** em **Identifiers (Identificadores)** .
 2. Clique no botão **+** e forneça um **Name (Nome)** que o identificará no Portal.
@@ -179,7 +177,6 @@ Para obter mais informações sobre como criar um IPA, consulte [Suporte do IPA]
 ## <a name="summary"></a>Resumo
 
 Este artigo explicou os mecanismos de distribuição Ad Hoc, que são necessários para testar aplicativos Xamarin.iOS.
-
 
 ## <a name="related-links"></a>Links relacionados
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/07/2016
-ms.openlocfilehash: 6fd952fc929fc11d19d8ceb0153aa8d7702a21a7
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
-ms.translationtype: HT
+ms.openlocfilehash: 406d65145017e4c82743bc920ff19696a90afc33
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69889235"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771701"
 ---
 # <a name="customizing-a-viewcell"></a>Personalizando um ViewCell
 
@@ -573,7 +573,6 @@ O `DataTemplate` especifica os controles usados para exibir o conteúdo da célu
 ## <a name="summary"></a>Resumo
 
 Este artigo demonstrou como criar um renderizador personalizado para um [`ViewCell`](xref:Xamarin.Forms.ViewCell) hospedado dentro de um controle [`ListView`](xref:Xamarin.Forms.ListView) do Xamarin.Forms. Isso impede que os cálculos de layout do Xamarin.Forms sejam chamados repetidamente durante a rolagem de `ListView`.
-
 
 ## <a name="related-links"></a>Links relacionados
 

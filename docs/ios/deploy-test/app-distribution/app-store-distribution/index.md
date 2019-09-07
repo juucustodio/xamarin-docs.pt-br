@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 08/23/2017
-ms.openlocfilehash: 5cf57a42092535363071acffe993cd38a91b9805
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 05034989c60868f8bff8164da7da90a7ff8788a3
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290987"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70763213"
 ---
 # <a name="app-store-distribution"></a>Distribuição da App Store
 
@@ -70,7 +70,6 @@ Também é possível solicitar um Certificado usando a caixa de diálogo Prefer�
 
 3. Dependendo dos privilégios de sua equipe, a identidade de assinatura será gerada conforme mostrado abaixo ou talvez você precise aguardar até um agente de equipe ou administrador aprová-la:  [![](images/generated.png "A identidade de assinatura será gerada e uma caixa de diálogo será exibida")](images/generated.png#lightbox)
 
-
 <a name="creatingprofile" />
 
 ## <a name="creating-a-distribution-profile"></a>Como criar um perfil de distribuição
@@ -81,7 +80,6 @@ Também é possível solicitar um Certificado usando a caixa de diálogo Prefer�
 
 Como com qualquer outro Perfil de Provisionamento que você criar, uma ID do Aplicativo será necessária para identificar o Aplicativo que você está distribuindo ao dispositivo do usuário. Se ainda não tiver criado uma, siga as etapas abaixo para criá-la:
 
-
 1. No [Apple Developer Center (Centro de Desenvolvedores da Apple)](https://developer.apple.com/account/overview.action), navegue até a seção *Certificate, Identifiers and Profiles (Certificados, Identificadores e Perfis)* . Selecione **App IDs (IDs do Aplicativo)** em **Identifiers (Identificadores)** .
 2. Clique no botão **+** e forneça um **Name (Nome)** que o identificará no Portal.
 3. O prefixo do aplicativo já deve estar definido como sua ID de Equipe e não pode ser alterado. Selecione uma ID do Aplicativo Explícita ou Curinga e insira uma ID de Pacote no formato DNS inverso, como:
@@ -89,7 +87,6 @@ Como com qualquer outro Perfil de Provisionamento que você criar, uma ID do Apl
     - **Curinga**: com.[DomainName].*
 4. Selecione quaisquer [Serviços de Aplicativos](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#appservices) que seu aplicativo exija.
 5. Clique no botão **Continue (Continuar)** e siga as instruções na tela para criar a nova ID do Aplicativo.
-
 
 ### <a name="creating-a-provisioning-profile"></a>Criando um perfil de provisionamento
 
@@ -120,7 +117,6 @@ Depois de obter os componentes obrigatórios necessários para criar um Perfil d
     [![](images/distribute06.png "Insira um nome para o novo Perfil de Distribuição")](images/distribute06.png#lightbox)
 
 7. Clique no botão **Generate (Gerar)** para criar o novo perfil e finalizar o processo.
-
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 

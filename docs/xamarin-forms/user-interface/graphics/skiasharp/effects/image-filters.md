@@ -7,12 +7,12 @@ ms.assetid: 173E7B22-AEC8-4F12-B657-1C0CEE01AD63
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/27/2018
-ms.openlocfilehash: 10b61a7279964e8e1fb76a88be4f253e96b59908
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: f93f0462d476daaaa551833391b1be1865795476
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70199201"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770537"
 ---
 # <a name="skiasharp-image-filters"></a>Filtros de imagem de SkiaSharp
 
@@ -76,7 +76,6 @@ O **imagem desfoque experimento** página na [ **SkiaSharpFormsDemos** ](https:/
 ```
 
 O arquivo code-behind usa os dois `Slider` valores de chamar `SKImageFilter.CreateBlur` para o `SKPaint` objeto usado para exibir texto e um bitmap:
-
 
 ```csharp
 public partial class ImageBlurExperimentPage : ContentPage

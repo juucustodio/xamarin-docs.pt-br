@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/08/2017
-ms.openlocfilehash: 45008e127286d14ef62c5212976bfd3a8aac651f
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 667de4d579f43558d9a811c386e355433f526077
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69529184"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70760458"
 ---
 # <a name="authentication-and-authorization"></a>Autenticação e autorização
 
@@ -37,7 +37,7 @@ O OpenID Connect é uma camada de autenticação sobre o protocolo OAuth 2,0. O 
 
 A combinação do OpenID Connect e do OAuth 2,0 combina as duas preocupações fundamentais de segurança de autenticação e acesso à API, e o IdentityServer 4 é uma implementação desses protocolos.
 
-Em aplicativos que usam comunicação direta de cliente para microserviço, como o aplicativo de referência eShopOnContainers, um microserviço de autenticação dedicado agindo como um serviço de token de segurança (STS) pode ser usado para autenticar usuários, como mostrado na figura 9-1. Para obter mais informações sobre comunicação direta entre cliente e microserviço, consulte [comunicação entre o cliente e](~/xamarin-forms/enterprise-application-patterns/containerized-microservices.md#communication_between_client_and_microservices)os microserviços.
+Em aplicativos que usam comunicação direta de cliente para microserviço, como o aplicativo de referência eShopOnContainers, um microserviço de autenticação dedicado agindo como um serviço de token de segurança (STS) pode ser usado para autenticar usuários, como mostrado na figura 9-1. Para obter mais informações sobre comunicação direta entre cliente e microserviço, consulte [comunicação entre o cliente e os microserviços](~/xamarin-forms/enterprise-application-patterns/containerized-microservices.md#communication_between_client_and_microservices).
 
 ![](authentication-and-authorization-images/authentication.png "Autenticação por um microserviço de autenticação dedicado")
 
@@ -192,7 +192,7 @@ Esta configuração especifica dados para as seguintes propriedades:
 
 - `ClientId`: Uma ID exclusiva para o cliente.
 - `ClientName`: O nome de exibição do cliente, que é usado para registro em log e a tela de consentimento.
-- `AllowedGrantTypes`: Especifica como um cliente deseja interagir com o IdentityServer. Para obter mais informações, consulte Configurando [o fluxo de autenticação](#configuring_the_authentication_flow).
+- `AllowedGrantTypes`: Especifica como um cliente deseja interagir com o IdentityServer. Para obter mais informações, consulte [Configurando o fluxo de autenticação](#configuring_the_authentication_flow).
 - `ClientSecrets`: Especifica as credenciais de segredo do cliente que são usadas ao solicitar tokens do ponto de extremidade do token.
 - `RedirectUris`: Especifica os URIs permitidos para os quais retornar tokens ou códigos de autorização.
 - `RequireConsent`: Especifica se uma tela de consentimento é necessária.
@@ -323,7 +323,7 @@ Esse método analisa a resposta de autenticação contida no URI de retorno e de
 
 Se o ponto de extremidade do token receber um código de autorização válido e um verificador de segredo PKCE, ele responderá com um token de acesso, token de identidade e token de atualização. O token de acesso (que permite o acesso aos recursos da API) e o token de identidade são armazenados como configurações do aplicativo e a navegação da página é executada. Portanto, o efeito geral no aplicativo móvel eShopOnContainers é: desde que os usuários possam se autenticar com êxito com o IdentityServer, eles são navegados para a `MainView` página, que é um [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) que exibe o `CatalogView` como a guia selecionada.
 
-Para obter informações sobre navegação de página, consulte [Navigation](~/xamarin-forms/enterprise-application-patterns/navigation.md). Para obter informações sobre [`WebView`](xref:Xamarin.Forms.WebView) como a navegação faz com que um método de modelo de exibição seja executado, consulte invocando a [navegação usando comportamentos](~/xamarin-forms/enterprise-application-patterns/navigation.md#invoking_navigation_using_behaviors). Para obter informações sobre configurações de aplicativo, consulte [Gerenciamento de configuração](~/xamarin-forms/enterprise-application-patterns/configuration-management.md).
+Para obter informações sobre navegação de página, consulte [Navigation](~/xamarin-forms/enterprise-application-patterns/navigation.md). Para obter informações sobre [`WebView`](xref:Xamarin.Forms.WebView) como a navegação faz com que um método de modelo de exibição seja executado, consulte [invocando a navegação usando comportamentos](~/xamarin-forms/enterprise-application-patterns/navigation.md#invoking_navigation_using_behaviors). Para obter informações sobre configurações de aplicativo, consulte [Gerenciamento de configuração](~/xamarin-forms/enterprise-application-patterns/configuration-management.md).
 
 > [!NOTE]
 > O eShopOnContainers também permite uma entrada fictícia quando o aplicativo é configurado para usar serviços fictícios no `SettingsView`. Nesse modo, o aplicativo não se comunica com o IdentityServer, permitindo que o usuário entre usando qualquer credencial.
@@ -382,7 +382,7 @@ private async Task NavigateAsync(string url)
 
 Esse método limpa o token de identidade e o token de acesso das configurações do aplicativo e define a `IsLogin` Propriedade como `false`, o `LoginView` que faz [`WebView`](xref:Xamarin.Forms.WebView) com que o na página se torne invisível. Por fim, `LoginUrl` a propriedade é definida como o URI do [ponto de extremidade de autorização](https://identityserver4.readthedocs.io/en/latest/endpoints/authorize.html)do IdentityServer, com os parâmetros necessários, na preparação para a próxima vez que o usuário iniciar uma entrada.
 
-Para obter informações sobre navegação de página, consulte [Navigation](~/xamarin-forms/enterprise-application-patterns/navigation.md). Para obter informações sobre [`WebView`](xref:Xamarin.Forms.WebView) como a navegação faz com que um método de modelo de exibição seja executado, consulte invocando a [navegação usando comportamentos](~/xamarin-forms/enterprise-application-patterns/navigation.md#invoking_navigation_using_behaviors). Para obter informações sobre configurações de aplicativo, consulte [Gerenciamento de configuração](~/xamarin-forms/enterprise-application-patterns/configuration-management.md).
+Para obter informações sobre navegação de página, consulte [Navigation](~/xamarin-forms/enterprise-application-patterns/navigation.md). Para obter informações sobre [`WebView`](xref:Xamarin.Forms.WebView) como a navegação faz com que um método de modelo de exibição seja executado, consulte [invocando a navegação usando comportamentos](~/xamarin-forms/enterprise-application-patterns/navigation.md#invoking_navigation_using_behaviors). Para obter informações sobre configurações de aplicativo, consulte [Gerenciamento de configuração](~/xamarin-forms/enterprise-application-patterns/configuration-management.md).
 
 > [!NOTE]
 > O eShopOnContainers também permite uma saída fictícia quando o aplicativo é configurado para usar serviços fictícios no SettingsView. Nesse modo, o aplicativo não se comunica com o IdentityServer e, em vez disso, limpa todos os tokens armazenados das configurações do aplicativo.
@@ -414,7 +414,7 @@ O IdentityServer pode ser integrado ao fluxo de trabalho de autorização para q
 
 **Figura 9-5:** Autorização por token de acesso
 
-O aplicativo móvel eShopOnContainers comunica-se com o microserviço de identidade e solicita um token de acesso como parte do processo de autenticação. O token de acesso é encaminhado para as APIs expostas pelos microserviços de classificação e cesta como parte das solicitações de acesso. Os tokens de acesso contêm informações sobre o cliente e o usuário. As APIs usam essas informações para autorizar o acesso aos seus dados. Para obter informações sobre como configurar o IdentityServer para proteger APIs, consulte Configurando [recursos de API](#configuring-api-resources).
+O aplicativo móvel eShopOnContainers comunica-se com o microserviço de identidade e solicita um token de acesso como parte do processo de autenticação. O token de acesso é encaminhado para as APIs expostas pelos microserviços de classificação e cesta como parte das solicitações de acesso. Os tokens de acesso contêm informações sobre o cliente e o usuário. As APIs usam essas informações para autorizar o acesso aos seus dados. Para obter informações sobre como configurar o IdentityServer para proteger APIs, consulte [configurando recursos de API](#configuring-api-resources).
 
 ### <a name="configuring-identityserver-to-perform-authorization"></a>Configurando o IdentityServer para executar a autorização
 
@@ -470,14 +470,13 @@ httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValu
 
 A `DefaultRequestHeaders` propriedade `Authorization` `Bearer`da classe expõe os cabeçalhos que são enviados com cada solicitação e o token de acesso é adicionado ao cabeçalho prefixado com a cadeia de caracteres. `HttpClient` Quando a solicitação é enviada a uma API RESTful, o valor do `Authorization` cabeçalho é extraído e validado para garantir que ele seja enviado de um emissor confiável e usado para determinar se o usuário tem permissão para invocar a API que a recebe.
 
-Para obter mais informações sobre como o aplicativo móvel eShopOnContainers faz solicitações da Web, consulte Acessando [dados remotos](~/xamarin-forms/enterprise-application-patterns/accessing-remote-data.md).
+Para obter mais informações sobre como o aplicativo móvel eShopOnContainers faz solicitações da Web, consulte [acessando dados remotos](~/xamarin-forms/enterprise-application-patterns/accessing-remote-data.md).
 
 ## <a name="summary"></a>Resumo
 
 Há muitas abordagens para integrar a autenticação e a autorização em um aplicativo Xamarin. Forms que se comunica com um aplicativo Web ASP.NET MVC. O aplicativo móvel eShopOnContainers executa autenticação e autorização com um microserviço de identidade em contêiner que usa o IdentityServer 4. IdentityServer é uma estrutura de software livre do OpenID Connect e do OAuth 2,0 para ASP.NET Core que se integra com a identidade ASP.NET Core para executar a autenticação de token de portador.
 
 O aplicativo móvel solicita tokens de segurança do IdentityServer, seja para autenticar um usuário ou para acessar um recurso. Ao acessar um recurso, um token de acesso deve ser incluído na solicitação para APIs que exigem autorização. O middleware da IdentityServer valida tokens de acesso de entrada para garantir que eles sejam enviados de um emissor confiável e que sejam válidos para serem usados com a API que os recebe.
-
 
 ## <a name="related-links"></a>Links relacionados
 

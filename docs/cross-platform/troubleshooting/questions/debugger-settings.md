@@ -6,12 +6,12 @@ ms.assetid: 3A024E4E-ACA3-4C7A-ADEF-541665D15779
 author: conceptdev
 ms.author: crdun
 ms.date: 05/08/2018
-ms.openlocfilehash: 1abf166e35688790bb0b059793c8929495eeea02
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 343f8d37d77726d2cdc06a74c44e476af00dde27
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70285043"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70765152"
 ---
 # <a name="what-project-settings-are-required-for-the-debugger"></a>Quais configurações do projeto são necessárias para o depurador?
 
@@ -32,4 +32,3 @@ Siga estas etapas para verificar as configurações do seu ambiente:
 3. Configurações para cada plataforma:
     - Acesse **compilar > Android build > opções de depuração**. Marque a caixa **habilitar instrumentação do desenvolvedor** .
     - Vá para **compilar > depuração do IOS**. Marque a caixa de seleção **Habilitar depuração** .
-

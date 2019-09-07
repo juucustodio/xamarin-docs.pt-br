@@ -7,17 +7,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 09/06/2018
-ms.openlocfilehash: 4d8f467b4dcc5e6c4628ed7afa43779cc48b7ef5
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: b05ab7ee835a97f13af618332baec7a5ebf404ec
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522183"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70764095"
 ---
 # <a name="splash-screen"></a>Splash Screen
 
 _Um aplicativo Android leva algum tempo para ser iniciado, especialmente quando o aplicativo é iniciado pela primeira vez em um dispositivo. Uma tela inicial pode exibir o progresso de inicialização para o usuário ou para indicar a identidade visual._
-
 
 ## <a name="overview"></a>Visão geral
 
@@ -33,20 +32,17 @@ Este guia aborda uma técnica para implementar uma tela inicial em um aplicativo
 
 [![Tela inicial do logotipo do Xamarin de exemplo seguida pela tela do aplicativo](splash-screen-images/splashscreen-01-sml.png)](splash-screen-images/splashscreen-01.png#lightbox)
 
-
 ## <a name="requirements"></a>Requisitos
 
 Este guia pressupõe que o aplicativo tem como alvo o nível 15 (Android 4.0.3) ou superior da API do Android. O aplicativo também deve ter os pacotes **xamarin. Android. support. v4** e **xamarin. Android. support. v7. AppCompat** NuGet adicionados ao projeto.
 
 Todo o código e o XML neste guia podem ser encontrados no projeto de exemplo de [tela](https://docs.microsoft.com/samples/xamarin/monodroid-samples/splashscreen) inicial deste guia.
 
-
 ## <a name="implementing-a-splash-screen"></a>Implementando uma tela inicial
 
 A maneira mais rápida de renderizar e exibir a tela inicial é criar um tema personalizado e aplicá-lo a uma atividade que exibe a tela inicial. Quando a atividade é renderizada, ela carrega o tema e aplica o recurso desenhável (referenciado pelo tema) ao plano de fundo da atividade. Essa abordagem evita a necessidade de criar um arquivo de layout.
 
 A tela inicial é implementada como uma atividade que exibe o empate com marca, executa todas as inicializações e inicia todas as tarefas. Depois que o aplicativo for inicializado, a atividade da tela inicial iniciará a atividade principal e se removerá da pilha voltar do aplicativo.
-
 
 ### <a name="creating-a-drawable-for-the-splash-screen"></a>Criando um empate para a tela inicial
 
@@ -69,14 +65,13 @@ Neste guia, usamos uma lista de [camadas](https://developer.android.com/guide/to
 </layer-list>
 ```
 
-Isso `layer-list` centralizará a imagem de abertura **Splash. png** em `@color/splash_background` segundo plano especificado pelo recurso. Coloque esse arquivo XML na pasta **recursos/empates** (por exemplo, resourceable **/splash_screen. xml**).
+Isso `layer-list` centralizará a imagem de abertura **Splash. png** em `@color/splash_background` segundo plano especificado pelo recurso. Coloque esse arquivo XML na pasta **recursos/empates** (por exemplo, **resourceable/splash_screen. xml**).
 
 Depois que a tela inicial for criada, a próxima etapa será criar um tema para a tela inicial.
 
-
 ### <a name="implementing-a-theme"></a>Implementando um tema
 
-Para criar um tema personalizado para a atividade da tela inicial, edite (ou adicione) o arquivo **Values/Styles. xml** e crie um novo `style` elemento para a tela inicial. Um arquivo **Values/Style. xml** de exemplo é mostrado abaixo `style` com um chamado mythemes **. Splash**:
+Para criar um tema personalizado para a atividade da tela inicial, edite (ou adicione) o arquivo **Values/Styles. xml** e crie um novo `style` elemento para a tela inicial. Um arquivo **Values/Style. xml** de exemplo é mostrado abaixo `style` com um chamado **mythemes. Splash**:
 
 ```xml
 <resources>
@@ -95,7 +90,6 @@ Para criar um tema personalizado para a atividade da tela inicial, edite (ou adi
 ```
 
 **MyTheme. Splash** é muito companhias Spartan &ndash; ele declara o plano de fundo da janela, remove explicitamente a barra de título da janela e declara que ela é de tela inteira. Se você quiser criar uma tela inicial que emula a interface do usuário do seu aplicativo antes que a atividade inplana o primeiro layout, você pode usar `windowContentOverlay` em vez `windowBackground` de em sua definição de estilo. Nesse caso, você também deve modificar o **splash_screen. xml** Drawable para que ele exiba uma emulação de sua interface do usuário.
-
 
 ### <a name="create-a-splash-activity"></a>Criar uma atividade de splash
 
@@ -178,7 +172,7 @@ Para adicionar uma tela inicial para o modo paisagem, use as seguintes etapas:
     </layer-list>
     ```
 
-3. Crie a pasta resources **/Values-Land** se ela ainda não existir.
+3. Crie a pasta **Resources/Values-Land** se ela ainda não existir.
 
 4. Adicione os arquivos **Colors. xml** e **Style. xml** a **Values-Land** (eles podem ser copiados e modificados dos arquivos **valores/Colors. xml** e **Values/Style. xml** existentes).
 
@@ -217,14 +211,11 @@ Para adicionar uma tela inicial para o modo paisagem, use as seguintes etapas:
 
     [![Rotação da tela inicial para o modo paisagem](splash-screen-images/landscape-splash-sml.png)](splash-screen-images/landscape-splash.png#lightbox)
 
-
 Observe que o uso de uma tela inicial em modo paisagem nem sempre fornece uma experiência contínua. Por padrão, o Android inicia o aplicativo no modo retrato e faz a transição para o modo paisagem mesmo que o dispositivo já esteja no modo paisagem. Como resultado, se o aplicativo for iniciado enquanto o dispositivo estiver no modo paisagem, o dispositivo apresentará brevemente a tela de abertura retrato e, em seguida, anima a rotação de retrato para a tela inicial paisagem. Infelizmente, essa transição inicial de retrato para paisagem ocorre mesmo quando `ScreenOrientation = Android.Content.PM.ScreenOrientation.Landscape` é especificado nos sinalizadores da atividade de abertura. A melhor maneira de contornar essa limitação é criar uma única imagem de tela inicial que seja renderizada corretamente nos modos retrato e paisagem.
-
 
 ## <a name="summary"></a>Resumo
 
 Este guia abordou uma maneira de implementar uma tela inicial em um aplicativo Xamarin. Android; a saber, aplicando um tema personalizado à atividade de inicialização.
-
 
 ## <a name="related-links"></a>Links relacionados
 

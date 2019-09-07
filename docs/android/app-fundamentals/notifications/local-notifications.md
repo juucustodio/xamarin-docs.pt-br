@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/16/2018
-ms.openlocfilehash: 3ff6bc9c603360232b22a36dadb42b6caf31cada
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 0d5cde38c9bb9ef4771ec17ef34ebf7e1b8cf74c
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522387"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755509"
 ---
 # <a name="local-notifications-on-android"></a>Notificações locais no Android
 
@@ -83,7 +83,6 @@ O Android inclui suporte para metadados de notificação para que as notificaç�
 
 > [!NOTE]
 > A **visibilidade** e a **categoria** foram introduzidas no Android 5,0 e não estão disponíveis em versões anteriores do Android. A partir do Android 8,0, os [canais de notificação](#notif-chan) são usados para controlar como as notificações são apresentadas ao usuário.
-
 
 ### <a name="expanded-layouts"></a>Layouts expandidos
 
@@ -329,7 +328,6 @@ Uma notificação permanece visível até que uma das três coisas aconteça:
 
 Para obter mais informações sobre a atualização de notificações do Android, consulte [modificar uma notificação](https://developer.android.com/training/notify-user/managing.html#Updating).
 
-
 ### <a name="starting-an-activity-from-a-notification"></a>Iniciando uma atividade de uma notificação
 
 No Android, é comum que uma notificação seja associada a uma *ação* &ndash; uma atividade que é iniciada quando o usuário toca na notificação. Essa atividade pode residir em outro aplicativo ou mesmo em outra tarefa. Para adicionar uma ação a uma notificação, você cria um objeto [PendingIntent](xref:Android.App.PendingIntent) e associa `PendingIntent` o com a notificação. Um `PendingIntent` é um tipo especial de intenção que permite que o aplicativo destinatário execute uma parte de código predefinida com as permissões do aplicativo de envio. Quando o usuário toca na notificação, o Android inicia a atividade especificada pelo `PendingIntent`.
@@ -462,7 +460,7 @@ Para usar uma imagem como um ícone grande em uma notificação, você chama o m
 builder.SetLargeIcon (BitmapFactory.DecodeResource (Resources, Resource.Drawable.monkey_icon));
 ```
 
-Este código de exemplo abre o arquivo de imagem em Resources/ **monkey_icon. png**, converte-o em um bitmap e passa o bitmap resultante `NotificationCompat.Builder`para. Normalmente, a resolução da imagem de origem é maior do que &ndash; o ícone pequeno, mas não muito maior. Uma imagem muito grande pode causar operações de redimensionamento desnecessárias que podem atrasar o lançamento da notificação.
+Este código de exemplo abre o arquivo de imagem em **Resources/monkey_icon. png**, converte-o em um bitmap e passa o bitmap resultante `NotificationCompat.Builder`para. Normalmente, a resolução da imagem de origem é maior do que &ndash; o ícone pequeno, mas não muito maior. Uma imagem muito grande pode causar operações de redimensionamento desnecessárias que podem atrasar o lançamento da notificação.
 
 ### <a name="big-text-style"></a>Estilo de texto grande
 
@@ -531,7 +529,7 @@ builder.SetStyle (picStyle);
 // Create the notification and publish it ...
 ```
 
-Como o `SetLargeIcon` método de `NotificationCompat.Builder`, o método [BigPicture](xref:Android.App.Notification.BigPictureStyle.BigPicture*) de `BigPictureStyle` requer um bitmap da imagem que você deseja exibir no corpo da notificação. Neste exemplo, o método [DecodeResource](xref:Android.Graphics.BitmapFactory.DecodeResource*) de `BitmapFactory` lê o arquivo de imagem localizado em Resources/ **desenháable/x_bldg. png** e o converte em um bitmap.
+Como o `SetLargeIcon` método de `NotificationCompat.Builder`, o método [BigPicture](xref:Android.App.Notification.BigPictureStyle.BigPicture*) de `BigPictureStyle` requer um bitmap da imagem que você deseja exibir no corpo da notificação. Neste exemplo, o método [DecodeResource](xref:Android.Graphics.BitmapFactory.DecodeResource*) de `BitmapFactory` lê o arquivo de imagem localizado em **Resources/desenháable/x_bldg. png** e o converte em um bitmap.
 
 Você também pode exibir imagens que não são empacotadas como um recurso. Por exemplo, o código de exemplo a seguir carrega uma imagem do cartão SD local e a exibe em uma notificação de *imagem* :
 
@@ -558,7 +556,7 @@ Neste exemplo, o arquivo de imagem localizado em **/sdcard/Pictures/My-tshirt.jp
 
 ![Exemplo de imagem de camiseta em notificação](local-notifications-images/19-tshirt-notification.png)
 
-Se você não souber o tamanho do arquivo de imagem com antecedência, é uma boa ideia encapsular a chamada para [BitmapFactory.](xref:Android.Graphics.BitmapFactory.DecodeFile*) decodificafile em um manipulador &ndash; de exceção. `OutOfMemoryError` uma exceção poderá ser gerada se a imagem for muito grande para que o Android redimensione.
+Se você não souber o tamanho do arquivo de imagem com antecedência, é uma boa ideia encapsular a chamada para [BitmapFactory. decodificafile](xref:Android.Graphics.BitmapFactory.DecodeFile*) em um manipulador &ndash; de exceção. uma `OutOfMemoryError` exceção poderá ser gerada se a imagem for muito grande para que o Android redimensione.
 
 Para saber mais sobre como carregar e decodificar imagens de bitmap grandes, confira [carregar bitmaps grandes com eficiência](https://github.com/xamarin/recipes/tree/master/Recipes/android/resources/general/load_large_bitmaps_efficiently).
 
@@ -709,7 +707,7 @@ O recurso *não incomodar* (novo no Android 5,0) filtra as notificações com ba
 
 ![Opções de tela não incomodar](local-notifications-images/26-do-not-disturb.png)
 
-Quando o usuário configura *não incomodar* para bloquear todas as interrupções, exceto para chamadas telefônicas (conforme ilustrado na captura de tela acima), o Android permite que as notificações `Notification.CategoryCall` com uma configuração de categoria seja apresentada enquanto o dispositivo está em nãomodo de perturbador. Observe que `Notification.CategoryAlarm` as notificações nunca são bloqueadas no modo não *incomodar* .
+Quando o usuário configura *não incomodar* para bloquear todas as interrupções, exceto para chamadas telefônicas (conforme ilustrado na captura de tela acima), o Android permite que as notificações `Notification.CategoryCall` com uma configuração de categoria seja apresentada enquanto o dispositivo *está em não modo de perturbador* . Observe que `Notification.CategoryAlarm` as notificações nunca são bloqueadas no modo não *incomodar* .
 
 O exemplo [LocalNotifications](https://docs.microsoft.com/samples/xamarin/monodroid-samples/localnotifications) demonstra como usar `NotificationCompat.Builder` o para iniciar uma segunda atividade de uma notificação. Este código de exemplo é explicado nas instruções [using local Notifications no Xamarin. Android](~/android/app-fundamentals/notifications/local-notifications-walkthrough.md) .
 

@@ -7,17 +7,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/13/2018
-ms.openlocfilehash: 5edde7cff0867161394270250a8fe622e8e03ee3
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
-ms.translationtype: HT
+ms.openlocfilehash: dfd6c9d6419f663b1ef474066f7918859d42b3c5
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69524906"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70757291"
 ---
 # <a name="xamarin-for-java-developers"></a>Xamarin para Desenvolvedores Java
 
 _Caso seja um desenvolvedor de Java, você está no caminho certo para aproveitar as suas habilidades e código existente na plataforma Xamarin, enquanto obtém os benefícios da reutilização de código do C#. Você descobrirá que a sintaxe do C# é muito semelhante à sintaxe do Java e que ambas as linguagens fornecem recursos muito semelhantes. Além disso, você descobrirá recursos exclusivos do C# que facilitarão suas tarefas de desenvolvimento._
-
 
 ## <a name="overview"></a>Visão geral
 
@@ -61,7 +60,6 @@ No entanto, há várias diferenças entre Java e C#. Por exemplo:
 
 - O C# é compatível com LINQ (consulta integrada à linguagem), o que permite usar as palavras reservadas `from`, `select` e `where` para gravar consultas em coleções de uma maneira semelhante às consultas de banco de dados.
 
-
 É claro, há muitas outras diferenças entre C# e Java que podem ser abordadas neste artigo. Além disso, Java e C# continuam a evoluir (por exemplo, Java 8, que ainda não está na cadeia de ferramentas do Android, é compatível com expressões lambda no estilo C#), então essas diferenças sofrerão alterações ao longo do tempo. São descritas aqui apenas as diferenças mais importantes encontradas atualmente por desenvolvedores Java não familiarizados com o Xamarin.Android.
 
 - [Do Java ao desenvolvimento em C#](#fundamentals) é uma introdução às diferenças fundamentais entre C# e Java.
@@ -81,7 +79,6 @@ O C# oferece muitos recursos principais para Xamarin.Android que não estão atu
 - [Programação assíncrona](#async) &ndash; os recursos de programação assíncrona do C# (`async`/`await`) mantêm os aplicativos responsivos.
     O suporte no nível de linguagem desse recurso torna a programação assíncrona fácil de implementar e menos propensa a erros.
 
-
 Além disso, o Xamarin permite [aproveitar ativos existentes do Java](#interop) por meio de uma tecnologia conhecida como *associação*. Você pode chamar seu código, estruturas e bibliotecas do Java existentes do C#, fazendo uso de geradores de associação automática do Xamarin. Para fazer isso, basta criar uma biblioteca estática em Java e expô-la ao C# por meio de uma associação.
 
 <a name="fundamentals" />
@@ -90,14 +87,11 @@ Além disso, o Xamarin permite [aproveitar ativos existentes do Java](#interop) 
 
 As seções a seguir explicam as diferenças de "introdução" básica entre C# e Java; uma seção posterior descreve as diferenças orientadas a objeto entre essas linguagens.
 
-
-
 ### <a name="libraries-vs-assemblies"></a>Bibliotecas vs. Assemblies
 
 O Java normalmente empacota classes relacionadas em arquivos **.jar**. Em C# e .NET, no entanto, pedaços reutilizáveis de código pré-compilado são empacotados em *assemblies*, que normalmente são empacotados como arquivos *.dll*. Um assembly é uma unidade de implantação para código C#/.NET, sendo que cada assembly é tipicamente associado um projeto C#. Assemblies contêm código intermediário (IL) que é compilado por Just-In-Time no tempo de execução.
 
 Para obter mais informações sobre assemblies, veja o tópico [Assemblies e o cache de assembly global](https://docs.microsoft.com/dotnet/csharp/programming-guide/concepts/assemblies-gac/).
-
 
 ### <a name="packages-vs-namespaces"></a>Pacotes vs. Namespaces
 
@@ -108,7 +102,6 @@ namespace WeatherApp
 {
     ...
 ```
-
 
 ### <a name="importing-types"></a>Importando tipos
 
@@ -142,8 +135,6 @@ using System.Threading.Tasks;
 
 Essas instruções importam a funcionalidade dos namespaces `System`, `Android.App`, `Android.Content`, etc.
 
-
-
 ### <a name="generics"></a>Genéricos
 
 Tanto Java quanto C# dão suporte a *genéricos*, que são espaços reservados que permitem que você conecte diferentes tipos em tempo de compilação. No entanto, genéricos funcionam de forma ligeiramente diferente em C#. No Java, a [eliminação de tipo](https://docs.oracle.com/javase/tutorial/java/generics/erasure.html) disponibiliza informações de tipo somente em tempo de compilação, mas não em tempo de execução. Por outro lado, o .NET Common Language Runtime (CLR) dá suporte explícito a tipos genéricos, o que significa que o C# tem acesso a informações de tipo em tempo de execução. No desenvolvimento do Xamarin.Android diário, a importância dessa distinção não é aparente na maior parte do tempo, mas se estiver usando [reflexão](https://docs.microsoft.com/dotnet/csharp/programming-guide/concepts/reflection), você dependerá desse recurso para acessar as informações de tipo em tempo de execução.
@@ -158,7 +149,6 @@ Neste exemplo de código, `FindViewById` obtém uma referência para o controle 
 
 Para obter mais informações sobre os genéricos, veja o tópico [Genéricos](https://docs.microsoft.com/dotnet/csharp/programming-guide/generics/index) do MSDN.
 Observe que há algumas limitações no suporte de Xamarin.Android para classes C# genéricas; Para obter mais informações, consulte [Limitações](~/android/internals/limitations.md).
-
 
 <a name="oopfeatures" />
 
@@ -192,8 +182,6 @@ No entanto, também há algumas diferenças importantes:
 
 - O C# usa a sintaxe do destruidor de estilo C++ para expressar finalizadores. A sintaxe é diferente do método `finalize` do Java, mas a semântica é praticamente a mesma. (Observe que em C#, os destruidores chamam automaticamente o destruidor da classe base &ndash;, enquanto no Java, utiliza-se uma chamada explícita para `super.finalize`.)
 
-
-
 ### <a name="class-inheritance"></a>Herança da Classe
 
 Para estender uma classe em Java, você deve usar a palavra-chave `extends`. Para estender uma classe em C#, você usa dois-pontos (`:`) para indicar derivação. Por exemplo, em aplicativos Xamarin.Android, você geralmente verá derivações da classe parecidas com o fragmento de código a seguir:
@@ -220,7 +208,6 @@ Quando você quiser impedir que uma classe seja dividida em mais subclasses em C
 
 Para mais informações sobre definições de classe do C#, veja os tópicos [Classe](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/classes) e [Herança](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/inheritance).
 
-
 <a name="properties" />
 
 ### <a name="properties"></a>Propriedades
@@ -244,8 +231,6 @@ O objeto `rulerView` também tem uma propriedade chamada `DrawingCacheEnabled` &
 O acesso às propriedades pode ser leitura/gravação, somente leitura ou somente gravação. Além disso, você pode usar modificadores de acesso diferentes para leitura e gravação. Por exemplo, você pode definir uma propriedade que tem acesso de leitura público, mas acesso de gravação privado.
 
 Para obter mais informações sobre propriedades do C#, veja o tópico [Propriedades](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/properties).
-
-
 
 ### <a name="calling-base-class-methods"></a>Chamar métodos de classe base
 
@@ -280,8 +265,6 @@ public class MainActivity : Activity
 
 Nesse caso, o método `OnCreate` definido pela classe derivada (`MainActivity`) chama o método `OnCreate` da classe base (`Activity`).
 
-
-
 ### <a name="access-modifiers"></a>Modificadores de acesso
 
 Java e C# dão suporte aos modificadores de acesso `public`, `private` e `protected`. No entanto, o C# é compatível com dois modificadores de acesso adicionais:
@@ -291,8 +274,6 @@ Java e C# dão suporte aos modificadores de acesso `public`, `private` e `protec
 - **`protected internal`** &ndash; O membro de classe é acessível dentro do assembly de definição, da classe de definição e de classes derivadas (tanto as classes derivadas dentro do assembly quanto as derivadas fora dele têm acesso).
 
 Para obter mais informações sobre os modificadores de acesso do C#, veja o tópico [Modificadores de acesso](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/access-modifiers).
-
-
 
 ### <a name="virtual-and-override-methods"></a>Métodos de substituição e virtuais
 
@@ -308,7 +289,6 @@ No entanto, há algumas diferenças entre o Java e o C# no modo de declarar mét
 - Classes derivadas de C# devem usar a palavra-chave `override` para indicar explicitamente que um método de classe base virtual está sendo substituído.
 
 Para obter mais informações sobre o suporte do C# para polimorfismo, veja o tópico [Polimorfismo](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/polymorphism).
-
 
 <a name="lambdas" />
 
@@ -339,7 +319,6 @@ button.Click += (sender, args) => {
 Neste exemplo, o código de expressão lambda (o código entre chaves) incrementa a contagem de cliques e atualiza o texto `button` para exibir a contagem de cliques. Essa expressão lambda é registrada com o objeto `button` como um manipulador de eventos a ser chamado sempre que o botão é tocado. (Manipuladores de eventos são explicados mais detalhadamente abaixo.) Neste exemplo simples, os parâmetros `sender` e `args` não são usados pelo código de expressão lambda, mas eles são necessários na expressão lambda para atender aos requisitos de assinatura de método para registro de evento. Nos bastidores, o compilador de C# converte a expressão lambda em um método anônimo que é chamado sempre eventos de clique em botão ocorrem.
 
 Para obter mais informações sobre C# e expressões lambda, veja o tópico [Expressões lambda](https://docs.microsoft.com/dotnet/csharp/programming-guide/statements-expressions-operators/lambda-expressions).
-
 
 <a name="events" />
 
@@ -389,7 +368,6 @@ Observe que teremos para declarar essa lista de parâmetros, mesmo se nós não 
 
 Normalmente, as expressões lambda são usadas para declarar manipuladores de eventos no código do Xamarin.Android. Essa forma abreviada de declarar manipuladores de eventos pode inicialmente parecer incompreensível, mas economiza uma enorme quantidade de tempo quando você está lendo e gravando código. Com o aumento da familiaridade, você se acostuma a reconhecer esse padrão (o que ocorre com frequência no código do Xamarin.Android) e você gasta mais tempo pensando sobre a lógica de negócios do seu aplicativo e menos tempo com a dificuldade de lidar com sobrecarga sintática.
 
-
 <a name="async" />
 
 ## <a name="asynchronous-programming"></a>Programação assíncrona
@@ -402,7 +380,6 @@ O C# inclui suporte no nível de linguagem para programação assíncrona por me
 Em aplicativos Xamarin.Android, `async` e `await` normalmente são usados para liberar o thread de interface do usuário para que ele possa responder à entrada do usuário (como o toque em um botão **Cancelar**) enquanto uma operação de execução longa ocorre em uma tarefa em segundo plano.
 
 No exemplo a seguir, um manipulador de eventos de clique de botão faz com que uma operação assíncrona baixe uma imagem da Web:
-
 
 ```csharp
 downloadButton.Click += downloadAsync;
@@ -426,14 +403,13 @@ Enquanto isso, o thread de interface do usuário do aplicativo ainda pode respon
 Para uma introdução a `async`/`await` em C#, veja o tópico [Programação assíncrona com async e await](https://docs.microsoft.com/dotnet/csharp/async).
 Para obter mais informações sobre o suporte de Xamarin de recursos de programação assíncrona, consulte [visão geral de suporte assíncrono](~/cross-platform/platform/async.md).
 
-
 <a name="keywords" />
 
 ## <a name="keyword-differences"></a>Diferenças em palavras-chave
 
 Muitas palavras-chave usadas em Java também são usadas em C#. Também há um número de palavras-chave do Java que têm uma contraparte equivalente, mas de nome diferente em C#, conforme listado nesta tabela:
 
-|Java|C#|DESCRIÇÃO|
+|Java|C#|Descrição|
 |---|---|---|
 |`boolean`|[bool](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/bool)|Usado para declarar os valores boolianos true e false.|
 |`extends`|`:`|Precede a classe e as interfaces das quais herdar.|
@@ -447,10 +423,9 @@ Muitas palavras-chave usadas em Java também são usadas em C#. Também há um n
 |`super`|[base](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/base)|Usado para acessar membros da classe pai de dentro de uma classe derivada.|
 |`synchronized`|[lock](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/lock-statement)|Encapsula uma seção crítica do código com a aquisição e a liberação de bloqueio.|
 
-
 Além disso, há muitas palavras-chave que são exclusivas do C# e não têm uma correspondência no Java. O código do Xamarin.Android geralmente usa as seguintes palavras-chave do C# (esta tabela é útil para referência ao ler o [exemplo de código](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Android) do Xamarin.Android):
 
-|C#|DESCRIÇÃO|
+|C#|Descrição|
 |---|---|
 |[as](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/as)|Executa conversões entre tipos de referência compatíveis ou tipos anuláveis.|
 |[async](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/async)|Especifica que uma expressão lambda ou método é assíncrono.|
@@ -476,7 +451,6 @@ Além disso, há muitas palavras-chave que são exclusivas do C# e não têm uma
 |[value](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/value)|Referencia o valor que o código do cliente deseja atribuir a uma propriedade.|
 |[virtual](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/virtual)|Permite que um método seja substituído em uma classe derivada.|
 
-
 <a name="interop" />
 
 ## <a name="interoperating-with-existing-java-code"></a>Interoperação com código Java existente
@@ -489,8 +463,6 @@ Se você tem a funcionalidade existente do Java que não deseja converter em C#,
 
 Para obter mais informações sobre essas técnicas, consulte [Visão geral da integração Java](~/android/platform/java-integration/index.md).
 
-
-
 ## <a name="for-further-reading"></a>Para leitura adicional
 
 O [Guia de programação em C#](https://docs.microsoft.com/dotnet/csharp/programming-guide/) do MSDN é uma ótima maneira de começar a aprender a linguagem de programação C#, e você pode usar a [Referência de C#](https://docs.microsoft.com/dotnet/csharp/language-reference/) para pesquisar recursos específicos da linguagem C#.
@@ -499,12 +471,9 @@ Da mesma forma que o conhecimento de Java trata-se tanto de familiaridade com as
 
 Quando você estiver pronto para lidar com o seu primeiro projeto do Xamarin.Android em C#, nossa série [Hello, Android](~/android/get-started/hello-android/index.md) pode lhe ajudar a criar seu primeiro aplicativo Xamarin.Android e avançar ainda mais no seu entendimento dos fundamentos de desenvolvimento de aplicativos Android com o Xamarin.
 
-
-
 ## <a name="summary"></a>Resumo
 
 Este artigo fornece uma introdução para o ambiente de programação C# do Xamarin.Android ponto de vista de um desenvolvedor Java. Ele indica as semelhanças entre C# e Java, explicando suas diferenças práticas. Ele apresenta assemblies e namespaces, explica como importar tipos externos e fornece uma visão geral das diferenças em modificadores de acesso, genéricos, derivação de classe, chamada de métodos de classe base, substituição de métodos e manipulação de eventos. Ele apresenta recursos C# que não estão disponíveis em Java, tais como propriedades, programação assíncrona de `async`/`await`, lambdas, delegados C# e o sistema de manipulação de eventos do C#. Ele inclui tabelas de palavras-chave importantes do C#, explica como interoperar com bibliotecas Java existentes e fornece links para documentação relacionada para estudo posterior.
-
 
 ## <a name="related-links"></a>Links relacionados
 

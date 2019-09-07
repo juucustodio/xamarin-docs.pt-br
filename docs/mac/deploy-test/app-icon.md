@@ -7,17 +7,16 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 6a4ea3950b9657e4e04c6465cc0a64ac3c1d266c
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 2a5f8f6f2feda1ab27c874d8281483e9e26f0855
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291567"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770145"
 ---
 # <a name="application-icon-for-xamarinmac-apps"></a>Ícone do aplicativo para aplicativos Xamarin.Mac
 
 _Este artigo aborda a criação de imagens necessárias para um ícone de um aplicativo Xamarin.Mac, agrupando as imagens em um arquivo ".icns" e incluindo o ícone no projeto Xamarin.Mac._
-
 
 ## <a name="overview"></a>Visão geral
 
@@ -27,11 +26,9 @@ Um ícone grande deve transmitir o objetivo principal de uma experiência de apl
 
 ![O editor do AppIcon.appiconset](app-icon-images/intro01.png "O editor do AppIcon.appiconset")
 
-
 ## <a name="application-icon"></a>Ícone do aplicativo
 
 Um ícone grande deve transmitir o objetivo principal de uma experiência de aplicativo e dica de Xamarin.Mac que o usuário deve esperar ao usar um aplicativo. Todos os aplicativos macOS devem incluir vários tamanhos de seu ícone para exibição no Localizador, Compartimento, Barra Inicial e outros locais em todo o computador.
-
 
 ## <a name="designing-the-icon"></a>Projetando o ícone
 
@@ -48,7 +45,6 @@ A Apple sugere as dicas a seguir ao criar o ícone do aplicativo:
 - Não use réplicas dos ícones da Apple nos ícones.
 
 Leia as seções [Galeria de Ícone do Aplicativo](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/Gallery.html#//apple_ref/doc/uid/20000957-CH88-SW1) e [Criando Ícones de Aplicativo](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/Designing.html#//apple_ref/doc/uid/20000957-CH87-SW1) das [Diretrizes de Interface Humana do OS X](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/) da Apple antes de criar um ícone do aplicativo do Xamarin.Mac.
-
 
 ## <a name="required-image-sizes-and-filenames"></a>Tamanhos de imagem e nomes de arquivos necessários
 
@@ -76,7 +72,6 @@ Para garantir que o ícone tenha boa aparência em todos os locais que os usuár
 
 Para obter mais informações, consulte a documentação [Fornecer versões de alta resolução de todos os recursos gráficos do aplicativo](https://developer.apple.com/library/mac/documentation/GraphicsAnimation/Conceptual/HighResolutionOSX/Optimizing/Optimizing.html#//apple_ref/doc/uid/TP40012302-CH7-SW3) da Apple.
 
-
 ## <a name="packaging-the-icon-resources"></a>Empacotamento de recursos de ícone
 
 Com o ícone criado e salvo nos nomes e tamanhos dos arquivos necessários, o Visual Studio para Mac facilita sua atribuição aos ativos de imagem para uso no Xamarin.Mac.
@@ -90,7 +85,6 @@ Faça o seguinte:
 
     [![Selecionar uma imagem de ícone](app-icon-images/intro02.png "Selecionar uma imagem de ícone")](app-icon-images/intro02-large.png#lightbox)
 3. Salve as alterações.
-
 
 ## <a name="using-the-icon"></a>Usar o Ícone
 
@@ -108,11 +102,9 @@ Quando o aplicativo for executado, o novo ícone será exibido no compartimento:
 
 ![Um exemplo de um ícone de aplicativo no Dock do macOS](app-icon-images/icon04.png "Um exemplo de um ícone de aplicativo no Dock do macOS")
 
-
 ## <a name="summary"></a>Resumo
 
 Este artigo apresentou uma visão detalhada de como trabalhar com imagens necessárias para criar um ícone de aplicativo macOS ícone, um ícone de empacotamento e como incluir um ícone em um projeto Xamarin.Mac.
-
 
 ## <a name="related-links"></a>Links relacionados
 

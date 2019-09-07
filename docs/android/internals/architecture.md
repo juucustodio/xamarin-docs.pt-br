@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/25/2018
-ms.openlocfilehash: ec93083ee3d99dbf748309b23248e982b793ce13
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 06817c563f12425e5c339cb8f2560f37f9ace0b5
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69524845"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70756692"
 ---
 # <a name="architecture"></a>Arquitetura
 
@@ -28,7 +28,6 @@ Os desenvolvedores do Xamarin. Android acessam os vários recursos no sistema op
 
 Para obter mais informações sobre como as classes do Android se comunicam com as classes de tempo de execução do Android, consulte o documento de [design da API](~/android/internals/api-design.md) .
 
-
 ## <a name="application-packages"></a>Pacotes de aplicativos
 
 Os pacotes de aplicativos Android são contêineres ZIP com uma extensão de arquivo *. apk* . Os pacotes de aplicativos Xamarin. Android têm a mesma estrutura e layout que os pacotes Android normais, com as seguintes adições:
@@ -36,18 +35,13 @@ Os pacotes de aplicativos Android são contêineres ZIP com uma extensão de arq
 - Os assemblies de aplicativo (contendo IL) são *armazenados* sem compactação na pasta *assemblies* . Durante a inicialização do processo na versão, compila o *. apk* é *mmap ()* Ed no processo e os assemblies são carregados da memória. Isso permite a inicialização de aplicativo mais rápida, pois os assemblies não precisam ser extraídos antes da execução.  
 - *Observação:* Informações de localização do assembly, como [assembly. Location](xref:System.Reflection.Assembly.Location) e [assembly. CodeBase](xref:System.Reflection.Assembly.CodeBase) *não pode ser confiável* em builds de versão. Eles não existem como entradas de sistema de arquivos distintas e não têm nenhum local utilizável.
 
-
 - As bibliotecas nativas que contêm o tempo de execução do mono estão presentes dentro de *. apk* . Um aplicativo Xamarin. Android deve conter bibliotecas nativas para as arquiteturas do Android desejadas/direcionadas, por exemplo, *ARMEABI* , *ARMEABI-v7a* , *x86* . Os aplicativos Xamarin. Android não podem ser executados em uma plataforma a menos que contenham as bibliotecas de tempo de execução apropriadas.
 
-
-Os aplicativos Xamarin. Android também contêm wrappers que podem ser *chamados pelo Android* para permitir que o Android chame código gerenciado.
-
-
+Os aplicativos Xamarin. Android também contêm *wrappers* que podem ser chamados pelo Android para permitir que o Android chame código gerenciado.
 
 ## <a name="android-callable-wrappers"></a>Callable Wrappers do Android
 
-- Os wrappers que podem ser **chamados pelo Android** são uma ponte [JNI](https://en.wikipedia.org/wiki/Java_Native_Interface) , que são usados sempre que o tempo de execução do Android precisa para invocar o código gerenciado. Os wrappers callable Android são como os métodos virtuais podem ser substituídos e as interfaces Java podem ser implementadas. Consulte o documento [visão geral da integração de Java](~/android/platform/java-integration/index.md) para obter mais informações.
-
+- Os **wrappers** que podem ser chamados pelo Android são uma ponte [JNI](https://en.wikipedia.org/wiki/Java_Native_Interface) , que são usados sempre que o tempo de execução do Android precisa para invocar o código gerenciado. Os wrappers callable Android são como os métodos virtuais podem ser substituídos e as interfaces Java podem ser implementadas. Consulte o documento [visão geral da integração de Java](~/android/platform/java-integration/index.md) para obter mais informações.
 
 <a name="Managed_Callable_Wrappers" />
 
@@ -64,15 +58,12 @@ As referências globais podem ser liberadas explicitamente chamando [Java. lang.
 
 Deve-se ter cuidado ao descartar wrappers callable gerenciados se a instância puder ser compartilhada inadvertidamente entre threads, uma vez que descartar a instância afetará as referências de quaisquer outros threads. Para segurança máxima, somente `Dispose()` de instâncias que foram alocadas via `new` *ou* de métodos que você *sabe* sempre alocar novas instâncias e instâncias não armazenadas em cache que podem causar compartilhamento de instância acidental entre threads.
 
-
-
 ## <a name="managed-callable-wrapper-subclasses"></a>Subclasses de wrapper callable gerenciadas
 
 As subclasses de wrapper callable gerenciadas são onde toda a lógica específica do aplicativo "interessante" pode residir. Isso inclui subclasses de [Android. app. Activity](xref:Android.App.Activity) personalizadas (como o tipo [Atividade1](https://github.com/xamarin/monodroid-samples/blob/master/HelloM4A/Activity1.cs#L13) no modelo de projeto padrão). (Especificamente, essas são todas as subclasses *Java. lang. Object* que *não* contêm um atributo personalizado [RegisterAttribute](xref:Android.Runtime.RegisterAttribute) ou [RegisterAttribute. DoNotGenerateAcw](xref:Android.Runtime.RegisterAttribute.DoNotGenerateAcw) é *false*, que é o padrão.)
 
 Como os wrappers chamáveis gerenciados, as subclasses de wrapper callable Managed também contêm uma referência global, acessível por meio da propriedade [Java. lang. Object. Handle](xref:Java.Lang.Object.Handle) . Assim como ocorre com os wrappers callable gerenciados, as referências globais podem ser liberadas explicitamente chamando [Java. lang. Object. Dispose ()](xref:Java.Lang.Object.Dispose).
 Ao contrário dos wrappers chamáveis gerenciados, deve-se *tomar muito cuidado* antes de descartar tais instâncias, já que *Dispose ()* -ing da instância interromperá o mapeamento entre a instância Java (uma instância de um Android Callable Wrapper) e o cópia.
-
 
 ### <a name="java-activation"></a>Ativação do Java
 
@@ -172,11 +163,9 @@ I/mono-stdout( 2993): [Managed: Value=]
 
 Apenas *Dispose ()* de subclasses de wrapper callable gerenciados quando você sabe que o objeto Java não será mais usado, ou a subclasse não contém dados de instância e um construtor *(IntPtr, JniHandleOwnership)* foi fornecido.
 
-
-
 ## <a name="application-startup"></a>Inicialização do aplicativo
 
-Quando uma atividade, um serviço, etc. é iniciado, o Android verifica primeiro se já existe um processo em execução para hospedar a atividade/serviço/etc. Se esse processo não existir, um novo processo será criado, o [AndroidManifest. xml](https://developer.android.com/guide/topics/manifest/manifest-intro.html) será lido e o tipo especificado no [/manifest/application/@android:name](https://developer.android.com/guide/topics/manifest/application-element.html#nm) atributo será carregado e instanciado. Em seguida, todos os tipos especificados [/manifest/application/provider/@android:name](https://developer.android.com/guide/topics/manifest/provider-element.html#nm) pelos valores de atributo são instanciados e têm seu método [ContentProvider. attachInfo% 28)](xref:Android.Content.ContentProvider.AttachInfo*) invocado. O Xamarin. Android se conecta a isso adicionando um *mono.*  Myruntimeprovider ContentProvider para AndroidManifest. xml durante o processo de compilação. O *mono. O método monoruntimeprovider. attachInfo ()* é responsável por carregar o tempo de execução do mono no processo.
+Quando uma atividade, um serviço, etc. é iniciado, o Android verifica primeiro se já existe um processo em execução para hospedar a atividade/serviço/etc. Se esse processo não existir, um novo processo será criado, o [AndroidManifest. xml](https://developer.android.com/guide/topics/manifest/manifest-intro.html) será lido e o tipo especificado no [/manifest/application/@android:name](https://developer.android.com/guide/topics/manifest/application-element.html#nm) atributo será carregado e instanciado. Em seguida, todos os tipos especificados [/manifest/application/provider/@android:name](https://developer.android.com/guide/topics/manifest/provider-element.html#nm) pelos valores de atributo são instanciados e têm seu método [ContentProvider. attachInfo% 28)](xref:Android.Content.ContentProvider.AttachInfo*) invocado. O Xamarin. Android se conecta a isso adicionando um *mono. Myruntimeprovider* *ContentProvider* para AndroidManifest. xml durante o processo de compilação. O *mono. O método monoruntimeprovider. attachInfo ()* é responsável por carregar o tempo de execução do mono no processo.
 Qualquer tentativa de usar o mono antes desse ponto falhará. ( *Observação*: É por isso que os tipos que subclasse [Android. app. Application](xref:Android.App.Application) precisam fornecer um [Construtor (IntPtr, JniHandleOwnership)](https://github.com/xamarin/monodroid-samples/blob/a9e8ef23/SanityTests/Hello.cs#L103), pois a instância do aplicativo é criada antes que o mono possa ser inicializado.)
 
 Quando a inicialização do processo for `AndroidManifest.xml` concluída, o será consultado para localizar o nome da classe da atividade/serviço/etc. para iniciar. Por exemplo, o [ /manifest/application/activity/@android:name atributo](https://developer.android.com/guide/topics/manifest/activity-element.html#nm) é usado para determinar o nome de uma atividade a ser carregada. Para atividades, esse tipo deve herdar [Android. app. Activity](xref:Android.App.Activity).

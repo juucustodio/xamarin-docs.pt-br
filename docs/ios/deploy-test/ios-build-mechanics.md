@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: ec510d46bf1b46cf8fd70c8f4d43b3108f46a010
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 58bf8325a0fab17411dd7a4f857fdad8bdc6b016
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70284781"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70756268"
 ---
 # <a name="ios-build-mechanics"></a>Mecânica de Compilação do iOS
 
@@ -23,7 +23,6 @@ Desenvolver excelentes aplicativos é mais do que apenas escrever um código de 
 Lembre-se de que as opções padrão são seguras e rápidas, mas não são ideias para todas as situações. Além disso, muitas opções podem reduzir ou aumentar a velocidade do ciclo de desenvolvimento, dependendo do projeto individual. Por exemplo, a remoção nativa requer tempo, mas se pouco tamanho for obtido, o tempo gasto com a remoção não será recuperado por uma implantação mais rápida. Por outro lado, a remoção nativa pode reduzir o aplicativo significativamente, nesse caso, a implantação será mais rápida. Isso varia de projeto para projeto e a única maneira de saber é testando.
 
 A velocidade de compilação do Xamarin também pode ser afetada por vários recursos e entre os recursos de um computador que podem afetar o desempenho estão: capacidade do processador, velocidades de barramento, quantidade de memória física, velocidade do disco, velocidade da rede. Essas limitações de desempenho estão além do escopo deste documento e são de responsabilidade do desenvolvedor.
-
 
 ## <a name="timing-apps"></a>Sincronizar aplicativos
 
@@ -38,7 +37,6 @@ Para habilitar os resultados de diagnóstico do MSBuild no Visual Studio para Ma
 5. Reiniciar o Visual Studio para Mac
 6. Limpar e recompilar o seu pacote
 7. Exibir os resultados de diagnóstico no Painel de Erros (Exibição > Painéis > Erros) clicando no botão de Resultado de Compilação
-
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
@@ -71,12 +69,10 @@ As ferramentas do Xamarin, tecnicamente, funcionam em qualquer Mac que possa exe
 
 No estado desconectado, o Visual Studio no Windows só realizará a fase de compilação do C# e não tentará executar a vinculação ou compilação AOT, empacotar o aplicativo em um pacote _.app_ nem conectar-se ao pacote de aplicativos. (A fase de compilação do C# raramente é um gargalo de desempenho.) Tente identificar em que parte do pipeline a compilação está lenta, fazendo a compilando diretamente no host de compilação do Mac no Visual Studio para Mac.
 
-
 Além disso, um dos locais mais comuns para a lentidão é a conexão de rede entre o computador Windows e o host de compilação do Mac. Isso pode ocorrer devido a um obstáculo físico na rede, usar uma conexão sem fio ou ter que viajar por um computador saturado (como um serviço Mac na nuvem).
 
 ## <a name="simulator-tricks"></a>Truques do Simulador
 
- 
 Ao implantar aplicativos móveis, é fundamental implantar o código rapidamente. Por uma série de motivos, incluindo a velocidade e a falta de requisitos de provisionamento de dispositivos, os desenvolvedores, muitas vezes, optam por implantar um emulador ou simulador pré-instalado. Para os fabricantes de ferramentas de desenvolvedor, a decisão de fornecer um simulador ou emulador se resume a uma compensação entre a velocidade e compatibilidade. 
 
 A Apple fornece um simulador para desenvolvimento do iOS, promovendo a velocidade sobre a compatibilidade, com a criação de um ambiente menos restritivo para executar o código. Esse ambiente menos restritivo permite ao Xamarin usar o compilador Em Tempo Real (JIT) do simulador (em vez do [AOT](~/ios/internals/architecture.md) em um dispositivo), o que significa que a compilação é compilada no código nativo em tempo de execução. Como o Mac é muito mais rápido do que um dispositivo, isso permite um melhor desempenho.
@@ -84,7 +80,7 @@ A Apple fornece um simulador para desenvolvimento do iOS, promovendo a velocidad
 O simulador usa um inicializador do aplicativo compartilhado, permitindo que o iniciador seja reutilizado, em vez de ser compilado cada vez, como é necessário no dispositivo.
 
 Levando em consideração as informações acima, a lista abaixo fornece algumas informações sobre etapas a serem executadas ao compilar e implantar seu aplicativo no simulador para fornecer o melhor desempenho.
- 
+
 ### <a name="tips"></a>Dicas
 
 - Para compilações: 
@@ -116,14 +112,12 @@ Uma série de configurações de compilação é oferecida ao implantar aplicati
 - Versão
   - As compilações de versão são aquelas que são enviadas aos seus usuários e o foco no desempenho é fundamental. Ao usar a configuração de Versão, convém usar o compilador de otimização do LLVM e otimizar arquivos PNG.
 
- 
 Também é importante entender a relação entre compilação e implantação. O tempo de implantação é uma função do tamanho do aplicativo. Um aplicativo maior leva mais tempo para implantação. Minimizando o tamanho do aplicativo, é possível reduzir o tempo de implantação.
 
 Minimizar o tamanho do aplicativo também pode reduzir o tempo de compilação. Isso ocorre porque a remoção do código do aplicativo leva menos tempo do que compilar nativamente o código que não será usado. Arquivos de objetos menores significam vinculação mais rápida, o que cria um arquivo executável menor e com menos símbolos para gerar. Portanto, economizar espaço tem um benefício duplo, e é por isso que **Vincular SDK** é o padrão para todas as compilações de dispositivos. 
 
 > [!NOTE]
 > A opção **Vincular SDK** pode ser exibida como Vincular somente SDKs de estruturas ou Vincular somente assemblies de SDK, dependendo do IDE que está sendo usado.
- 
 
 ### <a name="tips"></a>Dicas
 
@@ -133,7 +127,6 @@ Minimizar o tamanho do aplicativo também pode reduzir o tempo de compilação. 
   - Considere Vincular todos os assemblies. Otimizar cada assembly 
   - Desabilite a criação de símbolos de depuração usando `--dsym=false`. No entanto, saiba que desabilitar essa opção significa que os relatórios de falhas só poderão ser simbolizados na máquina que compilou o aplicativo e somente se o aplicativo não tiver sido eliminado.
 
- 
 O que evitar:
 
 - Binários FAT (depuração) 
@@ -141,7 +134,7 @@ O que evitar:
 - Desabilitar a remoção 
   - Símbolos `--nosymbolstrip` 
   - IL (versão) `--nostrip`.  
- 
+
 Dicas adicionais 
 
 - Como no simulador, prefira Compilar a Recompilar 
@@ -176,7 +169,6 @@ As ferramentas podem ser instruídas a manterem os itens dentro do aplicativo us
 
 Caso você não tenha acesso ao código-fonte ou ele seja gerado por uma ferramenta e você não queira alterá-lo, ele ainda poderá ser vinculado criando um arquivo XML que descreve todos os tipos e membros que precisam ser preservados. Em seguida, é possível adicionar o sinalizador `--xml={file.name}.xml` às opções de projeto, que processaram o código exatamente como se você estivesse usando Atributos.
 
-
 ### <a name="partially-linking-applications"></a>Vinculação Parcial de Aplicativos 
 
 Também é possível vincular parcialmente os aplicativos, para ajudar a otimizar o tempo de compilação do seu aplicativo:
@@ -185,11 +177,11 @@ Também é possível vincular parcialmente os aplicativos, para ajudar a otimiza
   - Algumas das otimizações de tamanho do aplicativo serão perdidas.
   - Não é necessário acesso ao código-fonte.
   - Por exemplo, `--linkall --linkskip=fieldserviceiOS`.
- 
+
 - Use a opção `Link SDK` e o atributo `[LinkerSafe]` nos assemblies necessários 
   - É necessário acesso ao código-fonte.
   - Informa ao sistema que o assembly é seguro para vincular e é processado como se ele fosse um SDK do Xamarin.
- 
+
 ### <a name="objective-c-bindings"></a>Associações do Objective-C 
 
 - Usar o atributo `[Assembly: LinkerSafe]` nas suas associações pode economizar tempo e reduzir o tamanho.
@@ -208,110 +200,81 @@ Este guia explorou como determinar o ritmo de um aplicativo iOS e as opções a 
 # Benchmarks
 
 ## Layer 1: building again after making modifications, but _without_ cleaning should be faster 
- 
+
 The app should build a bit more quickly if you have only made changes to a subset of the libraries and you do not clean the build before re-deploying. 
- 
- 
- 
+
 ### Clean build time 
 178 seconds 
- 
- 
+
 ### Build again (without cleaning) after making _no changes_ 
 12.5 seconds 
- 
- 
+
 ### Build again (without cleaning) after changing 1 line in "ViewIOS/ImageResourcesHelper.cs" 
 3 trials: 45 seconds, 43 seconds, 43 seconds 
- 
- 
+
 ### Build again (without cleaning) after changing 1 line in each of the following files 
- 
+
 - ViewIOS/ImageResourcesHelper.cs 
 - Sales.Native.Core.Tools/UIComponents/ListView/IListView.cs 
 - View.Models/Mailing/MailingModel.cs 
- 
+
 3 trials: 45 seconds, 45 seconds, 45 seconds 
- 
- 
- 
+
 ### Build again (without cleaning) after changing 1 line in each of the following files 
- 
+
 - ViewIOS/ImageResourcesHelper.cs 
 - Sales.Native.Core.Tools/UIComponents/ListView/IListView.cs 
 - View.Models/Mailing/MailingModel.cs 
 - Sales.Native.Core.IOS.Ext/ServiceInterfaces/AlertDialog/Dialog.cs 
 - Sales.Native.Core.Tools.IOS.Ext/BaseViews/BaseNavigationViewController.cs 
 - View.Common/Services/DataTransferResult.cs 
- 
+
 45 seconds 
- 
- 
- 
- 
- 
- 
+
 ## Layer 2: "app thinning" aka "device specific builds" 
- 
+
 The idea of "app thinning" is that the IDE will only build the 1 architecture needed for the specific device that you're deploying to (rather than _both_ 32-bit and 64-bit architectures). 
- 
+
 As of the latest "Xamarin 4" builds, you can now enable "app thinning" in Visual Studio via the "Project Options -> iOS Build -> Enable device-specific builds" setting. 
- 
+
 Or if you prefer you can achieve a similar result by changing the "Project Options -> iOS Build -> Advanced [tab] -> Supported architectures" to select just _one_ architecture (for example ARM64 if you are developing on a 64-bit device). 
- 
- 
- 
+
 (Caveat: I ran the following builds in Visual Studio for Mac on the Mac rather than on the command line.) 
- 
+
 ### Clean build time without "device specific builds" 
 177 seconds 
- 
- 
- 
+
 ### Clean build time _with_ "device specific builds"  
 2 trials: 106 seconds, 98 seconds 
- 
- 
- 
+
 ### Build again (without cleaning) after changing 1 line in "ViewIOS/ImageResourcesHelper.cs" 
 2 trials: 31 seconds, 31 seconds 
- 
- 
+
 * * * 
- 
- 
+
 ## Using the same strategy, but explicitly setting "Supported architectures" to select ARM64 _only_ (rather than using "device specific builds") 
- 
+
 (These builds were again run on the command line using `xbuild`.) 
- 
- 
- 
+
 ### Clean build time with "Supported architectures" set to ARM64 _only_ 
 2 trials: 80 seconds, 91 seconds 
- 
- 
- 
+
 ### Build again (without cleaning) after changing 1 line in "ViewIOS/ImageResourcesHelper.cs" 
 2 trials: 26 seconds, 26 seconds 
- 
- 
- 
- 
- 
+
 [1] Mac system used for testing: MacBookAir5,2 
- 
+
 - 2.0 GHz Core i7 (I7-3667U) 
- 
+
 2 Cores with hyper-threading 
- 
+
 L2 Cache (per Core): 256 KB 
 L3 Cache: 4 MB 
- 
+
 - Standard MacBook soldered-in solid-state storage 
- 
+
 - 8 GB RAM 
 ---->
-
 
 ## <a name="related-links"></a>Links relacionados
 

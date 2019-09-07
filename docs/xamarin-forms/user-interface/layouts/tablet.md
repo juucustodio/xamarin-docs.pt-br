@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/01/2016
-ms.openlocfilehash: 7455e9b8f8e164dd5733b44db4aaac8a93133a05
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 87d99c62f20e6cfd23605d1917a577ac0d95038f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70121594"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70772455"
 ---
 # <a name="layout-for-tablet-and-desktop-apps"></a>Layout para aplicativos Tablet e desktop
 
@@ -39,7 +39,7 @@ O modelo Xamarin. Forms inclui automaticamente o suporte a iPad ao definir a con
 
 Para fornecer uma experiência de inicialização agradável e garantir que a resolução de tela inteira seja usada em todos os dispositivos, você deve verificar se uma [tela de inicialização específica para iPad](~/ios/app-fundamentals/images-icons/launch-screens.md) (usando um storyboard) é fornecida. Isso garante que o aplicativo seja renderizado corretamente em dispositivos iPad mini, iPad e iPad pro.
 
-Antes do iOS 9, todos os aplicativos usavam a tela inteira no dispositivo, mas alguns iPads agora podem executar multitarefas de [tela dividida](~/ios/platform/multitasking.md).
+Antes do iOS 9, todos os aplicativos usavam a tela inteira no dispositivo, mas alguns iPads agora podem executar [multitarefas de tela dividida](~/ios/platform/multitasking.md).
 Isso significa que seu aplicativo pode ocupar apenas uma coluna fina no lado da tela, 50% da largura da tela ou na tela inteira.
 
 exemplo de tela de divisão do iPad [ ![(tablet-images/ipad-sml.png " ")]] (tablet-images/ipad.png#lightbox "exemplo de tela de divisão do iPad")
@@ -61,13 +61,11 @@ Os aplicativos executados em tablets e desktops Windows podem ser redimensionado
 
 Exemplo de divisão de tela do Windows [ ![(tablet-images/splitscreen-sml.png " ")]] (tablet-images/splitscreen.png#lightbox "Exemplo de divisão de tela do Windows")
 
-
 <a name="optimize" />
 
 ## <a name="optimizing-for-tablet-and-desktop"></a>Otimizando para Tablet e desktop
 
 Você pode ajustar sua interface do usuário do Xamarin. Forms dependendo se um telefone ou dispositivo tablet/Desktop está sendo usado. Isso significa que você pode otimizar a experiência do usuário para dispositivos de tela larga, como tablets e computadores desktop.
-
 
 ### <a name="deviceidiom"></a>Device.Idiom
 
@@ -89,8 +87,6 @@ Essa abordagem pode ser expandida para fazer alterações significativas em layo
 O [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) é ideal para telas maiores, especialmente no iPad em que ele usa o [`UISplitViewController`](xref:UIKit.UISplitViewController) para fornecer uma experiência de Ios nativa.
 
 Leia [esta postagem no blog do Xamarin](https://blog.xamarin.com/bringing-xamarin-forms-apps-to-tablets/) para ver como você pode adaptar sua interface do usuário para que os telefones usem um layout e telas maiores possam `MasterDetailPage`usar outro (com o).
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

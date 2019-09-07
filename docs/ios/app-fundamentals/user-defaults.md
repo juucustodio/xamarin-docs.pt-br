@@ -7,17 +7,16 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 06/07/2016
-ms.openlocfilehash: 6ff697964cbc057b4a3f905394d147d7c132d79b
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 4db5718394c3835861f3dfa8b99a4bac70e26981
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70281949"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70767013"
 ---
 # <a name="working-with-user-defaults-in-xamarinios"></a>Trabalhando com padrões do usuário no Xamarin. iOS
 
 _Este artigo aborda como trabalhar com NSUserDefault para salvar as configurações padrão em um aplicativo Xamarin. iOS ou extensão._
-
 
 A `NSUserDefaults` classe fornece uma maneira para que aplicativos e extensões do IOS interajam programaticamente com o sistema de padrões de todo o sistema. Usando o sistema de padrões, o usuário pode configurar o comportamento ou o estilo de um aplicativo para atender às suas preferências (com base no design do aplicativo). Por exemplo, para apresentar dados em medidas métricas vs Imperial ou selecione um determinado tema da interface do usuário.
 
@@ -129,14 +128,11 @@ plist.SetBool(useHeader, "UseHeader");
 > [!IMPORTANT]
 > Quando seu aplicativo é executado pela primeira `NSUserDefaults` vez, o lê as chaves e os valores do banco de dados de padrões do usuário do aplicativo e os armazena em cache para a memória para evitar abrir e ler o banco de dados sempre que um valor é necessário.
 
-
-
 <a name="Summary" />
 
 ## <a name="summary"></a>Resumo
 
 Este artigo abordou a `NSUserDefaults` classe e como ela pode ser usada para fornecer um conjunto de opções que o usuário final pode usar para configurar seu aplicativo Xamarin. Ios. Além disso, ele abordou o uso de grupos de aplicativos para se comunicar entre uma extensão e seu aplicativo pai ou entre aplicativos em um grupo.
-
 
 ## <a name="related-links"></a>Links relacionados
 

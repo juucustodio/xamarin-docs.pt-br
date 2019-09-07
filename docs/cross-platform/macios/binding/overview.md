@@ -6,12 +6,12 @@ ms.assetid: 9EE288C5-8952-C5A9-E542-0BD847300EC6
 author: conceptdev
 ms.author: crdun
 ms.date: 11/25/2015
-ms.openlocfilehash: 3b0e5d12f47ffb46ad009530bcc9c0b373496f63
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: db37a6a912cae3c2d53d8838ba2d2bd0224e8df7
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70279787"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70765592"
 ---
 # <a name="overview-of-objective-c-bindings"></a>Visão geral das associações de Objective-C
 
@@ -37,7 +37,6 @@ Você também pode ler mais detalhes técnicos de [como ele funciona](#howitwork
 
 Você pode usar o `btouch-native` para Xamarin. Ios (ou `bmac-native` se você estiver usando o Xamarin. Mac) para criar associações diretamente. Ele funciona passando as definições C# de API que você criou manualmente (ou usando nitidez objetiva) para a ferramenta de linha de comando (`btouch-native` para Ios ou `bmac-native` Mac).
 
-
 A sintaxe geral para invocar essas ferramentas é:
 
 ```csharp
@@ -51,7 +50,6 @@ bash$ bmac-native -e cocos2d.cs -s:enums.cs -x:extensions.cs
 ```
 
 O comando acima irá gerar o arquivo `cocos2d.dll` no diretório atual e ele conterá a biblioteca totalmente associada que você pode usar em seu projeto. Essa é a ferramenta que o Visual Studio para Mac usa para criar suas associações se você usar um projeto de associação (descrito [abaixo](#bindingproject)).
-
 
 <a name="bindingproject" />
 

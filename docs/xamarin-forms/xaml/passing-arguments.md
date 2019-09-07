@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2016
-ms.openlocfilehash: 065c7284970ececacbdb298d773b19f654280513
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 80f332e45d6c46ad49543923e85cbb2eceadb378
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70228095"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70767592"
 ---
 # <a name="passing-arguments-in-xaml"></a>Passando argumentos em XAML
 
@@ -168,7 +168,6 @@ O [ `OnPlatform` ](xref:Xamarin.Forms.OnPlatform`1) classe é uma classe genéri
 ## <a name="summary"></a>Resumo
 
 Este artigo demonstrou usando os atributos XAML que podem ser usados para passar argumentos para o construtor não padrão, para chamar métodos de fábrica e para especificar o tipo de um argumento genérico.
-
 
 ## <a name="related-links"></a>Links relacionados
 

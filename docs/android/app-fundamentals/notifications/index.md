@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: 7d153491802a74ff06b3a5cd63e585b7fd18ff03
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 57c77b5d8d6a4763dc7b5c7a62a51ffe3137827d
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68644312"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755359"
 ---
 # <a name="notifications-in-xamarinandroid"></a>Notificações no Xamarin. Android
 
@@ -22,7 +22,7 @@ Esta seção explica como implementar notificações no Xamarin. Android. Ele de
 Esta seção explica como implementar notificações locais no Xamarin. Android. Ele descreve os vários elementos da interface do usuário de uma notificação do Android e discute as APIs envolvidas na criação e exibição de uma notificação.
 
 ## <a name="walkthrough---using-local-notifications-in-xamarinandroidlocal-notifications-walkthroughmd"></a>[Walkthrough – usando notificações locais no Xamarin. Android](local-notifications-walkthrough.md)  
- 
+
 Este tutorial explica como usar notificações locais em um aplicativo Xamarin. Android. Ele demonstra as noções básicas de criação e publicação de uma notificação. Quando o usuário clica na notificação na gaveta de notificação, ele inicia uma segunda atividade. 
 
 ## <a name="further-reading"></a>Leitura adicional

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/28/2018
-ms.openlocfilehash: 91e49c387818ca4d7472325efa665a5c2bfd9e64
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 8ebc52936dfdcb6b5262424eba5652de0b8908e0
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522045"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755603"
 ---
 # <a name="activity-lifecycle"></a>Ciclo de vida de atividade
 
@@ -32,7 +32,6 @@ Este capítulo examina o ciclo de vida da atividade em detalhes, incluindo:
 - Estados de atividade
 - Métodos de ciclo de vida
 - Retendo o estado de um aplicativo
-
 
 Esta seção também inclui uma [explicação](~/android/app-fundamentals/activity-lifecycle/saving-state.md) que fornece exemplos práticos sobre como salvar com eficiência o estado durante o ciclo de vida da atividade. Ao final deste capítulo, você deve ter uma compreensão do ciclo de vida da atividade e de como dar suporte a ele em um aplicativo Android.
 
@@ -56,7 +55,6 @@ Esses Estados podem ser divididos em quatro grupos principais da seguinte maneir
     As atividades interrompidas ainda tentam reter suas informações de estado e membro pelo tempo máximo possível, mas as atividades interrompidas são consideradas como a prioridade mais baixa dos três Estados e, como tal, o sistema operacional eliminará as atividades nesse estado primeiro para atender ao recurso requisitos de atividades de prioridade mais alta.
 
 1. *Reiniciado* &ndash; É possível que uma atividade que seja colocada em pausa seja interrompida no ciclo de vida para ser removida da memória pelo Android. Se o usuário navega de volta para a atividade, ele deve ser reiniciado, restaurado para o estado salvo anteriormente e, em seguida, exibido para o usuário.
-
 
 ### <a name="activity-re-creation-in-response-to-configuration-changes"></a>Recriação de atividade em resposta a alterações de configuração
 
@@ -122,7 +120,6 @@ As atividades devem substituir esse método para executar tarefas como:
 - Exibir alertas ou caixas de diálogo relevantes
 - Conectar manipuladores de eventos externos
 
-
 Por exemplo, o trecho de código a seguir mostra como inicializar a câmera:
 
 ```csharp
@@ -174,7 +171,6 @@ Há dois métodos de ciclo de vida possíveis que serão chamados `OnPause`após
 1. `OnResume`será chamado se a atividade for retornada para o primeiro plano.
 1. `OnStop`será chamado se a atividade estiver sendo colocada em segundo plano.
 
-
 #### <a name="onstop"></a>OnStop
 
 [OnStop](xref:Android.App.Activity.OnStop) é chamado quando a atividade não está mais visível para o usuário. Isso acontece quando ocorre uma das seguintes situações:
@@ -182,7 +178,6 @@ Há dois métodos de ciclo de vida possíveis que serão chamados `OnPause`após
 - Uma nova atividade está sendo iniciada e está cobrindo essa atividade.
 - Uma atividade existente está sendo trazida para o primeiro plano.
 - A atividade está sendo destruída.
-
 
 `OnStop`Nem sempre pode ser chamado em situações de pouca memória, como quando o Android está sem problemas para recursos e não pode fazer o plano de fundo da atividade corretamente. Por esse motivo, é melhor não confiar na `OnStop` chamada ao preparar uma atividade para destruição. Os próximos métodos de ciclo de vida que podem ser chamados depois disso `OnDestroy` serão se a atividade estiver desaparecendo `OnRestart` ou se a atividade voltar a interagir com o usuário.
 
@@ -325,7 +320,6 @@ Esse método existe para fornecer alguma flexibilidade em relação a quando o e
 
 Para obter um exemplo de como salvar o `Bundle`estado usando um, consulte a explicação sobre como [salvar o estado da atividade](saving-state.md).
 
-
 #### <a name="bundle-limitations"></a>Limitações de pacote
 
 Embora `OnSaveInstanceState` o facilite o salvamento de dados transitórios, ele tem algumas limitações:
@@ -337,7 +331,6 @@ Embora `OnSaveInstanceState` o facilite o salvamento de dados transitórios, ele
 - Os dados salvos usando o pacote são serializados, o que pode levar a atrasos.
 
 O estado do pacote é útil para dados simples que não usam muita memória, enquanto *dados de instância que não* são de configuração são úteis para dados mais complexos, ou dados que são caros de recuperar, como de uma chamada de serviço da Web ou uma consulta de banco de dado complicada. Os dados da instância sem configuração são salvos em um objeto, conforme necessário. A próxima seção apresenta `OnRetainNonConfigurationInstance` uma maneira de preservar tipos de dados mais complexos por meio de alterações de configuração.
-
 
 ### <a name="persisting-complex-data"></a>Persistindo dados complexos
 
@@ -477,7 +470,6 @@ Nesta seção, aprendemos como preservar dados de estado simples com o e `Bundle
 ## <a name="summary"></a>Resumo
 
 O ciclo de vida da atividade do Android fornece uma estrutura poderosa para o gerenciamento de estado das atividades em um aplicativo, mas pode ser difícil de entender e implementar. Este capítulo apresentou os diferentes Estados em que uma atividade pode passar durante seu tempo de vida, bem como os métodos de ciclo de vida associados a esses Estados. Em seguida, as diretrizes foram fornecidas em que tipo de lógica deve ser executada em cada um desses métodos.
-
 
 ## <a name="related-links"></a>Links relacionados
 

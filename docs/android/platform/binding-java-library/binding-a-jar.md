@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/11/2018
-ms.openlocfilehash: 6aa9367495ba00138a38816ffab51c1ab43eec94
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 9a9e7e9c5d189527d4fbdcc2001d6f003fa63dd7
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69524811"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70757871"
 ---
 # <a name="binding-a-jar"></a>Associação de um .JAR
 
@@ -33,7 +33,6 @@ O código da MCW gerado usa JNI (Java Native interface) para encaminhar suas cha
 Neste guia, vamos percorrer as noções básicas de criação de uma biblioteca de associações para um único. Arquivo JAR. Ilustraremos com um exemplo onde tudo está certo &ndash; , onde não é necessária nenhuma personalização ou depuração de associações. 
 A [criação de associações usando metadados](~/android/platform/binding-java-library/customizing-bindings/java-bindings-metadata.md) oferece um exemplo de um cenário mais avançado em que o processo de associação não é totalmente automático e alguma quantidade de intervenção manual é necessária. Para obter uma visão geral da Associação de biblioteca Java em geral (com um exemplo de código básico), consulte [associando uma biblioteca Java](~/android/platform/binding-java-library/index.md). 
 
- 
 ## <a name="walkthrough"></a>Passo a passo
 
 Nas instruções a seguir, criaremos uma biblioteca de associações para [Picasso](http://square.github.io/picasso/), um Android popular. JAR que fornece o carregamento de imagens e a funcionalidade de cache. Usaremos as etapas a seguir para associar **Picasso-2. x. x. jar** para criar um novo assembly .NET que possamos usar em um projeto Xamarin. Android: 
@@ -74,7 +73,6 @@ Picasso.With (this)
 
 ```
 
-
 ### <a name="creating-the-bindings-library"></a>Criando a biblioteca de associações
 
 Antes de começar com as etapas abaixo, baixe [Picasso-2. x. x. jar](http://repo1.maven.org/maven2/com/squareup/picasso/picasso/2.5.2/picasso-2.5.2.jar).
@@ -113,10 +111,7 @@ Defina o nível da API de destino para sua biblioteca de associações (neste ex
 
 [![Nível de API de destino definido como API 19](binding-a-jar-images/06-set-target-framework-sml.png)](binding-a-jar-images/06-set-target-framework.png#lightbox)
 
-
 Por fim, crie a biblioteca de associações. Embora algumas mensagens de aviso possam ser exibidas, o projeto de biblioteca de associações deve ser compilado com êxito e produzir uma saída. DLL no seguinte local: **JarBinding/bin/Debug/JarBinding.dll**
-    
-
 
 ### <a name="using-the-bindings-library"></a>Usando a biblioteca de associações
 
@@ -191,13 +186,10 @@ Compile e execute o projeto **BindingTest** . O aplicativo será inicializado e,
 [![Captura de tela de BindingTest em execução](binding-a-jar-images/11-result-sml.png)](binding-a-jar-images/11-result.png#lightbox)
 
 Parabéns! Você uma biblioteca Java com êxito. JAR e o utilizou em seu aplicativo Xamarin. Android.
- 
- 
+
 ## <a name="summary"></a>Resumo
 
 Neste tutorial, criamos uma biblioteca de associações para terceiros. Arquivo JAR, adicionado a biblioteca de associações a um aplicativo de teste mínimo e, em seguida, executou o aplicativo C# para verificar se nosso código pode chamar o código Java que reside no. Arquivo JAR. 
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

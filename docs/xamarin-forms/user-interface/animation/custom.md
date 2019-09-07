@@ -7,19 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/14/2016
-ms.openlocfilehash: b195e63bcc88c4d1c659216f99ab698773f73e9e
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 86fac9dd0c2f9281a0c828ace68fbf77679dce5b
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656806"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70759834"
 ---
 # <a name="custom-animations-in-xamarinforms"></a>Animações personalizadas no xamarin. Forms
 
 [![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-animation-custom)
 
 _A classe de animação é o bloco de construção de todas as animações de xamarin. Forms, com os métodos de extensão na classe ViewExtensions criando um ou mais objetos de animação. Este artigo demonstra como usar a classe de animação para criar e Cancelar animações, sincronizar várias animações e criar animações personalizadas que animar propriedades que não estão animadas pelos métodos de animação existentes._
-
 
 Um número de parâmetros deve ser especificado durante a criação de um `Animation` objeto, incluindo os valores inicial e final da propriedade sendo animada e um retorno de chamada que altera o valor da propriedade. Um `Animation` objeto também pode manter uma coleção de animações filho que podem ser executados e sincronizadas. Para obter mais informações, consulte [animações filho](#child).
 
@@ -180,7 +179,6 @@ Neste exemplo de código, o `ColorTo` método anima a [ `TextColor` ](xref:Xamar
 ## <a name="summary"></a>Resumo
 
 Este artigo demonstrou como usar o [ `Animation` ](xref:Xamarin.Forms.Animation) classe para criar e Cancelar animações, sincronizar várias animações e criar animações personalizadas que animar propriedades que não estão animadas pela animação existente métodos. O `Animation` classe é o bloco de construção de todas as animações de xamarin. Forms.
-
 
 ## <a name="related-links"></a>Links relacionados
 

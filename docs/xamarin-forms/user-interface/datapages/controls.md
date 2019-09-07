@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: 2af4bc3bd4dc6ae47f573c58c84aad54f41d42cd
-ms.sourcegitcommit: 41a029c69925e3a9d2de883751ebfd649e8747cd
+ms.openlocfilehash: e92669d9938b9fe48a1a589e0465acd03f129716
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68980810"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70759888"
 ---
 # <a name="datapages-controls-reference"></a>Referência de controles de páginas de DataPages
 
@@ -67,7 +67,6 @@ O `HeroImage` controle tem quatro propriedades:
 
 ![](controls-images/heroimage-light-ios.png "Controle HeroImage no iOS") ![](controls-images/heroimage-dark-ios.png "HeroImage controle no iOS")
 
-
 <a name="listitem" />
 
 ### <a name="listitem"></a>ListItem
@@ -101,7 +100,6 @@ Essas capturas de tela `ListItem` mostram o nas plataformas Ios e Android usando
 **iOS**
 
 ![](controls-images/listitem-light-ios.png "Controle de item de lista no iOS") ![](controls-images/listitem-dark-ios.png "controle ListItem no iOS")
-
 
 ## <a name="custom-control-example"></a>Exemplo de controle personalizado
 
@@ -307,7 +305,6 @@ O design visual do controle personalizado é declarado explicitamente no modelo 
       VerticalOptions="End"
       Style="{ StaticResource CardViewTextStyle }"
     />
-
 
     <!-- CARDVIEW DETAIL -->
     <Label

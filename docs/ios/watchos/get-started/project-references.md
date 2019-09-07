@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 09/13/2016
-ms.openlocfilehash: 72a1fe3541eb4ece67dd137ebcd33f8e81ae9553
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: dcadb5146df39aa4887e28b65078acc9454f3d34
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292260"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70767981"
 ---
 # <a name="watchos-project-references-in-xamarin"></a>Referências de projeto watchOS no Xamarin
 
@@ -32,12 +32,9 @@ Exiba as referências clicando duas vezes nos nós de referências para cada pro
 
   ![](project-references-images/catalog-reference2.png "Aplicativo de observação de referências de aplicativo do iPhone")
 
-
 - A **extensão do aplicativo de inspeção** não faz referência a nenhum dos outros projetos
 
   ![](project-references-images/catalog-reference3.png "A extensão do aplicativo de inspeção não faz referência a outros projetos")
-
-
 
 ## <a name="bundle-identifiers"></a>Identificadores de pacote
 
@@ -76,4 +73,3 @@ A versão atual do **sistema operacional de inspeção** é 8,2, portanto, o **d
 ![](project-references-images/infoplist-watchapp.png "O arquivo Watch info. plist")
 
 O destino de implantação para o aplicativo Watch pode ser diferente da extensão Watch e do aplicativo iOS.
-

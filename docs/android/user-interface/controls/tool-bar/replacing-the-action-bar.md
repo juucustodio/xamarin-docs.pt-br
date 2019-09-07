@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/27/2018
-ms.openlocfilehash: d59acaec36c63c62fe934f145d06bfbb78d11f6c
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: df6a479123dfc0fa2e5a47c9210a4bdf24d066e1
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522862"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70762459"
 ---
 # <a name="replacing-the-action-bar"></a>Substituição da barra de ações
 
@@ -33,15 +33,11 @@ Para substituir a barra de ação padrão de um aplicativo `Toolbar`por um:
 
 As seções a seguir explicam esse processo em detalhes. Um aplicativo simples é criado e sua barra de ação é substituída por `Toolbar`um personalizado. 
 
-
-
 ## <a name="start-an-app-project"></a>Iniciar um projeto de aplicativo
 
-Crie um novo projeto Android chamado **ToolbarFun** (consulte [Olá, Android](~/android/get-started/hello-android/hello-android-quickstart.md) para obter mais informações sobre como criar um novo projeto Android). Depois que esse projeto for criado, defina os níveis de destino e mínimo da API do Android para **android 5,0 (API nível 21-pirulito)** ou posterior. Para obter mais informações sobre como definir os níveis de versão do Android, consulte Understanding [Android API Levels](~/android/app-fundamentals/android-api-levels.md). Quando o aplicativo é criado e executado, ele exibe a barra de ação padrão como visto nesta captura de tela:
+Crie um novo projeto Android chamado **ToolbarFun** (consulte [Olá, Android](~/android/get-started/hello-android/hello-android-quickstart.md) para obter mais informações sobre como criar um novo projeto Android). Depois que esse projeto for criado, defina os níveis de destino e mínimo da API do Android para **android 5,0 (API nível 21-pirulito)** ou posterior. Para obter mais informações sobre como definir os níveis de versão do Android, consulte [Understanding Android API Levels](~/android/app-fundamentals/android-api-levels.md). Quando o aplicativo é criado e executado, ele exibe a barra de ação padrão como visto nesta captura de tela:
 
 [![Captura de tela da barra de ação padrão](replacing-the-action-bar-images/01-before-sml.png)](replacing-the-action-bar-images/01-before.png#lightbox)
-
-
 
 ## <a name="create-a-custom-theme"></a>Criar um tema personalizado
 
@@ -58,7 +54,7 @@ Abra o diretório de **recursos/valores** e crie um novo arquivo chamado **Style
 </resources>
 ```
 
-Esse XML define um novo tema personalizado chamado mythemes, com base no tema **Theme. material. Light. DarkActionBar** na pirulito. O `windowNoTitle` atributo é definido como `true` para ocultar a barra de título: 
+Esse XML define um novo tema personalizado chamado **Mythemes** , com base no tema **Theme. material. Light. DarkActionBar** na pirulito. O `windowNoTitle` atributo é definido como `true` para ocultar a barra de título: 
 
 ```xml
 <item name="android:windowNoTitle">true</item>
@@ -71,7 +67,7 @@ Para exibir a barra de ferramentas personalizada, `ActionBar` o padrão deve ser
 ```
 
 Uma configuração verde `colorPrimary` -oliva é usada para a cor do plano de fundo da barra de ferramentas: 
- 
+
 ```xml
 <item name="android:colorPrimary">#5A8622</item>
 ```
@@ -85,8 +81,6 @@ Edite **Properties/AndroidManifest. xml** e adicione o `android:theme` seguinte 
 ```
 
 Para obter mais informações sobre como aplicar um tema personalizado a um aplicativo, consulte [usando temas personalizados](~/android/user-interface/material-theme.md#customtheme). 
-
-
 
 ## <a name="define-a-toolbar-layout"></a>Definir um layout de barra de ferramentas
 
@@ -123,8 +117,6 @@ android:theme="@android:style/ThemeOverlay.Material.Dark.ActionBar"
 
 Essa configuração é usada para que os itens de menu contrastem com a cor de fundo mais escura.
 
-
-
 ## <a name="include-the-toolbar-layout"></a>Incluir o layout da barra de ferramentas
 
 Edite o arquivo de layout **Resources/layout/Main. axml** e substitua seu conteúdo pelo XML a seguir:
@@ -141,8 +133,6 @@ Edite o arquivo de layout **Resources/layout/Main. axml** e substitua seu conte�
 ```
 
 Esse layout inclui o `Toolbar` definido em **Toolbar. xml** e usa um `RelativeLayout` para especificar que o `Toolbar` deve ser colocado na parte superior da interface do usuário (acima do botão). 
-
-
 
 ## <a name="find-and-activate-the-toolbar"></a>Localizar e ativar a barra de ferramentas
 
@@ -168,7 +158,6 @@ Observe que o `Toolbar` é estilizado de forma independente `Theme.Material.Ligh
 
 Se ocorrer uma exceção durante a execução do aplicativo, consulte a seção [solução de problemas](#troubleshooting) abaixo.
 
- 
 ## <a name="add-menu-items"></a>Adicionar itens de menu 
 
 Nesta seção, os menus são adicionados ao `Toolbar`. A área superior direita do `ToolBar` é reservada para itens &ndash; de menu cada item de menu (também chamado de item de *ação*) pode executar uma ação dentro da atividade atual ou pode executar uma ação em nome de todo o aplicativo. 
@@ -185,12 +174,9 @@ Para adicionar menus ao `Toolbar`:
 
 As seções a seguir demonstram esse processo em detalhes adicionando os itens de menu **Editar** e **salvar** ao personalizado `Toolbar`. 
 
-
-
 ### <a name="install-menu-icons"></a>Ícones do menu instalar
 
 Continuando com `ToolbarFun` o aplicativo de exemplo, adicione ícones de menu ao projeto de aplicativo. Baixe os [ícones da barra de ferramentas](https://github.com/xamarin/monodroid-samples/blob/master/Supportv7/AppCompat/Toolbar/Resources/toolbar-icons-plus.zip?raw=true), descompacte e copie o conteúdo das *mipmap* extraídas para o projeto *mipmap-* Folders em **ToolbarFun/recursos** e inclua cada arquivo de ícone adicionado no projeto.
-
 
 ### <a name="define-a-menu-resource"></a>Definir um recurso de menu
 
@@ -226,7 +212,6 @@ Esse XML cria três itens de menu:
 
 Os `showAsAction` atributos dos itens de menu **Editar** e **salvar** são definidos para `ifRoom` &ndash; essa configuração faz com que esses itens de menu sejam `Toolbar` exibidos no se houver espaço suficiente para serem exibidos. O item de menu de `showAsAction` preferências `never` define como &ndash; isso faz com que o menu de **preferências** apareça no menu de *estouro* (três pontos verticais). 
 
-
 ### <a name="implement-oncreateoptionsmenu"></a>Implementar OnCreateOptionsMenu
 
 Adicione o seguinte método a **MainActivity.cs**:
@@ -240,8 +225,6 @@ public override bool OnCreateOptionsMenu(IMenu menu)
 ```
 
 O Android chama `OnCreateOptionsMenu` o método para que o aplicativo possa especificar o recurso de menu para uma atividade. Nesse método, o recurso **top_menus. xml** é informado no passado `menu`. Esse código faz com que os `Toolbar`novos itens de menu **Editar**, **salvar**e **preferências** apareçam no. 
-
-
 
 ### <a name="implement-onoptionsitemselected"></a>Implementar OnOptionsItemSelected
 
@@ -271,7 +254,6 @@ Quando um usuário toca no menu de estouro, o item de menu **preferências** é 
 [![Captura de tela do item de menu de preferências que aparece no menu de estouro](replacing-the-action-bar-images/06-preferences-sml.png)](replacing-the-action-bar-images/06-preferences.png#lightbox)
 
 Para obter mais informações sobre os menus do Android, consulte o tópico [menus](https://developer.android.com/guide/topics/ui/menus.html) para desenvolvedores do Android. 
- 
 
 ## <a name="troubleshooting"></a>Solução de problemas
 
@@ -286,7 +268,6 @@ Se o aplicativo não estiver configurado corretamente para usar um tema personal
 Além disso, uma mensagem de erro como a seguinte pode ser produzida: _Java.Lang.IllegalStateException: Esta atividade já tem uma barra de ação fornecida pela janela décor._ 
 
 Para corrigir esse erro, verifique se o `android:theme` atributo do tema personalizado foi adicionado a `<application>` (em **Properties/AndroidManifest. xml**) conforme descrito anteriormente em [aplicar o tema personalizado](#apply-the-custom-theme). Além disso, esse erro pode ser causado se o `Toolbar` layout ou o tema personalizado não estiver configurado corretamente.
-
 
 ## <a name="related-links"></a>Links relacionados
 

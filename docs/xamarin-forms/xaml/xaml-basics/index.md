@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017
-ms.openlocfilehash: a7e98f64672788f13b247aa6cbba8adca84bb319
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 0b30a0167b72ebeb4c53481c6d2d9d9344296894
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70121542"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70767358"
 ---
 # <a name="xamarinforms-xaml-basics"></a>Noções básicas de XAML de xamarin. Forms
 
@@ -34,7 +34,6 @@ Além desses artigos Noções básicas de XAML, você pode baixar capítulos do 
 [![](images/cover-sml.png "Capa do livro")](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md)
 
 Tópicos XAML são abordados mais detalhadamente nos vários capítulos do livro, incluindo:
-
 
 | Capítulo | Baixar | Resumo |
 |---------|---------|---------|

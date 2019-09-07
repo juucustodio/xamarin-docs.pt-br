@@ -9,12 +9,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 10/05/2018
-ms.openlocfilehash: 2595ff23dcc0688c141f943d4ea61e13c970b7aa
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
-ms.translationtype: HT
+ms.openlocfilehash: c02e8e3c30508951df071810aff8db429a2f04ea
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68509574"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70756714"
 ---
 # <a name="hello-android-deep-dive"></a>Olá, Android: Aprofundamento
 
@@ -116,7 +116,6 @@ Os itens estão resumidos na tabela abaixo:
 - **desenhável** &ndash; os diretórios desenháveis contêm [recursos desenháveis](https://developer.android.com/guide/topics/resources/drawable-resource.html), como imagens e bitmaps.
 
 - **mipmap** &ndash; O diretório mipmap contém arquivos desenháveis para diferentes densidades de ícones do inicializador. No modelo padrão, o diretório desenhável contém o arquivo de ícone do aplicativo, **Icon.png**.
-
 
 ::: zone pivot="windows"
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/20/2018
-ms.openlocfilehash: 8f7dd6f0a2e6db2580982a877cab2137cf28fab2
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 9266d8c4e1723adfb7e5e55dce7ede6d47f6f116
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68508712"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755486"
 ---
 # <a name="broadcast-receivers-in-xamarinandroid"></a>Receptores de difusão no Xamarin. Android
 
@@ -27,7 +27,7 @@ O Android identifica dois tipos de difusões:
 - **Difusão explícita** &ndash; Esses tipos de difusão visam um aplicativo específico. O uso mais comum de uma difusão explícita é iniciar uma atividade. Um exemplo de uma difusão explícita quando um aplicativo precisa discar um número de telefone; Ele enviará uma intenção que tem como alvo o aplicativo de telefone no Android e passa o número de telefone a ser discado. Em seguida, o Android roteará a intenção para o aplicativo de telefone.
 - **Difusão implícita** &ndash; Essas difusões são expedidas para todos os aplicativos no dispositivo. Um exemplo de difusão implícita é a `ACTION_POWER_CONNECTED` intenção. Essa intenção é publicada toda vez que o Android detecta que a bateria no dispositivo está carregando. O Android roteará essa intenção para todos os aplicativos que se registraram para esse evento.
 
-O receptor de difusão é uma subclasse do `BroadcastReceiver` tipo e deve substituir o [`OnReceive`](xref:Android.Content.BroadcastReceiver.OnReceive*) método. O Android será `OnReceive` executado no thread principal, portanto, esse método deve ser projetado para ser executado rapidamente. Deve-se ter cuidado ao gerar threads `OnReceive` no, pois o Android pode encerrar o processo quando o método for concluído. Se um receptor de difusão precisar executar o trabalho de longa execução, é recomendável  agendar um `JobScheduler` trabalho usando o ou o _Dispatcher do trabalho firebase_. O agendamento do trabalho com um trabalho será discutido em um guia separado.
+O receptor de difusão é uma subclasse do `BroadcastReceiver` tipo e deve substituir o [`OnReceive`](xref:Android.Content.BroadcastReceiver.OnReceive*) método. O Android será `OnReceive` executado no thread principal, portanto, esse método deve ser projetado para ser executado rapidamente. Deve-se ter cuidado ao gerar threads `OnReceive` no, pois o Android pode encerrar o processo quando o método for concluído. Se um receptor de difusão precisar executar o trabalho de longa execução, é recomendável agendar um `JobScheduler` trabalho usando o ou o _Dispatcher do trabalho firebase_. O agendamento do trabalho com um trabalho será discutido em um guia separado.
 
 Um _filtro de intenção_ é usado para registrar um receptor de difusão para que o Android possa rotear mensagens corretamente. O filtro de intenção pode ser especificado em tempo de execução (às vezes, isso é chamado de _receptor de contexto registrado_ ou de _registro dinâmico_) ou pode ser definido estaticamente no manifesto do Android (um _receptor registrado pelo manifesto_). O Xamarin. Android fornece C# um atributo `IntentFilterAttribute`, que registrará de forma estática o filtro de intenção (isso será discutido em mais detalhes posteriormente neste guia). A partir do Android 8,0, não é possível que um aplicativo se registre estaticamente para uma difusão implícita.
 
@@ -62,7 +62,7 @@ public class SampleReceiver : BroadcastReceiver
 ```
 
 Quando o Xamarin. Android compila a classe, ele também atualizará o AndroidManifest com os metadados necessários para registrar o receptor. Para um receptor de difusão estaticamente registrado, o deve `Enabled` ser adequadamente definido como `true`; caso contrário, o Android não será capaz de criar uma instância do receptor.
- 
+
 A `Exported` propriedade controla se o receptor de difusão pode receber mensagens de fora do aplicativo. Se a propriedade não estiver definida explicitamente, o valor padrão da propriedade será determinado pelo Android com base em se houver filtros de intenção associados ao receptor de difusão. Se houver pelo menos um filtro de intenção para o receptor de difusão, o Android irá pressupor `Exported` que a `true`propriedade é. Se não houver nenhum filtro de intenção associado ao receptor de difusão, o Android assumirá que o valor é `false`. 
 
 O `OnReceive` método recebe uma referência `Intent` ao que foi expedida para o receptor de difusão. Isso possibilita que o remetente da intenção passe valores para o receptor de difusão.

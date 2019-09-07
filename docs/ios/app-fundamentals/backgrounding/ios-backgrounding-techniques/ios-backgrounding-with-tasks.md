@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: 0d001c39b2111785911d678bdeb2e83d761fba11
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 7596f79119f28997cbcda6e7057e682edfd760b8
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70286994"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70756355"
 ---
 # <a name="ios-backgrounding-with-tasks"></a>Operação em segundo plano no iOS com tarefas
 
@@ -23,7 +23,6 @@ As tarefas em segundo plano podem ser divididas em três categorias:
 1. **Tarefas seguras em segundo plano** – chamadas em qualquer lugar no aplicativo em que você tem uma tarefa que você não deseja interromper se o aplicativo entrar no plano de fundo.
 1. **Tarefas DidEnterBackground** – chamadas durante o `DidEnterBackground` método de ciclo de vida do aplicativo para auxiliar na limpeza e no salvamento de estado.
 1. **Transferências em segundo plano (Ios 7 +)** – um tipo especial de tarefa em segundo plano usada para executar transferências de rede no Ios 7. Diferentemente das tarefas regulares, as transferências em segundo plano não têm um limite de tempo predeterminado.
-
 
 A segurança em segundo `DidEnterBackground` plano e as tarefas são seguras para uso no Ios 6 e no Ios 7, com algumas pequenas diferenças. Vamos investigar esses dois tipos de tarefas com mais detalhes.
 
@@ -47,7 +46,6 @@ O processo de registro emparelha uma tarefa com um identificador exclusivo `task
 > [!IMPORTANT]
 > As tarefas seguras em segundo plano podem ser executadas no thread principal ou em um thread em segundo plano, dependendo das necessidades do aplicativo.
 
-
 ## <a name="performing-tasks-during-didenterbackground"></a>Executando tarefas durante DidEnterBackground
 
 Além de tornar uma tarefa de execução longa em segundo plano, o registro pode ser usado para disparar tarefas à medida que um aplicativo está sendo colocado em segundo plano. o IOS fornece um método de evento na classe AppDelegate `DidEnterBackground` chamado que pode ser usado para salvar o estado do aplicativo, salvar dados do usuário e criptografar conteúdo confidencial antes que um aplicativo entre no plano de fundo. Um aplicativo tem aproximadamente cinco segundos para retornar desse método ou ele será encerrado. Portanto, as tarefas de limpeza que podem levar mais de cinco segundos para serem concluídas podem ser `DidEnterBackground` chamadas de dentro do método. Essas tarefas devem ser invocadas em um thread separado.
@@ -68,7 +66,6 @@ Começamos substituindo o `DidEnterBackground` método `AppDelegate`no, onde reg
 
 > [!IMPORTANT]
 > o iOS usa um [mecanismo de Watchdog](https://developer.apple.com/library/ios/qa/qa1693/_index.html) para garantir que a interface do usuário de um aplicativo permaneça responsiva. Um aplicativo que passa muito tempo no `DidEnterBackground` deixará de responder na interface do usuário. Iniciar as tarefas a serem executadas em segundo plano `DidEnterBackground` permitem retornar em tempo hábil, mantendo a interface do usuário responsiva e impedindo o Watchdog de interromper o aplicativo.
-
 
 ## <a name="handling-background-task-time-limits"></a>Manipulando limites de tempo de tarefa em segundo plano
 
@@ -133,7 +130,6 @@ O backbone de transferências em segundo plano no Ios 7 é `NSURLSession` a nova
 1. Transfira conteúdo por meio de interrupções de rede e dispositivo.
 1. Carregar e baixar arquivos grandes ( *serviço de transferência em segundo plano* ).
 
-
 Vamos examinar mais de perto como isso funciona.
 
 ### <a name="nsurlsession-api"></a>API NSURLSession
@@ -157,7 +153,6 @@ else {
 > [!IMPORTANT]
 > Evite fazer chamadas para atualizar a interface do usuário de segundo plano no código em conformidade com o iOS 6, pois o iOS 6 não oferece suporte a atualizações de interface do usuário em segundo plano e encerrará o aplicativo.
 
-
 A `NSURLSession` API inclui um conjunto avançado de recursos para lidar com a autenticação, gerenciar transferências com falha e relatar erros do lado do cliente, mas não do lado do servidor. Ele ajuda a ligar as interrupções no tempo de execução da tarefa introduzido no iOS 7 e também fornece suporte para transferir arquivos grandes de forma rápida e confiável. A próxima seção explora esse segundo recurso.
 
 ### <a name="background-transfer-service"></a>Serviço de transferência em segundo plano
@@ -167,4 +162,3 @@ Antes do iOS 7, carregar ou baixar arquivos em segundo plano não era confiável
 As transferências iniciadas usando o serviço de transferência em segundo plano são gerenciadas pelo sistema operacional e fornecem APIs para lidar com a autenticação e os erros. Como as transferências não são associadas por um limite de tempo arbitrário, elas podem ser usadas para carregar ou baixar arquivos grandes, atualizar automaticamente o conteúdo em segundo plano e muito mais. Consulte a [orientação de transferência em segundo plano](~/ios/app-fundamentals/backgrounding/ios-backgrounding-walkthroughs/background-transfer-walkthrough.md) para obter detalhes sobre como implementar o serviço.
 
 O serviço de transferência em segundo plano geralmente é emparelhado com a busca em segundo plano ou notificações remotas para ajudar os aplicativos a atualizar o conteúdo em segundo plano. Nas próximas duas seções, apresentamos o conceito de registro de aplicativos inteiros para serem executados em segundo plano no iOS 6 e no iOS 7.
-

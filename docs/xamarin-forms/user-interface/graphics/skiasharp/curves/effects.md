@@ -7,12 +7,12 @@ ms.assetid: 95167D1F-A718-405A-AFCC-90E596D422F3
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/29/2017
-ms.openlocfilehash: f43c4dac1811a54ee0ceeb70e2b2b1835a5ca030
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 82755a6a87ec0a47c10aac7078beeab6e14c218d
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70228248"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70759378"
 ---
 # <a name="path-effects-in-skiasharp"></a>Efeitos de caminho em SkiaSharp
 
@@ -943,7 +943,6 @@ Você pode usar esse efeito de caminho para traçar ou preenchimento. Linhas sã
 
 O argumento final é uma semente usada para gerar a sequência pseudoaleatória usada para o efeito. O efeito de tremulação terá uma aparência um pouco diferente para diferentes sementes. O argumento tem um valor padrão de zero, o que significa que o efeito é o mesmo sempre que você executar o programa. Se você quiser tremulação diferente sempre que a tela é redesenhada, você pode definir a semente para o `Millisecond` propriedade de um `DataTime.Now` valor (por exemplo).
 
-
 O **tremulação experimentar** página lhe permite fazer experiências com valores diferentes nas traçar um retângulo:
 
 [![Captura de tela tripla da página JitterExperiment](effects-images/jitterexperiment-small.png)](effects-images/jitterexperiment-large.png#lightbox)
@@ -1086,7 +1085,7 @@ public Boolean GetFillPath (SKPath src, SKPath dst, SKRect cullRect, Single resS
 
 Somente os primeiros dois argumentos são necessários. O método acessa o caminho referenciado pela `src` argumento, modifica os dados de caminho com base nas propriedades de traço na `SKPaint` objeto (incluindo o `PathEffect` propriedade) e, em seguida, grava os resultados no `dst` caminho. O `resScale` parâmetro permite reduzir a precisão para criar um caminho de destino menor e o `cullRect` argumento pode eliminar delimitações fora de um retângulo.
 
-Um uso básico desse método não envolve efeitos de caminho: Se o `SKPaint` objeto tiver sua `Style` propriedade definida como `SKPaintStyle.Stroke` `PathEffect`enão tiver seu conjunto, o criaráumcaminhoquerepresentaumcontornodocaminhodeorigemcomosetivessesidotraçado`GetFillPath` pelo Propriedades de pintura.
+Um uso básico desse método não envolve efeitos de caminho: Se o `SKPaint` objeto tiver sua `Style` propriedade definida como `SKPaintStyle.Stroke` *e não tiver seu* `PathEffect` conjunto, o criaráumcaminhoquerepresentaumcontornodocaminhodeorigemcomosetivessesidotraçadopelo`GetFillPath` Propriedades de pintura.
 
 Por exemplo, se o `src` caminho é um círculo simples do radius 500 e o `SKPaint` objeto Especifica a largura do traço de 100, então o `dst` caminho se torne dois círculos concêntricos, uma com um raio de 450 e outra com um raio de 550. O método é chamado `GetFillPath` porque preencher esse `dst` caminho é o mesmo que traça o `src` caminho. Mas você também pode traçar o `dst` caminho para ver os contornos do caminho.
 
@@ -1412,8 +1411,6 @@ Como você já descobriu, as linhas de hachura não são precisamente restritas 
 [![Captura de tela tripla da página linhas de hachura tracejada](effects-images/dashedhatchlines-small.png)](effects-images/dashedhatchlines-large.png#lightbox)
 
 Agora que você já viu que variam de simples pontos e traços a combinações estranhas para efeitos de caminho, use sua imaginação e veja o que você pode criar.
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

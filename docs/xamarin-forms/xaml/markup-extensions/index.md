@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: 3b135f916225f896680cfb73175ba0568928be06
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 40a50ecf93c8b77577e8e74df2e134b0ce3f80b6
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655758"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70767545"
 ---
 # <a name="xaml-markup-extensions"></a>Extensões de marcação XAML
 
@@ -55,8 +55,6 @@ Use as extensões de marcação XAML definidas no xamarin. Forms.
 ## <a name="creating-xaml-markup-extensionscreatingmd"></a>[Criação de extensões de marcação XAML](creating.md)
 
 Escreva suas próprias extensões de marcação XAML personalizados.
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

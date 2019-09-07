@@ -7,17 +7,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2018
-ms.openlocfilehash: 95d4194e0ed1a1da435a233e40a74f506c49b539
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: e2bfc64626d658cbcb22ba5f2ebd1f1ff069ec19
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70119871"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70757758"
 ---
 # <a name="android-job-scheduler"></a>Agendador de trabalhos do Android
 
 _Este guia discute como agendar o trabalho em segundo plano usando a API do Agendador de trabalho do Android, que está disponível em dispositivos Android que executam o Android 5,0 (API nível 21) e superior._
-
 
 ## <a name="overview"></a>Visão geral 
 
@@ -52,7 +51,7 @@ Para agendar o trabalho com o Agendador de trabalhos do Android, um aplicativo X
 
 - **bool OnStopJob (parâmetros JobParameters)** &ndash; Isso é chamado quando o trabalho é interrompido prematuramente pelo Android. Ele deve retornar `true` se o trabalho deve ser reagendado com base nos critérios de repetição (discutidos abaixo mais detalhadamente).
 
-É possível especificar _restrições_ ou gatilhos que controlarão quando um trabalho pode ou deve ser executado. Por exemplo, é possível restringir um trabalho para que ele seja executado somente quando o dispositivo estiver carregando ou para iniciar um trabalho quando uma imagem for executada.
+É possível especificar _restrições_ ou _gatilhos_ que controlarão quando um trabalho pode ou deve ser executado. Por exemplo, é possível restringir um trabalho para que ele seja executado somente quando o dispositivo estiver carregando ou para iniciar um trabalho quando uma imagem for executada.
 
 Este guia discutirá detalhadamente como implementar uma `JobService` classe e agendá-la com o. `JobScheduler`
 
@@ -78,7 +77,6 @@ Todo o trabalho executado pela biblioteca do Agendador de trabalhos do Android d
 4. Substitua o `OnStartJob` método, adicionando o código para executar o trabalho. O Android invocará esse método no thread principal do aplicativo para executar o trabalho. Trabalho que levará mais tempo que alguns milissegundos devem ser executados em um thread para evitar o bloqueio do aplicativo.
 5. Quando o trabalho é concluído, o `JobService` deve chamar o `JobFinished` método. Esse método é como `JobService` diz que `JobScheduler` o trabalho é feito. A falha na `JobFinished` chamada resultará `JobService` na colocação de demandas desnecessárias no dispositivo, reduzindo a vida útil da bateria. 
 6. É uma boa ideia também substituir o `OnStopJob` método. Esse método é chamado pelo Android quando o trabalho está sendo desligado antes de ser concluído e fornece a `JobService` oportunidade de descartar corretamente todos os recursos. Esse método deve retornar `true` se for necessário reagendar o trabalho ou `false` se não for desejável para executar novamente o trabalho.
-   
 
 O código a seguir é um exemplo do mais simples `JobService` para um aplicativo, usando a TPL para realizar um trabalho de forma assíncrona:
 
@@ -115,7 +113,6 @@ Os aplicativos Xamarin. Android não instanciam `JobService` diretamente um, em 
 
 - **JobID** Esse é um `int` valor que é usado para identificar um trabalho para o `JobScheduler`. &ndash; A reutilização desse valor atualizará todos os trabalhos existentes. O valor deve ser exclusivo para o aplicativo. 
 - **JobService** Esse parâmetro é um `ComponentName` que `JobScheduler` identifica explicitamente o tipo que deve ser usado para executar um trabalho. &ndash; 
-  
 
 Esse método de extensão demonstra como criar um `JobInfo.Builder` com um Android `Context`, como uma atividade:
 
@@ -138,7 +135,6 @@ var jobInfo = jobBuilder.Build();  // creates a JobInfo object.
 
 Um recurso poderoso do Agendador de trabalhos do Android é a capacidade de controlar quando um trabalho é executado ou sob quais condições um trabalho pode ser executado. A tabela a seguir descreve alguns dos métodos no `JobInfo.Builder` que permitem que um aplicativo influencie quando um trabalho pode ser executado:  
 
-
 |  Método | Descrição   |
 |---|---|
 | `SetMinimumLatency`  | Especifica que um atraso (em milissegundos) deve ser observado antes de um trabalho ser executado. |
@@ -149,7 +145,6 @@ Um recurso poderoso do Agendador de trabalhos do Android é a capacidade de cont
 | `SetDeviceIdle` | O trabalho será executado quando o dispositivo estiver ocupado. |
 | `SetPeriodic` | Especifica que o trabalho deve ser executado regularmente. |
 | `SetPersisted` | O trabalho deve ser perisisável entre as reinicializações do dispositivo. | 
-
 
 O `SetBackoffCriteria` fornece algumas diretrizes sobre quanto tempo o `JobScheduler` deve aguardar antes de tentar executar um trabalho novamente. Há duas partes para os critérios de retirada: um atraso em milissegundos (valor padrão de 30 segundos) e o tipo de retirada que deve ser usado (às vezes chamado de _política de retirada_ ou a _política de repetição_). As duas políticas são encapsuladas na `Android.App.Job.BackoffPolicy` enumeração:
 
@@ -206,7 +201,7 @@ else
     snackBar.Show();
 }
 ```
- 
+
 ### <a name="cancelling-a-job"></a>Cancelando um trabalho
 
 É possível cancelar todos os trabalhos que foram agendados ou apenas um único trabalho usando o `JobsScheduler.CancelAll()` método ou o `JobScheduler.Cancel(jobId)` método:

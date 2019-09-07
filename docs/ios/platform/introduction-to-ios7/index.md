@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: 69f43df64ccf7de75b00e1a0b3f6e2ececc5bbb3
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: d3a3c28e30e38562035b4d0c7c05366865157dd5
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292023"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70752070"
 ---
 # <a name="introduction-to-ios-7"></a>Introdução ao iOS 7
 
@@ -30,7 +30,6 @@ o iOS 7 aumenta o suporte à animação no UIKit, permitindo que os aplicativos 
 
 - `springWithDampingRatio`– Um valor entre 0 e 1, em que o oscilação aumenta para um valor menor.
 - `initialSpringVelocity`– A velocidade inicial da mola como uma porcentagem da distância total da animação por segundo.
-
 
 O código a seguir produz um efeito de mola quando o centro da exibição de imagem é alterado:
 
@@ -104,13 +103,11 @@ Há vários comportamentos primitivos diferentes disponíveis para disparar inte
 - `UIPushBehavior`– Aplica-se força a um item dinâmico.
 - `UISnapBehavior`– Permite que um item dinâmico se ajuste a uma posição com um efeito de mola.
 
-
 Embora existam muitos primitivos, o processo geral para adicionar interações baseadas em física a uma exibição usando o UIKit Dynamics é consistente entre os comportamentos:
 
 1. Crie um Animator dinâmico.
 1. Criar comportamento (s).
 1. Adicione comportamentos ao Animator dinâmico.
-
 
 ### <a name="dynamics-example"></a>Exemplo do Dynamics
 
@@ -233,7 +230,6 @@ o iOS 7 muda quando e como o trabalho em segundo plano é executado. A conclusã
 - Busca em segundo plano – permite que os aplicativos atualizem o conteúdo em segundo plano em intervalos regulares.
 - Notificações remotas – permite que os aplicativos atualizem conteúdo ao receber uma notificação por push. As notificações podem ser silenciosas ou podem exibir uma faixa na tela de bloqueio.
 - Serviço de transferência em segundo plano – permite carregar e baixar dados, como arquivos grandes, sem um limite de tempo fixo.
-
 
 Para obter mais detalhes sobre os novos recursos de multitarefa, consulte as seções do iOS do [Guia de fundo](~/ios/app-fundamentals/backgrounding/index.md)do Xamarin.
 

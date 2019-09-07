@@ -1,18 +1,18 @@
 ---
 title: Resumo do capítulo 15. A interface interativa
-description: 'Criando aplicativos móveis com xamarin. Forms: Resumo do capítulo 15. A interface interativa'
+description: 'Criando aplicativos móveis com Xamarin. Forms: Resumo do capítulo 15. A interface interativa'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: F54E86F4-1CDA-474E-9B09-242060C2C13D
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: 974ef2a141ec7175c2306d4af63f534a5c77ecb2
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 1c30f87b9173d2ca4de0b2d91ad13145031e9b0a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61334940"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70760755"
 ---
 # <a name="summary-of-chapter-15-the-interactive-interface"></a>Resumo do capítulo 15. A interface interativa
 
@@ -48,8 +48,8 @@ As exibições de seis restantes são abordadas nos capítulos a seguir:
 - `Picker`: [**Capítulo 19. Exibições de coleção**](chapter19.md)
 - `ListView`: [**Capítulo 19. Exibições de coleção**](chapter19.md)
 - `TableView`: [**Capítulo 19. Exibições de coleção**](chapter19.md)
-- `Map`: [**Capítulo 28. Localização e mapas**](chapter28.md)
-- `OpenGLView`: Não abordado neste livro (e não há suporte para plataformas do Windows)
+- `Map`: [**CAPÍTULO 28. Localização e mapas**](chapter28.md)
+- `OpenGLView`: Não abordado neste livro (e não há suporte para plataformas Windows)
 
 ## <a name="slider-and-stepper"></a>Controle deslizante e escalonador
 
@@ -94,7 +94,7 @@ O [ `Stepper` ](xref:Xamarin.Forms.Stepper) define as propriedades e eventos com
 
 - [`Increment`](xref:Xamarin.Forms.Stepper.Increment) do tipo `double`inicializado como 1
 
-Visualmente, o `Stepper` consiste em dois botões rotulados **&ndash;** e **+**. Pressionar **&ndash;** diminui `Value` pela `Increment` em um mínimo de `Minimum`. Pressionar **+** aumenta `Value` pela `Increment` a um máximo de `Maximum`.
+Visualmente, o `Stepper` consiste em dois botões rotulados **&ndash;** e **+** . Pressionar **&ndash;** diminui `Value` pela `Increment` em um mínimo de `Minimum`. Pressionar **+** aumenta `Value` pela `Increment` a um máximo de `Maximum`.
 
 Isso é demonstrado pelo [ **StepperDemo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter15/StepperDemo) exemplo.
 
@@ -238,8 +238,6 @@ O [ **DaysBetweenDates** ](https://github.com/xamarin/xamarin-forms-book-samples
 O [ **SetTimer** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter15/SetTimer) programa demonstra como usar o `TimePicker` para especificar uma hora para um timer. O programa só funciona se mantê-lo em primeiro plano.
 
 **SetTimer** também demonstra como usar o [ `DisplayAlert` ](xref:Xamarin.Forms.Page.DisplayAlert(System.String,System.String,System.String)) método de `Page` para exibir uma caixa de alerta.
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

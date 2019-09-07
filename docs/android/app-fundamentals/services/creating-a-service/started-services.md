@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 9f3ac33df34f5046fad6d392a6b7edf8a9a7f23f
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 1b7bed0fc6dba1d9f80524ac3429b7fdcb751ab9
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68644136"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755065"
 ---
 # <a name="started-services-with-xamarinandroid"></a>Serviços iniciados com Xamarin. Android
 
@@ -42,8 +42,8 @@ O primeiro parâmetro é um `Intent` objeto que contém os metadados sobre o tra
 
 - `StartCommandFlag.Redelivery`Isso significa que o `Intent` é uma nova entrega de um anterior `Intent`. &ndash; Esse valor é fornecido quando o serviço retornou `StartCommandResult.RedeliverIntent` , mas foi interrompido antes de ser desligado corretamente.
 -`StartCommandFlag.Retry`Esse valor é recebido quando uma chamada `OnStartCommand` anterior falhou e o Android está tentando iniciar o serviço novamente com a mesma intenção que a tentativa anterior com falha. &dash;
- 
-Por fim, o terceiro parâmetro é um valor inteiro que é exclusivo para o aplicativo que identifica a solicitação. É possível que vários chamadores invoquem o mesmo objeto de serviço. Esse valor é usado para associar uma solicitação para interromper um serviço com uma determinada solicitação para iniciar um serviço. Ele será discutido mais detalhadamente na seção parando [o serviço](#Stopping_the_Service). 
+
+Por fim, o terceiro parâmetro é um valor inteiro que é exclusivo para o aplicativo que identifica a solicitação. É possível que vários chamadores invoquem o mesmo objeto de serviço. Esse valor é usado para associar uma solicitação para interromper um serviço com uma determinada solicitação para iniciar um serviço. Ele será discutido mais detalhadamente na seção [parando o serviço](#Stopping_the_Service). 
 
 O valor `StartCommandResult` é retornado pelo serviço como uma sugestão ao Android sobre o que fazer se o serviço for eliminado devido a restrições de recursos. Há três valores possíveis para `StartCommandResult`:
 

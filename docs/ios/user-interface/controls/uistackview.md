@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: conceptdev
 ms.author: crdun
 ms.date: 03/20/2017
-ms.openlocfilehash: a3adbf18e18e4f2a42ed3c89162455040a9fe699
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: bde76891b4b01800384ee0579e3fbe14987c5420
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70282694"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768381"
 ---
 # <a name="stack-views-in-xamarinios"></a>Exibições de pilha no Xamarin. iOS
 
@@ -270,8 +270,6 @@ Muitas das propriedades da exibição da pilha podem ser especificadas usando cl
 
 Este artigo abordou o novo `UIStackView` controle (para o Ios 9) para gerenciar um conjunto de subexibições em uma pilha organizada horizontal ou verticalmente em um aplicativo Xamarin. Ios.
 Ele começou com um exemplo simples de uso de exibições de pilha para criar uma interface do usuário e concluiu com uma visão mais detalhada das exibições de pilha e suas propriedades e recursos.
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/06/2017
-ms.openlocfilehash: f1fc484931ba7a574ac660b4856f20b1cb1e08a3
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 57e6ed2c01e382d7daee2933ac49c8282199a3fc
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70119591"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70758858"
 ---
 # <a name="responding-to-authentication-callbacks"></a>Responder a chamadas de autenticação
 
@@ -24,7 +24,6 @@ O scanner de impressão digital é executado em segundo plano em seu próprio th
 
 Se um `CryptoObject` foi usado ao chamar `Authenticate`, é recomendável chamar `Cipher.DoFinal` em `OnAuthenticationSuccessful`.
 `DoFinal`gerará uma exceção se a codificação tiver sido violada ou inicializada incorretamente, indicando que o resultado do scanner de impressão digital pode ter sido adulterado fora do aplicativo.
-
 
 > [!NOTE]
 > É recomendável manter a classe de retorno de chamada relativamente leve e gratuita da lógica específica do aplicativo. Os retornos de chamada devem agir como um "Cop. de tráfego" entre o aplicativo Android e os resultados do scanner de impressão digital.
@@ -103,55 +102,29 @@ Observe que `OnAuthenticationError` será invocado quando a verificação de imp
 
 Uma lista e descrição dos códigos de erro e códigos de ajuda podem ser encontrados na [documentação SDK do Android](https://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.html#FINGERPRINT_ACQUIRED_GOOD) para a classe fingerprintmanager. O Xamarin. Android representa esses valores com `Android.Hardware.Fingerprints.FingerprintState` a enumeração:
 
-
 - **`AcquiredGood`** &ndash; (valor 0) a imagem adquirida foi boa.
-
 
 - **`AcquiredImagerDirty`** &ndash; (valor 3) a imagem de impressão digital estava muito ruidosa devido a uma sujeira suspeita ou detectada no sensor. Por exemplo, é razoável retornar isso após a detecção múltipla `AcquiredInsufficient` ou real de sujeira no sensor (pixels presos, faixas, etc.). Espera-se que o usuário execute uma ação para limpar o sensor quando ele é retornado.
 
-
 - **`AcquiredInsufficient`** (valor 2) a imagem de impressão digital estava muito ruidosa para ser processada devido a uma condição detectada (ou seja, uma capa seca) ou um sensor possivelmente sujo (consulte `AcquiredImagerDirty`. &ndash;
-
-
 
 - **`AcquiredPartial`** &ndash; (valor 1) apenas uma imagem de impressão digital parcial foi detectada. Durante o registro, o usuário deve ser informado sobre o que precisa ocorrer para resolver esse problema, por exemplo &ldquo;, pressione o sensor com firmeza.&rdquo;
 
-
-
 - **`AcquiredTooFast`** &ndash; (valor 5) a imagem de impressão digital estava incompleta devido ao movimento rápido. Embora seja principalmente apropriado para sensores de matriz linear, isso também poderia acontecer se o dedo fosse movido durante a aquisição. O usuário deve ser solicitado a mover o dedo mais devagar (linear) ou deixar o dedo no sensor mais longo.
-
-
-
 
 - **`AcquiredToSlow`** &ndash; (valor 4) a imagem de impressão digital ficou ilegível devido à falta de movimento. Isso é mais apropriado para sensores de matriz linear que exigem um movimento de dedo.
 
-
-
 - **`ErrorCanceled`** &ndash; (valor 5) a operação foi cancelada porque o sensor de impressão digital não está disponível. Por exemplo, isso pode acontecer quando o usuário é alternado, o dispositivo está bloqueado ou outra operação pendente impede ou desabilita.
-
-
 
 - **`ErrorHwUnavailable`** &ndash; (valor 1) o hardware está indisponível. Tente novamente mais tarde.
 
-
-
-
 - **`ErrorLockout`** &ndash; (valor 7) a operação foi cancelada porque a API está bloqueada devido a muitas tentativas.
-
-
-
 
 - **`ErrorNoSpace`** &ndash; (valor 4) estado de erro retornado para operações como registro; a operação não pode ser concluída porque não há armazenamento suficiente restante para concluir a operação.
 
-
-
 - **`ErrorTimeout`** &ndash; (valor 3) estado de erro retornado quando a solicitação atual está sendo executada por muito tempo. Isso destina-se a impedir que programas Aguardem o sensor de impressão digital indefinidamente. O tempo limite é específico da plataforma e do sensor, mas geralmente é de cerca de 30 segundos.
 
-
-
 - **`ErrorUnableToProcess`** &ndash; (valor 2) estado de erro retornado quando o sensor não conseguiu processar a imagem atual.
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

@@ -7,22 +7,20 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/05/2018
-ms.openlocfilehash: 9bff233b5507e3456ba3620315bd967d0ac7018d
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
-ms.translationtype: HT
+ms.openlocfilehash: 6d391bd804e1c59d06d78dd7cffe3f11f9276468
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69525784"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70754633"
 ---
 # <a name="application-package-size"></a>Tamanho dos pacotes de aplicativos
 
 _Este artigo examina as partes que constituem um pacote do aplicativo do Xamarin.Android e as estratégias associadas que podem ser usadas para a implantação eficiente do pacote durante a depuração e as etapas de lançamento de desenvolvimento._
 
-
 ## <a name="overview"></a>Visão geral
 
 Xamarin.Android usa uma variedade de mecanismos para minimizar o tamanho do pacote, mas mantendo uma depuração e um processo de implantação eficientes. Neste artigo, examinamos a versão do Xamarin.Android e o fluxo de trabalho de implantação de depuração, bem como o modo como a plataforma do Xamarin.Android assegura o build e lançamento de pacotes de aplicativos pequenos.
-
 
 ## <a name="release-packages"></a>Pacotes de versão
 
@@ -41,7 +39,6 @@ Como podemos ver, isso remove uma quantidade significativa de BCL que não estav
 ![Tamanho de pacote de ApiDemo depois da vinculação](app-package-size-images/api-demo-package-size-after-linker.png)
 
 Conforme ilustrado aqui, o tamanho do pacote do aplicativo geralmente será aproximadamente 2,9 MB maior do que seu aplicativo e as respectivas dependências.
-
 
 ## <a name="debug-packages"></a>Pacotes de depuração
 
@@ -75,11 +72,9 @@ Para habilitar a *Implantação de Assembly Rápida*, faça o seguinte:
 
 4. Clique no botão **OK** para salvar as alterações e fechar a caixa de diálogo Opções de Projeto.
 
-
 Na próxima vez que o aplicativo for compilado para depuração, os assemblies serão instalados diretamente no dispositivo (se já não tiverem sido) e um pacote do aplicativo menor (que não inclua os assemblies) será instalado no dispositivo. Isso reduzirá o tempo necessário para deixar as alterações ao aplicativo funcionando e prontas para serem testadas.
 
 Suportando a primeira implantação demorada do tempo de execução compartilhado e da plataforma compartilhada, toda vez que fazemos uma alteração ao aplicativo, é possível implantar a nova versão com rapidez e facilidade, de modo que temos um ciclo rápido de alteração/implantação/execução.
-
 
 ## <a name="summary"></a>Resumo
 

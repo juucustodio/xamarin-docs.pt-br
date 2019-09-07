@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: c23515c7fc7a3fef836cba76ec30279c94150da2
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: f48f84c704fa8ce20ce24dfbfaca2df23a8494eb
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70281530"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70752712"
 ---
 # <a name="purchasing-consumable-products-in-xamarinios"></a>Comprando produtos consumíveis no Xamarin. iOS
 
@@ -41,24 +41,14 @@ Há outro tipo de fluxo de trabalho – *produtos entregues pelo servidor* – q
 ## <a name="consumable-products-example"></a>Exemplo de produtos consumíveis
 
 O [código InAppPurchaseSample](https://docs.microsoft.com/samples/xamarin/ios-samples/storekit) contém um projeto chamado *itens consumíveis* que implementa uma "moeda no jogo" básica (chamada de "créditos do macaco"). O exemplo a seguir mostra como implementar dois produtos de compra no aplicativo para permitir que o usuário compre quantos "créditos de macaco" desejar – em um aplicativo real também seria uma forma de gastar!   
-   
-   
-   
- O aplicativo é mostrado nessas capturas de tela – cada compra adiciona mais "créditos de macaco" ao saldo do usuário:   
-   
-   
-   
- [![Cada compra adiciona mais créditos de macaco ao saldo dos usuários](purchasing-consumable-products-images/image27.png)](purchasing-consumable-products-images/image27.png#lightbox)   
-   
-   
-   
- As interações entre as classes personalizadas, StoreKit e a App Store têm esta aparência:   
-   
-   
-   
- [![As interações entre classes personalizadas, StoreKit e a loja de aplicativos](purchasing-consumable-products-images/image28.png)](purchasing-consumable-products-images/image28.png#lightbox)
 
-&nbsp;
+O aplicativo é mostrado nessas capturas de tela – cada compra adiciona mais "créditos de macaco" ao saldo do usuário:   
+
+ [![Cada compra adiciona mais créditos de macaco ao saldo dos usuários](purchasing-consumable-products-images/image27.png)](purchasing-consumable-products-images/image27.png#lightbox)   
+
+As interações entre as classes personalizadas, StoreKit e a App Store têm esta aparência:   
+
+ [![As interações entre classes personalizadas, StoreKit e a loja de aplicativos](purchasing-consumable-products-images/image28.png)](purchasing-consumable-products-images/image28.png#lightbox)
 
 ### <a name="viewcontroller-methods"></a>Métodos ViewController
 
@@ -69,10 +59,8 @@ NSObject succeededObserver, failedObserver;
 ```
 
 O Construtor também criará a `SKProductsRequestDelegate` subclasse ( `InAppPurchaseManager`) que, por sua vez, cria e `SKPaymentTransactionObserver` registra `CustomPaymentObserver`o ().   
-   
-   
-   
- A primeira parte do processamento de uma transação de compra no aplicativo é manipular o pressionamento de botão quando o usuário deseja comprar algo, conforme mostrado no código a seguir do aplicativo de exemplo:
+
+A primeira parte do processamento de uma transação de compra no aplicativo é manipular o pressionamento de botão quando o usuário deseja comprar algo, conforme mostrado no código a seguir do aplicativo de exemplo:
 
 ```csharp
 buy5Button.TouchUpInside += (sender, e) => {
@@ -83,9 +71,7 @@ buy10Button.TouchUpInside += (sender, e) => {
 };
 ```
 
-   
-   
- A segunda parte da interface do usuário está tratando a notificação de que a transação foi bem-sucedida, nesse caso, atualizando o saldo exibido:
+A segunda parte da interface do usuário está tratando a notificação de que a transação foi bem-sucedida, nesse caso, atualizando o saldo exibido:
 
 ```csharp
 priceObserver = NSNotificationCenter.DefaultCenter.AddObserver (InAppPurchaseManager.InAppPurchaseManagerTransactionSucceededNotification,
@@ -118,10 +104,8 @@ public void PurchaseProduct(string appStoreProductId)
 ```
 
 A adição do pagamento à fila é uma operação assíncrona. O aplicativo recupera o controle enquanto o StoreKit processa a transação e a envia para os servidores da Apple. Nesse ponto, o iOS verificará se o usuário está conectado à loja de aplicativos e solicitará uma ID da Apple e uma senha, se necessário.   
-   
-   
-   
- Supondo que o usuário se autentique com êxito com a loja de aplicativos e concorde com a `SKPaymentTransactionObserver` transação, o receberá a resposta do StoreKit e chamará o método a seguir para atender à transação e finalizá-la.
+
+Supondo que o usuário se autentique com êxito com a loja de aplicativos e concorde com a `SKPaymentTransactionObserver` transação, o receberá a resposta do StoreKit e chamará o método a seguir para atender à transação e finalizá-la.
 
 ```csharp
 public void CompleteTransaction (SKPaymentTransaction transaction)
@@ -250,10 +234,8 @@ Como uma conexão de rede pode ser transitória em dispositivos móveis, os apli
 ### <a name="purchase-transactions"></a>Transações de compra
 
 A fila de pagamento StoreKit armazenará e encaminhará solicitações de compra, se possível, para que o efeito de uma interrupção de rede varie dependendo de quando a rede falhou durante o processo de compra.   
-   
-   
-   
- Se ocorrer um erro durante uma `SKPaymentTransactionObserver` transação, a subclasse ( `CustomPaymentObserver`) terá o `UpdatedTransactions` método chamado e a `SKPaymentTransaction` classe estará no estado de falha.
+
+Se ocorrer um erro durante uma `SKPaymentTransactionObserver` transação, a subclasse ( `CustomPaymentObserver`) terá o `UpdatedTransactions` método chamado e a `SKPaymentTransaction` classe estará no estado de falha.
 
 ```csharp
 public override void UpdatedTransactions (SKPaymentQueue queue, SKPaymentTransaction[] transactions)
@@ -307,14 +289,10 @@ Applications may detect and respond to specific error codes, or handle them in t
 ## <a name="handling-restrictions"></a>Restrições de tratamento
 
 As **configurações > recurso de restrições de > geral** do IOS permitem que os usuários bloqueiem determinados recursos de seu dispositivo.   
-   
-   
-   
- Você pode consultar se o usuário tem permissão para fazer compras no aplicativo por meio do `SKPaymentQueue.CanMakePayments` método. Se isso retornar false, o usuário não poderá acessar a compra no aplicativo. O StoreKit exibirá automaticamente uma mensagem de erro para o usuário se uma compra for tentada. Ao marcar esse valor, seu aplicativo pode ocultar os botões de compra ou executar alguma outra ação para ajudar o usuário.   
-   
-   
-   
- No arquivo, o `CanMakePayments` método encapsula a função StoreKit como esta: `InAppPurchaseManager.cs`
+
+Você pode consultar se o usuário tem permissão para fazer compras no aplicativo por meio do `SKPaymentQueue.CanMakePayments` método. Se isso retornar false, o usuário não poderá acessar a compra no aplicativo. O StoreKit exibirá automaticamente uma mensagem de erro para o usuário se uma compra for tentada. Ao marcar esse valor, seu aplicativo pode ocultar os botões de compra ou executar alguma outra ação para ajudar o usuário.   
+
+No arquivo, o `CanMakePayments` método encapsula a função StoreKit como esta: `InAppPurchaseManager.cs`
 
 ```csharp
 public bool CanMakePayments()
@@ -324,14 +302,10 @@ public bool CanMakePayments()
 ```
 
 Para testar esse método, use o recurso de **restrições** do IOS para desabilitar **compras no aplicativo**:   
-   
-   
-   
+
  [![Usar o recurso de restrições do iOS para desabilitar compras no aplicativo](purchasing-consumable-products-images/image31.png)](purchasing-consumable-products-images/image31.png#lightbox)   
-   
-   
-   
- Esse código de `ConsumableViewController` exemplo reage a `CanMakePayments` retornar false exibindo o texto **desabilitado AppStore** nos botões desabilitados.
+
+Esse código de `ConsumableViewController` exemplo reage a `CanMakePayments` retornar false exibindo o texto **desabilitado AppStore** nos botões desabilitados.
 
 ```csharp
 // only if we can make payments, request the prices
@@ -348,21 +322,11 @@ if (iap.CanMakePayments()) {
 ```
 
 O aplicativo tem esta aparência quando o recurso de **compras no aplicativo** é restrito – os botões de compra são desabilitados.   
-   
-   
-   
+
  [![O aplicativo é semelhante a este quando o recurso de compras no aplicativo está restrito os botões de compra estão desabilitados](purchasing-consumable-products-images/image32.png)](purchasing-consumable-products-images/image32.png#lightbox)   
-   
-   
-   
 
 As informações do produto ainda podem ser `CanMakePayments` solicitadas quando for false, para que o aplicativo ainda possa recuperar e exibir os preços. Isso significa que, se removermos a `CanMakePayments` verificação do código, os botões de compra ainda estarão ativos; no entanto, quando uma compra for tentada, o usuário verá uma mensagem informando que as **compras no aplicativo não são permitidas** (geradas pelo StoreKit quando a fila de pagamento é acessado):   
-   
-   
-   
- [![Compras no aplicativo não são permitidas](purchasing-consumable-products-images/image33.png)](purchasing-consumable-products-images/image33.png#lightbox)   
-   
-   
-   
- Os aplicativos do mundo real podem adotar uma abordagem diferente para lidar com a restrição, como ocultar os botões completamente e, talvez, oferecer uma mensagem mais detalhada do que o alerta que o StoreKit mostra automaticamente.
 
+ [![Compras no aplicativo não são permitidas](purchasing-consumable-products-images/image33.png)](purchasing-consumable-products-images/image33.png#lightbox)   
+
+Os aplicativos do mundo real podem adotar uma abordagem diferente para lidar com a restrição, como ocultar os botões completamente e, talvez, oferecer uma mensagem mais detalhada do que o alerta que o StoreKit mostra automaticamente.

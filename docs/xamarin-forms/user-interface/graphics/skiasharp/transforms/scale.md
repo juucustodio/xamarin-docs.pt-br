@@ -7,12 +7,12 @@ ms.assetid: 54A43F3D-9DA8-44A7-9AE4-7E3025129A0B
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/23/2017
-ms.openlocfilehash: 2e9259bed6ad0ae5a926cb75ea74c1f379897220
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 1adade4e66a6df504ba7c8ac3ff1f668c014fe93
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68649281"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770458"
 ---
 # <a name="the-scale-transform"></a>A transformação de escala
 
@@ -342,7 +342,6 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 O código também exibe os 10 estrela mais vezes, cada vez que o dimensionamento de diminuição fatorar 10% e progressivamente alterando a cor de vermelho para azul:
 
 [![](scale-images/isotropicscaling-small.png "Captura de tela da página dimensionamento Isotropic tripla")](scale-images/isotropicscaling-large.png#lightbox "tripla captura de tela da página dimensionamento Isotropic")
-
 
 ## <a name="related-links"></a>Links relacionados
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: 2080961e2741ea0d0f0316918c55f3c2a194a00a
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 43dce7fe6d2a4a976879b1f583711d767dcacc7c
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70289973"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70756206"
 ---
 # <a name="using-testflight-to-distribute-xamarinios-apps"></a>Usando TestFlight para distribuir aplicativos Xamarin.iOS
 
@@ -22,9 +22,7 @@ Teste beta é parte integrante do ciclo de desenvolvimento de software e há mui
 
 O TestFlight é o serviço de teste beta da Apple para aplicativos iOS e é acessível apenas por meio do [iTunes Connect](https://itunesconnect.apple.com/). Está disponível para aplicativos iOS 8.0 e posteriores. TestFlight permite testes beta com usuários internos e externos e, devido a uma análise de aplicativo Beta para estes últimos, garante um processo muito mais fácil na análise final ao publicar para a App Store.
 
-
 Anteriormente, o binário era gerado no Visual Studio para Mac e carregado para o site TestFlightApp para distribuição aos testadores. Com o novo processo, há vários aprimoramentos que permitem que você tenha aplicativos de alta qualidade e bem testados aplicativos na App Store. Por exemplo:
-
 
 - A análise de Aplicativo Beta necessária para testes externos garante uma chance maior de sucesso para a Análise da App Store final, uma vez que ambos exigem aderência às diretrizes da Apple.
 - Antes do upload, o aplicativo precisa ser registrado com o iTunes Connect. Isso garante que não haja incompatibilidade entre perfis, nomes e certificados de provisionamento.
@@ -44,7 +42,6 @@ Para testar builds com o TestFlight, é necessário criar um *perfil de distribu
 Você pode confirmar que seu perfil de distribuição contém o direito beta ao [validar seu build no Xcode](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md), conforme ilustrado abaixo:
 
 [![](testflight-images/validate-build.png "Enviando o aplicativo para a Apple")](testflight-images/validate-build.png#lightbox)
-
 
 ## <a name="testflight-workflow"></a>Fluxo de trabalho TestFlight
 
@@ -68,14 +65,11 @@ O fluxo de trabalho a seguir descreve as etapas necessárias para começar a usa
 
     [![](testflight-images/my-apps.png "Selecionar Meus aplicativos")](testflight-images/my-apps.png#lightbox)
 
-
 3. Na tela **Meus aplicativos**, clique no botão **+** no canto superior esquerdo da tela para adicionar um novo aplicativo. Se você tiver contas de desenvolvedor Mac e iOS, escolha o tipo do novo aplicativo aqui.
 
 Você verá a janela de envio **Novo aplicativo do iOS**, que deverá conter exatamente as mesmas informações que Info.plist do seu aplicativo
 
 Para obter mais informações sobre como criar um novo registro do iTunes Connect, consulte o guia [Creating an iTunes Connect Record](~/ios/deploy-test/app-distribution/app-store-distribution/itunesconnect.md) (Como criar um registro do iTunes Connect).
-
-
 
 ### <a name="completing-the-new-ios-app-submission-form"></a>Preenchendo o novo formulário de envio de aplicativo iOS
 
@@ -91,7 +85,6 @@ O formulário deve refletir exatamente as informações no arquivo Info.plist do
 - **Versão** – número de versão do aplicativo que está sendo carregado. Ele é escolhido pelo desenvolvedor.
 - **SKU** – SKU é uma ID exclusiva para seu aplicativo, que não será vista pelos usuários. Pode ser considerada de maneira semelhante a uma ID do produto. No exemplo acima, escolhi a data junto com um número de versão para essa data.
 
-
 ## <a name="upload-your-app"></a>Carregar seu aplicativo
 
 Quando o registro do iTunes Connect tiver sido criado, você poderá carregar novos builds. Lembre-se de que builds devem ter o novo direito beta.
@@ -105,7 +98,6 @@ Primeiro, compile o [distribuível final](~/ios/deploy-test/app-distribution/app
  Para compilar um binário no Visual Studio para Mac, você precisará usar a função _Arquivo Morto_. Clique com o botão direito dou mouse no projeto e selecione **Arquivo Morto para Publicação**, conforme ilustrado abaixo:
 
  [![](testflight-images/new-archive.png "Selecionar Arquivo Morto para Publicação")](testflight-images/new-archive.png#lightbox)
-
 
  Consulte o guia [Criando o distribuível](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md) para obter mais informações.
 
@@ -144,7 +136,6 @@ Após abri-lo, selecione a opção **Deliver Your App**  (Entregar seu Aplicativ
  Consulte a seção [Enviando seu aplicativo para a Apple](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md) para saber mais sobre essas etapas.
 
 -----
-
 
 O guia [Publishing to the App Store](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md) (Como publicar na App Store) descreve todas as etapas acima em mais detalhes; consulte-o para uma análise mais detalhada do processo de envio à App Store.
 
@@ -217,7 +208,6 @@ Você pode convidar esses testadores selecionando o nome deles e clicando no bot
 Você pode ver o status do convite na coluna status da página Testadores Internos:
 
 [![](testflight-images/status-added.png "O status do convite")](testflight-images/status-added.png#lightbox)
-
 
 ### <a name="external-testers"></a>Testadores Externos
 

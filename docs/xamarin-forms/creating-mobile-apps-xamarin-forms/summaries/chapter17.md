@@ -1,18 +1,18 @@
 ---
 title: Resumo do capítulo 17. Domínio da grade
-description: 'Criando aplicativos móveis com xamarin. Forms: Resumo do capítulo 17. Domínio da grade'
+description: 'Criando aplicativos móveis com Xamarin. Forms: Resumo do capítulo 17. Domínio da grade'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 71EDEF9C-4220-4D2E-A235-43F1EC8746C1
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: 3aaf8e9d1eb8e0d98ad32a6b5a1286f14c7bb906
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 37b5e2bbafa816de27390771ae6daa33c74f7651
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61333698"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70760635"
 ---
 # <a name="summary-of-chapter-17-mastering-the-grid"></a>Resumo do capítulo 17. Domínio da grade
 
@@ -101,8 +101,6 @@ O [ **KeypadGrid** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/
 O `Grid` pode ajudar a estruturar um programa para responder a alterações de orientação. O [ **GridRgbSliders** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter17/GridRgbSliders) exemplo demonstra uma técnica que move um elemento entre uma segunda linha de um telefone e orientada a retrato e a segunda coluna de um telefone com orientação paisagem.
 
 Inicializa o programa `Slider` elementos a um intervalo de 0 a 255 e ligações de dados usa para exibir o valor dos controles deslizantes em hexadecimal. Porque o `Slider` valores flutuantes, ponto e o .NET a cadeia de caracteres de formatação para hexadecimal funciona somente com números inteiros, uma [ `DoubleToIntConvert` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/DoubleToIntConverter.cs) classe o [ **Xamarin.FormsBook.Toolkit** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) biblioteca de Ajuda.
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

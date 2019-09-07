@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: 6eb942c0276bda28cb4be14fb31cdf820b9ccd5e
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: e81504b3411674c8f8f92bf9018d617dd1c4bc4c
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291355"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768907"
 ---
 # <a name="customizing-a-tables-appearance-in-xamarinios"></a>Personalizando a aparência de uma tabela no Xamarin. iOS
 
@@ -26,7 +26,6 @@ Há quatro estilos internos:
 - **Subtítulo** – dá `UIImageView` suporte a um subtítulo e.
 - **Value1** – subtítulo alinhado à direita `UIImageView`, dá suporte a um.
 - **Value2** – o título é alinhado à direita e o subtítulo é alinhado à esquerda (mas nenhuma imagem).
-
 
 Essas capturas de tela mostram como cada estilo é exibido:
 
@@ -57,7 +56,6 @@ As células podem ter os seguintes acessórios adicionados à direita da exibiç
 - **DetailButton** – responde ao toque independentemente do restante da célula, permitindo que ele execute uma função diferente para tocar a própria célula (como abrir um pop-up ou uma nova janela que não faz parte de uma `UINavigationController` pilha).
 - **DisclosureIndicator** – normalmente usado para indicar que tocar na célula abrirá outra exibição.
 - **DetailDisclosureButton** – uma combinação de `DetailButton` e. `DisclosureIndicator`
-
 
 Isso é o que eles parecem:
 
@@ -128,7 +126,6 @@ A classe de célula Personalizada consiste em apenas três métodos:
 - **UpdateCell** – um método para `UITableView.GetCell` usar para definir as propriedades da célula.
 - **LayoutSubviews** – defina o local dos controles da interface do usuário. No exemplo, cada célula tem o mesmo layout, mas uma célula mais complexa (particularmente aquelas com tamanhos variados) pode precisar de diferentes posições de layout dependendo do conteúdo que está sendo exibido.
 
-
 O código de exemplo completo no **CellCustomTable > CustomVegeCell.cs** segue:
 
 ```csharp
@@ -184,8 +181,6 @@ public override UITableViewCell GetCell (UITableView tableView, NSIndexPath inde
     return cell;
 }
 ```
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

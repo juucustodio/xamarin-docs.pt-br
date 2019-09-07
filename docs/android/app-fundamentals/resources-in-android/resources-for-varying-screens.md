@@ -6,17 +6,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/28/2018
-ms.openlocfilehash: 49e0de909e2255d850211e51596efdaa43f293ae
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 0a82c84b334cbfcf3ab978b5ebd0e256bcd64815
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68509365"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755053"
 ---
 # <a name="creating-resources-for-varying-screens"></a>Criando recursos para diferentes telas
 
 O Android é executado em vários dispositivos diferentes, cada um com uma ampla variedade de resoluções, tamanhos de tela e densidades de tela. O Android executará o dimensionamento e o redimensionamento para fazer seu aplicativo funcionar nesses dispositivos, mas isso pode resultar em uma experiência de usuário abaixo do ideal. Por exemplo, as imagens podem aparecer borradas ou podem estar posicionadas conforme o esperado em uma exibição.
-
 
 ## <a name="concepts"></a>Conceitos
 
@@ -38,7 +37,6 @@ Observe que os três primeiros desses conceitos são inter-relacionados, &ndash;
 
 Para ajudar a lidar com essa complexidade, a estrutura do Android prefere usar os *espd (pixels independentes de densidade)* para layouts de tela. Usando pixels independentes de densidade, os elementos da interface do usuário aparecerão para que ele tenha o mesmo tamanho físico em telas com diferentes densidades.
 
-
 ## <a name="supporting-various-screen-sizes-and-densities"></a>Dando suporte a vários tamanhos de tela e densidades
 
 O Android lida com a maior parte do trabalho para renderizar os layouts corretamente para cada configuração de tela. No entanto, há algumas ações que podem ser tomadas para ajudar o sistema a sair.
@@ -46,7 +44,6 @@ O Android lida com a maior parte do trabalho para renderizar os layouts corretam
 O uso de pixels independentes de densidade em vez de pixels reais em layouts é suficiente na maioria dos casos para garantir a independência de densidade.
 O Android dimensionará o drawables em tempo de execução para o tamanho apropriado.
 No entanto, é possível que o dimensionamento faça com que os bitmaps apareçam borrados. Para contornar esse problema, forneça recursos alternativos para as diferentes densidades. Ao criar dispositivos para várias resoluções e densidades de tela, será mais fácil começar com as imagens mais altas de resolução ou de alta capacidade e, em seguida, reduzir verticalmente.
-
 
 ### <a name="declare-the-supported-screen-size"></a>Declarar o tamanho de tela com suporte
 
@@ -87,7 +84,6 @@ Edite **AndroidManifest. xml** para incluir [suporte-telas](https://developer.an
 
 ### <a name="provide-alternate-layouts-for-different-screen-sizes"></a>Fornecer layouts alternativos para diferentes tamanhos de tela
 
-
 Layouts alternativos possibilitam personalizar um modo de exibição para um tamanho de tela específico, alterando o posicionamento ou o tamanho dos elementos da interface do usuário do componente.
 
 Começando com o nível de API 13 (Android 3,2), os tamanhos de tela são preteridos em favor do uso do qualificador de DP SW*N*. Esse novo qualificador declara a quantidade de espaço que um determinado layout precisa. É recomendável que os aplicativos que devem ser executados no Android 3,2 ou superior devam usar esses qualificadores mais recentes.
@@ -104,7 +100,6 @@ Por exemplo, se um layout exigir um mínimo de 700 DP de largura de tela, o layo
 
 -----
 
-
 Como diretriz, aqui estão alguns números para vários dispositivos:
 
 - **Telefone típico** &ndash; 320 DP: um telefone típico
@@ -115,7 +110,7 @@ Como diretriz, aqui estão alguns números para vários dispositivos:
 
 - **Um Tablet de 10 "** &ndash; 720 DP: como o Motorola Xoom
 
-Para aplicativos que têm como destino os níveis de API de até 12 (Android 3,1), os layouts devem ir em diretórios que usam os qualificadores **Small**//**xlarges** pequenos**normais**/como generalizações de os vários tamanhos de tela que estão disponíveis na maioria dos dispositivos. Por exemplo, na imagem abaixo, há recursos alternativos para os quatro tamanhos de tela diferentes:
+Para aplicativos que têm como destino os níveis de API de até 12 (Android 3,1), os layouts devem ir em diretórios que usam os qualificadores **Small**/**xlarges** pequenos**normais**//como generalizações de os vários tamanhos de tela que estão disponíveis na maioria dos dispositivos. Por exemplo, na imagem abaixo, há recursos alternativos para os quatro tamanhos de tela diferentes:
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
@@ -150,8 +145,6 @@ Para aplicativos que irão abranger os níveis de API antigos e novos, pode ser 
 
 -----
 
-
-
 ### <a name="provide-different-bitmaps-for-different-screen-densities"></a>Fornecer bitmaps diferentes para diferentes densidades de tela
 
 Embora o Android dimensione os bitmaps conforme necessário para um dispositivo, os próprios bitmaps podem não ser expandidos ou reduzidos de forma elegante: eles podem se tornar difusas ou borrados. Fornecer bitmaps apropriados para a densidade da tela atenuará esse problema.
@@ -164,7 +157,6 @@ Compare isso com um layout projetado com recursos específicos de densidade:
 
 ![Capturas de tela com recursos específicos de densidade](resources-for-varying-screens-images/07-density-specific-resources.png)
 
-
 ### <a name="create-varying-density-resources-with-android-asset-studio"></a>Criar recursos de densidade variável com o Android Asset Studio
 
 A criação desses bitmaps de várias densidades pode ser um pouco entediante. Dessa forma, o Google criou um utilitário online que pode reduzir alguns dos tédio envolvidos na criação desses bitmaps chamados [**Android Asset Studio**](https://romannurik.github.io/AndroidAssetStudio/).
@@ -172,7 +164,6 @@ A criação desses bitmaps de várias densidades pode ser um pouco entediante. D
 [![Android Asset Studio](resources-for-varying-screens-images/08-android-asset-studio-sml.png)](resources-for-varying-screens-images/08-android-asset-studio.png#lightbox)
 
 Este site ajudará na criação de bitmaps direcionados para as quatro densidades de tela comuns, fornecendo uma imagem. O Android Asset Studio criará os bitmaps com algumas personalizações e, em seguida, permitirá que eles sejam baixados como um arquivo zip.
-
 
 ## <a name="tips-for-multiple-screens"></a>Dicas para várias telas
 
@@ -182,13 +173,12 @@ O Android é executado em um número desconcertante de dispositivos, e a combina
 
 - **Use o DPS em vez de pixels** . os pixels se tornarão problemáticos conforme as alterações na densidade da tela. Não codifique valores de pixel. Evite pixels em favor de DP (pixels independentes de densidade).
 
-- **Evitar** [AbsoluteLayout](xref:Android.Widget.AbsoluteLayout) Sempre que possível&ndash; , ele é preterido no nível de API 3 (Android 1,5) e resultará em layouts frágeis.  
+- **Evitar** [AbsoluteLayout](xref:Android.Widget.AbsoluteLayout) Sempre que possível&ndash; , ele é preterido no nível de API 3 (Android 1,5) e resultará em layouts frágeis. 
    Ele não deve ser usado. Em vez disso, tente usar widgets de layout mais flexíveis, como [**LinearLayout**](xref:Android.Widget.LinearLayout), [**RelativeLayout**](xref:Android.Widget.RelativeLayout)ou a nova [**GridLayout**](xref:Android.Widget.GridLayout).
 
-- **Escolha uma orientação de layout como padrão**    Por exemplo, em vez de fornecer os recursos alternativos layout-Land e layout-Port, coloque os recursos para paisagem no layout e os recursos para retrato em layout-Port. &ndash;
+- **Escolha uma orientação de layout como padrão**Por exemplo, em vez de fornecer os recursos alternativos layout-Land e layout-Port, coloque os recursos para paisagem no layout e os recursos para retrato em layout-Port. &ndash;
 
 - **Usar LayoutParams para altura e largura** – ao definir elementos da interface do usuário em um arquivo de layout XML, um aplicativo Android usando os valores **wrap_content** e **fill_parent** terá mais sucesso para garantir uma aparência adequada em diferentes dispositivos do que usando unidades independentes de pixel ou densidade. Esses valores de dimensão fazem com que o Android dimensione os recursos de bitmap conforme apropriado. Por esse mesmo motivo, as unidades independentes de densidade são mais bem reservadas para a especificação de margens e preenchimento de elementos de interface do usuário.
-
 
 ## <a name="testing-multiple-screens"></a>Testando várias telas
 

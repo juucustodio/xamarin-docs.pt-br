@@ -7,19 +7,18 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: 34f192938ac583e39232312377142015aa6d3811
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: cd4bc8dbc02a44807ec197d39349971d8f9cd6f9
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70287559"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768578"
 ---
 # <a name="additional-watchos-3-frameworks-changes"></a>Alterações adicionais de estruturas watchOS 3
 
 _Este artigo aborda as alterações adicionais e secundárias ou aprimoramentos nas estruturas existentes do watchOS 3._
 
 Além das principais alterações no iOS, a Apple fez modificações e melhorias em várias estruturas existentes no watchOS 3.
-
 
 ## <a name="core-data"></a>Dados principais
 
@@ -33,14 +32,12 @@ Os aprimoramentos a seguir foram feitos na estrutura de dados principal para o s
 
 Para obter mais informações, consulte a [referência da estrutura de dados principal](https://developer.apple.com/reference/coredata)da Apple.
 
-
 ## <a name="core-motion"></a>Movimento principal
 
 Os aprimoramentos a seguir foram feitos na estrutura de movimento principal para o sistema operacional de inspeção 3:
 
 - O novo evento de movimento do dispositivo usa o acelerômetro e o giroscópio para fornecer atualizações de movimento e de orientação. O aplicativo pode se registrar para essa atualização (em taxas de até 100Hz).
 - O novo evento pedometer permite notificações rápidas e em tempo real quando o usuário pausa e retoma a execução. Use o [CMPedometer](https://developer.apple.com/reference/coremotion/cmpedometer) para se registrar em eventos de pedometer de primeiro plano ou em segundo plano.
-
 
 ## <a name="foundation"></a>Fundamental
 
@@ -52,7 +49,6 @@ Os aprimoramentos a seguir foram feitos na estrutura de base para o sistema oper
 - Use a nova classe [NSMeasurementFormatter](https://developer.apple.com/reference/foundation/nsmeasurementformatter) para formatar as medidas localizadas para exibição para o usuário final.
 - Use as novas classes [NSUnit](https://developer.apple.com/reference/foundation/nsunit) e [NSDimension](https://developer.apple.com/reference/foundation/nsdimension) para representar UOMs específicos.
 
-
 ## <a name="healthkit"></a>HealthKit
 
 Os seguintes aprimoramentos foram feitos na estrutura HealthKit para o sistema operacional de observação 3:
@@ -60,7 +56,6 @@ Os seguintes aprimoramentos foram feitos na estrutura HealthKit para o sistema o
 - Use a nova classe [HKWorkoutConfiguration](https://developer.apple.com/reference/healthkit/hkworkoutconfiguration) para especificar o `ActivityType` e `LocationType` de um treinamento.
 - O novo [HKWheelchairUseObject](https://developer.apple.com/reference/healthkit/hkwheelchairuseobject) e o `WheelchairUse` método da classe [HKHealthStore](https://developer.apple.com/reference/healthkit/hkhealthstore) foram adicionados para trabalhar com dados de integridade relacionados a cadeira de rodas.
 - Foram adicionadas novas chaves de metadados para os tipos meteorológicos `HKWeatherConditionClear` ( `HKWeatherConditionCloudy`como e) e os tipos de `HKWorkoutActivityTypeFlexibility` treinamento `HKWorkoutActivityTypeWheelchairRunPace`(como e) foram adicionados.
-
 
 ## <a name="homekit"></a>HomeKit
 
@@ -70,7 +65,6 @@ Os seguintes aprimoramentos foram feitos na estrutura HomeKit para o sistema ope
 - Foram adicionados vários novos serviços e características.
 - Adição de mais contexto e configuração dos acessórios de serviços primários e serviços de link.
 
-
 ## <a name="passkit"></a>PassKit
 
 Os seguintes aprimoramentos foram feitos na estrutura PassKit para o sistema operacional de observação 3:
@@ -78,14 +72,12 @@ Os seguintes aprimoramentos foram feitos na estrutura PassKit para o sistema ope
 - Expande a estrutura para dar suporte a pagamentos seguros e no aplicativo na Apple Watch de bens e serviços físicos.
 - As seguintes classes agora estão disponíveis: [PKPayment](https://developer.apple.com/reference/passkit/pkpayment), [PKPaymentMethod](https://developer.apple.com/reference/passkit/pkpaymentmethod), [PKPaymentRequest](https://developer.apple.com/reference/passkit/pkpaymentrequest) e [PKPaymentToken](https://developer.apple.com/reference/passkit/pkpaymenttoken)
 
-
 ## <a name="uikit"></a>UIKit
 
 Os seguintes aprimoramentos foram feitos na estrutura UIKit para o sistema operacional de observação 3:
 
 - Para dar suporte ao tipo dinâmico em rótulos, campos `PreferredFontForTextStyle` `UIFont` de texto e caixas de texto, use o novo método da classe.
 - O `ColorWithDisplayP3` método foi adicionado para dar suporte à cor ampla.
-
 
 ## <a name="related-links"></a>Links relacionados
 

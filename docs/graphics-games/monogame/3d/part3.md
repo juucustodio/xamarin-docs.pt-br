@@ -6,12 +6,12 @@ ms.assetid: A4130995-48FD-4E2E-9C2B-ADCEFF35BE3A
 author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
-ms.openlocfilehash: c44e6b76751096d817727df759ecbeca5bd5a8f3
-ms.sourcegitcommit: f255aa286bd52e8a80ffa620c2e93c97f069f8ec
+ms.openlocfilehash: 2f5e66ae58f471be62839de17fe4edd12ccef457
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68680989"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70763994"
 ---
 # <a name="3d-coordinates-in-monogame"></a>Coordenadas 3D em monojogo
 
@@ -34,13 +34,11 @@ Quando terminar, teremos um projeto com um robô movendo em um círculo e uma c�
 
 ![](part3-images/image1.gif "Depois de concluído, o aplicativo incluirá um projeto com um robô que se move em um círculo e uma câmera que pode ser controlada pela entrada por toque")
 
-
 ## <a name="creating-a-project"></a>Criando um projeto
 
 Este tutorial explica como mover objetos no espaço 3D. Vamos começar com o projeto para renderizar modelos e matrizes de vértices [que podem ser encontrados aqui](https://docs.microsoft.com/samples/xamarin/mobile-samples/modelsandvertsmg/). Depois de baixado, descompacte e abra o projeto para verificar se ele é executado e devemos ver o seguinte:
 
 ![](part3-images/image2.png "Depois de baixado, descompacte e abra o projeto para certificar-se de que ele é executado e esta exibição deve ser exibida")
-
 
 ## <a name="creating-a-robot-entity"></a>Criando uma entidade de robô
 
@@ -94,7 +92,6 @@ namespace MonoGame3D
 
                     effect.Projection = Matrix.CreatePerspectiveFieldOfView(
                         fieldOfView, aspectRatio, nearClipPlane, farClipPlane);
-
 
                 }
 

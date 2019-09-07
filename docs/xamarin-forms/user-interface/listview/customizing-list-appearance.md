@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/13/2018
-ms.openlocfilehash: 1355f65a192cf8f7f119a2ee77f334c115650578
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: fc0664ff32e63af5d0c80f69ff69f4992ad0c708
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70121631"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770315"
 ---
 # <a name="customizing-listview-appearance"></a>Personalizando a aparência de ListView
 
@@ -294,12 +294,10 @@ XAML:
 
 ![](customizing-list-appearance-images/height-custom.png "ListView com altura de linha fixa")
 
-
 ### <a name="uneven-rows"></a>Linhas irregulares
 
 Se você quiser linhas individuais ter alturas diferentes, você pode definir as `HasUnevenRows` propriedade para `true`.
 Observe que as alturas das linhas não precisam ser definido manualmente uma vez `HasUnevenRows` foi definida como `true`, pois as alturas serão calculadas automaticamente pelo xamarin. Forms.
-
 
 C#:
 
@@ -337,8 +335,6 @@ O `OnImageTapped` manipulador de eventos é executado em resposta a uma [ `Image
 ![](customizing-list-appearance-images/dynamic-row-resizing.png "ListView com redimensionamento da linha do tempo de execução")
 
 Observe que há uma grande possibilidade de degradação do desempenho se esse recurso está sendo usado em excesso.
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

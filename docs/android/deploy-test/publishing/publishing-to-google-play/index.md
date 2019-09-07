@@ -6,19 +6,18 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: b976f540fb5b9aa7ea86cabb5b50276e53bed9a6
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
-ms.translationtype: HT
+ms.openlocfilehash: c6559db8cc2e3e18ec48dd85ea2d68455336bdd8
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70119806"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755959"
 ---
 # <a name="publishing-to-google-play"></a>Publicando no Google Play
 
 Embora existam muitos mercados de aplicativo para a distribuição de um aplicativo, o Google Play é indiscutivelmente o maior e mais visitado repositório do mundo para aplicativos Android. O Google Play fornece uma plataforma única para distribuição, publicidade, vendas e análise das vendas de um aplicativo Android.
 
 Esta seção abordará os tópicos específicos para o Google Play, como o registro para se tornar um editor, a coleta de ativos para ajudar o Google Play a promover e anunciar o seu aplicativo, as diretrizes para a classificação do seu aplicativo no Google Play e o uso de filtros para restringir a implantação de um aplicativo em certos dispositivos.
-
 
 ## <a name="requirements"></a>Requisitos
 
@@ -29,8 +28,6 @@ Todos os aplicativos precisam ser assinados com uma chave de criptografia que ex
 O tamanho máximo para um APK publicado no Google Play é 100 MB. Se um aplicativo exceder esse tamanho, o Google Play permitirá que ativos extras sejam entregues por meio de *Arquivos de expansão de APK*. Os arquivos de expansão Android permitem que o APK tenha 2 arquivos adicionais de até 2 GB de tamanho cada. O Google Play hospedará e distribuirá esses arquivos sem custo adicional. Os arquivos de expansão serão discutidos em outra seção.
 
 O Google Play não está disponível globalmente. Alguns locais podem não ter suporte para a distribuição de aplicativos.
-
-
 
 ## <a name="becoming-a-publisher"></a>Tornando-se um editor
 
@@ -43,20 +40,15 @@ Para publicar aplicativos no Google Play, é necessário ter uma conta de editor
 1. Confirme a verificação por email.
 1. Depois que a conta foi criada, é possível publicar aplicativos usando o Google Play.
 
-
 O Google Play não oferece suporte a todos os países do mundo. A lista mais atualizada de países pode ser encontrada nos seguintes links:
 
 1. [Locais com suporte para Desenvolvedor &amp; Registro de Comerciante](https://support.google.com/googleplay/android-developer/bin/answer.py?hl=en&amp;answer=150324) &ndash; esta é uma lista de todos os países em que os desenvolvedores podem se registrar como comerciantes e vender aplicativos pagos.
 
 1. [Locais com suporte para distribuição aos usuários do Google Play](https://support.google.com/googleplay/android-developer/bin/answer.py?hl=en&amp;answer=138294) &ndash; esta é uma lista de todos os países em que os aplicativos podem ser distribuídos.
 
-
-
 ### <a name="preparing-promotional-assets"></a>Preparação de ativos promocionais
 
 Para promover e anunciar efetivamente um aplicativo no Google Play, o Google permite que os desenvolvedores enviem ativos promocionais como capturas de tela, gráficos e vídeos. O Google Play usará esses ativos para anunciar e promover o aplicativo.
-
-
 
 #### <a name="launcher-icons"></a>Ícones de inicializador
 
@@ -66,7 +58,6 @@ Um *Ícone de inicializador* é um gráfico que representa um aplicativo. Cada �
 - **mdpi** (160 dpi) &ndash; 48 x 48 px
 - **hdpi** (240 dpi) &ndash; 72 x 72 px
 - **hxdpi** (320 dpi) &ndash; 96 x 96 px
-
 
 Os ícones de inicializador são as primeiras coisas vistas por um usuário nos aplicativos no Google Play, portanto tome cuidado para que os ícones de inicializador sejam visualmente atraentes e significativos.
 
@@ -78,8 +69,6 @@ Dicas de ícones de inicializador:
 
 1. **Use o canal alfa**&ndash; Ícones devem usar o canal alfa e não devem ser imagens de quadro completo.
 
-
-
 #### <a name="high-resolution-application-icons"></a>Ícones de aplicativos de alta resolução
 
 Os aplicativos no Google Play requerem uma versão de alta fidelidade do ícone do aplicativo. Ela só é usada pelo Google Play e não substitui o ícone do lançador de aplicativo. As especificações para o ícone de alta resolução são:
@@ -90,8 +79,6 @@ Os aplicativos no Google Play requerem uma versão de alta fidelidade do ícone 
 
 O [Android Asset Studio](https://romannurik.github.io/AndroidAssetStudio/) é uma ferramenta útil para a criação de ícones de inicializador adequados e para a criação do ícone do aplicativo de alta resolução.
 
-
-
 #### <a name="screen-shots"></a>Capturas de tela
 
 O Google play requer no mínimo duas e no máximo oito capturas de tela de um aplicativo. Elas serão exibidas na página de detalhes do aplicativo no Google Play.
@@ -101,16 +88,12 @@ As especificações das capturas de tela são:
 1. 24 bits, PNG ou JPG, sem canal alfa
 1. 320w x 480h ou 480w x 800h ou 480w x 854h. Imagens em orientação paisagem serão cortadas.
 
-
-
 #### <a name="promotional-graphic"></a>Elemento gráfico promocional
 
 Esta é uma imagem opcional usada pelo Google Play:
 
 1. É uma imagem de 180w x 120h, de 24 bits, PNG ou JPG, sem canal alfa.
 1. Sem borda na arte.
-
-
 
 #### <a name="feature-graphic"></a>Funcionalidade Gráfica
 
@@ -120,13 +103,9 @@ Usado pela seção em destaque do Google Play. Este elemento gráfico pode ser e
 1. Todo o conteúdo importante deve estar em um quadro de 924x500. Os pixels fora desse quadro podem ser recortados para fins estilísticos.
 1. Este elemento gráfico pode ser reduzido: usar texto grande e manter os elementos gráficos simples.
 
-
-
 #### <a name="video-link"></a>Link de vídeo
 
 Esta é uma URL para um vídeo do YouTube mostrando o aplicativo. O vídeo deve ter entre 30 segundos e 2 minutos de duração e apresentar as melhores partes do seu aplicativo.
-
-
 
 ### <a name="publishing-to-google-play"></a>Publicando no Google Play
 
@@ -186,7 +165,6 @@ A próxima seção explica como criar um novo projeto de API do Google e gerar a
 
 -----
 
-
 #### <a name="create-a-google-api-project"></a>Criar um projeto de API do Google
 
 Primeiro, entre na sua [Conta de Desenvolvedor do Google Play](https://play.google.com/apps/publish).
@@ -223,7 +201,6 @@ Clique em **Salvar** para salvar as alterações. Isso retorna para a página **
 [![Ícone Baixar JSON](images/07-download-json-sml.png)](images/07-download-json.png#lightbox)
 
 Esse arquivo JSON contém a ID do Cliente e o Segredo do cliente que você pode recortar e colar na caixa de diálogo **Assinar e Distribuir** na próxima etapa.
-
 
 #### <a name="register-google-api-access"></a>Registrar acesso à API do Google
 
@@ -269,7 +246,6 @@ O **Archive Manager** exibe o progresso do upload:
 Quando o upload for concluído, o status de conclusão aparece no canto inferior esquerdo do Visual Studio:
 
 [![Mensagem Publicação do projeto concluída](images/vs/11-published-sml.png)](images/vs/11-published.png#lightbox)
-
 
 ### <a name="troubleshooting"></a>Solução de problemas
 

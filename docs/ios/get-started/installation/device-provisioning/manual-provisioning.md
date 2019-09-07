@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 07/15/2017
-ms.openlocfilehash: 5f56a99e341f58bc06e8bf49305b5527a92f0413
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: c190e92c8366644c00e0f03c314d535f43f8046b
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70289723"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768635"
 ---
 # <a name="manual-provisioning-for-xamarinios"></a>Provisionamento manual para o Xamarin.iOS
 
@@ -265,7 +265,6 @@ Neste momento, o provisionamento já deve estar concluído e o aplicativo pronto
 
 4. Certifique-se de definir a configuração de build para **iPhone** ou **iPad**, em vez do simulador.
 5. Clique em **Executar** no Visual Studio e exiba o aplicativo em execução no dispositivo.
-
 
 -----
 

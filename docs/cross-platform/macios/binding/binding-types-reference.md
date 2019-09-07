@@ -6,12 +6,12 @@ ms.assetid: C6618E9D-07FA-4C84-D014-10DAC989E48D
 author: conceptdev
 ms.author: crdun
 ms.date: 03/06/2018
-ms.openlocfilehash: 52c4f6b45a44eaa9df253e9d049d1016de4a6e30
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: ef94c90cec11c374b24ddfb159674adb468e72de
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70199356"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70765783"
 ---
 # <a name="binding-types-reference-guide"></a>Guia de referência de tipos de associação
 
@@ -52,7 +52,6 @@ interface UITextField : UITextInput {
 ```
 
 Você pode controlar muitos outros aspectos da geração de código aplicando outros atributos à interface, bem como Configurando [`[BaseType]`](#BaseTypeAttribute) o atributo.
-
 
 ### <a name="generating-events"></a>Gerando eventos
 
@@ -208,7 +207,6 @@ public interface UIAccelerometerDelegate {
 }
 ```
 
-
 #### <a name="basetypekeeprefuntil"></a>BaseType.KeepRefUntil
 
 Se você aplicar esse atributo quando novas instâncias dessa classe forem criadas, a instância desse objeto será mantida até que o método referenciado pelo `KeepRefUntil` tenha sido invocado. Isso é útil para melhorar a usabilidade de suas APIs, quando você não deseja que seu usuário mantenha uma referência a um objeto para usar seu código. O valor dessa propriedade é o nome de um método na `Delegate` classe, portanto, você deve usá-lo em combinação com as `Events` Propriedades e `Delegates` também.
@@ -293,7 +291,7 @@ Em alguns casos, você encontrará Membros **estáticos** dentro de categorias, 
 @end
 ```
 
-Isso resultará em uma definição de C# interface de categoria incorreta:
+Isso resultará em uma definição de C# interface de categoria **incorreta** :
 
 ```csharp
 [Category]
@@ -538,7 +536,6 @@ Em seguida, ele expõe o seguinte `UIImagePickerController` na classe:
 public event EventHandler<UIImagePickerImagePickedEventArgs> FinishedPickingImage { add; remove; }
 ```
 
-
 ### <a name="eventnameattribute"></a>EventNameAttribute
 
 Esse atributo é usado para permitir que o gerador altere o nome de um evento ou propriedade gerada na classe. Às vezes, é útil quando o nome do método de classe de modelo faz sentido para a classe de modelo, mas pareceria estranha na classe de origem como um evento ou uma propriedade.
@@ -706,11 +703,9 @@ interface Robot : SpeakProtocol {
 }
 ```
 
-
 ## <a name="member-definitions"></a>Definições de membro
 
 Os atributos nesta seção são aplicados a membros individuais de um tipo: propriedades e declarações de método.
-
 
 ### <a name="alignattribute"></a>Alignattribute
 
@@ -724,7 +719,6 @@ public interface GLKBaseEffect {
     Vector4 ConstantColor { [Align (16)] get; set;  }
 }
 ```
-
 
 ### <a name="appearanceattribute"></a>Appearanceattribute
 
@@ -1163,7 +1157,6 @@ Em vez de `objc_msgSend` chamar diretamente, a invocação passará por um tramp
 
 Atualmente, apenas algumas `objc_msgSend` assinaturas têm suporte (você descobrirá se uma assinatura não tem suporte quando a vinculação nativa de um aplicativo que usa a associação falha com um símbolo monotouch_ *_objc_msgSend* ausente), mas mais pode ser adicionado na solicitação.
 
-
 ### <a name="newattribute"></a>NewAttribute
 
 Esse atributo é aplicado a métodos e propriedades para que o gerador gere a `new` palavra-chave na frente da declaração.
@@ -1405,7 +1398,6 @@ NSObject GetAndRetainObject ();
 
 Além disso, esse atributo é propagado para o código gerado, de forma que o tempo de execução do Xamarin. iOS saiba que ele deve reter o objeto ao retornar para Objective-C dessa função.
 
-
 ### <a name="sealedattribute"></a>Sealattribute
 
 Instrui o gerador a sinalizar o método gerado como lacrado. Se esse atributo não for especificado, o padrão será gerar um método virtual (um método virtual, um método abstract ou uma substituição dependendo de como outros atributos são usados).
@@ -1415,7 +1407,6 @@ Instrui o gerador a sinalizar o método gerado como lacrado. Se esse atributo n�
 ### <a name="staticattribute"></a>Staticattribute
 
 Quando o `[Static]` atributo é aplicado a um método ou propriedade, isso gera um método ou uma propriedade estática. Se esse atributo não for especificado, o gerador produzirá um método ou uma propriedade de instância.
-
 
 ### <a name="transientattribute"></a>Transitóriaattribute
 
@@ -1634,7 +1625,6 @@ public class RetainAttribute {
 }
 ```
 
-
 ### <a name="retainlistattribute"></a>RetainListAttribute
 
 Instrui o gerador a manter uma referência gerenciada para o parâmetro ou remover uma referência interna para o parâmetro. Isso é usado para manter os objetos referenciados.
@@ -1651,7 +1641,6 @@ Se o valor de `doAdd` for true, o parâmetro será adicionado `__mt_{0}_var List
 
 Para obter um exemplo, consulte [Foundation.cs](https://github.com/mono/maccore/blob/master/src/foundation.cs) e [NSNotificationCenter.cs](https://github.com/mono/maccore/blob/master/src/Foundation/NSNotificationCenter.cs)
 
-
 ### <a name="transientattribute"></a>Transitóriaattribute
 
 Esse atributo é aplicado aos parâmetros e é usado somente ao fazer a transição de Objective- C#C para.  Durante essas transições, os vários parâmetros Objective-C `NSObject` são encapsulados em uma representação gerenciada do objeto.
@@ -1665,7 +1654,6 @@ Esse atributo informa o tempo de execução que você deseja que o objeto seja d
 A regra é simples: se o tempo de execução tivesse que criar uma nova representação gerenciada a partir do objeto nativo, no final da função, a contagem de retenção para o objeto nativo será descartada e a propriedade Handle do objeto gerenciado será limpa.   Isso significa que, se você mantiver uma referência ao objeto gerenciado, essa referência se tornará inútil (invocar métodos nele gerará uma exceção).
 
 Se o objeto passado não tiver sido criado, ou se já havia uma representação gerenciada pendente do objeto, a disposição forçada não ocorrerá. 
-
 
 ## <a name="property-attributes"></a>Atributos de propriedade
 

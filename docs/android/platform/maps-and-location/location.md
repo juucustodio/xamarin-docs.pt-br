@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/22/2018
-ms.openlocfilehash: 8366796af47e8915bf0bd9ba680e6144e1cfaebc
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 61532eb1e31db6a862275180394b2b5ba9b05f8e
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70280602"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70761722"
 ---
 # <a name="location-services-on-android"></a>Serviços de localização no Android
 
@@ -75,11 +75,10 @@ else
 
 Os aplicativos devem ser tolerantes ao cenário em que o usuário não concederá permissão (ou revogou a permissão) e terá uma maneira de lidar com essa situação normalmente. Consulte o [Guia de permissões](~/android/app-fundamentals/permissions.md) para obter mais detalhes sobre como implementar verificações de permissão em tempo de execução no Xamarin. Android.
 
-
 ## <a name="using-the-fused-location-provider"></a>Usando o provedor de localização com fusível
 
 O provedor de localização com fusível é a maneira preferida para aplicativos Android receberem atualizações de local do dispositivo, pois ele selecionará com eficiência o provedor de localização durante o tempo de execução para fornecer as melhores informações de localização de uma maneira eficiente de bateria. Por exemplo, um usuário percorrendo todo o mundo Obtém a melhor leitura de local com GPS. Se o usuário, em seguida, orientar as inportas, onde o GPS funciona mal (se houver), o provedor de localização com fusível pode alternar automaticamente para WiFi, o que funciona melhor.
- 
+
 A API do provedor de localização com fusível fornece uma variedade de outras ferramentas para capacitar aplicativos com reconhecimento de local, incluindo monitoramento de atividades e isolamentos geográficas. Nesta seção, vamos nos concentrar nos conceitos básicos da configuração do, no estabelecimento de `LocationClient`provedores e na obtenção do local do usuário.
 
 O provedor de localização com fusível faz parte do [Google Play Services](https://developer.android.com/google/play-services/index.html).

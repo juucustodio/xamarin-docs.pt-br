@@ -1,18 +1,18 @@
 ---
 title: Resumo do capítulo 16. Associação de dados
-description: 'Criando aplicativos móveis com xamarin. Forms: Resumo do capítulo 16. Associação de dados'
+description: 'Criando aplicativos móveis com Xamarin. Forms: Resumo do capítulo 16. Associação de dados'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: ED997DB0-C229-4868-A5FB-928703B377D6
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/18/2018
-ms.openlocfilehash: df3cee3fe71553b63bf4b050cad141b66ad98a06
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 2d61413fb1d8c28a3957da53601d0ad682f35518
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61334164"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771097"
 ---
 # <a name="summary-of-chapter-16-data-binding"></a>Resumo do capítulo 16. Associação de dados
 
@@ -138,8 +138,6 @@ Você pode simplificar a controles personalizados usando associações de dados.
 Em vez disso, o [ `NewCheckBox.cs.xaml` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/NewCheckBox.xaml) arquivo contém toda a marcação para elementos visuais do controle por meio de ligações de dados sobre o `Label` elementos com base nas propriedades definidas no arquivo code-behind.
 
 O [ **NewCheckBoxDemo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter16/NewCheckBoxDemo) exemplo demonstra o `NewCheckBox` controle personalizado.
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

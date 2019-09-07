@@ -6,17 +6,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: b5f09413379de13aaf12e8113e8deb0f3c2bf0c3
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
-ms.translationtype: HT
+ms.openlocfilehash: fe1422aa55e5c1518134e6d0fbbf40047b577767
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69525464"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70753801"
 ---
 # <a name="publishing-an-application"></a>Publicando um aplicativo
 
 Quando um bom aplicativo é criado, as pessoas querem usá-lo. Esta seção aborda as etapas envolvidas com a distribuição pública de um aplicativo criado com o Xamarin.Android por meio de canais, como email, um servidor Web particular, Google Play ou a Amazon App Store para Android.
-
 
 ## <a name="overview"></a>Visão geral
 
@@ -36,7 +35,6 @@ Como pode ser visto no diagrama acima, a preparação é a mesma, independenteme
 - **Por email** &ndash; É possível que os usuários instalem um aplicativo Xamarin.Android pelo email. O aplicativo será instalado quando o anexo for aberto com um dispositivo Android.
 - **Por meio de um mercado** &ndash; Há vários mercados de aplicativos que existem para distribuição, como [Google Play](http://play.google.com/) ou [Amazon App Store for Android](http://www.amazon.com/mobile-apps/b?ie=UTF8&node=2350149011).
 
-
 Usar um marketplace estabelecido é a maneira mais comum para publicar um aplicativo, pois ele fornece um alcance mais amplo do mercado e maior controle sobre a distribuição. No entanto, a publicação de um aplicativo por meio de um marketplace requer esforço adicional.
 
 Vários canais podem distribuir um aplicativo Xamarin.Android simultaneamente. Por exemplo, um aplicativo pode ser publicado no Google Play, Amazon App Store para o Android e também ser baixado de um servidor Web.
@@ -51,7 +49,6 @@ O Google Play é indiscutivelmente o marketplace mais abrangente e popular para 
 [![Captura de tela do Google Play](images/google-play-app.png)](images/google-play-app.png#lightbox)
 
 Esta seção mostrou como carregar o aplicativo em lojas como o Google Play, junto com o material promocional apropriado. Arquivos de expansão APK foram explicados, fornecendo uma visão geral conceitual sobre o que são e como funcionam. Os serviços de licenciamento do Google também foram descritos. Finalmente, meios alternativos de distribuição foram apresentados, incluindo o uso de um servidor Web HTTP, distribuição de email simples e a Amazon App Store para Android.
-
 
 ## <a name="related-links"></a>Links relacionados
 

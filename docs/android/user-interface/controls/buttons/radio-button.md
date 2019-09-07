@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: 2279282b08c9d97b239de424cf38aa6f1463dc4d
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: c1dabfcd481dccf50075c02c54019ee27499769f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68510363"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70758819"
 ---
 # <a name="radiobutton"></a>RadioButton
 
@@ -19,8 +19,7 @@ Nesta seção, você criará dois botões de opção mutuamente exclusivos (a ha
 e[`RadioButton`](xref:Android.Widget.RadioButton)
 widgets. Quando o botão de opção for pressionado, uma mensagem do sistema será exibida.
 
-
-Abra o arquivo Resources **/layout/Main. axml** e [`RadioButton`](xref:Android.Widget.RadioButton)adicione dois s, aninhados em um [`LinearLayout`](xref:Android.Widget.LinearLayout) [`RadioGroup`](xref:Android.Widget.RadioGroup) (dentro do):
+Abra o arquivo **Resources/layout/Main. axml** e [`RadioButton`](xref:Android.Widget.RadioButton)adicione dois s, aninhados em um [`LinearLayout`](xref:Android.Widget.LinearLayout) [`RadioGroup`](xref:Android.Widget.RadioGroup) (dentro do):
 
 ```xml
 <RadioGroup

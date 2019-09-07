@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 05/18/2016
-ms.openlocfilehash: 4a04f0ed4cbb336e331528c3d8265efb31388328
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 943cdfaee07bc4fd4ed3273840036055ad40b89a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70289525"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70766743"
 ---
 # <a name="accessibility-on-ios"></a>Acessibilidade no iOS
 
@@ -74,7 +74,6 @@ UIAccessibility.PostNotification (
     someControl);  // someControl gets focus
 ```
 
-
 ## <a name="accessibility-and-localization"></a>Acessibilidade e localização
 
 As propriedades de acessibilidade, como o rótulo e a dica, podem ser localizadas da mesma forma que outro texto na interface do usuário.
@@ -122,7 +121,6 @@ A tela de **acessibilidade** também fornece configurações de zoom, tamanho do
 
 Siga estas [instruções do VoiceOver](https://developer.apple.com/library/ios/technotes/TestingAccessibilityOfiOSApps/TestAccessibilityonYourDevicewithVoiceOver/TestAccessibilityonYourDevicewithVoiceOver.html) para testar a acessibilidade em dispositivos IOS.
 
-
 ## <a name="simulator-testing"></a>Testes de simulador
 
 Ao testar no simulador, o **Inspetor de acessibilidade** está disponível para ajudar a verificar se as propriedades de acessibilidade e os eventos estão configurados corretamente. Ative o Inspetor no aplicativo **configurações** navegando para **geral > acessibilidade > Inspetor de acessibilidade**:
@@ -135,8 +133,6 @@ Aqui está um exemplo da saída quando uma linha de exibição de tabela é sele
 ![](accessibility-images/tableview-a11y-sml.png "Usando o Inspetor de acessibilidade")
 
 Enquanto o Inspetor estiver visível, use o ícone "X" na parte superior esquerda para mostrar temporariamente e ocultar a sobreposição e habilitar/desabilitar as configurações de acessibilidade.
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

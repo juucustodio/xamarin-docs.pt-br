@@ -7,18 +7,17 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: 0049d69caabce545b2813dbd2b3905fe96f28fed
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 0f3e56ab90d5205318539994bae7f4db153bb163
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292734"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768086"
 ---
 # <a name="working-with-the-watchos-parent-application-in-xamarin"></a>Trabalhando com o aplicativo pai no Xamarin watchOS
 
 > [!IMPORTANT]
 > Acessar o aplicativo pai usando os exemplos a seguir só funciona em aplicativos do watch watchOS 1.
-
 
 Há diferentes maneiras de se comunicar entre o aplicativo de inspeção e o aplicativo iOS que ele é fornecido com:
 
@@ -30,7 +29,6 @@ Há diferentes maneiras de se comunicar entre o aplicativo de inspeção e o apl
 
 O aplicativo pai, às vezes, também é conhecido como o aplicativo de contêiner.
 
-
 <a name="code" />
 
 ## <a name="run-code"></a>Executar código
@@ -39,8 +37,6 @@ Comunicação entre uma extensão de inspeção e o aplicativo de iPhone pai é 
 Sua extensão de inspeção pode solicitar o aplicativo do iOS pai fazer algum processamento em seu nome usando o `OpenParentApplication` método.
 
 Isso é especialmente útil para tarefas em execução demorada (incluindo solicitações de rede) - somente o pai aplicativo iOS podem tirar proveito do processamento em segundo plano para concluir essas tarefas e salvar os dados recuperados em um local acessível para a extensão de inspeção.
-
-
 
 ### <a name="watch-kit-app-extension"></a>Assista a extensão do aplicativo de Kit
 
@@ -57,12 +53,10 @@ WKInterfaceController.OpenParentApplication (new NSDictionary (), (replyInfo, er
 });
 ```
 
-
 ### <a name="ios-app"></a>Aplicativo iOS
 
 Todas as chamadas de uma extensão de aplicativo de inspeção são roteadas por meio do aplicativo do iPhone `HandleWatchKitExtensionRequest` método.
 Se você estiver fazendo solicitações diferentes no aplicativo de inspeção, esse método terá de consultar o `userInfo` dicionário para determinar como processar a solicitação.
-
 
 ```csharp
 [Register ("AppDelegate")]
@@ -81,7 +75,6 @@ public partial class AppDelegate : UIApplicationDelegate
     }
 }
 ```
-
 
 <a name="storage" />
 
@@ -142,8 +135,6 @@ wormHole = new Wormhole ("group.com.your-company.watchstuff", "messageDir");
 ```
 
 Baixe o C# versão [WormHoleSharp](https://github.com/Clancey/WormHoleSharp).
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

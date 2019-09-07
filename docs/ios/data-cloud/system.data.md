@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 11/25/2015
-ms.openlocfilehash: 36eeb517fee69742f900a0cf18e1d19d093dfc52
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 44d2e468efeacea919af2d243588d0da6d72945d
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290123"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70766545"
 ---
 # <a name="systemdata-in-xamarinios"></a>System. Data no Xamarin. iOS
 
@@ -110,7 +110,6 @@ class Demo {
 > [!IMPORTANT]
 > Conforme mencionado no exemplo de código acima, é uma prática inadequada inserir cadeias de caracteres em comandos SQL, pois torna seu código vulnerável à [injeção de SQL](https://en.wikipedia.org/wiki/SQL_injection).
 
-
 ### <a name="using-command-parameters"></a>Uso de parâmetros de comando
 
 O código a seguir mostra como usar parâmetros de comando para inserir com segurança o texto inserido pelo usuário no banco de dados (mesmo que o texto contenha caracteres especiais do SQL como um apóstrofo):
@@ -149,7 +148,6 @@ A funcionalidade ausente em **System. Data. dll** consiste em:
 - [System.Data.Odbc](xref:System.Data.Odbc)
 - A `System.EnterpriseServices.dll` dependência foi *removida* do `System.Data.dll` , resultando na remoção do método [SqlConnection. EnlistDistributedTransaction (ITransaction)](xref:System.Data.SqlClient.SqlConnection.EnlistDistributedTransaction*) .
 
-
 <a name="Mono.Data.Sqlite" />
 
 ### <a name="monodatasqlite"></a>Mono.Data.Sqlite
@@ -170,4 +168,3 @@ Os problemas mais comuns parecem estar relacionados à consulta de esquema de ba
 ## <a name="data-binding"></a>Associação de dados
 
 A associação de dados não tem suporte no momento.
-

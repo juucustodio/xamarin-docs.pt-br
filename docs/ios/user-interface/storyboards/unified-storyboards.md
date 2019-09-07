@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/20/2017
-ms.openlocfilehash: cf3a3f6638547acf8d22854b6d8a32622c304932
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 07a61eb9d0c16f82d6c367cefc9e3050ca8dfc25
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70280859"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768825"
 ---
 # <a name="unified-storyboards-in-xamarinios"></a>Storyboards unificados no Xamarin. iOS
 
@@ -31,7 +31,6 @@ Os dispositivos são definidos por classes de tamanho, em ambos os eixos vertica
 - **Regular** – isso é para um tamanho de tela grande (como um iPad) ou um gadget que dá a impressão de um tamanho grande (como um`UIScrollView`
 - **Compact** – é para dispositivos menores (como um iPhone). Esse tamanho leva em consideração a orientação do dispositivo.
 
-
 Se os dois conceitos forem usados juntos, o resultado será uma grade 2 x 2 que define os diferentes tamanhos possíveis que podem ser usados nas orientações diferentes, como visto no diagrama a seguir:
 
  [![](unified-storyboards-images/sizeclassgrid.png "Uma grade 2 x 2 que define os diferentes tamanhos possíveis que podem ser usados em orientações regulares e compactas")](unified-storyboards-images/sizeclassgrid.png#lightbox)
@@ -43,7 +42,6 @@ O desenvolvedor pode criar um controlador de exibição que usa qualquer uma das
 O iPad, devido ao tamanho, tem um tamanho de classe **regular** para ambas as orientações.
 
  [![](unified-storyboards-images/image1.png "Classes de tamanho do iPad")](unified-storyboards-images/image1.png#lightbox)
-
 
 ### <a name="iphone-size-classes"></a>Classes de tamanho do iPhone
 
@@ -97,7 +95,6 @@ Ambientes de características são uma nova interface no iOS 8 e são capazes de
 - Exibir controladores ( `UIViewController` ).
 - Exibições `UIView` ().
 - Controlador de apresentação `UIPresentationController` ().
-
 
 O desenvolvedor usa a coleção de características retornada por um ambiente de características para determinar como uma interface do usuário deve ser disposta.
 
@@ -234,14 +231,12 @@ Agora vamos examinar mais de perto o que acontece quando um controlador de exibi
 - Por padrão, o controlador de exibição de divisão usará o controlador de exibição primário como a exibição depois que o recolhimento ocorrer. O desenvolvedor pode substituir esse comportamento substituindo o `GetPrimaryViewControllerForCollapsingSplitViewController` método `UISplitViewControllerDelegate` do e fornecendo qualquer controlador de exibição que desejam exibir no estado recolhido.
 - O controlador de exibição secundário precisa ser mesclado no controlador de exibição primário. Geralmente, o desenvolvedor não precisa realizar nenhuma ação para esta etapa; o controlador de exibição de divisão inclui o tratamento automático desta fase com base no dispositivo de hardware. No entanto, pode haver alguns casos especiais em que o desenvolvedor vai querer interagir com essa alteração. Chamar o `CollapseSecondViewController` método `UISplitViewControllerDelegate` de permite que o controlador de exibição mestre seja exibido quando o recolhimento ocorre, em vez da exibição de detalhes.
 
-
 ### <a name="expanding-the-split-view-controller"></a>Expandindo o controlador de exibição de divisão
 
 Agora vamos examinar mais de perto o que acontece quando um controlador de exibição de divisão é expandido de um estado recolhido. Mais uma vez, há dois estágios que precisam ocorrer:
 
 - Primeiro, defina o novo controlador de exibição primário. Por padrão, o controlador de exibição de divisão usará automaticamente o controlador de exibição primário do modo de exibição recolhido. Novamente, o desenvolvedor pode substituir esse comportamento usando o `GetPrimaryViewControllerForExpandingSplitViewController` método `UISplitViewControllerDelegate` do.
 - Depois que o controlador de exibição primário tiver sido escolhido, o controlador de exibição secundário deverá ser recriado. Novamente, o controlador de exibição de divisão inclui o tratamento automático desta fase com base no dispositivo de hardware. O desenvolvedor pode substituir esse comportamento chamando o `SeparateSecondaryViewController` método `UISplitViewControllerDelegate` do.
-
 
 Em um controlador de exibição de divisão, o controlador de exibição primário desempenha uma parte na expansão e no recolhimento das exibições implementando `CollapseSecondViewController` os `SeparateSecondaryViewController` métodos e do `UISplitViewControllerDelegate`. `UINavigationController`implementa esses métodos para enviar e pop automaticamente o controlador de exibição secundário.
 
@@ -253,7 +248,6 @@ Isso apresentou um acoplamento muito rígido entre o controlador de navegação 
 
 - `ShowViewController`– Adapta-se para exibir o novo controlador de exibição com base em seu ambiente. Por exemplo, em um `UINavigationController` ele simplesmente envia por push a nova exibição para a pilha. Em um controlador de exibição de divisão, o novo controlador de exibição será apresentado no lado esquerdo como o novo controlador de exibição primário. Se nenhum controlador de exibição de contêiner estiver presente, o novo modo de exibição será exibido como um controlador de exibição modal.
 - `ShowDetailViewController`– Funciona de maneira semelhante ao `ShowViewController`, mas é implementado em um controlador de exibição de divisão para substituir o modo de exibição de detalhes pelo novo controlador de exibição que está sendo passado. Se o controlador de exibição de divisão estiver recolhido (como pode ser visto em um aplicativo do iPhone), a chamada será redirecionada `ShowViewController` para o método e a nova exibição será mostrada como o controlador de exibição primário. Novamente, se nenhum controlador de exibição de contêiner estiver presente, o novo modo de exibição será exibido como um controlador de exibição modal.
-
 
 Esses métodos funcionam iniciando no controlador de exibição de folha e orientam a hierarquia de exibição até encontrarem o controlador de exibição de contêiner correto para manipular a exibição da nova exibição.
 
@@ -269,7 +263,6 @@ Esse método percorre a cadeia de hierarquia até que o controlador de exibiçã
 
 1. Se um `ShowViewController` método for chamado, o primeiro controlador de exibição na cadeia que implementa esse método é o controlador de navegação, portanto, ele é usado como o pai da nova exibição.
 1. Se um `ShowDetailViewController` método foi chamado em vez disso, o controlador de exibição de divisão é o primeiro controlador de exibição para implementá-lo, portanto, ele é usado como o pai.
-
 
 O `GetTargetForAction` método funciona localizando um controlador de exibição que implementa uma determinada ação e, em seguida, solicitando o controlador de exibição se desejar receber essa ação. Como esse método é público, os desenvolvedores podem criar seus próprios métodos personalizados que funcionam exatamente como os métodos `ShowViewController` internos `ShowDetailViewController` e.
 
@@ -690,7 +683,6 @@ O arquivo da tela de inicialização é exibido como uma tela inicial enquanto u
 A fatoração nos novos dispositivos iPhone 6 e iPhone 6 Plus (e o próximo Apple Watch) com todos os dispositivos iPhone e iPad existentes representa uma grande variedade de tamanhos, orientações e resoluções de ativos de imagem `Default.png` da tela de inicialização que devem ser criado e mantido. Além disso, esses arquivos podem ser muito grandes e "inchar" o pacote de aplicativos de entrega, aumentando a quantidade de tempo necessária para baixar o aplicativo da iTunes App Store (possivelmente mantendo a capacidade de ser entregue em uma rede de celular) e aumentar a quantidade de armazenamento necessária no dispositivo do usuário final.
 
 Novo no Ios 8, o desenvolvedor pode criar um único arquivo atômico `.xib` no Xcode que usa o layout automático e classes de tamanho para criar uma *tela de inicialização dinâmica* que funcionará para cada dispositivo, resolução e orientação. Isso não apenas reduz a quantidade de trabalho necessária do desenvolvedor para criar e manter todos os ativos de imagem necessários, mas reduz consideravelmente o tamanho do grupo instalado do aplicativo.
-
 
 As telas de inicialização dinâmica têm as seguintes limitações e considerações:
 

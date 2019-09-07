@@ -8,12 +8,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2018
-ms.openlocfilehash: d3face5db37e22fe7acceaa975c3327bb02b78ab
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 8107a26e090aa920d71146d5f2af8b8365697d6b
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69523328"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70757205"
 ---
 # <a name="resolving-library-installation-errors"></a>Resolver Erros de Instalação da Biblioteca
 
@@ -23,8 +23,6 @@ _Em alguns casos, você pode receber erros durante a instalação das biblioteca
 
 Ao criar um projeto de aplicativo Xamarin. Android, você poderá obter erros de compilação quando o Visual Studio ou Visual Studio para Mac tentar baixar e instalar bibliotecas de dependências. Muitos desses erros são causados por problemas de conectividade de rede, corrupção de arquivo ou problemas de controle de versão. Este guia descreve os erros de instalação da biblioteca de suporte mais comuns e fornece as etapas para solucionar esses problemas e fazer com que seu projeto de aplicativo seja criado novamente. 
 
- 
- 
 ## <a name="errors-while-downloading-m2repository"></a>Erros ao baixar o m2Repository
 
 Você pode ver erros de **m2repository** ao fazer referência a um pacote NuGet das bibliotecas de suporte do Android ou dos serviços de Google Play. Essa mensagem de erro é semelhante à exibida a seguir:
@@ -35,15 +33,13 @@ Download failed. Please download https://dl-ssl.google.com/android/repository/an
 
 Este exemplo é para **o\_Android\_m2repository R16**, mas você pode ver essa mesma mensagem de erro para uma versão diferente, como **Android\_\_m2repository R18** ou **Android\_ m2repository\_R25**. 
 
-
-
 ### <a name="automatic-recovery-from-m2repository-errors"></a>Recuperação automática de erros do m2repository 
 
 Geralmente, esse problema pode ser remediado excluindo a biblioteca problemática e recompilando de acordo com estas etapas: 
 
 1. Navegue até o diretório de biblioteca de suporte no seu computador:
 
-    - No Windows, as bibliotecas de suporte estão localizadas em **C\\:\\Users\\_nome_do_usuário_\\\\AppData local Xamarin**. 
+    - No Windows, as bibliotecas de suporte estão localizadas em **\\C:\\Users\\_nome_do_usuário_\\AppData\\local Xamarin**. 
 
     - Em Mac OS X, as bibliotecas de suporte estão localizadas em **/Users/_username_/.local/share/Xamarin**. 
 
@@ -60,8 +56,6 @@ Geralmente, esse problema pode ser remediado excluindo a biblioteca problemátic
 4. Recompilar o &ndash; projeto fazendo isso fará com que o processo de compilação Baixe novamente a biblioteca ausente.
 
 Na maioria dos casos, essas etapas resolverão o erro de compilação e permitirão que você continue. Se a exclusão dessa biblioteca não resolver o erro de compilação, você deverá baixar e instalar manualmente **o\_arquivo\_m2repository r_nn_. zip do Android** , conforme descrito na próxima seção. 
-
-
 
 ### <a name="manually-downloading-m2repository"></a>Baixando o m2repository manualmente
 
@@ -119,9 +113,7 @@ Se você tentou usar as etapas de recuperação automática acima e ainda tiver 
 
     [![Exemplo do repositório R16. zip que está sendo renomeado para 0595E577D19D31708195A83087881EE6. zip](resolving-library-installation-errors-images/03-md5-rename-vs.png)](resolving-library-installation-errors-images/03-md5-rename-vs.png#lightbox)
 
-
 Se esse procedimento não resolver o erro de compilação, você deverá baixar manualmente o **arquivo\_Android\_m2repository r_nn_. zip** , descompactá-lo e instalar seu conteúdo, conforme descrito na próxima seção. 
-
 
 ### <a name="manually-downloading-and-installing-m2repository-files"></a>Baixando e Instalando manualmente arquivos m2repository
 
@@ -133,7 +125,7 @@ Unzipping failed. Please download https://dl-ssl.google.com/android/repository/a
 
 Use as etapas a seguir para baixar o **m2repository** e instalar seu conteúdo:
 
-1. Exclua o conteúdo da pasta de biblioteca correspondente à mensagem de erro. Por exemplo, na mensagem de erro acima, você excluiria o conteúdo **de C\\:\\Users\\***nome_do_usuário***\\AppData\\local\\Xamarin Android. support. v423.1.1.0\\** . 
+1. Exclua o conteúdo da pasta de biblioteca correspondente à mensagem de erro. Por exemplo, na mensagem de erro acima, você excluiria o conteúdo de **C\\:\\Users\\***nome_do_usuário***\\AppData\\local\\Xamarin Android. support. v423.1.1.0\\** . 
     Conforme descrito anteriormente, você deve excluir todo o conteúdo deste diretório:
 
     [![Excluindo pastas de conteúdo, inseridas e android_m2repository da pasta 23.1.1.0](resolving-library-installation-errors-images/04-delete-contents-vs.png)](resolving-library-installation-errors-images/04-delete-contents-vs.png#lightbox)
@@ -144,7 +136,7 @@ Use as etapas a seguir para baixar o **m2repository** e instalar seu conteúdo:
 
     [![pasta m2repository encontrada no arquivo zip extraído](resolving-library-installation-errors-images/05-m2repository-vs.png)](resolving-library-installation-errors-images/05-m2repository-vs.png#lightbox)
 
-4. No diretório de biblioteca com versão que você limpou na etapa 1, crie novamente o **conteúdo** e os subdiretórios **inseridos** . Por exemplo, a captura de tela a seguir ilustra o **conteúdo** e os subdiretórios **inseridos** que estão sendo criados na pasta **23.1.1.0** para **\_Android m2repository\_R25. zip**: 
+4. No diretório de biblioteca com versão que você limpou na etapa 1, crie novamente o **conteúdo** e os subdiretórios **inseridos** . Por exemplo, a captura de tela a seguir ilustra o **conteúdo** e os subdiretórios **inseridos** que estão sendo criados na pasta **23.1.1.0** para **Android\_m2repository\_R25. zip**: 
 
     [![Criar conteúdo e pastas inseridas na pasta 23.1.1.0](resolving-library-installation-errors-images/06-recreate-folders-vs.png)](resolving-library-installation-errors-images/06-recreate-folders-vs.png#lightbox)
 
@@ -166,8 +158,6 @@ Use as etapas a seguir para baixar o **m2repository** e instalar seu conteúdo:
     No macOS, descompacte o arquivo **. aar** usando o comando **unzip** no terminal (por exemplo, **unzip File. aar**).
 
 Neste ponto, você instalou manualmente os componentes ausentes e seu projeto deve compilar sem erros. Caso contrário, verifique se você baixou a versão de arquivo **m2repository** **. zip** que corresponde exatamente à versão na mensagem de erro e verifique se você instalou seu conteúdo nos locais corretos, conforme descrito nas etapas acima. 
-
-
 
 ## <a name="summary"></a>Resumo 
 

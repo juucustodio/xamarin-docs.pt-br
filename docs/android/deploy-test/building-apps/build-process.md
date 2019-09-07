@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/22/2019
-ms.openlocfilehash: 84910bd499aa6894d86778a9bc4eb1467f063134
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: c331747677ee56f87458f51ef36a9bb2034beab1
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70225743"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70754257"
 ---
 # <a name="build-process"></a>Processo de build
 
@@ -44,7 +44,6 @@ O *Fast Deployment* trabalha em conjunto com o tempo de execução compartilhado
 O Fast Deployment reconhecidamente falha em dispositivos que bloqueiam a sincronização de `adb` ao diretório `/data/data/@PACKAGE_NAME@/files/.__override__`.
 
 O Fast Deployment é habilitado por padrão e pode ser desabilitado em builds de depuração, definindo a propriedade `$(EmbedAssembliesIntoApk)` para `True`.
-
 
 ## <a name="msbuild-projects"></a>Projetos do MSBuild
 
@@ -128,7 +127,6 @@ Propriedades de instalação controlam o comportamento dos destinos `Install` e 
   # Use `/Library/Frameworks/Mono.framework/Commands/msbuild` on OS X
   MSBuild /t:Install ProjectName.csproj /p:AdbTarget=-e
   ```
-
 
 ### <a name="packaging-properties"></a>Propriedades de empacotamento
 
@@ -530,7 +528,6 @@ As [Propriedades de Assinatura](#Signing_Properties) também são relevantes ao 
 
   - **West**: incluir codificações ocidentais, como *europeu ocidental (Mac)* \[macintosh, CP10000\], *islandês (Mac)* \[x-mac-islandês, CP10079\], *Centro-europeu (Windows)* \[iso-8859-2, CP1250\], *europeu ocidental (Windows)* \[iso-8859-1, CP1252\], *grego (Windows)* \[iso-8859-7, CP1253\], *Centro-europeu (ISO)* \[iso 8859-2, CP28592\], *latim 3 (ISO)* \[iso-8859-3, CP28593\], *grego (ISO)* \[iso-8859-7, CP28597\], *latim 9 (ISO)* \[iso-8859-15, CP28605\], *OEM Estados Unidos* \[CP437\], *Europeu Ocidental (DOS)* \[CP850\], *português (DOS)* \[CP860\], *islandês (DOS)* \[CP861\], *francês canadense (DOS)* \[CP863\] e *nórdico (DOS)* \[CP865\].
 
-
   ```xml
   <MandroidI18n>West</MandroidI18n>
   ```
@@ -548,7 +545,6 @@ As seguintes propriedades de MSBuild são usadas com [projetos de associação](
 - **AndroidClassParser** &ndash; uma propriedade de cadeia de caracteres que controla como os arquivos `.jar` são analisados. Os possíveis valores incluem:
 
   - **class-parse**: usa `class-parse.exe` para analisar o código de bytes Java diretamente, sem a assistência de uma JVM. Esse valor é experimental.
-
 
   - **jar2xml**: usa `jar2xml.jar` para usar a reflexão do Java para extrair tipos e membros de um arquivo `.jar`.
 
@@ -579,7 +575,6 @@ As seguintes propriedades de MSBuild são usadas com [projetos de associação](
     - Cache em `jmethodID` de construtores do Java Callable Wrapper para subclasses gerenciadas.
 
     O valor padrão é `XAJavaInterop1`.
-
 
 ### <a name="resource-properties"></a>Propriedades de recurso
 
@@ -680,13 +675,11 @@ Para usar o armazenamento de chaves gerado acima, use o grupo de propriedades:
 
 *Ações de build* são [aplicadas a arquivos](https://docs.microsoft.com/visualstudio/msbuild/common-msbuild-project-items) dentro do projeto e controlam como o arquivo é processado.
 
-
 ### <a name="androidaarlibrary"></a>AndroidAarLibrary
 
 A ação do build de `AndroidAarLibrary` deve ser usada para referenciar diretamente a arquivos .aar. Essa ação do build será mais usada pelos componentes do Xamarin. Especificamente para incluir referências aos arquivos .aar que são necessários para que a Google Play e outros serviços funcionem.
 
 Os arquivos com essa ação do build serão tratados de forma semelhante aos recursos inseridos encontrados em projetos de biblioteca. Os arquivos .aar serão extraídos para o diretório intermediário. Em seguida, todos os ativos, recursos e arquivos .jar serão incluídos nos grupos de itens adequados.
-
 
 ### <a name="androidboundlayout"></a>AndroidBoundLayout
 
@@ -696,7 +689,6 @@ Indica que o code-behind deverá ser gerado para o arquivo de layout quando a pr
 <AndroidBoundLayout Include="Resources\layout\Main.axml" />
 ```
 
-
 <a name="AndroidEnvironment" />
 
 ### <a name="androidenvironment"></a>AndroidEnvironment
@@ -704,28 +696,23 @@ Indica que o code-behind deverá ser gerado para o arquivo de layout quando a pr
 Arquivos com uma ação de build `AndroidEnvironment` são usados para [inicializar variáveis de ambiente e propriedades do sistema durante a inicialização do processo](~/android/deploy-test/environment.md).
 A ação de build `AndroidEnvironment` pode ser aplicada a vários arquivos, e eles serão avaliados sem nenhuma ordem específica (então não especifique a mesma propriedade de sistema ou variável de ambiente em vários arquivos).
 
-
 ### <a name="androidfragmenttype"></a>AndroidFragmentType
 
 Especifica o tipo totalmente qualificado de padrão a ser usado para todos os elementos de layout `<fragment>` ao gerar o código de associações de layout. O padrão da propriedade é o tipo `Android.App.Fragment` do Android.
-
 
 ### <a name="androidjavalibrary"></a>AndroidJavaLibrary
 
 Arquivos com uma ação de build `AndroidJavaLibrary` são arquivos Java (arquivos `.jar`) que serão incluídos no pacote do Android final.
 
-
 ### <a name="androidjavasource"></a>AndroidJavaSource
 
 Arquivos com uma ação de build `AndroidJavaSource` são código-fonte do Java que será incluído no pacote do Android final.
-
 
 ### <a name="androidlintconfig"></a>AndroidLintConfig
 
 A ação de build 'AndroidLintConfig' deve ser usada em conjunto com a propriedade de build `AndroidLintEnabled`. Os arquivos com essa ação de build serão mesclados e passados para as ferramentas `lint` do Android. Eles deverão ser arquivos XML que contenham informações sobre quais testes devem ser habilitados e desabilitados.
 
 Confira a [documentação do lint](https://developer.android.com/studio/write/lint) para obter mais detalhes.
-
 
 ### <a name="androidnativelibrary"></a>AndroidNativeLibrary
 
@@ -738,7 +725,6 @@ Observe que, como o Android é compatível com várias ABIs (interfaces binária
 
 Com a detecção de caminho, o nome do diretório pai da biblioteca nativa é usado para especificar a ABI usada como destino pela biblioteca. Portanto, se você adicionar `lib/armeabi-v7a/libfoo.so` ao build, em a ABI será "detectada" como `armeabi-v7a`.
 
-
 #### <a name="item-attribute-name"></a>Nome de atributo de item
 
 **Abi** &ndash; especifica a ABI da biblioteca nativa.
@@ -750,7 +736,6 @@ Com a detecção de caminho, o nome do diretório pai da biblioteca nativa é us
   </AndroidNativeLibrary>
 </ItemGroup>
 ```
-
 
 ### <a name="androidresource"></a>AndroidResource
 
@@ -789,18 +774,15 @@ Usuários mais avançados talvez queiram usar diferentes recursos em configuraç
 </ItemGroup>
 ```
 
-
 ### <a name="content"></a>Conteúdo
 
 A ação de build `Content` normal não é compatível (pois ainda não descobrimos como dar suporte a ela sem uma etapa de primeira execução de custo possivelmente alto).
 
 Começando com o Xamarin.Android 5.1, tentar usar a ação de build `@(Content)` resultará em um aviso `XA0101`.
 
-
 ### <a name="linkdescription"></a>LinkDescription
 
 Arquivos com uma ação de build *LinkDescription* são usados para [controlar o comportamento do vinculador](~/cross-platform/deploy-test/linker.md).
-
 
 <a name="ProguardConfiguration" />
 
@@ -809,7 +791,6 @@ Arquivos com uma ação de build *LinkDescription* são usados para [controlar o
 Arquivos com uma ação de build *ProguardConfiguration* contêm opções que são usadas para controlar o comportamento de `proguard`. Para obter mais informações sobre essa ação de build, consulte [ProGuard](~/android/deploy-test/release-prep/proguard.md).
 
 Esses arquivos são ignorados, a menos que a propriedade `$(EnableProguard)` do MSBuild seja `True`.
-
 
 ## <a name="target-definitions"></a>Definições de destino
 

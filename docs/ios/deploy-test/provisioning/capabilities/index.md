@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 05/06/2018
-ms.openlocfilehash: 6014bb0889c84c35edc991011bae46065d4ff8d7
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: d7a2f14b55d9f8de2ea01bdfa5c68c5c9f8f2555
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70287108"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70756145"
 ---
 # <a name="working-with-capabilities-in-xamarinios"></a>Trabalhando com recursos no Xamarin.iOS
 
@@ -113,7 +113,6 @@ As funcionalidades são adicionadas ao arquivo **Entitlements.plist**. Para adic
 
 -----
 
-
 <a name="devcenter" />
 
 ## <a name="using-the-developer-center"></a>Usando a Central de Desenvolvedores
@@ -146,7 +145,6 @@ Usar a central de desenvolvedores é um processo de duas etapas que requer a cri
     ![Confirmação de ID do aplicativo](images/image9.png)
 
 9. Clique em **Registrar** e em **Concluído**. A ID do aplicativo recém-criada deve ser exibida na lista de IDs do aplicativo iOS.
-
 
 <a name="provisioningprofile" />
 

@@ -6,12 +6,12 @@ ms.assetid: C7E6E54D-3957-407D-BB87-22B095148C6B
 author: conceptdev
 ms.author: crdun
 ms.date: 05/08/2018
-ms.openlocfilehash: 3b940199a1384540bcc9f7134dabf8b69ac3767e
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: de70eda2898f29a1e7afed9440d5f5fae496e069
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70285008"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70765108"
 ---
 # <a name="general-frequently-asked-questions"></a>Perguntas frequentes gerais
 
@@ -42,7 +42,6 @@ Há vários componentes Google Play Services e pacotes NuGet, mas para facilitar
 ### <a name="where-are-the-components-stored-on-my-machinecomponent-storagemd"></a>[Onde meus componentes são armazenados no meu computador?](component-storage.md)
 Sempre que você instala um componente do Xamarin em um projeto de aplicativo, ele é colocado nos dois locais listados neste guia.
 
-
 ## <a name="troubleshooting"></a>Solução de problemas
 ### <a name="where-can-i-find-my-version-information-and-logsversion-logsmd"></a>[Onde posso encontrar informações e logs da minha versão?](version-logs.md)
 Este guia fornece detalhes sobre onde encontrar a maioria das informações de diagnóstico que podem ser usadas para solucionar problemas com o Xamarin.
@@ -55,4 +54,3 @@ Jenkins é um pacote de CI de código-fonte aberto; por causa dessa quantidade d
 
 ### <a name="what-project-settings-are-required-for-the-debuggerdebugger-settingsmd"></a>[Quais configurações do projeto são necessárias para o depurador?](debugger-settings.md)
 Para que o depurador funcione conforme o esperado (pontos de interrupção de acesso, exibir logs de depuração etc.), a instrumentação do desenvolvedor e a exibição de informações de depuração devem ser habilitadas. Este guia fornece detalhes sobre como localizar e ativar essas configurações.
-

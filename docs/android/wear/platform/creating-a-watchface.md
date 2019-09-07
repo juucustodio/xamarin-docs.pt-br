@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/23/2018
-ms.openlocfilehash: a3b38a77f045c17b66c65a14eda32f5a7fcd5fc5
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: a6dfab949eb19708f69d838a7c792f2e7bbd76b3
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522245"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70758510"
 ---
 # <a name="creating-a-watch-face"></a>Como criar um mostrador de relógio
 
@@ -41,7 +41,6 @@ Para implementar um serviço Watch face, é necessário o seguinte:
 
 Embora o Android 5,0 seja o nível mínimo de API para implementar um serviço Watch face, o Android 5,1 ou posterior é recomendado. Dispositivos Android que executam o Android 5,1 (API 22) ou superior permitem que aplicativos de desgaste controlem o que é exibido na tela enquanto o dispositivo está no modo de *ambiente* de baixa energia. Quando o dispositivo deixa o modo de *ambiente* de baixa energia, ele está no modo *interativo* . Para obter mais informações sobre esses modos, consulte [mantendo seu aplicativo visível](https://developer.android.com/training/wearables/apps/always-on.html).
 
-
 ## <a name="start-an-app-project"></a>Iniciar um projeto de aplicativo
 
 Crie um novo projeto do Android desgaste 1,0 chamado **WatchFace** (para obter mais informações sobre como criar novos projetos do Xamarin. Android, consulte [Olá, Android](~/android/get-started/hello-android/hello-android-quickstart.md)):
@@ -55,7 +54,6 @@ Crie um novo projeto do Android desgaste 1,0 chamado **WatchFace** (para obter m
 [![Caixa de diálogo novo projeto](creating-a-watchface-images/03-wear-project-xs-sml.png "Selecionar aplicativo de desgaste na caixa de diálogo novo projeto")](creating-a-watchface-images/03-wear-project-xs.png#lightbox)
 
 -----
-
 
 Defina o nome do pacote `com.xamarin.watchface`como:
 
@@ -86,7 +84,6 @@ Além disso, habilite as permissões de **Internet** e **WakeLock** :
 
 Em seguida, baixe [Preview. png](creating-a-watchface-images/preview.png) &ndash; . isso será adicionado à pasta **drawables** mais adiante neste passo a passos.
 
-
 ## <a name="add-the-xamarinandroid-wear-package"></a>Adicionar o pacote de desgaste do Xamarin. Android
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
@@ -107,13 +104,11 @@ Inicie o Gerenciador de pacotes NuGet (em Visual Studio para Mac, clique com o b
 
 -----
 
-
 Compilar e executar o aplicativo em um dispositivo ou emulador de desgaste (para obter mais informações sobre como fazer isso, consulte o guia de [introdução](~/android/wear/get-started/index.md) ). Você deverá ver a seguinte tela de aplicativo no dispositivo de desgaste:
 
 [![Captura de tela do aplicativo](creating-a-watchface-images/08-app-screen.png "Tela de aplicativo no dispositivo de desgaste")](creating-a-watchface-images/08-app-screen.png#lightbox)
 
 Neste ponto, o aplicativo de desgaste básico não tem a funcionalidade de relógio de inspeção porque ainda não fornece uma implementação de serviço de inspeção. Esse serviço será adicionado em seguida.
-
 
 ## <a name="canvaswatchfaceservice"></a>CanvasWatchFaceService
 
@@ -135,14 +130,13 @@ Nas seções a seguir, um serviço de face de inspeção personalizado será cri
 
 4. No `MyWatchFaceEngine`, implemente `OnCreate` o método para criar o estilo facial de inspeção e executar outras tarefas de inicialização.
 
-5. Implemente `OnDraw` o método `MyWatchFaceEngine`de. Esse método é chamado sempre que a face de inspeção precisa ser redesenhada (ouseja, invalidada). `OnDraw`é o método que desenha (e redesenha) inspecionar elementos de face, como hora, minuto e segundo, mãos.
+5. Implemente `OnDraw` o método `MyWatchFaceEngine`de. Esse método é chamado sempre que a face de inspeção precisa ser redesenhada (ou seja, *invalidada*). `OnDraw`é o método que desenha (e redesenha) inspecionar elementos de face, como hora, minuto e segundo, mãos.
 
 6. Implemente `OnTimeTick` o método `MyWatchFaceEngine`de.
     `OnTimeTick`é chamado pelo menos uma vez por minuto (nos modos de ambiente e interativo) ou quando a data/hora foi alterada.
 
 Para obter mais informações `CanvasWatchFaceService`sobre o, consulte a documentação da API do Android [CanvasWatchFaceService](https://developer.android.com/reference/android/support/wearable/watchface/CanvasWatchFaceService.html) .
 Da mesma forma, [CanvasWatchFaceService. Engine](https://developer.android.com/reference/android/support/wearable/watchface/CanvasWatchFaceService.Engine.html) explica a implementação real da face Watch.
-
 
 ### <a name="add-the-canvaswatchfaceservice"></a>Adicionar o CanvasWatchFaceService
 
@@ -190,7 +184,6 @@ namespace WatchFace
 
 `MyWatchFaceEngine`é a implementação &ndash; da face de inspeção real que contém o código que desenha a face de inspeção. Ele também manipula eventos do sistema, como alterações de tela (modos de ambiente/interativo, ativação de tela, etc.).
 
-
 ### <a name="implement-the-engine-oncreate-method"></a>Implementar o método OnCreate do mecanismo
 
 O `OnCreate` método inicializa a face de inspeção. Adicione o seguinte campo a `MyWatchFaceEngine`:
@@ -232,7 +225,6 @@ Para obter mais informações sobre essas e outras opções de estilo facial de 
 
 Após a conclusão de `SetWatchFaceStyle` , o `OnCreate` cria uma instância do objeto `Paint` (`hoursPaint`) e define sua cor como branco e seu tamanho de texto como 48 pixels (o [TEXTSIZE](https://developer.android.com/reference/android/graphics/Paint.html#setTextSize%28float%29) deve ser especificado em pixels).
 
-
 ### <a name="implement-the-engine-ondraw-method"></a>Implementar o método OnDraw do mecanismo
 
 O `OnDraw` método é talvez o método &ndash; mais `CanvasWatchFaceService.Engine` importante é o método que realmente desenha os elementos de face de superfície, como dígitos e mãos de relógio.
@@ -253,7 +245,6 @@ Quando o Android `OnDraw`chama, ele passa em `Canvas` uma instância e os limite
 
 Para obter mais informações sobre `OnDraw` o método, consulte a documentação da API [onDraw](https://developer.android.com/reference/android/support/wearable/watchface/CanvasWatchFaceService.Engine#ondraw) do Android.
 
-
 ### <a name="implement-the-engine-ontimetick-method"></a>Implementar o método OnTimeTick do mecanismo
 
 O Android chama periodicamente o `OnTimeTick` método para atualizar o tempo mostrado pela face de inspeção. Ele é chamado pelo menos uma vez por minuto (nos modos de ambiente e interativo) ou quando a data/hora ou o fuso horário foram alterados. Adicione o seguinte método a `MyWatchFaceEngine`:
@@ -268,7 +259,6 @@ public override void OnTimeTick()
 Essa implementação `OnTimeTick` simplesmente chama `Invalidate`. O `Invalidate` método agenda `OnDraw` para redesenhar a face de inspeção.
 
 Para obter mais informações sobre `OnTimeTick` o método, consulte a documentação da API do Android [onTimeTick](https://developer.android.com/reference/android/support/wearable/watchface/WatchFaceService.Engine.html#onTimeTick()) .
-
 
 ## <a name="register-the-canvaswatchfaceservice"></a>Registrar o CanvasWatchFaceService
 
@@ -306,7 +296,6 @@ Esse XML faz o seguinte:
 
 Isso conclui o código para o exemplo básico `WatchFace` . A próxima etapa é adicionar os recursos necessários.
 
-
 ## <a name="add-resource-files"></a>Adicionar arquivos de recurso
 
 Para poder executar o serviço Watch, você deve adicionar o recurso **watch_face** e a imagem de visualização. Primeiro, crie um novo arquivo XML em **Resources/XML/watch_face. xml** e substitua seu conteúdo pelo seguinte XML:
@@ -333,7 +322,6 @@ Esse arquivo de recurso define um `wallpaper` elemento simples que será usado p
 Se você ainda não tiver feito isso, baixe [Preview. png](creating-a-watchface-images/preview.png).
 Instale-o em **recursos/empates/Preview. png**. Certifique-se de adicionar esse arquivo ao `WatchFace` projeto. Essa imagem de visualização é exibida para o usuário no seletor de face de inspeção no dispositivo de desgaste. Para criar uma imagem de visualização para sua própria face de inspeção, você pode tirar uma captura de tela da face de inspeção enquanto ela está em execução. (Para obter mais informações sobre como obter capturas de tela de dispositivos de desgaste, consulte [tirando capturas de tela](~/android/wear/deploy-test/debug-on-device.md#screenshots)).
 
-
 ## <a name="try-it"></a>Experimente!
 
 Crie e implante o aplicativo no dispositivo de desgaste. Você deve ver a tela de aplicativo de desgaste aparecer como antes. Faça o seguinte para habilitar a nova face de inspeção:
@@ -359,7 +347,6 @@ No entanto, ele implementa a funcionalidade básica que é necessária para cria
 
 Na próxima seção, essa face de inspeção será atualizada para uma implementação mais sofisticada.
 
-
 ## <a name="upgrading-the-watch-face"></a>Atualizando a face do relógio
 
 No restante deste passo a passos, `MyWatchFaceService` o é atualizado para exibir uma face de inspeção de estilo analógico e é estendido para dar suporte a mais recursos. Os seguintes recursos serão adicionados para criar o rosto de inspeção atualizado:
@@ -376,7 +363,6 @@ No restante deste passo a passos, `MyWatchFaceService` o é atualizado para exib
 
 Antes de implementar as alterações de código abaixo, baixe [drawed. zip](https://github.com/xamarin/monodroid-samples/blob/master/wear/WatchFace/Resources/drawable.zip?raw=true), descompacte-o e mova os arquivos. png descompactados para **recursos/desenháveis** (substitua a **visualização anterior. png**). Adicione os novos arquivos. png ao `WatchFace` projeto.
 
-
 ### <a name="update-engine-features"></a>Recursos do mecanismo de atualização
 
 A próxima etapa é atualizar **MyWatchFaceService.cs** para uma implementação que desenha uma face de inspeção analógica e dá suporte a novos recursos. Substitua o conteúdo de **MyWatchFaceService.cs** pela versão analógica do código de rosto de inspeção em [MyWatchFaceService.cs](https://github.com/xamarin/monodroid-samples/blob/master/wear/WatchFace/WatchFace/MyWatchFaceService.cs) (você pode recortar e colar essa fonte no **MyWatchFaceService.cs**existente).
@@ -387,7 +373,7 @@ Esta versão do **MyWatchFaceService.cs** adiciona mais código aos métodos exi
 
 O método **OnCreate** atualizado configura o estilo facial de inspeção como antes, mas inclui algumas etapas adicionais:
 
-1. Define a imagem de plano de fundo para o recurso **xamarin_background** que reside em Resources **/Drawable-hdpi/xamarin_background. png**.
+1. Define a imagem de plano de fundo para o recurso **xamarin_background** que reside em **Resources/Drawable-hdpi/xamarin_background. png**.
 
 2. Inicializa `Paint` objetos para desenhar a hora, o minuto e a segunda mão.
 
@@ -413,13 +399,11 @@ O método **OnDraw** atualizado desenha uma face de inspeção de estilo analóg
 
 6. Desenha cada mão na superfície de inspeção. Observe que a segunda mão não será desenhada se a inspeção estiver no modo ambiente.
 
-
 #### <a name="onpropertieschanged"></a>Onpropertieschanged
 
 Esse método é chamado para informar `MyWatchFaceEngine` as propriedades do dispositivo de desgaste (como o modo ambiente de baixo bit e a proteção de Burn-in). No `MyWatchFaceEngine`, esse método verifica apenas o modo de ambiente de bit baixo (no modo de ambiente de bit baixo, a tela dá suporte a menos bits para cada cor).
 
 Para obter mais informações sobre esse método, consulte a documentação da API do Android [onpropertieschanged](https://developer.android.com/reference/android/support/wearable/watchface/WatchFaceService.Engine.html#onPropertiesChanged%28android.os.Bundle%29).
-
 
 #### <a name="onambientmodechanged"></a>OnAmbientModeChanged
 
@@ -427,13 +411,11 @@ Esse método é chamado quando o dispositivo de desgaste entra ou sai do modo de
 
 Para obter mais informações sobre esse método, consulte a documentação da API do Android [onAmbientModeChanged](https://developer.android.com/reference/android/support/wearable/watchface/WatchFaceService.Engine.html#onAmbientModeChanged%28boolean%29) .
 
-
 #### <a name="onvisibilitychanged"></a>OnVisibilityChanged
 
 Esse método é chamado sempre que a inspeção se torna visível ou oculta. No `MyWatchFaceEngine`, esse método registra/cancela o registro do receptor de fuso horário (descrito abaixo) de acordo com o estado de visibilidade.
 
 Para obter mais informações sobre esse método, consulte a documentação da API do Android [onvisibilidadechanged](https://developer.android.com/reference/android/support/wearable/watchface/WatchFaceService.Engine.html#onVisibilityChanged%28boolean%29).
-
 
 ### <a name="time-zone-feature"></a>Recurso de fuso horário
 
@@ -485,11 +467,9 @@ Crie e implante o aplicativo no dispositivo de desgaste novamente. Selecione a f
 
 Nesta captura de tela, a segunda mão é movida uma vez por segundo. Quando você executa esse código em um dispositivo de desgaste, a segunda mão desaparece quando o relógio entra no modo ambiente.
 
-
 ## <a name="summary"></a>Resumo
 
 Neste tutorial, um watchface de desgaste do Android 1,0 personalizado foi implementado e testado. As `CanvasWatchFaceService` classes `CanvasWatchFaceService.Engine` e foram introduzidas, e os métodos essenciais da classe Engine foram implementados para criar uma face de inspeção digital simples. Essa implementação foi atualizada com mais funcionalidade para criar uma face de inspeção analógica, e métodos adicionais foram implementados para lidar com alterações de visibilidade, modo ambiente e diferenças nas propriedades do dispositivo. Por fim, um receptor de difusão de fuso horário foi implementado para que o relógio atualize automaticamente a hora em que um fuso horário é ultrapassado.
-
 
 ## <a name="related-links"></a>Links relacionados
 

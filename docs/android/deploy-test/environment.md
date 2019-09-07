@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/15/2018
-ms.openlocfilehash: 14be0fec50138aed7b2b3e8d48d49cad86abbb2b
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
-ms.translationtype: HT
+ms.openlocfilehash: 80e338319e4eeddcb3df287f86bcf89397d423f1
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70119423"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70754035"
 ---
 # <a name="xamarinandroid-environment"></a>Ambiente do Xamarin.Android
 
@@ -41,7 +41,6 @@ Se a *chave* começar com uma letra minúscula, então a *chave* será tratada c
 ## <a name="xamarinandroid-environment-variables"></a>Variáveis de ambiente do Xamarin.Android
 
 O Xamarin.Android é compatível com a variável `XA_HTTP_CLIENT_HANDLER_TYPE`, que pode ser definida por meio de `adb shell setprop debug.mono.env` ou por meio da ação de build `$(AndroidEnvironment)`.
-
 
 ### `XA_HTTP_CLIENT_HANDLER_TYPE`
 
@@ -100,7 +99,6 @@ Controla quais informações adicionais o Xamarin.Android registrará em `adb lo
     Evite isso.
 - `timing`: imprimir algumas informações de tempo de método. Isso também criará os arquivos `.__override__/methods.txt` e `.__override__/counters.txt`.
 
-
 ### `debug.mono.max_grefc`
 
 O valor da propriedade do sistema `debug.mono.max_grefc` é um inteiro.
@@ -151,13 +149,11 @@ XA_HTTP_CLIENT_HANDLER_TYPE=Xamarin.Android.Net.AndroidClientHandler
 > O dispositivo Android subjacente deve ser compatível com TLS 1.2.
 O Android 5.0 e versões posteriores dão suporte à TLS 1.2
 
-
 ## <a name="example"></a>Exemplo
 
 ```shell
 ## Comments are lines which start with '#'
 ## Blank lines are ignored.
-
 
 ## Enable GREF messages to `adb logcat`
 debug.mono.log=gref
@@ -165,8 +161,6 @@ debug.mono.log=gref
 ## Clear out a Mono environment variable to decrease logging
 MONO_LOG_LEVEL=
 ```
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

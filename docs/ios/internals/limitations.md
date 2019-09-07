@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 04/09/2018
-ms.openlocfilehash: 1d6f4dc20a32810bb218ce3aa2281fa1355a584d
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 83c71ebf844102a7d3a16969868f187237fb0d04
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291898"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70753337"
 ---
 # <a name="limitations-of-xamarinios"></a>Limitações do Xamarin. iOS
 
@@ -21,7 +21,6 @@ Como os aplicativos que usam o Xamarin. iOS são compilados no código estático
 Essas são as limitações do Xamarin. iOS em comparação com o mono da área de trabalho:
 
  <a name="Limited_Generics_Support" />
-
 
 ## <a name="limited-generics-support"></a>Suporte a genéricos limitados
 
@@ -32,7 +31,6 @@ A tecnologia [AOT completa](https://www.mono-project.com/docs/advanced/aot/#full
 Alguns dos problemas comuns que os desenvolvedores executam, incluem:
 
  <a name="Generic_Subclasses_of_NSObjects_are_limited" />
-
 
 ### <a name="generic-subclasses-of-nsobjects-are-limited"></a>As subclasses genéricas de NSObjects são limitadas
 
@@ -47,9 +45,7 @@ class Foo<T> : UIView {
 > [!NOTE]
 > Embora as subclasses genéricas de NSObjects sejam possíveis, há algumas limitações. Ler as [subclasses genéricas do documento NSObject](~/ios/internals/api-design/nsobject-generics.md) para obter mais informações
 
-
  <a name="No_Dynamic_Code_Generation" />
-
 
 ## <a name="no-dynamic-code-generation"></a>Nenhuma geração de código dinâmico
 
@@ -60,10 +56,7 @@ Como o kernel do iOS impede que um aplicativo gere código dinamicamente, o Xama
 - Não há suporte para a criação dinâmica de tipos (sem Type. GetType ("com MyType ' 1")), embora a pesquisa de tipos existentes (Type. GetType ("System. String"), por exemplo, funcione bem).
 - Retornos de chamada invertidos devem ser registrados com o tempo de execução no momento da compilação.
 
-
-
  <a name="System.Reflection.Emit" />
-
 
 ### <a name="systemreflectionemit"></a>System.Reflection.Emit
 
@@ -72,7 +65,6 @@ A falta de System. Reflection. **Emissão** significa que nenhum código que dep
 - O tempo de execução de linguagem dinâmica.
 - Quaisquer linguagens criadas com base no tempo de execução de linguagem dinâmica.
 - TransparentProxy de comunicação remota ou qualquer outra coisa que cause o tempo de execução para gerar código dinamicamente.
-
 
   > [!IMPORTANT]
   > Não confunda **Reflection. Emit** com **reflexão**. Reflection. Emit é sobre a geração dinâmica de código e o código compilado em JIT e compilado para código nativo. Devido às limitações no iOS (sem compilação JIT), não há suporte para isso.
@@ -94,7 +86,6 @@ System.ExecutionEngineException: Attempting to JIT compile method '(wrapper mana
 
  <a name="Reverse_Callbacks" />
 
-
 ### <a name="reverse-callbacks"></a>Retornos de chamada reverso
 
 Em mono padrão, é possível passar C# instâncias delegadas para código não gerenciado no lugar de um ponteiro de função. Normalmente, o tempo de execução transforma esses ponteiros de função em uma conversão pequena que permite que um código não gerenciado chame de volta para código gerenciado.
@@ -110,9 +101,7 @@ No mono, essas pontes são implementadas pelo compilador just-in-time. Ao usar o
 
 A pilha de comunicação remota não está disponível no Xamarin. iOS.
 
-
  <a name="Runtime_Disabled_Features" />
-
 
 ## <a name="runtime-disabled-features"></a>Recursos desabilitados para tempo de execução
 
@@ -125,14 +114,10 @@ Os recursos a seguir foram desabilitados no tempo de execução do iOS do mono:
 - O mecanismo JIT
 - Verificador de metadados (já que não há JIT)
 
-
  <a name=".NET_API_Limitations" />
-
 
 ## <a name="net-api-limitations"></a>Limitações da API .NET
 
 A API do .NET exposta é um subconjunto da estrutura completa, já que tudo está disponível no iOS. Consulte as perguntas frequentes para obter uma [lista de assemblies com suporte no momento](~/cross-platform/internals/available-assemblies.md).
-
-
 
 Em particular, o perfil de API usado pelo Xamarin. iOS não inclui System. Configuration, portanto, não é possível usar arquivos XML externos para configurar o comportamento do tempo de execução.

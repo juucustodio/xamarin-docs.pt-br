@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 06/09/2016
-ms.openlocfilehash: 364775ae8e8874d87022b5e45bd23ea29e82382d
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: df91699e0880bfae780b69f4b30be6667e8d64d9
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292418"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70763118"
 ---
 # <a name="using-icloud-with-xamarinios"></a>Usando o iCloud com Xamarin. iOS
 
@@ -63,7 +63,6 @@ Selecione e ative a opção **documentos & dados** .
 - **Você deve usar um dispositivo para testar o iCloud** -ele não funcionará no simulador.
 Na verdade, você realmente precisa de dois ou mais dispositivos conectados com a mesma ID da Apple para ver o iCloud em ação.
 
-
 ## <a name="key-value-storage"></a>Armazenamento de chave-valor
 
 O armazenamento de chave-valor é destinado a pequenas quantidades de dados que um usuário deseja manter entre dispositivos, como a última página que eles exibiram em um livro ou revista. O armazenamento de chave-valor não deve ser usado para fazer backup de dados.
@@ -81,8 +80,6 @@ Há algumas limitações a serem consideradas ao usar o armazenamento de chave-v
 O exemplo **iCloudKeyValue** demonstra como funciona. O código de exemplo cria uma chave chamada para cada dispositivo: você pode definir essa chave em um dispositivo e observar que o valor é propagado para outras pessoas. Ele também cria uma chave chamada "Shared" que pode ser editada em qualquer dispositivo – se você editar em vários dispositivos de uma vez, o iCloud decidirá qual valor "WINS" (usando um carimbo de data/hora na alteração) e será propagado.
 
 Esta captura de tela mostra o exemplo em uso. Quando as notificações de alteração são recebidas do iCloud, elas são impressas na exibição de texto de rolagem na parte inferior da tela e atualizadas nos campos de entrada.
-
-
 
  [![](introduction-to-icloud-images/icloud-kv-arrows.png "O fluxo de mensagens entre dispositivos")](introduction-to-icloud-images/icloud-kv-arrows.png#lightbox)
 
@@ -406,8 +403,6 @@ Os usuários podem gerenciar documentos do iCloud no diretório **documentos** d
 
  [![](introduction-to-icloud-images/icloudstorage.png "Gerenciando fluxo de trabalho de documentos do iCloud")](introduction-to-icloud-images/icloudstorage.png#lightbox)
 
-
-
 Os usuários também receberão avisos diferentes quando tentarem remover um aplicativo habilitado para iCloud de seu dispositivo, para informá-los sobre o status dos documentos do iCloud relacionados a esse aplicativo.
 
  [![](introduction-to-icloud-images/icloud-delete1.png "Caixa de diálogo de exemplo quando o usuário tenta remover um aplicativo habilitado para iCloud de seu dispositivo")](introduction-to-icloud-images/icloud-delete1.png#lightbox)
@@ -430,8 +425,6 @@ Este artigo apresentou o novo recurso iCloud incluído no iOS 5. Ele examinou as
 O exemplo de armazenamento de valor-chave demonstrou como o iCloud pode ser usado para armazenar uma pequena quantidade de dados semelhante à maneira como os NSUserPreferences são armazenados. O exemplo UIDocument mostrou como dados mais complexos podem ser armazenados e sincronizados em vários dispositivos por meio do iCloud.
 
 Por fim, incluía uma breve discussão sobre como a adição do backup do iCloud deve influenciar o design do aplicativo.
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

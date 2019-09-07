@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: b9658aa0a4222fb9d257299ea3c6fd69016abdb4
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
-ms.translationtype: HT
+ms.openlocfilehash: ca27b0ba0f9e434809250a78047f3bd503f80b50
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68646745"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771651"
 ---
 # <a name="xamarinforms-binding-path"></a>Caminho de associação do Xamarin.Forms
 
@@ -162,8 +162,6 @@ O tipo da propriedade `Content` agora é revelado como sendo `Xamarin.Forms.Stac
 Como o Xamarin.Forms processa o caminho de associação, ele instala um manipulador `PropertyChanged` em qualquer objeto no caminho que implementa a interface `INotifyPropertyChanged`. Por exemplo, a associação final reage a uma alteração no primeiro `Label` porque a propriedade `Text` é alterada.
 
 Se uma propriedade no caminho de associação não implementar `INotifyPropertyChanged`, todas as alterações a essa propriedade serão ignoradas. Algumas alterações podem invalidar por completo o caminho de associação. Portanto, você deverá usar essa técnica somente quando a cadeia de caracteres de propriedades e subpropriedades nunca se tornarem inválidas.
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

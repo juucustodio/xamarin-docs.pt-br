@@ -7,12 +7,12 @@ ms.assetid: B62F9487-C30E-4C63-BAB1-4C091FF50378
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
-ms.openlocfilehash: 4e8c909ce7dfd9c8f6dccbf2685ff2658931b6a5
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 74335de66e74f6adc7c9488a1b78c31d36d03f14
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656353"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70759413"
 ---
 # <a name="skiasharp-transparency"></a>Transparência de SkiaSharp
 
@@ -139,7 +139,6 @@ paint.Color = SKColors.Blue.WithAlpha((byte)(0xFF * transparency));
 A animação alterna entre as duas palavras, incitam o usuário "codificar mais" (ou talvez, solicitar "mais código"):
 
 [![Mais código de código](transparency-images/CodeMoreCode.png "mais código de código")](transparency-images/CodeMoreCode-Large.png#lightbox)
-
 
 Neste artigo anterior sobre [ **Noções básicas de Bitmap no SkiaSharp**](bitmaps.md), você viu como exibir bitmaps usando um dos [ `DrawBitmap` ](xref:SkiaSharp.SKCanvas.DrawBitmap*) métodos de `SKCanvas`. Todos os `DrawBitmap` métodos incluem uma `SKPaint` objeto como o último parâmetro. Por padrão, esse parâmetro é definido como `null` e você pode ignorá-lo. 
 

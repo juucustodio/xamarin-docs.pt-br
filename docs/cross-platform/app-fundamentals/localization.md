@@ -6,12 +6,12 @@ ms.assetid: CC6847B2-23FB-4EDE-9F7E-EF29DD46A5C5
 author: conceptdev
 ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: 8ecc0cf0ed1fe77f55044d44ecdfc43d6cb6b448
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: b7dfeee92020be2fb40cfdfc5eb1b97d065b97e9
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70289112"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70758171"
 ---
 # <a name="localization"></a>Localização
 
@@ -44,7 +44,6 @@ Ao projetar e criar um aplicativo, as coisas que você pode ter inserido anterio
 - Classificação de dados.
 
 Independentemente de quais plataformas móveis seu aplicativo se destina a essas dicas ajudará você a criar um aplicativo localizado de alta qualidade.
-
 
 ## <a name="design-considerations"></a>Considerações de design
 
@@ -85,7 +84,6 @@ No entanto, alguns recursos fazem sentido localizar, como:
 - Ícones – alguns iconografia podem ser específicos de cultura e você pode facilitar o uso do seu aplicativo localizando as imagens para refletir a compreensão local.
 - Cores – algumas culturas entendem cores de forma diferente – vermelho pode significar um aviso em uma região, mas boa sorte em outra. Verifique com alto-falantes nativos ao projetar seu aplicativo para determinar se você deve criar um mecanismo para localizar cores.
 
-
 ### <a name="videos-and-sound"></a>Vídeos e som
 
 Vídeos e sons apresentam desafios especiais ao localizar um aplicativo, porque embora seja relativamente fácil obter cadeias de caracteres convertidas, gravar várias faixas de voz ou clipes de vídeo pode ser caro e difícil.
@@ -93,7 +91,6 @@ Vídeos e sons apresentam desafios especiais ao localizar um aplicativo, porque 
 Várias cópias de arquivos de vídeo e de som também podem aumentar significativamente o tamanho do seu aplicativo (especialmente se você estiver localizando em um grande número de idiomas ou tiver muitos arquivos de mídia). Você pode considerar baixar apenas os ativos de idioma necessários depois que o usuário tiver instalado seu aplicativo, mas isso também pode resultar em uma experiência de usuário ruim em redes lentas.
 
 Muitas vezes, há várias maneiras de resolver problemas de localização – o mais importante é considerá-los antecipadamente e garantir que seu aplicativo tenha sido projetado para cuidar deles.
-
 
 ### <a name="dates-times-numbers-and-currency"></a>Datas, horas, números e moeda
 
@@ -144,7 +141,6 @@ Certifique-se de escrever e testar seu algoritmo de pesquisa com vários idiomas
 - Lematização – se sua pesquisa for criada para pesquisar palavras semelhantes, raízes do Word e outras otimizações de pesquisa, serão essas otimizações criadas para todos os idiomas aos quais você dá suporte?
 - Classificação – Verifique se os resultados estão classificados corretamente (veja acima).
 
-
 ### <a name="data-from-external-sources"></a>Dados de fontes externas
 
 Muitos aplicativos baixam dados de fontes externas, do Twitter e RSS feeds para o clima, notícias ou preços de ações. Ao exibi-lo para um usuário, você precisa considerar a possibilidade de exibir uma tela de informações irrelevantes ou ilegíveis.
@@ -157,7 +153,6 @@ Há algumas estratégias que você pode usar para tentar e garantir que seu apli
 
 Isso também pode afetar links externos para faixas de áudio ou vídeos – ao projetar seu aplicativo, não se esqueça de planejar antecipadamente o conteúdo traduzido ou garantir que os usuários sejam adequadamente informados pela interface do usuário quando o conteúdo não for apresentado em seus idioma.
 
-
 ### <a name="dont-over-translate"></a>Não sobretraduzir
 
 Algumas cadeias de caracteres em seu aplicativo podem não precisar de tradução ou, na pior das hipóteses, precisam de atenção especial pelo tradutor. Os exemplos podem incluir:
@@ -169,20 +164,15 @@ Algumas cadeias de caracteres em seu aplicativo podem não precisar de traduçã
 
 Por fim, não se esqueça de incluir instruções detalhadas para o tradutor se determinadas cadeias de caracteres exigirem tratamento especial.
 
-
 ### <a name="formatted-text"></a>Texto formatado
 
 Geralmente não é um problema com aplicativos móveis porque cadeias de caracteres geralmente não são formatadas de forma avançada. No entanto, se o Rich Text (como formatação em negrito ou itálico) for necessário em seu aplicativo, verifique se o tradutor sabe como inserir a formatação, se os arquivos de cadeias de caracteres o armazenam corretamente e se estão formatados corretamente antes de serem exibidos para o usuário (ou seja, não deixe acidentalmente os próprios códigos de formatação são apresentados ao usuário).
-
-
 
 ## <a name="translation-tips"></a>Dicas de tradução
 
 A tradução das cadeias de caracteres usadas por um aplicativo é considerada parte do processo de localização. Normalmente, essa tarefa será terceirizada para um serviço de tradução e executada por uma equipe multilíngue que pode não conhecer seu aplicativo ou sua empresa.
 
 As dicas a seguir ajudarão você a produzir cadeias de caracteres mais fáceis de serem traduzidas com precisão e, portanto, melhorar a qualidade dos seus aplicativos localizados.
-
-
 
 ### <a name="localize-complete-strings-not-words"></a>Localizar cadeias de caracteres completas, não palavras
 
@@ -208,7 +198,6 @@ e tente criar a frase correta imediatamente no código usando a concatenação d
 
 **Isso não é recomendado** porque ele não funciona necessariamente para todas as linguagens e será difícil para o tradutor entender o contexto de cada segmento curto. Ele também leva a reutilização de cadeias de caracteres traduzidas, o que poderá causar problemas posteriormente se eles forem usados em diferentes contextos (e depois forem atualizados).
 
-
 ### <a name="allow-for-parameter-re-ordering"></a>Permitir reordenação de parâmetro
 
 Algumas linguagens de programação exigem sintaxe extra para especificar a ordem dos parâmetros em uma cadeia de caracteres, no entanto, o .NET já dá suporte ao conceito de espaços reservados numerados, portanto
@@ -227,7 +216,6 @@ pode ser traduzido o seguinte (onde a posição e a ordem dos espaços reservado
 
 e os tokens serão ordenados como o tradutor pretendido. Certifique-se de incluir uma explicação do que cada espaço reservado contém ao enviar a cadeia de caracteres para um tradutor.
 
-
 ### <a name="use-multiple-strings-for-cardinality"></a>Usar várias cadeias de caracteres para cardinalidade
 
 Evite cadeias `"You have {0} message/s."` de caracteres como usar cadeias de caracteres específicas para cada Estado para fornecer uma melhor experiência do usuário:
@@ -242,7 +230,6 @@ Evite cadeias `"You have {0} message/s."` de caracteres como usar cadeias de car
 ```
 
 Você precisará escrever código em seu aplicativo para avaliar o número que está sendo exibido e escolher a cadeia de caracteres apropriada. Algumas plataformas (incluindo iOS e Android) têm recursos internos para escolher automaticamente a melhor cadeia de caracteres do plural com base nas preferências do idioma/localidade atual.
-
 
 ### <a name="allowing-for-gender"></a>Permitindo o gênero
 
@@ -294,7 +281,6 @@ Também há serviços profissionais de tradução que utilizarão suas cadeias d
 
 Um dos melhores serviços conhecidos é o [Lionbridge](http://www.lionbridge.com/). A maioria dos serviços profissionais oferece suporte a todos os tipos de arquivo comuns, incluindo cadeias de caracteres, XML, RESX e POT/PO.
 
-
 ## <a name="summary"></a>Resumo
 
 Este artigo introduziu alguns dos conceitos com os quais você deve estar familiarizado antes de internacionalizar seu aplicativo e, em seguida, localizar seus recursos e também abordou como alterar as preferências de idioma de cada plataforma.
@@ -306,8 +292,6 @@ Continue lendo os detalhes técnicos da plataforma em que você está interessad
 - Localização entre plataformas do [Xamarin. Forms](~/xamarin-forms/app-fundamentals/localization/index.md) usando arquivos resx.
 - Localização da plataforma nativa do [Xamarin. Ios](~/ios/app-fundamentals/localization/index.md) .
 - Localização da plataforma nativa do [Xamarin. Android](~/android/app-fundamentals/localization.md) .
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

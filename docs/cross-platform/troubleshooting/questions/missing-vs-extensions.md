@@ -6,12 +6,12 @@ ms.assetid: 066d36a3-e553-48d6-8769-c972274d7641
 author: conceptdev
 ms.author: crdun
 ms.date: 03/20/2017
-ms.openlocfilehash: c81ef4e07a90f09d6e06d0d1f565febfcaacf922
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 180db6789ab9cc665ad815b943013b117a562709
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70288389"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70757065"
 ---
 # <a name="missing-visual-studio-extensions-after-installation"></a>Extensões do Visual Studio ausentes após a instalação
 
@@ -44,7 +44,6 @@ Em determinadas situações, o instalador do Xamarin pode desmarcar automaticame
     `C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\Xamarin\Xamarin\3.1.228.0`
 
     Se as extensões estiverem instaladas corretamente (para a versão 3.1.228), haverá 60 itens na pasta:
-
 
     ![](missing-vs-extensions-images/folder.png "Lista de conteúdo da pasta ' Xamarin\3.1.228.0 ' no Explorer")
 

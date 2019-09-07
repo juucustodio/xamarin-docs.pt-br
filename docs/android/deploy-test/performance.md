@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: d7d6bf128d3814917633bdd69e3c9c54c8d6a20c
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 88e1acecdc96af596a0151bbd3f64dc4547d4cce
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70197507"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70753815"
 ---
 # <a name="xamarinandroid-performance"></a>Desempenho do Xamarin.Android
 
@@ -34,7 +34,6 @@ Há várias técnicas para aumentar o desempenho, bem como o desempenho observad
 - [Descartar os Recursos de Imagem não Utilizados](#disposeimages)
 - [Evitar aritmético de ponto flutuante](#avoidfloats)
 - [Descartar as caixas de diálogo](#dismissdialogs)
-
 
 > [!NOTE]
 > Antes de ler esse artigo, você deve primeiro ler [Desempenho de plataforma cruzada](~/cross-platform/deploy-test/memory-perf-best-practices.md), que discute técnicas que não são específicas a uma plataforma para melhorar o uso de memória e o desempenho de aplicativos criados usando a plataforma Xamarin.
@@ -246,7 +245,6 @@ using (Bitmap smallPic = BitmapFactory.DecodeByteArray(smallImageByte, 0, smallI
 
 Para saber mais sobre a liberação de recursos descartáveis, consulte [Liberar Recursos IDisposable](~/cross-platform/deploy-test/memory-perf-best-practices.md#idisposable).  
 
-
 <a name="avoidfloats" />
 
 ## <a name="avoid-floating-point-arithmetic"></a>Evitar aritmético de ponto flutuante
@@ -265,7 +263,6 @@ Ao usar a classe [`ProgressDialog`](xref:Android.App.ProgressDialog) (ou qualque
 ## <a name="summary"></a>Resumo
 
 Esse artigo descreve e discute técnicas para aumentar o desempenho dos aplicativos criados com o Xamarin.Android. Coletivamente, essas técnicas podem reduzir de forma considerável a quantidade de trabalho que está sendo executado por uma CPU e a quantidade de memória consumida por um aplicativo.
-
 
 ## <a name="related-links"></a>Links relacionados
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 09/07/2017
-ms.openlocfilehash: d4fab992121ad6a2b272012f7249df5ed8427513
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 8983ac0c860dafb3a3a0e4c90bd82bdf87c4c4f8
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70286736"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70752390"
 ---
 # <a name="sirikit-updates-in-ios-11"></a>Atualizações do SiriKit no iOS 11
 
@@ -210,7 +210,6 @@ Com os nomes de aplicativo alternativos definidos, as seguintes frases também f
 - "Faça uma lista de compras com maçãs, bananas e pêras no _MonkeyNotes_"
 - "Adicionar WWDC de tarefas no _MonkeyTodo_"
 
-
 ## <a name="troubleshooting"></a>Solução de problemas
 
 Alguns erros que você pode encontrar ao executar o exemplo ou adicionar SiriKit a seus próprios aplicativos:
@@ -225,7 +224,6 @@ _Exceção de Objective-C lançada.  Nome: Motivo do NSInternalInconsistencyExce
   [![Opções de projeto mostrando direitos definidos corretamente](sirikit-images/set-entitlements-sml.png)](sirikit-images/set-entitlements.png#lightbox)
 
 - (para implantação de dispositivo) A ID do aplicativo tem SiriKit habilitado e perfil de provisionamento baixado.
-
 
 ## <a name="related-links"></a>Links relacionados
 

@@ -7,17 +7,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: 4673b178512a886e5fdb154c57c8d659276bb392
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: d37537f345a1532e38ab4d016cfbd5b26eae8b3a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522331"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70758543"
 ---
 # <a name="tabbed-layouts-with-the-actionbar"></a>Layouts com guias com o ActionBar
 
 _Este guia apresenta e explica como usar as APIs do ActionBar para criar uma interface do usuário com guias em um aplicativo Xamarin. Android._
-
 
 ## <a name="overview"></a>Visão geral
 
@@ -25,15 +24,11 @@ A barra de ação é um padrão de interface do usuário do Android que é usado
 
 Observe que `Toolbar` é um componente de barra de ação mais novo e mais generalizado que você deve `ActionBar` usar`Toolbar` em vez de ( `ActionBar`foi projetado para substituir). Para obter mais informações, consulte [barra de ferramentas](~/android/user-interface/controls/tool-bar/index.md). 
 
-
-
 ## <a name="requirements"></a>Requisitos
 
 Qualquer aplicativo Xamarin. Android voltado para a API de nível 11 (Android 3,0) ou superior tem acesso às APIs ActionBar como parte das APIs nativas do Android. 
 
 Algumas das APIs ActionBar foram portadas de volta para o nível de API 7 (Android 2,1) e estão disponíveis por meio da [biblioteca do v7 AppCompat](https://developer.android.com/tools/support-library/features.html#v7-appcompat), disponibilizada para aplicativos Xamarin. Android por meio do [Xamarin Android support library-v7](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/) Package.
-
-
 
 ## <a name="introducing-tabs-in-the-actionbar"></a>Apresentando as guias no ActionBar
 
@@ -59,8 +54,6 @@ O Xamarin. Android encapsula o `ActionBar.ITabListener` com eventos `ActionBar.T
 - TabReselected
 - TabUnselected
 
-
-
 ### <a name="adding-tabs-to-the-actionbar"></a>Adicionando guias ao ActionBar
 
 O ActionBar é nativo para Android 3,0 (API nível 11) e superior e está disponível para qualquer aplicativo Xamarin. Android que se destinar a essa API como um mínimo. 
@@ -79,7 +72,6 @@ As etapas a seguir ilustram como adicionar guias ActionBar a uma atividade do An
 3. Atribua manipuladores de eventos ou forneça uma `ActionBar.ITabListener` implementação personalizada que responderá aos eventos que são gerados quando o usuário interage com as guias ActionBar.
 
 4. Adicione a guia que foi criada na etapa anterior ao `ActionBar`.
-
 
 O código a seguir é um exemplo do uso dessas etapas para adicionar guias a um aplicativo que usa manipuladores de eventos para responder a alterações de Estado: 
 
@@ -107,14 +99,11 @@ protected override void OnCreate(Bundle bundle)
 }
 ```
 
-
 #### <a name="event-handlers-vs-actionbaritablistener"></a>Manipuladores de eventos vs ActionBar. ITabListener
 
 Os aplicativos devem usar manipuladores de `ActionBar.ITabListener` eventos e para cenários diferentes. Os manipuladores de eventos oferecem uma determinada quantidade de conveniência sintática; Eles evitam que você precise criar uma classe e implementá `ActionBar.ITabListener`-la. Essa conveniência acompanha um Xamarin de custo &ndash; . o Android realiza essa transformação para você, criando uma classe e implementando `ActionBar.ITabListener` para você. Isso é bom quando um aplicativo tem um número limitado de guias. 
 
 Ao lidar com muitas guias ou compartilhar funcionalidades comuns entre guias ActionBar, pode ser mais eficiente em termos de memória e desempenho para criar uma classe personalizada que implementa `ActionBar.ITabListener`e compartilhar uma única instância da classe. Isso reduzirá o número de GREF que um aplicativo Xamarin. Android está usando. 
-
-
 
 ### <a name="backwards-compatibility-for-older-devices"></a>Compatibilidade com versões anteriores para dispositivos mais antigos
 
@@ -171,11 +160,9 @@ public class MainActivity : ActionBarActivity, ActionBar.ITabListener
 }
 ```
 
-
 ## <a name="summary"></a>Resumo
 
 Neste guia, discutimos como criar uma interface do usuário com guias em um Xamarin. Android usando o ActionBar. Abordamos como adicionar guias ao ActionBar e como uma atividade pode interagir com os eventos de guia por meio `ActionBar.ITabListener` da interface. Também vimos como a biblioteca de suporte do Android v7 AppCompat Package reporta as guias ActionBar para versões mais antigas do Android. 
-
 
 ## <a name="related-links"></a>Links relacionados
 

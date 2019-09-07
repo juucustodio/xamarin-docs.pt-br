@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/05/2016
-ms.openlocfilehash: c5271aab5342f065694e598bd5c2892ef1f18aeb
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
-ms.translationtype: HT
+ms.openlocfilehash: 04d96dad455cbcf8360f12ee97a0540e7e746d62
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656667"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771469"
 ---
 # <a name="passing-effect-parameters-as-common-language-runtime-properties"></a>Passando parâmetros de efeito como propriedades de Common Language Runtime
 
@@ -237,7 +237,6 @@ A Plataforma Universal do Windows não fornece um efeito de sombra, de forma que
 ## <a name="summary"></a>Resumo
 
 Este artigo demonstrou como usar propriedades de CLR para passar parâmetros para um efeito. Propriedades de CLR podem ser usadas para definir parâmetros de efeito que não respondem a alterações de propriedade de tempo de execução.
-
 
 ## <a name="related-links"></a>Links relacionados
 

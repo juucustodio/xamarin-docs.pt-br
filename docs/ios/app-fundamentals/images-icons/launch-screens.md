@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 05/02/2018
-ms.openlocfilehash: d0d5452c2b79fb674e473efd50aaf587d64c4544
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 18d33dfcef109fd29f32969b9bdd15b8a2dc475a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290245"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70764047"
 ---
 # <a name="launch-screens-for-xamarinios-apps"></a>Iniciar telas para aplicativos Xamarin. iOS
 
@@ -131,7 +131,7 @@ No iOS 8 (e posterior), o desenvolvedor pode criar um storyboard unificado espec
     - Para editar um arquivo de storyboard, o Visual Studio precisa de uma conexão ativa com um host de Build do Mac. Consulte o guia [conectando-se ao Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md) para obter detalhes.
 
 7. Escolha um dispositivo e uma orientação para visualizar o storyboard da tela de inicialização no designer do iOS. Abra o painel de seleção de dispositivo na barra de ferramentas inferior e selecione **iPhone 4S** e **retrato**: 
- 
+
     ![A barra de ferramentas de seleção de dispositivo](launch-screens-images/launch07-vs.png)
 
     - Observe que a seleção de um dispositivo e orientação altera apenas a forma como o designer do iOS visualiza o design. Independentemente da seleção feita aqui, as restrições adicionadas recentemente são aplicadas em todos os dispositivos e orientações, a menos que o botão **Editar características** tenha sido usado para especificar o contrário. 
@@ -196,7 +196,6 @@ Ao atualizar um aplicativo existente para usar storyboards para suas telas de in
 Em seguida, clique `Info.plist` duas vezes no arquivo no **Gerenciador de soluções** para abri-lo para edição. Na **tela iniciar**, selecione o novo arquivo de storyboard criado acima.
 
 ![](launch-screens-images/storyboard09.png "Selecione o novo arquivo de storyboard criado acima")
-
 
 Para usar o novo storyboard como uma tela de inicialização, faça o seguinte:
 

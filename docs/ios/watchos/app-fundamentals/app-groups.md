@@ -7,15 +7,14 @@ ms.assetid: 6968606B-C287-424F-A321-2492E12BC0BB
 author: conceptdev
 ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: c75db8bd29b7a57c46610abdd5e4024938fc9e1b
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: fec6cef22ddbc47aca0027aa026e0524b38bec4e
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70280324"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768056"
 ---
 # <a name="working-with-watchos-app-groups-in-xamarin"></a>Trabalhando com grupos de aplicativos watchOS no Xamarin
-
 
 Um grupo de aplicativos permite que diferentes aplicativos (ou um aplicativo e suas extensões) acessem um local de armazenamento de arquivo compartilhado. Grupos de aplicativo podem ser usados para dados como:
 
@@ -39,14 +38,11 @@ Além de configurar o perfil de provisionamento, **habilite grupos de aplicativo
 
 [![](app-groups-images/entitlements-sml.png "Configurar o plist e inserir a ID")](app-groups-images/entitlements.png#lightbox)
 
-
 ### <a name="deployment"></a>Implantação
 
 Certifique-se de configurar o grupo de aplicativos corretamente em seu provisionamento de [implantação](~/ios/watchos/deploy-test/index.md#App_Groups) .
 
-
 Para obter mais informações, consulte o [recursos do grupo de aplicativo](~/ios/deploy-test/provisioning/capabilities/app-groups-capabilities.md) documentação.
-
 
 ## <a name="related-links"></a>Links relacionados
 

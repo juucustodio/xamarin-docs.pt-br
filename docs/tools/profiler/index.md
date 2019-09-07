@@ -6,12 +6,12 @@ ms.assetid: 3247fcee-6acc-470d-ab87-c1c511d67363
 author: conceptdev
 ms.author: crdun
 ms.date: 06/03/2018
-ms.openlocfilehash: ca26edc0311de2028af529dc43ea1ffde2383cf4
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 745c59ad50f0e8ad50a8ec56549d99b7b5e72228
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70283660"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70772473"
 ---
 # <a name="xamarin-profiler"></a>Criador de perfil do Xamarin
 
@@ -307,7 +307,6 @@ Com o uso do C# e F# do código gerenciado, ele pode ser bastante comum e, infel
 No momento, somente as configurações de depuração padrão podem ser Profiles.
 
 Se você criar o perfil de um aplicativo com qualquer outra configuração, receberá a seguinte caixa de diálogo de mensagem:
-
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 

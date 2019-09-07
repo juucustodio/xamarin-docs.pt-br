@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/26/2018
-ms.openlocfilehash: 06b4764570205a39734d38e3e118b7dc1fa35d18
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: 2da2af2a57fb0ec737927024d497530c2a3aac5b
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69888731"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70759882"
 ---
 # <a name="xamarinforms-boxview"></a>Xamarin. Forms BoxView
 
@@ -783,7 +783,6 @@ A segunda mão é tratada de maneira um pouco diferente: Uma função de atenua�
 ## <a name="conclusion"></a>Conclusão
 
 O `BoxView` pode parecer simples em primeiro lugar, mas como você viu, ele pode ser bastante versáteis e podem quase reproduzir visuais que são normalmente possíveis somente com gráficos vetoriais. Para gráficos mais sofisticados, consulte [usar SkiaSharp em xamarin. Forms](~/xamarin-forms/user-interface/graphics/skiasharp/index.md).
-
 
 ## <a name="related-links"></a>Links relacionados
 

@@ -7,17 +7,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 394feda6f5a13855be1d1166dc22bb2a5c890d26
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: 98acabec7132730304bf5e8b81e99f2727b6d50e
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69887768"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755579"
 ---
 # <a name="handling-rotation"></a>Tratamento de rotação
 
 _Este tópico descreve como tratar as alterações de orientação do dispositivo no Xamarin. Android. Ele aborda como trabalhar com o sistema de recursos do Android para carregar automaticamente os recursos para uma determinada orientação do dispositivo, bem como para manipular alterações de orientação de forma programática._
-
 
 ## <a name="overview"></a>Visão geral
 
@@ -25,10 +24,9 @@ Como os dispositivos móveis são facilmente girados, a rotação interna é um 
 
 Este guia examina os seguintes tópicos de orientação:
 
-- **Rotação de layout** declarativo &ndash; Como usar o sistema de recursos do Android para criar aplicativos com reconhecimento de orientação, incluindo como carregar layouts e drawables para orientações específicas.
+- **Rotação de layout declarativo** &ndash; Como usar o sistema de recursos do Android para criar aplicativos com reconhecimento de orientação, incluindo como carregar layouts e drawables para orientações específicas.
 
 - **Rotação de layout programática** &ndash; Como adicionar controles programaticamente e como tratar as alterações de orientação manualmente.
-
 
 ## <a name="handling-rotation-declaratively-with-layouts"></a>Tratamento de rotação declarativamente com layouts
 
@@ -38,7 +36,6 @@ Isso inclui suporte para:
 - *Recursos de layout* &ndash; Especificar quais arquivos de layout são desinflados para cada orientação.
 
 - *Recursos de desenho* &ndash; Especificar quais drawables são carregados para cada orientação.
-
 
 ### <a name="layout-resources"></a>Recursos de layout
 
@@ -65,7 +62,6 @@ Este projeto cria um único arquivo **Main. axml** na pasta **Resources/layout**
 Se o dispositivo for girado para a orientação paisagem, o método `OnCreate` da atividade será chamado novamente e o mesmo arquivo **Main. axml** será inalterado, conforme mostrado na captura de tela abaixo:
 
 [![Mesma tela, mas na orientação paisagem](handling-rotation-images/01-sml.png)](handling-rotation-images/01.png#lightbox)
-
 
 #### <a name="orientation-specific-layouts"></a>Layouts específicos de orientação
 
@@ -103,12 +99,11 @@ Executar esse código e girar o dispositivo de retrato para paisagem demonstra o
 
 [![Capturas de tela retrato e paisagem imprimindo o modo retrato](handling-rotation-images/02.png)](handling-rotation-images/02.png#lightbox)
 
-
 ### <a name="drawable-resources"></a>Recursos de desenho
 
 Durante a rotação, o Android trata os recursos de desenho de forma semelhante aos recursos de layout. Nesse caso, o sistema Obtém o drawables das pastas **recursos/desenháveis** e **recursos/empates** , respectivamente.
 
-Por exemplo, digamos que o projeto inclua uma imagem chamada macaco. png na pasta resources **/drawáveis** , em que o empate é referenciado de um `ImageView` em XML como este:
+Por exemplo, digamos que o projeto inclua uma imagem chamada macaco. png na pasta **Resources/drawáveis** , em que o empate é referenciado de um `ImageView` em XML como este:
 
 ```xml
 <ImageView
@@ -119,15 +114,13 @@ Por exemplo, digamos que o projeto inclua uma imagem chamada macaco. png na past
   android:layout_centerHorizontal="true" />
 ```
 
-Vamos supor ainda que uma versão diferente de **macaco. png** esteja incluída em Resources **/draw-Land**. Assim como ocorre com os arquivos de layout, quando o dispositivo é girado, as alterações desenhadas para a orientação determinada, conforme mostrado abaixo:
+Vamos supor ainda que uma versão diferente de **macaco. png** esteja incluída em **Resources/Draw-Land**. Assim como ocorre com os arquivos de layout, quando o dispositivo é girado, as alterações desenhadas para a orientação determinada, conforme mostrado abaixo:
 
 [![Versão diferente de macaco. png mostrada nos modos retrato e paisagem](handling-rotation-images/03.png)](handling-rotation-images/03.png#lightbox)
-
 
 ## <a name="handling-rotation-programmatically"></a>Manipulação de rotação programaticamente
 
 Às vezes, definimos layouts no código. Isso pode ocorrer por vários motivos, incluindo limitações técnicas, preferência do desenvolvedor, etc. Quando adicionamos controles programaticamente, um aplicativo deve considerar manualmente a orientação do dispositivo, que é manipulada automaticamente quando usamos recursos XML.
-
 
 ### <a name="adding-controls-in-code"></a>Adicionando controles no código
 
@@ -172,7 +165,6 @@ protected override void OnCreate (Bundle bundle)
 Esse código cria uma instância de uma `RelativeLayout` classe e define sua `LayoutParameters` propriedade. A `LayoutParams` classe é a maneira do Android de encapsular como os controles são posicionados de forma reutilizável. Depois que uma instância de um layout é criada, os controles podem ser criados e adicionados a ele. Os controles também `LayoutParameters`têm, como o `TextView` neste exemplo. Depois que `TextView` o for criado, adicioná-lo `RelativeLayout` ao e definir `RelativeLayout` o como a exibição de conteúdo resultará no aplicativo `TextView` exibindo o conforme mostrado:
 
 [![Botão de contador de incremento mostrado nos modos retrato e paisagem](handling-rotation-images/04.png)](handling-rotation-images/04.png#lightbox)
-
 
 ### <a name="detecting-orientation-in-code"></a>Detectando orientação no código
 
@@ -219,7 +211,6 @@ protected override void OnCreate (Bundle bundle)
 Esse código define o `TextView` a ser posicionado 100 pixels a partir da parte superior esquerda da tela, animando automaticamente para o novo layout, quando girado para paisagem, como mostrado aqui:
 
 [![O estado de exibição é preservado nos modos retrato e paisagem](handling-rotation-images/05.png)](handling-rotation-images/05.png#lightbox)
-
 
 ### <a name="preventing-activity-restart"></a>Impedindo a reinicialização da atividade
 
@@ -284,13 +275,11 @@ Aqui, `TextView's` os parâmetros de layout são inicializados para paisagem e r
 
 Quando executamos o aplicativo, o Android carrega as alterações da interface do usuário à medida que a rotação do dispositivo ocorre e não reinicia a atividade.
 
-
 ## <a name="preventing-activity-restart-for-declarative-layouts"></a>Evitando a reinicialização da atividade para layouts declarativos
 
 As reinicializações de atividade causadas pela rotação do dispositivo também podem ser evitadas se definirmos o layout em XML. Por exemplo, podemos usar essa abordagem se quisermos impedir uma reinicialização da atividade (por motivos de desempenho, talvez) e não precisarmos carregar novos recursos para orientações diferentes.
 
 Para fazer isso, seguimos o mesmo procedimento que usamos com um layout programático. Basta definir `ConfigurationChanges` `ActivityAttribute`no ,`CodeLayoutActivity` como fizemos no anterior. Qualquer código que precise ser executado para a alteração de orientação pode ser novamente implementado no `OnConfigurationChanged` método.
-
 
 ## <a name="maintaining-state-during-orientation-changes"></a>Mantendo o estado durante as alterações de orientação
 
@@ -298,12 +287,9 @@ Se a rotação de manipulação for declarativa ou programaticamente, todos os a
 
 Para obter mais informações sobre o estado de persistência no Android, consulte o guia [do ciclo de vida da atividade](~/android/app-fundamentals/activity-lifecycle/index.md) .
 
-
 ## <a name="summary"></a>Resumo
 
 Este artigo abordou como usar os recursos internos do Android para trabalhar com rotação. Primeiro, ele explicou como usar o sistema de recursos do Android para criar aplicativos com reconhecimento de orientação. Em seguida, ele apresentou como adicionar controles no código, bem como tratar as alterações de orientação manualmente.
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

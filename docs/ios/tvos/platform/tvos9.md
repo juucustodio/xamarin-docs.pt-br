@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 06/07/2016
-ms.openlocfilehash: 2da3e919ec792297f26670c43275bb0c54040835
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: ecf5a7cabb03cea92075127d4d5e87350f45619e
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290714"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769114"
 ---
 # <a name="introduction-to-tvos-9"></a>Introdução ao tvOS 9
 
@@ -175,11 +175,6 @@ A imagem da prateleira superior pode ser fornecida como um único arquivo `.png`
 Em vez de exibir uma imagem de prateleira superior estática, ela pode conter uma linha dinâmica ou itens de foco ou um conjunto dinâmico de faixas de rolagem. Ambos os estilos dinâmicos permitem que você realce o conteúdo fornecido pelo seu aplicativo ou salte para seus recursos mais usados.
 
 Para obter mais informações, consulte nossa documentação sobre [como trabalhar com ícones e imagens](~/ios/tvos/app-fundamentals/icons-images.md) e a [referência da estrutura TVServices](https://developer.apple.com/library/prerelease/tvos/documentation/TVServices/Reference/TVServices_Ref/index.html#//apple_ref/doc/uid/TP40016412) da Apple para obter mais informações sobre como adicionar uma extensão de prateleira superior ao seu aplicativo para fornecer conteúdo de prateleira superior dinâmico.
-
-
-
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

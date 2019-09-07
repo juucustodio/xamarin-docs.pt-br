@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: 8a6cdd5ccec0d2c60eba18418327fd786201f11b
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 41a5a30cdd5017046415f1d678abf1d44e83e678
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70285639"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70753679"
 ---
 # <a name="connection-troubleshooting-for-a-xamarinios-build-host"></a>Solução de problemas de conexão de um host de build do Xamarin.iOS
 
@@ -25,11 +25,9 @@ _Este guia fornece etapas de solução de problemas que podem ser encontrados us
 
 Os arquivos de log podem ser localizados, navegando até **Ajuda &gt; Xamarin &gt; Zip Logs** no Visual Studio.
 
-
 ## <a name="wheres-the-xamarin-build-host-app"></a>Onde está o Aplicativo de Host de Build do Xamarin?
 
 O Host de Build do Xamarin das versões anteriores do Xamarin.iOS não é mais necessário. O Visual Studio agora implanta automaticamente o agente através de Logon Remoto e o executa em segundo plano. Não há nenhum aplicativo adicional que será executado em computadores Mac ou Windows.
-
 
 ## <a name="troubleshooting-remote-login"></a>Solução de Problemas de Logon Remoto
 
@@ -64,7 +62,6 @@ O Host de Build do Xamarin das versões anteriores do Xamarin.iOS não é mais n
     Por exemplo, na captura de tela abaixo, o nome da conta será **amyb** e não **Amy Burns**:
 
     [![](troubleshooting-images/troubleshooting-image5a.png "Obtendo o nome da conta do aplicativo Terminal")](troubleshooting-images/troubleshooting-image5a.png#lightbox)
-
 
 6. Verifique se o endereço IP que você está usando para o Mac está correto. Você pode encontrar o endereço IP em **Preferências do Sistema > Compartilhamento > Logon Remoto** no Mac.
 
@@ -373,7 +370,6 @@ Se você estiver solucionando um problema de build e deseja verificar se o compo
 2. Pressione Control e clique na pasta **mtbs** e selecione **Mover para Lixeira**:
 
     [![](troubleshooting-images/troubleshooting-image9.png "Mover a pasta mtbs para a Lixeira")](troubleshooting-images/troubleshooting-image9.png#lightbox)
-
 
 ## <a name="related-links"></a>Links relacionados
 

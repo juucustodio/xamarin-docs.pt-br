@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/20/2018
-ms.openlocfilehash: 9f66764fef5c54563ffd03274b1f86a8c0bcc637
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 3b74acee34c367814fbd2a948fe490f4225aee00
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522145"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755387"
 ---
 # <a name="httpclient-stack-and-ssltls-implementation-selector-for-android"></a>Seletor de implementação de HttpClient Stack e SSL/TLS para Android
 
@@ -32,7 +32,6 @@ A configuração HttpClient do Xamarin. Android está em **Opções do projeto >
 Estas são as configurações recomendadas para o suporte a TLS 1,2:
 
 [![Opções do Visual Studio Android](http-stack-images/android-win-sml.png)](http-stack-images/android-win.png#lightbox)
-
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
@@ -75,8 +74,6 @@ O manipulador gerenciado é o manipulador HttpClient totalmente gerenciado que f
 - Normalmente, é muito mais lento (por exemplo, criptografia) do que a API nativa.
 - Ele requer mais código gerenciado, criando aplicativos maiores.
 
-
-
 ### <a name="choosing-a-handler"></a>Escolhendo um manipulador
 
 A escolha entre `AndroidClientHandler` e `HttpClientHandler` depende das necessidades do seu aplicativo. `AndroidClientHandler`é recomendado para o suporte de segurança mais atualizado, por exemplo,
@@ -98,7 +95,6 @@ A desvantagem de usar o SSL sem graça como o sob o provedor TLS é que ele pode
 
 A partir do Xamarin. Android 8,3, o provedor TLS padrão é um SSL`btls`enfadonho (). Se você não quiser usar o SSL enfadonho, poderá reverter para a implementação de SSL gerenciada por histórico definindo a `$(AndroidTlsProvider)` Propriedade como `legacy` (para obter mais informações sobre como definir propriedades de compilação, consulte [processo de compilação](~/android/deploy-test/building-apps/build-process.md)).
 
-
 ### <a name="programatically-using-androidclienthandler"></a>Usando programaticamente`AndroidClientHandler`
 
 O `Xamarin.Android.Net.AndroidClientHandler` é uma `HttpMessageHandler` implementação especificamente para o Xamarin. Android.
@@ -113,7 +109,6 @@ HttpClient client = new HttpClient(new Xamarin.Android.Net.AndroidClientHandler 
 
 > [!NOTE]
 > O dispositivo Android subjacente deve dar suporte a TLS 1,2 (IE. Android 4,1 e posterior). Observe que o suporte oficial para TLS 1,2 está no Android 5.0 +. No entanto, alguns dispositivos dão suporte a TLS 1,2 no Android 4.1 +.
-
 
 ## <a name="ssltls-implementation-build-option"></a>Opção de Build de implementação de SSL/TLS
 
@@ -135,7 +130,7 @@ Por exemplo:
 var client = new HttpClient();
 ```
 
-Se a implementação de HttpClient tiver sido definida como gerenciada e a implementação de TLS tiver sido definida para o **TLS 1.2 + nativo**, o `client` objeto `HttpClientHandler` usará automaticamente o gerenciado e o TLS 1,2 (fornecido pela biblioteca BoringSSL) para seu Solicitações HTTP.
+Se a implementação de HttpClient tiver sido definida como **gerenciada** e a implementação de TLS tiver sido definida para o **TLS 1.2 + nativo**, o `client` objeto `HttpClientHandler` usará automaticamente o gerenciado e o TLS 1,2 (fornecido pela biblioteca BoringSSL) para seu Solicitações HTTP.
 
 No entanto, se a **implementação** de HttpClient `AndroidHttpClient`for definida como `HttpClient` , todos os objetos usarão a classe `java.net.URLConnection` Java subjacente e não serão afetados pelo valor de **implementação de TLS/SSL** . `WebRequest`os objetos usariam a biblioteca BoringSSL.
 
@@ -180,7 +175,6 @@ Essa variável de ambiente é definida adicionando um _arquivo de ambiente_ ao p
 -----
 
 Consulte o guia do [ambiente Xamarin. Android](~/android/deploy-test/environment.md) para obter mais detalhes sobre as variáveis de ambiente e Xamarin. Android.
-
 
 ## <a name="related-links"></a>Links relacionados
 

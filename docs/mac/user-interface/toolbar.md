@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: de0db40fb678bf88a18c6be42d89644d41583b99
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: cd2490bfad880d128f5eaeebd4aac58ad3a4d8fa
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70280100"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70772717"
 ---
 # <a name="toolbars-in-xamarinmac"></a>Barras de ferramentas no Xamarin. Mac
 
@@ -357,7 +357,6 @@ Execute o aplicativo e observe que o item de **lixo** agora está desabilitado n
 ## <a name="summary"></a>Resumo
 
 Este artigo deu uma visão detalhada de como trabalhar com barras de ferramentas e itens de barra de ferramentas em um aplicativo Xamarin. Mac. Ele descreveu como criar e manter barras de ferramentas no Interface Builder do Xcode, como alguns controles da interface do usuário funcionam automaticamente com itens da barra de ferramentas, C# como trabalhar com barras de ferramentas no código e como habilitar e Desabilitar itens da barra de ferramentas.
-
 
 ## <a name="related-links"></a>Links relacionados
 

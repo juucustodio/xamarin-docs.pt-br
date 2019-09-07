@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 3c30beadf7c2de618952bdf0cd5c03e7ceee2845
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: HT
+ms.openlocfilehash: e2542a95ce7b62a017161da4fe206b83202c9085
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50109699"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70754137"
 ---
 # <a name="debug-on-device"></a>Depurar no dispositivo
 
@@ -21,7 +21,6 @@ _Este artigo explica como depurar um aplicativo Xamarin.Android em um dispositiv
 ## <a name="debug-on-device-overview"></a>Visão geral de depuração no dispositivo
 
 É possível depurar um aplicativo Xamarin.Android em um dispositivo Android usando o Visual Studio para Mac ou o Visual Studio. Antes de depurar um dispositivo, ele deve ser [instalado para desenvolvimento](~/android/get-started/installation/set-up-device-for-development.md) e conectado ao seu PC ou Mac.
-
 
 ## <a name="debug-application"></a>Depurar aplicativo
 
@@ -53,12 +52,9 @@ Depois que o dispositivo foi selecionado, o Xamarin.Android conectará ao dispos
 
 -----
 
-
-
 ## <a name="summary"></a>Resumo
 
 Este documento discutiu como depurar um aplicativo Xamarin.Android definindo um ponto de interrupção e selecionando o dispositivo de destino.
-
 
 ## <a name="related-links"></a>Links relacionados
 

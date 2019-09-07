@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 8fb0b5136cc75463fc35ced2336e0ea321e8aecd
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 9d8710b3b88b59871b88a1d42ec4f4bb3e515ff5
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69524422"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70756513"
 ---
 # <a name="how-content-providers-work"></a>Como os provedores de conteúdo funcionam
 
@@ -23,12 +23,9 @@ Há duas classes envolvidas em uma `ContentProvider` interação:
 
 Um provedor de conteúdo é normalmente apoiado por um banco de dados SQLite, mas a API significa que o consumo de código não precisa saber nada sobre o SQL subjacente. As consultas são feitas por meio de um URI usando constantes para referenciar nomes de coluna (para reduzir as dependências na estrutura `ICursor` de dados subjacente) e um é retornado para que o código de consumo seja iterado.
 
-
 ## <a name="consuming-a-contentprovider"></a>Consumindo um ContentProvider
 
 `ContentProviders`expor sua funcionalidade por meio de um URI que é registrado no **AndroidManifest. xml** do aplicativo que publica os dados. Há uma convenção em que o URI e as colunas de dados que são expostas devem estar disponíveis como constantes para facilitar a ligação aos dados. `ContentProviders` Tudo interno do Android fornece classes de conveniência com constantes que fazem referência à estrutura de dados [`Android.Providers`](xref:Android.Provider) no namespace.
-
-
 
 ### <a name="built-in-providers"></a>Provedores internos
 
@@ -47,8 +44,6 @@ O Android oferece acesso a uma ampla variedade de dados do sistema e `ContentPro
 - *Userdictionary* &ndash; conteúdo do dicionário definido pelo usuário usado para entrada de texto preditiva.
 
 - *Caixa postal* &ndash; histórico de mensagens de correio de voz.
-
-
 
 ## <a name="classes-overview"></a>Visão geral de classes
 
@@ -79,4 +74,3 @@ A `ContentProvider` API permite que os consumidores realizem uma variedade de op
 - Excluir registros.
 
 Este documento contém um exemplo que usa um fornecido `ContentProvider`pelo sistema, bem como um exemplo simples de somente leitura que implementa um personalizado. `ContentProvider`
-

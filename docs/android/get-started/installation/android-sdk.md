@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/09/2018
-ms.openlocfilehash: 54b57097c7742cb5c09f97b40c68c72b6f9c3bf1
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
-ms.translationtype: HT
+ms.openlocfilehash: da0a441be9cd07af456b1600155151e48d44162c
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69525113"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70758054"
 ---
 # <a name="setting-up-the-android-sdk-for-xamarinandroid"></a>Configurando o SDK do Android para o Xamarin.Android
 
@@ -50,7 +50,6 @@ O Gerenciador de SDK do Xamarin Android também requer o Java Development Kit (q
 > [!IMPORTANT]
 > O Xamarin.Android não é compatível com o JDK 9.
 
- 
 ## <a name="sdk-manager"></a>Gerenciador de SDK 
 
 Para iniciar o Gerenciador de SDK no Visual Studio, clique em **Ferramentas > Android > Gerenciador de SDK do Android**:
@@ -62,7 +61,6 @@ O Gerenciador do SDK do Android será aberto na tela **SDKs e Ferramentas do And
 [![Captura de tela do Gerenciador de SDK do Android aberto na guia Plataformas](android-sdk-images/win/03-sdk-manager-platforms-sml.png)](android-sdk-images/win/03-sdk-manager-platforms.png#lightbox)
 
 A tela **SDKs e Ferramentas do Android** será descrita em mais detalhes nas seções seguintes.
-
 
 ### <a name="android-sdk-location"></a>Local do SDK do Android
 
@@ -78,12 +76,10 @@ Para definir o local do SDK do Android, clique no botão de reticências (&helli
 
 Ao clicar em **OK**, o Gerenciador do SDK gerenciará o SDK do Android instalado no local selecionado.
 
-
 ### <a name="tools-tab"></a>Guia Ferramentas
 
 A guia **Ferramentas** mostra uma lista de _ferramentas_ e _adicionais_. Use essa guia para instalar as Android SDK Tools, as ferramentas de plataforma e as ferramentas de build.
 Além disso, é possível instalar o Android Emulator, o depurador de baixo nível (LLDB), o NDK, a aceleração por HAXM e as bibliotecas do Google Play.
-
 
 Por exemplo, para baixar o pacote do Google Android Emulator, clique na marca de seleção ao lado de **Android Emulator** e clique no botão **Aplicar Alterações**:
 
@@ -127,7 +123,6 @@ Quando o repositório do Google é selecionado, os pacotes adicionais que não e
 
 Para voltar a usar o repositório compatível de plataformas e ferramentas, clique em **Microsoft (Recomendado)** . Assim, a lista de pacotes e ferramentas será restaurada para a seleção padrão.
 
-
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 ## <a name="requirements"></a>Requisitos
@@ -146,11 +141,11 @@ O Gerenciador de SDK do Xamarin Android também requer o Java Development Kit (q
 
 > [!IMPORTANT]
 > O Xamarin.Android não é compatível com o JDK 9.
- 
+
 ## <a name="sdk-manager"></a>Gerenciador de SDK 
 
 Para iniciar o Gerenciador de SDK no Visual Studio para Mac, clique em **Ferramentas > Gerenciador de SDK**:
- 
+
 [![Local do item de menu do Gerenciador de SDK do Android](android-sdk-images/mac/01-sdk-manager-menu-item-m75-sml.png)](android-sdk-images/mac/01-sdk-manager-menu-item-m75.png#lightbox)
 
 O **Gerenciador de SDK do Android** será aberto na **janela Preferências**, que contém três guias, **Plataformas**, **Ferramentas** e **Locais**:
@@ -158,7 +153,6 @@ O **Gerenciador de SDK do Android** será aberto na **janela Preferências**, qu
 [![Captura de tela do Gerenciador de SDK do Android aberto na guia Plataformas](android-sdk-images/mac/02-sdk-manager-platforms-m75-sml.png)](android-sdk-images/mac/02-sdk-manager-platforms-m75.png#lightbox)
 
 As guias do Gerenciador do SDK do Android do Xamarin serão descritas nas seções seguintes.
-
 
 ### <a name="locations-tab"></a>Guia Locais
 
@@ -186,7 +180,6 @@ Deve ser exibida uma caixa de diálogo com a mensagem _O pacote a seguir exige q
 [![Tela de aceitação da licença](android-sdk-images/mac/05-license-acceptance-m75-sml.png)](android-sdk-images/mac/05-license-acceptance-m75.png#lightbox)
 
 Clique em **Aceitar** se estiver de acordo com os termos e condições. Na parte inferior da janela, uma barra de progresso indica o andamento do download e da instalação. Após a conclusão da instalação, a guia **Ferramentas** mostrará que as ferramentas e adicionais foram instalados.
-
 
 ### <a name="platforms-tab"></a>Guia Plataformas
 
@@ -222,11 +215,9 @@ Para voltar a usar o repositório compatível de plataformas e ferramentas, cliq
 
 -----
 
- 
 ## <a name="summary"></a>Resumo
 
 Este guia explicou como instalar e usar a ferramenta Xamarin Android SDK Manager no Visual Studio e no Visual Studio para Mac.
-
 
 ## <a name="related-links"></a>Links relacionados
 

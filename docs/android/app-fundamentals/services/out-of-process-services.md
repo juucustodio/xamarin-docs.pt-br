@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 2794a1d23cd7c1eab9cf4e94eaa805ad2b8bca61
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 5429f260399602b7ef15e8263bc74cb8ae940f4f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70119126"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70754884"
 ---
 # <a name="running-android-services-in-remote-processes"></a>Executando serviços Android em processos remotos
 
@@ -312,7 +312,6 @@ msg.Data = serviceParameters;
 messenger.Send(msg);
 ```
 
-
 > [!NOTE]
 > Em geral, um `Message` não deve ter uma carga maior que 1 MB. O limite de tamanho pode variar de acordo com a versão do Android e em qualquer alteração proprietária que o fornecedor possa ter feito em sua implementação do AOSP (Open Source Project) do Android que é fornecido com o dispositivo.
 
@@ -475,7 +474,6 @@ Para exibir as permissões que um aplicativo recebeu, abra o aplicativo Configur
 ## <a name="summary"></a>Resumo
 
 Este guia foi uma discussão avançada sobre como executar um serviço Android em um processo remoto. As diferenças entre um serviço local e um remoto foram explicadas, juntamente com alguns motivos pelos quais um serviço remoto pode ser útil para a estabilidade e o desempenho de um aplicativo Android. Depois de explicar como implementar um serviço remoto e como um cliente pode se comunicar com o serviço, o guia passou a fornecer uma maneira de limitar o acesso ao serviço somente de clientes autorizados.
-
 
 ## <a name="related-links"></a>Links relacionados
 

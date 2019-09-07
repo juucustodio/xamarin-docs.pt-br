@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 05/22/2017
-ms.openlocfilehash: a44f0921b959c6b8fd6f076fd119ea52345f821f
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: a0c5821b91c6394b8bae4a090899fa81eb4756e2
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70282649"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70763759"
 ---
 # <a name="application-icons-in-xamarinios"></a>Ícones de aplicativo no Xamarin. iOS
 
@@ -98,7 +98,7 @@ Os tamanhos e resoluções de ativos de imagem a seguir serão necessários para
  4. Usa as mesmas imagens e tamanhos que o ícone de destaque.
  5. Usa os mesmos ícones de tamanho que o iPhone.
  6. Somente com suporte com conjuntos de imagens do catálogo de ativos.
- 
+
  Para obter mais informações sobre ícones, consulte a documentação de [tamanhos de imagem e ícone](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/IconMatrix.html#//apple_ref/doc/uid/TP40006556-CH27-SW1) da Apple.
 
 <a name="managing" />

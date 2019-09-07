@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 ms.date: 11/25/2015
 author: conceptdev
 ms.author: crdun
-ms.openlocfilehash: cfa82ccec8149acfc7ddd69bff2f68e0e11894d1
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: cbe1b374b97f64e0c28b2f89ca9f6d510511b74d
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70282425"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768837"
 ---
 # <a name="introduction-to-monotouchdialog-for-xamarinios"></a>Introdução à MonoTouch. caixa de diálogo para Xamarin. iOS
 
@@ -57,7 +57,6 @@ MT. A D simplifica isso encapsulando todo o código em uma API genérica para a 
 - **API de elementos de nível baixo** – a *API de elementos* é baseada na criação de uma árvore hierárquica de elementos que representam telas e seus componentes. A API dos elementos oferece aos desenvolvedores mais flexibilidade e controle na criação de UIs. Além disso, a API dos elementos tem suporte avançado para definição declarativa via JSON, que permite uma declaração incrivelmente rápida, bem como a geração de interface do usuário dinâmica de um servidor. 
 - **API de reflexão de alto nível** – também conhecido como o *associação* *API* , nos quais classes são anotadas com dicas de interface do usuário e, em seguida, o MT. D automaticamente cria telas com base nos objetos e fornece uma associação entre o que é exibida (e, opcionalmente, editada) na tela e o objeto base fazendo. O exemplo acima ilustrou o uso da API de reflexão. Essa API não fornece o controle refinado que a API dos elementos faz, mas reduz ainda mais a complexidade ao criar automaticamente a hierarquia de elementos com base nos atributos de classe. 
 
-
 MT. O D vem embalado de um grande conjunto de elementos de interface do usuário internos para a criação de tela, mas também reconhece a necessidade de elementos personalizados e layouts de tela avançados. Dessa forma, a extensibilidade é uma inclusas em destaque de primeira classe na API. Os desenvolvedores podem estender os elementos existentes ou criar novos e, em seguida, integrar-se perfeitamente.
 
 Além disso, o MT. A D tem vários recursos comuns do iOS UX incorporados, como suporte de "pull para atualização", carregamento de imagem assíncrona e suporte de pesquisa.
@@ -82,7 +81,6 @@ MT. O D compila as telas usando as quatro partes a seguir:
 - **RootElement**
 - **Section**
 - **Elemento**
-
 
 ### <a name="dialogviewcontroller"></a>DialogViewController
 
@@ -249,7 +247,6 @@ Ele é inicializado com três valores:
 - Texto do espaço reservado (esse é o texto esmaecido que fornece uma dica para o usuário). 
 - O valor do texto.
 
-
 O espaço reservado e o valor podem ser nulos. No entanto, a legenda é necessária.
 
 A qualquer momento, acessar sua propriedade Value pode recuperar o valor de `EntryElement`.
@@ -260,7 +257,6 @@ Além disso `KeyboardType` , a propriedade pode ser definida no momento da cria�
 - Telefone
 - Url
 - Email
-
 
 ### <a name="boolean-element"></a>Elemento booliano
 
@@ -427,7 +423,6 @@ A pesquisa alterará o conteúdo da exibição conforme o usuário digitar. Ele 
 - `FinishSearch`
 - `PerformFilter`
 
-
 O sistema é extensível, portanto, você pode alterar esse comportamento se desejar.
 
 ### <a name="background-image-loading"></a>Carregamento de imagem em segundo plano
@@ -575,7 +570,6 @@ A forma como você notifica o usuário sobre um erro é específico do aplicativ
 ## <a name="summary"></a>Resumo
 
 Este artigo abordou muitas informações sobre o MonoTouch. Dialog. Ele abordou os conceitos básicos do como o MT. O D trabalha e abordou os vários componentes que compõem o MT. 3D. Ele também mostrou a ampla matriz de elementos e personalizações de tabela com suporte do MT. D e discutiu como o MT. A D pode ser estendida com elementos personalizados. Além disso, ele explicou o suporte a JSON em MT. D que permite criar elementos dinamicamente do JSON.
-
 
 ## <a name="related-links"></a>Links relacionados
 

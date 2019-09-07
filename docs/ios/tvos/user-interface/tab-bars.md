@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: 799dd40caae0323b71cae2c6715bf8cd16f78356
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: df19dcf542bd3a62a696c0d7d533b4e14390336e
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70283978"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769004"
 ---
 # <a name="working-with-tvos-tab-bar-controllers-in-xamarin"></a>Trabalhando com controladores de barra de guias tvOS no Xamarin
 
@@ -121,7 +121,6 @@ Para obter mais informações sobre como trabalhar com storyboards, consulte nos
 
 Use a `Items` propriedade `UITabBar` do `UITabBarItems` para acessar a coleção que ela contém como uma matriz indexada zero (0). A `SelectedItem` propriedade retornará a guia selecionada no momento (categoria) como um `UITabBarItem`.
 
-
 <a name="Working-with-Tab-Bar-Items" />
 
 ## <a name="working-with-tab-bar-items"></a>Trabalhando com itens da barra de guias
@@ -144,9 +143,6 @@ Use a `Title` propriedade `UITabBarItem` do para alterar o título e a `Image` p
 ## <a name="summary"></a>Resumo
 
 Este artigo abordou a criação e o trabalho com o controlador da barra de guias dentro de um aplicativo Xamarin. tvOS.
-
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

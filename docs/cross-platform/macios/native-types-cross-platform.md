@@ -6,17 +6,16 @@ ms.assetid: B9C56C3B-E196-4ADA-A1DE-AC10D1001C2A
 author: conceptdev
 ms.author: crdun
 ms.date: 04/07/2016
-ms.openlocfilehash: dde5b2429622c967fa4419700ce8fe9860afbb10
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 273b7f2eb40f1fa8495e0a0e8e18fa947241f389
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290844"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70765409"
 ---
 # <a name="working-with-native-types-in-cross-platform-apps"></a>Trabalhando com tipos nativos em aplicativos multiplataforma
 
 _Este artigo aborda o uso dos novos tipos nativos do iOS API Unificada (Nint, nuint, nfloat) em um aplicativo de plataforma cruzada em que o código é compartilhado com dispositivos não iOS, como Android ou Windows Phone sistemas operacionais._
-
 
 Os tipos nativos de 64 tipos funcionam com as APIs iOS e Mac. Se você estiver escrevendo um código compartilhado que é executado no Android ou no Windows também, será necessário gerenciar a conversão de tipos unificados em tipos .NET regulares que você pode compartilhar.
 
@@ -211,7 +210,6 @@ Observe que, aqui, alteramos `CalculateArea` o método para retornar `nfloat` um
 
 Se o código for compilado e executado em um dispositivo não API unificada, o `using nfloat = global::System.Single;` mapeará `nfloat` o para `Single` um que será convertido implicitamente em `float` um que permita que o aplicativo de front-end `CalculateArea` de consumo chame o método sem modificado.
 
-
 #### <a name="using-type-conversions-in-the-front-end-app"></a>Usando conversões de tipo no aplicativo de front-end
 
 Caso os aplicativos de front-end façam apenas algumas chamadas para sua biblioteca de códigos compartilhados, outra solução poderia ser deixar a biblioteca inalterada e fazer a conversão de tipo no aplicativo Xamarin. iOS ou Xamarin. Mac ao chamar a rotina existente. Por exemplo:
@@ -228,7 +226,6 @@ Se o aplicativo de consumo fizer centenas de chamadas para a biblioteca de códi
 
 Com base na arquitetura de nosso aplicativo, podemos acabar usando uma ou mais das soluções acima para dar suporte a tipos de dados nativos (quando necessário) em nosso código de plataforma cruzada.
 
-
 ## <a name="xamarinforms-applications"></a>Aplicativos Xamarin. Forms
 
 O seguinte é necessário para usar o Xamarin. Forms para UIs de plataforma cruzada que também serão compartilhadas com um aplicativo API Unificada:
@@ -243,8 +240,6 @@ Para obter mais detalhes, consulte nossa documentação [atualizando os aplicati
 ## <a name="summary"></a>Resumo
 
 Neste artigo, vimos quando usar os tipos de dados nativos em um aplicativo API Unificada e suas implicações entre plataformas. Apresentamos várias soluções que podem ser usadas em situações em que os novos tipos de dados nativos devem ser usados em bibliotecas de plataforma cruzada. Além disso, vimos um guia rápido para dar suporte a APIs unificadas em aplicativos de plataforma cruzada do Xamarin. Forms.
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

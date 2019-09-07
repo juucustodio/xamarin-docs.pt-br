@@ -7,12 +7,12 @@ ms.technology: xamarin-skiasharp
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: 370fec5b9323187f6345d3e6bf9d3e38145cedff
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: eee338461593ad131f679d32cadf63fe3b1a4c40
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68652779"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70759341"
 ---
 # <a name="path-basics-in-skiasharp"></a>Noções básicas de caminho no SkiaSharp
 
@@ -194,7 +194,6 @@ Aqui está o programa em execução:
 [![](paths-images/strokejoins-small.png "Tripla captura de tela da página traço une")](paths-images/strokejoins-large.png#lightbox "tripla captura de tela da página de junções de traço")
 
 A junção de Malhete consiste em um ponto de curva na qual as linhas de se conectar. Ao unir duas linhas em um ângulo pequeno, a junção de Malhete pode se tornar muito longa. Para evitar esquadrias excessivamente longo, o comprimento da junção de Malhete é limitado pelo valor da [ `StrokeMiter` ](xref:SkiaSharp.SKPaint.StrokeMiter) propriedade `SKPaint`. Uma junção de Malhete que excede esse comprimento é cortada para se tornar uma junção de bisel.
-
 
 ## <a name="related-links"></a>Links relacionados
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: f931397f50b6b7aece099efb775a6dda560bf0eb
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: d1047ae8cae6a8e86b72690fe5d80d0ba9e752a4
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70279997"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768409"
 ---
 # <a name="auto-layout-with-the-xamarin-designer-for-ios"></a>Layout automático com o Xamarin Designer para iOS
 
@@ -47,7 +47,6 @@ A configuração padrão do designer do iOS tem o modo de restrição habilitado
 
     ![](designer-auto-layout-images/image01.png "A caixa de seleção usar AutoLayout no painel de propriedades")
 
-
 Por padrão, nenhuma restrição é criada ou visível na superfície. Em vez disso, eles são inferidos automaticamente das informações do quadro no momento da compilação. Para adicionar restrições, precisamos selecionar um elemento na superfície de design e adicionar restrições a ele. Podemos fazer isso usando a **barra de ferramentas de restrição**.
 
 ## <a name="constraints-toolbar"></a>Barra de ferramentas restrições
@@ -63,7 +62,6 @@ A barra de ferramentas de restrições foi atualizada e agora consiste em duas p
 - **Um botão "atualizar restrições":** É importante observar que as alterações dependem de se você estiver no modo de edição de restrições.
   - No modo de edição de restrição, esse botão ajusta as restrições para corresponder ao quadro do elemento.
   - No modo de edição de quadro, esse botão ajusta o quadro do elemento para corresponder à posição que as restrições estão definindo.
-
 
 ## <a name="surface-based-constraint-editing"></a>Edição de restrição baseada em superfície
 
@@ -87,8 +85,6 @@ Observe as três linhas verdes tracejadas entre os outros dois botões. As linha
 
 > [!IMPORTANT]
 > Guias de layout são tipos especiais de destinos de restrição que nos permitem criar restrições superiores e inferiores que levam em conta a presença de barras do sistema, como barras de status ou barras de ferramentas. Um dos principais usos é ter um aplicativo compatível entre o iOS 6 e o iOS 7, já que a versão mais recente tem a exibição de contêiner sendo estendida abaixo da barra de status. Para obter mais informações sobre o guia de layout superior, consulte a [documentação da Apple](https://developer.apple.com/library/ios/documentation/userexperience/conceptual/transitionguide/AppearanceCustomization.html#//apple_ref/doc/uid/TP40013174-CH15-SW2).
-
-
 
 As próximas três seções introduzem o trabalho com diferentes tipos de restrições.
 
@@ -129,7 +125,6 @@ Vários tipos de problemas podem surgir ao usar restrições:
 - **Restrições conflitantes** – isso ocorre quando várias restrições forçam o elemento a ter valores conflitantes para um atributo e o mecanismo de restrição não pode reconcilá-los.
 - **Itens** subrestritos — as propriedades de um elemento (local + tamanho) devem ser totalmente cobertas por seu conjunto de restrições e tamanhos intrínsecos para que as restrições sejam válidas. Se esses valores forem ambíguos, o item será considerado como sendo restringido.
 - **Incorreta de quadro** – isso ocorre quando o quadro de um elemento e seu conjunto de restrições definem dois retângulos resultantes diferentes.
-
 
 Esta seção elabora os três problemas listados acima e fornece detalhes sobre como tratá-los.
 

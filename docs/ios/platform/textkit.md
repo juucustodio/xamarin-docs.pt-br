@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: c153e653cc57d35f125ef58ebc8df0013f77e7c1
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: dba65eb11b6ae22a51610804e3a6a73549f4565b
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70283021"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769760"
 ---
 # <a name="textkit-in-xamarinios"></a>TextKit no Xamarin. iOS
 
@@ -31,7 +31,6 @@ O TextKit fornece uma arquitetura em camadas que separa o armazenamento de texto
 - `NSTextContainer`– Fornece o sistema de coordenadas e a geometria usada para layout de texto.
 - `NSLayoutManager`– Prepara o texto, virando o texto em glifos.
 - `NSTextStorage`– Armazena os dados de texto, bem como manipula atualizações de propriedade de texto em lotes. Todas as atualizações do lote são enviadas ao Gerenciador de layout para o processamento real das alterações, como recalcular o layout e redesenhar o texto.
-
 
 Essas três classes são aplicadas a uma exibição que renderiza texto. As `UITextView`exibições de manipulação de texto internas, como, `UITextField`e `UILabel` já as têm definidas, mas você também pode criá-las e aplicá- `UIView` las a qualquer instância.
 
@@ -144,8 +143,6 @@ Esse código adiciona suporte para desenhar na exibição de texto usando gráfi
 > [!IMPORTANT]
 > Este exemplo subclasses `UITextView` para adicionar suporte a desenho de toque. A subclasse `UITextView` não é necessária para obter os recursos do TextKit.
 
-
-
 Depois que o usuário desenha na exibição de texto, o `CGPath` desenho é aplicado a `UIBezierPath` uma instância definindo a `UIBezierPath.CGPath` Propriedade:
 
 ```csharp
@@ -164,7 +161,6 @@ A captura de tela a seguir ilustra como o layout de texto muda para o fluxo ao r
 ![](textkit-images/exclusionpath2.png "Esta captura de tela ilustra como o layout de texto muda para o fluxo ao redor do caminho desenhado")
 
 Observe que a propriedade do `AllowsNonContiguousLayout` Gerenciador de layout está definida como false nesse caso. Isso faz com que o layout seja recalculado para todos os casos em que o texto é alterado. Definir isso como verdadeiro pode beneficiar o desempenho ao evitar uma atualização de layout completo, especialmente no caso de documentos grandes. No entanto `AllowsNonContiguousLayout` , definir como true impediria que o caminho de exclusão atualizasse o layout em algumas circunstâncias, por exemplo, se o texto for inserido em tempo de execução sem um retorno de carro à direita antes do caminho que está sendo definido.
-
 
 ## <a name="related-links"></a>Links relacionados
 

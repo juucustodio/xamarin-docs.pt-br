@@ -9,12 +9,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/02/2019
-ms.openlocfilehash: e26a71ad72b557a27841bfee1d26001126e2a2a2
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 688b0e87bb6281923d3099c0d269b1c2554b6c7a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68654666"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70756750"
 ---
 # <a name="style-a-cross-platform-xamarinforms-application"></a>Estilizar um aplicativo Xamarin. Forms de plataforma cruzada
 
@@ -39,7 +39,7 @@ Você deve concluir com êxito o [início rápido anterior](database.md) antes d
 
 1. Inicie o Visual Studio e abra a solução observações.
 
-2. No **Gerenciador de soluções**, no projeto do Notes, clique duas vezes em **app. XAML** para abri-lo. Em seguida, substitua o código existente pelo código a seguir:
+2. No **Gerenciador de soluções**, no projeto do **Notes** , clique duas vezes em **app. XAML** para abri-lo. Em seguida, substitua o código existente pelo código a seguir:
 
     ```xaml
     <?xml version="1.0" encoding="utf-8"?>
@@ -81,7 +81,7 @@ Você deve concluir com êxito o [início rápido anterior](database.md) antes d
 
     Salve as alterações em **app. XAML** pressionando **Ctrl + S**e feche o arquivo.
 
-3. No **Gerenciador de soluções**, no projeto do Notes, clique duas vezes em **NotesPage. XAML** para abri-lo. Em seguida, substitua o código existente pelo código a seguir:
+3. No **Gerenciador de soluções**, no projeto do **Notes** , clique duas vezes em **NotesPage. XAML** para abri-lo. Em seguida, substitua o código existente pelo código a seguir:
 
     ```xaml
     <?xml version="1.0" encoding="UTF-8"?>
@@ -120,7 +120,7 @@ Você deve concluir com êxito o [início rápido anterior](database.md) antes d
 
     Salve as alterações em **NotesPage. XAML** pressionando **Ctrl + S**e feche o arquivo.
 
-4. No **Gerenciador de soluções**, no projeto do Notes, clique duas vezes em **NoteEntryPage. XAML** para abri-lo. Em seguida, substitua o código existente pelo código a seguir:
+4. No **Gerenciador de soluções**, no projeto do **Notes** , clique duas vezes em **NoteEntryPage. XAML** para abri-lo. Em seguida, substitua o código existente pelo código a seguir:
 
     ```xaml
     <?xml version="1.0" encoding="UTF-8"?>
@@ -315,7 +315,6 @@ Você deve concluir com êxito o [início rápido anterior](database.md) antes d
     No **NotesPage** , pressione o **+** botão para navegar até o **NoteEntryPage** e insira uma observação. Em cada página, observe como o estilo foi alterado no início rápido anterior.
 
 ::: zone-end
-
 
 ## <a name="next-steps"></a>Próximas etapas
 

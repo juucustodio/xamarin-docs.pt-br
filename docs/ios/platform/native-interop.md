@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 07/28/2016
-ms.openlocfilehash: 75180152c3ed7056102038b9019f8017183c17ee
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 16e6d66cd41ead7a4d234cf45bb73e53e41aa5eb
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70279941"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769566"
 ---
 # <a name="referencing-native-libraries-in-xamarinios"></a>Referenciando bibliotecas nativas no Xamarin. iOS
 
@@ -56,7 +56,6 @@ lipo -create -output libMyLibrary.a libMyLibrary-i386.a libMyLibrary-arm64.a lib
 
 Isso cria `libMyLibrary.a` qual será uma biblioteca universal (FAT) que será adequada para uso em todos os destinos de desenvolvimento do Ios.
 
-
 ### <a name="missing-required-architecture-i386"></a>Falta a arquitetura necessária i386
 
 Se você estiver recebendo uma `does not implement methodSignatureForSelector` mensagem `does not implement doesNotRecognizeSelector` ou em sua saída de tempo de execução ao tentar consumir uma biblioteca Objective-C no simulador de Ios, sua biblioteca provavelmente não foi compilada para a arquitetura i386 (consulte o [edifício universal Native ](#building_native)Seção de bibliotecas acima).
@@ -80,7 +79,6 @@ Se você quisesse vincular estaticamente a biblioteca "libMyLibrary. a" obtida d
 - Traga a biblioteca para seu projeto
 - Configurar o Xamarin. iOS para vincular a biblioteca
 - Acesse os métodos da biblioteca.
-
 
 Para **colocar a biblioteca em seu projeto**, selecione o projeto no Gerenciador de soluções e pressione **Command + Option + a**. Navegue até o libMyLibrary. a e adicione-o ao projeto. Quando solicitado, informe Visual Studio para Mac ou o Visual Studio para copiá-lo no projeto. Depois de adicioná-lo, localize o libFoo. a no projeto, clique com o botão direito do mouse nele e defina a **ação de Build** como **None**.
 
@@ -113,7 +111,6 @@ Há dois tipos de bibliotecas nativas disponíveis no iOS:
 - Bibliotecas compartilhadas que fazem parte do sistema operacional.
 
 - Bibliotecas estáticas que você envia com seu aplicativo.
-
 
 Para acessar os métodos definidos em qualquer um deles, use a [funcionalidade P/Invoke do mono](https://www.mono-project.com/docs/advanced/pinvoke/) , que é a mesma tecnologia que você usaria no .net, que é aproximadamente:
 
@@ -174,4 +171,3 @@ public static extern double AnimalLibraryVersion();
 Como você só pode usar bibliotecas estáticas no Ios, não há uma biblioteca compartilhada externa com a qual vincular, portanto, o parâmetro de caminho no atributo DllImport precisa usar o `__Internal` nome especial (Observe os caracteres de sublinhado duplo no início do nome) em vez de o nome do caminho.
 
 Isso força o DllImport a pesquisar o símbolo do método que você está fazendo referência no programa atual, em vez de tentar carregá-lo de uma biblioteca compartilhada.
-

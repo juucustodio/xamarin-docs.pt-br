@@ -6,12 +6,12 @@ ms.assetid: 67246203-D78E-4DCC-9E55-7D3D93968E54
 author: conceptdev
 ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: b6ac960770320ed100e8b082cabf8240efed070b
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 10ab9b379344ab6c514eba84f1ef3fd9c7400b73
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290829"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70765546"
 ---
 # <a name="apple-platform-ios-and-mac"></a>Plataforma Apple (iOS e Mac)
 
@@ -31,7 +31,6 @@ O API Unificada para projetos iOS e Mac usa os mesmos namespaces para estruturas
 > **Preterimento de perfil clássico:** Conforme novas plataformas são adicionadas no Xamarin. iOS, estamos começando a substituir gradualmente os recursos do perfil clássico (MonoTouch. dll). Por exemplo, a opção não NRC (New-ref-Count) foi removida. O NRC sempre foi habilitado para todos os aplicativos unificados (ou seja, não NRC nunca é uma opção) e não tem problemas conhecidos. Versões futuras removerão a opção de usar Boehm como o coletor de lixo. Essa também era uma opção nunca disponível para aplicativos unificados. A remoção completa do suporte clássico está agendada para o outono de 2016 com o lançamento do Xamarin. iOS 10,0.
 
 As APIs do xamarin. Ios e xamarin. Mac originais (não unificadas) tornaram o `MonoTouch.` compartilhamento de código mais difícil porque as estruturas nativas tinham ou `MonoMac.` prefixos de namespace.  Fornecemos alguns namespaces vazios que permitem aos desenvolvedores compartilhar código adicionando `using` instruções que fazem referência a namespaces MonoMac e MonoTouch no mesmo arquivo, mas isso era um pouco ruim. O API Clássica só deve continuar a ser usado em aplicativos herdados distribuídos internamente (a atualização para a API Unificada é recomendada).
-
 
 ### <a name="updating-from-classic-to-the-unified-api"></a>Atualizando do clássico para o API Unificada
 

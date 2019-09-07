@@ -7,12 +7,12 @@ ms.assetid: 1D53067B-3502-4D74-B89D-7EC496901AE2
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/24/2017
-ms.openlocfilehash: a645ef4ed55c8b4c78bad94865777088f62f1175
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 467863dba2f5757e0590ccf64927ae2af292f285
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68647401"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770566"
 ---
 # <a name="svg-path-data-in-skiasharp"></a>Dados de caminho SVG em SkiaSharp
 
@@ -428,7 +428,6 @@ public class PrettyAnalogClockPage : ContentPage
 Algo especial é feito com a mão de segundo, no entanto. Porque o relógio é atualizado a cada 16 milissegundos, o `Millisecond` propriedade do `DateTime` valor potencialmente pode ser usado para animar uma varredura de segundo manualmente em vez de um que se move em pequenos saltos do segundo a segundo. Mas esse código não permite o movimento suave. Em vez disso, ele usa o xamarin. Forms [ `SpringIn` ](xref:Xamarin.Forms.Easing.SpringIn) e [ `SpringOut` ](xref:Xamarin.Forms.Easing.SpringOut) animação funções para um tipo diferente de movimentação de easing. Essas funções de easing fazer com que a mão de segundo mover de uma maneira mais irregular &mdash; extraindo voltar um pouco antes de ele move e, em seguida, um pouco excesso de solução seu destino, um efeito que Infelizmente não pode ser reproduzido nessas capturas de tela estáticas:
 
 [![](path-data-images/prettyanalogclock-small.png "Captura de tela da página bastante o relógio analógico tripla")](path-data-images/prettyanalogclock-large.png#lightbox "tripla captura de tela da página bastante o relógio analógico")
-
 
 ## <a name="related-links"></a>Links relacionados
 

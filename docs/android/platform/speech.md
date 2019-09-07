@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/02/2018
-ms.openlocfilehash: 2a6de91772b1b6135a5b3567f691b8cd3522a924
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 14cce06399b804ba8fd982a40347fb3146b281c8
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68643251"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70757423"
 ---
 # <a name="android-speech"></a>Fala do Android
 
@@ -206,7 +206,6 @@ Por exemplo, o usuário pode escolher francês e clicar no ícone de download pa
 
 A instalação desses dados ocorre automaticamente após a conclusão do download.
 
-
 ### <a name="step-5---the-ioninitlistener"></a>Etapa 5-o IOnInitListener
 
 Para que uma atividade possa converter o texto em fala, o método `OnInit` de interface deve ser implementado (esse é o segundo parâmetro especificado para a instanciação `TextToSpeech` da classe). Isso inicializa o ouvinte e testa o resultado.
@@ -229,8 +228,6 @@ void TextToSpeech.IOnInitListener.OnInit(OperationResult status)
 ## <a name="summary"></a>Resumo
 
 Neste guia, vimos as noções básicas da conversão de texto em fala e fala em texto e nos possíveis métodos de como incluí-los em seus próprios aplicativos. Embora eles não abranjam todos os casos específicos, agora você deve ter um entendimento básico de como a fala é interpretada, como instalar novas linguagens e como aumentar o inclusivity de seus aplicativos.
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

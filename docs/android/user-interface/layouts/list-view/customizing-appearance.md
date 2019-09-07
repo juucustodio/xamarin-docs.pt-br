@@ -6,17 +6,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/26/2018
-ms.openlocfilehash: a2487fd0f7d90b70ec0dc1fb1978ca06a3108822
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 2787e814d330bf8262ba05e38c7827211e07fd72
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522610"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70764253"
 ---
 # <a name="customizing-a-listviews-appearance-with-xamarinandroid"></a>Personalizando a aparência de um ListView com o Xamarin. Android
 
 A aparência de um ListView é ditada pelo layout das linhas que estão sendo exibidas. Para alterar a aparência de um `ListView`, use um layout de linha diferente.
-
 
 ## <a name="built-in-row-views"></a>Exibições de linha internas
 
@@ -82,8 +81,6 @@ view = context.LayoutInflater.Inflate(Android.Resource.Layout.SimpleExpandableLi
 
 As propriedades da exibição de grupo e do modo de exibição filho podem ser definidas referenciando os `Text1` identificadores padrão e `Text2` de controle, conforme mostrado acima. A captura de tela SimpleExpandableListItem (mostrada acima) fornece um exemplo de uma SimpleExpandableListItem1 (exibição de grupo de uma linha) e uma exibição filho de duas linhas (SimpleExpandableListItem2). Como alternativa, a exibição de grupo pode ser configurada para duas linhas (SimpleExpandableListItem2) e a exibição filho pode ser configurada para uma linha (SimpleExpandableListItem1), ou a exibição de grupo e a exibição filho podem ter o mesmo número de linhas. 
 
-
-
 ## <a name="accessories"></a>Acessórios
 
 As linhas podem ter acessórios adicionados à direita da exibição para indicar o estado de seleção:
@@ -105,7 +102,6 @@ ListAdapter = new ArrayAdapter<String>(this, Android.Resource.Layout.SimpleListI
 ```
 
 A `ListView` si só dá suporte a modos de seleção diferentes, independentemente do acessório que está sendo exibido. Para evitar confusão, use `Single` o modo de `SingleChoice` seleção com acessórios `Checked` e `Multiple` o modo ou `MultipleChoice` com o estilo. O modo de seleção é controlado pela `ChoiceMode` propriedade `ListView`do.
-
 
 ### <a name="handling-api-level"></a>Manipulando nível de API
 
@@ -129,7 +125,6 @@ lv.ChoiceMode = 1; // Single
 //lv.ChoiceMode = 3; // MultipleModal
 */
 ```
-
 
 ### <a name="selecting-items-programmatically"></a>Selecionando itens programaticamente
 
@@ -157,7 +152,6 @@ for (var i = 0; i < sparseArray.Size(); i++ )
 Console.WriteLine();
 ```
 
-
 ## <a name="creating-custom-row-layouts"></a>Criando layouts de linha personalizados
 
 As quatro exibições internas de linha são muito simples. Para exibir layouts mais complexos (como uma lista de emails ou tweets ou informações de contato), é necessário um modo de exibição personalizado. Exibições personalizadas geralmente são declaradas como arquivos AXML no diretório de **recursos/layout** e, em seguida, carregadas usando sua ID de recurso por um adaptador personalizado. O modo de exibição pode conter qualquer número de classes de exibição (como textviews, ImageViews e outros controles) com cores, fontes e layout personalizados.
@@ -176,9 +170,7 @@ Este exemplo é diferente dos exemplos anteriores de várias maneiras:
 
 - `ItemClick`deve ser declarado de forma diferente (um manipulador de eventos `ListView.ItemClick` é anexado a em `OnListItemClick` vez `ListActivity`de uma substituição em).
 
-
 Essas alterações são detalhadas abaixo, começando com a criação da exibição da atividade e da exibição de linha personalizada e, em seguida, a cobertura das modificações ao adaptador e à atividade para renderizá-las.
-
 
 ### <a name="adding-a-listview-to-an-activity-layout"></a>Adicionando um ListView a um layout de atividade
 
@@ -210,10 +202,9 @@ Como `HomeScreen` não `ListActivity` é mais herdado dele, ele não tem uma exi
 
 O benefício de usar um `Activity` com um layout personalizado (em vez de `ListActivity`um) está na capacidade de adicionar controles adicionais à tela, como o título `TextView` neste exemplo.
 
-
 ### <a name="creating-a-custom-row-layout"></a>Criando um layout de linha personalizado
 
-Outro arquivo de layout AXML é necessário para conter o layout personalizado para cada linha que será exibida na exibição de lista. Neste exemplo, a linha terá um plano de fundo verde, texto marrom e imagem alinhada à direita. A marcação XML do Android para declarar esse layout é descrita em Resources **/layout/CustomView. axml**:
+Outro arquivo de layout AXML é necessário para conter o layout personalizado para cada linha que será exibida na exibição de lista. Neste exemplo, a linha terá um plano de fundo verde, texto marrom e imagem alinhada à direita. A marcação XML do Android para declarar esse layout é descrita em **Resources/layout/CustomView. axml**:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -256,7 +247,6 @@ Outro arquivo de layout AXML é necessário para conter o layout personalizado p
 
 Embora um layout de linha personalizado possa conter muitos controles diferentes, o desempenho da rolagem pode ser afetado por designs complexos e por meio de imagens (especialmente se eles precisarem ser carregados pela rede). Consulte o artigo do Google para obter mais informações sobre como resolver problemas de desempenho de rolagem.
 
-
 ### <a name="referencing-a-custom-row-view"></a>Fazendo referência a uma exibição de linha personalizada
 
 A implementação do exemplo de adaptador personalizado está em `HomeScreenAdapter.cs`. O método de chave `GetView` é onde ele carrega o AXML personalizado usando a ID `Resource.Layout.CustomView`de recurso e, em seguida, define as propriedades em cada um dos controles na exibição antes de retorná-lo. A classe completa do adaptador é mostrada:
@@ -297,7 +287,6 @@ public class HomeScreenAdapter : BaseAdapter<TableItem> {
 }
 ```
 
-
 ### <a name="referencing-the-custom-listview-in-the-activity"></a>Referenciando ListView personalizado na atividade
 
 Como a `HomeScreen` classe agora é herdada de `ListView` `Activity`, um campo é declarado na classe para manter uma referência ao controle declarado no AXML:
@@ -331,8 +320,6 @@ void OnListItemClick(object sender, AdapterView.ItemClickEventArgs e)
 A tela resultante é parecida com esta:
 
 [![Captura de tela da CustomRowView resultante](customizing-appearance-images/customrowview.png)](customizing-appearance-images/customrowview.png#lightbox)
-
-
 
 ### <a name="customizing-the-row-selector-color"></a>Personalizando a cor do seletor de linha
 
@@ -374,13 +361,9 @@ Uma linha selecionada e a mensagem `Toast` correspondente agora têm esta aparê
 
 [![Uma linha selecionada em laranja, com mensagem do sistema exibindo o nome da linha selecionada](customizing-appearance-images/customselectcolor.png)](customizing-appearance-images/customselectcolor.png#lightbox)
 
-
-
 ### <a name="preventing-flickering-on-custom-layouts"></a>Impedindo a cintilação em layouts personalizados
 
 O Android tenta melhorar o desempenho da `ListView` rolagem por meio do cache de informações de layout. Se você tiver listas de rolagem longas de dados, também deverá definir `android:cacheColorHint` a propriedade `ListView` na declaração na definição de AXML da atividade (para o mesmo valor de cor que o plano de fundo de seu layout de linha personalizado). A falha ao incluir essa dica pode resultar em uma ' cintilação ', pois o usuário rola através de uma lista com cores de plano de fundo de linha personalizadas.
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

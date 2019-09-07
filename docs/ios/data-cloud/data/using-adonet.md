@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: 3526ee254a3986e1ff59288adeb95a49129b8b60
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: a9df85a405bc086f86dae73fea615581bf9d28d0
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290965"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70767381"
 ---
 # <a name="using-adonet-with-xamarinios"></a>Usando o ADO.NET com Xamarin. iOS
 
@@ -37,7 +37,6 @@ Clique com o botão direito do mouse em **referências > editar referências...*
 ## <a name="about-monodatasqlite"></a>Sobre o mono. Data. sqlite
 
 Usaremos a `Mono.Data.Sqlite.SqliteConnection` classe para criar um arquivo de banco de dados em branco e, `SqliteCommand` em seguida, criar uma instância de objetos que podemos usar para executar instruções SQL no banco de dados.
-
 
 1. **Criando um banco de dados em branco** -chame o `CreateFile` método com um caminho de arquivo (IE. Writeable) válido. Você deve verificar se o arquivo já existe antes de chamar esse método, caso contrário, um novo banco de dados (em branco) será criado na parte superior do antigo, e o arquivo antigo será perdido:
 
@@ -153,7 +152,6 @@ Como o SQLite permite que comandos SQL arbitrários sejam executados em relaçã
 - **ExecuteReader** – usado quando uma coleção de linhas deve ser retornada como um `SqlDataReader` .
 - **ExecuteScalar** – recupera um único valor (por exemplo, uma agregação).
 
-
 ### <a name="executenonquery"></a>EXECUTENONQUERY
 
 As instruções INSERT, UPDATE e DELETE retornarão o número de linhas afetadas. Todas as outras instruções SQL retornarão-1.
@@ -199,7 +197,6 @@ O método ExecuteReader retorna um objeto SqliteDataReader. Além do método Rea
 - **RowsAffected** – contagem das linhas afetadas pela consulta.
 - **HasRows** – se alguma linha foi retornada.
 
-
 ### <a name="executescalar"></a>EXECUTESCALAR
 
 Use isso para instruções SELECT que retornam um único valor (como uma agregação).
@@ -212,7 +209,6 @@ using (var contents = connection.CreateCommand ()) {
 ```
 
 O `ExecuteScalar` tipo de retorno do método `object` é – você deve converter o resultado dependendo da consulta de banco de dados. O resultado pode ser um inteiro de uma consulta de contagem ou uma cadeia de caracteres de uma consulta SELECT de coluna única. Observe que isso é diferente para outros métodos Execute que retornam um objeto leitor ou uma contagem do número de linhas afetadas.
-
 
 ## <a name="related-links"></a>Links relacionados
 

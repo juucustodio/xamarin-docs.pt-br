@@ -6,12 +6,12 @@ ms.assetid: 1F4A1BE1-7205-43F4-89D0-6C8672F52598
 author: conceptdev
 ms.author: crdun
 ms.date: 10/11/2017
-ms.openlocfilehash: b5362c0a809423e2782ee60faa96658cf132d752
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: fa50ae16b69436936f0a7a8a5cf0aeaa54dfedfb
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290865"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70765666"
 ---
 # <a name="objective-sharpie-release-history"></a>Histórico de lançamento de nitidez do objetivo
 
@@ -142,4 +142,3 @@ Correções de bugs secundárias.
 [Baixar o v 1.1.1](https://download.xamarin.com/objective-sharpie/ObjectiveSharpie-1.1.1.pkg)
 
 1.1.1 foi a primeira versão principal após 1,5 anos de uso interno e desenvolvimento no Xamarin seguindo a visualização inicial da nitidez do objetivo em abril de 2013. Essa versão é a primeira a ser geralmente considerada estável e utilizável para uma ampla variedade de bibliotecas nativas, apresentando um novo back-end Clang.
-

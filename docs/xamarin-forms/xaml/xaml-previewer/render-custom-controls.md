@@ -1,30 +1,30 @@
 ---
-title: Renderizar controles personalizados no pré-visualizador XAML
-description: Este artigo descreve como mostrar seus controles personalizados no pré-visualizador XAML.
+title: Renderizar controles personalizados no previsor XAML
+description: Este artigo descreve como mostrar os controles personalizados no previsor XAML.
 ms.prod: xamarin
 ms.assetid: 4D795372-CB8F-48F4-B63D-845E44B261F7
 ms.technology: xamarin-forms
 author: maddyleger1
 ms.author: maleger
 ms.date: 03/27/2019
-ms.openlocfilehash: 977c29312e0be8b92f216c224414f9bd03f8562d
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 5b87c631574f159230e1dc23285b9087bcc94255
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60875971"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70767325"
 ---
-# <a name="render-custom-controls-in-the-xaml-previewer"></a>Renderizar controles personalizados no pré-visualizador XAML
+# <a name="render-custom-controls-in-the-xaml-previewer"></a>Renderizar controles personalizados no previsor XAML
 
-_Controles personalizados às vezes, não funcionam conforme o esperado no pré-visualizador XAML. Use as diretrizes neste artigo para entender as limitações de visualização de seus controles personalizados._
+_Os controles personalizados às vezes não funcionam conforme o esperado no previsor XAML. Use as diretrizes neste artigo para entender as limitações da visualização de seus controles personalizados._
 
-## <a name="basic-preview-mode"></a>Modo de visualização básico
+## <a name="basic-preview-mode"></a>Modo de visualização básica
 
-Mesmo se você ainda não tiver criado seu projeto, o pré-visualizador XAML será renderizado suas páginas. Até que você cria, qualquer controle que depende de lógica mostrará seu tipo base do xamarin. Forms. Quando seu projeto é compilado, o pré-visualizador XAML tentar mostrar controles personalizados com processamento em tempo de design habilitado. Se o processamento falhar, ela mostrará o tipo base do xamarin. Forms.
+Mesmo que você não tenha criado seu projeto, o previsor XAML processará suas páginas. Até você compilar, qualquer controle que dependa do code-behind mostrará seu tipo base Xamarin. Forms. Quando o projeto é compilado, o Previewer XAML tentará mostrar controles personalizados com o processamento de tempo de design habilitado. Se o processamento falhar, ele mostrará o tipo base Xamarin. Forms.
 
-## <a name="enable-design-time-rendering-for-custom-controls"></a>Habilitar o processamento em tempo de design para controles personalizados
+## <a name="enable-design-time-rendering-for-custom-controls"></a>Habilitar renderização de tempo de design para controles personalizados
 
-Se você fazer seus próprios controles personalizados ou use os controles de uma biblioteca de terceiros, o pré-visualizador pode exibi-los incorretamente. Controles personalizados devem aceitar renderização para aparecer no visualizador, se você escreveu o controle ou importou de uma biblioteca de tempo de design. Com controles que você criou, adicione a [ `[DesignTimeVisible(true)]` ](xref:System.ComponentModel.DesignTimeVisibleAttribute) para sua classe do controle para mostrá-lo no visualizador:
+Se você fizer seus próprios controles personalizados ou usar controles de uma biblioteca de terceiros, o visualizador poderá exibi-los incorretamente. Os controles personalizados devem aceitar o processamento de tempo de design para aparecer no visualizador, quer você tenha escrito o controle ou importado de uma biblioteca. Com os controles que você criou, adicione [`[DesignTimeVisible(true)]`](xref:System.ComponentModel.DesignTimeVisibleAttribute) o à classe do seu controle para mostrá-lo no visualizador:
 
 ```csharp
 namespace MyProject
@@ -38,22 +38,21 @@ namespace MyProject
 }
 ```
 
-Use [classe de base de ImageCirclePlugin de James Montemagno](https://github.com/jamesmontemagno/ImageCirclePlugin/blob/master/src/ImageCircle/CircleImage.shared.cs) como exemplo.
+Use a [classe base ImageCirclePlugin's de James Montemagno](https://github.com/jamesmontemagno/ImageCirclePlugin/blob/master/src/ImageCircle/CircleImage.shared.cs) como exemplo.
 
+## <a name="skiasharp-controls"></a>Controles SkiaSharp
 
-## <a name="skiasharp-controls"></a>Controles de SkiaSharp
-
-Atualmente, os controles de SkiaSharp só têm suporte quando você está visualizando no iOS. Eles não serão renderizadas na visualização do Android.
+Atualmente, os controles SkiaSharp só têm suporte quando você está visualizando no iOS. Eles não serão renderizados na visualização do Android.
 
 ## <a name="troubleshooting"></a>Solução de problemas
 
-### <a name="check-your-xamarinforms-version"></a>Verifique a versão do xamarin. Forms
-Verifique se você tem pelo menos 3.6 do xamarin. Forms instalado. Você pode atualizar sua versão do xamarin. Forms no NuGet.
+### <a name="check-your-xamarinforms-version"></a>Verifique sua versão do Xamarin. Forms
+Verifique se você tem pelo menos o Xamarin. Forms 3,6 instalado. Você pode atualizar sua versão do Xamarin. Forms no NuGet.
 
-### <a name="even-with-designtimevisibletrue-my-custom-control-isnt-rendering-properly"></a>Mesmo com `[DesignTimeVisible(true)]`, meu controle personalizado não estiver renderizando corretamente.
-Controles personalizados que dependem muito do code-behind ou back-end de dados sempre não funcionam no pré-visualizador XAML. Você pode tentar:
-* Movendo o controle para que ele não inicializar se [o modo de design está habilitado](index.md#detect-design-mode)
-* Configurando [dados de tempo de design](design-time-data.md) para mostrar dados fictícios de back-end
+### <a name="even-with-designtimevisibletrue-my-custom-control-isnt-rendering-properly"></a>Mesmo com `[DesignTimeVisible(true)]`o, meu controle personalizado não é renderizado corretamente.
+Os controles personalizados que dependem muito dos dados code-behind ou back-end nem sempre funcionam no previsor XAML. Você pode tentar:
+* Movendo o controle para que ele não seja inicializado se o [modo de design estiver habilitado](index.md#detect-design-mode)
+* Configurando [dados de tempo de design](design-time-data.md) para mostrar dados falsos do back-end
 
-### <a name="the-xaml-previewer-shows-the-error-custom-controls-arent-rendering-properly"></a>O pré-visualizador XAML mostra o erro "Controles personalizados não renderizar corretamente"
-Tente limpar e recriar o projeto, ou fechar e reabrir o arquivo XAML.
+### <a name="the-xaml-previewer-shows-the-error-custom-controls-arent-rendering-properly"></a>O previsor XAML mostra o erro "os controles personalizados não são renderizados corretamente"
+Tente limpar e recompilar seu projeto, ou fechar e reabrir o arquivo XAML.

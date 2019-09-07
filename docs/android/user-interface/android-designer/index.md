@@ -7,17 +7,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/25/2018
-ms.openlocfilehash: 94f5dd206fb4794d1cdd71792418a2b4a2278c80
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 176037db501c2577775bdfb817fea01f16a02242
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69523149"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70761638"
 ---
 # <a name="xamarinandroid-designer"></a>Xamarin. Designer Android
 
 _Este artigo descreve os recursos do Xamarin. Designer Android. Ele explica as noções básicas do designer, demonstrando como usar o designer para dispor visualmente de widgets e editar propriedades. Ele também ilustra como usar o designer para trabalhar com interfaces do usuário e recursos em várias configurações, como temas, linguagens e configurações de dispositivo, bem como design para modos de exibição alternativos, como paisagem e retrato._
-
 
 ## <a name="overview"></a>Visão geral
 
@@ -36,8 +35,6 @@ Este artigo pesquisa os diversos recursos do Xamarin. Designer Android. Ele expl
 8. Como lidar com conflitos que podem surgir ao trabalhar com modos de exibição alternativos. 
 9. Como usar ferramentas de design de material para criar aplicativos em conformidade com o design de material.
 
-
-
 ## <a name="sections"></a>Seções
 
  [Usar o Android Designer](~/android/user-interface/android-designer/designer-walkthrough.md)
@@ -50,14 +47,10 @@ Este artigo pesquisa os diversos recursos do Xamarin. Designer Android. Ele expl
 
  [Recursos de design de material](~/android/user-interface/android-designer/material-design-features.md)
 
-
-
 ## <a name="summary"></a>Resumo
 
 Este artigo abordou o conjunto de recursos do Xamarin. Designer Android.
 Ele mostrou como começar a usar o designer e explicou suas várias partes. Ele descreveu como carregar um layout, bem como adicionar e modificar widgets, usando a **superfície do designer** , bem como a exibição da **fonte** . Ele também explicou como trabalhar com vários recursos e configurações de dispositivo. Por fim, ele examinou como usar o designer para desenvolver interfaces do usuário criadas especificamente para exibições alternativas, como paisagem e retrato, além de como resolver conflitos que podem surgir entre essas exibições.
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: 60bf25d7d88a1772e8b742a336a5faaebdf964fa
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 1a91b92cc3e82bad02d630dde8ced1d1ba63e3fd
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290808"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768484"
 ---
 # <a name="maps-in-xamarinios"></a>Mapas no Xamarin. iOS
 
@@ -52,7 +52,6 @@ A captura de tela a seguir mostra os diferentes estilos de mapa disponíveis:
 
 - Zoom por meio de um gesto de pinçar
 - Movimento panorâmico por meio de um gesto panorâmico
-
 
 Esses recursos podem ser habilitados ou desabilitados simplesmente definindo `ZoomEnabled` as `ScrollEnabled` Propriedades e da `MKMapView` instância, em que o valor padrão é true para ambos. Por exemplo, para exibir um mapa estático, basta definir as propriedades apropriadas como false:
 
@@ -100,7 +99,6 @@ Uma anotação em si tem duas partes:
 
 - O `MKAnnotation` objeto, que inclui dados de modelo sobre a anotação, como o título e o local da anotação.
 - O `MKAnnotationView` , que contém a imagem a ser exibida e, opcionalmente, um texto explicativo que é mostrado quando o usuário toca na anotação.
-
 
 O MAP Kit usa o padrão de delegação do IOS para adicionar anotações a um mapa, `Delegate` onde a propriedade `MKMapView` de é definida como uma instância de `MKMapViewDelegate`um. É a implementação deste delegado que é responsável por retornar o `MKAnnotationView` para uma anotação.
 
@@ -183,7 +181,6 @@ Outra maneira de camadas de elementos gráficos em um mapa é usar sobreposiçõ
 - Polilinhas – geralmente visto ao mostrar uma rota.
 - Círculos – usados para realçar uma área circular de um mapa.
 
-
 Além disso, as sobreposições personalizadas podem ser criadas para mostrar geometrias arbitrárias com código de desenho granular e personalizado. Por exemplo, o radar de clima seria um bom candidato para uma sobreposição personalizada.
 
 #### <a name="adding-an-overlay"></a>Adicionando uma sobreposição
@@ -192,7 +189,6 @@ Semelhante às anotações, a adição de uma sobreposição envolve duas partes
 
 - Criar um objeto de modelo para a sobreposição e adicioná- `MKMapView` lo ao.
 - Criar uma exibição para a sobreposição no `MKMapViewDelegate` .
-
 
 O modelo para a sobreposição pode ser `MKShape` qualquer subclasse. O Xamarin. Ios `MKShape` inclui subclasses para polígonos, polilinhas e círculos, por `MKPolygon`meio `MKPolyline` das `MKCircle` classes e, respectivamente.
 
@@ -231,7 +227,6 @@ Para executar uma pesquisa local, um aplicativo deve seguir estas etapas:
 1. Crie um `MKLocalSearch` objeto a `MKLocalSearchRequest` partir do.
 1. Chame o `Start` método `MKLocalSearch` no objeto.
 1. Recupere o `MKLocalSearchResponse` objeto em um retorno de chamada.
-
 
 A própria API de pesquisa local não fornece nenhuma interface do usuário. Ele nem precisa de um mapa para ser usado. No entanto, para fazer uso prático da pesquisa local, um aplicativo precisa fornecer uma maneira de especificar uma consulta de pesquisa e exibir resultados. Além disso, como os resultados conterão dados de localização, geralmente fará sentido mostrá-los em um mapa.
 
@@ -279,8 +274,6 @@ Vamos dar uma olhada em como implementar o `searchResultsController` e o `search
 Isso resulta em uma barra de pesquisa exibida sobre o mapa, conforme mostrado abaixo:
 
  ![](images/07-searchbar.png "Uma barra de pesquisa exibida sobre o mapa")
-
-
 
 ### <a name="displaying-the-search-results"></a>Exibindo os resultados da pesquisa
 
@@ -351,7 +344,6 @@ public class SearchResultsViewController : UITableViewController
             }
         });
 
-
     }
 }
 ```
@@ -382,7 +374,6 @@ public void Search (string forSearchString)
         }
     });
 
-
 }
 ```
 
@@ -406,8 +397,6 @@ A implementação acima adiciona uma anotação ao mapa quando um item é seleci
 
 > [!IMPORTANT]
 > `UISearchController`foi implementado no iOS 8. Se você quiser dar suporte a dispositivos anteriores a isso, será necessário usar `UISearchDisplayController`o.
-
-
 
 ## <a name="summary"></a>Resumo
 

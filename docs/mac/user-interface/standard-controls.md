@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 2701b1f8bf343c653da33fd587c9da3302f52335
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 18ce7eb4dcd68596027f739579fd5a4b70497829
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292243"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70772705"
 ---
 # <a name="standard-controls-in-xamarinmac"></a>Controles padrão no Xamarin. Mac
 
@@ -215,7 +215,6 @@ Selecione o tipo de exposição a ser criado e forneça um **nome**para a **toma
 
 [![](standard-controls-images/edit13.png "Configurando a tomada ou a ação")](standard-controls-images/edit13.png#lightbox)
 
-
 Para obter mais informações sobre como trabalhar com **saídas** e **ações**, consulte a seção [saídas e ações](~/mac/get-started/hello-mac.md#outlets-and-actions) da nossa [introdução ao Xcode e à documentação Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) .
 
 <a name="Synchronizing_Changes_with_Xcode" />
@@ -324,7 +323,6 @@ Quando o aplicativo é executado e a janela com o botão é chave e focada, se o
 O AppKit fornece vários tipos de caixas de seleção e grupos de botões de opção que podem ser usados no design da interface do usuário. Para obter mais informações, consulte a seção de [botões](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/ControlsButtons.html#//apple_ref/doc/uid/20000957-CH48-SW1) das [diretrizes de interface humana do os X](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)da Apple. 
 
 [![](standard-controls-images/buttons02.png "Um exemplo dos tipos de caixa de seleção disponíveis")](standard-controls-images/buttons02.png#lightbox)
-
 
 Caixas de seleção e botões de opção (expostos via **saídas**) têm um estado (como **ligado** e **desligado**), o estado pode ser marcado ou definido com `State` a propriedade em `NSCellStateValue` relação à enumeração. Por exemplo:
 
@@ -637,7 +635,6 @@ Usando a codificação de valor chave e técnicas de vinculação de dados em se
 A KVC (codificação de valor chave) é um mecanismo para acessar as propriedades de um objeto indiretamente, usando chaves (cadeias de caracteres especialmente formatadas) para identificar Propriedades em vez de acessá-las por meio de variáveis de instância ou métodos de acessador (`get/set`). Ao implementar acessadores compatíveis com codificação de chave-valor em seu aplicativo Xamarin. Mac, você obterá acesso a outros recursos do macOS, como KVO (chave-valor, observação), vinculação de dados, dados principais, associações de Cocoa e scripts.
 
 Para obter mais informações, consulte a seção [vinculação de dados simples](~/mac/app-fundamentals/databinding.md#Simple_Data_Binding) de nossa [vinculação de dados e documentação de codificação de chave-valor](~/mac/app-fundamentals/databinding.md) .
-
 
 <a name="Summary" />
 

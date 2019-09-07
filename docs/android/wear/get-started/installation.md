@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/25/2018
-ms.openlocfilehash: d85c199f6243fc49c1ca924bbd60cfef48b6d91f
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 190e38e525288dbc2b7f6bd9e785c723c80c6271
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70119998"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70762235"
 ---
 # <a name="setup-and-installation"></a>Instalação e Configuração
 
@@ -45,7 +45,6 @@ Depois de instalar o Xamarin. Android, execute as seguintes etapas para que voc�
 
 Essas etapas são descritas nas seções a seguir.
 
-
 ### <a name="install-android-sdk-and-tools"></a>Instalar SDK do Android e ferramentas 
 
 Inicie o **Gerenciador de SDK do Android**: 
@@ -59,7 +58,6 @@ Inicie o **Gerenciador de SDK do Android**:
 ![Como iniciar o Gerenciador de SDK do Android no Visual Studio para Mac](installation-images/xs/sdk-menu.png)
 
 -----
-
 
 Verifique se você tem as seguintes SDK do Android e ferramentas instaladas:
 
@@ -79,11 +77,9 @@ Se você não tiver o SDK e as ferramentas mais recentes instalados, baixe as fe
 
 -----
 
-
 ## <a name="configuration"></a>Configuração
 
 Antes de usar testar seu aplicativo, você deve configurar um emulador de desgaste do Android ou um dispositivo real de desgaste do Android. 
-
 
 ### <a name="android-wear-emulator"></a>Emulador de desgaste do Android
 
@@ -101,16 +97,13 @@ Antes de usar um emulador de desgaste do Android, você deve configurar um dispo
 
 Para obter mais informações sobre como configurar um emulador de desgaste do Android, consulte [depurar o desgaste do Android em um emulador](~/android/wear/deploy-test/debug-on-emulator.md).
 
-
 ### <a name="android-wear-device"></a>Dispositivo Android de desgaste
 
 Se você tiver um dispositivo de desgaste do Android, como um SmartWatch de desgaste do Android, poderá depurar o aplicativo nesse dispositivo em vez de usar um emulador. Para obter informações sobre como desenvolver com um dispositivo de desgaste, consulte [Depurar em um dispositivo de desgaste](~/android/wear/deploy-test/debug-on-device.md).
 
-
 ## <a name="create-your-first-android-wear-app"></a>Criar seu primeiro aplicativo de desgaste do Android
 
 Siga as instruções [Hello, desgaste](~/android/wear/get-started/hello-wear.md) para criar seu primeiro aplicativo Watch.
-
 
 ## <a name="packaging-your-app"></a>Empacotando seu aplicativo
 
@@ -119,7 +112,6 @@ Os aplicativos de desgaste do Android sempre são distribuídos com um aplicativ
 Quando você adiciona seu aplicativo de desgaste do Android como uma referência ao aplicativo Android principal, ele é considerado automaticamente como um projeto de desgaste do Android e gerará todos os metadados e XML necessários para você. Além disso, ele verificará se o pacote e os números de versão correspondem para que você possa enviar facilmente seus aplicativos para Google Play. 
 
 Para saber mais sobre aplicativos de desgaste de pacotes, consulte [trabalhando com empacotamento](~/android/wear/deploy-test/packaging.md).
-
 
 ## <a name="related-links"></a>Links relacionados
 

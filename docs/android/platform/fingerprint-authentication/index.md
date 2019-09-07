@@ -7,17 +7,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: ac373d20cbe08719fd7aa8e3888bbd608d8549c7
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: a58242e89033d6cd2652495f9466379f63f498f0
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70119517"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70761244"
 ---
 # <a name="fingerprint-authentication"></a>Autenticação de impressão digital
 
 _Este guia discute como adicionar a autenticação de impressão digital, introduzida no Android 6,0, a um aplicativo Xamarin. Android._
-
 
 ## <a name="fingerprint-authentication-overview"></a>Visão geral da autenticação de impressão digital
 
@@ -51,11 +50,6 @@ Este guia explicará como usar as `FingerprintManager` APIs para aprimorar um ap
 A autenticação de impressão digital requer Android 6,0 (API nível 23) ou superior e um dispositivo com um scanner de impressão digital. 
 
 Uma impressão digital já deve estar inscrita no dispositivo para cada usuário que deve ser autenticado. Isso envolve a configuração de um bloqueio de tela que usa uma senha, PIN, padrão de toque ou reconhecimento facial. É possível simular algumas das funcionalidades de autenticação de impressão digital em um Android Emulator.  Para obter mais informações sobre esses dois tópicos, consulte a seção [registrando uma impressão digital](enrolling-fingerprint.md) . 
-
-
-
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

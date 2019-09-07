@@ -7,12 +7,12 @@ ms.technology: xamarin-skiasharp
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: ed423a19eabd9c7f1d91457cc1834f28d62b2121
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: cc62ca4656a845a261c56424aa1ea1331c994994
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68647312"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70759212"
 ---
 # <a name="lines-and-stroke-caps"></a>Limites de linha e de traço
 
@@ -237,7 +237,6 @@ Quando você usa em vez disso `SKPointMode.Lines`, conforme mostrado na tela de 
 A captura de tela UWP mostra o resultado do `SKPointMode.Polygon` valor. Uma linha é desenhada entre os pontos sucessivos na matriz, mas se você analisar de forma bastante aproximada, você verá que essas linhas não estão conectadas. Cada uma destas linhas separadas começa e termina com o limite de linha especificado. Se você selecionar o `Round` caps, as linhas podem aparecer para ser conectado, mas não realmente estão conectados.
 
 Se linhas são ou não conectadas é um aspecto essencial de como trabalhar com caminhos de elementos gráficos.
-
 
 ## <a name="related-links"></a>Links relacionados
 

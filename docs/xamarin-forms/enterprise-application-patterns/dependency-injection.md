@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: 6cbcd6612323acc8619004d56fff82461e005e9e
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 72ffa4508f2c8f050f505313a28ce8278f2570b4
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69529144"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70760260"
 ---
 # <a name="dependency-injection"></a>Injeção de dependência
 
@@ -197,7 +197,6 @@ Autofac inclui escopos de instância adicionais. Para obter mais informações, 
 A injeção de dependência permite o desacoplamento de tipos concretos do código que depende desses tipos. Normalmente, ele usa um contêiner que contém uma lista de registros e mapeamentos entre interfaces e tipos abstratos e os tipos concretos que implementam ou estendem esses tipos.
 
 O Autofac facilita a criação de aplicativos menos rígidos e fornece todos os recursos normalmente encontrados em contêineres de injeção de dependência, incluindo métodos para registrar mapeamentos de tipo e instâncias de objeto, resolver objetos, gerenciar tempos de vida de objetos e injetar objetos dependentes em construtores de objetos que ele resolve.
-
 
 ## <a name="related-links"></a>Links relacionados
 

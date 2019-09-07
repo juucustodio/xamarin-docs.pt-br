@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: 638840bafd43961cdce6ebe0fa2fb6cbe8b33e16
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 960be485f6997ed8c861d47181fa89397cff9c0a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291530"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70753143"
 ---
 # <a name="eventkit-in-xamarinios"></a>Kit no Xamarin. iOS
 
@@ -24,7 +24,6 @@ Neste guia, vamos abordar:
 
 - **Noções básicas do kit** – isso apresentará as partes fundamentais de kit por meio das principais classes e fornecerá uma compreensão de seu uso. Esta seção é necessária para a leitura antes de lidar com a próxima parte do documento. 
 - **Tarefas comuns** – a seção tarefas comuns destina-se a ser uma referência rápida sobre como fazer coisas comuns, como; enumerar calendários, criar, salvar e recuperar eventos de calendário e lembretes, bem como usar os controladores internos para criar e modificar eventos de calendário. Esta seção não precisa ser lida de frente para trás, pois ela deve ser uma referência para tarefas específicas. 
-
 
 Todas as tarefas deste guia estão disponíveis no aplicativo de exemplo complementar:
 
@@ -376,7 +375,6 @@ App.Current.EventStore.FetchReminders (
 ## <a name="summary"></a>Resumo
 
 Este documento forneceu uma visão geral das partes importantes da estrutura kit e várias das tarefas mais comuns. No entanto, a estrutura kit é muito grande e poderosa e inclui recursos que não foram introduzidos aqui, como: atualizações em lote, configuração de alarmes, configuração de recorrência de eventos, registro e escuta de alterações no banco de dados de calendário, definir limites geográficos e muito mais.  Para obter mais informações, consulte o [Guia de programação de calendário e lembretes](https://developer.apple.com/library/prerelease/ios/#documentation/DataManagement/Conceptual/EventKitProgGuide/Introduction/Introduction.html)da Apple.
-
 
 ## <a name="related-links"></a>Links relacionados
 

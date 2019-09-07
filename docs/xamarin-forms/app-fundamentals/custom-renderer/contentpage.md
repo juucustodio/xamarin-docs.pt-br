@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 73d57c632cfcd36bd7f38865c39acb7fecb55e3e
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
-ms.translationtype: HT
+ms.openlocfilehash: 64367ded8dcd173f7c9e57cfc234aa66712aefd4
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68650925"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70772019"
 ---
 # <a name="customizing-a-contentpage"></a>Personalizando uma ContentPage
 
@@ -253,7 +253,6 @@ Ao implementar um renderizador personalizado que deriva de `PageRenderer` na UWP
 ## <a name="summary"></a>Resumo
 
 Este artigo demonstrou como criar um renderizador personalizado para a página [`ContentPage`](xref:Xamarin.Forms.ContentPage), permitindo que os desenvolvedores substituam a renderização nativa padrão com sua própria personalização específica a uma plataforma. Um `ContentPage` é um elemento visual que mostra uma única exibição e ocupa a maior parte da tela.
-
 
 ## <a name="related-links"></a>Links relacionados
 

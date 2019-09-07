@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 11/25/2015
-ms.openlocfilehash: 8b1b82a1707a4aa58ef1e3dadbaeb79ada1ad6a1
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 56e35662230a3c529eb48a0ae742c2b063c1ac10
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291880"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70753340"
 ---
 # <a name="new-reference-counting-system-in-xamarinios"></a>Novo sistema de contagem de referência no Xamarin. iOS
 
@@ -46,10 +46,8 @@ Observe que essas opções foram removidas em versões mais recentes do Visual S
 
  A nova extensão de contagem de referência é necessária para o API Unificada e deve ser habilitada por padrão. As versões mais antigas do IDE podem não ter esse valor marcado automaticamente e talvez você precise fazer uma verificação por conta própria.
 
-
 > [!IMPORTANT]
 > Uma versão anterior desse recurso já existe desde o MonoTouch 5,2, mas só estava disponível para o **SGen** como uma visualização experimental. Essa nova versão aprimorada agora também está disponível para o coletor de lixo **Boehm** .
-
 
 Historicamente, houve dois tipos de objetos gerenciados pelo Xamarin. iOS: aqueles que eram meramente um wrapper em um objeto nativo (objetos pares) e aqueles que ampliaram ou incorporaram novas funcionalidades (objetos derivados) – geralmente mantendo o estado de memória extra. Anteriormente, era possível aumentar um objeto de mesmo nível com o estado (por exemplo, adicionando um C# manipulador de eventos), mas que permitimos que o objeto passasse sem referência e, em seguida, coletado. Isso pode causar uma falha posteriormente (por exemplo, se o tempo de execução de Objective-C tiver sido chamado de volta para o objeto gerenciado).
 

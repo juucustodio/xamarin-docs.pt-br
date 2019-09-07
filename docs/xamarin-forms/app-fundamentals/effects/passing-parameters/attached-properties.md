@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/05/2016
-ms.openlocfilehash: d40e1657eb39543023490892b8765ee1fe956ec4
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
-ms.translationtype: HT
+ms.openlocfilehash: 2fcfbfa8a1780a9da4e9bfe187dc99a5172e95f0
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68645367"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771477"
 ---
 # <a name="passing-effect-parameters-as-attached-properties"></a>Passando parâmetros de efeito como propriedades anexadas
 
@@ -432,7 +432,6 @@ O método `OnElementPropertyChanged` atualiza a cor ou o deslocamento da sombra,
 ## <a name="summary"></a>Resumo
 
 Este artigo demonstrou o uso de propriedades anexadas para passar parâmetros para um efeito e a alteração de um parâmetro em tempo de execução. Propriedades anexadas podem ser usadas para definir parâmetros de efeito que respondem a alterações de propriedade de tempo de execução.
-
 
 ## <a name="related-links"></a>Links relacionados
 

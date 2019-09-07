@@ -8,12 +8,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/27/2018
-ms.openlocfilehash: 421d51cbb1ae3adb80aef6e4bf3cf1da38d6de8e
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
-ms.translationtype: HT
+ms.openlocfilehash: d5de743cdbef1358450a2f358acb86dce2d373c7
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69887829"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70758021"
 ---
 # <a name="android-emulator-troubleshooting"></a>Solução de problemas do Android Emulator
 
@@ -48,11 +48,9 @@ Se vir um erro sobre uma falha ao instalar o APK no emulador ou sobre uma falha 
 
 5. Se o emulador não aparecer nessa lista, inicie o **Gerenciador de SDK do Android**, aplique todas as atualizações e tente iniciar o emulador novamente.
 
-
 ### <a name="mmio-access-error"></a>Erro ao acessar o MMIO
 
 Se for exibida a mensagem **Ocorreu um erro de acesso de MMIO**, reinicie o emulador.
-
 
 <a name="gps-win" />
 
@@ -69,7 +67,6 @@ Por exemplo, este dispositivo virtual incluirá o Google Play Services e o Googl
 
 > [!NOTE]
 > Imagens do Google Play Store estão disponíveis apenas para alguns tipos de dispositivos básicos, como Pixel, Pixel 2, Nexus 5 e Nexus 5X.
-
 
 <a name="perf-win" />
 
@@ -91,13 +88,11 @@ Se a aceleração de hardware não estiver habilitada, iniciar um dispositivo vi
 
 Se essa mensagem de erro for exibida, confira [Problemas de aceleração de hardware](#accel-issues-win) mais adiante para ver as etapas você pode seguir para verificar e habilitar a aceleração de hardware.
 
-
 ### <a name="acceleration-is-enabled-but-the-emulator-runs-too-slowly"></a>A aceleração de está habilitada, mas o emulador é executado muito lentamente 
 
 Uma causa comum para esse problema é não estar usando uma imagem com base em x86 em seu dispositivo virtual (AVD). Ao criar um dispositivo virtual (confira [Gerenciando dispositivos virtuais com o Android Device Manager](~/android/get-started/installation/android-emulator/device-manager.md)), certifique-se de selecionar uma imagem de sistema baseada em x86:
 
 [![Selecionar uma imagem de sistema x86 para um dispositivo virtual](troubleshooting-images/win/02-x86-virtual-device-w158-sml.png)](troubleshooting-images/win/02-x86-virtual-device-w158.png#lightbox)
-
 
 <a name="accel-issues-win" />
 
@@ -148,7 +143,6 @@ Para corrigir esse problema, reinicialize o BIOS do computador e habilite as seg
 
 Se a aceleração de hardware estiver habilitada e o BIOS estiver configurado corretamente, o emulador deverá ser executado com êxito com aceleração de hardware.
 No entanto, ainda poderá haver problemas devido a questões específicas do Hyper-V e do HAXM, conforme explicado a seguir.
-
 
 ### <a name="hyper-v-issues"></a>Problemas do Hyper-V
 
@@ -203,7 +197,6 @@ Após a conclusão desses comandos, reinicialize.
 
 Para obter mais informações sobre como habilitar o Hyper-V (incluindo técnicas para habilitar o Hyper-V usando a ferramenta Gerenciamento e Manutenção de Imagens de Implantação ), confira [Instalar o Hyper-V](https://docs.microsoft.com/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v).
 
-
 ### <a name="haxm-issues"></a>Problemas do HAXM
 
 Os problemas com o HAXM normalmente são causados por conflitos com outras tecnologias de virtualização, configurações incorretas ou um driver de HAXM desatualizado.
@@ -231,7 +224,6 @@ SERVICE_NAME: intelhaxm
 
 Se o `STATE` não estiver definido como `RUNNING`, confira [Como usar o Hardware Accelerated Execution Manager da Intel](https://software.intel.com/android/articles/how-to-use-the-intel-hardware-accelerated-execution-manager-intel-haxm-android-emulator) para resolver o problema.
 
-
 <a name="virt-conflicts" />
 
 #### <a name="haxm-virtualization-conflicts"></a>Conflitos de virtualização do HAXM
@@ -243,7 +235,6 @@ O HAXM pode entrar em conflito com outras tecnologias que usam virtualização, 
 - **Device Guard** &ndash; o Device Guard e o Credential Guard podem impedir que o Hyper-V seja desabilitado em máquinas Windows. Para desabilitar o Device Guard e o Credential Guard, consulte [Desabilitando o Device Guard](#disable-devguard).
 
 - **Software antivírus** &ndash; se você estiver executando um software antivírus que usa virtualização assistida por hardware (como o Avast), desabilite ou desinstale esse software, reinicialize e tente novamente o iniciar o Android Emulator.
-
 
 #### <a name="incorrect-bios-settings"></a>Configurações incorretas de BIOS
 
@@ -326,7 +317,6 @@ Se o Device Guard estiver habilitado, use as seguintes etapas para desabilitá-l
 
 Se o Hyper-V ainda não estiver desabilitado, as políticas do computador ingressado no domínio podem impedir que você desabilite o Device Guard ou o Credential Guard. Nesse caso, você poderá solicitar uma isenção ao administrador do domínio a fim de permitir que você recuse o Credential Guard. Como alternativa, você poderá usar um computador que não esteja ingressado no domínio se precisar usar o HAXM.
 
-
 ## <a name="additional-troubleshooting-tips"></a>Dicas adicionais de solução de problemas
 
 As sugestões a seguir costumam ser úteis para diagnosticar problemas do Android Emulator.
@@ -364,8 +354,6 @@ Você pode exibir cada arquivo **DeviceManager.log** usando um editor de texto c
 Component Intel x86 Emulator Accelerator (HAXM installer) r6.2.1 [Extra: (Intel Corporation)] not present on the system
 ```
 
-
-
 ::: zone-end
 ::: zone pivot="macos"
 
@@ -396,7 +384,6 @@ Se vir um erro sobre uma falha ao instalar o APK no emulador ou sobre uma falha 
 
 5. Se o emulador não aparecer nessa lista, inicie o **Gerenciador de SDK do Android**, aplique todas as atualizações e tente iniciar o emulador novamente.
 
-
 ### <a name="mmio-access-error"></a>Erro ao acessar o MMIO
 
 Se a mensagem **Ocorreu um erro de acesso de MMIO** for exibida, reinicie o emulador.
@@ -417,7 +404,6 @@ Por exemplo, este dispositivo virtual incluirá o Google Play Services e o Googl
 > [!NOTE]
 > Imagens do Google Play Store estão disponíveis apenas para alguns tipos de dispositivos básicos, como Pixel, Pixel 2, Nexus 5 e Nexus 5X.
 
-
 <a name="perf-mac" />
 
 ## <a name="performance-issues"></a>Problemas de desempenho
@@ -433,7 +419,6 @@ As seções a seguir tratam desses cenários com mais detalhes.
 ### <a name="hardware-acceleration-is-not-enabled"></a>A aceleração de hardware não está habilitada
 
 Se a aceleração de hardware não estiver habilitada, poderá aparecer uma caixa de diálogo com uma mensagem semelhante a **o dispositivo será executado sem aceleração** quando você implantar seu aplicativo no Android Emulator. Se você não tiver certeza se a aceleração de hardware está habilitada no computador (ou se quiser saber qual tecnologia está fornecendo a aceleração), confira [Problemas de aceleração de hardware](#accel-issues-mac) mais adiante para ver as etapas que pode seguir para verificar e habilitar a aceleração de hardware.
-
 
 ### <a name="acceleration-is-enabled-but-the-emulator-runs-too-slowly"></a>A aceleração de está habilitada, mas o emulador é executado muito lentamente 
 
@@ -467,11 +452,9 @@ kern.hv_support: 1
 
 Se o Framework de Hipervisor não estiver disponível em seu Mac, você poderá seguir as etapas em [Acelerar com o HAXM](~/android/get-started/installation/android-emulator/hardware-acceleration.md?tabs=vsmac#haxm-mac) para usar o HAXM para aceleração.
 
-
 ### <a name="haxm-issues"></a>Problemas do HAXM
 
 Se o Android Emulator não inicia corretamente, normalmente o problema é causado pelo HAXM. Os problemas com o HAXM normalmente são causados por conflitos com outras tecnologias de virtualização, configurações incorretas ou um driver de HAXM desatualizado. Tente reinstalar o driver do HAXM seguindo as etapas detalhadas em [Instalando o HAXM](~/android/get-started/installation/android-emulator/hardware-acceleration.md?tabs=vsmac#install-haxm-mac).
-
 
 ## <a name="additional-troubleshooting-tips"></a>Dicas adicionais de solução de problemas
 

@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/06/2017
-ms.openlocfilehash: 83fa64ca207358b712341e1923a3a9a67a449e1f
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 4d294b7aee9d4a6c2118a5ff12968a7f95fb981c
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69524728"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70757865"
 ---
 # <a name="android-beam"></a>Beam do Android
 
@@ -27,9 +27,7 @@ O Android dá suporte a duas maneiras de definir mensagens com o feixe do Androi
 
 - `SetNdefPushMessageCallback`-Quando o feixe do Android é iniciado, um aplicativo pode manipular um retorno de chamada para criar um NdefMessage. Esse mecanismo permite que a criação de mensagens seja atrasada até que os dispositivos estejam no intervalo. Ele dá suporte a cenários em que a mensagem pode variar com base no que está acontecendo no aplicativo.
 
-
 Em ambos os casos, para enviar dados com o transmissão do Android, um `NdefMessage`aplicativo envia um, empacotando `NdefRecords`os dados em vários. Vamos dar uma olhada nos principais pontos que devem ser resolvidos antes que possamos disparar o feixe do Android. Primeiro, trabalharemos com o estilo de retorno de chamada para `NdefMessage`criar um.
-
 
 ## <a name="creating-a-message"></a>Criando uma mensagem
 
@@ -65,7 +63,6 @@ public NdefRecord CreateMimeRecord (String mimeType, byte [] payload)
 }
 ```
 
-
 ## <a name="receiving-a-message"></a>Recebendo uma mensagem
 
 No lado do recebimento, o sistema invoca uma intenção com a `ActionNdefDiscovered` ação, na qual podemos extrair o NdefMessage da seguinte maneira:
@@ -78,8 +75,6 @@ NdefMessage msg = (NdefMessage) rawMsgs [0];
 Para obter um exemplo de código completo que usa o feixe do Android, mostrado em execução na captura de tela abaixo, consulte a [demonstração do feixe do Android](https://docs.microsoft.com/samples/xamarin/monodroid-samples/androidbeamdemo) na Galeria de exemplos.
 
 [![Capturas de tela de exemplo da demonstração do feixe do Android](android-beam-images/24.png)](android-beam-images/24.png#lightbox)
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

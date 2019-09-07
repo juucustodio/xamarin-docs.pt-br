@@ -7,17 +7,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 09/05/2018
-ms.openlocfilehash: ebe8f483e501c4e34295a889f0d9ae06df8ba1d9
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 0089f8681142b1d3d3446c21ba89ab2648e4a638
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69523705"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70761414"
 ---
 # <a name="xamarinandroid-designer-basics"></a>Noções básicas do Xamarin. Designer Android
 
 _Este tópico apresenta os recursos do Xamarin. Designer Android, explica como iniciar o designer, descreve o Design Surface e detalha como usar o painel Propriedades para editar as propriedades do widget._
-
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
@@ -84,7 +83,7 @@ A **barra de ferramentas do designer** fornece acesso aos seguintes recursos:
 
 - **Seletor de configuração** Seleciona a configuração do dispositivo, como *retrato* ou *paisagem.* &ndash;
 
-- **Opções** do qualificador de recursosAbre uma caixa de diálogo que apresenta menus suspensos para seleção de idioma, modo de interface do usuário, modo noturno e opções de tela de ida e volta. &ndash;
+- **Opções do qualificador de recursos**Abre uma caixa de diálogo que apresenta menus suspensos para seleção de idioma, modo de interface do usuário, modo noturno e opções de tela de ida e volta. &ndash;
 
 - **Configurações da barra de ações** &ndash; Define as configurações da barra de ações para o layout.
 
@@ -94,9 +93,9 @@ A **barra de ferramentas do designer** fornece acesso aos seguintes recursos:
 
 Cada um desses recursos é explicado em mais detalhes nestes tópicos:
 
-- [Qualificadores de recursos e opções de visualização](~/android/user-interface/android-designer/resource-qualifiers.md) fornecem informações detalhadas sobre o seletor de **dispositivo**, seletor de **versão do Android**, seletor de **tema**, seletor de **configuração**, qualificações de **recursos Opções**e **configurações da barra de ações**.
+- [Qualificadores de recursos e opções de visualização](~/android/user-interface/android-designer/resource-qualifiers.md) fornecem informações detalhadas sobre o **seletor de dispositivo**, **seletor de versão do Android**, **seletor de tema**, **seletor de configuração**, **qualificações de recursos Opções**e **configurações da barra de ações**.
 
-- As exibições de [layout alternativo](~/android/user-interface/android-designer/alternative-layout-views.md) explicam como usar o seletor de **layout alternativo**.
+- As [exibições de layout alternativo](~/android/user-interface/android-designer/alternative-layout-views.md) explicam como usar o **seletor de layout alternativo**.
 
 - Os [recursos de design de material do Xamarin. designer Android](~/android/user-interface/android-designer/material-design-features.md) fornecem uma visão geral abrangente do editor de **tema** e da grade de **design do material**.
 
@@ -112,7 +111,6 @@ Neste exemplo, clicar com o botão direito `TextView` do mouse em uma abre um me
 
 - **Exclua**, **Copie**e **recorte** &ndash; `TextView`as operações que se aplicam ao clique com o botão direito do mouse.
 
-
 ### <a name="zoom-controls"></a>Controles de zoom
 
 O **design Surface** dá suporte ao zoom por meio de vários controles, conforme mostrado:
@@ -121,7 +119,7 @@ O **design Surface** dá suporte ao zoom por meio de vários controles, conforme
 
 Esses controles facilitam a visualização de determinadas áreas da interface do usuário no designer:
 
-- Realçar contêineres Realça os contêineres na design Surface para que sejam mais fáceis de localizar ao ampliar e reduzir. &ndash;
+- **Realçar contêineres** Realça os contêineres na design Surface para que sejam mais fáceis de localizar ao ampliar e reduzir. &ndash;
 
 - **Tamanho normal** &ndash; Renderiza o layout pixel-for-pixel para que você possa ver como o layout irá examinar a resolução do dispositivo selecionado.
 
@@ -166,7 +164,6 @@ As alterações feitas na origem XML são processadas imediatamente no **design 
 
 Para maior facilidade de navegação ao trabalhar com arquivos XML longos, o painel de **origem** dá suporte ao ScrollBar do Visual Studio (como visto à direita na captura de tela anterior). Para obter mais informações sobre a barra de rolagem, consulte [como controlar seu código Personalizando a barra de rolagem](https://msdn.microsoft.com/library/dn237345.aspx).
 
-
 ### <a name="autocompletion"></a>Preenchimento automático
 
 Ao começar a digitar o nome de um atributo para um widget, você pode pressionar <kbd>Ctrl + espaço</kbd> para ver uma lista de possíveis conclusões. Por exemplo, depois de `android:lay` inserir no exemplo a seguir (seguido digitando <kbd>Ctrl + espaço</kbd>), a seguinte lista é apresentada:
@@ -183,8 +180,6 @@ Depois de inserir um novo atributo para um widget e começar a atribuir um valor
 
 Na parte inferior desse pop-up há dois botões (conforme descrito em vermelho na captura de tela acima). Clicar no botão **recursos do projeto** à esquerda restringe a lista a recursos que fazem parte do projeto do aplicativo, enquanto clicar no botão recursos do **Framework** à direita restringe a lista para exibir os recursos disponíveis na estrutura.
 Estes botões são ativados ou desativados: você pode clicar neles novamente para desabilitar a ação de filtragem fornecida por cada um.
-
-
 
 ## <a name="properties-pane"></a>Painel Propriedades
 
@@ -217,10 +212,9 @@ Nessa lista, você pode selecionar um recurso de texto a ser usado para esse wid
 
 Clicar no quadrado em branco à direita da `Src` Propriedade abre a caixa de diálogo **selecionar recurso** com uma lista de recursos que variam de cores (como mostrado acima) a drawables.
 
-
 ### <a name="boolean-property-references"></a>Referências de propriedade booliana
 
-As propriedades boolianas normalmente são selecionadas como marcas de seleção ao lado de uma propriedade no janela Propriedades. Você pode designar um `true` valor `false` ou marcando ou desmarcando essa caixa de seleção, ou pode selecionar uma referência de propriedade clicando no quadrado de preenchimento escuro à direita da propriedade. No exemplo a seguir, o texto é alterado para todas as maiúsculas clicando na referência de propriedade **Text All Caps** Boolean associada `TextView`à selecionada:
+As propriedades *boolianas* normalmente são selecionadas como marcas de seleção ao lado de uma propriedade no janela Propriedades. Você pode designar um `true` valor `false` ou marcando ou desmarcando essa caixa de seleção, ou pode selecionar uma referência de propriedade clicando no quadrado de preenchimento escuro à direita da propriedade. No exemplo a seguir, o texto é alterado para todas as maiúsculas clicando na referência de propriedade **Text All Caps** Boolean associada `TextView`à selecionada:
 
 ![Exemplo de configuração de propriedades booleanas](designer-basics-images/vs/11-boolean.png)
 
@@ -232,7 +226,7 @@ O Designer Android dá suporte à edição direta de determinadas propriedades n
 
 As propriedades de texto de alguns widgets ( `Button` como e `TextView`) podem ser editadas diretamente no **design Surface**. Clicar duas vezes em um widget irá colocá-lo no modo de edição, conforme mostrado abaixo:
 
-![Recurso de texto para a cadeia de caracteres] de saudação (designer-basics-images/vs/12-text-resource.png "Recurso de texto")
+![Recurso de texto para a cadeia de caracteres de saudação](designer-basics-images/vs/12-text-resource.png "Recurso de texto")
 
 Você pode inserir um novo valor de texto ou pode inserir uma nova cadeia de caracteres de recurso. No exemplo a seguir, o `@string/hello` recurso está sendo substituído pelo `CLICK THIS BUTTON`texto:
 
@@ -260,7 +254,7 @@ Conforme mencionado anteriormente, você pode alternar para o modo de edição d
 
 ![Encapsular conteúdo e redimensionar alças](designer-basics-images/vs/17-wrap-content.png)
 
-Clicar no identificador de **conteúdo** de encapsulamento reduz o widget nessa dimensão para que não seja maior do que o necessário para encapsular o conteúdo incluído. Neste exemplo, o texto do botão é reduzido horizontalmente, conforme mostrado na próxima captura de tela.
+Clicar no identificador de **conteúdo de encapsulamento** reduz o widget nessa dimensão para que não seja maior do que o necessário para encapsular o conteúdo incluído. Neste exemplo, o texto do botão é reduzido horizontalmente, conforme mostrado na próxima captura de tela.
 
 Quando o valor do tamanho é definido como **encapsular conteúdo**, o designer exibe um identificador triangular apontando na direção oposta para alterar o tamanho `match_parent`para:
 
@@ -276,7 +270,6 @@ Nem todos os contêineres permitem `Size` a edição de um widget. Por exemplo, 
 
 ![Sem identificadores de redimensionamento](designer-basics-images/vs/20-no-resize-handles.png)
 
-
 ## <a name="document-outline"></a>Estrutura de Tópicos do Documento
 
 O **contorno do documento** exibe a hierarquia do widget do layout.
@@ -286,10 +279,7 @@ No exemplo a seguir, o widget `LinearLayout` recipiente é selecionado:
 
 O contorno do widget selecionado (neste caso, a `LinearLayout`) também é realçado no **design Surface**. O widget selecionado na estrutura de tópicos do documento permanece em sincronia com sua contraparte na **design Surface**. Isso é útil para selecionar grupos de modos de exibição, que nem sempre são fáceis de selecionar na **design Surface**.
 
-A **estrutura de tópicos do documento** dá suporte a copiar e colar, ou você pode usar arrastar e soltar. O recurso arrastar e soltar tem suporte da **estrutura de tópicos do documento** para a **design Surface** , bem como da **design Surface** para a estrutura de **Tópicos do documento**. Além disso, clicar com o botão direito do mouse em um item no contorno do **documento** exibe o menu de contexto desse item (o mesmo menu de contexto que aparece quando você clica com o botão direito do mouse no mesmo widget na **design Surface**).
-
-
-
+A **estrutura de tópicos do documento** dá suporte a copiar e colar, ou você pode usar arrastar e soltar. O recurso arrastar e soltar tem suporte da **estrutura de tópicos do documento** para a **design Surface** , bem como da **design Surface** para a estrutura de **Tópicos do documento**. Além disso, clicar com o botão direito do mouse em um item no **contorno do documento** exibe o menu de contexto desse item (o mesmo menu de contexto que aparece quando você clica com o botão direito do mouse no mesmo widget na **design Surface**).
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
@@ -346,7 +336,7 @@ A barra de ferramentas fornece acesso aos seguintes recursos:
 
 - **Seletor de configuração** Seleciona a configuração do dispositivo, como *retrato* ou *paisagem.* &ndash;
 
-- **Opções** do qualificador de recursosAbre uma caixa de diálogo que apresenta menus suspensos para seleção de idioma, modo de interface do usuário, modo noturno e opções de tela de ida e volta. &ndash;
+- **Opções do qualificador de recursos**Abre uma caixa de diálogo que apresenta menus suspensos para seleção de idioma, modo de interface do usuário, modo noturno e opções de tela de ida e volta. &ndash;
 
 - **Configurações da barra de ações** &ndash; Define as configurações da barra de ações para o layout.
 
@@ -356,9 +346,9 @@ A barra de ferramentas fornece acesso aos seguintes recursos:
 
 Cada um desses recursos é explicado em mais detalhes nestes tópicos:
 
-[Qualificadores de recursos e opções de visualização](~/android/user-interface/android-designer/resource-qualifiers.md) fornecem informações detalhadas sobre o seletor de **dispositivo**, seletor de **versão do Android**, seletor de **tema**, seletor de **configuração**, qualificações de **recursos Opções**e **configurações da barra de ações**.
+[Qualificadores de recursos e opções de visualização](~/android/user-interface/android-designer/resource-qualifiers.md) fornecem informações detalhadas sobre o **seletor de dispositivo**, **seletor de versão do Android**, **seletor de tema**, **seletor de configuração**, **qualificações de recursos Opções**e **configurações da barra de ações**.
 
-As exibições de [layout alternativo](~/android/user-interface/android-designer/alternative-layout-views.md) explicam como usar o seletor de **layout alternativo**.
+As [exibições de layout alternativo](~/android/user-interface/android-designer/alternative-layout-views.md) explicam como usar o **seletor de layout alternativo**.
 
 Os [recursos de design de material](~/android/user-interface/android-designer/material-design-features.md) fornecem uma visão geral abrangente do editor de **tema** e da grade de **design de material**.
 
@@ -390,7 +380,7 @@ O Design Surface dá suporte ao zoom por meio de vários controles, conforme mos
 
 Esses controles facilitam a visualização de determinadas áreas da interface do usuário no designer:
 
-- Realçar contêineres &ndash; Realça os contêineres na design Surface para que sejam mais fáceis de localizar ao ampliar e reduzir.
+- **Realçar contêineres** &ndash; Realça os contêineres na design Surface para que sejam mais fáceis de localizar ao ampliar e reduzir.
 
 - **Tamanho normal** &ndash; Renderiza o layout pixel-for-pixel para que você possa ver como o layout irá examinar a resolução do dispositivo selecionado.
 
@@ -446,7 +436,6 @@ Normalmente, as propriedades *booleanas* são mostradas como uma caixa de seleç
 
 [![Exemplo de configuração de propriedades booleanas](designer-basics-images/xs/12-boolean-sml.png)](designer-basics-images/xs/12-boolean.png#lightbox)
 
-
 ## <a name="grouped-properties"></a>Propriedades agrupadas
 
 Alguns widgets têm propriedades com vários valores que são agrupadas ( `Padding`como, por exemplo). Esses valores de propriedade são listados no **painel de propriedades** em uma única linha expansível. Algumas dessas propriedades podem ser editadas diretamente na linha agrupada, como a `Padding` Propriedade mostrada abaixo:
@@ -489,7 +478,7 @@ Conforme mencionado anteriormente, você pode alternar para o modo de edição d
 
 [![Encapsular conteúdo e redimensionar alças](designer-basics-images/xs/18-wrap-content-sml.png)](designer-basics-images/xs/18-wrap-content.png#lightbox)
 
-Clicar no identificador de **conteúdo** de encapsulamento reduz o widget nessa dimensão para que não seja maior do que o necessário para encapsular o conteúdo incluído. Neste exemplo, o texto do botão é reduzido horizontalmente, conforme mostrado na próxima captura de tela.
+Clicar no identificador de **conteúdo de encapsulamento** reduz o widget nessa dimensão para que não seja maior do que o necessário para encapsular o conteúdo incluído. Neste exemplo, o texto do botão é reduzido horizontalmente, conforme mostrado na próxima captura de tela.
 
 Quando o valor do tamanho é definido como **encapsular conteúdo**, o designer exibe um identificador triangular apontando na direção oposta para alterar o tamanho `match_parent`para:
 

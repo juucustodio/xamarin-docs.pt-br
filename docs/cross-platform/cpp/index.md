@@ -5,12 +5,12 @@ description: Visual Studio para Mac pode ser usado para criar e integrar o C/C++
 author: mikeparker104
 ms.author: miparker
 ms.date: 12/17/2018
-ms.openlocfilehash: a6c5e172fa9fe41e210f332d351adc307d0c7df3
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 685d4f5de197c6b3664d63306fa206bea17409e1
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68648186"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70766357"
 ---
 # <a name="use-cc-libraries-with-xamarin"></a>Usar C/C++ bibliotecas com o Xamarin
 
@@ -18,7 +18,7 @@ ms.locfileid: "68648186"
 
 O Xamarin permite que os desenvolvedores criem aplicativos móveis nativos de plataforma cruzada com o Visual Studio. Geralmente, C# as associações são usadas para expor componentes de plataforma existentes aos desenvolvedores. No entanto, há ocasiões em que os aplicativos Xamarin precisam trabalhar com bases de código existentes. Às vezes, as equipes simplesmente não têm tempo, orçamento ou recursos para portar uma base de código grande, bem testada e C#altamente otimizada para.
 
-[O C++ Visual para desenvolvimento móvel de plataforma cruzada](https://docs.microsoft.com/visualstudio/cross-platform/visual-cpp-for-cross-platform-mobile-development) permite queC++ o C# C/e o código sejam compilados como parte da mesma solução, oferecendo muitas vantagens, incluindo uma experiência de depuração unificada. A Microsoft usou o CC++ /e o Xamarin dessa forma para entregar aplicativos como o hiperlapsar a [câmera](https://www.microsoft.com/microsoftpix) [móvel](https://www.microsoft.com/p/hyperlapse-mobile/9wzdncrd1prw) e o PIX.
+[O C++ Visual para desenvolvimento móvel de plataforma cruzada](https://docs.microsoft.com/visualstudio/cross-platform/visual-cpp-for-cross-platform-mobile-development) permite queC++ o C# C/e o código sejam compilados como parte da mesma solução, oferecendo muitas vantagens, incluindo uma experiência de depuração unificada. A Microsoft usou o CC++ /e o Xamarin dessa forma para entregar aplicativos como o [hiperlapsar](https://www.microsoft.com/p/hyperlapse-mobile/9wzdncrd1prw) a [câmera](https://www.microsoft.com/microsoftpix)móvel e o PIX.
 
 No entanto, em alguns casos, há um desejo (ou requisito) para manter oC++ C/Tools e os processos existentes em vigor e manter o código da biblioteca dissociado do aplicativo, tratando a biblioteca como se fosse semelhante a um componente de terceiros. Nessas situações, o desafio não está apenas expondo os membros relevantes C# , mas Gerenciando a biblioteca como uma dependência. E, é claro, automatizar o máximo possível do processo.  
 
@@ -33,7 +33,7 @@ Em última análise, o código deve ser compilado e executado com êxito em toda
 ## <a name="high-level-approach"></a>Abordagem de alto nível
 
 A ilustração a seguir representa a abordagem de quatro estágios usada para transformar códigoC++ C/código-fonte em uma biblioteca xamarin de plataforma cruzada que é compartilhada via NuGet e, em seguida, é consumida em um aplicativo Xamarin. Forms.
- 
+
 ![Abordagem de alto nível para usar C/C++ com Xamarin](images/cpp-steps.jpg)
 
 Os quatro estágios são:
@@ -73,7 +73,7 @@ Depois que o feed é configurado, o pacote precisa ser referenciado de cada proj
 
 O repositório de código-fonte contém uma [lista de leituras adicionais](https://github.com/xamarin/mobcat/tree/master/samples/cpp_with_xamarin#wrapping-up) que inclui artigos sobre como configurar um feed do NuGet privado no Azure DevOps e como enviar por push o pacote para esse feed. Embora exijam um pouco mais de tempo de configuração do que um diretório local, esse tipo de feed é melhor em um ambiente de desenvolvimento de equipe.
 
-## <a name="walk-through"></a>Orientação
+## <a name="walk-through"></a>Passo a passo
 
 As etapas fornecidas são específicas para **Visual Studio para Mac**, mas a estrutura funciona no **Visual Studio 2017** também.
 
@@ -136,7 +136,7 @@ Este estágio requer as [bibliotecas pré-compiladas](https://github.com/xamarin
 
 ### <a name="creating-the-visual-studio-solution"></a>Criando a solução do Visual Studio
 
-1. Em **Visual Studio para Mac**, clique **em novo projeto** (na *página de boas-vindas*) ou em **nova solução** (no menu *arquivo* ).
+1. Em **Visual Studio para Mac**, clique em **novo projeto** (na *página de boas-vindas*) ou em **nova solução** (no menu *arquivo* ).
 2. Na janela **novo projeto** , escolha **projeto compartilhado** (de dentro da *biblioteca de > multiplataforma*) e clique em **Avançar**.
 3. Atualize os campos a seguir e clique em **criar**:
 
@@ -614,8 +614,8 @@ Para concluir o passo a passos, crie um aplicativo **Xamarin. Forms** para consu
     open -n -a "Visual Studio"
     ```
 
-2. Em **Visual Studio para Mac**, clique **em novo projeto** (na *página de boas-vindas*) ou em **nova solução** (no menu *arquivo* ).
-3. Na janela **novo projeto** , escolha **aplicativo de formulários em branco** (de dentro de multiplataforma *> aplicativo*) e clique em **Avançar**.
+2. Em **Visual Studio para Mac**, clique em **novo projeto** (na *página de boas-vindas*) ou em **nova solução** (no menu *arquivo* ).
+3. Na janela **novo projeto** , escolha **aplicativo de formulários em branco** (de dentro de *multiplataforma > aplicativo*) e clique em **Avançar**.
 4. Atualize os campos a seguir e clique em **Avançar**:
 
     - **Nome do aplicativo:** MathFuncsApp.
@@ -630,7 +630,7 @@ Para concluir o passo a passos, crie um aplicativo **Xamarin. Forms** para consu
     - **Local** Use o local de salvamento padrão (ou escolha uma alternativa).
 
 6. Em **Gerenciador de soluções**, **controle + clique** no destino (**MathFuncsApp. Android** ou **MathFuncs. Ios**) para teste inicial e escolha **definir como projeto de inicialização**.
-7. Escolha o **dispositivo** preferencial ou/**emulador**de simulador. 
+7. Escolha o **dispositivo** preferencial ou**emulador**de **simulador**/. 
 8. Execute a solução (**comando + retorno**) para validar que o projeto **Xamarin. Forms** do modelo é compilado e executado corretamente. 
 
     > [!NOTE]

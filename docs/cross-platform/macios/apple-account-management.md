@@ -6,12 +6,12 @@ ms.assetid: 71388B83-699B-4E42-8CBF-8557A4A3CABF
 author: conceptdev
 ms.author: crdun
 ms.date: 05/06/2018
-ms.openlocfilehash: 9629d775b45951279178dffa3600e7cd5073dd38
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 65945a303375863f7b92b20405aa78e6b2edacda
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290624"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70766130"
 ---
 # <a name="apple-account-management"></a>Gerenciamento de contas da Apple
 
@@ -55,7 +55,7 @@ Você deve ter uma conta de desenvolvedor da Apple para usar esse recurso. Mais 
     ![caixa de diálogo fastlane.](apple-account-management-images/image2.png)
 
 3. Insira sua ID da Apple e senha e clique no botão **entrar** . Isso salvará suas credenciais no conjunto de chaves seguro neste computador. o [Fastlane](~/ios/deploy-test/provisioning/fastlane/index.md) é usado para tratar suas credenciais com segurança e passá-las para o portal do desenvolvedor da Apple.
- 
+
 4. Selecione **sempre permitir** na caixa de diálogo de alerta para permitir que o Visual Studio use suas credenciais:
 
     ![Caixa de diálogo sempre permitir alerta](apple-account-management-images/image4.png)
@@ -81,13 +81,12 @@ Você deve ter uma conta de desenvolvedor da Apple para usar esse recurso. Mais 
     ![caixa de diálogo nome de usuário e senha](apple-account-management-images/prov1a.png)
 
 1. Depois que sua conta tiver sido adicionada com êxito, você verá sua ID da Apple e todas as equipes das quais sua ID da Apple faz parte.
- 
+
 1. Selecione qualquer equipe e pressione a **Exibir detalhes...** . Isso exibirá uma lista de todas as identidades de assinatura e perfis de provisionamento que estão instalados em seu computador:
 
     ![caixa de diálogo nome de usuário e senha](apple-account-management-images/prov2.png)
 
 -----
-
 
 ## <a name="managing-signing-identities-and-provisioning-profiles"></a>Gerenciando identidades de assinatura e perfis de provisionamento
 

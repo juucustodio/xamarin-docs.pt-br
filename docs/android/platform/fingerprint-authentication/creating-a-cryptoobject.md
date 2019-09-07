@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 03796af880aaef74c2d4b54007ac34ef1c5dc180
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 7328792e0d921beb09389d9a0400ea97766b2246
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70119834"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70756440"
 ---
 # <a name="creating-a-cryptoobject"></a>Criando um Cryptoobject
 
@@ -154,8 +154,6 @@ protected void FingerPrintAuthenticationExample()
 ```
 
 Agora que vimos como criar um `CryptoObject`, vamos continuar a ver como os `FingerprintManager.AuthenticationCallbacks` são usados para transferir os resultados do serviço de scanner de impressão digital para um aplicativo Android.
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

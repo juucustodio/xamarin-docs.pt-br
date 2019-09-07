@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: 28dfdbd7837f87d003e5b949ea3f7421613997f7
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 10f065d6e7b1cacb217cb510c57707662a196664
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70288298"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768563"
 ---
 # <a name="working-with-tvos-table-views-in-xamarin"></a>Trabalhando com exibições de tabela tvOS no Xamarin
 
@@ -952,8 +952,6 @@ Como o tvOS é baseado no iOS, as exibições de tabela e os controladores de ex
 ## <a name="summary"></a>Resumo
 
 Este artigo abordou a criação e o trabalho com exibições de tabela dentro de um aplicativo Xamarin. tvOS. E apresentamos um exemplo de como trabalhar com uma exibição de tabela dentro de um modo de exibição de divisão, que é o uso típico de uma exibição de tabela em um aplicativo tvOS.
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

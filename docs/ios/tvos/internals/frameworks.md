@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 06/07/2016
-ms.openlocfilehash: 510e99f247756c35156dcec63d62638b99716430
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: dddbe8cb834eed7174619926a175adb0f8f0f50a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70287915"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769605"
 ---
 # <a name="supported-and-unsupported-frameworks-in-tvos"></a>Estruturas com e sem suporte no tvOS
 
@@ -109,8 +109,6 @@ Veja a seguir uma lista de estruturas com suporte no iOS 9, mas que foram removi
 - WatchConnectivity
 - WatchKit
 - WebKit
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

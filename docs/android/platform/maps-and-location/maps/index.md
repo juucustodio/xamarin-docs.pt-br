@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/25/2018
-ms.openlocfilehash: e36a8e25c5924ac82356c0f1c3110d1596f81cbf
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 194f82757b0b4cb5e148e06d4303dc0d22afb9b3
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69523890"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70761704"
 ---
 # <a name="how-to-use-google-maps-and-location-with-xamarinandroid"></a>Como usar o Google Maps e o local com o Xamarin. Android
 
@@ -28,7 +28,6 @@ As tecnologias de mapeamento são um complemento onipresente aos dispositivos m�
 
 Os tópicos desta seção abrangem uma ampla gama de recursos de mapeamento.
 Primeiro, eles explicam como aproveitar o aplicativo de mapas interno do Android e como exibir uma visão panorâmica de um local. Em seguida, eles abordam como usar a API Maps para incorporar recursos de mapeamento diretamente dentro de um aplicativo, cobrindo como controlar a posição e a exibição de um mapa, além de como adicionar sobreposições gráficas.
-
 
 ## <a name="related-links"></a>Links relacionados
 

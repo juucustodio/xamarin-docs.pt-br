@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/21/2018
-ms.openlocfilehash: 0d4e32b7bf98758f12dc038e0b61ffa0132f234d
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 8d30cdd4a50e912208d29e2171ef4c3db174718a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69529231"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70760559"
 ---
 # <a name="file-handling-in-xamarinforms"></a>Manipulação de arquivos no Xamarin.Forms
 
-[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithfiles)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithfiles)
 
 _O tratamento de arquivos com o Xamarin.Forms pode ser alcançado usando código em uma biblioteca .NET Standard ou usando recursos inseridos._
 
@@ -118,7 +118,6 @@ Há duas soluções para esse problema com Projetos compartilhados:
 - **Sincronizar os projetos** – edite as propriedades do projeto para cada plataforma para usar o **mesmo** nome de assembly e o namespace padrão. Esse valor pode ser embutido como o prefixo para IDs de recurso inserido no Projeto compartilhado.
 - **Diretivas de compilador #if** – use diretivas de compilador para definir o prefixo correto de ID do recurso e use esse valor para construir dinamicamente a ID do recurso correta.
 
-
 Veja abaixo o código ilustrando a segunda opção. As diretivas de compilador são usadas para selecionar o prefixo de recurso embutido (normalmente o mesmo que o namespace padrão para o projeto de referência). A variável `resourcePrefix` é usada para criar uma ID de recurso válida, concatenando-a com o nome do arquivo de recurso inserido.
 
 ```csharp
@@ -169,4 +168,3 @@ Este artigo mostrou algumas operações de arquivo simples para salvar e carrega
 - [FilesSample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithfiles)
 - [Amostras do Xamarin.Forms](https://github.com/xamarin/xamarin-forms-samples)
 - [Trabalhando com o sistema de arquivos no Xamarin.iOS](~/ios/app-fundamentals/file-system.md)
-

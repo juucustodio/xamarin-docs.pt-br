@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: e6f26fb96c0a538543c8e0b0574461ea99709631
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: c6534067388b59c1e191426011fd0e6b8560348f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70119483"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70759729"
 ---
 # <a name="getting-started-with-datapages"></a>Guia de Introdução DataSourceControl
 
@@ -52,7 +52,6 @@ No **App. XAML** do arquivo, adicione um personalizado `xmlns:mytheme` do tema e
 
 > [!IMPORTANT]
 > Você também deve seguir as etapas para [carregar assemblies de tema (abaixo)](#loadtheme) , adicionando um código clichê ao Ios `AppDelegate` e ao `MainActivity`Android. Isso será melhorado em uma versão de visualização futura.
-
 
 ## <a name="3-add-a-xaml-page"></a>3. Adicionar uma página XAML
 
@@ -175,9 +174,7 @@ Os desenvolvedores que preferem o c# para o XAML pode criar dados de associaçõ
 SetBinding (TitleProperty, new DataSourceBinding ("title"));
 ```
 
-
 É um pouco mais trabalho criar temas do zero, mas versões de visualização futuras tornarão isso mais fácil.
-
 
 ## <a name="troubleshooting"></a>Solução de problemas
 
@@ -206,8 +203,6 @@ var x = typeof(Xamarin.Forms.Themes.DarkThemeResources);
 x = typeof(Xamarin.Forms.Themes.LightThemeResources);
 x = typeof(Xamarin.Forms.Themes.Android.UnderlineEffect);
 ```
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

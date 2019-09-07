@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 758134b0c5171e46c47ff6fd8071b13a44d5789b
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 7b341ee5ee72c3a89ab14161862896585ed498fc
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291616"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70772695"
 ---
 # <a name="table-views-in-xamarinmac"></a>Exibições de tabela no Xamarin. Mac
 
@@ -407,7 +407,6 @@ Se você quiser permitir que o usuário selecione uma única linha, clique duas 
 
 Salve as alterações e retorne ao Visual Studio para Mac para sincronizar com o Xcode.
 
-
 Em seguida, edite o `ProductTableDelegate.cs` arquivo e adicione o seguinte método:
 
 ```csharp
@@ -435,7 +434,6 @@ Se você quiser permitir que o usuário selecione várias linhas, clique duas ve
 [![](table-view-images/select02.png "O Inspetor de atributo")](table-view-images/select02.png#lightbox)
 
 Salve as alterações e retorne ao Visual Studio para Mac para sincronizar com o Xcode.
-
 
 Em seguida, edite o `ProductTableDelegate.cs` arquivo e adicione o seguinte método:
 

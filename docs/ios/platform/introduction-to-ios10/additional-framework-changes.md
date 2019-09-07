@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: 620b89ba4682d65552fa5555c978b7eb5f437714
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: db0ea7720f7b65434c5248fb16456441768e25c8
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290767"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70752519"
 ---
 # <a name="additional-ios-10-frameworks-changes"></a>Alterações adicionais em estruturas do iOS 10
 
@@ -210,7 +210,6 @@ Os aprimoramentos a seguir foram feitos na estrutura UIKit no iOS 10:
 Os aprimoramentos a seguir foram feitos na estrutura WebKit no iOS 10:
 
 - O `WKWebView` suporte de Peek e pop foi adicionado à classe. Use o `ShouldPreviewElement` método para determinar se uma determinada exibição da Web deve exibir uma visualização.
-
 
 ## <a name="related-links"></a>Links relacionados
 

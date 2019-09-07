@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: c7b31e05a5b9d75559fae14f467312f5abc8fe94
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 7a261d1fc86fac16cf48575616359b083daebf47
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70289805"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70756551"
 ---
 # <a name="xamarinios-app-distribution-overview"></a>Visão geral da distribuição de aplicativos Xamarin.iOS
 
@@ -20,9 +20,7 @@ _Este documento fornece uma visão geral das técnicas de distribuição dispon�
 
 Depois que um aplicativo Xamarin.iOS for desenvolvido, a próxima etapa no ciclo de vida de desenvolvimento do software é distribuir o aplicativo para os usuários, conforme mostrado na seção destacada do diagrama abaixo:
 
-
 [![](images/publishingdiagram.png "Depois que o aplicativo iOS for desenvolvido, a próxima etapa é distribuir o aplicativo para os usuários, conforme mostrado na seção destacada deste diagrama")](images/publishingdiagram.png#lightbox)
-
 
 Apple fornece as seguintes maneiras de distribuir um aplicativo iOS, que tem suporte com Xamarin.iOS:
 

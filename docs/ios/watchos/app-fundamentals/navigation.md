@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: 7502998e8e8da5e011ef1ec0ab7dcc6e3d892d3d
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 05da84949f6613bce24f103df4d86f1bdcd30764
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70286049"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768731"
 ---
 # <a name="working-with-watchos-navigation-in-xamarin"></a>Trabalhando com o watchOS navegação no Xamarin
 
@@ -97,7 +97,6 @@ Interfaces com base na página passe o dedo para esquerda para a direita, semelh
 
 ![](navigation-images/paged-1.png "Exemplo de primeira página") ![](navigation-images/paged-2.png "página segundo exemplo") ![](navigation-images/paged-5.png "quinta página de exemplo")
 
-
 Para tornar uma interface baseada em página de interface do usuário principal para o aplicativo de inspeção, use `ReloadRootControllers` com uma matriz de controladores de interface e contextos:
 
 ```csharp
@@ -113,8 +112,6 @@ var controllerNames = new [] { "pageController", "pageController", "pageControll
 var contexts = new [] { "First", "Second", "Third", "Fourth", "Fifth" };
 PresentController (controllerNames, contexts);
 ```
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

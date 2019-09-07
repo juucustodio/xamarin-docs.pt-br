@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 7cc7eeabebbfbcd4b264202235307638b88842d8
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: a14ac0be141a473855dd2e9e19a57fd2d01649bb
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69524217"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70761926"
 ---
 # <a name="lollipop-features"></a>Recursos do Lollipop
 
@@ -24,11 +24,11 @@ O Android 5,0 (pirulito) apresenta uma nova linguagem de design, *design de mate
 
 O *tema do material* é o Embodiment desses princípios de design de interface do usuário no Android. Este artigo começa abordando os recursos de suporte do tema do material:
 
-- **Animações** Animações de comentários de toque, animações de transição de atividade, animações de transição de estado de exibição e um efeito de revelação. &ndash;
+- **Animações**Animações de comentários de toque, animações de transição de atividade, animações de transição de estado de exibição e um efeito de revelação. &ndash;
 
 - **Exibir sombras e elevação** Os modos de exibição `elevation` agora têm uma propriedade; &ndash;   exibições com `elevation` valores mais altos convertem sombras maiores no plano de fundo.
 
-- **Recursos de cores** A tonalidade desenhável possibilita a reutilização de ativos de imagem alterando sua cor e a extração de *cores proeminentes* ajuda você a aplicar temas de seu aplicativo dinamicamente com base nas cores de uma imagem. &ndash;
+- **Recursos de cores** A tonalidade *desenhável* possibilita a reutilização de ativos de imagem alterando sua cor e a *extração de cores proeminentes* ajuda você a aplicar temas de seu aplicativo dinamicamente com base nas cores de uma imagem. &ndash;
 
 Muitos recursos de tema de material já estão incorporados à experiência de interface do usuário do Android 5,0, enquanto outros devem ser adicionados explicitamente aos aplicativos. Por exemplo, algumas exibições padrão (como botões) já incluem animações de feedback de toque, enquanto os aplicativos devem habilitar a maioria das sombras da exibição.
 
@@ -39,7 +39,6 @@ Além das melhorias da interface do usuário trazidas por meio do tema do materi
 - **Novos widgets de interface do usuário** O novo `RecyclerView` widget torna mais fácil para os aplicativos transmitir grandes conjuntos de dados e informações complexas, e o `CardView` novo widget fornece um formato de apresentação simplificado do tipo cartão para exibir texto e imagens. &ndash;
 
 - **Novas APIs** &ndash; O Android 5,0 adiciona novas APIs para vários suporte de rede, conectividade Bluetooth aprimorada, gerenciamento de armazenamento mais fácil e controle mais flexível de players de multimídia e dispositivos de câmera. Um novo recurso de agendamento de trabalho está disponível para executar tarefas de forma assíncrona em horários agendados. Esse recurso ajuda a melhorar a vida útil da bateria, por exemplo, agendar tarefas para ocorrer quando o dispositivo estiver conectado e carregando.
-
 
 ## <a name="requirements"></a>Requisitos
 
@@ -52,7 +51,6 @@ O seguinte é necessário para usar os novos recursos do Android 5,0 em aplicati
 - **Java Developer Kit** &ndash; xamarin. Android exige [JDK 1.8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) ou posterior, se você estiver desenvolvendo para o nível de API 24 ou superior (JDK 1.8 também dá suporte a níveis de API anteriores ao 24, incluindo o Lollipop). A versão de 64 bits do JDK 1,8 será necessária se você estiver usando controles personalizados ou o Visualizador de formulários.
 
 Você pode continuar a usar o [JDK 1,7](https://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html) se estiver desenvolvendo especificamente para o nível de API 23 ou anterior.
-
 
 ## <a name="setting-up-an-android-50-project"></a>Configurando um projeto do Android 5,0
 
@@ -101,7 +99,6 @@ O Android 5,0 usa o novo tempo de execução do Android (arte) como o tempo de e
 
 Os aplicativos existentes devem funcionar sem alteração sob &ndash; arte, exceto para aplicativos que exploram técnicas exclusivas para o tempo de execução Dalvik anterior, o que pode não funcionar em arte. Para obter mais informações sobre essas alterações, consulte [verificando o comportamento do aplicativo no tempo de execução do Android (arte)](https://developer.android.com/guide/practices/verifying-apps-art.html).
 
-
 ### <a name="notification-changes"></a>Alterações de notificação
 
 As notificações foram alteradas significativamente no Android 5,0:
@@ -142,11 +139,9 @@ O tema material inclui três tipos internos que você pode usar em seu aplicativ
 
 Para obter mais informações sobre como usar recursos de tema de material em aplicativos Xamarin. Android, consulte o [tema do material](~/android/user-interface/material-theme.md).
 
-
 ## <a name="animations"></a>Animations
 
 O Android 5,0 fornece animações de feedback de toque, animações de transição de atividade e animações de transição de estado de exibição para tornar as interfaces de aplicativo mais intuitivas para uso. Além disso, os aplicativos Android 5,0 podem usar as animações de *efeito de revelar* para ocultar ou revelar exibições. Você pode usar as configurações de *movimento curvo* para configurar a renderização das animações com rapidez ou lentidão.
-
 
 ### <a name="touch-feedback-animations"></a>Animações de comentários de toque
 
@@ -157,7 +152,6 @@ As animações de comentários de toque fornecem aos usuários comentários visu
 O contato de toque inicial com o botão ocorre na primeira imagem à esquerda, enquanto a sequência restante (da esquerda para a direita) ilustra como o efeito de ondulação se espalha para a borda do botão. Quando a animação do Ripple termina, a exibição retorna à sua aparência original. A animação padrão do Ripple ocorre em uma fração de segundo, mas o comprimento da animação pode ser personalizado por um período de tempo maior ou menor.
 
 Para obter mais informações sobre animações de comentários sobre toque no Android 5,0, consulte [Personalizar comentários de toque](https://developer.android.com/training/material/animations.html#Touch).
-
 
 ### <a name="activity-transition-animations"></a>Animações de transição de atividade
 
@@ -179,7 +173,7 @@ Um elemento compartilhado (uma foto de um Caterpillar) é uma das várias exibi�
 
 Para as transições de entrada, o Android 5,0 fornece três tipos de animações:
 
-- **Animação** de detalhamento &ndash; Amplia uma exibição do centro da cena.
+- **Animação de detalhamento** &ndash; Amplia uma exibição do centro da cena.
 
 - **Animação de slide** &ndash; Move uma exibição em uma das bordas de uma cena.
 
@@ -189,7 +183,7 @@ Para as transições de entrada, o Android 5,0 fornece três tipos de animaçõe
 
 Para transições de saída, o Android 5,0 fornece três tipos de animações:
 
-- **Animação** de detalhamento &ndash; Reduz uma exibição para o centro da cena.
+- **Animação de detalhamento** &ndash; Reduz uma exibição para o centro da cena.
 
 - **Animação de slide** &ndash; Move um modo de exibição para uma das bordas de uma cena.
 
@@ -207,7 +201,6 @@ As transições de elemento compartilhado dão suporte a vários tipos de anima�
 
 Para obter mais informações sobre animações de transição de atividade no Android 5,0, consulte [Personalizar transições de atividade](https://developer.android.com/training/material/animations.html#Transitions).
 
-
 ### <a name="view-state-transition-animations"></a>Exibir animações de transição de estado
 
 O Android 5,0 torna possível que as animações sejam executadas quando o estado de uma exibição é alterado. Você pode animar as transições de estado de exibição usando uma das seguintes técnicas:
@@ -217,7 +210,6 @@ O Android 5,0 torna possível que as animações sejam executadas quando o estad
 - Defina a funcionalidade de animação que é executada quando o estado de uma exibição é alterado. A nova `StateListAnimator` classe permite que você defina um Animator que é executado quando o estado de uma exibição é alterado.
 
 Para obter mais informações sobre animações de transição de estado no Android 5,0, consulte [animar estado de exibição de alterações](https://developer.android.com/training/material/animations.html#ViewState).
-
 
 ### <a name="reveal-effect"></a>Revelar efeito
 
@@ -233,7 +225,6 @@ Revelar animações pode ser revertida; ou seja, o círculo de recorte pode ser 
 
 Para obter mais informações sobre o efeito de revelações do Android 5,0 no, consulte [usar o efeito revelar](https://developer.android.com/training/material/animations.html#Reveal).
 
-
 ### <a name="curved-motion"></a>Movimento curvo
 
 Além desses recursos de animação, o Android 5,0 também fornece novas APIs que permitem que você especifique as curvas de tempo e movimento das animações. O Android 5,0 usa essas curvas para interpolar a movimentação temporal e espacial durante animações. Três curvas são definidas no Android 5,0:
@@ -246,7 +237,6 @@ Além desses recursos de animação, o Android 5,0 também fornece novas APIs qu
 
 Você pode usar a nova `PathInterpolator` classe para especificar como ocorre a interpolação de movimento. `PathInterpolator`é um interpolador que percorre caminhos de animação de acordo com pontos de controle especificados e curvas de movimento. Para obter mais informações sobre como especificar configurações de movimento curvo no Android 5,0, consulte [usar o movimento curvo](https://developer.android.com/training/material/animations.html#CurvedMotion).
 
-
 ## <a name="view-shadows--elevation"></a>Exibir sombras & elevação
 
 No Android 5,0, você pode especificar a *elevação* de uma exibição definindo uma nova `Z` propriedade. Um valor `Z` maior faz com que a exibição Converta uma sombra maior em segundo plano, fazendo com que a exibição pareça flutuar para cima acima do plano de fundo. Você pode definir a elevação inicial de um modo de exibição configurando seu `elevation` atributo no layout.
@@ -257,8 +247,7 @@ O exemplo a seguir ilustra a conversão de sombras por `TextView` um controle va
 
 Exibir configurações de sombra pode ser estático (como mostrado acima) ou pode ser usado em animações para fazer com que uma exibição pareça ficar temporariamente acima do plano de fundo da exibição. Você pode usar a `ViewPropertyAnimator` classe para animar a elevação de uma exibição. A elevação de uma exibição é a soma de sua configuração `elevation` de layout mais `translationZ` uma propriedade que pode ser definida por `ViewPropertyAnimator` meio de uma chamada de método.
 
-Para saber mais sobre como exibir sombras no Android 5,0, confira [definição de sombras e exibições](https://developer.android.com/training/material/shadows-clipping.html)de recorte.
-
+Para saber mais sobre como exibir sombras no Android 5,0, confira [definição de sombras e exibições de recorte](https://developer.android.com/training/material/shadows-clipping.html).
 
 ## <a name="color-features"></a>Recursos de cores
 
@@ -266,8 +255,7 @@ O Android 5,0 fornece dois novos recursos para o gerenciamento de cores em aplic
 
 - A *tonalidade desenhável* permite que você altere as cores dos ativos de imagem alterando um atributo de layout.
 
-- A extração de *cores proeminentes* torna possível personalizar dinamicamente o tema de cores do aplicativo para coordenar com a paleta de cores de uma imagem exibida.
-
+- A *extração de cores proeminentes* torna possível personalizar dinamicamente o tema de cores do aplicativo para coordenar com a paleta de cores de uma imagem exibida.
 
 ### <a name="drawable-tinting"></a>Tonalidade de desenho
 
@@ -282,7 +270,6 @@ Esse logotipo é exibido acima de um plano de fundo circular azul, conforme most
 ![Exemplos do logotipo acima com configurações de tonalidade diferentes](lollipop-images/drawable-tinting.png)
 
 Para obter mais informações sobre tonalidades desenháveis no Android 5,0, consulte [tonalidades desenháveis](https://developer.android.com/training/material/drawables.html#DrawableTint).
-
 
 ### <a name="prominent-color-extraction"></a>Extração de cores proeminentes
 
@@ -306,8 +293,7 @@ Por exemplo, nas capturas de tela a seguir, um aplicativo de exibição de fotos
 
 Nas capturas de tela acima, a barra de ação é definida como a cor "luz vibrante" extraída e o plano de fundo é definido como a cor "vibrante escuro" extraída. Em cada exemplo acima, uma linha de pequenos quadrados de cor é incluída para ilustrar as cores da paleta que foram extraídas da imagem.
 
-Para obter mais informações sobre extração de cores no Android 5,0, consulte extraindo [cores proeminentes de uma imagem](https://developer.android.com/training/material/drawables.html#ColorExtract).
-
+Para obter mais informações sobre extração de cores no Android 5,0, consulte [extraindo cores proeminentes de uma imagem](https://developer.android.com/training/material/drawables.html#ColorExtract).
 
 ## <a name="new-ui-widgets"></a>Novos widgets de interface do usuário
 
@@ -322,7 +308,6 @@ Ambos os widgets incluem suporte inclusas para recursos de tema de material; por
 [![Capturas de tela de aplicativos criados com RecyclerView](lollipop-images/recyclerview-cardview-sml.png)](lollipop-images/recyclerview-cardview.png#lightbox)
 
 A captura de tela à esquerda é um exemplo `RecyclerView` de como usado em um aplicativo de email, e a captura de tela à direita é `CardView` um exemplo de como usado em um aplicativo de reserva de viagem.
-
 
 ### <a name="recyclerview"></a>RecyclerView
 
@@ -342,7 +327,6 @@ As capturas de tela a `RecyclerView` seguir ilustram um que contém 100 itens (c
 
 Para obter mais `RecyclerView`informações, consulte [RecyclerView](~/android/user-interface/layouts/recycler-view/index.md).
 
-
 ### <a name="cardview"></a>CardView
 
 `CardView`é uma exibição simples que simula um cartão flutuante com cantos arredondados. Como `CardView` o tem sombras de exibição internas, ele fornece uma maneira fácil de adicionar profundidade visual ao seu aplicativo. As capturas de tela a seguir mostram três exemplos orientados a texto de `CardView`:
@@ -352,7 +336,6 @@ Para obter mais `RecyclerView`informações, consulte [RecyclerView](~/android/u
 Cada um `TextView`dos cartões no exemplo acima contém a; a cor do plano de fundo é definida `cardBackgroundColor` por meio do atributo.
 
 Para obter mais `CardView`informações, consulte [CardView](~/android/user-interface/controls/card-view.md).
-
 
 ## <a name="enhanced-notifications"></a>Notificações aprimoradas
 
@@ -389,7 +372,6 @@ No Android 5,0, você pode fornecer metadados de notificação para ajudar o And
 As categorias de notificação são usadas para filtrar quais notificações podem ser apresentadas quando o dispositivo está no modo *não incomodar* .
 
 Para obter informações detalhadas sobre como criar e iniciar notificações com os recursos mais recentes do Android 5,0, consulte [notificações locais](~/android/app-fundamentals/notifications/local-notifications.md).
-
 
 ## <a name="new-apis"></a>Novas APIs
 
@@ -485,8 +467,6 @@ Este artigo forneceu uma visão geral dos novos recursos importantes no Android 
 
 Se você for novo no Xamarin Android Development, leia [instalação e instalação](~/android/get-started/installation/index.md) para ajudá-lo a começar a usar o Xamarin. Android.
 [Olá, o Android](~/android/get-started/hello-android/index.md) é uma introdução excelente para aprender a criar projetos Android.
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

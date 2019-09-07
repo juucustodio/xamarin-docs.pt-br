@@ -7,17 +7,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/25/2018
-ms.openlocfilehash: 71784e18b9becf9851ad9ed9d4730a82d0ff94f7
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: a4867ef779e55d16ef49b2f8ad0dc5bd0ec7024f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69523657"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70761450"
 ---
 # <a name="using-the-xamarinandroid-designer"></a>Usando o Xamarin. Designer Android
 
 _Este artigo é uma explicação do tutorial do Xamarin. Designer Android. Ele demonstra como criar uma interface do usuário para um pequeno aplicativo de navegador de cores; Essa interface do usuário é criada inteiramente no designer._
-
 
 ## <a name="overview"></a>Visão geral
 
@@ -33,7 +32,6 @@ Este artigo demonstra como usar o Xamarin. Designer Android para criar visualmen
 
 O objetivo deste tutorial é usar o Designer Android para criar uma interface do usuário para um aplicativo de exemplo de navegador de cores. O aplicativo de navegador de cores apresenta uma lista de cores, seus nomes e seus valores RGB. Você aprenderá a adicionar widgets ao **design Surface** , bem como a formatar esses widgets visualmente. Depois disso, você aprenderá a modificar os widgets de forma interativa no **design Surface** ou usando o painel de **Propriedades** do designer. Por fim, você verá como o design se parece quando o aplicativo é executado em um dispositivo ou emulador.
 
-
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ### <a name="creating-a-new-project"></a>Criar um novo projeto
@@ -46,7 +44,6 @@ Nomeie o novo aplicativo **DesignerWalkthrough** e clique em **OK**.
 Na caixa de diálogo **novo aplicativo Android** , escolha **aplicativo em branco** e clique em **OK**:
 
 [![Selecionando o modelo de aplicativo em branco do Android](designer-walkthrough-images/vs/02-blank-app-w158-sml.png)](designer-walkthrough-images/vs/02-blank-app-w158.png#lightbox)
-
 
 ### <a name="adding-a-layout"></a>Adicionando um layout
 
@@ -98,8 +95,7 @@ Neste ponto, a superfície do designer deve se parecer com a captura de tela a s
 
 [![Layout do designer](designer-walkthrough-images/vs/14-raw-layout-w158-sml.png)](designer-walkthrough-images/vs/14-raw-layout-w158.png#lightbox)
 
-Se os dois `textView` widgets não estiverem dentro `linearLayout1`do, você poderá arrastá `linearLayout1` -los para no contorno do **documento** e posicioná-los para que eles apareçam conforme mostrado na `linearLayout1`captura de tela anterior (recuado abaixo).
-
+Se os dois `textView` widgets não estiverem dentro `linearLayout1`do, você poderá arrastá `linearLayout1` -los para no **contorno do documento** e posicioná-los para que eles apareçam conforme mostrado na `linearLayout1`captura de tela anterior (recuado abaixo).
 
 ### <a name="arranging-the-user-interface"></a>Organizando a interface do usuário
 
@@ -167,7 +163,7 @@ Isso remove `android:src="@android:drawable/ic_menu_gallery"` do XML de origem p
 
 Agora que o layout **list_item** está definido, a próxima etapa é adicionar um `ListView` ao layout principal. Isso `ListView` conterá uma lista de **list_item**. 
 
-No **Gerenciador de soluções**, abra Resources **/layout/activity_main. axml**. Na **caixa de ferramentas**, localize `ListView` o widget e arraste-o para a **design Surface**. O `ListView` no designer ficará em branco, exceto para linhas azuis que descrevem sua borda quando ela for selecionada. Você pode exibir a **estrutura de tópicos do documento** para verificar se o **ListView** foi adicionado corretamente:
+No **Gerenciador de soluções**, abra **Resources/layout/activity_main. axml**. Na **caixa de ferramentas**, localize `ListView` o widget e arraste-o para a **design Surface**. O `ListView` no designer ficará em branco, exceto para linhas azuis que descrevem sua borda quando ela for selecionada. Você pode exibir a **estrutura de tópicos do documento** para verificar se o **ListView** foi adicionado corretamente:
 
 [![Novo ListView](designer-walkthrough-images/vs/23-new-listview-w158-sml.png)](designer-walkthrough-images/vs/23-new-listview-w158.png#lightbox)
 
@@ -283,8 +279,6 @@ Crie e execute o aplicativo. A captura de tela a seguir é um exemplo de como o 
 
 [![Captura de tela final](designer-walkthrough-images/vs/25-final-screenshot-sml.png)](designer-walkthrough-images/vs/25-final-screenshot.png#lightbox)
 
-
-
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 ### <a name="creating-a-new-project"></a>Criar um novo projeto
@@ -352,7 +346,6 @@ Em seguida, adicione `Text (Small)` um widget abaixo `Text (Large)` do widget. N
 
 Se os dois `textView` widgets não estiverem dentro `linearLayout1`do, você poderá arrastá `linearLayout1` -los para na **estrutura de tópicos do documento** e posicioná-los para que eles apareçam conforme mostrado na `linearLayout1`captura de tela anterior (recuado abaixo).
 
-
 ### <a name="arranging-the-user-interface"></a>Organizando a interface do usuário
 
 A próxima etapa é modificar a interface do usuário para exibir `ImageView` a à esquerda, com os dois `TextView` widgets empilhados `ImageView`à direita do.
@@ -376,7 +369,6 @@ Clicar no triângulo novamente retorna a `Width` configuração para `match_pare
 Com a raiz `LinearLayout` selecionada, retorne à guia **Propriedades** e clique em **widget**. Altere a `Orientation` configuração para `horizontal` conforme mostrado abaixo. Neste ponto, o **design Surface** deve se parecer com a captura de tela a seguir. Observe que os `TextView` widgets foram movidos para a direita `ImageView`do:
 
 [![Selecionar orientação horizontal](designer-walkthrough-images/xs/18-horizontal-orientation-m75-sml.png)](designer-walkthrough-images/xs/18-horizontal-orientation-m75.png#lightbox)
-
 
 ### <a name="modifying-the-spacing"></a>Modificando o espaçamento
 
@@ -411,7 +403,7 @@ Isso remove `android:src="@android:drawable/ic_menu_gallery"` do XML de origem p
 
 Agora que o layout **list_item** está definido, a próxima etapa é adicionar um `ListView` ao layout principal. Isso `ListView` conterá uma lista de **list_item**. 
 
-No **Gerenciador de soluções**, abra Resources **/layout/Main. axml**.
+No **Gerenciador de soluções**, abra **Resources/layout/Main. axml**.
 Clique no `Button` widget (se houver) e exclua-o. Na **caixa de ferramentas**, localize `ListView` o widget e arraste-o para a **design Surface**.
 O `ListView` no designer ficará em branco, exceto para linhas azuis que descrevem sua borda quando ela for selecionada. Você pode exibir a **estrutura de tópicos do documento** para verificar se o **ListView** foi adicionado corretamente:
 
@@ -528,7 +520,6 @@ Crie e execute o aplicativo. A captura de tela a seguir é um exemplo de como o 
 [![Captura de tela final](designer-walkthrough-images/xs/26-final-screenshot-sml.png)](designer-walkthrough-images/xs/26-final-screenshot.png#lightbox)
 
 -----
-
 
 ## <a name="summary"></a>Resumo
 

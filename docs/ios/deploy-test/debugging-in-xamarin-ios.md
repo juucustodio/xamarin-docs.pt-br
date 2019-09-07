@@ -7,19 +7,18 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: a307641b466eae680c8eb43c1b8fff7623195cde
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 8a1a110bf1ff021c3280e19dea777180d71dba1a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70283088"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70763356"
 ---
 # <a name="debugging-xamarinios-apps"></a>Depurando aplicativos Xamarin.iOS
 
 _Aplicativos Xamarin.iOS podem ser depurados com o depurador interno no Visual Studio para Mac ou no Visual Studio._
 
 Use o suporte à depuração nativo do Visual Studio para Mac para depurar C# e outro código de linguagens gerenciadas e use [LLDB](http://lldb.llvm.org/tutorial.html) quando precisar depurar código C, C++ ou Objective C que possa estar vinculando a seu projeto Xamarin.iOS.
-
 
 > [!NOTE]
 > Ao compilar aplicativos no modo de Depuração, o Xamarin.iOS gerará aplicativos muito maiores e mais lentos, uma vez que cada linha de código deve ser instrumentada. Antes de liberar, faça um build de Liberação.
@@ -49,13 +48,13 @@ Você pode exibir todos os pontos de interrupção definidos em seu código indo
 [![](debugging-in-xamarin-ios-images/image0a.png "O painel de Pontos de interrupção")](debugging-in-xamarin-ios-images/image0a.png#lightbox)
 
  Se o painel de Pontos de Interrupção não aparecer automaticamente, você poderá torná-lo visível selecionando _Exibir > Depurar Windows > Pontos de Interrupção_
- 
+
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 [![](debugging-in-xamarin-ios-images/image0.png "O painel de Pontos de interrupção")](debugging-in-xamarin-ios-images/image0.png#lightbox)
 
  Se o painel Pontos de Interrupção não aparecer automaticamente, você poderá torná-lo visível selecionando _Depurar > Windows > Pontos de Interrupção_
- 
+
 -----
 
 Antes de iniciar a depuração de qualquer aplicativo, sempre garanta que a configuração esteja definida como **Depurar**, uma vez que isso contém um conjunto de ferramentas útil para dar suporte à depuração, como pontos de interrupção, uso de visualizadores de dados e exibição da pilha de chamadas:
@@ -85,8 +84,6 @@ Para iniciar a depuração, selecione o dispositivo de destino ou semelhante no 
 
 -----
 
-
-
 Em seguida, implante seu aplicativo pressionando o botão **Executar**.
 
 Quando você atingir um ponto de interrupção, o código será realçado em amarelo:
@@ -105,7 +102,6 @@ Você também pode definir regras para determinar as circunstâncias sob as quai
 
 Para definir um ponto de interrupção condicional, acesse a **janela Propriedades do Ponto de Interrupção**, o que pode ser feito de duas maneiras:
 
-
 - Para adicionar um novo ponto de interrupção condicional, clique com o botão direito do mouse na margem do editor, à esquerda do número de linha para o código para o qual deseja definir um ponto de interrupção e selecione o novo ponto de interrupção:
 
   [![](debugging-in-xamarin-ios-images/image4.png "Selecionar Novo ponto de interrupção")](debugging-in-xamarin-ios-images/image4.png#lightbox)
@@ -113,7 +109,6 @@ Para definir um ponto de interrupção condicional, acesse a **janela Propriedad
 - Para adicionar uma condição a um ponto de interrupção existente, clique com o botão direito do mouse no ponto de interrupção e selecione **Propriedades de Ponto de Interrupção** ou, no **painel Pontos de Interrupção**, selecione o botão de propriedades ilustrado abaixo:
 
   [![](debugging-in-xamarin-ios-images/image5.png "O painel de Pontos de interrupção")](debugging-in-xamarin-ios-images/image5.png#lightbox)
-
 
 Então você pode inserir a condição sob a qual você deseja que o ponto de interrupção ocorra:
 
@@ -199,7 +194,6 @@ Esse depurador flexível requer um esquema de depuração cooperativo quando est
 
 <a name="Accessing_the_Console" />
 
-
 ## <a name="accessing-the-console"></a>Acesso ao console
 
 Logs de falha e a saída da classe Console serão enviados ao console do iPhone. Você pode acessar esse console com Xcode usando o “Organizador” e selecionando o dispositivo no organizador.
@@ -212,7 +206,6 @@ Para usuários do Visual Studio, há alguns logs disponíveis na janela de saíd
 
 <a name="Debugging_Mono's_Class_Libraries" />
 
-
 ## <a name="debugging-monos-class-libraries"></a>Depuração de bibliotecas de classes Mono
 
 O Xamarin.iOS é enviado com o código-fonte para bibliotecas de classes Mono e você pode usar essa etapa única do depurador para ver tudo está funcionando nos bastidores.
@@ -220,7 +213,6 @@ O Xamarin.iOS é enviado com o código-fonte para bibliotecas de classes Mono e 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 Como esse recurso consome mais memória durante a depuração, ele está desligado por padrão.
-
 
 Para habilitar esse recurso, verifique se a opção **Depurar somente o código do projeto; não intervir no código do framework** está desmarcada no menu _Visual Studio para Mac > Preferências > Depurador_, conforme ilustrado abaixo:
 
@@ -235,7 +227,6 @@ Para depurar as bibliotecas de classe no Visual Studio, desabilite **Apenas Meu 
 -----
 
 Depois de fazer isso, você pode iniciar o aplicativo e intervir em qualquer uma das bibliotecas de classes centrais do Mono.
-
 
 ## <a name="related-links"></a>Links relacionados
 

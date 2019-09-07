@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: 7c6e395a353dcfd737ad244df9d169edc5b08f1c
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 1c093d3d67ace3b0f9186fca8226d4ef631d9af0
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68510302"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70762301"
 ---
 # <a name="xamarinandroid-listview-and-the-activity-lifecycle"></a>ListView do Xamarin. Android e o ciclo de vida da atividade
 
@@ -24,7 +24,6 @@ No entanto, se os dados forem alterados com frequência ou usar muita memória, 
 
 Se o adaptador usar recursos como memória ou um cursor gerenciado, lembre-se de liberar esses recursos no método complementar para o local em que foram instanciados (por exemplo, os objetos criados `OnStart` no podem ser descartados em `OnStop`).
 
-
 ## <a name="configuration-changes"></a>Alterações de configuração
 
 É importante lembrar que as alterações &ndash; de configuração especialmente a rotação de tela e a visibilidade &ndash; do teclado podem fazer com que a atividade atual seja destruída e recriada (a `ConfigurationChanges` menos que você especifique o contrário usando o atributo). Isso significa que, em condições normais, girar um dispositivo fará com `ListView` que `Adapter` um e seja recriado e (a menos que você tenha escrito `OnPause` código `OnResume`em e) os Estados de posição de rolagem e de seleção de linha serão perdidos.
@@ -36,4 +35,3 @@ O atributo a seguir impediria que uma atividade fosse destruída e recriada como
 ```
 
 A atividade deve então ser `OnConfigurationChanged` substituída para responder a essas alterações adequadamente. Para obter mais detalhes sobre como lidar com alterações de configuração, consulte a documentação.
-

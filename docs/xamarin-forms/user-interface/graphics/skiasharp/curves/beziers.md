@@ -7,12 +7,12 @@ ms.assetid: 8FE0F6DC-16BC-435F-9626-DD1790C0145A
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/25/2017
-ms.openlocfilehash: 9c1ee2e036fc903c7fe8422a32fba44cc93d43f9
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 1cf061f2ff27720ad78567bc26f00d99c5456f04
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70228276"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70759425"
 ---
 # <a name="three-types-of-bzier-curves"></a>Três tipos de curvas de bézier
 
@@ -552,7 +552,6 @@ Como você pode ver, não há nenhuma diferença visual entre o `ConicTo` caminh
 Mas, definir o ângulo de 180 graus e a matemática falhar.
 
 É uma pena nesse caso, que `ConicTo` não oferece suporte para pesos negativos, como em teoria (com base em equações paramétricas), o círculo pode ser concluído com outra chamada para `ConicTo` com os mesmos pontos, mas um valor negativo do peso. Isso permitiria que a criação de um círculo completo com apenas dois `ConicTo` curvas com base em qualquer ângulo entre (mas não incluindo) zero graus e 180 graus.
-
 
 ## <a name="related-links"></a>Links relacionados
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 09/25/2017
-ms.openlocfilehash: aabbbb706d4b6fcd022e30f726696b5d4f46167f
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 9f15d586a0ca209fec088fc48ca975efae4ab8fc
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70279511"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768357"
 ---
 # <a name="working-with-row-actions-in-xamarinios"></a>Trabalhando com ações de linha no Xamarin. iOS
 
@@ -26,7 +26,6 @@ o IOS fornece duas maneiras de executar ações em uma tabela `UISwipeActionsCon
 
 A `UITableViewRowAction` classe é usada para definir uma ação que ocorrerá quando o usuário passar horizontalmente para a esquerda em uma linha em uma exibição de tabela.
 Por exemplo, ao editar uma tabela, o passar o dedo para a esquerda em uma linha exibe um botão **excluir** por padrão. Ao anexar várias instâncias da `UITableViewRowAction` classe a uma `UITableView`, várias ações personalizadas podem ser definidas, cada uma com seu próprio texto, formatação e comportamento.
-
 
 ## <a name="uiswipeactionsconfiguration"></a>UISwipeActionsConfiguration
 
@@ -43,7 +42,6 @@ Eles são explicados com mais detalhes nas seções a seguir.
 `UITableViewController`(e também `UITableViewSource` e `UITableViewDelegate`) contêm dois métodos: `GetLeadingSwipeActionsConfiguration` e `GetTrailingSwipeActionsConfiguration`, que são usados para implementar um conjunto de ações de passar o dedo em uma linha de exibição de tabela. A ação de passar o dedo à esquerda refere-se a um dedo do lado esquerdo da tela em um idioma da esquerda para a direita e do lado direito da tela em um idioma da direita para a esquerda.
 
 O exemplo a seguir (do exemplo [TableSwipeActions](https://docs.microsoft.com/samples/xamarin/ios-samples/tableswipeactions) ) demonstra a implementação da configuração do dedo à esquerda. Duas ações são criadas a partir das ações contextuais, que são explicadas [abaixo](#create-uicontextualaction). Essas ações são passadas para uma inicializada [`UISwipeActionsConfiguration`](#create-uiswipeactionsconfigurations)recentemente, que é usada como o valor de retorno.
-
 
 ```csharp
 public override UISwipeActionsConfiguration GetLeadingSwipeActionsConfiguration(UITableView tableView, NSIndexPath indexPath)
@@ -180,8 +178,6 @@ Quando o código acima for executado e o usuário passar o dedo para a esquerda 
 [![](row-action-images/action01.png "O botão Olá que está sendo exibido em vez do botão excluir")](row-action-images/action01.png#lightbox)
 
 Se o usuário tocar no botão **Olá** , `Hello World!` ele será gravado no console do no Visual Studio para Mac ou no Visual Studio quando o aplicativo for executado no modo de depuração.
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

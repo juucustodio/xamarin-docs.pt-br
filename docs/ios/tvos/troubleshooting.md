@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: 3fb479321686e4b956fc6ffee90dd5b0b2c16d9c
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: f54edead87459282ccd6a44225269542fad9d0e4
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291189"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769102"
 ---
 # <a name="troubleshooting-tvos-apps-built-with-xamarin"></a>Solução de problemas de aplicativos tvOS criados com o Xamarin
 
@@ -146,7 +146,6 @@ Os controladores de jogo podem ser usados para aprimorar jogos e fornecer uma no
 
 Se você estiver enviando um aplicativo Xamarin. tvOS com suporte do controlador de jogo para a loja de aplicativos da Apple TV e receber uma mensagem de erro na forma de:
 
-
 _Descobrimos um ou mais problemas com sua entrega recente para "nome do aplicativo". Sua entrega foi bem-sucedida, mas talvez você queira corrigir os seguintes problemas em sua próxima entrega:_
 
 _Pacote inválido – um aplicativo que dá suporte a controladores de jogos também deve dar suporte ao Apple TV Remote._
@@ -200,8 +199,6 @@ Para o seguinte caminho:
 Observe que o número do perfil no caminho deve corresponder ao número de perfil do PCL.
 
 Com esse arquivo em vigor, você deve ser capaz de adicionar com êxito o arquivo PCL ao projeto Xamarin. tvOS.
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/07/2018
-ms.openlocfilehash: 1948c700827f1cc235de5857cde9a2a149af8412
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: f7dd62af7cfa37f136b4c72c7c34907ad8ebf36f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69524369"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70761185"
 ---
 # <a name="creating-a-fragment"></a>Criando um fragmento
 
@@ -26,7 +26,6 @@ public override View OnCreateView(LayoutInflater inflater, ViewGroup container, 
 
 O código acima irá inflar a `Resource.Layout.Example_Fragment`exibição e adicioná-la como uma exibição filho `ViewGroup` ao contêiner.
 
-
 > [!NOTE]
 > As subclasses de fragmento devem ter um construtor público padrão sem argumento.
 
@@ -36,7 +35,7 @@ Há duas maneiras pelas quais um fragmento pode ser hospedado dentro de uma ativ
 
 - **Declarativamente** Os fragmentos podem ser usados declarativamente `.axml` nos arquivos de layout usando `<Fragment>` a marca. &ndash;
 
-- Programaticamente Os fragmentos também podem ser instanciados dinamicamente usando a `FragmentManager` API da classe. &ndash;
+- **Programaticamente** Os fragmentos também podem ser instanciados dinamicamente usando a `FragmentManager` API da classe. &ndash;
 
 O uso programático `FragmentManager` por meio da classe será discutido posteriormente neste guia.
 
@@ -102,14 +101,12 @@ OU
 <fragment class="Com.Example.DetailsFragment" android:id="@+id/fragment_content" android:layout_width="match_parent" android:layout_height="match_parent" />
 ```
 
-
 ## <a name="fragment-lifecycle"></a>Ciclo de vida do fragmento
 
 Os fragmentos têm seu próprio ciclo de vida que é, de certa forma, independente do, mas ainda são afetados pelo [ciclo de vida da atividade de hospedagem](~/android/app-fundamentals/activity-lifecycle/index.md).
 Por exemplo, quando uma atividade é pausada, todos os fragmentos associados são pausados. O diagrama a seguir descreve o ciclo de vida do fragmento.
 
 [![Diagrama de fluxo ilustrando o ciclo de vida do fragmento](creating-a-fragment-images/fragment-lifecycle.png)](creating-a-fragment-images/fragment-lifecycle.png#lightbox)
-
 
 ### <a name="fragment-creation-lifecycle-methods"></a>Métodos de ciclo de vida de criação de fragmento
 
@@ -128,10 +125,9 @@ A lista abaixo mostra o fluxo dos vários retornos de chamada no ciclo de vida d
 - **`OnActivityCreated()`** Chamado após **Activity. OnCreate** foi concluído pela atividade de hospedagem. &ndash;
     Os ajustes finais para a interface do usuário devem ser executados no momento.
 
-- **`OnStart()`** &ndash; Chamado após a atividade de contenção ter sido retomada. Isso torna o fragmento visível para o usuário. Em muitos casos, o fragmento conterá o código que, de outra forma, estaria no método OnStart **()** de uma atividade.
+- **`OnStart()`** &ndash; Chamado após a atividade de contenção ter sido retomada. Isso torna o fragmento visível para o usuário. Em muitos casos, o fragmento conterá o código que, de outra forma, estaria no método **OnStart ()** de uma atividade.
 
 - **`OnResume()`** &ndash; Este é o último método chamado antes que o usuário possa interagir com o fragmento. Um exemplo do tipo de código que deve ser executado nesse método seria habilitar recursos de um dispositivo com o qual o usuário pode interagir, como a câmera que os serviços de localização. Os serviços como esses podem causar o esgotamento excessivo da bateria, mas um aplicativo deve minimizar seu uso para preservar a vida útil da bateria.
-
 
 ### <a name="fragment-destruction-lifecycle-methods"></a>Métodos de ciclo de vida de destruição de fragmento
 
@@ -147,11 +143,9 @@ A próxima lista explica os métodos de ciclo de vida que são chamados como um 
 
 - **`OnDetach()`** &ndash; Esse método é chamado logo antes que o fragmento não esteja mais associado à atividade. A hierarquia de exibição do fragmento não existe mais e todos os recursos que são usados pelo fragmento devem ser liberados neste ponto.
 
-
 ### <a name="using-setretaininstance"></a>Usando SetRetainInstance
 
 É possível que um fragmento especifique que ele não deve ser completamente destruído se a atividade estiver sendo recriada. A `Fragment` classe fornece o método `SetRetainInstance` para essa finalidade. Se `true` for passado para esse método, quando a atividade for reiniciada, a mesma instância do fragmento será usada. Se isso acontecer, todos os métodos de retorno de chamada serão invocados `OnDestroy` , exceto o e os retornos de chamada do ciclo de `OnCreate` vida. Esse processo é ilustrado no diagrama do ciclo de vida mostrado acima (pelas linhas pontilhadas verdes).
-
 
 ## <a name="fragment-state-management"></a>Gerenciamento de estado do fragmento
 
@@ -189,7 +183,6 @@ A `OnSaveInstanceState` substituição é um mecanismo apropriado para salvar da
 
 Como o `EditText` controle tem um `id` atribuído, o fragmento salva automaticamente os dados no widget quando `OnSaveInstanceState` é chamado.
 
-
 ### <a name="bundle-limitations"></a>Limitações de pacote
 
 Embora o `OnSaveInstanceState` uso do facilite o salvamento de dados transitórios, o uso desse método tem algumas limitações:
@@ -197,7 +190,6 @@ Embora o `OnSaveInstanceState` uso do facilite o salvamento de dados transitóri
 - Se o fragmento não for adicionado à pilha voltar, seu estado não será restaurado quando o usuário pressionar o botão **voltar** .
 
 - Quando o pacote é usado para salvar dados, esses dados são serializados. Isso pode levar a atrasos de processamento.
-
 
 ## <a name="contributing-to-the-menu"></a>Contribuindo para o menu
 

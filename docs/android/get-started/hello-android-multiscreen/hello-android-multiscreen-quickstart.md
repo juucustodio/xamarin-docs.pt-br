@@ -1,5 +1,5 @@
 ---
-title: 'Multitela Hello, Android: Guia de Início Rápido'
+title: 'Multitela Hello, Android: Início rápido'
 description: Este guia de duas partes expande o aplicativo Phoneword para manipular uma segunda tela. Ao longo do caminho, Blocos de Construção do Aplicativo Android básicos são apresentados com um aprofundamento maior de uma arquitetura Android.
 zone_pivot_groups: platform
 ms.topic: quickstart
@@ -9,14 +9,14 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 10/05/2018
-ms.openlocfilehash: aab10d434461521825fd633369ffa3c6331e905b
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
-ms.translationtype: HT
+ms.openlocfilehash: d1a4d73242e9701ff9ffcfc58791986bca89a095
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68643972"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755846"
 ---
-# <a name="hello-android-multiscreen-quickstart"></a>Multitela Hello, Android: Guia de Início Rápido
+# <a name="hello-android-multiscreen-quickstart"></a>Multitela Hello, Android: Início rápido
 
 _Este guia de duas partes expande o aplicativo Phoneword para manipular uma segunda tela. Ao longo do caminho, Blocos de Construção do Aplicativo Android básicos são apresentados com um aprofundamento maior de uma arquitetura Android._
 
@@ -215,7 +215,6 @@ Adicione o `translationHistory` nome e valor da cadeia de caracteres ao arquivo 
 O texto do botão **Histórico de Conversão** deve ser atualizado para refletir o novo valor de cadeia de caracteres:
 
 [![O botão reflete o novo valor de cadeia de caracteres](hello-android-multiscreen-quickstart-images/xs/05-new-string-value-sml.png)](hello-android-multiscreen-quickstart-images/xs/05-new-string-value.png#lightbox)
-
 
 Com o botão **Histórico de Conversão** selecionado na superfície de design, abra a guia **Comportamento** no **Painel de Propriedades** e clique duas vezes na caixa de seleção **Habilitado** para desabilitar o botão. Isso fará com que o botão fique mais escuro na superfície de design:
 

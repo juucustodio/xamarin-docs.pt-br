@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/24/2016
-ms.openlocfilehash: bf9b630613dcc5c25dac96cad71e54022ead1812
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 3c4fa085c9fdf17cdc256d9710c23911bb60d584
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68649591"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770640"
 ---
 # <a name="native-views-in-xaml"></a>Exibições nativas em XAML
 
@@ -486,7 +486,6 @@ O `MySpinner` classe expõe `ItemsSource` e `SelectedObject` propriedades e um `
 ## <a name="summary"></a>Resumo
 
 Este artigo demonstrou como consumir exibições nativas de arquivos XAML de xamarin. Forms. Propriedades e os manipuladores de eventos podem ser definidos em exibições nativas e eles podem interagir com exibições do xamarin. Forms.
-
 
 ## <a name="related-links"></a>Links relacionados
 

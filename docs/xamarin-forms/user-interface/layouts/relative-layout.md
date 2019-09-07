@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/25/2015
-ms.openlocfilehash: c5032bfa49fb1cee63c48ea8fa3e98bcd5748c31
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: d8c2cc4f31b148ee3181629e5b3b5faf01016617
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68657185"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70772534"
 ---
 # <a name="xamarinforms-relativelayout"></a>Xamarin. Forms RelativeLayout
 
@@ -226,7 +226,6 @@ O código acima resulta no layout a seguir:
 ![](relative-layout-images/relative.png "RelativeLayout complexo")
 
 Observe que `RelativeLayouts`s forem aninhadas, pois em alguns casos layouts de aninhamento pode ser mais fácil do que apresentar todos os elementos do layout do mesmo. Além disso, observe que alguns elementos são `RelativeToView`, pois o que permite layout mais fácil e intuitivo quando as relações entre os modos de exibição de guia de posicionamento.
-
 
 ## <a name="related-links"></a>Links relacionados
 

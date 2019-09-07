@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: d409787661491a6922434a12157c494851644412
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: d180345c36531b58c13eebbd97dc4f7555b8f13c
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291625"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768865"
 ---
 # <a name="populating-a-table-with-data-in-xamarinios"></a>Populando uma tabela com dados no Xamarin. iOS
 
@@ -25,7 +25,6 @@ Este guia aborda:
 - Adicionando um índice
 - Adicionando cabeçalhos e rodapés
 
-
 <a name="Subclassing_UITableViewSource" />
 
 ## <a name="subclassing-uitableviewsource"></a>UITableViewSource de subclasse
@@ -36,7 +35,6 @@ Há apenas dois métodos obrigatórios necessários para fazer uma tabela exibir
 
 - **RowsInSection** – retorna uma [`nint`](~/cross-platform/macios/nativetypes.md) contagem do número total de linhas de dados que a tabela deve exibir.
 - **GetCell** – retorna um `UITableCellView` populado com dados para o índice de linha correspondente passado para o método.
-
 
 O arquivo de exemplo Basictable **TableSource.cs** tem a implementação mais simples possível `UITableViewSource`do. Você pode ver no trecho de código abaixo que ele aceita uma matriz de cadeias de caracteres para exibir na tabela e retorna um estilo de célula padrão contendo cada cadeia de caracteres:
 
@@ -139,13 +137,9 @@ public override void RowSelected (UITableView tableView, NSIndexPath indexPath)
 }
 ```
 
-
 Agora, o usuário pode tocar em uma linha e um alerta será exibido:
 
-
-
  [![](populating-a-table-with-data-images/image4.png "O alerta de linha selecionada")](populating-a-table-with-data-images/image4.png#lightbox)
-
 
 ## <a name="cell-reuse"></a>Reutilização de célula
 
@@ -246,7 +240,6 @@ A `UITableViewSource` subclasse, em seguida, precisa dos seguintes métodos adic
 - **RowsInSection** – retorna o número de linhas em uma determinada seção.
 - **SectionIndexTitles** – retorna a matriz de cadeias de caracteres que será usada para exibir o índice. O código de exemplo retorna uma matriz de letras.
 
-
 Os métodos atualizados no arquivo de exemplo **BasicTableIndex/TableName. cs** têm a seguinte aparência:
 
 ```csharp
@@ -266,7 +259,6 @@ public override string[] SectionIndexTitles (UITableView tableView)
 
 Geralmente, os índices são usados apenas com o estilo de tabela simples.
 
-
 <a name="Adding_Headers_and_Footers" />
 
 ## <a name="adding-headers-and-footers"></a>Adicionando cabeçalhos e rodapés
@@ -280,7 +272,6 @@ Para exibir cabeçalhos e rodapés, `UITableViewSource` a subclasse requer estes
 
 - **TitleForHeader** – retorna o texto a ser usado como o cabeçalho
 - **TitleForFooter** – retorna o texto a ser usado como o rodapé.
-
 
 Os métodos atualizados no arquivo de exemplo **BasicTableHeaderFooter/Code/TableName. cs** têm a seguinte aparência:
 
@@ -296,7 +287,6 @@ public override string TitleForFooter (UITableView tableView, nint section)
 ```
 
 Você pode personalizar ainda mais a aparência do cabeçalho e do rodapé com um objeto View, usando `GetViewForHeader` as `GetViewForFooter` substituições de `UITableViewSource`método e em.
-
 
 ## <a name="related-links"></a>Links relacionados
 

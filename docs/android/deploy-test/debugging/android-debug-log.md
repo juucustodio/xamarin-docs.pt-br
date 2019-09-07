@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/22/2018
-ms.openlocfilehash: fd28143a2d4678a240d9d6f9f1cc3b1c5da80222
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
-ms.translationtype: HT
+ms.openlocfilehash: ef3ba27b9056e1de92aabb87f86416b2985d6e1d
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69525701"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70754216"
 ---
 # <a name="android-debug-log"></a>Log de depuração do Android
 
@@ -29,7 +29,6 @@ A ferramenta **Log de Depuração** fornece uma maneira de visualizar a saída d
 > A ferramenta **Log de Depuração** não funciona com o Xamarin Live Player.
 
 O **Log de Depuração** não exibe mensagens de log que são geradas durante o execução do aplicativo autônomo no dispositivo (ou seja, enquanto ele estiver desconectado do Visual Studio).
-
 
 ## <a name="accessing-the-debug-log-from-visual-studio"></a>Acessar o Log de Depuração do Visual Studio
 
@@ -60,13 +59,11 @@ A captura de tela a seguir ilustra as várias partes da janela **Ferramenta de D
 
 - **Caixa de Pesquisa** &ndash; Insira as cadeias de caracteres de pesquisa nessa caixa para filtrar um subconjunto de entradas de log.
 
-
 Quando a janela da ferramenta **Log de Depuração** for exibida, use o menu suspenso do dispositivo para escolher o dispositivo Android a ser monitorado:
 
 [![Localização do Seletor de Dispositivo](android-debug-log-images/vswin-02-devices-combo-sml.png)](android-debug-log-images/vswin-02-devices-combo.png#lightbox)
 
 Após o dispositivo ser selecionado, a ferramenta **Log de Dispositivo** adiciona automaticamente entradas de log de um aplicativo em execução &ndash; essas entradas de log são mostradas na tabela de entradas de log. Alternar entre dispositivos interrompe e inicia o registro de dispositivo. Observe que um projeto Android deve ser carregado antes que qualquer dispositivo apareça no seletor de dispositivos. Se o dispositivo não aparecer no seletor de dispositivos, verifique se ele está disponível no menu suspenso do dispositivo do Visual Studio ao lado do botão **Iniciar**.
-
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
@@ -104,7 +101,6 @@ Após o dispositivo ser selecionado, a ferramenta **Log de Dispositivo** adicion
 
 -----
 
-
 ## <a name="accessing-from-the-command-line"></a>Acessando da Linha de Comando
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
@@ -129,11 +125,9 @@ $ ./adb logcat
 
 -----
 
-
 Se mais de um dispositivo estiver conectado, o dispositivo deverá ser identificado explicitamente. Por exemplo, **adb -d logcat** exibe o log do único dispositivo físico conectado, enquanto **adb -e logcat** mostra o log do único emulador em execução.
 
 Mais comandos podem ser encontrados inserindo **adb** e lendo as mensagens de ajuda.
-
 
 ## <a name="writing-to-the-debug-log"></a>Gravar no Log de Depuração
 

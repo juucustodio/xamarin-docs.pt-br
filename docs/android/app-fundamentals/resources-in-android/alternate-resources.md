@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/13/2018
-ms.openlocfilehash: 05c3816d0cc01beb3ed99994788b58e5f187171a
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 3f1e2ef06fb439f4b3ef290b1a7f80856b126a8d
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70225783"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755193"
 ---
 # <a name="alternate-resources"></a>Recursos alternativos
 
@@ -25,13 +25,12 @@ Pode haver mais de um qualificador em um nome, cada um deles separado por um tra
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ![Recursos alternativos](alternate-resources-images/alternate-resources-vs.png)
- 
+
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 ![Recursos alternativos](alternate-resources-images/alternate-resources-xs.png)
- 
+
 -----
- 
 
 As regras a seguir se aplicam ao adicionar qualificadores a um tipo de recurso:
 
@@ -103,7 +102,6 @@ Os qualificadores possíveis estão listados abaixo para referência:
 
   - `12key`&ndash; Há um teclado de hardware de 12 teclas
 
-
 - **Disponibilidade da chave de navegação** &ndash; Para quando a navegação de 5 vias ou d-Pad (direcional-pad) estiver disponível. Isso pode ser alterado durante o tempo de vida do seu aplicativo. Os possíveis valores são:
 
   - `navexposed`&ndash; as chaves de navegação estão disponíveis para o usuário
@@ -122,9 +120,7 @@ Os qualificadores possíveis estão listados abaixo para referência:
 
 - **Versão da plataforma (nível de API)** O nível de API com suporte do dispositivo no formato v*N*, em que N é o nível de API que está sendo direcionado. &ndash; Por exemplo, v11 se destinará a um dispositivo de nível de API 11 (Android 3,0).
 
-
 Para obter informações mais completas sobre qualificadores de recursos, consulte [fornecendo recursos](https://developer.android.com/guide/topics/resources/providing-resources.html) no site de desenvolvedores do Android.
-
 
 ## <a name="how-android-determines-what-resources-to-use"></a>Como o Android determina quais recursos usar
 
@@ -138,7 +134,7 @@ O Android determina a base de recursos Iterando o seguinte teste de regras:
 
 - **Identificar o próximo qualificador de prioridade mais alta** &ndash; referindo-se à tabela acima, selecione o próximo qualificador de prioridade mais alta (de cima para baixo).
 
-- **Manter todos os diretórios de recursos para** o qualificador &ndash; se houver quaisquer diretórios de recursos que correspondam ao qualificador para a tabela acima, selecione o próximo qualificador de prioridade mais alta (de cima para baixo).
+- **Manter todos os diretórios de recursos para o qualificador** &ndash; se houver quaisquer diretórios de recursos que correspondam ao qualificador para a tabela acima, selecione o próximo qualificador de prioridade mais alta (de cima para baixo).
 
 Essas regras também são ilustradas no fluxograma a seguir:
 
