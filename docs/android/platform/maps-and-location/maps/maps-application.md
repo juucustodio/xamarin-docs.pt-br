@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/25/2018
-ms.openlocfilehash: b436ea4f5d8c70f0ca641bea72d1230fc07c5086
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: b950326eb5a124d5040caa0044309630a2a53d38
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69523786"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70761669"
 ---
 # <a name="launching-the-maps-application"></a>Iniciando o aplicativo Maps
 
@@ -21,7 +21,6 @@ A maneira mais simples de trabalhar com mapas no Xamarin. Android é aproveitar 
 [![Captura de tela de exemplo do aplicativo do Google Maps interno](maps-application-images/01-mapsapplication.png)](maps-application-images/01-mapsapplication.png#lightbox)
 
 Quando você usa o aplicativo Maps, o mapa não fará parte do seu aplicativo. Em vez disso, seu aplicativo iniciará o aplicativo Maps e carregará o mapa externamente. A próxima seção examina como usar o Xamarin. Android para iniciar mapas como aquele acima.
-
 
 ## <a name="creating-the-intent"></a>Criando a intenção
 
@@ -35,7 +34,6 @@ StartActivity (mapIntent);
 
 Esse código é tudo o que é necessário para iniciar o mapa mostrado na captura de tela anterior. Além de especificar a latitude e a longitude, o esquema de URI para mapas oferece suporte a várias outras opções.
 
-
 ## <a name="geo-uri-scheme"></a>Esquema de URI geográfica
 
 O código acima usou o esquema geográfico para criar um URI. Esse esquema de URI dá suporte a vários formatos, conforme listado abaixo:
@@ -48,15 +46,11 @@ O código acima usou o esquema geográfico para criar um URI. Esse esquema de UR
 
 - `geo:0,0?q=business+near+city`&ndash; Abre o aplicativo Maps e exibe os resultados da pesquisa anotada. 
 
-
 As versões do URI que tomam uma consulta (ou seja, o endereço ou os termos de pesquisa) usam o serviço de geocodificador do Google para recuperar o local que é exibido no mapa. Por exemplo, o URI `geo:0,0?q=coop+Cambridge` resulta no mapa mostrado abaixo:
 
 [![Captura de tela de exemplo mostrando o Google Maps com um termo de pesquisa](maps-application-images/02-mapsearch.png)](maps-application-images/02-mapsearch.png#lightbox)
 
-
-
 Para obter mais informações sobre esquemas de URI geográfica, consulte [Mostrar um local em um mapa](https://developer.android.com/guide/components/intents-common.html#Maps).
-
 
 ## <a name="street-view"></a>Exibição da rua
 
@@ -92,6 +86,5 @@ Como você pode ver, há vários parâmetros com suporte, conforme listado abaix
 - `zoom`&ndash; Multiplicador de zoom para o panorama da exibição de rua, em que 1,0 = Zoom normal, 2,0 = zoom 2x, 3,0 = zoom 4x, etc.
 
 - `mz`&ndash; O nível de zoom do mapa que será usado ao ir para o aplicativo Maps da exibição de rua.
-
 
 Trabalhar com o aplicativo de mapas interno ou a exibição de rua é uma maneira fácil de adicionar suporte de mapeamento rapidamente. No entanto, a API de mapas do Android oferece um controle mais preciso sobre a experiência de mapeamento.

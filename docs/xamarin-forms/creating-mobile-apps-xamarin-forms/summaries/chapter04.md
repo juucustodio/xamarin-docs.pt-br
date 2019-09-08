@@ -1,18 +1,18 @@
 ---
 title: Resumo do capítulo 4. Rolagem da pilha
-description: 'Criando aplicativos móveis com xamarin. Forms: Resumo do capítulo 4. Rolagem da pilha'
+description: 'Criando aplicativos móveis com Xamarin. Forms: Resumo do capítulo 4. Rolagem da pilha'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 7A39FD4F-15AD-4F94-960E-9FEEB63FFD44
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
-ms.openlocfilehash: 87846eba71278295ae6f266f6e786c0992aebd34
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 66e4f52e87a4398dd2e09d2d128f43de9a71a665
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61334503"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70760837"
 ---
 # <a name="summary-of-chapter-4-scrolling-the-stack"></a>Resumo do capítulo 4. Rolagem da pilha
 
@@ -110,8 +110,6 @@ Colocando um `StackLayout` em um `ScrollView` é comum, mas colocando um `Scroll
 O truque é dar a `ScrollView` filho do `StackLayout` um `VerticalOptions` configuração de `FillAndExpand`. Isso é demonstrado na [ **BlackCat** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/BlackCat) exemplo.
 
 O **BlackCat** exemplo também demonstra como definir e acessar os recursos do programa que são inseridos na biblioteca compartilhada. Isso também pode ser obtido com projetos de ativos compartilhados (SAPs), mas o processo é um pouco mais complicado, como o [ **BlackCatSap** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/BlackCatSap) demonstra.
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

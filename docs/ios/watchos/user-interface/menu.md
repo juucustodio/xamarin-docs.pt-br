@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: 497ac23ae6fe094b8049ac1b3460d327716e4ece
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: c37d8592b7aadc2c88c31826bc954abfa3c0836d
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291685"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70766797"
 ---
 # <a name="watchos-menu-control-force-touch-in-xamarin"></a>Controle de menu watchOS (Force Touch) no Xamarin
 
@@ -28,7 +28,6 @@ Se um `Menu` tiver sido implementado para um controlador de interface, quando um
 Os toques de força não estão associados a nenhum elemento específico na tela; somente um menu pode ser anexado a um controlador de interface e aparecerá independentemente de onde o Force Touch pressionar ocorre na tela.
 
 Entre uma e quatro opções de menu podem ser apresentadas.
-
 
 ## <a name="adding-a-menu"></a>Adicionando um menu
 
@@ -56,7 +55,6 @@ partial void MenuItemTapped ()
 Semelhante às imagens de tabulação no iOS, as imagens de item de menu exigem um padrão opaco com um canal alfa que permite que o plano de fundo apareça.
 
 Você deve adicionar as imagens usadas para o menu ao projeto do aplicativo Watch (não o projeto de extensão do aplicativo Watch) para obter o melhor desempenho.
-
 
 ## <a name="changing-the-menu-items"></a>Alterando os itens de menu
 
@@ -90,8 +88,6 @@ void MenuItemTapped ()
 O `ClearAllMenuItems` método pode ser chamado para remover todos os itens de menu *adicionados programaticamente* .
 
 Os itens de menu configurados no storyboard não podem ser apagados.
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

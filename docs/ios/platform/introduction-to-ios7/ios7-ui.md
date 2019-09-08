@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: 4568b204989c3ebb89ba4441232a100678657e28
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 97542c50041bfe24a3ad9494443ed8a4df85f113
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70280650"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70752235"
 ---
 # <a name="ios-7-user-interface-overview"></a>Visão geral da interface do usuário do iOS 7
 
@@ -69,7 +69,7 @@ UIBarButtonItem button = new UIBarButtonItem ("Bar Button", UIBarButtonItemStyle
 Isso produz uma exibição de alerta padrão, com a subexibição ignorada, conforme mostrado abaixo:
 
  ![](ios7-ui-images/alert.png "UIAlertView de exemplo")
- 
+
  Observação: UIAlertView foi preterido no iOS 8. Exiba a receita do [controlador de alerta](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/alertcontroller) em usando uma exibição de alerta no Ios 8 e superior.
 
 ### <a name="uisegmentedcontrol"></a>UISegmentedControl
@@ -253,7 +253,6 @@ A cor da tonalidade também pode ser aplicada a imagens quando o `RenderingMode`
 
 > [!IMPORTANT]
 > A cor da tonalidade não pode `UIAppearance`ser definida usando.
-
 
 ### <a name="dynamic-type"></a>Tipo dinâmico
 

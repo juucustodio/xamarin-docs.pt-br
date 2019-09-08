@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/02/2018
-ms.openlocfilehash: 4301022ae665498eaf90ca1e1786afbd6d19094a
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: fa35f6fe2388484875180594f18041947963ef7a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70198388"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70763975"
 ---
 # <a name="packaging-wear-apps"></a>Aplicativos de desgaste de pacotes
 
@@ -47,7 +47,6 @@ A partir do Xamarin Android 5,0, seu aplicativo de desgaste é empacotado automa
 
 -----
 
-
 Observe que você receberá um erro **XA5211** se o nome do pacote do aplicativo de desgaste não corresponder ao nome do pacote do aplicativo portátil. Por exemplo:
 
 ```shell
@@ -75,7 +74,6 @@ O assembly que o projeto de aplicativo de desgaste gera não é usado como uma r
     ```
 
 - Adiciona o aplicativo de desgaste como um recurso **bruto** ao projeto portátil. 
-
 
 ## <a name="manual-packaging"></a>Empacotamento manual
 
@@ -105,4 +103,3 @@ Você pode gravar aplicativos de desgaste do Android no Xamarin. Android antes d
     ```
 
 Consulte também as [instruções do packging manual](https://developer.android.com/training/wearables/apps/packaging.html#PackageManually)do site para desenvolvedores do Android.
-

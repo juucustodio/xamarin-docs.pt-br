@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/26/2018
-ms.openlocfilehash: 2deee2bd7fa07f562bee02409d1a7a19cdac0be9
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
-ms.translationtype: HT
+ms.openlocfilehash: dccc47d8ee69686fe2ac7409f75284c64c99a2d4
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68650855"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70772011"
 ---
 # <a name="customizing-an-entry"></a>Personalizando uma entrada
 
@@ -212,7 +212,6 @@ A chamada ao método `OnElementChanged` da classe base cria uma instância de um
 ## <a name="summary"></a>Resumo
 
 Este artigo demonstrou como criar um renderizador de controle personalizado para o controle [`Entry`](xref:Xamarin.Forms.Entry) do Xamarin.Forms, permitindo que os desenvolvedores substituam a renderização nativa padrão por sua própria personalização específica da plataforma. Os renderizadores personalizados fornecem uma abordagem eficiente para personalizar a aparência de controles do Xamarin.Forms. Eles podem ser usados para pequenas alterações de estilo ou personalização sofisticada de comportamento e de layout específico da plataforma.
-
 
 ## <a name="related-links"></a>Links relacionados
 

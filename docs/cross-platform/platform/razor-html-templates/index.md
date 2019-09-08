@@ -6,12 +6,12 @@ ms.assetid: D8B87C4F-178E-48D9-BE43-85066C46F05C
 author: conceptdev
 ms.author: crdun
 ms.date: 07/24/2018
-ms.openlocfilehash: ccad60f749732ae2d0bf8e9852859b13af3a629e
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 7f9f45976d0d7db42be18fede2f21825a385bea4
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70284915"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70765341"
 ---
 # <a name="building-html-views-using-razor-templates"></a>Criando exibições HTML usando modelos do Razor
 
@@ -198,7 +198,6 @@ Esta seção introduziu os recursos dos controles de exibição da Web no Androi
 - A capacidade de interceptar solicitações de C# navegação no código,
 - A capacidade de chamar JavaScript a C# partir do código.
 
-
 A próxima seção apresenta o Razor, que torna mais fácil criar o HTML a ser usado em aplicativos híbridos.
 
 ## <a name="what-is-razor"></a>O que é o Razor?
@@ -235,7 +234,6 @@ Observe as seguintes diferenças de um arquivo HTML regular:
 - O IDE gerará automaticamente a classe Partial para modelos (arquivos com a extensão **. cshtml** ). Você pode exibir esse código, mas ele não deve ser editado.
  ![RazorView. cshtml](images/image6_125x34.png) a classe parcial é denominada RazorView para corresponder ao nome do arquivo de modelo. cshtml. É esse nome que é usado para fazer referência ao modelo no C# código.
 - `@using`as instruções também podem ser incluídas na parte superior de um modelo do Razor para incluir namespaces adicionais.
-
 
 A saída HTML final pode então ser gerada com o código C# a seguir. Observe que especificamos que o modelo é uma cadeia de caracteres "Olá, Mundo", que será incorporada à saída do modelo renderizado.
 
@@ -379,8 +377,6 @@ Esta seção explica como usar o compilar seu próprio aplicativo híbrido usand
 - **Aplicativo iOS > > aplicação WebView**
 - **Projeto MVC do ASP.NET**
 
-
-
 A **nova** janela de solução tem esta aparência para projetos iPhone e Android-a descrição da solução na direita realça o suporte para o mecanismo de modelagem do Razor.
 
  ![Criando soluções iPhone e Android](images/image13_1139x959.png)
@@ -399,7 +395,6 @@ As partes importantes da solução são:
 - Arquivos de modelo Razor. cshtml como **RazorView. cshtml** .
 - Classes de modelo que são referenciadas nos modelos do Razor, como **ExampleModel.cs** .
 - A classe específica da plataforma que cria a exibição da Web e renderiza o modelo, como `MainActivity` no Android `iPhoneHybridViewController` e no Ios.
-
 
 A seção a seguir explica como os projetos funcionam.
 
@@ -494,7 +489,6 @@ O repositório [RazorTodo](https://github.com/xamarin/mobile-samples/tree/master
 - **RazorTodo** – aplicativo baseado em HTML completo usando modelos do Razor.
 - **RazorNativeTodo** -usa controles de exibição de lista nativa para IOS e Android, mas exibe a tela de edição com HTML e Razor.
 
-
 Esses aplicativos Xamarin são executados no iOS e no Android, utilizando PCLs (bibliotecas de classe portátil) para compartilhar um código comum, como as classes de banco de dados e modelo. Os modelos Razor **. cshtml** também podem ser incluídos no PCL para que eles sejam facilmente compartilhados entre plataformas.
 
 Ambos os aplicativos de exemplo incorporam o compartilhamento do Twitter e as APIs de conversão de texto em fala da plataforma nativa, demonstrando que aplicativos híbridos com o Xamarin ainda têm acesso a toda a funcionalidade subjacente de exibições controladas por modelo do Razor em HTML.
@@ -507,7 +501,6 @@ O aplicativo **RazorNativeTodo** usa um modelo HTML Razor para o modo de exibiç
 
 - Desempenho-os controles de rolagem nativos usam a virtualização para garantir a rolagem rápida e suave, mesmo com listas muito longas de dados.
 - Experiência nativa-os elementos da interface do usuário específicos da plataforma são facilmente habilitados, como o suporte ao índice de rolagem rápida no iOS e no Android.
-
 
 Um dos principais benefícios da criação de aplicativos híbridos com o Xamarin é que você pode começar com uma interface de usuário totalmente controlada por HTML (como o primeiro exemplo) e adicionar funcionalidade específica da plataforma quando necessário (como o segundo exemplo mostra). As telas de lista nativa e as telas de edição do Razor do HTML no iOS e no Android são mostradas abaixo.
 

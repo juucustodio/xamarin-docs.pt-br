@@ -6,15 +6,14 @@ ms.assetid: 0A74766A-B583-47AF-986C-FEA8F5CBF9CD
 author: conceptdev
 ms.author: crdun
 ms.date: 03/23/2017
-ms.openlocfilehash: c8fa3e6f9e941e0c48570f5d691e7ef83eeffae8
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 271d66ef952718654a2e45eb0d3901e2962ae31b
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70287632"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70766264"
 ---
 # <a name="microsoft-azure-active-directory"></a>Microsoft Azure Active Directory
-
 
 Azure Active Directory permite que os desenvolvedores protejam recursos como arquivos, links e APIs da Web, o Office 365 e muito mais usando a mesma conta institucional que os funcionários usam para entrar em seus sistemas ou verificar seus emails.
 
@@ -33,4 +32,3 @@ Depois de adicionar Active Directory autenticação a um aplicativo, você tamb�
 ## <a name="graph-api"></a>API do Graph
 
 Saiba como acessar o [API do Graph](~/cross-platform/data-cloud/active-directory/graph.md) usando o Xamarin (também abordado em nosso [blog](https://blog.xamarin.com/authenticate-xamarin-mobile-apps-using-azure-active-directory/)).
-

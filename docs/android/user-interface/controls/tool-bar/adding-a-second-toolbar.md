@@ -6,20 +6,18 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/15/2018
-ms.openlocfilehash: 4d9bf7b7a43c7c258bc60e9dfea1626e5c304b03
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 9fb5c696e830710e6ad99140477eedcbfe0e8823
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522868"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70764684"
 ---
 # <a name="adding-a-second-toolbar"></a>Adicionar uma segunda barra de ferramentas
 
-
 ## <a name="overview"></a>Visão geral 
 
-O `Toolbar` pode fazer mais do que substituir a barra &ndash; de ação que pode ser usada várias vezes em uma atividade, pode ser personalizada para posicionamento em qualquer lugar na tela e pode ser configurada para abranger apenas uma largura parcial da tela. Os exemplos a seguir ilustram como criar um `Toolbar` segundo e colocá-lo na parte inferior da tela. Isso `Toolbar` implementa os itens de menu **copiar**, recortar e **colar** . 
-
+O `Toolbar` pode fazer mais do que substituir a barra &ndash; de ação que pode ser usada várias vezes em uma atividade, pode ser personalizada para posicionamento em qualquer lugar na tela e pode ser configurada para abranger apenas uma largura parcial da tela. Os exemplos a seguir ilustram como criar um `Toolbar` segundo e colocá-lo na parte inferior da tela. Isso `Toolbar` implementa os itens de menu **copiar**, **recortar**e **colar** . 
 
 ## <a name="define-the-second-toolbar"></a>Definir a segunda barra de ferramentas 
 
@@ -68,7 +66,7 @@ android:background="?android:attr/colorAccent
 
 Observe que isso `Toolbar` se baseia em um tema diferente (**ThemeOverlay. material. Dark. ActionBar**) do que o `Toolbar` usado pelo criado na [substituição da barra](~/android/user-interface/controls/tool-bar/replacing-the-action-bar.md) &ndash; de ação ela não está associada à janela da atividade décor ou a o tema usado no primeiro `Toolbar`.
 
-Edite Resources **/Values/Styles. xml** e adicione a seguinte cor de destaque à definição de estilo: 
+Edite **Resources/Values/Styles. xml** e adicione a seguinte cor de destaque à definição de estilo: 
 
 ```xml
 <item name="android:colorAccent">#C7A935</item>
@@ -78,8 +76,6 @@ Isso dá à barra de ferramentas inferior uma cor âmbar escura. Compilar e exec
 
 [![Captura de tela do aplicativo com a segunda barra de ferramentas amarela na parte inferior do ecrã](adding-a-second-toolbar-images/01-second-toolbar-sml.png)](adding-a-second-toolbar-images/01-second-toolbar.png#lightbox)
 
-
- 
 ## <a name="add-edit-menu-items"></a>Adicionar itens de menu de edição 
 
 Esta seção explica como adicionar itens de menu de edição à parte `Toolbar`inferior. 
@@ -94,9 +90,7 @@ Para adicionar itens de menu a um `Toolbar`secundário:
 
 4. Implemente um manipulador de `OnCreate` cliques no para os novos itens de menu. 
 
-As seções a seguir demonstram esse processo em detalhes:Os itens de menu recortar, **copiar**e **colar** são adicionados à `Toolbar`parte inferior. 
-
-
+As seções a seguir demonstram esse processo em detalhes: Os itens de menu **recortar**, **copiar**e **colar** são adicionados à `Toolbar`parte inferior. 
 
 ### <a name="define-the-edit-menu-resource"></a>Definir o recurso de menu Editar
 
@@ -123,9 +117,7 @@ No subdiretório de **recursos/menu** , crie um novo arquivo XML chamado **edit_
 </menu>
 ```
 
-Esse XML cria ositens de menu recortar, **copiar**e **colar** (usando ícones `mipmap-` que foram adicionados às pastas ao [substituir a barra de ação](~/android/user-interface/controls/tool-bar/replacing-the-action-bar.md)).
-
-
+Esse XML cria os itens de menu **recortar**, **copiar**e **colar** (usando ícones `mipmap-` que foram adicionados às pastas ao [substituir a barra de ação](~/android/user-interface/controls/tool-bar/replacing-the-action-bar.md)).
 
 ### <a name="inflate-the-menus"></a>Inflar os menus
 
@@ -146,15 +138,13 @@ Compile e execute o aplicativo. Quando o aplicativo for executado, o texto e os 
 
 [![Diagrama da barra de ferramentas inferior com ícones de recortar, copiar e colar](adding-a-second-toolbar-images/02-bottom-toolbar-sml.png)](adding-a-second-toolbar-images/02-bottom-toolbar.png#lightbox)
 
-Tocar no ícone do menu recortar faz com que o seguinte sistema de notificação seja exibido: 
+Tocar no ícone do menu **recortar** faz com que o seguinte sistema de notificação seja exibido: 
 
 [![Captura de tela do sistema indicando que o ícone do menu recortar foi tocado](adding-a-second-toolbar-images/03-bottom-tapped-sml.png)](adding-a-second-toolbar-images/03-bottom-tapped.png#lightbox)
 
 Tocar em itens de menu em qualquer barra de ferramentas exibe as notificações resultantes: 
 
 [![Capturas de tela das notificações dos itens de menu salvar, copiar e colar que estão sendo tocadas](adding-a-second-toolbar-images/04-menu-action-sml.png)](adding-a-second-toolbar-images/04-menu-action.png#lightbox)
-
-
 
 ## <a name="the-up-button"></a>O botão para cima 
 
@@ -184,8 +174,6 @@ Quando o usuário navega `MainActivity` de para `DetailActivity`, o `DetailActiv
 [![Exemplo de captura de tela de uma seta para a esquerda do botão para cima na barra de ferramentas](adding-a-second-toolbar-images/05-up-button-sml.png)](adding-a-second-toolbar-images/05-up-button.png#lightbox)
 
 Tocar no botão **up** faz com que o aplicativo retorne `MainActivity`. Em um aplicativo mais complexo com vários níveis de hierarquia, tocar nesse botão retornaria o usuário para o próximo nível mais alto no aplicativo, e não para a tela anterior. 
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: a48e7bd780783a7b33008a5d86011f5497b042d5
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 194f1a260adc49083a8d4365a310447acbcc96f2
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70287969"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769030"
 ---
 # <a name="working-with-tvos-stacked-views-in-xamarin"></a>Trabalhando com exibições empilhadas do tvOS no Xamarin
 
@@ -74,9 +74,6 @@ Se a `BaselineRelativeArrangement` propriedade for `true`, as subexibições ser
 
 > [!IMPORTANT]
 > O alinhamento de linha de base não funciona em tamanhos de subexibições ampliados ou compactados, pois a linha de base será calculada para a posição incorreta. Para alinhamento de linha de base, verifique se a **altura** da subexibição corresponde à **altura**do modo de exibição de conteúdo intrínseco.
-
-
-
 
 <a name="Common-Stack-View-Uses" />
 
@@ -309,8 +306,6 @@ Muitas das propriedades da exibição da pilha podem ser especificadas usando cl
 ## <a name="summary"></a>Resumo
 
 Este artigo abordou a criação e o trabalho com a exibição empilhada dentro de um aplicativo Xamarin. tvOS.
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

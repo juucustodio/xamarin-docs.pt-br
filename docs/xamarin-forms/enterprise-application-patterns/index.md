@@ -1,87 +1,86 @@
 ---
-title: Padrões de aplicativo empresarial usando o livro eletrônico do xamarin. Forms
-description: Este livro eletrônico fornece diretrizes de arquitetura para o desenvolvimento de aplicativos empresariais de xamarin. Forms testáveis adaptáveis e sustentáveis.
+title: Padrões de aplicativos empresariais usando o Xamarin. Forms eBook
+description: Este eBook fornece diretrizes arquitetônicas para o desenvolvimento de aplicativos empresariais Xamarin. Forms adaptáveis e que podem ser testados.
 ms.prod: xamarin
 ms.assetid: 28cfed6c-6175-4223-a8cc-798d40bf0832
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: f972a32f8daf920f2121e5aa56923c0f3a7f808a
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: a26fdd931f539da990e21166eec361fd1702de9c
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61299935"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70760210"
 ---
-# <a name="enterprise-application-patterns-using-xamarinforms-ebook"></a>Padrões de aplicativo empresarial usando o livro eletrônico do xamarin. Forms
+# <a name="enterprise-application-patterns-using-xamarinforms-ebook"></a>Padrões de aplicativos empresariais usando o Xamarin. Forms eBook
 
-_Diretrizes de arquitetura para o desenvolvimento de aplicativos empresariais de xamarin. Forms testáveis adaptáveis e sustentáveis_
+_Diretrizes arquitetônicas para o desenvolvimento de aplicativos empresariais do Xamarin. Forms adaptáveis, que podem ser mantidos e que podem ser testados_
 
-![](images/cover-sml.png "Padrões de aplicativo empresarial usando o livro eletrônico do xamarin. Forms")
+![](images/cover-sml.png "Padrões de aplicativos empresariais usando o Xamarin. Forms eBook")
 
-Este livro eletrônico fornece orientação sobre como implementar o padrão Model-View-ViewModel (MVVM), a injeção de dependência, a navegação, a validação e o gerenciamento de configuração, mantendo um acoplamento flexível. Além disso, há também orientações sobre como executar autenticação e autorização com IdentityServer, acessando dados através de microsserviços em contêineres e testes de unidade.
+Este eBook fornece orientação sobre como implementar o padrão MVVM (Model-View-ViewModel), injeção de dependência, navegação, validação e gerenciamento de configuração, mantendo o acoplamento flexível. Além disso, também há orientações sobre como executar a autenticação e a autorização com o IdentityServer, acessar dados de microservices em contêineres e testes de unidade.
 
 ## <a name="prefaceprefacemd"></a>[Prefácio](preface.md)
 
-Este capítulo explica a finalidade e o escopo do guia e que ele é destinado.
+Este capítulo explica a finalidade e o escopo do guia e a quem ele é destinado.
 
 ## <a name="introductionintroductionmd"></a>[Introdução](introduction.md)
 
-Os desenvolvedores de aplicativos empresariais enfrentam vários desafios que podem alterar a arquitetura do aplicativo durante o desenvolvimento. Portanto, é importante compilar um aplicativo para que possa ser modificado ou estendido ao longo do tempo. A criação de tal adaptabilidade pode ser difícil, mas geralmente envolve o particionamento de um aplicativo em componentes discretos e flexíveis que podem ser facilmente integrados juntos em um aplicativo.
+Os desenvolvedores de aplicativos empresariais enfrentam vários desafios que podem alterar a arquitetura do aplicativo durante o desenvolvimento. Portanto, é importante criar um aplicativo para que ele possa ser modificado ou estendido ao longo do tempo. A criação de tal adaptabilidade pode ser difícil, mas normalmente envolve o particionamento de um aplicativo em componentes discretos e livremente acoplados que podem ser facilmente integrados em um aplicativo.
 
 ## <a name="mvvmmvvmmd"></a>[MVVM](mvvm.md)
 
-O padrão Model-View-ViewModel (MVVM) ajuda a separar a lógica de negócios e apresentação de um aplicativo de sua interface do usuário (UI) de forma precisa. Mantendo uma separação clara entre a lógica do aplicativo e a interface do usuário ajuda a resolver vários problemas de desenvolvimento e pode tornar mais fácil de testar um aplicativo, manter e evoluem. Ele pode também melhoram muito a oportunidades de reutilização de código e permite que os desenvolvedores e designers de interface do usuário mais facilmente colaboram durante o desenvolvimento de suas respectivas partes de um aplicativo.
+O padrão MVVM (Model-View-ViewModel) ajuda a separar corretamente a lógica de negócios e de apresentação de um aplicativo da interface do usuário. Manter uma separação clara entre a lógica do aplicativo e a interface do usuário ajuda a resolver inúmeros problemas de desenvolvimento e pode facilitar o teste, a manutenção e a evolução de um aplicativo. Ele também pode melhorar consideravelmente as oportunidades de reutilização de código e permite que desenvolvedores e designers de interface do usuário colaborem mais facilmente ao desenvolver suas respectivas partes de um aplicativo.
 
 ## <a name="dependency-injectiondependency-injectionmd"></a>[Injeção de dependência](dependency-injection.md)
 
-Injeção de dependência permite desassociação de tipos concretos do código que depende desses tipos. Normalmente, ele usa um contêiner que mantém uma lista de registros e mapeamentos entre as interfaces e tipos abstratos e os tipos concretos que implementam ou estendem a esses tipos.
+A injeção de dependência permite o desacoplamento de tipos concretos do código que depende desses tipos. Normalmente, ele usa um contêiner que contém uma lista de registros e mapeamentos entre interfaces e tipos abstratos e os tipos concretos que implementam ou estendem esses tipos.
 
-Contêineres de injeção de dependência reduzem o acoplamento entre objetos fornecendo um recurso para instanciar instâncias de classe e gerenciar seu tempo de vida com base na configuração do contêiner. Durante a criação de objetos, o contêiner injeta quaisquer dependências que exige que o objeto nele. Se essas dependências ainda não tem sido criadas, o contêiner cria e resolve as dependências entre primeiro.
+Os contêineres de injeção de dependência reduzem o acoplamento entre objetos, fornecendo um recurso para instanciar instâncias de classe e gerenciar sua vida útil com base na configuração do contêiner. Durante a criação de objetos, o contêiner injeta todas as dependências que o objeto exige. Se essas dependências ainda não tiverem sido criadas, o contêiner criará e resolverá suas dependências primeiro.
 
 ## <a name="communicating-between-loosely-coupled-componentscommunicating-between-loosely-coupled-componentsmd"></a>[Comunicação entre componentes flexíveis](communicating-between-loosely-coupled-components.md)
 
-O xamarin. Forms [ `MessagingCenter` ](xref:Xamarin.Forms.MessagingCenter) classe implementa a publicar-padrão, permitindo a comunicação baseada em mensagens entre os componentes são inconvenientes para vincular as referências de objeto e o tipo de assinatura. Esse mecanismo permite que os publicadores e assinantes para se comunicar sem a necessidade de uma referência entre si, ajudando a reduzir as dependências entre componentes, enquanto também permite que componentes de forma independente seja desenvolvido e testado.
+A classe [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) do Xamarin.Forms implementa o padrão de publicação-assinatura, permitindo uma comunicação baseada em mensagens entre componentes que são inconvenientes de vincular por referências de objeto e de tipo. Esse mecanismo permite que publicadores e assinantes se comuniquem sem ter uma referência entre si, ajudando a reduzir as dependências entre os componentes, permitindo também que os componentes sejam desenvolvidos e testados de forma independente.
 
 ## <a name="navigationnavigationmd"></a>[Navegação](navigation.md)
 
-Xamarin. Forms inclui suporte para navegação de página, que geralmente resulta da interação do usuário com a interface do usuário ou do aplicativo em si, como resultado das alterações de estado interno controlado por lógica. No entanto, a navegação pode ser complexa para implementar em aplicativos que usam o padrão MVVM.
+O Xamarin. Forms inclui suporte para a navegação de página, que normalmente resulta da interação do usuário com a interface ou do próprio aplicativo, como resultado de alterações de estado controladas pela lógica interna. No entanto, a navegação pode ser complexa para ser implementada em aplicativos que usam o padrão MVVM.
 
-Este capítulo apresenta um `NavigationService` classe, que é usado para executar a navegação de model first de modo de exibição de modelos de exibição. Colocar a lógica de navegação no modo de exibição classes de modelo significa que a lógica pode ser exercida por meio de testes automatizados. Além disso, o modelo de exibição, em seguida, pode implementar a lógica para controlar a navegação para assegurar que determinadas regras de negócio são aplicadas.
+Este capítulo apresenta uma `NavigationService` classe, que é usada para executar o modelo de exibição-primeira navegação de modelos de exibição. Colocar a lógica de navegação em classes de modelo de exibição significa que a lógica pode ser exercitada por meio de testes automatizados. Além disso, o modelo de exibição pode então implementar a lógica para controlar a navegação a fim de garantir que determinadas regras de negócio sejam impostas.
 
 ## <a name="validationvalidationmd"></a>[Validação](validation.md)
 
-Qualquer aplicativo que aceita entrada de usuários deve garantir que a entrada é válida. Sem validação, um usuário pode fornecer dados que faz com que o aplicativo falhe. Validação impõe regras de negócio e impede que um invasor injetando dados mal-intencionados.
+Qualquer aplicativo que aceite entrada de usuários deve garantir que a entrada seja válida. Sem a validação, um usuário pode fornecer dados que causam falha no aplicativo. A validação impõe regras de negócio e impede que um invasor insira dados mal-intencionados.
 
-No contexto do Model-View-ViewModel (MVVM) padrão, um modelo de exibição ou modelo geralmente precisará executar a validação de dados e sinalizar erros de validação para o modo de exibição para que o usuário possa corrigi-los.
+No contexto do padrão Model-View-ViewModel (MVVM), um modelo de exibição ou modelo geralmente será necessário para executar a validação de dados e sinalizar quaisquer erros de validação para o modo de exibição para que o usuário possa corrigi-los.
 
 ## <a name="configuration-managementconfiguration-managementmd"></a>[Gerenciamento de configurações](configuration-management.md)
 
-As configurações permitem a separação dos dados que configura o comportamento de um aplicativo do código, permitindo que o comportamento a ser alterado sem recompilar o aplicativo. Configurações do aplicativo são dados que um aplicativo cria e gerencia e configurações de usuário são as configurações personalizáveis de um aplicativo que afetam o comportamento do aplicativo e não exigem o ajuste re frequente.
+As configurações permitem a separação de dados que configuram o comportamento de um aplicativo do código, permitindo que o comportamento seja alterado sem recriar o aplicativo. As configurações do aplicativo são dados que um aplicativo cria e gerencia, e as configurações de usuário são as configurações personalizáveis de um aplicativo que afetam o comportamento do aplicativo e não exigem um reajuste frequente.
 
 ## <a name="containerized-microservicescontainerized-microservicesmd"></a>[Microservices em contêineres](containerized-microservices.md)
 
-Os Microsserviços oferecem uma abordagem ao desenvolvimento de aplicativos e implantação que é adequada para os requisitos de agilidade, escala e confiabilidade de aplicativos de nuvem modernos. Uma das principais vantagens de microsserviços é que eles podem ser escalados horizontalmente de forma independente, o que significa que uma área funcional específica pode ser dimensionada que que requer mais processamento de rede ou energia largura de banda para dar suporte à demanda, sem dimensionamento desnecessariamente áreas do o aplicativo que não estejam enfrentando o aumento na demanda.
+Os microserviços oferecem uma abordagem ao desenvolvimento e à implantação de aplicativos adequados para os requisitos de agilidade, escala e confiabilidade dos aplicativos de nuvem modernos. Uma das principais vantagens dos microserviços é que eles podem ser expandidos de forma independente, o que significa que uma área funcional específica pode ser dimensionada para exigir mais capacidade de processamento ou largura de banda de rede para dar suporte à demanda, sem áreas de dimensionamento desnecessariamente de o aplicativo que não está sofrendo maior demanda.
 
 ## <a name="authentication-and-authorizationauthentication-and-authorizationmd"></a>[Autenticação e autorização](authentication-and-authorization.md)
 
-Há muitas abordagens para integrar a autenticação e autorização em um aplicativo xamarin. Forms que se comunica com um aplicativo web ASP.NET MVC. Aqui, autenticação e autorização são executadas com um microsserviço de identidade em contêineres que usa 4 IdentityServer. IdentityServer é uma estrutura de OAuth 2.0 e OpenID Connect do código-fonte aberto para o ASP.NET Core se integra ao ASP.NET Core Identity para realizar a autenticação de token de portador.
+Há muitas abordagens para integrar a autenticação e a autorização em um aplicativo Xamarin. Forms que se comunica com um aplicativo Web ASP.NET MVC. Aqui, a autenticação e a autorização são executadas com um microserviço de identidade em contêiner que usa o IdentityServer 4. IdentityServer é uma estrutura de software livre do OpenID Connect e do OAuth 2,0 para ASP.NET Core que se integra com a identidade ASP.NET Core para executar a autenticação de token de portador.
 
 ## <a name="accessing-remote-dataaccessing-remote-datamd"></a>[Acesso a dados remotos](accessing-remote-data.md)
 
-Muitas soluções modernas baseado na web fazer uso dos serviços da web, hospedados por servidores web, para fornecer funcionalidade para o cliente remoto a aplicativos. As operações que um serviço web expõe constituem uma API da web e aplicativos de cliente devem ser capazes de utilizar a API da web sem saber como os dados ou operações que expõe a API são implementadas.
+Muitas soluções modernas baseadas na Web fazem uso de serviços Web, hospedados por servidores Web, para fornecer funcionalidade para aplicativos cliente remotos. As operações que um serviço Web expõe constituem uma API Web, e os aplicativos cliente devem ser capazes de utilizar a API Web sem saber como os dados ou as operações que a API expõe são implementados.
 
 ## <a name="unit-testingunit-testingmd"></a>[Testes de Unidade](unit-testing.md)
 
-Teste de modelos e modelos de exibição de aplicativos MVVM é idêntico ao teste de outras classes e as mesmas ferramentas e técnicas podem ser usadas. No entanto, há alguns padrões que são comuns ao modelo e classes de modelo de exibição, que podem se beneficiar das técnicas de teste de unidade específica.
+Os modelos de teste e os modelos de exibição dos aplicativos MVVM são idênticos ao teste de todas as outras classes, e as mesmas ferramentas e técnicas podem ser usadas. No entanto, há alguns padrões típicos para modelar e exibir classes de modelo, que podem se beneficiar de técnicas de teste de unidade específicas.
 
 ## <a name="feedback"></a>Comentários
 
-Este projeto tem um site da comunidade, no qual você pode postar perguntas e fornecer comentários. O site da comunidade está localizado em [GitHub](https://github.com/dotnet-architecture/eShopOnContainers). Como alternativa, comentários sobre o livro eletrônico podem ser enviados por email para [ dotnet-architecture-ebooks-feedback@service.microsoft.com ](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com).
-
+Este projeto tem um site de comunidade, no qual você pode postar perguntas e fornecer comentários. O site da Comunidade está localizado no [GitHub](https://github.com/dotnet-architecture/eShopOnContainers). Como alternativa, comentários sobre o eBook podem ser enviados por email [dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com).
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Baixe o livro eletrônico (PDF de 2Mb)](https://aka.ms/xamarinpatternsebook)
-- [eShopOnContainers (GitHub) (amostra)](https://github.com/dotnet-architecture/eShopOnContainers)
+- [Download do eBook (PDF de 2Mb)](https://aka.ms/xamarinpatternsebook)
+- [eShopOnContainers (GitHub) (exemplo)](https://github.com/dotnet-architecture/eShopOnContainers)

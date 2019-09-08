@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 06/07/2016
-ms.openlocfilehash: 9d83be4eec793f571fe3d308c80ca9c023828f56
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: f0633b0f91bf39d10ad42e1ee41997213ca3047e
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70288915"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769037"
 ---
 # <a name="building-tvos-user-interfaces-with-xamarin"></a>Criando interfaces de usuário do tvOS com o Xamarin
 
@@ -69,8 +69,6 @@ Este artigo aborda a criação e o trabalho com exibições de tabela e controla
 ## <a name="working-with-text-and-search-fieldsiostvosuser-interfacetext-fields-and-searchmd"></a>[Trabalhando com campos de pesquisa e texto](~/ios/tvos/user-interface/text-fields-and-search.md)
 
 Este artigo aborda a criação e o trabalho com campos de texto e de pesquisa dentro de um aplicativo Xamarin. tvOS.
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

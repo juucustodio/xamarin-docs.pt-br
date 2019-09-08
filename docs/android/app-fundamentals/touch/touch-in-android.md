@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: 0619dd9a81c40633c7c61f23ef9e8f3ef92c2e6a
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: e9810eed3affb15f581b95aec1aff9ae560ff63c
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70197629"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70754749"
 ---
 # <a name="touch-in-android"></a>Toque no Android
 
@@ -22,15 +22,13 @@ Assim como o Ios, o Android cria um objeto que mantém os dados sobre a interaç
 - Um conjunto de valores de eixo que descrevem a posição das `MotionEvent` outras propriedades de movimento, como o local em que o toque está ocorrendo, quando o toque ocorreu e quanto foi usada a quantidade de pressão.
    Os valores de eixo podem ser diferentes dependendo do dispositivo, portanto, a lista anterior não descreve todos os valores de eixo.
 
-
 O `MotionEvent` objeto será passado para um método apropriado em um aplicativo. Há três maneiras de um aplicativo Xamarin. Android responder a um evento de toque:
 
 - *Atribua um manipulador de eventos `View.Touch` a* - `Android.Views.View` `EventHandler<View.TouchEventArgs>` a classe com a qual os aplicativos podem atribuir um manipulador. Esse é um comportamento típico do .NET.
 
-- *`View.IOnTouchListener` Implementando* -as instâncias dessa interface podem ser atribuídas a um objeto View usando a exibição. `SetOnListener`forma. Isso é funcionalmente equivalente a atribuir um manipulador de eventos ao `View.Touch` evento. Se houver alguma lógica comum ou compartilhada para a qual muitas exibições diferentes podem precisar quando elas forem tocadas, será mais eficiente criar uma classe e implementar esse método do que atribuir a cada exibição seu próprio manipulador de eventos.
+- *Implementando `View.IOnTouchListener`*  -as instâncias dessa interface podem ser atribuídas a um objeto View usando a exibição. `SetOnListener`forma. Isso é funcionalmente equivalente a atribuir um manipulador de eventos ao `View.Touch` evento. Se houver alguma lógica comum ou compartilhada para a qual muitas exibições diferentes podem precisar quando elas forem tocadas, será mais eficiente criar uma classe e implementar esse método do que atribuir a cada exibição seu próprio manipulador de eventos.
 
 - *Substituir`View.OnTouchEvent`* -todas as exibições na subclasse `Android.Views.View`do Android. Quando um modo de exibição for tocado, o `OnTouchEvent` Android chamará e passará um `MotionEvent` objeto como um parâmetro.
-
 
 > [!NOTE]
 > Nem todos os dispositivos Android dão suporte a telas de toque. 
@@ -78,7 +76,6 @@ Essa interface fornece seis métodos para os vários gestos:
 - *OnShowPress* -chamado depois que um ondown ocorreu e um evento move ou up não foi executado.
 
 - *OnSingleTapUp* – chamado quando ocorre um único toque.
-
 
 Em muitos casos, os aplicativos podem estar interessados apenas em um subconjunto de gestos. Nesse caso, os aplicativos devem estender a classe GestureDetector. SimpleOnGestureListener e substituir os métodos que correspondem aos eventos em que estão interessados.
 
@@ -164,8 +161,6 @@ private void GestureOverlayViewOnGesturePerformed(object sender, GestureOverlayV
 ```
 
 Com isso feito, você deve ter uma compreensão de como usar toque e gestos em um aplicativo Xamarin. Android. Agora vamos passar para uma explicação e ver todos os conceitos em um aplicativo de exemplo funcional.
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

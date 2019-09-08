@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: db666fc6a547e3fa089475ba5912774c1af3be0d
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
-ms.translationtype: HT
+ms.openlocfilehash: 551dea5455ffd060d808aa11e8996c5984745fda
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68650754"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771905"
 ---
 # <a name="highlighting-a-circular-area-on-a-map"></a>Realçando uma área circular em um mapa
 
@@ -305,7 +305,6 @@ Esse método executa as seguintes operações, desde que o renderizador personal
 - O círculo é criado instanciando um objeto `MapPolygon`. A classe `MapPolygon` é usada para exibir uma forma de vários pontos no mapa, definindo sua propriedade `Path` como um objeto `Geopath` que contém as coordenadas da forma.
 - O polígono é renderizado no mapa adicionando-o à coleção `MapControl.MapElements`.
 
-
 ```
 List<Position> GenerateCircleCoordinates(Position position, double radius)
 {
@@ -331,7 +330,6 @@ List<Position> GenerateCircleCoordinates(Position position, double radius)
 ## <a name="summary"></a>Resumo
 
 Este artigo explicou como adicionar uma sobreposição circular a um mapa a fim de realçar uma área circular nele.
-
 
 ## <a name="related-links"></a>Links relacionados
 

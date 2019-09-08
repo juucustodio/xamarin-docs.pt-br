@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: f453e6a7d4f516ee87dda25141cfd9ff81b9110d
-ms.sourcegitcommit: 21182d07d4bbddc26cd36f1c5b86b79011f6984a
+ms.openlocfilehash: 843aeda14ad8c47014b577bdce8004872b12865d
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70169244"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70753460"
 ---
 # <a name="xamarinios-api-design"></a>Design de API do Xamarin. iOS
 
@@ -285,9 +285,9 @@ Por exemplo, considere a classe [UIWebView](https://developer.apple.com/iphone/l
 
 Para muitos tipos, o Xamarin. Ios criará automaticamente um delegado apropriado que encaminhará `UIWebViewDelegate` as C# chamadas para eventos. Para `UIWebView`:
 
-- O método [webViewDidStartLoad](https://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html#//apple_ref/occ/intfm/UIWebViewDelegate/webViewDidStartLoad:) é mapeado para o evento [UIWebView.](xref:UIKit.UIWebView.LoadStarted) LoadStarted.
-- O método [webViewDidFinishLoad](https://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html#//apple_ref/occ/intfm/UIWebViewDelegate/webViewDidFinishLoad:) é mapeado para o evento [UIWebView.](xref:UIKit.UIWebView.LoadFinished) loadfinalized.
-- O método [WebView: didFailLoadWithError](https://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html#//apple_ref/occ/intfm/UIWebViewDelegate/webView:didFailLoadWithError:) é mapeado para o evento [UIWebView.](xref:UIKit.UIWebView.LoadError) LoadError.
+- O método [webViewDidStartLoad](https://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html#//apple_ref/occ/intfm/UIWebViewDelegate/webViewDidStartLoad:) é mapeado para o evento [UIWebView. LoadStarted](xref:UIKit.UIWebView.LoadStarted) .
+- O método [webViewDidFinishLoad](https://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html#//apple_ref/occ/intfm/UIWebViewDelegate/webViewDidFinishLoad:) é mapeado para o evento [UIWebView. loadfinalized](xref:UIKit.UIWebView.LoadFinished) .
+- O método [WebView: didFailLoadWithError](https://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html#//apple_ref/occ/intfm/UIWebViewDelegate/webView:didFailLoadWithError:) é mapeado para o evento [UIWebView. LoadError](xref:UIKit.UIWebView.LoadError) .
 
 Por exemplo, esse programa simples registra os horários de início e término ao carregar uma exibição da Web:
 
@@ -552,7 +552,6 @@ Isso é feito em algumas etapas:
 1. Armazene a interface do usuário mais as conexões em seu arquivo XIB/NIB.
 1. Carregue o arquivo NIB em tempo de execução.
 1. Acesse a variável de tomada.
-
 
 As etapas (1) a (3) são abordadas na documentação da Apple para a criação de interfaces com Interface Builder.
 

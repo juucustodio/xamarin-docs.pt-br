@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: ccdf1e3fc0c42f8af8f9219a8b472827048a90dc
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
-ms.translationtype: HT
+ms.openlocfilehash: e542336cfd3bf1eac50c343a3edfeb0efa414d0c
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69525221"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70753616"
 ---
 # <a name="apk-expansion-files"></a>Arquivos de Expansão APK
 
@@ -29,10 +29,8 @@ Arquivos de expansão são tratados como *obb (blobs binários opacos)* e podem 
 - **Expansão principal** &ndash; Esse arquivo é o arquivo de expansão principal para recursos e ativos que não cabem no limite de tamanho do APK. O arquivo de expansão principal deve conter os ativos primários de que um aplicativo precisa e raramente deve ser atualizado.
 - **Expansão de patch** &ndash; Destina-se a pequenas atualizações ao arquivo de expansão principal. Esse arquivo pode ser atualizado. É responsabilidade do aplicativo executar quaisquer patches ou atualizações necessários desse arquivo.
 
-
 Os arquivos de expansão devem ser carregados ao mesmo tempo em que o APK é carregado.
 O Google Play não permite que um arquivo de expansão seja carregado a um APK existente nem que APKs existentes sejam atualizados. Se for necessário atualizar um arquivo de expansão, um novo APK deverá ser carregado com o `versionCode` atualizado.
-
 
 ## <a name="expansion-file-storage"></a>Armazenamento de arquivo de expansão
 
@@ -41,7 +39,6 @@ Quando os arquivos forem baixados para um dispositivo, eles serão armazenados e
 - **_shared-store_** &ndash; Esse é o diretório especificado por `Android.OS.Environment.ExternalStorageDirectory`.
 - **_package-name_** &ndash; Esse é o nome do pacote do aplicativo no estilo Java.
 
-
 Após o download, arquivos de expansão não devem ser movidos, alterados, renomeados nem excluídos de seu local no dispositivo. Fazer isso fará os arquivos de expansão serem baixados novamente, excluindo os arquivos antigos. Além disso, o diretório de arquivos de expansão deve conter somente os arquivos do pacote de expansão.
 
 Os arquivos de expansão não oferecem nenhuma segurança nem proteção ao conteúdo &ndash; outros aplicativos ou usuários podem acessar os arquivos salvos no armazenamento compartilhado.
@@ -49,7 +46,6 @@ Os arquivos de expansão não oferecem nenhuma segurança nem proteção ao cont
 Se for necessário descompactar um arquivo de expansão, os arquivos descompactados deverão ser armazenados em um diretório separado, como um em `Android.OS.Environment.ExternalStorageDirectory`.
 
 Uma alternativa a extrair os arquivos de um arquivo de expansão é ler os ativos ou os recursos diretamente do arquivo de expansão. O arquivo de expansão nada mais é do que um arquivo zip que pode ser usado com um `ContentProvider` apropriado. A [Android.Play.ExpansionLibrary](https://github.com/mattleibow/Android.Play.ExpansionLibrary) contém um assembly, [System.IO.Compression.Zip](https://github.com/mattleibow/Android.Play.ExpansionLibrary/tree/master/System.IO.Compression.Zip), que inclui um `ContentProvider` que permitirá acesso direto do arquivo a alguns arquivos de mídia. Se os arquivos de mídia estiverem sendo empacotados em um arquivo zip, chamadas de reprodução de mídia poderão usar arquivos zip diretamente sem necessidade de descompactá-los. Os arquivos de mídia não devem ser compactados quando adicionados ao arquivo zip. 
-
 
 ### <a name="filename-format"></a>Formato de nome de arquivo
 
@@ -65,9 +61,7 @@ Os três componentes desse esquema são:
 - `<expansion-version>` &ndash; É um inteiro que corresponde a `versionCode` do APK ao qual o arquivo foi associado inicialmente.
 - `<package-name>` &ndash; Esse é o nome do pacote do aplicativo no estilo Java.
 
-
 Por exemplo, se a versão do APK for 21 e o nome do pacote for `mono.samples.helloworld`, o arquivo de expansão principal será denominado **main.21.mono.samples.helloworld**.
-
 
 ## <a name="download-process"></a>Processo de download
 
@@ -81,7 +75,6 @@ Quando um aplicativo é iniciado, ele deve verificar se os arquivos de expansão
 - **Nomes de Arquivo** &ndash; O nome de arquivo (no dispositivo atual) com o qual os pacotes de expansão devem ser salvos.
 - **URL para Download** &ndash; A URL que deve ser usada para baixar os pacotes de expansão. Isso é exclusivo para cada download e expirará logo após ser fornecido.
 
-
 Depois da execução da verificação de LVL, o aplicativo deve baixar os arquivos de expansão, levando em consideração os seguintes pontos como parte do download:
 
 - O dispositivo pode não ter espaço suficiente para armazenar os arquivos de expansão.
@@ -89,8 +82,6 @@ Depois da execução da verificação de LVL, o aplicativo deve baixar os arquiv
 - Os arquivos de expansão são baixados em segundo plano para evitar bloquear interações do usuário.
 - Enquanto o download ocorre em segundo plano, um indicador de progresso deve ser exibido.
 - Os erros que ocorrem durante o download são processados normalmente e recuperáveis.
-
-
 
 ## <a name="architectural-overview"></a>Visão geral da arquitetura
 
@@ -103,6 +94,5 @@ Para facilitar o esforço necessário para integrar os arquivos de expansão em 
 - **Biblioteca do Downloader** &ndash; Essa é uma biblioteca que reduz o esforço necessário para integrar os arquivos de expansão em um aplicativo. A biblioteca baixará os arquivos de expansão em um serviço em segundo plano, exibirá notificações de usuário, lidará com problemas de conectividade de rede, retomará downloads, etc.
 - **LVL (Biblioteca de Verificação de Licença)** &ndash; Uma biblioteca para fazer e processar chamadas aos serviços de Licenciamento de Aplicativos. Também poderá ser usada para realizar verificações de licenciamento para ver se o aplicativo está autorizado para uso no dispositivo.
 - **Biblioteca Zip de Expansão de APK (opcional)** &ndash; Se os arquivos de expansão estiverem em um arquivo zip, essa biblioteca atuará como um provedor de conteúdo e permitirá que um aplicativo leia os recursos e ativos diretamente no arquivo zip sem precisar expandir o arquivo zip.
-
 
 Essas bibliotecas foram portadas para C# e estão disponíveis sob a licença do Apache 2.0. Para integrar rapidamente arquivos de expansão a um aplicativo existente, essas bibliotecas podem ser adicionadas a um aplicativo Xamarin.Android existente. O código está disponível na [Android.Play.ExpansionLibrary](https://github.com/mattleibow/Android.Play.ExpansionLibrary) no GitHub.

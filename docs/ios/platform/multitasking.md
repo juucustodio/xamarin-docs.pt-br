@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: conceptdev
 ms.author: crdun
 ms.date: 03/20/2017
-ms.openlocfilehash: 87de42504081374f830a4fe286476ad822eeed99
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 8f38200e8274a36783ac7bd1aec4b695036f83e2
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70280154"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769629"
 ---
 # <a name="multitasking-for-ipad-in-xamarinios"></a>Multitarefa para iPad no Xamarin. iOS
 
@@ -40,7 +40,6 @@ Este artigo abordará as etapas necessárias para garantir que seu aplicativo Xa
 > [!VIDEO https://youtube.com/embed/GctYAozoLr8]
 
 **Multitarefa para vídeo do iPad**
-
 
 <a name="Multitasking-QuickStart" />
 
@@ -251,8 +250,6 @@ Para recusar a reprodução de vídeo PIP, faça o seguinte em seu aplicativo:
 ## <a name="summary"></a>Resumo
 
 Este artigo abordou as etapas necessárias para garantir que um aplicativo Xamarin. iOS seja executado e se comporte corretamente na nova capacidade de multitarefa do iOS 9 para iPads. Além disso, ele abordou a recusa de multitarefas para aplicativos em que não é uma boa opção.
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

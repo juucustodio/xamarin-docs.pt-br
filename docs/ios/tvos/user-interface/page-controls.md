@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: ec4b99fd1c8ec28f6b4bbb30695613da6c40d60c
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 8bb517eaa549567ae92695fbad300d055f42771f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70288944"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769053"
 ---
 # <a name="working-with-tvos-page-controls-in-xamarin"></a>Trabalhando com controles de página tvOS no Xamarin
 
@@ -35,7 +35,6 @@ A maneira mais fácil de trabalhar com controles de página em um aplicativo Xam
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
-
 1. No **painel de soluções**, clique duas vezes no arquivo `Main.storyboard` e abra-o para edição.
 1. Arraste um **controle de página** da **caixa de ferramentas** e solte-o na exibição:
 
@@ -49,9 +48,7 @@ A maneira mais fácil de trabalhar com controles de página em um aplicativo Xam
     [![](page-controls-images/page04.png "Nomear o controle")](page-controls-images/page04.png#lightbox)
 1. Salve as alterações.
 
-
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
-
 
 1. No **Gerenciador de soluções**, clique duas vezes no arquivo `Main.storyboard` e abra-o para edição.
 1. Arraste um **controle de página** da **caixa de ferramentas** e solte-o na exibição:
@@ -65,7 +62,6 @@ A maneira mais fácil de trabalhar com controles de página em um aplicativo Xam
 
     [![](page-controls-images/page04-vs.png "Nomear o controle")](page-controls-images/page04-vs.png#lightbox)
 1. Salve as alterações.
-
 
 -----
 
@@ -167,8 +163,6 @@ Para obter mais informações sobre como trabalhar com storyboards, consulte nos
 ## <a name="summary"></a>Resumo
 
 Este artigo abordou a criação e o trabalho com o controle de página dentro de um aplicativo Xamarin. tvOS.
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: b846d034c31069c02e3c97fba0ac0d68e6df2e23
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 66bea7d2a9660018c7cec9b7bafeadafd5029ed9
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292528"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769433"
 ---
 # <a name="speech-recognition-in-xamarinios"></a>Reconhecimento de fala no Xamarin. iOS
 
@@ -128,9 +128,6 @@ Para fornecer a chave `NSSpeechRecognitionUsageDescription` necessária `Info.pl
 
 > [!IMPORTANT]
 > A falha ao fornecer qualquer uma das `Info.plist` chaves acima`NSSpeechRecognitionUsageDescription` ( `NSMicrophoneUsageDescription`ou) pode resultar na falha do aplicativo sem aviso ao tentar acessar o reconhecimento de fala ou o microfone para áudio ao vivo.
-
-
-
 
 ### <a name="requesting-authorization"></a>Solicitando autorização
 
@@ -398,8 +395,6 @@ A Apple tem a seguinte sugestão para ser transparente e respeitar a privacidade
 ## <a name="summary"></a>Resumo
 
 Este artigo apresentou o novo Speech API e mostrou como implementá-lo em um aplicativo Xamarin. iOS para dar suporte ao reconhecimento de fala contínuo e transcrever a fala (de fluxos de áudio dinâmicos ou gravados) em texto. 
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

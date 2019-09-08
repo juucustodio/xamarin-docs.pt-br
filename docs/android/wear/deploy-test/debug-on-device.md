@@ -7,17 +7,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 2a0c21f5a985e7a0bbe5b2afac1520280a0bd5e8
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 9596ff34352337d892fc22df5651b2f78f8c33f6
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522135"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70762169"
 ---
 # <a name="debug-on-a-wear-device"></a>Depurar em um dispositivo Wear
 
 _Este artigo explica como depurar um aplicativo de desgaste do Xamarin. Android em um dispositivo de desgaste._
-
 
 ## <a name="overview"></a>Visão geral
 
@@ -37,11 +36,9 @@ Use as etapas a seguir para habilitar a depuração no dispositivo Android desga
 
 5. Confirme se a **depuração ADB** está habilitada.
 
-
 ## <a name="debugging-over-usb"></a>Depurando por USB
 
 Se o dispositivo de desgaste tiver uma porta USB, você poderá conectar o dispositivo de desgaste ao seu computador, implantá-lo e executar/depurar o aplicativo como faria usando um telefone Android (para obter mais informações, consulte [Depurar em um dispositivo](~/android/deploy-test/debugging/debug-on-device.md)).
-
 
 ## <a name="debugging-over-bluetooth"></a>Depuração via Bluetooth
 
@@ -121,7 +118,6 @@ Exclua a captura de tela no dispositivo digitando o seguinte comando:
 adb -s 127.0.0.1:4444 shell rm /sdcard/DCIM/screencap.png
 ```
 
-
 ### <a name="uninstalling-an-app"></a>Desinstalando um aplicativo
 
 Você pode desinstalar um aplicativo do dispositivo de desgaste digitando o seguinte comando:
@@ -136,8 +132,7 @@ Por exemplo, para remover o aplicativo com o nome `com.xamarin.weartest`do pacot
 adb -s 127.0.0.1:4444 uninstall com.xamarin.weartest
 ```
 
-Para obter mais informações sobre como depurar dispositivos Android de desgaste via Bluetooth, consulte Depurando [sobre Bluetooth](https://developer.android.com/training/wearables/apps/bt-debugging.html).
-
+Para obter mais informações sobre como depurar dispositivos Android de desgaste via Bluetooth, consulte [Depurando sobre Bluetooth](https://developer.android.com/training/wearables/apps/bt-debugging.html).
 
 ## <a name="debugging-a-wear-app-with-a-companion-phone-app"></a>Depurando um aplicativo de desgaste com um aplicativo de telefone complementar
 
@@ -153,7 +148,6 @@ Para depurar o aplicativo de desgaste com um aplicativo complementar:
 
 4. Execute e depure o aplicativo de desgaste no dispositivo.
 
- 
 ## <a name="summary"></a>Resumo
 
 Este artigo explicou como configurar um dispositivo de desgaste do Android para depuração de desgaste do Visual Studio via Bluetooth e como depurar um aplicativo de desgaste com um aplicativo de telefone complementar. Ele também forneceu dicas de depuração comuns para depurar um aplicativo de desgaste via Bluetooth.

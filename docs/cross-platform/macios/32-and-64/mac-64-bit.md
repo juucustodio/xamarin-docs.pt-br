@@ -1,44 +1,44 @@
 ---
-title: Atualizando aplicativos unificados do xamarin. Mac para 64 bits
-description: Este guia descreve como atualizar seus aplicativos xamarin. Mac para o destino de 64 bits. Ele também fornece exemplos dos tipos de erros que podem ser encontrados ao fazer essa alteração.
+title: Atualizando aplicativos unificados do Xamarin. Mac para 64 bits
+description: Este guia descreve como atualizar seus aplicativos Xamarin. Mac para o destino de 64 bits. Ele também fornece exemplos dos tipos de erros que podem ser encontrados ao fazer essa alteração.
 ms.prod: xamarin
 ms.assetid: C3810A74-539C-4FFB-B47F-68CA5F7BCDAD
 author: conceptdev
 ms.author: crdun
 ms.date: 02/22/2018
-ms.openlocfilehash: 9bd70fec5d6d3bbbc4855980e1542bd4e486acaa
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 5539bab417c5efc0064cd1753cb74c7524463ee5
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61266702"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70765917"
 ---
-# <a name="updating-xamarinmac-unified-applications-to-64-bit"></a>Atualizando aplicativos unificados do xamarin. Mac para 64 bits
+# <a name="updating-xamarinmac-unified-applications-to-64-bit"></a>Atualizando aplicativos unificados do Xamarin. Mac para 64 bits
 
-A partir de janeiro de 2018, a Apple exige que os novos [64 bits de destino de envios de Mac App Store](https://developer.apple.com/news/?id=06282017a). Aplicativos já está disponíveis a Mac App Store devem ser atualizados para o destino de 64 bits de junho de 2018.
+A partir de janeiro de 2018, a Apple requer que novas [submissas do Mac App Store tenham o destino de 64 bits](https://developer.apple.com/news/?id=06282017a). Os aplicativos já disponíveis na Mac App Store devem ser atualizados para o destino de 64 bits até junho de 2018.
 
-O **arquivo** > **New** modelo de projeto do xamarin. Mac cria aplicativos de 64 bits por padrão, portanto, todos os aplicativos criados recentemente já são compatível com 64 bits e não exigirá qualquer alteração.
+O **arquivo** > **novo** modelo de projeto Xamarin. Mac cria aplicativos de 64 bits por padrão, portanto, todos os aplicativos criados recentemente já são compatíveis com 64 bits e não exigirão nenhuma alteração.
 
 ## <a name="targeting-64-bit"></a>Direcionamento de 64 bits
 
-1. Abra o **opções de projeto** janela para seu aplicativo xamarin. Mac:
+1. Abra a janela **Opções de projeto** para seu aplicativo Xamarin. Mac:
 
-   ![O menu contextual para o projeto](mac-64-bit-images/1-contextual_menu-vsmac.png "o menu contextual para o projeto")
+   ![O menu contextual do projeto](mac-64-bit-images/1-contextual_menu-vsmac.png "O menu contextual do projeto")
 
-2. Selecione **Build do Mac** e defina **arquiteturas com suporte** para **x86\_64**:
+2. Selecione o **Build do Mac** e defina as **arquiteturas com suporte** para **\_x86 64**:
 
-   [![Definindo as arquiteturas com suporte como x86_64](mac-64-bit-images/2-project_options-vsmac.png "definindo as arquiteturas com suporte como x86_64")](mac-64-bit-images/2-project_options-vsmac-large.png#lightbox)
+   [![Definindo as arquiteturas com suporte para o x86_64](mac-64-bit-images/2-project_options-vsmac.png "Definindo as arquiteturas com suporte para o x86_64")](mac-64-bit-images/2-project_options-vsmac-large.png#lightbox)
 
-3. Se seu aplicativo tem dependências externas, como referências nativas ou projetos de associação, você deve atualizá-los para 64 bits de destino.
+3. Se seu aplicativo tiver quaisquer dependências externas, como referências nativas ou projetos de associação, atualize-as para o destino de 64 bits.
 
 ### <a name="errors"></a>Erros
 
-Na primeira vez que você compila ou executar seu aplicativo com o suporte de 64 bits, você poderá encontrar erros de link de problemas de clang ou tempo de execução. Esses erros podem ocorrer se o terceiro dependências — por exemplo, as referências nativas em xamarin. Mac ou projetos de associações ou estruturas de todo o sistema carregados manualmente — não foram atualizadas para 64 bits.
+Na primeira vez que você criar ou executar seu aplicativo com suporte de 64 bits, você poderá encontrar erros de link de Clang ou problemas de tempo de execução. Esses erros podem ocorrer se dependências de terceiros — por exemplo, referências nativas em seus projetos Xamarin. Mac ou bindings, ou estruturas de todo o sistema carregadas manualmente, não foram atualizadas para 64 bits.
 
 > [!TIP]
-> A conversão de seu projeto para 64 bits é uma alteração importante e indiretamente pode revelar vários erros de programação. Em particular, ele pode alterar o tamanho e o alinhamento de estruturas de dados, o que afetaria assinaturas p/invoke e código nativo vinculado em seu projeto. Considere revisar qualquer dados de avisos de compilação e teste seu aplicativo completamente posteriormente para detectar possíveis problemas.
+> Converter seu projeto para 64 bits é uma alteração importante e pode revelar indiretamente vários erros de programação. Em particular, ele pode alterar o tamanho e o alinhamento das estruturas de dados, o que afetaria as assinaturas p/Invoke e o código nativo vinculado em seu projeto. Considere a análise de quaisquer avisos de compilação fornecidos e teste o aplicativo detalhadamente mais tarde para detectar possíveis problemas.
 
-#### <a name="example-error-resulting-from-a-dynamically-linked-third-party-dependency-that-does-not-target-64-bit"></a>Erro de exemplo resultante de uma dependência de terceiros vinculados dinamicamente que não tem como destino 64 bits:
+#### <a name="example-error-resulting-from-a-dynamically-linked-third-party-dependency-that-does-not-target-64-bit"></a>Erro de exemplo resultante de uma dependência de terceiros vinculada dinamicamente que não tem como alvo 64 bits:
 
 ```console
 ld : warning : ignoring file PATH/ThirdPartyLibrary.framework/ThirdPartyLibrary, 
@@ -46,9 +46,9 @@ file was built for i386 which is not the architecture being linked (x86_64):
 PATH/ThirdPartyLibrary.framework/ThirdPartyLibrary 
 ```
 
-Esse erro pode ser seguido em tempo de execução pelo `dlopen` retornando `IntPtr.Zero` em vez de um identificador esperado.
+Esse erro pode ser seguido em tempo de `dlopen` execução `IntPtr.Zero` retornando em vez de um identificador esperado.
 
-#### <a name="example-error-resulting-from-a-statically-linked-third-party-dependency-that-does-not-target-64-bit"></a>Erro de exemplo resultante de uma dependência de terceiros vinculadas estaticamente que não tem como destino 64 bits:
+#### <a name="example-error-resulting-from-a-statically-linked-third-party-dependency-that-does-not-target-64-bit"></a>Erro de exemplo resultante de uma dependência de terceiros vinculada estaticamente que não tem como alvo 64 bits:
 
 ```console
 Undefined symbols for architecture x86_64:
@@ -57,5 +57,4 @@ Undefined symbols for architecture x86_64:
 ld: symbol(s) not found for architecture x86_64 
 ```
 
-Para compilar e executar com êxito, atualize essas dependências para 64 bits e recompilar seu aplicativo.
-
+Para compilar e executar com êxito, atualize essas dependências para 64 bits e recompile seu aplicativo.

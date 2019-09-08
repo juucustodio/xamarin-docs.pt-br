@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: 7d324d1faa045dcfbb2b3e6dcc3000a67b5f9e10
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
-ms.translationtype: HT
+ms.openlocfilehash: bd505e97ce4fcca2197f6c7da2de8411931900ab
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69525387"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70753783"
 ---
 # <a name="publishing-independently"></a>Publicação Independente
 
@@ -29,18 +29,14 @@ Algumas licenças estão disponíveis para desenvolvimento, implantação e dist
 
 Visite a [visualstudio.com](https://visualstudio.microsoft.com/xamarin/) para baixar as edições de comunidade ou para saber mais sobre como comprar as edições Professional e Enterprise.
 
-
 ## <a name="allow-installation-from-unknown-sources"></a>Permitir instalação de fontes desconhecidas
 
 Por padrão, o Android impede que os usuários baixem e instalem aplicativos de locais diferentes do Google Play. Para permitir a instalação de fontes diferentes do marketplace, um usuário deve habilitar a configuração *Fontes desconhecidas* em um dispositivo antes de tentar instalar um aplicativo. A configuração para isso pode ser encontrada em **Configurações > Segurança**, conforme mostrado no diagrama a seguir:
 
 [![Tela de Configurações de segurança](publishing-independently-images/settings.png)](publishing-independently-images/settings.png#lightbox)
 
-
 > [!IMPORTANT]
 > Alguns provedores de rede podem impedir a instalação de aplicativos de fontes desconhecidas, independentemente dessa configuração.
-
-
 
 ## <a name="publishing-by-e-mail"></a>Publicando por email
 
@@ -50,11 +46,9 @@ Anexar a versão APK a um email é uma maneira rápida e fácil de distribuir um
 
 Embora a distribuição por email seja simples, ela fornece algumas proteções contra pirataria ou distribuição não autorizada. Ela é melhor reservada para situações em que os destinatários do aplicativo sejam poucos e eles são confiáveis para não distribuir o aplicativo.
 
-
 ## <a name="publishing-by-web"></a>Publicando pela Web
 
 É possível distribuir um aplicativo por um servidor Web. Isso é feito ao carregar o aplicativo para o servidor Web e, em seguida, fornecer um link de download para os usuários. Quando um dispositivo com Android navega até um link e, em seguida, baixa o aplicativo, esse aplicativo será instalado automaticamente quando o download for concluído.
-
 
 ## <a name="manually-installing-an-apk"></a>Instalar manualmente um APK
 

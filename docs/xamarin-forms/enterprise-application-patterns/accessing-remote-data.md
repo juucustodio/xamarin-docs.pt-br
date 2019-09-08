@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: 7edbe96a6c32b4ebd4fc788e7361cddbae40601a
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 9c793f4d5f0cda5bff2dedef5e4e5e5bdfca69e5
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69529186"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770800"
 ---
 # <a name="accessing-remote-data"></a>Acesso a dados remotos
 
@@ -411,7 +411,6 @@ Muitas soluções modernas baseadas na Web fazem uso de serviços Web, hospedado
 O desempenho de um aplicativo pode ser melhorado pelo armazenamento em cache de dados acessados com frequência para um armazenamento rápido localizado próximo ao aplicativo. Os aplicativos podem implementar o cache de leitura com o padrão de reserva de cache. Esse padrão determina se o item está atualmente no cache. Se o item não estiver no cache, ele será lido no repositório de dados e adicionado ao cache.
 
 Ao se comunicar com APIs Web, os aplicativos devem ser sensíveis a falhas transitórias. As falhas transitórias incluem a perda momentânea de conectividade de rede para serviços, a indisponibilidade temporária de um serviço ou tempos limite que surgem quando um serviço está ocupado. Essas falhas costumam ser autocorrigidas e, se a ação for repetida após um atraso adequado, provavelmente terá sucesso. Portanto, os aplicativos devem encapsular todas as tentativas de acessar uma API Web no código que implementa um mecanismo transitório de tratamento de falhas.
-
 
 ## <a name="related-links"></a>Links relacionados
 

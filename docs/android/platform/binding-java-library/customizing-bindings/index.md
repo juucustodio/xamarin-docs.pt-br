@@ -7,20 +7,19 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 09/25/2017
-ms.openlocfilehash: e29432504f3b8554c387d277004d3cc779aade95
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 37e91070ea10defedbeebdbb06220fabbd2554fc
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69524645"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70756635"
 ---
 # <a name="customizing-bindings"></a>Personalização de associações
 
 _Você pode personalizar uma associação do Xamarin. Android editando os metadados que controlam o processo de associação. Essas modificações manuais geralmente são necessárias para resolver erros de compilação e para formatar a API resultante para que seja mais consistente com C#/.net. Esses guias explicam a estrutura desses metadados, como modificar os metadados e como usar o JavaDoc para recuperar os nomes dos parâmetros do método._
 
-
 ## <a name="overview"></a>Visão geral
- 
+
 O Xamarin. Android automatiza grande parte do processo de ligação; no entanto, em alguns casos, a modificação manual é necessária para resolver os seguintes problemas:
 
 - Resolvendo erros de compilação causados por tipos ausentes, tipos ofuscados, nomes duplicados, problemas de visibilidade de classe e outras situações que não podem ser resolvidas pelas ferramentas do Xamarin. Android. 
@@ -33,7 +32,6 @@ O Xamarin. Android automatiza grande parte do processo de ligação; no entanto,
 
 Você pode fazer algumas ou todas essas alterações modificando os metadados que controlam o processo de associação.
 
-
 ## <a name="guides"></a>Guias
 
 Os guias a seguir descrevem os metadados que controlam o processo de associação e explicam como modificar esses metadados para resolver esses problemas:
@@ -42,7 +40,3 @@ Os guias a seguir descrevem os metadados que controlam o processo de associaçã
     Ele descreve as várias etapas manuais que às vezes são necessárias para concluir uma biblioteca de associação Java e explica como formatar uma API exposta por uma associação para seguir melhor as diretrizes de design do .NET.
 
 - A [nomenclatura de parâmetros com Javadoc](~/android/platform/binding-java-library/customizing-bindings/naming-parameters-with-javadoc.md) explica como recuperar nomes de parâmetro em um projeto de associação Java usando o Javadoc produzido do projeto Java associado.
-
-
- 
-

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: 676523e461737d7820278ca8c319794d3347088d
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 70646999154297592137c6966626b318fb73897c
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70289799"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771261"
 ---
 # <a name="introduction-to-xamarinforms-control-templates"></a>Introdução aos modelos de controle do Xamarin.Forms
 
@@ -51,7 +51,6 @@ Escolher onde definir uma instância [`ControlTemplate`](xref:Xamarin.Forms.Cont
 - As instâncias [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) definidas no nível do aplicativo podem ser aplicadas às páginas em todo o aplicativo.
 
 Os modelos de controle mais baixos na hierarquia de exibição têm precedência sobre os definidos na parte de cima. Por exemplo, um [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) denominado `DarkTheme` definido no nível da página tem precedência sobre um modelo com o mesmo nome definido no nível do aplicativo. Portanto, um modelo de controle que define um tema a ser aplicado a cada página em um aplicativo deve ser definido no nível do aplicativo.
-
 
 ## <a name="related-links"></a>Links relacionados
 

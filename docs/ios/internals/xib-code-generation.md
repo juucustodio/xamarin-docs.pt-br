@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: 367f0b6a44482762f8609eb959e154c942ff14f5
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 474e8ba772773f437bc30a07a34f6bfbb286cd82
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291827"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768496"
 ---
 # <a name="xib-code-generation-in-xamarinios"></a>. xib geração de código no Xamarin. iOS
 
@@ -72,7 +72,6 @@ As classes de designer contêm métodos parciais correspondentes a todas as aç�
 
 1. Se você digitar `partial` o corpo da classe da parte de classe que não é do designer, a Visual Studio para Mac oferecerá a conclusão automático das assinaturas de todos os métodos parciais não implementados.
 2. As assinaturas de método parcial têm um atributo aplicado que as expõe ao mundo Objective-C, para que possam ser manipuladas como a ação correspondente.
-
 
 Se desejar, você pode ignorar o método parcial e implementar a ação aplicando o atributo a um método diferente ou deixá-lo passar para uma classe base.
 

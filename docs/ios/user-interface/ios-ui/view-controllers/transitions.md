@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 06/14/2017
-ms.openlocfilehash: 45d9580899ac42dba300086b5d5694c07d177871
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: bbba1cbb907e3744677ff6bbe39b97fb62616e33
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70287828"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768162"
 ---
 # <a name="view-controller-transitions-in-xamarinios"></a>Exibir transições do controlador no Xamarin. iOS
 
@@ -28,7 +28,6 @@ Para usar uma transição personalizada com `PresentViewController`:
 2. Implemente `UIViewControllerTransitioningDelegate` para criar uma classe Animator, que é uma instância `UIViewControllerAnimatedTransitioning` do.
 3. Defina a `TransitioningDelegate` Propriedade como uma instância do `UIViewControllerTransitioningDelegate` , também no controlador a ser apresentado.
 4. Apresente o controlador de exibição.
-
 
 Por exemplo, o código a seguir apresenta um controlador de exibição `ControllerTwo` do tipo `UIViewController` -uma subclasse:
 
@@ -83,7 +82,6 @@ A `UIViewControllerAnimatedTransitioning` classe manipula a animação real. Doi
 1. `TransitionDuration`– Retorna a duração da animação em segundos.
 1. `AnimateTransition`– executa a animação real.
 
-
 Por exemplo, a seguinte classe implementa `UIViewControllerAnimatedTransitioning` para animar o quadro da exibição do controlador:
 
 ```csharp
@@ -129,7 +127,6 @@ As exibições de coleção têm suporte interno para a criação de transiçõe
 - **Controladores de navegação** – a transição animada entre `UICollectionViewController` duas instâncias pode, opcionalmente, ser manipulada automaticamente quando uma `UINavigationController` gerencia.
 - **Layout de transição** – uma `UICollectionViewTransitionLayout` nova classe permite A transição interativa entre layouts.
 
-
 ### <a name="navigation-controller-transitions"></a>Transições do controlador de navegação
 
 Quando usado em um controlador de navegação, `UICollectionViewController` um inclui suporte para transições animadas entre controladores. Esse suporte é interno e requer apenas algumas etapas simples para implementar:
@@ -138,7 +135,6 @@ Quando usado em um controlador de navegação, `UICollectionViewController` um i
 1. Adicione uma instância do `UICollectionViewController` à raiz da pilha do controlador de navegação.
 1. Crie um segundo `UICollectionViewController` e defina sua `UseLayoutToLayoutNavigtionTransitions` Propriedade como `true` .
 1. Envie o segundo `UICollectionViewController` para a pilha do controlador de navegação.
-
 
 O código a seguir adiciona `UICollectionViewController` uma subclasse chamada `ImagesCollectionViewController` à raiz de uma pilha do controlador de navegação, com a `UseLayoutToLayoutNavigationTransitions` propriedade definida como `false`:
 
@@ -216,7 +212,6 @@ As etapas para implementar uma transição interativa dentro de um reconhecedor 
 1. Manipule a conclusão da transição no manipulador de conclusão do `StartInteractiveTransition` método.
 1. Adicione o reconhecedor de gestos ao modo de exibição de coleção.
 
-
 O código a seguir implementa uma transição de layout interativo dentro de um reconhecedor de gestos de pinçagem:
 
 ```csharp
@@ -260,9 +255,6 @@ imagesController.CollectionView.AddGestureRecognizer (pinch);
 ```
 
 À medida que o usuário pinça o modo de exibição `TransitionProgress` de coleção, o é definido em relação à escala de pinçagem. Nessa implementação, se o usuário encerrar a pinçagem antes que a transição seja de 50% concluída, a transição será cancelada. Caso contrário, a transição será concluída.
-
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: a0719dce3b7f5484168dc5679237b01286f5de78
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 6aa5eede658f13a36220398f92192eefa2473bab
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70286754"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768598"
 ---
 # <a name="quick-interaction-techniques-for-watchos-3-in-xamarin"></a>Técnicas de interação rápida para watchOS 3 no Xamarin
 
@@ -98,7 +98,7 @@ A Apple sugere o seguinte ao trabalhar com reconhecedores de gestos no watchOS 3
 - Alguns gestos têm precedência sobre outros tipos de gestos, como:
   - Rolagem
   - Force Touch
- 
+
 ### <a name="digital-crown-rotation"></a>Rotação de Digital Crown
 
 Ao implementar o suporte de Digital Crown em seus aplicativos watchOS 3, um desenvolvedor pode fornecer maior velocidade de navegação e interações de precisão para seus usuários.
@@ -169,7 +169,6 @@ A Apple o deixou para o desenvolvedor determinar como as contagens de rotação 
 O sinal (`+/-`) do Delta rotacional indica a direção em que o usuário está ligando a digital Crown:
 
 [![](quick-interaction-techniques-images/quick03.png "O sinal do Delta rotacional indica a direção em que o usuário está ligando a Digital Crown")](quick-interaction-techniques-images/quick03.png#lightbox)
-
 
 Se o usuário estiver rolando para cima, o WatchKit retornará deltas positivos e, se estiver rolando para baixo, os deltas negativos serão retornados, independentemente da orientação em que o usuário está gastando o relógio.
 

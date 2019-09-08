@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 ms.date: 11/25/2015
 author: conceptdev
 ms.author: crdun
-ms.openlocfilehash: 5fc5e6c1df911963ab765f5d49016eace8e2733f
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: d9174e9b2d6c056c94b405033a25eeb787c92f9f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70284141"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768762"
 ---
 # <a name="monotouchdialog-json-markup"></a>Markup Json MonoTouch.Dialog
 
@@ -91,7 +91,6 @@ var theBoolean = jsonElement ["the-boolean"] as BooleanElement;
 
  <a name="Root_Element_Syntax" />
 
-
 ## <a name="root-element-syntax"></a>Sintaxe do elemento raiz
 
 O elemento raiz contém os seguintes valores:
@@ -99,11 +98,9 @@ O elemento raiz contém os seguintes valores:
 - `title`
 - `sections` (opcional)
 
-
 O elemento raiz pode aparecer dentro de uma seção como um elemento para criar um controlador aninhado. Nesse caso, a propriedade `"type"` extra deve ser definida como`"root"`
 
  <a name="url" />
-
 
 ### <a name="url"></a>url
 
@@ -111,13 +108,11 @@ Se a `"url"` propriedade for definida, se o usuário tocar nesse RootElement, o 
 
  <a name="group" />
 
-
 ### <a name="group"></a>grupo
 
 Se definido, define o GroupName para o elemento raiz. Os nomes de grupo são usados para escolher um resumo que é exibido como o valor do elemento raiz de um dos elementos aninhados no elemento. Esse é o valor de uma caixa de seleção ou o valor de um botão de opção.
 
  <a name="radioselected" />
-
 
 ### <a name="radioselected"></a>radioselected
 
@@ -125,13 +120,11 @@ Identifica o item de opção selecionado em elementos aninhados
 
  <a name="title" />
 
-
 ### <a name="title"></a>título
 
 Se presente, será o título usado para o RootElement
 
  <a name="type" />
-
 
 ### <a name="type"></a>tipo
 
@@ -139,13 +132,11 @@ Deve ser definido como `"root"` quando isso aparece em uma seção (usada para a
 
  <a name="sections" />
 
-
 ### <a name="sections"></a>sections
 
 Esta é uma matriz JSON com seções individuais
 
  <a name="Section_Syntax" />
-
 
 ## <a name="section-syntax"></a>Sintaxe da seção
 
@@ -155,9 +146,7 @@ A seção contém:
 - `footer` (opcional)
 - Matriz `elements`
 
-
  <a name="header" />
-
 
 ### <a name="header"></a>cabeçalho
 
@@ -165,13 +154,11 @@ Se estiver presente, o texto do cabeçalho será exibido como uma legenda da se�
 
  <a name="footer" />
 
-
 ### <a name="footer"></a>cabeçalho
 
 Se estiver presente, o rodapé será exibido na parte inferior da seção.
 
  <a name="elements" />
-
 
 ### <a name="elements"></a>elementos
 
@@ -182,11 +169,9 @@ Alguns dos elementos compartilham algumas propriedades comuns como `"caption"` e
 - `entry`linhas (regular ou senha)
 - `boolean`valores (usando opções ou imagens)
 
-
 Elementos de cadeia de caracteres podem ser usados como botões fornecendo um método para invocar quando o usuário toca na célula ou no acessório,
 
  <a name="Rendering_Elements" />
-
 
 ## <a name="rendering-elements"></a>Renderizando elementos
 
@@ -230,7 +215,6 @@ A renderização de elementos pode exibir duas cadeias de caracteres ao mesmo te
 
  <a name="accessory" />
 
-
 ### <a name="accessory"></a>embuti
 
 Determina o tipo de acessório a ser mostrado no elemento de renderização, os valores possíveis são:
@@ -239,11 +223,9 @@ Determina o tipo de acessório a ser mostrado no elemento de renderização, os 
 - `detail-disclosure`
 - `disclosure-indicator`
 
-
 Se o valor não estiver presente, nenhum acessório será mostrado
 
  <a name="background" />
-
 
 ### <a name="background"></a>tela de fundo
 
@@ -251,20 +233,17 @@ A propriedade Background define a cor do plano de fundo da célula. O valor é u
 
  <a name="caption" />
 
-
 ### <a name="caption"></a>Legenda
 
 A cadeia de caracteres principal a ser mostrada no elemento de renderização. A fonte e a cor podem ser personalizadas definindo as `"textcolor"` propriedades `"font"` e. O estilo de renderização é determinado pela `"style"` propriedade.
 
  <a name="color_and_detailcolor" />
 
-
 ### <a name="color-and-detailcolor"></a>cor e detailcolor
 
 A cor a ser usada para o texto principal ou o texto detalhado.
 
  <a name="detailfont_and_font" />
-
 
 ### <a name="detailfont-and-font"></a>detailfont e fonte
 
@@ -274,9 +253,7 @@ Veja a seguir as especificações de fonte válidas:
 - Helvetica
 - "Helvetica-14"
 
-
  <a name="linebreak" />
-
 
 ### <a name="linebreak"></a>LineBreak
 
@@ -289,11 +266,9 @@ Determina como as linhas são divididas. Os valores possíveis são:
 - `tail-truncation`
 - `word-wrap`
 
-
 Ambos `character-wrap` `"lines"` e `word-wrap` podem ser usados junto com a propriedade definida como zero para transformar o elemento de renderização em um elemento de várias linhas.
 
  <a name="ontap_and_onaccessorytap" />
-
 
 ### <a name="ontap-and-onaccessorytap"></a>ONTAP e onaccessorytap
 
@@ -316,13 +291,11 @@ class Foo {
 
  <a name="lines" />
 
-
 ### <a name="lines"></a>linhas
 
 Se isso for definido como zero, ele fará com que o tamanho automático do elemento, dependendo do conteúdo das cadeias de caracteres contidas. Para que isso funcione, você também deve definir a `"linebreak"` Propriedade como `"character-wrap"` ou `"word-wrap"`.
 
  <a name="style" />
-
 
 ### <a name="style"></a>Estilo
 
@@ -334,9 +307,7 @@ Os valores possíveis são:
 - `"value2"`
 - `"subtitle"`: texto com um subtítulo.
 
-
  <a name="subtitle" />
-
 
 ### <a name="subtitle"></a>subtítulo
 
@@ -345,20 +316,17 @@ Isso faz tanto com uma única entrada.
 
  <a name="textcolor" />
 
-
 ### <a name="textcolor"></a>TextColor
 
 A cor a ser usada para o texto.
 
  <a name="value" />
 
-
 ### <a name="value"></a>value
 
 O valor secundário a ser mostrado no elemento de renderização. O layout disso é afetado pela `"style"` configuração. A fonte e a cor podem ser personalizadas definindo o `"detailfont"` e `"detailcolor"`o.
 
  <a name="Boolean_Elements" />
-
 
 ## <a name="boolean-elements"></a>Elementos boolianos
 
@@ -382,13 +350,11 @@ Elementos boolianos devem definir o tipo `"bool"`como, pode conter `"caption"` u
 
  <a name="type" />
 
-
 ### <a name="type"></a>tipo
 
 O `"boolean"` tipo pode ser definido como ou `"checkbox"`. Se definido como booliano, ele usará uma UISlider ou imagens ( `"on"` se `"off"` ambas e estiverem definidas). Se for definido como CheckBox, ele usará uma caixa de seleção. A `"group"` propriedade pode ser usada para marcar um elemento booliano como pertencente a um grupo específico. Isso será útil se a raiz que a contém também `"group"` tiver uma propriedade, pois a raiz resumirá os resultados com uma contagem de todos os Boolianos (ou caixas de seleção) que pertencem ao mesmo grupo.
 
  <a name="Entry_Elements" />
-
 
 ## <a name="entry-elements"></a>Elementos de entrada
 
@@ -423,13 +389,11 @@ Você usa elementos de entrada para permitir que o usuário insira dados. O tipo
 
  <a name="autocorrect" />
 
-
 ### <a name="autocorrect"></a>matemática
 
 Determina o estilo de correção automática a ser usado para a entrada. Os valores possíveis são true ou false (ou as cadeias `"no"`de caracteres `"yes"` e).
 
  <a name="capitalization" />
-
 
 ### <a name="capitalization"></a>/
 
@@ -440,16 +404,13 @@ O estilo de capitalização a ser usado para a entrada. Os valores possíveis s�
 - `sentences`
 - `words`
 
-
  <a name="caption" />
-
 
 ### <a name="caption"></a>Legenda
 
 A legenda a ser usada para a entrada
 
  <a name="keyboard" />
-
 
 ### <a name="keyboard"></a>teclado
 
@@ -465,16 +426,13 @@ O tipo de teclado a ser usado para entrada de dados. Os valores possíveis são:
 - `twitter`
 - `url`
 
-
  <a name="placeholder" />
-
 
 ### <a name="placeholder"></a>reservado
 
 O texto de dica que é mostrado quando a entrada tem um valor vazio.
 
  <a name="return-key" />
-
 
 ### <a name="return-key"></a>chave de retorno
 
@@ -492,9 +450,7 @@ O rótulo usado para a chave de retorno. Os valores possíveis são:
 - `send`
 - `yahoo`
 
-
  <a name="value" />
-
 
 ### <a name="value"></a>value
 
@@ -502,14 +458,12 @@ O valor inicial para a entrada
 
  <a name="Radio_Elements" />
 
-
 ## <a name="radio-elements"></a>Elementos de rádio
 
 Elementos de rádio têm `"radio"`tipo. O item selecionado é escolhido pela propriedade no elemento `radioselected` raiz que o contém.
 Além disso, se um valor for definido para `"group"` a propriedade, esse botão de opção pertencerá a esse grupo.
 
  <a name="Date_and_Time_Elements" />
-
 
 ## <a name="date-and-time-elements"></a>Elementos de data e hora
 
@@ -535,7 +489,6 @@ Os tipos `"datetime"` `"time"` de elemento `"date"` e são usados para renderiza
 ```
 
  <a name="Html/Web_Element" />
-
 
 ## <a name="htmlweb-element"></a>Elemento HTML/Web
 

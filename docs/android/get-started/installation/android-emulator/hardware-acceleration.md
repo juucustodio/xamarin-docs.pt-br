@@ -8,12 +8,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/27/2018
-ms.openlocfilehash: 230c72539388028aaf8f05d200d8779105102644
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: add9c602f4c04f1d95db4cee578fdadf0b41cf33
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70225628"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70757998"
 ---
 # <a name="hardware-acceleration-for-emulator-performance-hyper-v--haxm"></a>Aceleração de hardware para o desempenho do emulador (Hyper-V e HAXM)
 
@@ -86,7 +86,6 @@ Se todos os requisitos listados do Hyper-V tiverem um valor de **Sim**, o comput
 
 [![Exemplo de saída de systeminfo](hardware-acceleration-images/win/02-systeminfo-w158-sml.png)](hardware-acceleration-images/win/02-systeminfo-w158.png#lightbox)
 
-
 ### <a name="enabling-hyper-v-acceleration"></a>Habilitar a aceleração do Hyper-V
 
 Se o computador atender aos critérios acima, use as seguintes etapas para acelerar o Android Emulator com o Hyper-V:
@@ -103,9 +102,7 @@ Se o computador atender aos critérios acima, use as seguintes etapas para acele
 
     [![Caixa de diálogo SDKs e Ferramentas do Android](hardware-acceleration-images/win/04-sdk-manager-w158-sml.png)](hardware-acceleration-images/win/04-sdk-manager-w158.png#lightbox)
 
-
 Ao criar um dispositivo virtual (confira [Gerenciando dispositivos virtuais com o Android Device Manager](~/android/get-started/installation/android-emulator/device-manager.md)), certifique-se de selecionar uma imagem de sistema baseada em **x86**. Se você usar uma imagem de sistema baseada em ARM, o dispositivo virtual não será acelerado e será executado lentamente.
-
 
 ## <a name="accelerating-with-haxm"></a>Acelerar com HAXM
 
@@ -141,7 +138,6 @@ Pacotes de instalação do HAXM para Windows estão disponíveis na página [Int
 2. Execute o arquivo **intelhaxm-android.exe** para iniciar o instalador do HAXM. Aceite os valores padrão nas caixas de diálogo do instalador:
 
    ![Janela de instalação do Intel Hardware Accelerated Execution Manager](hardware-acceleration-images/win/06-haxm-installer.png)
-
 
 Ao criar um dispositivo virtual (confira [Gerenciando dispositivos virtuais com o Android Device Manager](~/android/get-started/installation/android-emulator/device-manager.md)), certifique-se de selecionar uma imagem de sistema baseada em **x86**. Se você usar uma imagem de sistema baseada em ARM, o dispositivo virtual não será acelerado e será executado lentamente.
 
@@ -227,7 +223,6 @@ Se HAXM não estiver instalado, siga as etapas na próxima seção para instalá
 ### <a name="installing-haxm"></a>Instalando o HAXM
 
 Pacotes de instalação do HAXM para macOS estão disponíveis na página [Hardware Accelerated Execution Manager da Intel](https://software.intel.com/android/articles/intel-hardware-accelerated-execution-manager). Use as etapas a seguir para baixar e instalar o HAXM:
-
 
 1. No site da Intel, baixe a versão mais recente do [mecanismo de virtualização do HAXM](https://software.intel.com/android/articles/intel-hardware-accelerated-execution-manager/) para macOS.
 

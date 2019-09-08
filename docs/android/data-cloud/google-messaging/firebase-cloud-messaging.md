@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/31/2018
-ms.openlocfilehash: f9fbb53c2948c58b5f5ee1cd0589318a578c0f45
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: ab42e190f5348de13610955f1175eb01531a280a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69526049"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70754550"
 ---
 # <a name="firebase-cloud-messaging"></a>Mensagens na nuvem do firebase
 
@@ -47,10 +47,9 @@ O FCM usa as seguintes credenciais para identificar o servidor de aplicativos e 
 - <a name="fcm-in-action-registration-token"></a>**Token de registro** O token de registro (também conhecido como a *ID da instância*) é a identidade FCM do seu aplicativo cliente em um determinado dispositivo. &ndash; O token de registro é gerado em tempo &ndash; de execução seu aplicativo recebe um token de registro quando ele se registra pela primeira vez com FCM durante a execução em um dispositivo. O token de registro autoriza uma instância do seu aplicativo cliente (em execução nesse dispositivo específico) para receber mensagens do FCM.
     Um exemplo de token de registro é `fkBQTHxKKhs:AP91bHuEedxM4xFAUn0z ... JKZS` (uma cadeia de caracteres muito longa).
 
-Configurando o [firebase Cloud Messaging](#setup_fcm) (mais adiante neste guia) fornece instruções detalhadas para criar um projeto e gerar essas credenciais. Quando você cria um novo projeto no [console do firebase](https://console.firebase.google.com/), um arquivo de credenciais chamado **Google-Services. JSON** é &ndash; criado para adicionar esse arquivo ao seu projeto do Xamarin. Android, conforme explicado em [notificações remotas com o FCM](~/android/data-cloud/google-messaging/remote-notifications-with-fcm.md).
+[Configurando o firebase Cloud Messaging](#setup_fcm) (mais adiante neste guia) fornece instruções detalhadas para criar um projeto e gerar essas credenciais. Quando você cria um novo projeto no [console do firebase](https://console.firebase.google.com/), um arquivo de credenciais chamado **Google-Services. JSON** é &ndash; criado para adicionar esse arquivo ao seu projeto do Xamarin. Android, conforme explicado em [notificações remotas com o FCM](~/android/data-cloud/google-messaging/remote-notifications-with-fcm.md).
 
 As seções a seguir explicam como essas credenciais são usadas quando os aplicativos cliente se comunicam com os servidores de aplicativos por meio do FCM.
-
 
 <a name="registration" />
 
@@ -69,8 +68,6 @@ Um aplicativo cliente deve primeiro se registrar no FCM antes que o sistema de m
 O servidor de aplicativos armazena em cache o token de registro para comunicações subsequentes com o aplicativo cliente. O servidor de aplicativos pode enviar uma confirmação de volta ao aplicativo cliente para indicar que o token de registro foi recebido. Depois que esse handshake ocorre, o aplicativo cliente pode receber mensagens de (ou enviar mensagens para) o servidor de aplicativos. O aplicativo cliente pode receber um novo token de registro se o token antigo for comprometido (consulte [notificações remotas com FCM](~/android/data-cloud/google-messaging/remote-notifications-with-fcm.md) para obter um exemplo de como um aplicativo recebe atualizações de token de registro).
 
 Quando o aplicativo cliente não deseja mais receber mensagens do servidor de aplicativos, ele pode enviar uma solicitação ao servidor de aplicativos para excluir o token de registro. Se o aplicativo cliente for desinstalado de um dispositivo, o FCM detectará isso e notificará automaticamente o servidor de aplicativos para excluir o token de registro.
-
-
 
 ### <a name="downstream-messaging"></a>Mensagens downstream
 
@@ -108,7 +105,6 @@ As etapas a seguir são usadas no tópico mensagens (depois que o aplicativo cli
 
 Para obter mais informações sobre mensagens de tópico do firebase, consulte mensagens de tópico do Google [no Android](https://firebase.google.com/docs/cloud-messaging/android/topic-messaging).
 
-
 <a name="setup_fcm" />
 
 ## <a name="setting-up-firebase-cloud-messaging"></a>Configurando o firebase Cloud Messaging
@@ -145,8 +141,6 @@ Antes de poder usar os serviços do FCM em seu aplicativo, você deve criar um n
 
 Para obter um exemplo detalhado de como adicionar o **Google-Services. JSON** a um projeto de aplicativo para receber mensagens de notificação por push do FCM no Android, consulte [notificações remotas com FCM](~/android/data-cloud/google-messaging/remote-notifications-with-fcm.md).
 
-
-
 ## <a name="for-further-reading"></a>Para leitura adicional
 
 - O [firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging/) do Google fornece uma visão geral dos principais recursos do firebase Cloud Messaging, uma explicação de como ele funciona e instruções de instalação.
@@ -160,7 +154,6 @@ Para obter um exemplo detalhado de como adicionar o **Google-Services. JSON** a 
 ## <a name="summary"></a>Resumo
 
 Este artigo forneceu uma visão geral do FCM (firebase Cloud Messaging). Ele explicou as várias credenciais que são usadas para identificar e autorizar mensagens entre servidores de aplicativos e aplicativos cliente. Ele ilustrou os cenários de registro e de mensagens downstream e detalha as etapas para registrar seu aplicativo no FCM para usar os serviços do FCM.
-
 
 ## <a name="related-links"></a>Links relacionados
 

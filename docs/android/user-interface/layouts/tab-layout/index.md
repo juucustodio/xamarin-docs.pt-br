@@ -7,15 +7,14 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/08/2017
-ms.openlocfilehash: 5f67ec30ce04993701634387f7c2023a0f92004f
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 1e0632eb921b25fef40b8f0483ab80d62c9e1235
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522355"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70762191"
 ---
 # <a name="tabbed-layouts"></a>Layouts com guias
-
 
 ## <a name="overview"></a>Visão geral
 
@@ -29,8 +28,6 @@ As guias são um padrão popular de interface do usuário em aplicativos móveis
 - **Barra de ferramentas** é um componente de barra de ação mais novo e flexível `ActionBar`que substitui. &ndash; `Toolbar` `Toolbar`está disponível no Android 5,0 pirulito ou posterior, e também está disponível para versões mais antigas do Android por meio do pacote NuGet da [biblioteca de suporte do Android v7](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/) . 
     `Toolbar`Atualmente é o componente de barra de ação recomendado a ser usado em aplicativos Android.
     Para obter mais informações, consulte [barra de ferramentas](~/android/user-interface/controls/tool-bar/index.md). 
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

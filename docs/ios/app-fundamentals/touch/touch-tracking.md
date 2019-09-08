@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: 00fa1a65d2a73220675d8142e70ac904a93e3042
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: eca8a1bdc3c60ae4dbaabf022a9dbe91f7e30402
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70281977"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70767031"
 ---
 # <a name="multi-touch-finger-tracking-in-xamarinios"></a>Acompanhamento de dedos multitoque no Xamarin. iOS
 
@@ -41,7 +41,6 @@ class FingerPaintPolyline
 ```
 
 Cada polilinha tem uma cor, uma largura de traço e um objeto de [`CGPath`](xref:CoreGraphics.CGPath) gráficos do IOS para acumular e renderizar vários pontos da linha à medida que ele está sendo desenhado.
-
 
 Todo o restante do código mostrado abaixo está contido em um `UIView` nome `FingerPaintCanvasView`derivativo. Essa classe mantém um dicionário de objetos do tipo `FingerPaintPolyline` durante o tempo que estão sendo desenhados ativamente por um ou mais dedos:
 
@@ -187,8 +186,6 @@ Totalmente, esse processamento permite que o programa [FingerPaint](https://docs
 [![](touch-tracking-images/image01.png "Acompanhamento de dedos individuais e desenho dos resultados na tela")](touch-tracking-images/image01.png#lightbox)
 
 Agora você viu como é possível acompanhar os dedos individuais na tela e fazer distinção entre eles.
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: d1e5602643ba5578c4bc2a26e6db2d9f49033469
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 2bed40c3ac2853a5f99c2b487e909164e12e676d
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291687"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70766962"
 ---
 # <a name="watchos-table-controls-in-xamarin"></a>Controles de tabela watchOS no Xamarin
 
@@ -39,9 +39,6 @@ Para definir a **classe** para o controlador de linha, selecione a linha na **es
 
 Depois que a classe do controlador da linha for definida, o IDE criará um arquivo C# correspondente no projeto. Arraste os controles (como rótulos) para a linha e dê a eles nomes para que eles possam ser referenciados no código.
 
-
-
-
 ## <a name="create-and-populate-rows"></a>Criar e preencher linhas
 
 `SetNumberOfRows`cria as classes de controlador de linha para cada linha, `Identifier` usando o para selecionar a correta. Se você deu ao controlador de linha um `Identifier`personalizado, altere **padrão** no trecho de código abaixo para o identificador usado. O `RowController` *para cada linha* é criado quando `SetNumberOfRows` é chamado e a tabela é exibida.
@@ -65,7 +62,6 @@ for (var i = 0; i < rows.Count; i++) {
 
 > [!IMPORTANT]
 > Usar `SetNumberOfRows` e, em seguida, fazer `GetRowController` o loop por meio de using faz com que toda a tabela seja enviada para o relógio. Nas exibições subsequentes da tabela, se você precisar adicionar ou remover as linhas específicas `InsertRowsAt` , `RemoveRowsAt` use e para obter um melhor desempenho.
-
 
 ## <a name="respond-to-taps"></a>Responder a toques
 
@@ -142,7 +138,6 @@ for (var i = 0; i < rows.Count; i++) {
 }
 ```
 
-
 ## <a name="vertical-detail-paging"></a>Paginação de detalhes vertical
 
 o watchOS 3 introduziu um novo recurso para tabelas: a capacidade de percorrer as páginas de detalhes relacionadas a cada linha, sem precisar voltar para a tabela e escolher outra linha. As telas de detalhes podem ser roladas passando o dedo para cima e para baixo, ou usando o Digital Crown.
@@ -210,8 +205,6 @@ namespace WatchTables.OnWatchExtension
 ```
 
 As saídas e ações declaradas aqui podem ser referenciadas no código, no entanto, o arquivo **. designer.cs** não deve ser editado diretamente.
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

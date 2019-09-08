@@ -6,12 +6,12 @@ ms.assetid: AD0A7971-51B1-4E38-B412-7907CE43CDDF
 author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
-ms.openlocfilehash: 013e169770fa2e52f89915d1b74c7292a049f87e
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: c5702780b6a0f0732d846a2cd4226aec5e49fc21
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70197822"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70766830"
 ---
 # <a name="using-the-model-class"></a>Usando a classe Model
 
@@ -39,10 +39,9 @@ Antes de prosseguir, devemos verificar se o projeto é aberto e implantado corre
 
 ![Tela de jogo azul em branco](part1-images/image2.png)
 
-
 ## <a name="including-the-xnbs-in-the-game-project"></a>Incluindo o XNBs no projeto do jogo
 
-O formato de arquivo. XNB é uma extensão padrão para conteúdo criado (conteúdo que foi criado pela [ferramenta de pipeline](http://www.monogame.net/documentation/?page=Pipeline)de monojogo). Todo o conteúdo criado tem um arquivo de origem (que é um arquivo. FBX no caso de nosso modelo) e um arquivo de destino (um arquivo. XNB). O formato. FBX é um formato de modelo 3D comum que pode ser criado por aplicativos como [Maya](http://www.autodesk.com/products/maya/overview) e [Blender](http://www.blender.org/). 
+O formato de arquivo. XNB é uma extensão padrão para conteúdo criado (conteúdo que foi criado pela [ferramenta de pipeline de monojogo](http://www.monogame.net/documentation/?page=Pipeline)). Todo o conteúdo criado tem um arquivo de origem (que é um arquivo. FBX no caso de nosso modelo) e um arquivo de destino (um arquivo. XNB). O formato. FBX é um formato de modelo 3D comum que pode ser criado por aplicativos como [Maya](http://www.autodesk.com/products/maya/overview) e [Blender](http://www.blender.org/). 
 
 A `Model` classe pode ser construída carregando um arquivo. XNB de um disco que contém dados geométricos 3D.   Esse arquivo. XNB é criado por meio de um projeto de conteúdo. Modelos de monojogo incluem automaticamente um projeto de conteúdo (com a extensão. MGCP) em nossa pasta de conteúdo. Para obter uma discussão detalhada sobre a ferramenta de pipeline de monojogo, consulte o [Guia de pipeline de conteúdo](https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/content-pipeline/introduction.md).
 
@@ -210,7 +209,6 @@ Podemos ver que a câmera foi movida mais de volta, resultando `Model` na exibi�
 ## <a name="rendering-multiple-models"></a>Renderizando vários modelos
 
 Como mencionado acima, um único `Model` pode ser desenhado várias vezes. Para facilitar isso, vamos mover o código de `Model` desenho para seu próprio método que usa a posição desejada `Model` como parâmetro. Depois de concluído, `Draw` nossos `DrawModel` métodos e serão parecidos com:
-
 
 ```csharp
 protected override void Draw(GameTime gameTime)

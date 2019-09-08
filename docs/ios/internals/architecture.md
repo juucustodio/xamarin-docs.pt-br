@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: 7d59a295961c25ecfcc99bb54fdc188c957cf3ee
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: b0cece7f553d0169c311e6614428ed37c5c77813
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291950"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768529"
 ---
 # <a name="ios-app-architecture"></a>Arquitetura do aplicativo iOS
 
@@ -93,7 +93,6 @@ O atributo `[Export]` Required contém uma cadeia de caracteres, que é o seleto
 
 Há dois tipos de registradores usados no Xamarin. iOS – dinâmico e estático:
 
-
 - **Registradores dinâmicos** – o registrador dinâmico faz o registro de todos os tipos em seu assembly em tempo de execução. Ele faz isso usando funções fornecidas pela [API de tempo de execução do Objective-C](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ObjCRuntimeRef/). O registrador dinâmico, portanto, tem uma inicialização mais lenta, mas um tempo de compilação mais rápido. Isso é padrão para o simulador de iOS. Funções nativas (geralmente em C), chamadas trampolines, são usadas como implementações de método ao usar os registradores dinâmicos. Elas variam entre diferentes arquiteturas.
 
 - **Registradores estáticos** – o registrador estático gera código Objective-C durante a compilação, que é então compilado em uma biblioteca estática e vinculado ao executável. Isso permite uma inicialização mais rápida, mas leva mais tempo durante o tempo de compilação. Isso é usado por padrão para compilações de dispositivo. O registrador estático também pode ser usado com o simulador de `--registrar:static` Ios passando `mtouch` como um atributo nas opções de Build do projeto, conforme mostrado abaixo:
@@ -114,7 +113,6 @@ Dependendo do tipo de projeto, o seguinte é feito:
 Toda essa sequência de inicialização é compilada em uma biblioteca estática, que é então vinculada ao seu executável final para que seu aplicativo saiba como tirar o fundo.
 
 Neste ponto, nosso aplicativo foi inicializado, o mono está em execução, estamos em código gerenciado e sabemos como chamar o código nativo e ser chamado de volta. A próxima coisa que precisamos fazer é realmente começar a adicionar controles e tornar o aplicativo interativo.
-
 
 ## <a name="generator"></a>Gerador
 
@@ -165,7 +163,6 @@ Em um alto nível, ele consegue isso executando as seguintes tarefas:
 - Se a vinculação estiver habilitada, execute o vinculador gerenciado para otimizar seus assemblies copiando partes não utilizadas.
 - Compilação AOT.
 - Crie um executável nativo, que gera uma série de bibliotecas estáticas (uma para cada assembly) vinculadas ao executável nativo, para que o executável nativo seja composto pelo código do inicializador, pelo código do registrador (se estático) e por todas as saídas da AOT Compiler
-
 
 Para obter informações mais detalhadas sobre o vinculador e como ele é usado, consulte o guia do [vinculador](~/ios/deploy-test/linker.md) .
 

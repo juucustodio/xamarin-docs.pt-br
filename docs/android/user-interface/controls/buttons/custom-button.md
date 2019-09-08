@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: ecb745f2f50b5aa0e22e331a4def0be9d8f86aa5
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 4504045eb1692d95ee1e981bbec3da3a45699db3
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68510390"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70758925"
 ---
 # <a name="custom-button"></a>Botão personalizado
 
@@ -36,12 +36,11 @@ Crie um novo arquivo no diretório de **recursos/empates** chamado **android_but
 
 Isso define um único recurso que poderá ser desenhado, que alterará sua imagem com base no estado atual do botão. O primeiro `<item>` define **android_pressed. png** como a imagem quando o botão é pressionado (ele foi ativado); o segundo `<item>` define **android_focused. png** como a imagem quando o botão está focalizado (quando o botão é realçado usando o trackball ou o pad direcional); e o terceiro `<item>` define **android_normal. png** como a imagem para o estado normal (quando não pressionada nem focada). Esse arquivo XML agora representa um único recurso de desenho e, quando referenciado [`Button`](xref:Android.Widget.Button) por um para seu plano de fundo, a imagem exibida será alterada com base nesses três Estados.
 
-
 > [!NOTE]
 > A ordem dos `<item>` elementos é importante. Quando esse empate é referenciado, os `<item>`s são percorridos em ordem para determinar qual deles é apropriado para o estado atual do botão.
 > Como a imagem "normal" é por último, ela só é aplicada quando as `android:state_pressed` condições `android:state_focused` e ambos são avaliados como falso.
 
-Abra o arquivo Resources **/layout/Main. axml** e [`Button`](xref:Android.Widget.Button) adicione o elemento:
+Abra o arquivo **Resources/layout/Main. axml** e [`Button`](xref:Android.Widget.Button) adicione o elemento:
 
 ```xml
 <Button
@@ -68,7 +67,6 @@ button.Click += (o, e) => {
 Isso captura o [`Button`](xref:Android.Widget.Button) do layout e, em seguida, adiciona [`Toast`](xref:Android.Widget.Toast) uma mensagem a ser exibida quando [`Button`](xref:Android.Widget.Button) o é clicado.
 
 Agora, execute o aplicativo.
-
 
 *Partes desta página são modificações com base no trabalho criado e compartilhado pelo projeto de software livre do Android e usadas de acordo com os termos descritos na licença de atribuição do*
 [*Creative Commons 2,5*](http://creativecommons.org/licenses/by/2.5/).

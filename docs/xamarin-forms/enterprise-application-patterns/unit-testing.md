@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: c631ca73d69ea630592920a32804512f89d5baaf
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 0fb63c650e73bce5a08b204f942f0c19583e4899
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69529080"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770684"
 ---
 # <a name="unit-testing-enterprise-apps"></a>Aplicativos empresariais de teste de unidade
 
@@ -225,7 +225,6 @@ Um teste de unidade usa uma pequena unidade do aplicativo, normalmente um métod
 O comportamento de um objeto em teste pode ser isolado por meio da substituição de objetos dependentes por objetos fictícios que simulam o comportamento dos objetos dependentes. Isso permite que os testes de unidade sejam executados sem a necessidade de recursos difíceis, como serviços Web ou bancos de dados.
 
 Os modelos de teste e os modelos de exibição dos aplicativos MVVM são idênticos ao teste de todas as outras classes, e as mesmas ferramentas e técnicas podem ser usadas.
-
 
 ## <a name="related-links"></a>Links relacionados
 

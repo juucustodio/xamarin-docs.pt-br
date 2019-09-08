@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/23/2016
-ms.openlocfilehash: 15afd5b1812e0423097e889cd8c2558ca01a8074
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 4ead912b55790caf3e2e1f22e149f5682e6bb697
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70119751"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70761213"
 ---
 # <a name="scanning-for-fingerprints"></a>Verificando impressões digitais
 
@@ -58,10 +58,7 @@ Vamos discutir cada um desses parâmetros no `Authenticate` método um pouco mai
 
 Pode ser necessário que o usuário (ou o aplicativo) cancele a verificação de impressão digital depois de ser iniciado. Nessa situação, invoque o [`IsCancelled`](https://developer.android.com/reference/android/os/CancellationSignal.html#isCanceled()) método [`CancellationSignal`](https://developer.android.com/reference/android/os/CancellationSignal.html) no que foi fornecido para `FingerprintManager.Authenticate` quando foi chamado para iniciar a verificação de impressão digital.
 
-Agora que já vimos o `Authenticate` método, vamos examinar alguns dos parâmetros mais importantes com mais detalhes. Em primeiro lugar, veremos como [responder a retornos de chamada de autenticação](~/android/platform/fingerprint-authentication/fingerprint-authentication-callbacks.md), que discutirão como criar uma subclasse do fingerprintmanager [. AuthenticationCallback](https://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.AuthenticationCallback.html), permitindo que um aplicativo Android reaja aos resultados fornecidos pelo scanner de impressão digital.
-
-
-
+Agora que já vimos o `Authenticate` método, vamos examinar alguns dos parâmetros mais importantes com mais detalhes. Em primeiro lugar, veremos como [responder a retornos de chamada de autenticação](~/android/platform/fingerprint-authentication/fingerprint-authentication-callbacks.md), que discutirão como criar uma subclasse do [fingerprintmanager. AuthenticationCallback](https://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.AuthenticationCallback.html), permitindo que um aplicativo Android reaja aos resultados fornecidos pelo scanner de impressão digital.
 
 ## <a name="related-links"></a>Links relacionados
 

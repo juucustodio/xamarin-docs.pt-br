@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: 76733d4efd4ce292da2781c97aef963fb68e3974
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: ab72034d7b565a31c59d997f03844b6c8c959785
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70287869"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768173"
 ---
 # <a name="working-with-the-ui-thread-in-xamarinios"></a>Trabalhando com o thread de interface do usuário no Xamarin. iOS
 
@@ -40,7 +40,6 @@ Durante a depuração de aplicativos Xamarin. iOS, um erro será gerado se o seu
 
  <a name="Background_Thread_Example" />
 
-
 ## <a name="background-thread-example"></a>Exemplo de thread em segundo plano
 
 Aqui está um exemplo que tenta acessar um controle de interface do usuário ( `UILabel`a) de um thread em segundo plano usando um thread simples:
@@ -64,7 +63,6 @@ new System.Threading.Thread(new System.Threading.ThreadStart(() => {
 Você não precisará usá-lo para o restante dos exemplos neste documento, mas é um conceito importante a ser lembrado quando seu aplicativo faz solicitações de rede, usa o centro de notificação ou outros métodos que exigem um manipulador de conclusão que será executado em outro processo.
 
  <a name="Async_Await_Example" />
-
 
 ## <a name="asyncawait-example"></a>Exemplo de Async/Await
 
@@ -92,7 +90,6 @@ async partial void button2_TouchUpInside (UIButton sender)
 ```
 
 Se um método assíncrono for chamado de um thread em segundo plano (não o thread da interface `InvokeOnMainThread` do usuário principal), ainda seria necessário.
-
 
 ## <a name="related-links"></a>Links relacionados
 

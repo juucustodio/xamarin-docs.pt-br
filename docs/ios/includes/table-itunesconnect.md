@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 3560c365df18f0331d5834de20dbc5585615dbeb
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70763225"
+---
 |Dispositivo|Retrato (Nenhuma barra de status)|Retrato (Tela inteira)|Paisagem (Nenhuma barra de status)|Paisagem (Tela inteira)|
 |---|---|---|---|---|
 |Retina de 3,5 polegadas|640 x 920|640 x 960|960 x 600|960 x 640|
@@ -14,5 +22,4 @@ Os vídeos de versão prévia do aplicativo estão nos seguintes tamanhos e reso
 |iPhone 5 e 5s|1136 x 640 (16:9)|1920 x 1080<br />1136 x 640|1080 x 1920<br />640 x 1136|
 |iPad|2048 x 1536 (4:3)|1200 x 900|900 x 1200|
 |iPhone 6|1334 x 750|1334 x 750|750 x 1334|
-|iPhone 6 Plus|2.208 x 1.242 (pixels renderizados) 1.920 x 1.080 (pixels físicos)|1920 x 1080|1080 x 1920|
-
+|iPhone 6 Plus|2\.208 x 1.242 (pixels renderizados) 1.920 x 1.080 (pixels físicos)|1920 x 1080|1080 x 1920|

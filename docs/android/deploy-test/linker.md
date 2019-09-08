@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/30/2018
-ms.openlocfilehash: 4e9a7df9ef418eb9a671979da6d61f7afe03a49f
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
-ms.translationtype: HT
+ms.openlocfilehash: e5f494c2f41500b660bf333e7c63f0120536f52a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69525423"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70753848"
 ---
 # <a name="linking-on-android"></a>Vinculação no Android
 
@@ -25,8 +25,6 @@ Por exemplo, a amostra [Hello, Android](https://docs.microsoft.com/samples/xamar
 |Versão com vinculação:|4,2 MB|2,9 MB|
 
 A vinculação resulta em um pacote que tem 30% do tamanho do pacote original (desvinculado) na 1.2.0 e 18% do pacote desvinculado na 4.0.1.
-
-
 
 ## <a name="control"></a>Controle
 
@@ -50,7 +48,6 @@ public class MyActivity {
 }
 ```
 
-
 ### <a name="linker-behavior"></a>Comportamento do vinculador
 
 O mecanismo principal para controlar o vinculador é a lista suspensa **Comportamento do vinculador** (*Vinculação* no Visual Studio) dentro da caixa de diálogo **Opções de Projeto**. Há três opções:
@@ -58,7 +55,6 @@ O mecanismo principal para controlar o vinculador é a lista suspensa **Comporta
 1. **Não Vincular** (*Nenhum* no Visual Studio)
 1. **Vincular os Assemblies do SDK** (*Somente os Assemblies do SDK*)
 1. **Vincular Todos os Assemblies** (*Assemblies de SDK e de Usuário*)
-
 
 A opção **Não Vincular** desliga o vinculador; o exemplo de tamanho de aplicativo "Versão sem Vinculação" acima usava esse comportamento. Isso é útil para solucionar problemas de falhas de tempo de execução, para ver se o vinculador é responsável. Essa configuração geralmente não é recomendada para builds de produção.
 
@@ -86,7 +82,6 @@ E/mono    (17755):   at LinkerScratch2.Activity1.OnCreate (Android.OS.Bundle bun
 E/mono    (17755):   at Android.App.Activity.n_OnCreate_Landroid_os_Bundle_ (IntPtr jnienv, IntPtr native__this, IntPtr native_savedInstanceState) [0x00000] in <filename unknown>:0
 E/mono    (17755):   at (wrapper dynamic-method) object:95bb4fbe-bef8-4e5b-8e99-ca83a5d7a124 (intptr,intptr,intptr)
 ```
-
 
 ### <a name="preserving-code"></a>Preservação do código
 
@@ -149,8 +144,6 @@ namespace Android.Runtime
 
 Nos exemplos acima, o atributo `Preserve` é declarado no namespace `Android.Runtime`; no entanto, você pode usar o atributo `Preserve` em qualquer namespace porque o vinculador procura esse atributo pelo nome do tipo.
 
-
-
 ### <a name="falseflag"></a>falseflag
 
 Se o atributo [Preserve] não pode ser usado, geralmente é útil fornecer um bloco de código para que o vinculador acredite que o tipo é usado, impedindo simultaneamente que o bloco de código seja executado em tempo de execução. Para usar essa técnica, poderíamos fazer:
@@ -173,8 +166,6 @@ class MyActivity {
 }
 ```
 
-
-
 ### <a name="linkskip"></a>linkskip
 
 É possível especificar que um conjunto de assemblies fornecidos pelo usuário não sejam vinculados, permitindo simultaneamente que outros assemblies de usuário sejam ignorados com o comportamento *Vincular Assemblies de SDK* usando a [Propriedade AndroidLinkSkip do MSBuild](~/android/deploy-test/building-apps/build-process.md):
@@ -185,14 +176,11 @@ class MyActivity {
 </PropertyGroup>
 ```
 
-
 ### <a name="linkdescription"></a>LinkDescription
 
 A [`@(LinkDescription)`](~/android/deploy-test/building-apps/build-process.md)
 **Ação de build** pode ser usada em arquivos que podem conter um [arquivo de configuração de vinculador personalizado](~/cross-platform/deploy-test/linker.md).
 arquivo. Arquivos de configuração de vinculador personalizados podem ser necessários para preservar membros `internal` ou `private` que precisam ser preservados.
-
-
 
 ### <a name="custom-attributes"></a>Atributos personalizados
 
@@ -207,7 +195,6 @@ Quando um assembly é vinculado, os seguintes tipos de atributo personalizados s
 - System.MonoTODOAttribute
 - System.Xml.MonoFIXAttribute
 
-
 Quando um assembly é vinculado, os seguintes tipos de atributo personalizados serão removidos de todos os builds de versão:
 
 - System.Diagnostics.DebuggableAttribute
@@ -219,7 +206,6 @@ Quando um assembly é vinculado, os seguintes tipos de atributo personalizados s
 - System.Diagnostics.DebuggerStepThroughAttribute
 - System.Diagnostics.DebuggerTypeProxyAttribute
 - System.Diagnostics.DebuggerVisualizerAttribute
-
 
 ## <a name="related-links"></a>Links relacionados
 

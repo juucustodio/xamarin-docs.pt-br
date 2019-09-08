@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: ecc31fa6aab9e2be1c33f16d2f424b397f4a9a73
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: b79f64f154dbd7dde623d13385f111d3d5a5d3f2
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291734"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769544"
 ---
 # <a name="introduction-to-proactive-suggestions-in-xamarinios"></a>Introdução às sugestões proativas no Xamarin. iOS
 
@@ -534,7 +534,6 @@ Esta seção configurará as sugestões de localização diretamente de dentro d
 
 Quando o aplicativo é iniciado com um objeto `MKDirectionsRequest` MapKit, ele deve começar automaticamente a fornecer instruções ao usuário para o local solicitado, ou apresentar uma interface do usuário que torna mais fácil para o usuário começar a obter direções. Por exemplo:
 
-
 ```csharp
 using System;
 using Foundation;
@@ -607,7 +606,6 @@ Para aplicativos que lidam com mídia, o iOS dá suporte aos seguintes comportam
   - Depois de chegar em casa ou trabalho. 
 
 Ao incluir uma chamada de API simples no iOS 10, o desenvolvedor pode criar uma experiência de tela de bloqueio mais atraente para os usuários do aplicativo de mídia. Usando a `MPPlayableContentManager` classe para gerenciar a reprodução de mídia, os controles de mídia completos (como os apresentados pelo aplicativo de música) serão apresentados na tela de bloqueio do aplicativo.
-
 
 ```csharp
 using System;
@@ -682,8 +680,6 @@ namespace MonkeyPlayer
 ## <a name="summary"></a>Resumo
 
 Este artigo abordou as sugestões proativas e mostrou como o desenvolvedor pode usá-las para direcionar o tráfego para o aplicativo Xamarin. iOS. Ele abordou a etapa de implementar sugestões proativas e as diretrizes de uso apresentadas.
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

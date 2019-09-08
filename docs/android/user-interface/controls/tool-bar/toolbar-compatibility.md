@@ -6,15 +6,14 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/15/2018
-ms.openlocfilehash: 31602b14179691d13d8058c90cf20a6f7f667124
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: f8dcda63c97c15367157b6a6cb857c0bfef79a27
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522825"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70764584"
 ---
 # <a name="toolbar-compatibility"></a>Compatibilidade da barra de ferramentas
-
 
 ## <a name="overview"></a>Visão geral
 
@@ -34,14 +33,11 @@ Para modificar um aplicativo para usar a versão do AppCompat da barra de ferram
 
 Cada uma dessas etapas é explicada em detalhes nas seções a seguir.
 
-
-
 ## <a name="set-the-minimum-and-target-android-version"></a>Definir a versão mínima e de destino do Android
 
 A estrutura de destino do aplicativo deve ser definida como a API nível 21 ou superior ou o aplicativo não será implantado corretamente. Se um erro como **nenhum identificador de recurso encontrado para o atributo ' tileModeX ' no pacote ' Android '** for visto durante a implantação do aplicativo, isso ocorre porque a estrutura de destino não está definida como **Android 5,0 (nível de API 21-pirulito)** ou superior. 
 
-Defina o nível de estrutura de destino para a API nível 21 ou superior e defina as configurações de projeto no nível da API do Android para a versão mínima do Android para a qual o aplicativo oferece suporte. Para obter mais informações sobre como definir os níveis de API do Android, consulte Understanding [Android API Levels](~/android/app-fundamentals/android-api-levels.md). `ToolbarFun` No exemplo, a versão mínima do Android é definida como KitKat (nível de API 4,4). 
-
+Defina o nível de estrutura de destino para a API nível 21 ou superior e defina as configurações de projeto no nível da API do Android para a versão mínima do Android para a qual o aplicativo oferece suporte. Para obter mais informações sobre como definir os níveis de API do Android, consulte [Understanding Android API Levels](~/android/app-fundamentals/android-api-levels.md). `ToolbarFun` No exemplo, a versão mínima do Android é definida como KitKat (nível de API 4,4). 
 
 ## <a name="install-the-appcompat-nuget-package"></a>Instalar o pacote NuGet do AppCompat
 
@@ -51,15 +47,13 @@ Em seguida, adicione o pacote de [biblioteca de suporte do Android v7 AppCompat]
 
 Quando esse NuGet é instalado, vários outros pacotes NuGet também são instalados, se ainda não estiverem presentes (como **Xamarin. Android. support. animada. Vector. estilododesenho**, **xamarin. Android. support. v4**e  **Xamarin. Android. support. Vector. Estilododesenho**). Para obter mais informações sobre a instalação de pacotes [do NuGet, consulte Walkthrough: Incluindo um NuGet em seu projeto](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough). 
 
-
 ## <a name="use-an-appcompat-theme-and-toolbar"></a>Usar um tema e uma barra de ferramentas do AppCompat
 
 A biblioteca AppCompat vem com vários `Theme.AppCompat` temas que podem ser usados em qualquer versão do Android com suporte na biblioteca AppCompat. O `ToolbarFun` tema do aplicativo de exemplo é `Theme.Material.Light.DarkActionBar`derivado de, que não está disponível em versões do Android anteriores à pirulito. Portanto, `ToolbarFun` deve ser adaptado para usar o equivalente de AppCompat para esse `Theme.AppCompat.Light.DarkActionBar`tema,. Além disso, `Toolbar` como o não está disponível em versões do Android anteriores à pirulito, devemos usar a versão AppCompat `Toolbar`do. Portanto, os layouts devem `android.support.v7.widget.Toolbar` ser usados `Toolbar`em vez de. 
 
-
 ### <a name="update-layouts"></a>Atualizar layouts
 
-Edite Resources **/layout/Main. axml** e substitua o `Toolbar` elemento pelo seguinte XML: 
+Edite **Resources/layout/Main. axml** e substitua o `Toolbar` elemento pelo seguinte XML: 
 
 ```xml
 <android.support.v7.widget.Toolbar
@@ -71,7 +65,7 @@ Edite Resources **/layout/Main. axml** e substitua o `Toolbar` elemento pelo seg
     android:layout_height="wrap_content" />
 ```
 
-Edite Resources **/layout/Toolbar. xml** e substitua seu conteúdo pelo XML a seguir: 
+Edite **Resources/layout/Toolbar. xml** e substitua seu conteúdo pelo XML a seguir: 
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -86,10 +80,9 @@ Edite Resources **/layout/Toolbar. xml** e substitua seu conteúdo pelo XML a se
 
 Observe que os `?attr` valores não são mais prefixados `android:` com (lembre- `?` se de que a notação faz referência a um recurso no tema atual). Se `?android:attr` ainda foram usados aqui, o Android referenciaria o valor do atributo da plataforma em execução no momento, em vez da biblioteca AppCompat. Como este exemplo usa o `actionBarSize` definido pela biblioteca AppCompat, o `android:` prefixo é Descartado. Da mesma `@android:style` forma, é `@style` alterado para que `android:theme` o atributo seja definido como um tema na biblioteca &ndash; AppCompat em `ThemeOverlay.AppCompat.Dark.ActionBar` que o tema é usado aqui `ThemeOverlay.Material.Dark.ActionBar`em vez de. 
 
-
 ### <a name="update-the-style"></a>Atualizar o estilo
 
-Edite Resources **/Values/Styles. xml** e substitua seu conteúdo pelo seguinte XML: 
+Edite **Resources/Values/Styles. xml** e substitua seu conteúdo pelo seguinte XML: 
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -105,8 +98,6 @@ Edite Resources **/Values/Styles. xml** e substitua seu conteúdo pelo seguinte 
 ```
 
 Os nomes de item e o tema pai neste exemplo não são mais prefixados com `android:` porque estamos usando a biblioteca AppCompat. Além disso, o tema pai é alterado para a versão AppCompat `Light.DarkActionBar`do. 
-
-
 
 ### <a name="update-menus"></a>Atualizar menus
 
@@ -173,7 +164,6 @@ Da mesma forma, edite os **recursos/menu/edit_menus. xml** e substitua seu conte
 
 Como essa opção de namespace fornece suporte para o `showAsAction` atributo em versões do Android antes do nível de API 11? O atributo `showAsAction` personalizado e todos os seus valores possíveis são incluídos no aplicativo quando o NuGet do AppCompat é instalado. 
 
-
 ## <a name="subclass-appcompatactivity"></a>AppCompatActivity de subclasse
 
 A etapa final da conversão é modificar `MainActivity` de forma que ela seja uma subclasse de. `AppCompactActivity` Edite **MainActivity.cs** e adicione as `using` seguintes instruções: 
@@ -203,9 +193,6 @@ Compile o aplicativo e execute-o em um dispositivo de pré-pirulito ou um emulad
 [![Captura de tela completa do aplicativo em execução em um dispositivo KitKat, ambas as barras de ferramentas são mostradas](toolbar-compatibility-images/02-running-on-kitkat-sml.png)](toolbar-compatibility-images/02-running-on-kitkat.png#lightbox)
 
 Quando a biblioteca AppCompat é usada, os temas não precisam ser alternados com base na versão &ndash; do Android a biblioteca AppCompat torna possível fornecer uma experiência de usuário consistente em todas as versões do Android com suporte. 
-
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

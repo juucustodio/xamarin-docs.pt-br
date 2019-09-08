@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: a012d8f166a287dfde4247a2df6d1e82091d9d70
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 1ad0200d083f7b190184f631de51483f4f651d17
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290452"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769749"
 ---
 # <a name="walkthrough---using-local-notifications-in-xamarinios"></a>Walkthrough – usando notificações locais no Xamarin. iOS
 
@@ -24,7 +24,6 @@ _Nesta seção, vamos examinar como usar as notificações locais em um aplicati
 ## <a name="walkthrough"></a>Passo a passo
 
 Permita criar um aplicativo simples que mostrará notificações locais em ação. Esse aplicativo terá um único botão. Quando clicamos no botão, ele cria uma notificação local. Depois que o período de tempo especificado tiver decorrido, veremos que a notificação será exibida.
-
 
 1. No Visual Studio para Mac, crie uma nova solução de exibição única do iOS e `Notifications`chame-a.
 1. Abra o `Main.storyboard` arquivo e arraste um botão para a exibição. Nomeie o **botão**botão e dê a ele o título **Adicionar notificação**. Talvez você também queira definir algumas [restrições](~/ios/user-interface/designer/designer-auto-layout.md) para o botão neste ponto: 
@@ -88,7 +87,6 @@ Permita criar um aplicativo simples que mostrará notificações locais em açã
 
 1. Precisamos lidar com o caso em que a notificação foi iniciada devido a uma notificação local. Edite o `FinishedLaunching` método `AppDelegate` no para incluir o seguinte trecho de código:
 
-
     ```csharp
     // check for a notification
 
@@ -119,7 +117,6 @@ Permita criar um aplicativo simples que mostrará notificações locais em açã
 ## <a name="summary"></a>Resumo
 
 Este tutorial mostrou como usar as várias APIs para criar e publicar notificações no iOS. Ele também demonstrou como atualizar o ícone do aplicativo com uma notificação para fornecer alguns comentários específicos do aplicativo para o usuário.
-
 
 ## <a name="related-links"></a>Links relacionados
 

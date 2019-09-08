@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/15/2017
-ms.openlocfilehash: 0972b7c6fa686f40ca548f8267f8e514e9244f05
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 3fd3ec0207ac3ae1e5fcaa7d11d91247cd73666d
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70286146"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70762900"
 ---
 # <a name="icloud-capabilities-in-xamarinios"></a>Recursos iCloud no Xamarin.iOS
 
@@ -92,7 +92,7 @@ Para criar uma nova ID do aplicativo e adicionar um contêiner, faça o seguinte
     ![Tela de seleção de contêiner](icloud-capabilities-images/image34.png)
 
 10. Confirme as atribuições do contêiner e pressione **Atribuir**.
- 
+
 Agora esta ID do aplicativo pode ser usada para gerar, ou gerar novamente, um novo perfil de provisionamento, conforme descrito no guia [Trabalhando com funcionalidades](~/ios/deploy-test/provisioning/capabilities/index.md). 
 
 Para obter mais informações sobre como usar o iCloud, consulte os seguintes guias:
@@ -102,7 +102,7 @@ Para obter mais informações sobre como usar o iCloud, consulte os seguintes gu
 * [Introdução ao Seletor de Documentos](~/ios/platform/document-picker.md)
 
 ## <a name="next-steps"></a>Próximas etapas
- 
+
 A lista a seguir descreve as etapas adicionais que precisam ser executadas:
 
 * Use o namespace do framework em seu aplicativo.

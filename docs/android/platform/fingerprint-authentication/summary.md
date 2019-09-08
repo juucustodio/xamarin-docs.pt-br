@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 08738a751fd630c6a413b1c7393f8007f5c97060
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 4d406b492e2f55604daf8a1c6b4be32f23b63f54
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68643555"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70761227"
 ---
 # <a name="fingerprint-authentication-guidance"></a>Diretrizes de autenticação de impressão digital
 
@@ -34,8 +34,6 @@ A autenticação de impressão digital é uma ótima maneira de permitir que um 
 Primeiro, discutimos as próprias APIs de impressão `FingerprintManager` digital, `FingerprintManagerCompat`(e). Examinamos como a `FingerprintManager.AuthenticationCallbacks` classe abstrata deve ser estendida por um aplicativo e usada como um intermediário entre o hardware de impressão digital e o próprio aplicativo. Em seguida, examinamos como verificar a integridade dos resultados do scanner de impressão digital `Cipher` usando um objeto java. Por fim, fizemos um pouco sobre os testes descrevendo como registrar uma impressão digital em um dispositivo e usar o **ADB** para simular um passe de impressão digital em um emulador. 
 
 Se ainda não tiver feito isso, você deve examinar o [aplicativo de exemplo](https://github.com/xamarin/monodroid-samples/tree/master/FingerprintGuide) que acompanha este guia. A [amostra da caixa de diálogo de impressão digital](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-m-fingerprintdialog) foi transportada de Java para Xamarin. Android e fornece outro exemplo de como adicionar autenticação de impressão digital a um aplicativo Android.
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

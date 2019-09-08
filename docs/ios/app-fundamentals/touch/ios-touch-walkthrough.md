@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: d78363bf7d38f19a14f689c2825ea9c9934653e4
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 022602c50386017b178672e20e3e352345feec0b
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70280246"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70767201"
 ---
 # <a name="walkthrough-using-touch-in-xamarinios"></a>Passo a passo: Usando o touch no Xamarin. iOS
 
@@ -35,11 +35,9 @@ Siga as instruções abaixo para adicionar código ao storyboard e saiba mais so
 
 Neste exemplo, demonstraremos algumas das APIs de toque. Siga estas etapas para adicionar o código necessário para implementar eventos de toque:
 
-
 1. Abra o projeto **Touch_Start**. Primeiro, execute o projeto para verificar se tudo está OK e toque no botão **amostras de toque** . Você verá uma tela semelhante à seguinte (embora nenhum dos botões funcione):
 
     [![](ios-touch-walkthrough-images/image4.png "Aplicativo de exemplo executado com botões que não são de trabalho")](ios-touch-walkthrough-images/image4.png#lightbox)
-
 
 1. Edite o arquivo **TouchViewController.cs** e adicione as duas variáveis de instância a seguir `TouchViewController`à classe:
 
@@ -49,7 +47,6 @@ Neste exemplo, demonstraremos algumas das APIs de toque. Siga estas etapas para 
     private bool touchStartedInside;
     #endregion
     ```
-
 
 1. Implemente `TouchesBegan` o método, conforme mostrado no código abaixo:
 
@@ -172,7 +169,6 @@ Neste exemplo, demonstraremos algumas das APIs de toque. Siga estas etapas para 
     [![](ios-touch-walkthrough-images/image4.png "A tela inicial do aplicativo")](ios-touch-walkthrough-images/image4.png#lightbox)
     
     [![](ios-touch-walkthrough-images/image5.png "A tela depois que o usuário arrasta um botão")](ios-touch-walkthrough-images/image5.png#lightbox)
- 
 
 <a name="Gesture_Recognizer_Samples" />
 
@@ -189,7 +185,6 @@ Se você executar o [código de exemplo inicial](https://docs.microsoft.com/samp
  [![](ios-touch-walkthrough-images/image6.png "Clicar no botão amostras do reconhecedor de gestos mostra esta tela")](ios-touch-walkthrough-images/image6.png#lightbox)
 
 Siga estas etapas para implementar os reconhecedores de gesto:
-
 
 1. Edite o arquivo **GestureViewController.cs** e adicione a seguinte variável de instância:
 
@@ -248,7 +243,6 @@ Observe que atribuímos um destino ao gesto na forma do método `HandleDrag` –
 
     O código acima verificará primeiro o estado do reconhecedor de gestos e, em seguida, moverá a imagem pela tela. Com esse código em vigor, o controlador agora pode dar suporte à arrastação de uma imagem em toda a tela.
 
-
 1. Adicione um `UITapGestureRecognizer` que irá alterar a imagem que está sendo exibida em DoubleTouchImage. Adicione o seguinte método ao `GestureViewController` controlador:
 
     ```csharp
@@ -304,13 +298,10 @@ Observe que atribuímos um destino ao gesto na forma do método `HandleDrag` –
 
     Observe também que inicializamos o valor de `originalImageFrame`.
 
-
 1. Execute o aplicativo e interaja com as duas imagens.
 A captura de tela a seguir é um exemplo dessas interações:
     
     [![](ios-touch-walkthrough-images/image7.png "Esta captura de tela mostra uma interação de arrastar")](ios-touch-walkthrough-images/image7.png#lightbox)
-
-
 
 <a name="Custom_Gesture_Recognizer"/>
 
@@ -321,7 +312,6 @@ Nesta seção, aplicaremos os conceitos de seções anteriores para criar um rec
  [![](ios-touch-walkthrough-images/image8.png "O aplicativo reconhecerá quando o usuário desenha um ' V ' na tela")](ios-touch-walkthrough-images/image8.png#lightbox)
 
 Siga estas etapas para criar um reconhecedor de gestos personalizado:
-
 
 1. Adicione uma nova classe ao projeto chamado `CheckmarkGestureRecognizer`e faça com que ele se pareça com o código a seguir:
 
@@ -441,8 +431,6 @@ Siga estas etapas para criar um reconhecedor de gestos personalizado:
     O método Reset é chamado quando a `State` propriedade é alterada `Recognized` para ou `Ended`. Esse é o momento de redefinir qualquer estado interno definido no reconhecedor de gestos personalizado.
 Agora, a classe pode começar na próxima vez que o usuário interage com o aplicativo e estar pronta para tentar reconhecê-lo.
 
-
-
 1. Agora que definimos um reconhecedor de gestos`CheckmarkGestureRecognizer`personalizado (), edite o arquivo **CustomGestureViewController.cs** e adicione as duas variáveis de instância a seguir:
 
     ```csharp
@@ -499,11 +487,7 @@ Agora, a classe pode começar na próxima vez que o usuário interage com o apli
     
     [![](ios-touch-walkthrough-images/image10.png "O botão está desmarcado")](ios-touch-walkthrough-images/image10.png#lightbox)
 
-
-
 As três seções acima demonstraram diferentes maneiras de responder a eventos de toque no iOS: usando eventos de toque, reconhecedores de gestos internos ou com um reconhecedor de gestos personalizado.
-
-
 
 ## <a name="related-links"></a>Links relacionados
 

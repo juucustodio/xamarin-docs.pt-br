@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 05/23/2017
-ms.openlocfilehash: 683587e4857ede20096be731b3cfa3b88b3a668d
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 25b4e5a564c8dabf4cb44881c25e0a10ade47350
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70282526"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70767737"
 ---
 # <a name="custom-document-icons-in-xamarinios"></a>Ícones de documento personalizados no Xamarin. iOS
 
@@ -30,7 +30,7 @@ Os ícones podem ser fornecidos para vários tamanhos, otimizados para as vária
 Para atribuir esses valores em Visual Studio para Mac, use a seção **tipos de documento** na `Info.plist` guia Avançado no editor para adicionar o tipo de documento e atribuir ícones de imagem a ele. Por exemplo, aqui está uma captura de tela mostrando o registro do suporte a PDF:
 
  [![](custom-document-types-images/18.png "A seção tipos de documento sob a guia Avançado no editor ' info. plist '")](custom-document-types-images/18.png#lightbox)
- 
+
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Para atribuir esses valores no Visual Studio, use a seção **tipos de documento** na `Info.plist`guia Avançado no:
@@ -43,9 +43,7 @@ Clique no botão **Adicionar tipo de documento** e preencha os campos obrigatór
 
 -----
 
-
 Para obter mais informações sobre tipos de documento, consulte [referência de identificadores de tipo uniforme](https://developer.apple.com/library/ios/#documentation/Miscellaneous/Reference/UTIRef/Articles/System-DeclaredUniformTypeIdentifiers.html) da Apple e [Tópicos de programação de interação de documentos para IOS](https://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/DocumentInteraction_TopicsForIOS/Introduction/Introduction.html).
-
 
 ## <a name="related-links"></a>Links relacionados
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/20/2017
-ms.openlocfilehash: 96dbb60b8754223203394745bc86af2297cb5ff3
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: fa2e287775e6669bd8bdf2728d9c676c451af69b
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70278534"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70753293"
 ---
 # <a name="contacts-and-contactsui-in-xamarinios"></a>Contatos e ContactsUI no Xamarin. iOS
 
@@ -31,9 +31,6 @@ As duas novas estruturas contêm a seguinte funcionalidade:
 
 > [!IMPORTANT]
 > As estruturas `AddressBook` existentes `AddressBookUI` e usadas pelo Ios 8 (e anteriores) foram preteridas no Ios 9 e devem ser substituídas por novas `Contacts` e `ContactsUI` estruturas assim que possível para qualquer aplicativo Xamarin. Ios existente. Novos aplicativos devem ser escritos em relação às novas estruturas.
-
-
-
 
 Nas seções a seguir, vamos dar uma olhada nessas novas estruturas e em como implementá-las em um aplicativo Xamarin. iOS.
 
@@ -359,7 +356,6 @@ PresentViewController(view, true, null);
 ## <a name="summary"></a>Resumo
 
 Este artigo deu uma visão detalhada de como trabalhar com as estruturas de interface do usuário de contato e contato em um aplicativo Xamarin. iOS. Primeiro, ele abordou os diferentes tipos de objetos que a estrutura de contato fornece e como usá-los para criar novos ou acessar contatos existentes. Ele também examinou a estrutura da interface do usuário do contato para selecionar os contatos existentes e exibir as informações de contato.
-
 
 ## <a name="related-links"></a>Links relacionados
 

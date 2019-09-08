@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/15/2017
-ms.openlocfilehash: 78270ee181f56f4b82637ed74a10a916d8fa4a77
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 9d0ffbd0da99134dfae3e42fe8baf4111c80935f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70285457"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70762998"
 ---
 # <a name="apple-pay-capabilities-in-xamarinios"></a>Recursos Apple Pay no Xamarin.iOS
 
@@ -35,7 +35,7 @@ As etapas a seguir orientam a criação dos itens acima:
 A ID do comerciante é usada para informar o Apple Pay que você pode aceitar pagamentos e é passada ao método `PaymentRequest` do PassKit e usada no direito do Apple Pay:
 
 1. Procure a [Central de Desenvolvedores da Apple](https://developer.apple.com/account/) e acesse a seção Certificados, Identificador e Perfis: 
- 
+
     ![Seleção de ID do comerciante na Central de Desenvolvedores](apple-pay-capabilities-images/image57.png)
 
 2. Em **Identificadores**, selecione **IDs do comerciante** e, em seguida, escolha **+** para criar uma nova ID do comerciante:  
@@ -149,7 +149,7 @@ Para obter mais informações sobre o uso do Apple Pay, consulte o guia a seguir
 * [Introdução ao Apple Pay](~/ios/platform/apple-pay.md)
 
 ## <a name="next-steps"></a>Próximas etapas
- 
+
 A lista a seguir descreve as etapas adicionais que precisam ser executadas:
 
 * Use o namespace do framework em seu aplicativo.

@@ -6,12 +6,12 @@ ms.assetid: 9ce61f18-22ac-4b93-91be-5b499677d661
 author: conceptdev
 ms.author: crdun
 ms.date: 03/24/2017
-ms.openlocfilehash: f31fd699aad95ff785ff887b2a2a8b6f2601ad7b
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 7fcb482fd17cba267d25dbea5d25232f2cf6ff2f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290182"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70765941"
 ---
 # <a name="cross-platform-performance"></a>Desempenho de plataforma cruzada
 
@@ -173,7 +173,6 @@ O campo `handler` mantém a referência para o método anônimo e é usado para 
 
 A inicialização lenta pode ser usada para adiar a criação de um objeto até que ele seja usado pela primeira vez. Essa técnica é usada principalmente para melhorar o desempenho, evitar a computação e reduzir os requisitos de memória.
 
-
 Considere o uso da inicialização lenta para objetos com custo de criação elevado nesses dois cenários:
 
 - O aplicativo não pode usar o objeto.
@@ -246,8 +245,6 @@ Operações de execução longa também devem dar suporte a cancelamento. Por ex
 
 > [!IMPORTANT]
 > A classe `CancellationTokenSource` implementa a interface `IDisposable` e então o método `CancellationTokenSource.Dispose` deve ser invocado uma vez que o trabalho com a instância `CancellationTokenSource` for concluído.
-
-
 
 Para obter mais informações, veja [Visão geral do suporte assíncrono](~/cross-platform/platform/async.md).
 
