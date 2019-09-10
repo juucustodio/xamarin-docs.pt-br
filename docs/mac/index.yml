@@ -1,90 +1,58 @@
-### YamlMime:YamlDocument
-documentType: LandingData
+### YamlMime:Landing
 title: Xamarin.Mac
+summary: O Xamarin.Mac expõe o SDK completo do macOS para desenvolvedores do .NET para compilar aplicativos do Mac nativos usando o C#.
 metadata:
-  description: O Xamarin.Mac expõe o SDK de macOS completo para desenvolvedores de .NET.
+  title: Xamarin.Mac
+  description: O Xamarin.Mac expõe o SDK completo do macOS para desenvolvedores do .NET para compilar aplicativos do Mac nativos usando o C#.
   author: conceptdev
   ms.author: crdun
-  ms.date: 07/27/2018
+  ms.date: 08/27/2019
   ms.topic: landing-page
   ms.technology: xamarin-mac
-abstract:
-  description: O Xamarin.Mac expõe o SDK de macOS completo para desenvolvedores de .NET. Compile aplicativos totalmente nativos no Visual Studio para Mac.
-  menu:
-    items:
-      - href: ~/mac/samples/index.yml
-        text: Amostras de Mac
-      - href: 'https://docs.microsoft.com/xamarin/mac/release-notes/'
-        text: Notas sobre a versão
-      - href: 'https://developer.apple.com/documentation/'
-        text: Documentação para desenvolvedores da Apple
-      - href: /visualstudio/mac/
-        text: Visual Studio para Mac
-sections:
-  - title: Introdução
-    items:
-      - type: paragraph
-        text: 'Aprenda a compilar seu primeiro aplicativo do Mac com Xamarin e C#.'
-      - type: list
-        style: icon48
-        items:
-          - image:
-              src: 'https://docs.microsoft.com/media/common/i_setup.svg'
-            text: Configuração
-            href: ~/mac/get-started/installation.md
-          - image:
-              src: 'https://docs.microsoft.com/media/common/i_xplat-code.svg'
-            text: 'Hello, Mac'
-            href: ~/mac/get-started/hello-mac.md
-  - title: Guias
-    items:
-      - type: list
-        style: cards
-        className: cardsB
-        items:
-          - href: ~/mac/get-started/index.md
-            html: Tutoriais para ajudar você a usar Xamarin.Mac. Verifique se tudo está instalado corretamente e compile seus primeiros aplicativos Mac.
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_get-started.svg'
-              href: ~/mac/get-started/index.md
-            title: Guia de Introdução
-          - href: ~/mac/app-fundamentals/
-            html: 'Tudo o que você precisa saber para compilar aplicativos Mac, como trabalhar com arquivos, imagens, bancos de dados e muito mais.'
-            image:
-              src: ~/media/icons/i_app-build.svg
-              href: ~/mac/app-fundamentals/
-            title: Conceitos básicos de aplicativo
-          - href: ~/mac/user-interface
-            html: Saiba mais sobre o conjunto completo de controles de interface do usuário disponíveis para macOS no AppKit.
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: ~/mac/user-interface/
-            title: Interface do Usuário
-          - href: ~/mac/platform/
-            html: 'Trabalhar com recursos de plataforma Mac, como Storyboards, OpenTK e os recursos mais recentes do macOS.'
-            image:
-              src: ~/media/icons/i_platform.svg
-              href: ~/mac/platform/
-            title: Recursos da plataforma
-          - href: ~/mac/deploy-test/
-            html: 'Instruções para compilação e implantação de aplicativos na App Store, e dicas para testá-los com antecedência!'
-            image:
-              src: ~/media/icons/i_deploy-test.svg
-              href: ~/mac/deploy-test/
-            title: Implantação e Teste
-          - href: ~/mac/internals/
-            html: Informações adicionais sobre os recursos internos do Xamarin.Mac e assistência com recursos como acessibilidade.
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_config-tools.svg'
-              href: ~/mac/internals/
-            title: Conceitos avançados e recursos internos
-  - title: Referência
-    items:
-      - type: list
-        style: cards
-        className: cardsD
-        items:
-          - title: API
-            html: '<p><a href="https://docs.microsoft.com/dotnet/api/AppKit">Documentos de API do Mac</a></p><p><a href="https://docs.microsoft.com/dotnet/api/?view=xamarinmac-3.0">Biblioteca de classes base</a></p>'
-          - title: Exemplos
-            html: '<p><a href="https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Mac">Amostras de Mac</a></p>'
+  ms.openlocfilehash: 14411712cbb1e72e279749ce23b587584aea9be6
+  ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+  ms.translationtype: HT
+  ms.contentlocale: pt-BR
+  ms.lasthandoff: 09/06/2019
+  ms.locfileid: "70770060"
+landingContent:
+- title: Introdução
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: Hello, Mac
+      url: ~/mac/get-started/hello-mac.md
+  - linkListType: download
+    links:
+    - text: Exemplos de Xamarin.Mac
+      url: https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Mac
+    - text: Visual Studio para Mac
+      url: /visualstudio/mac/installation/
+- title: Compilar aplicativos do Mac
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Conceitos básicos de aplicativo
+      url: ~/mac/app-fundamentals/index.md
+    - text: Controles da interface do usuário
+      url: ~/mac/user-interface/index.md
+    - text: Recursos da plataforma Mac
+      url: ~/mac/platform/index.md
+    - text: Conceitos avançados e recursos internos
+      url: ~/mac/internals/index.md
+  - linkListType: deploy
+    links:
+    - text: Publicar na Mac App Store
+      url: ~/mac/deploy-test/publishing-to-the-app-store/index.md
+- title: Pesquisar APIs e versões
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: Documentos de API do Xamarin.Mac
+      url: https://docs.microsoft.com/dotnet/api/?view=xamarin-mac-sdk-14
+    - text: Biblioteca de classes base disponível no Xamarin.Mac
+      url: https://docs.microsoft.com/dotnet/api/?view=xamarinmac-3.0
+    - text: Notas sobre a versão do Xamarin.Mac
+      url: https://docs.microsoft.com/xamarin/mac/release-notes/
+    - text: Documentação para desenvolvedores da Apple
+      url: https://developer.apple.com/documentation/
