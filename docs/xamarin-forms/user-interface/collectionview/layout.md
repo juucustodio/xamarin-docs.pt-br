@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/22/2019
-ms.openlocfilehash: ac32e340212dd42c373a39df138436e7ee313958
-ms.sourcegitcommit: 1341f2950b775a4daa7d0548a51fdef759afd6e3
+ms.openlocfilehash: 376e35c8b82973ea1343966fad814db2d3a5e673
+ms.sourcegitcommit: e83035c746f165ee6d03f2e9fd0066ee4f20a9fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69976532"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70906462"
 ---
 # <a name="xamarinforms-collectionview-layout"></a>Layout CollectionView do Xamarin. Forms
 
@@ -40,7 +40,7 @@ Esses layouts podem ser especificados definindo a [`ItemsLayout`](xref:Xamarin.F
 - [`SnapPointsAlignment`](xref:Xamarin.Forms.ItemsLayout.SnapPointsAlignment), do tipo [`SnapPointsAlignment`](xref:Xamarin.Forms.SnapPointsAlignment), especifica como os pontos de ajuste são alinhados com os itens.
 - [`SnapPointsType`](xref:Xamarin.Forms.ItemsLayout.SnapPointsType), do tipo [`SnapPointsType`](xref:Xamarin.Forms.SnapPointsType), especifica o comportamento dos pontos de ajuste ao rolar.
 
-Essas propriedades são apoiadas por [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objetos, o que significa que as propriedades podem ser destinos de associações de dados. Para obter mais informações sobre pontos de encaixe, consulte [pontos de alinhamento](scrolling.md#snap-points) no guia de rolagem de [CollectionView do Xamarin. Forms](scrolling.md) .
+Essas propriedades são apoiadas por [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objetos, o que significa que as propriedades podem ser destinos de associações de dados. Para obter mais informações sobre pontos de encaixe, consulte [pontos de alinhamento](scrolling.md#snap-points) no guia de [rolagem de CollectionView do Xamarin. Forms](scrolling.md) .
 
 A [`ItemsLayoutOrientation`](xref:Xamarin.Forms.ItemsLayoutOrientation) enumeração define os seguintes membros:
 
@@ -493,7 +493,7 @@ CollectionView collectionView = new CollectionView
 
 Esse código resulta em uma lista vertical de colunas únicas, que tem um espaçamento de 20 em volta de cada item:
 
-[ ![Captura de tela de um CollectionView com espaçamento de item, em espaçamento de item CollectionView do IOS e Android](layout-images/vertical-list-spacing.png "") ] (layout-images/vertical-list-spacing-large.png#lightbox "Espaçamento de item CollectionView")
+[ ![Captura de tela de um CollectionView com espaçamento de item, em](layout-images/vertical-list-spacing.png "espaçamento de item CollectionView") do IOS e Android] (layout-images/vertical-list-spacing-large.png#lightbox "Espaçamento de item CollectionView")
 
 Quando um [`CollectionView`](xref:Xamarin.Forms.CollectionView) define sua [`ItemsLayout`](xref:Xamarin.Forms.ItemsView.ItemsLayout) propriedade para um [`GridItemsLayout`](xref:Xamarin.Forms.GridItemsLayout) objeto, as `GridItemsLayout.VerticalItemSpacing` propriedades `GridItemsLayout.HorizontalItemSpacing` e podem ser definidas como `double` valores que representam o espaço vazio vertical e horizontalmente em volta de cada item:
 
@@ -528,7 +528,7 @@ CollectionView collectionView = new CollectionView
 
 Esse código resulta em uma grade vertical de duas colunas, que tem um espaçamento vertical de 20 em volta de cada item e um espaçamento horizontal de 30 em volta de cada item:
 
-[ ![Captura de tela de um CollectionView com espaçamento de item, em espaçamento de item CollectionView do IOS e Android](layout-images/vertical-grid-spacing.png "") ] (layout-images/vertical-grid-spacing-large.png#lightbox "Espaçamento de item CollectionView")
+[ ![Captura de tela de um CollectionView com espaçamento de item, no](layout-images/vertical-grid-spacing.png "espaçamento de item CollectionView") do Android] (layout-images/vertical-grid-spacing-large.png#lightbox "Espaçamento de item CollectionView")
 
 ## <a name="item-sizing"></a>Dimensionamento de item
 
@@ -573,7 +573,7 @@ void OnImageTapped(object sender, EventArgs e)
 
 O `OnImageTapped` manipulador de eventos é executado em resposta a [`Image`](xref:Xamarin.Forms.Image) um objeto que está sendo tocado e altera as dimensões da imagem para que seja exibido mais facilmente:
 
-[ ![Captura de tela de um CollectionView com dimensionamento de item dinâmico, em dimensionamento de](layout-images/runtime-resizing.png "Item dinâmico de CollectionView") em Ios e Android] (layout-images/runtime-resizing-large.png#lightbox "Dimensionamento de item dinâmico CollectionView")
+[ ![Captura de tela de um CollectionView com dimensionamento de item dinâmico, em](layout-images/runtime-resizing.png "dimensionamento de item dinâmico de CollectionView") em Ios e Android] (layout-images/runtime-resizing-large.png#lightbox "Dimensionamento de item dinâmico CollectionView")
 
 ## <a name="right-to-left-layout"></a>Layout da direita para a esquerda
 
