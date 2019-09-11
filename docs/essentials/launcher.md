@@ -5,12 +5,12 @@ ms.assetid: BABF40CC-8BEE-43FD-BE12-6301DF27DD33
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 08/20/2019
-ms.openlocfilehash: c1c9fc4ce7e7a1dc4ab9573d29407f081e2ad8a1
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 3e49e12faac1fc93816d9a51646f639046c200c5
+ms.sourcegitcommit: ab51d32f4ea0e0d4701f0bf2f1465c9323cd070b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70199853"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70887363"
 ---
 # <a name="xamarinessentials-launcher"></a>Xamarin.Essentials: Inicializador
 
@@ -58,7 +58,7 @@ public class LauncherTest
 
 Esse recurso permite que um aplicativo solicite que outros aplicativos abram e exibam um arquivo. O Xamarin.Essentials detectará automaticamente o tipo de arquivo (MIME) e solicitará que o arquivo seja aberto.
 
-Veja um exemplo de como gravar texto no disco e solicitar que ele seja aberto:
+Aqui está um exemplo de gravação de texto em disco e solicitação de abertura:
 
 ```csharp
 var fn = "File.txt";
