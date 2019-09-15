@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/06/2018
-ms.openlocfilehash: b8a7353ee67ee0686ad97428222c69dd095ee83a
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 870765a7a32874dfa17a9b0cf7176e4a721abf47
+ms.sourcegitcommit: cf56d2bae34dc0f8e94c2d3d28d5f460d59807bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290436"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70985956"
 ---
 # <a name="xamarinios-errors"></a>Erros do Xamarin. iOS
 
@@ -854,7 +854,7 @@ Para compilar seu aplicativo, o Xamarin. iOS deve vincular as bibliotecas do sis
 
 A maneira recomendada para corrigir esse erro é atualizar o Xcode para obter o SDK necessário. Se você tiver várias versões do Xcode instaladas ou quiser usar um Xcode em um local não padrão, certifique-se de definir o local do Xcode correto nas preferências do IDE.
 
-Como alternativa, habilite o [vinculador](https://docs.microsoft.com/en-us/xamarin/ios/deploy-test/linker) gerenciado para remover APIs não usadas, incluindo (na maioria dos casos) as novas que exigem a biblioteca especificada. No entanto, isso não funcionará se o seu projeto exigir APIs introduzidas em um SDK mais recente do que o que o Xcode fornece.
+Como alternativa, habilite o [vinculador](https://docs.microsoft.com/xamarin/ios/deploy-test/linker) gerenciado para remover APIs não usadas, incluindo (na maioria dos casos) as novas que exigem a biblioteca especificada. No entanto, isso não funcionará se o seu projeto exigir APIs introduzidas em um SDK mais recente do que o que o Xcode fornece.
 
 Como uma solução Straw, use uma versão mais antiga do Xamarin. iOS que não exija que esses novos SDKs estejam presentes durante o processo de compilação.
 

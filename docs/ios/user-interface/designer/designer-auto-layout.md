@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: d1047ae8cae6a8e86b72690fe5d80d0ba9e752a4
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: a2f637677620f9bfb2bd26a5af55fb9fb56a7af9
+ms.sourcegitcommit: cf56d2bae34dc0f8e94c2d3d28d5f460d59807bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70768409"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70985693"
 ---
 # <a name="auto-layout-with-the-xamarin-designer-for-ios"></a>Layout automático com o Xamarin Designer para iOS
 
@@ -63,9 +63,23 @@ A barra de ferramentas de restrições foi atualizada e agora consiste em duas p
   - No modo de edição de restrição, esse botão ajusta as restrições para corresponder ao quadro do elemento.
   - No modo de edição de quadro, esse botão ajusta o quadro do elemento para corresponder à posição que as restrições estão definindo.
 
+## <a name="constraints-editing-popover"></a>Popover de edição de restrições
+
+O pop-up do editor de restrições nos permite adicionar e atualizar as várias restrições de uma vez para uma exibição SELECT. Podemos criar várias restrições de espaçamento, taxa de proporção e alinhamento, como alinhar uma exibição às bordas esquerdas de duas exibições.
+
+Para as restrições de edição no modo de exibição selecionado, clique nas reticências para ![exibir o popover: Constraints Editing popover](designer-auto-layout-images/constraints-popup.png)
+
+Ao abrir o popover de restrições, ele exibe as restrições predefinidas na exibição. Podemos definir todas as restrições de espaçamento selecionando **todos os lados** da ComboBox no canto superior direito e selecionar **limpar tudo** para removê-los. 
+
+O **W** definirá Width e **H** definirá a restrição de altura. Ao verificar a **taxa de proporção**, a altura e a largura das exibições serão controladas em diferentes tamanhos de tela, a largura da exibição será usada como numerador para o ração e a altura como o denominador.
+
+![espaçamento de restrições](designer-auto-layout-images/constraints-spacing.png)
+
+Quatro caixas de combinação para restrições de espaçamento lista as exibições vizinhas para ancorar a restrição
+
 ## <a name="surface-based-constraint-editing"></a>Edição de restrição baseada em superfície
 
-Na seção anterior, aprendemos a adicionar restrições padrão e remover restrições usando a barra de ferramentas restrições. Para uma edição de restrição mais ajustada, podemos interagir com restrições diretamente na superfície de design. Esta seção apresenta os conceitos básicos da edição de restrição baseada em superfície, incluindo controles de espaçamento de PIN, áreas de soltar e trabalho com diferentes tipos de restrições.
+Para uma edição de restrição mais ajustada, podemos interagir com restrições diretamente na superfície de design. Esta seção apresenta os conceitos básicos da edição de restrição baseada em superfície, incluindo controles de espaçamento de PIN, áreas de soltar e trabalho com diferentes tipos de restrições.
 
 ### <a name="creating-constraints"></a>Criando restrições
 

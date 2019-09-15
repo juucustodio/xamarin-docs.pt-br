@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 07/01/2019
-ms.openlocfilehash: ea7ebdf5e589f3c24f8c607d1464e86678012f23
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 48e7f97bf37ec5204ec1798ec1fdd7dfe5954cc5
+ms.sourcegitcommit: cf56d2bae34dc0f8e94c2d3d28d5f460d59807bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70120626"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70985989"
 ---
 # <a name="introduction-to-ios-13"></a>Introdução ao iOS 13
 
@@ -23,6 +23,10 @@ Siga estas [instruções](~/ios/platform/ios13/get-started.md) para começar.
 ## <a name="dark-modedark-modemd"></a>[Modo escuro](dark-mode.md)
 
 o iOS 13 apresenta um novo modo escuro que fornece aos desenvolvedores os meios para permitir que seus aplicativos caibam facilmente. As novas ferramentas permitem que você projete seus aplicativos simultaneamente com temas claros e escuros.
+
+## <a name="sign-in-with-applesign-inmd"></a>[Entrar com a Apple](sign-in.md)
+
+o iOS 13 fornece uma nova funcionalidade para entrar em aplicativos usando o entrar com dispositivos Apple, permitindo que você tenha mais confiança de que suas informações pessoais não sejam roubadas ou coletadas de nenhuma forma, aproveitando o 2FA e um conjunto restrito de fornecidos divulgação.
 
 ## <a name="augmented-reality"></a>Realidade aumentada
 
@@ -41,10 +45,6 @@ O Core ML 3 torna possível treinar facilmente modelos de ML usando os recursos 
 o iPadOS é uma expansão do iOS criado especificamente com o iPad em mente.
 
 Com o iPadOS, você pode fazer maior uso do lápis Apple usando o PencilKit com novos gestos, permitir o uso de várias janelas e arrastar e soltar vários conteúdos entre aplicativos. o iPadOS também pode permitir que os aplicativos forneçam fontes em todo o sistema.
-
-## <a name="privacy-and-security"></a>Privacidade e segurança
-
-o iOS 13 fornece uma nova funcionalidade para entrar em aplicativos usando o entrar com dispositivos Apple, permitindo que você tenha mais confiança de que suas informações pessoais não sejam roubadas ou coletadas de nenhuma forma, aproveitando o 2FA e um conjunto restrito de fornecidos divulgação.
 
 ## <a name="related-links"></a>Links relacionados
 
