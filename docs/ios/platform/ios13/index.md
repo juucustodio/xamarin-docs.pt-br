@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 07/01/2019
-ms.openlocfilehash: 48e7f97bf37ec5204ec1798ec1fdd7dfe5954cc5
-ms.sourcegitcommit: cf56d2bae34dc0f8e94c2d3d28d5f460d59807bf
+ms.openlocfilehash: b8a5e8f42c44287a1d60f43784c3e42a9e7fc0ff
+ms.sourcegitcommit: a5ef4497db04dfa016865bc7454b3de6ff088554
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70985989"
+ms.lasthandoff: 09/15/2019
+ms.locfileid: "70997969"
 ---
 # <a name="introduction-to-ios-13"></a>Introdução ao iOS 13
 
@@ -48,4 +48,4 @@ Com o iPadOS, você pode fazer maior uso do lápis Apple usando o PencilKit com 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Notas de versão de visualização do Xamarin. iOS](/xamarin/ios/release-notes/12/12.99)
+- [Notas de versão do Xamarin. iOS 13](/xamarin/ios/release-notes/13/13.0)

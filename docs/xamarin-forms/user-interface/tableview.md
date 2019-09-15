@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/14/2018
-ms.openlocfilehash: 195ed82325ed681f31f9963d5ff0ca0a7fef48ab
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 558eb9f476fd6b566f1f161c01fc809498a4c4a8
+ms.sourcegitcommit: a5ef4497db04dfa016865bc7454b3de6ff088554
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70228143"
+ms.lasthandoff: 09/15/2019
+ms.locfileid: "70998004"
 ---
 # <a name="xamarinforms-tableview"></a>Modo de tabela do xamarin. Forms
 
@@ -90,7 +90,7 @@ Além disso, a cor do texto exibido para cada [`TableSection`](xref:Xamarin.Form
 
 Xamarin. Forms é fornecido com células internas para coletar e exibir informações. Embora [`ListView`](xref:Xamarin.Forms.ListView) [`SwitchCell`](xref:Xamarin.Forms.SwitchCell) e [`TableView`](xref:Xamarin.Forms.TableView) possa usar todas as mesmas células, e [`EntryCell`](xref:Xamarin.Forms.EntryCell) são as mais relevantes para um `TableView` cenário.
 
-Ver [aparência de célula do ListView](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md) para obter uma descrição detalhada dos [TextCell](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md#TextCell) e [ImageCell](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md#ImageCell).
+Ver [aparência de célula do ListView](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md) para obter uma descrição detalhada dos [TextCell](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md#textcell) e [ImageCell](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md#imagecell).
 
 <a name="switchcell" />
 

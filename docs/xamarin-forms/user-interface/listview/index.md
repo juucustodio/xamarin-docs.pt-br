@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/04/2019
-ms.openlocfilehash: 5d09d76a44a6322285a143230173d244848ba4a6
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 9d7dd98b98c7722d6fcdcb49c10e326732fa9f0b
+ms.sourcegitcommit: a5ef4497db04dfa016865bc7454b3de6ff088554
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70770204"
+ms.lasthandoff: 09/15/2019
+ms.locfileid: "70997990"
 ---
 # <a name="xamarinforms-listview"></a>Xamarin. Forms ListView
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithlistview)
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithlistview)
 
 [`ListView`](xref:Xamarin.Forms.ListView)é uma exibição para apresentar listas de dados, especialmente listas longas que exigem rolagem.
 
@@ -36,6 +36,7 @@ Um `ListView` é mais adequado para coleções que consistem em um único tipo d
 Para obter mais informações sobre como associar dados `ListView` a uma instância do, consulte [fontes de dados do ListView](~/xamarin-forms/user-interface/listview/data-and-databinding.md).
 
 ## <a name="components"></a>Componentes
+
 O `ListView` controle tem vários componentes disponíveis para exercitar a funcionalidade nativa de cada plataforma. Esses componentes são definidos nas seções a seguir.
 
 ### <a name="headers-and-footerscustomizing-list-appearancemdheaders-and-footers"></a>[Cabeçalhos e rodapés](customizing-list-appearance.md#headers-and-footers)
@@ -55,7 +56,7 @@ Os itens de dados `ListView` em uma são chamados de células. Cada célula corr
 - [As células internas](customizing-cell-appearance.md#built-in-cells), `TextCell` como e `ImageCell`, correspondem a controles nativos e são especialmente com bom desempenho.
   - Um [`TextCell`](customizing-cell-appearance.md#textcell) exibe uma cadeia de texto, opcionalmente com texto detalhado. Texto de detalhe é renderizado como uma segunda linha em uma fonte menor com uma cor de ênfase.
   - Um [`ImageCell`](customizing-cell-appearance.md#imagecell) exibe uma imagem com texto. Aparece como um `TextCell` com uma imagem à esquerda.
-- [As células personalizadas](customizing-cell-appearance.md#customcells) são usadas para apresentar dados complexos. Por exemplo, uma célula personalizada pode ser usada para apresentar uma lista de músicas que incluem o álbum e o artista.
+- [As células personalizadas](customizing-cell-appearance.md#custom-cells) são usadas para apresentar dados complexos. Por exemplo, uma célula personalizada pode ser usada para apresentar uma lista de músicas que incluem o álbum e o artista.
 
 A captura de tela a `ListView` seguir mostra um com itens ImageCell:
 
@@ -64,11 +65,12 @@ A captura de tela a `ListView` seguir mostra um com itens ImageCell:
 Para saber mais sobre como personalizar células em um `ListView`, consulte [Personalizando a aparência da célula ListView](customizing-cell-appearance.md).
 
 ## <a name="functionality"></a>Funcionalidade
+
 A `ListView` classe oferece suporte a vários estilos de interação.
 
 - O [pull para atualização](interactivity.md#pull-to-refresh) permite que o usuário puxe `ListView` para baixo para atualizar o conteúdo.
 - As [ações de contexto](interactivity.md#context-actions) permitem que o desenvolvedor especifique ações personalizadas em itens de lista individuais. Por exemplo, você pode implementar a ação para passar o dedo no iOS, ou toque ações no Android.
-- A [seleção](interactivity.md#selectiontaps) permite que o desenvolvedor anexe a funcionalidade aos eventos de seleção e desmarcação em itens de lista.
+- A [seleção](interactivity.md#selection-and-taps) permite que o desenvolvedor anexe a funcionalidade aos eventos de seleção e desmarcação em itens de lista.
 
 A captura de tela a `ListView` seguir mostra um com ações de contexto:
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/12/2016
-ms.openlocfilehash: 769ff7efedca453734b6db2dd2dcb2ad503ba272
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 289d47a700762caa8e41baef23818be6c684c61a
+ms.sourcegitcommit: a5ef4497db04dfa016865bc7454b3de6ff088554
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70759794"
+ms.lasthandoff: 09/15/2019
+ms.locfileid: "70998063"
 ---
 # <a name="xamarinforms-cells"></a>Células do xamarin. Forms
 
@@ -34,14 +34,14 @@ Xamarin. Forms dá suporte aos seguintes tipos de célula:
 
 |     |     |
 | --- | --- |
-| Um [ `TextCell` ](xref:Xamarin.Forms.TextCell) exibe uma ou duas cadeias de caracteres de texto. Defina as [ `Text` ](xref:Xamarin.Forms.TextCell.Text) propriedade e, opcionalmente, o [ `Detail` ](xref:Xamarin.Forms.TextCell.Detail) propriedade para essas cadeias de caracteres de texto.<br /><br />[Documentação da API](xref:Xamarin.Forms.TextCell) / [guia](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md#TextCell) | [![Exemplo de TextCell](cells-images/TextCell.png "exemplo TextCell")](cells-images/TextCell-Large.png#lightbox "TextCell exemplo")<br />[O código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/TextCellDemoPage.cs) / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/TextCellDemoPage.xaml) |
+| Um [ `TextCell` ](xref:Xamarin.Forms.TextCell) exibe uma ou duas cadeias de caracteres de texto. Defina as [ `Text` ](xref:Xamarin.Forms.TextCell.Text) propriedade e, opcionalmente, o [ `Detail` ](xref:Xamarin.Forms.TextCell.Detail) propriedade para essas cadeias de caracteres de texto.<br /><br />[Documentação da API](xref:Xamarin.Forms.TextCell) / [guia](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md#textcell) | [![Exemplo de TextCell](cells-images/TextCell.png "exemplo TextCell")](cells-images/TextCell-Large.png#lightbox "TextCell exemplo")<br />[O código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/TextCellDemoPage.cs) / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/TextCellDemoPage.xaml) |
 |     |     |
 
 ### <a name="imagecell"></a>ImageCell
 
 |     |     |
 | --- | --- |
-| O [ `ImageCell` ](xref:Xamarin.Forms.ImageCell) exibe as mesmas informações que [ `TextCell` ](#textCell) , mas inclui um bitmap que podem ser definidas com o [ `Source` ](xref:Xamarin.Forms.Image.Source) propriedade.<br /><br />[Documentação da API](xref:Xamarin.Forms.ImageCell) / [guia](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md#ImageCell) | [![Exemplo de ImageCell](cells-images/ImageCell.png "exemplo ImageCell")](cells-images/ImageCell-Large.png#lightbox "ImageCell exemplo")<br />[O código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ImageCellDemoPage.cs) / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ImageCellDemoPage.xaml) |
+| O [ `ImageCell` ](xref:Xamarin.Forms.ImageCell) exibe as mesmas informações que [ `TextCell` ](#textCell) , mas inclui um bitmap que podem ser definidas com o [ `Source` ](xref:Xamarin.Forms.Image.Source) propriedade.<br /><br />[Documentação da API](xref:Xamarin.Forms.ImageCell) / [guia](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md#imagecell) | [![Exemplo de ImageCell](cells-images/ImageCell.png "exemplo ImageCell")](cells-images/ImageCell-Large.png#lightbox "ImageCell exemplo")<br />[O código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ImageCellDemoPage.cs) / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ImageCellDemoPage.xaml) |
 |     |     |
 
 ### <a name="switchcell"></a>SwitchCell
