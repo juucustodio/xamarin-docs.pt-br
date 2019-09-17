@@ -252,6 +252,8 @@
               href: platform/ios13/get-started.md
             - name: Modo escuro
               href: platform/ios13/dark-mode.md
+            - name: Entrar com Apple
+              href: platform/ios13/sign-in.md
             - name: Solução de problemas
               href: platform/ios13/troubleshooting/index.md
         - name: iOS 12

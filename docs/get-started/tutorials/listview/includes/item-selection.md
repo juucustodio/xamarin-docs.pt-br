@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: c33db7de63a585cb6fb47aa1145aa724c9eb790f
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: a537bdaf2015dd7d179545cb7587934818e960d7
+ms.sourcegitcommit: a5ef4497db04dfa016865bc7454b3de6ff088554
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61037262"
+ms.lasthandoff: 09/15/2019
+ms.locfileid: "71004141"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -43,7 +43,7 @@ ms.locfileid: "61037262"
 
     Defina pontos de interrupção nos dois manipuladores de eventos e toque em itens no [`ListView`](xref:Xamarin.Forms.ListView). Observe que o evento [`ItemSelected`](xref:Xamarin.Forms.ListView.ItemSelected) é acionado apenas quando um novo item é selecionado no [`ListView`](xref:Xamarin.Forms.ListView), enquanto o evento [`ItemTapped`](xref:Xamarin.Forms.ListView.ItemTapped) é acionado sempre que um item é tocado.
 
-    Para obter mais informações sobre a seleção e toques em itens, confira [Seleção e toques](~/xamarin-forms/user-interface/listview/interactivity.md#selection--taps) no guia [Interatividade de ListView](~/xamarin-forms/user-interface/listview/interactivity.md).
+    Para obter mais informações sobre a seleção e toques em itens, confira [Seleção e toques](~/xamarin-forms/user-interface/listview/interactivity.md#selection-and-taps) no guia [Interatividade de ListView](~/xamarin-forms/user-interface/listview/interactivity.md).
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
@@ -82,4 +82,4 @@ ms.locfileid: "61037262"
 
     Defina pontos de interrupção nos dois manipuladores de eventos e toque em itens no [`ListView`](xref:Xamarin.Forms.ListView). Observe que o evento [`ItemSelected`](xref:Xamarin.Forms.ListView.ItemSelected) é acionado apenas quando um novo item é selecionado no [`ListView`](xref:Xamarin.Forms.ListView), enquanto o evento [`ItemTapped`](xref:Xamarin.Forms.ListView.ItemTapped) é acionado sempre que um item é tocado.
 
-    Para obter mais informações sobre a seleção e toques em itens, confira [Seleção e toques](~/xamarin-forms/user-interface/listview/interactivity.md#selection--taps) no guia [Interatividade de ListView](~/xamarin-forms/user-interface/listview/interactivity.md).
+    Para obter mais informações sobre seleção e toques em itens, consulte [Selection & Taps](~/xamarin-forms/user-interface/listview/interactivity.md#selection-and
