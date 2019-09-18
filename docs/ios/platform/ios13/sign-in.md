@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/10/2019
-ms.openlocfilehash: ae4cccc900396c7ebd6e737160e38c5e9dcdc74e
-ms.sourcegitcommit: cf56d2bae34dc0f8e94c2d3d28d5f460d59807bf
+ms.openlocfilehash: a8ea06d81fcc79a24f155a1562818daea3ba982a
+ms.sourcegitcommit: 13e43f510da37ad55f1c2f5de1913fb0aede6362
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70986054"
+ms.lasthandoff: 09/16/2019
+ms.locfileid: "71021393"
 ---
 # <a name="sign-in-with-apple-in-xamarinios"></a>Entre com a Apple no Xamarin. iOS
 
@@ -25,10 +25,11 @@ Este documento apresenta como você pode adicionar a entrada com o Apple em apli
 ## <a name="requirements"></a>Requisitos
 
 Esse recurso requer:
+
 * iOS 13
 * Xamarin. iOS 12,99
-* Visual Studio 2019 ou Visual Studio 2019 para Mac com suporte do Xcode 11. 
- 
+* Visual Studio 2019 ou Visual Studio 2019 para Mac com suporte do Xcode 11.
+
 Consulte [introdução](get-started.md) para obter mais detalhes.
 
 ## <a name="apple-developer-setup"></a>Instalação do desenvolvedor da Apple
@@ -218,7 +219,7 @@ public UIWindow GetPresentationAnchor (ASAuthorizationController controller) => 
 
 ## <a name="summary"></a>Resumo
 
-Este artigo introduziu a entrada com a Apple para iOS. 
+Este artigo introduziu a entrada com a Apple para iOS.
 
 ## <a name="related-links"></a>Links relacionados
 

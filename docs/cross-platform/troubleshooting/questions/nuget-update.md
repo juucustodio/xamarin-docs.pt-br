@@ -6,12 +6,12 @@ ms.assetid: 40DDE713-DE80-422F-BE34-A732E40C3F81
 author: conceptdev
 ms.author: crdun
 ms.date: 11/25/2015
-ms.openlocfilehash: f487fe0f8db9fa71e8571e150e0e8afe1630cde2
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 753afbda38a79cdc472a9b635a2354c6b9934617
+ms.sourcegitcommit: 61a35d0643eb3bf5adb8f8831da54771d8dde626
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70765083"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71033365"
 ---
 # <a name="how-can-i-update-nuget"></a>Como posso atualizar o NuGet?
 
@@ -20,6 +20,7 @@ As atualizações, extensões e suplementos do NuGet podem ser encontrados na gu
 Observe que as atualizações *só* serão mostradas nesses menus se você não tiver a versão mais recente com suporte do NUGET pelo IDE instalada:
 
 ## <a name="visual-studio"></a>Visual Studio
+
 1. Abrir **ferramentas > extensões e atualizações > atualizações > Galeria do Visual Studio**
 2. Selecione **Gerenciador de pacotes NuGet para Visual Studio [ano]**
 

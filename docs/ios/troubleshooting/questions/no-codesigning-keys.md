@@ -7,19 +7,21 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 04/03/2018
-ms.openlocfilehash: aa2f52be4e485fb55a949a0327161bd1c301334c
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: e10a04627b903c02140a6a2ead5c379c1e8bdcf6
+ms.sourcegitcommit: 13e43f510da37ad55f1c2f5de1913fb0aede6362
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769710"
+ms.lasthandoff: 09/16/2019
+ms.locfileid: "71021385"
 ---
 # <a name="why-does-my-ios-build-fail-with-no-valid-iphone-code-signing-keys-found-in-keychain"></a>Por que minha compilação do iOS falha com: Nenhuma chave de assinatura de código do iPhone foi encontrada no conjunto de chaves?
 
 ## <a name="cause-of-the-error"></a>Causa do erro
-Essa mensagem de erro ocorre quando o projeto em questão está procurando credenciais de assinatura de código válidas, mas não consegue encontrá-las. A assinatura de código é necessária para testes e implantações em dispositivos iOS físicos; assim como as compilações ad hoc & App Store. 
+
+Essa mensagem de erro ocorre quando o projeto em questão está procurando credenciais de assinatura de código válidas, mas não consegue encontrá-las. A assinatura de código é necessária para testes e implantações em dispositivos iOS físicos; assim como as compilações ad hoc & App Store.
 
 ### <a name="provisioning-devices"></a>Dispositivos de provisionamento
+
 Se você ainda não tiver provisionado um dispositivo iOS antes, o guia a seguir o conduzirá pelo processo completo passo a passo: [Guia de provisionamento de dispositivos](~/ios/get-started/installation/device-provisioning/index.md)
 
 ## <a name="bug-when-using-ios-simulator"></a>Bug ao usar o simulador do iOS
@@ -30,9 +32,11 @@ Se você ainda não tiver provisionado um dispositivo iOS antes, o guia a seguir
 Houve um bug no Xamarin. Visual Studio 3,11 que causou o projeto iOS em um modelo Xamarin. Forms para adicionar os direitos do codesign. o plist para compilações do simulador; bloqueando efetivamente os testes usando o simulador.
 
 ### <a name="how-to-fix"></a>Como corrigir
+
 Você pode solucionar o problema removendo `<CodesignEntitlements>` o sinalizador das compilações de depuração no arquivo. csproj. Você pode fazer isso da seguinte maneira:
 
-*Aviso: Erros em arquivos. csproj podem dividir seu projeto, portanto, é uma boa ideia fazer backup de seus arquivos antes de tentar isso.*
+> [!WARNING]
+> Erros em arquivos. csproj podem dividir seu projeto, portanto, é uma boa ideia fazer backup de seus arquivos antes de tentar isso.
 
 1. Clique com o botão direito do mouse no projeto do iOS no painel de solução e selecione **descarregar projeto**
 2. Clique com o botão direito do mouse no projeto novamente e selecione **Editar [ProjectName]. csproj**
@@ -43,4 +47,4 @@ Você pode solucionar o problema removendo `<CodesignEntitlements>` o sinalizado
 5. Recarregue o projeto e você deve ser capaz de implantar no simulador.
 
 ### <a name="next-steps"></a>Próximas etapas
-Para obter mais assistência, entrar em contato conosco ou, se esse problema permanecer mesmo depois de utilizar as informações acima, consulte [quais opções de suporte estão disponíveis para o Xamarin?](~/cross-platform/troubleshooting/support-options.md) para obter informações sobre opções de contato, sugestões, bem como como arquivar um novo bug, se necessário . 
+Para obter mais assistência, entrar em contato conosco ou, se esse problema permanecer mesmo depois de utilizar as informações acima, consulte [quais opções de suporte estão disponíveis para o Xamarin?](~/cross-platform/troubleshooting/support-options.md) para obter informações sobre opções de contato, sugestões, bem como como arquivar um novo bug, se necessário .

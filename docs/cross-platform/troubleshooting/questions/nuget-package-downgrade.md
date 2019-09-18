@@ -6,12 +6,12 @@ ms.assetid: 2375F833-A630-471E-B8E9-5AD2CB81F264
 author: conceptdev
 ms.author: crdun
 ms.date: 05/08/2018
-ms.openlocfilehash: 33f542d0da48f0cd3f7e1bcb85ae06137d8be3cd
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: fc504d1d7a9e990b3bcd90b3404e7db3d9fe7527
+ms.sourcegitcommit: 13e43f510da37ad55f1c2f5de1913fb0aede6362
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70288322"
+ms.lasthandoff: 09/16/2019
+ms.locfileid: "71021140"
 ---
 # <a name="how-do-i-downgrade-a-nuget-package"></a>Como fazer downgrade de um pacote NuGet?
 
@@ -43,4 +43,5 @@ Você também pode copiar/colar o comando exato da página do NuGet do pacote. E
 
     `Xamarin.Forms version:1.4`
 
-*Observação: Se você adicionar um espaço entre `version:` & o número de versão, a pesquisa se comportará como embora nenhuma versão tenha sido especificada.*
+> [!NOTE]
+> Se você adicionar um espaço entre `version:` & o número de versão, a pesquisa se comportará como embora nenhuma versão tenha sido especificada.
