@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: bb85c69b13fa052f33186a3153be266ef87a7925
-ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
+ms.openlocfilehash: cbf301b341f78ae8d8826580d30a13393716f56c
+ms.sourcegitcommit: 61a35d0643eb3bf5adb8f8831da54771d8dde626
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67277074"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71059531"
 ---
 Antes de tentar realizar este tutorial, você deve ter concluído com sucesso:
 
@@ -13,6 +13,7 @@ Antes de tentar realizar este tutorial, você deve ter concluído com sucesso:
 Neste tutorial, você aprenderá como:
 
 > [!div class="checklist"]
+>
 > - Criar um [`Grid`](xref:Xamarin.Forms.Grid) do Xamarin.Forms em XAML.
 > - Especificar colunas e linhas para `Grid`.
 > - Distribuir o conteúdo em diversas colunas ou linhas em `Grid`.
