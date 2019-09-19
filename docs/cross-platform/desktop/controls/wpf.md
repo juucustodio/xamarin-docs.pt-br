@@ -5,12 +5,12 @@ description: Este documento compara e contrasta o WPF para Xamarin. Forms. Ele a
 author: conceptdev
 ms.author: crdun
 ms.date: 04/26/2017
-ms.openlocfilehash: d23b449382183b0385eac38c0b9205e48dbe0a34
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: de8e3445679e185b488311e58221ae5f4c28f85c
+ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290404"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71106040"
 ---
 # <a name="wpf-vs-xamarinforms-similarities--differences"></a>WPF vs. Xamarin. Forms: Semelhanças & diferenças
 
@@ -65,6 +65,7 @@ Um dos principais conceitos transferidos é uma infra-estrutura de ligação de 
 ### <a name="defining-bindable-properties"></a>Definindo propriedades vinculáveis
 
 A definição de uma propriedade vinculável no Xamarin. Forms é a mesma do WPF:
+
 1. O objeto deve derivar `BindableObject`de.
 2. Deve haver um campo estático público do tipo `BindableProperty` declarado para definir a chave de armazenamento de backup para a propriedade.
 3. Deve haver um wrapper de propriedades de instância pública que `GetValue` usa `SetValue` e para recuperar e alterar o valor das propriedades.

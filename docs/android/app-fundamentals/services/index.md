@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2018
-ms.openlocfilehash: 7123d7d491bb32a8a506b308cac5ecb6458a1add
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 042878fa8d30acb55de68f63e3491aacb5dbdfb5
+ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70754866"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71105882"
 ---
 # <a name="creating-android-services"></a>Criando serviços Android
 
@@ -66,6 +66,7 @@ A partir do Android 8,0 (API nível 26), um aplicativo Android não tem mais a c
 * Outro aplicativo está em primeiro plano e está usando componentes de um aplicativo que seria, de outra forma, em segundo plano. Um exemplo disso é se o aplicativo A, que está em primeiro plano, está associado a um serviço fornecido pelo aplicativo B. o aplicativo B também seria considerado em primeiro plano e não encerrado pelo Android para estar em segundo plano.
 
 Há algumas situações em que, embora um aplicativo esteja em segundo plano, o Android ativará o aplicativo e relaxará essas restrições por alguns minutos, permitindo que o aplicativo execute algum trabalho:
+
 * Uma mensagem de nuvem firebase de alta prioridade é recebida pelo aplicativo.
 * O aplicativo recebe uma difusão. 
 * O aplicativo recebe e executa um `PendingIntent` em resposta a uma notificação.

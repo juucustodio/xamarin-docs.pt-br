@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: maddyleger1
 ms.author: maleger
 ms.date: 03/27/2019
-ms.openlocfilehash: 5b87c631574f159230e1dc23285b9087bcc94255
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 57c0fd540ef42c18462b4f989b21bac5ed05dc04
+ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70767325"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71105993"
 ---
 # <a name="render-custom-controls-in-the-xaml-previewer"></a>Renderizar controles personalizados no previsor XAML
 
@@ -51,6 +51,7 @@ Verifique se você tem pelo menos o Xamarin. Forms 3,6 instalado. Você pode atu
 
 ### <a name="even-with-designtimevisibletrue-my-custom-control-isnt-rendering-properly"></a>Mesmo com `[DesignTimeVisible(true)]`o, meu controle personalizado não é renderizado corretamente.
 Os controles personalizados que dependem muito dos dados code-behind ou back-end nem sempre funcionam no previsor XAML. Você pode tentar:
+
 * Movendo o controle para que ele não seja inicializado se o [modo de design estiver habilitado](index.md#detect-design-mode)
 * Configurando [dados de tempo de design](design-time-data.md) para mostrar dados falsos do back-end
 

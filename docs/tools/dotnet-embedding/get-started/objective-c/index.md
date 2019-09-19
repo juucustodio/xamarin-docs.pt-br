@@ -6,12 +6,12 @@ ms.assetid: 4ABC0247-B608-42D4-89CB-D2E598097142
 author: conceptdev
 ms.author: crdun
 ms.date: 11/14/2017
-ms.openlocfilehash: 66b99e0da574c50df32afedb1dd6dc9de315b347
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: b9c97e871791b633c65e9d374edfe446874567e9
+ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70278461"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71106097"
 ---
 # <a name="getting-started-with-objective-c"></a>Introdução ao Objective-C
 
@@ -28,6 +28,7 @@ Para usar a inserção do .NET com o Objective-C, você precisará de um Mac em 
 Você pode instalar [Visual Studio para Mac](https://visualstudio.microsoft.com/vs/mac/) para editar e compilar seu C# código.
 
 > [!NOTE]
+>
 > - Versões anteriores do macOS, Xcode e mono _podem_ funcionar, mas não são testadas e não suportadas
 > - A geração de código pode ser feita no Windows, mas só é possível compilá-la em um computador Mac em que o Xcode está instalado
 

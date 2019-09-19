@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/06/2018
-ms.openlocfilehash: 870765a7a32874dfa17a9b0cf7176e4a721abf47
-ms.sourcegitcommit: cf56d2bae34dc0f8e94c2d3d28d5f460d59807bf
+ms.openlocfilehash: e001f22759ac70bbf81a10bf5e56790497dab767
+ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70985956"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71105983"
 ---
 # <a name="xamarinios-errors"></a>Erros do Xamarin. iOS
 
@@ -1598,6 +1598,7 @@ Não foi possível carregar o assembly raiz. Verifique se o caminho na mensagem 
 Ocorreu algo inesperado ao tentar otimizar o código de associação gerado. O elemento que está causando o problema é nomeado na mensagem de erro. Para corrigir esse problema, o assembly chamado (ou que contém o tipo ou o método nomeado) precisará ser fornecido em um novo problema no [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) , juntamente com um log de compilação completo com detalhes `-v -v -v -v` habilitados (ou seja, nos **argumentos mTouch adicionais**).
 
 O último dígito `x` será:
+
 - `0`para um nome de assembly;
 - `1`para um nome de tipo;
 - `3`para um nome de método;

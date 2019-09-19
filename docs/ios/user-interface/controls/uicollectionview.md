@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/20/2017
-ms.openlocfilehash: 29483ca184786f8f0d2a7d0d9345608542d30e61
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 078d5a2d5c05f39a9c6d8d081b08faa7b4b8ec67
+ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70768850"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71106116"
 ---
 # <a name="collection-views-in-xamarinios"></a>Exibições de coleção no Xamarin. iOS
 
@@ -459,6 +459,7 @@ Selecione o modo de exibição de coleção (pode ser mais fácil fazer isso na 
 [![](uicollectionview-images/quick04.png "Definir os tamanhos de exibição de coleção")](uicollectionview-images/quick04.png#lightbox)
 
 Em seguida, edite a célula padrão:
+
 - Alterar a cor do plano de fundo para azul
 - Adicionar um rótulo para atuar como o título da célula
 - Definir o identificador de reutilização para a **célula**

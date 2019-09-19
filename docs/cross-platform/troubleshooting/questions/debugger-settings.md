@@ -6,12 +6,12 @@ ms.assetid: 3A024E4E-ACA3-4C7A-ADEF-541665D15779
 author: conceptdev
 ms.author: crdun
 ms.date: 05/08/2018
-ms.openlocfilehash: 343f8d37d77726d2cdc06a74c44e476af00dde27
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: a3677117e30538c4df8c9b797acce0be602c3b59
+ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70765152"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71106082"
 ---
 # <a name="what-project-settings-are-required-for-the-debugger"></a>Quais configurações do projeto são necessárias para o depurador?
 
@@ -20,6 +20,7 @@ Para que o depurador funcione conforme o esperado (pontos de interrupção de ac
 Siga estas etapas para verificar as configurações do seu ambiente:
 
 ## <a name="visual-studio"></a>Visual Studio
+
 1. Abrir as opções de projeto
 2. Vá para **compilação > avançado...** Definir informações de depuração como **completas**
 3. Configurações para cada plataforma:
@@ -27,6 +28,7 @@ Siga estas etapas para verificar as configurações do seu ambiente:
    - Vá para **depuração do iOS > depuração de & instrumentação**. Marque a caixa de seleção **Habilitar depuração** .
 
 ## <a name="visual-studio-for-mac"></a>Visual Studio para Mac
+
 1. Abrir as opções de projeto
 2. Vá para **compilar > compilador > opções gerais**. Definir informações de depuração como **completas**
 3. Configurações para cada plataforma:

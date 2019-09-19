@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/26/2019
-ms.openlocfilehash: 24ab8f4b988277cbbf1162a08e5641332a58bd81
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 19cc24c3937921f4f4d95584e1cd656c37b4155f
+ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70228154"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71105971"
 ---
 # <a name="xamarinforms-label"></a>Rótulo do xamarin. Forms
 
@@ -230,6 +230,7 @@ As capturas de tela a seguir mostram o resultado da configuração de `Formatted
 A altura vertical de um [ `Label` ](xref:Xamarin.Forms.Label) e uma [ `Span` ](xref:Xamarin.Forms.Span) pode ser personalizado definindo o [ `Label.LineHeight` ](xref:Xamarin.Forms.Label.LineHeight) propriedade ou [ `Span.LineHeight` ](xref:Xamarin.Forms.Span.LineHeight) para um `double` valor. No iOS e Android, esses valores são multiplicadores da altura da linha original e na plataforma Universal de Windows (UWP) o `Label.LineHeight` valor da propriedade é um multiplicador de tamanho da fonte do rótulo.
 
 > [!NOTE]
+>
 > - No iOS, o [ `Label.LineHeight` ](xref:Xamarin.Forms.Label.LineHeight) e [ `Span.LineHeight` ](xref:Xamarin.Forms.Span.LineHeight) propriedades alterar a altura da linha de texto que cabem em uma única linha e o texto que é quebrada em várias linhas.
 > - No Android, o [ `Label.LineHeight` ](xref:Xamarin.Forms.Label.LineHeight) e [ `Span.LineHeight` ](xref:Xamarin.Forms.Span.LineHeight) propriedades apenas alterar a altura da linha de texto que é quebrada em várias linhas.
 > - Na UWP, o [ `Label.LineHeight` ](xref:Xamarin.Forms.Label.LineHeight) propriedade altera a altura da linha de texto que é quebrada em várias linhas, e o [ `Span.LineHeight` ](xref:Xamarin.Forms.Span.LineHeight) propriedade não tem nenhum efeito.
@@ -305,7 +306,7 @@ O texto exibido por [`Label`](xref:Xamarin.Forms.Label) e [`Span`](xref:Xamarin.
 1. Defina o `ICommand` que será executado [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer)pelo.
 1. Escreva o código que será executado pelo `ICommand`.
 
-O exemplo de código a seguir, extraído do exemplo de demonstrações [`Label`](xref:Xamarin.Forms.Label) de [hiperlink](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-hyperlinks/) , mostra um cujo [`Span`](xref:Xamarin.Forms.Span) conteúdo está definido de várias instâncias:
+O exemplo de código a seguir, extraído do exemplo de [demonstrações de hiperlink](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-hyperlinks/) , mostra um [`Label`](xref:Xamarin.Forms.Label) cujo conteúdo está definido de várias [`Span`](xref:Xamarin.Forms.Span) instâncias:
 
 ```xaml
 <Label>
@@ -328,7 +329,7 @@ O exemplo de código a seguir, extraído do exemplo de demonstrações [`Label`]
 
 Neste exemplo, a primeira e terceira [`Span`](xref:Xamarin.Forms.Span) instâncias compõem texto, enquanto o segundo `Span` representa um hiperlink tappable. Ele tem sua cor de texto definida como azul e tem uma decoração de texto sublinhado. Isso cria a aparência de um hiperlink, conforme mostrado nas seguintes capturas de tela:
 
-[![] Hiperlinks (label-images/hyperlinks-small.png "") Hiperlinks](label-images/hyperlinks-large.png#lightbox)
+[![Hiperlinks](label-images/hyperlinks-small.png "Hiperlinks")](label-images/hyperlinks-large.png#lightbox)
 
 Quando o hiperlink for tocado, o [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer) responderá executando o `ICommand` definido por sua [`Command`](xref:Xamarin.Forms.TapGestureRecognizer.Command) propriedade. Além disso, a URL especificada pela [`CommandParameter`](xref:Xamarin.Forms.TapGestureRecognizer.CommandParameter) propriedade será passada para o `ICommand` como um parâmetro.
 
@@ -358,7 +359,7 @@ O `TapCommand` executa o `OpenBrowser` método, passando o valor [`TapGestureRec
 
 A abordagem anterior para criar um hiperlink requer escrever código repetitivo toda vez que você precisar de um hiperlink em seu aplicativo. No entanto, [`Label`](xref:Xamarin.Forms.Label) as [`Span`](xref:Xamarin.Forms.Span) classes e podem ser subclasses para `HyperlinkLabel` criar `HyperlinkSpan` classes e, com o reconhecedor de gestos e o código de formatação de texto adicionado lá.
 
-O exemplo de código a seguir, extraído do exemplo de demonstrações `HyperlinkSpan` de [hiperlink](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-hyperlinks/) , mostra uma classe:
+O exemplo de código a seguir, extraído do exemplo de [demonstrações de hiperlink](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-hyperlinks/) , mostra uma `HyperlinkSpan` classe:
 
 ```csharp
 public class HyperlinkSpan : Span

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/21/2018
-ms.openlocfilehash: 40fa2d93b7fd756c284727566e8043f5084bd483
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: def8bf236ec25d3b75e435ff525a683343d9b861
+ms.sourcegitcommit: f324193bcfb1c674e421955cf6ee2a4249d61ac3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70757483"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71119227"
 ---
 # <a name="platform-features"></a>Recursos da plataforma
 
@@ -41,6 +41,10 @@ O Android 3,0 introduziu fragmentos, mostrando como dar suporte a designs mais f
 ## <a name="app-linkingandroidplatformapp-linkingmd"></a>[App-Linking](~/android/platform/app-linking.md)
 
 Este guia discutirá como o Android 6,0 dá suporte à _vinculação de aplicativos_, uma técnica que permite que os aplicativos móveis respondam a URLs em sites. Ele discutirá como implementar a vinculação de aplicativos em um aplicativo Android 6,0 e como configurar um site para conceder permissões ao aplicativo móvel para lidar com links de aplicativo para o domínio.
+
+## <a name="android-10androidplatformandroid-10md"></a>[Android 10](~/android/platform/android-10.md)
+
+Este artigo fornece uma descrição dos novos recursos do Android 10, explica como preparar o Xamarin. Android para desenvolvimento do Android 10 e fornece links para aplicativos de exemplo que ilustram como usar os recursos do Oreo do Android em aplicativos Xamarin. Android.
 
 ## <a name="android-9-pieandroidplatformpiemd"></a>[Pizza do Android 9](~/android/platform/pie.md)
 
