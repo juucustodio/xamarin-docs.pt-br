@@ -1,14 +1,15 @@
 ---
-ms.openlocfilehash: b2a15ab67cdf6498a2ca92b29bebda2998349314
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: b1c6e031d30dc4c30007e04cd8e883c8ddf2e6a0
+ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68669518"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71107153"
 ---
 Parabéns por concluir este tutorial, no qual você aprendeu a:
 
 > [!div class="checklist"]
+>
 > - Criar um [`Label`](xref:Xamarin.Forms.Label) do Xamarin.Forms em XAML.
 > - Alterar a aparência do `Label`.
 > - Apresentar o texto, em um único `Label`, que tenha vários formatos.
