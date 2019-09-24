@@ -6,12 +6,12 @@ ms.assetid: 46E0578A-7EB9-C105-ABB0-A043E501F36B
 author: conceptdev
 ms.author: crdun
 ms.date: 03/23/2017
-ms.openlocfilehash: 0e513ecb67f5b902afd91546b1de6720cb0369c1
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: bf6ea18c73226a620ce002797d2d2b04b48c7cc8
+ms.sourcegitcommit: 76f930ce63b193ca3f7f85f768b031e59cb342ec
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70761978"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71198425"
 ---
 # <a name="part-6---testing-and-app-store-approvals"></a>Parte 6 – Teste e aprovações da app store
 
@@ -100,7 +100,7 @@ A lista a seguir é um bom ponto de partida para verificar os casos de borda que
 
 ### <a name="guidelines-are-more-than-just-a-guide"></a>As diretrizes são mais do que apenas um ' guia '
 
-A Apple é famosa por ser estrito sobre a adesão às suas diretrizes de interface humana, uma vez que uma das principais forças de sua plataforma é a consistência (e o aumento percebido na usabilidade). A Microsoft adotou uma abordagem semelhante com os aplicativos do Windows que implementam a interface do usuário estilo metro. O processo de aprovação para ambas as plataformas envolverá seu aplicativo sendo avaliado para sua adesão à filosofia de design relevante.
+A Apple é famosa por ser estrito sobre a adesão às suas diretrizes de interface humana, uma vez que uma das principais forças de sua plataforma é a consistência (e o aumento percebido na usabilidade). A Microsoft adotou uma abordagem semelhante com os aplicativos do Windows que implementam o [sistema de design fluente](https://microsoft.com/design/fluent). O processo de aprovação para ambas as plataformas envolverá seu aplicativo sendo avaliado para sua adesão à filosofia de design relevante.
 
 Isso não quer dizer que a inovação da interface do usuário não é suportada nem incentivada, mas há certas coisas que você não deve fazer "ou seu aplicativo será rejeitado.
 

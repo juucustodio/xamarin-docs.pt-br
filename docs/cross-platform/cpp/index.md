@@ -5,12 +5,12 @@ description: Visual Studio para Mac pode ser usado para criar e integrar o C/C++
 author: mikeparker104
 ms.author: miparker
 ms.date: 12/17/2018
-ms.openlocfilehash: 685d4f5de197c6b3664d63306fa206bea17409e1
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: a10d63e8ed152fae3c9e87cbae7bacb25a0d019c
+ms.sourcegitcommit: 09bc69d7119a04684c9e804c5cb113b8b1bb7dfc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70766357"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71206379"
 ---
 # <a name="use-cc-libraries-with-xamarin"></a>Usar C/C++ bibliotecas com o Xamarin
 
@@ -132,7 +132,7 @@ Serão essas funções de invólucro que são usadas no lado do [Xamarin](https:
 
 ## <a name="wrapping-the-native-library-stage-2"></a>Encapsulando a biblioteca nativa (estágio 2)
 
-Este estágio requer as [bibliotecas pré-compiladas](https://github.com/xamarin/mobcat/tree/master/samples/cpp_with_xamarin/Sample/Artefacts) descritas na [seção anterior](##creating-the-native-libraries-stage-1).
+Este estágio requer as [bibliotecas pré-compiladas](https://github.com/xamarin/mobcat/tree/master/samples/cpp_with_xamarin/Sample/Artefacts) descritas na [seção anterior](#creating-the-native-libraries-stage-1).
 
 ### <a name="creating-the-visual-studio-solution"></a>Criando a solução do Visual Studio
 

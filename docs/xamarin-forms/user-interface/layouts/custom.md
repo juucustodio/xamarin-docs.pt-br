@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/29/2017
-ms.openlocfilehash: 0828d780ed075a6e3b18ba5020f5908fb8c06189
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 9442116bf053768fe22d123d1c7e3d146f9b2834
+ms.sourcegitcommit: 76f930ce63b193ca3f7f85f768b031e59cb342ec
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292583"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71198500"
 ---
 # <a name="create-a-custom-layout-in-xamarinforms"></a>Criar um layout personalizado no Xamarin. Forms
 
 [![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-customlayout-wraplayout)
 
-_Xamarin. Forms define quatro classes de layout – StackLayout, AbsoluteLayout, RelativeLayout e grade, e cada organiza seus filhos de uma maneira diferente. No entanto, às vezes, é necessário para organizar o conteúdo da página usando um layout que não são fornecido pelo xamarin. Forms. Este artigo explica como escrever uma classe de layout personalizado e demonstra uma classe de WrapLayout sensíveis à orientação que organiza seus filhos horizontalmente pela página e, em seguida, ajusta a exibição dos filhos subsequentes em linhas adicionais._
+_O Xamarin. Forms define cinco classes de layout – StackLayout, AbsoluteLayout, RelativeLayout, Grid e FlexLayout, e cada uma organiza seus filhos de uma maneira diferente. No entanto, às vezes, é necessário para organizar o conteúdo da página usando um layout que não são fornecido pelo xamarin. Forms. Este artigo explica como escrever uma classe de layout personalizado e demonstra uma classe de WrapLayout sensíveis à orientação que organiza seus filhos horizontalmente pela página e, em seguida, ajusta a exibição dos filhos subsequentes em linhas adicionais._
 
 No xamarin. Forms, todas as classes de layout derivam de [ `Layout<T>` ](xref:Xamarin.Forms.Layout`1) classe e restringir o tipo genérico para [ `View` ](xref:Xamarin.Forms.View) e seus tipos derivados. Por sua vez, o `Layout<T>` classe deriva de [ `Layout` ](xref:Xamarin.Forms.Layout) classe, que fornece o mecanismo para posicionamento e o filho de dimensionamento elementos.
 
@@ -427,7 +427,7 @@ O número de colunas em cada linha depende do tamanho da foto, a largura da tela
 
 - [WrapLayout (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-customlayout-wraplayout)
 - [Layouts personalizados](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter26.md)
-- [Criar Layouts personalizados no xamarin. Forms (vídeo)](https://evolve.xamarin.com/session/56e20f83bad314273ca4d81c)
+- [Criar Layouts personalizados no xamarin. Forms (vídeo)](https://www.youtube.com/watch?v=sxjOqNZFhKU)
 - [T\<> de layout](xref:Xamarin.Forms.Layout`1)
 - [Layout](xref:Xamarin.Forms.Layout)
 - [VisualElement](xref:Xamarin.Forms.VisualElement)

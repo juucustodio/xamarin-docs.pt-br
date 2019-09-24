@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 06/25/2018
-ms.openlocfilehash: d88832dd4fd69019f9905fb779c5572ba9a689eb
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: c6385ff193c54fdab8f252c757cad810751b3f08
+ms.sourcegitcommit: 09bc69d7119a04684c9e804c5cb113b8b1bb7dfc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70281030"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71206295"
 ---
 # <a name="ios-platform-features-overview"></a>Visão geral dos recursos da plataforma iOS
 
@@ -22,7 +22,7 @@ Esta página lista as versões recentes do iOS, além de destacar algumas das es
 
 |  |  |
 |-------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Introdução à visualização do iOS 13](~/ios/platform/ios13/index.md) | Este documento descreve o Xamarin. iOS 13 Preview.|
+| [Introdução ao iOS 13](~/ios/platform/ios13/index.md) | Este documento descreve o Xamarin. iOS 13.|
 | [Introdução ao iOS 12](~/ios/platform/introduction-to-ios12/index.md) | Este documento descreve os recursos do iOS 12 disponíveis para uso durante a criação de aplicativos Xamarin. iOS.|
 | [Introdução ao iOS 11](~/ios/platform/introduction-to-ios11/index.md) | Este documento descreve os recursos novos e atualizados no iOS 11 e no Xcode 9, como ARKit, Core ML, Core NFC, drag e drop, MapKit, PDFKit, SiriKit e Vision. Ele é vinculado a guias que descrevem como usar esses recursos com o Xamarin. iOS. |
 | [Introdução ao iOS 10](~/ios/platform/introduction-to-ios10/index.md) | o iOS 10 inclui várias novas APIs e serviços que permitem desenvolver aplicativos com novos recursos e funcionalidades. Com o iOS 10, os aplicativos têm novas capacidades, como estender mapas, mensagens, telefone e Siri. Esta seção mostra o comos para aproveitar esses recursos em um aplicativo Xamarin. iOS. |

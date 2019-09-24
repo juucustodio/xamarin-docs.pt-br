@@ -7,16 +7,14 @@ ms.technology: xamarin-forms
 author: davidortinau
 ms.author: daortin
 ms.date: 09/10/2019
-ms.openlocfilehash: c46da6b4ed877cc85f98e6ef0ab2b9a28d811723
-ms.sourcegitcommit: cf56d2bae34dc0f8e94c2d3d28d5f460d59807bf
+ms.openlocfilehash: c1f75f4872d787e261ab6bbac3624e31538c6ff0
+ms.sourcegitcommit: 09bc69d7119a04684c9e804c5cb113b8b1bb7dfc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70986005"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71206535"
 ---
 # <a name="setup-sign-in-with-apple-for-xamarinforms"></a>Entrar com a Apple para Xamarin. Forms
-
-![Esta API está atualmente em visualização](~/media/shared/preview.png)
 
 Este guia aborda a série de etapas necessárias para configurar seus aplicativos de plataforma cruzada para que sejam avançados de entrar com a Apple. Embora a configuração da Apple seja direta no portal do desenvolvedor da Apple, etapas adicionais são necessárias para criar uma relação segura entre o Android e a Apple. 
 

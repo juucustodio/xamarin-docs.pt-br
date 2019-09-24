@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/12/2019
-ms.openlocfilehash: 6c529c8df7ef1e4372285a157f489941d795d7f6
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: b735541d51321231775b025745e68c54552697d3
+ms.sourcegitcommit: 76f930ce63b193ca3f7f85f768b031e59cb342ec
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655228"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71198487"
 ---
 # <a name="xamarinforms-material-visual"></a>Visual de material do Xamarin. Forms
 
@@ -53,18 +53,18 @@ Funcionalmente, os renderizadores de material não são diferentes para os rende
 
 Depois de instalar o pacote NuGet [Xamarin. Forms. Visual. material](https://www.nuget.org/packages/Xamarin.Forms.Visual.Material/) , os renderizadores de material devem ser inicializados em cada projeto de plataforma.
 
-No Ios, isso deve ocorrer em **AppDelegate.cs** invocando o `FormsMaterial.Init` método *após* o `Xamarin.Forms.Forms.Init` método:
+No Ios, isso deve ocorrer em **AppDelegate.cs** invocando o `Xamarin.Forms.FormsMaterial.Init` método *após* o `Xamarin.Forms.Forms.Init` método:
 
 ```csharp
 global::Xamarin.Forms.Forms.Init();
-FormsMaterial.Init();
+global::Xamarin.Forms.FormsMaterial.Init();
 ```
 
-No Android, isso deve ocorrer em **MainActivity.cs** invocando o `FormsMaterial.Init` método *após* o `Xamarin.Forms.Forms.Init` método:
+No Android, isso deve ocorrer em **MainActivity.cs** invocando o `Xamarin.Forms.FormsMaterial.Init` método *após* o `Xamarin.Forms.Forms.Init` método:
 
 ```csharp
 global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
-FormsMaterial.Init(this, savedInstanceState);
+global::Xamarin.Forms.FormsMaterial.Init(this, savedInstanceState);
 ```
 
 ## <a name="consume-material-renderers"></a>Consumir renderizadores de materiais
@@ -78,7 +78,7 @@ Os aplicativos podem optar por usar os renderizadores de material definindo [`Vi
 </ContentPage>
 ```
 
-O código C# equivalente é:
+Este é o código C# equivalente:
 
 ```csharp
 ContentPage contentPage = new ContentPage();

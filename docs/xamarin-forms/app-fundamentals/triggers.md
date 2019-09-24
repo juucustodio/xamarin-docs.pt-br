@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/01/2016
-ms.openlocfilehash: 31dfcc26121b0683db476b0c4be9a420efe5b66f
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 9e49dfa99ccb6aae49a72ce044bb8071c210336e
+ms.sourcegitcommit: 76f930ce63b193ca3f7f85f768b031e59cb342ec
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70771243"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71198571"
 ---
 # <a name="xamarinforms-triggers"></a>Gatilhos do Xamarin.Forms
 
@@ -144,7 +144,7 @@ Uma implementação de ação do gatilho deve:
 
 - Substituir o método `Invoke` – isso é chamado sempre que os critérios do gatilho forem atendidos.
 
-- Outra opção é expor propriedades que podem ser definidas no XAML quando o gatilho é declarado (como `Anchor`, `Scale` e `Length` neste exemplo).
+- Opcionalmente, expor propriedades que podem ser definidas no XAML quando o gatilho é declarado. Para obter um exemplo disso, consulte a `VisualElementPopTriggerAction` classe no aplicativo de exemplo que o acompanha.
 
 ```csharp
 public class NumericValidationTriggerAction : TriggerAction<Entry>
@@ -158,7 +158,7 @@ public class NumericValidationTriggerAction : TriggerAction<Entry>
 }
 ```
 
-As propriedades expostas pela ação de gatilho podem ser definidas na declaração de XAML da seguinte maneira:
+O gatilho de evento pode então ser consumido do XAML:
 
 ```xaml
 <EventTrigger Event="TextChanged">

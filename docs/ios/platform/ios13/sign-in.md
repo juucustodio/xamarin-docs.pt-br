@@ -7,30 +7,18 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/10/2019
-ms.openlocfilehash: a8ea06d81fcc79a24f155a1562818daea3ba982a
-ms.sourcegitcommit: 13e43f510da37ad55f1c2f5de1913fb0aede6362
+ms.openlocfilehash: 5c5191a6a7490ec0301bdea7b7f5aa2217b80c96
+ms.sourcegitcommit: 09bc69d7119a04684c9e804c5cb113b8b1bb7dfc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71021393"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71206368"
 ---
 # <a name="sign-in-with-apple-in-xamarinios"></a>Entre com a Apple no Xamarin. iOS
-
-![Esta API está atualmente em visualização](~/media/shared/preview.png)
 
 Entrar com a Apple é um novo serviço que fornece proteção de identidade para usuários de serviços de autenticação de terceiros. A partir do iOS 13, a Apple exige que qualquer aplicativo novo usando serviços de autenticação de terceiros também deve fornecer entrada com a Apple. Os aplicativos existentes que estão sendo atualizados não precisam adicionar entrar com a Apple até abril de 2020.
 
 Este documento apresenta como você pode adicionar a entrada com o Apple em aplicativos iOS 13.
-
-## <a name="requirements"></a>Requisitos
-
-Esse recurso requer:
-
-* iOS 13
-* Xamarin. iOS 12,99
-* Visual Studio 2019 ou Visual Studio 2019 para Mac com suporte do Xcode 11.
-
-Consulte [introdução](get-started.md) para obter mais detalhes.
 
 ## <a name="apple-developer-setup"></a>Instalação do desenvolvedor da Apple
 
