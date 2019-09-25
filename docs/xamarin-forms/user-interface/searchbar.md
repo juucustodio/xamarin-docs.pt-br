@@ -8,10 +8,10 @@ author: profexorgeek
 ms.author: jusjohns
 ms.date: 07/12/2019
 ms.openlocfilehash: 41bb9e082f042e7ca2933d72b4b71a4ff6c4fef4
-ms.sourcegitcommit: 9178e2e689f027212ea3e623b556b312985d79fe
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69658031"
 ---
 # <a name="xamarinforms-searchbar"></a>SearchBar Xamarin. Forms
@@ -20,7 +20,7 @@ ms.locfileid: "69658031"
 
 O Xamarin. Forms [`SearchBar`](xref:Xamarin.Forms.SearchBar) é um controle de entrada do usuário usado para iniciar uma pesquisa. O `SearchBar` controle dá suporte a texto de espaço reservado, entrada de consulta, execução de pesquisa e cancelamento. A captura de tela a `SearchBar` seguir mostra uma consulta com os `ListView`resultados exibidos em um:
 
-[ ![Captura de tela de Searchbar em Ios e Android](searchbar-images/device-searchbars-cropped.png "Searchbar no Ios e Android") ] (searchbar-images/device-searchbars.png#lightbox "Searchbar no Ios e Android")
+[![Captura de tela de Searchbar no Ios e Android](searchbar-images/device-searchbars-cropped.png "Searchbar no Ios e Android")](searchbar-images/device-searchbars.png#lightbox "SearchBar no iOS e Android")
 
 A `SearchBar` classe define as seguintes propriedades:
 
@@ -82,7 +82,7 @@ SearchBar searchBar = new SearchBar
 
 A captura de tela a seguir `SearchBar` mostra o controle resultante:
 
-[ ![Captura de tela de Searchbar personalizado no Ios e Android](searchbar-images/device-searchbars-styled-cropped.png "Searchbar personalizado no Ios e no Android") ] (searchbar-images/device-searchbars-styled.png#lightbox "Searchbar personalizado no Ios e no Android")
+[![Captura de tela de Searchbar personalizado no Ios e no Android](searchbar-images/device-searchbars-styled-cropped.png "Searchbar personalizado no Ios e no Android")](searchbar-images/device-searchbars-styled.png#lightbox "SearchBar personalizado no iOS e no Android")
 
 ## <a name="perform-a-search-with-event-handlers"></a>Executar uma pesquisa com manipuladores de eventos
 

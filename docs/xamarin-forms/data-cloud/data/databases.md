@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 06/21/2018
 ms.openlocfilehash: 9ea105b27aacef9ca9d63af0c57de880d039ff53
-ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "68739174"
 ---
 # <a name="xamarinforms-local-databases"></a>Bancos de dados locais do Xamarin.Forms
@@ -26,7 +26,7 @@ Os aplicativos Xamarin.Forms podem usar o pacote [NuGet SQLite.NET PCL](https://
 
 O [aplicativo de exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo) que acompanha é um aplicativo simples de lista de tarefas. As capturas de tela a seguir mostram como o exemplo é exibido em cada plataforma:
 
-[![Capturas de tela de exemplo do banco de dados Xamarin.Forms](databases-images/todo-list-sml.png "Capturas de tela da primeira página TodoList")](databases-images/todo-list.png#lightbox "Capturas de tela da primeira página TodoList")[![Capturas de tela de exemplo do banco de dados Xamarin.Forms](databases-images/todo-list-sml.png "Capturas de tela de exemplo do banco de dados Xamarin.Forms")](databases-images/todo-list.png#lightbox "Capturas de tela de exemplo do banco de dados Xamarin.Forms")
+[![Capturas de tela de exemplo do banco de dados Xamarin. Forms](databases-images/todo-list-sml.png "Capturas de tela da primeira") ](databases-images/todo-list.png#lightbox "Capturas de tela da primeira lista de tarefas") lista de tarefas [ ![Bancos de dados do Xamarin. Forms exemplo capturas]de tela(databases-images/todo-list-sml.png "todo da primeira página") ](databases-images/todo-list.png#lightbox "Capturas de tela da primeira lista de tarefas")
 
 <a name="Using_SQLite_with_PCL" />
 

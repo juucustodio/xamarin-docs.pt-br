@@ -10,10 +10,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 04/01/2019
 ms.openlocfilehash: 48af81856ebe92a712b5d41d8d856bb00a526982
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "68655002"
 ---
 # <a name="create-a-single-page-xamarinforms-application"></a>Criar um aplicativo Xamarin. Forms de página única
@@ -28,7 +28,7 @@ Neste guia de início rápido, você aprenderá a:
 
 O guia de início rápido explica como criar um aplicativo Xamarin. Forms de plataforma cruzada, que permite que você insira uma anotação e persista-a no armazenamento do dispositivo. O aplicativo final é mostrado abaixo:
 
-[![](single-page-images/screenshots-sml.png "Aplicativo de Notas")](single-page-images/screenshots.png#lightbox "Aplicativo de Notas")
+[![](single-page-images/screenshots-sml.png "Aplicativo do Notes")](single-page-images/screenshots.png#lightbox "Aplicativo do Notes")
 
 ::: zone pivot="windows"
 
@@ -177,7 +177,7 @@ Para obter mais informações sobre esses pré-requisitos, consulte [instalando 
 
     ![](single-page-images/vs/ios-start.png "Barra de ferramentas do iOS do Visual Studio")
 
-    [Observações no simulador de Ios ![(single-page-images/vs/notes-ios.png " ")]] (single-page-images/vs/notes-ios-large.png#lightbox "Observações no simulador de Ios")
+    [![](single-page-images/vs/notes-ios.png "Observações no simulador de iOS")](single-page-images/vs/notes-ios-large.png#lightbox "Observações no simulador de iOS")
 
     Insira uma nota e pressione o botão **Salvar**.
 
@@ -327,7 +327,7 @@ Para obter mais informações sobre esses pré-requisitos, consulte [instalando 
 
     ![](single-page-images/vs/ios-start.png "Barra de ferramentas do iOS do Visual Studio")
 
-    [Observações no simulador de Ios ![(single-page-images/vs/notes-ios.png " ")]] (single-page-images/vs/notes-ios-large.png#lightbox "Observações no simulador de Ios")
+    [![](single-page-images/vs/notes-ios.png "Observações no simulador de iOS")](single-page-images/vs/notes-ios-large.png#lightbox "Observações no simulador de iOS")
 
     Insira uma nota e pressione o botão **Salvar**.
 
@@ -468,7 +468,7 @@ Para obter mais informações sobre esses pré-requisitos, consulte [instalando 
 
       ![](single-page-images/vsmac/start.png "Barra de ferramentas do Visual Studio para Mac")
 
-      [Observações no simulador de Ios ![(single-page-images/vsmac/notes-ios.png " ")]] (single-page-images/vsmac/notes-ios-large.png#lightbox "Observações no simulador de Ios")
+      [![](single-page-images/vsmac/notes-ios.png "Observações no simulador de iOS")](single-page-images/vsmac/notes-ios-large.png#lightbox "Observações no simulador de iOS")
 
     Insira uma nota e pressione o botão **Salvar**.
 

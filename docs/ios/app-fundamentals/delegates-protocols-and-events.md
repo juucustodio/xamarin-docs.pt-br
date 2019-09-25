@@ -8,10 +8,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 09/17/2017
 ms.openlocfilehash: d42263733c7fa793713738be4b389eaa4850f38b
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "68649365"
 ---
 # <a name="events-protocols-and-delegates-in-xamarinios"></a>Eventos, protocolos e delegados no Xamarin. iOS
@@ -253,7 +253,7 @@ No entanto, ao contrário dos protocolos Objective C# -C, C# (ou interfaces), as
 
 O Xamarin. iOS cuida de toda a associação do iOS para você. No entanto, se você precisar associar um protocolo de Objective-C manualmente, poderá fazer isso decorando uma classe com o `ExportAttribute`. Esse é o mesmo método usado pelo Xamarin. iOS em si.
 
-Para obter mais informações sobre como associar tipos Objective-C no Xamarin. iOS, consulte o artigo associando os [tipos Objective-c](~/ios/platform/binding-objective-c/index.md).
+Para obter mais informações sobre como associar tipos Objective-C no Xamarin. iOS, consulte o artigo [associando os tipos Objective-c](~/ios/platform/binding-objective-c/index.md).
 
 No entanto, ainda não estamos com protocolos. Eles também são usados no iOS como base para delegados de Objective-C, que é o tópico da próxima seção.
 

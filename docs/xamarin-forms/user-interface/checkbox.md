@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 06/11/2019
 ms.openlocfilehash: f78ca9d2cf7a9e57b81c5d923c64b36a7982c4b0
-ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "68739153"
 ---
 # <a name="xamarinforms-checkbox"></a>Caixa de seleção Xamarin. Forms
@@ -108,9 +108,9 @@ Neste exemplo, o [`Label`](xref:Xamarin.Forms.Label) usa uma expressão de assoc
 
 Nas capturas de tela a seguir, a captura de [`Label`](xref:Xamarin.Forms.Label) tela do IOS `CheckBox` mostra a formatação quando o está vazio, enquanto `Label` a captura de `CheckBox` tela do Android mostra a formatação quando o está marcado:
 
-[ ![Captura de tela de uma caixa de seleção de associação de dados, na](checkbox-images/checkbox-databinding.png "caixa de seleção Associação de dados") Ios e Android] (checkbox-images/checkbox-databinding-large.png#lightbox "Caixa de seleção Associação de dados")
+[![Captura de tela de uma caixa de seleção de associação de dados, no Ios e no Android](checkbox-images/checkbox-databinding.png "Caixa de seleção Associação de dados")](checkbox-images/checkbox-databinding-large.png#lightbox "Caixa de seleção Associação de dados")
 
-Para obter mais informações sobre gatilhos, consulte gatilhos do [Xamarin. Forms](~/xamarin-forms/app-fundamentals/triggers.md).
+Para obter mais informações sobre gatilhos, consulte [gatilhos do Xamarin. Forms](~/xamarin-forms/app-fundamentals/triggers.md).
 
 ## <a name="disable-a-checkbox"></a>Desabilitar uma caixa de seleção
 

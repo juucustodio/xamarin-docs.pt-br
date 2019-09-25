@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/28/2018
-ms.openlocfilehash: 0a82c84b334cbfcf3ab978b5ebd0e256bcd64815
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 6db927409e07b97ef5b7b1e7f54b6bcbdc60e115
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70755053"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71249669"
 ---
 # <a name="creating-resources-for-varying-screens"></a>Criando recursos para diferentes telas
 
@@ -50,6 +50,8 @@ No entanto, é possível que o dimensionamento faça com que os bitmaps apareça
 A declaração do tamanho da tela garante que apenas os dispositivos com suporte possam baixar o aplicativo. Isso é feito definindo o elemento [suportation-screens](https://developer.android.com/guide/topics/manifest/supports-screens-element.html) no arquivo **AndroidManifest. xml** . Esse elemento é usado para especificar quais tamanhos de tela têm suporte no aplicativo. Uma determinada tela será considerada suportada se o aplicativo puder posicionar corretamente seus layouts para preencher a tela. Usando esse elemento de manifesto, o aplicativo não aparecerá no [*Google Play*](https://play.google.com/) para dispositivos que não atendem às especificações da tela. No entanto, o aplicativo ainda será executado em dispositivos com telas sem suporte, mas os layouts podem parecer borrados e pixels.
 
 As Sixes de tela com suporte são declaradas no arquivo **colocalizadas/AndroidManifest. xml** da solução:
+
+<!-- markdownlint-disable MD001 -->
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 

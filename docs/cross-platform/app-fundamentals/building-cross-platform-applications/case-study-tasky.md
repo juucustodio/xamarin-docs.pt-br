@@ -6,12 +6,12 @@ ms.assetid: B581B2D0-9890-C383-C654-0B0E12DAD5A6
 author: conceptdev
 ms.author: crdun
 ms.date: 03/23/2017
-ms.openlocfilehash: 798dd1b5df2ea05eb428c9465e996d606c22009b
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 246ee002404fdf6fe1120c19701aceb3c2dee7db
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70281204"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71249781"
 ---
 # <a name="cross-platform-app-case-study-tasky"></a>Estudo de caso do aplicativo de plataforma cruzada: Tasky
 
@@ -475,7 +475,7 @@ Os aplicativos resultantes têm esta aparência em cada plataforma:
 
  <a name="iOS" />
 
-#### <a name="ios"></a>iOS
+### <a name="ios"></a>iOS
 
 O aplicativo usa o design de interface do usuário padrão iOS, como o botão "Adicionar" posicionado na barra de navegação e usando o ícone de **adição (+)** interno. Ele também usa o comportamento `UINavigationController` de botão "voltar" padrão e dá suporte a "passar o dedo para exclusão" na tabela.
 
@@ -483,7 +483,7 @@ O aplicativo usa o design de interface do usuário padrão iOS, como o botão "A
 
  <a name="Android" />
 
-#### <a name="android"></a>Android
+### <a name="android"></a>Android
 
 O aplicativo do Android usa controles internos, incluindo o layout interno para linhas que exigem um ' tique ' exibido. O comportamento de retorno de hardware/sistema é suportado além de um botão voltar na tela.
 
@@ -491,7 +491,7 @@ O aplicativo do Android usa controles internos, incluindo o layout interno para 
 
  <a name="Windows_Phone" />
 
-#### <a name="windows-phone"></a>Windows Phone
+### <a name="windows-phone"></a>Windows Phone
 
 O aplicativo Windows Phone usa o layout padrão, preenchendo a barra de aplicativos na parte inferior da tela, em vez de uma barra de navegação na parte superior.
 

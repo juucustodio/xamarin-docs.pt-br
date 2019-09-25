@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 12/18/2018
 ms.openlocfilehash: a824c892d21df9264b772bed09a4aef893f3b949
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "68647903"
 ---
 # <a name="bindable-layouts-in-xamarinforms"></a>Layouts vinculáveis no Xamarin. Forms
@@ -44,7 +44,7 @@ Um layout vinculável é populado com dados `ItemsSource` definindo sua propried
 <Grid BindableLayout.ItemsSource="{Binding Items}" />
 ```
 
-O código C# equivalente é:
+Este é o código C# equivalente:
 
 ```csharp
 IEnumerable<string> items = ...;
@@ -74,7 +74,7 @@ A aparência de cada item no layout vinculável pode ser definida definindo a `B
 </StackLayout>
 ```
 
-O código C# equivalente é:
+Este é o código C# equivalente:
 
 ```csharp
 DataTemplate circleImageTemplate = ...;
@@ -99,7 +99,7 @@ A aparência de cada item no layout vinculável pode ser escolhida em tempo de e
             ... />
 ```
 
-O código C# equivalente é:
+Este é o código C# equivalente:
 
 ```csharp
 DataTemplateSelector dataTemplateSelector = new TechItemTemplateSelector { ... };

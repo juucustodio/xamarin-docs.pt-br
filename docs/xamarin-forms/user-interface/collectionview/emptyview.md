@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 05/06/2019
 ms.openlocfilehash: c6a2a53f267a7f6764ec441944193e8c5ecd9189
-ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "68739183"
 ---
 # <a name="xamarinforms-collectionview-emptyview"></a>EmptyView CollectionView do Xamarin. Forms
@@ -43,7 +43,7 @@ A [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) propriedade pode ser def
                 EmptyView="No items to display" />
 ```
 
-O código C# equivalente é:
+Este é o código C# equivalente:
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -55,7 +55,7 @@ collectionView.SetBinding(ItemsView.ItemsSourceProperty, "EmptyMonkeys");
 
 O resultado é que, como a coleção associada a dados `null`é, a cadeia de caracteres [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) definida como o valor da propriedade é exibida:
 
-[ ![Captura de tela de uma lista vertical de CollectionView com um modo de exibição de texto vazio, na lista vertical de CollectionView do IOS e Android](emptyview-images/null-itemssource.png "com exibição de texto vazio") ] (emptyview-images/null-itemssource-large.png#lightbox "Lista vertical CollectionView com exibição de texto vazio")
+[![Captura de tela de uma lista vertical CollectionView com uma exibição de texto vazio, no Ios e no Android](emptyview-images/null-itemssource.png "Lista vertical CollectionView com exibição de texto vazio")](emptyview-images/null-itemssource-large.png#lightbox "Lista vertical CollectionView com exibição de texto vazio")
 
 ## <a name="display-views-when-data-is-unavailable"></a>Exibir exibições quando os dados estiverem indisponíveis
 
@@ -92,7 +92,7 @@ A [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) propriedade pode ser def
 </StackLayout>
 ```
 
-O código C# equivalente é:
+Este é o código C# equivalente:
 
 ```csharp
 SearchBar searchBar = new SearchBar { ... };
@@ -112,7 +112,7 @@ collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
 
 Quando o [`SearchBar`](xref:Xamarin.Forms.SearchBar) executa o `FilterCommand`, [`CollectionView`](xref:Xamarin.Forms.CollectionView) a coleção exibida pelo é [`SearchBar.Text`](xref:Xamarin.Forms.SearchBar.Text) filtrada para o termo de pesquisa armazenado na propriedade. Se a operação de filtragem não gerar dados, o [`StackLayout`](xref:Xamarin.Forms.StackLayout) conjunto como o [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) valor da propriedade será exibido:
 
-[ ![Captura de tela de uma lista vertical de CollectionView com exibição vazia personalizada, na lista vertical de CollectionView do Android e Ios](emptyview-images/filter-multiple-views.png "com exibição vazia personalizada") ] (emptyview-images/filter-multiple-views-large.png#lightbox "Lista vertical CollectionView com exibição vazia personalizada")
+[![Captura de tela de uma lista vertical CollectionView com exibição vazia personalizada, no Ios e no Android](emptyview-images/filter-multiple-views.png "Lista vertical CollectionView com exibição vazia personalizada")](emptyview-images/filter-multiple-views-large.png#lightbox "Lista vertical CollectionView com exibição vazia personalizada")
 
 ## <a name="display-a-templated-custom-type-when-data-is-unavailable"></a>Exibir um tipo personalizado de modelo quando os dados estiverem indisponíveis
 
@@ -147,7 +147,7 @@ A [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) propriedade pode ser def
 </StackLayout>
 ```
 
-O código C# equivalente é:
+Este é o código C# equivalente:
 
 ```csharp
 SearchBar searchBar = new SearchBar { ... };
@@ -178,7 +178,7 @@ public class FilterData : BindableObject
 
 A [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) propriedade é definida como um `FilterData` objeto e os dados `Filter` de propriedade são associados à [`SearchBar.Text`](xref:Xamarin.Forms.SearchBar.Text) propriedade. Quando o [`SearchBar`](xref:Xamarin.Forms.SearchBar) executa o `FilterCommand`, [`CollectionView`](xref:Xamarin.Forms.CollectionView) a coleção exibida pelo é `Filter` filtrada para o termo de pesquisa armazenado na propriedade. Se a operação de filtragem não gerar dados, o [`Label`](xref:Xamarin.Forms.Label) definido [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)no, que é definido como o valor [`EmptyViewTemplate`](xref:Xamarin.Forms.ItemsView.EmptyViewTemplate) da propriedade, será exibido:
 
-[ ![Captura de tela de uma lista vertical de CollectionView com um modelo de exibição vazio, na lista vertical de CollectionView do Android e Ios com o](emptyview-images/emptyviewtemplate.png "modelo de exibição vazio") ] (emptyview-images/emptyviewtemplate-large.png#lightbox "Lista vertical de CollectionView com modelo de exibição vazio")
+[![Captura de tela de uma lista vertical CollectionView com um modelo de exibição vazio, no Ios e no Android](emptyview-images/emptyviewtemplate.png "Lista vertical de CollectionView com modelo de exibição vazio")](emptyview-images/emptyviewtemplate-large.png#lightbox "Lista vertical de CollectionView com modelo de exibição vazio")
 
 > [!NOTE]
 > Ao exibir um tipo personalizado de modelo quando os dados não estão disponíveis, [`EmptyViewTemplate`](xref:Xamarin.Forms.ItemsView.EmptyViewTemplate) a propriedade pode ser definida como uma exibição que contém várias exibições filho.
@@ -253,9 +253,9 @@ void ToggleEmptyView(bool isToggled)
 
 O `ToggleEmptyView` método define a [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) Propriedade do `collectionView` objeto como [`ContentView`](xref:Xamarin.Forms.ContentView) [`Switch.IsToggled`](xref:Xamarin.Forms.Switch.IsToggled) um dos dois objetos armazenados no [,combasenovalordapropriedade.`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) Quando o [`SearchBar`](xref:Xamarin.Forms.SearchBar) executa o `FilterCommand`, [`CollectionView`](xref:Xamarin.Forms.CollectionView) a coleção exibida pelo é [`SearchBar.Text`](xref:Xamarin.Forms.SearchBar.Text) filtrada para o termo de pesquisa armazenado na propriedade. Se a operação de filtragem não gerar dados, o `ContentView` objeto definido como a `EmptyView` propriedade será exibido:
 
-[ ![Captura de tela de uma lista vertical de CollectionView com exibições vazias trocadas, na lista vertical de CollectionView do Android e Ios](emptyview-images/swap.png "com exibições vazias trocadas") ] (emptyview-images/swap-large.png#lightbox "Lista vertical CollectionView com exibições vazias trocadas")
+[![Captura de tela de uma lista vertical CollectionView com exibições vazias trocadas, no Ios e no Android](emptyview-images/swap.png "Lista vertical CollectionView com exibições vazias trocadas")](emptyview-images/swap-large.png#lightbox "Lista vertical CollectionView com exibições vazias trocadas")
 
-Para obter mais informações sobre dicionários de recursos, consulte dicionários de [recursos do Xamarin. Forms](~/xamarin-forms/xaml/resource-dictionaries.md).
+Para obter mais informações sobre dicionários de recursos, consulte [dicionários de recursos do Xamarin. Forms](~/xamarin-forms/xaml/resource-dictionaries.md).
 
 ## <a name="choose-an-emptyviewtemplate-at-runtime"></a>Escolha um EmptyViewTemplate em tempo de execução
 
@@ -290,7 +290,7 @@ A aparência do [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) pode ser e
 </ContentPage>
 ```
 
-O código C# equivalente é:
+Este é o código C# equivalente:
 
 ```csharp
 SearchBar searchBar = new SearchBar { ... };
@@ -324,7 +324,7 @@ public class SearchTermDataTemplateSelector : DataTemplateSelector
 
 A `SearchTermTemplateSelector` classe define `DefaultTemplate` e `OtherTemplate` [Propriedadesquesãodefinidasparamodelos`DataTemplate`](xref:Xamarin.Forms.DataTemplate) de dados diferentes. A `OnSelectTemplate` substituição retorna `DefaultTemplate`, que exibe uma mensagem para o usuário, quando a consulta de pesquisa não é igual a "xamarin". Quando a consulta de pesquisa é igual a "xamarin", `OnSelectTemplate` a substituição `OtherTemplate`retorna, que exibe uma mensagem básica ao usuário:
 
-[ ![Captura de tela de uma seleção de modelo de exibição vazia do tempo de execução CollectionView, na](emptyview-images/datatemplateselector.png "seleção do modelo de exibição vazio do IOS e Android em um CollectionView") ] (emptyview-images/datatemplateselector-large.png#lightbox "Seleção de modelo de exibição vazia em tempo de execução em um CollectionView")
+[![Captura de tela de uma seleção de modelo de exibição vazia do tempo de execução CollectionView, no Ios e no Android](emptyview-images/datatemplateselector.png "Seleção de modelo de exibição vazia em tempo de execução em um CollectionView")](emptyview-images/datatemplateselector-large.png#lightbox "Seleção de modelo de exibição vazia em tempo de execução em um CollectionView")
 
 Para obter mais informações sobre seletores de modelo de dados, consulte [criar um Xamarin. Forms DataTemplateSelector](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md).
 

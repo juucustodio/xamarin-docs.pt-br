@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
 ms.openlocfilehash: f40737799f63c6e0c61fcc6f4f59584222a49d6d
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "68648321"
 ---
 # <a name="listview-group-header-style-on-ios"></a>Estilo do cabeçalho do grupo ListView no iOS
@@ -31,7 +31,7 @@ Esses controles específicos da plataforma iOS controlam se [`ListView`](xref:Xa
 </ContentPage>
 ```
 
-Como alternativa, ele pode ser consumido de C# usando a API fluente:
+Como alternativa, ele pode ser consumido de c# usando a API fluente:
 
 ```csharp
 using Xamarin.Forms.PlatformConfiguration;
@@ -50,7 +50,7 @@ Além disso, o `ListView.GetGroupHeaderStyle` método pode ser usado para retorn
 
 O resultado é que um valor `GroupHeaderStyle` especificado é aplicado [`ListView`](xref:Xamarin.Forms.ListView)ao, que controla se as células de cabeçalho flutuam durante a rolagem:
 
-[ ![Captura de tela de células de cabeçalho ListView flutuantes e não flutuantes, em ListView do IOS](listview-group-header-style-images/group-header-styles.png "com células de cabeçalho flutuantes e não flutuantes") ] (listview-group-header-style-images/group-header-styles-large.png#lightbox "ListView com células de cabeçalho flutuantes e não flutuantes")
+[![Captura de tela de células de cabeçalho ListView flutuantes e não flutuantes, no Ios](listview-group-header-style-images/group-header-styles.png "ListView com células de cabeçalho flutuantes e não flutuantes")](listview-group-header-style-images/group-header-styles-large.png#lightbox "ListView com células de cabeçalho flutuantes e não flutuantes")
 
 ## <a name="related-links"></a>Links relacionados
 

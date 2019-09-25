@@ -6,12 +6,12 @@ ms.assetid: F7126340-04B2-4A10-B14D-394E23527C1A
 author: conceptdev
 ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: 7f41d65c8981d4ef6ffcf1b812fbbbb7e72e7719
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: bcee9c7e09a9470cbf80e99c047a7c52f61f888a
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68509740"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71249800"
 ---
 # <a name="3264-bit-platform-considerations"></a>considerações sobre a plataforma de 32/64 bits
 
@@ -34,11 +34,13 @@ O API clássica do Xamarin`XamMac.dll` ( `monotouch.dll`e) tem suporte apenas pa
 
 Para aplicativos móveis Xamarin. iOS que foram convertidos no API Unificada, os desenvolvedores devem atualizar manualmente as configurações de compilação para o destino de 64 bits:
 
+<!-- markdownlint-disable MD001 -->
+
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 1. No **painel de soluções**, clique duas vezes no projeto do aplicativo para abrir a janela **Opções do projeto** .
 2. Selecione **Build do IOS**.
-3. Para o simulador de iPhone, na lista suspensa **arquiteturas com suporte** , selecione **\_x86 64** ou **i386\_+ x86 64**:
+3. Para o simulador de iPhone, na lista suspensa **arquiteturas com suporte** , selecione **x86\_64** ou **i386\_+ x86 64**:
 
    [![Configurando arquiteturas com\_suporte para x86 64 ou\_i386 + x86 64](Images/Image01.png "Setting Supported architectures to x86\_64 or i386 + x86\_64")](Images/Image01-large.png#lightbox) 
 
@@ -53,7 +55,7 @@ Para aplicativos móveis Xamarin. iOS que foram convertidos no API Unificada, os
 
 1. Na **Gerenciador de soluções**, clique com o botão direito do mouse no projeto do aplicativo e selecione **Propriedades**.
 2. Selecione **Build do IOS**.
-3. Para o simulador de iPhone, defina as **arquiteturas com suporte** para **\_x86 64** ou **i386 +\_x86 64**: 
+3. Para o simulador de iPhone, defina as **arquiteturas com suporte** para **x86\_64** ou **i386 +\_x86 64**: 
 
    [![Configurando arquiteturas com suporte para x86_64 ou\_i386 + x86 64](Images/VS02.png "Setting Supported architectures to x86_64 or i386 + x86\_64")](Images/VS02-large.png#lightbox)
 
@@ -104,7 +106,7 @@ Para Mac, esse é o modo preferencial de operação, pois a maioria dos Macs em 
 
 ### <a name="enabling-64-bit-builds-of-xamarinmac-apps"></a>Habilitando compilações de 64 bits de aplicativos Xamarin. Mac
 
-Para obter informações sobre como criar um aplicativo de 64 bits usando o Xamarin. Mac, consulte a atualização de aplicativos unificados do [xamarin. Mac para o guia de 64 bits](~/cross-platform/macios/32-and-64/mac-64-bit.md) .
+Para obter informações sobre como criar um aplicativo de 64 bits usando o Xamarin. Mac, consulte a [atualização de aplicativos unificados do xamarin. Mac para o guia de 64 bits](~/cross-platform/macios/32-and-64/mac-64-bit.md) .
 
 ## <a name="related-links"></a>Links relacionados
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/06/2016
-ms.openlocfilehash: 8e347d5d0c80f7aaac121ca1e68eec618ff2ff88
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: b17a1177abafe4e605263664038842863302ac3b
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70760990"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71249697"
 ---
 # <a name="localization"></a>Localização
 
@@ -60,7 +60,7 @@ O arquivo de recursos base (RESX) contém as cadeias de caracteres de idioma pad
 
 Escolha um nome significativo, como **AppResources**, e pressione **OK**.
 
-[![Adicionar arquivo de recurso](text-images/resx-new-file-sml.png "Caixa de diálogo Novo Arquivo")](text-images/resx-new-file.png#lightbox "Caixa de diálogo Novo Arquivo")
+[![Adicionar arquivo de recurso](text-images/resx-new-file-sml.png "Caixa de diálogo novo arquivo")](text-images/resx-new-file.png#lightbox "Caixa de diálogo novo arquivo")
 
 Dois arquivos serão adicionados ao projeto:
 
@@ -76,6 +76,8 @@ A árvore de solução mostrará que os arquivos são relacionados. O arquivo RE
 Por padrão, quando são geradas referências fortemente tipadas a cadeias de caracteres, elas são o `internal` para o assembly. Isso ocorre porque a ferramenta de build padrão para arquivos RESX gera o arquivo **.designer.cs** com propriedades `internal`.
 
 Selecione o arquivo **AppResources.resx** e mostre o painel **Propriedades** para ver onde a ferramenta de build está configurada. A captura de tela abaixo mostra a **Ferramenta Personalizada: ResXFileCodeGenerator**.
+
+<!-- markdownlint-disable MD001 -->
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 

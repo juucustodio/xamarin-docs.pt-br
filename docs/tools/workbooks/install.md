@@ -6,18 +6,20 @@ ms.assetid: 9D4E10E8-A288-4C6C-9475-02969198C119
 author: conceptdev
 ms.author: crdun
 ms.date: 06/19/2018
-ms.openlocfilehash: 4638d599d72ea2a6375aa2afff5974ef8c09308d
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 6fc204e8524d53820407b2efd3ab0de6af28c669
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70772129"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71249918"
 ---
 # <a name="workbooks-installation-and-requirements"></a>Instalação e requisitos de pastas de trabalho
 
 <a name="install" />
 
 ## <a name="download-and-install"></a>Baixar e instalar
+
+<!-- markdownlint-disable MD001 -->
 
 # <a name="windowstabwindows"></a>[Windows](#tab/windows)
 

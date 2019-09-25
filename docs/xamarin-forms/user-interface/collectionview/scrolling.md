@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/13/2019
 ms.openlocfilehash: 303266f44664f7f57aeaf36869a3a06c8eb91870
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69888645"
 ---
 # <a name="xamarinforms-collectionview-scrolling"></a>Rolagem de CollectionView do Xamarin. Forms
@@ -42,7 +42,7 @@ Quando um usuário passa o dedo para iniciar uma rolagem, a posição final da r
 </CollectionView>
 ```
 
-O código C# equivalente é:
+Este é o código C# equivalente:
 
 ```csharp
 CollectionView collectionView = new CollectionView();
@@ -115,7 +115,7 @@ collectionView.ScrollTo(monkey, position: ScrollToPosition.MakeVisible);
 
 Este código de exemplo resulta na rolagem mínima necessária para rolar o item para a exibição:
 
-[ ![Captura de tela de uma lista vertical de CollectionView com um item rolado na exibição, em lista vertical de CollectionView do Android e Ios](scrolling-images/scrolltoposition-makevisible.png "com item rolado") ] (scrolling-images/scrolltoposition-makevisible-large.png#lightbox "Lista vertical CollectionView com item rolado")
+[![Captura de tela de uma lista vertical CollectionView com um item rolado na exibição, no Ios e no Android](scrolling-images/scrolltoposition-makevisible.png "Lista vertical CollectionView com item rolado")](scrolling-images/scrolltoposition-makevisible-large.png#lightbox "Lista vertical CollectionView com item rolado")
 
 > [!NOTE]
 > O [`ScrollToPosition.MakeVisible`](xref:Xamarin.Forms.ScrollToPosition) membro será usado por padrão, se o `position` argumento não for especificado ao chamar o `ScrollTo` método.
@@ -130,7 +130,7 @@ collectionView.ScrollTo(monkey, position: ScrollToPosition.Start);
 
 Este código de exemplo resulta no item que está sendo rolado para o início da exibição:
 
-[ ![Captura de tela de uma lista vertical de CollectionView com um item rolado na exibição, em lista vertical de CollectionView do Android e Ios](scrolling-images/scrolltoposition-start.png "com item rolado") ] (scrolling-images/scrolltoposition-start-large.png#lightbox "Lista vertical CollectionView com item rolado")
+[![Captura de tela de uma lista vertical CollectionView com um item rolado na exibição, no Ios e no Android](scrolling-images/scrolltoposition-start.png "Lista vertical CollectionView com item rolado")](scrolling-images/scrolltoposition-start-large.png#lightbox "Lista vertical CollectionView com item rolado")
 
 ### <a name="center"></a>Centralizado
 
@@ -142,7 +142,7 @@ collectionView.ScrollTo(monkey, position: ScrollToPosition.Center);
 
 Este código de exemplo resulta no item que está sendo rolado para o centro da exibição:
 
-[ ![Captura de tela de uma lista vertical de CollectionView com um item rolado na exibição, em lista vertical de CollectionView do Android e Ios](scrolling-images/scrolltoposition-center.png "com item rolado") ] (scrolling-images/scrolltoposition-center-large.png#lightbox "Lista vertical CollectionView com item rolado")
+[![Captura de tela de uma lista vertical CollectionView com um item rolado na exibição, no Ios e no Android](scrolling-images/scrolltoposition-center.png "Lista vertical CollectionView com item rolado")](scrolling-images/scrolltoposition-center-large.png#lightbox "Lista vertical CollectionView com item rolado")
 
 ### <a name="end"></a>End
 
@@ -154,7 +154,7 @@ collectionView.ScrollTo(monkey, position: ScrollToPosition.End);
 
 Este código de exemplo resulta no item que está sendo rolado para o final da exibição:
 
-[ ![Captura de tela de uma lista vertical de CollectionView com um item rolado na exibição, em lista vertical de CollectionView do Android e Ios](scrolling-images/scrolltoposition-end.png "com item rolado") ] (scrolling-images/scrolltoposition-end-large.png#lightbox "Lista vertical CollectionView com item rolado")
+[![Captura de tela de uma lista vertical CollectionView com um item rolado na exibição, no Ios e no Android](scrolling-images/scrolltoposition-end.png "Lista vertical CollectionView com item rolado")](scrolling-images/scrolltoposition-end-large.png#lightbox "Lista vertical CollectionView com item rolado")
 
 ## <a name="disable-scroll-animation"></a>Desabilitar animação de rolagem
 
@@ -180,7 +180,7 @@ O valor padrão da `ItemsUpdatingScrollMode` propriedade é. `KeepItemsInView` P
 </CollectionView>
 ```
 
-O código C# equivalente é:
+Este é o código C# equivalente:
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -211,7 +211,7 @@ A [`SnapPointsType`](xref:Xamarin.Forms.SnapPointsType) enumeração define os s
 
 Por padrão, a [`SnapPointsType`](xref:Xamarin.Forms.ItemsLayout.SnapPointsType) propriedade é definida como `SnapPointsType.None`, o que garante que a rolagem não enencaixe itens, conforme mostrado nas capturas de tela a seguir:
 
-[ ![Captura de tela de uma lista vertical de CollectionView sem pontos de encaixe, na lista vertical de CollectionView do Android e Ios](scrolling-images/snappoints-none.png "sem os pontos de ajuste") ] (scrolling-images/snappoints-none-large.png#lightbox "Lista vertical CollectionView sem pontos de ajuste")
+[![Captura de tela de uma lista vertical CollectionView sem pontos de ajuste, no Ios e no Android](scrolling-images/snappoints-none.png "Lista vertical CollectionView sem pontos de ajuste")](scrolling-images/snappoints-none-large.png#lightbox "Lista vertical CollectionView sem pontos de ajuste")
 
 ### <a name="snap-points-alignment"></a>Alinhamento dos pontos de ajuste
 
@@ -245,7 +245,7 @@ Por padrão, a [`SnapPointsAlignment`](xref:Xamarin.Forms.ItemsLayout.SnapPoints
 </CollectionView>
 ```
 
-O código C# equivalente é:
+Este é o código C# equivalente:
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -264,7 +264,7 @@ CollectionView collectionView = new CollectionView
 
 Quando um usuário passa o dedo para iniciar uma rolagem, o item superior será alinhado com a parte superior da exibição:
 
-[ ![Captura de tela de uma lista vertical de CollectionView com pontos de partida de início, na lista vertical de CollectionView do Android e Ios](scrolling-images/snappoints-start.png "com pontos de ajuste de início") ] (scrolling-images/snappoints-start-large.png#lightbox "Lista vertical CollectionView com pontos de ajuste de início")
+[![Captura de tela de uma lista vertical de CollectionView com pontos de partida de início, no Ios e no Android](scrolling-images/snappoints-start.png "Lista vertical CollectionView com pontos de ajuste de início")](scrolling-images/snappoints-start-large.png#lightbox "Lista vertical CollectionView com pontos de ajuste de início")
 
 #### <a name="center"></a>Centralizado
 
@@ -289,7 +289,7 @@ O `SnapPointsAlignment.Center` membro indica que os pontos de ajuste estão alin
 </CollectionView>
 ```
 
-O código C# equivalente é:
+Este é o código C# equivalente:
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -308,7 +308,7 @@ CollectionView collectionView = new CollectionView
 
 Quando um usuário passa o dedo para iniciar uma rolagem, o item superior será alinhado ao centro na parte superior da exibição:
 
-[ ![Captura de tela de uma lista vertical de CollectionView com pontos de alinhamento do centro, na lista vertical de CollectionView do Android e Ios](scrolling-images/snappoints-center.png "com pontos de alinhamento do centro") ] (scrolling-images/snappoints-center-large.png#lightbox "Lista vertical CollectionView com pontos de alinhamento do centro")
+[![Captura de tela de uma lista vertical CollectionView com pontos de alinhamento do centro, no Ios e no Android](scrolling-images/snappoints-center.png "Lista vertical CollectionView com pontos de alinhamento do centro")](scrolling-images/snappoints-center-large.png#lightbox "Lista vertical CollectionView com pontos de alinhamento do centro")
 
 #### <a name="end"></a>End
 
@@ -333,7 +333,7 @@ O `SnapPointsAlignment.End` membro indica que os pontos de ajuste estão alinhad
 </CollectionView>
 ```
 
-O código C# equivalente é:
+Este é o código C# equivalente:
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -352,7 +352,7 @@ CollectionView collectionView = new CollectionView
 
 Quando um usuário passa o dedo para iniciar uma rolagem, o item inferior será alinhado com a parte inferior da exibição:
 
-[ ![Captura de tela de uma lista vertical de CollectionView com pontos de ajuste finais, na lista vertical de CollectionView do Android e Ios](scrolling-images/snappoints-end.png "com pontos de ajuste finais") ] (scrolling-images/snappoints-end-large.png#lightbox "Lista vertical CollectionView com pontos de ajuste finais")
+[![Captura de tela de uma lista vertical CollectionView com pontos de ajuste finais, no Ios e no Android](scrolling-images/snappoints-end.png "Lista vertical CollectionView com pontos de ajuste finais")](scrolling-images/snappoints-end-large.png#lightbox "Lista vertical CollectionView com pontos de ajuste finais")
 
 ## <a name="related-links"></a>Links relacionados
 

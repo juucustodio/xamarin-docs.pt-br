@@ -9,12 +9,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/01/2019
-ms.openlocfilehash: ff07af00e1e647255ac56318c0685552823f510c
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 2cd4726566e73aece5d0deef90ad1feedefaa2d8
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68653503"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71249673"
 ---
 # <a name="store-data-in-a-local-sqlitenet-database"></a>Armazenar dados em um banco de SQLite.NET local
 
@@ -27,10 +27,10 @@ Neste guia de início rápido, você aprenderá a:
 
 O guia de início rápido explica como armazenar dados em um SQLite.NET local. O aplicativo final é mostrado abaixo:
 
-[ ![(database-images/screenshots1-sml.png " ")]Página de anotações] (database-images/screenshots1.png#lightbox "Página de anotações") (database-images/screenshots2.png#lightbox "Página de entrada de observação") da página de entrada do note [ ![(database-images/screenshots2-sml.png " ")]] 
+[![](database-images/screenshots1-sml.png "")](database-images/screenshots1.png#lightbox "Página de anotações")
+[![](database-images/screenshots2-sml.png "Página de entrada de observação") da página de anotações](database-images/screenshots2.png#lightbox "Página de entrada de observação")
 
-
-### <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Pré-requisitos
 
 Você deve concluir com êxito o [início rápido anterior](multi-page.md) antes de tentar este guia de início rápido. Como alternativa, baixe o [exemplo anterior de início rápido](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-multipage/) e use-o como o ponto de partida para este guia de início rápido.
 
@@ -40,7 +40,7 @@ Você deve concluir com êxito o [início rápido anterior](multi-page.md) antes
 
 1. Inicie o Visual Studio e abra a solução observações.
 
-2. Em **Gerenciador de soluções**, selecione o projeto do Notes, clique com o botão direito do mouse e selecione **gerenciar pacotes NuGet...** :
+2. Em **Gerenciador de soluções**, selecione o projeto do **Notes** , clique com o botão direito do mouse e selecione **gerenciar pacotes NuGet...** :
 
     ![](database-images/vs/add-nuget-packages.png "Adicionar Pacotes NuGet")    
 
@@ -58,7 +58,7 @@ Você deve concluir com êxito o [início rápido anterior](multi-page.md) antes
 
     Este pacote será usado para incorporar operações de banco de dados ao aplicativo.
 
-4. No **Gerenciador de soluções**, no projeto do notes, abra **note.cs** na pasta **modelos** e substitua o código existente pelo código a seguir:
+4. No **Gerenciador de soluções**, no projeto do **Notes** , abra **note.cs** na pasta **modelos** e substitua o código existente pelo código a seguir:
 
     ```csharp
     using System;
@@ -83,9 +83,9 @@ Você deve concluir com êxito o [início rápido anterior](multi-page.md) antes
     > [!WARNING]
     > A tentativa de criar o aplicativo neste ponto resultará em erros que serão corrigidos nas etapas subsequentes.
 
-5. Em **Gerenciador de soluções**, adicione uma nova pasta chamada **dados** ao projeto do Notes.
+5. Em **Gerenciador de soluções**, adicione uma nova pasta chamada **dados** ao projeto do **Notes** .
 
-6. No **Gerenciador de soluções**, no projeto do Notes, adicione uma nova classe chamada **NoteDatabase** à pasta de **dados** .
+6. No **Gerenciador de soluções**, no projeto do **Notes** , adicione uma nova classe chamada **NoteDatabase** à pasta de **dados** .
 
 7. No **NoteDatabase.cs**, substitua o código existente pelo código a seguir:
 
@@ -146,7 +146,7 @@ Você deve concluir com êxito o [início rápido anterior](multi-page.md) antes
     > [!WARNING]
     > A tentativa de criar o aplicativo neste ponto resultará em erros que serão corrigidos nas etapas subsequentes.
 
-8. No **Gerenciador de soluções**, no projeto do Notes, clique duas vezes em **app.XAML.cs** para abri-lo. Em seguida, substitua o código existente pelo código a seguir:
+8. No **Gerenciador de soluções**, no projeto do **Notes** , clique duas vezes em **app.XAML.cs** para abri-lo. Em seguida, substitua o código existente pelo código a seguir:
 
     ```csharp
     using System;
@@ -203,7 +203,7 @@ Você deve concluir com êxito o [início rápido anterior](multi-page.md) antes
     > [!WARNING]
     > A tentativa de criar o aplicativo neste ponto resultará em erros que serão corrigidos nas etapas subsequentes.
 
-9. No **Gerenciador de soluções**, no projeto do Notes, clique duas vezes em **NotesPage.XAML.cs** para abri-lo. Em seguida, `OnAppearing` substitua o método pelo código a seguir:
+9. No **Gerenciador de soluções**, no projeto do **Notes** , clique duas vezes em **NotesPage.XAML.cs** para abri-lo. Em seguida, `OnAppearing` substitua o método pelo código a seguir:
 
     ```csharp
     protected override async void OnAppearing()
@@ -300,7 +300,7 @@ Você deve concluir com êxito o [início rápido anterior](multi-page.md) antes
     > [!WARNING]
     > A tentativa de criar o aplicativo neste ponto resultará em erros que serão corrigidos nas etapas subsequentes.
 
-5. No **painel de soluções**, adicione uma nova pasta denominada **dados** ao projeto do Notes.
+5. No **painel de soluções**, adicione uma nova pasta denominada **dados** ao projeto do **Notes** .
 
 6. No **painel de soluções**, no projeto do **Notes** , adicione uma nova classe chamada **NoteDatabase** à pasta de **dados** .
 

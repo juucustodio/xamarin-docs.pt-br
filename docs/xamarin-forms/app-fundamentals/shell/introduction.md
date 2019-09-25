@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 05/24/2019
 ms.openlocfilehash: dd1dc9b679a46dc082de1fe9b3c5f10b6757c0d8
-ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
-ms.translationtype: HT
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "68739277"
 ---
 # <a name="xamarinforms-shell-introduction"></a>Introdução ao Xamarin.Forms
@@ -34,22 +34,22 @@ Além disso, o aplicativo Shell tem a vantagem de aumentar a velocidade de rende
 
 O Shell fornece uma experiência de navegação obstinada, com base em guias e submenus. O nível superior da navegação em um aplicativo do Shell será um submenu ou uma barra de guias inferior, dependendo dos requisitos de navegação do aplicativo. O exemplo a seguir mostra um aplicativo em que o nível superior da navegação é um submenu:
 
-[![Captura de tela de um submenu do Shell no iOS e no Android](introduction-images/flyout.png "Submenu Shell")](introduction-images/flyout-large.png#lightbox "Submenu Shell")
+[![Captura de tela de um submenu do Shell, no Ios e no Android](introduction-images/flyout.png "Submenu do Shell")](introduction-images/flyout-large.png#lightbox "Submenu do Shell")
 
 Selecionar um item de submenu faz com que a guia inferior que representa o item seja selecionada e exibida:
 
-[![Captura de tela das guias inferiores no Shell no iOS e no Android](introduction-images/monkeys.png "Guias inferiores do Shell")](introduction-images/monkeys-large.png#lightbox "Guias inferiores do Shell")
+[![Captura de tela das guias inferiores do Shell, no Ios e no Android](introduction-images/monkeys.png "Guias inferiores do Shell")](introduction-images/monkeys-large.png#lightbox "Guias inferiores do Shell")
 
 > [!NOTE]
 > Quando o submenu está fechado, a barra de guias inferior pode ser considerada o nível principal da navegação no aplicativo.
 
 Cada guia exibe um [`ContentPage`](xref:Xamarin.Forms.ContentPage). No entanto, se uma guia inferior contiver mais de uma página, será possível navegar pelas páginas por meio da barra de guias superior:
 
-[![Captura de tela das guias superiores no Shell no iOS e Android](introduction-images/cats.png "Guias superiores no Shell")](introduction-images/cats-large.png#lightbox "Guias superiores no Shell")
+[![Captura de tela das guias superiores do Shell, no Ios e no Android](introduction-images/cats.png "Guias superiores do Shell")](introduction-images/cats-large.png#lightbox "Guias superiores do Shell")
 
 Dentro de cada guia, é possível navegar para objetos [`ContentPage`](xref:Xamarin.Forms.ContentPage) adicionais:
 
-[![Captura de tela da navegação de página no Shell no iOS e Android](introduction-images/cat-details.png "Navegação no aplicativo Shell")](introduction-images/cat-details-large.png#lightbox "Navegação no aplicativo Shell")
+[![Captura de tela da navegação de página do Shell, no Ios e no Android](introduction-images/cat-details.png "Navegação de aplicativo de shell")](introduction-images/cat-details-large.png#lightbox "Navegação de aplicativo de Shell")
 
 ## <a name="related-links"></a>Links relacionados
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/25/2018
-ms.openlocfilehash: a4867ef779e55d16ef49b2f8ad0dc5bd0ec7024f
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: f696e8159d929bf41596c4dc9498e682e361f412
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70761450"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71249996"
 ---
 # <a name="using-the-xamarinandroid-designer"></a>Usando o Xamarin. Designer Android
 
@@ -31,6 +31,8 @@ Este artigo demonstra como usar o Xamarin. Designer Android para criar visualmen
 ## <a name="walkthrough"></a>Passo a passo
 
 O objetivo deste tutorial é usar o Designer Android para criar uma interface do usuário para um aplicativo de exemplo de navegador de cores. O aplicativo de navegador de cores apresenta uma lista de cores, seus nomes e seus valores RGB. Você aprenderá a adicionar widgets ao **design Surface** , bem como a formatar esses widgets visualmente. Depois disso, você aprenderá a modificar os widgets de forma interativa no **design Surface** ou usando o painel de **Propriedades** do designer. Por fim, você verá como o design se parece quando o aplicativo é executado em um dispositivo ou emulador.
+
+<!-- markdownlint-disable MD001 -->
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 

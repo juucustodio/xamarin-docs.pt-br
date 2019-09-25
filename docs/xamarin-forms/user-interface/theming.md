@@ -8,15 +8,15 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2019
 ms.openlocfilehash: 3e0f508a9c980c02681f1be581846f9f2f25e2d0
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69529281"
 ---
 # <a name="theming-a-xamarinforms-application"></a>Um aplicativo Xamarin. Forms
 
-[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-theming/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-theming/)
 
 Aplicativos Xamarin. Forms podem responder a alterações de estilo dinamicamente em tempo de execução `DynamicResource` usando a extensão de marcação. Essa extensão de marcação é semelhante à `StaticResource` extensão de marcação, pois ambas usam uma chave de dicionário para buscar um valor de [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary)a. No entanto, `StaticResource` enquanto a extensão de marcação executa uma única pesquisa `DynamicResource` de dicionário, a extensão de marcação mantém um link para a chave de dicionário. Portanto, se o valor associado à chave for substituído, a alteração será aplicada ao [`VisualElement`](xref:Xamarin.Forms.VisualElement). Isso permite que eles sejam implementados em aplicativos Xamarin. Forms.
 
@@ -29,7 +29,7 @@ O processo de implementação de temas de tempo de execução em um aplicativo X
 
 As capturas de tela a seguir mostram as páginas com tema, com o aplicativo iOS usando uma clara Theme e o aplicativo do Android usando um tema escuro:
 
-[![Captura de tela da página principal de um aplicativo com tema, no Ios e no Android] (theming-images/main-page-both-themes.png "Página principal do aplicativo com tema") ] (theming-images/main-page-both-themes-large.png#lightbox "Página principal do aplicativo com tema") Captura de [ ![tela da página de detalhes de um aplicativo com tema, na](theming-images/detail-page-both-themes.png "página de")detalhes do IOS e do Android da]página de detalhes do aplicativo com tema dos aplicativos com tema(theming-images/detail-page-both-themes-large.png#lightbox "") 
+[![Captura de tela da página principal de um aplicativo com tema, no Ios e no Android] (theming-images/main-page-both-themes.png "Página principal do aplicativo com tema") ](theming-images/main-page-both-themes-large.png#lightbox "Página principal do aplicativo com tema") Captura de [ ![tela da página de detalhes de um aplicativo com tema, na](theming-images/detail-page-both-themes.png "página de detalhes do IOS e do Android do aplicativo com tema") ](theming-images/detail-page-both-themes-large.png#lightbox "Página de detalhes do aplicativo com tema") 
 
 
 ## <a name="define-themes"></a>Definir temas
@@ -89,7 +89,7 @@ Um aplicativo requer um tema padrão, para que os controles tenham valores para 
 </Application>
 ```
 
-Para obter mais informações sobre como mesclar dicionários de recursos, consulte dicionários de [Recursos mesclados](~/xamarin-forms/xaml/resource-dictionaries.md#merged-resource-dictionaries).
+Para obter mais informações sobre como mesclar dicionários de recursos, consulte [dicionários de Recursos mesclados](~/xamarin-forms/xaml/resource-dictionaries.md#merged-resource-dictionaries).
 
 ## <a name="consume-theme-resources"></a>Consumir recursos de tema
 

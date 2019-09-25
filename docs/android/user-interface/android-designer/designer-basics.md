@@ -8,10 +8,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 09/05/2018
 ms.openlocfilehash: 0089f8681142b1d3d3446c21ba89ab2648e4a638
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "70761414"
 ---
 # <a name="xamarinandroid-designer-basics"></a>Noções básicas do Xamarin. Designer Android
@@ -248,7 +248,7 @@ Se uma margem já tiver sido definida, as linhas pontilhadas serão exibidas, in
 
 ![Exemplo de linhas pontilhadas marcando espaço em um botão](designer-basics-images/vs/16-margins-set.png)
 
-### <a name="size"></a>Size
+### <a name="size"></a>Tamanho
 
 Conforme mencionado anteriormente, você pode alternar para o modo de edição de tamanho clicando em um widget enquanto ele já estiver selecionado. Clique no identificador triangular para definir o tamanho da dimensão indicada para `wrap_content`:
 
@@ -472,7 +472,7 @@ Se uma margem já tiver sido definida, as linhas pontilhadas serão exibidas, in
 
 [![Exemplo de linhas pontilhadas marcando espaço em um botão](designer-basics-images/xs/17-margins-set-sml.png)](designer-basics-images/xs/17-margins-set.png#lightbox)
 
-### <a name="size"></a>Size
+### <a name="size"></a>Tamanho
 
 Conforme mencionado anteriormente, você pode alternar para o modo de edição de tamanho clicando em um widget enquanto ele já estiver selecionado. Clique no identificador triangular para definir o tamanho da dimensão indicada para `wrap_content`:
 

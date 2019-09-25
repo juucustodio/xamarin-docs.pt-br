@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
 ms.openlocfilehash: 9bde1140f6590daa4b1d40a8b56edec314bfc66d
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "70760233"
 ---
 # <a name="introduction-to-enterprise-app-development"></a>Introdução ao desenvolvimento de aplicativos empresariais
@@ -89,7 +89,7 @@ Para obter informações sobre a implementação dos serviços de back- [end, co
 
 Este guia concentra-se na criação de aplicativos empresariais de plataforma cruzada usando Xamarin. Forms e usa o aplicativo móvel eShopOnContainers como exemplo. A Figura 1-2 mostra as páginas do aplicativo móvel eShopOnContainers que fornecem a funcionalidade descrita anteriormente.
 
-O aplicativo móvel eShopOnContainers [ ![(introduction-images/screenshots.png " ")]] (introduction-images/screenshots-large.png#lightbox "O aplicativo móvel eShopOnContainers")
+[![](introduction-images/screenshots.png "O aplicativo móvel eShopOnContainers")](introduction-images/screenshots-large.png#lightbox "O aplicativo móvel eShopOnContainers")
 
 **Figura 1-2**: O aplicativo móvel eShopOnContainers
 

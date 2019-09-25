@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/18/2019
 ms.openlocfilehash: 242673efb38931eb678432a28f24db0ad9b8cb7d
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "70228224"
 ---
 # <a name="xamarinforms-map"></a>Mapa do xamarin. Forms
@@ -25,7 +25,7 @@ Uma vez configurado, o `Map` controlar funciona exatamente como qualquer outro e
 
 O controle de mapa tenha sido usado na [MapsSample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps) sample, que é mostrado abaixo.
 
- [![Mapas no exemplo MobileCRM](map-images/maps-zoom-sml.png "exemplo de controle de mapa")](map-images/maps-zoom.png#lightbox "exemplo de controle de mapa")
+ [![Mapas no exemplo de MobileCRM](map-images/maps-zoom-sml.png "Exemplo de controle de mapeamento")](map-images/maps-zoom.png#lightbox "Exemplo de Controle de Mapeamento")
 
 Funcionalidade de mapa pode ser aprimorada ainda mais com a criação de um [mapear um renderizador personalizado](~/xamarin-forms/app-fundamentals/custom-renderer/map/index.md).
 
@@ -201,7 +201,7 @@ slider.ValueChanged += (sender, e) =>
 };
 ```
 
-[![Mapas com zoom](map-images/maps-zoom-sml.png "mapa de controle de Zoom")](map-images/maps-zoom.png#lightbox "Zoom do controle de mapa")
+[![Mapas com zoom](map-images/maps-zoom-sml.png "Controle de mapeamento zoom")](map-images/maps-zoom.png#lightbox "Controle de Mapeamento zoom")
 
 Além disso, a [`Map`](xref:Xamarin.Forms.Maps.Map) classe tem uma `MoveToLastRegionOnLayoutChange` Propriedade do tipo `bool`, que é apoiada por uma propriedade vinculável. Por padrão, essa propriedade `true`é, que indica que a região do mapa exibida será movida de sua região atual para sua região definida anteriormente quando ocorrer uma alteração de layout, como na rotação do dispositivo. Quando essa propriedade é definida como `false`, a região de mapa exibida permanecerá centralizada quando ocorrer uma alteração de layout. O exemplo a seguir mostra a configuração desta propriedade:
 
@@ -324,7 +324,7 @@ A aparência `IEnumerable` de cada item na coleção é definida pela definiçã
 
 As capturas de tela a [`Map`](xref:Xamarin.Forms.Maps.Map) seguir mostram [`Pin`](xref:Xamarin.Forms.Maps.Pin) uma exibição de uma coleção usando a associação de dados:
 
-[ ![Captura de tela do mapa com Pins de associação de dados em um mapa do IOS e Android](map-images/pins-itemssource.png "com Pins associados a dados") ] (map-images/pins-itemssource-large.png#lightbox "Mapear com Pins associados a dados")
+[![Captura de tela do mapa com Pins de associação de dados, no Ios e no Android](map-images/pins-itemssource.png "Mapear com Pins associados a dados")](map-images/pins-itemssource-large.png#lightbox "Mapear com Pins associados a dados")
 
 ### <a name="choose-item-appearance-at-runtime"></a>Escolher a aparência do item em tempo de execução
 

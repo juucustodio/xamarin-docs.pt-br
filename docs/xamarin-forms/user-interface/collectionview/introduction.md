@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/24/2019
 ms.openlocfilehash: 14abf2e7eff64d2e3e9656bf1ca76f4cee615408
-ms.sourcegitcommit: 5ef92b44f0d10c58013d3c3dd6283509f1499587
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/23/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69986079"
 ---
 # <a name="xamarinforms-collectionview-introduction"></a>Introdução de CollectionView do Xamarin. Forms
@@ -22,7 +22,7 @@ ms.locfileid: "69986079"
 
 [`CollectionView`](xref:Xamarin.Forms.CollectionView) é uma exibição para apresentar listas de dados usando especificações de layout diferentes. Ele visa fornecer uma alternativa mais flexível e de alto desempenho para [`ListView`](xref:Xamarin.Forms.ListView)o. Por exemplo, as capturas de tela a `CollectionView` seguir mostram um que usa uma grade vertical de duas colunas e que permite seleção múltipla:
 
-[ ![Captura de tela de um layout de grade vertical CollectionView, em layout de](introduction-images/verticalgrid-multipleselection.png "grade vertical CollectionView") para IOS e Android com seleção múltipla] (introduction-images/verticalgrid-multipleselection-large.png#lightbox "Layout de grade vertical CollectionView com seleção múltipla")
+[![Captura de tela de um layout de grade vertical CollectionView, no Ios e no Android](introduction-images/verticalgrid-multipleselection.png "Layout de grade vertical CollectionView com seleção múltipla")](introduction-images/verticalgrid-multipleselection-large.png#lightbox "Layout de grade vertical CollectionView com seleção múltipla")
 
 [`CollectionView`](xref:Xamarin.Forms.CollectionView)está disponível no Xamarin. Forms 4,0. No entanto, ele é experimental e só pode ser usado adicionando a linha de código a seguir à `AppDelegate` sua classe no Ios ou à sua `MainActivity` classe no Android, antes de `Forms.Init`chamar:
 
@@ -55,7 +55,7 @@ Embora as [`CollectionView`](xref:Xamarin.Forms.CollectionView) APIs [`ListView`
 | Células | `TextCell`, `ImageCell`, `ViewCell` | [`CollectionView`](xref:Xamarin.Forms.CollectionView)Não tem conceito de células. Em vez disso, um modelo de dados é usado para definir a aparência de cada item de dados na lista. |
 | Separadores de linha | `SeparatorColor`, `SeparatorVisibility` | [`CollectionView`](xref:Xamarin.Forms.CollectionView)Não inclui separadores internos. Eles podem ser fornecidos, se desejado, no modelo de item. |
 | Seleção | `SelectionMode`, `SelectedItem` | [`CollectionView`](xref:Xamarin.Forms.CollectionView)dá suporte à seleção única e múltipla. Para obter mais informações, consulte [seleção de CollectionView do Xamarin. Forms](selection.md). |
-| Altura da linha | `HasUnevenRows`, `RowHeight` | Em um `CollectionView`, a altura da linha de cada item é determinada `ItemSizingStrategy` pela propriedade. Para obter mais informações, consulte dimensionamento de [Item](layout.md#item-sizing).|
+| Altura da linha | `HasUnevenRows`, `RowHeight` | Em um `CollectionView`, a altura da linha de cada item é determinada `ItemSizingStrategy` pela propriedade. Para obter mais informações, consulte [dimensionamento de item](layout.md#item-sizing).|
 | Cache | `CachingStrategy` | [`CollectionView`](xref:Xamarin.Forms.CollectionView)usa automaticamente a virtualização fornecida pelos controles nativos subjacentes. |
 | Cabeçalhos e rodapés | `Header`, `HeaderElement`, `HeaderTemplate`, `Footer`, `FooterElement`, `FooterTemplate` | [`CollectionView`](xref:Xamarin.Forms.CollectionView)pode apresentar um cabeçalho e um rodapé que rolam com os itens da lista, por `Header`meio `Footer`das `HeaderTemplate` `FooterTemplate` Propriedades,, e. Para obter mais informações, consulte [cabeçalhos e rodapés](layout.md#headers-and-footers). |
 | Agrupamento | `GroupDisplayBinding`, `GroupHeaderTemplate`, `GroupShortNameBinding`, `IsGroupingEnabled` | [`CollectionView`](xref:Xamarin.Forms.CollectionView)exibe dados agrupados corretamente definindo sua `IsGrouped` Propriedade como. `true` Cabeçalhos de grupo e rodapés de grupo podem ser personalizados definindo `GroupHeaderTemplate` as `GroupFooterTemplate` Propriedades e [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) como objetos. Para obter mais informações, consulte [agrupamento CollectionView do Xamarin. Forms](grouping.md). |

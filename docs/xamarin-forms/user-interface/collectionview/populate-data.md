@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/13/2019
 ms.openlocfilehash: 6942baed6af2a2e9b2c713a8fe08cf4c8ed4416b
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69888544"
 ---
 # <a name="xamarinforms-collectionview-data"></a>Dados CollectionView do Xamarin. Forms
@@ -55,7 +55,7 @@ Um [`CollectionView`](xref:Xamarin.Forms.CollectionView) é populado com dados d
 > [!NOTE]
 > Observe que o elemento `x:Array` requer um atributo `Type` que indica o tipo dos itens na matriz.
 
-O código C# equivalente é:
+Este é o código C# equivalente:
 
 ```csharp
 CollectionView collectionView = new CollectionView();
@@ -76,7 +76,7 @@ collectionView.ItemsSource = new string[]
 
 Por padrão, [`CollectionView`](xref:Xamarin.Forms.CollectionView) o exibe itens em uma lista vertical, conforme mostrado nas capturas de tela a seguir:
 
-[ ![Captura de tela de CollectionView contendo itens de texto, em itens de texto do IOS e Android](populate-data-images/text.png "em um CollectionView") ] (populate-data-images/text-large.png#lightbox "Itens de texto em um CollectionView")
+[![Captura de tela de CollectionView contendo itens de texto, no Ios e no Android](populate-data-images/text.png "Itens de texto em um CollectionView")](populate-data-images/text-large.png#lightbox "Itens de texto em um CollectionView")
 
 Para obter informações sobre como alterar o [`CollectionView`](xref:Xamarin.Forms.CollectionView) layout, consulte [especificar um layout](layout.md). Para obter informações sobre como definir a aparência de cada item no `CollectionView`, consulte definir a aparência do [Item](#define-item-appearance).
 
@@ -88,7 +88,7 @@ Para obter informações sobre como alterar o [`CollectionView`](xref:Xamarin.Fo
 <CollectionView ItemsSource="{Binding Monkeys}" />
 ```
 
-O código C# equivalente é:
+Este é o código C# equivalente:
 
 ```csharp
 CollectionView collectionView = new CollectionView();
@@ -139,7 +139,7 @@ A aparência de cada item no [`CollectionView`](xref:Xamarin.Forms.CollectionVie
 </CollectionView>
 ```
 
-O código C# equivalente é:
+Este é o código C# equivalente:
 
 ```csharp
 CollectionView collectionView = new CollectionView();
@@ -186,7 +186,7 @@ public class Monkey
 
 As capturas de tela a seguir mostram o resultado da modelagem de cada item na lista:
 
-[ ![Captura de tela de CollectionView em que cada item é modelado, em itens de modelo Ios e Android](populate-data-images/datatemplate.png "em um CollectionView") ] (populate-data-images/datatemplate-large.png#lightbox "Itens de modelo em um CollectionView")
+[![Captura de tela de CollectionView em que cada item é modelado, no Ios e no Android](populate-data-images/datatemplate.png "Itens de modelo em um CollectionView")](populate-data-images/datatemplate-large.png#lightbox "Itens de modelo em um CollectionView")
 
 Para obter mais informações sobre modelos de dados, confira [Modelos de dados do Xamarin.Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md).
 
@@ -216,7 +216,7 @@ A aparência de cada item no [`CollectionView`](xref:Xamarin.Forms.CollectionVie
 </ContentPage>
 ```
 
-O código C# equivalente é:
+Este é o código C# equivalente:
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -243,7 +243,7 @@ public class MonkeyDataTemplateSelector : DataTemplateSelector
 
 A `MonkeyDataTemplateSelector` classe define `AmericanMonkey` e `OtherMonkey` [Propriedadesquesãodefinidasparamodelos`DataTemplate`](xref:Xamarin.Forms.DataTemplate) de dados diferentes. A `OnSelectTemplate` substituição retorna o `AmericanMonkey` modelo, que exibe o nome do macaco e o local em azul-petróleo, quando o nome do macaco contiver "America". Quando o nome do macaco não contém "America", `OnSelectTemplate` a substituição retorna `OtherMonkey` o modelo, que exibe o nome do macaco e o local em prata:
 
-[ ![Captura de tela da seleção de modelo de item de tempo de execução CollectionView, na](populate-data-images/datatemplateselector.png "seleção de modelo de item de tempo de execução") do IOS e Android] (populate-data-images/datatemplateselector-large.png#lightbox "Seleção de modelo de item de tempo de execução em um CollectionView")
+[![Captura de tela da seleção de modelo de item de tempo de execução CollectionView em Ios e Android](populate-data-images/datatemplateselector.png "Seleção de modelo de item de tempo de execução em um CollectionView")](populate-data-images/datatemplateselector-large.png#lightbox "Seleção de modelo de item de tempo de execução em um CollectionView")
 
 Para obter mais informações sobre seletores de modelo de dados, consulte [criar um Xamarin. Forms DataTemplateSelector](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md).
 
@@ -277,7 +277,7 @@ O exemplo de XAML a seguir [`CollectionView`](xref:Xamarin.Forms.CollectionView)
 </CollectionView>
 ```
 
-O código C# equivalente é:
+Este é o código C# equivalente:
 
 ```csharp
 CollectionView collectionView = new CollectionView

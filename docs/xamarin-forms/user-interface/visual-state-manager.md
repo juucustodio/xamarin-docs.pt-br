@@ -9,10 +9,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 05/07/2018
 ms.openlocfilehash: 228501172ede71204c64e1efe1673ce92be424ea
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "68656050"
 ---
 # <a name="the-xamarinforms-visual-state-manager"></a>O xamarin. Forms Visual State Manager
@@ -492,7 +492,7 @@ Marcação VSM está anexada à segunda `Label` (chamado `helpLabel`) e o `Butto
 
 Se o `Entry` não contém um número de telefone válido, em seguida, o estado atual é "Inválido" e, portanto, a segunda `Label` está visível e o `Button` está desabilitado:
 
-[![Validação de VSM: ](vsm-images/VsmValidationInvalid.png "Validação de VSM de") estado inválida-inválida](vsm-images/VsmValidationInvalid-Large.png#lightbox)
+[![Validação de VSM: ](vsm-images/VsmValidationInvalid.png "Validação de VSM de estado inválida-inválida")](vsm-images/VsmValidationInvalid-Large.png#lightbox)
 
 Quando um número de telefone válido for inserido, em seguida, o estado atual se torna "Válido". A segunda `Entry` desaparece e a `Button` agora está habilitado:
 

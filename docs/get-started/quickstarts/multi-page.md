@@ -10,10 +10,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 04/01/2019
 ms.openlocfilehash: 9ce02b4c6412eab1f4b1003b262573c59940286c
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "68653790"
 ---
 # <a name="perform-navigation-in-a-multi-page-xamarinforms-application"></a>Executar a navegação em um aplicativo Xamarin. Forms de várias páginas
@@ -28,8 +28,8 @@ Neste guia de início rápido, você aprenderá a:
 
 O guia de início rápido explica como transformar um aplicativo Xamarin. Forms de plataforma cruzada em uma única página, capaz de armazenar uma única observação, em um aplicativo de várias páginas, capaz de armazenar várias notas. O aplicativo final é mostrado abaixo:
 
-[ ![(multi-page-images/screenshots1-sml.png " ")]Página de anotações] (multi-page-images/screenshots1.png#lightbox "Página de anotações") (multi-page-images/screenshots2.png#lightbox "Página de entrada de observação") da página de entrada do note [ ![(multi-page-images/screenshots2-sml.png " ")]] 
-
+[![](multi-page-images/screenshots1-sml.png "")](multi-page-images/screenshots1.png#lightbox "Página de anotações")
+[![](multi-page-images/screenshots2-sml.png "Página de entrada de observação") da página de anotações](multi-page-images/screenshots2.png#lightbox "Página de entrada de observação")
 
 ### <a name="prerequisites"></a>Pré-requisitos
 
@@ -43,7 +43,7 @@ Você deve concluir com êxito o [início rápido anterior](single-page.md) ante
 
     ![](multi-page-images/vs/open-solution.png "Abrir Projeto")
 
-2. Em **Gerenciador de soluções**, clique com o botão direito do mouse no projeto do Notes e selecione **Adicionar > nova pasta**:
+2. Em **Gerenciador de soluções**, clique com o botão direito do mouse no projeto do **Notes** e selecione **Adicionar > nova pasta**:
 
     ![](multi-page-images/vs/add-new-item.png "Adicionar Novo Item")
 
@@ -81,7 +81,7 @@ Você deve concluir com êxito o [início rápido anterior](single-page.md) ante
 
     Salve as alterações em **note.cs** pressionando **Ctrl + S**e feche o arquivo.
 
-7. Em **Gerenciador de soluções**, clique com o botão direito do mouse no projeto do Notes e selecione **Adicionar > novo item..** . Na caixa de diálogo **Adicionar novo item** , **selecione C# itens visuais > Xamarin. Forms > página de conteúdo**, nomeie o novo arquivo **NoteEntryPage**e clique no botão **Adicionar** :
+7. Em **Gerenciador de soluções**, clique com o botão direito do mouse no projeto do **Notes** e selecione **Adicionar > novo item..** . Na caixa de diálogo **Adicionar novo item** , **selecione C# itens visuais > Xamarin. Forms > página de conteúdo**, nomeie o novo arquivo **NoteEntryPage**e clique no botão **Adicionar** :
 
     ![](multi-page-images/vs/add-note-entry-page.png "Adicionar ContentPage Xamarin. Forms")
 
@@ -176,7 +176,7 @@ Você deve concluir com êxito o [início rápido anterior](single-page.md) ante
       > [!WARNING]
       > A tentativa de criar o aplicativo neste ponto resultará em erros que serão corrigidos nas etapas subsequentes.
 
-10. Em **Gerenciador de soluções**, clique com o botão direito do mouse no projeto do Notes e selecione **Adicionar > novo item..** . Na caixa de diálogo **Adicionar novo item** , **selecione C# itens visuais > Xamarin. Forms > página de conteúdo**, nomeie o novo arquivo **NotesPage**e clique no botão **Adicionar** .
+10. Em **Gerenciador de soluções**, clique com o botão direito do mouse no projeto do **Notes** e selecione **Adicionar > novo item..** . Na caixa de diálogo **Adicionar novo item** , **selecione C# itens visuais > Xamarin. Forms > página de conteúdo**, nomeie o novo arquivo **NotesPage**e clique no botão **Adicionar** .
 
       Isso adicionará uma página chamada **NotesPage** à pasta raiz do projeto. Esta página será a página raiz do aplicativo.
 
@@ -307,7 +307,7 @@ Você deve concluir com êxito o [início rápido anterior](single-page.md) ante
 
     Salve as alterações em **App.xaml.cs** ao pressionar **CTRL + S** e feche o arquivo.
 
-14. No **Gerenciador de soluções**, no projeto do Notes, clique com o botão direito do mouse em **MainPage. XAML**e selecione **excluir**. Na caixa de diálogo exibida, pressione o botão **OK** para remover o arquivo do disco rígido.
+14. No **Gerenciador de soluções**, no projeto do **Notes** , clique com o botão direito do mouse em **MainPage. XAML**e selecione **excluir**. Na caixa de diálogo exibida, pressione o botão **OK** para remover o arquivo do disco rígido.
 
     Isso remove uma página que não é mais usada.
 

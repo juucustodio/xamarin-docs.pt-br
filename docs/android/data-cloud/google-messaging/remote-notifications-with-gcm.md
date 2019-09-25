@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/02/2019
-ms.openlocfilehash: 813bb59cf11f35f69620c30e8ba12281df08df75
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: a59f824e1d97966d8d0af92bc9bbcc8d80fcfa4d
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70754511"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71249923"
 ---
 # <a name="remote-notifications-with-google-cloud-messaging"></a>Notificações remotas com Google Cloud Messaging
 
@@ -312,7 +312,7 @@ public RegistrationIntentService() : base ("RegistrationIntentService") { }
 
 A principal funcionalidade do `RegistrationIntentService` reside `OnHandleIntent` no método. Vamos examinar esse código para ver como ele registra nosso aplicativo com o GCM.
 
-##### <a name="request-a-registration-token"></a>Solicitar um token de registro
+#### <a name="request-a-registration-token"></a>Solicitar um token de registro
 
 `OnHandleIntent`primeiro chama o método [InstanceId. GetToken](https://developers.google.com/android/reference/com/google/android/gms/iid/InstanceID.html#getToken&#40;java.lang.String,%20java.lang.String&#41;) do Google para solicitar um token de registro do gcm. Encapsulamos esse código em um `lock` para proteger contra a possibilidade de várias tentativas de registro ocorrendo `lock` simultaneamente &ndash; , garantindo que essas tentativas sejam processadas em sequência. Se não conseguirmos obter um token de registro, uma exceção é lançada e registramos um erro. Se o registro for bem sucedido, `token` será definido para o token de registro que obtemos de volta do gcm: 
 
@@ -334,7 +334,7 @@ catch (Exception e)
     Log.Debug ...
 ```
 
-##### <a name="forward-the-registration-token-to-the-app-server"></a>Encaminhar o token de registro para o servidor de aplicativos
+#### <a name="forward-the-registration-token-to-the-app-server"></a>Encaminhar o token de registro para o servidor de aplicativos
 
 Se recebermos um token de registro (ou seja, nenhuma exceção foi gerada), chamamos `SendRegistrationToAppServer` para associar o token de registro do usuário à conta do lado do servidor (se houver) que é mantida pelo nosso aplicativo. Como essa implementação depende do design do servidor de aplicativos, um método vazio é fornecido aqui: 
 
@@ -347,7 +347,7 @@ void SendRegistrationToAppServer (string token)
 
 Em alguns casos, o servidor de aplicativos não precisa do token de registro do usuário; Nesse caso, esse método pode ser omitido. Quando um token de registro é enviado ao servidor de aplicativos `SendRegistrationToAppServer` , o deve manter um booliano para indicar se o token foi enviado ao servidor. Se esse booliano for false `SendRegistrationToAppServer` , enviará o token para o &ndash; servidor de aplicativos, caso contrário, o token já foi enviado para o servidor de aplicativos em uma chamada anterior. 
 
-##### <a name="subscribe-to-the-notification-topic"></a>Assinar o tópico de notificação
+#### <a name="subscribe-to-the-notification-topic"></a>Assinar o tópico de notificação
 
 Em seguida, chamamos nosso `Subscribe` método para indicar ao GCM que desejamos assinar um tópico de notificação. No `Subscribe`, chamamos a API [GcmPubSub. Subscribe](https://developers.google.com/android/reference/com/google/android/gms/gcm/GcmPubSub.html#subscribe&#40;java.lang.String,%20java.lang.String,%20android.os.Bundle&#41;) para assinar nosso aplicativo cliente para todas as mensagens em `/topics/global`:
 

@@ -10,10 +10,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 01/02/2019
 ms.openlocfilehash: 688b0e87bb6281923d3099c0d269b1c2554b6c7a
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "70756750"
 ---
 # <a name="style-a-cross-platform-xamarinforms-application"></a>Estilizar um aplicativo Xamarin. Forms de plataforma cruzada
@@ -26,8 +26,8 @@ Neste guia de início rápido, você aprenderá a:
 
 O guia de início rápido explica como estilizar um aplicativo Xamarin. Forms de plataforma cruzada com estilos XAML. O aplicativo final é mostrado abaixo:
 
-[ ![(styling-images/screenshots1-sml.png " ")]Página de anotações] (styling-images/screenshots1.png#lightbox "Página de anotações") (styling-images/screenshots2.png#lightbox "Página de entrada de observação") da página de entrada do note [ ![(styling-images/screenshots2-sml.png " ")]] 
-
+[![](styling-images/screenshots1-sml.png "")](styling-images/screenshots1.png#lightbox "Página de anotações")
+[![](styling-images/screenshots2-sml.png "Página de entrada de observação") da página de anotações](styling-images/screenshots2.png#lightbox "Página de entrada de observação")
 
 ### <a name="prerequisites"></a>Pré-requisitos
 

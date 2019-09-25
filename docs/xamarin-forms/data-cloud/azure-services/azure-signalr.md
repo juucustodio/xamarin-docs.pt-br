@@ -7,10 +7,10 @@ author: profexorgeek
 ms.author: jusjohns
 ms.date: 06/07/2019
 ms.openlocfilehash: a4d0f5c5ceefcfe9a36a5fcf10c6fb4937c1db90
-ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "68739218"
 ---
 # <a name="azure-signalr-service-with-xamarinforms"></a>Serviço do Azure Signalr com Xamarin. Forms
@@ -32,11 +32,11 @@ O aplicativo de exemplo consiste em três componentes principais: um hub de serv
 1. O Hub Signalr transmite a mensagem para todas as instâncias de aplicativo móvel conectadas, incluindo o remetente original.
 
 > [!NOTE]
-> As funções Negotiate e **Talk** no aplicativo de exemplo podem ser executadas localmente usando o Visual Studio 2019 e as ferramentas de tempo de execução do Azure. No entanto, o serviço de sinalizador do Azure não pode ser emulado localmente e é difícil expor Azure Functions hospedado localmente para dispositivos físicos ou virtuais para teste. É recomendável que você implante o Azure Functions em uma instância de aplicativo Azure Functions, pois isso permite o teste entre plataformas. Para obter detalhes de implantação, consulte [implantar Azure Functions com o Visual Studio 2019](#deploy-azure-functions-with-visual-studio-2019).
+> As funções **Negotiate** e **Talk** no aplicativo de exemplo podem ser executadas localmente usando o Visual Studio 2019 e as ferramentas de tempo de execução do Azure. No entanto, o serviço de sinalizador do Azure não pode ser emulado localmente e é difícil expor Azure Functions hospedado localmente para dispositivos físicos ou virtuais para teste. É recomendável que você implante o Azure Functions em uma instância de aplicativo Azure Functions, pois isso permite o teste entre plataformas. Para obter detalhes de implantação, consulte [implantar Azure Functions com o Visual Studio 2019](#deploy-azure-functions-with-visual-studio-2019).
 
 ### <a name="create-an-azure-signalr-service"></a>Criar um serviço de Signaler do Azure
 
-Um serviço de Signaler do Azure pode ser criado escolhendo **criar um recurso** no canto superior esquerdo do portal do Azure e procurando por signalr. O serviço de Signaler do Azure pode ser criado na camada gratuita. O serviço de Signaler do Azure deve estar no modo de serviço sem **servidor** . Se você escolher acidentalmente o modo de serviço padrão ou clássico, poderá alterá-lo mais tarde nas propriedades do serviço de Signaler do Azure.
+Um serviço de Signaler do Azure pode ser criado escolhendo **criar um recurso** no canto superior esquerdo do portal do Azure e procurando por **signalr**. O serviço de Signaler do Azure pode ser criado na camada gratuita. O serviço de Signaler do Azure deve estar no modo de serviço sem **servidor** . Se você escolher acidentalmente o modo de serviço padrão ou clássico, poderá alterá-lo mais tarde nas propriedades do serviço de Signaler do Azure.
 
 A captura de tela a seguir mostra a criação de um novo serviço de Signaler do Azure:
 
@@ -130,7 +130,7 @@ Depois de entrar no seu conta Microsoft, você pode localizar e escolher seu apl
 
 ![Um aplicativo Azure Functions na caixa de diálogo de publicação do Visual Studio 2019](azure-signalr-images/vs-app-selection.png "Azure Functions aplicativo na caixa de diálogo de publicação do Visual Studio 2019")
 
-Depois de selecionar uma instância de aplicativo Azure Functions, a URL do site, a configuração e outras informações sobre o aplicativo de Azure Functions de destino são exibidas. Escolha **editar Azure app configurações de serviço** e insira a cadeia de conexão no campo **remoto** . A cadeia de conexão é usada pelas funções Negotiate e **Talk** para se conectar ao serviço de signaler do Azure e está disponível na seção **chaves** do serviço de signaler do Azure em seu portal do Azure. Para obter mais informações sobre a cadeia de conexão, consulte [criar um serviço de signaler do Azure](#create-an-azure-signalr-service).
+Depois de selecionar uma instância de aplicativo Azure Functions, a URL do site, a configuração e outras informações sobre o aplicativo de Azure Functions de destino são exibidas. Escolha **editar Azure app configurações de serviço** e insira a cadeia de conexão no campo **remoto** . A cadeia de conexão é usada pelas funções **Negotiate** e **Talk** para se conectar ao serviço de signaler do Azure e está disponível na seção **chaves** do serviço de signaler do Azure em seu portal do Azure. Para obter mais informações sobre a cadeia de conexão, consulte [criar um serviço de signaler do Azure](#create-an-azure-signalr-service).
 
 Depois de inserir a cadeia de conexão, você pode clicar em **publicar** para implantar suas funções no aplicativo Azure functions. Após a conclusão, as funções serão listadas no aplicativo Azure Functions no portal do Azure. A captura de tela a seguir mostra as funções publicadas no portal do Azure:
 
@@ -189,7 +189,7 @@ public async Task SendMessageAsync(string username, string message)
 }
 ```
 
-O `ConnectAsync` método`SignalRService` na classe executa uma solicitação HTTP Get para a função **Negotiate** hospedada no aplicativo Azure functions. A função Negotiate retorna JSON que é desserializado em uma instância da `NegotiateInfo` classe. Depois que `NegotiateInfo` o objeto é recuperado, ele é usado para se registrar diretamente com o serviço de signaler do Azure usando `HubConnection` uma instância da classe.
+O `ConnectAsync` método`SignalRService` na classe executa uma solicitação HTTP Get para a função **Negotiate** hospedada no aplicativo Azure functions. A função **Negotiate** retorna JSON que é desserializado em uma instância da `NegotiateInfo` classe. Depois que `NegotiateInfo` o objeto é recuperado, ele é usado para se registrar diretamente com o serviço de signaler do Azure usando `HubConnection` uma instância da classe.
 
 ASP.NET Core Signalr converte os dados de entrada da conexão aberta em mensagens e permite que os desenvolvedores definam tipos de mensagem e associem manipuladores de eventos a mensagens de entrada por tipo. O `ConnectAsync` método registra um manipulador de eventos para o nome da mensagem definido no arquivo **Constants.cs** do aplicativo de exemplo, que é "NewMessage" por padrão.
 

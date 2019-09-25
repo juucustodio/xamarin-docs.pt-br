@@ -7,10 +7,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
 ms.openlocfilehash: d72c428bb4b8c88365180c5c3c50b107eed2b21d
-ms.sourcegitcommit: 41a029c69925e3a9d2de883751ebfd649e8747cd
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "68978454"
 ---
 # <a name="part-1--creating-a-cross-platform-monogame"></a>Parte 1 – Criando um monojogo de plataforma cruzada
@@ -32,7 +32,7 @@ Ao concluir, o projeto tem a estrutura adequada para executar a lógica de atual
 >
 > A seção **desenvolvimento de jogos** deve aparecer no Gerenciador de **suplementos**.
 
-Para habilitar o suplemento monogame para Visual Studio para Mac, selecione **Visual Studio para Mac** > **Gerenciador de suplementos...** . Para o Visual Studio 2019 no Windows, selecione **ferramentas** > **Gerenciador de suplementos...** . Selecione a guia **Galeria** , expanda a categoria **desenvolvimento de jogos** e selecione suplemento monogame e clique em **instalar...** :
+Para habilitar o suplemento monogame para Visual Studio para Mac, selecione **Visual Studio para Mac** > **Gerenciador de suplementos...** . Para o Visual Studio 2019 no Windows, selecione **ferramentas** > **Gerenciador de suplementos...** . Selecione a guia **Galeria** , expanda a categoria **desenvolvimento de jogos** e selecione **suplemento monogame**e clique em **instalar...** :
 
 ![Galeria de extensões de Visual Studio para Mac selecionando monojogo](part1-images/image2.png)
 
@@ -40,7 +40,7 @@ Uma vez instalado, os modelos de jogos serão exibidos no Visual Studio para Mac
 
 ## <a name="creating-a-new-solution"></a>Criando uma nova solução
 
-Em Visual Studio para Mac selecione **arquivo > nova solução**. Na caixa de diálogo **novo projeto** , clique em **diversos**, role até a seção **geral** , selecione a opção aplicativo móvel de **monojogo universal** e clique em Avançar.
+Em Visual Studio para Mac selecione **arquivo > nova solução**. Na caixa de diálogo **novo projeto** , clique em **diversos**, role até a seção **geral** , selecione a opção **aplicativo móvel de monojogo universal** e clique em Avançar.
 
 ![Caixa de diálogo novo projeto criando um aplicativo de monojogo](part1-images/image3.png)
 

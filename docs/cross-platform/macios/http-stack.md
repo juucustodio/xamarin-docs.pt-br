@@ -6,12 +6,12 @@ ms.assetid: 12101297-BB04-4410-85F0-A0D41B7E6591
 author: conceptdev
 ms.author: crdun
 ms.date: 04/20/2018
-ms.openlocfilehash: f3c30e8edc36c6d92b6fac0bd0e199aa26e16993
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 305c0c939d99207e39a469f7e8c5370cc5555d38
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70280921"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71249974"
 ---
 # <a name="httpclient-and-ssltls-implementation-selector-for-iosmacos"></a>Seletor de implementação de HttpClient e SSL/TLS para iOS/macOS
 
@@ -24,7 +24,7 @@ Os projetos devem referenciar o assembly do **System .net. http** .
 >
 > Para garantir que seus aplicativos continuem a trabalhar com esses servidores e serviços, **você deve atualizar seus projetos do Xamarin com `NSUrlSession` a configuração mostrada abaixo e, em seguida, recompilar e reimplantar seus aplicativos** para os usuários.
 
-### <a name="selecting-an-httpclient-stack"></a>Selecionando uma pilha HttpClient
+## <a name="selecting-an-httpclient-stack"></a>Selecionando uma pilha HttpClient
 
 Para ajustar o `HttpClient` que está sendo usado pelo seu aplicativo:
 

@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
 ms.openlocfilehash: 9c793f4d5f0cda5bff2dedef5e4e5e5bdfca69e5
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "70770800"
 ---
 # <a name="accessing-remote-data"></a>Acesso a dados remotos
@@ -53,7 +53,7 @@ A `CatalogService` classe é usada para gerenciar o processo de recuperação de
 
 A Figura 10-1 mostra a interação das classes que lêem os dados do catálogo do microserviço de catálogo para `CatalogView`exibição pelo.
 
-[Recuperando dados do microserviço de catálogo ![(accessing-remote-data-images/catalogdata.png " ")]] (accessing-remote-data-images/catalogdata-large.png#lightbox "Recuperando dados do microserviço de catálogo")
+[![](accessing-remote-data-images/catalogdata.png "Recuperando dados do microserviço de catálogo")](accessing-remote-data-images/catalogdata-large.png#lightbox "Recuperando dados do microserviço de catálogo")
 
 **Figura 10-1**: Recuperando dados do microserviço de catálogo
 
@@ -158,7 +158,7 @@ A `BasketService` classe é usada para gerenciar a recuperação de dados e o pr
 
 A Figura 10-2 mostra a interação de classes que enviam os dados da cesta `BasketView`exibidos pelo, ao microserviço da cesta.
 
-[Enviando dados para o microserviço da cesta ![(accessing-remote-data-images/basketdata.png " ")]] (accessing-remote-data-images/basketdata-large.png#lightbox "Enviando dados para o microserviço da cesta")
+[![](accessing-remote-data-images/basketdata.png "Enviando dados para o microserviço da cesta")](accessing-remote-data-images/basketdata-large.png#lightbox "Enviando dados para o microserviço da cesta")
 
 **Figura 10-2**: Enviando dados para o microserviço da cesta
 

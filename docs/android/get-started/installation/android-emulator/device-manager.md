@@ -9,12 +9,12 @@ author: conceptdev
 ms.author: crdun
 ms.custom: video
 ms.date: 01/22/2019
-ms.openlocfilehash: 60dcbd6f59e622fe5a1272bd2d61540b03e510e4
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 682fc5c2241ab3177b12f46dd31d264a4f58b951
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70758436"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71250090"
 ---
 # <a name="managing-virtual-devices-with-the-android-device-manager"></a>Gerenciando dispositivos virtuais com o Android Device Manager
 
@@ -362,6 +362,8 @@ O menu de opções adicionais contém os seguintes itens:
 ## <a name="troubleshooting"></a>Solução de problemas
 
 As seções a seguir explicam como diagnosticar e solucionar problemas que podem ocorrer durante o uso do Android Device Manager para configurar dispositivos virtuais.
+
+<!-- markdownlint-disable MD001 -->
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 

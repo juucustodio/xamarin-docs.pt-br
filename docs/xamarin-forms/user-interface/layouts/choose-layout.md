@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/21/2018
 ms.openlocfilehash: 161da8948f356fef997a411855598bc99d2f49b7
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69893993"
 ---
 # <a name="choose-a-xamarinforms-layout"></a>Escolha um layout do Xamarin. Forms
@@ -22,7 +22,7 @@ As classes de layout Xamarin. Forms permitem que você organize e agrupe control
 
 A imagem a seguir mostra layouts típicos que podem ser obtidos com as principais classes de layout do Xamarin. Forms:
 
-[ ![As classes de layout principais nas classes de layout Xamarin. Forms](images/layouts.png "xamarin. Forms") ] (images/layouts-large.png#lightbox "Classes de layout do Xamarin. Forms")
+[![As classes de layout principal no Xamarin. Forms](images/layouts.png "Classes de layout do Xamarin. Forms")](images/layouts-large.png#lightbox "Classes de layout do Xamarin. Forms")
 
 ## <a name="stacklayout"></a>StackLayout
 
@@ -243,7 +243,7 @@ Quando essa propriedade é definida em uma classe de layout, seu valor é transf
 
 Para obter o melhor desempenho de layout possível, siga as diretrizes em [otimizar o desempenho do layout](~/xamarin-forms/deploy-test/performance.md#optimize-layout-performance).
 
-Além disso, o desempenho de renderização de página também pode ser melhorado usando a compactação de layout, que remove os layouts especificados da árvore visual. Para obter mais informações, consulte compactação de [layout](layout-compression.md).
+Além disso, o desempenho de renderização de página também pode ser melhorado usando a compactação de layout, que remove os layouts especificados da árvore visual. Para obter mais informações, consulte [compactação de layout](layout-compression.md).
 
 ## <a name="related-links"></a>Links relacionados
 

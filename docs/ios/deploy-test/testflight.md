@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: 43dce7fe6d2a4a976879b1f583711d767dcacc7c
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 8267c49302a755dcc433345b6a53aa9f2e2c71e6
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70756206"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71250169"
 ---
 # <a name="using-testflight-to-distribute-xamarinios-apps"></a>Usando TestFlight para distribuir aplicativos Xamarin.iOS
 
@@ -90,6 +90,8 @@ O formulário deve refletir exatamente as informações no arquivo Info.plist do
 Quando o registro do iTunes Connect tiver sido criado, você poderá carregar novos builds. Lembre-se de que builds devem ter o novo direito beta.
 
 Primeiro, compile o [distribuível final](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md) no IDE e, em seguida, [envie seu aplicativo para a Apple](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md) por meio do Carregador de Aplicativos ou a função arquivo morto no Xcode.
+
+<!-- markdownlint-disable MD001 -->
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
