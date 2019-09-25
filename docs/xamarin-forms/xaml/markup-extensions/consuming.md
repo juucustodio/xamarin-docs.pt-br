@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/18/2019
 ms.openlocfilehash: 03aaf471479a5113aade6bd3f34034afadfb538c
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69887894"
 ---
 # <a name="consuming-xaml-markup-extensions"></a>Consumo de extensões de marcação XAML
@@ -143,7 +143,7 @@ O exemplo final exibe o `Device.RuntimePlatform` valor. O `Environment.NewLine` 
 
 Aqui está o exemplo em execução:
 
-[![Demonstração de X:Static](consuming-images/staticdemo-small.png "X:Static demonstração")](consuming-images/staticdemo-large.png#lightbox "X:Static demonstração")
+[![demonstração de x:static](consuming-images/staticdemo-small.png "demonstração de x:static")](consuming-images/staticdemo-large.png#lightbox "Demonstração de x:Static")
 
 <a name="reference" />
 
@@ -185,15 +185,15 @@ O **demonstração X:Reference** página mostra dois usos do `x:Reference` com a
 </ContentPage>
 ```
 
-Ambos `x:Reference` expressões usam a versão abreviada do `ReferenceExtension` nome da classe e eliminar o `Name=` faz parte da expressão. No primeiro exemplo, o `x:Reference` extensão de marcação é inserida no `Binding` extensão de marcação. Observe que o `Source` e `StringFormat` configurações são separadas por vírgulas. Aqui está o programa em execução:
+Ambos `x:Reference` expressões usam a versão abreviada do `ReferenceExtension` nome da classe e eliminar o `Name=` faz parte da expressão. No primeiro exemplo, o `x:Reference` extensão de marcação é inserida no `Binding` extensão de marcação. Observe que o `Source` e `StringFormat` configurações são separadas por vírgulas. Este é o programa em execução:
 
-[![Demonstração de X:Reference](consuming-images/referencedemo-small.png "demonstração X:Reference")](consuming-images/referencedemo-large.png#lightbox "X:Reference demonstração")
+[![demonstração do x:Reference](consuming-images/referencedemo-small.png "demonstração do x:Reference")](consuming-images/referencedemo-large.png#lightbox "Demonstração do x:Reference")
 
 <a name="type" />
 
 ## <a name="xtype-markup-extension"></a>Extensão de marcação x:Type
 
-O `x:Type` extensão de marcação é o equivalente em XAML do C# [ `typeof` ](/dotnet/csharp/language-reference/keywords/typeof/) palavra-chave. Ele dá suporte a [ `TypeExtension` ](xref:Xamarin.Forms.Xaml.TypeExtension) classe, que define uma propriedade chamada [ `TypeName` ](xref:Xamarin.Forms.Xaml.TypeExtension.TypeName) do tipo `string` que é definido como um nome de classe ou estrutura. O `x:Type` retorna da extensão de marcação a [ `System.Type` ](xref:System.Type) objeto dessa classe ou estrutura. `TypeName` é a propriedade de conteúdo do `TypeExtension`, portanto `TypeName=` não é necessário quando `x:Type` é exibida com as chaves.
+O `x:Type` extensão de marcação é o equivalente em XAML do c# [ `typeof` ](/dotnet/csharp/language-reference/keywords/typeof/) palavra-chave. Ele dá suporte a [ `TypeExtension` ](xref:Xamarin.Forms.Xaml.TypeExtension) classe, que define uma propriedade chamada [ `TypeName` ](xref:Xamarin.Forms.Xaml.TypeExtension.TypeName) do tipo `string` que é definido como um nome de classe ou estrutura. O `x:Type` retorna da extensão de marcação a [ `System.Type` ](xref:System.Type) objeto dessa classe ou estrutura. `TypeName` é a propriedade de conteúdo do `TypeExtension`, portanto `TypeName=` não é necessário quando `x:Type` é exibida com as chaves.
 
 Dentro do xamarin. Forms, há várias propriedades que têm argumentos de tipo `Type`. Os exemplos incluem o [ `TargetType` ](xref:Xamarin.Forms.Style.TargetType) propriedade do `Style`e o [X:TypeArguments](~/xamarin-forms/xaml/passing-arguments.md#generic_type_arguments) atributo usado para especificar argumentos em classes genéricas. No entanto, o analisador XAML executa o `typeof` operação automaticamente e o `x:Type` extensão de marcação não é usada nesses casos.
 
@@ -242,7 +242,7 @@ Isso é como o menu de navegação em `MainPage` no **extensões de marcação**
 
 Aqui está a página principal de abertura **extensões de marcação**:
 
-[![Principal página](consuming-images/mainpage-small.png "principal página")](consuming-images/mainpage-large.png#lightbox "principal página")
+[![Página principal](consuming-images/mainpage-small.png "Página principal")](consuming-images/mainpage-large.png#lightbox "Página Principal")
 
 Cada `CommandParameter` estiver definida como um `x:Type` extensão de marcação que faz referência a uma das outras páginas. O `Command` propriedade é associada a uma propriedade chamada `NavigateCommand`. Essa propriedade é definida no `MainPage` arquivo code-behind:
 
@@ -325,7 +325,7 @@ public partial class TypeDemoPage : ContentPage
 
 O método que é executado quando um `Button` é pressionado cria uma nova instância do argumento, define sua `VerticalOptions` propriedade e adiciona-o para o `StackLayout`. Os três `Button` elementos, em seguida, compartilhem a página com modos de exibição criados dinamicamente:
 
-[![Demonstração de X:Type](consuming-images/typedemo-small.png "demonstração X:Type")](consuming-images/typedemo-large.png#lightbox "X:Type demonstração")
+[![demonstração de x:Type](consuming-images/typedemo-small.png "demonstração de x:Type")](consuming-images/typedemo-large.png#lightbox "Demonstração de x:Type")
 
 <a name="array" />
 
@@ -382,7 +382,7 @@ O **demonstração X:array** página mostra como usar `x:Array` para adicionar i
 
 O `ViewCell` cria um simples `BoxView` para cada entrada de cor:
 
-[![Demonstração de X:array](consuming-images/arraydemo-small.png "demonstração X:array")](consuming-images/arraydemo-large.png#lightbox "X:array demonstração")
+[![demonstração do x:array](consuming-images/arraydemo-small.png "demonstração do x:array")](consuming-images/arraydemo-large.png#lightbox "Demonstração do x:Array")
 
 Há várias maneiras para especificar o indivíduo `Color` itens nessa matriz. Você pode usar um `x:Static` extensão de marcação:
 
@@ -408,7 +408,7 @@ Ao definir matrizes de tipos comuns, como cadeias de caracteres ou números, use
 
 ## <a name="xnull-markup-extension"></a>Extensão de marcação x:Null
 
-O `x:Null` extensão de marcação dá suporte a [ `NullExtension` ](xref:Xamarin.Forms.Xaml.NullExtension) classe. Ele não tem propriedades e é simplesmente o equivalente XAML do C# [ `null` ](/dotnet/csharp/language-reference/keywords/null/) palavra-chave.
+O `x:Null` extensão de marcação dá suporte a [ `NullExtension` ](xref:Xamarin.Forms.Xaml.NullExtension) classe. Ele não tem propriedades e é simplesmente o equivalente XAML do c# [ `null` ](/dotnet/csharp/language-reference/keywords/null/) palavra-chave.
 
 O `x:Null` extensão de marcação é raramente necessário e raramente usada, mas se você encontrar uma necessidade para ele, você ficará feliz por isso ele existe.
 
@@ -453,9 +453,9 @@ O **demonstração X:Null** página ilustra um cenário quando `x:Null` talvez s
 
 Em seguida, você descobre que, para uma da `Label` elementos, você deseja que todas as configurações de propriedade na implícito `Style` , exceto para o `FontFamily`, que você deseja ser o valor padrão. Você pode definir outra `Style` para essa finalidade, mas uma abordagem mais simples é simplesmente definir o `FontFamily` propriedade de determinada `Label` ao `x:Null`, conforme demonstrado no Centro de `Label`.
 
-Aqui está o programa em execução:
+Este é o programa em execução:
 
-[![Demonstração de X:Null](consuming-images/nulldemo-small.png "demonstração X:Null")](consuming-images/nulldemo-large.png#lightbox "X:Null demonstração")
+[![demonstração do x:NULL](consuming-images/nulldemo-small.png "demonstração do x:NULL")](consuming-images/nulldemo-large.png#lightbox "Demonstração do x:Null")
 
 Observe que quatro dos `Label` elementos têm uma fonte com serifa, mas o centro `Label` tem a fonte sem serifa padrão.
 
@@ -497,9 +497,9 @@ O **demonstração OnPlatform** página mostra como usar o `OnPlatform` extensã
 
 Neste exemplo, todos os três `OnPlatform` expressões usam a versão abreviada do `OnPlatformExtension` nome de classe. Os três `OnPlatform` conjunto de extensões de marcação a [ `Color` ](xref:Xamarin.Forms.BoxView.Color), [ `WidthRequest` ](xref:Xamarin.Forms.VisualElement.WidthRequest), e [ `HeightRequest` ](xref:Xamarin.Forms.VisualElement.HeightRequest) propriedades do [ `BoxView` ](xref:Xamarin.Forms.BoxView) como valores diferentes em iOS, Android e UWP. As extensões de marcação também fornecem valores padrão para essas propriedades nas plataformas que não forem especificadas, eliminando o `Default=` faz parte da expressão. Observe que as propriedades de extensão de marcação que são definidas são separadas por vírgulas.
 
-Aqui está o programa em execução:
+Este é o programa em execução:
 
-[![Demonstração de OnPlatform](consuming-images/onplatformdemo-small.png "demonstração OnPlatform")](consuming-images/onplatformdemo-large.png#lightbox "OnPlatform demonstração")
+[![Demonstração da plataforma](consuming-images/onplatformdemo-small.png "Demonstração da plataforma")](consuming-images/onplatformdemo-large.png#lightbox "Demonstração da plataforma")
 
 <a name="onidiom" />
 
@@ -535,9 +535,9 @@ O **demonstração OnIdiom** página mostra como usar o `OnIdiom` extensão de m
 
 Neste exemplo, todos os três `OnIdiom` expressões usam a versão abreviada do `OnIdiomExtension` nome de classe. Os três `OnIdiom` conjunto de extensões de marcação a [ `Color` ](xref:Xamarin.Forms.BoxView.Color), [ `WidthRequest` ](xref:Xamarin.Forms.VisualElement.WidthRequest), e [ `HeightRequest` ](xref:Xamarin.Forms.VisualElement.HeightRequest) propriedades do [ `BoxView` ](xref:Xamarin.Forms.BoxView) como valores diferentes em telefone, tablet e expressões da área de trabalho. As extensões de marcação também fornecem valores padrão para essas propriedades em que as linguagens que não forem especificadas, eliminando o `Default=` faz parte da expressão. Observe que as propriedades de extensão de marcação que são definidas são separadas por vírgulas.
 
-Aqui está o programa em execução:
+Este é o programa em execução:
 
-[![Demonstração de OnIdiom](consuming-images/onidiomdemo-small.png "demonstração OnIdiom")](consuming-images/onidiomdemo-large.png#lightbox "OnIdiom demonstração")
+[![Demonstração do Onidioma](consuming-images/onidiomdemo-small.png "Demonstração do Onidioma")](consuming-images/onidiomdemo-large.png#lightbox "Demonstração do onidioma")
 
 ## <a name="datatemplate-markup-extension"></a>Extensão de marcação DataTemplate
 
@@ -583,9 +583,9 @@ A página de **demonstração do FontImage** mostra como usar `FontImage` a exte
 
 Neste exemplo, a versão abreviada do `FontImageExtension` nome da classe é usada para exibir um ícone do Xbox, da família de fontes Ionicons, em um. [`Image`](xref:Xamarin.Forms.Image) A expressão também usa a `OnPlatform` extensão de marcação para especificar `FontFamily` valores de propriedade diferentes no Ios e no Android. Além disso, a `Glyph=` parte da expressão é eliminada e as propriedades de extensão de marcação definidas são separadas por vírgulas. Observe que, embora o caractere Unicode para o ícone `\uf30c`seja, ele deve ser ignorado em XAML e, portanto `&#xf30c;`, se torna.
 
-Aqui está o programa em execução:
+Este é o programa em execução:
 
-[ ![Captura de tela da demonstração de FontImage da extensão de marcação FontImage](consuming-images/fontimagedemo.png "") ] (consuming-images/fontimagedemo-large.png#lightbox "Demonstração do FontImage")
+[![Captura de tela da extensão de marcação FontImage](consuming-images/fontimagedemo.png "Demonstração do FontImage")](consuming-images/fontimagedemo-large.png#lightbox "Demonstração do FontImage")
 
 Para obter informações sobre como exibir ícones de fonte especificando os dados de ícone `FontImageSource` de fonte em um objeto, consulte [exibir ícones de fonte](~/xamarin-forms/user-interface/text/fonts.md#display-font-icons).
 

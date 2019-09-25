@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
 ms.openlocfilehash: 24276dce97e4935ba41d7012cf6a9aa8fa2658a8
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "68651372"
 ---
 # <a name="cell-background-color-on-ios"></a>Cor do plano de fundo da célula no iOS
@@ -41,7 +41,7 @@ Essa plataforma do IOS específica define a cor de plano de [`Cell`](xref:Xamari
 </ContentPage>
 ```
 
-Como alternativa, ele pode ser consumido de C# usando a API fluente:
+Como alternativa, ele pode ser consumido de c# usando a API fluente:
 
 ```csharp
 using Xamarin.Forms.PlatformConfiguration;
@@ -56,7 +56,7 @@ O `ListView.On<iOS>` método Especifica que este específicos da plataforma ser�
 
 O resultado é que a cor do plano de [`Cell`](xref:Xamarin.Forms.Cell) fundo em um pode ser definida [`Color`](xref:Xamarin.Forms.Color)como um específico:
 
-[ ![Captura de tela das células do cabeçalho do grupo azul-petróleo, em ListView do IOS](cell-background-color-images/group-header-cell-color.png "com células do cabeçalho do grupo azul-petróleo") ] (cell-background-color-images/group-header-cell-color-large.png#lightbox "ListView com células de cabeçalho de grupo azul-petróleo")
+[![Captura de tela das células do cabeçalho do grupo azul-petróleo, no Ios](cell-background-color-images/group-header-cell-color.png "ListView com células de cabeçalho de grupo azul-petróleo")](cell-background-color-images/group-header-cell-color-large.png#lightbox "ListView com células de cabeçalho de grupo azul-petróleo")
 
 ## <a name="related-links"></a>Links relacionados
 

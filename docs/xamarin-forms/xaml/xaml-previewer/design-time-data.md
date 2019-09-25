@@ -8,10 +8,10 @@ author: maddyleger1
 ms.author: maleger
 ms.date: 03/27/2019
 ms.openlocfilehash: a6a34615adc9cf290ff6bf9dd344487e5f29cfa2
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69887848"
 ---
 # <a name="use-design-time-data-with-the-xaml-previewer"></a>Usar dados de tempo de design com o previsor XAML
@@ -52,7 +52,7 @@ Neste exemplo, o botão só aparece em tempo de design. Use este método para co
 
 ## <a name="preview-images-at-design-time"></a>Visualizar imagens em tempo de design
 
-Você pode definir uma fonte de tempo de design para imagens vinculadas à página ou carregadas dinamicamente. Em seu projeto Android, adicione a imagem que você deseja mostrar no previsor XAML para os **recursos >** pasta desenhável. Em seu projeto do iOS, adicione a imagem à pasta **recursos** . Em seguida, você pode mostrar essa imagem no visualizador XAML em tempo de design:
+Você pode definir uma fonte de tempo de design para imagens vinculadas à página ou carregadas dinamicamente. Em seu projeto Android, adicione a imagem que você deseja mostrar no previsor XAML para os **recursos > pasta desenhável** . Em seu projeto do iOS, adicione a imagem à pasta **recursos** . Em seguida, você pode mostrar essa imagem no visualizador XAML em tempo de design:
 
 ```xaml
 <Image Source={Binding ProfilePicture} d:Source="DesignTimePicture.jpg" />
