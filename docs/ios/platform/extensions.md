@@ -9,10 +9,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/22/2017
 ms.openlocfilehash: 5995ba06873b2fb5f75c593fbc7136806e50d982
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "70290599"
 ---
 # <a name="ios-extensions-in-xamarinios"></a>extensões do iOS no Xamarin. iOS
@@ -29,11 +29,11 @@ Todas as extensões são instaladas em conjunto com um aplicativo de contêiner 
 
 |Tipo|Descrição|Ponto de extensão|Aplicativo host|
 |--- |--- |--- |--- |
-|Ação|Editor ou Visualizador especializado para um tipo de mídia específico|`com.apple.ui-services`|Any|
+|Ação|Editor ou Visualizador especializado para um tipo de mídia específico|`com.apple.ui-services`|Qualquer|
 |Provedor de documentos|Permite que o aplicativo use um repositório de documentos remoto|`com.apple.fileprovider-ui`|Aplicativos usando um [UIDocumentPickerViewController](xref:UIKit.UIDocumentPickerViewController)|
-|Teclado|Teclados alternativos|`com.apple.keyboard-service`|Any|
+|Teclado|Teclados alternativos|`com.apple.keyboard-service`|Qualquer|
 |Edição de fotos|Manipulação e edição de fotos|`com.apple.photo-editing`|Editor de photos. app|
-|Compartilhar|Compartilha dados com redes sociais, serviços de mensagens, etc.|`com.apple.share-services`|Any|
+|Compartilhar|Compartilha dados com redes sociais, serviços de mensagens, etc.|`com.apple.share-services`|Qualquer|
 |Hoje|"Widgets" que aparecem na tela atual ou no centro de notificações|`com.apple.widget-extensions`|Hoje e centro de notificações|
 
 [Pontos de extensão adicionais](~/ios/platform/introduction-to-ios10/index.md#app-extensions) foram adicionados no Ios 10.
