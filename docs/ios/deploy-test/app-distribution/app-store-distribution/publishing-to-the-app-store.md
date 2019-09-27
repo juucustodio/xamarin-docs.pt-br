@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 06/25/2018
-ms.openlocfilehash: 9f9504890b12f6a3d8046e98ce537cc0d742f2ed
-ms.sourcegitcommit: 159f250ae7535fca7ab3bc4dc7395dc4cc2af93f
+ms.openlocfilehash: 8b0b74a1db314f5241f965207ac898316a8276e0
+ms.sourcegitcommit: f9cbec7a1a0553da1e60ff371fda2b3c717f941b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71278148"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71312343"
 ---
 # <a name="publishing-xamarinios-apps-to-the-app-store"></a>Publicar aplicativos Xamarin.iOS na App Store
 
@@ -121,9 +121,38 @@ Os projetos novos do Xamarin.iOS configuram automaticamente as _configurações 
 
 15. Clique em **OK** para salvar as alterações nas propriedades do projeto.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio-2019tabwindows"></a>[Visual Studio 2019](#tab/windows)
 
-1. Verifique se o Visual Studio 2019 ou o Visual Studio 2017 foi [emparelhado com um host de build do Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
+1. Verifique se o Visual Studio 2019 foi [emparelhado a um host de Build do Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
+2. Clique com o botão direito do mouse em **Nome do Projeto** no **Gerenciador de Soluções** e selecione **Propriedades**.
+3. Navegue até a guia **iOS Build** e defina **Configuração** como **Versão** e **Plataforma** como **iPhone**.
+4. Para compilar com um SDK específico do iOS, selecione-o na lista **Versão do SDK**. Caso contrário, deixe esse valor como **Padrão**.
+5. A vinculação reduz o tamanho total do aplicativo ao eliminar o código não utilizado. Na maioria dos casos, o **Comportamento do vinculador** deve ser definido como o valor padrão de **Vincular apenas SDKs da estrutura**. Em algumas situações, como ao usar bibliotecas de terceiros, pode ser necessário definir esse valor como **Não vincular** para garantir que o código necessário não seja removido. Para saber mais, consulte o guia [Vincular aplicativos do Xamarin.iOS](~/ios/deploy-test/linker.md).
+6. Confira **Otimizar imagens PNG** para diminuir ainda mais o tamanho do aplicativo.
+7. A depuração não deve ser habilitada, pois deixará o build maior, sem necessidade.
+8. Para o iOS 11, selecione uma das arquiteturas de dispositivo compatíveis com **ARM64**. Para saber mais sobre a compilação para dispositivos iOS de 64 bits, consulte a seção **Habilitar compilações de 64 bits de aplicativos Xamarin.iOS** da documentação [Considerações sobre plataformas de 32/64 bits](~/cross-platform/macios/32-and-64/index.md).
+9. Talvez você queira usar o compilador **LLVM** para compilar código menor e mais rápido. No entanto, essa opção aumenta o tempo de compilação.
+10. Com base nas necessidades do seu aplicativo, você também pode ajustar o tipo de **Coleta de Lixo** que está sendo usado e configurar para a **Internacionalização**.
+
+    Depois de definir as opções descritas acima, as configurações de build devem ser semelhantes a isto:
+
+    ![Configurações de build do iOS](publishing-to-the-app-store-images/build-w157.png "Configurações de build do iOS")
+
+    Confira também o guia [Mecânica de compilação do iOS](~/ios/deploy-test/ios-build-mechanics.md), que descreve as configurações de build.
+
+11. Navegue para a guia **Assinatura de Pacote do iOS**. Defina **Configuração** como **Versão**, **Plataforma** como **iPhone** e marque **Provisionamento manual**.
+12. Defina **Identidade de assinatura** como **Distribuição (automática)** .
+13. Selecione o **Perfil de provisionamento** da App Store [criado acima](#create-and-install-an-app-store-provisioning-profile).
+
+    As opções de assinatura de pacote do projeto serão parecidas com isto:
+
+    ![Configurações de Assinatura de Pacote do iOS](publishing-to-the-app-store-images/bundleSigning-w157.png "Configurações de Assinatura de Pacote do iOS")
+
+14. Salve a configuração de build e feche-a.
+
+# <a name="visual-studio-2017tabwin-vs2017"></a>[Visual Studio 2017](#tab/win-vs2017)
+
+1. Verifique se o Visual Studio 2017 foi [emparelhado com um host de build do Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
 2. Clique com o botão direito do mouse em **Nome do Projeto** no **Gerenciador de Soluções** e selecione **Propriedades**.
 3. Navegue até a guia **iOS Build** e defina **Configuração** como **Versão** e **Plataforma** como **iPhone**.
 4. Para compilar com um SDK específico do iOS, selecione-o na lista **Versão do SDK**. Caso contrário, deixe esse valor como **Padrão**.
@@ -209,12 +238,42 @@ Com as configurações de build configuradas corretamente e o iTunes Connect agu
     >
     > Para conferir uma solução alternativa para esse erro, veja [esta postagem nos Fóruns do Xamarin](https://forums.xamarin.com/discussion/40388/disallowed-paths-itunesmetadata-plist-found-at-when-submitting-to-app-store/p1).
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio-2019tabwindows"></a>[Visual Studio 2019](#tab/windows)
 
 > [!NOTE]
-> No momento, o Visual Studio 2017 não é compatível com o fluxo de trabalho **Arquivo para publicação** encontrado no Visual Studio para Mac.
+> A publicação na loja de aplicativos tem suporte no Visual Studio 2019 versão 16,3 e superior.
 
-1. Verifique se o Visual Studio 2019 ou o Visual Studio 2017 foi [emparelhado com um host de build do Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
+1. Verifique se o Visual Studio 2019 está [emparelhado a um host de Build do Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
+2. Selecione **liberar** na lista suspensa **configurações da solução** e **iPhone** na lista suspensa plataformas de **solução** .
+
+    ![Captura de tela da barra de ferramentas do Visual Studio mostrando configuração de solução definida como versão, plataforma de solução definida como iPhone e destino definida como dispositivo.](publishing-to-the-app-store-images/chooseConfig-w157.png "Captura de tela da barra de ferramentas do Visual Studio mostrando configuração de solução definida como versão, plataforma de solução definida como iPhone e destino definida como dispositivo.")
+
+3. No menu **Compilar** , selecione **arquivo morto...** . Isso abrirá o **Gerenciador de arquivos** e começará a criar um arquivo morto.
+
+4. Depois que o arquivo for criado, clique em **distribuir...** para abrir o assistente de publicação.
+
+    ![Captura de tela do local do botão distribuir na exibição do Gerenciador de arquivos.](publishing-to-the-app-store-images/archives-win.png "Captura de tela do local do botão distribuir na exibição do Gerenciador de arquivos.")
+
+5. Selecione o canal de distribuição **App Store**.
+
+6. Selecione sua identidade de assinatura e o perfil de provisionamento. Clique em **carregar para armazenar**.
+
+    ![Captura de tela do assistente de publicação mostrando uma identidade de assinatura válida e seleção de perfil de provisionamento.](publishing-to-the-app-store-images/provProfileSelect-win.png "Captura de tela do assistente de publicação mostrando uma identidade de assinatura válida e seleção de perfil de provisionamento.")
+
+7. Insira sua ID da Apple e [uma senha específica do aplicativo](https://support.apple.com/ht204397). Clique em **OK** para começar a carregar seu aplicativo para o App Store Connect.
+
+    ![Captura de tela da janela pop-up para inserir sua ID da Apple e a senha específica do aplicativo.](publishing-to-the-app-store-images/connectInfo-win.png "Captura de tela da janela pop-up para inserir sua ID da Apple e a senha específica do aplicativo.")
+
+# <a name="visual-studio-2017tabwin-vs2017"></a>[Visual Studio 2017](#tab/win-vs2017)
+
+> [!NOTE]
+> O Visual Studio 2017 não oferece suporte ao fluxo de trabalho de publicação completo encontrado em Visual Studio para Mac e no Visual Studio 2019.
+>
+> As etapas a seguir são para o Xcode 10.
+>
+> Você ainda pode seguir as etapas abaixo para criar um. Arquivo IPA, mas para implantar na App Store usando o Xcode 11 (que é necessário para o suporte do iOS 13), você deve [usar Visual Studio para Mac](?tabs=macos#build-and-submit-your-app).
+
+1. Verifique se o Visual Studio 2017 foi [emparelhado com um host de build do Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
 2. Selecione **Versão** no menu suspenso **Configurações da solução** do Visual Studio 2017, e **iPhone** no menu suspenso **Plataformas da solução**.
 
     ![Configuração de build e seleção de plataforma](publishing-to-the-app-store-images/chooseConfig-w157.png "Configuração de build e seleção de plataforma")
@@ -226,6 +285,13 @@ Com as configurações de build configuradas corretamente e o iTunes Connect agu
 
 4. Para localizar o arquivo .ipa no computador Windows, clique com o botão direito do mouse no nome do projeto Xamarin.iOS no **Gerenciador de Soluções** do Visual Studio 2019 ou do Visual Studio 2017 e escolha **Abrir Pasta no Explorador de Arquivos**. Em seguida, no **Explorador de Arquivos** do Windows, navegue até o subdiretório **bin/iPhone/Release**. A menos que você tenha [personalizado o local de saída de arquivo .ipa](#customize-the-ipa-location), ele deve estar nesse diretório.
 5. Para, em vez disso, exibir o arquivo .ipa no host de build do Mac, clique com o botão direito do mouse no nome do projeto Xamarin.iOS no **Gerenciador de Soluções** no Visual Studio 2019 ou no Visual Studio 2017 (no Windows) e selecione **Mostrar arquivo IPA no servidor de build**. Isso abrirá uma janela **Localizador** no host de build do Mac com o arquivo .ipa selecionado.
+
+    > [!TIP]
+    >
+    > As etapas a seguir só serão válidas se você estiver usando o Xcode 10 e Compilando para o iOS 12 e anterior. 
+    >
+    > Para implantar na App Store usando o Xcode 11 (para iOS 13), você deve [usar Visual Studio para Mac](?tabs=macos#build-and-submit-your-app) para compilar e carregar seu aplicativo. O **carregador de aplicativos** não estará disponível para o Xcode 11.
+
 6. No host de build do Mac, abra o **Carregador de Aplicativos**. No Xcode, selecione **Xcode > Abrir Ferramenta de Desenvolvedor > Carregador de Aplicativos**.
 
     > [!NOTE]
@@ -331,4 +397,3 @@ Este artigo descreveu como configurar, compilar e enviar um aplicativo iOS para 
 - [Configurar um aplicativo no iTunes Connect](~/ios/deploy-test/app-distribution/app-store-distribution/itunesconnect.md)
 - [Ícones de aplicativo no Xamarin.iOS](~/ios/app-fundamentals/images-icons/app-icons.md)
 - [Telas de inicialização para Xamarin.iOS](~/ios/app-fundamentals/images-icons/launch-screens.md)
-- [Documentação do Carregador de Aplicativos (Apple)](https://help.apple.com/itc/apploader/#/apdS673accdb)

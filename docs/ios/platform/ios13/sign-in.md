@@ -7,14 +7,16 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/10/2019
-ms.openlocfilehash: 5c5191a6a7490ec0301bdea7b7f5aa2217b80c96
-ms.sourcegitcommit: 09bc69d7119a04684c9e804c5cb113b8b1bb7dfc
+ms.openlocfilehash: d8c458ad30d7e281427dad0e29092c55fede7347
+ms.sourcegitcommit: fc689c1a6b641c124378dedc1bd157d96fc759a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71206368"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71319535"
 ---
 # <a name="sign-in-with-apple-in-xamarinios"></a>Entre com a Apple no Xamarin. iOS
+
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/ios-samples/ios13-addingthesigninwithappleflowtoyourapp/)
 
 Entrar com a Apple é um novo serviço que fornece proteção de identidade para usuários de serviços de autenticação de terceiros. A partir do iOS 13, a Apple exige que qualquer aplicativo novo usando serviços de autenticação de terceiros também deve fornecer entrada com a Apple. Os aplicativos existentes que estão sendo atualizados não precisam adicionar entrar com a Apple até abril de 2020.
 
@@ -204,10 +206,6 @@ public UIWindow GetPresentationAnchor (ASAuthorizationController controller) => 
 
 #endregion
 ```
-
-## <a name="summary"></a>Resumo
-
-Este artigo introduziu a entrada com a Apple para iOS.
 
 ## <a name="related-links"></a>Links relacionados
 

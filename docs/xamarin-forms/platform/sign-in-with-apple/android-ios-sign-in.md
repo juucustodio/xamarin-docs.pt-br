@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidortinau
 ms.author: daortin
 ms.date: 09/10/2019
-ms.openlocfilehash: 105088b612ffc35d18bdf800b48cc700ce6f4a48
-ms.sourcegitcommit: 09bc69d7119a04684c9e804c5cb113b8b1bb7dfc
+ms.openlocfilehash: df011a6eb72b6eb30af0a197d4be48b0f2494384
+ms.sourcegitcommit: fc689c1a6b641c124378dedc1bd157d96fc759a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71206516"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71319517"
 ---
 # <a name="use-sign-in-with-apple-in-xamarinforms"></a>Use entrar com a Apple no Xamarin. Forms
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://github.com/Redth/Xamarin.AppleSignIn.Sample)
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/signinwithapple/)
 
 Entrar com a Apple é para todos os novos aplicativos no iOS 13 que usam serviços de autenticação de terceiros. Os detalhes de implementação entre o iOS e o Android são bastante diferentes. Este guia explica como você pode fazer isso hoje em Xamarin. Forms.
 
