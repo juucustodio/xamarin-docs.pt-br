@@ -1,4 +1,4 @@
-# [Documentação do Xamarin](index.md)
+# [Documentação do Xamarin](index.yml)
 ## [Android](android/index.yml)
 ## [iOS](ios/index.yml)
 ## [Mac](mac/index.yml)
