@@ -56,29 +56,29 @@ sections:
         style: cards
         className: cardsB
         items:
-          - href: ~/xamarin-forms/app-fundamentals/
+          - href: ~/xamarin-forms/app-fundamentals/index.yml
             html: 'Tudo que você precisa saber para desenvolver aplicativos Xamarin.Forms, como navegação, gestos, associação de dados e mais.'
             image:
               src: ~/media/icons/i_app-build.svg
-              href: ~/xamarin-forms/app-fundamentals/
+              href: ~/xamarin-forms/app-fundamentals/index.yml
             title: Conceitos básicos de aplicativo
-          - href: ~/xamarin-forms/user-interface
+          - href: ~/xamarin-forms/user-interface/index.yml
             html: Saiba mais sobre o conjunto completo de controles de interface do usuário disponíveis no XAML do Xamarin.Forms.
             image:
               src: ~/media/icons/i_user-interface.svg
-              href: ~/xamarin-forms/user-interface/
+              href: ~/xamarin-forms/user-interface/index.yml
             title: Interface do Usuário
-          - href: ~/xamarin-forms/xaml/
+          - href: ~/xamarin-forms/xaml/index.yml
             html: Compile interfaces do usuário declarativamente e compartilhe em plataformas móveis e desktop.
             image:
               src: ~/media/icons/i_xaml-forms.svg
-              href: ~/xamarin-forms/xaml/
+              href: ~/xamarin-forms/xaml/index.yml
             title: XAML
-          - href: ~/xamarin-forms/platform/
+          - href: ~/xamarin-forms/platform/index.yml
             html: 'Trabalhar com recursos de plataforma Xamarin.Forms, como Renderizadores personalizados e outros recursos importantes de cada versão.'
             image:
               src: ~/media/icons/i_platform.svg
-              href: ~/xamarin-forms/platform/
+              href: ~/xamarin-forms/platform/index.yml
             title: Recursos da plataforma
           - href: ~/essentials/index.md?context=xamarin/xamarin-forms
             html: 'APIs multiplataforma para tarefas comuns, como acesso a arquivos, informações do dispositivo, os recursos de hardware e muito mais.'
@@ -86,23 +86,23 @@ sections:
               src: 'https://docs.microsoft.com/media/common/i_multi-connect.svg'
               href: ~/essentials/index.md?context=xamarin/xamarin-forms
             title: Xamarin.Essentials
-          - href: ~/xamarin-forms/data-cloud/
+          - href: ~/xamarin-forms/data-cloud/index.yml
             html: 'Armazenamento e recuperação de dados locais e remotos, e outros serviços do Azure baseados em nuvem.'
             image:
               src: ~/media/icons/i_data-cloud.svg
-              href: ~/xamarin-forms/data-cloud/
+              href: ~/xamarin-forms/data-cloud/index.yml
             title: Dados e Serviços de Nuvem do Azure
-          - href: ~/xamarin-forms/deploy-test/
+          - href: ~/xamarin-forms/deploy-test/index.yml
             html: Instruções para compilação e implantação de aplicativos e dicas para testá-los com antecedência!
             image:
               src: ~/media/icons/i_deploy-test.svg
-              href: ~/xamarin-forms/deploy-test/
+              href: ~/xamarin-forms/deploy-test/index.yml
             title: Implantação e Teste
-          - href: ~/xamarin-forms/internals/
+          - href: ~/xamarin-forms/internals/index.yml
             html: Informações adicionais sobre os recursos internos de Xamarin.Forms e assistência com recursos como a localização e acessibilidade.
             image:
               src: 'https://docs.microsoft.com/media/common/i_config-tools.svg'
-              href: ~/xamarin-forms/internals/
+              href: ~/xamarin-forms/internals/index.yml
             title: Conceitos avançados e recursos internos
   - title: Referência
     items:
