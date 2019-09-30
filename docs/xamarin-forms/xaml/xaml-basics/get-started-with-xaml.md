@@ -6,13 +6,13 @@ ms.assetid: 9073FA0E-BD5A-4492-8A93-54C466F6EDB9
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/10/2018
-ms.openlocfilehash: 32f809c5b21e56497328ce00bf49a7337ac0270a
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.date: 09/30/2019
+ms.openlocfilehash: a35a3750957073168bca4903e1cef79ed53a3de9
+ms.sourcegitcommit: bb6a103de620386187a08151a4cdc29a4dc53a10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71250039"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71679971"
 ---
 # <a name="part-1-getting-started-with-xaml"></a>Parte 1. Introdução ao XAML
 
@@ -30,17 +30,19 @@ Para começar a editar seu primeiro arquivo XAML, use o Visual Studio ou Visual 
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-No Windows, use o Visual Studio para selecionar **arquivo > Novo > projeto** no menu. No **novo projeto** caixa de diálogo, selecione **Visual C# > plataforma cruzada** à esquerda e, em seguida, **aplicativo móvel (xamarin. Forms)** na lista no centro.
+No Windows, inicie o Visual Studio 2019 e, na janela iniciar, clique em **criar um novo projeto** para criar um novo projeto:
 
-![Nova caixa de diálogo de projeto](get-started-with-xaml-images/win/newprojectdialog.w157.png)
+![Nova janela de solução](get-started-with-xaml-images/win/new-solution-2019.png)
 
-Selecione um local para a solução, dê um nome de **XamlSamples** (ou acordo com sua preferência) e pressione **Okey**.
+Na janela **criar um novo projeto** , selecione **móvel** na lista suspensa **tipo de projeto** , selecione o modelo **aplicativo móvel (Xamarin. Forms)** e clique no botão **Avançar** :
 
-Na próxima tela, selecione a **aplicativo em branco** modelo e o **.NET Standard** estratégia de compartilhamento de código:
+![Janela novo projeto](get-started-with-xaml-images/win/new-project-2019.png)
 
-![Caixa de diálogo novo aplicativo](get-started-with-xaml-images/win/newcrossplatformapp.png)
+Na janela **configurar seu novo projeto** , defina o **nome do projeto** como **XamlSamples** (ou qualquer que seja sua preferência) e clique no botão **criar** .
 
-Pressione **OK**.
+Na caixa de diálogo **novo aplicativo de plataforma cruzada** , clique em **em branco**e clique no botão **OK** :
+
+![Caixa de diálogo novo aplicativo](get-started-with-xaml-images/win/new-cross-platform-app.png)
 
 Quatro projetos são criados na solução: o **XamlSamples** .NET Standard library, **XamlSamples.Android**, **XamlSamples.iOS**e a plataforma Universal do Windows solução, **XamlSamples.UWP**.
 
@@ -151,9 +153,9 @@ Para visuais mais interessantes, tudo o que você precisa é mais interessante d
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-Para adicionar outros XAML baseado `ContentPage` classes ao seu projeto, selecione o **XamlSamples** biblioteca .NET Standard de projeto e invoque o **projeto > Adicionar Novo Item** item de menu. Na parte esquerda dos **Adicionar Novo Item** caixa de diálogo, selecione **Visual C#**  e **xamarin. Forms**. Na lista Selecione **página de conteúdo** (não **página de conteúdo (C#)** , que cria uma página somente de código, ou **exibição de conteúdo**, que não é uma página). Nomeie a página, por exemplo, **HelloXamlPage.xaml**:
+Para adicionar outras classes `ContentPage` baseadas em XAML ao seu projeto, selecione o projeto de biblioteca **XamlSamples** .net Standard, clique com o botão direito do mouse e selecione **Adicionar > novo item...** . Na caixa de diálogo **Adicionar novo item** , **selecione C# itens visuais > Xamarin. Forms > página de conteúdo** (não a **página conteúdo (C#)** , que cria uma página somente código ou **exibição de conteúdo**, que não é uma página). Nomeie a página, por exemplo, **HelloXamlPage**:
 
-![Caixa de diálogo Adicionar novo item](get-started-with-xaml-images/win/addnewitemdialog.w157.png)
+![Caixa de diálogo Adicionar novo item](get-started-with-xaml-images/win/add-new-item-dialog-2019.png)
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
