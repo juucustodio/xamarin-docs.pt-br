@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/06/2019
-ms.openlocfilehash: c65a1aed79199106d2a754329dd38d87feda66a2
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
-ms.translationtype: HT
+ms.openlocfilehash: 70f8f630558730f6074373eb3a814209921235de
+ms.sourcegitcommit: 2798da316a3e9d9de3ea36ff6444f60f60553424
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69888964"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71674562"
 ---
 # <a name="xamarinforms-shell-navigation"></a>Navegação do Shell do Xamarin.Forms
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 
 O Shell do Xamarin.Forms inclui uma experiência de navegação baseada em URI que usa rotas para qualquer página no aplicativo sem precisar seguir uma hierarquia definida. Além disso, eles também oferecem a capacidade de navegar para trás, sem precisar visitar todas as páginas na pilha de navegação.
 
@@ -156,7 +156,7 @@ Este exemplo navega até a página para a rota `monkeydetails`.
 
 Além disso, há suporte para os seguintes formatos de rota relativa:
 
-| Formatar | DESCRIÇÃO |
+| Formatar | Descrição |
 | --- | --- |
 | //*rota* | A hierarquia de rotas será pesquisada à procura da rota especificada, acima da rota exibida atualmente. |
 | ///*rota* | A hierarquia de rotas será pesquisada à procura da rota especificada, abaixo da rota exibida atualmente. |
@@ -211,7 +211,7 @@ A classe `Tab` define uma propriedade `Stack`, do tipo `IReadOnlyList<Page>`, qu
 
 A classe `Shell` define um evento `Navigating`, que é acionado quando a navegação está prestes a ser realizada, devido à navegação programática ou à interação do usuário. O objeto `ShellNavigatingEventArgs` que acompanha o evento `Navigating` fornece as seguintes propriedades:
 
-| Propriedade | Tipo | DESCRIÇÃO |
+| Propriedade | Tipo | Descrição |
 |---|---|---|
 | `Current` | `ShellNavigationState` | O URI da página atual. |
 | `Source` | `ShellNavigationSource` | O tipo de navegação que ocorreu. |
@@ -226,7 +226,7 @@ Além disso, a classe `ShellNavigatingEventArgs` fornece um método `Cancel` que
 
 A classe `Shell` também define um evento`Navigated`, que é acionado quando a navegação é concluída. O objeto `ShellNavigatedEventArgs` que acompanha o evento `Navigating` fornece as seguintes propriedades:
 
-| Propriedade | Tipo | DESCRIÇÃO |
+| Propriedade | Tipo | Descrição |
 |---|---|---|
 | `Current` | `ShellNavigationState` | O URI da página atual. |
 | `Previous`| `ShellNavigationState` | O URI da página anterior. |
@@ -302,7 +302,7 @@ A classe `BackButtonBehavior` define as propriedades a seguir, que controlam a a
 
 - `Command`, do tipo `ICommand`, que é executado quando o botão Voltar é pressionado.
 - `CommandParameter`, do tipo `object`, que é o parâmetro passado para `Command`.
-- `IconOveride`, do tipo [`ImageSource`](xref:Xamarin.Forms.ImageSource), o ícone usado para o botão Voltar.
+- `IconOverride`, do tipo [`ImageSource`](xref:Xamarin.Forms.ImageSource), o ícone usado para o botão Voltar.
 - `IsEnabled`, do tipo `boolean`, indica se o botão Voltar está habilitado. O valor padrão é `true`.
 - `TextOverride`, do tipo `string`, o texto usado para o botão Voltar.
 
@@ -335,7 +335,7 @@ Shell.SetBackButtonBehavior(this, new BackButtonBehavior
 
 A propriedade `Command` é definida como uma `ICommand` a ser executada quando o botão Voltar é pressionado, e a propriedade `IconOverride` é definida como o ícone usado pelo botão Voltar:
 
-[![Captura de tela da substituição de um ícone do botão Voltar no iOS e no Android](navigation-images/back-button.png "Substituição de ícone do botão Voltar do Shell")](navigation-images/back-button-large.png#lightbox "Substituição de ícone do botão Voltar do Shell")
+[![Captura de tela de um ícone de botão voltar do Shell substituir, na substituição do ícone do botão voltar do shell do IOS e do Android](navigation-images/back-button.png "")](navigation-images/back-button-large.png#lightbox "Substituir ícone do botão voltar do Shell")
 
 ## <a name="related-links"></a>Links relacionados
 
