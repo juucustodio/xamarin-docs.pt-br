@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 06/25/2018
-ms.openlocfilehash: 8b0b74a1db314f5241f965207ac898316a8276e0
-ms.sourcegitcommit: f9cbec7a1a0553da1e60ff371fda2b3c717f941b
+ms.openlocfilehash: b6fb02697d3df59181750bf6fd7c840129554ac3
+ms.sourcegitcommit: 84d788f7dbabc1c83ac795ed3952d589074fa8e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71312343"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71811177"
 ---
 # <a name="publishing-xamarinios-apps-to-the-app-store"></a>Publicar aplicativos Xamarin.iOS na App Store
 
@@ -211,7 +211,6 @@ Com as configurações de build configuradas corretamente e o iTunes Connect agu
 2. No menu **Compilar**, selecione **Arquivo para publicação**.
 3. Depois que o arquivo for criado, a exibição de **arquivos mortos** será exibida. Clique em **Assinar e Distribuir...** para abrir o assistente de publicação.
 
-
     ![Captura de tela do local do botão assinar e distribuir na exibição de arquivos mortos.](publishing-to-the-app-store-images/archives-mac.png "Captura de tela do local do botão assinar e distribuir na exibição de arquivos mortos.")
 
     > [!NOTE]
@@ -288,7 +287,7 @@ Com as configurações de build configuradas corretamente e o iTunes Connect agu
 
     > [!TIP]
     >
-    > As etapas a seguir só serão válidas se você estiver usando o Xcode 10 e Compilando para o iOS 12 e anterior. 
+    > As etapas a seguir só serão válidas se você estiver usando o Xcode 10 e Compilando para o iOS 12 e anterior.
     >
     > Para implantar na App Store usando o Xcode 11 (para iOS 13), você deve [usar Visual Studio para Mac](?tabs=macos#build-and-submit-your-app) para compilar e carregar seu aplicativo. O **carregador de aplicativos** não estará disponível para o Xcode 11.
 
