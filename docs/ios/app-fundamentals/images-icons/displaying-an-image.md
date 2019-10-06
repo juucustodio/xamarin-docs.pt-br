@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 04/24/2018
-ms.openlocfilehash: 8e06b03e0acb129f1eb0c3c793d0b4a05c11ce2b
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: eaef454de77387ea2a6732fa00797a6a4f0e3cd1
+ms.sourcegitcommit: 621649fb4a119981290fed7a1061cbae30b982a6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70282383"
+ms.lasthandoff: 10/06/2019
+ms.locfileid: "71975877"
 ---
 # <a name="displaying-an-image-in-xamarinios"></a>Exibindo uma imagem no Xamarin. iOS
 
@@ -32,7 +32,7 @@ Para criar um novo conjunto de imagens e adicionar imagens a ele, faça o seguin
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
-1. No **Gerenciador de soluções**, clique duas vezes no `Assets.xcassets` arquivo para abri-lo para edição:
+1. No **Gerenciador de soluções**, clique duas vezes no arquivo `Assets.xcassets` para abri-lo para edição:
 
     ![](displaying-an-image-images/imageset01.png "Os assets. xcassets no Gerenciador de Soluções")
 2. Clique com o botão direito do mouse na **lista ativos** e selecione **novo conjunto de imagens**:
@@ -75,18 +75,18 @@ Para renomear um conjunto de imagens, faça o seguinte:
 
 -----
 
-Ao usar um **conjunto de imagens** no código, referencie-o por nome chamando `FromBundle` o método da `UIImage` classe. Por exemplo:
+Ao usar um **conjunto de imagens** no código, referencie-o por nome chamando o método `FromBundle` da classe `UIImage`. Por exemplo:
 
 ```csharp
 MonkeyImage.Image = UIImage.FromBundle ("PurpleMonkey");
 ```
 
 > [!IMPORTANT]
-> Se as imagens atribuídas a um conjunto de imagens não estiverem aparecendo corretamente, verifique se o nome do arquivo correto está `FromBundle` sendo usado com o método (o **conjunto de imagens** e não o nome do **Catálogo de ativos** pai). Para imagens PNG, a `.png` extensão pode ser omitida. Para outros formatos de imagem, a extensão é necessária (por exemplo, `PurpleMonkey.jpg`).
+> Se as imagens atribuídas a um conjunto de imagens não estiverem aparecendo corretamente, verifique se o nome do arquivo correto está sendo usado com o método `FromBundle` (o **conjunto de imagens** e não o nome do **Catálogo de ativos** pai). Para imagens PNG, a extensão `.png` pode ser omitida. Para outros formatos de imagem, a extensão é necessária (por exemplo, `PurpleMonkey.jpg`).
 
 ### <a name="using-vector-images-in-asset-catalogs"></a>Usando imagens vetoriais em catálogos de ativos
 
-A partir do iOS 8, a classe **vector** especial foi adicionada aos **conjuntos de imagens** que permite que o desenvolvedor inclua uma imagem de vetor formatada em **PDF** no fita, incluindo arquivos de bitmap individuais em diferentes resoluções. Usando esse método, forneça um único arquivo de vetor para `@1x` a resolução (formatado como um arquivo de PDF vetorial) `@2x` e `@3x` as versões e do arquivo serão geradas no momento da compilação e incluídas no pacote do aplicativo.
+A partir do iOS 8, a classe **vector** especial foi adicionada aos **conjuntos de imagens** que permitem que o desenvolvedor inclua uma imagem de vetor formatada em **PDF** no fita em vez disso, incluindo arquivos de bitmap individuais em resoluções diferentes. Usando esse método, forneça um único arquivo de vetor para a resolução `@1x` (formatada como um arquivo PDF vetorial) e as versões `@2x` e `@3x` do arquivo serão geradas no momento da compilação e incluídas no pacote do aplicativo.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
@@ -98,11 +98,11 @@ A partir do iOS 8, a classe **vector** especial foi adicionada aos **conjuntos d
 
 -----
 
-Por exemplo, se o desenvolvedor incluir um `MonkeyIcon.pdf` arquivo como o vetor de um catálogo de ativos com uma resolução de 150px x 150px, os seguintes ativos de bitmap seriam incluídos no pacote de aplicativo final quando ele foi compilado:
+Por exemplo, se o desenvolvedor incluir um arquivo `MonkeyIcon.pdf` como o vetor de um catálogo de ativos com uma resolução de 150px x 150px, os seguintes ativos de bitmap seriam incluídos no pacote de aplicativo final quando ele foi compilado:
 
-- `MonkeyIcon@1x.png`-resolução de 150px x 150px.
-- `MonkeyIcon@2x.png`-resolução de 300px x 300px.
-- `MonkeyIcon@3x.png`-resolução de 450px x 450px.
+- `MonkeyIcon@1x.png`-150px x resolução de 150px.
+- `MonkeyIcon@2x.png`-300px x resolução de 300px.
+- `MonkeyIcon@3x.png`-450px x resolução de 450px.
 
 O seguinte deve ser levado em consideração ao usar imagens de vetor de PDF em catálogos de ativos:
 
@@ -155,24 +155,24 @@ if (MyIcon.Image != null) {
 }
 ```
 
-Como a `RenderMode` propriedade de um `UIImage` é somente leitura, use o `ImageWithRenderingMode` método para criar uma nova instância da imagem com a configuração do modo de processamento desejado.
+Como a propriedade `RenderMode` de um `UIImage` é somente leitura, use o método `ImageWithRenderingMode` para criar uma nova instância da imagem com a configuração do modo de processamento desejado.
 
-Há três configurações possivelmente para `UIImage.RenderMode` por meio da `UIImageRenderingMode` enumeração:
+Há três configurações possivelmente para `UIImage.RenderMode` por meio da enumeração `UIImageRenderingMode`:
 
-- `AlwaysOriginal`– Força a imagem a ser renderizada como o arquivo de imagem de origem original sem nenhuma alteração.
-- `AlwaysTemplate`– Força a imagem a ser renderizada como uma imagem de modelo ao colorir os pixels com `Tint` a cor especificada.
-- `Automatic`-Renderiza a imagem como um modelo ou original com base no ambiente em que ela é usada. Por exemplo, se a imagem for usada em um `UIToolBar` `UITabBar` , `UINavigationBar`ou `UISegmentControl` ela será tratada como um modelo.
+- `AlwaysOriginal`-força a imagem a ser renderizada como o arquivo de imagem de origem original sem nenhuma alteração.
+- `AlwaysTemplate`-força a imagem a ser renderizada como uma imagem de modelo ao colorir os pixels com a cor de @no__t 1 especificada.
+- `Automatic` – renderiza a imagem como um modelo ou original com base no ambiente em que ela é usada. Por exemplo, se a imagem for usada em um `UIToolBar`, `UINavigationBar`, `UITabBar` ou `UISegmentControl`, ela será tratada como um modelo.
 
 ## <a name="adding-new-assets-collections"></a>Adicionando novas coleções de ativos
 
-Ao trabalhar com imagens em catálogos de ativos, pode haver ocasiões em que uma nova coleção será necessária, em vez de adicionar todas as imagens do aplicativo à `Assets.xcassets` coleção. Por exemplo, ao criar recursos sob demanda.
+Ao trabalhar com imagens em catálogos de ativos, pode haver ocasiões em que uma nova coleção será necessária, em vez de adicionar todas as imagens do aplicativo à coleção `Assets.xcassets`. Por exemplo, ao criar recursos sob demanda.
 
 Para adicionar um novo catálogo de ativos ao projeto:
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 1. Clique com o botão direito do mouse no **nome do projeto** na **Gerenciador de soluções** e selecione **Adicionar** > **novo arquivo...**
-2. Selecione**Catálogo de ativos**do **Ios** > , insira um **nome** para a coleção e clique no botão **novo** :
+2. Selecione**Catálogo de ativos** >  do **Ios**, insira um **nome** para a coleção e clique no botão **novo** :
 
     ![](displaying-an-image-images/asset01.png "Criando um novo catálogo de ativos")
 
@@ -185,23 +185,23 @@ Para adicionar um novo catálogo de ativos ao projeto:
 
 -----
 
-A partir daqui, a coleção pode ser trabalhada da mesma maneira que a coleção `Assets.xcassets` padrão incluída automaticamente no projeto.
+A partir daqui, a coleção pode ser trabalhada da mesma maneira que a coleção padrão `Assets.xcassets` incluída automaticamente no projeto.
 
 ## <a name="using-images-with-controls"></a>Usando imagens com controles
 
-Além de usar imagens para dar suporte a um aplicativo, o iOS também usa imagens com tipos de controle de aplicativo, como barras de tabulação, barras de ferramentas, barras de navegação, tabelas e botões. Uma maneira simples de fazer uma imagem aparecer em um controle é atribuir uma `UIImage` instância à propriedade do `Image` controle.
+Além de usar imagens para dar suporte a um aplicativo, o iOS também usa imagens com tipos de controle de aplicativo, como barras de tabulação, barras de ferramentas, barras de navegação, tabelas e botões. Uma maneira simples de fazer uma imagem aparecer em um controle é atribuir uma instância `UIImage` à propriedade `Image` do controle.
 
 ### <a name="frombundle"></a>FromBundle
 
-A `FromBundle` chamada de método é uma chamada síncrona (de bloqueio) que tem vários recursos de carregamento e gerenciamento de imagens, como o suporte a cache e o tratamento automático de arquivos de imagem para várias resoluções.
+A chamada de método `FromBundle` é uma chamada síncrona (de bloqueio) que tem um número de recursos de carregamento e gerenciamento de imagens interno, como suporte a cache e manipulação automática de arquivos de imagem para várias resoluções.
 
-O exemplo a seguir mostra como definir a imagem de um `UITabBarItem` `UITabBar`em:
+O exemplo a seguir mostra como definir a imagem de um `UITabBarItem` em um `UITabBar`:
 
 ```csharp
 TabBarItem.Image = UIImage.FromBundle ("MyImage");
 ```
 
-Supondo `MyImage` que seja o nome de um ativo de imagem adicionado a um catálogo de ativos acima. Ao trabalhar com imagens do catálogo de ativos, basta especificar o nome do conjunto de `FromBundle` imagens no método para imagens formatadas para **png** :
+Supondo que `MyImage` é o nome de um ativo de imagem adicionado a um catálogo de ativos acima. Ao trabalhar com imagens do catálogo de ativos, basta especificar o nome do conjunto de imagens no método `FromBundle` para imagens formatadas para **png** :
 
 ```csharp
 TabBarItem.Image = UIImage.FromBundle ("MyImage");
@@ -217,7 +217,7 @@ Para obter mais informações sobre ícones e imagens, consulte a documentação
 
 ## <a name="displaying-an-image-in-a-storyboards"></a>Exibindo uma imagem em um storyboards
 
-Depois que uma imagem tiver sido adicionada a um projeto Xamarin. Ios usando catálogos de ativos, ela poderá ser facilmente exibida em um storyboard usando `UIImageView` um no designer do Ios. Por exemplo, se o seguinte ativo de imagem tiver sido adicionado:
+Depois que uma imagem tiver sido adicionada a um projeto Xamarin. iOS usando catálogos de ativos, ela poderá ser facilmente exibida em um storyboard usando um `UIImageView` no designer do iOS. Por exemplo, se o seguinte ativo de imagem tiver sido adicionado:
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
@@ -225,7 +225,7 @@ Depois que uma imagem tiver sido adicionada a um projeto Xamarin. Ios usando cat
 
 Faça o seguinte para exibi-lo em um storyboard:
 
-1. Clique duas vezes no `Main.storyboard` arquivo no **Gerenciador de soluções** para abri-lo para edição no designer do Ios.
+1. Clique duas vezes no arquivo `Main.storyboard` no **Gerenciador de soluções** para abri-lo para edição no designer do Ios.
 2. Selecione uma **exibição de imagem** na **caixa de ferramentas**:
 
      ![](displaying-an-image-images/display02.png "Selecione uma exibição de imagem na caixa de ferramentas")
@@ -248,7 +248,7 @@ Faça o seguinte para exibi-lo em um storyboard:
 
 Faça o seguinte para exibi-lo em um storyboard:
 
-1. Clique duas vezes no `Main.storyboard` arquivo no **Gerenciador de soluções** para abri-lo para edição no designer do Ios.
+1. Clique duas vezes no arquivo `Main.storyboard` no **Gerenciador de soluções** para abri-lo para edição no designer do Ios.
 2. Selecione uma **exibição de imagem** na **caixa de ferramentas**:
 
      ![](displaying-an-image-images/display02vs.png "Selecione uma exibição de imagem na caixa de ferramentas")
@@ -285,7 +285,7 @@ imageView.Image = UIImage.FromBundle ("Kemah");
 View.AddSubview (imageView);
 ```
 
-Esse código cria um novo `UIImageView` e dá a ele um tamanho inicial e uma posição. Em seguida, ele carrega a imagem de um ativo de imagem adicionado ao projeto e `UIImageView` adiciona o ao `UIView` pai para exibi-lo.
+Esse código cria um novo `UIImageView` e dá a ele um tamanho inicial e uma posição. Em seguida, ele carrega a imagem de um ativo de imagem adicionado ao projeto e adiciona o `UIImageView` ao pai `UIView` para exibi-lo.
 
 ## <a name="related-links"></a>Links relacionados
 

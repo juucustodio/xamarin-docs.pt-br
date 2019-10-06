@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 07/01/2019
-ms.openlocfilehash: 1f190ef2f99e71c8cf21680f9902caccf3454450
-ms.sourcegitcommit: 09bc69d7119a04684c9e804c5cb113b8b1bb7dfc
+ms.openlocfilehash: ed9eb5dc80935c8401f5bd8c9be1c301af3480f5
+ms.sourcegitcommit: 621649fb4a119981290fed7a1061cbae30b982a6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71206328"
+ms.lasthandoff: 10/06/2019
+ms.locfileid: "71975761"
 ---
 # <a name="get-started-with-ios-13"></a>Introdução ao iOS 13
 
@@ -22,9 +22,9 @@ Este documento descreve como começar a criar aplicativos Xamarin que chamam API
 
 1. **Instalar o Xcode 11** – os desenvolvedores da Apple registrados podem baixar e instalar a versão mais recente do Xcode 11 do [portal do desenvolvedor da Apple](https://developer.apple.com/download/) ou da loja de **aplicativos**.
 
-2. **Executar o Xcode 11** – execute o Xcode 11 antes de atualizar e executar o Visual Studio para Mac, pois ele instala algumas ferramentas exigidas pelo Xamarin.
+2. **Executar o Xcode 11** – execute o Xcode 11 antes de atualizar e executar o Visual Studio para Mac ou o Visual Studio 2019, pois ele instala algumas ferramentas exigidas pelo Xamarin.
 
-3. Em Visual Studio para Mac, selecione **Visual Studio > verificar se há atualizações...** , selecione o canal **estável** e instale as atualizações disponíveis.
+3. **Atualização Visual Studio para Mac e Visual Studio 2019** – Verifique se você tem a versão estável mais recente do Xamarin.
 
 4. Adicional **Instale o Ios 13 em seus dispositivos IOS** – para testes de dispositivo de aplicativos que usam APIs introduzidas com o Xcode 11, os desenvolvedores da Apple registrados podem [baixar](https://developer.apple.com/download) e instalar o sistema operacional em seus dispositivos. 
 
