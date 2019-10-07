@@ -7,18 +7,21 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/10/2018
-ms.openlocfilehash: 56075949a5b5c01873af3ff79a4cf8f6cefcb142
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.openlocfilehash: d20e27fdbb1f62c2aebb7122d7f0c042b3ac9085
+ms.sourcegitcommit: 4cf434b126eb7df6b2fd9bb1d71613bf2b6aac0e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "68644547"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71997194"
 ---
 # <a name="gtk-platform-setup"></a>Configuração da plataforma GTK #
 
 ![Visualizar](~/media/shared/preview.png)
 
 O Xamarin. Forms agora tem suporte de visualização para aplicativos GTK #. O GTK # é um kit de ferramentas de interface gráfica do usuário que vincula o GTK + Toolkit e uma variedade de bibliotecas GNOME, permitindo o desenvolvimento de aplicativos gráficos GNOME totalmente nativos usando mono e .NET. Este artigo demonstra como adicionar um projeto GTK # a uma solução Xamarin. Forms.
+
+> [!IMPORTANT]
+> O suporte para Xamarin. Forms para GTK # é fornecido pela Comunidade. Para obter mais informações, consulte [suporte à plataforma Xamarin. Forms](https://github.com/xamarin/Xamarin.Forms/wiki/Platform-Support).
 
 Antes de começar, crie uma nova solução Xamarin. Forms ou use uma solução Xamarin. Forms existente, por exemplo, [**GameOfLife**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/boxview-gameoflife).
 
@@ -39,19 +42,19 @@ Siga estas instruções para adicionar um aplicativo GTK # que será executado n
 
 3. Digite um nome para o projeto com uma extensão **GTK** , por exemplo, **GameOfLife. GTK**. Clique no botão **procurar** , selecione a pasta que contém os outros projetos da plataforma e pressione **Selecionar pasta**. Isso colocará o projeto do GTK no mesmo diretório que os outros projetos na solução.
 
-    ![Adicionar um novo projeto GTK](gtk-images/win/add-new-project.png "Adicionar um novo projeto GTK")
+    ![Adicionar um novo projeto do GTK](gtk-images/win/add-new-project.png "Adicionar um novo projeto do GTK")
 
     Pressione o botão **OK** para criar o projeto.
 
 4. Na **Gerenciador de soluções**, clique com o botão direito do mouse no novo projeto GTK e selecione **gerenciar pacotes NuGet**. Selecione a guia **procurar** e procure **Xamarin. Forms** 3,0 ou superior.
 
-    ![Selecione o pacote NuGet do Xamarin. Forms](gtk-images/win/select-forms-nuget-package.png "Selecione o pacote NuGet do Xamarin. Forms")
+    ![Selecione o pacote do NuGet do xamarin. Forms](gtk-images/win/select-forms-nuget-package.png "Selecione o pacote NuGet do xamarin. Forms")
 
     Selecione o pacote e clique no botão **instalar** .
 
 5. Agora, procure o pacote **Xamarin. Forms. Platform. GTK** 3,0 ou superior.
 
-    ![Selecione o pacote NuGet Xamarin. Forms. Platform. GTK](gtk-images/win/select-forms-platform-nuget-package.png "Selecione o pacote NuGet Xamarin. Forms. Platform. GTK")
+    ![Selecione o pacote NuGet xamarin. Forms. Platform. GTK]e(gtk-images/win/select-forms-platform-nuget-package.png "Selecione o pacote NuGet xamarin. Forms. Platform. GTK")
 
     Selecione o pacote e clique no botão **instalar** .
 
@@ -59,11 +62,11 @@ Siga estas instruções para adicionar um aplicativo GTK # que será executado n
 
 7. Na **Gerenciador de soluções**, clique com o botão direito do mouse em **referências** no projeto GTK. Na caixa de diálogo **Gerenciador de referências** , selecione **projetos** à esquerda e marque a caixa de seleção adjacente ao .net Standard ou ao projeto compartilhado:
 
-    ![Referenciar o projeto compartilhado](gtk-images/win/reference-shared-project.png "Referenciar o projeto compartilhado")
+    ![Referenciar o projeto compartilhado](gtk-images/win/reference-shared-project.png "referenciar o projeto compartilhado")
 
 8. Na caixa de diálogo **Gerenciador de referências** , pressione o botão **procurar** e navegue até a pasta **C:\Program Files (x86) \GtkSharp\2.12\lib** e selecione **ATK-Sharp. dll**, **GDK-Sharp. dll**, **Glade-Sharp. dll**,  **arquivos GLib-Sharp. dll**, **GTK-dotnet. dll**, **GTK-Sharp. dll** .
 
-    ![Referenciar as bibliotecas do GTK #](gtk-images/win/reference-gtk-libraries.png "Referenciar as bibliotecas do GTK #")
+    ![Referenciar as bibliotecas do GTK #](gtk-images/win/reference-gtk-libraries.png "referenciam as bibliotecas do GTK #")
 
     Pressione o botão **OK** para adicionar as referências.
 
@@ -104,11 +107,11 @@ Siga estas instruções para adicionar um aplicativo GTK # que será executado n
 
 12. Na janela **Propriedades** , selecione a guia **aplicativo** e altere a lista suspensa **tipo de saída** para aplicativo do **Windows**.
 
-    ![Alterar o tipo de saída do projeto](gtk-images/win/change-project-output-type.png "Alterar o tipo de saída do projeto")
+    ![Alterar o tipo de saída do projeto](gtk-images/win/change-project-output-type.png "alterar o tipo de saída do projeto")
 
 13. Na **Gerenciador de soluções**, clique com o botão direito do mouse no projeto GTK e selecione **definir como projeto de inicialização**. Pressione F5 para executar o programa com o depurador do Visual Studio na área de trabalho do Windows:
 
-    ![Jogo de vida do GTK #](gtk-images/win/gtk-gameoflife.png "Jogo de vida do GTK #")
+    Jogo(gtk-images/win/gtk-gameoflife.png "de vida de") vida do GTK # para o ![GTK]#
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
@@ -122,17 +125,17 @@ Siga estas instruções para adicionar um aplicativo GTK # que será executado n
 
 4. Na **painel de soluções**, clique com o botão direito do mouse em **pacotes > adicionar pacotes...** para o projeto GTK e adicione o pacote NuGet de pré-lançamento do Xamarin. Forms 3,0 ou superior.
 
-    ![Selecione o pacote NuGet do Xamarin. Forms](gtk-images/mac/select-forms-nuget-package.png "Selecione o pacote NuGet do Xamarin. Forms")
+    ![Selecione o pacote do NuGet do xamarin. Forms](gtk-images/mac/select-forms-nuget-package.png "Selecione o pacote NuGet do xamarin. Forms")
 
 5. Na **painel de soluções**, clique com o botão direito do mouse em **pacotes > adicionar pacotes...** para o projeto GTK e adicione o pacote NuGet de pré-lançamento do Xamarin. Forms. Platform. GTK 3,0 ou superior.
 
-    ![Selecione o pacote NuGet Xamarin. Forms. Platform. GTK](gtk-images/mac/select-forms-platform-nuget-package.png "Selecione o pacote NuGet Xamarin. Forms. Platform. GTK")
+    ![Selecione o pacote NuGet xamarin. Forms. Platform. GTK]e(gtk-images/mac/select-forms-platform-nuget-package.png "Selecione o pacote NuGet xamarin. Forms. Platform. GTK")
 
 6. Atualize os outros projetos da plataforma para usar a mesma versão do Xamarin. Forms conforme usado pelo projeto do GTK.
 
 7. Na **painel de soluções**, clique com o botão direito do mouse em **referências > Editar referências...** para o projeto GTK e adicione uma referência ao projeto Xamarin. Forms (.net Standard ou projeto compartilhado).
 
-    ![Referenciar o projeto compartilhado](gtk-images/mac/reference-shared-project.png "Referenciar o projeto compartilhado")
+    ![Referenciar o projeto compartilhado](gtk-images/mac/reference-shared-project.png "referenciar o projeto compartilhado")
 
 8. Edite o arquivo **Program.cs** do projeto GTK para que seja semelhante ao seguinte código:
 
@@ -169,7 +172,7 @@ Siga estas instruções para adicionar um aplicativo GTK # que será executado n
 
 10. Na barra de ferramentas Visual Studio para Mac, pressione o botão **Iniciar** (o botão triangular que se assemelha a um botão de reprodução) para iniciar o aplicativo.
 
-    ![Jogo de vida do GTK #](gtk-images/mac/gtk-gameoflife.png "Jogo de vida do GTK #")
+    Jogo(gtk-images/mac/gtk-gameoflife.png "de vida de") vida do GTK # para o ![GTK]#
 
 -----
 
@@ -177,9 +180,9 @@ Siga estas instruções para adicionar um aplicativo GTK # que será executado n
 
 ### <a name="platform-specifics"></a>Especificações da plataforma
 
-Você pode determinar em qual plataforma seu aplicativo Xamarin. Forms está em execução por meio de XAML ou código. Isso permite que você altere as características do programa quando ele está em execução no GTK #. No código, compare o valor de `Device.RuntimePlatform` com a `Device.GTK` constante (que é igual à cadeia de caracteres "GTK"). Se houver uma correspondência, o aplicativo será executado em GTK #.
+Você pode determinar em qual plataforma seu aplicativo Xamarin. Forms está em execução por meio de XAML ou código. Isso permite que você altere as características do programa quando ele está em execução no GTK #. No código, compare o valor de `Device.RuntimePlatform` com a constante `Device.GTK` (que é igual à cadeia de caracteres "GTK"). Se houver uma correspondência, o aplicativo será executado em GTK #.
 
-Em XAML, você pode usar a `OnPlatform` marca para selecionar um valor de propriedade específico para a plataforma:
+Em XAML, você pode usar a marca `OnPlatform` para selecionar um valor de propriedade específico para a plataforma:
 
 ```xaml
 <Button.TextColor>
@@ -211,7 +214,7 @@ GtkThemes.LoadCustomTheme ("Themes/gtkrc");
 
 ### <a name="native-forms"></a>Formulários nativos
 
-Os formulários nativos permitem que páginas [`ContentPage`](xref:Xamarin.Forms.ContentPage)derivadas de Xamarin. Forms sejam consumidas por projetos nativos, incluindo projetos GTK #. Isso pode ser feito criando uma instância da [`ContentPage`](xref:Xamarin.Forms.ContentPage)página derivada e convertendo-a para o tipo nativo do GTK # usando o método de `CreateContainer` extensão:
+Os formulários nativos permitem que as páginas derivadas do Xamarin. Forms [`ContentPage`](xref:Xamarin.Forms.ContentPage)sejam consumidas por projetos nativos, incluindo projetos GTK #. Isso pode ser feito criando uma instância da página derivada [`ContentPage`](xref:Xamarin.Forms.ContentPage)e convertendo-a para o tipo nativo do GTK # usando o método de extensão `CreateContainer`:
 
 ```csharp
 var settingsView = new SettingsView().CreateContainer();

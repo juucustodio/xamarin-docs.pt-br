@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/01/2016
-ms.openlocfilehash: 9e49dfa99ccb6aae49a72ce044bb8071c210336e
-ms.sourcegitcommit: 76f930ce63b193ca3f7f85f768b031e59cb342ec
+ms.openlocfilehash: 66323974fa44f5397e21541595a187ce0ba4d061
+ms.sourcegitcommit: 4cf434b126eb7df6b2fd9bb1d71613bf2b6aac0e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71198571"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71997146"
 ---
 # <a name="xamarinforms-triggers"></a>Gatilhos do Xamarin.Forms
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithtriggers)
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithtriggers)
 
 Os gatilhos permitem expressar ações declarativamente em XAML que alteram a aparência dos controles com base em eventos ou alterações de propriedade.
 
@@ -144,7 +144,7 @@ Uma implementação de ação do gatilho deve:
 
 - Substituir o método `Invoke` – isso é chamado sempre que os critérios do gatilho forem atendidos.
 
-- Opcionalmente, expor propriedades que podem ser definidas no XAML quando o gatilho é declarado. Para obter um exemplo disso, consulte a `VisualElementPopTriggerAction` classe no aplicativo de exemplo que o acompanha.
+- Opcionalmente, expor propriedades que podem ser definidas no XAML quando o gatilho é declarado. Para obter um exemplo disso, consulte a classe `VisualElementPopTriggerAction` no aplicativo de exemplo que o acompanha.
 
 ```csharp
 public class NumericValidationTriggerAction : TriggerAction<Entry>
@@ -278,7 +278,12 @@ Na parte inferior das telas, o botão **Logon** permanece inativo até que ambos
 
 Outra maneira de implementar alterações quando ocorre um gatilho é adicionando as coleções `EnterActions` e `ExitActions` e especificando as implementações `TriggerAction<T>`.
 
-Você pode fornecer *ambos* `EnterActions` e `ExitActions`, bem como `Setter`s em um gatilho, mas lembre-se de que `Setter`s são chamados imediatamente (eles não aguardam o `EnterAction` ou o `ExitAction` ser concluído). Como alternativa, você pode executar tudo no código e não usar `Setter`s.
+A coleção [`EnterActions`](xref:Xamarin.Forms.TriggerBase.EnterActions) é usada para definir um `IList` de objetos [`TriggerAction`](xref:Xamarin.Forms.TriggerAction) que serão invocados quando a condição do gatilho for atendida. A coleção [`ExitActions`](xref:Xamarin.Forms.TriggerBase.ExitActions) é usada para definir um `IList` de objetos `TriggerAction` que serão invocados depois que a condição do gatilho não for mais atendida.
+
+> [!NOTE]
+> Os objetos [`TriggerAction`](xref:Xamarin.Forms.TriggerAction) definidos nas coleções `EnterActions` e `ExitActions` são ignorados pela classe [`EventTrigger`](xref:Xamarin.Forms.EventTrigger) .    
+
+Você *pode fornecer @no__t* -1 e `ExitActions`, bem como `Setter`S em um gatilho, mas lembre-se de que os `Setter`S são chamados imediatamente (eles não aguardam a conclusão do `EnterAction` ou `ExitAction`). Como alternativa, você pode executar tudo no código e não usar `Setter`s.
 
 ```xaml
 <Entry Placeholder="enter job title">
@@ -292,7 +297,7 @@ Você pode fornecer *ambos* `EnterActions` e `ExitActions`, bem como `Setter`s e
             <Trigger.ExitActions>
                 <local:FadeTriggerAction StartsFrom="1" />
             </Trigger.ExitActions>
-                        <!-- You can use both Enter/Exit and Setter together if required -->
+            <!-- You can use both Enter/Exit and Setter together if required -->
         </Trigger>
     </Entry.Triggers>
 </Entry>
@@ -327,8 +332,6 @@ public class FadeTriggerAction : TriggerAction<VisualElement>
     }
 }
 ```
-
-Observação: `EnterActions` e `ExitActions` são ignorados em **Gatilhos de evento**.
 
 ## <a name="related-links"></a>Links relacionados
 
