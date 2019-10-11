@@ -6,12 +6,12 @@ ms.assetid: AC2626CB-28A7-4808-B2A9-789D67899546
 author: conceptdev
 ms.author: crdun
 ms.date: 03/23/2017
-ms.openlocfilehash: 6ffd1c3e42dbaf0a82b07cd9e0a00228c5fa0604
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.openlocfilehash: ee1ef1ecda18ee9817fcf10b7dda0c7b4489bf9f
+ms.sourcegitcommit: e354aabfb39598e0ce11115db3e6bcebb9f68338
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "70293134"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72273132"
 ---
 # <a name="using-team-city-with-xamarin"></a>Usando a cidade da equipe com o Xamarin
 
@@ -61,7 +61,7 @@ Uma etapa crucial na configuração de um servidor de compilação é instalar t
 3. **Xcode** – o Xcode é necessário para compilar e assinar aplicativos Ios.
 4. **Ferramentas de linha de comando do Xcode** – isso é descrito na etapa 1 da seção de instalação do guia [atualizando Ruby com rbenv](https://github.com/calabash/calabash-ios/wiki) .
 5. **Identidade de assinatura & perfis de provisionamento** – importe os certificados e o perfil de provisionamento por meio do Xcode. Consulte o guia da Apple sobre como [Exportar identidades de assinatura e perfis de provisionamento](https://developer.apple.com/library/ios/recipes/xcode_help-accounts_preferences/articles/export_signing_assets.html) para obter mais detalhes.
-6. **Repositórios de chaves do Android** – Copie os repositórios de chaves Android necessários para um diretório ao qual o usuário TeamCity tenha acesso `~/Documents/keystores/MyAndroidApp1`, ou seja,.
+6. **Repositórios de chaves do Android** – Copie os repositórios de chaves Android necessários para um diretório ao qual o usuário TeamCity tenha acesso, ou seja, `~/Documents/keystores/MyAndroidApp1`.
 7. **Calabash** – essa é uma etapa opcional se seu aplicativo tiver testes escritos usando o Calabash. Consulte o guia [instalando o Calabash no os X Mavericks](https://github.com/calabash/calabash-ios/wiki) e o guia [atualizando Ruby com o rbenv](https://github.com/calabash/calabash-ios/wiki) para obter mais informações.
 
 O diagrama a seguir ilustra todos esses componentes:
@@ -134,7 +134,7 @@ Observe que para compilar o aplicativo Xamarin Android **xbuild** usa o projeto,
 
 #### <a name="submitting-xamarinuitests-to-test-cloud"></a>Enviando o Xamarin. UITests para Test Cloud
 
-UITests são enviados usando o `test-cloud.exe` aplicativo, conforme mostrado no trecho a seguir:
+UITests são enviados usando o aplicativo `test-cloud.exe`, conforme mostrado no trecho a seguir:
 
 ```bash
 test-cloud.exe <path-to-apk-or-ipa-file> <test-cloud-team-api-key> --devices <device-selection-id> --assembly-dir <path-to-tests-containing-test-assemblies> --nunit-xml report.xml --user <email>
@@ -142,11 +142,11 @@ test-cloud.exe <path-to-apk-or-ipa-file> <test-cloud-team-api-key> --devices <de
 
 Quando o teste é executado, os resultados de teste serão retornados na forma de um arquivo XML de estilo NUnit chamado **Report. xml**. TeamCity exibirá as informações no log de compilação.
 
-Para obter mais informações sobre como enviar UITests para Test Cloud, consulte este guia sobre como [preparar o Xamarin. UITests para upload](https://docs.microsoft.com/appcenter/test-cloud/preparing-for-upload/uitest/).
+Para obter mais informações sobre como enviar UITests para Test Cloud, consulte [preparando aplicativos xamarin. Android](/appcenter/test-cloud/preparing-for-upload/xamarin-android-uitest) ou [preparando aplicativos xamarin. Ios](/appcenter/test-cloud/preparing-for-upload/xamarin-ios-uitest).
 
 #### <a name="submitting-calabash-tests-to-test-cloud"></a>Enviando testes de Calabash para Test Cloud
 
-Os testes de Calabash são enviados `test-cloud` usando o Gem, conforme mostrado no seguinte trecho:
+Os testes de Calabash são enviados usando a gem `test-cloud`, conforme mostrado no trecho a seguir:
 
 ```bash
 test-cloud submit /path/to/APK-or-IPA <test-cloud-team-api-key> --devices <device-id> --user <email>
@@ -167,35 +167,35 @@ Quando o TeamCity é instalado e Visual Studio para Mac pode criar seu projeto, 
 
 1. Iniciado ao fazer logon no TeamCity por meio do navegador da Web. Navegue até o projeto raiz:
 
-    ![Navegue até o projeto raiz](teamcity-images/image2.png "Navegue até o projeto raiz") Abaixo do projeto raiz, crie um novo subprojeto:
+    ![Navegue até o projeto raiz],(teamcity-images/image2.png "navegue até o projeto raiz") abaixo do projeto raiz, crie um novo subprojeto:
 
-    ![Navegue até o projeto raiz abaixo do projeto raiz, crie um novo subprojeto](teamcity-images/image3.png "Navegue até o projeto raiz abaixo do projeto raiz, crie um novo subprojeto")
+    ![Navegue até o projeto raiz abaixo do projeto raiz, crie um novo subprojeto,](teamcity-images/image3.png "navegue até o projeto raiz abaixo do projeto raiz, crie um novo subprojeto")
 2. Depois que o subprojeto tiver sido criado, adicione uma nova configuração de compilação:
 
-    ![Depois que o subprojeto tiver sido criado, adicione uma nova configuração de compilação](teamcity-images/image5.png "Depois que o subprojeto tiver sido criado, adicione uma nova configuração de compilação")
+    ![Depois que o subprojeto tiver sido criado, adicione uma nova configuração de compilação](teamcity-images/image5.png "após a criação do subprojeto, adicione uma nova configuração de compilação")
 3. Anexe um projeto do VCS à configuração de compilação. Isso é feito por meio da tela de configuração de controle de versão:
 
-    ![Isso é feito por meio da tela de configuração de controle de versão](teamcity-images/image6.png "Isso é feito por meio da tela de configuração de controle de versão")
+    ![Isso é feito por meio da tela de configuração de controle de versão](teamcity-images/image6.png "isso é feito por meio da tela de configuração de controle de versão")
 
     Se não houver nenhum projeto do VCS criado, você terá a opção de criar um da nova página raiz do VCS mostrada abaixo:
 
-    ![Se não houver nenhum projeto do vcs criado, você terá a opção de criar um na página raiz do novo vcs](teamcity-images/image7.png "Se não houver nenhum projeto do vcs criado, você terá a opção de criar um na página raiz do novo vcs")
+    ![Se não houver nenhum projeto do vcs criado, você terá a opção de criar um na nova página raiz do vcs](teamcity-images/image7.png "se não houver nenhum projeto do vcs criado, você tem a opção de criar um na página raiz do novo vcs")
 
     Depois que a raiz do VCS tiver sido anexada, o TeamCity fará o check-out do projeto e tentará detectar automaticamente as etapas de compilação. Se você estiver familiarizado com o TeamCity, poderá selecionar uma das etapas de compilação detectadas. É seguro ignorar as etapas de compilação detectadas por enquanto.
 
 4. Em seguida, configure um gatilho de compilação. Isso colocará uma compilação em fila quando determinadas condições forem atendidas, como quando um usuário confirmar o código para o repositório. A captura de tela a seguir mostra como adicionar um gatilho de compilação:
 
-    ![Esta captura de tela mostra como adicionar um gatilho de compilação](teamcity-images/image8.png "Esta captura de tela mostra como adicionar um gatilho de compilação") Um exemplo de configuração de um gatilho de compilação pode ser visto na seguinte captura de tela:
+    ![Esta captura de tela mostra como adicionar um gatilho de compilação](teamcity-images/image8.png "esta captura de tela mostra como adicionar um gatilho de compilação") . um exemplo de como configurar um gatilho de compilação pode ser visto na seguinte captura de tela:
 
-    ![Um exemplo de configuração de um gatilho de compilação pode ser visto nesta captura de tela](teamcity-images/image9.png "Um exemplo de configuração de um gatilho de compilação pode ser visto nesta captura de tela")
+    Um ![exemplo de configuração de um gatilho de compilação pode ser visto nesta captura de tela](teamcity-images/image9.png "um exemplo de configuração de um gatilho de compilação pode ser visto nesta captura de tela")
 
 5. A seção anterior, parametrizando o script de Build, sugerindo o armazenamento de alguns valores como variáveis de ambiente. Essas variáveis podem ser adicionadas à configuração de compilação por meio da tela parâmetros. Adicione as variáveis para a chave de API Test Cloud, a ID do dispositivo iOS e a ID do dispositivo Android, conforme mostrado na captura de tela abaixo:
 
-    ![Adicione as variáveis para a chave de API Test Cloud, a ID do dispositivo IOS e a ID do dispositivo Android](teamcity-images/image11.png "Adicione as variáveis para a chave de API Test Cloud, a ID do dispositivo IOS e a ID do dispositivo Android")
+    ![Adicione as variáveis para a chave de api Test Cloud, a ID do dispositivo IOS e a ID do dispositivo Android](teamcity-images/image11.png "adicione as variáveis para a chave de API Test Cloud, a ID do dispositivo IOS e a ID do dispositivo Android")
 
 6. A etapa final é adicionar uma etapa de compilação que invocará o script de compilação para compilar o aplicativo e enfileirar o aplicativo para Test Cloud. A captura de tela a seguir é um exemplo de uma etapa de compilação que usa um Rakefile para criar um aplicativo:
 
-    ![Esta captura de tela é um exemplo de uma etapa de compilação que usa um Rakefile para criar um aplicativo](teamcity-images/image12.png "Esta captura de tela é um exemplo de uma etapa de compilação que usa um Rakefile para criar um aplicativo")
+    ![Esta captura de tela é um exemplo de uma etapa de compilação que usa um Rakefile para criar um aplicativo](teamcity-images/image12.png "essa captura de tela é um exemplo de uma etapa de compilação que usa um Rakefile para criar um aplicativo")
 
 7. Neste ponto, a configuração da compilação foi concluída. É uma boa ideia disparar uma compilação para confirmar que o projeto está configurado corretamente. Uma boa maneira de fazer isso é confirmar uma alteração pequena e insignificante no repositório. TeamCity deve detectar a confirmação e iniciar uma compilação.
 
@@ -209,5 +209,6 @@ Em seguida, abordamos como criar um projeto no TeamCity que colocará em fila um
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Preparando o carregamento do Xamarin. UITests para](/appcenter/test-cloud/preparing-for-upload/uitest/)
+- [Preparando aplicativos Xamarin. Android](/appcenter/test-cloud/preparing-for-upload/xamarin-android-uitest)
+- [Preparando aplicativos Xamarin. iOS](/appcenter/test-cloud/preparing-for-upload/xamarin-ios-uitest)
 - [Instalando e Configurando o TeamCity](http://confluence.jetbrains.com/display/TCD8/Installing+and+Configuring+the+TeamCity+Server)

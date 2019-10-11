@@ -7,12 +7,12 @@ ms.assetid: E3A4E373-F65D-45C8-8E77-577A804AC3F8
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: 110b2646fb7e1bda00c628749489c14a540e2b54
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: a3eca2036b0e4c2722e034e48ad4ca3054343a89
+ms.sourcegitcommit: 5110d1279809a2af58d3d66cd14c78113bb51436
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70759539"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72032576"
 ---
 # <a name="drawing-a-simple-circle-in-skiasharp"></a>Desenhar um círculo simples em SkiaSharp
 
@@ -26,7 +26,7 @@ O [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin
 
 ![](circle-images/circleexample.png "Um círculo azul descrito em vermelho")
 
-O [ `SimpleCirle` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/SimpleCirclePage.cs) deriva de classe page `ContentPage` e contém duas `using` diretivas para os namespaces de SkiaSharp:
+O [ `SimpleCircle` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/SimpleCirclePage.cs) deriva de classe page `ContentPage` e contém duas `using` diretivas para os namespaces de SkiaSharp:
 
 ```csharp
 using SkiaSharp;
@@ -143,7 +143,7 @@ Neste momento, o `DrawCircle` chamada preenche o círculo usando as novas propri
 
 Aqui está o programa em execução no iOS, Android e plataforma Universal do Windows:
 
-[![](circle-images/simplecircle-small.png "Captura de tela da página círculo simples tripla")](circle-images/simplecircle-large.png#lightbox "tripla captura de tela da página círculo simples")
+[![](circle-images/simplecircle-small.png "Captura de tela tripla da página de círculo simples")](circle-images/simplecircle-large.png#lightbox "Captura de tela tripla da página de círculo simples")
 
 Ao executar o programa, você pode ativar o telefone ou o simulador lateralmente para ver como o gráfico é redesenhado. Cada vez que o elemento gráfico precisa ser redesenhado, o `PaintSurface` manipulador de eventos é chamado novamente.
 
@@ -154,7 +154,7 @@ Um `SKPaint` objeto é pouco mais do que uma coleção de propriedades de desenh
 > [!NOTE]
 > O `SKPaint` classe define um [ `IsAntialias` ](xref:SkiaSharp.SKPaint.IsAntialias) para habilitar a suavização no processamento de seus elementos gráficos. A suavização geralmente resulta em bordas visualmente mais suaves, portanto, você provavelmente desejará definir essa propriedade como `true` na maioria dos seus `SKPaint` objetos. Para fins de simplicidade, essa propriedade é _não_ definido na maioria das páginas de exemplo.
 
-Embora a largura do contorno do círculo seja especificada como 25 pixels &mdash; ou um quarto do raio do círculo &mdash; , parece ser mais fino, e há um bom motivo para isso: Metade da largura da linha é obscurecida pelo círculo azul. Os argumentos para o `DrawCircle` método definem as coordenadas geométricas abstratas de um círculo. O interior azul é dimensionado para essa dimensão até o pixel mais próximo, mas a estrutura de tópicos de 25 pixels de largura permeiam círculo Geométrico &mdash; pela metade dentro e fora da metade.
+Embora a largura da estrutura de tópicos do círculo seja especificada como 25 pixels &mdash; ou um quarto do raio do círculo &mdash; parece ser mais fino, e há um bom motivo para isso: Metade da largura da linha é obscurecida pelo círculo azul. Os argumentos para o `DrawCircle` método definem as coordenadas geométricas abstratas de um círculo. O interior azul é dimensionado para essa dimensão até o pixel mais próximo, mas a estrutura de tópicos de 25 pixels de largura permeiam círculo Geométrico &mdash; pela metade dentro e fora da metade.
 
 O exemplo a seguir na [a integração com o xamarin. Forms](~/xamarin-forms/user-interface/graphics/skiasharp/basics/integration.md) artigo demonstra isso visualmente.
 

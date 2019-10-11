@@ -6,19 +6,21 @@ ms.assetid: EDFE7B19-C5FD-40D5-816C-FAE56532E885
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/30/2019
-ms.openlocfilehash: a4d246419c7449c2395759cf5a8b04469e7a2309
-ms.sourcegitcommit: 266e75fa6893d3732e4e2c0c8e79c62be2804468
-ms.translationtype: HT
+ms.date: 10/08/2019
+ms.openlocfilehash: 8d5de8bac6cc61b0874c978a6443ca4490015457
+ms.sourcegitcommit: eb23b7d745d1090376f9def07e0f11cb089494d0
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68820991"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72170971"
 ---
 # <a name="xamarinforms-messagingcenter"></a>Xamarin.Forms MessagingCenter
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/usingmessagingcenter)
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/usingmessagingcenter)
 
 O padrão de publicação-assinatura é um padrão de troca de mensagens em que os publicadores enviam mensagens sem ter conhecimento de nenhum receptor, conhecido como assinante. Da mesma forma, os assinantes escutam mensagens específicas, sem ter conhecimento de nenhum publicador.
+
+Os eventos no .NET implementam o padrão de publicação-assinatura e são a abordagem mais simples e direta para uma camada de comunicação entre componentes se não for necessário um acoplamento flexível, como um controle e a página que o contém. No entanto, os tempos de vida do Publicador e do Assinante são acoplados por referências de objeto entre si e o tipo de assinante deve ter uma referência ao tipo de Publicador. Isso pode criar problemas de gerenciamento de memória, especialmente quando há objetos de vida curta que se inscrevem em um evento de um objeto estático ou de vida longa. Se o manipulador de eventos não for removido, o Assinante será mantido ativo pela referência a ele no Publicador, e isso impedirá ou atrasará a coleta de lixo do Assinante.
 
 A classe [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) do Xamarin.Forms implementa o padrão de publicação-assinatura, permitindo uma comunicação baseada em mensagens entre componentes que são inconvenientes de vincular por referências de objeto e de tipo. Esse mecanismo permite que publicadores e assinantes se comuniquem sem ter uma referência entre si, ajudando a reduzir as dependências entre eles.
 

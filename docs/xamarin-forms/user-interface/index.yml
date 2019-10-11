@@ -145,6 +145,12 @@ sections:
               src: ~/media/icons/i_user-interface.svg
               href: slider.md
             title: Controle deslizante
+          - href: splashscreen.md
+            html: Saiba como criar telas iniciais para aplicativos do Xamarin.Forms.
+            image:
+              src: ~/media/icons/i_user-interface.svg
+              href: splashscreen.md
+            title: Splash Screen
           - href: stepper.md
             html: Saiba como permitir que um usuário selecione um valor numérico em um intervalo de valores com o controle Stepper.
             image:

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/09/2018
-ms.openlocfilehash: da0a441be9cd07af456b1600155151e48d44162c
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 9bdc7b57cee74a91cc3abf69a216ea9913482c94
+ms.sourcegitcommit: e354aabfb39598e0ce11115db3e6bcebb9f68338
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70758054"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72273158"
 ---
 # <a name="setting-up-the-android-sdk-for-xamarinandroid"></a>Configurando o SDK do Android para o Xamarin.Android
 
@@ -45,7 +45,7 @@ O Gerenciador de SDK do Xamarin Android também requer o Java Development Kit (q
 
 - Você poderá continuar usando o [JDK 7](https://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html) se estiver desenvolvendo especificamente para o nível de API 23 ou anterior.
 
-- Se estiver usando o Visual Studio 15.8 Versão Prévia 5 ou posterior, você poderá tentar usar a [Distribuição do OpenJDK Móvel da Microsoft](openjdk.md) (atualmente em versão prévia) em vez do JDK 8.
+- Se você estiver usando o Visual Studio 15,8 Preview 5 ou posterior, poderá tentar usar a [distribuição de OpenJDK móvel da Microsoft](openjdk.md) em vez do JDK 8.
 
 > [!IMPORTANT]
 > O Xamarin.Android não é compatível com o JDK 9.
@@ -115,13 +115,13 @@ Clique em **Aceitar** se estiver de acordo com os termos e condições. Essa cai
 
 ### <a name="repository-selection"></a>Seleção de repositórios
 
-Por padrão, o Gerenciador do SDK do Android baixa os componentes e as ferramentas da plataforma de um repositório gerenciado pela Microsoft. Se você precisar acessar plataformas e ferramentas experimentais alfa/beta que ainda não estão disponíveis no repositório da Microsoft, poderá alterar o Gerenciador do SDK e fazer com que ele use o repositório do Google. Para fazer essa alteração, clique no ícone de engrenagem no canto inferior direito e selecione **Repositório > Google (Não compatível)** :
+Por padrão, o Gerenciador do SDK do Android baixa os componentes e as ferramentas da plataforma de um repositório gerenciado pela Microsoft. Se você precisar acessar plataformas e ferramentas experimentais alfa/beta que ainda não estão disponíveis no repositório da Microsoft, poderá alterar o Gerenciador do SDK e fazer com que ele use o repositório do Google. Para fazer essa alteração, clique no ícone de engrenagem no canto inferior direito e selecione **Repositório > Google (Não compatível)**:
 
 [![Selecionar repositório do Google](android-sdk-images/win/11-google-repo-w157-sml.png)](android-sdk-images/win/11-google-repo-w157.png#lightbox)
 
 Quando o repositório do Google é selecionado, os pacotes adicionais que não estavam disponíveis anteriormente poderão aparecer na guia **Plataformas**. (Na captura de tela acima, a **Plataforma do SDK do Android 28** foi adicionada alterando para o repositório do Google.) O uso do repositório do Google não tem suporte e, portanto, não é recomendado para o desenvolvimento cotidiano.
 
-Para voltar a usar o repositório compatível de plataformas e ferramentas, clique em **Microsoft (Recomendado)** . Assim, a lista de pacotes e ferramentas será restaurada para a seleção padrão.
+Para voltar a usar o repositório compatível de plataformas e ferramentas, clique em **Microsoft (Recomendado)**. Assim, a lista de pacotes e ferramentas será restaurada para a seleção padrão.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
@@ -137,7 +137,7 @@ O Gerenciador de SDK do Xamarin Android também requer o Java Development Kit (q
 
 - Você poderá continuar usando o [JDK 7](https://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html) se estiver desenvolvendo especificamente para o nível de API 23 ou anterior.
 
-- Se estiver usando o Visual Studio para Mac 7.7 ou posterior, você poderá tentar usar a [Distribuição do OpenJDK Móvel da Microsoft](openjdk.md) (atualmente em versão prévia) em vez do JDK 8.
+- Se você estiver usando o Visual Studio para Mac 7,7 ou posterior, poderá tentar usar a [distribuição de OpenJDK móvel da Microsoft](openjdk.md) em vez do JDK 8.
 
 > [!IMPORTANT]
 > O Xamarin.Android não é compatível com o JDK 9.
@@ -205,13 +205,13 @@ Clique em **Aceitar** se estiver de acordo com os termos e condições. Essa cai
 
 ### <a name="repository-selection"></a>Seleção de repositórios
 
-Por padrão, o Gerenciador do SDK do Android baixa os componentes e as ferramentas da plataforma de um repositório gerenciado pela Microsoft. Se você precisar acessar plataformas e ferramentas experimentais alfa/beta que ainda não estão disponíveis no repositório da Microsoft, poderá alterar o Gerenciador do SDK e fazer com que ele use o repositório do Google. Para fazer essa alteração, clique no ícone de engrenagem no canto inferior direito e selecione **Repositório > Google (Não compatível)** :
+Por padrão, o Gerenciador do SDK do Android baixa os componentes e as ferramentas da plataforma de um repositório gerenciado pela Microsoft. Se você precisar acessar plataformas e ferramentas experimentais alfa/beta que ainda não estão disponíveis no repositório da Microsoft, poderá alterar o Gerenciador do SDK e fazer com que ele use o repositório do Google. Para fazer essa alteração, clique no ícone de engrenagem no canto inferior direito e selecione **Repositório > Google (Não compatível)**:
 
 [![Selecionar repositório do Google](android-sdk-images/mac/09-google-repo-m75-sml.png)](android-sdk-images/mac/09-google-repo-m75.png#lightbox)
 
 Quando o repositório do Google é selecionado, os pacotes adicionais que não estavam disponíveis anteriormente poderão aparecer na guia **Plataformas**. (Na captura de tela acima, a **Plataforma do SDK do Android 28** foi adicionada alterando para o repositório do Google.) O uso do repositório do Google não tem suporte e, portanto, não é recomendado para o desenvolvimento cotidiano.
 
-Para voltar a usar o repositório compatível de plataformas e ferramentas, clique em **Microsoft (Recomendado)** . Assim, a lista de pacotes e ferramentas será restaurada para a seleção padrão.
+Para voltar a usar o repositório compatível de plataformas e ferramentas, clique em **Microsoft (Recomendado)**. Assim, a lista de pacotes e ferramentas será restaurada para a seleção padrão.
 
 -----
 

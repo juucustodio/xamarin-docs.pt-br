@@ -1,73 +1,73 @@
 ---
-title: recursos da plataforma iOS no xamarin. Forms
-description: Adicionando funcionalidade específica do iOS para aplicativos xamarin. Forms.
+title: recursos da plataforma iOS no Xamarin. Forms
+description: Adicionar funcionalidade específica do iOS a aplicativos Xamarin. Forms.
 ms.prod: xamarin
 ms.assetid: 634AB62E-68C8-454C-838B-F1CC4E4E21BC
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/22/2019
-ms.openlocfilehash: 7aa9d298c2219dff60ca8ca1f917c72194ad21ca
-ms.sourcegitcommit: 0fd04ea3af7d6a6d6086525306523a5296eec0df
+ms.openlocfilehash: c90cfc297914b585403ae84e7dbac11fd6e02836
+ms.sourcegitcommit: eb23b7d745d1090376f9def07e0f11cb089494d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67512678"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72170939"
 ---
-# <a name="ios-platform-features-in-xamarinforms"></a>recursos da plataforma iOS no xamarin. Forms
+# <a name="ios-platform-features-in-xamarinforms"></a>recursos da plataforma iOS no Xamarin. Forms
 
-Desenvolvimento de aplicativos xamarin. Forms para iOS requer o Visual Studio. O [página de requisitos](~/get-started/requirements.md) contém mais informações sobre os pré-requisitos.
+O desenvolvimento de aplicativos Xamarin. Forms para iOS requer o Visual Studio. A [página requisitos](~/get-started/requirements.md) contém mais informações sobre os pré-requisitos.
 
-## <a name="platform-specifics"></a>Especificidades da plataforma
+## <a name="platform-specifics"></a>Especificações da plataforma
 
 Especificidades da plataforma permitem que você consumir funcionalidade só está disponível em uma plataforma específica, sem implementar renderizadores personalizados ou efeitos.
 
-A seguinte funcionalidade específica da plataforma é fornecida para exibições do xamarin. Forms, páginas e layouts no iOS:
+A funcionalidade específica da plataforma a seguir é fornecida para exibições, páginas e layouts do Xamarin. Forms no iOS:
 
-- Suporte para qualquer um de desfoque [ `VisualElement` ](xref:Xamarin.Forms.VisualElement). Para obter mais informações, consulte [VisualElement desfoque no iOS](visualelement-blur.md).
-- Desabilitar o modo de cor herdados em um com suporte [ `VisualElement` ](xref:Xamarin.Forms.VisualElement). Para obter mais informações, consulte [modo de cor VisualElement herdado no iOS](legacy-color-mode.md).
-- Habilitando uma sombra em um [ `VisualElement` ](xref:Xamarin.Forms.VisualElement). Para obter mais informações, consulte [VisualElement Drop sombras no iOS](visualelement-drop-shadow.md).
+- Suporte para qualquer um de desfoque [ `VisualElement` ](xref:Xamarin.Forms.VisualElement). Para obter mais informações, consulte o [Desfoque do visualelement no Ios](visualelement-blur.md).
+- Desabilitar o modo de cor herdados em um com suporte [ `VisualElement` ](xref:Xamarin.Forms.VisualElement). Para obter mais informações, consulte [modo de cor herdado do visualelement no Ios](legacy-color-mode.md).
+- Habilitando uma sombra em um [ `VisualElement` ](xref:Xamarin.Forms.VisualElement). Para obter mais informações, consulte as [sombras de soltar do visualelement no Ios](visualelement-drop-shadow.md).
 
-A seguinte funcionalidade específica da plataforma é fornecida para modos de exibição do xamarin. Forms no iOS:
+A seguinte funcionalidade específica da plataforma é fornecida para exibições do Xamarin. Forms no iOS:
 
-- Definindo o [ `Cell` ](xref:Xamarin.Forms.Cell) cor do plano de fundo. Para obter mais informações, consulte [cor de plano de fundo da célula no iOS](cell-background-color.md).
-- Garantir que inseridos texto se adapta a um [ `Entry` ](xref:Xamarin.Forms.Entry) ajustando o tamanho da fonte. Para obter mais informações, consulte [tamanho da fonte de entrada no iOS](entry-font-size.md).
-- Configurando a cor do cursor uma [ `Entry` ](xref:Xamarin.Forms.Entry). Para obter mais informações, consulte [entrada de cor do Cursor no iOS](entry-cursor-color.md).
-- Controlando se [ `ListView` ](xref:Xamarin.Forms.ListView) células de cabeçalho float durante a rolagem. Para obter mais informações, consulte [ListView estilo do cabeçalho de grupo no iOS](listview-group-header-style.md).
-- Controlar se as animações de linha estão desabilitadas quando o [ `ListView` ](xref:Xamarin.Forms.ListView) coleção de itens está sendo atualizada. Para obter mais informações, consulte [ListView linha animações no iOS](listview-row-animations.md).
-- Definindo o estilo do separador em um [ `ListView` ](xref:Xamarin.Forms.ListView). Para obter mais informações, consulte [ListView estilo do separador no iOS](listview-separator-style.md).
-- Controlando quando a seleção de item ocorre em um [ `Picker` ](xref:Xamarin.Forms.Picker). Para obter mais informações, consulte [seletor de seleção de Item no iOS](picker-selection.md).
-- Habilitando a [ `Slider.Value` ](xref:Xamarin.Forms.Slider.Value) propriedade a ser definido tocando em uma posição no [ `Slider` ](xref:Xamarin.Forms.Slider) barra, em vez de precisar arrastar o `Slider` thumb. Para obter mais informações, consulte [controle deslizante Thumb toque no iOS](slider-thumb.md).
+- Definindo a cor do plano de fundo [`Cell`](xref:Xamarin.Forms.Cell) . Para obter mais informações, consulte [cor do plano de fundo da célula no Ios](cell-background-color.md).
+- Garantir que inseridos texto se adapta a um [ `Entry` ](xref:Xamarin.Forms.Entry) ajustando o tamanho da fonte. Para obter mais informações, consulte [tamanho da fonte de entrada em Ios](entry-font-size.md).
+- Configurando a cor do cursor uma [ `Entry` ](xref:Xamarin.Forms.Entry). Para obter mais informações, consulte [cor do cursor de entrada no Ios](entry-cursor-color.md).
+- Controlando se as células [de cabeçalho `ListView`](xref:Xamarin.Forms.ListView) flutuam durante a rolagem. Para obter mais informações, consulte [estilo de cabeçalho do grupo ListView no Ios](listview-group-header-style.md).
+- Controlando se as animações de linha são desabilitadas quando a coleção de itens [`ListView`](xref:Xamarin.Forms.ListView) está sendo atualizada. Para obter mais informações, consulte [animações de linha ListView no Ios](listview-row-animations.md).
+- Definindo o estilo do separador em um [ `ListView` ](xref:Xamarin.Forms.ListView). Para obter mais informações, consulte [estilo do separador ListView no Ios](listview-separator-style.md).
+- Controlando quando a seleção de item ocorre em um [ `Picker` ](xref:Xamarin.Forms.Picker). Para obter mais informações, consulte [seleção de item do seletor no Ios](picker-selection.md).
+- Habilitando a [ `Slider.Value` ](xref:Xamarin.Forms.Slider.Value) propriedade a ser definido tocando em uma posição no [ `Slider` ](xref:Xamarin.Forms.Slider) barra, em vez de precisar arrastar o `Slider` thumb. Para obter mais informações, consulte [controle deslizante do slider no Ios](slider-thumb.md).
 
-A seguinte funcionalidade específica da plataforma é fornecida para páginas do xamarin. Forms no iOS:
+A seguinte funcionalidade específica de plataforma é fornecida para páginas Xamarin. Forms no iOS:
 
-- Ocultando o separador de barra de navegação em um [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage). Para obter mais informações, consulte [NavigationPage separador de barra no iOS](navigation-bar-separator.md).
-- Controlar se a barra de navegação é translúcida. Para obter mais informações, consulte [Translucência da barra de navegação no iOS](navigation-bar-translucent.md).
-- Controlar se o texto da barra de status de cor em um [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage) é ajustado para coincidir com a luminosidade da barra de navegação. Para obter mais informações, consulte [modo de cor de texto NavigationPage barra no iOS](status-bar-text-color.md).
-- Controlar se o título da página é exibido como um título grande na barra de navegação de página. Para obter mais informações, consulte [títulos de página grande no iOS](page-large-title.md).
-- Definir a visibilidade do indicador inicial em um [ `Page` ](xref:Xamarin.Forms.Page). Para obter mais informações, consulte [página inicial de indicador de visibilidade no iOS](page-home-indicator.md).
-- Definindo a visibilidade da barra de status em uma [ `Page` ](xref:Xamarin.Forms.Page). Para obter mais informações, consulte [página de visibilidade da barra de Status no iOS](page-status-bar-visibility.md).
-- Garantir que esse conteúdo da página está posicionado em uma área da tela que é segura para todos os dispositivos iOS. Para obter mais informações, consulte [guia do Layout da área de segurança no iOS](page-safe-area-layout.md).
-- Definindo o estilo de apresentação de páginas modais em um iPad. Para obter mais informações, consulte [iPad estilo de apresentação de página Modal](ipad-page-presentation-style.md).
+- Ocultando o separador de barra de navegação em um [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage). Para obter mais informações, consulte [separador de barra NavigationPage no Ios](navigation-bar-separator.md).
+- Controlar se a barra de navegação é translúcida. Para obter mais informações, consulte [barra de navegação Translucency no Ios](navigation-bar-translucent.md).
+- Controlar se o texto da barra de status de cor em um [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage) é ajustado para coincidir com a luminosidade da barra de navegação. Para obter mais informações, consulte [modo de cor de texto da barra de NavigationPage no Ios](status-bar-text-color.md).
+- Controlar se o título da página é exibido como um título grande na barra de navegação de página. Para obter mais informações, consulte [títulos de páginas grandes no Ios](page-large-title.md).
+- Definindo a visibilidade do indicador inicial em um [`Page`](xref:Xamarin.Forms.Page). Para obter mais informações, consulte a [visibilidade do indicador inicial no Ios](page-home-indicator.md).
+- Definindo a visibilidade da barra de status em uma [ `Page` ](xref:Xamarin.Forms.Page). Para obter mais informações, consulte [visibilidade da barra de status da página no Ios](page-status-bar-visibility.md).
+- Garantir que esse conteúdo da página está posicionado em uma área da tela que é segura para todos os dispositivos iOS. Para obter mais informações, consulte [Guia de layout de área segura no Ios](page-safe-area-layout.md).
+- Definindo o estilo de apresentação das páginas modais. Para obter mais informações, consulte [estilo de apresentação de página modal](page-presentation-style.md).
 
-A seguinte funcionalidade específica da plataforma é fornecida para layouts do xamarin. Forms no iOS:
+A funcionalidade específica da plataforma a seguir é fornecida para layouts do Xamarin. Forms no iOS:
 
-- Controlar se uma [ `ScrollView` ](xref:Xamarin.Forms.ScrollView) manipula um gesto de toque ou passá-lo ao seu conteúdo. Para obter mais informações, consulte [ScrollView toques de conteúdo no iOS](scrollview-content-touches.md).
+- Controlar se uma [ `ScrollView` ](xref:Xamarin.Forms.ScrollView) manipula um gesto de toque ou passá-lo ao seu conteúdo. Para obter mais informações, consulte [ScrollView Content Entoques on Ios](scrollview-content-touches.md).
 
-A seguinte funcionalidade específica da plataforma é fornecida para o xamarin. Forms [ `Application` ](xref:Xamarin.Forms.Application) classe no iOS:
+A funcionalidade específica da plataforma a seguir é fornecida para a classe Xamarin. Forms [`Application`](xref:Xamarin.Forms.Application) no IOS:
 
-- Desabilitando o dimensionamento para tamanhos de fonte nomeada de acessibilidade. Para obter mais informações, consulte [acessibilidade colocação em escala para tamanhos de fonte chamado no iOS](named-font-size-scaling.md).
-- Habilitando o controle de layout e renderização atualizações a serem executadas no thread principal. Para obter mais informações, consulte [atualizações de controle do Thread principal no iOS](main-thread-updates-ui.md).
-- Habilitando um [ `PanGestureRecognizer` ](xref:Xamarin.Forms.PanGestureRecognizer) em uma exibição de rolagem para capturar e compartilhar o gesto de panorâmica com o modo de exibição de rolagem. Para obter mais informações, consulte [simultâneas reconhecimento de gesto de panorâmica no iOS](application-pan-gesture.md).
+- Desabilitando o dimensionamento de acessibilidade para tamanhos de fonte nomeados. Para obter mais informações, consulte [dimensionamento de acessibilidade para tamanhos de fonte nomeados no Ios](named-font-size-scaling.md).
+- Habilitando o controle de layout e renderização atualizações a serem executadas no thread principal. Para obter mais informações, consulte [principais atualizações de controle de thread no Ios](main-thread-updates-ui.md).
+- Habilitando um [ `PanGestureRecognizer` ](xref:Xamarin.Forms.PanGestureRecognizer) em uma exibição de rolagem para capturar e compartilhar o gesto de panorâmica com o modo de exibição de rolagem. Para obter mais informações, consulte [reconhecimento de gesto de Pan simultânea no Ios](application-pan-gesture.md).
 
 ## <a name="ios-specific-formatting"></a>formatação específica do iOS
 
-Xamarin. Forms permite que os estilos de interface do usuário de plataforma cruzada e cores a ser definida - mas há outras opções para definir o tema do iOS usando as APIs da plataforma no projeto do iOS.
+O Xamarin. Forms permite definir estilos e cores de interface do usuário de plataforma cruzada, mas há outras opções para definir o tema do seu iOS usando APIs de plataforma no projeto do iOS.
 
-[Leia mais](formatting.md) sobre a formatação de interface do usuário usando as APIs do iOS específicas, como **Info. plist** configuração e o `UIAppearance` API.
+[Leia mais](formatting.md) sobre como formatar a interface do usuário usando APIs específicas do IOS, como a configuração **info. plist** e a API `UIAppearance`.
 
-![](images/status-white-sml.png "Temas do iOS")
+![](images/status-white-sml.png "iOS com temas")
 
 ## <a name="other-ios-features"></a>Outros recursos do iOS
 
-Usando o [renderizadores personalizados](~/xamarin-forms/app-fundamentals/custom-renderer/index.md), o [DependencyService](~/xamarin-forms/app-fundamentals/dependency-service/index.md)e o [MessagingCenter](~/xamarin-forms/app-fundamentals/messaging-center.md), é possível incorporar uma ampla variedade de funcionalidade nativa em Aplicativos xamarin. Forms para iOS.
+Usando [renderizadores personalizados](~/xamarin-forms/app-fundamentals/custom-renderer/index.md), o [DependencyService](~/xamarin-forms/app-fundamentals/dependency-service/index.md)e o [MessagingCenter](~/xamarin-forms/app-fundamentals/messaging-center.md), é possível incorporar uma ampla variedade de funcionalidades nativas aos aplicativos Xamarin. Forms para Ios.
