@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: maddyleger1
 ms.author: maleger
 ms.date: 03/27/2019
-ms.openlocfilehash: a6a34615adc9cf290ff6bf9dd344487e5f29cfa2
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.openlocfilehash: 47171c3853fa8f5eb572971e119d51733cb53a40
+ms.sourcegitcommit: 43423d4018cc0d4b0b8c98a4b3da0704495eb0cf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "69887848"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72303247"
 ---
 # <a name="use-design-time-data-with-the-xaml-previewer"></a>Usar dados de tempo de design com o previsor XAML
 
-_Alguns layouts são difíceis de Visualizar sem dados. Use essas dicas para tirar o máximo proveito da visualização de páginas pesadas de dados no visualizador XAML._
+os layouts de @no__t 0Some são difíceis de Visualizar sem dados. Use essas dicas para tirar o máximo proveito da visualização de páginas pesadas de dados no previsor XAML. _
 
 ## <a name="design-time-data-basics"></a>Noções básicas de dados de tempo de design
 
@@ -28,7 +28,7 @@ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
 mc:Ignorable="d"
 ```
 
-Depois de adicionar os namespaces, você pode `d:` colocar na frente de qualquer atributo ou controle para mostrá-lo no previsor XAML. Elementos com `d:` não são mostrados em tempo de execução.
+Depois de adicionar os namespaces, você pode colocar `d:` na frente de qualquer atributo ou controle para mostrá-lo no previsor XAML. Elementos com `d:` não são mostrados em tempo de execução.
 
 Por exemplo, você pode adicionar texto a um rótulo que geralmente tem dados associados a ele.
 
@@ -36,9 +36,9 @@ Por exemplo, você pode adicionar texto a um rótulo que geralmente tem dados as
 <Label Text="{Binding Name}" d:Text="Name!" />
 ```
 
-[![Dados de tempo de design com texto em um rótulo](xaml-previewer-images/designtimedata-label-sm.png "Dados de tempo de design com texto um rótulo")](xaml-previewer-images/designtimedata-label-lg.png#lightbox)
+[![Dados de tempo de design com texto em um rótulo](xaml-previewer-images/designtimedata-label-sm.png "dados de tempo de design com texto um rótulo")](xaml-previewer-images/designtimedata-label-lg.png#lightbox)
 
-Neste exemplo, sem `d:Text`, o visualizador XAML não mostraria nada para o rótulo. Em vez disso, ele mostra "Name!" onde o rótulo terá dados reais em tempo de execução.
+Neste exemplo, sem `d:Text`, o previsor XAML não mostraria nada para o rótulo. Em vez disso, ele mostra "Name!" onde o rótulo terá dados reais em tempo de execução.
 
 Você pode usar `d:` com qualquer atributo para um controle Xamarin. Forms, como cores, tamanhos de fonte e espaçamento. Você pode até mesmo adicioná-lo ao próprio controle:
 
@@ -46,7 +46,7 @@ Você pode usar `d:` com qualquer atributo para um controle Xamarin. Forms, como
 <d:Button Text="Design Time Button" />
 ```
 
-[![Dados de tempo de design com um controle de botão](xaml-previewer-images/designtimedata-controls-sm.png "Dados de tempo de design com um controle de botão")](xaml-previewer-images/designtimedata-controls-lg.png#lightbox)
+[![Dados de tempo de design com um controle de botão](xaml-previewer-images/designtimedata-controls-sm.png "dados de tempo de design com um controle de botão")](xaml-previewer-images/designtimedata-controls-lg.png#lightbox)
 
 Neste exemplo, o botão só aparece em tempo de design. Use este método para colocar um espaço reservado no para um [controle personalizado sem suporte pelo Visualizador XAML](render-custom-controls.md).
 
@@ -58,7 +58,7 @@ Você pode definir uma fonte de tempo de design para imagens vinculadas à pági
 <Image Source={Binding ProfilePicture} d:Source="DesignTimePicture.jpg" />
 ```
 
-[![Dados de tempo de design com imagens](xaml-previewer-images/designtimedata-image-sm.png "Dados de tempo de design com iamges")](xaml-previewer-images/designtimedata-image-lg.png#lightbox)
+[![Dados de tempo de design com imagens](xaml-previewer-images/designtimedata-image-sm.png "dados de tempo de design com iamges")](xaml-previewer-images/designtimedata-image-lg.png#lightbox)
 
 ## <a name="design-time-data-for-listviews"></a>Dados de tempo de design para ListViews
 
@@ -84,15 +84,54 @@ ListViews são uma maneira popular de exibir dados em um aplicativo móvel. No e
 </StackLayout>
 ```
 
-[![Dados de tempo de design com um ListView](xaml-previewer-images/designtimedata-itemssource-sm.png "Dados de tempo de design com um ListView")](xaml-previewer-images/designtimedata-itemssource-lg.png#lightbox)
+[![Dados de tempo de design com](xaml-previewer-images/designtimedata-itemssource-sm.png "dados de tempo de design de ListView com ListView")](xaml-previewer-images/designtimedata-itemssource-lg.png#lightbox)
 
 Este exemplo mostrará um ListView de três textcéls no previsor XAML. Você pode alterar `x:String` para um modelo de dados existente em seu projeto.
 
-Consulte o [aplicativo Hanselman. Forms de James Montemagno](https://github.com/jamesmontemagno/Hanselman.Forms/blob/vnext/src/Hanselman/Views/Podcasts/PodcastDetailsPage.xaml#L26-L47) para obter um exemplo mais complexo.
+Você também pode criar uma matriz de objetos de dados. Por exemplo, as propriedades públicas de um objeto de dados `Monkey` podem ser construídas como dados de tempo de design:
+
+```csharp
+namespace Monkeys.Models
+{
+    public class Monkey
+    {
+        public string Name { get; set; }
+        public string Location { get; set; }
+    }
+}
+```
+
+Para usar a classe em XAML, você precisará importar o namespace no nó raiz:
+
+```xaml
+xmlns:models="clr-namespace:Monkeys.Models"
+```
+
+```xaml
+<StackLayout>
+    <ListView ItemsSource="{Binding Items}">
+        <d:ListView.ItemsSource>
+            <x:Array Type="{x:Type models:Monkey}">
+                <models:Monkey Name="Baboon" Location="Africa and Asia"/>
+                <models:Monkey Name="Capuchin Monkey" Location="Central and South America"/>
+                <models:Monkey Name="Blue Monkey" Location="Central and East Africa"/>
+            </x:Array>
+        </d:ListView.ItemsSource>
+        <ListView.ItemTemplate>
+            <DataTemplate x:DataType="models:Monkey">
+                <TextCell Text="{Binding Name}"
+                          Detail="{Binding Location}" />
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</StackLayout>
+```
+
+O benefício aqui é que você pode associar ao modelo real que você planeja usar.
 
 ## <a name="alternative-hardcode-a-static-viewmodel"></a>Opcional Codificar um ViewModel estático
 
-Se você não quiser adicionar dados de tempo de design a controles individuais, poderá configurar um armazenamento de dados fictício para associar à sua página. Consulte a postagem de blog de James Montemagno [sobre como adicionar dados de tempo de design](http://motzcod.es/post/143702671962/xamarinforms-xaml-previewer-design-time-data) para ver como associar a um ViewModel estático em XAML.
+Se você não quiser adicionar dados de tempo de design a controles individuais, poderá configurar um armazenamento de dados fictício para associar à sua página. Consulte a postagem de blog de James Montemagno [sobre como adicionar dados de tempo de design](https://montemagno.com/xamarin-forms-design-time-data-tips-best-practices/) para ver como associar a um ViewModel estático em XAML.
 
 ## <a name="troubleshooting"></a>Solução de problemas
 
