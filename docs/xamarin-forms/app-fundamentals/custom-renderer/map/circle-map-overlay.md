@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 551dea5455ffd060d808aa11e8996c5984745fda
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: ecc4686e9966de7a184730589c44a951e4daddb2
+ms.sourcegitcommit: 403e3ec789d075cf1ca23473190aeb6b87220d52
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70771905"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72424869"
 ---
 # <a name="highlighting-a-circular-area-on-a-map"></a>Realçando uma área circular em um mapa
 
@@ -20,7 +20,7 @@ ms.locfileid: "70771905"
 
 _Este artigo explica como adicionar uma sobreposição circular a um mapa a fim de realçar uma área circular nele._
 
-## <a name="overview"></a>Visão geral
+## <a name="overview"></a>Visão Geral
 
 Uma sobreposição é um gráfico em camadas em um mapa. As sobreposições são suporte para elaborar conteúdos gráficos que são dimensionados com o mapa conforme ele é ampliado e reduzido. As capturas de tela a seguir mostram o resultado do acréscimo de uma sobreposição circular a um mapa:
 
@@ -229,7 +229,6 @@ namespace MapOverlay.Droid
             {
                 var formsMap = (CustomMap)e.NewElement;
                 circle = formsMap.Circle;
-                Control.GetMapAsync(this);
             }
         }
 
@@ -250,7 +249,7 @@ namespace MapOverlay.Droid
 }
 ```
 
-O método `OnElementChanged` chamará o método `MapView.GetMapAsync`, que obterá o `GoogleMap` subjacente que está vinculado à exibição, desde que o renderizador personalizado esteja anexado a um novo elemento do Xamarin.Forms. Quando a instância de `GoogleMap` estiver disponível, o método `OnMapReady` será invocado e o círculo será criado instanciando um objeto `CircleOptions` que especifica o centro do círculo e seu raio em metros. Em seguida, o círculo é adicionado ao mapa chamando o método `NativeMap.AddCircle`.
+O método `OnElementChanged` recupera os dados de círculo personalizados, desde que o renderizador personalizado seja anexado a um novo elemento Xamarin. Forms. Quando a instância de `GoogleMap` estiver disponível, o método `OnMapReady` será invocado e o círculo será criado instanciando um objeto `CircleOptions` que especifica o centro do círculo e seu raio em metros. Em seguida, o círculo é adicionado ao mapa chamando o método `NativeMap.AddCircle`.
 
 #### <a name="creating-the-custom-renderer-on-the-universal-windows-platform"></a>Criando o renderizador personalizado na Plataforma Universal do Windows
 

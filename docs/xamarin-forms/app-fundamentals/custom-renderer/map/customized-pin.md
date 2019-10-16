@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: 8df5b373fccdef93a8ffbc66fd53a94378f47a6e
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
-ms.translationtype: HT
+ms.openlocfilehash: 94a537c88f28971bf7f2778f33a35e4c251afd38
+ms.sourcegitcommit: 403e3ec789d075cf1ca23473190aeb6b87220d52
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68650827"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72424850"
 ---
 # <a name="customizing-a-map-pin"></a>Personalizando um marcador de mapa
 
@@ -22,9 +22,9 @@ _Este artigo demonstra como criar um renderizador personalizado para o Controle 
 
 Cada exibição do Xamarin.Forms tem um renderizador que o acompanha para cada plataforma que cria uma instância de um controle nativo. Quando um [`Map`](xref:Xamarin.Forms.Maps.Map) é renderizado por um aplicativo Xamarin.Forms no iOS, é criada uma instância da classe `MapRenderer`, que, por sua vez, cria uma instância de um controle `MKMapView` nativo. Na plataforma Android, a classe `MapRenderer` cria uma instância de um controle `MapView` nativo. Na UWP (Plataforma Universal do Windows), a classe `MapRenderer` cria uma instância de um `MapControl` nativo. Para obter mais informações sobre as classes de renderizador e de controle nativo para as quais os controles do Xamarin.Forms são mapeadas, confira [Classes base do renderizador e controles nativos](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md).
 
-O seguinte diagrama ilustra a relação entre o [`Map`](xref:Xamarin.Forms.Maps.Map) e os controles nativos correspondentes que o implementam:
+O diagrama a seguir ilustra a relação entre o [`Map`](xref:Xamarin.Forms.Maps.Map) e os controles nativos correspondentes que o implementam:
 
-![](customized-pin-images/map-classes.png "Relação entre o Controle de Mapeamento e a implementação de controles nativos")
+![](customized-pin-images/map-classes.png "Relationship Between the Map Control and the Implementing Native Controls")
 
 E possível usar o processo de renderização para implementar personalizações específicas da plataforma criando um renderizador personalizado para um [`Map`](xref:Xamarin.Forms.Maps.Map) em cada plataforma. O processo para fazer isso é o seguinte:
 
@@ -78,7 +78,7 @@ O controle `CustomMap` pode ser referenciado em XAML no projeto da biblioteca do
 </ContentPage>
 ```
 
-O prefixo do namespace `local` pode ter qualquer nome. No entanto, os valores de `clr-namespace` e `assembly` devem corresponder aos detalhes do mapa personalizado. Quando o namespace é declarado, o prefixo é usado para referenciar o mapa personalizado.
+O prefixo do namespace `local` pode ser qualquer nome. No entanto, os valores de `clr-namespace` e `assembly` devem corresponder aos detalhes do mapa personalizado. Quando o namespace é declarado, o prefixo é usado para referenciar o mapa personalizado.
 
 O seguinte exemplo de código mostra como o controle `CustomMap` pode ser consumido por uma página em C#:
 
@@ -131,28 +131,28 @@ Agora, um renderizador personalizado pode ser adicionado a cada projeto de aplic
 
 ## <a name="creating-the-custom-renderer-on-each-platform"></a>Criando o renderizador personalizado em cada plataforma
 
-O processo para criar a classe do renderizador personalizado é o seguinte:
+O processo para criar a classe do renderizador personalizado é a seguinte:
 
 1. Criar uma subclasse da classe `MapRenderer` que renderiza o mapa personalizado.
 1. Substituir o método `OnElementChanged` que renderiza o mapa personalizado e escrever a lógica para personalizá-lo. Esse método é chamado quando o mapa personalizado do Xamarin.Forms correspondente é criado.
-1. Adicione um atributo `ExportRenderer` à classe de renderizador personalizado para especificar que ele será usado para renderizar o mapa personalizado do Xamarin.Forms. Esse atributo é usado para registrar o renderizador personalizado no Xamarin.Forms.
+1. Adicione um atributo `ExportRenderer` à classe de renderizador personalizado para especificar que ele será usado para renderizar o mapa personalizado do Xamarin.Forms. Este atributo é usado para registrar o renderizador personalizado no Xamarin.Forms.
 
 > [!NOTE]
-> O fornecimento de um renderizador personalizado em cada projeto da plataforma é opcional. Se um renderizador personalizado não estiver registrado, será usado o renderizador padrão da classe base do controle.
+> O fornecimento de um renderizador personalizado em cada projeto de plataforma é opcional. Se um renderizador personalizado não estiver registrado, será usado o renderizador padrão da classe base do controle.
 
-O seguinte diagrama ilustra as responsabilidades de cada projeto no aplicativo de exemplo, bem como as relações entre elas:
+O diagrama a seguir ilustra as responsabilidades de cada projeto no aplicativo de exemplo, bem como as relações entre elas:
 
-![](customized-pin-images/solution-structure.png "Responsabilidades do projeto de renderizador personalizado de CustomMap")
+![](customized-pin-images/solution-structure.png "CustomMap Custom Renderer Project Responsibilities")
 
 O controle `CustomMap` é renderizado por classes de renderizador específicas da plataforma, que derivam da classe `MapRenderer` para cada plataforma. Isso faz com que cada controle `CustomMap` seja renderizado com controles específicos da plataforma, conforme mostrado nas seguintes capturas de tela:
 
-![](customized-pin-images/screenshots.png "CustomMap em cada plataforma")
+![](customized-pin-images/screenshots.png "CustomMap on each Platform")
 
-A classe `MapRenderer` expõe o método `OnElementChanged`, que é chamado quando o mapa personalizado do Xamarin.Forms é criado para renderizar o controle nativo correspondente. Esse método usa um parâmetro `ElementChangedEventArgs`, que contém as propriedades `OldElement` e `NewElement`. Essas propriedades representam o elemento do Xamarin.Forms ao qual o renderizador *estava* anexado e o elemento do Xamarin.Forms ao qual o renderizador *está* anexado, respectivamente. No aplicativo de exemplo, a propriedade `OldElement` será `null` e a propriedade `NewElement` conterá uma referência à instância de `CustomMap`.
+A classe `MapRenderer` expõe o método `OnElementChanged`, que é chamado quando o mapa personalizado do Xamarin.Forms é criado para renderizar o controle nativo correspondente. Esse método usa um parâmetro `ElementChangedEventArgs`, que contém as propriedades `OldElement` e `NewElement`. Essas propriedades representam o elemento do Xamarin.Forms a que o renderizador *estava* anexado e o elemento a que o renderizador *está* anexado, respectivamente. No aplicativo de exemplo, a propriedade `OldElement` será `null` e a propriedade `NewElement` conterá uma referência à instância de `CustomMap`.
 
-Uma versão de substituição do método `OnElementChanged`, em cada classe de renderizador específica da plataforma, é o lugar para realizar a personalização do controle nativo. Uma referência tipada ao controle nativo que está sendo usado na plataforma pode ser acessada por meio da propriedade `Control`. Além disso, é possível obter uma referência ao controle do Xamarin.Forms que está sendo renderizado por meio da propriedade `Element`.
+Uma versão de substituição do método `OnElementChanged`, em cada classe de renderizador específica da plataforma, é o lugar para realização da personalização do controle nativo. Uma referência tipada ao controle nativo que está sendo usado na plataforma pode ser acessada por meio da propriedade `Control`. Além disso, é possível obter uma referência ao controle do Xamarin.Forms que está sendo renderizado por meio da propriedade `Element`.
 
-É necessário ter cuidado ao assinar manipuladores de eventos no método `OnElementChanged`, conforme demonstrado no seguinte exemplo de código:
+É necessário ter cuidado ao assinar manipuladores de eventos no método `OnElementChanged`, conforme demonstrado no exemplo de código a seguir:
 
 ```csharp
 protected override void OnElementChanged (ElementChangedEventArgs<Xamarin.Forms.View> e)
@@ -169,7 +169,7 @@ protected override void OnElementChanged (ElementChangedEventArgs<Xamarin.Forms.
 }
 ```
 
-O controle nativo deverá ser configurado e os manipuladores de eventos deverão ser assinados apenas quando o renderizador personalizado for anexado a um novo elemento do Xamarin.Forms. De forma semelhante, a assinatura dos manipuladores de eventos assinados só deverá ser cancelada quando o elemento ao qual o renderizador está anexado for alterado. A adoção dessa abordagem ajudará a criar um renderizador personalizado que não sofre perdas de memória.
+O controle nativo deverá ser configurado e os manipuladores de eventos deverão ser assinados apenas quando o renderizador personalizado for anexado a um novo elemento do Xamarin.Forms. De forma semelhante, a assinatura dos manipuladores de eventos assinados só deverá ser cancelada quando o elemento ao qual o renderizador está anexado for alterado. Adotar essa abordagem ajudará a criar um renderizador personalizado que não sofre perdas de memória.
 
 Cada classe de renderizador personalizado é decorada com um atributo `ExportRenderer` que registra o renderizador no Xamarin.Forms. O atributo aceita dois parâmetros – o nome do tipo de controle personalizado do Xamarin.Forms que está sendo renderizado e o nome do tipo de renderizador personalizado. O prefixo `assembly` do atributo especifica que o atributo se aplica a todo o assembly.
 
@@ -179,11 +179,11 @@ As seções a seguir abordam a implementação de cada classe de renderizador pe
 
 As seguintes capturas de tela mostram o mapa, antes e após a personalização:
 
-![](customized-pin-images/map-layout-ios.png "Controle de Mapeamento antes e após a personalização")
+![](customized-pin-images/map-layout-ios.png "Map Control Before and After Customization")
 
 No iOS, o marcador é chamado de *anotação* e pode ser uma imagem personalizada ou um marcador definido pelo sistema de várias cores. As anotações podem opcionalmente mostrar um *texto explicativo*, que é exibido em resposta à seleção da anotação pelo usuário. O texto explicativo exibe o `Label` e as propriedades `Address` da instância `Pin`, com as exibições acessório direita e esquerda opcionais. Na captura de tela acima, a exibição acessório esquerda é a imagem de um macaco, com a exibição acessório direita sendo o botão *Informações*.
 
-O seguinte exemplo de código mostra o renderizador personalizado para a plataforma iOS:
+O exemplo de código a seguir mostra o renderizador personalizado para a plataforma iOS:
 
 ```csharp
 [assembly: ExportRenderer(typeof(CustomMap), typeof(CustomMapRenderer))]
@@ -352,11 +352,11 @@ Para obter mais informações sobre como personalizar uma instância `MKMapView`
 
 As seguintes capturas de tela mostram o mapa, antes e após a personalização:
 
-![](customized-pin-images/map-layout-android.png "Controle de Mapeamento antes e após a personalização")
+![](customized-pin-images/map-layout-android.png "Map Control Before and After Customization")
 
 No Android, o marcador é chamado de *marcador* e pode ser uma imagem personalizada ou um marcador definido pelo sistema de várias cores. Os marcadores podem mostrar uma *janela de informações*, que é exibida na resposta ao toque do usuário no marcador. A janela de informações exibe as propriedades `Label` e `Address` da instância `Pin` e pode ser personalizada para incluir outros tipos de conteúdo. No entanto, apenas uma janela de informações pode ser mostrada por vez.
 
-O seguinte exemplo de código mostra o renderizador personalizado para a plataforma Android:
+O exemplo de código a seguir mostra o renderizador personalizado para a plataforma Android:
 
 ```csharp
 [assembly: ExportRenderer(typeof(CustomMap), typeof(CustomMapRenderer))]
@@ -383,7 +383,6 @@ namespace CustomRenderer.Droid
             {
                 var formsMap = (CustomMap)e.NewElement;
                 customPins = formsMap.CustomPins;
-                Control.GetMapAsync(this);
             }
         }
 
@@ -399,7 +398,7 @@ namespace CustomRenderer.Droid
 }
 ```
 
-Desde que o renderizador personalizado esteja anexado a um novo elemento do Xamarin.Forms, o método `OnElementChanged` chamará o método `MapView.GetMapAsync`, que obterá o `GoogleMap` subjacente que está vinculado à exibição. Depois que a instância `GoogleMap` estiver disponível, a substituição `OnMapReady` será invocada. Esse método registra um manipulador de eventos para o evento `InfoWindowClick`, que é disparado quando a [janela de informações recebe um clique](#Clicking_on_the_Info_Window) e tem a assinatura cancelada somente quando o elemento ao qual o renderizador está anexado é alterado. A substituição `OnMapReady` também chama o método `SetInfoWindowAdapter` para especificar que a instância da classe `CustomMapRenderer` fornecerá os métodos para personalizar a janela de informações.
+Desde que o renderizador personalizado seja anexado a um novo elemento Xamarin. Forms, o método `OnElementChanged` recupera a lista de Pins personalizados do controle. Depois que a instância `GoogleMap` estiver disponível, a substituição `OnMapReady` será invocada. Esse método registra um manipulador de eventos para o evento `InfoWindowClick`, que é disparado quando a [janela de informações recebe um clique](#Clicking_on_the_Info_Window) e tem a assinatura cancelada somente quando o elemento ao qual o renderizador está anexado é alterado. A substituição `OnMapReady` também chama o método `SetInfoWindowAdapter` para especificar que a instância da classe `CustomMapRenderer` fornecerá os métodos para personalizar a janela de informações.
 
 A classe `CustomMapRenderer` implementa a interface `GoogleMap.IInfoWindowAdapter` para [personalizar a janela de informações](#Customizing_the_Info_Window). Essa interface especifica que os seguintes métodos precisam ser implementados:
 
@@ -511,7 +510,7 @@ Para obter mais informações sobre como personalizar uma instância `MapView`, 
 
 As seguintes capturas de tela mostram o mapa, antes e após a personalização:
 
-![](customized-pin-images/map-layout-uwp.png "Controle de Mapeamento antes e após a personalização")
+![](customized-pin-images/map-layout-uwp.png "Map Control Before and After Customization")
 
 No UWP, o marcador é chamado de *ícone de mapa* e pode ser uma imagem personalizada ou a imagem padrão definida pelo sistema. Um ícone de mapa pode mostrar um `UserControl`, que é exibido em resposta ao toque do usuário no ícone de mapa. O `UserControl` pode exibir qualquer conteúdo, incluindo as propriedades `Label` e `Address` da instância `Pin`.
 
