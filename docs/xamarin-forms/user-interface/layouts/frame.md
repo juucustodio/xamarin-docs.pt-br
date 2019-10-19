@@ -8,36 +8,36 @@ author: profexorgeek
 ms.author: jusjohns
 ms.date: 08/06/2019
 ms.openlocfilehash: 619b29a9d65594b1badd805c3361fe1a174d7174
-ms.sourcegitcommit: 1341f2950b775a4daa7d0548a51fdef759afd6e3
+ms.sourcegitcommit: dad4dfcd194b63ec9e903363351b6d9e543d4888
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
+ms.lasthandoff: 10/18/2019
 ms.locfileid: "69976498"
 ---
 # <a name="xamarinforms-frame"></a>Quadro do Xamarin. Forms
 
 [![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-frame/)
 
-A classe Xamarin. [`Frame`](xref:Xamarin.Forms.Frame) Forms é um layout usado para encapsular uma exibição com uma borda que pode ser configurada com cores, sombra e outras opções. Quadros geralmente são usados para criar bordas em torno de controles, mas podem ser usados para criar uma interface do usuário mais complexa. Para obter mais informações, consulte [uso avançado de quadro](#advanced-frame-usage).
+A classe [`Frame`](xref:Xamarin.Forms.Frame) Xamarin. Forms é um layout usado para encapsular uma exibição com uma borda que pode ser configurada com cores, sombra e outras opções. Quadros geralmente são usados para criar bordas em torno de controles, mas podem ser usados para criar uma interface do usuário mais complexa. Para obter mais informações, consulte [uso avançado de quadro](#advanced-frame-usage).
 
-A captura de tela `Frame` a seguir mostra os controles no Ios e no Android:
+A captura de tela a seguir mostra `Frame` controles no iOS e no Android:
 
-Exemplos de quadros ["exemplos de quadros em Ios e Android" no Ios e no Android ![](frame-images/frame-cropped.png)](frame-images/frame-full.png#lightbox "")
+[![ "exemplos de quadro no iOS e no Android"](frame-images/frame-cropped.png)](frame-images/frame-full.png#lightbox "Exemplos de quadro no iOS e no Android")
 
-A `Frame` classe define as seguintes propriedades:
+A classe `Frame` define as seguintes propriedades:
 
-* [`BorderColor`](xref:Xamarin.Forms.Frame.BorderColor)é um `Color` valor que determina a cor `Frame` da borda.
-* [`CornerRadius`](xref:Xamarin.Forms.Frame.CornerRadius)é um `float` valor que determina o raio arredondado do canto.
-* [`HasShadow`](xref:Xamarin.Forms.Frame.HasShadow)é um `bool` valor que determina se o quadro tem uma sombra de projeção.
+* [`BorderColor`](xref:Xamarin.Forms.Frame.BorderColor) é um valor de `Color` que determina a cor da borda de `Frame`.
+* [`CornerRadius`](xref:Xamarin.Forms.Frame.CornerRadius) é um valor de `float` que determina o raio arredondado do canto.
+* [`HasShadow`](xref:Xamarin.Forms.Frame.HasShadow) é um valor `bool` que determina se o quadro tem uma sombra de projeção.
 
-Essas propriedades são apoiadas por [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objetos, o que significa `Frame` que o pode ser o destino de associações de dados.
+Essas propriedades têm o suporte de objetos [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) , o que significa que o `Frame` pode ser o destino de associações de dados.
 
 > [!NOTE]
-> O `HasShadow` comportamento da propriedade é dependente da plataforma. O valor padrão é `true` em todas as plataformas. No entanto, nas sombras suspensas UWP não são renderizadas. As sombras de soltar são renderizadas no Android e no iOS, mas as sombras de soltar no iOS são mais escuras e ocupam mais espaço.
+> O comportamento da propriedade `HasShadow` é dependente da plataforma. O valor padrão é `true` em todas as plataformas. No entanto, nas sombras suspensas UWP não são renderizadas. As sombras de soltar são renderizadas no Android e no iOS, mas as sombras de soltar no iOS são mais escuras e ocupam mais espaço.
 
 ## <a name="create-a-frame"></a>Criar um quadro
 
-Um `Frame` pode ser instanciado em XAML. O objeto `Frame` padrão tem um plano de fundo branco, uma sombra e nenhuma borda. Um `Frame` objeto normalmente encapsula outro controle. O exemplo a seguir mostra um `Frame` padrão encapsulando um `Label` objeto:
+Um `Frame` pode ser instanciado em XAML. O objeto de `Frame` padrão tem um plano de fundo branco, uma sombra e nenhuma borda. Um objeto `Frame` normalmente encapsula outro controle. O exemplo a seguir mostra um padrão `Frame` encapsulando um objeto `Label`:
 
 ```xaml
 <Frame>
@@ -54,7 +54,7 @@ Frame defaultFrame = new Frame
 };
 ```
 
-`Frame`os objetos podem ser personalizados com cantos arredondados, bordas coloridas e sombras projetadas definindo as propriedades no XAML. O exemplo a seguir mostra um `Frame` objeto personalizado:
+`Frame` objetos podem ser personalizados com cantos arredondados, bordas coloridas e sombras, definindo as propriedades no XAML. O exemplo a seguir mostra um objeto de `Frame` personalizado:
 
 ```xaml
 <Frame BorderColor="Orange"
@@ -78,15 +78,15 @@ Frame frame = new Frame
 
 ## <a name="advanced-frame-usage"></a>Uso avançado de quadros
 
-A `Frame` classe é herdada de `ContentView`, o que significa que ela pode `View` conter qualquer `Layout` tipo de objeto, incluindo objetos. Essa capacidade permite que `Frame` o seja usado para criar objetos de interface do usuário complexos, como cartões.
+A classe `Frame` herda de `ContentView`, o que significa que ela pode conter qualquer tipo de objeto `View`, incluindo objetos `Layout`. Essa capacidade permite que o `Frame` seja usado para criar objetos de interface do usuário complexos, como cartões.
 
 ### <a name="create-a-card-with-a-frame"></a>Criar um cartão com um quadro
 
-A combinação `Frame` de um objeto `Layout` com um objeto, `StackLayout` como um objeto, permite a criação de uma interface do usuário mais complexa. A captura de tela a seguir mostra um cartão de exemplo `Frame` , criado usando um objeto:
+A combinação de um objeto `Frame` com um objeto `Layout`, como um objeto `StackLayout`, permite a criação de uma interface do usuário mais complexa. A captura de tela a seguir mostra um cartão de exemplo, criado usando um objeto `Frame`:
 
-Captura de tela ["captura de tela de um cartão criado com um quadro" de um cartão criado com um quadro ![](frame-images/frame-card-cropped.png)](frame-images/frame-full.png#lightbox "")
+[![ "captura de tela de um cartão criado com um quadro"](frame-images/frame-card-cropped.png)](frame-images/frame-full.png#lightbox "Captura de tela de um cartão criado com um quadro")
 
-O XAML a seguir mostra como criar um cartão com a `Frame` classe:
+O XAML a seguir mostra como criar um cartão com a classe `Frame`:
 
 ```xaml
 <Frame BorderColor="Gray"
@@ -139,9 +139,9 @@ Frame cardFrame = new Frame
 
 ### <a name="round-elements"></a>Elementos arredondados
 
-A `CornerRadius` propriedade`Frame` do controle pode ser usada para criar uma imagem de círculo. A captura de tela a seguir mostra um exemplo de uma imagem arredondada, criada usando um `Frame` objeto:
+A propriedade `CornerRadius` do controle de `Frame` pode ser usada para criar uma imagem de círculo. A captura de tela a seguir mostra um exemplo de uma imagem arredondada, criada usando um objeto `Frame`:
 
-["Captura de tela de uma imagem de círculo criada com um quadro" captura de tela de uma imagem de círculo criada com um quadro ![](frame-images/circle-image-cropped.png)](frame-images/frame-full.png#lightbox "")
+[![ "captura de tela de uma imagem de círculo criada com um quadro"](frame-images/circle-image-cropped.png)](frame-images/frame-full.png#lightbox "Captura de tela de uma imagem de círculo criada com um quadro")
 
 O XAML a seguir mostra como criar uma imagem de círculo em XAML:
 
@@ -189,7 +189,7 @@ Frame circleImageFrame = new Frame
 A imagem em **áreas de. jpg** deve ser adicionada a cada projeto de plataforma e como isso é feito varia de acordo com a plataforma. Para obter mais informações, consulte [imagens no Xamarin. Forms](~/xamarin-forms/user-interface/images.md).
 
 > [!NOTE]
-> Os cantos arredondados têm um comportamento ligeiramente diferente entre as plataformas. O `Image` `Frame` objeto deve ser metade da diferença entre a largura da imagem e a largura do quadro pai e deve ser negativo para centralizar a imagem uniformemente dentro do objeto. `Margin` No entanto, a largura e a altura solicitadas não são `Margin`Garantidas `HeightRequest` , `WidthRequest` portanto, as propriedades e podem precisar ser alteradas com base no tamanho da imagem e em outras opções de layout.
+> Os cantos arredondados têm um comportamento ligeiramente diferente entre as plataformas. A `Margin` do objeto de `Image` deve ser metade da diferença entre a largura da imagem e a largura do quadro pai e deve ser negativa para centralizar a imagem uniformemente dentro do objeto `Frame`. No entanto, a largura e a altura solicitadas não são garantidas, portanto, as propriedades `Margin`, `HeightRequest` e `WidthRequest` podem precisar ser alteradas com base no tamanho da imagem e em outras opções de layout.
 
 ## <a name="related-links"></a>Links relacionados
 
