@@ -6,24 +6,24 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: ad7e2e16784a309286d42d4562a52ef57671e477
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: bd05596ce8c6f8acb81b3ca68c6393a0be47768a
+ms.sourcegitcommit: cb13fadbaa6d19dea94b9005bda20c2efd1b8039
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70764559"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72541921"
 ---
 # <a name="xamarinandroid-gridlayout"></a>GridLayout do Xamarin. Android
 
-O `GridLayout` é uma nova `ViewGroup` subclasse que dá suporte ao layout de exibições em uma grade 2D, semelhante a uma tabela HTML, como mostrado abaixo:
+A `GridLayout` é uma nova subclasse de `ViewGroup` que dá suporte ao layout de exibições em uma grade 2D, semelhante a uma tabela HTML, como mostrado abaixo:
 
- [![GridLayout cortada exibindo quatro células](grid-layout-images/21-gridlayoutcropped.png)](grid-layout-images/21-gridlayoutcropped.png#lightbox)
+ [![Cropped GridLayout exibindo quatro células](grid-layout-images/21-gridlayoutcropped.png)](grid-layout-images/21-gridlayoutcropped.png#lightbox)
 
- `GridLayout`funciona com uma hierarquia de exibição plana, em que as exibições filhas definem seus locais na grade especificando as linhas e colunas nas quais elas devem estar. Dessa forma, a *GridLayout* é capaz de posicionar modos de exibição na grade sem exigir que as exibições intermediárias forneçam uma estrutura de tabela, como visto nas linhas da tabela usadas no TableLayout. Ao manter uma hierarquia plana, a *GridLayout* é capaz de fazer o layout mais rápido de suas exibições filhas. Vamos dar uma olhada em um exemplo para ilustrar o que esse conceito realmente significa no código.
+ `GridLayout` funciona com uma hierarquia de exibição plana, em que as exibições filhas definem seus locais na grade especificando as linhas e colunas em que elas devem estar. Dessa forma, a *GridLayout* é capaz de posicionar modos de exibição na grade sem exigir que as exibições intermediárias forneçam uma estrutura de tabela, como visto nas linhas da tabela usadas no TableLayout. Ao manter uma hierarquia plana, a *GridLayout* é capaz de fazer o layout mais rápido de suas exibições filhas. Vamos dar uma olhada em um exemplo para ilustrar o que esse conceito realmente significa no código.
 
 ## <a name="creating-a-grid-layout"></a>Criando um layout de grade
 
-O XML a seguir adiciona `TextView` vários controles a uma *GridLayout*.
+O XML a seguir adiciona vários controles de `TextView` a uma *GridLayout*.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -49,15 +49,15 @@ O XML a seguir adiciona `TextView` vários controles a uma *GridLayout*.
 
 O layout ajustará os tamanhos de linha e coluna para que as células possam ajustar seu conteúdo, conforme ilustrado pelo diagrama a seguir:
 
- [![Diagrama de layout mostrando duas células à esquerda menores do que à direita](grid-layout-images/gridlayout-cells.png)](grid-layout-images/gridlayout-cells.png#lightbox)
+ [![Diagram de layout mostrando duas células à esquerda menores do que à direita](grid-layout-images/gridlayout-cells.png)](grid-layout-images/gridlayout-cells.png#lightbox)
 
 Isso resulta na seguinte interface do usuário quando executado em um aplicativo:
 
- [![Captura de tela do aplicativo GridLayoutDemo exibindo quatro células](grid-layout-images/01-gridlayout.png)](grid-layout-images/01-gridlayout.png#lightbox)
+ [![Screenshot do aplicativo GridLayoutDemo exibindo quatro células](grid-layout-images/01-gridlayout.png)](grid-layout-images/01-gridlayout.png#lightbox)
 
 ## <a name="specifying-orientation"></a>Especificando a orientação
 
-Observe no XML acima, cada `TextView` um não especifica uma linha ou coluna. Quando não forem especificados, o `GridLayout` atribuirá cada exibição filho em ordem, com base na orientação. Por exemplo, vamos alterar a orientação da GridLayout do padrão, que é horizontal, para vertical assim:
+Observe no XML acima, cada `TextView` não especifica uma linha ou coluna. Quando não são especificados, o `GridLayout` atribui cada exibição filho em ordem, com base na orientação. Por exemplo, vamos alterar a orientação da GridLayout do padrão, que é horizontal, para vertical assim:
 
 ```xml
 <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -69,17 +69,17 @@ Observe no XML acima, cada `TextView` um não especifica uma linha ou coluna. Qu
 </GridLayout>
 ```
 
-Agora, o `GridLayout` irá posicionar as células de cima para baixo em cada coluna, em vez da esquerda para a direita, conforme mostrado abaixo:
+Agora, a `GridLayout` posicionará as células de cima para baixo em cada coluna, em vez da esquerda para a direita, conforme mostrado abaixo:
 
- [![Diagrama ilustrando como as células são posicionadas na orientação vertical](grid-layout-images/gridlayoutorientation.png)](grid-layout-images/gridlayoutorientation.png#lightbox)
+ [![Diagram ilustrando como as células são posicionadas na orientação vertical](grid-layout-images/gridlayoutorientation.png)](grid-layout-images/gridlayoutorientation.png#lightbox)
 
 Isso resulta na seguinte interface do usuário em tempo de execução:
 
- [![Captura de tela de GridLayoutDemo com células posicionadas na orientação vertical](grid-layout-images/02-gridlayout.png)](grid-layout-images/02-gridlayout.png#lightbox)
+ [![Screenshot de GridLayoutDemo com células posicionadas na orientação vertical](grid-layout-images/02-gridlayout.png)](grid-layout-images/02-gridlayout.png#lightbox)
 
 ### <a name="specifying-explicit-position"></a>Especificando a posição explícita
 
-Se quisermos controlar explicitamente as posições das exibições filho no `GridLayout`, podemos definir seus `layout_row` atributos e `layout_column` . Por exemplo, o XML a seguir resultará no layout mostrado na primeira captura de tela (mostrada acima), independentemente da orientação.
+Se quisermos controlar explicitamente as posições das exibições filho na `GridLayout`, podemos definir seus `layout_row` e `layout_column` atributos. Por exemplo, o XML a seguir resultará no layout mostrado na primeira captura de tela (mostrada acima), independentemente da orientação.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -113,7 +113,7 @@ Se quisermos controlar explicitamente as posições das exibições filho no `Gr
 
 ### <a name="specifying-spacing"></a>Especificando o espaçamento
 
-Temos algumas opções que fornecerão o espaçamento entre as exibições filhas do `GridLayout`. Podemos usar o `layout_margin` atributo para definir a margem em cada exibição filho diretamente, conforme mostrado abaixo
+Temos algumas opções que fornecerão o espaçamento entre as exibições filhas do `GridLayout`. Podemos usar o atributo `layout_margin` para definir a margem em cada exibição filho diretamente, conforme mostrado abaixo
 
 ```xml
 <TextView
@@ -124,8 +124,8 @@ Temos algumas opções que fornecerão o espaçamento entre as exibições filha
             android:layout_margin="10dp" />
 ```
 
-Além disso, no Android 4, uma nova exibição de espaçamento de `Space` uso geral chamada agora está disponível. Para usá-lo, basta adicioná-lo como uma exibição filho.
-Por exemplo, o XML abaixo adiciona uma `GridLayout` linha adicional ao definindo seu `rowcount` como 3 e adiciona uma `Space` exibição que fornece o espaçamento entre o `TextViews`.
+Além disso, no Android 4, uma nova exibição de espaçamento de uso geral chamada `Space` agora está disponível. Para usá-lo, basta adicioná-lo como uma exibição filho.
+Por exemplo, o XML abaixo adiciona uma linha adicional à `GridLayout` definindo seu `rowcount` como 3 e adiciona uma exibição de `Space` que fornece o espaçamento entre o `TextViews`.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -163,15 +163,15 @@ Por exemplo, o XML abaixo adiciona uma `GridLayout` linha adicional ao definindo
 </GridLayout>
 ```
 
-Esse XML cria espaçamento no `GridLayout` conforme mostrado abaixo:
+Esse XML cria o espaçamento na `GridLayout`, conforme mostrado abaixo:
 
- [![Captura de tela de GridLayoutDemo ilustrando células maiores com espaçamento](grid-layout-images/03-gridlayout.png)](grid-layout-images/03-gridlayout.png#lightbox)
+ [![Screenshot de GridLayoutDemo ilustrando células maiores com espaçamento](grid-layout-images/03-gridlayout.png)](grid-layout-images/03-gridlayout.png#lightbox)
 
-O benefício de usar o novo `Space` modo de exibição é que ele permite o espaçamento e não exige a definição de atributos em cada exibição filho.
+O benefício de usar o novo modo de exibição de `Space` é que ele permite o espaçamento e não exige a definição de atributos em cada exibição filho.
 
 ### <a name="spanning-columns-and-rows"></a>Abrangendo colunas e linhas
 
-O `GridLayout` também dá suporte a células que abrangem várias colunas e linhas. Por exemplo, digamos que adicionamos outra linha contendo um botão ao `GridLayout` conforme mostrado abaixo:
+O `GridLayout` também dá suporte a células que abrangem várias colunas e linhas. Por exemplo, digamos que adicionamos outra linha contendo um botão à `GridLayout`, como mostrado abaixo:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -214,9 +214,9 @@ O `GridLayout` também dá suporte a células que abrangem várias colunas e lin
 </GridLayout>
 ```
 
-Isso fará com que a primeira coluna do `GridLayout` seja ampliada para acomodar o tamanho do botão, como vemos aqui:
+Isso fará com que a primeira coluna da `GridLayout` seja ampliada para acomodar o tamanho do botão, como vemos aqui:
 
-[![Captura de tela de GridLayoutDemo com botão que abrange apenas a primeira coluna](grid-layout-images/04-gridlayout.png)](grid-layout-images/04-gridlayout.png#lightbox)
+[![Screenshot de GridLayoutDemo com botão abrangendo apenas a primeira coluna](grid-layout-images/04-gridlayout.png)](grid-layout-images/04-gridlayout.png#lightbox)
 
 Para manter a primeira coluna de alongamento, podemos definir o botão para abranger duas colunas definindo seu ColumnSpan como este:
 
@@ -229,12 +229,12 @@ Para manter a primeira coluna de alongamento, podemos definir o botão para abra
     android:layout_columnSpan="2" />
 ```
 
-Fazer isso resulta em um layout para o `TextViews` que é semelhante ao layout que tínhamos anteriormente, com o botão adicionado à parte inferior `GridLayout` do, conforme mostrado abaixo:
+Fazer isso resulta em um layout para o `TextViews` que é semelhante ao layout que tínhamos anteriormente, com o botão adicionado à parte inferior da `GridLayout`, como mostrado abaixo:
 
- [![Captura de tela de GridLayoutDemo com botão abrangendo ambas as colunas](grid-layout-images/05-gridlayout.png)](grid-layout-images/05-gridlayout.png#lightbox)
+ [![Screenshot de GridLayoutDemo com botão abrangendo ambas as colunas](grid-layout-images/05-gridlayout.png)](grid-layout-images/05-gridlayout.png#lightbox)
 
 ## <a name="related-links"></a>Links relacionados
 
-- [GridLayoutDemo (exemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/platformfeatures-ics-samples-gridlayoutdemo)
+- [GridLayoutDemo (exemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/gridlayoutdemo)
 - [Introdução ao sanduíche de sorvete](http://www.android.com/about/ice-cream-sandwich/)
 - [Plataforma Android 4,0](https://developer.android.com/sdk/android-4.0.html)
