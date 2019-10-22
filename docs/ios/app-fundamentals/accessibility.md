@@ -8,10 +8,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 05/18/2016
 ms.openlocfilehash: 943cdfaee07bc4fd4ed3273840036055ad40b89a
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "70766743"
 ---
 # <a name="accessibility-on-ios"></a>Acessibilidade no iOS
@@ -21,15 +21,15 @@ Consulte as páginas de acessibilidade do [Android e acessibilidade](~/android/a
 
 ## <a name="describing-ui-elements"></a>Descrevendo elementos da interface do usuário
 
-o IOS fornece `AccessibilityLabel` as `AccessibilityHint` Propriedades e para que os desenvolvedores adicionem texto descritivo que pode ser usado pelo leitor de tela do VoiceOver para tornar os controles mais acessíveis. Os controles também podem ser marcados com uma ou mais características que fornecem contexto adicional em modos acessíveis.
+o iOS fornece as propriedades `AccessibilityLabel` e `AccessibilityHint` para que os desenvolvedores adicionem texto descritivo que pode ser usado pelo leitor de tela do VoiceOver para tornar os controles mais acessíveis. Os controles também podem ser marcados com uma ou mais características que fornecem contexto adicional em modos acessíveis.
 
-Alguns controles talvez não precisem ser acessíveis (por exemplo, um rótulo em uma entrada de texto ou uma imagem puramente decorativa) – o `IsAccessibilityElement` é fornecido para desabilitar a acessibilidade nesses casos.
+Alguns controles podem não precisar ser acessíveis (por exemplo, um rótulo em uma entrada de texto ou uma imagem puramente decorativa) – a `IsAccessibilityElement` é fornecida para desabilitar a acessibilidade nesses casos.
 
 **Designer de interface do usuário**
 
 O **painel de propriedades** contém uma seção de acessibilidade que permite que essas configurações sejam editadas quando um controle é selecionado no designer de interface do usuário do IOS:
 
-![](accessibility-images/ios-designer-sml.png "Configurações de acessibilidade")
+![](accessibility-images/ios-designer-sml.png "Accessibility Settings")
 
 **C#**
 
@@ -52,7 +52,7 @@ O valor de `AccessibilityIdentifier` nunca é falado ou exibido para o usuário.
 
 ## <a name="postnotification"></a>Notificação por
 
-O `UIAccessibility.PostNotification` método permite que os eventos sejam gerados para o usuário fora da interação direta (por exemplo, quando eles interagem com um controle específico).
+O método `UIAccessibility.PostNotification` permite que os eventos sejam gerados para o usuário fora da interação direta (por exemplo, quando eles interagem com um controle específico).
 
 ### <a name="announcement"></a>Nascimento
 
@@ -66,7 +66,7 @@ UIAccessibility.PostNotification (
 
 ### <a name="layoutchanged"></a>Layoutchanged
 
-O `LayoutChanged` comunicado é usado quando o layout da tela:
+O anúncio de `LayoutChanged` é usado quando o layout da tela:
 
 ```csharp
 UIAccessibility.PostNotification (
@@ -78,9 +78,9 @@ UIAccessibility.PostNotification (
 
 As propriedades de acessibilidade, como o rótulo e a dica, podem ser localizadas da mesma forma que outro texto na interface do usuário.
 
-**MainStoryboard.strings**
+**MainStoryboard. Strings**
 
-Se a interface do usuário for disposta em um storyboard, você poderá fornecer traduções para propriedades de acessibilidade da mesma maneira que outras propriedades. No exemplo a seguir, um `UITextField` tem uma **ID** de localização `Pqa-aa-ury` e duas propriedades de acessibilidade sendo definidas em espanhol:
+Se a interface do usuário for disposta em um storyboard, você poderá fornecer traduções para propriedades de acessibilidade da mesma maneira que outras propriedades. No exemplo a seguir, um `UITextField` tem uma **ID de localização** de `Pqa-aa-ury` e duas propriedades de acessibilidade sendo definidas em espanhol:
 
 ```csharp
 /* Accessibility */
@@ -90,7 +90,7 @@ Se a interface do usuário for disposta em um storyboard, você poderá fornecer
 
 Esse arquivo seria colocado no diretório **es. lproj** para conteúdo espanhol.
 
-**Localizable.strings**
+**As cadeias de caracteres localizáveis**
 
 Como alternativa, as traduções podem ser adicionadas ao arquivo **localizável. Strings** no diretório de conteúdo localizado (por exemplo, **es. lproj** para espanhol):
 
@@ -100,7 +100,7 @@ Como alternativa, as traduções podem ser adicionadas ao arquivo **localizável
 "Provide more information" = "escriba más información";
 ```
 
-Essas traduções podem ser usadas C# no por `LocalizedString` meio do método:
+Essas traduções podem ser usadas C# no por meio do método `LocalizedString`:
 
 ```csharp
 notesText.AccessibilityLabel = NSBundle.MainBundle.LocalizedString ("Notes", "");
@@ -115,7 +115,7 @@ Consulte o [Guia de localização do IOS](~/ios/app-fundamentals/localization/in
 
 O VoiceOver está habilitado no aplicativo **configurações** navegando para **geral > acessibilidade > VoiceOver**:
 
-![](accessibility-images/settings-sml.png "Definindo a taxa de fala")
+![](accessibility-images/settings-sml.png "Setting the speaking rate")
 
 A tela de **acessibilidade** também fornece configurações de zoom, tamanho do texto, cor & opções de contraste, configurações de fala e outras opções de configuração.
 
@@ -125,12 +125,12 @@ Siga estas [instruções do VoiceOver](https://developer.apple.com/library/ios/t
 
 Ao testar no simulador, o **Inspetor de acessibilidade** está disponível para ajudar a verificar se as propriedades de acessibilidade e os eventos estão configurados corretamente. Ative o Inspetor no aplicativo **configurações** navegando para **geral > acessibilidade > Inspetor de acessibilidade**:
 
-![](accessibility-images/settings-inspector-sml.png "Habilitar Inspetor de acessibilidade")
+![](accessibility-images/settings-inspector-sml.png "Enable Accessibility Inspector")
 
 Uma vez habilitada, a janela do Inspetor focaliza a tela do iOS em todos os momentos.
 Aqui está um exemplo da saída quando uma linha de exibição de tabela é selecionada – Observe que o **rótulo** contém uma sentença que fornece o conteúdo da linha e também que é "Done" (ou seja, o tique é visível):
 
-![](accessibility-images/tableview-a11y-sml.png "Usando o Inspetor de acessibilidade")
+![](accessibility-images/tableview-a11y-sml.png "Using Accessibility Inspector")
 
 Enquanto o Inspetor estiver visível, use o ícone "X" na parte superior esquerda para mostrar temporariamente e ocultar a sobreposição e habilitar/desabilitar as configurações de acessibilidade.
 
@@ -138,4 +138,4 @@ Enquanto o Inspetor estiver visível, use o ícone "X" na parte superior esquerd
 
 - [Acessibilidade multiplataforma](~/cross-platform/app-fundamentals/accessibility.md)
 - [Acessibilidade do iOS (Apple)](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/iPhoneAccessibility/Accessibility_on_iPhone/Accessibility_on_iPhone.html)
-- [iOS VoiceOver](http://www.apple.com/accessibility/ios/voiceover/)
+- [VoiceOver do iOS](http://www.apple.com/accessibility/ios/voiceover/)

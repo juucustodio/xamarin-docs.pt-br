@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 06/12/2019
 ms.openlocfilehash: b27b4b0c3c5662c6cc1c2c151dd9ebe1523da3a4
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "71198519"
 ---
 # <a name="xamarinforms-dependencyservice-introduction"></a>Introdução ao DependencyService do Xamarin.Forms
@@ -29,7 +29,7 @@ O processo para usar o [`DependencyService`](xref:Xamarin.Forms.DependencyServic
 
 O diagrama a seguir mostra como a funcionalidade de plataforma nativa é invocada em um aplicativo Xamarin.Forms:
 
-![Visão geral de localização de serviço usando a classe DependencyService do Xamarin.Forms](introduction-images/dependency-service.png "Localização de serviço DependencyService")
+![Visão geral do local do serviço usando a classe DependencyService do Xamarin. Forms](introduction-images/dependency-service.png "Local do serviço DependencyService")
 
 ## <a name="create-an-interface"></a>Criar uma interface
 

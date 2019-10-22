@@ -8,10 +8,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 07/25/2018
 ms.openlocfilehash: 6ae10e73c3f41226560beb8cf8c50608fc6adf3f
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "70762617"
 ---
 # <a name="resource-qualifiers-and-visualization-options"></a>Qualificadores de recursos e opções de visualização
@@ -24,21 +24,21 @@ _Este tópico explica como definir recursos que serão usados somente quando alg
 
 **As opções do qualificador de recursos** podem ser acessadas clicando no ícone de reticências à direita do botão modo **paisagem** :
 
-[![Opções do qualificador de recursos](resource-qualifiers-images/vs/08-resource-qual-opt-sml.png)](resource-qualifiers-images/vs/08-resource-qual-opt.png#lightbox)
+[Opções de qualificador ![Resource](resource-qualifiers-images/vs/08-resource-qual-opt-sml.png)](resource-qualifiers-images/vs/08-resource-qual-opt.png#lightbox)
 
 Essa caixa de diálogo apresenta menus suspensos para os seguintes qualificadores de recursos:
 
-- **Idioma** do &ndash; Exibe recursos de idioma disponíveis e oferece uma opção para adicionar novos recursos de idioma/região.
+- O **idioma** &ndash; exibe recursos de idioma disponíveis e oferece uma opção para adicionar novos recursos de idioma/região.
 
-- **Modo de interface do usuário** Lista modos de exibição (como **encaixe de carro** e encaixe de mesa), bem como direções de layout. &ndash;
+- O **modo de interface do usuário** &ndash; lista modos de exibição (como **encaixe de carro** e encaixe de **mesa**), bem como direções de layout.
 
 Cada um desses menus suspensos abre novas caixas de diálogo em que você pode selecionar e configurar qualificadores de recursos (conforme explicado a seguir).
 
-### <a name="language"></a>Idioma
+### <a name="language"></a>Linguagem
 
 O menu suspenso **idioma** lista somente os idiomas que têm recursos definidos (ou **todos os idiomas**, que é o padrão). No entanto, também há uma opção **Adicionar idioma/região...** que permite adicionar um novo idioma à lista:
 
-[![Adicionar idioma/região](resource-qualifiers-images/vs/09-add-language-region-sml.png)](resource-qualifiers-images/vs/09-add-language-region.png#lightbox)
+[idioma/região ![Add](resource-qualifiers-images/vs/09-add-language-region-sml.png)](resource-qualifiers-images/vs/09-add-language-region.png#lightbox)
 
 Quando você clica em **Adicionar idioma/região...** , a caixa de diálogo **Selecionar idioma** é aberta para exibir listas suspensas de regiões e idiomas disponíveis:
 
@@ -54,7 +54,7 @@ Observe que, se você adicionar um novo idioma, mas não criar novos recursos pa
 
 Quando você clica no menu suspenso **modo de interface do usuário** , uma lista de modos é exibida, como **normal**, **encaixe de carro**, **encaixe de mesa**, **televisão**, **dispositivo**e **inspeção**:
 
-[![Menu do modo de interface do usuário](resource-qualifiers-images/vs/12-ui-mode-sml.png)](resource-qualifiers-images/vs/12-ui-mode.png#lightbox)
+[menu do modo de ![UI](resource-qualifiers-images/vs/12-ui-mode-sml.png)](resource-qualifiers-images/vs/12-ui-mode.png#lightbox)
 
 Abaixo dessa lista, os modos noturnos **não são noturno** e à **noite**, seguidos pelas direções de layout da **esquerda para a direita** e da **direita para a esquerda** (para obter informações sobre as opções da **esquerda para a direita** e da **direita para a esquerda** , consulte [ LayoutDirection](xref:Android.Util.LayoutDirection)).
 Os últimos itens na caixa de diálogo **Opções do qualificador de recursos** são as **telas arredondadas** (para uso com o Android desgaste) ou **não telas arredondadas**.
@@ -69,11 +69,11 @@ O ícone **configurações da barra de ações** está disponível à esquerda d
 
 Esse ícone abre uma caixa de diálogo popover que fornece uma maneira de selecionar um dos três modos de barra de ação:
 
-- **Padrão** &ndash; O consiste em um logotipo ou um texto de ícone e título com um subtítulo opcional.
+- O &ndash; **padrão** consiste em um logotipo ou um texto de ícone e título com um subtítulo opcional.
 
-- **Lista** de &ndash; Modo de navegação de lista. Em vez de texto de título estático, esse modo apresenta um menu de lista para navegação dentro da atividade (ou seja, pode ser apresentado ao usuário como uma lista suspensa).
+- **Lista** &ndash; modo de navegação da lista. Em vez de texto de título estático, esse modo apresenta um menu de lista para navegação dentro da atividade (ou seja, pode ser apresentado ao usuário como uma lista suspensa).
 
-- **Guias** &ndash; Modo de navegação de guia. Em vez de texto de título estático, esse modo apresenta uma série de guias para navegação dentro da atividade.
+- **Guias** &ndash; modo de navegação de guia. Em vez de texto de título estático, esse modo apresenta uma série de guias para navegação dentro da atividade.
 
 ## <a name="themes"></a>Temas
 
@@ -83,7 +83,7 @@ O menu suspenso **tema** exibe todos os temas definidos no projeto. A seleção 
 
 Quando um tema é selecionado, o Design Surface é atualizado para mostrar o efeito do novo tema. Observe que essa alteração se tornará permanente somente se o botão **OK** for clicado na caixa de diálogo **tema** . Depois que um tema tiver sido selecionado, ele será incluído no menu suspenso **tema** , conforme mostrado abaixo:
 
-O ![tema claro agora está disponível] O (resource-qualifiers-images/vs/16-light-theme.png "tema claro agora está disponível")
+![O tema claro agora está disponível](resource-qualifiers-images/vs/16-light-theme.png "O tema claro agora está disponível")
 
 ## <a name="android-version"></a>Versão do Android
 
@@ -93,7 +93,7 @@ O seletor de **versão** do Android define a versão do Android que é usada par
 
 A versão da estrutura de destino pode ser definida nas configurações do projeto em **propriedades > aplicativo > compilar usando a versão do Android**. Para obter mais informações sobre a versão do Framework de destino, consulte [noções básicas sobre níveis de API do Android](~/android/app-fundamentals/android-api-levels.md).
 
-O conjunto de widgets disponíveis na caixa de ferramentas é determinado pela versão da estrutura de destino do projeto. Isso também é verdadeiro para as propriedades disponíveis na **janela Propriedades**. A lista de widgets disponíveis *não* é determinada pelo valor selecionado no seletor de **versão** da barra de ferramentas. Por exemplo, se você definir a versão de destino do projeto como Android 4,4, ainda poderá selecionar Android 6,0 no seletor de versão da barra de ferramentas para ver a aparência do projeto no Android 6,0, mas não será possível adicionar widgets específicos ao Android 6,0 &ndash;  Você ainda estará limitado aos widgets que estão disponíveis no Android 4,4.
+O conjunto de widgets disponíveis na caixa de ferramentas é determinado pela versão da estrutura de destino do projeto. Isso também é verdadeiro para as propriedades disponíveis na **janela Propriedades**. A lista de widgets disponíveis *não* é determinada pelo valor selecionado no seletor de **versão** da barra de ferramentas. Por exemplo, se você definir a versão de destino do projeto para Android 4,4, ainda poderá selecionar Android 6,0 no seletor de versão da barra de ferramentas para ver a aparência do projeto no Android 6,0, mas não será possível adicionar widgets específicos ao Android 6,0 &ndash; w mal, ainda se limitando aos widgets que estão disponíveis no Android 4,4.
 
 Para obter mais informações sobre tipos de recursos, consulte [recursos do Android](~/android/app-fundamentals/resources-in-android/index.md).
 
@@ -103,29 +103,29 @@ Para obter mais informações sobre tipos de recursos, consulte [recursos do And
 
 **As opções do qualificador de recursos** podem ser acessadas clicando no ícone de reticências à direita do botão modo **paisagem** :
 
-[![Opções do qualificador de recursos](resource-qualifiers-images/xs/08-resource-qual-opt-m75-sml.png)](resource-qualifiers-images/xs/08-resource-qual-opt-m75.png#lightbox)
+[opções de qualificador ![Resource](resource-qualifiers-images/xs/08-resource-qual-opt-m75-sml.png)](resource-qualifiers-images/xs/08-resource-qual-opt-m75.png#lightbox)
 
 Essa caixa de diálogo apresenta menus suspensos para os seguintes qualificadores de recursos:
 
-- **Idioma** do &ndash; Exibe recursos de idioma disponíveis e oferece uma opção para adicionar novos recursos de idioma/região.
+- O **idioma** &ndash; exibe recursos de idioma disponíveis e oferece uma opção para adicionar novos recursos de idioma/região.
 
-- **Modo de interface do usuário** Lista modos de exibição (como **encaixe de carro** e encaixe de mesa), bem como direções de layout. &ndash;
+- O **modo de interface do usuário** &ndash; lista modos de exibição (como **encaixe de carro** e encaixe de **mesa**), bem como direções de layout.
 
 Cada um desses menus suspensos abre novas caixas de diálogo em que você pode selecionar e configurar qualificadores de recursos (conforme explicado a seguir).
 
-### <a name="language"></a>Idioma
+### <a name="language"></a>Linguagem
 
 O menu suspenso **idioma** lista somente os idiomas que têm recursos definidos (ou **todos os idiomas**, que é o padrão). No entanto, também há uma opção **Adicionar idioma/região...** que permite adicionar um novo idioma à lista:
 
-[![Adicionar idioma/região](resource-qualifiers-images/xs/09-add-language-region-m75-sml.png)](resource-qualifiers-images/xs/09-add-language-region-m75.png#lightbox)
+[idioma/região ![Add](resource-qualifiers-images/xs/09-add-language-region-m75-sml.png)](resource-qualifiers-images/xs/09-add-language-region-m75.png#lightbox)
 
 Quando você clica em **Adicionar idioma/região...** , a caixa de diálogo **Selecionar idioma** é aberta para exibir listas suspensas de regiões e idiomas disponíveis:
 
-[![Lista de idiomas](resource-qualifiers-images/xs/10-languages-m75-sml.png)](resource-qualifiers-images/xs/10-languages-m75.png#lightbox)
+[![List de idiomas](resource-qualifiers-images/xs/10-languages-m75-sml.png)](resource-qualifiers-images/xs/10-languages-m75.png#lightbox)
 
 Neste exemplo, escolhemos **fr (francês)** para a linguagem e **ser** (Bélgica) para o dialeto regional do francês. Observe que o campo **região** é opcional porque muitas linguagens podem ser especificadas sem considerar regiões específicas. Quando o menu suspenso **idioma** é aberto novamente, ele exibe o recurso recém-adicionado de idioma/região:
 
-[![Idioma e região escolhidos](resource-qualifiers-images/xs/11-language-region-added-m75-sml.png)](resource-qualifiers-images/xs/11-language-region-added-m75.png#lightbox)
+[![Language e região escolhidos](resource-qualifiers-images/xs/11-language-region-added-m75-sml.png)](resource-qualifiers-images/xs/11-language-region-added-m75.png#lightbox)
 
 Observe que, se você adicionar um novo idioma, mas não criar novos recursos para ele, o idioma adicionado não será mais exibido na próxima vez que você abrir o projeto.
 
@@ -133,7 +133,7 @@ Observe que, se você adicionar um novo idioma, mas não criar novos recursos pa
 
 Quando você clica no menu suspenso **modo de interface do usuário** , uma lista de modos é exibida, como **normal**, **encaixe de carro**, **encaixe de mesa**, **televisão**, **dispositivo**e **inspeção**:
 
-[![Menu do modo de interface do usuário](resource-qualifiers-images/xs/12-ui-mode-m75-sml.png)](resource-qualifiers-images/xs/12-ui-mode-m75.png#lightbox)
+[menu do modo de ![UI](resource-qualifiers-images/xs/12-ui-mode-m75-sml.png)](resource-qualifiers-images/xs/12-ui-mode-m75.png#lightbox)
 
 Abaixo dessa lista, os modos noturnos **não** são da noite e da **noite**, seguidos pelas direções de layout da **esquerda para a direita** e da **direita para a esquerda**. O último par de opções permite que você selecione **telas arredondadas** ou **telas retangulares** (úteis para dispositivos Android de desgaste).
 
@@ -144,35 +144,35 @@ Para obter informações sobre as opções da **esquerda para a direita** e da *
 
 O ícone **configurações da barra de ações** está disponível à esquerda do ícone de pincel (editor de tema):
 
-[![Configurações da barra de ações](resource-qualifiers-images/xs/13-action-bar-m75-sml.png)](resource-qualifiers-images/xs/13-action-bar-m75.png#lightbox)
+[configurações da barra de ![Action](resource-qualifiers-images/xs/13-action-bar-m75-sml.png)](resource-qualifiers-images/xs/13-action-bar-m75.png#lightbox)
 
 Esse ícone abre uma caixa de diálogo popover que fornece uma maneira de selecionar um dos três modos de barra de ação:
 
-- **Padrão** &ndash; O consiste em um logotipo ou ícone e texto de título com um subtítulo opcional.
+- O &ndash; **padrão** consiste em um logotipo ou ícone e texto de título com um subtítulo opcional.
 
-- **Lista** de &ndash; Modo de navegação de lista. Em vez de texto de título estático, esse modo apresenta um menu de lista para navegação dentro da atividade (ou seja, pode ser apresentado ao usuário como uma lista suspensa).
+- **Lista** &ndash; modo de navegação da lista. Em vez de texto de título estático, esse modo apresenta um menu de lista para navegação dentro da atividade (ou seja, pode ser apresentado ao usuário como uma lista suspensa).
 
-- **Guias** &ndash; Modo de navegação de guia. Em vez de texto de título estático, esse modo apresenta uma série de guias para navegação dentro da atividade.
+- **Guias** &ndash; modo de navegação de guia. Em vez de texto de título estático, esse modo apresenta uma série de guias para navegação dentro da atividade.
 
 ## <a name="themes"></a>Temas
 
 O menu suspenso **tema** exibe todos os temas definidos no projeto. A seleção de **mais temas** abre uma caixa de diálogo com uma lista de todos os temas disponíveis no SDK do Android instalado, conforme mostrado abaixo:
 
-[![Lista de mais temas](resource-qualifiers-images/xs/14-theme-menu-m75-sml.png)](resource-qualifiers-images/xs/14-theme-menu-m75.png#lightbox)
+[lista de temas do ![More](resource-qualifiers-images/xs/14-theme-menu-m75-sml.png)](resource-qualifiers-images/xs/14-theme-menu-m75.png#lightbox)
 
 Quando um tema é selecionado, o Design Surface é atualizado para mostrar o efeito do novo tema. Observe que essa alteração se tornará permanente somente se o botão **OK** for clicado na caixa de diálogo **tema** . Depois que um tema tiver sido selecionado, ele será incluído no menu suspenso **tema** , conforme mostrado abaixo:
 
-[![O tema claro agora está disponível](resource-qualifiers-images/xs/15-light-theme-m75-sml.png)](resource-qualifiers-images/xs/15-light-theme-m75.png#lightbox)
+[o tema do ![Light agora está disponível](resource-qualifiers-images/xs/15-light-theme-m75-sml.png)](resource-qualifiers-images/xs/15-light-theme-m75.png#lightbox)
 
 ## <a name="android-version"></a>Versão do Android
 
 O seletor de **versão** do Android define a versão do Android que é usada para renderizar o layout no designer. O seletor exibe todas as versões que são compatíveis com a versão da estrutura de destino do projeto:
 
-[![Lista de versões do Android](resource-qualifiers-images/xs/16-android-version-m75-sml.png)](resource-qualifiers-images/xs/16-android-version-m75.png#lightbox)
+[![List de versões do Android](resource-qualifiers-images/xs/16-android-version-m75-sml.png)](resource-qualifiers-images/xs/16-android-version-m75.png#lightbox)
 
 A versão da estrutura de destino pode ser definida nas configurações do projeto na seção **Opções do projeto > Build > geral** . Para obter mais informações sobre a versão do Framework de destino, consulte [noções básicas sobre níveis de API do Android](~/android/app-fundamentals/android-api-levels.md).
 
-O conjunto de widgets disponíveis na caixa de ferramentas é determinado pela versão da estrutura de destino do projeto. Isso também é verdadeiro para as propriedades disponíveis no **painel de propriedades**. A lista de widgets disponíveis *não* é determinada pelo valor selecionado no seletor de **versão** da barra de ferramentas. Por exemplo, se você definir a versão de destino do projeto como Android 4,4, ainda poderá selecionar Android 6,0 no seletor de versão da barra de ferramentas para ver a aparência do projeto no Android 6,0, mas não será possível adicionar widgets específicos ao Android 6,0 &ndash;  Você ainda estará limitado aos widgets que estão disponíveis no Android 4,4.
+O conjunto de widgets disponíveis na caixa de ferramentas é determinado pela versão da estrutura de destino do projeto. Isso também é verdadeiro para as propriedades disponíveis no **painel de propriedades**. A lista de widgets disponíveis *não* é determinada pelo valor selecionado no seletor de **versão** da barra de ferramentas. Por exemplo, se você definir a versão de destino do projeto para Android 4,4, ainda poderá selecionar Android 6,0 no seletor de versão da barra de ferramentas para ver a aparência do projeto no Android 6,0, mas não será possível adicionar widgets específicos ao Android 6,0 &ndash; w mal, ainda se limitando aos widgets que estão disponíveis no Android 4,4.
 
 Para obter mais informações sobre tipos de recursos, consulte [recursos do Android](~/android/app-fundamentals/resources-in-android/index.md).
 

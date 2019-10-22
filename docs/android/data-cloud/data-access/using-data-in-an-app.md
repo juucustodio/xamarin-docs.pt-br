@@ -7,10 +7,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 02/08/2018
 ms.openlocfilehash: 922b1fa411a176df580050384e7555120fd68137
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "70754453"
 ---
 # <a name="using-data-in-an-app"></a>Usar dados em um aplicativo
@@ -23,7 +23,7 @@ Depois de adicionar alguns dados, as telas de aplicativo têm esta aparência no
 
 ![Detalhes de exemplo do Android](using-data-in-an-app-images/image12.png "Detalhes de exemplo do Android")
 
-O projeto do Android é mostrado &ndash; abaixo, o código mostrado nesta seção está contido no diretório **ORM** :
+O projeto do Android é mostrado abaixo &ndash; o código mostrado nesta seção está contido no diretório **ORM** :
 
 ![Árvore de projeto do Android](using-data-in-an-app-images/image14.png "Árvore de projeto do Android")
 
@@ -36,7 +36,7 @@ Há algumas operações de leitura no exemplo:
 - Lendo a lista
 - Lendo registros individuais
 
-Os dois métodos na `StockDatabase` classe são:
+Os dois métodos na classe `StockDatabase` são:
 
 ```csharp
 public IEnumerable<Stock> GetStocks ()
@@ -57,7 +57,7 @@ O Android renderiza os dados como um `ListView`.
 
 ## <a name="create-and-update"></a>Criar e atualizar
 
-Para simplificar o código do aplicativo, é fornecido um único método de salvamento que faz uma inserção ou atualização, dependendo se a PrimaryKey foi definida. Como a `Id` propriedade é marcada com um `[PrimaryKey]` atributo, você não deve defini-la em seu código. Esse método detectará se o valor foi salvo anteriormente (verificando a propriedade de chave primária) e inserirá ou atualizará o objeto de acordo:
+Para simplificar o código do aplicativo, é fornecido um único método de salvamento que faz uma inserção ou atualização, dependendo se a PrimaryKey foi definida. Como a propriedade `Id` é marcada com um atributo `[PrimaryKey]`, você não deve defini-la em seu código. Esse método detectará se o valor foi salvo anteriormente (verificando a propriedade de chave primária) e inserirá ou atualizará o objeto de acordo:
 
 ```csharp
 public int SaveStock (Stock item)
@@ -77,7 +77,7 @@ Aplicativos do mundo real normalmente exigirão alguma validação (como campos 
 
 ## <a name="delete"></a>Excluir
 
-Ao contrário `Insert` dos `Update` métodos e, `Delete<T>` o método pode aceitar apenas o valor de chave primária em vez `Stock` de um objeto completo. Neste exemplo, um `Stock` objeto é passado para o método, mas apenas a propriedade ID é passada para o `Delete<T>` método.
+Ao contrário dos métodos `Insert` e `Update`, o método `Delete<T>` pode aceitar apenas o valor da chave primária em vez de um objeto `Stock` completo. Neste exemplo, um objeto `Stock` é passado para o método, mas apenas a propriedade ID é passada para o método `Delete<T>`.
 
 ```csharp
 public int DeleteStock(Stock stock)
@@ -92,13 +92,13 @@ public int DeleteStock(Stock stock)
 
 Alguns aplicativos são fornecidos com um banco de dados já populado com data. Você pode fazer isso facilmente em seu aplicativo móvel enviando um arquivo de banco de dados SQLite existente com seu aplicativo e copiando-o em um diretório gravável antes de acessá-lo. Como o SQLite é um formato de arquivo padrão usado em muitas plataformas, há várias ferramentas disponíveis para criar um arquivo de banco de dados do SQLite:
 
-- **Extensão Firefox do Gerenciador SQLite** &ndash; Funciona no Mac e no Windows e produz arquivos que são compatíveis com Ios e Android.
+- A **extensão Firefox do Gerenciador do SQLite** &ndash; funciona no Mac e no Windows e produz arquivos que são compatíveis com Ios e Android.
 
-- **Linha de comando** Consulte [www.sqlite.org/SQLite.html](http://www.sqlite.org/sqlite.html) . &ndash;
+- @No__t_1 de **linha de comando** consulte [www.sqlite.org/SQLite.html](http://www.sqlite.org/sqlite.html) .
 
 Ao criar um arquivo de banco de dados para distribuição com seu aplicativo, tome cuidado com a nomenclatura de tabelas e colunas para garantir que elas correspondam ao que o código espera, especialmente se você estiver usando SQLite.NET que C# esperará que os nomes correspondam às suas classes e Propriedades ( ou os atributos personalizados associados).
 
-Para garantir que algum código seja executado antes de qualquer outra coisa em seu aplicativo Android, você pode colocá-lo na primeira atividade para carregar ou você `Application` pode criar uma subclasse que é carregada antes de qualquer atividade. O código a seguir mostra `Application` uma subclasse que copia um arquivo de banco de **dados existente. sqlite** do diretório **/Resources/RAW/**
+Para garantir que algum código seja executado antes de qualquer outra coisa em seu aplicativo Android, você pode colocá-lo na primeira atividade para carregar ou você pode criar uma subclasse de `Application` que é carregada antes de qualquer atividade. O código a seguir mostra uma subclasse `Application` que copia um arquivo de banco de **dados existente. sqlite** do diretório **/Resources/RAW/**
 
 ```csharp
 [Application]

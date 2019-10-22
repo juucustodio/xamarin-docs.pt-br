@@ -8,15 +8,15 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
 ms.openlocfilehash: e9325c34c645b75f28c7e2070f6bb095780ddb02
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "70771458"
 ---
 # <a name="introduction-to-effects"></a>Introdução aos efeitos
 
-_Efeitos permitem que os controles nativos em cada plataforma sejam personalizados e são geralmente usados para pequenas alterações de estilo. Este artigo fornece uma introdução aos efeitos, descreve o limite entre efeitos e renderizadores personalizados e descreve a classe PlatformEffect._
+_Os efeitos permitem que os controles nativos em cada plataforma sejam personalizados e normalmente são usados para alterações de estilo pequeno. Este artigo fornece uma introdução aos efeitos, descreve o limite entre efeitos e renderizadores personalizados, além de descrever a classe PlatformEffect._
 
 [Páginas, Layouts e Controles](~/xamarin-forms/user-interface/controls/index.md) do Xamarin.Forms apresenta uma API comum para descrever interfaces do usuário móveis multiplataforma. Cada página, layout e controle é renderizado de maneira diferente em cada plataforma usando uma classe `Renderer`, que por sua vez cria um controle nativo (correspondente à representação no Xamarin.Forms), organiza sua disposição na tela e adiciona o comportamento especificado no código compartilhado.
 
@@ -38,7 +38,7 @@ Tudo que pode ser feito com um efeito também pode ser feito com um renderizador
 
 A tabela a seguir lista o namespace para a classe `PlatformEffect` em cada plataforma, bem como os tipos de suas propriedades:
 
-|Plataforma|Namespace|Contêiner|Controle|
+|Plataforma|espaço de nome|Contêiner|Controle|
 |--- |--- |--- |--- |
 |iOS|Xamarin.Forms.Platform.iOS|UIView|UIView|
 |Android|Xamarin.Forms.Platform.Android|ViewGroup|Exibir|

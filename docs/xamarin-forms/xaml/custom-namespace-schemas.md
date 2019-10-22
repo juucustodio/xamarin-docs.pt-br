@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 12/21/2018
 ms.openlocfilehash: d76b5eefcaf0edeb12f128c60e9b8fffff8bcf3b
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "68644701"
 ---
 # <a name="xaml-custom-namespace-schemas-in-xamarinforms"></a>Esquemas de namespace personalizado XAML no Xamarin. Forms
@@ -27,9 +27,9 @@ Os tipos em uma biblioteca podem ser referenciados em XAML declarando um namespa
 </ContentPage>
 ```
 
-No entanto, a especificação de um namespace CLR e `xmlns` de um nome de assembly em uma definição pode ser estranha e propenso a erros. Além disso, várias declarações de namespace XAML poderão ser necessárias se a biblioteca contiver tipos em vários namespaces.
+No entanto, especificar um namespace CLR e um nome de assembly em uma definição de `xmlns` pode ser estranho e propenso a erros. Além disso, várias declarações de namespace XAML poderão ser necessárias se a biblioteca contiver tipos em vários namespaces.
 
-Uma abordagem alternativa é definir um esquema de namespace personalizado, `http://mycompany.com/schemas/controls`como, que é mapeado para um ou mais namespaces CLR. Isso permite que uma única declaração de namespace XAML referencie todos os tipos em um assembly, mesmo se eles estiverem em namespaces diferentes. Ele também permite uma única declaração de namespace XAML para referenciar tipos em vários assemblies.
+Uma abordagem alternativa é definir um esquema de namespace personalizado, como `http://mycompany.com/schemas/controls`, que é mapeado para um ou mais namespaces CLR. Isso permite que uma única declaração de namespace XAML referencie todos os tipos em um assembly, mesmo se eles estiverem em namespaces diferentes. Ele também permite uma única declaração de namespace XAML para referenciar tipos em vários assemblies.
 
 Para obter mais informações sobre namespaces XAML, consulte [namespaces XAML no Xamarin. Forms](namespaces.md).
 
@@ -49,12 +49,12 @@ namespace MyCompany.Controls
 }
 ```
 
-Todos os controles na biblioteca residem no `MyCompany.Controls` namespace. Esses controles podem ser expostos a um assembly de chamada por meio de um esquema de namespace personalizado.
+Todos os controles na biblioteca residem no namespace `MyCompany.Controls`. Esses controles podem ser expostos a um assembly de chamada por meio de um esquema de namespace personalizado.
 
-Um esquema de namespace personalizado é definido com `XmlnsDefinitionAttribute` a classe, que especifica o mapeamento entre um namespace XAML e um ou mais namespaces CLR. O `XmlnsDefinitionAttribute` usa dois argumentos: o nome do namespace XAML e o nome do namespace CLR. O nome do namespace XAML é armazenado na `XmlnsDefinitionAttribute.XmlNamespace` Propriedade e o nome do namespace CLR é armazenado `XmlnsDefinitionAttribute.ClrNamespace` na propriedade.
+Um esquema de namespace personalizado é definido com a classe `XmlnsDefinitionAttribute`, que especifica o mapeamento entre um namespace XAML e um ou mais namespaces CLR. O `XmlnsDefinitionAttribute` usa dois argumentos: o nome do namespace XAML e o nome do namespace CLR. O nome do namespace XAML é armazenado na propriedade `XmlnsDefinitionAttribute.XmlNamespace` e o nome do namespace CLR é armazenado na propriedade `XmlnsDefinitionAttribute.ClrNamespace`.
 
 > [!NOTE]
-> A `XmlnsDefinitionAttribute` classe também tem uma propriedade chamada `AssemblyName`, que pode ser definida opcionalmente como o nome do assembly. Isso só é necessário quando um namespace CLR referenciado de `XmlnsDefinitionAttribute` um está em um assembly externo.
+> A classe `XmlnsDefinitionAttribute` também tem uma propriedade chamada `AssemblyName`, que pode ser definida opcionalmente como o nome do assembly. Isso só é necessário quando um namespace CLR referenciado de um `XmlnsDefinitionAttribute` está em um assembly externo.
 
 O `XmlnsDefinitionAttribute` deve ser definido no nível do assembly no projeto que contém os namespaces CLR que serão mapeados no esquema de namespace personalizado. O exemplo a seguir mostra o arquivo **AssemblyInfo.cs** do aplicativo de exemplo:
 
@@ -66,16 +66,16 @@ using MyCompany.Controls;
 [assembly: XmlnsDefinition("http://mycompany.com/schemas/controls", "MyCompany.Controls")]
 ```
 
-Esse código cria um esquema de namespace personalizado que mapeia `http://mycompany.com/schemas/controls` a URL para `MyCompany.Controls` o namespace CLR. Além disso, o `Preserve` atributo é especificado no assembly, para garantir que o vinculador preserve todos os tipos no assembly.
+Esse código cria um esquema de namespace personalizado que mapeia a URL de `http://mycompany.com/schemas/controls` para o namespace `MyCompany.Controls` CLR. Além disso, o atributo `Preserve` é especificado no assembly, para garantir que o vinculador preserve todos os tipos no assembly.
 
 > [!IMPORTANT]
-> O `Preserve` atributo deve ser aplicado a classes no assembly que são mapeadas por meio do esquema de namespace personalizado ou aplicadas ao assembly inteiro.
+> O atributo `Preserve` deve ser aplicado a classes no assembly que são mapeadas por meio do esquema de namespace personalizado ou aplicadas ao assembly inteiro.
 
 O esquema de namespace personalizado pode então ser usado para a resolução de tipo em arquivos XAML.
 
 ## <a name="consuming-a-custom-namespace-schema"></a>Consumindo um esquema de namespace personalizado
 
-Para consumir tipos do esquema de namespace personalizado, o compilador XAML requer que haja uma referência de código do assembly que consome os tipos para o assembly que define os tipos. Isso pode ser feito adicionando uma classe que contém um `Init` método ao assembly que define os tipos que serão consumidos por meio de XAML:
+Para consumir tipos do esquema de namespace personalizado, o compilador XAML requer que haja uma referência de código do assembly que consome os tipos para o assembly que define os tipos. Isso pode ser feito adicionando uma classe que contém um método `Init` ao assembly que define os tipos que serão consumidos por meio de XAML:
 
 ```csharp
 namespace MyCompany.Controls
@@ -89,7 +89,7 @@ namespace MyCompany.Controls
 }
 ```
 
-O `Init` método pode então ser chamado a partir do assembly que consome tipos do esquema de namespace personalizado:
+O método `Init` pode então ser chamado a partir do assembly que consome tipos do esquema de namespace personalizado:
 
 ```csharp
 using Xamarin.Forms;
@@ -111,7 +111,7 @@ namespace CustomNamespaceSchemaDemo
 > [!WARNING]
 > A falha ao incluir tal referência de código fará com que o compilador XAML não consiga localizar o assembly que contém os tipos de esquema de namespace personalizado.
 
-Para consumir o `CircleButton` controle, um namespace XAML é declarado, com a declaração de namespace especificando a URL do esquema de namespace personalizado:
+Para consumir o controle de `CircleButton`, um namespace XAML é declarado, com a declaração de namespace especificando a URL do esquema de namespace personalizado:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -133,11 +133,11 @@ Para consumir o `CircleButton` controle, um namespace XAML é declarado, com a d
 </ContentPage>
 ```
 
-`CircleButton`as [`ContentPage`](xref:Xamarin.Forms.ContentPage) instâncias podem então ser adicionadas ao declarando- `controls` as com o prefixo do namespace.
+`CircleButton` instâncias podem ser adicionadas ao [`ContentPage`](xref:Xamarin.Forms.ContentPage) declarando-as com o prefixo de namespace `controls`.
 
-Para localizar os tipos de esquema de namespace personalizado, o Xamarin. Forms pesquisará `XmlnsDefinitionAttribute` os assemblies referenciados em busca de instâncias. Se o `xmlns` atributo de um elemento em um arquivo XAML corresponder ao `XmlNamespace` valor da propriedade em `XmlnsDefinitionAttribute`um, o Xamarin. Forms tentará usar `XmlnsDefinitionAttribute.ClrNamespace` o valor da propriedade para a resolução do tipo. Se a resolução de tipo falhar, o Xamarin. Forms continuará a tentar a resolução de tipo `XmlnsDefinitionAttribute` com base em quaisquer instâncias de correspondência adicionais.
+Para localizar os tipos de esquema de namespace personalizado, o Xamarin. Forms pesquisará assemblies referenciados para instâncias de `XmlnsDefinitionAttribute`. Se o atributo `xmlns` de um elemento em um arquivo XAML corresponder ao valor da propriedade `XmlNamespace` em um `XmlnsDefinitionAttribute`, o Xamarin. Forms tentará usar o valor da propriedade `XmlnsDefinitionAttribute.ClrNamespace` para a resolução do tipo. Se a resolução de tipo falhar, o Xamarin. Forms continuará a tentar a resolução de tipo com base em quaisquer instâncias de `XmlnsDefinitionAttribute` correspondentes adicionais.
 
-O resultado é que duas `CircleButton` instâncias são exibidas:
+O resultado é que duas instâncias de `CircleButton` são exibidas:
 
 ![Botões de círculo](custom-namespace-schemas-images/circle-buttons.png "Botões de círculo")
 

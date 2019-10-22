@@ -7,17 +7,17 @@ author: conceptdev
 ms.author: crdun
 ms.date: 04/26/2019
 ms.openlocfilehash: 3067493315c62c46f44fb94aa61a919e1449080b
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "70289703"
 ---
 # <a name="remoted-ios-simulator-for-windows"></a>Simulador remoto de iOS para Windows
 
 O iOS Simulator remoto para Windows permite que você teste seus aplicativos em um simulador de iOS exibido no Windows juntamente com o Visual Studio 2019 e o Visual Studio 2017.
 
-[![simulador do Ios em execução no Windows](images/hero-sml.png "simulador do Ios em execução no Windows")](images/hero.png#lightbox)
+[![simulador do iOS em execução no Windows](images/hero-sml.png "simulador do iOS em execução no Windows")](images/hero.png#lightbox)
 
 ## <a name="getting-started"></a>Introdução
 
@@ -34,17 +34,17 @@ A barra de ferramentas na parte superior da janela do simulador contém vários 
 
 - **Página inicial** – simula o botão página inicial em um dispositivo IOS.
 - **Bloquear** – bloqueia o simulador (passe o dedo para desbloquear).
-- **Captura de tela** – salva uma captura de tela do simulador (armazenado no **Pictures\Xamarin\iOS Simulator\\** ).
+- **Captura de tela** – salva uma captura de tela do simulador (armazenado no **Pictures\Xamarin\iOS Simulator \\** ).
 - [**Configurações**](#settings) – exibe o teclado, o local e outras configurações.
 - [**Outras opções**](#other-options) – exibe várias opções de simulador, como rotação, gestos de agitar e Touch ID.
 
-    [![exemplo de mapas do simulador do IOS](images/maps-app-sml.png "exemplo de mapas do simulador do IOS")](images/maps-app.png#lightbox)
+    [![exemplo de mapas do simulador do iOS](images/maps-app-sml.png "exemplo de mapas do simulador do iOS")](images/maps-app.png#lightbox)
 
 ## <a name="settings"></a>Configurações
 
 Clicar no ícone de engrenagem da barra de ferramentas abre a janela **configurações** :
 
-[![configurações do simulador do IOS](images/settings-sml.png "configurações do simulador do IOS")](images/settings.png#lightbox)
+[![configurações do simulador do iOS](images/settings-sml.png "configurações do simulador do iOS")](images/settings.png#lightbox)
 
 Essas configurações permitem que você habilite o teclado de hardware, escolha um local que o dispositivo deve relatar (os locais estáticos e em movimento têm suporte), habilite a ID de toque e redefina o conteúdo e as configurações do simulador.
 
@@ -52,7 +52,7 @@ Essas configurações permitem que você habilite o teclado de hardware, escolha
 
 O botão de reticências da barra de ferramentas revela outras opções, como rotação, agitar gestos e reinicialização. Essas mesmas opções podem ser exibidas como uma lista clicando com o botão direito do mouse em qualquer lugar na janela do simulador:
 
-[![configurações adicionais do simulador do IOS](images/more-sml.png "configurações adicionais do simulador do IOS")](images/more.png#lightbox)
+[![configurações adicionais do simulador do iOS](images/more-sml.png "configurações adicionais do simulador do iOS")](images/more.png#lightbox)
 
 ## <a name="touchscreen-support"></a>Suporte à tela touch
 

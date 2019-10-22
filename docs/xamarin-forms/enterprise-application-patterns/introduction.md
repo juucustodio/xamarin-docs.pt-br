@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
 ms.openlocfilehash: 9bde1140f6590daa4b1d40a8b56edec314bfc66d
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "70760233"
 ---
 # <a name="introduction-to-enterprise-app-development"></a>Introdução ao desenvolvimento de aplicativos empresariais
@@ -62,7 +62,7 @@ Este guia inclui um aplicativo de exemplo, eShopOnContainers, que é uma loja on
 
 A Figura 1-1 fornece uma visão geral de alto nível da arquitetura do aplicativo de exemplo.
 
-![](introduction-images/architecture.png "arquitetura de alto nível do eShopOnContainers")
+![](introduction-images/architecture.png "eShopOnContainers high-level architecture")
 
 **Figura 1-1**: arquitetura de alto nível do eShopOnContainers
 
@@ -83,15 +83,15 @@ O aplicativo de exemplo inclui os seguintes serviços de back-end:
 
 Esses serviços de back-end são implementados como microservices usando ASP.NET Core MVC e são implantados como contêineres exclusivos em um único host do Docker. Coletivamente, esses serviços de back-end são chamados de aplicativo de referência eShopOnContainers. Os aplicativos cliente se comunicam com os serviços de back-end por meio de uma interface da Web de transferência de estado de reapresentação (REST). Para obter mais informações sobre os microserviços e o Docker, consulte [microservices em contêineres](~/xamarin-forms/enterprise-application-patterns/containerized-microservices.md).
 
-Para obter informações sobre a implementação dos serviços de back- [end, consulte microservices do .net: Arquitetura para aplicativos .NET em contêineres](https://aka.ms/microservicesebook).
+Para obter informações sobre a implementação dos serviços de back-end, consulte [microservices do .net: arquitetura para aplicativos .net em contêineres](https://aka.ms/microservicesebook).
 
 ### <a name="mobile-app"></a>Aplicativo móvel
 
 Este guia concentra-se na criação de aplicativos empresariais de plataforma cruzada usando Xamarin. Forms e usa o aplicativo móvel eShopOnContainers como exemplo. A Figura 1-2 mostra as páginas do aplicativo móvel eShopOnContainers que fornecem a funcionalidade descrita anteriormente.
 
-[![](introduction-images/screenshots.png "O aplicativo móvel eShopOnContainers")](introduction-images/screenshots-large.png#lightbox "O aplicativo móvel eShopOnContainers")
+[![](introduction-images/screenshots.png "The eShopOnContainers mobile app")](introduction-images/screenshots-large.png#lightbox "The eShopOnContainers mobile app")
 
-**Figura 1-2**: O aplicativo móvel eShopOnContainers
+**Figura 1-2**: o aplicativo móvel eShopOnContainers
 
 O aplicativo móvel consome os serviços de back-end fornecidos pelo aplicativo de referência eShopOnContainers. No entanto, ele pode ser configurado para consumir dados de serviços fictícios para aqueles que desejam evitar a implantação dos serviços de back-end.
 
@@ -121,14 +121,14 @@ A solução de aplicativo móvel eShopOnContainers organiza o código-fonte e ou
 
 |Projeto|Descrição|
 |--- |--- |
-|eShopOnContainers.Core|Este projeto é o projeto de PCL (biblioteca de classes portátil) que contém o código compartilhado e a interface do usuário compartilhada.|
-|eShopOnContainers.Droid|Este projeto mantém o código específico do Android e é o ponto de entrada para o aplicativo do Android.|
-|eShopOnContainers.iOS|Esse projeto mantém o código específico do iOS e é o ponto de entrada para o aplicativo iOS.|
-|eShopOnContainers.UWP|Este projeto mantém o código específico Plataforma Universal do Windows (UWP) e é o ponto de entrada para o aplicativo do Windows.|
-|eShopOnContainers.TestRunner.Droid|Este projeto é o executor de teste do Android para o projeto eShopOnContainers. UnitTests.|
-|eShopOnContainers.TestRunner.iOS|Este projeto é o executor de teste do iOS para o projeto eShopOnContainers. UnitTests.|
-|eShopOnContainers.TestRunner.Windows|Este projeto é o executor de teste Plataforma Universal do Windows para o projeto eShopOnContainers. UnitTests.|
-|eShopOnContainers.UnitTests|Este projeto contém testes de unidade para o projeto eShopOnContainers. Core.|
+|eShopOnContainers. Core|Este projeto é o projeto de PCL (biblioteca de classes portátil) que contém o código compartilhado e a interface do usuário compartilhada.|
+|eShopOnContainers. Droid|Este projeto mantém o código específico do Android e é o ponto de entrada para o aplicativo do Android.|
+|eShopOnContainers. iOS|Esse projeto mantém o código específico do iOS e é o ponto de entrada para o aplicativo iOS.|
+|eShopOnContainers. UWP|Este projeto mantém o código específico Plataforma Universal do Windows (UWP) e é o ponto de entrada para o aplicativo do Windows.|
+|eShopOnContainers. TestRunner. Droid|Este projeto é o executor de teste do Android para o projeto eShopOnContainers. UnitTests.|
+|eShopOnContainers. TestRunner. iOS|Este projeto é o executor de teste do iOS para o projeto eShopOnContainers. UnitTests.|
+|eShopOnContainers. TestRunner. Windows|Este projeto é o executor de teste Plataforma Universal do Windows para o projeto eShopOnContainers. UnitTests.|
+|eShopOnContainers. UnitTests|Este projeto contém testes de unidade para o projeto eShopOnContainers. Core.|
 
 As classes do aplicativo móvel eShopOnContainers podem ser usadas novamente em qualquer aplicativo Xamarin. Forms com pouca ou nenhuma modificação.
 
@@ -142,14 +142,14 @@ O projeto eShopOnContainers. Core PCL contém as seguintes pastas:
 |Comportamentos|Contém comportamentos que são expostos para exibir classes.|
 |Controles|Contém controles personalizados usados pelo aplicativo.|
 |Conversores|Contém conversores de valor que aplicam lógica personalizada a uma associação.|
-|Efeitos|Contém a `EntryLineColorEffect` classe, que é usada para alterar a cor da borda de `Entry` controles específicos.|
-|Exceções|Contém o personalizado `ServiceAuthenticationException`.|
-|Extensões|Contém métodos de extensão para `VisualElement` as `IEnumerable` classes e.|
+|Efeitos|Contém a classe `EntryLineColorEffect`, que é usada para alterar a cor da borda de controles de `Entry` específicos.|
+|Exceções|Contém o `ServiceAuthenticationException` personalizado.|
+|Extensões|Contém métodos de extensão para as classes `VisualElement` e `IEnumerable`.|
 |Auxiliares|Contém classes auxiliares para o aplicativo.|
 |Modelos|Contém as classes de modelo para o aplicativo.|
-|Propriedades|Contém `AssemblyInfo.cs`, um arquivo de metadados do assembly .net.|
+|Propriedades|Contém `AssemblyInfo.cs`, um arquivo de metadados do assembly .NET.|
 |Serviços|Contém interfaces e classes que implementam serviços que são fornecidos ao aplicativo.|
-|Gatilhos|Contém o `BeginAnimation` gatilho, que é usado para invocar uma animação em XAML.|
+|Gatilhos|Contém o gatilho `BeginAnimation`, que é usado para invocar uma animação em XAML.|
 |Validações|Contém classes envolvidas na validação de entrada de dados.|
 |ViewModels|Contém a lógica do aplicativo que é exposta a páginas.|
 |Exibições|Contém as páginas do aplicativo.|

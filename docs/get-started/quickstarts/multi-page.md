@@ -10,10 +10,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 04/01/2019
 ms.openlocfilehash: 9ce02b4c6412eab1f4b1003b262573c59940286c
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "68653790"
 ---
 # <a name="perform-navigation-in-a-multi-page-xamarinforms-application"></a>Executar a navegação em um aplicativo Xamarin. Forms de várias páginas
@@ -28,10 +28,10 @@ Neste guia de início rápido, você aprenderá a:
 
 O guia de início rápido explica como transformar um aplicativo Xamarin. Forms de plataforma cruzada em uma única página, capaz de armazenar uma única observação, em um aplicativo de várias páginas, capaz de armazenar várias notas. O aplicativo final é mostrado abaixo:
 
-[![](multi-page-images/screenshots1-sml.png "")](multi-page-images/screenshots1.png#lightbox "Página de anotações")
-[![](multi-page-images/screenshots2-sml.png "Página de entrada de observação") da página de anotações](multi-page-images/screenshots2.png#lightbox "Página de entrada de observação")
+[![](multi-page-images/screenshots1-sml.png "Notes Page")](multi-page-images/screenshots1.png#lightbox "Notes Page")
+[![](multi-page-images/screenshots2-sml.png "Note Entry Page")](multi-page-images/screenshots2.png#lightbox "Note Entry Page")
 
-### <a name="prerequisites"></a>Pré-requisitos
+### <a name="prerequisites"></a>Prerequisites
 
 Você deve concluir com êxito o [início rápido anterior](single-page.md) antes de tentar este guia de início rápido. Como alternativa, baixe o [exemplo anterior de início rápido](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-singlepage/) e use-o como o ponto de partida para este guia de início rápido.
 
@@ -41,23 +41,23 @@ Você deve concluir com êxito o [início rápido anterior](single-page.md) ante
 
 1. Inicie o Visual Studio. Na janela iniciar, clique na solução **observações** na lista projetos recentes/soluções, ou clique em **abrir um projeto ou solução**e, na caixa de diálogo **Abrir projeto/solução** , selecione o arquivo de solução para o projeto do Notes:
 
-    ![](multi-page-images/vs/open-solution.png "Abrir Projeto")
+    ![](multi-page-images/vs/open-solution.png "Open Project")
 
 2. Em **Gerenciador de soluções**, clique com o botão direito do mouse no projeto do **Notes** e selecione **Adicionar > nova pasta**:
 
-    ![](multi-page-images/vs/add-new-item.png "Adicionar Novo Item")
+    ![](multi-page-images/vs/add-new-item.png "Add New Item")
 
 3. Em **Gerenciador de soluções**, nomeie os novos **modelos**de pasta:
 
-    ![](multi-page-images/vs/name-folder.png "Pasta de modelos")
+    ![](multi-page-images/vs/name-folder.png "Models Folder")
 
 4. Em **Gerenciador de soluções**, selecione a pasta **modelos** , clique com o botão direito do mouse e selecione **Adicionar > novo item...** :
 
-    ![](multi-page-images/vs/add-new-models-file.png "Adicionar Novo Arquivo")
+    ![](multi-page-images/vs/add-new-models-file.png "Add New File")
 
 5. Na caixa de diálogo **Adicionar novo item** , **selecione C# itens visuais > classe**, nomeie a nova **Nota**de arquivo e clique no botão **Adicionar** :
 
-    ![](multi-page-images/vs/add-note-class.png "Adicionar classe de observação")
+    ![](multi-page-images/vs/add-note-class.png "Add Note Class")
 
     Isso adicionará uma classe denominada **Observação** à pasta **modelos** do projeto do **Notes** .
 
@@ -77,13 +77,13 @@ Você deve concluir com êxito o [início rápido anterior](single-page.md) ante
     }
     ```
 
-    Essa classe define um `Note` modelo que irá armazenar dados sobre cada nota no aplicativo.    
+    Essa classe define um modelo de `Note` que armazenará dados sobre cada nota no aplicativo.    
 
     Salve as alterações em **note.cs** pressionando **Ctrl + S**e feche o arquivo.
 
 7. Em **Gerenciador de soluções**, clique com o botão direito do mouse no projeto do **Notes** e selecione **Adicionar > novo item..** . Na caixa de diálogo **Adicionar novo item** , **selecione C# itens visuais > Xamarin. Forms > página de conteúdo**, nomeie o novo arquivo **NoteEntryPage**e clique no botão **Adicionar** :
 
-    ![](multi-page-images/vs/add-note-entry-page.png "Adicionar ContentPage Xamarin. Forms")
+    ![](multi-page-images/vs/add-note-entry-page.png "Add Xamarin.Forms ContentPage")
 
     Isso adicionará uma nova página chamada **NoteEntryPage** à pasta raiz do projeto. Esta página será a segunda página do aplicativo.
 
@@ -114,7 +114,7 @@ Você deve concluir com êxito o [início rápido anterior](single-page.md) ante
       </ContentPage>
       ```
 
-      Esse código declarativamente define a interface do usuário para a página, que consiste em [`Editor`](xref:Xamarin.Forms.Editor) uma entrada de texto for e [`Button`](xref:Xamarin.Forms.Button) duas instâncias que direcionam o aplicativo para salvar ou excluir um arquivo. As duas `Button` instâncias são dispostas horizontalmente em [`Grid`](xref:Xamarin.Forms.Grid)uma, com `Editor` a `Grid` e que estão sendo colocadas verticalmente [`StackLayout`](xref:Xamarin.Forms.StackLayout)em um. Além disso, o `Editor` usa a vinculação de dados para associar `Text` à propriedade do `Note` modelo. Para obter mais informações sobre vinculação de dados, consulte [vinculação de dados](deepdive.md#data-binding) no guia de [início rápido do Xamarin. Forms](deepdive.md).
+      Esse código declarativamente define a interface do usuário para a página, que consiste em um [`Editor`](xref:Xamarin.Forms.Editor) para entrada de texto e duas instâncias de [`Button`](xref:Xamarin.Forms.Button) que direcionam o aplicativo para salvar ou excluir um arquivo. As duas instâncias de `Button` são dispostas horizontalmente em uma [`Grid`](xref:Xamarin.Forms.Grid), com o `Editor` e `Grid` sendo dispostos verticalmente em uma [`StackLayout`](xref:Xamarin.Forms.StackLayout). Além disso, o `Editor` usa a vinculação de dados para associar à propriedade `Text` do modelo de `Note`. Para obter mais informações sobre vinculação de dados, consulte [vinculação de dados](deepdive.md#data-binding) no guia de [início rápido do Xamarin. Forms](deepdive.md).
 
       Salve as alterações em **NoteEntryPage. XAML** pressionando **Ctrl + S**e feche o arquivo.
 
@@ -169,7 +169,7 @@ Você deve concluir com êxito o [início rápido anterior](single-page.md) ante
       }
       ```
 
-      Esse código armazena uma `Note` instância, que representa uma única nota, [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) no da página. Quando o **salvamento** [`Button`](xref:Xamarin.Forms.Button) é pressionado, `OnSaveButtonClicked` o manipulador de eventos é executado, o `Editor` que salva o conteúdo do em um novo arquivo com um FileName gerado aleatoriamente ou a um arquivo existente se uma observação estiver sendo atualizada. Em ambos os casos, o arquivo é armazenado na pasta de dados do aplicativo local para o aplicativo. Em seguida, o método navega de volta para a página anterior. Quando a **exclusão** `Button` é pressionada `OnDeleteButtonClicked` , o manipulador de eventos é executado, o que exclui o arquivo, desde que ele exista e navega de volta para a página anterior. Para obter mais informações sobre navegação, consulte [navegação](deepdive.md#navigation) no guia de [início rápido do Xamarin. Forms](deepdive.md).
+      Esse código armazena uma instância de `Note`, que representa uma única nota, na [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) da página. Quando o [`Button`](xref:Xamarin.Forms.Button) de salvamento é pressionado, o manipulador de eventos de `OnSaveButtonClicked` é executado, o que salva o conteúdo do `Editor` em um novo arquivo com um FileName gerado aleatoriamente ou em um arquivo existente se uma observação estiver sendo atualizada. Em ambos os casos, o arquivo é armazenado na pasta de dados do aplicativo local para o aplicativo. Em seguida, o método navega de volta para a página anterior. Quando o `Button` de **exclusão** é pressionado, o manipulador de eventos `OnDeleteButtonClicked` é executado, o que exclui o arquivo, desde que ele exista e navega de volta para a página anterior. Para obter mais informações sobre navegação, consulte [navegação](deepdive.md#navigation) no guia de [início rápido do Xamarin. Forms](deepdive.md).
 
       Salve as alterações em **NoteEntryPage.XAML.cs** pressionando **Ctrl + S**e feche o arquivo.
 
@@ -205,7 +205,7 @@ Você deve concluir com êxito o [início rápido anterior](single-page.md) ante
     </ContentPage>
     ```
 
-    Esse código define declarativamente a interface do usuário para a página, que consiste em [`ListView`](xref:Xamarin.Forms.ListView) um e [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem)um. O `ListView` usa a vinculação de dados para exibir todas as anotações que são recuperadas pelo aplicativo e a seleção de uma observação `NoteEntryPage` navegará até o local em que a nota pode ser modificada. Como alternativa, uma nova nota pode ser criada pressionando o `ToolbarItem`. Para obter mais informações sobre vinculação de dados, consulte [vinculação de dados](deepdive.md#data-binding) no guia de [início rápido do Xamarin. Forms](deepdive.md).
+    Esse código define declarativamente a interface do usuário para a página, que consiste em um [`ListView`](xref:Xamarin.Forms.ListView) e um [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem). O `ListView` usa a vinculação de dados para exibir todas as anotações que são recuperadas pelo aplicativo e a seleção de uma observação navegará até o `NoteEntryPage` em que a nota pode ser modificada. Como alternativa, uma nova nota pode ser criada pressionando o `ToolbarItem`. Para obter mais informações sobre vinculação de dados, consulte [vinculação de dados](deepdive.md#data-binding) no guia de [início rápido do Xamarin. Forms](deepdive.md).
 
     Salve as alterações em **NotesPage. XAML** pressionando **Ctrl + S**e feche o arquivo.
 
@@ -272,7 +272,7 @@ Você deve concluir com êxito o [início rápido anterior](single-page.md) ante
     }
     ```    
 
-    Esse código define a funcionalidade para o `NotesPage`. Quando a página é exibida, `OnAppearing` o método é executado, o que popula [`ListView`](xref:Xamarin.Forms.ListView) o com todas as anotações que foram recuperadas da pasta de dados do aplicativo local. Quando o [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem) é pressionado, `OnNoteAddedClicked` o manipulador de eventos é executado. Esse `NoteEntryPage`método navega para o, definindo o [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) do `NoteEntryPage` para uma nova `Note` instância. Quando um item no `ListView` é selecionado, o manipulador de `OnListViewItemSelected` eventos é executado. Esse `NoteEntryPage`método navega para o, definindo o [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) do `NoteEntryPage` para a instância selecionada `Note` . Para obter mais informações sobre navegação, consulte [navegação](deepdive.md#navigation) no guia de [início rápido do Xamarin. Forms](deepdive.md).
+    Esse código define a funcionalidade para o `NotesPage`. Quando a página é exibida, o método `OnAppearing` é executado, o que popula a [`ListView`](xref:Xamarin.Forms.ListView) com todas as anotações que foram recuperadas da pasta de dados do aplicativo local. Quando o [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem) é pressionado, o manipulador de eventos `OnNoteAddedClicked` é executado. Esse método navega para a `NoteEntryPage`, definindo a [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) do `NoteEntryPage` como uma nova instância `Note`. Quando um item na `ListView` é selecionado, o manipulador de eventos `OnListViewItemSelected` é executado. Esse método navega para a `NoteEntryPage`, definindo a [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) do `NoteEntryPage` para a instância de `Note` selecionada. Para obter mais informações sobre navegação, consulte [navegação](deepdive.md#navigation) no guia de [início rápido do Xamarin. Forms](deepdive.md).
 
     Salve as alterações em **NotesPage.XAML.cs** pressionando **Ctrl + S**e feche o arquivo.
 
@@ -303,7 +303,7 @@ Você deve concluir com êxito o [início rápido anterior](single-page.md) ante
     }
     ```
 
-    Esse código adiciona uma declaração de namespace para `System.IO` o namespace e adiciona uma declaração para uma propriedade `FolderPath` estática do tipo `string`. A `FolderPath` propriedade é usada para armazenar o caminho no dispositivo em que os dados de observação serão armazenados. Além disso, o código inicializa a `FolderPath` propriedade `App` no construtor e inicializa a [`MainPage`](xref:Xamarin.Forms.Application.MainPage) Propriedade como um [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) que hospeda uma instância do `NotesPage`. Para obter mais informações sobre navegação, consulte [navegação](deepdive.md#navigation) no guia de [início rápido do Xamarin. Forms](deepdive.md).
+    Esse código adiciona uma declaração de namespace para o namespace `System.IO` e adiciona uma declaração para uma propriedade estática `FolderPath` do tipo `string`. A propriedade `FolderPath` é usada para armazenar o caminho no dispositivo em que os dados de observação serão armazenados. Além disso, o código inicializa a propriedade `FolderPath` no Construtor `App` e inicializa a propriedade [`MainPage`](xref:Xamarin.Forms.Application.MainPage) como um [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) que hospeda uma instância do `NotesPage`. Para obter mais informações sobre navegação, consulte [navegação](deepdive.md#navigation) no guia de [início rápido do Xamarin. Forms](deepdive.md).
 
     Salve as alterações em **App.xaml.cs** ao pressionar **CTRL + S** e feche o arquivo.
 
@@ -313,7 +313,7 @@ Você deve concluir com êxito o [início rápido anterior](single-page.md) ante
 
 15. Compile e execute o projeto em cada plataforma. Para obter mais informações, consulte [criando o início rápido](single-page.md#building-the-quickstart).
 
-    No **NotesPage** , pressione o **+** botão para navegar até o **NoteEntryPage** e insira uma observação. Depois de salvar a observação, o aplicativo navegará de volta para o **NotesPage**.
+    No **NotesPage** , pressione o botão **+** para navegar até o **NoteEntryPage** e insira uma observação. Depois de salvar a observação, o aplicativo navegará de volta para o **NotesPage**.
 
     Insira um número de notas, de comprimento variável, para observar o comportamento do aplicativo.
 
@@ -324,23 +324,23 @@ Você deve concluir com êxito o [início rápido anterior](single-page.md) ante
 
 1. Inicialize o Visual Studio para Mac. Na janela iniciar, clique em **abrir**e, na caixa de diálogo, selecione o arquivo de solução para o projeto do Notes:
 
-    ![](multi-page-images/vsmac/open-solution.png "Abrir Solução")
+    ![](multi-page-images/vsmac/open-solution.png "Open Solution")
 
 2. No **painel de soluções**, selecione o projeto **notas** , clique com o botão direito do mouse e selecione **Adicionar > nova pasta**:
 
-    ![](multi-page-images/vsmac/add-new-folder.png "Adicionar nova pasta")
+    ![](multi-page-images/vsmac/add-new-folder.png "Add New Folder")
 
 3. Na **painel de soluções**, nomeie os novos **modelos**de pasta:
 
-    ![](multi-page-images/vsmac/name-folder.png "Pasta de modelos")
+    ![](multi-page-images/vsmac/name-folder.png "Models Folder")
 
 4. Na **painel de soluções**, selecione a pasta **modelos** , clique com o botão direito do mouse e selecione **Adicionar > novo arquivo...** :
 
-    ![](multi-page-images/vsmac/add-new-models-file.png "Adicionar Novo Arquivo")
+    ![](multi-page-images/vsmac/add-new-models-file.png "Add New File")
 
 5. Na caixa de diálogo **novo arquivo** , selecione **Geral > classe vazia**, nomeie a nova **Nota**de arquivo e clique no botão **novo** :
 
-    ![](multi-page-images/vsmac/add-note-class.png "Adicionar classe de observação")
+    ![](multi-page-images/vsmac/add-note-class.png "Add Note Class")
 
     Isso adicionará uma classe denominada **Observação** à pasta **modelos** do projeto do **Notes** .
 
@@ -360,13 +360,13 @@ Você deve concluir com êxito o [início rápido anterior](single-page.md) ante
     }
     ```
 
-    Essa classe define um `Note` modelo que irá armazenar dados sobre cada nota no aplicativo.
+    Essa classe define um modelo de `Note` que armazenará dados sobre cada nota no aplicativo.
 
     Salve as alterações no **note.cs** escolhendo **arquivo > salvar** (ou pressionando  **&#8984; + S**) e feche o arquivo.
 
 7. Na **painel de soluções**, selecione o projeto **notas** , clique com o botão direito do mouse e selecione **Adicionar > novo arquivo...** . Na caixa de diálogo **novo arquivo** , selecione **Forms > Forms Contentpage XAML**, nomeie o novo arquivo **NoteEntryPage**e clique no botão **novo** :
 
-    ![](multi-page-images/vsmac/add-note-entry-page.png "Adicionar ContentPage Xamarin. Forms")
+    ![](multi-page-images/vsmac/add-note-entry-page.png "Add Xamarin.Forms ContentPage")
 
     Isso adicionará uma nova página chamada **NoteEntryPage** à pasta raiz do projeto. Esta página será a segunda página do aplicativo.
 
@@ -397,7 +397,7 @@ Você deve concluir com êxito o [início rápido anterior](single-page.md) ante
       </ContentPage>
       ```
 
-      Esse código declarativamente define a interface do usuário para a página, que consiste em [`Editor`](xref:Xamarin.Forms.Editor) uma entrada de texto for e [`Button`](xref:Xamarin.Forms.Button) duas instâncias que direcionam o aplicativo para salvar ou excluir um arquivo. As duas `Button` instâncias são dispostas horizontalmente em [`Grid`](xref:Xamarin.Forms.Grid)uma, com `Editor` a `Grid` e que estão sendo colocadas verticalmente [`StackLayout`](xref:Xamarin.Forms.StackLayout)em um. Além disso, o `Editor` usa a vinculação de dados para associar `Text` à propriedade do `Note` modelo. Para obter mais informações sobre vinculação de dados, consulte [vinculação de dados](deepdive.md#data-binding) no guia de [início rápido do Xamarin. Forms](deepdive.md).
+      Esse código declarativamente define a interface do usuário para a página, que consiste em um [`Editor`](xref:Xamarin.Forms.Editor) para entrada de texto e duas instâncias de [`Button`](xref:Xamarin.Forms.Button) que direcionam o aplicativo para salvar ou excluir um arquivo. As duas instâncias de `Button` são dispostas horizontalmente em uma [`Grid`](xref:Xamarin.Forms.Grid), com o `Editor` e `Grid` sendo dispostos verticalmente em uma [`StackLayout`](xref:Xamarin.Forms.StackLayout). Além disso, o `Editor` usa a vinculação de dados para associar à propriedade `Text` do modelo de `Note`. Para obter mais informações sobre vinculação de dados, consulte [vinculação de dados](deepdive.md#data-binding) no guia de [início rápido do Xamarin. Forms](deepdive.md).
 
       Salve as alterações em **NoteEntryPage. XAML** escolhendo **arquivo > salvar** (ou pressionando  **&#8984; + S**) e feche o arquivo.
 
@@ -452,7 +452,7 @@ Você deve concluir com êxito o [início rápido anterior](single-page.md) ante
       }
       ```
 
-      Esse código armazena uma `Note` instância, que representa uma única nota, [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) no da página. Quando o **salvamento** [`Button`](xref:Xamarin.Forms.Button) é pressionado, `OnSaveButtonClicked` o manipulador de eventos é executado, o `Editor` que salva o conteúdo do em um novo arquivo com um FileName gerado aleatoriamente ou a um arquivo existente se uma observação estiver sendo atualizada. Em ambos os casos, o arquivo é armazenado na pasta de dados do aplicativo local para o aplicativo. Em seguida, o método navega de volta para a página anterior. Quando a **exclusão** `Button` é pressionada `OnDeleteButtonClicked` , o manipulador de eventos é executado, o que exclui o arquivo, desde que ele exista e navega de volta para a página anterior. Para obter mais informações sobre navegação, consulte [navegação](deepdive.md#navigation) no guia de [início rápido do Xamarin. Forms](deepdive.md).
+      Esse código armazena uma instância de `Note`, que representa uma única nota, na [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) da página. Quando o [`Button`](xref:Xamarin.Forms.Button) de salvamento é pressionado, o manipulador de eventos de `OnSaveButtonClicked` é executado, o que salva o conteúdo do `Editor` em um novo arquivo com um FileName gerado aleatoriamente ou em um arquivo existente se uma observação estiver sendo atualizada. Em ambos os casos, o arquivo é armazenado na pasta de dados do aplicativo local para o aplicativo. Em seguida, o método navega de volta para a página anterior. Quando o `Button` de **exclusão** é pressionado, o manipulador de eventos `OnDeleteButtonClicked` é executado, o que exclui o arquivo, desde que ele exista e navega de volta para a página anterior. Para obter mais informações sobre navegação, consulte [navegação](deepdive.md#navigation) no guia de [início rápido do Xamarin. Forms](deepdive.md).
 
       Salve as alterações no **NoteEntryPage.XAML.cs** escolhendo **arquivo > salvar** (ou pressionando  **&#8984; + S**) e feche o arquivo.
 
@@ -488,7 +488,7 @@ Você deve concluir com êxito o [início rápido anterior](single-page.md) ante
     </ContentPage>
     ```
 
-    Esse código define declarativamente a interface do usuário para a página, que consiste em [`ListView`](xref:Xamarin.Forms.ListView) um e [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem)um. O `ListView` usa a vinculação de dados para exibir todas as anotações que são recuperadas pelo aplicativo e a seleção de uma observação `NoteEntryPage` navegará até o local em que a nota pode ser modificada. Como alternativa, uma nova nota pode ser criada pressionando o `ToolbarItem`. Para obter mais informações sobre vinculação de dados, consulte [vinculação de dados](deepdive.md#data-binding) no guia de [início rápido do Xamarin. Forms](deepdive.md).
+    Esse código define declarativamente a interface do usuário para a página, que consiste em um [`ListView`](xref:Xamarin.Forms.ListView) e um [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem). O `ListView` usa a vinculação de dados para exibir todas as anotações que são recuperadas pelo aplicativo e a seleção de uma observação navegará até o `NoteEntryPage` em que a nota pode ser modificada. Como alternativa, uma nova nota pode ser criada pressionando o `ToolbarItem`. Para obter mais informações sobre vinculação de dados, consulte [vinculação de dados](deepdive.md#data-binding) no guia de [início rápido do Xamarin. Forms](deepdive.md).
 
     Salve as alterações em **NotesPage. XAML** escolhendo **arquivo > salvar** (ou pressionando  **&#8984; + S**) e feche o arquivo.
 
@@ -555,7 +555,7 @@ Você deve concluir com êxito o [início rápido anterior](single-page.md) ante
     }
     ```    
 
-    Esse código define a funcionalidade para o `NotesPage`. Quando a página é exibida, `OnAppearing` o método é executado, o que popula [`ListView`](xref:Xamarin.Forms.ListView) o com todas as anotações que foram recuperadas da pasta de dados do aplicativo local. Quando o [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem) é pressionado, `OnNoteAddedClicked` o manipulador de eventos é executado. Esse `NoteEntryPage`método navega para o, definindo o [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) do `NoteEntryPage` para uma nova `Note` instância. Quando um item no `ListView` é selecionado, o manipulador de `OnListViewItemSelected` eventos é executado. Esse `NoteEntryPage`método navega para o, definindo o [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) do `NoteEntryPage` para a instância selecionada `Note` . Para obter mais informações sobre navegação, consulte [navegação](deepdive.md#navigation) no guia de [início rápido do Xamarin. Forms](deepdive.md).
+    Esse código define a funcionalidade para o `NotesPage`. Quando a página é exibida, o método `OnAppearing` é executado, o que popula a [`ListView`](xref:Xamarin.Forms.ListView) com todas as anotações que foram recuperadas da pasta de dados do aplicativo local. Quando o [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem) é pressionado, o manipulador de eventos `OnNoteAddedClicked` é executado. Esse método navega para a `NoteEntryPage`, definindo a [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) do `NoteEntryPage` como uma nova instância `Note`. Quando um item na `ListView` é selecionado, o manipulador de eventos `OnListViewItemSelected` é executado. Esse método navega para a `NoteEntryPage`, definindo a [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) do `NoteEntryPage` para a instância de `Note` selecionada. Para obter mais informações sobre navegação, consulte [navegação](deepdive.md#navigation) no guia de [início rápido do Xamarin. Forms](deepdive.md).
 
     Salve as alterações no **NotesPage.XAML.cs** escolhendo **arquivo > salvar** (ou pressionando  **&#8984; + S**) e feche o arquivo.
 
@@ -586,9 +586,9 @@ Você deve concluir com êxito o [início rápido anterior](single-page.md) ante
     }
     ```
 
-    Esse código adiciona uma declaração de namespace para `System.IO` o namespace e adiciona uma declaração para uma propriedade `FolderPath` estática do tipo `string`. A `FolderPath` propriedade é usada para armazenar o caminho no dispositivo em que os dados de observação serão armazenados. Além disso, o código inicializa a `FolderPath` propriedade `App` no construtor e inicializa a [`MainPage`](xref:Xamarin.Forms.Application.MainPage) Propriedade como um [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) que hospeda uma instância do `NotesPage`. Para obter mais informações sobre navegação, consulte [navegação](deepdive.md#navigation) no guia de [início rápido do Xamarin. Forms](deepdive.md).
+    Esse código adiciona uma declaração de namespace para o namespace `System.IO` e adiciona uma declaração para uma propriedade estática `FolderPath` do tipo `string`. A propriedade `FolderPath` é usada para armazenar o caminho no dispositivo em que os dados de observação serão armazenados. Além disso, o código inicializa a propriedade `FolderPath` no Construtor `App` e inicializa a propriedade [`MainPage`](xref:Xamarin.Forms.Application.MainPage) como um [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) que hospeda uma instância do `NotesPage`. Para obter mais informações sobre navegação, consulte [navegação](deepdive.md#navigation) no guia de [início rápido do Xamarin. Forms](deepdive.md).
 
-    Salve as alterações em **App.xaml.cs** escolhendo **Arquivo > Salvar** (ou pressionando **&#8984; + S**) e feche o arquivo.
+    Salve as alterações em **App.xaml.cs** escolhendo **Arquivo > Salvar** (ou pressionando **& #8984; + S**) e feche o arquivo.
 
 14. No **painel de soluções**, no projeto do **Notes** , clique com o botão direito do mouse em **MainPage. XAML**e selecione **remover**. Na caixa de diálogo exibida, pressione o botão **excluir** para remover o arquivo do disco rígido.
 
@@ -596,7 +596,7 @@ Você deve concluir com êxito o [início rápido anterior](single-page.md) ante
 
 15. Compile e execute o projeto em cada plataforma. Para obter mais informações, consulte [criando o início rápido](single-page.md#building-the-quickstart).
 
-    No **NotesPage** , pressione o **+** botão para navegar até o **NoteEntryPage** e insira uma observação. Depois de salvar a observação, o aplicativo navegará de volta para o **NotesPage**.
+    No **NotesPage** , pressione o botão **+** para navegar até o **NoteEntryPage** e insira uma observação. Depois de salvar a observação, o aplicativo navegará de volta para o **NotesPage**.
 
     Insira um número de notas, de comprimento variável, para observar o comportamento do aplicativo.
 

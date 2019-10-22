@@ -8,17 +8,17 @@ author: conceptdev
 ms.author: crdun
 ms.date: 10/11/2016
 ms.openlocfilehash: 4000e4cc5d260457c0e0da275e3a7beecafd1a98
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "70767025"
 ---
 # <a name="introduction-to-data-storage-in-xamarinios-apps"></a>Introdução ao armazenamento de dados em aplicativos Xamarin. iOS
 
 ## <a name="when-to-use-a-database"></a>Quando usar um banco de dados
 
-Embora os recursos de armazenamento e processamento de dispositivos móveis estejam aumentando, os telefones e tablets ainda ficam &amp; atrasados por trás dos seus laptops de desktop. Por esse motivo, vale a pena dedicar algum tempo para planejar a arquitetura de armazenamento de dados para seu aplicativo, em vez de apenas pressupor que um banco de dado é a resposta certa o tempo todo. Há várias opções diferentes que atendam a diferentes requisitos, como:
+Embora os recursos de armazenamento e processamento de dispositivos móveis estejam aumentando, os telefones e tablets ainda ficam atrasados por trás de suas contrapartes de desktop &amp; laptops. Por esse motivo, vale a pena dedicar algum tempo para planejar a arquitetura de armazenamento de dados para seu aplicativo, em vez de apenas pressupor que um banco de dado é a resposta certa o tempo todo. Há várias opções diferentes que atendam a diferentes requisitos, como:
 
 - **Preferências** – o iOS oferece um mecanismo interno para armazenar pares chave-valor simples de dados. Se você estiver armazenando configurações de usuário simples ou pequenas partes de dados (como informações de personalização), use os recursos nativos da plataforma para armazenar esse tipo de informação. Para o iOS, você também pode aproveitar a sincronização do iCloud para esses dados, tanto para backup quanto para sincronização para usuários com vários dispositivos.
 - **Arquivos de texto** – entrada do usuário ou caches de conteúdo baixado (por exemplo, HTML) pode ser armazenado diretamente no sistema de arquivos. Use uma Convenção de nomenclatura de arquivo apropriada para ajudá-lo a organizar os arquivos e localizar dados.

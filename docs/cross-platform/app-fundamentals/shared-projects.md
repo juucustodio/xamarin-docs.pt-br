@@ -7,10 +7,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 07/18/2018
 ms.openlocfilehash: ed58b0810d3c4fd3a3dd99cddd16227f9ac30273
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "68739053"
 ---
 # <a name="shared-projects-code-sharing"></a>Compartilhamento de código de projetos compartilhados
@@ -27,7 +27,7 @@ Se você usou a vinculação de arquivos no passado para compartilhar código en
 
 Ao contrário da maioria dos outros tipos de projeto, um projeto compartilhado não tem nenhuma saída (no formato de DLL), em vez disso, o código é compilado em cada projeto que faz referência a ele. Isso é ilustrado no diagrama abaixo – conceitualmente, todo o conteúdo do projeto compartilhado é "copiado para" cada projeto de referência e compilado como se fosse parte dele.
 
-![](shared-projects-images/sharedassetproject.png "Arquitetura de projeto compartilhado")
+![](shared-projects-images/sharedassetproject.png "Shared Project architecture")
 
 O código em um projeto compartilhado pode conter diretivas de compilador que habilitarão ou desabilitarão seções de código, dependendo de qual projeto de aplicativo está usando o código, que é sugerido pelas caixas de plataforma colorida no diagrama.
 
@@ -43,7 +43,7 @@ Esta seção explica como criar e usar um projeto compartilhado usando Visual St
 
 ## <a name="creating-a-shared-project"></a>Criando um projeto compartilhado
 
-Para criar um novo projeto compartilhado, navegue até **arquivo > nova solução...** (ou clique com o botão direito do mouse em uma solução existente e escolha **adicionar > adicionar novo projeto...** ):
+Para criar um novo projeto compartilhado, navegue até **arquivo > nova solução...** (ou clique com o botão direito do mouse em uma solução existente e escolha **Adicionar > adicionar novo projeto...** ):
 
 [![Novo projeto compartilhado](shared-projects-images/xs-newsolution-sml.png "Nova solução")](shared-projects-images/xs-newsolution.png#lightbox)
 
@@ -57,7 +57,7 @@ Para que um projeto compartilhado seja útil, ele precisa ser referenciado por p
 
 A adição de uma referência a um projeto compartilhado é feita da mesma forma que faz referência a um projeto de biblioteca regular. Esta captura de tela mostra um projeto Xamarin. iOS que faz referência a um projeto compartilhado.
 
-![](shared-projects-images/xs-reference.png "Referência de projeto ao projeto compartilhado")
+![](shared-projects-images/xs-reference.png "Project reference to Shared Project")
 
 Depois que o projeto compartilhado é referenciado por outra biblioteca ou aplicativo, você pode criar a solução e exibir todos os erros no código. Quando o projeto compartilhado é referenciado por _dois ou mais_ projetos, um menu é exibido no canto superior esquerdo do editor de código-fonte, que mostra a escolha de quais projetos fazem referência a esse arquivo.
 
@@ -67,7 +67,7 @@ Quando você clica com o botão direito do mouse em um projeto compartilhado e e
 
 A tela de **Opções** é mostrada abaixo-o **nome** do projeto e o **namespace padrão** são as duas únicas configurações que geralmente serão alteradas.
 
-![](shared-projects-images/xs-sharedprojectoptions.png "Opções de projeto compartilhado")
+![](shared-projects-images/xs-sharedprojectoptions.png "Shared Project Options")
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
@@ -77,7 +77,7 @@ Esta seção explica como criar e usar um projeto compartilhado usando o Visual 
 
 ### <a name="creating-a-shared-project"></a>Criando um projeto compartilhado
 
-Para criar um novo projeto compartilhado, navegue até **arquivo** > **novo** > **projeto**.
+Para criar um novo projeto compartilhado, navegue até **arquivo**  > **novo** **projeto**de  > .
 
 No Visual Studio 2019, insira **compartilhado** na caixa de pesquisa na página **criar um novo projeto** . Selecione o modelo de **projeto compartilhado** e, em seguida, selecione **Avançar**. Insira um nome para o projeto e, em seguida, selecione **criar**.
 
@@ -87,13 +87,13 @@ No Visual Studio 2017, selecione o modelo de **projeto compartilhado** e, em seg
 
 Você também pode adicionar um novo projeto compartilhado a uma solução existente clicando com o botão direito do mouse no arquivo da solução e escolhendo **adicionar > novo projeto**. Um novo projeto compartilhado é semelhante ao mostrado abaixo (depois que um arquivo de classe tiver sido adicionado). Observe que não há referências ou nós de componentes; Eles não têm suporte para projetos compartilhados.
 
-![](shared-projects-images/vs-empty.png "Projeto compartilhado vazio")
+![](shared-projects-images/vs-empty.png "Empty Shared Project")
 
 Para que um projeto compartilhado seja útil, ele precisa ser referenciado por pelo menos um projeto que possa ser compilado (como um aplicativo ou uma biblioteca do iOS ou Android, ou um projeto PCL). Um projeto compartilhado não é compilado quando não tem nada fazendo referência a ele; portanto, a sintaxe (ou qualquer outro) erros não será realçada até que tenha sido referenciada por outra coisa.
 
 A adição de uma referência a um projeto compartilhado é feita da mesma forma que faz referência a um projeto de biblioteca regular. Esta captura de tela mostra um projeto Xamarin. iOS que faz referência a um projeto compartilhado.
 
-![](shared-projects-images/vs-reference.png "Referência de projeto ao projeto compartilhado")
+![](shared-projects-images/vs-reference.png "Project reference to Shared Project")
 
 Depois que o projeto compartilhado é referenciado por outra biblioteca ou aplicativo, você pode criar a solução e exibir todos os erros no código. Quando o projeto compartilhado é referenciado por _dois ou mais_ projetos, um menu é exibido no canto superior esquerdo do editor de código-fonte para ver quais projetos fazem referência ao arquivo de código atual.
 
@@ -103,7 +103,7 @@ Quando você seleciona um projeto compartilhado, há menos configurações no pa
 
 O painel **Propriedades** é mostrado abaixo-o **namespace raiz** é a única configuração que você pode alterar.
 
-![](shared-projects-images/vs-sharedprojectproperties.png "Propriedades do projeto compartilhado")
+![](shared-projects-images/vs-sharedprojectproperties.png "Shared Project Properties")
 
 -----
 
@@ -111,17 +111,17 @@ O painel **Propriedades** é mostrado abaixo-o **namespace raiz** é a única co
 
 ## <a name="shared-project-example"></a>Exemplo de projeto compartilhado
 
-O exemplo de [tarefa](https://github.com/xamarin/mobile-samples/tree/master/Tasky) usa um projeto compartilhado para conter o código comum usado pelos aplicativos Ios, Android e Windows Phone. Os arquivos `SQLite.cs` de `TaskRepository.cs` código-fonte e as diretivas de compilador Utilise (por exemplo, `#if __ANDROID__`) para produzir uma saída diferente para cada um dos aplicativos que fazem referência a eles.
+O exemplo de [tarefa](https://github.com/xamarin/mobile-samples/tree/master/Tasky) usa um projeto compartilhado para conter o código comum usado pelos aplicativos Ios, Android e Windows Phone. O `SQLite.cs` e `TaskRepository.cs` arquivos de código-fonte Utilise diretivas de compilador (por exemplo, `#if __ANDROID__`) para produzir uma saída diferente para cada um dos aplicativos que fazem referência a eles.
 
 A estrutura de solução completa é mostrada abaixo (no Visual Studio para Mac e no Visual Studio, respectivamente):
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
-![](shared-projects-images/xs-examplesolution.png "Solução Visual Studio para Mac")
+![](shared-projects-images/xs-examplesolution.png "Visual Studio for Mac solution")
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-![](shared-projects-images/vs-examplesolution.png "Solução do Visual Studio")
+![](shared-projects-images/vs-examplesolution.png "Visual Studio solution")
 
 -----
 
@@ -129,7 +129,7 @@ O projeto Windows Phone pode ser navegado em Visual Studio para Mac, mesmo que e
 
 Os aplicativos em execução são mostrados abaixo:
 
-![](shared-projects-images/example.png "exemplos de iOS, Android Windows Phone")
+![](shared-projects-images/example.png "iOS, Android, Windows Phone examples")
 
 ## <a name="summary"></a>Resumo
 

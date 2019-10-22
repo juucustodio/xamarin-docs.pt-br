@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 10/03/2018
 ms.openlocfilehash: 4d0e57b98a479112b9fdf4f9c503418f3966cc73
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "64749922"
 ---
 # <a name="skiasharp-platform-independent-examples"></a>Exemplos independentes de plataforma SkiaSharp
@@ -22,7 +22,7 @@ O SkiaSharp fornece uma API gráfica 2D avançada e poderosa que pode ser usada 
 
 Atualmente, a biblioteca está disponível como um [pacote NuGet](https://www.nuget.org/packages/SkiaSharp)de plataforma cruzada. você pode adicioná-la ao seu projeto adicionando a referência do NuGet.
 
-Para desenhar, seu código criará um `SkCanvas` que descreve a superfície onde as operações de desenho ocorrerão.
+Para desenhar, seu código criará um `SkCanvas` que descreve a superfície em que as operações de desenho ocorrerão.
 
 ## <a name="obtaining-an-skcanvas"></a>Obtendo um SKCanvas
 

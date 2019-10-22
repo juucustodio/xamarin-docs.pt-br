@@ -8,10 +8,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
 ms.openlocfilehash: 2129281f389c440d9ae746c4b9b06c4ddb32d1dc
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "70770036"
 ---
 # <a name="xamarinmac-extension-support"></a>Suporte à extensão de Xamarin.Mac
@@ -38,13 +38,13 @@ A seguir estão as limitações e os problemas conhecidos que podem ocorrer ao d
 
 As dicas a seguir podem ser úteis ao trabalhar com extensões no Xamarin. Mac:
 
-- Como o Xamarin. Mac atualmente não oferece suporte a extensões de depuração, a experiência de depuração dependerá `printf` principalmente de instruções de execução e semelhantes. No entanto, as extensões são executadas em um `Console.WriteLine` processo de área restrita, portanto, não funcionará como acontece em outros aplicativos Xamarin. Mac. Chamar diretamente fará com que as mensagens de depuração sejam enviadas para o log do sistema. [ `NSLog` ](https://gist.github.com/chamons/e2e409013a449cfbe1f2fbe5547f6554)
-- Quaisquer exceções não capturadas apresentarão o processo de extensão, fornecendo apenas uma pequena quantidade de informações úteis no **log do sistema**. O encapsulamento de código `try/catch` problemático em um `NSLog`bloco (exceção) antes da recriação pode ser útil.
-- O **log do sistema** pode ser acessado no aplicativo de **console** em**utilitários**de **aplicativos** > :
+- Como o Xamarin. Mac atualmente não oferece suporte a extensões de depuração, a experiência de depuração dependerá principalmente da execução e `printf` instruções like. No entanto, as extensões são executadas em um processo de área restrita, portanto `Console.WriteLine` não funcionará como faz em outros aplicativos Xamarin. Mac. Chamar [`NSLog` diretamente](https://gist.github.com/chamons/e2e409013a449cfbe1f2fbe5547f6554) produzirá mensagens de depuração para o log do sistema.
+- Quaisquer exceções não capturadas apresentarão o processo de extensão, fornecendo apenas uma pequena quantidade de informações úteis no **log do sistema**. O encapsulamento de código problemático em um bloco `try/catch` (exceção) que `NSLog` antes da recriação pode ser útil.
+- O **log do sistema** pode ser acessado por meio do aplicativo de **Console** em **aplicativos**  > **utilitários**:
 
-    [![](extensions-images/extension02.png "O log do sistema")](extensions-images/extension02.png#lightbox)
+    [![](extensions-images/extension02.png "The system log")](extensions-images/extension02.png#lightbox)
 - Conforme observado acima, a execução do aplicativo host de extensão o registrará no sistema. Excluindo o pacote de aplicativos com o cancelamento do registro. 
-- Se as versões "isoladas" das extensões de um aplicativo forem registradas, use o seguinte comando para localizá-las (para que elas possam ser excluídas):`plugin kit -mv`
+- Se as versões "isoladas" das extensões de um aplicativo forem registradas, use o seguinte comando para localizá-las (para que elas possam ser excluídas): `plugin kit -mv`
 
 <a name="Walkthrough-and-Sample-App" />
 

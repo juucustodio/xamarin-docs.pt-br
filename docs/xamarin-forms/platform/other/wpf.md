@@ -9,10 +9,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 04/05/2018
 ms.openlocfilehash: 38d9b42b3a29ea46d05a1d1cc4e38641d2445786
-ms.sourcegitcommit: 4cf434b126eb7df6b2fd9bb1d71613bf2b6aac0e
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "71997178"
 ---
 # <a name="wpf-platform-setup"></a>Configuração da plataforma WPF
@@ -56,19 +56,19 @@ Siga estas instruções para adicionar um aplicativo do WPF que será executado 
 
 6. Clique com o botão direito do mouse no nome da solução na **Gerenciador de soluções** e selecione **gerenciar pacotes NuGet para solução**. Selecione a guia **Atualizar** e o pacote **Xamarin. Forms** . Selecione todos os projetos e atualize-os para a mesma versão do Xamarin. Forms:
 
-    ![Atualizar o pacote NuGet](wpf-images/update-nuget-package.png "atualizar o pacote NuGet")
+    ![Atualizar o pacote NuGet](wpf-images/update-nuget-package.png "Atualizar o pacote NuGet")
 
 7. No projeto do WPF, clique com o botão direito do mouse em **referências**. Na caixa de diálogo **Gerenciador de referências** , selecione **projetos** à esquerda e marque a caixa de seleção adjacente ao projeto **BoxViewClock** :
 
-    ![Referenciar o projeto compartilhado](wpf-images/reference-shared-project.png "referenciar o projeto compartilhado")
+    ![Referenciar o projeto compartilhado](wpf-images/reference-shared-project.png "Referenciar o projeto compartilhado")
 
-8. Edite o arquivo **MainWindow. XAML** do projeto do WPF. Na marca `Window`, adicione uma declaração de namespace XML para o assembly e o namespace do **Xamarin. Forms. Platform. WPF** :
+8. Edite o arquivo **MainWindow. XAML** do projeto do WPF. Na marca `Window`, adicione uma declaração de namespace XML para o assembly e o namespace **Xamarin. Forms. Platform. WPF** :
 
     ```xaml
     xmlns:wpf="clr-namespace:Xamarin.Forms.Platform.WPF;assembly=Xamarin.Forms.Platform.WPF"
     ```
 
-    Agora, altere a marca `Window` para `wpf:FormsApplicationPage`. Altere a configuração `Title` para o nome do seu aplicativo, por exemplo, **BoxViewClock**. O arquivo XAML concluído deve ter a seguinte aparência:
+    Agora, altere a marca de `Window` para `wpf:FormsApplicationPage`. Altere a configuração de `Title` para o nome do seu aplicativo, por exemplo, **BoxViewClock**. O arquivo XAML concluído deve ter a seguinte aparência:
 
     ```xaml
     <wpf:FormsApplicationPage x:Class="BoxViewClock.WPF.MainWindow"
@@ -86,7 +86,7 @@ Siga estas instruções para adicionar um aplicativo do WPF que será executado 
     </wpf:FormsApplicationPage>
     ```
 
-9. Edite o arquivo **MainWindow.XAML.cs** do projeto do WPF. Adicione duas novas diretivas `using`:
+9. Edite o arquivo **MainWindow.XAML.cs** do projeto do WPF. Adicione duas novas diretivas de `using`:
 
     ```csharp
     using Xamarin.Forms;
@@ -100,7 +100,7 @@ Siga estas instruções para adicionar um aplicativo do WPF que será executado 
     LoadApplication(new BoxViewClock.App());
     ```
 
-    Exceto para comentários e diretivas `using` não utilizadas, o arquivo **MainWindows.XAML.cs** completo deve ter a seguinte aparência:
+    Exceto para comentários e diretivas de `using` não usadas, o arquivo **MainWindows.XAML.cs** completo deve ter esta aparência:
 
     ```csharp
     using Xamarin.Forms;
@@ -123,7 +123,7 @@ Siga estas instruções para adicionar um aplicativo do WPF que será executado 
 
 10. Clique com o botão direito do mouse no projeto do WPF no **Gerenciador de soluções** e selecione **definir como projeto de inicialização**. Pressione F5 para executar o programa com o depurador do Visual Studio na área de trabalho do Windows:
 
-    Relógio WPF ![BoxView Clock]WPF(wpf-images/wpf-boxviewclock.png "BoxView" )
+    ![Relógio do WPF BoxView](wpf-images/wpf-boxviewclock.png "Relógio do WPF BoxView" )
 
 ## <a name="next-steps"></a>Próximas etapas
 

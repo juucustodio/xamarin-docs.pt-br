@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 02/01/2016
 ms.openlocfilehash: f91d0127d0f2ffe37e3e0ff016dee551a679ad84
-ms.sourcegitcommit: e354aabfb39598e0ce11115db3e6bcebb9f68338
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "72273117"
 ---
 # <a name="layout-for-tablet-and-desktop-apps"></a>Layout para aplicativos Tablet e desktop
@@ -42,7 +42,7 @@ Para fornecer uma experiência de inicialização agradável e garantir que a re
 Antes do iOS 9, todos os aplicativos usavam a tela inteira no dispositivo, mas alguns iPads agora podem executar [multitarefas de tela dividida](~/ios/platform/multitasking.md).
 Isso significa que seu aplicativo pode ocupar apenas uma coluna fina no lado da tela, 50% da largura da tela ou na tela inteira.
 
-[![](tablet-images/ipad-sml.png "Exemplo de tela de divisão do iPad")](tablet-images/ipad.png#lightbox "Exemplo de tela de divisão do iPad")
+[![](tablet-images/ipad-sml.png "iPad Split Screen Example")](tablet-images/ipad.png#lightbox "iPad Split Screen Example")
 
 A funcionalidade de tela de divisão significa que você deve projetar seu aplicativo para funcionar bem com apenas 320 pixels de largura ou até 1366 pixels de largura.
 
@@ -59,7 +59,7 @@ Para dar suporte a tablets e computadores desktop que executam o Windows, você 
 
 Os aplicativos executados em tablets e desktops Windows podem ser redimensionados para dimensões arbitrárias, além da execução de tela inteira.
 
-[![](tablet-images/splitscreen-sml.png "Exemplo de divisão de tela do Windows")](tablet-images/splitscreen.png#lightbox "Exemplo de divisão de tela do Windows")
+[![](tablet-images/splitscreen-sml.png "Windows Split Screen Example")](tablet-images/splitscreen.png#lightbox "Windows Split Screen Example")
 
 <a name="optimize" />
 
@@ -67,9 +67,9 @@ Os aplicativos executados em tablets e desktops Windows podem ser redimensionado
 
 Você pode ajustar sua interface do usuário do Xamarin. Forms dependendo se um telefone ou dispositivo tablet/Desktop está sendo usado. Isso significa que você pode otimizar a experiência do usuário para dispositivos de tela larga, como tablets e computadores desktop.
 
-### <a name="deviceidiom"></a>Device.Idiom
+### <a name="deviceidiom"></a>Dispositivo. idioma
 
-Você pode usar a classe [`Device`](~/xamarin-forms/platform/device.md) para alterar o comportamento do aplicativo ou da interface do usuário. Usando a enumeração `Device.Idiom`, você pode
+Você pode usar a classe [`Device`](~/xamarin-forms/platform/device.md) para alterar o comportamento do seu aplicativo ou da interface do usuário. Usando a enumeração `Device.Idiom` você pode
 
 ```csharp
 if (Device.Idiom == TargetIdiom.Phone)
@@ -84,9 +84,9 @@ Essa abordagem pode ser expandida para fazer alterações significativas em layo
 
 ### <a name="leveraging-masterdetailpage"></a>Aproveitando o MasterDetailPage
 
-O [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) é ideal para telas maiores, especialmente no iPad, em que ele usa o [`UISplitViewController`](xref:UIKit.UISplitViewController) para fornecer uma experiência de Ios nativa.
+O [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) é ideal para telas maiores, especialmente no iPad em que ele usa o [`UISplitViewController`](xref:UIKit.UISplitViewController) para fornecer uma experiência nativa de Ios.
 
-Examine [esta postagem de blog do Xamarin](https://devblogs.microsoft.com/xamarin/bringing-xamarin-forms-apps-to-tablets/) para ver como você pode adaptar sua interface do usuário para que os telefones usem um layout e telas maiores possam usar outro (com o `MasterDetailPage`).
+Leia [esta postagem no blog do Xamarin](https://devblogs.microsoft.com/xamarin/bringing-xamarin-forms-apps-to-tablets/) para ver como você pode adaptar sua interface do usuário para que os telefones usem um layout e telas maiores possam usar outro (com o `MasterDetailPage`).
 
 ## <a name="related-links"></a>Links relacionados
 

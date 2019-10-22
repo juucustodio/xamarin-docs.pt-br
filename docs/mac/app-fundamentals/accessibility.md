@@ -8,10 +8,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
 ms.openlocfilehash: 087dcdc7024026e6a3ed3a05baca3b2648053cc8
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "70769943"
 ---
 # <a name="accessibility-on-macos"></a>Acessibilidade no macOS
@@ -23,18 +23,18 @@ Para entender como as APIs de acessibilidade funcionam no macOS (anteriormente c
 
 ## <a name="describing-ui-elements"></a>Descrevendo elementos da interface do usuário
 
-O AppKit usa `NSAccessibility` o protocolo para expor APIs que ajudam a tornar a interface do usuário acessível. Isso inclui um comportamento padrão que tenta definir valores significativos para propriedades de acessibilidade, como a definição de um botão `AccessibilityLabel`. Normalmente, o rótulo é uma única palavra ou frase curta que descreve o controle ou a exibição.
+O AppKit usa o protocolo `NSAccessibility` para expor APIs que ajudam a tornar a interface do usuário acessível. Isso inclui um comportamento padrão que tenta definir valores significativos para propriedades de acessibilidade, como definir a `AccessibilityLabel` de um botão. Normalmente, o rótulo é uma única palavra ou frase curta que descreve o controle ou a exibição.
 
 ### <a name="storyboard-files"></a>Arquivos de storyboard
 
 O Xamarin. Mac usa o Interface Builder do Xcode para editar arquivos de storyboard.
 As informações de acessibilidade podem ser editadas no **Inspetor de identidade** quando um controle é selecionado na superfície de design (conforme mostrado na captura de tela abaixo):
 
-[![Adicionando acessibilidade no interface Builder do Xcode](accessibility-images/xcode.png "Adicionando acessibilidade no interface Builder do Xcode")](accessibility-images/xcode-large.png#lightbox)
+[![Adicionando acessibilidade no Interface Builder do Xcode](accessibility-images/xcode.png "Adicionando acessibilidade no Interface Builder do Xcode")](accessibility-images/xcode-large.png#lightbox)
 
 ### <a name="code"></a>Código
 
-O Xamarin. Mac não é exposto atualmente `AccessibilityLabel` como setter.  Adicione o seguinte método auxiliar para definir o rótulo de acessibilidade:
+O Xamarin. Mac não é exposto atualmente como `AccessibilityLabel` setter.  Adicione o seguinte método auxiliar para definir o rótulo de acessibilidade:
 
 ```csharp
 public static class AccessibilityHelper
@@ -55,7 +55,7 @@ Esse método pode então ser usado no código, conforme mostrado:
 AccessibilityHelper.SetAccessibilityLabel (someButton, "New Accessible Description");
 ```
 
-A `AccessibilityHelp` propriedade é para uma explicação do que o controle ou exibição faz e deve ser adicionada somente quando o rótulo não fornecer informações suficientes. O texto de ajuda ainda deve ser mantido o mais curto possível, por exemplo, "excluir o documento".
+A propriedade `AccessibilityHelp` é para obter uma explicação do que o controle ou a exibição faz e deve ser adicionada somente quando o rótulo pode não fornecer informações suficientes. O texto de ajuda ainda deve ser mantido o mais curto possível, por exemplo, "excluir o documento".
 
 Alguns elementos da interface do usuário não são relevantes para acesso acessível (como um rótulo ao lado de uma entrada que tem seu próprio rótulo de acessibilidade e ajuda).
 Nesses casos, defina `AccessibilityElement = false` para que esses controles ou exibições sejam ignorados por leitores de tela ou outras ferramentas de acessibilidade.

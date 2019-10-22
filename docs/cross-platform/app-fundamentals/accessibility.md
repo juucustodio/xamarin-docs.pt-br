@@ -7,10 +7,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/22/2017
 ms.openlocfilehash: 55d531036336cdd6c3ac7efa1c5ba21b09a7be9e
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "70758132"
 ---
 # <a name="accessibility-in-xamarin-apps"></a>Acessibilidade em aplicativos Xamarin
@@ -28,7 +28,7 @@ Para implementar as diretrizes deste documento, use as APIs fornecidas por cada 
 - [**Acessibilidade do Android**](~/android/app-fundamentals/accessibility.md)
 - [**Acessibilidade do iOS**](~/ios/app-fundamentals/accessibility.md)
 - [**Acessibilidade do OS X**](~/mac/app-fundamentals/accessibility.md)
-- [**Xamarin.Forms**](~/xamarin-forms/app-fundamentals/accessibility/index.md)
+- [**Xamarin. Forms**](~/xamarin-forms/app-fundamentals/accessibility/index.md)
 
 <a name="checklist" />
 

@@ -8,17 +8,17 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
 ms.openlocfilehash: cf6835b99ea70c3922dd68bc21af3e44815cc92e
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "70769931"
 ---
 # <a name="copy-and-paste-in-xamarinmac"></a>Copiar e colar no Xamarin. Mac
 
 _Este artigo aborda como trabalhar com a área de trabalho para fornecer copiar e colar em um aplicativo Xamarin. Mac. Ele mostra como trabalhar com tipos de dados padrão que podem ser compartilhados entre vários aplicativos e como dar suporte a dados personalizados em um determinado aplicativo._
 
-## <a name="overview"></a>Visão geral
+## <a name="overview"></a>Visão Geral
 
 Ao trabalhar com C# o e o .net em um aplicativo Xamarin. Mac, você tem acesso ao mesmo suporte de área de trabalho (copiar e colar) que um desenvolvedor que trabalha no Objective-C tem.
 
@@ -31,7 +31,7 @@ Neste artigo, abordaremos as duas maneiras principais de usar a área de entrada
 
 Neste artigo, abordaremos as noções básicas de como trabalhar com a área de trabalho em um aplicativo Xamarin. Mac para dar suporte a operações de copiar e colar. É altamente recomendável que você trabalhe pelo artigo [Hello, Mac](~/mac/get-started/hello-mac.md) primeiro, especificamente a [introdução às seções Xcode e Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) e [ações](~/mac/get-started/hello-mac.md#outlets-and-actions) , pois ela aborda os principais conceitos e técnicas que usaremos em Este artigo.
 
-Talvez você queira dar uma olhada na seção [expondo C# classes/métodos para Objective-C](~/mac/internals/how-it-works.md) do documento [interno do Xamarin. Mac](~/mac/internals/how-it-works.md) também, explica os `Register` atributos e `Export` usados para conectar suas C# classes ao Objetos Objective-C e elementos de interface do usuário.
+Talvez você queira dar uma olhada na seção [ C# expondo classes/métodos para Objective-C](~/mac/internals/how-it-works.md) do documento [interno do Xamarin. Mac](~/mac/internals/how-it-works.md) também, explica o `Register` e `Export` atributos usados para conectar suas C# classes ao Objective-C objetos e elementos de interface do usuário.
 
 ## <a name="getting-started-with-the-pasteboard"></a>Introdução à área de ti
 
@@ -48,7 +48,7 @@ Primeiro, vamos criar um novo documento com base no aplicativo Xamarin. Mac ao q
 Faça o seguinte:
 
 1. Inicie Visual Studio para Mac e clique no link **novo projeto...** .
-2. Selecione**aplicativo** **Mac** >  Cocoa app e, em seguida, clique no botão Avançar: >  
+2. Selecione o**aplicativo** **Mac**  >   > **aplicativo Cocoa**e clique no botão **Avançar** : 
 
     [![Criando um novo projeto de aplicativo Cocoa](copy-paste-images/sample01.png "Criando um novo projeto de aplicativo Cocoa")](copy-paste-images/sample01-large.png#lightbox)
 3. Insira `MacCopyPaste` para o **nome do projeto** e mantenha tudo o mais como padrão. Clique em Avançar: 
@@ -61,9 +61,9 @@ Faça o seguinte:
 
 ### <a name="add-an-nsdocument"></a>Adicionar um NSDocument
 
-Em seguida, adicionaremos `NSDocument` uma classe personalizada que atuará como o armazenamento em segundo plano para a interface do usuário do aplicativo. Ele conterá uma única exibição de imagem e saberá como copiar uma imagem do modo de exibição para a área de entrada padrão e como tirar uma imagem da área de colagem padrão e exibi-la na exibição de imagem.
+Em seguida, adicionaremos uma classe de `NSDocument` personalizada que atuará como o armazenamento em segundo plano para a interface do usuário do aplicativo. Ele conterá uma única exibição de imagem e saberá como copiar uma imagem do modo de exibição para a área de entrada padrão e como tirar uma imagem da área de colagem padrão e exibi-la na exibição de imagem.
 
-Clique com o botão direito do mouse no projeto Xamarin. Mac na **painel de soluções** e selecione **Adicionar** > **novo arquivo..** :
+Clique com o botão direito do mouse no projeto Xamarin. Mac na **painel de soluções** e selecione **Adicionar**  > **novo arquivo..** :
 
 ![Adicionando um NSDocument ao projeto](copy-paste-images/sample03.png "Adicionando um NSDocument ao projeto")
 
@@ -174,7 +174,7 @@ namespace MacCopyPaste
 
 Vamos dar uma olhada em alguns dos códigos em detalhes abaixo.
 
-O código a seguir fornece uma propriedade para testar a existência de dados de imagem na área de ti padrão, se uma imagem estiver `true` disponível, se `false`for retornada:
+O código a seguir fornece uma propriedade para testar a existência de dados de imagem na área de ti padrão, se uma imagem estiver disponível, `true` será retornado mais `false`:
 
 ```csharp
 public bool ImageAvailableOnPasteboard {
@@ -397,7 +397,7 @@ namespace MacCopyPaste
 
 Vamos dar uma olhada neste código em detalhes abaixo.
 
-Primeiro, expomos uma instância da `ImageDocument` classe que criamos acima:
+Primeiro, expomos uma instância da classe `ImageDocument` que criamos acima:
 
 ```csharp
 private ImageDocument _document;
@@ -414,7 +414,7 @@ public ImageDocument Document {
 }
 ```
 
-Usando `Export`o, `WillChangeValue` e `DidChangeValue`temos configurado a propriedade para `Document` permitir a codificação de dados e o código de chave no Xcode.
+Usando `Export`, `WillChangeValue` e `DidChangeValue`, configuramos a propriedade `Document` para permitir a codificação de chave-valor e a vinculação de dados no Xcode.
 
 Também expõemos a imagem da imagem, bem adicionada à nossa interface do usuário no Xcode com a seguinte propriedade:
 
@@ -433,7 +433,7 @@ public NSImage Image {
 }
 ```
 
-Quando a janela principal é carregada e exibida, criamos uma instância da nossa `ImageDocument` classe e anexamos o compartimento da imagem da interface do usuário a ela com o seguinte código:
+Quando a janela principal é carregada e exibida, criamos uma instância de nossa classe de `ImageDocument` e anexamos a imagem da interface do usuário a ela com o seguinte código:
 
 ```csharp
 public override void AwakeFromNib ()
@@ -448,7 +448,7 @@ public override void AwakeFromNib ()
 }
 ```
 
-Por fim, em resposta ao usuário clicando nos itens da barra de ferramentas copiar e colar, chamamos a instância da `ImageDocument` classe para fazer o trabalho real:
+Por fim, em resposta ao usuário clicando nos itens da barra de ferramentas copiar e colar, chamamos a instância da classe `ImageDocument` para fazer o trabalho real:
 
 ```csharp
 partial void CopyImage (NSObject sender) {
@@ -535,13 +535,13 @@ void PasteImage (NSObject sender)
 }
 ```
 
-Para cada item de menu, obtemos a janela de chave atual, de nível superior e a `ImageWindow` convertemos em nossa classe:
+Para cada item de menu, obtemos a janela de chave atual, de nível superior e a convertemos em nossa classe de `ImageWindow`:
 
 ```csharp
 var window = NSApplication.SharedApplication.KeyWindow as ImageWindow;
 ```
 
-A partir daí, chamamos `ImageDocument` a instância da classe dessa janela para manipular as ações de copiar e colar. Por exemplo: 
+A partir daí, chamamos o `ImageDocument` instância da classe dessa janela para manipular as ações de copiar e colar. Por exemplo: 
 
 ```csharp
 window.Document.CopyImage (sender);
@@ -600,9 +600,9 @@ namespace MacCopyPaste
 }
 ```
 
-Novamente, obtemos a janela atual e a mais alta e `ImageDocument` usamos sua instância de classe para ver se os dados de imagem necessários existem. Em seguida, usamos `MenuWillHighlightItem` o método para habilitar ou desabilitar cada item com base nesse estado.
+Novamente, obtemos a janela atual e a mais alta e usamos sua instância de classe de `ImageDocument` para ver se os dados de imagem necessários existem. Em seguida, usamos o método `MenuWillHighlightItem` para habilitar ou desabilitar cada item com base nesse estado.
 
-Edite o arquivo **AppDelegate.cs** e faça `DidFinishLaunching` com que o método se pareça com o seguinte:
+Edite o arquivo **AppDelegate.cs** e faça com que o método de `DidFinishLaunching` se pareça com o seguinte:
 
 ```csharp
 public override void DidFinishLaunching (NSNotification notification)
@@ -613,11 +613,11 @@ public override void DidFinishLaunching (NSNotification notification)
 }
 ```
 
-Primeiro, desativamos a habilitação e desabilitação automática de itens de menu no menu Editar. Em seguida, anexamos uma instância da `EditMenuDelegate` classe que criamos acima.
+Primeiro, desativamos a habilitação e desabilitação automática de itens de menu no menu Editar. Em seguida, anexamos uma instância da classe `EditMenuDelegate` que criamos acima.
 
 Para obter mais informações, consulte a documentação de nossos [menus](~/mac/user-interface/menu.md) .
 
-### <a name="testing-the-app"></a>Testar o aplicativo
+### <a name="testing-the-app"></a>Testando o aplicativo
 
 Com tudo em vigor, estamos prontos para testar o aplicativo. Compile e execute o aplicativo e a interface principal é exibida:
 
@@ -639,11 +639,11 @@ Nas seções a seguir, vamos examinar detalhadamente como trabalhar com a área 
 
 ## <a name="about-the-pasteboard"></a>Sobre a área de ti
 
-No MacOS (anteriormente conhecido como os X), a área`NSPasteboard`de () fornece suporte para vários processos de servidor, como copiar & colar, arrastar & soltar e serviços de aplicativos. Nas seções a seguir, examinaremos com mais detalhes vários conceitos principais da área de entrada.
+No macOS (anteriormente conhecido como OS X), a área de armazenamento (`NSPasteboard`) fornece suporte para vários processos de servidor, como copiar & colar, arrastar & soltar e Serviços de Aplicativos. Nas seções a seguir, examinaremos com mais detalhes vários conceitos principais da área de entrada.
 
 ### <a name="what-is-a-pasteboard"></a>O que é uma área de ti?
 
-A `NSPasteboard` classe fornece um mecanismo padronizado para troca de informações entre aplicativos ou dentro de um determinado aplicativo. A principal função de uma área de colagem é o tratamento de operações de copiar e colar:
+A classe `NSPasteboard` fornece um mecanismo padronizado para troca de informações entre aplicativos ou dentro de um determinado aplicativo. A principal função de uma área de colagem é o tratamento de operações de copiar e colar:
 
 1. Quando o usuário seleciona um item em um aplicativo e usa o item de menu **recortar** ou **copiar** , uma ou mais representações do item selecionado são colocadas na área de transferência.
 2. Quando o usuário usa o item de menu **colar** (dentro do mesmo aplicativo ou outro), a versão dos dados que ele pode manipular é copiada da área de os e adicionada ao aplicativo.
@@ -659,15 +659,15 @@ Em sua forma mais simples, pasteboards são usados para mover dados dentro de um
 
 Uma área de ti pode ser pública ou privada e pode ser usada para uma variedade de finalidades em um aplicativo ou entre vários aplicativos. o macOS fornece vários pasteboards padrão, cada um com um uso específico e bem definido:
 
-- `NSGeneralPboard`-A área de transferência padrão para operações de **recortar**, **copiar** e **colar** .
-- `NSRulerPboard`– Dá suporte a operações de **recortar**, **copiar** e **colar** em **réguas**.
-- `NSFontPboard`– Dá suporte a operações de **recortar**, `NSFont` **copiar** e **colar** em objetos.
-- `NSFindPboard`– Dá suporte a painéis de localização específicos do aplicativo que podem compartilhar texto de pesquisa.
-- `NSDragPboard`– Dá suporte a operações de **arrastar & soltar** .
+- `NSGeneralPboard`-a área de transferência padrão para operações de **recortar**, **copiar** e **colar** .
+- `NSRulerPboard`-dá suporte a operações de **recortar**, **copiar** e **colar** em **réguas**.
+- `NSFontPboard`-oferece suporte a operações de **recortar**, **copiar** e **colar** em objetos `NSFont`.
+- `NSFindPboard`-oferece suporte a painéis de localização específicos do aplicativo que podem compartilhar texto de pesquisa.
+- `NSDragPboard`-dá suporte a operações **arrastar & drop** .
 
-Na maioria das situações, você usará um dos pasteboards definidos pelo sistema. Mas pode haver situações que exijam que você crie seu próprio pasteboards. Nessas situações, você pode usar o `FromName (string name)` método `NSPasteboard` da classe para criar uma área de dados personalizada com o nome fornecido.
+Na maioria das situações, você usará um dos pasteboards definidos pelo sistema. Mas pode haver situações que exijam que você crie seu próprio pasteboards. Nessas situações, você pode usar o método `FromName (string name)` da classe `NSPasteboard` para criar uma área de dados personalizada com o nome fornecido.
 
-Opcionalmente, você pode chamar o `CreateWithUniqueName` método `NSPasteboard` da classe para criar uma área de colagem nomeada exclusivamente.
+Opcionalmente, você pode chamar o método `CreateWithUniqueName` da classe `NSPasteboard` para criar uma área de colagem nomeada exclusivamente.
 
 ### <a name="pasteboard-items"></a>Itens da área de ti
 
@@ -691,13 +691,13 @@ Em termos gerais, você deve fornecer tantas representações dos dados sendo co
 
 Nessa situação, você pode colocar a primeira representação de dados na área de ti e o aplicativo de recebimento pode solicitar uma representação diferente, que pode ser gerada imediatamente antes da operação de colagem.
 
-Quando você coloca o item inicial na área de entrada, você especifica que uma ou mais das outras representações disponíveis são fornecidas por um objeto que está de acordo com a `NSPasteboardItemDataProvider` interface. Esses objetos fornecerão as representações adicionais sob demanda, conforme solicitado pelo aplicativo de recebimento.
+Quando você coloca o item inicial na área de entrada, você especifica que uma ou mais das outras representações disponíveis são fornecidas por um objeto que está de acordo com a interface `NSPasteboardItemDataProvider`. Esses objetos fornecerão as representações adicionais sob demanda, conforme solicitado pelo aplicativo de recebimento.
 
 ### <a name="change-count"></a>Contagem de alterações
 
 Cada área de colagem mantém uma _contagem de alteração_ que aumenta cada vez que um novo proprietário é declarado. Um aplicativo pode determinar se o conteúdo da área de ti foi alterado desde a última vez que o examinou verificando o valor da contagem de alterações.
 
-Use os `ChangeCount` métodos `ClearContents` e da `NSPasteboard` classe para modificar a contagem de alteração de uma determinada área de dados.
+Use os métodos `ChangeCount` e `ClearContents` da classe `NSPasteboard` para modificar a contagem de alteração de uma determinada área de dados.
 
 ## <a name="copying-data-to-a-pasteboard"></a>Copiando dados para uma área de ti
 
@@ -716,9 +716,9 @@ pasteboard.ClearContents();
 pasteboard.WriteObjects (new NSImage[] {image});
 ```
 
-Normalmente, você estará apenas escrevendo para a área de trabalho geral, como fizemos no exemplo acima. Qualquer objeto que você enviar para o `WriteObjects` método *deve* estar de acordo `INSPasteboardWriting` com a interface. Várias classes `NSString`internas ( `NSImage` `NSURL`como,,,, e`NSPasteboardItem`) estão automaticamente em conformidade com essa interface. `NSColor` `NSAttributedString`
+Normalmente, você estará apenas escrevendo para a área de trabalho geral, como fizemos no exemplo acima. Qualquer objeto enviado para o método `WriteObjects` *deve* estar de acordo com a interface `INSPasteboardWriting`. Várias classes internas (como `NSString`, `NSImage`, `NSURL`, `NSColor`, `NSAttributedString` e `NSPasteboardItem`) estão automaticamente em conformidade com essa interface.
 
-Se você estiver escrevendo uma classe de dados personalizada na área de ti, ela deverá `INSPasteboardWriting` estar em conformidade com a interface ou ser encapsulada em uma instância `NSPasteboardItem` da classe (consulte a seção [tipos de dados personalizados](#Custom_Data_Types) abaixo).
+Se você estiver escrevendo uma classe de dados personalizada na área de ti, ela deverá estar em conformidade com a interface `INSPasteboardWriting` ou ser encapsulada em uma instância da classe `NSPasteboardItem` (consulte a seção [tipos de dados personalizados](#Custom_Data_Types) abaixo).
 
 ## <a name="reading-data-from-a-pasteboard"></a>Lendo dados de uma área de ti
 
@@ -726,14 +726,14 @@ Conforme mencionado acima, para maximizar o potencial de compartilhamento de dad
 
 ### <a name="simple-paste-operation"></a>Operação de colar simples
 
-Você lê os dados da área de ti `ReadObjectsForClasses` usando o método. Será necessário dois parâmetros:
+Você lê os dados da área de ti usando o método `ReadObjectsForClasses`. Será necessário dois parâmetros:
 
-1. Uma matriz de `NSObject` tipos de classe com base que você deseja ler na área de colagem. Você deve solicitar isso com o tipo de dados mais desejado primeiro, com os tipos restantes em decrescente preferência.
+1. Uma matriz de tipos de classe baseados em `NSObject` que você deseja ler na área de colagem. Você deve solicitar isso com o tipo de dados mais desejado primeiro, com os tipos restantes em decrescente preferência.
 2. Um dicionário que contém restrições adicionais (como limitar a tipos de conteúdo de URL específicos) ou um dicionário vazio se nenhuma restrição adicional for necessária.
 
 O método retorna uma matriz de itens que atendem aos critérios que passamos e, portanto, contém, no máximo, o mesmo número de tipos de dados que são solicitados. também é possível que nenhum dos tipos solicitados esteja presente e uma matriz vazia será retornada.
 
-Por exemplo, o código a seguir verifica se existe um `NSImage` existente na área de ti geral e o exibe em uma imagem bem se ela:
+Por exemplo, o código a seguir verifica se existe uma `NSImage` na área de ti geral e a exibe em uma imagem bem se ela:
 
 ```csharp
 [Export("PasteImage:")]
@@ -767,8 +767,8 @@ public void PasteImage(NSObject sender) {
 
 Com base no tipo de aplicativo Xamarin. Mac que está sendo criado, pode ser capaz de lidar com várias representações dos dados que estão sendo colados. Nessa situação, há dois cenários para recuperar dados da área de ti:
 
-1. Faça uma única chamada para o `ReadObjectsForClasses` método e forneça uma matriz de todas as representações que você deseja (na ordem preferida).
-2. Faça várias chamadas para o `ReadObjectsForClasses` método solicitando uma matriz de tipos diferente a cada vez.
+1. Faça uma única chamada para o método `ReadObjectsForClasses` e forneça uma matriz de todas as representações que você deseja (na ordem preferida).
+2. Faça várias chamadas para o método `ReadObjectsForClasses` solicitando uma matriz diferente de tipos a cada vez.
 
 Consulte a seção **operação de colagem simples** acima para obter mais detalhes sobre como recuperar dados de uma área de ti.
 
@@ -776,9 +776,9 @@ Consulte a seção **operação de colagem simples** acima para obter mais detal
 
 Há ocasiões em que você pode querer verificar se uma área de dados contém uma determinada representação, sem realmente ler os dados da área de folga (como habilitar o item de menu **colar** somente quando houver dados válidos).
 
-Chame o `CanReadObjectForClasses` método da área de colagem para ver se ele contém um determinado tipo.
+Chame o método `CanReadObjectForClasses` da área de colagem para ver se ele contém um determinado tipo.
 
-Por exemplo, o código a seguir determina se a área de ti `NSImage` geral contém uma instância:
+Por exemplo, o código a seguir determina se a área de ti geral contém uma instância de `NSImage`:
 
 ```csharp
 public bool ImageAvailableOnPasteboard {
@@ -795,7 +795,7 @@ public bool ImageAvailableOnPasteboard {
 
 ### <a name="reading-urls-from-the-pasteboard"></a>Lendo URLs na área de ti
 
-Com base na função de um determinado aplicativo Xamarin. Mac, pode ser necessário ler URLs de uma área de dados, mas somente se eles atenderem a um determinado conjunto de critérios (como apontar para arquivos ou URLs de um tipo de dados específico). Nessa situação, você pode especificar critérios de pesquisa adicionais usando o segundo parâmetro dos `CanReadObjectForClasses` métodos ou. `ReadObjectsForClasses`
+Com base na função de um determinado aplicativo Xamarin. Mac, pode ser necessário ler URLs de uma área de dados, mas somente se eles atenderem a um determinado conjunto de critérios (como apontar para arquivos ou URLs de um tipo de dados específico). Nessa situação, você pode especificar critérios de pesquisa adicionais usando o segundo parâmetro dos métodos `CanReadObjectForClasses` ou `ReadObjectsForClasses`.
 
 <a name="Custom_Data_Types" />
 
@@ -803,7 +803,7 @@ Com base na função de um determinado aplicativo Xamarin. Mac, pode ser necess�
 
 Há ocasiões em que você precisará salvar seus próprios tipos personalizados na área de colagem de um aplicativo Xamarin. Mac. Por exemplo, um aplicativo de desenho de vetor que permite ao usuário copiar e colar objetos de desenho.
 
-Nessa situação, você precisará criar sua classe personalizada de dados para que ela seja herdada `NSObject` e esteja de acordo com algumas interfaces `INSPasteboardWriting` (`INSCoding`e `INSPasteboardReading`). Opcionalmente, você pode usar um `NSPasteboardItem` para encapsular os dados a serem copiados ou colados.
+Nessa situação, você precisará criar sua classe personalizada de dados para que ela seja herdada de `NSObject` e esteja de acordo com algumas interfaces (`INSCoding`, `INSPasteboardWriting` e `INSPasteboardReading`). Opcionalmente, você pode usar um `NSPasteboardItem` para encapsular os dados a serem copiados ou colados.
 
 Essas duas opções serão abordadas em detalhes abaixo.
 
@@ -929,7 +929,7 @@ Nas seções a seguir, vamos dar uma olhada detalhada nessa classe.
 
 #### <a name="inheritance-and-interfaces"></a>Herança e interfaces
 
-Antes que uma classe de dados personalizada possa ser gravada ou lida em uma área de ti, ela `INSPastebaordWriting` deve `INSPasteboardReading` estar em conformidade com as interfaces e. Além disso, ele deve herdar `NSObject` de e também estar em `INSCoding` conformidade com a interface:
+Antes que uma classe de dados personalizada possa ser gravada ou lida em uma área de ti, ela deve estar em conformidade com as interfaces `INSPastebaordWriting` e `INSPasteboardReading`. Além disso, ele deve herdar de `NSObject` e também estar em conformidade com a interface `INSCoding`:
 
 ```csharp
 [Register("ImageInfo")]
@@ -937,7 +937,7 @@ public class ImageInfo : NSObject, INSCoding, INSPasteboardWriting, INSPasteboar
 ...
 ```
 
-A classe também deve ser exposta a Objective-C usando `Register` a diretiva e deve expor quaisquer propriedades ou métodos necessários usando `Export`o. Por exemplo:
+A classe também deve ser exposta a Objective-C usando a diretiva `Register` e deve expor quaisquer propriedades ou métodos necessários usando `Export`. Por exemplo:
 
 ```csharp
 [Export("name")]
@@ -949,7 +949,7 @@ public string ImageType { get; set; }
 
 Estamos expondo os dois campos de dados que essa classe conterá: o nome da imagem e seu tipo (jpg, png, etc.). 
 
-Para obter mais informações, consulte a seção [ C# expondo classes/métodos para Objective-C](~/mac/internals/how-it-works.md) da documentação [interna do Xamarin. Mac](~/mac/internals/how-it-works.md) , ele explica `Register` os `Export` atributos e usados para conectar suas C# classes ao Objetos Objective-C e elementos de interface do usuário.
+Para obter mais informações, consulte a seção [ C# expondo classes/métodos para Objective-C](~/mac/internals/how-it-works.md) da documentação [interna do Xamarin. Mac](~/mac/internals/how-it-works.md) , ele explica o `Register` e `Export` atributos usados para conectar suas C# classes ao Objective-C objetos e elementos de interface do usuário.
 
 #### <a name="constructors"></a>Construtores
 
@@ -976,13 +976,13 @@ public ImageInfo(NSCoder decoder) {
 
 Primeiro, expõemos o construtor _vazio_ no método Objective-C padrão de `init`.
 
-Em seguida, expõemos `NSCoding` um Construtor compatível que será usado para criar uma nova instância do objeto da área de colagem ao colar sob o nome exportado `initWithCoder`de.
+Em seguida, expõemos um Construtor compatível com `NSCoding` que será usado para criar uma nova instância do objeto da área de colagem ao colar sob o nome exportado de `initWithCoder`.
 
 Esse construtor usa um `NSCoder` (conforme criado por um `NSKeyedArchiver` quando gravado na área de dados), extrai os dados emparelhados de chave/valor e salva-os nos campos de propriedade da classe data.
 
 #### <a name="writing-to-the-pasteboard"></a>Gravando na área de colagem
 
-Ao estar em conformidade com a `INSPasteboardWriting` interface, precisamos expor dois métodos e, opcionalmente, um terceiro método, para que a classe possa ser gravada na área de ti.
+Ao estar em conformidade com a interface `INSPasteboardWriting`, precisamos expor dois métodos e, opcionalmente, um terceiro método, para que a classe possa ser gravada na área de ti.
 
 Primeiro, precisamos dizer à área de os quais representações de tipo de dados para as quais a classe personalizada pode ser gravada:
 
@@ -996,7 +996,7 @@ public virtual string[] GetWritableTypesForPasteboard (NSPasteboard pasteboard) 
 
 Cada representação é identificada por meio de um identificador de tipo uniforme (UTI), que não é nada mais do que uma cadeia de caracteres simples que identifica exclusivamente o tipo de dados apresentado (para obter mais informações, consulte [visão geral dos identificadores de tipo uniforme](https://developer.apple.com/library/prerelease/mac/documentation/FileManagement/Conceptual/understanding_utis/understand_utis_intro/understand_utis_intro.html#//apple_ref/doc/uid/TP40001319) da Apple documentação).
 
-Para nosso formato personalizado, estamos criando nosso próprio UTI: "com. xamarin. Image-Info" (Observe que está em notação inversa, exatamente como um identificador de aplicativo). Nossa classe também é capaz de gravar uma cadeia de caracteres padrão na área`public.text`de (). 
+Para nosso formato personalizado, estamos criando nosso próprio UTI: "com. xamarin. Image-Info" (Observe que está em notação inversa, exatamente como um identificador de aplicativo). Nossa classe também é capaz de escrever uma cadeia de caracteres padrão na área de (`public.text`). 
 
 Em seguida, precisamos criar o objeto no formato solicitado que realmente é gravado na área de entrada:
 
@@ -1017,7 +1017,7 @@ public virtual NSObject GetPasteboardPropertyListForType (string type) {
 }
 ```
 
-Para o `public.text` tipo, estamos retornando um objeto simples e `NSString` formatado. Para o tipo `com.xamarin.image-info` personalizado, estamos usando um `NSKeyedArchiver` e a `NSCoder` interface para codificar a classe de dados personalizada para um arquivo de chave/valor emparelhado. Precisaremos implementar o método a seguir para realmente lidar com a codificação:
+Para o tipo de `public.text`, estamos retornando um objeto de `NSString` simples e formatado. Para o tipo de `com.xamarin.image-info` personalizado, estamos usando uma `NSKeyedArchiver` e a interface de `NSCoder` para codificar a classe de dados personalizada para um arquivo emparelhado de chave/valor. Precisaremos implementar o método a seguir para realmente lidar com a codificação:
 
 ```csharp
 [Export ("encodeWithCoder:")]
@@ -1040,7 +1040,7 @@ public virtual NSPasteboardWritingOptions GetWritingOptionsForType (string type,
 }
 ```
 
-Atualmente, apenas `WritingPromised` a opção está disponível e deve ser usada quando um determinado tipo é prometido apenas e não é gravado na área de dados. Para obter mais informações, consulte a seção [dados prometidos](#Promised_Data) acima.
+No momento, apenas a opção `WritingPromised` está disponível e deve ser usada quando um determinado tipo é prometido apenas e não gravado na área de dados. Para obter mais informações, consulte a seção [dados prometidos](#Promised_Data) acima.
 
 Com esses métodos em vigor, o código a seguir pode ser usado para escrever nossa classe personalizada na área de entrada:
 
@@ -1057,7 +1057,7 @@ pasteboard.WriteObjects (new ImageInfo[] { Info });
 
 #### <a name="reading-from-the-pasteboard"></a>Lendo na área de ti
 
-Ao estar em conformidade com a `INSPasteboardReading` interface, precisamos expor três métodos para que a classe de dados personalizada possa ser lida na área de colagem.
+Ao estar em conformidade com a interface `INSPasteboardReading`, precisamos expor três métodos para que a classe de dados personalizada possa ser lida na área de ti.
 
 Primeiro, precisamos informar à área de os quais representações de tipo de dados que a classe personalizada pode ler da área de transferência:
 
@@ -1090,7 +1090,7 @@ public static NSPasteboardReadingOptions GetReadingOptionsForType (string type, 
 }
 ```
 
-Para o `com.xamarin.image-info` tipo, estamos dizendo à área de colagem para decodificar o par de chave/valor que criamos com o `NSKeyedArchiver` ao gravar a classe na área de `initWithCoder:` os chamando o construtor que adicionamos à classe.
+Para o tipo de `com.xamarin.image-info`, estamos dizendo à área de colagem para decodificar o par de chave/valor que criamos com o `NSKeyedArchiver` ao gravar a classe na área de colagem chamando o Construtor `initWithCoder:` que adicionamos à classe.
 
 Finalmente, precisamos adicionar o seguinte método para ler as outras representações de dados do UTI da área de ti:
 
@@ -1133,11 +1133,11 @@ if (ok) {
 
 Pode haver ocasiões em que você precisa escrever itens personalizados na área de dados que não garantem a criação de uma classe personalizada ou que você queira fornecer dados em um formato comum, somente conforme necessário. Para essas situações, você pode usar um `NSPasteboardItem`.
 
-Um `NSPasteboardItem` fornece controle refinado sobre os dados que são gravados na área de ti e é projetado para acesso temporário-ele deve ser descartado depois de ser gravado na área de dados.
+Um `NSPasteboardItem` fornece controle refinado sobre os dados que são gravados na área de ti e é projetado para acesso temporário-ele deve ser descartado após ter sido gravado na área de ti.
 
 #### <a name="writing-data"></a>Gravando dados
 
-Para gravar seus dados personalizados em um `NSPasteboardItem` , você precisará fornecer um personalizado `NSPasteboardItemDataProvider`. Adicione uma nova classe ao projeto e chame-a de **ImageInfoDataProvider.cs**. Edite o arquivo e faça com que ele se pareça com o seguinte:
+Para gravar seus dados personalizados em um `NSPasteboardItem` você precisará fornecer uma `NSPasteboardItemDataProvider` personalizada. Adicione uma nova classe ao projeto e chame-a de **ImageInfoDataProvider.cs**. Edite o arquivo e faça com que ele se pareça com o seguinte:
 
 ```csharp
 using System;
@@ -1200,9 +1200,9 @@ namespace MacCopyPaste
 }
 ```
 
-Como fizemos com a classe de dados personalizada, precisamos usar as `Register` diretivas e `Export` para expô-la ao Objective-C. A classe deve herdar `NSPasteboardItemDataProvider` e deve implementar os `FinishedWithDataProvider` métodos `ProvideDataForType` e.
+Como fizemos com a classe de dados personalizada, precisamos usar as diretivas `Register` e `Export` para expô-la ao Objective-C. A classe deve herdar de `NSPasteboardItemDataProvider` e deve implementar os métodos `FinishedWithDataProvider` e `ProvideDataForType`.
 
-Use o `ProvideDataForType` método para fornecer os dados que serão encapsulados no da `NSPasteboardItem` seguinte maneira:
+Use o método `ProvideDataForType` para fornecer os dados que serão encapsulados na `NSPasteboardItem` da seguinte maneira:
 
 ```csharp
 [Export ("pasteboard:item:provideDataForType:")]
@@ -1220,7 +1220,7 @@ public override void ProvideDataForType (NSPasteboard pasteboard, NSPasteboardIt
 }
 ```
 
-Nesse caso, estamos armazenando duas partes de informações sobre nossa imagem (Name e ImageType) e gravando-as em uma cadeia de`public.text`caracteres simples ().
+Nesse caso, estamos armazenando duas partes de informações sobre nossa imagem (Name e ImageType) e gravando-as em uma cadeia de caracteres simples (`public.text`).
 
 Digite gravar os dados na área de colagem, use o seguinte código:
 

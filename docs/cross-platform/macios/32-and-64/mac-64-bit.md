@@ -7,17 +7,17 @@ author: conceptdev
 ms.author: crdun
 ms.date: 02/22/2018
 ms.openlocfilehash: 5539bab417c5efc0064cd1753cb74c7524463ee5
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "70765917"
 ---
 # <a name="updating-xamarinmac-unified-applications-to-64-bit"></a>Atualizando aplicativos unificados do Xamarin. Mac para 64 bits
 
 A partir de janeiro de 2018, a Apple requer que novas [submissas do Mac App Store tenham o destino de 64 bits](https://developer.apple.com/news/?id=06282017a). Os aplicativos já disponíveis na Mac App Store devem ser atualizados para o destino de 64 bits até junho de 2018.
 
-O **arquivo** > **novo** modelo de projeto Xamarin. Mac cria aplicativos de 64 bits por padrão, portanto, todos os aplicativos criados recentemente já são compatíveis com 64 bits e não exigirão nenhuma alteração.
+O **arquivo**  > **novo** modelo de projeto Xamarin. Mac cria aplicativos de 64 bits por padrão, portanto, todos os aplicativos criados recentemente já são compatíveis com 64 bits e não exigirão nenhuma alteração.
 
 ## <a name="targeting-64-bit"></a>Direcionamento de 64 bits
 
@@ -25,7 +25,7 @@ O **arquivo** > **novo** modelo de projeto Xamarin. Mac cria aplicativos de 64 b
 
    ![O menu contextual do projeto](mac-64-bit-images/1-contextual_menu-vsmac.png "O menu contextual do projeto")
 
-2. Selecione o **Build do Mac** e defina as **arquiteturas com suporte** para **\_x86 64**:
+2. Selecione **criação de Mac** e defina as **arquiteturas com suporte** para **x86 \_64**:
 
    [![Definindo as arquiteturas com suporte para o x86_64](mac-64-bit-images/2-project_options-vsmac.png "Definindo as arquiteturas com suporte para o x86_64")](mac-64-bit-images/2-project_options-vsmac-large.png#lightbox)
 
@@ -46,7 +46,7 @@ file was built for i386 which is not the architecture being linked (x86_64):
 PATH/ThirdPartyLibrary.framework/ThirdPartyLibrary 
 ```
 
-Esse erro pode ser seguido em tempo de `dlopen` execução `IntPtr.Zero` retornando em vez de um identificador esperado.
+Esse erro pode ser seguido em tempo de execução por `dlopen` retornando `IntPtr.Zero` em vez de um identificador esperado.
 
 #### <a name="example-error-resulting-from-a-statically-linked-third-party-dependency-that-does-not-target-64-bit"></a>Erro de exemplo resultante de uma dependência de terceiros vinculada estaticamente que não tem como alvo 64 bits:
 

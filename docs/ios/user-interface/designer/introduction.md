@@ -8,10 +8,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 01/31/2018
 ms.openlocfilehash: bb772d2b0cd50c1bac9b1d119adf4e9a04a341a3
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "71250147"
 ---
 # <a name="ios-designer-basics"></a>Noções básicas do iOS designer
@@ -40,13 +40,13 @@ Um controlador de exibição tem duas partes: uma representação visual no desi
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
-[![Um controlador de exibição no designer do IOS](introduction-images/1-storyboardwithviewcontroller-vsmac.png "Um controlador de exibição no designer do IOS")](introduction-images/1-storyboardwithviewcontroller-vsmac-large.png#lightbox)
+[![Um controlador de exibição no designer do iOS](introduction-images/1-storyboardwithviewcontroller-vsmac.png "Um controlador de exibição no designer do iOS")](introduction-images/1-storyboardwithviewcontroller-vsmac-large.png#lightbox)
 
 [![O código para um controlador de exibição](introduction-images/2-viewcontrollercode-vsmac.png "O código para um controlador de exibição")](introduction-images/2-viewcontrollercode-vsmac-large.png#lightbox)
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![Um controlador de exibição no designer do IOS](introduction-images/1-storyboardwithviewcontroller-vs.png "Um controlador de exibição no designer do IOS")](introduction-images/1-storyboardwithviewcontroller-vs-large.png#lightbox)
+[![Um controlador de exibição no designer do iOS](introduction-images/1-storyboardwithviewcontroller-vs.png "Um controlador de exibição no designer do iOS")](introduction-images/1-storyboardwithviewcontroller-vs-large.png#lightbox)
 
 [![O código para um controlador de exibição](introduction-images/2-viewcontrollercode-vs.png "O código para um controlador de exibição")](introduction-images/2-viewcontrollercode-vs-large.png#lightbox)
 
@@ -70,7 +70,7 @@ Alguns controles, como rótulos que contêm texto estático, podem ser adicionad
 
 Para acessar e manipular o botão no código, ele deve ter um identificador exclusivo. Forneça um identificador exclusivo selecionando o botão, abrindo o **painel de propriedades**e definindo seu campo de **nome** como um valor como "SubmitButton":
 
-[![Definindo o nome de um botão na painel de propriedades](introduction-images/4-settingbuttonname-vsmac.png "Definindo o nome de um botão na painel de propriedades")](introduction-images/4-settingbuttonname-vsmac-large.png#lightbox)
+[![Definindo o nome de um botão na Painel de Propriedades](introduction-images/4-settingbuttonname-vsmac.png "Definindo o nome de um botão na Painel de Propriedades")](introduction-images/4-settingbuttonname-vsmac-large.png#lightbox)
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
@@ -84,21 +84,21 @@ Agora que o botão tem um nome, ele pode ser acessado no código. Mas como isso 
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
-Na **painel de soluções**, navegar para **ViewController.cs** e clicar no indicador de divulgação revela que a definição de classe do `ViewController` controlador de exibição abrange dois arquivos, cada um contendo uma definição de [classe parcial](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/partial-classes-and-methods) :
+Na **painel de soluções**, navegar para **ViewController.cs** e clicar no indicador de divulgação revela que a definição de classe de `ViewController` do controlador de exibição abrange dois arquivos, cada um contendo uma definição de [classe parcial](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/partial-classes-and-methods) :
 
-[![Os dois arquivos que compõem a classe ViewController: ViewController.cs e ViewController.designer.cs](introduction-images/5-twoviewcontrollerfiles-vsmac.png "os dois arquivos que compõem a classe ViewController: ViewController.cs e ViewController.designer.cs")](introduction-images/5-twoviewcontrollerfiles-vsmac-large.png#lightbox)
+[![Os dois arquivos que compõem a classe ViewController: ViewController.cs e ViewController.designer.cs](introduction-images/5-twoviewcontrollerfiles-vsmac.png "Os dois arquivos que compõem a classe ViewController: ViewController.cs e ViewController.designer.cs")](introduction-images/5-twoviewcontrollerfiles-vsmac-large.png#lightbox)
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-Na **Gerenciador de soluções**, navegar para **ViewController.cs** e clicar no indicador de divulgação revela que a definição de classe do `ViewController` controlador de exibição abrange dois arquivos, cada um contendo uma [classe parcial](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/partial-classes-and-methods) defini
+Na **Gerenciador de soluções**, navegar para **ViewController.cs** e clicar no indicador de divulgação revela que a definição de classe de `ViewController` do controlador de exibição abrange dois arquivos, cada um contendo uma definição de [classe parcial](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/partial-classes-and-methods) :
 
-[![Os dois arquivos que compõem a classe ViewController: ViewController.cs e ViewController.designer.cs](introduction-images/5-twoviewcontrollerfiles-vs.png "os dois arquivos que compõem a classe ViewController: ViewController.cs e ViewController.designer.cs")](introduction-images/5-twoviewcontrollerfiles-vs-large.png#lightbox)
+[![Os dois arquivos que compõem a classe ViewController: ViewController.cs e ViewController.designer.cs](introduction-images/5-twoviewcontrollerfiles-vs.png "Os dois arquivos que compõem a classe ViewController: ViewController.cs e ViewController.designer.cs")](introduction-images/5-twoviewcontrollerfiles-vs-large.png#lightbox)
 
 -----
 
-- **ViewController.cs** deve ser preenchido com código personalizado relacionado à `ViewController` classe. Nesse arquivo, a `ViewController` classe pode responder a vários métodos de ciclo de vida do controlador de exibição do IOS, personalizar a interface do usuário e responder à entrada do usuários, como toques de botão.
+- **ViewController.cs** deve ser preenchido com código personalizado relacionado à classe `ViewController`. Nesse arquivo, a classe de `ViewController` pode responder a vários métodos de ciclo de vida do controlador de exibição do iOS, personalizar a interface do usuário e responder a entradas de usuários, como toques de botão.
 
-- **ViewController.designer.cs** é um arquivo gerado, criado pelo Ios designer para mapear a interface visualmente construída para código. Como as alterações nesse arquivo serão substituídas, elas não devem ser modificadas. As declarações de propriedade nesse arquivo possibilitam que o `ViewController` código na classe acesse, por **nome**, os controles configurados no designer do Ios. Abrir o **ViewController.designer.cs** revela o seguinte código:
+- **ViewController.designer.cs** é um arquivo gerado, criado pelo Ios designer para mapear a interface visualmente construída para código. Como as alterações nesse arquivo serão substituídas, elas não devem ser modificadas. As declarações de propriedade nesse arquivo possibilitam que o código na classe `ViewController` acesse, por **nome**, os controles configurados no designer do Ios. Abrir o **ViewController.designer.cs** revela o seguinte código:
 
 ```csharp
 namespace Designer
@@ -121,9 +121,9 @@ namespace Designer
 }
 ```
 
-A `SubmitButton` declaração de propriedade conecta toda `ViewController` a classe, não apenas o arquivo **ViewController.designer.cs** , ao botão definido no storyboard. Como **ViewController.cs** define parte da `ViewController` classe, ele tem acesso a `SubmitButton`.
+A declaração da propriedade `SubmitButton` conecta toda a classe de `ViewController`, não apenas o arquivo **ViewController.designer.cs** , ao botão definido no storyboard. Como **ViewController.cs** define parte da classe `ViewController`, ela tem acesso ao `SubmitButton`.
 
-A captura de tela a seguir ilustra que o `SubmitButton` IntelliSense agora reconhece a referência em **ViewController.cs**:
+A captura de tela a seguir ilustra que o IntelliSense agora reconhece a referência de `SubmitButton` em **ViewController.cs**:
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
@@ -149,13 +149,13 @@ Esta seção apresenta as partes do designer do iOS e fornece um tour pelos seus
 
 Os projetos do Xamarin. iOS criados com Visual Studio para Mac incluem um Storyboard. Para exibir o conteúdo de um storyboard, clique duas vezes no arquivo. Storyboard na **painel de soluções**:
 
-[![Um storyboard aberto no designer do IOS](introduction-images/7-storyboardopen-vsmac.png "Um storyboard aberto no designer do IOS")](introduction-images/7-storyboardopen-vsmac-large.png#lightbox)
+[![Um storyboard aberto no designer do iOS](introduction-images/7-storyboardopen-vsmac.png "Um storyboard aberto no designer do iOS")](introduction-images/7-storyboardopen-vsmac-large.png#lightbox)
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 A maioria dos projetos do Xamarin. iOS criados com o Visual Studio incluem um Storyboard. Para exibir o conteúdo de um storyboard, clique duas vezes no arquivo. Storyboard na **Gerenciador de soluções**:
 
-[![Um storyboard aberto no designer do IOS](introduction-images/7-storyboardopen-vs.png "Um storyboard aberto no designer do IOS")](introduction-images/7-storyboardopen-vs-large.png#lightbox)
+[![Um storyboard aberto no designer do iOS](introduction-images/7-storyboardopen-vs.png "Um storyboard aberto no designer do iOS")](introduction-images/7-storyboardopen-vs-large.png#lightbox)
 
 -----
 
@@ -167,7 +167,7 @@ O designer do iOS tem seis seções principais:
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
-[![Seções do designer do IOS](introduction-images/8-sixpartsofiosdesigner-vsmac.png "Seções do designer do IOS")](introduction-images/8-sixpartsofiosdesigner-vsmac-large.png#lightbox)
+[![Seções do designer do iOS](introduction-images/8-sixpartsofiosdesigner-vsmac.png "Seções do designer do iOS")](introduction-images/8-sixpartsofiosdesigner-vsmac-large.png#lightbox)
 
 1. **Design Surface** – o espaço de trabalho primário do designer do Ios. Mostrado na área do documento, ele permite a construção visual de interfaces do usuário.
 2. **Barra de ferramentas de restrições** – permite alternar entre o modo de edição de quadro e o modo de edição de restrição, duas maneiras diferentes de posicionar elementos em uma interface do usuário.
@@ -178,7 +178,7 @@ O designer do iOS tem seis seções principais:
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![Seções do designer do IOS](introduction-images/8-sixpartsofiosdesigner-vs.png "Seções do designer do IOS")](introduction-images/8-sixpartsofiosdesigner-vs-large.png#lightbox)
+[![Seções do designer do iOS](introduction-images/8-sixpartsofiosdesigner-vs.png "Seções do designer do iOS")](introduction-images/8-sixpartsofiosdesigner-vs-large.png#lightbox)
 
 1. **Design Surface** – o espaço de trabalho primário do designer do Ios. Mostrado na área do documento, ele permite a construção visual de interfaces do usuário.
 2. **Barra de ferramentas de restrições** – permite alternar entre o modo de edição de quadro e o modo de edição de restrição, duas maneiras diferentes de posicionar elementos em uma interface do usuário.
@@ -300,8 +300,8 @@ Observe que a seleção de um dispositivo e orientação altera apenas a forma c
 
 Quando as [classes de tamanho](~/ios/user-interface/storyboards/unified-storyboards.md#size-classes) estiverem [habilitadas](~/ios/user-interface/storyboards/unified-storyboards.md#enabling-size-classes), o botão **Editar características** será exibido na barra de ferramentas inferior expandida.  Clicar no botão **Editar características** exibe opções para criar uma variação de interface com base na classe de tamanho representada pelo dispositivo e orientação selecionados. Considere os exemplos a seguir:
 
-- Se a opção **iPhone se** / **retrato**estiver selecionada, o popover fornecerá opções para criar uma variação de interface para a classe tamanho compacto de altura normal. 
-- Se o **iPad Pro 9,7 "**  / **paisagem** / de**tela inteira** for selecionado, o popover fornecerá opções para criar uma variação de interface para a classe largura regular, tamanho normal de altura.
+- Se o **iPhone se**  / **retrato**, estiver selecionado, o popover fornecerá opções para criar uma variação de interface para a classe de tamanho de altura normal e largura de compactação. 
+- Se o **iPad Pro 9,7 "**  / **paisagem**  / **tela inteira** for selecionado, o popover fornecerá opções para criar uma variação de interface para a classe largura regular, tamanho normal de altura.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
@@ -342,7 +342,7 @@ Esses controles ajustam o zoom na superfície de design. Eles não afetam a inte
 
 Use o **painel de propriedades** para editar a identidade, os estilos visuais, a acessibilidade e o comportamento de um controle. A captura de tela a seguir ilustra as opções de **painel de propriedades** para um botão:
 
-[![O painel de propriedades para um botão](introduction-images/17-buttonpropertiespad-vsmac.png "O painel de propriedades para um botão")](introduction-images/17-buttonpropertiespad-vsmac-large.png#lightbox)
+[![O Painel de Propriedades para um botão](introduction-images/17-buttonpropertiespad-vsmac.png "O Painel de Propriedades para um botão")](introduction-images/17-buttonpropertiespad-vsmac-large.png#lightbox)
 #### <a name="properties-pad-sections"></a>Painel de Propriedades seções
 
 O **painel de propriedades** contém três seções:
@@ -406,19 +406,19 @@ Muitas propriedades na **janela Propriedades** não mostram nenhum valor ou um v
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
-Para especificar manipuladores de eventos personalizados para vários eventos, use a guia **eventos** do **painel de propriedades**. Por exemplo, na captura de tela abaixo, `HandleClick` um método manipula o evento de **toque interno** do botão:
+Para especificar manipuladores de eventos personalizados para vários eventos, use a guia **eventos** do **painel de propriedades**. Por exemplo, na captura de tela abaixo, um método `HandleClick` manipula o evento de **toque interno** do botão:
 
-[![O painel de propriedades, com um manipulador de eventos definido para um botão](introduction-images/19-buttonpropertiespadevents-vsmac.png "O painel de propriedades, com um manipulador de eventos definido para um botão")](introduction-images/19-buttonpropertiespadevents-vsmac-large.png#lightbox)
+[![O Painel de Propriedades, com um manipulador de eventos definido para um botão](introduction-images/19-buttonpropertiespadevents-vsmac.png "O Painel de Propriedades, com um manipulador de eventos definido para um botão")](introduction-images/19-buttonpropertiespadevents-vsmac-large.png#lightbox)
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-Para especificar manipuladores de eventos personalizados para vários eventos, use a guia **eventos** da **janela Propriedades**. Por exemplo, na captura de tela abaixo, `HandleClick` um método manipula o evento de **toque interno** do botão:
+Para especificar manipuladores de eventos personalizados para vários eventos, use a guia **eventos** da **janela Propriedades**. Por exemplo, na captura de tela abaixo, um método `HandleClick` manipula o evento de **toque interno** do botão:
 
 [![A janela Propriedades, com um manipulador de eventos definido para um botão](introduction-images/19-buttonpropertieswindowevents-vs.png "A janela Propriedades, com um manipulador de eventos definido para um botão")](introduction-images/19-buttonpropertieswindowevents-vs-large.png#lightbox)
 
 -----
 
-Depois que um manipulador de eventos tiver sido especificado, um método de mesmo nome deverá ser adicionado à classe do controlador de exibição correspondente. Caso contrário, `unrecognized selector` ocorrerá uma exceção quando o botão for tocado:
+Depois que um manipulador de eventos tiver sido especificado, um método de mesmo nome deverá ser adicionado à classe do controlador de exibição correspondente. Caso contrário, ocorrerá uma exceção de `unrecognized selector` quando o botão for tocado:
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 

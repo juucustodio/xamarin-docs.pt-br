@@ -8,24 +8,24 @@ author: conceptdev
 ms.author: crdun
 ms.date: 07/17/2018
 ms.openlocfilehash: d130d28b6cf0f15dab3a743a9a3fba144b75a67d
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "70289431"
 ---
 # <a name="application-lifecycle-demo-for-xamarinios"></a>Demonstração do ciclo de vida do aplicativo para Xamarin. iOS
 
-Este artigo e [código de exemplo](https://docs.microsoft.com/samples/xamarin/ios-samples/lifecycledemo) demonstra os quatro Estados do aplicativo no Ios e a função dos `AppDelegate` métodos de notificação da aplicação de quando os Estados são alterados. O aplicativo imprimirá atualizações no console sempre que o aplicativo alterar o estado:
+Este artigo e [código de exemplo](https://docs.microsoft.com/samples/xamarin/ios-samples/lifecycledemo) demonstra os quatro Estados do aplicativo no Ios, e a função dos métodos de `AppDelegate` notificando a aplicação de quando os Estados são alterados. O aplicativo imprimirá atualizações no console sempre que o aplicativo alterar o estado:
 
-[![](application-lifecycle-demo-images/image3-sml.png "O aplicativo de exemplo")](application-lifecycle-demo-images/image3.png#lightbox)
+[![](application-lifecycle-demo-images/image3-sml.png "The sample app")](application-lifecycle-demo-images/image3.png#lightbox)
 
-[![](application-lifecycle-demo-images/image4.png "O aplicativo imprimirá atualizações no console sempre que o aplicativo mudar de estado")](application-lifecycle-demo-images/image4.png#lightbox)
+[![](application-lifecycle-demo-images/image4.png "The app will print updates to the console whenever the app changes state")](application-lifecycle-demo-images/image4.png#lightbox)
 
 ## <a name="walkthrough"></a>Passo a passo
 
 1. Abra o projeto de **ciclo de vida** na solução **LifecycleDemo** .
-1. Abra a `AppDelegate` classe. O registro em log foi adicionado aos métodos do ciclo de vida para indicar quando o estado do aplicativo foi alterado:
+1. Abra a classe `AppDelegate`. O registro em log foi adicionado aos métodos do ciclo de vida para indicar quando o estado do aplicativo foi alterado:
 
     ```csharp
     public override void OnActivated(UIApplication application)
@@ -51,11 +51,11 @@ Este artigo e [código de exemplo](https://docs.microsoft.com/samples/xamarin/io
     }
     ```
 
-1. Inicie o aplicativo no simulador ou no dispositivo. `OnActivated`será chamado quando o aplicativo for iniciado. O aplicativo agora está no estado _ativo_ .
-1. Pressione o botão Início no simulador ou dispositivo para colocar o aplicativo em segundo plano. `OnResignActivation`e `DidEnterBackground` será chamado como o aplicativo faz a transição de `Active` para `Inactive` e para o `Backgrounded` estado. Como não há nenhum código de aplicativo definido para ser executado em segundo plano, o aplicativo é considerado _suspenso_ na memória.
-1. Navegue de volta para o aplicativo para trazê-lo de volta para o primeiro plano. `WillEnterForeground`e `OnActivated` ambos serão chamados:
+1. Inicie o aplicativo no simulador ou no dispositivo. `OnActivated` será chamado quando o aplicativo for iniciado. O aplicativo agora está no estado _ativo_ .
+1. Pressione o botão Início no simulador ou dispositivo para colocar o aplicativo em segundo plano. `OnResignActivation` e `DidEnterBackground` serão chamados como o aplicativo faz a transição de `Active` para `Inactive` e para o estado `Backgrounded`. Como não há nenhum código de aplicativo definido para ser executado em segundo plano, o aplicativo é considerado _suspenso_ na memória.
+1. Navegue de volta para o aplicativo para trazê-lo de volta para o primeiro plano. `WillEnterForeground` e `OnActivated` serão chamados:
 
-    ![](application-lifecycle-demo-images/image4.png "Alterações de estado impressas no console")
+    ![](application-lifecycle-demo-images/image4.png "State changes printed to the console")
 
     A linha de código a seguir no controlador de exibição é executada quando o aplicativo insere o primeiro plano do plano de fundo e altera o texto exibido na tela:
 

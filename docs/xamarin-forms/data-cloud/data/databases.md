@@ -8,25 +8,25 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 06/21/2018
 ms.openlocfilehash: 9ea105b27aacef9ca9d63af0c57de880d039ff53
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "68739174"
 ---
 # <a name="xamarinforms-local-databases"></a>Bancos de dados locais do Xamarin.Forms
 
 [![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo)
 
-_O Xamarin.Forms dá suporte a aplicativos controlados por banco de dados usando o mecanismo de banco de dados SQLite, que torna possível carregar e salvar objetos em código compartilhado. Este artigo descreve como os aplicativos Xamarin.Forms podem ler e gravar dados em um banco de dados SQLite local usando o SQLite.Net._
+_O Xamarin. Forms dá suporte a aplicativos baseados em banco de dados usando o mecanismo de banco de dados SQLite, que possibilita carregar e salvar objetos no código compartilhado. Este artigo descreve como os aplicativos Xamarin. Forms podem ler e gravar dados em um banco de dados SQLite local usando o SQLite.Net._
 
-## <a name="overview"></a>Visão geral
+## <a name="overview"></a>Visão Geral
 
 Os aplicativos Xamarin.Forms podem usar o pacote [NuGet SQLite.NET PCL](https://www.nuget.org/packages/sqlite-net-pcl/) para incorporar operações de banco de dados no código compartilhado referenciando as classes `SQLite` que acompanham o NuGet. As operações de banco de dados podem ser definidas no projeto de biblioteca do .NET Standard da solução Xamarin.Forms.
 
 O [aplicativo de exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo) que acompanha é um aplicativo simples de lista de tarefas. As capturas de tela a seguir mostram como o exemplo é exibido em cada plataforma:
 
-[![Capturas de tela de exemplo do banco de dados Xamarin. Forms](databases-images/todo-list-sml.png "Capturas de tela da primeira") ](databases-images/todo-list.png#lightbox "Capturas de tela da primeira lista de tarefas") lista de tarefas [ ![Bancos de dados do Xamarin. Forms exemplo capturas]de tela(databases-images/todo-list-sml.png "todo da primeira página") ](databases-images/todo-list.png#lightbox "Capturas de tela da primeira lista de tarefas")
+[![Banco de dados do xamarin. Forms exemplo](databases-images/todo-list-sml.png "Capturas de tela da primeira lista de tarefas")](databases-images/todo-list.png#lightbox "Capturas de tela da primeira lista de tarefas") capturas de tela de [ ![exemplo do banco de dados xamarin. Forms](databases-images/todo-list-sml.png "Capturas de tela da primeira lista de tarefas")](databases-images/todo-list.png#lightbox "Capturas de tela da primeira lista de tarefas")
 
 <a name="Using_SQLite_with_PCL" />
 
@@ -34,7 +34,7 @@ O [aplicativo de exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-for
 
 Para adicionar o suporte do SQLite em uma biblioteca do .NET Standard Xamarin.Forms, use a função de pesquisa do NuGet para localizar **sqlite-net-pcl** e instalar o pacote mais recente:
 
-![Adicione o pacote NuGet SQLite.NET PCL](databases-images/vs2017-sqlite-pcl-nuget.png "Adicione o pacote NuGet SQLite.NET PCL")
+![Adicionar pacote do NuGet SQLite.NET PCL](databases-images/vs2017-sqlite-pcl-nuget.png "Adicionar pacote do NuGet SQLite.NET PCL")
 
 Há inúmeros pacotes NuGet com nomes semelhantes. O pacote correto tem estes atributos:
 

@@ -8,22 +8,22 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/17/2017
 ms.openlocfilehash: c37d8592b7aadc2c88c31826bc954abfa3c0836d
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "70766797"
 ---
 # <a name="watchos-menu-control-force-touch-in-xamarin"></a>Controle de menu watchOS (Force Touch) no Xamarin
 
 O kit de inspeção fornece um gesto de Force Touch que dispara um menu quando implementado em uma tela de aplicativo de inspeção.
 
-![](menu-images/menu.png "Apple Watch mostrando um menu")
+![](menu-images/menu.png "Apple Watch showing a menu")
 <!-- watch image courtesy of http://infinitapps.com/bezel/ -->
 
 ## <a name="responding-to-force-touch"></a>Respondendo a Force Touch
 
-Se um `Menu` tiver sido implementado para um controlador de interface, quando um usuário executar uma Force Touch menu será exibido. Se nenhum menu tiver sido implementado, a tela será animada rapidamente, não ocorrerá nenhuma outra ação.
+Se um `Menu` tiver sido implementado para um controlador de interface, quando um usuário executar uma Force Touch o menu será exibido. Se nenhum menu tiver sido implementado, a tela será animada rapidamente, não ocorrerá nenhuma outra ação.
 
 Os toques de força não estão associados a nenhum elemento específico na tela; somente um menu pode ser anexado a um controlador de interface e aparecerá independentemente de onde o Force Touch pressionar ocorre na tela.
 
@@ -33,15 +33,15 @@ Entre uma e quatro opções de menu podem ser apresentadas.
 
 Um `Menu` deve ser adicionado a um `InterfaceController` no storyboard em tempo de design. Quando um controle de menu é arrastado para um controlador de interface, não há nenhuma indicação visual na visualização do storyboard, mas o **menu** é exibido no bloco de **Tópicos do documento** :
 
-![](menu-images/menu-action.png "Editando um menu em tempo de design")
+![](menu-images/menu-action.png "Editing a menu at design time")
 
 Até quatro itens de menu podem ser adicionados ao controle de menu. Eles podem ser configurados no painel de **Propriedades** . Os seguintes atributos podem ser definidos:
 
 - Título e
 - Imagem personalizada ou
-- Uma imagem do sistema: Aceitar, adicionar, bloquear, recusar, informações, talvez, mais, sem áudio, pausar, reproduzir, repetir, retomar, compartilhar, embaralhar, palestrante, lixeira.
+- Uma imagem do sistema: aceitar, adicionar, bloquear, recusar, informações, talvez, mais, sem áudio, pausar, reproduzir, repetir, retomar, compartilhar, embaralhar, palestrante, Trash.
 
-Crie um `Action` selecionando a seção **eventos** do painel de **Propriedades** e digitando o nome do método de ação. Um método parcial será criado no código, que pode ser implementado na classe do controlador de interface, desta forma:
+Crie um `Action` selecionando a seção **eventos** do painel de **Propriedades** e digitando o nome para o método de ação. Um método parcial será criado no código, que pode ser implementado na classe do controlador de interface, desta forma:
 
 ```csharp
 partial void MenuItemTapped ()
@@ -66,14 +66,14 @@ Menu items added the storyboard can be shown and hidden programmatically.
 
 ### <a name="adding-at-runtime"></a>Adicionando em tempo de execução
 
-Você não pode fazer `Menu` com que um seja adicionado a um controlador de interface em tempo de execução `MenuItem`, embora a coleção de s *possa* ser alterada programaticamente.
-Use o `AddMenuItem` método conforme mostrado:
+Você não pode fazer com que um `Menu` seja adicionado a um controlador de interface em tempo de execução, embora a coleção de `MenuItem`s *possa* ser alterada programaticamente.
+Use o método `AddMenuItem` conforme mostrado:
 
 ```csharp
 AddMenuItem (WKMenuItemIcon.Accept, "Yes", new ObjCRuntime.Selector ("tapped"));
 ```
 
-A API do kit de inspeção do Xamarin. Ios `selector` atualmente requer `AdMenuItem` um para o método, que deve ser declarado da seguinte maneira:
+A API do kit de inspeção do Xamarin. iOS atualmente requer um `selector` para o método `AdMenuItem`, que deve ser declarado da seguinte maneira:
 
 ```csharp
 [Export("tapped")]
@@ -85,11 +85,11 @@ void MenuItemTapped ()
 
 ### <a name="removing-at-runtime"></a>Removendo em tempo de execução
 
-O `ClearAllMenuItems` método pode ser chamado para remover todos os itens de menu *adicionados programaticamente* .
+O método `ClearAllMenuItems` pode ser chamado para remover todos os itens de menu *adicionados programaticamente* .
 
 Os itens de menu configurados no storyboard não podem ser apagados.
 
 ## <a name="related-links"></a>Links relacionados
 
-- [WatchKitCatalog (amostra)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
+- [WatchKitCatalog (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
 - [Documento de menu da Apple](https://developer.apple.com/library/prerelease/ios/documentation/General/Conceptual/WatchKitProgrammingGuide/Menus.html)

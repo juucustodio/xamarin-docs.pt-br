@@ -8,15 +8,15 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
 ms.openlocfilehash: 70646999154297592137c6966626b318fb73897c
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "70771261"
 ---
 # <a name="introduction-to-xamarinforms-control-templates"></a>Introdução aos modelos de controle do Xamarin.Forms
 
-_Os modelos de controle do Xamarin.Forms fornecem a capacidade de tematizar e tematizar novamente páginas de aplicativo em tempo de execução. Este artigo fornece uma introdução a modelos de controle._
+_Os modelos de controle do Xamarin. Forms fornecem a capacidade de aplicar temas e reformular páginas de aplicativo em tempo de execução. Este artigo fornece uma introdução aos modelos de controle._
 
 Os controles têm propriedades diferentes, tais como `BackgroundColor` e `TextColor`, que podem definir aspectos da aparência do controle. Essas propriedades podem ser definidas usando [estilos](~/xamarin-forms/user-interface/styles/index.md), que pode ser alterado em tempo de execução para implementar temas básicos. No entanto, os estilos não mantêm uma separação clara entre a aparência de uma página e seu conteúdo e as alterações que podem ser feitas ao definir essas propriedades são limitadas.
 
@@ -26,7 +26,7 @@ Os modelos de controle fornecem uma separação clara entre a aparência de uma 
 
 Um [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) especifica a aparência de uma página ou de uma exibição e contém um layout raiz e, dentro do layout, os controles que implementam o modelo. Normalmente, um `ControlTemplate` utilizará um [`ContentPresenter`](xref:Xamarin.Forms.ContentPresenter) para marcar onde o conteúdo a ser exibido pela página ou pela exibição será exibido. A página ou a exibição que consome o `ControlTemplate` definirá o conteúdo a ser exibido pelo `ContentPresenter`. O diagrama a seguir ilustra um `ControlTemplate` para uma página que contém um número de controles, incluindo um `ContentPresenter` marcado por um retângulo azul:
 
-![](introduction-images/control-template.png "Modelo de controle para uma página")
+![](introduction-images/control-template.png "Control Template for a Page")
 
 Um [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) pode ser aplicado aos seguintes tipos definindo suas propriedades `ControlTemplate`:
 

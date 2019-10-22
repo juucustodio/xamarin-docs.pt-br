@@ -8,10 +8,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 07/13/2018
 ms.openlocfilehash: 255f308078c892605b9ce20b17fd737c5582eaed
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "70768985"
 ---
 # <a name="displaying-images-with-xamarinios"></a>Exibindo imagens com Xamarin. iOS
@@ -26,7 +26,7 @@ O Visual Studio para Mac também dá suporte a um diretório especial chamado **
 
 Esta captura de tela mostra as opções de **ação de compilação** que aparecem quando um arquivo é clicado com o botão direito do mouse:
 
- [![](image-images/image30a.png "Menu de ação de Build")](image-images/image30a.png#lightbox)
+ [![](image-images/image30a.png "Build Action menu")](image-images/image30a.png#lightbox)
 
 O Visual Studio para Mac normalmente escolherá a **ação de Build** correta automaticamente, mas você deve estar ciente dessas configurações, especialmente se você mover arquivos em seu projeto.
 
@@ -34,15 +34,15 @@ O Visual Studio para Mac normalmente escolherá a **ação de Build** correta au
 
 Para adicionar um arquivo de imagem ao seu projeto, primeiro clique com o botão direito do mouse no projeto e escolha **Adicionar arquivos...**
 
- [![](image-images/image31a.png "Adicionar arquivos... AdicionarMenu")](image-images/image31a.png#lightbox)
+ [![](image-images/image31a.png "Add Files... menu")](image-images/image31a.png#lightbox)
 
 Selecione a imagem (ou imagens) que você deseja incluir na caixa de diálogo arquivo padrão. A ação de compilação padrão para imagens será **BundleResource** – não substitua esse valor, a menos que você tenha um motivo específico.
 
- [![](image-images/image32a.png "Caixa de diálogo Adicionar arquivos")](image-images/image32a.png#lightbox)
+ [![](image-images/image32a.png "Add Files dialog")](image-images/image32a.png#lightbox)
 
 A imagem será adicionada ao seu projeto e estará disponível para ser carregada e exibida no código. Esta captura de tela mostra uma imagem adicionada a um projeto de aplicativo iOS:
 
- [![](image-images/image33a.png "Imagem no projeto")](image-images/image33a.png#lightbox)
+ [![](image-images/image33a.png "Image in project")](image-images/image33a.png#lightbox)
 
 ### <a name="what-is-the-resources-directory"></a>O que é o diretório de recursos?
 
@@ -59,11 +59,11 @@ O diretório de **recursos** deve ser tão nomeado, e todos os arquivos devem te
 
 No designer do iOS, use uma **exibição de imagem** para exibir uma imagem ou uma série animada de imagens. O ícone de **exibição de imagem** da caixa de ferramentas é mostrado abaixo:
 
- [![](image-images/image35a.png "ImageView na caixa de ferramentas")](image-images/image35.png#lightbox)
+ [![](image-images/image35a.png "ImageView in Toolbox")](image-images/image35.png#lightbox)
 
 Arraste o **modo de exibição de imagem** da **caixa de ferramentas** para o controlador de exibição. Em seguida, em **modo de exibição de imagem > imagem** , a lista suspensa fornecerá uma lista de todos os arquivos de imagem disponíveis em seu projeto. Selecione qualquer um deles para adicioná-lo à sua exibição de imagem.
 
- [![](image-images/image36a.png "ImageView na caixa de ferramentas")](image-images/image36.png#lightbox)
+ [![](image-images/image36a.png "ImageView in Toolbox")](image-images/image36.png#lightbox)
 
 ### <a name="displaying-the-image-programmatically"></a>Exibindo a imagem programaticamente
 

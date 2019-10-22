@@ -7,10 +7,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/29/2017
 ms.openlocfilehash: 441a3cc19b4246fb2bdea54508142a894af5c051
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "67832543"
 ---
 # <a name="introduction-to-urhosharp"></a>Introdução ao UrhoSharp
@@ -68,7 +68,7 @@ Enquanto os outros exemplos mostram propriedades individuais de cada amostra.
 
 ## <a name="basic-structure"></a>Estrutura básica
 
-Seu jogo deve criar uma subclasse `Application` da classe, é aqui que você irá configurar seu jogo ( `Setup` no método) e iniciar `Start` o jogo (no método).  Em seguida, você constrói a interface do usuário principal.  Vamos examinar um pequeno exemplo que mostra as APIs para configurar uma cena 3D, alguns elementos da interface do usuário e anexar um comportamento simples a ele.
+Seu jogo deve criar uma subclasse da classe `Application`, é aqui que você configurará seu jogo (no método `Setup`) e iniciará o jogo (no método `Start`).  Em seguida, você constrói a interface do usuário principal.  Vamos examinar um pequeno exemplo que mostra as APIs para configurar uma cena 3D, alguns elementos da interface do usuário e anexar um comportamento simples a ele.
 
 ```csharp
 class MySample : Application {
@@ -135,9 +135,9 @@ Para iniciar seu aplicativo, você chama a função de inicialização do mecani
 new MySample().Run();
 ```
 
-O tempo de execução invocará `Start` os `Setup` métodos e para você.  Se você substituir `Setup` , poderá configurar os parâmetros do mecanismo (não mostrar neste exemplo).
+O tempo de execução invocará os métodos `Setup` e `Start` para você.  Se você substituir `Setup` você poderá configurar os parâmetros do mecanismo (não mostrar neste exemplo).
 
-Você deve substituir `Start` , pois isso abrirá o jogo.  Nesse método, você carregará seus ativos, conectará manipuladores de eventos, configurará sua cena e iniciará as ações que desejar.  Em nosso exemplo, nós criamos um pouco de interface de usuário para mostrar ao usuário, bem como configurar uma cena 3D.
+Você deve substituir `Start`, pois isso iniciará o jogo.  Nesse método, você carregará seus ativos, conectará manipuladores de eventos, configurará sua cena e iniciará as ações que desejar.  Em nosso exemplo, nós criamos um pouco de interface de usuário para mostrar ao usuário, bem como configurar uma cena 3D.
 
 O trecho de código a seguir usa a estrutura de interface do usuário para criar um elemento de texto e adicioná-lo ao seu aplicativo:
 
@@ -156,11 +156,11 @@ helloText.SetFont(
 UI.Root.AddChild(helloText);
 ```
 
-A estrutura da interface do usuário está lá para fornecer uma interface do usuário no jogo muito simples e funciona adicionando novos nós ao `UI.Root` nó.
+A estrutura da interface do usuário está lá para fornecer uma interface do usuário no jogo muito simples e funciona adicionando novos nós ao nó `UI.Root`.
 
 A segunda parte do nosso exemplo configura a cena principal.  Isso envolve uma série de etapas, criando uma cena 3D, criando uma caixa 3D na tela, adicionando uma luz, uma câmera e um visor.  Eles são explorados com mais detalhes na seção [cena, nós, componentes e câmeras](~/graphics-games/urhosharp/using.md#scenenodescomponentsandcameras).
 
-A terceira parte de nosso exemplo dispara algumas ações.  As ações são as receitas que descrevem um efeito específico e, uma vez criadas, podem ser executadas por um nó sob demanda `RunActionAsync` chamando o método `Node`em um.
+A terceira parte de nosso exemplo dispara algumas ações.  As ações são as receitas que descrevem um efeito específico e, uma vez criadas, podem ser executadas por um nó sob demanda chamando o método `RunActionAsync` em um `Node`.
 
 A primeira ação dimensiona a caixa com um efeito de saltamento e a segunda gira a caixa para sempre:
 
@@ -169,7 +169,7 @@ await boxNode.RunActionsAsync(
     new EaseBounceOut(new ScaleTo(duration: 1f, scale: 1)));
 ```
 
-O acima mostra como a primeira ação que criamos é uma `ScaleTo` ação, isso é meramente uma receita que indica que você deseja Dimensionar por um segundo em direção ao valor de uma propriedade Scale de um nó.  Essa ação, por sua vez, é encapsulada em torno `EaseBounceOut` de uma ação de atenuação, a ação.  As ações de atenuação distorcem a execução linear de uma ação e aplicam um efeito, neste caso, ele fornece o efeito de saída.
+O acima mostra como a primeira ação que criamos é uma ação `ScaleTo`, isso é meramente uma receita que indica que você deseja Dimensionar por um segundo em direção ao valor de uma propriedade Scale de um nó.  Essa ação, por sua vez, é encapsulada em torno de uma ação de atenuação, a ação `EaseBounceOut`.  As ações de atenuação distorcem a execução linear de uma ação e aplicam um efeito, neste caso, ele fornece o efeito de saída.
 Então, nossa receita poderia ser escrita como:
 
 ```csharp
