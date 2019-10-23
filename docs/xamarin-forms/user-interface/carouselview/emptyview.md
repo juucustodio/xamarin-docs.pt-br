@@ -1,31 +1,33 @@
 ---
-title: EmptyView CollectionView do Xamarin. Forms
-description: Em CollectionView, um modo de exibição vazio pode ser especificado para fornecer comentários ao usuário quando nenhum dado está disponível para exibição. O modo de exibição vazio pode ser uma cadeia de caracteres, uma exibição ou várias exibições.
+title: Xamarin. Forms CarouselView EmptyView
+description: No CarouselView, é possível especificar uma exibição vazia que fornece comentários ao usuário quando não há dados disponíveis para exibição. O modo de exibição vazio pode ser uma cadeia de caracteres, uma exibição ou várias exibições.
 ms.prod: xamarin
-ms.assetid: 6CEBCFE6-5577-4F68-9709-431062609153
+ms.assetid: C6DEE1A9-63FC-4889-BC77-F401D5D7DF32
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/06/2019
-ms.openlocfilehash: 9302b9a353173b0445d1d696849b4956134e555d
+ms.date: 10/03/2019
+ms.openlocfilehash: 55944b422495c9c3a7c93c6a2eab90a2db790780
 ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/21/2019
-ms.locfileid: "72696889"
+ms.locfileid: "72697566"
 ---
-# <a name="xamarinforms-collectionview-emptyview"></a>EmptyView CollectionView do Xamarin. Forms
+# <a name="xamarinforms-carouselview-emptyview"></a>Xamarin. Forms CarouselView EmptyView
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
+![](~/media/shared/preview.png "This API is currently pre-release")
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView) define as seguintes propriedades que podem ser usadas para fornecer comentários do usuário quando não há dados a serem exibidos:
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
+
+[`CarouselView`](xref:Xamarin.Forms.CarouselView) define as seguintes propriedades que podem ser usadas para fornecer comentários do usuário quando não há dados a serem exibidos:
 
 - [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView), do tipo `object`, a cadeia de caracteres, a associação ou a exibição que será exibida quando a propriedade [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) for `null` ou quando a coleção especificada pela propriedade `ItemsSource` for `null` ou vazia. O valor padrão é `null`.
 - [`EmptyViewTemplate`](xref:Xamarin.Forms.ItemsView.EmptyViewTemplate), do tipo [`DataTemplate`](xref:Xamarin.Forms.DataTemplate), o modelo a ser usado para formatar o `EmptyView` especificado. O valor padrão é `null`.
 
 Essas propriedades são apoiadas por [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objetos, o que significa que as propriedades podem ser destinos de associações de dados.
 
-Os principais cenários de uso para definir a propriedade [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) são exibir comentários do usuário quando uma operação de filtragem em um [`CollectionView`](xref:Xamarin.Forms.CollectionView) não produz dados e exibe comentários do usuário enquanto os dados estão sendo recuperados de um serviço Web.
+Os principais cenários de uso para definir a propriedade [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) são exibir comentários do usuário quando uma operação de filtragem em um [`CarouselView`](xref:Xamarin.Forms.CarouselView) não produz dados e exibe comentários do usuário enquanto os dados estão sendo recuperados de um serviço Web.
 
 > [!NOTE]
 > A propriedade [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) pode ser definida como uma exibição que inclui conteúdo interativo, se necessário.
@@ -37,23 +39,21 @@ Para obter mais informações sobre modelos de dados, confira [Modelos de dados 
 A propriedade [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) pode ser definida como uma cadeia de caracteres, que será exibida quando a propriedade [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) for `null` ou quando a coleção especificada pela propriedade `ItemsSource` for `null` ou vazia. O XAML a seguir mostra um exemplo desse cenário:
 
 ```xaml
-<CollectionView ItemsSource="{Binding EmptyMonkeys}"
-                EmptyView="No items to display" />
+<CarouselView ItemsSource="{Binding EmptyMonkeys}"
+              EmptyView="No items to display." />
 ```
 
 Este é o código C# equivalente:
 
 ```csharp
-CollectionView collectionView = new CollectionView
+CarouselView carouselView = new CarouselView
 {
-    EmptyView = "No items to display"
+    EmptyView = "No items to display."
 };
-collectionView.SetBinding(ItemsView.ItemsSourceProperty, "EmptyMonkeys");
+carouselView.SetBinding(ItemsView.ItemsSourceProperty, "EmptyMonkeys");
 ```
 
-O resultado é que, como a coleção associada a dados é `null`, a cadeia de caracteres definida como o valor da propriedade [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) é exibida:
-
-[![Captura de tela de uma lista vertical CollectionView com uma exibição de texto vazio, no iOS e no Android](emptyview-images/null-itemssource.png "Lista vertical CollectionView com exibição de texto vazio")](emptyview-images/null-itemssource-large.png#lightbox "Lista vertical CollectionView com exibição de texto vazio")
+O resultado é que, como a coleção associada a dados é `null`, a cadeia de caracteres definida como o valor da propriedade [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) é exibida.
 
 ## <a name="display-views-when-data-is-unavailable"></a>Exibir exibições quando os dados estiverem indisponíveis
 
@@ -61,17 +61,11 @@ A propriedade [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) pode ser def
 
 ```xaml
 <StackLayout Margin="20">
-    <SearchBar x:Name="searchBar"
-               SearchCommand="{Binding FilterCommand}"
-               SearchCommandParameter="{Binding Source={x:Reference searchBar}, Path=Text}"
+    <SearchBar SearchCommand="{Binding FilterCommand}"
+               SearchCommandParameter="{Binding Source={RelativeSource Self}, Path=Text}"
                Placeholder="Filter" />
-    <CollectionView ItemsSource="{Binding Monkeys}">
-        <CollectionView.ItemTemplate>
-            <DataTemplate>
-                ...
-            </DataTemplate>
-        </CollectionView.ItemTemplate>
-        <CollectionView.EmptyView>
+    <CarouselView ItemsSource="{Binding Monkeys}">
+        <CarouselView.EmptyView>
             <StackLayout>
                 <Label Text="No results matched your filter."
                        Margin="10,25,10,10"
@@ -85,8 +79,11 @@ A propriedade [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) pode ser def
                        HorizontalOptions="Fill"
                        HorizontalTextAlignment="Center" />
             </StackLayout>
-        </CollectionView.EmptyView>
-    </CollectionView>
+        </CarouselView.EmptyView>
+        <CarouselView.ItemTemplate>
+            ...
+        </CarouselView.ItemTemplate>
+    </CarouselView>
 </StackLayout>
 ```
 
@@ -94,7 +91,7 @@ Este é o código C# equivalente:
 
 ```csharp
 SearchBar searchBar = new SearchBar { ... };
-CollectionView collectionView = new CollectionView
+CarouselView carouselView = new CarouselView
 {
     EmptyView = new StackLayout
     {
@@ -105,12 +102,10 @@ CollectionView collectionView = new CollectionView
         }
     }
 };
-collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
+carouselView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
 ```
 
-Quando o [`SearchBar`](xref:Xamarin.Forms.SearchBar) executa o `FilterCommand`, a coleção exibida pelo [`CollectionView`](xref:Xamarin.Forms.CollectionView) é filtrada para o termo de pesquisa armazenado na propriedade [`SearchBar.Text`](xref:Xamarin.Forms.SearchBar.Text) . Se a operação de filtragem não gerar dados, o [`StackLayout`](xref:Xamarin.Forms.StackLayout) definido como o valor da propriedade [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) será exibido:
-
-[![Captura de tela de uma lista vertical CollectionView com exibição vazia personalizada, no iOS e no Android](emptyview-images/filter-multiple-views.png "Lista vertical CollectionView com exibição vazia personalizada")](emptyview-images/filter-multiple-views-large.png#lightbox "Lista vertical CollectionView com exibição vazia personalizada")
+Quando o [`SearchBar`](xref:Xamarin.Forms.SearchBar) executa o `FilterCommand`, a coleção exibida pelo [`CarouselView`](xref:Xamarin.Forms.CarouselView) é filtrada para o termo de pesquisa armazenado na propriedade [`SearchBar.Text`](xref:Xamarin.Forms.SearchBar.Text) . Se a operação de filtragem não gerar dados, o [`StackLayout`](xref:Xamarin.Forms.StackLayout) definido como o valor da propriedade [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) será exibido.
 
 ## <a name="display-a-templated-custom-type-when-data-is-unavailable"></a>Exibir um tipo personalizado de modelo quando os dados estiverem indisponíveis
 
@@ -120,18 +115,13 @@ A propriedade [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) pode ser def
 <StackLayout Margin="20">
     <SearchBar x:Name="searchBar"
                SearchCommand="{Binding FilterCommand}"
-               SearchCommandParameter="{Binding Source={x:Reference searchBar}, Path=Text}"
+               SearchCommandParameter="{Binding Source={RelativeSource Self}, Path=Text}"
                Placeholder="Filter" />
-    <CollectionView ItemsSource="{Binding Monkeys}">
-        <CollectionView.ItemTemplate>
-            <DataTemplate>
-                ...
-            </DataTemplate>
-        </CollectionView.ItemTemplate>
-        <CollectionView.EmptyView>
-            <views:FilterData Filter="{Binding Source={x:Reference searchBar}, Path=Text}" />
-        </CollectionView.EmptyView>
-        <CollectionView.EmptyViewTemplate>
+    <CarouselView ItemsSource="{Binding Monkeys}">
+        <CarouselView.EmptyView>
+            <controls:FilterData Filter="{Binding Source={x:Reference searchBar}, Path=Text}" />
+        </CarouselView.EmptyView>
+        <CarouselView.EmptyViewTemplate>
             <DataTemplate>
                 <Label Text="{Binding Filter, StringFormat='Your filter term of {0} did not match any records.'}"
                        Margin="10,25,10,10"
@@ -140,8 +130,11 @@ A propriedade [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) pode ser def
                        HorizontalOptions="Fill"
                        HorizontalTextAlignment="Center" />
             </DataTemplate>
-        </CollectionView.EmptyViewTemplate>
-    </CollectionView>
+        </CarouselView.EmptyViewTemplate>
+        <CarouselView.ItemTemplate>
+            ...
+        </CarouselView.ItemTemplate>
+    </CarouselView>
 </StackLayout>
 ```
 
@@ -149,7 +142,7 @@ Este é o código C# equivalente:
 
 ```csharp
 SearchBar searchBar = new SearchBar { ... };
-CollectionView collectionView = new CollectionView
+CarouselView carouselView = new CarouselView
 {
     EmptyView = new FilterData { Filter = searchBar.Text },
     EmptyViewTemplate = new DataTemplate(() =>
@@ -174,9 +167,7 @@ public class FilterData : BindableObject
 }
 ```
 
-A propriedade [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) é definida como um objeto `FilterData` e os dados da propriedade `Filter` são associados à propriedade [`SearchBar.Text`](xref:Xamarin.Forms.SearchBar.Text) . Quando o [`SearchBar`](xref:Xamarin.Forms.SearchBar) executa o `FilterCommand`, a coleção exibida pelo [`CollectionView`](xref:Xamarin.Forms.CollectionView) é filtrada para o termo de pesquisa armazenado na propriedade `Filter`. Se a operação de filtragem não gerar dados, o [`Label`](xref:Xamarin.Forms.Label) definido na [`DataTemplate`](xref:Xamarin.Forms.DataTemplate), que é definido como o valor da propriedade [`EmptyViewTemplate`](xref:Xamarin.Forms.ItemsView.EmptyViewTemplate) , será exibido:
-
-[![Captura de tela de uma lista vertical CollectionView com um modelo de exibição vazio, no iOS e no Android](emptyview-images/emptyviewtemplate.png "Lista vertical de CollectionView com modelo de exibição vazio")](emptyview-images/emptyviewtemplate-large.png#lightbox "Lista vertical de CollectionView com modelo de exibição vazio")
+A propriedade [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) é definida como um objeto `FilterData` e os dados da propriedade `Filter` são associados à propriedade [`SearchBar.Text`](xref:Xamarin.Forms.SearchBar.Text) . Quando o [`SearchBar`](xref:Xamarin.Forms.SearchBar) executa o `FilterCommand`, a coleção exibida pelo [`CarouselView`](xref:Xamarin.Forms.CarouselView) é filtrada para o termo de pesquisa armazenado na propriedade `Filter`. Se a operação de filtragem não gerar dados, o [`Label`](xref:Xamarin.Forms.Label) definido na [`DataTemplate`](xref:Xamarin.Forms.DataTemplate), que é definido como o valor da propriedade [`EmptyViewTemplate`](xref:Xamarin.Forms.ItemsView.EmptyViewTemplate) , será exibido.
 
 > [!NOTE]
 > Ao exibir um tipo personalizado de modelo quando os dados não estão disponíveis, a propriedade [`EmptyViewTemplate`](xref:Xamarin.Forms.ItemsView.EmptyViewTemplate) pode ser definida como uma exibição que contém várias exibições filho.
@@ -188,8 +179,12 @@ Exibições que serão exibidas como um [`EmptyView`](xref:Xamarin.Forms.ItemsVi
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="CollectionViewDemos.Views.EmptyViewSwapPage"
+             xmlns:viewmodels="clr-namespace:CarouselViewDemos.ViewModels"
+             x:Class="CarouselViewDemos.Views.EmptyViewSwapPage"
              Title="EmptyView (swap)">
+    <ContentPage.BindingContext>
+        <viewmodels:MonkeysViewModel />
+    </ContentPage.BindingContext>
     <ContentPage.Resources>
         <ContentView x:Key="BasicEmptyView">
             <StackLayout>
@@ -217,24 +212,20 @@ Exibições que serão exibidas como um [`EmptyView`](xref:Xamarin.Forms.ItemsVi
             </StackLayout>
         </ContentView>
     </ContentPage.Resources>
-
     <StackLayout Margin="20">
-        <SearchBar x:Name="searchBar"
-                   SearchCommand="{Binding FilterCommand}"
-                   SearchCommandParameter="{Binding Source={x:Reference searchBar}, Path=Text}"
+        <SearchBar SearchCommand="{Binding FilterCommand}"
+                   SearchCommandParameter="{Binding Source={RelativeSource Self}, Path=Text}"
                    Placeholder="Filter" />
         <StackLayout Orientation="Horizontal">
             <Label Text="Toggle EmptyViews" />
             <Switch Toggled="OnEmptyViewSwitchToggled" />
         </StackLayout>
-        <CollectionView x:Name="collectionView"
-                        ItemsSource="{Binding Monkeys}">
-            <CollectionView.ItemTemplate>
-                <DataTemplate>
-                    ...
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
-        </CollectionView>
+        <CarouselView x:Name="carouselView"
+                      ItemsSource="{Binding Monkeys}">
+            <CarouselView.ItemTemplate>
+                ...
+            </CarouselView.ItemTemplate>
+        </CarouselView>
     </StackLayout>
 </ContentPage>
 ```
@@ -244,23 +235,21 @@ Esse XAML define dois objetos [`ContentView`](xref:Xamarin.Forms.ContentView) no
 ```csharp
 void ToggleEmptyView(bool isToggled)
 {
-    collectionView.EmptyView = isToggled ? Resources["BasicEmptyView"] : Resources["AdvancedEmptyView"];
+    carouselView.EmptyView = isToggled ? Resources["BasicEmptyView"] : Resources["AdvancedEmptyView"];
 }
 ```
 
-O método `ToggleEmptyView` define a propriedade [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) do objeto `collectionView` como um dos dois objetos [`ContentView`](xref:Xamarin.Forms.ContentView) armazenados no [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary), com base no valor da propriedade [`Switch.IsToggled`](xref:Xamarin.Forms.Switch.IsToggled) . Quando o [`SearchBar`](xref:Xamarin.Forms.SearchBar) executa o `FilterCommand`, a coleção exibida pelo [`CollectionView`](xref:Xamarin.Forms.CollectionView) é filtrada para o termo de pesquisa armazenado na propriedade [`SearchBar.Text`](xref:Xamarin.Forms.SearchBar.Text) . Se a operação de filtragem não gerar dados, o objeto `ContentView` definido como a propriedade `EmptyView` será exibido:
-
-[![Captura de tela de uma lista vertical CollectionView com exibições vazias trocadas, no iOS e no Android](emptyview-images/swap.png "Lista vertical CollectionView com exibições vazias trocadas")](emptyview-images/swap-large.png#lightbox "Lista vertical CollectionView com exibições vazias trocadas")
+O método `ToggleEmptyView` define a propriedade [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) do objeto `carouselView` como um dos dois objetos [`ContentView`](xref:Xamarin.Forms.ContentView) armazenados no [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary), com base no valor da propriedade [`Switch.IsToggled`](xref:Xamarin.Forms.Switch.IsToggled) . Quando o [`SearchBar`](xref:Xamarin.Forms.SearchBar) executa o `FilterCommand`, a coleção exibida pelo [`CarouselView`](xref:Xamarin.Forms.CarouselView) é filtrada para o termo de pesquisa armazenado na propriedade [`SearchBar.Text`](xref:Xamarin.Forms.SearchBar.Text) . Se a operação de filtragem não gerar dados, o objeto `ContentView` definido como a propriedade `EmptyView` será exibido.
 
 Para obter mais informações sobre dicionários de recursos, consulte [dicionários de recursos do Xamarin. Forms](~/xamarin-forms/xaml/resource-dictionaries.md).
 
 ## <a name="choose-an-emptyviewtemplate-at-runtime"></a>Escolha um EmptyViewTemplate em tempo de execução
 
-A aparência da [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) pode ser escolhida em tempo de execução, com base em seu valor, definindo a propriedade [`CollectionView.EmptyViewTemplate`](xref:Xamarin.Forms.ItemsView.EmptyViewTemplate) como um objeto [`DataTemplateSelector`](xref:Xamarin.Forms.DataTemplateSelector) :
+A aparência da [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) pode ser escolhida em tempo de execução, com base em seu valor, definindo a propriedade [`CarouselView.EmptyViewTemplate`](xref:Xamarin.Forms.ItemsView.EmptyViewTemplate) como um objeto [`DataTemplateSelector`](xref:Xamarin.Forms.DataTemplateSelector) :
 
 ```xaml
 <ContentPage ...
-             xmlns:controls="clr-namespace:CollectionViewDemos.Controls">
+             xmlns:controls="clr-namespace:CarouselViewDemos.Controls">
     <ContentPage.Resources>
         <DataTemplate x:Key="AdvancedTemplate">
             ...
@@ -278,11 +267,15 @@ A aparência da [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) pode ser e
     <StackLayout Margin="20">
         <SearchBar x:Name="searchBar"
                    SearchCommand="{Binding FilterCommand}"
-                   SearchCommandParameter="{Binding Source={x:Reference searchBar}, Path=Text}"
+                   SearchCommandParameter="{Binding Source={RelativeSource Self}, Path=Text}"
                    Placeholder="Filter" />
-        <CollectionView ItemsSource="{Binding Monkeys}"
-                        EmptyView="{Binding Source={x:Reference searchBar}, Path=Text}"
-                        EmptyViewTemplate="{StaticResource SearchSelector}" />
+        <CarouselView ItemsSource="{Binding Monkeys}"
+                      EmptyView="{Binding Source={x:Reference searchBar}, Path=Text}"
+                      EmptyViewTemplate="{StaticResource SearchSelector}">
+            <CarouselView.ItemTemplate>
+                ...
+            </CarouselView.ItemTemplate>
+        </CarouselView>
     </StackLayout>
 </ContentPage>
 ```
@@ -291,17 +284,17 @@ Este é o código C# equivalente:
 
 ```csharp
 SearchBar searchBar = new SearchBar { ... };
-CollectionView collectionView = new CollectionView
+CarouselView carouselView = new CarouselView()
 {
     EmptyView = searchBar.Text,
     EmptyViewTemplate = new SearchTermDataTemplateSelector { ... }
 };
-collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
+carouselView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
 ```
 
 A propriedade [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) é definida como a propriedade [`SearchBar.Text`](xref:Xamarin.Forms.SearchBar.Text) e a propriedade [`EmptyViewTemplate`](xref:Xamarin.Forms.ItemsView.EmptyViewTemplate) é definida como um objeto `SearchTermDataTemplateSelector`.
 
-Quando o [`SearchBar`](xref:Xamarin.Forms.SearchBar) executa o `FilterCommand`, a coleção exibida pelo [`CollectionView`](xref:Xamarin.Forms.CollectionView) é filtrada para o termo de pesquisa armazenado na propriedade [`SearchBar.Text`](xref:Xamarin.Forms.SearchBar.Text) . Se a operação de filtragem não gerar dados, o [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) escolhido pelo objeto `SearchTermDataTemplateSelector` será definido como a propriedade [`EmptyViewTemplate`](xref:Xamarin.Forms.ItemsView.EmptyViewTemplate) e exibido.
+Quando o [`SearchBar`](xref:Xamarin.Forms.SearchBar) executa o `FilterCommand`, a coleção exibida pelo [`CarouselView`](xref:Xamarin.Forms.CarouselView) é filtrada para o termo de pesquisa armazenado na propriedade [`SearchBar.Text`](xref:Xamarin.Forms.SearchBar.Text) . Se a operação de filtragem não gerar dados, o [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) escolhido pelo objeto `SearchTermDataTemplateSelector` será definido como a propriedade [`EmptyViewTemplate`](xref:Xamarin.Forms.ItemsView.EmptyViewTemplate) e exibido.
 
 O exemplo a seguir mostra a classe `SearchTermDataTemplateSelector`:
 
@@ -319,15 +312,13 @@ public class SearchTermDataTemplateSelector : DataTemplateSelector
 }
 ```
 
-A classe `SearchTermTemplateSelector` define `DefaultTemplate` e `OtherTemplate` propriedades [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) definidas para modelos de dados diferentes. A substituição de `OnSelectTemplate` retorna `DefaultTemplate`, que exibe uma mensagem para o usuário, quando a consulta de pesquisa não é igual a "xamarin". Quando a consulta de pesquisa é igual a "xamarin", a substituição de `OnSelectTemplate` retorna `OtherTemplate`, que exibe uma mensagem básica ao usuário:
-
-[![Captura de tela de uma seleção de modelo de exibição vazia do tempo de execução CollectionView, no iOS e no Android](emptyview-images/datatemplateselector.png "Seleção de modelo de exibição vazia em tempo de execução em um CollectionView")](emptyview-images/datatemplateselector-large.png#lightbox "Seleção de modelo de exibição vazia em tempo de execução em um CollectionView")
+A classe `SearchTermTemplateSelector` define `DefaultTemplate` e `OtherTemplate` propriedades [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) definidas para modelos de dados diferentes. A substituição de `OnSelectTemplate` retorna `DefaultTemplate`, que exibe uma mensagem para o usuário, quando a consulta de pesquisa não é igual a "xamarin". Quando a consulta de pesquisa é igual a "xamarin", a substituição de `OnSelectTemplate` retorna `OtherTemplate`, que exibe uma mensagem básica ao usuário.
 
 Para obter mais informações sobre seletores de modelo de dados, consulte [criar um Xamarin. Forms DataTemplateSelector](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md).
 
 ## <a name="related-links"></a>Links relacionados
 
-- [CollectionView (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
+- [CarouselView (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
 - [Modelos de dados do Xamarin. Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)
 - [Dicionários de recursos do Xamarin. Forms](~/xamarin-forms/xaml/resource-dictionaries.md)
 - [Criar um DataTemplateSelector Xamarin. Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md)

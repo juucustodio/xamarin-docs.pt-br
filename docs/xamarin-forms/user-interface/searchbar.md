@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 07/12/2019
-ms.openlocfilehash: 41bb9e082f042e7ca2933d72b4b71a4ff6c4fef4
-ms.sourcegitcommit: dad4dfcd194b63ec9e903363351b6d9e543d4888
+ms.openlocfilehash: 4deeab1b2792675033372ccfe2bf343c08794955
+ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "69658031"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72696426"
 ---
 # <a name="xamarinforms-searchbar"></a>SearchBar Xamarin. Forms
 
@@ -25,10 +25,12 @@ O [`SearchBar`](xref:Xamarin.Forms.SearchBar) Xamarin. Forms é um controle de e
 A classe `SearchBar` define as seguintes propriedades:
 
 * [`CancelButtonColor`](xref:Xamarin.Forms.SearchBar.CancelButtonColor) é uma `Color` que define a cor do botão de cancelamento.
+* `CharacterSpacing`, do tipo `double`, é o espaçamento entre os caracteres do texto do `SearchBar`.
 * [`FontAttributes`](xref:Xamarin.Forms.SearchBar.FontAttributes) é um valor de enumeração `FontAttributes` que determina se a fonte `SearchBar` é negrito, itálico ou não.
 * [`FontFamily`](xref:Xamarin.Forms.SearchBar.FontFamily) é um `string` que determina a família de fontes usada pelo `SearchBar`.
 * [`FontSize`](xref:Xamarin.Forms.SearchBar.FontSize) pode ser um valor de enumeração `NamedSize` ou um valor `double` que representa tamanhos de fonte específicos entre plataformas.
 * [`HorizontalTextAlignment`](xref:Xamarin.Forms.SearchBar.HorizontalTextAlignment) é um valor de enumeração `TextAlignment` que define o alinhamento horizontal do texto da consulta.
+* `VerticalTextAlignment` é um valor de enumeração `TextAlignment` que define o alinhamento vertical do texto da consulta.
 * [`Placeholder`](xref:Xamarin.Forms.SearchBar.Placeholder) é uma `string` que define o texto do espaço reservado, como "Search...".
 * [`PlaceholderColor`](xref:Xamarin.Forms.SearchBar.PlaceholderColor) é uma `Color` que define a cor do texto do espaço reservado.
 * [`SearchCommand`](xref:Xamarin.Forms.SearchBar.SearchCommand) é um `ICommand` que permite a vinculação de ações do usuário, como toques ou cliques de dedos, a comandos definidos em um ViewModel.

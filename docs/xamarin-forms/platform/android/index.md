@@ -1,74 +1,78 @@
 ---
 title: Recursos da plataforma Android
-description: Este artigo explica como adicionar funcionalidade específica do Android para aplicativos xamarin. Forms.
+description: Este artigo explica como adicionar uma funcionalidade específica do Android aos aplicativos Xamarin. Forms.
 ms.prod: xamarin
 ms.assetid: E24168F3-0138-4814-86EA-B467F6B8A545
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 01/07/2018
-ms.openlocfilehash: dc02fdc8754db4ae97c29ba2a496804b2263abdc
-ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
+ms.date: 09/24/2019
+ms.openlocfilehash: 73e838b3a63132230cf594a3461c9d7ee6f302b8
+ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65970737"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72696946"
 ---
 # <a name="android-platform-features"></a>Recursos da plataforma Android
 
-Desenvolvimento de aplicativos xamarin. Forms para Android requer o Visual Studio. O [página de requisitos](~/get-started/requirements.md) contém mais informações sobre os pré-requisitos.
+O desenvolvimento de aplicativos Xamarin. Forms para Android requer o Visual Studio. A [página requisitos](~/get-started/requirements.md) contém mais informações sobre os pré-requisitos.
 
-## <a name="platform-specifics"></a>Especificidades da plataforma
+## <a name="platform-specifics"></a>Especificações da plataforma
 
-Especificidades da plataforma permitem que você consumir funcionalidade só está disponível em uma plataforma específica, sem implementar renderizadores personalizados ou efeitos.
+As especificações de plataforma permitem que você consuma a funcionalidade que só está disponível em uma plataforma específica, sem implementar renderizadores ou efeitos personalizados.
 
-A seguinte funcionalidade específica da plataforma é fornecida para modos de exibição, páginas e layouts no Android do xamarin. Forms:
+A funcionalidade específica da plataforma a seguir é fornecida para exibições, páginas e layouts do Xamarin. Forms no Android:
 
-- Controlando a ordem Z dos elementos visuais para determinar a ordem de desenho. Para obter mais informações, consulte [VisualElement elevação no Android](visualelement-elevation.md).
-- Desabilitar o modo de cor herdados em um com suporte [ `VisualElement` ](xref:Xamarin.Forms.VisualElement). Para obter mais informações, consulte [modo de cor VisualElement herdado no Android](legacy-color-mode.md).
+- Controlando a ordem Z de elementos visuais para determinar a ordem de desenho. Para obter mais informações, consulte [visualelement elevação no Android](visualelement-elevation.md).
+- Desabilitando o modo de cor herdado em um [`VisualElement`](xref:Xamarin.Forms.VisualElement)com suporte. Para obter mais informações, consulte [modo de cor herdado do visualelement no Android](legacy-color-mode.md).
 
-A seguinte funcionalidade específica da plataforma é fornecida para modos de exibição do xamarin. Forms no Android:
+A funcionalidade específica da plataforma a seguir é fornecida para exibições do Xamarin. Forms no Android:
 
-- Usando o preenchimento padrão e os valores de sombra dos botões do Android. Para obter mais informações, consulte [sombras no Android e o preenchimento do botão](button-padding-shadow.md).
-- Configurando o método de entrada opções do editor para o teclado virtual para um [ `Entry` ](xref:Xamarin.Forms.Entry). Para obter mais informações, consulte [opções do Editor de método de entrada de entrada no Android](entry-ime-options.md).
-- Habilitando uma sombra em um `ImageButton`. Para obter mais informações, consulte [ImageButton Drop sombras no Android](imagebutton-drop-shadow.md).
-- Habilitar a rolagem rápida em um [ `ListView` ](xref:Xamarin.Forms.ListView) para obter mais informações, consulte [ListView rolagem rápida no Android](listview-fast-scrolling.md).
-- Controlar se uma [ `WebView` ](xref:Xamarin.Forms.WebView) pode exibir o conteúdo misto. Para obter mais informações, consulte [WebView misto conteúdo no Android](webview-mixed-content.md).
-- Habilitar o zoom em uma [ `WebView` ](xref:Xamarin.Forms.WebView). Para obter mais informações, consulte [WebView Zoom no Android](webview-zoom-controls.md).
+- Usando os valores de preenchimento e sombra padrão dos botões do Android. Para obter mais informações, consulte [preenchimento de botão e sombras no Android](button-padding-shadow.md).
+- Definindo as opções do editor de método de entrada para o teclado soft de um [`Entry`](xref:Xamarin.Forms.Entry). Para obter mais informações, consulte [Opções do editor de método de entrada de entrada no Android](entry-ime-options.md).
+- Habilitando uma sombra suspensa em um `ImageButton`. Para obter mais informações, consulte [ImageButton drop Shadows on Android](imagebutton-drop-shadow.md).
+- Habilitando a rolagem rápida em um [`ListView`](xref:Xamarin.Forms.ListView) para obter mais informações, consulte a [rolagem rápida do ListView no Android](listview-fast-scrolling.md).
+- Controlando se um [`WebView`](xref:Xamarin.Forms.WebView) pode exibir conteúdo misto. Para obter mais informações, consulte [conteúdo misto do WebView no Android](webview-mixed-content.md).
+- Habilitar o zoom em um [`WebView`](xref:Xamarin.Forms.WebView). Para obter mais informações, consulte o [zoom do WebView no Android](webview-zoom-controls.md).
 
-A seguinte funcionalidade específica da plataforma é fornecida para páginas do xamarin. Forms no Android:
+A seguinte funcionalidade específica de plataforma é fornecida para as células Xamarin. Forms no Android:
 
-- Definir a altura da barra de navegação em um [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage). Para obter mais informações, consulte [NavigationPage altura da barra no Android](navigationpage-bar-height.md).
-- Desabilitar animações de transição ao navegar entre páginas em um [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage). Para obter mais informações, consulte [animações de transição de página TabbedPage no Android](tabbedpage-transition-animations.md).
-- Habilitando o dedo entre páginas em um [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage). Para obter mais informações, consulte [TabbedPage página passar o dedo no Android](tabbedpage-page-swiping.md).
-- Definir o posicionamento da barra de ferramentas e a cor em um [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage). Para obter mais informações, consulte [TabbedPage posicionamento de barra de ferramentas e a cor no Android](tabbedpage-toolbar-placement-color.md).
+- Habilitar [`ViewCell`](xref:Xamarin.Forms.ViewCell) modo herdado de ações de contexto, para que o menu ações de contexto não seja atualizado quando o item selecionado em um [`ListView`](xref:Xamarin.Forms.ListView) for alterado. Para obter mais informações, consulte [ações de contexto ViewCell no Android](viewcell-context-actions.md).
 
-A seguinte funcionalidade específica da plataforma é fornecida para o xamarin. Forms [ `Application` ](xref:Xamarin.Forms.Application) classe no Android:
+A seguinte funcionalidade específica de plataforma é fornecida para páginas Xamarin. Forms no Android:
 
-- Definindo o modo de operação de um teclado virtual. Para obter mais informações, consulte [reversível modo de entrada de teclado no Android](soft-keyboard-input-mode.md).
-- Desabilitando o [ `Disappearing` ](xref:Xamarin.Forms.Page.Appearing) e [ `Appearing` ](xref:Xamarin.Forms.Page.Appearing) página eventos de ciclo de vida em pausa e retomar, respectivamente, para aplicativos que usam AppCompat. Para obter mais informações, consulte [eventos de ciclo de vida da página no Android](page-lifecycle-events.md).
+- Definindo a altura da barra de navegação em um [`NavigationPage`](xref:Xamarin.Forms.NavigationPage). Para obter mais informações, consulte [altura da barra de NavigationPage no Android](navigationpage-bar-height.md).
+- Desabilitar animações de transição ao navegar pelas páginas de um [`TabbedPage`](xref:Xamarin.Forms.TabbedPage). Para obter mais informações, consulte [animações de transição de página TabbedPage no Android](tabbedpage-transition-animations.md).
+- Habilitando o passar o dedo entre páginas em um [`TabbedPage`](xref:Xamarin.Forms.TabbedPage). Para obter mais informações, consulte [TabbedPageing Page Podedor no Android](tabbedpage-page-swiping.md).
+- Definir o posicionamento e a cor da barra de ferramentas em um [`TabbedPage`](xref:Xamarin.Forms.TabbedPage). Para obter mais informações, consulte [posicionamento e cor da barra de ferramentas do TabbedPage no Android](tabbedpage-toolbar-placement-color.md).
+
+A funcionalidade específica da plataforma a seguir é fornecida para a classe [`Application`](xref:Xamarin.Forms.Application) do Xamarin. Forms no Android:
+
+- Definindo o modo de operação de um teclado virtual. Para obter mais informações, consulte [modo de entrada de teclado virtual no Android](soft-keyboard-input-mode.md).
+- Desabilitar o [`Disappearing`](xref:Xamarin.Forms.Page.Appearing) e [`Appearing`](xref:Xamarin.Forms.Page.Appearing) eventos de ciclo de vida da página em pausa e retomada, respectivamente, para aplicativos que usam AppCompat. Para obter mais informações, consulte [eventos de ciclo de vida da página no Android](page-lifecycle-events.md).
 
 ## <a name="platform-support"></a>Suporte de plataforma
 
-Originalmente, o projeto do Android do xamarin. Forms padrão usado um estilo mais antigo de renderização de controle do que era comum antes do Android 5.0. Aplicativos criados usando o modelo tem `FormsApplicationActivity` como a classe base da sua atividade principal.
+Originalmente, o projeto Android padrão do Xamarin. Forms usava um estilo mais antigo de renderização de controle que era comum antes do Android 5,0. Os aplicativos criados usando o modelo têm `FormsApplicationActivity` como a classe base de sua atividade principal.
 
-## <a name="material-design-via-appcompat"></a>Design de material via AppCompat
+## <a name="material-design-via-appcompat"></a>Design de material por AppCompat
 
-Projetos do Android do xamarin. Forms enquanto, use `FormsAppCompatActivity` como a classe base da sua atividade principal. Essa classe usa **AppCompat** recursos fornecidos pelo Android para implementar os temas de Design de Material.
+Os projetos Android do Xamarin. Forms agora usam `FormsAppCompatActivity` como a classe base de sua atividade principal. Essa classe usa recursos de **AppCompat** fornecidos pelo Android para implementar temas de design de material.
 
-Para adicionar os temas de Design de Material ao seu projeto do Android do xamarin. Forms, execute o [dar suporte a instruções de instalação para AppCompat](appcompat-material-design.md)
+Para adicionar temas de design de material ao seu projeto do Xamarin. Forms Android, siga as [instruções de instalação para suporte a AppCompat](appcompat-material-design.md)
 
-Aqui está o **Todo** exemplo com o padrão `FormsApplicationActivity`:
+Aqui está o exemplo de **todo** com o `FormsApplicationActivity` padrão:
 
-[![](images/before-appcompat-sml.png "Aplicativo de exemplo de tarefas pendentes sem AppCompat")](images/before-appcompat.png#lightbox "aplicativo de exemplo de tarefas pendentes sem AppCompat")
+[![](images/before-appcompat-sml.png "Todo Sample Application Without AppCompat")](images/before-appcompat.png#lightbox "Todo Sample Application Without AppCompat")
 
-E isso é o mesmo código depois de atualizar o projeto para usar `FormsAppCompatActivity` (e adicionar as informações de tema adicionais):
+E esse é o mesmo código depois de atualizar o projeto para usar `FormsAppCompatActivity` (e adicionar as informações de tema adicionais):
 
-[![](images/post-appcompat-sml.png "Aplicativo de exemplo de tarefas pendentes com AppCompat e temas")](images/post-appcompat.png#lightbox "aplicativo de exemplo de tarefas pendentes com AppCompat e temas")
+[![](images/post-appcompat-sml.png "Todo Sample Application With AppCompat and Theming")](images/post-appcompat.png#lightbox "Todo Sample Application With AppCompat and Theming")
 
 > [!NOTE]
-> Ao usar `FormsAppCompatActivity`, o [classes de base para alguns renderizadores personalizados Android](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md) será diferente.
+> Ao usar `FormsAppCompatActivity`, as [classes base para alguns renderizadores personalizados do Android](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md) serão diferentes.
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Adicionar suporte de Design de Material](appcompat-material-design.md)
+- [Adicionar suporte ao design de material](appcompat-material-design.md)

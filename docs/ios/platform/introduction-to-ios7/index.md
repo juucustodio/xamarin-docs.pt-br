@@ -8,10 +8,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2017
 ms.openlocfilehash: d3a3c28e30e38562035b4d0c7c05366865157dd5
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "70752070"
 ---
 # <a name="introduction-to-ios-7"></a>Introdução ao iOS 7
@@ -22,14 +22,14 @@ o iOS 7 é uma atualização importante para o iOS. Ele apresenta um design de i
 
 ## <a name="uiview-animation-enhancements"></a>Aprimoramentos de animação UIView
 
-o iOS 7 aumenta o suporte à animação no UIKit, permitindo que os aplicativos façam coisas que anteriormente exigiam descartar diretamente para a estrutura de animação principal. Por exemplo, `UIView` agora pode executar animações Spring, bem como animações de quadro-chave, `CAKeyframeAnimation` que anteriormente eram `CALayer`aplicadas a um.
+o iOS 7 aumenta o suporte à animação no UIKit, permitindo que os aplicativos façam coisas que anteriormente exigiam descartar diretamente para a estrutura de animação principal. Por exemplo, `UIView` agora pode executar animações Spring, bem como animações de quadro-chave, que anteriormente era uma `CAKeyframeAnimation` aplicada a uma `CALayer`.
 
 ### <a name="spring-animations"></a>Animações Spring
 
- `UIView`Agora dá suporte à animação de alterações de propriedade com um efeito de mola. Para adicionar isso, chame o `AnimateNotify` método ou `AnimateNotifyAsync` , passando valores para a taxa de amortecimento de mola e a velocidade de mola inicial, conforme descrito abaixo:
+ `UIView` agora oferece suporte à animação de alterações de propriedade com um efeito de mola. Para adicionar isso, chame o método `AnimateNotify` ou `AnimateNotifyAsync`, passando valores para a taxa de amortecimento de mola e a velocidade inicial da mola, conforme descrito abaixo:
 
-- `springWithDampingRatio`– Um valor entre 0 e 1, em que o oscilação aumenta para um valor menor.
-- `initialSpringVelocity`– A velocidade inicial da mola como uma porcentagem da distância total da animação por segundo.
+- `springWithDampingRatio` – um valor entre 0 e 1, em que o oscilação aumenta para um valor menor.
+- `initialSpringVelocity` – a velocidade inicial da mola como uma porcentagem da distância total da animação por segundo.
 
 O código a seguir produz um efeito de mola quando o centro da exibição de imagem é alterado:
 
@@ -49,11 +49,11 @@ void AnimateWithSpring ()
 
 Esse efeito de mola faz com que a exibição de imagem pareça saltar, pois ela conclui sua animação para um novo local central, conforme ilustrado abaixo:
 
- ![](images/spring-animation.png "Esse efeito de mola faz com que a exibição de imagem pareça ser devolvida à medida que ela conclui sua animação para um novo local central")
+ ![](images/spring-animation.png "This spring effect causes the image view to appear to bounce as it completes its animation to a new center location")
 
 ### <a name="keyframe-animations"></a>Animações de quadro-chave
 
-A `UIView` classe agora inclui o `AnimateWithKeyframes` método para criar animações de quadro- `UIView`chave em um. Esse método é semelhante a outros `UIView` métodos de animação, exceto que um `NSAction` adicional é passado como um parâmetro para incluir os quadros-chave. Dentro do `NSAction`, os quadros-chave são adicionados chamando `UIView.AddKeyframeWithRelativeStartTime`.
+A classe `UIView` agora inclui o método `AnimateWithKeyframes` para criar animações de quadro-chave em um `UIView`. Esse método é semelhante a outros métodos de animação `UIView`, exceto pelo fato de que uma `NSAction` adicional é passada como um parâmetro para incluir os quadros-chave. Dentro do `NSAction`, os quadros-chave são adicionados chamando `UIView.AddKeyframeWithRelativeStartTime`.
 
 Por exemplo, o trecho de código a seguir cria uma animação de quadro-chave para animar o centro de uma exibição, bem como para girar a exibição:
 
@@ -82,26 +82,26 @@ void AnimateViewWithKeyframes ()
 }
 ```
 
-Os dois primeiros parâmetros para o `AddKeyframeWithRelativeStartTime` método especificam a hora de início e a duração do quadro-chave, respectivamente, como uma porcentagem do tamanho geral da animação. O exemplo acima resulta na animação da exibição de imagem para seu novo centro ao longo do primeiro segundo, seguido de rotação de 90 graus no próximo segundo. Como a animação especifica `UIViewKeyframeAnimationOptions.Autoreverse` como uma opção, ambos os quadros-chave são animados também em ordem inversa. Por fim, os valores finais são definidos para o estado inicial no manipulador de conclusão.
+Os dois primeiros parâmetros para o método `AddKeyframeWithRelativeStartTime` especificam a hora de início e a duração do quadro-chave, respectivamente, como uma porcentagem do tamanho geral da animação. O exemplo acima resulta na animação da exibição de imagem para seu novo centro ao longo do primeiro segundo, seguido de rotação de 90 graus no próximo segundo. Como a animação especifica `UIViewKeyframeAnimationOptions.Autoreverse` como uma opção, ambos os quadros-chave são animados também em ordem inversa. Por fim, os valores finais são definidos para o estado inicial no manipulador de conclusão.
 
 As capturas de tela abaixo ilustram a animação combinada por meio dos quadros-chave:
 
- ![](images/keyframes.png "Estas capturas de tela ilustram a animação combinada por meio dos quadros-chave")
+ ![](images/keyframes.png "This screenshots illustrates the combined animation through the keyframes")
 
 ## <a name="uikit-dynamics"></a>UIKit Dynamics
 
 O UIKit Dynamics é um novo conjunto de APIs no UIKit que permite que os aplicativos criem interações animadas com base na física. O UIKit Dynamics encapsula um mecanismo de física 2D para tornar isso possível.
 
-A API é declarativa por natureza. Você declara como as interações de física se comportam criando objetos chamados *comportamentos* – para expressar conceitos de física, como gravidade, colisões, molas, etc. Em seguida, você anexa os comportamentos a outro objeto, chamado de *Animator dinâmico*, que encapsula uma exibição. O Animator dinâmico se preocupa em aplicar os comportamentos de física declarados a *itens dinâmicos* – itens que implementam `IUIDynamicItem`, como um. `UIView`
+A API é declarativa por natureza. Você declara como as interações de física se comportam criando objetos chamados *comportamentos* – para expressar conceitos de física, como gravidade, colisões, molas, etc. Em seguida, você anexa os comportamentos a outro objeto, chamado de *Animator dinâmico*, que encapsula uma exibição. O Animator dinâmico se preocupa em aplicar os comportamentos de física declarados a *itens dinâmicos* -itens que implementam `IUIDynamicItem`, como um `UIView`.
 
 Há vários comportamentos primitivos diferentes disponíveis para disparar interações complexas, incluindo:
 
-- `UIAttachmentBehavior`– Anexa dois itens dinâmicos, de forma que eles se movam juntos ou anexe um item dinâmico a um ponto de anexo.
-- `UICollisionBehavior`– Permite que itens dinâmicos participem de colisões.
-- `UIDynamicItemBehavior`– Especifica um conjunto geral de propriedades para aplicar a itens dinâmicos, como elasticidade, densidade e fricção.
-- `UIGravityBehavior`– Aplica a gravidade a um item dinâmico, fazendo com que os itens acelerem na direção do Gravitational.
-- `UIPushBehavior`– Aplica-se força a um item dinâmico.
-- `UISnapBehavior`– Permite que um item dinâmico se ajuste a uma posição com um efeito de mola.
+- `UIAttachmentBehavior` – anexa dois itens dinâmicos, de forma que eles se movam juntos ou anexe um item dinâmico a um ponto de anexo.
+- `UICollisionBehavior` – permite que itens dinâmicos participem de colisões.
+- `UIDynamicItemBehavior` – especifica um conjunto geral de propriedades para aplicar a itens dinâmicos, como elasticidade, densidade e fricção.
+- `UIGravityBehavior`-aplica a gravidade a um item dinâmico, fazendo com que os itens acelerem na direção do Gravitational.
+- `UIPushBehavior` – aplica-se força a um item dinâmico.
+- `UISnapBehavior` – permite que um item dinâmico se ajuste a uma posição com um efeito de mola.
 
 Embora existam muitos primitivos, o processo geral para adicionar interações baseadas em física a uma exibição usando o UIKit Dynamics é consistente entre os comportamentos:
 
@@ -117,7 +117,7 @@ Vejamos um exemplo que adiciona gravidade e um limite de colisão a um `UIView`.
 
 A adição de gravidade a uma exibição de imagem segue as 3 etapas descritas acima.
 
-Vamos trabalhar no `ViewDidLoad` método para este exemplo. Primeiro, adicione uma `UIImageView` instância da seguinte maneira:
+Vamos trabalhar no método `ViewDidLoad` para este exemplo. Primeiro, adicione uma instância de `UIImageView` da seguinte maneira:
 
 ```csharp
 image = UIImage.FromFile ("monkeys.jpg");
@@ -129,21 +129,21 @@ imageView = new UIImageView (new CGRect (new CGPoint (View.Center.X - image.Size
 View.AddSubview (imageView);
 ```
 
-Isso cria uma exibição de imagem centralizada na borda superior da tela. Para tornar a imagem "cair" com a gravidade, crie uma instância de `UIDynamicAnimator`um:
+Isso cria uma exibição de imagem centralizada na borda superior da tela. Para tornar a imagem "cair" com a gravidade, crie uma instância de um `UIDynamicAnimator`:
 
 ```csharp
 dynAnimator = new UIDynamicAnimator (this.View);
 ```
 
-O `UIDynamicAnimator` usa uma instância de uma referência `UIView` ou um `UICollectionViewLayout`, que contém os itens que serão animados de acordo com os comportamentos anexados.
+O `UIDynamicAnimator` usa uma instância de um `UIView` de referência ou uma `UICollectionViewLayout`, que contém os itens que serão animados de acordo com os comportamentos anexados.
 
-Em seguida, crie `UIGravityBehavior` uma instância. Você pode passar um ou mais objetos implementando `IUIDynamicItem`o, como `UIView`um:
+Em seguida, crie uma instância de `UIGravityBehavior`. Você pode passar um ou mais objetos implementando o `IUIDynamicItem`, como um `UIView`:
 
 ```csharp
 var gravity = new UIGravityBehavior (dynItems);
 ```
 
-O comportamento é passado a uma matriz `IUIDynamicItem`de, que nesse caso contém a única `UIImageView` instância que estamos animados.
+O comportamento é transmitido a uma matriz de `IUIDynamicItem`, que nesse caso contém a única instância de `UIImageView` que estamos animados.
 
 Por fim, adicione o comportamento ao Animator dinâmico:
 
@@ -153,16 +153,16 @@ dynAnimator.AddBehavior (gravity);
 
 Isso resulta na animação de imagem abaixo com gravidade, conforme ilustrado abaixo:
 
-![](images/gravity2.png "O local")
-![](images/gravity3.png "da imagem inicial do local da imagem final")
+![](images/gravity2.png "The starting image location")
+![](images/gravity3.png "The ending image location")
 
 Como não há nada restringindo os limites da tela, a exibição da imagem simplesmente fica fora da parte inferior. Para restringir a exibição de forma que a imagem colide com as bordas da tela, podemos adicionar um `UICollisionBehavior`. Abordaremos isso na próxima seção.
 
 #### <a name="uicollisionbehavior"></a>UICollisionBehavior
 
-Vamos começar criando um `UICollisionBehavior` e adicionando-o ao Animator dinâmico, exatamente como fizemos para o. `UIGravityBehavior`
+Vamos começar criando um `UICollisionBehavior` e adicionando-o ao Animator dinâmico, exatamente como fizemos para o `UIGravityBehavior`.
 
-Modifique o código para incluir `UICollisionBehavior`:
+Modifique o código para incluir o `UICollisionBehavior`:
 
 ```csharp
 using (image = UIImage.FromFile ("monkeys.jpg")) {
@@ -199,7 +199,7 @@ Agora, quando a imagem é animada verticalmente com gravidade, ela salta um pouc
 
 Podemos controlar ainda mais o comportamento da exibição da imagem descendente com comportamentos adicionais. Por exemplo, poderíamos adicionar um `UIDynamicItemBehavior` para aumentar a elasticidade, fazendo com que o modo de exibição de imagem salte mais quando ele colidir com a parte inferior da tela.
 
-Adicionar um `UIDynamicItemBehavior` segue as mesmas etapas que os outros comportamentos. Primeiro, crie o comportamento:
+A adição de um `UIDynamicItemBehavior` segue as mesmas etapas que os outros comportamentos. Primeiro, crie o comportamento:
 
 ```csharp
 var dynBehavior = new UIDynamicItemBehavior (dynItems) {

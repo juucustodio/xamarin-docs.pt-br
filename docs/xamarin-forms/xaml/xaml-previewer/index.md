@@ -9,17 +9,17 @@ author: maddyleger1
 ms.author: maleger
 ms.date: 02/04/2019
 ms.openlocfilehash: b287d523101bb8ca7faca8ea95ee898ccf9c0bb1
-ms.sourcegitcommit: e02b725e48af867eb2c53ac9e17805f778fbbc8c
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "68757258"
 ---
 # <a name="xaml-previewer-for-xamarinforms"></a>Visualizar XAML para Xamarin. Forms
 
 _Consulte os layouts do Xamarin. Forms renderizados conforme você digita_
 
-## <a name="overview"></a>Visão geral
+## <a name="overview"></a>Visão Geral
 
 O visualizador XAML mostra como sua página XAML do Xamarin. Forms será exibida no iOS e no Android. Quando você fizer alterações no XAML, verá-as visualizadas imediatamente junto com seu código. O modo de visualização de XAML está disponível no Visual Studio e Visual Studio para Mac.
 
@@ -52,7 +52,7 @@ Você pode alterar se a tela é dividida vertical ou horizontalmente ou recolher
 
 O botão **Visualizar** é exibido no editor quando você abre uma página XAML. Mostre ou oculte o visualizador pressionando os botões **Visualizar** ou **dividir** na parte inferior esquerda de qualquer janela de documento XAML:
 
-[![Pré-visor do Xamarin. Forms habilitado com o botão Visualizar ou dividir](xaml-previewer-images/xamlp-list-sml.png)](xaml-previewer-images/xamlp-list.png#lightbox)
+[pré-visor ![Xamarin. Forms habilitado com o botão Visualizar ou dividir](xaml-previewer-images/xamlp-list-sml.png)](xaml-previewer-images/xamlp-list.png#lightbox)
 
 > [!NOTE]
 > Em versões mais antigas do Visual Studio para Mac, o botão **Visualizar** estava localizado no canto superior direito da janela.
@@ -64,14 +64,14 @@ O botão **Visualizar** é exibido no editor quando você abre uma página XAML.
 As opções na parte superior do painel de visualização são:
 
 * **Android** – mostrar a versão do Android da tela
-* **Ios** – mostrar a versão do IOS da tela (*Observação: Se você estiver usando o Visual Studio no Windows, deverá ser [emparelhado com um Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md) para usar esse modo*)
+* **Ios** – mostrar a versão do IOS da tela (*Observação: se você estiver usando o Visual Studio no Windows, deverá ser [emparelhado com um Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md) para usar esse modo*)
 * **Dispositivo** -lista suspensa de dispositivos Android ou Ios, incluindo resolução e tamanho da tela
 * **Retrato (ícone)** – usa a orientação retrato para a visualização
 * **Paisagem (ícone)** – usa a orientação paisagem para a versão prévia
 
 ## <a name="detect-design-mode"></a>Detectar modo de design
 
-A propriedade [`DesignMode.IsDesignModeEnabled`](xref:Xamarin.Forms.DesignMode.IsDesignModeEnabled) estática informa se o aplicativo está em execução no visualizador. Usando-o, você pode especificar o código que será executado somente quando o aplicativo estiver ou não estiver em execução no visualizador:
+A propriedade estática [`DesignMode.IsDesignModeEnabled`](xref:Xamarin.Forms.DesignMode.IsDesignModeEnabled) informa se o aplicativo está em execução no visualizador. Usando-o, você pode especificar o código que será executado somente quando o aplicativo estiver ou não estiver em execução no visualizador:
 
 ```csharp
 if (DesignMode.IsDesignModeEnabled)
@@ -95,10 +95,10 @@ Verifique os problemas abaixo e os [fóruns do Xamarin](https://forums.xamarin.c
 
 * Pode levar algum tempo para que o visualizador seja iniciado – você verá "Inicializando o processamento" até que ele esteja pronto.
 * Tente fechar e reabrir o arquivo XAML.
-* Verifique se sua `App` classe tem um construtor sem parâmetros.
+* Verifique se sua classe de `App` tem um construtor sem parâmetros.
 * Verifique sua versão do Xamarin. Forms-deve ser pelo menos Xamarin. Forms 3,6. Você pode atualizar para a versão mais recente do Xamarin. Forms por meio do NuGet.
 * Verifique a instalação do JDK-a visualização do Android requer pelo menos o [JDK 8](https://www.oracle.com/technetwork/java/javase/downloads/index.html).
-* Tente encapsular todas as classes inicializadas no C# código da página `if (!DesignMode.IsDesignModeEnabled)`por trás no.
+* Tente encapsular todas as classes inicializadas no C# code-behind da página no `if (!DesignMode.IsDesignModeEnabled)`.
 
 ### <a name="custom-controls-arent-rendering"></a>Os controles personalizados não são renderizados
 

@@ -7,30 +7,33 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: a243acc0273931c963a586fbfda29586623b612e
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
-ms.translationtype: HT
+ms.openlocfilehash: 5cfaeb8589514972dfcccd11009a02c00f95bfac
+ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69889164"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72696438"
 ---
 # <a name="xamarinforms-carousel-page"></a>Página de carrossel do Xamarin.Forms
 
 [![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-carouselpage)
 
-_A CarouselPage do Xamarin.Forms é uma página em que os usuários podem passar o dedo de um lado ao outro para navegar por páginas de conteúdo, como uma galeria. Este artigo demonstra como usar uma CarouselPage para navegar por uma coleção de páginas._
+_O CarouselPage Xamarin. Forms é uma página que os usuários podem passar do lado a lado para navegar pelas páginas de conteúdo, como uma galeria. Este artigo demonstra como usar um CarouselPage para navegar por uma coleção de páginas._
+
+> [!IMPORTANT]
+> O [`CarouselPage`](xref:Xamarin.Forms.CarouselPage) foi substituído pelo [`CarouselView`](xref:Xamarin.Forms.CarouselView), que fornece um layout rolável, onde os usuários podem passar a passar por uma coleção de itens. Para obter mais informações sobre o `CarouselView`, consulte [Xamarin. Forms CarouselView](~/xamarin-forms/user-interface/carouselview/index.md).
 
 As seguintes capturas de tela mostram uma [`CarouselPage`](xref:Xamarin.Forms.CarouselPage) em cada plataforma:
 
-![](carousel-page-images/thirdpage.png "Terceiro item de CarouselPage")
+![](carousel-page-images/thirdpage.png "CarouselPage Third Item")
 
 O layout de uma [`CarouselPage`](xref:Xamarin.Forms.CarouselPage) é idêntico em todas as plataformas. As páginas podem ser navegadas passando o dedo da direita para a esquerda para navegar para frente na coleção e passando o dedo da esquerda para a direita para navegar para trás. As capturas de tela a seguir mostram a primeira página em uma instância de uma [`CarouselPage`](xref:Xamarin.Forms.CarouselPage):
 
-![](carousel-page-images/firstpage.png "Primeiro item de CarouselPage")
+![](carousel-page-images/firstpage.png "CarouselPage First Item")
 
 Passar o dedo da direita para a esquerda leva para a segunda página, conforme mostrado nas capturas de tela seguir:
 
-![](carousel-page-images/secondpage.png "Segundo item de CarouselPage")
+![](carousel-page-images/secondpage.png "CarouselPage Second Item")
 
 Passar o dedo da direita para a esquerda novamente leva para a terceira página, enquanto passar o dedo da esquerda para a direita retorna à página anterior.
 
@@ -40,11 +43,6 @@ Passar o dedo da direita para a esquerda novamente leva para a terceira página,
 Se uma [`CarouselPage`](xref:Xamarin.Forms.CarouselPage) for inserida na página [`Detail`](xref:Xamarin.Forms.MasterDetailPage.Detail) de um [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage), a propriedade [`MasterDetailPage.IsGestureEnabled`](xref:Xamarin.Forms.MasterDetailPage.IsGestureEnabledProperty) deverá ser definida como `false` para evitar conflitos de gesto entre o `CarouselPage` e o `MasterDetailPage`.
 
 Para obter mais informações sobre a [`CarouselPage`](xref:Xamarin.Forms.CarouselPage), confira o [Capítulo 25](https://developer.xamarin.com/r/xamarin-forms/book/chapter25.pdf) do livro sobre o Xamarin.Forms de Charles Petzold.
-
-<!--
-> [!NOTE]
-> The [`CarouselPage`](xref:Xamarin.Forms.CarouselPage) has been deprecated, and will be removed from Xamarin.Forms in a future release. Instead, the [`CarouselView`](xref:Xamarin.Forms.CarouselView) should be used to provide a gallery-like view, where users can swipe from side to side to move through a collection of items.
--->
 
 ## <a name="create-a-carouselpage"></a>Criar uma CarouselPage
 

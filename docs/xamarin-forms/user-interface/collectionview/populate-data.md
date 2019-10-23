@@ -6,21 +6,19 @@ ms.assetid: E1783E34-1C0F-401A-80D5-B2BE5508F5F8
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 08/13/2019
-ms.openlocfilehash: 6942baed6af2a2e9b2c713a8fe08cf4c8ed4416b
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
-ms.translationtype: HT
+ms.date: 09/20/2019
+ms.openlocfilehash: 5afdaa9afa4c5ced39498a1cb45de07fe4bf4195
+ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/21/2019
-ms.locfileid: "69888544"
+ms.locfileid: "72696694"
 ---
 # <a name="xamarinforms-collectionview-data"></a>Dados CollectionView do Xamarin. Forms
 
-![](~/media/shared/preview.png "This API is currently pre-release")
-
 [![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView) define as seguintes propriedades que definem os dados a serem exibidos e sua aparência:
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) inclui as seguintes propriedades que definem os dados a serem exibidos e sua aparência:
 
 - [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource), do tipo `IEnumerable`, especifica a coleção de itens a serem exibidos e tem um valor padrão de `null`.
 - [`ItemTemplate`](xref:Xamarin.Forms.ItemsView.ItemTemplate), do tipo [`DataTemplate`](xref:Xamarin.Forms.DataTemplate), especifica o modelo a ser aplicado a cada item na coleção de itens a serem exibidos.
@@ -78,7 +76,7 @@ Por padrão, [`CollectionView`](xref:Xamarin.Forms.CollectionView) exibe itens e
 
 [![Captura de tela de CollectionView contendo itens de texto, no iOS e no Android](populate-data-images/text.png "Itens de texto em um CollectionView")](populate-data-images/text-large.png#lightbox "Itens de texto em um CollectionView")
 
-Para obter informações sobre como alterar o layout de [`CollectionView`](xref:Xamarin.Forms.CollectionView) , consulte [especificar um layout](layout.md). Para obter informações sobre como definir a aparência de cada item na `CollectionView`, consulte [definir a aparência do item](#define-item-appearance).
+Para obter informações sobre como alterar o layout de [`CollectionView`](xref:Xamarin.Forms.CollectionView) , consulte [layout CollectionView do Xamarin. Forms](layout.md). Para obter informações sobre como definir a aparência de cada item na `CollectionView`, consulte [definir a aparência do item](#define-item-appearance).
 
 ### <a name="data-binding"></a>Associação de dados
 
@@ -250,6 +248,45 @@ Para obter mais informações sobre seletores de modelo de dados, consulte [cria
 > [!IMPORTANT]
 > Ao usar [`CollectionView`](xref:Xamarin.Forms.CollectionView), nunca defina o elemento raiz de seus objetos de [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) como um `ViewCell`. Isso fará com que uma exceção seja gerada porque `CollectionView` não tem conceito de células.
 
+## <a name="pull-to-refresh"></a>Efetuar pull para atualizar
+
+o [`CollectionView`](xref:Xamarin.Forms.CollectionView) dá suporte à funcionalidade de pull para atualizar por meio do `RefreshView`, que permite que os dados sejam exibidos para serem atualizados ao puxar a lista de itens. O `RefreshView` é um controle de contêiner que fornece a funcionalidade de pull para atualizar para seu filho, desde que o filho ofereça suporte a conteúdo rolável. Portanto, o pull para a atualização é implementado para um `CollectionView` definindo-o como o filho de um `RefreshView`:
+
+```xaml
+<RefreshView IsRefreshing="{Binding IsRefreshing}"
+             Command="{Binding RefreshCommand}">
+    <CollectionView ItemsSource="{Binding Animals}">
+        ...
+    </CollectionView>
+</RefreshView>
+```
+
+Este é o código C# equivalente:
+
+```csharp
+RefreshView refreshView = new RefreshView();
+ICommand refreshCommand = new Command(() =>
+{
+    // IsRefreshing is true
+    // Refresh data here
+    refreshView.IsRefreshing = false;
+});
+refreshView.Command = refreshCommand;
+
+CollectionView collectionView = new CollectionView();
+collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Animals");
+refreshView.Content = collectionView;
+// ...
+```
+
+Quando o usuário inicia uma atualização, o `ICommand` definido pela propriedade `Command` é executado, o que deve atualizar os itens que estão sendo exibidos. Uma visualização de atualização é mostrada enquanto a atualização ocorre, que consiste em um círculo de progresso animado:
+
+[![Captura de tela de pull-to-Refresh CollectionView, no iOS e no Android](populate-data-images/pull-to-refresh.png "Pull para atualização de CollectionView")](populate-data-images/pull-to-refresh-large.png#lightbox "Pull para atualização de CollectionView")
+
+O valor da propriedade `RefreshView.IsRefreshing` indica o estado atual da `RefreshView`. Quando uma atualização for disparada pelo usuário, essa propriedade passará automaticamente para `true`. Quando a atualização for concluída, você deverá redefinir a propriedade para `false`.
+
+Para obter mais informações sobre `RefreshView`, consulte [Xamarin. Forms RefreshView](~/xamarin-forms/user-interface/refreshview.md).
+
 ## <a name="load-data-incrementally"></a>Carregar dados de forma incremental
 
 o [`CollectionView`](xref:Xamarin.Forms.CollectionView) dá suporte ao carregamento de dados incrementalmente conforme os usuários rolam os itens. Isso permite cenários como o carregamento assíncrono de uma página de dados de um serviço Web, à medida que o usuário rola. Além disso, o ponto no qual mais dados são carregados é configurável para que os usuários não vejam o espaço em branco ou sejam interrompidos da rolagem.
@@ -303,6 +340,7 @@ void OnCollectionViewRemainingItemsThresholdReached(object sender, EventArgs e)
 ## <a name="related-links"></a>Links relacionados
 
 - [CollectionView (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
+- [RefreshView Xamarin. Forms](~/xamarin-forms/user-interface/refreshview.md)
 - [Associação de dados do Xamarin. Forms](~/xamarin-forms/app-fundamentals/data-binding/index.md)
 - [Modelos de dados do Xamarin. Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)
 - [Criar um DataTemplateSelector Xamarin. Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md)

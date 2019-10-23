@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/12/2019
-ms.openlocfilehash: e77dc003e3786767f873e71514ebb3b7aef8c8d6
-ms.sourcegitcommit: 8f78139333aa54d9247710008bcfae15f7fd5392
+ms.openlocfilehash: 25ddbea75d0fd6858f848499281da5d5f0b68171
+ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72583546"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72697194"
 ---
 # <a name="xamarinforms-device-class"></a>Classe de dispositivo Xamarin. Forms
 
@@ -154,18 +154,6 @@ someLabel.FontSize = Device.OnPlatform (
       Device.GetNamedSize (NamedSize.Large, someLabel)
 );
 ```
-
-## <a name="deviceopenuri"></a>Device. OpenUri
-
-O método `OpenUri` pode ser usado para disparar operações na plataforma subjacente, como abrir uma URL no navegador da Web nativo (**Safari** no Ios ou **Internet** no Android).
-
-```csharp
-Device.OpenUri(new Uri("https://evolve.xamarin.com/"));
-```
-
-O [exemplo WebView](https://github.com/xamarin/xamarin-forms-samples/blob/master/WorkingWithWebview/WorkingWithWebview/WebAppPage.cs) inclui um exemplo usando `OpenUri` para abrir URLs e também disparar chamadas telefônicas.
-
-O [exemplo de mapas](https://github.com/xamarin/xamarin-forms-samples/blob/master/WorkingWithMaps/WorkingWithMaps/MapAppPage.cs) também usa `Device.OpenUri` para exibir mapas e instruções usando os aplicativos nativos **Maps** no Ios e no Android.
 
 ## <a name="devicestarttimer"></a>Device. StartTimer
 

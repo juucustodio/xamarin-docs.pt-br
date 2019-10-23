@@ -1,22 +1,22 @@
 ---
 title: Classes base de renderizador e controles nativos
-description: Cada controle do Xamarin.Forms tem um renderizador que o acompanha para cada plataforma que cria uma instância de um controle nativo. Este artigo lista as classes de renderizador e controle nativo que implementam cada página, layout, exibição e célula do Xamarin.Forms.
+description: Cada um dos controles do Xamarin.Forms tem um renderizador que o acompanha para cada plataforma que cria uma instância de um controle nativo. Este artigo lista as classes de renderizador e controle nativo que implementam cada página, layout, exibição e célula do Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: A8909AE3-ED0E-4D24-BF96-B49E732E3B93
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 06/11/2019
-ms.openlocfilehash: 014ee5ae312e2dc4e8cf662a790d5fbe4b880f0f
-ms.sourcegitcommit: 0fd04ea3af7d6a6d6086525306523a5296eec0df
-ms.translationtype: HT
+ms.date: 10/11/2019
+ms.openlocfilehash: cf9c5d7aa018a6d12a6c4788dc1e8114088d056c
+ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67513031"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72697128"
 ---
 # <a name="renderer-base-classes-and-native-controls"></a>Classes base de renderizador e controles nativos
 
-_Cada controle do Xamarin.Forms tem um renderizador que o acompanha para cada plataforma que cria uma instância de um controle nativo. Este artigo lista as classes de renderizador e controle nativo que implementam cada página, layout, exibição e célula do Xamarin.Forms._
+_Todo controle Xamarin. Forms tem um renderizador que acompanha para cada plataforma que cria uma instância de um controle nativo. Este artigo lista as classes de processador e controle nativo que implementam cada página do Xamarin. Forms, layout, exibição e célula._
 
 Com exceção da classe `MapRenderer`, os renderizadores específicos da plataforma podem ser encontrados nos seguintes namespaces:
 
@@ -73,8 +73,9 @@ A seguinte tabela lista as classes de renderizador e controle nativo que impleme
 |[`ActivityIndicator`](xref:Xamarin.Forms.ActivityIndicator)|ActivityIndicatorRenderer|UIActivityIndicator|ProgressBar||ProgressBar|
 |[`BoxView`](xref:Xamarin.Forms.BoxView)|BoxRenderer (iOS e Android), BoxViewRenderer (UWP)|UIView|ViewGroup||Retângulo|
 |[`Button`](xref:Xamarin.Forms.Button)|ButtonRenderer|UIButton|Botão|AppCompatButton|Botão|
+|[`CarouselView`](xref:Xamarin.Forms.CarouselView)|CarouselViewRenderer|UICollectionView||RecyclerView|ListViewBase|
 |`CheckBox`|CheckBoxRenderer|UIButton||AppCompatCheckBox|CheckBox|
-|[`CollectionView`](xref:Xamarin.Forms.CollectionView)|CollectionViewRenderer|UICollectionView||RecyclerView||
+|[`CollectionView`](xref:Xamarin.Forms.CollectionView)|CollectionViewRenderer|UICollectionView||RecyclerView|ListViewBase|
 |[`DatePicker`](xref:Xamarin.Forms.DatePicker)|DatePickerRenderer|UITextField|EditText||DatePicker|
 |[`Editor`](xref:Xamarin.Forms.Editor)|EditorRenderer|UITextView|EditText||TextBox|
 |[`Entry`](xref:Xamarin.Forms.Entry)|[EntryRenderer](~/xamarin-forms/app-fundamentals/custom-renderer/entry.md)|UITextField|EditText||TextBox|
@@ -85,6 +86,7 @@ A seguinte tabela lista as classes de renderizador e controle nativo que impleme
 |[`Map`](xref:Xamarin.Forms.Maps.Map)|[MapRenderer](~/xamarin-forms/app-fundamentals/custom-renderer/map/index.md)|MKMapView|MapView||MapControl|
 |[`Picker`](xref:Xamarin.Forms.Picker)|PickerRenderer|UITextField|EditText|EditText|ComboBox|
 |[`ProgressBar`](xref:Xamarin.Forms.ProgressBar)|ProgressBarRenderer|UIProgressView|ProgressBar||ProgressBar|
+|`RefreshView`|RefreshViewRenderer|UIView||SwipeRefreshLayout|RefreshContainer|
 |[`SearchBar`](xref:Xamarin.Forms.SearchBar)|SearchBarRenderer|UISearchBar|SearchView||AutoSuggestBox|
 |[`Slider`](xref:Xamarin.Forms.Slider)|SliderRenderer|UISlider|SeekBar||Controle deslizante|
 |[`Stepper`](xref:Xamarin.Forms.Stepper)|StepperRenderer|UIStepper|LinearLayout||Controle|
@@ -107,4 +109,4 @@ A seguinte tabela lista as classes de renderizador e controle nativo que impleme
 
 ## <a name="summary"></a>Resumo
 
-Este artigo listou as classes de renderizador e controle nativo que implementam cada página, layout, exibição e célula do Xamarin.Forms. Cada controle do Xamarin.Forms tem um renderizador que o acompanha para cada plataforma que cria uma instância de um controle nativo.
+Este artigo listou as classes de renderizador e controle nativo que implementam cada página, layout, exibição e célula do Xamarin.Forms. Cada um dos controles do Xamarin.Forms tem um renderizador que o acompanha para cada plataforma que cria uma instância de um controle nativo.

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: 94a537c88f28971bf7f2778f33a35e4c251afd38
-ms.sourcegitcommit: 403e3ec789d075cf1ca23473190aeb6b87220d52
+ms.openlocfilehash: 98def647c38f69ec4f942a06e2187841c4e04459
+ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72424850"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72697163"
 ---
 # <a name="customizing-a-map-pin"></a>Personalizando um marcador de mapa
 
@@ -35,7 +35,7 @@ E possível usar o processo de renderização para implementar personalizações
 Cada item agora será abordado por vez, para implementar um renderizador `CustomMap` que exibe um mapa nativo com um marcador personalizado e uma exibição personalizada dos dados do marcador em cada plataforma.
 
 > [!NOTE]
-> [`Xamarin.Forms.Maps`](xref:Xamarin.Forms.Maps) precisa ser inicializado e configurado antes do uso. Para obter mais informações, consulte [`Maps Control`](~/xamarin-forms/user-interface/map.md).
+> [`Xamarin.Forms.Maps`](xref:Xamarin.Forms.Maps) precisa ser inicializado e configurado antes do uso. Para obter mais informações, consulte [`Maps Control`](~/xamarin-forms/user-interface/map/index.md).
 
 <a name="Creating_the_Custom_Map" />
 
@@ -654,7 +654,7 @@ Para obter mais informações sobre como personalizar uma instância `MapControl
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Controle de mapas](~/xamarin-forms/user-interface/map.md)
+- [Controle de mapas](~/xamarin-forms/user-interface/map/index.md)
 - [Mapas do iOS](~/ios/user-interface/controls/ios-maps/index.md)
 - [API de mapas](~/android/platform/maps-and-location/maps/maps-api.md)
 - [Marcador personalizado (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-map-pin)

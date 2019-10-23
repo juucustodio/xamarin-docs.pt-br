@@ -1,42 +1,43 @@
 ---
 title: CarouselView Xamarin. Forms
-description: O CarouselView é uma exibição para apresentar listas de dados em um layout como um carrossel.
+description: O CarouselView é uma exibição para apresentar dados em um layout rolável, onde os usuários podem passar a passar por uma coleção de itens.
 ms.prod: xamarin
 ms.assetid: 5b673347-cdba-4532-820f-fb5f070c86bc
 ms.technology: xamarin-forms
-author: pauldipietro
-ms.author: padipi
-ms.date: 09/09/2019
-ms.openlocfilehash: 06d20341053c4f77cb72aac9e1abdc85d9f95fdb
-ms.sourcegitcommit: e83035c746f165ee6d03f2e9fd0066ee4f20a9fb
+author: davidbritch
+ms.author: dabritch
+ms.date: 10/08/2019
+ms.openlocfilehash: 816c1b6e4ab497d0ada0f80fa3ad4800912587c3
+ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70908264"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72696980"
 ---
 # <a name="xamarinforms-carouselview"></a>CarouselView Xamarin. Forms
 
-![](~/media/shared/preview.png "Esta API está atualmente em pré-lançamento")
-
-> [!IMPORTANT]
-> A documentação do CarouselView está em desenvolvimento e alguns links podem se referir à documentação CollectionView. Na maioria dos casos, as informações devem ser aplicáveis devido à natureza de CarouselView que se baseiam em CollectionView.
+![](~/media/shared/preview.png "This API is currently pre-release")
 
 ## <a name="introductionintroductionmd"></a>[Introdução](introduction.md)
 
-O [`CarouselView`](xref:Xamarin.Forms.CarouselView) é uma exibição para apresentar dados em um layout do tipo carrossel. Sua implementação se baseia no [`CollectionView`](xref:Xamarin.Forms.CollectionView).
+O [`CarouselView`](xref:Xamarin.Forms.CarouselView) é uma exibição para apresentar dados em um layout rolável, onde os usuários podem passar por uma coleção de itens.
 
-## <a name="datacollectionviewpopulate-datamd"></a>[Dados](../collectionview/populate-data.md)
+## <a name="datapopulate-datamd"></a>[Dados](populate-data.md)
 
-Um [`CarouselView`](xref:Xamarin.Forms.CarouselView) é populado com dados definindo [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) sua propriedade para qualquer coleção que `IEnumerable`implementa. A aparência de cada item na lista pode ser definida definindo a [`ItemTemplate`](xref:Xamarin.Forms.ItemsView.ItemTemplate) propriedade [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)como a.
+Uma [`CarouselView`](xref:Xamarin.Forms.CarouselView) é populada com dados definindo sua propriedade [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) para qualquer coleção que implemente `IEnumerable`. A aparência de cada item pode ser definida definindo a propriedade [`ItemTemplate`](xref:Xamarin.Forms.ItemsView.ItemTemplate) como um [`DataTemplate`](xref:Xamarin.Forms.DataTemplate).
 
 ## <a name="layoutlayoutmd"></a>[Layout](layout.md)
 
 Por padrão, um [`CarouselView`](xref:Xamarin.Forms.CarouselView) exibirá seus itens em uma lista horizontal. No entanto, ele também tem acesso aos mesmos layouts que CollectionView, incluindo uma orientação vertical.
 
-## <a name="empty-viewscollectionviewemptyviewmd"></a>[Exibições vazias](../collectionview/emptyview.md)
+## <a name="interactioninteractionmd"></a>[Inter](interaction.md)
 
-No [`CarouselView`](xref:Xamarin.Forms.CarouselView), um modo de exibição vazio pode ser especificado para fornecer comentários ao usuário quando não há dados disponíveis para exibição. O modo de exibição vazio pode ser uma cadeia de caracteres, uma exibição ou várias exibições.
+O item exibido no momento em um [`CarouselView`](xref:Xamarin.Forms.CarouselView) pode ser acessado por meio das propriedades `CurrentItem` e `Position`.
 
-## <a name="scrollingcollectionviewscrollingmd"></a>[Rolagem](../collectionview/scrolling.md)
+## <a name="empty-viewsemptyviewmd"></a>[Exibições vazias](emptyview.md)
 
-Quando um usuário passa o dedo para iniciar uma rolagem, a posição final da rolagem pode ser controlada para que os itens sejam totalmente exibidos. Além disso, [`CarouselView`](xref:Xamarin.Forms.CarouselView) o define [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) dois métodos, que rolam programaticamente os itens para a exibição. Uma das sobrecargas rola o item no índice especificado para a exibição, enquanto o outro rola o item especificado para a exibição.
+No [`CarouselView`](xref:Xamarin.Forms.CarouselView), um modo de exibição vazio pode ser especificado para fornecer comentários ao usuário quando nenhum dado está disponível para exibição. O modo de exibição vazio pode ser uma cadeia de caracteres, uma exibição ou várias exibições.
+
+## <a name="scrollingscrollingmd"></a>[Rolagem](scrolling.md)
+
+Quando um usuário passa o dedo para iniciar uma rolagem, a posição final da rolagem pode ser controlada para que os itens sejam totalmente exibidos. Além disso, [`CarouselView`](xref:Xamarin.Forms.CarouselView) define dois métodos [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) , que programaticamente rolam os itens para a exibição. Uma das sobrecargas rola o item no índice especificado para a exibição, enquanto o outro rola o item especificado para a exibição.

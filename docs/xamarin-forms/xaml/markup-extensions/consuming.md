@@ -6,13 +6,13 @@ ms.assetid: CE686893-609C-4EC3-9225-6C68D2A9F79C
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/18/2019
-ms.openlocfilehash: 03aaf471479a5113aade6bd3f34034afadfb538c
-ms.sourcegitcommit: dad4dfcd194b63ec9e903363351b6d9e543d4888
+ms.date: 09/27/2019
+ms.openlocfilehash: a8698975d2609599e1404fbb9c87c617a54f23d7
+ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "69887894"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72696355"
 ---
 # <a name="consuming-xaml-markup-extensions"></a>Consumo de extensões de marcação do XAML
 
@@ -32,10 +32,11 @@ As extensões de marcação XAML ajudam a melhorar o poder e a flexibilidade do 
 
 Extensões de marcação XAML adicionais têm suporte historicamente por outras implementações de XAML e também são suportadas pelo Xamarin. Forms. Eles são descritos mais completamente em outros artigos:
 
-- `StaticResource` &ndash; objetos de referência de um dicionário de recursos, conforme descrito no artigo [**dicionários de recursos**](~/xamarin-forms/xaml/resource-dictionaries.md).
-- `DynamicResource` &ndash; responder a alterações em objetos em um dicionário de recursos, conforme descrito no artigo [**estilos dinâmicos**](~/xamarin-forms/user-interface/styles/dynamic.md).
-- `Binding` &ndash; estabelecer um vínculo entre as propriedades de dois objetos, conforme descrito no artigo [**vinculação de dados**](~/xamarin-forms/app-fundamentals/data-binding/index.md).
-- `TemplateBinding` &ndash; executa a vinculação de dados de um modelo de controle, conforme discutido no artigo [**Associação de um modelo de controle**](~/xamarin-forms/app-fundamentals/templates/control-templates/template-binding.md).
+- `StaticResource`-objetos de referência de um dicionário de recursos, conforme descrito no artigo [**dicionários de recursos**](~/xamarin-forms/xaml/resource-dictionaries.md).
+- `DynamicResource`-responder a alterações em objetos em um dicionário de recursos, conforme descrito no artigo [**estilos dinâmicos**](~/xamarin-forms/user-interface/styles/dynamic.md).
+- `Binding`-estabeleça um vínculo entre as propriedades de dois objetos, conforme descrito no artigo [**vinculação de dados**](~/xamarin-forms/app-fundamentals/data-binding/index.md).
+- `TemplateBinding`-executa a associação de dados de um modelo de controle, conforme discutido no artigo [**Associação de um modelo de controle**](~/xamarin-forms/app-fundamentals/templates/control-templates/template-binding.md).
+- `RelativeSource` – define a origem da associação em relação à posição do destino da associação, conforme discutido no artigo [associações relativas](~/xamarin-forms/app-fundamentals/data-binding/relative-bindings.md).
 
 O layout de [`RelativeLayout`](xref:Xamarin.Forms.RelativeLayout) usa a extensão de marcação personalizada [`ConstraintExpression`](xref:Xamarin.Forms.ConstraintExpression). Essa extensão de marcação é descrita no artigo [**RelativeLayout**](~/xamarin-forms/user-interface/layouts/relative-layout.md).
 
@@ -147,7 +148,7 @@ Este é o exemplo em execução:
 
 <a name="reference" />
 
-## <a name="xreference-markup-extension"></a>Extensão de marcação x:Reference
+## <a name="xreference-markup-extension"></a>extensão de marcação x:Reference
 
 A extensão de marcação de `x:Reference` é suportada pela classe [`ReferenceExtension`](xref:Xamarin.Forms.Xaml.ReferenceExtension) . A classe tem uma única propriedade chamada [`Name`](xref:Xamarin.Forms.Xaml.ReferenceExtension.Name) do tipo `string` que você define como o nome de um elemento na página que recebeu um nome com `x:Name`. Essa propriedade de `Name` é a propriedade Content de `ReferenceExtension`, portanto, `Name=` não é necessário quando `x:Reference` aparece entre chaves.
 
@@ -481,7 +482,7 @@ A extensão de marcação de `OnPlatform` é suportada pela classe [`OnPlatformE
 > [!NOTE]
 > O analisador XAML permite que a classe [`OnPlatformExtension`](xref:Xamarin.Forms.Xaml.OnPlatformExtension) seja abreviada como `OnPlatform`.
 
-A propriedade `Default` é a propriedade Content de `OnPlatformExtension`. Portanto, para expressões de marcação XAML expressas com chaves, você pode eliminar a `Default=` parte da expressão desde que ela seja o primeiro argumento.
+A propriedade `Default` é a propriedade Content de `OnPlatformExtension`. Portanto, para expressões de marcação XAML expressas com chaves, você pode eliminar a `Default=` parte da expressão desde que ela seja o primeiro argumento. Se a propriedade `Default` não estiver definida, ela usará como padrão o valor da propriedade [`BindableProperty.DefaultValue`](xref:Xamarin.Forms.BindableProperty.DefaultValue) , desde que a extensão de marcação esteja direcionando para um [`BindableProperty`](xref:Xamarin.Forms.BindableProperty).
 
 > [!IMPORTANT]
 > O analisador XAML espera que os valores do tipo correto sejam fornecidos para propriedades que consomem a extensão de marcação `OnPlatform`. Se a conversão de tipo for necessária, a extensão de marcação `OnPlatform` tentará executá-la usando os conversores padrão fornecidos pelo Xamarin. Forms. No entanto, há algumas conversões de tipo que não podem ser executadas pelos conversores padrão e, nesses casos, a propriedade `Converter` deve ser definida como uma implementação de `IValueConverter`.
