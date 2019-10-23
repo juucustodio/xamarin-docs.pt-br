@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 807f0b7b2969d9f1039beb1a7ec7d535be5c84dc
-ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
+ms.openlocfilehash: b1a041f1a2baae9b06de023f6eae9c6598b80061
+ms.sourcegitcommit: 5efbf5ab53532b3a74c80129ff4e0ca84b476d21
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67277085"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72678703"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -33,11 +33,11 @@ Para concluir este tutorial, você precisará ter o Visual Studio 2019 (versão 
     Esse código define declarativamente a interface do usuário para a página, que é composta por um [`Label`](xref:Xamarin.Forms.Label) em um [`Grid`](xref:Xamarin.Forms.Grid). Por padrão, o `Grid` posiciona suas exibições filho em uma única localização. Portanto, uma `Grid` que contém vários filhos devem especificar colunas e linhas, que serão abordadas no próximo exercício. Além disso, a propriedade [`Margin`](xref:Xamarin.Forms.View.Margin) indica a posição da renderização de `Grid` dentro de [`ContentPage`](xref:Xamarin.Forms.ContentPage).
 
     > [!NOTE]
-    > Além da propriedade [`Margin`](xref:Xamarin.Forms.View.Margin), a propriedade [`Padding`](xref:Xamarin.Forms.Layout.Padding) também pode ser definida em um [`Grid`](xref:Xamarin.Forms.Grid). O valor da propriedade [`Padding`](xref:Xamarin.Forms.Layout.Padding) especifica a distância entre as exibições na `Grid`. Para saber mais, confira [Margens e preenchimento](~/xamarin-forms/user-interface/layouts/margin-and-padding.md).
+    > Além da propriedade [`Margin`](xref:Xamarin.Forms.View.Margin), a propriedade [`Padding`](xref:Xamarin.Forms.Layout.Padding) também pode ser definida em um [`Grid`](xref:Xamarin.Forms.Grid). O valor da propriedade [`Padding`](xref:Xamarin.Forms.Layout.Padding) especifica a distância entre os limites do `Grid` e dos respectivos filhos. Para saber mais, confira [Margens e preenchimento](~/xamarin-forms/user-interface/layouts/margin-and-padding.md).
 
 1. Na barra de ferramentas do Visual Studio, pressione o botão **Iniciar** (o botão triangular que se parece com um botão Reproduzir) para iniciar o aplicativo dentro do simulador de iOS remoto ou Android Emulator escolhido:
 
-    [![Captura de tela de um Rótulo em uma Grade, em iOS e Android](../images/create-grid.png "Grade contendo um Rótulo")](../images/create-grid-large.png#lightbox "Grade contendo um Rótulos")
+    [![Captura de tela de um rótulo em uma grade, no iOS e no Android](../images/create-grid.png "Grade que contém um rótulo")](../images/create-grid-large.png#lightbox "Grade que contém um rótulos")
 
     Para obter mais informações sobre [`Grid`](xref:Xamarin.Forms.Grid), confira [Grade do Xamarin.Forms](~/xamarin-forms/user-interface/layouts/grid.md).
 
@@ -72,6 +72,6 @@ Para concluir este tutorial, você precisará ter o Visual Studio para Mac (vers
 
 1. Na barra de ferramentas do Visual Studio para Mac, pressione o botão **Iniciar** (o botão triangular que se parece com o botão Reproduzir) para iniciar o aplicativo dentro do simulador de iOS ou do Android Emulator escolhido:
 
-    [![Captura de tela de um Rótulo em uma Grade, em iOS e Android](../images/create-grid.png "Grade contendo um Rótulo")](../images/create-grid-large.png#lightbox "Grade contendo um Rótulos")
+    [![Captura de tela de um rótulo em uma grade, no iOS e no Android](../images/create-grid.png "Grade que contém um rótulo")](../images/create-grid-large.png#lightbox "Grade que contém um rótulos")
 
     Para obter mais informações sobre [`Grid`](xref:Xamarin.Forms.Grid), confira [Grade do Xamarin.Forms](~/xamarin-forms/user-interface/layouts/grid.md).

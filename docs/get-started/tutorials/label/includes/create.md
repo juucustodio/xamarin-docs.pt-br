@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: ec74a049adaa72010bf0566691e4d1f066058d4a
-ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
+ms.openlocfilehash: 9d78f0e9bf3b8d6d227f76b2729be849e5cdd3a6
+ms.sourcegitcommit: 5efbf5ab53532b3a74c80129ff4e0ca84b476d21
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67277081"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72678702"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -31,11 +31,11 @@ Para concluir este tutorial, você precisará ter o Visual Studio 2019 (versão 
     </ContentPage>
     ```
 
-    Esse código define declarativamente a interface do usuário para a página, que é composta por um [`Label`](xref:Xamarin.Forms.Label) em um [`StackLayout`](xref:Xamarin.Forms.StackLayout). A propriedade [`Label.Text`](xref:Xamarin.Forms.Button.Text) especifica o texto que é exibido e a propriedade [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) especifica que o texto seja centralizado horizontalmente.
+    Esse código define declarativamente a interface do usuário para a página, que é composta por um [`Label`](xref:Xamarin.Forms.Label) em um [`StackLayout`](xref:Xamarin.Forms.StackLayout). A propriedade [`Label.Text`](xref:Xamarin.Forms.Button.Text) especifica o texto que é exibido e a propriedade [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) especifica que o `Label` será horizontalmente centralizado.
 
 1. Na barra de ferramentas do Visual Studio, pressione o botão **Iniciar** (o botão triangular que se parece com um botão Reproduzir) para iniciar o aplicativo dentro do simulador remoto de iOS ou do Android Emulator escolhido:
 
-    [![Captura de tela de um rótulo centralizado no iOS e Android](../images/create-label.png "Um rótulo centralizado")](../images/create-label-large.png#lightbox "Um rótulo centralizado")
+    [![Captura de tela de um rótulo centralizado no iOS e no Android](../images/create-label.png "Um rótulo centralizado")](../images/create-label-large.png#lightbox "Um rótulo centralizado")
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
@@ -66,4 +66,4 @@ Para concluir este tutorial, você precisará ter o Visual Studio para Mac (vers
 
 1. Na barra de ferramentas do Visual Studio para Mac, pressione o botão **Iniciar** (o botão triangular que se parece com o botão Reproduzir) para iniciar o aplicativo dentro do simulador de iOS ou do Android Emulator escolhido:
 
-    [![Captura de tela de um rótulo centralizado no iOS e Android](../images/create-label.png "Um rótulo centralizado")](../images/create-label-large.png#lightbox "Um rótulo centralizado")
+    [![Captura de tela de um rótulo centralizado no iOS e no Android](../images/create-label.png "Um rótulo centralizado")](../images/create-label-large.png#lightbox "Um rótulo centralizado")

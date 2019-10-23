@@ -19,6 +19,12 @@ sections:
         style: cards
         className: cardsB
         items:
+          - href: 2019-10.md
+            html: 'Novidades nos documentos do Xamarin em outubro de 2019: Xamarin.Forms 4.3 lançado, bem como outras atualizações.'
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_article.svg'
+              href: 2019-10.md
+            title: Outubro de 2019
           - href: 2019-08.md
             html: 'Novidades nos documentos do Xamarin em agosto de 2019: lançamento do Xamarin.Forms 4.2, atualizações da interface do usuário e outras atualizações.'
             image:
