@@ -115,11 +115,11 @@ sections:
               src: ~/media/icons/i_user-interface.svg
               href: listview/index.md
             title: ListView
-          - href: map.md
+          - href: map/index.md
             html: 'Saiba como usar o controle Map, incluindo a configuração de plataforma necessária e como popular o mapa com pins.'
             image:
               src: ~/media/icons/i_user-interface.svg
-              href: map.md
+              href: map/index.md
             title: Mapas
           - href: menuitem.md
             html: Saiba como usar a classe MenuItem para adicionar itens ao menu de contexto de células ListView.
