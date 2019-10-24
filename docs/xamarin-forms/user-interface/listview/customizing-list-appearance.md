@@ -1,38 +1,38 @@
 ---
 title: Aparência de ListView
-description: Este artigo explica como personalizar ListViews em aplicativos xamarin. Forms usando os cabeçalhos, rodapés, grupos e as células de altura variável.
+description: Este artigo explica como personalizar ListViews em aplicativos Xamarin. Forms usando cabeçalhos, rodapés, grupos e células de altura variável.
 ms.prod: xamarin
 ms.assetid: DC8009B0-4371-4D60-885A-5362FC7EE3E5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/13/2018
-ms.openlocfilehash: 62073f624c37a48baa49453d7bdd1e0b849013cd
-ms.sourcegitcommit: a5ef4497db04dfa016865bc7454b3de6ff088554
+ms.openlocfilehash: f6576f1e7a0ed4aa27a40c7610b42e942c7923b4
+ms.sourcegitcommit: fbccdade677a805d842ec054e44bed3d01356e93
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2019
-ms.locfileid: "70998165"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798625"
 ---
 # <a name="listview-appearance"></a>Aparência de ListView
 
-[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-grouping)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-grouping)
 
-O Xamarin. Forms [`ListView`](xref:Xamarin.Forms.ListView) permite que você personalize a apresentação da lista, além das [`ViewCell`](xref:Xamarin.Forms.ViewCell) instâncias de cada linha da lista.
+O [`ListView`](xref:Xamarin.Forms.ListView) Xamarin. Forms permite que você personalize a apresentação da lista, além das instâncias de [`ViewCell`](xref:Xamarin.Forms.ViewCell) para cada linha da lista.
 
 ## <a name="grouping"></a>Agrupamento
 
-Grandes conjuntos de dados podem se tornar difíceis quando apresentados em uma lista de rolagem contínua. Habilitação de agrupamento pode melhorar a experiência do usuário nesses casos, organizar melhor o conteúdo e ativar os controles específicos da plataforma que facilitam a navegação de dados.
+Grandes conjuntos de dados podem se tornar difíceis quando apresentados em uma lista de rolagem contínua. A habilitação do agrupamento pode melhorar a experiência do usuário nesses casos, organizando melhor o conteúdo e ativando controles específicos da plataforma que facilitam a navegação dos dados.
 
-Quando o agrupamento é ativado para um `ListView`, uma linha de cabeçalho é adicionada para cada grupo.
+Quando o agrupamento é ativado para um `ListView`, uma linha de cabeçalho é adicionada a cada grupo.
 
 Para habilitar o agrupamento:
 
-- Crie uma lista de listas (uma lista de grupos, cada grupo que está sendo uma lista de elementos).
-- Defina as `ListView`do `ItemsSource` à lista.
-- Definir `IsGroupingEnabled` como true.
-- Definir [ `GroupDisplayBinding` ](xref:Xamarin.Forms.ListView.GroupDisplayBinding) para associar a propriedade dos grupos que está sendo usada como o título do grupo.
-- [Opcional] Definir [ `GroupShortNameBinding` ](xref:Xamarin.Forms.ListView.GroupShortNameBinding) para associar à propriedade que está sendo usada como o nome curto para o grupo dos grupos. O nome curto é usado para as listas de salto (coluna direita no iOS).
+- Crie uma lista de listas (uma lista de grupos, cada grupo sendo uma lista de elementos).
+- Defina o `ItemsSource` do `ListView` para essa lista.
+- Defina `IsGroupingEnabled` como true.
+- Defina [`GroupDisplayBinding`](xref:Xamarin.Forms.ListView.GroupDisplayBinding) para associar à propriedade dos grupos que estão sendo usados como o título do grupo.
+- Adicional Defina [`GroupShortNameBinding`](xref:Xamarin.Forms.ListView.GroupShortNameBinding) para associar à propriedade dos grupos que estão sendo usados como o nome curto do grupo. O nome curto é usado para as listas de atalhos (coluna do lado direito no iOS).
 
 Comece criando uma classe para os grupos:
 
@@ -52,9 +52,9 @@ public class PageTypeGroup : List<PageModel>
     }
 ```
 
-No código acima, `All` é a lista será dado ao nosso ListView como a origem da associação. `Title` e `ShortName` são as propriedades que serão usadas para títulos de grupo.
+No código acima, `All` é a lista que será dada ao nosso ListView como a origem da associação. `Title` e `ShortName` são as propriedades que serão usadas para títulos de grupo.
 
-Nesse estágio, `All` é uma lista vazia. Adicione um construtor estático para que a lista será preenchida no início do programa:
+Neste estágio, `All` é uma lista vazia. Adicione um construtor estático para que a lista seja populada na inicialização do programa:
 
 ```csharp
 static PageTypeGroup()
@@ -72,12 +72,12 @@ static PageTypeGroup()
                 new PageModel("Bella", "Desire", new switchCellPage(), "grapefruit.jpg"),
                 new PageModel("Ben", "Chocolate", new switchCellPage(), "grapefruit.jpg")
             }
-        }
+        };
         All = Groups; //set the publicly accessible list
 }
 ```
 
-No código acima, também podemos chamar `Add` os elementos de `Groups`, que são instâncias do tipo `PageTypeGroup`. Esse método é possível porque `PageTypeGroup` herda de `List<PageModel>`.
+No código acima, também podemos chamar `Add` em elementos de `Groups`, que são instâncias do tipo `PageTypeGroup`. Esse método é possível porque `PageTypeGroup` herda de `List<PageModel>`.
 
 Aqui está o XAML para exibir a lista agrupada:
 
@@ -104,22 +104,22 @@ Aqui está o XAML para exibir a lista agrupada:
 
 Esse XAML executa as seguintes ações:
 
-- Definir `GroupShortNameBinding` para o `ShortName` propriedade definida em nossa classe de grupo
-- Definir `GroupDisplayBinding` para o `Title` propriedade definida em nossa classe de grupo
+- Definir `GroupShortNameBinding` para a propriedade `ShortName` definida em nossa classe de grupo
+- Definir `GroupDisplayBinding` para a propriedade `Title` definida em nossa classe de grupo
 - Definir `IsGroupingEnabled` como true
-- Alterado o `ListView`do `ItemsSource` à lista agrupada
+- Alterou o `ItemsSource` do `ListView` para a lista agrupada
 
 A captura de tela a seguir mostra a interface do usuário resultante:
 
-![](customizing-list-appearance-images/grouping-depth.png "Exemplo de agrupamento de ListView")
+![](customizing-list-appearance-images/grouping-depth.png "ListView Grouping Example")
 
 ### <a name="customizing-grouping"></a>Personalizando o agrupamento
 
-Se o agrupamento tiver sido habilitado na lista, o cabeçalho de grupo também pode ser personalizado.
+Se o agrupamento tiver sido habilitado na lista, o cabeçalho do grupo também poderá ser personalizado.
 
-Assim como o `ListView` tem um `ItemTemplate` para definir como as linhas são exibidas, `ListView` tem um `GroupHeaderTemplate`.
+Semelhante a como o `ListView` tem um `ItemTemplate` para definir como as linhas são exibidas, `ListView` tem um `GroupHeaderTemplate`.
 
-Um exemplo de como personalizar o cabeçalho de grupo em XAML é mostrado aqui:
+Um exemplo de personalização do cabeçalho de grupo em XAML é mostrado aqui:
 
 ```xaml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -156,9 +156,9 @@ Um exemplo de como personalizar o cabeçalho de grupo em XAML é mostrado aqui:
 
 ## <a name="headers-and-footers"></a>Cabeçalhos e rodapés
 
-É possível para um ListView apresentar um cabeçalho e rodapé que rolam com os elementos da lista. O cabeçalho e rodapé podem ser cadeias de caracteres de texto ou um layout mais complicado. Esse comportamento é separado dos [grupos de seções](#grouping).
+É possível que um ListView apresente um cabeçalho e um rodapé que rolam com os elementos da lista. O cabeçalho e o rodapé podem ser cadeias de caracteres de texto ou um layout mais complicado. Esse comportamento é separado dos [grupos de seções](#grouping).
 
-Você pode definir o `Header` e/ou `Footer` com um `string` valor ou pode defini-los como um layout mais complexo. Também há `HeaderTemplate` e `FooterTemplate` propriedades que permitem criam layouts mais complexos para o cabeçalho e rodapé que suportam associação de dados.
+Você pode definir o `Header` e/ou `Footer` para um valor `string` ou pode defini-los como um layout mais complexo. Também há `HeaderTemplate` e `FooterTemplate` propriedades que permitem criar layouts mais complexos para o cabeçalho e o rodapé que dão suporte à vinculação de dados.
 
 Para criar um cabeçalho/rodapé básico, basta definir as propriedades de cabeçalho ou rodapé como o texto que você deseja exibir. No código:
 
@@ -170,7 +170,7 @@ ListView HeaderList = new ListView()
 };
 ```
 
-No XAML:
+Em XAML:
 
 ```xaml
 <ListView x:Name="HeaderList" 
@@ -180,9 +180,9 @@ No XAML:
 </ListView>
 ```
 
-![](customizing-list-appearance-images/header-default.png "ListView com cabeçalho e rodapé")
+![](customizing-list-appearance-images/header-default.png "ListView with Header and Footer")
 
-Para criar um cabeçalho personalizado e um rodapé, defina os modos de exibição do cabeçalho e rodapé:
+Para criar um cabeçalho e um rodapé personalizados, defina as exibições de cabeçalho e rodapé:
 
 ```xaml
 <ListView.Header>
@@ -201,24 +201,24 @@ Para criar um cabeçalho personalizado e um rodapé, defina os modos de exibiç�
 </ListView.Footer>
 ```
 
-![](customizing-list-appearance-images/header-custom.png "ListView com personalizado de cabeçalho e rodapé")
+![](customizing-list-appearance-images/header-custom.png "ListView with Customized Header and Footer")
 
 ## <a name="scrollbar-visibility"></a>Visibilidade da barra de rolagem
 
-A [`ListView`](xref:Xamarin.Forms.ListView) classe tem `HorizontalScrollBarVisibility` e `VerticalScrollBarVisibility` Propriedades, que Obtém ou define um [`ScrollBarVisibility`](xref:Xamarin.Forms.ScrollBarVisibility) valor que representa quando a barra de rolagem horizontal ou vertical é visível. Ambas as propriedades podem ser definidas com os seguintes valores:
+A classe [`ListView`](xref:Xamarin.Forms.ListView) tem `HorizontalScrollBarVisibility` e `VerticalScrollBarVisibility` Propriedades, que Obtém ou define um valor de [`ScrollBarVisibility`](xref:Xamarin.Forms.ScrollBarVisibility) que representa quando a barra de rolagem horizontal ou vertical é visível. Ambas as propriedades podem ser definidas com os seguintes valores:
 
-- [`Default`](xref:Xamarin.Forms.ScrollBarVisibility)indica o comportamento da barra de rolagem padrão para a plataforma e é o valor padrão `HorizontalScrollBarVisibility` para `VerticalScrollBarVisibility` as propriedades e.
-- [`Always`](xref:Xamarin.Forms.ScrollBarVisibility)indica que as barras de rolagem estarão visíveis, mesmo quando o conteúdo couber na exibição.
-- [`Never`](xref:Xamarin.Forms.ScrollBarVisibility)indica que as barras de rolagem não estarão visíveis, mesmo se o conteúdo não couber na exibição.
+- [`Default`](xref:Xamarin.Forms.ScrollBarVisibility) indica o comportamento padrão da barra de rolagem para a plataforma e é o valor padrão para as propriedades `HorizontalScrollBarVisibility` e `VerticalScrollBarVisibility`.
+- [`Always`](xref:Xamarin.Forms.ScrollBarVisibility) indica que as barras de rolagem estarão visíveis, mesmo quando o conteúdo couber na exibição.
+- [`Never`](xref:Xamarin.Forms.ScrollBarVisibility) indica que as barras de rolagem não estarão visíveis, mesmo que o conteúdo não caiba na exibição.
 
 ## <a name="row-separators"></a>Separadores de linha
 
-As linhas do separador são exibidas entre `ListView` elementos por padrão no iOS e Android. Se você desejar ocultar as linhas de separador no iOS e Android, defina o `SeparatorVisibility` propriedade em sua ListView. As opções para `SeparatorVisibility` são:
+As linhas separadoras são exibidas entre os elementos de `ListView` por padrão no iOS e no Android. Se você preferir ocultar as linhas separadoras no iOS e no Android, defina a propriedade `SeparatorVisibility` em ListView. As opções para `SeparatorVisibility` são:
 
-- **Padrão** -mostra uma linha separadora no iOS e Android.
-- **Nenhum** -oculta o separador em todas as plataformas.
+- **Padrão** -mostra uma linha separadora no Ios e Android.
+- **Nenhum** – oculta o separador em todas as plataformas.
 
-Visibilidade do padrão:
+Visibilidade padrão:
 
 C#:
 
@@ -226,15 +226,15 @@ C#:
 SeparatorDemoListView.SeparatorVisibility = SeparatorVisibility.Default;
 ```
 
-XAML:
+XAML
 
 ```xaml
 <ListView x:Name="SeparatorDemoListView" SeparatorVisibility="Default" />
 ```
 
-![](customizing-list-appearance-images/separator-default.png "ListView com separadores de linha padrão")
+![](customizing-list-appearance-images/separator-default.png "ListView with Default Row Separators")
 
-Nenhum:
+None
 
 C#:
 
@@ -242,15 +242,15 @@ C#:
 SeparatorDemoListView.SeparatorVisibility = SeparatorVisibility.None;
 ```
 
-XAML:
+XAML
 
 ```xaml
 <ListView x:Name="SeparatorDemoListView" SeparatorVisibility="None" />
 ```
 
-![](customizing-list-appearance-images/separator-none.png "ListView sem separadores de linha")
+![](customizing-list-appearance-images/separator-none.png "ListView without Row Separators")
 
-Você também pode definir a cor da linha do separador via o `SeparatorColor` propriedade:
+Você também pode definir a cor da linha do separador por meio da propriedade `SeparatorColor`:
 
 C#:
 
@@ -258,25 +258,25 @@ C#:
 SeparatorDemoListView.SeparatorColor = Color.Green;
 ```
 
-XAML:
+XAML
 
 ```xaml
 <ListView x:Name="SeparatorDemoListView" SeparatorColor="Green" />
 ```
 
-![](customizing-list-appearance-images/separator-custom.png "ListView com separadores de linha verde")
+![](customizing-list-appearance-images/separator-custom.png "ListView with Green Row Separators")
 
 > [!NOTE]
-> Definindo cada uma dessas propriedades no Android, após o carregamento de `ListView` resulta em uma penalidade de desempenho grande.
+> Definir qualquer uma dessas propriedades no Android depois de carregar a `ListView` incorre em uma grande penalidade de desempenho.
 
 ## <a name="row-height"></a>Altura da linha
 
-Por padrão, todas as linhas em um ListView têm a mesma altura. ListView tem duas propriedades que podem ser usadas para alterar esse comportamento:
+Todas as linhas em um ListView têm a mesma altura por padrão. ListView tem duas propriedades que podem ser usadas para alterar esse comportamento:
 
-- `HasUnevenRows` &ndash; `true`/`false` valor, as linhas têm diferentes alturas se definido como `true`. Assume o padrão de `false`.
-- `RowHeight` &ndash; Define a altura de cada a linha quando `HasUnevenRows` é `false`.
+- `HasUnevenRows` &ndash; `true` / valor de `false`, as linhas têm alturas variáveis, se definidas como `true`. Assume o padrão de `false`.
+- `RowHeight` &ndash; define a altura de cada linha quando `HasUnevenRows` é `false`.
 
-Você pode definir a altura de todas as linhas, definindo o `RowHeight` propriedade no `ListView`.
+Você pode definir a altura de todas as linhas definindo a propriedade `RowHeight` na `ListView`.
 
 ### <a name="custom-fixed-row-height"></a>Altura de linha fixa personalizada
 
@@ -286,17 +286,17 @@ C#:
 RowHeightDemoListView.RowHeight = 100;
 ```
 
-XAML:
+XAML
 
 ```xaml
 <ListView x:Name="RowHeightDemoListView" RowHeight="100" />
 ```
 
-![](customizing-list-appearance-images/height-custom.png "ListView com altura de linha fixa")
+![](customizing-list-appearance-images/height-custom.png "ListView with Fixed Row Height")
 
 ### <a name="uneven-rows"></a>Linhas desiguais
 
-Se você quiser linhas individuais ter alturas diferentes, você pode definir as `HasUnevenRows` propriedade para `true`. As alturas de linha não precisam ser definidas `HasUnevenRows` manualmente uma vez que `true`foram definidas como, porque as alturas serão calculadas automaticamente pelo Xamarin. Forms.
+Se desejar que as linhas individuais tenham alturas diferentes, você poderá definir a propriedade `HasUnevenRows` como `true`. As alturas de linha não precisam ser definidas manualmente quando `HasUnevenRows` foi definido como `true`, porque as alturas serão calculadas automaticamente pelo Xamarin. Forms.
 
 C#:
 
@@ -304,17 +304,17 @@ C#:
 RowHeightDemoListView.HasUnevenRows = true;
 ```
 
-XAML:
+XAML
 
 ```xaml
 <ListView x:Name="RowHeightDemoListView" HasUnevenRows="true" />
 ```
 
-![](customizing-list-appearance-images/height-uneven.png "ListView com linhas irregulares")
+![](customizing-list-appearance-images/height-uneven.png "ListView with Uneven Rows")
 
 ### <a name="resize-rows-at-runtime"></a>Redimensionar linhas em tempo de execução
 
-Individuais `ListView` linhas podem ser redimensionadas por meio de programação em tempo de execução, desde que o `HasUnevenRows` estiver definida como `true`. O [ `Cell.ForceUpdateSize` ](xref:Xamarin.Forms.Cell.ForceUpdateSize) método atualiza o tamanho da célula, mesmo quando não estiver visível no momento, conforme demonstrado no exemplo de código a seguir:
+Linhas `ListView` individuais podem ser programaticamente redimensionadas em tempo de execução, desde que a propriedade `HasUnevenRows` esteja definida como `true`. O método [`Cell.ForceUpdateSize`](xref:Xamarin.Forms.Cell.ForceUpdateSize) atualiza o tamanho de uma célula, mesmo quando ela não está visível no momento, conforme demonstrado no exemplo de código a seguir:
 
 ```csharp
 void OnImageTapped (object sender, EventArgs args)
@@ -329,17 +329,17 @@ void OnImageTapped (object sender, EventArgs args)
 }
 ```
 
-O `OnImageTapped` manipulador de eventos é executado em resposta a uma [ `Image` ](xref:Xamarin.Forms.Image) em uma célula que está sendo tocado e aumenta o tamanho do `Image` exibido na célula para que ela é exibida com facilidade.
+O manipulador de eventos `OnImageTapped` é executado em resposta a um [`Image`](xref:Xamarin.Forms.Image) em uma célula que está sendo tocada e aumenta o tamanho do `Image` exibido na célula para que ele seja facilmente exibido.
 
-![](customizing-list-appearance-images/dynamic-row-resizing.png "ListView com redimensionamento da linha do tempo de execução")
+![](customizing-list-appearance-images/dynamic-row-resizing.png "ListView with Runtime Row Resizing")
 
 > [!WARNING]
 > O uso excessivo do redimensionamento de linha de tempo de execução pode causar degradação de desempenho.
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Agrupamento (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-grouping)
-- [Exibição de renderizador personalizado (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithlistviewnative)
-- [Redimensionamento de linhas dinâmicas (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-dynamicunevenlistcells)
-- [Notas de versão 1.4](http://forums.xamarin.com/discussion/35451/xamarin-forms-1-4-0-released/)
-- [Notas de versão 1.3](http://forums.xamarin.com/discussion/29934/xamarin-forms-1-3-0-released/)
+- [Agrupamento (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-grouping)
+- [Exibição do renderizador personalizado (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithlistviewnative)
+- [Redimensionamento dinâmico de linhas (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-dynamicunevenlistcells)
+- [notas de versão de 1,4](http://forums.xamarin.com/discussion/35451/xamarin-forms-1-4-0-released/)
+- [notas de versão de 1,3](http://forums.xamarin.com/discussion/29934/xamarin-forms-1-3-0-released/)
