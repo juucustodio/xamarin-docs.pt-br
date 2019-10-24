@@ -6,35 +6,33 @@ ms.assetid: 2ED719AF-33D2-434D-949A-B70B479C9BA5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 08/13/2019
-ms.openlocfilehash: 303266f44664f7f57aeaf36869a3a06c8eb91870
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.date: 09/17/2019
+ms.openlocfilehash: 7aef14cbb854d89a2088a450353b943402f76a86
+ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "69888645"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72697228"
 ---
 # <a name="xamarinforms-collectionview-scrolling"></a>Rolagem de CollectionView do Xamarin. Forms
 
-![](~/media/shared/preview.png "Esta API está atualmente em pré-lançamento")
-
 [![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView)define dois [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) métodos, que rolam itens para o modo de exibição. Uma das sobrecargas rola o item no índice especificado para a exibição, enquanto o outro rola o item especificado para a exibição. Ambas as sobrecargas têm argumentos adicionais que podem ser especificados para indicar a posição exata do item após a conclusão da rolagem e se a rolagem deve ser animada.
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) define dois métodos [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) , que rolam itens para o modo de exibição. Uma das sobrecargas rola o item no índice especificado para a exibição, enquanto o outro rola o item especificado para a exibição. Ambas as sobrecargas têm argumentos adicionais que podem ser especificados para indicar o grupo ao qual o item pertence, a posição exata do item após a conclusão da rolagem e se a rolagem deve ser animada.
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView)define um [`ScrollToRequested`](xref:Xamarin.Forms.ItemsView.ScrollToRequested) evento que é acionado quando um [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) dos métodos é invocado. O [`ScrollToRequestedEventArgs`](xref:Xamarin.Forms.ScrollToRequestedEventArgs) objeto que acompanha o `ScrollToRequested` evento tem muitas `ScrollToPosition` `IsAnimated` `Index`Propriedades, incluindo, ,e.`Item` Essas propriedades são definidas a partir dos argumentos especificados nas `ScrollTo` chamadas de método.
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) define um evento de [`ScrollToRequested`](xref:Xamarin.Forms.ItemsView.ScrollToRequested) que é acionado quando um dos métodos de [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) é invocado. O objeto [`ScrollToRequestedEventArgs`](xref:Xamarin.Forms.ScrollToRequestedEventArgs) que acompanha o evento `ScrollToRequested` tem muitas propriedades, incluindo `IsAnimated`, `Index`, `Item` e `ScrollToPosition`. Essas propriedades são definidas a partir dos argumentos especificados nas chamadas de método `ScrollTo`.
 
-Além disso, [`CollectionView`](xref:Xamarin.Forms.CollectionView) o define `Scrolled` um evento que é acionado para indicar que a rolagem ocorreu. O `ItemsViewScrolledEventArgs` objeto que acompanha o `Scrolled` evento tem muitas propriedades. Para obter mais informações, consulte [detectar rolagem](#detect-scrolling).
+Além disso, [`CollectionView`](xref:Xamarin.Forms.CollectionView) define um evento de `Scrolled` que é acionado para indicar que a rolagem ocorreu. O objeto `ItemsViewScrolledEventArgs` que acompanha o evento `Scrolled` tem muitas propriedades. Para obter mais informações, consulte [detectar rolagem](#detect-scrolling).
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView)também define uma `ItemsUpdatingScrollMode` propriedade que representa o comportamento `CollectionView` de rolagem do quando novos itens são adicionados a ele. Para obter mais informações sobre essa propriedade, consulte [controlar posição de rolagem quando novos itens forem adicionados](#control-scroll-position-when-new-items-are-added).
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) também define uma propriedade `ItemsUpdatingScrollMode` que representa o comportamento de rolagem do `CollectionView` quando novos itens são adicionados a ele. Para obter mais informações sobre essa propriedade, consulte [controlar posição de rolagem quando novos itens forem adicionados](#control-scroll-position-when-new-items-are-added).
 
 Quando um usuário passa o dedo para iniciar uma rolagem, a posição final da rolagem pode ser controlada para que os itens sejam totalmente exibidos. Esse recurso é conhecido como encaixe, pois os itens se ajustam à posição quando a rolagem é interrompida. Para obter mais informações, consulte [snap Points](#snap-points).
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView)também pode carregar dados de forma incremental à medida que o usuário rola. Para obter mais informações, consulte [carregar dados incrementalmente](populate-data.md#load-data-incrementally).
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) também pode carregar dados de forma incremental à medida que o usuário rola. Para obter mais informações, consulte [carregar dados incrementalmente](populate-data.md#load-data-incrementally).
 
 ## <a name="detect-scrolling"></a>Detectar rolagem
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView)define um `Scrolled` evento que é acionado para indicar que a rolagem ocorreu. O exemplo de XAML a seguir `CollectionView` mostra um que define um manipulador de `Scrolled` eventos para o evento:
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) define um evento de `Scrolled` que é acionado para indicar que a rolagem ocorreu. O exemplo de XAML a seguir mostra um `CollectionView` que define um manipulador de eventos para o evento `Scrolled`:
 
 ```xaml
 <CollectionView Scrolled="OnCollectionViewScrolled">
@@ -49,7 +47,7 @@ CollectionView collectionView = new CollectionView();
 collectionView.Scrolled += OnCollectionViewScrolled;
 ```
 
-Neste exemplo de código, o `OnCollectionViewScrolled` manipulador de eventos é executado quando `Scrolled` o evento é disparado:
+Neste exemplo de código, o manipulador de eventos `OnCollectionViewScrolled` é executado quando o evento `Scrolled` é acionado:
 
 ```csharp
 void OnCollectionViewScrolled(object sender, ItemsViewScrolledEventArgs e)
@@ -64,25 +62,32 @@ void OnCollectionViewScrolled(object sender, ItemsViewScrolledEventArgs e)
 }
 ```
 
-O `OnCollectionViewScrolled` manipulador de eventos gera os valores `ItemsViewScrolledEventArgs` do objeto que acompanha o evento.
+Neste exemplo, o manipulador de eventos `OnCollectionViewScrolled` gera os valores do objeto `ItemsViewScrolledEventArgs` que acompanha o evento.
 
 > [!IMPORTANT]
-> O `Scrolled` evento é acionado para rolagens iniciadas pelo usuário e para rolagens programáticas.
+> O evento `Scrolled` é acionado para rolagens iniciadas pelo usuário e para rolagens programáticas.
 
 ## <a name="scroll-an-item-at-an-index-into-view"></a>Rolar um item em um índice para a exibição
 
-A primeira [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) sobrecarga do método rola o item no índice especificado para a exibição. Dado um [`CollectionView`](xref:Xamarin.Forms.CollectionView) objeto chamado `collectionView`, o exemplo a seguir mostra como rolar o item no índice 12 para a exibição:
+A primeira sobrecarga do método [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) rola o item no índice especificado para a exibição. Dado um objeto [`CollectionView`](xref:Xamarin.Forms.CollectionView) chamado `collectionView`, o exemplo a seguir mostra como rolar o item no índice 12 para a exibição:
 
 ```csharp
 collectionView.ScrollTo(12);
 ```
 
+Como alternativa, um item em dados agrupados pode ser rolado para a exibição, especificando os índices de item e de grupo. O exemplo a seguir mostra como rolar o terceiro item no segundo grupo para a exibição:
+
+```csharp
+// Items and groups are indexed from zero.
+collectionView.ScrollTo(2, 1);
+```
+
 > [!NOTE]
-> O [`ScrollToRequested`](xref:Xamarin.Forms.ItemsView.ScrollToRequested) evento é acionado quando [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) o método é invocado.
+> O evento [`ScrollToRequested`](xref:Xamarin.Forms.ItemsView.ScrollToRequested) é acionado quando o método [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) é invocado.
 
 ## <a name="scroll-an-item-into-view"></a>Rolar um item para a exibição
 
-A sobrecarga [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) do segundo método rola o item especificado para a exibição. Dado um [`CollectionView`](xref:Xamarin.Forms.CollectionView) objeto chamado `collectionView`, o exemplo a seguir mostra como rolar o item especificado para a exibição:
+A segunda [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) sobrecarga do método rola o item especificado para a exibição. Dado um objeto de [`CollectionView`](xref:Xamarin.Forms.CollectionView) chamado `collectionView`, o exemplo a seguir mostra como rolar o item de macaco Proboscis para a exibição:
 
 ```csharp
 MonkeysViewModel viewModel = BindingContext as MonkeysViewModel;
@@ -90,24 +95,33 @@ Monkey monkey = viewModel.Monkeys.FirstOrDefault(m => m.Name == "Proboscis Monke
 collectionView.ScrollTo(monkey);
 ```
 
+Como alternativa, um item em dados agrupados pode ser rolado para a exibição, especificando o item e o grupo. O exemplo a seguir mostra como rolar o item de macaco Proboscis no grupo Monkeys para a exibição:
+
+```csharp
+GroupedAnimalsViewModel viewModel = BindingContext as GroupedAnimalsViewModel;
+AnimalGroup group = viewModel.Animals.FirstOrDefault(a => a.Name == "Monkeys");
+Animal monkey = group.FirstOrDefault(m => m.Name == "Proboscis Monkey");
+collectionView.ScrollTo(monkey, group);
+```
+
 > [!NOTE]
-> O [`ScrollToRequested`](xref:Xamarin.Forms.ItemsView.ScrollToRequested) evento é acionado quando [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) o método é invocado.
+> O evento [`ScrollToRequested`](xref:Xamarin.Forms.ItemsView.ScrollToRequested) é acionado quando o método [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) é invocado.
 
-## <a name="scroll-bar-visibility"></a>Visibilidade da barra de rolagem
+## <a name="disable-scroll-animation"></a>Desabilitar animação de rolagem
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView)define `HorizontalScrollBarVisibility` e`VerticalScrollBarVisibility` Propriedades, que são apoiadas por propriedades vinculáveis. Essas propriedades obtêm ou definem um valor de [`ScrollBarVisibility`](xref:Xamarin.Forms.ScrollBarVisibility) enumeração que representa quando a barra de rolagem horizontal ou vertical é visível. A enumeração `ScrollBarVisibility` define os seguintes membros:
+Uma animação de rolagem é exibida ao rolar um item para a exibição. No entanto, essa animação pode ser desabilitada definindo o argumento `animate` do método `ScrollTo` como `false`:
 
-- [`Default`](xref:Xamarin.Forms.ScrollBarVisibility)indica o comportamento da barra de rolagem padrão para a plataforma e é o valor padrão `HorizontalScrollBarVisibility` para `VerticalScrollBarVisibility` as propriedades e.
-- [`Always`](xref:Xamarin.Forms.ScrollBarVisibility)indica que as barras de rolagem estarão visíveis, mesmo quando o conteúdo couber na exibição.
-- [`Never`](xref:Xamarin.Forms.ScrollBarVisibility)indica que as barras de rolagem não estarão visíveis, mesmo se o conteúdo não couber na exibição.
+```csharp
+collectionView.ScrollTo(monkey, animate: false);
+```
 
 ## <a name="control-scroll-position"></a>Posição de rolagem de controle
 
-Ao rolar um item para a exibição, a posição exata do item após a rolagem concluída pode ser especificada com o `position` argumento [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) dos métodos. Esse argumento aceita um [`ScrollToPosition`](xref:Xamarin.Forms.ScrollToPosition) membro de enumeração.
+Ao rolar um item para a exibição, a posição exata do item após a rolagem concluída pode ser especificada com o argumento `position` dos métodos [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) . Esse argumento aceita um membro de enumeração [`ScrollToPosition`](xref:Xamarin.Forms.ScrollToPosition) .
 
 ### <a name="makevisible"></a>MakeVisible
 
-O [`ScrollToPosition.MakeVisible`](xref:Xamarin.Forms.ScrollToPosition) membro indica que o item deve ser rolado até que fique visível na exibição:
+O membro [`ScrollToPosition.MakeVisible`](xref:Xamarin.Forms.ScrollToPosition) indica que o item deve ser rolado até que fique visível na exibição:
 
 ```csharp
 collectionView.ScrollTo(monkey, position: ScrollToPosition.MakeVisible);
@@ -115,14 +129,14 @@ collectionView.ScrollTo(monkey, position: ScrollToPosition.MakeVisible);
 
 Este código de exemplo resulta na rolagem mínima necessária para rolar o item para a exibição:
 
-[![Captura de tela de uma lista vertical CollectionView com um item rolado na exibição, no Ios e no Android](scrolling-images/scrolltoposition-makevisible.png "Lista vertical CollectionView com item rolado")](scrolling-images/scrolltoposition-makevisible-large.png#lightbox "Lista vertical CollectionView com item rolado")
+[![Captura de tela de uma lista vertical CollectionView com um item rolado na exibição, no iOS e no Android](scrolling-images/scrolltoposition-makevisible.png "Lista vertical CollectionView com item rolado")](scrolling-images/scrolltoposition-makevisible-large.png#lightbox "Lista vertical CollectionView com item rolado")
 
 > [!NOTE]
-> O [`ScrollToPosition.MakeVisible`](xref:Xamarin.Forms.ScrollToPosition) membro será usado por padrão, se o `position` argumento não for especificado ao chamar o `ScrollTo` método.
+> O membro [`ScrollToPosition.MakeVisible`](xref:Xamarin.Forms.ScrollToPosition) é usado por padrão, se o argumento `position` não for especificado ao chamar o método `ScrollTo`.
 
 ### <a name="start"></a>Início
 
-O [`ScrollToPosition.Start`](xref:Xamarin.Forms.ScrollToPosition) membro indica que o item deve ser rolado até o início da exibição:
+O membro [`ScrollToPosition.Start`](xref:Xamarin.Forms.ScrollToPosition) indica que o item deve ser rolado até o início da exibição:
 
 ```csharp
 collectionView.ScrollTo(monkey, position: ScrollToPosition.Start);
@@ -130,11 +144,11 @@ collectionView.ScrollTo(monkey, position: ScrollToPosition.Start);
 
 Este código de exemplo resulta no item que está sendo rolado para o início da exibição:
 
-[![Captura de tela de uma lista vertical CollectionView com um item rolado na exibição, no Ios e no Android](scrolling-images/scrolltoposition-start.png "Lista vertical CollectionView com item rolado")](scrolling-images/scrolltoposition-start-large.png#lightbox "Lista vertical CollectionView com item rolado")
+[![Captura de tela de uma lista vertical CollectionView com um item rolado na exibição, no iOS e no Android](scrolling-images/scrolltoposition-start.png "Lista vertical CollectionView com item rolado")](scrolling-images/scrolltoposition-start-large.png#lightbox "Lista vertical CollectionView com item rolado")
 
 ### <a name="center"></a>Centralizado
 
-O [`ScrollToPosition.Center`](xref:Xamarin.Forms.ScrollToPosition) membro indica que o item deve ser rolado para o centro da exibição:
+O membro [`ScrollToPosition.Center`](xref:Xamarin.Forms.ScrollToPosition) indica que o item deve ser rolado para o centro da exibição:
 
 ```csharp
 collectionView.ScrollTo(monkey, position: ScrollToPosition.Center);
@@ -142,11 +156,11 @@ collectionView.ScrollTo(monkey, position: ScrollToPosition.Center);
 
 Este código de exemplo resulta no item que está sendo rolado para o centro da exibição:
 
-[![Captura de tela de uma lista vertical CollectionView com um item rolado na exibição, no Ios e no Android](scrolling-images/scrolltoposition-center.png "Lista vertical CollectionView com item rolado")](scrolling-images/scrolltoposition-center-large.png#lightbox "Lista vertical CollectionView com item rolado")
+[![Captura de tela de uma lista vertical CollectionView com um item rolado na exibição, no iOS e no Android](scrolling-images/scrolltoposition-center.png "Lista vertical CollectionView com item rolado")](scrolling-images/scrolltoposition-center-large.png#lightbox "Lista vertical CollectionView com item rolado")
 
 ### <a name="end"></a>End
 
-O [`ScrollToPosition.End`](xref:Xamarin.Forms.ScrollToPosition) membro indica que o item deve ser rolado para o final da exibição:
+O membro [`ScrollToPosition.End`](xref:Xamarin.Forms.ScrollToPosition) indica que o item deve ser rolado para o final da exibição:
 
 ```csharp
 collectionView.ScrollTo(monkey, position: ScrollToPosition.End);
@@ -154,25 +168,17 @@ collectionView.ScrollTo(monkey, position: ScrollToPosition.End);
 
 Este código de exemplo resulta no item que está sendo rolado para o final da exibição:
 
-[![Captura de tela de uma lista vertical CollectionView com um item rolado na exibição, no Ios e no Android](scrolling-images/scrolltoposition-end.png "Lista vertical CollectionView com item rolado")](scrolling-images/scrolltoposition-end-large.png#lightbox "Lista vertical CollectionView com item rolado")
-
-## <a name="disable-scroll-animation"></a>Desabilitar animação de rolagem
-
-Uma animação de rolagem é exibida ao rolar um item para a exibição. No entanto, essa animação pode ser desabilitada `animate` definindo o argumento `ScrollTo` do método `false`como:
-
-```csharp
-collectionView.ScrollTo(monkey, animate: false);
-```
+[![Captura de tela de uma lista vertical CollectionView com um item rolado na exibição, no iOS e no Android](scrolling-images/scrolltoposition-end.png "Lista vertical CollectionView com item rolado")](scrolling-images/scrolltoposition-end-large.png#lightbox "Lista vertical CollectionView com item rolado")
 
 ## <a name="control-scroll-position-when-new-items-are-added"></a>Controlar a posição de rolagem quando novos itens forem adicionados
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView)define uma `ItemsUpdatingScrollMode` Propriedade, que é apoiada por uma propriedade vinculável. Essa propriedade Obtém ou define um `ItemsUpdatingScrollMode` valor de enumeração que representa o comportamento `CollectionView` de rolagem do quando novos itens são adicionados a ele. A enumeração `ItemsUpdatingScrollMode` define os seguintes membros:
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) define uma propriedade `ItemsUpdatingScrollMode`, que é apoiada por uma propriedade vinculável. Essa propriedade Obtém ou define um valor de enumeração de `ItemsUpdatingScrollMode` que representa o comportamento de rolagem do `CollectionView` quando novos itens são adicionados a ele. A enumeração `ItemsUpdatingScrollMode` define os seguintes membros:
 
-- `KeepItemsInView`ajusta o deslocamento de rolagem para manter o primeiro item visível exibido quando novos itens são adicionados.
-- `KeepScrollOffset`mantém o deslocamento de rolagem relativo ao início da lista quando novos itens são adicionados.
-- `KeepLastItemInView`ajusta o deslocamento de rolagem para manter o último item visível quando novos itens são adicionados.
+- `KeepItemsInView` ajusta o deslocamento de rolagem para manter o primeiro item visível exibido quando novos itens são adicionados.
+- `KeepScrollOffset` mantém o deslocamento de rolagem em relação ao início da lista quando novos itens são adicionados.
+- `KeepLastItemInView` ajusta o deslocamento de rolagem para manter o último item visível quando novos itens são adicionados.
 
-O valor padrão da `ItemsUpdatingScrollMode` propriedade é. `KeepItemsInView` Portanto, quando novos itens forem adicionados a um [`CollectionView`](xref:Xamarin.Forms.CollectionView) primeiro item visível na lista, permanecerão exibidos. Para garantir que itens recém-adicionados sempre fiquem visíveis na parte inferior da lista, a `ItemsUpdatingScrollMode` propriedade deve ser definida como: `KeepLastItemInView`
+O valor padrão da propriedade `ItemsUpdatingScrollMode` é `KeepItemsInView`. Portanto, quando novos itens são adicionados a um [`CollectionView`](xref:Xamarin.Forms.CollectionView) o primeiro item visível na lista permanecerá exibido. Para garantir que os itens recém-adicionados sempre fiquem visíveis na parte inferior da lista, a propriedade `ItemsUpdatingScrollMode` deve ser definida como `KeepLastItemInView`:
 
 ```xaml
 <CollectionView ItemsUpdatingScrollMode="KeepLastItemInView">
@@ -189,9 +195,17 @@ CollectionView collectionView = new CollectionView
 };
 ```
 
+## <a name="scroll-bar-visibility"></a>Visibilidade da barra de rolagem
+
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) define as propriedades `HorizontalScrollBarVisibility` e `VerticalScrollBarVisibility`, que são apoiadas pelas propriedades vinculáveis. Essas propriedades obtêm ou definem um [`ScrollBarVisibility`](xref:Xamarin.Forms.ScrollBarVisibility) valor de enumeração que representa quando a barra de rolagem horizontal ou vertical é visível. A enumeração `ScrollBarVisibility` define os seguintes membros:
+
+- [`Default`](xref:Xamarin.Forms.ScrollBarVisibility) indica o comportamento padrão da barra de rolagem para a plataforma e é o valor padrão para as propriedades `HorizontalScrollBarVisibility` e `VerticalScrollBarVisibility`.
+- [`Always`](xref:Xamarin.Forms.ScrollBarVisibility) indica que as barras de rolagem estarão visíveis, mesmo quando o conteúdo couber na exibição.
+- [`Never`](xref:Xamarin.Forms.ScrollBarVisibility) indica que as barras de rolagem não estarão visíveis, mesmo que o conteúdo não caiba na exibição.
+
 ## <a name="snap-points"></a>Pontos de ajuste
 
-Quando um usuário passa o dedo para iniciar uma rolagem, a posição final da rolagem pode ser controlada para que os itens sejam totalmente exibidos. Esse recurso é conhecido como encaixe, pois os itens se ajustam à posição quando a rolagem é interrompida e é controlado pelas seguintes [`ItemsLayout`](xref:Xamarin.Forms.ItemsLayout) Propriedades da classe:
+Quando um usuário passa o dedo para iniciar uma rolagem, a posição final da rolagem pode ser controlada para que os itens sejam totalmente exibidos. Esse recurso é conhecido como ajuste, porque os itens se ajustam à posição quando a rolagem é interrompida e é controlado pelas seguintes propriedades da classe [`ItemsLayout`](xref:Xamarin.Forms.ItemsLayout) :
 
 - [`SnapPointsType`](xref:Xamarin.Forms.ItemsLayout.SnapPointsType), do tipo [`SnapPointsType`](xref:Xamarin.Forms.SnapPointsType), especifica o comportamento dos pontos de ajuste ao rolar.
 - [`SnapPointsAlignment`](xref:Xamarin.Forms.ItemsLayout.SnapPointsAlignment), do tipo [`SnapPointsAlignment`](xref:Xamarin.Forms.SnapPointsAlignment), especifica como os pontos de ajuste são alinhados com os itens.
@@ -203,45 +217,37 @@ Essas propriedades são apoiadas por [`BindableProperty`](xref:Xamarin.Forms.Bin
 
 ### <a name="snap-points-type"></a>Tipo de pontos de ajuste
 
-A [`SnapPointsType`](xref:Xamarin.Forms.SnapPointsType) enumeração define os seguintes membros:
+A enumeração [`SnapPointsType`](xref:Xamarin.Forms.SnapPointsType) define os seguintes membros:
 
-- `None`indica que a rolagem não se ajusta aos itens.
-- `Mandatory`indica que o conteúdo sempre se ajusta ao ponto de ajuste mais próximo para onde a rolagem seria interrompida naturalmente, ao longo da direção de inércia.
-- `MandatorySingle`indica o mesmo comportamento que `Mandatory`, mas apenas rola um item de cada vez.
+- `None` indica que a rolagem não se ajusta aos itens.
+- `Mandatory` indica que o conteúdo sempre se ajusta ao ponto de ajuste mais próximo para onde a rolagem seria interrompida naturalmente, ao longo da direção de inércia.
+- `MandatorySingle` indica o mesmo comportamento que `Mandatory`, mas apenas rola um item de cada vez.
 
-Por padrão, a [`SnapPointsType`](xref:Xamarin.Forms.ItemsLayout.SnapPointsType) propriedade é definida como `SnapPointsType.None`, o que garante que a rolagem não enencaixe itens, conforme mostrado nas capturas de tela a seguir:
+Por padrão, a propriedade [`SnapPointsType`](xref:Xamarin.Forms.ItemsLayout.SnapPointsType) é definida como `SnapPointsType.None`, o que garante que a rolagem não enencaixe itens, conforme mostrado nas capturas de tela a seguir:
 
-[![Captura de tela de uma lista vertical CollectionView sem pontos de ajuste, no Ios e no Android](scrolling-images/snappoints-none.png "Lista vertical CollectionView sem pontos de ajuste")](scrolling-images/snappoints-none-large.png#lightbox "Lista vertical CollectionView sem pontos de ajuste")
+[![Captura de tela de uma lista vertical CollectionView sem pontos de ajuste, no iOS e no Android](scrolling-images/snappoints-none.png "Lista vertical CollectionView sem pontos de ajuste")](scrolling-images/snappoints-none-large.png#lightbox "Lista vertical CollectionView sem pontos de ajuste")
 
 ### <a name="snap-points-alignment"></a>Alinhamento dos pontos de ajuste
 
-A [`SnapPointsAlignment`](xref:Xamarin.Forms.SnapPointsAlignment) enumeração define `Start`os `Center`Membros, `End` e.
+A enumeração de [`SnapPointsAlignment`](xref:Xamarin.Forms.SnapPointsAlignment) define os membros `Start`, `Center` e `End`.
 
 > [!IMPORTANT]
-> O valor da [`SnapPointsAlignment`](xref:Xamarin.Forms.ItemsLayout.SnapPointsAlignment) propriedade é respeitado somente quando a [`SnapPointsType`](xref:Xamarin.Forms.ItemsLayout.SnapPointsType) propriedade é definida como `Mandatory`, ou `MandatorySingle`.
+> O valor da propriedade [`SnapPointsAlignment`](xref:Xamarin.Forms.ItemsLayout.SnapPointsAlignment) só é respeitado quando a propriedade [`SnapPointsType`](xref:Xamarin.Forms.ItemsLayout.SnapPointsType) é definida como `Mandatory` ou `MandatorySingle`.
 
 #### <a name="start"></a>Início
 
-O `SnapPointsAlignment.Start` membro indica que os pontos de ajuste estão alinhados com a borda à esquerda dos itens.
+O membro `SnapPointsAlignment.Start` indica que os pontos de ajuste estão alinhados com a borda à esquerda dos itens.
 
-Por padrão, a [`SnapPointsAlignment`](xref:Xamarin.Forms.ItemsLayout.SnapPointsAlignment) propriedade é definida como `SnapPointsAlignment.Start`. No entanto, para fins de integridade, o exemplo XAML a seguir mostra como definir esse membro de enumeração:
+Por padrão, a propriedade [`SnapPointsAlignment`](xref:Xamarin.Forms.ItemsLayout.SnapPointsAlignment) é definida como `SnapPointsAlignment.Start`. No entanto, para fins de integridade, o exemplo XAML a seguir mostra como definir esse membro de enumeração:
 
 ```xaml
-<CollectionView x:Name="collectionView"
-                ItemsSource="{Binding Monkeys}">
+<CollectionView ItemsSource="{Binding Monkeys}">
     <CollectionView.ItemsLayout>
-        <ListItemsLayout SnapPointsType="MandatorySingle"
-                         SnapPointsAlignment="Start">
-            <x:Arguments>
-                <ItemsLayoutOrientation>Vertical</ItemsLayoutOrientation>
-            </x:Arguments>
-        </ListItemsLayout>
+        <LinearItemsLayout Orientation="Vertical"
+                           SnapPointsType="MandatorySingle"
+                           SnapPointsAlignment="Start" />
     </CollectionView.ItemsLayout>
-    <CollectionView.ItemTemplate>
-        <DataTemplate>
-            ...
-        </DataTemplate>
-    </CollectionView.ItemTemplate>
+    ...
 </CollectionView>
 ```
 
@@ -250,42 +256,31 @@ Este é o código C# equivalente:
 ```csharp
 CollectionView collectionView = new CollectionView
 {
-    ItemsLayout = new ListItemsLayout(ItemsLayoutOrientation.Vertical)
+    ItemsLayout = new LinearItemsLayout(ItemsLayoutOrientation.Vertical)
     {
         SnapPointsType = SnapPointsType.MandatorySingle,
         SnapPointsAlignment = SnapPointsAlignment.Start
     },
-    ItemTemplate = new DataTemplate(() =>
-    {
-        return null;
-    })
+    // ...
 };
 ```
 
 Quando um usuário passa o dedo para iniciar uma rolagem, o item superior será alinhado com a parte superior da exibição:
 
-[![Captura de tela de uma lista vertical de CollectionView com pontos de partida de início, no Ios e no Android](scrolling-images/snappoints-start.png "Lista vertical CollectionView com pontos de ajuste de início")](scrolling-images/snappoints-start-large.png#lightbox "Lista vertical CollectionView com pontos de ajuste de início")
+[![Captura de tela de uma lista vertical de CollectionView com pontos de partida de início, no iOS e no Android](scrolling-images/snappoints-start.png "Lista vertical CollectionView com pontos de ajuste de início")](scrolling-images/snappoints-start-large.png#lightbox "Lista vertical CollectionView com pontos de ajuste de início")
 
 #### <a name="center"></a>Centralizado
 
-O `SnapPointsAlignment.Center` membro indica que os pontos de ajuste estão alinhados ao centro dos itens. O exemplo de XAML a seguir mostra como definir esse membro de enumeração:
+O membro `SnapPointsAlignment.Center` indica que os pontos de ajuste estão alinhados ao centro dos itens. O exemplo de XAML a seguir mostra como definir esse membro de enumeração:
 
 ```xaml
-<CollectionView x:Name="collectionView"
-                ItemsSource="{Binding Monkeys}">
+<CollectionView ItemsSource="{Binding Monkeys}">
     <CollectionView.ItemsLayout>
-        <ListItemsLayout SnapPointsType="MandatorySingle"
-                         SnapPointsAlignment="Center">
-            <x:Arguments>
-                <ItemsLayoutOrientation>Vertical</ItemsLayoutOrientation>
-            </x:Arguments>
-        </ListItemsLayout>
+        <LinearItemsLayout Orientation="Vertical"
+                           SnapPointsType="MandatorySingle"
+                           SnapPointsAlignment="Center" />
     </CollectionView.ItemsLayout>
-    <CollectionView.ItemTemplate>
-        <DataTemplate>
-            ...
-        </DataTemplate>
-    </CollectionView.ItemTemplate>
+    ...
 </CollectionView>
 ```
 
@@ -294,42 +289,31 @@ Este é o código C# equivalente:
 ```csharp
 CollectionView collectionView = new CollectionView
 {
-    ItemsLayout = new ListItemsLayout(ItemsLayoutOrientation.Vertical)
+    ItemsLayout = new LinearItemsLayout(ItemsLayoutOrientation.Vertical)
     {
         SnapPointsType = SnapPointsType.MandatorySingle,
         SnapPointsAlignment = SnapPointsAlignment.Center
     },
-    ItemTemplate = new DataTemplate(() =>
-    {
-        return null;
-    })
+    // ...
 };
 ```
 
 Quando um usuário passa o dedo para iniciar uma rolagem, o item superior será alinhado ao centro na parte superior da exibição:
 
-[![Captura de tela de uma lista vertical CollectionView com pontos de alinhamento do centro, no Ios e no Android](scrolling-images/snappoints-center.png "Lista vertical CollectionView com pontos de alinhamento do centro")](scrolling-images/snappoints-center-large.png#lightbox "Lista vertical CollectionView com pontos de alinhamento do centro")
+[![Captura de tela de uma lista vertical CollectionView com pontos de alinhamento do centro, no iOS e no Android](scrolling-images/snappoints-center.png "Lista vertical CollectionView com pontos de alinhamento do centro")](scrolling-images/snappoints-center-large.png#lightbox "Lista vertical CollectionView com pontos de alinhamento do centro")
 
 #### <a name="end"></a>End
 
-O `SnapPointsAlignment.End` membro indica que os pontos de ajuste estão alinhados com a borda à direita dos itens. O exemplo de XAML a seguir mostra como definir esse membro de enumeração:
+O membro `SnapPointsAlignment.End` indica que os pontos de ajuste estão alinhados com a borda à direita dos itens. O exemplo de XAML a seguir mostra como definir esse membro de enumeração:
 
 ```xaml
-<CollectionView x:Name="collectionView"
-                ItemsSource="{Binding Monkeys}">
+<CollectionView ItemsSource="{Binding Monkeys}">
     <CollectionView.ItemsLayout>
-        <ListItemsLayout SnapPointsType="MandatorySingle"
-                         SnapPointsAlignment="End">
-            <x:Arguments>
-                <ItemsLayoutOrientation>Vertical</ItemsLayoutOrientation>
-            </x:Arguments>
-        </ListItemsLayout>
+        <LinearItemsLayout Orientation="Vertical"
+                           SnapPointsType="MandatorySingle"
+                           SnapPointsAlignment="End" />
     </CollectionView.ItemsLayout>
-    <CollectionView.ItemTemplate>
-        <DataTemplate>
-            ...
-        </DataTemplate>
-    </CollectionView.ItemTemplate>
+    ...
 </CollectionView>
 ```
 
@@ -338,21 +322,18 @@ Este é o código C# equivalente:
 ```csharp
 CollectionView collectionView = new CollectionView
 {
-    ItemsLayout = new ListItemsLayout(ItemsLayoutOrientation.Vertical)
+    ItemsLayout = new LinearItemsLayout(ItemsLayoutOrientation.Vertical)
     {
         SnapPointsType = SnapPointsType.MandatorySingle,
         SnapPointsAlignment = SnapPointsAlignment.End
     },
-    ItemTemplate = new DataTemplate(() =>
-    {
-        return null;
-    })
+    // ...
 };
 ```
 
 Quando um usuário passa o dedo para iniciar uma rolagem, o item inferior será alinhado com a parte inferior da exibição:
 
-[![Captura de tela de uma lista vertical CollectionView com pontos de ajuste finais, no Ios e no Android](scrolling-images/snappoints-end.png "Lista vertical CollectionView com pontos de ajuste finais")](scrolling-images/snappoints-end-large.png#lightbox "Lista vertical CollectionView com pontos de ajuste finais")
+[![Captura de tela de uma lista vertical CollectionView com pontos de ajuste finais, no iOS e no Android](scrolling-images/snappoints-end.png "Lista vertical CollectionView com pontos de ajuste finais")](scrolling-images/snappoints-end-large.png#lightbox "Lista vertical CollectionView com pontos de ajuste finais")
 
 ## <a name="related-links"></a>Links relacionados
 

@@ -6,17 +6,15 @@ ms.assetid: 5C08F687-B9E6-4CE4-8726-F287F6D0B6A7
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/24/2019
-ms.openlocfilehash: 89afb0f2bfe93a5f78b0cd162f2a65e585b54b4b
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
-ms.translationtype: HT
+ms.date: 09/20/2019
+ms.openlocfilehash: 274a2a99445a77a2b8c1f68e823c753bc16b673a
+ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/21/2019
-ms.locfileid: "72303227"
+ms.locfileid: "72696678"
 ---
 # <a name="xamarinforms-collectionview-introduction"></a>Introdução de CollectionView do Xamarin. Forms
-
-![Esta API está atualmente em pré-lançamento](~/media/shared/preview.png)
 
 [![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
 
@@ -24,11 +22,7 @@ ms.locfileid: "72303227"
 
 [![Captura de tela de um layout de grade vertical CollectionView, no iOS e no Android](introduction-images/verticalgrid-multipleselection.png "Layout de grade vertical CollectionView com seleção múltipla")](introduction-images/verticalgrid-multipleselection-large.png#lightbox "Layout de grade vertical CollectionView com seleção múltipla")
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView) está disponível no Xamarin. Forms 4,0. No entanto, ele é experimental e só pode ser usado adicionando a linha de código a seguir à sua classe `AppDelegate` no iOS, ou à sua classe `MainActivity` no Android ou ao seu `App.xaml.cs` em UWP antes de chamar `Forms.Init` :
-
-```csharp
-Forms.SetFlags("CollectionView_Experimental");
-```
+o [`CollectionView`](xref:Xamarin.Forms.CollectionView) está disponível no Xamarin. Forms 4,3.
 
 > [!IMPORTANT]
 > o [`CollectionView`](xref:Xamarin.Forms.CollectionView) está disponível no Ios e no Android, mas está [disponível apenas parcialmente](https://gist.github.com/hartez/7d0edd4182dbc7de65cebc6c67f72e14) no plataforma universal do Windows.
@@ -59,7 +53,7 @@ Embora as APIs de [`CollectionView`](xref:Xamarin.Forms.CollectionView) e [`List
 | Cache | `CachingStrategy` | [`CollectionView`](xref:Xamarin.Forms.CollectionView) usa automaticamente a virtualização fornecida pelos controles nativos subjacentes. |
 | Cabeçalhos e rodapés | `Header`, `HeaderElement`, `HeaderTemplate`, `Footer`, `FooterElement`, `FooterTemplate` | [`CollectionView`](xref:Xamarin.Forms.CollectionView) pode apresentar um cabeçalho e um rodapé que rolam com os itens da lista, por meio das propriedades `Header`, `Footer`, `HeaderTemplate` e `FooterTemplate`. Para obter mais informações, consulte [cabeçalhos e rodapés](layout.md#headers-and-footers). |
 | Agrupamento | `GroupDisplayBinding`, `GroupHeaderTemplate`, `GroupShortNameBinding`, `IsGroupingEnabled` | [`CollectionView`](xref:Xamarin.Forms.CollectionView) exibe dados agrupados corretamente definindo sua propriedade `IsGrouped` como `true`. Cabeçalhos de grupo e rodapés de grupo podem ser personalizados definindo as propriedades `GroupHeaderTemplate` e `GroupFooterTemplate` como [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) objetos. Para obter mais informações, consulte [agrupamento CollectionView do Xamarin. Forms](grouping.md). |
-| Efetuar pull para atualizar | `IsPullToRefreshEnabled`, `IsRefreshing`, `RefreshAllowed`, `RefreshCommand`, `RefreshControlColor`, `BeginRefresh()`, `EndRefresh()` | O pull para a atualização não tem suporte no momento no `CollectionView`, mas será adicionado em uma versão futura. |
+| Efetuar pull para atualizar | `IsPullToRefreshEnabled`, `IsRefreshing`, `RefreshAllowed`, `RefreshCommand`, `RefreshControlColor`, `BeginRefresh()`, `EndRefresh()` | Há suporte para a funcionalidade de pull para atualizar ao definir um [`CollectionView`](xref:Xamarin.Forms.CollectionView) como o filho de um `RefreshView`. Para obter mais informações, consulte [pull to Refresh](populate-data.md#pull-to-refresh). |
 | Ações de contexto | `ContextActions` | No momento, não há suporte para ações de contexto no `CollectionView`, mas elas serão adicionadas em uma versão futura. |
 | Rolagem | `ScrollTo()` | [`CollectionView`](xref:Xamarin.Forms.CollectionView) define `ScrollTo` métodos, que rolam itens para o modo de exibição. Para obter mais informações, consulte [rolagem](scrolling.md). |
 

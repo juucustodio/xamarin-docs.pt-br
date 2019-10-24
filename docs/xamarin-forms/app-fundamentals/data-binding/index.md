@@ -6,19 +6,19 @@ ms.assetid: 938E85C8-521D-43B9-92CB-D591A06D98A6
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/23/2018
-ms.openlocfilehash: ace1129397251c02c5ffb682344ff2308a24c62a
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
-ms.translationtype: HT
+ms.date: 09/27/2019
+ms.openlocfilehash: fa92409b33717e528c3cfb83a24148c698836594
+ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68653361"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72697137"
 ---
 # <a name="xamarinforms-data-binding"></a>Associação de dados do Xamarin.Forms
 
 [![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
-_A associação de dados é a técnica de vinculação de propriedades de dois objetos para que as alterações em uma propriedade sejam automaticamente refletidas na outra propriedade. A associação de dados é parte integrante da arquitetura do aplicativo MVVM (Model-View-ViewModel)._
+_A vinculação de dados é a técnica de vincular propriedades de dois objetos para que as alterações em uma propriedade sejam refletidas automaticamente na outra propriedade. A vinculação de dados é parte integrante da arquitetura do aplicativo MVVM (Model-View-ViewModel)._
 
 ## <a name="the-data-linking-problem"></a>O problema de associação de dados
 
@@ -28,14 +28,14 @@ Para que esse trabalho seja realizado com êxito, o programa deve ser notificado
 
 ## <a name="the-data-binding-solution"></a>A solução de associação de dados
 
-A associação de dados automatiza esse trabalho e torna os manipuladores de eventos desnecessários. (No entanto, os eventos ainda são necessários, porque a infraestrutura de associação de dados faz uso deles.) Associações de dados podem ser implementadas no código ou em XAML, mas são muito mais comuns em XAML, em que elas ajudam a reduzir o tamanho do arquivo code-behind. Substituindo o código procedural em manipuladores de eventos por marcação ou código declarativo, o aplicativo é simplificado e esclarecido.
+A associação de dados automatiza esse trabalho e torna os manipuladores de eventos desnecessários. (No entanto, os eventos ainda são necessários, pois a infraestrutura de vinculação de dados os usa.) As associações de dados podem ser implementadas no código ou em XAML, mas são muito mais comuns em XAML, em que ajudam a reduzir o tamanho do arquivo code-behind. Substituindo o código procedural em manipuladores de eventos por marcação ou código declarativo, o aplicativo é simplificado e esclarecido.
 
 Um dos dois objetos envolvidos em uma associação de dados quase sempre é um elemento derivado de `View` e que faz parte da interface visual de uma página. O outro objeto é uma das seguintes opções:
 
 - Outro derivado de `View`, geralmente na mesma página.
 - Um objeto em um arquivo de código.
 
-Em programas de demonstração, tais como aqueles na amostra [**DataBindingDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos), associações de dados entre dois derivados de `View` geralmente são mostrados para fins de clareza e simplicidade. No entanto, os mesmos princípios podem ser aplicados às associações de dados entre um `View` e outros objetos. Quando um aplicativo é compilado usando a arquitetura MVVM (Model-View-ViewModel), a classe com os dados subjacentes é frequentemente chamada de um ViewModel.
+Em programas de demonstração, tais como aqueles na amostra [**DataBindingDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos), associações de dados entre dois derivados de `View` geralmente são mostrados para fins de clareza e simplicidade. No entanto, os mesmos princípios podem ser aplicados às associações de dados entre um `View` e outros objetos. Quando um aplicativo é criado usando a arquitetura MVVM (Model-View-ViewModel), a classe com dados subjacentes geralmente é chamada de ViewModel.
 
 Associações de dados são exploradas na seguinte série de artigos:
 
@@ -58,6 +58,10 @@ Aprofunde-se na propriedade `Path` da associação de dados para acessar subprop
 ## <a name="binding-value-convertersconvertersmd"></a>[Conversores de associação de valor](converters.md)
 
 Use conversores de valor de associação para alterar os valores dentro da associação de dados.
+
+## <a name="relative-bindingsrelative-bindingsmd"></a>[Associações relativas](relative-bindings.md)
+
+Use associações relativas para definir a origem da associação em relação à posição do destino da associação.
 
 ## <a name="binding-fallbacksbinding-fallbacksmd"></a>[Fallbacks de associação](binding-fallbacks.md)
 

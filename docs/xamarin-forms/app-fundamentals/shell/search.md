@@ -6,13 +6,13 @@ ms.assetid: F8F9471D-6771-4D23-96C0-2B79473A06D4
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/24/2019
-ms.openlocfilehash: 9e3acf1c5b101f021b0071947e91f0c9fc3dafcb
-ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
-ms.translationtype: HT
+ms.date: 09/25/2019
+ms.openlocfilehash: 400459d2701731726c91c70e020ef375a7031169
+ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68739259"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72695929"
 ---
 # <a name="xamarinforms-shell-search"></a>Pesquisa do Shell do Xamarin.Forms
 
@@ -20,11 +20,11 @@ ms.locfileid: "68739259"
 
 O Shell do Xamarin.Forms inclui a funcionalidade de pesquisa integrada fornecida pela classe `SearchHandler`. A funcionalidade de pesquisa pode ser adicionada a uma página definindo a propriedade anexada `Shell.SearchHandler` como um objeto `SearchHandler` da subclasse. Isso faz com que uma caixa de pesquisa seja adicionada na parte superior da página:
 
-[![Captura de tela de um SearchHandler do Shell no iOS e Android](search-images/searchhandler.png "SearchHandler do Shell")](search-images/searchhandler-large.png#lightbox "SearchHandler do Shell")
+[![Captura de tela de um shell SearchHandler, no iOS e no Android](search-images/searchhandler.png "SearchHandler do Shell")](search-images/searchhandler-large.png#lightbox "SearchHandler do Shell")
 
 Quando uma consulta é inserida na caixa de pesquisa, a propriedade `Query` é atualizada e, em cada atualização, o método `OnQueryChanged` é executado. Esse método pode ser substituído para preencher a área de sugestões de pesquisa com dados:
 
-[![Captura de tela dos resultados da pesquisa em um SearchHandler do Shell no iOS e Android](search-images/search-suggestions.png "Resultados da pesquisa no SearchHandler do Shell")](search-images/search-suggestions-large.png#lightbox "Resultados da pesquisa no SearchHandler do Shell")
+[![Captura de tela de resultados de uma pesquisa em um shell SearchHandler, no iOS e no Android](search-images/search-suggestions.png "Resultados da pesquisa do Shell SearchHandler")](search-images/search-suggestions-large.png#lightbox "Resultados da pesquisa do Shell SearchHandler")
 
 Em seguida, quando um resultado é selecionado na área de sugestões de pesquisa, o método `OnItemSelected` é executado. Esse método pode ser substituído para responder apropriadamente, por exemplo, navegando para uma página de detalhes.
 
@@ -99,15 +99,15 @@ O método `MonkeySearchHandler.OnQueryChanged` retorna um `List` de objetos `Ani
 
 A propriedade `ShowsResults` é definida como `true`, de modo que as sugestões de pesquisa são exibidas enquanto o usuário insere uma consulta de pesquisa:
 
-[![Captura de tela dos resultados da pesquisa em um SearchHandler do Shell no iOS e Android](search-images/search-results.png "Resultados da pesquisa no SearchHandler do Shell")](search-images/search-results-large.png#lightbox "Resultados da pesquisa no SearchHandler do Shell")
+[![Captura de tela dos resultados da pesquisa em um shell SearchHandler, no iOS e no Android](search-images/search-results.png "Resultados da pesquisa do Shell SearchHandler")](search-images/search-results-large.png#lightbox "Resultados da pesquisa do Shell SearchHandler")
 
 À medida que a consulta de pesquisa muda, a área de sugestões da pesquisa é atualizada:
 
-[![Captura de tela dos resultados da pesquisa em um SearchHandler do Shell no iOS e Android](search-images/search-results-change.png "Resultados da pesquisa no SearchHandler do Shell")](search-images/search-results-change-large.png#lightbox "Resultados da pesquisa no SearchHandler do Shell")
+[![Captura de tela dos resultados da pesquisa em um shell SearchHandler, no iOS e no Android](search-images/search-results-change.png "Resultados da pesquisa do Shell SearchHandler")](search-images/search-results-change-large.png#lightbox "Resultados da pesquisa do Shell SearchHandler")
 
 Quando um resultado de pesquisa é selecionado, ocorre a navegação até `MonkeyDetailPage`, e os dados sobre o macaco selecionado são exibidos:
 
-[![Captura de tela de detalhes do macaco no iOS e Android](search-images/detailpage.png "Detalhes do macaco")](search-images/detailpage-large.png#lightbox "Detalhes do macaco")
+[![Captura de tela de detalhes de macaco, no iOS e no Android](search-images/detailpage.png "Detalhes da macaco")](search-images/detailpage-large.png#lightbox "Detalhes da macaco")
 
 ## <a name="define-search-results-item-appearance"></a>Definir a aparência do item dos resultados da pesquisa
 
@@ -172,7 +172,7 @@ Os elementos especificados em [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) 
 
 As capturas de tela a seguir mostram o resultado dos modelos de cada item na área de sugestões:
 
-[![Captura de tela do modelo dos resultados da pesquisa em um SearchHandler do Shell no iOS e Android](search-images/search-results-template.png "Modelo dos resultados da pesquisa no SearchHandler do Shell")](search-images/search-results-template-large.png#lightbox "Resultados da pesquisa no SearchHandler do Shell")
+[![Captura de tela dos resultados de pesquisa do modelo em um shell SearchHandler, no iOS e no Android](search-images/search-results-template.png "Resultados da pesquisa do modelo SearchHandler do Shell")](search-images/search-results-template-large.png#lightbox "Resultados da pesquisa do modelo SearchHandler do Shell")
 
 Para obter mais informações sobre modelos de dados, confira [Modelos de dados do Xamarin.Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md).
 
@@ -211,12 +211,14 @@ A classe `SearchHandler` define as seguintes propriedades que afetam sua aparên
 
 - `BackgroundColor`, do tipo `Color`, é a cor do segundo plano do texto da caixa de pesquisa.
 - `CancelButtonColor`, do tipo `Color`, é a cor do botão Cancelar.
+- `CharacterSpacing`, do tipo `double`, é o espaçamento entre os caracteres do texto do `SearchHandler`.
 - `FontAttributes`, do tipo `FontAttributes`, indica se o texto da caixa de pesquisa está em negrito ou em itálico.
 - `FontFamily`, do tipo `string`, é a família da fonte usada para o texto da caixa de pesquisa.
 - `FontSize`, do tipo `double`, é o tamanho do texto da caixa de pesquisa.
 - `HorizontalTextAlignment`, do tipo `TextAlignment`, é o alinhamento horizontal da caixa de pesquisa.
 - `PlaceholderColor`, do tipo `Color`, é a cor do texto da caixa de pesquisa do espaço reservado.
 - `TextColor`, do tipo `Color`, é a cor do texto da caixa de pesquisa.
+- `VerticalTextAlignment`, do tipo `TextAlignment`, é o alinhamento vertical do texto da caixa de pesquisa.
 
 ## <a name="searchhandler-keyboard"></a>Teclado do SearchHandler
 

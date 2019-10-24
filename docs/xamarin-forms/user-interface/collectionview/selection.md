@@ -7,45 +7,43 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/06/2019
-ms.openlocfilehash: f1a3e8bb8959588e64339f70268370440f356be9
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.openlocfilehash: 1858d98b37df7d98f725b377280a971b3034ef0d
+ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "68738969"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72696356"
 ---
 # <a name="xamarinforms-collectionview-selection"></a>Seleção de CollectionView do Xamarin. Forms
 
-![](~/media/shared/preview.png "Esta API está atualmente em pré-lançamento")
-
 [![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView)define as seguintes propriedades que controlam a seleção de itens:
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) define as seguintes propriedades que controlam a seleção de itens:
 
 - [`SelectionMode`](xref:Xamarin.Forms.SelectableItemsView.SelectionMode), do tipo [`SelectionMode`](xref:Xamarin.Forms.SelectionMode), o modo de seleção.
-- [`SelectedItem`](xref:Xamarin.Forms.SelectableItemsView.SelectedItem), do tipo `object`, o item selecionado na lista. Essa propriedade tem um modo de associação padrão `TwoWay`de e tem um `null` valor quando nenhum item é selecionado.
-- [`SelectedItems`](xref:Xamarin.Forms.SelectableItemsView.SelectedItems), do tipo `IList<object>`, os itens selecionados na lista. Essa propriedade tem um modo de associação padrão `OneWay`de e tem um `null` valor quando nenhum item é selecionado.
+- [`SelectedItem`](xref:Xamarin.Forms.SelectableItemsView.SelectedItem), do tipo `object`, o item selecionado na lista. Essa propriedade tem um modo de associação padrão de `TwoWay` e tem um valor de `null` quando nenhum item é selecionado.
+- [`SelectedItems`](xref:Xamarin.Forms.SelectableItemsView.SelectedItems), do tipo `IList<object>`, os itens selecionados na lista. Essa propriedade tem um modo de associação padrão de `OneWay` e tem um valor de `null` quando nenhum item é selecionado.
 - [`SelectionChangedCommand`](xref:Xamarin.Forms.SelectableItemsView.SelectionChangedCommand), do tipo `ICommand`, que é executado quando o item selecionado é alterado.
 - [`SelectionChangedCommandParameter`](xref:Xamarin.Forms.SelectableItemsView.SelectionChangedCommandParameter), do tipo `object`, que é o parâmetro que é passado para o `SelectionChangedCommand`.
 
 Todas essas propriedades são apoiadas por objetos [`BindableProperty`](xref:Xamarin.Forms.BindableProperty), o que significa que essas propriedades podem ser o destino de vinculações de dados.
 
-Por padrão, [`CollectionView`](xref:Xamarin.Forms.CollectionView) a seleção está desabilitada. No entanto, esse comportamento pode ser alterado definindo [`SelectionMode`](xref:Xamarin.Forms.SelectableItemsView.SelectionMode) o valor da propriedade como um [`SelectionMode`](xref:Xamarin.Forms.SelectionMode) dos membros da enumeração:
+Por padrão, [`CollectionView`](xref:Xamarin.Forms.CollectionView) seleção está desabilitada. No entanto, esse comportamento pode ser alterado definindo o valor da propriedade [`SelectionMode`](xref:Xamarin.Forms.SelectableItemsView.SelectionMode) como um dos membros da enumeração [`SelectionMode`](xref:Xamarin.Forms.SelectionMode) :
 
-- `None`– indica que os itens não podem ser selecionados. Este é o valor padrão.
-- `Single`– indica que um único item pode ser selecionado, com o item selecionado sendo realçado.
-- `Multiple`– indica que vários itens podem ser selecionados, com os itens selecionados sendo realçados.
+- `None` – indica que os itens não podem ser selecionados. Este é o valor padrão.
+- `Single` – indica que um único item pode ser selecionado, com o item selecionado sendo realçado.
+- `Multiple` – indica que vários itens podem ser selecionados, com os itens selecionados sendo realçados.
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView)define um [`SelectionChanged`](xref:Xamarin.Forms.SelectableItemsView.SelectionChanged) evento que é acionado quando [`SelectedItem`](xref:Xamarin.Forms.SelectableItemsView.SelectedItem) a propriedade é alterada, devido ao usuário selecionar um item da lista ou quando um aplicativo define a propriedade. Além disso, esse evento também é acionado quando [`SelectedItems`](xref:Xamarin.Forms.SelectableItemsView.SelectedItems) a propriedade é alterada. O [`SelectionChangedEventArgs`](xref:Xamarin.Forms.SelectionChangedEventArgs) objeto que acompanha o `SelectionChanged` evento tem duas propriedades, ambas do tipo `IReadOnlyList<object>`:
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) define um evento de [`SelectionChanged`](xref:Xamarin.Forms.SelectableItemsView.SelectionChanged) que é acionado quando a propriedade [`SelectedItem`](xref:Xamarin.Forms.SelectableItemsView.SelectedItem) é alterada, devido ao usuário selecionar um item da lista ou quando um aplicativo define a propriedade. Além disso, esse evento também é acionado quando a propriedade [`SelectedItems`](xref:Xamarin.Forms.SelectableItemsView.SelectedItems) é alterada. O objeto [`SelectionChangedEventArgs`](xref:Xamarin.Forms.SelectionChangedEventArgs) que acompanha o evento `SelectionChanged` tem duas propriedades, ambas as `IReadOnlyList<object>` de tipo:
 
-- `PreviousSelection`– a lista de itens que foram selecionados antes da seleção ser alterada.
-- `CurrentSelection`– a lista de itens selecionados após a alteração da seleção.
+- `PreviousSelection` – a lista de itens que foram selecionados antes da seleção ser alterada.
+- `CurrentSelection` – a lista de itens selecionados após a alteração da seleção.
 
 ## <a name="single-selection"></a>Seleção única
 
-Quando a [`SelectionMode`](xref:Xamarin.Forms.SelectableItemsView.SelectionMode) propriedade é definida como `Single`, [`CollectionView`](xref:Xamarin.Forms.CollectionView) um único item no pode ser selecionado. Quando um item é selecionado, a [`SelectedItem`](xref:Xamarin.Forms.SelectableItemsView.SelectedItem) propriedade será definida como o valor do item selecionado. Quando essa propriedade é alterada, [`SelectionChangedCommand`](xref:Xamarin.Forms.SelectableItemsView.SelectionChangedCommand) o é executado (com o valor [`SelectionChangedCommandParameter`](xref:Xamarin.Forms.SelectableItemsView.SelectionChangedCommandParameter) do que está sendo passado `ICommand`para o) e [`SelectionChanged`](xref:Xamarin.Forms.SelectableItemsView.SelectionChanged) o evento é acionado.
+Quando a propriedade [`SelectionMode`](xref:Xamarin.Forms.SelectableItemsView.SelectionMode) é definida como `Single`, um único item no [`CollectionView`](xref:Xamarin.Forms.CollectionView) pode ser selecionado. Quando um item é selecionado, a propriedade [`SelectedItem`](xref:Xamarin.Forms.SelectableItemsView.SelectedItem) será definida como o valor do item selecionado. Quando essa propriedade é alterada, o [`SelectionChangedCommand`](xref:Xamarin.Forms.SelectableItemsView.SelectionChangedCommand) é executado (com o valor do [`SelectionChangedCommandParameter`](xref:Xamarin.Forms.SelectableItemsView.SelectionChangedCommandParameter) que está sendo passado para o `ICommand`) e o evento [`SelectionChanged`](xref:Xamarin.Forms.SelectableItemsView.SelectionChanged) é acionado.
 
-O exemplo de XAML a seguir [`CollectionView`](xref:Xamarin.Forms.CollectionView) mostra um que pode responder à seleção de um único item:
+O exemplo de XAML a seguir mostra um [`CollectionView`](xref:Xamarin.Forms.CollectionView) que pode responder à seleção de um único item:
 
 ```xaml
 <CollectionView ItemsSource="{Binding Monkeys}"
@@ -66,7 +64,7 @@ collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
 collectionView.SelectionChanged += OnCollectionViewSelectionChanged;
 ```
 
-Neste exemplo de código, o `OnCollectionViewSelectionChanged` manipulador de eventos é executado quando [`SelectionChanged`](xref:Xamarin.Forms.SelectableItemsView.SelectionChanged) o evento é acionado, com o manipulador de eventos recuperando o item selecionado anteriormente e o item selecionado atual:
+Neste exemplo de código, o manipulador de eventos `OnCollectionViewSelectionChanged` é executado quando o evento [`SelectionChanged`](xref:Xamarin.Forms.SelectableItemsView.SelectionChanged) é acionado, com o manipulador de eventos recuperando o item selecionado anteriormente e o item selecionado atual:
 
 ```csharp
 void OnCollectionViewSelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -78,17 +76,17 @@ void OnCollectionViewSelectionChanged(object sender, SelectionChangedEventArgs e
 ```
 
 > [!IMPORTANT]
-> O [`SelectionChanged`](xref:Xamarin.Forms.SelectableItemsView.SelectionChanged) evento pode ser acionado por alterações que ocorrem como resultado da alteração da [`SelectionMode`](xref:Xamarin.Forms.SelectableItemsView.SelectionMode) propriedade.
+> O evento [`SelectionChanged`](xref:Xamarin.Forms.SelectableItemsView.SelectionChanged) pode ser acionado por alterações que ocorrem como resultado da alteração da propriedade [`SelectionMode`](xref:Xamarin.Forms.SelectableItemsView.SelectionMode) .
 
-As capturas de tela a seguir mostram a seleção [`CollectionView`](xref:Xamarin.Forms.CollectionView)de item único em um:
+As capturas de tela a seguir mostram a seleção de item único em um [`CollectionView`](xref:Xamarin.Forms.CollectionView):
 
-[![Captura de tela de uma lista vertical CollectionView com seleção única, no Ios e no Android](selection-images/single-selection.png "Lista vertical CollectionView com seleção única")](selection-images/single-selection-large.png#lightbox "Lista vertical CollectionView com seleção única")
+[![Captura de tela de uma lista vertical CollectionView com seleção única, no iOS e no Android](selection-images/single-selection.png "Lista vertical CollectionView com seleção única")](selection-images/single-selection-large.png#lightbox "Lista vertical CollectionView com seleção única")
 
 ## <a name="multiple-selection"></a>Seleção múltipla
 
-Quando a [`SelectionMode`](xref:Xamarin.Forms.SelectableItemsView.SelectionMode) propriedade é definida como `Multiple` [`CollectionView`](xref:Xamarin.Forms.CollectionView) , vários itens no podem ser selecionados. Quando os itens são selecionados, [`SelectedItems`](xref:Xamarin.Forms.SelectableItemsView.SelectedItems) a propriedade será definida para os itens selecionados. Quando essa propriedade é alterada, [`SelectionChangedCommand`](xref:Xamarin.Forms.SelectableItemsView.SelectionChangedCommand) o é executado (com o valor [`SelectionChangedCommandParameter`](xref:Xamarin.Forms.SelectableItemsView.SelectionChangedCommandParameter) do que está sendo passado `ICommand`para o) e [`SelectionChanged`](xref:Xamarin.Forms.SelectableItemsView.SelectionChanged) o evento é acionado.
+Quando a propriedade [`SelectionMode`](xref:Xamarin.Forms.SelectableItemsView.SelectionMode) é definida como `Multiple`, vários itens na [`CollectionView`](xref:Xamarin.Forms.CollectionView) podem ser selecionados. Quando os itens são selecionados, a propriedade [`SelectedItems`](xref:Xamarin.Forms.SelectableItemsView.SelectedItems) será definida para os itens selecionados. Quando essa propriedade é alterada, o [`SelectionChangedCommand`](xref:Xamarin.Forms.SelectableItemsView.SelectionChangedCommand) é executado (com o valor do [`SelectionChangedCommandParameter`](xref:Xamarin.Forms.SelectableItemsView.SelectionChangedCommandParameter) que está sendo passado para o `ICommand`) e o evento [`SelectionChanged`](xref:Xamarin.Forms.SelectableItemsView.SelectionChanged) é acionado.
 
-O exemplo de XAML a seguir [`CollectionView`](xref:Xamarin.Forms.CollectionView) mostra um que pode responder a seleção de vários itens:
+O exemplo de XAML a seguir mostra um [`CollectionView`](xref:Xamarin.Forms.CollectionView) que pode responder a seleção de vários itens:
 
 ```xaml
 <CollectionView ItemsSource="{Binding Monkeys}"
@@ -109,7 +107,7 @@ collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
 collectionView.SelectionChanged += OnCollectionViewSelectionChanged;
 ```
 
-Neste exemplo de código, o `OnCollectionViewSelectionChanged` manipulador de eventos é executado quando [`SelectionChanged`](xref:Xamarin.Forms.SelectableItemsView.SelectionChanged) o evento é acionado, com o manipulador de eventos recuperando os itens anteriormente selecionados e os itens selecionados atuais:
+Neste exemplo de código, o manipulador de eventos `OnCollectionViewSelectionChanged` é executado quando o evento [`SelectionChanged`](xref:Xamarin.Forms.SelectableItemsView.SelectionChanged) é acionado, com o manipulador de eventos recuperando os itens anteriormente selecionados e os itens selecionados atuais:
 
 ```csharp
 void OnCollectionViewSelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -121,15 +119,15 @@ void OnCollectionViewSelectionChanged(object sender, SelectionChangedEventArgs e
 ```
 
 > [!IMPORTANT]
-> O [`SelectionChanged`](xref:Xamarin.Forms.SelectableItemsView.SelectionChanged) evento pode ser acionado por alterações que ocorrem como resultado da alteração da [`SelectionMode`](xref:Xamarin.Forms.SelectableItemsView.SelectionMode) propriedade.
+> O evento [`SelectionChanged`](xref:Xamarin.Forms.SelectableItemsView.SelectionChanged) pode ser acionado por alterações que ocorrem como resultado da alteração da propriedade [`SelectionMode`](xref:Xamarin.Forms.SelectableItemsView.SelectionMode) .
 
-As capturas de tela a seguir mostram a seleção [`CollectionView`](xref:Xamarin.Forms.CollectionView)de vários itens em um:
+As capturas de tela a seguir mostram a seleção de vários itens em um [`CollectionView`](xref:Xamarin.Forms.CollectionView):
 
-[![Captura de tela de uma lista vertical CollectionView com seleção múltipla, no Ios e no Android](selection-images/multiple-selection.png "Lista vertical CollectionView com seleção múltipla")](selection-images/multiple-selection-large.png#lightbox "Lista vertical CollectionView com seleção múltipla")
+[![Captura de tela de uma lista vertical CollectionView com seleção múltipla, no iOS e no Android](selection-images/multiple-selection.png "Lista vertical CollectionView com seleção múltipla")](selection-images/multiple-selection-large.png#lightbox "Lista vertical CollectionView com seleção múltipla")
 
 ## <a name="single-pre-selection"></a>Seleção única
 
-Quando a [`SelectionMode`](xref:Xamarin.Forms.SelectableItemsView.SelectionMode) propriedade é definida como `Single`, [`CollectionView`](xref:Xamarin.Forms.CollectionView) um único item no pode ser pré-selecionado definindo a [`SelectedItem`](xref:Xamarin.Forms.SelectableItemsView.SelectedItem) propriedade para o item. O exemplo de XAML a seguir `CollectionView` mostra um que seleciona previamente um único item:
+Quando a propriedade [`SelectionMode`](xref:Xamarin.Forms.SelectableItemsView.SelectionMode) é definida como `Single`, um único item no [`CollectionView`](xref:Xamarin.Forms.CollectionView) pode ser pré-selecionado definindo a propriedade [`SelectedItem`](xref:Xamarin.Forms.SelectableItemsView.SelectedItem) para o item. O exemplo de XAML a seguir mostra um `CollectionView` que seleciona previamente um único item:
 
 ```xaml
 <CollectionView ItemsSource="{Binding Monkeys}"
@@ -151,9 +149,9 @@ collectionView.SetBinding(SelectableItemsView.SelectedItemProperty, "SelectedMon
 ```
 
 > [!NOTE]
-> A [`SelectedItem`](xref:Xamarin.Forms.SelectableItemsView.SelectedItem) propriedade tem um modo de associação padrão `TwoWay`de.
+> A propriedade [`SelectedItem`](xref:Xamarin.Forms.SelectableItemsView.SelectedItem) tem um modo de associação padrão de `TwoWay`.
 
-O [ `SelectedItem` ](xref:Xamarin.Forms.SelectableItemsView.SelectedItem) associa dados de propriedade para o `SelectedMonkey` propriedade do modelo de exibição conectado, o que é do tipo `Monkey`. Por padrão, uma `TwoWay` associação é usada para que, se o usuário alterar o item selecionado, o valor `SelectedMonkey` da propriedade será definido como o objeto selecionado `Monkey` . A `SelectedMonkey` propriedade é definida `MonkeysViewModel` na classe e é definida como `Monkeys` o quarto item da coleção:
+Os dados da propriedade [`SelectedItem`](xref:Xamarin.Forms.SelectableItemsView.SelectedItem) são associados à propriedade `SelectedMonkey` do modelo de exibição conectado, que é do tipo `Monkey`. Por padrão, uma associação de `TwoWay` é usada para que, se o usuário alterar o item selecionado, o valor da propriedade `SelectedMonkey` será definido como o objeto de `Monkey` selecionado. A propriedade `SelectedMonkey` é definida na classe `MonkeysViewModel` e é definida como o quarto item da coleção de `Monkeys`:
 
 ```csharp
 public class MonkeysViewModel : INotifyPropertyChanged
@@ -186,13 +184,13 @@ public class MonkeysViewModel : INotifyPropertyChanged
 }
 ```
 
-Portanto, quando [`CollectionView`](xref:Xamarin.Forms.CollectionView) aparece, o quarto item da lista é pré-selecionado:
+Portanto, quando o [`CollectionView`](xref:Xamarin.Forms.CollectionView) for exibido, o quarto item da lista será pré-selecionado:
 
-[![Captura de tela de uma lista vertical CollectionView com seleção única, no Ios e no Android](selection-images/single-pre-selection.png "Lista vertical CollectionView com seleção única")](selection-images/single-pre-selection-large.png#lightbox "Lista vertical CollectionView com seleção única")
+[![Captura de tela de uma lista vertical CollectionView com seleção única, no iOS e no Android](selection-images/single-pre-selection.png "Lista vertical CollectionView com seleção única")](selection-images/single-pre-selection-large.png#lightbox "Lista vertical CollectionView com seleção única")
 
 ## <a name="multiple-pre-selection"></a>Várias seleções prévias
 
-Quando a [`SelectionMode`](xref:Xamarin.Forms.SelectableItemsView.SelectionMode) propriedade é definida como `Multiple` [`CollectionView`](xref:Xamarin.Forms.CollectionView) , vários itens no podem ser previamente selecionados. O exemplo de XAML a seguir `CollectionView` mostra um que permitirá a seleção prévia de vários itens:
+Quando a propriedade [`SelectionMode`](xref:Xamarin.Forms.SelectableItemsView.SelectionMode) é definida como `Multiple`, vários itens na [`CollectionView`](xref:Xamarin.Forms.CollectionView) podem ser previamente selecionados. O exemplo de XAML a seguir mostra um `CollectionView` que habilitará a seleção prévia de vários itens:
 
 ```xaml
 <CollectionView x:Name="collectionView"
@@ -215,9 +213,9 @@ collectionView.SetBinding(SelectableItemsView.SelectedItemsProperty, "SelectedMo
 ```
 
 > [!NOTE]
-> A [`SelectedItems`](xref:Xamarin.Forms.SelectableItemsView.SelectedItems) propriedade tem um modo de associação padrão `OneWay`de.
+> A propriedade [`SelectedItems`](xref:Xamarin.Forms.SelectableItemsView.SelectedItems) tem um modo de associação padrão de `OneWay`.
 
-O [ `SelectedItems` ](xref:Xamarin.Forms.SelectableItemsView.SelectedItems) associa dados de propriedade para o `SelectedMonkeys` propriedade do modelo de exibição conectado, o que é do tipo `ObservableCollection<object>`. A `SelectedMonkeys` propriedade é definida `MonkeysViewModel` na classe e é definida para o segundo, o quarto `Monkeys` e o quinto itens na coleção:
+Os dados da propriedade [`SelectedItems`](xref:Xamarin.Forms.SelectableItemsView.SelectedItems) são associados à propriedade `SelectedMonkeys` do modelo de exibição conectado, que é do tipo `ObservableCollection<object>`. A propriedade `SelectedMonkeys` é definida na classe `MonkeysViewModel` e é definida como o segundo, o quarto e o quinto itens na coleção `Monkeys`:
 
 ```csharp
 namespace CollectionViewDemos.ViewModels
@@ -254,17 +252,17 @@ namespace CollectionViewDemos.ViewModels
 }
 ```
 
-Portanto, quando [`CollectionView`](xref:Xamarin.Forms.CollectionView) aparece, o segundo, o quarto e o quinto itens da lista são previamente selecionados:
+Portanto, quando o [`CollectionView`](xref:Xamarin.Forms.CollectionView) aparecer, o segundo, o quarto e o quinto itens da lista serão previamente selecionados:
 
-[![Captura de tela de uma lista vertical CollectionView com várias seleções, no Ios e no Android](selection-images/multiple-pre-selection.png "Lista vertical CollectionView com várias seleções prévias")](selection-images/multiple-pre-selection-large.png#lightbox "Lista vertical CollectionView com várias seleções prévias")
+[![Captura de tela de uma lista vertical CollectionView com várias seleções, no iOS e no Android](selection-images/multiple-pre-selection.png "Lista vertical CollectionView com várias seleções prévias")](selection-images/multiple-pre-selection-large.png#lightbox "Lista vertical CollectionView com várias seleções prévias")
 
-## <a name="clearing-selections"></a>Limpando seleções
+## <a name="clear-selections"></a>Limpar seleções
 
-As [`SelectedItem`](xref:Xamarin.Forms.SelectableItemsView.SelectedItem) propriedades [`SelectedItems`](xref:Xamarin.Forms.SelectableItemsView.SelectedItems) e podem ser limpas definindo-as, ou os objetos aos quais eles se associam, ao `null`.
+As propriedades [`SelectedItem`](xref:Xamarin.Forms.SelectableItemsView.SelectedItem) e [`SelectedItems`](xref:Xamarin.Forms.SelectableItemsView.SelectedItems) podem ser limpas definindo-as ou os objetos aos quais eles se associam, para `null`.
 
 ## <a name="change-selected-item-color"></a>Alterar a cor do item selecionado
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView)tem um `Selected` [`VisualState`](xref:Xamarin.Forms.VisualState) que pode ser usado para iniciar uma alteração visual no item selecionado no `CollectionView`. Um caso de uso comum para `VisualState` isso é alterar a cor do plano de fundo do item selecionado, que é mostrado no exemplo de XAML a seguir:
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) tem uma [`VisualState`](xref:Xamarin.Forms.VisualState) `Selected` que pode ser usada para iniciar uma alteração visual no item selecionado no `CollectionView`. Um caso de uso comum para essa `VisualState` é alterar a cor do plano de fundo do item selecionado, que é mostrado no exemplo de XAML a seguir:
 
 ```xaml
 <ContentPage ...>
@@ -301,17 +299,17 @@ As [`SelectedItem`](xref:Xamarin.Forms.SelectableItemsView.SelectedItem) proprie
 ```
 
 > [!IMPORTANT]
-> O [`Style`](xref:Xamarin.Forms.Style) que contém o `Selected`deveter um [`TargetType`valorde](xref:Xamarin.Forms.Style.TargetType) propriedade que é o tipo do elemento raiz do `ItemTemplate` [,queédefinidocomoovalordapropriedade.`DataTemplate`](xref:Xamarin.Forms.DataTemplate) `VisualState`
+> O [`Style`](xref:Xamarin.Forms.Style) que contém o `Selected` `VisualState` deve ter um valor de propriedade [`TargetType`](xref:Xamarin.Forms.Style.TargetType) que seja o tipo do elemento raiz do [`DataTemplate`](xref:Xamarin.Forms.DataTemplate), que é definido como o valor da propriedade `ItemTemplate`.
 
-Neste exemplo, o valor [`Style.TargetType`](xref:Xamarin.Forms.Style.TargetType) da propriedade é definido como `Grid` porque [`ItemTemplate`](xref:Xamarin.Forms.ItemsView.ItemTemplate) o elemento raiz do é um [`Grid`](xref:Xamarin.Forms.Grid). O `Selected` [`BackgroundColor`](xref:Xamarin.Forms.VisualElement.BackgroundColor) [especificaque`CollectionView`](xref:Xamarin.Forms.CollectionView) quando um item no é selecionado, o do item será definido como `LightSkyBlue`: [`VisualState`](xref:Xamarin.Forms.VisualState)
+Neste exemplo, o valor da propriedade [`Style.TargetType`](xref:Xamarin.Forms.Style.TargetType) é definido como `Grid` porque o elemento raiz da [`ItemTemplate`](xref:Xamarin.Forms.ItemsView.ItemTemplate) é um [`Grid`](xref:Xamarin.Forms.Grid). O `Selected` [`VisualState`](xref:Xamarin.Forms.VisualState) especifica que quando um item no [`CollectionView`](xref:Xamarin.Forms.CollectionView) for selecionado, o [`BackgroundColor`](xref:Xamarin.Forms.VisualElement.BackgroundColor) do item será definido como `LightSkyBlue`:
 
-[![Captura de tela de uma lista vertical CollectionView com uma cor de seleção única personalizada, no Ios e no Android](selection-images/single-selection-color.png "Lista vertical CollectionView com uma cor de seleção única personalizada")](selection-images/single-selection-color-large.png#lightbox "Lista vertical CollectionView com uma cor de seleção única personalizada")
+[![Captura de tela de uma lista vertical CollectionView com uma cor de seleção única personalizada, no iOS e no Android](selection-images/single-selection-color.png "Lista vertical CollectionView com uma cor de seleção única personalizada")](selection-images/single-selection-color-large.png#lightbox "Lista vertical CollectionView com uma cor de seleção única personalizada")
 
 Para obter mais informações sobre os Estados visuais, consulte [Gerenciador de estado visual do Xamarin. Forms](~/xamarin-forms/user-interface/visual-state-manager.md).
 
 ## <a name="disable-selection"></a>Desabilitar seleção
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView)a seleção é desabilitada por padrão. No entanto, `CollectionView` se uma opção tiver a seleção habilitada, ela poderá [`SelectionMode`](xref:Xamarin.Forms.SelectableItemsView.SelectionMode) ser desabilitada definindo a propriedade como `None`:
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) seleção está desabilitada por padrão. No entanto, se uma `CollectionView` tiver a seleção habilitada, ela poderá ser desabilitada definindo a propriedade [`SelectionMode`](xref:Xamarin.Forms.SelectableItemsView.SelectionMode) como `None`:
 
 ```xaml
 <CollectionView ...
@@ -328,10 +326,10 @@ CollectionView collectionView = new CollectionView
 };
 ```
 
-Quando a [`SelectionMode`](xref:Xamarin.Forms.SelectableItemsView.SelectionMode) propriedade é definida como `None`, os itens em [`CollectionView`](xref:Xamarin.Forms.CollectionView) não podem ser selecionados, [`SelectedItem`](xref:Xamarin.Forms.SelectableItemsView.SelectedItem) a propriedade permanecerá `null`e o [`SelectionChanged`](xref:Xamarin.Forms.SelectableItemsView.SelectionChanged) evento não será acionado.
+Quando a propriedade [`SelectionMode`](xref:Xamarin.Forms.SelectableItemsView.SelectionMode) é definida como `None`, os itens na [`CollectionView`](xref:Xamarin.Forms.CollectionView) não podem ser selecionados, a propriedade [`SelectedItem`](xref:Xamarin.Forms.SelectableItemsView.SelectedItem) permanecerá `null` e o evento [`SelectionChanged`](xref:Xamarin.Forms.SelectableItemsView.SelectionChanged) não será disparado.
 
 > [!NOTE]
-> Quando um item tiver sido selecionado e a [`SelectionMode`](xref:Xamarin.Forms.SelectableItemsView.SelectionMode) propriedade for alterada de `Single` para `None`, a [`SelectedItem`](xref:Xamarin.Forms.SelectableItemsView.SelectedItem) propriedade será definida como `null` e o [`SelectionChanged`](xref:Xamarin.Forms.SelectableItemsView.SelectionChanged) evento será acionado com uma propriedade vazia `CurrentSelection` .
+> Quando um item tiver sido selecionado e a propriedade [`SelectionMode`](xref:Xamarin.Forms.SelectableItemsView.SelectionMode) for alterada de `Single` para `None`, a propriedade [`SelectedItem`](xref:Xamarin.Forms.SelectableItemsView.SelectedItem) será definida como `null` e o evento [`SelectionChanged`](xref:Xamarin.Forms.SelectableItemsView.SelectionChanged) será acionado com uma propriedade `CurrentSelection` vazia.
 
 ## <a name="related-links"></a>Links relacionados
 
