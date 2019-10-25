@@ -1,18 +1,18 @@
 ---
 title: Visual de material do Xamarin. Forms
-description: O Visual material xamarin. Forms pode ser usado para criar aplicativos Xamarin. Forms que parecem idênticos ou amplamente idênticos no iOS e no Android.
+description: O Visual material xamarin. Forms pode ser usado para criar aplicativos Xamarin. Forms que parecem amplamente idênticos no iOS e no Android.
 ms.prod: xamarin
 ms.assetid: B774F68C-EF9E-49E1-B738-CDC64879ADA2
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 03/12/2019
-ms.openlocfilehash: b735541d51321231775b025745e68c54552697d3
-ms.sourcegitcommit: dad4dfcd194b63ec9e903363351b6d9e543d4888
+ms.date: 10/18/2019
+ms.openlocfilehash: b447bd255270eb87f6139ddacadb9d31348ab7d7
+ms.sourcegitcommit: db2cf1b54125499d5320636927484707810c8e27
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "71198487"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72850486"
 ---
 # <a name="xamarinforms-material-visual"></a>Visual de material do Xamarin. Forms
 
@@ -20,36 +20,38 @@ ms.locfileid: "71198487"
 
 O [design de material](https://material.io) é um sistema de design conceituada criado pelo Google, que prescreve o tamanho, a cor, o espaçamento e outros aspectos de como os modos de exibição e os layouts devem se parecer e se comportar.
 
-O Visual material xamarin. Forms pode ser usado para aplicar regras de design de material a aplicativos Xamarin. Forms, criando aplicativos que parecem idênticos ou amplamente idênticos no iOS e no Android. Quando o Visual material está habilitado, as exibições com suporte adotam a mesma plataforma cruzada de design, criando uma aparência unificada. Isso é obtido com renderizadores materiais, que aplicam as regras de design de material.
+O Visual material xamarin. Forms pode ser usado para aplicar regras de design de material a aplicativos Xamarin. Forms, criando aplicativos que parecem ser amplamente idênticos no iOS e no Android. Quando o Visual material está habilitado, as exibições com suporte adotam a mesma plataforma cruzada de design, criando uma aparência unificada.
+
+[capturas de tela de materiais visuais de![](material-visual-images/material-visual-cropped.png)](material-visual-images/material-visual.png#lightbox)
 
 O processo para habilitar o Visual material Xamarin. Forms em seu aplicativo é:
 
 1. Adicione o pacote do NuGet [Xamarin. Forms. Visual. material](https://www.nuget.org/packages/Xamarin.Forms.Visual.Material/) aos seus projetos de plataforma iOS e Android. Este pacote NuGet fornece renderizadores de design de material otimizados no iOS e no Android. No iOS, o pacote fornece a dependência transitiva para [Xamarin. Ios. MaterialComponents](https://www.nuget.org/packages/Xamarin.iOS.MaterialComponents), que é uma C# associação aos [componentes materiais do Google para IOS](https://material.io/develop/ios/). No Android, o pacote fornece destinos de compilação para garantir que seu TargetFramework esteja configurado corretamente.
-1. Inicialize os renderizadores de material em cada projeto de plataforma. Para obter mais informações, consulte [inicializar renderizadores de material](#initialize-material-renderers).
-1. Consuma os renderizadores de material definindo a propriedade [`Visual`](xref:Xamarin.Forms.VisualElement.Visual) como `Material` em qualquer página que deva adotar as regras de design de material. Para obter mais informações, consulte [consumir renderizadores de materiais](#consume-material-renderers).
-1. adicional Personalize os renderizadores de material. Para obter mais informações, consulte [Personalizar renderizadores de material](#customize-material-renderers).
+1. Inicialize o Visual de material em cada projeto de plataforma. Para obter mais informações, consulte [inicializar o Visual do material](#initialize-material-visual).
+1. Crie controles visuais materiais definindo a propriedade [`Visual`](xref:Xamarin.Forms.VisualElement.Visual) como `Material` em todas as páginas que devem adotar as regras de design de material. Para obter mais informações, consulte [consumir renderizadores de materiais](#apply-material-visual).
+1. adicional Personalize os controles materiais. Para obter mais informações, consulte [Personalizar controles materiais](#customize-material-visual).
 
 > [!IMPORTANT]
-> No Android, os renderizadores de material exigem uma versão mínima de 5,0 (API 21) ou superior e um TargetFramework da versão 9,0 (API 28). Além disso, seu projeto de plataforma requer bibliotecas de suporte do Android 28.0.0 ou superior, e seu tema precisa herdar de um tema de componentes de material ou continuar a herdar de um tema AppCompat. Para obter mais informações, consulte [introdução aos componentes materiais para Android](https://github.com/material-components/material-components-android/blob/master/docs/getting-started.md).
+> No Android, o Visual do material requer uma versão mínima de 5,0 (API 21) ou superior e um TargetFramework da versão 9,0 (API 28). Além disso, seu projeto de plataforma requer bibliotecas de suporte do Android 28.0.0 ou superior, e seu tema precisa herdar de um tema de componentes de material ou continuar a herdar de um tema AppCompat. Para obter mais informações, consulte [introdução aos componentes materiais para Android](https://github.com/material-components/material-components-android/blob/master/docs/getting-started.md).
 
-Os renderizadores de materiais estão atualmente incluídos no pacote NuGet [Xamarin. Forms. Visual. material](https://www.nuget.org/packages/Xamarin.Forms.Visual.Material/) para as seguintes exibições:
+O Visual de material atualmente dá suporte aos seguintes controles:
 
+- [`ActivityIndicator`](xref:Xamarin.Forms.ActivityIndicator)
 - [`Button`](xref:Xamarin.Forms.Button)
 - `CheckBox`
+- [`DatePicker`](xref:Xamarin.Forms.DatePicker)
+- [`Editor`](xref:Xamarin.Forms.Editor)
 - [`Entry`](xref:Xamarin.Forms.Entry)
 - [`Frame`](xref:Xamarin.Forms.Frame)
-- [`ProgressBar`](xref:Xamarin.Forms.ProgressBar)
-- [`DatePicker`](xref:Xamarin.Forms.DatePicker)
-- [`TimePicker`](xref:Xamarin.Forms.TimePicker)
 - [`Picker`](xref:Xamarin.Forms.Picker)
-- [`ActivityIndicator`](xref:Xamarin.Forms.ActivityIndicator)
-- [`Editor`](xref:Xamarin.Forms.Editor)
+- [`ProgressBar`](xref:Xamarin.Forms.ProgressBar)
 - [`Slider`](xref:Xamarin.Forms.Slider)
 - [`Stepper`](xref:Xamarin.Forms.Stepper)
+- [`TimePicker`](xref:Xamarin.Forms.TimePicker)
 
-Funcionalmente, os renderizadores de material não são diferentes para os renderizadores padrão.
+Os controles materiais são obtidos por renderizadores materiais, que aplicam as regras de design de material. Funcionalmente, os renderizadores de materiais não são diferentes para os renderizadores padrão. Para obter mais informações, consulte [Personalizar material Visual](#customize-material-visual).
 
-## <a name="initialize-material-renderers"></a>Inicializar renderizadores de materiais
+## <a name="initialize-material-visual"></a>Inicializar o Visual do material
 
 Depois de instalar o pacote NuGet [Xamarin. Forms. Visual. material](https://www.nuget.org/packages/Xamarin.Forms.Visual.Material/) , os renderizadores de material devem ser inicializados em cada projeto de plataforma.
 
@@ -67,9 +69,9 @@ global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
 global::Xamarin.Forms.FormsMaterial.Init(this, savedInstanceState);
 ```
 
-## <a name="consume-material-renderers"></a>Consumir renderizadores de materiais
+## <a name="apply-material-visual"></a>Aplicar visual de material
 
-Os aplicativos podem optar por usar os renderizadores de material definindo a propriedade [`VisualElement.Visual`](xref:Xamarin.Forms.VisualElement.Visual) em uma página, layout ou exibição, para `Material`:
+Os aplicativos podem habilitar o Visual de material definindo a propriedade [`VisualElement.Visual`](xref:Xamarin.Forms.VisualElement.Visual) em uma página, um layout ou uma exibição, para `Material`:
 
 ```xaml
 <ContentPage Visual="Material"
@@ -85,7 +87,7 @@ ContentPage contentPage = new ContentPage();
 contentPage.Visual = VisualMarker.Material;
 ```
 
-A propriedade [`Visual`](xref:Xamarin.Forms.VisualElement.Visual) pode ser definida como qualquer tipo que implemente `IVisual`, com a classe [`VisualMarker`](xref:Xamarin.Forms.VisualMarker) fornecendo as seguintes propriedades `IVisual`:
+Definir a propriedade `VisualElement.Visual` como `Material` direciona seu aplicativo para usar os renderizadores visuais de material em vez dos renderizadores padrão. A propriedade [`Visual`](xref:Xamarin.Forms.VisualElement.Visual) pode ser definida como qualquer tipo que implemente `IVisual`, com a classe [`VisualMarker`](xref:Xamarin.Forms.VisualMarker) fornecendo as seguintes propriedades `IVisual`:
 
 - `Default` – indica que a exibição deve renderizar usando o renderizador padrão.
 - `MatchParent` – indica que a exibição deve usar o mesmo renderizador que seu pai direto.
@@ -107,9 +109,13 @@ As principais diferenças visíveis entre os renderizadores padrão e os renderi
 > [!NOTE]
 > Os componentes de design de material aderem em conjunto às diretrizes do Google. Como resultado, os renderizadores de design de material são tendenciosas em relação ao dimensionamento e ao comportamento. Quando você precisar de maior controle de estilos ou comportamento, ainda poderá criar seu próprio [efeito](~/xamarin-forms/app-fundamentals/effects/index.md), [comportamento](~/xamarin-forms/app-fundamentals/behaviors/index.md)ou [renderizador personalizado](~/xamarin-forms/app-fundamentals/custom-renderer/index.md) para obter os detalhes necessários.
 
-## <a name="customize-material-renderers"></a>Personalizar renderizadores de materiais
+## <a name="customize-material-visual"></a>Personalizar o Visual de material
 
-Os renderizadores de materiais podem, opcionalmente, ser personalizados, assim como os renderizadores padrão, por meio das seguintes classes base:
+O pacote NuGet do Visual do material é uma coleção de renderizadores que percebem os controles Xamarin. Forms. A personalização de controles visuais de material é idêntica à personalização de controles padrão.
+
+Os efeitos são a técnica recomendada quando a meta é personalizar um controle existente. Se houver um processador visual de material, será menos trabalho para personalizar o controle com um efeito do que é a subclasse do renderizador. Para obter mais informações sobre efeitos, consulte os [efeitos do Xamarin. Forms](~/xamarin-forms/app-fundamentals/effects/index.md).
+
+Renderizadores personalizados são a técnica recomendada quando um processador de materiais não existe. As seguintes classes de processador estão incluídas com o Visual material:
 
 - `MaterialButtonRenderer`
 - `MaterialCheckBoxRenderer`
@@ -124,7 +130,7 @@ Os renderizadores de materiais podem, opcionalmente, ser personalizados, assim c
 - `MaterialSliderRenderer`
 - `MaterialStepperRenderer`
 
-O código a seguir mostra um exemplo de personalização da classe `MaterialProgressBarRenderer`:
+A subclasse de um processador de material é quase idêntica aos renderizadores que não são materiais. No entanto, ao exportar um renderizador que subtem um processador de material, você deve fornecer um terceiro argumento para o atributo `ExportRenderer` que especifica o tipo de `VisualMarker.MaterialVisual`:
 
 ```csharp
 using Xamarin.Forms.Material.Android;
@@ -134,7 +140,7 @@ namespace MyApp.Android
 {
     public class CustomMaterialProgressBarRenderer : MaterialProgressBarRenderer
     {
-        ...
+        //...
     }
 }
 ```
@@ -150,4 +156,5 @@ Para obter mais informações sobre renderizadores personalizados, consulte [ren
 
 - [Visual do material (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-visualdemos)
 - [Criar um renderizador Visual Xamarin. Forms](create.md)
+- [Efeitos do Xamarin. Forms](~/xamarin-forms/app-fundamentals/effects/index.md)
 - [Renderizadores personalizados](~/xamarin-forms/app-fundamentals/custom-renderer/index.md)
