@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/30/2019
-ms.openlocfilehash: 24879b1ffcac97acdba27c32a22e43bfb6e80459
-ms.sourcegitcommit: e71474f91639bb43159b22f5d534325c3270ba93
+ms.openlocfilehash: 08026cd3f3ef7503a92f6c78f1e3e27ad3642d09
+ms.sourcegitcommit: f8583585c501607fdfa061b95e9a9f385ed1d591
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72749783"
+ms.lasthandoff: 10/26/2019
+ms.locfileid: "72959132"
 ---
 # <a name="xamarinforms-relative-bindings"></a>Associações relativas ao Xamarin. Forms
 
@@ -31,10 +31,10 @@ A extensão de marcação de `RelativeSource` é suportada pela classe `Relative
 
 A propriedade `Mode` deve ser definida como um dos membros da enumeração `RelativeBindingSourceMode`:
 
-- `TemplatedParent` indica o elemento no qual o modelo, no qual o elemento vinculado existe, é aplicado. Para obter mais informações, consulte [associando a um modelo pai](#bind-to-a-templated-parent).
-- `Self` indica o elemento no qual a associação está sendo definida, permitindo que você vincule uma propriedade desse elemento a outra propriedade no mesmo elemento. Para obter mais informações, consulte [associação a si mesmo](#bind-to-self).
-- `FindAncestor` indica o ancestral na árvore visual do elemento associado. Esse modo deve ser usado para associar a um controle ancestral representado pela propriedade `AncestorType`. Para obter mais informações, consulte [associando a um ancestral](#bind-to-an-ancestor).
-- `FindAncestorBindingContext` indica a `BindingContext` do ancestral na árvore visual do elemento associado. Esse modo deve ser usado para associar ao `BindingContext` de um ancestral representado pela propriedade `AncestorType`. Para obter mais informações, consulte [associando a um ancestral](#bind-to-an-ancestor).
+- `TemplatedParent` indica o elemento no qual o modelo, no qual o elemento vinculado existe, é aplicado. Para obter mais informações, consulte [associar a um modelo pai](#bind-to-a-templated-parent).
+- `Self` indica o elemento no qual a associação está sendo definida, permitindo que você vincule uma propriedade desse elemento a outra propriedade no mesmo elemento. Para obter mais informações, consulte [associar a si mesmo](#bind-to-self).
+- `FindAncestor` indica o ancestral na árvore visual do elemento associado. Esse modo deve ser usado para associar a um controle ancestral representado pela propriedade `AncestorType`. Para obter mais informações, consulte [associar a um ancestral](#bind-to-an-ancestor).
+- `FindAncestorBindingContext` indica a `BindingContext` do ancestral na árvore visual do elemento associado. Esse modo deve ser usado para associar ao `BindingContext` de um ancestral representado pela propriedade `AncestorType`. Para obter mais informações, consulte [associar a um ancestral](#bind-to-an-ancestor).
 
 A propriedade `Mode` é a propriedade content da classe `RelativeSourceExtension`. Portanto, para expressões de marcação XAML expressas com chaves, você pode eliminar a `Mode=` parte da expressão.
 
