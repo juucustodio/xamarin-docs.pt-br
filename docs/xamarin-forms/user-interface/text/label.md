@@ -6,13 +6,13 @@ ms.assetid: 02E6C553-5670-49A0-8EE9-5153ED21EA91
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 09/26/2019
-ms.openlocfilehash: 6ea8195d422da3c64175b164c5fbf2885eb234ab
-ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
+ms.date: 10/28/2019
+ms.openlocfilehash: d51ecc728ef6d22391f1cbc682aa204a3ce44b8a
+ms.sourcegitcommit: 9fa7cf9fae44ed092bc9cab17c843a443001734e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72696382"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72971224"
 ---
 # <a name="xamarinforms-label"></a>Rótulo do Xamarin. Forms
 
@@ -69,32 +69,6 @@ Label label = new Label { Text = "Character spaced text", CharacterSpacing = 10 
 ```
 
 O resultado é que os caracteres no texto exibido pelo [`Label`](xref:Xamarin.Forms.Label) são espaçados `CharacterSpacing` unidades independentes de dispositivo.
-
-## <a name="padding"></a>Enchimento
-
-O preenchimento representa o espaço entre um elemento e seus elementos filho e é usado para separar o elemento de seu próprio conteúdo. O preenchimento pode ser aplicado a instâncias de [`Label`](xref:Xamarin.Forms.Label) definindo a propriedade `Label.Padding` como um valor [`Thickness`](xref:Xamarin.Forms.Thickness) :
-
-```xaml
-<Label Text="Padded text"
-       Padding="20" />
-```
-
-Este é o código C# equivalente:
-
-```csharp
-Label label = new Label
-{
-    Text = "Padded text",
-    Padding = new Thickness(20)
-};
-```
-
-> [!IMPORTANT]
-> No iOS, quando um [`Label`](xref:Xamarin.Forms.Label) é criado que define a propriedade `Padding`, o preenchimento será aplicado e o valor de preenchimento poderá ser atualizado mais tarde. No entanto, quando uma `Label` é criada e não define a propriedade `Padding`, tentar defini-la mais tarde não terá nenhum efeito.
->
-> No Android e no Plataforma Universal do Windows, o valor da propriedade `Padding` pode ser especificado quando o `Label` é criado ou posterior.
-
-Para obter mais informações sobre preenchimento, consulte [margens e preenchimento](~/xamarin-forms/user-interface/layouts/margin-and-padding.md).
 
 ## <a name="colors"></a>Cores
 
@@ -390,6 +364,48 @@ var label = new Label
 As capturas de tela a seguir mostram o resultado da definição da propriedade [`Span.LineHeight`](xref:Xamarin.Forms.Span.LineHeight) como 1,8:
 
 ![Exemplo de span LineHeight](label-images/span-lineheight.png)
+
+## <a name="padding"></a>Enchimento
+
+O preenchimento representa o espaço entre um elemento e seus elementos filho e é usado para separar o elemento de seu próprio conteúdo. O preenchimento pode ser aplicado a instâncias de [`Label`](xref:Xamarin.Forms.Label) definindo a propriedade `Label.Padding` como um valor [`Thickness`](xref:Xamarin.Forms.Thickness) :
+
+```xaml
+<Label Padding="10">
+    <Label.FormattedText>
+        <FormattedString>
+            <Span Text="Lorem ipsum" />
+            <Span Text="dolor sit amet." />
+        </FormattedString>
+    </Label.FormattedText>
+</Label>
+```
+
+Este é o código C# equivalente:
+
+```csharp
+FormattedString formattedString = new FormattedString();
+formattedString.Spans.Add(new Span
+{
+  Text = "Lorem ipsum"
+});
+formattedString.Spans.Add(new Span
+{
+  Text = "dolor sit amet."
+});
+Label label = new Label
+{
+    FormattedText = formattedString,
+    Padding = new Thickness(20)
+};
+```
+
+> [!IMPORTANT]
+> No iOS, quando um [`Label`](xref:Xamarin.Forms.Label) é criado que define a propriedade `Padding`, o preenchimento será aplicado e o valor de preenchimento poderá ser atualizado mais tarde. No entanto, quando uma `Label` é criada e não define a propriedade `Padding`, tentar defini-la mais tarde não terá nenhum efeito.
+>
+> No Android e no Plataforma Universal do Windows, o valor da propriedade `Padding` pode ser especificado quando o `Label` é criado ou posterior.
+
+Para obter mais informações sobre preenchimento, consulte [margens e preenchimento](~/xamarin-forms/user-interface/layouts/margin-and-padding.md).
+
 
 ## <a name="hyperlinks"></a>Hiperlinks
 

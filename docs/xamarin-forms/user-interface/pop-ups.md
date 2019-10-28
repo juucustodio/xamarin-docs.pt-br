@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/25/2019
-ms.openlocfilehash: ddf0b96295f7153803db65a1fd741cc5df473730
-ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
+ms.openlocfilehash: 83aca8c9e64ffb01eb9773c17b42333f73c1aab5
+ms.sourcegitcommit: 9fa7cf9fae44ed092bc9cab17c843a443001734e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72697117"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72971259"
 ---
 # <a name="display-pop-ups"></a>Exibir pop-ups
 
@@ -100,7 +100,6 @@ O exemplo a seguir mostra a definição de alguns dos argumentos opcionais:
 
 ```csharp
 string result = await DisplayPromptAsync("Question 2", "What's 5 + 5?", maxLength: 2, keyboard: Keyboard.Numeric);
-}
 ```
 
 Esse código limita o número de caracteres que podem ser inseridos em 2 e exibe o teclado numérico para a entrada do usuário:
