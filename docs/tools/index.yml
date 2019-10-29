@@ -3,8 +3,8 @@ documentType: LandingData
 title: Ferramentas do Xamarin
 metadata:
   description: Ferramentas para melhorar a experiência de desenvolvimento do Xamarin.
-  author: conceptdev
-  ms.author: crdun
+  author: davidortinau
+  ms.author: daortin
   ms.date: 08/08/2018
   ms.topic: landing-page
 abstract:

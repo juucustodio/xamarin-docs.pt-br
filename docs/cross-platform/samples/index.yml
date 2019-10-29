@@ -3,8 +3,8 @@ documentType: LandingData
 title: Exemplos de plataforma cruzada
 metadata:
   description: Aplicativos de exemplo de Xamarin de plataforma cruzada para desenvolvedores móveis.
-  author: conceptdev
-  ms.author: crdun
+  author: davidortinau
+  ms.author: daortin
   ms.date: 07/30/2019
   ms.topic: sample
 abstract:

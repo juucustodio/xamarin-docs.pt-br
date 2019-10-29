@@ -3,8 +3,8 @@ documentType: LandingData
 title: Xamarin.Android
 metadata:
   description: O Xamarin.Android expõe o SDK de Android completo para desenvolvedores de .NET.
-  author: conceptdev
-  ms.author: crdun
+  author: davidortinau
+  ms.author: daortin
   ms.date: 07/27/2018
   ms.topic: landing-page
   ms.technology: xamarin-android
