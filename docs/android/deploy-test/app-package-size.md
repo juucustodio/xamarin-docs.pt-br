@@ -4,21 +4,21 @@ description: Este artigo examina as partes que constituem um pacote do aplicativ
 ms.prod: xamarin
 ms.assetid: 8D70CDDD-3D3C-9949-8045-AB8F93D18E74
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/05/2018
-ms.openlocfilehash: 6d391bd804e1c59d06d78dd7cffe3f11f9276468
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: ff1bc56ab1cf02e9e5354da94bebd0661da34bc5
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70754633"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028166"
 ---
 # <a name="application-package-size"></a>Tamanho dos pacotes de aplicativos
 
 _Este artigo examina as partes que constituem um pacote do aplicativo do Xamarin.Android e as estratégias associadas que podem ser usadas para a implantação eficiente do pacote durante a depuração e as etapas de lançamento de desenvolvimento._
 
-## <a name="overview"></a>Visão geral
+## <a name="overview"></a>Visão Geral
 
 Xamarin.Android usa uma variedade de mecanismos para minimizar o tamanho do pacote, mas mantendo uma depuração e um processo de implantação eficientes. Neste artigo, examinamos a versão do Xamarin.Android e o fluxo de trabalho de implantação de depuração, bem como o modo como a plataforma do Xamarin.Android assegura o build e lançamento de pacotes de aplicativos pequenos.
 

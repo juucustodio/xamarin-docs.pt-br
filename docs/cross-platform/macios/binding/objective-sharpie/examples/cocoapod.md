@@ -3,26 +3,26 @@ title: Exemplo do mundo real usando CocoaPods
 description: Este documento demonstra como usar a nitidez objetiva para gerar automaticamente as C# definições de associação de um CocoaPod.
 ms.prod: xamarin
 ms.assetid: 233B781D-5841-4250-9F63-0585231D2112
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/28/2018
-ms.openlocfilehash: 0f730b1c0a0deacdb84c198cfe4af47308a268cc
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: cf117880eb46b028d709a44aa453e111b007b441
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290023"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016271"
 ---
 # <a name="real-world-example-using-cocoapods"></a>Exemplo do mundo real usando CocoaPods
 
 > [!NOTE]
 > Este exemplo usa [AFNetworking CocoaPod](https://cocoapods.org/pods/AFNetworking).
 
-Novidade na versão 3,0, o Objective Sharp dá suporte à associação de CocoaPods e até mesmo`sharpie pod`inclui um comando () para tornar o download, a configuração e a criação de CocoaPods muito fáceis. Você deve se [familiarizar com o CocoaPods](https://cocoapods.org) em geral antes de usar esse recurso.
+Novidade na versão 3,0, o Objective Sharp dá suporte à vinculação de CocoaPods e até mesmo inclui um comando (`sharpie pod`) para tornar o download, a configuração e a criação de CocoaPods muito fáceis. Você deve se [familiarizar com o CocoaPods](https://cocoapods.org) em geral antes de usar esse recurso.
 
 ## <a name="creating-a-binding-for-a-cocoapod"></a>Criando uma associação para um CocoaPod
 
-O `sharpie pod` comando tem uma opção global e dois subcomandos:
+O comando `sharpie pod` tem uma opção global e dois subcomandos:
 
 ```bash
 $ sharpie pod -help
@@ -37,7 +37,7 @@ Available Commands:
   bind         Bind an existing Xamarin C# CocoaPods project
 ```
 
-O `init` subcomando também tem alguma ajuda útil:
+O subcomando `init` também tem uma ajuda útil:
 
 ```bash
 $ sharpie pod init -help
@@ -48,7 +48,7 @@ Init Options:
                    it even if one already exists
 ```
 
-Vários nomes de CocoaPod e de subspecs podem ser `init`fornecidos para.
+Vários nomes de CocoaPod e de subspecs podem ser fornecidos para `init`.
 
 ```bash
 $ sharpie pod init ios AFNetworking
@@ -93,4 +93,4 @@ Depois de gerar os arquivos **ApiDefinitions.cs** e **StructsAndEnums.cs** , dê
 
 - [Visão geral do objetivo de associação-C](~/cross-platform/macios/binding/overview.md)
 - [Associando bibliotecas de Objective-C](~/cross-platform/macios/binding/objective-c-libraries.md)
-- [Passo a passo: Associando uma biblioteca do Objective do iOS-C](~/ios/platform/binding-objective-c/walkthrough.md)
+- [Walkthrough: associando uma biblioteca de Objective do iOS-C](~/ios/platform/binding-objective-c/walkthrough.md)

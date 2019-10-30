@@ -4,15 +4,15 @@ description: Este documento apresenta os recursos de localização do SDK do And
 ms.prod: xamarin
 ms.assetid: D1277939-A1E8-468E-B136-820D816AF853
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/01/2018
-ms.openlocfilehash: 08d12a58b4a0d8a8f757df965bd9dfb73f1639b1
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: ae97297b81d33c4b9f814d4b3639984b05ce3d72
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70755381"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73021652"
 ---
 # <a name="android-localization"></a>Localização do Android
 
@@ -26,7 +26,7 @@ Esta seção descreve os principais recursos de localização do Android. Pule p
 
 Os usuários escolhem seu idioma nas **configurações > idioma & entrada**. Essa seleção controla o idioma exibido e as configurações regionais usadas (por exemplo, para formatação de data e número).
 
-A localidade atual pode ser consultada por meio do contexto `Resources`atual:
+A localidade atual pode ser consultada por meio da `Resources`do contexto atual:
 
 ```csharp
 var lang = Resources.Configuration.Locale; // eg. "es_ES"
@@ -36,19 +36,19 @@ Esse valor será um identificador de localidade que contém um código de idioma
 
 Exemplos comuns incluem:
 
-- `en_US`para inglês (Estados Unidos)
-- `es_ES`para espanhol (Espanha)
-- `ja_JP`para japonês (Japão)
-- `zh_CN`para chinês (China)
-- `zh_TW`para chinês (Taiwan)
-- `pt_PT`para Português (Portugal)
-- `pt_BR`para Português (Brasil)
+- `en_US` para inglês (Estados Unidos)
+- `es_ES` para espanhol (Espanha)
+- `ja_JP` para japonês (Japão)
+- `zh_CN` para chinês (China)
+- `zh_TW` para chinês (Taiwan)
+- `pt_PT` para Português (Portugal)
+- `pt_BR` para Português (Brasil)
 
 ### <a name="locale_changed"></a>LOCALE_CHANGED
 
-O Android `android.intent.action.LOCALE_CHANGED` é gerado quando o usuário altera sua seleção de idioma.
+O Android gera `android.intent.action.LOCALE_CHANGED` quando o usuário altera sua seleção de idioma.
 
-As atividades podem optar por lidar com isso definindo `android:configChanges` o atributo na atividade, da seguinte maneira:
+As atividades podem optar por lidar com isso definindo o atributo `android:configChanges` na atividade, da seguinte maneira:
 
 ```csharp
 [Activity (Label = "@string/app_name", MainLauncher = true, Icon="@drawable/launcher",
@@ -63,9 +63,9 @@ A estratégia de localização do Android tem as seguintes partes principais:
 
 - Pastas de recursos para conter cadeias de caracteres localizadas, imagens e outros recursos.
 
-- `GetText`método, que é usado para recuperar cadeias de caracteres localizadas no código
+- `GetText` método, que é usado para recuperar cadeias de caracteres localizadas no código
 
-- `@string/id`em arquivos AXML, para posicionar automaticamente cadeias de caracteres localizadas em layouts.
+- `@string/id` em arquivos AXML, para posicionar automaticamente as cadeias de caracteres localizadas em layouts.
 
 ### <a name="resource-folders"></a>Pastas de recursos
 
@@ -81,21 +81,21 @@ A maioria dos desenvolvedores já está familiarizada com o uso de sufixos de **
 ![Captura de tela de pastas de recursos/empates e de recursos/valores para vários identificadores culturais](localization-images/resources.png)
 
 > [!NOTE]
-> Ao especificar uma linguagem de nível superior como `es` apenas dois caracteres são necessários; no entanto, ao especificar uma localidade completa, o formato do nome do diretório requer um traço e um **r** minúsculo para separar as duas partes, por exemplo, **pt-rBR** ou  **zh-rCN**. Compare isso com o valor retornado no código, que tem um sublinhado (por exemplo, `pt_BR`). Ambos são diferentes do valor que a classe .NET `CultureInfo` usa, que tem apenas um traço (por exemplo, `pt-BR`). Tenha essas diferenças em mente ao trabalhar em plataformas do Xamarin.
+> Ao especificar uma linguagem de nível superior como `es` apenas dois caracteres são necessários; no entanto, ao especificar uma localidade completa, o formato de nome de diretório requer um traço e um **r** minúsculo para separar as duas partes, por exemplo, **pt-rBR** ou **zh-rCN**. Compare isso com o valor retornado no código, que tem um sublinhado (por exemplo, `pt_BR`). Ambos são diferentes para o valor que o .NET `CultureInfo` classe usa, que tem apenas um traço (por exemplo, `pt-BR`). Tenha essas diferenças em mente ao trabalhar em plataformas do Xamarin.
 
 #### <a name="stringsxml-file-format"></a>Formato de arquivo Strings. xml
 
 Um diretório de **valores** localizados (por exemplo, **os valores-es** ou **Values-pt-rBR**) devem conter um arquivo chamado **Strings. xml** que conterá o texto traduzido para essa localidade.
 
-Cada cadeia de caracteres traduzível é um elemento XML com a ID de recurso especificada `name` como o atributo e a cadeia de caracteres traduzida como o valor:
+Cada cadeia de caracteres traduzível é um elemento XML com a ID de recurso especificada como o atributo `name` e a cadeia de caracteres traduzida como o valor:
 
 ```xml
 <string name="app_name">TaskyL10n</string>
 ```
 
-Você precisa escapar de acordo com as regras XML normais e `name` deve ser uma ID de recurso do Android válida (sem espaços ou traços). Aqui está um exemplo do arquivo de cadeias de caracteres padrão (inglês) para o exemplo:
+Você precisa escapar de acordo com as regras XML normais e o `name` deve ser uma ID de recurso do Android válida (sem espaços ou traços). Aqui está um exemplo do arquivo de cadeias de caracteres padrão (inglês) para o exemplo:
 
-**values/Strings.xml**
+**Values/Strings. xml**
 
 ```xml
 <resources>
@@ -110,7 +110,7 @@ Você precisa escapar de acordo com as regras XML normais e `name` deve ser uma 
 
 Os valores do diretório espanhol **-es** contém um arquivo com o mesmo nome (**Strings. xml**) que contém as traduções:
 
-**values-es/Strings.xml**
+**Values-es/Strings. xml**
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -130,7 +130,7 @@ Com os arquivos de cadeias de caracteres configurados, os valores traduzidos pod
 
 ### <a name="axml-layout-files"></a>Arquivos de layout AXML
 
-Para fazer referência a cadeias de caracteres localizadas `@string/id` em arquivos de layout, use a sintaxe. Este trecho de código XML do exemplo `text` mostra as propriedades que estão sendo definidas com IDs de recursos localizados (alguns outros atributos foram omitidos):
+Para fazer referência a cadeias de caracteres localizadas em arquivos de layout, use a sintaxe `@string/id`. Este trecho de código XML do exemplo mostra `text` Propriedades sendo definidas com IDs de recursos localizados (alguns outros atributos foram omitidos):
 
 ```xml
 <TextView
@@ -145,7 +145,7 @@ Para fazer referência a cadeias de caracteres localizadas `@string/id` em arqui
 
 ### <a name="gettext-method"></a>Método GetText
 
-Para recuperar cadeias de caracteres traduzidas no `GetText` código, use o método e passe a ID do recurso:
+Para recuperar cadeias de caracteres traduzidas no código, use o método `GetText` e passe a ID do recurso:
 
 ```csharp
 var cancelText = Resources.GetText (Resource.String.taskcancel);
@@ -174,14 +174,14 @@ No **Strings. xml**
  </plurals>
 ```
 
-Para renderizar a cadeia de caracteres `GetQuantityString` completa, use o método, passando a ID do recurso e o valor a ser exibido (que é passado duas vezes). O segundo parâmetro é usado pelo Android para determinar *qual* `quantity` cadeia de caracteres usar, o terceiro parâmetro é o valor realmente substituído na cadeia de caracteres (ambos são obrigatórios).
+Para renderizar a cadeia de caracteres completa, use o método `GetQuantityString`, passando a ID do recurso e o valor a ser exibido (que é passado duas vezes). O segundo parâmetro é usado pelo Android para determinar *qual* `quantity` cadeia de caracteres usar, o terceiro parâmetro é o valor realmente substituído na cadeia de caracteres (ambos são obrigatórios).
 
 ```csharp
 var translated = Resources.GetQuantityString (
                     Resource.Plurals.numberOfTasks, taskcount, taskcount);`
 ```
 
-As `quantity` opções válidas são:
+As opções de `quantity` válidas são:
 
 - zero
 - um
@@ -190,7 +190,7 @@ As `quantity` opções válidas são:
 - muitos
 - outras
 
-Eles são descritos mais detalhadamente nos [documentos do Android](https://developer.android.com/guide/topics/resources/string-resource.html#Plurals). Se um determinado idioma não exigir manipulação "especial", `quantity` essas cadeias de caracteres serão ignoradas (por exemplo, somente o inglês usa `one` e `zero` `other`; a especificação de uma cadeia de caracteres não terá nenhum efeito, ela não será usada).
+Eles são descritos mais detalhadamente nos [documentos do Android](https://developer.android.com/guide/topics/resources/string-resource.html#Plurals). Se um determinado idioma não exigir manipulação "especial", as cadeias de caracteres `quantity` serão ignoradas (por exemplo, o inglês usa apenas `one` e `other`; especificar uma cadeia de caracteres de `zero` não terá efeito, ele não será usado).
 
 ### <a name="images"></a>Imagens
 
@@ -206,13 +206,13 @@ Nesta captura de tela, quatro imagens são salvas no diretório **desenhável** 
 
 Você também pode fornecer outros tipos de recursos alternativos específicos do idioma, incluindo layouts, animações e arquivos brutos. Isso significa que você pode fornecer um layout de tela específico para um ou mais dos seus idiomas de destino, por exemplo, você poderia criar um layout especificamente para alemão que permita rótulos de texto muito longos.
 
-O Android 4,2 introduziu o suporte para [idiomas da direita para a esquerda (RTL)](http://android-developers.blogspot.fr/2013/03/native-rtl-support-in-android-42.html) se `android:supportsRtl="true"`você definir a configuração do aplicativo. O qualificador `"ldrtl"` de recursos pode ser incluído em um nome de diretório para conter layouts personalizados que são criados para exibição DPE.
+O Android 4,2 introduziu o suporte para [idiomas da direita para a esquerda (RTL)](https://android-developers.blogspot.fr/2013/03/native-rtl-support-in-android-42.html) se você definir a configuração do aplicativo `android:supportsRtl="true"`. O qualificador de recursos `"ldrtl"` pode ser incluído em um nome de diretório para conter layouts personalizados que são criados para exibição DPE.
 
 Para obter mais informações sobre a nomenclatura e o fallback do diretório de recursos, consulte os documentos do Android para [fornecer recursos alternativos](https://developer.android.com/guide/topics/resources/providing-resources.html#AlternativeResources).
 
 ### <a name="app-name"></a>Nome do aplicativo
 
-O nome do aplicativo é fácil de localizar usando um `@string/id` no para a `MainLauncher` atividade:
+O nome do aplicativo é fácil de localizar usando um `@string/id` no para a atividade de `MainLauncher`:
 
 ```csharp
 [Activity (Label = "@string/app_name", MainLauncher = true, Icon="@drawable/launcher",
@@ -221,17 +221,17 @@ O nome do aplicativo é fácil de localizar usando um `@string/id` no para a `Ma
 
 ### <a name="right-to-left-rtl-languages"></a>Idiomas da direita para a esquerda (RTL)
 
-O Android 4,2 e mais recente fornece suporte completo para layouts RTL, descritos em detalhes no [blog de suporte nativo DPE](http://android-developers.blogspot.dk/2013/03/native-rtl-support-in-android-42.html).
+O Android 4,2 e mais recente fornece suporte completo para layouts RTL, descritos em detalhes no [blog de suporte nativo DPE](https://android-developers.blogspot.dk/2013/03/native-rtl-support-in-android-42.html).
 
-Ao usar o Android 4,2 (API nível 17) e mais recente, os valores de alinhamento `start` podem ser especificados `left` com `right` e `end` em vez `android:paddingStart`de e (por exemplo). Também há novas APIs como `LayoutDirection`, `TextDirection`e `TextAlignment` para ajudar a criar telas que se adaptem a leitores DPE.
+Ao usar o Android 4,2 (API nível 17) e mais recente, os valores de alinhamento podem ser especificados com `start` e `end` em vez de `left` e `right` (por exemplo, `android:paddingStart`). Também há novas APIs, como `LayoutDirection`, `TextDirection`e `TextAlignment` para ajudar a criar telas que se adaptem a leitores DPE.
 
 A captura de tela a seguir mostra o [exemplo de **tarefa** localizada](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10n) em árabe:
 
-[![Captura de tela do aplicativo de tarefa em árabe](localization-images/rtl-ar-sml.png)](localization-images/rtl-ar.png#lightbox) 
+[Captura de tela de![do aplicativo de tarefa em árabe](localization-images/rtl-ar-sml.png)](localization-images/rtl-ar.png#lightbox) 
 
 A próxima captura de tela mostra o [exemplo de **tarefa** localizada](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10n) em Hebraico:
 
-[![Captura de tela do aplicativo de tarefas em Hebraico](localization-images/rtl-he-sml.png)](localization-images/rtl-he.png#lightbox)
+[![captura de tela do aplicativo de tarefas em Hebraico](localization-images/rtl-he-sml.png)](localization-images/rtl-he.png#lightbox)
 
 O texto RTL é localizado usando arquivos **String. xml** da mesma forma que o texto ltr.
 

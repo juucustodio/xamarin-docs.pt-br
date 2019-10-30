@@ -4,15 +4,15 @@ description: Este artigo aborda o conceito de foco e como ele é usado para apre
 ms.prod: xamarin
 ms.assetid: DD72E95F-AE9B-47D2-B132-5FA5FBD8026E
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: b84150c8fdca04a9b21c28d126d221d2a9bc5a3f
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 3c754acc3502d7aa2c47264e734187ffe060c029
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769263"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030843"
 ---
 # <a name="working-with-tvos-navigation-and-focus-in-xamarin"></a>Trabalhando com navegação e foco do tvOS no Xamarin
 
@@ -20,7 +20,7 @@ _Este artigo aborda o conceito de foco e como ele é usado para apresentar e tra
 
 Este artigo aborda o conceito de [foco](#Focus-and-Selection) e como ele é usado para manipular a [navegação](#Navigation) em uma interface do usuário do aplicativo Xamarin. tvOS. Vamos examinar como os controles de navegação internos do tvOS usam o foco, o realce e a seleção para fornecer a navegação da interface do usuário do seu aplicativo Xamarin. tvOS.
 
-[![](navigation-focus-images/intro01.png "Navegação da interface do usuário de aplicativos tvOS")](navigation-focus-images/intro01.png#lightbox)
+[![](navigation-focus-images/intro01.png "tvOS apps User Interface Navigation")](navigation-focus-images/intro01.png#lightbox)
 
 Em seguida, vamos dar uma olhada em como o foco pode ser usado com [da Parallax](#Focus-and-Parallax) e *imagens em camadas* para fornecer pistas visuais para o estado de navegação atual para o usuário final.
 
@@ -34,7 +34,7 @@ Os usuários do seu aplicativo Xamarin. tvOS não serão interagindo com sua int
 
 Um aplicativo tvOS bem-sucedido implementa a navegação de forma a dar suporte uniforme à finalidade do aplicativo e à estrutura dos dados que ele apresenta sem chamar atenção para a navegação em si. Projete sua navegação para que ela se sinta natural e familiar sem ter dominado a interface do usuário ou desenhar o foco fora do conteúdo e da experiência do usuário dos aplicativos.
 
-[![](navigation-focus-images/nav01.png "O aplicativo de configurações do tvOS")](navigation-focus-images/nav01.png#lightbox)
+[![](navigation-focus-images/nav01.png "The tvOS settings app")](navigation-focus-images/nav01.png#lightbox)
 
 Ao usar uma Apple TV, o usuário normalmente navega por um conjunto empilhado de telas, cada uma apresentando um determinado conjunto de conteúdo. Por sua vez, cada nova tela pode levar a uma ou mais subtelas de conteúdo usando controles padrão da interface do usuário, como [botões](~/ios/tvos/user-interface/buttons.md), [barras de guias](~/ios/tvos/user-interface/tab-bars.md), tabelas, [exibições de coleção](~/ios/tvos/user-interface/collection-views.md) ou [exibições divididas](~/ios/tvos/user-interface/split-views.md).
 
@@ -48,7 +48,7 @@ A Apple sugere o seguinte em mente ao criar a navegação para seu aplicativo tv
 - **Fornecer navegação para trás por meio do botão de menu** – para criar uma experiência fácil e familiar, permita que os usuários naveguem para trás usando o botão de **menu** do Siri Remote. Pressionar o botão de **menu** sempre deve retornar à tela anterior ou retornar ao menu principal do aplicativo. No nível superior do aplicativo, pressionar o botão de **menu** deve retornar para a tela inicial da Apple TV.
 - **Normalmente, evite exibir um botão voltar** – porque pressionar o botão de **menu** no Siri remoto navega para trás pela pilha de tela, evite exibir um controle extra que duplique esse comportamento. Uma exceção a essa regra é para telas de compra ou telas com ações destrutivas (como excluir conteúdo) em que um botão de **cancelamento** também deve ser exibido.
 - **Mostre grandes coleções em uma única tela, em vez de muitos** – o Siri Remote foi projetado para fazer a movimentação por uma grande coleção de conteúdo de forma rápida e fácil usando gestos. Se seu aplicativo funciona com uma grande coleção de itens focados, considere mantê-los em uma única tela, em vez de dividi-los em várias telas que exigem mais navegação na parte do usuário.
-- **Use controles padrão para navegação** novamente, para criar uma experiência do usuário fácil e familiar, sempre que possível, use `UIKit` controles internos como controles de página, barras de tabulação, controles segmentados, exibições de tabela, exibições de coleção e exibições divididas para a navegação do aplicativo. Como o usuário já está familiarizado com esses elementos, eles poderão, de forma intuitiva, navegar no seu aplicativo.
+- **Use controles padrão para navegação** novamente, para criar uma experiência do usuário fácil e familiar, sempre que possível, use controles internos de `UIKit` como controles de página, barras de tabulação, controles segmentados, exibições de tabela, exibições de coleção e exibições divididas para seu navegação do aplicativo. Como o usuário já está familiarizado com esses elementos, eles poderão, de forma intuitiva, navegar no seu aplicativo.
 - **Favorecer a navegação horizontal de conteúdo** -por causa da natureza da Apple TV, passar da esquerda para a direita na Siri remota é mais natural do que para cima e para baixo. Considere essa opção ao criar layouts de conteúdo para seu aplicativo.
 
 <a name="Focus-and-Selection" />
@@ -57,7 +57,7 @@ A Apple sugere o seguinte em mente ao criar a navegação para seu aplicativo tv
 
 Na Apple TV, uma imagem, um botão ou outro elemento de interface do usuário é considerado _em foco_ quando é o destino da navegação atual.
 
-[![](navigation-focus-images/focus01.png "Exemplo de foco e seleção")](navigation-focus-images/focus01.png#lightbox)
+[![](navigation-focus-images/focus01.png "Focus and Selection example")](navigation-focus-images/focus01.png#lightbox)
 
 Ao contrário dos dispositivos iOS em que o usuário está interagindo diretamente com elementos na tela Touch do dispositivo, os usuários interagem com elementos tvOS de toda a sala usando o Siri remoto. Para apresentar e lidar com essa interação do usuário, a Apple TV usa um modelo baseado em _foco_ .
 
@@ -67,10 +67,10 @@ Conforme as alterações de foco, animações e efeitos sutis (como o efeito de 
 
 A Apple tem as seguintes sugestões para trabalhar com o foco e a seleção:
 
-- **Usar controles de interface do usuário internos para efeitos de movimento** – `UIKit` usando o e a API de foco em sua interface do usuário, o modelo de foco aplicará automaticamente os efeitos visuais e o movimento padrão aos elementos da interface de usuário. Isso faz com que seu aplicativo se sinta nativo e familiar para os usuários da plataforma Apple TV e permite uma movimentação fluida e intuitiva entre os itens com foco.
+- **Usar controles de interface do usuário internos para efeitos de movimento** – usando `UIKit` e a API de foco em sua interface do usuário, o modelo de foco aplicará automaticamente os efeitos visuais e o movimento padrão aos seus elementos de interface de usuário. Isso faz com que seu aplicativo se sinta nativo e familiar para os usuários da plataforma Apple TV e permite uma movimentação fluida e intuitiva entre os itens com foco.
 - **Mover o foco em direções esperadas** – na Apple TV, quase todos os elementos usam a manipulação indireta. Por exemplo, o usuário usa o Siri Remote para mover o foco e o sistema rola automaticamente a interface para manter o item atualmente focalizado. Se seu aplicativo implementar esse tipo de interação, certifique-se de que o foco se mova na direção do gesto do usuário. Portanto, se o usuário passar o dedo para a direita no Siri, o foco remoto deverá ser movido para a direita (o que pode fazer com que a tela role para a esquerda). A única exceção a essa regra são os itens de tela inteira que usam a manipulação direta (onde o dedo para cima move o elemento para cima).
-- **Verifique se o item focado é óbvio** – como os usuários estão interagindo com os elementos da interface do usuário do Afar, é essencial que o item atualmente focalizado se destaque. Normalmente, isso será manipulado automaticamente por `UIKit` elementos internos. Para controles personalizados, use recursos como tamanho do item ou sombra para mostrar o foco.
-- **Use da Parallax para fazer com que itens focados respondam** a pequenos gestos circulares no resultado remoto Siri em AdaBoost, movimento em tempo real do item focado. Esse [efeito de da Parallax](#Focus-and-Parallax) é incorporado `UIKit` em _imagens em camadas_ para dar ao usuário uma noção de conexão com o item focado.
+- **Verifique se o item focado é óbvio** – como os usuários estão interagindo com os elementos da interface do usuário do Afar, é essencial que o item atualmente focalizado se destaque. Normalmente, isso será manipulado automaticamente por elementos de `UIKit` internos. Para controles personalizados, use recursos como tamanho do item ou sombra para mostrar o foco.
+- **Use da Parallax para fazer com que itens focados respondam** a pequenos gestos circulares no resultado remoto Siri em AdaBoost, movimento em tempo real do item focado. Esse [efeito de da Parallax](#Focus-and-Parallax) é criado em `UIKit` _imagens em camadas_ para dar ao usuário uma noção de conexão com o item focado.
 - **Criar itens com foco do tamanho apropriado** -itens grandes com espaçamento amplo são mais fáceis de selecionar e navegar do que itens menores.
 - **Criar elemento de interface do usuário para parecer bom focado ou sem foco** – normalmente, a Apple TV representa o item focado aumentando seu tamanho. Verifique se os elementos da interface do usuário de seus aplicativos parecem ótimos em qualquer tamanho de apresentação e, se necessário, forneça ativos para elementos de tamanho maiores.
 - **Represente as alterações de foco** de forma fluida-use a animação para esmaecer suavemente entre um estado de itens **focalizado** e sem **foco** para manter as transições de dissonante.
@@ -80,7 +80,7 @@ A Apple tem as seguintes sugestões para trabalhar com o foco e a seleção:
 
 ### <a name="working-with-focus"></a>Trabalhando com foco
 
-Pode haver ocasiões em que você deseja criar um controle personalizado que possa se tornar um item focado. Nesse caso, substitua `CanBecomeFocused` a propriedade e `true`o retorno, `false`caso contrário, retorna. Por exemplo:
+Pode haver ocasiões em que você deseja criar um controle personalizado que possa se tornar um item focado. Nesse caso, substitua a propriedade `CanBecomeFocused` e retorne `true`, caso contrário, retorna `false`. Por exemplo:
 
 ```csharp
 public class myView : UIView
@@ -91,7 +91,7 @@ public class myView : UIView
 }
 ```
 
-A qualquer momento você pode usar a `Focused` propriedade de um `UIKit` controle para ver se ele é o item atual. Se `true` o item da interface do usuário tiver foco no momento, caso contrário, não. Por exemplo:
+A qualquer momento, você pode usar a propriedade `Focused` de um controle de `UIKit` para ver se ele é o item atual. Se `true` o item da interface do usuário tiver foco no momento, caso contrário, não. Por exemplo:
 
 ```csharp
 // Is my view in focus?
@@ -101,7 +101,7 @@ if (myView.Focused) {
 }
 ```
 
-Embora não seja possível mover o foco diretamente para outro elemento de interface do usuário por meio de código, você pode especificar qual elemento de interface do usuário primeiro `PreferredFocusedView` Obtém o `true`foco quando uma tela é carregada definindo sua propriedade como. Por exemplo:
+Embora não seja possível mover o foco diretamente para outro elemento de interface do usuário por meio de código, você pode especificar qual elemento de interface do usuário primeiro obtém o foco quando uma tela é carregada definindo sua propriedade `PreferredFocusedView` como `true`. Por exemplo:
 
 ```csharp
 // Make the play button the starting focus item
@@ -114,15 +114,15 @@ playButton.PreferredFocusedView = true;
 
 Quando o usuário faz com que o foco se desloque de um elemento de interface do usuário para outro (por exemplo, em resposta a um gesto no Siri remoto), um _evento de atualização de foco_ será enviado para o item que está perdendo o foco e o item ganha foco.
 
-Para elementos personalizados que herdam `UIView` de `UIViewController`ou, você pode substituir vários métodos para trabalhar com o evento de atualização de foco:
+Para elementos personalizados que herdam de `UIView` ou `UIViewController`, você pode substituir vários métodos para trabalhar com o evento de atualização de foco:
 
 - **DidUpdateFocus** -este método será chamado sempre que a exibição ganha ou perde o foco.
 - **ShouldUpdateFocus** – Use esse método para definir onde o foco pode ser movido.
 
-Para solicitar que o mecanismo de foco mova o foco de `PreferredFocusedView` volta para o elemento de `SetNeedsUpdateFocus` interface do usuário, chame o método do controlador de exibição.
+Para solicitar que o mecanismo de foco mova o foco de volta para o elemento de interface do usuário `PreferredFocusedView`, chame o método `SetNeedsUpdateFocus` do controlador de exibição.
 
 > [!IMPORTANT]
-> A `SetNeedsUpdateFocus` chamada só terá efeito se o controlador de exibição ao qual ele está sendo chamado contiver a exibição que tem o foco no momento.
+> Chamar `SetNeedsUpdateFocus` só terá efeito se o controlador de exibição ao qual ele está sendo chamado contiver a exibição que tem o foco no momento.
 
 <a name="Working-with-Focus-Guides" />
 
@@ -134,11 +134,11 @@ No entanto, pode haver ocasiões, devido à necessidades de seu design de interf
 
 Veja o seguinte layout de interface do usuário para obter um exemplo:
 
- [![](navigation-focus-images/guide01.png "Exemplo de trabalho com guias de foco")](navigation-focus-images/guide01.png#lightbox)
+ [![](navigation-focus-images/guide01.png "Working with Focus Guides example")](navigation-focus-images/guide01.png#lightbox)
 
 Como o botão **mais informações** não se enquadra em uma grade horizontal e vertical com o botão **comprar** , ele estaria inacessível ao usuário. No entanto, isso pode ser facilmente corrigido usando um _Guia de foco_ para fornecer dicas de movimentação para o mecanismo de foco. 
 
-Um guia de foco`UIFocusGuide`() expõe uma área não visível da exibição como de foco para o mecanismo de foco, permitindo que o foco seja redirecionado para outra exibição.
+Um guia de foco (`UIFocusGuide`) expõe uma área não visível da exibição como de foco para o mecanismo de foco, permitindo que o foco seja redirecionado para outra exibição.
 
 Portanto, para resolver o exemplo fornecido acima, o código a seguir pode ser adicionado ao controlador de exibição para criar um guia de foco entre os botões **mais informações** e **comprar** :
 
@@ -162,19 +162,19 @@ public override void ViewDidLoad ()
 }
 ```
 
-Primeiro, um novo `UIFocusGuide` é criado e adicionado à coleção de guias de layout da exibição usando `AddLayoutGuide` o método.
+Primeiro, um novo `UIFocusGuide` é criado e adicionado à coleção de guias de layout do modo de exibição usando o método `AddLayoutGuide`.
 
 Em seguida, as âncoras superior, esquerda, largura e altura do guia de foco são ajustadas em relação aos botões **mais informações** e **comprar** para posicioná-la entre elas. Consulte:
 
-[![](navigation-focus-images/guide02.png "Guia de foco de exemplo")](navigation-focus-images/guide02.png#lightbox)
+[![](navigation-focus-images/guide02.png "Example Focus Guide")](navigation-focus-images/guide02.png#lightbox)
 
-Também é importante observar que as novas restrições estão sendo ativadas à medida que são criadas definindo sua `Active` Propriedade como: `true`
+Também é importante observar que as novas restrições estão sendo ativadas à medida que são criadas definindo sua propriedade `Active` como `true`:
 
 ```csharp
 FocusGuide.LeftAnchor.ConstraintEqualTo (...).Active = true;
 ```
 
-Com o novo guia de foco estabelecido e adicionado à exibição, o método do `DidUpdateFocus` controlador de exibição pode ser substituído e o código a seguir foi adicionado para se mover entre os botões **mais informações** e **comprar** :
+Com o novo guia de foco estabelecido e adicionado à exibição, o método de `DidUpdateFocus` do controlador de exibição pode ser substituído e o código a seguir foi adicionado para se mover entre os botões **mais informações** e **comprar** :
 
 ```csharp
 public override void DidUpdateFocus (UIFocusUpdateContext context, UIFocusAnimationCoordinator coordinator)
@@ -202,16 +202,16 @@ public override void DidUpdateFocus (UIFocusUpdateContext context, UIFocusAnimat
 }
 ```
 
-Primeiro, esse código obtém o `NextFocusedView` `UIFocusUpdateContext` do que foi passado (`context`). Se essa exibição for `null`, nenhum processamento é necessário e o método foi encerrado.
+Primeiro, esse código obtém a `NextFocusedView` do `UIFocusUpdateContext` que foi passado (`context`). Se essa exibição for `null`, nenhum processamento é necessário e o método foi encerrado.
 
-Em seguida, `nextFocusableItem` o é avaliado. Se ele corresponder aos botões **mais informações** ou **comprar** , o foco será enviado para o botão oposto usando a propriedade do `PreferredFocusedView` guia de foco. Por exemplo:
+Em seguida, o `nextFocusableItem` é avaliado. Se ele corresponder aos botões **mais informações** ou **comprar** , o foco será enviado para o botão oposto usando a propriedade `PreferredFocusedView` do guia de foco. Por exemplo:
 
 ```csharp
 // Move from the More Info to Buy button
 FocusGuide.PreferredFocusedView = BuyButton;
 ```
 
-Caso nenhum dos botões seja a origem do deslocamento de foco, a `PreferredFocusedView` propriedade será desmarcada:
+No caso de nenhum botão ser a origem do deslocamento de foco, a propriedade `PreferredFocusedView` é desmarcada:
 
 ```csharp
 // No valid move
@@ -222,7 +222,7 @@ FocusGuide.PreferredFocusedView = null;
 
 ### <a name="working-with-focus-in-collections"></a>Trabalhando com foco em coleções
 
-Ao decidir se um item individual pode ou não ser focado em um `UICollectionView` ou um `UITableView`, você substituirá os `UICollectionViewDelegate` métodos do ou `UITableViewDelegate` , respectivamente. Por exemplo:
+Ao decidir se um item individual pode ou não ser focado em um `UICollectionView` ou em um `UITableView`, você substituirá os métodos do `UICollectionViewDelegate` ou `UITableViewDelegate`, respectivamente. Por exemplo:
 
 ```csharp
 public class CardHandDelegate : UICollectionViewDelegateFlowLayout
@@ -240,9 +240,9 @@ public class CardHandDelegate : UICollectionViewDelegateFlowLayout
 }
 ```
 
-O `CanFocusItem` método retorna `true` se o item atual pode estar em foco, caso contrário, `false`retorna.
+O método `CanFocusItem` retornará `true` se o item atual puder estar em foco, caso contrário retornará `false`.
 
-Se você quiser um `UICollectionView` ou um `UITableView` para lembrar e restaurar o foco para o último item quando ele perder e recuperar o foco, defina a `RemembersLastFocusedIndexPath` Propriedade como `true`.
+Se você quiser uma `UICollectionView` ou uma `UITableView` para lembrar e restaurar o foco para o último item quando ele perder e recuperar o foco, defina a propriedade `RemembersLastFocusedIndexPath` como `true`.
 
 <a name="Focus-and-Parallax" />
 
@@ -260,7 +260,7 @@ As imagens em camadas são necessárias para o ícone do aplicativo tvOS e têm 
 
 ### <a name="enabling-parallax"></a>Habilitando da Parallax
 
-O `UIImageView` controle (ou qualquer controle herdado de `UIImageView`) dá suporte automaticamente ao efeito de da Parallax. Por padrão, esse suporte está desabilitado, para habilitá-lo, use o seguinte código:
+O controle de `UIImageView` (ou qualquer controle que herda de `UIImageView`) oferece suporte automaticamente ao efeito de da Parallax. Por padrão, esse suporte está desabilitado, para habilitá-lo, use o seguinte código:
 
 ```csharp
 myImageView.AdjustsImageWhenAncestorFocused = true;

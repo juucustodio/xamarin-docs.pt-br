@@ -4,15 +4,15 @@ description: Como testar e depurar aplicativos Xamarin.Android
 ms.prod: xamarin
 ms.assetid: A355A471-8195-4391-93FE-0000BCB17923
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/22/2018
-ms.openlocfilehash: ab070d1f5f2400ee5daa12013953cf8c6beff082
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 0f873f69de7f85a77bdd0ca7aafa33bff1d9b961
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70279775"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73021521"
 ---
 # <a name="debugging"></a>Depuração
 

@@ -3,15 +3,15 @@ title: Localização da interface do usuário do aplicativo
 description: Este documento descreve os conceitos de plataforma cruzada de internacionalização e localização e examina como eles afetam o design do aplicativo.
 ms.prod: xamarin
 ms.assetid: CC6847B2-23FB-4EDE-9F7E-EF29DD46A5C5
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: 9e0a6569710ca3ad10f57d7145a97af92574427c
-ms.sourcegitcommit: 76f930ce63b193ca3f7f85f768b031e59cb342ec
+ms.openlocfilehash: 418c0da2b8fa0e495ae7e6a605c7fde43b6515cb
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71198445"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016803"
 ---
 # <a name="localization"></a>Localização
 
@@ -31,7 +31,7 @@ A *localização* é a etapa a seguir – criando recursos (como cadeias de cara
 
 A internacionalização geralmente é reduzida para i18n – abreviação de 18 letras entre "i" e "n". A localização é, de forma semelhante, reduzida para l10n – por 10 letras entre "L" e "n".
 
-## <a name="overview"></a>Visão geral
+## <a name="overview"></a>Visão Geral
 
 Este documento apresenta os conceitos associados à internacionalização e à localização e como eles se aplicam ao desenvolvimento de aplicativos móveis em geral.
 Ao projetar e criar um aplicativo, as coisas que você pode ter inserido anteriormente, mas que devem ser parametrizadas para localização, incluem:
@@ -59,7 +59,7 @@ As cadeias de caracteres do alemão (por exemplo) podem ser muito longas; às ve
 
 Compare os comprimentos de cadeia de caracteres para alguns itens na tela inicial do iOS em inglês, alemão e japonês:
 
-[![](localization-images/language-compare-sml.png "Tamanho da cadeia de caracteres alemão versus japonês")](localization-images/language-compare.png#lightbox)
+[![](localization-images/language-compare-sml.png "German vs Japanese string length")](localization-images/language-compare.png#lightbox)
 
 Observe que **as configurações** em inglês (8 caracteres) exigem 13 caracteres para a tradução do alemão, mas apenas 2 caracteres em Japonês.
 
@@ -218,7 +218,7 @@ e os tokens serão ordenados como o tradutor pretendido. Certifique-se de inclui
 
 ### <a name="use-multiple-strings-for-cardinality"></a>Usar várias cadeias de caracteres para cardinalidade
 
-Evite cadeias `"You have {0} message/s."` de caracteres como usar cadeias de caracteres específicas para cada Estado para fornecer uma melhor experiência do usuário:
+Evite cadeias de caracteres como `"You have {0} message/s."` usar cadeias de caracteres específicas para cada Estado para fornecer uma melhor experiência do usuário:
 
 **Bom**:
 
@@ -235,7 +235,7 @@ Você precisará escrever código em seu aplicativo para avaliar o número que e
 
 As linguagens baseadas em latim às vezes usam palavras diferentes, dependendo do gênero do assunto. Se seu aplicativo sabe sobre o gênero, você deve permitir que as cadeias de caracteres traduzidas reflitam isso.
 
-Também há um caso mais óbvio, até mesmo em inglês, em que as cadeias de caracteres referem-se a uma pessoa ou usuário específico do seu aplicativo. Por exemplo, alguns sites mostram mensagens como `"Bob commented on his post"` , portanto, você precisa de cadeias de caracteres para um sexo masculino, fêmea e não binário ou desconhecido:
+Também há um caso mais óbvio, até mesmo em inglês, em que as cadeias de caracteres referem-se a uma pessoa ou usuário específico do seu aplicativo. Por exemplo, alguns sites mostram mensagens como `"Bob commented on his post"`, portanto, você precisa de cadeias de caracteres para um sexo masculino, feminino e não binário ou desconhecido:
 
 **Bom**:
 
@@ -271,7 +271,7 @@ Para criar recursos de tradução em seu aplicativo, considere o [API de traduç
 Para fins de teste, você pode usar uma das muitas ferramentas de tradução online para incluir algum texto localizado em seu aplicativo durante o desenvolvimento:
 
 - [Tradutor do Bing](https://www.bing.com/translator/)
-- [Tradução do Google](http://translate.google.com/)
+- [Tradução do Google](https://translate.google.com/)
 
 Há muitos outros disponíveis. A qualidade da tradução automática geralmente não é considerada boa o suficiente para liberar um aplicativo sem primeiro ser revisado e testado por tradutores profissionais ou palestrantes nativos.
 
@@ -279,7 +279,7 @@ Há muitos outros disponíveis. A qualidade da tradução automática geralmente
 
 Também há serviços profissionais de tradução que utilizarão suas cadeias de caracteres e as distribuirão para seus próprios tradutores, fornecendo a você traduções concluídas por uma taxa.
 
-Um dos melhores serviços conhecidos é o [Lionbridge](http://www.lionbridge.com/). A maioria dos serviços profissionais oferece suporte a todos os tipos de arquivo comuns, incluindo cadeias de caracteres, XML, RESX e POT/PO.
+Um dos melhores serviços conhecidos é o [Lionbridge](https://www.lionbridge.com/). A maioria dos serviços profissionais oferece suporte a todos os tipos de arquivo comuns, incluindo cadeias de caracteres, XML, RESX e POT/PO.
 
 ## <a name="summary"></a>Resumo
 

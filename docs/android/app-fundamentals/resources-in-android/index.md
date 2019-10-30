@@ -4,21 +4,21 @@ description: Este artigo apresenta o conceito de recursos do Android no Xamarin.
 ms.prod: xamarin
 ms.assetid: C0DCC856-FA36-04CD-443F-68D26075649E
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/01/2018
-ms.openlocfilehash: ec1cb6fcce320ed5ea9154b42d0a5361940c1015
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 1ff4d9d896aaa5f290402a49aa4b4bd1f1e00aaf
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70755008"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73025057"
 ---
 # <a name="android-resources"></a>Recursos do Android
 
 _Este artigo apresenta o conceito de recursos do Android no Xamarin. Android e documentará como usá-los. Ele aborda como usar recursos em seu aplicativo Android para dar suporte à localização de aplicativos e vários dispositivos, incluindo diferentes tamanhos de tela e densidades._
 
-## <a name="overview"></a>Visão geral
+## <a name="overview"></a>Visão Geral
 
 Um aplicativo do Android raramente é apenas o código-fonte. Geralmente, há muitos outros arquivos que compõem um aplicativo: vídeo, imagens, fontes e arquivos de áudio apenas para citar alguns. Coletivamente, esses arquivos de código não-fonte são chamados de recursos e são compilados (juntamente com o código-fonte) durante o processo de compilação e empacotados como um APK para distribuição e instalação em dispositivos:
 
@@ -26,11 +26,11 @@ Um aplicativo do Android raramente é apenas o código-fonte. Geralmente, há mu
 
 Os recursos oferecem várias vantagens para um aplicativo Android:
 
-- **Separação de código** &ndash; Separa o código-fonte de imagens, cadeias de caracteres, menus, animações, cores etc. Como esses recursos podem ajudar consideravelmente na localização.
+- **A separação de código** &ndash; separa o código-fonte de imagens, cadeias de caracteres, menus, animações, cores etc. Como esses recursos podem ajudar consideravelmente na localização.
 
-- **Direcionar vários dispositivos** &ndash; Fornece suporte mais simples a diferentes configurações de dispositivo sem alterações de código.
+- **Direcionar vários dispositivos** &ndash; fornece suporte mais simples a diferentes configurações de dispositivo sem alterações de código.
 
-- **Verificação de tempo de compilação** &ndash; Os recursos são estáticos e compilados no aplicativo. Isso permite que o uso dos recursos seja verificado no momento da compilação, quando será fácil detectar e corrigir os erros, em oposição ao tempo de execução, quando for mais difícil de localizar e dispendioso para corrigir.
+- A **verificação de tempo de compilação** &ndash; recursos são estáticos e compilados no aplicativo. Isso permite que o uso dos recursos seja verificado no momento da compilação, quando será fácil detectar e corrigir os erros, em oposição ao tempo de execução, quando for mais difícil de localizar e dispendioso para corrigir.
 
 Quando um novo projeto Xamarin. Android é iniciado, um diretório especial chamado Resources é criado, juntamente com alguns subdiretórios:
 
@@ -60,11 +60,11 @@ Por exemplo, os **recursos/desenhar-de** especificarão as imagens para disposit
 
 Este artigo usará uma visão abrangente de como usar recursos e abordará os seguintes tópicos:
 
-- **Noções básicas de recursos do Android** &ndash; Usando recursos padrão de forma programática e declarativa, adicionando tipos de recursos como imagens e fontes a um aplicativo.
+- **Noções básicas de recursos do Android** &ndash; usando recursos padrão de forma programática e declarativa, adicionando tipos de recursos como imagens e fontes a um aplicativo.
 
-- **Configurações específicas do dispositivo** &ndash; Suporte a diferentes resoluções de tela e densidades em um aplicativo.
+- **Configurações específicas de dispositivo** &ndash; dar suporte a diferentes resoluções de tela e densidades em um aplicativo.
 
-- **Localização** &ndash; Usando recursos para dar suporte a regiões diferentes, um aplicativo pode ser usado.
+- &ndash; de **localização** usando recursos para dar suporte a regiões diferentes, um aplicativo pode ser usado.
 
 ## <a name="related-links"></a>Links relacionados
 

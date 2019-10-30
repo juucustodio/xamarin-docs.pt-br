@@ -4,21 +4,21 @@ description: Este documento descreve como trabalhar com controles segmentados tv
 ms.prod: xamarin
 ms.assetid: 23AD94CC-E93A-40B1-8E2B-ECD21FA355BE
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: deac7c5eee4ac0276c9d1a67cbfede8fc41378d6
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 0bedd898232b39898e6079a204bd7409587cde82
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769057"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030402"
 ---
 # <a name="working-with-tvos-segmented-controls-in-xamarin"></a>Trabalhando com controles segmentados tvOS no Xamarin
 
 Um controle segmentado fornece um conjunto de elementos lineares, cada um dos quais pode conter um ícone ou texto, e é usado para fornecer um conjunto de opções relacionadas ao usuário.
 
-[![](segmented-controls-images/segment01.png "Controles de segmento de exemplo")](segmented-controls-images/segment01.png#lightbox)
+[![](segmented-controls-images/segment01.png "Sample segment controls")](segmented-controls-images/segment01.png#lightbox)
 
 A Apple tem as seguintes sugestões para trabalhar com controles segmentados:
 
@@ -42,7 +42,7 @@ Você não pode misturar texto e ícones em um determinado segmento e deve evita
 
 A Apple faz as seguintes sugestões para trabalhar com o texto do segmento:
 
-- **Usar substantivos curtos e significativos** -o título do segmento deve declarar claramente o tipo de conteúdo que o usuário deve esperar ao selecionar o segmento fornecido. Por exemplo: Música ou vídeos.
+- **Usar substantivos curtos e significativos** -o título do segmento deve declarar claramente o tipo de conteúdo que o usuário deve esperar ao selecionar o segmento fornecido. Por exemplo: música ou vídeos.
 - **Usar capitalização de maiúsculas e minúsculas** – cada palavra do título dos segmentos deve ser capitalizada, exceto artigos, conconjuntos e preposições de menos de quatro (4) caracteres.
 - **Usar títulos curtos e focados** – Mantenha os títulos, curtos e focados no tipo de conteúdo a ser esperado quando o segmento for selecionado.
 
@@ -56,34 +56,34 @@ A maneira mais fácil de trabalhar com controles de segmento em um aplicativo Xa
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
-1. No **painel de soluções**, clique duas vezes no arquivo `Main.storyboard` e abra-o para edição.
+1. No **painel de soluções**, clique duas vezes no arquivo de `Main.storyboard` e abra-o para edição.
 1. Arraste um **controle de segmento** da **caixa de ferramentas** e solte-o na exibição: 
 
-    [![](segmented-controls-images/segment02.png "Um controle de segmento")](segmented-controls-images/segment02.png#lightbox)
+    [![](segmented-controls-images/segment02.png "A Segment Control")](segmented-controls-images/segment02.png#lightbox)
 1. Na **Guia Widget** do painel de **Propriedades**, você pode ajustar várias propriedades do controle de segmento, como seu **estilo** e **estado**: 
 
-    [![](segmented-controls-images/segment03.png "A guia do widget")](segmented-controls-images/segment03.png#lightbox)
+    [![](segmented-controls-images/segment03.png "The Widget Tab")](segmented-controls-images/segment03.png#lightbox)
 1. Use o campo **segmentos** para controlar o número de segmentos no controlador.
 1. Selecione um determinado segmento na **lista suspensa segmento** para ajustar suas propriedades individuais, como **título** ou **imagem** , e para controlar se um determinado segmento está **habilitado** ou **selecionado** quando o controle é exibido.
 1. Por fim, atribua **nomes** aos controles para que você possa respondê-los no C# código. Por exemplo: 
 
-    [![](segmented-controls-images/segment04.png "Atribuir um nome")](segmented-controls-images/segment04.png#lightbox)
+    [![](segmented-controls-images/segment04.png "Assign a Name")](segmented-controls-images/segment04.png#lightbox)
 1. Salve as alterações.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-1. No **Gerenciador de soluções**, clique duas vezes no arquivo `Main.storyboard` e abra-o para edição.
+1. No **Gerenciador de soluções**, clique duas vezes no arquivo de `Main.storyboard` e abra-o para edição.
 1. Arraste um **controle de segmento** da **caixa de ferramentas** e solte-o na exibição: 
 
-    [![](segmented-controls-images/segment02-vs.png "Um controle de segmento")](segmented-controls-images/segment02-vs.png#lightbox)
+    [![](segmented-controls-images/segment02-vs.png "A Segment Control")](segmented-controls-images/segment02-vs.png#lightbox)
 1. Na **Guia Widget** do Gerenciador de **Propriedades**, você pode ajustar várias propriedades do controle de segmento, como seu **estilo** e **estado**: 
 
-    [![](segmented-controls-images/segment03-vs.png "A guia do widget")](segmented-controls-images/segment03-vs.png#lightbox)
+    [![](segmented-controls-images/segment03-vs.png "The Widget Tab")](segmented-controls-images/segment03-vs.png#lightbox)
 1. Use o campo **segmentos** para controlar o número de segmentos no controlador.
 1. Selecione um determinado segmento na **lista suspensa segmento** para ajustar suas propriedades individuais, como **título** ou **imagem** , e para controlar se um determinado segmento está **habilitado** ou **selecionado** quando o controle é exibido.
 1. Por fim, atribua **nomes** aos controles para que você possa respondê-los no C# código. Por exemplo: 
 
-    [![](segmented-controls-images/segment04-vs.png "Atribuir um nome")](segmented-controls-images/segment04-vs.png#lightbox)
+    [![](segmented-controls-images/segment04-vs.png "Assign a Name")](segmented-controls-images/segment04-vs.png#lightbox)
 1. Salve as alterações.
 
 -----
@@ -125,9 +125,9 @@ partial void PlayerCountChanged (Foundation.NSObject sender) {
 }
 ```
 
-No caso do exemplo acima, o controle de segmento foi exposto como um `PlayerCount` nome e uma ação de `PlayerCountChanged` evento. Para obter mais informações sobre como trabalhar com ações e saídas, consulte a seção [escrevendo o código com saídas e ações](~/ios/tvos/get-started/hello-tvos.md#Writing-the-Code) do nosso [olá, tvOS guia de início rápido](~/ios/tvos/get-started/hello-tvos.md).
+No caso do exemplo acima, o controle de segmento foi exposto como um nome de `PlayerCount` e uma ação de evento `PlayerCountChanged`. Para obter mais informações sobre como trabalhar com ações e saídas, consulte a seção [escrevendo o código com saídas e ações](~/ios/tvos/get-started/hello-tvos.md#Writing-the-Code) do nosso [olá, tvOS guia de início rápido](~/ios/tvos/get-started/hello-tvos.md).
 
-A `SelectedSegment` propriedade Obtém ou define o segmento atualmente selecionado como um índice baseado em zero (0). Portanto, se você tiver cinco (5) segmentos, o primeiro segmento terá um índice de zero (0) e o último índice de quatro (4).
+A propriedade `SelectedSegment` Obtém ou define o segmento atualmente selecionado como um índice baseado em zero (0). Portanto, se você tiver cinco (5) segmentos, o primeiro segmento terá um índice de zero (0) e o último índice de quatro (4).
 
 <a name="Modifying-Segments" />
 
@@ -143,7 +143,7 @@ SegmentedControl.InsertSegment(UIImage.FromFile("icon.png"), 0, true);
 SegmentedControl.InsertSegment("New Segment", 0, true);
 ```
 
-O segundo parâmetro define onde o segmento será inserido usando um índice baseado em zero (0). Se o último parâmetro for `true` a inserção será animado.
+O segundo parâmetro define onde o segmento será inserido usando um índice baseado em zero (0). Se o último parâmetro for `true` a inserção será animada.
 
 Para remover um determinado segmento, use o seguinte:
 
@@ -157,7 +157,7 @@ Ou o seguinte para remover todos os segmentos:
 SegmentedControl.RemoveAllSegments();
 ```
 
-Novamente, se o último parâmetro for `true`, a remoção será animada. Use a `NumberOfSegments` propriedade para retornar o número atual de segmentos.
+Novamente, se o último parâmetro for `true`, a remoção será animada. Use a propriedade `NumberOfSegments` para retornar o número atual de segmentos.
 
 Para obter o **título** ou o **ícone** de um determinado segmento, use o seguinte:
 
@@ -204,11 +204,11 @@ Você pode usar o seguinte código para alterar o plano de fundo de um determina
 SegmentedControl.SetBackgroundImage (UIImage.FromFile("background.png"), UIControlState.Normal, UIBarMetrics.Default);
 ```
 
-Em `UIControlState` que especifica o estado do controle para o qual você está definindo a imagem como:
+Em que `UIControlState` especifica o estado do controle para o qual você está definindo a imagem como:
 
 - Normal
 - Taco
-- Desabilitado
+- Disabled
 - Selecionado
 - Focalizado
 
@@ -225,7 +225,7 @@ Além disso, você pode definir o divisor entre os segmentos usando:
 SegmentedControl.SetDividerImage (UIImage.FromFile("divider.png"), UIControlState.Normal, UIControlState.Normal, UIBarMetrics.Default);
 ```
 
-Em que a `UIControlState` primeira especifica o estado do segmento à esquerda do divisor e o segundo `UIControlState` especifica o estado do segmento à direita.
+Em que a primeira `UIControlState` especifica o estado do segmento à esquerda do divisor e a segunda `UIControlState` especifica o estado do segmento à direita.
 
 <a name="Summary" />
 

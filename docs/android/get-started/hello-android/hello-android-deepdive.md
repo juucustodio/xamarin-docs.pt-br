@@ -1,24 +1,24 @@
 ---
-title: 'Olá, Android: Aprofundamento'
+title: 'Hello, Android: aprofundamento'
 description: Neste guia de duas partes, você criará seu primeiro aplicativo Xamarin.Android e passará a entender os fundamentos de desenvolvimento de aplicativos Android com Xamarin. Ao longo do caminho, serão apresentados conceitos, ferramentas e etapas necessários para criar e implantar um aplicativo Xamarin.Android.
 zone_pivot_groups: platform
 ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: EF0E110B-20EA-43F6-9476-1A0F41AFD298
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 10/05/2018
-ms.openlocfilehash: c02e8e3c30508951df071810aff8db429a2f04ea
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: ee72c51611503f92e7ede3a01a7918780652935c
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70756714"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028001"
 ---
-# <a name="hello-android-deep-dive"></a>Olá, Android: Aprofundamento
+# <a name="hello-android-deep-dive"></a>Hello, Android: aprofundamento
 
-_Neste guia de duas partes, você criará seu primeiro aplicativo Xamarin.Android e passará a entender os fundamentos de desenvolvimento de aplicativos Android com Xamarin. Ao longo do caminho, serão apresentados conceitos, ferramentas e etapas necessários para criar e implantar um aplicativo Xamarin.Android._
+_Neste guia de duas partes, você criará seu primeiro aplicativo Xamarin. Android e desenvolverá uma compreensão dos conceitos básicos do desenvolvimento de aplicativos Android com o Xamarin. Ao longo do caminho, você será apresentado às ferramentas, aos conceitos e às etapas necessárias para criar e implantar um aplicativo Xamarin. Android._
 
 Em [Início rápido do Hello, Android](~/android/get-started/hello-android-multiscreen/hello-android-multiscreen-quickstart.md), você compilou e executou seu primeiro aplicativo Xamarin.Android. Agora é hora de desenvolver uma compreensão mais profunda de como funcionam os aplicativos Android para que você possa criar programas mais sofisticados. Este guia examina as etapas que você seguiu no passo a passo Hello, Android, para que você possa entender o que você fez e comece a desenvolver um entendimento fundamental do desenvolvimento de aplicativos Android.
 
@@ -165,7 +165,7 @@ As próximas seções exploram as relações entre as diversas partes do aplicat
 
 No aplicativo **Phoneword**, a ID do **TranslateButton** é definida como `@+id/TranslateButton`:
 
-[![Configuração de ID de TranslateButton](hello-android-deepdive-images/vs/04-translatebutton-sml.png "Configuração de ID de TranslateButton")](hello-android-deepdive-images/vs/04-translatebutton.png#lightbox)
+[![Configuração de ID do TranslateButton](hello-android-deepdive-images/vs/04-translatebutton-sml.png "Configuração de ID do TranslateButton")](hello-android-deepdive-images/vs/04-translatebutton.png#lightbox)
 
 ::: zone-end
 ::: zone pivot="macos"
@@ -188,7 +188,7 @@ Tudo que está definido na área de design é traduzido em XML para o Xamarin.An
 
 ::: zone pivot="windows"
 
-[![Exibição de fonte de designer](hello-android-deepdive-images/vs/05-source-view-sml.png "Exibição de fonte de designer")](hello-android-deepdive-images/vs/05-source-view.png#lightbox)
+[![Exibição de origem do designer](hello-android-deepdive-images/vs/05-source-view-sml.png "Exibição de origem do designer")](hello-android-deepdive-images/vs/05-source-view.png#lightbox)
 
 ::: zone-end
 ::: zone pivot="macos"
@@ -197,7 +197,7 @@ Tudo que está definido na área de design é traduzido em XML para o Xamarin.An
 
 ::: zone-end
 
-Esse código-fonte XML deve conter quatro elementos de controle: Dois elementos **TextView**, um elemento **EditText** e um elemento **Button**. Para fazer um tour mais detalhado sobre o Android Designer, consulte o guia [Visão geral do Designer](~/android/user-interface/android-designer/index.md) de Android do Xamarin.
+Este código-fonte XML deve conter quatro elementos de controle: dois **TextView**s, um **EDITTEXT** e um elemento **Button** . Para fazer um tour mais detalhado sobre o Android Designer, consulte o guia [Visão geral do Designer](~/android/user-interface/android-designer/index.md) de Android do Xamarin.
 
 As ferramentas e os conceitos por trás da parte visual da interface do usuário foram agora abordados. Em seguida, é hora de se aprofundar no código que aciona a interface do usuário conforme as atividades e o ciclo de vida da atividade são explorados.
 
@@ -273,7 +273,7 @@ Quando o `MainActivity` é iniciado, ele cria uma exibição com base no conteú
 ::: zone-end
 ::: zone pivot="macos"
 
-No aplicativo **Phoneword**, a primeira coisa a fazer em `OnCreate` é carregar a interface do usuário criada no Android Designer. Para carregar a interface do usuário, chame `SetContentView` e passe o *nome do recurso de layout* para o arquivo de layout: **Main.axml**. O layout está localizado em `Resource.Layout.Main`:
+No aplicativo **Phoneword**, a primeira coisa a fazer em `OnCreate` é carregar a interface do usuário criada no Android Designer. Para carregar a interface do usuário, chame `SetContentView` e passe para ele o *nome do recurso de layout* para o arquivo de layout: **Main.axml**. O layout está localizado em `Resource.Layout.Main`:
 
 ```csharp
 SetContentView (Resource.Layout.Main);
@@ -372,30 +372,30 @@ O Android selecionará o ícone com a densidade apropriada:
 
 ### <a name="generate-custom-icons"></a>Gerar ícones personalizados
 
-Nem todo mundo tem um designer disponível para criar os ícones personalizados e imagens de inicialização que um aplicativo precisa para se destacar. Aqui estão várias abordagens alternativas para gerar a arte final personalizada para o aplicativo:
+Nem todos têm um designer disponível para criar os ícones personalizados e iniciar imagens que um aplicativo precisa destacar. Aqui estão várias abordagens alternativas para gerar arte do aplicativo personalizado:
 
 ::: zone pivot="windows"
 
-- [Android Asset Studio](http://romannurik.github.io/AndroidAssetStudio/index.html) &ndash; Um gerador baseado na Web e usado no navegador para todos os tipos de ícones do Android, com links para outras ferramentas úteis da comunidade. Ele funciona melhor no Google Chrome.
+- [Android Asset Studio](https://romannurik.github.io/AndroidAssetStudio/index.html) &ndash; Um gerador baseado na Web e usado no navegador para todos os tipos de ícones do Android, com links para outras ferramentas úteis da comunidade. Ele funciona melhor no Google Chrome.
 
 - Visual Studio &ndash; você pode usar isso para criar um conjunto de ícones simples para seu aplicativo diretamente no IDE.
 
-- [Glyphish](http://www.glyphish.com/) &ndash; conjuntos de ícones predefinidos de alta qualidade para download gratuito e para compra.
+- [Glyphish](https://www.glyphish.com/) &ndash; conjuntos de ícones predefinidos de alta qualidade para download gratuito e para compra.
 
-- [Fiverr](http://www.fiverr.com/) &ndash; escolha dentre uma variedade de designers para criar um ícone definido para você, com valores partindo de US$ 5. Mesmo que os resultados com ele nem sempre sejam os esperados, trata-se de um bom recurso para quem precisa criar ícones rapidamente.
+- [Fiverr](https://www.fiverr.com/) &ndash; escolha dentre uma variedade de designers para criar um ícone definido para você, com valores partindo de US$ 5. Mesmo que os resultados com ele nem sempre sejam os esperados, trata-se de um bom recurso para quem precisa criar ícones rapidamente.
 
 ::: zone-end
 ::: zone pivot="macos"
 
-- [Android Asset Studio](http://romannurik.github.io/AndroidAssetStudio/index.html) &ndash; Um gerador baseado na Web e usado no navegador para todos os tipos de ícones do Android, com links para outras ferramentas úteis da comunidade. Ele funciona melhor no Google Chrome.
+- [Android Asset Studio](https://romannurik.github.io/AndroidAssetStudio/index.html) &ndash; Um gerador baseado na Web e usado no navegador para todos os tipos de ícones do Android, com links para outras ferramentas úteis da comunidade. Ele funciona melhor no Google Chrome.
 
-- [Sketch 3](https://itunes.apple.com/us/app/sketch/id852320343?mt=12) &ndash; O Sketch é um aplicativo do Mac para a criação de interfaces do usuário, ícones e muito mais. Este é o aplicativo que foi usado para criar o conjunto de Ícones e imagens de inicialização para aplicativos Xamarin. O Sketch 3 está disponível na loja de aplicativos e custa aproximadamente US$ 80. Você pode experimentar a [Ferramenta Sketch](http://bohemiancoding.com/sketch/tool/) gratuita também.
+- [Sketch 3](https://itunes.apple.com/us/app/sketch/id852320343?mt=12) &ndash; O Sketch é um aplicativo do Mac para a criação de interfaces do usuário, ícones e muito mais. Este é o aplicativo que foi usado para criar o conjunto de Ícones e imagens de inicialização para aplicativos Xamarin. O Sketch 3 está disponível na loja de aplicativos e custa aproximadamente US$ 80. Você pode experimentar a [Ferramenta Sketch](https://bohemiancoding.com/sketch/tool/) gratuita também.
 
-- [Pixelmator](http://www.pixelmator.com/) &ndash; um aplicativo de edição de imagem versátil para Mac que custa aproximadamente US$ 30.
+- [Pixelmator](https://www.pixelmator.com/) &ndash; um aplicativo de edição de imagem versátil para Mac que custa aproximadamente US$ 30.
 
-- [Glyphish](http://www.glyphish.com/) &ndash; conjuntos de ícones predefinidos de alta qualidade para download gratuito e para compra.
+- [Glyphish](https://www.glyphish.com/) &ndash; conjuntos de ícones predefinidos de alta qualidade para download gratuito e para compra.
 
-- [Fiverr](http://www.fiverr.com/) &ndash; escolha dentre uma variedade de designers para criar um ícone definido para você, com valores partindo de US$ 5. Mesmo que os resultados com ele nem sempre sejam os esperados, trata-se de um bom recurso para quem precisa criar ícones rapidamente.
+- [Fiverr](https://www.fiverr.com/) &ndash; escolha dentre uma variedade de designers para criar um ícone definido para você, com valores partindo de US$ 5. Mesmo que os resultados com ele nem sempre sejam os esperados, trata-se de um bom recurso para quem precisa criar ícones rapidamente.
 
 ::: zone-end
 

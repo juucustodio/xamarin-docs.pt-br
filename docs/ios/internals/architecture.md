@@ -4,15 +4,15 @@ description: Este documento descreve o Xamarin. iOS em um nível baixo, discutin
 ms.prod: xamarin
 ms.assetid: F40F2275-17DA-4B4D-9678-618FF25C6803
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: b0cece7f553d0169c311e6614428ed37c5c77813
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: e5dbc04e52aea4307716c343df5757d0fe012b74
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70768529"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73022396"
 ---
 # <a name="ios-app-architecture"></a>Arquitetura do aplicativo iOS
 
@@ -20,9 +20,9 @@ Os aplicativos Xamarin. iOS são executados no ambiente de execução mono e usa
 
 O diagrama a seguir mostra uma visão geral básica dessa arquitetura:
 
-[![](architecture-images/ios-arch-small.png "Este diagrama mostra uma visão geral básica da arquitetura de compilação da AOT (antecipação de tempo)")](architecture-images/ios-arch.png#lightbox)
+[![](architecture-images/ios-arch-small.png "This diagram shows a basic overview of the Ahead of Time (AOT) compilation architecture")](architecture-images/ios-arch.png#lightbox)
 
-## <a name="native-and-managed-code-an-explanation"></a>Código nativo e gerenciado: Uma explicação
+## <a name="native-and-managed-code-an-explanation"></a>Código nativo e gerenciado: uma explicação
 
 Ao desenvolver para o Xamarin, os termos *nativo e código gerenciado* são frequentemente usados. [Código gerenciado](https://blogs.msdn.microsoft.com/brada/2004/01/09/what-is-managed-code/) é o código que tem sua execução gerenciada pelo [.NET Framework Common Language Runtime](https://msdn.microsoft.com/library/8bs2ecf4(v=vs.110).aspx)ou no caso do Xamarin: o tempo de execução do mono. É isso que chamamos de linguagem intermediária.
 
@@ -35,7 +35,7 @@ Quando você compila qualquer aplicativo da plataforma Xamarin, o C# compilador 
 No entanto, há uma restrição de segurança no iOS, definida pela Apple, que não permite a execução de código gerado dinamicamente em um dispositivo.
 Para garantir que possamos aderir a esses protocolos de segurança, o Xamarin. iOS usa um compilador de AOT (antecipadamente tempo) para compilar o código gerenciado. Isso produz um binário iOS nativo, opcionalmente otimizado com LLVM para dispositivos, que pode ser implantado no processador baseado em ARM da Apple. Um diagrama aproximado de como isso se ajusta é ilustrado abaixo:
 
-[![](architecture-images/aot.png "Um diagrama aproximado de como isso se encaixa")](architecture-images/aot-large.png#lightbox)
+[![](architecture-images/aot.png "A rough diagram of how this fits together")](architecture-images/aot-large.png#lightbox)
 
 O uso da AOT tem várias limitações, que são detalhadas no guia de [limitações](~/ios/internals/limitations.md) . Ele também fornece uma série de melhorias no JIT por meio de uma redução no tempo de inicialização e várias otimizações de desempenho
 
@@ -52,7 +52,7 @@ Para obter mais informações sobre como usar seletores, consulte o guia de [sel
 
 Conforme mencionado acima, o registrador é um código que expõe o código gerenciado para Objective-C. Ele faz isso criando uma lista de todas as classes gerenciadas que derivam de NSObject:
 
-- Para todas as classes que não estão encapsulando uma classe Objective-c existente, ela cria uma nova classe Objective-c com membros Objective-c espelhando todos os membros`Export`gerenciados que têm um atributo [].
+- Para todas as classes que não estão encapsulando uma classe Objective-C existente, ela cria uma nova classe Objective-C com membros Objective-C espelhando todos os membros gerenciados que têm um atributo [`Export`].
 
 - Nas implementações para cada membro Objective-C, o código é adicionado automaticamente para chamar o membro gerenciado espelhado.
 
@@ -87,27 +87,27 @@ O pseudocódigo abaixo mostra um exemplo de como isso é feito:
 
 ```
 
-O código gerenciado pode conter os atributos `[Register]` e `[Export]`, que o registrador usa para saber que o objeto precisa ser exposto a Objective-C.
-O `[Register]` atributo é usado para especificar o nome da classe Objective-C gerada, caso o nome padrão gerado não seja adequado. Todas as classes derivadas de NSObject são automaticamente registradas com Objective-C.
-O atributo `[Export]` Required contém uma cadeia de caracteres, que é o seletor usado na classe Objective-C gerada.
+O código gerenciado pode conter os atributos, `[Register]` e `[Export]`, que o registrador usa para saber que o objeto precisa ser exposto a Objective-C.
+O atributo `[Register]` é usado para especificar o nome da classe Objective-C gerada, caso o nome padrão gerado não seja adequado. Todas as classes derivadas de NSObject são automaticamente registradas com Objective-C.
+O atributo de `[Export]` necessário contém uma cadeia de caracteres, que é o seletor usado na classe Objective-C gerada.
 
 Há dois tipos de registradores usados no Xamarin. iOS – dinâmico e estático:
 
 - **Registradores dinâmicos** – o registrador dinâmico faz o registro de todos os tipos em seu assembly em tempo de execução. Ele faz isso usando funções fornecidas pela [API de tempo de execução do Objective-C](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ObjCRuntimeRef/). O registrador dinâmico, portanto, tem uma inicialização mais lenta, mas um tempo de compilação mais rápido. Isso é padrão para o simulador de iOS. Funções nativas (geralmente em C), chamadas trampolines, são usadas como implementações de método ao usar os registradores dinâmicos. Elas variam entre diferentes arquiteturas.
 
-- **Registradores estáticos** – o registrador estático gera código Objective-C durante a compilação, que é então compilado em uma biblioteca estática e vinculado ao executável. Isso permite uma inicialização mais rápida, mas leva mais tempo durante o tempo de compilação. Isso é usado por padrão para compilações de dispositivo. O registrador estático também pode ser usado com o simulador de `--registrar:static` Ios passando `mtouch` como um atributo nas opções de Build do projeto, conforme mostrado abaixo:
+- **Registradores estáticos** – o registrador estático gera código Objective-C durante a compilação, que é então compilado em uma biblioteca estática e vinculado ao executável. Isso permite uma inicialização mais rápida, mas leva mais tempo durante o tempo de compilação. Isso é usado por padrão para compilações de dispositivo. O registrador estático também pode ser usado com o simulador de iOS, passando `--registrar:static` como um atributo `mtouch` nas opções de Build do projeto, conforme mostrado abaixo:
 
-    [![](architecture-images/image1.png "Configurando argumentos mTouch adicionais")](architecture-images/image1.png#lightbox)
+    [![](architecture-images/image1.png "Setting Additional mtouch arguments")](architecture-images/image1.png#lightbox)
 
 Para obter mais informações sobre as especificidades do sistema de registro do tipo iOS usado pelo Xamarin. iOS, consulte o guia do [registrador de tipos](~/ios/internals/registrar.md) .
 
 ## <a name="application-launch"></a>Inicialização do aplicativo
 
-O ponto de entrada de todos os executáveis do Xamarin. Ios é fornecido por `xamarin_main`uma função chamada, que inicializa o mono.
+O ponto de entrada de todos os executáveis do Xamarin. iOS é fornecido por uma função chamada `xamarin_main`, que inicializa o mono.
 
 Dependendo do tipo de projeto, o seguinte é feito:
 
-- Para aplicativos iOS e tvOS regulares, o método Main gerenciado, fornecido pelo aplicativo Xamarin, é chamado. Em seguida, esse método Main `UIApplication.Main`gerenciado chama, que é o ponto de entrada para Objective-C. UIApplication. Main é a associação para o método de `UIApplicationMain` Objective-C.
+- Para aplicativos iOS e tvOS regulares, o método Main gerenciado, fornecido pelo aplicativo Xamarin, é chamado. Em seguida, esse método Main gerenciado chama `UIApplication.Main`, que é o ponto de entrada para Objective-C. UIApplication. Main é a associação para o método de `UIApplicationMain` do Objective-C.
 - Para extensões, a função nativa – `NSExtensionMain` ou (`NSExtensionmain` para extensões WatchOS) – fornecida pelas bibliotecas da Apple é chamada. Como esses projetos são bibliotecas de classes e não projetos executáveis, não há nenhum método principal gerenciado a ser executado.
 
 Toda essa sequência de inicialização é compilada em uma biblioteca estática, que é então vinculada ao seu executável final para que seu aplicativo saiba como tirar o fundo.
@@ -152,7 +152,7 @@ public interface UIToolbar : UIBarPositioning {
 ```
 
 O gerador, chamado [`btouch`](https://github.com/xamarin/xamarin-macios/blob/master/src/btouch.cs) no Xamarin. Ios, pega esses arquivos de definição e usa as ferramentas .net para [compilá-los em um assembly temporário](https://github.com/xamarin/xamarin-macios/blob/master/src/btouch.cs#L318). No entanto, esse assembly temporário não é utilizável para chamar o código Objective-C. Em seguida, o gerador lê o assembly temporário C# e gera o código que pode ser usado em tempo de execução.
-É por isso que, por exemplo, se você adicionar um atributo aleatório ao arquivo Definition. cs, ele não aparecerá no código de saída. O gerador não sabe disso e, portanto `btouch` , não sabe procurar por ele no assembly temporário para gerar o resultado.
+É por isso que, por exemplo, se você adicionar um atributo aleatório ao arquivo Definition. cs, ele não aparecerá no código de saída. O gerador não sabe disso e, portanto, `btouch` não sabe procurar por ele no assembly temporário para gerar o resultado.
 
 Depois que o Xamarin. iOS. dll tiver sido criado, o mTouch agrupará todos os componentes juntos.
 

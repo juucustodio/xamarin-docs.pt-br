@@ -4,15 +4,15 @@ description: A biblioteca NuGet do SQLite.NET PCL fornece um mecanismo de acesso
 ms.prod: xamarin
 ms.assetid: 79813B09-42D7-47DD-AE71-A605E6B9EF24
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/18/2018
-ms.openlocfilehash: 45205859a55974414ee865b2141d2bb127e85bcc
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: e229ad37e8cd5ff940fb5abece7b782b84336d50
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70763138"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73008164"
 ---
 # <a name="using-sqlitenet-with-xamarinios"></a>Usando o SQLite.NET com Xamarin. iOS
 
@@ -28,9 +28,9 @@ Para incluir a biblioteca SQLite.NET em um aplicativo Xamarin, adicione o seguin
 - **Nome do pacote:** SQLite-net-PCL
 - **Autor:** Frank A. Krueger
 - **Id:** sqlite-net-pcl
-- **Url:** [nuget.org/packages/sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)
+- **URL:** [NuGet.org/packages/SQLite-net-PCL](https://www.nuget.org/packages/sqlite-net-pcl/)
 
-[![Pacote NuGet do SQLite.net](using-sqlite-orm-images/image1a-sml.png "Pacote NuGet do SQLite.net")](using-sqlite-orm-images/image1a.png#lightbox)
+[![Pacote NuGet do SQLite.NET](using-sqlite-orm-images/image1a-sml.png "Pacote NuGet do SQLite.NET")](using-sqlite-orm-images/image1a.png#lightbox)
 
 > [!TIP]
 > Há vários pacotes SQLite diferentes disponíveis – certifique-se de escolher o correto (talvez não seja o principal resultado na pesquisa).
@@ -71,7 +71,7 @@ O código de exemplo *DataAccess_Basic* para este documento é semelhante ao exe
 
 **iOS**
 
- [![exemplo de SQLite.NET do iOS](using-sqlite-orm-images/image2-sml.png)](using-sqlite-orm-images/image2-sml.png#lightbox)
+ [![exemplo do iOS SQLite.NET](using-sqlite-orm-images/image2-sml.png)](using-sqlite-orm-images/image2-sml.png#lightbox)
 
 O exemplo de código a seguir mostra uma interação de banco de dados inteira usando a biblioteca SQLite.NET para encapsular o acesso ao banco de dados subjacente. Ele mostra:
 
@@ -85,7 +85,7 @@ Você precisará incluir esses namespaces:
 using SQLite; // from the github SQLite.cs class
 ```
 
-Isso requer que você tenha adicionado o SQLite ao seu projeto, como realçado [aqui](#Usage). Observe que a tabela de banco de dados SQLite é definida pela adição de atributos a `Stock` uma classe (a classe) em vez de um comando CREATE TABLE.
+Isso requer que você tenha adicionado o SQLite ao seu projeto, como realçado [aqui](#Usage). Observe que a tabela de banco de dados SQLite é definida pela adição de atributos a uma classe (a classe `Stock`) em vez de um comando CREATE TABLE.
 
 ```csharp
 [Table("Items")]
@@ -122,7 +122,7 @@ public static void DoSomeDataAccess () {
 }
 ```
 
-Usar o `[Table]` atributo sem especificar um parâmetro de nome de tabela fará com que a tabela de banco de dados subjacente tenha o mesmo nome que a classe (nesse caso, "stock"). O nome real da tabela será importante se você escrever consultas SQL diretamente no banco de dados, em vez de usar os métodos de acesso de dado de ORM. Da mesma `[Column("_id")]` forma, o atributo é opcional e, se estiver ausente, uma coluna será adicionada à tabela com o mesmo nome da propriedade na classe.
+Usar o atributo `[Table]` sem especificar um parâmetro de nome de tabela fará com que a tabela de banco de dados subjacente tenha o mesmo nome que a classe (nesse caso, "stock"). O nome real da tabela será importante se você escrever consultas SQL diretamente no banco de dados, em vez de usar os métodos de acesso de dado de ORM. Da mesma forma, o atributo `[Column("_id")]` é opcional e, se estiver ausente, uma coluna será adicionada à tabela com o mesmo nome da propriedade na classe.
 
 ## <a name="sqlite-attributes"></a>Atributos do SQLite
 
@@ -130,7 +130,7 @@ Os atributos comuns que você pode aplicar às suas classes para controlar como 
 
 - **[PrimaryKey]** – esse atributo pode ser aplicado a uma propriedade Integer para forçá-lo a ser a chave primária da tabela subjacente. Não há suporte para chaves primárias compostas.
 - **[AutoIncrement]** – este atributo fará com que o valor de uma propriedade de inteiro seja incrementado automaticamente para cada novo objeto inserido no banco de dados
-- **[Column (Name)]** – o fornecimento do parâmetro `name` opcional substituirá o valor padrão do nome da coluna de banco de dados subjacente (que é o mesmo que a propriedade).
+- **[Column (Name)]** – o fornecimento do parâmetro opcional `name` substituirá o valor padrão do nome da coluna de banco de dados subjacente (que é o mesmo que a propriedade).
 - **[Table (Name)]** – marca a classe como sendo capaz de ser armazenada em uma tabela SQLite subjacente. A especificação do parâmetro de nome opcional substituirá o valor padrão do nome da tabela de banco de dados subjacente (que é o mesmo que o nome da classe).
 - **[MaxLength (value)]** – restringir o comprimento de uma propriedade de texto quando uma tentativa de inserção de banco de dados for tentada. O consumo de código deve validar isso antes de inserir o objeto, pois esse atributo só é "verificado" quando uma operação de inserção ou atualização de banco de dados é tentada.
 - **[Ignorar]** – faz com que o SQLite.net ignore essa propriedade. Isso é particularmente útil para propriedades que têm um tipo que não pode ser armazenado no banco de dados ou propriedades que modelam coleções que não podem ser resolvidas automaticamente são SQLite.
@@ -140,14 +140,14 @@ A maioria desses atributos são opcionais, o SQLite usará valores padrão para 
 
 ## <a name="more-complex-queries"></a>Consultas mais complexas
 
-Os seguintes métodos em `SQLiteConnection` podem ser usados para executar outras operações de dados:
+Os métodos a seguir no `SQLiteConnection` podem ser usados para executar outras operações de dados:
 
 - **Inserir** – adiciona um novo objeto ao banco de dados.
-- **Obter\<T >** – tenta recuperar um objeto usando a chave primária.
-- **Tabela\<T >** – retorna todos os objetos na tabela.
+- **Obter\<t >** – tenta recuperar um objeto usando a chave primária.
+- **Tabela\<t >** – retorna todos os objetos na tabela.
 - **Excluir** – exclui um objeto usando sua chave primária.
-- **Consulta\<T >** -executar uma consulta SQL que retorna um número de linhas (como objetos).
-- **Execute** – Use este método (e não `Query` ) quando você não espera linhas do SQL (como instruções INSERT, Update e Delete).
+- **Consulta\<t >** -executar uma consulta SQL que retorna um número de linhas (como objetos).
+- **Execute** – Use este método (e não `Query`) quando você não espera linhas de volta do SQL (como instruções INSERT, Update e Delete).
 
 ### <a name="getting-an-object-by-the-primary-key"></a>Obtendo um objeto pela chave primária
 
@@ -159,7 +159,7 @@ var existingItem = db.Get<Stock>(3);
 
 ### <a name="selecting-an-object-using-linq"></a>Selecionando um objeto usando LINQ
 
-Os métodos que retornam coleções\<dão suporte a IEnumerable T > para que você possa usar o LINQ para consultar ou classificar o conteúdo de uma tabela. O código a seguir mostra um exemplo usando o LINQ para filtrar todas as entradas que começam com a letra "A":
+Os métodos que retornam coleções dão suporte a IEnumerable\<T > para que você possa usar o LINQ para consultar ou classificar o conteúdo de uma tabela. O código a seguir mostra um exemplo usando o LINQ para filtrar todas as entradas que começam com a letra "A":
 
 ```csharp
 var apple = from s in db.Table<Stock>()
@@ -190,13 +190,13 @@ A chave primária é usada para excluir a linha, conforme mostrado aqui:
 var rowcount = db.Delete<Stock>(someStock.Id); // Id is the primary key
 ```
 
-Você pode verificar o `rowcount` para confirmar quantas linhas foram afetadas (excluídas neste caso).
+Você pode verificar a `rowcount` para confirmar quantas linhas foram afetadas (excluídas neste caso).
 
 ## <a name="using-sqlitenet-with-multiple-threads"></a>Usando SQLite.NET com vários threads
 
-O SQLite dá suporte a três modos de Threading diferentes: *Thread único*, *vários threads*e *serializados*. Se você quiser acessar o banco de dados de vários threads sem restrições, poderá configurar o SQLite para usar o modo de Threading **serializado** . É importante definir esse modo no início do aplicativo (por exemplo, no início do `OnCreate` método).
+O SQLite dá suporte a três modos de Threading diferentes: *thread único*, *vários threads*e *serializados*. Se você quiser acessar o banco de dados de vários threads sem restrições, poderá configurar o SQLite para usar o modo de Threading **serializado** . É importante definir esse modo no início do aplicativo (por exemplo, no início do método `OnCreate`).
 
-Para alterar o modo de Threading, chame `SqliteConnection.SetConfig` que está `Mono.Data.Sqlite` no namespace. Por exemplo, esta linha de código configura o SQLite para o modo **serializado** :
+Para alterar o modo de Threading, chame `SqliteConnection.SetConfig` que está no namespace `Mono.Data.Sqlite`. Por exemplo, esta linha de código configura o SQLite para o modo **serializado** :
 
 ```csharp
 using Mono.Data.Sqlite;

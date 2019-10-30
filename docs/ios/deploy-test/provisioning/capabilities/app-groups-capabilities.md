@@ -4,19 +4,19 @@ description: A adição de capacidades a um aplicativo geralmente requer uma con
 ms.prod: xamarin
 ms.assetid: 0A61220B-BBAC-492B-9D3B-578986E64064
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/15/2017
-ms.openlocfilehash: 72e0c27502c10fe3522d80c6345a847ca424d49f
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: f98603c2ffac35362c6697e4806bf4b2daf44710
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70762783"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030180"
 ---
 # <a name="app-group-capabilities-in-xamarinios"></a>Recursos de grupo de aplicativo no Xamarin.iOS
 
-_A adição de funcionalidades a um aplicativo geralmente requer uma configuração de provisionamento adicional. Este guia explica a configuração necessária para as funcionalidades do Grupo de aplicativos._
+_A adição de recursos a um aplicativo geralmente requer configuração de provisionamento adicional. Este guia explica a configuração necessária para os recursos do grupo de aplicativos._
 
 Um grupo de aplicativos permite que diferentes aplicativos (ou um aplicativo e suas extensões) acessem um local de armazenamento de arquivo compartilhado. Grupos de aplicativo podem ser usados para dados como:
 
@@ -28,7 +28,7 @@ Um grupo de aplicativos permite que diferentes aplicativos (ou um aplicativo e s
 
 O local compartilhado é configurado usando um [Grupo de Aplicativos](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/EntitlementKeyReference/Chapters/EnablingAppSandbox.html#//apple_ref/doc/uid/TP40011195-CH4-SW19), que é configurado na seção **Certificados, Identificadores e Perfis** na [Central de Desenvolvedores da Apple](https://developer.apple.com/account/). Esse valor também deve ser referenciado em cada projeto Entitlements.plist.
 
-O grupo de aplicativos terá um identificador, que normalmente é a ID de Pacote com um grupo. group. Por exemplo, a ID do Pacote `com.xamarin.WatchSettings` teria o grupo de aplicativos `group.com.xamarin.WatchSettings`.
+O grupo de aplicativos terá um identificador, que normalmente é a ID de Pacote com um grupo. prefixo. Por exemplo, a ID do Pacote `com.xamarin.WatchSettings` teria o grupo de aplicativos `group.com.xamarin.WatchSettings`.
 
 Para criar um novo grupo de aplicativos, faça o seguinte:
 
@@ -78,6 +78,6 @@ A lista a seguir descreve as etapas adicionais que precisam ser executadas:
 
 * Use o namespace do framework em seu aplicativo.
 * Adicione os direitos necessários para seu aplicativo. As informações sobre os direitos necessários e como adicioná-los estão detalhadas no guia [Trabalhando com direitos](~/ios/deploy-test/provisioning/entitlements.md).
-* Na **Assinatura de Pacote do iOS** do aplicativo, certifique-se de que **Direitos Personalizados** está definido como **Entitlements.plist**. Esta _não_ é a configuração padrão para builds de Depuração e do Simulador do iOS.
+* Na **Assinatura de Pacote do iOS** do aplicativo, certifique-se de que **Direitos Personalizados** está definido como **Entitlements.plist**. Isso _não_ a configuração padrão para compilações de depuração e do IOS Simulator.
 
 Se você encontrar problemas com serviços de aplicativos, consulte a seção [Solução de problemas](~/ios/deploy-test/provisioning/capabilities/index.md) do guia principal.

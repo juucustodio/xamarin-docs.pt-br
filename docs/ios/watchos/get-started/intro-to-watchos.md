@@ -1,139 +1,139 @@
 ---
-title: Introdução ao watchOS
-description: Este documento fornece uma visão geral do watchOS, que descreve o ciclo de vida do aplicativo, tipos de interface do usuário, tamanhos de tela, limitações e muito mais.
+title: Introdução ao watchOS 5
+description: Este documento fornece uma visão geral do watchOS, que descreve o ciclo de vida do aplicativo, os tipos de interface do usuário, os tamanhos de tela, as limitações e muito mais.
 ms.prod: xamarin
 ms.assetid: 99c316d6-6707-40f6-bec9-801d05888759
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 09/13/2016
-ms.openlocfilehash: df1177d55510571da3369d298bd05aa9bd0734a9
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: b3c2908d8ae9a68189fbff4d47afa49da21b88a5
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70767937"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030188"
 ---
-# <a name="introduction-to-watchos"></a>Introdução ao watchOS
+# <a name="introduction-to-watchos"></a>Introdução ao watchOS 5
 
 > [!NOTE]
-> Confira a [Introdução ao watchOS 3](~/ios/watchos/platform/introduction-to-watchos3/index.md) para uma visão geral dos recursos mais recentes.
+> Confira a [introdução ao watchOS 3](~/ios/watchos/platform/introduction-to-watchos3/index.md) para obter uma visão geral dos recursos mais recentes.
 
 ## <a name="about-watchos"></a>Sobre o watchOS
 
-Uma solução de aplicativo watchOS tem 3 projetos:
+Uma solução de aplicativo watchOS tem três projetos:
 
-- **Assista a extensão** – um projeto que contém o código para o aplicativo watch.
-- **Assista ao aplicativo** – contém o storyboard de interface do usuário e recursos.
-- **Aplicativo pai iOS** – esse aplicativo é um aplicativo de iPhone normal. O aplicativo de inspeção e a extensão são empacotadas em aplicativo do iPhone para entrega a inspeção do usuário.
+- **Inspecionar extensão** – um projeto que contém o código para o aplicativo Watch.
+- **Inspecionar aplicativo** – contém o storyboard e os recursos da interface do usuário.
+- **aplicativo pai do IOS** – este aplicativo é um aplicativo de iPhone normal. O aplicativo Watch e a extensão são agrupados no aplicativo do iPhone para entrega ao relógio do usuário.
 
-Em aplicativos watchOS 1, o código na extensão é executado no iPhone – a Apple Watch é efetivamente um vídeo externo. aplicativos do watchOS 2 e 3 são executados inteiramente na Apple Watch. Essa diferença é mostrada no diagrama a seguir:
+Nos aplicativos watchOS 1, o código na extensão é executado no iPhone – o Apple Watch é efetivamente uma exibição externa. os aplicativos watchOS 2 e 3 são executados inteiramente no Apple Watch. Essa diferença é mostrada no diagrama abaixo:
 
-[![](intro-to-watchos-images/arch-sml.png "A diferença entre watchOS 1 e watchOS 2 (e superior) é mostrada neste diagrama")](intro-to-watchos-images/arch.png#lightbox)
+[![](intro-to-watchos-images/arch-sml.png "The difference between watchOS 1 and watchOS 2 (and greater) is shown in this diagram")](intro-to-watchos-images/arch.png#lightbox)
 
-Independentemente de qual versão do watchOS destina-se, no Visual Studio para painel do Mac de soluções uma solução completa será algo parecido com isso:
+Independentemente de qual versão do watchOS é direcionada, em Visual Studio para Mac Painel de Soluções uma solução completa será semelhante a esta:
 
-[![](intro-to-watchos-images/projectstructure-sml.png "O painel de soluções")](intro-to-watchos-images/projectstructure.png#lightbox)
+[![](intro-to-watchos-images/projectstructure-sml.png "The Solution Pad")](intro-to-watchos-images/projectstructure.png#lightbox)
 
-O *aplicativo pai* um watchOS solução é um aplicativo iOS regular. Esse é o único projeto na solução que está visível **no telefone**. Casos de uso para este aplicativo inclui os tutoriais, telas administrativas e camada intermediária filtragem, cacheing, etc. No entanto, é possível que o usuário instalar e executar o aplicativo/extensão de inspeção sem **nunca** ter aberto o aplicativo pai, portanto, se você precisar que o aplicativo pai para executar inicialização única ou de administração, que precisa para programar seu relógio / extensão do aplicativo para informar ao usuário que.
+O *aplicativo pai* em uma solução watchOS é um aplicativo IOS normal. Esse é o único projeto na solução que é visível **no telefone**. Os casos de uso para esse aplicativo incluem tutoriais, telas administrativas e filtragem de camada intermediária, cache, etc. No entanto, é possível que o usuário instale e execute o aplicativo/extensão Watch sem **nunca** ter aberto o aplicativo pai. portanto, se você precisar que o aplicativo pai seja executado para inicialização ou administração única, será necessário programar seu aplicativo/extensão Watch para informar o usuário que.
 
-Embora o aplicativo pai oferece o aplicativo de inspeção e a extensão, eles executados em diferentes áreas de segurança.
+Embora o aplicativo pai entregue o aplicativo de inspeção e a extensão, eles são executados em áreas restritas diferentes.
 
-Sobre o watchOS 1, eles podem compartilhar dados por meio de um grupo de aplicativo compartilhado ou a função estática `WKInterfaceController.OpenParentApplication`, que irá disparar o `UIApplicationDelegate.HandleWatchKitExtensionRequest` método em seu aplicativo de pai `AppDelegate` (consulte [trabalhar com o aplicativo pai](~/ios/watchos/app-fundamentals/parent-app.md)).
+No watchOS 1, eles podem compartilhar dados por meio de um grupo de aplicativos compartilhado ou por meio da função estática `WKInterfaceController.OpenParentApplication`, que disparará o método `UIApplicationDelegate.HandleWatchKitExtensionRequest` na `AppDelegate` do seu aplicativo pai (consulte [trabalhando com o aplicativo pai](~/ios/watchos/app-fundamentals/parent-app.md)).
 
-Sobre o watchOS 2 ou posterior a estrutura de inspeção de conectividade é usada para se comunicar com o aplicativo pai, usando o `WCSession` classe.
+No watchOS 2 ou posterior, a estrutura de conectividade do Watch é usada para se comunicar com o aplicativo pai, usando a classe `WCSession`.
 
 ## <a name="application-lifecycle"></a>Ciclo de vida do aplicativo
 
-Na extensão de inspeção, uma subclasse do `WKInterfaceController` classe é criada para cada cena de Storyboard.
+Na extensão Watch, uma subclasse da classe `WKInterfaceController` é criada para cada cena de storyboard.
 
-Eles `WKInterfaceController` classes são análogas ao `UIViewController` objetos na programação do iOS, mas não têm o mesmo nível de acesso para o modo de exibição.
-Por exemplo, você não pode adicionar controles ao dinamicamente ou reestruturar sua interface do usuário.
-Você pode, no entanto, ocultar e revelar os controles e, com alguns controles, alterar seu tamanho, transparência e opções de aparência.
+Essas classes de `WKInterfaceController` são análogas aos objetos `UIViewController` na programação do iOS, mas não têm o mesmo nível de acesso à exibição.
+Por exemplo, você não pode adicionar controles dinamicamente ou reestruturar sua interface do usuário.
+Você pode, no entanto, ocultar e revelar controles e, com alguns controles, alterar suas opções de tamanho, transparência e aparência.
 
-O ciclo de vida de um `WKInterfaceController` objeto envolve as seguintes chamadas:
+O ciclo de vida de um objeto de `WKInterfaceController` envolve as seguintes chamadas:
 
-- [Ativo](xref:WatchKit.WKInterfaceController.Awake*) : Você deve executar a maior parte da inicialização nesse método.
-- [WillActivate](xref:WatchKit.WKInterfaceController.WillActivate) : Chamado logo antes de o aplicativo Watch aparecer para o usuário. Use esse método para executar a inicialização do último momento, iniciar as animações, etc.
-- Neste ponto, o aplicativo Watch é exibida e a extensão começa respondendo ao usuário de entrada e atualizando a exibição do aplicativo Watch por lógica do aplicativo.
-- [DidDeactivate](xref:WatchKit.WKInterfaceController.DidDeactivate) após o aplicativo Watch foi fechado pelo usuário, esse método é chamado. Depois que esse método retorna, controles de interface do usuário não podem ser modificados até a próxima vez `WillActivate` é chamado. Esse método também será chamado se a conexão para o iPhone é interrompida.
-- Depois que a extensão foi desativada, é inacessível ao programa. Pendente funções assíncronas **não** ser chamado. Assista ao que Kit de extensões não pode usar modos de processamento em segundo plano. Se o programa é reativado pelo usuário, mas o aplicativo não foi finalizado pelo sistema operacional, o primeiro método chamado será `WillActivate`.
+- [Ativo](xref:WatchKit.WKInterfaceController.Awake*) : você deve executar a maior parte da sua inicialização neste método.
+- [WillActivate](xref:WatchKit.WKInterfaceController.WillActivate) : chamado logo antes de o aplicativo Watch aparecer para o usuário. Use este método para executar a inicialização do último momento, iniciar animações, etc.
+- Neste ponto, o aplicativo Watch aparece e a extensão começa a responder à entrada do usuário e atualiza a exibição do aplicativo de inspeção de acordo com a lógica do aplicativo.
+- [DidDeactivate](xref:WatchKit.WKInterfaceController.DidDeactivate) Depois que o aplicativo Watch tiver sido descartado pelo usuário, esse método será chamado. Após esse método retornar, os controles de interface do usuário não poderão ser modificados até a próxima vez que `WillActivate` for chamado. Esse método também será chamado se a conexão com o iPhone for interrompida.
+- Depois que a extensão for desativada, ela ficará inacessível para seu programa. As funções assíncronas pendentes **não serão** chamadas. As extensões do Watch kit não podem usar modos de processamento em segundo plano. Se o programa for reativado pelo usuário, mas o aplicativo não tiver sido encerrado pelo sistema operacional, o primeiro método chamado será `WillActivate`.
 
-![](intro-to-watchos-images/wkinterfacecontrollerlifecycle.png "Visão geral do ciclo de vida do aplicativo")
+![](intro-to-watchos-images/wkinterfacecontrollerlifecycle.png "Application Lifecycle overview")
 
-## <a name="types-of-user-interface"></a>Tipos de Interface do usuário
+## <a name="types-of-user-interface"></a>Tipos de interface do usuário
 
-Há três tipos de interação com que o usuário pode ter com o aplicativo de inspeção.
-Todos são programados usando classes personalizadas de subpropriedades da `WKInterfaceController`, portanto, a sequência do ciclo de vida discutido anteriormente se aplica universalmente (as notificações são programadas com classes de subpropriedades de `WKUserNotificationController`, que por si só é uma subclasse de `WKInterfaceController`):
+Há três tipos de interação que o usuário pode ter com seu aplicativo Watch.
+Todos são programados usando subclasses personalizadas de `WKInterfaceController`, portanto, a sequência de ciclo de vida abordada anteriormente é aplicada universalmente (as notificações são programadas com subclasses de `WKUserNotificationController`, que é uma subclasse de `WKInterfaceController`):
 
 ### <a name="normal-interaction"></a>Interação normal
 
-A maioria da interação de extensão do aplicativo watch será com classes de subpropriedades da `WKInterfaceController` que você escreve para corresponder ao plano em seu aplicativo de inspeção **Interface.storyboard**. Isso é abordado em detalhes na [instalação](~/ios/watchos/get-started/installation.md) e [Introdução](~/ios/watchos/get-started/index.md) artigos.
-A imagem a seguir mostra uma parte do [Watch Kit catálogo](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog) Storyboard do exemplo. Para cada cena que mostrei aqui, há um personalizado correspondente `WKInterfaceController` (`LabelDetailController`, `ButtonDetailController`, `SwitchDetailController`, etc.) no projeto de extensão.
+A maior parte da interação de aplicativo/extensão de inspeção será com as subclasses de `WKInterfaceController` que você escreve para corresponder às cenas na interface do seu aplicativo de inspeção **. Storyboard**. Isso é abordado em detalhes nos artigos de [instalação](~/ios/watchos/get-started/installation.md) e [introdução](~/ios/watchos/get-started/index.md) .
+A imagem a seguir mostra uma parte do storyboard do exemplo do [catálogo do Watch kit](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog) . Para cada cena mostrada aqui, há um `WKInterfaceController` personalizado correspondente (`LabelDetailController`, `ButtonDetailController`, `SwitchDetailController`, etc.) no projeto de extensão.
 
-![](intro-to-watchos-images/scenes.png "Exemplos de interação de normal")
+![](intro-to-watchos-images/scenes.png "Normal Interaction examples")
 
 ### <a name="notifications"></a>Notificações
 
-[Notificações](~/ios/watchos/platform/notifications.md) são um caso de uso principal para o Apple Watch. Há suporte para notificações locais e remotas. A interação com notificações ocorre em dois estágios, chamados Visual curto e longo.
+As [notificações](~/ios/watchos/platform/notifications.md) são um caso de uso importante para o Apple Watch. Há suporte para notificações locais e remotas. A interação com as notificações ocorre em dois estágios, chamado curta e longa aparência.
 
-Parece curtos são exibidos rapidamente e mostrar o ícone do aplicativo watch, seu nome e o título (conforme especificado com `WKInterfaceController.SetTitle`).
+As breves aparências são exibidas brevemente e mostram o ícone do aplicativo Watch, seu nome e o título (conforme especificado com `WKInterfaceController.SetTitle`).
 
-Examinar longos combina um sistema forneceu **caixilho** área e botão descartar com seu conteúdo personalizado com base no Storyboard.
+A aparência demorada combina uma área de **caixilho** fornecida pelo sistema e ignora o botão com seu conteúdo personalizado baseado em Storyboard.
 
 `WKUserNotificationInterfaceController` estende `WKInterfaceController` com os métodos `DidReceiveLocalNotification` e `DidReceiveRemoteNotification`.
 Substitua esses métodos para reagir a eventos de notificação.
 
-Para obter mais informações sobre o design de interface do usuário de notificação, consulte o [diretrizes de Interface humana do Apple Watch](https://developer.apple.com/library/prerelease/ios/documentation/UserExperience/Conceptual/WatchHumanInterfaceGuidelines/Notifications.html#//apple_ref/doc/uid/TP40014992-CH20-SW1)
+Para obter mais informações sobre o design da interface do usuário de notificação, consulte as [diretrizes de interface humana Apple Watch](https://developer.apple.com/library/prerelease/ios/documentation/UserExperience/Conceptual/WatchHumanInterfaceGuidelines/Notifications.html#//apple_ref/doc/uid/TP40014992-CH20-SW1)
 
-![](intro-to-watchos-images/notifications.png "Notificações de exemplo")
+![](intro-to-watchos-images/notifications.png "Sample notifications")
 
 ## <a name="screen-sizes"></a>Tamanhos de tela
 
-O Apple Watch tem dois tamanhos de face: 38 mm e 42 mm, com uma taxa de exibição de 5:4 e uma tela de retina. Seus tamanhos utilizáveis são:
+O Apple Watch tem dois tamanhos de face: 38 mm e 42 mm, ambos com uma taxa de exibição de 5:4 e uma tela de retina. Seus tamanhos utilizáveis são:
 
-- 38 mm 136 x 170 pixels lógicos (272 x 340 pixels físicos)
-- 42 mm 156 x 195 pixels lógicos (312 x 390 pixels físicos).
+- 38 mm: 136 x 170 pixels lógicos (272 x 340 pixels físicos)
+- 42 mm: 156 x 195 pixels lógicos (312 x 390 pixels físicos).
 
-Use `WKInterfaceDevice.ScreenBounds` para determinar em qual exibir o aplicativo de inspeção está sendo executado.
+Use `WKInterfaceDevice.ScreenBounds` para determinar em que exibição seu aplicativo Watch está em execução.
 
-Em geral, é mais fácil desenvolver seu design de layout e de texto com a exibição de 38mm mais restrita e, em seguida, escalar verticalmente.
-Se você iniciar com o ambiente maior, reduzir verticalmente pode levar a sobreposição feia ou o truncamento de texto.
+Em geral, é mais fácil desenvolver seu design de texto e layout com a exibição de 38 mm mais restrita e, em seguida, escalar verticalmente.
+Se você começar com o ambiente maior, reduzir verticalmente pode levar a uma sobreposição ruim ou truncamento de texto.
 
-Leia mais sobre [trabalhando com tamanhos de tela](~/ios/watchos/app-fundamentals/screen-sizes.md).
+Leia mais sobre como [trabalhar com tamanhos de tela](~/ios/watchos/app-fundamentals/screen-sizes.md).
 
 ## <a name="limitations-of-watchos"></a>Limitações do watchOS
 
-Há algumas limitações do watchOS a serem consideradas ao desenvolver aplicativos watchOS:
+Há algumas limitações de watchOS a serem consideradas ao desenvolver aplicativos watchOS:
 
-- Dispositivos do Apple Watch têm um armazenamento limitado – Lembre-se de que o espaço disponível antes de baixar arquivos grandes (por exemplo arquivos de áudio ou filme).
+- Apple Watch dispositivos têm armazenamento limitado-esteja ciente do espaço disponível antes de baixar arquivos grandes (por exemplo, arquivos de áudio ou de filme).
 
-- Muitos watchOS [controles](~/ios/watchos/user-interface/index.md) apresentem semelhanças na UIKit, mas são classes diferentes (`WKInterfaceButton` vez `UIButton`, `WKInterfaceSwitch` para `UISwitch`, etc.) e ter um conjunto limitado de métodos em comparação com seu UIKit equivalentes. Além disso, o watchOS tem alguns controles, como `WKInterfaceDate` (para exibir uma data e hora) não tem que UIKit.
+- Muitos [controles](~/ios/watchos/user-interface/index.md) watchOS têm análogos em UIKit, mas são classes diferentes (`WKInterfaceButton` em vez de `UIButton`, `WKInterfaceSwitch` para `UISwitch`, etc.) e têm um conjunto limitado de métodos em comparação com seus equivalentes UIKit. Além disso, o watchOS tem alguns controles, como `WKInterfaceDate` (para exibir uma data e hora) que o UIKit não tem.
 
-  - Você não pode rotear as notificações para o relógio somente ou apenas no iPhone (o tipo de controle que o usuário tem sobre o roteamento não foi anunciado pela Apple).
+  - Você não pode encaminhar notificações apenas para o relógio ou somente o iPhone (que tipo de controle o usuário tem sobre o roteamento não foi anunciado pela Apple).
 
-Outras limitações conhecidas / perguntas frequentes:
+Algumas outras limitações conhecidas/perguntas frequentes:
 
-- Apple não permitirá mostradores de relógio de terceiros 3º personalizado.
+- A Apple não permitirá faces de inspeção personalizadas de terceiros.
 
-- As APIs que permitem a inspeção controlar o iTunes no telefone conectado são privadas.
+- As APIs que permitem que a inspeção controle o iTunes no telefone conectado são privadas.
 
 ## <a name="further-reading"></a>Leitura adicional
 
 Confira a documentação da Apple:
 
-- [Desenvolvendo para o Kit de inspeção](https://developer.apple.com/library/prerelease/ios/documentation/General/Conceptual/WatchKitProgrammingGuide/index.html#//apple_ref/doc/uid/TP40014969-CH8-SW1)
+- [Desenvolvendo para o kit de inspeção](https://developer.apple.com/library/prerelease/ios/documentation/General/Conceptual/WatchKitProgrammingGuide/index.html#//apple_ref/doc/uid/TP40014969-CH8-SW1)
 
-- [Assista ao guia de programação de Kit](https://developer.apple.com/library/prerelease/ios/documentation/General/Conceptual/WatchKitProgrammingGuide/DesigningaWatchKitApp.html)
+- [Guia de programação do Watch kit](https://developer.apple.com/library/prerelease/ios/documentation/General/Conceptual/WatchKitProgrammingGuide/DesigningaWatchKitApp.html)
 
-- [Diretrizes de Interface humana do Apple Watch](https://developer.apple.com/library/prerelease/ios/documentation/UserExperience/Conceptual/WatchHumanInterfaceGuidelines/index.html#//apple_ref/doc/uid/TP40014992-CH3-SW1)
+- [Diretrizes de interface humana Apple Watch](https://developer.apple.com/library/prerelease/ios/documentation/UserExperience/Conceptual/WatchHumanInterfaceGuidelines/index.html#//apple_ref/doc/uid/TP40014992-CH3-SW1)
 
 ## <a name="related-links"></a>Links relacionados
 
-- [watchOS 3 catálogo (amostra)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
-- [watchOS 1 catálogo (amostra)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
-- [Instalar e configurar](~/ios/watchos/get-started/installation.md)
-- [Primeiro vídeo de aplicativo de inspeção](https://blog.xamarin.com/your-first-watch-kit-app/)
-- [Desenvolvimento de Apple para guia do Kit de inspeção](https://developer.apple.com/library/prerelease/ios/documentation/General/Conceptual/WatchKitProgrammingGuide/index.html)
+- [Catálogo watchOS 3 (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
+- [Catálogo watchOS 1 (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
+- [Instalação e instalação](~/ios/watchos/get-started/installation.md)
+- [Primeiro vídeo do aplicativo Watch](https://blog.xamarin.com/your-first-watch-kit-app/)
+- [Guia de desenvolvimento do kit de inspeção da Apple](https://developer.apple.com/library/prerelease/ios/documentation/General/Conceptual/WatchKitProgrammingGuide/index.html)
 - [Dicas de WatchKit da Apple](https://developer.apple.com/watchkit/tips/)
 - [Introdução ao watchOS 3](~/ios/watchos/platform/introduction-to-watchos3/index.md)

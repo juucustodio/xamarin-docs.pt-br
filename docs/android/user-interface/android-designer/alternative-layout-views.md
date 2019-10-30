@@ -4,15 +4,15 @@ description: Este tópico explica como os layouts podem ser com controle de vers
 ms.prod: xamarin
 ms.assetid: 5EBF51FC-9048-F0CF-624A-D8782A91C1FD
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 07/25/2018
-ms.openlocfilehash: c872baa99496352a1934d10356a1001b309aa63e
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: 017d2d05c04dfaf2378ad1b0129eb4a75be2e777
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "70757412"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73019484"
 ---
 # <a name="alternative-layout-views"></a>Modos de exibição de layout alternativos
 
@@ -84,7 +84,7 @@ Se você decidir alterar a cor do texto no layout **padrão** para verde, verá 
 
 Uma *caixa de conflito* é exibida à direita do widget para explicar o conflito: 
 
-[aviso de ![Conflict](alternative-layout-views-images/xs/11-warning-sml.png)](alternative-layout-views-images/xs/11-warning.png#lightbox)
+[![aviso de conflito](alternative-layout-views-images/xs/11-warning-sml.png)](alternative-layout-views-images/xs/11-warning.png#lightbox)
 
 A caixa conflito mostra a lista de propriedades que foram alteradas e lista seus valores. Clicar em **ignorar conflito** aplica a propriedade alterar somente para este widget. Clicar em **aplicar** aplica a alteração de propriedade a esse widget, bem como ao widget correspondente no layout **padrão** vinculado. Se todas as alterações de propriedade forem aplicadas, o conflito será descartado automaticamente. 
 
@@ -106,7 +106,7 @@ Clicar no layout de **grande terra** revela o conflito. A seguinte mensagem é e
 
 Além disso, a caixa conflito exibe a seguinte mensagem:
 
-[![Conflict mensagem](alternative-layout-views-images/xs/15-conflict-message-sml.png)](alternative-layout-views-images/xs/15-conflict-message.png#lightbox)
+[![mensagem de conflito](alternative-layout-views-images/xs/15-conflict-message-sml.png)](alternative-layout-views-images/xs/15-conflict-message.png#lightbox)
 
 Adicionar o `CheckBox` causa um conflito porque o layout de **grande terra** tem alterações no `LinearLayout` que o contém. No entanto, nesse caso, a caixa conflito exibe o widget que acabou de ser inserido no layout **padrão** (o `CheckBox`).
 
@@ -122,19 +122,19 @@ Como visto no exemplo anterior com a `Button`, o `CheckBox` não tem um marcador
 
 Quando você clica no ícone de **exibição de layout alternativo** (à esquerda do **dispositivo**), um painel de visualização é aberto para listar os layouts alternativos disponíveis no seu projeto. Se não houver layouts alternativos, a exibição **padrão** será apresentada: 
 
-[painel de exibição de layout de ![Alternate](alternative-layout-views-images/xs/01-alt-layout-view-pane-sml.png)](alternative-layout-views-images/xs/01-alt-layout-view-pane.png#lightbox)
+[painel de exibição de layout alternativo![](alternative-layout-views-images/xs/01-alt-layout-view-pane-sml.png)](alternative-layout-views-images/xs/01-alt-layout-view-pane.png#lightbox)
 
 Quando você clica no sinal de adição verde ao lado de **nova versão**, a caixa de diálogo **criar variação de layout** é aberta para que você possa selecionar os qualificadores de recursos para esta variação de layout: 
 
-[variação de layout de ![Create](alternative-layout-views-images/xs/02-create-layout-variation-sml.png)](alternative-layout-views-images/xs/02-create-layout-variation.png#lightbox)
+[![criar variação de layout](alternative-layout-views-images/xs/02-create-layout-variation-sml.png)](alternative-layout-views-images/xs/02-create-layout-variation.png#lightbox)
 
 No exemplo a seguir, o qualificador de recurso para a **orientação de tela** é definido como **paisagem**e o **tamanho da tela** é alterado para **grande**. Isso cria uma nova versão de layout chamada **Large-Land**:
 
-[variação de ![Large Land](alternative-layout-views-images/xs/03-large-land-sml.png)](alternative-layout-views-images/xs/03-large-land.png#lightbox)
+[![variação em grande escala](alternative-layout-views-images/xs/03-large-land-sml.png)](alternative-layout-views-images/xs/03-large-land.png#lightbox)
 
 Observe que o painel de visualização à esquerda exibe os efeitos das seleções de qualificador de recurso. Clicar em **Adicionar** cria o layout alternativo e alterna o designer para esse layout. O painel de visualização de **exibição de layout alternativo** indica qual layout é carregado no designer por meio de um pequeno ponteiro à direita, conforme indicado na seguinte captura de tela: 
 
-[indicador de layout de ![Loaded](alternative-layout-views-images/xs/04-new-layout-sml.png)](alternative-layout-views-images/xs/04-new-layout.png#lightbox)
+[![indicador de layout carregado](alternative-layout-views-images/xs/04-new-layout-sml.png)](alternative-layout-views-images/xs/04-new-layout.png#lightbox)
 
 ## <a name="editing-alternative-layouts"></a>Editando layouts alternativos
 
@@ -142,15 +142,15 @@ Quando você cria layouts alternativos, muitas vezes é desejável fazer uma ún
 
 Para simplificar a manutenção de várias versões de layout, o designer fornece um modo de **várias edições** que propaga as alterações em um ou mais layouts. Quando mais de um layout estiver presente, o ícone de **várias edições** será exibido: 
 
-[ícone de ![Multi de edição](alternative-layout-views-images/xs/05-multi-layout-icon-sml.png)](alternative-layout-views-images/xs/05-multi-layout-icon.png#lightbox)
+[![ícone de várias edições](alternative-layout-views-images/xs/05-multi-layout-icon-sml.png)](alternative-layout-views-images/xs/05-multi-layout-icon.png#lightbox)
 
 Quando você clica no ícone de **várias edições** , aparecem linhas que indicam que os layouts estão vinculados (como mostrado abaixo); ou seja, quando você faz uma alteração em um layout, essa alteração é propagada para todos os layouts vinculados. Você pode desvincular todos os layouts clicando no ícone de círculo indicado na seguinte captura de tela: 
 
-[![Unlink todos os layouts](alternative-layout-views-images/xs/06a-linked-sml.png)](alternative-layout-views-images/xs/06a-linked.png#lightbox)
+[![desvincular todos os layouts](alternative-layout-views-images/xs/06a-linked-sml.png)](alternative-layout-views-images/xs/06a-linked.png#lightbox)
 
 Se você tiver mais de dois layouts, poderá alternar seletivamente o botão Editar à esquerda de cada visualização de layout para determinar quais layouts estão vinculados. Por exemplo, se você quiser fazer uma única alteração que se propaga para o primeiro e o último dos três layouts, primeiro desvinculo o layout do meio, conforme mostrado aqui: 
 
-[![Unlink layout do meio](alternative-layout-views-images/xs/06b-multi-linked-sml.png)](alternative-layout-views-images/xs/06b-multi-linked.png#lightbox)
+[![desvincular o layout do meio](alternative-layout-views-images/xs/06b-multi-linked-sml.png)](alternative-layout-views-images/xs/06b-multi-linked.png#lightbox)
 
 Neste exemplo, uma alteração feita no layout **padrão** ou **longo** será propagada para outro layout, mas não para o layout de **grande terra** . 
 
@@ -158,11 +158,11 @@ Neste exemplo, uma alteração feita no layout **padrão** ou **longo** será pr
 
 Em geral, quando você faz uma alteração em um layout, essa mesma alteração é propagada para todos os outros layouts vinculados. Por exemplo, adicionar um novo widget de `TextView` ao layout **padrão** e alterar sua cadeia de texto para `Portrait` fará com que a mesma alteração seja feita em todos os layouts vinculados. Veja como ele se parece no layout **padrão** : 
 
-[![Add TextView](alternative-layout-views-images/xs/07-add-textview-sml.png)](alternative-layout-views-images/xs/07-add-textview.png#lightbox)
+[![adicionar TextView](alternative-layout-views-images/xs/07-add-textview-sml.png)](alternative-layout-views-images/xs/07-add-textview.png#lightbox)
 
 A `TextView` também é adicionada à exibição de layout de **grande terra** porque está vinculada ao layout **padrão** : 
 
-[![Landscape TextView](alternative-layout-views-images/xs/08-landscape-textview-sml.png)](alternative-layout-views-images/xs/08-landscape-textview.png#lightbox)
+[TextView paisagem![](alternative-layout-views-images/xs/08-landscape-textview-sml.png)](alternative-layout-views-images/xs/08-landscape-textview.png#lightbox)
 
 Mas e se você quiser fazer uma alteração que seja local para apenas um layout (ou seja, você não quer que a alteração seja propagada para qualquer um dos outros layouts)? Para fazer isso, você deve desvincular o layout que deseja alterar antes de modificá-lo, conforme explicado a seguir. 
 
@@ -170,7 +170,7 @@ Mas e se você quiser fazer uma alteração que seja local para apenas um layout
 
 Suponha que queremos que os dois layouts tenham o `TextView` adicionado, mas também queremos alterar a cadeia de caracteres de texto no layout de **grande terra** para `Landscape` em vez de `Portrait`. Se fizermos essa alteração em **grande escala** enquanto os dois layouts estiverem vinculados, a alteração será propagada de volta para o layout **padrão** . Portanto, devemos primeiro desvincular os dois layouts antes de fazermos a alteração. Quando modificamos o texto em **grande escala** para `Landscape`, o designer marca essa alteração com um quadro vermelho para indicar que a alteração é local para o layout de **grande terra** e *não* é propagada de volta para o layout **padrão** : 
 
-[![Local alterar](alternative-layout-views-images/xs/09-local-change-sml.png)](alternative-layout-views-images/xs/09-local-change.png#lightbox)
+[![alteração local](alternative-layout-views-images/xs/09-local-change-sml.png)](alternative-layout-views-images/xs/09-local-change.png#lightbox)
 
 Quando você clica no layout **padrão** para exibi-lo, o `TextView` cadeia de caracteres de texto ainda é definido como `Portrait`. 
 
@@ -178,11 +178,11 @@ Quando você clica no layout **padrão** para exibi-lo, o `TextView` cadeia de c
 
 Se você decidir alterar a cor do texto no layout **padrão** para verde, verá um ícone de aviso aparecendo no layout vinculado. Clicar nesse layout abre o layout para revelar o conflito. O widget que causou o conflito é realçado com um quadro vermelho e a seguinte mensagem é exibida: *alterações recentes causaram conflitos nesse layout alternativo*. 
 
-[![Conflicting alterar](alternative-layout-views-images/xs/10-conflict-sml.png)](alternative-layout-views-images/xs/10-conflict.png#lightbox)
+[![alteração conflitante](alternative-layout-views-images/xs/10-conflict-sml.png)](alternative-layout-views-images/xs/10-conflict.png#lightbox)
 
 Uma *caixa de conflito* é exibida à direita do widget para explicar o conflito: 
 
-[aviso de ![Conflict](alternative-layout-views-images/xs/11-warning-sml.png)](alternative-layout-views-images/xs/11-warning.png#lightbox)
+[![aviso de conflito](alternative-layout-views-images/xs/11-warning-sml.png)](alternative-layout-views-images/xs/11-warning.png#lightbox)
 
 A caixa conflito mostra a lista de propriedades que foram alteradas e lista seus valores. Clicar em **ignorar conflito** aplica a propriedade alterar somente para este widget. Clicar em **aplicar** aplica a alteração de propriedade a esse widget, bem como ao widget correspondente no layout **padrão** vinculado. Se todas as alterações de propriedade forem aplicadas, o conflito será descartado automaticamente. 
 
@@ -190,27 +190,27 @@ A caixa conflito mostra a lista de propriedades que foram alteradas e lista seus
 
 As alterações de propriedade não são a única fonte de conflitos. Os conflitos podem ser detectados ao inserir ou remover widgets. Por exemplo, quando o layout de **grande terra** é desvinculado do layout **padrão** , e a `TextView` no layout de **grande terra** é arrastada e descartada acima da `Button`, o designer marca o widget movido para indicar o conflito:
 
-[conflito de ![View grupo](alternative-layout-views-images/xs/12-view-group-conflict-sml.png)](alternative-layout-views-images/xs/12-view-group-conflict.png#lightbox)
+[conflito de![exibir grupo](alternative-layout-views-images/xs/12-view-group-conflict-sml.png)](alternative-layout-views-images/xs/12-view-group-conflict.png#lightbox)
 
 No entanto, não há nenhum marcador no `Button`. Embora a posição da `Button` tenha sido alterada, a `Button` não mostra nenhuma alteração aplicada específica à configuração de **grande terra** . 
 
 Se um `CheckBox` for adicionado ao layout **padrão** , outro conflito será gerado e um ícone de aviso será exibido sobre o layout de **grande terra** : 
 
-[conflito de ![Checkbox](alternative-layout-views-images/xs/13-checkbox-conflict-sml.png)](alternative-layout-views-images/xs/13-checkbox-conflict.png#lightbox)
+[conflito de caixa de seleção de![](alternative-layout-views-images/xs/13-checkbox-conflict-sml.png)](alternative-layout-views-images/xs/13-checkbox-conflict.png#lightbox)
 
 Clicar no layout de **grande terra** revela o conflito. A seguinte mensagem é exibida: *alterações recentes causaram conflitos neste layout alternativo*. 
 
-[conflito de layout de ![Alt](alternative-layout-views-images/xs/14-alt-layout-conflict-sml.png)](alternative-layout-views-images/xs/14-alt-layout-conflict.png#lightbox)
+[conflito de layout de![Alt](alternative-layout-views-images/xs/14-alt-layout-conflict-sml.png)](alternative-layout-views-images/xs/14-alt-layout-conflict.png#lightbox)
 
 Além disso, a caixa conflito exibe a seguinte mensagem:
 
-[![Conflict mensagem](alternative-layout-views-images/xs/15-conflict-message-sml.png)](alternative-layout-views-images/xs/15-conflict-message.png#lightbox)
+[![mensagem de conflito](alternative-layout-views-images/xs/15-conflict-message-sml.png)](alternative-layout-views-images/xs/15-conflict-message.png#lightbox)
 
 Adicionar o `CheckBox` causa um conflito porque o layout de **grande terra** tem alterações no `LinearLayout` que o contém. No entanto, nesse caso, a caixa conflito exibe o widget que acabou de ser inserido no layout **padrão** (o `CheckBox`).
 
 Se você clicar em **ignorar conflito**, o designer resolverá o conflito, permitindo que o widget exibido na caixa de conflitos seja arrastado e solto no layout onde o widget está ausente (nesse caso, o layout de **grande terra** ): 
 
-[conflito de ![Resolved grupo](alternative-layout-views-images/xs/16-resolved-group-conflict-sml.png)](alternative-layout-views-images/xs/16-resolved-group-conflict.png#lightbox)
+[![conflito de grupo resolvido](alternative-layout-views-images/xs/16-resolved-group-conflict-sml.png)](alternative-layout-views-images/xs/16-resolved-group-conflict.png#lightbox)
 
 Como visto no exemplo anterior com a `Button`, o `CheckBox` não tem um marcador de alteração vermelho porque apenas os `LinearLayout` têm alterações que foram aplicadas no layout de **grande terra** .
 

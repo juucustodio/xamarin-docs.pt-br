@@ -4,15 +4,15 @@ description: Este documento descreve como criar resultados de pesquisa baseados 
 ms.prod: xamarin
 ms.assetid: 876315BA-2EF9-4275-AE33-A3A494BBF7FD
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/20/2017
-ms.openlocfilehash: 52da0cfcab56c0acd339f4f0a0f2456a66d002a8
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 3d5db2f060b59fc689bea99141342b0447ac8933
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769475"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73031520"
 ---
 # <a name="search-with-web-markup-in-xamarinios"></a>Pesquisar com marcação da Web no Xamarin. iOS
 
@@ -20,12 +20,12 @@ Para aplicativos que fornecem acesso ao seu conteúdo por meio de um site (não 
 
 Se seu aplicativo iOS já dá suporte à vinculação profunda móvel e seu site apresentou links profundos para o conteúdo em seu aplicativo, o rastreador da Web _Applebot_ da Apple indexará esse conteúdo e o adicionará automaticamente ao índice de nuvem deles:
 
-[![](web-markup-images/webmarkup01.png "Visão geral do índice de nuvem")](web-markup-images/webmarkup01.png#lightbox)
+[![](web-markup-images/webmarkup01.png "Cloud Index overview")](web-markup-images/webmarkup01.png#lightbox)
 
 A Apple fará a superfície desses resultados em pesquisa de destaque e nos resultados da pesquisa do Safari.
 Se o usuário toca em um desses resultados (e eles têm seu aplicativo instalado), eles serão levados ao conteúdo em seu aplicativo:
 
-[![](web-markup-images/webmarkup02.png "Vinculação profunda de um site nos resultados da pesquisa")](web-markup-images/webmarkup02.png#lightbox)
+[![](web-markup-images/webmarkup02.png "Deep linking from a website in search results")](web-markup-images/webmarkup02.png#lightbox)
 
 ## <a name="enabling-web-content-indexing"></a>Habilitando a indexação de conteúdo da Web
 
@@ -71,7 +71,7 @@ Você pode fornecer links profundos para o conteúdo do seu aplicativo usando um
 <meta name="twitter:app:url:iphone" content="AppNameURL">
 ```
 
-Para obter mais informações, consulte a documentação do [protocolo de cartão do Twitter](http://dev.twitter.com/cards/mobile) do Twitter.
+Para obter mais informações, consulte a documentação do [protocolo de cartão do Twitter](https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/abouts-cards) do Twitter.
 
 ## <a name="using-facebook-app-links"></a>Usando links de aplicativo do Facebook
 
@@ -83,11 +83,11 @@ Você pode fornecer links profundos para o conteúdo do aplicativo usando um lin
 <meta property="al:ios:url" content="AppNameURL">
 ```
 
-Para obter mais informações, consulte a documentação de [links de aplicativo](http://applinks.org) do Facebook.
+Para obter mais informações, consulte a documentação de [links de aplicativo](https://developers.facebook.com/docs/applinks) do Facebook.
 
 ## <a name="opening-deep-links"></a>Abrindo links profundos
 
-Você precisa adicionar suporte para abrir e exibir links profundos em seu aplicativo Xamarin. iOS. Edite o arquivo **AppDelegate.cs** e substitua `OpenURL` o método para manipular o formato de URL personalizado. Por exemplo:
+Você precisa adicionar suporte para abrir e exibir links profundos em seu aplicativo Xamarin. iOS. Edite o arquivo **AppDelegate.cs** e substitua o método `OpenURL` para manipular o formato de URL personalizado. Por exemplo:
 
 ```csharp
 public override bool OpenUrl (UIApplication application, NSUrl url, string sourceApplication, NSObject annotation)
@@ -129,7 +129,7 @@ Uma opção para fornecer marcação de dados estruturado é usando o Open Graph
 <meta property="og:video" content="http://company.com/appname/tutorial.mp4">
 ```
 
-Para obter mais informações, consulte o site de [gráficos aberto](http://ogp.me) .
+Para obter mais informações, consulte o site de [gráficos aberto](https://ogp.me) .
 
 Outro formato comum para marcação de dados estruturados é o formato de MicroData do esquema. org. Por exemplo:
 
@@ -152,20 +152,20 @@ As mesmas informações podem ser representadas no formato JSON-LD do esquema. o
 
 Veja a seguir um exemplo de metadados do seu site fornecendo resultados de pesquisa avançados para o usuário final:
 
-[![](web-markup-images/deeplink01.png "Resultados de pesquisa avançados por meio de marcação de dados estruturados")](web-markup-images/deeplink01.png#lightbox)
+[![](web-markup-images/deeplink01.png "Rich search results via Structured Data Markup")](web-markup-images/deeplink01.png#lightbox)
 
 Atualmente, a Apple dá suporte aos seguintes tipos de esquema do schema.org:
 
 - AggregateRating
-- ImageObject
+- Imageobject
 - InteractionCount
 - Ofereça
 - Organizações
 - PriceRange
 - Receita
-- SearchAction
+- Searchaction
 
-Para obter mais informações sobre esses tipos de esquema, consulte [Schema.org](http://schema.org).
+Para obter mais informações sobre esses tipos de esquema, consulte [Schema.org](https://schema.org).
 
 ## <a name="providing-actions-with-structured-data"></a>Fornecendo ações com dados estruturados
 
@@ -207,5 +207,5 @@ Para obter mais informações, consulte o [site do desenvolvedor de pesquisa de 
 
 - [Amostras do iOS 9](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS9)
 - [iOS 9 para desenvolvedores](https://developer.apple.com/ios/pre-release/)
-- [iOS 9.0](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)
+- [iOS 9,0](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)
 - [Guia de programação de pesquisa de aplicativo](https://developer.apple.com/library/prerelease/ios/documentation/General/Conceptual/AppSearch/index.html#//apple_ref/doc/uid/TP40016308)

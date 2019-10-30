@@ -4,19 +4,19 @@ description: Este documento fornece algumas considerações de desempenho para a
 ms.prod: xamarin
 ms.assetid: 54B07DED-FDF2-49B2-A5FB-3A9357E65922
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 11/10/2017
-ms.openlocfilehash: 12a2152424fac4024d8b83adb0c80c2499ec8b1d
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: a5a759ae9f156eec71706d9681fac2a94995848e
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70770100"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73021686"
 ---
 # <a name="xamarinmac-performance"></a>Desempenho do Xamarin.Mac
 
-## <a name="overview"></a>Visão geral
+## <a name="overview"></a>Visão Geral
 
 Aplicativos Xamarin.Mac são semelhantes a Xamarin.iOS e muitas das mesmas sugestões de desempenho são aplicáveis:
 

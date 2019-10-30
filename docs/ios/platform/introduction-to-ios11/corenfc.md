@@ -4,15 +4,15 @@ description: Este documento descreve como ler marcas de comunicação de campo N
 ms.prod: xamarin
 ms.technology: xamarin-ios
 ms.assetid: 846B59D3-F66A-48F3-A78C-84217697194E
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 09/25/2017
-ms.openlocfilehash: c7a9d359842dde916fc14ffea5ec6e3f453dfee0
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 110df71dd043f627b89a7c4a906db0418a8cfae8
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70752424"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73032201"
 ---
 # <a name="core-nfc-in-xamarinios"></a>Básico NFC no Xamarin. iOS
 
@@ -63,20 +63,20 @@ Seu aplicativo deve solicitar a capacidade de **leitura de marca de comunicaçã
 
 Crie uma nova **ID de aplicativo** e verifique se o serviço de **leitura de marca NFC** está marcado:
 
-[![Portal do desenvolvedor página nova ID do aplicativo com a marca NFC lendo selecionada](corenfc-images/app-services-nfc-sml.png)](corenfc-images/app-services-nfc.png#lightbox)
+[![portal do desenvolvedor página nova ID do aplicativo com a marca NFC lendo selecionado](corenfc-images/app-services-nfc-sml.png)](corenfc-images/app-services-nfc.png#lightbox)
 
 Em seguida, você deve criar um novo perfil de provisionamento para essa ID de aplicativo e, em seguida, baixar e instalá-lo em seu Mac de desenvolvimento.
 
 ## <a name="reading-a-tag"></a>Lendo uma marca
 
-Quando o projeto estiver configurado, adicione `using CoreNFC;` -o à parte superior do arquivo e siga estas três etapas para implementar a funcionalidade de leitura de marca NFC:
+Quando o projeto estiver configurado, adicione `using CoreNFC;` na parte superior do arquivo e siga estas três etapas para implementar a funcionalidade de leitura de marca NFC:
 
-### <a name="1-implement-infcndefreadersessiondelegate"></a>1. Implementar`INFCNdefReaderSessionDelegate`
+### <a name="1-implement-infcndefreadersessiondelegate"></a>1. implementar `INFCNdefReaderSessionDelegate`
 
 A interface tem dois métodos a serem implementados:
 
-- `DidDetect`– Chamado quando uma marca é lida com êxito.
-- `DidInvalidate`– Chamado quando ocorre um erro ou o tempo limite de 60 segundos é atingido.
+- `DidDetect` – chamado quando uma marca é lida com êxito.
+- `DidInvalidate` – chamado quando ocorre um erro ou o tempo limite de 60 segundos é atingido.
 
 #### <a name="diddetect"></a>DidDetect
 
@@ -96,7 +96,7 @@ public void DidDetect(NFCNdefReaderSession session, NFCNdefMessage[] messages)
 }
 ```
 
-Esse método pode ser chamado várias vezes (e uma matriz de mensagens pode ser passada) se a sessão permitir várias leituras de marca. Isso é definido usando o terceiro parâmetro do `Start` método (explicado na [etapa 2](#step2)).
+Esse método pode ser chamado várias vezes (e uma matriz de mensagens pode ser passada) se a sessão permitir várias leituras de marca. Isso é definido usando o terceiro parâmetro do método `Start` (explicado na [etapa 2](#step2)).
 
 #### <a name="didinvalidate"></a>DidInvalidate
 
@@ -125,7 +125,7 @@ Depois que uma sessão for invalidada, um novo objeto de sessão deverá ser cri
 
 <a name="step2" />
 
-### <a name="2-start-an-nfcndefreadersession"></a>2. Iniciar um`NFCNdefReaderSession`
+### <a name="2-start-an-nfcndefreadersession"></a>2. iniciar um `NFCNdefReaderSession`
 
 A verificação deve começar com uma solicitação de usuário, como um pressionamento de botão.
 O código a seguir cria e inicia uma sessão de verificação:
@@ -135,25 +135,25 @@ Session = new NFCNdefReaderSession(this, null, true);
 Session?.BeginSession();
 ```
 
-Os parâmetros para o `NFCNdefReaderSession` Construtor são os seguintes:
+Os parâmetros para o construtor de `NFCNdefReaderSession` são os seguintes:
 
-- `delegate`– Uma implementação de `INFCNdefReaderSessionDelegate`. No código de exemplo, o delegado é implementado no controlador de exibição de tabela, `this` portanto, é usado como o parâmetro delegado.
-- `queue`– A fila em que os retornos de chamada são tratados. Pode ser `null`, nesse caso, não se esqueça de usar o `DispatchQueue.MainQueue` ao atualizar os controles da interface do usuário (conforme mostrado no exemplo).
-- `invalidateAfterFirstRead`– Quando `true`, a verificação para após a primeira verificação bem-sucedida; quando `false` a verificação continuará e vários resultados forem retornados até que a verificação seja cancelada ou o tempo limite de 60 segundos seja atingido.
+- `delegate` – uma implementação de `INFCNdefReaderSessionDelegate`. No código de exemplo, o delegado é implementado no controlador de exibição de tabela, portanto `this` é usado como o parâmetro delegado.
+- `queue` – a fila em que os retornos de chamada são tratados. Pode ser `null`. nesse caso, use o `DispatchQueue.MainQueue` ao atualizar os controles da interface do usuário (conforme mostrado no exemplo).
+- `invalidateAfterFirstRead` – quando `true`, a verificação é interrompida após a primeira verificação bem-sucedida; Quando `false` verificação continuará e vários resultados forem retornados até que a verificação seja cancelada ou o tempo limite de 60 segundos seja atingido.
 
-### <a name="3-cancel-the-scanning-session"></a>3. Cancelar a sessão de verificação
+### <a name="3-cancel-the-scanning-session"></a>3. cancelar a sessão de verificação
 
 O usuário pode cancelar a sessão de verificação por meio de um botão fornecido pelo sistema na interface do usuário:
 
 ![Botão Cancelar durante a verificação](corenfc-images/scan-cancel-sml.png)
 
-O aplicativo pode cancelar programaticamente a verificação chamando `InvalidateSession` o método:
+O aplicativo pode cancelar programaticamente a verificação chamando o método `InvalidateSession`:
 
 ```csharp
 Session.InvalidateSession();
 ```
 
-Em ambos os casos, o método `DidInvalidate` do delegado será chamado.
+Em ambos os casos, o método de `DidInvalidate` do delegado será chamado.
 
 ## <a name="summary"></a>Resumo
 

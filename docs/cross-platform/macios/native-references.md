@@ -3,15 +3,15 @@ title: Projetos do iOS, Mac e bindings de referências nativas
 description: Referências nativas fornecem a capacidade de inserir uma estrutura nativa em um projeto Xamarin. iOS, Xamarin. Mac ou Binding.
 ms.prod: xamarin
 ms.assetid: E53185FB-CEF5-4AB5-94F9-CC9B57C52300
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/29/2017
-ms.openlocfilehash: 1ad7a98b92c34cf956e50ebc7a6cec73580f8f04
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: b3adfac067964e0a0f169b5d8f8860f34deffe62
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70765498"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73015612"
 ---
 # <a name="native-references-in-ios-mac-and-bindings-projects"></a>Referências nativas em projetos do iOS, Mac e bindings
 
@@ -30,19 +30,19 @@ No iOS 8 (e posterior), as **estruturas inseridas** podem ser estruturas incorpo
 
 <a name="Static-vs-Dynamic-Frameworks" />
 
-### <a name="static-vs-dynamic-frameworks"></a>Estático vs. Estruturas dinâmicas
+### <a name="static-vs-dynamic-frameworks"></a>Estruturas estáticas versus dinâmicas
 
 As **estruturas estáticas** são vinculadas no momento da compilação em que as **estruturas dinâmicas** são vinculadas no tempo de execução e, portanto, podem ser modificadas sem a necessidade de vincular novamente. Se você tiver usado qualquer estrutura de terceiros antes do iOS 8, você estava usando uma **estrutura estática** que foi compilada em seu aplicativo. Consulte a documentação de [programação da biblioteca dinâmica](https://developer.apple.com/library/mac/documentation/DeveloperTools/Conceptual/DynamicLibraries/100-Articles/OverviewOfDynamicLibraries.html#//apple_ref/doc/uid/TP40001873-SW1) da Apple para obter mais detalhes.
 
 <a name="Embedded-vs-System-Frameworks" />
 
-### <a name="embedded-vs-system-frameworks"></a>Incorporado vs. Estruturas do sistema
+### <a name="embedded-vs-system-frameworks"></a>Estruturas incorporadas versus do sistema
 
 As **estruturas inseridas** são incluídas em seu pacote de aplicativos e só podem ser acessadas pelo seu aplicativo específico por meio de sua área restrita. As **estruturas do sistema** são armazenadas no nível do sistema operacional e estão disponíveis para todos os aplicativos no dispositivo. Atualmente, apenas a Apple tem a capacidade de criar estruturas de nível de sistema operacional.
 
 <a name="Thin-vs-Fat-Frameworks" />
 
-### <a name="thin-vs-fat-frameworks"></a>Fino versus Estruturas de Fat
+### <a name="thin-vs-fat-frameworks"></a>Estruturas finas versus Fat
 
 **Estruturas finas** contêm apenas o código compilado para uma arquitetura de sistema específica em que as **estruturas de Fat** contêm código para várias arquiteturas. Cada base de código específica da arquitetura compilada em uma estrutura é conhecida como uma _fatia_. Portanto, por exemplo, se tivéssemos uma estrutura que foi compilada para as duas arquiteturas do simulador do iOS (i386 e x86_64), ela conteria duas fatias.
 
@@ -52,7 +52,7 @@ Se você tentou distribuir essa estrutura de exemplo com seu aplicativo, ela ser
 
 ## <a name="working-with-embedded-frameworks"></a>Trabalhando com estruturas inseridas
 
-Há duas etapas que devem ser concluídas para trabalhar com estruturas inseridas em um aplicativo Xamarin. iOS ou Xamarin. Mac: Criar uma estrutura de FAT e inserir a estrutura.
+Há duas etapas que devem ser concluídas para trabalhar com estruturas inseridas em um aplicativo Xamarin. iOS ou Xamarin. Mac: criar uma estrutura de FAT e inserir a estrutura.
 
 <a name="Overview" />
 
@@ -62,7 +62,7 @@ Conforme mencionado acima, para poder consumir uma estrutura incorporada em seu 
 
 Quando a estrutura e o aplicativo de consumo estiverem no mesmo projeto do Xcode, isso não será um problema, pois o Xcode criará a estrutura e o aplicativo usando as mesmas configurações de compilação. Como os aplicativos Xamarin não podem criar estruturas inseridas, essa técnica não pode ser usada.
 
-Para resolver esse problema, a `lipo` ferramenta de linha de comando pode ser usada para mesclar duas ou mais estruturas em uma estrutura de Fat que contém todas as fatias necessárias. Para obter mais informações sobre como trabalhar `lipo` com o comando, consulte nossa documentação [vinculando bibliotecas nativas](~/ios/platform/native-interop.md) .
+Para resolver esse problema, a ferramenta de linha de comando `lipo` pode ser usada para mesclar duas ou mais estruturas em uma estrutura de Fat que contém todas as fatias necessárias. Para obter mais informações sobre como trabalhar com o comando `lipo`, consulte nossa documentação [vinculando bibliotecas nativas](~/ios/platform/native-interop.md) .
 
 <a name="Embedding-a-Framework" />
 
@@ -73,13 +73,13 @@ A etapa a seguir é necessária para inserir uma estrutura em um projeto Xamarin
 1. Crie um novo ou abra um projeto Xamarin. iOS, Xamarin. Mac ou Binding existente.
 2. Na **Gerenciador de soluções**, clique com o botão direito do mouse no nome do projeto e selecione **Adicionar** > **Adicionar referência nativa**: 
 
-    [![](native-references-images/ref01.png "Na Gerenciador de Soluções, clique com o botão direito do mouse no nome do projeto e selecione Adicionar referência nativa")](native-references-images/ref01.png#lightbox)
+    [![](native-references-images/ref01.png "In the Solution Explorer, right-click on the project name and select Add Native Reference")](native-references-images/ref01.png#lightbox)
 3. Na caixa de diálogo **abrir** , selecione o nome da estrutura nativa que você deseja inserir e clique no botão **abrir** : 
 
-    [![](native-references-images/ref02.png "Selecione o nome da estrutura nativa a ser inserida e clique no botão abrir")](native-references-images/ref02.png#lightbox)
+    [![](native-references-images/ref02.png "Select the name of the Native Framework to embed and click the Open button")](native-references-images/ref02.png#lightbox)
 4. A estrutura será adicionada à árvore do projeto: 
 
-    [![](native-references-images/ref03.png "A estrutura será adicionada à árvore de projetos")](native-references-images/ref03.png#lightbox)
+    [![](native-references-images/ref03.png "The framework will be added to the projects tree")](native-references-images/ref03.png#lightbox)
 
 Quando o projeto for compilado, a estrutura nativa será inserida no pacote do aplicativo.
 

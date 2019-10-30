@@ -4,15 +4,15 @@ description: Este documento descreve como os desenvolvedores do Xamarin.iOS pode
 ms.prod: xamarin
 ms.assetid: A5CE2ECF-8057-49ED-8393-EB0C5977FE4C
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 07/16/2018
-ms.openlocfilehash: 8279487fc5effd5c2c019bffa5ceb820d2240400
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 951b019a4a0bf503629b6ac63853bd5b1c818bce
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291430"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73022752"
 ---
 # <a name="free-provisioning-for-xamarinios-apps"></a>Provisionamento gratuito para aplicativos Xamarin.iOS
 
@@ -49,7 +49,7 @@ Siga as etapas abaixo para testar seu aplicativo Xamarin.iOS com o provisionamen
 2. Abra o Xcode e navegue até **Xcode > Preferências**.
 3. Em **Contas**, use o botão **+** para adicionar sua ID Apple existente. Deve ter uma aparência semelhante à captura de tela a seguir:
 
-    ![Preferências do Xcode – Contas](free-provisioning-images/launchapp1.png "Preferências do Xcode – Contas")
+    ![Preferências do Xcode – contas](free-provisioning-images/launchapp1.png "Preferências do Xcode – contas")
 
 4. Feche as preferências do Xcode.
 5. Conecte o dispositivo iOS no qual gostaria de implantar o aplicativo.
@@ -60,7 +60,7 @@ Siga as etapas abaixo para testar seu aplicativo Xamarin.iOS com o provisionamen
 
 8. Após o novo projeto ter sido criado, escolha um esquema de build do Xcode direcionado para seu dispositivo iOS (em vez de um simulador).
 
-    ![Selecionar um esquema de build do Xcode](free-provisioning-images/xcodescheme.png "Selecionar um esquema de build do Xcode")
+    ![Selecionar um esquema de compilação do Xcode](free-provisioning-images/xcodescheme.png "Selecionar um esquema de compilação do Xcode")
 
 9. Abra as configurações de projeto do aplicativo selecionando seu nó de nível superior no **Navegador de Projeto** do Xcode.
 10. Em **Geral > Identidade**, certifique-se de que o **Identificador de Pacote** _corresponda exatamente_ ao identificador de pacote de seu aplicativo Xamarin.iOS.

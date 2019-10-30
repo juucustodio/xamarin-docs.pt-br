@@ -4,15 +4,15 @@ description: Este documento tem links para vários guias que descrevem tópicos 
 ms.prod: xamarin
 ms.assetid: 2DBF3BF9-79E7-4E24-AF26-E34C972B0169
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 8ce601bff478cfc75d209b0d3e6ec3f6a48dbeee
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: f3f5e27e97b7b62ade66ea2dc50a79ac03d51f90
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70288961"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73026463"
 ---
 # <a name="deploying-and-testing-xamarinios-apps"></a>Implantando e testando aplicativos Xamarin.iOS
 

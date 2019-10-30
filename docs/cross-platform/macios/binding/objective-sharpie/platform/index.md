@@ -3,15 +3,15 @@ title: Recursos de nitidez do objetivo
 description: Este documento contém links para vários guias que ajudam a descrever a nitidez do objetivo, como usá-lo e a saída que ele gera.
 ms.prod: xamarin
 ms.assetid: 9A17A2C6-AFFD-41E2-BE9B-9BC1AA57E1E1
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 01/15/2016
-ms.openlocfilehash: dfbfd443b06518bccbf3b71fcc27acac0bca7481
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 40f73a3f069c762266704d710080c324aa731ecf
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70279090"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016168"
 ---
 # <a name="objective-sharpie-features"></a>Recursos de nitidez do objetivo
 
@@ -24,8 +24,8 @@ Esses dois arquivos são emitidos pela nitidez do objetivo para serem incluídos
 ## <a name="native-frameworksnative-frameworksmd"></a>[**Estruturas nativas**](native-frameworks.md)
 
 Algumas bibliotecas são distribuídas como estruturas em vez de como fonte.
-A nitidez do objetivo permite que você use essas bibliotecas `-framework` com a opção.
+A nitidez do objetivo permite que você use essas bibliotecas com a opção `-framework`.
 
 ## <a name="verifyverifymd"></a>[**Confirme**](verify.md)
 
-A nitidez do objetivo `Verify` adiciona atributos para sinalizar que você precisa inspecionar e atualizar manualmente a associação gerada. 
+A nitidez do objetivo adiciona atributos de `Verify` para sinalizar que você precisa inspecionar e atualizar manualmente a associação gerada. 

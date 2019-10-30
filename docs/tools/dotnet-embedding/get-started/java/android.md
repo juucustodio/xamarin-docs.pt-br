@@ -3,15 +3,15 @@ title: Introdução ao Android
 description: Este documento descreve como começar a usar a inserção do .NET com o Android. Ele aborda a instalação da inserção do .NET, a criação de um projeto de biblioteca do Android, o uso de uma saída gerada em um projeto Android Studio e outras considerações.
 ms.prod: xamarin
 ms.assetid: 870F0C18-A794-4C5D-881B-64CC78759E30
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/28/2018
-ms.openlocfilehash: 9b0da6f5b195ecef5fd4e5e2b4585b660573a5be
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: bcda03d41cb3bafcfb3ee4b92046014cc5b0c119
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70278570"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73029779"
 ---
 # <a name="getting-started-with-android"></a>Introdução ao Android
 
@@ -53,7 +53,7 @@ A origem do layout deve ser semelhante a esta:
 </LinearLayout>
 ```
 
-Em sua atividade, verifique se você está chamando `SetContentView` com o novo layout:
+Em sua atividade, certifique-se de que você está chamando `SetContentView` com o novo layout:
 
 ```csharp
 [Activity(Label = "HelloActivity"),
@@ -70,9 +70,9 @@ public class HelloActivity : Activity
 ```
 
 > [!NOTE]
-> Não se esqueça `[Register]` do atributo. Para obter detalhes, consulte [limitações](#current-limitations-on-android).
+> Não se esqueça do atributo `[Register]`. Para obter detalhes, consulte [limitações](#current-limitations-on-android).
 
-Compile o projeto. O assembly resultante será salvo no `bin/Debug/hello-from-csharp.dll`.
+Compile o projeto. O assembly resultante será salvo em `bin/Debug/hello-from-csharp.dll`.
 
 ## <a name="installing-net-embedding-from-nuget"></a>Instalando a incorporação .NET do NuGet
 
@@ -111,7 +111,7 @@ Para usar o novo módulo do seu **aplicativo**, clique com o botão direito do m
 
 ![Dependências de Android Studio](android-images/androidstudiodependencies.png)
 
-Em sua atividade, adicione um novo `onResume` método e use o código a seguir para iniciar a C# atividade:
+Em sua atividade, adicione um novo método `onResume` e use o código a seguir para iniciar a C# atividade:
 
 ```java
 import hello_from_csharp.*;
@@ -169,7 +169,7 @@ Para que este exemplo funcione, todos os itens a seguir são configurados no APK
 - Assemblies .NET incluídos em **ativos/assemblies**
 - Modificações de **AndroidManifest. xml** para C# suas atividades, etc.
 - Recursos e ativos do Android de bibliotecas do .NET
-- [Wrappers](~/android/platform/java-integration/android-callable-wrappers.md) que podem ser chamados `Java.Lang.Object` pelo Android para qualquer subclasse
+- [Wrappers](~/android/platform/java-integration/android-callable-wrappers.md) que podem ser chamados por Android para qualquer subclasse de `Java.Lang.Object`
 
 Se você estiver procurando por um passo a passos adicional, confira o vídeo a seguir, que demonstra a inserção de [demonstração de FingerPaint](https://docs.microsoft.com/samples/xamarin/monodroid-samples/applicationfundamentals-fingerpaint) de Charles Petzold em um projeto Android Studio:
 
@@ -207,7 +207,7 @@ android {
 
 ## <a name="current-limitations-on-android"></a>Limitações atuais no Android
 
-No momento, se você criar uma `Java.Lang.Object`subclasse, o Xamarin. Android gerará o stub do Java (Android Callable Wrapper) em vez da incorporação do .net. Por isso, você deve seguir as mesmas regras para exportar C# para Java como Xamarin. Android. Por exemplo:
+No momento, se você `Java.Lang.Object`a subclasse, o Xamarin. Android gerará o stub do Java (Android Callable Wrapper) em vez da inserção do .NET. Por isso, você deve seguir as mesmas regras para exportar C# para Java como Xamarin. Android. Por exemplo:
 
 ```csharp
 [Register("mono.embeddinator.android.ViewSubclass")]
@@ -223,8 +223,8 @@ public class ViewSubclass : TextView
 }
 ```
 
-- `[Register]`é necessário para mapear para um nome de pacote Java desejado
-- `[Export]`é necessário para tornar um método visível para Java
+- `[Register]` é necessário para mapear para um nome de pacote Java desejado
+- `[Export]` é necessário para tornar um método visível para Java
 
 Podemos usar `ViewSubclass` em Java da seguinte forma:
 

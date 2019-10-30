@@ -4,15 +4,15 @@ description: Este documento fornece uma descrição de alto nível de algumas AP
 ms.prod: xamarin
 ms.assetid: 99EA7090-315D-493C-87D3-26AB73D9E1A9
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 07/08/2018
-ms.openlocfilehash: b3f3db32e87d83ea4e076d439df3342e5ca2ed50
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 39d954626bc9e789446e7f1deac67e2e0fca51c8
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70284632"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73032001"
 ---
 # <a name="introduction-to-ios-12"></a>Introdução ao iOS 12
 
@@ -56,7 +56,7 @@ o iOS 12 torna mais fácil para os usuários e desenvolvedores trabalhar com sen
 
 - O AutoPreenchimento de senha e senhas fortes automáticas possibilitam gerar, armazenar e usar senhas fortes automaticamente em aplicativos iOS ao se inscrever e fazer logon em um aplicativo.
 - O preenchimento automático de código de segurança possibilita o uso de códigos de autenticação baseados em SMS sem recorte manual e colagem ou memorização.
-- A `ASWebAuthenticationSession` classe simplifica o processo de trabalho com serviços de autenticação federada.
+- A classe `ASWebAuthenticationSession` simplifica o processo de trabalho com serviços de autenticação federada.
 - As extensões do provedor de credenciais de preenchimento automático possibilitam que aplicativos de senha de terceiros forneçam nome de usuário e senhas aos campos de logon.
 
 ## <a name="healthkit-updates"></a>Atualizações do HealthKit
@@ -69,7 +69,7 @@ No iOS 12, os aplicativos iMessage dão suporte a contextos de apresentação, q
 
 ## <a name="network-framework"></a>Estrutura de rede
 
-A estrutura de rede, a pilha de `URLSession` rede subjacente às APIs normalmente usadas em aplicativos Ios, agora está disponível como uma estrutura autônoma, facilitando o trabalho com TCP, UDP, TLS, IPv4/IPv6 e muito mais.
+A estrutura de rede, a pilha de rede subjacente às APIs de `URLSession` comumente usadas em aplicativos iOS, agora está disponível como uma estrutura autônoma, facilitando o trabalho com TCP, UDP, TLS, IPv4/IPv6 e muito mais.
 
 ## <a name="carplay"></a>CarPlay
 
@@ -80,4 +80,4 @@ No iOS 12, aplicativos de terceiros podem entregar mapas e ativar instruções d
 Com o iOS 12, a Apple preteriu:
 
 - OpenGL ES, [incentivando os desenvolvedores](https://developer.apple.com/ios/whats-new/) a adotar o metal.
-- [`UIWebView`](xref:UIKit.UIWebView), [em favor do `WKWebView` ](https://developer.apple.com/documentation/webkit/wkwebview?language=objc).
+- [`UIWebView`](xref:UIKit.UIWebView), [em favor de `WKWebView`](https://developer.apple.com/documentation/webkit/wkwebview?language=objc).

@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/07/2018
-ms.openlocfilehash: 187befd88c115133a92aa90a711438e7754518d5
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: 75249966c6506bc33ea06c7cfa9c398bd7eb8045
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "68648797"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73029492"
 ---
 # <a name="the-xamarinforms-flexlayout"></a>O FlexLayout Xamarin. Forms
 
@@ -21,7 +21,7 @@ ms.locfileid: "68648797"
 
 _Use FlexLayout para empilhar ou encapsular uma coleção de exibições filho._
 
-O [`FlexLayout`](xref:Xamarin.Forms.FlexLayout) Xamarin. Forms é novo no Xamarin. forms versão 3,0. Ele se baseia no módulo de [layout de caixa flexível](http://www.w3.org/TR/css-flexbox-1/)CSS, normalmente conhecido como _layout flexível_ ou _caixa flexível_, portanto chamado porque inclui muitas opções flexíveis para organizar os filhos no layout.
+O [`FlexLayout`](xref:Xamarin.Forms.FlexLayout) Xamarin. Forms é novo no Xamarin. forms versão 3,0. Ele se baseia no módulo de [layout de caixa flexível](https://www.w3.org/TR/css-flexbox-1/)CSS, normalmente conhecido como _layout flexível_ ou _caixa flexível_, portanto chamado porque inclui muitas opções flexíveis para organizar os filhos no layout.
 
 `FlexLayout` é semelhante ao Xamarin. Forms [`StackLayout`](~/xamarin-forms/user-interface/layouts/stack-layout.md) em que ele pode organizar seus filhos horizontal e verticalmente em uma pilha. No entanto, o `FlexLayout` também é capaz de encapsular seus filhos se houver muitos para caber em uma única linha ou coluna e também tiver muitas opções de orientação, alinhamento e adaptação a vários tamanhos de tela.
 
@@ -190,7 +190,7 @@ Aqui está o programa em execução, rola progressivamente de cima para baixo:
 
 ### <a name="page-layout-with-flexlayout"></a>Layout de página com FlexLayout
 
-Há um layout padrão no design da Web chamado de o [_Grail Santa_](https://en.wikipedia.org/wiki/Holy_grail_(web_design)) , pois é um formato de layout muito desejável, mas, muitas vezes, difícil de entender com perfeição. O layout consiste em um cabeçalho na parte superior da página e um rodapé na parte inferior, que se estendem para a largura total da página. Ocupar o centro da página é o conteúdo principal, mas geralmente com um menu de coluna à esquerda do conteúdo e informações complementares (às vezes chamado de área de _separar_ ) à direita. A [seção 5.4.1 da especificação de layout de caixa flexível do CSS](http://www.w3.org/TR/css-flexbox-1/#order-accessibility) descreve como o layout do Grail Santa pode ser percebido com uma caixa flexível.
+Há um layout padrão no design da Web chamado de o [_Grail Santa_](https://en.wikipedia.org/wiki/Holy_grail_(web_design)) , pois é um formato de layout muito desejável, mas, muitas vezes, difícil de entender com perfeição. O layout consiste em um cabeçalho na parte superior da página e um rodapé na parte inferior, que se estendem para a largura total da página. Ocupar o centro da página é o conteúdo principal, mas geralmente com um menu de coluna à esquerda do conteúdo e informações complementares (às vezes chamado de área de _separar_ ) à direita. A [seção 5.4.1 da especificação de layout de caixa flexível do CSS](https://www.w3.org/TR/css-flexbox-1/#order-accessibility) descreve como o layout do Grail Santa pode ser percebido com uma caixa flexível.
 
 A página de **layout do Grail Santa** do exemplo de **[FlexLayoutDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-flexlayoutdemos)** mostra uma implementação simples desse layout usando um `FlexLayout` aninhado em outro. Como essa página foi projetada para um telefone no modo retrato, as áreas à esquerda e à direita da área de conteúdo têm apenas 50 pixels de largura:
 
@@ -261,7 +261,7 @@ Três propriedades vinculáveis anexadas são demonstradas neste programa:
 
 ### <a name="catalog-items-with-flexlayout"></a>Itens de catálogo com FlexLayout
 
-A página de **itens de catálogo** no exemplo **[FlexLayoutDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-flexlayoutdemos)** é semelhante ao [exemplo 1 na seção 1,1 da especificação da caixa de layout flexível do CSS](http://www.w3.org/TR/css-flexbox-1/#overview) , exceto pelo fato de que ela exibe uma série horizontalmente rolável de imagens e descrições de três Monkeys :
+A página de **itens de catálogo** no exemplo **[FlexLayoutDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-flexlayoutdemos)** é semelhante ao [exemplo 1 na seção 1,1 da especificação da caixa de layout flexível do CSS](https://www.w3.org//TR/css-flexbox-1/#overview) , exceto pelo fato de que ela exibe uma série horizontalmente rolável de imagens e descrições de três Monkeys :
 
 [![A página de itens do catálogo](flex-layout-images/CatalogItems.png "A página de itens do catálogo")](flex-layout-images/CatalogItems-Large.png#lightbox)
 
@@ -575,7 +575,7 @@ A página **experimento base** do exemplo **[FlexLayoutDemos](https://docs.micro
 
 [![A página experimento base](flex-layout-images/BasisExperiment.png "A página experimento base")](flex-layout-images/BasisExperiment-Large.png#lightbox)
 
-A captura de tela do iOS à esquerda mostra os dois elementos `Label` que recebem alturas em unidades independentes de dispositivo. A tela do Android mostra que elas recebem alturas que são uma fração da altura total do `FlexLayout`. Se a `Basis` for definida em 100%, o filho será a altura da `FlexLayout` e será quebrado para a próxima coluna e ocupará toda a altura dessa coluna, como demonstra a captura de tela UWP: ela aparece como se os cinco filhos estiverem organizados em uma linha , mas eles são realmente organizados em cinco colunas.
+A captura de tela do iOS à esquerda mostra os dois elementos `Label` que recebem alturas em unidades independentes de dispositivo. A tela do Android mostra que elas recebem alturas que são uma fração da altura total do `FlexLayout`. Se a `Basis` for definida em 100%, o filho será a altura da `FlexLayout`e será quebrado para a próxima coluna e ocupará toda a altura dessa coluna, como demonstra a captura de tela UWP: ela aparece como se os cinco filhos estiverem organizados em uma linha , mas eles são realmente organizados em cinco colunas.
 
 ### <a name="the-grow-property"></a>A propriedade Grow
 

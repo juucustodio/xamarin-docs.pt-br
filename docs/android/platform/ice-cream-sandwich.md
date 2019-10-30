@@ -4,28 +4,28 @@ description: Este artigo descreve vários dos novos recursos disponíveis para d
 ms.prod: xamarin
 ms.assetid: 78E18A62-C12F-A699-37FA-44B9F6B44273
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/09/2018
-ms.openlocfilehash: 8cbb7c9c3da92b1ea5140e6f85accf53dab0bf80
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 382315f755102d7111db1a5c0f71d43bdea97a10
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70761457"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73020182"
 ---
 # <a name="ice-cream-sandwich-features"></a>Recursos do sanduíche de sorvete
 
 _Este artigo descreve vários dos novos recursos disponíveis para desenvolvedores de aplicativos com a API do Android 4-Ice de sorvete. Ele abrange várias novas tecnologias de interface do usuário e, em seguida, examina uma variedade de novos recursos que o Android 4 oferece para o compartilhamento de dados entre aplicativos e entre dispositivos._
 
-## <a name="overview"></a>Visão geral
+## <a name="overview"></a>Visão Geral
 
 O Android OS versão 4,0 (API nível 14) representa um grande retrabalho do sistema operacional Android e inclui várias alterações e atualizações importantes, incluindo:
 
-- **Interface do usuário atualizada** – vários novos recursos de IU oferecem aos desenvolvedores mais capacidade e flexibilidade quando criam interfaces de usuário do aplicativo. Esses novos recursos incluem: `GridLayout` , `PopupMenu` , `Switch` widget e `TextureView` . 
+- **Interface do usuário atualizada** – vários novos recursos de IU oferecem aos desenvolvedores mais capacidade e flexibilidade quando criam interfaces de usuário do aplicativo. Esses novos recursos incluem: `GridLayout`, `PopupMenu`, `Switch` widget e `TextureView`. 
 - **Melhor aceleração de hardware** – a renderização 2D agora ocorre na GPU para todos os controles do Android. Além disso, a aceleração de hardware está ativada, por padrão, em todos os aplicativos desenvolvidos para Android 4,0. 
 - **Novas APIs de dados** – há um novo acesso a dados que não foram oficialmente disponibilizados anteriormente, como dados de calendário e o perfil de usuário do proprietário do dispositivo. 
-- O **compartilhamento de dados do aplicativo** – o compartilhamento de dados entre aplicativos e dispositivos agora é mais fácil do `ShareActionProvider` que nunca por meio de tecnologias como o, que facilita a criação de uma ação de compartilhamento de uma barra de ação e a *transmissão do Android* para um *campo próximo A comunicação (NFC)* , que o torna um ajuste para compartilhar dados entre dispositivos de perto uns dos outros. 
+- O **compartilhamento de dados do aplicativo** – o compartilhamento de dados entre aplicativos e dispositivos agora é mais fácil do que nunca por meio de tecnologias como a `ShareActionProvider`, o que facilita a criação de uma ação de compartilhamento de uma barra de ação e a transmissão do *Android* para *comunicações de próximo campo ( NFC)* , que o torna um ajuste para compartilhar dados entre dispositivos de perto uns dos outros. 
 
 Neste artigo, vamos explorar esses recursos e outras alterações que foram feitas na API do Android 4,0, e explicaremos como usar cada recurso com o Xamarin. Android.
 
@@ -38,7 +38,7 @@ Uma variedade de novas tecnologias de interface do usuário estão disponíveis 
 - **[TextureView](~/android/user-interface/controls/texture-view.md)** – habilita o conteúdo de vídeo e OpenGL em uma exibição. 
 - **[Barra de navegação](~/android/user-interface/controls/navigation-bar.md)** – contém botões virtuais para voltar, iniciar e realizar várias tarefas. 
 
-Além disso, outros elementos da interface do usuário foram aprimorados `<a href"/guides/android/user_interface/popup_menus">PopupMenu</a>`, como o, que agora é mais fácil de trabalhar e guias, que têm uma aparência mais elegante.
+Além disso, outros elementos da interface do usuário foram aprimorados, como o `<a href"/guides/android/user_interface/popup_menus">PopupMenu</a>`, que agora é mais fácil de trabalhar e guias, que têm uma aparência mais elegante.
 
 ## <a name="sharing-features"></a>Recursos de compartilhamento
 

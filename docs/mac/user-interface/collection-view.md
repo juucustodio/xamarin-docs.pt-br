@@ -4,15 +4,15 @@ description: Este artigo descreve como trabalhar com exibições de coleção em
 ms.prod: xamarin
 ms.assetid: 6EE32256-5948-4AE4-8133-6D0B3F4173E8
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 05/24/2017
-ms.openlocfilehash: a3673f017a5dd50e5cc3ae44790bf359c2871440
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 565441762bc7d9dcf7f73b42a34e3feb0bff86f1
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70279632"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73025830"
 ---
 # <a name="collection-views-in-xamarinmac"></a>Exibições de coleção no Xamarin. Mac
 
@@ -20,21 +20,21 @@ _Este artigo descreve como trabalhar com exibições de coleção em um aplicati
 
 Ao trabalhar com C# o e o .net em um aplicativo Xamarin. Mac, o desenvolvedor tem acesso aos mesmos controles de exibição de coleção AppKit que um desenvolvedor trabalhando no *Objective-C* e no *Xcode* . Como o Xamarin. Mac se integra diretamente com o Xcode, o desenvolvedor usa o _interface Builder_ do Xcode para criar e manter exibições de coleção.
 
-Um `NSCollectionView` exibe uma grade de subexibições organizadas usando `NSCollectionViewLayout`um. Cada subexibição na grade é representada por um `NSCollectionViewItem` que gerencia o carregamento do conteúdo da exibição de um `.xib` arquivo.
+Um `NSCollectionView` exibe uma grade de subexibições organizadas usando uma `NSCollectionViewLayout`. Cada subexibição na grade é representada por um `NSCollectionViewItem` que gerencia o carregamento do conteúdo da exibição de um arquivo de `.xib`.
 
-[![Uma execução de aplicativo de exemplo](collection-view-images/intro01.png)](collection-view-images/intro01.png#lightbox)
+[![uma execução de aplicativo de exemplo](collection-view-images/intro01.png)](collection-view-images/intro01.png#lightbox)
 
 Este artigo aborda as noções básicas de como trabalhar com exibições de coleção em um aplicativo Xamarin. Mac. É altamente recomendável que você trabalhe pelo artigo [Hello, Mac](~/mac/get-started/hello-mac.md) primeiro, especificamente a [introdução às seções Xcode e Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) e [ações](~/mac/get-started/hello-mac.md#outlets-and-actions) , pois ela aborda os principais conceitos e técnicas que são usados ao longo deste artigo.
 
-Talvez você queira dar uma olhada na seção [expondo C# classes/métodos para Objective-C](~/mac/internals/how-it-works.md) do documento [interno do Xamarin. Mac](~/mac/internals/how-it-works.md) também, explica os `Register` comandos e `Export` usados para conectar suas C# classes ao Objetos Objective-C e elementos de interface do usuário.
+Talvez você queira dar uma olhada na seção [ C# expondo classes/métodos para Objective-C](~/mac/internals/how-it-works.md) do documento [interno do Xamarin. Mac](~/mac/internals/how-it-works.md) também, explica os comandos`Register`e`Export`usados para conectar suas C# classes ao Objective-C objetos e elementos de interface do usuário.
 
 <a name="About_Collection_Views"/>
 
 ## <a name="about-collection-views"></a>Sobre exibições de coleção
 
-O objetivo principal de um modo de exibição`NSCollectionView`de coleção () é organizar visualmente um grupo de objetos de maneira organizada usando um layout de`NSCollectionViewLayout`exibição de coleção (), com`NSCollectionViewItem`cada objeto individual () obtendo sua própria exibição na coleção maior. As exibições de coleção funcionam por meio de associação de dados e técnicas de codificação de valor chave e, como tal, você deve ler a documentação de [codificação de dados e de código chave-valor](~/mac/app-fundamentals/databinding.md) antes de continuar com este artigo.
+O objetivo principal de um modo de exibição de coleção (`NSCollectionView`) é organizar visualmente um grupo de objetos de maneira organizada usando um layout de exibição de coleção (`NSCollectionViewLayout`), com cada objeto individual (`NSCollectionViewItem`) obtendo sua própria exibição na coleção maior. As exibições de coleção funcionam por meio de associação de dados e técnicas de codificação de valor chave e, como tal, você deve ler a documentação de [codificação de dados e de código chave-valor](~/mac/app-fundamentals/databinding.md) antes de continuar com este artigo.
 
-O modo de exibição de coleção não tem um item de exibição de coleção interna padrão (como uma exibição de estrutura de tópicos ou tabela), portanto, o desenvolvedor é responsável por projetar e implementar uma _exibição de protótipo_ usando outros controles AppKit, como campos de imagem, campos de texto, rótulos, diante. Essa exibição de protótipo será usada para exibir e trabalhar com cada item gerenciado pelo modo de exibição de coleção e armazenado em um `.xib` arquivo.
+O modo de exibição de coleção não tem um item de exibição de coleção interna padrão (como uma exibição de estrutura de tópicos ou tabela), portanto, o desenvolvedor é responsável por projetar e implementar uma _exibição de protótipo_ usando outros controles AppKit, como campos de imagem, campos de texto, rótulos, diante. Essa exibição de protótipo será usada para exibir e trabalhar com cada item gerenciado pelo modo de exibição de coleção e armazenado em um arquivo de `.xib`.
 
 Como o desenvolvedor é responsável pela aparência de um item de exibição de coleção, o modo de exibição de coleção não tem suporte interno para realçar um item selecionado na grade. A implementação desse recurso será abordada neste artigo.
 
@@ -183,48 +183,48 @@ namespace MacDatabinding
 }
 ```
 
-O `PersonModel` modelo de dados será usado em todo o restante deste artigo.
+O modelo de dados `PersonModel` será usado em todo o restante deste artigo.
 
 <a name="Working_with_a_Collection_View"/>
 
 ## <a name="working-with-a-collection-view"></a>Trabalhando com uma exibição de coleção
 
-A associação de dados com uma exibição de coleção é muito semelhante à associação com uma exibição `NSCollectionViewDataSource` de tabela, como é usada para fornecer dados para a coleção. Como a exibição de coleção não tem um formato de exibição predefinido, mais trabalho é necessário para fornecer comentários de interação do usuário e para rastrear a seleção do usuário.
+A associação de dados com uma exibição de coleção é muito semelhante à associação com uma exibição de tabela, pois `NSCollectionViewDataSource` é usada para fornecer dados para a coleção. Como a exibição de coleção não tem um formato de exibição predefinido, mais trabalho é necessário para fornecer comentários de interação do usuário e para rastrear a seleção do usuário.
 
 <a name="Creating-the-Cell-Prototype"/>
 
 ### <a name="creating-the-cell-prototype"></a>Criando o protótipo de célula
 
-Como o modo de exibição de coleção não inclui um protótipo de célula padrão, o desenvolvedor precisará adicionar um `.xib` ou mais arquivos ao aplicativo Xamarin. Mac para definir o layout e o conteúdo das células individuais.
+Como o modo de exibição de coleção não inclui um protótipo de célula padrão, o desenvolvedor precisará adicionar um ou mais arquivos `.xib` ao aplicativo Xamarin. Mac para definir o layout e o conteúdo das células individuais.
 
 Faça o seguinte:
 
 1. Na **Gerenciador de soluções**, clique com o botão direito do mouse no nome do projeto e selecione **Adicionar** > **novo arquivo...**
-2. Selecione > **controlador de exibição**do Mac, dê a `EmployeeItem` ele um nome (como neste exemplo) e clique no botão **novo** para criar: 
+2. Selecione controlador de **exibição**do > do **Mac** , dê a ele um nome (como `EmployeeItem` neste exemplo) e clique no botão **novo** para criar: 
 
     ![Adicionando um novo controlador de exibição](collection-view-images/proto01.png)
 
-    Isso adicionará um `EmployeeItem.cs` `EmployeeItemController.cs` arquivo e `EmployeeItemController.xib` à solução do projeto.
-3. Clique duas vezes no `EmployeeItemController.xib` arquivo para abri-lo para edição no interface Builder do Xcode.
-4. Adicione um `NSBox` `NSImageView` e dois`NSLabel` controles à exibição e deite-os da seguinte maneira:
+    Isso adicionará um arquivo `EmployeeItem.cs`, `EmployeeItemController.cs` e `EmployeeItemController.xib` à solução do projeto.
+3. Clique duas vezes no arquivo `EmployeeItemController.xib` para abri-lo para edição no Interface Builder do Xcode.
+4. Adicione um `NSBox`, `NSImageView` e dois controles de `NSLabel` à exibição e deite-os da seguinte maneira:
 
     ![Criando o layout do protótipo de célula](collection-view-images/proto02.png)
-5. Abra o **Editor do assistente** e crie uma **tomada** para `NSBox` que ela possa ser usada para indicar o estado de seleção de uma célula:
+5. Abra o **Editor do assistente** e crie uma **tomada** para o `NSBox` para que ele possa ser usado para indicar o estado de seleção de uma célula:
 
     ![Expondo o NSBox em uma tomada](collection-view-images/proto03.png)
 6. Retorne ao **editor padrão** e selecione o modo de exibição de imagem.
-7. No **Inspetor de associação**, selecione **associar ao** > **proprietário do arquivo** e insira um **caminho de chave** do `self.Person.Icon`modelo de:
+7. No **Inspetor de associação**, selecione **associar a** > **proprietário do arquivo** e insira um **caminho de chave de modelo** de `self.Person.Icon`:
 
     ![Ligando o ícone](collection-view-images/proto04.png)
-8. Selecione o primeiro rótulo e, no **Inspetor de associação**, selecione **associar ao** > **proprietário do arquivo** e insira um caminho de chave `self.Person.Name`do **modelo** de:
+8. Selecione o primeiro rótulo e, no **Inspetor de associação**, selecione **associar a** > **proprietário do arquivo** e insira um **caminho de chave do modelo** de `self.Person.Name`:
 
     ![Associando o nome](collection-view-images/proto05.png)
-9. Selecione o segundo rótulo e, no **Inspetor de associação**, selecione **associar ao** > **proprietário do arquivo** e insira um caminho de chave `self.Person.Occupation`do **modelo** de:
+9. Selecione o segundo rótulo e, no **Inspetor de associação**, selecione **associar a** > **proprietário do arquivo** e insira um **caminho de chave do modelo** de `self.Person.Occupation`:
 
     ![Associando a ocupação](collection-view-images/proto06.png)
-10. Salve as alterações `.xib` no arquivo e retorne ao Visual Studio para sincronizar as alterações.
+10. Salve as alterações no arquivo de `.xib` e retorne ao Visual Studio para sincronizar as alterações.
 
-Edite `EmployeeItemController.cs` o arquivo e faça com que ele se pareça com o seguinte:
+Edite o arquivo de `EmployeeItemController.cs` e faça com que ele se pareça com o seguinte:
 
 ```csharp
 using System;
@@ -344,9 +344,9 @@ namespace MacCollectionNew
 }
 ```
 
-Observando esse código em detalhes, a classe é herdada `NSCollectionViewItem` de para que possa atuar como um protótipo para uma célula de exibição de coleção. A `Person` Propriedade expõe a classe que foi usada para associar dados ao modo de exibição de imagem e rótulos no Xcode. Esta é uma instância do `PersonModel` criada acima.
+Observando esse código em detalhes, a classe é herdada de `NSCollectionViewItem` para que possa atuar como um protótipo para uma célula de exibição de coleção. A propriedade `Person` expõe a classe que foi usada para associar dados ao modo de exibição de imagem e rótulos no Xcode. Esta é uma instância do `PersonModel` criado acima.
 
-A `BackgroundColor` propriedade é um atalho para o `NSBox` controle `FillColor` que será usado para mostrar o status de seleção de uma célula. Ao substituir a `Selected` propriedade `NSCollectionViewItem`do, o código a seguir define ou limpa esse estado de seleção:
+A propriedade `BackgroundColor` é um atalho para o `FillColor` do controle de `NSBox` que será usado para mostrar o status de seleção de uma célula. Ao substituir a propriedade `Selected` da `NSCollectionViewItem`, o código a seguir define ou limpa esse estado de seleção:
 
 ```csharp
 public override bool Selected
@@ -373,9 +373,9 @@ public override bool Selected
 
 ### <a name="creating-the-collection-view-data-source"></a>Criando a fonte de dados de exibição de coleção
 
-Uma fonte de dados de exibição`NSCollectionViewDataSource`de coleção () fornece todos os dados para uma exibição de coleção e cria e popula uma célula de exibição de `.xib` coleção (usando o protótipo) conforme necessário para cada item na coleção.
+Uma fonte de dados de exibição de coleção (`NSCollectionViewDataSource`) fornece todos os dados para uma exibição de coleção e cria e popula uma célula de exibição de coleção (usando o protótipo de `.xib`) conforme necessário para cada item na coleção.
 
-Adicione uma nova classe ao projeto, chame- `CollectionViewDataSource` a e faça com que ela se pareça com a seguinte:
+Adicione uma nova classe ao projeto, chame-a `CollectionViewDataSource` e faça com que ela fique parecida com a seguinte:
 
 ```csharp
 using System;
@@ -462,11 +462,11 @@ namespace MacCollectionNew
 }
 ```
 
-Observando esse código em detalhes, a classe herda de `NSCollectionViewDataSource` e expõe uma lista de `PersonModel` instâncias por meio de `Data` sua propriedade.
+Observando esse código em detalhes, a classe é herdada de `NSCollectionViewDataSource` e expõe uma lista de instâncias de `PersonModel` por meio de sua propriedade `Data`.
 
-Como essa coleção tem apenas uma seção, o código substitui o `GetNumberOfSections` método e sempre retorna `1`. Além disso, `GetNumberofItems` o método é substituído por ele retorna o número de itens `Data` na lista de propriedades.
+Como essa coleção tem apenas uma seção, o código substitui o método `GetNumberOfSections` e sempre retorna `1`. Além disso, o método `GetNumberofItems` é substituído por ele retorna o número de itens na lista de propriedades `Data`.
 
-O `GetItem` método é chamado sempre que uma nova célula é necessária e é semelhante ao seguinte:
+O método `GetItem` é chamado sempre que uma nova célula é necessária e é semelhante ao seguinte:
 
 ```csharp
 public override NSCollectionViewItem GetItem(NSCollectionView collectionView, NSIndexPath indexPath)
@@ -478,7 +478,7 @@ public override NSCollectionViewItem GetItem(NSCollectionView collectionView, NS
 }
 ```
 
-O `MakeItem` método da exibição de coleção é chamado para criar ou retornar uma instância reutilizável `EmployeeItemController` do e sua `Person` propriedade é definida como item que está sendo exibido na célula solicitada. 
+O método `MakeItem` da exibição de coleção é chamado para criar ou retornar uma instância reutilizável do `EmployeeItemController` e sua propriedade `Person` é definida como item que está sendo exibido na célula solicitada. 
 
 O `EmployeeItemController` deve ser registrado com o controlador de exibição de coleção com antecedência usando o seguinte código:
 
@@ -486,15 +486,15 @@ O `EmployeeItemController` deve ser registrado com o controlador de exibição d
 EmployeeCollection.RegisterClassForItem(typeof(EmployeeItemController), "EmployeeCell");
 ``` 
 
-O **identificador** (`EmployeeCell` `MakeItem` ) usado na chamada _deve_ corresponder ao nome do controlador de exibição que foi registrado com o modo de exibição de coleção. Esta etapa será abordada em detalhes abaixo.
+O **identificador** (`EmployeeCell`) usado na chamada `MakeItem` _deve_ corresponder ao nome do controlador de exibição que foi registrado com o modo de exibição de coleção. Esta etapa será abordada em detalhes abaixo.
 
 <a name="Handling-Item-Selection"/>
 
 ### <a name="handling-item-selection"></a>Manipulação da seleção de item
 
-Para lidar com a seleção e a desseleção de itens na coleção, um `NSCollectionViewDelegate` será necessário. Como este exemplo usará o tipo de `NSCollectionViewFlowLayout` layout interno, uma `NSCollectionViewDelegateFlowLayout` versão específica desse delegado será necessária.
+Para lidar com a seleção e a desseleção de itens na coleção, um `NSCollectionViewDelegate` será necessário. Como este exemplo usará o tipo de layout de `NSCollectionViewFlowLayout` interno, um `NSCollectionViewDelegateFlowLayout` versão específica desse delegado será necessário.
 
-Adicione uma nova classe ao projeto, chame- `CollectionViewDelegate` a e faça com que ela se pareça com a seguinte:
+Adicione uma nova classe ao projeto, chame-a `CollectionViewDelegate` e faça com que seja semelhante ao seguinte:
 
 ```csharp
 using System;
@@ -565,7 +565,7 @@ namespace MacCollectionNew
 }
 ``` 
 
-Os `ItemsSelected` métodos `ItemsDeselected` e são substituídos e usados para definir ou limpar `PersonSelected` a propriedade do controlador de exibição que está manipulando a exibição de coleção quando o usuário seleciona ou anula a seleção de um item. Isso será mostrado em detalhes abaixo.
+Os métodos `ItemsSelected` e `ItemsDeselected` são substituídos e usados para definir ou desmarcar a propriedade `PersonSelected` do controlador de exibição que está manipulando a exibição de coleção quando o usuário seleciona ou anula a seleção de um item. Isso será mostrado em detalhes abaixo.
 
 <a name="Creating-the-Collection-View-in-Interface-Builder"/>
 
@@ -575,7 +575,7 @@ Com todas as partes de suporte necessárias em vigor, o storyboard principal pod
 
 Faça o seguinte:
 
-1. Clique duas vezes no `Main.Storyboard` arquivo no **Gerenciador de soluções** para abri-lo para edição no interface Builder do Xcode.
+1. Clique duas vezes no arquivo `Main.Storyboard` no **Gerenciador de soluções** para abri-lo para edição no interface Builder do Xcode.
 2. Arraste uma exibição de coleção para a exibição principal e redimensione-a para preencher a exibição:
 
     ![Adicionando uma exibição de coleção ao layout](collection-view-images/collection01.png)
@@ -591,11 +591,11 @@ Faça o seguinte:
 
 ## <a name="bringing-it-all-together"></a>Reunindo tudo isso
 
-Todas as partes de suporte agora foram colocadas em vigor com uma classe para atuar como o modelo de dados (`PersonModel`), um `NSCollectionViewDataSource` foi adicionado para fornecer dados, um `NSCollectionViewDelegateFlowLayout` foi criado para tratar a seleção de itens e `NSCollectionView` um foi adicionado ao storyboard principal e é exposto como uma tomada`EmployeeCollection`().
+Todas as partes de suporte agora foram colocadas em vigor com uma classe para atuar como o modelo de dados (`PersonModel`), um `NSCollectionViewDataSource` foi adicionado para fornecer dados, um `NSCollectionViewDelegateFlowLayout` foi criado para tratar a seleção de itens e um `NSCollectionView` foi adicionado ao storyboard principal e exposto como uma tomada (`EmployeeCollection`).
 
 A etapa final é editar o controlador de exibição que contém a exibição de coleção e reunir todas as partes para preencher a coleção e tratar a seleção de itens.
 
-Edite `ViewController.cs` o arquivo e faça com que ele se pareça com o seguinte:
+Edite o arquivo de `ViewController.cs` e faça com que ele se pareça com o seguinte:
 
 ```csharp
 using System;
@@ -736,28 +736,28 @@ namespace MacCollectionNew
 }
 ```
 
-Dando uma olhada nesse código em detalhes, uma `Datasource` propriedade é definida para manter uma instância `CollectionViewDataSource` do que fornecerá os dados para o modo de exibição de coleção. Uma `PersonSelected` propriedade é definida para manter a `PersonModel` representação do item atualmente selecionado no modo de exibição de coleção. Essa propriedade também gera o `SelectionChanged` evento quando a seleção é alterada.
+Dando uma olhada nesse código em detalhes, uma propriedade `Datasource` é definida para manter uma instância do `CollectionViewDataSource` que fornecerá os dados para o modo de exibição de coleção. Uma propriedade `PersonSelected` é definida para manter o `PersonModel` que representa o item atualmente selecionado no modo de exibição de coleção. Essa propriedade também gera o evento `SelectionChanged` quando a seleção é alterada.
 
-A `ConfigureCollectionView` classe é usada para registrar o controlador de exibição que atua como o protótipo de célula com o modo de exibição de coleção usando a seguinte linha:
+A classe `ConfigureCollectionView` é usada para registrar o controlador de exibição que atua como o protótipo de célula com o modo de exibição de coleção usando a seguinte linha:
 
 ```csharp
 EmployeeCollection.RegisterClassForItem(typeof(EmployeeItemController), "EmployeeCell");
 ```
 
-Observe que o **identificador** (`EmployeeCell`) usado para registrar o protótipo corresponde ao que foi chamado no `GetItem` método do `CollectionViewDataSource` definido acima:
+Observe que o **identificador** (`EmployeeCell`) usado para registrar o protótipo corresponde ao que foi chamado no método `GetItem` do `CollectionViewDataSource` definido acima:
 
 ```csharp
 var item = collectionView.MakeItem("EmployeeCell", indexPath) as EmployeeItemController;
 ...
 ```
 
-Além disso, o tipo do controlador de exibição **deve** corresponder ao nome do `.xib` arquivo que define o protótipo **exatamente**. No caso deste exemplo, `EmployeeItemController` e. `EmployeeItemController.xib`
+Além disso, o tipo do controlador de exibição **deve** corresponder ao nome do arquivo de `.xib` que define o protótipo **exatamente**. No caso deste exemplo, `EmployeeItemController` e `EmployeeItemController.xib`.
 
-O layout real dos itens na exibição de coleção é controlado por uma classe de layout de exibição de coleção e pode ser alterado dinamicamente no tempo de execução, atribuindo uma nova `CollectionViewLayout` instância à propriedade. A alteração dessa propriedade atualiza a aparência da exibição de coleção sem animar a alteração.
+O layout real dos itens na exibição de coleção é controlado por uma classe de layout de exibição de coleção e pode ser alterado dinamicamente no tempo de execução, atribuindo uma nova instância à propriedade `CollectionViewLayout`. A alteração dessa propriedade atualiza a aparência da exibição de coleção sem animar a alteração.
 
-A Apple envia dois tipos de layout internos com o modo de exibição de coleção que manipulará os `NSCollectionViewFlowLayout` usos `NSCollectionViewGridLayout`mais comuns: e. Se o desenvolvedor precisar de um formato personalizado, como dispor os itens em um círculo, ele poderá criar uma instância personalizada do `NSCollectionViewLayout` e substituir os métodos necessários para obter o efeito desejado.
+A Apple fornece dois tipos de layout internos com o modo de exibição de coleção que manipulará os usos mais comuns: `NSCollectionViewFlowLayout` e `NSCollectionViewGridLayout`. Se o desenvolvedor precisar de um formato personalizado, como dispor os itens em um círculo, ele poderá criar uma instância personalizada do `NSCollectionViewLayout` e substituir os métodos necessários para obter o efeito desejado.
 
-Este exemplo usa o layout de fluxo padrão para que ele crie uma instância `NSCollectionViewFlowLayout` da classe e a configure da seguinte maneira:
+Este exemplo usa o layout de fluxo padrão para que ele crie uma instância da classe `NSCollectionViewFlowLayout` e a configure da seguinte maneira:
 
 ```csharp
 var flowLayout = new NSCollectionViewFlowLayout()
@@ -769,7 +769,7 @@ var flowLayout = new NSCollectionViewFlowLayout()
 };
 ```
 
-A `ItemSize` propriedade define o tamanho de cada célula individual na coleção. A `SectionInset` propriedade define as indefinições da borda da coleção nas quais as células serão dispostas. `MinimumInteritemSpacing`define o espaçamento mínimo entre os `MinimumLineSpacing` itens e define o espaçamento mínimo entre as linhas na coleção.
+A propriedade `ItemSize` define o tamanho de cada célula individual na coleção. A propriedade `SectionInset` define as indefinições da borda da coleção na qual as células serão dispostas. `MinimumInteritemSpacing` define o espaçamento mínimo entre os itens e `MinimumLineSpacing` define o espaçamento mínimo entre as linhas na coleção.
 
 O layout é atribuído à exibição de coleção e uma instância do `CollectionViewDelegate` é anexada para tratar a seleção de itens:
 
@@ -779,7 +779,7 @@ EmployeeCollection.CollectionViewLayout = flowLayout;
 EmployeeCollection.Delegate = new CollectionViewDelegate(this);
 ```
 
-O `PopulateWithData` método cria uma nova instância `CollectionViewDataSource`do, popula-a com os dados, anexa-a à exibição de coleção e chama o `ReloadData` método para exibir os itens:
+O método `PopulateWithData` cria uma nova instância do `CollectionViewDataSource`, popula-a com os dados, anexa-a à exibição de coleção e chama o método `ReloadData` para exibir os itens:
 
 ```csharp
 private void PopulateWithData()
@@ -796,7 +796,7 @@ private void PopulateWithData()
 }
 ```
 
-O `ViewDidLoad` método é substituído e chama os `ConfigureCollectionView` métodos `PopulateWithData` e para exibir a exibição de coleção final para o usuário:
+O método `ViewDidLoad` é substituído e chama os métodos `ConfigureCollectionView` e `PopulateWithData` para exibir a exibição de coleção final para o usuário:
 
 ```csharp
 public override void ViewDidLoad()

@@ -4,15 +4,15 @@ description: Este tópico demonstra como controlar eventos de toque de vários d
 ms.prod: xamarin
 ms.assetid: 048D51F9-BD6C-4B44-8C53-CCEF276FC5CC
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/25/2018
-ms.openlocfilehash: 6dd3bf848d38f0211dcda100994f6f7ec8831fce
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: f960c3cec90bd331f5a1433a869c7720b40c9680
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70754685"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73024276"
 ---
 # <a name="multi-touch-finger-tracking"></a>Acompanhamento de dedos multitoque
 
@@ -23,7 +23,7 @@ Há ocasiões em que um aplicativo multitoque precisa acompanhar os dedos indivi
 Para todos os eventos associados a um dedo específico, o código de ID permanece o mesmo. O código de ID é atribuído quando um dedo entra na tela pela primeira vez e se torna inválido depois que o dedo é levantado da tela.
 Esses códigos de ID geralmente são inteiros muito pequenos e o Android os reutiliza para eventos de toque posteriores.
 
-Quase sempre, um programa que controla os dedos individuais mantém um dicionário para acompanhamento de toque. A chave de dicionário é o código de ID que identifica um dedo específico. O valor do dicionário depende do aplicativo. No programa [FingerPaint](https://docs.microsoft.com/samples/xamarin/monodroid-samples/applicationfundamentals-fingerpaint) , cada traço de dedo (de toque para liberação) é associado a um objeto que contém todas as informações necessárias para renderizar a linha desenhada com esse dedo. O programa define uma classe `FingerPaintPolyline` pequena para essa finalidade:
+Quase sempre, um programa que controla os dedos individuais mantém um dicionário para acompanhamento de toque. A chave de dicionário é o código de ID que identifica um dedo específico. O valor do dicionário depende do aplicativo. No programa [FingerPaint](https://docs.microsoft.com/samples/xamarin/monodroid-samples/applicationfundamentals-fingerpaint) , cada traço de dedo (de toque para liberação) é associado a um objeto que contém todas as informações necessárias para renderizar a linha desenhada com esse dedo. O programa define uma pequena classe de `FingerPaintPolyline` para essa finalidade:
 
 ```csharp
 class FingerPaintPolyline
@@ -41,29 +41,29 @@ class FingerPaintPolyline
 }
 ```
 
-Cada polilinha tem uma cor, uma largura de traço e um objeto de [`Path`](xref:Android.Graphics.Path) gráfico do Android para acumular e renderizar vários pontos da linha à medida que ele está sendo desenhado.
+Cada polilinha tem uma cor, uma largura de traço e um elemento gráfico do Android [`Path`](xref:Android.Graphics.Path) objeto para acumular e renderizar vários pontos da linha à medida que ele está sendo desenhado.
 
-O restante do código mostrado abaixo está contido em um `View` nome `FingerPaintCanvasView`derivado. Essa classe mantém um dicionário de objetos do tipo `FingerPaintPolyline` durante o tempo que estão sendo desenhados ativamente por um ou mais dedos:
+O restante do código mostrado abaixo está contido em uma derivação `View` chamada `FingerPaintCanvasView`. Essa classe mantém um dicionário de objetos do tipo `FingerPaintPolyline` durante o tempo em que eles estão sendo desenhados ativamente por um ou mais dedos:
 
 ```csharp
 Dictionary<int, FingerPaintPolyline> inProgressPolylines = new Dictionary<int, FingerPaintPolyline>();
 ```
 
-Esse dicionário permite que a exibição Obtenha rapidamente as `FingerPaintPolyline` informações associadas a um dedo específico.
+Esse dicionário permite que a exibição Obtenha rapidamente as informações de `FingerPaintPolyline` associadas a um dedo específico.
 
-A `FingerPaintCanvasView` classe também mantém um `List` objeto para as polilinhas que foram concluídas:
+A classe `FingerPaintCanvasView` também mantém um objeto `List` para as polilinhas que foram concluídas:
 
 ```csharp
 List<FingerPaintPolyline> completedPolylines = new List<FingerPaintPolyline>();
 ```
 
-Os objetos nele `List` estão na mesma ordem em que foram desenhados.
+Os objetos neste `List` estão na mesma ordem em que foram desenhados.
 
-`FingerPaintCanvasView`Substitui dois métodos definidos por `View`:[`OnDraw`](xref:Android.Views.View.OnDraw*)
+`FingerPaintCanvasView` substitui dois métodos definidos por `View`: [`OnDraw`](xref:Android.Views.View.OnDraw*)
 e [`OnTouchEvent`](xref:Android.Views.View.OnTouchEvent*).
-Em sua `OnDraw` substituição, a exibição desenha as polilinhas concluídas e, em seguida, desenha as polilinhas em andamento.
+Em sua `OnDraw` substituir, a exibição desenha as polilinhas concluídas e, em seguida, desenha as polilinhas em andamento.
 
-A substituição do `OnTouchEvent` método começa obtendo um `pointerIndex` valor da `ActionIndex` propriedade. Esse `ActionIndex` valor diferencia entre vários dedos, mas não é consistente entre vários eventos. Por esse motivo, você usa o `pointerIndex` para obter o valor `id` do ponteiro do `GetPointerId` método. Essa ID *é* consistente entre vários eventos:
+A substituição do método `OnTouchEvent` começa obtendo um valor de `pointerIndex` da propriedade `ActionIndex`. Esse `ActionIndex` valor diferencia entre vários dedos, mas não é consistente entre vários eventos. Por esse motivo, você usa a `pointerIndex` para obter o ponteiro `id` valor do método `GetPointerId`. Essa ID *é* consistente entre vários eventos:
 
 ```csharp
 public override bool OnTouchEvent(MotionEvent args)
@@ -88,17 +88,17 @@ public override bool OnTouchEvent(MotionEvent args)
 }
 ```
 
-Observe que a substituição usa a `ActionMasked` propriedade `switch` na instrução em vez da `Action` propriedade. Eis o porquê:
+Observe que a substituição usa a propriedade `ActionMasked` na instrução `switch` em vez da propriedade `Action`. Eis o porquê:
 
-Quando você está lidando com o `Action` multitoque, a propriedade tem um valor de `MotionEventsAction.Down` para o primeiro dedo tocar na tela e os valores de `Pointer2Down` e `Pointer3Down` como o segundo e o terceiro dedos também tocam na tela. Como o quarto e o quinto dedos fazem contato, `Action` a propriedade tem valores numéricos que nem mesmo correspondem aos membros `MotionEventsAction` da enumeração! Você precisará examinar os valores dos sinalizadores de bits nos valores para interpretar o que significam.
+Quando você está lidando com o multitoque, a propriedade `Action` tem um valor de `MotionEventsAction.Down` para o primeiro dedo tocar na tela e os valores de `Pointer2Down` e `Pointer3Down` como o segundo e o terceiro dedos também tocam na tela. Como o quarto e o quinto dedos fazem contato, a propriedade `Action` tem valores numéricos que nem mesmo correspondem aos membros da enumeração `MotionEventsAction`! Você precisará examinar os valores dos sinalizadores de bits nos valores para interpretar o que significam.
 
-Da mesma forma, como os dedos deixam contato com a tela `Action` , a propriedade tem `Pointer2Up` valores `Pointer3Up` de e para o segundo e o terceiro `Up` dedos e para o primeiro dedo.
+Da mesma forma, como os dedos deixam contato com a tela, a propriedade `Action` tem valores de `Pointer2Up` e `Pointer3Up` para o segundo e o terceiro dedos e `Up` para o primeiro dedo.
 
-A `ActionMasked` propriedade usa um número menor de valores porque ela deve ser usada em conjunto com a `ActionIndex` propriedade para diferenciar entre vários dedos. Quando os dedos tocam na tela, a propriedade só `MotionEventActions.Down` pode ser igual ao primeiro `PointerDown` dedo e para os dedos subsequentes. Como os dedos saem da tela, `ActionMasked` tem valores de `Pointer1Up` para os dedos subsequentes `Up` e para o primeiro dedo.
+A propriedade `ActionMasked` usa um número menor de valores porque ela deve ser usada em conjunto com a propriedade `ActionIndex` para diferenciar entre vários dedos. Quando os dedos tocam na tela, a propriedade só pode ser igual `MotionEventActions.Down` para o primeiro dedo e `PointerDown` para os dedos subsequentes. Como os dedos saem da tela, `ActionMasked` tem valores de `Pointer1Up` para os dedos subseqüentes e `Up` para o primeiro dedo.
 
-Ao usar `ActionMasked`o, `ActionIndex` o faz distinção entre os dedos subsequentes para tocar e sair da tela, mas normalmente não é necessário usar esse valor, exceto como um argumento `MotionEvent` para outros métodos no objeto. Para o multitoque, um dos mais importantes desses métodos é `GetPointerId` chamado no código acima. Esse método retorna um valor que você pode usar para uma chave de dicionário para associar eventos específicos a dedos.
+Ao usar `ActionMasked`, o `ActionIndex` distingue entre os dedos subsequentes para tocar e sair da tela, mas normalmente não é necessário usar esse valor, exceto como um argumento para outros métodos no objeto `MotionEvent`. Para multitoque, um dos métodos mais importantes é `GetPointerId` chamado no código acima. Esse método retorna um valor que você pode usar para uma chave de dicionário para associar eventos específicos a dedos.
 
-A `OnTouchEvent` substituição no programa [FingerPaint](https://docs.microsoft.com/samples/xamarin/monodroid-samples/applicationfundamentals-fingerpaint) processa os eventos `MotionEventActions.Down` e `PointerDown` de forma idêntica, criando um novo `FingerPaintPolyline` objeto e adicionando-o ao dicionário:
+A substituição de `OnTouchEvent` no programa [FingerPaint](https://docs.microsoft.com/samples/xamarin/monodroid-samples/applicationfundamentals-fingerpaint) processa os `MotionEventActions.Down` e `PointerDown` eventos de forma idêntica ao criar um novo objeto `FingerPaintPolyline` e adicioná-lo ao dicionário:
 
 ```csharp
 public override bool OnTouchEvent(MotionEvent args)
@@ -133,9 +133,9 @@ public override bool OnTouchEvent(MotionEvent args)
 }
 ```
 
-Observe que o `pointerIndex` também é usado para obter a posição do dedo dentro da exibição. Todas as informações de toque estão associadas `pointerIndex` ao valor. O `id` identifica exclusivamente os dedos em várias mensagens, portanto, é usado para criar a entrada do dicionário.
+Observe que a `pointerIndex` também é usada para obter a posição do dedo dentro da exibição. Todas as informações de toque estão associadas ao valor de `pointerIndex`. O `id` identifica exclusivamente os dedos em várias mensagens, portanto, é usado para criar a entrada do dicionário.
 
-Da mesma forma `OnTouchEvent` , a substituição também `MotionEventActions.Up` manipula `Pointer1Up` o e, de maneira idêntica, transferindo a `completedPolylines` polilinha concluída para a coleção para que ela `OnDraw` possa ser desenhada durante a substituição. O código também remove a `id` entrada do dicionário:
+Da mesma forma, a substituição de `OnTouchEvent` também manipula o `MotionEventActions.Up` e `Pointer1Up` de maneira idêntica ao transferir a polilinha concluída para a coleção de `completedPolylines` para que elas possam ser desenhadas durante a substituição de `OnDraw`. O código também remove a entrada `id` do dicionário:
 
 ```csharp
 public override bool OnTouchEvent(MotionEvent args)
@@ -165,7 +165,7 @@ public override bool OnTouchEvent(MotionEvent args)
 
 Agora, para a parte complicada.
 
-Entre os eventos down e up, geralmente há muitos `MotionEventActions.Move` eventos. Eles são agrupados em uma única chamada para `OnTouchEvent`e devem ser tratados `Down` de forma diferente dos eventos e `Up` . O `pointerIndex` valor obtido anteriormente `ActionIndex` da propriedade deve ser ignorado. Em vez disso, o método deve `pointerIndex` obter vários valores fazendo `pointerIndex` um loop entre 0 `PointerCount` e a propriedade e, em `id` seguida, obter um para cada um desses valores:
+Entre os eventos down e up, geralmente há muitos eventos de `MotionEventActions.Move`. Eles são agrupados em uma única chamada para `OnTouchEvent`e devem ser tratados de forma diferente dos eventos `Down` e `Up`. O valor de `pointerIndex` obtido anteriormente da propriedade `ActionIndex` deve ser ignorado. Em vez disso, o método deve obter vários valores de `pointerIndex` fazendo um loop entre 0 e a propriedade `PointerCount` e, em seguida, obter uma `id` para cada um desses valores de `pointerIndex`:
 
 ```csharp
 public override bool OnTouchEvent(MotionEvent args)
@@ -193,7 +193,7 @@ public override bool OnTouchEvent(MotionEvent args)
 
 Esse tipo de processamento permite que o programa [FingerPaint](https://docs.microsoft.com/samples/xamarin/monodroid-samples/applicationfundamentals-fingerpaint) acompanhe os dedos individuais e desenhe os resultados na tela:
 
-[![Exemplo de captura de tela do exemplo de FingerPaint](touch-tracking-images/image01.png)](touch-tracking-images/image01.png#lightbox)
+[![exemplo de captura de tela do exemplo de FingerPaint](touch-tracking-images/image01.png)](touch-tracking-images/image01.png#lightbox)
 
 Agora você viu como é possível acompanhar os dedos individuais na tela e fazer distinção entre eles.
 

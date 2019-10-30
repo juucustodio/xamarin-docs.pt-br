@@ -4,15 +4,15 @@ description: As telas de toque em muitos dos dispositivos atuais permitem que os
 ms.prod: xamarin
 ms.assetid: 61874769-978A-4562-9B2A-7FFD45F58B38
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: 54f036b2a845b7d2f6603b6b9f54472ad2af8bcd
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 43637d8592631b2732e5922544f52d91947dd3bd
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70754713"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73024291"
 ---
 # <a name="touch-and-gestures-in-xamarinandroid"></a>Toque e gestos no Xamarin. Android
 
@@ -22,7 +22,7 @@ _As telas de toque em muitos dos dispositivos atuais permitem que os usuários i
 
 o iOS e o Android são semelhantes de como lidam com o Touch. Ambos podem dar suporte a vários pontos de contato diversos na tela e em gestos complexos. Este guia apresenta algumas das semelhanças em conceitos, bem como as particularidades de implementação de toque e gestos em ambas as plataformas.
 
-O Android usa `MotionEvent` um objeto para encapsular dados de toque e métodos no objeto de exibição para ouvir os toques.
+O Android usa um objeto `MotionEvent` para encapsular dados de toque e métodos no objeto de exibição para ouvir os toques.
 
 Além de capturar dados de toque, o iOS e o Android fornecem meios para interpretar padrões de toques em gestos. Esses reconhecedores de gesto podem, por sua vez, ser usados para interpretar comandos específicos do aplicativo, como uma rotação de uma imagem ou uma rodada de uma página. O Android fornece alguns gestos com suporte, bem como recursos para facilitar a adição de gestos personalizados complexos.
 
@@ -33,7 +33,7 @@ Este guia segue um formato semelhante para cada sistema operacional: primeiro, a
 ## <a name="sections"></a>Seções
 
 - [Toque no Android](~/android/app-fundamentals/touch/android-touch-walkthrough.md)
-- [Passo a passo: Usando o touch no Android](~/android/app-fundamentals/touch/android-touch-walkthrough.md)
+- [Walkthrough: usando o touch no Android](~/android/app-fundamentals/touch/android-touch-walkthrough.md)
 - [Controle multitoque](touch-tracking.md)
 
 ## <a name="summary"></a>Resumo

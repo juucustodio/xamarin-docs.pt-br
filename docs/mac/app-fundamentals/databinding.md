@@ -4,15 +4,15 @@ description: Este artigo aborda o uso da codificação de valor-chave e da obser
 ms.prod: xamarin
 ms.assetid: 72594395-0737-4894-8819-3E1802864BE7
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 0caed670e09c268bce4fe66cd5857313ac8ed174
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: 81a1f63078a5f7a2a70f731d1790f85f4283d22f
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "70769999"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030214"
 ---
 # <a name="data-binding-and-key-value-coding-in-xamarinmac"></a>Vinculação de dados e codificação de chave-valor no Xamarin. Mac
 
@@ -334,7 +334,7 @@ public NSArray People {
 Duas coisas a serem observadas aqui:
 
 1. Usamos um `NSMutableArray` em vez de uma matriz C# ou coleção padrão, pois isso é um requisito para associar dados a controles AppKit, como **exibições de tabela**, **exibições de estrutura de tópicos** e **coleções**.
-2. Exportamos a matriz de funcionários ao convertê-lo em um `NSArray` para fins de associação C# de dados e alteramos seu nome formatado, `People`, para um que a associação de dados espera, `personModelArray` na forma de **matriz {class_name}** (Observe que o primeiro caractere foi feito minúsculas).
+2. Expunhamos a matriz de funcionários ao convertê-lo em um `NSArray` para fins de vinculação C# de dados e alteramos seu nome formatado, `People`, para um que a ligação de dados espera, `personModelArray` na forma de **matriz {class_name}** (Observe que o primeiro caractere foi tornar-se minúsculas).
 
 Em seguida, precisamos adicionar alguns métodos públicos de nome especialmente para dar suporte a **controladores de matriz** e de **árvore**:
 

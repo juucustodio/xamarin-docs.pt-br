@@ -4,15 +4,15 @@ description: Como começar a desenvolver aplicativos para a pizza do Android 9 u
 ms.prod: xamarin
 ms.assetid: 6575DD32-9DC8-44E6-85EF-1F8BD07D3780
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 08/21/2018
-ms.openlocfilehash: 6475cd0f27e41321902b57dd28f59bfb250e0c8f
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 0105b43116df697bc6688becb77298c236dfa601
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70757457"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73019882"
 ---
 # <a name="android-pie-features"></a>Recursos de pizza do Android
 
@@ -30,14 +30,14 @@ O Xamarin. Android 9,0 fornece suporte para a pizza do Android. Para obter mais 
 
 A lista a seguir é necessária para usar os recursos de pizza do Android em aplicativos baseados no Xamarin:
 
-- **Visual Studio** &ndash; O Visual Studio 2019 é recomendado.
+- O **visual studio** &ndash; visual Studio 2019 é recomendado.
     Se você estiver usando o Visual Studio 2017, no Windows Update para o Visual Studio 2017 versão 15,8 ou posterior. No macOS, atualize para o Visual Studio 2017 para Mac versão 7,6 ou posterior.
 
-- **Xamarin. Android** &ndash; xamarin. Android 9.0.0.17 ou posterior deve ser instalado com o Visual Studio (o xamarin. Android é instalado automaticamente como parte do **desenvolvimento móvel com** carga de trabalho do .net).
+- O **xamarin. android** &ndash; Xamarin. Android 9.0.0.17 ou posterior deve ser instalado com o Visual Studio (o Xamarin. Android é instalado automaticamente como parte do **desenvolvimento móvel com** carga de trabalho do .net).
 
-- **Java Developer Kit** &ndash;O desenvolvimento do Xamarin Android 9,0 requer o [JDK 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) (ou você pode experimentar a versão prévia da distribuição da Microsoft do [OpenJDK](~/android/get-started/installation/openjdk.md)). O JDK8 é instalado automaticamente como parte do **desenvolvimento móvel com** carga de trabalho do .net.
+- O **Java Developer Kit** &ndash; o desenvolvimento do Xamarin Android 9,0 requer o [JDK 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) (ou você pode experimentar a versão prévia da distribuição da Microsoft do [OpenJDK](~/android/get-started/installation/openjdk.md)). O JDK8 é instalado automaticamente como parte do **desenvolvimento móvel com** carga de trabalho do .net.
 
-- **SDK do Android** &ndash; SDK do Android API 28 ou posterior deve ser instalada por meio do Gerenciador de SDK do Android.
+- **SDK do Android** &ndash; SDK do Android API 28 ou posterior deve ser instalada por meio do gerenciador de SDK do Android.
 
 ## <a name="getting-started"></a>Introdução
 
@@ -67,11 +67,11 @@ Para criar um projeto com o Xamarin. Android 9,0, primeiro você deve usar o SDK
 
 2. No canto inferior direito, clique no ícone de engrenagem e selecione **repositório > Google (sem suporte)** :
 
-    [![Configurando o repositório para o Google](pie-images/vs/set-repo-sml.png)](pie-images/vs/set-repo.png#lightbox)
+    [![definir o repositório para o Google](pie-images/vs/set-repo-sml.png)](pie-images/vs/set-repo.png#lightbox)
 
 3. Instale os pacotes do SDK de **pizza do Android** , listados como **SDK do Android plataforma 28** na guia **plataformas** (para obter mais informações sobre como usar o Gerenciador do SDK, consulte [SDK do Android setup](~/android/get-started/installation/android-sdk.md)):
 
-    [![Instalando pacotes de pizza do Android](pie-images/vs/sdk-manager-sml.png)](pie-images/vs/sdk-manager.png#lightbox)
+    [![instalar pacotes de pizza do Android](pie-images/vs/sdk-manager-sml.png)](pie-images/vs/sdk-manager.png#lightbox)
 
 4. Se você estiver usando um emulador, crie um dispositivo virtual que dê suporte ao **nível de API 28**. Para obter mais informações sobre como criar dispositivos virtuais, consulte [Managing Virtual Devices With the Android Device Manager](~/android/get-started/installation/android-emulator/device-manager.md).
 
@@ -92,13 +92,13 @@ Para obter informações sobre como usar o emulador do Android para teste e depu
 
 A pizza do Android apresenta uma variedade de novos recursos. Alguns desses novos recursos destinam-se a aproveitar os novos recursos de hardware oferecidos pelos dispositivos Android mais recentes, enquanto outros foram projetados para aprimorar ainda mais a experiência do usuário do Android:
 
-- **Exibir suporte a recorte** Fornece APIs para localizar o local e a forma do _recorte_ na parte superior da tela em dispositivos Android mais recentes. &ndash;
+- **Exibir suporte a recorte** &ndash; fornece APIs para localizar o local e a forma do _recorte_ na parte superior da tela em dispositivos Android mais recentes.
 
-- **Aprimoramentos de notificação** As mensagens de notificação agora podem exibir imagens e uma `Person` nova classe é usada para simplificar os participantes da conversa. &ndash;
+- Os **aprimoramentos de notificação** &ndash; mensagens de notificação agora podem exibir imagens e uma nova classe de `Person` é usada para simplificar os participantes da conversa.
 
-- **Posicionamento interno** &ndash; Suporte de plataforma para o protocolo de tempo de ida e volta de WiFi, o que possibilita que os aplicativos usem dispositivos WiFi para navegação em configurações de interno.
+- **Posicionamento interno** &ndash; suporte à plataforma para o protocolo de tempo de ida e volta de Wi-Fi, o que possibilita que os aplicativos usem dispositivos WiFi para navegação em configurações de interno.
 
-- **Suporte a várias câmeras** &ndash; Oferece a capacidade de acessar fluxos simultaneamente de várias câmeras físicas (como câmeras duplas e duplas).
+- O **suporte a várias câmeras** &ndash; oferece a capacidade de acessar fluxos simultaneamente de várias câmeras físicas (como câmeras duplas e duplas).
 
 As seções a seguir destacam esses recursos e fornecem exemplos de código breve para ajudá-lo a começar a usá-los em seu aplicativo.
 
@@ -107,15 +107,15 @@ As seções a seguir destacam esses recursos e fornecem exemplos de código brev
 Muitos dispositivos Android mais recentes com telas de borda a borda têm um *recorte de exibição* (ou "entalhe") na parte superior da exibição para câmera e palestrante.
 A captura de tela a seguir fornece um exemplo de emulador de um recorte:
 
-[![Emulador do Android simulando um recorte](pie-images/02-example-cutout-sml.png)](pie-images/02-example-cutout.png#lightbox)
+[![o emulador do Android simulando um recorte](pie-images/02-example-cutout-sml.png)](pie-images/02-example-cutout.png#lightbox)
 
 Para gerenciar como a janela do aplicativo exibe seu conteúdo em dispositivos com um recorte de exibição, a pizza do Android adicionou um novo atributo de layout de janela [LayoutInDisplayCutoutMode](https://developer.android.com/reference/android/view/WindowManager.LayoutParams.html#layoutInDisplayCutoutMode) . Esse atributo pode ser definido como um dos seguintes valores:
 
-- [LayoutInDisplayCutoutModeNever](https://developer.android.com/reference/android/view/WindowManager.LayoutParams.html#LAYOUT_IN_DISPLAY_CUTOUT_MODE_NEVER) &ndash; A janela nunca pode se sobrepor à área de recorte.
+- [LayoutInDisplayCutoutModeNever](https://developer.android.com/reference/android/view/WindowManager.LayoutParams.html#LAYOUT_IN_DISPLAY_CUTOUT_MODE_NEVER) &ndash; a janela nunca tenha permissão para se sobrepor à área de recorte.
 
-- [LayoutInDisplayCutoutModeShortEdges](https://developer.android.com/reference/android/view/WindowManager.LayoutParams.html#LAYOUT_IN_DISPLAY_CUTOUT_MODE_SHORT_EDGES) &ndash; A janela tem permissão para se estender para a área de recorte, mas apenas nas bordas curtas da tela. 
+- [LayoutInDisplayCutoutModeShortEdges](https://developer.android.com/reference/android/view/WindowManager.LayoutParams.html#LAYOUT_IN_DISPLAY_CUTOUT_MODE_SHORT_EDGES) &ndash; a janela tem permissão para se estender para a área de recorte, mas apenas nas bordas curtas da tela. 
 
-- [LayoutInDisplayCutoutModeDefault](https://developer.android.com/reference/android/view/WindowManager.LayoutParams.html#LAYOUT_IN_DISPLAY_CUTOUT_MODE_DEFAULT) &ndash; A janela poderá ser estendida para a área de recorte se o recorte estiver contido em uma barra do sistema.
+- [LayoutInDisplayCutoutModeDefault](https://developer.android.com/reference/android/view/WindowManager.LayoutParams.html#LAYOUT_IN_DISPLAY_CUTOUT_MODE_DEFAULT) &ndash; a janela terá permissão para se estender para a área de recorte se o recorte estiver contido em uma barra do sistema.
 
 Por exemplo, para impedir que a janela do aplicativo se sobreponha à área de recorte, defina o modo de recorte de layout como *nunca*: 
 
@@ -124,14 +124,14 @@ Window.Attributes.LayoutInDisplayCutoutMode =
     Android.Views.LayoutInDisplayCutoutMode.Never;
 ```
 
-Os exemplos a seguir fornecem exemplos desses modos de recorte. A primeira captura de tela à esquerda é do aplicativo em modo não-fullscreen. Na captura de tela do centro, o aplicativo é preenchido com `LayoutInDisplayCutoutMode` o botão `LayoutInDisplayCutoutModeShortEdges`completo com definido como. Observe que o plano de fundo branco do aplicativo se estende à área de recorte de exibição:
+Os exemplos a seguir fornecem exemplos desses modos de recorte. A primeira captura de tela à esquerda é do aplicativo em modo não-fullscreen. Na captura de tela do centro, o aplicativo é colocado no ecrã inteiro com `LayoutInDisplayCutoutMode` definido como `LayoutInDisplayCutoutModeShortEdges`. Observe que o plano de fundo branco do aplicativo se estende à área de recorte de exibição:
 
-[![Exemplo exibe modos de recorte no emulador](pie-images/03-cutout-modes-sml.png)](pie-images/03-cutout-modes.png#lightbox)
+[Exemplo de![exibir modos de recorte no emulador](pie-images/03-cutout-modes-sml.png)](pie-images/03-cutout-modes.png#lightbox)
 
-Na captura de tela final (acima à direita), `LayoutInDisplayCutoutMode` é definido como `LayoutInDisplayCutoutModeShortNever` antes de ir para o ecrã inteiro.
+Na captura de tela final (acima à direita), `LayoutInDisplayCutoutMode` é definido como `LayoutInDisplayCutoutModeShortNever` antes que ele vá para o ecrã completo.
 Observe que o plano de fundo branco do aplicativo não tem permissão para estender para a área de recorte de exibição.
 
-Se precisar de informações mais detalhadas sobre a área de recorte no dispositivo, você poderá usar a nova classe [DisplayCutout](https://developer.android.com/reference/android/view/DisplayCutout.html) . `DisplayCutout`representa a área da exibição que não pode ser usada para exibir o conteúdo. Você pode usar essas informações para recuperar o local e a forma do recorte para que seu aplicativo não tente exibir o conteúdo nessa área não funcional.
+Se precisar de informações mais detalhadas sobre a área de recorte no dispositivo, você poderá usar a nova classe [DisplayCutout](https://developer.android.com/reference/android/view/DisplayCutout.html) . `DisplayCutout` representa a área da exibição que não pode ser usada para exibir o conteúdo. Você pode usar essas informações para recuperar o local e a forma do recorte para que seu aplicativo não tente exibir o conteúdo nessa área não funcional.
 
 Para obter mais informações sobre os novos recursos de recorte no Android P, consulte [Exibir suporte ao recorte](https://developer.android.com/about/versions/pie/android-9.0#cutout).
 
@@ -149,11 +149,11 @@ A pizza do Android apresenta os seguintes aprimoramentos para melhorar a experi�
 
 O exemplo a seguir ilustra como usar as novas APIs para gerar uma notificação que contém uma imagem. Nas capturas de tela a seguir, uma notificação de texto é postada e seguida por uma notificação com uma imagem inserida. Quando as notificações são expandidas (como visto à direita), o texto da primeira notificação é exibido e a imagem inserida na segunda notificação é ampliada:
 
-[![Exemplo de notificação com imagem](pie-images/04-example-notifications-sml.png)](pie-images/04-example-notifications.png#lightbox)
+[![exemplo de notificação com imagem](pie-images/04-example-notifications-sml.png)](pie-images/04-example-notifications.png#lightbox)
 
-O exemplo a seguir ilustra como incluir uma imagem em uma notificação de pizza do Android e demonstra o uso da nova `Person` classe:
+O exemplo a seguir ilustra como incluir uma imagem em uma notificação de pizza do Android e demonstra o uso da nova classe `Person`:
 
-1. Crie um `Person` objeto que represente o remetente. Por exemplo, o nome e o ícone do remetente estão incluídos `fromPerson`em:
+1. Crie um objeto `Person` que representa o remetente. Por exemplo, o nome e o ícone do remetente estão incluídos no `fromPerson`:
 
     ```csharp
     Icon senderIcon = Icon.CreateWithResource(this, Resource.Drawable.sender_icon);
@@ -163,7 +163,7 @@ O exemplo a seguir ilustra como incluir uma imagem em uma notificação de pizza
         .Build();
     ```
 
-2. Crie um `Notification.MessagingStyle.Message` que contenha a imagem a ser enviada, passando a imagem para o novo método [Notification. messagingcollection. Message. SetData](https://developer.android.com/reference/android/app/Notification.MessagingStyle.Message.html#setData%28java.lang.String,%20android.net.Uri) .
+2. Crie um `Notification.MessagingStyle.Message` que contenha a imagem a ser enviada, passando a imagem para o novo método [Notification. messagingstyle. Message. SetData](https://developer.android.com/reference/android/app/Notification.MessagingStyle.Message.html#setData%28java.lang.String,%20android.net.Uri) .
    Por exemplo:
 
     ```csharp
@@ -173,7 +173,7 @@ O exemplo a seguir ilustra como incluir uma imagem em uma notificação de pizza
             .SetData("image/", imageUri);
     ```
 
-3. Adicione a mensagem a um `Notification.MessagingStyle` objeto. Por exemplo:
+3. Adicione a mensagem a um objeto `Notification.MessagingStyle`. Por exemplo:
 
     ```csharp
     Notification.MessagingStyle style = new Notification.MessagingStyle(fromPerson)
@@ -204,7 +204,7 @@ Para obter mais informações sobre como criar notificações, consulte [notific
 
 A pizza do Android fornece suporte para o IEEE 802.11 MC (também conhecido como _tempo de ida_ e volta do WiFi ou _RTT de WiFi_), o que possibilita que os aplicativos detectem a distância para um ou mais pontos de acesso Wi-Fi. Usando essas informações, é possível que seu aplicativo aproveite o *posicionamento interno* com uma precisão de um a dois metros. Em dispositivos Android que fornecem suporte de hardware para o IEEE 801.11 MC, seu aplicativo pode oferecer recursos de navegação, como o controle baseado em local de dispositivos inteligentes ou instruções ativadas por meio de uma loja:
 
-[![Exemplo de navegação em interno usando RTT de WiFi](pie-images/05-wifi-rtt-sml.png)](pie-images/05-wifi-rtt.png#lightbox)
+[![exemplo de navegação em interno usando RTT de WiFi](pie-images/05-wifi-rtt-sml.png)](pie-images/05-wifi-rtt.png#lightbox)
 
 A nova classe [WifiRttManager](https://developer.android.com/reference/android/net/wifi/rtt/WifiRttManager) e várias classes auxiliares fornecem os meios para medir a distância para dispositivos Wi-Fi. Para obter mais informações sobre as APIs de posicionamento interno introduzidas no Android P, consulte [Android .net. WiFi. RTT](https://developer.android.com/reference/android/net/wifi/rtt/package-summary).
 
@@ -223,7 +223,7 @@ Além disso, a pizza do Android dá suporte a vários outros recursos novos:
 
 - A nova classe [AnimatedImageDrawable](https://developer.android.com/reference/android/graphics/drawable/AnimatedImageDrawable.html) , que pode ser usada para desenhar e exibir imagens animadas.
 
-- Uma nova classe [ImageDecoder](https://developer.android.com/reference/android/graphics/ImageDecoder.html) que substitui `BitmapFactory`. `ImageDecoder`pode ser usado para decodificar `AnimatedImageDrawable`um.
+- Uma nova classe [ImageDecoder](https://developer.android.com/reference/android/graphics/ImageDecoder.html) que substitui `BitmapFactory`. `ImageDecoder` pode ser usado para decodificar um `AnimatedImageDrawable`.
 
 - Suporte para imagens de vídeo HDR (alta faixa dinâmica) e HEIF (formato de arquivo de imagem de alta eficiência).
 
@@ -245,7 +245,7 @@ Para obter mais informações sobre alterações de comportamento para aplicativ
 
 ## <a name="sample-code"></a>Código de exemplo
 
-[AndroidPMiniDemo](https://github.com/xamarin/monodroid-samples/tree/master/android-p/AndroidPMiniDemo) é um aplicativo de exemplo do Xamarin. Android para pizza do Android que demonstra como definir modos de recorte de exibição, `Person` como usar a nova classe e como enviar uma notificação que inclui uma imagem.
+[AndroidPMiniDemo](https://github.com/xamarin/monodroid-samples/tree/master/android-p/AndroidPMiniDemo) é um aplicativo de exemplo do Xamarin. Android para pizza do Android que demonstra como definir modos de recorte de exibição, como usar a nova classe `Person` e como enviar uma notificação que inclui uma imagem.
 
 ## <a name="summary"></a>Resumo
 

@@ -4,19 +4,19 @@ description: Este documento descreve como preencher uma tabela com dados em um a
 ms.prod: xamarin
 ms.assetid: 6FE64DDF-1029-EB9B-6EEC-1C7DFDFDF3AF
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: d180345c36531b58c13eebbd97dc4f7555b8f13c
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: d926e206e4bba04629163cfc3d63b51a5f2f840d
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70768865"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73021880"
 ---
 # <a name="populating-a-table-with-data-in-xamarinios"></a>Populando uma tabela com dados no Xamarin. iOS
 
-Para adicionar linhas a um `UITableView` , você precisa implementar uma `UITableViewSource` subclasse e substituir os métodos que a exibição de tabela chama para preencher a si mesma.
+Para adicionar linhas a um `UITableView` você precisa implementar uma subclasse `UITableViewSource` e substituir os métodos que a exibição de tabela chama para preencher a si mesma.
 
 Este guia aborda:
 
@@ -29,14 +29,14 @@ Este guia aborda:
 
 ## <a name="subclassing-uitableviewsource"></a>UITableViewSource de subclasse
 
-Uma `UITableViewSource` subclasse é atribuída a cada `UITableView`. A exibição de tabela consulta a classe de origem para determinar como renderizar a si mesma (por exemplo, quantas linhas são necessárias e a altura de cada linha se for diferente do padrão). O mais importante é que a fonte fornece cada exibição de célula preenchida com dados.
+Uma subclasse `UITableViewSource` é atribuída a cada `UITableView`. A exibição de tabela consulta a classe de origem para determinar como renderizar a si mesma (por exemplo, quantas linhas são necessárias e a altura de cada linha se for diferente do padrão). O mais importante é que a fonte fornece cada exibição de célula preenchida com dados.
 
 Há apenas dois métodos obrigatórios necessários para fazer uma tabela exibir dados:
 
-- **RowsInSection** – retorna uma [`nint`](~/cross-platform/macios/nativetypes.md) contagem do número total de linhas de dados que a tabela deve exibir.
+- **RowsInSection** – retorna uma contagem de [`nint`](~/cross-platform/macios/nativetypes.md) do número total de linhas de dados que a tabela deve exibir.
 - **GetCell** – retorna um `UITableCellView` populado com dados para o índice de linha correspondente passado para o método.
 
-O arquivo de exemplo Basictable **TableSource.cs** tem a implementação mais simples possível `UITableViewSource`do. Você pode ver no trecho de código abaixo que ele aceita uma matriz de cadeias de caracteres para exibir na tabela e retorna um estilo de célula padrão contendo cada cadeia de caracteres:
+O arquivo de exemplo Basictable **TableSource.cs** tem a implementação mais simples possível de `UITableViewSource`. Você pode ver no trecho de código abaixo que ele aceita uma matriz de cadeias de caracteres para exibir na tabela e retorna um estilo de célula padrão contendo cada cadeia de caracteres:
 
 ```csharp
 public class TableSource : UITableViewSource {
@@ -70,9 +70,9 @@ public class TableSource : UITableViewSource {
 }
 ```
 
-Um `UITableViewSource` pode usar qualquer estrutura de dados, de uma matriz de cadeia de caracteres simples (como mostrado neste exemplo) para uma lista < > ou outra coleção. A implementação de `UITableViewSource` métodos isola a tabela da estrutura de dados subjacente.
+Um `UITableViewSource` pode usar qualquer estrutura de dados, de uma matriz de cadeia de caracteres simples (como mostrado neste exemplo) para uma lista < > ou outra coleção. A implementação dos métodos de `UITableViewSource` isola a tabela da estrutura de dados subjacente.
 
-Para usar essa subclasse, crie uma matriz de cadeia de caracteres para construir a origem e, em seguida, `UITableView`atribua-a a uma instância de:
+Para usar essa subclasse, crie uma matriz de cadeia de caracteres para construir a origem e, em seguida, atribua-a a uma instância do `UITableView`:
 
 ```csharp
 public override void ViewDidLoad ()
@@ -87,9 +87,9 @@ public override void ViewDidLoad ()
 
 A tabela resultante é parecida com esta:
 
- [![](populating-a-table-with-data-images/image3.png "Exemplo de tabela em execução")](populating-a-table-with-data-images/image3.png#lightbox)
+ [![](populating-a-table-with-data-images/image3.png "Sample table running")](populating-a-table-with-data-images/image3.png#lightbox)
 
-A maioria das tabelas permite que o usuário toque em uma linha para selecioná-la e executar alguma outra ação (como reproduzir uma música ou chamar um contato ou mostrar outra tela). Para conseguir isso, há algumas coisas que precisamos fazer. Primeiro, vamos criar um AlertController para exibir uma mensagem quando o usuário clicar em uma linha adicionando o seguinte ao `RowSelected` método:
+A maioria das tabelas permite que o usuário toque em uma linha para selecioná-la e executar alguma outra ação (como reproduzir uma música ou chamar um contato ou mostrar outra tela). Para conseguir isso, há algumas coisas que precisamos fazer. Primeiro, vamos criar um AlertController para exibir uma mensagem quando o usuário clicar em uma linha adicionando o seguinte ao método `RowSelected`:
 
 ```csharp
 public override void RowSelected (UITableView tableView, NSIndexPath indexPath)
@@ -119,13 +119,13 @@ public TableSource (string[] items, HomeScreen owner)
 }
 ```
 
-Modifique o método ViewDidLoad em que a classe UITableViewSource é criada para passar `this` a referência:
+Modifique o método ViewDidLoad em que a classe UITableViewSource é criada para passar a referência `this`:
 
 ```csharp
 table.Source = new TableSource(tableItems, this);
 ```
 
-Finalmente, de volta ao `RowSelected` seu método, `PresentViewController` chame no campo armazenado em cache:
+Finalmente, de volta ao seu método `RowSelected`, chame `PresentViewController` no campo armazenado em cache:
 
 ```csharp
 public override void RowSelected (UITableView tableView, NSIndexPath indexPath)
@@ -139,13 +139,13 @@ public override void RowSelected (UITableView tableView, NSIndexPath indexPath)
 
 Agora, o usuário pode tocar em uma linha e um alerta será exibido:
 
- [![](populating-a-table-with-data-images/image4.png "O alerta de linha selecionada")](populating-a-table-with-data-images/image4.png#lightbox)
+ [![](populating-a-table-with-data-images/image4.png "The row selected alert")](populating-a-table-with-data-images/image4.png#lightbox)
 
 ## <a name="cell-reuse"></a>Reutilização de célula
 
-Neste exemplo, há apenas seis itens, portanto, não é necessária uma reutilização de célula. No entanto, ao exibir centenas ou milhares de linhas, seria um desperdício de memória para criar centenas ou milhares de `UITableViewCell` objetos quando apenas alguns couberem na tela por vez.
+Neste exemplo, há apenas seis itens, portanto, não é necessária uma reutilização de célula. No entanto, ao exibir centenas ou milhares de linhas, seria um desperdício de memória para criar centenas ou milhares de objetos de `UITableViewCell` quando apenas alguns couberem na tela por vez.
 
-Para evitar essa situação, quando uma célula desaparece da tela, sua exibição é colocada em uma fila para reutilização. À medida que o usuário rola, a tabela `GetCell` chama para solicitar que novas exibições sejam exibidas – para reutilizar uma célula existente (que não esteja sendo exibida no `DequeueReusableCell` momento), basta chamar o método. Se uma célula estiver disponível para reutilização, ela será retornada, caso contrário, um valor nulo será retornado e o código deverá criar uma nova instância de célula.
+Para evitar essa situação, quando uma célula desaparece da tela, sua exibição é colocada em uma fila para reutilização. À medida que o usuário rola, a tabela chama `GetCell` para solicitar que novas exibições sejam exibidas – para reutilizar uma célula existente (que não esteja sendo exibida no momento), basta chamar o método `DequeueReusableCell`. Se uma célula estiver disponível para reutilização, ela será retornada, caso contrário, um valor nulo será retornado e o código deverá criar uma nova instância de célula.
 
 Este trecho de código do exemplo demonstra o padrão:
 
@@ -157,13 +157,13 @@ if (cell == null)
     cell = new UITableViewCell (UITableViewCellStyle.Default, cellIdentifier);
 ```
 
-O `cellIdentifier` efetivamente cria filas separadas para diferentes tipos de célula. Neste exemplo, todas as células têm a mesma aparência que apenas um identificador codificado é usado. Se houver tipos diferentes de célula, cada um terá uma cadeia de caracteres de identificador diferente, quando eles forem instanciados e quando forem solicitados na fila de reutilização.
+O `cellIdentifier` cria efetivamente filas separadas para diferentes tipos de célula. Neste exemplo, todas as células têm a mesma aparência que apenas um identificador codificado é usado. Se houver tipos diferentes de célula, cada um terá uma cadeia de caracteres de identificador diferente, quando eles forem instanciados e quando forem solicitados na fila de reutilização.
 
 ### <a name="cell-reuse-in-ios-6"></a>Reutilização de célula no iOS 6 +
 
 o iOS 6 adicionou um padrão de reutilização de célula semelhante a uma introdução com exibições de coleção. Embora o padrão de reutilização existente mostrado acima ainda tenha suporte para compatibilidade com versões anteriores, esse novo padrão é preferível, pois elimina a necessidade da verificação nula na célula.
 
-Com o novo padrão, um aplicativo registra a classe de célula ou XIB a ser usada chamando `RegisterClassForCellReuse` ou `RegisterNibForCellReuse` no construtor do controlador. Em seguida, ao remover a fila da célula no `GetCell` método, basta chamar `DequeueReusableCell` passando o identificador que você registrou para a classe de célula ou XIB e o caminho do índice.
+Com o novo padrão, um aplicativo registra a classe de célula ou XIB a ser usada chamando `RegisterClassForCellReuse` ou `RegisterNibForCellReuse` no construtor do controlador. Em seguida, ao remover a fila da célula no método `GetCell`, basta chamar `DequeueReusableCell` passando o identificador que você registrou para a classe de célula ou XIB e o caminho do índice.
 
 Por exemplo, o código a seguir registra uma classe de célula personalizada em um UITableViewController:
 
@@ -180,7 +180,7 @@ public class MyTableViewController : UITableViewController
 }
 ```
 
-Com a classe MyCell registrada, a célula pode ser removida da fila `GetCell` no método `UITableViewSource` de sem a necessidade de uma verificação nula extra, como mostrado abaixo:
+Com a classe MyCell registrada, a célula pode ser removida da fila no método `GetCell` da `UITableViewSource` sem a necessidade de uma verificação nula extra, como mostrado abaixo:
 
 ```csharp
 class MyTableSource : UITableViewSource
@@ -198,7 +198,7 @@ class MyTableSource : UITableViewSource
 }
 ```
 
-Lembre-se de que, ao usar o novo padrão de reutilização com uma classe de célula Personalizada, você precisa implementar `IntPtr`o construtor que usa um, conforme mostrado no trecho abaixo; caso contrário, o Objective-C não será capaz de construir uma instância da classe Cell:
+Lembre-se de que, ao usar o novo padrão de reutilização com uma classe de célula Personalizada, você precisa implementar o construtor que usa um `IntPtr`, conforme mostrado no trecho de código abaixo; caso contrário, o Objective-C não será capaz de construir uma instância da classe Cell:
 
 ```csharp
 public class MyCell : UITableViewCell
@@ -218,9 +218,9 @@ Você pode ver exemplos dos tópicos explicados acima no exemplo **basictable** 
 
 Um índice ajuda o usuário a rolar por listas longas, normalmente ordenadas alfabeticamente, embora você possa indexar por qualquer critério que desejar. O exemplo **BasicTableIndex** carrega uma lista muito mais longa de itens de um arquivo para demonstrar o índice. Cada item no índice corresponde a uma "seção" da tabela.
 
- [![](populating-a-table-with-data-images/image5.png "A exibição do índice")](populating-a-table-with-data-images/image5.png#lightbox)
+ [![](populating-a-table-with-data-images/image5.png "The Index display")](populating-a-table-with-data-images/image5.png#lightbox)
 
-Para dar suporte a ' seções ', os dados por trás da tabela precisam ser agrupados; portanto, o `Dictionary<>` exemplo BasicTableIndex cria um da matriz de cadeias de caracteres usando a primeira letra de cada item como a chave de dicionário:
+Para dar suporte a ' seções ', os dados por trás da tabela precisam ser agrupados; portanto, o exemplo BasicTableIndex cria uma `Dictionary<>` da matriz de cadeias de caracteres usando a primeira letra de cada item como a chave de dicionário:
 
 ```csharp
 indexedTableItems = new Dictionary<string, List<string>>();
@@ -234,7 +234,7 @@ foreach (var t in items) {
 keys = indexedTableItems.Keys.ToArray ();
 ```
 
-A `UITableViewSource` subclasse, em seguida, precisa dos seguintes métodos adicionados ou modificados `Dictionary<>` para usar:
+Em seguida, a subclasse `UITableViewSource` precisa dos seguintes métodos adicionados ou modificados para usar o `Dictionary<>`:
 
 - **NumberOfSections** – esse método é opcional, por padrão, a tabela pressupõe uma seção. Ao exibir um índice, esse método deve retornar o número de itens no índice (por exemplo, 26 se o índice contiver todas as letras do alfabeto em inglês).
 - **RowsInSection** – retorna o número de linhas em uma determinada seção.
@@ -263,12 +263,12 @@ Geralmente, os índices são usados apenas com o estilo de tabela simples.
 
 ## <a name="adding-headers-and-footers"></a>Adicionando cabeçalhos e rodapés
 
-Cabeçalhos e rodapés podem ser usados para agrupar visualmente linhas em uma tabela. A estrutura de dados necessária é muito semelhante à adição de um índice `Dictionary<>` – um funciona muito bem. Em vez de usar o alfabeto para agrupar as células, este exemplo agrupará o "etc." por tipo botânico.
+Cabeçalhos e rodapés podem ser usados para agrupar visualmente linhas em uma tabela. A estrutura de dados necessária é muito semelhante à adição de um índice – um `Dictionary<>` funciona muito bem. Em vez de usar o alfabeto para agrupar as células, este exemplo agrupará o "etc." por tipo botânico.
 O resultado terá a seguinte aparência:
 
- [![](populating-a-table-with-data-images/image6.png "Cabeçalhos e rodapés de exemplo")](populating-a-table-with-data-images/image6.png#lightbox)
+ [![](populating-a-table-with-data-images/image6.png "Sample Headers and Footers")](populating-a-table-with-data-images/image6.png#lightbox)
 
-Para exibir cabeçalhos e rodapés, `UITableViewSource` a subclasse requer estes métodos adicionais:
+Para exibir cabeçalhos e rodapés, a subclasse `UITableViewSource` requer estes métodos adicionais:
 
 - **TitleForHeader** – retorna o texto a ser usado como o cabeçalho
 - **TitleForFooter** – retorna o texto a ser usado como o rodapé.
@@ -286,7 +286,7 @@ public override string TitleForFooter (UITableView tableView, nint section)
 }
 ```
 
-Você pode personalizar ainda mais a aparência do cabeçalho e do rodapé com um objeto View, usando `GetViewForHeader` as `GetViewForFooter` substituições de `UITableViewSource`método e em.
+Você pode personalizar ainda mais a aparência do cabeçalho e do rodapé com um objeto View, usando as substituições de método `GetViewForHeader` e `GetViewForFooter` no `UITableViewSource`.
 
 ## <a name="related-links"></a>Links relacionados
 

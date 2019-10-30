@@ -4,15 +4,15 @@ description: O processamento em segundo plano ou o plano de fundo é o processo 
 ms.prod: xamarin
 ms.assetid: F377440C-C5D9-4267-85D8-2C816E3A0300
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/05/2018
-ms.openlocfilehash: 5afb87eb3f84e00427072ef6c4e2c19b46de0186
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: e51b6c7ffe0b0ae027e527d959979e558afa6325
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70766575"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73005062"
 ---
 # <a name="backgrounding-in-xamarinios"></a>Plano de fundo no Xamarin. iOS
 
@@ -29,7 +29,7 @@ Neste guia e orientações detalhadas, vamos aprender a executar tarefas de apli
 1. [Introdução ao backgrounding no iOS](~/ios/app-fundamentals/backgrounding/introduction-to-backgrounding-in-ios.md)
 1. [Demonstração do ciclo de vida do aplicativo](~/ios/app-fundamentals/backgrounding/application-lifecycle-demo.md)
 1. [Técnicas de backgrounding do iOS](~/ios/app-fundamentals/backgrounding/ios-backgrounding-techniques/index.md)
-1. [Passo a passos: operando em segundo plano no iOS](~/ios/app-fundamentals/backgrounding/ios-backgrounding-walkthroughs/index.md)
+1. [Passo a passo: backgrounding no iOS](~/ios/app-fundamentals/backgrounding/ios-backgrounding-walkthroughs/index.md)
 1. [Orientação de backgrounding do iOS](~/ios/app-fundamentals/backgrounding/ios-backgrounding-guidance.md)
 
 ## <a name="summary"></a>Resumo

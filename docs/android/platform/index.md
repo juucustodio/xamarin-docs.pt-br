@@ -4,15 +4,15 @@ description: Os documentos nesta seção abrangem recursos específicos do Andro
 ms.prod: xamarin
 ms.assetid: DDE54082-6E2B-9ED9-05FB-D9C1D1B1258E
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 08/21/2018
-ms.openlocfilehash: def8bf236ec25d3b75e435ff525a683343d9b861
-ms.sourcegitcommit: f324193bcfb1c674e421955cf6ee2a4249d61ac3
+ms.openlocfilehash: a0b8b80499854d485b8420adb580c22a74933443
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71119227"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73020172"
 ---
 # <a name="platform-features"></a>Recursos da plataforma
 
@@ -38,7 +38,7 @@ Este guia discute o Dispatcher de trabalhos do firebase e como usá-lo para simp
 
 O Android 3,0 introduziu fragmentos, mostrando como dar suporte a designs mais flexíveis para vários tamanhos de tela diferentes encontrados em telefones e tablets. Este artigo abordará como usar fragmentos para desenvolver aplicativos Xamarin. Android e também como dar suporte a fragmentos em dispositivos anteriores ao Android 3,0 (nível de API 11).
 
-## <a name="app-linkingandroidplatformapp-linkingmd"></a>[App-Linking](~/android/platform/app-linking.md)
+## <a name="app-linkingandroidplatformapp-linkingmd"></a>[Vinculação de aplicativo](~/android/platform/app-linking.md)
 
 Este guia discutirá como o Android 6,0 dá suporte à _vinculação de aplicativos_, uma técnica que permite que os aplicativos móveis respondam a URLs em sites. Ele discutirá como implementar a vinculação de aplicativos em um aplicativo Android 6,0 e como configurar um site para conceder permissões ao aplicativo móvel para lidar com links de aplicativo para o domínio.
 

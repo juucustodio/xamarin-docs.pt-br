@@ -4,15 +4,15 @@ description: Este documento descreve como usar o destaque principal em um aplica
 ms.prod: xamarin
 ms.assetid: 1374914C-0F63-41BF-BD97-EBCEE86E57B1
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/20/2017
-ms.openlocfilehash: 00a973e670ff5100a44ba158fe50f134781a97e2
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 102c0e7dbd2f4c903793e83d7551a84a52cac4fb
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769501"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73031569"
 ---
 # <a name="search-with-core-spotlight-in-xamarinios"></a>Pesquisar com o principal Spotlight no Xamarin. iOS
 
@@ -47,11 +47,11 @@ CSSearchableIndex.DefaultSearchableIndex.Index (new CSSearchableItem[]{ item }, 
 
 Essas informações seriam exibidas como a seguir em um resultado de pesquisa:
 
-[![](corespotlight-images/corespotlight01.png "Visão geral do resultado da pesquisa do core Spotlight")](corespotlight-images/corespotlight01.png#lightbox)
+[![](corespotlight-images/corespotlight01.png "Core Spotlight search result overview")](corespotlight-images/corespotlight01.png#lightbox)
 
 ## <a name="restoring-an-item"></a>Restaurando um item
 
-Quando o usuário toca em um item adicionado ao resultado da pesquisa por meio do destaque principal para seu aplicativo `AppDelegate` , `ContinueUserActivity` o método é chamado (esse método também é `NSUserActivity`usado para). Por exemplo:
+Quando o usuário toca em um item adicionado ao resultado da pesquisa por meio do destaque principal para seu aplicativo, o método `AppDelegate` `ContinueUserActivity` é chamado (esse método também é usado para `NSUserActivity`). Por exemplo:
 
 ```csharp
 public override bool ContinueUserActivity (UIApplication application,
@@ -74,14 +74,14 @@ public override bool ContinueUserActivity (UIApplication application,
 }
 ```
 
-Observe que, desta vez, verificamos se a atividade tem `ActivityType` um `CSSearchableItem.ActionType`de.
+Observe que, desta vez, verificamos se a atividade tem uma `ActivityType` de `CSSearchableItem.ActionType`.
 
 ## <a name="updating-an-item"></a>Atualizando um item
 
 Pode haver ocasiões em que um item de índice criado com o destaque principal precisa ser modificado, como uma alteração no título ou imagem em miniatura é necessária. Para fazer essa alteração, usamos o mesmo método que foi usado para criar inicialmente o índice.
 Criamos um novo `CSSearchableItem` usando a mesma ID que foi usada para criar o item e anexar um novo `CSSearchableItemAttributeSet` contendo os atributos modificados:
 
-[![](corespotlight-images/corespotlight02.png "Atualizando uma visão geral do item")](corespotlight-images/corespotlight02.png#lightbox)
+[![](corespotlight-images/corespotlight02.png "Updating an Item overview")](corespotlight-images/corespotlight02.png#lightbox)
 
 Quando esse item é gravado no índice pesquisável, o item existente é atualizado com as novas informações.
 
@@ -129,13 +129,13 @@ CSSearchableIndex.DefaultSearchableIndex.DeleteAll((error) => {
 
 O destaque principal tem os seguintes recursos que ajudam a manter o índice preciso e atualizado:
 
-- **Suporte à atualização em lotes** – se seu aplicativo precisar criar ou modificar um grande grupo de índices ao mesmo tempo, todo o lote poderá ser enviado para o `Index` método da `CSSearchableIndex` classe em uma chamada.
-- **Responder a alterações de índice** – usar `CSSearchableIndexDelegate` o aplicativo pode responder a alterações e notificações do índice pesquisável.
+- **Suporte à atualização em lotes** – se seu aplicativo precisar criar ou modificar um grande grupo de índices ao mesmo tempo, todo o lote poderá ser enviado para o método `Index` da classe `CSSearchableIndex` em uma chamada.
+- **Responder a alterações de índice** – usando o `CSSearchableIndexDelegate` seu aplicativo pode responder a alterações e notificações do índice pesquisável.
 - **Aplicar a proteção de dados** – usando as classes de proteção de dados, você pode implementar a segurança nos itens que você adiciona ao índice pesquisável usando o destaque principal.
 
 ## <a name="related-links"></a>Links relacionados
 
 - [Amostras do iOS 9](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS9)
 - [iOS 9 para desenvolvedores](https://developer.apple.com/ios/pre-release/)
-- [iOS 9.0](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)
+- [iOS 9,0](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)
 - [Guia de programação de pesquisa de aplicativo](https://developer.apple.com/library/prerelease/ios/documentation/General/Conceptual/AppSearch/index.html#//apple_ref/doc/uid/TP40016308)

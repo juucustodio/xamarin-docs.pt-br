@@ -4,15 +4,15 @@ description: Este documento descreve como usar barras de pesquisa no Xamarin. iO
 ms.prod: xamarin
 ms.assetid: 22A8249A-19C6-4734-8331-E49FE3170771
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 07/11/2017
-ms.openlocfilehash: 36e339139a0a7f853a770fdb188b5f03ee93f7ee
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: 8b129e0e70bf3ded787094d1b1f740e73a8cbca1
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "70283355"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73021974"
 ---
 # <a name="search-bars-in-xamarinios"></a>Pesquisar barras no Xamarin. iOS
 
@@ -88,7 +88,7 @@ Essas propriedades são explicadas abaixo:
   - Mostra os resultados da pesquisa/botão indicadores – mostra um ícone de resultados da pesquisa ou indicadores na barra de pesquisa
   - Mostra o botão Cancelar – permite que os usuários saiam da função de pesquisa. É recomendável que isso esteja selecionado.
   - Mostra a barra de escopo – isso permite que os usuários limitem o escopo de sua pesquisa. Por exemplo, ao pesquisar no aplicativo de música, o usuário pode selecionar se deseja pesquisar Apple Music ou sua biblioteca para uma música ou um artista específico. Para exibir várias opções, adicione uma matriz de títulos à propriedade **ScopeBarTitles** .
-  títulos de escopo da barra de ![Search ](searchbar-images/image4.png)
+  ![títulos de escopo da barra de pesquisa](searchbar-images/image4.png)
 
 - **Comportamento do texto** – essas opções são usadas para abordar como a entrada do usuário é formatada quando estão digitando. A capitalização definirá o início de cada palavra ou frase, ou todos os caracteres como letras maiúsculas. Correção e verificação ortográfica com prompt para o usuário com a grafia sugerida de palavras conforme elas digitam.
 - **Teclado** – controla o estilo de teclado exibido para a entrada e, portanto, quais chaves estão disponíveis no teclado. Isso inclui o teclado numérico, o Phone pad, o email e a URL junto com outras opções.

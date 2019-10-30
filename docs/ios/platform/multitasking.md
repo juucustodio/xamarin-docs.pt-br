@@ -5,21 +5,21 @@ ms.prod: xamarin
 ms.assetid: 0F2266D7-21FF-404D-A148-0CFDE76B12AA
 ms.technology: xamarin-ios
 ms.custom: xamu-video
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/20/2017
-ms.openlocfilehash: 8f38200e8274a36783ac7bd1aec4b695036f83e2
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: aeb3d01a3d0f7edbe92c9959073d859fc63486a6
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769629"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73031650"
 ---
 # <a name="multitasking-for-ipad-in-xamarinios"></a>Multitarefa para iPad no Xamarin. iOS
 
 _o iOS 9 dá suporte a dois aplicativos em execução ao mesmo tempo, usando visualização de slides ou de divisão. Ele também dá suporte à reprodução de vídeo em imagem._
 
-![](multitasking-images/about02-sml.png "Exemplo de tela de dividir") ![](multitasking-images/about03-sml.png "imagem na imagem exemplo")
+![](multitasking-images/about02-sml.png "Exemplo de divisão de tela") ![](multitasking-images/about03-sml.png "Exemplo de imagem em imagem")
 
 o iOS 9 adiciona suporte multitarefa para executar dois aplicativos ao mesmo tempo em um hardware de iPad específico. Há suporte para multitarefas para iPad por meio dos seguintes recursos:
 
@@ -64,7 +64,7 @@ o iOS 9 oferece novos recursos de multitarefa no iPad com a introdução do _des
 
 O recurso deslizar sobre permite que o usuário escolha um segundo aplicativo e o exiba em um painel deslizante pequeno para fornecer interação rápida. O painel do slide acima é temporário e será fechado quando o usuário voltar para trabalhar com o aplicativo principal novamente.
 
-[![](multitasking-images/about01.png "O painel deslizante para cima")](multitasking-images/about01.png#lightbox)
+[![](multitasking-images/about01.png "The Slide Over panel")](multitasking-images/about01.png#lightbox)
 
 O principal a ser lembrado é que o usuário decide quais dois aplicativos serão executados lado a lado e que o desenvolvedor não tem controle sobre esse processo. Como resultado, há algumas coisas que você precisará fazer para garantir que seu aplicativo Xamarin. iOS seja executado corretamente em um slide ao longo do painel:
 
@@ -79,7 +79,7 @@ O deslizamento está disponível apenas em um iPad pro, iPad Air, iPad Air 2, iP
 
 Em hardware do iPad com suporte (iPad Air 2, iPad mini 4 e iPad pro somente), o usuário pode escolher um segundo aplicativo e executá-lo lado a lado com o aplicativo em execução no momento em um modo de divisão de tela. O usuário pode controlar a porcentagem da tela principal que cada aplicativo ocupa arrastando um divisor na tela.
 
-[![](multitasking-images/about02.png "O modo de exibição de divisão")](multitasking-images/about02.png#lightbox)
+[![](multitasking-images/about02.png "The Split View")](multitasking-images/about02.png#lightbox)
 
 Como deslizar, o usuário decide quais dois aplicativos serão executados lado a lado e, novamente, o desenvolvedor não tem controle sobre esse processo. Como resultado, o modo de exibição de divisão coloca requisitos semelhantes em um aplicativo Xamarin. iOS:
 
@@ -94,7 +94,7 @@ Para saber mais sobre como preparar seu aplicativo para o modo de exibição de 
 
 A nova imagem no recurso de imagem (também conhecida como _Pip_) permite que o usuário Assista a um vídeo em uma janela pequena e flutuante que o usuário pode posicionar em qualquer lugar na tela acima de outros aplicativos em execução.
 
-[![](multitasking-images/about03.png "Uma imagem de exemplo na janela flutuante de imagem")](multitasking-images/about03.png#lightbox)
+[![](multitasking-images/about03.png "An example Picture in Picture floating window")](multitasking-images/about03.png#lightbox)
 
 Como com o deslizamento e a exibição de divisão, o usuário tem controle total sobre como assistir a um vídeo na imagem no modo de imagem. Se a função principal do seu aplicativo for assistir a um vídeo, ele precisará de alguma modificação para se comportar corretamente no modo PIP. Caso contrário, nenhuma alteração será necessária para dar suporte a PIP.
 
@@ -118,7 +118,7 @@ Para dar suporte à multitarefa do iOS 9 em qualquer novo aplicativo Xamarin. iO
 
 Antes do iOS 9, você poderia projetar seu aplicativo com relação a tamanhos e orientações de tela de dispositivo específicos. Como um aplicativo agora pode ser executado em um painel de deslizamento ou no modo de exibição de divisão, ele pode se encontrar em execução em uma classe de tamanho horizontal regular ou normal no iPad, independentemente da orientação física do dispositivo ou do tamanho da tela.
 
-[![](multitasking-images/sizeclasses01.png "Considerações de tamanho e orientação da tela")](multitasking-images/sizeclasses01.png#lightbox)
+[![](multitasking-images/sizeclasses01.png "Screen Size and Orientation Considerations")](multitasking-images/sizeclasses01.png#lightbox)
 
 Em um iPad, um aplicativo de tela inteira tem classes regulares de tamanho horizontal e vertical. Todos os iPhones, mas o iPhone 6 Plus e iPhone 6s Plus, têm classes de tamanho compacto em ambas as direções em qualquer orientação. O iPhone 6 Plus e o iPhone 6s Plus no modo paisagem têm uma classe normal de tamanho horizontal e uma classe de tamanho vertical compacto (muito semelhante a um iPad mini).
 
@@ -132,13 +132,13 @@ Em iPads que dão suporte ao deslizamento e à exibição de divisão, você pod
 
 No aplicativo de exemplo [MuliTask](https://docs.microsoft.com/samples/xamarin/ios-samples/ios9-multitask) , se ele for executado em tela inteira em um iPad no modo paisagem, ele apresentará a lista e a exibição de detalhes ao mesmo tempo:
 
-[![](multitasking-images/sizeclasses03.png "A lista e a exibição de detalhes apresentados ao mesmo tempo")](multitasking-images/sizeclasses03.png#lightbox)
+[![](multitasking-images/sizeclasses03.png "The list and the detail view presented at the same time")](multitasking-images/sizeclasses03.png#lightbox)
 
 Se o mesmo aplicativo for executado em um slide sobre o painel, ele será apresentado como uma classe de tamanho horizontal compacto e exibirá apenas a lista:
 
-[![](multitasking-images/sizeclasses04.png "Somente a lista apresentada quando o dispositivo é horizontal")](multitasking-images/sizeclasses04.png#lightbox)
+[![](multitasking-images/sizeclasses04.png "Only the list presented when the device is horizontal")](multitasking-images/sizeclasses04.png#lightbox)
 
-Para garantir que seu aplicativo se comporta corretamente nessas situações, você deve adotar coleções de características junto com as classes de tamanho e estar `IUIContentContainer` em `IUITraitEnvironment` conformidade com as interfaces e. Consulte a [referência de classe UITraitCollection](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UITraitCollection_ClassReference/index.html#//apple_ref/doc/uid/TP40014202) da Apple e nosso guia [introdução ao storyboards unificado](~/ios/user-interface/storyboards/unified-storyboards.md) para obter mais informações.
+Para garantir que seu aplicativo se comporta corretamente nessas situações, você deve adotar coleções de características junto com as classes de tamanho e estar em conformidade com as interfaces `IUIContentContainer` e `IUITraitEnvironment`. Consulte a [referência de classe UITraitCollection](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UITraitCollection_ClassReference/index.html#//apple_ref/doc/uid/TP40014202) da Apple e nosso guia [introdução ao storyboards unificado](~/ios/user-interface/storyboards/unified-storyboards.md) para obter mais informações.
 
 Além disso, você não pode mais contar com os limites da tela de dispositivos para definir a área visível do aplicativo. você precisará usar os limites de janela do aplicativo em vez disso. Como os limites de janela estão totalmente sob o controle do usuário, não é possível ajustá-los programaticamente ou impedir que o usuário altere esses limites.
 
@@ -154,11 +154,11 @@ Agora, com o iOS 9, os aplicativos podem criar seus próprios atalhos de teclado
 
 A **Guia de comando** abrirá um alternador de aplicativo que permite ao usuário alternar rapidamente entre aplicativos do teclado, assim como o Mac os:
 
-[![](multitasking-images/keyboard01.png "O alternador de aplicativo")](multitasking-images/keyboard01.png#lightbox)
+[![](multitasking-images/keyboard01.png "The app switcher")](multitasking-images/keyboard01.png#lightbox)
 
 Se um aplicativo iOS 9 incluir atalhos de teclado, o usuário poderá manter o **comando**, a **opção** ou as teclas de **controle** para exibi-los em um pop-up:
 
-[![](multitasking-images/keyboard02.png "O pop-up atalhos de teclado")](multitasking-images/keyboard02.png#lightbox)
+[![](multitasking-images/keyboard02.png "The keyboard shortcuts popup")](multitasking-images/keyboard02.png#lightbox)
 
 #### <a name="defining-custom-keyboard-shortcuts"></a>Definindo atalhos de teclado personalizados
 
@@ -188,13 +188,13 @@ public void NewEntry() {
 #endregion
 ```
 
-Primeiro, substituimos a `CanBecomeFirstResponder` Propriedade e retornamos `true` para que o controlador de exibição ou exibição possa receber entrada de teclado. 
+Primeiro, substituimos a propriedade `CanBecomeFirstResponder` e retornamos `true` para que o controlador de exibição ou exibição possa receber entrada de teclado. 
 
-Em seguida, substituimos `KeyCommands` a propriedade e criamos `UIKeyCommand` uma nova para o pressionamento de tecla **Command-N** . Quando o pressionamento de teclas é ativado, `NewEntry` chamamos o método (que expõemos ao Ios 9 `Export` usando o comando) para executar a ação solicitada.
+Em seguida, substituimos a propriedade `KeyCommands` e criamos uma nova `UIKeyCommand` para a tecla **Command-N** . Quando o pressionamento de teclas é ativado, chamamos o método `NewEntry` (que expõemos ao iOS 9 usando o comando `Export`) para executar a ação solicitada.
 
 Se executarmos esse aplicativo em um iPad com um teclado de hardware anexado e o usuário digitar **Command-N**, uma nova entrada será adicionada à lista. Se o usuário mantiver a tecla de **comando** , a lista de atalhos será exibida:
 
-[![](multitasking-images/keyboard03.png "O pop-up atalhos de teclado")](multitasking-images/keyboard03.png#lightbox)
+[![](multitasking-images/keyboard03.png "The keyboard shortcuts popup")](multitasking-images/keyboard03.png#lightbox)
 
 Consulte o aplicativo de [multitarefa](https://docs.microsoft.com/samples/xamarin/ios-samples/ios9-multitask) de exemplo para obter uma implementação de exemplo.
 
@@ -228,7 +228,7 @@ Embora a Apple sugira que todos os aplicativos iOS 9 ofereçam suporte a multita
 
 Para que seu aplicativo Xamarin. iOS opte por ser executado em um painel de deslizamento ou no modo de exibição de divisão, edite o arquivo **info. plist** do projeto e marque a opção **requer tela inteira**:
 
-[![](multitasking-images/fullscreen01.png "Recusando a multitarefa")](multitasking-images/fullscreen01.png#lightbox)
+[![](multitasking-images/fullscreen01.png "Opting Out of Multitasking")](multitasking-images/fullscreen01.png#lightbox)
 
 > [!IMPORTANT]
 > Embora a recusa de multitarefas impeça que o aplicativo seja executado no deslizante ou no modo de exibição de divisão, ele não impede que outro aplicativo seja executado no deslizante ou uma imagem no vídeo de imagem seja exibida junto com seu aplicativo.
@@ -241,9 +241,9 @@ Na maioria das situações, o aplicativo deve permitir que o usuário reproduza 
 
 Para recusar a reprodução de vídeo PIP, faça o seguinte em seu aplicativo:
 
-- Se você estiver usando um `AVPlayerViewController` para exibir vídeo, defina a `AllowsPictureInPicturePlayback` Propriedade como `false`.
-- Se você estiver usando o `AVPlayerLayer` para exibir vídeo, não crie uma `AVPictureInPictureController`instância de.
-- Se você estiver usando um `WKWebView` para exibir vídeo, defina a `AllowsPictureInPictureMediaPlayback` Propriedade como `false`.
+- Se você estiver usando um `AVPlayerViewController` para exibir vídeo, defina a propriedade `AllowsPictureInPicturePlayback` como `false`.
+- Se você estiver usando o `AVPlayerLayer` para exibir vídeo, não crie uma instância de um `AVPictureInPictureController`.
+- Se você estiver usando um `WKWebView` para exibir vídeo, defina a propriedade `AllowsPictureInPictureMediaPlayback` como `false`.
 
 <a name="Summary" />
 
@@ -257,6 +257,6 @@ Este artigo abordou as etapas necessárias para garantir que um aplicativo Xamar
 - [Multitarefa (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios9-multitask)
 - [Introdução aos storyboards unificados](~/ios/user-interface/storyboards/unified-storyboards.md)
 - [iOS 9 para desenvolvedores](https://developer.apple.com/ios/pre-release/)
-- [iOS 9.0](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)
+- [iOS 9,0](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)
 - [Adotando aprimoramentos multitarefas no iPad](https://developer.apple.com/library/prerelease/ios/documentation/WindowsViews/Conceptual/AdoptingMultitaskingOniPad/index.html#//apple_ref/doc/uid/TP40015145)
 - [Postagem no blog](https://blog.xamarin.com/using-auto-layouts-for-ios-9-splitview/)

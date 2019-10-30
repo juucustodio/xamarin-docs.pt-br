@@ -4,21 +4,21 @@ description: Este documento discute como compilar um APK que será direcionado a
 ms.prod: xamarin
 ms.assetid: D21B195B-4530-4EB2-8704-5C4349A2CDD8
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/15/2018
-ms.openlocfilehash: 0c3bb547a21457a1666db5fe84560e10e3bb8eb1
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: b11f21b0d0932013c65ea9298ad9425747afdf79
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70754269"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028129"
 ---
 # <a name="building-abi-specific-apks"></a>Compilação de APKs específicos para ABI
 
 _Este documento discute como compilar um APK que será direcionado a uma única ABI usando o Xamarin.Android._
 
-## <a name="overview"></a>Visão geral
+## <a name="overview"></a>Visão Geral
 
 Em algumas situações, pode ser vantajoso para um aplicativo ter vários APKs – cada APK é assinado com o mesmo armazenamento de chaves e compartilha o mesmo nome de pacote, mas é compilado para uma configuração do Android ou dispositivo específico. Essa não é a abordagem recomendada, pois é muito mais simples ter um APK que pode dar suporte a vários dispositivos e configurações. Há algumas situações em que criar vários APKs pode ser útil, tais como:
 
@@ -35,7 +35,7 @@ Este guia abordará como criar o script o build de múltiplos APKs para um aplic
 1. Compile o aplicativo usando o **AndroidManifest.XML** da etapa anterior.
 1. Prepare o APK para lançamento, assinando-o e submetendo-o a zipalign.
 
-No final deste guia há um passo a passo que demonstra como criar o script dessas etapas usando o [Rake](http://martinfowler.com/articles/rake.html).
+No final deste guia há um passo a passo que demonstra como criar o script dessas etapas usando o [Rake](https://martinfowler.com/articles/rake.html).
 
 ### <a name="creating-the-version-code-for-the-apk"></a>Criar um código de versão para o APK
 
@@ -157,7 +157,7 @@ Após a tarefa rake ser concluída, haverá três pastas `bin` com o arquivo `xa
 [![Locais de pastas específicas de uma plataforma que contêm xamarin.helloworld.apk](abi-specific-apks-images/image01.png)](abi-specific-apks-images/image01.png#lightbox)
 
 > [!NOTE]
-> O processo de build descrito neste guia pode ser implementado em um dos diversos sistemas de build. Embora não tenhamos um exemplo escrito anteriormente, isso também deverá ser possível com [Powershell](https://technet.microsoft.com/scriptcenter/powershell.aspx) / [psake](https://github.com/psake/psake) ou [Fake](http://fsharp.github.io/FAKE/).
+> O processo de build descrito neste guia pode ser implementado em um dos diversos sistemas de build. Embora não tenhamos um exemplo escrito anteriormente, isso também deverá ser possível com [Powershell](https://technet.microsoft.com/scriptcenter/powershell.aspx) / [psake](https://github.com/psake/psake) ou [Fake](https://fsharp.github.io/FAKE/).
 
 ## <a name="summary"></a>Resumo
 

@@ -4,21 +4,21 @@ description: Este documento descreve como trabalhar com botões em um aplicativo
 ms.prod: xamarin
 ms.assetid: DA6EF400-A4E3-4245-A0D4-F2398CAE2C9B
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/07/2017
-ms.openlocfilehash: 869e2e5c3b074c928f3c49ca87c1c1801154df91
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 559944e5ae168fd3b45c4d25a86705c5032b2e04
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769974"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030484"
 ---
 # <a name="working-with-tvos-buttons-in-xamarin"></a>Trabalhando com botões tvOS no Xamarin
 
-Use uma instância da `UIButton` classe para criar um botão de foco e selecionável em uma janela tvOS. Quando o usuário seleciona um botão, ele envia uma mensagem de ação para o objeto de destino, permitindo que seu aplicativo Xamarin. tvOS responda à entrada do usuário.
+Use uma instância da classe `UIButton` para criar um botão com foco e selecionável em uma janela tvOS. Quando o usuário seleciona um botão, ele envia uma mensagem de ação para o objeto de destino, permitindo que seu aplicativo Xamarin. tvOS responda à entrada do usuário.
 
-[![](buttons-images/buttons01.png "Botões de exemplo")](buttons-images/buttons01.png#lightbox)
+[![](buttons-images/buttons01.png "Example buttons")](buttons-images/buttons01.png#lightbox)
 
 Para saber mais sobre como trabalhar com o foco e navegar com o Siri remoto, Confira nossa documentação sobre [como trabalhar com navegação e foco](~/ios/tvos/app-fundamentals/navigation-focus.md) e [controladores remotos e Bluetooth do Siri](~/ios/tvos/platform/remote-bluetooth.md) .
 
@@ -28,7 +28,7 @@ Para saber mais sobre como trabalhar com o foco e navegar com o Siri remoto, Con
 
 No tvOS, os botões são usados para ações específicas do aplicativo e podem conter um título, um ícone ou ambos. À medida que o usuário navega pela interface do usuário do aplicativo usando o [Siri remoto](~/ios/tvos/platform/remote-bluetooth.md#The-Siri-Remote), o foco muda para o botão fornecido, fazendo com que ele altere o texto e as cores do plano de fundo. Uma sombra também é aplicada ao botão adicionando um efeito 3D, o que parece aumentar acima do restante da interface do usuário.
 
-[![](buttons-images/buttons01.png "Botões de exemplo")](buttons-images/buttons01.png#lightbox)
+[![](buttons-images/buttons01.png "Example buttons")](buttons-images/buttons01.png#lightbox)
 
 A Apple tem as seguintes sugestões para trabalhar com botões:
 
@@ -63,39 +63,39 @@ A maneira mais fácil de trabalhar com botões em um aplicativo Xamarin. tvOS é
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
-1. No **Gerenciador de soluções**, clique duas vezes no arquivo `Main.storyboard` e abra-o para edição.
+1. No **Gerenciador de soluções**, clique duas vezes no arquivo de `Main.storyboard` e abra-o para edição.
 1. Arraste um **botão** da **biblioteca** e solte-o na exibição: 
 
-    [![](buttons-images/storyboard01.png "Um botão")](buttons-images/storyboard01.png#lightbox)
+    [![](buttons-images/storyboard01.png "A button")](buttons-images/storyboard01.png#lightbox)
 1. No **Gerenciador de propriedades**, você pode ajustar várias propriedades do botão, como seu **título** e a **cor do texto**: 
 
-    [![](buttons-images/storyboard02.png "Propriedades do botão")](buttons-images/storyboard02.png#lightbox)
-1. Em seguida, alterne para a **guia eventos** e conecte um **evento** do **botão** e chame- `ButtonPressed`o: 
+    [![](buttons-images/storyboard02.png "Button properties")](buttons-images/storyboard02.png#lightbox)
+1. Em seguida, alterne para a **guia eventos** e conecte um **evento** do **botão** e chame-o `ButtonPressed`: 
 
-    [![](buttons-images/storyboard03.png "A guia eventos")](buttons-images/storyboard03.png#lightbox)
-1. Você será alternado automaticamente para a `ViewController.cs` exibição em que você pode posicionar a nova ação em seu código usando as teclas de seta para **cima** e **para baixo** : 
+    [![](buttons-images/storyboard03.png "The Events Tab")](buttons-images/storyboard03.png#lightbox)
+1. Você será alternado automaticamente para a exibição `ViewController.cs`, onde poderá posicionar a nova ação em seu código usando as teclas de seta para **cima** e **para baixo** : 
 
-    [![](buttons-images/storyboard04.png "Colocando uma nova ação no código")](buttons-images/storyboard04.png#lightbox)
+    [![](buttons-images/storyboard04.png "Placing a new Action in code")](buttons-images/storyboard04.png#lightbox)
 1. Pressione **Enter** para selecionar o local: 
 
-    [![](buttons-images/storyboard05.png "O editor de código")](buttons-images/storyboard05.png#lightbox)
+    [![](buttons-images/storyboard05.png "The code editor")](buttons-images/storyboard05.png#lightbox)
 1. Salve as alterações em todos os arquivos.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-1. No **Gerenciador de soluções**, clique duas vezes no arquivo `Main.storyboard` e abra-o para edição.
+1. No **Gerenciador de soluções**, clique duas vezes no arquivo de `Main.storyboard` e abra-o para edição.
 1. Arraste um **botão** da **biblioteca** e solte-o na exibição: 
 
-    [![](buttons-images/storyboard01vs.png "Um botão")](buttons-images/storyboard01vs.png#lightbox)
+    [![](buttons-images/storyboard01vs.png "A button")](buttons-images/storyboard01vs.png#lightbox)
 1. No **Gerenciador de propriedades**, você pode ajustar várias propriedades do botão, como seu **título** e a **cor do texto**: 
 
-    [![](buttons-images/storyboard02vs.png "O Gerenciador de propriedades")](buttons-images/storyboard02vs.png#lightbox)
-1. Em seguida, alterne para a **guia eventos** e conecte um **evento** do **botão** e chame- `ButtonPressed`o: 
+    [![](buttons-images/storyboard02vs.png "The Properties Explorer")](buttons-images/storyboard02vs.png#lightbox)
+1. Em seguida, alterne para a **guia eventos** e conecte um **evento** do **botão** e chame-o `ButtonPressed`: 
 
-    [![](buttons-images/storyboard03vs.png "A guia eventos")](buttons-images/storyboard03vs.png#lightbox)
+    [![](buttons-images/storyboard03vs.png "The Events Tab")](buttons-images/storyboard03vs.png#lightbox)
 1. Salve as alterações em todos os arquivos.
 
-Edite o arquivo do controlador `ViewController.cs`de exibição (exemplo) e adicione o seguinte código para manipular o botão que está sendo selecionado:
+Edite o arquivo do controlador de exibição (exemplo `ViewController.cs`) e adicione o seguinte código para manipular o botão que está sendo selecionado:
 
 ```
 
@@ -119,10 +119,10 @@ namespace tvRemote
 
 -----
 
-Desde que a propriedade de `Enabled` um botão seja `true` e não seja coberta por outro controle ou exibição, ela pode se tornar o item em foco usando o Siri remoto. Se o usuário selecionar o botão e clicar na superfície de toque, `ButtonPressed` a ação definida acima será executada.
+Desde que a propriedade `Enabled` de um botão seja `true` e não seja coberta por outro controle ou exibição, ela poderá se tornar o item em foco usando o Siri remoto. Se o usuário selecionar o botão e clicar na superfície de toque, a ação `ButtonPressed` definida acima será executada.
 
 > [!IMPORTANT]
-> Embora seja possível atribuir ações como `TouchUpInside` a um `UIButton` no designer do Ios ao criar um manipulador de **eventos**, ele nunca será chamado porque a Apple TV não tem uma tela sensível ao toque ou dá suporte a eventos de toque. Você sempre deve usar o **tipo de ação** padrão ao criar **ações** para elementos da interface do usuário do tvOS.
+> Embora seja possível atribuir ações como `TouchUpInside` a um `UIButton` no designer do iOS ao criar um **manipulador de eventos**, ele nunca será chamado porque a Apple TV não tem uma tela sensível ao toque ou dá suporte a eventos de toque. Você sempre deve usar o **tipo de ação** padrão ao criar **ações** para elementos da interface do usuário do tvOS.
 
 Para obter mais informações sobre como trabalhar com storyboards, consulte nossa [Guia de início rápido Olá, tvOS](~/ios/tvos/get-started/hello-tvos.md).
 
@@ -130,7 +130,7 @@ Para obter mais informações sobre como trabalhar com storyboards, consulte nos
 
 ## <a name="buttons-and-code"></a>Botões e código
 
-Opcionalmente, um `UIButton` pode ser criado no C# código e adicionado à exibição do aplicativo tvOS. Por exemplo:
+Opcionalmente, uma `UIButton` pode ser criada no C# código e adicionada à exibição do aplicativo tvOS. Por exemplo:
 
 ```csharp
 var button = new UIButton(UIButtonType.System);
@@ -143,7 +143,7 @@ button.AllEvents += (sender, e) => {
 View.AddSubview (button);
 ```
 
-Quando você cria um novo `UIButton` no código, você especifica seu `UIButtonType` como um dos seguintes:
+Ao criar um novo `UIButton` no código, você especifica seu `UIButtonType` como um dos seguintes:
 
 - **Sistema** -esse é o tipo padrão de botão apresentado por tvOS e é o tipo que você usará com mais frequência.
 - **DetailDisclosure** -apresenta um tipo de botão "desligar" usado para ocultar ou mostrar informações detalhadas.
@@ -158,13 +158,13 @@ Em seguida, defina o tamanho da tela e o local do botão. Exemplo:
 button.Frame = new CGRect (25, 25, 300, 150);
 ```
 
-Em seguida, defina o título para o botão. `UIButtons`são diferentes da maioria `UIKit` dos controles em que têm um estado, de modo que você não pode simplesmente alterar o título, você precisa alterá- `UIControlState`lo para um determinado. Por exemplo:
+Em seguida, defina o título para o botão. `UIButtons` são diferentes do que a maioria dos controles de `UIKit`, pois eles têm um estado para que você não possa simplesmente alterar o título, você precisa alterá-lo para um determinado `UIControlState`. Por exemplo:
 
 ```csharp
 button.SetTitle ("Hello", UIControlState.Normal);
 ```
 
-Em seguida, use `AllEvents` o evento para ver quando o usuário clicou no botão. Exemplo:
+Em seguida, use o evento `AllEvents` para ver quando o usuário clicou no botão. Exemplo:
 
 ```csharp
 button.AllEvents += (sender, e) => {
@@ -180,25 +180,25 @@ View.AddSubview (button);
 ```
 
 > [!IMPORTANT]
-> Embora seja possível atribuir ações como `TouchUpInside` `UIButton`a a, ela nunca será chamada porque a Apple TV não tem uma tela sensível ao toque ou dá suporte a eventos de toque. Você sempre deve usar eventos como os próprios **eventos** ou **PrimaryActionTriggered**.
+> Embora seja possível atribuir ações como `TouchUpInside` a um `UIButton`, ela nunca será chamada porque a Apple TV não tem uma tela sensível ao toque ou dá suporte a eventos de toque. Você sempre deve usar eventos como os próprios **eventos** ou **PrimaryActionTriggered**.
 
 <a name="Styling-a-Button" />
 
 ## <a name="styling-a-button"></a>Estilizando um botão
 
-o tvOS fornece várias propriedades de `UIButton` um que podem ser usadas para fornecer seu título e estilizar a ti com coisas como cores de plano de fundo e imagens.
+o tvOS fornece várias propriedades de uma `UIButton` que podem ser usadas para fornecer seu título e estilizar o estilo com coisas como cores de plano de fundo e imagens.
 
 <a name="Button-Titles" />
 
 ### <a name="button-titles"></a>Títulos de botão
 
-Como vimos acima, são `UIButtons` diferentes da maioria dos `UIKit` controles, pois eles têm um estado para que você não possa simplesmente alterar o título, você precisa alterá-lo para `UIControlState`um determinado. Por exemplo:
+Como vimos acima, `UIButtons` são diferentes do que a maioria dos controles de `UIKit`, pois eles têm um estado para que você não possa simplesmente alterar o título, você precisa alterá-lo para um determinado `UIControlState`. Por exemplo:
 
 ```csharp
 button.SetTitle ("Hello", UIControlState.Normal);
 ```
 
-Você pode definir a cor do título para o botão usando `SetTitleColor` o método. Por exemplo:
+Você pode definir a cor do título para o botão usando o método `SetTitleColor`. Por exemplo:
 
 ```csharp
 button.SetTitleColor (UIColor.White, UIControlState.Normal);
@@ -228,15 +228,15 @@ myButton.SetAttributedTitle (highlightedAttributedTitle, UIControlState.Highligh
 
 ### <a name="button-images"></a>Imagens de botão
 
-Um `UIButton` pode ter uma imagem anexada e pode usar uma imagem como seu plano de fundo.
+Uma `UIButton` pode ter uma imagem anexada a ela e pode usar uma imagem como seu plano de fundo.
 
-Para definir a imagem de plano de fundo de um botão `UIControlState`para um determinado, use o seguinte código:
+Para definir a imagem de plano de fundo de um botão para um determinado `UIControlState`, use o seguinte código:
 
 ```csharp
 button.SetBackgroundImage(UIImage.FromFile("my image.png"), UIControlState.Normal);
 ```
 
-Defina a `AdjustsImageWhenHiglighted` Propriedade como `true` para desenhar a imagem mais clara quando o botão for realçado (esse é o padrão). Defina a `AdjustsImageWhenDisabled` Propriedade como `true` para desenhar a imagem mais escura quando o botão estiver desabilitado (novamente, esse é o padrão).
+Defina a propriedade `AdjustsImageWhenHiglighted` como `true` para desenhar a imagem mais clara quando o botão for realçado (esse é o padrão). Defina a propriedade `AdjustsImageWhenDisabled` como `true` para desenhar a imagem mais escura quando o botão estiver desabilitado (novamente, esse é o padrão).
 
 Para definir a imagem exibida no botão, use o seguinte código:
 
@@ -244,7 +244,7 @@ Para definir a imagem exibida no botão, use o seguinte código:
 button.SetImage(UIImage.FromFile("my image.png"), UIControlState.Normal);
 ```
 
-Use a `TintColor` propriedade para definir uma tonalidade de cor que é aplicada ao título e à imagem do botão. Para botões do `Custom` tipo, essa propriedade não tem efeito, você mesmo deve implementar o `TintColor` comportamento.
+Use a propriedade `TintColor` para definir uma tonalidade de cor que é aplicada ao título e à imagem do botão. Para botões do tipo de `Custom`, essa propriedade não tem efeito, você deve implementar o comportamento de `TintColor` você mesmo.
 
 <a name="Summary" />
 

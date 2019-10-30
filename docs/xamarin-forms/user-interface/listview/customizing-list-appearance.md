@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/13/2018
-ms.openlocfilehash: f6576f1e7a0ed4aa27a40c7610b42e942c7923b4
-ms.sourcegitcommit: fbccdade677a805d842ec054e44bed3d01356e93
+ms.openlocfilehash: 90b0e0f3802ce766decb802c9406d72b5966360e
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72798625"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73032808"
 ---
 # <a name="listview-appearance"></a>Aparência de ListView
 
@@ -341,5 +341,5 @@ O manipulador de eventos `OnImageTapped` é executado em resposta a um [`Image`]
 - [Agrupamento (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-grouping)
 - [Exibição do renderizador personalizado (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithlistviewnative)
 - [Redimensionamento dinâmico de linhas (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-dynamicunevenlistcells)
-- [notas de versão de 1,4](http://forums.xamarin.com/discussion/35451/xamarin-forms-1-4-0-released/)
-- [notas de versão de 1,3](http://forums.xamarin.com/discussion/29934/xamarin-forms-1-3-0-released/)
+- [notas de versão de 1,4](https://forums.xamarin.com/discussion/35451/xamarin-forms-1-4-0-released/)
+- [notas de versão de 1,3](https://forums.xamarin.com/discussion/29934/xamarin-forms-1-3-0-released/)

@@ -4,15 +4,15 @@ description: Este artigo explica as etapas de instalação e os detalhes de conf
 ms.prod: xamarin
 ms.assetid: 3BB395FA-0545-4024-A18F-98CF5E9CA55F
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/25/2018
-ms.openlocfilehash: 190e38e525288dbc2b7f6bd9e785c723c80c6271
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 83ec214ae1838959355e99322ce5a809ead004fa
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70762235"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028736"
 ---
 # <a name="setup-and-installation"></a>Instalação e Configuração
 
@@ -22,13 +22,13 @@ _Este artigo explica as etapas de instalação e os detalhes de configuração n
 
 O seguinte é necessário para criar aplicativos de desgaste do Android baseados em Xamarin:
 
-- **Visual Studio ou Visual Studio para Mac** &ndash; A Comunidade do Visual Studio 2017 ou posterior é necessária.
+- O **Visual Studio ou Visual Studio para Mac** &ndash; visual Studio 2017 Community ou posterior é necessário.
 
-- **Xamarin. Android** &ndash; xamarin. Android 4,17 ou posterior deve ser instalado e configurado com o Visual Studio ou Visual Studio para Mac.
+- O **xamarin. android** &ndash; Xamarin. Android 4,17 ou posterior deve ser instalado e configurado com o Visual Studio ou Visual Studio para Mac.
 
 - O **SDK do Android** -SDK do Android 5.0.1 (API 21) ou posterior deve ser instalado por meio do gerenciador de SDK do Android.
 
-- **Java Developer Kit** O desenvolvimento do Xamarin Android requer o [JDK 1,8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) se você estiver desenvolvendo para o nível de API 24 ou superior (o JDK 1,8 também oferece suporte a níveis de API anteriores a 24). &ndash;
+- **Java Developer Kit** &ndash; o desenvolvimento do Xamarin Android requer o [JDK 1,8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) se você estiver desenvolvendo para o nível de API 24 ou superior (o JDK 1,8 também oferece suporte a níveis de API anteriores a 24).
 
 Você pode continuar a usar o [JDK 1,7](https://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html) se estiver desenvolvendo especificamente para o nível de API 23 ou anterior.
 
@@ -65,7 +65,7 @@ Verifique se você tem as seguintes SDK do Android e ferramentas instaladas:
 - Android 4.4 W (API20) ou
 - Android 5.0.1 (API21) ou superior.
 
-Se você não tiver o SDK e as ferramentas mais recentes instalados, baixe as ferramentas de SDK necessárias *e* os bits de API (talvez seja necessário rolar um pouco para &ndash; encontrá-las a seleção de API é mostrada abaixo): 
+Se você não tiver o SDK e as ferramentas mais recentes instalados, baixe as ferramentas de SDK necessárias *e* os bits de API (talvez seja necessário rolar um pouco para encontrá-las &ndash; a seleção de API seja mostrada abaixo): 
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 

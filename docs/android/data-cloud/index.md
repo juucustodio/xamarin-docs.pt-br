@@ -4,15 +4,15 @@ description: Os guias nesta seção examinam como acessar dados e fazer uso de s
 ms.prod: xamarin
 ms.assetid: 54D9D34B-D4FA-473B-BD11-75D3762920B0
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/25/2018
-ms.openlocfilehash: 9fc654a33617f4cf32b90e207dd3a186c2b84db0
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: ab5fc27c2b7a611d3ce6eeabedcf563212ff07ee
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70754309"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028173"
 ---
 # <a name="data-and-cloud-services"></a>Serviços de dados e de nuvem
 

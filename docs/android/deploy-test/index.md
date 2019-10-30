@@ -4,15 +4,15 @@ description: Os guias desta seção explicam como testar um aplicativo, otimizar
 ms.prod: xamarin
 ms.assetid: 568C0B85-EFF3-AF6F-5605-95055193D367
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/25/2018
-ms.openlocfilehash: ff2b481fda34bc7a75c88c72a5e30f00c4b70d9d
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 70d03e2ed35970835e0343bc416041845e0edb29
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70754008"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028038"
 ---
 # <a name="deployment-and-testing"></a>Implantação e Teste
 
@@ -20,7 +20,7 @@ Os guias desta seção explicam como testar um aplicativo, otimizar seu desempen
 
 ## <a name="application-package-sizesapp-package-sizemd"></a>[Tamanho dos pacotes de aplicativos](app-package-size.md)
 
-Este artigo examina as partes que constituem um pacote de aplicativos do Xamarin.Android e as estratégias associadas que podem ser usadas para a implantação eficiente do pacote durante a depuração e as etapas de lançamento da implantação.
+Este artigo examina as partes que constituem um pacote do aplicativo do Xamarin.Android e as estratégias associadas que podem ser usadas para a implantação eficiente do pacote durante a depuração e as etapas de lançamento de desenvolvimento.
 
 ## <a name="building-appsbuilding-appsindexmd"></a>[Compilar aplicativos](building-apps/index.md)
 
@@ -50,7 +50,7 @@ Este artigo explica como usar o `gdb` para depurar um aplicativo Xamarin.Android
 
 Este guia explica como instalar um aplicativo Xamarin.Android como um Aplicativo de Sistema em um dispositivo Android ou como parte de um ROM personalizado.
 
-## <a name="linking-on-androidlinkermd"></a>[Vinculação no Android](linker.md)
+## <a name="linking-on-androidlinkermd"></a>[Usando Linker no Android](linker.md)
 
 Este artigo aborda o processo de vinculação usado pelo Xamarin.Android para reduzir o tamanho final de um aplicativo. Ele descreve os vários níveis de vinculação que podem ser executados e fornece algumas diretrizes e orientações para atenuar os erros que possam resultar do uso do vinculador.
 

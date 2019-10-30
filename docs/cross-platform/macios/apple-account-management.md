@@ -3,15 +3,15 @@ title: Gerenciamento de contas da Apple
 description: Este documento descreve como usar os recursos de gerenciamento de conta da Apple no Visual Studio para Mac e no Visual Studio 2019.
 ms.prod: xamarin
 ms.assetid: 71388B83-699B-4E42-8CBF-8557A4A3CABF
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 05/06/2018
-ms.openlocfilehash: 65945a303375863f7b92b20405aa78e6b2edacda
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 81f161442b33eee94f32c506947ed029fd40aadb
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70766130"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016337"
 ---
 # <a name="apple-account-management"></a>Gerenciamento de contas da Apple
 
@@ -39,7 +39,7 @@ Você deve ter uma conta de desenvolvedor da Apple para usar esse recurso. Mais 
 
 - Verifique se você está conectado à Internet. Isso ocorre porque o Fastlane se comunica diretamente com o portal do desenvolvedor da Apple.
 - Verifique se você tem as [Ferramentas do Fastlane instaladas](~/ios/deploy-test/provisioning/fastlane/index.md#Installation).
-- Verifique se você tem as ferramentas Fastlane mais [https://download.fastlane.tools](https://download.fastlane.tools)recentes do.
+- Verifique se você tem as ferramentas Fastlane mais recentes da [https://download.fastlane.tools](https://download.fastlane.tools).
 - Antes de começar, certifique-se de aceitar os contratos de licença de usuário no [portal do desenvolvedor](https://developer.apple.com/account/).
 
 ## <a name="adding-an-apple-developer-account"></a>Adicionando uma conta de desenvolvedor da Apple
@@ -50,7 +50,7 @@ Você deve ter uma conta de desenvolvedor da Apple para usar esse recurso. Mais 
 
     ![Opções de conta de desenvolvedor da Apple](apple-account-management-images/image1.png)
 
-2. Pressione o **+** botão para exibir a caixa de diálogo de entrada, conforme descrito abaixo: 
+2. Pressione o botão **+** para exibir a caixa de diálogo de entrada, conforme descrito abaixo: 
 
     ![caixa de diálogo fastlane.](apple-account-management-images/image2.png)
 
@@ -144,7 +144,7 @@ Atualmente, esse é um problema conhecido, relacionado ao bug [#53906](https://b
 
 ### <a name="if-you-are-experiencing-issues-logging-in-your-account-please-try-the-following"></a>Se você estiver tendo problemas ao fazer logon em sua conta, tente o seguinte:
 
-- Abra o aplicativo de conjunto de chaves e, em categoria, selecione *senhas*. `deliver.`Pesquise e exclua todas as entradas.
+- Abra o aplicativo de conjunto de chaves e, em categoria, selecione *senhas*. Pesquise `deliver.`e exclua todas as entradas.
 
 ### <a name="error-adding-account-please-sign-in-with-an-app-specific-password"></a>"Erro ao adicionar a conta. Entre com uma senha específica ao aplicativo "
 

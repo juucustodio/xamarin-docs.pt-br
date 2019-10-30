@@ -4,15 +4,15 @@ description: Este artigo aborda as estruturas de destino (bibliotecas de classes
 ms.prod: xamarin
 ms.assetid: AF21BE16-3F92-4121-AB4C-D51AC863D92D
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 11/10/2017
-ms.openlocfilehash: a612c2c23ceff13ea1d602465573514547628e55
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: e07ec4fd4436d951ea4033dbceab2cef47e96218
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769801"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73025927"
 ---
 # <a name="target-framework-for-xamarinmac"></a>Estrutura de destino para Xamarin. Mac
 
@@ -30,11 +30,11 @@ Uma das repercussões mais importantes dessas diferentes estruturas de destino �
 
 Há três opções de estrutura de destino disponíveis para o Xamarin. Mac, cada uma com vantagens e desvantagens diferentes:
 
-- **Moderno** (chamado de Mobile na documentação mais antiga) – um subconjunto muito semelhante ao que capacita o Xamarin. iOS, altamente ajustado para desempenho e tamanho. Essa estrutura de destino é segura para o vinculador, portanto, esses projetos podem ter sua superfície final reduzida drasticamente com a remoção de código não utilizado.
+- **Moderno** (chamada móvel na documentação mais antiga) – um subconjunto muito semelhante ao que é o Xamarin. Ios, altamente ajustado para desempenho e tamanho. Essa estrutura de destino é segura para o vinculador, portanto, esses projetos podem ter sua superfície final reduzida drasticamente com a remoção de código não utilizado.
 
 - **Completo** (chamado de XM 4,5 na documentação mais antiga) – um subconjunto muito semelhante à BCL de "área de trabalho", com algumas pequenas remoções. Como a estrutura de destino é quase idêntica ao Net45 (e posterior), ela pode facilmente consumir muitas nugets que não fornecem netstandard2 ou compilações específicas do Xamarin. Mac. No entanto, devido ao uso de System. Configuration, ele é incompatível com a vinculação.
 
-- **Sem suporte** (chamado de sistema na documentação mais antiga) – em vez de vincular a uma BCL fornecida pelo Xamarin. Mac, use o mono instalado do sistema atual. Isso fornece o conjunto completo de assemblies, incluindo algum problema conhecido (System. Drawing, por exemplo). Essa opção existe apenas com um "último recurso" e é altamente recomendável esgotar outras opções antes de usá-la. Como o nome indica, o uso não é suportado por canais de suporte oficial.
+- **Sem suporte** (chamado de sistema em documentação mais antiga) – em vez de vincular a uma BCL fornecida pelo Xamarin. Mac, use o mono instalado do sistema atual. Isso fornece o conjunto completo de assemblies, incluindo algum problema conhecido (System. Drawing, por exemplo). Essa opção existe apenas com um "último recurso" e é altamente recomendável esgotar outras opções antes de usá-la. Como o nome indica, o uso não é suportado por canais de suporte oficial.
 
 ## <a name="setting-the-target-framework"></a>Configurando a estrutura de destino
 

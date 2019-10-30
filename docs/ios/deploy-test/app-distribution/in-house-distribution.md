@@ -4,15 +4,15 @@ description: Este documento fornece uma visão geral sobre a distribuição de a
 ms.prod: xamarin
 ms.assetid: 9466E51E-303E-466E-85D7-D0525E16BB37
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: a27536585cbd320a5595d71b156459e25a1fa7a9
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 9b9db3e6ae081a02d2b2297e70c216015dceade6
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70763059"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73026541"
 ---
 # <a name="in-house-distribution-for-xamarinios-apps"></a>Distribuição interna para aplicativos Xamarin.iOS
 
@@ -56,15 +56,15 @@ Certificados do Programa de Desenvolvedores Corporativos da Apple durão três a
 3. Clique no botão **+** para criar um novo Certificado.
 4. No título *Produção*, selecione **Interna e Ad Hoc**:
 
-   [![](in-house-distribution-images/createcertmanually01.png "Selecionar Interna e Ad Hoc")](in-house-distribution-images/createcertmanually01.png#lightbox)
+   [![](in-house-distribution-images/createcertmanually01.png "Select In-House and Ad Hoc")](in-house-distribution-images/createcertmanually01.png#lightbox)
 
 5. Clique em Continuar e siga as instruções para criar uma Solicitação de Assinatura de Certificado por meio do Acesso do Conjunto de Chaves:
 
-   [![](in-house-distribution-images/createcertmanually02.png "Criar uma Solicitação de Assinatura de Certificado por meio do Acesso do Conjunto de Chaves")](in-house-distribution-images/createcertmanually02.png#lightbox)
+   [![](in-house-distribution-images/createcertmanually02.png "Create a Certificate Signing Request via Keychain Access")](in-house-distribution-images/createcertmanually02.png#lightbox)
 
 6. Depois de criar seu CSR, conforme instruído, clique em Continuar e carregue o CSR na Central de Associados:
 
-   [![](in-house-distribution-images/createcertmanually03.png "Carregar o CSR para a Central de Membros")](in-house-distribution-images/createcertmanually03.png#lightbox)
+   [![](in-house-distribution-images/createcertmanually03.png "Upload the CSR to the Member Center")](in-house-distribution-images/createcertmanually03.png#lightbox)
 
 7. Clique em Generate (Gerar) para criar o certificado.
 8. Baixe o certificado concluído e clique duas vezes no arquivo para instalá-lo.
@@ -74,15 +74,15 @@ Também é possível solicitar um Certificado usando a caixa de diálogo Prefer�
 
 1. Selecione a equipe e clique em *Exibir Detalhes*:
 
-   [![](in-house-distribution-images/selectteam.png "Selecionar sua equipe")](in-house-distribution-images/selectteam.png#lightbox)
+   [![](in-house-distribution-images/selectteam.png "Select your team")](in-house-distribution-images/selectteam.png#lightbox)
 
 2. Em seguida, clique no botão **Criar** próximo ao **Certificado de Distribuição iOS**:
 
-   [![](in-house-distribution-images/selectcert.png "Criar o Certificado de distribuição iOS")](in-house-distribution-images/selectcert.png#lightbox)
+   [![](in-house-distribution-images/selectcert.png "Create the iOS Distribution Certificate")](in-house-distribution-images/selectcert.png#lightbox)
 
 3. Em seguida, clique no botão de **mais (+)** e selecione **iOS App Store**:
 
-   [![](in-house-distribution-images/selectcert.png "Selecione a App Store do iOS")](in-house-distribution-images/selectcert.png#lightbox)
+   [![](in-house-distribution-images/selectcert.png "Select iOS App Store")](in-house-distribution-images/selectcert.png#lightbox)
 
 <a name="profile" />
 
@@ -96,7 +96,7 @@ Como com qualquer outro Perfil de Provisionamento que você criar, uma ID do Apl
 
 1. No [Apple Developer Center (Centro de Desenvolvedores da Apple)](https://developer.apple.com/account/overview.action), navegue até a seção *Certificate, Identifiers and Profiles (Certificados, Identificadores e Perfis)* . Selecione **App IDs (IDs do Aplicativo)** em **Identifiers (Identificadores)** .
 2. Clique no botão **+** e forneça um **Name (Nome)** que o identificará no Portal.
-3. O prefixo do aplicativo já deve estar definido como sua ID de Equipe e não pode ser alterado. Selecione uma ID do Aplicativo Explícita ou Curinga e insira uma ID de Pacote no formato DNS inverso, como: **Explicit (Explícita)** : com.[NomeDeDomínio].[NomeDeAplicativo] **Wildcard (Curinga)** :com.[NomeDeDomínio].*
+3. O prefixo do aplicativo já deve estar definido como sua ID de Equipe e não pode ser alterado. Selecione uma ID do Aplicativo Explicit (Explícita) ou Wildcard (Curinga) e insira uma ID de Pacote em um formato DNS inverso, como: **Explicit (Explícita)** : com.[DomainName].[AppName] **Wildcard (Curinga)** :com.[DomainName].*
 4. Selecione [App Services (Serviços de Aplicativos)](~/ios/get-started/installation/device-provisioning/index.md#provisioning-for-application-services) que seu aplicativo solicitar.
 5. Clique no botão **Continue (Continuar)** e siga as instruções na tela para criar a nova ID do Aplicativo.
 
@@ -104,23 +104,23 @@ Depois de obter os componentes obrigatórios necessários para criar um Perfil d
 
 1. Volte para o Portal de Provisionamento da Apple e selecione **Provisionamento** > **Distribuição**:
 
-   [![](in-house-distribution-images/distribute01.png "Selecione Provisionamento > Distribuição")](in-house-distribution-images/distribute01.png#lightbox)
+   [![](in-house-distribution-images/distribute01.png "Select Provisioning > Distribution")](in-house-distribution-images/distribute01.png#lightbox)
 
 2. Clique no botão **+** e selecione o tipo de Perfil de Distribuição que você deseja criar como **Interna**:
 
-   [![](in-house-distribution-images/distribute02.png "Crie um Perfil de Distribuição Interna")](in-house-distribution-images/distribute02.png#lightbox)
+   [![](in-house-distribution-images/distribute02.png "Create an In-House Distribution Profile")](in-house-distribution-images/distribute02.png#lightbox)
 
 3. Clique no botão **Continuar** e selecione a ID do Aplicativo na lista suspensa para a qual você deseja criar um Perfil de Distribuição:
 
-   [![](in-house-distribution-images/distribute03.png "Selecione a ID do aplicativo na lista suspensa")](in-house-distribution-images/distribute03.png#lightbox)
+   [![](in-house-distribution-images/distribute03.png "Select App ID from the dropdown list")](in-house-distribution-images/distribute03.png#lightbox)
 
 4. Clique no botão **Continuar** e selecione o certificado de distribuição necessário para assinar o aplicativo:
 
-   [![](in-house-distribution-images/distribute04.png "Selecione o certificado de distribuição necessário para assinar o aplicativo")](in-house-distribution-images/distribute04.png#lightbox)
+   [![](in-house-distribution-images/distribute04.png "Select distribution certificate required to sign the application")](in-house-distribution-images/distribute04.png#lightbox)
 
 5. Clique no botão **Continuar** e digite um **Nome** para o novo Perfil de Distribuição:
 
-   [![](in-house-distribution-images/distribute06.png "Insira um nome para o novo Perfil de Distribuição")](in-house-distribution-images/distribute06.png#lightbox)
+   [![](in-house-distribution-images/distribute06.png "Enter a Name for the new Distribution Profile")](in-house-distribution-images/distribute06.png#lightbox)
 
 6. Clique no botão **Generate (Gerar)** para criar o novo perfil e finalizar o processo.
 
@@ -138,7 +138,7 @@ Talvez você precise fechar o Visual Studio e fazer com que o Xcode (no Mac do H
 
 ## <a name="distributing-your-app-in-house"></a>Distribuindo o aplicativo internamente
 
-Com o Programa de Desenvolvedor Corporativo da Apple, o Licenciado é a pessoa responsável por distribuir o aplicativo e por cumprir as [diretrizes](http://adcdownload.apple.com/Documentation/License_Agreements__Apple_Developer_Enterprise_Program/Apple_Developer_Program_Enterprise_Agreement_20150608.pdf) definidas pela Apple.
+Com o Programa de Desenvolvedor Corporativo da Apple, o Licenciado é a pessoa responsável por distribuir o aplicativo e por cumprir as [diretrizes](https://developer.apple.com/programs/enterprise/) definidas pela Apple.
 
 Seu aplicativo pode ser distribuído com segurança usando uma variedade de formas diferentes, como:
 

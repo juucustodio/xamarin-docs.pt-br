@@ -4,19 +4,19 @@ description: A adição de capacidades a um aplicativo geralmente requer uma con
 ms.prod: xamarin
 ms.assetid: 98A4676F-992B-4593-8D38-6EEB2EB0801C
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 05/06/2018
-ms.openlocfilehash: d7a2f14b55d9f8de2ea01bdfa5c68c5c9f8f2555
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 6250dfa24361601c2b9929d80fec3cc7a18cab2d
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70756145"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028562"
 ---
 # <a name="working-with-capabilities-in-xamarinios"></a>Trabalhando com recursos no Xamarin.iOS
 
-_A adição de funcionalidades a um aplicativo geralmente requer uma configuração de provisionamento adicional. Este guia explica a configuração necessária para todas as funcionalidades._
+_A adição de recursos a um aplicativo geralmente requer configuração de provisionamento adicional. Este guia explica a configuração necessária para todos os recursos do._
 
 A Apple fornece _capacidades_ aos desenvolvedores, geralmente conhecidas como _serviços de aplicativos_, como uma forma de estender as funcionalidades e ampliar o escopo daquilo que os aplicativos iOS podem fazer. As capacidades permitem que os desenvolvedores adicionem uma integração mais profunda dos recursos de plataforma em seus aplicativo, como: a capacidade de realizar transações monetárias iniciadas no aplicativo, serviços de dispositivo adicionais como Siri e muito mais.
 Essas capacidades podem ser usadas com projetos Xamarin.iOS. A lista completa de serviços está descrita abaixo:
@@ -41,7 +41,7 @@ Essas capacidades podem ser usadas com projetos Xamarin.iOS. A lista completa de
 - Compartilhamento de conjunto de chaves
 - Extensões de rede
 - Configuração de hotspot
-- Múltiplos caminhos
+- Multipath
 - Leitura da marca NFC
 
 As funcionalidades podem ser habilitadas por meio do Visual Studio para Mac e do Visual Studio 2019 ou manualmente no Portal do Desenvolvedor da Apple. Determinadas capacidades, como Wallet, Apple Pay e iCloud, exigem a configuração adicional das IDs do aplicativo.
@@ -140,7 +140,7 @@ Usar a central de desenvolvedores é um processo de duas etapas que requer a cri
     ![Página de seleção de Serviços de Aplicativos](images/image8.png)
 
 7. Pressione **Continuar**.
-8. Confirme a ID do aplicativo. Cada serviço estará em um dos seguintes estados: **Habilitado**, **Desabilitado** ou **Configurável**, conforme ilustrado abaixo. Se estiver **Habilitado,** estará pronto para ser usado em um perfil de provisionamento. Se estiver **Configurável**, uma configuração adicional será necessária para essa capacidade. Estas etapas adicionais estão descritas mais detalhadamente nas próximas seções.
+8. Confirme a ID do aplicativo. Cada serviço estará em um dos seguintes estados: **Habilitado**, **Desabilitado**, ou **Configurável**, conforme é ilustrado abaixo. Se estiver **Habilitado,** estará pronto para ser usado em um perfil de provisionamento. Se estiver **Configurável**, uma configuração adicional será necessária para essa capacidade. Estas etapas adicionais estão descritas mais detalhadamente nas próximas seções.
 
     ![Confirmação de ID do aplicativo](images/image9.png)
 

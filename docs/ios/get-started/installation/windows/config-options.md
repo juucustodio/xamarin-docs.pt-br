@@ -4,15 +4,15 @@ description: Este artigo descreve como configurar Visual Studio 2019 para desenv
 ms.prod: xamarin
 ms.assetid: 22D82244-890D-4325-B3CC-C0AC49130BCA
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/16/2018
-ms.openlocfilehash: b3910bd096f2a8dd301a9ba6e200028d3121c8df
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: c5c819221bc08f1c39bde9b5900c2f9f9889764d
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70279219"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73022529"
 ---
 # <a name="configuring-visual-studio-for-ios-development"></a>Configurando o Visual Studio para desenvolvimento do iOS
 
@@ -54,8 +54,8 @@ Para verificar se este menu suspenso está visível na barra de ferramentas Padr
 - Escolha **Adicionar ou Remover Botões** 
 - Verifique se o item **Plataformas de Solução** está selecionado:
 
-![Habilitando o menu suspenso Plataformas de Solução](config-options-images/solution-platforms-enable.png "Habilitando o menu suspenso Plataformas de Solução")
+![Habilitando o menu suspenso plataformas de soluções](config-options-images/solution-platforms-enable.png "Habilitando o menu suspenso plataformas de soluções")
 
 Com um projeto do iOS aberto, as barras de ferramentas **Padrão** e **iOS** agora devem ser semelhantes à captura de tela a seguir:
 
-![Barras de ferramentas Padrão e iOS](config-options-images/toolbars.png "Barras de ferramentas Padrão e iOS")
+![Barras de ferramentas standard e iOS](config-options-images/toolbars.png "Barras de ferramentas standard e iOS")

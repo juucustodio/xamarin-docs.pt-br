@@ -3,15 +3,15 @@ title: Acessibilidade em aplicativos Xamarin
 description: Este documento fornece várias dicas para a criação de aplicativos acessíveis. Por exemplo, ele inclui recomendações sobre fontes grandes, alto contraste, interfaces autodescritivas e muito mais.
 ms.prod: xamarin
 ms.assetid: E587F0CF-7C1D-41F8-B5A8-DA3E738EDA81
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: 55d531036336cdd6c3ac7efa1c5ba21b09a7be9e
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: 23ef499005994c33586e1918ac3b2a9d28640d04
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "70758132"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030283"
 ---
 # <a name="accessibility-in-xamarin-apps"></a>Acessibilidade em aplicativos Xamarin
 
@@ -19,7 +19,7 @@ _Certifique-se de que seus aplicativos sejam utilizáveis pelo público mais amp
 
 Acessibilidade refere-se ao conceito de criação de interfaces de usuário de aplicativo que funcionam bem com recursos de assistência de entrada e de exibição do sistema operacional, como tipo grande, alto contraste, zoom, leitura de tela (conversão de texto em fala), indicações de comentários Visual ou Haptic e métodos de entrada alternativos.
 
-As plataformas desktop e móvel, como iOS, Android e Windows, fornecem APIs internas que ajudam os desenvolvedores a criarem aplicativos acessíveis, como o [Google Talkback](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback) e o [VoiceOver da Apple](http://www.apple.com/accessibility/ios/voiceover/).
+As plataformas desktop e móvel, como iOS, Android e Windows, fornecem APIs internas que ajudam os desenvolvedores a criarem aplicativos acessíveis, como o [Google Talkback](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback) e o [VoiceOver da Apple](https://www.apple.com/accessibility/ios/voiceover/).
 
 ## <a name="platform-specific-apis"></a>APIs específicas da plataforma
 
@@ -34,7 +34,7 @@ Para implementar as diretrizes deste documento, use as APIs fornecidas por cada 
 
 ## <a name="accessibility-checklist"></a>Lista de verificação de acessibilidade
 
-Siga estas dicas para garantir que seus aplicativos estejam acessíveis para o público mais amplo possível. Confira a [lista de verificação de testes de acessibilidade do Android](https://developer.android.com/training/accessibility/testing.html) e a página de [acessibilidade da Apple](http://www.apple.com/accessibility/) para obter informações adicionais.
+Siga estas dicas para garantir que seus aplicativos estejam acessíveis para o público mais amplo possível. Confira a [lista de verificação de testes de acessibilidade do Android](https://developer.android.com/training/accessibility/testing.html) e a página de [acessibilidade da Apple](https://www.apple.com/accessibility/) para obter informações adicionais.
 
 ### <a name="support-large-fonts-and-high-contrast"></a>Dar suporte a grandes fontes e alto contraste
 

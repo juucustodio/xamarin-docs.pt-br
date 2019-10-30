@@ -1,18 +1,18 @@
 ---
 title: Introdução ao iOS 12, tvOS 12 e watchOS 5
-description: Este documento descreve como concluir a configuração até o  build de aplicativos para iOS 12, tvOS 12 e watchOS 5 com o Xamarin. Ele discute como baixar o Xcode 10 e atualizar Visual Studio para Mac e o Visual Studio 2017.
+description: Este documento descreve como ser configurado para compilar aplicativos iOS 12, tvOS 12 e watchOS 5 com o Xamarin. Ele discute como baixar o Xcode 10 e atualizar Visual Studio para Mac e o Visual Studio 2017.
 ms.prod: xamarin
 ms.assetid: 6C0F0133-1A5F-408B-8BCA-BDCA313A55C2
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 09/19/2018
-ms.openlocfilehash: 480e7c1d5ff0aa7335b3f45d8e05f276bc5be208
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 1db249a9e07f178461bcb052508d08f54ecea121
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70287009"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73032013"
 ---
 # <a name="get-started-with-ios-12-tvos-12-and-watchos-5"></a>Introdução ao iOS 12, tvOS 12 e watchOS 5
 
@@ -26,12 +26,12 @@ Este documento descreve como começar a criar aplicativos Xamarin que chamam API
 
 3. **Atualização Visual Studio para Mac e Visual Studio 2017** – Verifique se você tem a versão estável mais recente do Xamarin.
 
-4. _(opcional)_ **Instalar o IOS 12 em seus dispositivos IOS** –
+4. _(opcional)_ **instalar o IOS 12 em seus dispositivos IOS** –
 
    Para o teste de dispositivos de aplicativos que usam APIs introduzidas com o Xcode 10, os desenvolvedores da Apple registrados podem [baixar](https://developer.apple.com/download) e instalar o sistema operacional em seus dispositivos.
 
    > [!TIP]
-   > Mesmo se seu aplicativo não usa novas APIs, certifique-se de criá-lo com os SDKs mais recentes do Xcode 10 e testá-lo para certificar-se de que tudo está funcionando conforme o esperado. Se um aplicativo não chamar novas APIs, você poderá recompilá-lo com esses novos SDKs e testá-lo em dispositivos que ainda não foram atualizados para o novo sistema operacional.
+   > Mesmo que seu aplicativo não use nenhuma nova API, não se esqueça de compilá-lo com os novos SDKs do Xcode 10 e testá-lo para garantir que tudo funcione conforme o esperado. Se um aplicativo não chamar novas APIs, você poderá recompilá-lo com esses novos SDKs e testá-lo em dispositivos que ainda não foram atualizados para o novo sistema operacional.
    >
    > Antes de atualizar seus dispositivos para as versões mais recentes do sistema operacional da Apple para testar seus aplicativos Xamarin, certifique-se de:
    >

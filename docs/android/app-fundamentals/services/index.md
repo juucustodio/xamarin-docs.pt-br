@@ -4,15 +4,15 @@ description: Este guia aborda os serviços Xamarin. Android, que são componente
 ms.prod: xamarin
 ms.assetid: BA371A59-6F7A-F62A-02FC-28253504ACC9
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/19/2018
-ms.openlocfilehash: 042878fa8d30acb55de68f63e3491aacb5dbdfb5
-ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
+ms.openlocfilehash: b427bbadc72ca557a37c652e853674fdf849c2c8
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71105882"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73024551"
 ---
 # <a name="creating-android-services"></a>Criando serviços Android
 
@@ -22,7 +22,7 @@ _Este guia aborda os serviços Xamarin. Android, que são componentes do Android
 
 Os aplicativos móveis não são como aplicativos da área de trabalho. As áreas de trabalho têm grandes quantidades de recursos como espaço real da tela, memória, espaço de armazenamento e uma fonte de alimentação conectada, os dispositivos móveis não. Essas restrições forçam os aplicativos móveis a se comportarem de forma diferente. Por exemplo, a tela pequena em um dispositivo móvel normalmente significa que apenas um aplicativo (ou seja, atividade) está visível por vez. Outras atividades são movidas para o plano de fundo e enviadas para um estado suspenso onde não podem executar nenhum trabalho. No entanto, só porque um aplicativo Android está em segundo plano não significa que é impossível para o aplicativo continuar funcionando. 
 
-Os aplicativos Android são compostos de pelo menos um dos quatro principais componentes a seguir: _Atividades_, _receptores de transmissão_, _provedores de conteúdo_e _Serviços_. As atividades são a base de muitos aplicativos excelentes do Android, pois fornecem a interface do usuário que permite que um usuários interaja com o aplicativo. No entanto, quando se trata de executar trabalho simultâneo ou em segundo plano, as atividades nem sempre são a melhor opção.
+Os aplicativos Android são compostos de pelo menos um dos quatro principais componentes a seguir: _atividades_, _receptores de transmissão_, _provedores de conteúdo_e _Serviços_. As atividades são a base de muitos aplicativos excelentes do Android, pois fornecem a interface do usuário que permite que um usuários interaja com o aplicativo. No entanto, quando se trata de executar trabalho simultâneo ou em segundo plano, as atividades nem sempre são a melhor opção.
 
 O mecanismo principal de trabalho em segundo plano no Android é o _serviço_. Um serviço Android é um componente projetado para fazer algum trabalho sem uma interface do usuário. Um serviço pode baixar um arquivo, reproduzir música ou aplicar um filtro a uma imagem. Os serviços também podem ser usados para_IPC_(comunicação entre processos) entre aplicativos Android. Por exemplo, um aplicativo Android pode usar o serviço de player de música que é de outro aplicativo ou um aplicativo pode expor dados (como as informações de contato de uma pessoa) para outros aplicativos por meio de um serviço. 
 
@@ -32,26 +32,26 @@ Para resolver essa preocupação, um desenvolvedor pode usar threads em uma ativ
 
 ![Quando o dispositivo gira, a instância 1 é destruída e a instância 2 é criada](images/image-01.png)
 
-Esse é um potencial vazamento &ndash; de memória que o thread criado pela primeira instância da atividade ainda estará em execução. Se o thread tiver uma referência à primeira instância da atividade, isso impedirá que o Android colete o objeto de coleta de lixo. No entanto, a segunda instância da atividade ainda é criada (o que, por sua vez, pode criar um novo thread). A rotação do dispositivo várias vezes em uma rápida sucessão pode esgotar toda a RAM e forçar o Android a encerrar todo o aplicativo para recuperar memória.
+Esse é um possível vazamento de memória &ndash; o thread criado pela primeira instância da atividade ainda estará em execução. Se o thread tiver uma referência à primeira instância da atividade, isso impedirá que o Android colete o objeto de coleta de lixo. No entanto, a segunda instância da atividade ainda é criada (o que, por sua vez, pode criar um novo thread). A rotação do dispositivo várias vezes em uma rápida sucessão pode esgotar toda a RAM e forçar o Android a encerrar todo o aplicativo para recuperar memória.
 
 Como regra geral, se o trabalho a ser executado deve sobreviver alémr uma atividade, um serviço deve ser criado para executar esse trabalho. No entanto, se o trabalho só for aplicável no contexto de uma atividade, a criação de um thread para executar o trabalho poderá ser mais apropriada. Por exemplo, criar uma miniatura para uma foto que acabou de ser adicionada a um aplicativo da Galeria de fotos provavelmente ocorreria em um serviço. No entanto, um thread pode ser mais apropriado para reproduzir algumas músicas que só devem ser ouvidos quando uma atividade estiver em primeiro plano.
 
 O trabalho em segundo plano pode ser dividido em duas classificações amplas:
 
-1. **Tarefa de longa execução** &ndash; Isso funciona em andamento até que seja interrompido explicitamente. Um exemplo de uma _tarefa de execução demorada_ é um aplicativo que transmite música ou que deve monitorar dados coletados de um sensor. Essas tarefas devem ser executadas, mesmo que o aplicativo não tenha nenhuma interface do usuário visível.
-2. **Tarefas periódicas** (às vezes chamado de trabalho), uma tarefa periódica é aquela que tem duração relativamente curta (vários segundos) e é executada em uma agenda (ou seja, uma vez por dia por uma semana ou talvez apenas uma vez nos próximos 60 segundos). &ndash; Um exemplo disso é baixar um arquivo da Internet ou gerar uma miniatura para uma imagem.
+1. **Tarefa de longa execução** &ndash; isso funciona em andamento até que seja interrompido explicitamente. Um exemplo de uma _tarefa de execução demorada_ é um aplicativo que transmite música ou que deve monitorar dados coletados de um sensor. Essas tarefas devem ser executadas, mesmo que o aplicativo não tenha nenhuma interface do usuário visível.
+2. **Tarefas periódicas** &ndash; (às vezes chamados de _trabalho_) uma tarefa periódica é aquela que tem duração relativamente curta (vários segundos) e é executada em uma agenda (ou seja, uma vez por dia por uma semana ou talvez apenas uma vez nos próximos 60 segundos). Um exemplo disso é baixar um arquivo da Internet ou gerar uma miniatura para uma imagem.
 
 Há quatro tipos diferentes de serviços do Android:
 
-* **Serviço associado** Um _serviço associado_ é um serviço que tem algum outro componente (normalmente uma atividade) associado a ele. &ndash; Um serviço associado fornece uma interface que permite que o componente ligado e o serviço interajam entre si. Quando não houver mais clientes ligados ao serviço, o Android encerrará o serviço. 
+* O **serviço associado** &ndash; um _serviço associado_ é um serviço que tem algum outro componente (normalmente uma atividade) associado a ele. Um serviço associado fornece uma interface que permite que o componente ligado e o serviço interajam entre si. Quando não houver mais clientes ligados ao serviço, o Android encerrará o serviço. 
 
-* **`IntentService`** Uma é uma subclasse especializada da classe que `Service` simplifica a criação e o uso de serviços. _`IntentService`_ &ndash; Um `IntentService` é destinado a lidar com chamadas autônomas individuais. Ao contrário de um serviço, que pode lidar simultaneamente com várias chamadas, `IntentService` um é mais parecido com um trabalho do _processador_ &ndash; da fila de trabalho que `IntentService` é colocado em fila e um processa cada trabalho, um de cada vez, em um único thread de trabalho. Normalmente, um`IntentService` não está associado a uma atividade ou a um fragmento. 
+* **`IntentService`** &ndash; um _`IntentService`_ é uma subclasse especializada da classe `Service` que simplifica a criação e o uso de serviços. Um `IntentService` é destinado a tratar chamadas autônomas individuais. Ao contrário de um serviço, que pode lidar simultaneamente com várias chamadas, um `IntentService` é mais parecido com um _processador de fila de trabalho_ &ndash; o trabalho é colocado em fila e um `IntentService` processa cada trabalho um de cada vez em um único thread de trabalho. Normalmente, um`IntentService` não está associado a uma atividade ou a um fragmento. 
 
-* **Serviço iniciado** Um _serviço iniciado_ é um serviço que foi iniciado por algum outro componente do Android (como uma atividade) e é executado continuamente em segundo plano até que algo indique explicitamente o serviço para parar. &ndash; Ao contrário de um serviço associado, um serviço iniciado não tem nenhum cliente associado diretamente a ele. Por esse motivo, é importante criar serviços iniciados para que eles possam ser reiniciados normalmente conforme necessário.
+* O **serviço iniciado** &ndash; um _serviço iniciado_ é um serviço que foi iniciado por algum outro componente do Android (como uma atividade) e é executado continuamente em segundo plano até que algo indique explicitamente o serviço para parar. Ao contrário de um serviço associado, um serviço iniciado não tem nenhum cliente associado diretamente a ele. Por esse motivo, é importante criar serviços iniciados para que eles possam ser reiniciados normalmente conforme necessário.
 
-* **Serviço híbrido** Um serviço híbrido é um serviço que tem as características de um _serviço iniciado_ e um _serviço associado_. &ndash; Um serviço híbrido pode ser iniciado pelo quando um componente é associado a ele ou pode ser iniciado por algum evento. Um componente de cliente pode ou não estar associado ao serviço híbrido. Um serviço híbrido continuará em execução até que seja explicitamente solicitado a parar ou até que não haja mais clientes associados a ele.
+* O **serviço híbrido** &ndash; um _serviço híbrido_ é um serviço que tem as características de um _serviço iniciado_ e um _serviço associado_. Um serviço híbrido pode ser iniciado pelo quando um componente é associado a ele ou pode ser iniciado por algum evento. Um componente de cliente pode ou não estar associado ao serviço híbrido. Um serviço híbrido continuará em execução até que seja explicitamente solicitado a parar ou até que não haja mais clientes associados a ele.
 
-O tipo de serviço a ser usado depende muito dos requisitos do aplicativo. Como regra prática, um `IntentService` ou um serviço associado são suficientes para a maioria das tarefas que um aplicativo Android deve executar, portanto, a preferência deve ser dada a um desses dois tipos de serviços. Uma `IntentService` é uma boa opção para tarefas "One-shot", como baixar um arquivo, enquanto um serviço associado seria adequado quando interações frequentes com uma atividade/fragmento forem necessárias. 
+O tipo de serviço a ser usado depende muito dos requisitos do aplicativo. Como regra prática, um `IntentService` ou um serviço associado é suficiente para a maioria das tarefas que um aplicativo Android deve executar, de modo que a preferência deve ser dada a um desses dois tipos de serviços. Uma `IntentService` é uma boa opção para tarefas "One-shot", como baixar um arquivo, enquanto um serviço associado seria adequado quando interações frequentes com uma atividade/fragmento forem necessárias. 
 
 Embora a maioria dos serviços seja executada em segundo plano, há uma subcategoria especial conhecida como _serviço de primeiro plano_. Esse é um serviço que recebe uma prioridade mais alta (em comparação com um serviço normal) para executar algum trabalho para o usuário (como tocar música). 
 
@@ -73,10 +73,10 @@ Há algumas situações em que, embora um aplicativo esteja em segundo plano, o 
 
 Os aplicativos Xamarin. Android existentes podem precisar alterar a forma como executam trabalho em segundo plano para evitar problemas que possam surgir no Android 8,0. Aqui estão algumas alternativas práticas para um serviço Android:
 
-* **Agendar trabalho para ser executado em segundo plano usando o Agendador de trabalhos do Android ou o [Dispatcher do trabalho firebase](~/android/platform/firebase-job-dispatcher.md)**  Essas duas bibliotecas fornecem uma estrutura para que os aplicativos segregem o trabalho em segundo plano nos trabalhos, uma unidade discreta de trabalho. &ndash; Os aplicativos podem agendar o trabalho com o sistema operacional juntamente com alguns critérios sobre quando o trabalho pode ser executado.
-* **Iniciar o serviço em primeiro plano** &ndash; um serviço em primeiro plano é útil para quando o aplicativo deve executar alguma tarefa em segundo plano e o usuário pode precisar interagir periodicamente com essa tarefa. O serviço de primeiro plano exibirá uma notificação persistente para que o usuário esteja ciente de que o aplicativo está executando uma tarefa em segundo plano e também fornece uma maneira de monitorar ou interagir com a tarefa. Um exemplo disso seria um aplicativo de podcasting que está reproduzindo um podcast para o usuário ou talvez baixando um episódio de podcast para que possa ser aproveitado posteriormente. 
-* **Usar uma mensagem de nuvem firebase de alta prioridade (FCM)** &ndash; Quando o Android recebe um FCM de alta prioridade para um aplicativo, ele permitirá que esse aplicativo execute serviços em segundo plano por um curto período de tempo. Essa seria uma boa alternativa para ter um serviço em segundo plano que sonda um aplicativo em segundo plano. 
-* **Adiar trabalho para quando o aplicativo entrar no primeiro plano** &ndash; Se nenhuma das soluções anteriores for viável, os aplicativos deverão desenvolver sua própria maneira de pausar e retomar o trabalho quando o aplicativo chegar ao primeiro plano.
+* **Agendar trabalho para ser executado em segundo plano usando o Agendador de trabalhos do Android ou o [Dispatcher de trabalhos do firebase](~/android/platform/firebase-job-dispatcher.md)**  &ndash; essas duas bibliotecas fornecem uma estrutura para que os aplicativos segregem o trabalho em segundo plano nos _trabalhos_, uma unidade discreta de trabalho. Os aplicativos podem agendar o trabalho com o sistema operacional juntamente com alguns critérios sobre quando o trabalho pode ser executado.
+* **Inicie o serviço em primeiro plano** &ndash; um serviço em primeiro plano é útil para quando o aplicativo deve executar alguma tarefa em segundo plano e o usuário pode precisar interagir periodicamente com essa tarefa. O serviço de primeiro plano exibirá uma notificação persistente para que o usuário esteja ciente de que o aplicativo está executando uma tarefa em segundo plano e também fornece uma maneira de monitorar ou interagir com a tarefa. Um exemplo disso seria um aplicativo de podcasting que está reproduzindo um podcast para o usuário ou talvez baixando um episódio de podcast para que possa ser aproveitado posteriormente. 
+* **Use uma FCM (mensagem de nuvem Firebase &ndash;) de alta prioridade** quando o Android recebe um FCM de alta prioridade para um aplicativo, ele permitirá que esse aplicativo execute serviços em segundo plano por um curto período de tempo. Essa seria uma boa alternativa para ter um serviço em segundo plano que sonda um aplicativo em segundo plano. 
+* **Adiar trabalho para quando o aplicativo entrar no primeiro plano** &ndash; se nenhuma das soluções anteriores for viável, os aplicativos deverão desenvolver sua própria maneira de pausar e retomar o trabalho quando o aplicativo chegar ao primeiro plano.
 
 ## <a name="related-links"></a>Links relacionados
 

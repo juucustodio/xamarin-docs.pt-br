@@ -4,15 +4,15 @@ description: Este documento fornece um alto nível de visão geral dos recursos 
 ms.prod: xamarin
 ms.assetid: 037F7FFF-2155-4017-B99A-839CE7EC5C9C
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 10/05/2018
-ms.openlocfilehash: f5028fe6ae7ee726ffd94d7908a089ce3bdcb385
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 94fea1786497d04602ea6cf06d875206cf69eb3e
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70287947"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030551"
 ---
 # <a name="introduction-to-tvos-12"></a>Introdução ao tvOS 12
 
@@ -26,11 +26,11 @@ o tvOS 12 inclui o TVUIKit, um conjunto de APIs que possibilita aos desenvolvedo
 
 ## <a name="password-autofill"></a>Preenchimento automático de senha
 
-Com o tvOS 12, os usuários podem usar seus dispositivos iOS para entrar em um aplicativo tvOS com um único toque. Isso é habilitado por meio de uma `UITextContentType` combinação de uso para especificar campos de nome de usuário e senha, domínios associados para estabelecer uma relação entre um aplicativo Ios e um aplicativo tvOS e ambientes de foco preferenciais para selecionar um item para receber foco depois de um usuário fornece um nome de usuário e senha.
+Com o tvOS 12, os usuários podem usar seus dispositivos iOS para entrar em um aplicativo tvOS com um único toque. Isso é habilitado por meio de uma combinação de uso de `UITextContentType` para especificar campos de nome de usuário e senha, domínios associados para estabelecer uma relação entre um aplicativo iOS e um aplicativo tvOS e ambientes de foco preferenciais para selecionar um item para receber foco depois de um usuário fornece um nome de usuário e senha.
 
 ## <a name="focus-engine-enhancements"></a>Aprimoramentos do mecanismo de foco
 
-o tvOS 12 permite todos os aplicativos, independentemente de como eles são renderizados, para interagir com o mecanismo de foco. Através de interações de um usuário com o Siri remoto, o mecanismo de foco pode ser usado com qualquer aplicativo para selecionar um item, uma dica em possíveis alterações de foco e o foco de atualização naturalmente. Isso é habilitado em aplicativos personalizados por meio da `IUIFocusItemContainer` interface do UIKit `UIFocusMovementHint` , da classe `IUIFocusItemScrollableContainer` , da interface e de outras classes e métodos relacionados.
+o tvOS 12 permite todos os aplicativos, independentemente de como eles são renderizados, para interagir com o mecanismo de foco. Através de interações de um usuário com o Siri remoto, o mecanismo de foco pode ser usado com qualquer aplicativo para selecionar um item, uma dica em possíveis alterações de foco e o foco de atualização naturalmente. Isso é habilitado em aplicativos personalizados por meio da interface `IUIFocusItemContainer` do UIKit, da classe `UIFocusMovementHint`, da interface do `IUIFocusItemScrollableContainer` e de outras classes e métodos relacionados.
 
 ## <a name="vision-framework"></a>Estrutura de visão
 

@@ -4,15 +4,15 @@ description: Como configurar um bloqueio de tela e registrar uma impressão digi
 ms.prod: xamarin
 ms.assetid: 52092F63-00EE-4F8B-A49F-65C9CCBA7EF2
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: f52be16a81f3c8047997e1f4a88e13f6b940db14
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: c0290dfa3b4aa301a07a589f78577899e8282158
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70756413"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73027588"
 ---
 # <a name="enrolling-a-fingerprint"></a>Registrar uma impressão digital
 
@@ -46,7 +46,7 @@ Para configurar um bloqueio de tela, execute as seguintes etapas:
 
 4. A partir daí, siga a sequência para adicionar uma impressão digital ao dispositivo:
 
-    [![Sequência de capturas de tela para adicionar uma impressão digital ao dispositivo](enrolling-fingerprint-images/testing-04-sml.png)](enrolling-fingerprint-images/testing-04.png#lightbox)
+    [![sequência de capturas de tela para adicionar uma impressão digital ao dispositivo](enrolling-fingerprint-images/testing-04-sml.png)](enrolling-fingerprint-images/testing-04.png#lightbox)
 
 5. Na tela final, você será solicitado a inserir o dedo no scanner de impressão digital: 
 
@@ -56,13 +56,13 @@ Para configurar um bloqueio de tela, execute as seguintes etapas:
 
 ### <a name="simulating-a-fingerprint-scan-on-the-emulator"></a>Simulando uma verificação de impressão digital no emulador
 
-Em um emulador do Android, é possível simular uma verificação de impressão digital usando o Android Debug Bridge. No OS X, inicie uma sessão de terminal enquanto estiver no Windows, inicie um prompt de comando ou `adb`uma sessão do PowerShell e execute:
+Em um emulador do Android, é possível simular uma verificação de impressão digital usando o Android Debug Bridge. No OS X, inicie uma sessão de terminal enquanto estiver no Windows, inicie um prompt de comando ou uma sessão do PowerShell e execute `adb`:
 
 ```shell
 $ adb -e emu finger touch 1
 ```
 
-O valor de **1** é a _ID\_do dedo_ para o dedo que foi "examinado". É um inteiro exclusivo que você atribui para cada impressão digital virtual. No futuro, quando o aplicativo estiver em execução, você poderá executar esse mesmo comando ADB sempre que o emulador solicitar uma impressão digital, você poderá executar `adb` o comando e passá-lo a _ID do dedo\__ para simular a verificação de impressão digital.
+O valor de **1** é a _ID de\__ do dedo para o dedo que foi "examinado". É um inteiro exclusivo que você atribui para cada impressão digital virtual. No futuro, quando o aplicativo estiver em execução, você poderá executar esse mesmo comando ADB cada vez que o emulador solicitar uma impressão digital, você poderá executar o comando `adb` e passá-lo para a _ID do dedo\__ para simular a verificação de impressão digital.
 
 Depois que a verificação de impressão digital for concluída, o Android o notificará de que a impressão digital foi adicionada:  
 

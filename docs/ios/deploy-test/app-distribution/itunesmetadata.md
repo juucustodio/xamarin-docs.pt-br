@@ -4,15 +4,15 @@ description: Esse artigo aborda o arquivo iTunesMetadata.plist usado para fornec
 ms.prod: xamarin
 ms.assetid: 70676eba-6a99-4a3a-bccc-84359fe9c2c3
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 47b2428ddca47f554fea675a9d2e70374679688f
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: cdaa0855538c35c82cb96bde58ad2258b1fb56e5
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70281155"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73026501"
 ---
 # <a name="the-itunesmetadataplist-file-in-xamarinios-apps"></a>O arquivo iTunesMetadata.plist em aplicativos Xamarin.iOS
 
@@ -242,7 +242,7 @@ Para aplicativos iOS, a Apple atualmente define os seguintes gêneros e IDs de g
 
 [!include[](~/ios/includes/table-appstore.md)]
 
-Para obter mais informações, consulte a documentação [Genre IDs Appendix](http://www.apple.com/itunes/affiliates/resources/documentation/genre-mapping.html) (Apêndice de IDs de Gênero) da Apple.
+Para obter mais informações, consulte a documentação [Genre IDs Appendix](https://www.apple.com/itunes/affiliates/resources/documentation/genre-mapping.html) (Apêndice de IDs de Gênero) da Apple.
 
 ### <a name="softwaresupporteddeviceids"></a>softwareSupportedDeviceIds
 
@@ -302,26 +302,26 @@ Faça o seguinte:
 1. No **Gerenciador de Soluções**, clique com o botão direito do mouse no arquivo de projeto Xamarin.iOS e selecione **Adicionar** > **Novo Arquivo...**
 2. Na caixa de diálogo Novo Arquivo, selecione **iOS** > **Lista de Propriedades**:
 
-    ![](itunesmetadata-images/image01.png "Selecionar a Lista de Propriedades do iOS")
+    ![](itunesmetadata-images/image01.png "Select iOS Property List")
 3. Digite `iTunesMetadata` para o **Nome** e clique no botão **Novo**.
 4. Clique duas vezes no arquivo `iTunesMetadata.plist` no **Gerenciador de Soluções** para abri-lo para edição:
 
-    ![](itunesmetadata-images/image02.png "O editor iTunesMetadata.plist")
+    ![](itunesmetadata-images/image02.png "The iTunesMetadata.plist editor")
 5. Clique no **+** verde para criar uma nova entrada e digite `UIRequiredDeviceCapabilities` como o nome da chave:
 
-    ![](itunesmetadata-images/image03.png "Criar uma nova entrada e digitar UIRequiredDeviceCapabilities como o nome da chave")
+    ![](itunesmetadata-images/image03.png "Create a new entry and enter UIRequiredDeviceCapabilities as the key name")
 6. Clique no tipo de valor da **Cadeia de caracteres** e selecione **Dicionário** na lista pop-up:
 
-    ![](itunesmetadata-images/image04.png "Selecionar um Dicionário na lista pop-up")
+    ![](itunesmetadata-images/image04.png "Select Dictionary from the popup list")
 7. Clique na dobra à esquerda do nome da Propriedade para revelar as entradas do dicionário:
 
-    ![](itunesmetadata-images/image05.png "Revelar as entradas do dicionário")
+    ![](itunesmetadata-images/image05.png "Reveal the dictionary entries")
 8. Clique no texto **Adicionar nova entrada** e, em seguida, clique no **+** verde para adicionar uma entrada ao dicionário:
 
-    ![](itunesmetadata-images/image06.png "Adicionar uma entrada ao dicionário")
+    ![](itunesmetadata-images/image06.png "Add an entry to the dictionary")
 9. Digite `armv7` para o nome da chave, selecione um tipo de **booliano** e digite **Sim** como o valor:
 
-    ![](itunesmetadata-images/image07.png "Insira armv7 como o nome da chave, selecione um tipo de Booliano e digite Sim como o valor")
+    ![](itunesmetadata-images/image07.png "Enter armv7 for the key name, select a type of Boolean and enter Yes as the value")
 10. Repita as etapas acima até que você tenha preenchido o arquivo `iTunesMetadata.plist` com todos os pares de chave/valor necessários (confira a seção [O Conteúdo do iTunesMetadata.plist](#iTunesMetadata_contents) acima para obter mais detalhes).
 
 11. Salve as alterações no arquivo plist.
@@ -365,7 +365,7 @@ Esse artigo abordou o arquivo `iTunesMetadata.plist` que pode ser usado para inf
 - [Distribuição da App Store](~/ios/deploy-test/app-distribution/app-store-distribution/index.md)
 - [Como configurar um aplicativo no iTunes Connect](~/ios/deploy-test/app-distribution/app-store-distribution/itunesconnect.md)
 - [Publicando na App Store](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md)
-- [Distribuição interna](~/ios/deploy-test/app-distribution/in-house-distribution.md)
+- [Distribuição Interna](~/ios/deploy-test/app-distribution/in-house-distribution.md)
 - [Distribuição Ad Hoc](~/ios/deploy-test/app-distribution/ad-hoc-distribution.md)
 - [Suporte a IPA](~/ios/deploy-test/app-distribution/ipa-support.md)
 - [Solução de problemas](~/ios/deploy-test/troubleshooting.md)

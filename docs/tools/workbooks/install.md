@@ -3,15 +3,15 @@ title: Instalação e requisitos de pastas de trabalho
 description: Este documento descreve como baixar e instalar o Xamarin Workbooks, discutindo as plataformas com suporte e os requisitos do sistema.
 ms.prod: xamarin
 ms.assetid: 9D4E10E8-A288-4C6C-9475-02969198C119
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/19/2018
-ms.openlocfilehash: 6fc204e8524d53820407b2efd3ab0de6af28c669
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.openlocfilehash: 92b08a9cfd725c1114b71fad4f29e6f28cd828b3
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71249918"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73029631"
 ---
 # <a name="workbooks-installation-and-requirements"></a>Instalação e requisitos de pastas de trabalho
 
@@ -44,7 +44,7 @@ ms.locfileid: "71249918"
 
 #### <a name="supported-app-platforms"></a>Plataformas de aplicativos com suporte
 
-|Plataforma de aplicativo|Suporte do so|Observações|
+|Plataforma de aplicativo|Suporte do so|Anotações|
 |--- |--- |--- |
 |Mac|Somente com suporte no Mac|
 |iOS|Com suporte no Mac e no Windows|O Xamarin. iOS 11,0 e o Xcode 9,0 ou posterior devem ser instalados no Mac. A execução de pastas de trabalho do iOS no Windows requer um host de Build do Mac executando todas as versões acima e o [simulador do IOS remoto](~/tools/ios-simulator/index.md) instalado no Windows.|
@@ -104,10 +104,10 @@ Se você estiver tendo problemas para conectar sua pasta de trabalho do iOS ou A
 - Nome do dispositivo ao qual você está tentando se conectar
 - Versão do sistema operacional do seu dispositivo
 - Android: Verifique se você está usando um emulador x86
-- Android: Qual plataforma de emulador você está usando? O Google Emulator?
+- Android: qual plataforma de emulador você está usando? O Google Emulator?
   Android Emulator do Visual Studio? Xamarin Android Player?
-- iOS no Windows: Qual versão do Xamarin Remote iOS Simulator você instalou (Marque **Adicionar/remover programas** no **painel de controle**)?
-- iOS no Windows: Forneça também informações de versão da plataforma para seu host de Build do Mac
+- iOS no Windows: qual versão do Xamarin Remote iOS Simulator você instalou (Marque **Adicionar/remover programas** no **painel de controle**)?
+- iOS no Windows: forneça também informações de versão da plataforma para seu host de Build do Mac
 - O dispositivo tem conectividade de rede (verifique via navegador da Web)?
 
 [bugs]: https://github.com/Microsoft/workbooks/issues/new
@@ -128,7 +128,7 @@ Se você tiver instalado pastas de trabalho com um instalador baixado, ele preci
 
 > **Iniciar Configurações de > > recursos do System > aplicativos &**
 
-![](install-images/windows-remove.png "Xamarin Workbooks conforme listado em &quot;recursos &amp; de aplicativos&quot;")
+![](install-images/windows-remove.png "Xamarin Workbooks as listed in &quot;Apps &amp; features&quot;")
 
 **Você ainda deve seguir o procedimento para a Instalador do Visual Studio garantir que as pastas de trabalho não sejam reinstaladas sem o seu conhecimento.**
 
@@ -144,7 +144,7 @@ sudo /Library/Frameworks/Xamarin.Interactive.framework/Versions/Current/uninstal
 
 O desinstalador detalhará os arquivos e diretórios que serão removidos e solicitará a confirmação antes de continuar.
 
-Passe o `-help` argumento para o `uninstall` script para cenários mais avançados.
+Passe o argumento `-help` para o script `uninstall` para cenários mais avançados.
 
 Para versões mais antigas, será necessário remover manualmente o seguinte:
 
@@ -155,11 +155,11 @@ Para versões mais antigas, será necessário remover manualmente o seguinte:
 
 ## <a name="downgrading"></a>Downgrade
 
-O identificador de pacote para **pastas de trabalho/Applications/Xamarin. app** foi `com.xamarin.Workbooks` alterado de `com.xamarin.Inspector` para na versão 1,4, já que as pastas de trabalho e o Inspetor agora estão totalmente divididos.
+O identificador de pacote para **pastas de trabalho/Applications/Xamarin. app** foi alterado de `com.xamarin.Inspector` para `com.xamarin.Workbooks` na versão 1,4, já que as pastas de trabalho e o Inspetor agora estão totalmente divididos.
 
 Devido a um bug em instaladores mais antigos, não é possível fazer downgrade de 1,4 ou versões mais recentes usando o 1.3.2 ou instaladores mais antigos.
 
 Para fazer o downgrade de 1,4 ou mais recente para o 1.3.2 ou mais antigo:
 
 1. [Desinstalar pastas de trabalho & Inspetor manualmente](#uninstall-macos)
-2. Executar o instalador do 1.3.2 `.pkg` ou mais antigo
+2. Execute o 1.3.2 ou o instalador de `.pkg` mais antigo

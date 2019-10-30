@@ -4,15 +4,15 @@ description: Este documento descreve como configurar um aplicativo ARKit no Xama
 ms.prod: xamarin
 ms.assetid: 877AF974-CC2E-48A2-8E1A-0EF9ABF2C92D
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 08/01/2017
-ms.openlocfilehash: 7f53108460c4e0799ab6c4078d8bb26788b0bf6e
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 67ee62fe18385f3a79f4afcb26299990f4666763
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70752540"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73032233"
 ---
 # <a name="using-arkit-with-urhosharp-in-xamarinios"></a>Usando ARKit com UrhoSharp no Xamarin. iOS
 
@@ -36,26 +36,26 @@ Dessa forma, quando você coloca um objeto no espaço 3D e o usuário se move, o
 
 ### <a name="ios-application-launch"></a>Inicialização do aplicativo iOS
 
-Seu aplicativo IOS precisa criar e iniciar o conteúdo 3D, você faz isso criando uma subclasse de implementação do `Urho.Application` e fornece o código de instalação substituindo o `Start` método.  É aí que sua cena é preenchida com dados, os manipuladores de eventos são configurados e assim por diante.
+Seu aplicativo iOS precisa criar e iniciar o conteúdo 3D, você faz isso criando uma subclasse de implementação do `Urho.Application` e fornece o código de instalação substituindo o método `Start`.  É aí que sua cena é preenchida com dados, os manipuladores de eventos são configurados e assim por diante.
 
-Apresentamos uma `Urho.ArkitApp` classe que as `Urho.Application` subclasses e em seu `Start` método realizam o trabalho pesado.   Tudo o que você precisa fazer em seu aplicativo Urho existente é alterar a classe base para ser do `Urho.ArkitApp` tipo e você tem um aplicativo que executará sua cena do Urho no mundo.
+Apresentamos uma classe `Urho.ArkitApp` que as subclasses `Urho.Application` e em seu método `Start` faz o trabalho pesado.   Tudo o que você precisa fazer em seu aplicativo Urho existente é alterar a classe base para ser do tipo `Urho.ArkitApp` e você tem um aplicativo que executará sua cena Urho no mundo.
 
 ### <a name="the-arkitapp-class"></a>A classe ArkitApp
 
 Essa classe fornece um conjunto de padrões convenientes, uma cena com alguns objetos-chave, bem como o processamento de eventos ARKit à medida que eles são entregues pelo sistema operacional.
 
-A instalação ocorre no `Start` método virtual.   Ao substituir esse método em sua subclasse, você precisa se certificar de encadear o seu pai usando `base.Start()` em sua própria implementação.
+A instalação ocorre no método virtual `Start`.   Ao substituir esse método em sua subclasse, você precisa se certificar de encadear o seu pai usando `base.Start()` em sua própria implementação.
 
-O `Start` método configura a cena, o visor, a câmera e uma luz direcional e as superfícies como propriedades públicas:
+O método `Start` configura a cena, o visor, a câmera e uma luz direcional e as superfícies como propriedades públicas:
 
-- r `Scene` para armazenar seus objetos,
-- uma direção `Light` com sombras e cujo local está disponível por meio da `LightNode` Propriedade
+- um `Scene` para armazenar seus objetos,
+- um `Light` direcional com sombras e cujo local está disponível por meio da propriedade `LightNode`
 - um `Camera` cujos componentes são atualizados quando o ARKit entrega uma atualização para o aplicativo e
-- uma `ViewPort` exibição dos resultados.
+- um `ViewPort` exibir os resultados.
 
 ### <a name="your-code"></a>Seu código
 
-Em seguida, você precisará subclasse da `ArkitApp` classe e substituir o `Start` método.   A primeira coisa que seu método deve fazer é encadear para o `ArkitApp.Start` chamando. `base.Start()`  Depois disso, você pode usar qualquer uma das propriedades configuradas por ArkitApp para adicionar seus objetos à cena, personalizar as luzes, as sombras ou os eventos que você deseja manipular.
+Em seguida, você precisará subclasse da classe `ArkitApp` e substituir o método `Start`.   A primeira coisa que seu método deve fazer é encadear a `ArkitApp.Start` chamando `base.Start()`.  Depois disso, você pode usar qualquer uma das propriedades configuradas por ArkitApp para adicionar seus objetos à cena, personalizar as luzes, as sombras ou os eventos que você deseja manipular.
 
 O exemplo de ARKit/UrhoSharp carrega um caractere animado com texturas e reproduz a animação, com a seguinte implementação:
 
@@ -102,15 +102,15 @@ A API do ARKit é bem simples, você cria e configura um objeto [ARSession](http
 
 Vamos compor as imagens que estão sendo entregues pela câmera para nós com nosso conteúdo 3D e ajustar a câmera em UrhoSharp para corresponder às chances de localização e posição do dispositivo.
 
-O diagrama a seguir mostra o que está ocorrendo `ArkitApp` na classe:
+O diagrama a seguir mostra o que está ocorrendo na classe `ArkitApp`:
 
-[![Diagrama de classes e telas no ArkitApp](urhosharp-images/image2.png)](urhosharp-images/image2.png#lightbox)
+[![diagrama de classes e telas no ArkitApp](urhosharp-images/image2.png)](urhosharp-images/image2.png#lightbox)
 
 ### <a name="rendering-the-frames"></a>Renderizando os quadros
 
 A ideia é simples, combine o vídeo proveniente da câmera com nossos gráficos 3D para produzir a imagem combinada.     Obteremos uma série dessas imagens capturadas em sequência e misturaremos essa entrada com a cena Urho.
 
-A maneira mais simples de fazer isso é inserir um `RenderPathCommand` no principal. `RenderPath`  Esse é um conjunto de comandos que são executados para desenhar um único quadro.  Esse comando preencherá o visor com qualquer textura que passamos para ele.    Configuramos isso no primeiro quadro que é processado, e a definição real é feita no arquivo th **ARRenderPath. xml** que é carregado neste momento.
+A maneira mais simples de fazer isso é inserir um `RenderPathCommand` no `RenderPath`principal.  Esse é um conjunto de comandos que são executados para desenhar um único quadro.  Esse comando preencherá o visor com qualquer textura que passamos para ele.    Configuramos isso no primeiro quadro que é processado, e a definição real é feita no arquivo th **ARRenderPath. xml** que é carregado neste momento.
 
 No entanto, enfrentamos dois problemas para misturar esses dois mundos:
 
@@ -151,7 +151,7 @@ Portanto, podemos renderizar imagens capturadas como um plano de fundo e renderi
 
 ### <a name="adjusting-the-camera"></a>Ajustando a câmera
 
-Os `ARFrame` objetos também contêm a posição estimada do dispositivo.  Agora precisamos mover a câmera de jogo ARFrame-antes de ARKit, não era muito importante controlar a orientação do dispositivo (rolo, pitch e desvio) e renderizar um holograma fixado sobre o vídeo, mas se você mover seu dispositivo, um pouco de holograma será descompasso.
+Os objetos `ARFrame` também contêm a posição estimada do dispositivo.  Agora precisamos mover a câmera de jogo ARFrame-antes de ARKit, não era muito importante controlar a orientação do dispositivo (rolo, pitch e desvio) e renderizar um holograma fixado sobre o vídeo, mas se você mover seu dispositivo, um pouco de holograma será descompasso.
 
 Isso acontece porque os sensores internos, como giroscópio, não conseguem controlar os movimentos, eles só podem acelerar.  O ARKit analisa cada quadro e extrai pontos de recursos para acompanhar e, portanto, é capaz de nos fornecer uma matriz de transformação precisa que contenha dados de movimentação e rotação.
 
@@ -162,7 +162,7 @@ var row = arCamera.Transform.Row3;
 CameraNode.Position = new Vector3(row.X, row.Y, -row.Z);
 ```
 
-`-row.Z` Usamos porque o ARKit usa um sistema de coordenadas à direita.
+Usamos `-row.Z` porque o ARKit usa um sistema de coordenadas à direita.
 
 ### <a name="plane-detection"></a>Detecção de plano
 

@@ -4,15 +4,15 @@ description: Este artigo aborda os novos aprimoramentos de jogos fornecidos pelo
 ms.prod: xamarin
 ms.assetid: 958D38FD-9240-482E-9A42-D6671ED8F2B0
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/20/2017
-ms.openlocfilehash: b1fa8cd69a2255d462066be88ad7ef695b71076e
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: fd79153520036ae49fd6fd9abe652e2c7459b30d
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70753116"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73032509"
 ---
 # <a name="ios-gaming-apis-in-xamarinios"></a>APIs de jogos do iOS no Xamarin. iOS
 
@@ -21,7 +21,7 @@ _Este artigo aborda os novos aprimoramentos de jogos fornecidos pelo iOS 9 que p
 A Apple fez várias melhorias tecnológicas nas APIs de jogos no iOS 9 que facilitam a implementação de gráficos e áudio de jogos em um aplicativo Xamarin. iOS.
 Isso inclui a facilidade de desenvolvimento por meio de estruturas de alto nível e o aproveitamento do poder da GPU do dispositivo iOS para melhorar a velocidade e os recursos gráficos.
 
-[![](images/flocking01.png "Um exemplo de um aplicativo que executa o pássaros")](images/flocking01.png#lightbox)
+[![](images/flocking01.png "An example of an app running flocking")](images/flocking01.png#lightbox)
 
 Isso inclui GameplayKit, ReplayKit, modelo de e/s, MetalKit e sombreadores de desempenho de metal juntamente com novos recursos aprimorados de metal, SceneKit e SpriteKit.
 
@@ -56,7 +56,7 @@ Por exemplo, um inimigo 2D encontra seu caminho por meio de um labirinto ou um c
 
 Considere o seguinte mapa:
 
-[![](images/gkpathfindpath.png "Um mapa pathfinding de exemplo")](images/gkpathfindpath.png#lightbox)
+[![](images/gkpathfindpath.png "An example pathfinding map")](images/gkpathfindpath.png#lightbox)
 
 Usando o pathfinding C# , esse código pode encontrar uma maneira por meio do mapa:
 
@@ -145,7 +145,7 @@ protected Func<GKRuleSystem, bool> mod(int m)
 }
 ```
 
-Com base em um determinado conjunto de regras`GKRule`() e um conjunto conhecido de entradas, o sistema especialista`GKRuleSystem`() criará uma saída`fizzbuzz` previsível (para o nosso exemplo acima).
+Com base em um determinado conjunto de regras (`GKRule`) e um conjunto conhecido de entradas, o sistema especialista (`GKRuleSystem`) criará uma saída previsível (`fizzbuzz` para o nosso exemplo acima).
 
 ### <a name="flocking"></a>Pássaros
 
@@ -365,14 +365,14 @@ public override void ViewWillLayoutSubviews ()
 
 Quando executado, a pequena _"Boids"_ animada flockrá entre os toques dos dedos:
 
-[![](images/flocking01.png "O pequeno Boids animado será flockdo em volta dos toques do dedo")](images/flocking01.png#lightbox)
+[![](images/flocking01.png "The little animated Boids will flock around the finger taps")](images/flocking01.png#lightbox)
 
 ### <a name="other-apple-examples"></a>Outros exemplos da Apple
 
 Além dos exemplos apresentados acima, a Apple forneceu os seguintes aplicativos de exemplo que podem ser transcodificados para C# o e o Xamarin. Ios:
 
-- [FourInARow: Usando o GameplayKit por minMax estrategista para o adversário AI](https://developer.apple.com/library/prerelease/ios/samplecode/FourInARow/Introduction/Intro.html#//apple_ref/doc/uid/TP40016142)
-- [AgentsCatalog: Usando o sistema de agentes no GameplayKit](https://developer.apple.com/library/prerelease/ios/samplecode/AgentsCatalog/Introduction/Intro.html#//apple_ref/doc/uid/TP40016141)
+- [FourInARow: usando o GameplayKit por minMax estrategista para o adversário AI](https://developer.apple.com/library/prerelease/ios/samplecode/FourInARow/Introduction/Intro.html#//apple_ref/doc/uid/TP40016142)
+- [AgentsCatalog: usando o sistema de agentes no GameplayKit](https://developer.apple.com/library/prerelease/ios/samplecode/AgentsCatalog/Introduction/Intro.html#//apple_ref/doc/uid/TP40016141)
 - [DemoBots: Criando um jogo de plataforma cruzada com SpriteKit e GameplayKit](https://developer.apple.com/library/prerelease/ios/samplecode/DemoBots/Introduction/Intro.html#//apple_ref/doc/uid/TP40015179)
 
 ## <a name="metal"></a>Metal
@@ -427,7 +427,7 @@ Para saber mais sobre e/s de modelo, consulte referência de [estrutura de e/s d
 
 A nova estrutura ReplayKit da Apple permite que você adicione facilmente a gravação do jogo play ao seu jogo iOS e permita que o usuário edite e compartilhe com rapidez e facilidade esse vídeo de dentro do aplicativo.
 
-Para obter mais informações, consulte a introdução da Apple [com ReplayKit e Game Center vídeo](https://developer.apple.com/videos/wwdc/2015/?id=605) e seus [DemoBots: Criando um jogo de plataforma cruzada com o](https://developer.apple.com/library/prerelease/ios/samplecode/DemoBots/Introduction/Intro.html#//apple_ref/doc/uid/TP40015179) aplicativo de exemplo SpriteKit e GameplayKit.
+Para obter mais informações, consulte a introdução da Apple [com ReplayKit e Game Center vídeo](https://developer.apple.com/videos/wwdc/2015/?id=605) e seu [DemoBots: Criando um jogo de plataforma cruzada com](https://developer.apple.com/library/prerelease/ios/samplecode/DemoBots/Introduction/Intro.html#//apple_ref/doc/uid/TP40015179) o aplicativo de exemplo SpriteKit e GameplayKit.
 
 ## <a name="scenekit"></a>SceneKit
 
@@ -440,10 +440,10 @@ Para obter mais informações, consulte nossa documentação do [SceneKit](~/ios
 A Apple adicionou os seguintes novos recursos ao SceneKit para iOS 9:
 
 - Agora, o Xcode fornece um editor de cena que permite criar rapidamente jogos e aplicativos 3D interativos editando cenas diretamente de dentro do Xcode.
-- As `SCNView` classes `SCNSceneRenderer` e podem ser usadas para habilitar a renderização de metal (em dispositivos IOS com suporte).
-- As `SCNAudioPlayer` classes `SCNNode` e podem ser usadas para adicionar efeitos de áudio espaciais que rastreiam automaticamente uma posição de Player para um aplicativo Ios.
+- As classes `SCNView` e `SCNSceneRenderer` podem ser usadas para habilitar a renderização de metal (em dispositivos iOS com suporte).
+- As classes `SCNAudioPlayer` e `SCNNode` podem ser usadas para adicionar efeitos de áudio espaciais que rastreiam automaticamente uma posição de Player para um aplicativo iOS.
 
-Para obter mais informações, consulte nossa [documentação do SceneKit](~/ios/platform/introduction-to-ios8.md#scenekit) e a [referência da estrutura SceneKit](https://developer.apple.com/library/prerelease/ios/documentation/SceneKit/Reference/SceneKit_Framework/index.html#//apple_ref/doc/uid/TP40012283) da Apple e [Fox: Criando um jogo SceneKit com o projeto de exemplo](https://developer.apple.com/library/prerelease/ios/samplecode/Fox/Introduction/Intro.html#//apple_ref/doc/uid/TP40016154) do Xcode Scene editor.
+Para obter mais informações, consulte nossa [documentação do SceneKit](~/ios/platform/introduction-to-ios8.md#scenekit) e a [referência da estrutura SceneKit](https://developer.apple.com/library/prerelease/ios/documentation/SceneKit/Reference/SceneKit_Framework/index.html#//apple_ref/doc/uid/TP40012283) da Apple e [Fox: Criando um jogo de SceneKit com o projeto de exemplo do Xcode Scene editor](https://developer.apple.com/library/prerelease/ios/samplecode/Fox/Introduction/Intro.html#//apple_ref/doc/uid/TP40016154) .
 
 ## <a name="spritekit"></a>SpriteKit
 
@@ -455,12 +455,12 @@ Para obter mais informações, consulte nossa documentação do [SpriteKit](~/io
 
 A Apple adicionou os seguintes novos recursos ao SpriteKit para iOS 9:
 
-- Efeito de áudio espacial que rastreia automaticamente a posição do jogador com `SKAudioNode` a classe.
+- Efeito de áudio espacial que rastreia automaticamente a posição do jogador com a classe `SKAudioNode`.
 - Agora, o Xcode apresenta um editor de cena e um editor de ação para facilitar a criação de jogos e aplicativos 2D.
-- Suporte de jogo de rolagem fácil com novos objetos`SKCameraNode`de nós de câmera ().
+- Suporte de jogo de fácil rolagem com objetos novos nós de câmera (`SKCameraNode`).
 - Em dispositivos iOS que dão suporte a metal, o SpriteKit o usará automaticamente para renderização, mesmo que você já esteja usando sombreadores do OpenGL ES personalizados.
 
-Para obter mais informações, consulte a [referência da estrutura SpriteKit](https://developer.apple.com/library/prerelease/ios/documentation/SpriteKit/Reference/SpriteKitFramework_Ref/index.html#//apple_ref/doc/uid/TP40013041) da Apple na documentação do [ [SpriteKit](~/ios/platform/introduction-to-ios8.md#spritekit) e suas DemoBots: Criando um jogo de plataforma cruzada com o](https://developer.apple.com/library/prerelease/ios/samplecode/DemoBots/Introduction/Intro.html#//apple_ref/doc/uid/TP40015179) aplicativo de exemplo SpriteKit e GameplayKit.
+Para obter mais informações, consulte a [referência da estrutura SpriteKit](https://developer.apple.com/library/prerelease/ios/documentation/SpriteKit/Reference/SpriteKitFramework_Ref/index.html#//apple_ref/doc/uid/TP40013041) da Apple na [documentação da SpriteKit](~/ios/platform/introduction-to-ios8.md#spritekit) e sua [DemoBots: Criando um jogo de plataforma cruzada com](https://developer.apple.com/library/prerelease/ios/samplecode/DemoBots/Introduction/Intro.html#//apple_ref/doc/uid/TP40015179) o aplicativo de exemplo SpriteKit e GameplayKit.
 
 ## <a name="summary"></a>Resumo
 
@@ -471,4 +471,4 @@ Ele introduziu GameplayKit e e/s de modelo; os principais aprimoramentos para o 
 
 - [Amostras do iOS 9](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS9)
 - [iOS 9 para desenvolvedores](https://developer.apple.com/ios/pre-release/)
-- [iOS 9.0](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)
+- [iOS 9,0](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)

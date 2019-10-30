@@ -3,15 +3,15 @@ title: Criando visão geral de aplicativos de plataforma cruzada
 description: Este documento fornece uma visão geral de alto nível da criação de aplicativos de plataforma cruzada. Ele aborda o valor de, C#padrões de design, como MVC/MVVM e UIs nativas.
 ms.prod: xamarin
 ms.assetid: E442EEFB-FA9C-40E9-9668-5A3F915C8400
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/23/2017
-ms.openlocfilehash: c7673e7cd79844130117963bc56fd6e1b3c2b5c7
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 7d839e0141f14f4ba86897b128bf2a8c0a79548d
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70758102"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016912"
 ---
 # <a name="building-cross-platform-applications-overview"></a>Criando visão geral de aplicativos de plataforma cruzada
 
@@ -26,7 +26,7 @@ O Xamarin não é apenas uma plataforma de "gravação única, executada em qual
 Aqui está um resumo dos principais pontos para criar aplicativos de plataforma cruzada do Xamarin:
 
 - **Use C#**  -escreva seus aplicativos no C#. O código existente escrito C# em pode ser portado para IOS e Android usando o Xamarin com muita facilidade e, obviamente, usado em aplicativos do Windows.
-- **Utilizar padrões de design do modelo MVC ou MVVM** – desenvolva a interface do usuário do aplicativo usando o padrão Model/View/Controller. Projete seu aplicativo usando uma abordagem de modelo/exibição/controlador ou uma abordagem de Model/View/ViewModel em que há uma separação clara entre o "modelo" e o restante. Determine quais partes do seu aplicativo usarão elementos nativos da interface do usuário de cada plataforma (iOS, Android, Windows, Mac) e use isso como uma diretriz para dividir seu aplicativo em dois componentes: "Core" e "user-interface".
+- **Utilizar padrões de design do modelo MVC ou MVVM** – desenvolva a interface do usuário do aplicativo usando o padrão Model/View/Controller. Projete seu aplicativo usando uma abordagem de modelo/exibição/controlador ou uma abordagem de Model/View/ViewModel em que há uma separação clara entre o "modelo" e o restante. Determine quais partes do seu aplicativo usarão elementos nativos da interface do usuário de cada plataforma (iOS, Android, Windows, Mac) e use-o como uma diretriz para dividir seu aplicativo em dois componentes: "Core" e "user-interface".
 - **Criar UIs nativas** -cada aplicativo específico do sistema operacional fornece uma camada de interface de usuário diferente C# (implementada no com a ajuda de ferramentas de design de interface do projeto nativas):
 
 1. No iOS, use as APIs do UIKit para criar aplicativos de aparência nativa, utilizando opcionalmente o iOS designer do Xamarin para criar sua interface do usuário visualmente.
@@ -53,7 +53,7 @@ Alguns desses componentes são implementados no estudo de caso de *tarefa* .
 
 Seguindo o princípio de separação de responsabilidade, colocando em camadas a arquitetura do aplicativo e, em seguida, movendo a funcionalidade principal que é independente da plataforma em uma biblioteca principal reutilizável, você pode maximizar o compartilhamento de código entre plataformas, como a figura abaixo apresenta
 
- ![](overview-images/layers2.png "Seguindo o princípio de separação de responsabilidade, colocando em camadas a arquitetura do aplicativo e, em seguida, movendo a funcionalidade principal que é independente da plataforma em uma biblioteca principal reutilizável, você pode maximizar o compartilhamento de código entre plataformas")
+ ![](overview-images/layers2.png "By following the principle of separation of responsibility by layering your application architecture and then moving core functionality that is platform agnostic into a reusable core library, you can maximize code sharing across platforms")
 
  <a name="Case_Studies" />
 

@@ -3,15 +3,15 @@ title: Desempenho de plataforma cruzada
 description: Este documento descreve várias técnicas que podem ser usadas para melhorar o desempenho de um aplicativo móvel. Ele aborda o Criador de Perfil, o recurso IDisposable, as referências fracas, o coletor de lixo SGen, as técnicas de redução de tamanho e muito mais.
 ms.prod: xamarin
 ms.assetid: 9ce61f18-22ac-4b93-91be-5b499677d661
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/24/2017
-ms.openlocfilehash: 7fcb482fd17cba267d25dbea5d25232f2cf6ff2f
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: d0b195b90bb57b6d0717c0fb06d0202857851fe7
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70765941"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016522"
 ---
 # <a name="cross-platform-performance"></a>Desempenho de plataforma cruzada
 
@@ -331,7 +331,7 @@ As etapas a seguir podem ser usadas para reduzir ainda mais o tamanho do execut�
 - Reduza o tamanho do código gerenciado do aplicativo. Isso pode ser feito habilitando o vinculador em cada assembly (*Vincular todos* para projetos iOS e *Vincular todos os assemblies* para projetos Android).
 
 Aplicativos Android também podem ser divididos em um APK separado para cada ABI ("arquitetura").
-Saiba mais nesta postagem no blog: [Como reduzir o tamanho do aplicativo Android](http://motzcod.es/post/112072508362/how-to-keep-your-android-app-size-down).
+Saiba mais nesta postagem de blog: [How To Keep Your Android App Size Down](https://montemagno.com/how-to-keep-your-android-app-size-down/) (Como manter o tamanho de seu aplicativo Android pequeno).
 
 <a name="optimizeimages" />
 

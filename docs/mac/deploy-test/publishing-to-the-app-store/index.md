@@ -4,19 +4,19 @@ description: Este documento descreve como implantar um aplicativo Xamarin.Mac co
 ms.prod: xamarin
 ms.assetid: D26C5E54-EAD2-5487-264D-4263AEA1EBF2
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 84a35389276fed031f6bea116c1e4f37a63469a7
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 60f51be5ffad67d839edd42b7826b0c57c46eb8a
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769864"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73029994"
 ---
 # <a name="publishing-xamarinmac-apps-to-the-mac-app-store"></a>Publicando aplicativos Xamarin.Mac na Mac App Store
 
-## <a name="overview"></a>Visão geral
+## <a name="overview"></a>Visão Geral
 
 Os aplicativos Xamarin.Mac podem ser distribuídos de duas maneiras diferentes:
 
@@ -29,7 +29,7 @@ Este documento explica como usar o Visual Studio para Mac e o Xcode para configu
 
 Ao ingressar no [Programa de Desenvolvedores do Mac](https://developer.apple.com/devcenter/mac/) será oferecido ao desenvolvedor uma opção para participar como uma Pessoa Física ou como uma Empresa, conforme mostrado na captura de tela abaixo:
 
-[![O Portal do Desenvolvedor da Apple](images/image1.png "O Portal do Desenvolvedor da Apple")](images/image1-large.png#lightbox)
+[![O portal do desenvolvedor da Apple](images/image1.png "O portal do desenvolvedor da Apple")](images/image1-large.png#lightbox)
 
 Escolha o tipo de registro correto para a sua situação.
 

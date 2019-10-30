@@ -4,29 +4,29 @@ description: Este documento descreve as várias partes de um UITableView no iOS.
 ms.prod: xamarin
 ms.assetid: B4139C8B-28F2-4C0F-297F-BF5432C5A915
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: 158b3575589df5854a32e95ec80c6ef02d21e661
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 0e8014263d417cef39147b440ed3b38155f226bb
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70768351"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73021848"
 ---
 # <a name="table-parts-and-functionality-in-xamarinios"></a>Partes de tabela e funcionalidade no Xamarin. iOS
 
 Um UITableView pode ter um estilo ' agrupado ' ou ' Plain ' e consiste nas seguintes partes:
 
 - [Cabeçalho da seção](#Section_Header)
-- [Células](#Cells) (ou linhas, se preferir)
+- [Células](#Cells) (ou linhas, se você preferir)
 - [Rodapé da seção](#Section_Footer)
 - [Índice](#Index)
-- [Modo de edição](#Edit_Features) (inclui "passar o dedo para excluir" e arrastar identificadores para alterar a ordem das linhas) 
+- [Modo de edição](#Edit_Features) (inclui "passar o dedo para excluir" e arrastar identificadores para alterar a ordem da linha) 
 
 Essas capturas de tela mostram como as linhas de seção, os cabeçalhos, os rodapés, os controles de edição e o índice são exibidos.
 
- [![](table-parts-and-functionality-images/image1a.png "Essas capturas de tela mostram como as linhas de seção, os cabeçalhos, os rodapés, os controles de edição e o índice são exibidos")](table-parts-and-functionality-images/image1a.png#lightbox)
+ [![](table-parts-and-functionality-images/image1a.png "These screenshots show how section rows, headers, footers, edit controls and the index are displayed")](table-parts-and-functionality-images/image1a.png#lightbox)
 
 Essas partes são descritas em mais detalhes abaixo:
 
@@ -72,7 +72,7 @@ O restante deste documento mostra como implementar todos esses recursos do UITab
 
 As classes primárias usadas para exibir exibições de tabela são mostradas aqui:
 
-[![](table-parts-and-functionality-images/classdiagram.png "As classes primárias usadas para exibir exibições de tabela são mostradas aqui")](table-parts-and-functionality-images/classdiagram.png#lightbox)
+[![](table-parts-and-functionality-images/classdiagram.png "The primary classes used to display table views are shown here")](table-parts-and-functionality-images/classdiagram.png#lightbox)
 
 A finalidade de cada classe é descrita abaixo:
 

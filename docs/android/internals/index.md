@@ -4,15 +4,15 @@ description: Arquitetura subjacente por trás do Xamarin. Android e seu design d
 ms.prod: xamarin
 ms.assetid: CC6A0D52-E9FA-4270-B3FA-84660621D6D5
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 05/21/2018
-ms.openlocfilehash: 4f860d493c5709e2f6c7f89e6f3a50981cf62dc3
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 97382243ac5f767d94a782b895401c1f2f8ae554
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70757819"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73027854"
 ---
 # <a name="advanced-concepts-and-internals"></a>Conceitos avançados e recursos internos
 

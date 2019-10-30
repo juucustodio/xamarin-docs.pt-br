@@ -4,15 +4,15 @@ description: Este documento descreve como usar catálogos de ativos para gerenci
 ms.prod: xamarin
 ms.assetid: BFB5665A-F557-46E1-B35E-870CC2026AD9
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 09/26/2017
-ms.openlocfilehash: e0b899e69405874f381c3ab6f9a9200a856d7402
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 62253adafcd028f459e8ca0cc11a8eb3e54d52c3
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70767305"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73004179"
 ---
 # <a name="app-store-icons-in-xamarinios"></a>Ícones da App Store no Xamarin. iOS
 
@@ -25,7 +25,7 @@ A Apple sugere as seguintes diretrizes ao criar o ícone do seu aplicativo:
 - Torne o ícone apropriado para seu aplicativo.
 - Crie um ícone simples, consistente com o design do seu aplicativo.
 - Evite usar palavras em seu ícone.
-- Pense globalmente: Um único ícone do aplicativo é usado em todos os territórios de repositório.
+- Pense globalmente: um único ícone do aplicativo é usado em todos os territórios de repositório.
 
 Uma imagem de 1.024 x 1.024 pixels é necessária para o ícone do aplicativo que será exibido na App Store.  A Apple declarou que o ícone da App Store no catálogo de ativos não pode ser transparente nem conter um canal alfa.
 

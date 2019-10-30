@@ -3,34 +3,34 @@ title: Responder a chamadas de autenticação
 ms.prod: xamarin
 ms.assetid: 6533AFC9-1A1C-4897-A154-4D4ECFE27761
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/06/2017
-ms.openlocfilehash: 57e6ed2c01e382d7daee2933ac49c8282199a3fc
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 8dc06740355bd95828e1a1bd8d9d15a2ef37e6b2
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70758858"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73027526"
 ---
 # <a name="responding-to-authentication-callbacks"></a>Responder a chamadas de autenticação
 
-O scanner de impressão digital é executado em segundo plano em seu próprio thread e, quando concluído, ele relatará os resultados da verificação invocando um método `FingerprintManager.AuthenticationCallback` de no thread da interface do usuário. Um aplicativo Android deve fornecer seu próprio manipulador que estende essa classe abstrata, implementando todos os seguintes métodos:
+O scanner de impressão digital é executado em segundo plano em seu próprio thread e, quando concluído, ele relatará os resultados da verificação invocando um método de `FingerprintManager.AuthenticationCallback` no thread da interface do usuário. Um aplicativo Android deve fornecer seu próprio manipulador que estende essa classe abstrata, implementando todos os seguintes métodos:
 
-- **`OnAuthenticationError(int errorCode, ICharSequence errString)`** &ndash; Chamado quando há um erro irrecuperável. Não há nada mais que um aplicativo ou usuário possa fazer para corrigir a situação, exceto possivelmente tente novamente.
-- **`OnAuthenticationFailed()`** &ndash; Esse método é invocado quando uma impressão digital é detectada, mas não é reconhecida pelo dispositivo.
-- **`OnAuthenticationHelp(int helpMsgId, ICharSequence helpString)`** &ndash; Chamado quando há um erro recuperável, como o dedo que está sendo transdedodo para o rápido no scanner.
-- **`OnAuthenticationSucceeded(FingerprintManagerCompati.AuthenticationResult result)`** &ndash; Isso é chamado quando uma impressão digital é reconhecida.
+- **`OnAuthenticationError(int errorCode, ICharSequence errString)`** &ndash; chamado quando há um erro irrecuperável. Não há nada mais que um aplicativo ou usuário possa fazer para corrigir a situação, exceto possivelmente tente novamente.
+- **`OnAuthenticationFailed()`** &ndash; esse método é invocado quando uma impressão digital é detectada, mas não é reconhecida pelo dispositivo.
+- **`OnAuthenticationHelp(int helpMsgId, ICharSequence helpString)`** &ndash; chamado quando há um erro recuperável, como o dedo que está sendo transdedodo para o rápido do scanner.
+- **`OnAuthenticationSucceeded(FingerprintManagerCompati.AuthenticationResult result)`** &ndash; isso é chamado quando uma impressão digital é reconhecida.
 
-Se um `CryptoObject` foi usado ao chamar `Authenticate`, é recomendável chamar `Cipher.DoFinal` em `OnAuthenticationSuccessful`.
-`DoFinal`gerará uma exceção se a codificação tiver sido violada ou inicializada incorretamente, indicando que o resultado do scanner de impressão digital pode ter sido adulterado fora do aplicativo.
+Se um `CryptoObject` foi usado ao chamar `Authenticate`, é recomendável chamar `Cipher.DoFinal` no `OnAuthenticationSuccessful`.
+`DoFinal` lançará uma exceção se a codificação tiver sido violada ou inicializada incorretamente, indicando que o resultado do scanner de impressão digital pode ter sido adulterado fora do aplicativo.
 
 > [!NOTE]
 > É recomendável manter a classe de retorno de chamada relativamente leve e gratuita da lógica específica do aplicativo. Os retornos de chamada devem agir como um "Cop. de tráfego" entre o aplicativo Android e os resultados do scanner de impressão digital.
 
 ## <a name="a-sample-authentication-callback-handler"></a>Um manipulador de retorno de chamada de autenticação de exemplo
 
-A classe a seguir é um exemplo de uma `FingerprintManager.AuthenticationCallback` implementação mínima: 
+A classe a seguir é um exemplo de uma implementação de `FingerprintManager.AuthenticationCallback` mínima: 
 
 ```csharp
 class MyAuthCallbackSample : FingerprintManagerCompat.AuthenticationCallback
@@ -90,25 +90,25 @@ class MyAuthCallbackSample : FingerprintManagerCompat.AuthenticationCallback
 }
 ```
 
-`OnAuthenticationSucceeded`verifica se um `Cipher` foi fornecido para `FingerprintManager` quando `Authentication` foi invocado. Nesse caso, o `DoFinal` método é chamado na codificação. Isso fecha o `Cipher`, restaurando-o para seu estado original. Se houvesse um problema com a codificação, `DoFinal` o gerará uma exceção e a tentativa de autenticação deverá ser considerada como falha.
+`OnAuthenticationSucceeded` verifica se um `Cipher` foi fornecido para `FingerprintManager` quando `Authentication` foi invocado. Nesse caso, o método `DoFinal` é chamado na codificação. Isso fecha o `Cipher`, restaurando-o para seu estado original. Se houvesse um problema com a codificação, `DoFinal` gerará uma exceção e a tentativa de autenticação deverá ser considerada como falha.
 
-Os `OnAuthenticationError` retornos de chamada e `OnAuthenticationHelp` cada um recebem um inteiro que indica qual foi o problema. A seção a seguir explica cada um dos possíveis códigos de erro ou de ajuda. Os dois retornos de chamada têm &ndash; finalidades semelhantes para informar ao aplicativo que a autenticação de impressão digital falhou. A diferença entre elas é a gravidade. `OnAuthenticationHelp`é um erro recuperável do usuário, como passar a impressão digital muito rápido; `OnAuthenticationError` é um erro mais grave, como um scanner de impressão digital danificado.
+Os retornos de chamada `OnAuthenticationError` e `OnAuthenticationHelp` recebem um inteiro que indica qual foi o problema. A seção a seguir explica cada um dos possíveis códigos de erro ou de ajuda. Os dois retornos de chamada têm finalidades semelhantes &ndash; para informar ao aplicativo que a autenticação de impressão digital falhou. A diferença entre elas é a gravidade. `OnAuthenticationHelp` é um erro recuperável do usuário, como passar a impressão digital muito rápido; `OnAuthenticationError` é um erro mais grave, como um scanner de impressão digital danificado.
 
-Observe que `OnAuthenticationError` será invocado quando a verificação de impressão digital for cancelada por meio da `CancellationSignal.Cancel()` mensagem. O `errMsgId` parâmetro terá o valor de 5 (`FingerprintState.ErrorCanceled`). Dependendo dos requisitos, uma implementação do `AuthenticationCallbacks` pode tratar essa situação de forma diferente dos outros erros. 
+Observe que `OnAuthenticationError` será invocado quando a verificação de impressão digital for cancelada por meio da mensagem de `CancellationSignal.Cancel()`. O parâmetro `errMsgId` terá o valor de 5 (`FingerprintState.ErrorCanceled`). Dependendo dos requisitos, uma implementação do `AuthenticationCallbacks` pode tratar essa situação de forma diferente dos outros erros. 
 
-`OnAuthenticationFailed`é invocado quando a impressão digital foi verificada com êxito, mas não corresponde a nenhuma impressão digital registrada com o dispositivo. 
+`OnAuthenticationFailed` é invocado quando a impressão digital foi verificada com êxito, mas não corresponde a nenhuma impressão digital registrada com o dispositivo. 
 
 ## <a name="help-codes-and-error-message-ids"></a>Códigos de ajuda e IDs de mensagem de erro 
 
-Uma lista e descrição dos códigos de erro e códigos de ajuda podem ser encontrados na [documentação SDK do Android](https://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.html#FINGERPRINT_ACQUIRED_GOOD) para a classe fingerprintmanager. O Xamarin. Android representa esses valores com `Android.Hardware.Fingerprints.FingerprintState` a enumeração:
+Uma lista e descrição dos códigos de erro e códigos de ajuda podem ser encontrados na [documentação SDK do Android](https://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.html#FINGERPRINT_ACQUIRED_GOOD) para a classe fingerprintmanager. O Xamarin. Android representa esses valores com o `Android.Hardware.Fingerprints.FingerprintState` enum:
 
 - **`AcquiredGood`** &ndash; (valor 0) a imagem adquirida foi boa.
 
-- **`AcquiredImagerDirty`** &ndash; (valor 3) a imagem de impressão digital estava muito ruidosa devido a uma sujeira suspeita ou detectada no sensor. Por exemplo, é razoável retornar isso após a detecção múltipla `AcquiredInsufficient` ou real de sujeira no sensor (pixels presos, faixas, etc.). Espera-se que o usuário execute uma ação para limpar o sensor quando ele é retornado.
+- **`AcquiredImagerDirty`** &ndash; (valor 3) a imagem de impressão digital estava muito ruidosa devido a uma sujeira suspeita ou detectada no sensor. Por exemplo, é razoável retorná-la após várias `AcquiredInsufficient` ou a detecção real de sujeira no sensor (pixels presos, faixas, etc.). Espera-se que o usuário execute uma ação para limpar o sensor quando ele é retornado.
 
-- **`AcquiredInsufficient`** (valor 2) a imagem de impressão digital estava muito ruidosa para ser processada devido a uma condição detectada (ou seja, uma capa seca) ou um sensor possivelmente sujo (consulte `AcquiredImagerDirty`. &ndash;
+- **`AcquiredInsufficient`** &ndash; (valor 2) a imagem de impressão digital estava muito ruidosa para ser processada devido a uma condição detectada (ou seja, uma capa seca) ou um sensor possivelmente sujo (consulte `AcquiredImagerDirty`.
 
-- **`AcquiredPartial`** &ndash; (valor 1) apenas uma imagem de impressão digital parcial foi detectada. Durante o registro, o usuário deve ser informado sobre o que precisa ocorrer para resolver esse problema, por exemplo &ldquo;, pressione o sensor com firmeza.&rdquo;
+- **`AcquiredPartial`** &ndash; (valor 1) apenas uma imagem de impressão digital parcial foi detectada. Durante o registro, o usuário deve ser informado sobre o que precisa ocorrer para resolver esse problema, por exemplo, &ldquo;Pressione firmemente o sensor.&rdquo;
 
 - **`AcquiredTooFast`** &ndash; (valor 5) a imagem de impressão digital estava incompleta devido ao movimento rápido. Embora seja principalmente apropriado para sensores de matriz linear, isso também poderia acontecer se o dedo fosse movido durante a aquisição. O usuário deve ser solicitado a mover o dedo mais devagar (linear) ou deixar o dedo no sensor mais longo.
 
@@ -124,7 +124,7 @@ Uma lista e descrição dos códigos de erro e códigos de ajuda podem ser encon
 
 - **`ErrorTimeout`** &ndash; (valor 3) estado de erro retornado quando a solicitação atual está sendo executada por muito tempo. Isso destina-se a impedir que programas Aguardem o sensor de impressão digital indefinidamente. O tempo limite é específico da plataforma e do sensor, mas geralmente é de cerca de 30 segundos.
 
-- **`ErrorUnableToProcess`** &ndash; (valor 2) estado de erro retornado quando o sensor não conseguiu processar a imagem atual.
+- **`ErrorUnableToProcess`** &ndash; (valor 2) estado de erro retornado quando o sensor não pôde processar a imagem atual.
 
 ## <a name="related-links"></a>Links relacionados
 

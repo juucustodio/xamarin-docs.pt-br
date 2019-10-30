@@ -3,15 +3,15 @@ title: Parte 6 – Teste e aprovações da app store
 description: Este documento descreve como testar um aplicativo de plataforma cruzada no dispositivo, gerenciar casos de teste, automatizar testes, executar testes de unidade e trabalhar com o processo de envio do aplicativo.
 ms.prod: xamarin
 ms.assetid: 46E0578A-7EB9-C105-ABB0-A043E501F36B
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/23/2017
-ms.openlocfilehash: bf6ea18c73226a620ce002797d2d2b04b48c7cc8
-ms.sourcegitcommit: 76f930ce63b193ca3f7f85f768b031e59cb342ec
+ms.openlocfilehash: 07eab1e8229cd6600bb8abdd324cb3eb12a8f886
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71198425"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016850"
 ---
 # <a name="part-6---testing-and-app-store-approvals"></a>Parte 6 – Teste e aprovações da app store
 
@@ -50,15 +50,15 @@ O Xamarin [UITest](https://docs.microsoft.com/appcenter/test-cloud/preparing-for
 
 ## <a name="unit-testing"></a>Teste de unidade
 
-### <a name="touchunit"></a>Touch.Unit
+### <a name="touchunit"></a>Touch. Unit
 
 O Xamarin. iOS inclui uma estrutura de teste de unidade chamada Touch. Unit que segue os testes de escrita de estilo JUnit/NUnit.
 
 Consulte nosso [teste de unidade com a documentação do Xamarin. Ios](~/ios/deploy-test/touch.unit.md) para obter detalhes sobre como escrever testes e executar Touch. Unit.
 
-### <a name="andrunit"></a>Andr.Unit
+### <a name="andrunit"></a>Andr. Unit
 
-Há um equivalente de código-fonte aberto de Touch. Unit para Android chamado Andr. Unit. Você pode baixá-lo do [GitHub](https://github.com/spouliot/Andr.Unit) e ler sobre o [ @spouliotblog da](http://spouliot.wordpress.com/2011/10/30/andr-unit-joins-the-family/)ferramenta no.
+Há um equivalente de código-fonte aberto de Touch. Unit para Android chamado Andr. Unit. Você pode baixá-lo do [GitHub](https://github.com/spouliot/Andr.Unit) e ler sobre a ferramenta no [blog de@spouliot](https://spouliot.wordpress.com/2011/10/30/andr-unit-joins-the-family/).
 
 ## <a name="app-store-approvals"></a>Aprovações da loja de aplicativos
 
@@ -129,7 +129,7 @@ Além dos problemas técnicos óbvios que podem resultar em um aplicativo sendo 
 
 Coloque o máximo de esforço nos metadados do aplicativo como em desenvolvimento e teste. Os aplicativos são rejeitados para violações secundárias nos metadados, portanto, vale a pena dedicar o tempo para obtê-lo certo.
 
-### <a name="app-stores-not-for-everyone"></a>Lojas de aplicativos: Não para todos
+### <a name="app-stores-not-for-everyone"></a>Lojas de aplicativos: não para todos
 
 O foco principal dos armazenamentos em cada plataforma é a distribuição do consumidor-a capacidade de alcançar o máximo possível de clientes. No entanto, nem todos os aplicativos são destinados a consumidores, há uma base rápida em crescimento de aplicativos internos e de extranet que exigem distribuição limitada para funcionários, fornecedores ou clientes. Esses aplicativos não são "para venda" e não precisam de aprovação, já que o desenvolvedor controla a distribuição para um grupo de usuários fechado.
 O suporte para esse tipo de implantação varia de acordo com a plataforma.

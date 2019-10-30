@@ -5,19 +5,19 @@ ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: E4150036-7760-4023-BD33-B7BDE7B7AF5B
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 10/05/2018
-ms.openlocfilehash: 3eee66032a33e66d3a6a22ca43cb931fbd59888f
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: HT
+ms.openlocfilehash: 4acbfe810abefd9a25721ddf59c9f4f197afdf28
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50122979"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73020972"
 ---
 # <a name="hello-android-multiscreen-deep-dive"></a>Multitela do Hello, Android: aprofundamento
 
-_Neste guia de duas partes, o aplicativo Phoneword básico (criado no guia Hello, Android) é expandido para processar uma segunda tela. Ao longo do caminho, são apresentados os blocos de construção do aplicativo Android básico. Um aprofundamento na arquitetura Android está incluído para ajudá-lo a desenvolver uma melhor compreensão da estrutura de aplicativo e da funcionalidade do Android._
+_Neste guia de duas partes, o aplicativo Phoneword básico (criado no Hello, guia do Android) é expandido para lidar com uma segunda tela. Ao longo do caminho, os blocos básicos de construção de aplicativos para Android são introduzidos. Uma análise mais profunda da arquitetura do Android está incluída para ajudá-lo a desenvolver uma melhor compreensão da estrutura e da funcionalidade do aplicativo Android._
 
 No [Início rápido de multitela do Hello, Android](~/android/get-started/hello-android-multiscreen/hello-android-multiscreen-quickstart.md), você compilou e executou seu primeiro aplicativo Xamarin.Android multitela.
 

@@ -1,17 +1,17 @@
 ---
-title: Xamarin. Android versus Desktop-diferenças no tempo de execução do mono
+title: Xamarin. Android versus desktop-diferenças no tempo de execução do mono
 ms.prod: xamarin
 ms.assetid: F953F9B4-3596-8B3A-A8E4-8219B5B9F7CA
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/25/2018
-ms.openlocfilehash: 7f98f2f75a106ad3a9f62256a7145ac746c4b1c8
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 8fe0e3a9adedb161c527ccdf6d6c3a7cd06a1d86
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70757781"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73027844"
 ---
 # <a name="limitations"></a>Limitações
 
@@ -25,16 +25,16 @@ Essas são as limitações do Xamarin. Android em comparação com o mono da ár
 
 ## <a name="limited-java-generation-support"></a>Suporte à geração de Java limitado
 
-Os [wrappers](~/android/platform/java-integration/android-callable-wrappers.md) que podem ser chamados pelo Android precisam ser gerados para que o código Java chame código gerenciado. *Por padrão, os*wrappers que podem ser chamados pelo Android conterão apenas (determinados) construtores declarados e métodos que substituem um método [`RegisterAttribute`](xref:Android.Runtime.RegisterAttribute)Java Virtual (ou seja, ele tem) ou implementam um método de interface java (a interface da mesma forma tem `Attribute`).
+Os [wrappers](~/android/platform/java-integration/android-callable-wrappers.md) que podem ser chamados pelo Android precisam ser gerados para que o código Java chame código gerenciado. *Por padrão, os*wrappers que podem ser chamados pelo Android conterão apenas (determinados) construtores declarados e métodos que substituem um método Java Virtual (ou seja, ele tem [`RegisterAttribute`](xref:Android.Runtime.RegisterAttribute)) ou implementam um método de interface java (a interface da mesma forma tem `Attribute`).
   
-Antes da versão 4,1, nenhum método adicional poderia ser declarado. Com a versão 4,1, [os `Export` atributos `ExportField` personalizados e podem ser usados para declarar os métodos e os campos do Java no wrapper que pode ser chamado pelo Android](~/android/platform/java-integration/working-with-jni.md).
+Antes da versão 4,1, nenhum método adicional poderia ser declarado. Com a versão 4,1, [os atributos personalizados `Export` e `ExportField` podem ser usados para declarar os métodos e os campos do Java no wrapper que pode ser chamado pelo Android](~/android/platform/java-integration/working-with-jni.md).
 
 ### <a name="missing-constructors"></a>Construtores ausentes
 
-Os construtores permanecem complicados, [`ExportAttribute`](xref:Java.Interop.ExportAttribute) a menos que sejam usados. O algoritmo para gerar construtores de wrapper callable Android é que um Construtor Java será emitido se:
+Os construtores permanecem complicados, a menos que [`ExportAttribute`](xref:Java.Interop.ExportAttribute) seja usado. O algoritmo para gerar construtores de wrapper callable Android é que um Construtor Java será emitido se:
 
 1. Há um mapeamento de Java para todos os tipos de parâmetro
-2. A classe base declara o mesmo construtor &ndash; , pois o wrapper que pode ser chamado pelo Android *deve* invocar o construtor de classe base correspondente; nenhum argumento padrão pode ser usado (já que não há uma maneira fácil de determinar quais valores deve ser usado em Java).
+2. A classe base declara o mesmo Construtor &ndash; isso é necessário porque o wrapper que pode ser chamado pelo Android *deve* invocar o construtor de classe base correspondente; nenhum argumento padrão pode ser usado (já que não há uma maneira fácil de determinar quais valores devem ser usados em Java).
 
 Por exemplo, considere a seguinte classe:
 
@@ -47,7 +47,7 @@ class MyIntentService : IntentService {
 }
 ```
 
-Embora isso pareça perfeitamente lógico, o wrapper do Android callable *no Builds* não conterá um construtor padrão. Consequentemente, se você tentar iniciar esse serviço (por exemplo [`Context.StartService`](xref:Android.Content.Context.StartService*), ele falhará:
+Embora isso pareça perfeitamente lógico, o wrapper do Android callable *no Builds* não conterá um construtor padrão. Consequentemente, se você tentar iniciar esse serviço (por exemplo, [`Context.StartService`](xref:Android.Content.Context.StartService*), ele falhará:
 
 ```shell
 E/AndroidRuntime(31766): FATAL EXCEPTION: main
@@ -70,7 +70,7 @@ E/AndroidRuntime(31766):        at android.app.ActivityThread.handleCreateServic
 E/AndroidRuntime(31766):        ... 10 more
 ```
 
-A solução alternativa é declarar um construtor padrão, adorna-lo com `ExportAttribute`o e [`ExportAttribute.SuperStringArgument`](xref:Java.Interop.ExportAttribute.SuperArgumentsString)definir: 
+A solução alternativa é declarar um construtor padrão, adorna-lo com a `ExportAttribute`e definir o [`ExportAttribute.SuperStringArgument`](xref:Java.Interop.ExportAttribute.SuperArgumentsString): 
 
 ```csharp
 [Service]
@@ -88,7 +88,7 @@ class MyIntentService : IntentService {
 
 As C# classes genéricas são apenas parcialmente suportadas. As seguintes limitações existem:
 
-- Tipos genéricos não podem usar `[Export]` ou `[ExportField`]. Tentar fazer isso irá gerar um `XA4207` erro.
+- Tipos genéricos não podem usar `[Export]` ou `[ExportField`]. Tentar fazer isso irá gerar um erro de `XA4207`.
 
     ```csharp
     public abstract class Parcelable<T> : Java.Lang.Object, IParcelable
@@ -101,7 +101,7 @@ As C# classes genéricas são apenas parcialmente suportadas. As seguintes limit
     }
     ```
 
-- Os métodos genéricos não podem `[Export]` usar `[ExportField]`ou:
+- Métodos genéricos não podem usar `[Export]` ou `[ExportField]`:
 
     ```csharp
     public class Example : Java.Lang.Object
@@ -116,7 +116,7 @@ As C# classes genéricas são apenas parcialmente suportadas. As seguintes limit
     }
     ```
 
-- `[ExportField]`Não pode ser usado em métodos que retornam `void`:
+- `[ExportField]` não pode ser usado em métodos que retornam `void`:
 
     ```csharp
     public class Example : Java.Lang.Object

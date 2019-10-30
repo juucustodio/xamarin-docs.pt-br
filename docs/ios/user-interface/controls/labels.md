@@ -4,23 +4,23 @@ description: Este documento discute como usar rótulos no Xamarin. iOS. Ele desc
 ms.prod: xamarin
 ms.assetid: 54DA1221-13E4-4D45-B263-5F22A0AC7B53
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 07/11/2017
-ms.openlocfilehash: 275acd02e6cece0842344d8e5833c23af1014a0f
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 04d33d986d76daf29fc7392206c62f77d34dd969
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70768944"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73022014"
 ---
 # <a name="labels-in-xamarinios"></a>Rótulos no Xamarin. iOS
 
-O `UILabel` controle é usado para exibir texto único e de várias linhas, somente leitura.
+O controle `UILabel` é usado para exibir texto único e de várias linhas somente leitura.
 
 ## <a name="implementing-a-label"></a>Implementando um rótulo
 
-Um novo rótulo é criado instanciando-se [`UILabel`](xref:UIKit.UILabel)um:
+Um novo rótulo é criado instanciando uma [`UILabel`](xref:UIKit.UILabel):
 
 ```csharp
 UILabel label = new UILabel();
@@ -74,9 +74,9 @@ label.AttributedText = new NSAttributedString(
             );
 ```
 
-Para obter mais informações sobre como estilizar o texto usando `NSAttributedString` , consulte a receita de texto de [estilo](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/text_field/style_text) .
+Para obter mais informações sobre como estilizar o texto usando `NSAttributedString` consulte a receita de [texto de estilo](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/text_field/style_text) .
 
-Por padrão, os rótulos `Enabled` têm o conjunto como verdadeiro, mas é possível defini-lo como desabilitado para dar ao usuário uma dica de que um determinado controle está desabilitado:
+Por padrão, os rótulos têm o `Enabled` definido como true, mas é possível defini-lo como desabilitado para dar ao usuário uma dica de que determinado controle está desabilitado:
 
 ```csharp
 label.Enabled = false;

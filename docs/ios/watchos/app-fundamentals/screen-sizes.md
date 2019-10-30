@@ -4,21 +4,21 @@ description: Este documento descreve como trabalhar com vários tamanhos de tela
 ms.prod: xamarin
 ms.assetid: 840DF939-2F59-4ABA-87D8-92AAC8A92BC4
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: e9c87b76dc6845962450b8cb6fab921ea1748832
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: aeaa1bb1273bc062e0ac76eaa09722827f15797f
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70768323"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028400"
 ---
 # <a name="working-with-watchos-screen-sizes-in-xamarin"></a>Trabalhando com tamanhos de tela watchOS no Xamarin
 
 Apple Watch está disponível em dois tamanhos de tela:
 
-- **38mm**
+- **38 mm**
   - 136 x 170 pixels lógicos (272 x 340 pixels físicos)
 
 - **42 mm**
@@ -30,11 +30,11 @@ Você deve levar em conta o tamanho da tela ao projetar e testar seus aplicativo
 
 Por padrão, o designer de Visual Studio para Mac exibirá os controladores de interface de inspeção em **qualquer Apple Watch**.
 
-![](screen-sizes-images/screen-any-sml.png "O designer exibe os controladores de interface de inspeção a qualquer Apple Watch")
+![](screen-sizes-images/screen-any-sml.png "The Designer displays watch interface controllers at Any Apple Watch")
 
 Use o menu tamanho para editar e visualizar o storyboard em qualquer um dos tamanhos de tela disponíveis: **38 mm** ou **42 mm**:
 
-![](screen-sizes-images/screen-menu-sml.png "Selecionando o tamanho de 38 mm ou 42 mm")
+![](screen-sizes-images/screen-menu-sml.png "Selecting the 38mm or 42mm size")
 
 Às vezes, o tamanho de tela maior renderizará o conteúdo que seria truncado/oculto na tela menor.
 Certifique-se de testar ambos os tamanhos.
@@ -43,7 +43,7 @@ Certifique-se de testar ambos os tamanhos.
 
 Seu aplicativo deve exibir o mesmo conteúdo na tela, independentemente do tamanho, e deve expandir ou contratar elementos conforme apropriado. No designer de Visual Studio para Mac, no Inspetor de atributo, você deve usar **relativo ao contêiner** ou **tamanho para ajustar o conteúdo** em preferência a tamanhos fixos.
 
-![](screen-sizes-images/sizeattributepanel-sml.png "Use em relação ao contêiner ou tamanho para ajustar o conteúdo em preferência a tamanhos fixos")
+![](screen-sizes-images/sizeattributepanel-sml.png "Use Relative to Container or Size to Fit Content in preference to fixed sizes")
 
 Como a tela Watch está circundada por uma tampa preta, não é recomendável fornecer preenchimento em direção à sua interface. Permita que os elementos entrem na borda da tela e deixe o painel formar uma borda natural em torno do aplicativo.
 
@@ -51,13 +51,13 @@ Como a tela Watch está circundada por uma tampa preta, não é recomendável fo
 
 Ao testar o simulador, você pode alternar facilmente entre os dois tamanhos de tela usando o menu de **dispositivo de > de hardware** .
 
-![](screen-sizes-images/simulator.png "O simulador pode alternar entre os dois tamanhos de tela usando o menu de dispositivo de hardware")
+![](screen-sizes-images/simulator.png "The simulator can switch between the two screen sizes using the Hardware Device menu")
 
 ## <a name="image-resources"></a>Recursos de imagem
 
 Você deve usar vários ativos de imagem se um único ativo não parecer bom em tamanhos diferentes. Os catálogos de ativos de imagem permitem que bitmaps separados sejam especificados para cada tamanho:
 
-![](screen-sizes-images/images-xcassets.png "Editor de catálogo de ativos de imagem")
+![](screen-sizes-images/images-xcassets.png "Image asset catalog editor")
 
 ```csharp
 // specify the asset name, the correct size will automatically be loaded

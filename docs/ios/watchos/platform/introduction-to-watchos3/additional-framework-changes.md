@@ -4,15 +4,15 @@ description: Este documento descreve várias alterações de estrutura introduzi
 ms.prod: xamarin
 ms.assetid: FE93796E-F699-4B14-B37D-D39F9D48E81E
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: cd4bc8dbc02a44807ec197d39349971d8f9cd6f9
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 628d2c8efe9459378c64c55d653eac14c55e0815
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70768578"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028276"
 ---
 # <a name="additional-watchos-3-frameworks-changes"></a>Alterações adicionais de estruturas watchOS 3
 
@@ -27,8 +27,8 @@ Os aprimoramentos a seguir foram feitos na estrutura de dados principal para o s
 - Os objetos raiz [NSManagedObjectContext](https://developer.apple.com/reference/coredata/nsmanagedobjectcontext) dão suporte à falha e busca simultâneas sem serialização.
 - A classe [NSPersistentStoreCoordinator](https://developer.apple.com/reference/coredata/nspersistentstorecoordinator) mantém um pool de armazenamentos de dados do SQLite.
 - Os objetos [NSManagedObjectContext](https://developer.apple.com/reference/coredata/nsmanagedobjectcontext) com armazenamentos de dados SQLite no modo de diário Wal dão suporte ao novo recurso de geração de consulta em que os contextos de objeto gerenciado (MOC) podem ser fixados em versões de banco de dados específicas para futuras transações de busca e falha.
-- Usando o alto nível `NSPersistenceContainer` para fazer referência a, [NSManagedObjectModel](https://developer.apple.com/reference/coredata/nsmanagedobjectmodel) e outros recursos principais de configuração de `NSPersistentStoreCoordinator`dados.
-- Vários novos métodos de conveniência foram adicionados para `NSManagedObject` tornar mais fácil executar buscas e criar subclasses.
+- Usando o `NSPersistenceContainer` de alto nível para fazer referência ao `NSPersistentStoreCoordinator`, [NSManagedObjectModel](https://developer.apple.com/reference/coredata/nsmanagedobjectmodel) e outros recursos principais de configuração de dados.
+- Vários novos métodos de conveniência foram adicionados à `NSManagedObject` facilitando a execução de buscas e criação de subclasses.
 
 Para obter mais informações, consulte a [referência da estrutura de dados principal](https://developer.apple.com/reference/coredata)da Apple.
 
@@ -54,8 +54,8 @@ Os aprimoramentos a seguir foram feitos na estrutura de base para o sistema oper
 Os seguintes aprimoramentos foram feitos na estrutura HealthKit para o sistema operacional de observação 3:
 
 - Use a nova classe [HKWorkoutConfiguration](https://developer.apple.com/reference/healthkit/hkworkoutconfiguration) para especificar o `ActivityType` e `LocationType` de um treinamento.
-- O novo [HKWheelchairUseObject](https://developer.apple.com/reference/healthkit/hkwheelchairuseobject) e o `WheelchairUse` método da classe [HKHealthStore](https://developer.apple.com/reference/healthkit/hkhealthstore) foram adicionados para trabalhar com dados de integridade relacionados a cadeira de rodas.
-- Foram adicionadas novas chaves de metadados para os tipos meteorológicos `HKWeatherConditionClear` ( `HKWeatherConditionCloudy`como e) e os tipos de `HKWorkoutActivityTypeFlexibility` treinamento `HKWorkoutActivityTypeWheelchairRunPace`(como e) foram adicionados.
+- O novo [HKWheelchairUseObject](https://developer.apple.com/reference/healthkit/hkwheelchairuseobject) e o método `WheelchairUse` da classe [HKHealthStore](https://developer.apple.com/reference/healthkit/hkhealthstore) foram adicionados para trabalhar com dados de integridade relacionados a cadeira de rodas.
+- Novas chaves de metadados foram adicionadas para tipos meteorológicos (como `HKWeatherConditionClear` e `HKWeatherConditionCloudy`) e os tipos de treinamento (como `HKWorkoutActivityTypeFlexibility` e `HKWorkoutActivityTypeWheelchairRunPace`) foram adicionados.
 
 ## <a name="homekit"></a>HomeKit
 
@@ -76,8 +76,8 @@ Os seguintes aprimoramentos foram feitos na estrutura PassKit para o sistema ope
 
 Os seguintes aprimoramentos foram feitos na estrutura UIKit para o sistema operacional de observação 3:
 
-- Para dar suporte ao tipo dinâmico em rótulos, campos `PreferredFontForTextStyle` `UIFont` de texto e caixas de texto, use o novo método da classe.
-- O `ColorWithDisplayP3` método foi adicionado para dar suporte à cor ampla.
+- Para dar suporte ao tipo dinâmico em rótulos, campos de texto e caixas de texto, use o novo método `PreferredFontForTextStyle` da classe `UIFont`.
+- O método `ColorWithDisplayP3` foi adicionado para oferecer suporte a cores largos.
 
 ## <a name="related-links"></a>Links relacionados
 

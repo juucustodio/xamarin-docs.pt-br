@@ -4,19 +4,19 @@ description: Este documento descreve como depurar exceções originadas no tempo
 ms.prod: xamarin
 ms.assetid: B0C0CE31-2737-4969-8EA5-D39D3333E9C2
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 10/19/2016
-ms.openlocfilehash: 7340df1d65768363f39c6f080a5d50e2ac250400
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: bc5a151323414e867b919035b0c5705234faebf9
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769879"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73021663"
 ---
 # <a name="debugging-a-native-crash-in-a-xamarinmac-app"></a>Depuração de uma falha nativa em um aplicativo Xamarin.Mac
 
-## <a name="overview"></a>Visão geral
+## <a name="overview"></a>Visão Geral
 
 Erros de programação, às vezes, podem gerar falhas no tempo de execução nativo Objective-C. Diferentemente de exceções C#, eles não apontam para uma linha específica em seu código, que você pode buscar corrigir. Às vezes, eles podem ser triviais para localizar e corrigir, enquanto em outras ocasiões eles podem ser extremamente difíceis de rastrear. 
 
@@ -179,11 +179,11 @@ new System.Threading.Thread (() =>
 
 Isso forçará o aplicativo a executar o coletor de lixo a cada segundo. Execute novamente o seu aplicativo e tente reproduzir o bug. Se você falha imediatamente ou consistentemente em vez de aleatoriamente, isso significa que você está no caminho certo.
 
-### <a name="reporting"></a>Relatório
+### <a name="reporting"></a>Relatórios
 
 A próxima etapa é relatar o problema para o Xamarin para que a associação possa ser corrigida para versões futuras. Se você for o proprietário da licença Enterprise ou comercial, abra um tíquete em 
 
-[http://xamarin.com/support](http://xamarin.com/support)
+[visualstudio.microsoft.com/vs/support/](https://visualstudio.microsoft.com/vs/support/)
 
 Caso contrário, procure um problema existente:
 

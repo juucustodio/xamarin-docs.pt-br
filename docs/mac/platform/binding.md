@@ -4,26 +4,26 @@ description: Este documento contém links para guias que descrevem como trabalha
 ms.prod: xamarin
 ms.assetid: 521707CD-79D3-488A-84CB-A37EBF93AC94
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 01/13/2017
-ms.openlocfilehash: 59ac5a4f9949f1e65e67b9629c43ddb4b822bf43
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: c478437a9c84475e8c31484523db16336f8808e6
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290057"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73029926"
 ---
 # <a name="binding-mac-libraries-for-xamarinmac"></a>Associando bibliotecas de Mac para Xamarin. Mac
 
 Siga estes links para saber mais sobre como associar bibliotecas Objective-C no Xamarin. Mac:
 
 - [**Visão geral**](~/cross-platform/macios/binding/overview.md) -
-  Descreve como funciona a associação.
-- [**Associando bibliotecas de Objective-C**](~/cross-platform/macios/binding/objective-c-libraries.md) -
-  Instruções sobre como associar bibliotecas Objective-C para uso em projetos do Xamarin.
+  descreve como funciona a associação.
+- A [**Associação das bibliotecas Objective-c**](~/cross-platform/macios/binding/objective-c-libraries.md) -
+  instruções sobre como associar bibliotecas de Objective-c para uso em projetos do Xamarin.
 - [**Guia de referência de definição de tipo**](~/cross-platform/macios/binding/binding-types-reference.md) -
-  Descreve todos os atributos disponíveis para associar autores para orientar o processo de geração de associação.
+  descreve todos os atributos disponíveis para ligar autores para orientar o processo de geração de associação.
 
 ## <a name="objective-sharpiecross-platformmaciosbindingobjective-sharpieindexmd"></a>[Objective Sharpie](~/cross-platform/macios/binding/objective-sharpie/index.md)
 

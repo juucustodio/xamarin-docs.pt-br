@@ -4,15 +4,15 @@ description: Este documento discute como vincular bibliotecas C nativas em um ap
 ms.prod: xamarin
 ms.assetid: 1DA80280-E78A-EC4B-8673-C249C8425CF5
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 07/28/2016
-ms.openlocfilehash: 16e6d66cd41ead7a4d234cf45bb73e53e41aa5eb
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: c8b882430d5d7d02e444acd00cfdacfc7b29a42b
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769566"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73031631"
 ---
 # <a name="referencing-native-libraries-in-xamarinios"></a>Referenciando bibliotecas nativas no Xamarin. iOS
 
@@ -38,7 +38,7 @@ Para criar a versão ARM64 da sua biblioteca nativa, execute o seguinte comando:
 /Developer/usr/bin/xcodebuild -project MyProject.xcodeproj -target MyLibrary -sdk iphoneos -arch arm64 -configuration Release clean build
 ```
 
-Desta vez, a biblioteca nativa criada será localizada em `MyProject.xcodeproj/build/Release-iphoneos/`. Mais uma vez, copie (ou mova) esse arquivo para um local seguro, renomeando-o para algo como **libMyLibrary-arm64. a** para que ele não entre em conflito.
+Desta vez, a biblioteca nativa criada estará localizada em `MyProject.xcodeproj/build/Release-iphoneos/`. Mais uma vez, copie (ou mova) esse arquivo para um local seguro, renomeando-o para algo como **libMyLibrary-arm64. a** para que ele não entre em conflito.
 
 Agora, crie a versão ARMv7 da biblioteca:
 
@@ -48,17 +48,17 @@ Agora, crie a versão ARMv7 da biblioteca:
 
 Copie (ou mova) o arquivo de biblioteca resultante para o mesmo local em que você moveu as outras 2 versões da biblioteca, renomeando-o para algo como **libMyLibrary-ARMv7. a**.
 
-Para criar um binário universal, você pode usar a `lipo` ferramenta da seguinte forma:
+Para criar um binário universal, você pode usar a ferramenta `lipo` da seguinte maneira:
 
 ```bash
 lipo -create -output libMyLibrary.a libMyLibrary-i386.a libMyLibrary-arm64.a libMyLibrary-armv7.a
 ```
 
-Isso cria `libMyLibrary.a` qual será uma biblioteca universal (FAT) que será adequada para uso em todos os destinos de desenvolvimento do Ios.
+Isso cria `libMyLibrary.a` que será uma biblioteca universal (FAT) que será adequada para uso em todos os destinos de desenvolvimento do iOS.
 
 ### <a name="missing-required-architecture-i386"></a>Falta a arquitetura necessária i386
 
-Se você estiver recebendo uma `does not implement methodSignatureForSelector` mensagem `does not implement doesNotRecognizeSelector` ou em sua saída de tempo de execução ao tentar consumir uma biblioteca Objective-C no simulador de Ios, sua biblioteca provavelmente não foi compilada para a arquitetura i386 (consulte o [edifício universal Native ](#building_native)Seção de bibliotecas acima).
+Se você estiver recebendo uma mensagem de `does not implement methodSignatureForSelector` ou `does not implement doesNotRecognizeSelector` em sua saída de tempo de execução ao tentar consumir uma biblioteca Objective-C no simulador de iOS, sua biblioteca provavelmente não foi compilada para a arquitetura i386 (consulte a [criação de bibliotecas nativas universal](#building_native) seção acima).
 
 Para verificar as arquiteturas com suporte em uma determinada biblioteca, use o seguinte comando no terminal:
 
@@ -66,7 +66,7 @@ Para verificar as arquiteturas com suporte em uma determinada biblioteca, use o 
 lipo -info /full/path/to/libraryname.a
 ```
 
-Em `/full/path/to/` que é o caminho completo para a biblioteca que está `libraryname.a` sendo consumida e é o nome da biblioteca em questão.
+Em que `/full/path/to/` é o caminho completo para a biblioteca que está sendo consumida e `libraryname.a` é o nome da biblioteca em questão.
 
 Se você tiver a origem para a biblioteca, precisará compilá-la e agrupá-la para a arquitetura i386 também, se desejar testar seu aplicativo no simulador de iOS.
 
@@ -90,7 +90,7 @@ Para **Configurar o Xamarin. Ios para vincular a biblioteca**, nas opções de p
 
 O exemplo acima irá vincular **libMyLibrary. a**
 
-Você pode usar `-gcc_flags` para especificar qualquer conjunto de argumentos de linha de comando a serem passados para o compilador gcc usado para fazer o link final do seu executável. Por exemplo, essa linha de comando também faz referência à estrutura CFNetwork:
+Você pode usar `-gcc_flags` para especificar qualquer conjunto de argumentos de linha de comando a serem passados para o compilador GCC usado para fazer o link final do seu executável. Por exemplo, essa linha de comando também faz referência à estrutura CFNetwork:
 
 ```bash
 -gcc_flags "-L${ProjectDir} -lMylibrary -lSystemLibrary -framework CFNetwork -force_load ${ProjectDir}/libMyLibrary.a"
@@ -119,7 +119,7 @@ Para acessar os métodos definidos em qualquer um deles, use a [funcionalidade P
 - Determinar em qual biblioteca ela reside
 - Gravar a declaração P/Invoke apropriada
 
-Ao usar P/Invoke, você precisa especificar o caminho da biblioteca com a qual você está vinculando. Ao usar bibliotecas compartilhadas do IOS, você pode codificar o caminho ou pode usar as constantes de conveniência que definimos em nosso `Constants`, essas constantes devem abranger as bibliotecas compartilhadas do Ios.
+Ao usar P/Invoke, você precisa especificar o caminho da biblioteca com a qual você está vinculando. Ao usar bibliotecas compartilhadas do iOS, você pode codificar o caminho ou pode usar as constantes de conveniência que definimos em nosso `Constants`, essas constantes devem abranger as bibliotecas compartilhadas do iOS.
 
 Por exemplo, se você quisesse invocar o método UIRectFrameUsingBlendMode da biblioteca UIKit da Apple que tem essa assinatura em C:
 
@@ -140,11 +140,11 @@ Constants. UIKitLibrary é meramente uma constante definida como "/System/Librar
 
 ### <a name="accessing-c-dylibs"></a>Acessando C Dylibs
 
-Se você tiver a necessidade de consumir um C dylib em seu aplicativo Xamarin. Ios, há um pouco de configuração extra necessária antes de chamar o `DllImport` atributo.
+Se você tiver a necessidade de consumir um C dylib em seu aplicativo Xamarin. iOS, há um pouco de configuração extra necessária antes de chamar o atributo `DllImport`.
 
-Por exemplo, se tivermos um `Animal.dylib` com um `Animal_Version` método que iremos chamar em nosso aplicativo, precisamos informar ao Xamarin. Ios o local da biblioteca antes de tentar consumi-lo.
+Por exemplo, se tivermos um `Animal.dylib` com um método `Animal_Version` que iremos chamar em nosso aplicativo, precisamos informar ao Xamarin. iOS o local da biblioteca antes de tentar consumi-lo.
 
-Para fazer isso, edite `Main.CS` o arquivo e faça com que ele se pareça com o seguinte:
+Para fazer isso, edite o arquivo de `Main.CS` e faça com que ele se pareça com o seguinte:
 
 ```csharp
 static void Main (string[] args)
@@ -157,7 +157,7 @@ static void Main (string[] args)
 }
 ```
 
-Em `/full/path/to/` que é o caminho completo para o dylib que está sendo consumido. Com esse código em vigor, podemos vincular ao `Animal_Version` método da seguinte maneira:
+Onde `/full/path/to/` é o caminho completo para o dylib que está sendo consumido. Com esse código em vigor, podemos vincular ao método `Animal_Version` da seguinte maneira:
 
 ```csharp
 [DllImport("Animal.dylib", EntryPoint="Animal_Version")]
@@ -168,6 +168,6 @@ public static extern double AnimalLibraryVersion();
 
 ### <a name="static-libraries"></a>Bibliotecas estáticas
 
-Como você só pode usar bibliotecas estáticas no Ios, não há uma biblioteca compartilhada externa com a qual vincular, portanto, o parâmetro de caminho no atributo DllImport precisa usar o `__Internal` nome especial (Observe os caracteres de sublinhado duplo no início do nome) em vez de o nome do caminho.
+Como você só pode usar bibliotecas estáticas no iOS, não há uma biblioteca compartilhada externa com a qual vincular, portanto, o parâmetro de caminho no atributo DllImport precisa usar o nome especial `__Internal` (Observe os caracteres de sublinhado duplo no início do nome) em vez de nome do caminho.
 
 Isso força o DllImport a pesquisar o símbolo do método que você está fazendo referência no programa atual, em vez de tentar carregá-lo de uma biblioteca compartilhada.

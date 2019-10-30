@@ -4,15 +4,15 @@ description: 'Este documento descreve os novos recursos do MapKit no iOS 11: agr
 ms.prod: xamarin
 ms.assetid: 304AE5A3-518F-422F-BE24-92D62CE30F34
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 08/30/2017
-ms.openlocfilehash: cef87d68c3b87697ee1f18fc85d185c1cc6d1b9a
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 02bd25c4b4e251536dfdabdef109eb659fe3be37
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70752473"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73032163"
 ---
 # <a name="new-features-in-mapkit-on-ios-11"></a>Novos recursos no MapKit no iOS 11
 
@@ -31,11 +31,11 @@ o iOS 11 adiciona os seguintes novos recursos ao MapKit:
 
 O exemplo de MapKit de exemplo ["Tandm"](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-mapkitsample) mostra como implementar o novo recurso de clustering de anotação do IOS 11.
 
-### <a name="1-create-an-mkpointannotation-subclass"></a>1. Criar uma `MKPointAnnotation` subclasse
+### <a name="1-create-an-mkpointannotation-subclass"></a>1. criar uma subclasse de `MKPointAnnotation`
 
 A classe de anotação de ponto representa cada marcador no mapa. Eles podem ser adicionados individualmente usando `MapView.AddAnnotation()` ou de uma matriz usando `MapView.AddAnnotations()`.
 
-As classes de anotação de ponto não têm uma representação visual, elas só precisam representar os dados associados ao marcador (o mais importante, a `Coordinate` propriedade que é a latitude e a longitude no mapa) e todas as propriedades personalizadas:
+As classes de anotação de ponto não têm uma representação visual, elas só precisam representar os dados associados ao marcador (o mais importante, a propriedade `Coordinate` que é sua latitude e longitude no mapa) e quaisquer propriedades personalizadas:
 
 ```csharp
 public class Bike : MKPointAnnotation
@@ -57,14 +57,14 @@ public class Bike : MKPointAnnotation
 }
 ```
 
-### <a name="2-create-an-mkmarkerannotationview-subclass-for-single-markers"></a>2. Criar uma `MKMarkerAnnotationView` subclasse para marcadores únicos
+### <a name="2-create-an-mkmarkerannotationview-subclass-for-single-markers"></a>2. criar uma subclasse de `MKMarkerAnnotationView` para marcadores únicos
 
 A exibição de anotação do marcador é a representação visual de cada anotação e é estilizada usando propriedades como:
 
 - **MarkerTintColor** – a cor do marcador.
 - **GlyphText** – texto exibido no marcador.
 - **Glyphimage** – define a imagem que é exibida no marcador.
-- **DisplayPriority** – determina a ordem z (comportamento de empilhamento) quando o mapa está lotado com marcadores. Use um dos `Required`, `DefaultHigh`ou `DefaultLow`.
+- **DisplayPriority** – determina a ordem z (comportamento de empilhamento) quando o mapa está lotado com marcadores. Use uma das `Required`, `DefaultHigh`ou `DefaultLow`.
 
 Para dar suporte ao clustering automático, você também deve definir:
 
@@ -104,7 +104,7 @@ public class BikeView : MKMarkerAnnotationView
   }
 ```
 
-### <a name="3-create-an-mkannotationview-to-represent-clusters-of-markers"></a>3. Criar um `MKAnnotationView` para representar clusters de marcadores
+### <a name="3-create-an-mkannotationview-to-represent-clusters-of-markers"></a>3. criar um `MKAnnotationView` para representar clusters de marcadores
 
 Embora a exibição de anotação que representa um cluster de marcadores _possa_ ser uma imagem simples, os usuários esperam que o aplicativo forneça indicações visuais sobre o número de marcadores agrupados.
 
@@ -112,7 +112,7 @@ O [código de exemplo](https://docs.microsoft.com/samples/xamarin/ios-samples/io
 
 Você também deve definir:
 
-- **DisplayPriority** – determina a ordem z (comportamento de empilhamento) quando o mapa está lotado com marcadores. Use um dos `Required`, `DefaultHigh`ou `DefaultLow`.
+- **DisplayPriority** – determina a ordem z (comportamento de empilhamento) quando o mapa está lotado com marcadores. Use uma das `Required`, `DefaultHigh`ou `DefaultLow`.
 - **Colisãomode** – `Circle` ou `Rectangle`.
 
 ```csharp
@@ -179,7 +179,7 @@ public class ClusterView : MKAnnotationView
 }
 ```
 
-### <a name="4-register-the-view-classes"></a>4. Registrar as classes de exibição
+### <a name="4-register-the-view-classes"></a>4. registrar as classes de exibição
 
 Quando o controle de exibição de mapa está sendo criado e adicionado a um modo de exibição, registre os tipos de exibição de anotação para habilitar o comportamento de clustering automático à medida que o mapa é ampliado e reduzido:
 
@@ -188,7 +188,7 @@ MapView.Register(typeof(BikeView), MKMapViewDefault.AnnotationViewReuseIdentifie
 MapView.Register(typeof(ClusterView), MKMapViewDefault.ClusterAnnotationViewReuseIdentifier);
 ```
 
-### <a name="5-render-the-map"></a>5. Renderizar o mapa!
+### <a name="5-render-the-map"></a>5. renderizar o mapa!
 
 Quando o mapa é renderizado, os marcadores de anotação serão clusterizados ou renderizados, dependendo do nível de zoom. Como as alterações no nível de zoom, os marcadores animam e saem dos clusters.
 
@@ -215,13 +215,13 @@ NavigationItem.RightBarButtonItem = new UIBarButtonItem(compass);
 MapView.ShowsCompass = false; // so we don't have two compasses!
 ```
 
-A `ShowsCompass` propriedade pode ser usada para controlar a visibilidade da bússola padrão dentro da exibição do mapa.
+A propriedade `ShowsCompass` pode ser usada para controlar a visibilidade da bússola padrão dentro da exibição do mapa.
 
 <a name="scale" />
 
 ## <a name="scale-view"></a>Exibição de escala
 
-Adicione a escala em outro lugar na exibição usando `MKScaleView.FromMapView()` o método para obter uma instância da exibição de escala a ser adicionada em outro lugar na hierarquia de exibição.
+Adicione a escala em outro lugar na exibição usando o método `MKScaleView.FromMapView()` para obter uma instância da exibição escala a ser adicionada em outro lugar na hierarquia de exibição.
 
 ![Exibição de escala sobreposta em um mapa](mapkit-images/scale-sml.png)
 
@@ -233,13 +233,13 @@ View.AddSubview(scale); // constraints omitted for simplicity
 MapView.ShowsScale = false; // so we don't have two scale displays!
 ```
 
-A `ShowsScale` propriedade pode ser usada para controlar a visibilidade da bússola padrão dentro da exibição do mapa.
+A propriedade `ShowsScale` pode ser usada para controlar a visibilidade da bússola padrão dentro da exibição do mapa.
 
 <a name="user-tracking" />
 
 ## <a name="user-tracking-button"></a>Botão de controle do usuário
 
-O botão de controle do usuário centraliza o mapa no local atual do usuário. Use o `MKUserTrackingButton.FromMapView()` método para obter uma instância do botão, aplicar alterações de formatação e adicionar em outro lugar na hierarquia de exibição.
+O botão de controle do usuário centraliza o mapa no local atual do usuário. Use o método `MKUserTrackingButton.FromMapView()` para obter uma instância do botão, aplicar alterações de formatação e adicionar em outro lugar na hierarquia de exibição.
 
 ![Botão local do usuário sobreposto em um mapa](mapkit-images/user-location-sml.png)
 

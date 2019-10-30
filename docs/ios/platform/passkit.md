@@ -4,15 +4,15 @@ description: O aplicativo de carteira permite que os usuários do iOS armazenem 
 ms.prod: xamarin
 ms.assetid: 74B9973B-C1E8-B727-3F6D-59C1F98BAB3A
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/13/2018
-ms.openlocfilehash: ec44e32c3eb0d0d436a497ddb14c86af1de8d703
-ms.sourcegitcommit: e354aabfb39598e0ce11115db3e6bcebb9f68338
+ms.openlocfilehash: a51ab165d8eac2e3c881871bc71456c8279c5461
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72273169"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73031675"
 ---
 # <a name="passkit-in-xamarinios"></a>PassKit no Xamarin. iOS
 
@@ -21,7 +21,7 @@ Esses passos são gerados por comerciantes e enviados ao cliente por email, URLs
 
 Este documento apresenta a carteira e o uso da API PassKit com Xamarin. iOS.
 
- [![](passkit-images/image1.png "A carteira armazena e organiza todos os passos em um telefone")](passkit-images/image1.png#lightbox)
+ [![](passkit-images/image1.png "The Wallet stores and organizes all the passes on a phone")](passkit-images/image1.png#lightbox)
 
 ## <a name="requirements"></a>Requisitos
 
@@ -49,7 +49,7 @@ Em seu núcleo, o PassKit fornece uma maneira simples e conveniente de armazenar
 
 O PassKit não é apenas uma API no CocoaTouch, em vez disso, ele faz parte de um ecossistema maior de aplicativos, dados e serviços que facilitam o compartilhamento e o gerenciamento seguros de códigos de barras e outros dados. Este diagrama de alto nível mostra as diferentes entidades que podem ser envolvidas na criação e no uso de passagens:
 
- [![](passkit-images/image2.png "Este diagrama de alto nível mostra as entidades envolvidas na criação e uso de passagens")](passkit-images/image2.png#lightbox)
+ [![](passkit-images/image2.png "This high level diagram shows the entities involved in creating and using passes")](passkit-images/image2.png#lightbox)
 
 Cada parte do ecossistema tem uma função claramente definida:
 
@@ -77,7 +77,7 @@ Atualmente, os cinco tipos com suporte, que podem ser diferenciados no aplicativ
 
 Os cinco tipos de passagem são mostrados nesta captura de tela (em ordem: cupom, genérico, cartão de loja, aprovação de placa e tíquete de evento):
 
- [![](passkit-images/image3.png "Os cinco tipos de passagem são mostrados nesta captura de tela")](passkit-images/image3.png#lightbox)
+ [![](passkit-images/image3.png "The five pass types are shown in this screenshot")](passkit-images/image3.png#lightbox)
 
 ### <a name="file-structure"></a>Estrutura de arquivos
 
@@ -85,7 +85,7 @@ Um arquivo de passagem é, na verdade, um arquivamento ZIP com uma extensão **.
 
 - **Pass. JSON** – obrigatório. Contém todas as informações para a passagem.
 - **manifest. JSON** – obrigatório. Contém hashes SHA1 para cada arquivo na passagem, exceto o arquivo de assinatura e este arquivo (manifest. JSON).
-- **assinatura** – obrigatório. Criado assinando o arquivo `manifest.json` com o certificado gerado no portal de provisionamento do iOS.
+- **assinatura** – obrigatório. Criado assinando o arquivo de `manifest.json` com o certificado gerado no portal de provisionamento do iOS.
 - **logo. png** – opcional.
 - **background. png** – opcional.
 - **Icon. png** – opcional.
@@ -93,15 +93,15 @@ Um arquivo de passagem é, na verdade, um arquivamento ZIP com uma extensão **.
 
 A estrutura de diretório de um arquivo de passagem é mostrada abaixo (este é o conteúdo do arquivo ZIP):
 
- [![](passkit-images/image4.png "A estrutura de diretório de um arquivo de passagem é mostrada aqui")](passkit-images/image4.png#lightbox)
+ [![](passkit-images/image4.png "Directory structure of a pass file is shown here")](passkit-images/image4.png#lightbox)
 
-### <a name="passjson"></a>pass.json
+### <a name="passjson"></a>Pass. JSON
 
 JSON é o formato porque as passagens normalmente são criadas em um servidor – isso significa que o código de geração é independente da plataforma no servidor. As três principais informações em cada passagem são:
 
 - **teamIdentifier** – isso vincula todas as passagens que você gera para sua conta da loja de aplicativos. Esse valor é visível no portal de provisionamento do iOS.
 - **passTypeIdentifier** – Registre-se no portal de provisionamento para que os grupos passem juntos (se você produzir mais de um tipo). Por exemplo, um café pode criar um tipo de passagem de cartão de loja para permitir que seus clientes ganhem créditos de fidelidade, mas também um tipo de passagem de cupom separado para criar e distribuir cupons de desconto. Essa mesma cafeteria pode até mesmo manter eventos de música ao vivo e emitir passagens de tíquete de evento para eles.
-- **SerialNumber** – uma cadeia de caracteres exclusiva dentro deste `passTypeidentifier`. O valor é opaco para carteira, mas é importante para o acompanhamento de passagens específicas ao se comunicar com o servidor.
+- **SerialNumber** – uma cadeia de caracteres exclusiva nesta `passTypeidentifier`. O valor é opaco para carteira, mas é importante para o acompanhamento de passagens específicas ao se comunicar com o servidor.
 
 Há um grande número de outras chaves JSON em cada passagem, um exemplo do que é mostrado abaixo:
 
@@ -192,15 +192,15 @@ Pode ser atualizado por Push ou por meio da API PassKit, de forma que a data/hor
 
 ### <a name="localization"></a>Localização
 
-A tradução de uma passagem em vários idiomas é semelhante à localização de um aplicativo iOS – crie diretórios específicos da linguagem com a extensão `.lproj` e coloque os elementos localizados dentro. As traduções de texto devem ser inseridas em um arquivo `pass.strings`, enquanto as imagens localizadas devem ter o mesmo nome que a imagem que substituem na raiz de passagem.
+A tradução de uma passagem em vários idiomas é semelhante à localização de um aplicativo iOS – crie diretórios específicos de linguagem com a extensão `.lproj` e coloque os elementos localizados dentro. As traduções de texto devem ser inseridas em um arquivo `pass.strings`, enquanto as imagens localizadas devem ter o mesmo nome que a imagem que substituem na raiz de passagem.
 
 ## <a name="security"></a>Segurança
 
 As passagens são assinadas com um certificado privado que você gera no portal de provisionamento do iOS. As etapas para assinar a passagem são:
 
-1. Calcule um hash SHA1 para cada arquivo no diretório Pass (não inclua o arquivo `manifest.json` ou `signature`, que não deve existir nesse estágio de qualquer maneira).
+1. Calcule um hash SHA1 para cada arquivo no diretório Pass (não inclua o `manifest.json` ou `signature` arquivo, nenhum dos quais deve existir nesse estágio de qualquer maneira).
 1. Escreva `manifest.json` como uma lista de chaves/valores JSON de cada nome de arquivo com seu hash.
-1. Use o certificado para assinar o arquivo `manifest.json` e gravar o resultado em um arquivo chamado `signature`.
+1. Use o certificado para assinar o arquivo de `manifest.json` e gravar o resultado em um arquivo chamado `signature`.
 1. COMPACTe tudo e dê ao arquivo resultante uma extensão de arquivo `.pkpass`.
 
 Como sua chave privada é necessária para assinar a passagem, esse processo só deve ser feito em um servidor seguro que você controla. Não distribua suas chaves para tentar e gerar passagens em um aplicativo.
@@ -222,9 +222,9 @@ Para criar uma ID de tipo de passagem, faça o seguinte.
 
 A primeira etapa é configurar uma ID de tipo de passagem para cada _tipo_ diferente de pass a ser suportado. A ID de passagem (ou o identificador de tipo de passagem) cria um identificador exclusivo para a passagem. Usaremos essa ID para vincular a passagem à sua conta de desenvolvedor usando um certificado.
 
-1. Na [seção certificados, identificadores e perfis do portal de provisionamento do IOS](https://developer.apple.com/account/overview.action), navegue até **identificadores** e selecione as IDs de **tipo de passagem** . Em seguida, selecione o botão **+** para criar um novo tipo de passagem: [![](passkit-images/passid.png "Criar um novo tipo de passagem")](passkit-images/passid.png#lightbox)
+1. Na [seção certificados, identificadores e perfis do portal de provisionamento do IOS](https://developer.apple.com/account/overview.action), navegue até **identificadores** e selecione as IDs de **tipo de passagem** . Em seguida, selecione o botão **+** para criar um novo tipo de passagem:[![](passkit-images/passid.png "Criar um novo tipo de passagem")](passkit-images/passid.png#lightbox)
 
-2. Forneça uma **Descrição** (nome) e um **identificador** (cadeia de caracteres exclusiva) para a passagem. Observe que todas as IDs de tipo de passagem devem começar com a cadeia de caracteres `pass.` neste exemplo, usamos `pass.com.xamarin.coupon.banana`: [![](passkit-images/register.png "Forneça uma descrição e um identificador")](passkit-images/register.png#lightbox)
+2. Forneça uma **Descrição** (nome) e um **identificador** (cadeia de caracteres exclusiva) para a passagem. Observe que todas as IDs de tipo de passagem devem começar com a cadeia de caracteres `pass.` neste exemplo, usamos `pass.com.xamarin.coupon.banana`:[![](passkit-images/register.png "Forneça uma descrição e um identificador")](passkit-images/register.png#lightbox)
 
 3. Confirme a ID de passagem pressionando o botão **registrar** .
 
@@ -232,11 +232,11 @@ A primeira etapa é configurar uma ID de tipo de passagem para cada _tipo_ difer
 
 Para criar um novo certificado para essa ID de tipo de passagem, faça o seguinte:
 
-1. Selecione a ID de passagem criada recentemente na lista e clique em **Editar** : [![](passkit-images/pass-done.png "Selecione a nova ID de passagem na lista")](passkit-images/pass-done.png#lightbox)
+1. Selecione a ID de passagem criada recentemente na lista e clique em **Editar** :[![](passkit-images/pass-done.png "Selecione a nova ID de passagem na lista")](passkit-images/pass-done.png#lightbox)
 
     Em seguida, selecione **criar certificado...** :
 
-    [![](passkit-images/cert-dist.png "Selecione criar certificado")](passkit-images/cert-dist.png#lightbox)
+    [![](passkit-images/cert-dist.png "Select Create Certificate")](passkit-images/cert-dist.png#lightbox)
 
 2. Siga as etapas para criar uma solicitação de assinatura de certificado (CSR).
   
@@ -261,16 +261,16 @@ Agora que criamos o tipo Pass, podemos criar manualmente uma passagem para o tes
 
 Há alguns arquivos de origem no [código de exemplo](https://docs.microsoft.com/samples/xamarin/ios-samples/passkit) para este artigo que podem ser usados para gerar uma passagem. Use os arquivos no diretório `CouponBanana.raw` do diretório CreateAPassManually Os seguintes arquivos estão presentes:
 
- [![](passkit-images/image18.png "Esses arquivos estão presentes")](passkit-images/image18.png#lightbox)
+ [![](passkit-images/image18.png "These files are present")](passkit-images/image18.png#lightbox)
 
-Abra o Pass. JSON e edite o JSON. Você deve, pelo menos, atualizar o `passTypeIdentifier` e o `teamIdentifer` para corresponder à sua conta de desenvolvedor da Apple.
+Abra o Pass. JSON e edite o JSON. Você deve, pelo menos, atualizar o `passTypeIdentifier` e `teamIdentifer` para corresponder à sua conta de desenvolvedor da Apple.
 
 ```json
 "passTypeIdentifier" : "pass.com.xamarin.coupon.banana",
 "teamIdentifier" : "?????????",
 ```
 
-Em seguida, você deve calcular os hashes para cada arquivo e criar o arquivo `manifest.json`. Ele terá uma aparência semelhante a esta quando você terminar:
+Em seguida, você deve calcular os hashes para cada arquivo e criar o arquivo de `manifest.json`. Ele terá uma aparência semelhante a esta quando você terminar:
 
 ```json
 {
@@ -292,11 +292,11 @@ Baixe os **materiais de suporte da semente de bolso** no site de [downloads da A
 
 Se você examinar a saída dessas ferramentas (definindo o nome de arquivo como. zip e, em seguida, abri-la), você verá os seguintes arquivos (Observe a adição dos arquivos `manifest.json` e `signature`):
 
- [![](passkit-images/image19.png "Examinando a saída dessas ferramentas")](passkit-images/image19.png#lightbox)
+ [![](passkit-images/image19.png "Examining the output of these tools")](passkit-images/image19.png#lightbox)
 
-Depois de assinar, compactar e renomear o arquivo (por exemplo, para `BananaCoupon.pkpass`), você pode arrastá-lo para o simulador para teste ou enviá-lo por email para você mesmo para recuperar em um dispositivo real. Você deve ver uma tela para **Adicionar** a passagem, da seguinte maneira:
+Depois de assinar, compactar e renomear o arquivo (por exemplo, para `BananaCoupon.pkpass`) você pode arrastá-lo para o simulador para teste ou enviá-lo por email para você mesmo para recuperar em um dispositivo real. Você deve ver uma tela para **Adicionar** a passagem, da seguinte maneira:
 
- [![](passkit-images/image20.png "Adicionar a tela de passagem")](passkit-images/image20.png#lightbox)
+ [![](passkit-images/image20.png "Add the pass screen")](passkit-images/image20.png#lightbox)
 
 Normalmente, esse processo seria automatizado em um servidor, no entanto, a criação manual de passagem pode ser uma opção para pequenas empresas que estão criando apenas cupons que não exigem o suporte de um servidor back-end.
 
@@ -304,7 +304,7 @@ Normalmente, esse processo seria automatizado em um servidor, no entanto, a cria
 
 A carteira é a parte central do ecossistema PassKit. Esta captura de tela mostra a carteira vazia e como a lista de passagem e as passagens individuais parecem:
 
- [![](passkit-images/image21.png "Esta captura de tela mostra a carteira vazia e como a lista de passagem e as passagens individuais parecem")](passkit-images/image21.png#lightbox)
+ [![](passkit-images/image21.png "This screenshot shows the empty Wallet, and how the pass list and individual passes look")](passkit-images/image21.png#lightbox)
 
 Os recursos de carteira incluem:
 
@@ -333,9 +333,9 @@ Os aplicativos de canal são aplicativos intermediários que podem receber passa
 
 Esta captura de tela mostra como o **email** no Ios 6 reconhece um anexo Pass e as ofertas (quando tocadas) para **adicioná** -lo à carteira.
 
- [![](passkit-images/image22.png "Esta captura de tela mostra como o email no iOS 6 reconhece uma passagem de anexo")](passkit-images/image22.png#lightbox)
+ [![](passkit-images/image22.png "This screenshot shows how Mail in iOS 6 recognizes a pass attachment")](passkit-images/image22.png#lightbox)
 
- [![](passkit-images/image23.png "Esta captura de tela mostra como as ofertas de email para adicionar um anexo de aprovação à carteira")](passkit-images/image23.png#lightbox)
+ [![](passkit-images/image23.png "This screenshot shows how Mail offers to add a pass attachment to Wallet")](passkit-images/image23.png#lightbox)
 
 Se você estiver criando um aplicativo que pode ser um canal para passagens, eles podem ser reconhecidos pelo:
 
@@ -369,11 +369,11 @@ Para definir direitos, faça o seguinte:
 
 Clique duas vezes no arquivo **retitles. plist** na painel de soluções para abrir o editor de direitos. plist:
 
-![](passkit-images/image31.png "Editor de direitos. PLST")
+![](passkit-images/image31.png "Entitlements.plst editor")
 
 Na seção carteira, selecione a opção **habilitar carteira**
 
-![](passkit-images/image32.png "Habilitar direitos de carteira")
+![](passkit-images/image32.png "Enable wallet entitlement")
 
 A opção padrão é para seu aplicativo permitir todos os tipos de passagem. No entanto, é possível restringir seu aplicativo e permitir apenas um subconjunto de tipos de passagem de equipe. Para habilitar isso, selecione o **subconjunto de tipos de aprovação de equipe** e insira o identificador de tipo de passagem do subconjunto que você deseja permitir.
 
@@ -383,13 +383,13 @@ Clique duas vezes no arquivo **pretitles. plist** para abrir o arquivo de origem
 
 Para adicionar o direito de carteira, defina a **Propriedade** como `Passbook Identifiers` no menu suspenso, que irá definir automaticamente o **tipo** `Array`. Em seguida, defina o **valor** da cadeia de caracteres para `$(TeamIdentifierPrefix)*`:
 
-![](passkit-images/image33.png "Habilitar direitos de carteira")
+![](passkit-images/image33.png "Enable wallet entitlement")
 
 Isso habilitará o aplicativo a permitir todos os tipos de passes. Para restringir seu aplicativo e permitir apenas um subconjunto de tipos de passagem de equipe, defina o valor da cadeia de caracteres para:
 
 `$(TeamIdentifierPrefix)pass.$(CFBundleIdentifier)`
 
-Em que `pass.$(CFBundleIdentifier)` é a ID de passagem que foi criada [acima](~/ios/platform/passkit.md)
+Onde `pass.$(CFBundleIdentifier)` é a ID de aprovação que foi criada [acima](~/ios/platform/passkit.md)
 
 -----
 
@@ -403,7 +403,7 @@ Se você tiver esse erro ao implantar:
 Installation failed: Your code signing/provisioning profiles are not correctly configured (error: 0xe8008016)
 ```
 
-em seguida, a matriz de direitos `pass-type-identifiers` está incorreta (ou não corresponde ao **perfil de provisionamento**). Verifique se as IDs de tipo de passagem e sua ID de equipe estão corretas.
+em seguida, a matriz de direitos de `pass-type-identifiers` está incorreta (ou não corresponde ao **perfil de provisionamento**). Verifique se as IDs de tipo de passagem e sua ID de equipe estão corretas.
 
 ## <a name="classes"></a>Classes
 
@@ -449,7 +449,7 @@ var passes = library.GetPasses ();  // returns PKPass[]
 
 Observe que o simulador não filtra a lista de passagens retornadas, portanto, esse método sempre deve ser testado em dispositivos reais. Essa lista pode ser exibida em um UITableView. O [aplicativo de exemplo](https://docs.microsoft.com/samples/xamarin/ios-samples/passkit) tem esta aparência após dois cupons terem sido adicionados:
 
- [![](passkit-images/image29.png "O aplicativo de exemplo tem a seguinte aparência depois que dois cupons tiverem sido adicionados")](passkit-images/image29.png#lightbox)
+ [![](passkit-images/image29.png "The sample app look like this after two coupons have been added")](passkit-images/image29.png#lightbox)
 
 ### <a name="displaying-passes"></a>Exibindo passagens
 
@@ -470,7 +470,7 @@ string passInfo =
 
 Essa cadeia de caracteres é mostrada como um alerta no [exemplo](https://docs.microsoft.com/samples/xamarin/ios-samples/passkit):
 
- [![](passkit-images/image30.png "O alerta selecionado pelo cupom no exemplo")](passkit-images/image30.png#lightbox)
+ [![](passkit-images/image30.png "The Coupon Selected alert in the sample")](passkit-images/image30.png#lightbox)
 
 Você também pode usar o método `LocalizedValueForFieldKey()` para recuperar dados de campos nos passos que você criou (já que você saberá quais campos devem estar presentes). O código de exemplo não mostra isso.
 
@@ -491,7 +491,7 @@ NavigationController.PresentModalViewController (pkapvc, true);
 
 A passagem é apresentada com as opções **Adicionar** e **Cancelar** :
 
- [![](passkit-images/image20.png "A passagem apresentada com as opções Adicionar e cancelar")](passkit-images/image20.png#lightbox)
+ [![](passkit-images/image20.png "The pass presented with Add and Cancel options")](passkit-images/image20.png#lightbox)
 
 ### <a name="replace-an-existing-pass"></a>Substituir uma passagem existente
 

@@ -3,15 +3,15 @@ title: Desempenho e segurança
 description: Este documento contém links para vários guias que descrevem as técnicas para melhorar o desempenho de aplicativos Xamarin.iOS, Xamarin.Android e Xamarin.Mac.
 ms.prod: xamarin
 ms.assetid: 3E0886A7-B0ED-44CC-8DE3-5B274FBBE2E5
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/25/2017
-ms.openlocfilehash: 6c226095c43a389f491dd2af9a158ceb4420b637
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
-ms.translationtype: HT
+ms.openlocfilehash: c07032d63032eb59cc67712bc2419f74319ea107
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34780578"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016508"
 ---
 # <a name="performance-and-security"></a>Desempenho e segurança
 

@@ -3,15 +3,15 @@ title: Parte 2 – Arquitetura
 description: Este documento descreve os padrões de arquitetura úteis para a criação de aplicativos de plataforma cruzada. Ele aborda camadas típicas de aplicativos (camada de dados, camada de acesso a dados, etc.) e padrões comuns de software móvel (MVVM, MVC, etc.)
 ms.prod: xamarin
 ms.assetid: 2176DB2D-E84A-3757-CFAB-04A586068D50
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/27/2017
-ms.openlocfilehash: e1b1a98bf06bbd03b382f0b7263e6965d4efad15
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 84a06e23ec7125892701762ab5bad7b86a8faf90
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70762113"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030271"
 ---
 # <a name="part-2---architecture"></a>Parte 2 – Arquitetura
 
@@ -46,7 +46,7 @@ Padrões são uma maneira estabelecida de capturar soluções recorrentes para p
 
 - **Model, View, ViewModel (MVVM)** – o padrão Model-View-ViewModel é popular com estruturas que dão suporte à vinculação de dados, como Xamarin. Forms. Ele foi popular por SDKs habilitados para XAML como o Windows Presentation Foundation (WPF) e o Silverlight; em que o ViewModel atua como uma passagem entre os dados (modelo) e a interface do usuário (exibição) por meio de vinculação de dados e comandos.
 - **Modelo, exibição, controlador (MVC)** – um padrão comum e geralmente mal compreendido, o MVC é usado com mais frequência ao criar interfaces do usuário e fornece uma separação entre a definição real de uma tela de IU (exibição), o mecanismo por trás dela que lida com a interação ( Controlador) e os dados que o popula (modelo). O modelo é, na verdade, uma parte totalmente opcional e, portanto, o núcleo da compreensão desse padrão está na exibição e no controlador. O MVC é uma abordagem popular para aplicativos iOS.
-- **Fachada de negócios** – também conhecido como padrão de gerente, fornece um ponto de entrada simplificado para trabalho complexo. Por exemplo, em um aplicativo de rastreamento de tarefas, você pode `TaskManager` ter uma classe com métodos `GetAllTasks()` como `GetTask(taskID)` , `SaveTask (task)` ,, etc. A `TaskManager` classe fornece uma fachada para os trabalhos internos de realmente salvar/recuperar objetos de tarefas.
+- **Fachada de negócios** – também conhecido como padrão de gerente, fornece um ponto de entrada simplificado para trabalho complexo. Por exemplo, em um aplicativo de controle de tarefas, você pode ter uma classe `TaskManager` com métodos como `GetAllTasks()`, `GetTask(taskID)`, `SaveTask (task)`, etc. A classe `TaskManager` fornece uma fachada para os trabalhos internos de realmente salvar/recuperar objetos de tarefas.
 - **Singleton** – o padrão singleton fornece uma maneira na qual apenas uma única instância de um objeto específico pode existir. Por exemplo, ao usar o SQLite em aplicativos móveis, você sempre desejará uma instância do banco de dados. Usar o padrão singleton é uma maneira simples de garantir isso.
 - **Provedor** – um padrão cunhado pela Microsoft (possivelmente semelhante à estratégia ou injeção de dependência básica) para incentivar o reuso de código nos aplicativos Silverlight, WPF e WinForms. O código compartilhado pode ser escrito em uma interface ou classe abstrata, e implementações concretas específicas da plataforma são escritas e passadas quando o código é usado.
 - **Async** – não deve ser confundido com a palavra-chave Async, o padrão assíncrono é usado quando o trabalho de execução longa precisa ser executado sem manter a interface do usuário ou o processamento atual. Em sua forma mais simples, o padrão assíncrono simplesmente descreve que tarefas de longa execução devem ser iniciadas em outro thread (ou abstração de thread semelhante, como uma tarefa), enquanto o thread atual continua a processar e escuta uma resposta do processo em segundo plano e, em seguida, atualiza a interface do usuário quando os dados e o estado são retornados.

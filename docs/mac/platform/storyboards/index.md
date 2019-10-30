@@ -4,15 +4,15 @@ description: Este artigo fornece uma introdução ao trabalho com storyboards em
 ms.prod: xamarin
 ms.assetid: F37BA503-0B25-489F-80A8-58C493291A55
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: ff29ac58db618d4a644bbaa5a95ac8624726827f
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: b27a8d65ebaca6009d8310931b9dac3a4d7e12f3
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70770056"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73026144"
 ---
 # <a name="introduction-to-storyboards-in-xamarinmac"></a>Introdução aos storyboards no Xamarin. Mac
 
@@ -20,7 +20,7 @@ _Este artigo fornece uma introdução ao trabalho com storyboards em um aplicati
 
 Os storyboards permitem desenvolver uma interface do usuário para seu aplicativo Xamarin. Mac que não inclui apenas as definições e controles de janela, mas também contém os links entre janelas diferentes (via continuações) e Estados de exibição.
 
-[![](images/intro01.png "Uma interface do usuário de exemplo no Xcode")](images/intro01.png#lightbox)
+[![](images/intro01.png "A sample UI in Xcode")](images/intro01.png#lightbox)
 
 Este artigo fornecerá uma introdução ao uso de storyboards para definir uma interface do usuário do aplicativo Xamarin. Mac.
 
@@ -36,11 +36,11 @@ Usando storyboards, toda a interface do usuário de um aplicativo Xamarin. Mac p
 
 Como mencionado acima, um storyboard define toda a interface do usuário para um determinado aplicativo dividido em uma visão geral funcional de seus _controladores de exibição_. No Interface Builder do Xcode, cada um desses controladores reside em sua própria _cena_.
 
-[![](images/intro02.png "Um controlador de exibição de exemplo")](images/intro02.png#lightbox)
+[![](images/intro02.png "An example view controller")](images/intro02.png#lightbox)
 
 Cada cena representa um determinado par de controlador de exibição e exibição com um conjunto de linhas (chamado continuações) que conectam cada cena na interface do usuário, mostrando assim suas relações. Alguns continuações definem como um controlador de exibição contém uma ou mais exibições filho ou controladores de exibição. Outros continuações, definem transições entre o controlador de exibição (como exibir um popover ou uma caixa de diálogo). 
 
-[![](images/intro03.png "Um exemplo de transição")](images/intro03.png#lightbox)
+[![](images/intro03.png "A sample segue")](images/intro03.png#lightbox)
 
 A coisa mais importante a observar é que cada transição representa o fluxo de alguma forma de dados entre o elemento fornecido da interface do usuário do aplicativo.
 
@@ -50,11 +50,11 @@ A coisa mais importante a observar é que cada transição representa o fluxo de
 
 Os controladores de exibição definem as relações entre uma determinada exibição de informações em um aplicativo Mac e o modelo de dados que fornece essas informações. Cada cena de nível superior no storyboard representa um controlador de exibição no código do aplicativo Xamarin. Mac.
 
-[![](images/intro04.png "Um controlador de exibição de guias de exemplo")](images/intro04.png#lightbox)
+[![](images/intro04.png "An example slips view controller")](images/intro04.png#lightbox)
 
 Dessa forma, cada controlador de exibição é um emparelhamento reutilizável e independente da representação visual da informação (exibição) e da lógica para apresentar e controlar essas informações.
 
-Em uma determinada cena, você pode fazer todas as coisas que normalmente teriam sido tratadas por arquivos `.xib` individuais: 
+Em uma determinada cena, você pode fazer todas as coisas que normalmente teriam sido tratadas por arquivos de `.xib` individuais: 
 
 - Coloque subexibições e controles (como botões e caixas de texto).
 - Definir posições de elemento e restrições de layout automático.
@@ -70,7 +70,7 @@ No macOS, a maioria dos aplicativos tendem a agrupar suas exibições na mesma j
 
 Considerando o as tendências da macOS em relação à contenção, há situações em que as _continuações de apresentação_ são usadas, como janelas restritas, exibições de planilha e popovers.
 
-Ao usar a apresentação continuações, você pode substituir `PrepareForSegue` o método do controlador de exibição pai para que a apresentação seja inicializada e as variáveis e forneça todos os dados para o controlador de exibição que está sendo apresentado.
+Ao usar a apresentação continuações, você pode substituir o método `PrepareForSegue` do controlador de exibição pai para que a apresentação seja inicializada e as variáveis e forneça todos os dados para o controlador de exibição que está sendo apresentado.
 
 <a name="Design-and-Run-Times" />
 

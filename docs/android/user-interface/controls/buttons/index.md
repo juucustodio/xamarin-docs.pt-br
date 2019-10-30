@@ -4,19 +4,19 @@ description: Implementando os elementos da interface do usuário que os usuário
 ms.prod: xamarin
 ms.assetid: 4FBB7789-A8DA-4B8B-A46C-849181388A8D
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 08/18/2017
-ms.openlocfilehash: 87b39c3968e09d34c1ffadbb7d527abac7cb76ca
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: ec5c907eac1c7ec7fbdde56ac146f16c323692ed
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69523031"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73029332"
 ---
 # <a name="buttons-in-xamarinandroid"></a>Botões no Xamarin. Android
 
-A `Button` classe é usada para representar vários estilos diferentes de botão em telas do Android. Esta seção apresenta as diferentes opções para trabalhar com botões no Xamarin. Android:
+A classe `Button` é usada para representar vários estilos diferentes de botão em telas do Android. Esta seção apresenta as diferentes opções para trabalhar com botões no Xamarin. Android:
 
 - [RadioButton](~/android/user-interface/controls/buttons/radio-button.md) permite que o usuário selecione uma opção de um conjunto.
 

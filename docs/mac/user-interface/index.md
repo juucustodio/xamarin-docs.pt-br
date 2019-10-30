@@ -4,15 +4,15 @@ description: Este documento contém links para guias que descrevem vários contr
 ms.prod: xamarin
 ms.assetid: 876B6EC2-E158-43F2-B9C9-03F54F3D2A49
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/27/2018
-ms.openlocfilehash: f1168378104fd40fa7de78297f1f683d0caa0afa
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 7f5303cd63c6ff1433b56b3f47b67d3925b1d1e1
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70283117"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73032786"
 ---
 # <a name="macos-user-interface-controls-in-xamarinmac"></a>controles de interface do usuário macOS no Xamarin. Mac
 
@@ -22,7 +22,7 @@ Ao trabalhar com C# o e o .net em um aplicativo Xamarin. Mac, você tem acesso a
 
 Os guias listados abaixo fornecem informações detalhadas sobre como trabalhar com elementos da interface do usuário do macOS em um aplicativo Xamarin. Mac. É altamente recomendável que você trabalhe pelo artigo [Hello, Mac](~/mac/get-started/hello-mac.md) primeiro, especificamente a [introdução às seções Xcode e Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) e [ações](~/mac/get-started/hello-mac.md#outlets-and-actions) , pois ela aborda os principais conceitos e técnicas que usaremos em todos os artigos.
 
-Talvez você queira dar uma olhada na seção [expondo C# classes/métodos para Objective-C](~/mac/internals/how-it-works.md#exposing-c-classes--methods-to-objective-c) do documento [interno do Xamarin. Mac](~/mac/internals/how-it-works.md) também, pois ele explica os `Register` atributos e `Export` usados para conectar suas classes C# para objetos Objective-C e elementos de interface do usuário.
+Talvez você queira dar uma olhada na seção [ C# expondo classes/métodos para Objective-C](~/mac/internals/how-it-works.md#exposing-c-classes--methods-to-objective-c) do documento [interno do Xamarin. Mac](~/mac/internals/how-it-works.md) também, pois ele explica os atributos`Register`e`Export`usados para conectar suas C# classes ao Objetos Objective-C e elementos de interface do usuário.
 
 ## <a name="windowsmacuser-interfacewindowmd"></a>[Windows](~/mac/user-interface/window.md)
 
@@ -66,7 +66,7 @@ Este artigo aborda como trabalhar com exibições de coleção em um aplicativo 
 
 ## <a name="creating-custom-controlsmacuser-interfacecustom-controlsmd"></a>[Criando controles personalizados](~/mac/user-interface/custom-controls.md)
 
-Este artigo aborda a criação de controles de interface do usuário personalizados ( `NSControl`herdados de), o desenho de uma interface personalizada para o controle e a criação de ações personalizadas que podem ser usadas com a interface Builder do Xcode.
+Este artigo aborda a criação de controles de interface do usuário personalizados (herdando de `NSControl`), desenhando uma interface personalizada para o controle e criando ações personalizadas que podem ser usadas com a Interface Builder do Xcode.
 
 ## <a name="mac-samples-gallery"></a>Galeria de exemplos de Mac
 

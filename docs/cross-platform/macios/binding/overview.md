@@ -3,15 +3,15 @@ title: Visão geral das associações de Objective-C
 description: Este documento fornece uma visão geral de diferentes maneiras de C# criar associações para código Objective-C, incluindo associações de linha de comando, projetos de associação e nitidez objetiva. Ele também discute como a associação funciona.
 ms.prod: xamarin
 ms.assetid: 9EE288C5-8952-C5A9-E542-0BD847300EC6
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 11/25/2015
-ms.openlocfilehash: db37a6a912cae3c2d53d8838ba2d2bd0224e8df7
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: cad352466e7661183c5277f60c63c283342c50fb
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70765592"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73015879"
 ---
 # <a name="overview-of-objective-c-bindings"></a>Visão geral das associações de Objective-C
 
@@ -19,7 +19,7 @@ _Detalhes de como o processo de ligação funciona_
 
 A associação de uma biblioteca Objective-C para uso com o Xamarin executa três etapas:
 
-1. Escreva uma C# "definição de API" para descrever como a API nativa é exposta no .net e como ela é mapeada para o Objective-C subjacente. Isso é feito usando construções C# padrão como `interface` e vários **atributos** de associação (consulte este [exemplo simples](~/cross-platform/macios/binding/objective-c-libraries.md#Binding_an_API)).
+1. Escreva uma C# "definição de API" para descrever como a API nativa é exposta no .net e como ela é mapeada para o Objective-C subjacente. Isso é feito usando construções C# padrão como `interface`e vários **atributos** de associação (consulte este [exemplo simples](~/cross-platform/macios/binding/objective-c-libraries.md#Binding_an_API)).
 
 2. Depois de gravar a "definição de API" no C#, você a compila para produzir um assembly de "Associação". Isso pode ser feito na [**linha de comando**](#commandline) ou usando um [**projeto de associação**](#bindingproject) no Visual Studio para Mac ou no Visual Studio.
 
@@ -35,7 +35,7 @@ Você também pode ler mais detalhes técnicos de [como ele funciona](#howitwork
 
 ## <a name="command-line-bindings"></a>Associações de linha de comando
 
-Você pode usar o `btouch-native` para Xamarin. Ios (ou `bmac-native` se você estiver usando o Xamarin. Mac) para criar associações diretamente. Ele funciona passando as definições C# de API que você criou manualmente (ou usando nitidez objetiva) para a ferramenta de linha de comando (`btouch-native` para Ios ou `bmac-native` Mac).
+Você pode usar o `btouch-native` para Xamarin. iOS (ou `bmac-native` se você estiver usando o Xamarin. Mac) para criar associações diretamente. Ele funciona passando as definições C# de API que você criou manualmente (ou usando nitidez objetiva) para a ferramenta de linha de comando (`btouch-native`para iOS ou`bmac-native`para Mac).
 
 A sintaxe geral para invocar essas ferramentas é:
 
@@ -75,7 +75,7 @@ Leia os [documentos de nitidez do objetivo](~/cross-platform/macios/binding/obje
 
 Primeiro, localize um tipo que você deseja associar. Para fins de discussão (e simplicidade), Vincularemos o tipo [NSEnumerator](https://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSEnumerator_Class/Reference/Reference.html) (que já foi associado em [Foundation. NSEnumerator](xref:Foundation.NSEnumerator); a implementação abaixo é apenas para fins de exemplo).
 
-Em segundo lugar, precisamos criar o C# tipo. Provavelmente desejaremos colocá-lo em um namespace; como o Objective-C não dá suporte a namespaces, precisaremos `[Register]` usar o atributo para alterar o nome do tipo que o Xamarin. Ios registrará com o tempo de execução Objective-C. O C# tipo também deve herdar de [Foundation. NSObject](xref:Foundation.NSObject):
+Em segundo lugar, precisamos criar o C# tipo. Provavelmente desejaremos colocá-lo em um namespace; como o Objective-C não dá suporte a namespaces, precisaremos usar o atributo `[Register]` para alterar o nome do tipo que o Xamarin. iOS registrará com o tempo de execução Objective-C. O C# tipo também deve herdar de [Foundation. NSObject](xref:Foundation.NSObject):
 
 ```csharp
 namespace Example.Binding {
@@ -95,7 +95,7 @@ static Selector selAllObjects = new Selector("allObjects");
 static Selector selNextObject = new Selector("nextObject");
 ```
 
-Em quarto lugar, seu tipo precisará fornecer construtores. Você *deve* encadear sua invocação de construtor ao construtor da classe base. Os `[Export]` atributos permitem que o código Objective-C chame os construtores com o nome do seletor especificado:
+Em quarto lugar, seu tipo precisará fornecer construtores. Você *deve* encadear sua invocação de construtor ao construtor da classe base. Os atributos de `[Export]` permitem que o código Objective-C chame os construtores com o nome do seletor especificado:
 
 ```csharp
 [Export("init")]
@@ -115,7 +115,7 @@ public NSEnumerator(IntPtr handle)
 }
 ```
 
-Quinta, forneça métodos para cada um dos seletores declarados na etapa 3. Elas usarão `objc_msgSend()` para invocar o seletor no objeto nativo. Observe o uso de [Runtime. GetNSObject ()](xref:ObjCRuntime.Runtime.GetNSObject*) para converter um `IntPtr` em `NSObject` um tipo apropriado (sub-). Se você quiser que o método seja chamado do código Objective-C, o membro *deverá* ser **virtual**.
+Quinta, forneça métodos para cada um dos seletores declarados na etapa 3. Eles usarão `objc_msgSend()` para invocar o seletor no objeto nativo. Observe o uso de [Runtime. GetNSObject ()](xref:ObjCRuntime.Runtime.GetNSObject*) para converter um `IntPtr` em um tipo de `NSObject` (subchave) digitado adequadamente. Se você quiser que o método seja chamado do código Objective-C, o membro *deverá* ser **virtual**.
 
 ```csharp
 [Export("nextObject")]

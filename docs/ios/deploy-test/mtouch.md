@@ -4,15 +4,15 @@ description: Este documento descreve a mtouch, uma ferramenta que orienta muitas
 ms.prod: xamarin
 ms.assetid: BCA491DA-E4C1-8689-3EC9-E4C72495A798
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/05/2017
-ms.openlocfilehash: 9b2cb44dff7712953454a9add71f092956e3c759
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 2a0f9d063b319c0f412f6e8f47a59f0f994678ae
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70762781"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73026279"
 ---
 # <a name="using-mtouch-to-bundle-xamarinios-apps"></a>Usando mtouch para o agrupar aplicativos Xamarin.iOS
 
@@ -65,7 +65,7 @@ Para compilar software para o dispositivo, você compilará seu aplicativo usand
 $ mtouch -dev -c "iPhone Developer: Miguel de Icaza" foo.exe
 ```
 
-Nesse caso específico, estamos usando o certificado "Desenvolvedor de iPhone: Miguel de Icaza" para assinar o aplicativo. Essa etapa é muito importante, ou o dispositivo físico não aceitará carregar o aplicativo.
+Nesse caso específico, estamos usando o certificado "iPhone Developer: Miguel de Icaza" para assinar o aplicativo. Essa etapa é muito importante, ou o dispositivo físico não aceitará carregar o aplicativo.
 
  <a name="Running_your_Application" />
 
@@ -120,6 +120,3 @@ Essas etapas são normalmente executadas pelo Visual Studio para Mac.
 
 Consulte a página de manual do [mtouch(1)](http://docs.go-mono.com/?link=man%3amtouch(1)) para obter detalhes sobre as outras opções de linha de comando.
 
-## <a name="related-links"></a>Links relacionados
-
-- [mtouch(1)](http://iosapi.xamarin.com/?link=man%3amtouch(1))

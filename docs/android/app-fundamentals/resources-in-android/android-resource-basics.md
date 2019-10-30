@@ -3,15 +3,15 @@ title: Noções básicas sobre o recurso do Android
 ms.prod: xamarin
 ms.assetid: ED32E7B5-D552-284B-6385-C3EDDCC30A4B
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/01/2018
-ms.openlocfilehash: c248949024d0e13a24863368e88aa559fa496806
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: ac228e6f0c251ae6f0fcabe1be855c6ed4a85d35
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70755252"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73025354"
 ---
 # <a name="android-resource-basics"></a>Noções básicas sobre o recurso do Android
 
@@ -19,11 +19,11 @@ Quase todos os aplicativos Android terão algum tipo de recurso neles; no mínim
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-![Arquivos de recursos](android-resource-basics-images/01-resource-files-vs.png)
+![Arquivos de recurso](android-resource-basics-images/01-resource-files-vs.png)
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
-![Arquivos de recursos](android-resource-basics-images/01-resource-files-xs.png)
+![Arquivos de recurso](android-resource-basics-images/01-resource-files-xs.png)
 
 -----
 
@@ -33,11 +33,11 @@ Os cinco arquivos que compõem os recursos padrão foram criados na pasta de rec
 
 - **Main. axml** &ndash; o arquivo de layout da interface do usuário padrão para um aplicativo. Observe que, embora o Android use a extensão de arquivo **. xml** , o Xamarin. Android usa a extensão de arquivo **. axml** .
 
-- **Strings. xml** &ndash; uma tabela de cadeia de caracteres para ajudar com a localização do aplicativo
+- String **. xml** &ndash; uma tabela de cadeia de caracteres para ajudar na localização do aplicativo
 
 - **AboutResources. txt** &ndash; isso não é necessário e pode ser excluído com segurança. Ele fornece apenas uma visão geral de alto nível da pasta de recursos e dos arquivos nela.
 
-- Resource.designer.cs&ndash; esse arquivo é gerado automaticamente e mantido pelo Xamarin. Android e mantém a ID exclusiva atribuída a cada recurso. Isso é muito semelhante e idêntico à finalidade do arquivo R. Java que um aplicativo Android escrito em Java teria. Ele é criado automaticamente pelas ferramentas Xamarin. Android e será regenerado de tempos em tempos.
+- **Resource.designer.cs** &ndash; esse arquivo é gerado automaticamente e mantido pelo Xamarin. Android e mantém a ID exclusiva atribuída a cada recurso. Isso é muito semelhante e idêntico à finalidade do arquivo R. Java que um aplicativo Android escrito em Java teria. Ele é criado automaticamente pelas ferramentas Xamarin. Android e será regenerado de tempos em tempos.
 
 ## <a name="creating-and-accessing-resources"></a>Criando e acessando recursos
 
@@ -55,13 +55,13 @@ A criação de recursos é tão simples quanto adicionar arquivos ao diretório 
 
 Isso permite que as ferramentas do Xamarin. Android compilem e insiram corretamente os recursos no arquivo APK. Se por algum motivo a **ação de compilação** não estiver definida como **recurso Android**, os arquivos serão excluídos do APK e qualquer tentativa de carregar ou acessar os recursos resultará em um erro de tempo de execução e o aplicativo falhará.
 
-Além disso, é importante observar que, embora o Android dê suporte apenas a nomes de fileminúsculas para itens de recursos, o Xamarin. Android é um pouco mais tolerante; Ele dará suporte a nomes de filemaiúsculos e minúsculos. A Convenção de nomes de imagem é usar letras minúsculas com sublinhados como separadores (por **exemplo\_,\_meu Image Name. png**). Observe que os nomes de recursos não poderão ser processados se forem usados traços ou espaços como separadores.
+Além disso, é importante observar que, embora o Android dê suporte apenas a nomes de fileminúsculas para itens de recursos, o Xamarin. Android é um pouco mais tolerante; Ele dará suporte a nomes de filemaiúsculos e minúsculos. A Convenção de nomes de imagem é usar letras minúsculas com sublinhados como separadores (por exemplo, **minha imagem de\_\_Name. png**). Observe que os nomes de recursos não poderão ser processados se forem usados traços ou espaços como separadores.
 
-Depois que os recursos tiverem sido adicionados a um projeto, há duas maneiras de usá-los em &ndash; um aplicativo programaticamente (dentro do código) ou em arquivos XML.
+Depois que os recursos tiverem sido adicionados a um projeto, há duas maneiras de usá-los em um aplicativo &ndash; de forma programática (dentro do código) ou de arquivos XML.
 
 ## <a name="referencing-resources-programmatically"></a>Referenciando recursos programaticamente
 
-Para acessar esses arquivos programaticamente, eles recebem uma ID de recurso exclusiva. Essa ID de recurso é um inteiro definido em uma classe especial `Resource`chamada, que é encontrada no arquivo **Resource.designer.cs**e tem uma aparência semelhante a esta:
+Para acessar esses arquivos programaticamente, eles recebem uma ID de recurso exclusiva. Essa ID de recurso é um inteiro definido em uma classe especial chamada `Resource`, que é encontrado no arquivo **Resource.designer.cs**e tem uma aparência semelhante a esta:
 
 ```csharp
 public partial class Resource
@@ -88,8 +88,8 @@ public partial class Resource
 }
 ```
 
-Cada ID de recurso está contida dentro de uma classe aninhada que corresponde ao tipo de recurso. Por exemplo, quando o arquivo **Icon. png** foi adicionado ao projeto, o Xamarin. Android atualizou `Resource` a classe, criando uma classe aninhada chamada `Drawable` com uma constante `Icon`dentro do nome.
-Isso permite que o arquivo **Icon. png** seja referenciado no código como `Resource.Drawable.Icon`. A `Resource` classe não deve ser editada manualmente, pois as alterações feitas nela serão substituídas pelo Xamarin. Android.
+Cada ID de recurso está contida dentro de uma classe aninhada que corresponde ao tipo de recurso. Por exemplo, quando o arquivo **Icon. png** foi adicionado ao projeto, o Xamarin. Android atualizou a classe `Resource`, criando uma classe aninhada chamada `Drawable` com uma constante dentro de `Icon`nomeada.
+Isso permite que o arquivo **Icon. png** seja referenciado no código como `Resource.Drawable.Icon`. A classe `Resource` não deve ser editada manualmente, pois quaisquer alterações feitas nela serão substituídas pelo Xamarin. Android.
 
 Ao referenciar recursos programaticamente (no código), eles podem ser acessados por meio da hierarquia de classes de recursos que usa a seguinte sintaxe:
 
@@ -97,11 +97,11 @@ Ao referenciar recursos programaticamente (no código), eles podem ser acessados
 [<PackageName>.]Resource.<ResourceType>.<ResourceName>
 ```
 
-- **Pacotename** &ndash; O pacote que está fornecendo o recurso e só é necessário quando recursos de outros pacotes estão sendo usados.
+- **Packagename** &ndash; pacote que está fornecendo o recurso e só é necessário quando recursos de outros pacotes estão sendo usados.
 
-- **ResourceType** &ndash; Esse é o tipo de recurso aninhado que está dentro da classe de recurso descrita acima.
+- **ResourceType** &ndash; esse é o tipo de recurso aninhado que está dentro da classe de recurso descrita acima.
 
-- **Nome do recurso** &ndash; esse é o nome de arquivo do recurso (sem a extensão) ou o valor do atributo Android: Name para recursos que estão em um elemento XML.
+- O **nome do recurso** &ndash; este é o nome do arquivo do recurso (sem a extensão) ou o valor do atributo Android: Name para recursos que estão em um elemento XML.
 
 ## <a name="referencing-resources-from-xml"></a>Referenciando recursos de XML
 
@@ -111,11 +111,11 @@ Os recursos em um arquivo XML são acessados por uma sintaxe especial a seguir:
 @[<PackageName>:]<ResourceType>/<ResourceName>
 ```
 
-- **Pacotename** &ndash; o pacote que está fornecendo o recurso e só é necessário quando recursos de outros pacotes estão sendo usados.
+- **Packagename** &ndash; pacote que está fornecendo o recurso e só é necessário quando recursos de outros pacotes estão sendo usados.
 
-- **ResourceType** &ndash; Esse é o tipo de recurso aninhado que está dentro da classe de recurso.
+- **ResourceType** &ndash; esse é o tipo de recurso aninhado que está dentro da classe de recurso.
 
-- **Nome do recurso** Esse é o nome de arquivo do recurso (*sem* a extensão de tipo de arquivo) ou `android:name` o valor do atributo para recursos que estão em um elemento XML. &ndash;
+- O **nome do recurso** &ndash; este é o nome do arquivo do recurso (*sem* a extensão de tipo de arquivo) ou o valor do atributo `android:name` para recursos que estão em um elemento XML.
 
 Por exemplo, o conteúdo de um arquivo de layout, **Main. axml**, é o seguinte:
 
@@ -132,7 +132,7 @@ Por exemplo, o conteúdo de um arquivo de layout, **Main. axml**, é o seguinte:
 </LinearLayout>
 ```
 
-Este exemplo tem um [`ImageView`](https://github.com/xamarin/recipes/tree/master/Recipes/android/controls/imageview) que requer um recurso com empate nomeado **sinalizador**. O `ImageView` tem seu `src` atributo definido como `@drawable/flag`. Quando a atividade for iniciada, o Android procurará dentro do recurso de diretório **/empate** para um arquivo chamado **Flag. png** (a extensão de arquivo pode ser outro formato de imagem, como **Flag. jpg**) e carregar esse arquivo `ImageView`e exibi-lo no.
+Este exemplo tem um [`ImageView`](https://github.com/xamarin/recipes/tree/master/Recipes/android/controls/imageview) que requer um recurso com nome desenhado chamado **sinalizador**. O `ImageView` tem seu atributo `src` definido como `@drawable/flag`. Quando a atividade for iniciada, o Android procurará dentro do recurso de diretório **/empate** para um arquivo chamado **Flag. png** (a extensão de arquivo pode ser outro formato de imagem, como **Flag. jpg**) e carregar esse arquivo e exibi-lo no `ImageView`.
 Quando esse aplicativo é executado, ele seria semelhante à imagem a seguir:
 
 ![ImageView localizada](android-resource-basics-images/03-localized-screenshot.png)

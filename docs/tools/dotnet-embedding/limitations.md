@@ -3,15 +3,15 @@ title: Limitações de incorporação do .NET
 description: Este documento descreve as limitações da inserção do .NET, a ferramenta que permite que você consuma o código .NET em outras linguagens de programação.
 ms.prod: xamarin
 ms.assetid: EBBBB886-1CEF-4DF4-AFDD-CA96049F878E
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 11/14/2017
-ms.openlocfilehash: cf431d4e3d30ac2ec06bfebc9cebe101411faa1c
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 4e2b653365a747b30016a1fbd42b8a01c4c87848
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292705"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73029750"
 ---
 # <a name="net-embedding-limitations"></a>Limitações de incorporação do .NET
 
@@ -41,7 +41,7 @@ Dependendo de suas necessidades, pode ser possível fazer parte da solução alt
 
 ### <a name="nullability"></a>Nulidade
 
-Não há nenhum metadado no .NET que nos informe se uma referência nula é aceitável ou não para uma API. A maioria das APIs `ArgumentNullException` gerará se elas não conseguirem lidar com um `null` argumento. Isso é problemático, pois o tratamento de exceções Objective-C é algo melhor evitado.
+Não há nenhum metadado no .NET que nos informe se uma referência nula é aceitável ou não para uma API. A maioria das APIs irá gerar `ArgumentNullException` se não puderem lidar com um argumento `null`. Isso é problemático, pois o tratamento de exceções Objective-C é algo melhor evitado.
 
 Como não podemos gerar anotações de nulidade precisas nos arquivos de cabeçalho e deseja minimizar as exceções gerenciadas, por padrão, os argumentos não nulos (`NS_ASSUME_NONNULL_BEGIN`) e adicionariam algum específico, quando a precisão é possível, anotações de nulidade.
 

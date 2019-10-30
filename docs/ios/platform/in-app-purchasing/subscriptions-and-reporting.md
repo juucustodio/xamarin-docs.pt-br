@@ -4,15 +4,15 @@ description: Este documento descreve assinaturas não renovadas, assinaturas gra
 ms.prod: xamarin
 ms.assetid: 27EE4234-07F5-D2CD-DC1C-86E27C20141E
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: 81e8f5c1beafeaafcf0d5dcbcc3bf4d66ee05a66
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 8f930e2358562df7e68841b87b6a3df0914805fe
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70752670"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73032298"
 ---
 # <a name="subscriptions-and-reporting-in-xamarinios"></a>Assinaturas e relatórios no Xamarin. iOS
 
@@ -50,17 +50,17 @@ O segredo compartilhado de compra no aplicativo deve ser usado na solicitação 
 
 No iTunes Connect home page selecione **meus aplicativos**:   
    
- [![](subscriptions-and-reporting-images/image2.png "Selecionar Meus aplicativos")](subscriptions-and-reporting-images/image2.png#lightbox)  
+ [![](subscriptions-and-reporting-images/image2.png "Select My Apps")](subscriptions-and-reporting-images/image2.png#lightbox)  
 
 Selecione um aplicativo e clique na guia **compras no aplicativo** :
 
-[![](subscriptions-and-reporting-images/image6.png "Clique na guia compras no aplicativo")](subscriptions-and-reporting-images/image6.png#lightbox)
+[![](subscriptions-and-reporting-images/image6.png "Click on the In-App Purchases tab")](subscriptions-and-reporting-images/image6.png#lightbox)
 
 Na parte inferior da página, selecione **Exibir ou gerar um segredo compartilhado**:
    
- [![](subscriptions-and-reporting-images/image40.png "Selecione Exibir ou gerar um segredo compartilhado")](subscriptions-and-reporting-images/image40.png#lightbox)
+ [![](subscriptions-and-reporting-images/image40.png "Select View or generate a shared secret")](subscriptions-and-reporting-images/image40.png#lightbox)
 
- [![](subscriptions-and-reporting-images/image41.png "Gerar um segredo compartilhado")](subscriptions-and-reporting-images/image41.png#lightbox)   
+ [![](subscriptions-and-reporting-images/image41.png "Generate a shared secret")](subscriptions-and-reporting-images/image41.png#lightbox)   
 
 Para usar o segredo compartilhado, inclua-o no conteúdo JSON que é enviado aos servidores da Apple ao validar uma confirmação de compra no aplicativo para uma assinatura renovável automaticamente, desta forma:
 
@@ -98,9 +98,9 @@ O objeto SKPaymentTransaction não inclui o termo de assinatura – você deve u
 
 Para facilitar o teste de assinaturas, suas durações são compactadas durante o teste na área restrita. uma renovação de assinaturas de 1 semana a cada 3 minutos, as assinaturas de 1 ano são renovadas a cada hora. As assinaturas serão renovadas automaticamente no máximo seis vezes durante o teste na área restrita.
 
-## <a name="reporting"></a>Relatório
+## <a name="reporting"></a>Relatórios
 
-o iTunes Connect ( [iTunesConnect.Apple.com](http://itunesconnect.apple.com)) fornece:   
+o iTunes Connect ( [iTunesConnect.Apple.com](https://itunesconnect.apple.com)) fornece:   
    
  **Vendas e tendências** – exibe detalhes de downloads de aplicativos, atualizações e compras no aplicativo.   
    
@@ -108,9 +108,9 @@ o iTunes Connect ( [iTunesConnect.Apple.com](http://itunesconnect.apple.com)) fo
 
 Um relatório de vendas e tendências de exemplo é mostrado abaixo:   
 
- [![](subscriptions-and-reporting-images/image42.png "Um relatório de vendas e tendências de exemplo")](subscriptions-and-reporting-images/image42.png#lightbox)   
+ [![](subscriptions-and-reporting-images/image42.png "An example Sales and Trends report")](subscriptions-and-reporting-images/image42.png#lightbox)   
    
- Há também um [aplicativo IOS **Mobile do ITC Connect**(iTunes link)](http://itunes.apple.com/us/app/itunes-connect-mobile/id376771144?mt=8).
+ Há também um [aplicativo IOS **Mobile do ITC Connect**(iTunes link)](https://itunes.apple.com/us/app/itunes-connect-mobile/id376771144?mt=8).
 as capturas de tela do iPhone para algumas das estatísticas disponíveis são mostradas aqui:   
    
- [![](subscriptions-and-reporting-images/image43.png "capturas de tela do iPhone para algumas das estatísticas disponíveis")](subscriptions-and-reporting-images/image43.png#lightbox)
+ [![](subscriptions-and-reporting-images/image43.png "iPhone screenshots for some of the statistics available")](subscriptions-and-reporting-images/image43.png#lightbox)

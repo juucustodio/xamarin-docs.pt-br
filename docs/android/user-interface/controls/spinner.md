@@ -3,25 +3,25 @@ title: Controle giratório do Xamarin. Android
 ms.prod: xamarin
 ms.assetid: 004089E9-7C1D-2285-765A-B69143091F2A
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/06/2018
-ms.openlocfilehash: 2c7f0de2347e614b8c24de32bf3f88362a212a94
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: ba4a83eb997b879e8a2398f9857e2fd80221f8ef
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68510403"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73029159"
 ---
 # <a name="xamarinandroid-spinner"></a>Controle giratório do Xamarin. Android
 
-[`Spinner`](xref:Android.Widget.Spinner)é um widget que apresenta uma lista suspensa para a seleção de itens. Este guia explica como criar um aplicativo simples que exibe uma lista de opções em um controle giratório, seguido por modificações que exibem outros valores associados à opção selecionada.
+[`Spinner`](xref:Android.Widget.Spinner) é um widget que apresenta uma lista suspensa para a seleção de itens. Este guia explica como criar um aplicativo simples que exibe uma lista de opções em um controle giratório, seguido por modificações que exibem outros valores associados à opção selecionada.
 
 ## <a name="basic-spinner"></a>Controle giratório básico
 
 Na primeira parte deste tutorial, você criará um widget simples de controle giratório que exibe uma lista de planetas. Quando um planeta é selecionado, uma mensagem do sistema exibe o item selecionado:
 
-[![Capturas de tela de exemplo do aplicativo HelloSpinner](spinner-images/01-example-screenshots-sml.png)](spinner-images/01-example-screenshots.png#lightbox)
+[![capturas de tela de exemplo do aplicativo HelloSpinner](spinner-images/01-example-screenshots-sml.png)](spinner-images/01-example-screenshots.png#lightbox)
 
 Inicie um novo projeto chamado **HelloSpinner**.
 
@@ -49,9 +49,9 @@ Abra **Resources/layout/Main. axml** e insira o seguinte XML:
 </LinearLayout>
 ```
 
-Observe que o [`TextView`](xref:Android.Widget.TextView)atributo `android:text` do e o [`Spinner`](xref:Android.Widget.Spinner)atributo `android:prompt` do fazem referência ao mesmo recurso de cadeia de caracteres. Esse texto se comporta como um título para o widget. Quando aplicado ao [`Spinner`](xref:Android.Widget.Spinner), o texto do título será exibido na caixa de diálogo de seleção que aparece ao selecionar o widget.
+Observe que o atributo `android:text` do [`TextView`](xref:Android.Widget.TextView)e o atributo `android:prompt` do [`Spinner`](xref:Android.Widget.Spinner)referenciam o mesmo recurso de cadeia de caracteres. Esse texto se comporta como um título para o widget. Quando aplicado à [`Spinner`](xref:Android.Widget.Spinner), o texto do título será exibido na caixa de diálogo de seleção que aparece ao selecionar o widget.
 
-Edite Resources **/Values/Strings. xml** e modifique o arquivo para ter a seguinte aparência:
+Edite **Resources/Values/Strings. xml** e modifique o arquivo para ter a seguinte aparência:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -71,16 +71,16 @@ Edite Resources **/Values/Strings. xml** e modifique o arquivo para ter a seguin
 </resources>
 ```
 
-O segundo `<string>` elemento define a cadeia de caracteres de título [`TextView`](xref:Android.Widget.TextView) referenciada pelo e [`Spinner`](xref:Android.Widget.Spinner) no layout acima.
-O `<string-array>` elemento define a lista de cadeias de caracteres que serão exibidas como a lista [`Spinner`](xref:Android.Widget.Spinner) no widget.
+O segundo elemento `<string>` define a cadeia de caracteres de título referenciada pelo [`TextView`](xref:Android.Widget.TextView) e [`Spinner`](xref:Android.Widget.Spinner) no layout acima.
+O elemento `<string-array>` define a lista de cadeias de caracteres que serão exibidas como a lista no widget [`Spinner`](xref:Android.Widget.Spinner) .
 
-Agora, abra **MainActivity.cs** e adicione a `using` seguinte instrução:
+Agora, abra **MainActivity.cs** e adicione a seguinte instrução de `using`:
 
 ```csharp
 using System;
 ```
 
-Em seguida, insira o seguinte código para [`OnCreate()`](xref:Android.App.Activity.OnCreate*)o método):
+Em seguida, insira o seguinte código para o método [`OnCreate()`](xref:Android.App.Activity.OnCreate*)):
 
 ```csharp
 protected override void OnCreate (Bundle bundle)
@@ -101,13 +101,13 @@ protected override void OnCreate (Bundle bundle)
 }
 ```
 
-Depois que `Main.axml` o layout é definido como a exibição de conteúdo [`Spinner`](xref:Android.Widget.Spinner) , o widget é capturado do layout [`FindViewById<>(int)`](xref:Android.App.Activity.FindViewById*)com.
-Dos[`CreateFromResource()`](xref:Android.Widget.ArrayAdapter.CreateFromResource*)
-em seguida, o método [`ArrayAdapter`](xref:Android.Widget.ArrayAdapter)cria um novo, que associa cada item na matriz de cadeia de caracteres à aparência [`Spinner`](xref:Android.Widget.Spinner) inicial do (que é como cada item aparecerá no controle giratório quando selecionado). A `Resource.Array.planets_array` ID referencia o `string-array` definido acima e a `Android.Resource.Layout.SimpleSpinnerItem` ID faz referência a um layout para a aparência do controle giratório padrão, definida pela plataforma.
+Depois que o layout de `Main.axml` é definido como a exibição de conteúdo, o widget de [`Spinner`](xref:Android.Widget.Spinner) é capturado do layout com [`FindViewById<>(int)`](xref:Android.App.Activity.FindViewById*).
+O [`CreateFromResource()`](xref:Android.Widget.ArrayAdapter.CreateFromResource*)
+em seguida, o método cria um novo [`ArrayAdapter`](xref:Android.Widget.ArrayAdapter), que associa cada item na matriz de cadeia de caracteres à aparência inicial do [`Spinner`](xref:Android.Widget.Spinner) (que é como cada item aparecerá no controle giratório quando selecionado). A ID de `Resource.Array.planets_array` referencia a `string-array` definida acima e a ID de `Android.Resource.Layout.SimpleSpinnerItem` referencia um layout para a aparência do controle giratório padrão, definida pela plataforma.
 [`SetDropDownViewResource`](xref:Android.Widget.ArrayAdapter.SetDropDownViewResource*)
-é chamado para definir a aparência de cada item quando o widget é aberto. Por fim, [`ArrayAdapter`](xref:Android.Widget.ArrayAdapter) o é definido para associar todos os seus itens [`Spinner`](xref:Android.Widget.Spinner) ao definindo a [`Adapter`](xref:Android.Widget.ArrayAdapter) propriedade.
+é chamado para definir a aparência de cada item quando o widget é aberto. Por fim, a [`ArrayAdapter`](xref:Android.Widget.ArrayAdapter) é definida para associar todos os seus itens com a [`Spinner`](xref:Android.Widget.Spinner) , definindo a propriedade [`Adapter`](xref:Android.Widget.ArrayAdapter) .
 
-Agora, forneça um método de retorno de chamada que notifique o aplicativo quando um item tiver sido [`Spinner`](xref:Android.Widget.Spinner)selecionado no. Este método deve se parecer com o seguinte:
+Agora, forneça um método de retorno de chamada que notifique o aplicativo quando um item tiver sido selecionado no [`Spinner`](xref:Android.Widget.Spinner). Este método deve se parecer com o seguinte:
 
 ```csharp
 private void spinner_ItemSelected (object sender, AdapterView.ItemSelectedEventArgs e)
@@ -118,32 +118,32 @@ private void spinner_ItemSelected (object sender, AdapterView.ItemSelectedEventA
 }
 ```
 
-Quando um item é selecionado, o remetente é convertido em um [`Spinner`](xref:Android.Widget.Spinner) para que os itens possam ser acessados. Usando a `Position` propriedade `ItemEventArgs`no, você pode descobrir o texto do objeto selecionado e usá-lo para exibir um [`Toast`](xref:Android.Widget.Toast).
+Quando um item é selecionado, o remetente é convertido em um [`Spinner`](xref:Android.Widget.Spinner) para que os itens possam ser acessados. Usando a propriedade `Position` na `ItemEventArgs`, você pode descobrir o texto do objeto selecionado e usá-lo para exibir uma [`Toast`](xref:Android.Widget.Toast).
 
 Executar o aplicativo; Ele deve ter a seguinte aparência:
 
-[![Exemplo de captura de tela de Spinner com Mars selecionado como o planeta](spinner-images/02-basic-example-sml.png)](spinner-images/02-basic-example.png#lightbox)
+[![exemplo de captura de tela do controle giratório com Mars selecionado como o planeta](spinner-images/02-basic-example-sml.png)](spinner-images/02-basic-example.png#lightbox)
 
 ## <a name="spinner-using-keyvalue-pairs"></a>Controle giratório usando pares de chave/valor
 
-Geralmente, é necessário usar `Spinner` para exibir valores de chave que estão associados a algum tipo de dados usados pelo seu aplicativo. Como `Spinner` o não funciona diretamente com pares de chave/valor, você deve armazenar o par de chave/valor separadamente, `Spinner` preencher o com valores de chave e, em seguida, usar a posição da chave selecionada no controle giratório para pesquisar o valor de dados associado. 
+Geralmente, é necessário usar `Spinner` para exibir valores de chave que estão associados a algum tipo de dados usados pelo seu aplicativo. Como `Spinner` não funciona diretamente com pares de chave/valor, você deve armazenar o par de chave/valor separadamente, preencher o `Spinner` com valores de chave e, em seguida, usar a posição da chave selecionada no controle giratório para pesquisar o valor de dados associado. 
 
 Nas etapas a seguir, o aplicativo **HelloSpinner** é modificado para exibir a temperatura média para o planeta selecionado:
 
-Adicione a seguinte `using` instrução a **MainActivity.cs**:
+Adicione a seguinte instrução `using` a **MainActivity.cs**:
 
 ```csharp
 using System.Collections.Generic;
 ```
 
-Adicione a seguinte variável de instância à `MainActivity` classe.
+Adicione a seguinte variável de instância à classe `MainActivity`.
 Essa lista manterá pares de chave/valor para os planetas e suas temperaturas médias:
 
 ```csharp
 private List<KeyValuePair<string, string>> planets;
 ```
 
-No método, adicione o seguinte código antes que `adapter` seja declarado: `OnCreate`
+No método `OnCreate`, adicione o código a seguir antes que `adapter` seja declarado:
 
 ```csharp
 planets = new List<KeyValuePair<string, string>>
@@ -169,7 +169,7 @@ foreach (var item in planets)
     planetNames.Add (item.Key);
 ```
 
-Passe esta lista para o `ArrayAdapter` Construtor (em vez `planets_array` do recurso):
+Passe esta lista para o Construtor `ArrayAdapter` (em vez do recurso `planets_array`):
 
 ```csharp
 var adapter = new ArrayAdapter<string>(this,
@@ -190,7 +190,7 @@ private void spinner_ItemSelected(object sender, AdapterView.ItemSelectedEventAr
 
 Executar o aplicativo; o sistema deve ter a seguinte aparência:
 
-[![Exemplo de seleção de planeta exibindo temperatura](spinner-images/03-keyvalue-example-sml.png)](spinner-images/03-keyvalue-example.png#lightbox)
+[![exemplo de seleção do planeta exibindo a temperatura](spinner-images/03-keyvalue-example-sml.png)](spinner-images/03-keyvalue-example.png#lightbox)
 
 ## <a name="resources"></a>Recursos
 
@@ -198,5 +198,5 @@ Executar o aplicativo; o sistema deve ter a seguinte aparência:
 - [`ArrayAdapter`](xref:Android.Widget.ArrayAdapter)
 - [`Spinner`](xref:Android.Widget.Spinner)
 
-*Partes desta página são modificações com base no trabalho criado e compartilhado pelo projeto de software livre do Android e usadas de acordo com os termos descritos na licença de atribuição do*
-[*Creative Commons 2,5*](http://creativecommons.org/licenses/by/2.5/).
+*Partes desta página são modificações com base no trabalho criado e compartilhado pelo projeto de software livre do Android e usadas de acordo com os termos descritos na licença de* [*atribuição
+Creative Commons 2,5*](https://creativecommons.org/licenses/by/2.5/).

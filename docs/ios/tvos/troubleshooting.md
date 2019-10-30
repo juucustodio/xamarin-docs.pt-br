@@ -5,15 +5,15 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 124E4953-4DFA-42B0-BCFC-3227508FE4A6
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: f54edead87459282ccd6a44225269542fad9d0e4
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 11ac6289b7d2f278f534f5a65679754d212b5067
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769102"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030527"
 ---
 # <a name="troubleshooting-tvos-apps-built-with-xamarin"></a>Solução de problemas de aplicativos tvOS criados com o Xamarin
 
@@ -25,12 +25,12 @@ _Este artigo aborda os problemas conhecidos que você pode encontrar ao trabalha
 
 A versão atual do suporte do tvOS do Xamarin tem os seguintes problemas conhecidos:
 
-- **Estrutura mono** – mono 4,3 Cryptography. ProtectedData falha ao descriptografar dados do mono 4,2. Como resultado, os pacotes NuGet não conseguirão restaurar com o `Data unprotection failed` erro quando uma origem do NuGet protegida for configurada.
+- **Estrutura mono** – mono 4,3 Cryptography. ProtectedData falha ao descriptografar dados do mono 4,2. Como resultado, os pacotes NuGet não serão restaurados com o erro `Data unprotection failed` quando uma fonte de NuGet protegida for configurada.
   - **Solução alternativa** – em Visual Studio para Mac você precisará adicionar todas as fontes de pacote NuGet que usam autenticação de senha antes de tentar restaurar os pacotes novamente.
 - **Visual Studio para Mac w/ F# Add-in** – erro ao criar um F# modelo do Android no Windows. Isso ainda deve funcionar corretamente no Mac.
-- **Xamarin. Mac** – ao executar o projeto de modelo unificado do Xamarin. Mac com a `Unsupported`estrutura de destino `Could not connect to the debugger` definida como, o pop-up pode aparecer.
+- **Xamarin. Mac** – ao executar o projeto de modelo unificado do Xamarin. Mac com a estrutura de destino definida como `Unsupported`, o pop-up `Could not connect to the debugger` pode aparecer.
   - **Possível solução alternativa** – faça downgrade da versão do mono Framework disponível em nosso canal estável.
-- **Xamarin Visual Studio & xamarin. Ios** – ao implantar aplicativos WatchKit no Visual Studio, o erro `The file ‘bin\iPhoneSimulator\Debug\WatchKitApp1WatchKitApp.app\WatchKitApp1WatchKitApp’ does not exist` pode ser exibido.
+- **Xamarin visual studio & xamarin. Ios** – ao implantar aplicativos WatchKit no Visual Studio, o erro `The file ‘bin\iPhoneSimulator\Debug\WatchKitApp1WatchKitApp.app\WatchKitApp1WatchKitApp’ does not exist` pode aparecer.
 
 Informe todos os bugs encontrados no [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
@@ -47,7 +47,7 @@ Para resolver esse problema, faça o seguinte:
 1. Em Visual Studio para Mac, clique com o botão direito do mouse no arquivo de projeto Xamarin. tvOS na **Gerenciador de soluções** e selecione **Opções**.
 2. Selecione **TvOS Build** e verifique se você está na configuração de **versão** : 
 
-    [![](troubleshooting-images/ts01.png "Selecione as opções de Build do tvOS")](troubleshooting-images/ts01.png#lightbox)
+    [![](troubleshooting-images/ts01.png "Select tvOS Build options")](troubleshooting-images/ts01.png#lightbox)
 3. Adicione `--bitcode=asmonly` ao campo **argumentos mTouch adicionais** e clique no botão **OK** .
 4. Recrie seu aplicativo na configuração de **versão** .
 
@@ -76,11 +76,11 @@ Section
  reserved2 0
 ```
 
-`addr`e `size` serão diferentes, mas outros campos devem ser idênticos.
+`addr` e `size` serão diferentes, mas outros campos deverão ser idênticos.
 
-Você precisará certificar-se de que todas as bibliotecas estáticas (`.a`) de terceiros que você está usando foram criadas em relação a bibliotecas tvOS (não bibliotecas Ios) e que também incluem informações de BitCode.
+Você precisará certificar-se de que as bibliotecas estáticas de terceiros (`.a`) que você está usando foram criadas em relação a bibliotecas tvOS (não bibliotecas iOS) e que também incluem informações de BitCode.
 
-Para aplicativos ou bibliotecas que incluem BitCode válidas `size` , o será maior que um. Há algumas situações em que uma biblioteca pode ter o marcador BitCode, mas não contém BitCode válido. Por exemplo:
+Para aplicativos ou bibliotecas que incluem BitCode válidas, o `size` será maior que um. Há algumas situações em que uma biblioteca pode ter o marcador BitCode, mas não contém BitCode válido. Por exemplo:
 
 **BitCode inválido**
 
@@ -102,7 +102,7 @@ $ otool -l -arch arm64 libDownloadableAgent-tvos.a |grep __bitcode -A 3
       size 0x0000000000045440
 ```
 
-Observe que a diferença `size` entre as duas bibliotecas no exemplo listado é executada acima. A biblioteca deve ser gerada a partir de uma compilação de arquivo do Xcode com BitCode `ENABLE_BITCODE`habilitado (configuração do Xcode) como uma solução para esse problema de tamanho.
+Observe que a diferença em `size` entre as duas bibliotecas no exemplo listado é executada acima. A biblioteca deve ser gerada a partir de uma compilação de arquivo do Xcode com BitCode habilitado (configuração do Xcode `ENABLE_BITCODE`) como uma solução para esse problema de tamanho.
 
 ### <a name="apps-that-only-contain-the-arm64-slice-must-also-have-arm64-in-the-list-of-uirequireddevicecapabilities-in-infoplist"></a>Os aplicativos que contêm apenas a fatia arm64 também devem ter "arm64" na lista de UIRequiredDeviceCapabilities no info. plist
 
@@ -110,7 +110,7 @@ Ao enviar um aplicativo para a loja de aplicativos da Apple TV para publicação
 
 _"Os aplicativos que contêm apenas a fatia arm64 também devem ter" arm64 "na lista de UIRequiredDeviceCapabilities no info. plist"_
 
-Se isso ocorrer, edite `Info.plist` o arquivo e verifique se ele tem as seguintes chaves:
+Se isso ocorrer, edite o arquivo de `Info.plist` e verifique se ele tem as seguintes chaves:
 
 ```xml
 <key>UIRequiredDeviceCapabilities</key>
@@ -123,18 +123,18 @@ Recompile seu aplicativo para liberação e reenvie para o iTunes Connect.
 
 ### <a name="task-mtouch-execution----failed"></a>Execução da tarefa "MTouch"--com falha
 
-Se você estiver usando uma biblioteca de terceiros (como monogames) e a compilação da versão falhar com uma longa série de mensagens de erro terminando em `Task "MTouch" execution -- FAILED`, tente adicionar `-gcc_flags="-framework OpenAL"` aos seus argumentos de **toque adicionais**:
+Se você estiver usando uma biblioteca de terceiros (como monogames) e a compilação da versão falhar com uma longa série de mensagens de erro terminando em `Task "MTouch" execution -- FAILED`, tente adicionar `-gcc_flags="-framework OpenAL"` aos seus **argumentos de toque adicionais**:
 
-[![](troubleshooting-images/mtouch01.png "Execução de MTouch de tarefa")](troubleshooting-images/mtouch01.png#lightbox)
+[![](troubleshooting-images/mtouch01.png "Task MTouch execution")](troubleshooting-images/mtouch01.png#lightbox)
 
-Você também deve incluir `--bitcode=asmonly` os **argumentos de toque adicionais**, ter suas opções de vinculador definidas para **vincular tudo** e fazer uma compilação limpa.
+Você também deve incluir `--bitcode=asmonly` nos **argumentos de toque adicionais**, ter suas opções de vinculador definidas para **vincular tudo** e fazer uma compilação limpa.
 
 ### <a name="itms-90471-error-the-large-icon-is-missing"></a>Erro de ITMS-90471. O ícone grande está ausente
 
 Se você receber uma mensagem no formato "ITMS-90471 Error. O ícone grande está ausente "ao tentar enviar um aplicativo Xamarin. tvOS para a versão da loja de aplicativos da Apple TV para o Release, verifique o seguinte:
 
-1. Verifique se você incluiu os ativos de ícone grande no `Assets.car` arquivo que você criou usando a documentação de [ícones de aplicativo](~/ios/tvos/app-fundamentals/icons-images.md#App-Icons) .
-2. Certifique-se de incluir `Assets.car` o arquivo da documentação [trabalhando com ícones e imagens](~/ios/tvos/app-fundamentals/icons-images.md) em seu pacote de aplicativos final.
+1. Verifique se você incluiu os ativos de ícone grande no arquivo de `Assets.car` que você criou usando a documentação de [ícones de aplicativo](~/ios/tvos/app-fundamentals/icons-images.md#App-Icons) .
+2. Certifique-se de incluir o arquivo de `Assets.car` da documentação [trabalhando com ícones e imagens](~/ios/tvos/app-fundamentals/icons-images.md) em seu pacote de aplicativos final.
 
 ### <a name="invalid-bundle--an-app-that-supports-game-controllers-must-also-support-the-apple-tv-remote"></a>Pacote inválido – um aplicativo que dá suporte a controladores de jogos também deve dar suporte ao Apple TV Remote
 
@@ -154,7 +154,7 @@ ou
 
 _Pacote inválido – os aplicativos da Apple TV com a estrutura GameController devem incluir a chave GCSupportedGameControllers no info. plist do aplicativo._
 
-A solução é adicionar suporte para o Siri remoto (`GCMicroGamepad`) ao arquivo do `Info.plist` aplicativo. O perfil do micro Game Controller foi adicionado pela Apple para direcionar o Siri remoto. Por exemplo, inclua as seguintes chaves:
+A solução é adicionar suporte para o Siri remoto (`GCMicroGamepad`) ao arquivo de `Info.plist` do seu aplicativo. O perfil do micro Game Controller foi adicionado pela Apple para direcionar o Siri remoto. Por exemplo, inclua as seguintes chaves:
 
 ```xml
 <key>GCSupportedGameControllers</key>  

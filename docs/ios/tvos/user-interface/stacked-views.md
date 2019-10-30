@@ -4,29 +4,29 @@ description: Este documento descreve como trabalhar com exibições empilhadas d
 ms.prod: xamarin
 ms.assetid: 00B07F85-F30B-4DD4-8664-A61D0A1CDB0E
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: 194f1a260adc49083a8d4365a310447acbcc96f2
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 9f2c8fb235603c5dac37fc0c25be2f070d7df98e
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769030"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73022155"
 ---
 # <a name="working-with-tvos-stacked-views-in-xamarin"></a>Trabalhando com exibições empilhadas do tvOS no Xamarin
 
-O controle de exibição de`UIStackView`pilha () aproveita o poder do layout automático e de classes de tamanho para gerenciar uma pilha de subexibições, horizontal ou verticalmente, que responde dinamicamente às alterações de conteúdo e ao tamanho da tela do dispositivo da Apple TV.
+O controle de exibição de pilha (`UIStackView`) aproveita o poder do layout automático e as classes de tamanho para gerenciar uma pilha de subexibições, horizontal ou verticalmente, que respondem dinamicamente às alterações de conteúdo e ao tamanho da tela do dispositivo da Apple TV.
 
 O layout de todas as subexibições anexadas a uma exibição de pilha é gerenciado por ela com base nas propriedades definidas pelo desenvolvedor, como eixo, distribuição, alinhamento e espaçamento:
 
-[![](stacked-views-images/stacked01.png "Diagrama de layout de subexibição")](stacked-views-images/stacked01.png#lightbox)
+[![](stacked-views-images/stacked01.png "Subview layout diagram")](stacked-views-images/stacked01.png#lightbox)
 
-Ao usar um `UIStackView` em um aplicativo Xamarin. tvOS, o desenvolvedor pode definir as subexibições dentro de um storyboard no designer do Ios ou adicionando e removendo subexibições no C# código.
+Ao usar um `UIStackView` em um aplicativo Xamarin. tvOS, o desenvolvedor pode definir as subexibições dentro de um storyboard no designer do iOS ou adicionando e removendo subexibições no C# código.
 
 ## <a name="about-stacked-view-controls"></a>Sobre controles de exibição empilhados
 
-O `UIStackView` é projetado como uma exibição de contêiner que não é de renderização e, como tal, não é desenhado para a tela como outras subclasses de `UIView`. Definir propriedades como `BackgroundColor` ou substituir `DrawRect` não terá nenhum efeito visual.
+A `UIStackView` é projetada como uma exibição de contêiner que não é de renderização e, como tal, não é desenhada para a tela como outras subclasses de `UIView`. Definir propriedades como `BackgroundColor` ou substituir `DrawRect` não terá efeito visual.
 
 Há várias propriedades que controlam como uma exibição de pilha irá organizar sua coleção de subexibições:
 
@@ -34,7 +34,7 @@ Há várias propriedades que controlam como uma exibição de pilha irá organiz
 - **Alinhamento** – controla como as subexibições são alinhadas dentro da exibição de pilha.
 - **Distribuição** – controla como as subexibições são dimensionadas na exibição de pilha.
 - **Espaçamento** – controla o espaço mínimo entre cada subexibição na exibição de pilha.
-- **Relativa à linha** de `true`base – se, o espaçamento vertical de cada subexibição será derivado da linha de base.
+- **Relativa à linha de base** – se `true`, o espaçamento vertical de cada subexibição será derivado da sua linha de base.
 - **Margens de layout relativas** – coloca as subexibições em relação às margens de layout padrão.
 
 Normalmente, você usará uma exibição de pilha para organizar um pequeno número de subexibições. Interfaces de usuário mais complexas podem ser criadas aninhando-se uma ou mais exibições de pilha umas nas outras.
@@ -47,27 +47,27 @@ Você pode ajustar ainda mais a aparência das UIs adicionando restrições adic
 
 Quando uma subexibição é adicionada a uma exibição de pilha, seu layout é totalmente controlado por essa exibição de pilha usando classes de tamanho e layout automático para posicionar e dimensionar as exibições organizadas.
 
-A exibição de pilha _fixará_ a primeira e a última subexibição em sua coleção nas bordas **superior** e **inferior** para exibições de pilha vertical ou bordas **esquerda** e **direita** para exibições de pilha horizontal. Se você definir a `LayoutMarginsRelativeArrangement` Propriedade como `true`, a exibição fixará as subexibições às margens relevantes, em vez da borda.
+A exibição de pilha _fixará_ a primeira e a última subexibição em sua coleção nas bordas **superior** e **inferior** para exibições de pilha vertical ou bordas **esquerda** e **direita** para exibições de pilha horizontal. Se você definir a propriedade `LayoutMarginsRelativeArrangement` como `true`, a exibição fixará as subexibições às margens relevantes, em vez da borda.
 
-A exibição de pilha usa a propriedade da `IntrinsicContentSize` subexibição ao calcular o tamanho das subexibições ao `Axis` longo do definido ( `FillEqually Distribution`exceto para o). O `FillEqually Distribution` redimensiona todas as subexibições para que elas tenham o mesmo tamanho, preenchendo o modo de exibição `Axis`de pilha ao longo do.
+A exibição de pilha usa a propriedade de `IntrinsicContentSize` de subexibição ao calcular o tamanho das subexibições ao longo do `Axis` definido (exceto para o `FillEqually Distribution`). O `FillEqually Distribution` redimensiona todas as subexibições para que elas tenham o mesmo tamanho, preenchendo o modo de exibição de pilha ao longo do `Axis`.
 
-Com exceção do `Fill Alignment`, a exibição de pilha usa a propriedade da `IntrinsicContentSize` subexibição para calcular o tamanho da exibição perpendicular ao especificado `Axis`. Para o `Fill Alignment`, todas as subexibições são dimensionadas para preencher a exibição de pilha perpendicular ao determinado `Axis`.
+Com exceção da `Fill Alignment`, a exibição de pilha usa a propriedade `IntrinsicContentSize` de subexibição para calcular o tamanho da exibição perpendicular ao `Axis`determinado. Para o `Fill Alignment`, todas as subexibições são dimensionadas para preencher a exibição de pilha perpendicular ao `Axis`especificado.
 
 <a name="Positioning-and-Sizing-the-Stack-View" />
 
 ## <a name="positioning-and-sizing-the-stack-view"></a>Posicionando e dimensionando a exibição de pilha
 
-Embora o modo de exibição de pilha tenha controle total sobre o layout de qualquer subexibição (com base `Axis` em `Distribution`propriedades como e), você ainda precisa posicionar o`UIStackView`modo de exibição de pilha () dentro de sua exibição pai usando o layout automático e as classes de tamanho.
+Embora a exibição de pilha tenha controle total sobre o layout de qualquer subexibição (com base em propriedades como `Axis` e `Distribution`), você ainda precisa posicionar o modo de exibição de pilha (`UIStackView`) em sua exibição pai usando o layout automático e as classes de tamanho.
 
 Em geral, isso significa fixar pelo menos duas bordas da exibição de pilha para expandir e contratar, definindo, portanto, sua posição. Sem restrições adicionais, o modo de exibição de pilha será redimensionado automaticamente para se ajustar a todas as suas subexibições da seguinte maneira:
 
-- O tamanho ao longo `Axis` de sua será a soma de todos os tamanhos de subexibição, além de qualquer espaço que tenha sido definido entre cada subexibição.
-- Se a `LayoutMarginsRelativeArrangement` propriedade for `true`, o tamanho das exibições da pilha também incluirá espaço para as margens.
-- O tamanho perpendicular ao `Axis` será definido como a maior subexibição na coleção.
+- O tamanho ao longo de sua `Axis` será a soma de todos os tamanhos de subexibição, além de qualquer espaço que tenha sido definido entre cada subexibição.
+- Se a propriedade `LayoutMarginsRelativeArrangement` for `true`, o tamanho das exibições de pilha também incluirá espaço para as margens.
+- O tamanho perpendicular à `Axis` será definido como a maior subexibição na coleção.
 
-Além disso, você pode especificar restrições para a **altura** e a **largura**da exibição de pilha. Nesse caso, as subexibições serão dispostas (dimensionadas) para preencher o espaço especificado pela exibição de pilha conforme determinado pelas `Distribution` Propriedades e. `Alignment`
+Além disso, você pode especificar restrições para a **altura** e a **largura**da exibição de pilha. Nesse caso, as subexibições serão dispostas (dimensionadas) para preencher o espaço especificado pela exibição de pilha conforme determinado pelas propriedades `Distribution` e `Alignment`.
 
-Se a `BaselineRelativeArrangement` propriedade for `true`, as subexibições serão dispostas com base na primeira ou na última linha de base da subexibição, em vez de usar a posição **superior**, **inferior** ou **central*- **Y** . Eles são calculados no conteúdo da exibição de pilha da seguinte maneira:
+Se a propriedade `BaselineRelativeArrangement` for `true`, as subexibições serão dispostas com base na primeira ou última linha de base da subexibição, em vez de usar a posição **superior**, **inferior** ou **central*- **Y** . Eles são calculados no conteúdo da exibição de pilha da seguinte maneira:
 
 - Uma exibição de pilha vertical retornará a primeira subexibição para a primeira linha de base e a última para a última. Se qualquer uma dessas subexibições estiver em modo de exibição de pilha, a primeira ou a última linha de base será usada.
 - Uma exibição de pilha horizontal usará sua subexibição mais alta para a primeira e a última linha de base. Se a exibição mais alta também for uma exibição de pilha, ela usará a subexibição mais alta que a linha de base.
@@ -81,10 +81,10 @@ Se a `BaselineRelativeArrangement` propriedade for `true`, as subexibições ser
 
 Há vários tipos de layout que funcionam bem com controles de exibição de pilha. De acordo com a Apple, aqui estão alguns dos usos mais comuns:
 
-- **Defina o tamanho ao longo do eixo** – fixando ambas as bordas ao longo da `Axis` exibição da pilha e uma das bordas adjacentes para definir a posição, a exibição da pilha aumentará ao longo do eixo para se ajustar ao espaço definido por suas subexibições.
+- **Defina o tamanho ao longo do eixo** – fixando ambas as bordas ao longo do `Axis` da exibição da pilha e uma das bordas adjacentes para definir a posição, a exibição da pilha aumentará ao longo do eixo para se ajustar ao espaço definido por suas subexibições.
 - **Definir a posição da subexibição** – ao fixar as bordas adjacentes da exibição de pilha à sua exibição pai, a exibição de pilha aumentará em ambas as dimensões para ajustá-la a ela contendo subexibições.
 - **Definir o tamanho e a posição da pilha** – fixando todas as quatro bordas da exibição de pilha para a exibição pai, a exibição de pilha organiza as subexibições com base no espaço definido na exibição de pilha.
-- **Defina o tamanho perpendicular ao eixo** – fixando ambas as bordas perpendiculares à exibição da `Axis` pilha e uma das bordas ao longo do eixo para definir a posição, a exibição da pilha aumentará perpendicular ao eixo para se ajustar ao espaço definido por suas subexibições.
+- **Defina o tamanho perpendicular ao eixo** – fixando ambas as bordas perpendiculares à `Axis` da exibição da pilha e uma das bordas ao longo do eixo para definir a posição, a exibição da pilha aumentará perpendicular ao eixo para se ajustar ao espaço definido por suas subexibições.
 
 <a name="Stack-Views-and-Storyboards" />
 
@@ -94,48 +94,48 @@ A maneira mais fácil de trabalhar com exibições de pilha em um aplicativo Xam
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
-1. Na **painel de soluções**, clique duas vezes no arquivo `Main.storyboard` e abra-o para edição.
+1. Na **painel de soluções**, clique duas vezes no arquivo de `Main.storyboard` e abra-o para edição.
 1. Projete o layout de seus elementos individuais que você vai adicionar à exibição de pilha:
 
-    [![](stacked-views-images/layout01.png "Exemplo de layout de elemento")](stacked-views-images/layout01.png#lightbox)
+    [![](stacked-views-images/layout01.png "Element layout example")](stacked-views-images/layout01.png#lightbox)
 1. Adicione todas as restrições necessárias aos elementos para garantir que elas sejam dimensionadas corretamente. Esta etapa é importante quando o elemento é adicionado à exibição de pilha.
 1. Faça o número necessário de cópias (quatro, neste caso):
 
-    [![](stacked-views-images/layout02.png "O número necessário de cópias")](stacked-views-images/layout02.png#lightbox)
+    [![](stacked-views-images/layout02.png "The required number of copies")](stacked-views-images/layout02.png#lightbox)
 1. Arraste uma **exibição de pilha** da **caixa de ferramentas** e solte-a na exibição:
 
-    [![](stacked-views-images/layout03.png "Uma exibição de pilha")](stacked-views-images/layout03.png#lightbox)
-1. Selecione o modo de exibição de pilha, na **Guia Widget** do **painel de propriedades** selecione **preencher** para o **alinhamento**, **preencha igualmente** para a **distribuição** e `25` insira para o **espaçamento**:
+    [![](stacked-views-images/layout03.png "A Stack View")](stacked-views-images/layout03.png#lightbox)
+1. Selecione o modo de exibição de pilha, na **Guia Widget** do **painel de propriedades** selecione **preencher** para o **alinhamento**, **preencha igualmente** para a **distribuição** e insira `25` para o **espaçamento**:
 
-    [![](stacked-views-images/layout04.png "A guia do widget")](stacked-views-images/layout04.png#lightbox)
+    [![](stacked-views-images/layout04.png "The Widget Tab")](stacked-views-images/layout04.png#lightbox)
 1. Posicione o modo de exibição de pilha na tela onde você deseja e adicione restrições para mantê-lo no local necessário.
 1. Selecione os elementos individuais e arraste-os para a exibição de pilha:
 
-    [![](stacked-views-images/layout05.png "Os elementos individuais na exibição de pilha")](stacked-views-images/layout05.png#lightbox)
+    [![](stacked-views-images/layout05.png "The individual elements in the Stack View")](stacked-views-images/layout05.png#lightbox)
 1. O layout será ajustado e os elementos serão organizados no modo de exibição de pilha com base nos atributos definidos acima.
 1. Atribua **nomes** na **Guia Widget** do Gerenciador de **Propriedades** para trabalhar com os controles de interface do C# usuário no código.
 1. Salve as alterações.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-1. Na **Gerenciador de soluções**, clique duas vezes no arquivo `Main.storyboard` e abra-o para edição.
+1. Na **Gerenciador de soluções**, clique duas vezes no arquivo de `Main.storyboard` e abra-o para edição.
 1. Projete o layout de seus elementos individuais que você vai adicionar à exibição de pilha:
 
-    [![](stacked-views-images/layout01.png "Exemplo de layout de elemento")](stacked-views-images/layout01.png#lightbox)
+    [![](stacked-views-images/layout01.png "Example element layout")](stacked-views-images/layout01.png#lightbox)
 1. Adicione todas as restrições necessárias aos elementos para garantir que elas sejam dimensionadas corretamente. Esta etapa é importante quando o elemento é adicionado à exibição de pilha.
 1. Faça o número necessário de cópias (quatro, neste caso):
 
-    [![](stacked-views-images/layout02.png "O número necessário de cópias")](stacked-views-images/layout02.png#lightbox)
+    [![](stacked-views-images/layout02.png "The required number of copies")](stacked-views-images/layout02.png#lightbox)
 1. Arraste uma **exibição de pilha** da **caixa de ferramentas** e solte-a na exibição:
 
-    [![](stacked-views-images/layout03-vs.png "Uma exibição de pilha")](stacked-views-images/layout03-vs.png#lightbox)
-1. Selecione o modo de exibição de pilha, na **Guia Widget** do **Gerenciador de propriedades** , selecione **preenchimento** para o **alinhamento**, **preencha igualmente** para a `25` **distribuição** e insira para o **espaçamento**:
+    [![](stacked-views-images/layout03-vs.png "A Stack View")](stacked-views-images/layout03-vs.png#lightbox)
+1. Selecione o modo de exibição de pilha, na **Guia Widget** do **Gerenciador de propriedades** , selecione **preenchimento** para o **alinhamento**, **preencha igualmente** para a **distribuição** e insira `25` para o **espaçamento**:
 
-    [![](stacked-views-images/layout04-vs.png "A guia do widget")](stacked-views-images/layout04-vs.png#lightbox)
+    [![](stacked-views-images/layout04-vs.png "The Widget Tab")](stacked-views-images/layout04-vs.png#lightbox)
 1. Posicione o modo de exibição de pilha na tela onde você deseja e adicione restrições para mantê-lo no local necessário.
 1. Selecione os elementos individuais e arraste-os para a exibição de pilha:
 
-    [![](stacked-views-images/layout05-vs.png "Os elementos individuais na exibição de pilha")](stacked-views-images/layout05-vs.png#lightbox)
+    [![](stacked-views-images/layout05-vs.png "The individual elements in the Stack View")](stacked-views-images/layout05-vs.png#lightbox)
 1. O layout será ajustado e os elementos serão organizados no modo de exibição de pilha com base nos atributos definidos acima.
 1. Atribua **nomes** na **Guia Widget** do Gerenciador de **Propriedades** para trabalhar com os controles de interface do C# usuário no código.
 1. Salve as alterações.
@@ -143,7 +143,7 @@ A maneira mais fácil de trabalhar com exibições de pilha em um aplicativo Xam
 -----
 
 > [!IMPORTANT]
-> Embora seja possível atribuir ações como `TouchUpInside` a um elemento de interface do usuário (como a `UIButton`) no designer do Ios ao criar um manipulador de eventos, ele nunca será chamado porque a Apple TV não tem uma tela sensível ao toque ou dá suporte a eventos de toque. Você sempre deve usar o padrão `Action Type` ao criar ações para elementos da interface do usuário do tvOS.
+> Embora seja possível atribuir ações como `TouchUpInside` a um elemento de interface do usuário (como um `UIButton`) no designer do iOS ao criar um manipulador de eventos, ele nunca será chamado porque a Apple TV não tem uma tela sensível ao toque ou dá suporte a eventos de toque. Você sempre deve usar o `Action Type` padrão ao criar ações para elementos da interface do usuário do tvOS.
 
 Para obter mais informações sobre como trabalhar com storyboards, consulte nossa [Guia de início rápido Olá, tvOS](~/ios/tvos/get-started/hello-tvos.md).
 
@@ -184,11 +184,11 @@ partial void PlayerCountChanged (Foundation.NSObject sender) {
 
 Quando o aplicativo for executado, os quatro elementos serão igualmente distribuídos em nossa exibição de pilha:
 
-[![](stacked-views-images/layout06.png "Quando o aplicativo for executado, os quatro elementos serão igualmente distribuídos em nossa exibição de pilha")](stacked-views-images/layout06.png#lightbox)
+[![](stacked-views-images/layout06.png "When the app is run, the four elements will equally be distributed in our Stack View")](stacked-views-images/layout06.png#lightbox)
 
 Se o número de players for reduzido, as exibições não usadas serão ocultadas e a exibição de pilha ajustará o layout para ajustar:
 
-[![](stacked-views-images/layout07.png "Se o número de players for reduzido, as exibições não usadas serão ocultadas e a exibição de pilha ajustará o layout para caber")](stacked-views-images/layout07.png#lightbox)
+[![](stacked-views-images/layout07.png "If the number of players is decreased, the unused views are hidden and the Stack View adjust the layout to fit")](stacked-views-images/layout07.png#lightbox)
 
 <a name="Populate-a-Stack-View-from-Code" />
 
@@ -248,7 +248,7 @@ partial void DecreaseRating (Foundation.NSObject sender) {
 }
 ```
 
-Vamos dar uma olhada em algumas partes desse código em detalhes. Primeiro, `if` usamos instruções para verificar se não há mais de cinco "estrelas" ou menos de zero.
+Vamos dar uma olhada em algumas partes desse código em detalhes. Primeiro, usamos um `if` instruções para verificar se não há mais de cinco "estrelas" ou menos de zero.
 
 Para adicionar uma nova "estrela", carregamos sua imagem e definimos seu **modo de conteúdo** para **dimensionar o ajuste de aspecto**:
 
@@ -265,7 +265,7 @@ Em seguida, adicionamos o novo ícone de "estrela" à coleção de subexibiçõe
 RatingView.AddArrangedSubview(icon);
 ```
 
-Você observará que adicionamos o `UIImageView` `UIStackView`à propriedade do `ArrangedSubviews` e não ao `SubView`. Qualquer exibição que você deseja que a exibição de pilha controle seu layout deve ser adicionada à `ArrangedSubviews` propriedade.
+Você observará que adicionamos o `UIImageView` à propriedade `ArrangedSubviews` do `UIStackView`e não ao `SubView`. Qualquer exibição que você deseja que a exibição de pilha controle seu layout deve ser adicionada à propriedade `ArrangedSubviews`.
 
 Para remover uma subexibição de uma exibição de pilha, primeiro obtemos a subexibição a ser removida:
 
@@ -273,7 +273,7 @@ Para remover uma subexibição de uma exibição de pilha, primeiro obtemos a su
 var icon = RatingView.ArrangedSubviews[RatingView.ArrangedSubviews.Length-1];
 ```
 
-Em seguida, precisamos removê-lo da `ArrangedSubviews` coleção e da exibição super:
+Em seguida, precisamos removê-lo da coleção de `ArrangedSubviews` e da exibição super:
 
 ```csharp
 // Remove from stack and screen
@@ -281,13 +281,13 @@ RatingView.RemoveArrangedSubview(icon);
 icon.RemoveFromSuperview();
 ```
 
-Remover uma subexibição apenas da coleção `ArrangedSubviews` a retira do controle da exibição de pilha, mas não a remove da tela.
+Remover uma subexibição apenas da coleção de `ArrangedSubviews` a retira do controle da exibição de pilha, mas não a remove da tela.
 
 <a name="Dynamically-Changing-Content" />
 
 ## <a name="dynamically-changing-content"></a>Alteração dinâmica de conteúdo
 
-Uma exibição de pilha ajustará automaticamente o layout das subexibições sempre que uma subexibição for adicionada, removida ou oculta. O layout também será ajustado se qualquer propriedade da exibição de pilha for ajustada (como a sua `Axis`).
+Uma exibição de pilha ajustará automaticamente o layout das subexibições sempre que uma subexibição for adicionada, removida ou oculta. O layout também será ajustado se qualquer propriedade da exibição de pilha for ajustada (como sua `Axis`).
 
 As alterações de layout podem ser animadas colocando-as em um bloco de animação, por exemplo:
 

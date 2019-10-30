@@ -3,15 +3,15 @@ title: GridViewPager
 ms.prod: xamarin
 ms.assetid: A1CDD5F0-049B-4DFA-A268-8A875D26A675
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/02/2018
-ms.openlocfilehash: ff054b1bd9607dd0dade874453a6ddf99ea4fd77
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 77c5eb65601e5bfdac2cbaad2e196a8ae2813981
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70758215"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030314"
 ---
 # <a name="gridviewpager"></a>GridViewPager
 
@@ -31,11 +31,11 @@ O XML de layout tem a seguinte aparência:
     android:keepScreenOn="true" />
 ```
 
-Criar um[`GridPagerAdapter`](https://developer.android.com/reference/android/support/wearable/view/GridPagerAdapter.html)
-(ou subclasse como[`FragmentGridPagerAdapter`](https://developer.android.com/reference/android/support/wearable/view/FragmentGridPagerAdapter.html)
+Criar um [`GridPagerAdapter`](https://developer.android.com/reference/android/support/wearable/view/GridPagerAdapter.html)
+(ou subclasse, como [`FragmentGridPagerAdapter`](https://developer.android.com/reference/android/support/wearable/view/FragmentGridPagerAdapter.html)
 para fornecer exibições a serem exibidas à medida que o usuário navega.
 
-O [adaptador de exemplo](https://github.com/xamarin/monodroid-samples/blob/master/wear/GridViewPager/GridViewPager/SimpleGridPagerAdapter.cs) mostra como implementar os métodos necessários, incluindo substituições `RowCount`para `GetColumnCount`, `GetBackground`, e`GetFragment`
+O [adaptador de exemplo](https://github.com/xamarin/monodroid-samples/blob/master/wear/GridViewPager/GridViewPager/SimpleGridPagerAdapter.cs) mostra como implementar os métodos necessários, incluindo substituições para `RowCount`, `GetColumnCount`, `GetBackground`e `GetFragment`
 
 Conecte o adaptador conforme mostrado:
 

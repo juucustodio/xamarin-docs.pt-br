@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: 72ffa4508f2c8f050f505313a28ce8278f2570b4
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 975b32610b4b496e329c5c5a29b79efd2874d8cf
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70760260"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73029498"
 ---
 # <a name="dependency-injection"></a>Injeção de dependência
 
@@ -26,7 +26,7 @@ Também há outros tipos de injeção de dependência, como *injeção de setter
 
 ## <a name="introduction-to-dependency-injection"></a>Introdução à injeção de dependência
 
-A injeção de dependência é uma versão especializada do padrão de inversão de controle (IoC), onde a preocupação que está sendo invertida é o processo de obtenção da dependência necessária. Com a injeção de dependência, outra classe é responsável por injetar dependências em um objeto no tempo de execução. O exemplo de código a seguir mostra `ProfileViewModel` como a classe é estruturada ao usar a injeção de dependência:
+A injeção de dependência é uma versão especializada do padrão de inversão de controle (IoC), onde a preocupação que está sendo invertida é o processo de obtenção da dependência necessária. Com a injeção de dependência, outra classe é responsável por injetar dependências em um objeto no tempo de execução. O exemplo de código a seguir mostra como a classe `ProfileViewModel` é estruturada ao usar a injeção de dependência:
 
 ```csharp
 public class ProfileViewModel : ViewModelBase  
@@ -41,7 +41,7 @@ public class ProfileViewModel : ViewModelBase
 }
 ```
 
-O `ProfileViewModel` Construtor recebe uma `IOrderService` instância como um argumento, injetado por outra classe. A única dependência na `ProfileViewModel` classe está no tipo de interface. Portanto, a `ProfileViewModel` classe não tem nenhum conhecimento da classe responsável por instanciar o `IOrderService` objeto. A classe responsável por instanciar o `IOrderService` objeto e inseri-lo `ProfileViewModel` na classe, é conhecida como o contêiner de injeção de *dependência*.
+O construtor de `ProfileViewModel` recebe uma instância de `IOrderService` como um argumento, injetado por outra classe. A única dependência na classe `ProfileViewModel` está no tipo de interface. Portanto, a classe `ProfileViewModel` não tem nenhum conhecimento da classe responsável por instanciar o objeto `IOrderService`. A classe responsável por instanciar o objeto `IOrderService` e inseri-lo na classe `ProfileViewModel`, é conhecida como *contêiner de injeção de dependência*.
 
 Os contêineres de injeção de dependência reduzem o acoplamento entre objetos, fornecendo um recurso para instanciar instâncias de classe e gerenciar sua vida útil com base na configuração do contêiner. Durante a criação de objetos, o contêiner injeta todas as dependências que o objeto exige. Se essas dependências ainda não tiverem sido criadas, o contêiner criará e resolverá suas dependências primeiro.
 
@@ -57,20 +57,20 @@ Há várias vantagens em usar um contêiner de injeção de dependência:
 
 No contexto de um aplicativo Xamarin. Forms que usa o MVVM, um contêiner de injeção de dependência normalmente será usado para registrar e resolver modelos de exibição e para registrar serviços e inseri-los em modelos de exibição.
 
-Há muitos contêineres de injeção de dependência disponíveis, com o aplicativo móvel eShopOnContainers usando Autofac para gerenciar a instanciação do modelo de exibição e classes de serviço no aplicativo. O Autofac facilita a criação de aplicativos menos rígidos e fornece todos os recursos normalmente encontrados em contêineres de injeção de dependência, incluindo métodos para registrar mapeamentos de tipo e instâncias de objeto, resolver objetos, gerenciar tempos de vida de objetos e injetar objetos dependentes em construtores de objetos que ele resolve. Para obter mais informações sobre Autofac, consulte [Autofac](http://autofac.readthedocs.io/en/latest/index.html) em readthedocs.IO.
+Há muitos contêineres de injeção de dependência disponíveis, com o aplicativo móvel eShopOnContainers usando Autofac para gerenciar a instanciação do modelo de exibição e classes de serviço no aplicativo. O Autofac facilita a criação de aplicativos menos rígidos e fornece todos os recursos normalmente encontrados em contêineres de injeção de dependência, incluindo métodos para registrar mapeamentos de tipo e instâncias de objeto, resolver objetos, gerenciar tempos de vida de objetos e injetar objetos dependentes em construtores de objetos que ele resolve. Para obter mais informações sobre Autofac, consulte [Autofac](https://autofac.readthedocs.io/en/latest/index.html) em readthedocs.IO.
 
-No Autofac, a `IContainer` interface fornece o contêiner de injeção de dependência. A Figura 3-1 mostra as dependências ao usar esse contêiner, que instancia `IOrderService` um objeto e o `ProfileViewModel` injeta na classe.
+No Autofac, a interface `IContainer` fornece o contêiner de injeção de dependência. A Figura 3-1 mostra as dependências ao usar esse contêiner, que instancia um objeto `IOrderService` e o injeta na classe `ProfileViewModel`.
 
-![](dependency-injection-images/dependencyinjection.png "Exemplo de dependências ao usar injeção de dependência")
+![](dependency-injection-images/dependencyinjection.png "Dependencies example when using dependency injection")
 
 **Figura 3-1:** Dependências ao usar injeção de dependência
 
-Em tempo de execução, o contêiner deve saber qual implementação `IOrderService` da interface ela deve instanciar, antes de poder `ProfileViewModel` criar uma instância de um objeto. Isso envolve:
+Em tempo de execução, o contêiner deve saber qual implementação da interface de `IOrderService` ela deve criar uma instância, antes de poder instanciar um objeto `ProfileViewModel`. Isso envolve:
 
-- O contêiner que decide como criar uma instância de um objeto `IOrderService` que implementa a interface. Isso é conhecido como *registro*.
-- O contêiner que instancia o objeto que implementa a `IOrderService` interface e o `ProfileViewModel` objeto. Isso é conhecido como *resolução*.
+- O contêiner que decide como criar uma instância de um objeto que implementa a interface `IOrderService`. Isso é conhecido como *registro*.
+- O contêiner que instancia o objeto que implementa a interface `IOrderService` e o objeto `ProfileViewModel`. Isso é conhecido como *resolução*.
 
-Eventualmente, o aplicativo terminará de usar `ProfileViewModel` o objeto e ele ficará disponível para coleta de lixo. Neste ponto, o coletor de lixo deve descartar `IOrderService` a instância se outras classes não compartilharem a mesma instância.
+Eventualmente, o aplicativo terminará de usar o objeto `ProfileViewModel` e ele ficará disponível para coleta de lixo. Neste ponto, o coletor de lixo deve descartar a instância de `IOrderService` se outras classes não compartilharem a mesma instância.
 
 > [!TIP]
 > Gravar código independente de contêiner. Sempre tente escrever código independente de contêiner para desacoplar o aplicativo do contêiner de dependência específico que está sendo usado.
@@ -87,25 +87,25 @@ Há duas maneiras de registrar tipos e objetos no contêiner por meio de código
 > [!TIP]
 > Contêineres de injeção de dependência nem sempre são adequados. A injeção de dependência apresenta mais complexidade e requisitos que podem não ser apropriados ou úteis para aplicativos pequenos. Se uma classe não tiver nenhuma dependência ou não for uma dependência para outros tipos, talvez não faça sentido colocá-la no contêiner. Além disso, se uma classe tiver um único conjunto de dependências que são integrais para o tipo e nunca serão alteradas, talvez não faça sentido colocá-la no contêiner.
 
-O registro de tipos que exigem injeção de dependência deve ser executado em um único método em um aplicativo, e esse método deve ser invocado no início do ciclo de vida do aplicativo para garantir que o aplicativo esteja ciente das dependências entre suas classes. No aplicativo móvel eShopOnContainers, isso é executado pela `ViewModelLocator` classe, que cria o `IContainer` objeto e é a única classe no aplicativo que contém uma referência a esse objeto. O exemplo de código a seguir mostra como o aplicativo móvel eShopOnContainers declara `IContainer` o objeto `ViewModelLocator` na classe:
+O registro de tipos que exigem injeção de dependência deve ser executado em um único método em um aplicativo, e esse método deve ser invocado no início do ciclo de vida do aplicativo para garantir que o aplicativo esteja ciente das dependências entre suas classes. No aplicativo móvel eShopOnContainers, isso é executado pela classe `ViewModelLocator`, que cria o objeto `IContainer` e é a única classe no aplicativo que contém uma referência a esse objeto. O exemplo de código a seguir mostra como o aplicativo móvel eShopOnContainers declara o objeto `IContainer` na classe `ViewModelLocator`:
 
 ```csharp
 private static IContainer _container;
 ```
 
-Tipos e instâncias são registrados no `RegisterDependencies` método `ViewModelLocator` na classe. Isso é obtido primeiro com a criação `ContainerBuilder` de uma instância, que é demonstrada no exemplo de código a seguir:
+Tipos e instâncias são registrados no método `RegisterDependencies` na classe `ViewModelLocator`. Isso é obtido primeiro com a criação de uma instância de `ContainerBuilder`, que é demonstrada no exemplo de código a seguir:
 
 ```csharp
 var builder = new ContainerBuilder();
 ```
 
-Os tipos e as instâncias são então registrados `ContainerBuilder` com o objeto, e o exemplo de código a seguir demonstra a forma mais comum do registro de tipo:
+Os tipos e as instâncias são então registrados com o objeto `ContainerBuilder`, e o exemplo de código a seguir demonstra a forma mais comum do registro de tipo:
 
 ```csharp
 builder.RegisterType<RequestProvider>().As<IRequestProvider>();
 ```
 
-O `RegisterType` método mostrado aqui mapeia um tipo de interface para um tipo concreto. Ele informa ao contêiner para criar uma `RequestProvider` instância de um objeto ao criar uma instância de um objeto que requer `IRequestProvider` uma injeção de um por meio de um construtor.
+O método `RegisterType` mostrado aqui mapeia um tipo de interface para um tipo concreto. Ele informa ao contêiner para criar uma instância de um objeto `RequestProvider` ao criar uma instância de um objeto que requer uma injeção de um `IRequestProvider` por meio de um construtor.
 
 Os tipos concretos também podem ser registrados diretamente sem um mapeamento de um tipo de interface, conforme mostrado no exemplo de código a seguir:
 
@@ -113,34 +113,34 @@ Os tipos concretos também podem ser registrados diretamente sem um mapeamento d
 builder.RegisterType<ProfileViewModel>();
 ```
 
-Quando o `ProfileViewModel` tipo for resolvido, o contêiner injetará suas dependências necessárias.
+Quando o tipo de `ProfileViewModel` for resolvido, o contêiner injetará suas dependências necessárias.
 
-O Autofac também permite o registro de instância, em que o contêiner é responsável por manter uma referência a uma instância singleton de um tipo. Por exemplo, o exemplo de código a seguir mostra como o aplicativo móvel eShopOnContainers registra o tipo concreto a ser `ProfileViewModel` usado quando uma `IOrderService` instância requer uma instância:
+O Autofac também permite o registro de instância, em que o contêiner é responsável por manter uma referência a uma instância singleton de um tipo. Por exemplo, o exemplo de código a seguir mostra como o aplicativo móvel eShopOnContainers registra o tipo concreto a ser usado quando uma instância de `ProfileViewModel` requer uma instância de `IOrderService`:
 
 ```csharp
 builder.RegisterType<OrderService>().As<IOrderService>().SingleInstance();
 ```
 
-O `RegisterType` método mostrado aqui mapeia um tipo de interface para um tipo concreto. O `SingleInstance` método configura o registro para que cada objeto dependente receba a mesma instância compartilhada. Portanto, apenas uma única `OrderService` instância existirá no contêiner, que é compartilhada por objetos que exigem uma injeção de um `IOrderService` por meio de um construtor.
+O método `RegisterType` mostrado aqui mapeia um tipo de interface para um tipo concreto. O método `SingleInstance` configura o registro para que cada objeto dependente receba a mesma instância compartilhada. Portanto, apenas uma única instância de `OrderService` existirá no contêiner, que é compartilhada por objetos que exigem uma injeção de um `IOrderService` por meio de um construtor.
 
-O registro da instância também pode ser executado `RegisterInstance` com o método, que é demonstrado no exemplo de código a seguir:
+O registro da instância também pode ser executado com o método `RegisterInstance`, que é demonstrado no seguinte exemplo de código:
 
 ```csharp
 builder.RegisterInstance(new OrderMockService()).As<IOrderService>();
 ```
 
-O `RegisterInstance` método mostrado aqui cria uma nova `OrderMockService` instância e a registra com o contêiner. Portanto, há apenas uma `OrderMockService` única instância no contêiner, que é compartilhada por objetos que exigem uma injeção de um `IOrderService` por meio de um construtor.
+O método `RegisterInstance` mostrado aqui cria uma nova instância de `OrderMockService` e a registra com o contêiner. Portanto, existe apenas uma única instância de `OrderMockService` no contêiner, que é compartilhada por objetos que exigem uma injeção de um `IOrderService` por meio de um construtor.
 
-Após o registro de tipo e instância `IContainer` , o objeto deve ser criado, o que é demonstrado no exemplo de código a seguir:
+Após o registro de tipo e instância, o objeto `IContainer` deve ser criado, o que é demonstrado no exemplo de código a seguir:
 
 ```csharp
 _container = builder.Build();
 ```
 
-Invocar o `Build` método `ContainerBuilder` na instância cria um novo contêiner de injeção de dependência que contém os registros que foram feitos.
+Invocar o método `Build` na instância `ContainerBuilder` cria um novo contêiner de injeção de dependência que contém os registros que foram feitos.
 
 > [!TIP]
-> Considere um `IContainer` como imutável. Embora o Autofac forneça `Update` um método para atualizar os registros em um contêiner existente, chamar esse método deve ser evitado sempre que possível. Há riscos para modificar um contêiner após sua criação, especialmente se o contêiner tiver sido usado. Para obter mais informações, consulte [considerar um contêiner como imutável](http://docs.autofac.org/en/latest/best-practices/#consider-a-container-as-immutable) em readthedocs.IO.
+> Considere um `IContainer` como imutável. Enquanto o Autofac fornece um método de `Update` para atualizar os registros em um contêiner existente, chamar esse método deve ser evitado sempre que possível. Há riscos para modificar um contêiner após sua criação, especialmente se o contêiner tiver sido usado. Para obter mais informações, consulte [considerar um contêiner como imutável](https://docs.autofac.org/en/latest/best-practices/#consider-a-container-as-immutable) em readthedocs.IO.
 
 <a name="resolution" />
 
@@ -154,13 +154,13 @@ Geralmente, quando um tipo é resolvido, uma das três coisas acontece:
 1. Se o tipo tiver sido registrado como um singleton, o contêiner retornará a instância singleton. Se esta for a primeira vez que o tipo é chamado para, o contêiner a cria, se necessário, e mantém uma referência a ele.
 1. Se o tipo não tiver sido registrado como um singleton, o contêiner retornará uma nova instância e não manterá uma referência a ele.
 
-O exemplo de código a seguir mostra `RequestProvider` como o tipo que foi registrado anteriormente com Autofac pode ser resolvido:
+O exemplo de código a seguir mostra como o tipo de `RequestProvider` que foi registrado anteriormente com Autofac pode ser resolvido:
 
 ```csharp
 var requestProvider = _container.Resolve<IRequestProvider>();
 ```
 
-Neste exemplo, Autofac é solicitado a resolver o tipo concreto para o `IRequestProvider` tipo, juntamente com quaisquer dependências. Normalmente, o `Resolve` método é chamado quando uma instância de um tipo específico é necessária. Para obter informações sobre como controlar o tempo de vida de objetos resolvidos, consulte [Gerenciando o tempo de vida de objetos resolvidos](#managing_the_lifetime_of_resolved_objects).
+Neste exemplo, Autofac é solicitado a resolver o tipo concreto para o tipo de `IRequestProvider`, juntamente com quaisquer dependências. Normalmente, o método `Resolve` é chamado quando uma instância de um tipo específico é necessária. Para obter informações sobre como controlar o tempo de vida de objetos resolvidos, consulte [Gerenciando o tempo de vida de objetos resolvidos](#managing_the_lifetime_of_resolved_objects).
 
 O exemplo de código a seguir mostra como o aplicativo móvel eShopOnContainers instancia tipos de modelo de exibição e suas dependências:
 
@@ -168,7 +168,7 @@ O exemplo de código a seguir mostra como o aplicativo móvel eShopOnContainers 
 var viewModel = _container.Resolve(viewModelType);
 ```
 
-Neste exemplo, Autofac é solicitado a resolver o tipo de modelo de exibição para um modelo de exibição solicitado, e o contêiner também resolverá quaisquer dependências. Ao resolver o `ProfileViewModel` tipo, a dependência a ser resolvida é `IOrderService` um objeto. Portanto, o Autofac primeiro constrói um `OrderService` objeto e, em seguida, o passa para o `ProfileViewModel` Construtor da classe. Para obter mais informações sobre como o aplicativo móvel eShopOnContainers constrói modelos de exibição e os associa a exibições, consulte [criando automaticamente um modelo de exibição com um localizador de modelo de exibição](~/xamarin-forms/enterprise-application-patterns/mvvm.md#automatically_creating_a_view_model_with_a_view_model_locator).
+Neste exemplo, Autofac é solicitado a resolver o tipo de modelo de exibição para um modelo de exibição solicitado, e o contêiner também resolverá quaisquer dependências. Ao resolver o tipo de `ProfileViewModel`, a dependência a ser resolvida é um objeto `IOrderService`. Portanto, o Autofac primeiro constrói um objeto `OrderService` e, em seguida, o passa para o construtor da classe `ProfileViewModel`. Para obter mais informações sobre como o aplicativo móvel eShopOnContainers constrói modelos de exibição e os associa a exibições, consulte [criando automaticamente um modelo de exibição com um localizador de modelo de exibição](~/xamarin-forms/enterprise-application-patterns/mvvm.md#automatically_creating_a_view_model_with_a_view_model_locator).
 
 > [!NOTE]
 > Efetuar o registro e a resolução de tipos usando um contêiner tem um custo de desempenho devido ao uso da reflexão pelo contêiner para criar cada tipo, especialmente se as dependências estiverem sendo reconstruídas para cada navegação de página no aplicativo. Se houver muitas dependências ou se elas forem profundas, o custo da criação poderá aumentar significativamente.
@@ -179,18 +179,18 @@ Neste exemplo, Autofac é solicitado a resolver o tipo de modelo de exibição p
 
 Depois de registrar um tipo, o comportamento padrão para Autofac é criar uma nova instância do tipo registrado cada vez que o tipo é resolvido ou quando o mecanismo de dependência injeta instâncias em outras classes. Nesse cenário, o contêiner não mantém uma referência ao objeto resolvido. No entanto, ao registrar uma instância, o comportamento padrão do Autofac é gerenciar o tempo de vida do objeto como um singleton. Portanto, a instância permanece no escopo enquanto o contêiner está no escopo e é descartada quando o contêiner sai do escopo e é coletado pelo lixo, ou quando o código descarta explicitamente o contêiner.
 
-Um escopo de instância Autofac pode ser usado para especificar o comportamento singleton de um objeto que o Autofac cria a partir de um tipo registrado. Os escopos da instância Autofac gerenciam os tempos de vida do objeto instanciados pelo contêiner. O escopo da instância padrão para `RegisterType` o método é `InstancePerDependency` o escopo. No entanto `SingleInstance` , o escopo pode ser usado `RegisterType` com o método, para que o contêiner crie ou retorne uma instância singleton de um tipo `Resolve` ao chamar o método. O exemplo de código a seguir mostra como Autofac é instruído a criar uma instância singleton `NavigationService` da classe:
+Um escopo de instância Autofac pode ser usado para especificar o comportamento singleton de um objeto que o Autofac cria a partir de um tipo registrado. Os escopos da instância Autofac gerenciam os tempos de vida do objeto instanciados pelo contêiner. O escopo de instância padrão para o método `RegisterType` é o escopo de `InstancePerDependency`. No entanto, o escopo de `SingleInstance` pode ser usado com o método `RegisterType`, para que o contêiner crie ou retorne uma instância singleton de um tipo ao chamar o método `Resolve`. O exemplo de código a seguir mostra como Autofac é instruído a criar uma instância singleton da classe `NavigationService`:
 
 ```csharp
 builder.RegisterType<NavigationService>().As<INavigationService>().SingleInstance();
 ```
 
-Na primeira vez que a `INavigationService` interface é resolvida, o contêiner cria um `NavigationService` novo objeto e mantém uma referência a ele. Em qualquer resoluções subsequentes `INavigationService` da interface, o contêiner retorna uma referência `NavigationService` ao objeto que foi criado anteriormente.
+Na primeira vez que a interface de `INavigationService` é resolvida, o contêiner cria um novo objeto de `NavigationService` e mantém uma referência a ele. Em qualquer resoluções subsequentes da interface `INavigationService`, o contêiner retorna uma referência ao objeto `NavigationService` que foi criado anteriormente.
 
 > [!NOTE]
 > O escopo SingleInstance descarta objetos criados quando o contêiner é Descartado.
 
-Autofac inclui escopos de instância adicionais. Para obter mais informações, consulte [escopo da instância](http://autofac.readthedocs.io/en/latest/lifetime/instance-scope.html) em readthedocs.IO.
+Autofac inclui escopos de instância adicionais. Para obter mais informações, consulte [escopo da instância](https://autofac.readthedocs.io/en/latest/lifetime/instance-scope.html) em readthedocs.IO.
 
 ## <a name="summary"></a>Resumo
 

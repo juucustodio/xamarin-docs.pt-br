@@ -4,15 +4,15 @@ description: Este documento fornece várias dicas de solução de problemas para
 ms.prod: xamarin
 ms.assetid: 323DD5EE-87CE-48E4-B234-1CF61B45A019
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 09/22/2016
-ms.openlocfilehash: 51276a7682599c6480c637fac385992feaf06e49
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: a4e7f7169e4c7ec0ec2947e17b1434179f47488f
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70278892"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73017030"
 ---
 # <a name="xamarinmac---macos-sierra-troubleshooting"></a>Xamarin. Mac – solução de problemas de macOS Sierra
 
@@ -51,28 +51,28 @@ Se uma data de validade incorreta ou um código de segurança (CW) for inserido 
 
 Problemas Conhecidos:
 
-- Chamar `NSObject.ValueForKey` será uma `null` chave resultará em uma exceção.
-- Ambos `NSURLSession` `http://` e `NSURLConnection` não mais conjuntos de codificação RC4 durante o handshake de TLS para URLs.
-- Os `ViewWillLayoutSubviews` aplicativos podem parar se modificarem a geometria de uma superexibição nos métodos `LayoutSubviews` ou.
+- Chamar `NSObject.ValueForKey` será uma chave de `null` resultará em uma exceção.
+- Os `NSURLSession` e `NSURLConnection` não são mais conjuntos de codificação RC4 durante o handshake de TLS para URLs de `http://`.
+- Os aplicativos podem travar se modificarem a geometria de uma superexibição nos métodos `ViewWillLayoutSubviews` ou `LayoutSubviews`.
 - Para todas as conexões SSL/TLS, a cifra simétrica RC4 agora está desabilitada por padrão. Além disso, a API de transporte seguro não dá mais suporte a SSLv3 e é recomendável que o aplicativo pare de usar a criptografia SHA-1 e 3DES assim que possível.
 
 <a name="CFNetwork-HTTP-Protocol" />
 
 ## <a name="cfnetwork-http-protocol"></a>Protocolo HTTP CFNetwork
 
-A `HTTPBodyStream` propriedade `NSURLConnection` `NSURLSession` da classe deve ser definida como um fluxo não aberto, já que e agora impõe estritamente esse requisito. `NSMutableURLRequest`
+A propriedade `HTTPBodyStream` da classe `NSMutableURLRequest` deve ser definida como um fluxo não aberto, pois `NSURLConnection` e `NSURLSession` agora impõem estritamente esse requisito.
 
 <a name="CloudKit" />
 
 ## <a name="cloudkit"></a>CloudKit
 
-As operações de longa execução retornarão um _"você não tem permissão para salvar o arquivo"._ ao.
+As operações de longa execução retornarão um _"você não tem permissão para salvar o arquivo"._ Ao.
 
 <a name="CoreImage" />
 
 ## <a name="core-image"></a>Imagem principal
 
-A `CIImageProcessor` API agora dá suporte a uma contagem de imagens de entrada arbitrária. `CIImageProcessor`A API que foi incluída no macOS Sierra beta 1 será removida.
+A API de `CIImageProcessor` agora dá suporte a uma contagem de imagens de entrada arbitrária. `CIImageProcessor` API que foi incluída no macOS Sierra beta 1 será removida.
 
 <a name="Notifications" />
 
@@ -84,13 +84,13 @@ Ao trabalhar com as extensões de conteúdo de notificação, os controladores d
 
 ## <a name="nsuseractivity"></a>NSUserActivity
 
-Após uma operação de entrega, `UserInfo` a propriedade de `NSUserActivity` um objeto pode estar vazia. `BecomeCurrent` Chame`NSUserActivity` explicitamente o objeto como uma solução alternativa atual.
+Após uma operação de entrega, a propriedade `UserInfo` de um objeto `NSUserActivity` pode estar vazia. Chame explicitamente `BecomeCurrent` objeto `NSUserActivity` como uma solução alternativa atual.
 
 <a name="Safari" />
 
 ## <a name="safari"></a>Safari
 
-O geolocation requer uma`https://`URL segura () para funcionar no Ios 10 e MacOS Sierra para impedir o uso mal-intencionado de dados de localização.
+O geolocation requer uma URL segura (`https://`) para trabalhar no Ios 10 e MacOS Sierra para impedir o uso mal-intencionado de dados de localização.
 
 ## <a name="related-links"></a>Links relacionados
 

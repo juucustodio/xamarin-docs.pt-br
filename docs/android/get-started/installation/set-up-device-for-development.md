@@ -4,15 +4,15 @@ description: Esse artigo discutirá como configurar um dispositivo Android e con
 ms.prod: xamarin
 ms.assetid: 9116A3AA-EA00-56AF-AE70-BAEEC045EF11
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/22/2018
-ms.openlocfilehash: a2b69152ab616e74761d9acf6a74d30144fe43b3
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
-ms.translationtype: HT
+ms.openlocfilehash: f5b92bc202cbf9765a63219ad653442152c3eb24
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65925054"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73020711"
 ---
 # <a name="set-up-device-for-development"></a>Configurar o dispositivo para desenvolvimento
 
@@ -71,7 +71,7 @@ Execute o aplicativo **android.bat** no diretório **[caminho de instalação do
 
 ### <a name="download-the-usb-drivers"></a>Baixar os Drivers USB
 
-Os dispositivos Google Nexus (exceto o Galaxy Nexus) exigem o Driver USB do Google. O driver para o Galaxy Nexus é [distribuído pela Samsung](http://www.samsung.com/us/support/downloads/).
+Os dispositivos Google Nexus (exceto o Galaxy Nexus) exigem o Driver USB do Google. O driver para o Galaxy Nexus é [distribuído pela Samsung](https://www.samsung.com/us/support/downloads/).
 Todos os outros dispositivos Android devem usar o [driver USB do seu respectivo fabricante](https://developer.android.com/tools/extras/oem-usb.html#Drivers).
 
 Instale o pacote do **Driver USB do Google** iniciando o Gerenciador de SDK do Android e expandindo a pasta **Extras**, como pode ser visto na captura de tela a seguir:
@@ -183,7 +183,7 @@ Esse artigo discutiu como configurar um dispositivo Android para desenvolvimento
 
 - [Android Debug Bridge](https://developer.android.com/tools/help/adb.html)
 - [Usando Dispositivos de Hardware](https://developer.android.com/tools/device.html)
-- [Downloads de Drivers Samsung](http://www.samsung.com/us/support/downloads/)
+- [Downloads de Drivers Samsung](https://www.samsung.com/us/support/downloads/)
 - [Drivers USB OEM](https://developer.android.com/tools/extras/oem-usb.html#Drivers)
 - [Driver USB do Google](https://developer.android.com/sdk/win-usb.html)
-- [Desenvolvedores de XDA: Windows 8 – Problema do ADB/driver de inicialização rápida resolvido](http://forum.xda-developers.com/showthread.php?t=1583801)
+- [Desenvolvedores XDA: Windows 8 – problema do ADB/driver de inicialização rápida resolvido](https://forum.xda-developers.com/showthread.php?t=1583801)

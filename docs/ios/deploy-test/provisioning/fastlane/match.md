@@ -4,15 +4,15 @@ description: Este documento descreve o comando match do fastlane, que é usado p
 ms.prod: xamarin
 ms.assetid: C4A2A67E-0643-4CED-B1A9-79D65054F3CA
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 8991ddc55069fad8c5f023f35ece0926f0f7e5b8
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 08fdcafe33e4b9b2aa6b5595c732718878be33f2
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70285722"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028506"
 ---
 # <a name="fastlane-for-ios---match"></a>fastlane para iOS - match
 
@@ -59,15 +59,15 @@ fastlane match init
 
 Quando solicitado, digite a URL do repositório git:
 
- [![](match-images/fastlane-image7.png "Inserir a URL do repositório git")](match-images/fastlane-image7.png#lightbox)
+ [![](match-images/fastlane-image7.png "Enter the URL of the git repo")](match-images/fastlane-image7.png#lightbox)
 
 A URL pode ser encontrada e copiada clicando no botão **Clonar ou Baixar** no github.com, conforme ilustrado abaixo:
 
-[![](match-images/fastlane-image6.png "A URL no botão Clonar ou Baixar no github.com")](match-images/fastlane-image6.png#lightbox)
+[![](match-images/fastlane-image6.png "The URL under the Clone or Download button on github.com")](match-images/fastlane-image6.png#lightbox)
 
 A inicialização do projeto cria um matchfile – um arquivo de texto que pode ser editado para passar as variáveis de ambiente para a ferramenta de correspondência. Um exemplo de matchfile é ilustrado abaixo:
 
-[![](match-images/fastlane-image8.png "Um exemplo de matchfile")](match-images/fastlane-image8.png#lightbox)
+[![](match-images/fastlane-image8.png "A matchfile example")](match-images/fastlane-image8.png#lightbox)
 
 <a name="running" />
 
@@ -93,7 +93,7 @@ Além de criar novos certificados e perfis, usar qualquer um desses comandos adi
 - Um arquivo Leiame com instruções básicas
 - Uma versão compatível
 
-[![](match-images/fastlane-image9.png "A estrutura do projeto no repositório git")](match-images/fastlane-image9.png#lightbox)
+[![](match-images/fastlane-image9.png "The project structure in the git repo")](match-images/fastlane-image9.png#lightbox)
 
 Os perfis de provisionamento estão instalados em `~/Library/MobileDevice/Provisioning Profiles`. Certificados e chaves privadas são instalados diretamente no seu conjunto de chaves.
 

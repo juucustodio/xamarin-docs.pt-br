@@ -4,15 +4,15 @@ description: Este tópico explica como definir recursos que serão usados soment
 ms.prod: xamarin
 ms.assetid: 2111C18A-3EDA-3787-25E1-3869FF4BE441
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 07/25/2018
-ms.openlocfilehash: 6ae10e73c3f41226560beb8cf8c50608fc6adf3f
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: ccac795333dff52d35a66e8cd205c7b5bbd1bb2c
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "70762617"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73029407"
 ---
 # <a name="resource-qualifiers-and-visualization-options"></a>Qualificadores de recursos e opções de visualização
 
@@ -24,7 +24,7 @@ _Este tópico explica como definir recursos que serão usados somente quando alg
 
 **As opções do qualificador de recursos** podem ser acessadas clicando no ícone de reticências à direita do botão modo **paisagem** :
 
-[Opções de qualificador ![Resource](resource-qualifiers-images/vs/08-resource-qual-opt-sml.png)](resource-qualifiers-images/vs/08-resource-qual-opt.png#lightbox)
+[![opções do qualificador de recursos](resource-qualifiers-images/vs/08-resource-qual-opt-sml.png)](resource-qualifiers-images/vs/08-resource-qual-opt.png#lightbox)
 
 Essa caixa de diálogo apresenta menus suspensos para os seguintes qualificadores de recursos:
 
@@ -34,11 +34,11 @@ Essa caixa de diálogo apresenta menus suspensos para os seguintes qualificadore
 
 Cada um desses menus suspensos abre novas caixas de diálogo em que você pode selecionar e configurar qualificadores de recursos (conforme explicado a seguir).
 
-### <a name="language"></a>Linguagem
+### <a name="language"></a>Idioma
 
 O menu suspenso **idioma** lista somente os idiomas que têm recursos definidos (ou **todos os idiomas**, que é o padrão). No entanto, também há uma opção **Adicionar idioma/região...** que permite adicionar um novo idioma à lista:
 
-[idioma/região ![Add](resource-qualifiers-images/vs/09-add-language-region-sml.png)](resource-qualifiers-images/vs/09-add-language-region.png#lightbox)
+[![Adicionar idioma/região](resource-qualifiers-images/vs/09-add-language-region-sml.png)](resource-qualifiers-images/vs/09-add-language-region.png#lightbox)
 
 Quando você clica em **Adicionar idioma/região...** , a caixa de diálogo **Selecionar idioma** é aberta para exibir listas suspensas de regiões e idiomas disponíveis:
 
@@ -54,7 +54,7 @@ Observe que, se você adicionar um novo idioma, mas não criar novos recursos pa
 
 Quando você clica no menu suspenso **modo de interface do usuário** , uma lista de modos é exibida, como **normal**, **encaixe de carro**, **encaixe de mesa**, **televisão**, **dispositivo**e **inspeção**:
 
-[menu do modo de ![UI](resource-qualifiers-images/vs/12-ui-mode-sml.png)](resource-qualifiers-images/vs/12-ui-mode.png#lightbox)
+[menu do modo de interface do usuário ![](resource-qualifiers-images/vs/12-ui-mode-sml.png)](resource-qualifiers-images/vs/12-ui-mode.png#lightbox)
 
 Abaixo dessa lista, os modos noturnos **não são noturno** e à **noite**, seguidos pelas direções de layout da **esquerda para a direita** e da **direita para a esquerda** (para obter informações sobre as opções da **esquerda para a direita** e da **direita para a esquerda** , consulte [ LayoutDirection](xref:Android.Util.LayoutDirection)).
 Os últimos itens na caixa de diálogo **Opções do qualificador de recursos** são as **telas arredondadas** (para uso com o Android desgaste) ou **não telas arredondadas**.
@@ -103,7 +103,7 @@ Para obter mais informações sobre tipos de recursos, consulte [recursos do And
 
 **As opções do qualificador de recursos** podem ser acessadas clicando no ícone de reticências à direita do botão modo **paisagem** :
 
-[opções de qualificador ![Resource](resource-qualifiers-images/xs/08-resource-qual-opt-m75-sml.png)](resource-qualifiers-images/xs/08-resource-qual-opt-m75.png#lightbox)
+[![opções do qualificador de recursos](resource-qualifiers-images/xs/08-resource-qual-opt-m75-sml.png)](resource-qualifiers-images/xs/08-resource-qual-opt-m75.png#lightbox)
 
 Essa caixa de diálogo apresenta menus suspensos para os seguintes qualificadores de recursos:
 
@@ -113,19 +113,19 @@ Essa caixa de diálogo apresenta menus suspensos para os seguintes qualificadore
 
 Cada um desses menus suspensos abre novas caixas de diálogo em que você pode selecionar e configurar qualificadores de recursos (conforme explicado a seguir).
 
-### <a name="language"></a>Linguagem
+### <a name="language"></a>Idioma
 
 O menu suspenso **idioma** lista somente os idiomas que têm recursos definidos (ou **todos os idiomas**, que é o padrão). No entanto, também há uma opção **Adicionar idioma/região...** que permite adicionar um novo idioma à lista:
 
-[idioma/região ![Add](resource-qualifiers-images/xs/09-add-language-region-m75-sml.png)](resource-qualifiers-images/xs/09-add-language-region-m75.png#lightbox)
+[![Adicionar idioma/região](resource-qualifiers-images/xs/09-add-language-region-m75-sml.png)](resource-qualifiers-images/xs/09-add-language-region-m75.png#lightbox)
 
 Quando você clica em **Adicionar idioma/região...** , a caixa de diálogo **Selecionar idioma** é aberta para exibir listas suspensas de regiões e idiomas disponíveis:
 
-[![List de idiomas](resource-qualifiers-images/xs/10-languages-m75-sml.png)](resource-qualifiers-images/xs/10-languages-m75.png#lightbox)
+[![lista de idiomas](resource-qualifiers-images/xs/10-languages-m75-sml.png)](resource-qualifiers-images/xs/10-languages-m75.png#lightbox)
 
 Neste exemplo, escolhemos **fr (francês)** para a linguagem e **ser** (Bélgica) para o dialeto regional do francês. Observe que o campo **região** é opcional porque muitas linguagens podem ser especificadas sem considerar regiões específicas. Quando o menu suspenso **idioma** é aberto novamente, ele exibe o recurso recém-adicionado de idioma/região:
 
-[![Language e região escolhidos](resource-qualifiers-images/xs/11-language-region-added-m75-sml.png)](resource-qualifiers-images/xs/11-language-region-added-m75.png#lightbox)
+[Idioma ![e região escolhidos](resource-qualifiers-images/xs/11-language-region-added-m75-sml.png)](resource-qualifiers-images/xs/11-language-region-added-m75.png#lightbox)
 
 Observe que, se você adicionar um novo idioma, mas não criar novos recursos para ele, o idioma adicionado não será mais exibido na próxima vez que você abrir o projeto.
 
@@ -133,7 +133,7 @@ Observe que, se você adicionar um novo idioma, mas não criar novos recursos pa
 
 Quando você clica no menu suspenso **modo de interface do usuário** , uma lista de modos é exibida, como **normal**, **encaixe de carro**, **encaixe de mesa**, **televisão**, **dispositivo**e **inspeção**:
 
-[menu do modo de ![UI](resource-qualifiers-images/xs/12-ui-mode-m75-sml.png)](resource-qualifiers-images/xs/12-ui-mode-m75.png#lightbox)
+[menu do modo de interface do usuário ![](resource-qualifiers-images/xs/12-ui-mode-m75-sml.png)](resource-qualifiers-images/xs/12-ui-mode-m75.png#lightbox)
 
 Abaixo dessa lista, os modos noturnos **não** são da noite e da **noite**, seguidos pelas direções de layout da **esquerda para a direita** e da **direita para a esquerda**. O último par de opções permite que você selecione **telas arredondadas** ou **telas retangulares** (úteis para dispositivos Android de desgaste).
 
@@ -144,7 +144,7 @@ Para obter informações sobre as opções da **esquerda para a direita** e da *
 
 O ícone **configurações da barra de ações** está disponível à esquerda do ícone de pincel (editor de tema):
 
-[configurações da barra de ![Action](resource-qualifiers-images/xs/13-action-bar-m75-sml.png)](resource-qualifiers-images/xs/13-action-bar-m75.png#lightbox)
+[![configurações da barra de ação](resource-qualifiers-images/xs/13-action-bar-m75-sml.png)](resource-qualifiers-images/xs/13-action-bar-m75.png#lightbox)
 
 Esse ícone abre uma caixa de diálogo popover que fornece uma maneira de selecionar um dos três modos de barra de ação:
 
@@ -158,17 +158,17 @@ Esse ícone abre uma caixa de diálogo popover que fornece uma maneira de seleci
 
 O menu suspenso **tema** exibe todos os temas definidos no projeto. A seleção de **mais temas** abre uma caixa de diálogo com uma lista de todos os temas disponíveis no SDK do Android instalado, conforme mostrado abaixo:
 
-[lista de temas do ![More](resource-qualifiers-images/xs/14-theme-menu-m75-sml.png)](resource-qualifiers-images/xs/14-theme-menu-m75.png#lightbox)
+[![mais lista de temas](resource-qualifiers-images/xs/14-theme-menu-m75-sml.png)](resource-qualifiers-images/xs/14-theme-menu-m75.png#lightbox)
 
 Quando um tema é selecionado, o Design Surface é atualizado para mostrar o efeito do novo tema. Observe que essa alteração se tornará permanente somente se o botão **OK** for clicado na caixa de diálogo **tema** . Depois que um tema tiver sido selecionado, ele será incluído no menu suspenso **tema** , conforme mostrado abaixo:
 
-[o tema do ![Light agora está disponível](resource-qualifiers-images/xs/15-light-theme-m75-sml.png)](resource-qualifiers-images/xs/15-light-theme-m75.png#lightbox)
+[![tema de luz agora está disponível](resource-qualifiers-images/xs/15-light-theme-m75-sml.png)](resource-qualifiers-images/xs/15-light-theme-m75.png#lightbox)
 
 ## <a name="android-version"></a>Versão do Android
 
 O seletor de **versão** do Android define a versão do Android que é usada para renderizar o layout no designer. O seletor exibe todas as versões que são compatíveis com a versão da estrutura de destino do projeto:
 
-[![List de versões do Android](resource-qualifiers-images/xs/16-android-version-m75-sml.png)](resource-qualifiers-images/xs/16-android-version-m75.png#lightbox)
+[Lista de![de versões do Android](resource-qualifiers-images/xs/16-android-version-m75-sml.png)](resource-qualifiers-images/xs/16-android-version-m75.png#lightbox)
 
 A versão da estrutura de destino pode ser definida nas configurações do projeto na seção **Opções do projeto > Build > geral** . Para obter mais informações sobre a versão do Framework de destino, consulte [noções básicas sobre níveis de API do Android](~/android/app-fundamentals/android-api-levels.md).
 

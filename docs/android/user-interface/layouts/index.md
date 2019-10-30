@@ -4,15 +4,15 @@ description: Definindo a estrutura visual do seu aplicativo Xamarin. Android
 ms.prod: xamarin
 ms.assetid: 2BA72B0E-230D-4F98-B4D5-4EFB0D479789
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 08/18/2017
-ms.openlocfilehash: 60752760415bd416d339cc2a3729075b4fca0d32
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: f15aeff8590cf6d82168fd3e39ba6f78d649d2ab
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70764470"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028964"
 ---
 # <a name="xamarinandroid-layouts"></a>Layouts do Xamarin. Android
 
@@ -34,7 +34,7 @@ Os layouts são usados para organizar os elementos que compõem a interface de i
 
     ![Exibição de reciclo de exemplo](images/recycler-view.png)
 
-- [ListView](~/android/user-interface/layouts/list-view/index.md) é um grupo de exibição que cria uma lista de itens roláveis. Os itens de lista são inseridos automaticamente na lista usando um adaptador de lista. O `ListView` é um componente de interface do usuário importante dos aplicativos Android, pois é usado em todos os lugares de listas curtas de opções de menu para listas longas de contatos ou favoritos da Internet. Ele fornece uma maneira simples de apresentar uma lista de rolagem de linhas que podem ser formatadas com um estilo interno ou personalizados extensivamente. Uma instância de ListView requer um adaptador para alimentar com os dados contidos nas exibições de linha.
+- [ListView](~/android/user-interface/layouts/list-view/index.md) é um grupo de exibição que cria uma lista de itens roláveis. Os itens de lista são inseridos automaticamente na lista usando um adaptador de lista. O `ListView` é um componente de interface do usuário importante dos aplicativos Android, pois ele é usado em todos os lugares de listas curtas de opções de menu para listas longas de contatos ou favoritos da Internet. Ele fornece uma maneira simples de apresentar uma lista de rolagem de linhas que podem ser formatadas com um estilo interno ou personalizados extensivamente. Uma instância de ListView requer um adaptador para alimentar com os dados contidos nas exibições de linha.
 
     ![Exibição de lista de exemplo](images/list-view.png)
 

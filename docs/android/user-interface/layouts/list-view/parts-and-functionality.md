@@ -3,41 +3,41 @@ title: Partes e funcionalidade de ListView
 ms.prod: xamarin
 ms.assetid: ABA40FED-FF68-C0B0-BC43-C748CEE585D8
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 08/21/2017
-ms.openlocfilehash: 4566ee5d203b5d098133aebe2c32dbaec712e17a
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: b8fd44a70f4c7ecdcf7919dec1c81461200b35bf
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70764219"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028859"
 ---
-# <a name="xamarinandroid-listview-parts-and-functionality"></a>Funcionalidades e partes de ListView do Xamarin. Android
+# <a name="xamarinandroid-listview-parts-and-functionality"></a>Xamarin.Android ListView Parts and Functionality
 
-Um `ListView` consiste nas seguintes partes:
+A `ListView` consists of the following parts:
 
-- **Linhas** &ndash; A representação visível dos dados na lista.
+- **Rows** &ndash; The visible representation of the data in the list.
 
-- **Adaptador** do &ndash; Uma classe não visual que associa a fonte de dados ao modo de exibição de lista.
+- **Adapter** &ndash; A non-visual class that binds the data source to the list view.
 
-- **Rolagem rápida** &ndash; Um identificador que permite ao usuário rolar o comprimento da lista.
+- **Fast Scrolling** &ndash; A handle that lets the user scroll the length of the list.
 
-- **Índice da seção** &ndash; Um elemento de interface do usuário que flutua sobre as linhas de rolagem para indicar onde na lista as linhas atuais estão localizadas.
+- **Índice de seção** &ndash; um elemento de interface do usuário que flutua sobre as linhas de rolagem para indicar onde na lista as linhas atuais estão localizadas.
 
-Essas capturas de tela usam `ListView` um controle básico para mostrar como a rolagem rápida e o índice de seção são renderizados:
+Essas capturas de tela usam um controle de `ListView` básico para mostrar como a rolagem rápida e o índice de seção são renderizados:
 
-[![Capturas de tela de aplicativos usando linhas antigas, rolagem rápida e índice de seção simples](parts-and-functionality-images/listviewparts.png)](parts-and-functionality-images/listviewparts.png#lightbox)
+[![capturas de tela de aplicativos usando linhas antigas, rolagem rápida e índice de seção simples](parts-and-functionality-images/listviewparts.png)](parts-and-functionality-images/listviewparts.png#lightbox)
 
-Os elementos que compõem um `ListView` são descritos mais detalhadamente abaixo:
+Os elementos que compõem uma `ListView` são descritos mais detalhadamente abaixo:
 
 ## <a name="rows"></a>Linhas
 
-Cada linha tem sua própria `View`. A exibição pode ser uma das exibições internas definidas em `Android.Resources`ou uma exibição personalizada. Cada linha pode usar o mesmo layout de exibição ou todas elas podem ser diferentes. Há exemplos neste documento de uso de layouts internos e outros explicando como definir layouts personalizados.
+Cada linha tem seu próprio `View`. A exibição pode ser uma das exibições internas definidas em `Android.Resources`, ou uma exibição personalizada. Cada linha pode usar o mesmo layout de exibição ou todas elas podem ser diferentes. Há exemplos neste documento de uso de layouts internos e outros explicando como definir layouts personalizados.
 
 ## <a name="adapter"></a>Adaptador
 
-O `ListView` controle requer um `Adapter` para fornecer o formatado `View` para cada linha. O Android possui adaptadores e exibições internos que podem ser usados ou classes personalizadas podem ser criadas.
+O controle `ListView` requer uma `Adapter` para fornecer a `View` formatada para cada linha. O Android possui adaptadores e exibições internos que podem ser usados ou classes personalizadas podem ser criadas.
 
 ## <a name="fast-scrolling"></a>Rolagem rápida
 
@@ -49,20 +49,20 @@ Ao rolar por listas longas, o índice de seção opcional fornece ao usuário co
 
 ## <a name="classes-overview"></a>Visão geral de classes
 
-As classes primárias usadas para `ListViews` exibição são mostradas aqui:
+As classes primárias usadas para exibir `ListViews` são mostradas aqui:
 
-[![Diagrama UML que ilustra as relações entre ListView e classes associadas](parts-and-functionality-images/image2.png)](parts-and-functionality-images/image2.png#lightbox)
+[![diagrama UML que ilustra as relações entre ListView e classes associadas](parts-and-functionality-images/image2.png)](parts-and-functionality-images/image2.png#lightbox)
 
 A finalidade de cada classe é descrita abaixo:
 
-- **ListView** &ndash; elemento de interface do usuário que exibe uma coleção rolável de linhas. Em telefones, ele geralmente usa a tela inteira (nesse caso, a `ListActivity` classe pode ser usada) ou pode fazer parte de um layout maior em telefones ou dispositivos Tablet.
+- **ListView** &ndash; elemento de interface do usuário que exibe uma coleção rolável de linhas. Em telefones, ele geralmente usa a tela inteira (nesse caso, a classe `ListActivity` pode ser usada) ou pode fazer parte de um layout maior em telefones ou dispositivos Tablet.
 
-- **Exibir** uma exibição no Android pode ser qualquer elemento da interface do usuário, mas no contexto de `ListView` uma ti, `View` é necessário fornecer um a ser fornecido para cada linha. &ndash;
+- **Exibir** &ndash; uma exibição no Android pode ser qualquer elemento de interface do usuário, mas no contexto de um `ListView` ele requer que um `View` seja fornecido para cada linha.
 
-- **BaseAdapter** Classe base para implementações de adaptador para `ListView` associar um a uma fonte de dados. &ndash;
+- **BaseAdapter** &ndash; classe base para implementações de adaptador para associar um `ListView` a uma fonte de dados.
 
-- **ArrayAdapter** Classe de adaptador interna que associa uma matriz de cadeias de caracteres a `ListView` uma para exibição. &ndash; O genérico `ArrayAdapter<T>` faz o mesmo para outros tipos.
+- **ArrayAdapter** &ndash; classe de adaptador interna que associa uma matriz de cadeias de caracteres a uma `ListView` para exibição. O `ArrayAdapter<T>` genérico faz o mesmo para outros tipos.
 
-- **CursorAdapter** &ndash; Use oupara`SimpleCursorAdapter` exibir dados com base em uma consulta do SQLite. `CursorAdapter`
+- **CursorAdapter** &ndash; usar `CursorAdapter` ou `SimpleCursorAdapter` para exibir dados com base em uma consulta do SQLite.
 
-Este documento contém exemplos simples que usam um `ArrayAdapter` , bem como exemplos mais complexos que exigem implementações personalizadas `BaseAdapter` do `CursorAdapter`ou do.
+Este documento contém exemplos simples que usam um `ArrayAdapter`, bem como exemplos mais complexos que exigem implementações personalizadas de `BaseAdapter` ou `CursorAdapter`.

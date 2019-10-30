@@ -4,15 +4,15 @@ description: Este documento descreve como usar o Touch ID, a tecnologia de auten
 ms.prod: xamarin
 ms.assetid: 4BC8EFD6-52FC-4793-BA69-D6BFF850FE5F
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/20/2017
-ms.openlocfilehash: bc797d250b4b66ebfd06bad76c3f43759a65e7c3
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 112a2a038be9f749f37d2d3260d08f2e58b0c597
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292510"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73031437"
 ---
 # <a name="touch-id-in-xamarinios"></a>ID de toque no Xamarin. iOS
 
@@ -29,7 +29,7 @@ O conjunto de chaves é um banco de dados grande que fornece armazenamento segur
 O conjunto de chaves é um banco de dados especializado, em que cada linha é conhecida como um item de conjunto de _chaves_. Cada item é descrito por atributos de conjunto de chaves e é composto por valores criptografados. Para permitir o uso eficiente do conjunto de chaves, ele é otimizado para itens pequenos ou _segredos_.
 Cada item do conjunto de chaves é protegido pela senha dos usuários e por um segredo de dispositivo exclusivo. Os itens do conjunto de chaves devem ser protegidos mesmo quando os usuários não estiverem usando seus dispositivos. Isso é implementado no iOS apenas permitindo que os itens fiquem disponíveis quando o dispositivo estiver desbloqueado — quando o dispositivo estiver bloqueado, eles ficarão indisponíveis. Eles também podem ser armazenados em um backup criptografado. Um dos principais recursos do conjunto de chaves é impor o controle de acesso; um aplicativo tem acesso à sua parte do conjunto de chaves e todos os outros aplicativos serão impedidos. O diagrama a seguir ilustra como um aplicativo interage com o conjunto de chaves:
 
-[![](touchid-images/image1.png "Este diagrama ilustra como um aplicativo interage com o conjunto de chaves")](touchid-images/image1.png#lightbox)
+[![](touchid-images/image1.png "This diagram illustrates how an application interacts with the keychain")](touchid-images/image1.png#lightbox)
 
 ### <a name="secure-enclave"></a>Proteger enclave
 
@@ -46,9 +46,9 @@ Primeiro, o aplicativo deve consultar o conjunto de chaves para ver se existe um
 
 A lista de controle de acesso é um novo atributo de item do conjunto de chaves no iOS 8 que descreve as informações sobre o que deve ocorrer para permitir que uma determinada operação ocorra. Isso pode estar na forma de exibir uma caixa de diálogo de alerta ou solicitar uma senha. A ACL permite que você defina a acessibilidade e a autenticação para um item de conjunto de chaves. O diagrama a seguir mostra como esse novo atributo se vincula com o restante do item do conjunto de chaves:
 
-[![](touchid-images/image2.png "Este diagrama mostra como esse novo atributo se vincula ao restante do item do conjunto de chaves")](touchid-images/image2.png#lightbox)
+[![](touchid-images/image2.png "This diagram shows how this new attribute ties in with the rest of the keychain item")](touchid-images/image2.png#lightbox)
 
-A partir do IOS 8, agora há uma nova política de presença de `SecAccessControl`usuário,, que é imposta pelo Secure enclave em um iPhone 5S e superior. Podemos ver na tabela abaixo, como a configuração do dispositivo pode influenciar a avaliação da política:
+A partir do iOS 8, agora há uma nova política de presença de usuário, `SecAccessControl`, que é imposta pelo enclave seguro em um iPhone 5S e superior. Podemos ver na tabela abaixo, como a configuração do dispositivo pode influenciar a avaliação da política:
 
 |Configuração do dispositivo|Avaliação de política|Mecanismo de backup|
 |--- |--- |--- |
@@ -63,19 +63,19 @@ Uma nova estrutura no iOS 8, chamada _autenticação local_, dá suporte a esse 
 
 Como estabelecemos na seção anterior, os aplicativos podem usar a autenticação local para autenticar o usuário em conformidade com a política de segurança que foi configurada no dispositivo.
 
-Atualmente, a API fornece apenas dois recursos: Em primeiro lugar, ele ajuda os serviços de conjunto de chaves existentes por meio do uso de novas listas de controle de acesso (ACLs) do conjunto de chaves. Os dados do conjunto de chaves podem ser desbloqueados com a autenticação bem-sucedida de uma impressão digital dos usuários.
+Atualmente, a API fornece apenas dois recursos: em primeiro lugar, ele ajuda os serviços de conjunto de chaves existentes por meio do uso de novas listas de controle de acesso (ACLs) do conjunto de chaves. Os dados do conjunto de chaves podem ser desbloqueados com a autenticação bem-sucedida de uma impressão digital dos usuários.
 
-Em segundo lugar, o LocalAuthentication fornece dois métodos para autenticar seu aplicativo localmente. Os desenvolvedores devem `CanEvaluatePolicy` usar o para determinar se o dispositivo é capaz de aceitar a ID de `EvaluatePolicy` toque e, em seguida, iniciar a operação de autenticação.
+Em segundo lugar, o LocalAuthentication fornece dois métodos para autenticar seu aplicativo localmente. Os desenvolvedores devem usar `CanEvaluatePolicy` para determinar se o dispositivo é capaz de aceitar o Touch ID e, em seguida, `EvaluatePolicy` iniciar a operação de autenticação.
 
 Embora os dois recursos ofereçam autenticação local, eles não fornecem um mecanismo para o aplicativo ou para o usuário se autenticar em um servidor remoto.
 A autenticação local fornece uma nova interface de usuário padrão para autenticação. No caso do touch ID, esse é um modo de exibição de alerta com dois botões, conforme ilustrado abaixo. Um botão a ser cancelado e outro para usar os meios de fallback de autenticação – a senha. Há também uma mensagem personalizada que deve ser definida. É uma boa prática usar isso para explicar ao usuário por que a autenticação do touch ID é necessária.
 
-[![](touchid-images/image12.png "O alerta de autenticação de ID de toque")](touchid-images/image12.png#lightbox)
+[![](touchid-images/image12.png "The Touch ID authentication alert")](touchid-images/image12.png#lightbox)
 
 ### <a name="with-keychain-services"></a>Com os serviços de conjunto de chaves
 
 Vimos um pouco antes de como um item do conjunto de chaves é descriptografado, usando o Secure enclave para verificar nossa senha. No iOS 8, podemos usar a autenticação local para solicitar a verificação da ID de toque em conjunto com o recurso listas de controle de acesso, que fornece a implementação do mecanismo de fallback ou a senha.
-Para usar a ACL, devemos usar a `SecAccessControl` política e, em seguida, verificar o estado do dispositivo `SecAccessible.WhenPasscodeSetThisDeviceOnly` usando `SecAccessible.WhenUnlocked`ou.
+Para usar a ACL, devemos usar a política de `SecAccessControl` e, em seguida, verificar o estado do dispositivo usando `SecAccessible.WhenPasscodeSetThisDeviceOnly` ou `SecAccessible.WhenUnlocked`.
 
 #### <a name="considerations-with-acl"></a>Considerações com ACL
 
@@ -92,7 +92,7 @@ A autenticação local foi criada como uma maneira de coletar credenciais, como 
 
 Para fazer isso, um aplicativo chama a avaliação da política dentro da autenticação local, que inicia a operação dentro do Secure enclave. Você pode aproveitar isso para fornecer autenticação ao seu aplicativo, sem consultar diretamente/acessar o Secure enclave.
 
-[![](touchid-images/image13a.png "Usando a autenticação local sem serviços de conjunto de chaves")](touchid-images/image13a.png#lightbox)
+[![](touchid-images/image13a.png "Using Local Authentication without Keychain Services")](touchid-images/image13a.png#lightbox)
 
 O uso da autenticação local em seu aplicativo fornece uma maneira simples de implementar a verificação do usuário, por exemplo, para desbloquear um recurso exclusivamente para os olhos do proprietário do dispositivo, como aplicativos bancários, ou para auxiliar os controles dos pais para o indivíduo aplicativo. Você também pode usá-lo como uma maneira de estender a autenticação que já existe – os usuários como suas informações para serem seguros, mas também gostam de ter opções.
 
@@ -102,9 +102,9 @@ No assunto da segurança, também é extremamente importante saber que não há 
 
 Para usar o Touch ID sem o conjunto de chaves aproveitando a API de autenticação local, há algumas funções que podemos usar. Eles são detalhados abaixo:
 
-- `CanEvaluatePolicy`– Isso simplesmente verificará se o dispositivo é capaz de aceitar a ID de toque.
-- `EvaluatePolicy`– Isso inicia a operação de autenticação e exibe a interface do usuário e `true` retorna `false` uma resposta ou.
-- `DeviceOwnerAuthenticationWithBiometrics`– Esta é a política que pode ser usada para mostrar a tela de ID de toque. Vale a pena observar que não há nenhum mecanismo de fallback de senha aqui. em vez disso, você deve implementar esse fallback em seu aplicativo para permitir que os usuários ignorem a autenticação de ID de toque.
+- `CanEvaluatePolicy` – isso simplesmente verificará se o dispositivo é capaz de aceitar a ID de toque.
+- `EvaluatePolicy` – isso inicia a operação de autenticação e exibe a interface do usuário e retorna uma `true` ou `false` resposta.
+- `DeviceOwnerAuthenticationWithBiometrics` – essa é a política que pode ser usada para mostrar a tela de ID de toque. Vale a pena observar que não há nenhum mecanismo de fallback de senha aqui. em vez disso, você deve implementar esse fallback em seu aplicativo para permitir que os usuários ignorem a autenticação de ID de toque.
 
 Há algumas limitações com o uso da autenticação local, que estão listadas abaixo:
 
@@ -123,19 +123,19 @@ Nas seções anteriores, examinamos a teoria por trás do acesso e da autentica�
 Então, vamos dar uma olhada na adição de uma autenticação de ID de toque ao nosso aplicativo. Neste tutorial, vamos atualizar o exemplo de [tabela storyboard](https://docs.microsoft.com/samples/xamarin/ios-samples/data/storyboardtable/) , adicionando autenticação local para que ele funcione como o exemplo de [autenticação de storyboard – local Authentication](https://docs.microsoft.com/samples/xamarin/ios-samples/storyboardtable-localauthentication) , que permite apenas que usuários autenticados adicionem tarefas à lista.
 
 1. Baixe o exemplo e execute-o em Visual Studio para Mac.
-2. Clique duas vezes `MainStoryboard.Storyboard` em on para abrir o exemplo no designer do Ios. Com este exemplo, queremos adicionar uma nova tela ao nosso aplicativo, que controlará a autenticação. Isso vai antes do atual `MasterViewController`.
+2. Clique duas vezes em `MainStoryboard.Storyboard` para abrir o exemplo no designer do iOS. Com este exemplo, queremos adicionar uma nova tela ao nosso aplicativo, que controlará a autenticação. Isso vai antes da `MasterViewController`atual.
 3. Arraste um novo **controlador de exibição** da **caixa de ferramentas** para a **design Surface**. Defina como o **controlador de exibição raiz** por **Ctrl + arrastar** do **controlador de navegação**:
 
-    [![](touchid-images/image4.png "Definir o controlador de exibição raiz")](touchid-images/image4.png#lightbox)
-4. Nomeie o novo controlador `AuthenticationViewController`de exibição.
-5. Em seguida, arraste um botão e coloque-o `AuthenticationViewController`no. Chame isso `AuthenticateButton`e dê a ele o texto `Add a Chore`.
-6. Crie um evento no `AuthenticateButton` chamado. `AuthenticateMe`
-7. Crie um transição manual do `AuthenticationViewController` clicando na barra preta na parte inferior e **Ctrl + arraste** da barra para a `MasterViewController` e escolhendo **enviar por push** (ou **Mostrar** se estiver usando classes de tamanho):
+    [![](touchid-images/image4.png "Set the Root View Controller")](touchid-images/image4.png#lightbox)
+4. Nomeie o novo controlador de exibição `AuthenticationViewController`.
+5. Em seguida, arraste um botão e coloque-o na `AuthenticationViewController`. Chame esse `AuthenticateButton`e dê a ele o texto `Add a Chore`.
+6. Crie um evento no `AuthenticateButton` chamado `AuthenticateMe`.
+7. Crie um transição manual de `AuthenticationViewController` clicando na barra preta na parte inferior e **Ctrl + arrastar** da barra para a `MasterViewController` e escolhendo **enviar por push** (ou **Mostrar** se estiver usando classes de tamanho):
 
-    [![](touchid-images/image5.png "Arraste da barra até o MasterViewController e escolha enviar ou mostrar")](touchid-images/image6.png#lightbox)
+    [![](touchid-images/image5.png "Drag from the bar to the MasterViewController and choosing push or show")](touchid-images/image6.png#lightbox)
 8. Clique no transição criado recentemente e dê a ele o identificador `AuthenticationSegue`, conforme ilustrado abaixo:
 
-    [![](touchid-images/image7.png "Definir o identificador transição como AuthenticationSegue")](touchid-images/image7.png#lightbox)
+    [![](touchid-images/image7.png "Set the segue identifier to AuthenticationSegue")](touchid-images/image7.png#lightbox)
 9. Adicione o seguinte código ao `AuthenticationViewController`:
 
     ```csharp
@@ -166,19 +166,19 @@ Então, vamos dar uma olhada na adição de uma autenticação de ID de toque ao
 
 Esse é todo o código de que você precisa para implementar a autenticação de ID de toque usando a autenticação local. As linhas realçadas na imagem abaixo mostram o uso da autenticação local:
 
-[![](touchid-images/image8.png "As linhas destacadas mostram o uso da autenticação local")](touchid-images/image8.png#lightbox)
+[![](touchid-images/image8.png "The highlighted lines show the use of Local Authentication")](touchid-images/image8.png#lightbox)
 
-Primeiro, precisamos estabelecer se o dispositivo é capaz de aceitar a entrada de ID de toque, usando o `CanEvaluatePolicy` e passando a política. `DeviceOwnerAuthenticationWithBiometrics` Se isso for verdadeiro, poderemos exibir a interface do usuário da ID `EvaluatePolicy`de toque usando. Há três informações que temos para passar `EvaluatePolicy` – a própria política, uma cadeia de caracteres explicando por que a autenticação é necessária e um manipulador de resposta. O manipulador de resposta informa ao aplicativo o que ele deve fazer no caso de uma autenticação bem-sucedida ou malsucedida. Vamos examinar mais de perto o manipulador de resposta:
+Primeiro, precisamos estabelecer se o dispositivo é capaz de aceitar a entrada de ID de toque, usando o `CanEvaluatePolicy` e passando o `DeviceOwnerAuthenticationWithBiometrics`de política. Se isso for verdadeiro, poderemos exibir a interface do usuário da ID de toque usando `EvaluatePolicy`. Há três informações que temos para passar para `EvaluatePolicy` – a própria política, uma cadeia de caracteres explicando por que a autenticação é necessária e um manipulador de resposta. O manipulador de resposta informa ao aplicativo o que ele deve fazer no caso de uma autenticação bem-sucedida ou malsucedida. Vamos examinar mais de perto o manipulador de resposta:
 
-[![](touchid-images/image9.png "O manipulador de resposta")](touchid-images/image9.png#lightbox)
+[![](touchid-images/image9.png "The reply handler")](touchid-images/image9.png#lightbox)
 
-O manipulador de resposta é especificado do `LAContextReplyHandler`tipo, que toma os parâmetros Success – `bool` um valor e um `NSError` chamado `error`. Se for bem-sucedido, é aí que executaremos qualquer coisa que quisermos autenticar – nesse caso, exibindo a tela que nos permitirá adicionar uma nova tarefa. Lembre-se de que uma das advertências da autenticação local é que ela deve ser executada em primeiro plano, portanto, `InvokeOnMainThread`certifique-se de usar:
+O manipulador de resposta é especificado do tipo `LAContextReplyHandler`, que obtém os parâmetros Success – a `bool` valor e um `NSError` chamado `error`. Se for bem-sucedido, é aí que executaremos qualquer coisa que quisermos autenticar – nesse caso, exibindo a tela que nos permitirá adicionar uma nova tarefa. Lembre-se de que uma das advertências da autenticação local é que ela deve ser executada em primeiro plano, portanto, certifique-se de usar `InvokeOnMainThread`:
 
-[![](touchid-images/image10.png "Usar InvokeOnMainThread para autenticação local")](touchid-images/image10.png#lightbox)
+[![](touchid-images/image10.png "Use InvokeOnMainThread for Local Authentication")](touchid-images/image10.png#lightbox)
 
-Por fim, quando a autenticação tiver sido bem-sucedida, queremos fazer a transição para `MasterViewController`o. O `PerformSegue` método pode ser usado para fazer isso:
+Por fim, quando a autenticação tiver sido bem-sucedida, queremos fazer a transição para o `MasterViewController`. O método `PerformSegue` pode ser usado para fazer isso:
 
-[![](touchid-images/image11.png "Chamar o método PerformSegue para fazer a transição para o MasterViewController")](touchid-images/image11.png#lightbox)
+[![](touchid-images/image11.png "Call PerformSegue method to transition to the MasterViewController")](touchid-images/image11.png#lightbox)
 
 ## <a name="summary"></a>Resumo
 

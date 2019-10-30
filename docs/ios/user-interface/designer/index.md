@@ -4,15 +4,15 @@ description: Este documento descreve como usar o Xamarin Designer para iOS para 
 ms.prod: xamarin
 ms.assetid: E35EFB69-EBBA-40E3-ADBE-CB8016F17127
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 05/31/2018
-ms.openlocfilehash: 577c5602c1cbc331564c3034b3f0c11a4b97bc0c
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 157e16da2c524029c29e767cd6b3e5eb550a2389
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70279850"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73021758"
 ---
 # <a name="building-user-interfaces-with-the-ios-designer"></a>Criando interfaces do usuário com o designer do iOS
 
@@ -20,11 +20,11 @@ _O Xamarin Designer para iOS é um designer visual para os formatos de storyboar
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
-[![designer do Ios no Visual Studio para Mac](images/designer-vsmac-sml.png "O designer do IOS")](images/designer-vsmac.png#lightbox)
+[![Designer do iOS no Visual Studio para Mac](images/designer-vsmac-sml.png "O designer do iOS")](images/designer-vsmac.png#lightbox)
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![designer do Ios no Visual Studio](images/designer-vs.png "O designer do IOS")](images/designer-vs.png#lightbox)
+[![Designer do iOS no Visual Studio](images/designer-vs.png "O designer do iOS")](images/designer-vs.png#lightbox)
 
 -----
 

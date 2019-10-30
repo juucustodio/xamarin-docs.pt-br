@@ -4,15 +4,15 @@ description: A maioria dos aplicativos tem algum requisito para salvar dados no 
 ms.prod: xamarin
 ms.assetid: 6B47E864-C6E7-4AA2-8DEF-2C8BF551D17C
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: 2343603199661ea39b1f0af172ce0ccf48a2cd66
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 9906e617b7072ebf7b1213a7278d117dc4f560ab
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70754584"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73023858"
 ---
 # <a name="xamarinandroid-data-access"></a>Acesso a dados do Xamarin. Android
 
@@ -29,9 +29,9 @@ O Xamarin. Android dá suporte a APIs de acesso ao banco de dados, como:
 
 A maior parte do código nesta seção é completamente entre plataformas e será executada no iOS ou Android sem modificação. Há dois aplicativos de exemplo discutidos:
 
-- [**DataAccess_Basic**](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Basic) &ndash; Operações de dados simples gravam os resultados em um controle de exibição de texto;
+- [**DataAccess_Basic**](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Basic) &ndash; operações de dados simples grava os resultados em um controle de exibição de texto;
 
-- [**DataAccess_Advanced**](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Advanced) &ndash; Integra operações de dados em um pequeno aplicativo de trabalho que lista e edita uma estrutura de dados simples.
+- O [**DataAccess_Advanced**](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Advanced) &ndash; integra operações de dados em um pequeno aplicativo de trabalho que lista e edita uma estrutura de dados simples.
 
 Ambas as soluções de exemplo contêm projetos de aplicativo de exemplo iOS e Android.
 

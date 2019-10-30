@@ -4,15 +4,15 @@ description: Este artigo aborda os conceitos básicos do uso do poderoso namespa
 ms.prod: xamarin
 ms.assetid: FA3B8EC4-34D2-47E3-ACEA-BD34B28115B9
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/02/2018
-ms.openlocfilehash: 14cce06399b804ba8fd982a40347fb3146b281c8
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: e8c7d1a4fb3537644ed3b7737158a5e50abcdae5
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70757423"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73019761"
 ---
 # <a name="android-speech"></a>Fala do Android
 
@@ -24,7 +24,7 @@ Ter um sistema, que "entende" a fala humana e enunciates o que está sendo digit
 
 Por exemplo, com o fixe para baixo no uso do telefone celular durante a condução, os usuários desejam uma maneira gratuita de operar seus dispositivos. A grande quantidade de diferentes fatores forma do Android, como o desgaste do Android, e a inclusão cada vez maior das pessoas capazes de usar dispositivos Android (como tablets e pads de anotações), criou um foco grande em excelentes aplicativos de TTS.
 
-O Google fornece ao desenvolvedor um rico conjunto de APIs no namespace Android. Speech para abranger a maioria das instâncias de tornar um dispositivo "com reconhecimento de fala" (como software projetado para os cegos).  O namespace inclui a instalação para permitir que o texto seja traduzido para `Android.Speech.Tts`a fala, controle sobre o mecanismo usado para executar a tradução, bem como um número `RecognizerIntent`de s que permitem que a fala seja convertida em texto.
+O Google fornece ao desenvolvedor um rico conjunto de APIs no namespace Android. Speech para abranger a maioria das instâncias de tornar um dispositivo "com reconhecimento de fala" (como software projetado para os cegos).  O namespace inclui a instalação para permitir que o texto seja convertido em fala por meio de `Android.Speech.Tts`, controle sobre o mecanismo usado para executar a tradução, bem como uma série de `RecognizerIntent`s que permitem que a fala seja convertida em texto.
 
 Embora as instalações estejam lá para que a fala seja compreendida, há limitações com base no hardware usado. É improvável que o dispositivo interprete com êxito tudo falado sobre ele em todos os idiomas disponíveis.
 
@@ -32,7 +32,7 @@ Embora as instalações estejam lá para que a fala seja compreendida, há limit
 
 Não há requisitos especiais para este guia, além de seu dispositivo ter um microfone e um palestrante.
 
-O núcleo de um dispositivo Android interpretando a fala é o uso `Intent` de um com `OnActivityResult`um correspondente.
+O núcleo de um dispositivo Android interpretando a fala é o uso de um `Intent` com um `OnActivityResult`correspondente.
 No entanto, é importante reconhecer que a fala não é compreendida — mas interpretada para texto. A diferença é importante.
 
 ### <a name="the-difference-between-understanding-and-interpreting"></a>A diferença entre entender e interpretar
@@ -69,7 +69,7 @@ if (rec != "android.hardware.microphone")
 
 ### <a name="creating-the-intent"></a>Criando a intenção
 
-A intenção do sistema de fala usa um tipo específico de tentativa chamado de `RecognizerIntent`. Essa intenção controla um grande número de parâmetros, incluindo o tempo de espera com silêncio até que a gravação seja considerada acima, quaisquer idiomas adicionais para reconhecimento e saída, e qualquer texto a ser incluído `Intent`na caixa de diálogo modal como meio de instrução. Neste trecho de código `VOICE` , `readonly int` é usado para reconhecimento no `OnActivityResult`.
+A intenção do sistema de fala usa um tipo específico de intenção chamado de `RecognizerIntent`. Essa tentativa controla um grande número de parâmetros, incluindo o tempo de espera com silêncio até que a gravação seja considerada acima, quaisquer idiomas adicionais para reconhecimento e saída, e qualquer texto a ser incluído na caixa de diálogo modal do `Intent`como meio de instrução. Neste trecho de código, `VOICE` é um `readonly int` usado para reconhecimento no `OnActivityResult`.
 
 ```csharp
 var voiceIntent = new Intent(RecognizerIntent.ActionRecognizeSpeech);
@@ -85,11 +85,11 @@ StartActivityForResult(voiceIntent, VOICE);
 
 ### <a name="conversion-of-the-speech"></a>Conversão da fala
 
-O texto interpretado da fala será entregue dentro do `Intent`, que é retornado quando a atividade é concluída e acessado via `GetStringArrayListExtra(RecognizerIntent.ExtraResults)`. Isso retornará um `IList<string>`, do qual o índice pode ser usado e exibido, dependendo do número de idiomas solicitados na intenção do chamador (e especificado `RecognizerIntent.ExtraMaxResults`no). Assim como acontece com qualquer lista, vale a pena verificar se há dados a serem exibidos.
+O texto interpretado da fala será entregue dentro do `Intent`, que é retornado quando a atividade é concluída e acessado via `GetStringArrayListExtra(RecognizerIntent.ExtraResults)`. Isso retornará um `IList<string>`, do qual o índice pode ser usado e exibido, dependendo do número de idiomas solicitados na intenção do chamador (e especificado no `RecognizerIntent.ExtraMaxResults`). Assim como acontece com qualquer lista, vale a pena verificar se há dados a serem exibidos.
 
-Ao escutar o valor de retorno de `StartActivityForResult`a, o `OnActivityResult` método deve ser fornecido.
+Ao escutar o valor de retorno de um `StartActivityForResult`, o método de `OnActivityResult` deve ser fornecido.
 
-No exemplo a seguir, `textBox` é usado `TextBox` para gerar uma saída do que foi ditado. Ele poderia ser usado igualmente para passar o texto para alguma forma de intérprete e, a partir daí, o aplicativo pode comparar o texto e a ramificação com outra parte do aplicativo.
+No exemplo a seguir, `textBox` é um `TextBox` usado para gerar a saída do que foi ditado. Ele poderia ser usado igualmente para passar o texto para alguma forma de intérprete e, a partir daí, o aplicativo pode comparar o texto e a ramificação com outra parte do aplicativo.
 
 ```csharp
 protected override void OnActivityResult(int requestCode, Result resultVal, Intent data)
@@ -131,13 +131,13 @@ Em grande parte, os dispositivos Android vêm com o serviço padrão do Google T
 
 ### <a name="step-1---instantiating-texttospeech"></a>Etapa 1-criando uma instância de TextToSpeech
 
-`TextToSpeech`pode levar até 3 parâmetros, os dois primeiros são necessários com o terceiro opcional (`AppContext`, `IOnInitListener`, `engine`). O ouvinte é usado para ligar ao serviço e testar a falha com o mecanismo que está sendo qualquer número de texto do Android disponível para mecanismos de fala. No mínimo, o dispositivo terá o próprio mecanismo do Google.
+`TextToSpeech` pode levar até três parâmetros, os dois primeiros são necessários com o terceiro opcional (`AppContext`, `IOnInitListener``engine`). O ouvinte é usado para ligar ao serviço e testar a falha com o mecanismo que está sendo qualquer número de texto do Android disponível para mecanismos de fala. No mínimo, o dispositivo terá o próprio mecanismo do Google.
 
 ### <a name="step-2---finding-the-languages-available"></a>Etapa 2-localizando os idiomas disponíveis
 
-A `Java.Util.Locale` classe contém um método útil chamado `GetAvailableLocales()`. Essa lista de idiomas com suporte do mecanismo de fala pode ser testada em relação aos idiomas instalados.
+A classe `Java.Util.Locale` contém um método útil chamado `GetAvailableLocales()`. Essa lista de idiomas com suporte do mecanismo de fala pode ser testada em relação aos idiomas instalados.
 
-É uma questão comum gerar a lista de idiomas "compreendidos". Sempre haverá um idioma padrão (o idioma definido pelo usuário ao definir o dispositivo pela primeira vez), portanto, neste exemplo, o `List<string>` tem "padrão" como o primeiro parâmetro, o restante da lista será preenchido dependendo do resultado `textToSpeech.IsLanguageAvailable(locale)`do.
+É uma questão comum gerar a lista de idiomas "compreendidos". Sempre haverá um idioma padrão (o idioma definido pelo usuário ao definir seu dispositivo pela primeira vez), portanto, neste exemplo, o `List<string>` tem "padrão" como o primeiro parâmetro, o restante da lista será preenchido dependendo do resultado da `textToSpeech.IsLanguageAvailable(locale)`.
 
 ```csharp
 var langAvailable = new List<string>{ "Default" };
@@ -162,17 +162,17 @@ langAvailable = langAvailable.OrderBy(t => t).Distinct().ToList();
 ```
 
 Esse código chama [TextToSpeech. IsLanguageAvailable](xref:Android.Speech.Tts.TextToSpeech.IsLanguageAvailable*) para testar se o pacote de idioma de uma determinada localidade já está presente no dispositivo.
-Esse método retorna um [LanguageAvailableResult](xref:Android.Speech.Tts.LanguageAvailableResult), que indica se o idioma para a localidade passada está disponível. Se `LanguageAvailableResult` o indicar que o idioma `NotSupported`é, não haverá nenhum pacote de voz disponível (mesmo para download) para esse idioma. Se `LanguageAvailableResult` for definido como `MissingData`, será possível baixar um novo pacote de idioma, conforme explicado abaixo na etapa 4.
+Esse método retorna um [LanguageAvailableResult](xref:Android.Speech.Tts.LanguageAvailableResult), que indica se o idioma para a localidade passada está disponível. Se `LanguageAvailableResult` indicar que o idioma está `NotSupported`, não haverá nenhum pacote de voz disponível (mesmo para download) para esse idioma. Se `LanguageAvailableResult` for definido como `MissingData`, será possível baixar um novo pacote de idioma, conforme explicado abaixo na etapa 4.
 
 ### <a name="step-3---setting-the-speed-and-pitch"></a>Etapa 3 – definir a velocidade e o timbre
 
-O Android permite que o usuário altere o som da fala alterando `SpeechRate` e `Pitch` (a taxa de velocidade e o Tom da fala). Isso vai de 0 a 1, com a fala "normal" sendo 1 para ambos.
+O Android permite que o usuário altere o som da fala alterando a `SpeechRate` e `Pitch` (a taxa de velocidade e o Tom da fala). Isso vai de 0 a 1, com a fala "normal" sendo 1 para ambos.
 
 ### <a name="step-4---testing-and-loading-new-languages"></a>Etapa 4 – testando e carregando novos idiomas
 
-O download de um novo idioma é realizado com `Intent`o uso de um. O resultado dessa tentativa faz com que o método [OnActivityResult](xref:Android.App.Activity.OnActivityResult*) seja invocado. Ao contrário do exemplo de conversão de fala em texto (que usou o [RecognizerIntent](xref:Android.Speech.RecognizerIntent) como parâmetro `PutExtra` para o `Intent`), os `Intent`s de teste e de carregamento são baseados em `Action`:
+O download de um novo idioma é executado usando um `Intent`. O resultado dessa tentativa faz com que o método [OnActivityResult](xref:Android.App.Activity.OnActivityResult*) seja invocado. Ao contrário do exemplo de fala a texto (que usou o [RecognizerIntent](xref:Android.Speech.RecognizerIntent) como um parâmetro de `PutExtra` para a `Intent`), os `Intent`s de teste e carregamento são baseados em `Action`:
 
-- [TextToSpeech. Engine. ActionCheckTtsData](xref:Android.Speech.Tts.TextToSpeech.Engine.ActionCheckTtsData) &ndash; inicia uma atividade do mecanismo de `TextToSpeech` plataforma para verificar a instalação e a disponibilidade corretas dos recursos de idioma no dispositivo.
+- [TextToSpeech. Engine. ActionCheckTtsData](xref:Android.Speech.Tts.TextToSpeech.Engine.ActionCheckTtsData) &ndash; inicia uma atividade do mecanismo de `TextToSpeech` da plataforma para verificar a instalação e a disponibilidade corretas dos recursos de idioma no dispositivo.
 
 - [TextToSpeech. Engine. ActionInstallTtsData](xref:Android.Speech.Tts.TextToSpeech.Engine.ActionInstallTtsData) &ndash; inicia uma atividade que solicita que o usuário Baixe os idiomas necessários.
 
@@ -194,9 +194,9 @@ protected override void OnActivityResult(int req, Result res, Intent data)
 }
 ```
 
-`TextToSpeech.Engine.ActionCheckTtsData`testes para a disponibilidade de recursos de idioma. `OnActivityResult`é invocado quando esse teste é concluído. Se os recursos de idioma precisam ser baixados, `OnActivityResult` o dispara a `TextToSpeech.Engine.ActionInstallTtsData` ação para iniciar uma atividade que permite ao usuário baixar os idiomas necessários. Observe que essa `OnActivityResult` implementação não verifica o `Result` código porque, neste exemplo simplificado, a determinação já foi feita de que o pacote de idioma precisa ser baixado.
+`TextToSpeech.Engine.ActionCheckTtsData` testes para a disponibilidade de recursos de idioma. `OnActivityResult` é invocado quando esse teste é concluído. Se for necessário baixar os recursos de idioma, `OnActivityResult` disparará a ação `TextToSpeech.Engine.ActionInstallTtsData` para iniciar uma atividade que permite ao usuário baixar os idiomas necessários. Observe que essa implementação de `OnActivityResult` não verifica o código de `Result` porque, neste exemplo simplificado, a determinação já foi feita de que o pacote de idioma precisa ser baixado.
 
-A `TextToSpeech.Engine.ActionInstallTtsData` ação faz com que a atividade de **dados de voz do Google TTS** seja apresentada ao usuário para escolher os idiomas a serem baixados:
+A ação `TextToSpeech.Engine.ActionInstallTtsData` faz com que a atividade de **dados de voz TTS do Google** seja apresentada ao usuário para escolher os idiomas a serem baixados:
 
 ![Atividade de dados de voz do Google TTS](speech-images/01-google-tts-voice-data.png)
 
@@ -208,9 +208,9 @@ A instalação desses dados ocorre automaticamente após a conclusão do downloa
 
 ### <a name="step-5---the-ioninitlistener"></a>Etapa 5-o IOnInitListener
 
-Para que uma atividade possa converter o texto em fala, o método `OnInit` de interface deve ser implementado (esse é o segundo parâmetro especificado para a instanciação `TextToSpeech` da classe). Isso inicializa o ouvinte e testa o resultado.
+Para que uma atividade possa converter o texto em fala, o método de interface `OnInit` deve ser implementado (esse é o segundo parâmetro especificado para a instanciação da classe `TextToSpeech`). Isso inicializa o ouvinte e testa o resultado.
 
-O ouvinte deve testar ambos `OperationResult.Success` e `OperationResult.Failure` , no mínimo.
+O ouvinte deve testar tanto `OperationResult.Success` quanto `OperationResult.Failure` no mínimo.
 O exemplo a seguir mostra exatamente isso:
 
 ```csharp

@@ -4,15 +4,15 @@ description: Direitos são capacidades especiais do aplicativo e permissões de 
 ms.prod: xamarin
 ms.assetid: 8A3961A2-02AB-4228-A41D-06CB4108D9D0
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 08/13/2018
-ms.openlocfilehash: 381cddcef826d00b09f9928746bb4f60ce78a7e0
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 43bde3a31a79728548e72ea1d34977f1a131f282
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70284799"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028538"
 ---
 # <a name="working-with-entitlements-in-xamarinios"></a>Trabalhar com direitos no Xamarin.iOS
 
@@ -44,12 +44,12 @@ Para configurar os direitos no Visual Studio para Mac, faça o seguinte:
 1. No **Gerenciador de Soluções**, clique duas vezes no arquivo **Info.plist** para abri-lo para edição.
 2. Na seção **Destino do aplicativo iOS**, preencha um nome para o aplicativo e insira o **Identificador do pacote** que foi criado quando a ID do aplicativo foi definida:
 
-    ![](entitlements-images/servicexs01.png "Insira um Identificador do pacote")
+    ![](entitlements-images/servicexs01.png "Enter a Bundle Identifier")
 
 3. Salve as alterações no arquivo **Info.plist**.
 4. No **Gerenciador de Soluções**, clique duas vezes no arquivo **Entitlements.plist** para abri-lo para edição:
 
-    ![](entitlements-images/servicexs02.png "Editando os direitos")
+    ![](entitlements-images/servicexs02.png "Editing the Entitlements")
 
 5. Selecione e configure os direitos necessários (se houver) para o aplicativo Xamarin.iOS de maneira que eles correspondam à configuração definida quando a ID do aplicativo foi criada.
 6. Salve as alterações no arquivo **Entitlements.plist**.
@@ -61,12 +61,12 @@ Para configurar os direitos no Visual Studio, faça o seguinte:
 1. No **Gerenciador de Soluções**, clique com o botão direito do mouse em **Info.plist**, selecione **Abrir Com...** e o arquivo **Editor de Lista de Propriedades** para abri-lo para edição.
 2. Na seção **Destino do aplicativo iOS**, preencha um nome para o aplicativo e insira o **Identificador do pacote** que foi criado quando a ID do aplicativo foi definida:
 
-    ![](entitlements-images/servicevs01.png "Configuração de um Identificador do pacote")
+    ![](entitlements-images/servicevs01.png "Setting the Bundle Identifier")
 
 3. Salve as alterações no arquivo **Info.plist**.
 4. No **Gerenciador de Soluções**, clique com o botão direito do mouse no arquivo **Entitlements.plist**, selecione **Abrir Com...** e **Editor de Lista de Propriedades** para abri-lo para edição:
 
-    ![](entitlements-images/servicevs02.png "Editando os direitos")
+    ![](entitlements-images/servicevs02.png "Editing the Entitlements")
 
     Como alternativa, clique duas vezes no arquivo **Entitlements.plist** para abrir o editor de código-fonte XML, que permitirá definir o valor da chave e a propriedade do Direito, conforme está detalhado na seção [Referência de chave de direito](#entitlement-key-reference) abaixo.
 
@@ -94,7 +94,7 @@ Chaves de direitos podem ser adicionadas por meio do painel Código-fonte do edi
 
 ### <a name="wallet"></a>Carteira
 
-- **Descrição**: Formalmente conhecido como Passbook, o wallet é um aplicativo que armazena e gerencia passes. Esses passes podem ser cartões de crédito, cartões de armazenamento, passagens aéreas ou tíquetes.
+- **Descrição**: formalmente conhecido como Passbook, o wallet é um aplicativo que armazena e gerencia passes. Esses passes podem ser cartões de crédito, cartões de armazenamento, passagens aéreas ou tíquetes.
 
   - **Identificador de tipo de passe**
     - **Chaves**: com.apple.developer.pass-type-identifiers
@@ -109,7 +109,7 @@ Chaves de direitos podem ser adicionadas por meio do painel Código-fonte do edi
 
 ### <a name="icloud"></a>iCloud
 
-- **Descrição**: o iCloud fornece aos usuários do iOS uma maneira fácil e simples de armazenar conteúdo e compartilhá-lo entre dispositivos. Os desenvolvedores podem usar o iCloud para fornecer um meio de armazenamento para seus usuários de quatro maneiras: Armazenamento de chave-valor, Armazenamento de UIDocument, CoreData e uso do CloudKit diretamente para fornecer armazenamento para arquivos e diretórios individuais. Para obter mais informações sobre essas maneiras, consulte o guia Introdução ao iCloud.
+- **Descrição**: o iCloud fornece aos usuários do iOS uma maneira fácil e simples de armazenar conteúdo e compartilhá-lo entre dispositivos. Os desenvolvedores podem usar o iCloud de quatro maneiras para fornecer um meio de armazenamento para seus usuários: armazenamento de chave-valor, armazenamento de UIDocument, CoreData e usando o CloudKit diretamente para fornecer armazenamento para arquivos e diretórios individuais. Para obter mais informações sobre essas maneiras, consulte o guia Introdução ao iCloud.
 
   - **Documentos e CloudKit do iCloud**
     - **Chaves**: com.apple.developer.ubiquity-container-identifiers
@@ -128,7 +128,7 @@ Chaves de direitos podem ser adicionadas por meio do painel Código-fonte do edi
 
 ### <a name="app-groups"></a>Grupos de Aplicativos
 
-- **Descrição**: Um grupo de aplicativos permite que diferentes aplicativos (ou um aplicativo e suas extensões) acessem um local de armazenamento de arquivo compartilhado.
+- **Descrição**: um Grupo de Aplicativos permite que diferentes aplicativos (ou um aplicativo e suas extensões) acessem um local de armazenamento de arquivo compartilhado.
 
   - **Chave**: com.apple.security.application-groups
   - **Cadeia de caracteres**: group.$(CFBundleIdentifier)
@@ -137,7 +137,7 @@ Chaves de direitos podem ser adicionadas por meio do painel Código-fonte do edi
 
 ### <a name="apple-pay"></a>Apple Pay
 
-- **Descrição**: O Apple Pay permite que os usuários paguem produtos físicos usando o dispositivo iOS.
+- **Descrição**: o Apple Pay permite que os usuários paguem produtos físicos usando o dispositivo iOS.
   - **Chave**: com.apple.developer.in-app-payments
   - **Cadeia de caracteres**: merchant.your.mechantid
 
@@ -148,7 +148,7 @@ Chaves de direitos podem ser adicionadas por meio do painel Código-fonte do edi
 
 ### <a name="siri"></a>Siri
 
-- **Descrição**: O SiriKit permite que um aplicativo iOS forneça serviços acessíveis ao Siri e ao aplicativo de Mapas em um dispositivo iOS usando Extensões de Aplicativo e as novas estruturas de Intenções e interface do usuário de Intenções. Para obter mais informações, consulte o guia Introdução ao SiriKit.
+- **Descrição**: o SiriKit permite que um aplicativo iOS forneça serviços acessíveis ao Siri e ao aplicativo de Mapas em um dispositivo iOS usando Extensões de Aplicativo e as novas estruturas de Intenções e interface do usuário de Intenções. Para obter mais informações, consulte o guia Introdução ao SiriKit.
   - **Chave**: com.apple.developer.siri
 
 ### <a name="personal-vpn"></a>VPN pessoal
@@ -158,49 +158,49 @@ Chaves de direitos podem ser adicionadas por meio do painel Código-fonte do edi
 
 ### <a name="keychain-sharing"></a>Compartilhamento de conjunto de chaves
 
-- **Descrição**: O compartilhamento de conjunto de chaves permite que os desenvolvedores de aplicativos compartilhem as senhas armazenadas no conjunto de chaves do dispositivo com outros aplicativos desenvolvidos pela mesma equipe. O acesso pode ser restringido passando um identificador de grupo de acesso do conjunto de chaves na cadeia de caracteres.
+- **Descrição**: o compartilhamento de conjunto de chaves permite que os desenvolvedores de aplicativos compartilhem as senhas armazenadas no conjunto de chaves do dispositivo com outros aplicativos desenvolvidos pela mesma equipe. O acesso pode ser restringido passando um identificador de grupo de acesso do conjunto de chaves na cadeia de caracteres.
   - **Chave**: keychain-access-groups
   - **Cadeia de caracteres**: $(AppIdentifierPrefix) $(CFBundleIdentifier)
 
 ### <a name="inter-app-audio"></a>Áudio entre aplicativos
 
-- **Descrição**: O Inter-App Audio permite que os desenvolvedores transmitam áudio entre aplicativos.
+- **Descrição**: o Áudio entre aplicativos permite que os desenvolvedores transmitam áudio entre aplicativos.
   - **Chave**: inter-app-audio
-  - **Booliano**: SIM
+  - **Booliano**: sim
 
 ### <a name="associated-domains"></a>Domínios Associados
 
-- **Descrição**: Os domínios associados que precisam ser tratados como links universais devem ser transmitidos com esse direito. Os links universais podem ser implementados para permitir a vinculação entre o aplicativo e o site. Você deve fornecer uma entrada para cada domínio com suporte do aplicativo e cada entrada deve começar com `applinks:`
+- **Descrição**: os domínios associados que precisam ser tratados como links universais devem ser transmitidos com esse direito. Os links universais podem ser implementados para permitir a vinculação entre o aplicativo e o site. Você deve fornecer uma entrada para cada domínio com suporte do aplicativo e cada entrada deve começar com `applinks:`
   - **Chave**: com.apple.developer.associated-domains
   - **Cadeia de caracteres**: webcredentials:example.com
 
 ### <a name="data-protection"></a>Proteção de Dados
 
-- **Descrição**: A habilitação da proteção de dados usa hardware de criptografia interno para armazenar os dados confidenciais usados no aplicativo em um formato criptografado. Por padrão, o nível de proteção é definido como proteção completa (os arquivos são acessíveis apenas quando o dispositivo está desbloqueado).
+- **Descrição**: a habilitação da proteção de dados usa hardware de criptografia interno para armazenar os dados confidenciais usados no aplicativo em um formato criptografado. Por padrão, o nível de proteção é definido como proteção completa (os arquivos são acessíveis apenas quando o dispositivo está desbloqueado).
   - **Chave**: com.apple.developer.default-data-protection
-  - **Cadeia de Caracteres**: NSFileProtectionComplete
+  - **Cadeia de caracteres**: NSFileProtectionComplete
 
 ### <a name="homekit"></a>HomeKit
 
-- **Descrição**: A estrutura HomeKit fornece uma plataforma para instalar, configurar e gerenciar dispositivos de automação residencial com suporte, tudo usando um dispositivo iOS. Para obter mais informações sobre como usar o HomeKit, consulte o guia Introdução ao HomeKit.
+- **Descrição**: a estrutura HomeKit fornece uma plataforma para instalar, configurar e gerenciar dispositivos de automação residencial com suporte, tudo usando um dispositivo iOS. Para obter mais informações sobre como usar o HomeKit, consulte o guia Introdução ao HomeKit.
   - **Chave**: com.apple.developer.homekit
-  - **Booliano**: SIM
+  - **Booliano**: sim
 
 ### <a name="healthkit"></a>HealthKit
 
-- **Descrição**: O HealthKit é uma estrutura introduzida no iOS 8 que fornece um armazenamento de dados centralizado, coordenado e seguro para obter informações relacionadas à integridade. Para obter mais informações sobre como usar o HealthKit, consulte o guia Introdução ao HealthKit.
+- **Descrição**: o HealthKit é uma estrutura introduzida no iOS 8 que fornece um armazenamento de dados centralizado, coordenado e seguro para obter informações relacionadas à integridade. Para obter mais informações sobre como usar o HealthKit, consulte o guia Introdução ao HealthKit.
   - **Chave**: com.apple.developer.healthkit
-  - **Booliano**: SIM
+  - **Booliano**: sim
 
 ### <a name="wireless-accessory-configuration"></a>Configuração de Acessório sem Fio
 
-- **Descrição**: O uso da Configuração de Acessório Sem Fio permite que seu aplicativo configure acessórios MFi Wi-Fi
+- **Descrição**: o uso da Configuração de Acessório Sem Fio permite que seu aplicativo configure acessórios MFi Wi-Fi
   - **Chave**: com.apple.external-accessory.wireless-configuration
-  - **Booliano**: SIM
+  - **Booliano**: sim
 
 ### <a name="classkit"></a>ClassKit
 
-- **Descrição**: O ClassKit permite que professores vejam o progresso do aluno em atividades atribuídas em seu aplicativo.
+- **Descrição**: o ClassKit permite que professores vejam o progresso do aluno em atividades atribuídas em seu aplicativo.
   - **Chave**: com.apple.developer.ClassKit-environment
   - **Cadeia de caracteres**: `development` ou `production`
 

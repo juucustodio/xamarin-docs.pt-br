@@ -3,30 +3,30 @@ title: ListView do Xamarin. Android e o ciclo de vida da atividade
 ms.prod: xamarin
 ms.assetid: 40840D03-6074-30A2-74DA-3664703E3367
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/06/2018
-ms.openlocfilehash: 1c093d3d67ace3b0f9186fca8226d4ef631d9af0
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: a4ebda89ad3bdcb663dc9d7cd513e45760163c34
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70762301"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028942"
 ---
 # <a name="xamarinandroid-listview-and-the-activity-lifecycle"></a>ListView do Xamarin. Android e o ciclo de vida da atividade
 
 As atividades passam por determinados Estados à medida que seu aplicativo é executado, como inicialização, execução, pausa e parada. Para obter mais informações e diretrizes específicas sobre como lidar com transições de estado, consulte o [tutorial ciclo de vida da atividade](~/android/app-fundamentals/activity-lifecycle/index.md).
-É importante entender o ciclo de vida da atividade e posicionar seu `ListView` código nos locais corretos.
+É importante entender o ciclo de vida da atividade e posicionar seu código de `ListView` nos locais corretos.
 
-Todos os exemplos neste documento executam "tarefas de instalação" no método da `OnCreate` atividade e (quando necessário) executam "desmontagem" em. `OnDestroy` Os exemplos geralmente usam pequenos conjuntos de dados que não são alterados, portanto, carregar novamente os dados com mais frequência é desnecessário.
+Todos os exemplos neste documento executam "tarefas de instalação" no método de `OnCreate` da atividade e (quando necessário) executam "desmontagem" em `OnDestroy`. Os exemplos geralmente usam pequenos conjuntos de dados que não são alterados, portanto, carregar novamente os dados com mais frequência é desnecessário.
 
-No entanto, se os dados forem alterados com frequência ou usar muita memória, talvez seja apropriado usar diferentes métodos de ciclo de vida para popular `ListView`e atualizar seu. Por exemplo, se os dados subjacentes estiverem constantemente mudando (ou podem ser afetados por atualizações em outras atividades), criar o adaptador `OnStart` no `OnResume` ou garantirá que os dados mais recentes sejam exibidos cada vez que a atividade for mostrada.
+No entanto, se os dados forem alterados com frequência ou usar muita memória, talvez seja apropriado usar diferentes métodos de ciclo de vida para popular e atualizar sua `ListView`. Por exemplo, se os dados subjacentes estiverem constantemente mudando (ou podem ser afetados por atualizações em outras atividades), a criação do adaptador em `OnStart` ou `OnResume` garantirá que os dados mais recentes sejam exibidos sempre que a atividade for mostrada.
 
-Se o adaptador usar recursos como memória ou um cursor gerenciado, lembre-se de liberar esses recursos no método complementar para o local em que foram instanciados (por exemplo, os objetos criados `OnStart` no podem ser descartados em `OnStop`).
+Se o adaptador usar recursos como memória ou um cursor gerenciado, lembre-se de liberar esses recursos no método complementar para o local em que foram instanciados (por exemplo, os objetos criados no `OnStart` podem ser descartados em `OnStop`).
 
 ## <a name="configuration-changes"></a>Alterações de configuração
 
-É importante lembrar que as alterações &ndash; de configuração especialmente a rotação de tela e a visibilidade &ndash; do teclado podem fazer com que a atividade atual seja destruída e recriada (a `ConfigurationChanges` menos que você especifique o contrário usando o atributo). Isso significa que, em condições normais, girar um dispositivo fará com `ListView` que `Adapter` um e seja recriado e (a menos que você tenha escrito `OnPause` código `OnResume`em e) os Estados de posição de rolagem e de seleção de linha serão perdidos.
+É importante lembrar-se de que as alterações de configuração &ndash; especialmente a rotação de tela e a visibilidade do teclado &ndash; podem fazer com que a atividade atual seja destruída e recriada (a menos que você especifique de outra forma usando o atributo `ConfigurationChanges`). Isso significa que, em condições normais, girar um dispositivo fará com que um `ListView` e `Adapter` seja recriado e (a menos que você tenha escrito código em `OnPause` e `OnResume`) os Estados de posição de rolagem e de seleção de linha serão perdidos.
 
 O atributo a seguir impediria que uma atividade fosse destruída e recriada como resultado de alterações de configuração:
 
@@ -34,4 +34,4 @@ O atributo a seguir impediria que uma atividade fosse destruída e recriada como
 [Activity(ConfigurationChanges="keyboardHidden|orientation")]
 ```
 
-A atividade deve então ser `OnConfigurationChanged` substituída para responder a essas alterações adequadamente. Para obter mais detalhes sobre como lidar com alterações de configuração, consulte a documentação.
+A atividade deve então substituir `OnConfigurationChanged` para responder a essas alterações adequadamente. Para obter mais detalhes sobre como lidar com alterações de configuração, consulte a documentação.

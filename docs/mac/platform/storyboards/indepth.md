@@ -4,25 +4,25 @@ description: Este documento descreve como trabalhar com storyboards no Xamarin. 
 ms.prod: xamarin
 ms.assetid: DF4DF7C2-DDD7-4A32-B375-5C5446301EC5
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 6aca181b2942bbde854df41c8f9741106cda6776
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 06774d13cf053b661dd0b2d24b7df0c0b767b4db
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70279306"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73026409"
 ---
 # <a name="working-with-storyboards-in-xamarinmac"></a>Trabalhando com storyboards no Xamarin. Mac
 
 Um storyboard define toda a interface do usuário para um determinado aplicativo dividido em uma visão geral funcional de seus controladores de exibição. No Interface Builder do Xcode, cada um desses controladores reside em sua própria cena.
 
-[![Um storyboard no Interface Builder do Xcode](indepth-images/intro01.png)](indepth-images/intro01.png#lightbox)
+[![um storyboard no Interface Builder do Xcode](indepth-images/intro01.png)](indepth-images/intro01.png#lightbox)
 
-O storyboard é um arquivo de recurso (com as extensões `.storyboard`do) que é incluído no pacote do aplicativo Xamarin. Mac quando ele é compilado e enviado. Para definir o storyboard inicial para seu aplicativo, edite `Info.plist` o arquivo e selecione a **interface principal** na caixa suspensa: 
+O storyboard é um arquivo de recurso (com as extensões do `.storyboard`) que é incluído no pacote do aplicativo Xamarin. Mac quando ele é compilado e enviado. Para definir o storyboard inicial para seu aplicativo, edite-o `Info.plist` arquivo e selecione a **interface principal** na caixa suspensa: 
 
-[![O editor info. plist](indepth-images/sb01.png)](indepth-images/sb01.png#lightbox)
+[![o editor do info. plist](indepth-images/sb01.png)](indepth-images/sb01.png#lightbox)
 
 <a name="Loading-from-Code" />
 
@@ -41,11 +41,11 @@ controller.ShowWindow(this);
 
 O `FromName` carrega o arquivo de storyboard com o nome fornecido que foi incluído no pacote do aplicativo. O `InstantiateControllerWithIdentifier` cria uma instância do controlador de exibição com a identidade fornecida. Você define a identidade no Interface Builder do Xcode ao criar a interface do usuário:
 
-[![Definindo a ID do storyboard](indepth-images/sb02.png)](indepth-images/sb02.png#lightbox)
+[![definir a ID do storyboard](indepth-images/sb02.png)](indepth-images/sb02.png#lightbox)
 
-Opcionalmente, você pode usar o `InstantiateInitialController` método para carregar o controlador de exibição ao qual foi atribuído o controlador inicial no interface Builder:
+Opcionalmente, você pode usar o método `InstantiateInitialController` para carregar o controlador de exibição ao qual foi atribuído o controlador inicial no Interface Builder:
 
-[![Configurando o controlador inicial](indepth-images/sb03.png)](indepth-images/sb03.png#lightbox)
+[![definir o controlador inicial](indepth-images/sb03.png)](indepth-images/sb03.png#lightbox)
 
 Ele é marcado pelo **ponto de entrada do storyboard** e pela seta aberta finalizada acima.
 
@@ -59,24 +59,24 @@ Os controladores de exibição definem as relações entre uma determinada exibi
 
 ### <a name="the-view-controller-lifecycle"></a>O ciclo de vida do controlador de exibição
 
-Vários novos métodos foram adicionados à `NSViewController` classe para dar suporte a storyboards no MacOS. O mais importante é que os métodos a seguir usam para responder ao ciclo de vida da exibição que está sendo controlada pelo controlador de exibição fornecido:
+Vários novos métodos foram adicionados à classe `NSViewController` para dar suporte a storyboards no macOS. O mais importante é que os métodos a seguir usam para responder ao ciclo de vida da exibição que está sendo controlada pelo controlador de exibição fornecido:
 
-- `ViewDidLoad`-Esse método é chamado quando a exibição é carregada a partir do arquivo de storyboard.
-- `ViewWillAppear`-Esse método é chamado logo antes da exibição ser exibida na tela.
-- `ViewDidAppear`-Esse método é chamado diretamente depois que a exibição é exibida na tela.
-- `ViewWillDisappear`-Esse método é chamado logo antes da exibição ser removida da tela.
-- `ViewDidDisappear`-Esse método é chamado diretamente após a exibição ser removida da tela.
-- `UpdateViewConstraints`-Esse método é chamado quando as restrições que definem uma exibição de posição e tamanho de layout automático precisam ser atualizadas.
-- `ViewWillLayout`-Esse método é chamado logo antes de as subexibições dessa exibição serem colocadas na tela.
-- `ViewDidLayout`-Esse método é chamado diretamente depois que as subexibições de exibição são dispostas na tela.
+- `ViewDidLoad`-esse método é chamado quando a exibição é carregada a partir do arquivo de storyboard.
+- `ViewWillAppear`-esse método é chamado logo antes de a exibição ser exibida na tela.
+- `ViewDidAppear`-esse método é chamado diretamente depois que a exibição é exibida na tela.
+- `ViewWillDisappear`-esse método é chamado logo antes de a exibição ser removida da tela.
+- `ViewDidDisappear`-esse método é chamado diretamente após a exibição ser removida da tela.
+- `UpdateViewConstraints`-esse método é chamado quando as restrições que definem uma exibição de posição e tamanho de layout automático precisam ser atualizadas.
+- `ViewWillLayout`-esse método é chamado logo antes de as subexibições dessa exibição serem dispostas na tela.
+- `ViewDidLayout`-esse método é chamado diretamente depois que as subexibições de exibição são dispostas na tela.
 
 <a name="The-Responder-Chain" />
 
 ### <a name="the-responder-chain"></a>A cadeia de respondentes
 
-Além disso `NSViewControllers` , agora fazem parte da cadeia de _respondentes_da janela:
+Além disso, `NSViewControllers` agora fazem parte da cadeia de _respondentes_da janela:
 
-[![A cadeia de respondentes](indepth-images/vc01.png)](indepth-images/vc01.png#lightbox)
+[![cadeia de respondentes](indepth-images/vc01.png)](indepth-images/vc01.png#lightbox)
 
 E, assim, eles são conectados para receber e responder a eventos, como seleções de item de menu recortar, copiar e colar. Essa conexão do controlador de exibição automática ocorre apenas em aplicativos em execução no macOS Sierra (10,12) e superior.
 
@@ -86,13 +86,13 @@ E, assim, eles são conectados para receber e responder a eventos, como seleçõ
 
 Em storyboards, os controladores de exibição (como o controlador de exibição de divisão e o controlador de exibição de guia) agora podem implementar o _confinamento_, de modo que eles podem "conter" outros controladores de subexibição:
 
-[![Um exemplo de contenção do controlador de exibição](indepth-images/vc02.png)](indepth-images/vc02.png#lightbox)
+[![um exemplo de contenção do controlador de exibição](indepth-images/vc02.png)](indepth-images/vc02.png#lightbox)
 
 Os controladores de exibição filho contêm métodos e propriedades para vinculá-los de volta ao controlador de exibição pai e para trabalhar com a exibição e a remoção de exibições da tela.
 
 Todos os controladores de exibição de contêiner incorporados ao macOS têm um layout específico que a Apple sugere que você siga se criar seus próprios controladores de exibição de contêiner personalizados:
 
-[![O layout do controlador de exibição](indepth-images/vc03.png)](indepth-images/vc03.png#lightbox)
+[![o layout do controlador de exibição](indepth-images/vc03.png)](indepth-images/vc03.png#lightbox)
 
 O controlador de exibição de coleção contém uma matriz de itens de exibição de coleção, cada um contendo um ou mais controladores de exibição que contêm suas próprias exibições.
 
@@ -116,13 +116,13 @@ Considerando o as tendências da macOS em relação à contenção, há situaç�
 - **Popover** -apresenta o destino do transição como em uma janela popover. Por exemplo, use este tipo de transição para apresentar opções quando um elemento de interface do usuário for clicado pelo usuário.
 - **Personalizado** -apresenta o destino do transição usando um tipo transição personalizado definido pelo desenvolvedor. Consulte a seção [criando continuações personalizados](#Creating-Custom-Segues) abaixo para obter mais detalhes.
 
-Ao usar a apresentação continuações, você pode substituir `PrepareForSegue` o método do controlador de exibição pai para que a apresentação seja inicializada e as variáveis e forneça todos os dados para o controlador de exibição que está sendo apresentado.
+Ao usar a apresentação continuações, você pode substituir o método `PrepareForSegue` do controlador de exibição pai para que a apresentação seja inicializada e as variáveis e forneça todos os dados para o controlador de exibição que está sendo apresentado.
 
 <a name="Triggered-Segues" />
 
 ### <a name="triggered-segues"></a>Continuações disparado
 
-Continuações disparado permite que você especifique o chamado continuações (por meio de sua propriedade de **identificador** no interface Builder) e os tenha disparado por eventos, como o `PerformSegue` usuário clicando em um botão ou chamando o método no código:
+Continuações disparado permite que você especifique o chamado continuações (por meio de sua propriedade de **identificador** no interface Builder) e os tenha disparado por eventos, como o usuário clicando em um botão ou chamando o método `PerformSegue` no código:
 
 ```csharp
 // Display the Scene defined by the given Segue ID
@@ -131,9 +131,9 @@ PerformSegue("MyNamedSegue", this);
 
 A ID transição é definida dentro do Interface Builder do Xcode quando você está fazendo o layout da interface do usuário do aplicativo:
 
-[![Inserindo um nome de transição](indepth-images/sg02.png)](indepth-images/sg02.png#lightbox)
+[![inserir um nome de transição](indepth-images/sg02.png)](indepth-images/sg02.png#lightbox)
 
-No controlador de exibição que está agindo como a origem do transição, você deve substituir o `PrepareForSegue` método e fazer qualquer inicialização necessária antes que o transição seja executado e o controlador de exibição especificado seja exibido:
+No controlador de exibição que está agindo como a origem do transição, você deve substituir o método `PrepareForSegue` e fazer qualquer inicialização necessária antes que o transição seja executado e o controlador de exibição especificado seja exibido:
 
 ```csharp
 public override void PrepareForSegue (NSStoryboardSegue segue, NSObject sender)
@@ -150,7 +150,7 @@ public override void PrepareForSegue (NSStoryboardSegue segue, NSObject sender)
 }
 ```
 
-Opcionalmente, você pode substituir o `ShouldPerformSegue` método e controlar se o transição é realmente executado por meio C# de código. Para os controladores de exibição apresentados manualmente, `DismissController` chame seu método para removê-los da exibição quando não forem mais necessários.
+Opcionalmente, você pode substituir o método `ShouldPerformSegue` e controlar se o transição é realmente executado por meio C# de código. Para os controladores de exibição apresentados manualmente, chame o método `DismissController` para removê-los da exibição quando não forem mais necessários.
 
 <a name="Creating-Custom-Segues" />
 
@@ -208,14 +208,14 @@ namespace OnCardMac
 
 Algumas coisas a serem observadas aqui:
 
-- Estamos usando o `Register` atributo para expor essa classe para Objective-C/MacOS.
-- Estamos substituindo o `Perform` método para realmente executar a ação de nosso transição personalizado.
-- Estamos substituindo o controlador da `ContentViewController` janela por um definido pelo destino (destino) do transição.
-- Estamos removendo o controlador de exibição original para liberar memória usando o `RemoveFromParentViewController` método.
+- Estamos usando o atributo `Register` para expor essa classe para Objective-C/macOS.
+- Estamos substituindo o método `Perform` para realmente executar a ação de nosso transição personalizado.
+- Estamos substituindo o controlador de `ContentViewController` da janela por um definido pelo destino (destino) do transição.
+- Estamos removendo o controlador de exibição original para liberar memória usando o método `RemoveFromParentViewController`.
 
 Para usar esse novo tipo de transição no Interface Builder do Xcode, precisamos compilar o aplicativo primeiro e, em seguida, alternar para o Xcode e adicionar um novo transição entre dois bastidores. Defina o **estilo** como **personalizado** e a **classe transição** como `ReplaceViewSegue` (o nome da nossa classe transição personalizada):
 
-[![Definindo a classe transição](indepth-images/sg01.png)](indepth-images/sg01.png#lightbox)
+[![definir a classe transição](indepth-images/sg01.png)](indepth-images/sg01.png#lightbox)
 
 <a name="Triggered-Segues" />
 
@@ -224,10 +224,10 @@ Para usar esse novo tipo de transição no Interface Builder do Xcode, precisamo
 Os controladores de janela contêm e controlam os diferentes tipos de janela que seu aplicativo macOS pode criar. Para storyboards, eles têm os seguintes recursos:
 
 1. Eles devem fornecer um controlador de exibição de conteúdo. Esse será o mesmo controlador de exibição de conteúdo que a janela filho tem.
-2. A `Storyboard` Propriedade conterá o storyboard do qual o controlador de janela foi carregado `null` , caso contrário, se não for carregado a partir de um Storyboard.
-3. Você pode chamar o `DismissController` método para fechar a janela especificada e removê-la da exibição.
+2. A propriedade `Storyboard` conterá o storyboard do qual o controlador de janela foi carregado, caso contrário, `null` se não for carregado de um Storyboard.
+3. Você pode chamar o método `DismissController` para fechar a janela especificada e removê-la da exibição.
 
-Assim como os controladores de exibição, os `PerformSegue`controladores `PrepareForSegue` de janela `ShouldPerformSegue` implementam o e os métodos e podem ser usados como a origem de uma operação transição.
+Assim como os controladores de exibição, os controladores de janela implementam os métodos `PerformSegue`, `PrepareForSegue` e `ShouldPerformSegue` e podem ser usados como a origem de uma operação transição.
 
 O controlador de janela é responsável pelos seguintes recursos de um aplicativo macOS:
 
@@ -245,15 +245,15 @@ No entanto, onde os gestos no iOS são determinados pelo design do aplicativo (p
 
 Usando reconhecedores de gestos, você pode reduzir bastante a quantidade de código necessária para adicionar interações personalizadas a um item na interface do usuário. Como eles podem determinar automaticamente entre cliques duplos e únicos, clique e arraste eventos, etc.
 
-Em vez de substituir `MouseDown` o evento em seu controlador de exibição, você deve usar um reconhecedor de gesto para manipular o evento de entrada do usuário ao trabalhar com storyboards.
+Em vez de substituir o evento de `MouseDown` em seu controlador de exibição, você deve usar um reconhecedor de gesto para manipular o evento de entrada do usuário ao trabalhar com storyboards.
 
 Os reconhecedores de gesto a seguir estão disponíveis no macOS:
 
-- `NSClickGestureRecognizer`-Registrar eventos de mouse para baixo e para cima.
-- `NSPanGestureRecognizer`-Registra os eventos de arrastar e soltar do botão do mouse.
-- `NSPressGestureRecognizer`-Registra o pressionamento de um botão do mouse para um determinado período de tempo.
-- `NSMagnificationGestureRecognizer`-Registra um evento de ampliação de hardware trackpad.
-- `NSRotationGestureRecognizer`-Registra um evento de rotação de hardware trackpad.
+- `NSClickGestureRecognizer`-registrar eventos de Down e up do mouse.
+- `NSPanGestureRecognizer`-registra os eventos de arrastar e soltar do botão do mouse.
+- `NSPressGestureRecognizer`-registra a retenção de um botão do mouse para um determinado período de tempo.
+- `NSMagnificationGestureRecognizer`-registra um evento de ampliação de hardware trackpad.
+- `NSRotationGestureRecognizer`-registra um evento de rotação de hardware trackpad.
 
 <a name="Using-Storyboard-References" />
 
@@ -269,23 +269,23 @@ Além disso, uma referência de storyboard pode fornecer uma _âncora_ para outr
 
 Para adicionar uma referência a um storyboard externo, faça o seguinte:
 
-1. Na **Gerenciador de soluções**, clique com o botão direito do mouse no nome do projeto e selecione **Adicionar** > **novo arquivo...** Storyboard do **Mac** > .  >  Insira um **nome** para o novo storyboard e clique no botão **novo** : 
+1. Na **Gerenciador de soluções**, clique com o botão direito do mouse no nome do projeto e selecione **Adicionar** > **novo arquivo...**  > **Mac** > **storyboard**. Insira um **nome** para o novo storyboard e clique no botão **novo** : 
 
-    [![Adicionando um novo storyboard](indepth-images/ref01.png)](indepth-images/ref01.png#lightbox)
+    [![adicionar um novo storyboard](indepth-images/ref01.png)](indepth-images/ref01.png#lightbox)
 2. No **Gerenciador de soluções**, clique duas vezes no novo nome do storyboard para abri-lo para edição no interface Builder do Xcode.
 3. Projete o layout das cenas do novo storyboard como faria normalmente e salve suas alterações: 
 
-    [![Criando a interface](indepth-images/ref02.png)](indepth-images/ref02.png#lightbox)
+    [![projetando a interface](indepth-images/ref02.png)](indepth-images/ref02.png#lightbox)
 4. Alterne para o storyboard ao qual você vai adicionar a referência no Interface Builder.
 5. Arraste uma **referência de storyboard** da **biblioteca de objetos** para a design Surface: 
 
-    [![Selecionando uma referência de storyboard na biblioteca](indepth-images/ref03.png)](indepth-images/ref03.png#lightbox)
+    [![selecionando uma referência de storyboard na biblioteca](indepth-images/ref03.png)](indepth-images/ref03.png#lightbox)
 6. No **Inspetor de atributo**, selecione o nome do **storyboard** que você criou acima: 
 
-    [![Configurando a referência](indepth-images/ref04.png)](indepth-images/ref04.png#lightbox)
+    [![configurar a referência](indepth-images/ref04.png)](indepth-images/ref04.png#lightbox)
 7. Controle-clique em um widget de interface do usuário (como um botão) em uma cena existente e crie um novo transição para a **referência do storyboard** que você acabou de criar.  No menu pop-up, selecione **Mostrar** para concluir o transição: 
 
-    [![Configurando o tipo transição](indepth-images/ref06.png)](indepth-images/ref06.png#lightbox) 
+    [![definir o tipo transição](indepth-images/ref06.png)](indepth-images/ref06.png#lightbox) 
 8. Salve as alterações no storyboard.
 9. Retorne para Visual Studio para Mac para sincronizar suas alterações.
 
@@ -300,20 +300,20 @@ Para adicionar uma referência a uma cena específica um storyboard externo (e n
 1. Na **Gerenciador de soluções**, clique duas vezes no storyboard externo para abri-lo para edição no interface Builder do Xcode.
 2. Adicione uma nova cena e projete seu layout como faria normalmente: 
 
-    [![Criando o layout no Xcode](indepth-images/ref07.png)](indepth-images/ref07.png#lightbox)
+    [![criar o layout no Xcode](indepth-images/ref07.png)](indepth-images/ref07.png#lightbox)
 3. No **Inspetor de identidade**, insira uma **ID de storyboard** para o controlador de janela da nova cena: 
 
-    [![Definindo a ID do storyboard](indepth-images/ref08.png)](indepth-images/ref08.png#lightbox)
+    [![definir a ID do storyboard](indepth-images/ref08.png)](indepth-images/ref08.png#lightbox)
 4. Abra o storyboard ao qual você vai adicionar a referência em Interface Builder.
 5. Arraste uma **referência de storyboard** da **biblioteca de objetos** para a design Surface: 
 
-    [![Selecionando uma referência de storyboard na biblioteca](indepth-images/ref03.png)](indepth-images/ref03.png#lightbox)
+    [![selecionar uma referência de storyboard da biblioteca](indepth-images/ref03.png)](indepth-images/ref03.png#lightbox)
 6. No **Inspetor de identidade**, selecione o nome do **storyboard** e a **ID de referência** (ID do storyboard) da cena que você criou acima: 
 
-    [![Definindo a ID de referência](indepth-images/ref09.png)](indepth-images/ref09.png#lightbox)
+    [![definir a ID de referência](indepth-images/ref09.png)](indepth-images/ref09.png#lightbox)
 7. Controle-clique em um widget de interface do usuário (como um botão) em uma cena existente e crie um novo transição para a **referência do storyboard** que você acabou de criar. No menu pop-up, selecione **Mostrar** para concluir o transição: 
 
-    [![Configurando o tipo transição](indepth-images/ref06.png)](indepth-images/ref06.png#lightbox) 
+    [![definir o tipo transição](indepth-images/ref06.png)](indepth-images/ref06.png#lightbox) 
 8. Salve as alterações no storyboard.
 9. Retorne para Visual Studio para Mac para sincronizar suas alterações.
 
@@ -328,19 +328,19 @@ Para adicionar uma referência a uma cena específica do mesmo storyboard, faça
 1. Na **Gerenciador de soluções**, clique duas vezes no storyboard para abri-lo para edição.
 2. Adicione uma nova cena e projete seu layout como faria normalmente: 
 
-    [![Editando o storyboard no Xcode](indepth-images/ref11.png)](indepth-images/ref11.png#lightbox)
+    [![editar o storyboard no Xcode](indepth-images/ref11.png)](indepth-images/ref11.png#lightbox)
 3. No **Inspetor de identidade**, insira uma **ID de storyboard** para o controlador de janela da nova cena: 
 
-    [![Definindo a ID do storyboard](indepth-images/ref12.png)](indepth-images/ref12.png#lightbox)
+    [![definir a ID do storyboard](indepth-images/ref12.png)](indepth-images/ref12.png#lightbox)
 4. Arraste uma **referência de storyboard** da **caixa de ferramentas** para a design Surface: 
 
-    [![Selecionando uma referência de storyboard na biblioteca](indepth-images/ref03.png)](indepth-images/ref03.png#lightbox)
+    [![selecionar uma referência de storyboard da biblioteca](indepth-images/ref03.png)](indepth-images/ref03.png#lightbox)
 5. No **Inspetor de atributo**, selecione **ID de referência** (ID do storyboard) da cena que você criou acima: 
 
-    [![Definindo a ID de referência](indepth-images/ref13.png)](indepth-images/ref13.png#lightbox)
+    [![definir a ID de referência](indepth-images/ref13.png)](indepth-images/ref13.png#lightbox)
 6. Controle-clique em um widget de interface do usuário (como um botão) em uma cena existente e crie um novo transição para a **referência do storyboard** que você acabou de criar. No menu pop-up, selecione **Mostrar** para concluir o transição: 
 
-    [![Selecionando o tipo transição](indepth-images/ref06.png)](indepth-images/ref06.png#lightbox) 
+    [![selecionar o tipo transição](indepth-images/ref06.png)](indepth-images/ref06.png#lightbox) 
 7. Salve as alterações no storyboard.
 8. Retorne para Visual Studio para Mac para sincronizar suas alterações.
 

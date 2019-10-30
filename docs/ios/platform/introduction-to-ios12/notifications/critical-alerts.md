@@ -4,15 +4,15 @@ description: Este documento descreve como usar alertas críticos com o Xamarin. 
 ms.prod: xamarin
 ms.assetid: 75742257-081D-44F4-B49E-FB807DF85262
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 09/04/2018
-ms.openlocfilehash: 54a214215f77b66f6a4b134dcb8d27b26c44fb6c
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 43b810b95e4da2927030617e68c0ade824a0beaa
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291289"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73031972"
 ---
 # <a name="critical-alerts-in-xamarinios"></a>Alertas críticos no Xamarin. iOS
 
@@ -28,7 +28,7 @@ Depois de receber esse direito da Apple e seguir todas as instruções associada
 
 A solicitação de autorização de notificação de um aplicativo solicita que o usuário permita ou proíba as notificações de um aplicativo. Se a solicitação de autorização de notificação solicitar permissão para enviar alertas críticos, o aplicativo também dará ao usuário a oportunidade de aceitar alertas críticos.
 
-O código a seguir solicita permissão para enviar alertas críticos e notificações padrão e sons passando o[`UNAuthorizationOptions`](xref:UserNotifications.UNAuthorizationOptions)
+O código a seguir solicita permissão para enviar alertas críticos e notificações padrão e sons passando o [`UNAuthorizationOptions`](xref:UserNotifications.UNAuthorizationOptions) apropriado
 valores para [`RequestAuthorization`](xref:UserNotifications.UNUserNotificationCenter.RequestAuthorization*):
 
 ```csharp
@@ -45,13 +45,13 @@ public override bool FinishedLaunching(UIApplication application, NSDictionary l
 
 ## <a name="local-critical-alerts"></a>Alertas críticos locais
 
-Para enviar um alerta crítico local, crie um[`UNMutableNotificationContent`](xref:UserNotifications.UNMutableNotificationContent)
-e defina sua `Sound` Propriedade como:
+Para enviar um alerta crítico local, crie um [`UNMutableNotificationContent`](xref:UserNotifications.UNMutableNotificationContent)
+e defina sua propriedade `Sound` como:
 
 - `UNNotificationSound.DefaultCriticalSound`, que usa o som de notificação crítico padrão.
 - `UNNotificationSound.GetCriticalSound`, que permite que você especifique um som personalizado que é agrupado com seu aplicativo e um volume.
 
-Em seguida, crie `UNNotificationRequest` um do conteúdo de notificação e adicione-o à central de notificações:
+Em seguida, crie uma `UNNotificationRequest` do conteúdo da notificação e adicione-a ao centro de notificações:
 
 ```csharp
 var content = new UNMutableNotificationContent()

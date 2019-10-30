@@ -4,15 +4,15 @@ description: Este guia explora como determinar o ritmo dos seus aplicativos e co
 ms.prod: xamarin
 ms.assetid: 06FD3940-D666-4C9E-BC3E-BBE481EF8012
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: 58bf8325a0fab17411dd7a4f857fdad8bdc6b016
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 92bf7934b1ad4f6d959fc458f536cf3b3426df51
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70756268"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73026364"
 ---
 # <a name="ios-build-mechanics"></a>Mecânica de Compilação do iOS
 
@@ -32,7 +32,7 @@ Para habilitar os resultados de diagnóstico do MSBuild no Visual Studio para Ma
 
 1. Clique em **Visual Studio para Mac > Preferências...**
 2. No modo de exibição de árvore à esquerda, selecione **Projetos > Compilar**
-3. No painel à direita, defina o menu suspenso de detalhamento do Log como **Diagnóstico**:  [![](ios-build-mechanics-images/image2.png "Configurando o nível de detalhes do Log")](ios-build-mechanics-images/image2.png#lightbox)
+3. No painel direito, defina a lista suspensa detalhes do log para **diagnóstico**:[![](ios-build-mechanics-images/image2.png "Definindo o detalhamento do log")](ios-build-mechanics-images/image2.png#lightbox)
 4. Clique em **OK**
 5. Reiniciar o Visual Studio para Mac
 6. Limpar e recompilar o seu pacote
@@ -44,7 +44,7 @@ Para habilitar os resultados de diagnóstico do MSBuild no Visual Studio para Ma
 
 1. Clique em **Ferramentas > Opções...**
 2. No modo de exibição de árvore à esquerda, selecione **Projetos e Soluções > Compilar e Executar**
-3. No painel à direita, defina o *Menu suspenso de detalhamento de resultados de build do MSBuild* como **Diagnóstico**:  [![](ios-build-mechanics-images/image2-vs.png "Configurar o detalhamento dos resultados de build do MSBuild")](ios-build-mechanics-images/image2-vs.png#lightbox)
+3. No painel direito, defina o *menu suspenso de detalhes de saída de compilação do MSBuild* como **diagnóstico**:[![](ios-build-mechanics-images/image2-vs.png "Definindo o detalhamento de saída da compilação do MSBuild")](ios-build-mechanics-images/image2-vs.png#lightbox)
 4. Clique em **OK**
 5. Limpe e recompile o seu pacote.
 6. Os resultados de diagnóstico estão visíveis no painel Resultados.
@@ -67,7 +67,7 @@ Total time: 1554 ms
 
 As ferramentas do Xamarin, tecnicamente, funcionam em qualquer Mac que possa executar o OS X 10.10 Yosemite ou posterior. No entanto, as experiências de desenvolvedor e tempos de compilação podem ser prejudicados pelo desempenho do Mac.
 
-No estado desconectado, o Visual Studio no Windows só realizará a fase de compilação do C# e não tentará executar a vinculação ou compilação AOT, empacotar o aplicativo em um pacote _.app_ nem conectar-se ao pacote de aplicativos. (A fase de compilação do C# raramente é um gargalo de desempenho.) Tente identificar em que parte do pipeline a compilação está lenta, fazendo a compilando diretamente no host de compilação do Mac no Visual Studio para Mac.
+No estado desconectado, o Visual Studio no Windows só realizará a fase de compilação do C# e não tentará executar a vinculação ou compilação AOT, empacotar o aplicativo em um pacote _.app_ nem conectar-se ao pacote de aplicativos. (A C# fase de compilação raramente é um afunilamento de desempenho.) Tentativa de identificar onde o Build está diminuindo a velocidade, criando diretamente no host de Build do Mac em Visual Studio para Mac.
 
 Além disso, um dos locais mais comuns para a lentidão é a conexão de rede entre o computador Windows e o host de compilação do Mac. Isso pode ocorrer devido a um obstáculo físico na rede, usar uma conexão sem fio ou ter que viajar por um computador saturado (como um serviço Mac na nuvem).
 
@@ -97,7 +97,7 @@ Levando em consideração as informações acima, a lista abaixo fornece algumas
 
 A captura de tela abaixo ilustra como definir essas opções para o simulador nas opções do iOS:
 
-[![](ios-build-mechanics-images/image3.png "Definindo as opções")](ios-build-mechanics-images/image3.png#lightbox)
+[![](ios-build-mechanics-images/image3.png "Setting the options")](ios-build-mechanics-images/image3.png#lightbox)
 
 ## <a name="device-tricks"></a>Truques de dispositivos
 
@@ -148,7 +148,7 @@ Dicas adicionais
 
 A captura de tela abaixo ilustra como definir essas opções para o simulador nas opções do iOS:
 
-[![](ios-build-mechanics-images/image4.png "Definindo as opções")](ios-build-mechanics-images/image4.png#lightbox)
+[![](ios-build-mechanics-images/image4.png "Setting the options")](ios-build-mechanics-images/image4.png#lightbox)
 
 ## <a name="using-the-linker"></a>Usar o Vinculador
 
@@ -280,4 +280,4 @@ L3 Cache: 4 MB
 
 - [Publicação do Blog](https://blog.xamarin.com/xamarin-ios-build-improvements/)
 - [Vinculação no iOS](~/ios/deploy-test/linker.md)
-- [Configuração Personalizada do Vinculador](~/cross-platform/deploy-test/linker.md)
+- [Configuração personalizada do Linker](~/cross-platform/deploy-test/linker.md)

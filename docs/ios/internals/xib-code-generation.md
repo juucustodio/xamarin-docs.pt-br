@@ -4,15 +4,15 @@ description: Este documento descreve como o Xamarin. iOS gera código para mapea
 ms.prod: xamarin
 ms.assetid: 365991A8-E07A-0420-D28E-BC4D32065E1A
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: 474e8ba772773f437bc30a07a34f6bfbb286cd82
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 778b8eeb82ebfb62cfb8c16e14f341c9afb8ff7a
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70768496"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73022251"
 ---
 # <a name="xib-code-generation-in-xamarinios"></a>. xib geração de código no Xamarin. iOS
 
@@ -33,7 +33,7 @@ As classes personalizadas podem ser definidas em um arquivo **. xib** usando o c
 
 ## <a name="generating-code"></a>Gerando código
 
-Para qualquer  **{0}arquivo. xib** com uma ação de compilação de *Page*, se um  **{0}arquivo. xib.designer.cs** também existir no projeto, Visual Studio para Mac gerará classes parciais no arquivo do designer para todas as classes de usuário pode encontrar no arquivo **. xib** , com propriedades para as saídas e métodos parciais para todas as ações. A geração de código é habilitada simplesmente pela presença desse arquivo.
+Para qualquer arquivo **{0}. xib** com uma ação de compilação de *página*, se um arquivo **{0}. xib.designer.cs** também existir no projeto, Visual Studio para Mac gerará classes parciais no arquivo de designer para todas as classes de usuário que ele pode encontrar no arquivo **. xib** , com propriedades para as saídas e métodos parciais para todas as ações. A geração de código é habilitada simplesmente pela presença desse arquivo.
 
 O arquivo de designer é atualizado automaticamente quando o arquivo **. xib** é alterado e Visual Studio para Mac recupera o foco. O arquivo de designer não deve ser modificado manualmente, pois as alterações serão substituídas na próxima vez Visual Studio para Mac atualizar o arquivo.
 
@@ -41,7 +41,7 @@ O arquivo de designer é atualizado automaticamente quando o arquivo **. xib** �
 
 Visual Studio para Mac gera as classes de designer usando o namespace padrão do projeto para o local do arquivo de designer, para torná-lo consistente com o projeto normal do .NET namespacing. O namespace de arquivos de designer é orientado pelo "namespace padrão" do projeto e suas configurações de "políticas de nomenclatura do .NET". Saiba que, se o namespace padrão do seu projeto for alterado, MD irá regenerar as classes no novo namespace, de modo que você pode descobrir que suas classes parciais não correspondem mais.
 
-Para tornar a classe detectável pelo tempo de execução Objective-C, Visual Studio para Mac aplica um `[Register (name)]` atributo à classe. Embora o Xamarin. Ios Registre `NSObject`automaticamente as classes derivadas, ele usa os nomes .NET totalmente qualificados. O atributo aplicado por Visual Studio para Mac substitui isso para garantir que cada classe seja registrada com o nome usado no arquivo **. xib** . Se você usar classes personalizadas no IB sem usar Visual Studio para Mac para gerar arquivos de designer, talvez seja necessário aplicar isso manualmente para fazer com que as classes gerenciadas correspondam aos nomes de classe Objective-C esperados.
+Para tornar a classe detectável pelo tempo de execução Objective-C, Visual Studio para Mac aplica um atributo `[Register (name)]` à classe. Embora o Xamarin. iOS registre automaticamente classes derivadas de `NSObject`, ele usa os nomes .NET totalmente qualificados. O atributo aplicado por Visual Studio para Mac substitui isso para garantir que cada classe seja registrada com o nome usado no arquivo **. xib** . Se você usar classes personalizadas no IB sem usar Visual Studio para Mac para gerar arquivos de designer, talvez seja necessário aplicar isso manualmente para fazer com que as classes gerenciadas correspondam aos nomes de classe Objective-C esperados.
 
 As classes não podem ser definidas em mais de um **. xib**ou entrarão em conflito.
 
@@ -51,7 +51,7 @@ As classes parciais do designer não devem ser usadas no estado em que se encont
 
 A razão para isso é a necessidade de flexibilidade. Por exemplo, várias classes codebehind podiam fazer uma subclasse de uma classe abstrata gerenciada comum, que subclasse a classe a ser subclasse por IB.
 
-É convencional colocá-los em um  **{0}arquivo. xib.cs** ao lado do arquivo do  **{0}designer. xib.designer.cs** .
+É convencional colocá-los em um arquivo **{0}. xib.cs** ao lado do arquivo do designer **{0}. xib.designer.cs** .
 
 <a name="generated" />
 
@@ -63,19 +63,19 @@ Nas classes parciais do designer, Visual Studio para Mac gera propriedades corre
 
 As classes de designer contêm propriedades correspondentes a todas as saídas definidas na classe personalizada. O fato de que essas são propriedades são um detalhe de implementação do Xamarin. iOS para o objetivo da ponte C, para habilitar a vinculação lenta. Você deve considerá-los equivalentes a campos privados, destinados a serem usados somente da classe codebehind. Se você quiser torná-los públicos, adicione Propriedades de acessador à parte de classe que não seja do designer, como faria em qualquer outro campo privado.
 
-Se as propriedades da tomada forem definidas para ter um `id` tipo de ( `NSObject`equivalente a), o gerador de código do designer determinará atualmente o tipo mais forte possível com base em objetos conectados a essa tomada, por conveniência.
+Se as propriedades da tomada forem definidas para ter um tipo de `id` (equivalente a `NSObject`), o gerador de código do designer determinará atualmente o tipo mais forte possível com base em objetos conectados a essa tomada, por conveniência.
 No entanto, isso pode não ter suporte em versões futuras, portanto, é recomendável que você explicitamente digite as saídas ao definir a classe personalizada.
 
 ### <a name="action-properties"></a>Propriedades da ação
 
 As classes de designer contêm métodos parciais correspondentes a todas as ações definidas na classe personalizada. Esses são métodos sem implementação. A finalidade dos métodos parciais é dupla:
 
-1. Se você digitar `partial` o corpo da classe da parte de classe que não é do designer, a Visual Studio para Mac oferecerá a conclusão automático das assinaturas de todos os métodos parciais não implementados.
+1. Se você digitar `partial` no corpo da classe da parte de classe que não é do designer, o Visual Studio para Mac oferecerá a conclusão automático das assinaturas de todos os métodos parciais não implementados.
 2. As assinaturas de método parcial têm um atributo aplicado que as expõe ao mundo Objective-C, para que possam ser manipuladas como a ação correspondente.
 
 Se desejar, você pode ignorar o método parcial e implementar a ação aplicando o atributo a um método diferente ou deixá-lo passar para uma classe base.
 
-Se as ações forem definidas para ter um tipo de `id` remetente de ( `NSObject`equivalente a), o gerador de código do designer determinará atualmente o tipo mais forte possível com base em objetos conectados a essa ação. No entanto, isso pode não ter suporte em versões futuras, portanto, é recomendável que você explicitamente digite as ações ao definir a classe personalizada.
+Se as ações forem definidas para ter um tipo de remetente de `id` (equivalente a `NSObject`), o gerador de código do designer determinará atualmente o tipo mais forte possível com base em objetos conectados a essa ação. No entanto, isso pode não ter suporte em versões futuras, portanto, é recomendável que você explicitamente digite as ações ao definir a classe personalizada.
 
 Observe que esses métodos parciais são criados apenas C#para o, porque o CodeDOM não dá suporte a métodos parciais, portanto, eles não são gerados para outras linguagens.
 

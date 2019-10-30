@@ -4,23 +4,23 @@ description: Este documento descreve o Linker do Xamarin.iOS, que é usado para 
 ms.prod: xamarin
 ms.assetid: 3A4B2178-F264-0E93-16D1-8C63C940B2F9
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/24/2017
-ms.openlocfilehash: 2cda4d53ae3f5f5716d53fd8862ca9cf000003e0
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 284705973f9c0ec606572170f7e927ed4745ddd1
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70762837"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030233"
 ---
 # <a name="linking-xamarinios-apps"></a>Usando Linker em aplicativos Xamarin.iOS
 
 Ao compilar seu aplicativo, o Visual Studio para Mac ou o Visual Studio chama uma ferramenta chamada **mtouch**, que inclui um linker para código gerenciado. Ele é usado para remover os recursos que o aplicativo não está usando das class libraries. A meta é reduzir o tamanho do aplicativo, que será fornecido com apenas as partes necessárias.
 
-O vinculador usa análise estática para determinar os diferentes caminhos de código que seu aplicativo é suscetível a seguir. Ela é um pouco pesada, já que precisa passar por todos os detalhes de cada assembly, para verificar se nada detectável foi removido. Ele não é habilitado por padrão em builds do simulador para acelerar o tempo de compilação durante a depuração. No entanto, já que ele produz aplicativos menores e que pode acelerar a compilação AOT e o upload para o dispositivo, todos os *builds de dispositivos (versão)* estão usando o vinculador por padrão.
+O linker usa análise estática para determinar os diferentes caminhos de código que seu aplicativo é suscetível a seguir. Ela é um pouco pesada, já que precisa passar por todos os detalhes de cada assembly, para verificar se nada detectável foi removido. Ele não é habilitado por padrão em builds do simulador para acelerar o tempo de compilação durante a depuração. No entanto, já que ele produz aplicativos menores e que pode acelerar a compilação AOT e o upload para o dispositivo, todos os *builds de dispositivos (Release)* estão usando o linker por padrão.
 
-Já que o vinculador é uma ferramenta estática, ele não pode marcar para tipos de inclusão e métodos que são chamados por meio de reflexão, ou instanciados dinamicamente. Há várias opções de soluções alternativas para essa limitação.
+Já que o linker é uma ferramenta estática, ele não pode marcar para inclusão tipos e métodos que são chamados por meio de reflection, ou instanciados dinamicamente. Há várias opções de soluções alternativas para essa limitação.
 
 <a name="Linker_Behavior" />
 
@@ -30,7 +30,7 @@ Já que o vinculador é uma ferramenta estática, ele não pode marcar para tipo
 
 O processo de _linking_ pode ser personalizado por meio do menu suspenso de comportamento do linker em **Opções do Projeto**. Para acessá-lo, clique duas vezes no projeto iOS e navegue até **Build do iOS > Opções do Linker**, conforme ilustrado abaixo:
 
-[![](linker-images/image1.png "Opções do Vinculador")](linker-images/image1.png#lightbox)
+[![](linker-images/image1.png "Linker Options")](linker-images/image1.png#lightbox)
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
@@ -40,11 +40,11 @@ Faça o seguinte:
 
 1. Clique com o botão direito do mouse no **Nome do Projeto** no **Gerenciador de Soluções** e selecione **Propriedades**:
 
-    ![](linker-images/linking01w.png "Clique com o botão direito do mouse no Nome do Projeto no Gerenciador de Soluções e selecione Propriedades")
+    ![](linker-images/linking01w.png "Right-click on the Project Name in the Solution Explorer and select Properties")
 2. Nas **Propriedades do Projeto**, selecione **Build do iOS**:
 
-    ![](linker-images/linking02w.png "Selecionar Build do iOS")
-3. Siga as instruções abaixo para alterar as opções de vinculação.
+    ![](linker-images/linking02w.png "Select IOS Build")
+3. Siga as instruções abaixo para alterar as opções do linker.
 
 -----
 
@@ -140,7 +140,7 @@ Isso corresponde à opção *-nolinkaway* ao usar a ferramenta de linha de coman
 
 Não há nenhuma interface do usuário para usar essa opção, mas ela pode ser fornecida na caixa de diálogo Opções do Projeto do Visual Studio para Mac ou no painel Propriedades do projeto do Visual Studio, dentro do campo de texto **Argumentos adicionais do mtouch**. (por exemplo, *--nolinkaway* não removeria o código extra (cerca de 100 KB)).
 
-### <a name="marking-your-assembly-as-linker-ready"></a>Marcar o assembly como pronto para o vinculador
+### <a name="marking-your-assembly-as-linker-ready"></a>Marcar o assembly como pronto para o Linker
 
 Os usuários podem selecionar a opção de apenas vincular os assemblies do SDK, sem nenhuma vinculação ao seu código.  Isso também significa que todas as bibliotecas de terceiros que não fazem parte do SDK principal do Xamarin não serão vinculadas.
 
@@ -161,12 +161,12 @@ O _linker_ do Xamarin procura o atributo `LinkerSafe` por nome, não pelo seu ti
 class LinkerSafeAttribute : System.Attribute {}
 ```
 
-## <a name="custom-linker-configuration"></a>Configuração personalizada do vinculador
+## <a name="custom-linker-configuration"></a>Configuração personalizada do Linker
 
 Siga as [instruções para criar um arquivo de configuração do vinculador](~/cross-platform/deploy-test/linker.md).
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Configuração personalizada do vinculador](~/cross-platform/deploy-test/linker.md)
+- [Configuração personalizada do Linker](~/cross-platform/deploy-test/linker.md)
 - [Usando Linker no Mac](~/mac/deploy-test/linker.md)
 - [Usando Linker no Android](~/android/deploy-test/linker.md)

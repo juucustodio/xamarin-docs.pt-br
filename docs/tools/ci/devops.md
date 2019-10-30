@@ -1,18 +1,18 @@
 ---
 title: DevOps com Xamarin
 ms.assetid: ff978cc2-5a25-46d6-921b-e51adaa65992
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 manager: crdun
 ms.workload:
 - xamarin
 ms.date: 10/23/2018
-ms.openlocfilehash: de7cb0d3cce97f251fe6d9625fb1373e6aac7a67
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 57e3444ebcbd87607da248ecacca5e76a44f1577
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61293681"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73007443"
 ---
 # <a name="devops-with-xamarin"></a>DevOps com Xamarin
 
@@ -26,7 +26,7 @@ As tabelas a seguir identificam quais recursos de DevOps no Visual Studio devem 
 
 ## <a name="agile-tools"></a>Ferramentas agile
 
-Link de referência: **[Sobre as ferramentas do Agile e gerenciamento de projeto Agile](/azure/devops/boards/backlogs/overview?view=vsts)**
+Link de referência: **[About Agile tools and Agile project management](/azure/devops/boards/backlogs/overview?view=vsts)** (Sobre as ferramentas Agile e o gerenciamento de projetos Agile)
 
 Comentário Geral: todos os recursos de planejamento e acompanhamento são independentes do tipo de projeto e de linguagens de codificação.
 
@@ -97,12 +97,12 @@ Link de referência: **[Melhorar a qualidade do código](/visualstudio/test/impr
 |[Analisar a qualidade do código gerenciado](/visualstudio/code-quality/analyzing-managed-code-quality-by-using-code-analysis)|Sim||
 |[Localizar código duplicado usando detecção de clone de código](https://msdn.microsoft.com/library/hh205279.aspx)|Sim||
 |[Medir complexidade e facilidade de manutenção do código gerenciado](/visualstudio/code-quality/measuring-complexity-and-maintainability-of-managed-code)|Sim||
-|[Gerenciador de Desempenho](/visualstudio/profiling/performance-explorer)|Não|Use o [Xamarin Profiler](/xamarin/tools/profiler/) por meio do Visual Studio para Mac em vez disso. Observe que o Xamarin Profiler está atualmente em visualização e ainda não funciona para destinos do Windows.|
+|[Gerenciador de Desempenho](/visualstudio/profiling/performance-explorer)|Não|Use o [Xamarin Profiler](/xamarin/tools/profiler/) por meio de Visual Studio para Mac em vez disso. Observe que o Xamarin Profiler está atualmente em visualização e ainda não funciona para destinos do Windows.|
 |[Analisar problemas de memória do .NET Framework](https://msdn.microsoft.com/library/dn342825.aspx)|Não|Ferramentas do Visual Studio não têm ganchos na estrutura Mono para a criação de perfil.|
 
 ## <a name="release-management"></a>Gerenciamento de liberações
 
-Link de referência: **[Compilar e liberar em Pipelines do Azure e o TFS](/azure/devops/pipelines/overview?view=vsts)**
+Link de referência: **[Build e versão no Azure Pipelines e no TFS](/azure/devops/pipelines/overview?view=vsts)**
 
 |Recurso|Tem suporte com o Xamarin|Comentários Adicionais|
 |-------------|----------------------------|-------------------------|
@@ -112,7 +112,7 @@ Link de referência: **[Compilar e liberar em Pipelines do Azure e o TFS](/azure
 
 ## <a name="monitor-with-hockeyapp"></a>Monitorar com HockeyApp
 
-Link de referência: **[Monitoramento com o HockeyApp](https://www.hockeyapp.net/features/)**
+Link de referência: **[Monitorar com HockeyApp](https://www.hockeyapp.net/features/)**
 
 |Recurso|Tem suporte com o Xamarin|Comentários Adicionais|
 |-------------|----------------------------|-------------------------|

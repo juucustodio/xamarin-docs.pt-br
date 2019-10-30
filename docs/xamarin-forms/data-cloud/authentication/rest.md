@@ -1,56 +1,56 @@
 ---
 title: Autenticar um serviço Web RESTful
-description: Autenticação básica oferece acesso a recursos somente a clientes que possuem as credenciais corretas. Este artigo explica como usar a autenticação básica para proteger o acesso aos recursos do serviço web RESTful.
+description: A autenticação básica fornece acesso a recursos somente para os clientes que têm as credenciais corretas. Este artigo explica como usar a autenticação básica para proteger o acesso aos recursos do serviço Web RESTful.
 ms.prod: xamarin
 ms.assetid: 7B5FFDC4-F2AA-4B12-A30A-1DACC7FECBF1
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/22/2018
-ms.openlocfilehash: 5a0e820c8a9f04b7ad9173893852285d53dbe7a6
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 23516603633116a8e28ae33004bdb6fc8764ec21
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69529208"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73032816"
 ---
 # <a name="authenticate-a-restful-web-service"></a>Autenticar um serviço Web RESTful
 
-_HTTP oferece suporte ao uso de vários mecanismos de autenticação para controlar o acesso aos recursos. Autenticação básica oferece acesso a recursos somente a clientes que possuem as credenciais corretas. Este artigo demonstra como usar a autenticação básica para proteger o acesso aos recursos do serviço web RESTful._
+_O HTTP dá suporte ao uso de vários mecanismos de autenticação para controlar o acesso aos recursos. A autenticação básica fornece acesso a recursos somente para os clientes que têm as credenciais corretas. Este artigo demonstra como usar a autenticação básica para proteger o acesso aos recursos do serviço Web RESTful._
 
 > [!NOTE]
-> No iOS 9 e superior, a segurança de transporte de aplicativo (ATS) impõe conexões seguras entre recursos da internet (como o servidor de back-end do aplicativo) e o aplicativo, impedindo assim a divulgação acidental de informações confidenciais. Desde que o ATS é habilitado por padrão em aplicativos criados para o iOS 9, todas as conexões serão sujeitos a requisitos de segurança ATS. Se as conexões não atender a esses requisitos, eles falharão com uma exceção.
-> ATS poderá ser aceito de se ele não é possível usar o `HTTPS` de protocolo e proteger a comunicação para recursos da internet. Isso pode ser feito atualizando o aplicativo **Info. plist** arquivo. Para obter mais informações, consulte [segurança de transporte de aplicativo](~/ios/app-fundamentals/ats.md).
+> No iOS 9 e superior, a ATS (segurança de transporte de aplicativo) impõe conexões seguras entre os recursos da Internet (como o servidor back-end do aplicativo) e o aplicativo, impedindo, assim, a divulgação acidental de informações confidenciais. Como o ATS está habilitado por padrão em aplicativos criados para iOS 9, todas as conexões estarão sujeitas a requisitos de segurança de ATS. Se as conexões não atenderem a esses requisitos, elas falharão com uma exceção.
+> O ATS pode ser recusado se não for possível usar o protocolo `HTTPS` e a comunicação segura para recursos da Internet. Isso pode ser feito atualizando o arquivo **info. plist** do aplicativo. Para obter mais informações, consulte [segurança do transporte de aplicativo](~/ios/app-fundamentals/ats.md).
 
-## <a name="authenticating-users-over-http"></a>Autenticar usuários via HTTP
+## <a name="authenticating-users-over-http"></a>Autenticando usuários por HTTP
 
-Autenticação básica é o mecanismo de autenticação mais simples compatível com HTTP e envolve o cliente que envia o nome de usuário e a senha como texto não criptografado codificado na base64. Ele funciona da seguinte maneira:
+A autenticação básica é o mecanismo de autenticação mais simples suportado pelo HTTP e envolve o cliente que envia o nome de usuário e a senha como texto codificado em base64 não criptografado. Ele funciona da seguinte maneira:
 
-- Se um serviço web recebe uma solicitação para um recurso protegido, ele rejeita a solicitação com um código de status HTTP 401 (acesso negado) e define o cabeçalho de resposta WWW-Authenticate, conforme mostrado no diagrama a seguir:
+- Se um serviço Web receber uma solicitação de um recurso protegido, ele rejeitará a solicitação com um código de status HTTP 401 (acesso negado) e definirá o cabeçalho de resposta WWW-Authenticate, conforme mostrado no diagrama a seguir:
 
-![](rest-images/basic-authentication-fail.png "Falha de autenticação básica")
+![](rest-images/basic-authentication-fail.png "Basic Authentication Failing")
 
-- Se um serviço web recebe uma solicitação para um recurso protegido, com o `Authorization` cabeçalho definido corretamente, o web serviço responde com um código de status HTTP 200, que indica se a solicitação foi bem-sucedida e que as informações solicitadas estão na resposta. Este cenário é mostrado no diagrama a seguir:
+- Se um serviço Web receber uma solicitação de um recurso protegido, com o cabeçalho de `Authorization` definido corretamente, o serviço Web responderá com um código de status HTTP 200, que indica que a solicitação foi bem-sucedida e que as informações solicitadas estão na resposta. Esse cenário é mostrado no diagrama a seguir:
 
-![](rest-images/basic-authentication-success.png "Após a autenticação básica")
+![](rest-images/basic-authentication-success.png "Basic Authentication Succeeding")
 
 > [!NOTE]
-> Autenticação básica deve ser usada apenas ao longo de uma conexão HTTPS. Quando usado em uma conexão HTTP, o `Authorization` cabeçalho pode ser decodificado com facilidade se o tráfego HTTP é capturado por um invasor.
+> A autenticação básica só deve ser usada em uma conexão HTTPS. Quando usado em uma conexão HTTP, o cabeçalho `Authorization` pode ser facilmente decodificado se o tráfego HTTP for capturado por um invasor.
 
-## <a name="specifying-basic-authentication-in-a-web-request"></a>Especificar a autenticação básica em uma solicitação da Web
+## <a name="specifying-basic-authentication-in-a-web-request"></a>Especificando a autenticação básica em uma solicitação da Web
 
-Uso da autenticação básica é especificado da seguinte maneira:
+O uso da autenticação básica é especificado da seguinte maneira:
 
-1. A cadeia de caracteres "Básico" é adicionado para o `Authorization` cabeçalho da solicitação.
-1. O nome de usuário e senha são combinados em uma cadeia de caracteres com o formato "nomedeusuario: senha", que é, em seguida, na Base 64 codificados e adicionado ao `Authorization` cabeçalho da solicitação.
+1. A cadeia de caracteres "Basic" é adicionada ao cabeçalho `Authorization` da solicitação.
+1. O nome de usuário e a senha são combinados em uma cadeia de caracteres com o formato "username: password", que é codificado em Base64 e adicionado ao cabeçalho `Authorization` da solicitação.
 
-Portanto, com um nome de usuário de 'XamarinUser' e uma senha de 'XamarinPassword', o cabeçalho se torna:
+Portanto, com um nome de usuário de ' XamarinUser ' e uma senha de ' XamarinPassword ', o cabeçalho se torna:
 
 ```csharp
 Authorization: Basic WGFtYXJpblVzZXI6WGFtYXJpblBhc3N3b3Jk
 ```
 
-O `HttpClient` classe pode definir o `Authorization` valor do cabeçalho no `HttpClient.DefaultRequestHeaders.Authorization` propriedade. Porque o `HttpClient` instância existe em várias solicitações, o `Authorization` cabeçalho só precisa ser definida uma vez, em vez de quando fazer cada solicitação, conforme mostrado no exemplo de código a seguir:
+A classe `HttpClient` pode definir o valor do cabeçalho `Authorization` na propriedade `HttpClient.DefaultRequestHeaders.Authorization`. Como a instância de `HttpClient` existe em várias solicitações, o cabeçalho `Authorization` precisa ser definido apenas uma vez, em vez de ao fazer cada solicitação, conforme mostrado no exemplo de código a seguir:
 
 ```csharp
 public class RestService : IRestService
@@ -70,19 +70,19 @@ public class RestService : IRestService
 }
 ```
 
-Em seguida, quando é feita uma solicitação para uma operação de serviço da web a solicitação é assinada com o `Authorization` cabeçalho, que indica se o usuário tem permissão para invocar a operação.
+Em seguida, quando uma solicitação é feita a uma operação de serviço Web, a solicitação é assinada com o cabeçalho `Authorization`, indicando se o usuário tem permissão para invocar a operação.
 
 > [!NOTE]
-> Embora esse código armazene credenciais como constantes, elas não devem ser armazenadas em um formato não seguro em um aplicativo publicado. O [Xamarith.Auth](https://www.nuget.org/packages/Xamarin.Auth/) NuGet fornece funcionalidade para armazenar com segurança as credenciais. Para obter mais informações, consulte [armazenando e recuperando informações da conta em dispositivos](~/xamarin-forms/data-cloud/authentication/oauth.md).
+> Embora esse código armazene credenciais como constantes, elas não devem ser armazenadas em um formato não seguro em um aplicativo publicado. O NuGet [Xamarith. auth](https://www.nuget.org/packages/Xamarin.Auth/) fornece funcionalidade para armazenar credenciais com segurança. Para obter mais informações, consulte [armazenando e recuperando informações de conta em dispositivos](~/xamarin-forms/data-cloud/authentication/oauth.md).
 
-## <a name="processing-the-authorization-header-server-side"></a>Processamento do lado do servidor de cabeçalho de autorização
+## <a name="processing-the-authorization-header-server-side"></a>Processando o lado do servidor de cabeçalho de autorização
 
-O serviço REST deve decorar cada ação com o `[BasicAuthentication]` atributo. Esse atributo é usado para analisar o `Authorization` cabeçalho e determinar se as credenciais codificadas em base64 são válidas comparando-as com os valores armazenados em *Web. config*. Embora essa abordagem seja adequada para um serviço de exemplo, ela requer a extensão de um serviço Web voltado ao público.
+O serviço REST deve decorar cada ação com o atributo `[BasicAuthentication]`. Esse atributo é usado para analisar o cabeçalho de `Authorization` e determinar se as credenciais codificadas em base64 são válidas comparando-as com os valores armazenados em *Web. config*. Embora essa abordagem seja adequada para um serviço de exemplo, ela requer a extensão de um serviço Web voltado ao público.
 
-O módulo de autenticação básica usada pelo IIS, os usuários são autenticados em relação às suas credenciais do Windows. Portanto, os usuários devem ter contas de domínio do servidor. No entanto, o modelo de autenticação básica pode ser configurado para permitir a autenticação personalizada, em que as contas de usuário são autenticadas em relação a uma fonte externa, como um banco de dados. Para obter mais informações, consulte [autenticação básica na API Web ASP.NET](http://www.asp.net/web-api/overview/security/basic-authentication) no site do ASP.NET.
+No módulo de autenticação básica usado pelo IIS, os usuários são autenticados em relação às suas credenciais do Windows. Portanto, os usuários devem ter contas no domínio do servidor. No entanto, o modelo de autenticação básica pode ser configurado para permitir a autenticação personalizada, em que as contas de usuário são autenticadas em uma fonte externa, como um banco de dados. Para obter mais informações, consulte [autenticação básica em ASP.NET Web API](https://www.asp.net/web-api/overview/security/basic-authentication) no site ASP.net.
 
 > [!NOTE]
-> Autenticação básica não foi projetada para gerenciar o log de. Portanto, é a abordagem de autenticação básica padrão para fazer logoff encerrar a sessão.
+> A autenticação básica não foi projetada para gerenciar o logout. Portanto, a abordagem de autenticação básica padrão para fazer logoff é encerrar a sessão.
 
 ## <a name="related-links"></a>Links relacionados
 

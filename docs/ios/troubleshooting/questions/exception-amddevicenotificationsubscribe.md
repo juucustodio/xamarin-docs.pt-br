@@ -4,15 +4,15 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 7E4ACC7E-F4FB-46C1-8837-C7FBAAFB2DC7
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: b6d2931168132630233112b9515071ac7fd07843
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: e1633989fc9b85d969f464857ab763153aea2e7d
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769743"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73031109"
 ---
 # <a name="systemexception-amdevicenotificationsubscribe-returned-"></a>System.Exception AMDeviceNotificationSubscribe retornou ...
 
@@ -21,7 +21,7 @@ ms.locfileid: "70769743"
 
 ## <a name="fix"></a>Correção
 
-1. Encerre o `usbmuxd` processo para que o sistema o reinicie:
+1. Encerre o processo de `usbmuxd` para que o sistema o reinicie:
 
     ```csharp
     sudo killall -QUIT usbmuxd
@@ -41,13 +41,13 @@ AMDeviceNotificationSubscribe returned: 3892314211
   at Mtb.Application.MainClass.Main (System.String[] args) [0x00000] in <filename unknown="">:0
 ```
 
-Essa mensagem pode aparecer em uma caixa de diálogo de erro quando você inicia o Visual Studio para Mac pela `mtbserver.log` primeira vez ou no arquivo no aplicativo host de Build do xamarin. Ios (**xamarin. Ios Build host > Exibir log do host**de Build).
+Essa mensagem pode aparecer em uma caixa de diálogo de erro quando você inicia o Visual Studio para Mac pela primeira vez ou no arquivo de `mtbserver.log` no aplicativo de host de Build do Xamarin. iOS (**xamarin. Ios Build host > exibir log de host**de Build).
 
-Observe que esse é um problema incomum. Se o Visual Studio estiver tendo problemas para se conectar ao host de Build do Mac, haverá outros erros que têm mais probabilidade de `mtbserver.log` aparecer no arquivo.
+Observe que esse é um problema incomum. Se o Visual Studio estiver tendo problemas para se conectar ao host de Build do Mac, haverá outros erros que têm mais probabilidade de aparecer no arquivo de `mtbserver.log`.
 
 ### <a name="errors-in-systemlog"></a>Erros em System. log
 
-Em alguns casos, as duas mensagens de erro a seguir também podem `/var/log/system.log`aparecer repetidamente em:
+Em alguns casos, as duas mensagens de erro a seguir também podem aparecer repetidamente em `/var/log/system.log`:
 
 ```csharp
 17:17:11.369 usbmuxd[55040]: dnssd_clientstub ConnectToServer: socket failed 24 Too many open files
@@ -58,8 +58,8 @@ Em alguns casos, as duas mensagens de erro a seguir também podem `/var/log/syst
 
 Uma estimativa na causa raiz do erro é que os serviços do sistema do OS X responsáveis por relatar informações do dispositivo iOS e do simulador podem, em casos raros, entrar em um estado inesperado. O Xamarin não pode interagir corretamente com os serviços do sistema nesse estado. Reinicializar o computador reinicia os serviços do sistema e resolve o problema.
 
-Com base nos erros `system.log` , parece que esse problema pode estar relacionado a Bonjour (`mDNSResponder`). A alteração entre redes WiFi diferentes parece aumentar as chances de atingir o problema.
+Com base nos erros de `system.log` parece que esse problema pode estar relacionado a Bonjour (`mDNSResponder`). A alteração entre redes WiFi diferentes parece aumentar as chances de atingir o problema.
 
 ## <a name="references"></a>Referências
 
-* [Bug 11789-MonoTouch. MobileDevice. MobileDeviceException: AMDeviceNotificationSubscribe retornou: 0xe8000063 [resolvido NoResponse]](https://bugzilla.xamarin.com/show_bug.cgi?id=11789)
+* [Bug 11789-MonoTouch. MobileDevice. MobileDeviceException: AMDeviceNotificationSubscribe retornado: 0xe8000063 [resolvido NoResponse]](https://bugzilla.xamarin.com/show_bug.cgi?id=11789)

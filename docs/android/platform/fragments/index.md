@@ -4,15 +4,15 @@ description: O Android 3,0 introduziu fragmentos, mostrando como dar suporte a d
 ms.prod: xamarin
 ms.assetid: 1AFB4242-A337-F8E0-83D9-B8D850D7F384
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/15/2018
-ms.openlocfilehash: f25c587f6a51a6b196f201c1b5060ff401f8cad2
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 5d243429fe4f61768568a634b205055c1ad94297
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70761870"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73020257"
 ---
 # <a name="fragments"></a>Fragmentos
 
@@ -28,17 +28,17 @@ Os pacotes de suporte eram originalmente chamados de *bibliotecas de compatibili
 
 Por exemplo, a imagem abaixo ilustra como um único aplicativo usa fragmentos entre diferentes fatores forma de dispositivo.
 
-[![Diagrama de como os fragmentos são usados em tablets e aparelhos](images/00.png)](images/00.png#lightbox)
+[![diagrama de como os fragmentos são usados em tablets e aparelhos de telefone](images/00.png)](images/00.png#lightbox)
 
 *O fragmento a* contém uma lista, enquanto o *fragmento B* contém detalhes de um item selecionado nessa lista. Quando o aplicativo é executado em um Tablet, ele pode exibir ambos os fragmentos na mesma atividade. Quando o mesmo aplicativo é executado em um monofone (com seu tamanho de tela menor), os fragmentos são hospedados em duas atividades separadas. O fragmento A e o fragmento B são os mesmos em ambos os fatores forma, mas as atividades que os hospedam são diferentes.
 
-Para ajudar uma atividade a coordenar e gerenciar todos esses fragmentos, o Android introduziu uma nova classe chamada *fragmentmanager*. Cada atividade tem sua própria instância de a `FragmentManager` para adicionar, excluir e localizar fragmentos hospedados. O diagrama a seguir ilustra a relação entre os fragmentos e as atividades:
+Para ajudar uma atividade a coordenar e gerenciar todos esses fragmentos, o Android introduziu uma nova classe chamada *fragmentmanager*. Cada atividade tem sua própria instância de um `FragmentManager` para adicionar, excluir e localizar fragmentos hospedados. O diagrama a seguir ilustra a relação entre os fragmentos e as atividades:
 
-[![Diagrama que ilustra as relações entre a atividade, o Gerenciador de fragmentos e os fragmentos](images/01.png)](images/01.png#lightbox)
+[Diagrama de ![ilustrando relações entre a atividade, o Gerenciador de fragmentos e os fragmentos](images/01.png)](images/01.png#lightbox)
 
 Em alguns aspectos, os fragmentos podem ser considerados como controles compostos ou como uma Minibarra de atividades. Eles embalam partes da interface do usuário em módulos reutilizáveis que podem ser usados independentemente pelos desenvolvedores em atividades. Um fragmento tem uma hierarquia de exibição — assim como uma atividade — mas, ao contrário de uma atividade, ele pode ser compartilhado entre telas. As exibições diferem dos fragmentos nos fragmentos que têm seu próprio ciclo de vida; os modos de exibição não.
 
-Embora a atividade seja um host para um ou mais fragmentos, ela não reconhece diretamente os fragmentos propriamente ditos. Da mesma forma, os fragmentos não estão cientes diretamente de outros fragmentos na atividade de hospedagem. No entanto, os `FragmentManager` fragmentos e as atividades estão cientes do em sua atividade. Usando o `FragmentManager`, é possível que uma atividade ou um fragmento obtenha uma referência a uma instância específica de um fragmento e, em seguida, chame métodos nessa instância. Dessa forma, a atividade ou os fragmentos podem se comunicar e interagir com outros fragmentos.
+Embora a atividade seja um host para um ou mais fragmentos, ela não reconhece diretamente os fragmentos propriamente ditos. Da mesma forma, os fragmentos não estão cientes diretamente de outros fragmentos na atividade de hospedagem. No entanto, os fragmentos e as atividades estão cientes do `FragmentManager` em sua atividade. Usando o `FragmentManager`, é possível que uma atividade ou um fragmento obtenha uma referência a uma instância específica de um fragmento e, em seguida, chame métodos nessa instância. Dessa forma, a atividade ou os fragmentos podem se comunicar e interagir com outros fragmentos.
 
 Este guia contém uma cobertura abrangente sobre como usar fragmentos, incluindo:
 
@@ -50,11 +50,11 @@ Este guia contém uma cobertura abrangente sobre como usar fragmentos, incluindo
 
 Os fragmentos estão disponíveis na SDK do Android começando com o nível de API 11 (Android 3,0), conforme mostrado na seguinte captura de tela:
 
-[![Selecionando o nível de API no Gerenciador de SDK do Android](images/02.png)](images/02.png#lightbox)
+[![selecionando o nível de API no Gerenciador de SDK do Android](images/02.png)](images/02.png#lightbox)
 
 Os fragmentos estão disponíveis no Xamarin. Android 4,0 e superior. Um aplicativo Xamarin. Android deve ter como destino o nível mínimo de API 11 (Android 3,0) ou superior para usar fragmentos. A estrutura de destino pode ser definida nas propriedades do projeto, conforme mostrado abaixo:
 
-[![Definindo o nível da API do Framework de destino nas opções do projeto](images/03-sml.png)](images/03.png#lightbox)
+[![definir o nível da API do Framework de destino nas opções do projeto](images/03-sml.png)](images/03.png#lightbox)
 
 É possível usar fragmentos em versões mais antigas do Android usando o pacote de suporte do Android e o Xamarin. Android 4,2 ou superior. Como fazer isso é abordado com mais detalhes nos documentos desta seção.
 
@@ -63,4 +63,3 @@ Os fragmentos estão disponíveis no Xamarin. Android 4,0 e superior. Um aplicat
 - [Galeria do Honeycomb (exemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/honeycombgallery)
 - [Fragmentos](https://developer.android.com/guide/topics/fundamentals/fragments.html)
 - [Pacote de suporte](https://developer.android.com/sdk/compatibility-library.html)
-- [Webinar MOTODEV: Apresentando fragmentos](http://motodev.adobeconnect.com/p9h1aqk3ttn/)

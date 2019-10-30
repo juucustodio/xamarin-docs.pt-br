@@ -4,22 +4,22 @@ description: Este documento descreve do comando sigh do fastlane, que é usado p
 ms.prod: xamarin
 ms.assetid: CD17276F-2C8C-4A46-A54C-DD532EBD5720
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: c9b6f6c29b86ee40c2d7b04dbe6fa4ce24a745ea
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 9506d80ab10ce70938f95371a52bf28bda33d42d
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70762630"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028502"
 ---
 # <a name="fastlane-for-ios-sigh"></a>fastlane para iOS – sigh
 
 > [!IMPORTANT]
 > O fastlane recomenda o uso de [`match`](~/ios/deploy-test/provisioning/fastlane/match.md) para gerar e manter perfis de provisionamento. Use o Sigh diretamente apenas se você deseja controle total e sabe o suficiente sobre a assinatura de código.
 
-## <a name="overview"></a>Visão geral
+## <a name="overview"></a>Visão Geral
 
 Tradicionalmente, o provisionamento do dispositivo é executado por cada membro de uma equipe de desenvolvimento pelo Xcode ou no Portal do desenvolvedor da Apple. Ele consiste em várias etapas:
 
@@ -50,7 +50,7 @@ Para saber mais sobre como instalar o fastlane, consulte o guia Introdução ao 
 
 ## <a name="what-is-sigh"></a>O que é o sigh
 
-O sigh oferece uma interface de terminal que permite criar e renovar perfis de provisionamento para todas as configurações: Desenvolvimento, Distribuição da App Store, Distribuição Ad Hoc e Distribuição Enterprise. Além disso, ele fornece uma maneira simples de baixar e reparar os perfis de provisionamento.
+O sigh fornece uma interface de terminal que permite que você crie e renove perfis de provisionamento para todas as configurações: Desenvolvimento, Distribuição de loja de aplicativos, Distribuição Ad Hoc e Distribuição corporativa. Além disso, ele fornece uma maneira simples de baixar e reparar os perfis de provisionamento.
 
 <a name="appid" />
 
@@ -64,7 +64,7 @@ fastlane produce -u your@appleid.com -a com.company.appname --skip_itc
 
 Em que `com.company.appname` é a ID do pacote do aplicativo, que está localizada no arquivo Info.plist do aplicativo do Xamarin.iOS, conforme ilustrado abaixo:
 
-[![](sigh-images/fastlane-image5.png "O arquivo Info.plist do aplicativo Xamarin.iOS")](sigh-images/fastlane-image5.png#lightbox)
+[![](sigh-images/fastlane-image5.png "The Info.plist file of the Xamarin.iOS application")](sigh-images/fastlane-image5.png#lightbox)
 
 A ID do aplicativo exclusiva deve ser uma cadeia de caracteres de estilo DNS reversa. Depois de ter criado a ID, crie um lembrete sobre ela, pois você precisará usá-la quando for usar o Sigh posteriormente neste guia.
 
@@ -111,7 +111,7 @@ Insira seu nome de usuário da Apple ID quando solicitado pelo Fastlane. Também
 
 Se sua Apple ID estiver conectada a várias equipes, elas serão exibidas aqui. Selecione o número que corresponde à equipe que você deseja usar:
 
-[![](sigh-images/fastlane-image2.png "Selecionar a equipe que você deseja usar")](sigh-images/fastlane-image2.png#lightbox)
+[![](sigh-images/fastlane-image2.png "Select the team that you wish to use")](sigh-images/fastlane-image2.png#lightbox)
 
 A ID da equipe também pode ser passada para a CLI do seguinte modo:
 
@@ -127,7 +127,7 @@ O fastlane, então, criará, baixará e instalará o perfil de provisionamento p
 
 Se procurar a Central de desenvolvedores, você poderá exibir o perfil de provisionamento recém-criado, conforme ilustrado abaixo:
 
-[![](sigh-images/fastlane-image10.png "Exibir o perfil de provisionamento recém-criado")](sigh-images/fastlane-image10.png#lightbox)
+[![](sigh-images/fastlane-image10.png "View the newly created provisioning profile")](sigh-images/fastlane-image10.png#lightbox)
 
 O sigh armazenará os perfis de provisionamento na pasta atual, por padrão. Para alterar o diretório de saída, edite o `output_path` ou faça o seguinte:
 

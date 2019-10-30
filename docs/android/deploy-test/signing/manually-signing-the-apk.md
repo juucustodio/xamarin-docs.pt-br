@@ -3,15 +3,15 @@ title: Assinando manualmente o APK
 ms.prod: xamarin
 ms.assetid: 08549E1C-7F04-4D20-9E7A-794B9D09FD12
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: 3be55c2149aa58bf6d8462e5c1ff24166078355f
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: f43cb3ac5ff4d976c57a9d82c2003a08954ef1a4
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70755893"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73021046"
 ---
 # <a name="manually-signing-the-apk"></a>Assinando manualmente o APK
 
@@ -26,7 +26,7 @@ Depois de o aplicativo ser compilado para liberação, o APK deverá ser assinad
 
 A ordem das etapas é importante e depende de qual ferramenta é usada para assinar o APK. Ao usar **apksigner**, é importante primeiro usar **zipalign** no aplicativo e, em seguida, assiná-lo com **apksigner**.  Caso seja necessário usar **jarsigner** para assinar o APK, é importante primeiro assinar o APK e, em seguida, executar **zipalign**. 
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 Este guia se concentrará no uso do **apksigner** usando as ferramentas de build do SDK de Android v24.0.3 ou superior. Ele pressupõe que um APK já foi compilado.
 

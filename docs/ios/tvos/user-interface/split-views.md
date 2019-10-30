@@ -4,21 +4,21 @@ description: Este documento descreve como trabalhar com exibições de divisão 
 ms.prod: xamarin
 ms.assetid: 21248CFB-5A94-4C19-B223-C72E0DC5F1D5
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: 5c147b43caf3018cde8870adb25bb73cb08f53ee
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: e42912add9dd94b9cce16d725a456b1b4da30e35
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70768505"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73022202"
 ---
 # <a name="working-with-tvos-split-view-controllers-in-xamarin"></a>Trabalhando com controladores de exibição de divisão tvOS no Xamarin
 
 Um controlador de exibição de divisão apresenta e gerencia um controlador de exibição mestre e de detalhes lado a lado, na tela ao mesmo tempo. Os controladores de exibição de divisão são usados para apresentar conteúdo persistente e de foco no modo de exibição mestre (a seção menor à esquerda) e detalhes relacionados na exibição de detalhes (a seção maior à direita).
 
-[![](split-views-images/intro01.png "Exibição de divisão de exemplo")](split-views-images/intro01.png#lightbox)
+[![](split-views-images/intro01.png "Sample Split View")](split-views-images/intro01.png#lightbox)
 
 <a name="About-Split-View-Controllers" />
 
@@ -28,7 +28,7 @@ Como mencionado acima, um controlador de exibição de divisão gerencia um cont
 
 Além disso, o controlador de modo de exibição mestre pode ser ocultado ou mostrado conforme necessário: 
 
-[![](split-views-images/intro02.png "O controlador do modo de exibição mestre oculto")](split-views-images/intro02.png#lightbox)
+[![](split-views-images/intro02.png "The Master View Controller hidden")](split-views-images/intro02.png#lightbox)
 
 Os controladores de modos de exibição de divisão geralmente são usados para apresentar uma lista de conteúdo filtrável, com as categorias no modo de exibição mestre e os resultados filtrados na exibição de detalhes. Normalmente, isso é apresentado como uma exibição de tabela à esquerda e uma [exibição de coleção](~/ios/tvos/user-interface/collection-views.md) à direita.
 
@@ -48,41 +48,41 @@ A maneira mais fácil de trabalhar com os controladores de exibição de divisã
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
-1. No **painel de soluções**, clique duas vezes no arquivo `Main.storyboard` e abra-o para edição.
+1. No **painel de soluções**, clique duas vezes no arquivo de `Main.storyboard` e abra-o para edição.
 1. Arraste um dos **controladores de exibição de divisão** da caixa de **ferramentas** e solte-o na exibição: 
 
-    [![](split-views-images/activity01.png "Um controlador de exibição de divisão")](split-views-images/activity01.png#lightbox)
+    [![](split-views-images/activity01.png "A Split View Controller")](split-views-images/activity01.png#lightbox)
 1. Por padrão, o designer do iOS instalará um controlador de navegação e um controlador de exibição no modo de exibição mestre. Se isso não atender aos requisitos do seu aplicativo, simplesmente exclua-os.
 1. Se você remover o modo de exibição mestre padrão, arraste um novo controlador de exibição para a superfície de design: 
 
-    [![](split-views-images/activity02.png "Um controlador de exibição")](split-views-images/activity02.png#lightbox)
+    [![](split-views-images/activity02.png "A View Controller")](split-views-images/activity02.png#lightbox)
 1. Controle-clique e arraste do controlador de exibição de divisão para o novo controlador de exibição mestre. 
 1. Selecione **mestre** no **menu pop-up**: 
 
-    [![](split-views-images/activity03.png "Selecione mestre no menu pop-up")](split-views-images/activity03.png#lightbox)
+    [![](split-views-images/activity03.png "Select Master from the Popup Menu")](split-views-images/activity03.png#lightbox)
 1. Crie o conteúdo de suas exibições mestre e de detalhes: 
 
-    [![](split-views-images/activity04.png "Exemplo de layout")](split-views-images/activity04.png#lightbox)
+    [![](split-views-images/activity04.png "Example layout")](split-views-images/activity04.png#lightbox)
 1. Atribua **nomes** na **Guia do widget** do **painel de propriedades** para trabalhar com os controles da interface do C# usuário no código.
 1. Salve as alterações e retorne ao Visual Studio para Mac.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-1. No **Gerenciador de soluções**, clique duas vezes no arquivo `Main.storyboard` e abra-o para edição.
+1. No **Gerenciador de soluções**, clique duas vezes no arquivo de `Main.storyboard` e abra-o para edição.
 1. Arraste um dos **controladores de exibição de divisão** da caixa de **ferramentas** e solte-o na exibição: 
 
-    [![](split-views-images/activity01-vs.png "Um controlador de exibição de divisão")](split-views-images/activity01-vs.png#lightbox)
+    [![](split-views-images/activity01-vs.png "A Split View Controller")](split-views-images/activity01-vs.png#lightbox)
 1. Por padrão, o designer do iOS adicionará um controlador de navegação e um controlador de exibição no modo de exibição mestre. Se isso não atender aos requisitos do seu aplicativo, simplesmente exclua-os.
 1. Se você remover o modo de exibição mestre padrão, arraste um novo controlador de exibição para a superfície de design: 
 
-    [![](split-views-images/activity02-vs.png "Um controlador de exibição")](split-views-images/activity02-vs.png#lightbox)
+    [![](split-views-images/activity02-vs.png "A View Controller")](split-views-images/activity02-vs.png#lightbox)
 1. Controle-clique e arraste do controlador de exibição de divisão para o novo controlador de exibição mestre. 
 1. Selecione **mestre** no **menu pop-up**: 
 
-    [![](split-views-images/activity03-vs.png "Selecione mestre no menu pop-up")](split-views-images/activity03-vs.png#lightbox)
+    [![](split-views-images/activity03-vs.png "Select Master from the Popup Menu")](split-views-images/activity03-vs.png#lightbox)
 1. Crie o conteúdo de suas exibições mestre e de detalhes: 
 
-    [![](split-views-images/activity04.png "Layout do conteúdo")](split-views-images/activity04.png#lightbox)
+    [![](split-views-images/activity04.png "Content layout")](split-views-images/activity04.png#lightbox)
 1. Atribua **nomes** na **Guia Widget** do Gerenciador de **Propriedades** para trabalhar com os controles de interface do C# usuário no código.
 1. Salve as alterações.
 
@@ -100,7 +100,7 @@ Como mencionado acima, um controlador de exibição de divisão geralmente é us
 
 ### <a name="accessing-master-and-detail"></a>Acessando mestre e detalhes
 
-Se você precisar acessar os controladores mestre e de exibição de detalhes programaticamente `ViewControllers` , use a propriedade do controlador de exibição de divisão. Por exemplo:
+Se você precisar acessar os controladores mestre e de exibição de detalhes programaticamente, use a propriedade `ViewControllers` do controlador de exibição de divisão. Por exemplo:
 
 ```csharp
 // Gain access to master and detail view controllers
@@ -122,7 +122,7 @@ A maneira mais fácil de fazer isso é expor uma propriedade em sua classe de co
 public DetailViewController DetailController { get; set;}
 ```
 
-No controlador de exibição de divisão, substitua `ViewDidLoad` o método e vincule as duas exibições juntas. Por exemplo:
+No controlador de exibição de divisão, substitua o método `ViewDidLoad` e vincule as duas exibições juntas. Por exemplo:
 
 ```csharp
 public override void ViewDidLoad ()
@@ -146,7 +146,7 @@ Você pode expor propriedades e métodos em seu controlador de exibição de det
 
 ### <a name="showing-and-hiding-master"></a>Mostrando e ocultando o mestre
 
-Opcionalmente, você pode mostrar e ocultar o controlador de modo de exibição `PreferredDisplayMode` mestre usando a propriedade do controlador de exibição de divisão. Por exemplo:
+Opcionalmente, você pode mostrar e ocultar o controlador de modo de exibição mestre usando a propriedade `PreferredDisplayMode` do controlador de exibição de divisão. Por exemplo:
 
 ```csharp
 // Show hide split view
@@ -157,14 +157,14 @@ if (SplitViewController.DisplayMode == UISplitViewControllerDisplayMode.PrimaryH
 }
 ```
 
-A `UISplitViewControllerDisplayMode` enumeração define como o controlador de modo de exibição mestre será apresentado como um dos seguintes:
+O `UISplitViewControllerDisplayMode` enum define como o controlador de exibição mestre será apresentado como um dos seguintes:
 
 - **Automatic** -tvOS controlará a apresentação das exibições mestre e de detalhes.
 - **PrimaryHidden** -isso oculta o controlador de exibição mestre.
 - **OnVisible** – exibe os controladores mestre e de exibição de detalhes lado a lado. Esta é a apresentação padrão normal.
 - **PrimaryOverlay** -o controlador de exibição de detalhes se estende em e é coberto pelo mestre.
 
-Para obter o estado da apresentação atual, use `DisplayMode` a propriedade do controlador de exibição de divisão.
+Para obter o estado da apresentação atual, use a propriedade `DisplayMode` do controlador de exibição de divisão.
 
 <a name="Summary" />
 

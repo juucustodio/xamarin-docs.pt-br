@@ -4,15 +4,15 @@ description: Com o iOS 12, é possível criar interfaces de usuário interativas
 ms.prod: xamarin
 ms.assetid: E3562E1B-E0EF-4C99-9F51-59DE22AFDE46
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 09/04/2018
-ms.openlocfilehash: 572b369755e37f123fbfdf5850a635e7ada12a9b
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: e629cd8f481558991d02c7fb879502ebd54753bd
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291232"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73031936"
 ---
 # <a name="interactive-notification-user-interfaces-in-xamarinios"></a>Interfaces de usuário de notificação interativa no Xamarin. iOS
 
@@ -58,15 +58,15 @@ No aplicativo de exemplo, o arquivo **info. plist** no projeto **RedGreenNotific
 
 Observe os seguintes recursos:
 
-- A `UNNotificationExtensionCategory` matriz Especifica o tipo de categorias de notificação que a extensão de conteúdo manipula.
-- Para oferecer suporte a conteúdo interativo, a extensão de conteúdo de notificação `UNNotificationExtensionUserInteractionEnabled` define a `true`chave como.
-- A `UNNotificationExtensionInitialContentSizeRatio` chave especifica a taxa inicial de altura/largura para a interface da extensão de conteúdo.
+- A matriz de `UNNotificationExtensionCategory` especifica o tipo de categorias de notificação que a extensão de conteúdo manipula.
+- Para oferecer suporte a conteúdo interativo, a extensão de conteúdo de notificação define a chave de `UNNotificationExtensionUserInteractionEnabled` como `true`.
+- A chave de `UNNotificationExtensionInitialContentSizeRatio` especifica a taxa inicial de altura/largura para a interface da extensão de conteúdo.
 
 ## <a name="interactive-interface"></a>Interface interativa
 
-**MainInterface. Storyboard**, que define a interface de uma extensão de conteúdo de notificação, é um storyboard padrão que contém um único controlador de exibição. No aplicativo de exemplo, o controlador de exibição é do `NotificationViewController`tipo e contém uma exibição de imagem, três botões e um controle deslizante. O storyboard associa esses controles aos manipuladores definidos em **NotificationViewController.cs**:
+**MainInterface. Storyboard**, que define a interface de uma extensão de conteúdo de notificação, é um storyboard padrão que contém um único controlador de exibição. No aplicativo de exemplo, o controlador de exibição é do tipo `NotificationViewController`e contém uma exibição de imagem, três botões e um controle deslizante. O storyboard associa esses controles aos manipuladores definidos em **NotificationViewController.cs**:
 
-- O manipulador do botão **Iniciar aplicativo** chama `PerformNotificationDefaultAction` o método de `ExtensionContext`ação em, que inicia o aplicativo:
+- O manipulador do botão **Iniciar aplicativo** chama o método de ação `PerformNotificationDefaultAction` em `ExtensionContext`, que inicia o aplicativo:
 
     ```csharp
     partial void HandleLaunchAppButtonTap(UIButton sender)
@@ -75,7 +75,7 @@ Observe os seguintes recursos:
     }
     ```
 
-    No aplicativo, a central de notificações do `Delegate` usuário (no aplicativo de exemplo, o `AppDelegate`) pode responder `DidReceiveNotificationResponse` à interação no método:
+    No aplicativo, o `Delegate` do centro de notificação do usuário (no aplicativo de exemplo, o `AppDelegate`) pode responder à interação no método `DidReceiveNotificationResponse`:
 
     ```csharp
     [Export("userNotificationCenter:didReceiveNotificationResponse:withCompletionHandler:")]
@@ -87,7 +87,7 @@ Observe os seguintes recursos:
             // ...
     ```
 
-- O manipulador do botão **ignorar notificação** `DismissNotificationContentExtension` chama `ExtensionContext`o, que fecha a notificação:
+- O manipulador do botão **ignorar notificação** chama `DismissNotificationContentExtension` em `ExtensionContext`, que fecha a notificação:
 
     ```csharp
     partial void HandleDismissNotificationButtonTap(UIButton sender)

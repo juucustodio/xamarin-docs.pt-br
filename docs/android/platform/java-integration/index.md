@@ -4,35 +4,35 @@ description: O ecossistema Java inclui uma coleção diversificada e imensa de c
 ms.prod: xamarin
 ms.assetid: 7B5B8695-1C49-19BF-AE99-948CDCBD2A20
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 01/18/2017
-ms.openlocfilehash: a9d239140cee9eb600414a1bfb0733c9af6488bc
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: ecaa02e036c74074b4fa922ea079355b72ff02e2
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70761418"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73020093"
 ---
 # <a name="java-integration-with-xamarinandroid"></a>Integração do Java com o Xamarin. Android
 
 _O ecossistema Java inclui uma coleção diversificada e imensa de componentes. Muitos desses componentes podem ser usados para reduzir o tempo necessário para desenvolver um aplicativo Android. Este documento apresentará e fornecerá uma visão geral de alto nível de algumas das maneiras como os desenvolvedores podem usar esses componentes Java existentes para aprimorar sua experiência de desenvolvimento de aplicativos Xamarin. Android._
 
-## <a name="overview"></a>Visão geral
+## <a name="overview"></a>Visão Geral
 
 Dada a extensão do ecossistema do Java, é muito provável que qualquer funcionalidade específica necessária para um aplicativo Xamarin. Android já tenha sido codificada em Java. Por isso, é atraente tentar reutilizar essas bibliotecas existentes ao criar um aplicativo Xamarin. Android.
 
 Há três maneiras possíveis de reutilizar bibliotecas Java em um aplicativo Xamarin. Android: 
 
-- **Criar uma biblioteca de associações Java** Com essa técnica, um projeto Xamarin. Android é usado para criar C# wrappers em todos os tipos de Java. &ndash; Um aplicativo Xamarin. Android pode referenciar os C# wrappers criados por esse projeto e, em seguida, `.jar` usar o arquivo. 
+- **Criar uma biblioteca de associações Java** &ndash; com essa técnica, um projeto Xamarin. Android é usado para criar C# wrappers em todos os tipos de Java. Um aplicativo Xamarin. Android pode referenciar os C# wrappers criados por esse projeto e, em seguida, usar o arquivo`.jar`. 
 
-- **Interface nativa do Java** C++ C#A interface nativa do Java (JNI) é uma estrutura que permite que código não Java (como ou) chame ou seja chamado por código Java em execução dentro de uma JVM. &ndash; 
+- A **interface nativa do java** &ndash; a *interface* *nativa do Java* (JNI) é uma estrutura que permite que código não Java ( C#como C++ ou) chame ou seja chamado pelo código Java em execução dentro de uma JVM. 
 
-- **Portar o código** Esse método envolve pegar o código-fonte Java e, em seguida, convertê-lo em C# &ndash; Isso pode ser feito manualmente ou usando uma ferramenta automatizada, como nitidez. 
+- **Porta o código** &ndash; esse método envolve pegar o código-fonte Java e, em seguida, C#convertê-lo em. Isso pode ser feito manualmente ou usando uma ferramenta automatizada, como nitidez. 
 
 No núcleo das duas primeiras técnicas está a *interface nativa do Java* (JNI). JNI é uma estrutura que permite que aplicativos não escritos em Java interajam com código Java em execução em um Máquina Virtual Java. O Xamarin. Android usa JNI para criar *associações* para C# o código. 
 
-A primeira técnica é uma abordagem mais automatizada e declarativa para a associação de bibliotecas Java. Ele envolve o uso de Visual Studio para Mac ou um tipo de projeto do Visual Studio que é fornecido pelo &ndash; Xamarin. Android na biblioteca de associações Java. Para criar essas associações com êxito, uma biblioteca de associações Java pode ainda exigir algumas modificações manuais, mas não tanto quanto uma abordagem JNI pura. Consulte [associando uma biblioteca Java](~/android/platform/binding-java-library/index.md) para obter mais informações sobre bibliotecas de associação Java. 
+A primeira técnica é uma abordagem mais automatizada e declarativa para a associação de bibliotecas Java. Ele envolve o uso de Visual Studio para Mac ou de um tipo de projeto do Visual Studio que é fornecido pelo Xamarin. Android &ndash; a biblioteca de associações Java. Para criar essas associações com êxito, uma biblioteca de associações Java pode ainda exigir algumas modificações manuais, mas não tanto quanto uma abordagem JNI pura. Consulte [associando uma biblioteca Java](~/android/platform/binding-java-library/index.md) para obter mais informações sobre bibliotecas de associação Java. 
 
 A segunda técnica, usando JNI, funciona em um nível muito mais baixo, mas pode fornecer controle e acesso mais precisos a métodos Java que normalmente não seriam acessíveis por meio de uma biblioteca de associação Java. 
 
@@ -48,4 +48,4 @@ Este documento forneceu uma visão geral de alto nível de algumas das diferente
 - [Associação de uma biblioteca Java](~/android/platform/binding-java-library/index.md)
 - [Trabalhando com JNI](~/android/platform/java-integration/working-with-jni.md)
 - [Ajustar Nitidez](https://github.com/slluis/sharpen)
-- [Interface nativa do Java](http://docs.oracle.com/javase/7/docs/technotes~/jni/index.html)
+- [Interface nativa do Java](https://docs.oracle.com/javase/7/docs/technotes~/jni/index.html)

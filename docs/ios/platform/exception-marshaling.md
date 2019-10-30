@@ -4,15 +4,15 @@ description: Este documento descreve como trabalhar com exceções nativas e ger
 ms.prod: xamarin
 ms.assetid: BE4EE969-C075-4B9A-8465-E393556D8D90
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/05/2017
-ms.openlocfilehash: 936c5b91a27fed1c00f3cf0c61d0184d5532c25a
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: ca3d4dfcd773a4f236ffbfd715cb53b514f6e2a3
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70753080"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73032521"
 ---
 # <a name="exception-marshaling-in-xamarinios"></a>Marshaling de exceção no Xamarin. iOS
 
@@ -32,7 +32,7 @@ O problema ocorre quando uma exceção é gerada e, durante o desenrolamento da 
 
 Um exemplo típico disso para Xamarin. iOS ou Xamarin. Mac é quando uma API nativa gera uma exceção Objective-C e, em seguida, essa exceção Objective-C deve ser tratada de alguma forma quando o processo de desenrolamento de pilha atingir um quadro gerenciado.
 
-A ação padrão é não fazer nada. Para o exemplo acima, isso significa deixar os quadros gerenciados desenrolados de tempo de execução Objective-C. Isso é problemático, pois o tempo de execução do Objective-C não sabe como desenrolar quadros gerenciados; por exemplo, ele não executará `finally` nenhuma `catch` cláusula or nesse quadro.
+A ação padrão é não fazer nada. Para o exemplo acima, isso significa deixar os quadros gerenciados desenrolados de tempo de execução Objective-C. Isso é problemático, pois o tempo de execução do Objective-C não sabe como desenrolar quadros gerenciados; por exemplo, ele não executará nenhuma cláusula `catch` ou `finally` nesse quadro.
 
 ### <a name="broken-code"></a>Código rompido
 
@@ -61,7 +61,7 @@ E o rastreamento de pilha será algo assim:
 6   TestApp                 ExceptionMarshaling.Exceptions.ThrowObjectiveCException ()
 ```
 
-Os quadros 0-3 são quadros nativos, e o desenrolador de pilha no tempo de execução Objective-C _pode_ desenrolar esses quadros. Em particular, ele executará qualquer cláusula Objective `@catch` - `@finally` C ou.
+Os quadros 0-3 são quadros nativos, e o desenrolador de pilha no tempo de execução Objective-C _pode_ desenrolar esses quadros. Em particular, ele executará qualquer cláusula Objective-C `@catch` ou `@finally`.
 
 No entanto, o desenrolador Objective-C _não_ é capaz de desenrolar corretamente os quadros gerenciados (quadros 4-6), pois os quadros serão desorganizados, mas a lógica de exceção gerenciada não será executada.
 
@@ -78,19 +78,19 @@ try {
 }
 ```
 
-Isso ocorre porque o desenrolador de pilha Objective-C não conhece a cláusula `catch` gerenciada e nem a `finally` cláusula será executada.
+Isso ocorre porque o desenrolador de pilha Objective-C não conhece a cláusula de `catch` gerenciada e nenhuma cláusula de `finally` será executada.
 
-Quando o exemplo de código acima _é_ eficaz, é porque Objective-c tem um método de ser notificado de exceções de Objective-c [`NSSetUncaughtExceptionHandler`][2]sem tratamento, que o xamarin. Ios e o xamarin. Mac usam, e nesse ponto tenta converter qualquer exceção de Objective-c para exceções gerenciadas.
+Quando o exemplo de código acima _é_ eficaz, é porque Objective-c tem um método de ser notificado de exceções de Objective-c sem tratamento, [`NSSetUncaughtExceptionHandler`][2], que o xamarin. Ios e o xamarin. Mac usam, e nesse ponto tenta converter qualquer Objective-c exceções a exceções gerenciadas.
 
 ## <a name="scenarios"></a>Cenários
 
 ### <a name="scenario-1---catching-objective-c-exceptions-with-a-managed-catch-handler"></a>Cenário 1-captura de exceções de Objective-C com um manipulador de catch gerenciado
 
-No cenário a seguir, é possível capturar exceções de Objective-C usando manipuladores gerenciados `catch` :
+No cenário a seguir, é possível capturar exceções de Objective-C usando manipuladores de `catch` gerenciados:
 
 1. Uma exceção Objective-C é lançada.
-2. O tempo de execução Objective-C percorre a pilha (mas não a desenrola), procurando `@catch` um manipulador nativo que possa manipular a exceção.
-3. O tempo de execução Objective-C `@catch` não localiza nenhum manipulador `NSGetUncaughtExceptionHandler`, chama e invoca o manipulador instalado pelo Xamarin. Ios/xamarin. Mac.
+2. O tempo de execução Objective-C percorre a pilha (mas não a desenrola), procurando um manipulador de `@catch` nativo que possa manipular a exceção.
+3. O tempo de execução Objective-C não localiza nenhum manipulador de `@catch`, chama `NSGetUncaughtExceptionHandler`e invoca o manipulador instalado pelo Xamarin. iOS/Xamarin. Mac.
 4. O manipulador do xamarin. iOS/Xamarin. Mac converterá a exceção Objective-C em uma exceção gerenciada e a lançará. Como o tempo de execução Objective-C não desenrolava a pilha (apenas enquadrada), o quadro atual é o mesmo em que a exceção Objective-C foi gerada.
 
 Outro problema ocorre aqui, porque o tempo de execução do mono não sabe como desenrolar os quadros Objective-C corretamente.
@@ -111,7 +111,7 @@ Quando o retorno de chamada de exceção Objective-C não capturado do Xamarin. 
 10 TestApp                  ExceptionMarshaling.Exceptions.ThrowObjectiveCException () [0x00013]
 ```
 
-Aqui, os únicos quadros gerenciados são os quadros 8-10, mas a exceção gerenciada é lançada no quadro 0. Isso significa que o tempo de execução do mono deve desenrolar os quadros nativos 0-7, o que causa um problema equivalente ao problema discutido acima: embora o tempo de execução do mono desenrolar os quadros `@catch` nativos `@finally` , ele não executará nenhum Objective-C ou cláusulas .
+Aqui, os únicos quadros gerenciados são os quadros 8-10, mas a exceção gerenciada é lançada no quadro 0. Isso significa que o tempo de execução do mono deve desenrolar os quadros nativos 0-7, o que causa um problema equivalente ao problema discutido acima: embora o tempo de execução do mono desenrolar os quadros nativos, ele não executará nenhuma cláusula Objective-C `@catch` ou `@finally`.
 
 Exemplo de código:
 
@@ -127,9 +127,9 @@ Exemplo de código:
 }
 ```
 
-E a `@finally` cláusula não será executada porque o tempo de execução mono que desenrola este quadro não sabe sobre isso.
+E a cláusula `@finally` não será executada porque o tempo de execução mono que desenrola este quadro não sabe sobre isso.
 
-Uma variação disso é lançar uma exceção gerenciada em código gerenciado e, em seguida, desenrolar por meio de quadros nativos para chegar à `catch` primeira cláusula gerenciada:
+Uma variação disso é lançar uma exceção gerenciada em código gerenciado e, em seguida, desenrolar por meio de quadros nativos para obter a primeira cláusula de `catch` gerenciada:
 
 ```csharp
 class AppDelegate : UIApplicationDelegate {
@@ -148,7 +148,7 @@ class AppDelegate : UIApplicationDelegate {
 }
 ```
 
-O método `UIApplication:Main` gerenciado chamará o método `UIApplicationMain` nativo e, em seguida, o Ios fará muita execução de código nativo antes de eventualmente chamar `AppDelegate:FinishedLaunching` o método gerenciado, com ainda muitos quadros nativos na pilha quando a exceção gerenciada for inicia
+O método `UIApplication:Main` gerenciado chamará o método nativo `UIApplicationMain` e, em seguida, o iOS fará muita execução de código nativo antes de eventualmente chamar o método de `AppDelegate:FinishedLaunching` gerenciado, com ainda muitos quadros nativos na pilha quando a exceção gerenciada for gerada :
 
 ```
  0: TestApp                 ExceptionMarshaling.IOS.AppDelegate:FinishedLaunching (UIKit.UIApplication,Foundation.NSDictionary)
@@ -184,15 +184,15 @@ O método `UIApplication:Main` gerenciado chamará o método `UIApplicationMain`
 30: TestApp                 ExceptionMarshaling.IOS.Application:Main (string[])
 ```
 
-Os quadros 0-1 e 27-30 são gerenciados, enquanto todos os entre eles são nativos. Se o mono desenrolar por meio desses quadros, nenhuma cláusula `@catch` Objective-C ou `@finally` será executada.
+Os quadros 0-1 e 27-30 são gerenciados, enquanto todos os entre eles são nativos. Se o mono desenrolar por meio desses quadros, nenhuma cláusula Objective-C `@catch` ou `@finally` será executada.
 
 ### <a name="scenario-2---not-able-to-catch-objective-c-exceptions"></a>Cenário 2-não é possível capturar exceções de Objective-C
 
-No cenário a seguir, _não_ é possível capturar exceções de Objective-c usando manipuladores gerenciados `catch` porque a exceção Objective-c foi tratada de outra maneira:
+No cenário a seguir, _não_ é possível capturar exceções de Objective-c usando manipuladores de `catch` gerenciados porque a exceção Objective-c foi tratada de outra maneira:
 
 1. Uma exceção Objective-C é lançada.
-2. O tempo de execução Objective-C percorre a pilha (mas não a desenrola), procurando `@catch` um manipulador nativo que possa manipular a exceção.
-3. O tempo de execução Objective- `@catch` C localiza um manipulador, desenrola a pilha e começa a `@catch` executar o manipulador.
+2. O tempo de execução Objective-C percorre a pilha (mas não a desenrola), procurando um manipulador de `@catch` nativo que possa manipular a exceção.
+3. O tempo de execução Objective-C localiza um manipulador de `@catch`, desenrola a pilha e começa a executar o manipulador de `@catch`.
 
 Esse cenário normalmente é encontrado em aplicativos Xamarin. iOS, pois, no thread principal, geralmente há um código como este:
 
@@ -213,7 +213,7 @@ void UIApplicationMain ()
 
 Isso significa que, no thread principal, nunca há uma exceção de Objective-C sem tratamento e, portanto, nosso retorno de chamada que converte exceções de Objective-C para exceções gerenciadas nunca é chamado.
 
-Isso também é bastante comum ao depurar aplicativos Xamarin. Mac em uma versão anterior do macOS do que o Xamarin. Mac dá suporte, pois inspecionar a maioria dos objetos da interface do usuário no depurador tentará buscar propriedades que correspondam aos seletores que não existem na plataforma em execução ( como o Xamarin. Mac inclui suporte para uma versão superior do macOS). Chamar esses seletores lançará um `NSInvalidArgumentException` ("seletor não reconhecido enviado para..."), que eventualmente faz com que o processo falhe.
+Isso também é bastante comum ao depurar aplicativos Xamarin. Mac em uma versão anterior do macOS do que o Xamarin. Mac dá suporte, pois inspecionar a maioria dos objetos da interface do usuário no depurador tentará buscar propriedades que correspondam aos seletores que não existem na plataforma em execução ( como o Xamarin. Mac inclui suporte para uma versão superior do macOS). Chamar esses seletores gerará um `NSInvalidArgumentException` ("seletor não reconhecido enviado para..."), que eventualmente faz com que o processo falhe.
 
 Para resumir, ter o tempo de execução Objective-C ou os quadros de liberação de tempo de execução mono que não estão programados para lidar pode levar a comportamentos indefinidos, como falhas, vazamentos de memória e outros tipos de comportamentos imprevisíveis (inadequados).
 
@@ -257,31 +257,31 @@ A captura de exceções no limite nativo gerenciado não é sem custos, portanto
 
 A seção de [sinalizadores de tempo de compilação](#build_time_flags) explica como habilitar a interceptação quando ela não está habilitada por padrão.
 
-## <a name="events"></a>Events
+## <a name="events"></a>Eventos
 
-Há dois novos eventos que são gerados quando uma exceção é interceptada: `Runtime.MarshalManagedException` e. `Runtime.MarshalObjectiveCException`
+Há dois novos eventos que são gerados quando uma exceção é interceptada: `Runtime.MarshalManagedException` e `Runtime.MarshalObjectiveCException`.
 
-Os dois eventos são passados `EventArgs` para um objeto que contém a exceção original que foi lançada `Exception` (a propriedade) e `ExceptionMode` uma propriedade para definir como a exceção deve ser empacotada.
+Os dois eventos são transmitidos a um objeto `EventArgs` que contém a exceção original que foi gerada (a propriedade `Exception`) e uma propriedade `ExceptionMode` para definir como a exceção deve ser empacotada.
 
-A `ExceptionMode` propriedade pode ser alterada no manipulador de eventos para alterar o comportamento de acordo com qualquer processamento personalizado feito no manipulador. Um exemplo seria anular o processo se ocorrer uma determinada exceção.
+A propriedade `ExceptionMode` pode ser alterada no manipulador de eventos para alterar o comportamento de acordo com qualquer processamento personalizado feito no manipulador. Um exemplo seria anular o processo se ocorrer uma determinada exceção.
 
-A alteração `ExceptionMode` da propriedade aplica-se ao evento único; ela não afeta nenhuma exceção interceptada no futuro.
+A alteração da propriedade `ExceptionMode` se aplica ao único evento; ela não afeta nenhuma exceção interceptada no futuro.
 
 Os seguintes modos estão disponíveis:
 
-- `Default`: O padrão varia de acordo com a plataforma. Se o GC estiver no modo cooperativo (watchOS) e `UnwindNativeCode` de outra forma (Ios/watchOS/MacOS). `ThrowObjectiveCException` O padrão pode ser alterado no futuro.
-- `UnwindNativeCode`: Este é o comportamento anterior (indefinido). Isso não está disponível ao usar o GC no modo cooperativo (que é a única opção em watchOS; portanto, essa não é uma opção válida em watchOS), mas é a opção padrão para todas as outras plataformas.
-- `ThrowObjectiveCException`: Converta a exceção gerenciada em uma exceção Objective-C e acione a exceção Objective-C. Esse é o padrão em watchOS.
-- `Abort`: Anule o processo.
-- `Disable`: Desabilita a interceptação de exceção, portanto, não faz sentido definir esse valor no manipulador de eventos, mas depois que o evento é gerado, ele é muito tarde para desabilitá-lo. Em qualquer caso, se for definido, ele se comportará como `UnwindNativeCode`.
+- `Default`: o padrão varia de acordo com a plataforma. É `ThrowObjectiveCException` se o GC está no modo cooperativo (watchOS) e `UnwindNativeCode` de outra forma (iOS/watchOS/macOS). O padrão pode ser alterado no futuro.
+- `UnwindNativeCode`: esse é o comportamento anterior (indefinido). Isso não está disponível ao usar o GC no modo cooperativo (que é a única opção em watchOS; portanto, essa não é uma opção válida em watchOS), mas é a opção padrão para todas as outras plataformas.
+- `ThrowObjectiveCException`: converta a exceção gerenciada em uma exceção Objective-C e gere a exceção Objective-C. Esse é o padrão em watchOS.
+- `Abort`: anular o processo.
+- `Disable`: desabilita a interceptação de exceção, portanto, não faz sentido definir esse valor no manipulador de eventos, mas depois que o evento é gerado, ele é muito tarde para desabilitá-lo. Em qualquer caso, se definido, ele se comportará como `UnwindNativeCode`.
 
 Para realizar marshaling de exceções de Objective-C para código gerenciado, os seguintes modos estão disponíveis:
 
-- `Default`: O padrão varia de acordo com a plataforma. Se o GC estiver no modo cooperativo (watchOS) e `UnwindManagedCode` de outra forma (Ios/tvOS/MacOS). `ThrowManagedException` O padrão pode ser alterado no futuro.
-- `UnwindManagedCode`: Este é o comportamento anterior (indefinido). Isso não está disponível ao usar o GC no modo cooperativo (que é o único modo GC válido em watchOS; portanto, essa não é uma opção válida em watchOS), mas é o padrão para todas as outras plataformas.
-- `ThrowManagedException`: Converta a exceção Objective-C em uma exceção gerenciada e gere a exceção gerenciada. Esse é o padrão em watchOS.
-- `Abort`: Anule o processo.
-- `Disable`:D isaptos a interceptação de exceção, portanto, não faz sentido definir esse valor no manipulador de eventos, mas depois que o evento é gerado, ele é muito tarde para desabilitá-lo. Em qualquer caso, se definido, ele anulará o processo.
+- `Default`: o padrão varia de acordo com a plataforma. É `ThrowManagedException` se o GC está no modo cooperativo (watchOS) e `UnwindManagedCode` de outra forma (iOS/tvOS/macOS). O padrão pode ser alterado no futuro.
+- `UnwindManagedCode`: esse é o comportamento anterior (indefinido). Isso não está disponível ao usar o GC no modo cooperativo (que é o único modo GC válido em watchOS; portanto, essa não é uma opção válida em watchOS), mas é o padrão para todas as outras plataformas.
+- `ThrowManagedException`: converta a exceção Objective-C em uma exceção gerenciada e gere a exceção gerenciada. Esse é o padrão em watchOS.
+- `Abort`: anular o processo.
+- `Disable`:D isapto a interceptação de exceção, portanto, não faz sentido definir esse valor no manipulador de eventos, mas depois que o evento é gerado, ele é muito tarde para desabilitá-lo. Em qualquer caso, se definido, ele anulará o processo.
 
 Portanto, para ver toda vez que uma exceção é empacotada, você pode fazer isso:
 
@@ -321,13 +321,13 @@ Runtime.MarshalObjectiveCException += (object sender, MarshalObjectiveCException
   - `abort`
   - `disable`
 
-Exceto para `disable`, esses valores são idênticos `ExceptionMode` aos valores que são passados para os `MarshalManagedException` eventos `MarshalObjectiveCException` e.
+Exceto para `disable`, esses valores são idênticos aos valores de `ExceptionMode` que são passados para os eventos `MarshalManagedException` e `MarshalObjectiveCException`.
 
-A `disable` opção desabilitará _principalmente_ a interceptação, exceto que ainda iremos interceptar exceções quando não adicionar nenhuma sobrecarga de execução. Os eventos de marshaling ainda são gerados para essas exceções, com o modo padrão sendo o modo padrão para a plataforma em execução.
+A opção `disable`, na _maioria das vezes_ , desabilitará a interceptação, exceto que ainda iremos interceptar exceções quando não adicionar nenhuma sobrecarga de execução. Os eventos de marshaling ainda são gerados para essas exceções, com o modo padrão sendo o modo padrão para a plataforma em execução.
 
 ## <a name="limitations"></a>Limitações
 
-Interceptamos apenas P/Invokes para a `objc_msgSend` família de funções ao tentar capturar exceções de Objective-C. Isso significa que um P/Invoke para outra função C, que, em seguida, gera quaisquer exceções Objective-C, ainda será executado no comportamento antigo e indefinido (isso pode ser melhorado no futuro).
+Interceptamos apenas P/Invokes para a família de `objc_msgSend` de funções ao tentar capturar exceções de Objective-C. Isso significa que um P/Invoke para outra função C, que, em seguida, gera quaisquer exceções Objective-C, ainda será executado no comportamento antigo e indefinido (isso pode ser melhorado no futuro).
 
 [2]: https://developer.apple.com/reference/foundation/1409609-nssetuncaughtexceptionhandler?language=objc
 

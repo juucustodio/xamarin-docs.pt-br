@@ -4,16 +4,16 @@ description: Este documento descreve como implantar sem fio um aplicativo Xamari
 ms.prod: xamarin
 ms.assetid: 5AB4C5A9-4FBB-4DCB-BD72-0022D5439E65
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.custom: video
 ms.date: 01/22/2019
-ms.openlocfilehash: afa87cf98a2f9caee49c510674fe774a46e81107
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: b0eb471bd41bb38d62ced38ed66cfa0dfee37bbf
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70284347"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73023417"
 ---
 # <a name="wireless-deployment-for-xamarinios-and-tvos-apps"></a>Implantação sem fio para aplicativos Xamarin.iOS e tvOS
 
@@ -59,7 +59,7 @@ O processo de emparelhamento a seguir só é necessário uma vez por dispositivo
 
 1. Abra o Xcode e vá para **Janela > Dispositivos e Simuladores**.
 2. Conecte o dispositivo iOS ao Mac usando um cabo de alimentação. Talvez seja necessário selecionar **Confiar Neste Computador** no dispositivo.
-3. Selecione seu dispositivo e marque a caixa de seleção **Conectar via rede** para emparelhá-lo:  ![Janela Dispositivo e Simulador mostrando a opção Conectar via rede](wireless-deployment-images/image2.png)
+3. Selecione o dispositivo e marque a caixa de seleção **Conectar via rede** para emparelhá-lo: ![janela Dispositivo e Simulador mostrando a opção Conectar via rede](wireless-deployment-images/image2.png)
 
 ### <a name="pairing-an-apple-tv-with-xcode"></a>Emparelhamento de uma Apple TV com o Xcode
 

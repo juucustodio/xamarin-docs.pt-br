@@ -4,21 +4,21 @@ description: Este guia descreve como usar o Emparelhar com Mac para conectar o V
 ms.prod: xamarin
 ms.assetid: 39DD7B3F-3E69-4E2A-B743-4C26AF613025
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 05/29/2018
-ms.openlocfilehash: 9296fa60a454fe83f9ec9b383067576b67e5f037
-ms.sourcegitcommit: 76f930ce63b193ca3f7f85f768b031e59cb342ec
+ms.openlocfilehash: b8020ae8539e12640cde0d565ccbd2eb0c01fc30
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71198549"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73022492"
 ---
 # <a name="pair-to-mac-for-xamarinios-development"></a>Emparelhar com o Mac para desenvolvimento no Xamarin.iOS
 
-_Este guia descreve como usar a funcionalidade Emparelhar com Mac para conectar o Visual Studio 2019 a um host de build do Mac. As mesmas instruções se aplicam ao Visual Studio 2017._
+_Este guia descreve como usar o Pair to Mac para conectar o Visual Studio 2019 a um host de Build do Mac. As mesmas instruções se aplicam ao Visual Studio 2017._
 
-## <a name="overview"></a>Visão geral
+## <a name="overview"></a>Visão Geral
 
 A criação de aplicativos do iOS nativos requer acesso às ferramentas de build da Apple, que são executadas somente em Mac. Por isso, o Visual Studio 2019 deve se conectar a um Mac acessível na rede para criar aplicativos Xamarin.iOS.
 
@@ -58,7 +58,7 @@ Para configurar o host de build do Mac, primeiramente habilite o acesso remoto:
 
 2. Marque **Acesso Remoto** na lista **Serviço**.
 
-    ![Habilitar Acesso Remoto](images/sharing.png "Habilitar Acesso Remoto")
+    ![Habilitando Acesso Remoto](images/sharing.png "Habilitando Acesso Remoto")
 
     Verifique se está definido para permitir o acesso de **Todos os usuários** ou se o nome de usuário ou grupo do Mac está incluído na lista de usuários permitidos.
 
@@ -78,13 +78,13 @@ Agora que o acesso remoto está habilitado, conecte o Visual Studio 2019 ao Mac.
 
     - Use o botão **Emparelhar com Mac** na barra de ferramentas do iOS:
 
-      ![A barra de ferramentas do iOS com o botão Emparelhar com Mac realçado](images/ios-toolbar.png "A barra de ferramentas do iOS com o botão Emparelhar com Mac realçado")
+      ![A barra de ferramentas do iOS, com o botão par ao Mac realçado](images/ios-toolbar.png "A barra de ferramentas do iOS, com o botão par ao Mac realçado")
 
     - Ou selecione **Ferramentas > iOS > Emparelhar com Mac**.
 
     - A caixa de diálogo **Emparelhar com Mac** exibe uma lista de todos os hosts de build disponíveis do Mac conectados anteriormente e atualmente:
 
-      ![A caixa de diálogo Emparelhar com Mac](images/pairtomac.png "A caixa de diálogo Emparelhar com Mac")
+      ![A caixa de diálogo emparelhar com Mac](images/pairtomac.png "A caixa de diálogo emparelhar com Mac")
 
 3. Selecione um Mac na lista. Clique em **Conectar**.
 
@@ -92,7 +92,7 @@ Agora que o acesso remoto está habilitado, conecte o Visual Studio 2019 ao Mac.
 
     - Na primeira vez que se conectar a um Mac, você precisará inserir seu nome de usuário e senha do computador:
 
-      ![Inserir um nome de usuário e uma senha para o Mac](images/auth.png "Inserir um nome de usuário e uma senha para o Mac")
+      ![Inserindo um nome de usuário e senha para o Mac](images/auth.png "Inserindo um nome de usuário e senha para o Mac")
 
       > [!TIP]
       > Ao fazer logon, use seu nome de usuário do sistema em vez do nome completo.
@@ -114,7 +114,7 @@ Agora que o acesso remoto está habilitado, conecte o Visual Studio 2019 ao Mac.
       > [!TIP]
       > Clicar com o botão direito do mouse em qualquer Mac na lista **Emparelhar com Mac** exibe um menu de contexto que permite **Conectar...** , **Esquecer este Mac** ou **Desconectar**:
       >
-      > ![Os menus de contexto do Emparelhar com Mac](images/contextmenu.png "Os menus de contexto do Emparelhar com Mac")
+      > ![Os menus de contexto do par para Mac](images/contextmenu.png "Os menus de contexto do par para Mac")
       >
       > Se escolher **Esquecer este Mac**, suas credenciais para o Mac selecionado serão esquecidas. Para reconectar-se ao Mac, você precisará inserir novamente seu nome de usuário e senha.
 
@@ -130,7 +130,7 @@ Se não vir um Mac específico listado na caixa de diálogo **Emparelhar com Mac
 
     - Abra **Preferências do Sistema > Compartilhamento > Acesso Remoto** no seu Mac:
 
-      [![O endereço IP do Mac em Preferências do Sistema > Compartilhamento](images/sharing-ipaddress.png "O endereço IP do Mac em Preferências do Sistema > Compartilhamento")](images/sharing.png#lightbox)
+      [![O endereço IP do Mac nas preferências do sistema > compartilhamento](images/sharing-ipaddress.png "O endereço IP do Mac nas preferências do sistema > compartilhamento")](images/sharing.png#lightbox)
 
     - Como alternativa, use a linha de comando. No Terminal, execute este comando:
 
@@ -143,15 +143,15 @@ Se não vir um Mac específico listado na caixa de diálogo **Emparelhar com Mac
 
 2. Na caixa de diálogo **Emparelhar com Mac** do Visual Studio 2019, selecione **Adicionar Mac...** :
 
-    [![O botão Adicionar Mac na caixa de diálogo Emparelhar com Mac](images/addtomac.png "O botão Adicionar Mac na caixa de diálogo Emparelhar com Mac")](images/addtomac-large.png#lightbox)
+    [![O botão Adicionar Mac na caixa de diálogo emparelhar com o Mac](images/addtomac.png "O botão Adicionar Mac na caixa de diálogo emparelhar com o Mac")](images/addtomac-large.png#lightbox)
 
 3. Insira o endereço IP do Mac e clique em **Adicionar**:
 
-    ![Inserir o endereço IP do Mac](images/enteripaddress.png "Inserir o endereço IP do Mac")
+    ![Inserindo o endereço IP do Mac](images/enteripaddress.png "Inserindo o endereço IP do Mac")
 
 4. Insira o nome de usuário e a senha para o Mac:
 
-    ![Inserir um nome de usuário e senha](images/auth.png "Inserir um nome de usuário e senha")
+    ![Insira um nome de usuário e senha](images/auth.png "Inserindo um nome de usuário e senha")
 
    > [!TIP]
    > Ao fazer logon, use seu nome de usuário do sistema em vez do nome completo.
@@ -160,7 +160,7 @@ Se não vir um Mac específico listado na caixa de diálogo **Emparelhar com Mac
 
 ## <a name="automatic-mac-provisioning"></a>Provisionamento automático do Mac
 
-Começando com o [Visual Studio 2019 versão 15.6](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes#automatic-macos-provisioning), a função Emparelhar com Mac provisiona um Mac automaticamente com o software necessário para a criação de aplicativos Xamarin.iOS: Mono, Xamarin.iOS (a estrutura de software, não o IDE do Visual Studio para Mac) e várias ferramentas relacionadas a Xcode (mas não o Xcode em si).
+A partir do [Visual Studio 2019 versão 15,6](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes#automatic-macos-provisioning), o par para Mac provisiona automaticamente um Mac com o software necessário para criar aplicativos Xamarin. Ios: mono, Xamarin. Ios (a estrutura de software, não o Visual Studio para Mac IDE) e vários Ferramentas relacionadas ao Xcode (mas não ao próprio Xcode).
 
 > [!IMPORTANT]
 >
@@ -178,7 +178,7 @@ O progresso é indicado por vários prompts, conforme mostrado pelas seguintes c
 
 ||Verificação de instalação|Baixando|Instalando o
 |---|---|---|---|
-|Mono|[![Instalação do Mono ausente](images/mono-missing.png "Instalação do Mono ausente")](images/mono-missing-large.png#lightbox)|[![Baixando o Mono](images/mono-downloading.png "Baixando o Mono")](images/mono-downloading-large.png#lightbox)|[![Instalando o Mono](images/mono-installing.png "Instalando o Mono")](images/mono-installing-large.png#lightbox)|
+|Mono|[![Instalação mono ausente](images/mono-missing.png "Instalação mono ausente")](images/mono-missing-large.png#lightbox)|[![Baixando o mono](images/mono-downloading.png "Baixando o mono")](images/mono-downloading-large.png#lightbox)|[![Instalando o mono](images/mono-installing.png "Instalando o mono")](images/mono-installing-large.png#lightbox)|
 
 ### <a name="xamarinios"></a>Xamarin.iOS
 
@@ -194,7 +194,7 @@ O progresso é indicado por vários prompts, conforme mostrado pelas seguintes c
 
 ||Verificação de instalação|Baixando|Instalando o
 |---|---|---|---|
-|Xamarin.iOS|[![Instalação do Xamarin.iOS ausente](images/xamios-missing.png "Instalação do Xamarin.iOS ausente")](images/xamios-missing-large.png#lightbox)|[![Baixando o Xamarin.iOS](images/xamios-downloading.png "Baixando o Xamarin.iOS")](images/xamios-downloading-large.png#lightbox)|[![Instalando o Xamarin.iOS](images/xamios-installing.png "Instalando o Xamarin.iOS")](images/xamios-installing-large.png#lightbox)|
+|Xamarin.iOS|[![Instalação do Xamarin. iOS ausente](images/xamios-missing.png "Instalação do Xamarin. iOS ausente")](images/xamios-missing-large.png#lightbox)|[![Baixando o Xamarin. iOS](images/xamios-downloading.png "Baixando o Xamarin. iOS")](images/xamios-downloading-large.png#lightbox)|[![Instalando o Xamarin. iOS](images/xamios-installing.png "Instalando o Xamarin.iOS")](images/xamios-installing-large.png#lightbox)|
 
 ### <a name="xcode-tools-and-license"></a>Licença e ferramentas Xcode
 
@@ -236,7 +236,7 @@ Os parâmetros passados para `msbuild` no exemplo acima são:
 - `ServerPassword` – a senha a ser usada ao fazer logon no host de build do Mac.
 
 > [!NOTE]
-> O Visual Studio 2019 armazena o `msbuild` no seguinte diretório: **C:\Arquivos de Programas (x86)\Microsoft Visual Studio\2017\\&lt;Version&gt;\MSBuild\15.0\Bin**
+> O Visual Studio 2019 armazena `msbuild` no seguinte diretório: **c:\Arquivos de programas (x86) \Microsoft Visual Studio\2017\\&lt;versão&gt;\MSBuild\15.0\Bin**
 
 Na primeira vez em que o Emparelhar com Mac fizer logon em um determinado host de build do Mac usando o Visual Studio 2019 ou a linha de comando, ele configurará chaves SSH. Com essas chaves, logons futuros não exigirão um nome de usuário ou senha. As chaves recém-criadas são armazenadas em **%LOCALAPPDATA%\Xamarin\MonoTouch**.
 

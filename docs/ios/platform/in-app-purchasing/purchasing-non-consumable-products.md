@@ -4,15 +4,15 @@ description: Este documento descreve produtos não consumíveis no Xamarin. iOS,
 ms.prod: xamarin
 ms.assetid: 635D9CA2-6BCA-53E1-7B10-968029AA3493
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: 50b26e1b37000df3e6cd96c8a3cd2f424dd4f1f0
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 2341d90a297d6241c47a5f03fbe8fffa89dd34b0
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70752656"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73032321"
 ---
 # <a name="purchasing-non-consumable-products-in-xamarinios"></a>Comprando produtos não consumíveis no Xamarin. iOS
 
@@ -24,13 +24,13 @@ O [código InAppPurchaseSample](https://docs.microsoft.com/samples/xamarin/ios-s
 
 O processo de compra é mostrado nesta série de capturas de tela – o botão **comprar** se torna o botão ativação de recurso:   
 
- [![](purchasing-non-consumable-products-images/image34.png "O processo de compra é mostrado nesta série de capturas de tela")](purchasing-non-consumable-products-images/image34.png#lightbox)   
+ [![](purchasing-non-consumable-products-images/image34.png "The purchase process is shown in this series of screenshots")](purchasing-non-consumable-products-images/image34.png#lightbox)   
 
 O processo de compra é o mesmo que um produto consumível; a principal diferença é a forma como a compra é controlada no código do aplicativo. Neste exemplo, o botão comprar só estará disponível se o produto ainda não tiver sido comprado, caso contrário, o botão ativará o recurso em si.   
 
 O diagrama a seguir mostra as interações entre as classes e o servidor da App Store para executar uma compra de produto não consumível:   
 
- [![](purchasing-non-consumable-products-images/image35.png "As interações entre classes e o servidor da App Store para executar uma compra de produto não consumível")](purchasing-non-consumable-products-images/image35.png#lightbox)   
+ [![](purchasing-non-consumable-products-images/image35.png "The interactions between classes and the App Store server to perform a non-consumable product purchase")](purchasing-non-consumable-products-images/image35.png#lightbox)   
 
 A principal diferença do exemplo de consumo é que, após a conclusão da compra, a interface do usuário é atualizada para evitar a nova compra. Neste exemplo, a notificação de uma transação bem-sucedida atualiza a interface do usuário para que o botão **comprar** seja convertido em um botão que ativa o próprio recurso.
 
@@ -47,5 +47,5 @@ Há situações em que um aplicativo não pode dizer se um produto não consumí
 O caminho de código nesse cenário é exatamente o mesmo que uma compra regular, as únicas diferenças são:
 
 - O usuário não será cobrado novamente para o produto.
-- O `SKPaymentTransaction` objeto passado para o aplicativo terá uma `OriginalTransaction` propriedade que se refere à transação que foi gerada quando o produto foi inicialmente adquirido. 
+- O objeto `SKPaymentTransaction` passado para o aplicativo terá uma propriedade `OriginalTransaction` que se refere à transação que foi gerada quando o produto foi inicialmente adquirido. 
 - Os aplicativos que vendem produtos não consumíveis também devem implementar o recurso de **restauração** do StoreKit para ajudar os usuários a recuperar as compras existentes. 

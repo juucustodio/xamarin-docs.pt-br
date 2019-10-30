@@ -4,15 +4,15 @@ description: Este tópico apresenta os recursos do Xamarin. Designer Android, ex
 ms.prod: xamarin
 ms.assetid: 48B20C9A-B2A2-AE82-76B2-A3C1E5A4050D
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 09/05/2018
-ms.openlocfilehash: 0089f8681142b1d3d3446c21ba89ab2648e4a638
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: 2d5f20326de56bca77dd8fdd742515e003f996e1
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "70761414"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73029511"
 ---
 # <a name="xamarinandroid-designer-basics"></a>Noções básicas do Xamarin. Designer Android
 
@@ -24,11 +24,11 @@ _Este tópico apresenta os recursos do Xamarin. Designer Android, explica como i
 
 O designer é iniciado automaticamente quando um layout é criado ou pode ser iniciado clicando-se duas vezes em um arquivo de layout existente. Por exemplo, clicar duas vezes em **activity_main. axml** na pasta **> layout de recursos** carregará o designer como visto nesta captura de tela:
 
-[tela de ![Designer no Visual Studio](designer-basics-images/vs/01-open-designer-sml.png)](designer-basics-images/vs/01-open-designer.png#lightbox)
+[tela do designer de![no Visual Studio](designer-basics-images/vs/01-open-designer-sml.png)](designer-basics-images/vs/01-open-designer.png#lightbox)
 
 Da mesma forma, você pode adicionar um novo layout clicando com o botão direito do mouse na pasta de **layout** na **Gerenciador de soluções** e selecionando **Adicionar > novo item... > O layout do Android**:
 
-[caixa de diálogo ![Add novo item](designer-basics-images/vs/02-add-new-layout-sml.png)](designer-basics-images/vs/02-add-new-layout.png#lightbox)
+[caixa de diálogo![adicionar novo item](designer-basics-images/vs/02-add-new-layout-sml.png)](designer-basics-images/vs/02-add-new-layout.png#lightbox)
 
 Isso cria um novo arquivo de layout **. axml** e o carrega no designer.
 
@@ -41,7 +41,7 @@ Isso cria um novo arquivo de layout **. axml** e o carrega no designer.
 
 O designer é composto por várias seções que dão suporte a seus diversos recursos, conforme mostrado na seguinte captura de tela:
 
-[![Diagram de painéis de designer](designer-basics-images/vs/03-designer-features-sml.png)](designer-basics-images/vs/03-designer-features.png#lightbox)
+[Diagrama de![de painéis de designer](designer-basics-images/vs/03-designer-features-sml.png)](designer-basics-images/vs/03-designer-features.png#lightbox)
 
 Ao editar um layout no designer, você usa os seguintes recursos para criar e moldar seu design:
 
@@ -61,7 +61,7 @@ Ao editar um layout no designer, você usa os seguintes recursos para criar e mo
 
 O designer torna possível arrastar e soltar widgets da caixa de ferramentas para a **design Surface**. Quando você interage com widgets no designer (adicionando novos widgets ou reposicionando os existentes), linhas verticais e horizontais são exibidas para marcar os pontos de inserção disponíveis. No exemplo a seguir, um novo widget de `Button` está sendo arrastado para o **design Surface**:
 
-[![Example linhas de inserção em Design Surface](designer-basics-images/vs/05-insertion-points-sml.png)](designer-basics-images/vs/05-insertion-points.png#lightbox)
+[![linhas de inserção de exemplo em Design Surface](designer-basics-images/vs/05-insertion-points-sml.png)](designer-basics-images/vs/05-insertion-points.png#lightbox)
 
 Além disso, os widgets podem ser copiados: você pode usar copiar e colar para copiar um widget ou pode arrastar e soltar um widget existente enquanto pressiona a tecla <kbd>Ctrl</kbd> .
 
@@ -69,7 +69,7 @@ Além disso, os widgets podem ser copiados: você pode usar copiar e colar para 
 
 A **barra de ferramentas do designer** (posicionada acima da **design Surface**) apresenta seletores de configuração e menus de ferramentas:
 
-[![Diagram da barra de ferramentas do designer](designer-basics-images/vs/04-toolbar-sml.png)](designer-basics-images/vs/04-toolbar.png#lightbox)
+[Diagrama de![da barra de ferramentas do designer](designer-basics-images/vs/04-toolbar-sml.png)](designer-basics-images/vs/04-toolbar.png#lightbox)
 
 A **barra de ferramentas do designer** fornece acesso aos seguintes recursos:
 
@@ -103,7 +103,7 @@ Cada um desses recursos é explicado em mais detalhes nestes tópicos:
 
 Um menu de contexto está disponível no **design Surface** e na estrutura de **Tópicos do documento**. Esse menu exibe os comandos que estão disponíveis para o widget selecionado e seu contêiner, facilitando a execução de operações em contêineres (que nem sempre são fáceis de selecionar no **design Surface**). Aqui está um exemplo de um menu de contexto:
 
-[![Example menu de contexto ao clicar com o botão direito do mouse no Design Surface](designer-basics-images/vs/06-context-menu-sml.png)](designer-basics-images/vs/06-context-menu.png#lightbox)
+[![menu de contexto de exemplo ao clicar com o botão direito do mouse no Design Surface](designer-basics-images/vs/06-context-menu-sml.png)](designer-basics-images/vs/06-context-menu.png#lightbox)
 
 Neste exemplo, clicar com o botão direito do mouse em um `TextView` abre um menu de contexto que fornece várias opções:
 
@@ -115,7 +115,7 @@ Neste exemplo, clicar com o botão direito do mouse em um `TextView` abre um men
 
 O **design Surface** dá suporte ao zoom por meio de vários controles, conforme mostrado:
 
-[![Diagram dos controles de zoom de Design Surface](designer-basics-images/vs/07-zoom-controls-sml.png)](designer-basics-images/vs/07-zoom-controls.png#lightbox)
+[Diagrama de![dos controles de zoom de Design Surface](designer-basics-images/vs/07-zoom-controls-sml.png)](designer-basics-images/vs/07-zoom-controls.png#lightbox)
 
 Esses controles facilitam a visualização de determinadas áreas da interface do usuário no designer:
 
@@ -135,7 +135,7 @@ Observe que a configuração de zoom escolhida não afeta a interface do usuári
 
 Na faixa central entre os painéis **design** e **fonte** , há vários botões que são usados para modificar como os painéis **design** e **fonte** são exibidos:
 
-[![Pane exibir locais do botão](designer-basics-images/vs/25-pane-buttons-sml.png)](designer-basics-images/vs/25-pane-buttons.png#lightbox)
+[Painel de![exibir locais do botão](designer-basics-images/vs/25-pane-buttons-sml.png)](designer-basics-images/vs/25-pane-buttons.png#lightbox)
 
 Esses botões fazem o seguinte:
 
@@ -158,7 +158,7 @@ Quando o **painel recolher** é clicado, somente o painel **design** é exibido.
 
 O painel **origem** exibe a origem XML subjacente ao design mostrado no **design Surface**. Como ambos os modos de exibição estão disponíveis ao mesmo tempo, é possível criar um design de interface do usuário voltando-se entre uma representação visual do design e a origem XML subjacente para o design:
 
-[![Example origem XML no painel de origem](designer-basics-images/vs/22-source-pane-w158-sml.png)](designer-basics-images/vs/22-source-pane-w158.png#lightbox)
+[Exemplo de origem XML do![no painel de origem](designer-basics-images/vs/22-source-pane-w158-sml.png)](designer-basics-images/vs/22-source-pane-w158.png#lightbox)
 
 As alterações feitas na origem XML são processadas imediatamente no **design Surface**; as alterações feitas no **design Surface** fazem com que a origem XML exibida no painel de **origem** seja atualizada de acordo. Quando você faz alterações em XML no painel **fonte** , recursos de preenchimento automático e IntelliSense estão disponíveis para agilizar o desenvolvimento da interface do usuário baseada em XML, conforme explicado a seguir.
 
@@ -168,7 +168,7 @@ Para maior facilidade de navegação ao trabalhar com arquivos XML longos, o pai
 
 Ao começar a digitar o nome de um atributo para um widget, você pode pressionar <kbd>Ctrl + espaço</kbd> para ver uma lista de possíveis conclusões. Por exemplo, depois de inserir `android:lay` no exemplo a seguir (seguido digitando <kbd>Ctrl + espaço</kbd>), a seguinte lista é apresentada:
 
-[![Autocompletion do atributo de layout](designer-basics-images/vs/23-autocompletion-w158-sml.png)](designer-basics-images/vs/23-autocompletion-w158.png#lightbox)
+[![preenchimento automático do atributo de layout](designer-basics-images/vs/23-autocompletion-w158-sml.png)](designer-basics-images/vs/23-autocompletion-w158.png#lightbox)
 
 Pressione <kbd>Enter</kbd> para aceitar a primeira conclusão listada ou use as teclas de direção para rolar para a conclusão desejada e pressione <kbd>Enter</kbd>. Como alternativa, você pode usar o mouse para rolar e clicar na conclusão desejada.
 
@@ -176,7 +176,7 @@ Pressione <kbd>Enter</kbd> para aceitar a primeira conclusão listada ou use as 
 
 Depois de inserir um novo atributo para um widget e começar a atribuir um valor, o IntelliSense aparece depois que um caractere de gatilho é digitado e fornece uma lista de valores válidos a serem usados para esse atributo. Por exemplo, após a primeira aspa dupla ser inserida para `android:layout_width` no exemplo a seguir, um seletor de preenchimento automático aparecerá para fornecer a lista de opções válidas para essa largura:
 
-[exemplo de ![IntelliSense para largura de layout](designer-basics-images/vs/24-intellisense-w158-sml.png)](designer-basics-images/vs/24-intellisense-w158.png#lightbox)
+[![exemplo de IntelliSense para largura de layout](designer-basics-images/vs/24-intellisense-w158-sml.png)](designer-basics-images/vs/24-intellisense-w158.png#lightbox)
 
 Na parte inferior desse pop-up há dois botões (conforme descrito em vermelho na captura de tela acima). Clicar no botão **recursos do projeto** à esquerda restringe a lista a recursos que fazem parte do projeto do aplicativo, enquanto clicar no botão recursos do **Framework** à direita restringe a lista para exibir os recursos disponíveis na estrutura.
 Estes botões são ativados ou desativados: você pode clicar neles novamente para desabilitar a ação de filtragem fornecida por cada um.
@@ -200,15 +200,15 @@ Algumas propriedades podem referenciar recursos que são definidos em arquivos d
 
 Por exemplo, a captura de tela a seguir mostra as opções disponíveis ao clicar no quadrado mais escuro à direita do campo de texto para um widget de `Text` na janela **Propriedades** :
 
-[![Example lista de opções de texto](designer-basics-images/vs/09-text-options-sml.png)](designer-basics-images/vs/09-text-options.png#lightbox)
+[![exemplo de lista de opções de texto](designer-basics-images/vs/09-text-options-sml.png)](designer-basics-images/vs/09-text-options.png#lightbox)
 
 Quando **Resource...** é clicado, a caixa de diálogo **selecionar recurso** é apresentada:
 
-[captura de tela de recursos ![Example com vários recursos listados](designer-basics-images/vs/09b-resources-w158-sml.png)](designer-basics-images/vs/09b-resources-w158.png#lightbox)
+[![exemplo de captura de tela de recursos com vários recursos listados](designer-basics-images/vs/09b-resources-w158-sml.png)](designer-basics-images/vs/09b-resources-w158.png#lightbox)
 
 Nessa lista, você pode selecionar um recurso de texto a ser usado para esse widget em vez de embutir o texto no painel **Propriedades** . O exemplo a seguir ilustra o seletor de recursos para a propriedade `Src` de um `ImageView`:
 
-[![Resource o ícone de listagem do seletor recurso para um ImageView](designer-basics-images/vs/10-src-resource-sml.png)](designer-basics-images/vs/10-src-resource.png#lightbox)
+[![recurso de ícone de listagem do seletor de recursos para um ImageView](designer-basics-images/vs/10-src-resource-sml.png)](designer-basics-images/vs/10-src-resource.png#lightbox)
 
 Clicar no quadrado em branco à direita da propriedade `Src` abre a caixa de diálogo **selecionar recurso** com uma lista de recursos que variam de cores (como mostrado acima) a drawables.
 
@@ -287,11 +287,11 @@ A **estrutura de tópicos do documento** dá suporte a copiar e colar, ou você 
 
 O designer é iniciado automaticamente quando um layout é criado ou pode ser iniciado clicando-se duas vezes em um arquivo. axml existente. Por exemplo, clicar duas vezes em **Main. axml** na pasta **> layout de recursos** carregará o designer, conforme mostrado abaixo:
 
-[tela de ![Designer no Visual Studio para Mac](designer-basics-images/xs/01-open-designer-sml.png)](designer-basics-images/xs/01-open-designer.png#lightbox)
+[tela do designer de![no Visual Studio para Mac](designer-basics-images/xs/01-open-designer-sml.png)](designer-basics-images/xs/01-open-designer.png#lightbox)
 
 Da mesma forma, você pode adicionar um novo layout clicando com o botão direito do mouse na pasta de **layout** na **painel de soluções** e selecionando **Adicionar > novo arquivo > o layout de > do Android**:
 
-[caixa de diálogo ![Add novo arquivo](designer-basics-images/xs/02-add-new-layout-sml.png)](designer-basics-images/xs/02-add-new-layout.png#lightbox)
+[caixa de diálogo![adicionar novo arquivo](designer-basics-images/xs/02-add-new-layout-sml.png)](designer-basics-images/xs/02-add-new-layout.png#lightbox)
 
 Isso cria um novo arquivo. axml e o carrega no Design Surface.
 
@@ -304,7 +304,7 @@ Isso cria um novo arquivo. axml e o carrega no Design Surface.
 
 O designer é composto por várias seções que dão suporte a seus diversos recursos, conforme mostrado na seguinte captura de tela:
 
-[![Diagram de painéis de designer](designer-basics-images/xs/03-designer-features-sml.png)](designer-basics-images/xs/03-designer-features.png#lightbox)
+[Diagrama de![de painéis de designer](designer-basics-images/xs/03-designer-features-sml.png)](designer-basics-images/xs/03-designer-features.png#lightbox)
 
 Ao editar um layout no designer, você usa os seguintes recursos para criar e moldar seu design:
 
@@ -314,7 +314,7 @@ Ao editar um layout no designer, você usa os seguintes recursos para criar e mo
 
 - A **caixa de ferramentas** &ndash; fornece uma lista de widgets e layouts que você pode arrastar e soltar na design Surface.
 
-- @No__t_1 de **painel de propriedades** lista as propriedades do widget selecionado para exibição e edição.
+- &ndash; de **painel de propriedades** lista as propriedades do widget selecionado para exibição e edição.
 
 - **Estrutura de tópicos do documento** &ndash; exibe a árvore de widgets que compõem o layout. Você pode clicar em um item na árvore para fazer com que ele seja selecionado no designer. Além disso, clicar em um item na árvore carrega as propriedades do item no painel de propriedades.
 
@@ -322,7 +322,7 @@ Ao editar um layout no designer, você usa os seguintes recursos para criar e mo
 
 A barra de ferramentas (posicionada acima da Design Surface) apresenta seletores de configuração e menus de ferramentas:
 
-[![Diagram da barra de ferramentas do designer](designer-basics-images/xs/04-toolbar-sml.png)](designer-basics-images/xs/04-toolbar.png#lightbox)
+[Diagrama de![da barra de ferramentas do designer](designer-basics-images/xs/04-toolbar-sml.png)](designer-basics-images/xs/04-toolbar.png#lightbox)
 
 A barra de ferramentas fornece acesso aos seguintes recursos:
 
@@ -356,7 +356,7 @@ Os [recursos de design de material](~/android/user-interface/android-designer/ma
 
 O designer torna possível arrastar e soltar widgets da caixa de ferramentas para a Design Surface. Quando você interage com widgets no designer (adicionando novos widgets ou reposicionando os existentes), linhas verticais e horizontais são exibidas para marcar os pontos de inserção disponíveis. No exemplo a seguir, um novo widget de `Button` está sendo arrastado para o Design Surface:
 
-[![Example linhas de inserção em Design Surface](designer-basics-images/xs/05-insertion-points-sml.png)](designer-basics-images/xs/05-insertion-points.png#lightbox)
+[![linhas de inserção de exemplo em Design Surface](designer-basics-images/xs/05-insertion-points-sml.png)](designer-basics-images/xs/05-insertion-points.png#lightbox)
 
 Além disso, os widgets podem ser copiados: você pode usar copiar e colar para copiar um widget ou pode arrastar e soltar um widget existente enquanto pressiona a tecla <kbd>Ctrl</kbd> .
 
@@ -364,7 +364,7 @@ Além disso, os widgets podem ser copiados: você pode usar copiar e colar para 
 
 Um menu de contexto está disponível no Design Surface e na estrutura de tópicos do documento. Esse menu exibe os comandos que estão disponíveis para o widget selecionado e seu contêiner, facilitando a execução de operações em contêineres (que nem sempre são fáceis de selecionar no Design Surface). Aqui está um exemplo de um menu de contexto:
 
-[![Example menu de contexto ao clicar com o botão direito do mouse no Design Surface](designer-basics-images/xs/06-context-menu-sml.png)](designer-basics-images/xs/06-context-menu.png#lightbox)
+[![menu de contexto de exemplo ao clicar com o botão direito do mouse no Design Surface](designer-basics-images/xs/06-context-menu-sml.png)](designer-basics-images/xs/06-context-menu.png#lightbox)
 
 Neste exemplo, clicar com o botão direito do mouse em um `Button` abre um menu de contexto que fornece várias opções:
 
@@ -376,7 +376,7 @@ Neste exemplo, clicar com o botão direito do mouse em um `Button` abre um menu 
 
 O Design Surface dá suporte ao zoom por meio de vários controles, conforme mostrado:
 
-[![Diagram dos controles de zoom de Design Surface](designer-basics-images/xs/07-zoom-controls-sml.png)](designer-basics-images/xs/07-zoom-controls.png#lightbox)
+[Diagrama de![dos controles de zoom de Design Surface](designer-basics-images/xs/07-zoom-controls-sml.png)](designer-basics-images/xs/07-zoom-controls.png#lightbox)
 
 Esses controles facilitam a visualização de determinadas áreas da interface do usuário no designer:
 
@@ -396,7 +396,7 @@ Observe que a configuração de zoom escolhida não afeta a interface do usuári
 
 O designer oferece suporte à edição de propriedades do widget por meio do **painel de propriedades**. As propriedades listadas no painel de propriedades são alteradas dependendo de qual widget está selecionado na superfície do designer. Quando o `Button` no exemplo anterior é selecionado, as propriedades desse widget de `Button` são mostradas:
 
-[![Screenshot do painel de propriedades](designer-basics-images/xs/08-property-pad-sml.png)](designer-basics-images/xs/08-property-pad.png#lightbox)
+[![captura de tela do painel de propriedades](designer-basics-images/xs/08-property-pad-sml.png)](designer-basics-images/xs/08-property-pad.png#lightbox)
 
 ## <a name="property-pad-sections"></a>Seções do painel de propriedades
 
@@ -424,23 +424,23 @@ Quando clicado, esse botão abre um seletor de recursos.
 
 Por exemplo, a captura de tela a seguir mostra os recursos disponíveis ao clicar nas reticências à direita do campo de texto de um widget de `Button` no **painel de propriedades**:
 
-[captura de tela de recursos ![Example com dois recursos listados](designer-basics-images/xs/09-resources-sml.png)](designer-basics-images/xs/09-resources.png#lightbox)
+[![exemplo de captura de tela de recursos com dois recursos listados](designer-basics-images/xs/09-resources-sml.png)](designer-basics-images/xs/09-resources.png#lightbox)
 
 O exemplo a seguir ilustra o seletor de recursos para a propriedade `Src` de um `ImageView`:
 
-[![Resource o ícone de listagem do seletor recurso para um ImageView](designer-basics-images/xs/10-src-resource-sml.png)](designer-basics-images/xs/10-src-resource.png#lightbox)
+[![recurso de ícone de listagem do seletor de recursos para um ImageView](designer-basics-images/xs/10-src-resource-sml.png)](designer-basics-images/xs/10-src-resource.png#lightbox)
 
 ### <a name="boolean-property-references"></a>Referências de propriedade booliana
 
 Normalmente, as propriedades *booleanas* são mostradas como uma caixa de seleção no painel de propriedades. Quando uma propriedade `Boolean` dá suporte a referências de recursos, uma pequena caixa de seleção é exibida ao lado da propriedade. Uma CheckBox marcada significa `true` e uma caixa vazia significa `false`. Você também pode inserir diretamente um valor, como `true` ou `false`. Passar o mouse sobre a entrada abre um pequeno ícone de campo de texto. Você pode clicar nele se desejar inserir o valor manualmente.
 
-[![Example da configuração de propriedades booleanas](designer-basics-images/xs/12-boolean-sml.png)](designer-basics-images/xs/12-boolean.png#lightbox)
+[![exemplo de configuração de propriedades booleanas](designer-basics-images/xs/12-boolean-sml.png)](designer-basics-images/xs/12-boolean.png#lightbox)
 
 ## <a name="grouped-properties"></a>Propriedades agrupadas
 
 Alguns widgets têm propriedades de vários valores que são agrupados em conjunto (como `Padding`, por exemplo). Esses valores de propriedade são listados no **painel de propriedades** em uma única linha expansível. Algumas dessas propriedades podem ser editadas diretamente na linha agrupada, como a propriedade `Padding` mostrada abaixo:
 
-[configurações de ![Example para a propriedade Padding](designer-basics-images/xs/13-padding-property-sml.png)](designer-basics-images/xs/13-padding-property.png#lightbox)
+[![configurações de exemplo para a propriedade Padding](designer-basics-images/xs/13-padding-property-sml.png)](designer-basics-images/xs/13-padding-property.png#lightbox)
 
 ## <a name="editing-properties-inline"></a>Editando propriedades embutidas
 
@@ -450,7 +450,7 @@ O Designer Android dá suporte à edição direta de determinadas propriedades n
 
 As propriedades de texto de alguns widgets (como `Button` e `TextView`) podem ser editadas diretamente no Design Surface. Clicar duas vezes em um widget irá colocá-lo no modo de edição, conforme mostrado abaixo:
 
-[![Text recurso para a cadeia de caracteres de saudação](designer-basics-images/xs/14-text-resource-sml.png)](designer-basics-images/xs/14-text-resource.png#lightbox)
+[![recurso de texto para a cadeia de caracteres de saudação](designer-basics-images/xs/14-text-resource-sml.png)](designer-basics-images/xs/14-text-resource.png#lightbox)
 
 Você pode inserir um novo valor de texto ou pode inserir uma nova cadeia de caracteres de recurso. No exemplo a seguir, o recurso de `@string/hello` está sendo substituído pelo texto, `CLICK THIS BUTTON`:
 
@@ -466,40 +466,40 @@ Quando você seleciona um widget, o designer exibe identificadores que permitem 
 
 Quando você clica em um widget pela primeira vez, as alças de margem são exibidas. Se você mover o mouse para uma das alças, o designer exibirá a propriedade que o identificador irá alterar (como mostrado abaixo para a propriedade `layout_marginLeft`):
 
-[![Screenshot mostrando alças de margem no designer](designer-basics-images/xs/16-margin-handles-sml.png)](designer-basics-images/xs/16-margin-handles.png#lightbox)
+[![captura de tela mostrando alças de margem no designer](designer-basics-images/xs/16-margin-handles-sml.png)](designer-basics-images/xs/16-margin-handles.png#lightbox)
 
 Se uma margem já tiver sido definida, as linhas pontilhadas serão exibidas, indicando o espaço ocupado pela margem:
 
-[![Example de linhas pontilhadas marcando espaço em um botão](designer-basics-images/xs/17-margins-set-sml.png)](designer-basics-images/xs/17-margins-set.png#lightbox)
+[![exemplo de linhas pontilhadas marcando espaço em um botão](designer-basics-images/xs/17-margins-set-sml.png)](designer-basics-images/xs/17-margins-set.png#lightbox)
 
 ### <a name="size"></a>Tamanho
 
 Conforme mencionado anteriormente, você pode alternar para o modo de edição de tamanho clicando em um widget enquanto ele já estiver selecionado. Clique no identificador triangular para definir o tamanho da dimensão indicada para `wrap_content`:
 
-[![Wrap conteúdo e alças de redimensionamento](designer-basics-images/xs/18-wrap-content-sml.png)](designer-basics-images/xs/18-wrap-content.png#lightbox)
+[![encapsular conteúdo e alças de redimensionamento](designer-basics-images/xs/18-wrap-content-sml.png)](designer-basics-images/xs/18-wrap-content.png#lightbox)
 
 Clicar no identificador de **conteúdo de encapsulamento** reduz o widget nessa dimensão para que não seja maior do que o necessário para encapsular o conteúdo incluído. Neste exemplo, o texto do botão é reduzido horizontalmente, conforme mostrado na próxima captura de tela.
 
 Quando o valor do tamanho é definido como **encapsular conteúdo**, o designer exibe um identificador triangular apontando na direção oposta para alterar o tamanho para `match_parent`:
 
-[![Match identificador pai](designer-basics-images/xs/19-match-parent-sml.png)](designer-basics-images/xs/19-match-parent.png#lightbox)
+[![identificador pai de correspondência](designer-basics-images/xs/19-match-parent-sml.png)](designer-basics-images/xs/19-match-parent.png#lightbox)
 
 Clicar no identificador **pai de correspondência** restaura o tamanho dessa dimensão para que seja o mesmo que o widget pai.
 
 Além disso, você pode arrastar a alça de redimensionamento circular (conforme mostrado nas capturas de tela acima) para redimensionar o widget para um valor de `dp` arbitrário. Quando você fizer isso, ambos os identificadores **pai** de **conteúdo** e correspondência serão apresentados para essa dimensão:
 
-[alças de redimensionamento ![Circular](designer-basics-images/xs/20-resize-dp-sml.png)](designer-basics-images/xs/20-resize-dp.png#lightbox)
+[![identificadores de redimensionamento circular](designer-basics-images/xs/20-resize-dp-sml.png)](designer-basics-images/xs/20-resize-dp.png#lightbox)
 
 Nem todos os contêineres permitem a edição do `Size` de um widget. Por exemplo, observe que na captura de tela abaixo com a `LinearLayout` selecionada, as alças de redimensionamento não aparecem:
 
-[alças de redimensionamento ![No](designer-basics-images/xs/21-no-resize-handles-sml.png)](designer-basics-images/xs/20-no-resize-handles.png#lightbox)
+[![sem identificadores de redimensionamento](designer-basics-images/xs/21-no-resize-handles-sml.png)](designer-basics-images/xs/20-no-resize-handles.png#lightbox)
 
 ## <a name="document-outline"></a>Estrutura de Tópicos do Documento
 
 O **contorno do documento** exibe a hierarquia do widget do layout.
 No exemplo a seguir, o widget contendo `LinearLayout` é selecionado:
 
-[![Document contorno](designer-basics-images/xs/22-outline-view-sml.png)](designer-basics-images/xs/22-outline-view.png#lightbox)
+[![estrutura de tópicos do documento](designer-basics-images/xs/22-outline-view-sml.png)](designer-basics-images/xs/22-outline-view.png#lightbox)
 
 O contorno do widget selecionado (nesse caso, um `LinearLayout`) também é realçado no Design Surface. O widget selecionado na estrutura de tópicos do documento permanece em sincronia com sua contraparte na Design Surface. Isso é útil para selecionar grupos de modos de exibição, que nem sempre são fáceis de selecionar na Design Surface.
 

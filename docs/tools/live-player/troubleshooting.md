@@ -3,15 +3,15 @@ title: Solução de problemas Xamarin Live Player
 description: Este documento descreve os problemas conhecidos com o Xamarin Live Player e as possíveis correções. Ele aborda problemas de conexão, problemas de configuração e muito mais.
 ms.prod: xamarin
 ms.assetid: 29A97ADA-80E0-40A1-8B26-C68FFABE7D26
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/13/2019
-ms.openlocfilehash: 04a377bad42ff680247759036327035d61757b42
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: d51241bee5f4ddc06032006071fa8296be37f2fb
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290172"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73005939"
 ---
 # <a name="troubleshooting-xamarin-live-player"></a>Solução de problemas Xamarin Live Player
 
@@ -74,7 +74,7 @@ Ocorre quando o dispositivo móvel que executa o Xamarin Live Player não está 
 
 ## <a name="error-while-trying-to-deploy-message-in-ide"></a>Mensagem "erro ao tentar implantar" no IDE
 
-**"IOException: não é possível ler dados da conexão de transporte: A operação no soquete sem bloqueio bloquearia "**
+**"IOException: não é possível ler dados da conexão de transporte: a operação em um soquete que não é de bloqueio bloquearia"**
 
 Esse erro costuma ocorrer quando o dispositivo móvel que executa o Xamarin Live Player não está na mesma rede que o computador que executa o Visual Studio; Isso geralmente acontece ao se conectar a um dispositivo que foi emparelhado anteriormente com êxito.
 
@@ -87,32 +87,32 @@ Esse erro costuma ocorrer quando o dispositivo móvel que executa o Xamarin Live
 
 Se você não puder se conectar ao seu dispositivo por Wi-Fi, poderá tentar configurar manualmente seu dispositivo por meio do arquivo de configuração, com as seguintes etapas:
 
-**Etapa 1: Abrir arquivo de configuração**
+**Etapa 1: abrir o arquivo de configuração**
 
 Vá para a pasta de dados do aplicativo:
 
 - Windows: **%USERPROFILE%\AppData\Roaming**
-- macOS: **~/Users/$USER/.config**
+- macOS: **~/Users/$User/.config**
 
 Nesta pasta, você encontrará **PlayerDeviceList. xml** se ele não existir, será necessário criar um.
 
-**Etapa 2: Obter endereço IP**
+**Etapa 2: obter endereço IP**
 
 No aplicativo Xamarin Live Player, acesse **sobre > teste de conexão > iniciar o teste de conexão**.
 
 Anote o endereço IP, você precisará do endereço IP listado ao configurar o dispositivo.
 
-**Etapa 3: Obter código de emparelhamento**
+**Etapa 3: obter o código de emparelhamento**
 
 Dentro do Xamarin Live Player toque em **emparelhar** ou **emparelhar novamente**e pressione **Enter manualmente**. Um código numérico será exibido, que será necessário para atualizar o arquivo de configuração.
 
-**Etapa 4: Gerar GUID**
+**Etapa 4: gerar GUID**
 
 Vá para: https://www.guidgenerator.com/online-guid-generator.aspx e gere um novo GUID e verifique se a letra maiúscula está ativada.
 
-**Etapa 5: Configurar dispositivo**
+**Etapa 5: configurar o dispositivo**
 
-Abra o **PlayerDeviceList. xml** em um editor como o Visual Studio ou Visual Studio Code. Você precisa configurar seu dispositivo manualmente neste arquivo. Por padrão, o arquivo deve conter o seguinte elemento `Devices` XML vazio:
+Abra o **PlayerDeviceList. xml** em um editor como o Visual Studio ou Visual Studio Code. Você precisa configurar seu dispositivo manualmente neste arquivo. Por padrão, o arquivo deve conter o seguinte elemento XML de `Devices` vazio:
 
 ```xml
 <DeviceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
@@ -154,7 +154,7 @@ Algumas classes do sistema não podem ser substituídas, por exemplo:
 public class SomeCustomButton : Xamarin.Forms.Button { ... }
 ```
 
-## <a name="mainactivitycs-resourcelayout-does-not-contain-a-definition-for-main"></a>"MainActivity.cs: ' Resource. layout ' não contém uma definição para ' Main ' "
+## <a name="mainactivitycs-resourcelayout-does-not-contain-a-definition-for-main"></a>"MainActivity.cs: ' Resource. layout ' não contém uma definição para ' Main '"
 
 Esse erro ocorre para projetos Android com interfaces de usuário definidas em arquivos AXML.
 Atualmente, não há suporte para arquivos AXML no Xamarin Live Player.

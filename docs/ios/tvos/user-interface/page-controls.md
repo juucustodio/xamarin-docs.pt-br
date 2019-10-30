@@ -4,21 +4,21 @@ description: Este documento descreve como trabalhar com controles de página tvO
 ms.prod: xamarin
 ms.assetid: 19198D46-7BBE-4D04-9BFA-7D1C5C9F9FC6
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: 8bb517eaa549567ae92695fbad300d055f42771f
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 12fe9645ab832db1db37e36b0342664bbd2fe9f8
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769053"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030411"
 ---
 # <a name="working-with-tvos-page-controls-in-xamarin"></a>Trabalhando com controles de página tvOS no Xamarin
 
 Às vezes, talvez seja necessário exibir uma série de páginas ou imagens em seu aplicativo Xamarin. tvOS. Um controle de página foi projetado para mostrar claramente em qual página um usuário está fora do número máximo de páginas. Um controle de página exibe uma série de pontos em relação a um plano de fundo de forma escura e oval. A página atual exibirá um ponto preenchido, todas as outras páginas serão mostradas como pontos vazios. O controle de página cortará os pontos mais externos se houver muitos para caber em sua área de plano de fundo.
 
-[![](page-controls-images/page01.png "Controle de página de exemplo")](page-controls-images/page01.png#lightbox)
+[![](page-controls-images/page01.png "Sample Page control")](page-controls-images/page01.png#lightbox)
 
 Um controle de página em um elemento não interativo projetado para fornecer comentários somente para o usuário. Você precisará adicionar outros controles para alterar o número da página atual (como gestos ou botões).
 
@@ -35,40 +35,40 @@ A maneira mais fácil de trabalhar com controles de página em um aplicativo Xam
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
-1. No **painel de soluções**, clique duas vezes no arquivo `Main.storyboard` e abra-o para edição.
+1. No **painel de soluções**, clique duas vezes no arquivo de `Main.storyboard` e abra-o para edição.
 1. Arraste um **controle de página** da **caixa de ferramentas** e solte-o na exibição:
 
-    [![](page-controls-images/page02.png "Um controle de página")](page-controls-images/page02.png#lightbox)
+    [![](page-controls-images/page02.png "A Page Control")](page-controls-images/page02.png#lightbox)
 1. Na **Guia Widget** da **painel de propriedades**, você pode ajustar várias propriedades do controle de página, como a **página atual** e o **número de páginas**:
 
-    [![](page-controls-images/page03.png "A guia do widget")](page-controls-images/page03.png#lightbox)
+    [![](page-controls-images/page03.png "The Widget Tab")](page-controls-images/page03.png#lightbox)
 1. Em seguida, adicione controles ou gestos à exibição para voltar e avançar pela coleção de páginas.
 1. Por fim, atribua **nomes** aos controles para que você possa respondê-los no C# código. Por exemplo:
 
-    [![](page-controls-images/page04.png "Nomear o controle")](page-controls-images/page04.png#lightbox)
+    [![](page-controls-images/page04.png "Name the control")](page-controls-images/page04.png#lightbox)
 1. Salve as alterações.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-1. No **Gerenciador de soluções**, clique duas vezes no arquivo `Main.storyboard` e abra-o para edição.
+1. No **Gerenciador de soluções**, clique duas vezes no arquivo de `Main.storyboard` e abra-o para edição.
 1. Arraste um **controle de página** da **caixa de ferramentas** e solte-o na exibição:
 
-    [![](page-controls-images/page02-vs.png "Um controle de página")](page-controls-images/page02-vs.png#lightbox)
+    [![](page-controls-images/page02-vs.png "A Page Control")](page-controls-images/page02-vs.png#lightbox)
 1. Na **Guia Widget** do Gerenciador de **Propriedades**, você pode ajustar várias propriedades do controle de página, como a **página atual** e o **número de páginas**:
 
-    [![](page-controls-images/page03-vs.png "A guia do widget")](page-controls-images/page03-vs.png#lightbox)
+    [![](page-controls-images/page03-vs.png "The Widget tab")](page-controls-images/page03-vs.png#lightbox)
 1. Em seguida, adicione controles ou gestos à exibição para voltar e avançar pela coleção de páginas.
 1. Por fim, atribua **nomes** aos controles para que você possa respondê-los no C# código. Por exemplo:
 
-    [![](page-controls-images/page04-vs.png "Nomear o controle")](page-controls-images/page04-vs.png#lightbox)
+    [![](page-controls-images/page04-vs.png "Name the control")](page-controls-images/page04-vs.png#lightbox)
 1. Salve as alterações.
 
 -----
 
 > [!IMPORTANT]
-> Embora seja possível atribuir eventos como `TouchUpInside` a um elemento de interface do usuário (como um UIButton) no designer do IOS, ele nunca será chamado porque o Apple TV não tem uma tela sensível ao toque ou dá suporte a eventos de toque. Você sempre deve usar o `Primary Action` evento ao criar manipuladores de eventos para elementos da interface do usuário do tvOS.
+> Embora seja possível atribuir eventos como `TouchUpInside` a um elemento de interface do usuário (como um UIButton) no designer do iOS, ele nunca será chamado porque a Apple TV não tem uma tela sensível ao toque ou dá suporte a eventos de toque. Você sempre deve usar o evento `Primary Action` ao criar manipuladores de eventos para elementos da interface do usuário do tvOS.
 
-Edite o arquivo do controlador `ViewController.cs`de exibição (exemplo) e adicione o código para manipular as páginas que estão sendo alteradas. Por exemplo:
+Edite o arquivo do controlador de exibição (exemplo `ViewController.cs`) e adicione o código para lidar com as páginas que estão sendo alteradas. Por exemplo:
 
 ```csharp
 using System;
@@ -154,7 +154,7 @@ Para alterar o número de página atual, use o seguinte código:
 PageView.CurrentPage = PageNumber;
 ```
 
-A `CurrentPage` propriedade é zero (0) com base, portanto, a primeira página será zero e a última será uma menos a quantidade máxima de páginas.
+A propriedade `CurrentPage` é zero (0) com base, portanto, a primeira página será zero e a última será uma menos a quantidade máxima de páginas.
 
 Para obter mais informações sobre como trabalhar com storyboards, consulte nossa [Guia de início rápido Olá, tvOS](~/ios/tvos/get-started/hello-tvos.md).
 

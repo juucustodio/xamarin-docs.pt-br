@@ -3,24 +3,24 @@ title: LinearLayout Xamarin. Android
 ms.prod: xamarin
 ms.assetid: B49D129C-AF24-3C5A-C833-5A34AFBB2442
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/07/2018
-ms.openlocfilehash: 14e9b352a309de94a374b52141e3fd61715d8f75
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: b1cff01c66ae2581a68286e62bd8c8c5fb7f9d72
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70764379"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028952"
 ---
 # <a name="xamarinandroid-linearlayout"></a>LinearLayout Xamarin. Android
 
-[`LinearLayout`](xref:Android.Widget.LinearLayout)é um[`ViewGroup`](xref:Android.Views.ViewGroup)
-que exibe o filho[`View`](xref:Android.Views.View)
+[`LinearLayout`](xref:Android.Widget.LinearLayout) é um [`ViewGroup`](xref:Android.Views.ViewGroup)
+que exibe [`View`](xref:Android.Views.View) filho
 elementos em uma direção linear, tanto vertical quanto horizontalmente.
 
 Você deve ter cuidado ao usar o [`LinearLayout`](xref:Android.Widget.LinearLayout).
-Se você começar a aninhar [`LinearLayout`](xref:Android.Widget.LinearLayout)vários s, talvez queira considerar o uso de um[`RelativeLayout`](xref:Android.Widget.RelativeLayout)
+Se começar a aninhar vários [`LinearLayout`](xref:Android.Widget.LinearLayout)s, talvez você queira considerar o uso de um [`RelativeLayout`](xref:Android.Widget.RelativeLayout)
 Stead.
 
 Inicie um novo projeto chamado **HelloLinearLayout**.
@@ -103,13 +103,13 @@ Abra **Resources/layout/Main. axml** e insira o seguinte:
 </LinearLayout>
 ```
 
-Inspecione cuidadosamente este XML. Há uma raiz[`LinearLayout`](xref:Android.Widget.LinearLayout)
-Isso define sua orientação como vertical &ndash; todos os s filhos [`View`](xref:Android.Views.View)(dos quais ele tem dois) serão empilhados verticalmente. O primeiro filho é outro[`LinearLayout`](xref:Android.Widget.LinearLayout)
-que usa uma orientação horizontal e o segundo filho é um[`LinearLayout`](xref:Android.Widget.LinearLayout)
-que usa uma orientação vertical. Cada um desses s [`LinearLayout`](xref:Android.Widget.LinearLayout)aninhados contém vários[`TextView`](xref:Android.Widget.TextView)
-elementos, que são orientados entre si da maneira definida por seu pai [`LinearLayout`](xref:Android.Widget.LinearLayout).
+Inspecione cuidadosamente este XML. Há um [`LinearLayout`](xref:Android.Widget.LinearLayout) raiz
+Isso define sua orientação como vertical &ndash; todos os [`View`](xref:Android.Views.View)filhos (dos quais ele tem dois) serão empilhados verticalmente. O primeiro filho é outro [`LinearLayout`](xref:Android.Widget.LinearLayout)
+que usa uma orientação horizontal e o segundo filho é um [`LinearLayout`](xref:Android.Widget.LinearLayout)
+que usa uma orientação vertical. Cada um desses [`LinearLayout`](xref:Android.Widget.LinearLayout)s aninhados contém vários [`TextView`](xref:Android.Widget.TextView)
+elementos, que são orientados entre si da maneira definida por seus [`LinearLayout`](xref:Android.Widget.LinearLayout)pai.
 
-Agora, abra **HelloLinearLayout.cs** e verifique se ele carrega o layout de **recursos/layout/Main. axml** no[`OnCreate()`](xref:Android.App.Activity.OnCreate*)
+Agora, abra **HelloLinearLayout.cs** e verifique se ele carrega o layout de **recursos/layout/Main. axml** no [`OnCreate()`](xref:Android.App.Activity.OnCreate*)
 forma
 
 ```csharp
@@ -120,18 +120,18 @@ protected override void OnCreate (Bundle savedInstanceState)
 }
 ```
 
-O [`SetContentView(int)`](xref:Android.App.Activity.SetContentView*)método) carrega o arquivo de layout para [`Activity`](xref:Android.App.Activity)o, especificado pela ID &ndash; `Resources.Layout.Main` do recurso refere-se ao arquivo de layout **Resources/layout/Main. axml** .
+O método [`SetContentView(int)`](xref:Android.App.Activity.SetContentView*)) carrega o arquivo de layout para o [`Activity`](xref:Android.App.Activity), especificado pela ID de recurso &ndash; `Resources.Layout.Main` refere-se ao arquivo de layout **Resources/layout/Main. axml** .
 
 Execute o aplicativo. Você deve ver o seguinte:
 
-[![Captura de tela do aplicativo primeiro LinearLayout organizada horizontalmente, segundo verticalmente](linear-layout-images/helloviews1.png)](linear-layout-images/helloviews1.png#lightbox)
+[![captura de tela do aplicativo primeiro LinearLayout organizado horizontalmente, segundo verticalmente](linear-layout-images/helloviews1.png)](linear-layout-images/helloviews1.png#lightbox)
 
-Observe como os atributos XML definem o comportamento de cada exibição. Tente experimentar com valores diferentes para `android:layout_weight` ver como o espaço da tela é distribuído com base no peso de cada elemento. Consulte o documento [objetos de layout comuns](https://developer.android.com/guide/topics/ui/declaring-layout.html) para saber mais sobre como[`LinearLayout`](xref:Android.Widget.LinearLayout)
-manipula o `android:layout_weight` atributo.
+Observe como os atributos XML definem o comportamento de cada exibição. Tente experimentar valores diferentes para `android:layout_weight` para ver como o espaço da tela é distribuído com base no peso de cada elemento. Consulte o documento [objetos de layout comuns](https://developer.android.com/guide/topics/ui/declaring-layout.html) para saber mais sobre como [`LinearLayout`](xref:Android.Widget.LinearLayout)
+manipula o atributo `android:layout_weight`.
 
 ## <a name="references"></a>Referências
 
 - [`LinearLayout`](xref:Android.Widget.LinearLayout)
 - [`TextView`](xref:Android.Widget.TextView)
 
-_Partes desta página são modificações com base no trabalho criado e compartilhado pelo projeto de software livre do Android e usadas de acordo com os termos descritos na [licença de atribuição do Creative Commons 2,5](http://creativecommons.org/licenses/by/2.5/)._
+_Partes desta página são modificações com base no trabalho criado e compartilhado pelo projeto de software livre do Android e usadas de acordo com os termos descritos na [licença de atribuição do Creative Commons 2,5](https://creativecommons.org/licenses/by/2.5/)._

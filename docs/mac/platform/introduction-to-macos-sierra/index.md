@@ -4,15 +4,15 @@ description: Este artigo apresenta todas as APIs e recursos novos e modificados 
 ms.prod: xamarin
 ms.assetid: 71A8A737-F310-4320-BD23-743AA1E9033C
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: b452d4b0a75a64349692c633a8c1bee6a8770256
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 31aa4d1fb8b77b88fc6b6790147409ff8ec13145
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290932"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73029832"
 ---
 # <a name="introduction-to-macos-sierra"></a>Introdução ao macOS Sierra
 
@@ -52,7 +52,7 @@ Para obter mais informações, consulte a referência da [estrutura do APPLEPAY 
 
 Aplicativos macOS modernos, como o navegador da Web do Safari da Apple, páginas de tabelas e números de processador de palavras distribuídos usam muitas novas tecnologias para apresentar uma interface do usuário unificada e sensível ao contexto que se afasta de elementos tradicionais da interface de usuário, como painéis flutuantes e vários abertos Windows.
 
-[![Um exemplo de uma janela Mac com guias](images/content08.png)](images/content08.png#lightbox)
+[![um exemplo de uma janela Mac com guias](images/content08.png)](images/content08.png#lightbox)
 
 Nosso guia [criando aplicativos MacOS modernos](~/mac/platform/introduction-to-macos-sierra/modern-cocoa-apps.md) aborda várias dicas, recursos e técnicas que um desenvolvedor pode usar para criar um aplicativo MacOS moderno no Xamarin. Mac.
 
@@ -83,15 +83,15 @@ Para obter mais informações, consulte o [Guia de programação de extensões d
 
 A Apple fez vários aprimoramentos na segurança e na privacidade em macOS Sierra que ajudarão o aplicativo a melhorar a segurança do aplicativo e a garantir a privacidade do usuário final, incluindo o seguinte:
 
-- A nova `NSAllowsArbitraryLoadsInWebContent` chave pode ser adicionada ao arquivo do `Info.plist` aplicativo e permitirá que as páginas da Web sejam carregadas corretamente enquanto a proteção de ATS (segurança de transporte da Apple) ainda estiver habilitada para o restante do aplicativo.
+- A nova chave de `NSAllowsArbitraryLoadsInWebContent` pode ser adicionada ao arquivo de `Info.plist` do aplicativo e permitirá que as páginas da Web sejam carregadas corretamente enquanto a proteção de segurança de transporte da Apple (ATS) ainda estiver habilitada para o restante do aplicativo.
 - A API de CDSA (arquitetura de segurança de dados comum) foi preterida e deve ser substituída pela API SecKey para gerar chaves assimétricas.
 - Para todas as conexões SSL/TLS, a cifra simétrica RC4 agora está desabilitada por padrão. Além disso, a API de transporte seguro não dá mais suporte a SSLv3 e é recomendável que o aplicativo pare de usar a criptografia SHA-1 e 3DES assim que possível.
 - Como a nova área de transferência no iOS 10 e macOS Sierra permite que o usuário Copie e cole entre os dispositivos, a API foi expandida para permitir que uma área de transferência seja limitada a um dispositivo específico e tenha o carimbo de data/hora para ser limpo automaticamente em um determinado ponto. Além disso, os chamados pasteboards não são mais mantidos e devem ser substituídos pelos contêineres de área de ti compartilhados.
-- Se o aplicativo acessar dados protegidos (como o calendário do usuário), ele _deverá_ declarar essa intenção com a chave de valor da cadeia de caracteres de finalidade `Info.plist` correta em`NSCalendarUsageDescription` seu arquivo (no caso do calendário).
+- Se o aplicativo acessar dados protegidos (como o calendário do usuário), ele _deverá_ declarar essa intenção com a chave de valor da cadeia de caracteres de finalidade correta em seu arquivo de `Info.plist` (`NSCalendarUsageDescription` no caso do calendário).
 - Os aplicativos assinados pelo desenvolvedor que não são entregues por meio da Mac App Store agora podem aproveitar o CloudKit, o conjunto de chaves do iCloud, a unidade iCloud, as notificações por push remotos, os direitos MapKit e VPN.
 - macOS Sierra não dá mais suporte ao fornecimento de código ou dados externos junto com o aplicativo de signatário de código em seu arquivo zip ou imagem de disco não assinado, pois o caminho de tempo de execução não é conhecido antes do tempo de execução.
 
-Além disso, os aplicativos em execução no MacOS Sierra (ou posterior) devem declarar estaticamente sua intenção de acessar recursos específicos ou informações do usuário inserindo uma ou mais chaves de `Info.plist` privacidade específicas em seus arquivos que explicam ao usuário por que o aplicativo deseja obter às.
+Além disso, os aplicativos em execução no macOS Sierra (ou posterior) devem declarar estaticamente sua intenção de acessar recursos específicos ou informações do usuário inserindo uma ou mais chaves de privacidade específicas em seus arquivos de `Info.plist` que explicam ao usuário por que o aplicativo deseja obter acesso .
 
 Como o macOS Sierra compartilha essas alterações com o iOS 10, consulte nosso guia de [aprimoramentos de segurança e privacidade](~/ios/app-fundamentals/security-privacy.md) do IOS 10 para obter mais informações.
 
@@ -99,7 +99,7 @@ Como o macOS Sierra compartilha essas alterações com o iOS 10, consulte nosso 
 
 ### <a name="smart-card-driver-extension-support"></a>Suporte à extensão de driver de cartão inteligente
 
-Com o MacOS Sierra, o aplicativo pode `NSExtension` criar drivers de cartão inteligente com base que permitem acesso somente leitura ao conteúdo de determinados tipos de cartões inteligentes. Essas informações são apresentadas dentro do conjunto de chaves do sistema (substituindo o método de arquitetura de segurança de dados comum preterido).
+Com o macOS Sierra, o aplicativo pode criar `NSExtension` drivers de cartão inteligente com base que permitem acesso somente leitura ao conteúdo de determinados tipos de cartões inteligentes. Essas informações são apresentadas dentro do conjunto de chaves do sistema (substituindo o método de arquitetura de segurança de dados comum preterido).
 
 para obter mais informações, pleas consulte a [referência da estrutura CryptoTokenKit](https://developer.apple.com/reference/cryptotokenkit)da Apple.
 
@@ -123,11 +123,11 @@ Para obter mais informações, consulte a [referência de registro em log](https
 
 macOS Sierra estende o suporte para formatos de pixel de intervalo estendido e espaços de cores de ampla gama em todo o sistema, incluindo estruturas como gráficos principais, imagem principal, metal e AVFoundation. O suporte para dispositivos com monitores largos de cores é mais facilitou, fornecendo esse comportamento em toda a pilha gráfica.
 
-Além disso `AppKit` , foi modificado para funcionar no novo colorspace **sRGB** estendido, facilitando a combinação de cores em escalas de cores amplas sem perda significativa de desempenho.
+Além disso, `AppKit` foi modificado para funcionar no novo colorspace de **sRGB** estendido, facilitando a combinação de cores em gamas de cores amplas sem perda significativa de desempenho.
 
 A Apple oferece as seguintes práticas recomendadas ao trabalhar com cores amplas:
 
-- `NSColor`Agora, o usa o espaço de cores sRGB e não fixe mais valores `0.0` para `1.0` o intervalo de to. Se o aplicativo depender do comportamento anterior do fixe, será necessário modificá-lo para macOS Sierra.
+- `NSColor` agora usa o espaço de cores sRGB e não fixe mais valores para a `0.0` para `1.0` intervalo. Se o aplicativo depender do comportamento anterior do fixe, será necessário modificá-lo para macOS Sierra.
 - Ao usar uma API de nível baixo, como gráficos principal ou metal para fornecer processamento de imagens, o aplicativo deve usar um espaço de cores de intervalo estendido e um formato de pixel que dê suporte a valores de ponto flutuante de 16 bits. Quando necessário, o aplicativo terá que fixe manualmente os valores de componente de cor.
 - Os principais gráficos, a imagem principal e os sombreadores de desempenho de metal fornecem novos métodos para conversão entre os dois espaços de cores.
 

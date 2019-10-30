@@ -4,15 +4,15 @@ description: Este documento descreve o sistema de contagem de referência aprimo
 ms.prod: xamarin
 ms.assetid: 0221ED8C-5382-4C1C-B182-6C3F3AA47DB1
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 11/25/2015
-ms.openlocfilehash: 56e35662230a3c529eb48a0ae742c2b063c1ac10
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 8d8ad5b5f79b90fc415c9e3cdf6809a4e196056f
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70753340"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73022297"
 ---
 # <a name="new-reference-counting-system-in-xamarinios"></a>Novo sistema de contagem de referência no Xamarin. iOS
 
@@ -22,13 +22,13 @@ O Xamarin. iOS 9.2.1 introduziu o sistema de contagem de referência aprimorado 
 
 A partir do Xamarin 9.2.1, o novo sistema de contagem de referência é habilitado para **todos os** aplicativos por padrão.
 
-Se você estiver desenvolvendo um aplicativo existente, poderá verificar o arquivo. csproj para garantir que todas as ocorrências de `MtouchUseRefCounting` estejam definidas como `true`, como abaixo:
+Se você estiver desenvolvendo um aplicativo existente, poderá verificar o arquivo. csproj para garantir que todas as ocorrências de `MtouchUseRefCounting` sejam definidas como `true`, como abaixo:
 
 ```xml
 <MtouchUseRefCounting>true</MtouchUseRefCounting>
 ```
 
-Se ele estiver definido como `false` seu aplicativo não estará usando as novas ferramentas.
+Se estiver definido como `false` seu aplicativo não usará as novas ferramentas.
 
 ### <a name="using-older-versions-of-xamarin"></a>Usando versões mais antigas do Xamarin
 
@@ -38,7 +38,7 @@ O Xamarin. iOS 7.2.1 e superior apresenta uma visualização aprimorada do nosso
 
 Para habilitar esse novo sistema de contagem de referência, marque a caixa de seleção **usar a extensão de contagem de referência** encontrada na guia **avançado** das **Opções de Build do IOS**do seu projeto, conforme mostrado abaixo: 
 
-[![](newrefcount-images/image1.png "Habilitar o novo sistema de contagem de referência")](newrefcount-images/image1.png#lightbox)
+[![](newrefcount-images/image1.png "Enable the new Reference Counting System")](newrefcount-images/image1.png#lightbox)
 
 Observe que essas opções foram removidas em versões mais recentes do Visual Studio para Mac.
 
@@ -71,7 +71,7 @@ class MyTableSource : UITableViewSource {
 }
 ```
 
-Sem a extensão de contagem de referência, esse código `cell` falharia porque se tornasse `TouchDown` uma coleção e, portanto, seu delegado, que será convertido em um ponteiro pendente.
+Sem a extensão de contagem de referência, esse código falharia porque `cell` se tornasse uma coleção e, portanto, seu `TouchDown` delegado, que será convertido em um ponteiro pendente.
 
 A extensão de contagem de referência garante que o objeto gerenciado permaneça ativo e impeça sua coleção, desde que o objeto nativo seja retido pelo código nativo.
 

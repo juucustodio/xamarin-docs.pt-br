@@ -4,15 +4,15 @@ description: Este documento descreve como usar a estrutura da visão do iOS 11 n
 ms.prod: xamarin
 ms.assetid: 7273ED68-7B7D-4252-B3A0-02DB2E357A8C
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 08/31/2017
-ms.openlocfilehash: efe3f2d4c79dc6e5e2a7f13408de52e05006e10a
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: b58e7b1fffed3253d9765401d52f16b751db134d
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70752272"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73032064"
 ---
 # <a name="vision-framework-in-xamarinios"></a>Estrutura de visão no Xamarin. iOS
 
@@ -37,18 +37,18 @@ A detecção e a Detecção Facial de retângulo são discutidas em mais detalhe
 
 O [exemplo VisionRects](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-visionrectangles) mostra como processar uma imagem e desenhar os retângulos detectados nela.
 
-### <a name="1-initialize-the-vision-request"></a>1. Inicializar a solicitação de visão
+### <a name="1-initialize-the-vision-request"></a>1. inicializar a solicitação de visão
 
-No `ViewDidLoad`, crie um `VNDetectRectanglesRequest` que faça referência `HandleRectangles` ao método que será chamado ao final de cada solicitação:
+Em `ViewDidLoad`, crie um `VNDetectRectanglesRequest` que referencie o método `HandleRectangles` que será chamado ao final de cada solicitação:
 
-A `MaximumObservations` Propriedade também deve ser definida; caso contrário, ela usará como padrão 1 e apenas um único resultado será retornado.
+A propriedade `MaximumObservations` também deve ser definida; caso contrário, ela usará como padrão 1 e apenas um único resultado será retornado.
 
 ```csharp
 RectangleRequest = new VNDetectRectanglesRequest(HandleRectangles);
 RectangleRequest.MaximumObservations = 10;
 ```
 
-### <a name="2-start-the-vision-processing"></a>2. Iniciar o processamento da visão
+### <a name="2-start-the-vision-processing"></a>2. iniciar o processamento da visão
 
 O código a seguir inicia o processamento da solicitação. No exemplo de **VisionRects** , esse código é executado depois que o usuário seleciona uma imagem:
 
@@ -60,11 +60,11 @@ DispatchQueue.DefaultGlobalQueue.DispatchAsync(()=>{
 });
 ```
 
-Esse manipulador passa o `ciImage` para a estrutura `VNDetectRectanglesRequest` de visão que foi criada na etapa 1.
+Esse manipulador passa o `ciImage` para o Vision Framework `VNDetectRectanglesRequest` criado na etapa 1.
 
-### <a name="3-handle-the-results-of-vision-processing"></a>3. Manipular os resultados do processamento da visão
+### <a name="3-handle-the-results-of-vision-processing"></a>3. manipule os resultados do processamento da visão
 
-Depois que a detecção de retângulo é concluída, a estrutura executa `HandleRectangles` o método, um resumo do qual é mostrado abaixo:
+Depois que a detecção de retângulo for concluída, a estrutura executará o método `HandleRectangles`, um resumo do que é mostrado abaixo:
 
 ```csharp
 private void HandleRectangles(VNRequest request, NSError error){
@@ -86,9 +86,9 @@ private void HandleRectangles(VNRequest request, NSError error){
 }
 ```
 
-### <a name="4-display-the-results"></a>4. Exibir os resultados
+### <a name="4-display-the-results"></a>4. exibir os resultados
 
-O `OverlayRectangles` método no exemplo **VisionRectangles** tem três funções:
+O método `OverlayRectangles` no exemplo **VisionRectangles** tem três funções:
 
 - Renderizando a imagem de origem,
 - Desenhar um retângulo para indicar onde cada um foi detectado e
@@ -98,7 +98,7 @@ Exiba a [origem do exemplo](https://docs.microsoft.com/samples/xamarin/ios-sampl
 
 ![Fotografia com três retângulos detectados](vision-images/found-rectangles-phone-sml.png)
 
-### <a name="5-further-processing"></a>5. Processamento adicional
+### <a name="5-further-processing"></a>5. processamento adicional
 
 A detecção de retângulo geralmente é apenas a primeira etapa em uma cadeia de operações, como com [Este exemplo de CoreMLVision](~/ios/platform/introduction-to-ios11/coreml.md#coremlvision), em que os retângulos são passados para um modelo do coreml para analisar os dígitos manuscritos.
 
@@ -108,15 +108,15 @@ A detecção de retângulo geralmente é apenas a primeira etapa em uma cadeia d
 
 O [exemplo de VisionFaces](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-visionfaces) funciona de maneira semelhante ao exemplo de **VisionRectangles** , usando uma classe de solicitação de visão diferente.
 
-### <a name="1-initialize-the-vision-request"></a>1. Inicializar a solicitação de visão
+### <a name="1-initialize-the-vision-request"></a>1. inicializar a solicitação de visão
 
-No `ViewDidLoad`, crie um `VNDetectFaceRectanglesRequest` que faça referência `HandleRectangles` ao método que será chamado ao final de cada solicitação.
+Em `ViewDidLoad`, crie um `VNDetectFaceRectanglesRequest` que referencie o método `HandleRectangles` que será chamado ao final de cada solicitação.
 
 ```csharp
 FaceRectangleRequest = new VNDetectFaceRectanglesRequest(HandleRectangles);
 ```
 
-### <a name="2-start-the-vision-processing"></a>2. Iniciar o processamento da visão
+### <a name="2-start-the-vision-processing"></a>2. iniciar o processamento da visão
 
 O código a seguir inicia o processamento da solicitação. No exemplo de **VisionFaces** , esse código é executado depois que o usuário seleciona uma imagem:
 
@@ -128,11 +128,11 @@ DispatchQueue.DefaultGlobalQueue.DispatchAsync(()=>{
 });
 ```
 
-Esse manipulador passa o `ciImage` para a estrutura `VNDetectFaceRectanglesRequest` de visão que foi criada na etapa 1.
+Esse manipulador passa o `ciImage` para o Vision Framework `VNDetectFaceRectanglesRequest` criado na etapa 1.
 
-### <a name="3-handle-the-results-of-vision-processing"></a>3. Manipular os resultados do processamento da visão
+### <a name="3-handle-the-results-of-vision-processing"></a>3. manipule os resultados do processamento da visão
 
-Depois que a detecção de face for concluída, o manipulador executará o `HandleRectangles` método que executa o tratamento de erros e exibirá os limites das faces detectadas e chamará os `OverlayRectangles` retângulos delimitadores de desenho no quadro original:
+Depois que a detecção de face for concluída, o manipulador executará o método de `HandleRectangles` que executa o tratamento de erros e exibirá os limites das faces detectadas e chamará os `OverlayRectangles` para desenhar retângulos delimitadores na imagem original:
 
 ```csharp
 private void HandleRectangles(VNRequest request, NSError error){
@@ -159,9 +159,9 @@ private void HandleRectangles(VNRequest request, NSError error){
 }
 ```
 
-### <a name="4-display-the-results"></a>4. Exibir os resultados
+### <a name="4-display-the-results"></a>4. exibir os resultados
 
-O `OverlayRectangles` método no exemplo **VisionFaces** tem três funções:
+O método `OverlayRectangles` no exemplo **VisionFaces** tem três funções:
 
 - Renderizando a imagem de origem,
 - Desenhando um retângulo para cada face detectada e
@@ -171,9 +171,9 @@ Exiba a [origem do exemplo](https://docs.microsoft.com/samples/xamarin/ios-sampl
 
 ![Fotografia com duas faces detectadas](vision-images/found-faces-phone-sml.png)
 
-### <a name="5-further-processing"></a>5. Processamento adicional
+### <a name="5-further-processing"></a>5. processamento adicional
 
-O Vision Framework inclui recursos adicionais para detectar recursos faciais, como os olhos e a boca. Use o `VNDetectFaceLandmarksRequest` tipo, que retornará `VNFaceObservation` resultados como na etapa 3 acima, mas com dados adicionais `VNFaceLandmark` .
+O Vision Framework inclui recursos adicionais para detectar recursos faciais, como os olhos e a boca. Use o tipo de `VNDetectFaceLandmarksRequest`, que retornará `VNFaceObservation` resultados, como na etapa 3 acima, mas com dados de `VNFaceLandmark` adicionais.
 
 ## <a name="related-links"></a>Links relacionados
 

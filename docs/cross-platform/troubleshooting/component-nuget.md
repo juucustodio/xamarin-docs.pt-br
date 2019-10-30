@@ -4,15 +4,15 @@ description: Este documento descreve como substituir as referências de componen
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 9E6C986F-3FBA-4599-8367-FB0C565C0ADE
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/18/2018
-ms.openlocfilehash: e9bd54523fa46625e9a9e6e46247b92987f3d427
-ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
+ms.openlocfilehash: 47f47882cb270a8e2517f7cab6f1d6af1cf473f3
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71106072"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73014339"
 ---
 # <a name="updating-component-references-to-nuget"></a>Atualizando referências de componente para o NuGet
 
@@ -60,7 +60,7 @@ Para remover um componente do seu projeto:
     </ItemGroup>
     ```
 
-4. Remova as referências para `XamarinComponentReference` e salve o arquivo. No exemplo acima, é seguro remover todo `ItemGroup`o.
+4. Remova as referências a `XamarinComponentReference` e salve o arquivo. No exemplo acima, é seguro remover toda a `ItemGroup`.
 
 5. Depois que o arquivo tiver sido salvo, clique com o botão direito do mouse no nome do projeto e selecione **recarregar projeto**.
 
@@ -95,7 +95,7 @@ Para remover um componente do seu projeto:
     </ItemGroup>
     ```
 
-3. Remova as referências para `XamarinComponentReference` e salve o arquivo. No exemplo acima, é seguro remover todo o`ItemGroup`
+3. Remova as referências a `XamarinComponentReference` e salve o arquivo. No exemplo acima, é seguro remover toda a `ItemGroup`
 
 4. Repita as etapas acima para cada projeto em sua solução.
 
@@ -159,8 +159,8 @@ Para confirmar se existe um pacote NuGet substituto, pesquise em [NuGet.org](htt
 
 Por exemplo, você pode encontrar o pacote **SQLite-net-PCL** popular procurando por:
 
-- [`sqlite-net-pcl`](https://www.nuget.org/packages?q=sqlite-net-pcl)– o nome do produto.
-- [`praeclarum`](https://www.nuget.org/packages?q=praeclarum)– o perfil do autor.
+- [`sqlite-net-pcl`](https://www.nuget.org/packages?q=sqlite-net-pcl) – o nome do produto.
+- [`praeclarum`](https://www.nuget.org/packages?q=praeclarum) – o perfil do autor.
 
 ### <a name="updating-the-solution"></a>Atualizando a solução
 

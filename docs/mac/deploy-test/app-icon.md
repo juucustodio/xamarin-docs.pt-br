@@ -4,27 +4,27 @@ description: Este artigo aborda a criação de imagens necessárias para um íco
 ms.prod: xamarin
 ms.assetid: 675b9405-d9a7-49f0-94ad-417f10a71d11
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 2a5f8f6f2feda1ab27c874d8281483e9e26f0855
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: d0acd44561b220507aafda7af05cd2862f6c9009
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70770145"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73021709"
 ---
 # <a name="application-icon-for-xamarinmac-apps"></a>Ícone do aplicativo para aplicativos Xamarin.Mac
 
 _Este artigo aborda a criação de imagens necessárias para um ícone de um aplicativo Xamarin.Mac, agrupando as imagens em um arquivo ".icns" e incluindo o ícone no projeto Xamarin.Mac._
 
-## <a name="overview"></a>Visão geral
+## <a name="overview"></a>Visão Geral
 
 Ao trabalhar com C# e .NET em um aplicativo Xamarin.Mac, um desenvolvedor tem acesso às mesmas ferramentas de Imagem e Ícones que um desenvolvedor trabalhando em *Objective-C* e *Xcode*.
 
 Um ícone grande deve transmitir o objetivo principal de uma experiência de aplicativo e dica de Xamarin.Mac que o usuário deve esperar ao usar o aplicativo. Este artigo aborda todas as etapas necessárias para criar os Ativos de Imagem necessários para um ícone, empacotando os ativos em um arquivo `AppIcon.appiconset` e consumindo esse arquivo em um aplicativo de Xamarin.Mac.
 
-![O editor do AppIcon.appiconset](app-icon-images/intro01.png "O editor do AppIcon.appiconset")
+![O editor AppIcon. appiconset](app-icon-images/intro01.png "O editor AppIcon. appiconset")
 
 ## <a name="application-icon"></a>Ícone do aplicativo
 
@@ -80,10 +80,10 @@ Faça o seguinte:
 
 1. No **Painel de Soluções**, abra **Assets.xcassets** > **AppIcons.appiconset**: 
 
-    ![Editar o AppIcon.appiconset](app-icon-images/intro01.png "Editar o AppIcon.appiconset")
+    ![Editando o AppIcon. appiconset](app-icon-images/intro01.png "Editando o AppIcon. appiconset")
 2. Para cada tamanho de ícone necessário, clique no ícone e selecione o arquivo de imagem correspondentes criado acima: 
 
-    [![Selecionar uma imagem de ícone](app-icon-images/intro02.png "Selecionar uma imagem de ícone")](app-icon-images/intro02-large.png#lightbox)
+    [![Selecionando uma imagem de ícone](app-icon-images/intro02.png "Selecionando uma imagem de ícone")](app-icon-images/intro02-large.png#lightbox)
 3. Salve as alterações.
 
 ## <a name="using-the-icon"></a>Usar o Ícone
@@ -95,12 +95,12 @@ Faça o seguinte:
 1. Clique duas vezes no **Info.plist** no **Painel de Soluções** para abrir as **Opções de Projeto**.
 2. Na seção **Destino de Aplicativo do Mac OS X**, clique em **Ícones de Aplicativo** para selecionar o arquivo `AppIcon.appiconset`: 
 
-    [![Definir o conjunto de ícones](app-icon-images/icon01.png "Definir o conjunto de ícones")](app-icon-images/icon01-large.png#lightbox)
+    [![Definindo o conjunto de ícones](app-icon-images/icon01.png "Definindo o conjunto de ícones")](app-icon-images/icon01-large.png#lightbox)
 3. Salve as alterações.
 
 Quando o aplicativo for executado, o novo ícone será exibido no compartimento:
 
-![Um exemplo de um ícone de aplicativo no Dock do macOS](app-icon-images/icon04.png "Um exemplo de um ícone de aplicativo no Dock do macOS")
+![Um exemplo de um ícone de aplicativo no encaixe macOS](app-icon-images/icon04.png "Um exemplo de um ícone de aplicativo no encaixe macOS")
 
 ## <a name="summary"></a>Resumo
 

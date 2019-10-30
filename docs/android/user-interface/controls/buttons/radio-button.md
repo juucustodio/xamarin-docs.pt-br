@@ -3,23 +3,23 @@ title: RadioButton
 ms.prod: xamarin
 ms.assetid: 3C32EA3F-D917-C988-72C5-A17354DA791E
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/06/2018
-ms.openlocfilehash: c1dabfcd481dccf50075c02c54019ee27499769f
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 9f51adcbd1accb4f780318cc0853e612ed8e5bed
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70758819"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73029308"
 ---
 # <a name="radiobutton"></a>RadioButton
 
-Nesta seção, você criará dois botões de opção mutuamente exclusivos (a habilitação de um desabilita o outro), usando o[`RadioGroup`](xref:Android.Widget.RadioGroup)
-e[`RadioButton`](xref:Android.Widget.RadioButton)
+Nesta seção, você criará dois botões de opção mutuamente exclusivos (a habilitação de um desabilita o outro), usando o [`RadioGroup`](xref:Android.Widget.RadioGroup)
+e [`RadioButton`](xref:Android.Widget.RadioButton)
 widgets. Quando o botão de opção for pressionado, uma mensagem do sistema será exibida.
 
-Abra o arquivo **Resources/layout/Main. axml** e [`RadioButton`](xref:Android.Widget.RadioButton)adicione dois s, aninhados em um [`LinearLayout`](xref:Android.Widget.LinearLayout) [`RadioGroup`](xref:Android.Widget.RadioGroup) (dentro do):
+Abra o arquivo **Resources/layout/Main. axml** e adicione dois [`RadioButton`](xref:Android.Widget.RadioButton)s, aninhados em uma [`RadioGroup`](xref:Android.Widget.RadioGroup) (dentro do [`LinearLayout`](xref:Android.Widget.LinearLayout)):
 
 ```xml
 <RadioGroup
@@ -37,10 +37,10 @@ Abra o arquivo **Resources/layout/Main. axml** e [`RadioButton`](xref:Android.Wi
 </RadioGroup>
 ```
 
-É importante que os [`RadioButton`](xref:Android.Widget.RadioButton)s sejam agrupados [`RadioGroup`](xref:Android.Widget.RadioGroup) pelo elemento para que não haja mais de um pode ser selecionado de cada vez. Essa lógica é manipulada automaticamente pelo sistema Android. Quando um[`RadioButton`](xref:Android.Widget.RadioButton)
+É importante que os [`RadioButton`](xref:Android.Widget.RadioButton)s sejam agrupados pelo elemento [`RadioGroup`](xref:Android.Widget.RadioGroup) para que não haja mais de um pode ser selecionado de cada vez. Essa lógica é manipulada automaticamente pelo sistema Android. Quando um [`RadioButton`](xref:Android.Widget.RadioButton)
 dentro de um grupo é selecionado, todos os outros são desmarcados automaticamente.
 
-Para fazer algo quando cada [`RadioButton`](xref:Android.Widget.RadioButton) um é selecionado, precisamos escrever um manipulador de eventos:
+Para fazer algo quando cada [`RadioButton`](xref:Android.Widget.RadioButton) é selecionado, precisamos escrever um manipulador de eventos:
 
 ```csharp
 private void RadioButtonClick (object sender, EventArgs e)
@@ -51,10 +51,10 @@ private void RadioButtonClick (object sender, EventArgs e)
 ```
 
 Primeiro, o remetente passado é convertido em um RadioButton.
-Em seguida, um[`Toast`](xref:Android.Widget.Toast)
+Em seguida, um [`Toast`](xref:Android.Widget.Toast)
 mensagem exibe o texto do botão de opção selecionado.
 
-Agora, na parte inferior da[`OnCreate()`](xref:Android.App.Activity.OnCreate*)
+Agora, na parte inferior da [`OnCreate()`](xref:Android.App.Activity.OnCreate*)
 , adicione o seguinte:
 
 ```csharp
@@ -70,9 +70,9 @@ Isso captura cada um dos [`RadioButton`](xref:Android.Widget.RadioButton)s do la
 Execute o aplicativo.
 
 > [!TIP]
-> Se você precisar alterar o estado por conta própria (por exemplo, ao carregar [`CheckBoxPreference`](xref:Android.Preferences.CheckBoxPreference)um salvo), use o[`Checked`](xref:Android.Widget.CompoundButton.Checked)
-> setter de propriedade ou[`Toggle()`](xref:Android.Widget.CompoundButton.Toggle)
+> Se você precisar alterar o estado por conta própria (por exemplo, ao carregar um [`CheckBoxPreference`](xref:Android.Preferences.CheckBoxPreference)salvo), use o [`Checked`](xref:Android.Widget.CompoundButton.Checked)
+> setter de propriedade ou [`Toggle()`](xref:Android.Widget.CompoundButton.Toggle)
 > método.
 
-*Partes desta página são modificações com base no trabalho criado e compartilhado pelo projeto de software livre do Android e usadas de acordo com os termos descritos na licença de atribuição do*
-[*Creative Commons 2,5*](http://creativecommons.org/licenses/by/2.5/). 
+*Partes desta página são modificações com base no trabalho criado e compartilhado pelo projeto de software livre do Android e usadas de acordo com os termos descritos na licença de* [*atribuição
+Creative Commons 2,5*](https://creativecommons.org/licenses/by/2.5/). 

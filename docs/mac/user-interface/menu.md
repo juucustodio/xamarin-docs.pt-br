@@ -4,15 +4,15 @@ description: Este artigo aborda como trabalhar com menus em um aplicativo Xamari
 ms.prod: xamarin
 ms.assetid: 5D367F8E-3A76-4995-8A89-488530FAD802
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 7a19b2e70ff18ae43cb65804c6c125890fa1851b
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: 7cca5be2ea13deb17b27e5452df389a998c6eb09
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "70770982"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73026178"
 ---
 # <a name="menus-in-xamarinmac"></a>Menus no Xamarin. Mac
 

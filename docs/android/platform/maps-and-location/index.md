@@ -4,15 +4,15 @@ description: Usando mapas com Xamarin. Android
 ms.prod: xamarin
 ms.assetid: B45211C5-D377-4A55-8C8E-95D4BF470AE3
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 08/03/2016
-ms.openlocfilehash: 57a1e4ecab83d86752a362dd4e2c427665ec1c64
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 36f16e2fb068808eae51f2a034c6576af9eb291c
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68510531"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73020080"
 ---
 # <a name="maps-and-location-on-android"></a>Mapas e localização no Android
 

@@ -3,15 +3,15 @@ title: Preparar um aplicativo para lançamento
 ms.prod: xamarin
 ms.assetid: 9C8145B3-FCF1-4649-8C6A-49672DDA4159
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/21/2018
-ms.openlocfilehash: 5113255d8776987783ad5e8f023e7b2b30924ea4
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.openlocfilehash: 8c21895918e4d4ac9a82804d4b140fbf7bf798fe
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71249999"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73021204"
 ---
 # <a name="preparing-an-application-for-release"></a>Preparar um aplicativo para lançamento
 
@@ -101,7 +101,7 @@ O modo Versão desativa o tempo de execução compartilhado e ativa a vinculaç�
 
 - Configuração: Nenhum &ndash; Xamarin.Android 4.2.5 Tamanho = 17,4 MB.
 
-- Configuração: Somente Assemblies do SDK &ndash; Xamarin.Android 4.2.5 Tamanho = 3.0 MB.
+- Configuração: Somente Assemblies do SDK &ndash; Xamarin.Android 4.2.5 Tamanho = 3 MB.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 

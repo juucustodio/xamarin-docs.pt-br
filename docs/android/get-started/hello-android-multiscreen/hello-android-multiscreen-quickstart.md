@@ -1,24 +1,24 @@
 ---
-title: 'Multitela Hello, Android: Início rápido'
+title: 'Multitela Hello, Android: início rápido'
 description: Este guia de duas partes expande o aplicativo Phoneword para manipular uma segunda tela. Ao longo do caminho, Blocos de Construção do Aplicativo Android básicos são apresentados com um aprofundamento maior de uma arquitetura Android.
 zone_pivot_groups: platform
 ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: ED99584A-BA3B-429A-AEE5-CF3CB0116762
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 10/05/2018
-ms.openlocfilehash: d1a4d73242e9701ff9ffcfc58791986bca89a095
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 114373b6c4b194fe6e566255eb09eb82a8208312
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70755846"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73020960"
 ---
-# <a name="hello-android-multiscreen-quickstart"></a>Multitela Hello, Android: Início rápido
+# <a name="hello-android-multiscreen-quickstart"></a>Multitela Hello, Android: início rápido
 
-_Este guia de duas partes expande o aplicativo Phoneword para manipular uma segunda tela. Ao longo do caminho, Blocos de Construção do Aplicativo Android básicos são apresentados com um aprofundamento maior de uma arquitetura Android._
+_Este guia de duas partes expande o aplicativo Phoneword para manipular uma segunda tela. Ao longo do caminho, os blocos de construção de aplicativos Android básicos são introduzidos com uma análise mais profunda da arquitetura do Android._
 
 Na seção de passo a passo deste guia, você adicionará uma segunda tela ao aplicativo [Phoneword](https://docs.microsoft.com/samples/xamarin/monodroid-samples/phoneword) para controlar o histórico de números convertidos usando o aplicativo. O [aplicativo final](https://docs.microsoft.com/samples/xamarin/monodroid-samples/phonewordmultiscreen) terá uma segunda tela exibindo os números que foram “convertidos”, conforme ilustrado pela captura de tela à direita:
 

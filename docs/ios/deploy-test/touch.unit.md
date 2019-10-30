@@ -4,15 +4,15 @@ description: Este documento fornece uma visão geral de como fazer teste de unid
 ms.prod: xamarin
 ms.assetid: BD959779-3239-79B6-5289-3A9ECDFBD973
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 44ced93605ff595fe2fd7f09f88948e5b0e1914c
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 08ddf282c8839a6283b90c0736c0b4259bd01469
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70282453"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028451"
 ---
 # <a name="unit-testing-xamarinios-apps"></a>Teste de unidade de aplicativos Xamarin.iOS
 
@@ -23,11 +23,11 @@ Os testes de unidade com o Xamarin.iOS são feitos usando a estrutura Touch.Unit
 
 Para configurar uma estrutura de teste de unidade para seu projeto, tudo o que você precisa fazer é adicionar à solução um projeto do tipo **Projeto de Testes de Unidade iOS**. Faça isso clicando com o botão direito do mouse na sua solução e selecionar **Adicionar > Adicionar Novo Projeto**. Na lista, selecione **iOS > Testes > API Unificado > Projeto de Testes de Unidade iOS** (você pode escolher C# ou F#).
 
-![](touch.unit-images/00.png "Escolha C# ou F#")
+![](touch.unit-images/00.png "Choose either C# or F#")
 
 O item acima criará um projeto básico que contém um programa de execução básico e que faz referência ao novo assembly MonoTouch.NUnitLite, assim seu projeto terá esta aparência:
 
-![](touch.unit-images/01.png "O projeto no Gerenciador de Soluções")
+![](touch.unit-images/01.png "The project in the Solution Explorer")
 
 A classe `AppDelegate.cs` contém o executor de teste e tem esta aparência:
 
@@ -105,20 +105,20 @@ Para executar este projeto dentro de sua solução, clique com botão direito do
 
 O executor de teste permite que você veja quais testes são registrados e selecione individualmente os testes que podem ser executados.
 
-[![](touch.unit-images/02-sml.png "A lista de testes registrados")](touch.unit-images/02.png#lightbox) 
-[![](touch.unit-images/03-sml.png "Um texto individual")](touch.unit-images/03.png#lightbox) 
+[![](touch.unit-images/02-sml.png "The list of registered tests")](touch.unit-images/02.png#lightbox) 
+[![](touch.unit-images/03-sml.png "An individual text")](touch.unit-images/03.png#lightbox) 
 
-[![](touch.unit-images/04-sml.png "Os resultados da execução")](touch.unit-images/04.png#lightbox)
+[![](touch.unit-images/04-sml.png "The run results")](touch.unit-images/04.png#lightbox)
 
 Você pode executar acessórios de teste individuais selecionando o acessório texto nas exibições aninhadas ou você pode executar todos os seus testes com "Executar tudo". Se você executar o teste padrão, ele deverá incluir um teste aprovado, um não aprovado e um ignorado. Esta é a aparência do relatório e você pode fazer uma busca detalhada diretamente nos testes não aprovados e descobrir mais informações sobre a falha:
 
-[![](touch.unit-images/05-sml.png "Um relatório de exemplo")](touch.unit-images/05.png#lightbox) [![](touch.unit-images/06-sml.png "Um relatório de exemplo")](touch.unit-images/06.png#lightbox) [![](touch.unit-images/07-sml.png "Um relatório de exemplo")](touch.unit-images/07.png#lightbox)
+[![](touch.unit-images/05-sml.png "Um relatório de exemplo")](touch.unit-images/05.png#lightbox)[![](touch.unit-images/06-sml.png "Um relatório de exemplo")](touch.unit-images/06.png#lightbox)[![](touch.unit-images/07-sml.png "Um relatório de exemplo")](touch.unit-images/07.png#lightbox)
 
 Você também pode examinar a janela Saída do Aplicativo no seu IDE para ver quais testes estão sendo executados e seus status atuais.
 
 ## <a name="writing-new-tests"></a>Gravando novos testes
 
-O NUnitLite é uma versão modificada do NUnit denominada projeto [Touch.Unit](https://github.com/xamarin/Touch.Unit). Ele é uma estrutura de teste leve para .NET, com base em ideias em [NUnit](http://nunit.com/) e fornece um subconjunto de seus recursos.
+O NUnitLite é uma versão modificada do NUnit denominada projeto [Touch.Unit](https://github.com/xamarin/Touch.Unit). Ele é uma estrutura de teste leve para .NET, com base em ideias em [NUnit](https://nunit.com/) e fornece um subconjunto de seus recursos.
 Ele usa o mínimo de recursos e é executada em plataformas de recursos restritos, como aquelas usados no desenvolvimento incorporado e móvel. A API NUnitLite está disponível para você no Xamarin.iOS. Com o esqueleto básico fornecido pelo modelo de teste de unidade, o ponto de entrada principal é o método [Classe assert](xref:NUnit.Framework.Assert).
 
 Além dos métodos de classe assert, a funcionalidade de teste de unidade é dividida nos namespaces a seguir que fazem parte do NUnitLite:

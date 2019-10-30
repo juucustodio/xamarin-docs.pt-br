@@ -4,19 +4,19 @@ description: Este documento descreve antecipadamente a compilação de tempo no 
 ms.prod: xamarin
 ms.assetid: 38B8A017-5A58-429C-A6E9-9860A1DCEF63
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 11/10/2017
-ms.openlocfilehash: 6797428596fddb0361fb307240bf8237a1e8554d
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: dac98ba74f389bec9016e52fa7a3f2f34ec71f0a
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769826"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73029962"
 ---
 # <a name="xamarinmac-ahead-of-time-compilation"></a>O Xamarin. Mac antes da compilação do tempo
 
-## <a name="overview"></a>Visão geral
+## <a name="overview"></a>Visão Geral
 
 A compilação antecipada de tempo (AOT) é uma poderosa técnica de otimização para melhorar o desempenho de inicialização. No entanto, ele também afeta o tempo de compilação, o tamanho do aplicativo e a execução do programa de maneiras profundas. Para entender as compensações que ele impõe, vamos nos aprofundar um pouco na compilação e execução de um aplicativo.
 
@@ -29,7 +29,7 @@ Há dois pontos em que esse processamento pode ser feito:
 
 Cada opção tem vários benefícios e compensações:
 
-- **JIT**
+- **ATIVOU**
   - **Tempo de inicialização** – a compilação JIT deve ser feita na inicialização. Para a maioria dos aplicativos, isso está na ordem de 100 ms, mas, para grandes aplicativos, esse tempo pode ser significativamente maior.
   - **Execução** – como o código JIT pode ser otimizado para o processador específico que está sendo usado, um código ligeiramente melhor pode ser gerado. Na maioria dos aplicativos, há alguns pontos percentuais mais rápidos no máximo.
 - **AOT**

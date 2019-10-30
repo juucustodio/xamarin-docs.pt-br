@@ -4,21 +4,21 @@ description: Este artigo apresenta todas as APIs e recursos novos e modificados 
 ms.prod: xamarin
 ms.assetid: 4D71BBD9-B948-4B59-9AF5-F199C51CBEB3
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 3ce1c802fb276e271cddc75e8ebabd2237d84d39
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: db398947b5f13963febae7d25a7898af21600813
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70752003"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73031776"
 ---
 # <a name="introduction-to-ios-9"></a>Introdução ao iOS 9
 
 _Este artigo apresenta todas as APIs e recursos novos e modificados disponíveis no iOS 9 para desenvolvedores do Xamarin. iOS._
 
-![](images/ios9-sml.png "O logotipo do iOS 9")
+![](images/ios9-sml.png "The iOS 9 logo")
 
 A Apple adicionou várias novas APIs e serviços no iOS 9, juntamente com vários aprimoramentos nos recursos existentes.
 
@@ -137,9 +137,9 @@ No iOS 9, a Apple aprimorou o conjunto de chaves para fornecer um novo tipo de c
 
 - Uma nova restrição de ID de toque que invalida itens de conjunto de chaves quando o banco de dados de impressão digital é modificado.
 - Novas restrições que permitem a criação de entradas da lista de controle de acesso com apenas a ID de toque ou senha.
-- Um novo contexto de autenticação que permite invocar a autenticação separada `SecItem` de chamadas.
+- Um novo contexto de autenticação que permite invocar a autenticação separada de chamadas `SecItem`.
 - Entropia da lista de controle de acesso (usando a opção de senha do aplicativo) para criptografia de item do conjunto de chaves fornecido pelo aplicativo.
-- Suporte para gerar e usar chaves dentro do enclave seguro (por meio `kSecAttrTokenIDSecureEnclave` do atributo).
+- Suporte para gerar e usar chaves dentro do enclave seguro (por meio do atributo `kSecAttrTokenIDSecureEnclave`).
 
 Para obter mais informações, consulte nossa [introdução à documentação do touch ID](~/ios/platform/touchid.md) .
 
@@ -177,8 +177,8 @@ Para obter mais informações, consulte nossa documentação [adicional de alter
 A Apple preteriu as seguintes APIs e funções no iOS 9:
 
 - **Catálogo de endereços & interface do usuário do catálogo de endereços** -essas APIs foram substituídas pelas estruturas de interface do usuário contato e contato. Para obter mais informações, consulte a documentação [da interface do usuário contatos e contatos](~/ios/platform/contacts.md) .
-- **CBCentralManager** -os `RetrievePeripherals` métodos `RetrieveConnectedPeripherals` edaclasseforamremovidosnoIos9.`CBCentralManager` Chamar esses métodos fará com que um aplicativo falhe ao emparelhar um acessório ou iniciar o aplicativo.
-- **FetchAllChanges** -a `FetchAllChanges` da `CKFetchRecordChangesOperation` classe foi depreciada e será removida no Ios 9.
+- **CBCentralManager** -os métodos `RetrievePeripherals` e `RetrieveConnectedPeripherals` da classe `CBCentralManager` foram removidos no Ios 9. Chamar esses métodos fará com que um aplicativo falhe ao emparelhar um acessório ou iniciar o aplicativo.
+- **FetchAllChanges** -a `FetchAllChanges` da classe `CKFetchRecordChangesOperation` foi depreciada e será removida no Ios 9.
 - **Player de mídia** -a estrutura do Media Player foi preterida no Ios 9. Em vez disso, use as APIs AVKit ou AV Foundation.
 
 Para obter uma lista completa de substituições de API específicas, consulte a documentação de [diffs da API do iOS 9,0](https://developer.apple.com/library/prerelease/ios/releasenotes/General/iOS90APIDiffs/index.html#//apple_ref/doc/uid/TP40016222) da Apple.

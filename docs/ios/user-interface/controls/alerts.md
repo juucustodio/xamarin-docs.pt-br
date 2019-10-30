@@ -4,15 +4,15 @@ description: Este documento descreve como exibir alertas no Xamarin. iOS usando 
 ms.prod: xamarin
 ms.assetid: 61C671E9-3757-4052-86E4-28640025A34A
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: ec2a35a33682ec7bda2840cfb4bc6b4908fc65b0
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 1264b28b2ee56ec5de610350a199668c67d5c33c
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292382"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73022097"
 ---
 # <a name="displaying-alerts-in-xamarinios"></a>Exibindo alertas no Xamarin. iOS
 
@@ -32,7 +32,7 @@ Há três etapas necessárias a serem seguidas ao criar um controlador de alerta
 - Crie e configure o alerta com um:
   - título
   - mensagem
-  - preferredStyle
+  - preferível
 
 - Adicional Adicionar um campo de texto
 - Adicionar as ações necessárias
@@ -81,7 +81,7 @@ Os alertas também podem exibir uma planilha de ações, semelhante à captura d
 
  ![Alerta de planilha de ações](alerts-images/alert3.png)
 
-Os botões são adicionados ao alerta com o `AddAction` método:
+Os botões são adicionados ao alerta com o método `AddAction`:
 
 ```csharp
 actionSheetButton.TouchUpInside += ((sender, e) => {

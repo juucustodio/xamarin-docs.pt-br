@@ -5,15 +5,15 @@ ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: c866e5f4-8154-4342-876e-efa0693d66f5
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 10/05/2018
-ms.openlocfilehash: 72e421e088a582e4d2de1cf830a0978cca9f45c8
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 3bcfb20d8283f621ac1d32730ee67be2b09efe50
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70762649"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73023403"
 ---
 # <a name="hello-ios-multiscreen--deep-dive"></a>Olá, iOS multitela – análise detalhada
 
@@ -26,7 +26,7 @@ Então, nos aprofundamos no controlador de navegação e aprendemos a usá-lo pa
 
 No tutorial [Hello, iOS](~/ios/get-started/hello-ios/index.md), aprendemos que aplicativos iOS têm apenas uma *Janela* para a qual controladores de exibição são responsáveis por carregar suas *Hierarquias de Exibição de Conteúdo*. No segundo passo a passo do Phoneword, adicionamos uma segunda tela ao nosso aplicativo e enviamos alguns dados (uma lista de números de telefone) entre as duas telas, conforme ilustra o diagrama a seguir:
 
- [![](hello-ios-multiscreen-deepdive-images/08.png "Este diagrama ilustra a passagem de dados entre duas telas")](hello-ios-multiscreen-deepdive-images/08.png#lightbox)
+ [![](hello-ios-multiscreen-deepdive-images/08.png "This diagram illustrates passing data between two screens")](hello-ios-multiscreen-deepdive-images/08.png#lightbox)
 
 Em nosso exemplo, os dados foram coletados na primeira tela, passados do primeiro controlador de exibição para o segundo e exibidos pela segunda tela. Essa separação de telas, de controladores de exibição e de dados segue o padrão *MVC (Modelo, Exibição, Controlador)* . Nas próximas seções, discutimos os benefícios do padrão, seus componentes e como os utilizamos em nosso aplicativo Phoneword.
 
@@ -34,7 +34,7 @@ Em nosso exemplo, os dados foram coletados na primeira tela, passados do primeir
 
 Modelo-Exibição-Controlador é um *padrão de design* – uma solução de arquitetura reutilizável para um problema ou caso de uso comum no código. MVC é uma arquitetura de aplicativos com uma *GUI (Interface Gráfica do Usuário)* . Ele atribui aos objetos no aplicativo uma entre três funções: *Modelo* (lógica de dados ou aplicativo), *Exibição* (interface do usuário) e *Controlador* (code-behind). O diagrama a seguir ilustra as relações entre as três partes do padrão MVC e o usuário:
 
- [![](hello-ios-multiscreen-deepdive-images/00.png "Este diagrama ilustra as relações entre as três partes do padrão MVC e o usuário")](hello-ios-multiscreen-deepdive-images/00.png#lightbox)
+ [![](hello-ios-multiscreen-deepdive-images/00.png "This diagram illustrates the relationships between the three pieces of the MVC pattern and the user")](hello-ios-multiscreen-deepdive-images/00.png#lightbox)
 
 O padrão MVC é útil porque fornece uma separação lógica entre diferentes partes de um aplicativo de GUI e facilita a reutilização de códigos e exibições. Vamos avançar e dar uma olhada em cada uma das três funções em mais detalhes.
 
@@ -68,32 +68,32 @@ No aplicativo Phoneword, usamos um controlador de navegação para ajudar a gere
 
 O controlador de navegação é comum em aplicativos iOS e fornece navegação para aplicativos iOS padrão, como o aplicativo **Configurações**, conforme ilustrado pela captura de tela abaixo:
 
- [![](hello-ios-multiscreen-deepdive-images/01.png "O controlador de navegação fornece navegação para aplicativos iOS como o aplicativo de Configurações mostrado aqui")](hello-ios-multiscreen-deepdive-images/01.png#lightbox)
+ [![](hello-ios-multiscreen-deepdive-images/01.png "The navigation controller provides navigation for iOS applications like the Settings app shown here")](hello-ios-multiscreen-deepdive-images/01.png#lightbox)
 
 O controlador de navegação atende a três funções principais:
 
 - **Fornece Ganchos para Navegação de Avanço** – o controlador de navegação usa uma metáfora de navegação hierárquica na qual Hierarquias de Exibição de Conteúdo são *enviadas por push* para uma *pilha de navegação*. Você pode pensar em uma pilha de navegação como uma pilha de cartas de baralho, em que apenas a carta superior está visível, conforme ilustra o diagrama a seguir:  
 
-    [![](hello-ios-multiscreen-deepdive-images/02.png "Este diagrama ilustra a navegação como uma pilha de cartas")](hello-ios-multiscreen-deepdive-images/02.png#lightbox)
+    [![](hello-ios-multiscreen-deepdive-images/02.png "This diagram illustrates navigation as a stack of cards")](hello-ios-multiscreen-deepdive-images/02.png#lightbox)
 
 - **Opcionalmente, fornece um botão Voltar** – quando fazemos o push de um novo item para a pilha de navegação, a barra de título pode exibir automaticamente um *botão Voltar* que permite ao usuário retornar na navegação. Pressionar o botão Voltar abre em *pop-up* o controlador de exibição atual pilha de navegação e carrega a hierarquia de Exibição de Conteúdo anterior na Janela:  
 
-    [![](hello-ios-multiscreen-deepdive-images/03.png "Este diagrama ilustra a retirada de uma carta da pilha")](hello-ios-multiscreen-deepdive-images/03.png#lightbox)
+    [![](hello-ios-multiscreen-deepdive-images/03.png "This diagram illustrates 'popping' a card off the stack")](hello-ios-multiscreen-deepdive-images/03.png#lightbox)
 
 - **Fornece uma Barra de Título** – a parte superior do controlador de navegação é chamada de *Barra de Título*. Ele é responsável por exibir o título do controlador de exibição, conforme ilustrado pelo diagrama a seguir:  
 
-    [![](hello-ios-multiscreen-deepdive-images/04.png "A Barra de Título é responsável por exibir o título do controlador de exibição")](hello-ios-multiscreen-deepdive-images/04.png#lightbox)
+    [![](hello-ios-multiscreen-deepdive-images/04.png "The Title Bar is responsible for displaying the view controller title")](hello-ios-multiscreen-deepdive-images/04.png#lightbox)
 
 ### <a name="root-view-controller"></a>Controlador de exibição raiz
 
 Um controlador de navegação não gerencia uma hierarquia de Exibição de Conteúdo e, portanto, não tem nada para exibir por conta própria.
 Em vez disso, o controlador de navegação é associado a um *Controlador de exibição raiz*:
 
- [![](hello-ios-multiscreen-deepdive-images/05.png "Um controlador de navegação é emparelhado com um Controlador de exibição raiz")](hello-ios-multiscreen-deepdive-images/05.png#lightbox)
+ [![](hello-ios-multiscreen-deepdive-images/05.png "A navigation controller is paired with a Root view controller")](hello-ios-multiscreen-deepdive-images/05.png#lightbox)
 
 O Controlador de exibição raiz representa o primeiro controlador de exibição na pilha do controlador de navegação, e a hierarquia de Exibição de Conteúdo do Controlador de exibição raiz é a primeira hierarquia de Exibição de Conteúdo a ser carregada na Janela. Para colocar todo o aplicativo na pilha do controlador de navegação, é possível transferir o Segue Sourceless para o controlador de navegação e definir o controlador de exibição da primeira tela como o Controlador de exibição raiz, como fizemos no aplicativo Phoneword:
 
- [![](hello-ios-multiscreen-deepdive-images/06.png "O Segue Sourceless define o controlador de exibição das primeiras telas como o Controlador de exibição raiz")](hello-ios-multiscreen-deepdive-images/06.png#lightbox)
+ [![](hello-ios-multiscreen-deepdive-images/06.png "The Sourceless Segue sets the first screens view controller as the Root view controller")](hello-ios-multiscreen-deepdive-images/06.png#lightbox)
 
 ### <a name="additional-navigation-options"></a>Opções de navegação adicionais
 
@@ -107,7 +107,7 @@ No passo a passo do Phoneword, tratamos da transição entre os dois controlador
 
 Quando adicionamos um Segue com uma ação **Mostrar** ao Storyboard, instruímos o iOS a efetuar push do segundo controlador de exibição na pilha do controlador de navegação:
 
- [![](hello-ios-multiscreen-deepdive-images/09.png "Definir o tipo de segue por meio de uma lista suspensa")](hello-ios-multiscreen-deepdive-images/09.png#lightbox)
+ [![](hello-ios-multiscreen-deepdive-images/09.png "Setting the segue type from a dropdown list")](hello-ios-multiscreen-deepdive-images/09.png#lightbox)
 
 Adicionar um Segue ao Storyboard é suficiente para criar uma transição simples entre telas. Se quisermos transmitir dados entre controladores de exibição, precisamos substituir o método `PrepareForSegue` e manipular os dados nós mesmos:
 

@@ -4,21 +4,21 @@ description: O Android pode executar em diversas arquiteturas de computador dife
 ms.prod: xamarin
 ms.assetid: D812883C-A14A-E74B-0F72-E50071E96328
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 05/30/2019
-ms.openlocfilehash: f24fdb768cc0c4e12fdc58f6e5386edd0db98527
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 1141b96151df0adda755b7c6d60019c18825cc76
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70753954"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028024"
 ---
 # <a name="multi-core-devices--xamarinandroid"></a>Dispositivos de vários núcleos e o Xamarin.Android
 
-_O Android pode executar em diversas arquiteturas de computador diferentes. Este documento aborda as arquiteturas de CPU diferentes que podem ser utilizadas em um aplicativo Xamarin.Android. Este documento também explica como aplicativos Android são empacotados para dar suporte a diferentes arquiteturas de CPU. A ABI (interface binária de aplicativo) é apresentada e são fornecidas diretrizes sobre quais ABIs para usar em um aplicativo Xamarin.Android._
+_O Android pode ser executado em várias arquiteturas de computador diferentes. Este documento discute as diferentes arquiteturas de CPU que podem ser empregadas para um aplicativo Xamarin. Android. Este documento também explicará como os aplicativos Android são empacotados para dar suporte a diferentes arquiteturas de CPU. A interface binária do aplicativo (ABI) será introduzida e serão fornecidas orientações sobre o que ABIs usar em um aplicativo Xamarin. Android._
 
-## <a name="overview"></a>Visão geral
+## <a name="overview"></a>Visão Geral
 
 O Android permite a criação de binários multiarquitetura, um único arquivo `.apk` que contém o código de computador que é compatível com várias arquiteturas de CPU diferentes. Isso é feito associando-se cada trecho de código de computador com uma *interface binária de aplicativo*. A ABI será usada para controlar qual código de computador será executado em um dispositivo de hardware específico. Por exemplo, para um aplicativo do Android ser executado em um dispositivo x86, é necessário incluir suporte a ABI x86 ao compilar o aplicativo.
 
@@ -54,7 +54,7 @@ Cada ABI compatível com o Android é identificada por um nome exclusivo.
 Esse é o nome de uma EABI para CPUs baseadas em ARM, compatível com pelo menos o conjunto de instruções ARMv5TE. O Android segue a ABI little endian ARM GNU/Linux. Esta ABI não é compatível com cálculos de ponto flutuante assistidos por hardware. Todas as operações de FP são executadas por funções auxiliares de software que são provenientes da biblioteca estática `libgcc.a` do compilador. Os dispositivos SMP não são compatíveis com o `armeabi`.
 
 > [!IMPORTANT]
-> O código `armeabi` do Xamarin.Android não é thread-safe e não deve ser usado em dispositivos `armeabi-v7a` com várias CPUs (descritos abaixo). O uso de código `armeabi` em um dispositivo `armeabi-v7a` de núcleo único é seguro.
+> O código `armeabi` do Xamarin. Android não é thread-safe e não deve ser usado em dispositivos `armeabi-v7a` de várias CPUs (descritos abaixo). O uso de código `armeabi` em um dispositivo `armeabi-v7a` de núcleo único é seguro.
 
 #### <a name="armeabi-v7a"></a>armeabi-v7a
 
@@ -122,7 +122,7 @@ No tempo de instalação do pacote, bibliotecas nativas dentro de `.apk` são ex
 
 O comportamento de instalação de biblioteca nativa do Android varia consideravelmente entre versões do Android.
 
-#### <a name="installing-native-libraries-pre-android-40"></a>Instalando bibliotecas nativas: Pre-Android 4.0
+#### <a name="installing-native-libraries-pre-android-40"></a>Instalar bibliotecas nativas: pré-Android 4.0
 
 Android anterior ao 4.0 Ice Cream Sandwich apenas extrairá bibliotecas nativas de uma *única ABI* dentro do `.apk`. Aplicativos do Android dessa época tentarão primeiro extrair todas as bibliotecas nativas para a ABI primária e, se essas bibliotecas não existirem, o Android extrairá então todas as bibliotecas nativas para a ABI secundária. Nenhuma "mesclagem" é realizada.
 
@@ -140,7 +140,7 @@ Após a instalação, o diretório de biblioteca nativa conterá:
 $APP/lib/libtwo.so # from the armeabi-v7a directory in the apk
 ```
 
-Em outras palavras, nenhum `libone.so` é instalado. Isso causará problemas, pois `libone.so` não estará presente para que o aplicativo seja carregado em tempo de execução. Esse comportamento, embora inesperado, foi registrado como um bug e reclassificado como "[funcionando como esperado](http://code.google.com/p/android/issues/detail?id=9089)."
+Em outras palavras, nenhum `libone.so` é instalado. Isso causará problemas, pois `libone.so` não estará presente para que o aplicativo seja carregado em tempo de execução. Esse comportamento, embora inesperado, foi registrado como um bug e reclassificado como "[funcionando como esperado](https://code.google.com/p/android/issues/detail?id=9089)."
 
 Consequentemente, ao usar versões do Android anteriores à 4.0 como destino, é necessário fornecer *todas* as bibliotecas nativas para *cada* ABI à qual o aplicativo em questão dará suporte, ou seja, o `.apk` deve conter:
 
@@ -174,7 +174,7 @@ $APP/lib/libone.so
 $APP/lib/libtwo.so
 ```
 
-Esse comportamento é dependente da ordem, conforme descrito no seguinte documento – [Problema 24321: O Galaxy Nexus 4.0.2 usa código nativo do armeabi quando ambos o armeabi e o armeabi-v7a são incluídos no apk](http://code.google.com/p/android/issues/detail?id=25321).
+Infelizmente, esse comportamento é dependente da ordem, conforme descrito no seguinte documento – [Problema 24321: o Galaxy Nexus 4.0.2 usa código nativo armeabi quando ambos armeabi e armeabi-v7a estão incluídos no apk](https://code.google.com/p/android/issues/detail?id=25321).
 
 As bibliotecas nativas são processadas "em ordem" (conforme listadas, por exemplo, pela descompactação) e a *primeira correspondência* é extraída. Já que o `.apk` contém as versões `armeabi` e `armeabi-v7a` de `libtwo.so` e o `armeabi` é listado primeiro, é a versão `armeabi` que é extraída, *não* a versão `armeabi-v7a`:
 
@@ -192,7 +192,7 @@ Além disso, mesmo se os duas ABIs `armeabi` e `armeabi-v7a` são especificadas 
 
 Consequentemente, o `armeabi` `libmonodroid.so` será encontrado primeiro dentro do `.apk` e o `armeabi` `libmonodroid.so` será o extraído, embora o `armeabi-v7a` `libmonodroid.so` esteja presente e otimizado para o destino. Isso também pode resultar em erros de tempo de execução obscuros, pois `armeabi` não é seguro para SMP.
 
-##### <a name="installing-native-libraries-android-404-and-later"></a>Instalando bibliotecas nativas: Android 4.0.4 e posterior
+##### <a name="installing-native-libraries-android-404-and-later"></a>Instalar bibliotecas nativas: Android 4.0.4 e posterior
 
 O Android 4.0.4 altera a lógica de extração: ele enumerará todas as bibliotecas nativas, lerá o nome base do arquivo e, em seguida, extrairá a versão da ABI primária (se presente) ou da ABI secundária (se presente). Isso permite um comportamento de "mesclagem"; ou seja, se nós temos um `.apk` com o seguinte conteúdo:
 
@@ -255,5 +255,5 @@ Na sequência, ele abordou como especificar o suporte a ABI em um aplicativo Xam
 
 - [ABI para a arquitetura ARM (PDF)](http://infocenter.arm.com/help/topic/com.arm.doc.ihi0036b/IHI0036B_bsabi.pdf)
 - [NDK do Android](https://developer.android.com/tools/sdk/ndk/index.html)
-- [Problema 9089: Nexus One – não é possível carregar NENHUMA biblioteca nativa do armeabi se há pelo menos uma biblioteca no armeabi-v7a](http://code.google.com/p/android/issues/detail?id=9089)
-- [Problema 24321: O Galaxy Nexus 4.0.2 usa código nativo do armeabi quando o armeabi e o armeabi-v7a são incluídos no apk](http://code.google.com/p/android/issues/detail?id=25321)
+- [Problema 9089: Nexus One – não é possível carregar NENHUMA biblioteca nativa do armeabi se há pelo menos uma biblioteca no armeabi-v7a](https://code.google.com/p/android/issues/detail?id=9089)
+- [Problema 24321: o Galaxy Nexus 4.0.2 usa código nativo do armeabi quando ambos o armeabi e o armeabi-v7a são incluídos no apk](https://code.google.com/p/android/issues/detail?id=25321)

@@ -4,15 +4,15 @@ description: Este documento contém links para vários guias que descrevem como 
 ms.prod: xamarin
 ms.assetid: 04DF47DD-4E17-75D7-AC7C-8CF4A574CD21
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 01/06/2016
-ms.openlocfilehash: 1d888cbc779cbb4fcaf8312b87627f1bd18fe719
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 7f5af84a8dfb9f774822e28e50cf8bbca9acf94b
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70768398"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73021885"
 ---
 # <a name="working-with-tables-and-cells-in-xamarinios"></a>Trabalhando com tabelas e células no Xamarin. iOS
 
@@ -22,14 +22,14 @@ Para aqueles que trabalham em aplicativos de plataforma cruzada com o Xamarin. A
 
 Esses artigos terão uma visão abrangente de como trabalhar com tabelas, incluindo:
 
-- **Partes de tabela** – apresentando e explicando os elementos visuais `UITableView` do controle. 
+- **Partes de tabela** – apresentando e explicando os elementos visuais do controle de `UITableView`. 
 - **Exibindo dados em tabelas** – demonstrando como criar e preencher uma tabela, usar estilos de tabela e célula diferentes e evitar problemas de memória por meio da reciclagem de objetos de célula. 
 - **Uso avançado** – Criando células personalizadas e usando os recursos de edição da classe UITableView. 
 - **Criar uma tabela visualmente** – usando o Xamarin designer para IOS para criar uma interface orientada por tabela com um Storyboard. 
 
 ## <a name="contents"></a>Conteúdo
 
- [Funcionalidade de &amp; partes de tabela](~/ios/user-interface/controls/tables/table-parts-and-functionality.md)
+ [&amp; funcionalidade de partes de tabela](~/ios/user-interface/controls/tables/table-parts-and-functionality.md)
 
  [Preencher uma tabela com dados](~/ios/user-interface/controls/tables/populating-a-table-with-data.md)
 

@@ -3,15 +3,15 @@ title: Aplicativo Xamarin Live Player
 description: Este documento descreve o Xamarin Live Player aplicativo, que pode ser usado para visualizar as alterações de código ativas no dispositivo. Ele aborda a instalação, os exemplos, os logs, as configurações, o gerenciamento de dispositivos e muito mais.
 ms.prod: xamarin
 ms.assetid: A7EB73C1-38D7-46C5-9AF6-4C571C168BE7
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/13/2019
-ms.openlocfilehash: d4cf596d70be746e85f21bace3e5ddf662076e6d
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: f1d3adfad3b9d2a64990ff11f81bf3a1a39825bb
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70772322"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73029652"
 ---
 # <a name="xamarin-live-player-app"></a>Aplicativo Xamarin Live Player
 
@@ -39,7 +39,7 @@ Se a conexão for bem-sucedida, o código deverá ser executado no dispositivo q
 
 Pressione o botão de informações **(i)** na parte inferior do aplicativo para revelar o menu de **Opções** :
 
-[![Captura de tela do menu de opções](player-images/options-sml.png)](player-images/options.png#lightbox)
+[![captura de tela do menu de opções](player-images/options-sml.png)](player-images/options.png#lightbox)
 
 ### <a name="logs"></a>Logs
 
@@ -51,7 +51,7 @@ Exibir logs para diagnosticar problemas.
 - Informações de versão.
 - Enviar comentários.
 
-[![Captura de tela das configurações](player-images/settings-sml.png)](player-images/settings.png#lightbox)
+[![captura de tela das configurações](player-images/settings-sml.png)](player-images/settings.png#lightbox)
 
 ## <a name="managing-devices"></a>Gerenciando dispositivos
 

@@ -3,15 +3,15 @@ title: Ambiente do Xamarin.Android
 ms.prod: xamarin
 ms.assetid: 67BFD4E1-276C-4B9F-9BD8-A5218D2BD529
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/15/2018
-ms.openlocfilehash: 076e6bfd1155c0eba4045af59a599a34b0fca1d5
-ms.sourcegitcommit: 13e43f510da37ad55f1c2f5de1913fb0aede6362
+ms.openlocfilehash: 54fc52c2f2460726fe1c22149d4e7cc0e8a92609
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71021174"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028068"
 ---
 # <a name="xamarinandroid-environment"></a>Ambiente do Xamarin.Android
 
@@ -36,7 +36,7 @@ Os comentários são linhas que começam com `#`. Linhas em branco são ignorada
 
 Se a *chave* começa com uma letra maiúscula, *chave* é tratada como uma variável de ambiente e **setenv**(3) é usado para definir a variável de ambiente para o *valor* especificado durante a inicialização do processo.
 
-Se a *chave* começar com uma letra minúscula, então a *chave* será tratada como uma propriedade do sistema Android e o *valor* será o *valor padrão*: as propriedades do sistema Android que controlam o comportamento de execução do Xamarin.Android são pesquisadas primeiro no repositório de propriedades do sistema Android e, se nenhum valor estiver presente, então o valor especificado no arquivo de ambiente será usado. Isso é para permitir que `adb shell setprop` seja usado para substituir valores provenientes do arquivo de ambiente para fins de diagnóstico.
+Se a *chave* começa com uma letra minúscula, a *chave* é tratada como uma propriedade do sistema Android e *valor* é o *valor padrão*: propriedades do sistema Android que controlam o comportamento de execução do Xamarin.Android são pesquisadas primeiro do repositório de propriedades do sistema Android e, se nenhum valor está presente, o valor especificado no arquivo de ambiente é usado. Isso é para permitir que `adb shell setprop` seja usado para substituir valores provenientes do arquivo de ambiente para fins de diagnóstico.
 
 ## <a name="xamarinandroid-environment-variables"></a>Variáveis de ambiente do Xamarin.Android
 
@@ -90,12 +90,12 @@ Controla quais informações adicionais o Xamarin.Android registrará em `adb lo
 É uma cadeia de caracteres separada por vírgulas (`,`), que contém um dos seguintes valores:
 
 - `all`: imprimir *todas* as mensagens. Isso raramente é uma boa ideia, pois inclui mensagens `lref`.
-- `assembly`: imprimir `.apk` e as mensagens de análise de assembly.
+- `assembly`: imprimir mensagens de análise de assembly e `.apk`.
 - `gc`: imprimir mensagens relacionadas a GC.
-- `gref`: imprimir as mensagens de referência global da JNI.
-- `lref`: imprimir as mensagens de referência local da JNI.
+- `gref`: imprimir mensagens de referência global de JNI.
+- `lref`: imprimir mensagens de referência local de JNI.
   > [!NOTE]
-  > isso `adb logcat`realmente* enviará  como spam.
+  > Isso *realmente* enviará spam `adb logcat`.
   > No Xamarin.Android 5.1, isso também criará um arquivo `.__override__/lrefs.txt`, que pode ficar *gigantesco*.
   > Evite isso.
 - `timing`: imprimir algumas informações de tempo de método. Isso também criará os arquivos `.__override__/methods.txt` e `.__override__/counters.txt`.
@@ -130,8 +130,8 @@ Em geral, a recomendação é *não usar*. O uso de rastreamento enviará a saí
 
 A propriedade do sistema `debug.mono.wref` permite substituir o mecanismo de referência fraca JNI padrão detectado. Há dois valores compatíveis:
 
-- `jni`: usar referências fracas da JNI, conforme criadas pelo `JNIEnv::NewWeakGlobalRef()` e destruídas por `JNIEnv::DeleteWeakGlobalREf()`.
-- `java`: Use as referências globais JNI que `java.lang.WeakReference` fazem referência a instâncias.
+- `jni`: use referências fracas JNI, conforme criadas pelo `JNIEnv::NewWeakGlobalRef()` e destruídas por `JNIEnv::DeleteWeakGlobalREf()`.
+- `java`: Use referências globais JNI que fazem referência a instâncias de `java.lang.WeakReference`.
 
 `java` é usado, por padrão, até a API-7 e na API-19 (Kit Kat) com ART habilitado. (A API-8 adicionou referências `jni` e o ART *interrompeu* `jni` referências.)
 

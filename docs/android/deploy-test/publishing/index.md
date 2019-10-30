@@ -3,21 +3,21 @@ title: Publicando um aplicativo
 ms.prod: xamarin
 ms.assetid: 51E19000-040A-2B74-C462-EC57C617085C
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: fe1422aa55e5c1518134e6d0fbbf40047b577767
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 765adf10e5bdf20191c5ee1c089d39032ea07ce0
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70753801"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73021372"
 ---
 # <a name="publishing-an-application"></a>Publicando um aplicativo
 
 Quando um bom aplicativo é criado, as pessoas querem usá-lo. Esta seção aborda as etapas envolvidas com a distribuição pública de um aplicativo criado com o Xamarin.Android por meio de canais, como email, um servidor Web particular, Google Play ou a Amazon App Store para Android.
 
-## <a name="overview"></a>Visão geral
+## <a name="overview"></a>Visão Geral
 
 A etapa final no desenvolvimento de um aplicativo Xamarin.Android é publicar o aplicativo. A publicação é o processo de compilação de um aplicativo Xamarin.Android para que ele esteja pronto para que os usuários instalem em seus dispositivos e envolve duas tarefas essenciais:
 
@@ -33,7 +33,7 @@ Como pode ser visto no diagrama acima, a preparação é a mesma, independenteme
 
 - **Por meio de um site** &ndash; Um aplicativo Xamarin.Android pode ser disponibilidade para download em um site, do qual os usuários podem, em seguida, instalar o aplicativo ao clicar em um link.
 - **Por email** &ndash; É possível que os usuários instalem um aplicativo Xamarin.Android pelo email. O aplicativo será instalado quando o anexo for aberto com um dispositivo Android.
-- **Por meio de um mercado** &ndash; Há vários mercados de aplicativos que existem para distribuição, como [Google Play](http://play.google.com/) ou [Amazon App Store for Android](http://www.amazon.com/mobile-apps/b?ie=UTF8&node=2350149011).
+- **Por meio de um mercado** &ndash; Há vários mercados de aplicativos que existem para distribuição, como [Google Play](https://play.google.com/) ou [Amazon App Store for Android](https://www.amazon.com/mobile-apps/b?ie=UTF8&node=2350149011).
 
 Usar um marketplace estabelecido é a maneira mais comum para publicar um aplicativo, pois ele fornece um alcance mais amplo do mercado e maior controle sobre a distribuição. No entanto, a publicação de um aplicativo por meio de um marketplace requer esforço adicional.
 

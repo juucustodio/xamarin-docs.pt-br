@@ -4,15 +4,15 @@ description: Este artigo descreve como trabalhar com o armazenamento de dados de
 ms.prod: xamarin
 ms.assetid: C56B5046-D2C0-4B63-9CE0-ADAA0EFD368A
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: 4b50ba09488f1f052f3e41302a42c691089727ff
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: d84752afd5579216272895f750522a8f38ece34a
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769645"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030800"
 ---
 # <a name="tvos-resources-and-data-storage-in-xamarin"></a>Recursos de tvOS e armazenamento de dados no Xamarin
 
@@ -22,7 +22,7 @@ _Este artigo aborda como trabalhar com recursos e armazenamento de dados persist
 
 ## <a name="tvos-resource-limitations"></a>Limitações de recursos do tvOS
 
-Ao contrário dos dispositivos iOS, a nova Apple TV fornece armazenamento local persistente extremamente limitado para aplicativos ou dados tvOS. Para itens muito pequenos (como preferências do usuário), seu aplicativo tvOS ainda tem acesso a `NSUserDefaults` com um [limite de 500 KB de dados](https://forums.developer.apple.com/message/50696#50696). No entanto, se seu aplicativo Xamarin. tvOS precisar manter maiores quantidades de informações, ele deverá armazenar e recuperar esses dados do [icloud](#iCloud-Data-Storage).
+Ao contrário dos dispositivos iOS, a nova Apple TV fornece armazenamento local persistente extremamente limitado para aplicativos ou dados tvOS. Para itens muito pequenos (como as preferências do usuário), seu aplicativo tvOS ainda tem acesso a `NSUserDefaults` com um [limite de 500 KB de dados](https://forums.developer.apple.com/message/50696#50696). No entanto, se seu aplicativo Xamarin. tvOS precisar manter maiores quantidades de informações, ele deverá armazenar e recuperar esses dados do [icloud](#iCloud-Data-Storage).
 
 Além disso, o tvOS limita o tamanho de um aplicativo da Apple TV para 200 MB. Se seu aplicativo exigir recursos além desse tamanho, eles precisarão ser empacotados e carregados usando [recursos sob demanda](#On-Demand-Resources) (até um 2 GB adicional). Devido a essas limitações, é essencial que você tenha tempo de download de ativos adicionais corretamente para fornecer a melhor experiência para os usuários do seu aplicativo. Para obter mais informações, consulte o [Guia de recursos sob demanda](https://developer.apple.com/library/prerelease/tvos/documentation/FileManagement/Conceptual/On_Demand_Resources_Guide/index.html#//apple_ref/doc/uid/TP40015083)da Apple.
 

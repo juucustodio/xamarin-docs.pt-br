@@ -6,15 +6,15 @@ ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: 61ba3a7e-fe11-4439-8bc8-9809512b8eff
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 10/05/2018
-ms.openlocfilehash: f29001d00a8071c213641d0337f1e8f307ca8afa
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 0fa6c05b3aa90f1d1875b9169350b197d882d863
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70281766"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73023257"
 ---
 # <a name="hello-ios--deep-dive"></a>Hello, iOS – Aprofundamento
 
@@ -30,7 +30,7 @@ O Visual Studio para Mac é um IDE gratuito de software livre que combina funcio
 
 O Visual Studio para Mac segue a prática do Visual Studio de organizar o código em *soluções* e *projetos*. Uma solução é um contêiner que pode conter um ou mais projetos. Um projeto pode ser um aplicativo (por exemplo, iOS ou Android), uma biblioteca com suporte, um aplicativo de teste e muito mais. No aplicativo Phoneword, um novo projeto de iPhone foi adicionado usando o modelo de **Aplicativo de exibição única**. A solução inicial tinha esta aparência:
 
-![](hello-ios-deepdive-images/image30.png "Uma captura de tela da solução inicial")
+![](hello-ios-deepdive-images/image30.png "A screenshot of the initial solution")
 
 ::: zone-end
 ::: zone pivot="windows"
@@ -41,7 +41,7 @@ O Visual Studio é um IDE avançado da Microsoft. Ele conta com um designer visu
 
 O Visual Studio organiza o código em soluções e projetos. Uma solução é um contêiner que pode conter um ou mais projetos. Um projeto pode ser um aplicativo (por exemplo, iOS ou Android), uma biblioteca com suporte, um aplicativo de teste e muito mais. No aplicativo Phoneword, um novo projeto de iPhone foi adicionado usando o modelo de **Aplicativo de exibição única**. A solução inicial tinha esta aparência:
 
-![](hello-ios-deepdive-images/vs-image30.png "Uma captura de tela da solução inicial")
+![](hello-ios-deepdive-images/vs-image30.png "A screenshot of the initial solution")
 
 ::: zone-end
 
@@ -51,14 +51,14 @@ O Visual Studio organiza o código em soluções e projetos. Uma solução é um
 
 À esquerda está o **Painel de soluções**, que contém a estrutura de diretórios e todos os arquivos associados à solução:
 
-![](hello-ios-deepdive-images/image31.png "O Painel de soluções, que contém a estrutura de diretórios e todos os arquivos associados à solução")
+![](hello-ios-deepdive-images/image31.png "The solution Pad, which contains the directory structure and all the files associated with the solution")
 
 ::: zone-end
 ::: zone pivot="windows"
 
 À direita está o **Painel da solução**, que contém a estrutura de diretórios e todos os arquivos associados à solução:
 
-![](hello-ios-deepdive-images/vs-image31.png "O Painel da solução, que contém a estrutura de diretórios e todos os arquivos associados à solução")
+![](hello-ios-deepdive-images/vs-image31.png "The solution Pane, which contains the directory structure and all the files associated with the solution")
 
 ::: zone-end
 
@@ -81,7 +81,7 @@ Antes que um aplicativo iOS possa carregar uma interface do usuário, duas coisa
 
 Esta seção estuda as relações ilustradas no diagrama a seguir:
 
-[![](hello-ios-deepdive-images/image32.png "As relações dos conceitos básicos de arquitetura e aplicativo estão ilustradas neste diagrama")](hello-ios-deepdive-images/image32.png#lightbox)
+[![](hello-ios-deepdive-images/image32.png "The Architecture and App Fundamentals relationships are illustrated in this diagram")](hello-ios-deepdive-images/image32.png#lightbox)
 
 ### <a name="main-method"></a>método Main
 
@@ -146,28 +146,28 @@ O Designer do iOS é uma ferramenta visual para criar interfaces do usuário no 
 
 ::: zone pivot="macos"
 
-![](hello-ios-deepdive-images/image33.png "Interface do Designer do iOS")
+![](hello-ios-deepdive-images/image33.png "iOS Designer Interface")
 
 Um *Storyboard* é um arquivo que contém os designs visuais das telas do nosso aplicativo, bem como as transições e as relações entre as telas. A representação da tela de um aplicativo em um Storyboard é chamada de _cena_. Cada cena representa um controlador de exibição e a pilha de exibições que ele gerencia (hierarquia de exibição de conteúdo). Quando um novo projeto de **Aplicativo de exibição única** é criado de um modelo, o Visual Studio para Mac gera automaticamente um arquivo de storyboard denominado `Main.storyboard` e o preenche com uma única cena, conforme ilustrado pela captura de tela abaixo:
 
-![](hello-ios-deepdive-images/image34.png "O Visual Studio para Mac gera automaticamente um arquivo do storyboard chamado Main.storyboard e o preenche com uma única cena")
+![](hello-ios-deepdive-images/image34.png "Visual Studio for Mac automatically generates a Storyboard file called Main.storyboard and populates it with a single Scene")
 
 A barra preta na parte inferior da tela do storyboard pode ser selecionada para escolher o controlador de exibição da cena. O controlador de exibição é uma instância da classe `UIViewController` que contém o código subjacente para a hierarquia de exibição de conteúdo. Propriedades nesse controlador de exibição podem ser exibidas e definidas dentro do **Painel de Propriedades**, conforme ilustrado pela captura de tela abaixo:
 
-![](hello-ios-deepdive-images/image35.png "O painel Propriedades")
+![](hello-ios-deepdive-images/image35.png "The Properties Pane")
 
 ::: zone-end
 ::: zone pivot="windows"
 
-![](hello-ios-deepdive-images/vs-image33.png "Interface do Designer do iOS")
+![](hello-ios-deepdive-images/vs-image33.png "iOS Designer Interface")
 
 Um *Storyboard* é um arquivo que contém os designs visuais das telas do nosso aplicativo, bem como as transições e as relações entre as telas. A representação da tela de um aplicativo em um Storyboard é chamada de _cena_. Cada cena representa um controlador de exibição e a pilha de exibições que ele gerencia (hierarquia de exibição de conteúdo). Quando um novo projeto de **Aplicativo de exibição única** é criado de um modelo, o Visual Studio gera automaticamente um arquivo de storyboard denominado `Main.storyboard` e preenche-o com uma única cena, conforme ilustrado pela captura de tela abaixo:
 
-![](hello-ios-deepdive-images/vs-image34.png "O Visual Studio gera automaticamente um arquivo do storyboard chamado Main.storyboard e o preenche com uma única cena")
+![](hello-ios-deepdive-images/vs-image34.png "Visual Studio automatically generates a Storyboard file called Main.storyboard and populates it with a single Scene")
 
 A barra na parte inferior da tela do storyboard pode ser selecionada para escolher o controlador de exibição da cena. O controlador de exibição é uma instância da classe `UIViewController` que contém o código subjacente para a hierarquia de exibição de conteúdo. Propriedades nesse controlador de exibição podem ser exibidas e definidas dentro do **Painel Propriedades**, conforme ilustrado pela captura de tela abaixo:
 
-![](hello-ios-deepdive-images/vs-image35.png "O painel Propriedades")
+![](hello-ios-deepdive-images/vs-image35.png "The Properties Pane")
 
 ::: zone-end
 
@@ -175,7 +175,7 @@ A _Exibição_ pode ser selecionada clicando dentro da parte branca da cena. A e
 
 À esquerda da cena há uma seta cinza com um ícone de sinalizador, conforme ilustrado pela captura de tela abaixo:
 
- [![](hello-ios-deepdive-images/image37.png "Uma seta cinza com um ícone de sinalizador")](hello-ios-deepdive-images/image37.png#lightbox)
+ [![](hello-ios-deepdive-images/image37.png "A gray arrow with a flag icon")](hello-ios-deepdive-images/image37.png#lightbox)
 
 A seta cinza representa uma transição de storyboard chamada *Segue* (pronuncia-se "seg-uêi"). Como este segue não tem nenhuma origem, ele é chamado de *Segue sem origem*. Um segue sem origem aponta para a primeira cena cujas exibições são carregadas na janela do aplicativo na inicialização do aplicativo. A cena e as exibições dentro dela serão a primeira coisa que o usuário verá quando o aplicativo for carregado.
 
@@ -183,12 +183,12 @@ Ao criar uma interface do usuário, exibições adicionais podem ser arrastadas 
 
 ::: zone pivot="macos"
 
-![](hello-ios-deepdive-images/image38.png "As exibições adicionais podem ser arrastadas da caixa de ferramentas para a exibição principal na superfície de design")
+![](hello-ios-deepdive-images/image38.png "Additional Views can be dragged from the Toolbox onto the main View on the design surface")
 
 ::: zone-end
 ::: zone pivot="windows"
 
-![](hello-ios-deepdive-images/vs-image38.png "As exibições adicionais podem ser arrastadas da caixa de ferramentas para a exibição principal na superfície de design")
+![](hello-ios-deepdive-images/vs-image38.png "Additional Views can be dragged from the Toolbox onto the main View on the design surface")
 
 ::: zone-end
 
@@ -196,12 +196,12 @@ Essas exibições adicionais são chamadas de *subexibições*. Juntas, a exibi�
 
 ::: zone pivot="macos"
 
-![](hello-ios-deepdive-images/image39.png "O painel de estrutura de tópicos do documento")
+![](hello-ios-deepdive-images/image39.png "The Document Outline pad")
 
 ::: zone-end
 ::: zone pivot="windows"
 
-![](hello-ios-deepdive-images/vs-image39.png "O painel de estrutura de tópicos do documento")
+![](hello-ios-deepdive-images/vs-image39.png "The Document Outline pad")
 
 ::: zone-end
 
@@ -209,12 +209,12 @@ As subexibições são realçadas no diagrama a seguir:
 
 ::: zone pivot="macos"
 
-![](hello-ios-deepdive-images/image40.png "As subexibições são realçadas no diagrama")
+![](hello-ios-deepdive-images/image40.png "The Subviews are highlighted in the diagram")
 
 ::: zone-end
 ::: zone pivot="windows"
 
-![](hello-ios-deepdive-images/vs-image40.png "As subexibições são realçadas no diagrama")
+![](hello-ios-deepdive-images/vs-image40.png "The Subviews are highlighted in the diagram")
 
 ::: zone-end
 
@@ -224,24 +224,24 @@ A próxima seção divide a hierarquia de exibição de conteúdo representado p
 
 Uma _hierarquia de exibição de conteúdo_ é uma pilha de exibições e subexibições gerenciadas por um único controlador de exibição, conforme ilustrado pelo diagrama a seguir:
 
- [![](hello-ios-deepdive-images/image41.png "A Hierarquia de exibição de conteúdo")](hello-ios-deepdive-images/image41.png#lightbox)
+ [![](hello-ios-deepdive-images/image41.png "The Content View Hierarchy")](hello-ios-deepdive-images/image41.png#lightbox)
 
 Podemos tornar mais fácil a visualização da hierarquia de exibição de conteúdo de nosso `ViewController` alterando temporariamente a cor da tela de fundo da exibição raiz para amarelo na seção de Exibição do **Painel Propriedades**, conforme ilustrado pela captura de tela abaixo:
 
 ::: zone pivot="macos"
 
-![](hello-ios-deepdive-images/image42.png "Alterar a cor da tela de fundo da exibição raiz para amarelo na seção de exibição do Painel de Propriedades")
+![](hello-ios-deepdive-images/image42.png "Changing the background color of the root View to yellow in the View section of the Properties Pad")
 
 ::: zone-end
 ::: zone pivot="windows"
 
-![](hello-ios-deepdive-images/vs-image42.png "Alterar a cor da tela de fundo da exibição raiz para amarelo na seção de exibição do Painel de Propriedades")
+![](hello-ios-deepdive-images/vs-image42.png "Changing the background color of the root View to yellow in the View section of the Properties Pad")
 
 ::: zone-end
 
 O diagrama a seguir ilustra as relações entre a janela, exibições, subexibições e controlador de exibição que levam a interface do usuário para a tela do dispositivo:
 
-[![](hello-ios-deepdive-images/image43.png "As relações entre a janela, as exibições, as subexibições e o controlador de exibição")](hello-ios-deepdive-images/image43.png#lightbox)
+[![](hello-ios-deepdive-images/image43.png "The relationships between the Window, Views, Subviews, and view controller")](hello-ios-deepdive-images/image43.png#lightbox)
 
 A próxima seção discute como trabalhar com exibições no código e aprender programação voltada à interação do usuário usando os controladores de exibição e o ciclo de vida da exibição.
 
@@ -255,22 +255,22 @@ Cada hierarquia de exibição de conteúdo tem um controlador de exibição corr
 
 O controlador de exibição é representado em um storyboard como uma barra na parte inferior da cena. Selecionar o controlador de exibição exibe suas propriedades no **Painel de Propriedades**:
 
-![](hello-ios-deepdive-images/image44.png "Com a seleção do controlador de exibição, as propriedades são exibidas no painel Propriedades")
+![](hello-ios-deepdive-images/image44.png "Selecting the view controller brings up its properties in the Properties Pane")
 
 Uma classe de controlador de exibição personalizada para a hierarquia de Exibição de conteúdo representada por essa cena pode ser definida por meio da edição da propriedade **Classe**, na seção **Identidade** do **Painel de Propriedades**. Por exemplo, nosso aplicativo **Phoneword** define o `ViewController` como o controlador de exibição para nossa primeira tela, conforme ilustrado pela captura de tela abaixo:
 
-![](hello-ios-deepdive-images/image45new.png "O aplicativo Phoneword define o ViewController como o controlador de exibição")
+![](hello-ios-deepdive-images/image45new.png "The Phoneword application sets the ViewController as the view controller")
 
 ::: zone-end
 ::: zone pivot="windows"
 
 O controlador de exibição é representado em um storyboard como uma barra na parte inferior da cena. Com a seleção do controlador de exibição, as propriedades são exibidas no **Painel Propriedades**:
 
-![](hello-ios-deepdive-images/vs-image44.png "Com a seleção do controlador de exibição, as propriedades são exibidas no painel Propriedades")
+![](hello-ios-deepdive-images/vs-image44.png "Selecting the view controller brings up its properties in the Properties Pane")
 
 Uma classe de controlador de exibição personalizada para a hierarquia de exibição de conteúdo representada por essa cena pode ser definida por meio da edição da propriedade **Classe**, na seção **Identidade** do **Painel Propriedades**. Por exemplo, nosso aplicativo **Phoneword** define o `ViewController` como o controlador de exibição para nossa primeira tela, conforme ilustrado pela captura de tela abaixo:
 
-![](hello-ios-deepdive-images/vs-image45.png "O aplicativo Phoneword define o ViewController como o controlador de exibição")
+![](hello-ios-deepdive-images/vs-image45.png "The Phoneword application sets the ViewController as the view controller")
 
 ::: zone-end
 
@@ -313,7 +313,7 @@ A função mais importante do controlador de exibição é responder a interaç�
 Vamos explorar como isso funciona.
 No projeto `Phoneword_iOS`, um botão chamado `TranslateButton` foi adicionado à hierarquia de exibição de conteúdo:
 
-[![](hello-ios-deepdive-images/image1.png "Um botão chamado TranslateButton foi adicionado à Hierarquia de exibição de conteúdo")](hello-ios-deepdive-images/image1.png#lightbox)
+[![](hello-ios-deepdive-images/image1.png "A button was added called TranslateButton to the Content View Hierarchy")](hello-ios-deepdive-images/image1.png#lightbox)
 
 Quando um **Name** é atribuído ao controle **Button** no **Painel Propriedades**, o Designer do iOS o mapeia automaticamente para um controle no **ViewController.designer.cs**, tornando o `TranslateButton` disponível dentro da classe `ViewController`. Controles serão disponibilizados primeiro no estágio `ViewDidLoad` do ciclo de vida de exibição, portanto, esse método de ciclo de vida é usado para responder ao toque do usuário:
 
@@ -420,36 +420,36 @@ Depois que o dispositivo é configurado você pode implantar para ele conectando
 
 ::: zone pivot="macos"
 
-![](hello-ios-deepdive-images/image46new.png "Pressionar Iniciar/Reproduzir")
+![](hello-ios-deepdive-images/image46new.png "Pressing Start/Play")
 
 ::: zone-end
 ::: zone pivot="windows"
 
-![](hello-ios-deepdive-images/vs-image46.png "Pressionar Iniciar/Reproduzir")
+![](hello-ios-deepdive-images/vs-image46.png "Pressing Start/Play")
 
 ::: zone-end
 
 O aplicativo será implantado no dispositivo iOS:
 
-[![](hello-ios-deepdive-images/image1.png "O aplicativo será implantado no dispositivo iOS e executado")](hello-ios-deepdive-images/image1.png#lightbox)
+[![](hello-ios-deepdive-images/image1.png "The app will deploy to the iOS device and run")](hello-ios-deepdive-images/image1.png#lightbox)
 
 ### <a name="generate-custom-icons-and-launch-images"></a>Gerar ícones personalizados e imagens de inicialização
 
-Nem todo mundo tem um designer disponível para criar os ícones personalizados e imagens de inicialização que um aplicativo precisa para se destacar. Aqui estão várias abordagens alternativas para gerar a arte final personalizada para o aplicativo:
+Nem todos têm um designer disponível para criar os ícones personalizados e iniciar imagens que um aplicativo precisa destacar. Aqui estão várias abordagens alternativas para gerar arte do aplicativo personalizado:
 
 ::: zone pivot="macos"
 
-- [**Sketch**](https://www.sketchapp.com") o Sketch é um aplicativo do Mac para criação de interfaces do usuário, ícones e muito mais. Este é o aplicativo que foi usado para criar o conjunto de Ícones e imagens de inicialização para aplicativos Xamarin. O Sketch 3 está disponível na App Store. Você pode experimentar a [Ferramenta Sketch](http://bohemiancoding.com/sketch/tool/) gratuita também.
-- [**Pixelmator**](http://www.pixelmator.com/) – uma imagem versátil editando o aplicativo para Mac que custa aproximadamente US$ 30.
-- [**Glyphish**](http://www.glyphish.com/) – conjuntos de ícones predefinidos de alta qualidade para download gratuito e para compra.
-- [**Fiverr**](http://www.fiverr.com/) – escolha dentre uma variedade de designers para criar um ícone definido para você, com valores partindo de US$ 5. Mesmo que os resultados com ele nem sempre sejam os esperados, trata-se de um bom recurso para quem precisa criar ícones rapidamente
+- [**Sketch**](https://www.sketchapp.com") o Sketch é um aplicativo do Mac para criação de interfaces do usuário, ícones e muito mais. Este é o aplicativo que foi usado para criar o conjunto de Ícones e imagens de inicialização para aplicativos Xamarin. O Sketch 3 está disponível na App Store. Você pode experimentar a [Ferramenta Sketch](https://bohemiancoding.com/sketch/tool/) gratuita também.
+- [**Pixelmator**](https://www.pixelmator.com/) – uma imagem versátil editando o aplicativo para Mac que custa aproximadamente US$ 30.
+- [**Glyphish**](https://www.glyphish.com/) – conjuntos de ícones predefinidos de alta qualidade para download gratuito e para compra.
+- [**Fiverr**](https://www.fiverr.com/) – escolha dentre uma variedade de designers para criar um ícone definido para você, com valores partindo de US$ 5. Mesmo que os resultados com ele nem sempre sejam os esperados, trata-se de um bom recurso para quem precisa criar ícones rapidamente
 
 ::: zone-end
 ::: zone pivot="windows"
 
 - Visual Studio – você pode usar isso para criar um conjunto de ícones simples para seu aplicativo diretamente no IDE.
-- [**Glyphish**](http://www.glyphish.com/) – conjuntos de ícones predefinidos de alta qualidade para download gratuito e para compra.
-- [**Fiverr**](http://www.fiverr.com/) – escolha dentre uma variedade de designers para criar um ícone definido para você, com valores partindo de US$ 5. Mesmo que os resultados com ele nem sempre sejam os esperados, trata-se de um bom recurso para quem precisa criar ícones rapidamente
+- [**Glyphish**](https://www.glyphish.com/) – conjuntos de ícones predefinidos de alta qualidade para download gratuito e para compra.
+- [**Fiverr**](https://www.fiverr.com/) – escolha dentre uma variedade de designers para criar um ícone definido para você, com valores partindo de US$ 5. Mesmo que os resultados com ele nem sempre sejam os esperados, trata-se de um bom recurso para quem precisa criar ícones rapidamente
 
 ::: zone-end
 

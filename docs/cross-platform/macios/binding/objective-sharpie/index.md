@@ -3,21 +3,21 @@ title: Criando associações com nitidez objetiva
 description: Esta seção fornece uma introdução à nitidez objetiva, ferramenta de linha de comando do Xamarin usada para automatizar o processo de criação de uma associação a uma biblioteca Objective-C
 ms.prod: xamarin
 ms.assetid: 9C0A932C-7601-4357-B3F7-62ABAC835019
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 10/11/2017
-ms.openlocfilehash: d5b9fa1edc09b831dbc69ab092dfb5270942e67a
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 4d6ab6cf48c5c365a4d8d05ef108a4d3a5d16134
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70765705"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016188"
 ---
 # <a name="creating-bindings-with-objective-sharpie"></a>Criando associações com nitidez objetiva
 
 _Esta seção fornece uma introdução à nitidez objetiva, ferramenta de linha de comando do Xamarin usada para automatizar o processo de criação de uma associação a uma biblioteca Objective-C_
 
-- [Histórico](#history) &  [de visão geral](#overview)
+- [Histórico](#history) de & de [visão geral](#overview)
 - [Introdução](get-started.md)
 - [Ferramentas e comandos](tools.md)
 - [Recursos](platform/index.md)
@@ -25,7 +25,7 @@ _Esta seção fornece uma introdução à nitidez objetiva, ferramenta de linha 
 - [Concluir instruções](~/ios/platform/binding-objective-c/walkthrough.md)
 - [Histórico de versões](releases.md)
 
-## <a name="overview"></a>Visão geral
+## <a name="overview"></a>Visão Geral
 
 A Sharpde objetiva é uma ferramenta de linha de comando para ajudar a inicializar a primeira passagem de uma associação.
 Ele funciona analisando os arquivos de cabeçalho de uma biblioteca nativa para mapear a API pública para a [definição de associação](~/cross-platform/macios/binding/objective-c-libraries.md#The_API_definition_file) (um processo que anteriormente era feito manualmente).
@@ -44,7 +44,7 @@ No entanto, a nitidez objetiva é uma ferramenta muito avançada que requer conh
 ## <a name="related-links"></a>Links relacionados
 
 - [Download de nitidez do objetivo](https://aka.ms/objective-sharpie)
-- [Passo a passo: Associando uma biblioteca Objective-C](~/ios/platform/binding-objective-c/walkthrough.md)
+- [Walkthrough: associando uma biblioteca Objective-C](~/ios/platform/binding-objective-c/walkthrough.md)
 - [Associação de bibliotecas de Objective-C](~/cross-platform/macios/binding/objective-c-libraries.md)
 - [Detalhes da Associação](~/cross-platform/macios/binding/overview.md)
 - [Guia de referência de tipos de associação](~/cross-platform/macios/binding/binding-types-reference.md)

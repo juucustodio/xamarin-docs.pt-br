@@ -1,35 +1,35 @@
 ---
-title: Using UrhoSharp To Build A 3D Game
-description: Este documento fornece uma visão geral do UrhoSharp, descrevendo as cenas, componentes, formas, câmeras, ações, entrada do usuário, som e muito mais.
+title: Usando o UrhoSharp para criar um jogo 3D
+description: Este documento fornece uma visão geral do UrhoSharp, descrevendo cenas, componentes, formas, câmeras, ações, entrada do usuário, som e muito mais.
 ms.prod: xamarin
 ms.assetid: D9BEAD83-1D9E-41C3-AD4B-3D87E13674A0
 author: conceptdev
 ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: 7307f7dcfcc6b5e2576ce4b425879ae05c5a6056
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: cb4e524977b53f1a17552298c509d43ccf460f08
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67832666"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73011645"
 ---
-# <a name="using-urhosharp-to-build-a-3d-game"></a>Usar UrhoSharp para criar um jogo 3D
+# <a name="using-urhosharp-to-build-a-3d-game"></a>Usando o UrhoSharp para criar um jogo 3D
 
-Antes de escrever seu primeiro jogo, você deseja Familiarize-se com as Noções básicas: como configurar sua cena, como carregar recursos (que contém sua arte final) e como criar interações simples para o seu jogo.
+Antes de escrever seu primeiro jogo, você deseja se familiarizar com os conceitos básicos: como configurar sua cena, como carregar recursos (isso contém o seu trabalho artístico) e como criar interações simples para seu jogo.
 
 <a name="scenenodescomponentsandcameras"/>
 
-## <a name="scenes-nodes-components-and-cameras"></a>Nos bastidores, nós, componentes e câmeras
+## <a name="scenes-nodes-components-and-cameras"></a>Cenas, nós, componentes e câmeras
 
-O modelo de cena pode ser descrito como um grafo de cena baseadas em componentes. A cena consiste em uma hierarquia de nós da cena, começando a partir do nó raiz, que também representa a cena inteira. Cada `Node` tem uma transformação 3D (posição, rotação e escala), um nome, uma ID, além de um número arbitrário de componentes.  Componentes coloque um nó à vida, eles podem tornar a adicionar uma representação visual (`StaticModel`), eles podem emitir um som (`SoundSource`), eles podem fornecer um limite de colisão e assim por diante.
+O modelo de cena pode ser descrito como um grafo de cena baseado em componente. A cena consiste em uma hierarquia de nós de cena, a partir do nó raiz, que também representa toda a cena. Cada `Node` tem uma transformação 3D (posição, rotação e escala), um nome, uma ID, além de um número arbitrário de componentes.  Os componentes levam um nó à vida, eles podem fazer com que o adicione uma representação visual (`StaticModel`), eles podem emitir som (`SoundSource`), eles podem fornecer um limite de colisão e assim por diante.
 
-Você pode criar suas cenas e nós de instalação usando o [Urho Editor](#urhoeditor), ou você pode fazer coisas do seu código c#.  Neste documento, exploraremos o uso de código, definindo as configurações conforme elas ilustram os elementos necessários para colocar as coisas sejam exibidos na tela
+Você pode criar seus bastidores e configurar nós usando o [Editor Urho](#urhoeditor)ou pode fazer coisas do seu C# código.  Neste documento, exploraremos as configurações que usam o código, pois ilustram os elementos necessários para que as coisas sejam exibidas na tela
 
-Além de configurar sua cena, é preciso configurar um `Camera`, isso é o que determina o que será obter mostrado ao usuário.
+Além de configurar sua cena, você precisa configurar um `Camera`, isso é o que determina o que será mostrado ao usuário.
 
-### <a name="setting-up-your-scene"></a>Como configurar sua cena
+### <a name="setting-up-your-scene"></a>Configurando sua cena
 
-Você normalmente criaria este formulário seu método de início:
+Normalmente, você criaria esse formulário o método Start:
 
 ```csharp
 var scene = new Scene ();
@@ -53,7 +53,7 @@ planeObject.SetMaterial(ResourceCache.GetMaterial("Materials/StoneTiled.xml"));
 
 ### <a name="components"></a>Componentes
 
-Renderizar objetos 3D, a reprodução de som, física e lógica de scripts atualizações são todos habilitadas com a criação de diferentes componentes em nós chamando `CreateComponent<T>()`.  Por exemplo, configuração de seu nó e o componente de luz como este:
+A renderização de objetos 3D, reprodução de som, física e atualizações de lógica com script são habilitadas criando componentes diferentes para os nós chamando `CreateComponent<T>()`.  Por exemplo, configure o nó e o componente de luz como este:
 
 ```csharp
 // Create a directional light to the world so that we can see something. The
@@ -65,30 +65,30 @@ var lightNode = scene.CreateChild("DirectionalLight");
 lightNode.SetDirection (new Vector3(0.6f, -1.0f, 0.8f));
 ```
 
-Que criamos acima de um nó com o nome "`DirectionalLight`" e definir uma direção para ele, mas nada mais.  Agora, podemos pode transformar o nó acima em um nó de emissão de luz, anexando uma `Light` componente a ele, com `CreateComponent`:
+Nós criamos acima de um nó com o nome "`DirectionalLight`" e definimos uma direção para ele, mas nada mais.  Agora, podemos transformar o nó acima em um nó emissor claro, anexando um componente `Light` a ele, com `CreateComponent`:
 
 ```csharp
 var light = lightNode.CreateComponent<Light>();
 ```
 
-Os componentes criados para o `Scene` em si desempenham um papel especial: para implementar a funcionalidade de toda a cena. Eles devem ser criados antes de todos os outros componentes e incluem o seguinte:
+Os componentes criados no `Scene` em si têm uma função especial: para implementar a funcionalidade em toda a cena. Eles devem ser criados antes de todos os outros componentes e incluem o seguinte:
 
- `Octree`: implementa o particionamento espacial e acelerada consultas de visibilidade. Sem esse 3D objetos não podem ser renderizados.
- `PhysicsWorld`: implementa a simulação de física. Como os componentes de física `RigidBody` ou `CollisionShape` pode não funcionar corretamente sem isso.
- `DebugRenderer`: implementa depurar a renderização de geometria.
+ `Octree`: implementa particionamento espacial e consultas de visibilidade aceleradas. Sem esses objetos 3D não podem ser renderizados.
+ `PhysicsWorld`: implementa a simulação física. Componentes de física, como `RigidBody` ou `CollisionShape`, não podem funcionar corretamente sem isso.
+ `DebugRenderer`: implementa a renderização de geometria de depuração.
 
-Componentes comuns, como `Light`, `Camera` ou `StaticModel`
-não devem ser criadas diretamente para o `Scene`, mas em vez disso, em nós filho.
+Componentes comuns como `Light`, `Camera` ou `StaticModel`
+Não deve ser criado diretamente no `Scene`, mas sim em nós filho.
 
-A biblioteca vem com uma ampla variedade de componentes que você pode anexar a seus nós para colocá-las de vida: elementos visíveis ao usuário (modelos), sons, corpos rígidos, formas de colisão, câmeras, fontes de luz, emissores de partículas e muito mais.
+A biblioteca vem com uma ampla variedade de componentes que você pode anexar a seus nós para levá-los à vida: elementos visíveis ao usuário (modelos), sons, corpos rígidos, formas de colisão, câmeras, fontes leves, emissores de partículas e muito mais.
 
 ### <a name="shapes"></a>Formas
 
-Como uma conveniência, várias formas estão disponíveis como nós simples no namespace Urho.Shapes.  Isso inclui caixas, esferas, cones, cilindros e planos.
+Como uma conveniência, várias formas estão disponíveis como nós simples no namespace Urho. Shapes.  Isso inclui caixas, cones, cilindros e planos.
 
-### <a name="camera-and-viewport"></a>Câmera e o visor
+### <a name="camera-and-viewport"></a>Câmera e visor
 
-Assim como a luz, câmeras são componentes, portanto, você precisará anexar o componente a um nó, como este:
+Assim como a luz, as câmeras são componentes, portanto, você precisará anexar o componente a um nó, desta forma:
 
 ```csharp
 var CameraNode = scene.CreateChild ("camera");
@@ -96,7 +96,7 @@ camera = CameraNode.CreateComponent<Camera>();
 CameraNode.Position = new Vector3 (0, 5, 0);
 ```
 
-Com isso, você criou uma câmera e você tenha colocado a câmera no mundo 3D, a próxima etapa é informar o `Application` que se trata a câmera que você deseja usar, isso é feito com o código a seguir:
+Com isso, você criou uma câmera e colocou a câmera no mundo 3D, a próxima etapa é informar ao `Application` que essa é a câmera que você deseja usar, isso é feito com o seguinte código:
 
 ```csharp
 Renderer.SetViewPort (0, new Viewport (Context, scene, camera, null))
@@ -104,64 +104,64 @@ Renderer.SetViewPort (0, new Viewport (Context, scene, camera, null))
 
 E agora você deve ser capaz de ver os resultados da sua criação.
 
-### <a name="identification-and-scene-hierarchy"></a>Hierarquia de identificação e a cena
+### <a name="identification-and-scene-hierarchy"></a>Identificação e hierarquia de cena
 
-Ao contrário de nós, os componentes não têm nomes; componentes dentro do mesmo nó somente são identificados por seu tipo e o índice na lista de componentes do nó, que será preenchida na ordem de criação, por exemplo, você pode recuperar o `Light` componente do `lightNode` acima do objeto como este:
+Ao contrário dos nós, os componentes não têm nomes; os componentes dentro do mesmo nó são identificados apenas pelo seu tipo e índice na lista de componentes do nó, que é preenchida na ordem de criação, por exemplo, você pode recuperar o componente `Light` fora do objeto `lightNode` acima da seguinte maneira:
 
 ```csharp
 var myLight = lightNode.GetComponent<Light>();
 ```
 
-Você também pode obter uma lista de todos os componentes, recuperando os `Components` propriedade que retorna um `IList<Component>` que você pode usar.
+Você também pode obter uma lista de todos os componentes recuperando a propriedade `Components` que retorna uma `IList<Component>` que você pode usar.
 
-Quando criado, nós e componentes de obtém IDs de inteiro global de cena. Eles podem ser consultados de cena usando as funções `GetNode(uint id)` e `GetComponent(uint id)`. Isso é muito mais rápido do que fazer por exemplo recursivo de consultas do nó de cena com base no nome.
+Quando criado, os nós e os componentes obtêm IDs de inteiros globais de cena. Eles podem ser consultados a partir da cena usando as funções `GetNode(uint id)` e `GetComponent(uint id)`. Isso é muito mais rápido do que, por exemplo, fazer consultas de nó de cena com base no nome recursivo.
 
-Não há nenhum conceito interno de uma entidade ou um objeto do jogo; em vez disso, é responsabilidade do programador para decidir a hierarquia de nós e em quais nós colocar qualquer lógica de scripts. Normalmente, movendo a liberar objetos no mundo 3D seriam criados como filhos do nó raiz. Nós podem ser criados com ou sem um nome usando `CreateChild`. Exclusividade dos nomes de nó não é imposta.
+Não há um conceito interno de um objeto de entidade ou de jogo; em vez disso, o programador deve decidir a hierarquia de nós e em quais nós colocá-las em qualquer lógica de script. Normalmente, os objetos de movimentação livre no mundo 3D seriam criados como filhos do nó raiz. Os nós podem ser criados com ou sem um nome usando `CreateChild`. A exclusividade dos nomes de nó não é imposta.
 
-Sempre que houver alguns composição hierárquica, é recomendado (e de fato necessário, porque os componentes não têm suas próprias transformações 3D) para criar um nó filho.
+Sempre que houver uma composição hierárquica, é recomendável (e, na verdade, necessário, porque os componentes não têm suas próprias transformações 3D) para criar um nó filho.
 
-Por exemplo se um caractere estava mantendo um objeto em sua mão, o objeto deve ter seu próprio nó, o que seria como pai para funções básicas de mão do caractere (também um `Node`).  A exceção é a física `CollisionShape`, que pode ser offsetted e girado individualmente em relação ao nó.
+Por exemplo, se um caractere estava segurando um objeto por sua mão, o objeto deve ter seu próprio nó, que seria pai do Bone à mão do caractere (também uma `Node`).  A exceção é a `CollisionShape`física, que pode ser offsettedda e girada individualmente em relação ao nó.
 
-Observe que `Scene`do proprietário transformação propositadamente será ignorada como uma otimização ao calcular as transformações de mundo derivado de nós filho, portanto, a alteração não tem nenhum efeito e deve ser deixado como está (posição na origem, nenhuma rotação, nenhum dimensionamento).
+Observe que `Scene`própria transformação é intencionalmente ignorada como uma otimização ao calcular transformações derivadas mundiais de nós filho, portanto, alterá-la não tem nenhum efeito e deve ser deixada como está (posição na origem, sem rotação, sem dimensionamento).
 
-`Scene` nós podem ser reassociados livremente. Por outro lado componentes pertencem sempre para o nó anexado a e não podem ser movidos entre nós. Nós e componentes fornecem uma `Remove` função para fazer isso sem ter que passar por meio do pai. Depois que o nó for removido, nenhuma operação no nó ou componente em questão é seguras depois de chamar essa função.
+`Scene` nós podem ser repais livremente. Os componentes em contraste sempre pertencem ao nó ao qual eles se conectaram e não podem ser movidos entre nós. Ambos os nós e componentes fornecem uma função `Remove` para fazer isso sem precisar passar pelo pai. Depois que o nó for removido, nenhuma operação no nó ou componente em questão será segura depois de chamar essa função.
 
-Também é possível criar um `Node` que não pertence a uma cena. Isso é útil por exemplo com uma câmera movendo em uma cena que pode ser carregada ou salvos, porque, em seguida, a câmera não serão salvos juntamente com a cena real e não será destruída quando a cena é carregada. No entanto, observe que Criando componentes de geometria, física ou script em um nó desanexado e, em seguida, movê-lo em uma cena posteriormente fará com que esses componentes não funcione corretamente.
+Também é possível criar um `Node` que não pertença a uma cena. Isso é útil, por exemplo, com uma câmera que se move em uma cena que pode ser carregada ou salva, pois, em seguida, a câmera não será salva junto com a cena real e não será destruída quando a cena for carregada. No entanto, observe que criar geometria, física ou componentes de script para um nó desanexado e, em seguida, movê-lo para uma cena mais tarde fará com que esses componentes não funcionem corretamente.
 
 ### <a name="scene-updates"></a>Atualizações de cena
 
-Uma cena cujas atualizações estão habilitadas (padrão) será atualizado automaticamente em cada iteração do loop principal.  O aplicativo `SceneUpdate` manipulador de eventos é invocado.
+Uma cena cujas atualizações estão habilitadas (padrão) será atualizada automaticamente em cada iteração de loop principal.  O manipulador de eventos de `SceneUpdate` do aplicativo é invocado nele.
 
-Nós e os componentes podem ser excluídos da atualização de cena, desabilitá-las, consulte `Enabled`.  O comportamento depende do componente específico, mas, por exemplo, um componente desenhável a desabilitação também torna invisível, enquanto a desabilitação de um componente de origem som retira a ele. Se um nó estiver desabilitado, todos os seus componentes são tratados como desabilitados, independentemente de seu próprio estado habilitar/desabilitar.
+Nós e componentes podem ser excluídos da atualização de cena desabilitando-os, consulte `Enabled`.  O comportamento depende do componente específico, mas, por exemplo, desabilitar um componente desenhável também o torna invisível, ao mesmo tempo em que a desabilitação de um componente de origem de som o desativa. Se um nó estiver desabilitado, todos os seus componentes serão tratados como desabilitados, independentemente de seu próprio estado de Habilitação/desabilitação.
 
-## <a name="adding-behavior-to-your-components"></a>Adicionando o comportamento para os seus componentes
+## <a name="adding-behavior-to-your-components"></a>Adicionando o comportamento aos seus componentes
 
-A melhor maneira de estruturar seu jogo é fazer com que seu próprio componente que encapsulam um ator ou um elemento em seu jogo.  Isso faz com que o recurso autocontido, de que os ativos utilizados para exibi-lo, ao seu comportamento.
+A melhor maneira de estruturar seu jogo é tornar seu próprio componente que encapsula um ator ou elemento em seu jogo.  Isso torna o recurso autocontido, dos ativos usados para exibi-lo, ao seu comportamento.
 
-A maneira mais simples de Adicionar comportamento a um componente é usar as ações, que são instruções que você pode enfileirar e combinar isso com programação assíncrona em c#.  Isso permite que o comportamento de seu componente possa ser de nível muito alto e torna mais simples de entender o que está acontecendo.
+A maneira mais simples de adicionar comportamento a um componente é usar ações, que são instruções que você pode colocar em fila e combiná- C# las com programação assíncrona.  Isso permite que o comportamento do seu componente seja de nível muito alto e torna mais simples entender o que está acontecendo.
 
-Como alternativa, você pode controlar exatamente o que acontece ao seu componente Atualizando propriedades do componente em cada quadro (discutido na seção de comportamento baseado em quadro).
+Como alternativa, você pode controlar exatamente o que acontece com seu componente atualizando suas propriedades de componente em cada quadro (discutido na seção comportamento baseado em quadro).
 
 ### <a name="actions"></a>Ações
 
-Você pode adicionar comportamento para nós muito facilmente usando as ações.  Ações podem alterar várias propriedades de nó e executá-los em um período de tempo ou repeti-los várias vezes com uma curva de animação determinada.
+Você pode adicionar comportamento a nós com muito facilidade usando ações.  As ações podem alterar várias propriedades de nó e executá-las em um período de tempo ou repeti-las várias vezes com uma determinada curva de animação.
 
-Por exemplo, considere um nó de "nuvem" na sua cena, você pode fazer o fade-lo assim:
+Por exemplo, considere um nó "nuvem" em sua cena, você pode esmaecer assim:
 
 ```csharp
 await cloud.RunActionsAsync (new FadeOut (duration: 3))
 ```
 
-Ações são objetos imutáveis, que permite que você reutilize a ação para impulsionar diferentes objetos.
+As ações são objetos imutáveis, o que permite que você reutilize a ação para conduzir diferentes objetos.
 
-Uma linguagem comum é criar uma ação que executa a operação inversa:
+Um idioma comum é criar uma ação que execute a operação inversa:
 
 ```csharp
 var gotoExit = new MoveTo (duration: 3, position: exitLocation);
 var return = gotoExit.Reverse ();
 ```
 
-O exemplo a seguir seria esmaecer o objeto para você por um período de três segundos.  Você também pode executar uma ação após o outro, por exemplo, você poderia primeiro mover a nuvem e, em seguida, ocultá-lo:
+O exemplo a seguir esmaecerá o objeto por um período de três segundos.  Você também pode executar uma ação depois de outra, por exemplo, você pode primeiro mover a nuvem e, em seguida, ocultá-la:
 
 ```csharp
 await cloud.RunActionsAsync (
@@ -169,7 +169,7 @@ await cloud.RunActionsAsync (
     new FadeOut (duration: 3));
 ```
 
-Se você quiser que as duas ações ocorram ao mesmo tempo, pode usar a ação paralela e fornecer as ações que você deseja feitas em paralelo:
+Se você quiser que ambas as ações ocorram ao mesmo tempo, poderá usar a ação paralela e fornecer todas as ações que você deseja que sejam executadas em paralelo:
 
 ```csharp
   await cloud.RunActionsAsync (
@@ -178,29 +178,29 @@ Se você quiser que as duas ações ocorram ao mesmo tempo, pode usar a ação p
       new FadeOut (duration: 3)));
 ```
 
-No exemplo acima, a nuvem moverá e fade out ao mesmo tempo.
+No exemplo acima, a nuvem será movida e esmaeceda ao mesmo tempo.
 
-Você observará que eles estão usando C# `await`, que permite que você pense linearmente sobre o comportamento que você deseja atingir.
+Você observará que eles estão usando C#`await`, o que permite que você pense linearmente sobre o comportamento que você deseja obter.
 
 ### <a name="basic-actions"></a>Ações básicas
 
-Estas são as ações com suporte no UrhoSharp:
+Essas são as ações com suporte no UrhoSharp:
 
-- Movimentação de nós: `MoveTo`, `MoveBy`, `Place`, `BezierTo`, `BezierBy`, `JumpTo`, `JumpBy`
-- Girando nós: `RotateTo`, `RotateBy`
-- O dimensionamento de nós: `ScaleTo`, `ScaleBy`
+- Movendo nós: `MoveTo`, `MoveBy`, `Place`, `BezierTo`, `BezierBy`, `JumpTo`, `JumpBy`
+- Nós em rotação: `RotateTo`, `RotateBy`
+- Dimensionando nós: `ScaleTo`, `ScaleBy`
 - Nós de esmaecimento: `FadeIn`, `FadeTo`, `FadeOut`, `Hide`, `Blink`
 - Tonalidade: `TintTo`, `TintBy`
-- Momentos: `Hide`, `Show`, `Place`, `RemoveSelf`, `ToggleVisibility`
+- Instantâneos: `Hide`, `Show`, `Place`, `RemoveSelf`, `ToggleVisibility`
 - Looping: `Repeat`, `RepeatForever`, `ReverseTime`
 
-Outros recursos avançados incluem a combinação da `Spawn` e `Sequence` ações.
+Outros recursos avançados incluem a combinação das ações de `Spawn` e `Sequence`.
 
-### <a name="easing---controlling-the-speed-of-your-actions"></a>Atenuação - controlar a velocidade de suas ações
+### <a name="easing---controlling-the-speed-of-your-actions"></a>Facilitando o controle da velocidade de suas ações
 
-A atenuação é uma maneira que direciona a maneira que a animação será Desdobrar, e ele pode fazer muito mais agradável suas animações.  Por padrão suas ações terá um comportamento linear, por exemplo um `MoveTo` ação teria uma movimentação muito robótica.  Você pode dispor suas ações em uma ação de suavização para alterar o comportamento, por exemplo, o que seria lentamente iniciar a movimentação, acelerar e lentamente chegar ao fim (`EasyInOut`).
+A atenuação é uma maneira que direciona a maneira como a animação se desdobrará e pode tornar suas animações muito mais agradáveis.  Por padrão, suas ações terão um comportamento linear, por exemplo, uma ação `MoveTo` teria uma movimentação muito robótica.  Você pode encapsular suas ações em uma ação de atenuação para alterar o comportamento, por exemplo, uma que iniciaria lentamente a movimentação, acelerar e atingir o final (`EasyInOut`) lentamente.
 
-Você pode fazer isso, encapsulando uma ação existente em uma ação de easing, por exemplo:
+Você faz isso encapsulando uma ação existente em uma ação de atenuação, por exemplo:
 
 ```csharp
 await cloud.RunActionAsync (
@@ -208,14 +208,14 @@ await cloud.RunActionAsync (
      new MoveTo (duration: 3, position: new Vector (0,0,15)), rate:1))
 ```
 
-Há muitos modos de atenuação, o gráfico a seguir mostra os vários tipos de easing e seu comportamento no valor do objeto que estão controlando no período de tempo, do início ao fim:
+Há muitos modos de atenuação, o gráfico a seguir mostra os vários tipos de atenuação e seu comportamento no valor do objeto que eles estão controlando no período de tempo, do início ao fim:
 
-![Modos de easing](using-images/easing.png "este gráfico mostra os vários tipos de easing e seu comportamento no valor do objeto que estão controlando no período de tempo")
+![Modos de atenuação](using-images/easing.png "Este gráfico mostra os vários tipos de atenuação e seu comportamento no valor do objeto que eles estão controlando durante o período de tempo")
 
-### <a name="using-actions-and-async-code"></a>Usando o código assíncrono e ações
+### <a name="using-actions-and-async-code"></a>Usando ações e código assíncrono
 
-No seu `Component` subclasse, você deverá apresentar um método assíncrono que prepara o comportamento do seu componente e a funcionalidade de discos para ele.
-Em seguida, você faria para invocar esse método usando a linguagem c# `await` palavra-chave de outra parte do seu programa qualquer um dos seus `Application.Start` método ou em resposta a um ponto de usuário ou a história em seu aplicativo.
+Em sua subclasse de `Component`, você deve introduzir um método assíncrono que prepara o comportamento do componente e conduz a funcionalidade para ele.
+Em seguida, você invocaria esse método C# usando a palavra-chave`await`de outra parte do seu programa, o método `Application.Start`ou em resposta a um usuário ou Story Point em seu aplicativo.
 
 Por exemplo:
 
@@ -265,13 +265,13 @@ class Robot : Component {
 }
 ```
 
-No `Launch` método acima três ações são iniciados: o robô entra em cena, esta ação irá alterar o local do nó em um período de 0,6 segundo.  Como essa é uma opção de async, isso ocorrerá simultaneamente como a próxima instrução que é a chamada para `MoveRandomly`.  Esse método irá alterar a posição do robô em paralelo em um local aleatório.  Isso é obtido executando duas ações compostas, o movimento a um novo local e voltando ao original posicionar e repita a operação, desde que o robô permaneça ativo.  E, para tornar as coisas mais interessantes, o robô será manter acertar simultaneamente.  A solução será iniciado somente cada 0,1 segundos.
+No método `Launch` acima de três ações são iniciadas: o robô entra na cena, essa ação alterará o local do nó em um período de 0,6 segundos.  Como essa é uma opção assíncrona, isso ocorrerá simultaneamente como a próxima instrução, que é a chamada para `MoveRandomly`.  Esse método irá alterar a posição do robô em paralelo para um local aleatório.  Isso é feito executando duas ações compostas, a movimentação para um novo local e voltando para a posição original e repete isso, desde que o robô permaneça vivo.  E para tornar as coisas mais interessantes, o robô continuará a ser solucionado simultaneamente.  A captura só será iniciada a cada 0,1 segundos.
 
-### <a name="frame-based-behavior-programming"></a>Programação de comportamento baseado em quadro
+### <a name="frame-based-behavior-programming"></a>Programação de comportamento baseada em quadros
 
-Se você quiser controlar o comportamento do seu componente em uma base quadro a quadro, em vez de usar as ações, o que você faria é substituir a `OnUpdate` método de sua `Component` subclasse.  Esse método é invocado uma vez por quadro e é invocado apenas se você definir a propriedade ReceiveSceneUpdates como true.
+Se você quiser controlar o comportamento do seu componente em uma base quadro a quadro em vez de usar ações, o que você faria é substituir o método `OnUpdate` de sua subclasse `Component`.  Esse método é invocado uma vez por quadro e é invocado somente se você definir a propriedade ReceiveSceneUpdates como true.
 
-A seguir mostra como criar um `Rotator` componente, que é anexado a um nó, o que faz com que o nó girar:
+O seguinte mostra como criar um componente `Rotator`, que é então anexado a um nó, o que faz com que o nó gire:
 
 ```csharp
 class Rotator : Component {
@@ -291,7 +291,7 @@ class Rotator : Component {
 }
 ```
 
-E isso é como você faria anexar esse componente a um nó:
+E é assim que você anexaria esse componente a um nó:
 
 ```csharp
 Node boxNode = new Node();
@@ -301,9 +301,9 @@ boxNode.AddComponent (rotator);
 
 ### <a name="combining-styles"></a>Combinando estilos
 
-Você pode usar o modelo de async/ação com base para a programação de grande parte do comportamento que é excelente para disparar e esquecer o estilo de programação, mas você pode também ajustar seu comportamento de componente para executar também algum código de atualização em cada quadro.
+Você pode usar o modelo baseado em Async/Action para programar grande parte do comportamento, o que é ótimo para o estilo de programação acionar e esquecer, mas você também pode ajustar o comportamento do componente para também executar um código de atualização em cada quadro.
 
-Por exemplo, na demonstração SamplyGame isso é usado na `Enemy` classe codifica as ações de usos de comportamento básico, mas ela também garante que os componentes apontarão para o usuário, definindo a direção do nó com `Node.LookAt`:
+Por exemplo, na demonstração de SamplyGame, isso é usado na classe `Enemy` codifica que o comportamento básico usa ações, mas também garante que os componentes apontem para o usuário definindo a direção do nó com `Node.LookAt`:
 
 ```csharp
     protected override void OnUpdate(SceneUpdateEventArgs args)
@@ -316,13 +316,13 @@ Por exemplo, na demonstração SamplyGame isso é usado na `Enemy` classe codifi
     }
 ```
 
-## <a name="loading-and-saving-scenes"></a>Carregar e salvar as cenas
+## <a name="loading-and-saving-scenes"></a>Carregando e salvando cenas
 
-Cenas podem ser carregadas e salvos em formato XML; Consulte as funções `LoadXml` e `SaveXML`. Quando uma cena é carregada, todo o conteúdo existente nele (nós filho e componentes) é removido primeiro. Nós e componentes que são marcados como temporários com o `Temporary` propriedade não serão salvas. O serializador manipula todos os componentes internos e propriedades, mas não é inteligente o suficiente para lidar com as propriedades personalizadas e os campos definidos em suas subclasses de componente. No entanto, ele fornece dois métodos virtuais para isso:
+Os bastidores podem ser carregados e salvos em formato XML; Consulte as funções `LoadXml` e `SaveXML`. Quando uma cena é carregada, todo o conteúdo existente nela (nós e componentes filho) é removido primeiro. Nós e componentes marcados como temporários com a propriedade `Temporary` não serão salvos. O serializador lida com todos os componentes e propriedades internos, mas não é inteligente o suficiente para lidar com propriedades e campos personalizados definidos em suas subclasses de componentes. No entanto, ele fornece dois métodos virtuais para isso:
 
- `OnSerialize` onde você pode registrá-lo estados personalizados para a serialização
+ `OnSerialize` onde você pode registrar Estados personalizados para a serialização
 
- `OnDeserialized` onde você pode obter seus estados personalizados salvos.
+ `OnDeserialized` onde você pode obter os Estados personalizados salvos.
 
 Normalmente, um componente personalizado se parecerá com o seguinte:
 
@@ -357,13 +357,13 @@ class MyComponent : Component {
 
 ### <a name="object-prefabs"></a>Pré-fabricados de objeto
 
-Apenas carregar ou salvar o plano inteiro não é flexível o suficiente para jogos em que novos objetos precisam ser criadas dinamicamente. Por outro lado, a criação de objetos complexos e definindo suas propriedades no código também será entediantes. Por esse motivo, também é possível salvar um nó da cena que incluirá seus nós filho, componentes e atributos. Eles convenientemente posteriormente podem ser carregados como um grupo.  Um objeto salvo é conhecido como um pré-fabricado. Há três maneiras de fazer isso:
+Apenas carregar ou salvar cenas inteiras não é flexível o suficiente para jogos em que novos objetos precisam ser criados dinamicamente. Por outro lado, a criação de objetos complexos e a definição de suas propriedades no código também serão entediantes. Por esse motivo, também é possível salvar um nó de cena que incluirá seus nós filho, componentes e atributos. Posteriormente, eles podem ser facilmente carregados como um grupo.  Esse objeto salvo costuma ser chamado de pré-fabricado. Há três maneiras de fazer isso:
 
 - No código chamando `Node.SaveXml` no nó
-- No editor, selecionando o nó na janela de hierarquia e escolhendo "Salvar nó como" no menu "Arquivo".
-- Usando o comando "nó" no `AssetImporter`, que salvará a hierarquia de nó da cena e quaisquer modelos contidos no ativo de entrada (por exemplo. um arquivo Collada)
+- No editor, selecionando o nó na janela hierarquia e escolhendo "salvar nó como" no menu "arquivo".
+- Usando o comando "node" no `AssetImporter`, que salvará a hierarquia do nó de cena e todos os modelos contidos no ativo de entrada (por exemplo, um arquivo arquivo COLLADA)
 
-Para criar uma instância do nó salvo em uma cena, chame `InstantiateXml`. O nó será criado como um filho da cena, mas pode ser reassociado livremente depois disso. Posição e rotação para colocar o nó precisam ser especificados. O código a seguir demonstra como criar uma instância de um pré-fabricado `Ninja.xm` a uma cena com a posição desejada e a rotação:
+Para instanciar o nó salvo em uma cena, chame `InstantiateXml`. O nó será criado como um filho da cena, mas poderá ser repai livremente depois disso. A posição e a rotação para colocar o nó precisam ser especificadas. O código a seguir demonstra como criar uma instância de um `Ninja.xm` pré-fabricado para uma cena com a posição e a rotação desejadas:
 
 ```csharp
 var prefabPath = Path.Combine (FileSystem.ProgramDir,"Data/Objects/Ninja.xml");
@@ -376,11 +376,11 @@ using (var file = new File(Context, prefabPath, FileMode.Read))
 
 ## <a name="events"></a>Eventos
 
-UrhoObjects gerar uma série de eventos, elas são exibidas como c# eventos sobre as várias classes que geram eles.  Além do c#-modelo baseado em evento, também é possível usar um o `SubscribeToXXX` métodos que permitem que você assine e mantenha um token de assinatura que você pode usar posteriormente para cancelar a assinatura.  A diferença é que o primeiro permitirá muitos chamadores inscrever-se, enquanto o segundo é só permite um, mas permite o estilo lambda mais agradável abordagem a ser usada e ainda assim, permite a fácil remoção da assinatura.  Eles são mutuamente exclusivos.
+UrhoObjects geram vários eventos, eles são exibidos como C# eventos em várias classes que os geram.  Além do C#modelo de evento baseado em, também é possível usar os métodos`SubscribeToXXX`que lhe permitirão assinar e manter um token de assinatura que você pode usar posteriormente para cancelar a assinatura.  A diferença é que o primeiro permitirá que vários chamadores se assinem, enquanto o segundo só permite um, mas permite que a abordagem de estilo lambda mais interessante seja usada e, ainda assim, permita uma remoção fácil da assinatura.  Eles são mutuamente exclusivos.
 
-Quando você assina um evento, você deve fornecer um método que usa um argumento com os argumentos de evento apropriado.
+Ao assinar um evento, você deve fornecer um método que aceite um argumento com os argumentos de evento apropriados.
 
-Por exemplo, isso é como você se inscreve em um botão do mouse para baixo de evento:
+Por exemplo, é assim que você assina um evento de botão do mouse para baixo:
 
 ```csharp
 public void override Start ()
@@ -394,7 +394,7 @@ void HandleMouseButtonDown(MouseButtonDownEventArgs args)
 }
 ```
 
-Com o estilo de lambda:
+Com estilo lambda:
 
 ```csharp
 public void override Start ()
@@ -405,7 +405,7 @@ public void override Start ()
 }
 ```
 
-Às vezes, você desejará parar de receber notificações para o evento, nesses casos, salvar o valor de retorno da chamada para `SubscribeTo` método e invocar o método de cancelamento da assinatura:
+Às vezes, você desejará parar de receber notificações para o evento, nesses casos, salvar o valor de retorno da chamada para `SubscribeTo` método e invocar o método de cancelamento de assinatura nele:
 
 ```csharp
 Subscription mouseSub;
@@ -419,11 +419,11 @@ public void override Start ()
 }
 ```
 
-O parâmetro recebido pelo manipulador de eventos é uma classe de argumentos de evento com rigidez de tipos que serão específicos para cada evento e contém a carga do evento.
+O parâmetro recebido pelo manipulador de eventos é uma classe de argumentos de evento fortemente tipada que será específica para cada evento e contém a carga do evento.
 
-## <a name="responding-to-user-input"></a>Responder à entrada do usuário
+## <a name="responding-to-user-input"></a>Respondendo à entrada do usuário
 
-Você pode se inscrever para vários eventos, como pressionamentos de teclas para baixo por assinatura do evento e responder à entrada que está sendo entregue:
+Você pode assinar vários eventos, como pressionamentos de teclas, inscrevendo-se no evento e respondendo à entrada que está sendo entregue:
 
 ```csharp
 Start ()
@@ -438,7 +438,7 @@ void HandleKeyDown (KeyDownEventArgs arg)
 }
 ```
 
-Mas, em muitos cenários, você deseja que seus manipuladores de atualização de cena para verificar o status atual das chaves quando eles estão sendo atualizados e atualize seu código adequadamente.  Por exemplo, a seguir pode ser usado para atualizar o local de câmera com base no teclado de entrada:
+Mas, em muitos cenários, você deseja que os manipuladores de atualização de cena verifiquem o status atual das chaves quando elas estão sendo atualizadas e atualize seu código de acordo.  Por exemplo, o seguinte pode ser usado para atualizar o local da câmera com base na entrada do teclado:
 
 ```csharp
 protected override void OnUpdate(float timeStep)
@@ -461,61 +461,61 @@ protected override void OnUpdate(float timeStep)
 
 ## <a name="resources-assets"></a>Recursos (ativos)
 
-Os recursos incluem a maioria das coisas UrhoSharp que são carregados do armazenamento em massa durante a inicialização ou o tempo de execução:
+Os recursos incluem a maioria das coisas em UrhoSharp que são carregadas do armazenamento em massa durante a inicialização ou tempo de execução:
 
-- `Animation` – usado para animações estrutural
-- `Image` -representa imagens armazenadas em uma variedade de formatos de gráfico
-- `Model` -Modelos 3D
-- `Material` – usados para renderizar os modelos de materiais.
-- `ParticleEffect`- [Descreve](http://urho3d.github.io/documentation/1.4/_particles.html) como um emissor de partícula funciona, consulte "[partículas](#particles)" abaixo.
-- `Shader` -sombreadores personalizados
-- `Sound` -sons para reprodução, consulte "[som](#sound)" abaixo.
-- `Technique` -técnicas de renderização de material
-- `Texture2D` -Textura 2D
-- `Texture3D` -Textura 3D
-- `TextureCube` -O cubo de textura
+- `Animation`-usado para animações de esqueleto
+- `Image`-representa as imagens armazenadas em uma variedade de formatos gráficos
+- Modelos de `Model` 3D
+- `Material`-materiais usados para renderizar modelos.
+- `ParticleEffect`- [descreve](https://urho3d.github.io/documentation/1.4/_particles.html) como o emissor de partículas funciona, consulte "[partículas](#particles)" abaixo.
+- `Shader`-sombreadores personalizados
+- `Sound`-sons para reprodução, consulte "[som](#sound)" abaixo.
+- técnicas de renderização de `Technique` material
+- textura `Texture2D`-2D
+- textura de `Texture3D`-3D
+- textura de `TextureCube` cubo
 - `XmlFile`
 
-Eles são gerenciados e carregados pelo `ResourceCache` subsistema (disponível como `Application.ResourceCache`).
+Eles são gerenciados e carregados pelo subsistema `ResourceCache` (disponível como `Application.ResourceCache`).
 
-Os próprios recursos são identificados por seus caminhos de arquivo, em relação a diretórios do recurso registrado ou arquivos de pacote. Por padrão, o mecanismo registra os diretórios de recursos `Data` e `CoreData`, ou os pacotes `Data.pak` e `CoreData.pak` se eles existirem.
+Os próprios recursos são identificados por seus caminhos de arquivo, em relação aos diretórios de recursos registrados ou aos arquivos de pacote. Por padrão, o mecanismo registra os diretórios de recursos `Data` e `CoreData`, ou os pacotes `Data.pak` e `CoreData.pak` se existirem.
 
-Se houver falha ao carregar um recurso, um erro será registrado e uma referência nula é retornada.
+Se o carregamento de um recurso falhar, um erro será registrado e uma referência nula será retornada.
 
-O exemplo a seguir mostra uma maneira comum de busca de um recurso do cache do recurso.  Nesse caso, uma textura para um elemento de interface do usuário, isso usa a `ResourceCache` propriedade a partir de `Application` classe.
+O exemplo a seguir mostra uma maneira típica de buscar um recurso do cache de recursos.  Nesse caso, uma textura para um elemento de interface do usuário usa a propriedade `ResourceCache` da classe `Application`.
 
 ```csharp
 healthBar.SetTexture(ResourceCache.GetTexture2D("Textures/HealthBarBorder.png"));
 ```
 
-Recursos também podem criados manualmente e armazenados no cache do recurso, como se tivessem sido carregados do disco.
+Os recursos também podem ser criados manualmente e armazenados no cache de recursos como se estivessem carregados do disco.
 
-Orçamentos de memória podem ser definidos por tipo de recurso: se recursos consomem mais memória do que o permitido, os recursos mais antigos serão removidos do cache se não estiver em uso mais. Por padrão os orçamentos de memória estiverem definidos como ilimitados.
+Os orçamentos de memória podem ser definidos por tipo de recurso: se os recursos consomem mais memória do que o permitido, os recursos mais antigos serão removidos do cache se não estiverem mais em uso. Por padrão, os orçamentos de memória são definidos como ilimitados.
 
-### <a name="bringing-3d-models-and-images"></a>Colocar imagens e modelos 3D
+### <a name="bringing-3d-models-and-images"></a>Trazendo imagens e modelos 3D
 
-Urho3D tenta usar formatos de arquivo existentes sempre que possível e definir os formatos de arquivo personalizados somente quando absolutamente necessário, como para modelos (.mdl) e para animações (. ani). Para esses tipos de ativos, Urho fornece um conversor - [AssetImporter](http://urho3d.github.io/documentation/1.4/_tools.html) que podem consumir muitos formatos 3D populares como fbx dae, 3ds e obj, etc.
+O Urho3D tenta usar formatos de arquivo existentes sempre que possível e definir formatos de arquivo personalizados somente quando for absolutamente necessário, como para modelos (. mdl) e para animações (. ani). Para esses tipos de ativos, o Urho fornece um conversor- [AssetImporter](https://urho3d.github.io/documentation/1.4/_tools.html) que pode consumir muitos formatos 3D populares, como FBX, Dae, 3ds e obj, etc.
 
-Também há um suplemento útil para Blender [ https://github.com/reattiva/Urho3D-Blender ](https://github.com/reattiva/Urho3D-Blender) que pode exportar seus ativos Blender no formato adequado para Urho3D.
+Também há um suplemento útil para [https://github.com/reattiva/Urho3D-Blender](https://github.com/reattiva/Urho3D-Blender) do Blender que pode exportar seus ativos do Blender no formato adequado para Urho3D.
 
 ### <a name="background-loading-of-resources"></a>Carregamento em segundo plano de recursos
 
-Normalmente, quando a solicitação de recursos usando um dos `ResourceCache`do `Get` método, eles são carregados imediatamente no thread principal, que pode levar vários milissegundos para todas as etapas necessárias (carregar arquivo do disco, analisar dados, carregar no GPU, se necessário ) e, portanto, pode resultar em quedas de taxa de quadros.
+Normalmente, ao solicitar recursos usando um dos `ResourceCache`método `Get`, eles são carregados imediatamente no thread principal, o que pode levar vários milissegundos para todas as etapas necessárias (carregar arquivo do disco, analisar dados, carregar na GPU, se necessário) e pode Portanto, resultam em quedas de taxa de quadros.
 
-Se você souber de antemão quais recursos você precisa, você pode solicitar a ser carregado em um thread em segundo plano, chamando `BackgroundLoadResource`. Você pode assinar o evento de recurso carregado do plano de fundo usando o `SubscribeToResourceBackgroundLoaded` método. Ela informa se o carregamento, na verdade, foi um sucesso ou falha. Dependendo do recurso, somente uma parte do processo de carregamento pode ser movido para um thread em segundo plano, por exemplo a etapa de carregamento Concluindo a GPU sempre precisa acontecer no thread principal. Observe que, se você chamar um dos métodos para um recurso que está na fila de carregamento em segundo plano de carregamento de recursos, o thread principal ficará parada até que o carregamento for concluído.
+Se você souber antecipadamente quais recursos você precisa, poderá solicitar que eles sejam carregados em um thread em segundo plano chamando `BackgroundLoadResource`. Você pode assinar o evento carregado de segundo plano do recurso usando o método `SubscribeToResourceBackgroundLoaded`. Ele saberá se o carregamento realmente foi um sucesso ou uma falha. Dependendo do recurso, apenas uma parte do processo de carregamento pode ser movida para um thread em segundo plano, por exemplo, a etapa de carregamento de GPU de acabamento sempre precisa ocorrer no thread principal. Observe que se você chamar um dos métodos de carregamento de recursos para um recurso que é enfileirado para carregamento em segundo plano, o thread principal será interrompido até que seu carregamento seja concluído.
 
-A cena assíncrona funcionalidade de carregamento `LoadAsync` e `LoadAsyncXML` tem a opção de carregamento em segundo plano recursos primeiro antes de prosseguir para carregar o conteúdo da cena. Ele também pode ser usado para carregar apenas os recursos sem modificar a cena, especificando o `LoadMode.ResourcesOnly`. Assim, para preparar um arquivo cena ou objeto pré-fabricado para instanciação rápida.
+A funcionalidade de carregamento de cena assíncrona `LoadAsync` e `LoadAsyncXML` tem a opção de carregar primeiro os recursos em segundo plano antes de prosseguir para carregar o conteúdo da cena. Ele também pode ser usado para carregar apenas os recursos sem modificar a cena, especificando o `LoadMode.ResourcesOnly`. Isso permite preparar um arquivo de pré-fabricado de cena ou de objeto para instanciação rápida.
 
-Finalmente o tempo máximo (em milissegundos) gasto cada quadro em terminar plano de fundo recursos carregados podem ser configurados definindo a `FinishBackgroundResourcesMs` propriedade no `ResourceCache`.
+Por fim, o tempo máximo (em milissegundos) gasto em cada quadro na conclusão de recursos carregados em segundo plano pode ser configurado definindo a propriedade `FinishBackgroundResourcesMs` no `ResourceCache`.
 
 <a name="sound"/>
 
-## <a name="sound"></a>Som
+## <a name="sound"></a>Sonora
 
-Som é uma parte importante do jogo e a estrutura de UrhoSharp fornece uma maneira de reprodução de sons em seu jogo.  Reproduzir sons, anexando um `SoundSource`
-componente um `Node` e, em seguida, reproduzir um arquivo nomeado de recursos.
+O som é uma parte importante do jogo e a estrutura UrhoSharp fornece uma maneira de reproduzir sons em seu jogo.  Você joga sons anexando um `SoundSource`
+componente para um `Node` e, em seguida, reproduzir um arquivo nomeado de seus recursos.
 
-Isso é como isso é feito:
+É assim que isso é feito:
 
 ```csharp
 var explosionNode = Scene.CreateChild();
@@ -529,11 +529,11 @@ soundSource.AutoRemove = true;
 
 ## <a name="particles"></a>Partículas
 
-Partículas fornecem uma maneira simple de adicionar alguns efeitos simples e econômica para seu aplicativo.  Você pode consumir partículas armazenadas no formato PEX, usando ferramentas como o [ http://onebyonedesign.com/flash/particleeditor/ ](http://onebyonedesign.com/flash/particleeditor/).
+As partículas fornecem uma maneira simples de adicionar alguns efeitos simples e baratos ao seu aplicativo.  Você pode consumir partículas armazenadas no formato PEX, usando ferramentas como [http://onebyonedesign.com/flash/particleeditor/](http://onebyonedesign.com/flash/particleeditor/).
 
-Partículas são componentes que podem ser adicionados a um nó.  Você precisa chamar o nó `CreateComponent<ParticleEmitter2D>` método para criar a partícula e, em seguida, configurar a partícula definindo a propriedade efeito para um efeito de 2D que é carregado do cache do recurso.
+As partículas são componentes que podem ser adicionados a um nó.  Você precisa chamar o método de `CreateComponent<ParticleEmitter2D>` do nó para criar a partícula e, em seguida, configurar a partícula definindo a Propriedade Effect como um efeito 2D que é carregado do cache de recursos.
 
-Por exemplo, você pode chamar esse método em seu componente para mostrar alguns partículas que são renderizadas como um detalhamento quando atinge:
+Por exemplo, você pode invocar esse método em seu componente para mostrar algumas partículas que são renderizadas como uma explosão quando ele atinge:
 
 ```csharp
 public async void Explode (Component target)
@@ -552,27 +552,27 @@ public async void Explode (Component target)
 }
 ```
 
-O código acima criará um nó de detalhamento que é anexado ao componente atual, dentro deste nó de detalhamento criamos um emissor de partícula 2D e configurá-lo definindo a propriedade efeito.  Podemos executar duas ações, que dimensiona o nó para ser menor e um que deixa nesse tamanho por 0,5 segundos.  Em seguida, removemos o detalhamento, que também removerá o efeito de partículas na tela.
+O código acima criará um nó de explosão que é anexado ao seu componente atual, dentro deste nó de explosão, criamos um emissor de partícula 2D e o configuramos definindo a Propriedade Effect.  Executamos duas ações, uma que dimensiona o nó para ser menor e outro que o deixa com esse tamanho por 0,5 segundos.  Em seguida, removemos a explosão, que também remove o efeito de partícula da tela.
 
-A partícula acima renderizado da seguinte forma ao usar uma textura de esfera:
+A partícula acima é renderizada desta forma ao usar uma textura de esfera:
 
-![Partículas com uma textura de esfera](using-images/image-1.png "renderiza a partícula acima como este, ao usar uma textura de esfera")
+![Partículas com uma textura de esfera](using-images/image-1.png "A partícula acima é renderizada desta forma ao usar uma textura de esfera")
 
-E isso é o que aparece se você usar uma textura em blocos:
+E essa é a aparência se você usar uma textura de bloco:
 
-![Partículas com uma textura de caixa](using-images/image-2.png "e esse é o que parece se usando uma textura em blocos")
+![Partículas com uma textura de caixa](using-images/image-2.png "E isso é o que parece se usar uma textura de bloco")
 
-## <a name="multi-threading-support"></a>Suporte a multithreading
+## <a name="multi-threading-support"></a>Suporte a vários threads
 
-UrhoSharp é uma biblioteca de thread única.  Isso significa que você não deve tentar invocar métodos em UrhoSharp de um thread em segundo plano, ou corromper o estado do aplicativo de risco e provavelmente a falha de seu aplicativo.
+UrhoSharp é uma única biblioteca threaded.  Isso significa que você não deve tentar invocar métodos no UrhoSharp a partir de um thread em segundo plano, ou você pode prejudicar o estado do aplicativo e, provavelmente, travar seu aplicativo.
 
-Se você quiser executar um código em segundo plano e, em seguida, atualize Urho componentes da interface do usuário principal, você pode usar o `Application.InvokeOnMain(Action)`
-método.  Além disso, você pode usar c# await e o .NET APIs para garantir que o código é executado no thread adequado de tarefas.
+Se você quiser executar algum código em segundo plano e, em seguida, atualizar os componentes do Urho na interface do usuário principal, poderá usar o `Application.InvokeOnMain(Action)`
+método.  Além disso, você pode C# usar o Await e as APIs de tarefa do .net para garantir que o código seja executado no thread apropriado.
 
 ## <a name="urhoeditor"></a>UrhoEditor
 
-Você pode baixar o Editor Urho para sua plataforma do [Urho site](http://urho3d.github.io/), vá para Downloads e escolher a versão mais recente.
+Você pode baixar o editor de Urho para sua plataforma do [site do Urho](http://urho3d.github.io/), ir para downloads e escolher a versão mais recente.
 
 ## <a name="copyrights"></a>Direitos autorais
 
-Esta documentação contém o conteúdo original do Xamarin Inc, mas desenha amplamente na documentação do código-fonte aberto para o projeto Urho3D e contém as capturas de tela do projeto Cocos2D.
+Esta documentação contém conteúdo original da Xamarin Inc, mas se desenha extensivamente a partir da documentação de software livre para o projeto Urho3D e contém capturas de tela do projeto Cocos2D.

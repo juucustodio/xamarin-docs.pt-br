@@ -3,15 +3,15 @@ title: Vinculação no Android
 ms.prod: xamarin
 ms.assetid: 3528E195-AA74-90AF-B5F3-3B65FB4F0BB8
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/30/2018
-ms.openlocfilehash: e5f494c2f41500b660bf333e7c63f0120536f52a
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 729dede97a9b153738ca72af499d4d1e9d77fae0
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70753848"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73021452"
 ---
 # <a name="linking-on-android"></a>Vinculação no Android
 
@@ -48,7 +48,7 @@ public class MyActivity {
 }
 ```
 
-### <a name="linker-behavior"></a>Comportamento do vinculador
+### <a name="linker-behavior"></a>Comportamento do Linker
 
 O mecanismo principal para controlar o vinculador é a lista suspensa **Comportamento do vinculador** (*Vinculação* no Visual Studio) dentro da caixa de diálogo **Opções de Projeto**. Há três opções:
 
@@ -209,5 +209,5 @@ Quando um assembly é vinculado, os seguintes tipos de atributo personalizados s
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Configuração personalizada do vinculador](~/cross-platform/deploy-test/linker.md)
+- [Configuração personalizada do Linker](~/cross-platform/deploy-test/linker.md)
 - [Vinculação no iOS](~/ios/deploy-test/linker.md)

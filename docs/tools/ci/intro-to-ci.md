@@ -3,15 +3,15 @@ title: Introdução à integração contínua com o Xamarin
 description: Este documento descreve a integração contínua com o Xamarin. Ele aborda o controle de versão e vários ambientes de integração contínua.
 ms.prod: xamarin
 ms.assetid: C034200E-2947-4309-9DDD-80DAC505C43F
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 07/19/2017
-ms.openlocfilehash: d335a107d1520db3c76ee602d38adcb129f122b0
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 2862f05f2d183c9345d2b92268ddf2101cc2492e
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70293100"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73029811"
 ---
 # <a name="introduction-to-continuous-integration-with-xamarin"></a>Introdução à integração contínua com o Xamarin
 
@@ -32,13 +32,13 @@ Novamente, com a integração contínua, o ato de confirmar as alterações faz 
 
 O diagrama a seguir ilustra esse processo:
 
-[![](intro-to-ci-images/intro01-small.png "Este diagrama ilustra esse processo")](intro-to-ci-images/intro01.png#lightbox)
+[![](intro-to-ci-images/intro01-small.png "This diagram illustrates this process")](intro-to-ci-images/intro01.png#lightbox)
 
 Os aplicativos móveis apresentam desafios exclusivos para a integração contínua. Os aplicativos podem exigir sensores como o GPS ou a câmera que estão disponíveis somente em dispositivos físicos. Além disso, simuladores ou emuladores são apenas uma aproximação de hardware e podem ocultar ou obscurecer problemas. No final, é necessário testar um aplicativo móvel em hardware real para ter certeza de que ele está realmente pronto para o cliente.
 
 O [teste de App Center](https://docs.microsoft.com/appcenter/test-cloud) resolve esse problema específico testando aplicativos diretamente em centenas de dispositivos físicos. Os desenvolvedores escrevem testes de aceitação automatizados, o que permite um teste de interface de usuário poderoso. Depois que esses testes são carregados no App Center, o servidor de CI pode executá-los automaticamente como parte de um processo de CI, conforme mostrado no diagrama a seguir:
 
-[![](intro-to-ci-images/intro02-small.png "Depois que esses testes são carregados no App Center, o servidor de CI pode executá-los automaticamente como parte de um processo de CI, conforme mostrado neste diagrama")](intro-to-ci-images/intro02.png#lightbox)
+[![](intro-to-ci-images/intro02-small.png "Once these tests are uploaded to App Center, the CI server can run them automatically as part of a CI process as shown in this diagram")](intro-to-ci-images/intro02.png#lightbox)
 
 ## <a name="components-of-continuous-integration"></a>Componentes da integração contínua
 
@@ -65,15 +65,15 @@ Um resumo completo de todos os recursos de ALM (gerenciamento do ciclo de vida d
 
 #### <a name="git"></a>Git
 
-O [git](http://git-scm.com) é uma solução popular de controle de versão de software livre que foi originalmente desenvolvida para gerenciar o código-fonte do kernel do Linux. É um sistema muito rápido e flexível que é popular com projetos de software de todos os tamanhos. Ele é facilmente dimensionado de desenvolvedores únicos com acesso insatisfatório à Internet a grandes equipes que abrangem o mundo. O Git também torna a ramificação muito fácil, o que, por sua vez, pode incentivar fluxos paralelos de desenvolvimento com risco mínimo.
+O [git](https://git-scm.com) é uma solução popular de controle de versão de software livre que foi originalmente desenvolvida para gerenciar o código-fonte do kernel do Linux. É um sistema muito rápido e flexível que é popular com projetos de software de todos os tamanhos. Ele é facilmente dimensionado de desenvolvedores únicos com acesso insatisfatório à Internet a grandes equipes que abrangem o mundo. O Git também torna a ramificação muito fácil, o que, por sua vez, pode incentivar fluxos paralelos de desenvolvimento com risco mínimo.
 
-O Git pode operar totalmente por meio de navegadores da Web ou de [clientes de GUI](http://git-scm.com/downloads/guis) que são executados no Linux, no Mac OSX e no Windows. Ele é gratuito para repositórios públicos; os repositórios privados exigem um [plano pago](https://github.com/pricing).
+O Git pode operar totalmente por meio de navegadores da Web ou de [clientes de GUI](https://git-scm.com/downloads/guis) que são executados no Linux, no Mac OSX e no Windows. Ele é gratuito para repositórios públicos; os repositórios privados exigem um [plano pago](https://github.com/pricing).
 
-As versões atuais do Visual Studio para Windows e Mac fornecem suporte nativo para git. A Microsoft fornece uma [extensão baixável para git](http://visualstudiogallery.msdn.microsoft.com/abafc7d6-dcaa-40f4-8a5e-d6724bdb980c) para versões mais antigas do Visual Studio. Conforme observado acima, o Azure DevOps e o TFS podem usar o Git para controle de versão em vez de TFVC.
+As versões atuais do Visual Studio para Windows e Mac fornecem suporte nativo para git. A Microsoft fornece uma [extensão baixável para git](https://visualstudiogallery.msdn.microsoft.com/abafc7d6-dcaa-40f4-8a5e-d6724bdb980c) para versões mais antigas do Visual Studio. Conforme observado acima, o Azure DevOps e o TFS podem usar o Git para controle de versão em vez de TFVC.
 
 #### <a name="subversion"></a>Subversion
 
-[Subversão](http://subversion.apache.org) (SVN) é um sistema de controle de versão de software livre popular que está em uso desde 2000. O SVN é executado em todas as versões modernas do OS X, Windows, FreeBSD, Linux e UNIX. Visual Studio para Mac tem suporte nativo para SVN. Há extensões de terceiros que trazem suporte de SVN ao Visual Studio.
+O [svn (Subversion](https://subversion.apache.org) ) é um sistema de controle de versão de software livre popular que está em uso desde 2000. O SVN é executado em todas as versões modernas do OS X, Windows, FreeBSD, Linux e UNIX. Visual Studio para Mac tem suporte nativo para SVN. Há extensões de terceiros que trazem suporte de SVN ao Visual Studio.
 
 ### <a name="continuous-integration-environments"></a>Ambientes de integração contínua
 
@@ -93,11 +93,11 @@ Com o Azure DevOps, você cria uma definição de compilação separada para cad
 Com Team Foundation Server, você configura um computador de compilação da seguinte maneira para plataformas de destino específicas:
 
 - **Android e Windows:** Instale o Visual Studio e as ferramentas do Xamarin (para Android e Windows ambas) e configure com suas licenças do Xamarin. Também é necessário mover o SDK do Android para um local compartilhado no servidor em que o agente de compilação do TFS possa encontrá-lo. Para obter detalhes, consulte [Configurando TFVC](https://docs.microsoft.com/azure/devops/repos/tfvc/overview).
-- **iOS e Xamarin:** Instale o Visual Studio e as ferramentas do Xamarin no Windows Server com a licença apropriada. Em seguida, instale Visual Studio para Mac em uma máquina Mac OS X acessível pela rede, que servirá como um host de compilação e criará o pacote de aplicativo final (IPA para iOS, aplicativo para OS X).
+- **Ios e Xamarin:** Instale o Visual Studio e as ferramentas do Xamarin no Windows Server com a licença apropriada. Em seguida, instale Visual Studio para Mac em uma máquina Mac OS X acessível pela rede, que servirá como um host de compilação e criará o pacote de aplicativo final (IPA para iOS, aplicativo para OS X).
 
 O diagrama a seguir ilustra essa topografia:
 
-[![](intro-to-ci-images/intro03-small.png "Este diagrama ilustra essa topografia")](intro-to-ci-images/intro03.png#lightbox)
+[![](intro-to-ci-images/intro03-small.png "This diagram illustrates this topography")](intro-to-ci-images/intro03.png#lightbox)
 
 Também é possível vincular um servidor TFS local a um projeto DevOps do Azure para que as compilações do Azure DevOps sejam delegadas ao servidor local. Para obter detalhes, consulte [Compilar e liberar agentes](https://docs.microsoft.com/azure/devops/pipelines/agents/agents/).
 
@@ -105,13 +105,13 @@ Também é possível vincular um servidor TFS local a um projeto DevOps do Azure
 
 Se você usar o Jenkins para criar seus aplicativos, poderá armazenar seu código no Azure DevOps ou Team Foundation Server e continuar a usar o Jenkins para suas compilações de CI. Você pode disparar uma compilação Jenkins ao enviar código por push para o repositório Git do projeto de equipe ou ao verificar o código em TFVC. Para obter detalhes, consulte [Jenkins com o Azure DevOps](https://docs.microsoft.com/azure/devops/service-hooks/services/jenkins).
 
-[![](intro-to-ci-images/intro04-small.png "Se você usar o Jenkins para criar seus aplicativos, poderá armazenar seu código no Azure DevOps ou Team Foundation Server e continuar a usar o Jenkins para suas compilações de CI")](intro-to-ci-images/intro04.png#lightbox)
+[![](intro-to-ci-images/intro04-small.png "If you use Jenkins to build your apps, you can store your code in Azure DevOps or Team Foundation Server and continue to use Jenkins for your CI builds")](intro-to-ci-images/intro04.png#lightbox)
 
 #### <a name="git-and-jenkins"></a>Git e Jenkins
 
 Outro ambiente de CI comum pode ser totalmente baseado em OS X. Esse cenário envolve o uso do git para controle de código-fonte e Jenkins para o servidor de compilação. Ambos estão em execução em um único computador Mac OS X com Visual Studio para Mac instalado. Isso é muito semelhante ao ambiente do Azure DevOps + Jenkins abordado na seção anterior:
 
-[![](intro-to-ci-images/intro05-small.png "Isso é muito semelhante ao ambiente do Azure DevOps + Jenkins discutido na seção anterior")](intro-to-ci-images/intro05.png#lightbox)
+[![](intro-to-ci-images/intro05-small.png "This is very similar to the Azure DevOps + Jenkins environment discussed in the previous section")](intro-to-ci-images/intro05.png#lightbox)
 
 > [!IMPORTANT]
 > **O Jenkins [não tem suporte da Microsoft](~/cross-platform/troubleshooting/questions/xamarin-jenkins.md).**

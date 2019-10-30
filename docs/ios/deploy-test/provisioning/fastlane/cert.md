@@ -4,22 +4,22 @@ description: 'Este documento descreve o fastlane, uma ferramenta que automatiza 
 ms.prod: xamarin
 ms.assetid: 900FA6FF-F3C9-4D35-993E-B0D88E6B1883
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 8e98a8e0314d8cb5ace4d17fdc62eb2ec75ca336
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: ba0348ff0cf6dc394f67b3c5779fd49eb852673f
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292456"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028530"
 ---
 # <a name="fastlane-for-ios--cert"></a>fastlane para iOS – cert
 
 > [!IMPORTANT]
 > O fastlane recomenda o uso da ferramenta [`match`](~/ios/deploy-test/provisioning/fastlane/match.md) para gerar e manter certificados. Use `cert` diretamente apenas se você deseja controle total e sabe o suficiente sobre a assinatura de código. Use esta ação para baixar a identidade de assinatura de código mais recente.
 
-## <a name="overview"></a>Visão geral
+## <a name="overview"></a>Visão Geral
 
 Tradicionalmente, o provisionamento do dispositivo é executado por cada membro de uma equipe de desenvolvimento pelo Xcode ou no Portal do desenvolvedor da Apple. Ele consiste em várias etapas:
 
@@ -65,7 +65,7 @@ fastlane cert --development
 
 O cert solicitará sua Apple ID e senha, então insira:
 
-[![](cert-images/fastlane-image1.png "O cert solicitará sua Apple ID e senha")](cert-images/fastlane-image1.png#lightbox)
+[![](cert-images/fastlane-image1.png "cert will prompt for your Apple ID and password")](cert-images/fastlane-image1.png#lightbox)
 
 > [!IMPORTANT]
 > Na primeira vez em que a senha for inserida, ela será salva no conjunto de chaves do macOS local. Como alternativa, variáveis de ambiente podem ser usadas para armazenar o nome de usuário e a senha ou você poderá usar `export fastlane_DONT_STORE_PASSWORD=1` se não quiser que sua senha seja armazenada no conjunto de chaves. Para saber mais sobre como gerenciar credenciais com fastlane, veja o guia do [gerenciador de credenciais](https://github.com/fastlane/fastlane/blob/master/credentials_manager/README.md) do fastlane.
@@ -78,7 +78,7 @@ fastlane cert -u myemailadress@domain.com
 
 Se sua Apple ID estiver conectada a várias equipes, elas serão exibidas aqui. Selecione o número que corresponde à equipe que você deseja usar:
 
-[![](cert-images/fastlane-image2.png "Selecionar a equipe que você deseja usar")](cert-images/fastlane-image2.png#lightbox)
+[![](cert-images/fastlane-image2.png "Select the team that you wish to use")](cert-images/fastlane-image2.png#lightbox)
 
 A ID da equipe também pode ser passada usando o seguinte sinalizador:
 

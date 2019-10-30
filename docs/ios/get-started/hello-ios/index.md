@@ -1,23 +1,23 @@
 ---
-title: 'Aplicativo de exemplo: Hello, iOS'
+title: 'Aplicativo de exemplo: Olá, iOS'
 description: Este documento contém links para guias que apresentam as ferramentas e os conceitos necessários para entender como criar e implantar um aplicativo do Xamarin.iOS.
 ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: cf04736b-c95a-4e6f-b49f-b7f2b7ff62b9
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 10/05/2018
-ms.openlocfilehash: 42303e9ff710e6f59c5569ef26356b98837d262f
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: af0b9b4a73a82afbaef314384b10d6b9465a4b29
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70289606"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73022809"
 ---
-# <a name="sample-app-hello-ios"></a>Aplicativo de exemplo: Hello, iOS
+# <a name="sample-app-hello-ios"></a>Aplicativo de exemplo: Olá, iOS
 
-## <a name="part-1-quickstartiosget-startedhello-ioshello-ios-quickstartmd"></a>[Parte 1: Início rápido](~/ios/get-started/hello-ios/hello-ios-quickstart.md)
+## <a name="part-1-quickstartiosget-startedhello-ioshello-ios-quickstartmd"></a>[Parte 1: início rápido](~/ios/get-started/hello-ios/hello-ios-quickstart.md)
 
 A primeira parte deste guia descreve como criar um aplicativo que converte um número de telefone alfanumérico inserido pelo usuário em numérico e, em seguida, chama esse número.
 

@@ -3,15 +3,15 @@ title: Introdução ao Java
 description: Este documento descreve como começar a usar a inserção do .NET com o Java. Ele aborda os requisitos do sistema, a instalação e as plataformas com suporte.
 ms.prod: xamarin
 ms.assetid: B9A25E9B-3EC2-489A-8AD3-F78287609747
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/28/2018
-ms.openlocfilehash: 8d6bc284d07ce1be11ad273f875b75a70ae14a0f
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 09ea33724c2b1184654ce7768ea1cb2525b62c28
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70278401"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73007372"
 ---
 # <a name="getting-started-with-java"></a>Introdução ao Java
 
@@ -59,7 +59,7 @@ Além disso, você pode criar a incorporação .NET da origem, ver nosso [reposi
 
 O Java está atualmente em um estado de visualização para macOS, Windows e Android.
 
-A plataforma é selecionada passando o `--platform=<platform>` argumento de linha de comando para a ferramenta de inserção .net. Atualmente `macOS`, `Windows` e`Android` têm suporte.
+A plataforma é selecionada passando o argumento de linha de comando `--platform=<platform>` para a ferramenta de inserção .NET. Atualmente `macOS`, `Windows`e `Android` têm suporte.
 
 ### <a name="macos-and-windows"></a>macOS e Windows
 

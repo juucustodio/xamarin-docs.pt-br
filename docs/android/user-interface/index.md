@@ -4,15 +4,15 @@ description: Criando interfaces de usuário para aplicativos Xamarin. Android
 ms.prod: xamarin
 ms.assetid: F67B7C33-BC53-2BB6-CDA7-16E4AB4A9EFB
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/25/2018
-ms.openlocfilehash: 405fb0e30881ee64514d3984842ac820d5663382
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: a881629c63ea2991b8ea4673811311076fcaabe9
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70764481"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028988"
 ---
 # <a name="user-interface"></a>Interface do Usuário
 
@@ -37,7 +37,7 @@ Um aplicativo Android leva algum tempo para ser iniciado, especialmente quando o
 ## <a name="layoutsandroiduser-interfacelayoutsindexmd"></a>[Layouts](~/android/user-interface/layouts/index.md)
 
 Os layouts são usados para definir a estrutura visual de uma interface do usuário.
-Layouts como `ListView` e `RecyclerView` são os blocos de construção mais fundamentais de aplicativos Android. Normalmente, um layout usará um `Adapter` para atuar como uma ponte do layout para os dados subjacentes que são usados para popular itens de dados no layout. Esta seção explica como usar `LinearLayout`layouts como `TableLayout`, `RelativeLayout` `RecyclerView`,, e `GridView`.
+Layouts como `ListView` e `RecyclerView` são os blocos de construção mais fundamentais de aplicativos Android. Normalmente, um layout usará um `Adapter` para atuar como uma ponte do layout para os dados subjacentes que são usados para popular itens de dados no layout. Esta seção explica como usar layouts como `LinearLayout`, `RelativeLayout`, `TableLayout`, `RecyclerView`e `GridView`.
 
 ## <a name="controlsandroiduser-interfacecontrolsindexmd"></a>[Controles](~/android/user-interface/controls/index.md)
 

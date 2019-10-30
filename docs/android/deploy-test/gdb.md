@@ -3,19 +3,19 @@ title: GDB
 ms.prod: xamarin
 ms.assetid: CD0BE462-FA38-4881-B481-82AD05B3B8FE
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/05/2018
-ms.openlocfilehash: 0599b2374addf461e59948a1926de06e6e1e746a
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 51ebb8932f4b1ef8f10ba699e59ce53c98a38a50
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70754051"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73021484"
 ---
 # <a name="gdb"></a>GDB
 
-## <a name="overview"></a>Visão geral
+## <a name="overview"></a>Visão Geral
 
 O Xamarin.Android 4.10 introduziu o suporte parcial para uso de `gdb` usando o destino de MSBuild `_Gdb`. 
 
@@ -57,7 +57,7 @@ O destino `_Gdb` iniciará uma atividade launcher declarada dentro de seu arquiv
 O destino `_Gdb` criará um diretório `gdb-symbols` e copiará o conteúdo dos diretórios `/system/lib` e `$APPDIR/lib` do seu destino para lá.
 
 > [!NOTE]
-> O conteúdo do diretório `gdb-symbols` está vinculado ao destino do Android no qual você implantou, e não será automaticamente substituído se você mudar o destino. (Considere isso um bug.) Se alterar os dispositivos de destino do Android, você precisará excluir este diretório manualmente.
+> O conteúdo do diretório `gdb-symbols` está vinculado ao destino do Android no qual você implantou, e não será automaticamente substituído se você mudar o destino. (Considere esse um bug.) Se você alterar os dispositivos de destino do Android, será necessário excluir manualmente esse diretório.
 
 Por fim, copie o comando `gdb` gerado e execute-o no shell:
 
@@ -152,7 +152,7 @@ A depuração de aplicativo pode ser habilitada configurando a propriedade de at
 
 Um `gdbserver` acessível pode ser fornecido seguindo a seção [Builds de depuração sem o Fast Deployment](#Debug_Builds_without_Fast_Deployment).
 
-Um probleminha: O destino `_Gdb` do MSBuild finalizará todas as instâncias de aplicativo em execução anteriormente. Isso não funcionará em destinos com Android anterior à v4.0.
+Um probleminha: o destino `_Gdb` do MSBuild finalizará quaisquer instâncias de aplicativo em execução anteriormente. Isso não funcionará em destinos com Android anterior à v4.0.
 
 <a name="Troubleshooting" />
 

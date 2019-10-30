@@ -4,15 +4,15 @@ description: Este documento descreve várias opções de configuração de build
 ms.prod: xamarin
 ms.assetid: 3B259248-887E-3E4F-E09C-7AD28C2A8CEE
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: dd6fac2434c5205acfec10e4830dc72ea42aa340
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 30415bd2df14cdc13f94a020475acf471b25c6ae
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70756155"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030367"
 ---
 # <a name="compiling-for-different-devices-in-xamarinios"></a>Compilar para diferentes dispositivos no Xamarin.iOS
 
@@ -20,11 +20,11 @@ As propriedades de build do executável podem ser configuradas da página de pro
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
-[![](compiling-for-different-devices-images/image1.png "A página de propriedades do Build do iOS do projeto")](compiling-for-different-devices-images/image1.png#lightbox) 
+[![](compiling-for-different-devices-images/image1.png "The Projects iOS Build properties page")](compiling-for-different-devices-images/image1.png#lightbox) 
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![](compiling-for-different-devices-images/image1a.png "A página de propriedades do Build do iOS do projeto")](compiling-for-different-devices-images/image1a.png#lightbox)
+[![](compiling-for-different-devices-images/image1a.png "The Projects iOS Build properties page")](compiling-for-different-devices-images/image1a.png#lightbox)
 
 -----
 
@@ -62,9 +62,9 @@ O mecanismo de back-end de otimização do LLVM produz código mais rígido que 
 
 Você pode habilitar essas opções de Build do iOS no Visual Studio para Mac ou no Visual Studio.
 
-[![](compiling-for-different-devices-images/image2.png "Habilitando LLVM")](compiling-for-different-devices-images/image2.png#lightbox)
+[![](compiling-for-different-devices-images/image2.png "Enabling LLVM")](compiling-for-different-devices-images/image2.png#lightbox)
 
-[![](compiling-for-different-devices-images/image2a.png "Habilitando LLVM")](compiling-for-different-devices-images/image2a.png#lightbox)
+[![](compiling-for-different-devices-images/image2a.png "Enabling LLVM")](compiling-for-different-devices-images/image2a.png#lightbox)
 
  <a name="ARMV7_and_ARMV7s_support" />
 
@@ -124,7 +124,7 @@ Para fazer isso, você deve realizar as seguintes etapas:
 - Abra as **Opções do Projeto** e navegue até o painel **Build do iOS**.
 - Adicione `'-gcc_flags "-weak_framework iAd"'` às **Opções Adicionais** para cada configuração que você deseja vincular de modo fraco em:
 
-[![](compiling-for-different-devices-images/image3.png "Opções Adicionais")](compiling-for-different-devices-images/image3.png#lightbox)
+[![](compiling-for-different-devices-images/image3.png "Additional Options")](compiling-for-different-devices-images/image3.png#lightbox)
 
 Além disso, você precisará evitar que seu uso dos tipos execute em versões anteriores do iOS, em que eles podem não existir. Há vários métodos para fazer isso, um dos quais é analisar `UIDevice.CurrentDevice.SystemVersion`.
 

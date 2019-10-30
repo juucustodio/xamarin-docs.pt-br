@@ -4,15 +4,15 @@ description: Este guia apresenta o layout automático do iOS e descreve como usa
 ms.prod: xamarin
 ms.assetid: CAC7A715-55BB-45E2-BB6D-2168D36D428F
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: a2f637677620f9bfb2bd26a5af55fb9fb56a7af9
-ms.sourcegitcommit: cf56d2bae34dc0f8e94c2d3d28d5f460d59807bf
+ms.openlocfilehash: f15c754a47f910f430af3c036ed510cc9e130eac
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70985693"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73021804"
 ---
 # <a name="auto-layout-with-the-xamarin-designer-for-ios"></a>Layout automático com o Xamarin Designer para iOS
 
@@ -30,7 +30,7 @@ Este guia pressupõe o conhecimento dos componentes do designer da [introdução
 
 Uma restrição é uma representação matemática da relação entre dois elementos na tela. A representação da posição de um elemento de interface do usuário como uma relação matemática resolve vários problemas associados ao código da localização de um elemento de interface do usuário. Por exemplo, se tivéssemos de colocar um botão 20px na parte inferior da tela no modo retrato, a posição do botão estará fora da tela no modo paisagem. Para evitar isso, poderíamos definir uma restrição que coloca a borda inferior do botão 20px na parte inferior da exibição. Em seguida, a posição da borda do botão seria calculada como *Button. Bottom = View. Bottom-20px*, que colocaria o botão 20px na parte inferior da exibição no modo retrato e paisagem. A capacidade de calcular o posicionamento com base em uma relação matemática é o que torna as restrições tão úteis no design da interface do usuário.
 
-Quando definimos uma restrição, criamos um `NSLayoutConstraint` objeto que usa como argumentos os objetos a serem restritos e as propriedades, ou *atributos*, em que a restrição atuará. No designer do iOS, os atributos incluem bordas como a *esquerda*, *direita*, *superior*e *inferior* de um elemento. Eles também incluem atributos de tamanho, como *altura* e *largura*, e o local do ponto central, *CenterX* e *CenterY*. Por exemplo, quando adicionamos uma restrição na posição do limite esquerdo de dois botões, o designer está gerando o seguinte código nos bastidores:
+Quando definimos uma restrição, criamos um objeto `NSLayoutConstraint` que usa como argumentos os objetos a serem restritos e as propriedades, ou *atributos*, em que a restrição atuará. No designer do iOS, os atributos incluem bordas como a *esquerda*, *direita*, *superior*e *inferior* de um elemento. Eles também incluem atributos de tamanho, como *altura* e *largura*, e o local do ponto central, *CenterX* e *CenterY*. Por exemplo, quando adicionamos uma restrição na posição do limite esquerdo de dois botões, o designer está gerando o seguinte código nos bastidores:
 
 ```csharp
 View.AddConstraint (NSLayoutConstraint.Create (Button1, NSLayoutAttribute.Left, NSLayoutRelation.Equal, Button2, NSLayoutAttribute.Left, 1, 10));
@@ -45,17 +45,17 @@ A configuração padrão do designer do iOS tem o modo de restrição habilitado
 1. Clique em um espaço vazio na superfície de design. Isso anula a seleção de qualquer elemento e exibe as propriedades do documento Storyboard.
 1. Marque ou desmarque a caixa de seleção **usar AutoLayout** no painel de propriedades:
 
-    ![](designer-auto-layout-images/image01.png "A caixa de seleção usar AutoLayout no painel de propriedades")
+    ![](designer-auto-layout-images/image01.png "The Use Autolayout checkbox in the property panel")
 
 Por padrão, nenhuma restrição é criada ou visível na superfície. Em vez disso, eles são inferidos automaticamente das informações do quadro no momento da compilação. Para adicionar restrições, precisamos selecionar um elemento na superfície de design e adicionar restrições a ele. Podemos fazer isso usando a **barra de ferramentas de restrição**.
 
 ## <a name="constraints-toolbar"></a>Barra de ferramentas restrições
 
- [![](designer-auto-layout-images/toolbarnew.png "Os comandos do menu de contexto")](designer-auto-layout-images/toolbarnew.png#lightbox)
+ [![](designer-auto-layout-images/toolbarnew.png "The Context Menu Commands")](designer-auto-layout-images/toolbarnew.png#lightbox)
 
 A barra de ferramentas de restrições foi atualizada e agora consiste em duas partes principais:
 
-- **Alternância de botão de modo de restrições**: Anteriormente, você inseriu o modo de restrições clicando novamente em uma exibição selecionada na superfície de design. Agora você deve usar esse botão de alternância na barra de restrições:
+- **Uma alternância de botão de modo de restrições**: anteriormente, você inseriu o modo de restrições clicando novamente em uma exibição selecionada na superfície de design. Agora você deve usar esse botão de alternância na barra de restrições:
 
   ![alternância de modos de restrições](designer-auto-layout-images/constraints.png)
 
@@ -67,7 +67,7 @@ A barra de ferramentas de restrições foi atualizada e agora consiste em duas p
 
 O pop-up do editor de restrições nos permite adicionar e atualizar as várias restrições de uma vez para uma exibição SELECT. Podemos criar várias restrições de espaçamento, taxa de proporção e alinhamento, como alinhar uma exibição às bordas esquerdas de duas exibições.
 
-Para as restrições de edição no modo de exibição selecionado, clique nas reticências para ![exibir o popover: Constraints Editing popover](designer-auto-layout-images/constraints-popup.png)
+Para as restrições de edição no modo de exibição selecionado, clique nas reticências para exibir as restrições popover: ![edição popover](designer-auto-layout-images/constraints-popup.png)
 
 Ao abrir o popover de restrições, ele exibe as restrições predefinidas na exibição. Podemos definir todas as restrições de espaçamento selecionando **todos os lados** da ComboBox no canto superior direito e selecionar **limpar tudo** para removê-los. 
 
@@ -93,7 +93,7 @@ Os 4 identificadores em forma de T em cada lado do elemento definem as bordas *s
 
 Para criar uma restrição, escolha um identificador e arraste-o para algum lugar na superfície de design. Quando você inicia a operação de arrastar, uma série de linhas/caixas verdes aparecerá na superfície informando o que você pode restringir. Por exemplo, na captura de tela abaixo, estamos restringindo o lado superior do botão do meio:
 
- [![](designer-auto-layout-images/image07.png "Restringindo o lado superior do botão do meio")](designer-auto-layout-images/image07.png#lightbox)
+ [![](designer-auto-layout-images/image07.png "Constraining the top side of the middle button")](designer-auto-layout-images/image07.png#lightbox)
 
 Observe as três linhas verdes tracejadas entre os outros dois botões. As linhas verdes indicam *áreas de soltar*ou os atributos de outros elementos aos quais podemos restringir. Na captura de tela acima, os outros dois botões oferecem 3 áreas verticais de soltar ( *inferior*, *Center*, *superior*) para restringir nosso botão. A linha verde tracejada na parte superior da exibição significa que o controlador de exibição oferece uma restrição na parte superior da exibição e a caixa verde sólida significa que o controlador de exibição oferece uma restrição abaixo do guia de layout superior.
 
@@ -106,13 +106,13 @@ As próximas três seções introduzem o trabalho com diferentes tipos de restri
 
 Com as restrições de tamanho- *altura* e *largura* , você tem duas opções. A primeira opção é arrastar a alça para restringir a um tamanho de elemento vizinho, conforme ilustrado pelo exemplo acima. A outra opção é clicar duas vezes na alça para criar uma autorestrição. Isso nos permite especificar um valor de tamanho constante, conforme ilustrado pela captura de tela abaixo:
 
- [![](designer-auto-layout-images/sizec.png "Arraste a alça para restringir a um tamanho de elemento vizinho, conforme ilustrado aqui")](designer-auto-layout-images/sizec.png#lightbox)
+ [![](designer-auto-layout-images/sizec.png "Drag the handle to constrain to a neighbor element size, as illustrated here")](designer-auto-layout-images/sizec.png#lightbox)
 
 ### <a name="center-constraints"></a>Restrições do centro
 
 O identificador quadrado criará uma restrição *CenterX* ou *CenterY* , dependendo do contexto. Arrastar o identificador quadrado acenderá os outros elementos para oferecer áreas de soltar vertical e horizontal, conforme ilustrado pela captura de tela abaixo:
 
- [![](designer-auto-layout-images/centerc.png "Restrições do centro")](designer-auto-layout-images/centerc.png#lightbox)
+ [![](designer-auto-layout-images/centerc.png "Center Constraints")](designer-auto-layout-images/centerc.png#lightbox)
 
 Se você escolher uma área de soltar vertical, uma restrição de *Centro* será criada. Se você escolher uma área de remoção horizontal, a restrição será baseada em *CenterX*.
 
@@ -120,17 +120,17 @@ Se você escolher uma área de soltar vertical, uma restrição de *Centro* ser�
 
 Para criar restrições de igualdade de tamanho e alinhamento entre dois elementos, você pode selecionar itens de uma barra de ferramentas superior para especificar o alinhamento horizontal da ordem, o alinhamento vertical e o tamanho equalities, conforme ilustrado pela captura de tela abaixo:
 
- [![](designer-auto-layout-images/image06.png "Restrições de combinação")](designer-auto-layout-images/image06.png#lightbox)
+ [![](designer-auto-layout-images/image06.png "Combinational Constraints")](designer-auto-layout-images/image06.png#lightbox)
 
 ### <a name="visualizing-and-editing-constraints"></a>Visualizando e editando restrições
 
 Quando você adicionar uma restrição, ela será exibida na superfície de design como uma linha azul quando você selecionar um item:
 
- [![](designer-auto-layout-images/image09.png "Visualizando restrições")](designer-auto-layout-images/image09.png#lightbox)
+ [![](designer-auto-layout-images/image09.png "Visualizing Constraints")](designer-auto-layout-images/image09.png#lightbox)
 
 Você pode selecionar uma restrição clicando em uma linha azul e editando os valores de restrição diretamente no painel de propriedades. Como alternativa, clicar duas vezes em uma linha azul abrirá um popover que permite que você edite os valores diretamente na superfície de design:
 
- [![](designer-auto-layout-images/image08.png "Restrições de edição")](designer-auto-layout-images/image08.png#lightbox)
+ [![](designer-auto-layout-images/image08.png "Editing Constraints")](designer-auto-layout-images/image08.png#lightbox)
 
 ## <a name="constraint-issues"></a>Problemas de restrição
 
@@ -146,27 +146,27 @@ Esta seção elabora os três problemas listados acima e fornece detalhes sobre 
 
 As restrições conflitantes são marcadas em vermelho e têm um símbolo de aviso. Focalizar os símbolos de aviso traz um popover com informações sobre o conflito:
 
- [![](designer-auto-layout-images/image11.png "Aviso de restrições conflitantes")](designer-auto-layout-images/image11.png#lightbox)
+ [![](designer-auto-layout-images/image11.png "Conflicting Constraints warning")](designer-auto-layout-images/image11.png#lightbox)
 
 ### <a name="underconstrained-items"></a>Itens de restrição
 
 Os itens subrestritos aparecem em laranja e disparam a aparência de um ícone de marcador laranja na barra de objetos do controlador de exibição:
 
- [![](designer-auto-layout-images/image02.png "Itens subrestringidos aparecem em laranja")](designer-auto-layout-images/image02.png#lightbox)
+ [![](designer-auto-layout-images/image02.png "Underconstrained items appear in orange")](designer-auto-layout-images/image02.png#lightbox)
 
 Se você clicar nesse ícone de marcador, poderá obter informações sobre itens subrestringidos na cena e resolver os problemas totalmente restringindo-os ou removendo suas restrições, conforme ilustrado pela captura de tela abaixo:
 
- [![](designer-auto-layout-images/image10.png "Corrigindo itens de restrição")](designer-auto-layout-images/image10.png#lightbox)
+ [![](designer-auto-layout-images/image10.png "Fixing Underconstrained Items")](designer-auto-layout-images/image10.png#lightbox)
 
 ### <a name="frame-misplacement"></a>Incorreta de quadro
 
 O incorreto de quadro usa o mesmo código de cor que os itens de restrição. O item sempre será renderizado na superfície usando seu quadro nativo, mas, no caso de um esboço de quadro, um retângulo vermelho marcará o local em que o item terminará quando o aplicativo for executado, conforme ilustrado pela captura de tela abaixo:
 
- [![](designer-auto-layout-images/image05.png "Exibição de incorretação do quadro de exemplo")](designer-auto-layout-images/image05.png#lightbox)
+ [![](designer-auto-layout-images/image05.png "Sample Frame Misplacement view")](designer-auto-layout-images/image05.png#lightbox)
 
 Para resolver erros de local de quadro, selecione o botão **Atualizar quadros com base nas restrições** da barra de ferramentas restrições (botão da extrema direita):
 
- [![](designer-auto-layout-images/image03.png "Botão de barra de ferramentas atualizar quadros com base no restrições")](designer-auto-layout-images/image03.png#lightbox)
+ [![](designer-auto-layout-images/image03.png "Update Frames based on Constraints toolbar button")](designer-auto-layout-images/image03.png#lightbox)
 
 Isso ajustará automaticamente o quadro do elemento para corresponder às posições definidas pelos controles.
 
@@ -181,10 +181,10 @@ Para acessar uma restrição no código, primeiro você precisa expô-lo no desi
 1. Crie a restrição como normal (usando qualquer um dos métodos listados acima).
 2. No **Gerenciador de estrutura de tópicos do documento**, localize a restrição desejada e selecione-a:
 
-    [![](designer-auto-layout-images/modify01.png "O Gerenciador de estrutura de tópicos do documento")](designer-auto-layout-images/modify01.png#lightbox)
+    [![](designer-auto-layout-images/modify01.png "The Document Outline Explorer")](designer-auto-layout-images/modify01.png#lightbox)
 3. Em seguida, atribua um **nome** à restrição na guia **widget** do Gerenciador de **Propriedades**:
 
-    [![](designer-auto-layout-images/modify02.png "A guia do widget")](designer-auto-layout-images/modify02.png#lightbox)
+    [![](designer-auto-layout-images/modify02.png "The Widget Tab")](designer-auto-layout-images/modify02.png#lightbox)
 4. Salve as alterações.
 
 Com as alterações acima em vigor, você pode acessar a restrição no código e modificar suas propriedades. Por exemplo, você pode usar o seguinte para definir a altura do modo de exibição anexado como zero:
@@ -195,18 +195,18 @@ ViewInfoHeight.Constant = 0;
 
 Dada a seguinte configuração para a restrição no designer do iOS:
 
-[![](designer-auto-layout-images/modify03.png "Editando uma restrição no Gerenciador de propriedades")](designer-auto-layout-images/modify03.png#lightbox)
+[![](designer-auto-layout-images/modify03.png "Editing a Constraint in the Property Explorer")](designer-auto-layout-images/modify03.png#lightbox)
 
 ### <a name="the-deferred-layout-pass"></a>A passagem de layout adiada
 
 Em vez de atualizar instantaneamente a exibição anexada em resposta às alterações de restrição, o mecanismo de layout automático agenda um _passo de layout adiado_ para o futuro próximo. Durante essa passagem adiada, não apenas a restrição de exibição fornecida é atualizada, as restrições para cada exibição na hierarquia são recalculadas e atualizadas para ajustar o novo layout.
 
-A qualquer momento, você pode agendar sua própria passagem de layout adiada chamando `SetNeedsLayout` os `SetNeedsUpdateConstraints` métodos ou da exibição pai. 
+A qualquer momento, você pode agendar sua própria passagem de layout adiado chamando os métodos `SetNeedsLayout` ou `SetNeedsUpdateConstraints` da exibição pai. 
 
 A passagem de layout adiada consiste em duas passagens exclusivas por meio da hierarquia de exibição:
 
-- **A passagem de atualização** dessa passagem, o mecanismo de layout automático percorre a hierarquia de exibição e invoca o `UpdateViewConstraints` método em todos os controladores de `UpdateConstraints` exibição e no método em todas as exibições.
-- **A passagem de layout** novamente, o mecanismo de layout automático atravessa a hierarquia de exibição, mas, desta vez, `ViewWillLayoutSubviews` invoca o método em todos os controladores `LayoutSubviews` de exibição e o método em todas as exibições. O `LayoutSubviews` método atualiza a `Frame` propriedade de cada subexibição com o retângulo calculado pelo mecanismo de layout automático.
+- **A passagem de atualização** dessa passagem, o mecanismo de layout automático percorre a hierarquia de exibição e invoca o método `UpdateViewConstraints` em todos os controladores de exibição e o método `UpdateConstraints` em todas as exibições.
+- **A passagem de layout** novamente, o mecanismo de layout automático atravessa a hierarquia de exibição, mas, desta vez, invoca o método `ViewWillLayoutSubviews` em todos os controladores de exibição e o método `LayoutSubviews` em todas as exibições. O método `LayoutSubviews` atualiza a propriedade `Frame` de cada subexibição com o retângulo calculado pelo mecanismo de layout automático.
 
 ### <a name="animating-constraint-changes"></a>Animando alterações de restrição
 
@@ -222,7 +222,7 @@ View.LayoutIfNeeded();
 UIView.CommitAnimations();
 ```
 
-A chave aqui é chamar o `LayoutIfNeeded` método da exibição pai dentro do bloco de animação. Isso informa ao modo de exibição para desenhar cada "frame" do local animado ou da alteração de tamanho. Sem essa linha, a exibição simplesmente se ajustaria à versão final sem animação.
+A chave aqui é chamar o método `LayoutIfNeeded` da exibição pai dentro do bloco de animação. Isso informa ao modo de exibição para desenhar cada "frame" do local animado ou da alteração de tamanho. Sem essa linha, a exibição simplesmente se ajustaria à versão final sem animação.
 
 ## <a name="summary"></a>Resumo
 

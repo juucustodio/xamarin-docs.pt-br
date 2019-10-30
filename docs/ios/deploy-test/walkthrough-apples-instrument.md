@@ -4,19 +4,19 @@ description: Este artigo descreve como usar a Ferramenta de Instrumentos da Appl
 ms.prod: xamarin
 ms.assetid: 8f21db1d-7107-4158-8058-d47e417689a0
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 2bdb95c73ed692b3ba7f0c3ff15cd7754a7e7b66
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 41254fb6aac176cd796fba851478b31f774553d2
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70278872"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73023450"
 ---
 # <a name="walkthrough---using-apples-instruments-tool"></a>Passo a passo – Usando a Ferramenta de Instrumentos da Apple
 
-_Este artigo explica como usar a ferramenta Instrumentos da Apple para diagnosticar problemas de memória em um aplicativo iOS compilado com o Xamarin. Demonstra como inicializar o Instrumentos, tirar instantâneos do heap e analisar o aumento da memória. Ele também mostra como usar o Instrumentos para exibir e identificar as linhas exatas do código que causam o problema de memória._
+_Este artigo explica como usar a ferramenta instrumentos da Apple para diagnosticar problemas de memória em um aplicativo iOS criado com o Xamarin. Ele demonstra como iniciar instrumentos, tirar instantâneos de heap e analisar o crescimento da memória. Ele também mostra como usar instrumentos para exibir e identificar as linhas exatas de código que causam o problema de memória._
 
 Esta página demonstra como usar a **ferramenta de instrumentos do Xcode** para diagnosticar um problema de memória em um aplicativo iOS.
 Primeiro, baixe o [exemplo do MemoryDemo](https://docs.microsoft.com/samples/xamarin/ios-samples/profiling-memorydemo) e abra a solução **antes** no Visual Studio para Mac.
@@ -27,19 +27,19 @@ Primeiro, baixe o [exemplo do MemoryDemo](https://docs.microsoft.com/samples/xam
 2. Carregue o aplicativo no dispositivo, escolhendo o item de menu **Executar > Carregar no Dispositivo**.
 3. Escolha o modelo **Alocações** (ícone laranja com caixa branca)
 
-    ![](walkthrough-apples-instrument-images/00-allocations-tempate.png "Escolha o modelo de alocações")
+    ![](walkthrough-apples-instrument-images/00-allocations-tempate.png "Choose the Allocations template")
 
 4. Selecione o aplicativo **Demonstração de Memória** na lista **Escolher um modelo de criação de perfil para:** na parte superior da janela. Clique no dispositivo iOS para expandir o menu que mostra os aplicativos instalados.
 
-    ![](walkthrough-apples-instrument-images/01-mem-demo.png "Selecione o aplicativo Memory Demo")
+    ![](walkthrough-apples-instrument-images/01-mem-demo.png "Select the Memory Demo application")
 
-5. Pressione o botão **Escolher** (canto inferior direito da janela) para iniciar **Instrumentos**. Este modelo mostrará dois itens no painel superior: alocações e Rastreador de VM.
+5. Pressione o botão **Escolher** (canto inferior direito da janela) para iniciar **Instrumentos**. Este modelo mostrará dois itens no painel superior: Alocações e Controlador de VM.
 
 6. Pressione o botão **Gravar** (círculo vermelho no canto superior esquerdo) em Instrumentos, o que iniciará o aplicativo.
 
-7. Selecione a linha **Rastreador de VM** no painel superior (agora que o aplicativo está em execução, ele conterá duas seções: tamanho residente e sujo). No painel **Inspetor**, escolha a opção **Mostrar Configurações de Exibição** (o ícone de engrenagem) e marque a caixa de seleção **Instantâneo Automático**, conforme mostrado no canto inferior direito desta captura de tela:
+7. Selecione a linha **Controlador de VM** no painel superior (agora que o aplicativo é executado, ele conterá duas seções: Tamanho Residente e Sujo). No painel **Inspetor**, escolha a opção **Mostrar Configurações de Exibição** (o ícone de engrenagem) e marque a caixa de seleção **Instantâneo Automático**, conforme mostrado no canto inferior direito desta captura de tela:
 
-    ![](walkthrough-apples-instrument-images/02-auto-snapshot.png "Escolha a opção Mostrar Configurações de Exibição no ícone de engrenagem e, em seguida, marque a caixa de seleção de instantâneo automático")
+    ![](walkthrough-apples-instrument-images/02-auto-snapshot.png "Choose the Show Display Settings option the gear icon then tick the Automatic Snapshotting checkbox")
 
 8. Selecione a linha **Alocações** no painel superior (agora que o aplicativo é executado, ele indicará *Todas as VMs Anônimas e Heap*)
 9. No painel **Inspetor**, escolha a opção **Mostrar Configurações de Vídeo** (o ícone de engrenagem) e clique no botão **Marcar Geração** para estabelecer uma linha de base. Um pequeno sinalizador vermelho será exibido na linha do tempo na parte superior da janela
@@ -50,15 +50,15 @@ Primeiro, baixe o [exemplo do MemoryDemo](https://docs.microsoft.com/samples/xam
 
 14. Observe que o nó **&lt;non-object>** mostra um crescimento excessivo de memória. Clique na seta ao lado desse nó para ver mais detalhes – clique com o botão direito do mouse no rastreamento de pilha para adicionar **Local de Origem** ao painel:
 
-    ![](walkthrough-apples-instrument-images/03-mem-growth.png "Adicione o local de origem ao painel")
+    ![](walkthrough-apples-instrument-images/03-mem-growth.png "Add Source Location to the pane")
 
 15. Classifique por **Tamanho** e exiba **Detalhes Estendidos**:
 
-    ![](walkthrough-apples-instrument-images/04-extended-detail.png "Classifique por Tamanho e exiba Detalhes Estendidos")
+    ![](walkthrough-apples-instrument-images/04-extended-detail.png "Sort by Size and display the  Extended Detail view")
 
 16. Clique na entrada desejada na pilha de chamadas para ver o código relacionado:
 
-    ![](walkthrough-apples-instrument-images/05-related-code.png "Exibir o código relacionado")
+    ![](walkthrough-apples-instrument-images/05-related-code.png "Viewing the related code")
 
 Nesse caso, uma nova imagem é criada e armazenada em uma coleção para cada célula, nem as células de exibição de coleção existente são reutilizadas.
 
@@ -83,11 +83,11 @@ public override UICollectionViewCell GetCell (UICollectionView collectionView, N
 
 Agora, quando o aplicativo é executado, o uso de memória é bastante reduzido – o **Crescimento** entre gerações agora é medido em Kib (quilobytes) em vez de MiB (megabytes), como era antes de corrigir o código:
 
-![](walkthrough-apples-instrument-images/06-reduced-memory.png "Mostrar o uso de memória do aplicativo")
+![](walkthrough-apples-instrument-images/06-reduced-memory.png "Showing the app memory usage")
 
 O código aprimorado está disponível no [Exemplo de MemoryDemo](https://docs.microsoft.com/samples/xamarin/ios-samples/profiling-memorydemo) na solução **posterior** no Visual Studio para Mac.
 
-Este blog da comunidade sobre [Coleta de Lixo do Xamarin.iOS](http://c-sharx.net/2015-04-27-xamarin-ios-the-garbage-collector-and-me/) é uma referência útil para lidar com problemas de memória com o Xamarin.iOS.
+Este blog da comunidade sobre [Coleta de Lixo do Xamarin.iOS](https://c-sharx.net/2015-04-27-xamarin-ios-the-garbage-collector-and-me/) é uma referência útil para lidar com problemas de memória com o Xamarin.iOS.
 
 ## <a name="summary"></a>Resumo
 
@@ -98,4 +98,4 @@ Por fim, o aplicativo foi examinado novamente para verificar se que o problema f
 ## <a name="related-links"></a>Links relacionados
 
 - [Amostra do Memory Demo](https://docs.microsoft.com/samples/xamarin/ios-samples/profiling-memorydemo)
-- [Coleta de lixo do Xamarin.iOS (publicação do blog)](http://c-sharx.net/2015-04-27-xamarin-ios-the-garbage-collector-and-me/)
+- [Coleta de lixo do Xamarin.iOS (publicação do blog)](https://c-sharx.net/2015-04-27-xamarin-ios-the-garbage-collector-and-me/)

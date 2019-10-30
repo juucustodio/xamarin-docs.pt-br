@@ -4,20 +4,20 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: EA3CFCC4-2D2E-49D6-A26C-8C0706ACA045
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/29/2018
-ms.openlocfilehash: e96f9a0ce4d1eec9bf853faceeb85a2acb4840af
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 1246eeac63a0ae232396d4c2fd69d8bf516f5e3e
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70761016"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73026998"
 ---
 # <a name="how-do-i-automate-an-android-nunit-test-project"></a>Como automatizar um projeto de Teste NUnit do Android?
 
 > [!NOTE]
-> Este guia explica como automatizar um projeto de teste do Android NUnit, não um projeto Xamarin. UITest. Os guias do Xamarin. UITest podem ser encontrados [aqui](https://docs.microsoft.com/appcenter/test-cloud/preparing-for-upload/uitest).
+> Este guia explica como automatizar um projeto de teste do Android NUnit, não um projeto Xamarin. UITest. Os guias do Xamarin. UITest podem ser encontrados [aqui](https://docs.microsoft.com/appcenter/test-cloud/preparing-for-upload/xamarin-android-uitest).
 
 Quando você cria um projeto de **aplicativo de teste de unidade (Android)** no Visual Studio (ou no projeto de **teste de unidade do Android** no Visual Studio para Mac), este projeto não executa automaticamente os testes por padrão.
 Para executar testes NUnit em um dispositivo de destino, você pode criar uma subclasse de [Android. app. Instrumentation](xref:Android.App.Instrumentation) que é iniciada usando o seguinte comando: 
@@ -55,11 +55,11 @@ As etapas a seguir explicam esse processo:
     }
     ```
 
-    Neste arquivo, `Xamarin.Android.NUnitLite.TestSuiteInstrumentation` (de **Xamarin. Android. novo nunitlite. dll**) é subclasse para Create. `TestInstrumentation`
+    Nesse arquivo, `Xamarin.Android.NUnitLite.TestSuiteInstrumentation` (de **Xamarin. Android. novo nunitlite. dll**) é subclasse para criar `TestInstrumentation`.
 
-2. Implemente `TestInstrumentation` o construtor e `AddTests` o método. O `AddTests` método controla quais testes são realmente executados.
+2. Implemente o construtor de `TestInstrumentation` e o método `AddTests`. O método `AddTests` controla quais testes são realmente executados.
 
-3. Modifique o `.csproj` arquivo para adicionar **TestInstrumentation.cs**. Por exemplo:
+3. Modifique o arquivo de `.csproj` para adicionar **TestInstrumentation.cs**. Por exemplo:
 
     ```xml
     <?xml version="1.0" encoding="utf-8"?>
@@ -75,24 +75,24 @@ As etapas a seguir explicam esse processo:
     </Project>
     ```
 
-4. Use o comando a seguir para executar os testes de unidade. Substitua `PACKAGE_NAME` pelo nome do pacote do aplicativo (o nome do pacote pode ser encontrado no atributo do `/manifest/@package` aplicativo localizado em **AndroidManifest. xml**):
+4. Use o comando a seguir para executar os testes de unidade. Substitua `PACKAGE_NAME` pelo nome do pacote do aplicativo (o nome do pacote pode ser encontrado no atributo `/manifest/@package` do aplicativo localizado em **AndroidManifest. xml**):
 
     ```shell
     adb shell am instrument -w PACKAGE_NAME/app.tests.TestInstrumentation
     ```
 
-5. Opcionalmente, você pode modificar o `.csproj` arquivo para adicionar o `RunTests` destino do MSBuild. Isso possibilita invocar os testes de unidade com um comando semelhante ao seguinte:
+5. Opcionalmente, você pode modificar o arquivo de `.csproj` para adicionar o destino do `RunTests` MSBuild. Isso possibilita invocar os testes de unidade com um comando semelhante ao seguinte:
 
     ```shell
     msbuild /t:RunTests Project.csproj
     ```
 
-    (Observe que o uso desse novo destino não é necessário; o `adb` comando anterior pode ser usado em `msbuild`vez de).
+    (Observe que o uso desse novo destino não é necessário; o comando `adb` anterior pode ser usado em vez de `msbuild`.)
 
-Para obter mais informações sobre como `adb shell am instrument` usar o comando para executar testes de unidade, consulte o tópico Android Developer [running tests with ADB](https://developer.android.com/studio/test/command-line.html#RunTestsDevice) .
+Para obter mais informações sobre como usar o comando `adb shell am instrument` para executar testes de unidade, consulte o tópico desenvolvimento de testes do Android [com o ADB](https://developer.android.com/studio/test/command-line.html#RunTestsDevice) .
 
 > [!NOTE]
-> Com a versão [Xamarin. Android 5,0](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/android/xamarin.android_5/xamarin.android_5.1/index.md#Android_Callable_Wrapper_Naming) , os nomes de pacote padrão para wrappers que podem ser chamados pelo Android serão baseados no md5sum do nome qualificado pelo assembly do tipo que está sendo exportado. Isso permite que o mesmo nome totalmente qualificado seja fornecido de dois assemblies diferentes e não obtenha um erro de empacotamento. Portanto, certifique-se de usar `Name` a propriedade `Instrumentation` no atributo para gerar um nome legível de ACW/classe.
+> Com a versão [Xamarin. Android 5,0](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/android/xamarin.android_5/xamarin.android_5.1/index.md#Android_Callable_Wrapper_Naming) , os nomes de pacote padrão para wrappers que podem ser chamados pelo Android serão baseados no md5sum do nome qualificado pelo assembly do tipo que está sendo exportado. Isso permite que o mesmo nome totalmente qualificado seja fornecido de dois assemblies diferentes e não obtenha um erro de empacotamento. Portanto, certifique-se de usar a propriedade `Name` no atributo `Instrumentation` para gerar um nome legível de ACW/classe.
 
-_O nome do ACW deve ser usado no `adb` comando acima_.
-A renomeação/refatoração da C# classe exigirá, `RunTests` portanto, a modificação do comando para usar o nome de ACW correto.
+_O nome do ACW deve ser usado no comando `adb` acima_.
+A renomeação/refatoração da C# classe exigirá, portanto, a modificação do comando `RunTests` para usar o nome de ACW correto.

@@ -4,15 +4,15 @@ description: Este guia apresenta várias ferramentas do Fastlane que podem ser u
 ms.prod: xamarin
 ms.assetid: 8202C57D-22FF-4224-A5B1-AAEF12B7C106
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: c26d912a4684f6ddbee46ae953ce5cf1a3db67bd
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 0af85c1c27d2b329d81cc680a0fc4c075d4a86dd
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70762728"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028603"
 ---
 # <a name="introduction-to-fastlane-for-ios"></a>Introdução ao fastlane para iOS
 
@@ -50,13 +50,13 @@ O conteúdo fornecido pode ser usado como um springboard para ajudar com a distr
 3. Instale o fastlane descompactando o arquivo e clicando duas vezes no executável `install`. Se você receber um erro informando que o arquivo "não pode ser aberto porque pertence a um desenvolvedor não identificado", pressione OK e faça o seguinte:
     - CTRL + clique no executável `install`. A caixa de diálogo abaixo será exibida:
 
-     ![](images/fastlane-image12.png "A caixa de diálogo de instalação")
+     ![](images/fastlane-image12.png "The install dialog")
 
     - Pressione OK para iniciar a instalação das ferramentas do fastlane
 
 4. O terminal solicitará o diálogo ilustrado abaixo. Pressione `y`:
 
-   ![](images/fastlane-image13.png "O aviso do Terminal")
+   ![](images/fastlane-image13.png "The Terminal prompt")
 
 5. Execute o `which fastlane` antes de usar o Fastlane pela primeira vez. O caminho deve se parecer com o seguinte: 
 
@@ -66,7 +66,7 @@ O conteúdo fornecido pode ser usado como um springboard para ajudar com a distr
 
 6. Se o caminho corresponder ao acima, você estará pronto para começar.
 
-     Caso contrário, faça o seguinte:  No macOS, abra `.bash_profile`, que é um arquivo de texto não criptografado oculto no diretório base, com o seguinte comando:
+     Caso contrário, faça o seguinte: no macOS, abra `.bash_profile`, que é um arquivo de texto não criptografado oculto no diretório base, com o seguinte comando:
 
     ```bash
     open ~/.bash_profile
@@ -84,11 +84,11 @@ O conteúdo fornecido pode ser usado como um springboard para ajudar com a distr
 
 O fastlane é um projeto de software livre muito ativo que regularmente envia por push novas versões. Quando uma nova versão do fastlane estiver disponível, você será informado ao executar qualquer comando do fastlane:
 
-[![](images/fastlane-image0.png "O aviso de atualização do fastlane")](images/fastlane-image0.png#lightbox)
+[![](images/fastlane-image0.png "The fast lane update prompt")](images/fastlane-image0.png#lightbox)
 
 Para atualizar para uma nova versão do Fastlane, baixe o pacote mais recente [aqui](https://download.fastlane.tools) e clique duas vezes no pacote de instalação para executá-lo:
 
-[![](images/fastlane-image0a.png "Executando o pacote de instalação")](images/fastlane-image0a.png#lightbox)
+[![](images/fastlane-image0a.png "Running the install package")](images/fastlane-image0a.png#lightbox)
 
 ## <a name="contents"></a>Conteúdo
 
@@ -106,7 +106,7 @@ Depois de criar uma identidade de assinatura e perfis de provisionamento com fas
 
 Para definir as opções de assinatura de código para um aplicativo do Xamarin.iOS, clique com o botão direito do mouse no nome do projeto, selecione **Opções de Projeto > Build > Assinatura do Pacote iOS** e defina a Identidade de Assinatura e o Perfil de Provisionamento explicitamente, como demonstrado a seguir:
 
-[![](images/fastlane-image11.png "Definir a Identidade de assinatura e o Perfil de provisionamento explicitamente")](images/fastlane-image11.png#lightbox)
+[![](images/fastlane-image11.png "Set the Signing Identity and Provisioning Profile explicitly")](images/fastlane-image11.png#lightbox)
 
 ## <a name="related-links"></a>Links relacionados
 

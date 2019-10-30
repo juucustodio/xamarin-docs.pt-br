@@ -4,15 +4,15 @@ description: Este documento descreve o HealthKit, uma estrutura introduzida no i
 ms.prod: xamarin
 ms.assetid: E3927A21-507C-43BA-A2AD-957716BA9B52
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: eb944b062f75ceec8ca8dbe22cde64b0fdd15625
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 21f10c7771e1c30eabb3f42a161c6d563a5327f3
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70752949"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73032394"
 ---
 # <a name="healthkit-in-xamarinios"></a>HealthKit no Xamarin. iOS
 
@@ -30,7 +30,7 @@ Este artigo não abordará tópicos mais avançados, como a consulta do banco de
 
 Neste artigo, criaremos um aplicativo de exemplo para registrar a taxa de coração do usuário:
 
-[![](healthkit-images/image01.png "Um aplicativo de exemplo para registrar a taxa de coração dos usuários")](healthkit-images/image01.png#lightbox)
+[![](healthkit-images/image01.png "A sample application to record the users heart rate")](healthkit-images/image01.png#lightbox)
 
 ## <a name="requirements"></a>Requisitos
 
@@ -50,9 +50,9 @@ Os aplicativos do kit de integridade exigem:
 
 - Uma **ID de aplicativo**explícita.
 - Um **perfil de provisionamento** associado a essa ID explícita do **aplicativo** e com as permissões do **Kit de integridade** .
-- Um `Entitlements.plist` com uma `com.apple.developer.healthkit` Propriedade do tipo `Boolean` definido como `Yes`.
-- Um `Info.plist` `String` `healthkit`cuja `UIRequiredDeviceCapabilities` chave contém uma entrada com o valor.
-- O `Info.plist` também deve ter as entradas de explicação de privacidade apropriadas `String` : uma explicação para `NSHealthUpdateUsageDescription` a chave se o aplicativo vai gravar dados e uma `String` explicação para a chave `NSHealthShareUsageDescription` se o aplicativo for ler o kit de integridade dado.
+- Um `Entitlements.plist` com uma propriedade `com.apple.developer.healthkit` do tipo `Boolean` definido como `Yes`.
+- Um `Info.plist` cuja chave de `UIRequiredDeviceCapabilities` contém uma entrada com o valor de `String` `healthkit`.
+- O `Info.plist` também deve ter as entradas de explicação de privacidade apropriadas: uma explicação de `String` para a chave `NSHealthUpdateUsageDescription` se o aplicativo for gravar dados e uma explicação de `String` para a chave `NSHealthShareUsageDescription` se o aplicativo for ler os dados do kit de integridade.
 
 Para saber mais sobre como provisionar um aplicativo iOS, o artigo [provisionamento de dispositivos](~/ios/get-started/installation/device-provisioning/index.md) na série **introdução** do Xamarin descreve a relação entre os certificados de desenvolvedor, as IDs de aplicativo, os perfis de provisionamento e os direitos de aplicativo.
 
@@ -62,25 +62,25 @@ Para saber mais sobre como provisionar um aplicativo iOS, o artigo [provisioname
 
 A criação de uma **ID de aplicativo** explícita e um **perfil de provisionamento** apropriado é feito no centro de [desenvolvimento do IOS](https://developer.apple.com/devcenter/ios/index.action)da Apple. 
 
-Suas **IDs de aplicativo** atuais são listadas na seção [certificados, identificadores & perfis](https://developer.apple.com/account/ios/identifiers/bundle/bundleList.action) do centro de desenvolvimento. Geralmente, essa lista mostrará valores de ID `*`de, indicando que o**nome** da **ID** - do aplicativo pode ser usado com qualquer número de sufixos. Essas *IDs de aplicativo curinga* não podem ser usadas com o kit de integridade.
+Suas **IDs de aplicativo** atuais são listadas na seção [certificados, identificadores & perfis](https://developer.apple.com/account/ios/identifiers/bundle/bundleList.action) do centro de desenvolvimento. Geralmente, essa lista mostrará valores de **ID** de `*`, indicando que a **id do aplicativo** - **nome** pode ser usada com qualquer número de sufixos. Essas *IDs de aplicativo curinga* não podem ser usadas com o kit de integridade.
 
-Para criar uma **ID de aplicativo**explícita, clique **+** no botão na parte superior direita para levá-lo para a página **registrar ID do aplicativo IOS** :
+Para criar uma **ID de aplicativo**explícita, clique no botão **+** no canto superior direito para levá-lo para a página **registrar ID do aplicativo IOS** :
 
-[![](healthkit-images/image02.png "Registrando um aplicativo no portal do desenvolvedor da Apple")](healthkit-images/image02.png#lightbox)
+[![](healthkit-images/image02.png "Registering an app on the Apple Developer Portal")](healthkit-images/image02.png#lightbox)
 
 Conforme mostrado na imagem acima, depois de criar uma descrição do aplicativo, use a seção **ID explícita do aplicativo** para criar uma ID para seu aplicativo. Na seção **serviços de aplicativos** , verifique **Kit de integridade** na seção **habilitar serviços** .
 
-Quando terminar, pressione o botão **continuar** para registrar a ID do **aplicativo** em sua conta. Você será levado de volta à página **certificados, identificadores e perfis** . Clique em **perfis de provisionamento** para levá-lo à lista de seus perfis de provisionamento atuais e clique no **+** botão no canto superior direito para levá-lo à página **Adicionar perfil de provisionamento do IOS** . Selecione a opção de **desenvolvimento de aplicativo do IOS** e clique em **continuar** para acessar a página **selecionar ID do aplicativo** . Aqui, selecione a ID explícita do **aplicativo** que você especificou anteriormente:
+Quando terminar, pressione o botão **continuar** para registrar a ID do **aplicativo** em sua conta. Você será levado de volta à página **certificados, identificadores e perfis** . Clique em **perfis de provisionamento** para levá-lo para a lista de seus perfis de provisionamento atuais e clique no botão **+** no canto superior direito para levá-lo à página **Adicionar perfil de provisionamento do IOS** . Selecione a opção de **desenvolvimento de aplicativo do IOS** e clique em **continuar** para acessar a página **selecionar ID do aplicativo** . Aqui, selecione a ID explícita do **aplicativo** que você especificou anteriormente:
 
-[![](healthkit-images/image03.png "Selecione a ID explícita do aplicativo")](healthkit-images/image03.png#lightbox)
+[![](healthkit-images/image03.png "Select the explicit App ID")](healthkit-images/image03.png#lightbox)
 
 Clique em **continuar** e trabalhe nas telas restantes, em que você especificará seus **certificados de desenvolvedor**, **dispositivos**e um **nome** para este perfil de **provisionamento**:
 
-[![](healthkit-images/image04.png "Gerando o perfil de provisionamento")](healthkit-images/image04.png#lightbox)
+[![](healthkit-images/image04.png "Generating the Provisioning Profile")](healthkit-images/image04.png#lightbox)
 
 Clique em **gerar** e aguardar a criação do seu perfil. Baixe o arquivo e clique duas vezes nele para instalar o no Xcode. Você pode confirmar que está instalado em **Xcode > preferências > contas > exibir detalhes...** Você deve ver seu perfil de provisionamento recém instalado e deve ter o ícone do Health kit e qualquer outro serviço especial em sua linha de **direitos** :
 
-[![](healthkit-images/image05.png "Exibindo o perfil no Xcode")](healthkit-images/image05.png#lightbox)
+[![](healthkit-images/image05.png "Viewing the profile in Xcode")](healthkit-images/image05.png#lightbox)
 
 <a name="associating-appid" />
 
@@ -90,11 +90,11 @@ Depois de criar e instalar um perfil de **provisionamento** apropriado conforme 
 
 Em vez de percorrer o processo de criação de um projeto do Xamarin iOS 8 manualmente, abra o aplicativo de exemplo anexado a este artigo (que inclui um storyboard e código predefinidos). Para associar o aplicativo de exemplo ao seu perfil de **provisionamento**habilitado do kit de integridade, na **painel de soluções**, clique com o botão direito do mouse no projeto e ative sua caixa de diálogo de **Opções** . Alterne para o painel de **aplicativo do IOS** e insira a ID explícita do **aplicativo** que você criou anteriormente como o **identificador do pacote**do aplicativo:
 
-[![](healthkit-images/image06.png "Insira a ID explícita do aplicativo")](healthkit-images/image06.png#lightbox)
+[![](healthkit-images/image06.png "Enter the explicit App ID")](healthkit-images/image06.png#lightbox)
 
 Agora, alterne para o painel de **assinatura do pacote do IOS** . Seu **perfil de provisionamento**recentemente instalado, com sua associação à ID explícita do **aplicativo**, agora estará disponível como o **perfil de provisionamento**:
 
-[![](healthkit-images/image07.png "Selecionar o perfil de provisionamento")](healthkit-images/image07.png#lightbox)
+[![](healthkit-images/image07.png "Select the Provisioning Profile")](healthkit-images/image07.png#lightbox)
 
 Se o **perfil de provisionamento** não estiver disponível, verifique o **identificador do pacote** no painel de **aplicativos do IOS** em vez do especificado no centro de desenvolvimento do **Ios** e se o **perfil de provisionamento** está instalado (**Xcode Preferências de > > contas > Exibir detalhes...** ).
 
@@ -102,9 +102,9 @@ Quando o **perfil de provisionamento** habilitado para kit de integridade estive
 
 ### <a name="entitlementsplist-and-infoplist-values"></a>Valores de direitos. plist e info. plist
 
-O aplicativo de exemplo inclui `Entitlements.plist` um arquivo (que é necessário para aplicativos habilitados para o kit de integridade) e não é incluído em todos os modelos de projeto. Se o seu projeto não incluir direitos, clique com o botão direito do mouse em seu projeto, escolha **arquivo > novo arquivo... > iOS > os direitos. plist** para adicionar um manualmente.
+O aplicativo de exemplo inclui um arquivo de `Entitlements.plist` (que é necessário para aplicativos habilitados para o kit de integridade) e não é incluído em todos os modelos de projeto. Se o seu projeto não incluir direitos, clique com o botão direito do mouse em seu projeto, escolha **arquivo > novo arquivo... > iOS > os direitos. plist** para adicionar um manualmente.
 
-Por fim, `Entitlements.plist` seu deve ter o seguinte par de chave e valor:
+Por fim, seu `Entitlements.plist` deve ter o seguinte par de chave e valor:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -118,7 +118,7 @@ Por fim, `Entitlements.plist` seu deve ter o seguinte par de chave e valor:
 
 ```
 
-Da mesma forma `Info.plist` , o para o aplicativo deve ter um `healthkit` valor associado `UIRequiredDeviceCapabilities` à chave:
+Da mesma forma, o `Info.plist` para o aplicativo deve ter um valor de `healthkit` associado à chave de `UIRequiredDeviceCapabilities`:
 
 ```xml
 <key>UIRequiredDeviceCapabilities</key>
@@ -129,7 +129,7 @@ Da mesma forma `Info.plist` , o para o aplicativo deve ter um `healthkit` valor 
 
 ```
 
-O aplicativo de exemplo fornecido com este artigo inclui um pré-configurado `Entitlements.plist` que inclui todas as chaves necessárias.
+O aplicativo de exemplo fornecido com este artigo inclui um `Entitlements.plist` pré-configurado que inclui todas as chaves necessárias.
 
 <a name="programming" />
 
@@ -137,17 +137,17 @@ O aplicativo de exemplo fornecido com este artigo inclui um pré-configurado `En
 
 O armazenamento de informações do kit de integridade é um repositório de armazenamento privado específico do usuário que é compartilhado entre aplicativos. Como as informações de integridade são tão confidenciais, o usuário deve executar etapas positivas para permitir o acesso a dados. Esse acesso pode ser parcial (gravação, mas não lido, acesso a alguns tipos de dados, mas não a outros, etc.) e pode ser revogado a qualquer momento. Os aplicativos do kit de integridade devem ser escritos de forma defensiva, sabendo que muitos usuários serão hesitars sobre o armazenamento de suas informações relacionadas à integridade.
 
-Os dados do kit de integridade são limitados aos tipos especificados pela Apple. Esses tipos são estritamente definidos: alguns, como tipo de sangue, são limitados aos valores específicos de uma enumeração fornecida pela Apple, enquanto outros combinam uma magnitude com uma unidade de medida (como gramas, calorias e litros). Até mesmo dados que compartilham uma unidade de medida compatível são diferenciados `HKObjectType`por seu; por exemplo, o sistema de tipos capturará uma tentativa incorreta de armazenar um `HKQuantityTypeIdentifier.NumberOfTimesFallen` valor em `HKQuantityTypeIdentifier.FlightsClimbed` um campo que espera um `HKUnit.Count` mesmo que ambos usem o unidade de medida.
+Os dados do kit de integridade são limitados aos tipos especificados pela Apple. Esses tipos são estritamente definidos: alguns, como tipo de sangue, são limitados aos valores específicos de uma enumeração fornecida pela Apple, enquanto outros combinam uma magnitude com uma unidade de medida (como gramas, calorias e litros). Até mesmo dados que compartilham uma unidade de medida compatível são diferenciados por seus `HKObjectType`; por exemplo, o sistema de tipos capturará uma tentativa incorreta de armazenar um valor de `HKQuantityTypeIdentifier.NumberOfTimesFallen` em um campo que espera um `HKQuantityTypeIdentifier.FlightsClimbed` mesmo que ambos usem a unidade de medida `HKUnit.Count`.
 
-Os tipos armazenada no armazenamento de Datakit de integridade são todas subclasses `HKObjectType`de. `HKCharacteristicType`os objetos armazenam o sexo biológico, o tipo de sangue e a data de nascimento. Porém, mais comuns são `HKSampleType` objetos, que representam dados que são amostrados em um momento específico ou por um período de tempo. 
+Os tipos armazenada no armazenamento de Datakit de integridade são todas subclasses de `HKObjectType`. `HKCharacteristicType` objetos armazenam sexo biológico, tipo de sangue e data de nascimento. No entanto, mais comuns são os objetos `HKSampleType`, que representam os dados que são amostrados em um momento específico ou em um período de tempo. 
 
-[![](healthkit-images/image08.png "Gráfico de objetos HKSampleType")](healthkit-images/image08.png#lightbox)
+[![](healthkit-images/image08.png "HKSampleType objects chart")](healthkit-images/image08.png#lightbox)
 
-`HKSampleType`é abstract e tem quatro subclasses concretas. Atualmente, há apenas um tipo de `HKCategoryType` dados, que é a análise de suspensão. A grande maioria dos dados no kit de integridade são do `HKQuantityType` tipo e armazena seus dados `HKQuantitySample` em objetos, que são criados usando o padrão de design de fábrica familiar:
+`HKSampleType` é abstract e tem quatro subclasses concretas. Atualmente, há apenas um tipo de dados de `HKCategoryType`, que é a análise de suspensão. A grande maioria dos dados no kit de integridade são do tipo `HKQuantityType` e armazena seus dados em `HKQuantitySample` objetos, que são criados usando o padrão de design de fábrica familiar:
 
-[![](healthkit-images/image09.png "A grande maioria dos dados no kit de integridade são do tipo HKQuantityType e armazena seus dados em objetos HKQuantitySample")](healthkit-images/image09.png#lightbox)
+[![](healthkit-images/image09.png "The large majority of data in Health Kit are of type HKQuantityType and store their data in HKQuantitySample objects")](healthkit-images/image09.png#lightbox)
 
-`HKQuantityType`os tipos variam `HKQuantityTypeIdentifier.ActiveEnergyBurned` de `HKQuantityTypeIdentifier.StepCount`a. 
+os tipos de `HKQuantityType` variam de `HKQuantityTypeIdentifier.ActiveEnergyBurned` para `HKQuantityTypeIdentifier.StepCount`. 
 
 <a name="requesting-permission" />
 
@@ -155,17 +155,17 @@ Os tipos armazenada no armazenamento de Datakit de integridade são todas subcla
 
 Os usuários finais devem seguir etapas positivas para permitir que um aplicativo leia ou grave dados do kit de integridade. Isso é feito por meio do aplicativo de integridade que vem pré-instalado em dispositivos iOS 8. Na primeira vez em que um aplicativo do kit de integridade é executado, o usuário recebe uma caixa de diálogo de **acesso de integridade** controlado pelo sistema:
 
-[![](healthkit-images/image10.png "O usuário recebe uma caixa de diálogo de acesso de integridade controlado pelo sistema")](healthkit-images/image10.png#lightbox)
+[![](healthkit-images/image10.png "The user is presented with a system-controlled Health Access dialog")](healthkit-images/image10.png#lightbox)
 
 Posteriormente, o usuário pode alterar as permissões usando a caixa de diálogo **origens** do aplicativo de integridade:
 
-[![](healthkit-images/image11.png "O usuário pode alterar as permissões usando a caixa de diálogo origens de aplicativos de integridade")](healthkit-images/image11.png#lightbox)
+[![](healthkit-images/image11.png "The user can change permissions using Health apps Sources dialog")](healthkit-images/image11.png#lightbox)
 
-Como as informações de integridade são extremamente confidenciais, os desenvolvedores de aplicativos devem escrever seus programas de forma defensiva, com a expectativa de que as permissões serão recusadas e alteradas enquanto o aplicativo estiver em execução. O idioma mais comum é solicitar permissões no `UIApplicationDelegate.OnActivated` método e, em seguida, modificar a interface do usuário conforme apropriado.
+Como as informações de integridade são extremamente confidenciais, os desenvolvedores de aplicativos devem escrever seus programas de forma defensiva, com a expectativa de que as permissões serão recusadas e alteradas enquanto o aplicativo estiver em execução. O idioma mais comum é solicitar permissões no método `UIApplicationDelegate.OnActivated` e, em seguida, modificar a interface do usuário conforme apropriado.
 
 ### <a name="permissions-walkthrough"></a>Instruções de permissões
 
-No seu kit de integridade-projeto provisionado, abra o `AppDelegate.cs` arquivo. Observe a instrução usando `HealthKit`; na parte superior do arquivo.
+No seu kit de integridade-projeto provisionado, abra o arquivo `AppDelegate.cs`. Observe a instrução usando `HealthKit`; na parte superior do arquivo.
 
 O código a seguir está relacionado às permissões do Health Kit:
 
@@ -201,20 +201,20 @@ void ReactToHealthCarePermissions (bool success, NSError error)
 
 ```
 
-Todo o código nesses métodos poderia ser feito embutido no `OnActivated`, mas o aplicativo de exemplo usa métodos separados para tornar suas intenções mais claras: `ValidateAuthorization()` tem as etapas necessárias para solicitar acesso aos tipos específicos que estão sendo gravados (e lidos, se o aplicativo desejado) e `ReactToHealthCarePermissions()` é um retorno de chamada que é ativado depois que o usuário interage com a caixa de diálogo de permissões no Health. app.
+Todo o código nesses métodos pode ser feito embutido em `OnActivated`, mas o aplicativo de exemplo usa métodos separados para tornar suas intenções mais claras: `ValidateAuthorization()` tem as etapas necessárias para solicitar acesso aos tipos específicos que estão sendo gravados (e lidos, se o aplicativo desejado) e `ReactToHealthCarePermissions()` é um retorno de chamada que é ativado depois que o usuário interage com a caixa de diálogo de permissões no Health. app.
 
-O trabalho do `ValidateAuthorization()` é criar o conjunto de `HKObjectTypes` que o aplicativo irá gravar e solicitar autorização para atualizar esses dados. No aplicativo de exemplo, o `HKObjectType` é para a chave `KHQuantityTypeIdentifierKey.HeartRate`. Esse tipo é adicionado ao conjunto `typesToWrite`, enquanto o conjunto `typesToRead` é deixado vazio. Esses conjuntos, e uma referência ao `ReactToHealthCarePermissions()` retorno de chamada, são passados para. `HKHealthStore.RequestAuthorizationToShare()`
+O trabalho de `ValidateAuthorization()` é criar o conjunto de `HKObjectTypes` que o aplicativo irá gravar e solicitar autorização para atualizar esses dados. No aplicativo de exemplo, o `HKObjectType` é para o `KHQuantityTypeIdentifierKey.HeartRate`de chave. Esse tipo é adicionado ao conjunto `typesToWrite`, enquanto o `typesToRead` definido é deixado vazio. Esses conjuntos e uma referência ao retorno de chamada `ReactToHealthCarePermissions()` são passados para `HKHealthStore.RequestAuthorizationToShare()`.
 
-O `ReactToHealthCarePermissions()` retorno de chamada será chamado depois que o usuário tiver interagindo com a caixa de diálogo de permissões e passar duas partes `bool` de informação: um `true` valor que será se o usuário interagisse com a caixa de diálogo de permissões e um `NSError`que, se não for NULL, indica algum tipo de erro associado à apresentação da caixa de diálogo de permissões.
+O retorno de chamada `ReactToHealthCarePermissions()` será chamado depois que o usuário tiver interagindo com a caixa de diálogo de permissões e passar duas informações: um valor de `bool` que será `true`do se o usuário tiver interagindo com a caixa de diálogo de permissões e um `NSError` que , se não for NULL, indica algum tipo de erro associado à apresentação da caixa de diálogo de permissões.
 
 > [!IMPORTANT]
 > Para estar claro sobre os argumentos para esta função: os parâmetros de _êxito_ e _erro_ não indicam se o usuário concedeu permissão para acessar os dados do kit de integridade! Eles indicam apenas que o usuário tem a oportunidade de permitir o acesso aos dados.
 
-Para confirmar se o aplicativo tem acesso aos dados, o `HKHealthStore.GetAuthorizationStatus()` é usado, `HKQuantityTypeIdentifierKey.HeartRate`passando. Com base no status retornado, o aplicativo habilita ou desabilita a capacidade de inserir dados. Não há nenhuma experiência de usuário padrão para lidar com uma negação de acesso e há muitas opções possíveis. No aplicativo de exemplo, o status é definido em um `HeartRateModel` objeto singleton que, por sua vez, gera eventos relevantes.
+Para confirmar se o aplicativo tem acesso aos dados, o `HKHealthStore.GetAuthorizationStatus()` é usado, passando `HKQuantityTypeIdentifierKey.HeartRate`. Com base no status retornado, o aplicativo habilita ou desabilita a capacidade de inserir dados. Não há nenhuma experiência de usuário padrão para lidar com uma negação de acesso e há muitas opções possíveis. No aplicativo de exemplo, o status é definido em um `HeartRateModel` objeto singleton que, por sua vez, gera eventos relevantes.
 
 ## <a name="model-view-and-controller"></a>Modelo, exibição e controlador
 
-Para examinar o `HeartRateModel` objeto singleton, abra o `HeartRateModel.cs` arquivo:
+Para examinar o `HeartRateModel` objeto singleton, abra o arquivo `HeartRateModel.cs`:
 
 ```csharp
 using System;
@@ -327,23 +327,23 @@ namespace HKWork
 
 ```
 
-A primeira seção é um código clichê para a criação de manipuladores e eventos genéricos. A parte inicial da `HeartRateModel` classe também é clichê para a criação de um objeto singleton thread-safe.
+A primeira seção é um código clichê para a criação de manipuladores e eventos genéricos. A parte inicial da classe `HeartRateModel` também é clichê para a criação de um objeto singleton thread-safe.
 
-Em seguida `HeartRateModel` , expõe 3 eventos: 
+Em seguida, `HeartRateModel` expõe 3 eventos: 
 
-- `EnabledChanged`-Indica que o armazenamento de taxa de coração foi habilitado ou desabilitado (Observe que o armazenamento está inicialmente desabilitado). 
-- `ErrorMessageChanged`-Para este aplicativo de exemplo, temos um modelo de tratamento de erros muito simples: uma cadeia de caracteres com o último erro. 
-- `HeartRateStored`-Gerado quando uma taxa de coração é armazenada no banco de dados do kit de integridade.
+- `EnabledChanged`-indica que o armazenamento de taxa de coração foi habilitado ou desabilitado (Observe que o armazenamento está inicialmente desabilitado). 
+- `ErrorMessageChanged`-para este aplicativo de exemplo, temos um modelo de tratamento de erros muito simples: uma cadeia de caracteres com o último erro. 
+- `HeartRateStored`-gerado quando uma taxa de coração é armazenada no banco de dados do kit de integridade.
 
-Observe que sempre que esses eventos são acionados, isso é feito `NSObject.InvokeOnMainThread()`por meio do, o que permite aos assinantes atualizar a interface do usuário. Como alternativa, os eventos podem ser documentados como sendo gerados em threads em segundo plano e a responsabilidade de garantir a compatibilidade pode ser deixada para seus manipuladores. As considerações de thread são importantes nos aplicativos do kit de integridade porque muitas das funções, como a solicitação de permissão, são assíncronas e executam seus retornos de chamada em threads não principais.
+Observe que sempre que esses eventos são acionados, isso é feito por meio de `NSObject.InvokeOnMainThread()`, o que permite aos assinantes atualizar a interface do usuário. Como alternativa, os eventos podem ser documentados como sendo gerados em threads em segundo plano e a responsabilidade de garantir a compatibilidade pode ser deixada para seus manipuladores. As considerações de thread são importantes nos aplicativos do kit de integridade porque muitas das funções, como a solicitação de permissão, são assíncronas e executam seus retornos de chamada em threads não principais.
 
-O código específico do kit de `HeartRateModel` integridade no está nas duas `HeartRateInBeatsPerMinute()` funções `StoreHeartRate()`e. 
+O código específico do kit de integridade no `HeartRateModel` está nas duas funções `HeartRateInBeatsPerMinute()` e `StoreHeartRate()`. 
 
-`HeartRateInBeatsPerMinute()`converte seu argumento em um kit `HKQuantity`de integridade fortemente tipado. O tipo da `HKQuantityTypeIdentifierKey.HeartRate` quantidade é especificado pelo e as unidades da quantidade são `HKUnit.Count` divididas por `HKUnit.Minute` (em outras palavras, a unidade é de *batidas por minuto*). 
+`HeartRateInBeatsPerMinute()` converte seu argumento em um kit de integridade fortemente tipado `HKQuantity`. O tipo da quantidade é especificado pelo `HKQuantityTypeIdentifierKey.HeartRate` e as unidades da quantidade são `HKUnit.Count` dividida por `HKUnit.Minute` (em outras palavras, a unidade é de *batida por minuto*). 
 
-A `StoreHeartRate()` função usa um `HKQuantity` (no aplicativo de exemplo, um criado por `HeartRateInBeatsPerMinute()` ). Para validar seus dados, ele usa o `HKQuantity.IsCompatible()` método, que retorna `true` se as unidades do objeto podem ser convertidas nas unidades do argumento. Se a quantidade foi criada com `HeartRateInBeatsPerMinute()` isso, obviamente retornará `true`, mas também retornará `true` se a quantidade tiver sido criada como, por exemplo, de *batidas por hora*. Mais comumente, `HKQuantity.IsCompatible()` pode ser usado para validar a massa, a distância e a energia que o usuário ou um dispositivo pode inserir ou exibir em um sistema de medida (como unidades Imperial), mas que podem ser armazenados em outro sistema (como unidades métricas). 
+A função `StoreHeartRate()` usa uma `HKQuantity` (no aplicativo de exemplo, uma criada por `HeartRateInBeatsPerMinute()`). Para validar seus dados, ele usa o método `HKQuantity.IsCompatible()`, que retorna `true` se as unidades do objeto puderem ser convertidas em unidades no argumento. Se a quantidade tiver sido criada com `HeartRateInBeatsPerMinute()` isso, obviamente, retornará `true`, mas também retornará `true` se a quantidade tiver sido criada como, por exemplo, de *batidas por hora*. Mais comumente, `HKQuantity.IsCompatible()` pode ser usado para validar a massa, a distância e a energia que o usuário ou um dispositivo pode inserir ou exibir em um sistema de medida (como unidades Imperial), mas que pode ser armazenado em outro sistema (como unidades métricas). 
 
-Depois que a compatibilidade da quantidade tiver sido validada, `HKQuantitySample.FromType()` o método de fábrica será usado para criar um objeto `heartRateSample` fortemente tipado. `HKSample`os objetos têm uma data de início e de término; para leituras instantâneas, esses valores devem ser iguais, como no exemplo. O exemplo também não define nenhum dado de valor chave em seu `HKMetadata` argumento, mas é possível usar um código como o código a seguir para especificar o local do sensor:
+Depois que a compatibilidade da quantidade tiver sido validada, o método de fábrica `HKQuantitySample.FromType()` será usado para criar um objeto de `heartRateSample` fortemente tipado. `HKSample` objetos têm uma data de início e de término; para leituras instantâneas, esses valores devem ser iguais, como no exemplo. O exemplo também não define nenhum dado de valor chave em seu `HKMetadata` argumento, mas é possível usar um código como o código a seguir para especificar o local do sensor:
 
 ```csharp
 var hkm = new HKMetadata();
@@ -351,9 +351,9 @@ hkm.HeartRateSensorLocation = HKHeartRateSensorLocation.Chest;
 
 ```
 
-Depois que `heartRateSample` o tiver sido criado, o código criará uma nova conexão com o banco de dados com o bloco Using. Dentro desse bloco, o `HKHealthStore.SaveObject()` método tenta a gravação assíncrona no banco de dados. A chamada resultante para a expressão lambda dispara eventos relevantes, `HeartRateStored` ou. `ErrorMessageChanged`
+Depois que o `heartRateSample` tiver sido criado, o código criará uma nova conexão com o banco de dados com o bloco Using. Dentro desse bloco, o método `HKHealthStore.SaveObject()` tenta a gravação assíncrona no banco de dados. A chamada resultante para a expressão lambda dispara eventos relevantes, seja `HeartRateStored` ou `ErrorMessageChanged`.
 
-Agora que o modelo foi programado, é hora de ver como o controlador reflete o estado do modelo. Abra o `HKWorkViewController.cs` arquivo. O Construtor simplesmente conecta o `HeartRateModel` singleton aos métodos de manipulação de eventos (novamente, isso pode ser feito embutido em expressões lambda, mas métodos separados tornam a intenção um pouco mais óbvia):
+Agora que o modelo foi programado, é hora de ver como o controlador reflete o estado do modelo. Abra o arquivo `HKWorkViewController.cs`. O Construtor simplesmente conecta os `HeartRateModel` singleton aos métodos de manipulação de eventos (novamente, isso pode ser feito embutido em expressões lambda, mas métodos separados tornam a intenção um pouco mais óbvia):
 
 ```csharp
 public HKWorkViewController (IntPtr handle) : base (handle)
@@ -402,17 +402,17 @@ Anexe um dispositivo de Desenvolvimento iOS 8 provisionado corretamente ao seu s
 > - **Opções de projeto** – identificador de pacote (ID do aplicativo explícito) & perfil de provisionamento.
 > - **Código-fonte** -direitos. plist & info. plist
 
-Supondo que as provisões tenham sido definidas corretamente, o aplicativo será iniciado. Quando ele atingir seu `OnActivated` método, ele solicitará autorização do kit de integridade. Na primeira vez que isso for encontrado pelo sistema operacional, o usuário receberá a seguinte caixa de diálogo:
+Supondo que as provisões tenham sido definidas corretamente, o aplicativo será iniciado. Quando ele atingir seu método de `OnActivated`, ele solicitará a autorização do kit de integridade. Na primeira vez que isso for encontrado pelo sistema operacional, o usuário receberá a seguinte caixa de diálogo:
 
-[![](healthkit-images/image12.png "O usuário receberá essa caixa de diálogo")](healthkit-images/image12.png#lightbox)
+[![](healthkit-images/image12.png "The user will be presented with this dialog")](healthkit-images/image12.png#lightbox)
 
-Habilite seu aplicativo para atualizar os dados de taxa de coração e seu aplicativo será exibido novamente. O `ReactToHealthCarePermissions` retorno de chamada será ativado de forma assíncrona. Isso fará com que `HeartRateModel’s` a `Enabled` Propriedade seja alterada, o que irá `EnabledChanged` gerar o evento, o que `HKPermissionsViewController.OnEnabledChanged()` fará com que o manipulador de eventos seja `StoreData` executado, o que habilita o botão. O diagrama a seguir mostra a sequência:
+Habilite seu aplicativo para atualizar os dados de taxa de coração e seu aplicativo será exibido novamente. O retorno de chamada `ReactToHealthCarePermissions` será ativado de forma assíncrona. Isso fará com que a propriedade `HeartRateModel’s` `Enabled` seja alterada, o que irá gerar o evento `EnabledChanged`, o que fará com que o manipulador de eventos `HKPermissionsViewController.OnEnabledChanged()` seja executado, o que habilita o botão `StoreData`. O diagrama a seguir mostra a sequência:
 
-[![](healthkit-images/image13.png "Este diagrama mostra a sequência de eventos")](healthkit-images/image13.png#lightbox)
+[![](healthkit-images/image13.png "This diagram shows the sequence of events")](healthkit-images/image13.png#lightbox)
 
-Pressione o botão **gravar** . Isso fará com que `StoreData_TouchUpInside()` o manipulador seja executado, o que tentará analisar o valor `heartRate` do campo de texto, converter em `HKQuantity` um por meio da `HeartRateModel.HeartRateInBeatsPerMinute()` função discutida anteriormente e passar `HeartRateModel.StoreHeartRate()`essa quantidade para. Conforme discutido anteriormente, isso tentará armazenar os dados e irá gerar um `HeartRateStored` evento ou. `ErrorMessageChanged`
+Pressione o botão **gravar** . Isso fará com que o manipulador de `StoreData_TouchUpInside()` seja executado, o que tentará analisar o valor do campo de texto `heartRate`, converter em um `HKQuantity` por meio da função `HeartRateModel.HeartRateInBeatsPerMinute()` discutida anteriormente e passará essa quantidade para `HeartRateModel.StoreHeartRate()`. Como discutido anteriormente, isso tentará armazenar os dados e irá gerar um evento `HeartRateStored` ou `ErrorMessageChanged`.
 
-Clique duas vezes no botão **página inicial** do dispositivo e abra o aplicativo de integridade. Clique na guia **fontes** e você verá o aplicativo de exemplo listado. Escolha e desautorizar permissão para atualizar dados de taxa de coração. Clique duas vezes no botão **página inicial** e alterne de volta para seu aplicativo. Mais uma vez `ReactToHealthCarePermissions()` , será chamado, mas desta vez, como o acesso é negado, o botão **StoreData** será desabilitado (Observe que isso ocorre de forma assíncrona e a alteração na interface do usuário pode estar visível para o usuário final).
+Clique duas vezes no botão **página inicial** do dispositivo e abra o aplicativo de integridade. Clique na guia **fontes** e você verá o aplicativo de exemplo listado. Escolha e desautorizar permissão para atualizar dados de taxa de coração. Clique duas vezes no botão **página inicial** e alterne de volta para seu aplicativo. Mais uma vez, `ReactToHealthCarePermissions()` será chamado, mas desta vez, como o acesso é negado, o botão **StoreData** será desabilitado (Observe que isso ocorre de forma assíncrona e a alteração na interface do usuário pode estar visível para o usuário final).
 
 ## <a name="advanced-topics"></a>Tópicos avançados
 

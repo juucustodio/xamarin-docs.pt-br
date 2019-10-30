@@ -3,21 +3,21 @@ title: Associação do Objective-C
 description: Este documento fornece links para vários guias que descrevem como criar C# associações para código Objective-C, permitindo que os desenvolvedores consumam bibliotecas prontas para uso em aplicativos Xamarin.
 ms.prod: xamarin
 ms.assetid: DBBAA086-BB0F-8161-DF44-632F4F5DFE5D
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 01/25/2016
-ms.openlocfilehash: d48245ac6939a7b1a1528a7b42ec4a701f062a95
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: cc404f3995bd1f2940897f6cb84d57cea39ae44b
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70765764"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016275"
 ---
 # <a name="binding-objective-c"></a>Associação do Objective-C
 
 Esta seção inclui uma variedade de documentos que abrangem a criação de associações para bibliotecas Objective-C, para que possam C# ser chamadas a partir de aplicativos criados com Xamarin. Ios ou Xamarin. Mac.
 
-## <a name="overviewcross-platformmaciosbindingoverviewmd"></a>[Visão geral](~/cross-platform/macios/binding/overview.md)
+## <a name="overviewcross-platformmaciosbindingoverviewmd"></a>[Visão Geral](~/cross-platform/macios/binding/overview.md)
 
 Este documento contém alguns dos elementos internos de como uma associação ocorre. É um documento avançado com algumas informações técnicas.
 
@@ -38,7 +38,7 @@ A Sharpde objetiva é uma ferramenta de linha de comando para ajudar a inicializ
 
 A [página de associação do IOS](~/ios/platform/binding-objective-c/index.md) volta a esses recursos de associação comuns, além dos exemplos abaixo.
 
-### <a name="walkthrough-binding-an-objective-c-libraryiosplatformbinding-objective-cwalkthroughmd"></a>[Passo a passo: Associando uma biblioteca Objective-C](~/ios/platform/binding-objective-c/walkthrough.md)
+### <a name="walkthrough-binding-an-objective-c-libraryiosplatformbinding-objective-cwalkthroughmd"></a>[Walkthrough: associando uma biblioteca Objective-C](~/ios/platform/binding-objective-c/walkthrough.md)
 
 Este artigo fornece uma explicação passo a passo de como criar um projeto de associação usando o projeto de [InfColorPicker](https://github.com/InfinitApps/InfColorPicker) de software livre Objective-C como um exemplo. A biblioteca InfColorPicker fornece um controlador de exibição reutilizável que permite ao usuário selecionar uma cor com base em sua representação HSB, tornando a seleção de cores mais amigável. A nitidez do objetivo será usada para auxiliar no processo de ligação.
 

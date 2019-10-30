@@ -4,21 +4,21 @@ description: Este artigo mostra como usar uma classe auxiliar para controlar a r
 ms.prod: xamarin
 ms.assetid: E0305572-DC64-48BB-BD97-0A5096E6CA04
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: 57892689eeb5eef9747e19fa167b8598569f3cd1
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 4dddde8d4408df6a9b9d73c0a3efff62f563591a
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769201"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030771"
 ---
 # <a name="playing-sound-in-tvos-with-avaudioplayer-in-xamarin"></a>Reprodução de som em tvOS com AVAudioPlayer no Xamarin
 
 ## <a name="about-the-avaudioplayer"></a>Sobre o AVAudioPlayer
 
-O `AVAudioPlayer` é usado para reproduzir dados de áudio de uma memória ou de um arquivo. A Apple recomenda usar essa classe para reproduzir áudio em seu aplicativo, a menos que você esteja fazendo streaming de rede ou exija e/s de áudio de baixa latência.
+O `AVAudioPlayer` é usado para reproduzir dados de áudio de memória ou de um arquivo. A Apple recomenda usar essa classe para reproduzir áudio em seu aplicativo, a menos que você esteja fazendo streaming de rede ou exija e/s de áudio de baixa latência.
 
 Você pode usar o `AVAudioPlayer` para fazer o seguinte:
 
@@ -28,7 +28,7 @@ Você pode usar o `AVAudioPlayer` para fazer o seguinte:
 - Suporte a recursos como avançar ou retroceder.
 - Obter dados de medição de nível de reprodução.
 
-`AVAudioPlayer`dá suporte a sons em qualquer formato de áudio fornecido pelo Ios, tvOS e os `.aif`X `.wav` , `.mp3`como, ou.
+o `AVAudioPlayer` dá suporte a sons em qualquer formato de áudio fornecido pelo iOS, tvOS e OS X, como `.aif`, `.wav` ou `.mp3`.
 
 ## <a name="playing-sounds-in-tvos"></a>Tocando sons em tvOS
 

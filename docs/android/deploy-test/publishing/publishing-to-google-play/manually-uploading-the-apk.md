@@ -3,15 +3,15 @@ title: Carregando o APK Manualmente
 ms.prod: xamarin
 ms.assetid: 1309C251-ABF0-4412-B1F5-200DC8321A9D
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/15/2018
-ms.openlocfilehash: 47dd1da8c82c47ee07ad2b4e5a22a32010462de2
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: b5b7a416cf67c217862987e7fa29bfb6a9692642
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70756065"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73021248"
 ---
 # <a name="manually-uploading-the-apk"></a>Carregando o APK Manualmente
 
@@ -88,7 +88,7 @@ Clique em **Classificação de Conteúdo** no **Console do Desenvolvedor do Goog
 
 [![Seção Classificação de conteúdo](manually-uploading-the-apk-images/11-content-rating-sml.png)](manually-uploading-the-apk-images/11-content-rating.png#lightbox)
 
-Todos os aplicativos no Google Play devem ser classificados de acordo com o sistema de classificação do Google Play. Além da classificação de conteúdo, todos os aplicativos devem aderir à [Política de Conteúdo do Desenvolvedor](http://www.android.com/us/developer-content-policy.html) do Google.
+Todos os aplicativos no Google Play devem ser classificados de acordo com o sistema de classificação do Google Play. Além da classificação de conteúdo, todos os aplicativos devem aderir à [Política de Conteúdo do Desenvolvedor](https://www.android.com/us/developer-content-policy.html) do Google.
 
 A seguir estão listados os quatro níveis do sistema de classificação do Google Play e são fornecidas algumas diretrizes, como os recursos ou conteúdo que exigem ou impõem o nível de classificação: 
 
@@ -131,7 +131,7 @@ Após essa seção, há outras opções que podem ser selecionadas, como a alter
 ### <a name="consent"></a>Consentimento
 
 Na parte inferior da página **Preços &amp; Distribuição**, está a seção **CONSENTIMENTO**.
-Essa é uma seção obrigatória, utilizada para declarar que o aplicativo atende às [Diretrizes de Conteúdo do Android](http://www.android.com/market/terms/developer-content-policy.html#hl=us) e reconhecer que o aplicativo está sujeito às leis de exportação dos Estados Unidos:
+Essa é uma seção obrigatória, utilizada para declarar que o aplicativo atende às [Diretrizes de Conteúdo do Android](https://www.android.com/market/terms/developer-content-policy.html#hl=us) e reconhecer que o aplicativo está sujeito às leis de exportação dos Estados Unidos:
 
 [![Seção Consentimento](manually-uploading-the-apk-images/15-consent-sml.png)](manually-uploading-the-apk-images/15-consent.png#lightbox)
 
@@ -152,7 +152,7 @@ Quando os usuários buscam por aplicativos no site do Google Play, eles podem pe
 - [supports-screen](https://developer.android.com/guide/topics/manifest/supports-screens-element.html)&ndash; O Google Play usará os atributos para determinar se um aplicativo poderá ser implantado em um dispositivo com base no tamanho da tela. 
     O Google Play pressupõe que o Android pode adaptar um layout menor a telas maiores, mas não vice-versa. Desse modo, um aplicativo que declara o suporte para telas normais aparecerá em pesquisas por telas grandes, mas não em pesquisas por telas pequenas. Se um aplicativo Xamarin.Android não fornecer um elemento `<supports-screen>` no arquivo de manifesto, o Google Play presumirá que todos os atributos têm valor true e que o aplicativo dá suporte a todos os tamanhos de tela. Esse elemento deve ser adicionado manualmente ao **AndroidManifest.xml**. 
 
-- [uses-configuration](https://developer.android.com/guide/topics/manifest/uses-configuration-element.html)&ndash; Este elemento de manifesto é usado para solicitar determinados recursos de hardware, como o tipo de teclado, dispositivos de navegação, uma tela sensível ao toque etc. Esse elemento deve ser adicionado manualmente ao **AndroidManifest.xml**. 
+- [use-configuration](https://developer.android.com/guide/topics/manifest/uses-configuration-element.html) &ndash; esse elemento de manifesto é usado para solicitar determinados recursos de hardware, como o tipo de teclado, dispositivos de navegação, uma tela sensível ao toque, etc. Esse elemento deve ser adicionado ao **AndroidManifest. xml** manualmente. 
 
 - [uses-feature](https://developer.android.com/guide/topics/manifest/uses-feature-element.html)&ndash; Este elemento de manifesto declara os recursos de hardware ou software que um dispositivo deve ter para que o aplicativo funcione. Esse atributo é apenas informativo. O Google Play não exibirá o aplicativo em dispositivos que não satisfaçam esse filtro. Ainda é possível instalar o aplicativo por outros meios (manualmente ou baixando). Esse elemento deve ser adicionado manualmente ao **AndroidManifest.xml**. 
 

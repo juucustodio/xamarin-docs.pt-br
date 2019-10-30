@@ -3,15 +3,15 @@ title: Parte 3-Configurando uma solução de plataforma cruzada do Xamarin
 description: Este documento descreve como configurar uma solução de plataforma cruzada no Xamarin. Ele aborda várias estratégias de compartilhamento de código, como projetos compartilhados e .NET Standard.
 ms.prod: xamarin
 ms.assetid: 4139A6C2-D477-C563-C1AB-98CCD0D10A93
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/27/2017
-ms.openlocfilehash: acec74585487e9f0a0a13a80c5da49a187a4042f
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 843887282c9a5af671d46699ae2f601fd32902e0
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70758151"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016882"
 ---
 # <a name="part-3---setting-up-a-xamarin-cross-platform-solution"></a>Parte 3-Configurando uma solução de plataforma cruzada do Xamarin
 
@@ -63,7 +63,7 @@ A abordagem do Xamarin é agrupar o código em dois tipos de projeto:
 
 ### <a name="core-project"></a>Projeto principal
 
-Projetos de código compartilhado só devem referenciar assemblies que estejam disponíveis em todas as plataformas – por ex. os namespaces comuns do Framework `System`, `System.Core` como `System.Xml`e.
+Projetos de código compartilhado só devem referenciar assemblies que estejam disponíveis em todas as plataformas – por ex. os namespaces comuns do Common Framework, como `System`, `System.Core` e `System.Xml`.
 
 Projetos compartilhados devem implementar o máximo possível de funcionalidades que não sejam da interface do usuário, o que pode incluir as seguintes camadas:
 
@@ -89,11 +89,11 @@ Os projetos específicos da plataforma devem implementar:
 
 A arquitetura do aplicativo é ilustrada neste diagrama:
 
- [![](setting-up-a-xamarin-cross-platform-solution-images/conceptualarchitecture.png "A arquitetura do aplicativo é ilustrada neste diagrama")](setting-up-a-xamarin-cross-platform-solution-images/conceptualarchitecture.png#lightbox)
+ [![](setting-up-a-xamarin-cross-platform-solution-images/conceptualarchitecture.png "The application architecture is illustrated in this diagram")](setting-up-a-xamarin-cross-platform-solution-images/conceptualarchitecture.png#lightbox)
 
 Esta captura de tela mostra uma configuração de solução com os projetos de projeto de núcleo compartilhado, iOS e aplicativos Android. O projeto compartilhado contém código relacionado a cada uma das camadas de arquitetura (código comercial, de serviço, de dados e de acesso a dados):
 
- ![](setting-up-a-xamarin-cross-platform-solution-images/core-solution-example.png "O projeto compartilhado contém código relacionado a cada uma das camadas de arquitetura (código comercial, de serviço, de dados e de acesso a dados)")
+ ![](setting-up-a-xamarin-cross-platform-solution-images/core-solution-example.png "The Shared Project contains code relating to each of the architectural layers (Business, Service, Data and Data Access code)")
 
  <a name="Project_References" />
 
@@ -104,7 +104,7 @@ Os projetos de aplicativos específicos da plataforma fazem referência ao códi
 
 O aplicativo projeta cada projeto compartilhado de referência e contém o código de interface do usuário necessário para apresentar a funcionalidade para o usuário, conforme mostrado nestas capturas de tela:
 
-![](setting-up-a-xamarin-cross-platform-solution-images/solution-android.png "O aplicativo projeta cada referência de projeto compartilhado") ![](setting-up-a-xamarin-cross-platform-solution-images/solution-ios.png "cada referência de projeto compartilhado de projetos de aplicativo")
+![](setting-up-a-xamarin-cross-platform-solution-images/solution-android.png "O aplicativo projeta cada projeto compartilhado de referência") ![](setting-up-a-xamarin-cross-platform-solution-images/solution-ios.png "O aplicativo projeta cada projeto compartilhado de referência")
 
 Exemplos específicos de como os projetos devem ser estruturados são fornecidos nos estudos de caso.
 
@@ -118,11 +118,11 @@ Exemplos específicos de como os projetos devem ser estruturados são fornecidos
 
 É importante definir a ação de compilação correta para determinados tipos de arquivo. Esta lista mostra a ação de Build para alguns tipos de arquivo comuns:
 
-- **Todos C# os arquivos** – ação de compilação: Compilar
-- **Imagens no Xamarin. iOS & Windows** – ação de compilação: Conteúdo
+- **Todos C# os arquivos** – ação de compilação: compilar
+- **Imagens no Xamarin. iOS & Windows** – ação de compilação: conteúdo
 - **Arquivos XIB e storyboard no Xamarin. Ios** – ação de compilação: InterfaceDefinition
 - **Imagens e layouts AXML no Android** – ação de compilação: AndroidResource
-- **Arquivos XAML em projetos do Windows** – ação de compilação: Página
+- **Arquivos XAML em projetos do Windows** – ação de compilação: página
 - **Arquivos XAML do Xamarin. Forms** – ação de compilação: EmbeddedResource
 
 Geralmente, o IDE detectará o tipo de arquivo e sugerirá a ação de compilação correta.

@@ -3,15 +3,15 @@ title: Solução de problemas Xamarin Profiler
 description: Este documento fornece informações de solução de problemas relacionadas ao Xamarin Profiler. Ele descreve problemas relacionados ao log e diagnóstico, ao IDE e a outros tópicos.
 ms.prod: xamarin
 ms.assetid: 0060E9D1-C003-4E4C-ADE8-B406978FE891
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 10/27/2017
-ms.openlocfilehash: c6a05e332bf0c08f8c7ea328c2793f7d0bf00fb7
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 915f7df80e3ae29ab3c598ea95fabbc054e916dd
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70285696"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73019212"
 ---
 # <a name="xamarin-profiler-troubleshooting"></a>Solução de problemas Xamarin Profiler
 
@@ -25,9 +25,9 @@ A equipe do Xamarin pode ajudar a acompanhar problemas se você nos fornecer inf
 
 ### <a name="getting-log-outputs"></a>Obtendo saídas de log
 
-Nos logs do Mac são salvos `~/Library/Logs/Xamarin.Profiler/Profiler.<date>.log`no.
+Os logs do Mac são salvos em `~/Library/Logs/Xamarin.Profiler/Profiler.<date>.log`.
 
-No Windows, eles são salvos `%appdata%Local//Xamarin/Log/Xamarin.Profiler/Profiler.<date>.log` para incluir o log mais recente sempre que você enviar um problema.
+No Windows, eles são salvos em `%appdata%Local//Xamarin/Log/Xamarin.Profiler/Profiler.<date>.log` inclua o log mais recente sempre que você enviar um problema.
 
 Estamos adicionando mais registro em log à medida que passamos, portanto, essa saída deve aumentar e se tornar mais útil ao longo do tempo.
 
@@ -37,17 +37,17 @@ Estamos adicionando mais registro em log à medida que passamos, portanto, essa 
 
 Um arquivo **. MLPD** é a saída compactada do analisador de tempo de execução mono. O Xamarin Profiler GUI lê os dados de um **. MLPD** e os exibe para o usuário. arquivos **. MLPD** são ferramentas de depuração úteis para o Xamarin, pois ajudam nossos engenheiros a diagnosticar problemas que o criador de perfil pode ter com seus dados.
 
-O **. MLPD** para a sessão atual é automaticamente salvo no diretório do `/tmp` seu Mac e pode ser identificado pelo carimbo de data/hora. Se você ativar o registro em log, a primeira saída será o caminho para o arquivo **. MLPD** . O arquivo **. MLPD** normalmente será salvo no diretório a partir de ~/var/Folders...
+O **. MLPD** para a sessão atual é automaticamente salvo no diretório `/tmp` do seu Mac e pode ser identificado pelo carimbo de data/hora. Se você ativar o registro em log, a primeira saída será o caminho para o arquivo **. MLPD** . O arquivo **. MLPD** normalmente será salvo no diretório a partir de ~/var/Folders...
 
 O **. MLPD** para uma sessão atual também pode ser salvo escolhendo **arquivo > salvar como...** no menu do criador de perfil:
 
 **Visual Studio para Mac**:
 
-![](troubleshooting-images/image17.png "Salvando arquivo. MLPD no Visual Studio para Mac")
+![](troubleshooting-images/image17.png "Saving .mlpd file in Visual Studio for Mac")
 
 **Visual Studio**:
 
-![](troubleshooting-images/image17-vs.png "Salvando arquivo. MLPD no Visual Studio")
+![](troubleshooting-images/image17-vs.png "Saving .mlpd file in Visual Studio")
 
 É importante observar que **. MLPD** contêm muitas informações e o tamanho do arquivo será grande.
 
@@ -73,13 +73,13 @@ Verifique as seguintes configurações para resolver isso:
 
 Se você encontrar essa caixa de erro ao usar o criador de perfil no Visual Studio:
 
-![](troubleshooting-images/error.png "Caixa de erro ao usar o criador de perfil no Visual Studio")
+![](troubleshooting-images/error.png "Error box when using the profiler in Visual Studio")
 
 Normalmente, é porque não é possível iniciar o simulador/emulador. Tente executar o aplicativo normalmente, corrija os problemas que ele fornece e tente usar o criador de perfil novamente.
 
 #### <a name="to-watch-a-specific-thread"></a>Para assistir a um thread específico
 
-Se você tiver um thread que quisesse observar especificamente, seria ideal nomear o thread no início da criação para obter `ThreadName` em vez de. `0x0` Por exemplo, para definir o nome do `UI`thread como, você pode usar o seguinte código:
+Se você tiver um thread que quisesse observar especificamente, seria ideal nomear o thread no início de sua criação para obter `ThreadName` em vez de `0x0`. Por exemplo, para definir o nome do thread como `UI`, você pode usar o seguinte código:
 
 ```csharp
 RunOnUiThread (() => {

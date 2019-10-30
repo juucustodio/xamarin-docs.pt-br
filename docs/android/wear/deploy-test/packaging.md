@@ -3,15 +3,15 @@ title: Aplicativos de desgaste de pacotes
 ms.prod: xamarin
 ms.assetid: E32DD855-78DD-46F8-B234-4EAC0756BDA2
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/02/2018
-ms.openlocfilehash: fa35f6fe2388484875180594f18041947963ef7a
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: aa4a4f1ab3ae3024de2d969f9325c2efa4db48af
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70763975"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028639"
 ---
 # <a name="packaging-wear-apps"></a>Aplicativos de desgaste de pacotes
 
@@ -95,7 +95,7 @@ Você pode gravar aplicativos de desgaste do Android no Xamarin. Android antes d
     </wearableApp>
     ```
 
-5. Adicione manualmente um `<meta-data />` elemento ao elemento **AndroidManifest. xml** `<application>` do projeto de portátil que se refere ao novo recurso XML:
+5. Adicione manualmente um elemento `<meta-data />` ao elemento `<application>` **AndroidManifest. xml** do projeto portátil que se refere ao novo recurso XML:
 
     ```xml
     <meta-data android:name="com.google.android.wearable.beta.app"

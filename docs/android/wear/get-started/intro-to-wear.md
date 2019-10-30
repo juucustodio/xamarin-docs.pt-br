@@ -4,15 +4,15 @@ description: Com a introdução do desgaste do Android do Google, você não est
 ms.prod: xamarin
 ms.assetid: EAEF99F0-8FBE-47E4-8644-E7244CFAF464
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/01/2018
-ms.openlocfilehash: 80c24765022a916fa36e97aaf47b36435b3f7a7b
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: 3b1d27b1489cb71d4bd1922c2de993567ddf36bd
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "70758493"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028614"
 ---
 # <a name="introduction-to-android-wear"></a>Introdução ao Android Wear
 
@@ -152,17 +152,17 @@ Há muitos outros recursos de desgaste de 2,0, como ações embutidas, resposta 
 Aqui estão alguns exemplos dos dispositivos que podem executar o desgaste do Android:
 
 - [Motorola 360](https://moto360.motorola.com/)
-- [LG G Watch](http://www.lg.com/us/smart-watches/lg-W100-g-watch)
-- [LG G Watch R](http://www.lg.com/us/smartwatch/g-watch-r)
-- [Samsung Gear Live](http://www.samsung.com/global/microsite/gear/gearlive_design.html)
-- [Sony SmartWatch 3](http://www.sonymobile.com/global-en/products/smartwear/smartwatch-3-swr50/)
-- [ASUS ZenWatch](http://www.asus.com/us/Phones/ASUS_ZenWatch_WI500Q/)
+- [LG G Watch](https://www.lg.com/us/smart-watches/lg-W100-g-watch)
+- [LG G Watch R](https://www.lg.com/us/smartwatch/g-watch-r)
+- [Samsung Gear Live](https://www.samsung.com/global/microsite/gear/gearlive_design.html)
+- [Sony SmartWatch 3](https://www.sonymobile.com/global-en/products/smartwear/smartwatch-3-swr50/)
+- [ASUS ZenWatch](https://www.asus.com/us/Phones/ASUS_ZenWatch_WI500Q/)
 
 ## <a name="further-reading"></a>Leitura adicional
 
 Confira a documentação de desgaste do Android do Google:
 
-- [Sobre o desgaste do Android](http://www.android.com/wear/)
+- [Sobre o desgaste do Android](https://www.android.com/wear/)
 - [Design de aplicativo de desgaste do Android](https://developer.android.com/design/wear/index.html)
 - [biblioteca do Android. support. portátil](https://developer.android.com/reference/android/support/wearable/view/package-summary.html)
 - [Desgaste do Android 2,0](https://developer.android.com/wear/preview/index.html)

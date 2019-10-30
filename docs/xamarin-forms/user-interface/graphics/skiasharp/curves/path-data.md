@@ -1,34 +1,34 @@
 ---
-title: Dados de caminho SVG em SkiaSharp
-description: Este artigo explica como definir caminhos de SkiaSharp usando cadeias de caracteres de texto no formato de elementos gráficos vetoriais escaláveis e demonstra isso com o código de exemplo.
+title: Dados do caminho SVG em SkiaSharp
+description: Este artigo explica como definir caminhos SkiaSharp usando cadeias de caracteres de texto no formato gráfico de vetor escalonável e demonstra isso com o código de exemplo.
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: 1D53067B-3502-4D74-B89D-7EC496901AE2
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/24/2017
-ms.openlocfilehash: 467863dba2f5757e0590ccf64927ae2af292f285
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 809bcd8288c4c4205b3110418aeae0e08bf21dd6
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70770566"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73029459"
 ---
-# <a name="svg-path-data-in-skiasharp"></a>Dados de caminho SVG em SkiaSharp
+# <a name="svg-path-data-in-skiasharp"></a>Dados do caminho SVG em SkiaSharp
 
-[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
-_Definir caminhos usando cadeias de caracteres de texto no formato de elementos gráficos vetoriais escaláveis_
+_Definir caminhos usando cadeias de caracteres de texto no formato gráfico de vetor escalonável_
 
-O [ `SKPath` ](xref:SkiaSharp.SKPath) classe oferece suporte à definição de objetos de todo o caminho de cadeias de caracteres de texto em um formato estabelecido pela especificação de elementos gráficos vetoriais escaláveis (SVG). Você verá neste artigo como você pode representar um caminho inteiro como esta em uma cadeia de caracteres de texto:
+A classe [`SKPath`](xref:SkiaSharp.SKPath) dá suporte à definição de objetos de caminho inteiros de cadeias de caracteres de texto em um formato estabelecido pela especificação SVG (Scalable Vector Graphics). Você verá mais adiante neste artigo como você pode representar um caminho inteiro como este em uma cadeia de texto:
 
-![](path-data-images/pathdatasample.png "Um exemplo de caminho definido com dados de caminho SVG")
+![](path-data-images/pathdatasample.png "A sample path defined with SVG path data")
 
-O SVG é um linguagem para páginas da web de programação de gráficos baseados em XML. Porque o SVG deve permitir que os caminhos a serem definidos na marcação, em vez de uma série de chamadas de função, o SVG standard inclui uma maneira extremamente concisa de especificar um caminho gráfico inteiro como uma cadeia de caracteres de texto.
+O SVG é uma linguagem de programação gráfica baseada em XML para páginas da Web. Como o SVG deve permitir que os caminhos sejam definidos na marcação, em vez de uma série de chamadas de função, o padrão SVG inclui uma maneira extremamente concisa de especificar um caminho gráfico inteiro como uma cadeia de texto.
 
-Dentro de SkiaSharp, esse formato é conhecido como "-dados de caminho SVG." Também é compatível com o formato XAML do Windows com base em ambientes de programação, incluindo o Windows Presentation Foundation e a plataforma Universal do Windows, onde ele é conhecido como o [sintaxe de marcação de caminho](/dotnet/framework/wpf/graphics-multimedia/path-markup-syntax) ou o [mover e desenhe a sintaxe de comandos](/windows/uwp/xaml-platform/move-draw-commands-syntax/). Ele também pode servir como um formato de troca para imagens de gráficos vetoriais, especialmente em arquivos com base em texto, como XML.
+Em SkiaSharp, esse formato é conhecido como "SVG Path-Data." O formato também tem suporte em ambientes de programação baseados em XAML do Windows, incluindo o Windows Presentation Foundation e o Plataforma Universal do Windows, onde é conhecido como a [sintaxe de marcação de caminho](/dotnet/framework/wpf/graphics-multimedia/path-markup-syntax) ou a sintaxe de [comandos move e Draw](/windows/uwp/xaml-platform/move-draw-commands-syntax/). Ele também pode servir como um formato de troca para imagens gráficas vetoriais, especialmente em arquivos baseados em texto, como XML.
 
-O [ `SKPath` ](xref:SkiaSharp.SKPath) classe define dois métodos com as palavras `SvgPathData` em seus nomes:
+A classe [`SKPath`](xref:SkiaSharp.SKPath) define dois métodos com as palavras `SvgPathData` em seus nomes:
 
 ```csharp
 public static SKPath ParseSvgPathData(string svgPath)
@@ -36,7 +36,7 @@ public static SKPath ParseSvgPathData(string svgPath)
 public string ToSvgPathData()
 ```
 
-Estático [ `ParseSvgPathData` ](xref:SkiaSharp.SKPath.ParseSvgPathData(System.String)) método converte uma cadeia de caracteres para um `SKPath` objeto, enquanto [ `ToSvgPathData` ](xref:SkiaSharp.SKPath.ToSvgPathData) converte um `SKPath` objeto a ser uma cadeia de caracteres.
+O método estático [`ParseSvgPathData`](xref:SkiaSharp.SKPath.ParseSvgPathData(System.String)) converte uma cadeia de caracteres em um objeto `SKPath`, enquanto [`ToSvgPathData`](xref:SkiaSharp.SKPath.ToSvgPathData) converte um objeto `SKPath` em uma cadeia de caracteres.
 
 Aqui está uma cadeia de caracteres SVG para uma estrela de cinco pontas centralizada no ponto (0, 0) com um raio de 100:
 
@@ -44,21 +44,21 @@ Aqui está uma cadeia de caracteres SVG para uma estrela de cinco pontas central
 "M 0 -100 L 58.8 90.9, -95.1 -30.9, 95.1 -30.9, -58.8 80.9 Z"
 ```
 
-As letras são comandos que criam uma `SKPath` objeto: `M` indica uma `MoveTo` chamar, `L` está `LineTo`, e `Z` é `Close` para fechar um contorno. Cada par de números fornece uma coordenada X e Y de um ponto. Observe que o `L` comando é seguido por vários pontos, separados por vírgulas. Em uma série de coordenadas, pontos, vírgulas e espaço em branco são tratados idêntico. Alguns programadores preferem coloque vírgulas entre as coordenadas X e Y, em vez de entre os pontos, mas vírgulas ou espaços são necessárias apenas para evitar ambiguidade. Isso é perfeitamente aceitável:
+As letras são comandos que criam um objeto `SKPath`: `M` indica uma chamada `MoveTo`, `L` é `LineTo`e `Z` é `Close` para fechar uma delimitação. Cada par de números fornece uma coordenada X e Y de um ponto. Observe que o comando `L` é seguido por vários pontos separados por vírgulas. Em uma série de coordenadas e pontos, vírgulas e espaços em branco são tratados de forma idêntica. Alguns programadores preferem colocar vírgulas entre as coordenadas X e Y em vez de entre os pontos, mas as vírgulas ou os espaços são necessários apenas para evitar ambigüidade. Isso é perfeitamente legal:
 
 ```
 "M0-100L58.8 90.9-95.1-30.9 95.1-30.9-58.8 80.9Z"
 ```
 
-A sintaxe de dados de caminho SVG formalmente documentada no [8.3 da seção da especificação do SVG](http://www.w3.org/TR/SVG11/paths.html#PathData). Aqui está um resumo:
+A sintaxe dos dados do caminho SVG está formalmente documentada na [seção 8,3 da especificação SVG](https://www.w3.org/TR/SVG11/paths.html#PathData). Aqui está um resumo:
 
-## <a name="moveto"></a>**MoveTo**
+## <a name="moveto"></a>**Mover**
 
 ```
 M x y
 ```
 
-Isso inicia uma nova delimitação no caminho, definindo a posição atual. Dados de caminho sempre devem começar com um `M` comando.
+Isso inicia uma nova delimitação no caminho definindo a posição atual. Os dados de caminho devem sempre começar com um comando `M`.
 
 ## <a name="lineto"></a>**LineTo**
 
@@ -66,15 +66,15 @@ Isso inicia uma nova delimitação no caminho, definindo a posição atual. Dado
 L x y ...
 ```
 
-Este comando adiciona uma linha reta (ou linhas) para o caminho e define a nova posição atual até o final da última linha. Você pode seguir a `L` com vários pares de *x* e *y* coordenadas.
+Esse comando adiciona uma linha reta (ou linhas) ao caminho e define a nova posição atual para o final da última linha. Você pode seguir o comando `L` com vários pares de coordenadas *x* e *y* .
 
-## <a name="horizontal-lineto"></a>**Horizontal LineTo**
+## <a name="horizontal-lineto"></a>**Linha horizontalto**
 
 ```
 H x ...
 ```
 
-Este comando adiciona uma linha horizontal para o caminho e define a nova posição atual até o final da linha. Você pode seguir a `H` comando com vários *x* coordenadas, mas ele não faz muito sentido.
+Esse comando adiciona uma linha horizontal ao caminho e define a nova posição atual para o fim da linha. Você pode seguir o comando `H` com várias coordenadas *x* , mas isso não faz muito sentido.
 
 ## <a name="vertical-line"></a>**Linha vertical**
 
@@ -82,7 +82,7 @@ Este comando adiciona uma linha horizontal para o caminho e define a nova posiç
 V y ...
 ```
 
-Este comando adiciona uma linha vertical para o caminho e define a nova posição atual até o final da linha.
+Esse comando adiciona uma linha vertical ao caminho e define a nova posição atual para o fim da linha.
 
 ## <a name="close"></a>**Fechar**
 
@@ -90,51 +90,51 @@ Este comando adiciona uma linha vertical para o caminho e define a nova posiçã
 Z
 ```
 
-O `C` comando fecha a delimitação adicionando uma linha reta da posição atual para o início da delimitação.
+O comando `C` fecha a delimitação adicionando uma linha reta da posição atual até o início da delimitação.
 
 ## <a name="arcto"></a>**ArcTo**
 
-O comando para adicionar um arco elíptico para a delimitação, sem dúvida é o comando mais complexo na especificação dos dados de caminho SVG inteira. É o único comando em que números podem representar algo diferente de valores de coordenadas:
+O comando para adicionar um arco elíptico à delimitação é, de longe, o comando mais complexo em toda a especificação de dados de caminho SVG. É o único comando no qual os números podem representar algo diferente dos valores de coordenadas:
 
 ```
 A rx ry rotation-angle large-arc-flag sweep-flag x y ...
 ```
 
-O *rx* e *entar* parâmetros são os raios horizontais e verticais da elipse. O *ângulo de rotação* é no sentido horário em graus.
+Os parâmetros *RX* e *entar* são os raios horizontais e verticais da elipse. O *ângulo de rotação* é o sentido horário em graus.
 
-Defina a *sinalizador grande arco* para 1 para o arco grande ou 0 para o arco pequeno.
+Defina o *sinalizador de arco grande* para 1 para o arco grande ou para 0 para o arco pequeno.
 
-Defina as *sinalizador de varredura* como 1 para no sentido horário e como 0 para no sentido anti-horário.
+Defina o *sinalizador de varredura* como 1 para o sentido horário e 0 para o sentido anti-horário.
 
 O arco é desenhado para o ponto (*x*, *y*), que se torna a nova posição atual.
 
-## <a name="cubicto"></a>**CubicTo**
+## <a name="cubicto"></a>**Cúbicoto**
 
 ```
 C x1 y1 x2 y2 x3 y3 ...
 ```
 
-Este comando adiciona uma curva de Bézier cúbica da posição atual para (*x3*, *y3*), que se torna a nova posição atual. Os pontos (*x1*, *y1*) e (*x2*, *y2*) são pontos de controle.
+Esse comando adiciona uma curva Bézier cúbica da posição atual para (*X3*, *y3*), que se torna a nova posição atual. Os pontos (*X1*, *Y1*) e (*X2*, *Y2*) são pontos de controle.
 
-Várias curvas de Bézier podem ser especificadas por uma única `C` comando. O número de pontos deve ser um múltiplo de 3.
+Várias curvas Bézier podem ser especificadas por um único comando `C`. O número de pontos deve ser um múltiplo de 3.
 
-Também é um comando de curva de Bézier "suave":
+Também há um comando de curva Bézier "suave":
 
 ```
 S x2 y2 x3 y3 ...
 ```
 
-Esse comando deve seguir um comando de Bézier regular (embora não seja estritamente o que é necessário). O comando de Bézier smooth calcula o primeiro ponto de controle para que ele seja um reflexo do segundo ponto de controle de Bézier anterior em torno de seu ponto mútuo. Esses três pontos, portanto, são colinear, e a conexão entre as duas curvas de Bézier é suave.
+Esse comando deve seguir um comando de Bézier regular (embora isso não seja estritamente necessário). O comando Smooth Bézier calcula o primeiro ponto de controle para que ele seja um reflexo do segundo ponto de controle do Bézier anterior em relação ao seu ponto mútuo. Portanto, esses três pontos são colineares e a conexão entre as duas curvas Bézier é suave.
 
-## <a name="quadto"></a>**QuadTo**
+## <a name="quadto"></a>**Quádruplo**
 
 ```
 Q x1 y1 x2 y2 ...
 ```
 
-Para curvas de Bézier quadráticas, o número de pontos deve ser um múltiplo de 2. É o ponto de controle (*x1*, *y1*) e o ponto de extremidade (e a nova posição atual) é (*x2*, *y2*)
+Para curvas Bézier quadráticas, o número de pontos deve ser um múltiplo de 2. O ponto de controle é (*X1*, *Y1*) e o ponto de extremidade (e a nova posição atual) é (*X2*, *Y2*)
 
-Também há um comando de curva quadrática suave:
+Há também um comando de curva quadrática suave:
 
 ```
 T x2 y2 ...
@@ -142,15 +142,15 @@ T x2 y2 ...
 
 O ponto de controle é calculado com base no ponto de controle da curva quadrática anterior.
 
-Todos esses comandos também estão disponíveis nas versões "relativas", em que os pontos de coordenadas são em relação à posição atual. Esses comandos relativos começam com letras minúsculas, por exemplo `c` em vez de `C` para a versão relativa do comando de Bézier cúbica.
+Todos esses comandos também estão disponíveis em versões "relativas", em que os pontos de coordenadas são relativos à posição atual. Esses comandos relativos começam com letras minúsculas, por exemplo `c` em vez de `C` para a versão relativa do comando Bézier cúbico.
 
-Esta é a extensão da definição de dados de caminho SVG. Há um recurso para grupos de comandos de repetição ou para realizar qualquer tipo de cálculo. Comandos para `ConicTo` ou outros tipos de especificações de arco não estão disponíveis.
+Essa é a extensão da definição de dados de caminho SVG. Não há nenhum recurso para repetir grupos de comandos ou para executar qualquer tipo de cálculo. Os comandos para `ConicTo` ou outros tipos de especificações ARC não estão disponíveis.
 
-Estático [ `SKPath.ParseSvgPathData` ](xref:SkiaSharp.SKPath.ParseSvgPathData(System.String)) método espera uma cadeia de caracteres válida de comandos SVG. Se qualquer erro de sintaxe for detectado, o método retorna `null`. Que é a indicação de erro somente.
+O método de [`SKPath.ParseSvgPathData`](xref:SkiaSharp.SKPath.ParseSvgPathData(System.String)) estático espera uma cadeia de caracteres válida de comandos SVG. Se qualquer erro de sintaxe for detectado, o método retornará `null`. Essa é a única indicação de erro.
 
-O [ `ToSvgPathData` ](xref:SkiaSharp.SKPath.ToSvgPathData) método é útil para a obtenção de dados de caminho SVG de uma já existente `SKPath` objeto transferir para outro programa ou para armazenar em um formato de arquivo de texto como XML. (O `ToSvgPathData` método não é demonstrado no código de exemplo neste artigo.) Fazer *não* esperar `ToSvgPathData` para retornar uma cadeia de caracteres correspondente exatamente as chamadas de método que criou o caminho. Em particular, você descobrirá que os arcos são convertidos para vários `QuadTo` comandos, e isso é como eles aparecem nos dados de caminho retornados do `ToSvgPathData`.
+O método [`ToSvgPathData`](xref:SkiaSharp.SKPath.ToSvgPathData) é útil para obter dados de caminho SVG de um objeto `SKPath` existente para transferir para outro programa ou para armazenar em um formato de arquivo baseado em texto, como XML. (O método `ToSvgPathData` não é demonstrado no código de exemplo neste artigo.) *Não* Espere `ToSvgPathData` retornar uma cadeia de caracteres correspondente exatamente às chamadas de método que criou o caminho. Em particular, você descobrirá que os arcos são convertidos em vários comandos de `QuadTo`, e é assim que eles aparecem nos dados de caminho retornados de `ToSvgPathData`.
 
-O **caminho de dados Hello** página mágicas a palavra "HELLO" usando dados de caminho SVG. Tanto a `SKPath` e `SKPaint` objetos são definidos como campos na [ `PathDataHelloPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PathDataHelloPage.cs) classe:
+A página de **saudação de dados de caminho** soletra a palavra "Olá" usando dados de caminho SVG. Os objetos `SKPath` e `SKPaint` são definidos como campos na classe [`PathDataHelloPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PathDataHelloPage.cs) :
 
 ```csharp
 public class PathDataHelloPage : ContentPage
@@ -174,21 +174,21 @@ public class PathDataHelloPage : ContentPage
 }
 ```
 
-O caminho que define a cadeia de caracteres de texto começa no canto superior esquerdo no ponto (0, 0). Cada letra é 50 unidades de largura e altura de 100 unidades e letras são separadas por outro 25 unidades, que significa que todo o caminho é 350 unidades amplas.
+O caminho que define a cadeia de texto começa no canto superior esquerdo no ponto (0, 0). Cada letra tem 50 unidades de largura e 100 unidades de altura e as letras são separadas por outras 25 unidades, o que significa que o caminho inteiro tem 350 unidades de largura.
 
-O 'H' "Olá" é composto de três dos contornos de uma linha, enquanto o 'E' está duas curvas de Bézier cúbicas conectadas. Observe que o `C` comando é seguido por seis pontos e dois dos pontos de controle têm coordenadas Y de – 10 e 110, o que coloca-os fora do intervalo das coordenadas Y das outras letras. O "L" é duas linhas conectadas, enquanto a ' l'é uma elipse que é renderizada com um `A` comando.
+O ' H ' de "Olá" é composto de contornos de linha de 3 1, enquanto ' E ' são duas curvas Bézier cúbicas conectadas. Observe que o comando `C` é seguido por seis pontos, e dois dos pontos de controle têm coordenadas Y de – 10 e 110, o que os coloca fora do intervalo das coordenadas Y das outras letras. O ' L' é duas linhas conectadas, enquanto o ' O ' é uma elipse que é renderizada com um comando `A`.
 
-Observe que o `M` que começa a delimitação do último comando define a posição para o ponto (350, 50), que é o centro vertical da esquerda lado do ' l'. Conforme indicado pelos seguintes números primeiro o `A` de comando, a elipse tem um raio horizontal de 25 e um raio vertical de 50. O ponto de extremidade é indicado pelo último par de números no `A` comando, que representa o ponto (300, 49.9). Que é deliberadamente apenas um pouco diferente do ponto de início. Se o ponto de extremidade é definido igual ao ponto de início, o arco não será renderizado. Para desenhar uma elipse completa, você deve definir o ponto de extremidade próximo a (mas não é igual a) o ponto de partida, ou você deve usar dois ou mais `A` comandos, cada parte da elipse completa.
+Observe que o comando `M` que começa a última delimitação define a posição para o ponto (350, 50), que é o centro vertical do lado esquerdo do ' O '. Conforme indicado pelos primeiros números após o comando `A`, a elipse tem um raio horizontal de 25 e um raio vertical de 50. O ponto de extremidade é indicado pelo último par de números no comando `A`, que representa o ponto (300, 49,9). Isso é deliberadamente um pouco diferente do ponto de partida. Se o ponto de extremidade for definido como igual ao início, o arco não será renderizado. Para desenhar uma elipse completa, você deve definir o ponto de extremidade próximo a (mas não igual a) o início, ou deve usar dois ou mais comandos `A`, cada um para parte da elipse completa.
 
-Talvez você queira adicionar a seguinte instrução ao construtor da página e, em seguida, defina um ponto de interrupção para examinar a cadeia de caracteres resultante:
+Talvez você queira adicionar a instrução a seguir ao construtor da página e, em seguida, definir um ponto de interrupção para examinar a cadeia de caracteres resultante:
 
 ```csharp
 string str = helloPath.ToSvgPathData();
 ```
 
-Você descobrirá que o arco foi substituído por uma série de tempo de `Q` comandos para uma restauração por etapas aproximação do arco usando curvas de Bézier quadráticas.
+Você descobrirá que o arco foi substituído por uma longa série de comandos de `Q` para uma aproximação com partes do arco usando curvas Bézier quadráticas.
 
-O `PaintSurface` manipulador obtém os limites rígidos do caminho, que não inclui os pontos de controle para o 'E' e ' l' curvas. As três transformações mover o centro do caminho para o ponto (0, 0), dimensionar o caminho para o tamanho da tela (mas também considerando a largura do traço) e, em seguida, mover o centro do caminho para o centro da tela:
+O manipulador de `PaintSurface` Obtém os limites rígidos do caminho, que não inclui os pontos de controle das curvas ' E ' e ' O '. As três transformações movem o centro do caminho até o ponto (0, 0), dimensionam o caminho para o tamanho da tela (mas também ocupam a largura do traço em conta) e, em seguida, movem o centro do caminho para o centro da tela:
 
 ```csharp
 public class PathDataHelloPage : ContentPage
@@ -217,11 +217,11 @@ public class PathDataHelloPage : ContentPage
 }
 ```
 
-O caminho preenche a tela, que se parece mais razoável quando exibido no modo paisagem:
+O caminho preenche a tela, o que parece mais razoável quando exibido no modo paisagem:
 
-[![](path-data-images/pathdatahello-small.png "Caminho dados Hello da página de captura de tela tripla")](path-data-images/pathdatahello-large.png#lightbox "tripla captura de tela de caminho dados Hello página")
+[![](path-data-images/pathdatahello-small.png "Triple screenshot of the Path Data Hello page")](path-data-images/pathdatahello-large.png#lightbox "Triple screenshot of the Path Data Hello page")
 
-O **caminho de dados Cat** página é semelhante. Os objetos de caminho e paint são definidos como campos na [ `PathDataCatPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PathDataCatPage.cs) classe:
+A página **Cat de dados de caminho** é semelhante. Os objetos Path e Paint são definidos como campos na classe [`PathDataCatPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PathDataCatPage.cs) :
 
 ```csharp
 public class PathDataCatPage : ContentPage
@@ -255,11 +255,11 @@ public class PathDataCatPage : ContentPage
 }
 ```
 
-O cabeçalho de um gato é um círculo, e aqui, ele é renderizado com dois `A` comandos, cada um deles desenha um semicírculo. Ambos `A` os comandos para o cabeçalho define os raios horizontais e verticais de 100. Primeiro arco começa em (240, 100) e termina em (240, 300), que se torna o ponto inicial para o segundo arco que termina no (240, 100).
+O cabeçalho de um gato é um círculo, e aqui ele é renderizado com dois comandos `A`, cada um deles com um semicírculo. Ambos os comandos `A` para a cabeça definem raios horizontais e verticais de 100. O primeiro arco começa em (240, 100) e termina em (240, 300), que se torna o ponto de partida para o segundo arco que termina em (240, 100).
 
-Os dois olhos também são processados com dois `A` comandos e assim como acontece com head do gato, a segunda `A` comando termina no mesmo ponto como o início do primeiro `A` comando. No entanto, esses pares de `A` comandos não definem uma elipse. O com de cada arco é 40 unidades e o raio também 40 unidades, que significa que esses arcos não são semicircles completos.
+Os dois olhos também são renderizados com dois comandos `A` e, assim como acontece com a cabeça do gato, o segundo comando `A` termina no mesmo ponto que o início do primeiro comando `A`. No entanto, esses pares de comandos `A` não definem uma elipse. O com de cada arco é de 40 unidades e o raio também é 40 unidades, o que significa que esses arcos não são em semicírculos totais.
 
-O `PaintSurface` manipulador executa transformações semelhantes, como o exemplo anterior, mas define um único `Scale` fator para manter a taxa de proporção e fornecer uma pequena margem, de modo que caixas estreitas do gato sem tocar os lados da tela:
+O manipulador de `PaintSurface` executa transformações semelhantes como o exemplo anterior, mas define um único fator de `Scale` para manter a taxa de proporção e fornecer uma pequena margem para que as caixas estreitas do gato não se toquem com os lados da tela:
 
 ```csharp
 public class PathDataCatPage : ContentPage
@@ -288,13 +288,13 @@ public class PathDataCatPage : ContentPage
 }
 ```
 
-Aqui está o programa em execução:
+Este é o programa em execução:
 
-[![](path-data-images/pathdatacat-small.png "Tripla captura de tela da página do caminho dados Cat")](path-data-images/pathdatacat-large.png#lightbox "tripla captura de tela da página do caminho dados Cat")
+[![](path-data-images/pathdatacat-small.png "Triple screenshot of the Path Data Cat page")](path-data-images/pathdatacat-large.png#lightbox "Triple screenshot of the Path Data Cat page")
 
-Normalmente, quando um `SKPath` objeto é definido como um campo, os contornos do caminho devem ser definidos no construtor ou outro método. Ao usar dados de caminho SVG, no entanto, você viu que o caminho pode ser especificado inteiramente na definição de campo.
+Normalmente, quando um objeto `SKPath` é definido como um campo, os contornos do caminho devem ser definidos no construtor ou em outro método. No entanto, ao usar dados de caminho SVG, você viu que o caminho pode ser totalmente especificado na definição de campo.
 
-Anterior **feio relógio de analógico** amostra na [ **girar a transformar** ](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/rotate.md) artigo exibido os ponteiros do relógio como linhas simples. O **bastante o relógio analógico** programa abaixo substitui essas linhas com `SKPath` objetos definidos como campos na [ `PrettyAnalogClockPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PrettyAnalogClockPage.cs) classe juntamente com `SKPaint` objetos:
+O exemplo de **relógio analógico feio** anterior no artigo [**de transformação girar**](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/rotate.md) exibiu as mãos do relógio como linhas simples. O programa de **relógio muito analógico** abaixo substitui essas linhas por `SKPath` objetos definidos como campos na classe [`PrettyAnalogClockPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PrettyAnalogClockPage.cs) junto com `SKPaint` objetos:
 
 ```csharp
 public class PrettyAnalogClockPage : ContentPage
@@ -332,9 +332,9 @@ public class PrettyAnalogClockPage : ContentPage
 }
 ```
 
-Os ponteiros de hora e minuto agora anexando áreas. Para tornar esses mãos diferentes entre si, eles são desenhados com um contorno preto e preenchimento cinza usando o `handStrokePaint` e `handFillPaint` objetos.
+As mãos de hora e minuto agora têm áreas fechadas. Para tornar essas mãos distintas umas das outras, elas são desenhadas com um contorno preto e um preenchimento cinza usando os objetos `handStrokePaint` e `handFillPaint`.
 
-Na anterior **feio relógio de analógico** exemplo, o pouco círculos que marcados como as horas e minutos foram desenhados em um loop. Neste **bastante o relógio analógico** exemplo, uma abordagem totalmente diferente é usada: as marcas de hora e minuto são linhas pontilhadas desenhadas com a `minuteMarkPaint` e `hourMarkPaint` objetos:
+No exemplo de **relógio analógico feio** anterior, os pequenos círculos que marcavam as horas e os minutos foram desenhados em um loop. Nesse exemplo de **relógio muito analógico** , uma abordagem totalmente diferente é usada: as marcas de hora e de minuto são linhas pontilhadas desenhadas com os objetos `minuteMarkPaint` e `hourMarkPaint`:
 
 ```csharp
 public class PrettyAnalogClockPage : ContentPage
@@ -361,11 +361,11 @@ public class PrettyAnalogClockPage : ContentPage
 }
 ```
 
-O [ **por pontos e traços** ](~/xamarin-forms/user-interface/graphics/skiasharp/paths/dots.md) artigo discutiu como você pode usar o [ `SKPathEffect.CreateDash` ](xref:SkiaSharp.SKPathEffect.CreateDash*) método para criar uma linha tracejada. O primeiro argumento é uma `float` matriz que geralmente tem dois elementos: O primeiro elemento é o comprimento dos traços e o segundo elemento é a lacuna entre os traços. Quando o `StrokeCap` estiver definida como `SKStrokeCap.Round`, em seguida, as extremidades arredondadas do traço efetivamente aumentam o comprimento do traço usando a largura do traço em ambos os lados do traço. Assim, definindo o primeiro elemento da matriz como 0 cria uma linha pontilhada.
+O artigo [**pontos e traços**](~/xamarin-forms/user-interface/graphics/skiasharp/paths/dots.md) abordou como você pode usar o método [`SKPathEffect.CreateDash`](xref:SkiaSharp.SKPathEffect.CreateDash*) para criar uma linha tracejada. O primeiro argumento é um `float` matriz que geralmente tem dois elementos: o primeiro elemento é o comprimento dos traços e o segundo elemento é a lacuna entre os traços. Quando a propriedade `StrokeCap` é definida como `SKStrokeCap.Round`, as extremidades arredondadas do traço efetivamente aumentam o comprimento do traço pela largura do traço em ambos os lados do traço. Portanto, definir o primeiro elemento de matriz como 0 cria uma linha pontilhada.
 
-A distância entre esses pontos é regida por segundo elemento de matriz. Como você verá em breve, esses dois `SKPaint` objetos são usados para desenhar círculos com um raio de 90 unidades. A circunferência deste círculo, portanto, é 180π, o que significa que as marcas de 60 minutos devem aparecer cada unidades 3 π, que é o valor de segundo na `float` matriz em `minuteMarkPaint`. As marcas de 12 horas devem aparecer cada unidades 15π, que é o valor no segundo `float` matriz.
+A distância entre esses pontos é regida pelo segundo elemento da matriz. Como você verá em breve, esses dois objetos `SKPaint` são usados para desenhar círculos com um raio de 90 unidades. A circunferência desse círculo é, portanto, 180 π, o que significa que as marcas de 60 minutos devem aparecer todas as unidades 3π, que é o segundo valor na matriz de `float` em `minuteMarkPaint`. As 12 horas devem aparecer a cada 15π unidades, que é o valor na segunda matriz de `float`.
 
-O `PrettyAnalogClockPage` classe define um temporizador para invalidar a superfície de cada 16 milissegundos e o `PaintSurface` manipulador é chamado em que a taxa. As definições anteriores a `SKPath` e `SKPaint` objetos permitem bem simples código de desenho:
+A classe `PrettyAnalogClockPage` define um temporizador para invalidar a superfície a cada 16 milissegundos e o manipulador de `PaintSurface` é chamado com essa taxa. As definições anteriores dos objetos `SKPath` e `SKPaint` permitem um código de desenho muito claro:
 
 ```csharp
 public class PrettyAnalogClockPage : ContentPage
@@ -425,11 +425,11 @@ public class PrettyAnalogClockPage : ContentPage
 }
 ```
 
-Algo especial é feito com a mão de segundo, no entanto. Porque o relógio é atualizado a cada 16 milissegundos, o `Millisecond` propriedade do `DateTime` valor potencialmente pode ser usado para animar uma varredura de segundo manualmente em vez de um que se move em pequenos saltos do segundo a segundo. Mas esse código não permite o movimento suave. Em vez disso, ele usa o xamarin. Forms [ `SpringIn` ](xref:Xamarin.Forms.Easing.SpringIn) e [ `SpringOut` ](xref:Xamarin.Forms.Easing.SpringOut) animação funções para um tipo diferente de movimentação de easing. Essas funções de easing fazer com que a mão de segundo mover de uma maneira mais irregular &mdash; extraindo voltar um pouco antes de ele move e, em seguida, um pouco excesso de solução seu destino, um efeito que Infelizmente não pode ser reproduzido nessas capturas de tela estáticas:
+No entanto, algo especial é feito com a segunda mão. Como o relógio é atualizado a cada 16 milissegundos, a propriedade `Millisecond` do valor `DateTime` pode potencialmente ser usada para animar uma varredura de uma segunda mão, em vez de uma que se move em saltos discretos de segundo para segundo. Mas esse código não permite que a movimentação seja suave. Em vez disso, ele usa o [`SpringIn`](xref:Xamarin.Forms.Easing.SpringIn) Xamarin. Forms e [`SpringOut`](xref:Xamarin.Forms.Easing.SpringOut) as funções de atenuação de animação para um tipo diferente de movimento. Essas funções de atenuação fazem com que a segunda mão se mova de uma maneira jerkier &mdash; retornar um pouco antes de se mover e, em seguida, solucionar um pouco o seu destino, um efeito que infelizmente não pode ser reproduzido nessas capturas de tela estáticas:
 
-[![](path-data-images/prettyanalogclock-small.png "Captura de tela da página bastante o relógio analógico tripla")](path-data-images/prettyanalogclock-large.png#lightbox "tripla captura de tela da página bastante o relógio analógico")
+[![](path-data-images/prettyanalogclock-small.png "Triple screenshot of the Pretty Analog Clock page")](path-data-images/prettyanalogclock-large.png#lightbox "Triple screenshot of the Pretty Analog Clock page")
 
 ## <a name="related-links"></a>Links relacionados
 
-- [APIs de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [APIs do SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

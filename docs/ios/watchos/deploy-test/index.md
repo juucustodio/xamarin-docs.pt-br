@@ -4,15 +4,15 @@ description: Este documento descreve como implantar e testar aplicativos watchOS
 ms.prod: xamarin
 ms.assetid: 98257399-E9B3-4BAB-9204-0E89117DEA6D
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: af6d32808e2847c99c4f8a2d90e7dc2d3955ae03
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: b9b4d201e02d60bd6131c8693d9ac6a233e4fe10
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70284669"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028348"
 ---
 # <a name="deploying-and-testing-watchos-apps-with-xamarin"></a>Implantando e testando aplicativos watchOS com o Xamarin
 
@@ -44,7 +44,7 @@ Conforme discutido nas [instruções de instalação](~/ios/watchos/get-started/
 
 - Projeto unificado do Xamarin. iOS-`com.xamarin.WatchKitCatalog`
 - Projeto de extensão WatchKit-`com.xamarin.WatchKitCatalog.watchkitextension`
-- Inspecionar projeto de aplicativo-`com.xamarin.WatchKitCatalog.watchkitapp`
+- Assistir ao projeto de aplicativo-`com.xamarin.WatchKitCatalog.watchkitapp`
 
 Todos os três projetos exigem um perfil de provisionamento de distribuição correspondente, usando IDs de aplicativo explicitamente para cada um ou uma ID de aplicativo curinga.
 
@@ -60,7 +60,7 @@ Será necessário criar um perfil de provisionamento de distribuição para cada
 
 ### <a name="wildcard-app-id"></a>ID do aplicativo curinga
 
-Como alternativa, você pode criar uma **ID de aplicativo** curinga que corresponda a todos os três projetos `com.xamarin.*`, como.
+Como alternativa, você pode criar uma **ID de aplicativo** curinga que corresponda a todos os três projetos, como `com.xamarin.*`.
 
 Observe que alguns recursos não podem ser usados com uma ID de aplicativo curinga (como notificações por push). Se seu aplicativo exigir esses recursos, você deverá criar IDs explícitas do aplicativo.
 
@@ -78,7 +78,7 @@ Você pode usar um grupo de aplicativos para compartilhar dados entre seu aplica
 
 ### <a name="certificates-identifiers--profiles"></a>Certificados, identificadores & perfis
 
-Para usar um grupo de aplicativos, crie uma entrada na tela **grupos de aplicativos** . No exemplo abaixo, o grupo é nomeado com o mesmo estilo de DNS reverso que é comumente usado para IDs de aplicativo, mas `group.` com o prefixo (que é necessário):
+Para usar um grupo de aplicativos, crie uma entrada na tela **grupos de aplicativos** . No exemplo abaixo, o grupo é nomeado com o mesmo estilo de DNS reverso que é comumente usado para IDs de aplicativo, mas com o prefixo de `group.` (que é necessário):
 
 ![O identificador](images/appgroups-new-sml.png)
 

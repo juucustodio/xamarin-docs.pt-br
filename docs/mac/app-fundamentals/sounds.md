@@ -4,23 +4,23 @@ description: Este documento descreve como reproduzir som com AVAudioPlayer em um
 ms.prod: xamarin
 ms.assetid: 4A683A94-F75D-4EAF-8497-E9443653250B
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 10/19/2016
-ms.openlocfilehash: b4a5ead3e3c02fbdd2ae5486a6ac637defeb5abd
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 18043a88a129d48a1cad3b9ee15b6989d50ad126
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70283299"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030052"
 ---
 # <a name="playing-sound-with-avaudioplayer-in-xamarinmac"></a>Reprodução de som com AVAudioPlayer no Xamarin. Mac
 
 ## <a name="about-the-avaudioplayer"></a>Sobre o AVAudioPlayer
 
-A `AVAudioPlayer` classe é usada para reproduzir dados de áudio de memória ou de um arquivo. A Apple recomenda usar essa classe para reproduzir áudio em seu aplicativo, a menos que você esteja fazendo streaming de rede ou exija e/s de áudio de baixa latência.
+A classe `AVAudioPlayer` é usada para reproduzir dados de áudio de memória ou de um arquivo. A Apple recomenda usar essa classe para reproduzir áudio em seu aplicativo, a menos que você esteja fazendo streaming de rede ou exija e/s de áudio de baixa latência.
 
-Você pode usar a `AVAudioPlayer` classe para fazer o seguinte:
+Você pode usar a classe `AVAudioPlayer` para fazer o seguinte:
 
 - Jogue sons de qualquer duração com loop opcional.
 - Jogue vários sons ao mesmo tempo com a sincronização opcional.
@@ -28,7 +28,7 @@ Você pode usar a `AVAudioPlayer` classe para fazer o seguinte:
 - Suporte a recursos como avançar ou retroceder.
 - Obter dados de medição de nível de reprodução.
 
-`AVAudioPlayer`dá suporte a sons em qualquer formato de áudio fornecido pelo iOS, tvOS e macOS, como. aif,. wav ou. mp3.
+o `AVAudioPlayer` dá suporte a sons em qualquer formato de áudio fornecido pelo iOS, tvOS e macOS, como. aif,. wav ou. mp3.
 
 ## <a name="playing-sounds-in-macos"></a>Tocando sons no macOS
 

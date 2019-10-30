@@ -4,15 +4,15 @@ description: Este documento contém links para vários guias que descrevem conce
 ms.prod: xamarin
 ms.assetid: 608403AE-B09F-4D9C-8F59-F9DE9F0B1CF1
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/21/2017
-ms.openlocfilehash: 59257dafc1d92756feb85046df43de7b9da0cc42
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 0ccdde29183645b93831b7261909714f9baf3fa4
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290152"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73010022"
 ---
 # <a name="xamarinios-application-fundamentals"></a>Conceitos básicos do aplicativo Xamarin. iOS
 
@@ -72,4 +72,4 @@ As telas de toque em muitos dos dispositivos atuais permitem que os usuários in
 
 ## <a name="working-with-user-defaultsiosapp-fundamentalsuser-defaultsmd"></a>[Trabalhando com padrões de usuário](~/ios/app-fundamentals/user-defaults.md)
 
-A `NSUserDefaults` classe fornece uma maneira para que aplicativos e extensões do IOS interajam programaticamente com o sistema padrão de todo o sistema. Usando o sistema de padrões, o usuário pode configurar o comportamento ou o estilo de um aplicativo para atender às suas preferências (com base no design do aplicativo). Por exemplo, para apresentar dados em medidas métricas vs Imperial ou selecione um determinado tema da interface do usuário.
+A classe `NSUserDefaults` fornece uma maneira para que aplicativos e extensões do iOS interajam programaticamente com o sistema padrão de todo o sistema. Usando o sistema de padrões, o usuário pode configurar o comportamento ou o estilo de um aplicativo para atender às suas preferências (com base no design do aplicativo). Por exemplo, para apresentar dados em medidas métricas vs Imperial ou selecione um determinado tema da interface do usuário.

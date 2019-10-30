@@ -1,99 +1,99 @@
 ---
-title: Iniciar telas para aplicativos Xamarin. iOS
-description: Este artigo explica como criar uma tela de inicialização de aplicativo para todos os dispositivos iOS, em qualquer resolução e orientação, usando um único storyboard unificado.
+title: Launch Screens for Xamarin.iOS Apps
+description: This article explains how to create an app Launch Screen for all iOS devices, at any resolution and orientation, using a single Unified Storyboard.
 ms.prod: xamarin
 ms.assetid: 31A489CA-756B-4B9B-B386-4BADF18EDD33
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 05/02/2018
-ms.openlocfilehash: 18d33dfcef109fd29f32969b9bdd15b8a2dc475a
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 3adabbac3f56747093aa8a3def85869a92d33600
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70764047"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73010494"
 ---
-# <a name="launch-screens-for-xamarinios-apps"></a>Iniciar telas para aplicativos Xamarin. iOS
+# <a name="launch-screens-for-xamarinios-apps"></a>Launch Screens for Xamarin.iOS Apps
 
-_Este artigo explica como criar uma tela de inicialização de aplicativo para todos os dispositivos iOS, em qualquer resolução e orientação, usando um único storyboard unificado._
+_This article explains how to create an app Launch Screen for all iOS devices, at any resolution and orientation, using a single Unified Storyboard._
 
-Antes do iOS 8, a criação de uma tela de inicialização para um aplicativo iOS exigia que o desenvolvedor fornecesse um ativo de imagem para cada um dos vários fatores forma de dispositivo e resoluções em que o aplicativo poderia ser executado. No entanto, desde o lançamento do iOS 8, é possível usar um único storyboard unificado para criar uma tela de inicialização que parece correta em todos os casos.
+Before iOS 8, creating a Launch Screen for an iOS app required the developer to provide an image asset for each of the various device form factors and resolutions in which the app could run. Since the release of iOS 8, however, it has been possible to use a single Unified Storyboard to create a Launch Screen that looks correct in all cases.
 
-Esta breve explicação explica como criar uma tela de inicialização com um storyboard fornecido por padrão em um novo projeto ou com um storyboard adicionado manualmente a um projeto existente. Em seguida, ele demonstra como usar o designer do iOS para adicionar uma exibição de imagem e um rótulo ao storyboard, definir restrições nessas exibições e verificar se o storyboard parece correto para vários dispositivos e orientações.
+This brief walkthrough describes how to create a Launch Screen with either a Storyboard provided by default in a new Project or with a Storyboard added manually to an existing Project. It then demonstrates how to use the iOS Designer to add an Image View and a Label to the Storyboard, to set constraints on those views, and to verify that the Storyboard looks correct for various devices and orientations.
 
 <a name="storyboard" />
 
-## <a name="managing-launch-screens-with-storyboards"></a>Gerenciando telas de inicialização com storyboards
+## <a name="managing-launch-screens-with-storyboards"></a>Managing Launch Screens with Storyboards
 
-No iOS 8 (e posterior), o desenvolvedor pode criar um storyboard unificado especial para fornecer a tela de inicialização em vez de usar uma ou mais imagens de inicialização estática. Ao criar um storyboard de lançamento no designer do iOS, use classes de tamanho e layout automático para definir layouts diferentes para diferentes ambientes de exibição. Usando classes de tamanho e layout automático, o desenvolvedor pode criar uma tela de inicialização única que parece boa em todos os dispositivos e ambientes de exibição.
+In iOS 8 (and later), the developer can create a special Unified Storyboard to provide the Launch Screen instead of using one or more static launch images. When creating a launch Storyboard in the iOS Designer, use Size Classes and Auto Layout to define different layouts for different display environments. By using Size Classes and Auto Layout, the developer can create a single launch screen that looks good on all devices and display environments.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
-1. Em Visual Studio para Mac, crie um novo projeto selecionando **arquivo > nova solução** e, em seguida, escolhendo **aplicativo de modo de exibição único**: 
+1. In Visual Studio for Mac, create a new project by selecting **File > New Solution** and then choosing **Single View App**: 
 
-    ![A janela novo projeto, com o aplicativo de exibição única selecionado](launch-screens-images/launch01.png)
+    ![The New Project window, with Single View App selected](launch-screens-images/launch01.png)
 
-    - Por padrão, um novo projeto inclui um arquivo **LaunchScreen. Storyboard** que define a interface da tela de inicialização. 
-    - Para adicionar um storyboard da tela de inicialização a um projeto existente, clique com o botão direito do mouse no nome do projeto na **painel de soluções** e escolha **Adicionar > novo arquivo...** e, em seguida, selecione **tela de inicialização**:
+    - By default, a new Project includes a **LaunchScreen.storyboard** file that defines the Launch Screen interface. 
+    - To instead add a Launch Screen Storyboard to an existing project, right-click on the project name in the **Solution Pad** and choose **Add > New File...** and then select **Launch Screen**:
 
-    ![A janela novo arquivo, com a tela inicialização do iOS selecionada](launch-screens-images/launch01b.png)
+    ![The New File window, with iOS Launch Screen selected](launch-screens-images/launch01b.png)
 
-    - Nomeie o arquivo **LaunchScreen** ou outro nome de sua escolha.
+    - Name the file **LaunchScreen** or another name of your choosing.
 
-2. Configure o projeto para usar o storyboard apropriado para sua tela de inicialização:
+2. Configure the Project to use the appropriate Storyboard for its Launch Screen:
 
-    - Clique duas vezes no arquivo **info. plist** no **painel de soluções** para abri-lo para edição.
-    - Na seção **Iniciar imagens** , verifique se a **tela iniciar** está definida com o nome do storyboard apropriado:
+    - Double-click the **Info.plist** file in the **Solution Pad** to open it for editing.
+    - In the **Launch Images** section, make sure that **Launch Screen** is set to the name of the appropriate Storyboard:
 
     ![O seletor de tela de inicialização no info. plist](launch-screens-images/launch02.png)
 
-    - Por padrão, um novo projeto é configurado para usar **LaunchScreen. Storyboard** como tela de inicialização.
+    - By default, a new Project is configured to use **LaunchScreen.storyboard** as its Launch Screen.
 
-3. Adicione uma imagem ao catálogo de ativos do assets **. xcassets** para que ele esteja disponível para uso na tela de inicialização. Para obter mais informações, consulte a seção [adicionando imagens a um conjunto de imagens do catálogo de ativos](~/ios/app-fundamentals/images-icons/displaying-an-image.md) do guia [exibindo uma imagem](~/ios/app-fundamentals/images-icons/displaying-an-image.md) .
+3. Add an image to the **Assets.xcassets** Asset Catalog so that it is available for use on the Launch Screen. For more information, see the [Adding Images to an Asset Catalog Image Set](~/ios/app-fundamentals/images-icons/displaying-an-image.md) section of the [Displaying an Image](~/ios/app-fundamentals/images-icons/displaying-an-image.md) guide.
 
-4. Abra **LaunchScreen. Storyboard** para edição clicando duas vezes nele no **painel de soluções**.
+4. Open **LaunchScreen.storyboard** for editing by double-clicking it in the **Solution Pad**.
 
-5. Escolha um dispositivo e uma orientação para visualizar o storyboard da tela de inicialização no designer do iOS. Abra o painel seleção de dispositivo na barra de ferramentas inferior e selecione **iPhone 4S** e **retrato**.
+5. Escolha um dispositivo e uma orientação para visualizar o storyboard da tela de inicialização no designer do iOS. Open the device selection panel on the bottom toolbar and select **iPhone 4S** and **Portrait**.
 
     ![A barra de ferramentas de seleção de dispositivo](launch-screens-images/launch05.png)
 
     - Observe que a seleção de um dispositivo e orientação altera apenas a forma como o designer do iOS visualiza o design. Independentemente da seleção feita aqui, as restrições adicionadas recentemente são aplicadas em todos os dispositivos e orientações, a menos que o botão **Editar características** tenha sido usado para especificar o contrário. 
 
-6. Defina a cor da tela de **fundo** da exibição principal do controlador de exibição. Selecione o modo de exibição clicando no meio do controlador de exibição e ajuste a cor do plano de fundo usando o **painel de propriedades**:
+6. Defina a cor da tela de **fundo** da exibição principal do controlador de exibição. Select the View by clicking in the middle of the View Controller and adjust the background color using the **Properties Pad**:
 
     ![Uma única exibição com uma cor de fundo roxa](launch-screens-images/launch06.png)
 
 7. Adicione uma **exibição de imagem** à tela de inicialização e defina sua **imagem**de origem:
 
-    - Arraste um **modo de exibição de imagem** do **painel caixa de ferramentas** para o centro da exibição.
-    - Com a **exibição de imagem** selecionada, na seção **widget** do **painel de propriedades** defina a propriedade **imagem** como o conjunto de imagens já adicionado ao catálogo de ativos do assets **. xcassets** . Reposicione e dimensione a **exibição de imagem** conforme necessário:
+    - Drag an **Image View** from the **Toolbox Pad** to the center of the View.
+    - With the **Image View** selected, in the **Widget** section of the **Properties Pad** set the **Image** property to the Image Set already added to the **Assets.xcassets** Asset Catalog. Reposicione e dimensione a **exibição de imagem** conforme necessário:
     
-    ![Um modo de exibição de imagem com seu conjunto de propriedades de imagem](launch-screens-images/launch07.png)
+    ![An Image View with its Image property set](launch-screens-images/launch07.png)
 
-8. Adicione um **rótulo** abaixo da **exibição de imagem** e use o **painel de propriedades** para definir seus atributos: 
+8. Add a **Label** below the **Image View** and use the **Properties Pad** to set its attributes: 
 
-    ![Um rótulo com seu conjunto de cores e texto](launch-screens-images/launch08.png)
+    ![A Label with its text and color set](launch-screens-images/launch08.png)
 
-9. Alterne para o modo de edição de restrição usando o botão direito na **barra de ferramentas restrições**:
+9. Switch to Constraint Editing Mode by using the right-hand button in the **Constraints Toolbar**:
     
-    ![O botão modo de edição de restrição](launch-screens-images/launch09.png)
+    ![The Constraint Editing Mode button](launch-screens-images/launch09.png)
 
-10. Adicione restrições à **exibição de imagem**, definindo sua altura e largura e centralizando-a horizontalmente e verticalmente:
+10. Add constraints to the **Image View**, setting its height and width and centering it horizontally and vertically:
 
-    ![Uma exibição de imagem com restrições de layout](launch-screens-images/launch10.png)
+    ![An Image View with layout constraints](launch-screens-images/launch10.png)
 
     - Para obter mais detalhes sobre como adicionar restrições, consulte [layout automático com o Xamarin designer para IOS](~/ios/user-interface/designer/designer-auto-layout.md).
 
-11. Adicione restrições ao **rótulo**, centralize-o horizontalmente, dando a ele uma altura e uma largura e posicionando-o verticalmente uma distância fixa na **exibição de imagem**:
+11. Add constraints to the **Label**, centering it horizontally, giving it a height and width, and positioning it a fixed distance vertically from the **Image View**:
 
-    ![Um rótulo com restrições de layout](launch-screens-images/launch11.png)
+    ![A Label with layout constraints](launch-screens-images/launch11.png)
 
-12. Teste outros dispositivos e orientações para verificar se o design se parece com o esperado em todos os cenários. Nos casos em que os ajustes precisam ser feitos para um dispositivo ou uma orientação específica, use o botão **Editar características** para adicionar restrições para classes de tamanho específicas:
+12. Test other devices and orientations to verify that the design looks as intended in all scenarios. In cases where adjustments need to be made for a specific device or orientation, use the **Edit Traits** button to add constaints for specific size classes:
 
-    ![A tela de inicialização renderizada como um iPhone X usando a orientação paisagem](launch-screens-images/launch12.png)
+    ![The Launch Screen rendered as an iPhone X using Landscape orientation](launch-screens-images/launch12.png)
 
-13. Salve as alterações no storyboard. Execute o aplicativo em um simulador ou dispositivo e a tela de inicialização ficará visível enquanto o aplicativo estiver sendo iniciado.
+13. Save the changes to the Storyboard. Run the app on a simulator or device, and the Launch Screen will be visible as the app is launching.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
@@ -149,85 +149,85 @@ No iOS 8 (e posterior), o desenvolvedor pode criar um storyboard unificado espec
     - Arraste um **modo de exibição de imagem** da **caixa de ferramentas** para o centro da exibição.
     - Com a **exibição de imagem** ainda selecionada, na **seção widget** da **janela Propriedades** , defina a propriedade **imagem** como o conjunto de imagens já adicionado ao catálogo de ativos de **ativos** . Reposicione e dimensione a **exibição de imagem** conforme necessário:
     
-    ![Um modo de exibição de imagem com seu conjunto de propriedades de imagem](launch-screens-images/launch10-vs.png)
+    ![An Image View with its Image property set](launch-screens-images/launch10-vs.png)
 
-11. Adicione um **rótulo** abaixo da **exibição de imagem**:
+11. Add a **Label** below the **Image View**:
 
-    - Arraste um **rótulo** da **caixa de ferramentas** para a superfície de design, colocando-o abaixo da **exibição de imagem**.
-    - Defina atributos para o **rótulo** usando a **janela Propriedades**:
+    - Drag a **Label** from the **Toolbox** onto the design surface, placing it below the **Image View**.
+    - Set attributes for the **Label** using the **Properties Window**:
 
-    ![Um rótulo com seu conjunto de cores e texto](launch-screens-images/launch11-vs.png) 
+    ![A Label with its text and color set](launch-screens-images/launch11-vs.png) 
 
-12. Alterne para o modo de edição de restrição usando o botão direito na **barra de ferramentas restrições**:
+12. Switch to Constraint Editing Mode by using the right-hand button in the **Constraints Toolbar**:
     
-    ![O botão modo de edição de restrição](launch-screens-images/launch12-vs.png) 
+    ![The Constraint Editing Mode button](launch-screens-images/launch12-vs.png) 
 
-13. Adicione restrições à **exibição de imagem**, definindo sua altura e largura e centralizando-a horizontalmente e verticalmente:
+13. Add constraints to the **Image View**, setting its height and width and centering it horizontally and vertically:
 
-    ![Uma exibição de imagem com restrições de layout](launch-screens-images/launch13-vs.png) 
+    ![An Image View with layout constraints](launch-screens-images/launch13-vs.png) 
 
-    - Para obter informações sobre como adicionar restrições, consulte [layout automático com o Xamarin designer para IOS](~/ios/user-interface/designer/designer-auto-layout.md).
+    - For information about adding constraints, see [Auto Layout with the Xamarin Designer for iOS](~/ios/user-interface/designer/designer-auto-layout.md).
 
-14. Adicione restrições ao **rótulo**, centralize-o horizontalmente, dando a ele uma altura e uma largura e posicionando-o verticalmente uma distância fixa na **exibição de imagem**:
+14. Add constraints to the **Label**, centering it horizontally, giving it a height and width, and positioning it a fixed distance vertically from the **Image View**:
     
-    ![Um rótulo com restrições de layout](launch-screens-images/launch14-vs.png) 
+    ![A Label with layout constraints](launch-screens-images/launch14-vs.png) 
 
-15. Teste outros dispositivos e orientações para verificar se o design se parece com o esperado em todos os cenários. Nos casos em que os ajustes precisam ser feitos para um dispositivo ou uma orientação específica, use o botão **Editar características** para adicionar restrições para classes de tamanho específicas:
+15. Test other devices and orientations to verify that the design looks as intended in all scenarios. In cases where adjustments need to be made for a specific device or orientation, use the **Edit Traits** button to add constaints for specific size classes:
 
-    ![A tela de inicialização renderizada como um iPhone X usando a orientação paisagem](launch-screens-images/launch15-vs.png) 
+    ![The Launch Screen rendered as an iPhone X using Landscape orientation](launch-screens-images/launch15-vs.png) 
 
-16. Salve as alterações no storyboard. Execute o aplicativo em um simulador ou dispositivo e a tela de inicialização ficará visível enquanto o aplicativo estiver sendo iniciado.
+16. Save the changes to the Storyboard. Run the app on a simulator or device, and the Launch Screen will be visible as the app is launching.
 
 -----
 
 > [!NOTE]
-> Um storyboard usado como uma tela de inicialização _deve_ incluir apenas elementos de interface do usuário simples e internos e **não pode** fazer cálculos ou derivar de uma classe personalizada.
+> A Storyboard used as a Launch Screen _must_ include only simple, built-in UI elements and **cannot** do any calculations or derive from a custom class.
 
-Para obter mais informações sobre como criar uma tela de inicialização com um storyboard unificado, consulte a seção [telas de inicialização dinâmica](~/ios/user-interface/storyboards/unified-storyboards.md#dynamic-launch-screens) do guia de [storyboards unificados](~/ios/user-interface/storyboards/unified-storyboards.md) .
+For more information about creating a Launch Screen with a Unified Storyboard, please see the [Dynamic Launch Screens](~/ios/user-interface/storyboards/unified-storyboards.md#dynamic-launch-screens) section of the [Unified Storyboards](~/ios/user-interface/storyboards/unified-storyboards.md) guide.
 
-## <a name="migrating-to-launch-screen-storyboards"></a>Migrando para iniciar storyboards da tela
+## <a name="migrating-to-launch-screen-storyboards"></a>Migrating to Launch Screen Storyboards
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
-Ao atualizar um aplicativo existente para usar storyboards para suas telas de inicialização, clique com o botão direito do mouse no **nome do projeto** na **Gerenciador de soluções** e selecione **Adicionar** > **novo arquivo...** . Selecione**tela de inicialização** do **Ios** > e clique no botão **novo** :
+When updating an existing app to use Storyboards for its Launch Screens, right click the **Project Name** in the **Solution Explorer** and select **Add** > **New File...** . Select **iOS** > **Launch Screen** and click the **New** button:
 
-![](launch-screens-images/storyboard02.png "Selecionar uma tela de inicialização do iOS")
+![](launch-screens-images/storyboard02.png "Select an iOS Launch Screen")
 
-Em seguida, clique `Info.plist` duas vezes no arquivo no **Gerenciador de soluções** para abri-lo para edição. Na **tela iniciar**, selecione o novo arquivo de storyboard criado acima.
+Next, double-click the `Info.plist` file in the **Solution Explorer** to open it for editing. Under **Launch Screen**, select the new Storyboard file created above.
 
-![](launch-screens-images/storyboard09.png "Selecione o novo arquivo de storyboard criado acima")
+![](launch-screens-images/storyboard09.png "Select the new Storyboard file created above")
 
-Para usar o novo storyboard como uma tela de inicialização, faça o seguinte:
+To use the new Storyboard as a launch screen, do the following:
 
-1. Clique `Info.plist` duas vezes no arquivo no **Gerenciador de soluções** para abri-lo para edição.
-2. Role até a seção **imagens de inicialização universal** do editor, abra a lista suspensa **tela de inicialização** e selecione o nome do storyboard criado acima: 
+1. Double-click the `Info.plist` file in the **Solution Explorer** to open it for editing.
+2. Scroll to the **Universal Launch Images** section of the editor, open the **Launch Screen** dropdown and select the name of the storyboard created above: 
 
-    ![](launch-screens-images/storyboard08.png "Configurando a tela de inicialização para o storyboard")
+    ![](launch-screens-images/storyboard08.png "Setting the launch screen to the storyboard")
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-1. Clique com o botão direito do mouse no nome do projeto na **Gerenciador de soluções** e selecione **Adicionar** > **novo arquivo...** : 
+1. Right-click on the project name in the **Solution Explorer** and select **Add** > **New File...** : 
 
-    ![](launch-screens-images/image012.png "Adicionar novo arquivo")
-2. Insira um nome para a tela de inicialização e clique no botão **Adicionar** : 
+    ![](launch-screens-images/image012.png "Add new file")
+2. Enter a name for the launch screen and click the **Add** button: 
 
-    ![](launch-screens-images/image013.png "Insira um nome para a tela de inicialização")
-3. No **Gerenciador de soluções**, clique duas vezes no arquivo de storyboard recém-criado para abri-lo para edição.
-4. Verifique se a **classe size** está definida como **any: any** e a **exibição como** é **genérica**: 
+    ![](launch-screens-images/image013.png "Enter a name for the launch screen")
+3. In the **Solution Explorer**, double-click the newly created storyboard file to open it for editing.
+4. Ensure that the **Size Class** is set to **any:any** and the **View As** is **Generic**: 
 
-    ![](launch-screens-images/image016.png "Certifique-se de que a classe size esteja definida como Any: qualquer e a exibição como seja genérica")
-5. Assembly a tela de inicialização de classes de tamanho, elementos simples da interface `UIImageView`do usuário (como) e imagens que você incluiu no pacote do aplicativo: 
+    ![](launch-screens-images/image016.png "Ensure that the Size Class is set to any:any and the View As is Generic")
+5. Assembly the launch screen from Size Classes, simple UI elements (such as `UIImageView`) and images that you have included in the application's bundle: 
 
-    ![](launch-screens-images/image017.png "Assembly a tela de inicialização no designer do iOS")
-6. Salve as alterações no storyboard.
+    ![](launch-screens-images/image017.png "Assembly the launch screen in the iOS Designer")
+6. Save the changes to the Storyboard.
 
 -----
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Telas de inicialização dinâmica (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-dynamiclaunchscreen)
+- [Dynamic Launch Screens (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-dynamiclaunchscreen)
 - [Storyboards unificadas](~/ios/user-interface/storyboards/unified-storyboards.md)
 - [Noções básicas do Designer do iOS](~/ios/user-interface/designer/index.md)
-- [Adicionando imagens a um conjunto de imagens do catálogo de ativos](~/ios/app-fundamentals/images-icons/displaying-an-image.md#adding-images-to-an-asset-catalog-image-set)
-- [Layout automático com o Xamarin Designer para iOS](~/ios/user-interface/designer/designer-auto-layout.md)
-- [Diretrizes de interface humana: Tela de inicialização](https://developer.apple.com/ios/human-interface-guidelines/icons-and-images/launch-screen/)
+- [Adding Images to an Asset Catalog Image Set](~/ios/app-fundamentals/images-icons/displaying-an-image.md#adding-images-to-an-asset-catalog-image-set)
+- [Auto Layout with the Xamarin Designer for iOS](~/ios/user-interface/designer/designer-auto-layout.md)
+- [Human Interface Guidelines: Launch Screen](https://developer.apple.com/ios/human-interface-guidelines/icons-and-images/launch-screen/)
