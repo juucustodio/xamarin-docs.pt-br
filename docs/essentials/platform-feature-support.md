@@ -5,18 +5,18 @@ ms.assetid: 63FA28A5-6F52-4CB7-AF39-8DF7B436B5A4
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 08/20/2019
-ms.openlocfilehash: 86aa439d306bb861a1d24d93629056f9d3936363
-ms.sourcegitcommit: 61a35d0643eb3bf5adb8f8831da54771d8dde626
+ms.openlocfilehash: ec3474880660a2455c758b2660d5c43e23284c9d
+ms.sourcegitcommit: 93697a20e6fc7da547a8714ac109d7953b61d63f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71033050"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72980911"
 ---
 # <a name="platform-support"></a>Suporte de plataforma
 
 O Xamarin.Essentials é compatível com os seguintes sistemas operacionais e plataformas:
 
-| Plataforma | Versão |
+| Plataforma | Version |
 | --- | --- |
 | Android | 4.4 (API 19) ou superior |
 | iOS |10.0 ou superior |
@@ -38,7 +38,7 @@ Guia de ícones:
 
 * ✔– Suporte total
 * ⚠ – Suporte limitado
-* ❌ – Sem suporte
+* ❌-sem suporte
 
 | Recurso | Android | iOS | UWP | watchOS | tvOS | Tizen |
 | --- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
@@ -49,7 +49,7 @@ Guia de ícones:
 | [Área de transferência](clipboard.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ❌ | ❌ | ❌ |
 | [Conversores de cor](color-converters.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
 | [Bússola](compass.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ❌ | ❌ | ✔ |
-| [Conectividade](connectivity.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
+| [Conectividade](connectivity.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ❌ | ✔ | ✔ |
 | [Detectar movimento](detect-shake.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
 | [Informações sobre DeviceDisplay](device-display.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ❌ | ❌ | ❌ |
 | [Informações do dispositivo](device-information.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
@@ -71,7 +71,7 @@ Guia de ícones:
 | [Armazenamento seguro](secure-storage.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
 | [Compartilhe](share.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ❌ | ❌ | ✔ |
 | [SMS](sms.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ❌ | ❌ | ✔ |
-| [Conversão de Texto em Fala](text-to-speech.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
+| [Conversão de texto em fala](text-to-speech.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
 | [Conversores de unidade](unit-converters.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
 | [Monitoramento de versões](version-tracking.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
 | [Vibrar](vibrate.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ❌ | ❌ | ✔ |

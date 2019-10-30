@@ -4,15 +4,15 @@ description: Este documento descreve, em um alto nível, a interação do Xamari
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 9951F980-2C6C-47C0-8A35-A78F06C20BEB
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/05/2018
-ms.openlocfilehash: a8dc27574dc9959cc375a98fc0d7a18aac8bd6b7
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 7be60eaa1135284522ef1e6ce81c911a68ff9915
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70756963"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73012223"
 ---
 # <a name="why-isnt-jenkins-supported-by-microsoft"></a>Por que o Jenkins não tem suporte da Microsoft?
 
@@ -32,7 +32,7 @@ Embora conforme observado acima, os problemas de Jenkins não têm suporte diret
 
 A mensagem de erro para esse problema é algo assim:
 
-> erro XA5205: Não foi possível encontrar o diretório SDK do Android. Defina por meio de/p: AndroidSdkDirectory
+> erro XA5205: não foi possível encontrar o diretório SDK do Android. Defina por meio de/p: AndroidSdkDirectory
 
 As opções para definir o local do SDK podem variar dependendo do plug-in exato do Jenkins do Android que você está usando; um bom local para procurar como definir isso está no guia do plug-in. Por exemplo; o [plug-in Android Emulator](https://wiki.jenkins-ci.org/display/JENKINS/Android+Emulator+Plugin#AndroidEmulatorPlugin-Systemconfiguration) procura automaticamente o SDK, mas se ele não conseguir encontrá-lo; o local também pode ser definido por meio da página de configuração do sistema Jenkins para esse plug-in. 
 
@@ -44,10 +44,10 @@ As opções para definir o local do SDK podem variar dependendo do plug-in exato
 ### <a name="jenkins-reports-an-invalid-xamarin-license"></a>Jenkins relata uma licença do Xamarin inválida
 As mensagens de erro para esse problema normalmente são algo como
 
-> Erro de XA9008: A criação da linha de comando requer uma licença de negócios
+> Erro de XA9008: a criação da linha de comando requer uma licença de negócios
 
 ou
 
-> Erro: A edição inicial do Xamarin. iOS não oferece suporte à construção fora do Xamarin Studio 
+> Erro: a edição inicial do Xamarin. iOS não oferece suporte à compilação fora do Xamarin Studio 
 
-A causa mais comum desse cenário é o uso do Jenkins fazendo logon com uma conta de usuário não associada à sua licença do Xamarin. A maneira mais simples de resolver isso é instalar o Jenkins como um aplicativo diretamente por meio da conta de usuário. Esse processo e algumas considerações adicionais são descritos aqui:[https://forums.xamarin.com/discussion/comment/99397/#Comment_99397](https://forums.xamarin.com/discussion/comment/99397/#Comment_99397)
+A causa mais comum desse cenário é o uso do Jenkins fazendo logon com uma conta de usuário não associada à sua licença do Xamarin. A maneira mais simples de resolver isso é instalar o Jenkins como um aplicativo diretamente por meio da conta de usuário. Esse processo e algumas considerações adicionais são descritos aqui: [https://forums.xamarin.com/discussion/comment/99397/#Comment_99397](https://forums.xamarin.com/discussion/comment/99397/#Comment_99397)

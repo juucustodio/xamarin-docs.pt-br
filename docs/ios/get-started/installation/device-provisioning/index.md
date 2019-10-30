@@ -4,15 +4,15 @@ description: Este documento descreve como provisionar um dispositivo para que el
 ms.prod: xamarin
 ms.assetid: CACA5236-3C90-F6DF-FD4E-0797B61670CE
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 05/06/2018
-ms.openlocfilehash: 7ee3d7d9b2ce074174b676225ec934279ceb5a86
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: bb1ef1e948c796e6b0d91230be3c82c5a8c7d366
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292634"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73022695"
 ---
 # <a name="device-provisioning-for-xamarinios"></a>Provisionamento de dispositivos para o Xamarin.iOS
 
@@ -20,7 +20,7 @@ Ao desenvolver um aplicativo Xamarin.iOS, é essencial testá-lo implantando o a
 
 As seções realçadas na imagem abaixo mostram as etapas necessárias para concluir a configuração para provisionamento do iOS:
 
-[![](images/provisioningdiagram.png "As seções realçadas nesta imagem mostram as etapas necessárias para concluir a configuração para provisionamento do iOS")](images/provisioningdiagram.png#lightbox)
+[![](images/provisioningdiagram.png "The highlighted sections in this image show the steps required to get set up for iOS provisioning")](images/provisioningdiagram.png#lightbox)
 
 Depois disso, a próxima etapa é distribuir o aplicativo. Para obter mais informações sobre a implantação, acesse os guias de [Distribuição de aplicativos](~/ios/deploy-test/app-distribution/index.md).
 

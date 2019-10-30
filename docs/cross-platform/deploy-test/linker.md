@@ -3,15 +3,15 @@ title: Configuração personalizada do Linker
 description: Este documento descreve um arquivo XML que pode ser usado para configurar o vinculador garantindo explicitamente que o código necessário não seja eliminado do aplicativo vinculado.
 ms.prod: xamarin
 ms.assetid: F8A99E3F-2197-4399-AC81-F1DBAB5729C9
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: 230fe0f168b5718c2bc91cff6dbdc078b0e6834d
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 6ecfad9a3dc33a4fc4012a797631b5c240aa7a80
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70765925"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016532"
 ---
 # <a name="custom-linker-configuration"></a>Configuração personalizada do Linker
 
@@ -63,4 +63,4 @@ Por fim, qualquer tipo cujo nome completo (incluindo o namespace) corresponda ao
 ## <a name="related-links"></a>Links relacionados
 
 - [Vinculação no iOS](~/ios/deploy-test/linker.md)
-- [Vinculação no Android](~/android/deploy-test/linker.md)
+- [Usando Linker no Android](~/android/deploy-test/linker.md)

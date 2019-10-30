@@ -5,21 +5,21 @@ ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: D82EC193-2CB7-44C3-8688-0CEBDF60C3D6
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 12/02/2016
-ms.openlocfilehash: 4bbfbaf2b7efc7e1d2f75a7462d6a2559ed7a9c0
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 199b9de670e424bdc21a05966cfdd73c7e2cbb42
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70755707"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73020903"
 ---
 # <a name="hello-android-multiscreen"></a>Multitela Hello, Android
 
-_Neste guia de duas partes, você expande o aplicativo Phoneword criado no guia do Hello, Android para processar uma segunda tela. Ao longo do caminho, este guia apresentará os blocos de construção do aplicativo Android e se aprofundará na arquitetura do Android à medida que você desenvolve uma melhor compreensão da estrutura e funcionalidade do aplicativo Android._
+_Neste guia de duas partes, você expande o aplicativo Phoneword que você criou no guia Olá, Android para lidar com uma segunda tela. Ao longo do caminho, este guia apresentará os blocos básicos de construção do aplicativo Android e aprofundará-se na arquitetura do Android à medida que você desenvolver uma compreensão melhor da estrutura e da funcionalidade do aplicativo Android._
 
-## <a name="part-1-quickstartandroidget-startedhello-android-multiscreenhello-android-multiscreen-quickstartmd"></a>[Parte 1: Início rápido](~/android/get-started/hello-android-multiscreen/hello-android-multiscreen-quickstart.md)
+## <a name="part-1-quickstartandroidget-startedhello-android-multiscreenhello-android-multiscreen-quickstartmd"></a>[Parte 1: início rápido](~/android/get-started/hello-android-multiscreen/hello-android-multiscreen-quickstart.md)
 
 Na primeira parte deste guia, você adicionará uma segunda tela ao aplicativo Phoneword para controlar o histórico de números de chamadas do aplicativo. O aplicativo final exibirá uma segunda tela que lista o histórico de chamadas.
 

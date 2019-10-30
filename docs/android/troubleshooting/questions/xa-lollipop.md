@@ -4,15 +4,15 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 63B6E10C-098D-4C82-9253-07CA62EA85A5
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: d5edb5f4e2ce1ca39ba27a1de1a51760ea167e8b
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 9e36189c771ed0c91a6030fd0ab615ab9af4dd52
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70757138"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73026710"
 ---
 # <a name="what-version-of-xamarinandroid-added-lollipop-support"></a>Qual versão do Xamarin.Android adicionou suporte ao Lollipop?
 
@@ -22,7 +22,7 @@ ms.locfileid: "70757138"
 - [Xamarin. Android 4,17](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/android/xamarin.android_4/xamarin.android_4.17/index.md) adicionou suporte à versão prévia do Android L Preview.
 - [Xamarin. Android 4,20](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/android/xamarin.android_4/xamarin.android_4.20/index.md) adicionou suporte a pirulito do Android.
 
-O xamarin só dá suporte ativamente à versão estável atual das ferramentas do Xamarin. As informações abaixo são fornecidas "no estado em que se encontram" para versões mais antigas das ferramentas. Para obter as informações mais recentes sobre versões do Xamarin, consulte [aqui](http://releases.xamarin.com/).
+O xamarin só dá suporte ativamente à versão estável atual das ferramentas do Xamarin. As informações abaixo são fornecidas "no estado em que se encontram" para versões mais antigas das ferramentas. Para obter as informações mais recentes sobre versões do Xamarin, consulte as [notas de versão](https://docs.microsoft.com/xamarin/whats-new/#product-release-notes).
 
 ## <a name="missing-androidjar-for-api-level-21-in-android-l-preview"></a>"Android. jar ausente para a API nível 21" na visualização do Android L
 
@@ -42,12 +42,12 @@ Há algumas soluções alternativas para esse problema:
 
 2. Renomeie sua pasta Android-21 do Android-21 para Android-L. (Na melhor das hipóteses, isso só deve ser usado como uma correção temporária e pode não funcionar muito bem.)
 
-   **%LOCALAPPDATA%\\Android\\android-sdk\\platforms\\android-21**
+   **% LOCALAPPDATA%\\Android\\as plataformas de\\do Android-SDK\\Android-21**
 
 3. Fazer downgrade temporário de volta para a API do Android nível 21 "L" Preview [1]:
 
-    1. Exclua **as\\plataformas\\\\%LocalAppData%AndroidAndroid-\\SDK Android-21** 
-    2. Extraia [1] em **C\\:\\Users\\\\nome_do_usuário\\&lt;&gt;AppDatalocal\\Android-SDK\\plataformas** para criar uma pasta do **Android-L** .
+    1. Exclua as **plataformas% LocalAppData%\\android\\Android-sdk\\\\Android-21** 
+    2. Extrair [1] em **C:\\usuários\\&lt;nome de usuário&gt;\\AppData\\Local\\Android\\plataformas\\Android-SDK** para criar uma pasta do **Android-L** .
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
@@ -75,4 +75,4 @@ Há algumas soluções alternativas para esse problema:
 
 -----
 
-[1] - [https://dl-ssl.google.com/android/repository/android-L_r04.zip](https://dl-ssl.google.com/android/repository/android-L_r04.zip)
+[1]- [https://dl-ssl.google.com/android/repository/android-L_r04.zip](https://dl-ssl.google.com/android/repository/android-L_r04.zip)

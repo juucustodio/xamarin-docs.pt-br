@@ -2,15 +2,15 @@
 title: Inserção do .NET no Android
 ms.prod: xamarin
 ms.assetid: EB2F967A-6D95-4448-994B-6D5C7BFAC2C7
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/15/2018
-ms.openlocfilehash: 1369d5cd901207618128da8b0111e488eae7b83e
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: fef422b799ab5280aef205f4d5e55fd91050da39
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70772214"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73007334"
 ---
 # <a name="net-embedding-on-android"></a>Inserção do .NET no Android
 
@@ -22,11 +22,11 @@ Em alguns casos, talvez você queira adicionar uma biblioteca do Xamarin .NET a 
 
 Para que o Xamarin. Android funcione com a inserção do .NET, você precisará do seguinte:
 
-- Xamarin **. Android** &ndash; [xamarin. Android 7,5](https://visualstudio.microsoft.com/xamarin/) ou posterior deve estar instalado.
+- O **xamarin. android** &ndash;[xamarin. Android 7,5](https://visualstudio.microsoft.com/xamarin/) ou posterior deve estar instalado.
 
-- **Android Studio** O Android Studio [3. x](https://developer.android.com/studio/) ou posterior deve estar instalado. &ndash;
+- **Android Studio** &ndash;   [Android Studio 3. x](https://developer.android.com/studio/) ou posterior deve estar instalado.
 
-- **Java Developer Kit** &ndash;  [O Java 1,8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) ou posterior deve estar instalado.
+- O Java **Developer Kit** &ndash;[Java 1,8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) ou posterior deve estar instalado.
 
 ## <a name="using-embeddinator-4000"></a>Usando Embeddinator-4000
 
@@ -56,13 +56,13 @@ Para consumir uma biblioteca .NET em um projeto nativo do Android, use as seguin
 
 Para que o Xamarin. Android funcione com a inserção do .NET, você precisará do seguinte:
 
-- Xamarin **. Android** &ndash; [xamarin. Android 7,5](https://visualstudio.microsoft.com/xamarin/) ou posterior deve estar instalado.
+- O **xamarin. android** &ndash;[xamarin. Android 7,5](https://visualstudio.microsoft.com/xamarin/) ou posterior deve estar instalado.
 
-- **Android Studio** O Android Studio [3. x](https://developer.android.com/studio/) ou posterior deve estar instalado. &ndash;
+- **Android Studio** &ndash;   [Android Studio 3. x](https://developer.android.com/studio/) ou posterior deve estar instalado.
 
-- **Java Developer Kit** &ndash;  [O Java 1,8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) ou posterior deve estar instalado.
+- O Java **Developer Kit** &ndash;[Java 1,8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) ou posterior deve estar instalado.
 
-- **Mono** &ndash;  [mono 5,0](https://www.mono-project.com/download/) ou posterior deve estar instalado (o mono é instalado com Visual Studio para Mac).
+- O mono &ndash;[mono 5,0](https://www.mono-project.com/download/) ou posterior deve estar instalado ( **o mono é** instalado com Visual Studio para Mac).
 
 ## <a name="using-embeddinator-4000"></a>Usando Embeddinator-4000
 

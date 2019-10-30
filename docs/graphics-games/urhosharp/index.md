@@ -1,58 +1,58 @@
 ---
-title: UrhoSharp - 3D/2D Engine
-description: UrhoSharp é um mecanismo 3D e 2D de alto nível de plataforma cruzada que pode ser usado para criar animadas cenas 3D e 2D para seus aplicativos usando geometrias, material, luzes e câmeras.
+title: UrhoSharp-mecanismo 3D/2D
+description: O UrhoSharp é um mecanismo 3D e 2D de alto nível de plataforma cruzada que pode ser usado para criar cenas 3D e 2D animadas para seus aplicativos usando geometrias, materiais, luzes e câmeras.
 ms.prod: xamarin
 ms.assetid: E6C5B86C-3756-49DF-843B-0B3D981E1C01
 author: conceptdev
 ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: 06f1372d712f23078d120be824a01627d657d0a1
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: 10cdec5755a5fa45989396ce53da15233553a88f
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67832572"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73005072"
 ---
-# <a name="urhosharp---3d2d-engine"></a>UrhoSharp - 3D/2D Engine
+# <a name="urhosharp---3d2d-engine"></a>UrhoSharp-mecanismo 3D/2D
 
-_UrhoSharp é um mecanismo 2D e 3D de alto nível de plataforma cruzada que pode ser usado para criar animadas cenas 3D e 2D para seus aplicativos usando geometrias, material, luzes e câmeras._
+_O UrhoSharp é um mecanismo 3D e 2D de alto nível de plataforma cruzada que pode ser usado para criar cenas 3D e 2D animadas para seus aplicativos usando geometrias, materiais, luzes e câmeras._
 
-![Jogo de UrhoSharp de exemplo](images/video.gif)
+![Jogo UrhoSharp de exemplo](images/video.gif)
 
-UrhoSharp é distribuído como um pacote do NuGet que pode ser instalado no Visual Studio ou Visual Studio para Mac e pode ser usado para qualquer uma das seguintes plataformas de destino: Android, Windows, iOS, tvOS e MacOS.
+O UrhoSharp é distribuído como um pacote NuGet que pode ser instalado no Visual Studio ou Visual Studio para Mac e pode ser usado para direcionar qualquer uma das seguintes plataformas: Android, MacOS, iOS, tvOS e Windows.
 
 ## <a name="introduction-to-urhosharpgraphics-gamesurhosharpintroductionmd"></a>[Introdução ao UrhoSharp](~/graphics-games/urhosharp/introduction.md)
 
-Este artigo fornece uma visão geral do UrhoSharp e seus recursos de visualização 3D e para uso em jogos 3D simples.
+Este artigo fornece uma visão geral de alto nível do UrhoSharp e seus recursos para visualização 3D e para uso em jogos 3D simples.
 
 ## <a name="using-urhosharpgraphics-gamesurhosharpusingmd"></a>[Uso do UrhoSharp](~/graphics-games/urhosharp/using.md)
 
-Este documento descreve os conceitos centrais de UrhoSharp que você usaria para criar um jogo ou criar uma visualização 3D para seu aplicativo.
+Neste documento, descrevemos os principais conceitos de UrhoSharp que você usaria para criar um jogo ou criar uma visualização 3D para seu aplicativo.
 
 ## <a name="urho-and-your-platformgraphics-gamesurhosharpplatformindexmd"></a>[Urho e sua plataforma](~/graphics-games/urhosharp/platform/index.md)
 
-Esses guias descrevem as instruções de instalação para Urho em cada plataforma de destino e descrevem maneiras de integrar Urho com os aplicativos de iOS e Android existente.
+Esses guias descrevem as instruções de configuração para Urho em cada plataforma de destino e descrevem maneiras de integrar o Urho aos seus aplicativos Android e iOS existentes.
 
 ## <a name="programming-urhosharp-with-fgraphics-gamesurhosharpfsharpmd"></a>[Programação de UrhoSharp com F#](~/graphics-games/urhosharp/fsharp.md)
 
-Este guia o orienta através da criação de um simple "Olá, mundo!" Solução de UrhoSharp usando F# e o Visual Studio para Mac.
+Este guia percorre a criação de um "Olá, mundo!" simples Solução UrhoSharp usando F# e Visual Studio para Mac.
 
 ## <a name="samples"></a>Exemplos
 
-Nós criamos [exemplos no GitHub](https://github.com/xamarin/urho-samples) que ilustram como usar UrhoSharp.
+Criamos [exemplos no GitHub](https://github.com/xamarin/urho-samples) ilustrando como usar o UrhoSharp.
 
-- **FeatureSamples** mostra mais de 40 exemplos individuais que demonstram os recursos específicos do Urho.
+- **FeatureSamples** mostra mais de 40 exemplos individuais que demonstram recursos específicos do Urho.
 
-- **SamplyGame** é uma implementação de exemplo do jogo Shooty céu.
+- **SamplyGame** é uma implementação de exemplo do jogo de teste.
 
-- **FormsSample** demonstra como usar UrhoSharp em aplicativos xamarin. Forms.
+- **FormsSample** demonstra como usar o UrhoSharp em aplicativos Xamarin. Forms.
 
-Todos os exemplos são executados no Android, iOS, Mac e Windows.
+Todos os exemplos são executados em Android, iOS, Mac e Windows.
 
 ## <a name="copyright"></a>Copyright
 
-Esta documentação contém o conteúdo original do Xamarin Inc, mas desenha amplamente na documentação do código-fonte aberto para o projeto Urho3D e contém as capturas de tela do projeto Cocos2D.
+Esta documentação contém conteúdo original da Xamarin Inc, mas se desenha extensivamente a partir da documentação de software livre para o projeto Urho3D e contém capturas de tela do projeto Cocos2D.
 
 ## <a name="license"></a>Licença
 
-A licença de UrhoSharp está disponível no [http://download.xamarin.com/content/licenses/URHO.LICENSE](http://download.xamarin.com/content/licenses/URHO.LICENSE)
+A licença do UrhoSharp está disponível na [https://github.com/xamarin/urho/blob/master/LICENSE](https://github.com/xamarin/urho/blob/master/LICENSE)

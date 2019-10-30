@@ -4,15 +4,15 @@ description: Este documento descreve o exemplo DataAccess_Adv, que demonstra com
 ms.prod: xamarin
 ms.assetid: 2CB8150E-CD2C-4E97-8605-1EE8CBACFEEC
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 10/11/2016
-ms.openlocfilehash: 9441596cd457c3cc3a881e5db319ec3bbfc5a312
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: 060e4b8e7856e0024e6d236652c2b04c1da16f66
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "70766853"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73008247"
 ---
 # <a name="using-data-in-an-ios-app"></a>Usando dados em um aplicativo iOS
 
@@ -99,7 +99,7 @@ Alguns aplicativos são fornecidos com um banco de dados já populado com data.
 Você pode fazer isso facilmente em seu aplicativo móvel enviando um arquivo de banco de dados SQLite existente com seu aplicativo e copiando-o em um diretório gravável antes de acessá-lo. Como o SQLite é um formato de arquivo padrão usado em muitas plataformas, há várias ferramentas disponíveis para criar um arquivo de banco de dados do SQLite:
 
 - **Extensão Firefox do Gerenciador do SQLite** – funciona em Mac e Windows e produz arquivos que são compatíveis com Ios e Android.
-- **Linha de comando** – consulte [www.sqlite.org/SQLite.html](http://www.sqlite.org/sqlite.html) .
+- **Linha de comando** – consulte [www.sqlite.org/SQLite.html](https://www.sqlite.org/sqlite.html) .
 
 Ao criar um arquivo de banco de dados para distribuição com seu aplicativo, tome cuidado com a nomenclatura de tabelas e colunas para garantir que elas correspondam ao que o código espera, especialmente se você estiver usando SQLite.NET que C# esperará que os nomes correspondam às suas classes e Propriedades ( ou os atributos personalizados associados).
 

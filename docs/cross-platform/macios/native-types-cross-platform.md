@@ -3,15 +3,15 @@ title: Trabalhando com tipos nativos em aplicativos multiplataforma
 description: Este artigo aborda o uso dos novos tipos nativos do iOS API Unificada (Nint, nuint, nfloat) em um aplicativo de plataforma cruzada em que o código é compartilhado com dispositivos não iOS, como Android ou Windows Phone sistemas operacionais.
 ms.prod: xamarin
 ms.assetid: B9C56C3B-E196-4ADA-A1DE-AC10D1001C2A
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/07/2016
-ms.openlocfilehash: 273b7f2eb40f1fa8495e0a0e8e18fa947241f389
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: c86a00f325f9799b16f6244d3d1cb68de31be005
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70765409"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73015534"
 ---
 # <a name="working-with-native-types-in-cross-platform-apps"></a>Trabalhando com tipos nativos em aplicativos multiplataforma
 
@@ -23,21 +23,21 @@ Este documento discute diferentes maneiras de interoperar com o API Unificada de
 
 ## <a name="when-to-use-the-native-types"></a>Quando usar os tipos nativos
 
-APIs unificadas do xamarin. Ios e xamarin. Mac `int`ainda `uint` incluem `float` os tipos de `SizeF` dados e, bem `RectangleF`como os `PointF` tipos e. Esses tipos de dados existentes devem continuar a ser usados em qualquer código compartilhado e de plataforma cruzada. Os novos tipos de dados nativos só devem ser usados ao fazer uma chamada para uma API Mac ou iOS, onde o suporte para tipos com reconhecimento de arquitetura é necessário.
+APIs unificadas do xamarin. iOS e Xamarin. Mac ainda incluem os tipos de dados `int`, `uint` e `float`, bem como os tipos `RectangleF`, `SizeF` e `PointF`. Esses tipos de dados existentes devem continuar a ser usados em qualquer código compartilhado e de plataforma cruzada. Os novos tipos de dados nativos só devem ser usados ao fazer uma chamada para uma API Mac ou iOS, onde o suporte para tipos com reconhecimento de arquitetura é necessário.
 
-Dependendo da natureza do código que está sendo compartilhado, pode haver ocasiões em que o código de plataforma cruzada pode precisar lidar com os `nint`tipos `nuint` de `nfloat` dados e. Por exemplo: uma biblioteca que manipula transformações em dados retangulares que estavam usando `System.Drawing.RectangleF` anteriormente para compartilhar a funcionalidade entre versões do xamarin. Ios e xamarin. Android de um aplicativo precisa ser atualizada para lidar com tipos nativos no Ios.
+Dependendo da natureza do código que está sendo compartilhado, pode haver ocasiões em que o código de plataforma cruzada pode precisar lidar com os tipos de dados `nint`, `nuint` e `nfloat`. Por exemplo: uma biblioteca que lida com transformações em dados retangulares que anteriormente usavam `System.Drawing.RectangleF` para compartilhar funcionalidades entre versões do Xamarin. iOS e Xamarin. Android de um aplicativo, precisariam ser atualizadas para lidar com tipos nativos no iOS.
 
 A forma como essas alterações são tratadas depende do tamanho e da complexidade do aplicativo e da forma de compartilhamento de código que foi usada, como veremos nas seções a seguir.
 
 ## <a name="code-sharing-considerations"></a>Considerações de compartilhamento de código
 
-Conforme indicado no documento [Opções de código de compartilhamento](~/cross-platform/app-fundamentals/code-sharing.md) , há duas maneiras principais de compartilhar código entre projetos de plataforma cruzada: Projetos compartilhados e bibliotecas de classes portáteis. Qual dos dois tipos foi usado, limitará as opções que temos ao lidar com os tipos de dados nativos no código de plataforma cruzada.
+Conforme indicado no documento [Opções de código de compartilhamento](~/cross-platform/app-fundamentals/code-sharing.md) , há duas maneiras principais de compartilhar código entre projetos de plataforma cruzada: projetos compartilhados e bibliotecas de classes portáteis. Qual dos dois tipos foi usado, limitará as opções que temos ao lidar com os tipos de dados nativos no código de plataforma cruzada.
 
 ### <a name="portable-class-library-projects"></a>Projetos de biblioteca de classes portáteis
 
 Uma PCL (biblioteca de classes portátil) permite que você direcione as plataformas às quais deseja dar suporte e use interfaces para fornecer funcionalidade específica da plataforma.
 
-Como o tipo de projeto PCL é compilado para um `.DLL` e não tem sentido do API unificada, você será forçado a continuar usando os tipos de dados existentes (`int`, `uint`, `float`) no código-fonte PCL e o tipo converte as chamadas para o PCL classes e métodos nos aplicativos de front-end. Por exemplo:
+Como o tipo de projeto PCL é compilado em um `.DLL` e não tem sentido do API Unificada, você será forçado a continuar usando os tipos de dados existentes (`int`, `uint`, `float`) no código-fonte PCL e digitar as chamadas para as classes do PCL e os métodos nos aplicativos de front-end. Por exemplo:
 
 ```csharp
 using NativePCL;
@@ -49,11 +49,11 @@ Console.WriteLine ("Rectangle Area: {0}", Transformations.CalculateArea ((Rectan
 
 ### <a name="shared-projects"></a>Projetos compartilhados
 
-O tipo de projeto de ativo compartilhado permite organizar o código-fonte em um projeto separado que, em seguida, é incluído e compilado nos aplicativos individuais de front-end específicos `#if` da plataforma e usa as diretivas do compilador conforme necessário para gerenciar requisitos específicos da plataforma.
+O tipo de projeto de ativo compartilhado permite que você organize seu código-fonte em um projeto separado que, em seguida, seja incluído e compilado nos aplicativos individuais de front-end específicos da plataforma e use `#if` diretivas de compilador conforme necessário para gerenciar os recursos específicos da plataforma requirement.
 
 O tamanho e a complexidade dos aplicativos móveis de front-end que estão consumindo código compartilhado, juntamente com o tamanho e a complexidade do código que está sendo compartilhado, precisam ser levados em conta ao escolher o método de suporte para tipos de dados nativos em uma plataforma cruzada Projeto de ativo compartilhado.
 
-Com base nesses fatores, os seguintes tipos de soluções podem ser implementados usando `if __UNIFIED__ ... #endif` as diretivas do compilador para lidar com as API unificada alterações específicas ao código.
+Com base nesses fatores, os seguintes tipos de soluções podem ser implementados usando as `if __UNIFIED__ ... #endif` diretivas do compilador para lidar com as alterações API Unificada específicas do código.
 
 #### <a name="using-duplicate-methods"></a>Usando métodos duplicados
 
@@ -98,11 +98,11 @@ namespace NativeShared
 }
 ```
 
-No código acima, como a `CalculateArea` rotina é muito simples, usamos a compilação condicional e criamos uma versão API unificada separada do método. Por outro lado, se a biblioteca contivesse muitas rotinas ou várias rotinas complexas, essa solução não seria viável, pois ela apresentaria um problema que mantém todos os métodos em sincronia para modificações ou correções de bugs.
+No código acima, como a rotina de `CalculateArea` é muito simples, usamos a compilação condicional e criamos uma versão de API Unificada separada do método. Por outro lado, se a biblioteca contivesse muitas rotinas ou várias rotinas complexas, essa solução não seria viável, pois ela apresentaria um problema que mantém todos os métodos em sincronia para modificações ou correções de bugs.
 
 #### <a name="using-method-overloads"></a>Usando sobrecargas de método
 
-Nesse caso, a solução pode ser criar uma versão de sobrecarga dos métodos usando tipos de dados de 32 bits para que eles agora executem `CGRect` como um parâmetro e/ou um valor de retorno, converta esse valor `RectangleF` em um (sabendo que `nfloat` converter de para `float` é uma conversão com perdas) e chama a versão original da rotina para fazer o trabalho real. Por exemplo:
+Nesse caso, a solução pode ser criar uma versão de sobrecarga dos métodos usando tipos de dados de 32 bits, de modo que agora eles demorem `CGRect` como um parâmetro e/ou um valor de retorno, converta esse valor em um `RectangleF` (sabendo que a conversão de `nfloat` para `float` é uma conversão com perdas) e chama a versão original da rotina para fazer o trabalho real. Por exemplo:
 
 ```csharp
 using System;
@@ -149,7 +149,7 @@ Novamente, essa é uma boa solução, desde que a perda de precisão não afete 
 
 #### <a name="using-alias-directives"></a>Usando diretivas de alias
 
-Para áreas em que a perda de precisão é um problema, outra solução possível é usar `using` diretivas para criar um alias para tipos de dados nativos e CoreGraphics incluindo o código a seguir na parte superior dos arquivos de código-fonte compartilhados e convertendo qualquer necessário `int`, `uint` ou valorespara`nint` ,`nfloat`ou: `float` `nuint`
+Para áreas em que a perda de precisão é um problema, outra solução possível é usar `using` diretivas para criar um alias para tipos de dados nativos e CoreGraphics, incluindo o código a seguir na parte superior dos arquivos de código-fonte compartilhados e convertendo qualquer @no_ necessário valores de _t_1_, `uint` ou `float` para `nint`, `nuint` ou `nfloat`:
 
 ```csharp
 #if __UNIFIED__
@@ -206,9 +206,9 @@ namespace NativeShared
 }
 ```
 
-Observe que, aqui, alteramos `CalculateArea` o método para retornar `nfloat` um, em vez `float`do padrão. Isso foi feito para que não tenhamos um erro de compilação ao tentar converter _implicitamente_ o `nfloat` resultado do nosso cálculo (já que ambos os valores que estão sendo multiplicados `nfloat`são do tipo `float` ) em um valor de retorno.
+Observe que, aqui, alteramos o método `CalculateArea` para retornar um `nfloat` em vez do `float`padrão. Isso foi feito para que não tenhamos um erro de compilação ao tentar converter _implicitamente_ o resultado de `nfloat` de nosso cálculo (já que ambos os valores que estão sendo multiplicados são do tipo `nfloat`) em um valor de retorno `float`.
 
-Se o código for compilado e executado em um dispositivo não API unificada, o `using nfloat = global::System.Single;` mapeará `nfloat` o para `Single` um que será convertido implicitamente em `float` um que permita que o aplicativo de front-end `CalculateArea` de consumo chame o método sem modificado.
+Se o código for compilado e executado em um dispositivo não API Unificada, o `using nfloat = global::System.Single;` mapeia o `nfloat` para um `Single` que será convertido implicitamente em um `float` permitindo que o aplicativo de front-end de consumo chame o método de `CalculateArea` sem modificação.
 
 #### <a name="using-type-conversions-in-the-front-end-app"></a>Usando conversões de tipo no aplicativo de front-end
 

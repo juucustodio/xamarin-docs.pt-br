@@ -4,26 +4,26 @@ description: Esta seção inclui uma variedade de artigos que abordam o trabalho
 ms.prod: xamarin
 ms.assetid: 0AB8CC07-11E4-0D75-4119-AED1A1252424
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: 6940e07c51dbc19615454e0c51188152db22c63f
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 08698fab2bdd1528e7f532dc02c86219f98fd611
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70767222"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73010211"
 ---
 # <a name="images-and-icons-in-xamarinios"></a>Imagens e ícones no Xamarin. iOS
 
 _Esta seção inclui uma variedade de artigos que abordam o trabalho com imagens em um aplicativo Xamarin. iOS, como usá-los como ícones, iniciar telas ou incluí-los em controles e fornecer ícones para tipos de documento personalizados._
 
-Há várias maneiras de os ativos de imagem serem usados dentro de um aplicativo iOS. De simplesmente exibir uma imagem como parte da interface do usuário de um aplicativo para, atribuí-la a um controle de interface do `UIButton` usuário `UIImageView`, como um ou, para fornecer ícones e telas de inicialização, o Xamarin. Ios facilita a adição de um grande trabalho artístico a um aplicativo IOS das seguintes maneiras: 
+Há várias maneiras de os ativos de imagem serem usados dentro de um aplicativo iOS. De simplesmente exibir uma imagem como parte da interface do usuário de um aplicativo para, atribuindo-a a um controle de interface do usuário, como um `UIButton` ou `UIImageView`, para fornecer ícones e telas de inicialização, o Xamarin. iOS facilita a adição de um grande trabalho artístico a um aplicativo iOS das seguintes maneiras : 
 
 - **Imagens independentes de resolução** – use o suporte interno do IOS para trabalhar com imagens em diferentes resoluções e tipos de dispositivo (iPhone, iPad etc.).
 - **Conjuntos de imagens do catálogo de ativos** – use **conjuntos de imagens do catálogo de ativos** para gerenciar e agrupar todas as versões de um determinado ativo de imagem exigido por um aplicativo.
 - **Imagens no designer do IOS** – use o designer do IOS para definir imagens para controles.
-- **Imagens no código** – use os `UIImage` métodos da classe para carregar e trabalhar com ativos de imagem e atribuí-los a controles C# de interface do usuário no código.
+- **Imagens no código** – use os métodos da classe `UIImage` para carregar e trabalhar com ativos de imagem e atribuí-los a controles C# de interface do usuário no código.
 - **Ícone do aplicativo** – defina o ícone do aplicativo exigido por cada aplicativo Ios. Esse é o ícone que o usuário irá tocar na tela inicial do iOS para iniciar o aplicativo. Além disso, esse ícone é usado por Game Center, se aplicável.
 - **Ícone de destaque** – defina o ícone de destaque do aplicativo. Sempre que o usuário inserir o nome de um aplicativo em uma pesquisa de destaque, esse ícone será exibido.
 - **Ícone de configurações** – defina o ícone de **configurações** do aplicativo. Se o usuário inserir o aplicativo de **configurações** em seu dispositivo IOS, esse ícone será exibido no final da lista de configurações para o aplicativo. 
@@ -46,9 +46,9 @@ Este artigo aborda a inclusão e o gerenciamento de um ativo de imagem em um apl
 A Apple adicionou vários aprimoramentos ao iOS 10,3 que permitem que um aplicativo Gerencie seu ícone:
 
 - `ApplicationIconBadgeNumber`-Obtém ou define o emblema do ícone do aplicativo no Springboard.
-- `SupportsAlternateIcons`-Se `true` o aplicativo tiver um conjunto alternativo de ícones.
-- `AlternateIconName`-Retorna o nome do ícone alternativo selecionado no momento ou `null` se estiver usando o ícone primário.
-- `SetAlternameIconName`-Use este método para alternar o ícone do aplicativo para o ícone alternativo fornecido.
+- `SupportsAlternateIcons`-se `true` o aplicativo tem um conjunto alternativo de ícones.
+- `AlternateIconName`-retorna o nome do ícone alternativo selecionado no momento ou `null` se estiver usando o ícone principal.
+- `SetAlternameIconName`-Use esse método para alternar o ícone do aplicativo para o ícone alternativo fornecido.
 
 ## <a name="launch-screensiosapp-fundamentalsimages-iconslaunch-screensmd"></a>[Telas de Inicialização](~/ios/app-fundamentals/images-icons/launch-screens.md)
 

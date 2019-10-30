@@ -4,21 +4,21 @@ description: Este documento contém links para guias que descrevem como trabalha
 ms.prod: xamarin
 ms.assetid: E3904713-6018-4755-A315-EB045DFB3500
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 01/23/2017
-ms.openlocfilehash: dfd1a3c88d2c9c87c84a18736dd0f4c8c7e79005
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 7aac9a3e2a86f5cdcfa2d6ab27961dd83998bb0f
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70282997"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73009353"
 ---
 # <a name="handling-touch-in-xamarinios-apps"></a>Lidando com o touch em aplicativos Xamarin. iOS
 
 Como outras plataformas móveis, o iOS tem várias maneiras de lidar com o Touch. Ele pode dar suporte a vários pontos de contato na tela – e gestos complexos. Este guia apresenta alguns dos conceitos, bem como as particularidades de implementação de toque e gestos no iOS.
 
-o `UITouch` Ios encapsula dados de toque na classe, que é disponibilizado para aplicativos por meio de uma `UIResponder` série de métodos. Os aplicativos podem substituir esses métodos em subclasses `UIView` de `UIViewController`e, ambos herdam de `UIResponder`.
+o iOS encapsula dados de toque na classe `UITouch`, que é disponibilizada para aplicativos por meio de uma série de métodos `UIResponder`. Os aplicativos podem substituir esses métodos em subclasses de `UIView` e `UIViewController`, ambos herdam de `UIResponder`.
 
 Além de capturar dados de toque, o iOS fornece meios para interpretar padrões de toques em gestos. Esses reconhecedores de gesto podem, por sua vez, ser usados para interpretar comandos específicos do aplicativo, como uma rotação de uma imagem ou uma rodada de uma página. o iOS fornece uma rica coleção de classes para lidar com gestos comuns com o código mínimo adicionado.
 
@@ -29,7 +29,7 @@ No entanto, há ocasiões em que você precisa usar o processamento de toque de 
 ## <a name="sections"></a>Seções
 
 - [Toque no iOS](touch-in-ios.md)
-- [Passo a passo: usando o toque no iOS](ios-touch-walkthrough.md)
+- [Passo a passo: como usar o Touch no iOS](ios-touch-walkthrough.md)
 - [Controle de multitoque](touch-tracking.md)
 
 Este guia serve como introdução ao toque no iOS. Para obter mais informações sobre como usar os comentários de toque e Haptic 3D no iOS, que foram introduzidos no iOS 9 e 10, respectivamente, consulte os guias específicos abaixo:

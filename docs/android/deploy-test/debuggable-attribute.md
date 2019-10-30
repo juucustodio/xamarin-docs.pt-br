@@ -3,15 +3,15 @@ title: Atributo depurável
 ms.prod: xamarin
 ms.assetid: 1ABF90F1-6A70-45AE-9271-D90DC42807D0
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/05/2018
-ms.openlocfilehash: 10c66e0972c51bba04638706586793a848949980
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 55de652363cb761e730d2d92f66a14a941899ca2
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70754193"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028107"
 ---
 # <a name="debuggable-attribute"></a>Atributo depurável
 
@@ -30,4 +30,4 @@ Observe que o valor do atributo `android:debuggable` NÃO depende necessariament
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Aplicativos depuráveis no Android Market](http://labs.mwrinfosecurity.com/blog/2011/07/07/debuggable-apps-in-android-market/)
+- [Aplicativos depuráveis no Android Market](https://labs.f-secure.com/archive/debuggable-apps-in-android-market/)

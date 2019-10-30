@@ -3,15 +3,15 @@ title: Instalação e requisitos do Inspetor
 description: Este documento descreve como instalar o Xamarin Inspector e discute o sistema operacional, IDEs e plataformas de aplicativos com suporte.
 ms.prod: xamarin
 ms.assetid: 81174493-02D3-4FF5-AD57-04F3288A7F94
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/19/2018
-ms.openlocfilehash: 1273a51d29d7abcbecb9b19ae42e111db8ccc06c
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 19c4a15fb2490c7bace4798b0cb8e062b1379a04
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292308"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73029691"
 ---
 # <a name="inspector-installation-and-requirements"></a>Instalação e requisitos do Inspetor
 
@@ -49,7 +49,7 @@ A inspeção do aplicativo ao vivo está disponível para clientes empresariais.
 
 ### <a name="supported-app-platforms"></a>Plataformas de aplicativos com suporte
 
-|Plataforma de aplicativo|Suporte a IDE|Observações|
+|Plataforma de aplicativo|Suporte a IDE|Anotações|
 |--- |--- |--- |
 |Mac|Somente com suporte no Visual Studio para Mac|
 |iOS|Com suporte no Visual Studio 2017 e Visual Studio para Mac| O comportamento do vinculador deve ser definido como **não vincular** (em opções do projeto de **compilação do IOS** ) |
@@ -115,7 +115,7 @@ Para Android e iOS, é vital que saibamos em qual dispositivo você está depura
 - Nome do dispositivo, conforme mostrado no seu IDE
 - Versão do sistema operacional do seu dispositivo
 - Android: Verifique se você está usando um emulador x86
-- Android: Qual plataforma de emulador você está usando? O Google Emulator? Android Emulator do Visual Studio? Xamarin Android Player?
+- Android: qual plataforma de emulador você está usando? O Google Emulator? Android Emulator do Visual Studio? Xamarin Android Player?
 - O aplicativo que você está depurando aparece corretamente e funciona no dispositivo?
 - O dispositivo tem conectividade de rede (verifique via navegador da Web)?
 

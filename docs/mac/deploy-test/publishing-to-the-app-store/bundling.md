@@ -4,15 +4,15 @@ description: Este documento descreve como agrupar um aplicativo Xamarin.Mac para
 ms.prod: xamarin
 ms.assetid: 00a36d7c-937d-4657-bf6a-0de9684b8f94
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 129ba01a41f9e5f58802c4d4da65d1662a103adc
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 04ca9c98abbd97cd9e5d1f7694264b8316a7f151
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70770115"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73001560"
 ---
 # <a name="bundling-for-the-mac-app-store"></a>Agrupamento para Mac App Store
 
@@ -25,23 +25,23 @@ Esta seção descreve as noções básicas da criação de um aplicativo para la
 
 Altere **Configuração** para **Versão** antes de atualizar as opções de assinatura de código e empacotamento. O desenvolvedor precisa garantir que usem a **identidade** e o perfil de provisionamento criados acima quando assinarem o aplicativo para lançamento na App Store.
 
- [![Editar as opções de assinatura de código](bundling-images/config02.png "Editar as opções de assinatura de código")](bundling-images/config02-large.png#lightbox)
+ [![Editando as opções de assinatura de código](bundling-images/config02.png "Editando as opções de assinatura de código")](bundling-images/config02-large.png#lightbox)
 
 Verifique se a opção de criar um pacote do instalador foi marcada nas configurações de **Build do Mac**:
 
-[![Editar as opções de build](bundling-images/config03.png "Editar as opções de build")](bundling-images/config03-large.png#lightbox)
+[![Editando as opções de compilação](bundling-images/config03.png "Editando as opções de compilação")](bundling-images/config03-large.png#lightbox)
 
 ## <a name="build"></a>Build
 
 Antes de compilar, verifique se a configuração **Versão** foi selecionada. Quando o desenvolvedor compila o aplicativo, é solicitado a usar ambos os certificados:
 
- ![Permitir que o aplicativo use o certificado](bundling-images/image62.png "Permitir que o aplicativo use o certificado")
+ ![Permitindo que o aplicativo use o certificado](bundling-images/image62.png "Permitindo que o aplicativo use o certificado")
 
- ![Permitir que o aplicativo use o certificado](bundling-images/image63.png "Permitir que o aplicativo use o certificado")
+ ![Permitindo que o aplicativo use o certificado](bundling-images/image63.png "Permitindo que o aplicativo use o certificado")
 
 Depois que o aplicativo é compilado, o desenvolvedor pode clicar com o botão direito no projeto e escolher **Abrir Pasta Recipiente** para localizar o arquivo do pacote (no diretório `bin/x86/AppStore` no exemplo mostrado abaixo).  Este arquivo de pacote inclui um instalador para o aplicativo que pode ser enviado para a Apple para inclusão na Mac App Store.
 
- ![Selecionar o pacote de build no Localizador](bundling-images/image64.png "Selecionar o pacote de build no Localizador")
+ ![Selecionando o pacote de compilação no localizador](bundling-images/image64.png "Selecionando o pacote de compilação no localizador")
 
 ## <a name="related-links"></a>Links relacionados
 

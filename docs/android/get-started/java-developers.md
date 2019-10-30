@@ -4,21 +4,21 @@ description: Caso seja um desenvolvedor de Java, você está no caminho certo pa
 ms.prod: xamarin
 ms.assetid: A3B6C041-4052-4E7D-999C-C4FA10BE3D67
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/13/2018
-ms.openlocfilehash: f4c8c8b19d7738478cdc2c8f83c6fc8d1f361466
-ms.sourcegitcommit: cf56d2bae34dc0f8e94c2d3d28d5f460d59807bf
+ms.openlocfilehash: 1d9b41af68576a67c901f8f19a57fb4738430306
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70985653"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73027935"
 ---
 # <a name="xamarin-for-java-developers"></a>Xamarin para Desenvolvedores Java
 
-_Caso seja um desenvolvedor de Java, você está no caminho certo para aproveitar as suas habilidades e código existente na plataforma Xamarin, enquanto obtém os benefícios da reutilização de código do C#. Você descobrirá que a sintaxe do C# é muito semelhante à sintaxe do Java e que ambas as linguagens fornecem recursos muito semelhantes. Além disso, você descobrirá recursos exclusivos do C# que facilitarão suas tarefas de desenvolvimento._
+_Se você for um desenvolvedor de Java, está no caminho certo para aproveitar suas habilidades e o código existente na plataforma Xamarin, aproveitando os benefícios da reutilização de C#código do. Você descobrirá que C# a sintaxe é muito semelhante à sintaxe do Java e que ambas as linguagens fornecem recursos muito semelhantes. Além disso, você descobrirá recursos exclusivos do C# que tornarão sua vida de desenvolvimento mais fácil._
 
-## <a name="overview"></a>Visão geral
+## <a name="overview"></a>Visão Geral
 
 Este artigo oferece uma introdução à programação C# para desenvolvedores Java, com foco nos recursos de linguagem C# que você encontrará ao desenvolver aplicativos do Xamarin.Android. Além disso, este artigo explica como esses recursos diferem das respectivas contrapartes em Java e apresenta importantes recursos de C# (relevantes para Xamarin.Android) que não estão disponíveis em Java. Links para material de referência adicional são incluídos, então você pode usar este artigo como um ponto de partida para estudar o C# e o .NET em mais detalhes.
 
@@ -87,7 +87,7 @@ Além disso, o Xamarin permite [aproveitar ativos existentes do Java](#interop) 
 
 As seções a seguir explicam as diferenças de "introdução" básica entre C# e Java; uma seção posterior descreve as diferenças orientadas a objeto entre essas linguagens.
 
-### <a name="libraries-vs-assemblies"></a>Bibliotecas vs. Assemblies
+### <a name="libraries-vs-assemblies"></a>Bibliotecas vs. assemblies
 
 O Java normalmente empacota classes relacionadas em arquivos **.jar**. Em C# e .NET, no entanto, pedaços reutilizáveis de código pré-compilado são empacotados em *assemblies*, que normalmente são empacotados como arquivos *.dll*. Um assembly é uma unidade de implantação para código C#/.NET, sendo que cada assembly é tipicamente associado um projeto C#. Assemblies contêm código intermediário (IL) que é compilado por Just-In-Time no tempo de execução.
 
@@ -210,7 +210,7 @@ Para mais informações sobre definições de classe do C#, veja os tópicos [Cl
 
 <a name="properties" />
 
-### <a name="properties"></a>Properties
+### <a name="properties"></a>Propriedades
 
 Em Java, métodos modificadores (setters) e inspetores (getters) geralmente são usados para controlar como as alterações são feitas em membros de classe, simultaneamente ocultando e protegendo esses membros do código externo. Por exemplo, a classe `TextView` do Android fornece os métodos `getText` e `setText`. O C# fornece um mecanismo semelhante, mas mais direto, conhecido como *propriedades*.
 Os usuários de uma classe C# podem acessar uma propriedade da mesma maneira como eles acessariam um campo, mas cada acesso na verdade resulta em uma chamada de método que é transparente para o chamador. Esse método "nos bastidores" pode implementar efeitos colaterais, tais como a configuração de outros valores, a execução de conversões ou a alteração do estado do objeto.
@@ -316,7 +316,7 @@ button.Click += (sender, args) => {
 };
 ```
 
-Neste exemplo, o código de expressão lambda (o código entre chaves) incrementa a contagem de cliques e atualiza o texto `button` para exibir a contagem de cliques. Essa expressão lambda é registrada com o objeto `button` como um manipulador de eventos a ser chamado sempre que o botão é tocado. (Manipuladores de eventos são explicados mais detalhadamente abaixo.) Neste exemplo simples, os parâmetros `sender` e `args` não são usados pelo código de expressão lambda, mas eles são necessários na expressão lambda para atender aos requisitos de assinatura de método para registro de evento. Nos bastidores, o compilador de C# converte a expressão lambda em um método anônimo que é chamado sempre eventos de clique em botão ocorrem.
+Neste exemplo, o código de expressão lambda (o código entre chaves) incrementa a contagem de cliques e atualiza o texto `button` para exibir a contagem de cliques. Essa expressão lambda é registrada com o objeto `button` como um manipulador de eventos a ser chamado sempre que o botão é tocado. (Manipuladores de eventos são explicados em mais detalhes abaixo.) Neste exemplo simples, os parâmetros `sender` e `args` não são usados pelo código de expressão lambda, mas são necessários na expressão lambda para atender aos requisitos de assinatura do método para o registro de eventos. Nos bastidores, o compilador de C# converte a expressão lambda em um método anônimo que é chamado sempre eventos de clique em botão ocorrem.
 
 Para obter mais informações sobre C# e expressões lambda, veja o tópico [Expressões lambda](https://docs.microsoft.com/dotnet/csharp/programming-guide/statements-expressions-operators/lambda-expressions).
 

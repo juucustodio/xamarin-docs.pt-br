@@ -2,15 +2,15 @@
 ms.assetid: 1BB412D1-FC3D-4E69-8B01-B976A3DB6328
 title: 'WPF versus Xamarin. Forms: semelhanças & diferenças'
 description: Este documento compara e contrasta o WPF para Xamarin. Forms. Ele aborda modelos de controle, XAML, infraestrutura de associação, modelos de dados, ItemsControl, UserControl, navegação e navegação de URL.
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/26/2017
-ms.openlocfilehash: de8e3445679e185b488311e58221ae5f4c28f85c
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: 798839457a418d457bac83e6e20397722423dbac
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "71106040"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016481"
 ---
 # <a name="wpf-vs-xamarinforms-similarities--differences"></a>WPF versus Xamarin. Forms: semelhanças & diferenças
 

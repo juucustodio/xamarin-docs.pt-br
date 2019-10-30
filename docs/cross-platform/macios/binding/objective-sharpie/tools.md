@@ -3,15 +3,15 @@ title: Ferramentas de nitidez do objetivo & comandos
 description: Este documento fornece uma visão geral das ferramentas incluídas com a nitidez objetiva e os argumentos de linha de comando a serem usados com eles.
 ms.prod: xamarin
 ms.assetid: A84E209B-8932-4CC1-BAD1-7FD51F798A97
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 10/05/2015
-ms.openlocfilehash: 13f3000315e91cec7ff2422cff3b520997ba26fd
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 2179154aa6dc78a8b0b6b418d780e7996f8e557d
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70280916"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73015933"
 ---
 # <a name="objective-sharpie-tools--commands"></a>Ferramentas de nitidez do objetivo & comandos
 
@@ -53,14 +53,14 @@ A nitidez do objetivo fornece as seguintes ferramentas:
 
 |Ferramenta|Descrição|
 |--- |--- |
-|**xcode**|Fornece informações sobre a instalação atual do Xcode e as versões dos SDKs do iOS e Mac que estão disponíveis. Usaremos essas informações posteriormente quando gerarmos nossas associações.|
-|**pod**|Procura, configura, instala (em um diretório local) e associa bibliotecas de [CocoaPod](https://cocoapods.org/) Objective-C disponíveis no repositório de especificações mestras. Essa ferramenta avalia o CocoaPod instalado para deduzir automaticamente a entrada correta para passar para a `bind` ferramenta abaixo. Novidade no 3,0!|
+|**Xcode**|Fornece informações sobre a instalação atual do Xcode e as versões dos SDKs do iOS e Mac que estão disponíveis. Usaremos essas informações posteriormente quando gerarmos nossas associações.|
+|**Pod**|Procura, configura, instala (em um diretório local) e associa bibliotecas de [CocoaPod](https://cocoapods.org/) Objective-C disponíveis no repositório de especificações mestras. Essa ferramenta avalia o CocoaPod instalado para deduzir automaticamente a entrada correta a fim de passar para a ferramenta de `bind` abaixo. Novidade no 3,0!|
 |**bind**|Analisa os arquivos de cabeçalho (`*.h`) na biblioteca Objective-C nos arquivos [ApiDefinition.cs e StructsAndEnums.cs](~/cross-platform/macios/binding/objective-sharpie/platform/apidefinitions-structsandenums.md) iniciais.|
 |**update**|Verifica se há versões mais recentes de preversão e downloads de objetivo e inicia o instalador se houver um disponível.|
-|**verify-docs**|Mostra informações detalhadas sobre `[Verify]` atributos.|
+|**verificar-docs**|Mostra informações detalhadas sobre atributos de `[Verify]`.|
 |**docs**|Navega para este documento no navegador da Web padrão.|
 
-Para obter ajuda sobre uma ferramenta de nitidez de objetivo específica, insira o nome da ferramenta e a `-help` opção. Por exemplo, `sharpie xcode -help` retorna a seguinte saída:
+Para obter ajuda sobre uma ferramenta de nitidez de objetivo específica, digite o nome da ferramenta e a opção de `-help`. Por exemplo, `sharpie xcode -help` retorna a seguinte saída:
 
 ```
 $ sharpie xcode -help
@@ -74,7 +74,7 @@ Xcode Options:
   -sdks            List all available Xcode SDKs. Pass -verbose for more details.
 ```
 
-Antes que possamos iniciar o processo de associação, precisamos obter informações sobre nossos SDKs instalados atuais digitando o seguinte comando no terminal `sharpie xcode -sdks`. A saída pode ser diferente dependendo de quais versões do Xcode você instalou. `Xcode*.app` A`/Applications` nitidez do objetivo procura SDKs instalados em qualquer um no diretório:
+Antes que possamos iniciar o processo de associação, precisamos obter informações sobre nossos SDKs instalados atuais digitando o seguinte comando no terminal `sharpie xcode -sdks`. A saída pode ser diferente dependendo de quais versões do Xcode você instalou. A nitidez do objetivo procura SDKs instalados em qualquer `Xcode*.app` no diretório `/Applications`:
 
 ```
 $ sharpie xcode -sdks
@@ -87,4 +87,4 @@ sdk: macosx10.10     arch: x86_64  i386
 sdk: watchos2.0      arch: armv7
 ```
 
-A partir do acima, podemos ver que o `iphoneos9.1` SDK está instalado em nosso computador e tem `arm64` suporte à arquitetura. Usaremos esse valor para todos os exemplos nesta seção. Com essas informações em vigor, estamos prontos para analisar os arquivos de cabeçalho da biblioteca Objective-C na `ApiDefinition.cs` inicial `StructsAndEnums.cs` e no projeto de associação.
+A partir do acima, podemos ver que temos o SDK `iphoneos9.1` instalado em nosso computador e ele tem `arm64` suporte à arquitetura. Usaremos esse valor para todos os exemplos nesta seção. Com essas informações em vigor, estamos prontos para analisar os arquivos de cabeçalho da biblioteca Objective-C no `ApiDefinition.cs` inicial e `StructsAndEnums.cs` para o projeto de associação.

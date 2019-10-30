@@ -4,15 +4,15 @@ description: Este documento descreve vários meios de armazenamento de dados em 
 ms.prod: xamarin
 ms.assetid: B1994468-FD06-4FD9-96B3-FCEBB13A972A
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 10/11/2016
-ms.openlocfilehash: 4000e4cc5d260457c0e0da275e3a7beecafd1a98
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: eefe57abd4ebf4986411a1d717aebd131ebf408f
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "70767025"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73008344"
 ---
 # <a name="introduction-to-data-storage-in-xamarinios-apps"></a>Introdução ao armazenamento de dados em aplicativos Xamarin. iOS
 
@@ -54,13 +54,13 @@ Como o SQLite foi projetado para ser pequeno e rápido, há algumas limitações
 - Somente a renomeação de tabela e a addcoluna têm suporte. Você não pode executar outras modificações em seu esquema.
 - As exibições são somente leitura.
 
-Você pode aprender mais sobre o SQLite no site- [SQLite.org](http://SQLite.org) -no entanto, todas as informações de que você precisa para usar o SQLite com o Xamarin estão contidas neste documento e em exemplos associados. O mecanismo de banco de dados SQLite é integrado a todas as versões do iOS.
+Você pode aprender mais sobre o SQLite no site- [SQLite.org](https://SQLite.org) -no entanto, todas as informações de que você precisa para usar o SQLite com o Xamarin estão contidas neste documento e em exemplos associados. O mecanismo de banco de dados SQLite é integrado a todas as versões do iOS.
 Embora não seja abordado neste capítulo, o SQLite também está disponível para uso em aplicativos Windows Phone e Windows.
 
 ## <a name="windows-and-windows-phone"></a>Windows e Windows Phone
 
 O SQLite também pode ser usado em plataformas Windows, embora essas plataformas não sejam abordadas neste documento.
-Leia mais nos estudos de caso do [profissional](http://docs.xamarin.com/guides/cross-platform/application_fundamentals/building_cross_platform_applications/case_study%3A_tasky) de [tarefas](~/cross-platform/app-fundamentals/building-cross-platform-applications/case-study-tasky.md) e da tarefa e examine o [blog de Tim Heuer](http://timheuer.com/blog/archive/2012/06/28/seeding-your-metro-style-app-with-sqlite-database.aspx).
+Leia mais no estudo de caso de [tarefa](~/cross-platform/app-fundamentals/building-cross-platform-applications/case-study-tasky.md) e examine o [blog de Tim Heuer](https://timheuer.com/blog/archive/2012/06/28/seeding-your-metro-style-app-with-sqlite-database.aspx).
 
 ## <a name="related-links"></a>Links relacionados
 

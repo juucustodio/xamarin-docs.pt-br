@@ -4,15 +4,15 @@ description: Este documento descreve a acessibilidade no iOS, discutindo várias
 ms.prod: xamarin
 ms.assetid: 88D59B36-05A3-4356-AE29-EC2B69CE7162
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 05/18/2016
-ms.openlocfilehash: 943cdfaee07bc4fd4ed3273840036055ad40b89a
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: 31cae6d6770b4c8fc4ff722e67f4ddce8ffdd7c6
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "70766743"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73011299"
 ---
 # <a name="accessibility-on-ios"></a>Acessibilidade no iOS
 
@@ -138,4 +138,4 @@ Enquanto o Inspetor estiver visível, use o ícone "X" na parte superior esquerd
 
 - [Acessibilidade multiplataforma](~/cross-platform/app-fundamentals/accessibility.md)
 - [Acessibilidade do iOS (Apple)](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/iPhoneAccessibility/Accessibility_on_iPhone/Accessibility_on_iPhone.html)
-- [VoiceOver do iOS](http://www.apple.com/accessibility/ios/voiceover/)
+- [VoiceOver do iOS](https://www.apple.com/accessibility/ios/voiceover/)

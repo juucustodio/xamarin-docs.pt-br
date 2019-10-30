@@ -4,24 +4,24 @@ description: Este guia descreve as etapas para instalar o Xamarin.Android para V
 ms.prod: xamarin
 ms.assetid: 2BE4D5AD-D468-B177-8F96-837D084E7DE1
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/22/2018
-ms.openlocfilehash: 315cb8e58b0b9f29c06e4d0af2b8cf9adffb06e3
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 0caea0c31275a7459286c143cc92ca90731dd93b
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70758522"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73020694"
 ---
 # <a name="windows-installation"></a>Instalação do Windows
 
 _Este guia descreve as etapas para instalar o Xamarin.Android para Visual Studio no Windows e explica como configurar o Xamarin.Android para compilar seu primeiro aplicativo Xamarin.Android._
 
-## <a name="overview"></a>Visão geral
+## <a name="overview"></a>Visão Geral
 
 Como o Xamarin agora está incluído em todas as edições do Visual Studio sem custos adicionais e sem precisar de uma licença separada, você pode usar o instalador do Visual Studio para baixar e instalar ferramentas Xamarin.Android.
-(As etapas manuais de instalação e licenciamento que eram necessárias em versões anteriores do Xamarin.Android deixaram de ser necessárias.) Neste guia, você aprenderá o seguinte:
+(As etapas de instalação manual e licenciamento necessárias para versões anteriores do Xamarin. Android não são mais necessárias.) Neste guia, você aprenderá o seguinte:
 
 - Como configurar locais personalizados para o Java Development Kit, o SDK do Android e o NDK do Android.
 

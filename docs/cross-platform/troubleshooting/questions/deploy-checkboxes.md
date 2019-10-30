@@ -3,15 +3,15 @@ title: Implantar caixas de seleção desabilitadas no Configuration Manager
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: aaf675cd-d885-4dac-9754-77dbcaea3be9
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 12/02/2016
-ms.openlocfilehash: 82ff1a684ffad75a301f0db6b0f8e3116be6746d
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: edf471f1d9a2ee4adc11f09e0c7b7ad3cf6f78f1
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70285061"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73014248"
 ---
 # <a name="deploy-checkboxes-disabled-in-configuration-manager"></a>Implantar caixas de seleção desabilitadas no Configuration Manager
 
@@ -19,8 +19,8 @@ Já que os projetos Xamarin 3.5, Xamarin.iOS eram implantados automaticamente se
 
 Por isso, as caixas de seleção **Implantar** são intencionalmente desabilitadas no Configuration Manager do Visual Studio para projetos do Xamarin.iOS:
 
-![](deploy-checkboxes-images/configuration.png "O Visual Studio Configuration Manager mostrando a caixa de seleção ' implantar ' desabilitada para um projeto Xamarin. iOS no Xamarin 3,5")
+![](deploy-checkboxes-images/configuration.png "Visual Studio Configuration Manager showing the 'Deploy' checkbox disabled for a Xamarin.iOS project in Xamarin 3.5")
 
 Essa alteração elimina um erro que pode aparecer em versões mais antigas do Xamarin (versão 3.3 e anterior) quando o projeto do aplicativo Xamarin.iOS não era definido para implantação:
 
-![](deploy-checkboxes-images/error.png "Caixa de diálogo de erro: O projeto iPhoneApp1 precisa ser implantado antes que possa ser iniciado. Verifique se o projeto está selecionado para ser implantado na solução Configuration Manager.")
+![](deploy-checkboxes-images/error.png "Error dialog: The project iPhoneApp1 needs to be deployed before it can be started. Verify the project is selected to be deployed in the Solution Configuration Manager.")

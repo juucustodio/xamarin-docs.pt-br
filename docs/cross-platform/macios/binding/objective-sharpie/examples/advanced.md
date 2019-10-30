@@ -3,21 +3,21 @@ title: Exemplo avançado (manual) do mundo real
 description: Este documento descreve como usar a saída de xcodebuild como a entrada para a nitidez objetiva, que fornece informações sobre qual é a nitidez do objetivo nos bastidores.
 ms.prod: xamarin
 ms.assetid: 044FF669-0B81-4186-97A5-148C8B56EE9C
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/29/2017
-ms.openlocfilehash: 6dbaf904c31d1a778a25e591ee94c4d354f5698a
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 23ca9c3fe36a65aefb17f10fd3e680937c36acc0
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70765731"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016247"
 ---
 # <a name="advanced-manual-real-world-example"></a>Exemplo avançado (manual) do mundo real
 
 **Este exemplo usa a [biblioteca pop do Facebook](https://github.com/facebook/pop).**
 
-Esta seção aborda uma abordagem mais avançada de associação, na qual usaremos a ferramenta da `xcodebuild` Apple para primeiro criar o projeto pop e, em seguida, deduzir manualmente a entrada para a nitidez objetiva. Basicamente, isso aborda o que a nitidez do objetivo está fazendo nos bastidores da seção anterior.
+Esta seção aborda uma abordagem mais avançada de associação, onde usaremos a ferramenta de `xcodebuild` da Apple para primeiro criar o projeto POP e, em seguida, deduzir manualmente a entrada para a nitidez objetiva. Basicamente, isso aborda o que a nitidez do objetivo está fazendo nos bastidores da seção anterior.
 
 ```
  $ git clone https://github.com/facebook/pop.git
@@ -27,7 +27,7 @@ Cloning into 'pop'...
 $ cd pop
 ```
 
-Como a biblioteca pop tem um projeto do Xcode`pop.xcodeproj`(), podemos usar `xcodebuild` apenas para criar pop. Esse processo pode, por sua vez, gerar arquivos de cabeçalho que podem ser analisados pelo objetivo de nitidez. É por isso que a criação antes da associação é importante. Ao criar por `xcodebuild` meio do, certifique-se de que você passe o mesmo identificador e arquitetura do SDK que pretende passar para a nitidez objetiva (e lembre-se de que a nitidez do objetivo 3,0 pode fazer isso para você!):
+Como a biblioteca POP tem um projeto do Xcode (`pop.xcodeproj`), podemos usar `xcodebuild` para criar POP. Esse processo pode, por sua vez, gerar arquivos de cabeçalho que podem ser analisados pelo objetivo de nitidez. É por isso que a criação antes da associação é importante. Ao criar por meio de `xcodebuild` certifique-se de que você passe o mesmo identificador e arquitetura do SDK que pretende passar para a nitidez objetiva (e lembre-se, o objetivo de nitidez 3,0 pode fazer isso para você!):
 
 ```
 $ xcodebuild -sdk iphoneos9.0 -arch arm64
@@ -50,9 +50,9 @@ CpHeader pop/POPAnimationTracer.h build/Headers/POP/POPAnimationTracer.h
 ** BUILD SUCCEEDED **
 ```
 
-Haverá muitas saídas de informações de compilação no console como parte do `xcodebuild`. Como exibido acima, podemos ver que um destino "CpHeader" foi executado onde os arquivos de cabeçalho foram copiados para um diretório de saída de compilação. Esse geralmente é o caso e facilita a associação: como parte da compilação da biblioteca nativa, os arquivos de cabeçalho são frequentemente copiados para um local de consumo "publicamente", o que pode facilitar a análise da associação. Nesse caso, sabemos que os arquivos de cabeçalho do pop estão no `build/Headers` diretório.
+Haverá muitas saídas de informações de compilação no console como parte do `xcodebuild`. Como exibido acima, podemos ver que um destino "CpHeader" foi executado onde os arquivos de cabeçalho foram copiados para um diretório de saída de compilação. Esse geralmente é o caso e facilita a associação: como parte da compilação da biblioteca nativa, os arquivos de cabeçalho são frequentemente copiados para um local de consumo "publicamente", o que pode facilitar a análise da associação. Nesse caso, sabemos que os arquivos de cabeçalho do POP estão no diretório `build/Headers`.
 
-Agora estamos prontos para associar o POP. Sabemos que desejamos criar para o SDK `iphoneos8.1` com a `arm64` arquitetura e que os arquivos de cabeçalho `build/Headers` nos quais nos preocupamos estão sob a retirada do git pop. Se olharmos no `build/Headers` diretório, veremos vários arquivos de cabeçalho:
+Agora estamos prontos para associar o POP. Sabemos que desejamos criar para o SDK `iphoneos8.1` com a arquitetura de `arm64` e que os arquivos de cabeçalho nos quais nos preocupamos estão em `build/Headers` na retirada do git POP. Se olharmos no diretório `build/Headers`, veremos vários arquivos de cabeçalho:
 
 ```
 $ ls build/Headers/POP/
@@ -64,7 +64,7 @@ POPAnimationExtras.h     POPCustomAnimation.h     POPSpringAnimation.h
 POPAnimationPrivate.h    POPDecayAnimation.h
 ```
 
-Se observarmos `POP.h`, podemos ver que ele é o principal arquivo de cabeçalho de nível superior da biblioteca, `#import`que s outros arquivos. Por isso, precisamos apenas passar `POP.h` para a nitidez objetiva, e Clang fará o restante nos bastidores:
+Se olharmos `POP.h`, podemos ver que ele é o principal arquivo de cabeçalho de nível superior da biblioteca que `#import`s outros arquivos. Por isso, só precisamos passar `POP.h` para a nitidez objetiva, e Clang fará o restante nos bastidores:
 
 ```
 $ sharpie bind -output Binding -sdk iphoneos8.1 \
@@ -122,18 +122,18 @@ Submitting usage data to Xamarin...
 Done.
 ```
 
-Você observará que passamos um `-scope build/Headers` argumento para a nitidez objetiva. Como as bibliotecas C e Objective- `#import` C `#include` devem ou outros arquivos de cabeçalho que são detalhes de implementação da biblioteca e não da API que você `-scope` deseja associar, o argumento informa a nitidez do objetivo de ignorar qualquer API que não esteja definida em um arquivo em algum lugar `-scope` dentro do diretório.
+Você observará que passamos um argumento `-scope build/Headers` para a nitidez objetiva. Como as bibliotecas C e Objective-C devem `#import` ou `#include` outros arquivos de cabeçalho que são detalhes de implementação da biblioteca e não a API que você deseja associar, o argumento `-scope` informa a nitidez do objetivo de ignorar qualquer API que não esteja definida em um arquivo em algum lugar dentro do diretório `-scope`.
 
-Você descobrirá que `-scope` o argumento é geralmente opcional para bibliotecas implementadas de forma limpa, no entanto, não há nenhum dano em fornecer explicitamente.
+Você encontrará o argumento de `-scope` geralmente é opcional para bibliotecas implementadas com clareza, no entanto, não há nenhum dano no fornecimento explícito.
 
-Além disso, especificamos `-c -Ibuild/headers`. Em primeiro lugar `-c` , o argumento informa a nitidez do objetivo para interromper a interpretação de argumentos de linha de comando e passar quaisquer argumentos subsequentes _diretamente para o compilador Clang_. Portanto, `-Ibuild/Headers` é um argumento de compilador Clang que instrui o Clang a procurar por `build/Headers`inclusões, que é onde os cabeçalhos pop residem. Sem esse argumento, Clang não saberá onde localizar os arquivos que `POP.h` é `#import`ing. _Quase todos os "problemas" com o uso de nitidez objetiva se resumem para descobrir o que passar para o Clang_.
+Além disso, especificamos `-c -Ibuild/headers`. Em primeiro lugar, o argumento `-c` informa a nitidez do objetivo para interromper a interpretação de argumentos de linha de comando e passar quaisquer argumentos subsequentes _diretamente para o compilador Clang_. Portanto, `-Ibuild/Headers` é um argumento de compilador Clang que instrui o Clang a procurar por inclusões em `build/Headers`, que é onde os cabeçalhos POP residem. Sem esse argumento, Clang não saberá onde localizar os arquivos que `POP.h` está `#import`ing. _Quase todos os "problemas" com o uso de nitidez objetiva se resumem para descobrir o que passar para o Clang_.
 
 ### <a name="completing-the-binding"></a>Concluindo a associação
 
-A nitidez do objetivo agora gerou `Binding/ApiDefinitions.cs` e `Binding/StructsAndEnums.cs` arquivos.
+A Sharpde objetiva agora gerou arquivos `Binding/ApiDefinitions.cs` e `Binding/StructsAndEnums.cs`.
 
 Essas são as primeiras passagens básicas do objetivo inicial da ligação e, em alguns casos, pode ser tudo o que você precisa. Como mencionado acima, no entanto, o desenvolvedor geralmente precisará modificar manualmente os arquivos gerados após a conclusão do objetivo de ajuste de nitidez para [corrigir quaisquer problemas](~/cross-platform/macios/binding/objective-sharpie/platform/apidefinitions-structsandenums.md) que não puderam ser manipulados automaticamente pela ferramenta.
 
-Depois que as atualizações forem concluídas, esses dois arquivos agora poderão ser adicionados a um projeto de associação no Visual Studio para Mac ou serem passados `btouch` diretamente `bmac` para as ferramentas ou para produzir a associação final.
+Depois que as atualizações forem concluídas, esses dois arquivos agora poderão ser adicionados a um projeto de associação no Visual Studio para Mac ou serem passados diretamente para as ferramentas `btouch` ou `bmac` para produzir a associação final.
 
 Para obter uma descrição completa do processo de associação, consulte nossas [instruções completas sobre explicação](~/ios/platform/binding-objective-c/walkthrough.md).

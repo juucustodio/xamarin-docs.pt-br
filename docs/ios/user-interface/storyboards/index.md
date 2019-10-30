@@ -4,15 +4,15 @@ description: Este documento fornece uma introdução aos storyboards no Xamarin.
 ms.prod: xamarin
 ms.assetid: A3339BD2-9F56-7965-25F5-4B7C991EB775
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: cf181cf6c27476b7073073467ef186c352645e39
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: 494ac624ac4a77c592f358b68aec4429551a49a8
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "70768885"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73002425"
 ---
 # <a name="introduction-to-storyboards-in-xamarinios"></a>Introdução aos storyboards no Xamarin. iOS
 
@@ -266,7 +266,7 @@ public MainViewController (IntPtr handle) : base (handle)
 }
 ```
 
-Para obter mais informações sobre como registrar classes e métodos, consulte a documentação do [registrador de tipos](http://docs.xamarin.com/guides/ios/advanced_topics/registrar/) .
+Para obter mais informações sobre como registrar classes e métodos, consulte a documentação do [registrador de tipos](https://docs.microsoft.com/xamarin/ios/internals/registrar) .
 
 A última etapa dessa classe é conectar o botão e a transição para o controlador de exibição rosa. Criaremos uma instância do `PinkViewController` do storyboard; em seguida, programaremos um transição de push com `PushViewController`, conforme ilustrado pelo código de exemplo abaixo:
 

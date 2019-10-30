@@ -4,21 +4,21 @@ description: Este documento descreve como usar o depurador no Visual Studio para
 ms.prod: xamarin
 ms.assetid: 05460010-99E1-DC38-F855-2D691EF54484
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 8a1a110bf1ff021c3280e19dea777180d71dba1a
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: ae140f7ea75c1631c6c96170af738f3fac04dcdb
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70763356"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73026515"
 ---
 # <a name="debugging-xamarinios-apps"></a>Depurando aplicativos Xamarin.iOS
 
 _Aplicativos Xamarin.iOS podem ser depurados com o depurador interno no Visual Studio para Mac ou no Visual Studio._
 
-Use o suporte à depuração nativo do Visual Studio para Mac para depurar C# e outro código de linguagens gerenciadas e use [LLDB](http://lldb.llvm.org/tutorial.html) quando precisar depurar código C, C++ ou Objective C que possa estar vinculando a seu projeto Xamarin.iOS.
+Use o suporte à depuração nativo do Visual Studio para Mac para depurar C# e outro código de linguagens gerenciadas e use [LLDB](https://lldb.llvm.org/tutorial.html) quando precisar depurar código C, C++ ou Objective C que possa estar vinculando a seu projeto Xamarin.iOS.
 
 > [!NOTE]
 > Ao compilar aplicativos no modo de Depuração, o Xamarin.iOS gerará aplicativos muito maiores e mais lentos, uma vez que cada linha de código deve ser instrumentada. Antes de liberar, faça um build de Liberação.
@@ -33,11 +33,11 @@ Quando estiver pronto para iniciar a depuração de seu aplicativo, a primeira e
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
-[![](debugging-in-xamarin-ios-images/debugging1.png "Configuração de Pontos de interrupção")](debugging-in-xamarin-ios-images/debugging1.png#lightbox)
+[![](debugging-in-xamarin-ios-images/debugging1.png "Setting Breakpoints")](debugging-in-xamarin-ios-images/debugging1.png#lightbox)
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![](debugging-in-xamarin-ios-images/debugging1a.png "Configuração de Pontos de interrupção")](debugging-in-xamarin-ios-images/debugging1a.png#lightbox)
+[![](debugging-in-xamarin-ios-images/debugging1a.png "Setting Breakpoints")](debugging-in-xamarin-ios-images/debugging1a.png#lightbox)
 
 -----
 
@@ -45,13 +45,13 @@ Você pode exibir todos os pontos de interrupção definidos em seu código indo
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
-[![](debugging-in-xamarin-ios-images/image0a.png "O painel de Pontos de interrupção")](debugging-in-xamarin-ios-images/image0a.png#lightbox)
+[![](debugging-in-xamarin-ios-images/image0a.png "The Breakpoints pad")](debugging-in-xamarin-ios-images/image0a.png#lightbox)
 
  Se o painel de Pontos de Interrupção não aparecer automaticamente, você poderá torná-lo visível selecionando _Exibir > Depurar Windows > Pontos de Interrupção_
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![](debugging-in-xamarin-ios-images/image0.png "O painel de Pontos de interrupção")](debugging-in-xamarin-ios-images/image0.png#lightbox)
+[![](debugging-in-xamarin-ios-images/image0.png "The Breakpoints pad")](debugging-in-xamarin-ios-images/image0.png#lightbox)
 
  Se o painel Pontos de Interrupção não aparecer automaticamente, você poderá torná-lo visível selecionando _Depurar > Windows > Pontos de Interrupção_
 
@@ -61,13 +61,13 @@ Antes de iniciar a depuração de qualquer aplicativo, sempre garanta que a conf
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
-[![](debugging-in-xamarin-ios-images/debugging7.png "Depurando no simulador")](debugging-in-xamarin-ios-images/debugging7.png#lightbox)
-[ ![](debugging-in-xamarin-ios-images/debugging7a.png "Depurando em um dispositivo físico")](debugging-in-xamarin-ios-images/debugging7a.png#lightbox)
+[![](debugging-in-xamarin-ios-images/debugging7.png "Debugging on simulator")](debugging-in-xamarin-ios-images/debugging7.png#lightbox)
+[![](debugging-in-xamarin-ios-images/debugging7a.png "Debugging on a physical device")](debugging-in-xamarin-ios-images/debugging7a.png#lightbox)
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![](debugging-in-xamarin-ios-images/debugging7c.png "Depurando no simulador")](debugging-in-xamarin-ios-images/debugging7c.png#lightbox)
-[ ![](debugging-in-xamarin-ios-images/debugging7d.png "Depurando em um dispositivo físico")](debugging-in-xamarin-ios-images/debugging7d.png#lightbox)
+[![](debugging-in-xamarin-ios-images/debugging7c.png "Debugging on simulator")](debugging-in-xamarin-ios-images/debugging7c.png#lightbox)
+[![](debugging-in-xamarin-ios-images/debugging7d.png "Debugging on a physical device")](debugging-in-xamarin-ios-images/debugging7d.png#lightbox)
 
 -----
 
@@ -76,11 +76,11 @@ Para iniciar a depuração, selecione o dispositivo de destino ou semelhante no 
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
-[![](debugging-in-xamarin-ios-images/debugging7b.png "Selecionar o dispositivo de destino")](debugging-in-xamarin-ios-images/debugging7b.png#lightbox)
+[![](debugging-in-xamarin-ios-images/debugging7b.png "Select the target device")](debugging-in-xamarin-ios-images/debugging7b.png#lightbox)
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![](debugging-in-xamarin-ios-images/debugging7e.png "Selecionar o dispositivo de destino")](debugging-in-xamarin-ios-images/debugging7e.png#lightbox)
+[![](debugging-in-xamarin-ios-images/debugging7e.png "Select the target device")](debugging-in-xamarin-ios-images/debugging7e.png#lightbox)
 
 -----
 
@@ -88,11 +88,11 @@ Em seguida, implante seu aplicativo pressionando o botão **Executar**.
 
 Quando você atingir um ponto de interrupção, o código será realçado em amarelo:
 
-[![](debugging-in-xamarin-ios-images/image2.png "O código será realçado em amarelo")](debugging-in-xamarin-ios-images/image2.png#lightbox)
+[![](debugging-in-xamarin-ios-images/image2.png "The code will be highlighted yellow")](debugging-in-xamarin-ios-images/image2.png#lightbox)
 
 Ferramentas de depuração, como inspecionar os valores de objetos, podem ser usadas neste ponto para obter mais informações sobre o que está acontecendo em seu código:
 
-[![](debugging-in-xamarin-ios-images/image3.png "Exibindo um valor de cor")](debugging-in-xamarin-ios-images/image3.png#lightbox)
+[![](debugging-in-xamarin-ios-images/image3.png "Displaying a color value")](debugging-in-xamarin-ios-images/image3.png#lightbox)
 
 ## <a name="conditional-breakpoints"></a>Pontos de interrupção condicionais
 
@@ -104,25 +104,25 @@ Para definir um ponto de interrupção condicional, acesse a **janela Propriedad
 
 - Para adicionar um novo ponto de interrupção condicional, clique com o botão direito do mouse na margem do editor, à esquerda do número de linha para o código para o qual deseja definir um ponto de interrupção e selecione o novo ponto de interrupção:
 
-  [![](debugging-in-xamarin-ios-images/image4.png "Selecionar Novo ponto de interrupção")](debugging-in-xamarin-ios-images/image4.png#lightbox)
+  [![](debugging-in-xamarin-ios-images/image4.png "Select New Breakpoint")](debugging-in-xamarin-ios-images/image4.png#lightbox)
 
 - Para adicionar uma condição a um ponto de interrupção existente, clique com o botão direito do mouse no ponto de interrupção e selecione **Propriedades de Ponto de Interrupção** ou, no **painel Pontos de Interrupção**, selecione o botão de propriedades ilustrado abaixo:
 
-  [![](debugging-in-xamarin-ios-images/image5.png "O painel de Pontos de interrupção")](debugging-in-xamarin-ios-images/image5.png#lightbox)
+  [![](debugging-in-xamarin-ios-images/image5.png "The Breakpoints Pad")](debugging-in-xamarin-ios-images/image5.png#lightbox)
 
 Então você pode inserir a condição sob a qual você deseja que o ponto de interrupção ocorra:
 
-[![](debugging-in-xamarin-ios-images/image6.png "Inserir a condição para o Ponto de interrupção ocorrer")](debugging-in-xamarin-ios-images/image6.png#lightbox)
+[![](debugging-in-xamarin-ios-images/image6.png "Enter the condition for the breakpoint to occur")](debugging-in-xamarin-ios-images/image6.png#lightbox)
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Para definir um ponto de interrupção condicional no Visual Studio, primeiro [defina um ponto de interrupção regular](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/set_a_breakpoint). Clique com o botão direito do mouse no ponto de interrupção para exibir seu menu de contexto:
 
- [![](debugging-in-xamarin-ios-images/image4vs.png "O menu de contexto do ponto de interrupção")](debugging-in-xamarin-ios-images/image4vs.png#lightbox)
+ [![](debugging-in-xamarin-ios-images/image4vs.png "The breakpoint context menu")](debugging-in-xamarin-ios-images/image4vs.png#lightbox)
 
 Selecione **Condições…** para exibir o menu _Configurações do Ponto de Interrupção_:
 
- [![](debugging-in-xamarin-ios-images/image6vs.png "O menu Configurações do Ponto de interrupção")](debugging-in-xamarin-ios-images/image6vs.png#lightbox)
+ [![](debugging-in-xamarin-ios-images/image6vs.png "The Breakpoint Settings menu")](debugging-in-xamarin-ios-images/image6vs.png#lightbox)
 
 Aqui, você pode inserir as condições sob as quais deseja que o ponto de interrupção ocorra
 
@@ -138,7 +138,7 @@ Quando um ponto de interrupção for atingido, as ferramentas de depuração per
 
 No Visual Studio para Mac, eles terão a seguinte aparência:
 
- [![](debugging-in-xamarin-ios-images/image7.png "As ferramentas de Depuração permitem que o desenvolvedor tenha o controle da execução do programa")](debugging-in-xamarin-ios-images/image7.png#lightbox)
+ [![](debugging-in-xamarin-ios-images/image7.png "The Debug tools enable the developer to get control over the program’s execution")](debugging-in-xamarin-ios-images/image7.png#lightbox)
 
 Elas são:
 
@@ -151,7 +151,7 @@ Elas são:
 
 No Visual Studio, eles terão a seguinte aparência:
 
-[![](debugging-in-xamarin-ios-images/image7vs.png "As ferramentas de Depuração permitem que o desenvolvedor tenha o controle da execução do programa")](debugging-in-xamarin-ios-images/image7vs.png#lightbox)
+[![](debugging-in-xamarin-ios-images/image7vs.png "The Debug tools enable the developer to get control over the program’s execution")](debugging-in-xamarin-ios-images/image7vs.png#lightbox)
 
 Elas são:
 
@@ -198,7 +198,7 @@ Esse depurador flexível requer um esquema de depuração cooperativo quando est
 
 Logs de falha e a saída da classe Console serão enviados ao console do iPhone. Você pode acessar esse console com Xcode usando o “Organizador” e selecionando o dispositivo no organizador.
 
-Como alternativa, se não desejar iniciar o Xcode, você poderá usar o [Utilitário de Configuração do iPhone](http://www.apple.com/support/iphone/enterprise/) da Apple para acessar diretamente o console. Isso tem benefício adicional de poder acessar os logs do console usando um computador Windows se você estiver depurando um problema em campo.
+Como alternativa, se não desejar iniciar o Xcode, você poderá usar o [Utilitário de Configuração do iPhone](https://www.apple.com/support/iphone/enterprise/) da Apple para acessar diretamente o console. Isso tem benefício adicional de poder acessar os logs do console usando um computador Windows se você estiver depurando um problema em campo.
 
 Para usuários do Visual Studio, há alguns logs disponíveis na janela de saída, mas você deve mudar para o Mac para logs mais completos e detalhados.
 
@@ -216,13 +216,13 @@ Como esse recurso consome mais memória durante a depuração, ele está desliga
 
 Para habilitar esse recurso, verifique se a opção **Depurar somente o código do projeto; não intervir no código do framework** está desmarcada no menu _Visual Studio para Mac > Preferências > Depurador_, conforme ilustrado abaixo:
 
-[![](debugging-in-xamarin-ios-images/debugging6.png "Depurando bibliotecas de classes do Mono")](debugging-in-xamarin-ios-images/debugging6.png#lightbox)
+[![](debugging-in-xamarin-ios-images/debugging6.png "Debugging Mono's Class Libraries")](debugging-in-xamarin-ios-images/debugging6.png#lightbox)
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Para depurar as bibliotecas de classe no Visual Studio, desabilite **Apenas Meu Código** no menu _Depurar > Opções_. No nó _Depuração > Geral_, desmarque a caixa de seleção **Habilitar Apenas Meu Código**:
 
-[![](debugging-in-xamarin-ios-images/debugging6vs.png "Depurando bibliotecas de classes do Mono")](debugging-in-xamarin-ios-images/debugging6vs.png#lightbox)
+[![](debugging-in-xamarin-ios-images/debugging6vs.png "Debugging Mono's Class Libraries")](debugging-in-xamarin-ios-images/debugging6vs.png#lightbox)
 
 -----
 

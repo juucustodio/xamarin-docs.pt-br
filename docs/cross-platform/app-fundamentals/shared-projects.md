@@ -3,15 +3,15 @@ title: Usar projetos compartilhados para compartilhar código
 description: Projetos compartilhados permitem que você escreva código comum que é referenciado por vários projetos de aplicativo diferentes. O código é compilado como parte de cada projeto de referência e pode incluir diretivas de compilador para ajudar a incorporar a funcionalidade específica da plataforma à base de código compartilhada.
 ms.prod: xamarin
 ms.assetid: 191c71fb-44a4-4e6c-af4b-7b1107dce6af
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 07/18/2018
-ms.openlocfilehash: ed58b0810d3c4fd3a3dd99cddd16227f9ac30273
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: eee76c056d05edccd1e039bc5e4cb8107d1aceb5
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "68739053"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016692"
 ---
 # <a name="shared-projects-code-sharing"></a>Compartilhamento de código de projetos compartilhados
 
@@ -33,7 +33,7 @@ O código em um projeto compartilhado pode conter diretivas de compilador que ha
 
 Um projeto compartilhado não é compilado por conta própria, ele existe puramente como um agrupamento de arquivos de código-fonte que podem ser incluídos em outros projetos. Quando referenciado por outro projeto, o código é efetivamente compilado como *parte* desse projeto. Projetos compartilhados não podem fazer referência a nenhum outro tipo de projeto (incluindo outros projetos compartilhados).
 
-Observe que os projetos de aplicativo Android não podem fazer referência a outros projetos de aplicativo Android, por exemplo, um projeto de teste de unidade Android não pode fazer referência a um projeto de aplicativo Android. Para obter mais informações sobre essa limitação, consulte esta discussão sobre o [Fórum](http://forums.xamarin.com/discussion/comment/98092/).
+Observe que os projetos de aplicativo Android não podem fazer referência a outros projetos de aplicativo Android, por exemplo, um projeto de teste de unidade Android não pode fazer referência a um projeto de aplicativo Android. Para obter mais informações sobre essa limitação, consulte esta discussão sobre o [Fórum](https://forums.xamarin.com/discussion/comment/98092/).
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 

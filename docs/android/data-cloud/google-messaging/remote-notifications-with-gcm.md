@@ -4,15 +4,15 @@ description: Este tutorial fornece uma explicação passo a passo de como usar G
 ms.prod: xamarin
 ms.assetid: 4FC3C774-EF93-41B2-A81E-C6A08F32C09B
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 05/02/2019
-ms.openlocfilehash: a59f824e1d97966d8d0af92bc9bbcc8d80fcfa4d
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.openlocfilehash: 979df7965e6a972ffc80d786a26d36aa0a1a939b
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71249923"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73021611"
 ---
 # <a name="remote-notifications-with-google-cloud-messaging"></a>Notificações remotas com Google Cloud Messaging
 
@@ -56,11 +56,11 @@ Para receber mensagens de Google Cloud Messaging, a estrutura de [Google Play Se
 
 No Visual Studio, clique com o botão direito do mouse em **referências > gerenciar pacotes NuGet...** ; em Visual Studio para Mac, clique com o botão direito do mouse em **pacotes > adicionar pacotes...** . Pesquise por **Xamarin Google Play Services-GCM** e instale esse pacote no projeto **ClientApp** : 
 
-[![Instalando o Google Play Services](remote-notifications-with-gcm-images/1-google-play-services-sml.png)](remote-notifications-with-gcm-images/1-google-play-services.png#lightbox)
+[![instalar Google Play Services](remote-notifications-with-gcm-images/1-google-play-services-sml.png)](remote-notifications-with-gcm-images/1-google-play-services.png#lightbox)
 
 Quando você instala o **xamarin Google Play Services-GCM**, o **Xamarin Google Play Services-base** é instalado automaticamente. Se você receber um erro, altere a configuração *mínima do Android para o destino* do projeto para um valor diferente de **compilar usando a versão do SDK** e tente instalar o NuGet novamente. 
 
-Em seguida, edite **MainActivity.cs** e adicione `using` as seguintes instruções:
+Em seguida, edite **MainActivity.cs** e adicione as seguintes instruções `using`:
 
 ```csharp
 using Android.Gms.Common;
@@ -79,7 +79,7 @@ Como alternativa, você pode usar um emulador do Android executando o Android 2,
 
 Em [Google Cloud Messaging](~/android/data-cloud/google-messaging/google-cloud-messaging.md), especificamos um nome de pacote para nosso aplicativo habilitado para GCM (esse nome de pacote também serve como a *ID do aplicativo* associada à nossa chave de API e à ID de remetente). Vamos abrir as propriedades do projeto **ClientApp** e definir o nome do pacote como esta cadeia de caracteres. Neste exemplo, definimos o nome do pacote como `com.xamarin.gcmexample`:
 
-[![Configurando o nome do pacote](remote-notifications-with-gcm-images/2-package-name-sml.png)](remote-notifications-with-gcm-images/2-package-name.png#lightbox)
+[![definir o nome do pacote](remote-notifications-with-gcm-images/2-package-name-sml.png)](remote-notifications-with-gcm-images/2-package-name.png#lightbox)
 
 Observe que o aplicativo cliente não poderá receber um token de registro do GCM se esse nome de pacote não corresponder *exatamente* ao nome do pacote que inserimos no console do desenvolvedor do Google. 
 
@@ -87,14 +87,14 @@ Observe que o aplicativo cliente não poderá receber um token de registro do GC
 
 Um aplicativo Android deve ter as seguintes permissões configuradas antes que possa receber notificações de Google Cloud Messaging: 
 
-- `com.google.android.c2dm.permission.RECEIVE`&ndash; Concede permissão ao nosso aplicativo para registrar e receber mensagens de Google Cloud Messaging. (O que `c2dm` significa? Isso significa o _sistema de mensagens da nuvem para o dispositivo_, que é a predecessora agora preterida para gcm. 
-    O gcm ainda `c2dm` usa em muitas de suas cadeias de caracteres de permissão.) 
+- `com.google.android.c2dm.permission.RECEIVE` &ndash; concede permissão ao nosso aplicativo para registrar e receber mensagens de Google Cloud Messaging. (O que `c2dm` significa? Isso significa o _sistema de mensagens da nuvem para o dispositivo_, que é a predecessora agora preterida para gcm. 
+    O GCM ainda usa `c2dm` em muitas de suas cadeias de caracteres de permissão.) 
 
-- `android.permission.WAKE_LOCK`&ndash; (Opcional) impede que a CPU do dispositivo vá para a suspensão durante a escuta de uma mensagem. 
+- `android.permission.WAKE_LOCK` &ndash; (opcional) impede que a CPU do dispositivo vá para a suspensão durante a escuta de uma mensagem. 
 
-- `android.permission.INTERNET`&ndash; Concede acesso à Internet para que o aplicativo cliente possa se comunicar com o gcm. 
+- `android.permission.INTERNET` &ndash; concede acesso à Internet para que o aplicativo cliente possa se comunicar com o GCM. 
 
-- *package_name registra o aplicativo* `.permission.C2D_MESSAGE` com o Android e solicita permissão para receber exclusivamente todas as mensagens de C2D (nuvem para dispositivo). &ndash; O prefixo *package_name* é o mesmo que a ID do aplicativo. 
+- *package_name*`.permission.C2D_MESSAGE` &ndash; registra o aplicativo com o Android e solicita permissão para receber exclusivamente todas as mensagens de C2D (nuvem para dispositivo). O prefixo *package_name* é o mesmo que a ID do aplicativo. 
 
 Vamos definir essas permissões no manifesto do Android. Vamos editar **AndroidManifest. xml** e substituir o conteúdo pelo seguinte XML: 
 
@@ -143,7 +143,7 @@ Primeiro, vamos criar um layout para a área de mensagem. Edite **Resources. lay
 
 Salve **Main. axml** e feche-o.
 
-Quando o aplicativo cliente é iniciado, queremos que ele verifique se Google Play Services está disponível antes de tentar entrar em contato com o GCM. Edite **MainActivity.cs** e substitua ``count`` a declaração da variável de instância pela seguinte declaração de variável de instância: 
+Quando o aplicativo cliente é iniciado, queremos que ele verifique se Google Play Services está disponível antes de tentar entrar em contato com o GCM. Edite **MainActivity.cs** e substitua a declaração da variável de instância de ``count`` pela seguinte declaração de variável de instância: 
 
 ```csharp
 TextView msgText;
@@ -176,7 +176,7 @@ public bool IsPlayServicesAvailable ()
 
 Esse código verifica o dispositivo para ver se o Google Play Services APK está instalado. Se não estiver instalado, uma mensagem será exibida na área de mensagem que instrui o usuário a baixar um APK do Google Play Store (ou habilitá-lo nas configurações do sistema do dispositivo). Como queremos executar essa verificação quando o aplicativo cliente é iniciado, adicionaremos uma chamada para esse método no final de `OnCreate`. 
 
-Em seguida, substitua `OnCreate` o método pelo código a seguir:
+Em seguida, substitua o método `OnCreate` pelo código a seguir:
 
 ```csharp
 protected override void OnCreate (Bundle bundle)
@@ -202,7 +202,7 @@ Em seguida, escreveremos o código para entrar em contato com o GCM e recuperar 
 
 ### <a name="register-with-gcm"></a>Registrar com GCM
 
-Antes que o aplicativo possa receber notificações remotas do servidor de aplicativos, ele deve se registrar no GCM e recuperar um token de registro. O trabalho de registrar nosso aplicativo com o gcm é tratado por um `IntentService` que criamos. Nosso `IntentService` executa as seguintes etapas: 
+Antes que o aplicativo possa receber notificações remotas do servidor de aplicativos, ele deve se registrar no GCM e recuperar um token de registro. O trabalho de registrar nosso aplicativo com o GCM é tratado por um `IntentService` que criamos. Nosso `IntentService` executa as seguintes etapas: 
 
 1. Usa a API [InstanceId](https://developers.google.com/instance-id/) para gerar tokens de segurança que autorizam o aplicativo cliente a acessar o servidor de aplicativos. Em retorno, obtemos um token de registro do GCM.
 
@@ -210,7 +210,7 @@ Antes que o aplicativo possa receber notificações remotas do servidor de aplic
 
 3. Assina um ou mais canais de tópico de notificação.
 
-Depois de implementarmos `IntentService`isso, vamos testá-lo para ver se obtemos um token de registro do gcm.
+Depois de implementar esse `IntentService`, vamos testá-lo para ver se obtemos um token de registro do GCM.
 
 Adicione um novo arquivo chamado **RegistrationIntentService.cs** e substitua o código do modelo pelo seguinte:
 
@@ -272,13 +272,13 @@ No código de exemplo acima, altere *YOUR_SENDER_ID* para o número de ID de rem
 
 1. Faça logon no [console do Google Cloud](https://console.cloud.google.com/) e selecione o nome do projeto no menu suspenso. No painel de **informações do projeto** que é exibido para seu projeto, clique em **ir para configurações do projeto**:
 
-    [![Selecionando o projeto XamarinGCM](remote-notifications-with-gcm-images/7-choose-project-sml.png)](remote-notifications-with-gcm-images/7-choose-project.png#lightbox)
+    [![selecionar o projeto XamarinGCM](remote-notifications-with-gcm-images/7-choose-project-sml.png)](remote-notifications-with-gcm-images/7-choose-project.png#lightbox)
 
-2. Na página **configurações** , localize o **número** &ndash; do projeto que é a ID do remetente do seu projeto:
+2. Na página **configurações** , localize o **número do projeto** &ndash; esta é a ID do remetente do seu projeto:
 
-    [![Número do projeto exibido](remote-notifications-with-gcm-images/9-project-number-sml.png)](remote-notifications-with-gcm-images/9-project-number.png#lightbox)
+    [![número de projeto exibido](remote-notifications-with-gcm-images/9-project-number-sml.png)](remote-notifications-with-gcm-images/9-project-number.png#lightbox)
 
-Queremos iniciar nossa `RegistrationIntentService` quando nosso aplicativo começar a ser executado. Edite **MainActivity.cs** e modifique `OnCreate` o método para que `RegistrationIntentService` o nosso seja iniciado depois de verificar a presença de Google Play Services: 
+Queremos iniciar nossa `RegistrationIntentService` quando o aplicativo começa a ser executado. Edite **MainActivity.cs** e modifique o método `OnCreate` para que o `RegistrationIntentService` seja iniciado depois de verificar a presença de Google Play Services: 
 
 ```csharp
 protected override void OnCreate (Bundle bundle)
@@ -296,7 +296,7 @@ protected override void OnCreate (Bundle bundle)
 }
 ```
 
-Agora, vamos dar uma olhada em cada seção do `RegistrationIntentService` para entender como ela funciona. 
+Agora vamos dar uma olhada em cada seção de `RegistrationIntentService` para entender como ela funciona. 
 
 Primeiro, anotamos nosso `RegistrationIntentService` com o seguinte atributo para indicar que nosso serviço não deve ser instanciado pelo sistema: 
 
@@ -304,17 +304,17 @@ Primeiro, anotamos nosso `RegistrationIntentService` com o seguinte atributo par
 [Service (Exported = false)]
 ```
 
-O `RegistrationIntentService` Construtor nomeia o thread de trabalho *RegistrationIntentService* para facilitar a depuração. 
+O construtor de `RegistrationIntentService` nomeia o thread de trabalho *RegistrationIntentService* para facilitar a depuração. 
 
 ```csharp
 public RegistrationIntentService() : base ("RegistrationIntentService") { }
 ```
 
-A principal funcionalidade do `RegistrationIntentService` reside `OnHandleIntent` no método. Vamos examinar esse código para ver como ele registra nosso aplicativo com o GCM.
+A funcionalidade principal do `RegistrationIntentService` reside no método `OnHandleIntent`. Vamos examinar esse código para ver como ele registra nosso aplicativo com o GCM.
 
 #### <a name="request-a-registration-token"></a>Solicitar um token de registro
 
-`OnHandleIntent`primeiro chama o método [InstanceId. GetToken](https://developers.google.com/android/reference/com/google/android/gms/iid/InstanceID.html#getToken&#40;java.lang.String,%20java.lang.String&#41;) do Google para solicitar um token de registro do gcm. Encapsulamos esse código em um `lock` para proteger contra a possibilidade de várias tentativas de registro ocorrendo `lock` simultaneamente &ndash; , garantindo que essas tentativas sejam processadas em sequência. Se não conseguirmos obter um token de registro, uma exceção é lançada e registramos um erro. Se o registro for bem sucedido, `token` será definido para o token de registro que obtemos de volta do gcm: 
+`OnHandleIntent` primeiro chama o método [InstanceId. GetToken](https://developers.google.com/android/reference/com/google/android/gms/iid/InstanceID.html#getToken&#40;java.lang.String,%20java.lang.String&#41;) do Google para solicitar um token de registro do gcm. Encapsulamos esse código em um `lock` para proteger contra a possibilidade de várias tentativas de registro ocorrerem simultaneamente &ndash; o `lock` garante que essas intenções sejam processadas em sequência. Se não conseguirmos obter um token de registro, uma exceção é lançada e registramos um erro. Se o registro for bem sucedido, `token` será definido para o token de registro que obtemos de volta do GCM: 
 
 ```csharp
 static object locker = new object ();
@@ -336,7 +336,7 @@ catch (Exception e)
 
 #### <a name="forward-the-registration-token-to-the-app-server"></a>Encaminhar o token de registro para o servidor de aplicativos
 
-Se recebermos um token de registro (ou seja, nenhuma exceção foi gerada), chamamos `SendRegistrationToAppServer` para associar o token de registro do usuário à conta do lado do servidor (se houver) que é mantida pelo nosso aplicativo. Como essa implementação depende do design do servidor de aplicativos, um método vazio é fornecido aqui: 
+Se recebermos um token de registro (ou seja, nenhuma exceção foi lançada), chamamos `SendRegistrationToAppServer` para associar o token de registro do usuário à conta do lado do servidor (se houver) que é mantida pelo nosso aplicativo. Como essa implementação depende do design do servidor de aplicativos, um método vazio é fornecido aqui: 
 
 ```csharp
 void SendRegistrationToAppServer (string token)
@@ -345,11 +345,11 @@ void SendRegistrationToAppServer (string token)
 }
 ```
 
-Em alguns casos, o servidor de aplicativos não precisa do token de registro do usuário; Nesse caso, esse método pode ser omitido. Quando um token de registro é enviado ao servidor de aplicativos `SendRegistrationToAppServer` , o deve manter um booliano para indicar se o token foi enviado ao servidor. Se esse booliano for false `SendRegistrationToAppServer` , enviará o token para o &ndash; servidor de aplicativos, caso contrário, o token já foi enviado para o servidor de aplicativos em uma chamada anterior. 
+Em alguns casos, o servidor de aplicativos não precisa do token de registro do usuário; Nesse caso, esse método pode ser omitido. Quando um token de registro é enviado ao servidor de aplicativos, `SendRegistrationToAppServer` deve manter um booliano para indicar se o token foi enviado ao servidor. Se esse booliano for false, `SendRegistrationToAppServer` enviará o token para o servidor de aplicativos &ndash; caso contrário, o token já foi enviado para o servidor de aplicativos em uma chamada anterior. 
 
 #### <a name="subscribe-to-the-notification-topic"></a>Assinar o tópico de notificação
 
-Em seguida, chamamos nosso `Subscribe` método para indicar ao GCM que desejamos assinar um tópico de notificação. No `Subscribe`, chamamos a API [GcmPubSub. Subscribe](https://developers.google.com/android/reference/com/google/android/gms/gcm/GcmPubSub.html#subscribe&#40;java.lang.String,%20java.lang.String,%20android.os.Bundle&#41;) para assinar nosso aplicativo cliente para todas as mensagens em `/topics/global`:
+Em seguida, chamamos nosso método `Subscribe` para indicar ao GCM que desejamos assinar um tópico de notificação. Em `Subscribe`, chamamos a API [GcmPubSub. Subscribe](https://developers.google.com/android/reference/com/google/android/gms/gcm/GcmPubSub.html#subscribe&#40;java.lang.String,%20java.lang.String,%20android.os.Bundle&#41;) para assinar nosso aplicativo cliente para todas as mensagens em `/topics/global`:
 
 ```csharp
 void Subscribe (string token)
@@ -359,13 +359,13 @@ void Subscribe (string token)
 }
 ```
 
-O servidor de aplicativos deve enviar mensagens de `/topics/global` notificação para se tivéssemos de recebê-las. Observe que o nome do tópico `/topics` em pode ser qualquer coisa que você desejar, desde que o servidor de aplicativos e o aplicativo cliente concordem com esses nomes. (Aqui, escolhemos o nome `global` para indicar que desejamos receber mensagens em todos os tópicos com suporte no servidor de aplicativos.) 
+O servidor de aplicativos deve enviar mensagens de notificação para `/topics/global` se forem recebê-las. Observe que o nome do tópico em `/topics` pode ser qualquer coisa que você desejar, desde que o servidor de aplicativos e o aplicativo cliente concordem com esses nomes. (Aqui, escolhemos o nome `global` para indicar que desejamos receber mensagens em todos os tópicos com suporte no servidor de aplicativos.) 
 
 Para obter informações sobre mensagens de tópico do GCM no lado do servidor, consulte [enviar mensagens para tópicos](https://developers.google.com/cloud-messaging/topic-messaging)do Google. 
 
 #### <a name="implement-an-instance-id-listener-service"></a>Implementar um serviço de ouvinte de ID de instância
 
-Os tokens de registro são exclusivos e seguros; no entanto, o aplicativo cliente (ou GCM) pode precisar atualizar o token de registro no caso de reinstalação do aplicativo ou um problema de segurança. Por esse motivo, devemos implementar um `InstanceIdListenerService` que responda a solicitações de atualização de token do gcm. 
+Os tokens de registro são exclusivos e seguros; no entanto, o aplicativo cliente (ou GCM) pode precisar atualizar o token de registro no caso de reinstalação do aplicativo ou um problema de segurança. Por esse motivo, devemos implementar um `InstanceIdListenerService` que responda a solicitações de atualização de token do GCM. 
 
 Adicione um novo arquivo chamado **InstanceIdListenerService.cs** e substitua o código do modelo pelo seguinte: 
 
@@ -388,13 +388,13 @@ namespace ClientApp
 }
 ```
 
-Anote o seguinte atributo para indicar que o serviço não deve ser instanciado pelo sistema e que ele possa receber o token de registro do gcm (também chamado de *ID de instância*) solicitações de atualização: `InstanceIdListenerService` 
+Anote `InstanceIdListenerService` com o seguinte atributo para indicar que o serviço não deve ser instanciado pelo sistema e que ele possa receber as solicitações de atualização do token de registro do GCM (também chamada de *ID de instância*): 
 
 ```csharp
 [Service(Exported = false), IntentFilter(new[] { "com.google.android.gms.iid.InstanceID" })]
 ```
 
-O `OnTokenRefresh` método em nosso serviço inicia o `RegistrationIntentService` para que ele possa interceptar o novo token de registro.
+O método `OnTokenRefresh` em nosso serviço inicia o `RegistrationIntentService` para que ele possa interceptar o novo token de registro.
 
 #### <a name="test-registration-with-gcm"></a>Testar o registro com o GCM
 
@@ -459,15 +459,15 @@ namespace ClientApp
 }
 ```
 
-Vamos dar uma olhada em cada seção de nosso `GcmListenerService` para entender como ela funciona. 
+Vamos dar uma olhada em cada seção de nossa `GcmListenerService` para entender como ela funciona. 
 
-Primeiro, anotamos `GcmListenerService` um atributo para indicar que esse serviço não deve ser instanciado pelo sistema e incluímos um filtro de intenção para indicar que ele recebe mensagens do gcm: 
+Primeiro, anotamos `GcmListenerService` com um atributo para indicar que esse serviço não deve ser instanciado pelo sistema e incluímos um filtro de intenção para indicar que ele recebe as mensagens do GCM: 
 
 ```csharp
 [Service (Exported = false), IntentFilter (new [] { "com.google.android.c2dm.intent.RECEIVE" })]
 ```
 
-Quando `GcmListenerService` o recebe uma mensagem do gcm, `OnMessageReceived` o método é invocado. Esse método extrai o conteúdo da mensagem do passado `Bundle`, registra o conteúdo da mensagem (para que possamos exibi-lo na janela de saída) e as chamadas `SendNotification` para iniciar uma notificação local com o conteúdo da mensagem recebida: 
+Quando `GcmListenerService` recebe uma mensagem do GCM, o método `OnMessageReceived` é invocado. Esse método extrai o conteúdo da mensagem do `Bundle`passado, registra o conteúdo da mensagem (para que possamos exibi-lo na janela de saída) e chama `SendNotification` para iniciar uma notificação local com o conteúdo da mensagem recebida: 
 
 ```csharp
 var message = data.GetString ("message");
@@ -476,12 +476,12 @@ Log.Debug ("MyGcmListenerService", "Message: " + message);
 SendNotification (message);
 ```
 
-O `SendNotification` método usa `Notification.Builder` para criar a notificação e, em seguida, usa `NotificationManager` o para iniciar a notificação. Efetivamente, isso converte a mensagem de notificação remota em uma notificação local para ser apresentada ao usuário.
-Para obter mais informações sobre `Notification.Builder` como `NotificationManager`usar o e o, consulte [notificações locais](~/android/app-fundamentals/notifications/local-notifications.md).
+O método `SendNotification` usa `Notification.Builder` para criar a notificação e, em seguida, usa o `NotificationManager` para iniciar a notificação. Efetivamente, isso converte a mensagem de notificação remota em uma notificação local para ser apresentada ao usuário.
+Para obter mais informações sobre como usar `Notification.Builder` e `NotificationManager`, consulte [notificações locais](~/android/app-fundamentals/notifications/local-notifications.md).
 
 #### <a name="declare-the-receiver-in-the-manifest"></a>Declarar o receptor no manifesto
 
-Antes que possamos receber mensagens do GCM, devemos declarar o ouvinte do GCM no manifesto do Android. Vamos editar **AndroidManifest. xml** e substituir a `<application>` seção pelo seguinte XML: 
+Antes que possamos receber mensagens do GCM, devemos declarar o ouvinte do GCM no manifesto do Android. Vamos editar **AndroidManifest. xml** e substituir a seção `<application>` pelo seguinte XML: 
 
 ```xml
 <application android:label="RemoteNotifications" android:icon="@drawable/Icon">
@@ -508,11 +508,11 @@ Vejamos o que cada configuração nesse XML faz:
 |`com.google.android.c2dm.intent.RECEIVE`|O filtro de intenção anuncia que nosso aplicativo lida com mensagens de difusão do GCM.|
 |`com.google.android.c2dm.intent.REGISTRATION`|O filtro de intenção anuncia que nosso aplicativo lida com novas tentativas de registro (ou seja, implementamos um serviço de ouvinte de ID de instância).|
 
-Como alternativa, você pode decorar `GcmListenerService` com esses atributos em vez de especificá-los em XML. aqui, nós os especificamos em **AndroidManifest. xml** para que os exemplos de código sejam mais fáceis de seguir. 
+Como alternativa, você pode decorar `GcmListenerService` com esses atributos em vez de especificá-los em XML; aqui, nós os especificamos em **AndroidManifest. xml** para que os exemplos de código sejam mais fáceis de seguir. 
 
 ### <a name="create-a-message-sender-to-test-the-app"></a>Criar um remetente de mensagem para testar o aplicativo
 
-Vamos adicionar um C# projeto de aplicativo de console de desktop à solução e chamá-lo de **MessageSender**. Usaremos esse aplicativo de console para simular um servidor de &ndash; aplicativos que enviará mensagens de notificação para **ClientApp** por meio do gcm. 
+Vamos adicionar um C# projeto de aplicativo de console de desktop à solução e chamá-lo de **MessageSender**. Usaremos esse aplicativo de console para simular um servidor de aplicativos &ndash; ele enviará mensagens de notificação para **ClientApp** por meio do gcm. 
 
 #### <a name="add-the-jsonnet-package"></a>Adicionar o pacote Json.NET
 
@@ -520,11 +520,11 @@ Nesse aplicativo de console, estamos criando um conteúdo JSON que contém a men
 
 Vamos procurar o pacote **JSON.net** e instalá-lo no projeto: 
 
-[![Instalando o pacote Json.NET](remote-notifications-with-gcm-images/4-add-json.net-sml.png)](remote-notifications-with-gcm-images/4-add-json.net.png#lightbox)
+[![instalar o pacote Json.NET](remote-notifications-with-gcm-images/4-add-json.net-sml.png)](remote-notifications-with-gcm-images/4-add-json.net.png#lightbox)
 
 #### <a name="add-a-reference-to-systemnethttp"></a>Adicionar uma referência a System .net. http
 
-Também precisaremos adicionar uma referência para `System.Net.Http` que possamos instanciar um para enviar nossa mensagem de teste para o `HttpClient` gcm. No projeto **MessageSender** , clique com o botão direito do mouse em **referências > Adicionar referência** e role para baixo até ver **System .net. http**. Coloque uma marca de seleção ao lado de **System .net. http** e clique em **OK**. 
+Também precisaremos adicionar uma referência a `System.Net.Http` para que possamos criar uma instância de um `HttpClient` para enviar nossa mensagem de teste para o GCM. No projeto **MessageSender** , clique com o botão direito do mouse em **referências > Adicionar referência** e role para baixo até ver **System .net. http**. Coloque uma marca de seleção ao lado de **System .net. http** e clique em **OK**. 
 
 #### <a name="implement-code-that-sends-a-test-message"></a>Implementar o código que envia uma mensagem de teste
 
@@ -601,9 +601,9 @@ O GCM, por sua vez, encaminha essa mensagem para seu aplicativo cliente. Vamos c
 
 ### <a name="try-it"></a>Experimente!
 
-Agora estamos prontos para testar nosso aplicativo cliente. Se você estiver usando um emulador ou se o dispositivo estiver se comunicando com o GCM por Wi-Fi, você deverá abrir as seguintes portas TCP no firewall para que as mensagens do GCM sejam obtidas: 5228, 5229 e 5230.
+Agora estamos prontos para testar nosso aplicativo cliente. Se você estiver usando um emulador ou se o dispositivo estiver se comunicando com o GCM por Wi-Fi, você deverá abrir as seguintes portas TCP no firewall para que as mensagens do GCM obtenham por meio de: 5228, 5229 e 5230.
 
-Inicie o aplicativo cliente e assista à janela saída. Após o `RegistrationIntentService` recebimento bem-sucedido de um token de registro do gcm, a janela de saída deve exibir o token com a saída do log semelhante ao seguinte:
+Inicie o aplicativo cliente e assista à janela saída. Depois que o `RegistrationIntentService` receber com êxito um token de registro do GCM, a janela de saída deverá exibir o token com a saída do log semelhante ao seguinte:
 
 ```shell
 I/RegistrationIntentService(16103): GCM Registration Token: eX9ggabZV1Q:APA91bHjBnQXMUeBOT6JDiLpRt8m2YWtY ...
@@ -633,11 +633,11 @@ D/MyGcmListenerService(16103): Message: Hello, Xamarin!
 
 Além disso, você deve observar que um novo ícone de notificação apareceu na bandeja de notificação: 
 
-[![O ícone de notificação aparece no dispositivo](remote-notifications-with-gcm-images/5-icon-appears-sml.png)](remote-notifications-with-gcm-images/5-icon-appears.png#lightbox)
+[![ícone de notificação aparece no dispositivo](remote-notifications-with-gcm-images/5-icon-appears-sml.png)](remote-notifications-with-gcm-images/5-icon-appears.png#lightbox)
 
 Ao abrir a bandeja de notificação para exibir notificações, você deverá ver nossa notificação remota:
 
-[![A mensagem de notificação é exibida](remote-notifications-with-gcm-images/6-notification-in-tray-sml.png)](remote-notifications-with-gcm-images/6-notification-in-tray.png#lightbox)
+[![mensagem de notificação é exibida](remote-notifications-with-gcm-images/6-notification-in-tray-sml.png)](remote-notifications-with-gcm-images/6-notification-in-tray.png#lightbox)
 
 Parabéns, seu aplicativo recebeu sua primeira notificação remota!
 

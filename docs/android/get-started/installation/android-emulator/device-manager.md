@@ -5,20 +5,20 @@ zone_pivot_groups: platform
 ms.prod: xamarin
 ms.assetid: ECB327F3-FF1C-45CC-9FA6-9C11032BD5EF
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.custom: video
 ms.date: 01/22/2019
-ms.openlocfilehash: 682fc5c2241ab3177b12f46dd31d264a4f58b951
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.openlocfilehash: 64e637648b03dff81468f2d7ad072c7acc50868b
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71250090"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73021148"
 ---
 # <a name="managing-virtual-devices-with-the-android-device-manager"></a>Gerenciando dispositivos virtuais com o Android Device Manager
 
-_Este artigo explica como usar o Android Device Manager para criar e configurar AVDs (Dispositivos Virtuais Android) que emulam dispositivos físicos Android. É possível usar esses dispositivos virtuais para executar e testar aplicativos, sem a necessidade de um dispositivo físico._
+_Este artigo explica como usar o Android Device Manager para criar e configurar dispositivos virtuais Android (AVDs) que emulam dispositivos Android físicos. Você pode usar esses dispositivos virtuais para executar e testar seu aplicativo sem precisar contar com um dispositivo físico._
 
 Depois de ter verificado se a aceleração de hardware está habilitada (conforme descrito em [Aceleração de hardware para o desempenho do emulador](~/android/get-started/installation/android-emulator/hardware-acceleration.md)), a próxima etapa é usar o _Android Device Manager_ (também conhecido como o _Xamarin Android Device Manager_) para criar dispositivos virtuais que você pode usar para testar e depurar o aplicativo.
 
@@ -44,7 +44,7 @@ Para usar o Android Device Manager, os seguintes serão necessários:
 - Ferramentas do Visual Studio para Xamarin versão 4.9 ou posterior.
 
 - O SDK do Android precisa ser instalado (confira [Configurando o SDK do Android para Xamarin.Android](~/android/get-started/installation/android-sdk.md)).
-  Certifique-se de instalar o SDK do Android em seu local padrão, se ainda não estiver instalado: **C:\\Program Files (x86)\\Android\\android-sdk**.
+  Lembre-se de instalar o SDK do Android na localização padrão se ele ainda não estiver instalado: **C:\\Arquivos de Programas (x86)\\Android\\android-sdk**.
 
 - Os pacotes a seguir precisam ser instalados (por meio do [Gerenciador do SDK do Android](~/android/get-started/installation/android-sdk.md)): 
   - **Android SDK Tools versão 26.1.1** ou posterior

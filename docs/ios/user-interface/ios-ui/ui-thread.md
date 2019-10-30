@@ -4,15 +4,15 @@ description: Este documento descreve como trabalhar com o thread de interface do
 ms.prod: xamarin
 ms.assetid: 98762ACA-AD5A-4E1E-A536-7AF3BE36D77E
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: ab72034d7b565a31c59d997f03844b6c8c959785
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: ee7ab7c5d0503cffd2c12a493f314f191d912e92
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70768173"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73002844"
 ---
 # <a name="working-with-the-ui-thread-in-xamarinios"></a>Trabalhando com o thread de interface do usuário no Xamarin. iOS
 
@@ -24,7 +24,7 @@ Seu código só deve fazer alterações nos controles da interface do usuário d
 
 Quando você está criando controles em uma exibição ou manipulando um evento iniciado pelo usuário, como um toque, o código já está em execução no contexto do thread da interface do usuário.
 
-Se o código estiver sendo executado em um thread em segundo plano, em uma tarefa ou em um retorno de chamada, provavelmente não será executado no thread da interface do usuário principal. Nesse caso, você deve encapsular o código em uma chamada `InvokeOnMainThread` para `BeginInvokeOnMainThread` ou assim:
+Se o código estiver sendo executado em um thread em segundo plano, em uma tarefa ou em um retorno de chamada, provavelmente não será executado no thread da interface do usuário principal. Nesse caso, você deve encapsular o código em uma chamada para `InvokeOnMainThread` ou `BeginInvokeOnMainThread` assim:
 
 ```csharp
 InvokeOnMainThread ( () => {
@@ -32,17 +32,17 @@ InvokeOnMainThread ( () => {
 });
 ```
 
-O `InvokeOnMainThread` método é definido em `NSObject` para que possa ser chamado de dentro de métodos definidos em qualquer objeto UIKit (como um modo de exibição ou controlador de exibição).
+O método `InvokeOnMainThread` é definido em `NSObject` para que possa ser chamado de dentro de métodos definidos em qualquer objeto UIKit (como um modo de exibição ou controlador de exibição).
 
 Durante a depuração de aplicativos Xamarin. iOS, um erro será gerado se o seu código tentar acessar um controle de interface do usuário a partir do thread errado. Isso ajuda a rastrear e corrigir esses problemas com o método InvokeOnMainThread. Isso ocorre apenas durante a depuração e não gera um erro nas compilações de versão. A mensagem de erro será exibida da seguinte maneira:
 
- ![](ui-thread-images/image10.png "Execução de thread de interface do usuário")
+ ![](ui-thread-images/image10.png "UI Thread Execution")
 
  <a name="Background_Thread_Example" />
 
 ## <a name="background-thread-example"></a>Exemplo de thread em segundo plano
 
-Aqui está um exemplo que tenta acessar um controle de interface do usuário ( `UILabel`a) de um thread em segundo plano usando um thread simples:
+Aqui está um exemplo que tenta acessar um controle de interface do usuário (um `UILabel`) de um thread em segundo plano usando um thread simples:
 
 ```csharp
 new System.Threading.Thread(new System.Threading.ThreadStart(() => {
@@ -50,7 +50,7 @@ new System.Threading.Thread(new System.Threading.ThreadStart(() => {
 })).Start();
 ```
 
-Esse código gerará o `UIKitThreadAccessException` durante a depuração. Para corrigir o problema (e garantir que o controle de interface do usuário seja acessado somente do thread principal da interface do usuário), empacote qualquer código `InvokeOnMainThread` que referencie controles da interface do usuário dentro de uma expressão como esta:
+Esse código gerará o `UIKitThreadAccessException` durante a depuração. Para corrigir o problema (e garantir que o controle de interface do usuário seja acessado somente do thread principal da interface do usuário), empacote qualquer código que referencie controles da interface do usuário dentro de uma expressão `InvokeOnMainThread` como esta:
 
 ```csharp
 new System.Threading.Thread(new System.Threading.ThreadStart(() => {
@@ -66,9 +66,9 @@ Você não precisará usá-lo para o restante dos exemplos neste documento, mas 
 
 ## <a name="asyncawait-example"></a>Exemplo de Async/Await
 
-Ao usar as C# 5 palavras-chave `InvokeOnMainThread` Async/Await não é necessária porque quando uma tarefa esperada é concluída, o método continua no thread de chamada.
+Ao usar as C# cinco palavras-chave Async/Await`InvokeOnMainThread`não é necessário porque quando uma tarefa esperada é concluída, o método continua no thread de chamada.
 
-Este código de exemplo (que aguarda em uma chamada de método de atraso, puramente para fins de demonstração) mostra um método assíncrono chamado no thread da interface do usuário (trata-se de um manipulador TouchUpInside). Como o método recipiente é chamado no thread da interface do usuário, as operações da interface do usuário `UILabel` , como definir `UIAlertView` o texto em um ou mostrar um, podem ser chamadas com segurança após a conclusão das operações assíncronas em threads em segundo plano.
+Este código de exemplo (que aguarda em uma chamada de método de atraso, puramente para fins de demonstração) mostra um método assíncrono chamado no thread da interface do usuário (trata-se de um manipulador TouchUpInside). Como o método recipiente é chamado no thread da interface do usuário, as operações de interface do usuário como definir o texto em um `UILabel` ou mostrar um `UIAlertView` podem ser chamadas com segurança após as operações assíncronas terem sido concluídas em threads em segundo plano.
 
 ```csharp
 async partial void button2_TouchUpInside (UIButton sender)
@@ -89,7 +89,7 @@ async partial void button2_TouchUpInside (UIButton sender)
 }
 ```
 
-Se um método assíncrono for chamado de um thread em segundo plano (não o thread da interface `InvokeOnMainThread` do usuário principal), ainda seria necessário.
+Se um método assíncrono for chamado de um thread em segundo plano (não o thread da interface do usuário principal), `InvokeOnMainThread` ainda seria necessário.
 
 ## <a name="related-links"></a>Links relacionados
 

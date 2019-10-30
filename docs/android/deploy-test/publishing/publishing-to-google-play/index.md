@@ -3,15 +3,15 @@ title: Publicando no Google Play
 ms.prod: xamarin
 ms.assetid: FB1CC234-3554-8566-48BD-2B9B3A28CC7F
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: 656b74bce10d30ddd463486c5103d65c6ba5eb97
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.openlocfilehash: 77fc4cbb15c47b87b0fa33e81b0b3749115af076
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71250017"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73021277"
 ---
 # <a name="publishing-to-google-play"></a>Publicando no Google Play
 
@@ -124,7 +124,7 @@ O Xamarin Android 7.0 introduz um fluxo de trabalho integrado para a publicaçã
 5. Assine o aplicativo com o seu certificado.
 6. Publique o aplicativo assinado no Google Play.
 
-Em [Arquivo Morto para Publicação](~/android/deploy-test/release-prep/index.md#archive), a caixa de diálogo **Canal de Distribuição** apresentou duas opções de distribuição: **Ad Hoc** e **Google Play**. Se, em vez disso, for exibida a caixa de diálogo **Identidade de assinatura**, clique em **Voltar** para retornar para a caixa de diálogo **Canal de distribuição**. Selecione **Google Play** e clique em **Avançar**:
+Em [Arquivar para publicação](~/android/deploy-test/release-prep/index.md#archive), a caixa de diálogo **Canal de Distribuição** apresentou duas opções de distribuição: **Ad Hoc** e **Google Play**. Se, em vez disso, for exibida a caixa de diálogo **Identidade de assinatura**, clique em **Voltar** para retornar para a caixa de diálogo **Canal de distribuição**. Selecione **Google Play** e clique em **Avançar**:
 
 [![Caixa de diálogo Canal de Distribuição](images/vs/01-distribution-channel-sml.png)](images/vs/01-distribution-channel.png#lightbox)
 
@@ -219,7 +219,7 @@ Clique em **Permitir** para autorizar o aplicativo:
 
 #### <a name="publish"></a>Publicar
 
-Depois de clicar em **Permitir**, o navegador informa _Código de verificação recebido. Fechando..._ e o aplicativo é adicionado à lista de Contas do Google Play no Visual Studio. Na caixa de diálogo **Contas do Google Play**, clique em **Continuar**:
+Depois de clicar em **permitir**, o navegador relata o _código de verificação recebido. Fechando..._ e o aplicativo é adicionado à lista de contas de Google Play no Visual Studio. Na caixa de diálogo **Contas do Google Play**, clique em **Continuar**:
 
 [![Conta adicionada às Contas do Google Play](images/vs/07-account-added-sml.png)](images/vs/07-account-added.png#lightbox)
 
@@ -298,7 +298,7 @@ Agora o aplicativo pode ser carregado no Google Play. A caixa de diálogo **Publ
 
 Observe que um APK já deve ter sido enviado para o repositório do Google Play antes do **Publicar no Google Play** funcionar. Se um APK não estiver carregado, poderá ocorrer o seguinte erro:
 
-> _O Google Play exige que você faça upload manualmente do seu primeiro APK para esse aplicativo. Você pode usar um APK ad hoc para isso._
+> _Google Play exige que você carregue manualmente seu primeiro APK para este aplicativo. Você pode usar um APK ad hoc para isso._
 
 ou
 

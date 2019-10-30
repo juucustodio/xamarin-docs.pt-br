@@ -4,19 +4,19 @@ description: Este documento descreve como usar as APIs System. Threading em um a
 ms.prod: xamarin
 ms.assetid: 50BCAF3B-1020-DDC1-0339-7028985AAC72
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/05/2017
-ms.openlocfilehash: 7d3f00f3abd13d2edf8b827a881768fbd54d6379
-ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
+ms.openlocfilehash: 1c9282c790aa5436667b37e1861a96afffcaa668
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71106016"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73009446"
 ---
 # <a name="threading-in-xamarinios"></a>Threading no Xamarin. iOS
 
-O tempo de execução do Xamarin. IOS fornece aos desenvolvedores acesso às APIs de Threading do .net, explicitamente ao`System.Threading.Thread, System.Threading.ThreadPool`usar threads () e implicitamente ao usar os padrões de delegado assíncrono ou os métodos BeginXxx, bem como o intervalo completo de APIs que dão suporte ao Biblioteca paralela de tarefas.
+O tempo de execução do Xamarin. iOS fornece aos desenvolvedores acesso às APIs de Threading do .NET, explicitamente ao usar threads (`System.Threading.Thread, System.Threading.ThreadPool`) e implicitamente ao usar os padrões de delegado assíncrono ou os métodos BeginXXX, bem como o intervalo completo de APIs que dão suporte à tarefa Biblioteca paralela.
 
 O Xamarin recomenda enfaticamente que você use a TPL ( [biblioteca paralela de tarefas](https://msdn.microsoft.com/library/dd460717.aspx) ) para compilar aplicativos por alguns motivos:
 
@@ -24,7 +24,7 @@ O Xamarin recomenda enfaticamente que você use a TPL ( [biblioteca paralela de 
 - É mais fácil pensar nas operações em termos de tarefas TPL. Você pode manipulá-los facilmente, agendá-los, serializar sua execução ou iniciar muitos em paralelo com um rico conjunto de APIs. 
 - É a base para a programação com as novas C# extensões de linguagem assíncrona. 
 
-O pool de threads aumentará lentamente o número de threads conforme necessário, com base no número de núcleos de CPU disponíveis no sistema, na carga do sistema e nas demandas do aplicativo. Você pode usar esse pool de threads invocando métodos no `System.Threading.ThreadPool` ou usando o padrão `System.Threading.Tasks.TaskScheduler` (parte das *estruturas paralelas*).
+O pool de threads aumentará lentamente o número de threads conforme necessário, com base no número de núcleos de CPU disponíveis no sistema, na carga do sistema e nas demandas do aplicativo. Você pode usar esse pool de threads invocando métodos no `System.Threading.ThreadPool` ou usando o `System.Threading.Tasks.TaskScheduler` padrão (parte das *estruturas paralelas*).
 
 Normalmente, os desenvolvedores usam threads quando precisam criar aplicativos responsivos e não desejam bloquear o loop de execução da interface do usuário principal.
 
@@ -55,9 +55,9 @@ O acima invoca o código dentro do delegado no contexto do thread principal, sem
 
 ## <a name="threading-and-garbage-collection"></a>Threading e coleta de lixo
 
-No decorrer da execução, o tempo de execução do Objective-C criará e liberará objetos. Se os objetos forem sinalizados para "liberação automática", o tempo de execução do Objective-C liberará esses `NSAutoReleasePool`objetos para o atual do thread. O Xamarin. Ios cria `NSAutoRelease` um pool para cada thread `System.Threading.ThreadPool` do e para o thread principal. Essa extensão abrange todos os threads criados usando o TaskScheduler padrão em System. Threading. Tasks.
+No decorrer da execução, o tempo de execução do Objective-C criará e liberará objetos. Se os objetos forem sinalizados para "liberação automática", o tempo de execução do Objective-C liberará esses objetos para o `NSAutoReleasePool`atual do thread. O Xamarin. iOS cria um pool de `NSAutoRelease` para cada thread do `System.Threading.ThreadPool` e para o thread principal. Essa extensão abrange todos os threads criados usando o TaskScheduler padrão em System. Threading. Tasks.
 
-Se você criar seus próprios threads `System.Threading` usando o, precisará fornecer seu `NSAutoRelease` próprio pool para impedir que os dados sejam vazados. Para fazer isso, basta encapsular o thread na seguinte parte do código:
+Se você criar seus próprios threads usando `System.Threading` você precisará fornecer seu próprio pool de `NSAutoRelease` para impedir que os dados sejam vazados. Para fazer isso, basta encapsular o thread na seguinte parte do código:
 
 ```csharp
 void MyThreadStart (object arg)
@@ -68,7 +68,7 @@ void MyThreadStart (object arg)
 }
 ```
 
-Observação: Como o Xamarin. iOS 5,2, você não precisa fornecer o seu `NSAutoReleasePool` próprio como um será fornecido automaticamente para você.
+Observação: como o Xamarin. iOS 5,2, você não precisa fornecer seu próprio `NSAutoReleasePool` mais uma vez que ele será fornecido automaticamente para você.
 
 ## <a name="related-links"></a>Links relacionados
 

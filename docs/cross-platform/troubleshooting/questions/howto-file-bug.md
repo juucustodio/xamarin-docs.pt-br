@@ -1,66 +1,66 @@
 ---
 title: Quando e como devo criar um relatório de bugs?
-description: Este documento descreve quando, onde e como em um arquivo de um relatório de bugs. Ele também fornece as práticas recomendadas que permitem que os engenheiros a melhor diagnosticar o problema de relatório de bugs.
+description: Este documento descreve quando, onde e como arquivar um relatório de bugs. Ele também fornece práticas recomendadas de relatório de bugs que permitem aos engenheiros diagnosticar melhor o problema.
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 8AD9CFBF-282A-4C1F-95E9-25F21141B052
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 08/01/2018
-ms.openlocfilehash: 1224d38a2230fa2f5c7ca08f6e33c5468886c206
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: df00eebe682d2d06b99721a2d3c3b90d13454c75
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61356981"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73014000"
 ---
 # <a name="when-and-how-should-i-file-a-bug-report"></a>Quando e como devo criar um relatório de bugs?
 
 > [!TIP]
-> Use o **relatar um problema** item de menu no Visual Studio &ndash; Isso enviará informações de diagnóstico junto com o relatório de bug para ajudar a resolver o problema.
+> Use o item de menu **relatar um problema** no Visual Studio &ndash; isso enviará informações de diagnóstico junto com o relatório de bugs para ajudar a resolver o problema.
 >
-> Há instruções detalhadas para [2019 do Visual Studio ou Visual Studio 2017](https://docs.microsoft.com/visualstudio/ide/how-to-report-a-problem-with-visual-studio) e [Visual Studio para Mac](https://docs.microsoft.com/visualstudio/mac/report-a-problem).
+> Há instruções detalhadas para o [visual studio 2019 ou o visual studio 2017](https://docs.microsoft.com/visualstudio/ide/how-to-report-a-problem-with-visual-studio) e o [Visual Studio para Mac](https://docs.microsoft.com/visualstudio/mac/report-a-problem).
 >
-> Você pode procurar por relatórios existentes na [comunidade de desenvolvedores do Visual Studio](https://developercommunity.visualstudio.com/) site.
+> Você pode pesquisar relatórios existentes no site da [comunidade de desenvolvedores do Visual Studio](https://developercommunity.visualstudio.com/) .
 
-## <a name="file-a-bug-if"></a>Registre um bug se...
+## <a name="file-a-bug-if"></a>Arquivar um bug se...
 
-Você tem um conjunto de etapas você acha que os engenheiros poderão usar para reproduzir um problema.
+Você tem um conjunto de etapas que você considera que os engenheiros poderão usar para reproduzir um problema.
 
 OU
 
-Cuidadosamente, você pode descrever os visíveis sintomas do problema, especialmente se você também pode descrever algumas circunstâncias precisas relacionadas ao problema. <sup> [[1]](#note-1)</sup>
+Você pode descrever cuidadosamente os sintomas visíveis do problema, especialmente se você também pode descrever algumas circunstâncias precisas relacionadas ao problema. <sup> [[1]](#note-1)</sup>
 
-## <a name="best-practices-to-help-address-bugs-quickly-and-efficiently"></a>Práticas recomendadas para ajudar o endereço bugs rapidamente e com eficiência
+## <a name="best-practices-to-help-address-bugs-quickly-and-efficiently"></a>Práticas recomendadas para ajudar a resolver bugs com rapidez e eficiência
 
-1. <a name="ref-1" />Pesquisa [comunidade de desenvolvedores do Visual Studio](https://developercommunity.visualstudio.com/) e da web existentes e sugestões de uso que podem resolver o problema diretamente ou relatórios de bugs.<sup> [[2]](#note-2)</sup><sup>[[3]](#note-3)</sup>
+1. <a name="ref-1" />pesquise a [comunidade de desenvolvedores do Visual Studio](https://developercommunity.visualstudio.com/) e a Web para obter relatórios de bugs ou sugestões de uso existentes que possam resolver o problema diretamente. <sup>[[2]](#note-2)</sup><sup>[[3]](#note-3)</sup>
 
-1. <a name="ref-2" />Descreva o problema como clara e concisa possível, incluindo uma descrição do que aconteceu e deveria acontecer.
+1. <a name="ref-2" />descrever o problema da maneira mais clara e concisa possível, incluindo uma descrição do que aconteceu e deveria acontecer.
 
-1. <a name="ref-3" />Incluir qualquer rastreamentos de pilha relevantes, o texto da mensagem de erro, ou os logs de falha (se você usar o **relatar um problema** recurso, eles podem ser incluídos automaticamente). <sup>[[4]](#note-4)</sup>
+1. <a name="ref-3" />incluir quaisquer rastreamentos de pilha relevantes, texto de mensagem de erro ou logs de falha (se você usar o recurso **relatar um problema** , eles poderão ser incluídos automaticamente). <sup>[quatro](#note-4)</sup>
 
-1. <a name="ref-4" />Anote qualquer mensagem de erro importante que aparecem em anexos de captura de tela muito como texto sem formatação.
+1. <a name="ref-4" />anote todas as mensagens de erro importantes que aparecem em anexos de captura de tela como texto sem formatação.
 
-1. <a name="ref-5" />Inclua um caso de teste pequeno e independente que reproduza o bug com como o mínimo possível de código.  Se você não conseguir reproduzir o problema com um novo projeto (criado usando um dos modelos internos), em seguida, compacte um projeto que demonstra o problema e anexá-lo ao relatório de bugs.  Verifique o projeto de exemplo mais simples possível antes de anexá-lo. <sup> [[5]](#note-5)</sup><sup>[[6]](#note-6)</sup>
+1. <a name="ref-5" />incluir um caso de teste pequeno e independente que reproduza o bug com o mínimo de código possível.  Se você não puder reproduzir o problema com um projeto novo (criado usando um dos modelos internos), envie um projeto que demonstre o problema e anexe-o ao relatório de bugs.  Torne o projeto de exemplo o mais simples possível antes de anexá-lo. <sup>[[5]](#note-5)</sup><sup>[[6]](#note-6)</sup>
 
-1. <a name="ref-6" />Descreva o ambiente em que o bug foi encontrado, incluindo o sistema operacional e [versões do Xamarin](~/cross-platform/troubleshooting/questions/version-logs.md) e todas as dependências.
+1. <a name="ref-6" />descrever o ambiente em que o bug foi encontrado, incluindo o sistema operacional e [as versões do Xamarin](~/cross-platform/troubleshooting/questions/version-logs.md) e quaisquer dependências.
 
 ## <a name="additional-details"></a>Detalhes adicionais
 
-1. <a name="note-1" />[*^*](#ref-1) O ideal é que a descrição dos "Sintomas visíveis" deve incluir detalhes suficientes para que outros clientes podem confirmar se eles estão vendo o mesmo problema (mesmo mensagens de erro, mesmo degradação do desempenho, rastreamento de pilha mesmo em caso de falha, _etc._ ). Para "precisas circunstâncias", um bom exemplo seria se você pode dizer algo como: "Normalmente eu atingir o problema 75% do tempo, mas se eu mudar este uma coisa, em seguida, eu posso evitar o problema completamente." Outro exemplo semelhante de "circunstância preciso" é a se fazer o downgrade para uma versão anterior do Xamarin para o problema.
+1. <a name="note-1" />[ *^* ](#ref-1) idealmente a descrição dos "sintomas visíveis" deve incluir detalhes suficientes para que outros clientes possam confirmar se estão vendo o mesmo problema (as mesmas mensagens de erro, a mesma degradação de desempenho, o mesmo rastreamento de pilha de um falha, _etc._ ). Para "circunstâncias precisas", um bom exemplo seria se você disser algo como: "normalmente, atingi o problema de 75% do tempo, mas se eu alterar essa coisa, posso evitar o problema completamente". Outro exemplo semelhante de uma "circunstância precisa" é se o downgrade para uma versão anterior do Xamarin parar o problema.
 
-1. <a name="note-2" />[*^*](#ref-2) Como você esperaria, trechos de texto de erro (ou qualquer outro texto descritivo exclusivamente) são geralmente melhores termos de pesquisa. Se o relatório de bug existente estiver incompleto, são bem-vindo ao adicionar detalhes ou arquivo em um novo, melhor relatório de bugs.
+1. <a name="note-2" />[ *^* ](#ref-2) como você esperaria, os trechos de texto de erro (ou qualquer outro texto descritivo com exclusividade) geralmente são os melhores termos de pesquisa. Se o relatório de bugs existente estiver incompleto, você poderá adicionar detalhes ou arquivar um novo relatório de bugs melhor.
 
-1. <a name="note-3" />[*^*](#ref-3) Outra boa pergunta é se o mesmo problema foi relatado para qualquer Java, Objective-C ou Swift aplicativos. Nesse caso, o problema é muito provável que parte do Android ou iOS em si em vez de parte do Xamarin.
+1. <a name="note-3" />[ *^* ](#ref-3) outra boa pergunta é se o mesmo problema foi relatado para aplicativos Java, Objective-C ou Swift. Nesse caso, o problema é, provavelmente, parte do Android ou do iOS em vez de fazer parte do Xamarin.
 
-1. <a name="note-4" />[*^*](#ref-4) Alguns exemplos de informações a serem incluídas:
+1. <a name="note-4" />[ *^* ](#ref-4) alguns exemplos de informações a serem incluídas:
 
-    1. Para erros que ocorrem ao compilar um projeto, inclua o completo [saída do build diagnóstico](~/android/troubleshooting/troubleshooting.md#Diagnostic_MSBuild_Output) no relatório de bugs.
+    1. Para erros que ocorrem durante a compilação de um projeto, inclua a [saída](~/android/troubleshooting/troubleshooting.md#Diagnostic_MSBuild_Output) completa do Build de diagnóstico no relatório de bugs.
 
-    1. Para erros que ocorrem ao compilar ou depurar um projeto do iOS do Visual Studio, execute **Ajuda > Xamarin > Logs de Zip** depois de atingir o erro e incluir o arquivo. zip resultante no relatório de bugs.
+    1. Para erros que ocorrem ao criar ou depurar um projeto do iOS do Visual Studio, execute **ajuda > Xamarin > logs zip** depois de acessar o erro e incluir o arquivo. zip resultante no relatório de bugs.
 
-    1. Para exceções ou falhas em aplicativos do Android ou iOS, inclua o relevantes [depurar logs para aplicativos xamarin. Android e xamarin. IOS](~/cross-platform/troubleshooting/questions/version-logs.md#debug-logs-for-xamarin-apps).
+    1. Para exceções ou falhas em aplicativos Android ou iOS, inclua os logs de [depuração relevantes para aplicativos xamarin. Android e xamarin. Ios](~/cross-platform/troubleshooting/questions/version-logs.md#debug-logs-for-xamarin-apps).
 
-1. <a name="note-5" />[*^*](#ref-5) Se possível para o seu problema específico, uma opção é recriar o problema adicionando um pequeno número de arquivos de sua solução original em uma solução totalmente nova. A equipe do Xamarin geralmente será capaz de investigar os problemas, mesmo em casos de teste maiores (supondo que as etapas para reproduzir são explicadas claramente), mas oferecem mais simples de casos de teste que a melhor chance de que o bug sejam resolvido rapidamente.
+1. <a name="note-5" />[ *^* ](#ref-5) se possível para seu problema específico, uma opção é recriar o problema adicionando um pequeno número de arquivos de sua solução original em uma solução totalmente nova. A equipe do Xamarin muitas vezes será capaz de investigar problemas mesmo em casos de teste maiores (supondo que as etapas para reproduzir sejam explicadas claramente), mas casos de teste mais simples dão a melhor chance de que o bug seja resolvido rapidamente.
 
-1. <a name="note-6" />[*^*](#ref-6) Se ele estiver _não_ possível reproduzir o problema adicionando um pequeno número de arquivos para uma solução totalmente nova, em seguida, você pode compactar e anexar a pasta toda a solução para seu aplicativo completo. Exclua o `bin`, `obj`, `Components`, e `packages` pastas para tornar o zip de arquivos menores. (O IDE e o processo de compilação serão geralmente restaurar ou recriar o conteúdo dessas pastas conforme necessário.) Você também pode excluir quantos recursos e código de arquivos do projeto como desejar, desde que a solução resultante ainda demonstra o problema original.
+1. <a name="note-6" />[ *^* ](#ref-6) se _não_ for possível reproduzir o problema adicionando um pequeno número de arquivos a uma solução totalmente nova, você poderá compactar e anexar a pasta da solução inteira para seu aplicativo completo. Exclua as pastas `bin`, `obj`, `Components`e `packages` para tornar o arquivo zip menor. (O IDE e o processo de compilação geralmente restauram ou recriam o conteúdo dessas pastas conforme necessário.) Você também pode excluir quantos arquivos de código e de recursos do projeto desejar, desde que a solução resultante ainda demonstre o problema original.

@@ -4,15 +4,15 @@ description: Este guia explora a configuração do ambiente do Xamarin. iOS para
 ms.prod: xamarin
 ms.assetid: A25AE660-B145-465F-9CCE-8D82BFD614C6
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/05/2017
-ms.openlocfilehash: 1d9a65ab34cb0c02368f53679d38f1d07ec1f257
-ms.sourcegitcommit: 76f930ce63b193ca3f7f85f768b031e59cb342ec
+ms.openlocfilehash: 87f81f96e51b6744e37a80819c3c88d1abb644f1
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71198561"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73022231"
 ---
 # <a name="apple-pay-in-xamarinios"></a>Apple Pay no Xamarin. iOS
 
@@ -79,7 +79,7 @@ Novo no iOS 10, o desenvolvedor pode incorporar Apple Pay diretamente em seus si
 
 ### <a name="passkit-framework-enhancements"></a>Aprimoramentos do PassKit Framework
 
-No Ios 10, a estrutura PassKit foi expandida para dar suporte a Apple Pay `UIKit` fora do e para permitir que os emissores apresentem seus próprios cartões de dentro de seus aplicativos.
+No iOS 10, a estrutura PassKit foi expandida para dar suporte a Apple Pay fora do `UIKit` e para permitir que emissores apresentem seus próprios cartões de dentro de seus aplicativos.
 
 #### <a name="supporting-apple-pay-outside-of-uikit"></a>Dando suporte a Apple Pay fora do UIKit
 
@@ -87,15 +87,15 @@ Usando [PKPaymentAuthorizationController](https://developer.apple.com/reference/
 
 #### <a name="presenting-issuer-cards-from-within-apps"></a>Apresentando os cartões do emissor de dentro dos aplicativos
 
-Com o iOS 10, novos recursos foram adicionados à estrutura PassKit, que permitem que os emissores de cartões apresentem seus cartões de dentro de seus próprios aplicativos. O desenvolvedor pode adicionar um `PKPaymentButtonTypeInStore` UIButton à interface do usuário do aplicativo que exibirá um botão de Apple Pay para um cartão.
+Com o iOS 10, novos recursos foram adicionados à estrutura PassKit, que permitem que os emissores de cartões apresentem seus cartões de dentro de seus próprios aplicativos. O desenvolvedor pode adicionar um `PKPaymentButtonTypeInStore` UIButton à interface do usuário do aplicativo, que exibirá um botão de Apple Pay para um cartão.
 
-O `PresentPaymentPass` método da classe [PKPassLibrary](https://developer.apple.com/reference/passkit/pkpasslibrary) também pode ser usado para exibir o cartão de forma programática.
+O método `PresentPaymentPass` da classe [PKPassLibrary](https://developer.apple.com/reference/passkit/pkpasslibrary) também pode ser usado para exibir o cartão de forma programática.
 
 ### <a name="new-payment-network-support"></a>Novo suporte de rede de pagamento
 
 Novo no iOS 10, um aplicativo pode dar suporte automaticamente a uma nova rede de pagamento quando ela se tornar disponível sem que o desenvolvedor precise modificar, recompilar o aplicativo e reenviá-lo para a loja de aplicativos.
 
-O novo método [AvailableNetworks](https://developer.apple.com/reference/passkit/pkpaymentrequest/1833288-availablenetworks) da `PKPaymentNetwork` classe permite que um aplicativo Descubra as redes disponíveis no dispositivo do usuário em tempo de execução. Além disso, a propriedade [SupportedNetworks](https://developer.apple.com/reference/passkit/pkpaymentrequest/1619329-supportednetworks) foi expandida para pegar o nome do provedor de pagamentos como um argumento. Usando esses métodos, um aplicativo pode dar suporte automaticamente a qualquer rede à qual o provedor de pagamento dá suporte.
+O novo método [AvailableNetworks](https://developer.apple.com/reference/passkit/pkpaymentrequest/1833288-availablenetworks) da classe `PKPaymentNetwork` permite que um aplicativo Descubra as redes disponíveis no dispositivo do usuário em tempo de execução. Além disso, a propriedade [SupportedNetworks](https://developer.apple.com/reference/passkit/pkpaymentrequest/1619329-supportednetworks) foi expandida para pegar o nome do provedor de pagamentos como um argumento. Usando esses métodos, um aplicativo pode dar suporte automaticamente a qualquer rede à qual o provedor de pagamento dá suporte.
 
 Para obter mais informações, consulte nossa [configuração de Apple Pay](~/ios/platform/apple-pay.md) e o [Guia de Apple Pay](https://developer.apple.com/apple-pay/)da Apple.
 

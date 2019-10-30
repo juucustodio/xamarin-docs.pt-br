@@ -1,84 +1,84 @@
 ---
-title: Trabalhando com o watchOS Layout no Xamarin
-description: Este documento descreve como criar um layout de watchOS usando o Xamarin. Ele aborda os controladores de interface, grupos, separadores e controles de conteúdo.
+title: Trabalhando com o layout watchOS no Xamarin
+description: Este documento descreve como criar um layout watchOS usando o Xamarin. Ele aborda os controladores de interface, grupos, separadores e controles de conteúdo.
 ms.prod: xamarin
 ms.assetid: BEDB62A1-2249-4459-986F-413A41E63DF0
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: 0f9f8981325785d69d36ccd9d4de1cd69956a155
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 568d1e354d0ee840aeed980d6e8cc6b83068a1c8
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70768745"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73001538"
 ---
-# <a name="working-with-watchos-layout-in-xamarin"></a>Trabalhando com o watchOS Layout no Xamarin
+# <a name="working-with-watchos-layout-in-xamarin"></a>Trabalhando com o layout watchOS no Xamarin
 
-Design de layouts para o Apple Watch [tamanhos de tela](~/ios/watchos/app-fundamentals/screen-sizes.md) apresenta desafios únicos.
+A criação de layouts para os [tamanhos de tela](~/ios/watchos/app-fundamentals/screen-sizes.md) de Apple Watch apresenta desafios exclusivos.
 
 ## <a name="design-tips"></a>Dicas de design
 
-O ponto principal é: tornar sua interface do usuário, legível e pode ser utilizada em uma tela pequena de inspeção, com um dedo grande. Não cair na armadilha do design para o **simulador de iOS** (que aparece muito grande) e uma **ponteiro do mouse** (que funciona com os destinos de toque minúsculo)!
+O ponto principal é: tornar sua interface do usuário legível e utilizável em uma tela pequena de inspeção, com um grande dedo. Não se enquadrar na interceptação de design para o **simulador de Ios** (que parece muito grande) e um **ponteiro do mouse** (que funciona com pequenos destinos de toque)!
 
-- Usar um plano de fundo preto, ele cria a ilusão de uma tela maior com o painel frontal de preto a inspeção.
+- Usar um plano de fundo preto – cria a ilusão de uma tela maior com o painel preto da inspeção.
 
-- Não preencher em torno de seu layout de tela – o painel frontal do forms um preenchimento visual natural.
+- Não preencha o layout da tela-o painel forma um preenchimento Visual natural.
 
-- Se concentrar na legibilidade. Usar tamanhos de fontes e cores com cuidado para garantir que o texto é legível. Use os estilos de texto interna para obter suporte automático de tipo dinâmico.
+- Concentre-se na legibilidade. Use cores e tamanhos de fonte criteriosamente para garantir que o texto seja legível. Use os estilos de texto internos para obter suporte automático de tipo dinâmico.
 
-![](layout-images/type.png "Exemplo de suporte de tipo dinâmico")
+![](layout-images/type.png "Example of Dynamic Type support")
 
-- Se concentrar em tamanhos de destino de toque. Botões/tappable linhas da tabela com rótulos de texto devem ocupar a tela inteira. Apple diz "nunca colocar mais de três itens lado a lado", e se você usar ícones e não os rótulos de texto.
+- Concentre-se em tamanhos de destino de toque. As linhas da tabela Buttons/tappable com rótulos de texto devem abranger a tela inteira. A Apple diz "Nunca coloque mais de três itens lado a lado" e, se você usar ícones e não rótulos de texto.
 
-- Use o [ `Menu` controle](~/ios/watchos/user-interface/menu.md) à funcionalidade de expor com menos frequência usada para manter o design de seu aplicativo claro e conciso.
+- Use o [controle de`Menu`](~/ios/watchos/user-interface/menu.md) para expor a funcionalidade usada com menos frequência para manter seu design de aplicativo claro e conciso.
 
 ## <a name="implementation"></a>Implementação
 
-Assista o que Kit inclui os seguintes controles para ajudar você a criar layouts de aplicativos de inspeção atraente:
+O Watch kit inclui os seguintes controles para ajudá-lo a criar layouts de aplicativo atraentes de inspeção:
 
 ### <a name="interface-controller"></a>Controlador de interface
 
-O `WKInterfaceController` é a classe base todas suas cenas.
+A `WKInterfaceController` é a classe base de todos os seus bastidores.
 
-A superfície de design para o controlador de interface se comporta como uma vertical **grupo**: você pode arrastar outros controles para o controlador de interface e eles serão apresentados horizontalmente automaticamente um acima do outro:
+A superfície de design do controlador de interface se comporta como um **grupo**vertical: você pode arrastar outros controles para o controlador de interface e eles serão automaticamente dispostos um acima do outro:
 
-![](layout-images/controller-scene.png "Os controles são apresentados automaticamente-out um acima do outro")
+![](layout-images/controller-scene.png "Controls are automatically laid-out one above the other")
 
-Você pode definir as **posição** e **tamanho** propriedades em cada controle para controlar sua aparência:
+Você pode definir as propriedades **Position** e **size** em cada controle para controlar sua aparência:
 
-![](layout-images/positionsize-attributes.png "Definir as propriedades de posição e o tamanho em cada controle")
+![](layout-images/positionsize-attributes.png "Set the Position and Size properties on each control")
 
-Quando o tamanho é definido como **relativo ao contêiner** você pode fornecer um valor proporcional e um deslocamento de ajuste. Esta captura de tela mostra um botão que foi definido para usar a 80% da largura da tela de inspeção (**0.8**):
+Quando o tamanho é definido como **relativo ao contêiner** , você pode fornecer um valor proporcional e um ajuste de deslocamento. Esta captura de tela mostra um botão que foi definido para usar 80% da largura da tela de inspeção (**0,8**):
 
-![](layout-images/button-attributes.png "Forneça um valor proporcional e um deslocamento de ajuste")
+![](layout-images/button-attributes.png "Provide a proportional value and an offset adjustment")
 
 ### <a name="group"></a>Grupo
 
-`WKInterfaceGroup` é um contêiner de layout simples que pode ser configurado para a pilha controla vertical ou horizontalmente. Ele inclui o espaçamento entre cada controle por padrão, mas você pode modificar o espaçamento (e inserções) na **atributos** Inspetor.
+`WKInterfaceGroup` é um contêiner de layout simples que pode ser configurado para empilhar controles vertical ou horizontalmente. Ele inclui o espaçamento entre cada controle por padrão, mas você pode modificar o espaçamento (e as indefinições) no Inspetor de **atributos** .
 
-![](layout-images/group-attributes.png "Modificar o espaçamento e inserções no Inspetor de atributos")
+![](layout-images/group-attributes.png "Modify the spacing and insets in the Attributes inspector")
 
-Grupos podem em si ser dimensionados e posicionados em relação os controles ao redor deles, e os grupos podem ser aninhados para criar layouts complexos.
+Os grupos podem ser dimensionados e posicionados em relação aos controles ao seu respeito, e os grupos podem ser aninhados para criar layouts complexos.
 
-![](layout-images/group-scene.png "Grupos podem ser aninhados para criar layouts complexos")
+![](layout-images/group-scene.png "Groups can be nested to create complex layouts")
 
 ### <a name="separator"></a>Separador
 
-O controle de separador destina-se para ajudar a fornecer orientação visual em seu layout. Use separadores (ou cores de plano de fundo ou imagens) para ajudar o usuário a entender o conteúdo que está relacionado na tela.
+O controle Separator destina-se a ajudar a fornecer diretrizes visuais em seu layout. Use separadores (ou cores ou imagens de plano de fundo) para ajudar o usuário a entender qual conteúdo está relacionado na tela.
 
-![](layout-images/separator-scene.png "Exemplo de uso do separador")
+![](layout-images/separator-scene.png "Example of Separator usage")
 
-Observe que os separadores de azuis e verdes que não usam a largura total da tela foram configurados com um **Fixed** ou **relativo ao contêiner** tamanhos.
+Observe que os separadores azuis e verdes que não usam a largura total da tela foram configurados com os tamanhos **fixo** ou **relativo aos contêineres** .
 
 ### <a name="content-controls"></a>Controles de conteúdo
 
-Não há nenhum layout estaria completa sem o `Label`, `Image`, `Button`, `Switch`, `Slider`, `Map`, e [outros controles](~/ios/watchos/user-interface/index.md).
-Eles podem ser posicionados em seus layouts usando **grupos** ou as configurações de posição e o tamanho em cada controle.
+Nenhum layout seria completo sem o `Label`, `Image`, `Button`, `Switch`, `Slider`, `Map`e [outros controles](~/ios/watchos/user-interface/index.md).
+Eles podem ser posicionados em seus layouts usando **grupos** ou as configurações de posição e tamanho em cada controle.
 
 ## <a name="related-links"></a>Links relacionados
 
-- [WatchKitCatalog (amostra)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
-- [Referência do Layout da Apple](https://developer.apple.com/library/prerelease/ios/documentation/UserExperience/Conceptual/WatchHumanInterfaceGuidelines/Layout.html)
-- [Fazer referência a tipografia & Cor da Apple](https://developer.apple.com/library/prerelease/ios/documentation/UserExperience/Conceptual/WatchHumanInterfaceGuidelines/ColorandTypography.html)
+- [WatchKitCatalog (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
+- [Referência de layout da Apple](https://developer.apple.com/library/prerelease/ios/documentation/UserExperience/Conceptual/WatchHumanInterfaceGuidelines/Layout.html)
+- [Referência de tipografia de & de cor da Apple](https://developer.apple.com/library/prerelease/ios/documentation/UserExperience/Conceptual/WatchHumanInterfaceGuidelines/ColorandTypography.html)

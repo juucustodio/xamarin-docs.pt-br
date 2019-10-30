@@ -3,21 +3,21 @@ title: GridLayout
 ms.prod: xamarin
 ms.assetid: B69A4BF5-9CFB-443A-9F7B-062D1E498F61
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/06/2018
-ms.openlocfilehash: bd05596ce8c6f8acb81b3ca68c6393a0be47768a
-ms.sourcegitcommit: cb13fadbaa6d19dea94b9005bda20c2efd1b8039
+ms.openlocfilehash: 4b6fcfc3120c3ef09556f3466295f4bee35fad0c
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72541921"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73029001"
 ---
 # <a name="xamarinandroid-gridlayout"></a>GridLayout do Xamarin. Android
 
 A `GridLayout` é uma nova subclasse de `ViewGroup` que dá suporte ao layout de exibições em uma grade 2D, semelhante a uma tabela HTML, como mostrado abaixo:
 
- [![Cropped GridLayout exibindo quatro células](grid-layout-images/21-gridlayoutcropped.png)](grid-layout-images/21-gridlayoutcropped.png#lightbox)
+ [![GridLayout cortada exibindo quatro células](grid-layout-images/21-gridlayoutcropped.png)](grid-layout-images/21-gridlayoutcropped.png#lightbox)
 
  `GridLayout` funciona com uma hierarquia de exibição plana, em que as exibições filhas definem seus locais na grade especificando as linhas e colunas em que elas devem estar. Dessa forma, a *GridLayout* é capaz de posicionar modos de exibição na grade sem exigir que as exibições intermediárias forneçam uma estrutura de tabela, como visto nas linhas da tabela usadas no TableLayout. Ao manter uma hierarquia plana, a *GridLayout* é capaz de fazer o layout mais rápido de suas exibições filhas. Vamos dar uma olhada em um exemplo para ilustrar o que esse conceito realmente significa no código.
 
@@ -49,11 +49,11 @@ O XML a seguir adiciona vários controles de `TextView` a uma *GridLayout*.
 
 O layout ajustará os tamanhos de linha e coluna para que as células possam ajustar seu conteúdo, conforme ilustrado pelo diagrama a seguir:
 
- [![Diagram de layout mostrando duas células à esquerda menores do que à direita](grid-layout-images/gridlayout-cells.png)](grid-layout-images/gridlayout-cells.png#lightbox)
+ [![diagrama de layout mostrando duas células à esquerda menores do que à direita](grid-layout-images/gridlayout-cells.png)](grid-layout-images/gridlayout-cells.png#lightbox)
 
 Isso resulta na seguinte interface do usuário quando executado em um aplicativo:
 
- [![Screenshot do aplicativo GridLayoutDemo exibindo quatro células](grid-layout-images/01-gridlayout.png)](grid-layout-images/01-gridlayout.png#lightbox)
+ [![captura de tela do aplicativo GridLayoutDemo exibindo quatro células](grid-layout-images/01-gridlayout.png)](grid-layout-images/01-gridlayout.png#lightbox)
 
 ## <a name="specifying-orientation"></a>Especificando a orientação
 
@@ -71,11 +71,11 @@ Observe no XML acima, cada `TextView` não especifica uma linha ou coluna. Quand
 
 Agora, a `GridLayout` posicionará as células de cima para baixo em cada coluna, em vez da esquerda para a direita, conforme mostrado abaixo:
 
- [![Diagram ilustrando como as células são posicionadas na orientação vertical](grid-layout-images/gridlayoutorientation.png)](grid-layout-images/gridlayoutorientation.png#lightbox)
+ [Diagrama![ilustrando como as células são posicionadas na orientação vertical](grid-layout-images/gridlayoutorientation.png)](grid-layout-images/gridlayoutorientation.png#lightbox)
 
 Isso resulta na seguinte interface do usuário em tempo de execução:
 
- [![Screenshot de GridLayoutDemo com células posicionadas na orientação vertical](grid-layout-images/02-gridlayout.png)](grid-layout-images/02-gridlayout.png#lightbox)
+ [![captura de tela de GridLayoutDemo com células posicionadas na orientação vertical](grid-layout-images/02-gridlayout.png)](grid-layout-images/02-gridlayout.png#lightbox)
 
 ### <a name="specifying-explicit-position"></a>Especificando a posição explícita
 
@@ -165,7 +165,7 @@ Por exemplo, o XML abaixo adiciona uma linha adicional à `GridLayout` definindo
 
 Esse XML cria o espaçamento na `GridLayout`, conforme mostrado abaixo:
 
- [![Screenshot de GridLayoutDemo ilustrando células maiores com espaçamento](grid-layout-images/03-gridlayout.png)](grid-layout-images/03-gridlayout.png#lightbox)
+ [![captura de tela de GridLayoutDemo ilustrando células maiores com espaçamento](grid-layout-images/03-gridlayout.png)](grid-layout-images/03-gridlayout.png#lightbox)
 
 O benefício de usar o novo modo de exibição de `Space` é que ele permite o espaçamento e não exige a definição de atributos em cada exibição filho.
 
@@ -216,7 +216,7 @@ O `GridLayout` também dá suporte a células que abrangem várias colunas e lin
 
 Isso fará com que a primeira coluna da `GridLayout` seja ampliada para acomodar o tamanho do botão, como vemos aqui:
 
-[![Screenshot de GridLayoutDemo com botão abrangendo apenas a primeira coluna](grid-layout-images/04-gridlayout.png)](grid-layout-images/04-gridlayout.png#lightbox)
+[![captura de tela de GridLayoutDemo com botão abrangendo apenas a primeira coluna](grid-layout-images/04-gridlayout.png)](grid-layout-images/04-gridlayout.png#lightbox)
 
 Para manter a primeira coluna de alongamento, podemos definir o botão para abranger duas colunas definindo seu ColumnSpan como este:
 
@@ -231,10 +231,10 @@ Para manter a primeira coluna de alongamento, podemos definir o botão para abra
 
 Fazer isso resulta em um layout para o `TextViews` que é semelhante ao layout que tínhamos anteriormente, com o botão adicionado à parte inferior da `GridLayout`, como mostrado abaixo:
 
- [![Screenshot de GridLayoutDemo com botão abrangendo ambas as colunas](grid-layout-images/05-gridlayout.png)](grid-layout-images/05-gridlayout.png#lightbox)
+ [![captura de tela de GridLayoutDemo com botão abrangendo ambas as colunas](grid-layout-images/05-gridlayout.png)](grid-layout-images/05-gridlayout.png#lightbox)
 
 ## <a name="related-links"></a>Links relacionados
 
 - [GridLayoutDemo (exemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/gridlayoutdemo)
-- [Introdução ao sanduíche de sorvete](http://www.android.com/about/ice-cream-sandwich/)
+- [Introdução ao sanduíche de sorvete](https://www.android.com/about/ice-cream-sandwich/)
 - [Plataforma Android 4,0](https://developer.android.com/sdk/android-4.0.html)

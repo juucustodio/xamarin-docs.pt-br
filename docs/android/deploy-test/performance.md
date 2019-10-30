@@ -4,19 +4,19 @@ description: Há várias técnicas para aumentar o desempenho dos aplicativos cr
 ms.prod: xamarin
 ms.assetid: dc2e27f2-7f71-4d57-9cf9-165528276613
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: 88e1acecdc96af596a0151bbd3f64dc4547d4cce
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 620a7edd4467a5a2bae60bbd82d0e1460c9f0040
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70753815"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73021408"
 ---
 # <a name="xamarinandroid-performance"></a>Desempenho do Xamarin.Android
 
-_Há várias técnicas para aumentar o desempenho dos aplicativos criados com o Xamarin.Android. Coletivamente, essas técnicas podem reduzir de forma considerável a quantidade de trabalho que está sendo executado por uma CPU e a quantidade de memória consumida por um aplicativo. Esse artigo descreve e aborda essas técnicas._
+_Há muitas técnicas para aumentar o desempenho dos aplicativos criados com o Xamarin. Android. Coletivamente, essas técnicas podem reduzir muito a quantidade de trabalho que está sendo executado por uma CPU e a quantidade de memória consumida por um aplicativo. Este artigo descreve e discute essas técnicas._
 
 ## <a name="performance-overview"></a>Visão geral do desempenho
 

@@ -4,21 +4,21 @@ description: Este documento descreve a finalidade do registrador Xamarin. Mac e 
 ms.prod: xamarin
 ms.assetid: 7CAAA6B7-D654-4AD3-BAEC-9DD01210978A
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 11/10/2017
-ms.openlocfilehash: d44f445b0c3bcc6fd498372f6cdf3e20be39d5b5
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 991d9b2d911b5aa4ac07225fd1df34877451df49
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290092"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73017314"
 ---
 # <a name="xamarinmac-registrar"></a>Registrador do Xamarin. Mac
 
 _Este documento descreve a finalidade do registrador Xamarin. Mac e suas configurações de uso diferentes._
 
-## <a name="overview"></a>Visão geral
+## <a name="overview"></a>Visão Geral
 
 O Xamarin. Mac preenche a lacuna entre o mundo gerenciado (.NET) e o tempo de execução do Cocoa, permitindo que classes gerenciadas chamem classes Objective-C não gerenciadas e sejam chamadas de volta quando ocorrerem eventos. O trabalho necessário para realizar essa "mágica" é tratado pelo registrador e, em geral, oculto da exibição.
 
@@ -44,4 +44,4 @@ Há alguns cenários:
 - Plug-ins carregados após a inicialização com classes derivadas de NSObject
 - Instâncias de classe criadas dinamicamente derivando de NSObject
 
-onde o registrador não consegue saber que precisa registrar algum tipo no início. O `ObjCRuntime.Runtime.RegisterAssembly` método é fornecido para informar ao registrador que ele tem tipos adicionais a serem considerados.
+onde o registrador não consegue saber que precisa registrar algum tipo no início. O método `ObjCRuntime.Runtime.RegisterAssembly` é fornecido para informar ao registrador que ele tem tipos adicionais a serem considerados.

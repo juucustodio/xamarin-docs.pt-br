@@ -3,15 +3,15 @@ title: Plataforma Apple (iOS e Mac)
 description: 'Este documento descreve vários tópicos relacionados ao desenvolvimento do Xamarin. iOS e do Xamarin. Mac: compartilhamento de código, o API Unificada, bibliotecas de Objective-C, referências nativas, tipos nativos e muito mais.'
 ms.prod: xamarin
 ms.assetid: 67246203-D78E-4DCC-9E55-7D3D93968E54
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/29/2017
-ms.openlocfilehash: 10ab9b379344ab6c514eba84f1ef3fd9c7400b73
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 76e883ba42ed898188a646a8a43cf1e3f123a7eb
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70765546"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73015597"
 ---
 # <a name="apple-platform-ios-and-mac"></a>Plataforma Apple (iOS e Mac)
 
@@ -30,7 +30,7 @@ O API Unificada para projetos iOS e Mac usa os mesmos namespaces para estruturas
 > [!NOTE]
 > **Preterimento de perfil clássico:** Conforme novas plataformas são adicionadas no Xamarin. iOS, estamos começando a substituir gradualmente os recursos do perfil clássico (MonoTouch. dll). Por exemplo, a opção não NRC (New-ref-Count) foi removida. O NRC sempre foi habilitado para todos os aplicativos unificados (ou seja, não NRC nunca é uma opção) e não tem problemas conhecidos. Versões futuras removerão a opção de usar Boehm como o coletor de lixo. Essa também era uma opção nunca disponível para aplicativos unificados. A remoção completa do suporte clássico está agendada para o outono de 2016 com o lançamento do Xamarin. iOS 10,0.
 
-As APIs do xamarin. Ios e xamarin. Mac originais (não unificadas) tornaram o `MonoTouch.` compartilhamento de código mais difícil porque as estruturas nativas tinham ou `MonoMac.` prefixos de namespace.  Fornecemos alguns namespaces vazios que permitem aos desenvolvedores compartilhar código adicionando `using` instruções que fazem referência a namespaces MonoMac e MonoTouch no mesmo arquivo, mas isso era um pouco ruim. O API Clássica só deve continuar a ser usado em aplicativos herdados distribuídos internamente (a atualização para a API Unificada é recomendada).
+As APIs do Xamarin. iOS e Xamarin. Mac originais (não unificadas) tornaram o compartilhamento de código mais difícil porque as estruturas nativas tinham `MonoTouch.` ou `MonoMac.` prefixos de namespace.  Fornecemos alguns namespaces vazios que permitem aos desenvolvedores compartilhar código adicionando `using` instruções que fazem referência a namespaces MonoMac e MonoTouch no mesmo arquivo, mas isso foi um pouco ruim. O API Clássica só deve continuar a ser usado em aplicativos herdados distribuídos internamente (a atualização para a API Unificada é recomendada).
 
 ### <a name="updating-from-classic-to-the-unified-api"></a>Atualizando do clássico para o API Unificada
 
@@ -56,11 +56,11 @@ O que você precisa saber para dar suporte a aplicativos de 32 e 64 bits.
 
 ## <a name="working-with-native-types-in-cross-platform-appsnative-types-cross-platformmd"></a>[Trabalhar com tipos nativos em aplicativos de plataforma cruzada](native-types-cross-platform.md)
 
-Este artigo aborda o uso dos novos tipos nativos do IOS`nint`API unificada `nuint`( `nfloat`,,) em um aplicativo de plataforma cruzada em que o código é compartilhado com dispositivos não Ios, como Android ou Windows Phone sistemas operacionais.
+Este artigo aborda o uso dos novos tipos nativos de API Unificada do iOS (`nint`, `nuint``nfloat`) em um aplicativo de plataforma cruzada em que o código é compartilhado com dispositivos não iOS, como Android ou Windows Phone sistemas operacionais.
 Ele fornece informações sobre quando os tipos nativos devem ser usados e fornece várias soluções possíveis para casos em que o novo tipo deve ser usado com código de plataforma cruzada.
 
 ## <a name="httpclient-stack-and-ssltls-implementation-selectorhttp-stackmd"></a>[Pilha de HttpClient e seletor de implementação SSL/TLS](http-stack.md)
 
-O seletor de nova pilha HttpClient controla qual implementação de HttpClient usar em seu aplicativo Xamarin. iOS, Xamarin. tvOS e Xamarin. Mac. Agora você pode alternar para uma implementação que usa transportes nativos do IOS, tvOS ou os X (`NSUrlSession` ou `CFNetwork` dependendo do sistema operacional).
+O seletor de nova pilha HttpClient controla qual implementação de HttpClient usar em seu aplicativo Xamarin. iOS, Xamarin. tvOS e Xamarin. Mac. Agora você pode alternar para uma implementação que usa os transportes nativos do iOS, tvOS ou OS X (`NSUrlSession` ou `CFNetwork` dependendo do sistema operacional).
 
-SSL (camada de soquete seguro) e seu sucessor, TLS (segurança de camada de transporte), fornecer suporte para HTTP e `System.Net.Security.SslStream`outras conexões de rede via. A nova opção de compilação de implementação de SSL/TLS alterna entre a própria pilha TLS do mono e uma da plataforma da pilha TLS da Apple presente no Mac e no iOS.
+SSL (camada de soquete seguro) e seu sucessor, TLS (segurança de camada de transporte), fornecer suporte para HTTP e outras conexões de rede por meio de `System.Net.Security.SslStream`. A nova opção de compilação de implementação de SSL/TLS alterna entre a própria pilha TLS do mono e uma da plataforma da pilha TLS da Apple presente no Mac e no iOS.

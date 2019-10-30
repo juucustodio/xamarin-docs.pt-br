@@ -4,14 +4,14 @@ description: 'Estudo de caso de PCL: como posso resolver problemas relacionados 
 ms.prod: xamarin
 ms.assetid: 7986A556-382D-4D00-ACCF-3589B4029DE8
 ms.date: 04/17/2018
-author: conceptdev
-ms.author: crdun
-ms.openlocfilehash: 9fc90ad5987dcedf720068694533f4f9f38f99a8
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+author: davidortinau
+ms.author: daortin
+ms.openlocfilehash: e7c0bcc7450ab718659723293f995c83b4dc517a
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70757044"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73013568"
 ---
 # <a name="pcl-case-study-how-can-i-resolve-problems-related-to-systemdiagnosticstracing-for-the-microsoft-tpl-dataflow-nuget-package"></a>Estudo de caso de PCL: como posso resolver problemas relacionados a System.Diagnostics.Tracing para o pacote NuGet de Fluxo de Dados de TPL da Microsoft?
 
@@ -21,9 +21,9 @@ ms.locfileid: "70757044"
 
 ## <a name="summary"></a>Resumo
 
-O xamarin. iOS e o Xamarin. Android não implementam 100% de cada perfil PCL que eles permitem como referências. Para conveniência prática no Visual Studio para Mac, no Visual Studio e no Gerenciador de pacotes NuGet, os projetos do Xamarin permitem o uso de vários perfis que têm apenas implementações _incompletas_ . Por exemplo, nem Xamarin. iOS nem Xamarin. Android atualmente incluem uma implementação completa dos tipos no namespace PCL "System. Diagnostics. Tracing". Essa limitação leva a três camadas de erros ao tentar usar a versão padrão `portable-net45+win8+wpa81` do pacote NuGet do Microsoft TPL Dataflow.
+O xamarin. iOS e o Xamarin. Android não implementam 100% de cada perfil PCL que eles permitem como referências. Para conveniência prática no Visual Studio para Mac, no Visual Studio e no Gerenciador de pacotes NuGet, os projetos do Xamarin permitem o uso de vários perfis que têm apenas implementações _incompletas_ . Por exemplo, nem Xamarin. iOS nem Xamarin. Android atualmente incluem uma implementação completa dos tipos no namespace PCL "System. Diagnostics. Tracing". Essa limitação leva a três camadas de erros ao tentar usar a versão de `portable-net45+win8+wpa81` padrão do pacote NuGet do Microsoft TPL Dataflow.
 
-## <a name="workaround-switch-the-app-project-to-reference-the-portable-net45win8wp8wpa81-version-of-the-tpl-dataflow-library"></a>Solução alternativa: Alternar o projeto de aplicativo para referenciar a `portable-net45+win8+wp8+wpa81` versão da biblioteca de fluxo de aplicativos TPL
+## <a name="workaround-switch-the-app-project-to-reference-the-portable-net45win8wp8wpa81-version-of-the-tpl-dataflow-library"></a>Solução alternativa: mude o projeto de aplicativo para fazer referência à versão `portable-net45+win8+wp8+wpa81` da biblioteca de fluxo de aplicativos TPL
 
 (Isso evita todas as três camadas de erros e funciona para todas as versões recentes do Xamarin.)
 
@@ -43,55 +43,55 @@ O xamarin. iOS e o Xamarin. Android não implementam 100% de cada perfil PCL que
 
 ### <a name="explanation"></a>Explicação
 
-A `portable-net45+win8+wp8+wpa81` versão da biblioteca não faz referência a **System. Diagnostics. Tracing. dll** _, por_isso evita completamente todas as três camadas de problemas.
+A versão `portable-net45+win8+wp8+wpa81` da biblioteca não faz referência a **System. Diagnostics. Tracing. dll** _, por_isso evita completamente todas as três camadas de problemas.
 
 ### <a name="limitations"></a>Limitações
 
-- A `portable-net45+win8+wp8+wpa81` versão da biblioteca pode não incluir 100% da funcionalidade `portable-net45+win8+wpa81` da versão.
+- A versão `portable-net45+win8+wp8+wpa81` da biblioteca pode não incluir 100% da funcionalidade da versão `portable-net45+win8+wpa81`.
 
-- O Gerenciador de pacotes NuGet instala `portable-net45+win8+wpa81` a versão do pacote do NuGet PCL por padrão, portanto, você deve ajustar a referência manualmente.
+- O Gerenciador de pacotes NuGet instala a versão `portable-net45+win8+wpa81` do pacote do NuGet PCL por padrão, portanto, você deve ajustar a referência manualmente.
 
 ## <a name="details-about-the-three-layers-of-errors"></a>Detalhes sobre as três camadas de erros
 
 1. O assembly de fachada **System. Diagnostics. Tracing. dll** está ausente atualmente de todas as versões Mac do Xamarin. Android (bug não público 34888) e está ausente de todas as versões do Xamarin. Ios inferiores a 9,0 (ou inferior a XamarinVS 3.11.1443 no Windows) (corrigido em [Bug 32388](https://bugzilla.xamarin.com/show_bug.cgi?id=32388)). Esse problema causará um dos seguintes erros dependendo do destino da implantação e das configurações do vinculador:
 
-    - Xamarin.Android.Common.targets: Erro: Exceção ao carregar assemblies: System.IO.FileNotFoundException: Não foi possível carregar o assembly ' System. Diagnostics. Tracing ', versão = 4.0.0.0, Culture = neutral, PublicKeyToken = b03f5f7f11d50a3a '. Talvez ele não exista no perfil mono para Android?
+    - Xamarin. Android. Common. targets: erro: exceção ao carregar assemblies: System. IO. FileNotFoundException: não foi possível carregar o assembly ' System. Diagnostics. Tracing, versão = 4.0.0.0, Culture = neutral, PublicKeyToken = b03f5f7f11d50a3a '. Talvez ele não exista no perfil mono para Android?
 
-    - Não foi possível carregar o arquivo ou o assembly ' System. Diagnostics. Tracing ' ou uma de suas dependências. O sistema não pode encontrar o arquivo especificado. (System.IO.FileNotFoundException)
+    - Não foi possível carregar o arquivo ou o assembly ' System. Diagnostics. Tracing ' ou uma de suas dependências. O sistema não pode encontrar o arquivo especificado. (System. IO. FileNotFoundException)
 
-    - MTOUCH: erro MT3001: Não foi possível AOT o assembly '/Users/macuser/Projects/TPLDataflow/UnifiedSingleViewIphone1/obj/iPhone/Debug/mtouch-cache/64/Build/System.Threading.Tasks.Dataflow.dll '
+    - MTOUCH: Error MT3001: não foi possível AOT o assembly '/Users/macuser/Projects/TPLDataflow/UnifiedSingleViewIphone1/obj/iPhone/Debug/mtouch-cache/64/Build/System.Threading.Tasks.Dataflow.dll '
 
-    - MTOUCH: erro MT2002: Falha ao resolver o assembly: 'System.Diagnostics.Tracing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+    - MTOUCH: Error MT2002: falha ao resolver o assembly: ' System. Diagnostics. Tracing, Version = 4.0.0.0, Culture = neutral, PublicKeyToken = b03f5f7f11d50a3a '
 
 2. A [implementação mono atual dos tipos em "System. Diagnostics. Tracing"](https://github.com/mono/mono/blob/master/mcs/class/corlib/System.Diagnostics.Tracing/EventSource.cs) não tem algumas sobrecargas de método ([bug 27337](https://bugzilla.xamarin.com/show_bug.cgi?id=27337)). Esse problema causará um dos seguintes erros de vinculador ao criar um aplicativo Xamarin:
 
-    - /Library/Frameworks/Mono.framework/External/xbuild/Xamarin/Android/Xamarin.Android.Common.targets: erro: Erro ao executar a tarefa LinkAssemblies: erro XA2006: Referência ao item de metadados ' System. void System. Diagnostics. Tracing. EventSource:: WriteEvent (System. Int32, System. Object []) ' (definido em ' System. Threading. Tasks. Dataflow, Version = 4.5.24.0, Culture = neutral, PublicKeyToken = b03f5f7f11d50a3a ') de ' System. Threading. Tasks. Dataflow, Version = 4.5.24.0, Culture = neutral, PublicKeyToken = b03f5f7f11d50a3a ' não pôde ser resolvido.
+    - /Library/Frameworks/Mono.framework/External/xbuild/Xamarin/Android/Xamarin.Android.Common.targets: erro: erro ao executar a tarefa LinkAssemblies: erro XA2006: referência ao item de metadados ' System. void System. Diagnostics. Tracing. EventSource:: WriteEvent (System. Int32, System. Object []) ' (definido em ' System. Threading. Tasks. Dataflow, Version = 4.5.24.0, Culture = neutral, PublicKeyToken = b03f5f7f11d50a3a ') de ' System. Threading. Tasks. Dataflow, Version = 4.5.24.0, Culture = neutral, PublicKeyToken = b03f5f7f11d50a3a ' não pôde ser resolvido.
 
-    - MTOUCH: erro MT2002: Falha ao resolver "System. void System. Diagnostics. Tracing. EventSource:: WriteEvent (System. Int32, System. Object [])" referência de "System. Diagnostics. Tracing, versão = 4.0.0.0, Culture = neutral, PublicKeyToken = b03f5f7f11d50a3a"
+    - MTOUCH: Error MT2002: falha ao resolver "System. void System. Diagnostics. Tracing. EventSource:: WriteEvent (System. Int32, System. Object [])" referência de "System. Diagnostics. Tracing, versão = 4.0.0.0, Culture = neutral, PublicKeyToken = b03f5f7f11d50a3a"
 
-3. A [implementação mono atual dos tipos em "System. Diagnostics. Tracing"](https://github.com/mono/mono/blob/master/mcs/class/corlib/System.Diagnostics.Tracing/EventSource.cs) também é uma implementação "fictícia" _vazia_ ([bug 34890](https://bugzilla.xamarin.com/show_bug.cgi?id=34890)). Qualquer tentativa de usar esses métodos em tempo de execução pode, portanto, gerar resultados inesperados. Para o caso _específico_ da biblioteca de Dataflow do Microsoft tpl, parece que as `WriteEvent(System.Int32,System.Object[])` chamadas não são essenciais para a maior parte do comportamento da biblioteca, portanto, a correção para "camada 2" ([bug 27337](https://bugzilla.xamarin.com/show_bug.cgi?id=27337), adição de implementações vazias) provavelmente será suficiente para a maioria dos casos de uso do Microsoft TPL Dataflow.
+3. A [implementação mono atual dos tipos em "System. Diagnostics. Tracing"](https://github.com/mono/mono/blob/master/mcs/class/corlib/System.Diagnostics.Tracing/EventSource.cs) também é uma implementação "fictícia" _vazia_ ([bug 34890](https://bugzilla.xamarin.com/show_bug.cgi?id=34890)). Qualquer tentativa de usar esses métodos em tempo de execução pode, portanto, gerar resultados inesperados. Para o caso _específico_ da biblioteca de Dataflow do Microsoft tpl, parece que as chamadas para `WriteEvent(System.Int32,System.Object[])` não são essenciais para a maior parte do comportamento da biblioteca, portanto, a correção para "camada 2" ([bug 27337](https://bugzilla.xamarin.com/show_bug.cgi?id=27337), adicionando implementações vazias) provavelmente será suficiente para maioria dos casos de uso do Microsoft TPL Dataflow.
 
 ## <a name="questions--answers"></a>Perguntas & respostas
 
-### <a name="i-was-able-to-leave-linking-enabled-with-the-portable-net45win8wpa81-version-of-the-library-on-older-versions-of-xamarinios-or-on-xamarinandroid-how-did-that-work"></a>Consegui deixar a vinculação habilitada com a `portable-net45+win8+wpa81` versão da biblioteca em versões anteriores do xamarin. Ios ou no xamarin. Android. Como isso funcionou?
+### <a name="i-was-able-to-leave-linking-enabled-with-the-portable-net45win8wpa81-version-of-the-library-on-older-versions-of-xamarinios-or-on-xamarinandroid-how-did-that-work"></a>Eu consegui deixar a vinculação habilitada com a versão `portable-net45+win8+wpa81` da biblioteca em versões mais antigas do Xamarin. iOS ou no Xamarin. Android. Como isso funcionou?
 
 #### <a name="answer"></a>Atenda
 
-É _possível_ fazer com que a compilação seja concluída "com êxito" (com vinculação habilitada) em versões mais antigas do xamarin. Ios ou no xamarin. Android no Mac se você incluir uma referência `System.Diagnostics.Tracing.dll` ao _assembly_ \[de referência 1\]em vez do _assembly_ \[de fachada 2], mas infelizmente essa não é uma solução alternativa "correta". Os assemblies de referência só devem ser usados durante a criação de _bibliotecas portáteis_, não o código específico da plataforma, como aplicativos. A tentativa de _executar_ o código contido em assemblies de referência (em vez de apenas criar a partir dele) provavelmente produzirá resultados inesperados. A correção correta será para que a equipe mono adicione a sobrecarga ausente `WriteEvent(System.Int32,System.Object[])` [`EventSource`](https://github.com/mono/mono/blob/master/mcs/class/corlib/System.Diagnostics.Tracing/EventSource.cs) ao tipo ([bug 27337](https://bugzilla.xamarin.com/show_bug.cgi?id=27337)). Por enquanto, a melhor opção é alternar para a `portable-net45+win8+wp8+wpa81` versão da biblioteca de Dataflow do Microsoft tpl, conforme discutido na seção de solução alternativa acima.
+É _possível_ fazer com que a compilação seja concluída "com êxito" (com vinculação habilitada) em versões mais antigas do Xamarin. Ios ou no Xamarin. Android no Mac se você incluir uma referência ao _assembly de referência_ `System.Diagnostics.Tracing.dll` \[1\] em vez de o _assembly de fachada_ \[2], mas infelizmente essa não é uma solução alternativa "correta". Os assemblies de referência só devem ser usados durante a criação de _bibliotecas portáteis_, não o código específico da plataforma, como aplicativos. A tentativa de _executar_ o código contido em assemblies de referência (em vez de apenas criar a partir dele) provavelmente produzirá resultados inesperados. A correção correta será para que a equipe mono adicione a sobrecarga de `WriteEvent(System.Int32,System.Object[])` ausente ao tipo de [`EventSource`](https://github.com/mono/mono/blob/master/mcs/class/corlib/System.Diagnostics.Tracing/EventSource.cs) ([bug 27337](https://bugzilla.xamarin.com/show_bug.cgi?id=27337)). Por enquanto, a melhor opção é alternar para a versão `portable-net45+win8+wp8+wpa81` da biblioteca de Dataflow do Microsoft TPL, conforme discutido na seção solução alternativa acima.
 
-(Para qualquer pessoa que possa estar lendo este artigo depois de ver uma resposta mais antiga e mais curta do<https://stackoverflow.com/a/23591322/2561894>StackOverflow (), observe que a distinção entre assemblies de referência e o assembly de fachada _não_ foi mencionada lá.)
+(Para qualquer pessoa que possa estar lendo este artigo depois de ver uma resposta mais antiga e mais curta do StackOverflow (<https://stackoverflow.com/a/23591322/2561894>), observe que a distinção entre assemblies de referência e o assembly de fachada _não_ foi mencionada lá.)
 
 **\[1\] locais de "assembly de referência"**
 
 Windows: `C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETPortable\v4.5\System.Diagnostics.Tracing.dll`
 
-Mac (mono):`/Library/Frameworks/Mono.framework/Versions/Current/lib/mono/xbuild-frameworks/.NETPortable/v4.5/System.Diagnostics.Tracing.dll`
+Mac (mono): `/Library/Frameworks/Mono.framework/Versions/Current/lib/mono/xbuild-frameworks/.NETPortable/v4.5/System.Diagnostics.Tracing.dll`
 
 **\[2\] locais de "assembly fachada"**
 
 Windows: `C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\System.Diagnostics.Tracing.dll`
 
-Mac (mono):`/Library/Frameworks/Mono.framework/Versions/Current/lib/mono/4.5/Facades/System.Diagnostics.Tracing.dll`
+Mac (mono): `/Library/Frameworks/Mono.framework/Versions/Current/lib/mono/4.5/Facades/System.Diagnostics.Tracing.dll`
 
 ### <a name="will-it-help-if-i-manually-add-a-reference-to-the-systemdiagnosticstracing-facade-assembly"></a>Ajudará se eu adicionar manualmente uma referência ao assembly de fachada "System. Diagnostics. Tracing"?
 
@@ -101,7 +101,7 @@ _Em particular, é possível resolver o problema usando essas duas etapas?_
 
     Windows: `C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\System.Diagnostics.Tracing.dll`
 
-    Mac (mono):`/Library/Frameworks/Mono.framework/Versions/Current/lib/mono/4.5/Facades/System.Diagnostics.Tracing.dll`
+    Mac (mono): `/Library/Frameworks/Mono.framework/Versions/Current/lib/mono/4.5/Facades/System.Diagnostics.Tracing.dll`
 
 2. _Adicione uma referência ao assembly de fachada no projeto de aplicativo Xamarin. iOS ou Xamarin. Android._
 
@@ -117,7 +117,7 @@ Não, isso não ajudará.
 
 #### <a name="answer"></a>Atenda
 
-Não, o pacote NuGet 3,0 "System. Diagnostics. Tracing" inclui apenas implementações específicas de plataforma para "DNXCore50" e "netcore50". Ele _omite_ explicitamente as implementações para Xamarin. Android ("monoandroid") e Xamarin. Ios ("MonoTouch" e "xamarinios"). Isso significa que a instalação do pacote _não terá nenhum efeito_ para os projetos Xamarin. Android e Xamarin. Ios. O pacote NuGet pressupõe que essas duas plataformas fornecem sua _própria_ implementação dos tipos. Essa suposição é "correta" no sentido de que o mono tem _uma_ implementação do namespace, mas, como discutido nos \#pontos 2 \#e 3 de "detalhes sobre as três camadas de erros" acima, a implementação está atualmente completa. Portanto, a correção correta será para que a equipe mono resolva o [bug 27337](https://bugzilla.xamarin.com/show_bug.cgi?id=27337) e o [bug 34890](https://bugzilla.xamarin.com/show_bug.cgi?id=34890).
+Não, o pacote NuGet 3,0 "System. Diagnostics. Tracing" inclui apenas implementações específicas de plataforma para "DNXCore50" e "netcore50". Ele _omite_ explicitamente as implementações para Xamarin. Android ("monoandroid") e Xamarin. Ios ("MonoTouch" e "xamarinios"). Isso significa que a instalação do pacote _não terá nenhum efeito_ para os projetos Xamarin. Android e Xamarin. Ios. O pacote NuGet pressupõe que essas duas plataformas fornecem sua _própria_ implementação dos tipos. Essa suposição é "correta" no sentido de que o mono tem _uma_ implementação do namespace, mas, como discutido nos pontos \#2 e \#3 de "detalhes sobre as três camadas de erros" acima, a implementação está incompleta no momento. Portanto, a correção correta será para que a equipe mono resolva o [bug 27337](https://bugzilla.xamarin.com/show_bug.cgi?id=27337) e o [bug 34890](https://bugzilla.xamarin.com/show_bug.cgi?id=34890).
 
 ## <a name="next-steps"></a>Próximas etapas
 
