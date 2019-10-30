@@ -23,10 +23,10 @@ ms.locfileid: "68653790"
 Neste guia de início rápido, você aprenderá a:
 
 - Adicionar páginas adicionais a uma solução Xamarin.Forms.
-- Executar a navegação entre as páginas.
+- Execute a navegação entre as páginas.
 - Usar a vinculação de dados para sincronizar dados entre elementos da interface do usuário e sua fonte de dados.
 
-O guia de início rápido explica como transformar um aplicativo Xamarin. Forms de cross platform em uma única página, capaz de armazenar uma única observação, em um aplicativo de várias páginas, capaz de armazenar várias notas. O aplicativo final é mostrado abaixo:
+O guia de início rápido explica como transformar um aplicativo Xamarin. Forms de plataforma cruzada em uma única página, capaz de armazenar uma única observação, em um aplicativo de várias páginas, capaz de armazenar várias notas. O aplicativo final é mostrado abaixo:
 
 [![](multi-page-images/screenshots1-sml.png "Notes Page")](multi-page-images/screenshots1.png#lightbox "Notes Page")
 [![](multi-page-images/screenshots2-sml.png "Note Entry Page")](multi-page-images/screenshots2.png#lightbox "Note Entry Page")
@@ -47,7 +47,7 @@ Você deve concluir com êxito o [início rápido anterior](single-page.md) ante
 
     ![](multi-page-images/vs/add-new-item.png "Add New Item")
 
-3. Em **Gerenciador de soluções**, nomeie a pasta de **modelos**:
+3. Em **Gerenciador de soluções**, nomeie a nova pasta como **Modelos**
 
     ![](multi-page-images/vs/name-folder.png "Models Folder")
 
@@ -330,7 +330,7 @@ Você deve concluir com êxito o [início rápido anterior](single-page.md) ante
 
     ![](multi-page-images/vsmac/add-new-folder.png "Add New Folder")
 
-3. Na **painel de soluções**, nomeie a pasta de **modelos**:
+3. No **painel de soluções**, nomeie a nova pasta como **modelos**:
 
     ![](multi-page-images/vsmac/name-folder.png "Models Folder")
 
@@ -338,7 +338,7 @@ Você deve concluir com êxito o [início rápido anterior](single-page.md) ante
 
     ![](multi-page-images/vsmac/add-new-models-file.png "Add New File")
 
-5. Na caixa de diálogo **novo arquivo** , selecione **Geral > classe vazia**, nomeie o novo arquivo para **Note** e clique no botão **novo** :
+5. Na caixa de diálogo **novo arquivo** , selecione **Geral > classe vazia**, nomeie o novo arquivo como **Note** e clique no botão **novo**
 
     ![](multi-page-images/vsmac/add-note-class.png "Add Note Class")
 
@@ -562,7 +562,7 @@ Você deve concluir com êxito o [início rápido anterior](single-page.md) ante
     > [!WARNING]
     > A tentativa de criar o aplicativo neste ponto resultará em erros que serão corrigidos nas etapas subsequentes.
 
-13. Na **painel de soluções**, clique duas vezes em **App.XAML.cs** para abri-lo. Em seguida, substitua o código existente pelo código a seguir:
+13. Na **painel de soluções**, clique duas vezes em **app.XAML.cs** para abri-lo. Em seguida, substitua o código existente pelo código a seguir:
 
     ```csharp
     using System;
