@@ -24,7 +24,7 @@ O processo para usar o [`DependencyService`](xref:Xamarin.Forms.DependencyServic
 
 1. Crie uma interface para a funcionalidade de plataforma nativa, em código compartilhado. Para obter mais informações, confira [Criar uma interface](#create-an-interface).
 1. Implemente a interface nos projetos de plataforma necessários. Para obter mais informações, confira [Implementar a interface em cada plataforma](#implement-the-interface-on-each-platform).
-1. Registrar as implementações de plataforma no [`DependencyService`](xref:Xamarin.Forms.DependencyService). Isso permite que o Xamarin.Forms localize as implementações de plataforma em tempo de execução. Para obter mais informações, confira [Registrar as implementações de plataforma](#register-the-platform-implementations).
+1. Registrar as implementações de plataforma no [`DependencyService`](xref:Xamarin.Forms.DependencyService). Isso permite que o Xamarin.Forms localize as implementações de plataforma em runtime. Para obter mais informações, confira [Registrar as implementações de plataforma](#register-the-platform-implementations).
 1. Resolva as implementações de plataforma de um código compartilhado e as invoque. Para obter mais informações, confira [Resolver as implementações de plataforma](#resolve-the-platform-implementations).
 
 O diagrama a seguir mostra como a funcionalidade de plataforma nativa é invocada em um aplicativo Xamarin.Forms:

@@ -28,7 +28,7 @@ A vinculação resulta em um pacote que tem 30% do tamanho do pacote original (d
 
 ## <a name="control"></a>Controle
 
-A vinculação se baseia em *análise estática*. Consequentemente, tudo o que depende do ambiente de tempo de execução não será detectado:
+A vinculação se baseia em *análise estática*. Consequentemente, tudo o que depende do ambiente de runtime não será detectado:
 
 ```csharp
 // To play along at home, Example must be in a different assembly from MyActivity.
@@ -56,7 +56,7 @@ O mecanismo principal para controlar o vinculador é a lista suspensa **Comporta
 1. **Vincular os Assemblies do SDK** (*Somente os Assemblies do SDK*)
 1. **Vincular Todos os Assemblies** (*Assemblies de SDK e de Usuário*)
 
-A opção **Não Vincular** desliga o vinculador; o exemplo de tamanho de aplicativo "Versão sem Vinculação" acima usava esse comportamento. Isso é útil para solucionar problemas de falhas de tempo de execução, para ver se o vinculador é responsável. Essa configuração geralmente não é recomendada para builds de produção.
+A opção **Não Vincular** desliga o vinculador; o exemplo de tamanho de aplicativo "Versão sem Vinculação" acima usava esse comportamento. Isso é útil para solucionar problemas de falhas de runtime, para ver se o vinculador é responsável. Essa configuração geralmente não é recomendada para builds de produção.
 
 A opção **Vincular Assemblies de SDK** vincula apenas [assemblies que vêm com o Xamarin.Android](~/cross-platform/internals/available-assemblies.md).
 Todos os outros assemblies (tais como o seu código) não estão vinculados.
@@ -146,7 +146,7 @@ Nos exemplos acima, o atributo `Preserve` é declarado no namespace `Android.Run
 
 ### <a name="falseflag"></a>falseflag
 
-Se o atributo [Preserve] não pode ser usado, geralmente é útil fornecer um bloco de código para que o vinculador acredite que o tipo é usado, impedindo simultaneamente que o bloco de código seja executado em tempo de execução. Para usar essa técnica, poderíamos fazer:
+Se o atributo [Preserve] não pode ser usado, geralmente é útil fornecer um bloco de código para que o vinculador acredite que o tipo é usado, impedindo simultaneamente que o bloco de código seja executado em runtime. Para usar essa técnica, poderíamos fazer:
 
 ```csharp
 [Activity (Label="Linker Example", MainLauncher=true)]

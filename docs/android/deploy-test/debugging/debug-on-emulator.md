@@ -85,7 +85,7 @@ Após o emulador ser iniciado, o Xamarin.Android implantará o aplicativo no emu
 
 ![Emulador executando um aplicativo em branco](debug-on-emulator-images/emulator-running.png)
 
-O emulador pode ser deixado em execução: não é necessário desligá-lo e aguardar seu reinício toda vez que o aplicativo é iniciado. A primeira vez que um aplicativo Xamarin.Android for executado no emulador, o tempo de execução compartilhado do Xamarin.Android para o nível da API de destino será instalado, seguido pelo aplicativo. A instalação do tempo de execução pode levar alguns minutos, portanto, tenha paciência. A instalação do tempo de execução ocorre somente quando o primeiro aplicativo Xamarin.Android é implantado no emulador &ndash; as implantações subsequentes são mais rápidas porque somente o aplicativo é copiado para o emulador.
+O emulador pode ser deixado em execução: não é necessário desligá-lo e aguardar seu reinício toda vez que o aplicativo é iniciado. A primeira vez que um aplicativo Xamarin.Android for executado no emulador, o runtime compartilhado do Xamarin.Android para o nível da API de destino será instalado, seguido pelo aplicativo. A instalação do runtime pode levar alguns minutos, portanto, tenha paciência. A instalação do tempo de execução ocorre somente quando o primeiro aplicativo Xamarin.Android é implantado no emulador &ndash; as implantações subsequentes são mais rápidas porque somente o aplicativo é copiado para o emulador.
 
 <a name="quick-boot" />
 

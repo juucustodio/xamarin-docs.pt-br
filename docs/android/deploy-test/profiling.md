@@ -39,9 +39,9 @@ O Android Studio 3.0 e posterior inclui uma ferramenta Android Profiler. Você p
 
 As etapas a seguir explicam como iniciar um aplicativo Xamarin Android na ferramenta Android Profiler do Android Studio. Nas capturas de tela de exemplo abaixo, o aplicativo [XamagonXuzzle](https://docs.microsoft.com/samples/xamarin/mobile-samples/liveplayer-xamagonxuzzlelp/) do Xamarin Forms é criado e analisado usando o Android Profiler:
 
-1. Nas opções de build do projeto do Android, desabilite **Usar Tempo de Execução Compartilhado**. Isso garante que o APK (pacote de aplicativo Android) seja compilado sem dependência do tempo de desenvolvimento compartilhado do tempo de execução Mono.
+1. Nas opções de build do projeto do Android, desabilite **Usar Tempo de Execução Compartilhado**. Isso garante que o APK (pacote de aplicativo Android) seja compilado sem dependência do tempo de desenvolvimento compartilhado do runtime Mono.
 
-    ![Desabilitando Usar Tempo de Execução Compartilhado](profiling-images/vswin/01-turn-off-shared-runtime.png)
+    ![Desabilitando Usar Runtime Compartilhado](profiling-images/vswin/01-turn-off-shared-runtime.png)
 
 2. Compile o aplicativo para **Depuração** e implante-o em um dispositivo físico ou um emulador. Isso faz com que uma versão de **Depuração** assinada do APK seja compilada.
     Quanto ao exemplo do **XamagonXuzzle**, o APK resultante é denominado **com.companyname.XamagonXuzzle-Signed.apk**.

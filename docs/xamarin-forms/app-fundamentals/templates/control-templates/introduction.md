@@ -1,6 +1,6 @@
 ---
 title: Introdução aos modelos de controle do Xamarin.Forms
-description: Os modelos de controle do Xamarin.Forms fornecem a capacidade de tematizar e tematizar novamente páginas de aplicativo em tempo de execução. Este artigo fornece uma introdução a modelos de controle.
+description: Os modelos de controle do Xamarin.Forms fornecem a capacidade de tematizar e tematizar novamente páginas de aplicativo em runtime. Este artigo fornece uma introdução a modelos de controle.
 ms.prod: xamarin
 ms.assetid: 8B8E2360-6531-44A3-A7C8-9A8808DE9B86
 ms.technology: xamarin-forms

@@ -22,10 +22,10 @@ _Associações compiladas são resolvidas mais rapidamente do que associações 
 
 Associações de dados têm dois problemas principais:
 
-1. Não há validação em tempo de compilação para expressões de associação. Em vez disso, as associações são resolvidas em tempo de execução. Sendo assim, associações inválidas não são detectadas até o tempo de execução, quando o aplicativo não se comporta conforme esperado ou mensagens de erro são exibidas.
-1. Elas não são econômicas. Associações são resolvidas em tempo de execução usando a inspeção de objeto para uso geral (reflexão), e a sobrecarga de fazer isso varia de uma plataforma para outra.
+1. Não há validação em tempo de compilação para expressões de associação. Em vez disso, as associações são resolvidas em runtime. Sendo assim, associações inválidas não são detectadas até o runtime, quando o aplicativo não se comporta conforme esperado ou mensagens de erro são exibidas.
+1. Elas não são econômicas. Associações são resolvidas em runtime usando a inspeção de objeto para uso geral (reflexão), e a sobrecarga de fazer isso varia de uma plataforma para outra.
 
-Associações compiladas melhoram o desempenho de associação de dados em aplicativos do Xamarin.Forms resolvendo expressões de associação em tempo de compilação, em vez de tempo de execução. Além disso, essa validação em tempo de compilação das expressões de associação permite uma melhor experiência de solução de problemas para o desenvolvedor porque associações inválidas são relatadas como erros de build.
+Associações compiladas melhoram o desempenho de associação de dados em aplicativos do Xamarin.Forms resolvendo expressões de associação em tempo de compilação, em vez de runtime. Além disso, essa validação em tempo de compilação das expressões de associação permite uma melhor experiência de solução de problemas para o desenvolvedor porque associações inválidas são relatadas como erros de build.
 
 O processo para usar associações compiladas é:
 

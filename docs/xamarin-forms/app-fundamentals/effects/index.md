@@ -28,7 +28,7 @@ Efeitos simplificam a personalização de um controle. Este artigo demonstra com
 
 ## <a name="passing-parameters-to-an-effectpassing-parametersindexmd"></a>[Passar parâmetros para um efeito](passing-parameters/index.md)
 
-Criar um efeito que é configurado por meio de parâmetros permite que o efeito seja reutilizado. Esses artigos demonstram o uso de propriedades para passar parâmetros para um efeito e a alteração de um parâmetro em tempo de execução.
+Criar um efeito que é configurado por meio de parâmetros permite que o efeito seja reutilizado. Esses artigos demonstram o uso de propriedades para passar parâmetros para um efeito e a alteração de um parâmetro em runtime.
 
 ## <a name="invoking-events-from-an-effecttouch-trackingmd"></a>[Invocação de eventos de um efeito](touch-tracking.md)
 

@@ -20,7 +20,7 @@ Depois de o aplicativo ser compilado para liberação, o APK deverá ser assinad
 1. **Criar uma Chave Privada** &ndash; Esta etapa deve ser executada apenas uma vez. Uma chave privada é necessária para assinar digitalmente o APK.
     Depois que a chave privada foi preparada, essa etapa pode ser ignorada para compilações de versão futuras.
 
-2. **Efetuar o Zipalign no APK** &ndash; *Zipalign* é um processo de otimização que é executado em um aplicativo. Ele permite que o Android interaja de forma mais eficiente com o APK no tempo de execução. O Xamarin.Android realiza uma verificação no tempo de execução e não permitirá que o aplicativo seja executado se o APK não teve o zipalign efetuado.
+2. **Efetuar o Zipalign no APK** &ndash; *Zipalign* é um processo de otimização que é executado em um aplicativo. Ele permite que o Android interaja de forma mais eficiente com o APK no runtime. O Xamarin.Android realiza uma verificação no runtime e não permitirá que o aplicativo seja executado se o APK não teve o zipalign efetuado.
 
 3. **Assinar o APK** &ndash; essa etapa envolve usar o **apksigner** por meio do SDK do Android e assinar o APK com a chave privada criada na etapa anterior. Aplicativos desenvolvidos com versões das ferramentas de build do SDK do Android anteriores à v24.0.3 usarão o aplicativo **jarsigner** por meio do JDK. Ambas as ferramentas serão abordadas em mais detalhes abaixo. 
 

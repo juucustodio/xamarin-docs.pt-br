@@ -161,7 +161,7 @@ Para obter mais informações, confira [Reutilização do modo de exibição da 
 
 ## <a name="remove-event-handlers-in-activities"></a>Remover manipuladores de eventos nas atividades
 
-Quando uma atividade é destruída no tempo de execução do Android, ela ainda poderá estar ativa no tempo de execução Mono. Portanto, remova os manipuladores de eventos de objetos externos no `Activity.OnPause` para impedir que o tempo de execução mantenha uma referência a uma atividade que foi destruída.
+Quando uma atividade é destruída no runtime do Android, ela ainda poderá estar ativa no runtime Mono. Portanto, remova os manipuladores de eventos de objetos externos no `Activity.OnPause` para impedir que o tempo de execução mantenha uma referência a uma atividade que foi destruída.
 
 Em uma atividade, declare os manipuladores de eventos no nível de classe:
 

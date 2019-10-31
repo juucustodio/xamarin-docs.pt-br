@@ -36,7 +36,7 @@ Muitas das principais características do Java podem ser encontradas em C#:
 
 - Coleta de lixo
 
-- Compilação de tempo de execução
+- Compilação de runtime
 
 Java e C# são compilados em uma linguagem intermediária que é executada em um ambiente de execução gerenciado. C# e Java são estaticamente tipados e ambas as linguagens tratam cadeias de caracteres como tipos imutáveis.
 As duas linguagens usam uma hierarquia de classes de raiz única. Assim como o Java, o C# é compatível somente com a herança única e não permite métodos globais.
@@ -89,7 +89,7 @@ As seções a seguir explicam as diferenças de "introdução" básica entre C# 
 
 ### <a name="libraries-vs-assemblies"></a>Bibliotecas vs. assemblies
 
-O Java normalmente empacota classes relacionadas em arquivos **.jar**. Em C# e .NET, no entanto, pedaços reutilizáveis de código pré-compilado são empacotados em *assemblies*, que normalmente são empacotados como arquivos *.dll*. Um assembly é uma unidade de implantação para código C#/.NET, sendo que cada assembly é tipicamente associado um projeto C#. Assemblies contêm código intermediário (IL) que é compilado por Just-In-Time no tempo de execução.
+O Java normalmente empacota classes relacionadas em arquivos **.jar**. Em C# e .NET, no entanto, pedaços reutilizáveis de código pré-compilado são empacotados em *assemblies*, que normalmente são empacotados como arquivos *.dll*. Um assembly é uma unidade de implantação para código C#/.NET, sendo que cada assembly é tipicamente associado um projeto C#. Assemblies contêm código intermediário (IL) que é compilado por Just-In-Time no runtime.
 
 Para obter mais informações sobre assemblies, veja o tópico [Assemblies e o cache de assembly global](https://docs.microsoft.com/dotnet/csharp/programming-guide/concepts/assemblies-gac/).
 

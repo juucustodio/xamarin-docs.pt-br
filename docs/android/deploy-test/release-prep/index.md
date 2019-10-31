@@ -97,7 +97,7 @@ APKs do Xamarin.Android podem ficar menores por meio de uma combinação do vinc
 
 ### <a name="configure-the-linker"></a>Configurar o vinculador
 
-O modo Versão desativa o tempo de execução compartilhado e ativa a vinculação para que o aplicativo seja fornecido apenas com as partes necessárias do Xamarin.Android em tempo de execução. O *vinculador* no Xamarin.Android usa análise estática para determinar quais assemblies, tipos e membros de tipo são usados ou referenciados por um aplicativo Xamarin.Android. O vinculador, em seguida, descarta todos os assemblies, tipos e membros que não são usados (ou referenciados). Isso pode resultar em uma redução significativa no tamanho do pacote. Considere o exemplo [HelloWorld](~/android/deploy-test/linker.md), que apresenta uma redução 83% no tamanho final de seu APK: 
+O modo Versão desativa o runtime compartilhado e ativa a vinculação para que o aplicativo seja fornecido apenas com as partes necessárias do Xamarin.Android em runtime. O *vinculador* no Xamarin.Android usa análise estática para determinar quais assemblies, tipos e membros de tipo são usados ou referenciados por um aplicativo Xamarin.Android. O vinculador, em seguida, descarta todos os assemblies, tipos e membros que não são usados (ou referenciados). Isso pode resultar em uma redução significativa no tamanho do pacote. Considere o exemplo [HelloWorld](~/android/deploy-test/linker.md), que apresenta uma redução 83% no tamanho final de seu APK: 
 
 - Configuração: Nenhum &ndash; Xamarin.Android 4.2.5 Tamanho = 17,4 MB.
 
@@ -222,7 +222,7 @@ Observe que a opção **Agrupar em Código Nativo** *não* significa que os asse
 
 ### <a name="aot-compilation"></a>Compilação AOT
 
-A opção **Compilação AOT** (na página [Propriedades de Empacotamento](#Set_Packaging_Properties)) permite compilação AOT (Ahead-of-Time) de assemblies. Quando essa opção é habilitada, a sobrecarga de inicialização JIT (Just In Time) é minimizada pela pré-compilação de assemblies antes do tempo de execução. O código nativo resultante está incluído no APK juntamente com os assemblies não compilados. Isso resulta em menor tempo de inicialização do aplicativo, mas às custas de tamanhos um pouco maiores de APK.
+A opção **Compilação AOT** (na página [Propriedades de Empacotamento](#Set_Packaging_Properties)) permite compilação AOT (Ahead-of-Time) de assemblies. Quando essa opção é habilitada, a sobrecarga de inicialização JIT (Just In Time) é minimizada pela pré-compilação de assemblies antes do runtime. O código nativo resultante está incluído no APK juntamente com os assemblies não compilados. Isso resulta em menor tempo de inicialização do aplicativo, mas às custas de tamanhos um pouco maiores de APK.
 
 A opção **Compilação AOT** requer uma licença Enterprise ou superior. **Compilação AOT** só está disponível quando o projeto é configurado para o modo Versão e é desabilitada por padrão. Para obter mais informações sobre Compilação AOT, consulte [AOT](https://www.mono-project.com/docs/advanced/aot/).
 

@@ -186,7 +186,7 @@ Para mais informações sobre Depuração e Implantação Sem Fio, consulte o gu
 
 ## <a name="technical-details"></a>Detalhes técnicos
 
-O Xamarin.iOS usa o novo depurador flexível Mono. Diferente do depurador Mono padrão, que é um programa que controla um processo separado usando interfaces de sistema operacional, o depurador flexível funciona fazendo o tempo de execução Mono expor a funcionalidade de depuração por meio de um protocolo de transmissão.
+O Xamarin.iOS usa o novo depurador flexível Mono. Diferente do depurador Mono padrão, que é um programa que controla um processo separado usando interfaces de sistema operacional, o depurador flexível funciona fazendo o runtime Mono expor a funcionalidade de depuração por meio de um protocolo de transmissão.
 
 Na inicialização, um aplicativo a ser depurados contata o depurador e o depurador começa a operar. No Xamarin.iOS para Visual Studio, o Agente Mac do Xamarin atua como intermediário entre o aplicativo (Visual Studio) e o depurador.
 

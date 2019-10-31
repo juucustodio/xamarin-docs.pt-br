@@ -1,6 +1,6 @@
 ---
 title: Depuração de uma falha nativa em um aplicativo Xamarin.Mac
-description: Este documento descreve como depurar exceções originadas no tempo de execução do Objective-C. Ele aborda as falhas de declaração, problemas com retornos de chamada, propagação de exceção e muito mais.
+description: Este documento descreve como depurar exceções originadas no runtime do Objective-C. Ele aborda as falhas de declaração, problemas com retornos de chamada, propagação de exceção e muito mais.
 ms.prod: xamarin
 ms.assetid: B0C0CE31-2737-4969-8EA5-D39D3333E9C2
 ms.technology: xamarin-mac
@@ -18,7 +18,7 @@ ms.locfileid: "73021663"
 
 ## <a name="overview"></a>Visão Geral
 
-Erros de programação, às vezes, podem gerar falhas no tempo de execução nativo Objective-C. Diferentemente de exceções C#, eles não apontam para uma linha específica em seu código, que você pode buscar corrigir. Às vezes, eles podem ser triviais para localizar e corrigir, enquanto em outras ocasiões eles podem ser extremamente difíceis de rastrear. 
+Erros de programação, às vezes, podem gerar falhas no runtime nativo Objective-C. Diferentemente de exceções C#, eles não apontam para uma linha específica em seu código, que você pode buscar corrigir. Às vezes, eles podem ser triviais para localizar e corrigir, enquanto em outras ocasiões eles podem ser extremamente difíceis de rastrear. 
 
 Passaremos por alguns exemplos reais de falhas nativas e daremos uma olhada.
 

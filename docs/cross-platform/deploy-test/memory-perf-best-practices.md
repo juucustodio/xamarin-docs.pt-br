@@ -288,7 +288,7 @@ Para reduzir a pressão sobre o coletor de lixo, siga estas diretrizes:
 
 - Aplicativos iOS passam por compilação AOT (Ahead Of Time) para linguagem assembly do ARM. O .NET framework está incluído e as classes não utilizadas são eliminadas somente quando a opção de vinculador apropriada está habilitada.
 - Aplicativos Android são compilados em IL (linguagem intermediária) e empacotados com o MonoVM e a compilação JIT (Just-In-Time). Classes de estrutura não utilizadas são eliminadas somente quando a opção de vinculador apropriada está habilitada.
-- Aplicativos do Windows Phone são compilados para IL e executados segundo o tempo de execução interno.
+- Aplicativos do Windows Phone são compilados para IL e executados segundo o runtime interno.
 
 Além disso, se um aplicativo fizer uso extensivo de genéricos, o tamanho final do executável aumentará ainda mais, uma vez que ele conterá versões compiladas nativamente das possibilidades genéricas.
 
@@ -308,7 +308,7 @@ O vinculador fornece três diferentes configurações para controlar seu comport
 - **Vincular somente Assemblies de SDKs/SDK da Estrutura** – essa configuração reduzirá o tamanho apenas dos assemblies que são enviados via Xamarin. O código do usuário não será afetado.
 - **Vincular Todos os Assemblies** – essa é uma otimização mais agressiva que tem como destino o código do usuário e assemblies do SDK. Para associações, isso removerá os campos de suporte não utilizados e tornará cada instância (ou objetos associados) mais leves, consumindo menos memória.
 
-O *Vincular Todos os Assemblies* deve ser usado com cuidado, pois pode interromper o aplicativo de maneiras inesperadas. A análise estática realizada pelo vinculador pode não identificar corretamente todo o código que é necessário, resultando na remoção de uma quantidade excessiva de código do aplicativo compilado. Essa situação se manifestará somente em tempo de execução quando o aplicativo falhar. Por isso, é importante testar um aplicativo depois de alterar o comportamento do vinculador.
+O *Vincular Todos os Assemblies* deve ser usado com cuidado, pois pode interromper o aplicativo de maneiras inesperadas. A análise estática realizada pelo vinculador pode não identificar corretamente todo o código que é necessário, resultando na remoção de uma quantidade excessiva de código do aplicativo compilado. Essa situação se manifestará somente em runtime quando o aplicativo falhar. Por isso, é importante testar um aplicativo depois de alterar o comportamento do vinculador.
 
 Se o teste revelar que o vinculador removeu incorretamente uma classe ou método, será possível marcar tipos ou métodos que não são referenciados estaticamente, mas são exigidos pelo aplicativo pelo uso de um dos seguintes atributos:
 

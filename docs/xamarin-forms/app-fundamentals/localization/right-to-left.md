@@ -35,7 +35,7 @@ Em geral, a definição da propriedade [`FlowDirection`](xref:Xamarin.Forms.Visu
 [![TodoItemPage em árabe com direção de fluxo da direita para a esquerda](rtl-images/TodoItemPage-Arabic.png "TodoItemPage em árabe com direção de fluxo da direita para a esquerda")](rtl-images/TodoItemPage-Arabic-Large.png#lightbox "TodoItemPage em árabe com direção de fluxo da direita para a esquerda")
 
 > [!TIP]
-> Você só deve definir a propriedade [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) no layout inicial. A alteração desse valor em tempo de execução causa um processo caro de layout que afetará o desempenho.
+> Você só deve definir a propriedade [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) no layout inicial. A alteração desse valor em runtime causa um processo caro de layout que afetará o desempenho.
 
 O valor padrão da propriedade [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) de um elemento sem um pai é [`LeftToRight`](xref:Xamarin.Forms.FlowDirection.LeftToRight), enquanto o `FlowDirection` padrão de um elemento com um pai é [`MatchParent`](xref:Xamarin.Forms.FlowDirection.MatchParent). Portanto, um elemento herda o valor da propriedade `FlowDirection` de seu pai na árvore visual e qualquer elemento pode substituir o valor obtido de seu pai.
 

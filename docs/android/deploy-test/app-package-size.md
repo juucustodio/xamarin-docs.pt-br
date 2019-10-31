@@ -24,7 +24,7 @@ Xamarin.Android usa uma variedade de mecanismos para minimizar o tamanho do paco
 
 ## <a name="release-packages"></a>Pacotes de versão
 
-Para enviar um aplicativo totalmente independente, o pacote deve incluir o aplicativo, as bibliotecas associadas, o conteúdo, o tempo de execução Mono e os assemblies necessários da biblioteca BCL (biblioteca de classes base). Por exemplo, se usássemos o modelo "Hello World" padrão, o conteúdo de um build de pacote completo teria esta aparência:
+Para enviar um aplicativo totalmente independente, o pacote deve incluir o aplicativo, as bibliotecas associadas, o conteúdo, o runtime Mono e os assemblies necessários da biblioteca BCL (biblioteca de classes base). Por exemplo, se usássemos o modelo "Hello World" padrão, o conteúdo de um build de pacote completo teria esta aparência:
 
 [![Tamanho do pacote antes de vinculador](app-package-size-images/hello-world-package-size-before-linker.png)](app-package-size-images/hello-world-package-size-before-linker.png#lightbox)
 
@@ -46,7 +46,7 @@ As coisas são tratadas de forma ligeiramente diferente para builds de depuraç�
 
 O Android é relativamente lento para copiar e instalar um pacote, por isso, queremos que o tamanho do pacote seja o menor possível. Conforme abordado acima, uma maneira possível para minimizar o tamanho do pacote é por meio do vinculador. A vinculação é lenta, no entanto, e geralmente queremos implantar apenas as partes do aplicativo que foram alteradas desde a última implantação. Para fazer isso, separamos os componentes principais do Xamarin.Android do nosso aplicativo.
 
-Na primeira vez que depuramos no dispositivo, copiamos dois pacotes grandes chamados *tempo de execução compartilhado* e *plataforma compartilhada*. O tempo de execução compartilhado contém o tempo de execução Mono e a BCL, enquanto a plataforma compartilhada contém os assemblies específicos de nível da API do Android:
+Na primeira vez que depuramos no dispositivo, copiamos dois pacotes grandes chamados *tempo de execução compartilhado* e *plataforma compartilhada*. O runtime compartilhado contém o runtime Mono e a BCL, enquanto a plataforma compartilhada contém os assemblies específicos de nível da API do Android:
 
 [![Tamanho de pacote de tempo de execução compartilhado](app-package-size-images/shared-runtime-package-size.png)](app-package-size-images/shared-runtime-package-size.png#lightbox)
 
@@ -74,7 +74,7 @@ Para habilitar a *Implantação de Assembly Rápida*, faça o seguinte:
 
 Na próxima vez que o aplicativo for compilado para depuração, os assemblies serão instalados diretamente no dispositivo (se já não tiverem sido) e um pacote do aplicativo menor (que não inclua os assemblies) será instalado no dispositivo. Isso reduzirá o tempo necessário para deixar as alterações ao aplicativo funcionando e prontas para serem testadas.
 
-Suportando a primeira implantação demorada do tempo de execução compartilhado e da plataforma compartilhada, toda vez que fazemos uma alteração ao aplicativo, é possível implantar a nova versão com rapidez e facilidade, de modo que temos um ciclo rápido de alteração/implantação/execução.
+Suportando a primeira implantação demorada do runtime compartilhado e da plataforma compartilhada, toda vez que fazemos uma alteração ao aplicativo, é possível implantar a nova versão com rapidez e facilidade, de modo que temos um ciclo rápido de alteração/implantação/execução.
 
 ## <a name="summary"></a>Resumo
 

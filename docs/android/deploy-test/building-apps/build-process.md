@@ -29,9 +29,9 @@ Em termos gerais, há dois tipos de pacotes de aplicativos do Android (arquivos 
 
 Não coincidentemente, eles correspondem ao `Configuration` do MSBuild que produz o pacote.
 
-### <a name="shared-runtime"></a>Tempo de execução compartilhado
+### <a name="shared-runtime"></a>Runtime compartilhado
 
-O *tempo de execução compartilhado* é um par de pacotes Android adicionais que fornecem a biblioteca de classes base (`mscorlib.dll`, etc.) e a biblioteca de associações do Android (`Mono.Android.dll`, etc.). Builds de depuração contam com o tempo de execução compartilhado em vez de incluir os assemblies da biblioteca de classes base e da biblioteca de associações dentro do pacote do aplicativo Android, permitindo que o pacote de depuração seja menor.
+O *tempo de execução compartilhado* é um par de pacotes Android adicionais que fornecem a biblioteca de classes base (`mscorlib.dll`, etc.) e a biblioteca de associações do Android (`Mono.Android.dll`, etc.). Builds de depuração contam com o runtime compartilhado em vez de incluir os assemblies da biblioteca de classes base e da biblioteca de associações dentro do pacote do aplicativo Android, permitindo que o pacote de depuração seja menor.
 
 O tempo de execução compartilhado pode ser desabilitado em builds de depuração, definindo a propriedade `$(AndroidUseSharedRuntime)` para `False`.
 
@@ -432,7 +432,7 @@ As [Propriedades de Assinatura](#Signing_Properties) também são relevantes ao 
 
   Adicionado no Xamarin.Android 8.1.
 
-- **AndroidUseSharedRuntime** &ndash; uma propriedade booliana que determina se os *pacotes de tempo de execução compartilhado* são necessários para executar o aplicativo no dispositivo de destino. Depender dos pacotes de tempo de execução compartilhado permite que o pacote do aplicativo seja menor, acelerando o processo de criação e implantação de pacote e resultando em um ciclo de build/implantação/depuração mais rápido.
+- **AndroidUseSharedRuntime** &ndash; uma propriedade booliana que determina se os *pacotes de tempo de execução compartilhado* são necessários para executar o aplicativo no dispositivo de destino. Depender dos pacotes de runtime compartilhado permite que o pacote do aplicativo seja menor, acelerando o processo de criação e implantação de pacote e resultando em um ciclo de build/implantação/depuração mais rápido.
 
   Essa propriedade deve ser `True` para builds de depuração e `False` para projetos de versão.
 
