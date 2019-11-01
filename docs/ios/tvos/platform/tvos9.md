@@ -4,15 +4,15 @@ description: Este artigo apresenta todas as APIs e recursos novos e modificados 
 ms.prod: xamarin
 ms.assetid: A7E738E1-9F94-489B-918F-7DF8F0810987
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/07/2016
-ms.openlocfilehash: ecf5a7cabb03cea92075127d4d5e87350f45619e
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 34f332eb712f479f9f9565a3894212e3cdd5aaf6
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769114"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030539"
 ---
 # <a name="introduction-to-tvos-9"></a>Introdução ao tvOS 9
 
@@ -67,7 +67,7 @@ A nova Apple TV tem as seguintes especificações de hardware:
 - 32 GB ou 64 GB de armazenamento
 - 2GB de RAM
 - 10/100 Mbps Ethernet
-- WiFi 802.11a/b/g/n/ac
+- WiFi 802.11 a/b/g/n/AC
 - resolução de 1080p
 - HDMI
 - Porta C USB (para uso somente para desenvolvedores e diagnósticos)
@@ -81,8 +81,8 @@ O Siri remoto está disponível atualmente nos seguintes países:
 
 - Austrália
 - Canadá
-- França
-- Alemanha
+- France
+- Germany
 - Japão
 - Espanha
 - Reino Unido
@@ -90,7 +90,7 @@ O Siri remoto está disponível atualmente nos seguintes países:
 
 Todos os outros países receberão o remoto da Apple TV, que substitui o botão Siri por um botão de pesquisa que abre a tela de pesquisa padrão com entrada de texto para pesquisa:
 
-[![](tvos9-images/remote02.png "Siri remoto")](tvos9-images/remote02.png#lightbox)
+[![](tvos9-images/remote02.png "Siri Remote")](tvos9-images/remote02.png#lightbox)
 
 Para obter mais informações, consulte nossa documentação de [controladores Siri remotos e Bluetooth](~/ios/tvos/platform/remote-bluetooth.md) .
 
@@ -154,7 +154,7 @@ Para obter mais informações, consulte nossa documentação [trabalhando com na
 
 A tela inicial da Apple TV mostra todos os aplicativos que estão instalados e fornece uma maneira de acessar as preferências do usuário:
 
-[![](tvos9-images/home01.png "A tela inicial")](tvos9-images/home01.png#lightbox)
+[![](tvos9-images/home01.png "The Home Screen")](tvos9-images/home01.png#lightbox)
 
 O usuário navega em uma grade de ícones de aplicativo usando gestos de toque no Siri remoto usando o foco para selecionar um aplicativo e iniciá-lo. O ícone do aplicativo é a sua primeira chance de fazer uma boa impressão sobre o usuário potencial e deve comunicar a finalidade do seu aplicativo em um relance.
 
@@ -168,9 +168,9 @@ Para obter mais informações, consulte nossa documentação sobre [como trabalh
 
 Se o usuário tiver colocado seu aplicativo Xamarin. tvOS na linha superior da tela inicial da Apple TV, uma imagem de prateleira grande será exibida quando seu aplicativo for selecionado pelo usuário. Essa imagem deve destacar os recursos do seu aplicativo ou fornecer links diretos para seu conteúdo.
 
-[![](tvos9-images/topshelf01.png "A prateleira superior")](tvos9-images/topshelf01.png#lightbox)
+[![](tvos9-images/topshelf01.png "The Top Shelf")](tvos9-images/topshelf01.png#lightbox)
 
-A imagem da prateleira superior pode ser fornecida como um único arquivo `.png` ou `.lsr` estático ou pode ser criada dinamicamente em tempo de execução como uma única linha de itens com foco.
+A imagem da prateleira superior pode ser fornecida como um único arquivo estático `.png` ou `.lsr` ou pode ser criada dinamicamente em tempo de execução como uma única linha de itens com foco.
 
 Em vez de exibir uma imagem de prateleira superior estática, ela pode conter uma linha dinâmica ou itens de foco ou um conjunto dinâmico de faixas de rolagem. Ambos os estilos dinâmicos permitem que você realce o conteúdo fornecido pelo seu aplicativo ou salte para seus recursos mais usados.
 

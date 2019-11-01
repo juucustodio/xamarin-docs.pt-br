@@ -120,7 +120,7 @@ sections:
             image:
               src: ~/media/icons/i_user-interface.svg
               href: map/index.md
-            title: Mapas
+            title: Mapa
           - href: menuitem.md
             html: Saiba como usar a classe MenuItem para adicionar itens ao menu de contexto de células ListView.
             image:
@@ -194,7 +194,7 @@ sections:
               href: text/index.md
             title: Texto
           - href: theming.md
-            html: Saiba como criar temas para aplicativos Xamarin.Forms e alterar o tema em tempo de execução.
+            html: Saiba como criar temas para aplicativos Xamarin.Forms e alterar o tema em runtime.
             image:
               src: ~/media/icons/i_user-interface.svg
               href: theming.md

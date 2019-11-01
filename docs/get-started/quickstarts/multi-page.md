@@ -16,13 +16,13 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 10/21/2019
 ms.locfileid: "68653790"
 ---
-# <a name="perform-navigation-in-a-multi-page-xamarinforms-application"></a>Executar a navegação em um aplicativo Xamarin. Forms de várias páginas
+# <a name="perform-navigation-in-a-multi-page-xamarinforms-application"></a>Executar a navegação em um aplicativo Xamarin.Forms de várias páginas
 
 [![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-multipage/)
 
 Neste guia de início rápido, você aprenderá a:
 
-- Adicione páginas adicionais a uma solução Xamarin. Forms.
+- Adicionar páginas adicionais a uma solução Xamarin.Forms.
 - Executar a navegação entre as páginas.
 - Usar a vinculação de dados para sincronizar dados entre elementos da interface do usuário e sua fonte de dados.
 
@@ -43,7 +43,7 @@ Você deve concluir com êxito o [início rápido anterior](single-page.md) ante
 
     ![](multi-page-images/vs/open-solution.png "Open Project")
 
-2. Em **Gerenciador de soluções**, clique com o botão direito do mouse no projeto do **Notes** e selecione **Adicionar > nova pasta**:
+2. Em **Gerenciador de soluções**, clique com o botão direito do mouse no projeto do **Notes** e selecione **Adicionar > novo item..**
 
     ![](multi-page-images/vs/add-new-item.png "Add New Item")
 
@@ -81,7 +81,7 @@ Você deve concluir com êxito o [início rápido anterior](single-page.md) ante
 
     Salve as alterações em **note.cs** pressionando **Ctrl + S** e feche o arquivo.
 
-7. Em **Gerenciador de soluções**, clique com o botão direito do mouse no projeto do **Notes** e selecione **Adicionar > novo item..** . Na caixa de diálogo **Adicionar novo item** , **selecione C# itens visuais > Xamarin. Forms > página de conteúdo**, nomeie o novo arquivo **NoteEntryPage**e clique no botão **Adicionar** :
+7. Em **Gerenciador de soluções**, clique com o botão direito do mouse no projeto do **Notes** e selecione **Adicionar > novo item..** . Na caixa de diálogo **Adicionar novo item** , **selecione C# itens visuais > Xamarin.Forms > página de conteúdo**, nomeie o novo arquivo **NoteEntryPage** e clique no botão **Adicionar** :
 
     ![](multi-page-images/vs/add-note-entry-page.png "Add Xamarin.Forms ContentPage")
 
@@ -176,7 +176,7 @@ Você deve concluir com êxito o [início rápido anterior](single-page.md) ante
       > [!WARNING]
       > A tentativa de criar o aplicativo neste ponto resultará em erros que serão corrigidos nas etapas subsequentes.
 
-10. Em **Gerenciador de soluções**, clique com o botão direito do mouse no projeto do **Notes** e selecione **Adicionar > novo item..** . Na caixa de diálogo **Adicionar novo item** , **selecione C# itens visuais > Xamarin. Forms > página de conteúdo**, nomeie o novo arquivo **NotesPage**e clique no botão **Adicionar** .
+10. Em **Gerenciador de soluções**, clique com o botão direito do mouse no projeto do **Notes** e selecione **Adicionar > novo item..** . Na caixa de diálogo **Adicionar novo item** , **selecione C# itens visuais > Xamarin.Forms > página de conteúdo**, nomeie o novo arquivo **NoteEntryPage** e clique no botão **Adicionar** :
 
       Isso adicionará uma página chamada **NotesPage** à pasta raiz do projeto. Esta página será a página raiz do aplicativo.
 
@@ -364,7 +364,7 @@ Você deve concluir com êxito o [início rápido anterior](single-page.md) ante
 
     Salve as alterações no **Note.cs** escolhendo **arquivo > salvar** (ou pressionando  **&#8984; + S**) e feche o arquivo.
 
-7. Na **painel de soluções**, selecione o projeto **notas** , clique com o botão direito do mouse e selecione **Adicionar > novo arquivo...** . Na caixa de diálogo **novo arquivo** , selecione **Forms > Forms Contentpage XAML**, nomeie o novo arquivo **NoteEntryPage**e clique no botão **novo** :
+7. Na **painel de soluções**, selecione o projeto **Notes** , clique com o botão direito do mouse e selecione **Adicionar > novo arquivo...** . Na caixa de diálogo **novo arquivo** , selecione **Forms > Forms Contentpage XAML**, nomeie o novo arquivo **NoteEntryPage**e clique no botão **novo** :
 
     ![](multi-page-images/vsmac/add-note-entry-page.png "Add Xamarin.Forms ContentPage")
 
@@ -459,7 +459,7 @@ Você deve concluir com êxito o [início rápido anterior](single-page.md) ante
       > [!WARNING]
       > A tentativa de criar o aplicativo neste ponto resultará em erros que serão corrigidos nas etapas subsequentes.
 
-10. Na **painel de soluções**, selecione o projeto **notas** , clique com o botão direito do mouse e selecione **Adicionar > novo arquivo...** . Na caixa de diálogo **novo arquivo** , selecione **Forms > Forms Contentpage XAML**, nomeie o novo arquivo **NotesPage**e clique no botão **novo** .
+10. Na **painel de soluções**, selecione o projeto **Notes** , clique com o botão direito do mouse e selecione **Adicionar > novo arquivo...** . Na caixa de diálogo **novo arquivo** , selecione **Forms > Forms Contentpage XAML**, nomeie o novo arquivo **NoteEntryPage**e clique no botão **novo** :
 
       Isso adicionará uma página chamada **NotesPage** à pasta raiz do projeto. Esta página será a página raiz do aplicativo.
 
@@ -606,7 +606,7 @@ Você deve concluir com êxito o [início rápido anterior](single-page.md) ante
 
 Neste guia de início rápido, você aprendeu a:
 
-- Adicione páginas adicionais a uma solução Xamarin. Forms.
+- Adicionar páginas adicionais a uma solução Xamarin.Forms.
 - Executar a navegação entre as páginas.
 - Usar a vinculação de dados para sincronizar dados entre elementos da interface do usuário e sua fonte de dados.
 
