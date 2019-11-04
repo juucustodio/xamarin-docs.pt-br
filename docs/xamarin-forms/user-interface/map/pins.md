@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/23/2019
-ms.openlocfilehash: a2fb0ba2036dfe34e85c7bebab6ecb55cd868ad5
-ms.sourcegitcommit: 5c22097bed2a8d51ecaf6ca197bf4d449dfe1377
+ms.openlocfilehash: 930d2dcc701f88e2a350ec1011405bb18b86de6e
+ms.sourcegitcommit: 3ea19e3a51515b30349d03c70a5b3acd7eca7fe7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72810517"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73425557"
 ---
 # <a name="xamarinforms-map-pins"></a>Pins do mapa do Xamarin. Forms
 
@@ -44,10 +44,7 @@ Um [`Pin`](xref:Xamarin.Forms.Maps.Pin) pode ser adicionado a um [`Map`](xref:Xa
              xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps">
      <maps:Map x:Name="map"
                IsShowingUser="True"
-               MoveToLastRegionOnLayoutChange="False"
-               HeightRequest="100"                  
-               WidthRequest="960"
-               VerticalOptions="FillAndExpand">
+               MoveToLastRegionOnLayoutChange="False">
          <x:Arguments>
              <maps:MapSpan>
                  <x:Arguments>
@@ -80,10 +77,7 @@ Um [`Pin`](xref:Xamarin.Forms.Maps.Pin) pode ser adicionado a um [`Map`](xref:Xa
 </ContentPage>
 ```
 
-Esse XAML cria um objeto [`Map`](xref:Xamarin.Forms.Maps.Map) que mostra a região especificada pelo objeto [`MapSpan`](xref:Xamarin.Forms.Maps.MapSpan) . O objeto `MapSpan` é centralizado na latitude e na longitude representada por um objeto [`Position`](xref:Xamarin.Forms.Maps.Position) , que estende os graus 0, 1 de latitude e longitude. Um objeto [`Pin`](xref:Xamarin.Forms.Maps.Pin) é adicionado à coleção de [`Map.Pins`](xref:Xamarin.Forms.Maps.Pin) e desenhado no `Map` no local especificado por sua propriedade [`Position`](xref:Xamarin.Forms.Maps.Pin.Position) . Para obter informações sobre como passar argumentos em XAML para objetos que não têm construtores padrão, consulte [passando argumentos em XAML](~/xamarin-forms/xaml/passing-arguments.md).
-
-> [!NOTE]
-> O struct [`Position`](xref:Xamarin.Forms.Maps.Position) define as propriedades [`Latitude`](xref:Xamarin.Forms.Maps.Position.Latitude) e [`Longitude`](xref:Xamarin.Forms.Maps.Position.Longitude) somente leitura, tanto do tipo `double`. Ao criar um objeto de `Position` por meio de seu construtor, o valor de latitude será clamped entre-90,0 e 90,0, e o valor de longitude será clamped entre-180,0 e 180,0.
+Esse XAML cria um objeto [`Map`](xref:Xamarin.Forms.Maps.Map) que mostra a região especificada pelo objeto [`MapSpan`](xref:Xamarin.Forms.Maps.MapSpan) . O objeto `MapSpan` é centralizado na latitude e na longitude representada por um objeto [`Position`](xref:Xamarin.Forms.Maps.Position) , que estende os graus 0, 1 de latitude e longitude. Um objeto [`Pin`](xref:Xamarin.Forms.Maps.Pin) é adicionado à coleção de [`Map.Pins`](xref:Xamarin.Forms.Maps.Pin) e desenhado no `Map` no local especificado por sua propriedade [`Position`](xref:Xamarin.Forms.Maps.Pin.Position) . Para obter informações sobre a estrutura [`Position`](xref:Xamarin.Forms.Maps.Position) , consulte [posição e distância do mapa](position-distance.md). Para obter informações sobre como passar argumentos em XAML para objetos que não têm construtores padrão, consulte [passando argumentos em XAML](~/xamarin-forms/xaml/passing-arguments.md).
 
 Este é o código C# equivalente:
 
@@ -119,7 +113,7 @@ Por padrão, quando um [`Pin`](xref:Xamarin.Forms.Maps.Pin) é tocado, sua janel
 
 Tocar em outro lugar no mapa fecha a janela de informações.
 
-A classe [`Pin`](xref:Xamarin.Forms.Maps.Pin) define um evento `MarkerClicked`, que é acionado quando um `Pin` é tocado. Não é necessário manipular esse evento para exibir a janela de informações. Em vez disso, esse evento só deve ser tratado quando houver um requisito para ser notificado de que um PIN específico foi tocado.
+A classe [`Pin`](xref:Xamarin.Forms.Maps.Pin) define um evento `MarkerClicked`, que é acionado quando um `Pin` é tocado. Não é necessário manipular esse evento para exibir a janela de informações. Em vez disso, esse evento deve ser tratado quando houver um requisito para ser notificado de que um PIN específico foi tocado.
 
 A classe [`Pin`](xref:Xamarin.Forms.Maps.Pin) também define um evento `InfoWindowClicked` que é acionado quando uma janela de informações é tocada. Esse evento deve ser tratado quando houver um requisito para ser notificado de que uma janela de informações específica foi tocada.
 
@@ -190,7 +184,6 @@ Uma [`Map`](xref:Xamarin.Forms.Maps.Map) pode ser populada com Pins usando a vin
     <Grid>
         ...
         <maps:Map x:Name="map"
-                  MoveToLastRegionOnLayoutChange="false"
                   ItemsSource="{Binding Locations}">
             <maps:Map.ItemTemplate>
                 <DataTemplate>
@@ -211,7 +204,7 @@ A aparência de cada item na coleção de `IEnumerable` é definida pela defini�
 
 As capturas de tela a seguir mostram um [`Map`](xref:Xamarin.Forms.Maps.Map) exibir uma coleção de [`Pin`](xref:Xamarin.Forms.Maps.Pin) usando a associação de dados:
 
-[![Captura de tela do mapa com Pins de associação de dados, no iOS e no Android](map-images/pins-itemssource.png "Mapear com Pins associados a dados")](map-images/pins-itemssource-large.png#lightbox "Mapear com Pins associados a dados")
+[![Captura de tela do mapa com Pins de associação de dados, no iOS e no Android](pins-images/pins-itemsource.png "Mapear com Pins associados a dados")](pins-images/pins-itemsource-large.png#lightbox "Mapear com Pins associados a dados")
 
 ### <a name="choose-item-appearance-at-runtime"></a>Escolher a aparência do item em tempo de execução
 

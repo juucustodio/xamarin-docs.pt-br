@@ -8,12 +8,12 @@ author: davidortinau
 ms.author: daortin
 ms.custom: video
 ms.date: 01/22/2019
-ms.openlocfilehash: c65a8d4cf47fdec582b46370b6a8dbc1ddd55a1e
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: bdc8366e75455755cbb2f533b6707f72e33436e2
+ms.sourcegitcommit: 3ea19e3a51515b30349d03c70a5b3acd7eca7fe7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73022790"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73425582"
 ---
 # <a name="automatic-provisioning-for-xamarinios"></a>Provisionamento automático para o Xamarin.iOS
 
@@ -39,7 +39,7 @@ Você também precisa estar emparelhado com um host de build do Mac que tem o se
 
 ## <a name="enabling-automatic-signing"></a>Habilitando a Assinatura automática
 
-Antes de iniciar o processo de assinatura automática, você deve adicionar uma ID Apple ao Visual Studio, conforme descrito no guia [Gerenciamento de conta da Apple](~/cross-platform/macios/apple-account-management.md). Depois de adicionar um ID Apple, será possível usar qualquer _Equipe_ associada. Isso permite que certificados, perfis e outras IDs sejam feitas com relação à equipe. A ID da equipe também é usada para criar um prefixo para uma ID do aplicativo que será incluída no perfil de provisionamento. Isso permite que a Apple verifique que você é quem diz que ser.
+Antes de iniciar o processo de assinatura automática, você deve adicionar uma ID Apple ao Visual Studio, conforme descrito no guia [Gerenciamento de conta da Apple](~/cross-platform/macios/apple-account-management.md). Depois de adicionar um ID Apple, será possível usar qualquer _Equipe_ associada. Isso permite que certificados, perfis e outras IDs sejam feitas com relação à equipe. A ID de equipe também é usada para criar um prefixo para uma ID de aplicativo que será incluída no perfil de provisionamento. Isso permite que a Apple verifique que você é quem diz que ser.
 
 > [!IMPORTANT]
 > Para começar, entre no [iTunes Connect](https://itunesconnect.apple.com/) ou no site do [appleid.apple.com](https://appleid.apple.com) e confirme se você aceitou as políticas de conta mais recentes da Apple. Quando solicitado, conclua as etapas para aceitar novos contratos de conta da Apple. Se não aceitar o contrato de privacidade de maio de 2018, você verá um dos seguintes alertas quando tentar provisionar o dispositivo:

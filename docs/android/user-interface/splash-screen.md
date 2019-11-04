@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 10/02/2019
-ms.openlocfilehash: 8f225df47b299ae4748c3a3fea586f277e14213d
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: cc499902058e7b20b00e65e0c6541b8d137804a7
+ms.sourcegitcommit: 3ea19e3a51515b30349d03c70a5b3acd7eca7fe7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73028724"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73425507"
 ---
 # <a name="splash-screen"></a>Splash Screen
 
@@ -67,7 +67,7 @@ O aplicativo de exemplo define um empate chamado **splash_screen. xml**. Esse em
 </layer-list>
 ```
 
-Este `layer-list` centraliza a imagem de abertura em uma cor de plano de fundo especificada pelo recurso de `@color/splash_background`. O aplicativo de exemplo define essa cor no arquivo **Resources/Values/Color. xml** :
+Este `layer-list` centraliza a imagem de abertura em uma cor de plano de fundo especificada pelo recurso de `@color/splash_background`. O aplicativo de exemplo define essa cor no arquivo **Resources/Values/Colors. xml** :
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>

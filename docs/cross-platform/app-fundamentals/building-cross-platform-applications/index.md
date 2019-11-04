@@ -7,10 +7,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 01/28/2016
 ms.openlocfilehash: 2c630e58ff5a1221ec9e95099df4781041ecf2b4
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
-ms.translationtype: MT
+ms.sourcegitcommit: dad4dfcd194b63ec9e903363351b6d9e543d4888
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/18/2019
 ms.locfileid: "70288050"
 ---
 # <a name="building-cross-platform-applications"></a>Compilando aplicativos multiplataforma
@@ -46,7 +46,7 @@ Os princípios descritos neste documento são colocados em prática na *tarefa*d
 A tarefa é um aplicativo simples de lista de tarefas pendentes para iOS, Android e Windows Phone.
 Ele demonstra as noções básicas de criação de um aplicativo de plataforma cruzada com o Xamarin e usa um banco de dados SQLite local.
 
- lista de tarefas da lista [ ![de tarefas](images/iphone-list-sml.png)](images/iphone-list.png#lightbox) [ ![](images/iphone-list-sml.png)](images/iphone-list.png#lightbox)
+ [![lista de tasky](images/iphone-list-sml.png)](images/iphone-list.png#lightbox) [![de lista de tasky](images/iphone-list-sml.png)](images/iphone-list.png#lightbox)
 
 Leia o [estudo de caso de tarefa](~/cross-platform/app-fundamentals/building-cross-platform-applications/case-study-tasky.md).
 
@@ -63,8 +63,8 @@ Por fim, ele aborda brevemente os testes e fornece referências a um estudo de c
 ## <a name="related-links"></a>Links relacionados
 
 - [Opções de código de compartilhamento](~/cross-platform/app-fundamentals/code-sharing.md)
-- [Estudo de caso: Tarefa](~/cross-platform/app-fundamentals/building-cross-platform-applications/case-study-tasky.md)
+- [Estudo de caso: @No__t_0 de tarefas
 - [Aplicativo de exemplo de tarefa (github)](https://docs.microsoft.com/samples/xamarin/mobile-samples/taskyportable/)
-- [Desenvolvimento de aplicativos móveis Xamarin: Plataforma C# cruzada e fundamentos do Xamarin. Forms (Amazon)](http://www.amazon.com/Xamarin-Mobile-Application-Development-Cross-Platform/dp/1484202155/)
+- Desenvolvimento de aplicativos móveis [Xamarin: Plataforma C# cruzada e fundamentos do Xamarin. Forms (Amazon) ](http://www.amazon.com/Xamarin-Mobile-Application-Development-Cross-Platform/dp/1484202155/)
 - [Desenvolvimento móvel com C# por Greg Shackles (o ' Reilly)](http://shop.oreilly.com/product/0636920024002.do)
 - [Desenvolvimento móvel de plataforma cruzada profissional C# em por Scott Olson, John Hunter, Ben Horgen, Kenny goers (Wrox)](http://www.wrox.com/WileyCDA/WroxTitle/Professional-Cross-Platform-Mobile-Development-in-C-.productCd-1118157702.html)

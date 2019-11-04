@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/06/2016
-ms.openlocfilehash: b17a1177abafe4e605263664038842863302ac3b
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.openlocfilehash: 96c775ba8e29597a8420b1c42d53e33357c7324c
+ms.sourcegitcommit: 18b446a0032f3a7a064e5a6470e9d20b1ec2fbed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71249697"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73426456"
 ---
 # <a name="localization"></a>Localização
 
@@ -20,7 +20,7 @@ ms.locfileid: "71249697"
 
 _Aplicativos do Xamarin.Forms podem ser localizados usando arquivos de recursos do .NET._
 
-## <a name="overview"></a>Visão geral
+## <a name="overview"></a>Visão Geral
 
 O mecanismo interno para localização de usos de aplicativos .NET [arquivos RESX](https://msdn.microsoft.com/library/ekyft91f(v=vs.90).aspx) e as classes nos namespaces `System.Resources` e `System.Globalization`. Arquivos RESX que contêm cadeias de caracteres traduzidas são inseridos no assembly do Xamarin.Forms, junto com uma classe gerada pelo compilador que fornece acesso fortemente tipado para as traduções. O texto traduzido pode ser então recuperado no código.
 
@@ -69,7 +69,7 @@ Dois arquivos serão adicionados ao projeto:
 
 A árvore de solução mostrará que os arquivos são relacionados. O arquivo RESX *deve* ser editado para adicionar novas cadeias de caracteres traduzíveis; o arquivo **.designer.cs** *não* deve ser editado.
 
-![](text-images/appresources-tree.png "Arquivo AppResources.resx")
+![](text-images/appresources-tree.png "AppResources.resx File")
 
 ##### <a name="string-visibility"></a>Visibilidade da cadeia de caracteres
 
@@ -81,25 +81,25 @@ Selecione o arquivo **AppResources.resx** e mostre o painel **Propriedades** par
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![](text-images/vs-resx-internal-sml.png "Janela Propriedades de AppResources.resx")](text-images/vs-resx-internal.png#lightbox)
+[![](text-images/vs-resx-internal-sml.png "Properties Window for AppResources.Resx")](text-images/vs-resx-internal.png#lightbox)
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
-[![](text-images/xs-resx-internal-sml.png "Painel de Propriedades de AppResources.resx")](text-images/xs-resx-internal.png#lightbox)
+[![](text-images/xs-resx-internal-sml.png "Properties Pad for AppResources.Resx")](text-images/xs-resx-internal.png#lightbox)
 
 -----
 
-Para tornar as propriedades `public` da cadeia de caracteres fortemente tipadas, você deve alterar manualmente a configuração da **Ferramenta Personalizada: PublicResXFileCodeGenerator**, como mostrado na captura de tela abaixo:
+Para tornar as propriedades das cadeias de caracteres fortemente tipadas `public`, você precisa alterar manualmente a configuração para **Ferramenta Personalizada: PublicResXFileCodeGenerator**, conforme mostrado na captura de tela abaixo:
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![](text-images/vs-resx-public-sml.png "Janela Propriedades de AppResources.resx")](text-images/vs-resx-public.png#lightbox)
+[![](text-images/vs-resx-public-sml.png "Properties Window for AppResources.Resx")](text-images/vs-resx-public.png#lightbox)
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
-[![](text-images/xs-resx-internal-sml.png "Painel de Propriedades de AppResources.resx")](text-images/xs-resx-internal.png#lightbox)
+[![](text-images/xs-resx-internal-sml.png "Properties Pad for AppResources.Resx")](text-images/xs-resx-internal.png#lightbox)
 
-[![](text-images/xs-resx-public-sml.png "Painel de Propriedades de AppResources.resx")](text-images/xs-resx-public.png#lightbox)
+[![](text-images/xs-resx-public-sml.png "Properties Pad for AppResources.Resx")](text-images/xs-resx-public.png#lightbox)
 
 -----
 
@@ -155,9 +155,9 @@ Arquivos de recurso específico a um idioma devem seguir uma convenção de nome
 
 O padrão geral é usar códigos de idioma com duas letras, mas há alguns exemplos (como chinês) em que um formato diferente é usado, bem como outros exemplos (por exemplo, português brasileiro) em que um identificador de localidade de quatro caracteres é necessário.
 
-Estes arquivos de recursos específicos a um idioma *não* exigem uma classe parcial **.designer.cs** para que possam ser adicionados como arquivos XML regulares, com **Compilar Ação: EmbeddedResource** definido. Esta captura de tela mostra uma solução que contém os arquivos de recursos específicos a um idioma:
+Esses arquivos de recursos específicos a um idioma *não* exigem uma classe parcial **.designer.cs** para que possam ser adicionados como arquivos XML regulares, com **Compilar Ação: EmbeddedResource** definido. Esta captura de tela mostra uma solução que contém os arquivos de recursos específicos a um idioma:
 
-![](text-images/appresources-langs.png "Arquivos de recursos específicos a um idioma")
+![](text-images/appresources-langs.png "Language-Specific Resource Files")
 
 Conforme o aplicativo é desenvolvido e o texto é adicionado ao arquivo RESX base, você deve enviá-lo para os tradutores, que traduzirão cada elemento `data` e retornarão um arquivo de recurso específico a um idioma (usando a convenção de nomenclatura mostrada) para ser incluído no aplicativo. Alguns exemplos 'traduzidos de maneira automática' são mostrados abaixo:
 
@@ -208,7 +208,7 @@ myButton.Text = AppResources.AddButton;
 
 A interface do usuário no iOS, no Android e na UWP (Plataforma Universal do Windows) é renderizada da forma esperada, mas agora é possível traduzir o aplicativo para vários idiomas, porque o texto está sendo carregado de um recurso em vez de ser embutido em código. Veja uma captura de tela que mostra a interface do usuário em cada plataforma antes da tradução:
 
-![](text-images/simple-example-english.png "Interfaces do usuário multiplataforma antes da tradução")
+![](text-images/simple-example-english.png "Cross-Platform UIs Prior to Translation")
 
 ### <a name="troubleshooting"></a>Solução de problemas
 
@@ -398,7 +398,7 @@ namespace UsingResxLocalization.iOS
                 case "ms-SG":    // "Malaysian (Singapore)" not supported .NET culture
                     netLanguage = "ms"; // closest supported
                     break;
-                case "gsw-CH":  // "Schwiizertüütsch (Swiss German)" not supported .NET culture
+                case "gsw-CH":  // "Schwiizerdüütsch (Swiss German)" not supported .NET culture
                     netLanguage = "de-CH"; // closest supported
                     break;
                 // add more application-specific cases here (if required)
@@ -438,7 +438,7 @@ namespace UsingResxLocalization.iOS
 
 Há alguns elementos da interface do usuário definidos pelo sistema que são traduzidos automaticamente pelo iOS, como o botão **Concluído** no controle `Picker`. Para forçar o iOS a traduzir esses elementos, precisamos indicar a quais idiomas damos suporte no arquivo **Info.plist**. Você pode adicionar esses valores usando **Info.plist > Origem**, conforme mostrado aqui:
 
-![Chaves de localização em Info.plist](text-images/info-plist.png "Chaves de localização em Info.plist")
+![Chaves de localização no info. plist](text-images/info-plist.png "Chaves de localização no info. plist")
 
 Como alternativa, abra o arquivo **Info.plist** em um editor de XML e edite os valores diretamente:
 
@@ -506,7 +506,7 @@ namespace UsingResxLocalization.Android
                 }
                 catch (CultureNotFoundException e2)
                 {
-                    // iOS language not valid .NET culture, falling back to English
+                    // Android language not valid .NET culture, falling back to English
                     ci = new System.Globalization.CultureInfo("en");
                 }
             }
@@ -526,7 +526,7 @@ namespace UsingResxLocalization.Android
                 case "in-ID":  // "Indonesian (Indonesia)" has different code in  .NET
                     netLanguage = "id-ID"; // correct code for .NET
                     break;
-                case "gsw-CH":  // "Schwiizertüütsch (Swiss German)" not supported .NET culture
+                case "gsw-CH":  // "Schwiizerdüütsch (Swiss German)" not supported .NET culture
                     netLanguage = "de-CH"; // closest supported
                     break;
                     // add more application-specific cases here (if required)
@@ -583,7 +583,7 @@ Isso informa ao gerenciador de recursos a cultura padrão do aplicativo, garanti
 
 Depois de atualizar projetos específicos da plataforma conforme mostrado acima e recompilar o aplicativo com arquivos RESX traduzidos, traduções atualizadas serão disponibilizadas em cada aplicativo. Está é uma captura de tela do código de exemplo traduzido para chinês simplificado:
 
-![](text-images/simple-example-hans.png "Interfaces do usuário multiplataforma traduzidas para chinês simplificado")
+![](text-images/simple-example-hans.png "Cross-Platform UIs Translated to Simplified Chinese")
 
 Para obter mais informações sobre a localização na UWP, confira [Localização na UWP](/windows/uwp/design/globalizing/globalizing-portal/).
 
@@ -732,7 +732,7 @@ O iOS usa um padrão de nomenclatura chamado Localization Projects ou diretório
 
 Esta captura de tela mostra o aplicativo de exemplo do iOS com os diretórios **.lproj** específicos a um idioma. O diretório do idioma espanhol, chamado **es.lproj**, contém as versões localizadas da imagem padrão, bem como **flag.png**:
 
-![](text-images/ios-resources.png "Diretórios do projeto de localização do iOS")
+![](text-images/ios-resources.png "iOS Localization Project Directories")
 
 Cada diretório de idioma contém uma cópia de **flag.png**, localizada para esse idioma. Se nenhuma imagem for fornecida, o sistema operacional, por padrão, usará a imagem no diretório de idioma padrão. Para ter suporte completo do Retina, você precisa fornecer cópias de **@2x** e **@3x** de cada imagem.
 
@@ -746,7 +746,7 @@ O conteúdo de **InfoPlist.strings** é apenas um par de chave-valor para config
 
 Quando o aplicativo é executado, o nome do aplicativo e a imagem são localizados:
 
-![](text-images/ios-imageicon.png "Localização de imagem e texto no aplicativo de exemplo de iOS")
+![](text-images/ios-imageicon.png "iOS Sample App Text and Image Localization")
 
 ### <a name="android-application-project"></a>Projeto de Aplicativo Android
 
@@ -756,11 +756,11 @@ O Android segue um esquema diferente para armazenar imagens localizadas usando d
 
 Esta captura de tela mostra o exemplo do Android com um alguns recursos desenháveis e cadeias de caracteres localizados:
 
-![](text-images/android-resources.png "Diretórios de recursos desenháveis e cadeias de caracteres localizados no Android")
+![](text-images/android-resources.png "Android Localized Drawables and String Directories")
 
 Observe que o Android não usa os códigos zh-Hans e zh-Hant para chinês simplificado e chinês tradicional. Em vez disso, ele dá suporte apenas aos códigos específicos do país zh-CN e zh-TW.
 
-Para dar suporte a imagens com resolução diferente para telas de alta densidade, crie pastas adicionais com os sufixos `-*dpi`, como **drawables-es-mdpi**, **drawables-es-xdpi**, **drawables-es-xxdpi** etc. Confira [Fornecendo recursos alternativos do Android](https://developer.android.com/guide/topics/resources/providing-resources.html#AlternativeResources) para obter mais informações.
+Para dar suporte a diferentes imagens de resolução para telas de alta densidade, crie pastas de idioma adicionais com sufixos `-*dpi`, como **drawables-es-mdpi**, **drawables-es-Xdpi**, **drawables-es-xxdpi**, etc. Consulte [fornecendo recursos do Android alternativos](https://developer.android.com/guide/topics/resources/providing-resources.html#AlternativeResources) para obter mais informações.
 
 #### <a name="app-name"></a>Nome do Aplicativo
 
@@ -782,7 +782,7 @@ Atualize **MainActivity.cs** no projeto de aplicativo do Android para que `Label
 
 Agora, o aplicativo localiza o nome do aplicativo e a imagem. Veja uma captura de tela do resultado (em espanhol):
 
-![](text-images/android-imageicon.png "Localização de imagem e texto no aplicativo de exemplo de Android")
+![](text-images/android-imageicon.png "Android Sample App Text and Image Localization")
 
 ### <a name="universal-windows-platform-application-projects"></a>Projetos de aplicativo da Plataforma Universal do Windows
 
@@ -792,7 +792,7 @@ A Plataforma Universal do Windows tem uma infraestrutura de recurso que simplifi
 
 É possível localizar imagens colocando-as em uma pasta específica do recurso, como demonstrado na seguinte captura de tela:
 
-![](text-images/uwp-image-folder-structure.png "Estrutura de pastas de localização de imagens da UWP")
+![](text-images/uwp-image-folder-structure.png "UWP Image Localization Folder Structure")
 
 Em tempo de execução, a infraestrutura de recursos do Windows selecionará a imagem apropriada com base na localidade do usuário.
 

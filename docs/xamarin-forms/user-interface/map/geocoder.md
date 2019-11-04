@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/22/2019
-ms.openlocfilehash: ce1f6751c0381ed41058784fbea3ebedefbdac6d
-ms.sourcegitcommit: e4c23187874488ff55794d0e81a9bba30d2c2cd6
+ms.openlocfilehash: 9a20618fea0091979c2ea862f417dccec565b218
+ms.sourcegitcommit: 3ea19e3a51515b30349d03c70a5b3acd7eca7fe7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72778778"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73425612"
 ---
 # <a name="xamarinforms-map-geocoding"></a>Geocodificação de mapas do Xamarin. Forms
 
 [![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 
-O Xamarin. Forms. Maps fornece a classe [`Geocoder`](xref:Xamarin.Forms.Maps.Geocoder) , que converte entre endereços de cadeia de caracteres e coordenadas de latitude e longitude que são armazenadas em objetos [`Position`](xref:Xamarin.Forms.Maps.Position) .
+O namespace [`Xamarin.Forms.Maps`](xref:Xamarin.Forms.Maps) fornece uma classe [`Geocoder`](xref:Xamarin.Forms.Maps.Geocoder) , que converte entre endereços de cadeia de caracteres e coordenadas de latitude e longitude que são armazenadas em objetos [`Position`](xref:Xamarin.Forms.Maps.Position) . Para obter mais informações sobre a estrutura [`Position`](xref:Xamarin.Forms.Maps.Position) , consulte [posição e distância do mapa](position-distance.md).
 
 ## <a name="geocode-an-address"></a>Geocódigo de um endereço
 
@@ -55,4 +55,5 @@ O método [`GetAddressesForPositionAsync`](xref:Xamarin.Forms.Maps.Geocoder.GetA
 ## <a name="related-links"></a>Links relacionados
 
 - [Exemplo de mapas](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
+- [Posição e distância do mapa do Xamarin. Forms](position-distance.md)
 - [API geocodificadora](xref:Xamarin.Forms.Maps.Geocoder)
