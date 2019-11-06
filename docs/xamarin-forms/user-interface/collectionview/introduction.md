@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/20/2019
-ms.openlocfilehash: 274a2a99445a77a2b8c1f68e823c753bc16b673a
-ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
+ms.openlocfilehash: 871d7cad6c57cd34757ae992ce14d5f686935584
+ms.sourcegitcommit: 283810340de5310f63ef7c3e4b266fe9dc2ffcaf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72696678"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73662308"
 ---
 # <a name="xamarinforms-collectionview-introduction"></a>Introdução de CollectionView do Xamarin. Forms
 
@@ -37,6 +37,7 @@ Embora as APIs de [`CollectionView`](xref:Xamarin.Forms.CollectionView) e [`List
 - [`CollectionView`](xref:Xamarin.Forms.CollectionView) utiliza automaticamente a virtualização fornecida pelos controles nativos subjacentes.
 - [`CollectionView`](xref:Xamarin.Forms.CollectionView) reduz a superfície de API do [`ListView`](xref:Xamarin.Forms.ListView). Muitas propriedades e eventos de [`ListView`](xref:Xamarin.Forms.ListView) não estão presentes no `CollectionView`.
 - [`CollectionView`](xref:Xamarin.Forms.CollectionView) não inclui separadores internos.
+- [`CollectionView`](xref:Xamarin.Forms.CollectionView) gerará uma exceção se seu [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) for atualizado do thread da interface do usuário.
 
 ## <a name="move-from-listview-to-collectionview"></a>Mover de ListView para CollectionView
 
