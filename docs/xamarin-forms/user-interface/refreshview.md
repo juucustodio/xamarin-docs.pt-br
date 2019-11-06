@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/19/2019
-ms.openlocfilehash: b53c58a5e859bf7752855c3954666a062261599d
-ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
+ms.openlocfilehash: e38987006025dad1c2ff49c3ea8916e2075d61d7
+ms.sourcegitcommit: d1d4700b3b1b417a9d7b7da85ab5d28f8e8e599d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72697419"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73649290"
 ---
 # <a name="xamarinforms-refreshview"></a>RefreshView Xamarin. Forms
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-refreshview/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-refreshviewdemo/)
 
 O `RefreshView` é um controle de contêiner que fornece a funcionalidade de pull para atualizar para conteúdo rolável. Portanto, o filho de um `RefreshView` deve ser um controle rolável, como [`ScrollView`](xref:Xamarin.Forms.ScrollView), [`CollectionView`](xref:Xamarin.Forms.CollectionView)ou [`ListView`](xref:Xamarin.Forms.ListView).
 
@@ -105,6 +105,6 @@ Como alternativa, ao definir a propriedade `Command`, o delegado de `CanExecute`
 
 ## <a name="related-links"></a>Links relacionados
 
-- [RefreshView (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-refreshview/)
+- [RefreshView (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-refreshviewdemo/)
 - [Layouts vinculáveis no Xamarin. Forms](~/xamarin-forms/user-interface/layouts/bindable-layouts.md)
 - [Direção de recepção RefreshView específica da plataforma](~/xamarin-forms/platform/windows/refreshview-pulldirection.md)

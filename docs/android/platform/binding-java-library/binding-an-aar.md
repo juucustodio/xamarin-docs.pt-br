@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 04/11/2018
-ms.openlocfilehash: 516d8ebfd8e0dabbdbba9737ae8b35627c649380
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 103720c8cb47b1ac4cfe5cfadeb6b18828318ad3
+ms.sourcegitcommit: 5a23c66f81853884480aca666d649a56d68c01cb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73027758"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73618544"
 ---
 # <a name="binding-an-aar"></a>Associação de um .AAR
 
@@ -31,7 +31,7 @@ Um. O arquivo AAR é um. Arquivo ZIP que contém o seguinte:
 Neste guia, vamos percorrer as noções básicas de criação de uma biblioteca de associações para um único. Arquivo AAR. Para obter uma visão geral da Associação de biblioteca Java em geral (com um exemplo de código básico), consulte [associando uma biblioteca Java](~/android/platform/binding-java-library/index.md).
 
 > [!IMPORTANT]
-> Um projeto de associação só pode incluir um. Arquivo AAR. Se o. AAR dependências em outros. AAR, essas dependências devem estar contidas em seu próprio projeto de associação e, em seguida, referenciadas. Consulte o [Bug 44573](https://bugzilla.xamarin.com/show_bug.cgi?id=44573).
+> Um projeto de associação só pode incluir um. Arquivo AAR. Se o. O AAR depende de outros. AAR, essas dependências devem estar contidas em seu próprio projeto de associação e, em seguida, referenciadas. Consulte o [Bug 44573](https://bugzilla.xamarin.com/show_bug.cgi?id=44573).
 
 ## <a name="walkthrough"></a>Passo a passo
 
