@@ -4,17 +4,17 @@ title: Usar C/C++ bibliotecas com o Xamarin
 description: Visual Studio para Mac pode ser usado para criar e integrar o C/C++ Code multiplataforma em aplicativos móveis para Android e Ios, usando o Xamarin C#e o. Este artigo explica como configurar e depurar um C++ projeto em um aplicativo Xamarin.
 author: mikeparker104
 ms.author: miparker
-ms.date: 12/17/2018
-ms.openlocfilehash: a10d63e8ed152fae3c9e87cbae7bacb25a0d019c
-ms.sourcegitcommit: 09bc69d7119a04684c9e804c5cb113b8b1bb7dfc
+ms.date: 11/07/2019
+ms.openlocfilehash: 42a59570d727657b2f3c23bd9d1f37e1205717d0
+ms.sourcegitcommit: efbc69acf4ea484d8815311b058114379c9db8a2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71206379"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73842814"
 ---
 # <a name="use-cc-libraries-with-xamarin"></a>Usar C/C++ bibliotecas com o Xamarin
 
-## <a name="overview"></a>Visão geral
+## <a name="overview"></a>Visão Geral
 
 O Xamarin permite que os desenvolvedores criem aplicativos móveis nativos de plataforma cruzada com o Visual Studio. Geralmente, C# as associações são usadas para expor componentes de plataforma existentes aos desenvolvedores. No entanto, há ocasiões em que os aplicativos Xamarin precisam trabalhar com bases de código existentes. Às vezes, as equipes simplesmente não têm tempo, orçamento ou recursos para portar uma base de código grande, bem testada e C#altamente otimizada para.
 
@@ -26,7 +26,7 @@ Esta postagem descreve uma abordagem de alto nível para esse cenário e percorr
 
 ## <a name="background"></a>Informações preliminares
 
-O CC++ /é considerado uma linguagem de plataforma cruzada, mas deve-se tomar muito cuidado para garantir que o código-fonte seja realmente entre plataformas, usandoC++ apenas C/com suporte de todos os compiladores de destino e contendo pouca ou nenhuma plataforma incondicionalmente incluída ou código específico do compilador.
+O cC++ /é considerado uma linguagem de plataforma cruzada, mas é preciso tomar muito cuidado para garantir que o código-fonte seja realmente entre plataformas, usando apenasC++ C/com suporte de todos os compiladores de destino e que contenham pouca ou nenhuma plataforma ou código específico de compilador incluso.
 
 Em última análise, o código deve ser compilado e executado com êxito em todas as plataformas de destino, portanto, isso se resume à semelhança entre as plataformas (e os compiladores) que estão sendo direcionados. Os problemas ainda podem surgir de pequenas diferenças entre compiladores e, portanto, testes completos (preferencialmente automatizado) em cada plataforma de destino se tornam cada vez mais importantes.  
 
@@ -47,11 +47,11 @@ Os quatro estágios são:
 
 O objetivo deste estágio é criar bibliotecas nativas que podem ser chamadas pelo C# wrapper. Isso pode ou não ser relevante, dependendo da sua situação. As várias ferramentas e processos que podem ser trazidos neste cenário comum estão além do escopo deste artigo. As principais considerações estão mantendo a CC++ /codebase em sincronia com qualquer código wrapper nativo, teste de unidade suficiente e automação de compilação. 
 
-As bibliotecas no passo a passo foram criadas usando Visual Studio Code com um script de shell que o acompanha. Uma versão estendida desse passo a passo pode ser encontrada no [repositório GitHub de Cat móvel](https://github.com/xamarin/mobcat/blob/dev/samples/cpp_with_xamarin/) que aborda essa parte do exemplo em maior profundidade. As bibliotecas nativas estão sendo tratadas como uma dependência de terceiros nesse caso, no entanto, esse estágio é ilustrado para o contexto.
+As bibliotecas no passo a passo foram criadas usando Visual Studio Code com um script de shell que o acompanha. Uma versão estendida desse passo a passo pode ser encontrada no [repositório GitHub de Cat móvel](https://github.com/xamcat/mobcat-samples/tree/master/cpp_with_xamarin) que aborda essa parte do exemplo em maior profundidade. As bibliotecas nativas estão sendo tratadas como uma dependência de terceiros nesse caso, no entanto, esse estágio é ilustrado para o contexto.
 
 Para simplificar, a instrução tem como alvo apenas um subconjunto de arquiteturas. Para o iOS, ele usa o utilitário lipo para criar um binário único de Fat a partir dos binários específicos da arquitetura individual. O Android usará binários dinâmicos com um. portanto, a extensão e o iOS usarão um binário Fat estático com uma extensão. a. 
 
-### <a name="stage-2-wrapping-the-native-libraries-with-a-visual-studio-solution"></a>Estágio 2: Encapsulando as bibliotecas nativas com uma solução do Visual Studio
+### <a name="stage-2-wrapping-the-native-libraries-with-a-visual-studio-solution"></a>Etapa 2: encapsulando as bibliotecas nativas com uma solução do Visual Studio
 
 O próximo estágio é encapsular as bibliotecas nativas para que elas sejam facilmente usadas no .NET. Isso é feito com uma solução do Visual Studio com quatro projetos. Um projeto compartilhado contém o código comum. Os projetos destinados a cada Xamarin. Android, Xamarin. iOS e .NET Standard permitem que a biblioteca seja referenciada de maneira independente da plataforma.
 
@@ -61,23 +61,23 @@ A maior parte do trabalho nesta etapa se concentrará no uso de P/Invoke para ch
 
 Por fim, a saída desse estágio é um conjunto de bibliotecas .NET, uma por destino, junto com um documento nuspec que contém as informações necessárias para criar o pacote na próxima etapa.
 
-**Estágio 3: Empacotando e enviando por push um pacote NuGet para o wrapper .NET**
+**Estágio 3: empacotando e enviando por push um pacote NuGet para o wrapper .NET**
 
 O terceiro estágio é criar um pacote NuGet usando os artefatos de compilação da etapa anterior. O resultado desta etapa é um pacote NuGet que pode ser consumido de um aplicativo Xamarin. A instrução usa um diretório local para servir como o feed do NuGet. Em produção, essa etapa deve publicar um pacote em um feed do NuGet público ou privado e deve ser totalmente automatizada.
 
-**Estágio 4: Consumindo o pacote NuGet de um aplicativo Xamarin. Forms**
+**Estágio 4: consumindo o pacote NuGet de um aplicativo Xamarin. Forms**
 
 A etapa final é fazer referência e usar o pacote NuGet de um aplicativo Xamarin. Forms. Isso requer a configuração do feed do NuGet no Visual Studio para usar o feed definido na etapa anterior.
 
 Depois que o feed é configurado, o pacote precisa ser referenciado de cada projeto no aplicativo Xamarin. Forms de plataforma cruzada. ' O truque bait-and-switch fornece interfaces idênticas, portanto, a funcionalidade da biblioteca nativa pode ser chamada usando o código definido em um único local.
 
-O repositório de código-fonte contém uma [lista de leituras adicionais](https://github.com/xamarin/mobcat/tree/master/samples/cpp_with_xamarin#wrapping-up) que inclui artigos sobre como configurar um feed do NuGet privado no Azure DevOps e como enviar por push o pacote para esse feed. Embora exijam um pouco mais de tempo de configuração do que um diretório local, esse tipo de feed é melhor em um ambiente de desenvolvimento de equipe.
+O repositório de código-fonte contém uma [lista de leituras adicionais](https://github.com/xamcat/mobcat-samples/tree/master/cpp_with_xamarin#wrapping-up) que inclui artigos sobre como configurar um feed do NuGet privado no Azure DevOps e como enviar por push o pacote para esse feed. Embora exijam um pouco mais de tempo de configuração do que um diretório local, esse tipo de feed é melhor em um ambiente de desenvolvimento de equipe.
 
-## <a name="walk-through"></a>Passo a passo
+## <a name="walk-through"></a>Orientação
 
 As etapas fornecidas são específicas para **Visual Studio para Mac**, mas a estrutura funciona no **Visual Studio 2017** também.
 
-### <a name="prerequisites"></a>Pré-requisitos
+### <a name="prerequisites"></a>Prerequisites
 
 Para acompanhar, o desenvolvedor precisará de:
 
@@ -90,9 +90,9 @@ Para acompanhar, o desenvolvedor precisará de:
 
 ## <a name="creating-the-native-libraries-stage-1"></a>Criando as bibliotecas nativas (estágio 1)
 
-A funcionalidade da biblioteca nativa se baseia no exemplo do [passo a passo: Criando e usando uma biblioteca estática (C++)](https://docs.microsoft.com/cpp/windows/walkthrough-creating-and-using-a-static-library-cpp?view=vs-2017).
+A funcionalidade da biblioteca nativa baseia-se no exemplo de [passo a passo: Criando e usando umaC++biblioteca estática ()](https://docs.microsoft.com/cpp/windows/walkthrough-creating-and-using-a-static-library-cpp?view=vs-2017).
 
-Este passo a passos ignora o primeiro estágio, criando as bibliotecas nativas, pois a biblioteca é fornecida como uma dependência de terceiros nesse cenário. As bibliotecas nativas pré-compiladas são incluídas juntamente com o [código de exemplo](https://github.com/xamarin/mobcat/tree/master/samples/cpp_with_xamarin) ou podem ser [baixadas](https://github.com/xamarin/mobcat/tree/master/samples/cpp_with_xamarin/Sample/Artefacts) diretamente.
+Este passo a passos ignora o primeiro estágio, criando as bibliotecas nativas, pois a biblioteca é fornecida como uma dependência de terceiros nesse cenário. As bibliotecas nativas pré-compiladas são incluídas juntamente com o [código de exemplo](https://github.com/xamcat/mobcat-samples/tree/master/cpp_with_xamarin) ou podem ser [baixadas](https://github.com/xamcat/mobcat-samples/tree/master/cpp_with_xamarin/Sample/Artefacts) diretamente.
 
 ### <a name="working-with-the-native-library"></a>Trabalhando com a biblioteca nativa
 
@@ -112,7 +112,7 @@ namespace MathFuncs
 }
 ```
 
-Uma classe adicional define funções de wrapper que permitem a um consumidor .NET criar, descartar e interagir com a `MyMathFuncs` classe nativa subjacente.
+Uma classe adicional define funções de wrapper que permitem a um consumidor .NET criar, descartar e interagir com a classe de `MyMathFuncs` nativa subjacente.
 
 ```cpp
 #include "MyMathFuncs.h"
@@ -128,11 +128,11 @@ extern "C" {
 }
 ```
 
-Serão essas funções de invólucro que são usadas no lado do [Xamarin](https://visualstudio.microsoft.com/xamarin/) .
+Serão essas funções de invólucro que são usadas no lado do [Xamarin](https://visualstudio.microsoft.com/xamarin/) .
 
 ## <a name="wrapping-the-native-library-stage-2"></a>Encapsulando a biblioteca nativa (estágio 2)
 
-Este estágio requer as [bibliotecas pré-compiladas](https://github.com/xamarin/mobcat/tree/master/samples/cpp_with_xamarin/Sample/Artefacts) descritas na [seção anterior](#creating-the-native-libraries-stage-1).
+Este estágio requer as [bibliotecas pré-compiladas](https://github.com/xamcat/mobcat-samples/tree/master/cpp_with_xamarin/Sample/Artefacts) descritas na [seção anterior](#creating-the-native-libraries-stage-1).
 
 ### <a name="creating-the-visual-studio-solution"></a>Criando a solução do Visual Studio
 
@@ -140,9 +140,9 @@ Este estágio requer as [bibliotecas pré-compiladas](https://github.com/xamarin
 2. Na janela **novo projeto** , escolha **projeto compartilhado** (de dentro da *biblioteca de > multiplataforma*) e clique em **Avançar**.
 3. Atualize os campos a seguir e clique em **criar**:
 
-    - **Nome do projeto:** MathFuncs.Shared  
+    - **Nome do projeto:** MathFuncs. Shared  
     - **Nome da solução:** MathFuncs  
-    - **Local** Usar o local de salvamento padrão (ou escolher uma alternativa)   
+    - **Local:** Usar o local de salvamento padrão (ou escolher uma alternativa)   
     - **Crie um projeto dentro do diretório da solução:** Defina esta opção como marcada
 4. Em **Gerenciador de soluções**, clique duas vezes no projeto **MathFuncs. Shared** e navegue até **configurações principais**.
 5. Remover **. Compartilhado** do **namespace padrão** para que ele seja definido somente como **MathFuncs** e, em seguida, clique em **OK**.
@@ -152,8 +152,8 @@ Este estágio requer as [bibliotecas pré-compiladas](https://github.com/xamarin
 9. Escolha **.NET Standard 2,0** e clique em **Avançar**.
 10. Atualize os campos a seguir e clique em **criar**:
 
-    - **Nome do projeto:** MathFuncs.Standard  
-    - **Local** Usar o mesmo local de salvamento que o projeto compartilhado   
+    - **Nome do projeto:** MathFuncs. Standard  
+    - **Local:** Usar o mesmo local de salvamento que o projeto compartilhado   
 
 11. Em **Gerenciador de soluções**, clique duas vezes no projeto **MathFuncs. Standard** .
 12. Navegue até **configurações principais**e, em seguida, atualize o **namespace padrão** para **MathFuncs**.
@@ -166,8 +166,8 @@ Este estágio requer as [bibliotecas pré-compiladas](https://github.com/xamarin
 
     | **NOME DO PROJETO**  | **NOME DO MODELO**   | **MENU NOVO PROJETO**   |
     |-------------------| --------------------| -----------------------|
-    | MathFuncs.Android | Biblioteca de Classes       | Biblioteca de > do Android      |
-    | MathFuncs.iOS     | Biblioteca de associação     | Biblioteca de > do iOS          |
+    | MathFuncs. Android | Biblioteca de Classes       | Biblioteca de > do Android      |
+    | MathFuncs. iOS     | Biblioteca de associação     | Biblioteca de > do iOS          |
 
 19. Em **Gerenciador de soluções**, clique duas vezes no projeto **MathFuncs. Android** e navegue até as configurações do **compilador** .
 
@@ -211,13 +211,13 @@ O processo de adicionar as bibliotecas nativas à solução de wrapper varia lig
 
 4. Adicione as bibliotecas **. so** correspondentes a cada uma das pastas da **Abi** com base no seguinte mapeamento:
 
-    **arm64-v8a:** libs/Android/arm64
+    **arm64-V8A:** bibliotecas/Android/arm64
 
-    **armeabi-v7a:** libs/Android/arm  
+    **ARMEABI-v7a:** bibliotecas/Android/ARM  
 
-    **x86:** libs/Android/x86
+    **x86:** bibliotecas/Android/x86
 
-    **x86_64:** libs/Android/x86_64
+    **x86_64:** bibliotecas/Android/x86_64
 
     > [!NOTE]
     > Para adicionar arquivos, **controle + clique** na pasta que representa o respectivo **Abi**e, em seguida, escolha **Adicionar arquivos...** no menu **Adicionar** . Escolha a biblioteca apropriada (no diretório **PrecompiledLibs** ) e clique em **abrir** e, em seguida, clique em **OK** deixando a opção padrão para *copiar o arquivo para o diretório*.
@@ -252,7 +252,7 @@ Agora, a pasta **bibliotecas** deve aparecer da seguinte maneira:
     > [!NOTE]
     > Usar um tipo de projeto de biblioteca de associação junto com uma [referência nativa](https://docs.microsoft.com/xamarin/cross-platform/macios/native-references) incorpora a biblioteca estática e permite que ela seja automaticamente vinculada ao aplicativo Xamarin. Ios que faz referência a ela (mesmo quando ela é incluída por meio de um pacote NuGet).
 
-5. Abra **ApiDefinition.cs**, excluindo o código comentado do modelo (deixando `MathFuncs` apenas o namespace) e, em seguida, execute a mesma etapa para **structs.cs** 
+5. Abra **ApiDefinition.cs**, excluindo o código comentado de modelo (deixando apenas o namespace `MathFuncs`) e, em seguida, execute a mesma etapa para **structs.cs** 
 
     > [!NOTE]
     > Um projeto de biblioteca de associação requer esses arquivos (com as ações de compilação *ObjCBindingApiDefinition* e *ObjCBindingCoreSource* ) para compilar. No entanto, escreveremos o código para chamar nossa biblioteca nativa, fora desses arquivos de uma maneira que possa ser compartilhada entre destinos de biblioteca do Android e iOS usando P/Invoke padrão.
@@ -277,7 +277,7 @@ Agora, escreva o C# código para chamar a biblioteca nativa. O objetivo é ocult
         {
             public MyMathFuncsSafeHandle() : base(true) { }
 
-            public IntPtr Ptr => this.handle;
+            public IntPtr Ptr => handle;
 
             protected override bool ReleaseHandle()
             {
@@ -402,7 +402,7 @@ Agora, escreva o C# código para chamar a biblioteca nativa. O objetivo é ocult
 1. Substitua a linha **todo** :
 
     ```csharp
-    MyMathFuncsWrapper.DisposeMyMathFuncs(this);
+    MyMathFuncsWrapper.DisposeMyMathFuncs(handle);
     ```
 
 #### <a name="writing-the-mymathfuncs-class"></a>Escrevendo a classe MyMathFuncs
@@ -499,7 +499,7 @@ Para que a biblioteca seja empacotada e distribuída via NuGet, a solução prec
     > [!NOTE]
     > Consulte o documento de [referência do nuspec](https://docs.microsoft.com/nuget/reference/nuspec) para obter mais detalhes sobre o esquema usado para esse manifesto.
 
-5. Adicione um `<files>` elemento como um filho `<package>` do elemento (logo abaixo `<metadata>`), identificando cada arquivo com um elemento `<file>` separado:
+5. Adicione um elemento `<files>` como um filho do elemento `<package>` (logo abaixo de `<metadata>`), identificando cada arquivo com um elemento `<file>` separado:
 
     ```xml
     <files>
@@ -516,21 +516,21 @@ Para que a biblioteca seja empacotada e distribuída via NuGet, a solução prec
     > [!NOTE]
     > Quando um pacote é instalado em um projeto e onde há vários assemblies especificados pelo mesmo nome, o NuGet escolherá efetivamente o assembly mais específico para a plataforma fornecida.
 
-6. Adicione os `<file>` elementos para os assemblies do **Android** :
+6. Adicione os elementos de `<file>` para os assemblies do **Android** :
 
     ```xml
     <file src="MathFuncs.Android/bin/Release/MathFuncs.dll" target="lib/MonoAndroid81/MathFuncs.dll" />
     <file src="MathFuncs.Android/bin/Release/MathFuncs.pdb" target="lib/MonoAndroid81/MathFuncs.pdb" />
     ```
 
-7. Adicione os `<file>` elementos para os assemblies do **Ios** :
+7. Adicione os elementos de `<file>` para os assemblies do **Ios** :
 
     ```xml
     <file src="MathFuncs.iOS/bin/Release/MathFuncs.dll" target="lib/Xamarin.iOS10/MathFuncs.dll" />
     <file src="MathFuncs.iOS/bin/Release/MathFuncs.pdb" target="lib/Xamarin.iOS10/MathFuncs.pdb" />
     ```
 
-8. Adicione os `<file>` elementos para os assemblies do **netstandard 2.0** :
+8. Adicione os elementos de `<file>` para os assemblies do **netstandard 2.0** :
 
     ```xml
     <file src="MathFuncs.Standard/bin/Release/netstandard2.0/MathFuncs.dll" target="lib/netstandard2.0/MathFuncs.dll" />
@@ -588,7 +588,7 @@ A forma mais simples de feed do NuGet é um diretório local:
 
 1. Defina a **configuração de compilação** como **liberar**e execute uma compilação usando o **comando + B**.
 2. Abra o **terminal** e altere o diretório para a pasta que contém o arquivo **nuspec** .
-3. No **terminal**, execute o comando do **pacote NuGet** especificando o arquivo **nuspec** , a **versão** (por exemplo, 1.0.0) e o **OutputDirectory** usando a pasta criada na [etapa anterior](https://docs.microsoft.com/xamarin/cross-platform/cpp/index#creating-a-local-nuget-feed), ou seja,  **local-NuGet-feed**. Por exemplo:
+3. No **terminal**, execute o comando do **pacote NuGet** especificando o arquivo **nuspec** , a **versão** (por exemplo, 1.0.0) e o **OutputDirectory** usando a pasta criada na [etapa anterior](https://docs.microsoft.com/xamarin/cross-platform/cpp/index#creating-a-local-nuget-feed), ou seja, **local-NuGet-feed**. Por exemplo:
 
     ```bash
     nuget pack MathFuncs.nuspec -Version 1.0.0 -OutputDirectory ~/local-nuget-feed
@@ -627,14 +627,14 @@ Para concluir o passo a passos, crie um aplicativo **Xamarin. Forms** para consu
 
     - **Nome do projeto:** MathFuncsApp.
     - **Nome da solução:** MathFuncsApp.  
-    - **Local** Use o local de salvamento padrão (ou escolha uma alternativa).
+    - **Local:** Use o local de salvamento padrão (ou escolha uma alternativa).
 
 6. Em **Gerenciador de soluções**, **controle + clique** no destino (**MathFuncsApp. Android** ou **MathFuncs. Ios**) para teste inicial e escolha **definir como projeto de inicialização**.
-7. Escolha o **dispositivo** preferencial ou**emulador**de **simulador**/. 
+7. Escolha o **dispositivo** ou **emulador**de/de **simulador** preferencial. 
 8. Execute a solução (**comando + retorno**) para validar que o projeto **Xamarin. Forms** do modelo é compilado e executado corretamente. 
 
     > [!NOTE]
-    > **Ios** (especificamente, o simulador) tende a ter o tempo de compilação/implantação mais rápido.
+    > o **Ios** (especificamente o simulador) tende a ter o tempo de compilação/implantação mais rápido.
 
 ### <a name="adding-the-local-nuget-feed-to-the-nuget-configuration"></a>Adicionando o feed do NuGet local à configuração do NuGet
 
@@ -642,8 +642,8 @@ Para concluir o passo a passos, crie um aplicativo **Xamarin. Forms** para consu
 2. Escolha **fontes** na seção **NuGet** e clique em **Adicionar**.
 3. Atualize os campos a seguir e clique em **Adicionar fonte**:
 
-    - **Name:** Forneça um nome significativo, por exemplo, pacotes locais.  
-    - **Local** Especifique a pasta **local NuGet-feed** criada na [etapa anterior](#preparing-a-local-packages-directory).
+    - **Nome:** Forneça um nome significativo, por exemplo, pacotes locais.  
+    - **Local:** Especifique a pasta **local NuGet-feed** criada na [etapa anterior](#preparing-a-local-packages-directory).
 
     > [!NOTE]
     > Nesse caso, não é necessário especificar um nome de **usuário** e uma **senha**. 
@@ -671,13 +671,13 @@ Agora, com uma referência ao pacote **MathFuncs** em cada um dos projetos, as f
     using MathFuncs;
     ```
 
-3. Declare uma instância da `MyMathFuncs` classe na parte superior `MainPage` da classe:
+3. Declare uma instância da classe `MyMathFuncs` na parte superior da classe `MainPage`:
 
     ```csharp
     MyMathFuncs myMathFuncs;
     ```
 
-4. Substitua os `OnAppearing` métodos `OnDisappearing` e da `ContentPage` classe base:
+4. Substitua os métodos `OnAppearing` e `OnDisappearing` da classe base `ContentPage`:
 
     ```csharp
     protected override void OnAppearing()
@@ -691,7 +691,7 @@ Agora, com uma referência ao pacote **MathFuncs** em cada um dos projetos, as f
     }
     ```
 
-5. Atualize o `OnAppearing` método para inicializar a `myMathFuncs` variável declarada anteriormente:
+5. Atualize o método `OnAppearing` para inicializar a variável `myMathFuncs` declarada anteriormente:
 
     ```csharp
     protected override void OnAppearing()
@@ -701,7 +701,7 @@ Agora, com uma referência ao pacote **MathFuncs** em cada um dos projetos, as f
     }
     ```
 
-6. Atualize o `OnDisappearing` método para chamar o `Dispose` método em `myMathFuncs`:
+6. Atualize o método `OnDisappearing` para chamar o método `Dispose` no `myMathFuncs`:
 
     ```csharp
     protected override void OnDisappearing()
@@ -739,7 +739,7 @@ Agora, com uma referência ao pacote **MathFuncs** em cada um dos projetos, as f
     }
     ```
 
-8. Por fim, `TestMathFuncs` chame no final `OnAppearing` do método:
+8. Por fim, chame `TestMathFuncs` no final do método `OnAppearing`:
 
     ```csharp
     TestMathFuncs();
@@ -774,4 +774,4 @@ Este artigo explicou como criar um aplicativo Xamarin. Forms que usa bibliotecas
 
 ### <a name="further-reading"></a>Leitura adicional
 
-[Artigos relacionados ao conteúdo desta postagem](https://github.com/xamarin/mobcat/tree/master/samples/cpp_with_xamarin#wrapping-up)
+[Artigos relacionados ao conteúdo desta postagem](https://github.com/xamcat/mobcat-samples/tree/master/cpp_with_xamarin#wrapping-up)

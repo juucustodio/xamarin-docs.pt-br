@@ -6,13 +6,13 @@ ms.assetid: D44745D5-77BB-4596-9B8C-EC75C259157C
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 06/19/2017
-ms.openlocfilehash: 3c167b025b41bd4fc7c8c93bdb2f825c9daa540c
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.date: 11/07/2019
+ms.openlocfilehash: 83fbad8a9bbb9afef5ee80705fe9e86e51284e7d
+ms.sourcegitcommit: efbc69acf4ea484d8815311b058114379c9db8a2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73032843"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73842988"
 ---
 # <a name="authenticate-users-with-an-identity-provider"></a>Autenticar usuários com um provedor de identidade
 
@@ -259,6 +259,16 @@ var account = AccountStore.Create ().FindAccountsForService (Constants.AppName).
 ```
 
 O método `FindAccountsForService` retorna uma coleção `IEnumerable` de objetos `Account`, com o primeiro item na coleção que está sendo definida como a conta correspondente.
+
+## <a name="troubleshooting"></a>Solução de problemas
+
+- No Android, se você receber uma notificação do sistema quando fechar o navegador após a autenticação e quiser interromper a notificação do sistema, adicione o seguinte código ao projeto do Android depois de inicializar o Xamarin. auth:
+
+```csharp
+Xamarin.Auth.CustomTabsConfiguration.CustomTabsClosingMessage = null;
+```
+
+- No Android, se o navegador não fechar automaticamente, uma solução temporária será fazer o downgrade do pacote Xamarin. auth para a versão 1.5.0.3. Em seguida, adicione o [2.0.147 de criptografia PCL v](https://www.nuget.org/packages/PCLCrypto/2.0.147) ao projeto do Android.
 
 ## <a name="summary"></a>Resumo
 
