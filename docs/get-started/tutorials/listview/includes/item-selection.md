@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: a537bdaf2015dd7d179545cb7587934818e960d7
-ms.sourcegitcommit: a5ef4497db04dfa016865bc7454b3de6ff088554
+ms.openlocfilehash: 2185fa243d2bccea046be5c91a2b1e9ed365edfe
+ms.sourcegitcommit: ecb81266e59c9e1773a06582e138bf4eed713dfe
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2019
-ms.locfileid: "71004141"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74062851"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -39,7 +39,7 @@ ms.locfileid: "71004141"
 
 1. Na barra de ferramentas do Visual Studio, pressione o botão **Iniciar** (o botão triangular que se parece com um botão Reproduzir) para iniciar o aplicativo dentro do simulador remoto de iOS ou do Android Emulator escolhido:
 
-    [![Captura de tela de um ListView que responde à seleção e toques no item, no iOS e Android](../images/item-selection.png "Seleção de item de ListView")](../images/item-selection-large.png#lightbox "Seleção de item de ListView")
+    [![Captura de tela de um ListView que responde à seleção e toques no item, no iOS e Android](../images/item-selection.png "Seleção de item do ListView")](../images/item-selection-large.png#lightbox "Seleção de item do ListView")
 
     Defina pontos de interrupção nos dois manipuladores de eventos e toque em itens no [`ListView`](xref:Xamarin.Forms.ListView). Observe que o evento [`ItemSelected`](xref:Xamarin.Forms.ListView.ItemSelected) é acionado apenas quando um novo item é selecionado no [`ListView`](xref:Xamarin.Forms.ListView), enquanto o evento [`ItemTapped`](xref:Xamarin.Forms.ListView.ItemTapped) é acionado sempre que um item é tocado.
 
@@ -78,8 +78,8 @@ ms.locfileid: "71004141"
 
 1. Na barra de ferramentas do Visual Studio para Mac, pressione o botão **Iniciar** (o botão triangular que se parece com o botão Reproduzir) para iniciar o aplicativo dentro do simulador de iOS ou do Android Emulator escolhido:
 
-    [![Captura de tela de um ListView que responde à seleção e toques no item, no iOS e Android](../images/item-selection.png "Seleção de item de ListView")](../images/item-selection-large.png#lightbox "Seleção de item de ListView")
+    [![Captura de tela de um ListView que responde à seleção e toques no item, no iOS e Android](../images/item-selection.png "Seleção de item do ListView")](../images/item-selection-large.png#lightbox "Seleção de item do ListView")
 
     Defina pontos de interrupção nos dois manipuladores de eventos e toque em itens no [`ListView`](xref:Xamarin.Forms.ListView). Observe que o evento [`ItemSelected`](xref:Xamarin.Forms.ListView.ItemSelected) é acionado apenas quando um novo item é selecionado no [`ListView`](xref:Xamarin.Forms.ListView), enquanto o evento [`ItemTapped`](xref:Xamarin.Forms.ListView.ItemTapped) é acionado sempre que um item é tocado.
 
-    Para obter mais informações sobre seleção e toques em itens, consulte [Selection & Taps](~/xamarin-forms/user-interface/listview/interactivity.md#selection-and
+    Para obter mais informações sobre seleção e toques em itens, confira [Seleção e toques](~/xamarin-forms/user-interface/listview/interactivity.md#selection-and-taps)
