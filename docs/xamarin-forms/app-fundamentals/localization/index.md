@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2018
-ms.openlocfilehash: 71033e935a2d3a4be88dbcc5d975938771484640
-ms.sourcegitcommit: b60a37587aad8a0bfa8a522d88d22fa672002443
-ms.translationtype: HT
+ms.openlocfilehash: b580c6e41aa689ff8fcea698c40d7aaf5f2ca050
+ms.sourcegitcommit: 233aaa1ac3d8f40c09b6daf6d944ea0b4cbee381
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51285567"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74135267"
 ---
 # <a name="xamarinforms-localization"></a>Localização do Xamarin.Forms
 
 _A estrutura de localização interna do .NET pode ser usada para criar aplicativos multilíngues multiplataforma com o Xamarin.Forms._
 
-## <a name="string-and-image-localizationtextmd"></a>[Localização de cadeia de caracteres e imagem](text.md)
+## <a name="xamarinforms-string-and-image-localizationtextmd"></a>[Cadeia de caracteres Xamarin. Forms e localização de imagem](text.md)
 
 O mecanismo interno para localização de usos de aplicativos .NET [arquivos RESX](https://docs.microsoft.com/dotnet/framework/resources/creating-resource-files-for-desktop-apps#resources-in-resx-files) e as classes nos namespaces `System.Resources` e `System.Globalization`. Arquivos RESX que contêm cadeias de caracteres traduzidas são inseridos no assembly do Xamarin.Forms, junto com uma classe gerada pelo compilador que fornece acesso fortemente tipado para as traduções. O texto traduzido pode ser então recuperado no código.
 
