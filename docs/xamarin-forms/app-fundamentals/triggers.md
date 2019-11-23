@@ -16,7 +16,7 @@ ms.locfileid: "71997146"
 ---
 # <a name="xamarinforms-triggers"></a>Gatilhos do Xamarin.Forms
 
-[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithtriggers)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithtriggers)
 
 Os gatilhos permitem expressar ações declarativamente em XAML que alteram a aparência dos controles com base em eventos ou alterações de propriedade.
 
@@ -278,12 +278,12 @@ Na parte inferior das telas, o botão **Logon** permanece inativo até que ambos
 
 Outra maneira de implementar alterações quando ocorre um gatilho é adicionando as coleções `EnterActions` e `ExitActions` e especificando as implementações `TriggerAction<T>`.
 
-A coleção [`EnterActions`](xref:Xamarin.Forms.TriggerBase.EnterActions) é usada para definir um `IList` de objetos [`TriggerAction`](xref:Xamarin.Forms.TriggerAction) que serão invocados quando a condição do gatilho for atendida. A coleção [`ExitActions`](xref:Xamarin.Forms.TriggerBase.ExitActions) é usada para definir um `IList` de objetos `TriggerAction` que serão invocados depois que a condição do gatilho não for mais atendida.
+A coleção de [`EnterActions`](xref:Xamarin.Forms.TriggerBase.EnterActions) é usada para definir uma `IList` de objetos [`TriggerAction`](xref:Xamarin.Forms.TriggerAction) que serão invocados quando a condição do gatilho for atendida. A coleção de [`ExitActions`](xref:Xamarin.Forms.TriggerBase.ExitActions) é usada para definir uma `IList` de objetos `TriggerAction` que serão invocados depois que a condição do gatilho não for mais atendida.
 
 > [!NOTE]
 > Os objetos [`TriggerAction`](xref:Xamarin.Forms.TriggerAction) definidos nas coleções `EnterActions` e `ExitActions` são ignorados pela classe [`EventTrigger`](xref:Xamarin.Forms.EventTrigger) .    
 
-Você *pode fornecer @no__t* -1 e `ExitActions`, bem como `Setter`S em um gatilho, mas lembre-se de que os `Setter`S são chamados imediatamente (eles não aguardam a conclusão do `EnterAction` ou `ExitAction`). Como alternativa, você pode executar tudo no código e não usar `Setter`s.
+Você *pode fornecer `EnterActions`* e `ExitActions`, bem como `Setter`s em um gatilho, mas lembre-se de que os `Setter`s são chamados imediatamente (eles não esperam que a `EnterAction` ou `ExitAction` sejam concluídas). Como alternativa, você pode executar tudo no código e não usar `Setter`s.
 
 ```xaml
 <Entry Placeholder="enter job title">

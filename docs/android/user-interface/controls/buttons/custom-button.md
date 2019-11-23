@@ -34,7 +34,7 @@ Crie um novo arquivo no diretório de **recursos/empates** chamado **android_but
 </selector>
 ```
 
-Isso define um único recurso que poderá ser desenhado, que alterará sua imagem com base no estado atual do botão. O primeiro `<item>` define **android_pressed. png** como a imagem quando o botão é pressionado (ele foi ativado); a segunda `<item>` define **android_focused. png** como a imagem quando o botão está focalizado (quando o botão é realçado usando o trackball ou o pad direcional); e o terceiro `<item>` define **android_normal. png** como a imagem para o estado normal (quando não pressionada nem focada). Esse arquivo XML agora representa um único recurso de desenho e, quando referenciado por um [`Button`](xref:Android.Widget.Button) para seu plano de fundo, a imagem exibida será alterada com base nesses três Estados.
+Isso define um único recurso que poderá ser desenhado, que alterará sua imagem com base no estado atual do botão. A primeira `<item>` define **android_pressed. png** como a imagem quando o botão é pressionado (ele foi ativado); a segunda `<item>` define **android_focused. png** como a imagem quando o botão está focalizado (quando o botão é realçado usando o trackball ou o direcional); e o terceiro `<item>` define **android_normal. png** como a imagem para o estado normal (quando não pressionada nem focada). Esse arquivo XML agora representa um único recurso de desenho e, quando referenciado por um [`Button`](xref:Android.Widget.Button) para seu plano de fundo, a imagem exibida será alterada com base nesses três Estados.
 
 > [!NOTE]
 > A ordem dos elementos de `<item>` é importante. Quando esse empate é referenciado, os `<item>`s são percorridos em ordem para determinar qual deles é apropriado para o estado atual do botão.

@@ -18,7 +18,7 @@ ms.locfileid: "73029061"
 
 _ViewPager é um Gerenciador de layout que permite implementar a navegação Gestural. A navegação Gestural permite que o usuário passe o dedo para a esquerda e para a direita para percorrer as páginas de dados. Este guia explica como implementar a navegação Gestural com o ViewPager, com e sem fragmentos. Ele também descreve como adicionar indicadores de página usando PagerTitleStrip e PagerTabStrip._
 
-## <a name="overview"></a>Visão Geral
+## <a name="overview"></a>Visão geral
 
 Um cenário comum no desenvolvimento de aplicativos é a necessidade de fornecer aos usuários navegação Gestural entre exibições irmãos. Nessa abordagem, o usuário passa o dedo para a esquerda ou direita para acessar páginas de conteúdo (por exemplo, em um assistente de instalação ou em uma apresentação de slides). Você pode criar essas exibições de passe do dedo usando o widget `ViewPager`, disponível na [biblioteca de suporte do Android v4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/). O `ViewPager` é um widget de layout composto por várias exibições filhas em que cada exibição filho constitui uma página no layout: 
 
@@ -44,7 +44,7 @@ Para usar `ViewPager` em seu projeto de aplicativo, você deve instalar o pacote
 Três componentes são usados para implementar a navegação Gestural com `ViewPager`:
 
 - ViewPager
-- Adaptador
+- Personalizado
 - Indicador de pager
 
 Cada um desses componentes é resumido abaixo.
@@ -55,7 +55,7 @@ Cada um desses componentes é resumido abaixo.
 
 [![closeup do aplicativo TreePager exibindo uma transição entre exibições](images/02-transition-sml.png)](images/02-transition.png#lightbox)
 
-### <a name="adapter"></a>Adaptador
+### <a name="adapter"></a>Personalizado
 
 `ViewPager` efetua pull de seus dados de um *adaptador*. O trabalho do adaptador é criar os `View`s exibidos pelo `ViewPager`, fornecendo-os conforme necessário. O diagrama a seguir ilustra esse conceito &ndash; o adaptador cria e popula `View`s e os fornece ao `ViewPager`. Como o `ViewPager` detecta os gestos de toque do usuário, ele solicita que o adaptador forneça o `View` apropriado a ser exibido: 
 
@@ -67,7 +67,7 @@ Neste exemplo específico, cada `View` é construída a partir de uma imagem de 
 
 `ViewPager` pode ser usado para exibir um grande conjunto de dados (por exemplo, uma galeria de imagens pode conter centenas de imagens). Para ajudar o usuário a navegar por grandes conjuntos de dados, `ViewPager` geralmente é acompanhado por um *indicador de pager* que exibe uma cadeia de caracteres. A cadeia de caracteres pode ser o título da imagem, uma legenda ou simplesmente a posição da exibição atual dentro do conjunto de dados. 
 
-Há duas exibições que podem produzir essas informações de navegação para você: `PagerTabStrip` e `PagerTitleStrip.` cada uma exibe uma cadeia de caracteres na parte superior de uma `ViewPager`, e cada uma recebe seus dados do adaptador do `ViewPager`para que ele fique sempre em sincronia com o @no__t_ exibido no momento 4_ . A diferença entre eles é que `PagerTabStrip` inclui um indicador visual para a cadeia de caracteres "Current" enquanto `PagerTitleStrip` não (conforme mostrado nestas capturas de tela): 
+Há duas exibições que podem produzir essas informações de navegação para você: `PagerTabStrip` e `PagerTitleStrip.` cada uma exibe uma cadeia de caracteres na parte superior de um `ViewPager`, e cada uma recebe seus dados do adaptador do `ViewPager`para que ele fique sempre em sincronia com os `View`exibidos no momento. A diferença entre eles é que `PagerTabStrip` inclui um indicador visual para a cadeia de caracteres "Current" enquanto `PagerTitleStrip` não (conforme mostrado nestas capturas de tela): 
 
 [![capturas de tela do aplicativo TreePager com PagerTitleStrip e PagerTabStrip](images/04-comparison-sml.png)](images/04-comparison.png#lightbox)
 

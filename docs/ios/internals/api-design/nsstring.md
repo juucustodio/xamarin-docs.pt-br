@@ -16,9 +16,9 @@ ms.locfileid: "73022354"
 ---
 # <a name="nsstring-in-xamarinios-and-xamarinmac"></a>NSString no Xamarin. iOS e Xamarin. Mac
 
-O design das chamadas Xamarin. iOS e Xamarin. Mac para a API de uso para expor o tipo de cadeia de caracteres .NET nativo, `string`, para manipulação C# de cadeia de caracteres no e outras linguagens de programação .net, e para expor cadeia de caracteres como o tipo de dados exposto pela API em vez do `NSString` tipo de dados.
+O design das chamadas Xamarin. iOS e Xamarin. Mac para a API de uso para expor o tipo de cadeia de caracteres .NET nativo, `string`, para manipulação C# de cadeia de caracteres no e outras linguagens de programação .net, e para expor cadeia de caracteres como o tipo de dados exposto pela API em vez do tipo de dados `NSString` .
 
-Isso significa que os desenvolvedores não devem manter as cadeias de caracteres destinadas a serem usadas para chamar o Xamarin. iOS & API Xamarin. Mac (unificada) em um tipo especial (`Foundation.NSString`), elas podem continuar usando o `System.String` do mono para todas as operações e sempre que uma API no O xamarin. iOS ou o Xamarin. Mac requer uma cadeia de caracteres, nossa associação de API cuida do marshaling das informações.
+Isso significa que os desenvolvedores não devem manter as cadeias de caracteres destinadas a serem usadas para chamar o Xamarin. iOS & a API do Xamarin. Mac (unificada) em um tipo especial (`Foundation.NSString`), eles podem continuar usando o `System.String` do mono para todas as operações e sempre que uma API no Xamarin. iOS ou Xamarin. Mac exigir uma cadeia de caracteres, nossa associação de API
 
 Por exemplo, a propriedade Objective-C "text" em um `UILabel` do tipo `NSString`, é declarada da seguinte maneira:
 
@@ -34,17 +34,17 @@ class UILabel {
 }
 ```
 
-Nos bastidores, a implementação dessa propriedade realiza marshaling da C# cadeia de caracteres em um`NSString`e chama o método`objc_msgSend`da mesma forma que o Objective-C.
+Nos bastidores, a implementação dessa propriedade realiza marshaling da C# cadeia de caracteres em um `NSString` e chama o método `objc_msgSend` da mesma forma que o Objective-C.
 
-Há algumas APIs de Objective-C de terceiros que não consomem um `NSString`, mas sim consumir uma cadeia de caracteres C (um "*Char*"). Nesses casos, você ainda pode usar o tipo C# de dados String, mas deve usar o atributo [[plainstring]](~/cross-platform/macios/binding/objective-c-libraries.md) para informar ao gerador de associação que essa cadeia de caracteres não deve ser empacotada como um`NSString`, mas sim como uma cadeia de caracteres C.
+Há algumas APIs de Objective-C de terceiros que não consomem um `NSString`, mas sim consumir uma cadeia de caracteres C (um "*Char*"). Nesses casos, você ainda pode usar o tipo C# de dados String, mas deve usar o atributo [[plainstring]](~/cross-platform/macios/binding/objective-c-libraries.md) para informar ao gerador de associação que essa cadeia de caracteres não deve ser empacotada como um `NSString`, mas sim como uma cadeia de caracteres C.
 
  <a name="Exceptions_to_the_Rule" />
 
 ## <a name="exceptions-to-the-rule"></a>Exceções à regra
 
-No Xamarin. iOS e no Xamarin. Mac, fizemos uma exceção a essa regra. A decisão entre o momento em que exponhamos `string`s e quando fizermos uma comparação de `NSString`s será feita se o método de de `NSString`puder estar fazendo uma diferença de ponteiro em vez de uma comparação de conteúdo.
+No Xamarin. iOS e no Xamarin. Mac, fizemos uma exceção a essa regra. A decisão entre o momento em que exponhamos `string`s e quando fizermos uma comparação de `NSString`s será feita se o método de  de `NSString`puder estar fazendo uma diferença de ponteiro em vez de uma comparação de conteúdo.
 
-Isso pode acontecer quando uma API Objective-C usa um `NSString`público constante como um token que representa alguma ação, em vez de comparar o conteúdo real da cadeia de caracteres.
+Isso pode acontecer quando uma API Objective-C usa um `NSString`público  constante como um token que representa alguma ação, em vez de comparar o conteúdo real da cadeia de caracteres.
 
 Nesses casos, `NSString` APIs são expostas e há uma minoria de APIs que têm isso. Você também observará que as propriedades NSString são expostas em algumas classes. Essas propriedades de `NSString` são expostas para itens como notificações. Essas são propriedades geralmente semelhantes a:
 

@@ -22,13 +22,13 @@ O Xamarin. Forms é inicializado em cada plataforma após a conclusão da sequê
 
 - No método `OnCreate` da classe `MainActivity` no Android.
 - No método `FinishedLaunching` da classe `AppDelegate` no iOS.
-- No método `OnLaunched` da classe `App` em UWP.
+- No método `OnLaunched` da classe `App` no UWP.
 
 A tela inicial deve ser mostrada assim que possível quando o aplicativo é iniciado, mas o Xamarin. Forms não é inicializado até o final da sequência de inicialização, o que significa que a tela inicial deve ser implementada fora do Xamarin. Forms em cada plataforma. As seções a seguir explicam como criar telas de abertura em cada plataforma.
 
 ## <a name="xamarinforms-android-splash-screen"></a>Tela inicial do Xamarin. Forms para Android
 
-A criação de uma tela inicial no Android requer a criação de um @no__t inicial-0 como o `MainLauncher` com um tema especial. Assim que o @no__t inicial-0 é iniciado, ele inicia o principal `Activity` com o tema do aplicativo normal.
+A criação de uma tela inicial no Android requer a criação de um `Activity` inicial como o `MainLauncher` com um tema especial. Assim que o `Activity` inicial é iniciado, ele inicia o `Activity` principal com o tema do aplicativo normal.
 
 Para obter mais informações sobre telas de abertura no Xamarin. Android, consulte a [tela inicial do xamarin. Android](~/android/user-interface/splash-screen.md).
 
@@ -42,7 +42,7 @@ Para obter mais informações sobre telas de inicialização no Xamarin. iOS, co
 
 Em UWP, o **Package. appxmanifest** contém uma guia **ativos visuais** com um submenu **tela inicial** . Os elementos gráficos da tela inicial podem ser especificados neste menu:
 
-[tela inicial do ![Setting no UWP](splashscreen-images/uwp-splashscreen-cropped.png)](splashscreen-images/uwp-splashscreen.png#lightbox)
+[tela inicial de configuração de ![no UWP](splashscreen-images/uwp-splashscreen-cropped.png)](splashscreen-images/uwp-splashscreen.png#lightbox)
 
 ## <a name="related-links"></a>Links relacionados
 

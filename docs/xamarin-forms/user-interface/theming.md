@@ -29,8 +29,8 @@ O processo de implementação de temas de tempo de execução em um aplicativo X
 
 As capturas de tela a seguir mostram as páginas com tema, com o aplicativo iOS usando uma clara Theme e o aplicativo do Android usando um tema escuro:
 
-[![Captura de tela da página principal de um aplicativo com tema, no Ios e no android](theming-images/main-page-both-themes.png "Página principal do aplicativo com tema")](theming-images/main-page-both-themes-large.png#lightbox "Página principal do aplicativo com tema") 
-[![captura de tela da página de detalhes de um aplicativo com tema, no Ios e no Android](theming-images/detail-page-both-themes.png "Página de detalhes do aplicativo com tema")](theming-images/detail-page-both-themes-large.png#lightbox "Página de detalhes do aplicativo com tema")
+[![Captura de tela da página principal de um aplicativo com tema, no Ios e no android](theming-images/main-page-both-themes.png "Página principal do aplicativo com tema")](theming-images/main-page-both-themes-large.png#lightbox "Página principal do aplicativo com tema")
+[ ![captura de tela da página de detalhes de um aplicativo com tema, no Ios e no Android](theming-images/detail-page-both-themes.png "Página de detalhes do aplicativo com tema")](theming-images/detail-page-both-themes-large.png#lightbox "Página de detalhes do aplicativo com tema")
 
 ## <a name="define-themes"></a>Definir temas
 
@@ -183,7 +183,7 @@ Para obter mais informações sobre estilos, consulte [estilizando aplicativos X
 Quando um tema é selecionado em tempo de execução, o aplicativo deve:
 
 1. Remova o tema atual do aplicativo. Isso é feito desmarcando a propriedade [`MergedDictionaries`](xref:Xamarin.Forms.ResourceDictionary.MergedDictionaries) do [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary)no nível do aplicativo.
-2. Carregue o tema selecionado. Isso é obtido com a adição de uma instância do tema selecionado à propriedade `MergedDictionaries` do `ResourceDictionary` no nível do aplicativo.
+2. Carregue o tema selecionado. Isso é obtido com a adição de uma instância do tema selecionado à propriedade `MergedDictionaries` do `ResourceDictionary`no nível do aplicativo.
 
 Todos os objetos [`VisualElement`](xref:Xamarin.Forms.VisualElement) que definem propriedades com a extensão de marcação `DynamicResource` aplicarão os novos valores de tema. Isso ocorre porque a extensão de marcação de `DynamicResource` mantém um link para as chaves de dicionário. Portanto, quando os valores associados às chaves são substituídos, as alterações são aplicadas aos objetos `VisualElement`.
 

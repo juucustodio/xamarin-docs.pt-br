@@ -209,7 +209,7 @@ Há quatro mensagens de consequência:
 - Criação de referência global fraca: essas são as linhas que começam com *+ w +* .
 - Destruição de referência global fraca: essas são linhas que começam com *-w-* .
 
-Em todas as mensagens, o valor de *grefc* é a contagem de referências globais que o Xamarin. Android criou, enquanto o valor de *grefwc* é a contagem de referências globais fracas que o xamarin. Android criou. O *valor de Handle ou* *obj-Handle* é o valor de identificador JNI e o caractere após ' */* ' é o tipo de valor de identificador *:/l* para referência local, */g* para referências globais e */w* para o fraco global referências.
+Em todas as mensagens, o valor de *grefc* é a contagem de referências globais que o Xamarin. Android criou, enquanto o valor de *grefwc* é a contagem de referências globais fracas que o xamarin. Android criou. O valor Handle *ou obj-Handle* é o valor *do identificador JNI* e o caractere após ' */* ' é o tipo de valor de identificador: */l* para referência local, */g* para referências globais e */w* para referências globais fracas.
 
 Como parte do processo de GC, as referências globais (+ g +) são convertidas em referências globais fracas (causando + w + e-g-), um GC do lado do Java é iniciado e, em seguida, a referência global fraca é verificada para ver se ele foi coletado. Se ele ainda estiver ativo, um novo gref será criado em relação à referência fraca (+ g +,-w-); caso contrário, a referência fraca será destruída (-w).
 
@@ -306,7 +306,7 @@ Isso significa que o caminho não contém o diretório em que o diretório bin d
 
 ## <a name="monodroidexe-or-aresgenexe-exited-with-code-1"></a>monodroid. exe ou aresgen. exe encerrado com o código 1
 
-Para ajudá-lo a depurar esse problema, acesse o Visual Studio e altere o nível de detalhamento do MSBuild, para fazer isso, selecione: **ferramentas > opções > projeto** e **soluções > criar** e **Executar > Detalhamento da saída de compilação do projeto do MSBuild** e definir isso valor para **normal**.
+Para ajudá-lo a depurar esse problema, acesse o Visual Studio e altere o nível de detalhamento do MSBuild, para fazer isso, selecione: **ferramentas > opções > projeto** e **soluções > compilar** e **Executar > Detalhamento da saída de compilação do projeto do MSBuild** e defina esse valor como **normal**.
 
 Recompile e verifique o painel de saída do Visual Studio, que deve conter o erro completo.
 
@@ -464,7 +464,7 @@ mAdapter = new SimpleExpandableListAdapter (
 );
 ```
 
-O problema é que o Xamarin. Android realiza marshaling incorretamente de tipos genéricos aninhados. O `List<IDictionary<string, object>>` está sendo empacotado em um [Java. lang. ArrrayList](xref:Java.Util.ArrayList), mas o `ArrayList` está contendo `mono.android.runtime.JavaObject` instâncias (que fazem referência às instâncias de `Dictionary<string, object>`) em vez de algo que implementa [Java. util. map](xref:Java.Util.IMap), resultando no seguinte Exception
+O problema é que o Xamarin. Android realiza marshaling incorretamente de tipos genéricos aninhados. O `List<IDictionary<string, object>>` está sendo empacotado em um [Java. lang. ArrrayList](xref:Java.Util.ArrayList), mas o `ArrayList` está contendo `mono.android.runtime.JavaObject` instâncias (que fazem referência às instâncias de `Dictionary<string, object>`) em vez de algo que implementa [Java. util. map](xref:Java.Util.IMap), resultando na seguinte exceção:
 
 ```shell
 E/AndroidRuntime( 2991): FATAL EXCEPTION: main
@@ -515,7 +515,7 @@ using (var groupData = new JavaList<IDictionary<string, object>> ()) {
 
 ## <a name="unexpected-nullreferenceexceptions"></a>NullReferenceExceptions inesperadas
 
-Ocasionalmente, o [log de depuração do Android](~/android/deploy-test/debugging/android-debug-log.md) mencionará NullReferenceExceptions que &ldquo;não pode acontecer,&rdquo; ou venha do código de tempo de execução do mono para Android logo antes do aplicativo se tornarem inativos:
+Ocasionalmente o [logdedepuraçãodoAndroid](~/android/deploy-test/debugging/android-debug-log.md) mencionaráNullReferenceExceptionsque &ldquo;nãopodemacontecer,&rdquo; ouqueserãoprovenientesdocódigodetempodeexecuçãodomonoparaAndroidlogoantesdoaplicativosetornarem :
 
 ```shell
 E/mono(15202): Unhandled Exception: System.NullReferenceException: Object reference not set to an instance of an object
@@ -627,7 +627,7 @@ E/dalvikvm(  602): VM aborting
 
 No exemplo acima (que, incidentalmente, vem do [bug 685215](https://bugzilla.novell.com/show_bug.cgi?id=685215)), o problema é que muitas instâncias de Android. Graphics. Point estão sendo criadas; consulte o [comentário \#2](https://bugzilla.novell.com/show_bug.cgi?id=685215#c2) para obter uma lista de correções para esse bug específico.
 
-Normalmente, uma solução útil é descobrir qual tipo tem muitas instâncias alocadas &ndash; Android. Graphics. Point no despejo acima &ndash;, em seguida, encontrar onde elas são criadas no código-fonte e descartá-las adequadamente (para que seu objeto Java o tempo de vida é reduzido). Isso nem sempre é apropriado (\#685215 é multithread, então a solução trivial evita a chamada Dispose), mas é a primeira coisa a ser considerada.
+Normalmente, uma solução útil é descobrir qual tipo tem muitas instâncias alocadas &ndash; Android. Graphics. Point no despejo acima &ndash;, em seguida, encontrar onde elas são criadas no código-fonte e descartá-las adequadamente (para que seu tempo de vida do objeto Java seja reduzido). Isso nem sempre é apropriado (\#685215 é multithread, então a solução trivial evita a chamada Dispose), mas é a primeira coisa a ser considerada.
 
 Você pode habilitar o [log do GREF](~/android/troubleshooting/index.md) para ver quando GREFs são criados e quantas existem.
 

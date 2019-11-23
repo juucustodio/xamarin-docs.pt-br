@@ -18,7 +18,7 @@ ms.locfileid: "70771508"
 
 [![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-focuseffect)
 
-_Efeitos simplificam a personalização de um controle. Este artigo demonstra como criar um efeito que altera a cor da tela de fundo do controle Entry quando o controle obtém foco._
+_Os efeitos simplificam a personalização de um controle. Este artigo demonstra como criar um efeito que altera a cor do plano de fundo do controle de entrada quando o controle ganha foco._
 
 O processo para criar um efeito em cada projeto específico da plataforma é o seguinte:
 
@@ -33,7 +33,7 @@ O efeito, em seguida, poderá ser consumido sendo anexado ao controle apropriado
 > [!NOTE]
 > O fornecimento de um efeito em cada projeto de plataforma é opcional. Tentar usar um efeito quando não há um efeito registrado retornará um valor não nulo que não faz nada.
 
-O aplicativo de exemplo demonstra um `FocusEffect` que altera a cor da tela de fundo de um controle quando ele obtém o foco. O diagrama a seguir ilustra as responsabilidades de cada projeto no aplicativo de exemplo, bem como as relações entre elas:
+O aplicativo de exemplo demonstra um `FocusEffect` que altera a cor da tela de fundo de um controle quando ele obtém o foco. O seguinte diagrama ilustra as responsabilidades de cada projeto no aplicativo de exemplo, bem como as relações entre elas:
 
 ![](creating-images/focus-effect.png "Responsabilidades do projeto de efeito de foco")
 
@@ -234,7 +234,7 @@ public class FocusEffect : RoutingEffect
 }
 ```
 
-A classe `FocusEffect` cria subclasses da classe [`RoutingEffect`](xref:Xamarin.Forms.RoutingEffect), que representa um efeito independente de plataforma que encapsula um efeito interno, que é geralmente é específico da plataforma. A classe `FocusEffect` chama o construtor da classe base, passando um parâmetro composto por uma concatenação do nome do grupo de resolução (especificado usando o atributo [`ResolutionGroupName`](xref:Xamarin.Forms.ResolutionGroupNameAttribute) na classe do efeito) e pela ID exclusiva que foi especificada usando o atributo [`ExportEffect`](xref:Xamarin.Forms.ExportEffectAttribute) na classe do efeito. Portanto, quando o [`Entry`](xref:Xamarin.Forms.Entry) é inicializado em tempo de execução, uma nova instância do `MyCompany.FocusEffect` é adicionada à coleção [`Effects`](xref:Xamarin.Forms.Element.Effects) do controle.
+A classe `FocusEffect` cria subclasses da classe [`RoutingEffect`](xref:Xamarin.Forms.RoutingEffect), que representa um efeito independente de plataforma que encapsula um efeito interno, que é geralmente é específico da plataforma. A classe `FocusEffect` chama o construtor da classe base, passando um parâmetro composto por uma concatenação do nome do grupo de resolução (especificado usando o atributo [`ResolutionGroupName`](xref:Xamarin.Forms.ResolutionGroupNameAttribute) na classe do efeito) e pela ID exclusiva que foi especificada usando o atributo [`ExportEffect`](xref:Xamarin.Forms.ExportEffectAttribute) na classe do efeito. Portanto, quando o [`Entry`](xref:Xamarin.Forms.Entry) é inicializado em runtime, uma nova instância do `MyCompany.FocusEffect` é adicionada à coleção [`Effects`](xref:Xamarin.Forms.Element.Effects) do controle.
 
 Efeitos também podem ser anexados a controles usando um comportamento ou usando propriedades anexadas. Para obter mais informações sobre como anexar um efeito a um controle usando um comportamento, confira [EffectBehavior reutilizável](~/xamarin-forms/app-fundamentals/behaviors/reusable/effect-behavior.md). Para obter mais informações sobre como anexar um efeito a um controle usando propriedades anexadas, confira [Passar parâmetros para um efeito](~/xamarin-forms/app-fundamentals/effects/passing-parameters/index.md).
 

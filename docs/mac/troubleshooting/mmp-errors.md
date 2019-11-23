@@ -304,7 +304,7 @@ Como uma solução de última Straw, use uma versão mais antiga do Xamarin. Mac
 
 #### <a name="mm1604-file-of-type-0-is-not-a-macho-file-1"></a>MM1604: o arquivo do tipo {0} não é um arquivo MachO ({1}).
 
-## <a name="mm2xxx-linker"></a>MM2xxx: vinculador
+## <a name="mm2xxx-linker"></a>MM2xxx: Linker
 
 ### <a name="mm20xx-linker-general-errors"></a>MM20xx: erros do vinculador (geral)
 
@@ -338,7 +338,7 @@ Como uma solução de última Straw, use uma versão mais antiga do Xamarin. Mac
 
 <a name="MM2009" />
 
-#### <a name="mm2009-referenced-by-01------this-message-is-related-to-mm2006-"></a>MM2009: referenciado por {0}.{1} @ no__t_2_\* esta mensagem está relacionada ao MM2006 \*\*
+#### <a name="mm2009-referenced-by-01------this-message-is-related-to-mm2006-"></a>MM2009: referenciado por {0}.{1}\*\* essa mensagem está relacionada ao MM2006 \*\*
 
 <a name="MM2010" />
 
@@ -517,7 +517,7 @@ Se esse não for o caso, registre um [problema](https://github.com/xamarin/xamar
 
 <a name="MM5204" />
 
-#### <a name="mm5204-invalid-architecture-x86_64-is-only-supported-on-non-classic-profiles"></a>MM5204: arquitetura inválida. o x86_64 só tem suporte em perfis não clássicos.
+#### <a name="mm5204-invalid-architecture-x86_64-is-only-supported-on-non-classic-profiles"></a>MM5204: arquitetura inválida. Só há suporte para x86_64 em perfis não clássicos.
 
 <a name="MM5205" />
 
@@ -570,7 +570,7 @@ Consulte o [aviso de mTouch equivalente](~/ios/troubleshooting/mtouch-errors.md#
 
 <a name="MM5310" />
 
-#### <a name="mm5310-install_name_tool-failed-with-an-error-code-0-check-build-log-for-details"></a>MM5310: install_name_tool falhou com o código de erro '{0}'. Verifique o log de compilação para obter detalhes.
+#### <a name="mm5310-install_name_tool-failed-with-an-error-code-0-check-build-log-for-details"></a>MM5310: falha de install_name_tool com um código de erro '{0}'. Verifique o log de compilação para obter detalhes.
 
 <a name="MM5311" />
 

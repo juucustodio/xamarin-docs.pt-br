@@ -29,7 +29,7 @@ O Xamarin. Android 10,0 fornece suporte para Android 10. Para obter mais informa
 A lista a seguir é necessária para usar os recursos do Android 10 em aplicativos baseados no Xamarin:
 
 - **Visual Studio** – o visual Studio 2019 é recomendado. No Windows Update para o Visual Studio 2019 versão 16,3 ou posterior. No macOS, atualize para o Visual Studio 2019 para Mac versão 8,3 ou posterior.
-- **Xamarin. Android** -Xamarin. Android 10,0 ou posterior deve ser instalado com o Visual Studio (o Xamarin. Android é instalado automaticamente como parte do **desenvolvimento móvel com** carga de trabalho do .net no Windows e instalado como parte do **Visual Studio para o instalador do Mac**)
+- **Xamarin. Android** -Xamarin. Android 10,0 ou posterior deve ser instalado com o Visual Studio (o Xamarin. Android é instalado automaticamente como parte do **desenvolvimento móvel com** carga de trabalho do .net no Windows e instalado como parte do **instalador do Visual Studio para Mac**)
 - **Java Developer Kit** -o desenvolvimento do Xamarin. Android 10,0 requer o JDK 8. A distribuição da Microsoft do OpenJDK é instalada automaticamente como parte do Visual Studio.
 - A API de SDK do Android de **SDK do Android** 29 deve ser instalada por meio do gerenciador de SDK do Android.
 

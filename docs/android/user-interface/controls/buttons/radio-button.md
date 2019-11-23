@@ -72,7 +72,7 @@ Execute o aplicativo.
 > [!TIP]
 > Se você precisar alterar o estado por conta própria (por exemplo, ao carregar um [`CheckBoxPreference`](xref:Android.Preferences.CheckBoxPreference)salvo), use o [`Checked`](xref:Android.Widget.CompoundButton.Checked)
 > setter de propriedade ou [`Toggle()`](xref:Android.Widget.CompoundButton.Toggle)
-> método.
+> ProcessOnStatus...
 
 *Partes desta página são modificações com base no trabalho criado e compartilhado pelo projeto de software livre do Android e usadas de acordo com os termos descritos na licença de* [*atribuição
 Creative Commons 2,5*](https://creativecommons.org/licenses/by/2.5/). 

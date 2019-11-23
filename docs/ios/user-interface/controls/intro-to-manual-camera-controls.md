@@ -168,7 +168,7 @@ A sessão de captura de AV é usada para controlar a gravação de vídeo ao viv
 Faça o seguinte para modificar o `AppDelegate` do aplicativo e adicionar o código necessário:
 
 1. Clique duas vezes no arquivo `AppDelegate.cs` no Gerenciador de Soluções para abri-lo para edição.
-1. Adicione as seguintes instruções using à parte superior do arquivo:
+1. Adicione o seguinte usando instruções no topo do arquivo:
 
     ```csharp
     using System;
@@ -1117,7 +1117,7 @@ Todos os comandos de captura entre colchetes são implementados na classe `AVCap
 Duas novas classes foram implementadas para lidar com as configurações:
 
 - `AVCaptureAutoExposureBracketedStillImageSettings` – tem uma propriedade, `ExposureTargetBias`, usada para definir a tendência de um colchete de exposição automática.
-- `AVCaptureManual` @ no__t_1_ – ele tem duas propriedades, `ExposureDuration` e `ISO`, usado para definir a velocidade do obturador e o ISO para um colchete de exposição manual.
+- `AVCaptureManual``ExposureBracketedStillImageSettings` – ele tem duas propriedades, `ExposureDuration` e `ISO`, usados para definir a velocidade do obturador e o ISO para um colchete de exposição manual.
 
 ### <a name="bracketed-capture-controls-dos-and-donts"></a>Controles de captura entre colchetes são e não são
 

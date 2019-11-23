@@ -674,7 +674,7 @@ Consulte a documentação do [`[BindAs]`](~/cross-platform/macios/binding/bindin
 
 ### <a name="binding-notifications"></a>Notificações de associação
 
-As notificações são mensagens que são postadas no `NSNotificationCenter.DefaultCenter` e são usadas como um mecanismo para transmitir mensagens de uma parte do aplicativo para outra. Os desenvolvedores se inscrevem em notificações normalmente usando o método [Addobservar](xref:Foundation.NSNotificationCenter.AddObserver(Foundation.NSString,System.Action{Foundation.NSNotification})) do [NSNotificationCenter](xref:Foundation.NSNotificationCenter). Quando um aplicativo publica uma mensagem no centro de notificações, ele normalmente contém uma carga armazenada no dicionário [NSNotification. UserInfo](xref:Foundation.NSNotification.UserInfo) . Esse dicionário é de tipo fraco e a obtenção de informações sobre ele é propenso a erros, pois os usuários normalmente precisam ler na documentação quais chaves estão disponíveis no dicionário e os tipos de valores que podem ser armazenados no dicionário. Às vezes, a presença de chaves também é usada como um booliano.
+As notificações são mensagens que são postadas no `NSNotificationCenter.DefaultCenter` e são usadas como um mecanismo para transmitir mensagens de uma parte do aplicativo para outra. Os desenvolvedores se inscrevem em notificações normalmente usando o método [addobservar](xref:Foundation.NSNotificationCenter) do [NSNotificationCenter](xref:Foundation.NSNotificationCenter.AddObserver(Foundation.NSString,System.Action{Foundation.NSNotification})). Quando um aplicativo publica uma mensagem no centro de notificações, ele normalmente contém uma carga armazenada no dicionário [NSNotification. UserInfo](xref:Foundation.NSNotification.UserInfo) . Esse dicionário é de tipo fraco e a obtenção de informações sobre ele é propenso a erros, pois os usuários normalmente precisam ler na documentação quais chaves estão disponíveis no dicionário e os tipos de valores que podem ser armazenados no dicionário. Às vezes, a presença de chaves também é usada como um booliano.
 
 O gerador de associação do Xamarin. iOS fornece suporte para os desenvolvedores ligarem notificações. Para fazer isso, defina o [`[Notification]`](~/cross-platform/macios/binding/binding-types-reference.md#NotificationAttribute)
 o atributo em uma propriedade que também foi marcada com um [`[Field]`](~/cross-platform/macios/binding/binding-types-reference.md#FieldAttribute)
@@ -901,11 +901,11 @@ Task<string> LoadFileAsync (string file);
 
 ### <a name="surfacing-strong-types-for-weak-nsdictionary-parameters"></a>Identificando tipos fortes para parâmetros de NSDictionary fraco
 
-Em muitos lugares na API Objective-C, os parâmetros são passados como APIs de `NSDictionary` de tipo fraco com chaves e valores específicos, mas eles são propensos a erros (você pode passar chaves inválidas e não obter nenhum aviso; você pode passar valores inválidos e não obter nenhum aviso) e frustrante para usar como eles exigem várias viagens para a documentação a fim de Pesquisar os possíveis nomes de chave e valores.
+Em muitos lugares na API Objective-C, os parâmetros são passados como APIs de `NSDictionary` de tipo fraco com chaves e valores específicos, mas eles são propensos a erros (você pode passar chaves inválidas e não obter nenhum aviso; você pode passar valores inválidos e não obter nenhum aviso) e frustrante para usar, pois eles exigem várias viagens para a documentação para pesquisar os possíveis nomes
 
 A solução é fornecer uma versão fortemente tipada que forneça a versão fortemente tipada da API e, em segundo plano, mapeia as várias chaves e valores subjacentes.
 
-Por exemplo, se a API Objective-C aceitar um `NSDictionary` e ele estiver documentado como pegar a chave `XyzVolumeKey` que usa um `NSNumber` com um valor de volume de 0,0 a 1,0 e uma `XyzCaptionKey` que usa uma cadeia de caracteres , você deseja que os usuários tenham uma boa API parecida com esta:
+Por exemplo, se a API Objective-C aceitar um `NSDictionary` e ele estiver documentado como pegar a chave `XyzVolumeKey` que usa um `NSNumber` com um valor de volume de 0,0 a 1,0 e uma `XyzCaptionKey` que usa uma cadeia de caracteres, você desejaria que os usuários tenham uma boa API parecida com esta:
 
 ```csharp
 public class  XyzOptions {
@@ -1055,7 +1055,7 @@ A tabela a seguir mostra como você deve mapear tipos de Objective-C e CocoaTouc
 
 ### <a name="arrays"></a>Matrizes
 
-O tempo de execução do Xamarin. iOS cuida automaticamente C# da conversão de matrizes para`NSArrays`e de fazer a conversão de volta, por exemplo, o método Objective-C imaginário que retorna uma`NSArray`de`UIViews`:
+O tempo de execução do Xamarin. iOS cuida automaticamente C# da conversão de matrizes para `NSArrays` e de fazer a conversão de volta, por exemplo, o método Objective-C imaginário que retorna uma `NSArray` de `UIViews`:
 
 ```csharp
 // Get the peer views - untyped
@@ -1111,7 +1111,7 @@ class DialogPrint : UIViewController {
 }
 ```
 
-Para tornar a ligação mais atraente para C# os desenvolvedores, você normalmente fornecerá um método que usa um parâmetro`NSAction`, que C# permite que os delegados e lambdas sejam usados em vez da`Target+Selector`. Para fazer isso, você normalmente ocultaria o método `SetTarget` sinalizando-o com um [`[Internal]`](~/cross-platform/macios/binding/binding-types-reference.md#InternalAttribute)
+Para tornar a ligação mais atraente para C# os desenvolvedores, você normalmente fornecerá um método que usa um parâmetro `NSAction`, que C# permite que os delegados e lambdas sejam usados em vez da `Target+Selector`. Para fazer isso, você normalmente ocultaria o método `SetTarget` sinalizando-o com um [`[Internal]`](~/cross-platform/macios/binding/binding-types-reference.md#InternalAttribute)
 e, em seguida, você exporia um novo método auxiliar, como este:
 
 ```csharp
@@ -1328,7 +1328,7 @@ Você também pode referenciar enumerações ou tipos base que não são suporta
 
 Se você estiver associando APIs que não fazem parte do seu aplicativo, precisará certificar-se de que seu executável está vinculado a essas bibliotecas.
 
-Você precisa informar ao Xamarin. iOS como vincular suas bibliotecas, isso pode ser feito alterando sua configuração de compilação para invocar o comando `mtouch` com alguns argumentos de Build adicionais que especificam como vincular com as novas bibliotecas usando a opção "-gcc_flags" , seguido por uma cadeia de caracteres entre aspas que contém todas as bibliotecas adicionais que são necessárias para o seu programa, desta forma:
+Você precisa informar ao Xamarin. iOS como vincular suas bibliotecas, isso pode ser feito alterando sua configuração de compilação para invocar o comando `mtouch` com alguns argumentos de Build adicionais que especificam como vincular com as novas bibliotecas usando a opção "-gcc_flags", seguida por uma cadeia de caracteres entre aspas que contém todas as bibliotecas adicionais necessárias para o seu programa, desta forma:
 
 ```bash
 -gcc_flags "-L${ProjectDir} -lMylibrary -force_load -lSystemLibrary -framework CFNetwork -ObjC"
@@ -1347,7 +1347,7 @@ Ao usar o [`[LinkWithAttribute]`](~/cross-platform/macios/binding/binding-types-
 [assembly: LinkWith ("libMyLibrary.a", LinkTarget.ArmV6 | LinkTarget.ArmV7 | LinkTarget.Simulator, ForceLoad = true, IsCxx = true)]
 ```
 
-Você deve estar se perguntando, por que você precisa de `-force_load` comando, e o motivo é que o sinalizador-ObjC, embora ele compile o código em, ele não preserva os metadados necessários para dar suporte a categorias (o vinculador/a eliminação de código inativo do compilador o retira) que você precisa em tempo de execução para Xamarin. iOS.
+Você deve estar se perguntando, por que precisa de `-force_load` comando, e o motivo é que o sinalizador-ObjC, embora ele compile o código em, ele não preserva os metadados necessários para dar suporte a categorias (o vinculador/a eliminação de código inativo retira a ti) que você precisa em tempo de execução para Xamarin. iOS.
 
 <a name="Assisted_References" />
 

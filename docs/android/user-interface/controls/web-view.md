@@ -93,7 +93,7 @@ protected override void OnCreate (Bundle bundle)
 ```
 
 Isso inicializa o membro [`WebView`](xref:Android.Webkit.WebView) com o do layout de [`Activity`](xref:Android.App.Activity) e habilita o JavaScript para o [`WebView`](xref:Android.Webkit.WebView) com [`JavaScriptEnabled`](xref:Android.Webkit.WebSettings.JavaScriptEnabled)
-`= true` (consulte a [chamada C\# da receita do JavaScript](https://github.com/xamarin/recipes/tree/master/Recipes/android/controls/webview/call_csharp_from_javascript) para informações sobre como chamar funções de C\# do JavaScript). Por fim, uma página da Web inicial é carregada com [`LoadUrl(String)`](xref:Android.Webkit.WebView).
+`= true` (consulte a [chamada c\# da receita do JavaScript](https://github.com/xamarin/recipes/tree/master/Recipes/android/controls/webview/call_csharp_from_javascript) para obter informações sobre como chamar as funções de\# de dados do JavaScript). Por fim, uma página da Web inicial é carregada com [`LoadUrl(String)`](xref:Android.Webkit.WebView).
 
 Compile e execute o aplicativo. Você deve ver um aplicativo Web Viewer simples como aquele visto na seguinte captura de tela:
 
@@ -132,5 +132,5 @@ Creative Commons 2,5*](https://creativecommons.org/licenses/by/2.5/).
 ## <a name="related-links"></a>Links relacionados
 
 - [Chamar C# do JavaScript](https://github.com/xamarin/recipes/tree/master/Recipes/android/controls/webview/call_csharp_from_javascript)
-- [Android. WebKit. WebView](xref:Android.Webkit.WebView)
+- [Android.Webkit.WebView](xref:Android.Webkit.WebView)
 - [KeyEvent](xref:Android.Webkit.WebView)

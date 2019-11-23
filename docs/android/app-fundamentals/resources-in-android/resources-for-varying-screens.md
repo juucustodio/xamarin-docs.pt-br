@@ -112,7 +112,7 @@ Como diretriz, aqui estão alguns números para vários dispositivos:
 
 - **Um 10 "tablet** &ndash; 720 DP: como o Motorola Xoom
 
-Para aplicativos que têm como destino os níveis de API de até 12 (Android 3,1), os layouts devem ser em diretórios que usam os qualificadores **pequenos**/**normal**/**grandes**/**XLarge** como generalizações das várias telas tamanhos que estão disponíveis na maioria dos dispositivos. Por exemplo, na imagem abaixo, há recursos alternativos para os quatro tamanhos de tela diferentes:
+Para aplicativos que têm como destino níveis de API de até 12 (Android 3,1), os layouts devem ir em diretórios que usam os qualificadores **pequenos**/**normal**/**grande**/**XLarge** como generalizações dos vários tamanhos de tela que estão disponíveis na maioria dos dispositivos. Por exemplo, na imagem abaixo, há recursos alternativos para os quatro tamanhos de tela diferentes:
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
@@ -180,7 +180,7 @@ O Android é executado em um número desconcertante de dispositivos, e a combina
 
 - **Escolha uma orientação de layout como o &ndash; padrão** , por exemplo, em vez de fornecer os recursos alternativos **layout-Land** e **porta de layout**, coloque os recursos para paisagem no **layout**e os recursos para retrato em **layout-porta**.
 
-- **Usar LayoutParams para altura e largura** – ao definir elementos da interface do usuário em um arquivo de layout XML, um aplicativo Android usando os valores **wrap_content** e **fill_parent** terá mais sucesso para garantir uma aparência adequada em diferentes dispositivos do que usando unidades independentes de pixel ou densidade. Esses valores de dimensão fazem com que o Android dimensione os recursos de bitmap conforme apropriado. Por esse mesmo motivo, as unidades independentes de densidade são mais bem reservadas para a especificação de margens e preenchimento de elementos de interface do usuário.
+- **Usar LayoutParams para altura e largura** – ao definir elementos de interface do usuário em um arquivo de layout XML, um aplicativo Android usando os valores **wrap_content** e **fill_parent** terá mais sucesso para garantir uma aparência adequada em diferentes dispositivos do que o uso de unidades independentes de pixel ou de densidade. Esses valores de dimensão fazem com que o Android dimensione os recursos de bitmap conforme apropriado. Por esse mesmo motivo, as unidades independentes de densidade são mais bem reservadas para a especificação de margens e preenchimento de elementos de interface do usuário.
 
 ## <a name="testing-multiple-screens"></a>Testando várias telas
 

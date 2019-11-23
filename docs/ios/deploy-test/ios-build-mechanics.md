@@ -75,7 +75,7 @@ Além disso, um dos locais mais comuns para a lentidão é a conexão de rede en
 
 Ao implantar aplicativos móveis, é fundamental implantar o código rapidamente. Por uma série de motivos, incluindo a velocidade e a falta de requisitos de provisionamento de dispositivos, os desenvolvedores, muitas vezes, optam por implantar um emulador ou simulador pré-instalado. Para os fabricantes de ferramentas de desenvolvedor, a decisão de fornecer um simulador ou emulador se resume a uma compensação entre a velocidade e compatibilidade. 
 
-A Apple fornece um simulador para desenvolvimento do iOS, promovendo a velocidade sobre a compatibilidade, com a criação de um ambiente menos restritivo para executar o código. Esse ambiente menos restritivo permite ao Xamarin usar o compilador Em Tempo Real (JIT) do simulador (em vez do [AOT](~/ios/internals/architecture.md) em um dispositivo), o que significa que a compilação é compilada no código nativo em tempo de execução. Como o Mac é muito mais rápido do que um dispositivo, isso permite um melhor desempenho.
+A Apple fornece um simulador para desenvolvimento do iOS, promovendo a velocidade sobre a compatibilidade, com a criação de um ambiente menos restritivo para executar o código. Esse ambiente menos restritivo permite ao Xamarin usar o compilador Em Tempo Real (JIT) do simulador (em vez do [AOT](~/ios/internals/architecture.md) em um dispositivo), o que significa que a compilação é compilada no código nativo em runtime. Como o Mac é muito mais rápido do que um dispositivo, isso permite um melhor desempenho.
 
 O simulador usa um inicializador do aplicativo compartilhado, permitindo que o iniciador seja reutilizado, em vez de ser compilado cada vez, como é necessário no dispositivo.
 

@@ -16,11 +16,11 @@ ms.locfileid: "70770640"
 ---
 # <a name="native-views-in-xaml"></a>Exibições nativas em XAML
 
-[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-nativeviews-nativeswitch)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-nativeviews-nativeswitch)
 
-_Exibições nativas do iOS, Android e plataforma Universal do Windows podem ser referenciadas diretamente de arquivos XAML de xamarin. Forms. Propriedades e os manipuladores de eventos podem ser definidos em exibições nativas e eles podem interagir com exibições do xamarin. Forms. Este artigo demonstra como consumir exibições nativas de arquivos XAML de xamarin. Forms._
+_Exibições nativas do iOS, Android e Plataforma Universal do Windows podem ser referenciadas diretamente de arquivos XAML Xamarin. Forms. As propriedades e os manipuladores de eventos podem ser definidos em exibições nativas e podem interagir com exibições do Xamarin. Forms. Este artigo demonstra como consumir exibições nativas de arquivos XAML do Xamarin. Forms._
 
-Este artigo discute os seguintes tópicos:
+Este artigo aborda os seguintes tópicos:
 
 - [Consumindo exibições nativas](#consuming) – o processo para o consumo de um modo de exibição nativo de XAML.
 - [Usando associações nativas](#native_bindings) – e para as propriedades de exibições nativas de vinculação de dados.
@@ -38,7 +38,7 @@ Para inserir uma exibição nativa em um arquivo XAML de xamarin. Forms:
 1. Crie uma instância do modo nativo no arquivo XAML.
 
 > [!IMPORTANT]
-> O XAML compilado deve ser desabilitado para qualquer página XAML que use exibições nativas. Isso pode ser feito decorando a classe code-behind para sua página XAML com o `[XamlCompilation(XamlCompilationOptions.Skip)]` atributo. Para obter mais informações sobre a compilação XAML, consulte [compilação XAML no Xamarin. Forms](~/xamarin-forms/xaml/xamlc.md).
+> O XAML compilado deve ser desabilitado para qualquer página XAML que use exibições nativas. Isso pode ser feito decorando a classe code-behind para sua página XAML com o atributo `[XamlCompilation(XamlCompilationOptions.Skip)]`. Para obter mais informações sobre a compilação XAML, consulte [compilação XAML no Xamarin. Forms](~/xamarin-forms/xaml/xamlc.md).
 
 Para fazer referência a um modo de exibição nativo de um arquivo code-behind, você deve usar um projeto de ativo compartilhado (SAP) e encapsule o código específico da plataforma com diretivas de compilação condicional. Para obter mais informações, consulte [referindo-se a exibições nativas do código](#native_view_code).
 

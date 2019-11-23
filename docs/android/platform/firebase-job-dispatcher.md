@@ -18,7 +18,7 @@ ms.locfileid: "73020240"
 
 _Este guia discute como agendar o trabalho em segundo plano usando a biblioteca do Dispatcher de trabalhos do firebase do Google._
 
-## <a name="overview"></a>Visão Geral
+## <a name="overview"></a>Visão geral
 
 Uma das melhores maneiras de manter um aplicativo Android responsivo ao usuário é garantir que o trabalho complexo ou de longa execução seja executado em segundo plano. No entanto, é importante que o trabalho em segundo plano não afete negativamente a experiência do usuário com o dispositivo. 
 
@@ -34,7 +34,7 @@ O Android fornece as seguintes APIs para ajudar na execução do trabalho em seg
 Há dois recursos principais para executar com eficiência o trabalho em segundo plano (às vezes chamado de _trabalho em segundo plano_ ou um _trabalho_):
 
 1. **Agendando o trabalho de forma inteligente** &ndash; é importante que, quando um aplicativo estiver trabalhando em segundo plano, ele faça isso como um bom cidadão. O ideal é que o aplicativo não exija que um trabalho seja executado. Em vez disso, o aplicativo deve especificar condições que devem ser atendidas para quando o trabalho puder ser executado e, em seguida, agendar esse trabalho para ser executado quando as condições forem atendidas. Isso permite que o Android execute o trabalho de forma inteligente. Por exemplo, as solicitações de rede podem ser executadas em lotes para executar tudo ao mesmo tempo para fazer o uso máximo da sobrecarga envolvida na rede.
-2. **Encapsular o trabalho** &ndash; o código para executar o trabalho em segundo plano deve ser encapsulado em um componente discreto que pode ser executado independentemente da interface do usuário e será relativamente fácil de reagendar se o trabalho não for concluído para alguns falha.
+2. **Encapsular o trabalho** &ndash; o código para executar o trabalho em segundo plano deve ser encapsulado em um componente discreto que pode ser executado independentemente da interface do usuário e será relativamente fácil reagendar se o trabalho não for concluído por algum motivo.
 
 O Dispatcher do trabalho firebase é uma biblioteca do Google que fornece uma API fluente para simplificar o agendamento do trabalho em segundo plano. Ela deve ser a substituição do Google Cloud Manager. O Dispatcher do trabalho firebase consiste nas seguintes APIs:
 
@@ -125,7 +125,7 @@ Depois que o `FirebaseJobDispatcher` tiver sido instanciado, é possível criar 
 
 ### <a name="creating-a-firebasejobdispatcherjob-with-the-jobbuilder"></a>Criando um firebase. JobDispatcher. Job com o trabalho. Builder
 
-A classe `Firebase.JobDispatcher.Job` é responsável por encapsular os metadados necessários para executar um `JobService`. Um @ no__t_0_ contém informações como qualquer restrição que deve ser atendida antes que o trabalho possa ser executado, se a `Job` for recorrente ou quaisquer gatilhos que farão com que o trabalho seja executado.  Como um mínimo, um `Job` deve ter uma _marca_ (uma cadeia de caracteres exclusiva que identifica o trabalho para a `FirebaseJobDispatcher`) e o tipo de `JobService` que deve ser executado. O Dispatcher do trabalho firebase instanciará o `JobService` quando for hora de executar o trabalho.  Um `Job` é criado usando uma instância da classe `Firebase.JobDispatcher.Job.JobBuilder`. 
+A classe `Firebase.JobDispatcher.Job` é responsável por encapsular os metadados necessários para executar um `JobService`. Uma`Job` contém informações como qualquer restrição que deve ser atendida antes que o trabalho possa ser executado, se a `Job` for recorrente ou quaisquer gatilhos que farão com que o trabalho seja executado.  Como um mínimo, um `Job` deve ter uma _marca_ (uma cadeia de caracteres exclusiva que identifica o trabalho para a `FirebaseJobDispatcher`) e o tipo de `JobService` que deve ser executado. O Dispatcher do trabalho firebase instanciará o `JobService` quando for hora de executar o trabalho.  Um `Job` é criado usando uma instância da classe `Firebase.JobDispatcher.Job.JobBuilder`. 
 
 O trecho de código a seguir é o exemplo mais simples de como criar um `Job` usando a associação Xamarin. Android:
 
@@ -289,6 +289,6 @@ Este guia abordou como usar o Dispatcher de trabalhos do firebase para realizar 
 
 - [Xamarin. firebase. JobDispatcher no NuGet](https://www.nuget.org/packages/Xamarin.Firebase.JobDispatcher)
 - [firebase-Dispatcher de trabalho no GitHub](https://github.com/firebase/firebase-jobdispatcher-android)
-- [Associação do Xamarin. firebase. JobDispatcher](https://github.com/xamarin/XamarinComponents/tree/master/Android/FirebaseJobDispatcher)
+- [Xamarin.Firebase.JobDispatcher Binding](https://github.com/xamarin/XamarinComponents/tree/master/Android/FirebaseJobDispatcher)
 - [Agendamento de trabalhos inteligentes](https://developer.android.com/topic/performance/scheduling.html)
 - [Otimizações de memória e bateria do Android – Google I/O 2016 (vídeo)](https://www.youtube.com/watch?v=VC2Hlb22mZM&feature=youtu.be)

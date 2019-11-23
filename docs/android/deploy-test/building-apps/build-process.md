@@ -15,7 +15,7 @@ ms.locfileid: "73028147"
 ---
 # <a name="build-process"></a>Processo de build
 
-## <a name="overview"></a>Visão Geral
+## <a name="overview"></a>Visão geral
 
 O processo de build do Xamarin.Android é responsável por juntar tudo isto: [gerar `Resource.designer.cs`](~/android/internals/api-design.md), dar suporte a `AndroidAsset`, `AndroidResource` e outras [ações de build](#Build_Actions), gerar [wrappers que podem ser chamados pelo Android](~/android/platform/java-integration/android-callable-wrappers.md) e gerar um `.apk` para execução em dispositivos Android.
 
@@ -31,15 +31,15 @@ Não coincidentemente, eles correspondem ao `Configuration` do MSBuild que produ
 
 ### <a name="shared-runtime"></a>Runtime compartilhado
 
-O *tempo de execução compartilhado* é um par de pacotes Android adicionais que fornecem a biblioteca de classes base (`mscorlib.dll`, etc.) e a biblioteca de associações do Android (`Mono.Android.dll`, etc.). Builds de depuração contam com o runtime compartilhado em vez de incluir os assemblies da biblioteca de classes base e da biblioteca de associações dentro do pacote do aplicativo Android, permitindo que o pacote de depuração seja menor.
+O *runtime compartilhado* é um par de pacotes Android adicionais que fornecem a biblioteca de classes base (`mscorlib.dll`, etc.) e a biblioteca de associações do Android (`Mono.Android.dll`, etc.). Builds de depuração contam com o runtime compartilhado em vez de incluir os assemblies da biblioteca de classes base e da biblioteca de associações dentro do pacote do aplicativo Android, permitindo que o pacote de depuração seja menor.
 
-O tempo de execução compartilhado pode ser desabilitado em builds de depuração, definindo a propriedade `$(AndroidUseSharedRuntime)` para `False`.
+O runtime compartilhado pode ser desabilitado em builds de depuração, definindo a propriedade `$(AndroidUseSharedRuntime)` para `False`.
 
 <a name="Fast_Deployment" />
 
 ### <a name="fast-deployment"></a>Fast Deployment
 
-O *Fast Deployment* trabalha em conjunto com o tempo de execução compartilhado para reduzir ainda mais o tamanho do pacote do aplicativo Android. Isso é feito não agrupando assemblies do aplicativo dentro do pacote. Em vez disso, eles são copiados para o destino por meio de `adb push`. Esse processo agiliza o ciclo de build/implantação/depuração porque se *somente* assemblies são alterados, o pacote não é reinstalado. Em vez disso, apenas os assemblies atualizados são sincronizados novamente ao dispositivo de destino.
+O *Fast Deployment* trabalha em conjunto com o runtime compartilhado para reduzir ainda mais o tamanho do pacote do aplicativo Android. Isso é feito não agrupando assemblies do aplicativo dentro do pacote. Em vez disso, eles são copiados para o destino por meio de `adb push`. Esse processo agiliza o ciclo de build/implantação/depuração porque se *somente* assemblies são alterados, o pacote não é reinstalado. Em vez disso, apenas os assemblies atualizados são sincronizados novamente ao dispositivo de destino.
 
 O Fast Deployment reconhecidamente falha em dispositivos que bloqueiam a sincronização de `adb` ao diretório `/data/data/@PACKAGE_NAME@/files/.__override__`.
 
@@ -295,10 +295,10 @@ As [Propriedades de Assinatura](#Signing_Properties) também são relevantes ao 
     Isso corresponde à opção **Gerenciado** nas páginas de propriedades do Visual Studio.
 
   > [!NOTE]
-  > Se o suporte a TLS 1,2 for necessário em versões do Android anteriores à 5,0 *ou* se o suporte a TLS 1,2 for necessário com o `System.Net.WebClient` e as APIs relacionadas, `$(AndroidTlsProvider)` deverá ser usado.
+  > Se o suporte a TLS 1.2 for necessário nas versões do Android anteriores à 5.0 *ou* com o `System.Net.WebClient` e as APIs relacionadas, o `$(AndroidTlsProvider)` deverá ser usado.
 
   > [!NOTE]
-  > O suporte para essa propriedade funciona definindo a [variável de ambiente`XA_HTTP_CLIENT_HANDLER_TYPE`](~/android/deploy-test/environment.md).
+  > o suporte para esta propriedade funciona por meio da definição da [variável de ambiente `XA_HTTP_CLIENT_HANDLER_TYPE`](~/android/deploy-test/environment.md).
   > Um valor `$XA_HTTP_CLIENT_HANDLER_TYPE` encontrado em um arquivo com uma ação de build de `@(AndroidEnvironment)` terá precedência.
 
   Adicionado no Xamarin.Android 6.1.
@@ -524,11 +524,11 @@ As [Propriedades de Assinatura](#Signing_Properties) também são relevantes ao 
 
   - **Oriente Médio**: incluir codificações do oriente médio, tais como *Turco (Windows)* \[iso-8859-9, CP1254\], *Hebraico (Windows)* \[windows-1255, CP1255\], *Árabe (Windows)* \[windows-1256, CP1256\], *Árabe (ISO)* \[iso-8859-6, CP28596\], *Hebraico (ISO)* \[iso-8859-8, CP28598\], *Latim 5 (ISO)* \[iso-8859-9, CP28599\] e *Hebraico (alternativa ao ISO)* \[iso-8859-8, CP38598\].
 
-  - **Outros**: inclua outras codificações, como *cirílico (Windows)* \[CP1251\], *Báltico (windows)* \[ISO-8859-4, CP1257\], *vietnamita (Windows)* \[CP1258\], *cirílico ( KOI8-R)* \[KOI8-r, CP1251\], *ucraniano (Koi8-u)* \[KOI8-u, CP1251\], *báltico (ISO)* \[iso-8859-4, CP1257\], *cirílico (ISO)* \[ISO-8859-5, CP1251 @no__ t_21_, *ISCII Davenagari* \[x-ISCII-de, CP57002\], *ISCII Bengali* \[x-ISCII-ser, CP57003\], *ISCII tâmil* \[x-ISCII-ta, CP57004\], *ISCII télugo* \[x-ISCII-te, CP57005\], *ISCII assamês* \[x-ISCII-as, CP57006\], *ISCII odia* \[x-ISCII-or, CP57007\], *ISCII Kannada* \[x-ISCII-Ka, CP57008\], *ISCII Malaiala* \[x-ISCII-ma, CP57009\], *iscii Guzerate* \[x-ISCII-gu, CP57010\], *ISCII Punjabi* \[x-iscii-PA, CP57011\]e *tailandês (Windows)* \[CP874 @no_ _t_54_ .
+  - **Outros**: incluir outras codificações como *Cirílico (Windows)* \[CP1251\], *Báltico (Windows)* \[iso-8859-4, CP1257\], *Vietnamita (Windows)* \[CP1258\], *Cirílico (KOI8-R)* \[koi8-r, CP1251\], *Ucraniano (KOI8-U)* \[koi8-u, CP1251\], *Báltico (ISO)* \[iso-8859-4, CP1257\], *Cirílico (ISO)* \[iso-8859-5, CP1251\], *ISCII Davenagari* \[x-iscii-de, CP57002\], *ISCII Bengalês* \[x-iscii-be, CP57003\], *ISCII Tâmil* \[x-iscii-ta, CP57004\], *ISCII Télugo* \[x-iscii-te, CP57005\], *ISCII Assamês* \[x-iscii-as, CP57006\], *ISCII Odia* \[x-iscii-or, CP57007\], *ISCII Canarim* \[x-iscii-ka, CP57008\], *ISCII Malaiala* \[x-iscii-ma, CP57009\], *ISCII Guzerate* \[x-iscii-gu, CP57010\], *ISCII Panjabi* \[x-iscii-pa, CP57011\] e *Tailandês (Windows)* \[CP874\].
 
-  - **Rare**: Include Rare encodings such as *IBM EBCDIC (Turkish)* \[CP1026\], *IBM EBCDIC (Open Systems Latin 1)* \[CP1047\], *IBM EBCDIC (US-Canada with Euro)* \[CP1140\], *IBM EBCDIC (Germany with Euro)* \[CP1141\], *IBM EBCDIC (Denmark/Norway with Euro)* \[CP1142\], *IBM EBCDIC (Finland/Sweden with Euro)* \[CP1143\], *IBM EBCDIC (Italy with Euro)* \[CP1144\], *IBM EBCDIC (Latin America/Spain with Euro)* \[CP1145\], *IBM EBCDIC (United Kingdom with Euro)* \[CP1146\], *IBM EBCDIC (France with Euro)* \[CP1147\], *IBM EBCDIC (International with Euro)* \[CP1148\], *IBM EBCDIC (Icelandic with Euro)* \[CP1149\], *IBM EBCDIC (Germany)* \[CP20273\], *IBM EBCDIC (Denmark/Norway)* \[CP20277\], *IBM EBCDIC (Finland/Sweden)* \[CP20278\], *IBM EBCDIC (Italy)* \[CP20280\], *IBM EBCDIC (Latin America/Spain)* \[CP20284\], *IBM EBCDIC (United Kingdom)* \[CP20285\], *IBM EBCDIC (Japanese Katakana Extended)* \[CP20290\], *IBM EBCDIC (France)* \[CP20297\], *IBM EBCDIC (Arabic)* \[CP20420\], *IBM EBCDIC (Hebrew)* \[CP20424\], *IBM EBCDIC (Icelandic)* \[CP20871\], *IBM EBCDIC (Cyrillic - Serbian, Bulgarian)* \[CP21025\], *IBM EBCDIC (US-Canada)* \[CP37\], *IBM EBCDIC (International)* \[CP500\], *Arabic (ASMO 708)* \[CP708\], *Central European (DOS)* \[CP852\] *, Cyrillic (DOS)* \[CP855\], *Turkish (DOS)* \[CP857\], *Western European (DOS with Euro)* \[CP858\], *Hebrew (DOS)* \[CP862\], *Arabic (DOS)* \[CP864\], *Russian (DOS)* \[CP866\], *Greek (DOS)* \[CP869\], *IBM EBCDIC (Latin 2)* \[CP870\], and *IBM EBCDIC (Greek)* \[CP875\].
+  - **Raro**: incluir codificações raras, tais como *IBM EBCDIC (Turco)* \[CP1026\], *IBM EBCDIC (Open Systems Latim 1)* \[CP1047\], *IBM EBCDIC (EUA-Canadá com Euro)* \[CP1140\], *IBM EBCDIC (Alemanha com Euro)* \[CP1141\], *IBM EBCDIC (Dinamarca/Noruega com Euro)* \[CP1142\], *IBM EBCDIC (Finlândia/Suécia com Euro)* \[CP1143\], *IBM EBCDIC (Itália com Euro)* \[CP1144\], *IBM EBCDIC (América Latina/Espanha com Euro)* \[CP1145\], *IBM EBCDIC (Reino Unido com Euro)* \[CP1146\], *IBM EBCDIC (França com Euro)* \[CP1147\], *IBM EBCDIC (Internacional com Euro)* \[CP1148\], *IBM EBCDIC (Islandês com Euro)* \[CP1149\], *IBM EBCDIC (Alemanha)* \[CP20273\], *IBM EBCDIC (Dinamarca/Noruega)* \[CP20277\], *IBM EBCDIC (Finlândia/Suécia)* \[CP20278\], *IBM EBCDIC (Itália)* \[CP20280\], *IBM EBCDIC (América Latina/Espanha)* \[CP20284\], *IBM EBCDIC (Reino Unido)* \[CP20285\], *IBM EBCDIC (Katakana Japonês Estendido)* \[CP20290\], *IBM EBCDIC (França)* \[CP20297\], *IBM EBCDIC (Árabe)* \[CP20420\], *IBM EBCDIC (Hebraico)* \[CP20424\], *IBM EBCDIC (Islandês)* \[CP20871\], *IBM EBCDIC (Cirílico – Servo, Búlgaro)* \[CP21025\], *IBM EBCDIC (EUA-Canadá)* \[CP37\], *IBM EBCDIC (Internacional)* \[CP500\], *Árabe (ASMO 708)* \[CP708\], *Centro-europeu (DOS)* \[CP852\] *, Cirílico (DOS)* \[CP855\], *Turco (DOS)* \[CP857\], *Europeu Ocidental (DOS com Euro)* \[CP858\], *Hebraico (DOS)* \[CP862\], *Árabe (DOS)* \[CP864\], *Russo (DOS)* \[CP866\], *Grego (DOS)* \[CP869\], *IBM EBCDIC (Latim 2)* \[CP870\] e *IBM EBCDIC (Grego)* \[CP875\].
 
-  - **Oeste**: incluir codificações ocidentais, como *Europeu Ocidental (Mac)* \[Macintosh, CP10000\], *Islandês (Mac)* \[x-Mac-islandês, CP10079\], *Europa Central (Windows)* \[ISO-8859-2 , CP1250\], *Europa Ocidental (Windows)* \[iso-8859-1, CP1252\], *grego (Windows)* \[ISO-8859-7, CP1253\], *europa central (iso)* \[ISO-8859-2, CP28592\], *Latim 3 (ISO)* \[iso-8859-3, CP28593\], *grego (ISO)* \[ISO-8859-7, CP28597\], *latim 9 (iso)* \[ISO-8859-15, CP28605\], *OEM Estados Unidos* \[CP437\], *Europeu Ocidental (dos)* \[CP850\], *Português (dos)* \[CP860\], *ISLANDÊS (dos)* \[CP861\], *francês canadense (dos)* \[CP863\]e *nórdico (dos)* \[CP865\].
+  - **Oeste**: incluir codificações ocidentais, tais como *Europeu Ocidental (Mac)* \[macintosh, CP10000\], *Islandês (Mac)* \[x-mac-islandês, CP10079\], *Centro-europeu (Windows)* \[iso 8859-2, CP1250\], *Europeu Ocidental (Windows)* \[iso 8859-1, CP1252\], *Grego (Windows)* \[iso-8859-7, CP1253\], *Centro-europeu (ISO)* \[iso 8859-2, CP28592\], *Latim 3 (ISO)* \[iso 8859-3, CP28593\], *Grego (ISO)* \[iso-8859-7, CP28597\], *Latim 9 (ISO)*  \[iso 8859-15, CP28605\], *OEM Estados Unidos* \[CP437\], *Europeu Ocidental (DOS)* \[CP850\], *Português (DOS)* \[CP860\], *Islandês (DOS)* \[CP861\], *Francês Canadense (DOS)* \[CP863\], e *Nórdico (DOS)* \[CP865\].
 
   ```xml
   <MandroidI18n>West</MandroidI18n>
