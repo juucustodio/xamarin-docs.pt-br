@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2019
-ms.openlocfilehash: eaa29138f91fb8215e2c7c4e651baaf8e311f713
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
-ms.translationtype: HT
+ms.openlocfilehash: c7ddcf443e3834e6c9e9518779a016d69ad7e204
+ms.sourcegitcommit: 18891db12c9d47224326af5753eccad8a904a188
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69889190"
+ms.lasthandoff: 11/24/2019
+ms.locfileid: "74451811"
 ---
 # <a name="xamarinforms-shell-flyout"></a>Submenu Shell do Xamarin.Forms
 
@@ -20,7 +20,7 @@ ms.locfileid: "69889190"
 
 O submenu é o menu raiz de um aplicativo Shell e é acessível por meio de um ícone ou passando o dedo na lateral da tela. O submenu consiste em um cabeçalho opcional, itens de submenu e itens de menu opcionais:
 
-![Captura de tela de um submenu anotado Shell ](flyout-images/flyout-annotated.png "submenu anotado")
+![Screenshot of a Shell annotated flyout](flyout-images/flyout-annotated.png "Annotated flyout")
 
 Se necessário, a cor da tela de fundo do submenu pode ser definida como uma [`Color`](xref:Xamarin.Forms.Color) por meio da propriedade associável `Shell.FlyoutBackgroundColor`. Essa propriedade também pode ser definida em uma folha de estilos em cascata (CSS). Saiba mais em [propriedades específicas do Shell do Xamarin.Forms](~/xamarin-forms/user-interface/styles/css/index.md#xamarinforms-shell-specific-properties).
 
@@ -40,7 +40,7 @@ Por padrão, os aplicativos Shell têm um ícone de hambúrguer que, quando pres
 O submenu por ser acessado pelo ícone de hambúrguer ou passando o dedo na lateral da tela. No entanto, esse comportamento pode ser alterado definindo a propriedade anexada `Shell.FlyoutBehavior` como um dos membros de enumeração `FlyoutBehavior`:
 
 - `Disabled` – indica que o submenu não pode ser aberto pelo usuário.
-- `Flyout` – indica que o submenu pode ser aberto e fechado pelo usuário. Este é o valor padrão da propriedade `FlyoutBehavior`.
+- `Flyout` – indica que o submenu pode ser aberto e fechado pelo usuário. Este é o valor padrão para a propriedade de `FlyoutBehavior` .
 - `Locked` – indica que o submenu não pode ser fechado pelo usuário, e o submenu não se sobrepõe ao conteúdo.
 
 O exemplo a seguir mostra como desabilitar o submenu:
@@ -93,7 +93,7 @@ O tipo `FlyoutHeader` é mostrado no exemplo a seguir:
 
 Como resultado, teremos o cabeçalho do submenu a seguir:
 
-![Captura de tela do cabeçalho do submenu](flyout-images/flyout-header.png "Cabeçalho do submenu")
+![Screenshot of the flyout header](flyout-images/flyout-header.png "Cabeçalho do submenu")
 
 Como alternativa, a aparência do cabeçalho do submenu pode ser definida com a configuração da propriedade `Shell.FlyoutHeaderTemplate` como um [`DataTemplate`](xref:Xamarin.Forms.DataTemplate):
 
@@ -155,7 +155,7 @@ O exemplo a seguir mostra a definição dessas propriedades:
 
 Isso resulta em uma imagem de tela de fundo que aparece no submenu:
 
-![Captura de tela de uma imagem da tela de fundo do submenu](flyout-images/flyout-backgroundimage.png "Imagem da tela de fundo do submenu")
+![Screenshot of a flyout background image](flyout-images/flyout-backgroundimage.png "Imagem da tela de fundo do submenu")
 
 ## <a name="flyout-items"></a>Itens de submenu
 
@@ -193,7 +193,7 @@ O exemplo a seguir cria um submenu que contém um cabeçalho de submenu e dois i
 
 Neste exemplo, cada [`ContentPage`](xref:Xamarin.Forms.ContentPage) só pode ser acessado por meio dos itens do submenu:
 
-[![Captura de tela de um aplicativo Shell de duas páginas com itens de submenu no iOS e no Android](flyout-images/two-page-app-flyout.png "Aplicativo Shell de duas páginas com itens de submenu")](flyout-images/two-page-app-flyout-large.png#lightbox "Aplicativo Shell de duas páginas com itens de submenu")
+[![Screenshot of a Shell two page app with flyout items, on iOS and Android](flyout-images/two-page-app-flyout.png "Shell two page app with flyout items")](flyout-images/two-page-app-flyout-large.png#lightbox "Shell two page app with flyout items")
 
 > [!NOTE]
 > Quando o cabeçalho de submenu não estiver presente, os itens do submenu serão exibidos na parte superior dele. Caso contrário, eles aparecerão abaixo do cabeçalho do submenu.
@@ -300,7 +300,7 @@ Neste exemplo, os itens do submenu foram criados para o objeto `Tab` que é um f
 
 Isso resulta nos seguintes itens de submenu:
 
-[![Captura de tela do submenu contendo objetos FlyoutItem no iOS e Android](flyout-images/flyout-reduced.png "Submenu Shell contendo objetos FlyoutItem")](flyout-images/flyout-reduced-large.png#lightbox "Submenu Shell contendo objetos FlyoutItem")
+[![Screenshot of flyout containing FlyoutItem objects, on iOS and Android](flyout-images/flyout-reduced.png "Shell flyout containing FlyoutItem objects")](flyout-images/flyout-reduced-large.png#lightbox "Shell flyout containing FlyoutItem objects")
 
 ## <a name="define-flyoutitem-appearance"></a>Definir a aparência de FlyoutItem
 
@@ -331,10 +331,73 @@ A aparência de cada `FlyoutItem` pode ser personalizada definindo a propriedade
 
 Este exemplo exibe o título de cada objeto `FlyoutItem` em itálico:
 
-[![Captura de tela do modelo de objetos FlyoutItem no iOS e Android](flyout-images/flyoutitem-templated.png "Modelos de objetos FlyoutItem do Shell")](flyout-images/flyoutitem-templated-large.png#lightbox "Modelos de objetos FlyoutItem do Shell")
+[![Screenshot of templated FlyoutItem objects, on iOS and Android](flyout-images/flyoutitem-templated.png "Shell templated FlyoutItem objects")](flyout-images/flyoutitem-templated-large.png#lightbox "Shell templated FlyoutItem objects")
+
+
+Because `Shell.ItemTemplate` is an attached property, different templates can be attached to specific `FlyoutItem` objects.
 
 > [!NOTE]
 > O Shell fornece as propriedades `Title` e `FlyoutIcon` para o [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) do `ItemTemplate`.
+
+
+### <a name="default-template-for-flyoutitems-and-menuitems"></a>Default Template for FlyoutItems and MenuItems
+Shell uses the following template internally for its default implementation. This is a great starting point if all you want to do is make small tweaks to the existing layouts. This also demonstrates the Visual State Manager features of the flyout items. This same template can also be used for MenuItems
+
+```xaml
+<DataTemplate x:Key="FlyoutTemplates">
+    <Grid HeightRequest="{x:OnPlatform Android=50}">
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroupList>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal">
+                    </VisualState>
+                    <VisualState x:Name="Selected">
+                        <VisualState.Setters>
+                            <Setter Property="BackgroundColor" Value="#F2F2F2" />
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </VisualStateManager.VisualStateGroups>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="{x:OnPlatform Android=54, iOS=50}"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Image Source="{Binding FlyoutIcon}"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            HeightRequest="{x:OnPlatform Android=24, iOS=22}"
+            WidthRequest="{x:OnPlatform Android=24, iOS=22}">
+        </Image>
+        <Label VerticalOptions="Center"
+                Text="{Binding Title}"
+                FontSize="{x:OnPlatform Android=14, iOS=Small}"
+                FontAttributes="Bold" Grid.Column="1">
+            <Label.TextColor>
+                <OnPlatform x:TypeArguments="Color">
+                    <OnPlatform.Platforms>
+                        <On Platform="Android" Value="#D2000000" />
+                    </OnPlatform.Platforms>
+                </OnPlatform>
+            </Label.TextColor>
+            <Label.Margin>
+                <OnPlatform x:TypeArguments="Thickness">
+                    <OnPlatform.Platforms>
+                        <On Platform="Android" Value="20, 0, 0, 0" />
+                    </OnPlatform.Platforms>
+                </OnPlatform>
+            </Label.Margin>
+            <Label.FontFamily>
+                <OnPlatform x:TypeArguments="x:String">
+                    <OnPlatform.Platforms>
+                        <On Platform="Android" Value="sans-serif-medium" />
+                    </OnPlatform.Platforms>
+                </OnPlatform>
+            </Label.FontFamily>
+        </Label>
+    </Grid>
+</DataTemplate>
+```
 
 ## <a name="flyoutitem-tab-order"></a>Ordem de tabulação do FlyoutItem
 
@@ -403,7 +466,7 @@ Os objetos [`MenuItem`](xref:Xamarin.Forms.MenuItem) podem ser adicionados ao su
 
 Esse código adiciona dois objetos [`MenuItem`](xref:Xamarin.Forms.MenuItem) ao submenu, abaixo de todos os itens do submenu:
 
-[![Captura de tela do submenu contendo objetos MenuItem no iOS e Android](flyout-images/flyout.png "Submenu Shell contendo objetos MenuItem")](flyout-images/flyout-large.png#lightbox "Submenu Shell contendo objetos MenuItem")
+[![Screenshot of flyout containing MenuItem objects, on iOS and Android](flyout-images/flyout.png "Shell flyout containing MenuItem objects")](flyout-images/flyout-large.png#lightbox "Shell flyout containing MenuItem objects")
 
 O primeiro objeto [`MenuItem`](xref:Xamarin.Forms.MenuItem) executa um `ICommand` denominado `RandomPageCommand`, que navega para uma página aleatória no aplicativo. O segundo objeto `MenuItem` executa um `ICommand` denominado `HelpCommand`, que abre a URL especificada pela propriedade `CommandParameter` em um navegador da Web.
 
@@ -446,10 +509,10 @@ A aparência de cada `MenuItem` pode ser personalizada definindo a propriedade a
 
 Este exemplo anexa o `MenuItemTemplate` no nível do Shell a cada objeto `MenuItem`, exibindo o título de cada objeto `MenuItem` em itálico:
 
-[![Captura de tela do modelo de objetos MenuItem no iOS e Android](flyout-images/menuitem-templated.png "Modelos de objetos MenuItem do Shell")](flyout-images/menuitem-templated-large.png#lightbox "Modelos de objetos MenuItem do Shell")
+[![Screenshot of templated MenuItem objects, on iOS and Android](flyout-images/menuitem-templated.png "Shell templated MenuItem objects")](flyout-images/menuitem-templated-large.png#lightbox "Shell templated MenuItem objects")
 
 > [!NOTE]
-> O Shell fornece as propriedades [`Text`](xref:Xamarin.Forms.MenuItem.Text) e [`IconImageSource`](xref:Xamarin.Forms.MenuItem.IconImageSource) para o [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) do `MenuItemTemplate`.`
+> Shell provides the [`Text`](xref:Xamarin.Forms.MenuItem.Text) and [`IconImageSource`](xref:Xamarin.Forms.MenuItem.IconImageSource) properties to the [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) of the `MenuItemTemplate`. You can also use `Title` in place of `Text` and `Icon` in place of `IconImageSource` which will let you reuse the same template for Menu Items and Flyout Items
 
 Como `Shell.MenuItemTemplate` é uma propriedade anexada, diferentes modelos podem ser anexados a objetos `MenuItem` específicos:
 
@@ -488,6 +551,10 @@ Como `Shell.MenuItemTemplate` é uma propriedade anexada, diferentes modelos pod
     </MenuItem>
 </Shell>
 ```
+
+
+> [!NOTE]
+> The same template used for [Flyout Items](#default-template-for-flyoutitems-and-menuitems) can also be used for Menu Items.
 
 Este exemplo anexa o `MenuItemTemplate` no nível do Shell ao primeiro objeto `MenuItem` e anexa o `MenuItemTemplate` em linha ao segundo `MenuItem`.
 
