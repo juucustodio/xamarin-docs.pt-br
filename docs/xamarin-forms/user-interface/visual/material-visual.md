@@ -4,15 +4,15 @@ description: O Visual material xamarin. Forms pode ser usado para criar aplicati
 ms.prod: xamarin
 ms.assetid: B774F68C-EF9E-49E1-B738-CDC64879ADA2
 ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 10/18/2019
-ms.openlocfilehash: b447bd255270eb87f6139ddacadb9d31348ab7d7
-ms.sourcegitcommit: db2cf1b54125499d5320636927484707810c8e27
+author: profexorgeek
+ms.author: jusjohns
+ms.date: 11/25/2019
+ms.openlocfilehash: 4a960075ebea0fae4cde8d79bdc38641a0b1dc8a
+ms.sourcegitcommit: 1fdc6215f00863735bf0d2bf0afcaa45b714b453
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72850486"
+ms.lasthandoff: 11/25/2019
+ms.locfileid: "74465521"
 ---
 # <a name="xamarinforms-material-visual"></a>Visual de material do Xamarin. Forms
 
@@ -22,7 +22,7 @@ O [design de material](https://material.io) é um sistema de design conceituada 
 
 O Visual material xamarin. Forms pode ser usado para aplicar regras de design de material a aplicativos Xamarin. Forms, criando aplicativos que parecem ser amplamente idênticos no iOS e no Android. Quando o Visual material está habilitado, as exibições com suporte adotam a mesma plataforma cruzada de design, criando uma aparência unificada.
 
-[capturas de tela de materiais visuais de![](material-visual-images/material-visual-cropped.png)](material-visual-images/material-visual.png#lightbox)
+[capturas de tela de materiais visuais de ![](material-visual-images/material-visual-cropped.png)](material-visual-images/material-visual.png#lightbox)
 
 O processo para habilitar o Visual material Xamarin. Forms em seu aplicativo é:
 
@@ -80,7 +80,7 @@ Os aplicativos podem habilitar o Visual de material definindo a propriedade [`Vi
 </ContentPage>
 ```
 
-Este é o código C# equivalente:
+O código C# equivalente é:
 
 ```csharp
 ContentPage contentPage = new ContentPage();

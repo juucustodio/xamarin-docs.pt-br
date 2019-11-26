@@ -7,18 +7,18 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/05/2017
-ms.openlocfilehash: 8b84d959ce7976fc51cbdfee99cbceec560e8e8e
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 6b2753b0f1a7389d62866e5c8003b439a283e5b5
+ms.sourcegitcommit: 1c87135a47780f34102952d4b140850b4f08b075
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73022426"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74536511"
 ---
 # <a name="c-primer-for-objective-c-developers"></a>Manual de introdução a C# para Desenvolvedores de Objective-C
 
 _O Xamarin. iOS permite que o código independente de C# plataforma escrito para ser compartilhado entre plataformas. No entanto, os aplicativos iOS existentes talvez queiram aproveitar o código Objective-C que já foi criado. Este artigo serve como uma breve linha para desenvolvedores de Objective-C que buscam mudar para o C# Xamarin e o idioma._
 
-Aplicativos do iOS e do OS X desenvolvidos em Objective-C podem se beneficiar do Xamarin aproveitando o C# em locais em que o código específico da plataforma não é necessário. Assim, o código pode ser usado em dispositivos não Apple. Itens como serviços Web, JSON e análise de XML e algoritmos personalizados podem então ser usados em plataforma cruzada.
+os aplicativos iOS e macOS desenvolvidos no Objective-C podem se beneficiar do C# Xamarin aproveitando em locais onde o código específico da plataforma não é necessário, permitindo que tal código seja usado em dispositivos não Apple. Itens como serviços Web, JSON e análise de XML e algoritmos personalizados podem então ser usados em plataforma cruzada.
 
 Para tirar proveito do Xamarin, mantendo ativos de Objective-C existentes, o primeiro item pode ser exposto ao C# em uma tecnologia do Xamarin conhecida como associações, que levam o código em Objective-C para o mundo gerenciado do C#. Além disso, se desejado, também é possível fazer a portabilidade do código linha por linha para C#. No entanto, independentemente da abordagem, seja ela associação ou portabilidade, é necessário algum conhecimento de Objective-C e C# para aproveitar de maneira eficaz o código existente em Objective-C com o Xamarin.iOS.
 
@@ -32,7 +32,7 @@ Para obter detalhes sobre a criação de associações, confira os outros docume
 
 ## <a name="language-comparison"></a>Comparação de linguagens
 
-Objective-C e C# são linguagens muito diferentes do ponto de vista sintático e de runtime. Objective-C é uma linguagem dinâmica e usa um esquema de passagem de mensagem, enquanto C# é estaticamente tipado. Em relação à sintaxe, o Objective-C é como o Smalltalk, enquanto o C# deriva grande parte de sua sintaxe fundamental do Java, embora tenha se desenvolvido para incluir vários recursos além do Java nos últimos anos.
+Objective-C e C# são linguagens muito diferentes do ponto de vista sintático e de runtime. Objective-C é uma linguagem dinâmica e usa um esquema de passagem de mensagem, enquanto C# é estaticamente tipado. A sintaxe, Objective-C, é como Smalltalk, C# ao passo que deriva grande parte de sua sintaxe fundamental do Java, embora tenha se esdurado para incluir muitos recursos além do Java nos últimos anos.
 
 Dito isso, há vários recursos de linguagem do Objective-C e do C# que têm função semelhante. Ao criar uma associação para código de Objective-C em C# ou ao fazer a portabilidade de Objective-C para C#, é útil entender essas semelhanças.
 
@@ -64,7 +64,7 @@ Quando o método de extensão é chamado, a instância é passada para o argumen
 
 ### <a name="frameworks-vs-assemblies"></a>Estruturas vs. assemblies
 
-Classes relacionadas a pacotes em Objective-C em diretórios especiais conhecidos como estruturas. No entanto, em C# e .NET, assemblies são usados para fornecer código pré-compilado reutilizável. Em ambientes fora do iOS, assemblies contêm código de IL (linguagem intermediária) que é compilado JIT (just-in-time) no runtime. No entanto, a Apple não permite JIT em aplicativos do iOS. Portanto, o código em C# voltado para o iOS com o Xamarin é compilado AOT (antecipadamente), produzindo um único executável Unix juntamente com arquivos de metadados que estão incluídos no pacote do aplicativo.
+Classes relacionadas a pacotes em Objective-C em diretórios especiais conhecidos como estruturas. No entanto, em C# e .NET, assemblies são usados para fornecer código pré-compilado reutilizável. Em ambientes fora do iOS, assemblies contêm código de IL (linguagem intermediária) que é compilado JIT (just-in-time) no runtime. No entanto, a Apple não permite a execução de código compilado JIT em aplicativos iOS liberados na loja de aplicativos. Portanto, o código em C# voltado para o iOS com o Xamarin é compilado AOT (antecipadamente), produzindo um único executável Unix juntamente com arquivos de metadados que estão incluídos no pacote do aplicativo.
 
 ### <a name="selectors-vs-named-parameters"></a>Seletores vs. parâmetros nomeados
 
@@ -94,7 +94,7 @@ namespace MyAppNamespace
 
 Além disso, a palavra-chave de namespace no código acima define o namespace usado para o próprio arquivo de implementação. Se vários arquivos de implementação compartilharem o mesmo namespace, não será necessário incluir o namespace em uma diretiva using também, pois isso estará implícito.
 
-### <a name="properties"></a>Propriedades
+### <a name="properties"></a>{1&gt;Propriedades&lt;1}
 
 Objective-C e C# têm o conceito de propriedades para fornecer uma abstração de alto nível em torno de métodos de acessador. Em Objective-C, a diretiva de compilador @property é usada para gerar de forma eficaz os métodos acessadores. Por outro lado, C# inclui suporte para propriedades na própria linguagem. Uma propriedade de C# pode ser implementada usando um estilo mais longo que acessa um campo de suporte ou usando uma sintaxe de propriedade automática menor, conforme mostrado nos seguintes exemplos:
 
