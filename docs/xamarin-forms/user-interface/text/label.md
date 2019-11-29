@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/28/2019
-ms.openlocfilehash: ba23b7dee93c0c8938ee3b2b820ba081e420727c
-ms.sourcegitcommit: 93697a20e6fc7da547a8714ac109d7953b61d63f
+ms.openlocfilehash: d47146c90635084a4974cfa0c7dcb142ac918788
+ms.sourcegitcommit: 2cc0796902123df137611b855a55b754ca3c6d73
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72980869"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74556172"
 ---
 # <a name="xamarinforms-label"></a>Rótulo do Xamarin. Forms
 
@@ -133,8 +133,9 @@ Os rótulos podem ser definidos para manipular texto que não cabe em uma linha 
 
 O número de linhas exibidas por um [`Label`](xref:Xamarin.Forms.Label) pode ser especificado definindo a propriedade `Label.MaxLines` como um valor `int`:
 
-- Quando `MaxLines` é 0, o `Label` respeita o valor da propriedade [`LineBreakMode`](xref:Xamarin.Forms.Label.LineBreakMode) para mostrar apenas uma linha, possivelmente truncada ou todas as linhas com todo o texto.
-- Quando `MaxLines` é 1, o resultado é idêntico à definição da propriedade [`LineBreakMode`](xref:Xamarin.Forms.Label.LineBreakMode) como [`NoWrap`](xref:Xamarin.Forms.LineBreakMode), [`HeadTruncation`](xref:Xamarin.Forms.LineBreakMode), [`MiddleTruncation`](xref:Xamarin.Forms.LineBreakMode)ou [0](xref:Xamarin.Forms.LineBreakMode). No entanto, o `Label` respeitará o valor da propriedade [`LineBreakMode`](xref:Xamarin.Forms.Label.LineBreakMode) com relação ao posicionamento de uma elipse, se aplicável.
+- Quando `MaxLines` é-1, que é o valor padrão, o `Label` respeita o valor da propriedade [`LineBreakMode`](xref:Xamarin.Forms.Label.LineBreakMode) para mostrar apenas uma linha, possivelmente truncada ou todas as linhas com todo o texto.
+- Quando `MaxLines` é 0, o `Label` não é exibido.
+- Quando `MaxLines` é 1, o resultado é idêntico à definição da propriedade [`LineBreakMode`](xref:Xamarin.Forms.Label.LineBreakMode) como [`NoWrap`](xref:Xamarin.Forms.LineBreakMode), [`HeadTruncation`](xref:Xamarin.Forms.LineBreakMode), [`MiddleTruncation`](xref:Xamarin.Forms.LineBreakMode)ou [`TailTruncation`](xref:Xamarin.Forms.LineBreakMode). No entanto, o `Label` respeitará o valor da propriedade [`LineBreakMode`](xref:Xamarin.Forms.Label.LineBreakMode) com relação ao posicionamento de uma elipse, se aplicável.
 - Quando `MaxLines` for maior que 1, o `Label` exibirá até o número especificado de linhas, ao mesmo tempo em que respeita o valor da propriedade [`LineBreakMode`](xref:Xamarin.Forms.Label.LineBreakMode) com relação ao posicionamento de uma elipse, se aplicável. No entanto, definir a propriedade `MaxLines` como um valor maior que 1 não terá nenhum efeito se a propriedade [`LineBreakMode`](xref:Xamarin.Forms.Label.LineBreakMode) estiver definida como [`NoWrap`](xref:Xamarin.Forms.LineBreakMode).
 
 O exemplo XAML a seguir demonstra como definir a propriedade `MaxLines` em uma [`Label`](xref:Xamarin.Forms.Label):
@@ -166,7 +167,7 @@ A classe [`Label`](xref:Xamarin.Forms.Label) tem uma propriedade `TextType`, que
 - `Text` indica que o `Label` exibirá texto sem formatação e é o valor padrão da propriedade `Label.TextType`.
 - `Html` indica que o `Label` exibirá o texto HTML.
 
-Portanto, [`Label`](xref:Xamarin.Forms.Label) instâncias podem exibir HTML definindo a propriedade `Label.TextType` como `Html` e a propriedade `Label.Text` como uma cadeia de caracteres HTML:
+Portanto, [`Label`](xref:Xamarin.Forms.Label) instâncias podem exibir HTML definindo a propriedade `Label.TextType` como `Html`e a propriedade `Label.Text` como uma cadeia de caracteres HTML:
 
 ```csharp
 Label label = new Label
@@ -405,13 +406,12 @@ Label label = new Label
 
 Para obter mais informações sobre preenchimento, consulte [margens e preenchimento](~/xamarin-forms/user-interface/layouts/margin-and-padding.md).
 
-
 ## <a name="hyperlinks"></a>Hiperlinks
 
 O texto exibido pelas instâncias [`Label`](xref:Xamarin.Forms.Label) e [`Span`](xref:Xamarin.Forms.Span) pode ser transformado em hiperlinks com a seguinte abordagem:
 
 1. Defina as propriedades `TextColor` e `TextDecoration` do [`Label`](xref:Xamarin.Forms.Label) ou [`Span`](xref:Xamarin.Forms.Span).
-1. Adicione um [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer) à coleção de [`GestureRecognizers`](xref:Xamarin.Forms.GestureElement.GestureRecognizers) do [`Label`](xref:Xamarin.Forms.Label) ou [`Span`](xref:Xamarin.Forms.Span), cuja propriedade [`Command`](xref:Xamarin.Forms.TapGestureRecognizer.Command) é associada a um 0 e cuja propriedade [2](xref:Xamarin.Forms.TapGestureRecognizer.CommandParameter) contém a URL a ser aberta.
+1. Adicione um [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer) à coleção de [`GestureRecognizers`](xref:Xamarin.Forms.GestureElement.GestureRecognizers) do [`Label`](xref:Xamarin.Forms.Label) ou [`Span`](xref:Xamarin.Forms.Span), cuja propriedade [`Command`](xref:Xamarin.Forms.TapGestureRecognizer.Command) é associada a um `ICommand`e cuja propriedade [`CommandParameter`](xref:Xamarin.Forms.TapGestureRecognizer.CommandParameter) contém a URL a ser aberta.
 1. Defina o `ICommand` que será executado pelo [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer).
 1. Escreva o código que será executado pelo `ICommand`.
 
