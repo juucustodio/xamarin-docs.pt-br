@@ -1,118 +1,232 @@
-### YamlMime:YamlDocument
-documentType: LandingData
-title: Xamarin.Forms
+### YamlMime:Hub
+title: Documentação do Xamarin.Forms
+summary: O Xamarin.Forms permite que você compile aplicativos nativos usando um kit de ferramentas de interface do usuário multiplataforma do .NET destinado aos fatores forma de celular, tablet e desktop no Android, no iOS e muito mais.
+brand: xamarin
 metadata:
-  description: 'O Xamarin.Forms expõe um kit completo de ferramentas de interface do usuário multiplataforma para desenvolvedores de .NET para a compilação de aplicativos para celular, tablet e da área de trabalho.'
-  author: conceptdev
-  ms.author: crdun
-  ms.date: 04/22/2019
-  ms.topic: landing-page
-  ms.technology: xamarin-forms
-abstract:
-  description: 'O Xamarin.Forms expõe a um kit completo de ferramentas de interface do usuário entre plataformas para desenvolvedores de .NET. Crie aplicativos totalmente nativos para Android, iOS e Plataforma Universal do Windows usando C# no Visual Studio.'
-  menu:
-    items:
-      - href: ~/xamarin-forms/samples/
-        text: Exemplos do Xamarin.Forms
-      - href: 'https://docs.microsoft.com/xamarin/xamarin-forms/release-notes/'
-        text: Notas sobre a versão
-      - href: /visualstudio/
-        text: Visual Studio
-sections:
+  title: Documentação do Xamarin.Forms
+  description: O Xamarin.Forms permite que você compile aplicativos nativos usando um kit de ferramentas de interface do usuário multiplataforma do .NET destinado aos fatores forma de celular, tablet e desktop no Android, no iOS e muito mais.
+  ms.topic: hub-page
+  author: davidbritch
+  ms.author: dabritch
+  ms.date: 11/06/2019
+  ms.openlocfilehash: a5289c5b1935ec133b0f823a7fbebe307a8606a6
+  ms.sourcegitcommit: 2dea02d0c7497cd5a5cbdce5a26ae33540d78dcc
+  ms.translationtype: HT
+  ms.contentlocale: pt-BR
+  ms.lasthandoff: 11/27/2019
+  ms.locfileid: "74550090"
+highlightedContent:
+  items:
+  - title: O que é o Xamarin.Forms?
+    itemType: overview
+    url: ~/get-started/what-is-xamarin-forms.md
+  - title: Encontrar um exemplo
+    itemType: download
+    url: https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms
+  - title: Novidades
+    itemType: whats-new
+    url: ~/whats-new/index.yml
+  - title: Aprimore suas habilidades de desenvolvimento móvel
+    itemType: learn
+    url: https://docs.microsoft.com/learn/browse/?roles=developer&products=xamarin
+productDirectory:
+  title: Introdução
+  summary: Saiba como criar aplicativos multiplataforma para Android e iOS com o C# e o .NET usando o Visual Studio no Windows e no macOS.
+  items:
   - title: Introdução
+    imageSrc: https://docs.microsoft.com//media/common/i_get-started.svg
+    links:
+    - url: ~/get-started/requirements.md
+      text: Requisitos
+    - url: ~/get-started/installation/index.md
+      text: Instalação
+    - url: ~/get-started/first-app/index.md
+      text: Criar seu primeiro aplicativo
+  - title: Seguir os tutoriais
+    imageSrc: https://docs.microsoft.com//media/common/i_overview.svg
+    links:
+    - url: ~/get-started/tutorials/stacklayout/index.yml
+      text: Layout de pilha
+    - url: ~/get-started/tutorials/label/index.yml
+      text: Rótulos
+    - url: ~/get-started/tutorials/button/index.yml
+      text: Botões
+    - url: ~/get-started/tutorials/image/index.yml
+      text: Imagens
+    - url: ~/get-started/tutorials/index.yml
+      text: Todos os tutoriais do Xamarin.Forms
+  - title: Compilar um aplicativo completo
+    imageSrc: https://docs.microsoft.com//media/common/i_mobile-app-developement.svg
+    links:
+    - url: ~/get-started/quickstarts/single-page.md
+      text: Arquivo > Novo
+    - url: ~/get-started/quickstarts/multi-page.md
+      text: Adicionar navegação
+    - url: ~/get-started/quickstarts/database.md
+      text: Adicionar um banco de dados
+    - url: ~/get-started/quickstarts/styling.md
+      text: Definir o estilo do aplicativo
+  - title: Aproveitar o conhecimento existente
+    imageSrc: https://docs.microsoft.com//media/common/i_library.svg
+    links:
+    - url: ~/cross-platform/desktop/index.md
+      text: Área de trabalho do .NET (UWP, WPF, WinForms)
+    - url: ~/android/get-started/java-developers.md
+      text: Android e Java
+    - url: ~/ios/get-started/objective-c-developers/index.md
+      text: iOS e Objective-C
+    - url: ~/cross-platform/index.yml
+      text: Mais diretrizes de desenvolvimento
+conceptualContent:
+  title: Guias do Xamarin.Forms
+  items:
+  - title: Conceitos básicos de aplicativo
+    links:
+    - text: Associação de dados
+      url: ~/xamarin-forms/app-fundamentals/data-binding/index.md
+      itemType: concept
+    - text: DependencyService
+      url: ~/xamarin-forms/app-fundamentals/dependency-service/index.md
+      itemType: concept
+    - text: Navegação
+      url: ~/xamarin-forms/app-fundamentals/navigation/index.md
+      itemType: concept
+    - text: Shell
+      url: ~/xamarin-forms/app-fundamentals/shell/index.md
+      itemType: concept
+    footerLink:
+      url: ~/xamarin-forms/app-fundamentals/index.yml
+      text: Veja mais
+  - title: Interface do Usuário
+    links:
+    - text: CollectionView
+      url: ~/xamarin-forms/user-interface/collectionview/introduction.md
+      itemType: concept
+    - text: Escolha um layout
+      url: ~/xamarin-forms/user-interface/layouts/choose-layout.md
+      itemType: concept
+    - text: Referência de Controles
+      url: ~/xamarin-forms/user-interface/controls/index.md
+      itemType: concept
+    - text: Visual material
+      url: ~/xamarin-forms/user-interface/visual/material-visual.md
+      itemType: concept
+    footerLink:
+      url: ~/xamarin-forms/user-interface/index.yml
+      text: Veja mais
+  - title: XAML do Xamarin.Forms
+    links:
+    - text: Noções básicas de XAML
+      url: ~/xamarin-forms/xaml/xaml-basics/index.md
+      itemType: concept
+    - text: Recarga Dinâmica de XAML
+      url: ~/xamarin-forms/xaml/hot-reload.md
+      itemType: concept
+    - text: Extensões de marcação do XAML
+      url: ~/xamarin-forms/xaml/markup-extensions/index.md
+      itemType: concept
+    - text: Visualizador do XAML
+      url: ~/xamarin-forms/xaml/xaml-previewer/index.md
+      itemType: concept
+    footerLink:
+      url: ~/xamarin-forms/xaml/index.yml
+      text: Veja mais
+  - title: Recursos da plataforma
+    links:
+    - text: Elementos específicos à plataforma Android
+      url: ~/xamarin-forms/platform/android/index.md
+      itemType: concept
+    - text: Classe de dispositivo
+      url: ~/xamarin-forms/platform/device.md
+      itemType: concept
+    - text: Elementos específicos à plataforma iOS
+      url: ~/xamarin-forms/platform/ios/index.md
+      itemType: concept
+    - text: Exibições nativas
+      url: ~/xamarin-forms/platform/native-views/xaml.md
+      itemType: concept
+    footerLink:
+      url: ~/xamarin-forms/platform/index.yml
+      text: Veja mais
+  - title: Xamarin.Essentials
+    links:
+    - text: Introdução
+      url: ~/essentials/get-started.md
+      itemType: get-started
+    - text: Suporte de plataforma
+      url: ~/essentials/platform-feature-support.md
+      itemType: get-started
+    - text: Solução de problemas
+      url: ~/essentials/troubleshooting.md
+      itemType: overview
+    - text: Namespace do Xamarin.Essentials
+      url: https://docs.microsoft.com/dotnet/api/xamarin.essentials?view=xamarin-essentials
+      itemType: reference
+    footerLink:
+      url: ~/essentials/index.md?context=xamarin/xamarin-forms
+      text: Veja mais
+  - title: Dados e Serviços de Nuvem do Azure
+    links:
+    - text: Manipulação de arquivos
+      url: ~/xamarin-forms/data-cloud/data/files.md
+      itemType: concept
+    - text: Bancos de dados locais
+      url: ~/xamarin-forms/data-cloud/data/databases.md
+      itemType: concept
+    - text: Consumir um serviço Web baseado em REST
+      url: ~/xamarin-forms/data-cloud/web-services/rest.md
+      itemType: concept
+    - text: Autenticação com o Azure Active Directory B2C
+      url: ~/xamarin-forms/data-cloud/authentication/azure-ad-b2c.md
+      itemType: concept
+    footerLink:
+      url: ~/xamarin-forms/data-cloud/index.yml
+      text: Veja mais
+  - title: Implantação e Teste
+    links:
+    - text: Automatizar testes com o Visual Studio App Center
+      url: /appcenter/test-cloud/
+      itemType: concept
+    - text: Melhorar o desempenho do aplicativo
+      url: ~/xamarin-forms/deploy-test/performance.md
+      itemType: concept
+    - text: Publicar aplicativos iOS
+      url: ~/ios/deploy-test/app-distribution/index.md
+      itemType: concept
+    - text: Publicar aplicativos Android
+      url: ~/android/deploy-test/publishing/index.md
+      itemType: concept
+    footerLink:
+      url: ~/xamarin-forms/deploy-test/index.yml
+      text: Veja mais
+  - title: Conceitos avançados e recursos internos
+    links:
+    - text: Hierarquia de Classes de Controles
+      url: ~/xamarin-forms/internals/class-hierarchy.md
+      itemType: concept
+    - text: Resolução de dependência
+      url: ~/xamarin-forms/internals/dependency-resolution.md
+      itemType: concept
+    - text: Renderizadores Rápidos
+      url: ~/xamarin-forms/internals/fast-renderers.md
+      itemType: concept
+    - text: Source Link
+      url: ~/xamarin-forms/internals/sourcelink.md
+      itemType: concept
+    footerLink:
+      url: ~/xamarin-forms/internals/index.yml
+      text: Veja mais
+additionalContent:
+  sections:
+  - title: Livros
     items:
-      - type: paragraph
-        text: 'Aprenda a compilar seu primeiro aplicativo Xamarin.Forms com Xamarin e C#, direcionado para Android e iOS.'
-      - type: list
-        style: icon48
-        items:
-          - image:
-              src: 'https://docs.microsoft.com/media/common/i_setup.svg'
-            text: Configuração
-            href: ~/get-started/requirements.md
-          - image:
-              src: 'https://docs.microsoft.com/media/common/i_get-started.svg'
-            text: Primeiro aplicativo
-            href: ~/get-started/first-app/index.md
-          - image:
-              src: 'https://docs.microsoft.com/media/common/i_mobileapp.svg'
-            text: Início rápido do aplicativo
-            href: ~/get-started/quickstarts/single-page.md
-          - image:
-              src: 'https://docs.microsoft.com/media/common/i_mobileapp.svg'
-            text: Início rápido de várias páginas
-            href: ~/get-started/quickstarts/multi-page.md
-          - image:
-              src: 'https://docs.microsoft.com/media/common/i_mobileapp.svg'
-            text: Início rápido do banco de dados local
-            href: ~/get-started/quickstarts/database.md
-          - image:
-              src: 'https://docs.microsoft.com/media/common/i_mobileapp.svg'
-            text: Início rápido de estilos
-            href: ~/get-started/quickstarts/styling.md
-  - title: Guias
-    items:
-      - type: list
-        style: cards
-        className: cardsB
-        items:
-          - href: ~/xamarin-forms/app-fundamentals/index.yml
-            html: 'Tudo que você precisa saber para desenvolver aplicativos Xamarin.Forms, como navegação, gestos, associação de dados e mais.'
-            image:
-              src: ~/media/icons/i_app-build.svg
-              href: ~/xamarin-forms/app-fundamentals/index.yml
-            title: Conceitos básicos de aplicativo
-          - href: ~/xamarin-forms/user-interface/index.yml
-            html: Saiba mais sobre o conjunto completo de controles de interface do usuário disponíveis no XAML do Xamarin.Forms.
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: ~/xamarin-forms/user-interface/index.yml
-            title: Interface do Usuário
-          - href: ~/xamarin-forms/xaml/index.yml
-            html: Compile interfaces do usuário declarativamente e compartilhe em plataformas móveis e desktop.
-            image:
-              src: ~/media/icons/i_xaml-forms.svg
-              href: ~/xamarin-forms/xaml/index.yml
-            title: XAML
-          - href: ~/xamarin-forms/platform/index.yml
-            html: 'Trabalhar com recursos de plataforma Xamarin.Forms, como Renderizadores personalizados e outros recursos importantes de cada versão.'
-            image:
-              src: ~/media/icons/i_platform.svg
-              href: ~/xamarin-forms/platform/index.yml
-            title: Recursos da plataforma
-          - href: ~/essentials/index.md?context=xamarin/xamarin-forms
-            html: 'APIs multiplataforma para tarefas comuns, como acesso a arquivos, informações do dispositivo, os recursos de hardware e muito mais.'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_multi-connect.svg'
-              href: ~/essentials/index.md?context=xamarin/xamarin-forms
-            title: Xamarin.Essentials
-          - href: ~/xamarin-forms/data-cloud/index.yml
-            html: 'Armazenamento e recuperação de dados locais e remotos, e outros serviços do Azure baseados em nuvem.'
-            image:
-              src: ~/media/icons/i_data-cloud.svg
-              href: ~/xamarin-forms/data-cloud/index.yml
-            title: Dados e Serviços de Nuvem do Azure
-          - href: ~/xamarin-forms/deploy-test/index.yml
-            html: Instruções para compilação e implantação de aplicativos e dicas para testá-los com antecedência!
-            image:
-              src: ~/media/icons/i_deploy-test.svg
-              href: ~/xamarin-forms/deploy-test/index.yml
-            title: Implantação e Teste
-          - href: ~/xamarin-forms/internals/index.yml
-            html: Informações adicionais sobre os recursos internos de Xamarin.Forms e assistência com recursos como a localização e acessibilidade.
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_config-tools.svg'
-              href: ~/xamarin-forms/internals/index.yml
-            title: Conceitos avançados e recursos internos
-  - title: Referência
-    items:
-      - type: list
-        style: cards
-        className: cardsD
-        items:
-          - title: API
-            html: '<p><a href="https://docs.microsoft.com/dotnet/api/?view=xamarin-forms">Documentos da API do Xamarin.Forms</a></p>'
-          - title: Exemplos
-            html: '<p><a href="https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms">Amostras do Xamarin.Forms</a></p>'
-          - title: Livros
-            html: <p><a href="~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md">Livro eletrônico Criar aplicativos móveis</a></p><p><a href="~/xamarin-forms/enterprise-application-patterns/index.md">Livro eletrônico Padrões de aplicativo empresarial</a></p><p><a href="~/xamarin-forms/user-interface/graphics/skiasharp/index.md">Livro eletrônico Gráficos de SkiaSharp em Xamarin.Forms</a></p>
+    - title: Criar aplicativos móveis
+      summary: Este livro eletrônico é um guia para aprender a escrever aplicativos do Xamarin.Forms.
+      url: ~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md
+    - title: Diretrizes para aplicativos empresariais
+      summary: Este livro eletrônico consiste em diretrizes de arquitetura para desenvolvimento de aplicativos empresariais testáveis, adaptáveis e sustentáveis do Xamarin.Forms.
+      url: ~/xamarin-forms/enterprise-application-patterns/index.md
+    - title: Elementos gráficos de SkiaSharp em Xamarin.Forms
+      summary: Este livro eletrônico é um guia para desenhar gráficos vetoriais 2D, bitmaps e textos em aplicativos do Xamarin.Forms.
+      url: ~/xamarin-forms/user-interface/graphics/skiasharp/index.md
+  footer: '[Blogs](https://devblogs.microsoft.com/xamarin/) - [Twitter](https://twitter.com/xamarinhq) - [Stack Overflow](https://stackoverflow.com/questions/tagged/xamarin) - [Developer Community](https://developercommunity.visualstudio.com/spaces/8/index.html) - [Notas sobre a versão](https://docs.microsoft.com/xamarin/xamarin-forms/release-notes/)'
