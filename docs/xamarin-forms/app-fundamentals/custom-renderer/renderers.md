@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/11/2019
-ms.openlocfilehash: cf9c5d7aa018a6d12a6c4788dc1e8114088d056c
-ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
+ms.openlocfilehash: a11bbbc40cd209f90d03817fc81f58bd5661bd23
+ms.sourcegitcommit: 27e77acd0139c099f6592085a5ea5aabcaeedc7f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72697128"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74823877"
 ---
 # <a name="renderer-base-classes-and-native-controls"></a>Classes base de renderizador e controles nativos
 
@@ -51,7 +51,7 @@ A seguinte tabela lista as classes de renderizador e controle nativo que impleme
 
 A seguinte tabela lista as classes de renderizador e controle nativo que implementam cada tipo [Layout](~/xamarin-forms/user-interface/controls/layouts.md) do Xamarin.Forms:
 
-|Layout|Renderizador|iOS|Android|UWP|
+|{1&gt;{2&gt;Layout&lt;2}&lt;1}|Renderizador|iOS|Android|UWP|
 |--- |--- |--- |--- |--- |
 |[`ContentPresenter`](xref:Xamarin.Forms.ContentPresenter)|ViewRenderer|UIView|Exibir|FrameworkElement|
 |[`ContentView`](xref:Xamarin.Forms.ContentView)|ViewRenderer|UIView|Exibir|FrameworkElement|
@@ -88,12 +88,12 @@ A seguinte tabela lista as classes de renderizador e controle nativo que impleme
 |[`ProgressBar`](xref:Xamarin.Forms.ProgressBar)|ProgressBarRenderer|UIProgressView|ProgressBar||ProgressBar|
 |`RefreshView`|RefreshViewRenderer|UIView||SwipeRefreshLayout|RefreshContainer|
 |[`SearchBar`](xref:Xamarin.Forms.SearchBar)|SearchBarRenderer|UISearchBar|SearchView||AutoSuggestBox|
-|[`Slider`](xref:Xamarin.Forms.Slider)|SliderRenderer|UISlider|SeekBar||Controle deslizante|
+|[`Slider`](xref:Xamarin.Forms.Slider)|SliderRenderer|UISlider|SeekBar||Controle Deslizante|
 |[`Stepper`](xref:Xamarin.Forms.Stepper)|StepperRenderer|UIStepper|LinearLayout||Controle|
 |[`Switch`](xref:Xamarin.Forms.Switch)|SwitchRenderer|UISwitch|Alternar|SwitchCompat|ToggleSwitch|
 |[`TableView`](xref:Xamarin.Forms.TableView)|TableViewRenderer|UITableView|ListView||ListView|
 |[`TimePicker`](xref:Xamarin.Forms.TimePicker)|TimePickerRenderer|UITextField|EditText||TimePicker|
-|[`WebView`](xref:Xamarin.Forms.WebView)|WebViewRenderer|UIWebView|WebView||WebView|
+|[`WebView`](xref:Xamarin.Forms.WebView)|WkWebViewRenderer (iOS), WebViewRenderer (Android e UWP)|WkWebView|Exibição da Web||Exibição da Web|
 
 ## <a name="cells"></a>Células
 

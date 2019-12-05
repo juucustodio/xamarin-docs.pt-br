@@ -6,17 +6,17 @@ ms.assetid: BF1CF23A-3BC9-4226-92E6-DAEEB91422F1
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 02/12/2018
-ms.openlocfilehash: cc188abaece54a4df139918582e57d4116f894d0
-ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
-ms.translationtype: HT
+ms.date: 12/03/2019
+ms.openlocfilehash: b87e713f89951d03408fa559bcf6e02cdae65e28
+ms.sourcegitcommit: 27e77acd0139c099f6592085a5ea5aabcaeedc7f
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "64978131"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74824247"
 ---
 # <a name="xamarinforms-custom-renderers"></a>Renderizadores personalizados do Xamarin.Forms
 
-_As interfaces do usuário do Xamarin.Forms são renderizadas usando controles nativos da plataforma de destino, permitindo que os aplicativos Xamarin.Forms mantenham a aparência apropriada para cada plataforma. Renderizadores personalizados permitem que os usuários substituam esse processo para personalizar a aparência e o comportamento de controles do Xamarin.Forms em cada plataforma._
+_As interfaces do usuário xamarin. Forms são renderizadas usando os controles nativos da plataforma de destino, permitindo que os aplicativos Xamarin. Forms mantenham a aparência apropriada para cada plataforma. Os renderizadores personalizados permitem que os desenvolvedores substituam esse processo para personalizar a aparência e o comportamento dos controles Xamarin. Forms em cada plataforma._
 
 ## <a name="introduction-to-custom-renderersintroductionmd"></a>[Introdução a renderizadores personalizados](introduction.md)
 
@@ -46,18 +46,14 @@ Um [`ListView`](xref:Xamarin.Forms.ListView) do Xamarin.Forms é uma exibição 
 
 Um [`ViewCell`](xref:Xamarin.Forms.ViewCell) do Xamarin.Forms é uma célula que pode ser adicionada a um [`ListView`](xref:Xamarin.Forms.ListView) ou [`TableView`](xref:Xamarin.Forms.TableView), que contém uma exibição definida pelo desenvolvedor. Este artigo demonstra como criar um renderizador personalizado para um `ViewCell` hospedado dentro de um controle `ListView` do Xamarin.Forms. Isso impede que os cálculos de layout do Xamarin.Forms sejam chamados repetidamente durante a rolagem de `ListView`.
 
+## <a name="customizing-a-webviewhybridwebviewmd"></a>[Personalizando uma WebView](hybridwebview.md)
+
+Uma [`WebView`](xref:Xamarin.Forms.WebView) do Xamarin. Forms é uma exibição que exibe conteúdo Web e HTML em seu aplicativo. Este artigo explica como criar um renderizador personalizado que estende o `WebView` para permitir C# que o código seja invocado do JavaScript.
+
 ## <a name="implementing-a-viewviewmd"></a>[Implementar uma exibição](view.md)
 
 Controles de interfaces do usuário personalizadas do Xamarin.Forms devem derivar da classe [`View`](xref:Xamarin.Forms.View), que é usada para colocar os layouts e controles na tela. Este artigo demonstra como criar um renderizador personalizado para um controle personalizado do Xamarin.Forms, que é usado para exibir uma transmissão de vídeo de prévia com a câmera do dispositivo.
 
-## <a name="implementing-a-hybridwebviewhybridwebviewmd"></a>[Implementar um HybridWebView](hybridwebview.md)
-
-Este artigo demonstra como criar um renderizador personalizado para um controle personalizado `HybridWebView`, que demonstra como aprimorar os controles da Web específicos a uma plataforma para permitir que código C# seja invocado do JavaScript.
-
 ## <a name="implementing-a-video-playervideo-playerindexmd"></a>[Implementar um player de vídeo](video-player/index.md)
 
 Este artigo mostra como gravar renderizadores para implementar um controle personalizado `VideoPlayer` que pode reproduzir vídeos da Web, vídeos inseridos como recursos de aplicativo ou vídeos armazenados na biblioteca de vídeos no dispositivo do usuário. Várias técnicas são demonstradas, incluindo a implementação de métodos e de propriedades vinculáveis somente leitura.
-
-## <a name="related-links"></a>Links relacionados
-
-- [Efeitos](~/xamarin-forms/app-fundamentals/effects/index.md)
