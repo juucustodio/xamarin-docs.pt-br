@@ -7,37 +7,35 @@ ms.technology: xamarin-forms
 author: maddyleger1
 ms.author: maleger
 ms.date: 08/13/2019
-ms.openlocfilehash: 020b8208dfbfd7594d152a7b6e32f7e41f974c2f
-ms.sourcegitcommit: 43423d4018cc0d4b0b8c98a4b3da0704495eb0cf
+ms.openlocfilehash: 0f3ff5357d3fb4c60a910dda6befa8c699c6fc07
+ms.sourcegitcommit: 5f7749d6ba1db79aa0fbf4ee7c90f2dcd4de812b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/14/2019
-ms.locfileid: "72303254"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74884118"
 ---
 # <a name="xaml-hot-reload-for-xamarinforms-preview"></a>Hot recarregamento de XAML para Xamarin. Forms (visualização)
-
-![Versão prévia do recurso](~/media/shared/preview.png)
 
 Os Hot recarregamento de XAML são conectados ao fluxo de trabalho existente para aumentar a produtividade e poupar tempo. Sem o Hot recarregamento de XAML, você precisa compilar e implantar seu aplicativo toda vez que desejar ver uma alteração XAML. Com a recarga a quente, quando você salva o arquivo XAML, as alterações são refletidas em seu aplicativo em execução. Além disso, o estado de navegação e os dados serão mantidos, permitindo que você itere rapidamente na interface do usuário sem perder seu lugar no aplicativo. Portanto, com o Hot recarregamento de XAML, você gastará menos tempo recriando e implantando seus aplicativos para validar as alterações na interface do usuário.
 
 > [!NOTE]
 > Se você estiver escrevendo um aplicativo do WPF ou UWP, confira [Hot recarregamento de XAML para UWP e WPF](/visualstudio/debugger/xaml-hot-reload).
 
-## <a name="system-requirements"></a>Requisitos de sistema
+## <a name="system-requirements"></a>Requisitos do sistema
 
 | IDE/estrutura | Versão necessária |
 |------|------------------|
-|Visual Studio 2019 | 16,3 ou superior
-Visual Studio 2019 para Mac | 8,3 ou superior
+|Visual Studio 2019 | 16,4 ou superior
+Visual Studio 2019 para Mac | 8,4 ou superior
 Xamarin.Forms | 4,1 ou superior
 
 ## <a name="use-xaml-hot-reload-for-xamarinforms"></a>Usar o Hot recarregamento de XAML para Xamarin. Forms
 
 Nenhuma instalação ou configuração adicional é necessária para usar o Hot recarregamento de XAML. Ele é incorporado ao Visual Studio e pode ser habilitado nas configurações do IDE. Uma vez habilitado, você pode começar a usar o Hot recarregamento de XAML Depurando seu aplicativo em um emulador, simulador ou dispositivo físico. Atualmente, o recarregamento dinâmico de XAML funciona apenas durante a depuração no iOS ou Android.
 
-No Windows, o Hot recarregamento XAML pode ser habilitado marcando a caixa de seleção **habilitar o WebLoad do Xamarin** em **ferramentas** > **opções** > **Xamarin** > **Hot reupload**.
+No Windows, o Hot recarregamento de XAML pode ser habilitado marcando a caixa de seleção Habilitar o recarregamento do **xamarin** em **ferramentas** > **Opções** > **Xamarin** > **Hot recarregar**.
 
-Em um Mac, o Hot recarregamento XAML pode ser habilitado marcando a caixa de seleção **habilitar recarga do Xamarin** em **Visual Studio** > **preferências** > **projetos** > **Xamarin Hot recarregar**.
+Em um Mac, o Hot recarregamento XAML pode ser habilitado marcando a caixa de seleção **habilitar o WebLoad do xamarin** no **Visual Studio** > **preferências** > **projetos** > **Xamarin Hot recarregar**.
 
 ## <a name="resilient-reloading"></a>Recarregamento resiliente
 
@@ -47,7 +45,7 @@ Se você fizer uma alteração que o Hot recarregamento de XAML não possa recar
 
 - Você não pode adicionar, remover ou renomear arquivos ou pacotes NuGet durante uma sessão de recarga ativa de XAML. Se você adicionar ou remover um arquivo ou pacote NuGet, recompile e reimplante seu aplicativo para continuar usando o Hot recarregamento de XAML.
 - Defina o vinculador como **não vincular** para obter a melhor experiência. A configuração do **SDK do link somente** funciona na maior parte do tempo, mas pode falhar em determinados casos.
-- A depuração em um iPhone físico exige que o intérprete use o Hot recarregamento de XAML. Adicionar **--intérprete** ao campo de **argumentos adicionais do mTouch** em suas configurações de Build do IOS para usar o Hot recarregamento de XAML.
+- A depuração em um iPhone físico exige que o intérprete use o Hot recarregamento de XAML. Para fazer isso, abra as configurações do projeto, selecione a guia Build do iOS e certifique-se **de habilitar a configuração do intérprete mono** está habilitada. Talvez seja necessário alterar a opção de **plataforma** na parte superior da página de propriedades para **iPhone**.
 - Todas as referências criadas por meio da atribuição de um controle a outro campo ou propriedade usando seu valor `x:Name` não serão recarregadas.
 - Atualizar a hierarquia visual do aplicativo Shell no **AppShell. XAML** pode causar problemas ao manter o estado do seu aplicativo. Recompile o aplicativo para continuar recarregando.
 - O Hot recarregamento de XAML não C# pode recarregar o código, incluindo manipuladores de eventos, controles personalizados, code-behind de página e classes adicionais.
@@ -63,6 +61,6 @@ Se você fazia parte da visualização privada, sua extensão de recarregamento 
   - Verifique se você está na versão mais recente do IDE.
   - Defina as configurações do vinculador do Android ou iOS para **não vincular** nas configurações de Build do projeto.
 - Se nada acontecer ao salvar o arquivo XAML, certifique-se de que o Hot recarregamento esteja habilitado no IDE.
-- Se você estiver Depurando em um iPhone físico e seu aplicativo ficar sem resposta, verifique se o intérprete está habilitado. Para ativá-lo, adicione **--intérprete** ao campo de **argumentos mTouch adicionais** nas configurações de Build do Ios.
+- Se você estiver Depurando em um iPhone físico e seu aplicativo ficar sem resposta, verifique se o intérprete está habilitado. Para ativá-lo, abra as configurações do projeto, selecione a guia Build do iOS e marque a configuração **habilitar o intérprete mono** .
 
-Para relatar um bug, use a ferramenta de comentários na **ajuda** > **enviar comentários** > **relate um** menu de problemas no Windows e a **ajuda** > **relatar um** menu de problemas em um Mac.
+Para relatar um bug, use a ferramenta de comentários na **ajuda** > **enviar comentários** > **reportar um** menu de problemas no Windows e a **ajuda** > **relatar um** menu de problemas em um Mac.
