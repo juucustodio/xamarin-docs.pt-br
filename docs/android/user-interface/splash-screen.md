@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 10/02/2019
-ms.openlocfilehash: cc499902058e7b20b00e65e0c6541b8d137804a7
-ms.sourcegitcommit: 3ea19e3a51515b30349d03c70a5b3acd7eca7fe7
+ms.openlocfilehash: c8363adf479f0880bfbdf6a047d495da4b849395
+ms.sourcegitcommit: a2ec4aef8457eab4310cde2a41485931263ce16b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73425507"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74902251"
 ---
 # <a name="splash-screen"></a>Splash Screen
 
@@ -20,7 +20,7 @@ ms.locfileid: "73425507"
 
 _Um aplicativo Android leva algum tempo para ser iniciado, especialmente quando o aplicativo é iniciado pela primeira vez em um dispositivo. Uma tela inicial pode exibir o progresso de inicialização para o usuário ou para indicar a identidade visual._
 
-## <a name="overview"></a>Visão Geral
+## <a name="overview"></a>{1&gt;Visão Geral&lt;1}
 
 Um aplicativo Android leva algum tempo para ser inicializado, especialmente durante a primeira vez em que o aplicativo é executado em um dispositivo (às vezes, isso é chamado de _inicialização a frio_). A tela inicial pode exibir o progresso de inicialização para o usuário ou pode exibir informações de identidade visual para identificar e promover o aplicativo.
 
@@ -34,7 +34,7 @@ Este guia aborda uma técnica para implementar uma tela inicial em um aplicativo
 
 [tela inicial do logotipo do Xamarin de exemplo ![seguida pela tela do aplicativo](splash-screen-images/splashscreen-01-sml.png)](splash-screen-images/splashscreen-01.png#lightbox)
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>Requisitos do
 
 Este guia pressupõe que o aplicativo tem como destino o nível 21 ou superior da API do Android. O aplicativo também deve ter os pacotes **xamarin. Android. support. v4** e **xamarin. Android. support. v7. AppCompat** NuGet adicionados ao projeto.
 
@@ -88,7 +88,7 @@ Para criar um tema personalizado para a atividade da tela inicial, edite (ou adi
   <style name="MyTheme.Base" parent="Theme.AppCompat.Light">
   </style>
 
-    <style name="MyTheme" parent="MyTheme.Base">
+  <style name="MyTheme" parent="MyTheme.Base">
   </style>
 
   <style name="MyTheme.Splash" parent ="Theme.AppCompat.Light.NoActionBar">
@@ -101,7 +101,7 @@ Para criar um tema personalizado para a atividade da tela inicial, edite (ou adi
 </resources>
 ```
 
-**MyTheme. Splash** é muito companhias Spartan &ndash; ele declara o plano de fundo da janela, remove explicitamente a barra de título da janela e declara que ela é de tela inteira. Se você quiser criar uma tela inicial que emula a interface do usuário do seu aplicativo antes que a atividade inplana o primeiro layout, você pode usar `windowContentOverlay` em vez de `windowBackground` em sua definição de estilo. Nesse caso, você também deve modificar o **splash_screen. xml** Drawable para que ele exiba uma emulação de sua interface do usuário.
+**MyTheme. Splash** é muito companhias Spartan &ndash; ele declara o plano de fundo da janela, remove explicitamente a barra de título da janela e declara que ela é de tela inteira. Se você quiser criar uma tela inicial que emula a interface do usuário do seu aplicativo antes que a atividade inplana o primeiro layout, você pode usar `windowContentOverlay` em vez de `windowBackground` em sua definição de estilo. Nesse caso, você também deve modificar o **splash_screen. xml** drawável para que ele exiba uma emulação de sua interface do usuário.
 
 ### <a name="create-a-splash-activity"></a>Criar uma atividade de splash
 
@@ -229,7 +229,7 @@ Observe que o uso de uma tela inicial em modo paisagem nem sempre fornece uma ex
 
 Este guia abordou uma maneira de implementar uma tela inicial em um aplicativo Xamarin. Android; a saber, aplicando um tema personalizado à atividade de inicialização.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Tela inicial (exemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/splashscreen)
 - [lista de camadas desenhável](https://developer.android.com/guide/topics/resources/drawable-resource.html#LayerList)
