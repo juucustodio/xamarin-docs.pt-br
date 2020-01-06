@@ -7,20 +7,20 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/08/2017
-ms.openlocfilehash: 97997a527647ae972eadff47da8c1321d5d55daa
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: eca079972f4e46c0cf60c4749658ff9a7fe1791b
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655454"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75489798"
 ---
 # <a name="speech-recognition-using-the-microsoft-speech-api"></a>Reconhecimento de fala usando a API de fala da Microsoft
 
-[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
 
-_A API de fala da Microsoft é uma API baseada em nuvem que fornece algoritmos para processar a linguagem falada. Este artigo explica como usar a API de REST de reconhecimento de fala Microsoft para converter áudio em texto em um aplicativo xamarin. Forms._
+_O Microsoft Speech API é uma API baseada em nuvem que fornece algoritmos para processar a linguagem falada. Este artigo explica como usar a API REST de reconhecimento de fala da Microsoft para converter áudio em texto em um aplicativo Xamarin. Forms._
 
-## <a name="overview"></a>Visão geral
+## <a name="overview"></a>{1&gt;Visão Geral&lt;1}
 
 A API de fala da Microsoft tem dois componentes:
 
@@ -28,6 +28,9 @@ A API de fala da Microsoft tem dois componentes:
 - Um texto em fala API para converter texto em palavras faladas. Conversão de texto em fala é realizada por meio da API REST.
 
 Este artigo se concentra em fazer o reconhecimento de fala por meio da API REST. Embora as bibliotecas de cliente e serviço de suporte ao retorno de resultados parciais, a API REST só pode retornar um resultado de reconhecimento única, sem quaisquer resultados parciais.
+
+> [!NOTE]
+> Se você não tiver uma [assinatura do Azure](/azure/guides/developer/azure-developer-guide#understanding-accounts-subscriptions-and-billing), crie uma [conta gratuita](https://aka.ms/azfree-docs-mobileapps) antes de começar.
 
 Uma chave de API deve ser obtida para usar a API de fala da Microsoft. Isso pode ser obtido do Azure [portal](https://portal.azure.com/). Para obter mais informações, consulte [criar uma conta de serviços Cognitivos no portal do Azure](/azure/cognitive-services/cognitive-services-apis-create-account).
 
@@ -161,13 +164,13 @@ A resposta da API é retornada no formato JSON, com o texto reconhecido sendo co
 
 No aplicativo de exemplo, a resposta JSON é desserializada em um `SpeechResult` instância, com o resultado retornado para o método de chamada para exibição, conforme mostrado nas capturas de tela seguir:
 
-![](speech-recognition-images/speech-recognition.png "Reconhecimento de fala")
+![](speech-recognition-images/speech-recognition.png "Speech Recognition")
 
 ## <a name="summary"></a>Resumo
 
 Este artigo explicou como usar a API de REST de fala da Microsoft para converter áudio em texto em um aplicativo xamarin. Forms. Além de realizar o reconhecimento de fala, API de fala da Microsoft também pode converter o texto em palavras faladas.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Documentação da API de fala da Microsoft](/azure/cognitive-services/speech/home/).
 - [Consumir um serviço Web RESTful](~/xamarin-forms/data-cloud/web-services/rest.md)

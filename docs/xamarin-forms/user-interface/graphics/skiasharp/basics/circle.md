@@ -7,16 +7,16 @@ ms.assetid: E3A4E373-F65D-45C8-8E77-577A804AC3F8
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: a3eca2036b0e4c2722e034e48ad4ca3054343a89
-ms.sourcegitcommit: 5110d1279809a2af58d3d66cd14c78113bb51436
+ms.openlocfilehash: a0ab6a965c2507c01f5b7ebdc3670e6661ca481e
+ms.sourcegitcommit: 191f1f3b13a14e2afadcb95126c5f653722f126f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "72032576"
+ms.lasthandoff: 12/30/2019
+ms.locfileid: "75545628"
 ---
 # <a name="drawing-a-simple-circle-in-skiasharp"></a>Desenhar um círculo simples em SkiaSharp
 
-[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Aprenda as Noções básicas de desenho do SkiaSharp, inclusive canvases e pintar objetos_
 
@@ -24,7 +24,7 @@ Este artigo apresenta os conceitos de desenho de gráficos no xamarin. Forms usa
 
 O [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) programa contém todo o código de exemplo para esta série de artigos de SkiaSharp. A primeira página é intitulada **círculo simples** e chama a classe page [ `SimpleCirclePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/SimpleCirclePage.cs). Este código mostra como desenhar um círculo no centro da página com um raio de 100 pixels. O contorno do círculo é vermelho e o interior do círculo é azul.
 
-![](circle-images/circleexample.png "Um círculo azul descrito em vermelho")
+![](circle-images/circleexample.png "A blue circle outlined in red")
 
 O [ `SimpleCircle` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/SimpleCirclePage.cs) deriva de classe page `ContentPage` e contém duas `using` diretivas para os namespaces de SkiaSharp:
 
@@ -141,9 +141,9 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Neste momento, o `DrawCircle` chamada preenche o círculo usando as novas propriedades do `SKPaint` objeto.
 
-Aqui está o programa em execução no iOS, Android e plataforma Universal do Windows:
+Aqui está o programa em execução no iOS e no Android:
 
-[![](circle-images/simplecircle-small.png "Captura de tela tripla da página de círculo simples")](circle-images/simplecircle-large.png#lightbox "Captura de tela tripla da página de círculo simples")
+[![](circle-images/simplecircle-small.png "Triple screenshot of the Simple Circle page")](circle-images/simplecircle-large.png#lightbox "Triple screenshot of the Simple Circle page")
 
 Ao executar o programa, você pode ativar o telefone ou o simulador lateralmente para ver como o gráfico é redesenhado. Cada vez que o elemento gráfico precisa ser redesenhado, o `PaintSurface` manipulador de eventos é chamado novamente.
 
@@ -154,11 +154,11 @@ Um `SKPaint` objeto é pouco mais do que uma coleção de propriedades de desenh
 > [!NOTE]
 > O `SKPaint` classe define um [ `IsAntialias` ](xref:SkiaSharp.SKPaint.IsAntialias) para habilitar a suavização no processamento de seus elementos gráficos. A suavização geralmente resulta em bordas visualmente mais suaves, portanto, você provavelmente desejará definir essa propriedade como `true` na maioria dos seus `SKPaint` objetos. Para fins de simplicidade, essa propriedade é _não_ definido na maioria das páginas de exemplo.
 
-Embora a largura da estrutura de tópicos do círculo seja especificada como 25 pixels &mdash; ou um quarto do raio do círculo &mdash; parece ser mais fino, e há um bom motivo para isso: Metade da largura da linha é obscurecida pelo círculo azul. Os argumentos para o `DrawCircle` método definem as coordenadas geométricas abstratas de um círculo. O interior azul é dimensionado para essa dimensão até o pixel mais próximo, mas a estrutura de tópicos de 25 pixels de largura permeiam círculo Geométrico &mdash; pela metade dentro e fora da metade.
+Embora a largura do contorno do círculo é especificada como 25 pixels &mdash; ou um quarto do raio do círculo &mdash; ele parece ser mais finos e há um bom motivo para isso: metade da largura da linha é obscurecida pelo círculo azul. Os argumentos para o `DrawCircle` método definem as coordenadas geométricas abstratas de um círculo. O interior azul é dimensionado para essa dimensão até o pixel mais próximo, mas a estrutura de tópicos de 25 pixels de largura permeiam círculo Geométrico &mdash; pela metade dentro e fora da metade.
 
 O exemplo a seguir na [a integração com o xamarin. Forms](~/xamarin-forms/user-interface/graphics/skiasharp/basics/integration.md) artigo demonstra isso visualmente.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [APIs de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

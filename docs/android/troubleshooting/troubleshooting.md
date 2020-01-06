@@ -1,5 +1,5 @@
 ---
-title: Dicas de solução de problemas
+title: '{1&gt;Dicas de Solução de Problemas&lt;1}'
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 56137ACA-4811-B312-6860-E16D0FA123F7
@@ -7,14 +7,14 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/15/2018
-ms.openlocfilehash: ec5c6e4c4c47995e78c1819007a8fa5660873bd2
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 6d83afa47c459633506736b2497a82c444352c90
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73026589"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75488927"
 ---
-# <a name="troubleshooting-tips"></a>Dicas de solução de problemas
+# <a name="troubleshooting-tips"></a>{1&gt;Dicas de Solução de Problemas&lt;1}
 
 ## <a name="getting-diagnostic-information"></a>Obtendo informações de diagnóstico
 
@@ -662,7 +662,7 @@ Ao implantar um aplicativo criado com o [AOT + LLVM](~/android/deploy-test/relea
 
 ```shell
 Assertion: should not be reached at /Users/.../external/mono/mono/mini/tramp-x86.c:124
-Fatal signal 6 (SIGABRT), code -6 in tid 4051 (amarin.bug56111)
+Fatal signal 6 (SIGABRT), code -6 in tid 4051 (Xamarin.bug56111)
 ```
 
-Esse é um problema conhecido conforme relatado em [56111](https://bugzilla.xamarin.com/show_bug.cgi?id=56111). A solução alternativa é desabilitar o LLVM.
+Esse é um problema conhecido: a solução alternativa é desabilitar o LLVM.

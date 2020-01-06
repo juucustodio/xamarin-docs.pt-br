@@ -1,21 +1,21 @@
 ---
-title: Populating a Xamarin.Android ListView With Data
+title: Populando um ListView do Xamarin. Android com dados
 ms.prod: xamarin
 ms.assetid: AC4F95C8-EC3F-D960-7D44-8D55D0E4F1B6
 ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 08/21/2017
-ms.openlocfilehash: fda021eb90feba1fed2352ef7f771f5583b00920
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 7ec5537345536884e2dc3da02ab54a3ca00f760e
+ms.sourcegitcommit: 6f09bc2b760e76a61a854f55d6a87c4f421ac6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73028856"
+ms.lasthandoff: 01/02/2020
+ms.locfileid: "75607965"
 ---
-# <a name="populating-a-xamarinandroid-listview-with-data"></a>Populating a Xamarin.Android ListView With Data
+# <a name="populating-a-xamarinandroid-listview-with-data"></a>Populando um ListView do Xamarin. Android com dados
 
-To add rows to a `ListView` you need to add it to your layout and implement an `IListAdapter` with methods that the `ListView` calls to populate itself. O Android inclui classes internas de `ListActivity` e `ArrayAdapter` que você pode usar sem definir qualquer código ou XML de layout personalizado. A classe `ListActivity` cria automaticamente uma `ListView` e expõe uma propriedade `ListAdapter` para fornecer as exibições de linha a serem exibidas por meio de um adaptador.
+Para adicionar linhas a um `ListView` você precisa adicioná-lo ao seu layout e implementar uma `IListAdapter` com métodos que o `ListView` chama para preencher a si mesmo. O Android inclui classes internas de `ListActivity` e `ArrayAdapter` que você pode usar sem definir qualquer código ou XML de layout personalizado. A classe `ListActivity` cria automaticamente uma `ListView` e expõe uma propriedade `ListAdapter` para fornecer as exibições de linha a serem exibidas por meio de um adaptador.
 
 Os adaptadores internos usam uma ID de recurso de exibição como um parâmetro que é usado para cada linha. Você pode usar recursos internos como aqueles em `Android.Resource.Layout` para que você não precise escrever os seus próprios.
 
@@ -33,7 +33,6 @@ public class HomeScreen : ListActivity {
        items = new string[] { "Vegetables","Fruits","Flower Buds","Legumes","Bulbs","Tubers" };
        ListAdapter = new ArrayAdapter<String>(this, Android.Resource.Layout.SimpleListItem1, items);
    }
-   protected override void OnListItemClick(ListView l, View v, int position, long id)
 }
 ```
 
@@ -41,7 +40,7 @@ public class HomeScreen : ListActivity {
 
 Geralmente, um `ListView` também permitirá que o usuário toque em uma linha para executar alguma ação (como reproduzir uma música ou chamar um contato ou mostrar outra tela). Para responder aos toques do usuário, é necessário que haja mais um método implementado no `ListActivity` &ndash; `OnListItemClick` &ndash; assim:
 
-[Captura de tela de![de um SimpleListItem](populating-images/simplelistitem1.png)](populating-images/simplelistitem1.png#lightbox)
+[Captura de tela de ![de um SimpleListItem](populating-images/simplelistitem1.png)](populating-images/simplelistitem1.png#lightbox)
 
 ```csharp
 protected override void OnListItemClick(ListView l, View v, int position, long id)
@@ -137,7 +136,7 @@ Algumas implementações de adaptador (como o `CursorAdapter`) não têm um mét
 
 A rolagem rápida ajuda o usuário a rolar por listas longas fornecendo um "identificador" adicional que atua como uma barra de rolagem para acessar diretamente uma parte da lista. Esta captura de tela mostra o identificador de rolagem rápida:
 
-[Captura de tela de![de rolagem rápida com uma alça de rolagem](populating-images/fastscroll.png)](populating-images/fastscroll.png#lightbox)
+[Captura de tela de ![de rolagem rápida com uma alça de rolagem](populating-images/fastscroll.png)](populating-images/fastscroll.png#lightbox)
 
 Fazer com que o identificador de rolagem rápida apareça seja tão simples quanto definir a propriedade `FastScrollEnabled` como `true`:
 

@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 05/03/2018
-ms.openlocfilehash: 658bb65c9f9dea2c68b782736de02d95df368dd3
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 97c582ada0951f530885359112c3c7adfacc3502
+ms.sourcegitcommit: bdb8ad7337931adf2ea45b10c2af81ecc4aad26a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73024864"
+ms.lasthandoff: 12/27/2019
+ms.locfileid: "75500240"
 ---
 # <a name="creating-a-service"></a>Criando um serviço
 
@@ -83,7 +83,7 @@ A maneira mais básica de iniciar um serviço no Android é distribuir um `Inten
     downloadIntent.data = Uri.Parse(fileToDownload);
     ```
 
-- A **intenção implícita** &ndash; esse tipo de tentativa identifica livremente a ação que o usuário deseja executar, mas o serviço exato para concluir essa ação é desconhecido. Uma intenção implícita pode ser considerada como uma letra que é endereçada "a quem ele pode se preocupar...".
+- A **intenção implícita** &ndash; esse tipo de tentativa identifica livremente o tipo de ação que o usuário deseja executar, mas o serviço exato para concluir essa ação é desconhecido. Uma intenção implícita pode ser considerada como uma letra que é endereçada "a quem ele pode se preocupar...".
     O Android examinará o conteúdo da intenção e determinará se há um serviço existente que corresponda à intenção.
 
     Um _filtro de intenção_ é usado para ajudar a corresponder a intenção implícita com um serviço registrado. Um filtro de intenção é um elemento XML que é adicionado a **AndroidManifest. xml** que contém os metadados necessários para ajudar a corresponder um serviço com uma intenção implícita.
@@ -128,9 +128,9 @@ Isso resulta em uma entrada incluída no arquivo **AndroidManifest. xml** &ndash
 
 Com os conceitos básicos de um serviço Xamarin. Android fora do caminho, vamos examinar os diferentes subtipos de serviços com mais detalhes.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
-- [Android. app. Service](xref:Android.App.Service)
-- [Android. app. ServiceAttribute](xref:Android.App.ServiceAttribute)
-- [Android. app. intuito](xref:Android.Content.Intent)
-- [Android. app. IntentFilterAttribute](xref:Android.App.IntentFilterAttribute)
+- [Android.App.Service](xref:Android.App.Service)
+- [Android.App.ServiceAttribute](xref:Android.App.ServiceAttribute)
+- [Android.App.Intent](xref:Android.Content.Intent)
+- [Android.App.IntentFilterAttribute](xref:Android.App.IntentFilterAttribute)

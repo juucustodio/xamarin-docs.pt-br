@@ -7,22 +7,22 @@ ms.technology: xamarin-skiasharp
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: 924b66b3bdb66c2197b708d87e20eeb6f3ed9f46
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 16d576c599dbf5815b19aec4a2e8390f7ed0e601
+ms.sourcegitcommit: 191f1f3b13a14e2afadcb95126c5f653722f126f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70770517"
+ms.lasthandoff: 12/30/2019
+ms.locfileid: "75545563"
 ---
 # <a name="the-path-fill-types"></a>Os tipos de preenchimento do caminho
 
-[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Descubra os diferentes efeitos possíveis com tipos de preenchimento do caminho de SkiaSharp_
 
 Dois dos contornos em um caminho podem se sobrepor e as linhas que compõem uma única delimitação podem se sobrepor. Qualquer área fechada potencialmente pode ser preenchida, mas você não deseja preencher todas as áreas fechadas. Veja um exemplo:
 
-![](fill-types-images/filltypeexample.png "Cinco pontas parcialmente estrelas filles")
+![](fill-types-images/filltypeexample.png "Five-pointed star partially filles")
 
 Você tem controle um pouco sobre isso. O algoritmo de preenchimento é regido pela [ `SKFillType` ](xref:SkiaSharp.SKPath.FillType) propriedade do `SKPath`, que você definir um membro do [ `SKPathFillType` ](xref:SkiaSharp.SKPathFillType) enumeração:
 
@@ -170,9 +170,9 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Normalmente, o tipo de preenchimento do caminho deve afetar apenas preenchimentos e não traços, mas os dois `Inverse` modos afetam preenchimentos e traços. Para preenchimentos, os dois `Inverse` tipos preencher as áreas oppositely, de modo que a área de fora a estrela é preenchida. Para traços, dois `Inverse` tipos de cor tudo, exceto o traço. Usando esses tipos de preenchimento inverso pode produzir alguns efeitos ímpares, como demonstra a captura de tela do iOS:
 
-[![](fill-types-images/fivepointedstar-small.png "Captura de tela da página Five-Pointed estrela tripla")](fill-types-images/fivepointedstar-large.png#lightbox "tripla captura de tela da página Five-Pointed estrela")
+[![](fill-types-images/fivepointedstar-small.png "Triple screenshot of the Five-Pointed Star page")](fill-types-images/fivepointedstar-large.png#lightbox "Triple screenshot of the Five-Pointed Star page")
 
-As capturas de tela do Android e UWP mostram os efeitos de par-ímpares e Enrolamento típicos, mas a ordem do traço e preenchimento também afeta os resultados.
+A captura de tela do Android mostra os efeitos típicos de retrocesso e ímpar, mas a ordem do traço e do preenchimento também afeta os resultados.
 
 O algoritmo de contorno é dependente da direção que as linhas são desenhadas. Normalmente, quando você estiver criando um caminho, você pode controlar nessa direção conforme você especificar que as linhas são desenhadas de um ponto para outro. No entanto, o `SKPath` classe também define os métodos, como `AddRect` e `AddCircle` que desenhar delimitações inteiras. Para controlar como esses objetos são desenhados, os métodos incluem um parâmetro do tipo [ `SKPathDirection` ](xref:SkiaSharp.SKPathDirection), que tem dois membros:
 
@@ -223,9 +223,9 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 É uma imagem interessante criada com um mínimo de código:
 
-[![](fill-types-images/overlappingcircles-small.png "Captura de tela da página círculos sobrepostos tripla")](fill-types-images/overlappingcircles-large.png#lightbox "tripla captura de tela da página círculos sobrepostos")
+[![](fill-types-images/overlappingcircles-small.png "Triple screenshot of the Overlapping Circles page")](fill-types-images/overlappingcircles-large.png#lightbox "Triple screenshot of the Overlapping Circles page")
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [APIs de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

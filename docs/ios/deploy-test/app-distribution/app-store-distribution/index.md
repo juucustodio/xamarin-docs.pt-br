@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 08/23/2017
-ms.openlocfilehash: 78df4a7f4c90cd6459216f1f65dd09e0daae19f7
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 96300cdddcc21511ef85ebbfe33f6ce32cb56cd7
+ms.sourcegitcommit: 6f09bc2b760e76a61a854f55d6a87c4f421ac6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73026697"
+ms.lasthandoff: 01/02/2020
+ms.locfileid: "75607926"
 ---
 # <a name="app-store-distribution"></a>Distribuição da App Store
 
@@ -85,7 +85,7 @@ Como com qualquer outro Perfil de Provisionamento que você criar, uma ID do Apl
 3. O prefixo do aplicativo já deve estar definido como sua ID de Equipe e não pode ser alterado. Selecione uma ID do Aplicativo Explícita ou Curinga e insira uma ID de Pacote no formato DNS inverso, como:
     - **Explícito**: com.[DomainName].[AppName]
     - **Curinga**: com.[DomainName].*
-4. Selecione quaisquer [Serviços de Aplicativos](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#appservices) que seu aplicativo exija.
+4. Selecione quaisquer [Serviços de Aplicativos](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#provisioning-for-application-services) que seu aplicativo exija.
 5. Clique no botão **Continue (Continuar)** e siga as instruções na tela para criar a nova ID do Aplicativo.
 
 ### <a name="creating-a-provisioning-profile"></a>Criando um perfil de provisionamento
@@ -196,11 +196,11 @@ Para saber mais sobre a publicação de aplicativos na App Store, consulte [Como
 
 Este artigo abordou os principais componentes na preparação de um aplicativo Xamarin.iOS para distribuição na App Store.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Como configurar um aplicativo no iTunes Connect](~/ios/deploy-test/app-distribution/app-store-distribution/itunesconnect.md)
 - [Publicando na App Store](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md)
-- [Distribuição Interna](~/ios/deploy-test/app-distribution/in-house-distribution.md)
+- [Distribuição interna](~/ios/deploy-test/app-distribution/in-house-distribution.md)
 - [Distribuição Ad Hoc](~/ios/deploy-test/app-distribution/ad-hoc-distribution.md)
 - [O arquivo iTunesMetadata.plist](~/ios/deploy-test/app-distribution/itunesmetadata.md)
 - [Suporte a IPA](~/ios/deploy-test/app-distribution/ipa-support.md)

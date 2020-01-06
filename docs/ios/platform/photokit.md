@@ -7,16 +7,27 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/14/2017
-ms.openlocfilehash: 82cff753e7569c2642c467db692c2d2d84347df0
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: def34efd1fd48cc0e7dd802a6d3e843be1e156a4
+ms.sourcegitcommit: 5ddb107b0a56bef8a16fce5bc6846f9673b3b22e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73031612"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558801"
 ---
 # <a name="photokit-in-xamarinios"></a>PhotoKit no Xamarin. iOS
 
-PhotoKit é uma nova estrutura que permite que os aplicativos consultem a biblioteca de imagens do sistema e criem interfaces de usuário personalizadas para exibir e modificar seu conteúdo. Ele inclui várias classes que representam ativos de imagem e vídeo, bem como coleções de ativos, como álbuns e pastas.
+[![baixar](~/media/shared/download.png) de exemplo baixar um exemplo de código](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-samplephotoapp/)
+
+PhotoKit é uma estrutura que permite que os aplicativos consultem a biblioteca de imagens do sistema e criem interfaces de usuário personalizadas para exibir e modificar seu conteúdo. Ele inclui várias classes que representam ativos de imagem e vídeo, bem como coleções de ativos, como álbuns e pastas.
+
+## <a name="permissions"></a>Permissões
+
+Antes que seu aplicativo possa acessar a biblioteca de fotos, será apresentada ao usuário uma caixa de diálogo de permissões. Você deve fornecer um texto explicativo no arquivo **info. plist** para explicar como seu aplicativo usa a biblioteca de fotos, por exemplo:
+
+```xml
+<key>NSPhotoLibraryUsageDescription</key>
+<string>Applies filters to photos and updates the original image</string>
+```
 
 ## <a name="model-objects"></a>Objetos de modelo
 
@@ -55,7 +66,7 @@ Isso resulta em uma grade de imagens, conforme mostrado abaixo:
 
 ## <a name="saving-changes-to-the-photo-library"></a>Salvando alterações na biblioteca de fotos
 
-É assim que lida com a consulta e a leitura de dados. Você também pode gravar as alterações de volta na biblioteca. Como vários aplicativos interessados são capazes de interagir com a biblioteca de fotos do sistema, você pode registrar um observador para ser notificado sobre as alterações usando um PhotoLibraryObserver. Em seguida, quando as alterações chegam, seu aplicativo pode ser atualizado de acordo. Por exemplo, aqui está uma implementação simples para recarregar a exibição de coleção acima:
+É assim que lida com a consulta e a leitura de dados. Você também pode gravar as alterações de volta na biblioteca. Como vários aplicativos interessados são capazes de interagir com a biblioteca de fotos do sistema, você pode registrar um observador para ser notificado sobre as alterações usando uma `PhotoLibraryObserver`. Em seguida, quando as alterações chegam, seu aplicativo pode ser atualizado de acordo. Por exemplo, aqui está uma implementação simples para recarregar a exibição de coleção acima:
 
 ```csharp
 class PhotoLibraryObserver : PHPhotoLibraryChangeObserver
@@ -70,26 +81,25 @@ class PhotoLibraryObserver : PHPhotoLibraryChangeObserver
     public override void PhotoLibraryDidChange (PHChange changeInstance)
     {
         DispatchQueue.MainQueue.DispatchAsync (() => {
-        var changes = changeInstance.GetFetchResultChangeDetails (controller.fetchResults);
-        controller.fetchResults = changes.FetchResultAfterChanges;
-        controller.CollectionView.ReloadData ();
+            var changes = changeInstance.GetFetchResultChangeDetails (controller.fetchResults);
+            controller.fetchResults = changes.FetchResultAfterChanges;
+            controller.CollectionView.ReloadData ();
         });
     }
 }
 ```
 
-Para realmente escrever alterações de seu aplicativo, você cria uma solicitação de alteração. Cada uma das classes de modelo tem uma classe de solicitação de alteração associada. Por exemplo, para alterar um PHAsset, você cria um PHAssetChangeRequest. As etapas para executar alterações que são gravadas na biblioteca de fotos e enviadas aos observadores como a acima são:
+Para realmente escrever alterações de seu aplicativo, você cria uma solicitação de alteração. Cada uma das classes de modelo tem uma classe de solicitação de alteração associada. Por exemplo, para alterar um `PHAsset`, você cria uma `PHAssetChangeRequest`. As etapas para executar alterações que são gravadas na biblioteca de fotos e enviadas aos observadores como a acima são:
 
-- Execute a operação de edição.
-- Salve os dados da imagem filtrada em uma instância do PHContentEditingOutput.
-- Faça uma solicitação de alteração para publicar as alterações que formam a saída de edição.
+1. Execute a operação de edição.
+2. Salve os dados da imagem filtrada em uma instância do `PHContentEditingOutput`.
+3. Faça uma solicitação de alteração para publicar as alterações da saída de edição.
 
 Aqui está um exemplo que grava uma alteração em uma imagem que aplica um filtro de Noir de imagem principal:
 
 ```csharp
 void ApplyNoirFilter (object sender, EventArgs e)
 {
-
     Asset.RequestContentEditingInput (new PHContentEditingInputRequestOptions (), (input, options) => {
 
         // perform the editing operation, which applies a noir filter in this case
@@ -123,8 +133,8 @@ void ApplyNoirFilter (object sender, EventArgs e)
 
 Quando o usuário seleciona o botão, o filtro é aplicado:
 
-![](photokit-images/image5.png "An example of the filter being applied")
+![Dois exemplos, mostrando a foto antes e depois que o filtro é aplicado](photokit-images/image5.png)
 
-Graças ao PHPhotoLibraryChangeObserver, a alteração é refletida na exibição de coleção quando o usuário navega de volta:
+E, graças ao `PHPhotoLibraryChangeObserver`, a alteração é refletida na exibição de coleção quando o usuário navega de volta:
 
-![](photokit-images/image6.png "The change is reflected in the collection view when the user navigates back")
+![Exibição de coleção de fotos mostrando a foto modificada](photokit-images/image6.png)

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/22/2017
-ms.openlocfilehash: 885f5321c10bcbc5389daf7dd7a97d1f9d572499
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 37695ef93a1005febf12369e7d1defccf6130832
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73010373"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75488420"
 ---
 # <a name="application-icons-in-xamarinios"></a>Ícones de aplicativo no Xamarin. iOS
 
@@ -47,15 +47,15 @@ Os tamanhos e resoluções de ativos de imagem a seguir serão necessários para
     ||vezes|
     |---|---|
     |Ícone do Aplicativo|180x180|
-    |Luz|120 x 120|
+    |Destaque|120x120|
     |Configurações|87x87|
 
 - **iPhone: iOS 7 & 8**
 
     ||1x|2|
     |---|---|---|
-    |Ícone do Aplicativo|60 x 60<sup>1</sup>|120 x 120|
-    |Luz|40x40<sup>2</sup>|80x80|
+    |Ícone do Aplicativo|60x60<sup>1</sup>|120x120|
+    |Destaque|40x40<sup>2</sup>|80x80|
     |Configurações|-|-|
 
 - **iPhone: iOS 5 & 6**
@@ -63,25 +63,25 @@ Os tamanhos e resoluções de ativos de imagem a seguir serão necessários para
     ||1x|2|
     |---|---|---|
     |Ícone do Aplicativo|57 x 57|114x114|
-    |Luz|29 x 29|58x58|
-    |Configurações|29X29<sup>3, 4</sup>|58x58<sup>3, 4</sup>|
+    |Destaque|29 x 29|58x58|
+    |Configurações|29x29<sup>3, 4</sup>|58x58<sup>3, 4</sup>|
 
 ### <a name="ipad-icon-sizes"></a>Tamanhos de ícone do iPad
 
 - **iPad: iOS 9 & 10**
 
-    ||2x (iPad pro)|
+    ||2x (iPad Pro)|
     |---|---|
     |Ícone do Aplicativo|167x167<sup>6</sup>|
-    |Luz|120 x 120<sup>6</sup>|
+    |Destaque|120x120<sup>6</sup>|
     |Configurações|58x58<sup>5</sup>|
 
 - **iPad: iOS 7 & 8**
 
     ||1x|2|
     |---|---|---|
-    |Ícone do Aplicativo|76 x 76|152 x 152|
-    |Luz|40 x 40|80x80|
+    |Ícone do Aplicativo|76 x 76|152x152|
+    |Destaque|40 x 40|80x80|
     |Configurações|-|-|
 
 - **iPad: iOS 5 & 6**
@@ -89,8 +89,8 @@ Os tamanhos e resoluções de ativos de imagem a seguir serão necessários para
     ||1x|2|
     |---|---|---|
     |Ícone do Aplicativo|72 x 72|144x144|
-    |Luz|50 x 50|100x100|
-    |Configurações|29X29<sup>3, 5</sup>|58x58<sup>3, 5</sup>|
+    |Destaque|50 x 50|100x100|
+    |Configurações|29x29<sup>3, 5</sup>|58x58<sup>3, 5</sup>|
 
  1. O Visual Studio para Mac e o Xcode não dão mais suporte à definição da imagem 1x para iOS 7.
  2. Não há suporte para a definição de uma imagem 1x para iOS 7 ao usar catálogos de ativos.
@@ -107,39 +107,48 @@ Os tamanhos e resoluções de ativos de imagem a seguir serão necessários para
 
 Para ícones, um conjunto de imagens `AppIcon` especial pode ser adicionado ao arquivo de `Assets.xcassets` no projeto do aplicativo. Todas as versões da imagem necessárias para dar suporte a todas as resoluções são incluídas no _xcasset_ e agrupadas juntas. Um editor especial no Visual Studio para Mac permite que o desenvolvedor inclua e configure essas imagens graficamente.
 
-Para usar um catálogo de ativos, faça o seguinte:
+Para usar um catálogo de ativos, siga estas etapas:
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 1. Clique duas vezes no arquivo `Info.plist` no **Gerenciador de soluções** para abri-lo para edição.
-2. Role para baixo até a seção **ícones de aplicativo** .
-3. Na lista suspensa **origem** , verifique se **appIcon** está selecionado: 
+2. Role para baixo até a seção **ícones do iPhone** .
+3. Clique no botão **migrar para o catálogo de ativos** :
 
     ![](app-icons-images/migrate01.png "Ensure AppIcon is selected")
+
 4. No **Gerenciador de soluções**, clique duas vezes no arquivo `Assets.xcassets` para abri-lo para edição: 
 
     ![](app-icons-images/asset01.png "The Assets.xcassets file in the Solution Explorer")
+
 5. Selecione `AppIcon` na lista de ativos para exibir o `Icon Editor`:
 
     ![](app-icons-images/asset02.png "The AppIcon editor")
+
 6. Clique no tipo de ícone especificado e selecione um arquivo de imagem para o tipo/tamanho necessário ou arraste-o em uma imagem de uma pasta e solte-o no tamanho desejado.
 7. Clique no botão **abrir** para incluir a imagem no projeto e defini-la no xcasset.
 8. Repita para todas as imagens necessárias.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-1. Clique duas vezes no arquivo **info. plist** na **Gerenciador de soluções**:
+1. Clique duas vezes nas informações * *.  \* * arquivo no **Gerenciador de soluções**:
 
     ![](app-icons-images/icon01w.png "Select Info.plist")
+
 2. Clique na guia **ativos visuais** e clique no botão **usar catálogo de ativos** em **ícones do aplicativo**: 
 
     ![](app-icons-images/icon02w.png "Select the Visual Assets tab")
+
+    Se não houver nenhum botão, mas sim uma lista suspensa, um catálogo de ativos já foi adicionado a este projeto.
+
 3. No **Gerenciador de soluções**, expanda a pasta **Catálogo de ativos** : 
 
     ![](app-icons-images/image009.png "Expand the Asset Catalog folder")
+
 4. Clique duas vezes no arquivo de **mídia** para abri-lo no editor: 
 
     ![](app-icons-images/image010.png "Open the Media file in the editor")
+
 5. No **Gerenciador de propriedades** , o desenvolvedor pode selecionar os diferentes tipos e tamanhos de ícones necessários.
 6. Clique no tipo de ícone fornecido e selecione um arquivo de imagem para o tipo/tamanho necessário.
 7. Clique no botão **abrir** para incluir a imagem no projeto e defini-la no xcasset.
@@ -148,36 +157,6 @@ Para usar um catálogo de ativos, faça o seguinte:
 -----
 
 Esse é o método preferencial de incluir e gerenciar ativos de imagem que serão usados para fornecer ícones de aplicativo, de destaque e de configurações para um aplicativo.
-
-### <a name="migrating-from-infoplist-to-asset-catalogs"></a>Migrando do info. plist para catálogos de ativos
-
-Para um aplicativo Xamarin. iOS existente usando o arquivo de `Info.plist` para gerenciar seus ícones, é altamente recomendável que o desenvolvedor alterne para usar o ativo de imagem `AppIcons` dentro do `Assets.xcassets`.
-
-Faça o seguinte:
-
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
-
-1. Clique duas vezes no arquivo `Info.plist` no **Gerenciador de soluções** para abri-lo para edição.
-2. Role para baixo até a seção **ícones de aplicativo** .
-3. Na lista suspensa **origem** , selecione **migrar para catálogos de ativos**: 
-
-    ![](app-icons-images/migrate02.png "Select Migrate to Asset Catalogs")
-4. Todos os ícones existentes definidos no arquivo de `Info.plist` serão migrados para um conjunto de imagens `AppIcons` adicionado ao `Assets.xcassets`: 
-
-     ![](app-icons-images/migrate03.png "The AppIcons Image Set in the Assets.xcassets")
-
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
-
-1. Clique duas vezes no arquivo `Info.plist` no **Gerenciador de soluções** para abri-lo para edição.
-2. Clique na seção ícones do iPhone: 
-
-    ![](app-icons-images/image007.png "Rhe iPhone Icons editor")
-3. Role para baixo até a seção **ícones** .
-4. Na lista suspensa **Catálogo de ativos** , selecione **usar catálogos de ativos**.
-5. Todos os ícones existentes definidos no arquivo de `Info.plist` serão migrados para um conjunto de `Images` adicionado ao `Assets.xcassets`.
-6. Salve as alterações no arquivo `Info.plist`.
-
------
 
 <a name="itunes" />
 
@@ -208,7 +187,7 @@ Para especificar a Arte do iTunes, faça o seguinte:
 
 -----
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Trabalhando com imagens (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/workingwithimages)
 - [Hello, iPhone](~/ios/get-started/hello-ios/index.md)

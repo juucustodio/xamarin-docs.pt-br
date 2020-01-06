@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 08/13/2018
-ms.openlocfilehash: 43bde3a31a79728548e72ea1d34977f1a131f282
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: f6a38aea1e46e1165bb36d83e75e24769de0a1e2
+ms.sourcegitcommit: 9ab907e053c57fc96419149f83187bc3e8983a6b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73028538"
+ms.lasthandoff: 01/04/2020
+ms.locfileid: "75655312"
 ---
 # <a name="working-with-entitlements-in-xamarinios"></a>Trabalhar com direitos no Xamarin.iOS
 
@@ -41,15 +41,15 @@ Além de selecionar e configurar os serviços de aplicativo necessários ao defi
 
 Para configurar os direitos no Visual Studio para Mac, faça o seguinte:
 
-1. No **Gerenciador de Soluções**, clique duas vezes no arquivo **Info.plist** para abri-lo para edição.
-2. Na seção **Destino do aplicativo iOS**, preencha um nome para o aplicativo e insira o **Identificador do pacote** que foi criado quando a ID do aplicativo foi definida:
+1. No **painel de solução**, clique duas vezes no arquivo **info. plist** para abri-lo.
+2. Na seção **identidade** , preencha um nome para o aplicativo e insira o identificador do **pacote** que foi criado quando a ID do aplicativo foi definida:
 
-    ![](entitlements-images/servicexs01.png "Enter a Bundle Identifier")
+    ![Insira um identificador de pacote](entitlements-images/servicexs01-sml.png)
 
 3. Salve as alterações no arquivo **Info.plist**.
-4. No **Gerenciador de Soluções**, clique duas vezes no arquivo **Entitlements.plist** para abri-lo para edição:
+4. No **painel de solução**, clique duas vezes no arquivo **pretitles. plist** para abri-lo para edição:
 
-    ![](entitlements-images/servicexs02.png "Editing the Entitlements")
+    ![Editando os direitos](entitlements-images/servicexs02-sml.png)
 
 5. Selecione e configure os direitos necessários (se houver) para o aplicativo Xamarin.iOS de maneira que eles correspondam à configuração definida quando a ID do aplicativo foi criada.
 6. Salve as alterações no arquivo **Entitlements.plist**.
@@ -58,17 +58,17 @@ Para configurar os direitos no Visual Studio para Mac, faça o seguinte:
 
 Para configurar os direitos no Visual Studio, faça o seguinte:
 
-1. No **Gerenciador de Soluções**, clique com o botão direito do mouse em **Info.plist**, selecione **Abrir Com...** e o arquivo **Editor de Lista de Propriedades** para abri-lo para edição.
+1. No **Gerenciador de soluções**, clique duas vezes no **info. plist** para abri-lo para edição.
 2. Na seção **Destino do aplicativo iOS**, preencha um nome para o aplicativo e insira o **Identificador do pacote** que foi criado quando a ID do aplicativo foi definida:
 
-    ![](entitlements-images/servicevs01.png "Setting the Bundle Identifier")
+    ![Definindo o identificador do pacote](entitlements-images/servicevs01-sml.png)
 
 3. Salve as alterações no arquivo **Info.plist**.
-4. No **Gerenciador de Soluções**, clique com o botão direito do mouse no arquivo **Entitlements.plist**, selecione **Abrir Com...** e **Editor de Lista de Propriedades** para abri-lo para edição:
+4. No **Gerenciador de soluções**, clique duas vezes no arquivo **pretitles. plist** para abri-lo:
 
-    ![](entitlements-images/servicevs02.png "Editing the Entitlements")
+    ![Editando os direitos](entitlements-images/servicevs02-sml.png)
 
-    Como alternativa, clique duas vezes no arquivo **Entitlements.plist** para abrir o editor de código-fonte XML, que permitirá definir o valor da chave e a propriedade do Direito, conforme está detalhado na seção [Referência de chave de direito](#entitlement-key-reference) abaixo.
+    Você também pode clicar com o botão direito do mouse no arquivo Rights **. plist** e escolher **abrir com...** o editor de origem XML, que permitirá que você defina a propriedade de direitos e o valor da chave, conforme detalhado na seção [referência da chave de qualificação](#entitlement-key-reference) abaixo.
 
 5. Selecione e configure os direitos necessários (se houver) para o aplicativo Xamarin.iOS de maneira que eles correspondam à configuração definida quando a ID do aplicativo foi criada.
 6. Salve as alterações no arquivo **Entitlements.plist**.
@@ -83,10 +83,10 @@ Para adicionar um arquivo Entitlements.plist no Xamarin.iOS, faça o seguinte:
 
 1. Clique com o botão direito do mouse no arquivo de projeto e navegue até **Adicionar > Novo Arquivo...** :
 
-    ![Menu de contexto Adicionar Arquivos](entitlements-images/image1.png)
+    ![Menu de contexto Adicionar Arquivos](entitlements-images/image1-sml.png)
 2. Na caixa de diálogo Novo Arquivo, selecione **iOS > Lista de Propriedades** e nomeie-a como Direitos:
 
-    ![Caixa de diálogo Novo Arquivo](entitlements-images/image2.png)
+    ![Caixa de diálogo Novo Arquivo](entitlements-images/image2-sml.png)
 
 ## <a name="entitlement-key-reference"></a>Referência de chave de direito
 
@@ -104,8 +104,6 @@ Chaves de direitos podem ser adicionadas por meio do painel Código-fonte do edi
   - Isso habilitará o aplicativo a permitir todos os tipos de passes. Para restringir o aplicativo e permitir somente um subconjunto de tipos de passe de equipe, defina o valor de cadeia de caracteres como: `$(TeamIdentifierPrefix)pass.$(CFBundleIdentifier)`
 
   Em que pass.$(CFBundleIdentifier) é a ID do Passe criada [acima](~/ios/platform/passkit.md)
-
-<a name="icloud" />
 
 ### <a name="icloud"></a>iCloud
 
@@ -126,14 +124,12 @@ Chaves de direitos podem ser adicionadas por meio do painel Código-fonte do edi
 > [!IMPORTANT]
 > A Apple [fornece ferramentas](https://developer.apple.com/support/allowing-users-to-manage-data/) para ajudar os desenvolvedores a lidar adequadamente com o GDPR (Regulamento Geral sobre a Proteção de Dados) da União Europeia.
 
-### <a name="app-groups"></a>Grupos de Aplicativos
+### <a name="app-groups"></a>Grupos de aplicativo
 
 - **Descrição**: um Grupo de Aplicativos permite que diferentes aplicativos (ou um aplicativo e suas extensões) acessem um local de armazenamento de arquivo compartilhado.
 
   - **Chave**: com.apple.security.application-groups
   - **Cadeia de caracteres**: group.$(CFBundleIdentifier)
-
-<a name="apple-pay" />
 
 ### <a name="apple-pay"></a>Apple Pay
 
@@ -141,7 +137,7 @@ Chaves de direitos podem ser adicionadas por meio do painel Código-fonte do edi
   - **Chave**: com.apple.developer.in-app-payments
   - **Cadeia de caracteres**: merchant.your.mechantid
 
-### <a name="push-notifications"></a>Notificações por Push
+### <a name="push-notifications"></a>Notificações por push
 
 - **Chave**: aps-environment
 - **Cadeia de caracteres**: `development` ou `production`
@@ -156,7 +152,7 @@ Chaves de direitos podem ser adicionadas por meio do painel Código-fonte do edi
 - **Chave**: com.apple.developer.networking.vpn.api
 - **Cadeia de caracteres**: allow-vpn
 
-### <a name="keychain-sharing"></a>Compartilhamento de conjunto de chaves
+### <a name="keychain-sharing"></a>Compartilhamento de Conjunto de Chaves
 
 - **Descrição**: o compartilhamento de conjunto de chaves permite que os desenvolvedores de aplicativos compartilhem as senhas armazenadas no conjunto de chaves do dispositivo com outros aplicativos desenvolvidos pela mesma equipe. O acesso pode ser restringido passando um identificador de grupo de acesso do conjunto de chaves na cadeia de caracteres.
   - **Chave**: keychain-access-groups
@@ -192,7 +188,7 @@ Chaves de direitos podem ser adicionadas por meio do painel Código-fonte do edi
   - **Chave**: com.apple.developer.healthkit
   - **Booliano**: sim
 
-### <a name="wireless-accessory-configuration"></a>Configuração de Acessório sem Fio
+### <a name="wireless-accessory-configuration"></a>Configuração de acessório sem fio
 
 - **Descrição**: o uso da Configuração de Acessório Sem Fio permite que seu aplicativo configure acessórios MFi Wi-Fi
   - **Chave**: com.apple.external-accessory.wireless-configuration

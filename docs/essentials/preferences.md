@@ -6,12 +6,12 @@ author: jamesmontemagno
 ms.author: jamont
 ms.date: 01/15/2019
 ms.custom: video
-ms.openlocfilehash: 6d57b5ce9cb61363eef24b230f6cf71894f66198
-ms.sourcegitcommit: 53f5e83f4e246be703917d7cc719c8cc959517ab
-ms.translationtype: HT
+ms.openlocfilehash: 1c6e55b69ca683b7fc1919995ba576ab77bf3c3b
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54317876"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75488498"
 ---
 # <a name="xamarinessentials-preferences"></a>Xamarin.Essentials: Preferências
 
@@ -69,7 +69,7 @@ Os tipos de dados a seguir têm suporte em **Preferences**:
 
 ## <a name="implementation-details"></a>Detalhes da implementação
 
-Os valores de `DateTime` são armazenados em um formato binário de 64 bits (inteiro longo) usando dois métodos definidos pela classe `DateTime`: O método [`ToBinary`](xref:System.DateTime.ToBinary) é usado para codificar o valor `DateTime`, e o método [`FromBinary`](xref:System.DateTime.FromBinary(System.Int64)) decodifica o valor. Confira a documentação desses métodos para conhecer os ajustes que podem ser feitos em valores decodificados ao armazenar um `DateTime` que não seja um valor UTC (Tempo Universal Coordenado).
+Os valores de `DateTime` são armazenados em um formato binário de 64 bits (inteiro longo) usando dois métodos definidos pela classe `DateTime`: o método [`ToBinary`](xref:System.DateTime.ToBinary) é usado para codificar o valor `DateTime` e o método [`FromBinary`](xref:System.DateTime.FromBinary(System.Int64)) decodifica o valor. Confira a documentação desses métodos para conhecer os ajustes que podem ser feitos em valores decodificados ao armazenar um `DateTime` que não seja um valor UTC (Tempo Universal Coordenado).
 
 ## <a name="platform-implementation-specifics"></a>Particularidades de implementação da plataforma
 
@@ -83,7 +83,9 @@ Todos os dados são armazenados em [Preferências Compartilhadas](https://develo
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
-[ApplicationDataContainer](https://docs.microsoft.com/uwp/api/windows.storage.applicationdatacontainer) é usado para armazenar os valores no dispositivo. Se nenhum `sharedName` for especificado, o `LocalSettings` será usado, caso contrário, o nome será usado para criar um novo contêiner dentro do `LocalSettings`.
+[ApplicationDataContainer](https://docs.microsoft.com/uwp/api/windows.storage.applicationdatacontainer) é usado para armazenar os valores no dispositivo. Se nenhum `sharedName` for especificado, o `LocalSettings` será usado, caso contrário, o nome será usado para criar um novo contêiner dentro do `LocalSettings`. 
+
+`LocalSettings` também tem a seguinte restrição de que o nome de cada configuração pode ter 255 caracteres de comprimento máximo. Cada configuração pode ter até 8K bytes de tamanho e cada configuração composta pode ter até 64K bytes de tamanho.
 
 --------------
 

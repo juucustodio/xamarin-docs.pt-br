@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: 625826e729a6b4153396286361730d6a2b878dca
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: b357a6e1531c8f587c8fc0f86e2b56d6fecc2923
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73010467"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75488316"
 ---
 # <a name="walkthrough---background-location-in-xamarinios"></a>Walkthrough-local do plano de fundo no Xamarin. iOS
 
@@ -80,7 +80,7 @@ Este tutorial explica alguns conceitos importantes de plano de fundo, incluindo 
     > [!IMPORTANT]
     > o iOS 8 (e superior) também requer uma entrada no arquivo **info. plist** para mostrar o usuário como parte da solicitação de autorização.
 
-1. Adicione uma `NSLocationAlwaysUsageDescription` de chave ou `NSLocationWhenInUseUsageDescription` com uma cadeia de caracteres que será exibida para o usuário no alerta que solicita acesso a dados de local.
+1. Adicione as chaves **info. plist** para os tipos de permissão que o aplicativo requer – `NSLocationAlwaysUsageDescription`, `NSLocationWhenInUseUsageDescription`e/ou `NSLocationAlwaysAndWhenInUseUsageDescription` – com uma cadeia de caracteres que será exibida para o usuário no alerta que solicita acesso a dados de local.
 
 1. o iOS 9 requer que, ao usar `AllowsBackgroundLocationUpdates` o **info. plist** inclua o `UIBackgroundModes` de chave com o valor `location`. Se você concluiu a etapa 2 deste passo a passos, ele já deve estar em seu arquivo info. plist.
 
@@ -276,7 +276,7 @@ Agora, a interface do usuário começará a ser atualizada quando o aplicativo f
 
 Neste tutorial, criamos um aplicativo iOS com reconhecimento de plano de fundo bem comparado que imprime dados de localização na janela de saída do aplicativo e na tela.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Local (parte 4) (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/location)
 - [Referência da estrutura de localização principal](https://developer.apple.com/library/ios/documentation/CoreLocation/Reference/CoreLocation_Framework/_index.html)

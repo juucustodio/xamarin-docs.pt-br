@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: 609ee17b6f2fd392c612277de8bbf59f8780f7d9
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 871058d1c128b37a0f2e77b43587139efb433de1
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73020382"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75487770"
 ---
 # <a name="creating-a-cryptoobject"></a>Criando um Cryptoobject
 
@@ -57,7 +57,7 @@ public class CryptoObjectHelper
         Cipher cipher = Cipher.GetInstance(TRANSFORMATION);
         try
         {
-            cipher.Init(CipherMode.EncryptMode | CipherMode.DecryptMode, key);
+            cipher.Init(CipherMode.EncryptMode, key);
         } catch(KeyPermanentlyInvalidatedException e)
         {
             _keystore.DeleteEntry(KEY_NAME);
@@ -132,7 +132,7 @@ Depois que o `KeyGenParameterSpec` é criado, ele é usado para inicializar o `K
 
 ## <a name="using-the-cryptoobjecthelper"></a>Usando o CryptoObjectHelper
 
-Agora que o código de exemplo encapsulava grande parte da lógica para criar um `CryptoWrapper` na classe `CryptoObjectHelper`, Vamos revisitar o código do início deste guia e usar o `CryptoObjectHelper` para criar a codificação e iniciar um scanner de impressão digital : 
+Agora que o código de exemplo encapsulava grande parte da lógica para criar um `CryptoWrapper` na classe `CryptoObjectHelper`, Vamos revisitar o código do início deste guia e usar o `CryptoObjectHelper` para criar a codificação e iniciar um scanner de impressão digital: 
 
 ```csharp
 protected void FingerPrintAuthenticationExample()
@@ -155,14 +155,14 @@ protected void FingerPrintAuthenticationExample()
 
 Agora que vimos como criar um `CryptoObject`, vamos continuar a ver como os `FingerprintManager.AuthenticationCallbacks` são usados para transferir os resultados do serviço de scanner de impressão digital para um aplicativo Android.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Codificação](xref:Javax.Crypto.Cipher)
-- [Fingerprintlist. Cryptoobject](https://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.CryptoObject.html)
-- [FingerprintManagerCompat. Cryptoobject](https://developer.android.com/reference/android/support/v4/hardware/fingerprint/FingerprintManagerCompat.CryptoObject.html)
-- [Keygenerator](xref:Javax.Crypto.KeyGenerator)
+- [FingerprintManager.CryptoObject](https://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.CryptoObject.html)
+- [FingerprintManagerCompat.CryptoObject](https://developer.android.com/reference/android/support/v4/hardware/fingerprint/FingerprintManagerCompat.CryptoObject.html)
+- [KeyGenerator](xref:Javax.Crypto.KeyGenerator)
 - [KeyGenParameterSpec](https://developer.android.com/reference/android/security/keystore/KeyGenParameterSpec.html)
-- [KeyGenParameterSpec. Builder](https://developer.android.com/reference/android/security/keystore/KeyGenParameterSpec.Builder.html)
+- [KeyGenParameterSpec.Builder](https://developer.android.com/reference/android/security/keystore/KeyGenParameterSpec.Builder.html)
 - [KeyPermanentlyInvalidatedException](https://developer.android.com/reference/android/security/keystore/KeyPermanentlyInvalidatedException.html)
 - [KeyProperties](https://developer.android.com/reference/android/security/keystore/KeyProperties.html)
 - [AES](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard)

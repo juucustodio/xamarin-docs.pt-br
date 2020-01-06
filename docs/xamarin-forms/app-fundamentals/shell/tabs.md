@@ -6,13 +6,13 @@ ms.assetid: 318D81DB-E456-4E44-B083-36A27DBD9523
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/23/2019
-ms.openlocfilehash: a6d99197adca9d07fec5b996d2a74e2ac336d2e9
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
-ms.translationtype: HT
+ms.date: 11/06/2019
+ms.openlocfilehash: 0ffcbe99ef9696c5fde501809bea5ddcc7a793a7
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69888977"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75489824"
 ---
 # <a name="xamarinforms-shell-tabs"></a>Guias do Shell do Xamarin.Forms
 
@@ -50,7 +50,7 @@ O aplicativo Shell mais simples é um aplicativo de página única, que pode ser
 
 Este exemplo de código resulta no seguinte aplicativo de página única:
 
-[![Captura de tela de um aplicativo Shell de página única no iOS e Android](tabs-images/single-page-app.png "Aplicativo Shell de página única")](tabs-images/single-page-app-large.png#lightbox "Aplicativo Shell de página única")
+[![Captura de tela de um aplicativo de página única do Shell, no iOS e no Android](tabs-images/single-page-app.png "Aplicativo de página única do Shell")](tabs-images/single-page-app-large.png#lightbox "Aplicativo de página única do Shell")
 
 > [!NOTE]
 > A barra de navegação pode ser ocultada, se necessário, definindo a propriedade anexada `Shell.NavBarIsVisible` como `false` no objeto [`ContentPage`](xref:Xamarin.Forms.ContentPage).
@@ -100,7 +100,11 @@ Os objetos `Tab` são renderizados como guias inferiores, desde que haja vários
 
 Os títulos e os ícones da guia são definidos em cada objeto `Tab` e exibidos nas guias inferiores:
 
-[![Captura de tela de um aplicativo Shell de duas páginas com guias inferiores no iOS e no Android](tabs-images/two-page-app-bottom-tabs.png "Aplicativo Shell de duas páginas com guias inferiores")](tabs-images/two-page-app-bottom-tabs-large.png#lightbox "Aplicativo Shell de duas páginas com guias inferiores")
+[![Captura de tela de um aplicativo de duas páginas do shell com guias inferiores, no iOS e no Android](tabs-images/two-page-app-bottom-tabs.png "Aplicativo de duas páginas do shell com guias inferiores")](tabs-images/two-page-app-bottom-tabs-large.png#lightbox "Aplicativo de duas páginas do shell com guias inferiores")
+
+Quando houver mais de cinco guias, será exibida uma guia **mais** , que pode ser usada para acessar as guias adicionais:
+
+[![Captura de tela de um aplicativo de shell com uma guia mais, no iOS e no Android](tabs-images/more-tabs.png "Aplicativo shell com mais guias")](tabs-images/more-tabs-large.png#lightbox "Shellapp com mais guias")
 
 Como alternativa, os operadores de conversão implícita do Shell podem ser usados para remover os objetos `ShellContent` e `Tab` do exemplo anterior:
 
@@ -213,7 +217,7 @@ Quando mais de um objeto `ShellContent` está presente em um objeto `Tab`, uma b
 
 Isso resulta no layout mostrado nas capturas de tela seguir:
 
-[![Captura de tela de um aplicativo Shell de duas páginas com guias superior e inferior no iOS e no Android](tabs-images/two-page-app-top-tabs.png "Aplicativo Shell de duas páginas com guias superior e inferior")](tabs-images/two-page-app-top-tabs-large.png#lightbox "Aplicativo Shell de duas páginas com guias superior e inferior")
+[![Captura de tela de um aplicativo de duas páginas do shell com as guias superior e inferior, no iOS e no Android](tabs-images/two-page-app-top-tabs.png "Aplicativo de duas páginas do shell com guias superior e inferior")](tabs-images/two-page-app-top-tabs-large.png#lightbox "Aplicativo de duas páginas do shell com guias superior e inferior")
 
 Como alternativa, os operadores de conversão implícita do Shell podem ser usados para remover os objetos `ShellContent` e o segundo objeto `Tab` do exemplo anterior:
 

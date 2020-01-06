@@ -7,16 +7,16 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 07/15/2017
-ms.openlocfilehash: 50ba4a46e9d9f7cbf5337844025790ab51e309dd
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 945a42485486dbfddfd023a72e88d9127651c71f
+ms.sourcegitcommit: 6f09bc2b760e76a61a854f55d6a87c4f421ac6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73022683"
+ms.lasthandoff: 01/02/2020
+ms.locfileid: "75607939"
 ---
 # <a name="manual-provisioning-for-xamarinios"></a>Provisionamento manual para o Xamarin.iOS
 
-_Once Xamarin.iOS has been successfully installed, the next step in iOS development is to provision your iOS device. This guide explores using manual provisioning to set up development certificates and profiles._
+_Depois que o Xamarin. iOS tiver sido instalado com êxito, a próxima etapa no desenvolvimento do iOS será provisionar seu dispositivo iOS. Este guia explora o uso do provisionamento manual para configurar perfis e certificados de desenvolvimento._
 
 > [!NOTE]
 > As instruções nesta página são relevantes para desenvolvedores que têm acesso pago ao Programa de Desenvolvedor da Apple. Se tiver uma conta gratuita, confira o guia de [Provisionamento gratuito](~/ios/get-started/installation/device-provisioning/free-provisioning.md) para obter mais informações sobre testes no dispositivo.
@@ -181,9 +181,10 @@ Para criar manualmente um perfil de provisionamento para desenvolvimento, faça 
 8. Pressione **Baixar** para baixar o perfil de provisionamento em um Mac:
 
     [![](manual-provisioning-images/provisioning-profile06.png "Download the provisioning profile")](manual-provisioning-images/provisioning-profile06.png#lightbox)
-9. Clique duas vezes no arquivo para instalar o perfil de provisionamento no Xcode. Observe que o Xcode pode não mostrar indicações visuais de que o perfil está instalado, exceto ao abri-lo. Isso pode ser verificado navegando em **Xcode > Preferências > Contas**. Select your Apple ID and click **View Details...** . Your new provisioning profile should be listed, as illustrated below:
 
-      [![](manual-provisioning-images/provisioning-profile07.png "Viewing the profile in Xcode")](manual-provisioning-images/provisioning-profile07.png#lightbox)
+9. Clique duas vezes no arquivo para instalar o perfil de provisionamento no Xcode. Observe que o Xcode pode não mostrar indicações visuais de que o perfil está instalado, exceto ao abri-lo. Isso pode ser verificado navegando até o **Xcode > janela > dispositivos e simuladores**. Clique com o botão direito do mouse no dispositivo e selecione **Mostrar perfis de provisionamento**...
+
+      [![](manual-provisioning-images/provisioning-profile07-sml.png "Viewing the profile in Xcode")](manual-provisioning-images/provisioning-profile07.png#lightbox)
 
 Após o perfil de provisionamento ter sido criado com êxito, pode ser necessário atualizar o Xcode para que todos os certificados de desenvolvimento fiquem disponíveis para o Visual Studio para Mac e o Visual Studio.
 
@@ -197,7 +198,9 @@ Certificados e perfis de provisionamento que foram criados no Portal de Desenvol
 2. Inicie o Xcode.
 3. Escolha **Menu do Xcode > Preferências...**
 4. Clique na guia **Contas**.
-5. Select a team and click the  **Download Manual Profiles** button:  [![](manual-provisioning-images/selectteam1.png "Downloading Manual profiles")](manual-provisioning-images/selectteam1.png#lightbox)
+5. Selecione uma equipe e clique no botão **Baixar perfis manuais**:
+
+    [![baixar perfis manuais](manual-provisioning-images/selectteam1.png)](manual-provisioning-images/selectteam1.png#lightbox)
 
 6. Feche o Xcode.
 7. Inicie o Visual Studio para Mac ou Visual Studio.
@@ -215,8 +218,6 @@ Os novos certificados ou perfis de provisionamento estarão disponíveis no Visu
 > Pode ser necessário parar e reiniciar o Visual Studio para que ele exiba certificados novos ou modificados ou perfis atualizados pelo Xcode.
 
 -----
-
-<a name="appservices" />
 
 ## <a name="provisioning-for-application-services"></a>Provisionamento para serviços de aplicativo
 
@@ -238,11 +239,11 @@ Neste momento, o provisionamento já deve estar concluído e o aplicativo pronto
 1. Conecte o dispositivo em um Mac.
 2. No **Info.plist** do projeto, verifique se o identificador do pacote corresponde à ID do aplicativo (a menos que a ID do aplicativo seja um caractere curinga):
 
-   ![](manual-provisioning-images/deploydevice01xs.png "Entering an Identifier")
+   ![Inserindo um identificador](manual-provisioning-images/deploydevice01xs.png)
 
 3. Clique com o botão direito do mouse no projeto para exibir a caixa de diálogo Opções do Projeto e vá até **Compilar > Assinatura do Pacote iOS**. Na lista suspensa ao lado de **Identidade de Assinatura** e **Perfil de Provisionamento**, verifique se o Visual Studio para Mac pode ver os perfis corretos e selecione uma identidade e um perfil específicos:
 
-   ![](manual-provisioning-images/deploydevice02xs.png "Select a specific identity & profile")
+   ![Selecionar um perfil de & de identidade específico](manual-provisioning-images/deploydevice02xs.png)
 
    Se isso estiver definido como **Automático**, o Visual Studio para Mac selecionará a identidade e o perfil com base na ID do pacote que foi definida na etapa No. 2.
 
@@ -257,7 +258,7 @@ Neste momento, o provisionamento já deve estar concluído e o aplicativo pronto
 1. Conecte o dispositivo ao host de build do Mac.
 2. No **Info.plist** do projeto, verifique se o identificador do pacote corresponde à ID do aplicativo:
 
-   ![](manual-provisioning-images/servicevs01.png "Entering an Identifier")
+   ![Inserindo um identificador](manual-provisioning-images/servicevs01.png)
 
 3. Clique com o botão direito do mouse no projeto para exibir a caixa de diálogo Opções do Projeto e vá até **Compilar > Assinatura do Pacote iOS**. Na lista suspensa ao lado de **Identidade de Assinatura** e **Perfil de Provisionamento**, verifique se o Visual Studio pode ver os perfis corretos e selecione uma identidade e um perfil específicos.
 

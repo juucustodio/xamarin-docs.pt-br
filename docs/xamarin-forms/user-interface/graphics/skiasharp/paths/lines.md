@@ -7,22 +7,22 @@ ms.technology: xamarin-skiasharp
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: cc62ca4656a845a261c56424aa1ea1331c994994
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 724a79e618321f97257718bf56dd1fdd18f73563
+ms.sourcegitcommit: 191f1f3b13a14e2afadcb95126c5f653722f126f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70759212"
+ms.lasthandoff: 12/30/2019
+ms.locfileid: "75545596"
 ---
 # <a name="lines-and-stroke-caps"></a>Limites de linha e de traço
 
-[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Saiba como usar SkiaSharp para desenhar linhas com extremidades diferentes de traço_
 
 SkiaSharp, renderização de uma única linha é muito diferente da renderização de uma série de linhas retas conectadas. Até mesmo ao desenhar linhas individuais, no entanto, ele geralmente é necessário dar as linhas de uma largura de traço específica. Como essas linhas se tornam mais ampla, a aparência das extremidades das linhas também se torna importante. A aparência do final da linha é chamada de *limite do traço*:
 
-![](lines-images/strokecapsexample.png "As opções de caps três traço")
+![](lines-images/strokecapsexample.png "The three stroke caps options")
 
 Para desenhar linhas únicas, `SKCanvas` define um simples [ `DrawLine` ](xref:SkiaSharp.SKCanvas.DrawLine(System.Single,System.Single,System.Single,System.Single,SkiaSharp.SKPaint)) método cujos argumentos indicam o início e final coordenadas da linha com um `SKPaint` objeto:
 
@@ -30,7 +30,7 @@ Para desenhar linhas únicas, `SKCanvas` define um simples [ `DrawLine` ](xref:S
 canvas.DrawLine (x0, y0, x1, y1, paint);
 ```
 
-Por padrão, o [ `StrokeWidth` ](xref:SkiaSharp.SKPaint.StrokeWidth) propriedade de instâncias recém-criadas `SKPaint` objeto é 0, que tem o mesmo efeito que um valor de 1 na renderização de uma linha de um pixel na espessura. Isso parece muito fino em alta resolução dispositivos como telefones, portanto, você provavelmente vai querer definir o `StrokeWidth` para um valor maior. Mas depois de começar a desenhar linhas de uma espessura ajustável, isso gera outro problema: Como deve ser renderizado o início e o término dessas linhas espessas?
+Por padrão, o [ `StrokeWidth` ](xref:SkiaSharp.SKPaint.StrokeWidth) propriedade de instâncias recém-criadas `SKPaint` objeto é 0, que tem o mesmo efeito que um valor de 1 na renderização de uma linha de um pixel na espessura. Isso parece muito fino em alta resolução dispositivos como telefones, portanto, você provavelmente vai querer definir o `StrokeWidth` para um valor maior. Mas depois de começar a desenhar linhas de uma espessura dimensionável, que gera outra questão: como deve o começa e termina dessas linhas espessa ser renderizada?
 
 A aparência do começa e termina de linhas é chamada de um *limite de linha* ou, em Skia, um *limite do traço*. A palavra "cap" neste contexto refere-se a um tipo de hat &mdash; algo que se encontra no final da linha. Você definir a [ `StrokeCap` ](xref:SkiaSharp.SKPaint.StrokeCap) propriedade do `SKPaint` objeto para um dos seguintes membros dos [ `SKStrokeCap` ](xref:SkiaSharp.SKStrokeCap) enumeração:
 
@@ -94,7 +94,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Para cada membro do `SKStrokeCap` enumeração, o manipulador desenha duas linhas, uma com uma espessura de traço de 50 pixels e outra linha posicionado na parte superior com uma espessura de traço de dois pixels. Essa segunda linha é destinada a ilustrar o Geométrico início e fim da linha independente de espessura da linha e um limite do traço:
 
-[![](lines-images/strokecaps-small.png "Tripla captura de tela da página traço Caps")](lines-images/strokecaps-large.png#lightbox "tripla captura de tela da página de Caps de traço")
+[![](lines-images/strokecaps-small.png "Triple screenshot of the Stroke Caps page")](lines-images/strokecaps-large.png#lightbox "Triple screenshot of the Stroke Caps page")
 
 Como você pode ver, o `Square` e `Round` caps traço efetivamente estendem o comprimento da linha em metade da largura de traço no início da linha e novamente no final. Essa extensão será importante quando é necessário determinar as dimensões de um objeto gráfico renderizado.
 
@@ -228,17 +228,17 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 As capturas de tela mostram uma variedade de `Picker` seleções:
 
-[![](lines-images/multiplelines-small.png "Captura de tela da página de várias linhas tripla")](lines-images/multiplelines-large.png#lightbox "tripla captura de tela da página de várias linhas")
+[![](lines-images/multiplelines-small.png "Triple screenshot of the Multiple Lines page")](lines-images/multiplelines-large.png#lightbox "Triple screenshot of the Multiple Lines page")
 
 IPhone no esquerdo mostra como o `SKPointMode.Points` faz com que o membro de enumeração `DrawPoints` para processar cada um dos pontos na `SKPoint` se o limite de linha é de matriz como um quadrado `Butt` ou `Square`. Círculos são renderizados, se o limite de linha é `Round`.
 
-Quando você usa em vez disso `SKPointMode.Lines`, conforme mostrado na tela de Android no centro, o `DrawPoints` método desenha uma linha entre cada par de `SKPoint` valores, usando o limite de linha especificado, neste caso `Round`.
+A captura de tela do Android mostra o resultado da `SKPointMode.Lines`. O método `DrawPoints` desenha uma linha entre cada par de valores de `SKPoint`, usando a Cap de linha especificada, nesse caso `Round`.
 
-A captura de tela UWP mostra o resultado do `SKPointMode.Polygon` valor. Uma linha é desenhada entre os pontos sucessivos na matriz, mas se você analisar de forma bastante aproximada, você verá que essas linhas não estão conectadas. Cada uma destas linhas separadas começa e termina com o limite de linha especificado. Se você selecionar o `Round` caps, as linhas podem aparecer para ser conectado, mas não realmente estão conectados.
+Quando você usa `SKPointMode.Polygon`, uma linha é desenhada entre os pontos sucessivos na matriz, mas se você olhar muito bem, verá que essas linhas não estão conectadas. Cada uma destas linhas separadas começa e termina com o limite de linha especificado. Se você selecionar o `Round` caps, as linhas podem aparecer para ser conectado, mas não realmente estão conectados.
 
 Se linhas são ou não conectadas é um aspecto essencial de como trabalhar com caminhos de elementos gráficos.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [APIs de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

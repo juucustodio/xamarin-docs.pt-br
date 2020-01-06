@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: d926e206e4bba04629163cfc3d63b51a5f2f840d
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 954273907fea1c57ca9d2aaac5ceb7d81115f553
+ms.sourcegitcommit: 57b98c3c818a77cae94749665878d155ad031ff9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73021880"
+ms.lasthandoff: 12/27/2019
+ms.locfileid: "75500339"
 ---
 # <a name="populating-a-table-with-data-in-xamarinios"></a>Populando uma tabela com dados no Xamarin. iOS
 
@@ -59,9 +59,10 @@ public class TableSource : UITableViewSource {
             UITableViewCell cell = tableView.DequeueReusableCell (CellIdentifier);
             string item = TableItems[indexPath.Row];
 
-            //---- if there are no cells to reuse, create a new one
-            if (cell == null)
-            { cell = new UITableViewCell (UITableViewCellStyle.Default, CellIdentifier); }
+            //if there are no cells to reuse, create a new one
+            if (cell == null){ 
+                cell = new UITableViewCell (UITableViewCellStyle.Default, CellIdentifier); 
+            }
 
             cell.TextLabel.Text = item;
 
@@ -288,6 +289,6 @@ public override string TitleForFooter (UITableView tableView, nint section)
 
 Você pode personalizar ainda mais a aparência do cabeçalho e do rodapé com um objeto View, usando as substituições de método `GetViewForHeader` e `GetViewForFooter` no `UITableViewSource`.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [WorkingWithTables (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/workingwithtables)

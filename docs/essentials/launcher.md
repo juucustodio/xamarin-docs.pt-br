@@ -5,14 +5,14 @@ ms.assetid: BABF40CC-8BEE-43FD-BE12-6301DF27DD33
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 08/20/2019
-ms.openlocfilehash: 3e49e12faac1fc93816d9a51646f639046c200c5
-ms.sourcegitcommit: ab51d32f4ea0e0d4701f0bf2f1465c9323cd070b
+ms.openlocfilehash: 88c1450d28b4c94fe8079b8915503cf5de118644
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70887363"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75488511"
 ---
-# <a name="xamarinessentials-launcher"></a>Xamarin.Essentials: Inicializador
+# <a name="xamarinessentials-launcher"></a>Xamarin.Essentials: Launcher
 
 A classe **Launcher** permite que um aplicativo abra um URI pelo sistema. Isso geralmente é utilizado quando a vinculação profunda é usada em esquemas de URI personalizados de outro aplicativo. Se quiser abrir o navegador em um site, confira a API do **[Browser](open-browser.md)** .
 
@@ -54,7 +54,31 @@ public class LauncherTest
 }
 ```
 
-## <a name="files"></a>Arquivos
+### <a name="additional-platform-setup"></a>Configuração de plataforma adicional
+
+# <a name="androidtabandroid"></a>[Android](#tab/android)
+
+Nenhuma configuração adicional.
+
+# <a name="iostabios"></a>[iOS](#tab/ios)
+
+No iOS 9 e superior, a Apple impõe o esquema que um aplicativo pode consultar. Para especificar quais esquemas você gostaria de usar, você deve especificar `LSApplicationQueriesSchemes` em seu arquivo de `Info.plist`.
+
+```
+<key>LSApplicationQueriesSchemes</key>
+<array>
+    <string>lyft</string>  
+    <string>fb</string>
+</array>
+```
+
+# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
+
+Nenhuma configuração adicional.
+
+-----
+
+## <a name="files"></a>Files
 
 Esse recurso permite que um aplicativo solicite que outros aplicativos abram e exibam um arquivo. O Xamarin.Essentials detectará automaticamente o tipo de arquivo (MIME) e solicitará que o arquivo seja aberto.
 

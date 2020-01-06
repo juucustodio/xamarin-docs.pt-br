@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: ef0bcba7a59984c6bad7091431fe00b1f1b7eee3
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: d9d47e750580bb9e4a0f4a2283cbd9e8c6a44c93
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73031799"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75489083"
 ---
 # <a name="additional-ios-9-frameworks-changes"></a>Alterações adicionais em estruturas do iOS 9
 
@@ -131,7 +131,7 @@ A Apple incluiu as seguintes alterações na estrutura de [autenticação local]
 - A capacidade de usar o _contexto de autenticação_ em chamadas de conjunto de chaves e suporte para avaliar listas de controle de acesso de conjunto de chaves.
 - A capacidade de cancelar um prompt de usuário do código.
 
-Consulte nossa [introdução à documentação do touch ID](~/ios/platform/touchid.md) para obter mais informações sobre como trabalhar com o Touch ID no Xamarin. Ios.
+Para obter mais informações, consulte [Touch ID e face ID com Xamarin. Ios](~/ios/platform/touch-id-face-id.md).
 
 ### <a name="lacontext-changes"></a>LAContext alterações
 
@@ -221,7 +221,7 @@ A nova classe `NSDataAsset` permite que um aplicativo Xamarin. iOS busque o cont
 
 As novas classes de âncora de layout `NSLayoutAnchor` e `NSLayoutDimension` funcionam com as novas propriedades de âncora da classe [UIView](xref:UIKit.UIView) (como `LeadingAnchor` e `WidthAnchor`) para facilitar o layout no Ios 9.
 
-Consulte nossa [introdução à documentação de storyboards unificadas](~/ios/user-interface/storyboards/unified-storyboards.md) para obter mais informações sobre como trabalhar com classes de tamanho e AutoLayout em um aplicativo Xamarin. Ios e [referência de NSLayoutAnchor](https://developer.apple.com/library/prerelease/ios/documentation/AppKit/Reference/NSLayoutAnchor_ClassReference/index.html#//apple_ref/occ/cl/NSLayoutAnchor)da Apple, [referência de NSLayoutDimension](https://developer.apple.com/library/prerelease/ios/documentation/AppKit/Reference/NSLayoutDimension_ClassReference/index.html#//apple_ref/occ/cl/NSLayoutDimension) e [ UIView referência](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIView_Class/index.html#//apple_ref/occ/cl/UIView) para obter mais informações.
+Consulte nossa [introdução à documentação de storyboards unificadas](~/ios/user-interface/storyboards/unified-storyboards.md) para obter mais informações sobre como trabalhar com classes de tamanho e AutoLayout em um aplicativo Xamarin. Ios e [referência de NSLayoutAnchor](https://developer.apple.com/library/prerelease/ios/documentation/AppKit/Reference/NSLayoutAnchor_ClassReference/index.html#//apple_ref/occ/cl/NSLayoutAnchor)da Apple, referência de [NSLayoutDimension](https://developer.apple.com/library/prerelease/ios/documentation/AppKit/Reference/NSLayoutDimension_ClassReference/index.html#//apple_ref/occ/cl/NSLayoutDimension) e [referência de UIView](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIView_Class/index.html#//apple_ref/occ/cl/UIView) para obter mais informações.
 
 ### <a name="new-readable-content-margins"></a>Novas margens de conteúdo legíveis
 
@@ -259,7 +259,7 @@ Para corrigir essa situação, use o layout automático e as classes de tamanho 
 
 Use a nova classe `UITextInputAssistantItem` para grupos de botão da barra de layout em uma _barra de atalhos_. A barra de atalhos é uma nova área que está disponível no teclado flexível para fornecer atalhos de digitação.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Amostras do iOS 9](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS9)
 - [Introdução ao iOS 9](~/ios/platform/introduction-to-ios9/index.md)

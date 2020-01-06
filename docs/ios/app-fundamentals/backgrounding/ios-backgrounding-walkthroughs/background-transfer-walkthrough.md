@@ -6,21 +6,19 @@ ms.assetid: 6960E025-3D5C-457A-B893-25B734F8626D
 ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
-ms.date: 03/18/2017
-ms.openlocfilehash: 6004598b215c85b70b057ff156c3a905a0879138
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.date: 01/02/2020
+ms.openlocfilehash: 90d5034f332b311ee83ac2654bcbbc2cde2b11c0
+ms.sourcegitcommit: 6f09bc2b760e76a61a854f55d6a87c4f421ac6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73010712"
+ms.lasthandoff: 01/02/2020
+ms.locfileid: "75607822"
 ---
 # <a name="background-transfer-and-nsurlsession-in-xamarinios"></a>Transferência em segundo plano e NSURLSession no Xamarin. iOS
 
 Uma transferência em segundo plano é iniciada Configurando uma `NSURLSession` em segundo plano e enfileirando tarefas de carregamento ou download. Se as tarefas forem concluídas enquanto o aplicativo estiver em segundo plano, suspenso ou encerrado, o iOS notificará o aplicativo chamando o manipulador de conclusão no *AppDelegate*do aplicativo. O diagrama a seguir demonstra isso em ação:
 
- [![](background-transfer-walkthrough-images/transfer.png "A background transfer is initiated by configuring a background NSURLSession and enqueuing upload or download tasks")](background-transfer-walkthrough-images/transfer.png#lightbox)
-
-Vejamos como isso se parece no código.
+ [![uma transferência em segundo plano é iniciada Configurando uma NSURLSession em segundo plano e enfileirando tarefas de carregamento ou download](background-transfer-walkthrough-images/transfer.png)](background-transfer-walkthrough-images/transfer.png#lightbox)
 
 ## <a name="configuring-a-background-session"></a>Configurando uma sessão de plano de fundo
 
@@ -38,7 +36,7 @@ public partial class SimpleBackgroundTransferViewController : UIViewController
   NSUrlSessionConfiguration configuration =
       NSUrlSessionConfiguration.CreateBackgroundSessionConfiguration ("com.SimpleBackgroundTransfer.BackgroundSession");
   session = NSUrlSession.FromConfiguration
-      (configuration, (NSUrlSessionDelegate) new MySessionDelegate(), new NSOperationQueue());
+      (configuration, new MySessionDelegate(), new NSOperationQueue());
 
 }
 ```
@@ -58,13 +56,13 @@ Um `NSUrlSessionDelegate` fornece os seguintes métodos básicos para verificar 
 
 As sessões em segundo plano exigem delegados mais especializados, dependendo dos tipos de tarefas em execução. As sessões em segundo plano são limitadas a dois tipos de tarefas:
 
-- *Tarefas de carregamento* – tarefas do tipo `NSUrlSessionUploadTask` usam o `NSUrlSessionTaskDelegate`, que herda de `NSUrlSessionDelegate`. Esse delegado fornece métodos adicionais para acompanhar o progresso do upload, manipular o redirecionamento de HTTP e muito mais.
-- *Tarefas de download* – tarefas do tipo `NSUrlSessionDownloadTask` usam o `NSUrlSessionDownloadDelegate`, que herda de `NSUrlSessionTaskDelegate`. Esse delegado fornece todos os métodos para carregar tarefas, bem como métodos específicos de download para acompanhar o progresso do download e determinar quando uma tarefa de download foi retomada ou concluída.
+- *Tarefas de carregamento* – tarefas do tipo `NSUrlSessionUploadTask` usam a interface `INSUrlSessionTaskDelegate`, que implementa `INSUrlSessionDelegate`. Isso fornece métodos adicionais para acompanhar o progresso do upload, manipular o redirecionamento de HTTP e muito mais.
+- *Tarefas de download* – tarefas do tipo `NSUrlSessionDownloadTask` usam a interface `INSUrlSessionDownloadDelegate`, que implementa `INSUrlSessionDelegate` e `INSUrlSessionTaskDelegate`. Isso fornece todos os métodos para carregar tarefas, bem como métodos específicos de download para acompanhar o progresso do download e determinar quando uma tarefa de download foi retomada ou concluída.
 
-O código a seguir define uma tarefa que pode ser usada para baixar uma imagem de uma URL. Começamos a tarefa chamando `CreateDownloadTask` em nossa sessão de segundo plano e passando a solicitação de URL:
+O código a seguir define uma tarefa que pode ser usada para baixar uma imagem de uma URL. A tarefa é iniciada chamando `CreateDownloadTask` na sessão de segundo plano e passando a solicitação de URL:
 
 ```csharp
-const string DownloadURLString = "http://cdn1.xamarin.com/webimages/images/xamarin.png";
+const string DownloadURLString = "http://xamarin.com/images/xamarin.png"; // or other hosted file
 public NSUrlSessionDownloadTask downloadTask;
 
 NSUrl downloadURL = NSUrl.FromString (DownloadURLString);
@@ -72,12 +70,12 @@ NSUrlRequest request = NSUrlRequest.FromUrl (downloadURL);
 downloadTask = session.CreateDownloadTask (request);
 ```
 
-Em seguida, criaremos um novo delegado de download de sessão para manter o controle de todas as tarefas de download nesta sessão:
+Em seguida, crie um novo delegado de download de sessão para manter o controle de todas as tarefas de download nesta sessão. A classe delegate deve herdar de `NSObject` e implementar a interface necessária:
 
 ```csharp
-public class MySessionDelegate : NSUrlSessionDownloadDelegate
+public class MySessionDelegate : NSObject, INSUrlSessionDownloadDelegate
 {
-  public override void DidWriteData (NSUrlSession session, NSUrlSessionDownloadTask downloadTask, long bytesWritten, long totalBytesWritten, long totalBytesExpectedToWrite)
+  public void DidWriteData (NSUrlSession session, NSUrlSessionDownloadTask downloadTask, long bytesWritten, long totalBytesWritten, long totalBytesExpectedToWrite)
   {
     Console.WriteLine (string.Format ("DownloadTask: {0}  progress: {1}", downloadTask, progress));
     InvokeOnMainThread( () => {
@@ -88,7 +86,7 @@ public class MySessionDelegate : NSUrlSessionDownloadDelegate
 }
 ```
 
-Se quisermos descobrir o progresso de uma tarefa de download, podemos substituir o método `DidWriteData` para acompanhar o progresso e até mesmo atualizar a interface do usuário. As atualizações da interface do usuário aparecerão imediatamente se o aplicativo estiver em primeiro plano ou estará aguardando o usuário na próxima vez que abrir o aplicativo.
+Para descobrir o progresso de uma tarefa de download, substitua o método `DidWriteData` para acompanhar o progresso e até mesmo atualizar a interface do usuário. As atualizações da interface do usuário aparecerão imediatamente se o aplicativo estiver em primeiro plano ou estará aguardando o usuário na próxima vez que abrir o aplicativo.
 
 A API de delegação de sessão fornece um amplo kit de ferramentas para interagir com tarefas. Para obter uma lista completa de métodos de delegação de sessão, consulte a documentação da API `NSUrlSessionDelegate`.
 
@@ -99,31 +97,31 @@ A API de delegação de sessão fornece um amplo kit de ferramentas para interag
 
 A etapa final é permitir que o aplicativo saiba quando todas as tarefas associadas à sessão foram concluídas e manipular o novo conteúdo.
 
-No *AppDelegate*, assine o evento `HandleEventsForBackgroundUrl`. Quando o aplicativo entra no plano de fundo e uma sessão de transferência está em execução, esse método é chamado e o sistema nos passa um manipulador de conclusão:
+Na `AppDelegate`, assine o evento `HandleEventsForBackgroundUrl`. Quando o aplicativo entra no plano de fundo e uma sessão de transferência está em execução, esse método é chamado e o sistema nos passa um manipulador de conclusão:
 
 ```csharp
 public System.Action backgroundSessionCompletionHandler;
 
-public override void HandleEventsForBackgroundUrl (UIApplication application, string sessionIdentifier, System.Action completionHandler)
+public void HandleEventsForBackgroundUrl (UIApplication application, string sessionIdentifier, System.Action completionHandler)
 {
   this.backgroundSessionCompletionHandler = completionHandler;
 }
 ```
 
-Usaremos o manipulador de conclusão para permitir que o iOS saiba quando o processamento de nosso aplicativo é concluído.
+Use o manipulador de conclusão para permitir que o iOS saiba quando o processamento de nosso aplicativo é concluído.
 
 Lembre-se de que uma sessão pode gerar várias tarefas para processar uma transferência. Quando a última tarefa for concluída, um aplicativo suspenso ou encerrado será iniciado novamente em segundo plano. Em seguida, o aplicativo se conecta novamente ao `NSURLSession` usando o identificador de sessão exclusivo e chama `DidFinishEventsForBackgroundSession` no delegado da sessão. Esse método é a oportunidade do aplicativo para lidar com o novo conteúdo, incluindo a atualização da interface do usuário para refletir os resultados da transferência:
 
 ```csharp
-public override void DidFinishEventsForBackgroundSession (NSUrlSession session) {
+public void DidFinishEventsForBackgroundSession (NSUrlSession session) {
   // Handle new information, update UI, etc.
 }
 ```
 
-Quando terminarmos de lidar com o novo conteúdo, chamamos o manipulador de conclusão para permitir que o sistema saiba que é seguro tirar um instantâneo do aplicativo e voltar para o modo de suspensão:
+Depois de concluir o tratamento de novo conteúdo, chame o manipulador de conclusão para permitir que o sistema saiba que é seguro tirar um instantâneo do aplicativo e voltar para o modo de suspensão:
 
 ```csharp
-public override void DidFinishEventsForBackgroundSession (NSUrlSession session) {
+public void DidFinishEventsForBackgroundSession (NSUrlSession session) {
   var appDelegate = UIApplication.SharedApplication.Delegate as AppDelegate;
 
   // Handle new information, update UI, etc.
@@ -137,7 +135,7 @@ public override void DidFinishEventsForBackgroundSession (NSUrlSession session) 
 }
 ```
 
-Neste tutorial, abordamos as etapas básicas para implementar o serviço de transferência em segundo plano no iOS 7.
+Este tutorial abordou as etapas básicas para implementar o serviço de transferência em segundo plano no iOS 7 e mais recente.
 
 ## <a name="related-links"></a>Links relacionados
 

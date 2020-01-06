@@ -6,12 +6,12 @@ ms.assetid: 1B9A69EF-C200-41BF-B098-D978D7F9CD8F
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 06/07/2019
-ms.openlocfilehash: a4d0f5c5ceefcfe9a36a5fcf10c6fb4937c1db90
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: e95dd72513562bba9fb513c4742e476bc7be0c94
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "68739218"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75487394"
 ---
 # <a name="azure-signalr-service-with-xamarinforms"></a>Serviço do Azure Signalr com Xamarin. Forms
 
@@ -20,6 +20,9 @@ ms.locfileid: "68739218"
 ASP.NET Core Signalr é um modelo de aplicativo que simplifica o processo de adicionar comunicação em tempo real aos aplicativos. O serviço de Signaler do Azure permite o desenvolvimento e a implantação rápidos de aplicativos Signaler escalonáveis. Azure Functions são métodos de código sem servidor de curta duração que podem ser combinados para formar aplicativos escalonáveis e orientados a eventos.
 
 Este artigo e um exemplo mostram como combinar o serviço de sinalização do Azure e Azure Functions com o Xamarin. Forms, para fornecer mensagens em tempo real a clientes conectados.
+
+> [!NOTE]
+> Se você não tiver uma [assinatura do Azure](/azure/guides/developer/azure-developer-guide#understanding-accounts-subscriptions-and-billing), crie uma [conta gratuita](https://aka.ms/azfree-docs-mobileapps) antes de começar.
 
 ## <a name="create-an-azure-signalr-service-and-azure-functions-app"></a>Criar um serviço de Signaler do Azure e Azure Functions aplicativo
 
@@ -31,7 +34,7 @@ O aplicativo de exemplo consiste em três componentes principais: um hub de serv
 1. A função **Talk** passa a mensagem de entrada para o Hub signalr.
 1. O Hub Signalr transmite a mensagem para todas as instâncias de aplicativo móvel conectadas, incluindo o remetente original.
 
-> [!NOTE]
+> [!IMPORTANT]
 > As funções **Negotiate** e **Talk** no aplicativo de exemplo podem ser executadas localmente usando o Visual Studio 2019 e as ferramentas de tempo de execução do Azure. No entanto, o serviço de sinalizador do Azure não pode ser emulado localmente e é difícil expor Azure Functions hospedado localmente para dispositivos físicos ou virtuais para teste. É recomendável que você implante o Azure Functions em uma instância de aplicativo Azure Functions, pois isso permite o teste entre plataformas. Para obter detalhes de implantação, consulte [implantar Azure Functions com o Visual Studio 2019](#deploy-azure-functions-with-visual-studio-2019).
 
 ### <a name="create-an-azure-signalr-service"></a>Criar um serviço de Signaler do Azure
@@ -52,7 +55,7 @@ Essa cadeia de conexão é usada para [implantar Azure Functions com o Visual St
 
 Para testar o aplicativo de exemplo, você deve criar um novo aplicativo Azure Functions no portal do Azure. Anote o **nome do aplicativo** , pois essa URL é usada no arquivo de exemplo do aplicativo **Constants.cs** . A captura de tela a seguir mostra a criação de um novo aplicativo Azure Functions chamado "xdocsfunctions":
 
-[![Screenshot da criação do aplicativo Azure Functions](azure-signalr-images/azure-functions-app-cropped.png)](azure-signalr-images/azure-functions-app-full.png#lightbox)
+[Captura de tela de ![da criação do aplicativo Azure Functions](azure-signalr-images/azure-functions-app-cropped.png)](azure-signalr-images/azure-functions-app-full.png#lightbox)
 
 O Azure Functions pode ser implantado em uma instância de aplicativo Azure Functions do Visual Studio 2019. As seções a seguir descrevem a implantação de duas funções no aplicativo de exemplo para uma instância de aplicativo Azure Functions.
 

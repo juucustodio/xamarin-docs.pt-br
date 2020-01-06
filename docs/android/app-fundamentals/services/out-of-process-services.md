@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: fda5ed3b2a26166e23d4a796219758853d0aace7
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: f546a1403aa0af07fc69187c4cfbec8982ed7a2a
+ms.sourcegitcommit: 5821c9709bf5e06e6126233932f94f9cf3524577
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73024543"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75556503"
 ---
 # <a name="running-android-services-in-remote-processes"></a>Executando serviços Android em processos remotos
 
@@ -58,7 +58,7 @@ Este guia abordará os detalhes da implementação de um serviço fora do proces
 > [!IMPORTANT]
 > [Bugzilla 51940/GitHub 1950-os serviços com processos isolados e a classe de aplicativo personalizada falham ao resolver sobrecargas corretamente](https://github.com/xamarin/xamarin-android/issues/1950) relata que um serviço Xamarin. Android não será iniciado corretamente quando o `IsolatedProcess` for definido como `true`. Este guia é fornecido para uma referência. Um aplicativo Xamarin. Android ainda deve ser capaz de se comunicar com um serviço fora do processo escrito em Java.
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>Requisitos do
 
 Este guia pressupõe familiaridade com a criação de serviços.
 
@@ -129,7 +129,7 @@ Depois que o `ServiceAttribute` tiver sido definido, o serviço precisará imple
 
 ### <a name="implementing-a-handler"></a>Implementando um manipulador
 
-Para processar solicitações de cliente, o serviço deve implementar um `Handler` e substituir o `HandleMessage` methodThis é o método usa uma instância de `Message` que encapsula a chamada de método do cliente e converte essa chamada em alguma ação ou tarefa que o serviço irá executar. O objeto `Message` expõe uma propriedade chamada `What` que é um valor inteiro, o significado do qual é compartilhado entre o cliente e o serviço e está relacionado a alguma tarefa que o serviço deve executar para o cliente.
+Para processar solicitações de cliente, o serviço deve implementar um `Handler` e substituir o método `HandleMessage`. Esse é o método que usa uma instância `Message`, que encapsula a chamada de método do cliente e converte essa chamada em alguma ação ou tarefa que o serviço executará. O objeto `Message` expõe uma propriedade chamada `What` que é um valor inteiro, o significado do qual é compartilhado entre o cliente e o serviço e está relacionado a alguma tarefa que o serviço deve executar para o cliente.
 
 O trecho de código a seguir do aplicativo de exemplo mostra um exemplo de `HandleMessage`. Neste exemplo, há duas ações que um cliente pode solicitar do serviço:
 
@@ -149,7 +149,7 @@ public class TimestampRequestHandler : Android.OS.Handler
         switch (messageType)
         {
             case Constants.SAY_HELLO_TO_TIMESTAMP_SERVICE:
-                // The client as sent a simple Hello, say in the Android Log.
+                // The client has sent a simple Hello, say in the Android Log.
                 break;
 
             case Constants.GET_UTC_TIMESTAMP:
@@ -164,7 +164,7 @@ public class TimestampRequestHandler : Android.OS.Handler
 }
 ```
 
-Também é possível empacotar parâmetros para o serviço no `Message`. Isso será discutido posteriormente neste guia. O próximo tópico a ser considerado é a criação do objeto de `Messenger` para processar o `Message`s de entrada.
+Também é possível empacotar parâmetros para o serviço no `Message`. Isso será discutido posteriormente neste guia. O próximo tópico a ser considerado é a criação do objeto de `Messenger` para processar as `Message`s de entrada.
 
 ### <a name="instantiating-the-messenger"></a>Instanciando o Messenger
 
@@ -219,7 +219,7 @@ serviceToStart.SetComponent(cn);
 
 Quando o serviço é associado, o método `IServiceConnection.OnServiceConnected` é invocado e fornece um `IBinder` a um cliente. No entanto, o cliente não usará diretamente o `IBinder`. Em vez disso, ele criará uma instância de um objeto `Messenger` a partir desse `IBinder`. Esse é o `Messenger` que o cliente usará para interagir com o serviço remoto.
 
-Veja a seguir um exemplo de uma implementação de `IServiceConnection` muito básica que demonstra como um cliente trataria de se conectar e desconectar de um serviço. Observe que o método `OnServiceConnected` recebe e `IBinder` e o cliente cria uma `Messenger` do `IBinder`:
+Veja a seguir um exemplo de uma implementação de `IServiceConnection` muito básica que demonstra como um cliente trataria de se conectar e desconectar de um serviço. Observe que o método `OnServiceConnected` recebe e `IBinder`e o cliente cria uma `Messenger` do `IBinder`:
 
 ```csharp
 public class TimestampServiceConnection : Java.Lang.Object, IServiceConnection
@@ -242,7 +242,7 @@ public class TimestampServiceConnection : Java.Lang.Object, IServiceConnection
     {
         Log.Debug(TAG, $"OnServiceConnected {name.ClassName}");
 
-        IsConnected = service != null
+        IsConnected = service != null;
         Messenger = new Messenger(service);
 
         if (IsConnected)
@@ -270,8 +270,8 @@ public class TimestampServiceConnection : Java.Lang.Object, IServiceConnection
 Depois que a conexão de serviço e a intenção são criadas, é possível que o cliente chame `BindService` e inicie o processo de associação:
 
 ```csharp
-IServiceConnection serviceConnection = new TimestampServiceConnection(this);
-BindActivity(serviceToStart, serviceConnection, Bind.AutoCreate);
+var serviceConnection = new TimestampServiceConnection(this);
+BindService(serviceToStart, serviceConnection, Bind.AutoCreate);
 ```
 
 Depois que o cliente é vinculado com êxito ao serviço e o `Messenger` está disponível, é possível que o cliente envie `Messages` ao serviço.
@@ -300,7 +300,7 @@ A classe `Message` também expõe duas propriedades adicionais que podem ser usa
 
 ### <a name="passing-additional-values-to-the-service"></a>Passando valores adicionais para o serviço
 
-É possível passar dados mais complexos para o serviço usando um `Bundle`. Nesse caso, valores extras podem ser colocados em um `Bundle` e enviados junto com o `Message` definindo a propriedade de [propriedade `.Data`](xref:Android.OS.Message.Data) antes de enviar.
+É possível passar dados mais complexos para o serviço usando um `Bundle`. Nesse caso, valores extras podem ser colocados em um `Bundle` e enviados junto com o `Message` definindo a propriedade de [propriedade`.Data`](xref:Android.OS.Message.Data) antes de enviar.
 
 ```csharp
 Bundle serviceParameters = new Bundle();
@@ -317,7 +317,7 @@ messenger.Send(msg);
 
 ## <a name="returning-values-from-the-service"></a>Retornando valores do serviço
 
-A arquitetura de mensagens que foi discutida para esse ponto é unidirecional, o cliente envia uma mensagem para o serviço. Se for necessário que o serviço retorne um valor para um cliente, tudo o que foi discutido para esse ponto será invertido. O serviço deve criar um `Message`, empacotado quaisquer valores de retorno e enviar o `Message` por meio de um `Messenger` ao cliente. No entanto, o serviço não cria seu próprio `Messenger`; em vez disso, ele se baseia no cliente instanciando e empacotando um `Messenger` como parte da solicitação inicial. O serviço `Send`á a mensagem usando este `Messenger` fornecido pelo cliente.  
+A arquitetura de mensagens que foi discutida para esse ponto é unidirecional, o cliente envia uma mensagem para o serviço. Se for necessário que o serviço retorne um valor para um cliente, tudo o que foi discutido para esse ponto será invertido. O serviço deve criar um `Message`, empacotado quaisquer valores de retorno e enviar o `Message` por meio de um `Messenger` ao cliente. No entanto, o serviço não cria seu próprio `Messenger`; em vez disso, ele se baseia no cliente instanciando e empacotando um `Messenger` como parte da solicitação inicial. O serviço `Send`á a mensagem usando este `Messenger`fornecido pelo cliente.  
 
 A sequência de eventos para comunicação bidirecional é esta:
 
@@ -414,7 +414,7 @@ Um exemplo simplificado de criação de uma permissão de `normal` personalizada
 
 Para usar uma permissão personalizada, ela é declarada pelo serviço enquanto o cliente solicita essa permissão explicitamente.
 
-Para criar uma permissão no serviço APK, um elemento `permission` é adicionado ao elemento `manifest` em **AndroidManifest. xml**. Essa permissão deve ter os atributos `name`, `protectionLevel` e `label` definidos. O atributo `name` deve ser definido como uma cadeia de caracteres que identifica exclusivamente a permissão. O nome será exibido na exibição **informações do aplicativo** das configurações do **Android** (conforme mostrado na próxima seção).
+Para criar uma permissão no serviço APK, um elemento `permission` é adicionado ao elemento `manifest` em **AndroidManifest. xml**. Essa permissão deve ter os atributos `name`, `protectionLevel`e `label` definidos. O atributo `name` deve ser definido como uma cadeia de caracteres que identifica exclusivamente a permissão. O nome será exibido na exibição **informações do aplicativo** das configurações do **Android** (conforme mostrado na próxima seção).
 
 O atributo `protectionLevel` deve ser definido como um dos quatro valores de cadeia de caracteres descritos acima.  O `label` e `description` devem se referir a recursos de cadeia de caracteres e são usados para fornecer um nome amigável e uma descrição para o usuário.
 
@@ -475,15 +475,15 @@ Para exibir as permissões que um aplicativo recebeu, abra o aplicativo Configur
 
 Este guia foi uma discussão avançada sobre como executar um serviço Android em um processo remoto. As diferenças entre um serviço local e um remoto foram explicadas, juntamente com alguns motivos pelos quais um serviço remoto pode ser útil para a estabilidade e o desempenho de um aplicativo Android. Depois de explicar como implementar um serviço remoto e como um cliente pode se comunicar com o serviço, o guia passou a fornecer uma maneira de limitar o acesso ao serviço somente de clientes autorizados.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Cliques](xref:Android.OS.Handler)
 - [Message](xref:Android.OS.Message)
-- [Mensageiro](xref:Android.OS.Messenger)
+- [Messenger](xref:Android.OS.Messenger)
 - [ServiceAttribute](xref:Android.App.ServiceAttribute)
 - [O atributo exportado](https://developer.android.com/guide/topics/manifest/service-element.html#exported)
 - [Serviços com processos isolados e classe de aplicativo personalizada falham ao resolver sobrecargas corretamente](https://bugzilla.xamarin.com/show_bug.cgi?id=51940)
 - [Processos e threads](https://developer.android.com/guide/components/processes-and-threads.html)
 - [Manifesto do Android-permissões](https://developer.android.com/guide/topics/manifest/manifest-intro.html#perms)
 - [Dicas de segurança](https://developer.android.com/training/articles/security-tips.html)
-- [MessengerServiceDemo (exemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/applicationfundamentals-servicesamples-messengerservicedemo)
+- [MessengerServiceDemo (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/applicationfundamentals-servicesamples-messengerservicedemo)

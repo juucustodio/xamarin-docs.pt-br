@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/15/2018
-ms.openlocfilehash: 62560d97a2e85a6045e419f0c0602a375f5a2a75
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: da00eef7c08f7025239d15e60e6ec42416a36089
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73027879"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75487835"
 ---
 # <a name="garbage-collection"></a>Coleta de Lixo
 
@@ -108,13 +108,15 @@ A única maneira de descobrir qual ponte do GC funciona melhor é experimentando
 
 - **Habilitar ponte** de contabilidade – a contabilidade de ponte exibirá o custo médio dos objetos apontados por cada objeto envolvido no processo de ponte. A classificação dessas informações por tamanho fornecerá dicas sobre o que está mantendo a maior quantidade de objetos extras. 
 
-Para especificar qual opção de `GC_BRIDGE` um aplicativo deve nós, passe `bridge-implementation=old`, `bridge-implementation=new` ou `bridge-implementation=tarjan` para a variável de ambiente `MONO_GC_PARAMS`, por exemplo: 
+A configuração padrão é **Tarjan**. Se você encontrar uma regressão, poderá ser necessário definir essa opção como **antiga**. Além disso, você pode optar por usar a opção **antiga** mais estável se o **Tarjan** não produzir uma melhoria no desempenho.
+
+Para especificar qual opção de `GC_BRIDGE` um aplicativo deve usar, passe `bridge-implementation=old`, `bridge-implementation=new` ou `bridge-implementation=tarjan` para a variável de ambiente `MONO_GC_PARAMS`. Isso é feito adicionando um novo arquivo ao seu projeto com uma **ação de compilação** de `AndroidEnvironment`. Por exemplo: 
 
 ```shell
 MONO_GC_PARAMS=bridge-implementation=tarjan
 ```
 
-A configuração padrão é **Tarjan**. Se você encontrar uma regressão, poderá ser necessário definir essa opção como **antiga**. Além disso, você pode optar por usar a opção **antiga** mais estável se o **Tarjan** não produzir uma melhoria no desempenho. 
+Para obter mais informações, consulte [Configuração](#configuration).
 
 <a name="Helping_the_GC" />
 
@@ -127,7 +129,7 @@ Há várias maneiras de ajudar o GC a reduzir o uso de memória e os tempos de c
 O GC tem uma exibição incompleta do processo e pode não ser executado quando a memória está baixa porque o GC não sabe que a memória está baixa. 
 
 Por exemplo, uma instância de um tipo [Java. lang. Object](xref:Java.Lang.Object) ou tipo derivado tem pelo menos 20 bytes de tamanho (sujeito a alterações sem aviso prévio, etc.). 
-[Wrappers callable gerenciados](~/android/internals/architecture.md) não adicionam membros de instância adicionais, portanto, quando você tem uma instância de [Android. Graphics. bitmap](xref:Android.Graphics.Bitmap) que se refere a um blob de 10 MB de memória, o GC do Xamarin. Android não saberá que &ndash; GC verá um objeto de 20 bytes e irá Não é possível determinar se está vinculado aos objetos alocados no tempo de execução do Android que estão mantendo 10MB de memória ativa. 
+[Wrappers callable gerenciados](~/android/internals/architecture.md) não adicionam membros de instância adicionais, portanto, quando você tem uma instância de [Android. Graphics. bitmap](xref:Android.Graphics.Bitmap) que se refere a um blob de 10 MB de memória, o GC do Xamarin. Android não saberá que &ndash; GC verá um objeto de 20 bytes e não poderá determinar se está vinculado a objetos alocados para tempo de execução do 
 
 É frequentemente necessário para ajudar o GC. Infelizmente, *GC. AddMemoryPressure ()* e *GC.* Não há suporte para RemoveMemoryPressure (), portanto, se você *souber* que acabou de liberar um grafo de objeto grande alocado para Java, talvez seja necessário chamar manualmente o [GC. Collect ()](xref:System.GC.Collect) para solicitar um GC para liberar a memória do lado do Java, ou você pode descartar explicitamente as subclasses *Java. lang. Object* , interrompendo o mapeamento entre o wrapper callable gerenciado e a instância Java. Por exemplo, consulte [Bug 1084](https://bugzilla.xamarin.com/show_bug.cgi?id=1084#c6). 
 
@@ -185,7 +187,7 @@ Parameter name: jobject
 at Android.Runtime.JNIEnv.CallVoidMethod
 ```
 
-Essa situação geralmente ocorre quando a primeira descartar um objeto faz com que um membro se torne nulo e, em seguida, uma tentativa de acesso subsequente nesse membro NULL faz com que uma exceção seja gerada. Especificamente, o `Handle` do objeto (que vincula uma instância gerenciada à sua instância de Java subjacente) é invalidado na primeira descartar, mas o código gerenciado ainda tenta acessar essa instância Java subjacente, embora não esteja mais disponível (consulte [ Wrappers chamáveis gerenciados](~/android/internals/architecture.md#Managed_Callable_Wrappers) para obter mais informações sobre o mapeamento entre instâncias de Java e instâncias gerenciadas). 
+Essa situação geralmente ocorre quando a primeira descartar um objeto faz com que um membro se torne nulo e, em seguida, uma tentativa de acesso subsequente nesse membro NULL faz com que uma exceção seja gerada. Especificamente, a `Handle` do objeto (que vincula uma instância gerenciada à sua instância de Java subjacente) é invalidada na primeira Dispose, mas o código gerenciado ainda tenta acessar essa instância Java subjacente, embora não esteja mais disponível (consulte [wrappers callable gerenciados](~/android/internals/architecture.md#Managed_Callable_Wrappers) para obter mais informações sobre o mapeamento entre instâncias de Java e instâncias gerenciadas). 
 
 Uma boa maneira de evitar essa exceção é verificar explicitamente em seu método `Dispose` que o mapeamento entre a instância gerenciada e a instância Java subjacente ainda é válido; ou seja, verifique se o `Handle` do objeto é nulo (`IntPtr.Zero`) antes de acessar seus membros. Por exemplo, o seguinte método de `Dispose` acessa um objeto `childViews`: 
 
@@ -321,7 +323,7 @@ As principais coleções só devem ser invocadas manualmente, se já:
 
 Para controlar quando as referências globais são criadas e destruídas, você pode definir a propriedade do sistema [debug. mono. log](~/android/troubleshooting/index.md) para conter [*gref*](~/android/troubleshooting/index.md) e/ou [*GC*](~/android/troubleshooting/index.md). 
 
-## <a name="configuration"></a>Configuração
+## <a name="configuration"></a>Configuração do
 
 O coletor de lixo do Xamarin. Android pode ser configurado definindo a variável de ambiente `MONO_GC_PARAMS`. As variáveis de ambiente podem ser definidas com uma ação de compilação de [AndroidEnvironment](~/android/deploy-test/environment.md).
 

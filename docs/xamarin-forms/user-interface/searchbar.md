@@ -6,13 +6,13 @@ ms.assetId: F5EFEA72-CB23-4DD6-9545-D9BB755AF3CB
 ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
-ms.date: 07/12/2019
-ms.openlocfilehash: 4deeab1b2792675033372ccfe2bf343c08794955
-ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
+ms.date: 11/04/2019
+ms.openlocfilehash: 8888f1615f250a908930cec9058a54bd6e7fedc2
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72696426"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75490071"
 ---
 # <a name="xamarinforms-searchbar"></a>SearchBar Xamarin. Forms
 
@@ -85,6 +85,9 @@ SearchBar searchBar = new SearchBar
 A captura de tela a seguir mostra o controle de `SearchBar` resultante:
 
 [![Captura de tela de SearchBar personalizado no iOS e no Android](searchbar-images/device-searchbars-styled-cropped.png "SearchBar personalizado no iOS e no Android")](searchbar-images/device-searchbars-styled.png#lightbox "SearchBar personalizado no iOS e no Android")
+
+> [!NOTE]
+> No iOS, a classe `SearchBarRenderer` contém um método de `UpdateCancelButton` substituível. Esse método controla quando o botão Cancelar é exibido e pode ser substituído em um renderizador personalizado. Para obter mais informações sobre renderizadores personalizados, consulte [renderizadores personalizados do Xamarin. Forms](~/xamarin-forms/app-fundamentals/custom-renderer/index.md).
 
 ## <a name="perform-a-search-with-event-handlers"></a>Executar uma pesquisa com manipuladores de eventos
 

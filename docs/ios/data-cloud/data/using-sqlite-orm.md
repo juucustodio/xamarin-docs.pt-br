@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 04/18/2018
-ms.openlocfilehash: e229ad37e8cd5ff940fb5abece7b782b84336d50
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: fb0981fea906a474d39834a52f0a8bfdf496ca1e
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73008164"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75488407"
 ---
 # <a name="using-sqlitenet-with-xamarinios"></a>Usando o SQLite.NET com Xamarin. iOS
 
@@ -21,14 +21,14 @@ ORM significa mapeamento relacional de objeto – uma API que permite salvar e r
 
 <a name="Usage"/>
 
-## <a name="usage"></a>Uso
+## <a name="usage"></a>Medição de
 
 Para incluir a biblioteca SQLite.NET em um aplicativo Xamarin, adicione o seguinte pacote NuGet ao seu projeto:
 
 - **Nome do pacote:** SQLite-net-PCL
 - **Autor:** Frank A. Krueger
 - **Id:** sqlite-net-pcl
-- **URL:** [NuGet.org/packages/SQLite-net-PCL](https://www.nuget.org/packages/sqlite-net-pcl/)
+- **Url:** [nuget.org/packages/sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)
 
 [![Pacote NuGet do SQLite.NET](using-sqlite-orm-images/image1a-sml.png "Pacote NuGet do SQLite.NET")](using-sqlite-orm-images/image1a.png#lightbox)
 
@@ -130,13 +130,13 @@ Os atributos comuns que você pode aplicar às suas classes para controlar como 
 
 - **[PrimaryKey]** – esse atributo pode ser aplicado a uma propriedade Integer para forçá-lo a ser a chave primária da tabela subjacente. Não há suporte para chaves primárias compostas.
 - **[AutoIncrement]** – este atributo fará com que o valor de uma propriedade de inteiro seja incrementado automaticamente para cada novo objeto inserido no banco de dados
-- **[Column (Name)]** – o fornecimento do parâmetro opcional `name` substituirá o valor padrão do nome da coluna de banco de dados subjacente (que é o mesmo que a propriedade).
-- **[Table (Name)]** – marca a classe como sendo capaz de ser armazenada em uma tabela SQLite subjacente. A especificação do parâmetro de nome opcional substituirá o valor padrão do nome da tabela de banco de dados subjacente (que é o mesmo que o nome da classe).
+- **[Column (Name)]** &ndash; parâmetro `name` define o nome da coluna de banco de dados subjacente.
+- **[Table (Name)]** – marca a classe como sendo capaz de ser armazenada em uma tabela SQLite subjacente com o nome especificado.
 - **[MaxLength (value)]** – restringir o comprimento de uma propriedade de texto quando uma tentativa de inserção de banco de dados for tentada. O consumo de código deve validar isso antes de inserir o objeto, pois esse atributo só é "verificado" quando uma operação de inserção ou atualização de banco de dados é tentada.
 - **[Ignorar]** – faz com que o SQLite.net ignore essa propriedade. Isso é particularmente útil para propriedades que têm um tipo que não pode ser armazenado no banco de dados ou propriedades que modelam coleções que não podem ser resolvidas automaticamente são SQLite.
 - **[Unique]** – garante que os valores na coluna banco de dados subjacente sejam exclusivos.
 
-A maioria desses atributos são opcionais, o SQLite usará valores padrão para nomes de tabela e coluna. Você sempre deve especificar uma chave primária de inteiro para que as consultas seleção e exclusão possam ser executadas com eficiência em seus dados.
+A maioria desses atributos é opcional. Você sempre deve especificar uma chave primária de inteiro para que as consultas seleção e exclusão possam ser executadas com eficiência em seus dados.
 
 ## <a name="more-complex-queries"></a>Consultas mais complexas
 
@@ -204,7 +204,7 @@ using Mono.Data.Sqlite;
 SqliteConnection.SetConfig(SQLiteConfig.Serialized);
 ```
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [DataAccess básico (exemplo)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Basic)
 - [DataAccess avançado (exemplo)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Advanced)

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/27/2019
-ms.openlocfilehash: c57281f3fa526bb238f4a0dd6a4fad70376c742e
-ms.sourcegitcommit: b4c9eb94ae2b9eae852a24d126b39ac64a6d0ffb
+ms.openlocfilehash: 4427d347723284a2f8897612f10857270c9631bf
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2019
-ms.locfileid: "74681334"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75487159"
 ---
 # <a name="improve-xamarinforms-app-performance"></a>Melhorar o Desempenho do Aplicativo Xamarin.Forms
 
@@ -172,7 +172,7 @@ A capacidade de resposta geral do seu aplicativo pode ser aprimorada e os gargal
 - Evite tentar criar construtores assíncronos. Em vez disso, use eventos de ciclo de vida ou lógica de inicialização separada para `await` corretamente qualquer inicialização. Para obter mais informações, consulte [construtores assíncronos](https://blog.stephencleary.com/2013/01/async-oop-2-constructors.html) em blog.stephencleary.com.
 - Use o padrão de tarefa lenta para evitar esperar que operações assíncronas sejam concluídas durante a inicialização do aplicativo. Para obter mais informações, consulte [AsyncLazy](https://devblogs.microsoft.com/pfxteam/asynclazyt/).
 - Crie um wrapper de tarefa para operações assíncronas existentes, que não usam o TAP, criando `TaskCompletionSource<T>` objetos. Esses objetos têm os benefícios da programação de `Task` e permitem que você controle o tempo de vida e a conclusão do `Task`associado. Para obter mais informações, consulte [a natureza de TaskCompletionSource](https://devblogs.microsoft.com/pfxteam/the-nature-of-taskcompletionsourcetresult/).
-Asynchronous-MVVM-Applications-Commands).
+ 
 - Retornar um objeto `Task`, em vez de retornar um objeto de `Task` aguardado, quando não houver necessidade de processar o resultado de uma operação assíncrona. Isso é mais eficaz devido à execução de menos alternância de contexto.
 - Use a biblioteca de Dataflow da TPL (biblioteca paralela de tarefas) em cenários como processamento de dados conforme ele se tornar disponível ou quando você tiver várias operações que devem se comunicar entre si de forma assíncrona. Para obter mais informações, consulte fluxo de dados [(biblioteca paralela de tarefas)](/dotnet/standard/parallel-programming/dataflow-task-parallel-library).
 
@@ -182,7 +182,7 @@ Asynchronous-MVVM-Applications-Commands).
 - Atualize os elementos da interface do usuário com dados de operações assíncronas no thread da interface do usuário, para evitar que exceções sejam geradas. No entanto, as atualizações para a propriedade `ListView.ItemsSource` serão automaticamente empacotadas para o thread da interface do usuário. Para obter informações sobre como determinar se o código está em execução no thread da interface do usuário, consulte [Xamarin. Essentials: MainThread](~/essentials/main-thread.md?content=xamarin/xamarin-forms).
 
     > [!IMPORTANT]
-    > Todas as propriedades de controle que são atualizadas por meio da ligação de dados serão automaticamente marsheled para o thread de interface do usuário.
+    > Todas as propriedades de controle que são atualizadas por meio da ligação de dados serão automaticamente empacotadas para o thread da interface do usuário.
 
 ### <a name="error-handling"></a>Manipulação de erros
 
@@ -336,8 +336,8 @@ Para obter mais informações sobre renderizadores personalizados, consulte [Com
 - [Desempenho de plataforma cruzada](~/cross-platform/deploy-test/memory-perf-best-practices.md)
 - [Compilando XAML](~/xamarin-forms/xaml/xamlc.md)
 - [Associações compiladas](~/xamarin-forms/app-fundamentals/data-binding/compiled-bindings.md)
-- [Renderizadores Rápidos](~/xamarin-forms/internals/fast-renderers.md)
-- [Compactação de Layout](~/xamarin-forms/user-interface/layouts/layout-compression.md)
+- [Renderizadores rápidos](~/xamarin-forms/internals/fast-renderers.md)
+- [Compactação de layout](~/xamarin-forms/user-interface/layouts/layout-compression.md)
 - [Shell do Xamarin.Forms](~/xamarin-forms/app-fundamentals/shell/index.md)
 - [CollectionView de Xamarin.Forms](~/xamarin-forms/user-interface/collectionview/index.md)
 - [Desempenho de ListView](~/xamarin-forms/user-interface/listview/performance.md)

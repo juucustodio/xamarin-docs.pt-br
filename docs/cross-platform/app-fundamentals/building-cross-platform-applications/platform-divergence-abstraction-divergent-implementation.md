@@ -6,12 +6,12 @@ ms.assetid: BBE47BA8-78BC-6A2B-63BA-D1A45CB1D3A5
 author: davidortinau
 ms.author: daortin
 ms.date: 03/23/2017
-ms.openlocfilehash: 555723e689a9ba076ee34d49b93cf7141e542832
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: e1fa76faf0313a21061af585052a3b137243db55
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73016884"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75488641"
 ---
 # <a name="part-4---dealing-with-multiple-platforms"></a>Parte 4 – Lidar com várias plataformas
 
@@ -87,7 +87,7 @@ A implementação pode conter código específico da plataforma e até mesmo ref
 
 Ter que criar e passar implementações no código compartilhado. Se a interface for usada em profundidade no código compartilhado, ela acabará sendo passada por meio de vários parâmetros de método ou, de outra forma, por Push por meio da cadeia de chamadas. Se o código compartilhado usar muitas interfaces diferentes, todos eles deverão ser criados e definidos no código compartilhado em algum lugar.
 
-#### <a name="inheritance"></a>Herança
+#### <a name="inheritance"></a>{1&gt;Herança&lt;1}
 
 O código compartilhado pode implementar classes abstratas ou virtuais que poderiam ser estendidas em um ou mais projetos específicos da plataforma. Isso é semelhante ao uso de interfaces, mas com algum comportamento já implementado. Há diferentes pontos de vista sobre se as interfaces ou herança são uma opção de design melhor: C# em particular porque só permite a herança única que pode determinar a maneira como suas APIs podem ser projetadas no futuro. Use a herança com cuidado.
 
@@ -104,7 +104,7 @@ Essas bibliotecas também oferecem funcionalidade de plataforma cruzada C# para 
 - [**Xamarin. Essentials**](~/essentials/index.md) – APIs de plataforma cruzada para recursos comuns.
 - [**SkiaSharp**](~/xamarin-forms/user-interface/graphics/skiasharp/index.md) – gráficos 2D entre plataformas.
 
-## <a name="conditional-compilation"></a>Compilação condicional
+## <a name="conditional-compilation"></a>{1&gt;Compilação condicional&lt;1}
 
 Há algumas situações em que seu código compartilhado ainda precisará trabalhar de forma diferente em cada plataforma, possivelmente acessando classes ou recursos que se comportam de forma diferente. A compilação condicional funciona melhor com projetos de ativos compartilhados, em que o mesmo arquivo de origem está sendo referenciado em vários projetos que têm diferentes símbolos definidos.
 
@@ -186,16 +186,18 @@ Um exemplo simples de estudo de caso de compilação condicional é definir o lo
 O código a seguir usa a compilação condicional para garantir que a `DatabaseFilePath` esteja correta para cada plataforma:
 
 ```csharp
-public static string DatabaseFilePath {
-        get {
-    var filename = "TodoDatabase.db3";
+public static string DatabaseFilePath
+{
+    get
+    {
+        var filename = "TodoDatabase.db3";
 #if SILVERLIGHT
-    // Windows Phone 8
-    var path = filename;
+        // Windows Phone 8
+        var path = filename;
 #else
 
 #if __ANDROID__
-    string libraryPath = Environment.GetFolderPath(Environment.SpecialFolder.Personal); ;
+        string libraryPath = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
 #else
 #if __IOS__
         // we need to put in /Library/ on iOS5.1 to meet Apple's iCloud terms
@@ -207,9 +209,10 @@ public static string DatabaseFilePath {
         string libraryPath = Windows.Storage.ApplicationData.Current.LocalFolder.Path;
 #endif
 #endif
-        var path = Path.Combine (libraryPath, filename);
+        var path = Path.Combine(libraryPath, filename);
 #endif
         return path;
+    }
 }
 ```
 

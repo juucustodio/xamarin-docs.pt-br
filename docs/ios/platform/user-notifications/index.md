@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/01/2016
-ms.openlocfilehash: 85bdace802e58725195d9124af70f396a533aaee
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: fc3a0ace7760b89ad9b2679243c9b6d562191554
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73031232"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75489070"
 ---
 # <a name="user-notifications-framework-in-xamarinios"></a>Estrutura de notificações do usuário no Xamarin. iOS
 
@@ -30,9 +30,9 @@ Este artigo apresenta todas as maneiras como as notificações de usuário foram
 
 Este artigo analisa mais detalhadamente a nova estrutura de notificações de usuário e como tirar o máximo proveito dela em um aplicativo Xamarin. iOS.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Amostras do iOS 10](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS10)
 - [Referência da estrutura do usernotifications](https://developer.apple.com/reference/usernotifications)
 - [UserNotificationsUI](https://developer.apple.com/reference/usernotificationsui)
-- [Guia de programação de notificação local e remota](https://developer.apple.com/library/prerelease/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/Introduction.html)
+- [Guia de programação de notificação local e remota](https://developer.apple.com/documentation/usernotifications)

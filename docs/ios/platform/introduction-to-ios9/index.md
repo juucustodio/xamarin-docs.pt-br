@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: db398947b5f13963febae7d25a7898af21600813
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 531e04c3dbc9bd695087204ceae88d2f0f5df012
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73031776"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75488940"
 ---
 # <a name="introduction-to-ios-9"></a>Introdução ao iOS 9
 
@@ -141,7 +141,7 @@ No iOS 9, a Apple aprimorou o conjunto de chaves para fornecer um novo tipo de c
 - Entropia da lista de controle de acesso (usando a opção de senha do aplicativo) para criptografia de item do conjunto de chaves fornecido pelo aplicativo.
 - Suporte para gerar e usar chaves dentro do enclave seguro (por meio do atributo `kSecAttrTokenIDSecureEnclave`).
 
-Para obter mais informações, consulte nossa [introdução à documentação do touch ID](~/ios/platform/touchid.md) .
+Para obter mais informações, consulte [ID de toque e ID de face no Xamarin. Ios](~/ios/platform/touch-id-face-id.md).
 
 ## <a name="right-to-left-language-support"></a>Suporte de idiomas da direita para a esquerda
 
@@ -201,7 +201,7 @@ Confira também as partes do iOS desses exemplos (versões do Companion Mac OS X
 - [AgentsCatalog](https://github.com/xamarin/mac-ios-samples/tree/master/AgentsCatalog)
 - [MetalKitEssentials](https://github.com/xamarin/mac-ios-samples/tree/master/MetalKitEssentials)
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Amostras do iOS 9](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS9)
 - [Introdução ao toque 3D](~/ios/platform/3d-touch.md)

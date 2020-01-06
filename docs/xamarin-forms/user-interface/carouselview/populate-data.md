@@ -6,13 +6,13 @@ ms.assetid: 20DB2C57-CE3A-4D91-80DC-73AE361A3CB0
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/02/2019
-ms.openlocfilehash: 0ad31bc6f84ae633a9a18592a00670703db19df9
-ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
+ms.date: 12/17/2019
+ms.openlocfilehash: 7d1183bf0c741b5a7ca02b43c4edb0c640ee1ac2
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72697608"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75488212"
 ---
 # <a name="xamarinforms-carouselview-data"></a>Dados de CarouselView do Xamarin. Forms
 
@@ -258,7 +258,35 @@ Para obter mais informações sobre seletores de modelo de dados, consulte [cria
 > [!IMPORTANT]
 > Ao usar [`CarouselView`](xref:Xamarin.Forms.CarouselView), nunca defina o elemento raiz de seus objetos de [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) como um `ViewCell`. Isso fará com que uma exceção seja gerada porque `CarouselView` não tem conceito de células.
 
-## <a name="pull-to-refresh"></a>Efetuar pull para atualizar
+## <a name="display-indicators"></a>Exibir indicadores
+
+Os indicadores, que representam o número de itens e a posição atual em uma `CarouselView`, podem ser exibidos ao lado do `CarouselView`. Isso pode ser feito com o controle de `IndicatorView`:
+
+```xaml
+<StackLayout>
+    <CarouselView x:Name="carouselView"
+                  ItemsSource="{Binding Monkeys}">
+        <CarouselView.ItemTemplate>
+            <!-- DataTemplate that defines item appearance -->
+        </CarouselView.ItemTemplate>
+    </CarouselView>
+    <IndicatorView ItemsSourceBy="carouselView"
+                   IndicatorColor="LightGray"
+                   SelectedIndicatorColor="DarkGray"
+                   HorizontalOptions="Center" />
+</StackLayout>
+```
+
+Neste exemplo, a `IndicatorView` é renderizada abaixo da `CarouselView`, com um indicador para cada item na `CarouselView`. O `IndicatorView` é populado com dados definindo a propriedade `ItemsSourceBy` para o objeto `CarouselView`. Cada indicador é um círculo cinza claro, enquanto o indicador que representa o item atual no `CarouselView` é cinza escuro:
+
+[![Captura de tela de um CarouselView e IndicatorView, no iOS e no Android](populate-data-images/indicators.png "Círculos de IndicatorView")](populate-data-images/indicators-large.png#lightbox "Círculos de IndicatorView")
+
+> [!IMPORTANT]
+> Definir a propriedade `ItemsSourceBy` resulta na associação de propriedade `IndicatorView.Position` à propriedade `CarouselView.Position` e a propriedade `IndicatorView.ItemsSource` associando à propriedade `CarouselView.ItemsSource`.
+
+Para obter mais informações sobre indicadores, consulte [Xamarin. Forms IndicatorView](~/xamarin-forms/user-interface/indicatorview.md).
+
+## <a name="pull-to-refresh"></a>Puxar para atualizar
 
 o [`CarouselView`](xref:Xamarin.Forms.CarouselView) dá suporte à funcionalidade de pull para atualizar por meio do `RefreshView`, que permite que os dados sejam exibidos para serem atualizados ao puxar os itens. O `RefreshView` é um controle de contêiner que fornece a funcionalidade de pull para atualizar para seu filho, desde que o filho ofereça suporte a conteúdo rolável. Portanto, o pull para a atualização é implementado para um `CarouselView` definindo-o como o filho de um `RefreshView`:
 
@@ -351,6 +379,7 @@ void OnCollectionViewRemainingItemsThresholdReached(object sender, EventArgs e)
 ## <a name="related-links"></a>Links relacionados
 
 - [CarouselView (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
+- [IndicatorView Xamarin. Forms](~/xamarin-forms/user-interface/indicatorview.md)
 - [RefreshView Xamarin. Forms](~/xamarin-forms/user-interface/refreshview.md)
 - [Associação de dados do Xamarin. Forms](~/xamarin-forms/app-fundamentals/data-binding/index.md)
 - [Modelos de dados do Xamarin. Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)

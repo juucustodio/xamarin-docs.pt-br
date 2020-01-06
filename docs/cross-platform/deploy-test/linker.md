@@ -1,19 +1,19 @@
 ---
-title: Configuração personalizada do Linker
+title: Configuração personalizada do vinculador
 description: Este documento descreve um arquivo XML que pode ser usado para configurar o vinculador garantindo explicitamente que o código necessário não seja eliminado do aplicativo vinculado.
 ms.prod: xamarin
 ms.assetid: F8A99E3F-2197-4399-AC81-F1DBAB5729C9
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: 6ecfad9a3dc33a4fc4012a797631b5c240aa7a80
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 7d9b7dfc12c27a195e3cb797167690cded348803
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73016532"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75488901"
 ---
-# <a name="custom-linker-configuration"></a>Configuração personalizada do Linker
+# <a name="custom-linker-configuration"></a>Configuração personalizada do vinculador
 
 Se o conjunto padrão de opções não for o suficiente, faça o processo de vinculação com um arquivo XML que descreve o que você deseja do vinculador.
 
@@ -60,7 +60,8 @@ A segunda seção, para `My.Own.Assembly.dll`, garantirá que o tipo `Foo` prese
 O namespace `My.Own.Namespace` preservará todos os tipos que ele contém.
 Por fim, qualquer tipo cujo nome completo (incluindo o namespace) corresponda ao padrão de curinga "My.Other\*" preservará todos os seus campos e métodos. O caractere curinga `*` pode ser incluído várias vezes dentro de um padrão "tipo nomecompleto".
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Vinculação no iOS](~/ios/deploy-test/linker.md)
 - [Usando Linker no Android](~/android/deploy-test/linker.md)
+- [Repositório GitHub do vinculador com exemplos](https://github.com/mono/linker)

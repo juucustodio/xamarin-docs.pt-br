@@ -7,18 +7,18 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: 1781503d214b959d31223cbe8f55fd6afa0fef44
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: eeee9b7d694d9380c653fb87c24171bcaf79389d
+ms.sourcegitcommit: 9ab907e053c57fc96419149f83187bc3e8983a6b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73019284"
+ms.lasthandoff: 01/04/2020
+ms.locfileid: "75655273"
 ---
 # <a name="android-graphics-and-animation"></a>Gráficos e animação do Android
 
 _O Android fornece uma estrutura muito rica e diversificada para dar suporte a gráficos 2D e animações. Este tópico apresenta essas estruturas e discute como criar gráficos personalizados e animações para uso em um aplicativo Xamarin. Android._
 
-## <a name="overview"></a>Visão Geral
+## <a name="overview"></a>{1&gt;Visão Geral&lt;1}
 
 Apesar de ser executado em dispositivos que são tradicionalmente limitados, os mais altos aplicativos móveis geralmente têm uma experiência de usuário sofisticada (UX), completa com gráficos de alta qualidade e animações que fornecem uma sensação intuitiva, responsiva e dinâmica. À medida que os aplicativos móveis ficam cada vez mais sofisticados, os usuários começaram a esperar cada vez mais dos aplicativos.
 
@@ -82,7 +82,7 @@ O Android define vários tipos diferentes de recursos de empate:
 
 - [LevelListDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#LevelList) &ndash; isso é muito semelhante a um *StateListDrawable* , pois ele exibirá uma imagem com base em determinadas condições. No entanto, ao contrário de um *StateListDrawable*, o *LevelListDrawable* exibe uma imagem com base em um valor inteiro. Um exemplo de um *LevelListDrawable* seria exibir a força de um sinal WiFi. À medida que a força do sinal de WiFi é alterada, o empate que é exibido será alterado de acordo.
 
-- [ScaleDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Scale)/[ClipDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Clip) &ndash; como o nome indica, esses drawables fornecem a funcionalidade de dimensionamento e recorte. O *ScaleDrawable* dimensionará outro para ser desenhado, enquanto o *ClipDrawable* cortará outro empate.
+- [ScaleDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Scale)/[ClipDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Clip) &ndash; como o nome indica, esses drawables fornecem funcionalidade de dimensionamento e recorte. O *ScaleDrawable* dimensionará outro para ser desenhado, enquanto o *ClipDrawable* cortará outro empate.
 
 - [InsetDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Inset) &ndash; esse empate aplicará indefinições nos lados de outro recurso que poderá ser desenhado. Ele é usado quando uma exibição precisa de um plano de fundo menor do que os limites reais da exibição.
 
@@ -139,7 +139,7 @@ tv.SetBackgroundResource(Resource.Drawable.shape_rounded_blue_rect);
 
 Para ver como isso seria, execute o projeto *AnimationsDemo* e selecione o item de forma que pode ser extraído no menu principal. Devemos ver algo semelhante à captura de tela a seguir:
 
-![TextView com um plano de fundo personalizado, desenhável com um gradiente e cantos arredondados](graphics-and-animation-images/image1.png)
+[![TextView com um plano de fundo personalizado, desenhável com um gradiente e cantos arredondados](graphics-and-animation-images/image2-sml.png)](graphics-and-animation-images/image2.png#lightbox)
 
 Para obter mais detalhes sobre os elementos XML e a sintaxe de recursos de desenho, consulte a [documentação do Google](https://developer.android.com/guide/topics/resources/drawable-resource.html#Shape).
 
@@ -172,7 +172,7 @@ A classe Canvas expõe métodos para fornecer programaticamente as instruções 
 
 #### <a name="drawing-with-the-canvas-api"></a>Desenho com a API Canvas
 
-Vejamos um exemplo da API de tela em ação. O trecho de código a seguir mostra como desenhar uma exibição:
+Aqui está um exemplo da API Canvas em ação. O trecho de código a seguir mostra como desenhar uma exibição:
 
 ```csharp
 public class MyView : View
@@ -201,9 +201,9 @@ public class MyView : View
 
 Esse código acima cria primeiro uma pintura vermelha e um objeto de pintura verde. Ele preenche o conteúdo da tela com vermelho e, em seguida, instrui a tela a desenhar um retângulo verde que é 25% da largura da tela. Um exemplo disso pode ser visto pelo no projeto `AnimationsDemo` incluído com o código-fonte deste artigo. Ao iniciar o aplicativo e selecionar o item de desenho no menu principal, devemos uma tela semelhante à seguinte:
 
-![Tela com objetos de pintura vermelha e pintura verde](graphics-and-animation-images/image3.png)
+[Tela de ![com objetos de pintura vermelha e de pintura verde](graphics-and-animation-images/image3-sml.png)](graphics-and-animation-images/image3.png#lightbox)
 
-## <a name="animation"></a>Animação
+## <a name="animation"></a>{1&gt;Animação&lt;1}
 
 Usuários como coisas que se movem em seus aplicativos. As animações são uma ótima maneira de melhorar a experiência do usuário de um aplicativo e ajudá-lo a se destacar. As melhores animações são aquelas que os usuários não percebem porque se sentem naturais. O Android fornece as três seguintes APIs para animações:
 
@@ -421,7 +421,7 @@ Neste ponto, abordamos as bases das APIs de animação disponíveis em um aplica
 
 Este artigo apresentou muitos conceitos e APIs novos para ajudar a adicionar alguns elementos gráficos a um aplicativo Android. Primeiro, discutiu as várias APIs de gráficos 2D e demonstrou como o Android permite que os aplicativos desenhem diretamente na tela usando um objeto Canvas. Também vimos algumas técnicas alternativas que permitem que os gráficos sejam criados declarativamente usando arquivos XML. Em seguida, fizemos uma discussão sobre as APIs antigas e novas para a criação de animações no Android.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Demonstração de animação (exemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/animationdemo)
 - [Animação e gráficos](https://developer.android.com/guide/topics/graphics/index.html)

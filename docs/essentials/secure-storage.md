@@ -1,19 +1,19 @@
 ---
-title: 'Xamarin.Essentials: Armazenamento seguro'
+title: 'Xamarin.Essentials: Secure Storage'
 description: Este documento descreve a classe SecureStorage no Xamarin.Essentials, que ajuda a armazenar com segurança os pares de chave/valor simples. Ele aborda como usar a classe, os detalhes da implementação da plataforma e as limitações.
 ms.assetid: 78856C0D-76BB-406E-A880-D5A3987B7D64
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 04/02/2019
 ms.custom: video
-ms.openlocfilehash: 1e4cb52772a60489f887116cbcfd4e6a8930fa3a
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: f8e5a31b855158e1f801354c66f3d3d255eca559
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70756792"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75488485"
 ---
-# <a name="xamarinessentials-secure-storage"></a>Xamarin.Essentials: Armazenamento seguro
+# <a name="xamarinessentials-secure-storage"></a>Xamarin.Essentials: Secure Storage
 
 A classe **SecureStorage** ajuda a armazenar com segurança os pares de chave/valor simples.
 
@@ -133,13 +133,13 @@ SecureStorage.RemoveAll();
 
 O [Repositório de chaves do Android](https://developer.android.com/training/articles/keystore.html) é usado para armazenar a chave de criptografia usada para criptografar o valor antes que ele seja salvo em [Preferências Compartilhadas](https://developer.android.com/training/data-storage/shared-preferences.html) com um nome de arquivo **[ID-DO-SEU-PACOTE-DE-APLICATIVO].xamarinessentials**.  A chave (não uma chave de criptografia, a _chave_ para o _valor_) usada no arquivo de preferências compartilhadas é um _Hash MD5_ da chave passada para as APIs do `SecureStorage`.
 
-## <a name="api-level-23-and-higher"></a>API nível 23 e superior
+## <a name="api-level-23-and-higher"></a>Nível da API 23 e superior
 
 Em níveis da API mais recentes, uma chave **AES** é obtida do Repositório de chaves do Android e usada com uma cifra **AES/GCM/NoPadding** para criptografar o valor antes que ele seja armazenado no arquivo de preferências compartilhadas.
 
 ## <a name="api-level-22-and-lower"></a>Nível da API 22 e inferior
 
-Em níveis de API mais antigos, o Repositório de chaves do Android só é compatível com o armazenamento de chaves **RSA**, que é usado com uma cifra **RSA/ECB/PKCS1Padding** para criptografar uma chave **AES** (aleatoriamente gerada no tempo de execução) e armazenado no arquivo de preferências compartilhadas sob a chave _SecureStorageKey_, caso ainda não tenha sido gerado.
+Em níveis de API mais antigos, o Repositório de chaves do Android só é compatível com o armazenamento de chaves **RSA**, que é usado com uma cifra **RSA/ECB/PKCS1Padding** para criptografar uma chave **AES** (aleatoriamente gerada no runtime) e armazenado no arquivo de preferências compartilhadas sob a chave _SecureStorageKey_, caso ainda não tenha sido gerado.
 
 **SecureStorage** usa a API [Preferências](preferences.md) e segue a mesma persistência de dados descrita na documentação de [Preferências](preferences.md#persistence). Se um dispositivo fizer o upgrade do nível da API 22 ou inferior para o nível da API 23 e superior, esse tipo de criptografia continuará a ser usado, a menos que o aplicativo seja desinstalado ou **RemoveAll** seja chamado.
 
@@ -155,13 +155,13 @@ Em alguns casos os dados do conjunto de chaves estão sincronizados com o iCloud
 
 Os valores criptografados são armazenados em `ApplicationData.Current.LocalSettings`, dentro de um contêiner com o nome **[ID-DE-SEU-APLICATIVO].xamarinessentials**.
 
-**SecureStorage** usa a API [Preferências](preferences.md) e segue a mesma persistência de dados descrita na documentação de [Preferências](preferences.md#persistence).
+**SecureStorage** usa a API [Preferências](preferences.md) e segue a mesma persistência de dados descrita na documentação de [Preferências](preferences.md#persistence). Ele também usa `LocalSettings` que tem uma restrição de que o nome de cada configuração pode ter 255 caracteres de comprimento máximo. Cada configuração pode ter até 8K bytes de tamanho e cada configuração composta pode ter até 64K bytes de tamanho.
 
 -----
 
 ## <a name="limitations"></a>Limitações
 
-Essa API destina-se a armazenar pequenas quantidades de texto.  O desempenho pode ser lento se você tentar usá-lo para armazenar grandes quantidades de texto.
+Essa API destina-se a armazenar pequenas quantidades de texto.  O desempenho pode ser lento se você tentar usá-lo para armazenar grandes quantidades de texto. 
 
 ## <a name="api"></a>API
 

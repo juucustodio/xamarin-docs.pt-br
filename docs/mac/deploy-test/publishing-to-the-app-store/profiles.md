@@ -7,22 +7,20 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 04/12/2017
-ms.openlocfilehash: b361cd00121d16752d5eebc971653c8ea185c641
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 1bb7ffba11a7135735b7599fa7f12b47d0b347c8
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73018104"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75489382"
 ---
-# <a name="provisioning-profiles-for-xamarinmac-apps"></a>Perfis de provisionamento para aplicativos Xamarin.Mac
+# <a name="provisioning-profiles-for-xamarinmac-apps"></a>Perfis de provisionamento para aplicativos Xamarin. Mac
 
 Os perfis de provisionamento permitem que um desenvolvedor incorpore vários recursos específicos (como iCloud e notificações por Push) do macOS (anteriormente conhecido como o Mac OS X) em seus aplicativos Xamarin.Mac. Eles devem criar, baixar e instalar um Perfil de Provisionamento do Mac para cada aplicativo que estão desenvolvendo que usa esses recursos.
 
 [![](profiles-images/certif13.png "The Apple Provisioning Portal")](profiles-images/certif13.png#lightbox)
 
-<a name="Development_Provisioning_Profile" />
-
-## <a name="development-provisioning-profile"></a>Perfil de Provisionamento de Desenvolvimento
+## <a name="development-provisioning-profile"></a>Perfil de provisionamento de desenvolvimento
 
 Um Perfil de Provisionamento de Desenvolvimento permite que um aplicativo destinado à Mac App Store seja testado nos computadores específicos que foram configurados no perfil. Isso é particularmente relevante quando estiver usando recursos do macOS como iCloud e Notificações por Push.
 
@@ -61,9 +59,7 @@ Faça o seguinte:
 
 Será necessário criar um novo Perfil de Provisionamento de Desenvolvimento para cada novo aplicativo ou quando um novo computador for adicionado para ser usado em teste.
 
-<a name="Production_Provisioning_Profile" />
-
-## <a name="production-provisioning-profile"></a>Perfil de Provisionamento de Produção
+## <a name="production-provisioning-profile"></a>Perfil de provisionamento de produção
 
 Os perfis de provisionamento de produção são necessários para compilar um pacote para ser enviado à Mac App Store.
 

@@ -7,18 +7,18 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: fede666071aad8702eda17a94a06c7de49c7397e
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: e2b25468255ff84a3fe79ed4fea913e04bf88687
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73029471"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75489356"
 ---
 # <a name="upload-to-mac-app-store"></a>Carregar na Mac App Store
 
 _Este guia ensina como fazer upload de aplicativos Xamarin.Mac para publicação na Mac App Store._
 
-Os aplicativos são enviados para aprovação da Mac App Store através do [iTunes Connect](https://itunesconnect.apple.com/).
+Os aplicativos são enviados para aprovação da Mac App Store através do [iTunes Connect](https://itunesconnect.apple.com/). Você também precisará da ferramenta [**transportadora**](https://apps.apple.com/us/app/transporter/id1450874784?mt=12) da loja de aplicativos.
 
 1. Escolha um **Aplicativo macOS** para criar: 
 
@@ -70,37 +70,22 @@ Os aplicativos são enviados para aprovação da Mac App Store através do [iTun
 
     [![](uploading-images/image76.png "The acceptance notification")](uploading-images/image76.png#lightbox)
 
-9. Inicie o Application Loader e certifique-se de estar conectado com a ID da Apple.
-Escolha **Entregar seu aplicativo** para continuar: 
+9. Inicie o **transportador** e faça logon com sua ID da Apple e escolha **Adicionar aplicativo**:
 
-    [![](uploading-images/image77.png "The Application Loader interface")](uploading-images/image77.png#lightbox)
+    [![](uploading-images/transporter01-sml.png "The Application Loader interface")](uploading-images/transporter01.png#lightbox)
 
-10. Selecione na lista de aplicativos com status **Pronto para Carregar Binário** e clique em **Avançar**: 
+    Siga as instruções para carregar o pacote do aplicativo no iTunes Connect.
 
-    [![](uploading-images/image78.png "Selecting the app to load")](uploading-images/image78.png#lightbox)
-
-11. Examine os metadados do aplicativo e clique em **Escolher...** para localizar o arquivo do pacote: 
-
-    [![](uploading-images/image79.png "Reviewing the app metadata")](uploading-images/image79.png#lightbox)
-
-12. Localize o arquivo do pacote que foi compilado no Visual Studio para Mac usando a configuração de build da App Store: 
-
-    [![](uploading-images/image80.png "Selecting the file to upload")](uploading-images/image80.png#lightbox)
-
-13. Pressione **Enviar**: 
-
-    [![](uploading-images/image81.png "Sending the app")](uploading-images/image81.png#lightbox)
-
-14. O pacote será validado e quaisquer erros serão informados. Corrija esses erros e carregue novamente. Quando o upload for concluído com êxito, o aplicativo será automaticamente enviado para análise pela equipe do App Store: 
-
-    [![](uploading-images/image82.png "An example of upload errors")](uploading-images/image82.png#lightbox)
+    > [!NOTE]
+    > O [**transportador**](https://apps.apple.com/us/app/transporter/id1450874784?mt=12) substitui a ferramenta **carregador de aplicativos** usada com o Xcode 10 e anterior.
+    > O carregador de aplicativos não está mais disponível no Xcode 11 ou mais recente.
 
 Quando o aplicativo for aprovado, estará disponível para download ou compra na Mac App Store.
 
 ## <a name="related-links"></a>Links relacionados
 
 - [Instalação](~//mac/get-started/installation.md)
-- [Amostra do Hello, Mac](~//mac/get-started/hello-mac.md)
+- [Amostra do Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Distribua aplicativos na Mac App Store](https://developer.apple.com/devcenter/mac/checklist/)
 - [Guia de ferramentas: assinatura de código do aplicativo](https://developer.apple.com/library/mac/#documentation/ToolsLanguages/Conceptual/OSXWorkflowGuide/CodeSigning/CodeSigning.html)
 - [ID de Desenvolvedor e GateKeeper](https://developer.apple.com/resources/developer-id/)

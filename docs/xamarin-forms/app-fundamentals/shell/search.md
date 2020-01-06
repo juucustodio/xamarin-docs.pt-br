@@ -6,13 +6,13 @@ ms.assetid: F8F9471D-6771-4D23-96C0-2B79473A06D4
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 09/25/2019
-ms.openlocfilehash: 400459d2701731726c91c70e020ef375a7031169
-ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
+ms.date: 12/18/2019
+ms.openlocfilehash: 9bd4fe5f1a35e2a6f36540cbee13838841b36d92
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72695929"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75490058"
 ---
 # <a name="xamarinforms-shell-search"></a>Pesquisa do Shell do Xamarin.Forms
 
@@ -181,8 +181,11 @@ Para obter mais informações sobre modelos de dados, confira [Modelos de dados 
 Quando um `SearchHandler` é adicionado na parte superior de uma página, por padrão, a caixa de pesquisa fica visível e totalmente expandida. No entanto, esse comportamento pode ser alterado definindo a propriedade `SearchHandler.SearchBoxVisibility` para um dos membros da enumeração `SearchBoxVisibility`:
 
 - `Hidden` – a caixa de pesquisa não está visível ou acessível.
-- `Collapsible` – a caixa de pesquisa está oculta até que o usuário execute uma ação para mostrá-la.
-- `Expanded` – a caixa de pesquisa está visível e totalmente expandida.
+- `Collapsible` – a caixa de pesquisa está oculta até que o usuário execute uma ação para mostrá-la. No iOS, a caixa de pesquisa é revelada verticalmente com o toque do conteúdo da página e, no Android, a caixa de pesquisa é revelada tocando no ícone de ponto de interrogação.
+- `Expanded` – a caixa de pesquisa está visível e totalmente expandida. Este é o valor padrão da propriedade `SearchHandler.SearchBoxVisibility`.
+
+> [!IMPORTANT]
+> No iOS, uma caixa de pesquisa recolhível requer o iOS 11 ou superior.
 
 O exemplo a seguir mostra como ocultar a caixa de pesquisa:
 
@@ -190,7 +193,7 @@ O exemplo a seguir mostra como ocultar a caixa de pesquisa:
 <ContentPage ...
              xmlns:controls="clr-namespace:Xaminals.Controls">
     <Shell.SearchHandler>
-        <controls:MonkeySearchHandler SearchBoxVisibility="Hidden"
+        <controls:AnimalSearchHandler SearchBoxVisibility="Hidden"
                                       ... />
     </Shell.SearchHandler>
     ...

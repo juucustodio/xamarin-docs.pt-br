@@ -7,14 +7,14 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/03/2019
-ms.openlocfilehash: e3c042a82a9870e68c94741ae4bdfaa728a40cb0
-ms.sourcegitcommit: 27e77acd0139c099f6592085a5ea5aabcaeedc7f
+ms.openlocfilehash: 46d0b245246d9e93040cd8591dab8ed3a816268d
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74823903"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75487003"
 ---
-# <a name="customizing-a-hybridwebview"></a>Personalizando um HybridWebView
+# <a name="customizing-a-webview"></a>Personalizando uma WebView
 
 [![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-hybridwebview)
 
@@ -141,16 +141,16 @@ Um renderizador personalizado agora pode ser adicionado a cada projeto de aplica
 
 ## <a name="create-the-custom-renderer-on-each-platform"></a>Criar o renderizador personalizado em cada plataforma
 
-O processo para criar a classe do renderizador personalizado é a seguinte:
+O processo para criar a classe do renderizador personalizado é o seguinte:
 
 1. Crie uma subclasse da classe `WkWebViewRenderer` no iOS e a classe `WebViewRenderer` no Android e UWP, que renderiza o controle personalizado.
 1. Substitua o método `OnElementChanged` que renderiza o [`WebView`](xref:Xamarin.Forms.WebView) e a lógica de gravação para personalizá-lo. Esse método é chamado quando um objeto de `HybridWebView` é criado.
-1. Adicione um atributo `ExportRenderer` à classe de processador personalizado ou *AssemblyInfo.cs*, para especificar que ele será usado para renderizar o controle personalizado Xamarin. Forms. Este atributo é usado para registrar o renderizador personalizado no Xamarin.Forms.
+1. Adicione um atributo `ExportRenderer` à classe de processador personalizado ou *AssemblyInfo.cs*, para especificar que ele será usado para renderizar o controle personalizado Xamarin. Forms. Esse atributo é usado para registrar o renderizador personalizado no Xamarin.Forms.
 
 > [!NOTE]
 > Para a maioria dos elementos do Xamarin.Forms, o fornecimento de um renderizador personalizado em cada projeto de plataforma é opcional. Se um renderizador personalizado não estiver registrado, será usado o renderizador padrão da classe base do controle. No entanto, são necessários renderizadores personalizados em cada projeto da plataforma durante a renderização de um elemento [View](xref:Xamarin.Forms.View).
 
-O diagrama a seguir ilustra as responsabilidades de cada projeto no aplicativo de exemplo, bem como as relações entre elas:
+O seguinte diagrama ilustra as responsabilidades de cada projeto no aplicativo de exemplo, bem como as relações entre elas:
 
 ![](hybridwebview-images/solution-structure.png "HybridWebView Custom Renderer Project Responsibilities")
 
@@ -158,7 +158,7 @@ O `HybridWebView` controle personalizado é renderizado por classes de processad
 
 ![](hybridwebview-images/screenshots.png "HybridWebView on each Platform")
 
-As classes `WkWebViewRenderer` e `WebViewRenderer` expõem o método `OnElementChanged`, que é chamado quando o controle personalizado Xamarin. Forms é criado para renderizar o controle da Web nativo correspondente. Esse método usa um parâmetro `VisualElementChangedEventArgs` que contém `OldElement` e `NewElement` Propriedades. Essas propriedades representam o elemento do Xamarin.Forms a que o renderizador *estava* anexado e o elemento a que o renderizador *está* anexado, respectivamente. No aplicativo de exemplo, a propriedade `OldElement` será `null` e a propriedade `NewElement` conterá uma referência à instância de `HybridWebView`.
+As classes `WkWebViewRenderer` e `WebViewRenderer` expõem o método `OnElementChanged`, que é chamado quando o controle personalizado Xamarin. Forms é criado para renderizar o controle da Web nativo correspondente. Esse método usa um parâmetro `VisualElementChangedEventArgs` que contém `OldElement` e `NewElement` Propriedades. Essas propriedades representam o elemento do Xamarin.Forms ao qual o renderizador *estava* anexado e o elemento do Xamarin.Forms ao qual o renderizador *está* anexado, respectivamente. No aplicativo de exemplo, a propriedade `OldElement` será `null` e a propriedade `NewElement` conterá uma referência à instância de `HybridWebView`.
 
 Uma versão substituída do método `OnElementChanged`, em cada classe de processador de plataforma, é o local para executar a personalização do controle da Web nativo. Uma referência ao controle Xamarin. Forms que está sendo renderizado pode ser obtida por meio da propriedade `Element`.
 
@@ -222,7 +222,7 @@ As seções a seguir abordam como esse processo é implementado em cada platafor
 
 ### <a name="create-the-custom-renderer-on-ios"></a>Criar o renderizador personalizado no iOS
 
-O exemplo de código a seguir mostra o renderizador personalizado para a plataforma iOS:
+O seguinte exemplo de código mostra o renderizador personalizado para a plataforma iOS:
 
 ```csharp
 [assembly: ExportRenderer(typeof(HybridWebView), typeof(HybridWebViewRenderer))]
@@ -300,7 +300,7 @@ Além disso, **Info.plist** deve ser atualizado para incluir os seguintes valore
 
 ### <a name="create-the-custom-renderer-on-android"></a>Criar o renderizador personalizado no Android
 
-O exemplo de código a seguir mostra o renderizador personalizado para a plataforma Android:
+O seguinte exemplo de código mostra o renderizador personalizado para a plataforma Android:
 
 ```csharp
 [assembly: ExportRenderer(typeof(HybridWebView), typeof(HybridWebViewRenderer))]
@@ -401,7 +401,7 @@ Observe que a classe `JSBridge` mantém um `WeakReference` para a classe `Hybrid
 
 ### <a name="create-the-custom-renderer-on-uwp"></a>Criar o renderizador personalizado no UWP
 
-O exemplo de código a seguir mostra o renderizador personalizado para a UWP:
+O seguinte exemplo de código mostra o renderizador personalizado para o UWP:
 
 ```csharp
 [assembly: ExportRenderer(typeof(HybridWebView), typeof(HybridWebViewRenderer))]

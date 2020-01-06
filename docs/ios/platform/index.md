@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/25/2018
-ms.openlocfilehash: f2f0d44f9c9d2df3c09d98e8d921121ff2af1571
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 78f8c8d1340c6bb1063e59ad03485d8b9b807c58
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73032273"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75488992"
 ---
 # <a name="ios-platform-features-overview"></a>Visão geral dos recursos da plataforma iOS
 
@@ -125,9 +125,9 @@ O kit de texto é uma nova API que oferece recursos avançados de layout de text
 
 Este artigo fornecerá e apresentará uma introdução ao uso das novas APIs de toque 3D para adicionar gestos sensíveis à pressão aos seus aplicativos do Xamarin. iOS que estão em execução nos novos dispositivos iPhone 6s e iPhone 6s Plus.
 
-## <a name="touch-idiosplatformtouchidmd"></a>[ID de Toque](~/ios/platform/touchid.md)
+## <a name="touch-id-and-face-id-with-xamariniosiosplatformtouch-id-face-idmd"></a>[ID de toque e ID facial com Xamarin. iOS](~/ios/platform/touch-id-face-id.md)
 
-A ID de toque foi introduzida no iOS 7 como um meio de autenticar o usuário-semelhante a uma senha. No entanto, ele estava limitado a desbloquear o dispositivo, usando a loja de aplicativos, usando o iTunes e Autenticando apenas o conjunto de chaves do iCloud.
+A ID de toque e a ID de face são sistemas de autenticação biométricas disponíveis desde o iOS 8. Este artigo e exemplo descrevem como usar a ID de toque e a ID facial com Xamarin. iOS.
 
 ## <a name="user-notificationsiosplatformuser-notificationsindexmd"></a>[Notificações do usuário](~/ios/platform/user-notifications/index.md)
 

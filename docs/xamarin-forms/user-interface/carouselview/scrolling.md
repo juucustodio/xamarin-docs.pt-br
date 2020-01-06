@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/14/2019
-ms.openlocfilehash: dc72dc7549a697c7231045601851ba4108f29e1b
-ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
+ms.openlocfilehash: ce0e0b63206ab918b5d761be3e619370aec1eec7
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72697580"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75489746"
 ---
 # <a name="xamarinforms-carouselview-scrolling"></a>CarouselView de Xamarin. Forms
 
@@ -32,7 +32,7 @@ Todas essas propriedades são apoiadas por [`BindableProperty`](xref:Xamarin.For
 
 [`CarouselView`](xref:Xamarin.Forms.CarouselView) também define dois métodos [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) , que rolam itens para o modo de exibição. Uma das sobrecargas rola o item no índice especificado para a exibição, enquanto o outro rola o item especificado para a exibição. Ambas as sobrecargas têm argumentos adicionais que podem ser especificados para indicar a posição exata do item após a conclusão da rolagem e se a rolagem deve ser animada.
 
-[`CarouselView`](xref:Xamarin.Forms.CarouselView) define um evento de [`ScrollToRequested`](xref:Xamarin.Forms.ItemsView.ScrollToRequested) que é acionado quando um dos métodos de [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) é invocado. O objeto [`ScrollToRequestedEventArgs`](xref:Xamarin.Forms.ScrollToRequestedEventArgs) que acompanha o evento `ScrollToRequested` tem muitas propriedades, incluindo `IsAnimated`, `Index`, `Item` e `ScrollToPosition`. Essas propriedades são definidas a partir dos argumentos especificados nas chamadas de método `ScrollTo`.
+[`CarouselView`](xref:Xamarin.Forms.CarouselView) define um evento de [`ScrollToRequested`](xref:Xamarin.Forms.ItemsView.ScrollToRequested) que é acionado quando um dos métodos de [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) é invocado. O objeto [`ScrollToRequestedEventArgs`](xref:Xamarin.Forms.ScrollToRequestedEventArgs) que acompanha o evento `ScrollToRequested` tem muitas propriedades, incluindo `IsAnimated`, `Index`, `Item`e `ScrollToPosition`. Essas propriedades são definidas a partir dos argumentos especificados nas chamadas de método `ScrollTo`.
 
 Além disso, [`CarouselView`](xref:Xamarin.Forms.CarouselView) define um evento de `Scrolled` que é acionado para indicar que a rolagem ocorreu. O objeto `ItemsViewScrolledEventArgs` que acompanha o evento `Scrolled` tem muitas propriedades. Para obter mais informações, consulte [detectar rolagem](#detect-scrolling).
 
@@ -142,7 +142,7 @@ carouselView.ScrollTo(monkey, position: ScrollToPosition.Start);
 
 Este código de exemplo resulta no item que está sendo rolado para o início da exibição.
 
-### <a name="center"></a>Centralizado
+### <a name="center"></a>Center
 
 O membro [`ScrollToPosition.Center`](xref:Xamarin.Forms.ScrollToPosition) indica que o item deve ser rolado para o centro da exibição:
 
@@ -152,7 +152,7 @@ carouselViewView.ScrollTo(monkey, position: ScrollToPosition.Center);
 
 Este código de exemplo resulta no item que está sendo rolado para o centro da exibição.
 
-### <a name="end"></a>End
+### <a name="end"></a>Encerramento
 
 O membro [`ScrollToPosition.End`](xref:Xamarin.Forms.ScrollToPosition) indica que o item deve ser rolado para o final da exibição:
 
@@ -219,10 +219,10 @@ Por padrão, em um [`CarouselView`](xref:Xamarin.Forms.CarouselView), a propried
 
 ### <a name="snap-points-alignment"></a>Alinhamento dos pontos de ajuste
 
-A enumeração de [`SnapPointsAlignment`](xref:Xamarin.Forms.SnapPointsAlignment) define os membros `Start`, `Center` e `End`.
+A enumeração de [`SnapPointsAlignment`](xref:Xamarin.Forms.SnapPointsAlignment) define os membros `Start`, `Center`e `End`.
 
 > [!IMPORTANT]
-> O valor da propriedade [`SnapPointsAlignment`](xref:Xamarin.Forms.ItemsLayout.SnapPointsAlignment) só é respeitado quando a propriedade [`SnapPointsType`](xref:Xamarin.Forms.ItemsLayout.SnapPointsType) é definida como `Mandatory` ou `MandatorySingle`.
+> O valor da propriedade [`SnapPointsAlignment`](xref:Xamarin.Forms.ItemsLayout.SnapPointsAlignment) só é respeitado quando a propriedade [`SnapPointsType`](xref:Xamarin.Forms.ItemsLayout.SnapPointsType) é definida como `Mandatory`ou `MandatorySingle`.
 
 #### <a name="start"></a>Início
 
@@ -230,7 +230,7 @@ O membro `SnapPointsAlignment.Start` indica que os pontos de ajuste estão alinh
 
 ```xaml
 <CarouselView ItemsSource="{Binding Monkeys}"
-              NumberOfSideItems="1">
+              PeekAreaInsets="100">
     <CarouselView.ItemsLayout>
         <LinearItemsLayout Orientation="Horizontal"
                            SnapPointsType="MandatorySingle"
@@ -256,7 +256,7 @@ CarouselView carouselView = new CarouselView
 
 Quando um usuário passa o dedo para iniciar uma rolagem em uma [`CarouselView`](xref:Xamarin.Forms.CarouselView)horizontalmente, o item à esquerda será alinhado à esquerda da exibição.
 
-#### <a name="center"></a>Centralizado
+#### <a name="center"></a>Center
 
 O membro `SnapPointsAlignment.Center` indica que os pontos de ajuste estão alinhados ao centro dos itens.
 
@@ -264,7 +264,7 @@ Por padrão, em um [`CarouselView`](xref:Xamarin.Forms.CarouselView), a propried
 
 ```xaml
 <CarouselView ItemsSource="{Binding Monkeys}"
-              NumberOfSideItems="1">
+              PeekAreaInsets="100">
     <CarouselView.ItemsLayout>
         <LinearItemsLayout Orientation="Horizontal"
                            SnapPointsType="MandatorySingle"
@@ -290,13 +290,13 @@ CarouselView carouselView = new CarouselView
 
 Quando um usuário passa o dedo para iniciar uma rolagem em uma [`CarouselView`](xref:Xamarin.Forms.CarouselView)horizontalmente, o item central será alinhado ao centro da exibição.
 
-#### <a name="end"></a>End
+#### <a name="end"></a>Encerramento
 
 O membro `SnapPointsAlignment.End` indica que os pontos de ajuste estão alinhados com a borda à direita dos itens. O exemplo de XAML a seguir mostra como definir esse membro de enumeração:
 
 ```xaml
 <CarouselView ItemsSource="{Binding Monkeys}"
-              NumberOfSideItems="1">
+              PeekAreaInsets="100">
     <CarouselView.ItemsLayout>
         <LinearItemsLayout Orientation="Horizontal"
                            SnapPointsType="MandatorySingle"

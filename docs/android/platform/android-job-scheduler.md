@@ -7,18 +7,18 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2018
-ms.openlocfilehash: 4d28b80b32ff0d20afbe643d9c000f301a8ea582
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 4b1e0b32050b22a63bb89b28107877ef3e196b16
+ms.sourcegitcommit: 6de849e2feca928ce5d91a3897e7d4049301081c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73027819"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75667033"
 ---
 # <a name="android-job-scheduler"></a>Agendador de trabalhos do Android
 
 _Este guia discute como agendar o trabalho em segundo plano usando a API do Agendador de trabalho do Android, que está disponível em dispositivos Android que executam o Android 5,0 (API nível 21) e superior._
 
-## <a name="overview"></a>Visão Geral 
+## <a name="overview"></a>{1&gt;Visão Geral&lt;1} 
 
 Uma das melhores maneiras de manter um aplicativo Android responsivo ao usuário é garantir que o trabalho complexo ou de longa execução seja executado em segundo plano. No entanto, é importante que o trabalho em segundo plano não afete negativamente a experiência do usuário com o dispositivo. 
 
@@ -33,7 +33,7 @@ O Android fornece as seguintes APIs para ajudar na execução do trabalho em seg
 Há dois recursos principais para executar com eficiência o trabalho em segundo plano (às vezes chamado de _trabalho em segundo plano_ ou um _trabalho_):
 
 1. **Agendando o trabalho de forma inteligente** &ndash; é importante que, quando um aplicativo estiver trabalhando em segundo plano, ele faça isso como um bom cidadão. O ideal é que o aplicativo não exija que um trabalho seja executado. Em vez disso, o aplicativo deve especificar condições que devem ser atendidas para quando o trabalho puder ser executado e, em seguida, agendar esse trabalho com o sistema operacional que executará o trabalho quando as condições forem atendidas. Isso permite que o Android execute o trabalho para garantir a máxima eficiência no dispositivo. Por exemplo, as solicitações de rede podem ser executadas em lotes para executar tudo ao mesmo tempo para fazer o uso máximo da sobrecarga envolvida na rede.
-2. **Encapsular o trabalho** &ndash; o código para executar o trabalho em segundo plano deve ser encapsulado em um componente discreto que pode ser executado independentemente da interface do usuário e será relativamente fácil de reagendar se o trabalho não for concluído para alguns falha.
+2. **Encapsular o trabalho** &ndash; o código para executar o trabalho em segundo plano deve ser encapsulado em um componente discreto que pode ser executado independentemente da interface do usuário e será relativamente fácil reagendar se o trabalho não for concluído por algum motivo.
 
 O Agendador de trabalhos do Android é uma estrutura interna ao sistema operacional Android que fornece uma API fluente para simplificar o agendamento do trabalho em segundo plano.  O Agendador de trabalhos do Android consiste nos seguintes tipos:
 
@@ -43,7 +43,7 @@ O Agendador de trabalhos do Android é uma estrutura interna ao sistema operacio
 
 Para agendar o trabalho com o Agendador de trabalhos do Android, um aplicativo Xamarin. Android deve encapsular o código em uma classe que estende a classe `JobService`. `JobService` tem três métodos de ciclo de vida que podem ser chamados durante o tempo de vida do trabalho:
 
-- **bool OnStartJob (parâmetros de JobParameters)** &ndash; esse método é chamado pelo `JobScheduler` para executar o trabalho e é executado no thread principal do aplicativo. É responsabilidade do `JobService` executar o trabalho de forma assíncrona e `true` se houver trabalho restante, ou `false` se o trabalho for feito.
+- **bool OnStartJob (parâmetros de JobParameters)** &ndash; esse método é chamado pelo `JobScheduler` para executar o trabalho e é executado no thread principal do aplicativo. É responsabilidade do `JobService` executar o trabalho de forma assíncrona e retornar `true` se houver trabalho restante ou `false` se o trabalho for feito.
     
     Quando o `JobScheduler` chama esse método, ele solicitará e manterá um wakelock do Android durante o trabalho. Quando o trabalho é concluído, é responsabilidade do `JobService` dizer ao `JobScheduler` desse fato chamar o método `JobFinished` (descrito a seguir).
 
@@ -55,7 +55,7 @@ Para agendar o trabalho com o Agendador de trabalhos do Android, um aplicativo X
 
 Este guia discutirá detalhadamente como implementar uma classe de `JobService` e agendá-la com o `JobScheduler`.
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>Requisitos do
 
 O Agendador de trabalhos do Android requer a API do Android 21 (Android 5,0) ou superior. 
 
@@ -218,7 +218,7 @@ jobScheduler.Cancel(1)
 
 Este guia abordou como usar o Agendador de trabalhos do Android para executar o trabalho de forma inteligente em segundo plano. Ele abordou como encapsular o trabalho a ser executado como um `JobService` e como usar o `JobScheduler` para agendar esse trabalho, especificando os critérios com uma `JobTrigger` e como as falhas devem ser tratadas com um `RetryStrategy`.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Agendamento de trabalhos inteligentes](https://developer.android.com/topic/performance/scheduling.html)
 - [Referência da API do JobScheduler](https://developer.android.com/reference/android/app/job/JobScheduler.html)

@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/28/2018
-ms.openlocfilehash: 3f3ff0b06fe23d724e04ac34108119932aa666ef
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 8d773abbca348d09d3359f09cbded22f6521fb7f
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68649707"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75487315"
 ---
 # <a name="store-and-access-data-in-azure-storage-from-xamarinforms"></a>Armazene e acesse dados no armazenamento do Azure por meio do Xamarin. Forms
 
 [![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azurestorage)
 
-_Armazenamento do Azure é uma solução de armazenamento de nuvem escalonável que pode ser usada para armazenar dados não estruturados e estruturados. Este artigo demonstra como usar o xamarin. Forms para armazenar texto e dados binários no armazenamento do Azure e como acessar os dados._
+_O armazenamento do Azure é uma solução de armazenamento em nuvem escalonável que pode ser usada para armazenar dados não estruturados e estruturados. Este artigo demonstra como usar o Xamarin. Forms para armazenar texto e dados binários no armazenamento do Azure e como acessar os dados._
 
 O armazenamento do Azure fornece quatro serviços de armazenamento:
 
@@ -36,17 +36,20 @@ Neste artigo e que acompanha o aplicativo de exemplo demonstra a carregar arquiv
 
 Para obter mais informações sobre o armazenamento do Azure, consulte [Introdução ao armazenamento](https://azure.microsoft.com/documentation/articles/storage-introduction/).
 
+> [!NOTE]
+> Se você não tiver uma [assinatura do Azure](/azure/guides/developer/azure-developer-guide#understanding-accounts-subscriptions-and-billing), crie uma [conta gratuita](https://aka.ms/azfree-docs-mobileapps) antes de começar.
+
 ## <a name="introduction-to-blob-storage"></a>Introdução ao armazenamento de Blob
 
 O armazenamento de BLOBs consiste em três componentes, que são mostrados no diagrama a seguir:
 
-![](azure-storage-images/blob-storage.png "Conceitos de armazenamento de blob")
+![](azure-storage-images/blob-storage.png "Blob Storage Concepts")
 
 Todo o acesso ao armazenamento do Azure é por meio de uma conta de armazenamento. Uma conta de armazenamento pode conter um número ilimitado de contêineres, e um contêiner pode armazenar um número ilimitado de blobs, até o limite de capacidade da conta de armazenamento.
 
 Um blob é um arquivo de qualquer tipo e tamanho. O armazenamento do Azure dá suporte a três tipos diferentes de blob:
 
-- Blobs de blocos são otimizados para streaming e armazenamento de objetos de nuvem e são uma boa opção para armazenar backups, arquivos de mídia, documentos etc. Blobs de bloco podem ser até 195Gb de tamanho.
+- Blobs de blocos são otimizados para streaming e armazenamento de objetos de nuvem e são uma boa opção para armazenar backups, arquivos de mídia, documentos, etc. Blobs de blocos podem ter até 195 GB de tamanho.
 - Acrescentar blobs são semelhantes aos blobs de blocos, mas são otimizados para operações de acréscimo, como registro em log. Acrescentar blobs podem ser de até 195Gb.
 - Blobs de página são otimizados para operações frequentes de leitura/gravação e normalmente são usados para armazenar as máquinas virtuais e seus discos. Blobs de página podem ter até 1Tb de tamanho.
 
@@ -70,7 +73,7 @@ O processo para integrar uma conta de armazenamento do Azure em um aplicativo xa
 
 <a name="connecting" />
 
-## <a name="connecting-to-azure-storage"></a>Conectar-se ao armazenamento do Azure
+## <a name="connecting-to-azure-storage"></a>Conectar-se ao Armazenamento do Azure
 
 Todas as solicitações feitas em relação aos recursos da conta de armazenamento devem ser autenticada. Embora os blobs podem ser configurados para dar suporte à autenticação anônima, há duas abordagens principais para que um aplicativo pode usar para autenticar com uma conta de armazenamento:
 
@@ -122,7 +125,7 @@ Para obter mais informações sobre assinaturas de acesso compartilhado, consult
 
 ## <a name="creating-a-container"></a>Criar um contêiner
 
-O `GetContainer` método é usado para recuperar uma referência a um contêiner nomeado, o que, em seguida, pode ser usado para recuperar os blobs do contêiner ou adicionar blobs no contêiner. O seguinte exemplo de código mostra o `GetContainer` método:
+O `GetContainer` método é usado para recuperar uma referência a um contêiner nomeado, o que, em seguida, pode ser usado para recuperar os blobs do contêiner ou adicionar blobs no contêiner. O seguinte exemplo de código mostra o método `GetContainer`:
 
 ```csharp
 static CloudBlobContainer GetContainer(ContainerType containerType)
@@ -258,7 +261,7 @@ public static async Task<bool> DeleteFileAsync(ContainerType containerType, stri
 
 Depois de recuperar uma referência de contêiner, o método recupera uma referência de blob para o blob especificado. O blob é excluído com o `DeleteIfExistsAsync` método.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Armazenamento do Azure (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azurestorage)
 - [Introdução ao armazenamento](https://azure.microsoft.com/documentation/articles/storage-introduction/)

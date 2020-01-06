@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/14/2019
-ms.openlocfilehash: 051bbc1732dc1b074d27080f74621a57a80aaaa4
-ms.sourcegitcommit: e71474f91639bb43159b22f5d534325c3270ba93
+ms.openlocfilehash: 0149a66fedd98a94f1c9d96bf8e7e57715d1b90b
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72749814"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75488251"
 ---
 # <a name="xamarinforms-carouselview-layout"></a>Layout CarouselView do Xamarin. Forms
 
@@ -23,8 +23,6 @@ ms.locfileid: "72749814"
 [`CarouselView`](xref:Xamarin.Forms.CarouselView) define as seguintes propriedades que controlam o layout:
 
 - [`ItemsLayout`](xref:Xamarin.Forms.ItemsLayout), do tipo `LinearItemsLayout`, especifica o layout a ser usado.
-- [`ItemSizingStrategy`](xref:Xamarin.Forms.ItemsView.ItemSizingStrategy), do tipo [`ItemSizingStrategy`](xref:Xamarin.Forms.ItemSizingStrategy), especifica a estratégia de medida do item a ser usada.
-- `NumberOfSideItems`, do tipo `int`, o número de itens visíveis adjacentes ao item atual. O valor padrão é 0.
 - `PeekAreaInsets`, do tipo [`Thickness`](xref:Xamarin.Forms.Thickness), especifica o quanto tornar os itens adjacentes parcialmente visíveis pelo.
 
 Essas propriedades são apoiadas por [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objetos, o que significa que as propriedades podem ser destinos de associações de dados.
@@ -191,32 +189,6 @@ CarouselView carouselView = new CarouselView
 ```
 
 O resultado é que os itens adjacentes são parcialmente expostos na tela.
-
-## <a name="fully-visible-adjacent-items"></a>Itens adjacentes totalmente visíveis
-
-Por padrão, [`CarouselView`](xref:Xamarin.Forms.CarouselView) exibe um item de cada vez. No entanto, esse comportamento pode ser alterado definindo a propriedade `NumberOfSideItems` como um inteiro que representa o número de itens a serem exibidos adjacentes ao item atual. O XAML a seguir mostra um exemplo de como definir essa propriedade:
-
-```xaml
-<CarouselView ItemsSource="{Binding Monkeys}"
-              NumberOfSideItems="1">
-    ...
-</CarouselView>
-```
-
-Este é o código C# equivalente:
-
-```csharp
-CarouselView carouselView = new CarouselView
-{
-    ...
-    NumberOfSideItems = 1
-};
-```
-
-Este exemplo resulta em um item adjacente sendo exibido em cada lado do item atual.
-
-> [!NOTE]
-> Ao definir a propriedade `NumberOfSideItems`, qualquer valor de `PeekAreaInsets` ainda será aplicado.
 
 ## <a name="item-spacing"></a>Espaçamento de item
 

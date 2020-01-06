@@ -6,13 +6,13 @@ ms.assetid: 634AB62E-68C8-454C-838B-F1CC4E4E21BC
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 02/22/2019
-ms.openlocfilehash: c90cfc297914b585403ae84e7dbac11fd6e02836
-ms.sourcegitcommit: eb23b7d745d1090376f9def07e0f11cb089494d0
+ms.date: 12/11/2019
+ms.openlocfilehash: 5d0e289ddeb7eabef6d96c8882c772c704c54b34
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72170939"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75489720"
 ---
 # <a name="ios-platform-features-in-xamarinforms"></a>recursos da plataforma iOS no Xamarin. Forms
 
@@ -30,14 +30,15 @@ A funcionalidade específica da plataforma a seguir é fornecida para exibiçõe
 
 A seguinte funcionalidade específica da plataforma é fornecida para exibições do Xamarin. Forms no iOS:
 
-- Definindo a cor do plano de fundo [`Cell`](xref:Xamarin.Forms.Cell) . Para obter mais informações, consulte [cor do plano de fundo da célula no Ios](cell-background-color.md).
+- Definindo o [`Cell`](xref:Xamarin.Forms.Cell) cor do plano de fundo. Para obter mais informações, consulte [cor do plano de fundo da célula no Ios](cell-background-color.md).
 - Garantir que inseridos texto se adapta a um [ `Entry` ](xref:Xamarin.Forms.Entry) ajustando o tamanho da fonte. Para obter mais informações, consulte [tamanho da fonte de entrada em Ios](entry-font-size.md).
 - Configurando a cor do cursor uma [ `Entry` ](xref:Xamarin.Forms.Entry). Para obter mais informações, consulte [cor do cursor de entrada no Ios](entry-cursor-color.md).
-- Controlando se as células [de cabeçalho `ListView`](xref:Xamarin.Forms.ListView) flutuam durante a rolagem. Para obter mais informações, consulte [estilo de cabeçalho do grupo ListView no Ios](listview-group-header-style.md).
-- Controlando se as animações de linha são desabilitadas quando a coleção de itens [`ListView`](xref:Xamarin.Forms.ListView) está sendo atualizada. Para obter mais informações, consulte [animações de linha ListView no Ios](listview-row-animations.md).
+- Controlando se [`ListView`](xref:Xamarin.Forms.ListView) células de cabeçalho flutuam durante a rolagem. Para obter mais informações, consulte [estilo de cabeçalho do grupo ListView no Ios](listview-group-header-style.md).
+- Controlando se as animações de linha são desabilitadas quando a coleção de itens de [`ListView`](xref:Xamarin.Forms.ListView) está sendo atualizada. Para obter mais informações, consulte [animações de linha ListView no Ios](listview-row-animations.md).
 - Definindo o estilo do separador em um [ `ListView` ](xref:Xamarin.Forms.ListView). Para obter mais informações, consulte [estilo do separador ListView no Ios](listview-separator-style.md).
 - Controlando quando a seleção de item ocorre em um [ `Picker` ](xref:Xamarin.Forms.Picker). Para obter mais informações, consulte [seleção de item do seletor no Ios](picker-selection.md).
 - Habilitando a [ `Slider.Value` ](xref:Xamarin.Forms.Slider.Value) propriedade a ser definido tocando em uma posição no [ `Slider` ](xref:Xamarin.Forms.Slider) barra, em vez de precisar arrastar o `Slider` thumb. Para obter mais informações, consulte [controle deslizante do slider no Ios](slider-thumb.md).
+- Controlando a transição usada ao abrir um `SwipeView`. Para obter mais informações, consulte [modo de transição de toque SwipeView](swipeview-swipetransitionmode.md).
 
 A seguinte funcionalidade específica de plataforma é fornecida para páginas Xamarin. Forms no iOS:
 
@@ -54,7 +55,7 @@ A funcionalidade específica da plataforma a seguir é fornecida para layouts do
 
 - Controlar se uma [ `ScrollView` ](xref:Xamarin.Forms.ScrollView) manipula um gesto de toque ou passá-lo ao seu conteúdo. Para obter mais informações, consulte [ScrollView Content Entoques on Ios](scrollview-content-touches.md).
 
-A funcionalidade específica da plataforma a seguir é fornecida para a classe Xamarin. Forms [`Application`](xref:Xamarin.Forms.Application) no IOS:
+A funcionalidade específica da plataforma a seguir é fornecida para a classe [`Application`](xref:Xamarin.Forms.Application) Xamarin. Forms no IOS:
 
 - Desabilitando o dimensionamento de acessibilidade para tamanhos de fonte nomeados. Para obter mais informações, consulte [dimensionamento de acessibilidade para tamanhos de fonte nomeados no Ios](named-font-size-scaling.md).
 - Habilitando o controle de layout e renderização atualizações a serem executadas no thread principal. Para obter mais informações, consulte [principais atualizações de controle de thread no Ios](main-thread-updates-ui.md).
@@ -66,7 +67,7 @@ O Xamarin. Forms permite definir estilos e cores de interface do usuário de pla
 
 [Leia mais](formatting.md) sobre como formatar a interface do usuário usando APIs específicas do IOS, como a configuração **info. plist** e a API `UIAppearance`.
 
-![](images/status-white-sml.png "iOS com temas")
+![](images/status-white-sml.png "iOS Theming")
 
 ## <a name="other-ios-features"></a>Outros recursos do iOS
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 3f3b9c84fad0bce8939187fcd0c91d18314ce8ab
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 2162fba1275b66167965e90aeade721e08ea9130
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73032636"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75489317"
 ---
 # <a name="accessibility-on-macos"></a>Acessibilidade no macOS
 
@@ -23,7 +23,7 @@ Para entender como as APIs de acessibilidade funcionam no macOS (anteriormente c
 
 ## <a name="describing-ui-elements"></a>Descrevendo elementos da interface do usuário
 
-O AppKit usa o protocolo `NSAccessibility` para expor APIs que ajudam a tornar a interface do usuário acessível. Isso inclui um comportamento padrão que tenta definir valores significativos para propriedades de acessibilidade, como definir a `AccessibilityLabel` de um botão. Normalmente, o rótulo é uma única palavra ou frase curta que descreve o controle ou a exibição.
+O AppKit usa o protocolo `NSAccessibility` para expor APIs que ajudam a tornar a interface do usuário acessível. Isso inclui um comportamento padrão que tenta definir valores significativos para propriedades de acessibilidade, como definir a `AccessibilityLabel`de um botão. Normalmente, o rótulo é uma única palavra ou frase curta que descreve o controle ou a exibição.
 
 ### <a name="storyboard-files"></a>Arquivos de storyboard
 
@@ -37,14 +37,14 @@ As informações de acessibilidade podem ser editadas no **Inspetor de identidad
 O Xamarin. Mac não é exposto atualmente como `AccessibilityLabel` setter.  Adicione o seguinte método auxiliar para definir o rótulo de acessibilidade:
 
 ```csharp
-public static class AccessibilityHelper
+public static class AccessibilityHelper
 {
-    [System.Runtime.InteropServices.DllImport (ObjCRuntime.Constants.ObjectiveCLibrary)]
-    extern static void objc_msgSend (IntPtr handle, IntPtr selector, IntPtr label);
+    [System.Runtime.InteropServices.DllImport (ObjCRuntime.Constants.ObjectiveCLibrary)]
+    extern static void objc_msgSend (IntPtr handle, IntPtr selector, IntPtr label);
 
-    static public void SetAccessibilityLabel (this NSView view, string value)
+    static public void SetAccessibilityLabel (this NSView view, string value)
     {
-        objc_msgSend (view.Handle, new ObjCRuntime.Selector ("setAccessibilityLabel:").Handle, new NSString (value).Handle);
+        objc_msgSend (view.Handle, new ObjCRuntime.Selector ("setAccessibilityLabel:").Handle, new NSString (value).Handle);
     }
 }
 ```
@@ -84,7 +84,7 @@ Uma vez habilitado, o Inspetor aparece como uma janela flutuante que pode ser mo
 
 Para obter mais informações, leia o [Guia de acessibilidade de teste para os X](https://developer.apple.com/library/mac/documentation/Accessibility/Conceptual/AccessibilityMacOSX/OSXAXTestingApps.html).
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Acessibilidade entre plataformas](~/cross-platform/app-fundamentals/accessibility.md)
 - [Acessibilidade do Mac](https://www.apple.com/accessibility/mac/)

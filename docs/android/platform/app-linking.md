@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: 0c7df5f1013c912f69514ee08bac56d0c25c99c1
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: af90c286d2bb960a9f78547dd15c3d98a69529ae
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73027742"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75487822"
 ---
 # <a name="app-linking-in-android"></a>Vinculação de aplicativo no Android
 
@@ -36,7 +36,7 @@ Se o usuário não tiver aplicativos instalados que ofereçam suporte ao URI e u
 
 Este guia discutirá como configurar um aplicativo Android 6,0 e como criar e publicar o arquivo de links de ativos digitais para dar suporte à vinculação de aplicativos no Android 6,0.
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>Requisitos do
 
 Este guia requer o Xamarin. Android 6,1 e um aplicativo que tem como alvo o Android 6,0 (API nível 23) ou superior.
 
@@ -192,10 +192,9 @@ Há dois testes que podem ser executados para garantir que os filtros de intenç
 
 Este guia abordou como a vinculação de aplicativos funciona no Android 6,0. Em seguida, ele abordou como configurar um aplicativo Android 6,0 para dar suporte e responder a links de aplicativo. Ele também abordou como testar a vinculação de aplicativos em um aplicativo Android.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Encontrando a assinatura MD5 ou SHA1 do repositório de chaves](~/android/deploy-test/signing/keystore-signature.md)
-- [Atividades e intenções](https://university.xamarin.com/classes#4)
 - [AppLinks](https://developers.facebook.com/docs/applinks)
 - [Links de ativos digitais do Google](https://developers.google.com/digital-asset-links/)
 - [Gerador de lista de instruções e testador](https://developers.google.com/digital-asset-links/tools/generator)

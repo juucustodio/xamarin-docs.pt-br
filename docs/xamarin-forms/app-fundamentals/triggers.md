@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/01/2016
-ms.openlocfilehash: 66323974fa44f5397e21541595a187ce0ba4d061
-ms.sourcegitcommit: 4cf434b126eb7df6b2fd9bb1d71613bf2b6aac0e
+ms.openlocfilehash: 056bb16c76887661f054422b2c682a91e6bfa466
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71997146"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75489889"
 ---
 # <a name="xamarinforms-triggers"></a>Gatilhos do Xamarin.Forms
 
@@ -43,8 +43,9 @@ Este exemplo mostra um gatilho que altera uma cor da tela de fundo `Entry` quand
 <Entry Placeholder="enter name">
     <Entry.Triggers>
         <Trigger TargetType="Entry"
-             Property="IsFocused" Value="True">
+                 Property="IsFocused" Value="True">
             <Setter Property="BackgroundColor" Value="Yellow" />
+            <!-- multiple Setters elements are allowed -->
         </Trigger>
     </Entry.Triggers>
 </Entry>
@@ -74,6 +75,7 @@ Gatilhos também podem ser adicionados a uma declaração `Style` em um controle
                 <Trigger TargetType="Entry"
                          Property="IsFocused" Value="True">
                     <Setter Property="BackgroundColor" Value="Yellow" />
+                    <!-- multiple Setters elements are allowed -->
                 </Trigger>
             </Style.Triggers>
         </Style>
@@ -106,6 +108,7 @@ que é como nos referimos a outras propriedades do controle. Quando o tamanho do
                                        Path=Text.Length}"
                      Value="0">
             <Setter Property="IsEnabled" Value="False" />
+            <!-- multiple Setters elements are allowed -->
         </DataTrigger>
     </Button.Triggers>
 </Button>
@@ -168,7 +171,7 @@ O gatilho de evento pode então ser consumido do XAML:
 
 Tenha cuidado ao compartilhar gatilhos em um `ResourceDictionary`, pois uma instância será compartilhada entre os controles para que qualquer estado que está configurado uma vez se aplique a todos.
 
-Observe que os gatilhos de evento não dão suporte a `EnterActions` nem a `ExitActions` [descrito abaixo](#enterexit).
+Observe que os gatilhos de eventos não dão suporte a `EnterActions` e `ExitActions`[descritos abaixo](#enterexit).
 
 <a name="multi" />
 
@@ -188,8 +191,7 @@ Aqui está um exemplo de um gatilho para um botão que é associado a duas entra
                                    Path=Text.Length}"
                                Value="0" />
     </MultiTrigger.Conditions>
-
-  <Setter Property="IsEnabled" Value="False" />
+    <Setter Property="IsEnabled" Value="False" />
     <!-- multiple Setter elements are allowed -->
 </MultiTrigger>
 ```
@@ -270,7 +272,7 @@ O XAML é mostrado abaixo. Observe as seguintes diferenças do primeiro exemplo 
 Essas capturas de tela mostram a diferença entre os dois exemplos de gatilho múltiplo acima. Na parte superior das telas, a entrada de texto em apenas um `Entry` é suficiente para habilitar o botão **Salvar**.
 Na parte inferior das telas, o botão **Logon** permanece inativo até que ambos os campos contenham dados.
 
-![](triggers-images/multi-requireall.png "Exemplos de MultiTrigger")
+![](triggers-images/multi-requireall.png "MultiTrigger Examples")
 
 <a name="enterexit" />
 
@@ -316,24 +318,23 @@ O código `FadeTriggerAction` é mostrado abaixo:
 ```csharp
 public class FadeTriggerAction : TriggerAction<VisualElement>
 {
-    public FadeTriggerAction() {}
-
     public int StartsFrom { set; get; }
 
-    protected override void Invoke (VisualElement visual)
+    protected override void Invoke(VisualElement sender)
     {
-            visual.Animate("", new Animation( (d)=>{
-                var val = StartsFrom==1 ? d : 1-d;
-                visual.BackgroundColor = Color.FromRgb(1, val, 1);
-
-            }),
-            length:1000, // milliseconds
-            easing: Easing.Linear);
+        sender.Animate("FadeTriggerAction", new Animation((d) =>
+        {
+            var val = StartsFrom == 1 ? d : 1 - d;
+            // so i was aiming for a different color, but then i liked the pink :)
+            sender.BackgroundColor = Color.FromRgb(1, val, 1);
+        }),
+        length: 1000, // milliseconds
+        easing: Easing.Linear);
     }
 }
 ```
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Exemplo de gatilhos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithtriggers)
 - [Documentação da API do Xamarin.Forms](xref:Xamarin.Forms.TriggerAction`1)

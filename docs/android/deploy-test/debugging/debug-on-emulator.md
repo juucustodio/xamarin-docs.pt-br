@@ -7,18 +7,16 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 06/22/2018
-ms.openlocfilehash: 8ca13b4f9c961b8bb206d065ce3cf641a8662160
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 2bc8f82db29ed3c07c67293a83e6874f0cc6acb2
+ms.sourcegitcommit: 5821c9709bf5e06e6126233932f94f9cf3524577
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73028079"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75556516"
 ---
-# <a name="debugging-on-the-android-emulator"></a>Depurando no Android Emulator
+# <a name="debug-on-the-android-emulator"></a>Depurar no Android Emulator
 
 _Este guia mostra como iniciar um dispositivo virtual no Android Emulator para depurar e testar seu aplicativo._
-
-## <a name="overview"></a>Visão Geral
 
 O Android Emulator (instalado como parte da carga de trabalho **Desenvolvimento móvel com .NET**), pode ser executado em várias configurações para simular diferentes dispositivos Android. Cada uma dessas configurações é criada como um _dispositivo virtual_. Neste guia, você aprenderá a iniciar o emulador no Visual Studio e a executar seu aplicativo em um dispositivo virtual. Para obter informações sobre como configurar o Android Emulator e criar novos dispositivos virtuais, consulte [Configuração do Android Emulator](~/android/get-started/installation/android-emulator/index.md).
 
@@ -85,7 +83,7 @@ Após o emulador ser iniciado, o Xamarin.Android implantará o aplicativo no emu
 
 ![Emulador executando um aplicativo em branco](debug-on-emulator-images/emulator-running.png)
 
-O emulador pode ser deixado em execução: não é necessário desligá-lo e aguardar seu reinício toda vez que o aplicativo é iniciado. A primeira vez que um aplicativo Xamarin.Android for executado no emulador, o runtime compartilhado do Xamarin.Android para o nível da API de destino será instalado, seguido pelo aplicativo. A instalação do runtime pode levar alguns minutos, portanto, tenha paciência. A instalação do tempo de execução ocorre somente quando o primeiro aplicativo Xamarin.Android é implantado no emulador &ndash; as implantações subsequentes são mais rápidas porque somente o aplicativo é copiado para o emulador.
+O emulador pode ser deixado em execução: não é necessário desligá-lo e aguardar seu reinício toda vez que o aplicativo é iniciado. A primeira vez que um aplicativo Xamarin.Android for executado no emulador, o runtime compartilhado do Xamarin.Android para o nível da API de destino será instalado, seguido pelo aplicativo. A instalação do runtime pode levar alguns minutos, portanto, tenha paciência. A instalação do runtime ocorre somente quando o primeiro aplicativo Xamarin.Android é implantado no emulador &ndash; as implantações subsequentes são mais rápidas porque somente o aplicativo é copiado para o emulador.
 
 <a name="quick-boot" />
 

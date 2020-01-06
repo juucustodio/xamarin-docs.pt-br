@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/10/2018
-ms.openlocfilehash: 05dfa69a70bcd43b66cf6b572aee7d5720a81d76
-ms.sourcegitcommit: 2e5a6b8bcd1a073b54604f51538fd108e1c2a8e5
+ms.openlocfilehash: 4dedcb0869c1e965679812239b1de09f07efa875
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68869388"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75487614"
 ---
 # <a name="perceived-emotion-recognition-using-the-face-api"></a>Reconhecimento de emoções percebido usando o API de Detecção Facial
 
@@ -20,11 +20,16 @@ ms.locfileid: "68869388"
 
 O API de Detecção Facial pode executar a detecção de emoções para detectar raiva, con, aversão, medo, felicidade, neutro, tristeza e surpresa, em uma expressão facial baseada em anotações observadas por codificadores humanos. No entanto, é importante observar que as expressões faciais sozinhas podem não representar necessariamente os Estados internos das pessoas.
 
-Além de retornar um resultado de emoção para uma expressão facial, a API de Detecção Facial também pode retornar uma caixa delimitadora para faces detectadas. Observe que uma chave de API deve ser obtida para usar a API de detecção facial. Isso pode ser obtido no [Experimente os serviços Cognitivos](https://azure.microsoft.com/try/cognitive-services/?api=face-api).
+Além de retornar um resultado de emoção para uma expressão facial, a API de Detecção Facial também pode retornar uma caixa delimitadora para faces detectadas.
 
 Reconhecimento de emoções pode ser executado por meio de uma biblioteca de cliente e por meio da API REST. Este artigo se concentra em fazer o reconhecimento de emoção por meio da API REST. Para obter mais informações sobre a API REST, consulte [API REST de detecção facial](https://westus.dev.cognitive.microsoft.com/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236).
 
 API de detecção facial também pode ser usada para reconhecer as expressões faciais das pessoas em vídeo e pode retornar um resumo de suas emoções. Para obter mais informações, consulte [como analisar vídeos em tempo real](/azure/cognitive-services/face/face-api-how-to-topics/howtoanalyzevideo_face/).
+
+> [!NOTE]
+> Se você não tiver uma [assinatura do Azure](/azure/guides/developer/azure-developer-guide#understanding-accounts-subscriptions-and-billing), crie uma [conta gratuita](https://aka.ms/azfree-docs-mobileapps) antes de começar.
+
+Uma chave de API deve ser obtida para usar o API de Detecção Facial. Isso pode ser obtido no [Experimente os serviços Cognitivos](https://azure.microsoft.com/try/cognitive-services/?api=face-api).
 
 Para obter mais informações sobre a API de detecção facial, consulte [API de detecção facial](/azure/cognitive-services/face/overview/).
 
@@ -170,7 +175,7 @@ emotionResultLabel.Text = faces.FirstOrDefault().FaceAttributes.Emotion.ToRanked
 
 Captura de tela a seguir mostra o resultado do processo de reconhecimento de emoções no aplicativo de exemplo:
 
-![](emotion-recognition-images/emotion-recognition.png "Reconhecimento de emoções")
+![](emotion-recognition-images/emotion-recognition.png "Emotion Recognition")
 
 ## <a name="related-links"></a>Links relacionados
 

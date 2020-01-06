@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: f49fa08e5d9b2ad76fc069b415d6ea5b899b2bf7
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: a3d0962eb8253ca72b6afce77036e02a7aa59b94
+ms.sourcegitcommit: 6f09bc2b760e76a61a854f55d6a87c4f421ac6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73030783"
+ms.lasthandoff: 01/02/2020
+ms.locfileid: "75607887"
 ---
 # <a name="publishing-to-the-apple-tv-app-store"></a>Como publicar na Apple TV App Store
 
@@ -91,7 +91,7 @@ Faça o seguinte no Visual Studio para Mac:
 5. Selecione e configure os direitos necessários para seu aplicativo Xamarin. tvOS para que eles correspondam à configuração que você executou acima quando você definiu a ID do aplicativo.
 6. Salve as alterações no arquivo `Entitlements.plist`.
 
-Para obter instruções detalhadas, consulte a documentação [Provisionamento para Serviços de Aplicativo](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#appservices). Embora este documento tenha sido escrito para iOS, as mesmas etapas são usadas para provisionar um aplicativo Xamarin. tvOS.
+Para obter instruções detalhadas, consulte a documentação [Provisionamento para Serviços de Aplicativo](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#provisioning-for-application-services). Embora este documento tenha sido escrito para iOS, as mesmas etapas são usadas para provisionar um aplicativo Xamarin. tvOS.
 
 <a name="Setting_the_Apps_Icons_and_Launch_Screens" />
 
@@ -221,7 +221,7 @@ Se você estiver tendo problemas para enviar seu aplicativo Xamarin. tvOS para a
 
 Este artigo apresentou um guia passo a passo para configurar, compilar e enviar um aplicativo para publicação da loja de aplicativos da Apple TV. Primeiro, ele abordou as etapas necessárias para criar e instalar um perfil de provisionamento de distribuição. Em seguida, ele analisou como usar Visual Studio para Mac para criar uma compilação de distribuição. Por fim, ele mostrou como usar o iTunes Connect e a ferramenta de arquivamento Xcode para enviar um aplicativo para a loja de aplicativos da Apple TV.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Trabalhar com ícones e imagens](~/ios/tvos/app-fundamentals/icons-images.md)
 - [Preparar o envio de seu aplicativo para a nova Apple TV](https://developer.apple.com/tvos/submit/)

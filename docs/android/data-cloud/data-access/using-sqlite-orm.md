@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 04/18/2018
-ms.openlocfilehash: 96f084dc49a5558767b162eee59eff722f247904
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: ff59213a730b74b916b993c48a6f5f779149a6f9
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73023679"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75488069"
 ---
 # <a name="using-sqlitenet-with-android"></a>Usando o SQLite.NET com o Android
 
@@ -23,7 +23,7 @@ Para incluir a biblioteca SQLite.NET em um aplicativo Xamarin, adicione o seguin
 - **Nome do pacote:** SQLite-net-PCL
 - **Autor:** Frank A. Krueger
 - **Id:** sqlite-net-pcl
-- **URL:** [NuGet.org/packages/SQLite-net-PCL](https://www.nuget.org/packages/sqlite-net-pcl/)
+- **Url:** [nuget.org/packages/sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)
 
 [![Pacote NuGet do SQLite.NET](using-sqlite-orm-images/image1a-sml.png "Pacote NuGet do SQLite.NET")](using-sqlite-orm-images/image1a.png#lightbox)
 
@@ -128,9 +128,9 @@ Os atributos comuns que você pode aplicar às suas classes para controlar como 
 
 - **[AutoIncrement]** &ndash; esse atributo fará com que o valor de uma propriedade de inteiro seja incrementado automaticamente para cada novo objeto inserido no banco de dados
 
-- **[Column (Name)]** &ndash; fornecer o parâmetro opcional `name` substituirá o valor padrão do nome da coluna de banco de dados subjacente (que é o mesmo que a propriedade).
+- **[Column (Name)]** &ndash; parâmetro `name` define o nome da coluna de banco de dados subjacente.
 
-- **[Table (Name)]** &ndash; marca a classe como sendo capaz de ser armazenada em uma tabela SQLite subjacente. A especificação do parâmetro de nome opcional substituirá o valor padrão do nome da tabela de banco de dados subjacente (que é o mesmo que o nome da classe).
+- **[Table (Name)]** &ndash; marca a classe como sendo capaz de ser armazenada em uma tabela SQLite subjacente com o nome especificado.
 
 - **[MaxLength (value)]** &ndash; restringir o comprimento de uma propriedade de texto quando uma tentativa de inserção de banco de dados é tentada. O consumo de código deve validar isso antes de inserir o objeto, pois esse atributo só é "verificado" quando uma operação de inserção ou atualização de banco de dados é tentada.
 
@@ -139,7 +139,7 @@ Os atributos comuns que você pode aplicar às suas classes para controlar como 
 
 - **[Unique]** &ndash; garante que os valores na coluna banco de dados subjacente sejam exclusivos.
 
-A maioria desses atributos são opcionais, o SQLite usará valores padrão para nomes de tabela e coluna. Você sempre deve especificar uma chave primária de inteiro para que as consultas seleção e exclusão possam ser executadas com eficiência em seus dados.
+A maioria desses atributos é opcional. Você sempre deve especificar uma chave primária de inteiro para que as consultas seleção e exclusão possam ser executadas com eficiência em seus dados.
 
 ## <a name="more-complex-queries"></a>Consultas mais complexas
 
@@ -236,7 +236,7 @@ A versão Android do SQLite tem uma limitação que requer mais algumas etapas. 
 
 Essa solução alternativa também funciona para a biblioteca de `Mono.Data.Sqlite`. Para obter mais informações sobre SQLite e multithreading, consulte [SQLite e vários threads](https://www.sqlite.org/threadsafe.html).
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [DataAccess básico (exemplo)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Basic)
 - [DataAccess avançado (exemplo)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Advanced)

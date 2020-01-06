@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/06/2018
-ms.openlocfilehash: b2b7c2cc87b37ae0e7397988e37df6b9b1e3aa10
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: f64b57e73b69b3111087ca1352f5fb9536f855e5
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73029383"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75488953"
 ---
 # <a name="actionbar-for-xamarinandroid"></a>ActionBar para Xamarin. Android
 
@@ -138,9 +138,7 @@ Intent CreateIntent ()
 
 A imagem no exemplo de código acima é incluída como um ativo com o aplicativo e copiada para um local publicamente acessível quando a atividade é criada, portanto, ela poderá ser acessada por outros aplicativos, como o aplicativo de mensagens. O código de exemplo que acompanha este artigo contém a fonte completa deste exemplo, ilustrando seu uso.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [As guias de saudação do ICS (exemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/hellotabsics)
 - [Demonstração do ShareActionProvider (exemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/shareactionproviderdemo)
-- [Introdução ao sanduíche de sorvete](https://www.android.com/about/ice-cream-sandwich/)
-- [Plataforma Android 4,0](https://developer.android.com/sdk/android-4.0.html)

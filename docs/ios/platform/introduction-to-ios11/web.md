@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/12/2017
-ms.openlocfilehash: ef9577aad756ae67ac9fed685d7e40faea33c316
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: c52ac3c0f06d58ab5fff8228ca3bdf722056b5b6
+ms.sourcegitcommit: bad1ab3f78d7f94d48511666626b54f8ba155689
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73032061"
+ms.lasthandoff: 01/04/2020
+ms.locfileid: "75663441"
 ---
 # <a name="webkit-and-safari-changes-in-ios-11"></a>O WebKit e o Safari são alterados no iOS 11
 
@@ -20,7 +20,7 @@ o iOS 11 apresenta uma nova versão do navegador da Web do safari – Safari 11,
 
 ## <a name="safariservices"></a>Safariservices
 
-`SFSafariViewController` foi introduzido no iOS 9 como uma opção para exibir o conteúdo da Web ou autenticar usuários do seu aplicativo. Mais informações sobre seus recursos podem ser encontradas no guia de [modos de exibição da Web](~/ios/user-interface/controls/uiwebview.md#safariviewcontroller) .
+`SFSafariViewController` foi introduzido no iOS 9 como uma opção para exibir o conteúdo da Web ou autenticar usuários do seu aplicativo. Mais informações sobre seus recursos podem ser encontradas no guia de [modos de exibição da Web](~/ios/user-interface/controls/webview.md#sfsafariviewcontroller) .
 
 o iOS 11 introduziu atualizações de estilo para o controlador de exibição do Safari, dando a seus usuários uma experiência mais direta entre um aplicativo e a Web. Por exemplo, a remoção da barra de endereços agora dá ao controlador de exibição do Safari a sensação de um navegador no aplicativo, em vez de um mini-navegador. Você também pode personalizar o esquema de cores para se ajustar ao esquema de cores do seu aplicativo definindo as propriedades `preferredBarTintColor` e `PreferredControlTintColor`:
 
@@ -66,7 +66,7 @@ A Apple introduziu três aprimoramentos principais para `WKWebView` com o iOS 11
 
 - A capacidade de gerenciar cookies
 - Filtragem de conteúdo
-- Carregamento de recursos personalizados. 
+- Carregamento de recursos personalizados
 
 O gerenciamento de cookies é feito por meio da nova classe [`WKHttpCookieStore`](https://developer.apple.com/documentation/webkit/wkhttpcookiestore) , que permite adicionar e Excluir cookies, obter todos os cookies armazenados em um WKWebView e observar o repositório de cookies para alterações.
 

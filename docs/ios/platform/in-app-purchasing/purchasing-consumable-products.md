@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: 5af4ba8057070481728948635352e1ec2484a0d4
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: fb8cd050c789e165c1774398a3a2cc8e0467bde1
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73032344"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75489018"
 ---
 # <a name="purchasing-consumable-products-in-xamarinios"></a>Comprando produtos consumíveis no Xamarin. iOS
 
@@ -74,7 +74,7 @@ buy10Button.TouchUpInside += (sender, e) => {
 A segunda parte da interface do usuário está tratando a notificação de que a transação foi bem-sucedida, nesse caso, atualizando o saldo exibido:
 
 ```csharp
-priceObserver = NSNotificationCenter.DefaultCenter.AddObserver (InAppPurchaseManager.InAppPurchaseManagerTransactionSucceededNotification,
+succeededObserver = NSNotificationCenter.DefaultCenter.AddObserver (InAppPurchaseManager.InAppPurchaseManagerTransactionSucceededNotification,
 (notification) => {
    balanceLabel.Text = CreditManager.Balance() + " monkey credits";
 });
@@ -325,7 +325,7 @@ O aplicativo tem esta aparência quando o recurso de **compras no aplicativo** �
 
  [![o aplicativo tem esta aparência quando o recurso de compras no aplicativo está restrito, os botões de compra estão desabilitados](purchasing-consumable-products-images/image32.png)](purchasing-consumable-products-images/image32.png#lightbox)   
 
-As informações do produto ainda podem ser solicitadas quando `CanMakePayments` for false, para que o aplicativo ainda possa recuperar e exibir os preços. Isso significa que, se removermos a verificação de `CanMakePayments` do código, os botões de compra ainda estarão ativos; no entanto, quando uma compra for tentada, o usuário verá uma mensagem informando que as **compras no aplicativo não são permitidas** (geradas pelo StoreKit quando a fila de pagamento é acessado):   
+As informações do produto ainda podem ser solicitadas quando `CanMakePayments` for false, para que o aplicativo ainda possa recuperar e exibir os preços. Isso significa que, se removermos a verificação de `CanMakePayments` do código, os botões de compra ainda estarão ativos, no entanto, quando uma compra for tentada, o usuário verá uma mensagem informando que as **compras no aplicativo não são permitidas** (geradas pelo StoreKit quando a fila de pagamento é acessada):   
 
  [![compras no aplicativo não são permitidas](purchasing-consumable-products-images/image33.png)](purchasing-consumable-products-images/image33.png#lightbox)   
 

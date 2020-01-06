@@ -6,13 +6,13 @@ ms.assetid: 3FC2FBD1-C30B-4408-97B2-B04E3A2E4F03
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/28/2019
-ms.openlocfilehash: 022aa9f1aeb2961d98b52747441e875bd89a584a
-ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
-ms.translationtype: HT
+ms.date: 12/05/2019
+ms.openlocfilehash: e207949d607219393ffeb51fce818ddfb68ae344
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68739324"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75489902"
 ---
 # <a name="xamarinforms-shell-page-configuration"></a>Configuração da Página do Shell do Xamarin.Forms
 
@@ -86,6 +86,21 @@ Como alternativa, as propriedades de cor podem ser definidas com um estilo XAML:
 
 Confira mais informações sobre os estilos XAML em [Aplicar estilo a aplicativos do Xamarin.Forms usando os estilos do XAML](~/xamarin-forms/user-interface/styles/xaml/index.md).
 
+## <a name="enable-navigation-bar-shadow"></a>Habilitar sombra da barra de navegação
+
+A classe `Shell` define a propriedade anexada `NavBarHasShadow`, do tipo `bool`, que controla se a barra de navegação tem uma sombra. Por padrão, o valor da propriedade é `false`.
+
+Embora essa propriedade possa ser definida em um objeto de `Shell` de subclasse, ela também pode ser definida em todas as páginas que desejam habilitar a sombra da barra de navegação. Por exemplo, o XAML a seguir mostra a habilitação da sombra da barra de navegação de um [`ContentPage`](xref:Xamarin.Forms.ContentPage):
+
+```xaml
+<ContentPage ...
+             Shell.NavBarHasShadow="true">
+    ...
+</ContentPage>
+```
+
+Isso resulta na habilitação da sombra da barra de navegação.
+
 ## <a name="disable-the-navigation-bar"></a>Desabilitar a barra de navegação
 
 A classe `Shell` define a propriedade anexada `NavBarIsVisible`, do tipo `bool`, que controla se a barra de navegação deve estar visível quando uma página é apresentada. Por padrão, o valor da propriedade é `true`.
@@ -101,7 +116,7 @@ Embora essa propriedade possa ser definida em um objeto `Shell` na subclasse, el
 
 Isso torna o painel de navegação invisível quando a página é apresentada:
 
-![Captura de tela da página do Shell com uma barra de navegação invisível, no iOS e no Android](configuration-images/navigationbar-invisible.png "Página do Shell com a barra de navegação invisível")
+![Captura de tela da página do shell com uma barra de navegação invisível, no iOS e no Android](configuration-images/navigationbar-invisible.png "Página do shell com barra de navegação invisível")
 
 ## <a name="disable-the-tab-bar"></a>Desabilitar a barra de guias
 
@@ -118,7 +133,7 @@ Embora essa propriedade possa ser definida em um objeto `Shell` na subclasse, el
 
 Isso torna o painel de guias invisível quando a página é apresentada:
 
-![Captura de tela da página do Shell com uma barra de guias invisível, no iOS e no Android](configuration-images/tabbar-invisible.png "Página do Shell com a barra de guias invisível")
+![Captura de tela da página do shell com uma barra de guias invisível, no iOS e no Android](configuration-images/tabbar-invisible.png "Página do shell com barra de guias invisível")
 
 ## <a name="display-views-in-the-navigation-bar"></a>Exibir modos de exibição na barra de navegação
 
@@ -139,7 +154,7 @@ Embora essa propriedade possa ser definida em um objeto `Shell` na subclasse, el
 
 Isso faz com que uma imagem seja exibido na barra de navegação na página:
 
-![Captura de tela da página do Shell com uma visualização de título, no iOS e no Android](configuration-images/titleview.png "Página do Shell com uma exibição de título")
+![Captura de tela da página do shell com uma exibição de título, no iOS e no Android](configuration-images/titleview.png "Página do shell com um modo de exibição de título")
 
 > [!IMPORTANT]
 > Se a barra de navegação for definida como invisível, com a propriedade anexada `NavBarIsVisible`, a exibição de título não será exibida.

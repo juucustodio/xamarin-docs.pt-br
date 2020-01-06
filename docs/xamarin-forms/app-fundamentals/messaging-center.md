@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/08/2019
-ms.openlocfilehash: 8d5de8bac6cc61b0874c978a6443ca4490015457
-ms.sourcegitcommit: eb23b7d745d1090376f9def07e0f11cb089494d0
+ms.openlocfilehash: 0e5fd88678becd7becfcb1c43e14b1e33aad72de
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72170971"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75489868"
 ---
 # <a name="xamarinforms-messagingcenter"></a>Xamarin.Forms MessagingCenter
 
-[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/usingmessagingcenter)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/usingmessagingcenter)
 
 O padrão de publicação-assinatura é um padrão de troca de mensagens em que os publicadores enviam mensagens sem ter conhecimento de nenhum receptor, conhecido como assinante. Da mesma forma, os assinantes escutam mensagens específicas, sem ter conhecimento de nenhum publicador.
 
@@ -26,7 +26,7 @@ A classe [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) do Xamarin.Form
 
 A classe [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) fornece a funcionalidade de publicação-assinatura multicast. Isso significa que pode haver vários publicadores que publicam uma única mensagem e pode haver vários assinantes ouvindo a mesma mensagem:
 
-![](messaging-center-images/messaging-center.png "Funcionalidade de publicação-assinatura multicast")
+![](messaging-center-images/messaging-center.png "Multicast publish-subscribe functionality")
 
 Os publicadores enviam mensagens usando o método [`MessagingCenter.Send`](xref:Xamarin.Forms.MessagingCenter.Send*), enquanto os assinantes ouvem mensagens usando o método [`MessagingCenter.Subscribe`](xref:Xamarin.Forms.MessagingCenter.Subscribe*). Além disso, os assinantes também podem cancelar a assinatura de mensagens, se necessário, usando o método [`MessagingCenter.Unsubscribe`](xref:Xamarin.Forms.MessagingCenter.Unsubscribe*).
 
@@ -82,6 +82,9 @@ MessagingCenter.Subscribe<MainPage, string>(this, "Hi", async (sender, arg) =>
 ```
 
 Neste exemplo, o método [`Subscribe`](xref:Xamarin.Forms.MessagingCenter.Subscribe*) assina mensagens `Hi` enviadas pelo tipo `MainPage`, cujos dados de payload são um `string`. Um delegado de retorno de chamada é executado em resposta ao recebimento desse tipo de mensagem, que exibe os dados de payload em um alerta.
+
+> [!IMPORTANT]
+> O delegado executado pelo método `Subscribe` será executado no mesmo thread que publica a mensagem usando o método `Send`.
 
 ## <a name="unsubscribe-from-a-message"></a>Cancelar a assinatura de uma mensagem
 

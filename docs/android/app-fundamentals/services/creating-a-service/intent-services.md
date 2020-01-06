@@ -6,16 +6,14 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: c58787a051bfc965cb7493138ed6114ac23ed04d
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: acf8824c7a575bca37301a409bdf6d5f42cca622
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73024839"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75488056"
 ---
 # <a name="intent-services-in-xamarinandroid"></a>Serviços de intenção no Xamarin. Android
-
-## <a name="intent-services-overview"></a>Visão geral dos serviços de intenção
 
 Os serviços iniciados e vinculados são executados no thread principal, o que significa que, para manter o desempenho suave, um serviço precisa executar o trabalho de forma assíncrona. Uma das maneiras mais simples de resolver essa preocupação é com um _padrão de processador de fila de trabalho_, em que o trabalho a ser feito é colocado em uma fila que é atendida por um único thread.
 
@@ -57,8 +55,7 @@ O trabalho é enviado para um `IntentService` instanciando um `Intent` e, em seg
 Intent downloadIntent = new Intent(this, typeof(DemoIntentService));
 
 // This is just one example of passing some values to an IntentService via the Intent:
-downloadIntent.Put
-("file_to_download", "http://www.somewhere.com/file/to/download.zip");
+downloadIntent.PutPutExtra("file_to_download", "http://www.somewhere.com/file/to/download.zip");
 
 StartService(downloadIntent);
 ```
@@ -74,7 +71,7 @@ protected override void OnHandleIntent (Android.Content.Intent intent)
 }
 ```
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [IntentService](xref:Android.App.IntentService)
 - [StartService](xref:Android.Content.Context.StartService*)

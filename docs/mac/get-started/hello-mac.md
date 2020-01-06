@@ -8,12 +8,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 09/02/2018
-ms.openlocfilehash: cb5eb783109f4758fcbc997c4f2bf4a93aaa262b
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: b56275ef903aa7def239a2e19980f52d83e6194f
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73018137"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75489733"
 ---
 # <a name="hello-mac-walkthrough"></a>Olá, Mac – passo a passo
 
@@ -33,12 +33,12 @@ Os seguintes conceitos serão abordados:
 - **Saídas e ações** – como usar saídas e ações para conectar controles na interface do usuário.
 - **Teste/implantação** – como executar e testar um aplicativo Xamarin.Mac.
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>Requisitos do
 
 O desenvolvimento de aplicativos Xamarin.Mac requer:
 
 - Um computador Mac executando o macOS High Sierra (10.13) ou superior.
-- [Xcode 9 ou superior](https://itunes.apple.com/us/app/xcode/id497799835?mt=12).
+- [Xcode 10 ou superior](https://itunes.apple.com/us/app/xcode/id497799835?mt=12).
 - A versão mais recente do [Xamarin.Mac e do Visual Studio para Mac](https://docs.microsoft.com/visualstudio/mac/installation/).
 
 Para executar um aplicativo criado com o Xamarin.Mac, você precisará do seguinte:
@@ -589,7 +589,7 @@ O código do SourceWriter foi totalmente comentado e, quando disponível, foram 
 
 Este artigo abordou os conceitos básicos de um aplicativo Xamarin.Mac padrão. Ele abordou a criação de um novo aplicativo no Visual Studio para Mac, a concepção da interface do usuário no Xcode e Interface Builder, a exposição dos elementos da interface do usuário ao código C# usando **Saídas** e **Ações**, a adição de código para trabalhar com os elementos de interface do usuário e, por fim, a compilação e teste de um aplicativo Xamarin.Mac.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Hello, Mac (amostra)](https://docs.microsoft.com/samples/xamarin/mac-samples/hello-mac)
 - [Diretrizes de Interface Humana do macOS](https://developer.apple.com/design/human-interface-guidelines/macos/overview/themes/)

@@ -6,13 +6,13 @@ ms.assetid: FEDE51EB-577E-4B3E-9890-B7C1A5E52516
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/19/2019
-ms.openlocfilehash: c7ddcf443e3834e6c9e9518779a016d69ad7e204
-ms.sourcegitcommit: 18891db12c9d47224326af5753eccad8a904a188
+ms.date: 11/05/2019
+ms.openlocfilehash: 4049b3bdfdd6077dcfa151df9553722e63def0ba
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/24/2019
-ms.locfileid: "74451811"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75489954"
 ---
 # <a name="xamarinforms-shell-flyout"></a>Submenu Shell do Xamarin.Forms
 
@@ -247,6 +247,23 @@ Além disso, a classe `FlyoutItem` expõe os seguintes métodos substituíveis:
 - `TabIndexDefaultValueCreator`, retorna um `int` e é chamado para definir o valor padrão da propriedade `TabIndex`.
 - `TabStopDefaultValueCreator`, retorna um `bool` e é chamado para definir o valor padrão da propriedade `TabStop`.
 
+## <a name="flyout-vertical-scroll"></a>Rolagem vertical do submenu
+
+Por padrão, um submenu pode ser rolado verticalmente quando os itens do submenu não se ajustam ao submenu. Esse comportamento pode ser alterado definindo a propriedade `Shell.FlyoutVerticalScrollMode` vinculável como um dos membros da enumeração `ScrollMode`:
+
+- `Disabled` – indica que a rolagem vertical será desabilitada.
+- `Enabled` – indica que a rolagem vertical será habilitada.
+- `Auto` – indica que a rolagem vertical será habilitada se os itens do submenu não couberem no submenu. Este é o valor padrão da propriedade `Shell.FlyoutVerticalScrollMode`.
+
+O exemplo a seguir mostra como desabilitar a rolagem vertical:
+
+```xaml
+<Shell ...
+       FlyoutVerticalScrollMode="Disabled"
+    ...
+</Shell>
+```
+
 ## <a name="flyout-display-options"></a>Opções de exibição do submenu
 
 A enumeração `FlyoutDisplayOptions` define os seguintes membros:
@@ -436,7 +453,7 @@ A classe `Shell` tem uma propriedade associável denominada `CurrentItem`, do ti
 
 Esse código define o objeto `ShellContent` denominado `aboutItem` como a propriedade `CurrentItem`, o que faz com que ele seja exibido. Nesse exemplo, uma conversão implícita é usada para encapsular o objeto `ShellContent` em um objeto `Tab`, que é encapsulado em um objeto `FlyoutItem`.
 
-O código C# equivalente é:
+Este é o código C# equivalente:
 
 ```csharp
 Shell.Current.CurrentItem = aboutItem;

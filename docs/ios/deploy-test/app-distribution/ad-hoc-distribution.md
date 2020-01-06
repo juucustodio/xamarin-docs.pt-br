@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 74e258eeca78260fbfe3811e1dc6d8051e68e5f2
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 16ae440ec2fe3b5898c8f92d993279ef5e7e9794
+ms.sourcegitcommit: 6f09bc2b760e76a61a854f55d6a87c4f421ac6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73030248"
+ms.lasthandoff: 01/02/2020
+ms.locfileid: "75607913"
 ---
 # <a name="ad-hoc-distribution-for-xamarinios-apps"></a>Distribuição Ad Hoc para aplicativos Xamarin.iOS
 
@@ -84,7 +84,7 @@ Como com qualquer outro Perfil de Provisionamento que você criar, uma ID do Apl
 3. O prefixo do aplicativo já deve estar definido como sua ID de Equipe e não pode ser alterado. Selecione uma ID do Aplicativo Explícita ou Curinga e insira uma ID de Pacote no formato DNS inverso, como:
     - **Explícito**: `com.[DomainName].[AppName]`
     - **Curinga**: `com.[DomainName].*`
-4. Selecione [App Services (Serviços de Aplicativos)](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#appservices) que seu aplicativo solicitar.
+4. Selecione [App Services (Serviços de Aplicativos)](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#provisioning-for-application-services) que seu aplicativo solicitar.
 5. Clique no botão **Continuar** e siga as instruções na tela para criar a nova ID do Aplicativo.
 
 Depois de obter os componentes obrigatórios necessários para criar um Perfil de Distribuição, siga as etapas abaixo para criá-lo:
@@ -178,9 +178,9 @@ Para obter mais informações sobre como criar um IPA, consulte [Suporte do IPA]
 
 Este artigo explicou os mecanismos de distribuição Ad Hoc, que são necessários para testar aplicativos Xamarin.iOS.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Distribuição da App Store](~/ios/deploy-test/app-distribution/app-store-distribution/index.md)
-- [Distribuição Interna](~/ios/deploy-test/app-distribution/in-house-distribution.md)
+- [Distribuição interna](~/ios/deploy-test/app-distribution/in-house-distribution.md)
 - [O arquivo iTunesMetadata.plist](~/ios/deploy-test/app-distribution/itunesmetadata.md)
 - [Suporte a IPA](~/ios/deploy-test/app-distribution/ipa-support.md)

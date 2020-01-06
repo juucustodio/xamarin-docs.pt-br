@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: maddyleger1
 ms.author: maleger
 ms.date: 08/13/2019
-ms.openlocfilehash: 0f3ff5357d3fb4c60a910dda6befa8c699c6fc07
-ms.sourcegitcommit: 5f7749d6ba1db79aa0fbf4ee7c90f2dcd4de812b
+ms.openlocfilehash: d94f18d00ebf6eeec5f33343b5c0f985ba2a6ea8
+ms.sourcegitcommit: 9ab907e053c57fc96419149f83187bc3e8983a6b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74884118"
+ms.lasthandoff: 01/04/2020
+ms.locfileid: "75655401"
 ---
 # <a name="xaml-hot-reload-for-xamarinforms-preview"></a>Hot recarregamento de XAML para Xamarin. Forms (visualização)
 
@@ -20,6 +20,8 @@ Os Hot recarregamento de XAML são conectados ao fluxo de trabalho existente par
 
 > [!NOTE]
 > Se você estiver escrevendo um aplicativo do WPF ou UWP, confira [Hot recarregamento de XAML para UWP e WPF](/visualstudio/debugger/xaml-hot-reload).
+>
+> O Hot recarregamento de XAML para Xamarin. _Forms não funciona_ atualmente para projetos UWP Xamarin. Forms.
 
 ## <a name="system-requirements"></a>Requisitos do sistema
 
@@ -49,6 +51,7 @@ Se você fizer uma alteração que o Hot recarregamento de XAML não possa recar
 - Todas as referências criadas por meio da atribuição de um controle a outro campo ou propriedade usando seu valor `x:Name` não serão recarregadas.
 - Atualizar a hierarquia visual do aplicativo Shell no **AppShell. XAML** pode causar problemas ao manter o estado do seu aplicativo. Recompile o aplicativo para continuar recarregando.
 - O Hot recarregamento de XAML não C# pode recarregar o código, incluindo manipuladores de eventos, controles personalizados, code-behind de página e classes adicionais.
+- Não _funciona em_ outras plataformas Xamarin. Forms com suporte (como Mac os ou UWP).
 
 ## <a name="migrate-from-the-private-preview"></a>Migrar da versão prévia privada
 

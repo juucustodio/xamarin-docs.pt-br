@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 06/25/2018
-ms.openlocfilehash: bf0a099546b2d5610a639cbf9af4c7676d10bef9
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 371876d087c7027d4cfe2d2d9ada8b0dbedb5dd5
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73020046"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75488966"
 ---
 # <a name="obtaining-a-google-maps-api-key"></a>Obter uma chave de API do Google Maps
 
@@ -39,7 +39,7 @@ Por padrão, o repositório de chaves que é usado para assinar versões de depu
 
 Informações sobre um repositório de chaves são obtidas executando o comando `keytool` no JDK. Normalmente, essa ferramenta é encontrada no diretório bin do Java:
 
-**C:\\arquivos de programas (x86)\\Java\\JDK [versão]\\bin\\keytool. exe**
+**C:\\arquivos de programas\\Android\\JDK\\microsoft_dist_openjdk_ [versão]\\bin\\keytool. exe**
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
@@ -49,7 +49,7 @@ Por padrão, o repositório de chaves que é usado para assinar versões de depu
 
 Informações sobre um repositório de chaves são obtidas executando o comando `keytool` no JDK. Normalmente, essa ferramenta é encontrada no diretório bin do Java:
 
-**/System/Library/Java/JavaVirtualMachines/[VERSION]. JDK/Contents/Home/bin/keytool**
+**/System/Library/Java/JavaVirtualMachines/[VERSION].jdk/Contents/Home/bin/keytool**
 
 -----
 
@@ -133,11 +133,11 @@ Após a criação do projeto de API do **console do desenvolvedor do Google** , 
 
 1. Na página **SDK do Maps para Android** exibida (depois de clicar em **habilitar** na etapa anterior), vá para a guia **credenciais** e clique no botão **criar credenciais** :
 
-   [SDK do Maps![para mensagem de credenciais do Android](obtaining-a-google-maps-api-key-images/05-api-is-enabled-vs-sml.png)](obtaining-a-google-maps-api-key-images/05-api-is-enabled-vs.png#lightbox)
+   [SDK do Maps ![para mensagem de credenciais do Android](obtaining-a-google-maps-api-key-images/05-api-is-enabled-vs-sml.png)](obtaining-a-google-maps-api-key-images/05-api-is-enabled-vs.png#lightbox)
 
 2. Clique em **chave de API**:
 
-   [caixa de diálogo![adicionar credenciais ao seu projeto](obtaining-a-google-maps-api-key-images/06-add-credentials-to-your-project-vs-sml.png)](obtaining-a-google-maps-api-key-images/06-add-credentials-to-your-project-vs.png#lightbox)
+   [caixa de diálogo ![adicionar credenciais ao seu projeto](obtaining-a-google-maps-api-key-images/06-add-credentials-to-your-project-vs-sml.png)](obtaining-a-google-maps-api-key-images/06-add-credentials-to-your-project-vs.png#lightbox)
 
 3. Depois que esse botão é clicado, a chave de API é gerada. Em seguida, é necessário restringir essa chave para que apenas seu aplicativo possa chamar APIs com essa chave. Clique em **restringir chave**:
 
@@ -155,7 +155,7 @@ Após a criação do projeto de API do **console do desenvolvedor do Google** , 
 
    [![nome do pacote inserido é com. xamarin. docs. Android. map](obtaining-a-google-maps-api-key-images/10-enter-package-and-sha1-vs-sml.png)](obtaining-a-google-maps-api-key-images/10-enter-package-and-sha1-vs.png#lightbox)
 
-7. Observe que, para que seu APK acesse o Google Maps, você deve incluir impressões digitais e nomes de pacote do SHA-1 para cada repositório de chaves (depuração e versão) que você usa para assinar seu APK. Por exemplo, se você usar um computador para depuração e outro computador para gerar a versão APK, deverá incluir a impressão digital do certificado SHA-1 do repositório de chaves de depuração do primeiro computador e a impressão digital do certificado SHA-1 do repositório de chaves de lançamento do o segundo computador. Clique em **+ adicionar nome do pacote e impressão digital** para adicionar outra impressão digital e o nome do pacote, conforme mostrado neste exemplo:
+7. Observe que, na ordem de seu APK acessar o Google Maps, você deve incluir as impressões digitais de SHA-1 e nomes para cada repositório de chaves (depuração e versão) que você usa para assinar o APK do pacote. Por exemplo, se você usar um computador para outro computador para gerar a versão APK e de depuração, você deve incluir a impressão digital SHA-1 do certificado do repositório de chaves de depuração do primeiro computador e a impressão digital do certificado SHA-1 do repositório de chaves de versão o segundo computador. Clique em **+ adicionar nome do pacote e impressão digital** para adicionar outra impressão digital e o nome do pacote, conforme mostrado neste exemplo:
 
    [![adicionar outra impressão digital cria outro certificado SHA-1](obtaining-a-google-maps-api-key-images/11-second-fingerprint-vs-sml.png)](obtaining-a-google-maps-api-key-images/11-second-fingerprint-vs.png#lightbox)
 
@@ -192,7 +192,7 @@ Por fim, adicione essa chave de API ao arquivo **AndroidManifest. xml** do seu a
 </manifest>
 ```
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Console de APIs do Google](https://code.google.com/apis/console/)
 - [A chave de API do Google Maps](https://developers.google.com/maps/documentation/android/start#the_google_maps_api_key)

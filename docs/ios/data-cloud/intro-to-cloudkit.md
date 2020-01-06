@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/11/2016
-ms.openlocfilehash: 01c8df7cc17c71cd2ddd55e7ed1f5a8e21617604
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 29ccb919f68a45212bff3b66b4bc3fbdebd24faf
+ms.sourcegitcommit: bad1ab3f78d7f94d48511666626b54f8ba155689
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73030456"
+ms.lasthandoff: 01/04/2020
+ms.locfileid: "75663454"
 ---
 # <a name="cloudkit-in-xamarinios"></a>CloudKit no Xamarin. iOS
 
@@ -23,7 +23,7 @@ Os desenvolvedores podem se concentrar em seus aplicativos do lado do cliente e 
 > [!IMPORTANT]
 > A Apple [fornece ferramentas](https://developer.apple.com/support/allowing-users-to-manage-data/) para ajudar os desenvolvedores a lidar adequadamente com o GDPR (Regulamento Geral sobre a Proteção de Dados) da União Europeia.
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>Requisitos do
 
 O seguinte é necessário para concluir as etapas apresentadas neste artigo:
 
@@ -33,9 +33,9 @@ O seguinte é necessário para concluir as etapas apresentadas neste artigo:
 
 ## <a name="what-is-cloudkit"></a>O que é o CloudKit?
 
-CloudKit é uma maneira de fornecer ao desenvolvedor acesso aos servidores iCloud. Ele fornece a base para a unidade iCloud e para a biblioteca de fotos do iCloud. O CloudKit tem suporte em dispositivos Mac OS X e iOS da Apple.
+CloudKit é uma maneira de fornecer ao desenvolvedor acesso aos servidores iCloud. Ele fornece a base para a unidade iCloud e para a biblioteca de fotos do iCloud. O CloudKit tem suporte em dispositivos macOS e iOS.
 
- [![](intro-to-cloudkit-images/image1.png "How CloudKit is supported on both Mac OS X and Apple iOS Devices")](intro-to-cloudkit-images/image1.png#lightbox)
+[![como o CloudKit tem suporte em dispositivos macOS e iOS](intro-to-cloudkit-images/image1.png)](intro-to-cloudkit-images/image1.png#lightbox)
 
 O CloudKit usa a infraestrutura de conta do iCloud. Se houver um usuário conectado em uma conta do iCloud no dispositivo, o CloudKit usará sua ID para identificar o usuário. Se nenhuma conta estiver disponível, o acesso limitado somente leitura será fornecido.
 
@@ -50,23 +50,24 @@ No momento da elaboração deste artigo, a Apple está inicialmente fornecendo C
 
 ## <a name="enabling-cloudkit-in-a-xamarin-application"></a>Habilitando CloudKit em um aplicativo Xamarin
 
-Antes que um aplicativo Xamarin possa utilizar a estrutura CloudKit, o aplicativo deve ser provisionado corretamente conforme detalhado nos guias [trabalhando com recursos](~/ios/deploy-test/provisioning/capabilities/icloud-capabilities.md) e [trabalhando com direitos](~/ios/deploy-test/provisioning/entitlements.md)
+Antes que um aplicativo Xamarin possa utilizar a estrutura CloudKit, o aplicativo deve ser provisionado corretamente conforme detalhado nos guias [trabalhando com recursos](~/ios/deploy-test/provisioning/capabilities/icloud-capabilities.md) e [trabalhando com os direitos](~/ios/deploy-test/provisioning/entitlements.md) .
+
+Para acessar o CloudKit, o arquivo **. plist de direitos** deve incluir **habilitar icloud**, **armazenamento de chave-valor**e permissões de **CloudKit** .
+
+### <a name="sample-app"></a>Aplicativo de exemplo
+
+O [exemplo CloudKitAtlas](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-cloudkitatlas) demonstra como usar o CloudKit com o Xamarin. As etapas a seguir mostram como configurar a amostra – ela requer configurações adicionais além das necessárias apenas para CloudKit:
 
 1. Abra o projeto no Visual Studio para Mac ou no Visual Studio.
-2. No **Gerenciador de soluções**, abra o arquivo **info. plist** e verifique se o **identificador do pacote** corresponde ao que foi definido na **ID do aplicativo** criada como parte do provisionamento configurado:
-
-    [![](intro-to-cloudkit-images/image26a.png "Enter the Bundle Identifier")](intro-to-cloudkit-images/image26a-orig.png#lightbox "Info.plist file displaying Bundle Identifier")
-
-3. Role para baixo até a parte inferior do arquivo **info. plist** e selecione **modos de segundo plano habilitados**, **atualizações de local** e **notificações remotas**:
-
-    [![](intro-to-cloudkit-images/image27a.png "Select Enabled Background Modes, Location Updates and Remote Notifications")](intro-to-cloudkit-images/image27a-orig.png#lightbox "Info.plist file displaying background modes")
+2. No **Gerenciador de soluções**, abra o arquivo **info. plist** e verifique se o **identificador do pacote** corresponde ao que foi definido na **ID do aplicativo** criado como parte do provisionamento configurado.
+3. Role para baixo até a parte inferior do arquivo **info. plist** e selecione **modos de segundo plano habilitados**, **atualizações de local**e **notificações remotas**.
 4. Clique com o botão direito do mouse no projeto do iOS na solução e selecione **Opções**.
 5. Selecione **assinatura de pacote do IOS**, selecione a **identidade do desenvolvedor** e o **perfil de provisionamento** criados acima.
-6. Verifique se os **direitos. plist** incluem o **icloud** , o **armazenamento de chave-valor** e o **CloudKit** .
-7. Verifique se o **contêiner onipresença** existe para o aplicativo (como criado acima). Exemplo: `iCloud.com.your-company.CloudKitAtlas`
+6. Verifique se os **direitos. plist** incluem o **icloud**, o **armazenamento de chave-valor**e o **CloudKit**.
+7. Verifique se o **contêiner onipresença** existe para o aplicativo. Exemplo: `iCloud.com.your-company.CloudKitAtlas`
 8. Salve as alterações no arquivo.
 
-Com essas configurações em vigor, o aplicativo agora está pronto para acessar as APIs do CloudKit Framework.
+Com essas configurações em vigor, o aplicativo de exemplo agora está pronto para acessar as APIs do CloudKit Framework, bem como o plano de fundo, o local e os serviços de notificação.
 
 ## <a name="cloudkit-api-overview"></a>Visão geral da API do CloudKit
 
@@ -102,11 +103,7 @@ A Containerização de dados do iCloud também permite ao CloudKit encapsular in
 
 Os contêineres são totalmente gerenciados pelo desenvolvedor do aplicativo por meio do portal do WWDR. O namespace do contêiner é global em todos os desenvolvedores da Apple, portanto, o contêiner não deve ser exclusivo apenas para os aplicativos de um desenvolvedor específico, mas para todos os desenvolvedores e aplicativos da Apple.
 
-A Apple sugere usar a notação inversa de DNS ao criar o namespace para contêineres de aplicativos. Exemplo:
-
-```csharp
-iCloud.com.company-name.application-name
-```
+A Apple sugere usar a notação inversa de DNS ao criar o namespace para contêineres de aplicativos. Exemplo: `iCloud.com.company-name.application-name`
 
 Embora os contêineres sejam, por padrão, vinculado um-para-um a um determinado aplicativo, eles podem ser compartilhados entre aplicativos. Assim, vários aplicativos podem coordenar em um único contêiner. Um único aplicativo também pode se comunicar com vários contêineres.
 
@@ -130,11 +127,11 @@ O contêiner é o ponto de entrada inicial em CloudKit. O código a seguir pode 
 
 ```csharp
 using CloudKit;
-...
+//...
 
 public CKDatabase PublicDatabase { get; set; }
 public CKDatabase PrivateDatabase { get; set; }
-...
+//...
 
 // Get the default public and private databases for
 // the application
@@ -146,10 +143,10 @@ Estas são as diferenças entre os tipos de banco de dados:
 
 ||Banco de dados público|Banco de dados privado|
 |---|--- |--- |
-|**Tipo de dados**|Dados compartilhados|Dados do usuário atual|
+|**Tipo de dados**|Dados Compartilhados|Dados do usuário atual|
 |**Cota**|Contabilizado na cota do desenvolvedor|Contabilizado na cota do usuário|
 |**Permissões padrão**|Legível pelo mundo|Legível pelo usuário|
-|**Editando permissões**|Funções de painel do iCloud por meio de um nível de classe de registro|N/A|
+|**Editando permissões**|Funções de painel do iCloud por meio de um nível de classe de registro|{1&gt;N/A&lt;1}|
 
 ### <a name="records"></a>Registros
 
@@ -181,10 +178,10 @@ O código a seguir pode ser usado para criar um novo registro e armazená-lo em 
 
 ```csharp
 using CloudKit;
-...
+//...
 
 private const string ReferenceItemRecordName = "ReferenceItems";
-...
+//...
 
 var newRecord = new CKRecord (ReferenceItemRecordName);
 newRecord ["name"] = (NSString)nameTextField.Text;
@@ -246,7 +243,7 @@ Veja a seguir um exemplo de criação de uma referência em relação a um regis
 var reference = new CKReference(newRecord, new CKReferenceAction());
 ```
 
-### <a name="assets"></a>Comerciais
+### <a name="assets"></a>Ativos
 
 Os ativos permitem que um arquivo de dados grandes e não estruturados seja carregado no iCloud e associado a um determinado registro:
 
@@ -302,13 +299,10 @@ namespace CloudKitAtlas
     [Register ("AppDelegate")]
     public partial class AppDelegate : UIApplicationDelegate
     {
-        #region Computed Properties
         public override UIWindow Window { get; set;}
         public CKDatabase PublicDatabase { get; set; }
         public CKDatabase PrivateDatabase { get; set; }
-        #endregion
 
-        #region Override Methods
         public override bool FinishedLaunching (UIApplication application, NSDictionary launchOptions)
         {
             application.RegisterForRemoteNotifications ();
@@ -335,7 +329,6 @@ namespace CloudKitAtlas
         {
             Console.WriteLine ("Push received");
         }
-        #endregion
     }
 }
 ```
@@ -346,13 +339,11 @@ Em seguida, adicione o seguinte código a qualquer exibição ou contêiner de e
 
 ```csharp
 using CloudKit;
-...
+//...
 
-#region Computed Properties
 public AppDelegate ThisApp {
     get { return (AppDelegate)UIApplication.SharedApplication.Delegate; }
 }
-#endregion
 ```
 
 Isso adiciona um atalho para obter o `AppDelegate` e acessar os atalhos de banco de dados públicos e privados criados acima.
@@ -650,7 +641,7 @@ O CloudKit fornece as seguintes informações de usuário para o desenvolvedor:
 
 Em seguida, veremos esses tópicos detalhadamente.
 
-#### <a name="identity"></a>Identidade
+#### <a name="identity"></a>Identity
 
 Como mencionado acima, o CloudKit fornece uma maneira para o aplicativo identificar exclusivamente um determinado usuário:
 
@@ -750,7 +741,7 @@ O código a seguir descobrirá informações sobre o usuário atualmente conecta
 
 ```csharp
 public CKDiscoveredUserInfo UserInfo { get; set; }
-...
+//...
 
 // Get the user's metadata
 CKContainer.DefaultContainer.DiscoverUserInfo(UserID, (info, e) => {
@@ -863,6 +854,6 @@ Este artigo abordou uma breve introdução à API do CloudKit. Ele mostrou como 
 
 ## <a name="related-links"></a>Links relacionados
 
+- [CloudKit (Apple)](https://developer.apple.com/icloud/cloudkit/)
 - [CloudKitAtlas (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-cloudkitatlas)
-- [Introdução ao iOS 8](~/ios/platform/introduction-to-ios8.md)
 - [Criando um perfil de provisionamento](~/ios/get-started/installation/device-provisioning/index.md)
