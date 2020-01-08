@@ -9,7 +9,7 @@ metadata:
   ms.assetid: 391B4A77-7CAC-42D2-9E77-BD8E170E9BE6
   author: davidbritch
   ms.author: dabritch
-  ms.date: 08/07/2019
+  ms.date: 12/11/2019
 abstract:
   description: Saiba mais sobre como criar interfaces de usuário com o Xamarin.Forms.
 sections:
@@ -103,11 +103,17 @@ sections:
               src: ~/media/icons/i_user-interface.svg
               href: imagebutton.md
             title: ImageButton
-          - href: layouts/index.md
+          - href: indicatorview.md
+            html: Saiba como usar o controle IndicatorView para exibir indicadores que representam o número de itens e a posição atual em um CarouselView.
+            image:
+              src: ~/media/icons/i_user-interface.svg
+              href: indicatorview.md
+            title: IndicatorView
+          - href: layouts/index.yml
             html: Saiba como organizar o conteúdo usando os recursos e os controles de layout no Xamarin.Forms
             image:
               src: ~/media/icons/i_user-interface.svg
-              href: layouts/index.md
+              href: layouts/index.yml
             title: Layouts
           - href: listview/index.md
             html: Saiba como apresentar listas de dados usando o controle ListView.
@@ -175,6 +181,12 @@ sections:
               src: ~/media/icons/i_user-interface.svg
               href: styles/index.md
             title: Estilos
+          - href: swipeview.md
+            html: Saiba como usar um SwipeView para fornecer itens de menu de contexto que são revelados por um gesto de passar o dedo.
+            image:
+              src: ~/media/icons/i_user-interface.svg
+              href: swipeview.md
+            title: SwipeView
           - href: switch.md
             html: Saiba como definir um valor booliano usando um Switch.
             image:

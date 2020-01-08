@@ -2,7 +2,7 @@
   href: index.yml
   expanded: true
   items:
-    - name: Criando Aplicativos Móveis
+    - name: Criar aplicativos móveis
       href: get-started/index.md
       expanded: true
       items:
@@ -20,17 +20,17 @@
               href: app-fundamentals/building-cross-platform-applications/understanding-the-xamarin-mobile-platform.md
             - name: Parte 2 – Arquitetura
               href: app-fundamentals/building-cross-platform-applications/architecture.md
-            - name: Parte 3 – configuração de uma solução multiplataforma do Xamarin
+            - name: Parte 3 – Configurar uma solução multiplataforma do Xamarin
               href: app-fundamentals/building-cross-platform-applications/setting-up-a-xamarin-cross-platform-solution.md
             - name: Parte 4 – Lidar com várias plataformas
               href: app-fundamentals/building-cross-platform-applications/platform-divergence-abstraction-divergent-implementation.md
             - name: Parte 5 – Estratégias práticas de compartilhamento de código
               href: app-fundamentals/building-cross-platform-applications/practical-code-sharing-strategies.md
-            - name: Parte 6 – Teste e aprovações da app store
+            - name: Parte 6 – Teste e aprovações da App Store
               href: app-fundamentals/building-cross-platform-applications/testing-and-app-store-approvals.md
             - name: 'Estudo de caso: Tasky'
               href: app-fundamentals/building-cross-platform-applications/case-study-tasky.md
-    - name: Compartilhando código
+    - name: Compartilhamento de código
       href: app-fundamentals/index.md
       items:
         - name: Visão geral
@@ -55,9 +55,9 @@
               href: app-fundamentals/nuget-multiplatform-libraries/metadata.md
         - name: Pacotes NuGet (Manual)
           href: app-fundamentals/nuget-manual.md
-        - name: Usar bibliotecas C/C++ em aplicativos de plataforma cruzada
+        - name: Usar bibliotecas C/C++ em aplicativos multiplataforma
           href: cpp/index.md
-    - name: Suporte ao idioma
+    - name: Suporte a linguagens
       href: platform/index.md
       items:
         - name: 'C#'
@@ -69,7 +69,7 @@
         - name: 'F#'
           href: platform/fsharp/index.md
           items:
-            - name: Guia de Introdução
+            - name: Introdução
               href: platform/fsharp/overview.md
             - name: 'Amostras do F#'
               href: platform/fsharp/samples.md
@@ -88,6 +88,8 @@
         - name: Desempenho
           href: deploy-test/memory-perf-best-practices.md
           items:
+            - name: Desempenho do Xamarin.Forms
+              href: ~/xamarin-forms/deploy-test/performance.md?context=xamarin/cross-platform
             - name: Desempenho do Android
               href: ~/android/deploy-test/performance.md?context=xamarin/cross-platform
             - name: Desempenho do iOS
@@ -104,14 +106,14 @@
     - name: Depuração e implantação
       href: deploy-test/index.md
       items:
-        - name: Conectar aos serviços Web locais
+        - name: Conectar-se aos serviços Web locais
           href: deploy-test/connect-to-local-web-services.md
         - name: Configuração personalizada do Linker
           href: deploy-test/linker.md
         - name: Depuração de vários processos
           href: deploy-test/multi-process-debugging.md
     - name: Desenvolvedores para computadores desktop
-      displayName: 'Windows Forms (WinForms), Windows Presentation Foundation (WPF), and UWP Developers'
+      displayName: 'Windows Forms (WinForms), Windows Presentation Foundation (WPF), and UWP developers'
       href: desktop/index.md
       items:
         - name: Comparação de ciclo de vida do aplicativo
@@ -171,4 +173,4 @@
         - name: Atualizar referências de componentes para NuGet
           href: troubleshooting/component-nuget.md
     - name: Exemplos
-      href: samples/index.yml
+      href: samples/index.md

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: df2fa04deafc4438798593d3f25b85ec17363996
-ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
+ms.openlocfilehash: a51a00c8cfcd0b12787ecd3cd1eb986bb8f596c0
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67277083"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75490675"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -31,7 +31,7 @@ Para concluir este tutorial, você precisará ter o Visual Studio 2019 (versão 
     </ContentPage>
     ```
 
-    Esse código define declarativamente a interface do usuário para a página, que é composta por um [`Image`](xref:Xamarin.Forms.Image) em um [`StackLayout`](xref:Xamarin.Forms.StackLayout). A propriedade [`Image.Source`](xref:Xamarin.Forms.Image.Source) especifica a imagem a ser exibida por meio de um URI. A propriedade [`Image.Source`](xref:Xamarin.Forms.Image.Source) é do tipo [`ImageSource`](xref:Xamarin.Forms.ImageSource), o que permite que as imagens sejam originadas de arquivos, URIs ou recursos. Para obter mais informações, confira [Exibindo imagens](~/xamarin-forms/user-interface/images.md#displaying-images) no guia [Imagens no Xamarin.Forms](~/xamarin-forms/user-interface/images.md).
+    Esse código define declarativamente a interface do usuário para a página, que é composta por um [`Image`](xref:Xamarin.Forms.Image) em um [`StackLayout`](xref:Xamarin.Forms.StackLayout). A propriedade [`Image.Source`](xref:Xamarin.Forms.Image.Source) especifica a imagem a ser exibida por meio de um URI. A propriedade [`Image.Source`](xref:Xamarin.Forms.Image.Source) é do tipo [`ImageSource`](xref:Xamarin.Forms.ImageSource), o que permite que as imagens sejam originadas de arquivos, URIs ou recursos. Para obter mais informações, confira [Exibindo imagens](~/xamarin-forms/user-interface/images.md#display-images) no guia [Imagens no Xamarin.Forms](~/xamarin-forms/user-interface/images.md).
 
     A propriedade [`HeightRequest`](xref:Xamarin.Forms.VisualElement) especifica a altura de `Image` em unidades independentes do dispositivo.
 
@@ -40,7 +40,7 @@ Para concluir este tutorial, você precisará ter o Visual Studio 2019 (versão 
 
 1. Na barra de ferramentas do Visual Studio, pressione o botão **Iniciar** (o botão triangular que se parece com um botão Reproduzir) para iniciar o aplicativo dentro do simulador remoto de iOS ou do Android Emulator escolhido:
 
-    [![Captura de tela de uma imagem no iOS e Android](../images/create-image.png "Exibição de imagem exibindo uma imagem")](../images/create-image-large.png#lightbox "Exibição de imagem exibindo uma imagem")
+    [![Captura de tela de uma imagem no iOS e no Android](../images/create-image.png "Exibição de imagem exibindo uma imagem")](../images/create-image-large.png#lightbox "Exibição de imagem exibindo uma imagem")
 
     > [!NOTE]
     > A exibição [`Image`](xref:Xamarin.Forms.Image) armazena automaticamente as imagens baixadas por 24 horas. Para obter mais informações, confira [Cache de imagens baixadas](~/xamarin-forms/user-interface/images.md#downloaded-image-caching) no guia [Imagens no Xamarin.Forms](~/xamarin-forms/user-interface/images.md).
@@ -70,7 +70,7 @@ Para concluir este tutorial, você precisará ter o Visual Studio para Mac (vers
     </ContentPage>
     ```
 
-    Esse código define declarativamente a interface do usuário para a página, que é composta por um [`Image`](xref:Xamarin.Forms.Image) em um [`StackLayout`](xref:Xamarin.Forms.StackLayout). A propriedade [`Image.Source`](xref:Xamarin.Forms.Image.Source) especifica a imagem a ser exibida por meio de um URI. A propriedade [`Image.Source`](xref:Xamarin.Forms.Image.Source) é do tipo [`ImageSource`](xref:Xamarin.Forms.ImageSource), o que permite que as imagens sejam originadas de arquivos, URIs ou recursos. Para obter mais informações, confira [Exibindo imagens](~/xamarin-forms/user-interface/images.md#displaying-images) no guia [Imagens no Xamarin.Forms](~/xamarin-forms/user-interface/images.md).
+    Esse código define declarativamente a interface do usuário para a página, que é composta por um [`Image`](xref:Xamarin.Forms.Image) em um [`StackLayout`](xref:Xamarin.Forms.StackLayout). A propriedade [`Image.Source`](xref:Xamarin.Forms.Image.Source) especifica a imagem a ser exibida por meio de um URI. A propriedade [`Image.Source`](xref:Xamarin.Forms.Image.Source) é do tipo [`ImageSource`](xref:Xamarin.Forms.ImageSource), o que permite que as imagens sejam originadas de arquivos, URIs ou recursos. Para obter mais informações, confira [Exibindo imagens](~/xamarin-forms/user-interface/images.md#display-images) no guia [Imagens no Xamarin.Forms](~/xamarin-forms/user-interface/images.md).
 
     A propriedade [`HeightRequest`](xref:Xamarin.Forms.VisualElement) especifica a altura de `Image` em unidades independentes do dispositivo.
 
@@ -79,7 +79,7 @@ Para concluir este tutorial, você precisará ter o Visual Studio para Mac (vers
 
 1. Na barra de ferramentas do Visual Studio para Mac, pressione o botão **Iniciar** (o botão triangular que se parece com o botão Reproduzir) para iniciar o aplicativo dentro do simulador de iOS ou do Android Emulator escolhido:
 
-    [![Captura de tela de uma imagem no iOS e Android](../images/create-image.png "Exibição de imagem exibindo uma imagem")](../images/create-image-large.png#lightbox "Exibição de imagem exibindo uma imagem")
+    [![Captura de tela de uma imagem no iOS e no Android](../images/create-image.png "Exibição de imagem exibindo uma imagem")](../images/create-image-large.png#lightbox "Exibição de imagem exibindo uma imagem")
 
     > [!NOTE]
     > A exibição [`Image`](xref:Xamarin.Forms.Image) armazena automaticamente as imagens baixadas por 24 horas. Para obter mais informações, confira [Cache de imagens baixadas](~/xamarin-forms/user-interface/images.md#downloaded-image-caching) no guia [Imagens no Xamarin.Forms](~/xamarin-forms/user-interface/images.md).

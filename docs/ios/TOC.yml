@@ -226,7 +226,7 @@
             - name: Entrada de Texto
               href: user-interface/controls/text-input.md
             - name: Exibições da Web
-              href: user-interface/controls/uiwebview.md
+              href: user-interface/controls/webview.md
         - name: Restrições de layout programáticas
           href: user-interface/programmatic-layout-constraints.md
         - name: MonoTouch.Dialog
@@ -453,8 +453,8 @@
           href: platform/textkit.md
         - name: 3D Touch
           href: platform/3d-touch.md
-        - name: ID de Toque
-          href: platform/touchid.md
+        - name: Touch ID e Face ID
+          href: platform/touch-id-face-id.md
         - name: Estrutura de notificações de usuário
           items:
             - name: Visão geral
@@ -835,7 +835,7 @@
               href: troubleshooting/questions/no-codesigning-keys.md
             - name: 'Por que meu aplicativo do iOS 9 apresenta a falha “System.Exception: falha ao realizar marshal do objeto Objective-C”?'
               href: troubleshooting/questions/exception-marshal-obj-c.md
-            - name: 'Erro de tempo de execução: O assembly mscorlib.dll não foi encontrado ou não foi possível carregá-lo'
+            - name: 'Erro de runtime: O assembly mscorlib.dll não foi encontrado ou não foi possível carregá-lo'
               href: troubleshooting/questions/error-mscorlib-not-found.md
             - name: 'Erro de compilação: não foi possível codificar o deslocamento X na realocação dispersa resultante'
               href: troubleshooting/questions/error-encode-offset-scattered-relocation.md
@@ -1112,4 +1112,4 @@
     - name: Notas sobre a versão
       href: 'https://docs.microsoft.com/xamarin/ios/release-notes/'
     - name: Exemplos
-      href: samples/index.yml
+      href: samples/index.md
