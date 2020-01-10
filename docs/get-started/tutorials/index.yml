@@ -1,106 +1,55 @@
-### YamlMime:YamlDocument
-documentType: LandingData
+### YamlMime:Landing
 title: Tutoriais do Xamarin.Forms
+summary: Aprenda as noções básicas da criação de aplicativos móveis com Xamarin.Forms.
 metadata:
   title: Tutoriais do Xamarin.Forms
-  description: Tutoriais sobre como desenvolver aplicativos do Xamarin.Forms com o Visual Studio e o Visual Studio para Mac.
+  description: Tutoriais sobre as noções básicas da criação de aplicativos do Xamarin.Forms com o Visual Studio e o Visual Studio para Mac.
   ms.topic: landing-page
   ms.prod: xamarin
   ms.assetid: 8E3D88AE-923E-4B7C-ABAC-058A25A48BBF
-  ms.technology: xamarin-forms
   author: davidbritch
   ms.author: dabritch
-  ms.date: 02/14/2018
-abstract:
-  description: 'Esta página contém links para tutoriais para aprender mais sobre os conceitos básicos da criação de aplicativos móveis com o Xamarin.Forms. Para obter a documentação completa do Xamarin.Forms, confira <a href="/xamarin/xamarin-forms/">Documentação do Xamarin.Forms</a>.'
-sections:
-  - title: Layouts
-    items:
-      - type: list
-        style: cards
-        className: cardsB
-        items:
-          - href: stacklayout/
-            html: 'Saiba como organizar as exibições em uma pilha unidimensional, seja horizontal ou verticalmente.'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
-              href: stacklayout/
-            title: StackLayout
-          - href: grid/
-            html: Saiba como organizar as exibições em linhas e colunas que podem ter tamanhos proporcionais ou absolutos.
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_table.svg'
-              href: grid/
-            title: Grade
-  - title: Exibições
-    items:
-      - type: list
-        style: cards
-        className: cardsB
-        items:
-          - href: label/
-            html: 'Saiba como exibir texto, em linhas únicas e múltiplas.'
-            image:
-              src: ~/media/icons/i_form-label.svg
-              href: label/
-            title: Rotular
-          - href: button/
-            html: 'Saiba como responder a um toque ou clique de um botão, que direciona um aplicativo a executar uma tarefa específica.'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_button.svg'
-              href: button/
-            title: Botão
-          - href: entry/
-            html: Saiba como aceitar a entrada de texto de linha única.
-            image:
-              src: ~/media/icons/i_form-entry.svg
-              href: entry/
-            title: Entrada
-          - href: editor/
-            html: Saiba como aceitar a entrada de texto de várias linhas.
-            image:
-              src: ~/media/icons/i_form-editor.svg
-              href: editor/
-            title: Editor
-          - href: image/
-            html: Saiba como exibir imagens em uma página.
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_account-management.svg'
-              href: image/
-            title: Image
-          - href: listview/
-            html: Saiba como apresentar listas de dados.
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_sharepoint-list.svg'
-              href: listview/
-            title: ListView
-  - title: Princípios básicos do aplicativo
-    items:
-      - type: list
-        style: cards
-        className: cardsB
-        items:
-          - href: pop-ups/
-            html: 'Saiba como exibir alertas e folhas de ação com o Xamarin.Forms, fazer perguntas simples de usuários e orientar os usuários por meio de tarefas.'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_alert.svg'
-              href: pop-ups/
-            title: Pop-ups
-          - href: app-lifecycle/
-            html: Saiba mais sobre o ciclo de vida do aplicativo Xamarin.Forms e como persistir dados entre as alterações de estado do ciclo de vida.
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_agile.svg'
-              href: app-lifecycle/
-            title: Ciclo de vida do aplicativo
-          - href: local-database/
-            html: Saiba como usar o pacote SQLite.NET NuGet para incorporar operações de banco de dados local em um aplicativo.
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_generic-database.svg'
-              href: local-database/
-            title: Banco de dados local
-          - href: web-service/
-            html: Saiba como consumir serviços Web baseados em REST do Xamarin.Forms.
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_server.svg'
-              href: web-service/
-            title: Serviços da Web
+  ms.date: 12/23/2019
+  ms.openlocfilehash: fa5fb1d6747650520864371ceacf665a50dc0973
+  ms.sourcegitcommit: 0ffef1721f28717d46c8168ec96a45b6fe96b623
+  ms.translationtype: HT
+  ms.contentlocale: pt-BR
+  ms.lasthandoff: 01/07/2020
+  ms.locfileid: "75718734"
+landingContent:
+- title: Layouts
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: StackLayout
+      url: stacklayout/index.yml
+    - text: Grade
+      url: grid/index.yml
+- title: Controles
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Rotular
+      url: label/index.yml
+    - text: Botão
+      url: button/index.yml
+    - text: Entrada
+      url: entry/index.yml
+    - text: Editor
+      url: editor/index.yml
+    - text: Image
+      url: image/index.yml
+    - text: ListView
+      url: listview/index.yml
+    - text: Pop-ups
+      url: pop-ups/index.yml
+- title: Conceitos básicos do aplicativo
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Ciclo de vida do aplicativo
+      url: app-lifecycle/index.yml
+    - text: Banco de dados local
+      url: local-database/index.yml
+    - text: Serviços da Web
+      url: web-service/index.yml

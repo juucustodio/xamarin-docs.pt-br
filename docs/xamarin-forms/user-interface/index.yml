@@ -1,6 +1,6 @@
-### YamlMime:YamlDocument
-documentType: LandingData
+### YamlMime:Landing
 title: Interface do usuário do Xamarin.Forms
+summary: Saiba mais sobre como criar interfaces de usuário com o Xamarin.Forms.
 metadata:
   title: Interface do usuário do Xamarin.Forms
   description: Saiba mais sobre como criar interfaces de usuário com o Xamarin.Forms.
@@ -9,235 +9,177 @@ metadata:
   ms.assetid: 391B4A77-7CAC-42D2-9E77-BD8E170E9BE6
   author: davidbritch
   ms.author: dabritch
-  ms.date: 12/11/2019
-abstract:
-  description: Saiba mais sobre como criar interfaces de usuário com o Xamarin.Forms.
-sections:
-  - title: null
-    items:
-      - type: list
-        style: cards
-        className: cardsB
-        items:
-          - href: activityindicator.md
-            html: Saiba como usar um ActivityIndicator para indicar aos usuários que o aplicativo está envolvido em uma atividade demorada sem dar nenhuma indicação de progresso.
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: activityindicator.md
-            title: ActivityIndicator
-          - href: animation/index.md
-            html: Saiba como criar animações no Xamarin.Forms.
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: animation/index.md
-            title: Animação
-          - href: boxview.md
-            html: Saiba como usar um BoxView para criar retângulos coloridos.
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: boxview.md
-            title: BoxView
-          - href: button.md
-            html: Saiba como usar um botão para fazer com que um aplicativo realize uma tarefa específica.
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: button.md
-            title: Botão
-          - href: carouselview/index.md
-            html: Saiba como usar uma CarouselView para apresentar dados em um layout de carrossel.
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: collectionview/index.md
-            title: CarouselView
-          - href: checkbox.md
-            html: Saiba como definir um valor booliano usando uma CheckBox.
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: checkbox.md
-            title: CheckBox
-          - href: collectionview/index.md
-            html: Saiba como usar um CollectionView para apresentar listas de dados usando especificações de layout diferentes.
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: collectionview/index.md
-            title: CollectionView
-          - href: colors.md
-            html: Saiba como usar a classe Color para definir e usar cores entre plataformas.
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: colors.md
-            title: Cores
-          - href: controls/index.md
-            html: 'Saiba mais sobre as páginas, os layouts, as exibições e as células disponíveis no Xamarin.Forms.'
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: controls/index.md
-            title: Referência de Controles
-          - href: datepicker.md
-            html: Saiba como usar um DatePicker para permitir que uma data dentro de um intervalo especificado seja selecionada.
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: datepicker.md
-            title: DatePicker
-          - href: pop-ups.md
-            html: 'Saiba como exibir caixas de diálogo que fazem perguntas simples aos usuários, os guiam pelas tarefas e exibem prompts.'
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: pop-ups.md
-            title: Exibir pop-ups
-          - href: graphics/skiasharp/index.md
-            html: Saiba como incorporar gráficos em aplicativos do Xamarin.Forms usando o SkiaSharp.
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: graphics/skiasharp/index.md
-            title: Elementos gráficos com SkiaSharp
-          - href: images.md
-            html: Saiba como usar o controle Image para exibir uma imagem.
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: images.md
-            title: Imagens
-          - href: imagebutton.md
-            html: Saiba como usar o controle ImageButton para exibir uma imagem e responder a um toque que faz com que um aplicativo execute uma tarefa específica.
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: imagebutton.md
-            title: ImageButton
-          - href: indicatorview.md
-            html: Saiba como usar o controle IndicatorView para exibir indicadores que representam o número de itens e a posição atual em um CarouselView.
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: indicatorview.md
-            title: IndicatorView
-          - href: layouts/index.yml
-            html: Saiba como organizar o conteúdo usando os recursos e os controles de layout no Xamarin.Forms
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: layouts/index.yml
-            title: Layouts
-          - href: listview/index.md
-            html: Saiba como apresentar listas de dados usando o controle ListView.
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: listview/index.md
-            title: ListView
-          - href: map/index.md
-            html: 'Saiba como usar o controle Map, incluindo a configuração de plataforma necessária e como popular o mapa com pins.'
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: map/index.md
-            title: Mapa
-          - href: menuitem.md
-            html: Saiba como usar a classe MenuItem para adicionar itens ao menu de contexto de células ListView.
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: menuitem.md
-            title: MenuItem
-          - href: picker/index.md
-            html: Saiba como usar o controle Picker para selecionar um item de texto em uma lista de dados.
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: picker/index.md
-            title: Seletor
-          - href: progressbar.md
-            html: Saiba como usar um ProgressBar para indicar o progresso de um aplicativo por uma atividade demorada.
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: progressbar.md
-            title: ProgressBar
-          - href: refreshview.md
-            html: Saiba como usar um RefreshView para fornecer a funcionalidade de deslizar para atualizar em conteúdo rolável.
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: refreshview.md
-            title: RefreshView
-          - href: searchbar.md
-            html: Saiba como iniciar uma pesquisa usando o controle SearchBar.
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: searchbar.md
-            title: SearchBar
-          - href: slider.md
-            html: Saiba como permitir que um usuário selecione um valor numérico em um intervalo contínuo com o controle Slider.
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: slider.md
-            title: Controle deslizante
-          - href: splashscreen.md
-            html: Saiba como criar telas iniciais para aplicativos do Xamarin.Forms.
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: splashscreen.md
-            title: Splash Screen
-          - href: stepper.md
-            html: Saiba como permitir que um usuário selecione um valor numérico em um intervalo de valores com o controle Stepper.
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: stepper.md
-            title: Passador
-          - href: styles/index.md
-            html: Saiba como estilizar uma interface do usuário com estilos XAML e com CSS (folhas de estilos em cascata).
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: styles/index.md
-            title: Estilos
-          - href: swipeview.md
-            html: Saiba como usar um SwipeView para fornecer itens de menu de contexto que são revelados por um gesto de passar o dedo.
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: swipeview.md
-            title: SwipeView
-          - href: switch.md
-            html: Saiba como definir um valor booliano usando um Switch.
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: switch.md
-            title: Alternar
-          - href: tableview.md
-            html: 'Saiba como usar o TableView para exibir listas de dados ou opções com rolagem, em que as linhas não compartilham o mesmo modelo.'
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: tableview.md
-            title: TableView
-          - href: text/index.md
-            html: Saiba mais sobre os controles do Xamarin.Forms que apresentam e recebem texto.
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: text/index.md
-            title: Texto
-          - href: theming.md
-            html: Saiba como criar temas para aplicativos Xamarin.Forms e alterar o tema em runtime.
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: theming.md
-            title: Temas
-          - href: timepicker.md
-            html: Saiba como usar um TimePicker para permitir que um horário seja selecionado.
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: timepicker.md
-            title: TimePicker
-          - href: toolbaritem.md
-            html: Saiba como usar um ToolbarItem para adicionar botões à barra de navegação.
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: toolbaritem.md
-            title: ToolbarItem
-          - href: visual/index.md
-            html: Saiba como usar o Visual Material do Xamarin.Forms para criar aplicativos que parecem idênticos ou amplamente idênticos no iOS e no Android.
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: visual/index.md
-            title: Visual
-          - href: visual-state-manager.md
-            html: Saiba como definir estados visuais para a interface do usuário e ativar os estados com a classe VisualStateManager.
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: visual-state-manager.md
-            title: Gerenciador de Estado Visual
-          - href: webview.md
-            html: Saiba como exibir o conteúdo HTML e da Web em um aplicativo do Xamarin.Forms.
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: webview.md
-            title: WebView
+  ms.date: 12/30/2019
+  ms.openlocfilehash: 2a62ff0c3d94d47870b9b112b86091c534ed6ff8
+  ms.sourcegitcommit: ff0dd66d6d00257ac1695aa7ac46940ff7d3bd93
+  ms.translationtype: HT
+  ms.contentlocale: pt-BR
+  ms.lasthandoff: 01/06/2020
+  ms.locfileid: "75679604"
+landingContent:
+- title: Referência de controles
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Visão geral
+      url: controls/index.md
+    - text: Pages (Páginas)
+      url: controls/pages.md
+    - text: Layouts
+      url: controls/layouts.md
+    - text: Exibições
+      url: controls/views.md
+    - text: Células
+      url: controls/cells.md
+    - text: Propriedades, métodos e eventos comuns
+      url: controls/common-properties.md
+    - text: Controles de terceiros
+      url: controls/thirdparty.md
+- title: Exibições para apresentação
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: BoxView
+      url: boxview.md
+    - text: Image
+      url: images.md
+    - text: Rotular
+      url: text/label.md
+    - text: Mapa
+      url: map/index.md
+    - text: WebView
+      url: webview.md
+- title: Exibições que iniciam comandos
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Botão
+      url: button.md
+    - text: ImageButton
+      url: imagebutton.md
+    - text: RefreshView
+      url: refreshview.md
+    - text: SearchBar
+      url: searchbar.md
+    - text: SwipeView
+      url: swipeview.md
+- title: Exibições para definir valores
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: CheckBox
+      url: checkbox.md
+    - text: DatePicker
+      url: datepicker.md
+    - text: Controle deslizante
+      url: slider.md
+    - text: Passador
+      url: stepper.md
+    - text: Alternar
+      url: switch.md
+    - text: TimePicker
+      url: timepicker.md
+- title: Exibições para edição de texto
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Editor
+      url: text/editor.md
+    - text: Entrada
+      url: text/entry.md
+- title: Exibições para indicar atividade
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: ActivityIndicator
+      url: activityindicator.md
+    - text: ProgressBar
+      url: progressbar.md
+- title: Exibições que mostram coleções
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: CarouselView
+      url: carouselview/index.md
+    - text: CollectionView
+      url: collectionview/index.md
+    - text: IndicatorView
+      url: indicatorview.md
+    - text: ListView
+      url: listview/index.md
+    - text: Seletor
+      url: picker/index.md
+    - text: TableView
+      url: tableview.md
+- title: Controles adicionais
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: MenuItem
+      url: menuitem.md
+    - text: ToolbarItem
+      url: toolbaritem.md
+- title: Conceitos de interface do usuário
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Animação
+      url: animation/index.md
+    - text: Cores
+      url: colors.md
+    - text: Exibir pop-ups
+      url: pop-ups.md
+    - text: Fontes
+      url: text/fonts.md
+    - text: Elementos gráficos com SkiaSharp
+      url: graphics/skiasharp/index.md
+    - text: Tela inicial
+      url: splashscreen.md
+    - text: Estilos
+      url: styles/index.md
+    - text: Temas
+      url: theming.md
+    - text: Visual
+      url: visual/index.md
+    - text: Gerenciador de Estado Visual
+      url: visual-state-manager.md
+- title: Layouts
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Escolher um layout
+      url: layouts/choose-layout.md
+    - text: AbsoluteLayout
+      url: layouts/absolute-layout.md
+    - text: ContentView
+      url: layouts/contentview.md
+    - text: FlexLayout
+      url: layouts/flex-layout.md
+    - text: Quadro
+      url: layouts/frame.md
+    - text: Grade
+      url: layouts/grid.md
+    - text: RelativeLayout
+      url: layouts/relative-layout.md
+    - text: ScrollView
+      url: layouts/scroll-view.md
+    - text: StackLayout
+      url: layouts/stack-layout.md
+- title: Conceitos de layout
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Layouts associáveis
+      url: layouts/bindable-layouts.md
+    - text: Layout personalizado
+      url: layouts/custom.md
+    - text: Orientação do dispositivo
+      url: layouts/device-orientation.md
+    - text: LayoutOptions
+      url: layouts/layout-options.md
+    - text: Compactação de layout
+      url: layouts/layout-compression.md
+    - text: Margem e preenchimento
+      url: layouts/margin-and-padding.md
+    - text: Layout para tablet e desktop
+      url: layouts/tablet.md
