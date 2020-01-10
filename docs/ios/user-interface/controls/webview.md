@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: da477ca647de765d0173b223e2df2fe04959221b
-ms.sourcegitcommit: bad1ab3f78d7f94d48511666626b54f8ba155689
-ms.translationtype: HT
+ms.openlocfilehash: 1ae3a2af436a4ad8860ab27df550a1d74d5084a6
+ms.sourcegitcommit: 0ffef1721f28717d46c8168ec96a45b6fe96b623
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/04/2020
-ms.locfileid: "75663537"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75718760"
 ---
 # <a name="web-views-in-xamarinios"></a>Exibições da Web no Xamarin. iOS
 
@@ -22,7 +22,7 @@ o iOS 11 introduziu novas alterações em `WKWebView` e `SFSafariViewController`
 
 ## <a name="wkwebview"></a>WKWebView
 
-o `WKWebView` foi introduzido no iOS 8, permitindo que os desenvolvedores de aplicativos implementem uma interface de navegação na Web semelhante à do Mobile Safari. Isso é devido, em parte, ao fato de que `WKWebView` usa o mecanismo de JavaScript nitro, o mesmo mecanismo usado pelo Mobile Safari. os `WKWebView` sempre devem ser usados em UIWebView, devido ao [aumento do desempenho](http://blog.initlabs.com/post/100113463211/wkwebview-vs-uiwebview), aos gestos internos amigáveis e à facilidade de interação entre a página da Web e seu aplicativo.
+o `WKWebView` foi introduzido no iOS 8, permitindo que os desenvolvedores de aplicativos implementem uma interface de navegação na Web semelhante à do Mobile Safari. Isso é devido, em parte, ao fato de que `WKWebView` usa o mecanismo de JavaScript nitro, o mesmo mecanismo usado pelo Mobile Safari. `WKWebView` sempre deve ser usado em UIWebView, quando possível devido ao [aumento do desempenho](http://blog.initlabs.com/post/100113463211/wkwebview-vs-uiwebview), aos gestos internos amigáveis e à facilidade de interação entre a página da Web e seu aplicativo.
   
 `WKWebView` pode ser adicionado ao seu aplicativo de uma maneira quase idêntica ao UIWebView, no entanto, como desenvolvedor, você tem muito mais controle sobre a interface do usuário/UX e a funcionalidade. Criar e exibir o objeto de exibição da Web exibirá a página solicitada, no entanto, você pode controlar como a exibição é apresentada, como o usuário pode navegar e como o usuário sai da exibição.  
 
@@ -92,11 +92,11 @@ Para obter mais informações sobre o ATS, incluindo como implementá-lo em seu 
 ## <a name="uiwebview-deprecated"></a>UIWebView (preterido)
 
 > [!IMPORTANT]
-> A [documentação de `UIWebView` da Apple](https://developer.apple.com/documentation/uikit/uiwebview) indica que o controle foi preterido. Todos os aplicativos devem usar [`WKWebKit`](#wkwebview) em vez disso.
+> O `UIWebView` foi preterido. Os aplicativos que usam esse controle [não serão aceitos na loja de aplicativos a partir de abril de 2020, e os aplicativos existentes precisarão removê-lo até 2020 de dezembro](https://developer.apple.com/news/?id=12232019b).
+> 
+> A [documentação de `UIWebView` da Apple](https://developer.apple.com/documentation/uikit/uiwebview) sugere que os aplicativos usem [`WKWebView`](#wkwebview) em vez disso.
 
 `UIWebView` é a maneira herdada da Apple de fornecer conteúdo da Web em seu aplicativo. Ele foi lançado no iOS 2,0 e foi preterido a partir de 8,0.
-
-Se você planeja dar suporte a versões do iOS anteriores a 8,0, precisará usar `UIWebView`. Devido ao fato de que `UIWebView` é menos otimizada para desempenho do que as alternativas, é recomendável que você verifique a versão do iOS do usuário. Se ele for 8,0 ou superior, usar qualquer uma das opções explicadas abaixo criará uma melhor experiência do usuário.
 
 Para adicionar um UIWebView ao seu aplicativo Xamarin. iOS, use o seguinte código:
 

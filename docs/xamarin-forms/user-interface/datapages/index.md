@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: 1dc62066b71842e1d3b07495912fa35a549c0f1e
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 4569240d7419254bad41957d30b4ad652c7a3f4e
+ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70759679"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75727934"
 ---
 # <a name="xamarinforms-datapages"></a>Páginas de DataPages do Xamarin. Forms
 
-![](~/media/shared/preview.png "Essa API está atualmente em versão prévia")
+![](~/media/shared/preview.png "This API is currently in preview")
 
 > [!IMPORTANT]
 > As páginas de datarequer uma referência de tema do Xamarin. Forms para renderizar. Isso envolve a instalação do pacote NuGet [xamarin. Forms. Theme. base](https://www.nuget.org/packages/Xamarin.Forms.Theme.Base/) em seu projeto, seguido pelos pacotes NuGet [xamarin. Forms. Theme. Light](https://www.nuget.org/packages/Xamarin.Forms.Theme.Light/) ou [Xamarin. Forms. Theme. Dark](https://www.nuget.org/packages/Xamarin.Forms.Theme.Dark/) .
@@ -27,7 +27,7 @@ DataSourceControl fornece uma API para rápida e facilmente vincular uma fonte d
 
 Para ver como a demonstração da palestra de desenvolvimento funciona, confira o [Guia de introdução](get-started.md).
 
-[![](images/demo-sml.png "Aplicativo de exemplo DataSourceControl")](images/demo.png#lightbox "DataSourceControl exemplo de aplicativo")
+[![](images/demo-sml.png "DataPages Sample Application")](images/demo.png#lightbox "DataPages Sample Application")
 
 ## <a name="introduction"></a>Introdução
 
@@ -35,7 +35,7 @@ As fontes de dados e as páginas de dados associadas permitem aos desenvolvedore
 
 As páginas de DataPage são adicionadas a um aplicativo Xamarin. Forms, incluindo o pacote NuGet **Xamarin. Forms. Pages** .
 
-### <a name="data-sources"></a>Data Sources
+### <a name="data-sources"></a>Fontes de Dados
 
 A visualização tem algumas fontes de dados predefinidas disponíveis para uso:
 
@@ -43,7 +43,7 @@ A visualização tem algumas fontes de dados predefinidas disponíveis para uso:
 * **AzureDataSource** (NuGet separado)
 * **AzureEasyTableDataSource** (NuGet separado)
 
-Consulte o [Guia de introdução](get-started.md) para obter um exemplo usando `JsonDataSource`um.
+Consulte o [Guia de introdução](get-started.md) para obter um exemplo usando um `JsonDataSource`.
 
 ### <a name="pages--controls"></a>Controles de & de páginas
 
@@ -61,13 +61,13 @@ Consulte a [referência de controles de DataPages](controls.md) para obter exemp
 
 ### <a name="under-the-hood"></a>Nos bastidores
 
-Uma fonte de dados Xamarin. Forms adere à `IDataSource` interface.
+Uma fonte de dados Xamarin. Forms segue a interface `IDataSource`.
 
 A infraestrutura do Xamarin. Forms interage com uma fonte de dados por meio das seguintes propriedades:
 
-* `Data`– uma lista somente leitura de itens de dados que podem ser exibidos.
-* `IsLoading`– um booliano que indica se os dados são carregados e estão disponíveis para renderização.
-* `[key]`– um indexador para recuperar elementos.
+* `Data` – uma lista somente leitura de itens de dados que podem ser exibidos.
+* `IsLoading` – um booliano que indica se os dados são carregados e estão disponíveis para renderização.
+* `[key]` – um indexador para recuperar elementos.
 
 Há dois métodos `MaskKey` e `UnmaskKey` que podem ser usados para ocultar (ou mostrar) Propriedades de item de dados (por ex. impedir que sejam renderizados).
 A chave corresponde à propriedade nomeada no objeto de item de dados.

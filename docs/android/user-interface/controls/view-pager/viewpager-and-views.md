@@ -7,18 +7,18 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/01/2018
-ms.openlocfilehash: 65a613f229f04a4ab01ca73a9c53c026add49f84
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: c913f18e34f93e9ab7adc09109ea5c9e9e5067a2
+ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73029041"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75728142"
 ---
 # <a name="viewpager-with-views"></a>ViewPager com exibição
 
 _ViewPager é um Gerenciador de layout que permite implementar a navegação Gestural. A navegação Gestural permite que o usuário passe o dedo para a esquerda e para a direita para percorrer as páginas de dados. Este guia explica como implementar uma interface do usuário do swipeable com ViewPager e PagerTabStrip, usando exibições como páginas de dados (um guia subsequente aborda como usar fragmentos para as páginas)._
 
-## <a name="overview"></a>Visão Geral
+## <a name="overview"></a>{1&gt;Visão Geral&lt;1}
 
 Este guia é uma explicação que fornece uma demonstração passo a passo sobre como usar `ViewPager` para implementar uma galeria de imagens de árvores decídua e verde. Nesse aplicativo, o usuário passa o dedo para a esquerda e para a direita por meio de um "catálogo de árvore" para exibir imagens de árvore. Na parte superior de cada página do catálogo, o nome da árvore é listado em uma`PagerTabStrip`e uma imagem da árvore é exibida em uma `ImageView`. Um adaptador é usado para a interface do `ViewPager` para o modelo de dados subjacente. Este aplicativo implementa um adaptador derivado de `PagerAdapter`. 
 
@@ -91,7 +91,7 @@ protected override void OnCreate(Bundle bundle)
 }
 ```
 
-Esse código faz o seguinte:
+Este código faz o seguinte:
 
 1. Define a exibição do recurso de layout **Main. axml** .
 
@@ -207,7 +207,7 @@ public override Java.Lang.Object InstantiateItem (View container, int position)
 }
 ```
 
-Esse código faz o seguinte:
+Este código faz o seguinte:
 
 1. Cria uma instância de um novo `ImageView` para exibir a imagem de árvore na posição especificada. O `MainActivity` do aplicativo é o contexto que será passado para o construtor de `ImageView`.
 
@@ -234,17 +234,17 @@ public override void DestroyItem(View container, int position, Java.Lang.Object 
 }
 ```
 
-Esse código faz o seguinte:
+Este código faz o seguinte:
 
 1. Converte o `View` de contêiner passado em uma referência de `ViewPager`.
 
-2. Converte o objeto Java passado (`view`) em um C#`View`(`view as View`);
+2. Converte o objeto Java passado (`view`) em um C# `View` (`view as View`);
 
 3. Remove a exibição do `ViewPager`. 
 
 ### <a name="implement-isviewfromobject"></a>Implementar IsViewFromObject
 
-À medida que o usuário desliza para a esquerda e direita por meio de páginas de conteúdo, `ViewPager` chama `IsViewFromObject` para verificar se o `View` filho na posição fornecida está associado ao objeto do adaptador para essa mesma posição (portanto, o objeto do adaptador é chamado de *chave de objeto* ). Para aplicativos relativamente simples, a associação é uma das identidades &ndash; chave de objeto do adaptador nessa instância é a exibição retornada anteriormente para o `ViewPager` por meio de `InstantiateItem`. No entanto, para outros aplicativos, a chave de objeto pode ser outra instância de classe específica de adaptador que está associada (mas não igual a) a exibição filho que `ViewPager` é exibida nessa posição. Somente o adaptador sabe se a exibição passada e a chave de objeto estão associadas. 
+À medida que o usuário desliza para a esquerda e direita por meio de páginas de conteúdo, `ViewPager` chama `IsViewFromObject` para verificar se o `View` filho na posição fornecida está associado ao objeto do adaptador para essa mesma posição (portanto, o objeto do adaptador é chamado de *chave de objeto*). Para aplicativos relativamente simples, a associação é uma das identidades &ndash; chave de objeto do adaptador nessa instância é a exibição retornada anteriormente para o `ViewPager` por meio de `InstantiateItem`. No entanto, para outros aplicativos, a chave de objeto pode ser outra instância de classe específica de adaptador que está associada (mas não igual a) a exibição filho que `ViewPager` é exibida nessa posição. Somente o adaptador sabe se a exibição passada e a chave de objeto estão associadas. 
 
 `IsViewFromObject` deve ser implementado para que `PagerAdapter` funcione corretamente. Se `IsViewFromObject` retornar `false` para uma determinada posição, `ViewPager` não exibirá a exibição nessa posição. No aplicativo `TreePager`, a chave de objeto retornada por `InstantiateItem` *é* a `View` de página de uma árvore, de modo que o código só precisa verificar a identidade (ou seja, a chave de objeto e a exibição são as mesmas). Substitua `IsViewFromObject` pelo seguinte código: 
 
@@ -327,6 +327,6 @@ Observe que o sublinhado é removido quando você converte para `PagerTitleStrip
 
 Este tutorial forneceu um exemplo passo a passo de como criar um aplicativo básico baseado em `ViewPager`sem usar `Fragment`s. Ele apresentou uma fonte de dados de exemplo contendo imagens e cadeias de caracteres de legendas, um layout `ViewPager` para exibir as imagens e uma subclasse de `PagerAdapter` que conecta a `ViewPager` à fonte de dados. Para ajudar o usuário a navegar pelo conjunto de dados, foram incluídas instruções que explicam como adicionar um `PagerTabStrip` ou `PagerTitleStrip` para exibir a legenda da imagem na parte superior de cada página. 
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [TreePager (exemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/userinterface-treepager)

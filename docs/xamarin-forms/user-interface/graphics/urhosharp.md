@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/11/2016
-ms.openlocfilehash: 7045bd4d3343d0c11c6cd52fa02cdc005175b8a7
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 60c647a9a09ebffa5a9d50c799c09cf0dbf2e4ac
+ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70772929"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75727973"
 ---
 # <a name="using-urhosharp-in-xamarinforms"></a>Usar UrhoSharp em xamarin. Forms
 
@@ -25,21 +25,21 @@ ms.locfileid: "70772929"
 UrhoSharp pode ser usado para renderizar elementos gráficos em aplicativos xamarin. Forms.
 Isso [amostra](https://github.com/xamarin/urho-samples/tree/master/FormsSample) demonstra como UrhoSharp poderia ser usada para construir um gráfico 3D interativo:
 
-![](urhosharp-images/ios-animation.gif "Gráfico 3D interativos de UrhoSharp no iOS")
-![](urhosharp-images/android-animation.gif "gráfico 3D interativos de UrhoSharp no Android")
+![](urhosharp-images/ios-animation.gif "UrhoSharp 3D Interactive Chart on iOS")
+![](urhosharp-images/android-animation.gif "UrhoSharp 3D Interactive Chart on Android")
 
-## <a name="adding-the-urhosharp-nuget-packages"></a>Adicionando os pacotes do Nuget do UrhoSharp
+## <a name="adding-the-urhosharp-nuget-packages"></a>Adicionando os pacotes NuGet do UrhoSharp
 
-Antes de usar UrhoSharp, os desenvolvedores precisam adicionar o pacote Nuget de UrhoSharp à sua solução. Este guia pressupõe que um projeto xamarin. Forms com um iOS, Android e o .NET Standard projeto de biblioteca. Todo o código será gravado no projeto da biblioteca .NET Standard; mas, o UrhoSharp Nuget devem ser adicionado a projetos do Android e iOS muito.
+Antes de usar o UrhoSharp, os desenvolvedores precisam adicionar o pacote NuGet do UrhoSharp à sua solução. Este guia pressupõe que um projeto xamarin. Forms com um iOS, Android e o .NET Standard projeto de biblioteca. Todo o código será escrito no projeto de biblioteca de .NET Standard; Mas o NuGet UrhoSharp também deve ser adicionado aos projetos iOS e Android.
 
-O pacote do UrhoSharp.Forms Nuget contém todos os objetos necessários para criar objetos de UrhoSharp. O pacote do nuget UrhoSharp.Forms inclui o `UrhoSurface` classe, que é usada para hospedar o UrhoSharp em xamarin. Forms.
+O pacote NuGet UrhoSharp. Forms contém todos os objetos necessários para criar objetos UrhoSharp. O pacote NuGet UrhoSharp. Forms inclui a classe `UrhoSurface`, que é usada para hospedar o UrhoSharp no Xamarin. Forms.
 Para começar, clique com o botão direito do mouse na pasta **pacotes** no projeto de biblioteca .net Standard e selecione **adicionar pacotes...** . Insira o termo de pesquisa **UrhoSharp. Forms**, selecione **UrhoSharp para Xamarin. Forms**e clique em **Adicionar pacote**.
 
-[![](urhosharp-images/add-package-sml.png "Adicionar caixa de diálogo pacotes")](urhosharp-images/add-package.png#lightbox "Adicionar caixa de diálogo de pacotes")
+[![](urhosharp-images/add-package-sml.png "Add Packages Dialog")](urhosharp-images/add-package.png#lightbox "Add Packages Dialog")
 
 O pacote do UrhoSharp.Forms NuGet será adicionado ao projeto:
 
-![](urhosharp-images/packages.png "Pasta de pacotes")
+![](urhosharp-images/packages.png "Packages Folder")
 
 Repita as etapas acima para projetos específicos da plataforma (por exemplo, iOS e Android).
 
@@ -224,7 +224,7 @@ As animações na [superior da página](#what-is-urhosharp) mostram o exemplo em
 
 Esta página mostra como UrhoSharp pode ser usado para adicionar a visualização de dados 3D ao xamarin. Forms. Leia as [UrhoSharp documentação](~/graphics-games/urhosharp/index.md) para obter mais informações sobre como construir cenas Urho que podem ser incluídas em aplicativos xamarin. Forms usando o método mostrado acima.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Gráficos de exemplo (C# 6)](https://github.com/xamarin/urho-samples/tree/master/FormsSample)
 - [UrhoSharp](~/graphics-games/urhosharp/index.md)

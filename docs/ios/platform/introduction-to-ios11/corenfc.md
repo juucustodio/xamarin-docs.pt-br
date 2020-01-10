@@ -7,18 +7,18 @@ ms.assetid: 846B59D3-F66A-48F3-A78C-84217697194E
 author: davidortinau
 ms.author: daortin
 ms.date: 09/25/2017
-ms.openlocfilehash: 110df71dd043f627b89a7c4a906db0418a8cfae8
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 2e19fd37270d3c96cb175d30dc786a95a01c3fcf
+ms.sourcegitcommit: 2ed3d1c933fce4ce332128f125acb2f23f9e0f1a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73032201"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75753021"
 ---
 # <a name="core-nfc-in-xamarinios"></a>Básico NFC no Xamarin. iOS
 
 _Lendo marcas de NFC (comunicação a curta distância) usando o iOS 11_
 
-CoreNFC é uma nova estrutura no iOS 11 que fornece acesso ao rádio NFC ( _comunicação a curta distância_ ) para ler marcas de dentro de aplicativos. Ele funciona no iPhone 7, 7 mais, 8, 8 mais e X.
+CoreNFC é uma nova estrutura no iOS 11 que fornece acesso ao rádio NFC ( _comunicação a curta distância_ ) para ler marcas de dentro de aplicativos. O CoreNFC funciona nos modelos iPhone 7, iPhone 7 Plus, iPhone 8, iPhone 8 mais, iPhone X, iPhone XS e iPhone 11 (enquanto os modelos iPhone 6 e iPhone 6 Plus têm a funcionalidade de pagamento NFC, eles não dão suporte a CoreNFC).
 
 O leitor de marca NFC em dispositivos iOS dá suporte a todos os tipos de marca NFC de 1 a 5 que contêm informações de _formato de troca de dados_ (NDEF).
 
@@ -31,7 +31,7 @@ Há algumas restrições a serem consideradas:
 
 Esta página descreve a configuração necessária para usar o CoreNFC e mostra como usar a API usando o [código de exemplo "NFCTagReader"](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-nfctagreader).
 
-## <a name="configuration"></a>Configuração
+## <a name="configuration"></a>Configuração do
 
 Para habilitar o CoreNFC, você deve configurar três itens em seu projeto:
 
@@ -159,7 +159,7 @@ Em ambos os casos, o método de `DidInvalidate` do delegado será chamado.
 
 O CoreNFC permite que seu aplicativo leia dados de marcas NFC. Ele dá suporte à leitura de uma variedade de formatos de marca (NDEF tipos de 1 a 5), mas não oferece suporte a gravação ou formatação.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [NFCTagReader (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-nfctagreader)
 - [Introdução ao Core NFC (WWDC) (vídeo)](https://developer.apple.com/videos/play/wwdc2017/718/)
