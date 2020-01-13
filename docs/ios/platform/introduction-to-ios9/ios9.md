@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: cbea7686c2ec96492f9531e1ff30d1686db1a4c0
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: edc778879aa88d420f41bd2b7b8e15b6d80b5939
+ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73031767"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75728259"
 ---
 # <a name="ios-9-compatibility"></a>Compatibilidade com o iOS 9
 
@@ -99,7 +99,7 @@ Dyld Message: no cache image with name (/System/Library/PrivateFrameworks/JavaSc
 
 **Correção:** Isso será abordado para o iOS 9, mas há uma solução alternativa fácil que você pode se aplicar nesse meio tempo: Basta direcionar para uma versão mais recente do iOS no seu projeto (você pode tentar o iOS 7 nesse caso). Outras estruturas podem apresentar problemas semelhantes, por exemplo, a estrutura WebKit tornou-se pública no iOS 8 (e, portanto, direcionar para o iOS 7 resultará nesse erro; você deve direcionar o iOS 8 para usar WebKit em seu aplicativo).
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [informações de versão de compatibilidade do iOS 9](https://releases.xamarin.com/ios-hotfix-for-ios-9-preview-xcode-6/)
 - [Introdução ao iOS 9](~/ios/platform/introduction-to-ios9/index.md)

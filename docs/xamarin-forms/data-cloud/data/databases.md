@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 12/05/2019
-ms.openlocfilehash: 49344b089c3c49cd8cd566a690649b28101b51ba
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.openlocfilehash: 190aeb83456fa7c7ba8a9415b02ab56f3f8779da
+ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75487264"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75728272"
 ---
 # <a name="xamarinforms-local-databases"></a>Bancos de dados locais do Xamarin.Forms
 
@@ -34,14 +34,14 @@ Integre o SQLite.NET a aplicativos móveis seguindo estas etapas:
 
 Use o Gerenciador de pacotes NuGet para pesquisar o **SQLite-net-PCL** e adicione a versão mais recente ao projeto de código compartilhado.
 
-Há vários pacotes NuGet com nomes semelhantes. O pacote correto tem estes atributos:
+Há diversos pacotes NuGet com nomes semelhantes. O pacote correto tem estes atributos:
 
 - **Criado por:** Frank A. Krueger
 - **ID:** SQLite-net-PCL
 - **Link do NuGet:** [SQLite-net-PCL](https://www.nuget.org/packages/sqlite-net-pcl/)
 
 > [!NOTE]
-> Apesar do nome do pacote, use o pacote NuGet do **SQLite-net-PCL** mesmo em projetos .net Standard.
+> Apesar do nome do pacote, use o pacote NuGet **sqlite-net-pcl**, mesmo em projetos do .NET Standard.
 
 ## <a name="configure-app-constants"></a>Configurar constantes do aplicativo
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 04/20/2018
-ms.openlocfilehash: c9a0eee2779aa392cb2049b5518b6f30b7f05abc
-ms.sourcegitcommit: 58a08133496df53a639a82a7f672724220c57fd5
+ms.openlocfilehash: 2dd0a9a98c05204606f157cd9cd1028582af375b
+ms.sourcegitcommit: 5d75830fca6f2e58452d4445806e3653a3145dc0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74540391"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75870903"
 ---
 # <a name="broadcast-receivers-in-xamarinandroid"></a>Receptores de difusão no Xamarin. Android
 
@@ -29,7 +29,7 @@ O Android identifica dois tipos de difusões:
 
 O receptor de difusão é uma subclasse do tipo `BroadcastReceiver` e deve substituir o método [`OnReceive`](xref:Android.Content.BroadcastReceiver.OnReceive*) . O Android executará `OnReceive` no thread principal, portanto, esse método deve ser projetado para ser executado rapidamente. Deve-se ter cuidado ao gerar threads no `OnReceive` porque o Android pode encerrar o processo quando o método é concluído. Se um receptor de difusão precisar executar o trabalho de longa execução, é recomendável agendar um _trabalho_ usando o `JobScheduler` ou o _Dispatcher do trabalho firebase_. O agendamento do trabalho com um trabalho será discutido em um guia separado.
 
-Um _filtro de intenção_ é usado para registrar um receptor de difusão para que o Android possa rotear mensagens corretamente. O filtro de intenção pode ser especificado em tempo de execução (às vezes, isso é chamado de _receptor de contexto registrado_ ou de _registro dinâmico_) ou pode ser definido estaticamente no manifesto do Android (um _receptor registrado pelo manifesto_). O Xamarin. Android fornece C# um atributo,`IntentFilterAttribute`, que registrará de forma estática o filtro de intenção (isso será discutido em mais detalhes posteriormente neste guia). A partir do Android 8,0, não é possível que um aplicativo se registre estaticamente para uma difusão implícita.
+Um _filtro de intenção_ é usado para registrar um receptor de difusão para que o Android possa rotear mensagens corretamente. O filtro de intenção pode ser especificado em tempo de execução (às vezes, isso é chamado de _receptor de contexto registrado_ ou de _registro dinâmico_) ou pode ser definido estaticamente no manifesto do Android (um _receptor registrado pelo manifesto_). O Xamarin. Android fornece C# um atributo, `IntentFilterAttribute`, que registrará de forma estática o filtro de intenção (isso será discutido em mais detalhes posteriormente neste guia). A partir do Android 8,0, não é possível que um aplicativo se registre estaticamente para uma difusão implícita.
 
 A principal diferença entre o receptor registrado pelo manifesto e o receptor registrado pelo contexto é que um receptor registrado pelo contexto responderá apenas a difusões enquanto um aplicativo estiver em execução, enquanto um receptor registrado pelo manifesto pode responder a difusões, embora o aplicativo possa não estar em execução.  
 
@@ -82,6 +82,9 @@ public class MyBootReceiver : BroadcastReceiver
     }
 }
 ```
+
+> [!NOTE]
+> No Android 8,0 (API 26 e superior), o [Google colocou limitações](https://developer.android.com/about/versions/oreo/background) sobre o que os aplicativos podem fazer, enquanto os usuários não estão interagindo diretamente com eles. Essas limitações afetam os serviços em segundo plano e os receptores de difusão implícitas, como `Android.Content.Intent.ActionBootCompleted`. Devido a essas limitações, você pode ter dificuldades para registrar um receptor de difusão `Boot Completed` em versões mais recentes do Android. Se esse for o caso, observe que essas restrições não se aplicam aos serviços de primeiro plano, que podem ser chamados do receptor de difusão.
 
 Também é possível criar um filtro de intenção que responderá a tentativas personalizadas. Considere o exemplo a seguir: 
 

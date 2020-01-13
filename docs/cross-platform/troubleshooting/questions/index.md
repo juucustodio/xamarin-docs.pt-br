@@ -6,12 +6,12 @@ ms.assetid: C7E6E54D-3957-407D-BB87-22B095148C6B
 author: davidortinau
 ms.author: daortin
 ms.date: 05/08/2018
-ms.openlocfilehash: 0e49ef8fa0bf00d5ed41f3411393ffaf4891c1b8
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 30827292e59c70395fce17bb520f48b2f19c7d1e
+ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73013991"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75728170"
 ---
 # <a name="general-frequently-asked-questions"></a>Perguntas frequentes gerais
 
@@ -33,7 +33,7 @@ As atualizações, extensões e suplementos do NuGet podem ser encontrados na gu
 ### <a name="how-do-i-downgrade-a-nuget-packagenuget-package-downgrademd"></a>[Como fazer downgrade de um pacote NuGet?](nuget-package-downgrade.md)
 Visual Studio para Mac & o Visual Studio tem recursos para selecionar versões mais antigas de pacotes e instalá-los automaticamente; semelhante a como a atualização de pacotes funciona.
 
-### <a name="missing-packages-error-after-updating-nuget-packagesnuget-packages-missingmd"></a>[Erro de pacotes ausentes após atualizar os pacotes do Nuget](nuget-packages-missing.md)
+### <a name="missing-packages-error-after-updating-nuget-packagesnuget-packages-missingmd"></a>[Erro de pacotes ausentes após a atualização dos pacotes NuGet](nuget-packages-missing.md)
 Esse problema foi relatado principalmente em soluções de aplicativo de exemplo do Xamarin. Forms, mas o potencial para esse problema pode ocorrer em qualquer projeto que usa pacotes NuGet.
 
 ### <a name="unifying-google-play-services-components-and-nugetgps-components-nugetmd"></a>[Unificar os componentes do Google Play Services e o NuGet](gps-components-nuget.md)

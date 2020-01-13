@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 4abe0da2b75b6859c6547f0dc1c4cf8708491afb
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 40f99fb4e7e44e0a3dc499dc603e66620b890eaa
+ms.sourcegitcommit: ec62e2624295aa502ec35ac782031d61d61c3aaa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73022472"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75886561"
 ---
 # <a name="connection-troubleshooting-for-a-xamarinios-build-host"></a>Solução de problemas de conexão de um host de build do Xamarin.iOS
 
@@ -20,8 +20,8 @@ _Este guia fornece etapas de solução de problemas que podem ser encontrados us
 
 ## <a name="log-file-location"></a>Localização do Arquivo de Log
 
-- **Mac** – ~/Library/Logs/Xamarin-[MAJOR.MINOR]
-- **Windows** – %LOCALAPPDATA%\Xamarin\Logs
+- **Mac** – `~/Library/Logs/Xamarin-[MAJOR.MINOR]`
+- **Windows** – `%LOCALAPPDATA%\Xamarin\Logs`
 
 Os arquivos de log podem ser localizados, navegando até **Ajuda &gt; Xamarin &gt; Zip Logs** no Visual Studio.
 
@@ -133,7 +133,7 @@ Causa conhecida:
 
 #### <a name="trying-to-connect-never-completes"></a>"Tentando se conectar..." nunca é concluído
 
-- **Bug [#52264](https://bugzilla.xamarin.com/show_bug.cgi?id=52264)**  – Esse problema poderá acontecer no Xamarin 4.1 se **Login shell (Shell de logon)** no menu de contexto **Opções Avançadas** para o usuário do Mac em **System Preferences (Preferências do sistema) &gt; Users (Usuários) &amp; Groups (Grupos)** estiver definido como um valor diferente de **/bin/bash**. (A partir do Xamarin 4,2, esse cenário leva à mensagem de erro "não foi possível conectar".) **Solução alternativa**: altere o **Shell de logon** de volta para o padrão original de **/bin/bash**.
+- **Bug [#52264](https://bugzilla.xamarin.com/show_bug.cgi?id=52264)** – Esse problema poderá acontecer no Xamarin 4.1 se **Login shell (Shell de logon)** no menu de contexto **Opções Avançadas** para o usuário do Mac em **System Preferences (Preferências do sistema) &gt; Users (Usuários) &amp; Groups (Grupos)** estiver definido como um valor diferente de **/bin/bash**. (A partir do Xamarin 4,2, esse cenário leva à mensagem de erro "não foi possível conectar".) **Solução alternativa**: altere o **Shell de logon** de volta para o padrão original de **/bin/bash**.
 
 <a name="tryagain" />
 
@@ -145,9 +145,9 @@ Causas relatadas:
 
 - **Bug** – alguns usuários viram esse erro ao tentar se conectar ao host de build clicando duas vezes no nome do Mac na caixa de diálogo de conexão. **Solução alternativa possível**: [adicionar manualmente o Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md#manually-add-a-mac) usando o endereço IP.
 
-- **Bug [#35971](https://bugzilla.xamarin.com/show_bug.cgi?id=35971)**  – alguns usuários encontraram esse erro ao usar uma conexão de rede sem fio entre o host de build do Mac e o Windows. **Solução alternativa possível**: mover ambos os computadores para uma conexão de rede com fio.
+- **Bug [#35971](https://bugzilla.xamarin.com/show_bug.cgi?id=35971)** – alguns usuários encontraram esse erro ao usar uma conexão de rede sem fio entre o host de build do Mac e o Windows. **Solução alternativa possível**: mover ambos os computadores para uma conexão de rede com fio.
 
-- **Bug [#36642](https://bugzilla.xamarin.com/show_bug.cgi?id=36642)**  – no Xamarin 4.0, esta mensagem será exibida a qualquer momento que o arquivo **$HOME/.bashrc** no Mac contiver um erro. (A partir do Xamarin 4,1, os erros no arquivo **. bashrc** não afetarão mais o processo de conexão.) **Solução alternativa**: Mova o arquivo **. bashrc** para um local de backup (ou exclua-o se você souber que não precisa dele).
+- **Bug [#36642](https://bugzilla.xamarin.com/show_bug.cgi?id=36642)** – no Xamarin 4.0, esta mensagem será exibida a qualquer momento que o arquivo **$HOME/.bashrc** no Mac contiver um erro. (A partir do Xamarin 4,1, os erros no arquivo **. bashrc** não afetarão mais o processo de conexão.) **Solução alternativa**: Mova o arquivo **. bashrc** para um local de backup (ou exclua-o se você souber que não precisa dele).
 
 - **Bug [#52264](https://bugzilla.xamarin.com/show_bug.cgi?id=52264)** – esse erro poderá aparecer se **Shell de logon** no menu de contexto **Opções Avançadas** para o usuário do Mac em **Preferências do sistema > Usuários e Grupos** estiver definido como um valor diferente de **/bin/bash**. **Solução alternativa**: mude o **Login shell (Shell de logon)** para o padrão original de **/bin/bash**.
 
@@ -372,7 +372,7 @@ Se você estiver solucionando um problema de build e deseja verificar se o compo
 
     [![](troubleshooting-images/troubleshooting-image9.png "Move the mtbs folder to Trash")](troubleshooting-images/troubleshooting-image9.png#lightbox)
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Emparelhar com Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md)
 - [Vídeo sobre o agente de build do Xamarin Mac](https://www.youtube.com/watch?v=MBAPBtxkjFQ)

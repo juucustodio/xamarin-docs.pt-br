@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/27/2017
-ms.openlocfilehash: e8c05000275b65c18ddb6b628091da0fac462278
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 36c5733c347e3493b5ed423c52766c7e33fbdb3d
+ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73005458"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75728324"
 ---
 # <a name="adding-appcompat-and-material-design"></a>Adicionando AppCompat e design de material
 
@@ -21,7 +21,7 @@ _Siga estas etapas para converter aplicativos Android Xamarin. Forms existentes 
 <!-- source https://gist.github.com/jassmith/a3b2a543f99126782936
 https://blog.xamarin.com/material-design-for-your-xamarin-forms-android-apps/ -->
 
-## <a name="overview"></a>Visão Geral
+## <a name="overview"></a>{1&gt;Visão Geral&lt;1}
 
 Estas instruções explicam como atualizar seus aplicativos Android Xamarin. Forms existentes para usar a biblioteca AppCompat e habilitar o design de material na versão do Android de seus aplicativos Xamarin. Forms.
 
@@ -39,7 +39,7 @@ Verifique se a estrutura de destino do projeto Android é Android 6,0 (marshmall
 
 Crie os três arquivos a seguir em seu projeto Android e cole o conteúdo abaixo. O Google fornece um [Guia de estilo](https://www.google.com/design/spec/style/color.html#color-color-palette) e um gerador de paleta de [cores](https://www.materialpalette.com/) para ajudá-lo a escolher um esquema de cores alternativo para aquele especificado.
 
-**Recursos/valores/cores. xml**
+**Resources/values/colors.xml**
 
 ```xml
 <resources>
@@ -50,7 +50,7 @@ Crie os três arquivos a seguir em seu projeto Android e cole o conteúdo abaixo
 </resources>
 ```
 
-**Recursos/valores/Style. xml**
+**Resources/values/style.xml**
 
 ```xml
 <resources>
@@ -68,7 +68,7 @@ Crie os três arquivos a seguir em seu projeto Android e cole o conteúdo abaixo
 
 Um estilo adicional deve ser incluído na pasta **Values-v21** para aplicar propriedades específicas ao ser executado em Android pirulito e mais recente.
 
-**Resources/Values-v21/Style. xml**
+**Resources/values-v21/style.xml**
 
 ```xml
 <resources>
@@ -84,7 +84,7 @@ Um estilo adicional deve ser incluído na pasta **Values-v21** para aplicar prop
 
 Para garantir que essas novas informações de tema sejam usadas, defina o tema no arquivo **AndroidManifest** adicionando `android:theme="@style/MyTheme"` (Deixe o restante do XML como ele estava).
 
-**Propriedades/AndroidManifest. xml**
+**Properties/AndroidManifest.xml**
 
 ```xml
 ...
@@ -97,7 +97,7 @@ Para garantir que essas novas informações de tema sejam usadas, defina o tema 
 
 Crie os arquivos **Tabbar. axml** e **Toolbar. axml** no diretório de **recursos/layout** e cole o conteúdo abaixo:
 
-**Recursos/layout/Tabbar. axml**
+**Resources/layout/Tabbar.axml**
 
 ```xml
 <android.support.design.widget.TabLayout

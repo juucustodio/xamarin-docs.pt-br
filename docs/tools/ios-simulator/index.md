@@ -6,12 +6,12 @@ ms.assetid: 63c50190-7e54-4140-a30d-1a0e577c47d7
 author: davidortinau
 ms.author: daortin
 ms.date: 04/26/2019
-ms.openlocfilehash: 8313af47882b1c8c47f1e82f62f0a43e4e9c704c
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: d5898f9c6ee30eb1f12bf6480b93a609e762e6ea
+ms.sourcegitcommit: ec62e2624295aa502ec35ac782031d61d61c3aaa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73029721"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75886587"
 ---
 # <a name="remoted-ios-simulator-for-windows"></a>Simulador remoto de iOS para Windows
 
@@ -34,7 +34,7 @@ A barra de ferramentas na parte superior da janela do simulador contém vários 
 
 - **Página inicial** – simula o botão página inicial em um dispositivo IOS.
 - **Bloquear** – bloqueia o simulador (passe o dedo para desbloquear).
-- **Captura de tela** – salva uma captura de tela do simulador (armazenado no **Pictures\Xamarin\iOS Simulator \\** ).
+- **Captura de tela** – salva uma captura de tela do simulador (armazenado no **Pictures\Xamarin\iOS Simulator\\** ).
 - [**Configurações**](#settings) – exibe o teclado, o local e outras configurações.
 - [**Outras opções**](#other-options) – exibe várias opções de simulador, como rotação, gestos de agitar e Touch ID.
 
@@ -72,3 +72,12 @@ Para desabilitar o simulador do iOS remoto para Windows, navegue até **ferramen
 [![caixa de seleção para usar o simulador](images/options-sml.png "caixa de seleção para usar o simulador")](images/options.png#lightbox)
 
 Com essa opção desabilitada, a depuração abre o simulador de iOS no host de Build do Mac conectado.
+
+## <a name="troubleshooting"></a>Solução de problemas
+
+Se você tiver problemas com o simulador do iOS remoto, poderá exibir os logs nestes locais:
+
+- **Mac** – `~/Library/Logs/Xamarin/Simulator.Server`
+- **Windows** – `%LOCALAPPDATA%\Xamarin\Logs\Xamarin.Simulator`
+
+Se você [relatar um problema no Visual Studio](https://docs.microsoft.com/visualstudio/ide/how-to-report-a-problem-with-visual-studio), anexar esses logs poderá ser útil (há opções para manter os carregamentos privados).

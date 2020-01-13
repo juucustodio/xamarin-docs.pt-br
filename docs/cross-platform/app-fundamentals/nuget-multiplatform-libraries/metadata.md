@@ -6,12 +6,12 @@ ms.assetid: 147BA370-67A7-4E6C-BF17-AA7C536C0A48
 author: davidortinau
 ms.author: daortin
 ms.date: 03/23/2017
-ms.openlocfilehash: 5965b3f78bfc086b1cc6030a02f1cabafaae29d3
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 5e71ff86869c42d478fbf1ee3f6de5bff59431fc
+ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73016751"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75728207"
 ---
 # <a name="editing-nuget-metadata"></a>Editando metadados do NuGet
 
@@ -51,6 +51,6 @@ Consulte a [referência de elementos opcionais](https://docs.microsoft.com/nuget
 > [!NOTE]
 > Se o pacote NuGet estiver sendo distribuído no [NuGet.org](https://www.nuget.org) , é recomendável fornecer o máximo possível de informações.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Referência do .nuspec](https://docs.microsoft.com/nuget/schema/nuspec#general-form-and-schema)

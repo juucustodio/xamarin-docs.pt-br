@@ -8,12 +8,12 @@ author: pierceboggan
 ms.author: piboggan
 robots: noindex
 ms.date: 10/26/2018
-ms.openlocfilehash: 9fb085313e994adc486833bb25e893659aa33b4b
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: a5a5a9acf47603601461660df689a7a5fa6aee00
+ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73032751"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75728337"
 ---
 # <a name="xamarin-live-reload-preview"></a>Recarregamento do Xamarin Live (versão prévia)
 
@@ -22,7 +22,7 @@ ms.locfileid: "73032751"
 
 O Xamarin Live reload permite que você **faça alterações no XAML e os veja refletido em tempo real, sem a necessidade de outra compilação e implantação**. Todas as alterações feitas em seu XAML serão reimplantadas no salvamento e refletidas em seu destino de implantação.
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>Requisitos do
 
 * [Visual Studio 2017 versão 15,7 ou superior](https://visualstudio.microsoft.com/vs/) com o **desenvolvimento móvel com** carga de trabalho do .net.
 * [Xamarin. Forms 3.0.0 ou superior](https://www.nuget.org/packages/Xamarin.Forms/).
@@ -105,7 +105,7 @@ Se você estiver Depurando em um emulador do Android ou no simulador do iOS, a r
 
 ### <a name="does-it-require-debugging-the-app"></a>Ele requer a depuração do aplicativo? 
 
-Nº Na verdade, você pode até mesmo iniciar todos os seus destinos de aplicativo com suporte (Android, iOS e UWP) em qualquer número de dispositivos ou simuladores/emuladores e ver todas as atualizações ao mesmo tempo. 
+No. Na verdade, você pode até mesmo iniciar todos os seus destinos de aplicativo com suporte (Android, iOS e UWP) em qualquer número de dispositivos ou simuladores/emuladores e ver todas as atualizações ao mesmo tempo. 
 
 ## <a name="limitations"></a>Limitações
 
@@ -143,7 +143,7 @@ Nº Na verdade, você pode até mesmo iniciar todos os seus destinos de aplicati
 
 ### <a name="app-doesnt-connect"></a>O aplicativo não se conecta
 
-Quando o aplicativo é criado, as informações de **ferramentas > opções > Xamarin > recarregamento ao vivo** (nome do host, chaves de criptografia e porta) são incorporadas ao aplicativo, de modo que quando `LiveReload.Init()` é executado, nenhum emparelhamento ou configuração é necessário para a conexão com Houve.
+Quando o aplicativo é criado, as informações de **ferramentas > opções > Xamarin > recarregamento ao vivo** (nome do host, chaves de criptografia e porta) são incorporadas ao aplicativo, de modo que quando `LiveReload.Init()` é executado, nenhum emparelhamento ou configuração é necessário para que a conexão seja realizada com sucesso.
 
 Além de problemas normais de rede (firewall, dispositivo em uma rede diferente), o principal motivo pelo qual o aplicativo pode não conectar com êxito o IDE é porque sua configuração difere daquela do Visual Studio. Isso pode acontecer se:
 
@@ -160,9 +160,9 @@ Se você tiver uma versão prévia mais antiga e tiver problemas para desinstal�
 1. Exclua a pasta **C:\Program Files (x86) \Microsoft Visual Studio\Preview\Enterprise\Common7\IDE\Extensions\Xamarin\LiveReload** (Observação: substitua "Enterprise" pela edição instalada e "Preview" por "2017" se você instalou em um vs estável)
 2. Abra um **prompt de comando do desenvolvedor** para o Visual Studio e execute `devenv /updateconfiguration`. 
 
-## <a name="tips--tricks"></a>Dicas & truques
+## <a name="tips--tricks"></a>Dicas e truques
 
-* Desde que as configurações de recarga ao vivo não sejam alteradas (incluindo as chaves de criptografia, como se você desativar a **geração automática de chaves de criptografia**) e criar a partir da mesma máquina, não será necessário compilar e implantar o aplicativo após a implantação inicial, a menos que você altere código ou dependências. Você pode simplesmente iniciar um aplicativo implantado anteriormente e ele se conectará ao último host usado.
+* Desde que as configurações de recarga ao vivo não sejam alteradas (incluindo as chaves de criptografia, como se você desativar a **geração automática de chaves de criptografia**) e criar a partir do mesmo computador, não será necessário compilar e implantar o aplicativo após a implantação inicial, a menos que você altere o código ou as dependências. Você pode simplesmente iniciar um aplicativo implantado anteriormente e ele se conectará ao último host usado.
 
 * Não há nenhuma limitação de quantos dispositivos você pode conectar à mesma sessão do Visual Studio. Você pode implantar e iniciar o aplicativo em quantos dispositivos/simuladores forem necessários para ver o recarregamento ao vivo trabalhando em todos eles ao mesmo tempo.
 

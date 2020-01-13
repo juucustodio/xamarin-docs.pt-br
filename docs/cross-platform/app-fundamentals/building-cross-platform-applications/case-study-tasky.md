@@ -6,12 +6,12 @@ ms.assetid: B581B2D0-9890-C383-C654-0B0E12DAD5A6
 author: davidortinau
 ms.author: daortin
 ms.date: 03/23/2017
-ms.openlocfilehash: e38fc0d23c65189f51f7f8f159a07894b3e1ab72
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: a94baa66c1ca18762efccd980264170648c232fa
+ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73030330"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75728285"
 ---
 # <a name="cross-platform-app-case-study-tasky"></a>Estudo de caso de aplicativo de plataforma cruzada: tarefa
 
@@ -25,7 +25,7 @@ A *tarefa* *portátil* é um aplicativo simples de lista de tarefas pendentes. E
 
  <a name="Requirements" />
 
-### <a name="requirements"></a>Requisitos
+### <a name="requirements"></a>Requisitos do
 
 A primeira etapa na criação de um aplicativo é identificar os recursos desejados. Elas podem ser metas de alto nível ou casos de uso detalhados. A tarefa tem requisitos funcionais diretos:
 
@@ -52,7 +52,7 @@ Saber quais dados precisam ser armazenados ajudará a determinar qual mecanismo 
 
 A tarefa precisa armazenar três propriedades para cada ' TaskItem ':
 
-- **Nome** – cadeia de caracteres
+- **Name** – Cadeia de caracteres
 - **Observações** – cadeia de caracteres
 - **Concluído** – booliano
 
@@ -324,7 +324,7 @@ A camada da interface do usuário consiste nas seguintes classes:
 
  <a name="Home_Screen" />
 
-#### <a name="home-screen"></a>Tela inicial
+#### <a name="home-screen"></a>Tela de Início
 
 A tela inicial é uma tela `MonoTouch.Dialog` que exibe uma lista de tarefas do banco de dados SQLite. Ele herda de `DialogViewController` e implementa o código para definir a `Root` para conter uma coleção de objetos `TaskItem` para exibição.
 
@@ -341,7 +341,7 @@ Os dois métodos principais relacionados à exibição e interação com a lista
 
 Detalhes da tarefa é uma tela de entrada que permite que as tarefas sejam editadas ou excluídas.
 
-A tarefa usa a API de reflexão do `MonoTouch.Dialog` para exibir a tela, portanto, não há nenhuma implementação de `UIViewController`. Em vez disso, a classe `HomeScreen` instancia e exibe um `DialogViewController` usando a classe `TaskDialog` da camada de aplicativo.
+A tarefa usa a API de reflexão do `MonoTouch.Dialog`para exibir a tela, portanto, não há nenhuma implementação de `UIViewController`. Em vez disso, a classe `HomeScreen` instancia e exibe um `DialogViewController` usando a classe `TaskDialog` da camada de aplicativo.
 
 Esta captura de tela mostra uma exibição vazia que demonstra o atributo `Entry` Configurando o texto da marca d' água nos campos **Name** e **Notes** :
 
@@ -355,7 +355,7 @@ A funcionalidade da tela de **detalhes da tarefa** (como salvar ou excluir uma t
 
  <a name="Android_App" />
 
-## <a name="android-app"></a>Aplicativo Android
+## <a name="android-app"></a>Aplicativo do Android
 
 O projeto Xamarin. Android completo é mostrado abaixo:
 
@@ -381,11 +381,11 @@ Ele também deve fazer referência ao projeto PCL (por exemplo, TaskyPortableLib
 
 Semelhante à versão do iOS que vimos anteriormente, a camada de aplicativo na versão do Android contém classes específicas da plataforma necessárias para "associar" os objetos expostos pelo núcleo à interface do usuário.
 
- **TaskListAdapter** – para exibir uma lista \<T > de objetos, precisamos implementar um adaptador para exibir objetos personalizados em uma `ListView`. O adaptador controla qual layout é usado para cada item na lista – nesse caso, o código usa um layout interno do Android `SimpleListItemChecked`.
+ **TaskListAdapter** – para exibir uma lista\<t > de objetos, precisamos implementar um adaptador para exibir objetos personalizados em uma `ListView`. O adaptador controla qual layout é usado para cada item na lista – nesse caso, o código usa um layout interno do Android `SimpleListItemChecked`.
 
  <a name="User_Interface_(UI)" />
 
-### <a name="user-interface-ui"></a>Interface do usuário (IU)
+### <a name="user-interface-ui"></a>Interface do Usuário (IU)
 
 A camada de interface do usuário do aplicativo Android é uma combinação de código e marcação XML.
 
@@ -395,7 +395,7 @@ A camada de interface do usuário do aplicativo Android é uma combinação de c
 
  <a name="Home_Screen" />
 
-#### <a name="home-screen"></a>Tela inicial
+#### <a name="home-screen"></a>Tela de Início
 
 A tela inicial consiste em uma subclasse de atividade `HomeScreen` e o arquivo de `HomeScreen.axml` que define o layout (a posição do botão e a lista de tarefas). A tela é parecida com esta:
 
@@ -448,7 +448,7 @@ Os ViewModels encapsulam dados do PCL (`TaskItemManager`) e apresenta isso da ma
 
  <a name="User_Interface_(UI)" />
 
-### <a name="user-interface-ui"></a>Interface do usuário (IU)
+### <a name="user-interface-ui"></a>Interface do Usuário (IU)
 
 O XAML tem um recurso de vinculação de dados exclusivo que pode ser declarado na marcação e reduzir a quantidade de código necessária para exibir objetos:
 
@@ -507,7 +507,7 @@ Ele descreveu o processo usado para criar as camadas do aplicativo e discutiu qu
 
 O código pode ser baixado do [GitHub](https://github.com/xamarin/mobile-samples/tree/master/TaskyPortable).
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Criando aplicativos de plataforma cruzada (documento principal)](~/cross-platform/app-fundamentals/building-cross-platform-applications/index.md)
 - [Aplicativo de exemplo portátil para tarefas (github)](https://github.com/xamarin/mobile-samples/tree/master/TaskyPortable)

@@ -7,12 +7,12 @@ ms.assetid: 9E6C986F-3FBA-4599-8367-FB0C565C0ADE
 author: davidortinau
 ms.author: daortin
 ms.date: 04/18/2018
-ms.openlocfilehash: 47f47882cb270a8e2517f7cab6f1d6af1cf473f3
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 4a5aa13a197e885b074b07eae3594abd4992ee71
+ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73014339"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75728246"
 ---
 # <a name="updating-component-references-to-nuget"></a>Atualizando referências de componente para o NuGet
 
@@ -37,11 +37,11 @@ Se você carregar um projeto no Visual Studio, a caixa de diálogo a seguir ser�
 
 Para remover um componente do seu projeto:
 
-1. Abra o arquivo **. csproj** . Para fazer isso, clique com o botão direito do mouse no nome do projeto e selecione **descarregar projeto**. 
+1. Abra o arquivo **.csproj**. Para fazer isso, clique com o botão direito do mouse no nome do projeto e selecione **descarregar projeto**. 
 
 2. Clique com o botão direito do mouse novamente no projeto descarregado e selecione **Editar {Your-Project-Name}. csproj**.
 
-3. Localize todas as referências no arquivo para `XamarinComponentReference`. Ele deve ser semelhante ao exemplo a seguir:
+3. Localize todas as referências no arquivo para `XamarinComponentReference`. Ela deve ter uma aparência semelhante ao exemplo a seguir:
 
     ```xml
     <ItemGroup>
@@ -76,7 +76,7 @@ Para remover um componente do seu projeto:
 
 1. Abra o arquivo. csproj. Para fazer isso, clique com o botão direito do mouse no nome do projeto e selecione **ferramentas > arquivo de edição**.
 
-2. Localize todas as referências no arquivo para `XamarinComponentReference`. Ele deve ser semelhante ao exemplo a seguir:
+2. Localize todas as referências no arquivo para `XamarinComponentReference`. Ela deve ter uma aparência semelhante ao exemplo a seguir:
 
     ```xml
     <ItemGroup>
@@ -201,7 +201,7 @@ Isso significa que se você abrir a solução em um novo computador, o component
 
 Muitos fornecedores de componentes ainda estão trabalhando na migração para o NuGet, e outros (incluindo produtos comercialmente disponíveis) podem estar investigando opções de entrega alternativas.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Lista de plug-ins e bibliotecas populares do Xamarin](https://github.com/xamarin/XamarinComponents/blob/master/README.md)
 - [Instalar e usar um pacote NuGet (Windows)](https://docs.microsoft.com/nuget/quickstart/use-a-package)
