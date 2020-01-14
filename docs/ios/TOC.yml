@@ -612,23 +612,24 @@
       items:
         - name: Visão geral
           href: deploy-test/index.md
-        - name: Distribuição de aplicativo
-          href: deploy-test/app-distribution/index.md
+        - name: Distribuição do aplicativo
           items:
-            - name: Distribuição da App Store
+            - name: Visão geral
+              href: deploy-test/app-distribution/index.md
+            - name: Distribuição na App Store
               href: deploy-test/app-distribution/app-store-distribution/index.md
               items:
-                - name: Como configurar um aplicativo no iTunes Connect
+                - name: Configurar um aplicativo no iTunes Connect
                   href: deploy-test/app-distribution/app-store-distribution/itunesconnect.md
                 - name: Publicando na App Store
                   href: deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md
-            - name: Distribuição interna (Empresa)
+            - name: Distribuição In-House (Enterprise)
               href: deploy-test/app-distribution/in-house-distribution.md
-            - name: Distribuição Ad Hoc
+            - name: Distribuição ad hoc
               href: deploy-test/app-distribution/ad-hoc-distribution.md
             - name: O arquivo iTunesMetadata.plist
               href: deploy-test/app-distribution/itunesmetadata.md
-            - name: Suporte IPA
+            - name: Suporte para formato IPA
               href: deploy-test/app-distribution/ipa-support.md
         - name: Assinatura e provisionamento de código
           href: deploy-test/provisioning/index.md
