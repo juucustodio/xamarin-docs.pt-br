@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/04/2019
-ms.openlocfilehash: e115014728cce9252a92740b6db5beab582f61ed
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.openlocfilehash: 63ce27fc871da12eabb1baad568af167c860926f
+ms.sourcegitcommit: 211fed94fb96127a3e158ae1ff5d7eb831a203d8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75489863"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75955807"
 ---
 # <a name="xamarinforms-relative-bindings"></a>Associações relativas ao Xamarin. Forms
 
@@ -179,10 +179,10 @@ Neste exemplo, o [`Frame`](xref:Xamarin.Forms.Frame), que é o elemento raiz da 
 
 [![Captura de tela de uma associação relativa do modo TemplatedParent, no iOS e no Android](relative-bindings-images/templatedparent-relative-binding.png "Modo de associação relativa a TemplatedParent")](relative-bindings-images/templatedparent-relative-binding-large.png#lightbox "Modo de associação relativa a TemplatedParent")
 
-Para obter mais informações sobre modelos de controle, consulte [Xamarin. Forms Control templates](~/xamarin-forms/app-fundamentals/templates/control-templates/index.md).
+Para obter mais informações sobre modelos de controle, consulte [Xamarin. Forms Control templates](~/xamarin-forms/app-fundamentals/templates/control-template.md).
 
 ## <a name="related-links"></a>Links relacionados
 
 - [Demonstrações de associação de dados (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 - [Extensões de marcação XAML](~/xamarin-forms/xaml/markup-extensions/index.md)
-- [Modelos de controle do Xamarin. Forms](~/xamarin-forms/app-fundamentals/templates/control-templates/index.md)
+- [Modelos de controle do Xamarin. Forms](~/xamarin-forms/app-fundamentals/templates/control-template.md)

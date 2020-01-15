@@ -5,12 +5,12 @@ description: Este documento compara e contrasta o WPF para Xamarin. Forms. Ele a
 author: davidortinau
 ms.author: daortin
 ms.date: 04/26/2017
-ms.openlocfilehash: 798839457a418d457bac83e6e20397722423dbac
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: e87595c121f1117d055d812cb06c81ecba850c12
+ms.sourcegitcommit: 211fed94fb96127a3e158ae1ff5d7eb831a203d8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73016481"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75955651"
 ---
 # <a name="wpf-vs-xamarinforms-similarities--differences"></a>WPF versus Xamarin. Forms: semelhanças & diferenças
 
@@ -27,7 +27,7 @@ Usos comuns para isso são coisas como caixas de diálogo de autenticação, pro
 3. `ContentPresenter`
 4. `TemplateBinding`
 
-Mas é importante saber que eles _não_ atendem à mesma finalidade no Xamarin. Forms. Para obter mais informações sobre esse recurso, confira a [página de documentação](~/xamarin-forms/app-fundamentals/templates/control-templates/index.md).
+Mas é importante saber que eles _não_ atendem à mesma finalidade no Xamarin. Forms. Para obter mais informações sobre esse recurso, confira a [página de documentação](~/xamarin-forms/app-fundamentals/templates/control-template.md).
 
 ## <a name="xaml"></a>XAML
 
@@ -87,7 +87,7 @@ O suporte e o mecanismo de ligação são mais semelhantes à implementação do
 - Não há suporte para os seguintes recursos em associações:
   - BindingGroupName
   - BindsDirectlyToSource
-  - É assíncrono
+  - IsAsync
   - MultiBinding
   - NotifyOnSourceUpdated
   - NotifyOnTargetUpdated
@@ -97,7 +97,7 @@ O suporte e o mecanismo de ligação são mais semelhantes à implementação do
   - ValidatesOnDataErrors
   - ValidatesOnExceptions
   - Coleção de ValidationRules
-  - XPath
+  - {1&gt;XPath&lt;1}
   - XmlNamespaceManager
 
 #### <a name="relativesource"></a>RelativeSource
@@ -138,7 +138,7 @@ O WPF inclui um `RoutedCommand` interno que às vezes é usado; O Xamarin. Forms
 
 Ambas as interfaces têm suporte total em associações do Xamarin. Forms. Ao contrário de muitas estruturas baseadas em XAML, as notificações de alteração de propriedade podem ser geradas em threads em segundo plano no Xamarin. Forms (assim como o WPF) e o mecanismo de associação fará a transição apropriada para o thread da interface do usuário.
 
-Além disso, os dois ambientes dão suporte a `SynchronziationContext` e `async` / `await` fazer Marshalling de thread adequado. O WPF inclui a classe `Dispatcher` em todos os elementos visuais, o Xamarin. Forms tem um método estático `Device.BeginInvokeOnMainThread` que também pode ser usado (embora `SynchronizationContext` seja preferencial para codificação de plataforma cruzada).
+Além disso, os dois ambientes dão suporte a `SynchronziationContext` e `async`/`await` fazer Marshalling de thread adequado. O WPF inclui a classe `Dispatcher` em todos os elementos visuais, o Xamarin. Forms tem um método estático `Device.BeginInvokeOnMainThread` que também pode ser usado (embora `SynchronizationContext` seja preferencial para codificação de plataforma cruzada).
 
 - O Xamarin. Forms inclui um `ObservableCollection<T>` que oferece suporte a notificações de alteração de coleção.
 - Você pode usar `BindingBase.EnableCollectionSynchronization` para habilitar atualizações entre threads para uma coleção. A API é ligeiramente diferente da variação do WPF, [Verifique os detalhes de uso dos documentos](xref:Xamarin.Forms.BindingBase.EnableCollectionSynchronization*).
@@ -151,7 +151,7 @@ Além disso, eles não são tão flexíveis quanto seus equivalentes do WPF.
 
 1. O elemento raiz da `DataTemplate` deve _sempre_ ser um objeto `ViewCell`.
 2. Os gatilhos de dados têm suporte total em um modelo de dados, mas devem incluir uma propriedade `DataType` indicando o tipo da propriedade à qual o gatilho está associado.
-3. também há suporte para `DataTemplateSelector`, mas deriva de `DataTemplate` e, portanto, atribuído diretamente à propriedade `ItemTemplate` (vs.  `ItemTemplateSelector` no WPF).
+3. também há suporte para `DataTemplateSelector`, mas deriva de `DataTemplate` e, portanto, atribuído diretamente à propriedade `ItemTemplate` (vs. `ItemTemplateSelector` no WPF).
 
 ## <a name="itemscontrol"></a>ItemsControl
 
@@ -171,7 +171,7 @@ Em dispositivos de telefone, _telas_ diferentes geralmente são a solução e, p
 |--- |--- |
 |Baseado em pilha (Push/pop)|NavigationPage|
 |Mestre/Detalhes|MasterDetailPage|
-|Tabulações|TabbedPage|
+|Guias|TabbedPage|
 |Passar o dedo para a esquerda/direita|CarouselView|
 
 O `NavigationPage` é a abordagem mais comum, e cada página tem uma propriedade `Navigation` que pode ser usada para enviar e desativar páginas na pilha de navegação. Esse é o equivalente mais próximo ao `NavigationService` encontrado no WPF.
