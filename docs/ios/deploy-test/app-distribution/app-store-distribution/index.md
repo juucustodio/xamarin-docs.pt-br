@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 08/23/2017
-ms.openlocfilehash: 96300cdddcc21511ef85ebbfe33f6ce32cb56cd7
-ms.sourcegitcommit: 6f09bc2b760e76a61a854f55d6a87c4f421ac6c8
+ms.openlocfilehash: 73c4e992fae1a2d525670604d98f277fe4fde794
+ms.sourcegitcommit: 3e94c6d2b6d6a70c94601e7bf922d62c4a6c7308
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/02/2020
-ms.locfileid: "75607926"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "76031425"
 ---
 # <a name="app-store-distribution"></a>Distribuição da App Store
 
@@ -21,6 +21,9 @@ Depois que um aplicativo Xamarin.iOS foi desenvolvido, a próxima etapa do ciclo
 > [!IMPORTANT]
 > A Apple [indicou](https://developer.apple.com/ios/submit/) que, a partir de março de 2019, todos os aplicativos e atualizações enviados à App Store deverão ter sido criados com o SDK do iOS 12.1 ou posterior, incluído no Xcode 10.1 ou posterior.
 > Aplicativos também devem dar suporte aos tamanhos de tela do iPhone XS e de 12,9 pol. do iPad Pro.
+
+> [!IMPORTANT]
+> Se você estiver procurando recursos em relação ao `UIWebView` aviso de reprovação (ITMS-90809) ao usar o Xamarin. Forms, consulte a documentação do [WebView xamarin. Forms](~/xamarin-forms/user-interface/webview.md#uiwebview-deprecation-and-app-store-rejection-itms-90809) .
 
 Distribuir um aplicativo, assim como ocorre com o desenvolvimento de um aplicativo, requer provisionar os aplicativos usando o *perfil de provisionamento* apropriado. Perfis de provisionamento são arquivos que contêm informações de assinatura de código, bem como a identidade do aplicativo e o mecanismo de distribuição desejado. Também apresentam informações sobre os dispositivos nos quais o aplicativo pode ser implantado para distribuição fora da App Store.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: 1ae3a2af436a4ad8860ab27df550a1d74d5084a6
-ms.sourcegitcommit: 0ffef1721f28717d46c8168ec96a45b6fe96b623
+ms.openlocfilehash: 933edb1c0681f3fc9cbb8d81aa3091a65c4346e3
+ms.sourcegitcommit: 3e94c6d2b6d6a70c94601e7bf922d62c4a6c7308
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75718760"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "76031361"
 ---
 # <a name="web-views-in-xamarinios"></a>Exibições da Web no Xamarin. iOS
 
@@ -95,6 +95,9 @@ Para obter mais informações sobre o ATS, incluindo como implementá-lo em seu 
 > O `UIWebView` foi preterido. Os aplicativos que usam esse controle [não serão aceitos na loja de aplicativos a partir de abril de 2020, e os aplicativos existentes precisarão removê-lo até 2020 de dezembro](https://developer.apple.com/news/?id=12232019b).
 > 
 > A [documentação de `UIWebView` da Apple](https://developer.apple.com/documentation/uikit/uiwebview) sugere que os aplicativos usem [`WKWebView`](#wkwebview) em vez disso.
+
+> [!IMPORTANT]
+> Se você estiver procurando recursos em relação ao `UIWebView` aviso de reprovação (ITMS-90809) ao usar o Xamarin. Forms, consulte a documentação do [WebView xamarin. Forms](~/xamarin-forms/user-interface/webview.md#uiwebview-deprecation-and-app-store-rejection-itms-90809) .
 
 `UIWebView` é a maneira herdada da Apple de fornecer conteúdo da Web em seu aplicativo. Ele foi lançado no iOS 2,0 e foi preterido a partir de 8,0.
 

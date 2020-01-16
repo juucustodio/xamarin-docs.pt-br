@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/04/2019
-ms.openlocfilehash: c9f934ad690bffa2418a7221445a473d9a90fdb9
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.openlocfilehash: dedce45d0c09f807aaf2ecbf540b8c9f319a4f16
+ms.sourcegitcommit: 3e94c6d2b6d6a70c94601e7bf922d62c4a6c7308
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75490201"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "76031397"
 ---
 # <a name="xamarinforms-webview"></a>WebView do xamarin. Forms
 
@@ -518,6 +518,50 @@ function factorial(num) {
 </body>
 </html>
 ```
+
+## <a name="uiwebview-deprecation-and-app-store-rejection-itms-90809"></a>Reprovação UIWebView e rejeição da loja de aplicativos (ITMS-90809)
+
+A partir de abril de 2020, a [Apple rejeitará aplicativos](https://developer.apple.com/news/?id=12232019b) que ainda usam a API de `UIWebView` preterida. Embora o Xamarin. Forms tenha alternado para `WKWebView` como o padrão, ainda há uma referência ao SDK mais antigo nos binários do Xamarin. Forms. O comportamento atual do [vinculador do IOS](~/ios/deploy-test/linker.md) não remove isso e, como resultado, a API de `UIWebView` preterida ainda parecerá ser referenciada de seu aplicativo quando você enviar para a loja de aplicativos.
+
+Uma versão de visualização do vinculador está disponível para corrigir esse problema. Para habilitar a visualização, você precisará fornecer um argumento adicional `--optimize=experimental-xforms-product-type` ao vinculador. 
+
+Os pré-requisitos para isso funcionam são:
+
+- **Xamarin. forms 4,5 ou superior** &ndash; versões de pré-lançamento do Xamarin. Forms 4,5 podem ser usadas.
+- **Xamarin. Ios 13.10.0.17 ou superior** &ndash; Verifique sua versão do Xamarin. Ios [no Visual Studio](~/cross-platform/troubleshooting/questions/version-logs.md#version-information). Esta versão do Xamarin. iOS está incluída no Visual Studio para Mac 8.4.1 e no Visual Studio 16.4.3.
+- **Remover referências a `UIWebView`** &ndash; seu código não deve ter nenhuma referência a `UIWebView` ou a classes que usam `UIWebView`.
+
+### <a name="configure-the-linker-preview"></a>Configurar a visualização do vinculador
+
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+
+Siga estas etapas para que o vinculador remova `UIWebView` referências:
+
+1. **Abra as propriedades do projeto ios** &ndash; clique com o botão direito do mouse no seu projeto Ios e escolha **Propriedades**.
+1. **Navegue até a seção Build do ios** &ndash; selecione a seção **Build do IOS** .
+1. **Atualize os argumentos mTouch adicionais** &ndash; nos **argumentos adicionais do mTouch** adicione esse sinalizador `--optimize=experimental-xforms-product-type` (além de qualquer valor que possa já estar lá). 
+1. **Atualize todas as configurações de compilação** &ndash; use as listas de **configuração** e **plataforma** na parte superior da janela para atualizar todas as configurações de compilação. A configuração mais importante a ser atualizada é a configuração de **lançamento/iPhone** , pois ela normalmente é usada para criar compilações para envio da loja de aplicativos.
+
+Você pode ver a janela com o novo sinalizador em vigor nesta captura de tela:
+
+[![definir o sinalizador na seção Build do iOS](webview-images/iosbuildblade-vs-sml.png)](webview-images/iosbuildblade-vs.png#lightbox)
+
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+
+Siga estas etapas para que o vinculador remova `UIWebView` referências
+
+1. **Abra as opções de projeto do ios** &ndash; clique com o botão direito do mouse no seu projeto Ios e escolha **Opções**.
+1. **Navegue até a seção Build do ios** &ndash; selecione a seção **Build do IOS** .
+1. **Atualize os argumentos _mTouch_ adicionais** &ndash; em os **argumentos adicionais do _mTouch_**  adicione esse sinalizador `--optimize=experimental-xforms-product-type` (além de qualquer valor que possa já estar lá).
+1. **Atualize todas as configurações de compilação** &ndash; use as listas de **configuração** e **plataforma** na parte superior da janela para atualizar todas as configurações de compilação. A configuração mais importante a ser atualizada é a configuração de **lançamento/iPhone** , pois ela normalmente é usada para criar compilações para envio da loja de aplicativos.
+
+Você pode ver a janela com o novo sinalizador em vigor nesta captura de tela:
+
+[![definir o sinalizador na seção Build do iOS](webview-images/iosbuildblade-xs-sml.png)](webview-images/iosbuildblade-xs.png#lightbox)
+
+-----
+
+Agora, quando você cria uma nova compilação (versão) e a envia para a loja de aplicativos, não deve haver nenhum aviso sobre a API preterida.
 
 ## <a name="related-links"></a>Links Relacionados
 
