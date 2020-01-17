@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: db26de8deed9945c6fff2d49f7d12de03fbe38df
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 2ed16c651d0b373e33d58bb73591977d3484d6e0
+ms.sourcegitcommit: be8ce3449afab22673e48b546d857431c071d66f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73008233"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76162932"
 ---
 # <a name="using-adonet-with-xamarinios"></a>Usando o ADO.NET com Xamarin. iOS
 
@@ -210,7 +210,18 @@ using (var contents = connection.CreateCommand ()) {
 
 O tipo de retorno do método de `ExecuteScalar` é `object` – você deve converter o resultado dependendo da consulta de banco de dados. O resultado pode ser um inteiro de uma consulta de contagem ou uma cadeia de caracteres de uma consulta SELECT de coluna única. Observe que isso é diferente para outros métodos Execute que retornam um objeto leitor ou uma contagem do número de linhas afetadas.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="microsoftdatasqlite"></a>Microsoft.Data.Sqlite
+
+Há outro `Microsoft.Data.Sqlite`de biblioteca, que pode ser [instalado a partir do NuGet](https://www.nuget.org/packages/Microsoft.Data.Sqlite), que é funcionalmente equivalente a `Mono.Data.Sqlite` e permite os mesmos tipos de consultas.
+
+Há uma [comparação entre as duas bibliotecas](https://docs.microsoft.com/dotnet/standard/data/sqlite/compare) e alguns [detalhes específicos do Xamarin](https://docs.microsoft.com/dotnet/standard/data/sqlite/xamarin). Mais importante para aplicativos Xamarin. iOS, você deve incluir uma chamada de inicialização:
+
+```csharp
+// required for Xamarin.iOS
+SQLitePCL.Batteries_V2.Init();
+```
+
+## <a name="related-links"></a>Links Relacionados
 
 - [DataAccess básico (exemplo)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Basic)
 - [DataAccess avançado (exemplo)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Advanced)
