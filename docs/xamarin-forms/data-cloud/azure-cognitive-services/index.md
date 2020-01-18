@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/27/2019
-ms.openlocfilehash: fed556dc303fecb92a1ce5b09bfaa1aeb0c61bd0
-ms.sourcegitcommit: 2e5a6b8bcd1a073b54604f51538fd108e1c2a8e5
+ms.openlocfilehash: 03fb194a4c85d51a6fe477dcfdc8fa38fec5a89c
+ms.sourcegitcommit: ba83c107c87b015dbcc9db13964fe111a0573dca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68869325"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76265156"
 ---
 # <a name="xamarinforms-and-azure-cognitive-services"></a>Xamarin. Forms e serviços cognitivas do Azure
 
@@ -22,7 +22,7 @@ Os serviços cognitivas da Microsoft são um conjunto de APIs, SDKs e serviços 
 
 ## <a name="speech-recognitionspeech-recognitionmd"></a>[Reconhecimento de fala](speech-recognition.md)
 
-A API de fala da Microsoft é uma API baseada em nuvem que fornece algoritmos para processar a linguagem falada. Este artigo explica como usar a API de REST de reconhecimento de fala Microsoft para converter áudio em texto em um aplicativo xamarin. Forms.
+O serviço de fala do Azure é uma API baseada em nuvem que fornece algoritmos para processar a linguagem falada. Este artigo explica como usar o serviço de fala do Azure para transcrever a fala para o texto em um aplicativo Xamarin. Forms.
 
 ## <a name="spell-checkspell-checkmd"></a>[Verificação ortográfica](spell-check.md)
 
