@@ -8,12 +8,12 @@ ms.date: 02/26/2018
 ms.topic: conceptual
 ms.assetid: 11111111-2222-3333-4444-555555555555
 ms.prod: xamarin
-ms.openlocfilehash: e4c8e404f447dd88b338123335a291bc9f23e449
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: d6300d6d3fdebf851c3710aa2a949575e6fe3f68
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70119013"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "76530860"
 ---
 # <a name="metadata-and-markdown-template"></a>Metadados e modelo Markdown
 
@@ -65,6 +65,7 @@ O Markdown usa caracteres especiais, como \*, \` e \# para formatação. Se dese
 ## <a name="file-name"></a>Nome do arquivo
 
 Os nomes de arquivo usam as seguintes regras:
+
 - Conter apenas letras minúsculas, números e hifens.
 - Sem espaços nem caracteres de pontuação. Use os hifens para separar palavras e números no nome do arquivo.
 - Use verbos de ação específicos, como desenvolver, comprar, compilar, solucionar problemas. Sem palavras no gerúndio.
@@ -72,11 +73,10 @@ Os nomes de arquivo usam as seguintes regras:
 - Deve estar em Markdown e usar a extensão de arquivo .md.
 - Mantenha os nomes de arquivo razoavelmente curtos. Eles fazem parte da URL dos artigos.
 
-
-
 ## <a name="headings"></a>Títulos
 
 Use a capitalização de estilo da frase. Sempre coloque em maiúsculas:
+
 - A primeira palavra de um cabeçalho.
 - A palavra após dois pontos em um título ou cabeçalho (por exemplo, "Como classificar uma matriz").
 
@@ -133,6 +133,7 @@ O sistema de build tem algumas extensões que permitem vincular a APIs do .NET s
 Ao vincular a uma API, é possível usar seu UID (identificador exclusivo) que é gerado automaticamente com base no código-fonte.
 
 É possível usar uma das seguintes sintaxes:
+
 1. Link de markdown: `[link_text](xref:UID)`
 2. Link automático: `<xref:UID>`
 3. Forma abreviada: `@UID`
@@ -145,6 +146,7 @@ Para obter mais informações sobre como usar essa notação, consulte [Using cr
 > No momento, não há uma maneira fácil de encontrar os UIDs. A melhor maneira de encontrar o UID de uma API é pesquisá-lo neste repositório: [docascode/coreapi](https://github.com/docascode/coreapi). Estamos trabalhando para ter um sistema melhor no futuro.
 
 Quando o UID contém os caracteres especiais \` ou \#, o valor do UID precisa ser codificado em HTML como %60 e %23, respectivamente, como nos seguintes exemplos:
+
 - Exemplo: @System.Threading.Tasks.Task\`1 se torna `@System.Threading.Tasks.Task%601`
 - Exemplo: @System.Exception.\#ctor torna-se `@System.Exception.%23ctor`
 
@@ -158,7 +160,6 @@ Quando o UID contém os caracteres especiais \` ou \#, o valor do UID precisa se
 1. Ordenada
 1. Lista
 
-
 #### <a name="ordered-list-with-an-embedded-list"></a>Lista ordenada com uma lista inserida
 
 1. Esta
@@ -170,7 +171,6 @@ Quando o UID contém os caracteres especiais \` ou \#, o valor do UID precisa se
 1. ordered
 1. lista
 
-
 ### <a name="unordered-lists"></a>Listas não ordenadas
 
 - Este
@@ -179,20 +179,18 @@ Quando o UID contém os caracteres especiais \` ou \#, o valor do UID precisa se
 - com marcadores
 - lista
 
-
-##### <a name="unordered-list-with-an-embedded-list"></a>Lista não ordenada com uma lista inserida
+#### <a name="unordered-list-with-an-embedded-list"></a>Lista não ordenada com uma lista inserida
 
 - Este
 - com marcadores
 - lista
-    - Sra. Pereira
-    - Sr. Martins
+  - Sra. Pereira
+  - Sr. Martins
 - contém
 - outras
     1. Coronel Teixeira
     1. Sra. Barbosa
 - listas
-
 
 ## <a name="horizontal-rule"></a>Régua horizontal
 
@@ -208,12 +206,11 @@ Quando o UID contém os caracteres especiais \` ou \#, o valor do UID precisa se
 
 É possível usar uma [ferramenta de gerador de tabelas Markdown](http://www.tablesgenerator.com/markdown_tables) para ajudar a criá-las com mais facilidade.
 
-
 ### <a name="inline-code-blocks-with-language-identifier"></a>Blocos de código embutidos com identificador de linguagem
 
 Use três backticks (\`\`\`) + uma ID de idioma para aplicar a codificação de cores específico a um idioma para um bloco de código. Esta é a lista inteira de [IDs de linguagem de GFM](https://github.com/jmm/gfm-lang-ids/wiki/GitHub-Flavored-Markdown-(GFM)-language-IDs).
 
-##### <a name="c9839"></a>C&#9839;
+#### <a name="c9839"></a>C&#9839;
 
 ```c#
 using System;

@@ -1,7 +1,16 @@
+---
+ms.openlocfilehash: 4d045c0025effae4f5e4cd30e03f8776be0c1270
+ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "76530862"
+---
 # <a name="voice-and-tone-guidelines"></a>Diretrizes de voz e tom
 
 Os desenvolvedores lerão documentos para aprender sobre o Xamarin e usá-lo em seu trabalho regular.
 Sua meta é criar documentação útil que ajuda o leitor na sua jornada. Nossas diretrizes ajudam com isso. Nosso guia de estilo contém quatro recomendações:
+
 - [Usar um tom de conversa](#use-a-conversational-tone)
 - [Escrever na Segunda Pessoa](#write-in-2nd-person)
 - [Usar voz ativa](#use-active-voice)
