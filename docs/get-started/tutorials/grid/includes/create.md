@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: b1a041f1a2baae9b06de023f6eae9c6598b80061
-ms.sourcegitcommit: 5efbf5ab53532b3a74c80129ff4e0ca84b476d21
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "72678703"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -37,7 +37,7 @@ Para concluir este tutorial, você precisará ter o Visual Studio 2019 (versão 
 
 1. Na barra de ferramentas do Visual Studio, pressione o botão **Iniciar** (o botão triangular que se parece com um botão Reproduzir) para iniciar o aplicativo dentro do simulador de iOS remoto ou Android Emulator escolhido:
 
-    [![Captura de tela de um rótulo em uma grade, no iOS e no Android](../images/create-grid.png "Grade que contém um rótulo")](../images/create-grid-large.png#lightbox "Grade que contém um rótulos")
+    [![Captura de tela de um rótulo em uma grade, no iOS e no Android](../images/create-grid.png "Grade que contém um rótulo")](../images/create-grid-large.png#lightbox "Grade que contém rótulos")
 
     Para obter mais informações sobre [`Grid`](xref:Xamarin.Forms.Grid), confira [Grade do Xamarin.Forms](~/xamarin-forms/user-interface/layouts/grid.md).
 
@@ -72,6 +72,6 @@ Para concluir este tutorial, você precisará ter o Visual Studio para Mac (vers
 
 1. Na barra de ferramentas do Visual Studio para Mac, pressione o botão **Iniciar** (o botão triangular que se parece com o botão Reproduzir) para iniciar o aplicativo dentro do simulador de iOS ou do Android Emulator escolhido:
 
-    [![Captura de tela de um rótulo em uma grade, no iOS e no Android](../images/create-grid.png "Grade que contém um rótulo")](../images/create-grid-large.png#lightbox "Grade que contém um rótulos")
+    [![Captura de tela de um rótulo em uma grade, no iOS e no Android](../images/create-grid.png "Grade que contém um rótulo")](../images/create-grid-large.png#lightbox "Grade que contém rótulos")
 
     Para obter mais informações sobre [`Grid`](xref:Xamarin.Forms.Grid), confira [Grade do Xamarin.Forms](~/xamarin-forms/user-interface/layouts/grid.md).

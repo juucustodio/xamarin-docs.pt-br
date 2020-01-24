@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: cae1ec70880fe694584e14b732608725bcbb1d91
-ms.sourcegitcommit: 61a35d0643eb3bf5adb8f8831da54771d8dde626
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "71059533"
 ---
 Antes de tentar realizar este tutorial, você deve ter concluído com sucesso:
@@ -21,4 +21,4 @@ Neste tutorial, você aprenderá como:
 
 Você usará o Visual Studio 2019 ou Visual Studio para Mac para criar um aplicativo simples que demonstra como persistir dados entre alterações de estado do ciclo de vida. Estas capturas de tela mostram o aplicativo final:
 
-[![Captura de tela de uma Entrada cuja propriedade de Texto é persistida entre alterações de estado do ciclo de vida, no iOS e Android](../images/persist-data.png "Entrada cuja propriedade de Texto é persistida entre alterações de estado do ciclo de vida")](../images/persist-data-large.png#lightbox "Entrada cuja propriedade de Texto é persistida entre alterações de estado do ciclo de vida")
+[![Captura de tela de uma entrada cuja propriedade Text é mantida nas alterações de estado de ciclo de vida, no iOS e no Android](../images/persist-data.png "Entrada cuja propriedade Text é mantida nas alterações de estado de ciclo de vida")](../images/persist-data-large.png#lightbox "Entrada cuja propriedade Text é mantida nas alterações de estado de ciclo de vida")

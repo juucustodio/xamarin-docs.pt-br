@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 841dac9486097e27923ccfe582803b4ec50371cf
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "60896633"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -32,7 +32,7 @@ ms.locfileid: "60896633"
 
 1. Na barra de ferramentas do Visual Studio, pressione o botão **Iniciar** (o botão triangular que se parece com o botão Reproduzir) para iniciar o aplicativo dentro de seu simulador remoto de iOS ou do Android Emulator escolhido. Observe que a aparência de [`Label`](xref:Xamarin.Forms.Label) mudou:
 
-    [![Captura de tela de um Rótulo exibindo texto formatado, no iOS e Android](../images/label-formatted-text.png "Rótulo com texto formatado")](../images/label-formatted-text-large.png#lightbox "Rótulo com texto formatado")
+    [![Captura de tela de um rótulo exibindo o texto formatado, no iOS e no Android](../images/label-formatted-text.png "Rótulo com texto formatado")](../images/label-formatted-text-large.png#lightbox "Rótulo com texto formatado")
 
     Para obter mais informações sobre como definir a aparência de [`Span`](xref:Xamarin.Forms.Span), confira [Texto formatado](~/xamarin-forms/user-interface/text/label.md#formatted-text) no guia [Rótulo do Xamarin.Forms](~/xamarin-forms/user-interface/text/label.md).
 
@@ -62,6 +62,6 @@ ms.locfileid: "60896633"
 
 1. Na barra de ferramentas do Visual Studio para Mac, pressione o botão **Iniciar** (o botão triangular que se parece com um botão Reproduzir) para iniciar o aplicativo dentro do simulador de iOS ou do Android Emulator escolhido. Observe que a aparência de [`Label`](xref:Xamarin.Forms.Label) mudou:
 
-    [![Captura de tela de um Rótulo exibindo texto formatado, no iOS e Android](../images/label-formatted-text.png "Rótulo com texto formatado")](../images/label-formatted-text-large.png#lightbox "Rótulo com texto formatado")
+    [![Captura de tela de um rótulo exibindo o texto formatado, no iOS e no Android](../images/label-formatted-text.png "Rótulo com texto formatado")](../images/label-formatted-text-large.png#lightbox "Rótulo com texto formatado")
 
     Para obter mais informações sobre como definir a aparência de [`Span`](xref:Xamarin.Forms.Span), confira [Texto formatado](~/xamarin-forms/user-interface/text/label.md#formatted-text) no guia [Rótulo do Xamarin.Forms](~/xamarin-forms/user-interface/text/label.md).

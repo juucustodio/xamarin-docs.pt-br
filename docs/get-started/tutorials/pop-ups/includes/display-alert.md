@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 875f00b379879aa131d37018f89e475170e5320e
-ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/20/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "67277096"
 ---
 O Xamarin.Forms tem um pop-up modal, conhecido como um alerta, para alertar o usuário ou para fazer perguntas simples sobre eles. Neste exercício, você aprenderá a usar o método [`DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert*), da classe [`Page`](xref:Xamarin.Forms.Page), para exibir um alerta ao usuário e fazer uma pergunta simples.
@@ -61,11 +61,11 @@ Para concluir este tutorial, você precisará ter o Visual Studio 2019 (versão 
 
 1. Na barra de ferramentas do Visual Studio, pressione o botão **Iniciar** (o botão triangular que se parece com o botão Reproduzir) para iniciar o aplicativo dentro de seu simulador remoto de iOS ou do Android Emulator escolhido. Em seguida, toque no primeiro [`Button`](xref:Xamarin.Forms.Button):
 
-    [![Captura de tela de um alerta em iOS e Android](../images/alert.png "Alerta")](../images/alert-large.png#lightbox "Alerta")
+    [![Captura de tela de um alerta no iOS e no Android](../images/alert.png "Alerta")](../images/alert-large.png#lightbox "Alerta")
 
     Depois de ignorar o alerta, toque no segundo [`Button`](xref:Xamarin.Forms.Button):
 
-    [![Captura de tela de um alerta que gera uma pergunta, em iOS e Android](../images/alert-question.png "Alerta que faz uma pergunta")](../images/alert-question-large.png#lightbox "Alerta que faz uma pergunta")
+    [![Captura de tela de um alerta que faz uma pergunta, no iOS e no Android](../images/alert-question.png "Alerta que faz uma pergunta")](../images/alert-question-large.png#lightbox "Alerta que faz uma pergunta")
 
     Observe que, depois de selecionar uma resposta à pergunta, a resposta é enviada para a janela de **Saída** do Visual Studio.
 
@@ -124,11 +124,11 @@ Para concluir este tutorial, você precisará ter o Visual Studio para Mac (vers
 
 1. Na barra de ferramentas do Visual Studio para Mac, pressione o botão **Iniciar** (o botão triangular que se parece com um botão Reproduzir) para iniciar o aplicativo dentro do simulador de iOS ou do Android Emulator escolhido. Em seguida, toque no primeiro [`Button`](xref:Xamarin.Forms.Button):
 
-    [![Captura de tela de um alerta em iOS e Android](../images/alert.png "Alerta")](../images/alert-large.png#lightbox "Alerta")
+    [![Captura de tela de um alerta no iOS e no Android](../images/alert.png "Alerta")](../images/alert-large.png#lightbox "Alerta")
 
     Depois de ignorar o alerta, toque no segundo [`Button`](xref:Xamarin.Forms.Button):
 
-    [![Captura de tela de um alerta que gera uma pergunta, em iOS e Android](../images/alert-question.png "Alerta que faz uma pergunta")](../images/alert-question-large.png#lightbox "Alerta que faz uma pergunta")
+    [![Captura de tela de um alerta que faz uma pergunta, no iOS e no Android](../images/alert-question.png "Alerta que faz uma pergunta")](../images/alert-question-large.png#lightbox "Alerta que faz uma pergunta")
 
     Observe que, depois de selecionar uma resposta à pergunta, a resposta é enviada para a janela de **Saída do Aplicativo** do Visual Studio para Mac.
 

@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 93ee0681adcc63fe05b4be88ff67f0aeee3e03ca
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "61384366"
 ---
 Arquivos de imagem podem ser adicionados a projetos de plataforma e referenciados no código compartilhado do Xamarin.Forms. Esse método de distribuição de imagens é necessário quando as imagens são específicas da plataforma, como ao usar resoluções diferentes em diferentes plataformas ou designs ligeiramente diferentes.
@@ -20,19 +20,19 @@ Neste exercício, você modificará a solução **ImageTutorial** para exibir um
 
 1. Na **Gerenciador de Soluções**, no projeto **ImageTutorial.iOS**, expanda **Catálogos de Ativos** e clique duas vezes em **Ativos** para abri-lo. Em seguida, na guia **Assets.xcassets**, clique no botão **Mais** e selecione **Adicionar Conjunto de Imagens**:
 
-    ![Captura de tela da criação de uma nova imagem definida no catálogo de ativos no Visual Studio](../images/vs/new-image-set.png "Novo conjunto de imagens de catálogo de ativos")
+    ![Captura de tela da criação de um conjunto de imagens no catálogo de ativos no Visual Studio](../images/vs/new-image-set.png "Novo conjunto de imagens do catálogo de ativos")
 
 1. Na guia **Assets.xcassets**, selecione o novo conjunto de imagens e o editor será exibido:
 
-    ![Captura de tela do novo conjunto de imagens no catálogo de ativos no Visual Studio](../images/vs/new-image-set-editor.png "Editor de conjunto de imagens do catálogo de ativos")
+    ![Captura de tela de um novo conjunto de imagens no catálogo de ativos no Visual Studio](../images/vs/new-image-set-editor.png "Editor do conjunto de imagens do catálogo de ativos")
 
 1. Arraste **XamarinLogo.png** de seu sistema de arquivos para a caixa **1x** para a categoria **Universal**:
 
-    ![Captura de tela do conjunto de imagens contendo uma imagem no Visual Studio](../images/vs/image-set-with-image.png "Conjunto de imagens contendo uma imagem")
+    ![Captura de tela do conjunto de imagens que contém uma imagem no Visual Studio](../images/vs/image-set-with-image.png "Conjunto de imagens contendo uma imagem")
 
 1. Na guia **Assets.xcassets**, clique com o botão direito do mouse no nome do conjunto de imagens e altere seu nome para **XamarinLogo**:
 
-    ![Captura de tela do conjunto de imagens com o nome alterado no Visual Studio](../images/vs/rename-image-set.png "Conjunto de imagens com o nome alterado")
+    ![Captura de tela do conjunto de imagens renomeado no Visual Studio](../images/vs/rename-image-set.png "Conjunto de imagens renomeado")
 
     Salve e feche a guia **Assets.xcassets**.
 
@@ -58,7 +58,7 @@ Neste exercício, você modificará a solução **ImageTutorial** para exibir um
 
 1. Na barra de ferramentas do Visual Studio para Mac, pressione o botão **Iniciar** (o botão triangular que se parece com o botão Reproduzir) para iniciar o aplicativo dentro do simulador de iOS ou do Android Emulator escolhido:
 
-    [![Captura de tela de uma exibição de imagem mostrando uma imagem local em iOS e Android](../images/local-file.png "Exibição de imagem mostrando uma imagem local")](../images/local-file-large.png#lightbox "Exibição de imagem mostrando uma imagem local")
+    [![Captura de tela de uma exibição de imagem que mostra uma imagem local, no iOS e no Android](../images/local-file.png "Exibição de imagem mostrando uma imagem local")](../images/local-file-large.png#lightbox "Exibição de imagem mostrando uma imagem local")
 
     Para obter mais informações sobre imagens locais, confira [Imagens locais](~/xamarin-forms/user-interface/images.md#local-images) no guia [Imagens no Xamarin.Forms](~/xamarin-forms/user-interface/images.md).
 
@@ -66,19 +66,19 @@ Neste exercício, você modificará a solução **ImageTutorial** para exibir um
 
 1. No **Painel de Soluções**, no projeto **ImageTutorial.iOS**, clique duas vezes em **Assets.xcassets** para abri-lo. Em seguida, na **Lista de Ativos**, clique com o botão direito do mouse e selecione **Novo Conjunto de Imagens**:
 
-    ![Captura de tela da criação de uma nova imagem definida no catálogo de ativos no Visual Studio para Mac](../images/vsmac/new-image-set.png "Novo conjunto de imagens de catálogo de ativos")
+    ![Captura de tela da criação de um conjunto de imagens no catálogo de ativos no Visual Studio para Mac](../images/vsmac/new-image-set.png "Novo conjunto de imagens do catálogo de ativos")
 
 1. Na guia **Lista de Ativos**, selecione o novo conjunto de imagens e o editor será exibido:
 
-    ![Captura de tela do novo conjunto de imagens no catálogo de ativos no Visual Studio para Mac](../images/vsmac/new-image-set-editor.png "Editor de conjunto de imagens do catálogo de ativos")
+    ![Captura de tela do novo conjunto de imagens no catálogo de ativos no Visual Studio para Mac](../images/vsmac/new-image-set-editor.png "Editor do conjunto de imagens do catálogo de ativos")
 
 1. Arraste **XamarinLogo.png** de seu sistema de arquivos para a caixa **1x** para a categoria **Universal**:
 
-    ![Captura de tela do conjunto de imagens contendo uma imagem no Visual Studio para Mac](../images/vsmac/image-set-with-image.png "Conjunto de imagens contendo uma imagem")
+    ![Captura de tela do conjunto de imagens que contém uma imagem no Visual Studio para Mac](../images/vsmac/image-set-with-image.png "Conjunto de imagens contendo uma imagem")
 
 1. Na **Lista de Ativos**, clique duas vezes no nome do novo conjunto de imagens e altere seu nome para **XamarinLogo**:
 
-    ![Captura de tela do conjunto de imagens com o nome alterado no Visual Studio para Mac](../images/vsmac/rename-image-set.png "Conjunto de imagens com o nome alterado")
+    ![Captura de tela do conjunto de imagens renomeado no Visual Studio para Mac](../images/vsmac/rename-image-set.png "Conjunto de imagens renomeado")
 
 1. No **Painel de Soluções**, no projeto **ImageTutorial.Android**, expanda a pasta **Recursos**. Em seguida, arraste **XamarinLogo.png** de seu sistema de arquivos para a pasta **desenhável**.
 
@@ -104,6 +104,6 @@ Neste exercício, você modificará a solução **ImageTutorial** para exibir um
 
 1. Na barra de ferramentas do Visual Studio para Mac, pressione o botão **Iniciar** (o botão triangular que se parece com o botão Reproduzir) para iniciar o aplicativo dentro do simulador de iOS ou do Android Emulator escolhido:
 
-    [![Captura de tela de uma exibição de imagem mostrando uma imagem local em iOS e Android](../images/local-file.png "Exibição de imagem mostrando uma imagem local")](../images/local-file-large.png#lightbox "Exibição de imagem mostrando uma imagem local")
+    [![Captura de tela de uma exibição de imagem que mostra uma imagem local, no iOS e no Android](../images/local-file.png "Exibição de imagem mostrando uma imagem local")](../images/local-file-large.png#lightbox "Exibição de imagem mostrando uma imagem local")
 
     Para obter mais informações sobre imagens locais, confira [Imagens locais](~/xamarin-forms/user-interface/images.md#local-images) no guia [Imagens no Xamarin.Forms](~/xamarin-forms/user-interface/images.md).

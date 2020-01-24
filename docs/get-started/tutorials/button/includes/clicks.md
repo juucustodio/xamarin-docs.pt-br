@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: d1f7d209eaaca62a55b768646f51024609057a63
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "61372893"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -33,7 +33,7 @@ ms.locfileid: "61372893"
 
 1. Na barra de ferramentas do Visual Studio, pressione o botão **Iniciar** (o botão triangular que se parece com o botão Reproduzir) para iniciar o aplicativo dentro de seu simulador remoto de iOS ou do Android Emulator escolhido. Clique no [`Button`](xref:Xamarin.Forms.Button) e observe que o texto que ele exibe é alterado:
 
-    [![Captura de tela do texto do Botão sendo alterado após receber um clique, no iOS e Android](../images/handle-button-click.png "Lidar com um clique no botão")](../images/handle-button-click-large.png#lightbox "Lidar com um clique no botão")
+    [![Captura de tela do texto do botão sendo alterado após receber um clique, no iOS e no Android](../images/handle-button-click.png "Manipular o clique de um botão")](../images/handle-button-click-large.png#lightbox "Manipular o clique de um botão")
 
     Para obter mais informações sobre como lidar com cliques no botão, confira [Lidando com cliques no botão](~/xamarin-forms/user-interface/button.md#handling-button-clicks) no guia [Botão do Xamarin.Forms](~/xamarin-forms/user-interface/button.md).
 
@@ -64,6 +64,6 @@ ms.locfileid: "61372893"
 
 1. Na barra de ferramentas do Visual Studio para Mac, pressione o botão **Iniciar** (o botão triangular que se parece com um botão Reproduzir) para iniciar o aplicativo dentro do simulador de iOS ou do Android Emulator escolhido. Clique no [`Button`](xref:Xamarin.Forms.Button) e observe que o texto que ele exibe é alterado:
 
-    [![Captura de tela do texto do Botão sendo alterado após receber um clique, no iOS e Android](../images/handle-button-click.png "Lidar com um clique no botão")](../images/handle-button-click-large.png#lightbox "Lidar com um clique no botão")
+    [![Captura de tela do texto do botão sendo alterado após receber um clique, no iOS e no Android](../images/handle-button-click.png "Manipular o clique de um botão")](../images/handle-button-click-large.png#lightbox "Manipular o clique de um botão")
 
     Para obter mais informações sobre como lidar com cliques no botão, confira [Lidando com cliques no botão](~/xamarin-forms/user-interface/button.md#handling-button-clicks) no guia [Botão do Xamarin.Forms](~/xamarin-forms/user-interface/button.md).

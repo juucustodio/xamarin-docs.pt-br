@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 338b03ae5e52b06c6ddc225b418ee2bc7d5e5ffc
-ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "71107165"
 ---
 Antes de tentar realizar este tutorial, você deve ter concluído com sucesso:
@@ -24,4 +24,4 @@ Neste tutorial, você aprenderá como:
 
 Você usará o Visual Studio 2019 ou Visual Studio para Mac para criar um aplicativo simples que demonstra como recuperar dados do serviço Web [OpenWeatherMap](https://openweathermap.org/). Estas capturas de tela mostram o aplicativo final:
 
-[![Captura de tela de dados de clima de Seattle, em iOS e Android](../images/consume-web-service.png "Dados de clima de Seattle")](../images/consume-web-service-large.png#lightbox "Dados de clima de Seattle")
+[![Captura de tela de dados do clima de Seattle, no iOS e no Android](../images/consume-web-service.png "Dados do clima de Seattle")](../images/consume-web-service-large.png#lightbox "Dados do clima de Seattle")

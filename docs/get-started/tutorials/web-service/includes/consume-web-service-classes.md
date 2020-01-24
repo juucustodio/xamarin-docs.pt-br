@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: c92a97b336e89214bbd95021ad8fb9a56f64cc8c
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/08/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "67659740"
 ---
 Neste exercício, você criará uma interface do usuário para consumir a classe `RestService`, que, por sua vez, recupera dados da API Web [OpenWeatherMap](https://openweathermap.org/).
@@ -67,7 +67,7 @@ Neste exercício, você criará uma interface do usuário para consumir a classe
     </ContentPage>
     ```
 
-    Esse código define declarativamente a interface do usuário para a página, que consiste em uma [`Entry`](xref:Xamarin.Forms.Entry), um [`Button`](xref:Xamarin.Forms.Button) e uma série de instâncias [`Label`](xref:Xamarin.Forms.Label) em uma [`Grid`](xref:Xamarin.Forms.Grid). O `Entry` é preenchido com "Seattle" configurando sua propriedade [`Text`](xref:Xamarin.Forms.Entry.Text). O `Button` define seu evento [`Clicked`](xref:Xamarin.Forms.Button.Clicked) para um manipulador de eventos chamado `OnButtonClicked` que será criado na próxima etapa. Metade das instâncias `Label` exibem texto estático, com a associação de dados das instâncias restantes para propriedades `WeatherData`. Em tempo de execução, as instâncias `Label` que usam a associação de dados analisarão suas respectivas propriedades [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) para o objeto `WeatherData` a ser usado em suas expressões de associação. Para obter mais informações sobre associação de dados, confira [Associação de Dados do Xamarin.Forms](~/xamarin-forms/app-fundamentals/data-binding/index.md).
+    Esse código define declarativamente a interface do usuário para a página, que consiste em uma [`Entry`](xref:Xamarin.Forms.Entry), um [`Button`](xref:Xamarin.Forms.Button) e uma série de instâncias [`Label`](xref:Xamarin.Forms.Label) em uma [`Grid`](xref:Xamarin.Forms.Grid). O `Entry` é preenchido com "Seattle" configurando sua propriedade [`Text`](xref:Xamarin.Forms.Entry.Text). O `Button` define seu evento [`Clicked`](xref:Xamarin.Forms.Button.Clicked) para um manipulador de eventos chamado `OnButtonClicked` que será criado na próxima etapa. Metade das instâncias `Label` exibem texto estático, com a associação de dados das instâncias restantes para propriedades `WeatherData`. Em runtime, as instâncias `Label` que usam a associação de dados analisarão suas respectivas propriedades [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) para o objeto `WeatherData` a ser usado em suas expressões de associação. Para obter mais informações sobre associação de dados, confira [Associação de Dados do Xamarin.Forms](~/xamarin-forms/app-fundamentals/data-binding/index.md).
 
     Além disso, a [`Entry`](xref:Xamarin.Forms.Entry) tem um nome especificado com o atributo `x:Name`. Isso permite que o arquivo code-behind acesse o objeto usando o nome atribuído.
 
@@ -123,7 +123,7 @@ Neste exercício, você criará uma interface do usuário para consumir a classe
 
 1. Na barra de ferramentas do Visual Studio, pressione o botão **Iniciar** (o botão triangular que se parece com o botão Reproduzir) para iniciar o aplicativo dentro de seu simulador remoto de iOS ou do Android Emulator escolhido. Toque no [`Button`](xref:Xamarin.Forms.Button) para recuperar dados de clima atual para Seattle:
 
-    [![Captura de tela de dados de clima de Seattle, em iOS e Android](../images/consume-web-service.png "Dados de clima de Seattle")](../images/consume-web-service-large.png#lightbox "Dados de clima de Seattle")
+    [![Captura de tela de dados do clima de Seattle, no iOS e no Android](../images/consume-web-service.png "Dados do clima de Seattle")](../images/consume-web-service-large.png#lightbox "Dados do clima de Seattle")
 
     > [!IMPORTANT]
     > Sua chave de API OpenWeatherMap pessoal deve ser definida como o valor da constante `OpenWeatherMapAPIKey` na classe `Constants`.
@@ -187,7 +187,7 @@ Neste exercício, você criará uma interface do usuário para consumir a classe
     </ContentPage>
     ```
 
-    Esse código define declarativamente a interface do usuário para a página, que consiste em uma [`Entry`](xref:Xamarin.Forms.Entry), um [`Button`](xref:Xamarin.Forms.Button) e uma série de instâncias [`Label`](xref:Xamarin.Forms.Label) em uma [`Grid`](xref:Xamarin.Forms.Grid). O `Entry` é preenchido com "Seattle" configurando sua propriedade [`Text`](xref:Xamarin.Forms.Entry.Text). O `Button` define seu evento [`Clicked`](xref:Xamarin.Forms.Button.Clicked) para um manipulador de eventos chamado `OnButtonClicked` que será criado na próxima etapa. Metade das instâncias `Label` exibem texto estático, com a associação de dados das instâncias restantes para propriedades `WeatherData`. Em tempo de execução, as instâncias `Label` que usam a associação de dados analisarão suas respectivas propriedades [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) para o objeto `WeatherData` a ser usado em suas expressões de associação. Para obter mais informações sobre associação de dados, confira [Associação de Dados do Xamarin.Forms](~/xamarin-forms/app-fundamentals/data-binding/index.md).
+    Esse código define declarativamente a interface do usuário para a página, que consiste em uma [`Entry`](xref:Xamarin.Forms.Entry), um [`Button`](xref:Xamarin.Forms.Button) e uma série de instâncias [`Label`](xref:Xamarin.Forms.Label) em uma [`Grid`](xref:Xamarin.Forms.Grid). O `Entry` é preenchido com "Seattle" configurando sua propriedade [`Text`](xref:Xamarin.Forms.Entry.Text). O `Button` define seu evento [`Clicked`](xref:Xamarin.Forms.Button.Clicked) para um manipulador de eventos chamado `OnButtonClicked` que será criado na próxima etapa. Metade das instâncias `Label` exibem texto estático, com a associação de dados das instâncias restantes para propriedades `WeatherData`. Em runtime, as instâncias `Label` que usam a associação de dados analisarão suas respectivas propriedades [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) para o objeto `WeatherData` a ser usado em suas expressões de associação. Para obter mais informações sobre associação de dados, confira [Associação de Dados do Xamarin.Forms](~/xamarin-forms/app-fundamentals/data-binding/index.md).
 
     Além disso, a [`Entry`](xref:Xamarin.Forms.Entry) tem um nome especificado com o atributo `x:Name`. Isso permite que o arquivo code-behind acesse o objeto usando o nome atribuído.
 
@@ -245,7 +245,7 @@ Neste exercício, você criará uma interface do usuário para consumir a classe
 
 1. Na barra de ferramentas do Visual Studio para Mac, pressione o botão **Iniciar** (o botão triangular que se parece com um botão Reproduzir) para iniciar o aplicativo dentro do simulador de iOS ou do Android Emulator escolhido. Toque no [`Button`](xref:Xamarin.Forms.Button) para recuperar dados de clima atual para Seattle:
 
-    [![Captura de tela de dados de clima de Seattle, em iOS e Android](../images/consume-web-service.png "Dados de clima de Seattle")](../images/consume-web-service-large.png#lightbox "Dados de clima de Seattle")
+    [![Captura de tela de dados do clima de Seattle, no iOS e no Android](../images/consume-web-service.png "Dados do clima de Seattle")](../images/consume-web-service-large.png#lightbox "Dados do clima de Seattle")
 
     > [!IMPORTANT]
     > Sua chave de API OpenWeatherMap pessoal deve ser definida como o valor da constante `OpenWeatherMapAPIKey` na classe `Constants`.

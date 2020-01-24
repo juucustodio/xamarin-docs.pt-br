@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 1d2bed830af97ce1ff329a5396a415247a43189d
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "61372892"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -26,7 +26,7 @@ ms.locfileid: "61372892"
 
 1. Na barra de ferramentas do Visual Studio, pressione o botão **Iniciar** (o botão triangular que se parece com o botão Reproduzir) para iniciar o aplicativo dentro de seu simulador remoto de iOS ou do Android Emulator escolhido. Observe que a aparência de [`Button`](xref:Xamarin.Forms.Button) mudou:
 
-    [![Captura de tela de um Botão com uma aparência visual alterada em iOS e Android](../images/change-button-appearance.png "Botão com aparência alterada")](../images/change-button-appearance-large.png#lightbox "Botão com aparência alterada")
+    [![Captura de tela de um botão com uma aparência visual alterada, no iOS e no Android](../images/change-button-appearance.png "Botão com aparência alterada")](../images/change-button-appearance-large.png#lightbox "Botão com aparência alterada")
 
     Para obter mais informações sobre a configuração da aparência [`Button`](xref:Xamarin.Forms.Button), confira [Aparência do botão](~/xamarin-forms/user-interface/button.md#button-appearance) no guia [Botão do Xamarin.Forms](~/xamarin-forms/user-interface/button.md).
 
@@ -50,6 +50,6 @@ ms.locfileid: "61372892"
 
 1. Na barra de ferramentas do Visual Studio para Mac, pressione o botão **Iniciar** (o botão triangular que se parece com um botão Reproduzir) para iniciar o aplicativo dentro do simulador de iOS ou do Android Emulator escolhido. Observe que a aparência de [`Button`](xref:Xamarin.Forms.Button) mudou:
 
-    [![Captura de tela de um Botão com uma aparência visual alterada em iOS e Android](../images/change-button-appearance.png "Botão com aparência alterada")](../images/change-button-appearance-large.png#lightbox "Botão com aparência alterada")
+    [![Captura de tela de um botão com uma aparência visual alterada, no iOS e no Android](../images/change-button-appearance.png "Botão com aparência alterada")](../images/change-button-appearance-large.png#lightbox "Botão com aparência alterada")
 
     Para obter mais informações sobre a configuração da aparência [`Button`](xref:Xamarin.Forms.Button), confira [Aparência do botão](~/xamarin-forms/user-interface/button.md#button-appearance) no guia [Botão do Xamarin.Forms](~/xamarin-forms/user-interface/button.md).

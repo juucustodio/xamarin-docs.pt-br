@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: c826ee87c006b05322af8c9312bdf3120df8b357
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "61375329"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -33,7 +33,7 @@ ms.locfileid: "61375329"
 
 1. Na barra de ferramentas do Visual Studio, pressione o botão **Iniciar** (o botão triangular que se parece com um botão Reproduzir) para iniciar o aplicativo dentro do simulador de iOS remoto ou Android Emulator escolhido:
 
-    [![Captura de tela de uma Grade que tem conteúdo que se estende por várias colunas e linhas no iOS e no Android](../images/span-columns-rows.png "Grade com conteúdo abrangendo colunas e linhas")](../images/span-columns-rows-large.png#lightbox "Grade com conteúdo abrangendo colunas e linhas")
+    [![Captura de tela de uma grade que tem conteúdo que abrange várias colunas e linhas, no iOS e no Android](../images/span-columns-rows.png "Grade com conteúdo que abrange colunas e linhas")](../images/span-columns-rows-large.png#lightbox "Grade com conteúdo que abrange colunas e linhas")
 
     Para obter mais informações sobre a abrangência de colunas e linhas, confira [Abrangências](~/xamarin-forms/user-interface/layouts/grid.md#spans) no guia de [Grade do Xamarin.Forms](~/xamarin-forms/user-interface/layouts/grid.md).
 
@@ -64,6 +64,6 @@ ms.locfileid: "61375329"
 
 1. Na barra de ferramentas do Visual Studio para Mac, pressione o botão **Iniciar** (o botão triangular que se parece com o botão Reproduzir) para iniciar o aplicativo dentro do simulador de iOS ou do Android Emulator escolhido:
 
-    [![Captura de tela de uma Grade que tem conteúdo que se estende por várias colunas e linhas no iOS e no Android](../images/span-columns-rows.png "Grade com conteúdo abrangendo colunas e linhas")](../images/span-columns-rows-large.png#lightbox "Grade com conteúdo abrangendo colunas e linhas")
+    [![Captura de tela de uma grade que tem conteúdo que abrange várias colunas e linhas, no iOS e no Android](../images/span-columns-rows.png "Grade com conteúdo que abrange colunas e linhas")](../images/span-columns-rows-large.png#lightbox "Grade com conteúdo que abrange colunas e linhas")
 
     Para obter mais informações sobre a abrangência de colunas e linhas, confira [Abrangências](~/xamarin-forms/user-interface/layouts/grid.md#spans) no guia de [Grade do Xamarin.Forms](~/xamarin-forms/user-interface/layouts/grid.md).

@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 8f379e8639846d9a6424c4aaadf83ff89d7a8684
-ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "71107161"
 ---
 Antes de tentar realizar este tutorial, você deve ter concluído com sucesso:
@@ -24,4 +24,4 @@ Neste tutorial, você aprenderá como:
 
 Você usará o Visual Studio 2019 ou Visual Studio para Mac para criar um aplicativo simples que demonstra como armazenar dados em um banco de dados SQLite.NET local. Estas capturas de tela mostram o aplicativo final:
 
-[![Captura de tela de persistência de dados do banco de dados SQLite.NET local em iOS e Android](../images/consume-data-access-classes-reduced.png "Persistência de dados do banco de dados local")](../images/consume-data-access-classes-large.png#lightbox "Persistência de dados do banco de dados local")
+[![Captura de tela da persistência de dados do banco de dados SQLite.NET local, no iOS e no Android](../images/consume-data-access-classes-reduced.png "Persistência de dados do banco de dados local")](../images/consume-data-access-classes-large.png#lightbox "Persistência de dados do banco de dados local")

@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 5a464196c08220158432219d96bf82578789d8e5
-ms.sourcegitcommit: 8ecfa339d0f3e7687977bfe4fc96448942690183
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "67559976"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -23,7 +23,7 @@ ms.locfileid: "67559976"
 
 1. Na barra de ferramentas do Visual Studio, pressione o botão **Iniciar** (o botão triangular que se parece com um botão Reproduzir) para iniciar o aplicativo dentro do simulador remoto de iOS ou do Android Emulator escolhido:
 
-    [![Captura de tela de exibições filho orientadas horizontalmente, no iOS e Android](../images/orientation.png "StackLayout contendo instâncias de Rótulo orientadas horizontalmente")](../images/orientation-large.png#lightbox "StackLayout contendo instâncias de Rótulo orientadas horizontalmente")
+    [![Captura de tela das exibições filho orientadas horizontalmente em um StackLayout, no iOS e no Android](../images/orientation.png "StackLayout que contém instâncias de rótulo orientadas horizontalmente")](../images/orientation-large.png#lightbox "StackLayout que contém instâncias de rótulo orientadas horizontalmente")
 
     Observe que as instâncias de [`Label`](xref:Xamarin.Forms.Label) dentro do [`StackLayout`](xref:Xamarin.Forms.StackLayout) agora estão alinhadas horizontalmente, e não verticalmente.
 
@@ -44,7 +44,7 @@ ms.locfileid: "67559976"
 
 1. Na barra de ferramentas do Visual Studio para Mac, pressione o botão **Iniciar** (o botão triangular que se parece com o botão Reproduzir) para iniciar o aplicativo dentro do simulador de iOS ou do Android Emulator escolhido:
 
-    [![Captura de tela de exibições filho orientadas horizontalmente, no iOS e Android](../images/orientation.png "StackLayout contendo instâncias de Rótulo orientadas horizontalmente")](../images/orientation-large.png#lightbox "StackLayout contendo instâncias de Rótulo orientadas horizontalmente")
+    [![Captura de tela das exibições filho orientadas horizontalmente em um StackLayout, no iOS e no Android](../images/orientation.png "StackLayout que contém instâncias de rótulo orientadas horizontalmente")](../images/orientation-large.png#lightbox "StackLayout que contém instâncias de rótulo orientadas horizontalmente")
 
     Observe que as instâncias de [`Label`](xref:Xamarin.Forms.Label) dentro do [`StackLayout`](xref:Xamarin.Forms.StackLayout) agora estão alinhadas horizontalmente, e não verticalmente.
 

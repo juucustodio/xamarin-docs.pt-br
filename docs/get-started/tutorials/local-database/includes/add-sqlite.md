@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 8ad5ca60a074cbdc6ff91134cc9c1276ed653b91
-ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/20/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "67277090"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -19,11 +19,11 @@ Para concluir este tutorial, você precisará ter o Visual Studio 2019 (versão 
 
 1. Na **Gerenciador de Soluções**, selecione o projeto **LocalDatabaseTutorial**, clique com o botão direito do mouse e selecione **Gerenciar pacotes NuGet...** :
 
-    ![Captura de tela do item de menu Gerenciar pacotes NuGet sendo selecionado](../images/vs/add-nuget-packages.png "Item de menu Adicionar pacotes NuGet")
+    ![Captura de tela do item de menu Gerenciar Pacotes do NuGet sendo selecionado](../images/vs/add-nuget-packages.png "Item de menu Adicionar Pacotes do NuGet")
 
 1. No **Gerenciador de Pacotes NuGet**, selecione a guia **Procurar**, pesquise pelo pacote NuGet **sqlite-net-pcl**, selecione-o e clique no botão **Instalar** para adicioná-lo ao projeto:
 
-    ![Captura de tela do Pacote NuGet do SQLite.NET no Gerenciador de Pacotes NuGet](../images/vs/add-package.png "Pacote NuGet do SQLite.NET")
+    ![Captura de tela do Pacote do NuGet do SQLite.NET no Gerenciador de Pacotes do NuGet](../images/vs/add-package.png "Pacote do NuGet SQLite.NET")
 
     > [!NOTE]
     > Há diversos pacotes NuGet com nomes semelhantes. O pacote correto tem estes atributos:
@@ -50,11 +50,11 @@ Para concluir este tutorial, você precisará ter o Visual Studio para Mac (vers
 
 1. Na **Painel de Soluções**, selecione o projeto **LocalDatabaseTutorial**, clique com o botão direito do mouse e selecione **Adicionar > Adicionar pacotes NuGet...** :
 
-    ![Captura de tela do item de menu Adicionar pacotes NuGet sendo selecionado](../images/vsmac/add-nuget-packages.png "Item de menu Adicionar pacotes NuGet")
+    ![Captura de tela do item de menu Adicionar Pacotes do NuGet sendo selecionado](../images/vsmac/add-nuget-packages.png "Item de menu Adicionar Pacotes do NuGet")
 
 1. Na janela **Adicionar Pacotes**, pesquise pelo pacote NuGet **sqlite-net-pcl**, selecione-o e clique no botão **Adicionar Pacote** para adicioná-lo ao projeto:
 
-    ![Captura de tela do Pacote NuGet do SQLite.NET no Gerenciador de Pacotes NuGet](../images/vsmac/add-package.png "Pacote NuGet do SQLite.NET")
+    ![Captura de tela do Pacote do NuGet do SQLite.NET no Gerenciador de Pacotes do NuGet](../images/vsmac/add-package.png "Pacote do NuGet SQLite.NET")
 
     > [!NOTE]
     > Há diversos pacotes NuGet com nomes semelhantes. O pacote correto tem estes atributos:

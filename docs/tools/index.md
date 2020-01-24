@@ -6,7 +6,7 @@ ms.author: daortin
 ms.date: 12/27/2019
 ms.openlocfilehash: 80b85492a094ad3deddcc4f441580c3680844198
 ms.sourcegitcommit: c4f72221a6dce1276a90f2b52282b8145f8e0f1c
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 12/27/2019
 ms.locfileid: "75502922"

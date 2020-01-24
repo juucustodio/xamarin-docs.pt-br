@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 87eb021e6cc571a9a5522697cde2aa11ee991308
-ms.sourcegitcommit: 6ad272c2c7b0c3c30e375ad17ce6296ac1ce72b2
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "66193821"
 ---
 
@@ -37,7 +37,7 @@ O Xamarin.Forms tem um pop-up modal, conhecido como uma folha de ações, que po
 
 1. Na barra de ferramentas do Visual Studio, pressione o botão **Iniciar** (o botão triangular que se parece com o botão Reproduzir) para iniciar o aplicativo dentro de seu simulador remoto de iOS ou do Android Emulator escolhido. Em seguida, toque no [`Button`](xref:Xamarin.Forms.Button) que você adicionou ao [`ContentPage`](xref:Xamarin.Forms.ContentPage):
 
-    [![Captura de tela de uma folha de ações, no iOS e Android](../images/actionsheet.png "Folha de ações que orienta os usuários durante uma tarefa")](../images/actionsheet-large.png#lightbox "Folha de ações que orienta os usuários durante uma tarefa")
+    [![Captura de tela de uma folha de ações, no iOS e no Android](../images/actionsheet.png "Folha de ações que orienta os usuários por meio de uma tarefa")](../images/actionsheet-large.png#lightbox "Folha de ações que orienta os usuários por meio de uma tarefa")
 
     Observe que, após selecionar uma alternativa na caixa de diálogo de folha de ações, a seleção aparece na janela de **Saída** do Visual Studio.
 
@@ -71,7 +71,7 @@ O Xamarin.Forms tem um pop-up modal, conhecido como uma folha de ações, que po
 
 1. Na barra de ferramentas do Visual Studio para Mac, pressione o botão **Iniciar** (o botão triangular que se parece com um botão Reproduzir) para iniciar o aplicativo dentro do simulador de iOS ou do Android Emulator escolhido. Em seguida, toque no [`Button`](xref:Xamarin.Forms.Button) que você adicionou ao [`ContentPage`](xref:Xamarin.Forms.ContentPage):
 
-    [![Captura de tela de uma folha de ações, no iOS e Android](../images/actionsheet.png "Folha de ações que orienta os usuários durante uma tarefa")](../images/actionsheet-large.png#lightbox "Folha de ações que orienta os usuários durante uma tarefa")
+    [![Captura de tela de uma folha de ações, no iOS e no Android](../images/actionsheet.png "Folha de ações que orienta os usuários por meio de uma tarefa")](../images/actionsheet-large.png#lightbox "Folha de ações que orienta os usuários por meio de uma tarefa")
 
     Observe que, após selecionar uma alternativa na caixa de diálogo de folha de ações, a seleção aparece na janela de **Saída do Aplicativo** do Visual Studio para Mac.
 

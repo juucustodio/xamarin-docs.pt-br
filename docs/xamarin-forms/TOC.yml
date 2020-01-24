@@ -898,6 +898,8 @@
           href: deploy-test/index.yml
         - name: Melhorar o desempenho
           href: deploy-test/performance.md
+        - name: Reinicialização dinâmica
+          href: deploy-test/hot-restart.md
         - name: Automatizar testes com o Visual Studio App Center
           href: /appcenter/test-cloud/uitest/get-started-xamarin-forms
         - name: Publicar aplicativos iOS

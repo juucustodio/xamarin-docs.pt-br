@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 8820d52a2a41ce3c5de9cf1176d5a8a90a987900
-ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "71107164"
 ---
 Antes de tentar realizar este tutorial, você deve ter concluído com sucesso:
@@ -20,4 +20,4 @@ Neste tutorial, você aprenderá como:
 
 Você usará o Visual Studio 2019 ou Visual Studio para Mac para criar um aplicativo simples que demonstra como alinhar controles em um [`StackLayout`](xref:Xamarin.Forms.StackLayout). Estas capturas de tela mostram o aplicativo final:
 
-[![Captura de tela das exibições filho em um StackLayout, com as opções de alinhamento e expansão definidas, no iOS e Android](../images/alignment-expansion-reduced.png "StackLayout contendo instâncias de Rótulo, com o alinhamento e a expansão definidos")](../images/alignment-expansion-large.png#lightbox "StackLayout contendo instâncias de Rótulo, com o alinhamento e a expansão definidos")
+[![Captura de tela de exibições filho em um StackLayout, com opções de alinhamento e expansão definidas, no iOS e no Android](../images/alignment-expansion-reduced.png "StackLayout contendo instâncias de rótulo, com alinhamento e expansão definidos")](../images/alignment-expansion-large.png#lightbox "StackLayout contendo instâncias de rótulo, com alinhamento e expansão definidos")

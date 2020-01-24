@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: d87289e481b69592b68627d053e937856d3d6067
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "61375334"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -46,7 +46,7 @@ ms.locfileid: "61375334"
 
 1. Na barra de ferramentas do Visual Studio, pressione o botão **Iniciar** (o botão triangular que se parece com um botão Reproduzir) para iniciar o aplicativo dentro do simulador remoto de iOS ou do Android Emulator escolhido:
 
-    [![Captura de tela de uma Grade com conteúdo distribuído em colunas e linhas no iOS e no Android](../images/columns-rows.png "Grade com conteúdo em colunas e linhas")](../images/columns-rows-large.png#lightbox "Grade com conteúdo em colunas e linhas")
+    [![Captura de tela de uma grade que tem conteúdo disposto em colunas e linhas, no iOS e no Android](../images/columns-rows.png "Grade com conteúdo em colunas e linhas")](../images/columns-rows-large.png#lightbox "Grade com conteúdo em colunas e linhas")
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
@@ -88,4 +88,4 @@ ms.locfileid: "61375334"
 
 1. Na barra de ferramentas do Visual Studio para Mac, pressione o botão **Iniciar** (o botão triangular que se parece com o botão Reproduzir) para iniciar o aplicativo dentro do simulador de iOS ou do Android Emulator escolhido:
 
-    [![Captura de tela de uma Grade com conteúdo distribuído em colunas e linhas no iOS e no Android](../images/columns-rows.png "Grade com conteúdo em colunas e linhas")](../images/columns-rows-large.png#lightbox "Grade com conteúdo em colunas e linhas")
+    [![Captura de tela de uma grade que tem conteúdo disposto em colunas e linhas, no iOS e no Android](../images/columns-rows.png "Grade com conteúdo em colunas e linhas")](../images/columns-rows-large.png#lightbox "Grade com conteúdo em colunas e linhas")

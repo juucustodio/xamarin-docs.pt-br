@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 19afeed47f1c06c89c58dfd996d360698b19fc9c
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "61373332"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -43,7 +43,7 @@ ms.locfileid: "61373332"
 
 1. Na barra de ferramentas do Visual Studio, pressione o botão **Iniciar** (o botão triangular que se parece com um botão Reproduzir) para iniciar o aplicativo dentro do simulador remoto de iOS ou do Android Emulator escolhido:
 
-    [![Captura de tela do Editor contendo texto, em iOS e Android](../images/text-changes.png "Editor com texto")](../images/text-changes-large.png#lightbox "Editor com texto")
+    [![Captura de tela de um editor que contém texto, no iOS e no Android](../images/text-changes.png "Editor com texto")](../images/text-changes-large.png#lightbox "Editor com texto")
 
     Defina pontos de interrupção nos dois manipuladores de eventos, insira texto no [`Editor`](xref:Xamarin.Forms.Editor) e observe o acionamento de evento [`TextChanged`](xref:Xamarin.Forms.Entry.TextChanged). Desfoque o `Editor` para observar o evento [`Completed`](xref:Xamarin.Forms.Entry.Completed) sendo acionado.
 
@@ -86,7 +86,7 @@ ms.locfileid: "61373332"
 
 1. Na barra de ferramentas do Visual Studio para Mac, pressione o botão **Iniciar** (o botão triangular que se parece com o botão Reproduzir) para iniciar o aplicativo dentro do simulador de iOS ou do Android Emulator escolhido:
 
-    [![Captura de tela do Editor contendo texto, em iOS e Android](../images/text-changes.png "Editor com texto")](../images/text-changes-large.png#lightbox "Editor com texto")
+    [![Captura de tela de um editor que contém texto, no iOS e no Android](../images/text-changes.png "Editor com texto")](../images/text-changes-large.png#lightbox "Editor com texto")
 
     Defina pontos de interrupção nos dois manipuladores de eventos, insira texto no [`Editor`](xref:Xamarin.Forms.Editor) e observe o acionamento de evento [`TextChanged`](xref:Xamarin.Forms.Entry.TextChanged). Desfoque o `Editor` para observar o evento [`Completed`](xref:Xamarin.Forms.Entry.Completed) sendo acionado.
 

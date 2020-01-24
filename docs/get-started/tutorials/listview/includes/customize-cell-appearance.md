@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 3c88b71cea834f5e6ef20d43332904c052c6e3a6
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "61037334"
 ---
 Anteriormente, o [`ListView`](xref:Xamarin.Forms.ListView) era preenchido com os dados usando a associação de dados. No entanto, apesar da associação de dados a uma coleção, em que cada objeto na coleção definiu vários itens de dados, apenas um único item de dados foi exibido por objeto (a propriedade `Name` do objeto `Monkey`).

@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: cbf301b341f78ae8d8826580d30a13393716f56c
-ms.sourcegitcommit: 61a35d0643eb3bf5adb8f8831da54771d8dde626
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "71059531"
 ---
 Antes de tentar realizar este tutorial, você deve ter concluído com sucesso:
@@ -20,4 +20,4 @@ Neste tutorial, você aprenderá como:
 
 Você usará o Visual Studio 2019 ou Visual Studio para Mac para criar um aplicativo simples que demonstra como dispor controles em um [`Grid`](xref:Xamarin.Forms.Grid). Estas capturas de tela mostram o aplicativo final:
 
-[![Captura de tela de uma Grade que tem conteúdo que se estende por várias colunas e linhas no iOS e no Android](../images/span-columns-rows.png "Grade com conteúdo abrangendo colunas e linhas")](../images/span-columns-rows-large.png#lightbox "Grade com conteúdo abrangendo colunas e linhas")
+[![Captura de tela de uma grade que tem conteúdo que abrange várias colunas e linhas, no iOS e no Android](../images/span-columns-rows.png "Grade com conteúdo que abrange colunas e linhas")](../images/span-columns-rows-large.png#lightbox "Grade com conteúdo que abrange colunas e linhas")

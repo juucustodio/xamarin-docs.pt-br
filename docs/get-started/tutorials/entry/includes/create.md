@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 820761111c609f224a6dda14d5853777d22aa259
-ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/20/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "67277079"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -34,7 +34,7 @@ Para concluir este tutorial, você precisará ter o Visual Studio 2019 (versão 
 
 1. Na barra de ferramentas do Visual Studio, pressione o botão **Iniciar** (o botão triangular que se parece com um botão Reproduzir) para iniciar o aplicativo dentro do simulador remoto de iOS ou do Android Emulator escolhido:
 
-    [![Captura de tela de uma entrada no iOS e Android](../images/create-entry.png "Entrada contendo o texto de espaço reservado")](../images/create-entry-large.png#lightbox "Entrada contendo o texto de espaço reservado")
+    [![Captura de tela de uma entrada no iOS e no Android](../images/create-entry.png "Entrada contendo o texto do espaço reservado")](../images/create-entry-large.png#lightbox "Entrada contendo o texto do espaço reservado")
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
@@ -64,4 +64,4 @@ Para concluir este tutorial, você precisará ter o Visual Studio para Mac (vers
 
 1. Na barra de ferramentas do Visual Studio para Mac, pressione o botão **Iniciar** (o botão triangular que se parece com o botão Reproduzir) para iniciar o aplicativo dentro do simulador de iOS ou do Android Emulator escolhido:
 
-    [![Captura de tela de uma entrada no iOS e Android](../images/create-entry.png "Entrada contendo o texto de espaço reservado")](../images/create-entry-large.png#lightbox "Entrada contendo o texto de espaço reservado")
+    [![Captura de tela de uma entrada no iOS e no Android](../images/create-entry.png "Entrada contendo o texto do espaço reservado")](../images/create-entry-large.png#lightbox "Entrada contendo o texto do espaço reservado")

@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 854212951844d2443c5d1b332d94b533673640c4
-ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/20/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "67277087"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -34,7 +34,7 @@ Para concluir este tutorial, você precisará ter o Visual Studio 2019 (versão 
 
 1. Na barra de ferramentas do Visual Studio, pressione o botão **Iniciar** (o botão triangular que se parece com um botão Reproduzir) para iniciar o aplicativo dentro do simulador remoto de iOS ou do Android Emulator escolhido:
 
-    [![Captura de tela de um Botão no iOS e Android](../images/create-button.png "Botão contendo texto")](../images/create-button-large.png#lightbox "Botão contendo texto")
+    [![Captura de tela de um botão no iOS e no Android](../images/create-button.png "Botão que contém texto")](../images/create-button-large.png#lightbox "Botão que contém texto")
 
     Observe que, por padrão, um [`Button`](xref:Xamarin.Forms.Button) tende a ocupar todo o espaço permitido – neste caso, a largura total de seu elemento pai ([`StackLayout`](xref:Xamarin.Forms.StackLayout)).
 
@@ -66,6 +66,6 @@ Para concluir este tutorial, você precisará ter o Visual Studio para Mac (vers
 
 1. Na barra de ferramentas do Visual Studio para Mac, pressione o botão **Iniciar** (o botão triangular que se parece com o botão Reproduzir) para iniciar o aplicativo dentro do simulador de iOS ou do Android Emulator escolhido:
 
-    [![Captura de tela de um Botão no iOS e Android](../images/create-button.png "Botão contendo texto")](../images/create-button-large.png#lightbox "Botão contendo texto")
+    [![Captura de tela de um botão no iOS e no Android](../images/create-button.png "Botão que contém texto")](../images/create-button-large.png#lightbox "Botão que contém texto")
 
     Observe que, por padrão, um [`Button`](xref:Xamarin.Forms.Button) tende a ocupar todo o espaço permitido – neste caso, a largura total de seu elemento pai ([`StackLayout`](xref:Xamarin.Forms.StackLayout)).

@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 7471d6bc66463091fafea855b12da06292055be6
-ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/20/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "67277088"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -35,7 +35,7 @@ Para concluir este tutorial, você precisará ter o Visual Studio 2019 (versão 
 
 1. Na barra de ferramentas do Visual Studio, pressione o botão **Iniciar** (o botão triangular que se parece com um botão Reproduzir) para iniciar o aplicativo dentro do simulador remoto de iOS ou do Android Emulator escolhido:
 
-    [![Captura de tela de um Editor no iOS e Android](../images/create-editor.png "Editor contendo texto de espaço reservado")](../images/create-editor-large.png#lightbox "Editor contendo texto de espaço reservado")
+    [![Captura de tela de um editor no iOS e no Android](../images/create-editor.png "Editor que contém o texto do espaço reservado")](../images/create-editor-large.png#lightbox "Editor que contém o texto do espaço reservado")
 
     > [!NOTE]
     > Enquanto o Android indica a altura do [`Editor`](xref:Xamarin.Forms.Editor), o iOS não faz isso.
@@ -69,7 +69,7 @@ Para concluir este tutorial, você precisará ter o Visual Studio para Mac (vers
 
 1. Na barra de ferramentas do Visual Studio para Mac, pressione o botão **Iniciar** (o botão triangular que se parece com o botão Reproduzir) para iniciar o aplicativo dentro do simulador de iOS ou do Android Emulator escolhido:
 
-    [![Captura de tela de um Editor no iOS e Android](../images/create-editor.png "Editor contendo texto de espaço reservado")](../images/create-editor-large.png#lightbox "Editor contendo texto de espaço reservado")
+    [![Captura de tela de um editor no iOS e no Android](../images/create-editor.png "Editor que contém o texto do espaço reservado")](../images/create-editor-large.png#lightbox "Editor que contém o texto do espaço reservado")
 
     > [!NOTE]
     > Enquanto o Android indica a altura do [`Editor`](xref:Xamarin.Forms.Editor), o iOS não faz isso.
