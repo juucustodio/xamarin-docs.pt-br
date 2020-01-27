@@ -6,8 +6,6 @@
       items:
         - name: O que é o Xamarin.Forms
           href: ~/get-started/what-is-xamarin-forms.md
-        - name: Requisitos
-          href: ~/get-started/requirements.md
         - name: Instalação
           href: ~/get-started/installation/index.md
           items:
@@ -16,15 +14,19 @@
               items:
                 - name: Instalando versões prévias do Xamarin (Windows)
                   href: ~/get-started/installation/windows-preview.md
+                - name: Desinstalando o Xamarin do Visual Studio
+                  href: ~/get-started/installation/uninstalling-xamarin.md
             - name: Instalando o Visual Studio para Mac
               href: /visualstudio/mac/installation/
               items:
                 - name: Instalando versões prévias do Xamarin (Mac)
                   href: /visualstudio/mac/update/
+                - name: Desinstalando o Visual Studio para Mac
+                  href: /visualstudio/mac/uninstall
             - name: Instruções de configuração de firewall do Xamarin
               href: ~/get-started/installation/firewall.md
-            - name: Desinstalando o Xamarin
-              href: ~/get-started/installation/uninstalling-xamarin.md
+        - name: Plataformas com suporte
+          href: ~/get-started/supported-platforms.md
         - name: Primeiro aplicativo
           href: ~/get-started/first-app/index.md
         - name: Guias de Início Rápido
