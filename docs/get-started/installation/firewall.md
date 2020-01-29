@@ -7,19 +7,19 @@ author: conceptdev
 ms.author: crdun
 ms.date: 07/17/2019
 ms.openlocfilehash: 2b52dfd55194ec076f28f8c33e758a39d14f5943
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
-ms.translationtype: MT
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "70291325"
 ---
-# <a name="xamarin-firewall-configuration-instructions"></a>Instruções de configuração do Xamarin firewall
+# <a name="xamarin-firewall-configuration-instructions"></a>Instruções de configuração de firewall do Xamarin
 
-_Uma lista de hosts que você precisa permitir no firewall para permitir que a plataforma do Xamarin funcione para sua empresa._
+_Uma lista de hosts que precisam ser permitidos no firewall para permitir que a plataforma do Xamarin funcione para a sua empresa._
 
-Para que os produtos Xamarin sejam instalados e funcionem corretamente, determinados pontos de extremidade devem estar acessíveis para baixar as ferramentas necessárias e as atualizações para o seu software. Se você ou sua empresa têm configurações estritas de firewall, é possível que você tenha problemas com a instalação, licenciamento, componentes além de outros problemas. Este documento descreve alguns dos pontos de extremidade conhecidos que precisam ser permitidos em seu firewall para que o Xamarin funcione. Essa lista não inclui os pontos de extremidade necessários para todas as ferramentas de terceiros incluídas no download. Se você ainda estiver com problemas depois de passar por essa lista, consulte os guias de solução de problemas de instalação da Apple ou do Android.
+Para que os produtos Xamarin sejam instalados e funcionem corretamente, determinados pontos de extremidade devem estar acessíveis para baixar as ferramentas necessárias e as atualizações para o seu software. Se você ou sua empresa têm configurações estritas de firewall, é possível que você tenha problemas com a instalação, licenciamento, componentes além de outros problemas. Este documento descreve alguns dos pontos de extremidade conhecidos que precisam ser permitidos em seu firewall para o Xamarin funcionar. Essa lista não inclui os pontos de extremidade necessários para todas as ferramentas de terceiros incluídas no download. Se você ainda estiver com problemas depois de passar por essa lista, consulte os guias de solução de problemas de instalação da Apple ou do Android.
 
-## <a name="endpoints-to-allow"></a>Pontos de extremidade para permitir
+## <a name="endpoints-to-allow"></a>Pontos de extremidade a permitir
 
 ### <a name="xamarin-installer"></a>Instalador do Xamarin
 
@@ -39,7 +39,7 @@ Se você estiver usando um Mac e encontrar problemas de instalação do Xamarin.
 
 Os seguintes endereços precisarão ser adicionados para acessar o NuGet (o Xamarin.Forms é empacotado como um NuGet):
 
-- [www.nuget.org](www.nuget.org) (para acessar o NuGet)
+- www.nuget.org (para acessar o NuGet)
 - globalcdn.nuget.org (downloads do NuGet)
 - dl-ssl.google.com (componentes do Google para Android e Xamarin.Forms)
 
