@@ -36,7 +36,7 @@ Este exemplo demonstra as novas APIs de Design de material introduzidas no Andro
 Esta solução usa o NuGet do Xamarin Google Play Services para demonstrar alguns usos da API de mapas.
   :::column-end:::
     :::column:::
-[Pager do ![Flash Card](images/flash.png)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/userinterface-flashcardpager/)
+[![Pager do Flash Card](images/flash.png)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/userinterface-flashcardpager/)
 
 ### <a name="flash-card-pagerhttpsdocsmicrosoftcomsamplesxamarinmonodroid-samplesuserinterface-flashcardpager"></a>[Pager do cartão flash](https://docs.microsoft.com/samples/xamarin/monodroid-samples/userinterface-flashcardpager/)
 
@@ -46,14 +46,14 @@ Este exemplo demonstra como usar ViewPager e PagerTabStrip juntos para implement
 
 :::row:::
     :::column:::
-[Fragmentos de ![](images/fragments.png)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/fragmentswalkthrough/)
+[![Fragmentos de](images/fragments.png)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/fragmentswalkthrough/)
 
 ### <a name="fragmentshttpsdocsmicrosoftcomsamplesxamarinmonodroid-samplesfragmentswalkthrough"></a>[Fragmentos](https://docs.microsoft.com/samples/xamarin/monodroid-samples/fragmentswalkthrough/)
 
 Os fragmentos são componentes independentes e modulares usados para ajudar a solucionar a complexidade da produção de aplicativos que podem ser executados em telas de tamanhos diferentes.
     :::column-end:::
     :::column:::
-[Pintura de dedo ![](images/fingerpaint.png)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/applicationfundamentals-fingerpaint/)
+[![Pintura de dedo](images/fingerpaint.png)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/applicationfundamentals-fingerpaint/)
 
 ### <a name="finger-painthttpsdocsmicrosoftcomsamplesxamarinmonodroid-samplesapplicationfundamentals-fingerpaint"></a>[Pintura a dedo](https://docs.microsoft.com/samples/xamarin/monodroid-samples/applicationfundamentals-fingerpaint/)
 
@@ -70,7 +70,7 @@ Use este exemplo para aprender a usar os novos widgets CardView e RecyclerView i
 
 :::row:::
     :::column:::
-[Barra de ferramentas ![](images/toolbar.png)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android50-toolbar/)
+[![Barra de ferramentas](images/toolbar.png)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android50-toolbar/)
 
 ### <a name="toolbarhttpsdocsmicrosoftcomsamplesxamarinmonodroid-samplesandroid50-toolbar"></a>[Toolbar](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android50-toolbar/)
 

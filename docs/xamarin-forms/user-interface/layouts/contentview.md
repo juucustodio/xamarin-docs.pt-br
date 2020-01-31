@@ -22,7 +22,7 @@ A classe [`ContentView`](xref:Xamarin.Forms.ContentView) Xamarin. Forms é um ti
 
 A captura de tela a seguir mostra um controle `CardView` derivado da classe `ContentView`:
 
-[captura de tela do aplicativo de exemplo ![CardView](contentview-images/cardview-list-cropped.png)](contentview-images/cardview-list.png#lightbox)
+[![captura de tela do aplicativo de exemplo CardView](contentview-images/cardview-list-cropped.png)](contentview-images/cardview-list.png#lightbox)
 
 A classe `ContentView` define uma única propriedade:
 
@@ -202,7 +202,7 @@ A associação de dados em um `ControlTemplate` usa a extensão de marcação `T
 
 As capturas de tela a seguir mostram uma instância de `CardView` padrão e `CardView` cujo `ControlTemplate` foi substituído:
 
-[captura de tela de ControlTemplate ![CardView](contentview-images/cardview-controltemplates-cropped.png)](contentview-images/cardview-controltemplates.png#lightbox)
+[![captura de tela de ControlTemplate CardView](contentview-images/cardview-controltemplates-cropped.png)](contentview-images/cardview-controltemplates.png#lightbox)
 
 Para obter mais informações sobre modelos de controle, consulte [Xamarin. Forms Control templates](~/xamarin-forms/app-fundamentals/templates/control-template.md).
 

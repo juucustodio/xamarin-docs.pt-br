@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: 177a7f9017559daad528885da90edbc8a0760920
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
-ms.translationtype: MT
+ms.openlocfilehash: 007c027772701e424aad5995c0ec025c3589171c
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70771782"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725085"
 ---
 # <a name="creating-the-platform-video-players"></a>Criando os players de vídeo de plataforma
 
@@ -22,7 +22,7 @@ A solução [**VideoPlayerDemos**](https://docs.microsoft.com/samples/xamarin/xa
 
 ## <a name="the-video-player"></a>O player de vídeo
 
-A classe [`VideoPlayer`](https://github.com/xamarin/xamarin-forms-samples/blob/master/CustomRenderers/VideoPlayerDemos/VideoPlayerDemos/VideoPlayerDemos/VideoPlayer.cs) faz parte da biblioteca do .NET Standard **VideoPlayerDemos** que é compartilhada entre as plataformas. Ela deriva de `View`:
+A classe [`VideoPlayer`](https://github.com/xamarin/xamarin-forms-samples/blob/master/CustomRenderers/VideoPlayerDemos/VideoPlayerDemos/VideoPlayerDemos/FormsVideoLibrary/VideoPlayer.cs) faz parte da biblioteca do .NET Standard **VideoPlayerDemos** que é compartilhada entre as plataformas. Ela deriva de `View`:
 
 ```csharp
 using System;
@@ -45,7 +45,7 @@ Cada uma das plataformas contém uma classe chamada `VideoPlayerRenderer` que co
 
 Várias classes estão envolvidas ao implementar um player de vídeo no iOS. O aplicativo primeiro cria um [`AVPlayerViewController`](xref:AVKit.AVPlayerViewController) e, em seguida, define a propriedade [`Player`](xref:AVKit.AVPlayerViewController.Player*) como um objeto do tipo [`AVPlayer`](xref:AVFoundation.AVPlayer). Classes adicionais são necessárias quando o player recebe uma fonte de vídeo.
 
-Como todos os renderizadores, o [`VideoPlayerRenderer`](https://github.com/xamarin/xamarin-forms-samples/blob/master/CustomRenderers/VideoPlayerDemos/VideoPlayerDemos/VideoPlayerDemos.iOS/VideoPlayerRenderer.cs) do iOS contém um atributo `ExportRenderer` que identifica a exibição `VideoPlayer` com o renderizador:
+Como todos os renderizadores, o [`VideoPlayerRenderer`](https://github.com/xamarin/xamarin-forms-samples/blob/master/CustomRenderers/VideoPlayerDemos/VideoPlayerDemos/VideoPlayerDemos.iOS/FormsVideoLibrary/VideoPlayerRenderer.csVideoPlayerRenderer.cs) do iOS contém um atributo `ExportRenderer` que identifica a exibição `VideoPlayer` com o renderizador:
 
 ```csharp
 using System;
@@ -120,7 +120,7 @@ Geralmente, a propriedade `Control` da classe de renderizador depois disso se re
 
 ### <a name="the-android-video-view"></a>A exibição de vídeo do Android
 
-O renderizador do Android para o `VideoPlayer` se baseia na classe [`VideoView`](xrtef:Android.Widget.VideoView) do Android. No entanto, se `VideoView` é usado por si só para reproduzir um vídeo em um aplicativo Xamarin.Forms, o vídeo preenche a área alocada para o `VideoPlayer` sem manter a taxa de proporção correta. Por esse motivo (como você verá em breve), a `VideoView` se torna um filho de um `RelativeLayout` do Android. Uma diretiva `using` define `ARelativeLayout` para distingui-lo do `RelativeLayout` do Xamarin.Forms e esse é o segundo argumento genérico no `ViewRenderer`:
+O renderizador do Android para o `VideoPlayer` se baseia na classe [`VideoView`](xref:Android.Widget.VideoView) do Android. No entanto, se `VideoView` é usado por si só para reproduzir um vídeo em um aplicativo Xamarin.Forms, o vídeo preenche a área alocada para o `VideoPlayer` sem manter a taxa de proporção correta. Por esse motivo (como você verá em breve), a `VideoView` se torna um filho de um `RelativeLayout` do Android. Uma diretiva `using` define `ARelativeLayout` para distingui-lo do `RelativeLayout` do Xamarin.Forms e esse é o segundo argumento genérico no `ViewRenderer`:
 
 ```csharp
 using System;

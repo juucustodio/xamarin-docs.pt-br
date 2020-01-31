@@ -96,7 +96,7 @@ Antes do iOS 9, versões de retina da imagem pode ser colocadas na **recursos** 
 
 Imagens de resolução alternativo Android devem ser colocadas em [diretórios especialmente denominada](https://developer.android.com/guide/practices/screens_support.html) no projeto do Android, conforme mostrado na seguinte captura de tela:
 
-[local da imagem de várias resoluções do Android ![](images-images/xs-highdpisolution-sml.png)](images-images/xs-highdpisolution.png#lightbox)
+[![local da imagem de várias resoluções do Android](images-images/xs-highdpisolution-sml.png)](images-images/xs-highdpisolution.png#lightbox)
 
 Nomes de arquivo de imagem UWP [pode ser com o sufixo `.scale-xxx` antes da extensão de arquivo](https://docs.microsoft.com/windows/uwp/app-resources/images-tailored-for-scale-theme-contrast), onde `xxx` é a porcentagem de dimensionamento aplicado ao ativo, por exemplo, **myimage.scale 200.png**. Imagens, em seguida, podem ser chamadas para no código ou XAML sem o modificador de escala, por exemplo, apenas **myimage.png**. A plataforma selecionará a escala mais próxima do ativo apropriado com base em DPI de atual da tela.
 
@@ -140,7 +140,7 @@ Este painel mostra as **ID do recurso** que é usado para referenciar o recurso 
 O IDE gerou esse padrão por meio da concatenação de **Namespace padrão** para este projeto com o nome do arquivo, usando um ponto (.) entre cada valor.
 Essa ID pode ser editada na **propriedades** teclado, mas para esses exemplos o valor **WorkingWithImages.beach.jpg** será usado.
 
-[painel de propriedades do recurso inserido ![](images-images/xs-embeddedproperties-sml.png)](images-images/xs-embeddedproperties.png#lightbox)
+[![painel de propriedades do recurso inserido](images-images/xs-embeddedproperties-sml.png)](images-images/xs-embeddedproperties.png#lightbox)
 
 -----
 

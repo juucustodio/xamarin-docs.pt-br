@@ -40,7 +40,7 @@ public class HomeScreen : ListActivity {
 
 Geralmente, um `ListView` também permitirá que o usuário toque em uma linha para executar alguma ação (como reproduzir uma música ou chamar um contato ou mostrar outra tela). Para responder aos toques do usuário, é necessário que haja mais um método implementado no `ListActivity` &ndash; `OnListItemClick` &ndash; assim:
 
-[Captura de tela de ![de um SimpleListItem](populating-images/simplelistitem1.png)](populating-images/simplelistitem1.png#lightbox)
+[![Captura de tela de de um SimpleListItem](populating-images/simplelistitem1.png)](populating-images/simplelistitem1.png#lightbox)
 
 ```csharp
 protected override void OnListItemClick(ListView l, View v, int position, long id)
@@ -136,7 +136,7 @@ Algumas implementações de adaptador (como o `CursorAdapter`) não têm um mét
 
 A rolagem rápida ajuda o usuário a rolar por listas longas fornecendo um "identificador" adicional que atua como uma barra de rolagem para acessar diretamente uma parte da lista. Esta captura de tela mostra o identificador de rolagem rápida:
 
-[Captura de tela de ![de rolagem rápida com uma alça de rolagem](populating-images/fastscroll.png)](populating-images/fastscroll.png#lightbox)
+[![Captura de tela de de rolagem rápida com uma alça de rolagem](populating-images/fastscroll.png)](populating-images/fastscroll.png#lightbox)
 
 Fazer com que o identificador de rolagem rápida apareça seja tão simples quanto definir a propriedade `FastScrollEnabled` como `true`:
 

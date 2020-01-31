@@ -55,7 +55,7 @@ Essa cadeia de conexão é usada para [implantar Azure Functions com o Visual St
 
 Para testar o aplicativo de exemplo, você deve criar um novo aplicativo Azure Functions no portal do Azure. Anote o **nome do aplicativo** , pois essa URL é usada no arquivo de exemplo do aplicativo **Constants.cs** . A captura de tela a seguir mostra a criação de um novo aplicativo Azure Functions chamado "xdocsfunctions":
 
-[Captura de tela de ![da criação do aplicativo Azure Functions](azure-signalr-images/azure-functions-app-cropped.png)](azure-signalr-images/azure-functions-app-full.png#lightbox)
+[![Captura de tela de da criação do aplicativo Azure Functions](azure-signalr-images/azure-functions-app-cropped.png)](azure-signalr-images/azure-functions-app-full.png#lightbox)
 
 O Azure Functions pode ser implantado em uma instância de aplicativo Azure Functions do Visual Studio 2019. As seções a seguir descrevem a implantação de duas funções no aplicativo de exemplo para uma instância de aplicativo Azure Functions.
 

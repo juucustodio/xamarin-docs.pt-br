@@ -133,11 +133,11 @@ Após a criação do projeto de API do **console do desenvolvedor do Google** , 
 
 1. Na página **SDK do Maps para Android** exibida (depois de clicar em **habilitar** na etapa anterior), vá para a guia **credenciais** e clique no botão **criar credenciais** :
 
-   [SDK do Maps ![para mensagem de credenciais do Android](obtaining-a-google-maps-api-key-images/05-api-is-enabled-vs-sml.png)](obtaining-a-google-maps-api-key-images/05-api-is-enabled-vs.png#lightbox)
+   [![SDK do Maps para mensagem de credenciais do Android](obtaining-a-google-maps-api-key-images/05-api-is-enabled-vs-sml.png)](obtaining-a-google-maps-api-key-images/05-api-is-enabled-vs.png#lightbox)
 
 2. Clique em **chave de API**:
 
-   [caixa de diálogo ![adicionar credenciais ao seu projeto](obtaining-a-google-maps-api-key-images/06-add-credentials-to-your-project-vs-sml.png)](obtaining-a-google-maps-api-key-images/06-add-credentials-to-your-project-vs.png#lightbox)
+   [![caixa de diálogo adicionar credenciais ao seu projeto](obtaining-a-google-maps-api-key-images/06-add-credentials-to-your-project-vs-sml.png)](obtaining-a-google-maps-api-key-images/06-add-credentials-to-your-project-vs.png#lightbox)
 
 3. Depois que esse botão é clicado, a chave de API é gerada. Em seguida, é necessário restringir essa chave para que apenas seu aplicativo possa chamar APIs com essa chave. Clique em **restringir chave**:
 

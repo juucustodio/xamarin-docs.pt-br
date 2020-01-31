@@ -201,7 +201,7 @@ public class MyView : View
 
 Esse código acima cria primeiro uma pintura vermelha e um objeto de pintura verde. Ele preenche o conteúdo da tela com vermelho e, em seguida, instrui a tela a desenhar um retângulo verde que é 25% da largura da tela. Um exemplo disso pode ser visto pelo no projeto `AnimationsDemo` incluído com o código-fonte deste artigo. Ao iniciar o aplicativo e selecionar o item de desenho no menu principal, devemos uma tela semelhante à seguinte:
 
-[Tela de ![com objetos de pintura vermelha e de pintura verde](graphics-and-animation-images/image3-sml.png)](graphics-and-animation-images/image3.png#lightbox)
+[![Tela de com objetos de pintura vermelha e de pintura verde](graphics-and-animation-images/image3-sml.png)](graphics-and-animation-images/image3.png#lightbox)
 
 ## <a name="animation"></a>{1&gt;Animação&lt;1}
 

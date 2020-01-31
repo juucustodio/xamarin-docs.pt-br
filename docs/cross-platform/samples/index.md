@@ -24,7 +24,7 @@ Aplicativos de exemplo de plataforma cruzada do Xamarin e demonstrações de có
 
 :::row:::
     :::column:::
-[exemplo de ![todo](images/todo.png)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo/)
+[![exemplo de todo](images/todo.png)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo/)
 
 ### <a name="todohttpsdocsmicrosoftcomsamplesxamarinxamarin-forms-samplestodo"></a>[Todo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo/)
 
