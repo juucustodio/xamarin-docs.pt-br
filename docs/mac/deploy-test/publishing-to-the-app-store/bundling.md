@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 7d2cd650dd22cd64d506d5d17a5ae0c34b44fc2b
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
-ms.translationtype: MT
+ms.openlocfilehash: f4d38bb66a34257c1e0a27c5fbbfe16f59743e83
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75487172"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725500"
 ---
 # <a name="bundling-for-the-mac-app-store"></a>Agrupamento para Mac App Store
 
@@ -25,26 +25,26 @@ Esta seção descreve as noções básicas da criação de um aplicativo para la
 
 Altere **Configuração** para **Versão** antes de atualizar as opções de assinatura de código e empacotamento. O desenvolvedor precisa garantir que usem a **identidade** e o perfil de provisionamento criados acima quando assinarem o aplicativo para lançamento na App Store.
 
-[![editar as opções de assinatura de código](bundling-images/sign.png)](bundling-images/sign-large.png#lightbox)
+[![Editar as opções de assinatura de código](bundling-images/sign.png)](bundling-images/sign-large.png#lightbox)
 
 Verifique se a opção de criar um pacote do instalador foi marcada nas configurações de **Build do Mac**:
 
-[![Editando as opções de compilação](bundling-images/build.png "Editando as opções de compilação")](bundling-images/build-large.png#lightbox)
+[![Editar as opções de build](bundling-images/build.png "Editar as opções de build")](bundling-images/build-large.png#lightbox)
 
-## <a name="build"></a>{1&gt;Compilação&lt;1}
+## <a name="build"></a>Build
 
-Antes de compilar, verifique se a configuração **Versão** foi selecionada. Quando o desenvolvedor cria o aplicativo, ele será solicitado _duas vezes_ (para usar os certificados do aplicativo e do instalador):
+Antes de compilar, verifique se a configuração **Versão** foi selecionada. Quando o desenvolvedor compila o aplicativo, ele é solicitado _duas vezes_ (para usar o certificado do aplicativo e o certificado de instalação):
 
-![Permitir que o aplicativo use o certificado será exibido duas vezes](bundling-images/perms02.png)
+![Permitir que o aplicativo use o certificado, será exibido duas vezes](bundling-images/perms02.png)
 
-Depois que o aplicativo tiver sido criado, o desenvolvedor poderá clicar com o botão direito do mouse no projeto e escolher **revelar no Finder** para localizar o arquivo de pacote (no diretório `bin/Release/AppStore` no exemplo mostrado abaixo).  Este arquivo de pacote inclui um instalador para o aplicativo que pode ser enviado para a Apple para inclusão na Mac App Store.
+Depois que o aplicativo tiver sido compilado, o desenvolvedor poderá clicar com o botão direito do mouse no projeto e escolher **Revelar no Localizador** para localizar o arquivo do pacote (no diretório `bin/Release/AppStore` no exemplo mostrado abaixo).  Este arquivo de pacote inclui um instalador para o aplicativo que pode ser enviado para a Apple para inclusão na Mac App Store.
 
 > [!div class="mx-imgBorder"]
-> ![selecionando o pacote de compilação no Finder](bundling-images/path.png)
+> ![Selecionar o pacote de build no Finder](bundling-images/path.png)
 
 ## <a name="related-links"></a>Links relacionados
 
 - [Instalação](/visualstudio/mac/installation/)
 - [Amostra do Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Distribua aplicativos na Mac App Store](https://developer.apple.com/devcenter/mac/checklist/)
-- [ID de Desenvolvedor e GateKeeper](https://developer.apple.com/resources/developer-id/)
+- [ID de Desenvolvedor e GateKeeper](https://developer.apple.com/developer-id/)

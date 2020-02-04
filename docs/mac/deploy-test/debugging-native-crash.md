@@ -7,18 +7,18 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 10/19/2016
-ms.openlocfilehash: bc5a151323414e867b919035b0c5705234faebf9
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.openlocfilehash: 40d849ad403f2f47c00be9d3da7b59fc27ce8002
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73021663"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725487"
 ---
 # <a name="debugging-a-native-crash-in-a-xamarinmac-app"></a>Depuração de uma falha nativa em um aplicativo Xamarin.Mac
 
-## <a name="overview"></a>Visão Geral
+## <a name="overview"></a>Visão geral
 
-Erros de programação, às vezes, podem gerar falhas no runtime nativo Objective-C. Diferentemente de exceções C#, eles não apontam para uma linha específica em seu código, que você pode buscar corrigir. Às vezes, eles podem ser triviais para localizar e corrigir, enquanto em outras ocasiões eles podem ser extremamente difíceis de rastrear. 
+Erros de programação, às vezes, podem gerar falhas no runtime nativo Objective-C. Diferentemente de exceções C#, eles não apontam para uma linha específica em seu código, que você pode buscar corrigir. Às vezes, eles podem ser triviais para localizar e corrigir, enquanto em outras ocasiões eles podem ser extremamente difíceis de rastrear.
 
 Passaremos por alguns exemplos reais de falhas nativas e daremos uma olhada.
 
@@ -163,40 +163,40 @@ Este guia ajudará a rastrear bugs dessa natureza se eles aparecerem, relatá-lo
 
 ### <a name="locating"></a>Localizar
 
-Em quase todos os casos com bugs dessa natureza, o sintoma primário é de falhas nativas, normalmente com algo semelhante a `mono_sigsegv_signal_handler`, ou `_sigtrap` nos quadros superiores da pilha. O Cocoa está tentando chamar de volta em seu código C#, atingindo um objeto que foi coletado como lixo e falhando. No entanto, nem todas as falhas com esses símbolos são causadas por um problema de associação como esse. É necessário fazer pesquisa adicional para confirmar que esse é o problema. 
+Em quase todos os casos com bugs dessa natureza, o sintoma primário é de falhas nativas, normalmente com algo semelhante a `mono_sigsegv_signal_handler`, ou `_sigtrap` nos quadros superiores da pilha. O Cocoa está tentando chamar de volta em seu código C#, atingindo um objeto que foi coletado como lixo e falhando. No entanto, nem todas as falhas com esses símbolos são causadas por um problema de associação como esse. É necessário fazer pesquisa adicional para confirmar que esse é o problema.
 
 O que torna esses bugs difíceis de rastrear é que eles ocorrem apenas **depois** que uma coleta de lixo descartou o objeto em questão. Se você acredita que encontrou um desses bugs, adicione o seguinte código em algum lugar na sua sequência de inicialização:
 
 ```csharp
-new System.Threading.Thread (() => 
+new System.Threading.Thread (() =>
 {
     while (true) {
          System.Threading.Thread.Sleep (1000);
          GC.Collect ();
     }
-}).Start (); 
+}).Start ();
 ```
 
 Isso forçará o aplicativo a executar o coletor de lixo a cada segundo. Execute novamente o seu aplicativo e tente reproduzir o bug. Se você falha imediatamente ou consistentemente em vez de aleatoriamente, isso significa que você está no caminho certo.
 
 ### <a name="reporting"></a>Relatórios
 
-A próxima etapa é relatar o problema para o Xamarin para que a associação possa ser corrigida para versões futuras. Se você for o proprietário da licença Enterprise ou comercial, abra um tíquete em 
+A próxima etapa é relatar o problema para o Xamarin para que a associação possa ser corrigida para versões futuras. Se você for o proprietário da licença Enterprise ou comercial, abra um tíquete em
 
 [visualstudio.microsoft.com/vs/support/](https://visualstudio.microsoft.com/vs/support/)
 
 Caso contrário, procure um problema existente:
 
-- Verifique os [Fóruns do Xamarin.Mac](https://forums.xamarin.com/categories/mac)
+- Verifique os [Fóruns do Xamarin.Mac](https://forums.xamarin.com/categories/xamarin-mac)
 - Pesquise o [repositório de problemas](https://github.com/xamarin/xamarin-macios/issues)
 - Antes de mudar para problemas do GitHub, os problemas do Xamarin eram rastreados no [Bugzilla](https://bugzilla.xamarin.com/describecomponents.cgi). Procure lá por problemas correspondentes.
 - Se você não encontrar um problema correspondente, envie um novo problema no [repositório de problemas do GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
-Os problemas do GitHub são todos públicos. Não é possível ocultar comentários ou anexos. 
+Os problemas do GitHub são todos públicos. Não é possível ocultar comentários ou anexos.
 
 Inclua tanto do seguinte quanto possível:
 
-- Um exemplo simples reproduzindo o problema. Isso é **inestimável**, quando possível. 
+- Um exemplo simples reproduzindo o problema. Isso é **inestimável**, quando possível.
 - O rastreamento de pilha completo da falha.
 - O código C# ao redor da falha.   
 
@@ -250,4 +250,4 @@ Você nunca deve permitir que uma exceção do C# "vaze" código gerenciado para
 
 Sem perder muito tempo explicando os motivos técnicos disto, configurar a infraestrutura para capturar exceções gerenciadas em cada limite gerenciado/nativo é algo especialmente caro e há _muitas_ transições que acontecem em várias operações comuns. Várias operações, especialmente aquelas envolvendo o thread de interface do usuário, deverão ser concluídas rapidamente, ou o seu aplicativo falhará e terá características de desempenho inaceitáveis. Muitos desses retornos de chamada fazem coisas muito simples, que raramente têm a possibilidade de gerar exceções; portanto, essa sobrecarga seria cara e também desnecessária nesses casos.
 
-Assim, nós não configuraríamos esses blocos try/catch para você. Para os locais em que o código faz coisas não triviais (digamos, além de retornar boolianos ou matemática simples), você pode definir os blocos try/catch por conta própria. 
+Assim, nós não configuraríamos esses blocos try/catch para você. Para os locais em que o código faz coisas não triviais (digamos, além de retornar boolianos ou matemática simples), você pode definir os blocos try/catch por conta própria.

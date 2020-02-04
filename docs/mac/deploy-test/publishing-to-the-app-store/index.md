@@ -7,16 +7,16 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 2b6dcd53a9761ec3f030f3f5bf81894e9faa8b1f
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
-ms.translationtype: MT
+ms.openlocfilehash: 1a14bcc15299360a17b4c9e7a363b6d6e6f2e69a
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75487016"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725019"
 ---
 # <a name="publishing-xamarinmac-apps-to-the-mac-app-store"></a>Publicando aplicativos Xamarin.Mac na Mac App Store
 
-## <a name="overview"></a>{1&gt;Visão Geral&lt;1}
+## <a name="overview"></a>Visão geral
 
 Os aplicativos Xamarin.Mac podem ser distribuídos de duas maneiras diferentes:
 
@@ -25,11 +25,11 @@ Os aplicativos Xamarin.Mac podem ser distribuídos de duas maneiras diferentes:
 
 Este documento explica como usar o Visual Studio para Mac e o Xcode para configurar uma conta de Desenvolvedor da Apple e configurar um projeto Xamarin.Mac para cada tipo de implantação.
 
-## <a name="mac-developer-program"></a>Programa de desenvolvedor do Mac
+## <a name="mac-developer-program"></a>Programa de desenvolvedores do Mac
 
 Ao ingressar no [Programa de Desenvolvedores do Mac](https://developer.apple.com/devcenter/mac/) será oferecido ao desenvolvedor uma opção para participar como uma Pessoa Física ou como uma Empresa, conforme mostrado na captura de tela abaixo:
 
-[![O portal do desenvolvedor da Apple](images/image1.png "O portal do desenvolvedor da Apple")](images/image1-large.png#lightbox)
+[![O Portal do Desenvolvedor da Apple](images/image1.png "O Portal do Desenvolvedor da Apple")](images/image1-large.png#lightbox)
 
 Escolha o tipo de registro correto para a sua situação.
 
@@ -44,7 +44,7 @@ Esse guia o orienta durante a criação dos Certificados e Identificadores que s
 
 Esse guia o orienta na criação dos Perfis de Provisionamento que serão necessários para publicar um aplicativo Xamarin.Mac.
 
-### <a name="mac-app-configurationmacdeploy-testpublishing-to-the-app-storeapp-configurationmd"></a>[Configuração de aplicativo Mac](~/mac/deploy-test/publishing-to-the-app-store/app-configuration.md)
+### <a name="mac-app-configurationmacdeploy-testpublishing-to-the-app-storeapp-configurationmd"></a>[Configuração de aplicativos Mac](~/mac/deploy-test/publishing-to-the-app-store/app-configuration.md)
 
 Este guia explica como configurar um aplicativo Xamarin.Mac para publicação.
 
@@ -64,4 +64,4 @@ Este guia ensina como fazer upload de aplicativos Xamarin.Mac para publicação 
 
 - [Instalação](/visualstudio/mac/installation/)
 - [Amostra do Hello, Mac](~/mac/get-started/hello-mac.md)
-- [ID de Desenvolvedor e GateKeeper](https://developer.apple.com/resources/developer-id/)
+- [ID de Desenvolvedor e GateKeeper](https://developer.apple.com/developer-id/)

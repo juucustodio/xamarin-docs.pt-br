@@ -7,18 +7,18 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: de858049ef899134d61596cabfcf81fca973e8b0
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
-ms.translationtype: MT
+ms.openlocfilehash: f05e763df58e6fafc4d4ed1d4007979859670c28
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75489343"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725456"
 ---
 # <a name="signing-xamarinmac-apps-with-a-developer-id"></a>Assinar aplicativos Xamarin.Mac com uma ID de Desenvolvedor
 
 Se o desenvolvedor planeja distribuir um aplicativo diretamente aos usuários macOS, a Apple recomenda que a assinatura de código seja feita com sua ID de desenvolvedor para que ele possa ser instalado em sistemas macOS com o **GateKeeper** habilitado. Se o aplicativo não tiver sido assinado, o **GateKeeper** impedirá que os usuários instalem uma mensagem de alerta (eles podem ignorar essa restrição mantendo pressionada a tecla Control ao iniciar).
 
-Leia mais sobre [ID de desenvolvedor e GateKeeper](https://developer.apple.com/resources/developer-id/) e [Distribuindo fora da Mac App Store](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/Introduction/Introduction.html) no site da Apple.
+Leia mais sobre [ID de desenvolvedor e GateKeeper](https://developer.apple.com/developer-id/) e [Distribuindo fora da Mac App Store](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/Introduction/Introduction.html) no site da Apple.
 
 ## <a name="code-signing-options"></a>Opções de assinatura de código
 
@@ -26,7 +26,7 @@ Para compilar um aplicativo para implantação diretamente no conjunto de usuár
 
  [![](signing-images/config02.png "The Mac Signing options")](signing-images/config02.png#lightbox)
 
-## <a name="build"></a>{1&gt;Compilação&lt;1}
+## <a name="build"></a>Build
 
 Antes de compilar, verifique se a configuração correta foi selecionada e selecione para criar um pacote de instalação nas configurações do **Build do Mac**:
 
@@ -47,5 +47,5 @@ Depois de compilar o aplicativo, o desenvolvedor pode clicar com o botão direit
 - [Instalação](~//mac/get-started/installation.md)
 - [Amostra do Hello, Mac](~//mac/get-started/hello-mac.md)
 - [Distribua aplicativos na Mac App Store](https://developer.apple.com/devcenter/mac/checklist/)
-- [Guia de ferramentas: assinatura de código do aplicativo](https://developer.apple.com/library/mac/#documentation/ToolsLanguages/Conceptual/OSXWorkflowGuide/CodeSigning/CodeSigning.html)
-- [ID de Desenvolvedor e GateKeeper](https://developer.apple.com/resources/developer-id/)
+- [Guia de Ferramentas: Assinatura de Código do Aplicativo](https://developer.apple.com/library/mac/#documentation/ToolsLanguages/Conceptual/OSXWorkflowGuide/CodeSigning/CodeSigning.html)
+- [ID de Desenvolvedor e GateKeeper](https://developer.apple.com/developer-id/)

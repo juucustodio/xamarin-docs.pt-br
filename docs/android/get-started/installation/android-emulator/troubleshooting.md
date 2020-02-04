@@ -8,16 +8,16 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 08/27/2018
-ms.openlocfilehash: 675e6cebab95d2a997bf48a6c9231b5e8c661342
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.openlocfilehash: d73c72fa70a22bacf122f5c3957b789914dfd765
+ms.sourcegitcommit: dde593cf9dedf4a056ffef86bcf2fa0640412a4d
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73020837"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794824"
 ---
 # <a name="android-emulator-troubleshooting"></a>Solução de problemas do Android Emulator
 
-_Este artigo descreve as mensagens de aviso e os problemas mais comuns que ocorrem durante a configuração e a execução do Android Emulator. Além disso, ele descreve soluções para resolver esses erros, bem como várias dicas de solução de problemas para ajudá-lo a diagnosticar problemas de emulador._
+_Neste artigo, são descritas as mensagens de aviso e os problemas mais comuns que ocorrem durante a execução do Android Emulator. Além disso, são descritas soluções para resolver esses erros, bem como várias dicas de solução de problemas para ajudá-lo a diagnosticar problemas do emulador._
 
 ::: zone pivot="windows"
 
@@ -59,7 +59,7 @@ Se for exibida a mensagem **Ocorreu um erro de acesso de MMIO**, reinicie o emul
 Se o dispositivo virtual em execução no emulador não tem o Google Play Services ou o Google Play Store instalado, essa condição geralmente é causada pela criação de um dispositivo virtual sem incluir esses pacotes. Ao criar um dispositivo virtual (confira [Gerenciando dispositivos virtuais com o Android Device Manager](~/android/get-started/installation/android-emulator/device-manager.md)), certifique-se de selecionar pelo menos uma das opções a seguir:
 
 - **APIs do Google** &ndash; inclui o Google Play Services no dispositivo virtual.
-- **Google Play Store** &ndash; inclui o Google Play Store no dispositivo virtual.
+- **Google Play Store** &ndash; inclui a Google Play Store no dispositivo virtual.
 
 Por exemplo, este dispositivo virtual incluirá o Google Play Services e o Google Play Store:
 
@@ -230,11 +230,11 @@ Se o `STATE` não estiver definido como `RUNNING`, confira [Como usar o Hardware
 
 O HAXM pode entrar em conflito com outras tecnologias que usam virtualização, como o Hyper-V, o Windows Device Guard e alguns softwares antivírus:
 
-- **Hyper-V** &ndash; Se você estiver usando uma versão do Windows anterior à **Atualização de abril de 2018 para o Windows 10 (build 1803)** e o Hyper-V estiver habilitado, siga as etapas em [Desabilitando o Hyper-V](#disable-hyperv) para que o HAXM possa ser habilitado.
+- **Hyper-V** &ndash; se você estiver usando uma versão do Windows anterior à **Atualização de abril de 2018 para o Windows 10 (build 1803)** e o Hyper-V estiver habilitado, siga as etapas em [Desabilitando o Hyper-V](#disable-hyperv) para que o HAXM possa ser habilitado.
 
-- **Device Guard** &ndash; o Device Guard e o Credential Guard podem impedir que o Hyper-V seja desabilitado em máquinas Windows. Para desabilitar o Device Guard e o Credential Guard, consulte [Desabilitando o Device Guard](#disable-devguard).
+- **Device Guard** &ndash; o Device Guard e o Credential Guard podem impedir que o Hyper-V seja desabilitado em computadores Windows. Para desabilitar o Device Guard e o Credential Guard, consulte [Desabilitando o Device Guard](#disable-devguard).
 
-- **Software antivírus** &ndash; se você estiver executando um software antivírus que usa virtualização assistida por hardware (como o Avast), desabilite ou desinstale esse software, reinicialize e tente novamente o iniciar o Android Emulator.
+- **Software antivírus** &ndash; se você estiver executando um software antivírus que usa virtualização assistida por hardware (como o Avast), desabilite ou desinstale esse software, reinicialize e tente novamente iniciar o Android Emulator.
 
 #### <a name="incorrect-bios-settings"></a>Configurações incorretas de BIOS
 
@@ -284,7 +284,7 @@ Se o Device Guard estiver habilitado, use as seguintes etapas para desabilitá-l
 
 1. Verifique se o **Hyper-V** está desabilitado (em **Ativar ou desativar recursos do Windows**) conforme descrito na seção anterior.
 
-2. Na caixa de pesquisa do Windows, digite **gpedit** e selecione o resultado da pesquisa **Editar política de grupo**. Essas etapas iniciam o **Editor de Política de Grupo Local**.
+2. Na Caixa de Pesquisa do Windows, digite **gpedit.msc** e selecione o resultado da pesquisa **Editar política de grupo**. Essas etapas iniciam o **Editor de Política de Grupo Local**.
 
 3. No **Editor de Política de Grupo Local**, navegue até **Configuração do Computador > Modelos Administrativos > Sistema > Device Guard**:
 
@@ -395,7 +395,7 @@ Se a mensagem **Ocorreu um erro de acesso de MMIO** for exibida, reinicie o emul
 Se o dispositivo virtual em execução no emulador não tem o Google Play Services ou o Google Play Store instalado, essa condição normalmente é causada pela criação de um dispositivo virtual sem incluir esses pacotes. Ao criar um dispositivo virtual (confira [Gerenciando dispositivos virtuais com o Android Device Manager](~/android/get-started/installation/android-emulator/device-manager.md)), certifique-se de selecionar pelo menos uma destas opções:
 
 - **APIs do Google** &ndash; inclui o Google Play Services no dispositivo virtual.
-- **Google Play Store** &ndash; inclui o Google Play Store no dispositivo virtual.
+- **Google Play Store** &ndash; inclui a Google Play Store no dispositivo virtual.
 
 Por exemplo, este dispositivo virtual incluirá o Google Play Services e o Google Play Store:
 

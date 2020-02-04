@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: ae140f7ea75c1631c6c96170af738f3fac04dcdb
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.openlocfilehash: 48aba9ead925d3404146795eb9a3e0588d7b600d
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73026515"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76724690"
 ---
 # <a name="debugging-xamarinios-apps"></a>Depurando aplicativos Xamarin.iOS
 
@@ -25,7 +25,7 @@ Use o suporte à depuração nativo do Visual Studio para Mac para depurar C# e 
 
 O depurador do Xamarin.iOS é integrado ao IDE e permite que os desenvolvedores depurem aplicativos Xamarin.iOS criados com qualquer uma das linguagens gerenciadas com suporte no Xamarin.iOS no simulador e no dispositivo.
 
-O depurador Xamarin.iOS usa o [Depurador Flexível Mono](https://www.mono-project.com/docs/advanced/runtime/docs/soft-debugger/), o que significa que o código gerado e o tempo de execução Mono cooperam com o IDE para proporcionar uma experiência de depuração. Isso é diferente de depuradores rígidos, como LLDB ou MDB, que controlam um programa sem o conhecimento ou a cooperação do programa depurado.
+O depurador Xamarin.iOS usa o [Depurador Flexível Mono](https://www.mono-project.com/docs/advanced/runtime/docs/soft-debugger/), o que significa que o código gerado e o runtime Mono cooperam com o IDE para proporcionar uma experiência de depuração. Isso é diferente de depuradores rígidos, como LLDB ou MDB, que controlam um programa sem o conhecimento ou a cooperação do programa depurado.
 
 ## <a name="setting-breakpoints"></a>Configuração de pontos de interrupção
 
@@ -198,7 +198,7 @@ Esse depurador flexível requer um esquema de depuração cooperativo quando est
 
 Logs de falha e a saída da classe Console serão enviados ao console do iPhone. Você pode acessar esse console com Xcode usando o “Organizador” e selecionando o dispositivo no organizador.
 
-Como alternativa, se não desejar iniciar o Xcode, você poderá usar o [Utilitário de Configuração do iPhone](https://www.apple.com/support/iphone/enterprise/) da Apple para acessar diretamente o console. Isso tem benefício adicional de poder acessar os logs do console usando um computador Windows se você estiver depurando um problema em campo.
+Como alternativa, se não desejar iniciar o Xcode, você poderá usar o Utilitário de Configuração do iPhone da Apple para acessar diretamente o console. Isso tem benefício adicional de poder acessar os logs do console usando um computador Windows se você estiver depurando um problema em campo.
 
 Para usuários do Visual Studio, há alguns logs disponíveis na janela de saída, mas você deve mudar para o Mac para logs mais completos e detalhados.
 

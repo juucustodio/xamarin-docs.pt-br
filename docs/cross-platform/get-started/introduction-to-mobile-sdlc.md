@@ -6,12 +6,12 @@ ms.assetid: 420c5fdf-4610-4e71-9db5-fe894c961924
 author: davidortinau
 ms.author: daortin
 ms.date: 11/22/2016
-ms.openlocfilehash: b08293727a585ff68c4bac8a25b26d249505b1aa
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.openlocfilehash: c428d39911da9abff7d53d478fbe99dbe9a3604e
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73016392"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76724828"
 ---
 # <a name="mobile-software-development-lifecycle"></a>O ciclo de vida do desenvolvimento de software móvel
 
@@ -19,7 +19,7 @@ Criar aplicativos móveis pode ser tão fácil quanto abrir o Visual Studio, reu
 
 Neste documento, faremos um exame introdutório minucioso da criação de aplicativos móveis, incluindo:
 
-1. **Processo** – o processo de desenvolvimento de software é chamado de SDLC (ciclo de vida de desenvolvimento do software). Examinaremos todas as fases do SDLC em relação ao desenvolvimento de aplicativos móveis, incluindo: criação, design, desenvolvimento, estabilização, implantação e manutenção.
+1. **Processo** – o processo de desenvolvimento de software é chamado de SDLC (ciclo de vida de desenvolvimento do software). Vamos examinar todas as fases do SDLC em relação ao desenvolvimento de aplicativos móveis, incluindo: Concepção, Design, Desenvolvimento, Estabilização, Implantação e Manutenção.
 1. **Considerações** – há várias considerações ao criar aplicativos móveis, especialmente em contraste com aplicativos da área de trabalho ou Web tradicionais. Examinaremos essas considerações e como eles afetam o desenvolvimento para dispositivos móveis.
 
 Este documento destina-se às perguntas fundamentais sobre o desenvolvimento de aplicativos móveis, tanto para os novos desenvolvedores de aplicativos quanto para os experientes. Ele utiliza uma abordagem bastante abrangente para introduzir a maioria dos conceitos que você executará durante todo o SDLC (ciclo de vida de desenvolvimento do software). No entanto, este documento pode não se aplicar a todos. Se você está ansioso para começar a criar aplicativos, é recomendável avançar para o guia de [Introdução ao desenvolvimento móvel](~/cross-platform/get-started/introduction-to-mobile-development.md) e, em seguida, voltar para este documento mais tarde.
@@ -60,7 +60,7 @@ Além disso, os aplicativos devem ser avaliados no contexto do fator forma móve
 
 Para ajudar a criar a funcionalidade de um aplicativo, pode ser útil definir Atores e [Casos de Uso](https://en.wikipedia.org/wiki/Use_case). Os atores são funções dentro de um aplicativo e geralmente são usuários. Os casos de uso normalmente são ações ou propósitos.
 
-Por exemplo, um aplicativo de controle de tarefa pode ter dois atores: *Usuário* e *Amigo*. Um Usuário pode *criar uma tarefa* e *compartilhar uma tarefa* com um Amigo. Nesse caso, uma tarefa de criar e compartilhar uma tarefa são dois casos de uso distintos que, em conjunto com os atores, informará quais telas você precisa criar, bem como quais entidades de negócios e lógica precisarão ser desenvolvidas.
+Por exemplo, um aplicativo de controle de tarefa pode ter dois Atores: *Usuário* e *Amigo*. Um Usuário pode *criar uma tarefa* e *compartilhar uma tarefa* com um Amigo. Nesse caso, uma tarefa de criar e compartilhar uma tarefa são dois casos de uso distintos que, em conjunto com os atores, informará quais telas você precisa criar, bem como quais entidades de negócios e lógica precisarão ser desenvolvidas.
 
 Depois que um número apropriado de casos de uso e atores tiver sido capturado, é muito mais fácil de começar a criar um aplicativo. O desenvolvimento pode então se concentrar em como criar o aplicativo, em vez do que o aplicativo é ou deve fazer.
 
@@ -80,7 +80,7 @@ Ao criar modelos de experiência do usuário, é importante considerar as diretr
 1. **Android** – [diretrizes de design](https://developer.android.com/design/index.html)
 1. **UWP** – [Noções básicas de design da UWP](https://docs.microsoft.com/windows/uwp/design/basics/)
 
-Por exemplo, cada aplicativo tem uma metáfora para mudar entre seções em um aplicativo. O iOS usa uma barra de guias na parte inferior da tela, o Android usa uma barra de guias na parte superior da tela e a UWP usa a exibição [Pivô ou guia](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/tabs-pivot).
+Por exemplo, cada aplicativo tem uma metáfora para mudar entre seções em um aplicativo. O iOS usa uma barra de guias na parte inferior da tela, o Android usa uma barra de guias na parte superior da tela e a UWP usa a exibição [Pivô ou guia](/windows/uwp/design/controls-and-patterns/pivot).
 
 Além disso, o próprio hardware também determina decisões de experiência do usuário. Por exemplo, dispositivos iOS não têm nenhum botão *voltar* físico e, portanto, introduzem a metáfora do Controlador de Navegação:
 
@@ -108,7 +108,7 @@ No restante dos tutoriais, vamos nos concentrar principalmente na fase de desenv
 
 ### <a name="stabilization"></a>Estabilização
 
-A estabilização é o processo de corrigir os bugs do seu aplicativo. Não apenas do ponto de vista funcional, por exemplo: "Ele falha quando eu clico nesse botão", mas também em termos de usabilidade e desempenho. É melhor iniciar estabilização muito cedo no processo de desenvolvimento para que as correções possam ocorrer antes de se tornarem dispendiosas. Normalmente, aplicativos passam pelos estágios de *Protótipo*, *Alfa*, *Beta* e *Versão Release Candidate*. Pessoas diferentes definem esses estágios diferentemente, mas eles geralmente seguem o padrão a seguir:
+A estabilização é o processo de corrigir os bugs do seu aplicativo. Não apenas do ponto de vista funcional, por exemplo: "Ele falha quando eu clico nesse botão", mas também em termos de Usabilidade e Desempenho. É melhor iniciar estabilização muito cedo no processo de desenvolvimento para que as correções possam ocorrer antes de se tornarem dispendiosas. Normalmente, aplicativos passam pelos estágios de *Protótipo*, *Alfa*, *Beta* e *Versão Release Candidate*. Pessoas diferentes definem esses estágios diferentemente, mas eles geralmente seguem o padrão a seguir:
 
 1. **Protótipo** – o aplicativo ainda está em fase de prova de conceito e apenas a funcionalidade básica ou partes específicas do aplicativo estão funcionando. Há bugs importantes presentes.
 1. **Alfa** – o código da funcionalidade básica geralmente está pronto (compilado, mas não totalmente testado). Ainda há bugs importantes presentes, as funcionalidades secundárias podem ainda não estar presentes.
@@ -117,7 +117,7 @@ A estabilização é o processo de corrigir os bugs do seu aplicativo. Não apen
 
 Nunca é cedo demais para começar a testar um aplicativo. Por exemplo, se um grande problema for encontrado no estágio de protótipo, a experiência do usuário do aplicativo ainda poderá ser modificada para adequar-se a ele. Se um problema de desempenho for encontrado no estágio de alfa, será cedo suficiente para modificar a arquitetura antes que muito código tenha sido criado com base em suposições falsas.
 
-Normalmente, à medida que um aplicativo se move mais adiante no ciclo de vida, ele é aberto para mais pessoas para experimentá-lo, testá-lo, fornecer comentários etc. Por exemplo, os aplicativos de protótipo só podem ser mostrados ou disponibilizados para as principais partes interessadas, enquanto os aplicativos candidatos à versão podem ser distribuídos para os clientes que se inscrevem para acesso antecipado.
+Normalmente, conforme um aplicativo avança mais em seu ciclo de vida, ele é disponibilizado para que mais pessoas o experimentem, testem, forneçam comentários, etc. Por exemplo, os aplicativos de protótipo só podem ser mostrados ou disponibilizados para os principais stakeholders, enquanto os aplicativos em versão release candidate podem ser distribuídos aos clientes que se inscrevam para ter acesso antecipado.
 
 Para os primeiros testes e implantação em um número relativamente pequeno de dispositivos, geralmente a implantação direta de um computador de desenvolvimento é suficiente. No entanto, conforme o público-alvo aumenta, isso pode rapidamente tornar-se complicado. Assim, há uma série de opções de implantação de teste por aí que tornam esse processo muito mais fácil ao permitir que você convide pessoas para um pool de teste, libere builds pela web e forneça ferramentas que permitam obter comentários do usuário.
 

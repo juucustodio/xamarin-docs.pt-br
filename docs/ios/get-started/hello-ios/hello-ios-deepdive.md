@@ -9,12 +9,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 10/05/2018
-ms.openlocfilehash: 0fa6c05b3aa90f1d1875b9169350b197d882d863
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.openlocfilehash: 5fadd1ba556b15cb92134471f007e41f04fce69e
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73023257"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76724766"
 ---
 # <a name="hello-ios--deep-dive"></a>Hello, iOS – Aprofundamento
 
@@ -435,20 +435,17 @@ O aplicativo será implantado no dispositivo iOS:
 
 ### <a name="generate-custom-icons-and-launch-images"></a>Gerar ícones personalizados e imagens de inicialização
 
-Nem todos têm um designer disponível para criar os ícones personalizados e iniciar imagens que um aplicativo precisa destacar. Aqui estão várias abordagens alternativas para gerar arte do aplicativo personalizado:
+Nem todo mundo tem um designer disponível para criar os ícones personalizados e imagens de inicialização que um aplicativo precisa para se destacar. Aqui estão várias abordagens alternativas para gerar a arte final personalizada para o aplicativo:
 
 ::: zone pivot="macos"
 
-- [**Sketch**](https://www.sketchapp.com") o Sketch é um aplicativo do Mac para criação de interfaces do usuário, ícones e muito mais. Este é o aplicativo que foi usado para criar o conjunto de Ícones e imagens de inicialização para aplicativos Xamarin. O Sketch 3 está disponível na App Store. Você pode experimentar a [Ferramenta Sketch](https://bohemiancoding.com/sketch/tool/) gratuita também.
 - [**Pixelmator**](https://www.pixelmator.com/) – uma imagem versátil editando o aplicativo para Mac que custa aproximadamente US$ 30.
-- [**Glyphish**](https://www.glyphish.com/) – conjuntos de ícones predefinidos de alta qualidade para download gratuito e para compra.
 - [**Fiverr**](https://www.fiverr.com/) – escolha dentre uma variedade de designers para criar um ícone definido para você, com valores partindo de US$ 5. Mesmo que os resultados com ele nem sempre sejam os esperados, trata-se de um bom recurso para quem precisa criar ícones rapidamente
 
 ::: zone-end
 ::: zone pivot="windows"
 
 - Visual Studio – você pode usar isso para criar um conjunto de ícones simples para seu aplicativo diretamente no IDE.
-- [**Glyphish**](https://www.glyphish.com/) – conjuntos de ícones predefinidos de alta qualidade para download gratuito e para compra.
 - [**Fiverr**](https://www.fiverr.com/) – escolha dentre uma variedade de designers para criar um ícone definido para você, com valores partindo de US$ 5. Mesmo que os resultados com ele nem sempre sejam os esperados, trata-se de um bom recurso para quem precisa criar ícones rapidamente
 
 ::: zone-end

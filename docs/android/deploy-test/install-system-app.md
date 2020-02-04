@@ -7,16 +7,16 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/15/2018
-ms.openlocfilehash: 5eff10d58ac094f3493bd60bdb621df1bcb30477
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.openlocfilehash: 72cddde86708b5573dc578165354d137c4dc35b6
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73028052"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76723894"
 ---
 # <a name="installing-xamarinandroid-as-a-system-app"></a>Instalando o Xamarin.Android como um aplicativo de sistema
 
-_Este guia abordará as diferenças entre um aplicativo de sistema e um aplicativo de usuário e como instalar um aplicativo Xamarin. Android como um aplicativo de sistema. Este guia se aplica a autores de imagens de ROM do Android personalizadas. Ele não explicará como criar uma ROM personalizada._
+_Este guia discute as diferenças entre um aplicativo de sistema e um aplicativo de usuário e como instalar um aplicativo Xamarin.Android como um aplicativo de sistema. Este guia se aplica aos autores de imagens ROM personalizadas do Android. Ele não explicará como criar um ROM personalizado._
 
 ## <a name="system-app"></a>Aplicativo de sistema
 
@@ -26,7 +26,7 @@ Aplicativos de sistema são instalados na pasta **/system/app/** (um diretório 
 
 Aplicativos de sistema se comportam exatamente como aplicativos de usuário, mas tem as seguintes exceções notáveis:
 
-- Aplicativos de sistema são atualizáveis, exatamente como um _aplicativo de usuário_ normal. No entanto, como uma cópia do aplicativo sempre existe em **/system/app/** , sempre é possível reverter o aplicativo para a versão original.
+- Aplicativos de sistema são atualizáveis, exatamente como um _aplicativo de usuário_ normal. No entanto, como uma cópia do aplicativo sempre existe em **/system/app/**, sempre é possível reverter o aplicativo para a versão original.
 
 - Determinadas permissões somente para sistema que não estão disponíveis para um aplicativo de usuário podem ser concedidas a aplicativos de sistema. É um exemplo de uma permissão somente para sistema é [`BLUETOOTH_PRIVILEGED`](https://developer.android.com/reference/android/Manifest.permission.html#BLUETOOTH_PRIVILEGED), que permite que os aplicativos emparelhem com dispositivos Bluetooth sem nenhuma interação do usuário.
 
@@ -44,13 +44,13 @@ As etapas a seguir descrevem como instalar um aplicativo Xamarin.Android como um
 
 1. **Empacotar um APK de lançamento do aplicativo Xamarin.Android** &ndash; isso é descrito mais detalhadamente no guia [Publicar um aplicativo](~/android/deploy-test/publishing/index.md).
 
-2. **Extrair bibliotecas compartilhadas do APK** &ndash; usando qualquer programa utilitário ZIP, abra o arquivo do APK e examine o conteúdo da pasta **/lib/** . Essa pasta terá um subdiretório para cada ABI (_interface binária de aplicativo_) que for compatível com o aplicativo; o conteúdo dessa pasta incluirá todas as bibliotecas compartilhadas que forem exigidas pelo aplicativo nessa ABI específica:
+2. **Extrair bibliotecas compartilhadas do APK** &ndash; usando qualquer programa utilitário ZIP, abra o arquivo do APK e examine o conteúdo da pasta **/lib/**. Essa pasta terá um subdiretório para cada ABI (_interface binária de aplicativo_) que for compatível com o aplicativo; o conteúdo dessa pasta incluirá todas as bibliotecas compartilhadas que forem exigidas pelo aplicativo nessa ABI específica:
 
     ![Captura de tela de arquivos .so na pasta armeabi-v7a de taskypro.zip](install-system-app-images/install-system-app-01.png)
 
    Na captura de tela anterior, há apenas uma ABI compatível (**armeabi-v7a**) contendo os dois arquivos **.so** que são exigidos pelo aplicativo. Observe que só é necessário extrair os arquivos ABI que são apropriados para o dispositivo ou a arquitetura de destino do dispositivo ROM, ou seja, não copie arquivos **.so** da pasta **x86** para um ROM ou dispositivo **armeabi-v7a**.
 
-3. **Copiar arquivos .so para /system/lib** &ndash; copie os arquivos **.so** que foram extraídos do APK na etapa anterior para a pasta **/system/lib/** no ROM do personalizado.
+3. **Copiar arquivos .so para /system/lib** &ndash; Copie os arquivos **.so** que foram extraídos do APK na etapa anterior para a pasta **/system/lib/** no ROM personalizado.
 
 4. **Copiar o arquivo APK/system/app** &ndash; a etapa final é copiar o arquivo APK para a pasta **/system/app** no ROM.
 
@@ -63,4 +63,4 @@ Este guia discute as diferenças entre um _aplicativo de sistema_ e um _aplicati
 - [Publicando um aplicativo](~/android/deploy-test/publishing/index.md)
 - [Arquiteturas de CPU](~/android/app-fundamentals/cpu-architectures.md)
 - [BLUETOOTH_PRIVILEGED](https://developer.android.com/reference/android/Manifest.permission.html#BLUETOOTH_PRIVILEGED)
-- [Gerenciamento de ABI](https://developer.android.com/ndk~/abis.html)
+- [Gerenciamento de ABI](https://developer.android.com/ndk/guides/abis)

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: cdaa0855538c35c82cb96bde58ad2258b1fb56e5
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.openlocfilehash: 63a5ed357a903700ea89d858bcde9798ddf97942
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73026501"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76724614"
 ---
 # <a name="the-itunesmetadataplist-file-in-xamarinios-apps"></a>O arquivo iTunesMetadata.plist em aplicativos Xamarin.iOS
 
@@ -242,8 +242,6 @@ Para aplicativos iOS, a Apple atualmente define os seguintes gêneros e IDs de g
 
 [!include[](~/ios/includes/table-appstore.md)]
 
-Para obter mais informações, consulte a documentação [Genre IDs Appendix](https://www.apple.com/itunes/affiliates/resources/documentation/genre-mapping.html) (Apêndice de IDs de Gênero) da Apple.
-
 ### <a name="softwaresupporteddeviceids"></a>softwareSupportedDeviceIds
 
 Use a chave `softwareSupportedDeviceIds` para informar ao iTunes quais dispositivos iOS dão suporte a esse aplicativo iOS. Exemplo:
@@ -365,7 +363,7 @@ Esse artigo abordou o arquivo `iTunesMetadata.plist` que pode ser usado para inf
 - [Distribuição da App Store](~/ios/deploy-test/app-distribution/app-store-distribution/index.md)
 - [Como configurar um aplicativo no iTunes Connect](~/ios/deploy-test/app-distribution/app-store-distribution/itunesconnect.md)
 - [Publicando na App Store](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md)
-- [Distribuição Interna](~/ios/deploy-test/app-distribution/in-house-distribution.md)
+- [Distribuição interna](~/ios/deploy-test/app-distribution/in-house-distribution.md)
 - [Distribuição Ad Hoc](~/ios/deploy-test/app-distribution/ad-hoc-distribution.md)
 - [Suporte a IPA](~/ios/deploy-test/app-distribution/ipa-support.md)
 - [Solução de problemas](~/ios/deploy-test/troubleshooting.md)
