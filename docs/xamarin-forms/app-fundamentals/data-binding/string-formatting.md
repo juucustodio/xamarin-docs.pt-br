@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: ba7148ecabf7f534a953fda3c3d3021abeaa034c
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
-ms.translationtype: MT
+ms.openlocfilehash: bdd28e1ce6d36a0a025ac43a709af2e38a313526
+ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70771574"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76940378"
 ---
 # <a name="xamarinforms-string-formatting"></a>Formatação de cadeia de caracteres do Xamarin.Forms
 
@@ -44,7 +44,7 @@ A página **Formatação da cadeia de caracteres** ilustra vários usos da propr
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             xmlns:sys="clr-namespace:System;assembly=netstandard"
              x:Class="DataBindingDemos.StringFormattingPage"
              Title="String Formatting">
 
@@ -123,7 +123,7 @@ A última seção define o `BindingContext` com valor de `Math.PI` e o exibe com
 
 Este é o programa em execução:
 
-[![Formatação de cadeia de caracteres](string-formatting-images/stringformatting-small.png "Formatação de cadeia de caracteres")](string-formatting-images/stringformatting-large.png#lightbox "Formatação de cadeia de caracteres")
+[![Formação de cadeia de caracteres](string-formatting-images/stringformatting-small.png "Formação de cadeia de caracteres")](string-formatting-images/stringformatting-large.png#lightbox "Formação de cadeia de caracteres")
 
 ## <a name="viewmodels-and-string-formatting"></a>ViewModels e formatação de cadeia de caracteres
 
@@ -176,7 +176,7 @@ Essa abordagem é apresentada na amostra **Melhor Seletor de Cor**, que usa o me
 
 Agora há três pares de elementos `Slider` e `Label` associados à mesma propriedade de origem no objeto `HslColorViewModel`. A única diferença é que `Label` tem uma propriedade `StringFormat` para exibir cada valor `Slider`.
 
-[![Melhor Seletor de Cores](string-formatting-images/bettercolorselector-small.png "Melhor Seletor de Cores")](string-formatting-images/bettercolorselector-large.png#lightbox "Melhor Seletor de Cores")
+[![Melhor seletor de cores](string-formatting-images/bettercolorselector-small.png "Melhor Seletor de cores")](string-formatting-images/bettercolorselector-large.png#lightbox "Melhor Seletor de cores")
 
 Você deve estar se perguntando como poderá exibir valores RGB (vermelho, verde, azul) em formato hexadecimal tradicional de dois dígitos. Esses valores inteiros não estão diretamente disponíveis na estrutura `Color`. Uma solução é calcular valores inteiros dos componentes de cor dentro do ViewModel e expô-los como propriedades. Em seguida, você pode formatá-los usando a especificação de formatação `X2`.
 

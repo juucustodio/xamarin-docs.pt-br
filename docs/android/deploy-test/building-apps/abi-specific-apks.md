@@ -7,18 +7,18 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/15/2018
-ms.openlocfilehash: b11f21b0d0932013c65ea9298ad9425747afdf79
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.openlocfilehash: 0520439b89458b7f73a025cd8d6b2cf8fc41dac0
+ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73028129"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76940630"
 ---
 # <a name="building-abi-specific-apks"></a>Compilação de APKs específicos para ABI
 
 _Este documento discute como compilar um APK que será direcionado a uma única ABI usando o Xamarin.Android._
 
-## <a name="overview"></a>Visão Geral
+## <a name="overview"></a>Visão geral
 
 Em algumas situações, pode ser vantajoso para um aplicativo ter vários APKs – cada APK é assinado com o mesmo armazenamento de chaves e compartilha o mesmo nome de pacote, mas é compilado para uma configuração do Android ou dispositivo específico. Essa não é a abordagem recomendada, pois é muito mais simples ter um APK que pode dar suporte a vários dispositivos e configurações. Há algumas situações em que criar vários APKs pode ser útil, tais como:
 
@@ -64,17 +64,17 @@ O diagrama a seguir ilustra a posição de cada código descrito na lista acima:
 
 O Google Play garantirá que o APK correto seja entregue ao dispositivo com base no `versionCode` e na configuração de APK. O APK com o código da versão mais alto será entregue ao dispositivo. Como um exemplo, um aplicativo pode ter três APKs com os seguintes códigos de versão:
 
-- 11413456 – a ABI é `armeabi`, o nível da API de direcionamento é 14, telas pequenas a grandes e com um número de versão 456.
-- 21423456 – a ABI é `armeabi-v7a`, o nível da API de direcionamento é 14, telas normais &amp; grandes e com um número de versão 456.
-- 61423456 – a ABI é `x86`, o nível da API de direcionamento é 14, telas normais &amp; grandes e com um número de versão 456.
+- 11413456: a ABI é `armeabi`, o nível da API de direcionamento é 14, telas pequenas a grandes e com um número de versão 456.
+- 21423456: a ABI é `armeabi-v7a`, o nível da API de direcionamento é 14, telas normais &amp; grandes e com um número de versão 456.
+- 61423456: a ABI é `x86`, o nível da API de direcionamento é 14, telas normais &amp; grandes e com um número de versão 456.
 
 Para continuar com este exemplo, imagine que foi corrigido um bug que era específico para `armeabi-v7a`. A versão do aplicativo aumenta para 457, e um novo APK é criado com o `android:versionCode` definido para 21423457. Os versionCodes para as versões `armeabi` e `x86` permanecerão os mesmos.
 
 Agora, imagine que a versão x86 recebe algumas atualizações ou correções de bug que se destinam a uma API mais recente (nível da API 19), tornando esta a versão 500 do aplicativo. O novo `versionCode` seria alterado para 61923500, enquanto o armeabi/armeabi-v7a permaneceriam inalterados. Nesse momento, os códigos de versão seriam:
 
-- 11413456 – a ABI é `armeabi`, o nível da API de direcionamento é 14, telas pequenas a grandes e com um nome de versão de 456.
-- 21423457 – a ABI é `armeabi-v7a`, o nível da API de direcionamento é 14, telas normais &amp; grandes e com um nome de versão de 457.
-- 61923500 – a ABI é `x86`, o nível da API de direcionamento é 19, telas normais &amp; grandes e com um nome de versão de 500.
+- 11413456: a ABI é `armeabi`, o nível da API de direcionamento é 14, telas pequenas a grandes e com um nome de versão 456.
+- 21423457: a ABI é `armeabi-v7a`, o nível da API de direcionamento é 14, telas normais &amp; grandes e com um nome de versão 457.
+- 61923500: a ABI é `x86`, o nível da API de direcionamento é 19, telas normais &amp; grandes e com um nome de versão de 500.
 
 Manter esses códigos de versão manualmente pode ser um fardo significativo para o desenvolvedor. O processo de calcular o `android:versionCode` correto e posteriormente compilar os APKs deve ser automatizado.
 Um exemplo de como fazer isso será abordado no passo a passo no final deste documento.
@@ -95,13 +95,13 @@ Compilar o APK por ABI melhor é realizado usando `xbuild` ou `msbuild`, conform
 
 A lista a seguir explica cada parâmetro de linha de comando:
 
-- `/t:Package` &ndash; Cria um APK Android que é assinado usando o repositório de chaves de depuração
+- `/t:Package`&ndash; Cria um APK Android que é assinado usando o repositório de chaves de depuração
 
 - `/p:AndroidSupportedAbis=<TARGET_ABI>` &ndash; Esta é a ABI a ser usada como destino. Deve ser uma entre `armeabi`, `armeabi-v7a` ou `x86`
 
 - `/p:IntermediateOutputPath=obj.<TARGET_ABI>/` &ndash; Este é o diretório que conterá os arquivos intermediários que são criados como parte do build. Se necessário, o Xamarin.Android criará um diretório com o nome da ABI, tal como `obj.armeabi-v7a`. É recomendável usar uma pasta para cada ABI, pois isso impede problemas resultantes do "vazamento" de arquivos de um build para o outro. Observe que esse valor é encerrado com um separador de diretório (um `/` no caso de OS X).
 
-- `/p:AndroidManifest` &ndash; Essa propriedade especifica o caminho para o arquivo **AndroidManifest.XML**, que será usado durante o build.
+- `/p:AndroidManifest` &ndash; Essa propriedade especifica o caminho para o arquivo **AndroidManifest.XML** que será usado durante o build.
 
 - `/p:OutputPath=bin.<TARGET_ABI>` &ndash; Este é o diretório que conterá o APK final. O Xamarin.Android criará um diretório com o nome da ABI, por exemplo, `bin.armeabi-v7a`.
 

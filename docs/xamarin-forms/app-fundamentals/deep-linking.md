@@ -8,16 +8,16 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/28/2018
-ms.openlocfilehash: ff5c7cb36305780d12b5fd69b7cbadec0eaef551
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
-ms.translationtype: MT
+ms.openlocfilehash: fcd8333a0623058fceb486183ddb995e85eaf18a
+ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70771554"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76940330"
 ---
 # <a name="application-indexing-and-deep-linking"></a>Indexação de aplicativo e vinculação profunda
 
-[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/deeplinking)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/deeplinking)
 
 _A indexação de aplicativo permite que os aplicativos que seriam esquecidos após alguns usos permaneçam relevantes fazendo com que eles apareçam nos resultados da pesquisa. A vinculação profunda permite que os aplicativos respondam a um resultado de pesquisa que contém dados de aplicativo, normalmente navegando até uma página referenciada de um link profundo. Este artigo explica como usar a indexação de aplicativo e a vinculação profunda para fazer com que o Xamarin.Forms tenha conteúdo pesquisável em dispositivos iOS e Android._
 
@@ -29,7 +29,7 @@ A indexação de aplicativo e a vinculação profunda do Xamarin.Forms fornecem 
 
 Este aplicativo de exemplo demonstra um aplicativo de Lista de tarefas em que os dados são armazenados em um banco de dados local do SQLite, como mostrado nas seguintes capturas de tela:
 
-![](deep-linking-images/screenshots.png "Aplicativo TodoList")
+![](deep-linking-images/screenshots.png "TodoList Application")
 
 Cada instância `TodoItem` criada pelo usuário é indexada. Então, a pesquisa específica da plataforma pode ser usada para localizar dados indexados do aplicativo. Quando o usuário toca em um item de resultado de pesquisa para o aplicativo, o aplicativo é iniciado, o `TodoItemPage` é navegada e o `TodoItem` referenciado do link profundo é exibido.
 
@@ -79,6 +79,9 @@ AndroidAppLinks.Init(this);
 ```
 
 Quando **google-services.json** é adicionado ao projeto (e a ação de build *GoogleServicesJson** é definida), o processo de build extrai a chave de API e a ID do cliente e, em seguida, adiciona essas credenciais ao arquivo de manifesto gerado.
+
+> [!NOTE]
+> Neste artigo, os termos links de aplicativo e links profundos são frequentemente usados ​​de forma intercambiável. No entanto, no Android, estes termos têm significados separados. No Android, um link profundo é um filtro de intenção que permite aos usuários inserir diretamente uma atividade específica no aplicativo. Clicar em um link profundo pode abrir uma caixa de diálogo de desambiguidade, que permite ao usuário selecionar um dos vários aplicativos que podem manipular a URL. Um link de aplicativo do Android é um link profundo com base na URL do site, que foi verificada para pertencer ao seu site. Clicar em um link de aplicativo abre seu aplicativo se ele estiver instalado, sem abrir uma caixa de diálogo de desambiguidade.
 
 Para obter mais informações, consulte [Conteúdo de link profundo com navegação de URL do Xamarin.Forms](https://blog.xamarin.com/deep-link-content-with-xamarin-forms-url-navigation/) no blog do Xamarin.
 
@@ -135,7 +138,7 @@ Isso adiciona a instância [`AppLinkEntry`](xref:Xamarin.Forms.AppLinkEntry) à 
 
 Assim que uma instância [`AppLinkEntry`](xref:Xamarin.Forms.AppLinkEntry) tiver sido registrada para indexação, ela poderá aparecer nos resultados da pesquisa. A captura de tela a seguir mostra o conteúdo indexado que aparece nos resultados da pesquisa na plataforma iOS:
 
-![](deep-linking-images/ios-search.png "Conteúdo indexado nos resultados da pesquisa no iOS")
+![](deep-linking-images/ios-search.png "Indexed Content in Search Results on iOS")
 
 ## <a name="de-registering-indexed-content"></a>Cancelar o registro do conteúdo indexado
 
