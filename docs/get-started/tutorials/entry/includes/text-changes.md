@@ -1,14 +1,14 @@
 ---
-ms.openlocfilehash: 3130c20d39e0140695eed92ffa4941d6bafe796e
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+ms.openlocfilehash: deb3516cc134a8b2eecba8460931003de8bb312f
+ms.sourcegitcommit: ccbf914615c0ce6b3f308d930f7a77418aeb4dbc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2020
-ms.locfileid: "67394539"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77135030"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-1. Em **MainPage.xaml**, modifique a declaração [`Entry`](xref:Xamarin.Forms.Entry) de modo que ela defina um manipulador para os eventos [`TextChanged`](xref:Xamarin.Forms.Entry.TextChanged) e [`Completed`](xref:Xamarin.Forms.Entry.Completed):
+1. Em **MainPage.xaml**, modifique a declaração [`Entry`](xref:Xamarin.Forms.Entry) de modo que ela defina um manipulador para os eventos [`TextChanged`](xref:Xamarin.Forms.InputView.TextChanged) e [`Completed`](xref:Xamarin.Forms.Entry.Completed):
 
     ```xaml
     <Entry Placeholder="Enter text"
@@ -16,7 +16,7 @@ ms.locfileid: "67394539"
            Completed="OnEntryCompleted" />
     ```
 
-    Esse código define o evento [`TextChanged`](xref:Xamarin.Forms.Entry.TextChanged) para um manipulador de eventos chamado `OnEntryTextChanged` e o evento [`Completed`](xref:Xamarin.Forms.Entry.Completed) para um manipulador de eventos chamado `OnEntryCompleted`. Ambos os manipuladores de eventos serão criados na próxima etapa.
+    Esse código define o evento [`TextChanged`](xref:Xamarin.Forms.InputView.TextChanged) para um manipulador de eventos chamado `OnEntryTextChanged` e o evento [`Completed`](xref:Xamarin.Forms.Entry.Completed) para um manipulador de eventos chamado `OnEntryCompleted`. Ambos os manipuladores de eventos serão criados na próxima etapa.
 
 1. No **Gerenciador de Soluções**, no projeto **EntryTutorial**, expanda **MainPage.xaml** e clique duas vezes em **MainPage.xaml.cs** para abri-lo. Em seguida, em **MainPage.xaml.cs**, adicione os manipuladores de eventos `OnEntryTextChanged` e `OnEntryCompleted` à classe:
 
@@ -38,19 +38,19 @@ ms.locfileid: "67394539"
     Quando você finalizar o texto na [`Entry`](xref:Xamarin.Forms.Entry) com a tecla de retorno, o método `OnEntryCompleted` será executado. O argumento `sender` é o objeto `Entry` responsável por acionar o evento `TextChanged` e pode ser usado para acessar o objeto `Entry`.
 
     > [!IMPORTANT]
-    > Qualquer texto inserido em uma [`Entry`](xref:Xamarin.Forms.Entry) será armazenado na propriedade [`Text`](xref:Xamarin.Forms.Entry.Text).
+    > Qualquer texto inserido em uma [`Entry`](xref:Xamarin.Forms.Entry) será armazenado na propriedade [`Text`](xref:Xamarin.Forms.InputView.Text).
 
 1. Na barra de ferramentas do Visual Studio, pressione o botão **Iniciar** (o botão triangular que se parece com um botão Reproduzir) para iniciar o aplicativo dentro do simulador remoto de iOS ou do Android Emulator escolhido:
 
     [![Captura de tela de uma entrada que contém texto, no iOS e no Android](../images/text-changes.png "Entrada com texto")](../images/text-changes-large.png#lightbox "Entrada com texto")
 
-    Defina pontos de interrupção nos dois manipuladores de eventos e insira o texto na [`Entry`](xref:Xamarin.Forms.Entry), então observe os eventos [`TextChanged`](xref:Xamarin.Forms.Entry.TextChanged) e [`Completed`](xref:Xamarin.Forms.Entry.Completed) serem disparados.
+    Defina pontos de interrupção nos dois manipuladores de eventos e insira o texto na [`Entry`](xref:Xamarin.Forms.Entry), então observe os eventos [`TextChanged`](xref:Xamarin.Forms.InputView.TextChanged) e [`Completed`](xref:Xamarin.Forms.Entry.Completed) serem disparados.
 
     Para obter mais informações sobre eventos [`Entry`](xref:Xamarin.Forms.Entry), confira [Eventos e interatividade](~/xamarin-forms/user-interface/text/entry.md#events-and-interactivity) no guia de [Entrada do Xamarin.Forms](~/xamarin-forms/user-interface/text/entry.md).
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
-1. Em **MainPage.xaml**, modifique a declaração [`Entry`](xref:Xamarin.Forms.Entry) de modo que ela defina um manipulador para os eventos [`TextChanged`](xref:Xamarin.Forms.Entry.TextChanged) e [`Completed`](xref:Xamarin.Forms.Entry.Completed):
+1. Em **MainPage.xaml**, modifique a declaração [`Entry`](xref:Xamarin.Forms.Entry) de modo que ela defina um manipulador para os eventos [`TextChanged`](xref:Xamarin.Forms.InputView.TextChanged) e [`Completed`](xref:Xamarin.Forms.Entry.Completed):
 
     ```xaml
     <Entry Placeholder="Enter text"
@@ -58,7 +58,7 @@ ms.locfileid: "67394539"
            Completed="OnEntryCompleted" />
     ```
 
-    Esse código define o evento [`TextChanged`](xref:Xamarin.Forms.Entry.TextChanged) para um manipulador de eventos chamado `OnEntryTextChanged` e o evento [`Completed`](xref:Xamarin.Forms.Entry.Completed) para um manipulador de eventos chamado `OnEntryCompleted`. Ambos os manipuladores de eventos serão criados na próxima etapa.
+    Esse código define o evento [`TextChanged`](xref:Xamarin.Forms.InputView.TextChanged) para um manipulador de eventos chamado `OnEntryTextChanged` e o evento [`Completed`](xref:Xamarin.Forms.Entry.Completed) para um manipulador de eventos chamado `OnEntryCompleted`. Ambos os manipuladores de eventos serão criados na próxima etapa.
 
 1. No **Painel de Soluções**, no projeto **EntryTutorial**, expanda **MainPage.xaml** e clique duas vezes em **MainPage.xaml.cs** para abri-lo. Em seguida, em **MainPage.xaml.cs**, adicione os manipuladores de eventos `OnEntryTextChanged` e `OnEntryCompleted` à classe:
 
@@ -80,12 +80,12 @@ ms.locfileid: "67394539"
     Quando você finalizar o texto na [`Entry`](xref:Xamarin.Forms.Entry) com a tecla de retorno, o método `OnEntryCompleted` será executado. O argumento `sender` é o objeto `Entry` responsável por acionar o evento `TextChanged` e pode ser usado para acessar o objeto `Entry`.
 
     > [!IMPORTANT]
-    > Qualquer texto inserido em uma [`Entry`](xref:Xamarin.Forms.Entry) será armazenado na propriedade [`Text`](xref:Xamarin.Forms.Entry.Text).
+    > Qualquer texto inserido em uma [`Entry`](xref:Xamarin.Forms.Entry) será armazenado na propriedade [`Text`](xref:Xamarin.Forms.InputView.Text).
 
 1. Na barra de ferramentas do Visual Studio para Mac, pressione o botão **Iniciar** (o botão triangular que se parece com o botão Reproduzir) para iniciar o aplicativo dentro do simulador de iOS ou do Android Emulator escolhido:
 
     [![Captura de tela de uma entrada que contém texto, no iOS e no Android](../images/text-changes.png "Entrada com texto")](../images/text-changes-large.png#lightbox "Entrada com texto")
 
-    Defina pontos de interrupção nos dois manipuladores de eventos e insira o texto na [`Entry`](xref:Xamarin.Forms.Entry), então observe os eventos [`TextChanged`](xref:Xamarin.Forms.Entry.TextChanged) e [`Completed`](xref:Xamarin.Forms.Entry.Completed) serem disparados.
+    Defina pontos de interrupção nos dois manipuladores de eventos e insira o texto na [`Entry`](xref:Xamarin.Forms.Entry), então observe os eventos [`TextChanged`](xref:Xamarin.Forms.InputView.TextChanged) e [`Completed`](xref:Xamarin.Forms.Entry.Completed) serem disparados.
 
     Para obter mais informações sobre eventos [`Entry`](xref:Xamarin.Forms.Entry), confira [Eventos e interatividade](~/xamarin-forms/user-interface/text/entry.md#events-and-interactivity) no guia de [Entrada do Xamarin.Forms](~/xamarin-forms/user-interface/text/entry.md).

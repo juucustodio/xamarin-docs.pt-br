@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 820761111c609f224a6dda14d5853777d22aa259
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+ms.openlocfilehash: d8c50b1dfb2a2669f7611a6bc6da882c54b877aa
+ms.sourcegitcommit: ccbf914615c0ce6b3f308d930f7a77418aeb4dbc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2020
-ms.locfileid: "67277079"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77135065"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -30,7 +30,7 @@ Para concluir este tutorial, você precisará ter o Visual Studio 2019 (versão 
     </ContentPage>
     ```
 
-    Esse código define declarativamente a interface do usuário para a página, que é composta por um [`Entry`](xref:Xamarin.Forms.Entry) em um [`StackLayout`](xref:Xamarin.Forms.StackLayout). A propriedade [`Entry.Placeholder`](xref:Xamarin.Forms.Entry.Placeholder) especifica o texto de espaço reservado mostrado quando o `Entry` é exibido pela primeira vez.
+    Esse código define declarativamente a interface do usuário para a página, que é composta por um [`Entry`](xref:Xamarin.Forms.Entry) em um [`StackLayout`](xref:Xamarin.Forms.StackLayout). A propriedade [`Entry.Placeholder`](xref:Xamarin.Forms.InputView.Placeholder) especifica o texto de espaço reservado mostrado quando o `Entry` é exibido pela primeira vez.
 
 1. Na barra de ferramentas do Visual Studio, pressione o botão **Iniciar** (o botão triangular que se parece com um botão Reproduzir) para iniciar o aplicativo dentro do simulador remoto de iOS ou do Android Emulator escolhido:
 
@@ -60,7 +60,7 @@ Para concluir este tutorial, você precisará ter o Visual Studio para Mac (vers
     </ContentPage>
     ```
 
-    Esse código define declarativamente a interface do usuário para a página, que é composta por um [`Entry`](xref:Xamarin.Forms.Entry) em um [`StackLayout`](xref:Xamarin.Forms.StackLayout). A propriedade [`Entry.Placeholder`](xref:Xamarin.Forms.Entry.Placeholder) especifica o texto de espaço reservado mostrado quando o `Entry` é exibido pela primeira vez.
+    Esse código define declarativamente a interface do usuário para a página, que é composta por um [`Entry`](xref:Xamarin.Forms.Entry) em um [`StackLayout`](xref:Xamarin.Forms.StackLayout). A propriedade [`Entry.Placeholder`](xref:Xamarin.Forms.InputView.Placeholder) especifica o texto de espaço reservado mostrado quando o `Entry` é exibido pela primeira vez.
 
 1. Na barra de ferramentas do Visual Studio para Mac, pressione o botão **Iniciar** (o botão triangular que se parece com o botão Reproduzir) para iniciar o aplicativo dentro do simulador de iOS ou do Android Emulator escolhido:
 

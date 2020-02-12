@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 16ceaba572ca932777bb366d9f7c58f6dcb24f70
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+ms.openlocfilehash: 5d9d5e4eb757d6afd1c13cb4851edd23feaa6e65
+ms.sourcegitcommit: ccbf914615c0ce6b3f308d930f7a77418aeb4dbc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2020
-ms.locfileid: "67841488"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77135101"
 ---
 A subclasse [`Application`](xref:Xamarin.Forms.Application) tem um dicionário [`Properties`](xref:Xamarin.Forms.Application.Properties) estático que pode ser usado para armazenar dados entre alterações de estado do ciclo de vida. Esse dicionário usa uma chave `string` e armazena um valor de `object`. O dicionário é salvo automaticamente no dispositivo e é populado novamente quando o aplicativo é reiniciado.
 
@@ -82,7 +82,7 @@ Neste exercício, você modificará o aplicativo para persistir o texto de um [`
     </ContentPage>
     ```
 
-    Esse código define declarativamente a interface do usuário para a página, que é composta por um [`Entry`](xref:Xamarin.Forms.Entry) em um [`StackLayout`](xref:Xamarin.Forms.StackLayout). A propriedade [`Entry.Placeholder`](xref:Xamarin.Forms.Entry.Placeholder) especifica o texto de espaço reservado mostrado quando o `Entry` é exibido pela primeira vez e um manipulador de eventos denominado `OnEntryCompleted` é registrado com o evento [`Completed`](xref:Xamarin.Forms.Entry.Completed). Além disso, o `Entry` tem um nome especificado com o atributo `x:Name`. Isso permite que o arquivo code-behind acesse o objeto `Entry` usando o nome atribuído a ele.
+    Esse código define declarativamente a interface do usuário para a página, que é composta por um [`Entry`](xref:Xamarin.Forms.Entry) em um [`StackLayout`](xref:Xamarin.Forms.StackLayout). A propriedade [`Entry.Placeholder`](xref:Xamarin.Forms.InputView.Placeholder) especifica o texto de espaço reservado mostrado quando o `Entry` é exibido pela primeira vez e um manipulador de eventos denominado `OnEntryCompleted` é registrado com o evento [`Completed`](xref:Xamarin.Forms.Entry.Completed). Além disso, o `Entry` tem um nome especificado com o atributo `x:Name`. Isso permite que o arquivo code-behind acesse o objeto `Entry` usando o nome atribuído a ele.
 
 1. No **Gerenciador de Soluções**, no projeto **AppLifecycleTutorial**, expanda **MainPage.xaml** e clique duas vezes em **MainPage.xaml.cs** para abri-lo. Em seguida, em **MainPage.xaml.cs**, adicione uma substituição para o método `OnAppearing` e o manipulador de eventos `OnEntryCompleted` à classe:
 
@@ -100,7 +100,7 @@ Neste exercício, você modificará o aplicativo para persistir o texto de um [`
     }
     ```
 
-    O método `OnAppearing` recupera o valor da propriedade `App.DisplayText` e o define como o valor de propriedade [`Text`](xref:Xamarin.Forms.Entry.Text) do [`Entry`](xref:Xamarin.Forms.Entry).
+    O método `OnAppearing` recupera o valor da propriedade `App.DisplayText` e o define como o valor de propriedade [`Text`](xref:Xamarin.Forms.InputView.Text) do [`Entry`](xref:Xamarin.Forms.Entry).
 
     > [!NOTE]
     > A substituição do método `OnAppearing` é executada após a [`ContentPage`](xref:Xamarin.Forms.ContentPage) ser apresentada, mas apenas antes de se tornar visível. Portanto, esse é um bom lugar para definir o conteúdo das exibições do Xamarin.Forms.
@@ -186,7 +186,7 @@ Neste exercício, você modificará o aplicativo para persistir o texto de um [`
     </ContentPage>
     ```
 
-    Esse código define declarativamente a interface do usuário para a página, que é composta por um [`Entry`](xref:Xamarin.Forms.Entry) em um [`StackLayout`](xref:Xamarin.Forms.StackLayout). A propriedade [`Entry.Placeholder`](xref:Xamarin.Forms.Entry.Placeholder) especifica o texto de espaço reservado mostrado quando o `Entry` é exibido pela primeira vez e um manipulador de eventos denominado `OnEntryCompleted` é registrado com o evento [`Completed`](xref:Xamarin.Forms.Entry.Completed). Além disso, o `Entry` tem um nome especificado com o atributo `x:Name`. Isso permite que o arquivo code-behind acesse o objeto `Entry` usando o nome atribuído a ele.
+    Esse código define declarativamente a interface do usuário para a página, que é composta por um [`Entry`](xref:Xamarin.Forms.Entry) em um [`StackLayout`](xref:Xamarin.Forms.StackLayout). A propriedade [`Entry.Placeholder`](xref:Xamarin.Forms.InputView.Placeholder) especifica o texto de espaço reservado mostrado quando o `Entry` é exibido pela primeira vez e um manipulador de eventos denominado `OnEntryCompleted` é registrado com o evento [`Completed`](xref:Xamarin.Forms.Entry.Completed). Além disso, o `Entry` tem um nome especificado com o atributo `x:Name`. Isso permite que o arquivo code-behind acesse o objeto `Entry` usando o nome atribuído a ele.
 
 1. No **Painel de Soluções**, no projeto **AppLifecycleTutorial**, expanda **MainPage.xaml** e clique duas vezes em **MainPage.xaml.cs** para abri-lo. Em seguida, em **MainPage.xaml.cs**, adicione uma substituição para o método `OnAppearing` e o manipulador de eventos `OnEntryCompleted` à classe:
 
@@ -204,7 +204,7 @@ Neste exercício, você modificará o aplicativo para persistir o texto de um [`
     }
     ```
 
-    O método `OnAppearing` recupera o valor da propriedade `App.DisplayText` e o define como o valor de propriedade [`Text`](xref:Xamarin.Forms.Entry.Text) do [`Entry`](xref:Xamarin.Forms.Entry).
+    O método `OnAppearing` recupera o valor da propriedade `App.DisplayText` e o define como o valor de propriedade [`Text`](xref:Xamarin.Forms.InputView.Text) do [`Entry`](xref:Xamarin.Forms.Entry).
 
     > [!NOTE]
     > A substituição do método `OnAppearing` é executada após a [`ContentPage`](xref:Xamarin.Forms.ContentPage) ser apresentada, mas apenas antes de se tornar visível. Portanto, esse é um bom lugar para definir o conteúdo das exibições do Xamarin.Forms.
