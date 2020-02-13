@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/18/2018
-ms.openlocfilehash: 92e2ceeea901e2acea70118e75d936f3b3ac94db
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
-ms.translationtype: MT
+ms.openlocfilehash: 12c6229c1922f0bd4a4d25ca796bcb46141a326c
+ms.sourcegitcommit: ccbf914615c0ce6b3f308d930f7a77418aeb4dbc
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70199987"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77131135"
 ---
 # <a name="automation-properties-in-xamarinforms"></a>Propriedades de automação no Xamarin.Forms
 
@@ -113,7 +113,7 @@ AutomationProperties.SetHelpText(button, "Tap to toggle the activity indicator")
 > [!NOTE]
 > Observe que o método [`SetValue`](xref:Xamarin.Forms.BindableObject.SetValue(Xamarin.Forms.BindableProperty,System.Object)) também pode ser usado para definir a propriedade anexada `AutomationProperties.HelpText` – `button.SetValue(AutomationProperties.HelpTextProperty, "Tap to toggle the activity indicator");`
 
-Em algumas plataformas, para controles de edição como um [`Entry`](xref:Xamarin.Forms.Entry), a propriedade `HelpText` às vezes pode ser omitida e substituída por um texto de espaço reservado. Por exemplo, "Digite seu nome aqui" é um bom candidato para a propriedade [`Entry.Placeholder`](xref:Xamarin.Forms.Entry.Placeholder), que coloca o texto no controle antes da entrada feita pelo usuário.
+Em algumas plataformas, para controles de edição como um [`Entry`](xref:Xamarin.Forms.Entry), a propriedade `HelpText` às vezes pode ser omitida e substituída por um texto de espaço reservado. Por exemplo, "Digite seu nome aqui" é um bom candidato para a propriedade [`Entry.Placeholder`](xref:Xamarin.Forms.InputView.Placeholder), que coloca o texto no controle antes da entrada feita pelo usuário.
 
 <a name="labeledby" />
 

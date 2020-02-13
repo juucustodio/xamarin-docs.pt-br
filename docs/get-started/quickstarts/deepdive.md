@@ -10,12 +10,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/27/2018
-ms.openlocfilehash: 3936fe16ee768505c53ec119c51dcbecef7e6fbe
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+ms.openlocfilehash: c0e8ec27898cc842d485967e525c2936d7a0f56d
+ms.sourcegitcommit: ccbf914615c0ce6b3f308d930f7a77418aeb4dbc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2020
-ms.locfileid: "73842964"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77131046"
 ---
 # <a name="xamarinforms-quickstart-deep-dive"></a>Aprofundamento do Guia de Início Rápido do Xamarin.Forms
 
@@ -383,7 +383,7 @@ Para obter mais informações sobre navegação hierárquica, veja [Navegação 
 
 Vinculação de dados é usada para simplificar como um aplicativo Xamarin.Forms exibe e interage com seus dados. Ela estabelece uma conexão entre a interface do usuário e o aplicativo subjacente. A classe [`BindableObject`](xref:Xamarin.Forms.BindableObject) contém a maior parte da infraestrutura para dar suporte à vinculação de dados.
 
-A vinculação de dados conecta dois objetos, chamados de a *origem* e o *destino*. O objeto *origem* fornece os dados. O objeto *destino* consumirá (e geralmente exibirá) dados do objeto de origem. Por exemplo, um [`Editor`](xref:Xamarin.Forms.Editor) (objeto *alvo*) normalmente associará sua propriedade [`Text`](xref:Xamarin.Forms.Editor.Text) a uma propriedade `string` pública em um objeto de *origem*. O diagrama a seguir ilustra essa relação de associação:
+A vinculação de dados conecta dois objetos, chamados de a *origem* e o *destino*. O objeto *origem* fornece os dados. O objeto *destino* consumirá (e geralmente exibirá) dados do objeto de origem. Por exemplo, um [`Editor`](xref:Xamarin.Forms.Editor) (objeto *alvo*) normalmente associará sua propriedade [`Text`](xref:Xamarin.Forms.InputView.Text) a uma propriedade `string` pública em um objeto de *origem*. O diagrama a seguir ilustra essa relação de associação:
 
 ![](deepdive-images/data-binding.png "Data Binding")
 
@@ -432,7 +432,7 @@ O [`Editor`](xref:Xamarin.Forms.Editor) na `NoteEntryPage` é associado à propr
         ... />
 ```
 
-Uma associação entre a propriedade [`Editor.Text`](xref:Xamarin.Forms.Editor.Text) e a propriedade `Text` do objeto de *origem* é estabelecida. As alterações feitas no `Editor` serão propagadas automaticamente para o objeto `Note`. De modo semelhante, quando as alterações são feitas com a propriedade `Note.Text`, o mecanismo de associação do Xamarin.Forms também atualiza o conteúdo do `Editor`. Isso é conhecido como uma *associação bidirecional*.
+Uma associação entre a propriedade [`Editor.Text`](xref:Xamarin.Forms.InputView.Text) e a propriedade `Text` do objeto de *origem* é estabelecida. As alterações feitas no `Editor` serão propagadas automaticamente para o objeto `Note`. De modo semelhante, quando as alterações são feitas com a propriedade `Note.Text`, o mecanismo de associação do Xamarin.Forms também atualiza o conteúdo do `Editor`. Isso é conhecido como uma *associação bidirecional*.
 
 Para obter mais informações sobre associação de dados, confira [Associação de Dados do Xamarin.Forms](~/xamarin-forms/app-fundamentals/data-binding/index.md).
 
