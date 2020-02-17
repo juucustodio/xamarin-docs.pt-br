@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/06/2016
-ms.openlocfilehash: a3b9653651e3000b954cb6d16154cddc8d5d363a
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
-ms.translationtype: MT
+ms.openlocfilehash: 42ad56a7ae34bcef638ed25bea267dcabd21e20c
+ms.sourcegitcommit: ccbf914615c0ce6b3f308d930f7a77418aeb4dbc
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70772097"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77131085"
 ---
 # <a name="create-xamarinforms-behaviors"></a>Criar comportamentos do Xamarin.Forms
 
@@ -84,7 +84,7 @@ public class NumericValidationBehavior : Behavior<Entry>
 }
 ```
 
-O `NumericValidationBehavior` deriva da classe [`Behavior<T>`](xref:Xamarin.Forms.Behavior`1), em que `T` é um [`Entry`](xref:Xamarin.Forms.Entry). O método [`OnAttachedTo`](xref:Xamarin.Forms.Behavior`1.OnAttachedTo(Xamarin.Forms.BindableObject)) registra um manipulador de eventos para o evento [`TextChanged`](xref:Xamarin.Forms.Entry.TextChanged), com o método [`OnDetachingFrom`](xref:Xamarin.Forms.Behavior`1.OnDetachingFrom(Xamarin.Forms.BindableObject)) cancelando o registro do evento `TextChanged` para evitar perdas de memória. A funcionalidade principal do comportamento é fornecida pelo método `OnEntryTextChanged`, que analisa o valor inserido pelo usuário no `Entry` e define a propriedade [`TextColor`](xref:Xamarin.Forms.Entry.TextColor) como vermelha caso o valor não seja um `double`.
+O `NumericValidationBehavior` deriva da classe [`Behavior<T>`](xref:Xamarin.Forms.Behavior`1), em que `T` é um [`Entry`](xref:Xamarin.Forms.Entry). O método [`OnAttachedTo`](xref:Xamarin.Forms.Behavior`1.OnAttachedTo(Xamarin.Forms.BindableObject)) registra um manipulador de eventos para o evento [`TextChanged`](xref:Xamarin.Forms.InputView.TextChanged), com o método [`OnDetachingFrom`](xref:Xamarin.Forms.Behavior`1.OnDetachingFrom(Xamarin.Forms.BindableObject)) cancelando o registro do evento `TextChanged` para evitar perdas de memória. A funcionalidade principal do comportamento é fornecida pelo método `OnEntryTextChanged`, que analisa o valor inserido pelo usuário no `Entry` e define a propriedade [`TextColor`](xref:Xamarin.Forms.InputView.TextColor) como vermelha caso o valor não seja um `double`.
 
 > [!NOTE]
 > O Xamarin.Forms não define o `BindingContext` de um comportamento, porque os comportamentos podem ser compartilhados e aplicados a vários controles por meio dos estilos.
@@ -108,9 +108,9 @@ var entry = new Entry { Placeholder = "Enter a System.Double" };
 entry.Behaviors.Add (new NumericValidationBehavior ());
 ```
 
-Em tempo de execução, o comportamento responderá à interação com o controle, de acordo com a implementação do comportamento. As capturas de tela a seguir demonstram o comportamento respondendo a uma entrada inválida:
+Em runtime, o comportamento responderá à interação com o controle, de acordo com a implementação do comportamento. As capturas de tela a seguir demonstram o comportamento respondendo a uma entrada inválida:
 
-[![](creating-images/screenshots-sml.png "Aplicativo de exemplo com comportamento do Xamarin.Forms")](creating-images/screenshots.png#lightbox "Aplicativo de exemplo com comportamento do Xamarin.Forms")
+[![](creating-images/screenshots-sml.png "Sample Application with Xamarin.Forms Behavior")](creating-images/screenshots.png#lightbox "Sample Application with Xamarin.Forms Behavior")
 
 > [!NOTE]
 > Comportamentos são escritos para um tipo de controle específico (ou uma superclasse que pode ser aplicada a muitos controles) e só devem ser adicionados a um controle compatível. Tentar anexar um comportamento a um controle incompatível fará com que uma exceção seja lançada.
