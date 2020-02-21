@@ -6,12 +6,12 @@ ms.assetid: C1E24DB9-3099-4F79-BB88-10AABF7D4614
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 09/18/2019
-ms.openlocfilehash: 8bd530e743330ab8058f13cb7ba09f95a30ee886
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+ms.openlocfilehash: aaceb6089a5b7e5f0551dafe9ef1fe50d01433d9
+ms.sourcegitcommit: 24883be72e485e5311dd0eb91f9a22f78eeec11a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2020
-ms.locfileid: "75607835"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77374017"
 ---
 # <a name="what-is-xamarinforms"></a>O que é o Xamarin.Forms?
 
@@ -35,7 +35,7 @@ O Xamarin.Forms é para os desenvolvedores com os objetivos a seguir:
 
 O Xamarin.Forms fornece uma API consistente para a criação de elementos de interface do usuário entre plataformas. Essa API pode ser implementada em XAML ou C# e é compatível com DataBinding para padrões como MVVM (Model-View-ViewModel).
 
-No runtime, o Xamarin.Forms utiliza renderizadores de plataforma para converter os elementos da interface do usuário multiplataforma em controles nativos no Android, iOS e UWP. O permite aos desenvolvedores obter a aparência e o desempenho nativos e, ao mesmo tempo, aproveitar os benefícios do compartilhamento de código entre plataformas.
+No runtime, o Xamarin.Forms utiliza renderizadores de plataforma para converter os elementos da interface do usuário multiplataforma em controles nativos no Android, iOS e UWP. Isso permite que os desenvolvedores obtenham aparência, sensação e desempenho nativos, enquanto aproveitam os benefícios do compartilhamento de código entre plataformas.
 
 Os aplicativos Xamarin.Forms normalmente consistem em uma biblioteca .NET Standard compartilhada e projetos de plataforma individuais. A biblioteca compartilhada contém exibições XAML ou C# e qualquer lógica de negócios, como serviços, modelos ou outro código. Os projetos de plataforma contêm qualquer lógica específica da plataforma ou pacotes exigidos pelo aplicativo.
 
