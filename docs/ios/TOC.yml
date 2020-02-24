@@ -322,6 +322,11 @@
           items:
             - name: Passo a passo – Associar uma biblioteca Objective-C do iOS
               href: platform/binding-objective-c/walkthrough.md
+        - name: Associar bibliotecas do Swift do iOS
+          href: platform/binding-swift/index.md
+          items:
+            - name: Passo a passo
+              href: platform/binding-swift/walkthrough.md
         - name: CallKit
           href: platform/callkit.md
         - name: Contatos e ContactsUI
