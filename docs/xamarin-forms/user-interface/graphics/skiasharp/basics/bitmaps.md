@@ -9,7 +9,7 @@ ms.author: dabritch
 ms.date: 07/17/2018
 ms.openlocfilehash: 4aa73e1cba3f970396e5a52679372a160f47f7af
 ms.sourcegitcommit: 3bf02ecac9a8855779e07eb1e7e27abb9fc38934
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/29/2019
 ms.locfileid: "74658262"
@@ -101,9 +101,9 @@ O método de `SKBitmap.Decode` estático é responsável por decodificar arquivo
 
 ## <a name="loading-a-bitmap-resource"></a>Carregando um recurso de bitmap
 
-Em termos de código, a abordagem mais fácil para carregar bitmaps está incluindo um recurso de bitmap diretamente em seu aplicativo. O programa **SkiaSharpFormsDemos** inclui uma pasta chamada **Media** contendo vários arquivos de bitmap, incluindo um **macaco nomeado. png**. Para bitmaps armazenados como recursos de programa, você deve usar a caixa de diálogo **Propriedades** para dar ao arquivo uma **ação de compilação** do **recurso incorporado**!
+Em termos de código, a abordagem mais fácil para carregar bitmaps está incluindo um recurso de bitmap diretamente em seu aplicativo. O programa **SkiaSharpFormsDemos** inclui uma pasta chamada **Media** contendo vários arquivos de bitmap, incluindo um **namedmonkey.png**. Para bitmaps armazenados como recursos de programa, você deve usar a caixa de diálogo **Propriedades** para dar ao arquivo uma **ação de compilação** do **recurso incorporado**!
 
-Cada recurso inserido tem uma *ID de recurso* que consiste no nome do projeto, na pasta e no nome do arquivo, todos conectados por pontos: **SkiaSharpFormsDemos. Media. macaco. png**. Você pode obter acesso a esse recurso especificando essa ID de recurso como um argumento para o método [`GetManifestResourceStream`](xref:System.Reflection.Assembly.GetManifestResourceStream(System.String)) da classe [`Assembly`](xref:System.Reflection.Assembly) :
+Cada recurso inserido tem uma *ID de recurso* que consiste no nome do projeto, na pasta e no nome do arquivo, todos conectados por pontos: **SkiaSharpFormsDemos. Media. monkey.png**. Você pode obter acesso a esse recurso especificando essa ID de recurso como um argumento para o método [`GetManifestResourceStream`](xref:System.Reflection.Assembly.GetManifestResourceStream(System.String)) da classe [`Assembly`](xref:System.Reflection.Assembly) :
 
 ```csharp
 string resourceID = "SkiaSharpFormsDemos.Media.monkey.png";

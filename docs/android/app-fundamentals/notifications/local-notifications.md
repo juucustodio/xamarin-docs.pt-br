@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 08/16/2018
 ms.openlocfilehash: 617c04e2f40af535fb381362a389524d693fad0b
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73025644"
@@ -448,7 +448,7 @@ Aqui está um exemplo de uma notificação básica do Android 5,0 &ndash; ele ex
 
 ![Exemplo de notificação normal](local-notifications-images/13-sample-notification.png)
 
-E aqui está uma captura de tela da notificação depois de modificá-la para exibir um ícone grande &ndash; ele usa um ícone criado com base em uma imagem de um macaco Code do Xamarin:
+E aqui está uma captura de tela da notificação depois de modificá-la para exibir um ícone grande &ndash; ele usa um ícone criado com base em uma imagem de um macaco do Code do Xamarin:
 
 ![Exemplo de notificação de ícone grande](local-notifications-images/14-large-icon-sample.png)
 

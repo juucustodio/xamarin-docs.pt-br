@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 07/13/2018
 ms.openlocfilehash: 70d3e7ddc8b88651ec68552d35dbd4a3e9c90bd0
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73022076"
@@ -67,13 +67,13 @@ Arraste o **modo de exibição de imagem** da **caixa de ferramentas** para o co
 
 ### <a name="displaying-the-image-programmatically"></a>Exibindo a imagem programaticamente
 
-Como o **it macaco. jpg** está localizado na raiz do diretório de **recursos** , ele estará disponível em tempo de execução na raiz do pacote de aplicativos. Para exibir essa imagem em um controle de exibição de imagem, use o seguinte código:
+Como o **itmonkey.jpg** está localizado na raiz do diretório de **recursos** , ele estará disponível em tempo de execução na raiz do pacote de aplicativos. Para exibir essa imagem em um controle de exibição de imagem, use o seguinte código:
 
 ```csharp
 imageview1.Image = UIImage.FromBundle("SF Monkey.png");
 ```
 
-Se tivéssemos colocado a imagem em **/Resources/pics/SF macaco. jpg**, o código incluiria a pasta **pics** no caminho:
+Se tivéssemos colocado a imagem em **/Resources/pics/SF monkey.jpg**, o código incluiria a pasta **pics** no caminho:
 
 ```csharp
 imageview1.Image = UIImage.FromBundle("Pics/SF Monkey.png");

@@ -8,7 +8,7 @@ ms.author: daortin
 ms.date: 02/16/2018
 ms.openlocfilehash: 77fc4cbb15c47b87b0fa33e81b0b3749115af076
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73021277"
@@ -40,7 +40,7 @@ Para publicar aplicativos no Google Play, é necessário ter uma conta de editor
 1. Confirme a verificação por email.
 1. Depois que a conta foi criada, é possível publicar aplicativos usando o Google Play.
 
-O Google Play não oferece suporte a todos os países do mundo. A lista mais atualizada de países pode ser encontrada nos seguintes links:
+O Google Play não oferece suporte a todos os países/regiões do mundo. A lista mais atualizada de países pode ser encontrada nos seguintes links:
 
 1. [Locais com suporte para Desenvolvedor &amp; Registro de Comerciante](https://support.google.com/googleplay/android-developer/bin/answer.py?hl=en&amp;answer=150324) &ndash; esta é uma lista de todos os países em que os desenvolvedores podem se registrar como comerciantes e vender aplicativos pagos.
 
@@ -111,7 +111,7 @@ Esta é uma URL para um vídeo do YouTube mostrando o aplicativo. O vídeo deve 
 
 <!-- markdownlint-disable MD001 -->
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 O Xamarin Android 7.0 introduz um fluxo de trabalho integrado para a publicação de aplicativos no Google Play do Visual Studio. Se você estiver usando uma versão do Xamarin Android anterior à 7.0, será necessário carregar manualmente seu APK por meio do Console de desenvolvedor do Google Play. Além disso, você deve ter pelo menos um APK já carregado antes de usar o fluxo de trabalho integrado. Se ainda não carregou seu primeiro APK, você deverá carregá-lo manualmente. Para obter mais informações, consulte [Carregando manualmente o APK](~/android/deploy-test/publishing/publishing-to-google-play/manually-uploading-the-apk.md).
 
@@ -142,7 +142,7 @@ Na caixa de diálogo **Registrar acesso à API do Google**, você deve fornecer 
 
 A próxima seção explica como criar um novo projeto de API do Google e gerar a _ID do cliente_ e o _Segredo do cliente_ necessários.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
 O Visual Studio para Mac tem um fluxo de trabalho integrado para a publicação de aplicativos no Google Play.
 
@@ -206,7 +206,7 @@ Esse arquivo JSON contém a ID do Cliente e o Segredo do cliente que você pode 
 
 #### <a name="register-google-api-access"></a>Registrar acesso à API do Google
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 Use a ID do Cliente e o Segredo do cliente para preencher a caixa de diálogo **Conta da API do Google Play** no Visual Studio para Mac. É possível fornecer uma descrição para a conta &ndash; isso torna possível o registro de mais de uma conta do Google Play e o upload de futuros APKs em diferentes contas do Google Play. Copie a ID do Cliente e o Segredo do cliente nessa caixa de diálogo e clique em **Registrar**:
 
@@ -261,7 +261,7 @@ Quando ocorrer esse erro, faça upload manualmente de um APK (como um build Ad H
 
 Para resolver esse erro, recompile o aplicativo com um número de versão diferente e reenvie-o para o Google Play por meio da caixa de diálogo **Canal de Distribuição**.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
 Use a ID do Cliente e o Segredo do cliente para preencher a caixa de diálogo **Conta da API do Google Play** no Visual Studio para Mac. É possível fornecer uma descrição para a conta &ndash; isso torna possível o registro de mais de uma conta do Google Play e o upload de futuros APKs em diferentes contas do Google Play. Copie a ID do Cliente e o Segredo do cliente nessa caixa de diálogo e clique em **Registrar**:
 

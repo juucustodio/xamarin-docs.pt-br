@@ -9,7 +9,7 @@ ms.author: dabritch
 ms.date: 12/18/2019
 ms.openlocfilehash: 9bd4fe5f1a35e2a6f36540cbee13838841b36d92
 ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 12/25/2019
 ms.locfileid: "75490058"
@@ -107,7 +107,7 @@ A propriedade `ShowsResults` é definida como `true`, de modo que as sugestões 
 
 Quando um resultado de pesquisa é selecionado, ocorre a navegação até `MonkeyDetailPage`, e os dados sobre o macaco selecionado são exibidos:
 
-[![Captura de tela de detalhes de macaco, no iOS e no Android](search-images/detailpage.png "Detalhes da macaco")](search-images/detailpage-large.png#lightbox "Detalhes da macaco")
+[![Captura de tela de detalhes de macaco, no iOS e no Android](search-images/detailpage.png "Detalhes do macaco")](search-images/detailpage-large.png#lightbox "Detalhes do macaco")
 
 ## <a name="define-search-results-item-appearance"></a>Definir a aparência do item dos resultados da pesquisa
 

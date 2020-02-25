@@ -31,7 +31,7 @@ Normalmente, isso significa que você precisará determinar a impressão digital
 
 <!-- markdownlint-disable MD001 -->
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 Por padrão, o repositório de chaves que é usado para assinar versões de depuração de um aplicativo Xamarin. Android pode ser encontrado no seguinte local:
 
@@ -41,7 +41,7 @@ Informações sobre um repositório de chaves são obtidas executando o comando 
 
 **C:\\arquivos de programas\\Android\\JDK\\microsoft_dist_openjdk_ [versão]\\bin\\keytool. exe**
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
 Por padrão, o repositório de chaves que é usado para assinar versões de depuração de um aplicativo Xamarin. Android pode ser encontrado no seguinte local:
 
@@ -63,13 +63,13 @@ keytool -list -v -keystore [STORE FILENAME] -alias [KEY NAME] -storepass [STORE 
 
 Para a chave de depuração padrão (que é criada automaticamente para você para depuração), use este comando:
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 ```cmd
 keytool.exe -list -v -keystore "C:\Users\[USERNAME]\AppData\Local\Xamarin\Mono for Android\debug.keystore" -alias androiddebugkey -storepass android -keypass android
 ```
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
 ```bash
 keytool -list -v -keystore /Users/[USERNAME]/.local/share/Xamarin/Mono\ for\ Android/debug.keystore -alias androiddebugkey -storepass android -keypass android
@@ -125,7 +125,7 @@ Depois de ter recuperado a impressão digital SHA-1 do repositório de chaves de
 
    [![clicar no botão habilitar na seção painel](obtaining-a-google-maps-api-key-images/04-enable-api-vs-sml.png)](obtaining-a-google-maps-api-key-images/04-enable-api-vs.png#lightbox)
 
-Neste ponto, o projeto de API foi criado e o Google Maps Android API v2 foi adicionado a ele. No entanto, você não pode usar essa API em seu projeto até criar credenciais para ela. A próxima seção explica como criar uma chave de API e uma lista branca de um aplicativo Xamarin. Android para que ele esteja autorizado a usar essa chave.
+Neste ponto, o projeto de API foi criado e o Google Maps Android API v2 foi adicionado a ele. No entanto, você não pode usar essa API em seu projeto até criar credenciais para ela. A próxima seção explica como criar uma chave de API e uma lista de permissões de um aplicativo Xamarin. Android para que ele esteja autorizado a usar essa chave.
 
 ## <a name="obtaining-the-api-key"></a>Obtendo a chave de API
 

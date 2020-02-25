@@ -9,7 +9,7 @@ ms.author: dabritch
 ms.date: 06/16/2017
 ms.openlocfilehash: 1daf4822dd7debe98aabd58d42cb6ed29f95b90d
 ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 09/06/2019
 ms.locfileid: "70759356"
@@ -22,7 +22,7 @@ _Use caminhos para gráficos de clipe para áreas específicas e para criar regi
 
 Às vezes, é necessário restringir a renderização de gráficos para uma determinada área. Isso é conhecido como *recorte*. Você pode usar o recorte de efeitos especiais, como essa imagem de um monkey visto por meio de um buraco de fechadura:
 
-![Macaco por meio de um Keyhole](clipping-images/clippingsample.png)
+![Macaco pelo buraco da fechadura](clipping-images/clippingsample.png)
 
 O *área de recorte* é a área da tela na qual os gráficos são renderizados. Tudo o que é exibido fora da área de recorte não é renderizado. A área de recorte normalmente é definida por um retângulo ou um [ `SKPath` ](xref:SkiaSharp.SKPath) objeto, mas você também pode definir uma área de recorte usando um [ `SKRegion` ](xref:SkiaSharp.SKRegion) objeto. Esses dois tipos de objetos no parecem a princípio relacionados porque você pode criar uma região de um caminho. No entanto, você não pode criar um caminho de uma região e eles são muito diferentes internamente: Um caminho consiste em uma série de linhas e curvas, enquanto uma região é definida por uma série de linhas de varredura horizontais.
 
@@ -99,7 +99,7 @@ canvas.ClipPath(keyholePath);
 
 O `PaintSurface` manipulador, em seguida, redefine as transformações com uma chamada para `ResetMatrix` e desenha o bitmap para estender até a altura total da tela. Esse código supõe que o bitmap é quadrado, que é esse bitmap específico. O bitmap é renderizado somente na área definida pelo caminho de recorte:
 
-[![Captura de tela tripla do macaco por meio da página Keyhole](clipping-images/monkeythroughkeyhole-small.png)](clipping-images/monkeythroughkeyhole-large.png#lightbox)
+[![Captura de tela tripla da página do macaco pelo buraco da fechadura](clipping-images/monkeythroughkeyhole-small.png)](clipping-images/monkeythroughkeyhole-large.png#lightbox)
 
 O caminho de recorte é sujeito às transformações quando na verdade o `ClipPath` método é chamado, e não para as transformações em vigor quando um objeto gráfico (por exemplo, um bitmap) é exibido. O caminho de recorte é parte do estado da tela é salva com o `Save` método e podem ser restaurados com o `Restore` método.
 

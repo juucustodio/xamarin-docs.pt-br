@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 02/16/2018
 ms.openlocfilehash: 3277dd5eb7600500a5f60b2bbb13621aa237a235
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73019278"
@@ -103,7 +103,7 @@ Executar esse código e girar o dispositivo de retrato para paisagem demonstra o
 
 Durante a rotação, o Android trata os recursos de desenho de forma semelhante aos recursos de layout. Nesse caso, o sistema Obtém o drawables das pastas **recursos/desenháveis** e **recursos/empates** , respectivamente.
 
-Por exemplo, digamos que o projeto inclua uma imagem chamada macaco. png na pasta **Resources/drawáveis** , em que o empate é referenciado de um `ImageView` em XML como este:
+Por exemplo, digamos que o projeto inclua uma imagem chamada monkey.png na pasta **Resources/drawáveis** , em que o empate é referenciado de um `ImageView` em XML como este:
 
 ```xml
 <ImageView
@@ -114,9 +114,9 @@ Por exemplo, digamos que o projeto inclua uma imagem chamada macaco. png na past
   android:layout_centerHorizontal="true" />
 ```
 
-Vamos supor ainda que uma versão diferente de **macaco. png** esteja incluída em **Resources/Draw-Land**. Assim como ocorre com os arquivos de layout, quando o dispositivo é girado, as alterações desenhadas para a orientação determinada, conforme mostrado abaixo:
+Vamos supor ainda que uma versão diferente de **monkey.png** esteja incluída em **Resources/Draw-Land**. Assim como ocorre com os arquivos de layout, quando o dispositivo é girado, as alterações desenhadas para a orientação determinada, conforme mostrado abaixo:
 
-[![versão diferente de macaco. png mostrada nos modos retrato e paisagem](handling-rotation-images/03.png)](handling-rotation-images/03.png#lightbox)
+[![versão diferente de monkey.png mostrada nos modos retrato e paisagem](handling-rotation-images/03.png)](handling-rotation-images/03.png#lightbox)
 
 ## <a name="handling-rotation-programmatically"></a>Manipulação de rotação programaticamente
 

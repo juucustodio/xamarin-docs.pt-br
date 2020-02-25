@@ -8,7 +8,7 @@ ms.author: daortin
 ms.date: 07/24/2018
 ms.openlocfilehash: 5f1b1345f9abbf891cfbea6e45a8ed2abd7c0dac
 ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73014596"
@@ -70,7 +70,7 @@ Em ambas as plataformas, há um parâmetro que especifica o diretório base para
 <script type="text/javascript" src="jscript.js">
 ```
 
-consulte estes arquivos: **Style. css**, **macaco. jpg** e **JScript. js**. A configuração do diretório base informa à exibição da Web onde esses arquivos estão localizados para que possam ser carregados na página.
+consulte estes arquivos: **Style. css**, **monkey.jpg** e **JScript. js**. A configuração do diretório base informa à exibição da Web onde esses arquivos estão localizados para que possam ser carregados na página.
 
 #### <a name="ios"></a>iOS
 
