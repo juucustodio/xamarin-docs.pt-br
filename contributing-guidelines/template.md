@@ -8,12 +8,12 @@ ms.date: 02/26/2018
 ms.topic: conceptual
 ms.assetid: 11111111-2222-3333-4444-555555555555
 ms.prod: xamarin
-ms.openlocfilehash: d6300d6d3fdebf851c3710aa2a949575e6fe3f68
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.openlocfilehash: f26a786f3da909c7d948fe99b4b3a1423352ecbe
+ms.sourcegitcommit: ec62c7f28abc8e121656f1b93146657d90a4cab4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "76530860"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77553567"
 ---
 # <a name="metadata-and-markdown-template"></a>Metadados e modelo Markdown
 
@@ -95,7 +95,7 @@ Os cabeçalhos de segundo nível gerarão o Sumário na página exibida na seç�
 
 ## <a name="text-styling"></a>Estilo do texto
 
-*Itálico* Use para arquivos, pastas, caminhos (para itens longos, divididos em sua própria linha) – novos termos – URLs (a menos que sejam renderizadas como links, que é o padrão).
+_Itálico_ Use para arquivos, pastas, caminhos (para itens longos, divididos em sua própria linha) – novos termos – URLs (a menos que sejam renderizadas como links, que é o padrão).
 
 **Negrito** Use para elementos de interface do usuário.
 
