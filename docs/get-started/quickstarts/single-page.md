@@ -50,7 +50,7 @@ Para obter mais informações sobre esses pré-requisitos, confira [Como instala
 
     ![](single-page-images/vs/new-project-2019.png "Cross-Platform Project Templates")
 
-3. Na janela **Configurar seu novo projeto**, defina o **Nome do projeto** como **Notes**, escolha uma localização adequada para o projeto e clique no botão **Criar**:
+3. Na janela **Configurar seu novo projeto**, defina o **Nome do projeto** como **Notas**, escolha uma localização adequada para o projeto e clique no botão **Criar**:
 
     ![](single-page-images/vs/configure-project.png "Configure your Project")
 
@@ -144,7 +144,7 @@ Para obter mais informações sobre esses pré-requisitos, confira [Como instala
     }
     ```
 
-    Esse código define um campo `_fileName`, que referencia um arquivo chamado `notes.txt` que armazenará os dados de notas na pasta de dados local do aplicativo. Quando o construtor de página for executado o arquivo será lido, caso exista, e exibido no [`Editor`](xref:Xamarin.Forms.Editor). Quando **Salvar** [`Button`](xref:Xamarin.Forms.Button) for pressionado, o manipulador de eventos `OnSaveButtonClicked` será executado, salvando o conteúdo do `Editor` no arquivo. Quando o **Excluir** `Button` for pressionado, o manipulador de eventos `OnDeleteButtonClicked` será executado, excluindo o arquivo, caso ele exista, e removendo todo o texto do `Editor`. Para obter mais informações sobre a interação do usuário, confira [Como responder à interação do usuário](deepdive.md#responding-to-user-interaction) no [Aprofundamento do Guia de Início Rápido do Xamarin.Forms](deepdive.md).
+    Esse código define um campo `_fileName`, que referencia um arquivo chamado `notes.txt` que armazenará os dados de notas na pasta de dados local do aplicativo. Quando o construtor de página for executado o arquivo será lido, caso exista, e exibido no [`Editor`](xref:Xamarin.Forms.Editor). Quando o [`Button`](xref:Xamarin.Forms.Button) **Salvar** for pressionado, o manipulador de eventos `OnSaveButtonClicked` será executado, salvando o conteúdo do `Editor` no arquivo. Quando o `Button` **Excluir** for pressionado, o manipulador de eventos `OnDeleteButtonClicked` será executado, excluindo o arquivo, se ele existir, e removerá todo o texto do `Editor`. Para obter mais informações sobre a interação do usuário, confira [Como responder à interação do usuário](deepdive.md#responding-to-user-interaction) no [Aprofundamento do Guia de Início Rápido do Xamarin.Forms](deepdive.md).
 
     Salve as alterações em **MainPage.xaml.cs** ao pressionar **CTRL+S** e feche o arquivo.
 
@@ -294,7 +294,7 @@ Para obter mais informações sobre esses pré-requisitos, confira [Como instala
     }
     ```
 
-    Esse código define um campo `_fileName`, que referencia um arquivo chamado `notes.txt` que armazenará os dados de notas na pasta de dados local do aplicativo. Quando o construtor de página for executado o arquivo será lido, caso exista, e exibido no [`Editor`](xref:Xamarin.Forms.Editor). Quando **Salvar** [`Button`](xref:Xamarin.Forms.Button) for pressionado, o manipulador de eventos `OnSaveButtonClicked` será executado, salvando o conteúdo do `Editor` no arquivo. Quando o **Excluir** `Button` for pressionado, o manipulador de eventos `OnDeleteButtonClicked` será executado, excluindo o arquivo, caso ele exista, e removendo todo o texto do `Editor`. Para obter mais informações sobre a interação do usuário, confira [Como responder à interação do usuário](deepdive.md#responding-to-user-interaction) no [Aprofundamento do Guia de Início Rápido do Xamarin.Forms](deepdive.md).
+    Esse código define um campo `_fileName`, que referencia um arquivo chamado `notes.txt` que armazenará os dados de notas na pasta de dados local do aplicativo. Quando o construtor de página for executado o arquivo será lido, caso exista, e exibido no [`Editor`](xref:Xamarin.Forms.Editor). Quando o [`Button`](xref:Xamarin.Forms.Button) **Salvar** for pressionado, o manipulador de eventos `OnSaveButtonClicked` será executado, salvando o conteúdo do `Editor` no arquivo. Quando o `Button` **Excluir** for pressionado, o manipulador de eventos `OnDeleteButtonClicked` será executado, excluindo o arquivo, se ele existir, e removerá todo o texto do `Editor`. Para obter mais informações sobre a interação do usuário, confira [Como responder à interação do usuário](deepdive.md#responding-to-user-interaction) no [Aprofundamento do Guia de Início Rápido do Xamarin.Forms](deepdive.md).
 
     Salve as alterações em **MainPage.xaml.cs** ao pressionar **CTRL+S** e feche o arquivo.
 
@@ -448,7 +448,7 @@ Para obter mais informações sobre esses pré-requisitos, confira [Como instala
     }
     ```
 
-    Esse código define um campo `_fileName`, que referencia um arquivo chamado `notes.txt` que armazenará os dados de notas na pasta de dados local do aplicativo. Quando o construtor de página for executado o arquivo será lido, caso exista, e exibido no [`Editor`](xref:Xamarin.Forms.Editor). Quando **Salvar** [`Button`](xref:Xamarin.Forms.Button) for pressionado, o manipulador de eventos `OnSaveButtonClicked` será executado, salvando o conteúdo do `Editor` no arquivo. Quando o **Excluir** `Button` for pressionado, o manipulador de eventos `OnDeleteButtonClicked` será executado, excluindo o arquivo, caso ele exista, e removendo todo o texto do `Editor`. Para obter mais informações sobre a interação do usuário, confira [Como responder à interação do usuário](deepdive.md#responding-to-user-interaction) no [Aprofundamento do Guia de Início Rápido do Xamarin.Forms](deepdive.md).
+    Esse código define um campo `_fileName`, que referencia um arquivo chamado `notes.txt` que armazenará os dados de notas na pasta de dados local do aplicativo. Quando o construtor de página for executado o arquivo será lido, caso exista, e exibido no [`Editor`](xref:Xamarin.Forms.Editor). Quando o [`Button`](xref:Xamarin.Forms.Button) **Salvar** for pressionado, o manipulador de eventos `OnSaveButtonClicked` será executado, salvando o conteúdo do `Editor` no arquivo. Quando o `Button` **Excluir** for pressionado, o manipulador de eventos `OnDeleteButtonClicked` será executado, excluindo o arquivo, se ele existir, e removerá todo o texto do `Editor`. Para obter mais informações sobre a interação do usuário, confira [Como responder à interação do usuário](deepdive.md#responding-to-user-interaction) no [Aprofundamento do Guia de Início Rápido do Xamarin.Forms](deepdive.md).
 
     Salve as alterações em **MainPage.xaml.cs** ao escolher **Arquivo > Salvar** (ou ao pressionar **& #8984; + S**) e feche o arquivo.
 
