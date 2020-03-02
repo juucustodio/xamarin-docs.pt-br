@@ -255,12 +255,14 @@
           items:
             - name: Padrões de tela dupla
               href: app-fundamentals/dual-screen/design-patterns.md
-            - name: TwoPaneView
+            - name: Layout de tela dupla
               href: app-fundamentals/dual-screen/twopaneview.md
-            - name: DualScreenInfo
+            - name: Funcionalidades de tela dupla do dispositivo
               href: app-fundamentals/dual-screen/dual-screen-info.md
-            - name: DualScreenHelper
+            - name: Auxiliares de plataforma de tela dupla
               href: app-fundamentals/dual-screen/dual-screen-helper.md
+            - name: Gatilhos de tela dupla
+              href: app-fundamentals/dual-screen/triggers.md
         - name: Efeitos
           href: app-fundamentals/effects/index.md
           items:
