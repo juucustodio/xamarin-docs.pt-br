@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/01/2018
-ms.openlocfilehash: acfa7bc953906654567d361b93ec1ccff22c1f1b
-ms.sourcegitcommit: 191f1f3b13a14e2afadcb95126c5f653722f126f
-ms.translationtype: MT
+ms.openlocfilehash: 3bf1ab647faa4b6c4735585ddfeaeb704d7d3f41
+ms.sourcegitcommit: 6d86aac422d6ce2131930d18ada161d117c8c61b
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/30/2019
-ms.locfileid: "75545636"
+ms.lasthandoff: 02/24/2020
+ms.locfileid: "77567081"
 ---
 # <a name="xamarinforms-binding-mode"></a>Modo de associação do Xamarin.Forms
 
@@ -43,13 +43,13 @@ Na amostra [**DataBindingDemos**](https://docs.microsoft.com/samples/xamarin/xam
 </ContentPage>
 ```
 
-A princípio, isso pode parecer o inverso: agora o `Label` é a origem de associação de dados e o `Slider` é o destino. A associação referencia a propriedade `Opacity` do `Label`, que tem um valor padrão igual a 1.
+A princípio, isso pode parecer invertido: Agora o `Label` é a origem de associação de dados e o `Slider` é o destino. A associação referencia a propriedade `Opacity` do `Label`, que tem um valor padrão igual a 1.
 
 Como você pode esperar, o `Slider` é inicializada com o valor 1 do valor inicial `Opacity` de `Label`. Isso é mostrado na captura de tela do iOS à esquerda:
 
 [![Associação inversa](binding-mode-images/reversebinding-small.png "Associação inversa")](binding-mode-images/reversebinding-large.png#lightbox "Associação inversa")
 
-Mas você pode se surpreender que o `Slider` continue funcionando, como demonstra a captura de tela do Android. Isso parece sugerir que a associação de dados funciona melhor quando o `Slider` é o destino da associação em vez de `Label`, porque a inicialização funciona como poderíamos esperar.
+Mas você pode ficar surpreso de que o `Slider` continuará funcionando, como demonstrado na captura de tela do Android. Isso parece sugerir que a associação de dados funciona melhor quando o `Slider` é o destino da associação em vez de `Label`, porque a inicialização funciona como poderíamos esperar.
 
 A diferença entre a amostra **Associação inversa** e as amostras anteriores envolve o *modo de associação*.
 
@@ -58,10 +58,10 @@ A diferença entre a amostra **Associação inversa** e as amostras anteriores e
 O modo de associação é especificado com um membro da enumeração [`BindingMode`](xref:Xamarin.Forms.BindingMode):
 
 - [`Default`](xref:Xamarin.Forms.BindingMode.Default)
-- [`TwoWay`](xref:Xamarin.Forms.BindingMode.TwoWay) &ndash; dados vão de ambas as maneiras entre a origem e o destino
-- [`OneWay`](xref:Xamarin.Forms.BindingMode.OneWay) dados de &ndash; vão da origem para o destino
-- [`OneWayToSource`](xref:Xamarin.Forms.BindingMode.OneWayToSource) dados de &ndash; vão do destino para a origem
-- [`OneTime`](xref:Xamarin.Forms.BindingMode.OneWayToSource) dados de &ndash; vão da origem para o destino, mas somente quando o `BindingContext` for alterado (novo com Xamarin. Forms 3,0)
+- [`TwoWay`](xref:Xamarin.Forms.BindingMode.TwoWay) &ndash; os dados fluem bidirecionalmente entre a origem e o destino
+- [`OneWay`](xref:Xamarin.Forms.BindingMode.OneWay) &ndash; os dados vão da origem para o destino
+- [`OneWayToSource`](xref:Xamarin.Forms.BindingMode.OneWayToSource) &ndash; os dados fluem do destino para a origem
+- [`OneTime`](xref:Xamarin.Forms.BindingMode.OneWayToSource) &ndash; os dados fluem da origem para o destino, mas somente quando o `BindingContext` é alterado (novidade no Xamarin.Forms 3.0)
 
 Cada propriedade associável tem um modo de associação padrão definido quando a propriedade associável é criada, que está disponível na propriedade [`DefaultBindingMode`](xref:Xamarin.Forms.BindableProperty.DefaultBindingMode) do objeto `BindableProperty`. Esse modo de associação padrão indica o modo em vigor quando essa propriedade é um destino da associação de dados.
 
@@ -111,7 +111,7 @@ A página **Seletor de cor simples** demonstra o uso de um ViewModel simples. As
 
 O ViewModel é a origem da associação de dados. O ViewModel *não* define propriedades vinculáveis, mas implementa um mecanismo de notificação que permite que a infraestrutura de associação seja notificada quando o valor de uma propriedade é alterado. Esse mecanismo de notificação é a interface [`INotifyPropertyChanged`](xref:System.ComponentModel.INotifyPropertyChanged), que define um único evento chamado [`PropertyChanged`](xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged). Em geral, uma classe que implementa essa interface dispara o evento quando uma de suas propriedades públicas altera o valor. O evento não precisa ser disparado se a propriedade nunca é alterada. (A interface `INotifyPropertyChanged` também é implementada por `BindableObject` e um evento `PropertyChanged` é disparado sempre que uma propriedade vinculável altera o valor.)
 
-A classe `HslColorViewModel` define cinco propriedades: as propriedades `Hue`, `Saturation`, `Luminosity` e `Color` estão correlacionadas. Quando um dos três componentes de cor altera o valor, a propriedade `Color` é recalculada e os eventos `PropertyChanged` são disparados para todas as quatro propriedades:
+A classe `HslColorViewModel` define cinco propriedades: As propriedades `Hue`, `Saturation`, `Luminosity` e `Color` estão correlacionadas. Quando um dos três componentes de cor altera o valor, a propriedade `Color` é recalculada e os eventos `PropertyChanged` são disparados para todas as quatro propriedades:
 
 ```csharp
 public class HslColorViewModel : INotifyPropertyChanged
@@ -255,7 +255,7 @@ O arquivo XAML **Seletor de cor simples** cria uma instância do `HslColorViewMo
 </ContentPage>
 ```
 
-A `BoxView`, o `Label` e três exibições `Slider` herdam o contexto de associação da `Grid`. Essas exibições são destinos de associação que referenciam as propriedades de origem no ViewModel. Para a propriedade `Color` da `BoxView` e a propriedade `Text` do `Label`, as associações de dados são `OneWay`: as propriedades na exibição são definidas nas propriedades do ViewModel.
+A `BoxView`, o `Label` e três exibições `Slider` herdam o contexto de associação da `Grid`. Essas exibições são destinos de associação que referenciam as propriedades de origem no ViewModel. Para a propriedade `Color` de `BoxView` e a propriedade `Text` de `Label`, as associações de dados são `OneWay`: As propriedades no modo de exibição são definidas nas propriedades do ViewModel.
 
 No entanto, a propriedade `Value` do `Slider` é `TwoWay`. Isso permite que cada `Slider` seja definido no ViewModel e também que o ViewModel seja definido em cada `Slider`.
 
@@ -263,7 +263,7 @@ Quando o programa é executado pela primeira vez, a `BoxView`, o `Label` e três
 
 [![Seletor de cor simples](binding-mode-images/simplecolorselector-small.png "Seletor de cor simples")](binding-mode-images/simplecolorselector-large.png#lightbox "Seletor de cor simples")
 
-Conforme você manipula os controles deslizantes, os `BoxView` e `Label` são atualizados de acordo, conforme ilustrado pela captura de tela do Android.
+Conforme você manipula os controles deslizantes, `BoxView` e `Label` são atualizados de acordo, conforme ilustrado pela captura de tela do Android.
 
 A criação de uma instância do ViewModel no dicionário de recursos é uma abordagem comum. Também é possível criar uma instância do ViewModel dentro de marcas de elemento de propriedade para a propriedade `BindingContext`. No arquivo XAML **Seletor de cor simples**, tente remover o `HslColorViewModel` do dicionário de recursos e defini-lo como a propriedade `BindingContext` da `Grid` desta forma:
 
@@ -396,7 +396,7 @@ public class SampleSettingsViewModel : INotifyPropertyChanged
 
     bool SetProperty<T>(ref T storage, T value, [CallerMemberName] string propertyName = null)
     {
-        if (Object.Equals(storage, value))
+        if (object.Equals(storage, value))
             return false;
 
         storage = value;
@@ -413,9 +413,9 @@ public class SampleSettingsViewModel : INotifyPropertyChanged
 
 Cada configuração de aplicativo é uma propriedade salva no dicionário de propriedades do Xamarin.Forms em um método chamado `SaveState` e carregado desse dicionário no construtor. Na parte inferior da classe estão dois métodos que ajudam a simplificar ViewModels e torná-lo menos propenso a erros. O método `OnPropertyChanged` na parte inferior tem um parâmetro opcional que é definido como a propriedade de chamada. Isso previne erros de ortografia ao especificar o nome da propriedade como uma cadeia de caracteres.
 
-O método `SetProperty` na classe faz ainda mais: ele compara o valor que está sendo definido como a propriedade com o valor armazenado como um campo e apenas chama `OnPropertyChanged` quando os dois valores não são iguais.
+O método `SetProperty` na classe faz ainda mais: Ele compara o valor que está sendo definido como a propriedade com o valor armazenado como um campo e apenas chama `OnPropertyChanged` quando os dois valores não são iguais.
 
-A classe `SampleSettingsViewModel` define duas propriedades para a cor da tela de fundo: a propriedade `BackgroundNamedColor` é do tipo `NamedColor`, que é uma classe também incluída na solução **DataBindingDemos**. A propriedade `BackgroundColor` é do tipo `Color` e é obtida da propriedade `Color` do objeto `NamedColor`.
+A classe `SampleSettingsViewModel` define duas propriedades para a cor do plano de fundo: A propriedade `BackgroundNamedColor` é do tipo `NamedColor`, que é uma classe que também está incluída na solução **DataBindingDemos**. A propriedade `BackgroundColor` é do tipo `Color` e é obtida da propriedade `Color` do objeto `NamedColor`.
 
 A classe `NamedColor` usa a reflexão do .NET para enumerar todos os campos públicos estáticos na estrutura `Color` do Xamarin.Forms e armazená-los com seus nomes em uma coleção acessível na propriedade estática `All`:
 
@@ -561,7 +561,7 @@ public partial class App : Application
 
 Para obter mais informações sobre os métodos de ciclo de vida do aplicativo, confira o artigo [**Ciclo de vida do aplicativo**](~/xamarin-forms/app-fundamentals/app-lifecycle.md).
 
-Quase todo o restante é manipulado no arquivo **SampleSettingsPage.xaml**. O `BindingContext` da página é definido usando uma extensão de marcação `Binding`: a origem da associação é a propriedade estática `Application.Current`, que é a instância da classe `App` no projeto e o `Path` é definido como a propriedade `Settings`, que é o objeto `SampleSettingsViewModel`:
+Quase todo o restante é manipulado no arquivo **SampleSettingsPage.xaml**. O `BindingContext` da página é definido usando uma extensão de marcação `Binding`: A origem da associação é a propriedade estática `Application.Current`, que é a instância da classe `App` no projeto e o `Path` é definido como a propriedade `Settings`, que é o objeto `SampleSettingsViewModel`:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -681,7 +681,7 @@ A outra captura de tela mostra as configurações alteradas. Ao experimentar com
 
 No próximo artigo, você verá como especificar a [**Formatação da cadeia de caracteres**](string-formatting.md) de associações de dados que são definidas na propriedade `Text` de `Label`.
 
-## <a name="related-links"></a>Links Relacionados
+## <a name="related-links"></a>Links relacionados
 
 - [Demonstrações de associação de dados (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 - [Capítulo de associação de dados do catálogo de Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)

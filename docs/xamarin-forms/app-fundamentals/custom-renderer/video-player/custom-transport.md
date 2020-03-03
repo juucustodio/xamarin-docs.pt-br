@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: e0694598fe5637f6e63ebf64dce4a7d9768eba5f
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
-ms.translationtype: MT
+ms.openlocfilehash: efe41fa5f25f6257587fd97a2711e9037b94dc6e
+ms.sourcegitcommit: 10b4d7952d78f20f753372c53af6feb16918555c
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70771825"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77636010"
 ---
 # <a name="custom-video-transport-controls"></a>Controles personalizados de transporte de vídeo
 
@@ -613,7 +613,7 @@ A página **Transporte personalizado** define a propriedade **AreTransportContro
 </ContentPage>
 ```
 
-Gatilhos de dados são descritos em detalhes no artigo [Gatilhos de dados](~/xamarin-forms/app-fundamentals/triggers.md#data).
+Gatilhos de dados são descritos em detalhes no artigo [Gatilhos de dados](~/xamarin-forms/app-fundamentals/triggers.md#data-triggers).
 
 O arquivo code-behind tem os manipuladores para os eventos `Clicked` do botão:
 
@@ -649,11 +649,11 @@ namespace VideoPlayerDemos
 
 Como `AutoPlay` é definido como `false` no arquivo **CustomTransport.xaml**, você precisará pressionar o botão **Reproduzir** quando ele ficar habilitado para iniciar o vídeo. Os botões são definidos para que os caracteres Unicode abordados acima sejam acompanhados por seus equivalentes de texto. Os botões têm uma aparência consistente em cada plataforma durante a reprodução do vídeo:
 
-[![Reprodução de transporte personalizado](custom-transport-images/customtransportplaying-small.png "Reprodução de transporte personalizado")](custom-transport-images/customtransportplaying-large.png#lightbox "Reprodução de transporte personalizado")
+[![Execução de transporte personalizado](custom-transport-images/customtransportplaying-small.png "Execução de transporte personalizado")](custom-transport-images/customtransportplaying-large.png#lightbox "Execução de transporte personalizado")
 
 Porém, no Android e no UWP, o botão **Reproduzir** é muito diferente quando o vídeo está em pausa:
 
-[![Transporte personalizado em pausa](custom-transport-images/customtransportpaused-small.png "Transporte personalizado em pausa")](custom-transport-images/customtransportpaused-large.png#lightbox "Transporte personalizado em pausa")
+[![Transporte personalizado pausado](custom-transport-images/customtransportpaused-small.png "Transporte personalizado pausado")](custom-transport-images/customtransportpaused-large.png#lightbox "Transporte personalizado pausado")
 
 Em um aplicativo de produção, provavelmente, você desejará usar suas próprias imagens de bitmap para os botões para alcançar a uniformidade visual.
 

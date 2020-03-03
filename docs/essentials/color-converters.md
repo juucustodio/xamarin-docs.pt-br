@@ -4,13 +4,13 @@ description: A classe ColorConverters no Xamarin.Essentials fornece vários mét
 ms.assetid: B10428D6-89E2-4714-A39F-7E6E626391B2
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 03/13/2019
-ms.openlocfilehash: 5f26edf9515be79660574de0ae621daab3d1ea7d
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
-ms.translationtype: MT
+ms.date: 01/06/2020
+ms.openlocfilehash: 5d64967dfaa6ce7ef746a97f739cac67f5102fc2
+ms.sourcegitcommit: fec87846fcb262fc8b79774a395908c8c8fc8f5b
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70756908"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77545170"
 ---
 # <a name="xamarinessentials-color-converters"></a>Xamarin.Essentials: Conversores de cor
 
@@ -33,7 +33,7 @@ Ao trabalhar com `System.Drawing.Color`, você pode usar os conversores internos
 ```csharp
 var blueHex = ColorConverters.FromHex("#3498db");
 var blueHsl = ColorConverters.FromHsl(204, 70, 53);
-var blueUInt = ColorConverers.FromUInt(3447003);
+var blueUInt = ColorConverters.FromUInt(3447003);
 ```
 
 ## <a name="using-color-extensions"></a>Usando extensões de cor
@@ -49,12 +49,13 @@ var blueWithAlpha = blue.MultiplyAlpha(.5f);
 
 Há vários outros métodos de extensão incluindo:
 
-- ToUInt
+- GetComplementary
 - MultiplyAlpha
-- WithHue
+- ToUInt
 - WithAlpha
-- WithSaturation
+- WithHue
 - WithLuminosity
+- WithSaturation
 
 ## <a name="using-platform-extensions"></a>Usando as extensões de plataforma
 
