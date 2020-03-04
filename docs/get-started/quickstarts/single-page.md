@@ -32,7 +32,7 @@ O guia de início rápido explica como criar um aplicativo do Xamarin.Forms mult
 
 ::: zone pivot="windows"
 
-### <a name="prerequisites"></a>Pré-requisitos
+### <a name="prerequisites"></a>Prerequisites
 
 - Visual Studio 2019 (versão mais recente), com a carga de trabalho de **Desenvolvimento móvel com .NET** instalada.
 - Conhecimento de C#.
@@ -186,7 +186,7 @@ Para obter mais informações sobre esses pré-requisitos, confira [Como instala
 ::: zone-end
 ::: zone pivot="win-vs2017"
 
-### <a name="prerequisites"></a>Pré-requisitos
+### <a name="prerequisites"></a>Prerequisites
 
 - Visual Studio 2017, com a carga de trabalho de **Desenvolvimento móvel com .NET** instalada.
 - Conhecimento de C#.
@@ -336,7 +336,7 @@ Para obter mais informações sobre esses pré-requisitos, confira [Como instala
 ::: zone-end
 ::: zone pivot="macos"
 
-### <a name="prerequisites"></a>Pré-requisitos
+### <a name="prerequisites"></a>Prerequisites
 
 - Visual Studio para Mac (versão mais recente), compatível com a plataforma iOS e Android instalada.
 - Xcode (versão mais recente).
