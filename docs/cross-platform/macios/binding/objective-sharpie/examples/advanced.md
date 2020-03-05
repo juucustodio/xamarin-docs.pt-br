@@ -6,12 +6,12 @@ ms.assetid: 044FF669-0B81-4186-97A5-148C8B56EE9C
 author: davidortinau
 ms.author: daortin
 ms.date: 03/29/2017
-ms.openlocfilehash: 23ca9c3fe36a65aefb17f10fd3e680937c36acc0
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 5e36a66949c55a85d84cbbb17fa4d276e3af1eee
+ms.sourcegitcommit: acbaedbcb78bb5629d4a32e3b00f11540c93c216
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73016247"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "78291473"
 ---
 # <a name="advanced-manual-real-world-example"></a>Exemplo avançado (manual) do mundo real
 
@@ -19,7 +19,7 @@ ms.locfileid: "73016247"
 
 Esta seção aborda uma abordagem mais avançada de associação, onde usaremos a ferramenta de `xcodebuild` da Apple para primeiro criar o projeto POP e, em seguida, deduzir manualmente a entrada para a nitidez objetiva. Basicamente, isso aborda o que a nitidez do objetivo está fazendo nos bastidores da seção anterior.
 
-```
+```bash
  $ git clone https://github.com/facebook/pop.git
 Cloning into 'pop'...
    _(more git clone output)_
@@ -29,7 +29,7 @@ $ cd pop
 
 Como a biblioteca POP tem um projeto do Xcode (`pop.xcodeproj`), podemos usar `xcodebuild` para criar POP. Esse processo pode, por sua vez, gerar arquivos de cabeçalho que podem ser analisados pelo objetivo de nitidez. É por isso que a criação antes da associação é importante. Ao criar por meio de `xcodebuild` certifique-se de que você passe o mesmo identificador e arquitetura do SDK que pretende passar para a nitidez objetiva (e lembre-se, o objetivo de nitidez 3,0 pode fazer isso para você!):
 
-```
+```bash
 $ xcodebuild -sdk iphoneos9.0 -arch arm64
 
 Build settings from command line:
@@ -54,7 +54,7 @@ Haverá muitas saídas de informações de compilação no console como parte do
 
 Agora estamos prontos para associar o POP. Sabemos que desejamos criar para o SDK `iphoneos8.1` com a arquitetura de `arm64` e que os arquivos de cabeçalho nos quais nos preocupamos estão em `build/Headers` na retirada do git POP. Se olharmos no diretório `build/Headers`, veremos vários arquivos de cabeçalho:
 
-```
+```bash
 $ ls build/Headers/POP/
 POP.h                    POPAnimationTracer.h     POPDefines.h
 POPAnimatableProperty.h  POPAnimator.h            POPGeometry.h
@@ -66,7 +66,7 @@ POPAnimationPrivate.h    POPDecayAnimation.h
 
 Se olharmos `POP.h`, podemos ver que ele é o principal arquivo de cabeçalho de nível superior da biblioteca que `#import`s outros arquivos. Por isso, só precisamos passar `POP.h` para a nitidez objetiva, e Clang fará o restante nos bastidores:
 
-```
+```bash
 $ sharpie bind -output Binding -sdk iphoneos8.1 \
     -scope build/Headers build/Headers/POP/POP.h \
     -c -Ibuild/Headers -arch arm64
@@ -122,7 +122,7 @@ Submitting usage data to Xamarin...
 Done.
 ```
 
-Você observará que passamos um argumento `-scope build/Headers` para a nitidez objetiva. Como as bibliotecas C e Objective-C devem `#import` ou `#include` outros arquivos de cabeçalho que são detalhes de implementação da biblioteca e não a API que você deseja associar, o argumento `-scope` informa a nitidez do objetivo de ignorar qualquer API que não esteja definida em um arquivo em algum lugar dentro do diretório `-scope`.
+Você observará que passamos um argumento `-scope build/Headers` para a nitidez objetiva. Como as bibliotecas C e Objective-C devem `#import` ou `#include` outros arquivos de cabeçalho que são detalhes de implementação da biblioteca e não a API que você deseja associar, o argumento `-scope` informa a nitidez do objetivo para ignorar qualquer API que não esteja definida em um arquivo em algum lugar dentro do diretório `-scope`.
 
 Você encontrará o argumento de `-scope` geralmente é opcional para bibliotecas implementadas com clareza, no entanto, não há nenhum dano no fornecimento explícito.
 

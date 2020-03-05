@@ -8,18 +8,18 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: 1f5c4135dc1db874de16f6783a86fa7ea927676c
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 06524163fadc4300d55ec90f35723fd1561bb8a0
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73032726"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "78292525"
 ---
 # <a name="watchos-troubleshooting"></a>Solução de problemas do watchOS
 
 Esta página contém informações adicionais e soluções alternativas para os problemas que você pode encontrar.
 
-- [Problemas conhecidos](#knownissues)
+- [Problemas Conhecidos](#knownissues)
 
 - [Removendo o canal alfa de imagens de ícone](#noalpha)
 
@@ -29,16 +29,16 @@ Esta página contém informações adicionais e soluções alternativas para os 
 
 <a name="knownissues" />
 
-## <a name="known-issues"></a>Problemas Conhecidos
+## <a name="known-issues"></a>Problemas conhecidos
 
 ### <a name="general"></a>Geral
 
 <a name="deploy" />
 
 - Versões anteriores do Visual Studio para Mac mostram incorretamente um dos ícones de **AppleCompanionSettings** como sendo 88x88 pixels; que resulta em um **erro de ícone ausente** se você tentar enviar para a loja de aplicativos.
-    Esse ícone deve ser 87x87 pixels (29 unidades para telas **@3x** retina). Não é possível corrigir isso em Visual Studio para Mac-edite o ativo da imagem no Xcode ou edite manualmente o arquivo **Contents. JSON** (para corresponder a [Este exemplo](https://github.com/xamarin/monotouch-samples/blob/master/WatchKit/WatchKitCatalog/WatchApp/Resources/Images.xcassets/AppIcons.appiconset/Contents.json#L126-L132)).
+    Esse ícone deve ser 87x87 pixels (29 unidades para telas **@3x** retina). Não é possível corrigir isso em Visual Studio para Mac-edite o ativo da imagem no Xcode ou edite manualmente o arquivo **Contents. JSON** .
 
-- Se o info. plist do projeto de extensão de inspeção **> ID do pacote WKApp** não estiver [definido corretamente](~/ios/watchos/get-started/project-references.md) para corresponder à **ID do pacote**do aplicativo de inspeção, o depurador não conseguirá se conectar e Visual Studio para Mac aguardará a mensagem *"aguardando o depurador para conectar "* .
+- Se o info. plist do projeto de extensão de inspeção **> ID do pacote WKApp** não estiver [definido corretamente](~/ios/watchos/get-started/project-references.md) para corresponder à **ID do pacote**do aplicativo de inspeção, o depurador não conseguirá se conectar e Visual Studio para Mac aguardará a mensagem *"aguardando o depurador para se conectar"* .
 
 - A depuração tem suporte no modo de **notificações** , mas pode ser não confiável. Tentar novamente, às vezes, funcionará. Confirme se o `WKCompanionAppBundleIdentifier` **info. plist** do aplicativo de inspeção está definido para corresponder ao identificador do pacote do aplicativo pai/contêiner do IOS (ou seja, aquele que é executado no iPhone).
 
@@ -166,7 +166,7 @@ with an alpha channel. Icons should not have an alpha channel.
 
     ![](troubleshooting-images/add-6.png "Opening the storyboard in Interface Builder")
 
-8. Selecione o novo controlador de interface e dê a ele o ClassName que você definiu acima, por exemplo, `MyInterfaceController`
+8. Selecione o novo controlador de interface e dê a ele o ClassName que você definiu acima, por exemplo, `MyInterfaceController`.
     Se tudo funcionou corretamente, ele deverá aparecer automaticamente na lista suspensa **classe:** e você poderá selecioná-lo a partir daí.
 
     ![](troubleshooting-images/add-4.png "Setting a custom class")
@@ -257,7 +257,7 @@ Os argumentos restantes são explicados abaixo:
 
 ### <a name="--sdkroot"></a>--sdkroot
 
-Necessário. Especifica o caminho para o Xcode (6,2 ou posterior).
+Obrigatórios. Especifica o caminho para o Xcode (6,2 ou posterior).
 
 Exemplo:
 

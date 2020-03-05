@@ -6,23 +6,23 @@ ms.assetid: F6EA9E49-FB3E-442F-AF13-B7AD0C80D11F
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 09/20/2019
-ms.openlocfilehash: 0e2db2a054c871668b5787a53ffbe4464f982174
-ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
+ms.date: 01/16/2020
+ms.openlocfilehash: 694ec24697937b114036eceab1cafd5aae3617d8
+ms.sourcegitcommit: 10b4d7952d78f20f753372c53af6feb16918555c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72696927"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "78291546"
 ---
 # <a name="windows-platform-features"></a>Recursos da plataforma Windows
 
-O desenvolvimento de aplicativos Xamarin. Forms para plataformas Windows requer o Visual Studio. A [página requisitos](~/get-started/requirements.md) contém mais informações sobre os pré-requisitos.
+O desenvolvimento de aplicativos Xamarin. Forms para plataformas Windows requer o Visual Studio. A [página plataformas com suporte](~/get-started/supported-platforms.md) contém mais informações sobre os pré-requisitos.
 
 ![](images/allhanselman.png "Xamarin.Forms Applications Running on Windows")
 
-## <a name="platform-specifics"></a>Especificações da plataforma
+## <a name="platform-specifics"></a>Elementos específicos da plataforma
 
-As especificações de plataforma permitem que você consuma a funcionalidade que só está disponível em uma plataforma específica, sem implementar renderizadores ou efeitos personalizados.
+Especificidades da plataforma permitem que você consumir funcionalidade só está disponível em uma plataforma específica, sem implementar renderizadores personalizados ou efeitos.
 
 A funcionalidade específica da plataforma a seguir é fornecida para exibições, páginas e layouts do Xamarin. Forms no Plataforma Universal do Windows (UWP):
 
@@ -43,7 +43,11 @@ A seguinte funcionalidade específica de plataforma é fornecida para páginas X
 - Definindo opções de posicionamento da barra de ferramentas. Para obter mais informações, consulte [posicionamento da barra de ferramentas da página no Windows](page-toolbar-placement.md).
 - Habilitando ícones de página a serem exibidos em uma barra de ferramentas [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) . Para obter mais informações, consulte [ícones de TabbedPage no Windows](tabbedpage-icons.md).
 
-## <a name="platform-support"></a>Suporte de plataforma
+A funcionalidade específica da plataforma a seguir é fornecida para a classe [`Application`](xref:Xamarin.Forms.Application) Xamarin. Forms no UWP:
+
+- Especificar o diretório no projeto do qual os ativos de imagem serão carregados. Para obter mais informações, consulte [diretório de imagem padrão no Windows](default-image-directory.md).
+
+## <a name="platform-support"></a>Suporte a plataforma
 
 Os modelos do Xamarin. Forms disponíveis no Visual Studio contêm um projeto Plataforma Universal do Windows (UWP).
 

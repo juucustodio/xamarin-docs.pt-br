@@ -6,20 +6,20 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 09/09/2018
-ms.openlocfilehash: 8f732e05565c420ef28da38c0da0e61ecd595313
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 3bfa3bbde68fab95d729cc8a558d4eb3baf7b4fa
+ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73025021"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "78291541"
 ---
 # <a name="fonts"></a>Fontes
 
-## <a name="overview"></a>Visão Geral
+## <a name="overview"></a>Visão geral
 
 Começando com o nível de API 26, o SDK do Android permite que as fontes sejam tratadas como recursos, assim como em layouts ou drawables. A [biblioteca de suporte do Android 26 NuGet](https://www.nuget.org/packages/Xamarin.Android.Support.Compat/26.1.0.1) irá backport as novas APIs de fonte para os aplicativos que visam a API de nível 14 ou superior.
 
-Após a API voltados 26 ou a instalação da biblioteca de suporte do Android V26, há duas maneiras de usar fontes em um aplicativo Android:
+Depois de direcionar a API 26 ou instalar a biblioteca de suporte do Android V26, há duas maneiras de usar fontes em um aplicativo Android:
 
 1. **Empacote a fonte como um recurso do Android** &ndash; isso garante que a fonte esteja sempre disponível para o aplicativo, mas aumentará o tamanho do APK.
 2. **Baixe as fontes &ndash; o** Android também dá suporte ao download de uma fonte de um _provedor de fontes_. O provedor de fontes verifica se a fonte já está no dispositivo. Se necessário, a fonte será baixada e armazenada em cache no dispositivo. Essa fonte pode ser compartilhada entre vários aplicativos.
@@ -264,7 +264,7 @@ Antes de passar o `FontRequest` para o método `FontContractCompat.RequestFont`,
 - **`FontsContractCompat.FontRequestCallback`** &ndash; esta é uma classe abstrata que deve ser estendida. É um retorno de chamada que será invocado quando `RequestFont` for concluído. Um aplicativo Xamarin. Android deve subclasse `FontsContractCompat.FontRequestCallback` e substituir o `OnTypefaceRequestFailed` e `OnTypefaceRetrieved`, fornecendo as ações a serem executadas quando o download falhar ou for bem sucedido, respectivamente.
 - **`Handler`** &ndash; é uma `Handler` que será usada pelo `RequestFont` para baixar a fonte em um thread, se necessário. As fontes **não** devem ser baixadas no thread da interface do usuário.
 
-Este trecho de código é um exemplo C# de uma classe que fará o download de uma fonte de forma assíncrona de uma coleção de código aberto de fontes do Google. Ele implementa a interface `FontRequestCallback` e gera um C# evento quando `FontRequest`tiver terminado.
+Este trecho de código é um exemplo C# de uma classe que fará o download de uma fonte de forma assíncrona de uma coleção de código aberto de fontes do Google. Ele implementa a interface `FontRequestCallback` e gera um C# evento quando `FontRequest` tiver terminado.
 
 ```csharp
 public class FontDownloadHelper : FontsContractCompat.FontRequestCallback

@@ -5,12 +5,12 @@ ms.assetid: F3A7A4E6-41FE-4F12-949C-96090815C5D6
 author: davidortinau
 ms.author: daortin
 ms.date: 11/14/2017
-ms.openlocfilehash: f23f155a02422a3d04a0b14b282929ea63d60765
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 2d1d5b8985d132e5a5839e3cd23aaec32fc3815a
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73007298"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "78292526"
 ---
 # <a name="callbacks-on-android"></a>Retornos de chamada no Android
 
@@ -97,7 +97,7 @@ Se executarmos esse teste de unidade como está, ele falharia com um erro, como:
 System.NotSupportedException: Unable to find Invoker for type 'Android.AbstractClass'. Was it linked away?
 ```
 
-O que falta aqui é um tipo de `Invoker`. Essa é uma subclasse de `AbstractClass` que encaminha C# chamadas para Java. Se um objeto Java entrar no C# mundo e o tipo C# equivalente for abstrato, o Xamarin. Android procurará automaticamente um C# tipo com o sufixo`Invoker`para uso no C# código.
+O que falta aqui é um tipo de `Invoker`. Essa é uma subclasse de `AbstractClass` que encaminha C# chamadas para Java. Se um objeto Java entrar no C# mundo e o tipo C# equivalente for abstrato, o Xamarin. Android procurará automaticamente um C# tipo com o sufixo `Invoker` para uso no C# código.
 
 O Xamarin. Android usa esse `Invoker` padrão para projetos de associação Java entre outras coisas.
 
@@ -269,7 +269,7 @@ public class VirtualClass : Java.Lang.Object
 
 Se você seguiu o exemplo de classe `abstract` acima, ele funcionará com exceção de um detalhe: _o Xamarin. Android não pesquisará o `Invoker`_ .
 
-Para corrigir isso, modifique a C# classe a ser`abstract`:
+Para corrigir isso, modifique a C# classe a ser `abstract`:
 
 ```csharp
 public abstract class VirtualClass : Java.Lang.Object
@@ -296,5 +296,4 @@ Há muito trabalho a ser feito aqui, mas esses aprimoramentos na inserção do .
 - [Introdução no Android](~/tools/dotnet-embedding/get-started/java/android.md)
 - [Pesquisa do Android preliminar](~/tools/dotnet-embedding/android/index.md)
 - [Limitações de incorporação do .NET](~/tools/dotnet-embedding/limitations.md)
-- [Contribuindo para o projeto de código-fonte aberto](https://github.com/mono/Embeddinator-4000/blob/master/docs/Contributing.md)
 - [Códigos de erro e descrições](~/tools/dotnet-embedding/errors.md)

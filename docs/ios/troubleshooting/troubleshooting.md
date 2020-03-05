@@ -8,14 +8,14 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/22/2018
-ms.openlocfilehash: 21b1f0c29962b7aeb45a836c976ec2635a39622e
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 716999002cf90b50b90f4924adc11555cc43717f
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73030874"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "78292246"
 ---
-# <a name="troubleshooting-tips-for-xamarinios"></a>Dicas de solução de problemas para o Xamarin. iOS 
+# <a name="troubleshooting-tips-for-xamarinios"></a>Dicas de solução de problemas para o Xamarin. iOS
 
 ## <a name="xamarinios-cannot-resolve-systemvaluetuple"></a>O Xamarin. iOS não pode resolver System. ValueTuple
 
@@ -128,7 +128,7 @@ As configurações de namespace podem ser encontradas na caixa de diálogo opç�
 
 As ações para os arquivos do Interface Builder são conectadas aos widgets por reflexão em tempo de execução, portanto, esse aviso é esperado.
 
-Você pode usar "#pragma Aviso Disable 0169" "#pragma Aviso Enable 0169" em suas ações se desejar suprimir esse aviso apenas para esses métodos ou adicionar 0169 ao campo "ignorar avisos" nas opções do compilador se quiser desabilitá-lo para todo o projeto (não recomendado).
+Você pode usar "#pragma Aviso Disable 0169" "#pragma Aviso Enable 0169" em suas ações se desejar suprimir esse aviso apenas para esses métodos, ou adicionar 0169 ao campo "ignorar avisos" nas opções do compilador se desejar desabilitá-lo para todo o projeto (não recomendado).
 
 ## <a name="mtouch-failed-with-the-following-message-cannot-open-assembly-pathtoyourprojectexe"></a>mTouch falhou com a seguinte mensagem: não é possível abrir o assembly '/path/to/yourproject.exe '
 
@@ -186,7 +186,7 @@ Stacktrace:
 
 Isso significa que você está vinculando uma biblioteca estática compilada com código Thumb em seu projeto. A partir da versão 3,1 do SDK do iPhone (ou mais recente no momento da elaboração deste artigo), a Apple introduziu um bug em seu vinculador ao vincular código não-Thumb (Xamarin. iOS) com código de Thumb (sua biblioteca estática). Você precisará vincular com uma versão não-Thumb da sua biblioteca estática para atenuar esse problema.
 
-## <a name="systemexecutionengineexception-attempting-to-jit-compile-method-wrapper-managed-to-managed-foosystemcollectionsgenericicollection1get_count-"></a>System. ExecutionEngineException: tentando o método de compilação JIT (wrapper gerenciado para gerenciado) foo []: System. Collections. Generic. ICollection'1. get_Count ()
+## <a name="systemexecutionengineexception-attempting-to-jit-compile-method-wrapper-managed-to-managed-foosystemcollectionsgenericicollection1get_count-"></a>System. ExecutionEngineException: tentando o método de compilação JIT (wrapper gerenciado para gerenciado) foo []: System. Collections. Generic. ICollection ' 1. get_Count ()
 
 O sufixo [] indica que você ou a biblioteca de classes está chamando um método em uma matriz por meio de uma coleção genérica, como IEnumerable < >, ICollection < > ou IList < >. Como alternativa, você pode forçar explicitamente o compilador de AOT a incluir esse método chamando o método por conta própria e certificando-se de que esse código seja executado antes da chamada que disparou a exceção. Nesse caso, você poderia escrever:
 
@@ -208,7 +208,7 @@ Esse problema é muito raro e extremamente difícil de reproduzir-ele geralmente
 1. Tente repetir a etapa (1) com a sincronização de transmissão ainda desabilitada.
 1. Se o editor parar por mais de alguns segundos, tente executar "killall-QUIT [Visual Studio para Mac]" em um terminal enquanto ele estiver suspenso. Pode ser difícil tempo que o comando Kill acontece enquanto o editor está suspenso, mas é essencial fazê-lo, pois o comando força o mono a gravar rastreamentos de pilha de todos os threads para o log MD, que podemos usar para descobrir em que estado os threads estão enquanto XS está suspenso.
 
-Anexe os logs XS, **~/library/logs/XamarinStudio-{Version}/IDE-{timestamp}.log**, **ANDROIDTOOLS-{timestamp}. log**e **Components-{timestamp}. log** (em versões mais antigas de xs/MonoDevelop, basta enviar **~/library/logs /MonoDevelop-(3.0 | 2.8 | 2.6)/MonoDevelop.log**).
+Anexe os logs XS, **~/library/logs/XamarinStudio-{Version}/IDE-{timestamp}.log**, **ANDROIDTOOLS-{timestamp}. log**e **Components-{timestamp}. log** (em versões mais antigas de xs/MonoDevelop, basta enviar **~/library/logs/MonoDevelop-(3.0 | 2.8 | 2.6)/MonoDevelop.log**).
 
 > [!NOTE]
 > O problema acima foi corrigido em XS 2,2 final * *
@@ -219,7 +219,7 @@ Para dar suporte à depuração, as compilações de depuração contêm código
 
 A partir do Xamarin. iOS 1,3, as compilações de depuração incluíram suporte à depuração para cada componente único do mono (todos os métodos em todas as classes das estruturas).  
 
-Com o Xamarin. iOS 1,4, apresentaremos um método mais refinado para depuração, o padrão será fornecer apenas Instrumentação de depuração para seu código e suas bibliotecas, e não fazer isso para todos os [assemblies do mono](~/cross-platform/internals/available-assemblies.md) (isso ainda será possível, mas você precisará aceitar a depuração desses assemblies).
+Com o Xamarin. iOS 1,4, apresentaremos um método mais refinado para depuração, o padrão será fornecer apenas Instrumentação de depuração para seu código e suas bibliotecas, e não fazer isso para todos os [assemblies do mono](~/cross-platform/internals/available-assemblies.md) (isso ainda será possível, mas você precisará optar pela depuração desses assemblies).
 
 ## <a name="installation-hangs"></a>Travamentos de instalação
 
@@ -368,7 +368,7 @@ Observe também que o menu > de **destino do > iPhone Simulator**pode ser usado 
 
 Isso significa que você tem o XCode 4 instalado.   No XCode 4, a ferramenta ibtool foi removida, não é mais possível editar seus arquivos XIB com uma ferramenta autônoma.
 
-Se você quiser usar Interface Builder, instale o [Xcode Series 3](https://connect.apple.com/cgi-bin/WebObjects/MemberSite.woa/wa/getSoftware?bundleID=20792), disponível no site da Apple.
+Se você quiser usar Interface Builder, instale o XCode Series 3, disponível no site da Apple.
 
 ## <a name="cant-create-display-binding-for-mime-type-applicationvndapple-interface-builder"></a>"Não é possível criar a associação de exibição para o tipo MIME: application/vnd. Apple-Interface-Builder"
 
@@ -394,7 +394,7 @@ Se você obtiver uma falha de tempo de execução (SIGSEGV) dentro do simulador 
 Isso pode acontecer quando os nomes de aplicativo incluem um '. ' (ponto) em seu nome.
 Isso é proibido como o nome do executável em CFBundleExecutable, mesmo que ele possa funcionar em muitos outros casos (como dispositivos).
 
- \* "O valor não deve incluir nenhuma extensão no nome." - [https://developer.apple.com/library/mac/documentation/General/Reference/InfoPlistKeyReference/InfoPlistKeyReference.pdf](https://developer.apple.com/library/mac/documentation/General/Reference/InfoPlistKeyReference/InfoPlistKeyReference.pdf)
+"O valor não deve incluir nenhuma extensão no nome."
 
 ## <a name="error-custom-attribute-type-0x43-is-not-supported-when-double-clicking-xib-files"></a>Erro: "não há suporte para o tipo de atributo personalizado 0x43" ao clicar duas vezes em arquivos. xib
 

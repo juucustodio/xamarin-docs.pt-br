@@ -6,19 +6,19 @@ ms.assetid: 5F0CEC18-5EF6-4A99-9DCF-1A3B57EA157C
 author: davidortinau
 ms.author: daortin
 ms.date: 03/29/2017
-ms.openlocfilehash: 372a51ba204b3b87d1bb3917b26c0ffb8acfceb6
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 8402a48602dd94578e688faeb038aec69684e7d4
+ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73015132"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "78292313"
 ---
 # <a name="unified-api-overview"></a>Visão geral de API Unificada
 
 O API Unificada do Xamarin torna possível compartilhar código entre Mac e iOS e dar suporte a aplicativos de 32 e 64 bits com o mesmo binário. O API Unificada é usado por padrão nos projetos novos Xamarin. iOS e Xamarin. Mac.
 
 > [!IMPORTANT]
-> O Xamarin API Clássica, que precede o API Unificada, foi preterido. 
+> O Xamarin API Clássica, que precede o API Unificada, foi preterido.
 >
 > - A última versão do Xamarin. iOS para dar suporte ao API Clássica (MonoTouch. dll) era Xamarin. iOS 9,10.
 > - O Xamarin. Mac ainda dá suporte ao API Clássica, mas ele não é mais atualizado. Como ele foi preterido, os desenvolvedores devem mover seus aplicativos para a API Unificada.
@@ -33,7 +33,7 @@ Siga as instruções relevantes para sua plataforma:
 - [Atualizar aplicativos Xamarin.Forms existentes](updating-xamarin-forms-apps.md)
 - [Migrar uma associação para a API unificada](update-binding.md)
 
-## <a name="tips-for-updating-code-to-the-unified-apiupdating-tipsmd"></a>[Dicas para atualizar o código para a API unificada](updating-tips.md)
+## <a name="tips-for-updating-code-to-the-unified-api"></a>[Dicas para atualizar o código para a API unificada](updating-tips.md)
 
 Independentemente de quais aplicativos você está migrando, confira [estas dicas](updating-tips.md) para ajudá-lo a atualizar com êxito para o API unificada.
 
@@ -44,7 +44,7 @@ A partir deste ponto, nossas APIs serão apresentadas de duas maneiras:
 - **API clássica:** Limitado a 32 bits (somente) e expostos nos assemblies `monotouch.dll` e `XamMac.dll`.
 - **API unificada:** Dê suporte ao desenvolvimento de 32 e 64 bits com uma única API disponível nos assemblies `Xamarin.iOS.dll` e `Xamarin.Mac.dll`.
 
-Isso significa que para os desenvolvedores corporativos (não voltados a loja de aplicativos), você pode continuar usando as APIs clássicas existentes, pois continuaremos mantendo-as sempre, ou você pode atualizar para as novas APIs.
+Isso significa que para os desenvolvedores corporativos (não direcionando para a loja de aplicativos), você pode continuar usando as APIs clássicas existentes, pois continuaremos mantendo-as sempre, ou você pode atualizar para as novas APIs.
 
 <a name="namespace-changes" />
 
@@ -98,7 +98,7 @@ Pacotes NuGet com suporte do Xamarin. iOS anteriormente por meio do API Clássic
 O API Unificada introduz um novo identificador de plataforma para pacotes compatíveis – **Xamarin. iOS10**. Os pacotes NuGet existentes precisarão ser atualizados para adicionar suporte para essa plataforma, criando-se no API Unificada.
 
 > [!IMPORTANT]
-> Se você tiver um erro no formato _"erro 3, não será possível incluir ' MonoTouch. dll ' e ' Xamarin. Ios. dll ' no mesmo projeto do xamarin. Ios-' xamarin. Ios. dll ' é referenciado explicitamente, enquanto ' MonoTouch. dll ' é referenciado por ' xxx, Version = 0.0.000, Culture = neutral, PublicKeyToken = null ' "_ depois de converter seu aplicativo para as APIs unificadas, normalmente, é devido a ter um componente ou pacote NuGet no projeto que não foi atualizado para o API unificada. Você precisará remover o componente/NuGet existente, atualizar para uma versão que ofereça suporte a APIs unificadas e fazer uma compilação limpa.
+> Se você tiver um erro no formato _"erro 3, não será possível incluir ' MonoTouch. dll ' e ' Xamarin. Ios. dll ' no mesmo Xamarin. o projeto Ios-' Xamarin. Ios. dll ' é referenciado explicitamente, enquanto ' MonoTouch. dll ' é referenciado por ' xxx, Version = 0.0.000, Culture = neutral, PublicKeyToken = null '"_ depois de converter seu aplicativo para as APIs unificadas, normalmente, isso é devido à existência de um componente ou pacote NuGet no projeto que não foi atualizado para o API unificada. Você precisará remover o componente/NuGet existente, atualizar para uma versão que ofereça suporte a APIs unificadas e fazer uma compilação limpa.
 
 ### <a name="the-road-to-64-bits"></a>A estrada para 64 bits
 
@@ -134,7 +134,7 @@ if (IntPtr.Size == 4) {
 
 ### <a name="arrays-and-systemcollectionsgeneric"></a>Matrizes e System. coleções. Generic
 
-Como C# os indexadores esperam um tipo de`int`, você terá que converter explicitamente `nint`valores em`int`para acessar os elementos em uma coleção ou matriz. Por exemplo:
+Como C# os indexadores esperam um tipo de `int`, você terá que converter explicitamente `nint` valores em `int` para acessar os elementos em uma coleção ou matriz. Por exemplo:
 
 ```csharp
 public List<string> Names = new List<string>();
@@ -228,7 +228,7 @@ Anteriormente, isso seria um erro do compilador, pois um `Action` não pode ser 
 
 ### <a name="custom-delegates-replaced-with-actiont"></a>Delegados personalizados substituídos por ação\<T >
 
-Em **um** simples (por exemplo, um parâmetro), os delegados do .net foram substituídos por `Action<T>`. Por exemplo,
+Em **um** simples (por exemplo, um parâmetro), os delegados do .net foram substituídos por `Action<T>`. Por ex.:
 
 ```csharp
 public delegate void NSNotificationHandler (NSNotification notification);
@@ -311,11 +311,6 @@ Baixo impacto: na maioria dos casos essa alteração não afetará os aplicativo
 
 Alterações adicionais a serem observadas estão listadas nas [dicas para atualizar aplicativos para o API unificada](~/cross-platform/macios/unified/updating-tips.md).
 
-## <a name="sample-code"></a>Código de exemplo
-
-A partir de 31 de julho, publicamos portas dos exemplos do iOS para essa nova API na `magic-types` Branch em [MonoTouch-Samples](https://github.com/xamarin/monotouch-samples/commits/magic-types).
-
-Para Mac, estamos verificando exemplos no repositório [Mac-Samples](https://github.com/xamarin/mac-samples) (mostrando novas APIs em Mavericks/Yosemite), bem como amostras de 32/64 bits na ramificação dos tipos mágicos [Mac-Samples](https://github.com/xamarin/monotouch-samples/commits/magic-types).
 
 ## <a name="related-links"></a>Links relacionados
 

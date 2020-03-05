@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 06/21/2018
-ms.openlocfilehash: 2c1f571efb9ec3fb726912eb1e30496bc51fe26e
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 49d1eea60f766f4cb61484a6e441506cf8f046ff
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73026986"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "78292383"
 ---
 # <a name="is-it-possible-to-connect-to-android-emulators-running-on-a-mac-from-a-windows-vm"></a>É possível se conectar aos emuladores de Android em execução em um Mac usando uma VM do Windows?
 
@@ -37,8 +37,7 @@ Para se conectar ao Android Emulator em execução em um Mac de uma máquina vir
 
     A porta ímpar é aquela usada para se conectar ao `adb`. Consulte também [https://developer.android.com/tools/devices/emulator.html#emulatornetworking](https://developer.android.com/tools/devices/emulator.html#emulatornetworking).
 
-4. _Opção 1_: usar [`nc`](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/nc.1.html)
-    para encaminhar pacotes TCP de entrada recebidos externamente na porta 5555 (ou qualquer outra porta que você desejar) para a porta ímpar na interface de loopback (**127.0.0.1 5555** neste exemplo) e para encaminhar os pacotes de saída de outra maneira:
+4. _Opção 1_: Use `nc` para encaminhar pacotes TCP de entrada recebidos externamente na porta 5555 (ou qualquer outra porta que desejar) para a porta ímpar na interface de loopback (**127.0.0.1 5555** neste exemplo) e para encaminhar os pacotes de saída de outra maneira:
 
     ```bash
     cd /tmp
@@ -48,10 +47,9 @@ Para se conectar ao Android Emulator em execução em um Mac de uma máquina vir
 
     Contanto que os comandos de `nc` permaneçam em execução em uma janela de terminal, os pacotes serão encaminhados conforme o esperado. Você pode digitar Control-C na janela do terminal para encerrar os comandos do `nc` quando terminar de usar o emulador.
 
-    (A opção 1 é geralmente mais fácil do que a opção 2, especialmente se as **preferências do sistema > segurança & privacidade > o firewall** for ativado.) 
+    (A opção 1 é geralmente mais fácil do que a opção 2, especialmente se as **preferências do sistema > segurança & privacidade > o firewall** for ativado.)
 
-    _Opção 2_: usar [`pfctl`](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man8/pfctl.8.html)
-    para redirecionar pacotes TCP da porta `5555` (ou qualquer outra porta que você desejar) na interface de [rede compartilhada](https://kb.parallels.com/en/4948) para a porta ímpar na interface de loopback (`127.0.0.1:5555` neste exemplo):
+    _Opção 2_: Use `pfctl` para redirecionar pacotes TCP da porta `5555` (ou qualquer outra porta que você desejar) na interface de [rede compartilhada](https://kb.parallels.com/en/4948) para a porta ímpar na interface de loopback (`127.0.0.1:5555` neste exemplo):
 
     ```bash
     sed '/rdr-anchor/a rdr pass on vmnet8 inet proto tcp from any to any port 5555 -> 127.0.0.1 port 5555' /etc/pf.conf | sudo pfctl -ef -
@@ -77,7 +75,7 @@ Se você tiver habilitado _acesso remoto_ no Mac, poderá usar o encaminhamento 
 
 3. Execute `ssh` no Windows para configurar o encaminhamento de porta bidirecional entre uma porta local no Windows (`localhost:15555` neste exemplo) e a porta do emulador ímpar na interface de loopback do Mac (`127.0.0.1:5555` neste exemplo):
 
-    ```cmd 
+    ```cmd
     C:\> ssh -L localhost:15555:127.0.0.1:5555 mac-username@ip-address-of-the-mac
     ```
 
@@ -103,4 +101,4 @@ Mas, no momento, as extensões do Xamarin. Android IDE não fornecem uma maneira
 Este documento discute o comportamento atual a partir de março de 2016. A técnica descrita neste documento não faz parte do pacote de testes estável para o Xamarin, portanto, ele pode ser interrompido no futuro.
 
 Se você observar que a técnica não funciona mais, ou se você notar outros erros no documento, sinta-se à vontade para adicionar à discussão sobre o seguinte thread de Fórum: [http://forums.xamarin.com/discussion/33702/android-emulator-from-host-device-inside-windows-vm](https://forums.xamarin.com/discussion/33702/android-emulator-from-host-device-inside-windows-vm).
-Pelo!
+Obrigado!

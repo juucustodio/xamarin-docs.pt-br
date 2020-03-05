@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: 1339a6c2909c7ba62592d66dcdf08bcfd2e668a4
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 5b9dfb354f33f67c73b415f8c109ebdc27dcdb6d
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73030632"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "78292926"
 ---
 # <a name="additional-tvos-10-frameworks-changes"></a>Alterações adicionais do tvOS 10 frameworks
 
@@ -55,7 +55,7 @@ Para obter mais informações, consulte a [referência da estrutura de dados pri
 
 o tvOS 10 inclui os seguintes aprimoramentos na estrutura de gráficos principal:
 
-- A nova classe [CGColorConverterRef](https://developer.apple.com/reference/coregraphics/cgcolorconverterref) pode ser usada para executar uma série de conversões de cor.
+- A nova classe CGColorConverterRef pode ser usada para executar uma série de conversões de cor.
 
 <a name="Core-Image-Enhancements" />
 
@@ -65,7 +65,7 @@ o tvOS 10 faz os seguintes aprimoramentos na estrutura de imagem principal:
 
 - O método `ImageWithExtent` da classe [CIFilter](https://developer.apple.com/reference/coreimage/cifilter) pode ser usado para inserir o processamento personalizado na operação de filtro. A imagem principal invocará o retorno de chamada fornecido entre os filtros ao processar uma imagem para saída ou exibição.
 - O aplicativo agora pode processar imagens em um espaço de cores fora do espaço de cores de trabalho do contexto de imagem principal, convertendo dentro e fora do espaço de cores antes e depois do processamento.
-- Vários aprimoramentos de desempenho de renderização foram feitos para `UIImage` renderização (quando apoiado por armazenamentos de imagem de imagem principal) em objetos `UIImageView`. 
+- Vários aprimoramentos de desempenho de renderização foram feitos para `UIImage` renderização (quando apoiado por armazenamentos de imagem de imagem principal) em objetos `UIImageView`.
 - `UIImage` objetos marcados com largura ampla serão renderizados como uma cor de ampla gama em objetos `UIImageView` em dispositivos iOS que dão suporte a cores amplas.
 - O código do kernel da imagem de núcleo agora pode solicitar formatos de saída de pixel específicos.
 
@@ -159,7 +159,7 @@ Os aprimoramentos a seguir foram feitos na estrutura SceneKit no tvOS 10:
 - SceneKit interpreta valores de componente de cor em um espaço de cores RGB linear para todos os tipos de sombreador.
 - Como o SceneKit lê e ajusta as informações de perfil de cor em imagens de textura, use catálogos de ativos para todas as imagens para garantir que essas informações sejam fornecidas.
 - A renderização de espaço de cores linear e a grande cor podem ser desabilitadas especificando-se as chaves `SCNDisableLinearSpaceRendering` e `SCNDisableWideGamut` no `Info.plist`do aplicativo.
-- Crie Primates Polygon arbitrários (carregados a partir de arquivos ou gerados programaticamente) para especificar Geometry com a nova classe [SCNGeometryPrimitiveTypePolygon](https://developer.apple.com/reference/scenekit/1772322-scenekit_enumerations/scngeometryprimitivetype/scngeometryprimitivetypepolygon) .
+- Crie Primates Polygon arbitrários (carregados a partir de arquivos ou gerados programaticamente) para especificar Geometry com a nova classe [SCNGeometryPrimitiveTypePolygon](https://developer.apple.com/documentation/scenekit/scngeometryprimitivetype/scngeometryprimitivetypepolygon) .
 
 <a name="SpriteKit-Enhancements" />
 
@@ -181,7 +181,7 @@ Os aprimoramentos a seguir foram feitos na estrutura UIKit no tvOS 10:
 - A API de foco foi aprimorada para dar suporte ao foco de um item que não é de exibição, além de `UIViews`. Os itens que dão suporte ao foco _devem_ implementar a interface `IUIFocusItem`.
 - A nova classe `UIGraphicsRender` fornece um método orientado a objeto de criação de bitmaps ou PDFs de renderização UIKit ou gráficos principais e substitui o método `UIGraphicsBeginImageContext` preterido.
 - A classe `UIUserInterfaceStyle` foi adicionada para determinar qual tema da interface do usuário (escuro ou claro) está ativo no momento.
-- O novo suporte à animação com interrupções, com base em objeto e totalmente interativo, foi adicionado e a van está vinculada a gestos. Pleas consulte referência de [protocolo UIViewAnimating](https://developer.apple.com/reference/uikit/uiviewanimating)da Apple [, referência de classe UIViewPropertyAnimator](https://developer.apple.com/reference/uikit/uiviewpropertyanimator), referência de [protocolo UITimingCurveProvider](https://developer.apple.com/reference/uikit/uitimingcurveprovider), [referência de classe UICubicTimingParameters](https://developer.apple.com/reference/uikit/uicubictimingparameters) e [ Referência de classe UISpringTimingParameter](https://developer.apple.com/reference/uikit/uispringtimingparameters) para obter mais informações.
+- O novo suporte à animação com interrupções, com base em objeto e totalmente interativo, foi adicionado e a van está vinculada a gestos. Pleas consulte referência de [protocolo UIViewAnimating](https://developer.apple.com/reference/uikit/uiviewanimating)da Apple [, referência de classe UIViewPropertyAnimator](https://developer.apple.com/reference/uikit/uiviewpropertyanimator), referência de [protocolo UITimingCurveProvider](https://developer.apple.com/reference/uikit/uitimingcurveprovider), [referência de classe UICubicTimingParameters](https://developer.apple.com/reference/uikit/uicubictimingparameters) e [referência de classe UISpringTimingParameter](https://developer.apple.com/reference/uikit/uispringtimingparameters) para obter mais informações.
 - O novo `UIPreviewInteraction` e `UIPreviewInteractionDelegate` permitem que o aplicativo forneça uma interface personalizada para operações de Peek e pop.
 - A nova classe `UIAccessibilityCustomRotor` permite que o aplicativo forneça funcionalidade personalizada e específica ao contexto para tecnologias assistenciais, como voz.
 - Use os símbolos `UIAccessibilityIsAssistiveTouchRunning` e `UIAccessibilityAssistiveTouchStatusDidChangeNotification` para determinar se o AssistiveTouch está habilitado.

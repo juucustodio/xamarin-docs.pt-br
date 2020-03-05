@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 12/05/2019
-ms.openlocfilehash: 190aeb83456fa7c7ba8a9415b02ab56f3f8779da
-ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
+ms.openlocfilehash: 52b227b0244a83ec4a7466cca7591c6b712f1c76
+ms.sourcegitcommit: dde593cf9dedf4a056ffef86bcf2fa0640412a4d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75728272"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "78291739"
 ---
 # <a name="xamarinforms-local-databases"></a>Bancos de dados locais do Xamarin.Forms
 
@@ -38,7 +38,7 @@ Há diversos pacotes NuGet com nomes semelhantes. O pacote correto tem estes atr
 
 - **Criado por:** Frank A. Krueger
 - **ID:** SQLite-net-PCL
-- **Link do NuGet:** [SQLite-net-PCL](https://www.nuget.org/packages/sqlite-net-pcl/)
+- **Link do NuGet:** [sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)
 
 > [!NOTE]
 > Apesar do nome do pacote, use o pacote NuGet **sqlite-net-pcl**, mesmo em projetos do .NET Standard.
@@ -92,7 +92,7 @@ Uma classe de wrapper de banco de dados abstrai a camada de acesso de dado do re
 
 ### <a name="lazy-initialization"></a>Inicialização lenta
 
-O `TodoItemDatabase` usa a classe .NET `Lazy` para atrasar a inicialização do banco de dados até que ele seja acessado pela primeira vez. O uso da inicialização lenta impede que o processo de carregamento do banco de dados atrase a inicialização do aplicativo. Para obter mais informações, consulte [Lazy&lt;t&gt; classe](https://docs.microsoft.com/dotnet/api/system.lazy-1).
+O `TodoItemDatabase` usa a classe .NET `Lazy` para atrasar a inicialização do banco de dados até que ele seja acessado pela primeira vez. O uso da inicialização lenta impede que o processo de carregamento do banco de dados atrase a inicialização do aplicativo. Para obter mais informações, consulte [Lazy&lt;t&gt; classe](xref:System.Lazy`1).
 
 ```csharp
 public class TodoItemDatabase
@@ -175,7 +175,7 @@ Para obter mais informações, consulte [padrão assíncrono baseado em tarefa (
 A classe `TodoItemDatabase` inclui métodos para os quatro tipos de manipulação de dados: criar, ler, editar e excluir. A biblioteca SQLite.NET fornece um ORM (mapa relacional de objeto) simples que permite armazenar e recuperar objetos sem escrever instruções SQL.
 
 ```csharp
-public static class TodoItemDatabase {
+public class TodoItemDatabase {
 
     // ...
 
@@ -281,7 +281,7 @@ Em geral, mover, renomear ou copiar um arquivo de banco de dados é o mesmo proc
 
 Para obter mais informações, consulte [manipulação de arquivos no Xamarin. Forms](~/xamarin-forms/data-cloud/data/files.md).
 
-## <a name="related-links"></a>Links Relacionados
+## <a name="related-links"></a>Links relacionados
 
 - [Aplicativo de exemplo todo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo)
 - [Pacote NuGet do SQLite.NET](https://www.nuget.org/packages/sqlite-net-pcl/)
@@ -289,4 +289,4 @@ Para obter mais informações, consulte [manipulação de arquivos no Xamarin. F
 - [Usando o SQLite com Android](~/android/data-cloud/data-access/using-sqlite-orm.md)
 - [Usando o SQLite com iOS](~/ios/data-cloud/data/using-sqlite-orm.md)
 - [Padrão assíncrono baseado em tarefa (toque)](https://docs.microsoft.com/dotnet/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap)
-- [Classe de<T> lenta](https://docs.microsoft.com//api/system.lazy-1)
+- [Classe lenta de&lt;T&gt;](xref:System.Lazy`1)

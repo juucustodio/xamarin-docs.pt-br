@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: ab56332617fece8e80429f82000880012bf85b41
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: a2435b30b7d5b468fca6c55d295c87b9a0d20652
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73022403"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "78292927"
 ---
 # <a name="xamarinios-api-design"></a>Design de API do Xamarin. iOS
 
@@ -64,7 +64,7 @@ Esses são alguns dos princípios de design para as associações do Xamarin. iO
 - Tipos C# nativos:
 
   - [`NSString` se torna `string`](~/ios/internals/api-design/nsstring.md)
-  - Ativar `int` e `uint` parâmetros que devem ter sido enumerados em C# enumerações e C# enumerações com atributos de`[Flags]`
+  - Ativar `int` e `uint` parâmetros que devem ter sido enumerados em C# enumerações e C# enumerações com atributos de `[Flags]`
   - Em vez de objetos `NSArray` de tipo neutro, expõem matrizes como matrizes fortemente tipadas.
   - Para eventos e notificações, dê aos usuários uma opção entre:
 
@@ -74,7 +74,7 @@ Esses são alguns dos princípios de design para as associações do Xamarin. iO
 - Suporte ao padrão delegado Objective-C:
 
   - C#sistema de eventos
-  - Expor C# delegados (lambdas, métodos anônimos e`System.Delegate`) para APIs de Objective-C como blocos
+  - Expor C# delegados (lambdas, métodos anônimos e `System.Delegate`) para APIs de Objective-C como blocos
 
 ### <a name="assemblies"></a>Assemblies
 
@@ -87,15 +87,15 @@ O xamarin. iOS inclui vários assemblies que constituem o *perfil do Xamarin. Io
 O namespace [ObjCRuntime](xref:ObjCRuntime) permite aos desenvolvedores ligar os mundos entre C# o e o Objective-C.
 Essa é uma nova associação, projetada especificamente para o iOS, com base na experiência do Cocoa # e do GTK #.
 
-#### <a name="foundation"></a>Fundamental
+#### <a name="foundation"></a>Foundation
 
 O namespace [Foundation](xref:Foundation) fornece os tipos de dados básicos projetados para interoperar com a estrutura objetiva-c Foundation que faz parte do IOS e é a base para a programação orientada a objeto em Objective-c.
 
-O Xamarin. iOS é C# espelhado na hierarquia de classes de Objective-C. Por exemplo, a classe base Objective-C [NSObject](https://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSObject_Class/Reference/Reference.html) é utilizável C# de via [Foundation. NSObject](xref:Foundation.NSObject).
+O Xamarin. iOS é C# espelhado na hierarquia de classes de Objective-C. Por exemplo, a classe base Objective-C NSObject é utilizável C# de via [Foundation. NSObject](xref:Foundation.NSObject).
 
 Embora esse namespace forneça associações para os tipos base Objective-C, em alguns casos, mapeamos os tipos subjacentes para tipos .NET. Por exemplo:
 
-- Em vez de lidar [com NSString](https://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/Reference/NSString.html) e [NSArray](https://developer.apple.com/library/ios/#documentation/Cocoa/Reference/Foundation/Classes/NSArray_Class/NSArray.html), o tempo de execução C#expõe isso como [cadeia de caracteres](xref:System.String)s e [matrizes](xref:System.Array)com rigidez de tipos em toda a API.
+- Em vez de lidar com NSString [e NSArray](https://developer.apple.com/library/ios/#documentation/Cocoa/Reference/Foundation/Classes/NSArray_Class/NSArray.html), o tempo de execução C#expõe isso como [cadeia de caracteres](xref:System.String)s e [matrizes](xref:System.Array)com rigidez de tipos em toda a API.
 
 - Várias APIs auxiliares são expostas aqui para permitir que os desenvolvedores associem APIs Objective-C de terceiros, outras APIs do iOS ou APIs que atualmente não estão associadas ao Xamarin. iOS.
 
@@ -202,7 +202,7 @@ C#os delegados são fornecidos para operações comuns. Consulte a seção [dele
 
 #### <a name="opengles"></a>OpenGLES
 
-Para OpenGLs, distribuímos uma [versão modificada](xref:OpenTK) da API do [OpenTK](http://www.opentk.com/) , uma ligação orientada a objeto para OpenGL que foi modificada para usar tipos de dados e estruturas do CoreGraphics, bem como apenas expor a funcionalidade que está disponível no Ios.
+Para OpenGLs, distribuímos uma [versão modificada](xref:OpenTK) da API do [OpenTK](https://opentk.net/) , uma ligação orientada a objeto para OpenGL que foi modificada para usar tipos de dados e estruturas do CoreGraphics, bem como apenas expor a funcionalidade que está disponível no Ios.
 
 A funcionalidade do OpenGLs 1,1 está disponível por meio do [tipo ES11.gl](xref:OpenTK.Graphics.ES11.GL).
 
@@ -236,11 +236,11 @@ UIView [] GetViews ();
 
 Há alguns métodos expostos em `NSArray`, para os casos de canto em que você talvez queira usar um `NSArray` diretamente, mas seu uso é desencorajado na associação de API.
 
-Além disso, na **API clássica** em vez de expor `CGRect`, `CGPoint` e `CGSize` da API CoreGraphics, substituímos aquelas pelas implementações `System.Drawing` `RectangleF`, `PointF` e `SizeF` como ajudaram os desenvolvedores a preservar código OpenGL existente que usa OpenTK. Ao usar o novo **API unificada**de 64 bits, a API CoreGraphics deve ser usada.
+Além disso, na **API clássica** em vez de expor `CGRect`, `CGPoint` e `CGSize` da API CoreGraphics, substituímos aqueles pelas implementações `System.Drawing` `RectangleF`, `PointF` e `SizeF`, pois eles ajudarão os desenvolvedores a preservar o código OpenGL existente que usa OpenTK. Ao usar o novo **API unificada**de 64 bits, a API CoreGraphics deve ser usada.
 
 #### <a name="inheritance"></a>Herança
 
-O design de API do Xamarin. iOS permite aos desenvolvedores estender os tipos de Objective-C nativos da mesma forma que C# eles estendem um tipo, usando a palavra-chave "override" em uma classe derivada, bem como encadeando a implementação de base C# usando a "base" chaves.
+O design de API do Xamarin. iOS permite que os desenvolvedores estendam tipos de Objective-C nativos da mesma C# forma que estendem um tipo, usando a palavra-chave "override" em uma classe derivada, bem como encadeando a implementação de C# base usando a palavra-chave "base".
 
 Esse design permite que os desenvolvedores evitem lidar com seletores Objective-C como parte de seu processo de desenvolvimento, pois todo o sistema Objective-C já está encapsulado dentro das bibliotecas Xamarin. iOS.
 
@@ -257,7 +257,7 @@ public partial class void MyView : UIView {
 }
 ```
 
-#### <a name="delegates"></a>Delegados
+#### <a name="delegates"></a>Delega
 
 Objective-C C# e tem significados diferentes para o delegado de palavra em cada idioma.
 
@@ -279,15 +279,15 @@ No Xamarin. iOS, são oferecidos três mecanismos mutuamente exclusivos para ass
 2. [Fortemente tipado por meio de uma propriedade `Delegate`](#strongly-typed-via-a-delegate-property)
 3. [Tipo flexível por meio de uma propriedade `WeakDelegate`](#loosely-typed-via-the-weakdelegate-property)
 
-Por exemplo, considere a classe [UIWebView](https://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebView_Class/Reference/Reference.html) . Isso é expedido para uma instância [UIWebViewDelegate](https://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html) , que é atribuída à propriedade [delegar](https://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebView_Class/Reference/Reference.html#//apple_ref/occ/instp/UIWebView/delegate) .
+Por exemplo, considere a classe UIWebView. Isso é expedido para uma instância UIWebViewDelegate, que é atribuída à propriedade delegar.
 
 ##### <a name="via-events"></a>Por meio de eventos
 
-Para muitos tipos, o Xamarin. iOS criará automaticamente um delegado apropriado que encaminhará as chamadas C# de `UIWebViewDelegate` para eventos. Para o `UIWebView`:
+Para muitos tipos, o Xamarin. iOS criará automaticamente um delegado apropriado que encaminhará as chamadas C# de `UIWebViewDelegate` para eventos. Para `UIWebView`:
 
-- O método [webViewDidStartLoad](https://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html#//apple_ref/occ/intfm/UIWebViewDelegate/webViewDidStartLoad:) é mapeado para o evento [UIWebView. LoadStarted](xref:UIKit.UIWebView.LoadStarted) .
-- O método [webViewDidFinishLoad](https://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html#//apple_ref/occ/intfm/UIWebViewDelegate/webViewDidFinishLoad:) é mapeado para o evento [UIWebView. loadfinalized](xref:UIKit.UIWebView.LoadFinished) .
-- O método [WebView: didFailLoadWithError](https://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html#//apple_ref/occ/intfm/UIWebViewDelegate/webView:didFailLoadWithError:) é mapeado para o evento [UIWebView. LoadError](xref:UIKit.UIWebView.LoadError) .
+- O método webViewDidStartLoad é mapeado para o evento [UIWebView. LoadStarted](xref:UIKit.UIWebView.LoadStarted) .
+- O método webViewDidFinishLoad é mapeado para o evento [UIWebView. Loadfinalized](xref:UIKit.UIWebView.LoadFinished) .
+- O método WebView: didFailLoadWithError é mapeado para o evento [UIWebView. LoadError](xref:UIKit.UIWebView.LoadError) .
 
 Por exemplo, esse programa simples registra os horários de início e término ao carregar uma exibição da Web:
 
@@ -573,7 +573,7 @@ Em seguida, para carregar o ViewController de um arquivo NIB, faça o seguinte:
 var controller = new MyViewController ("HelloWorld", NSBundle.MainBundle, this);
 ```
 
-Isso carrega a interface do usuário do NIB. Agora, para acessar as saídas, é necessário informar ao tempo de execução que queremos acessá-las. Para fazer isso, a subclasse `UIViewController` precisa declarar as propriedades e anotá-las com o atributo [Connect]. Assim:
+Isso carrega a interface do usuário do NIB. Agora, para acessar as saídas, é necessário informar ao tempo de execução que queremos acessá-las. Para fazer isso, a subclasse `UIViewController` precisa declarar as propriedades e anotá-las com o atributo [Connect]. Dessa forma:
 
 ```csharp
 [Connect]
@@ -645,7 +645,7 @@ Esse construtor é usado para inicializar a instância, mas impede que o código
 public Foo (NSCoder coder)
 ```
 
-Esse construtor é fornecido para os casos em que o objeto está sendo inicializado a partir de uma instância de NSCoding. Para obter mais informações, consulte [Guia de programação de arquivos e serialização](https://developer.apple.com/mac/library/documentation/Cocoa/Conceptual/Archiving/index.html#//apple_ref/doc/uid/10000047i) da Apple.
+Esse construtor é fornecido para os casos em que o objeto está sendo inicializado a partir de uma instância de NSCoding.
 
 #### <a name="exceptions"></a>Exceções
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 07/11/2018
-ms.openlocfilehash: a8dfd267fe9f5f838927fc216d53c2475398ed16
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 0619488199c202e1877e4cfa60d622ef247e2b3f
+ms.sourcegitcommit: 24883be72e485e5311dd0eb91f9a22f78eeec11a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73022109"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "78292929"
 ---
 # <a name="buttons-in-xamarinios"></a>Botões no Xamarin. iOS
 
@@ -69,7 +69,7 @@ Um `UIButton` pode ser criado com apenas algumas linhas de código.
 Para responder a um toque de botão, forneça um manipulador para o evento de `TouchUpInside` do botão:
 
 ```csharp
-button.TouchUpInside += (sender, e) => {
+myButton.TouchUpInside += (sender, e) => {
     DoSomething();
 };
 ```
@@ -91,13 +91,13 @@ os controles de `UIButton` podem existir em vários Estados diferentes, cada um 
 
 > [!NOTE]
 > Para obter uma lista completa de todos os valores de `UIControlState`, dê uma olhada na [`UIKit.UIControlState enumeration`](xref:UIKit.UIControlState)
-> sobre.
+> online.
 
 Por exemplo, para definir a cor do título e a cor da sombra para `UIControlState.Normal`:
 
 ```csharp
-button.SetTitleColor(UIColor.White, UIControlState.Normal);
-button.SetTitleShadowColor(UIColor.Black, UIControlState.Normal);
+myButton.SetTitleColor(UIColor.White, UIControlState.Normal);
+myButton.SetTitleShadowColor(UIColor.Black, UIControlState.Normal);
 ```
 
 O código a seguir define o título do botão para uma cadeia de caracteres (estilizada) atribuída para `UIControlState.Normal` e `UIControlState.Highlighted`:
@@ -115,9 +115,9 @@ myButton.SetAttributedTitle(highlightedAttributedTitle, UIControlState.Highlight
 Os botões com um `UIButtonType` de `Custom` não têm estilos padrão. No entanto, é possível configurar a aparência do botão definindo uma imagem para seus Estados diferentes:
 
 ```csharp
-button4.SetImage (UIImage.FromBundle ("Buttons/MagicWand.png"), UIControlState.Normal);
-button4.SetImage (UIImage.FromBundle ("Buttons/MagicWand_Highlight.png"), UIControlState.Highlighted);
-button4.SetImage (UIImage.FromBundle ("Buttons/MagicWand_On.png"), UIControlState.Selected);
+myButton.SetImage (UIImage.FromBundle ("Buttons/MagicWand.png"), UIControlState.Normal);
+myButton.SetImage (UIImage.FromBundle ("Buttons/MagicWand_Highlight.png"), UIControlState.Highlighted);
+myButton.SetImage (UIImage.FromBundle ("Buttons/MagicWand_On.png"), UIControlState.Selected);
 ```
 
 Dependendo se o usuário estiver tocando no botão ou não, ele será renderizado como uma das imagens a seguir (`UIControlState.Normal`, `UIControlState.Highlighted` e `UIControlState.Selected` Estados, respectivamente):

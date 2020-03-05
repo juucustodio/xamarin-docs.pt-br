@@ -6,13 +6,13 @@ ms.assetid: 20DB2C57-CE3A-4D91-80DC-73AE361A3CB0
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 12/17/2019
-ms.openlocfilehash: 7d1183bf0c741b5a7ca02b43c4edb0c640ee1ac2
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.date: 02/27/2019
+ms.openlocfilehash: 154d039e95ccc2de28e09a7162a32a19f8f84656
+ms.sourcegitcommit: 5d22f37dfc358678df52a4d17c57261056a72cb7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75488212"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "78291557"
 ---
 # <a name="xamarinforms-carouselview-data"></a>Dados de CarouselView do Xamarin. Forms
 
@@ -98,7 +98,7 @@ carouselView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
 Neste exemplo, os dados da propriedade [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) são associados à propriedade `Monkeys` do ViewModel conectado.
 
 > [!NOTE]
-> Associações compiladas podem ser habilitadas para melhorar o desempenho de vinculação de dados em aplicativos Xamarin. Forms. Para saber mais, confira [Associações compiladas](~/xamarin-forms/app-fundamentals/data-binding/compiled-bindings.md).
+> Associações compiladas podem ser habilitadas para melhorar o desempenho de vinculação de dados em aplicativos Xamarin. Forms. Para obter mais informações, confira [Associações compiladas do Xamarin.Forms](~/xamarin-forms/app-fundamentals/data-binding/compiled-bindings.md).
 
 Para obter mais informações sobre associação de dados, confira [Associação de Dados do Xamarin.Forms](~/xamarin-forms/app-fundamentals/data-binding/index.md).
 
@@ -264,29 +264,29 @@ Os indicadores, que representam o número de itens e a posição atual em uma `C
 
 ```xaml
 <StackLayout>
-    <CarouselView x:Name="carouselView"
-                  ItemsSource="{Binding Monkeys}">
+    <CarouselView ItemsSource="{Binding Monkeys}"
+                  IndicatorView="indicatorView">
         <CarouselView.ItemTemplate>
             <!-- DataTemplate that defines item appearance -->
         </CarouselView.ItemTemplate>
     </CarouselView>
-    <IndicatorView ItemsSourceBy="carouselView"
+    <IndicatorView x:Name="indicatorView"
                    IndicatorColor="LightGray"
                    SelectedIndicatorColor="DarkGray"
                    HorizontalOptions="Center" />
 </StackLayout>
 ```
 
-Neste exemplo, a `IndicatorView` é renderizada abaixo da `CarouselView`, com um indicador para cada item na `CarouselView`. O `IndicatorView` é populado com dados definindo a propriedade `ItemsSourceBy` para o objeto `CarouselView`. Cada indicador é um círculo cinza claro, enquanto o indicador que representa o item atual no `CarouselView` é cinza escuro:
+Neste exemplo, a `IndicatorView` é renderizada abaixo da `CarouselView`, com um indicador para cada item na `CarouselView`. O `IndicatorView` é populado com dados definindo a propriedade `CarouselView.IndicatorView` para o objeto `IndicatorView`. Cada indicador é um círculo cinza claro, enquanto o indicador que representa o item atual no `CarouselView` é cinza escuro:
 
 [![Captura de tela de um CarouselView e IndicatorView, no iOS e no Android](populate-data-images/indicators.png "Círculos de IndicatorView")](populate-data-images/indicators-large.png#lightbox "Círculos de IndicatorView")
 
 > [!IMPORTANT]
-> Definir a propriedade `ItemsSourceBy` resulta na associação de propriedade `IndicatorView.Position` à propriedade `CarouselView.Position` e a propriedade `IndicatorView.ItemsSource` associando à propriedade `CarouselView.ItemsSource`.
+> Definir a propriedade `CarouselView.IndicatorView` resulta na associação de propriedade `IndicatorView.Position` à propriedade `CarouselView.Position` e a propriedade `IndicatorView.ItemsSource` associando à propriedade `CarouselView.ItemsSource`.
 
 Para obter mais informações sobre indicadores, consulte [Xamarin. Forms IndicatorView](~/xamarin-forms/user-interface/indicatorview.md).
 
-## <a name="pull-to-refresh"></a>Puxar para atualizar
+## <a name="pull-to-refresh"></a>Efetuar pull para atualizar
 
 o [`CarouselView`](xref:Xamarin.Forms.CarouselView) dá suporte à funcionalidade de pull para atualizar por meio do `RefreshView`, que permite que os dados sejam exibidos para serem atualizados ao puxar os itens. O `RefreshView` é um controle de contêiner que fornece a funcionalidade de pull para atualizar para seu filho, desde que o filho ofereça suporte a conteúdo rolável. Portanto, o pull para a atualização é implementado para um `CarouselView` definindo-o como o filho de um `RefreshView`:
 
@@ -381,6 +381,6 @@ void OnCollectionViewRemainingItemsThresholdReached(object sender, EventArgs e)
 - [CarouselView (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
 - [IndicatorView Xamarin. Forms](~/xamarin-forms/user-interface/indicatorview.md)
 - [RefreshView Xamarin. Forms](~/xamarin-forms/user-interface/refreshview.md)
-- [Associação de dados do Xamarin. Forms](~/xamarin-forms/app-fundamentals/data-binding/index.md)
+- [Associação de dados do Xamarin.Forms](~/xamarin-forms/app-fundamentals/data-binding/index.md)
 - [Modelos de dados do Xamarin. Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)
 - [Criar um DataTemplateSelector Xamarin. Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md)

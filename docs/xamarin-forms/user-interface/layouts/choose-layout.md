@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/21/2018
-ms.openlocfilehash: 161da8948f356fef997a411855598bc99d2f49b7
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: d029e679400b9523df8e03d509230849fa0c96c4
+ms.sourcegitcommit: 9ae537efc106f56aeec562773004c6f708704ae9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "69893993"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78291480"
 ---
 # <a name="choose-a-xamarinforms-layout"></a>Escolha um layout do Xamarin. Forms
 
@@ -97,7 +97,7 @@ O XAML a seguir mostra como criar um [`Grid`](xref:Xamarin.Forms.Grid) com duas 
         <ColumnDefinition />
     </Grid.ColumnDefinitions>    
     <Label Text="Column 0, Row 0"
-           Width="200" />
+           WidthRequest="200" />
     <Label Grid.Column="1"
            Text="Column 1, Row 0" />
     <Label Grid.Row="1"
@@ -113,7 +113,7 @@ Neste exemplo, o dimensionamento funciona da seguinte maneira:
 - Cada linha tem uma altura explícita de unidades independentes de dispositivo 50.
 - A largura da primeira coluna é definida como [`Auto`](xref:Xamarin.Forms.GridLength.Auto)e, portanto, é tão larga quanto a necessária para seus filhos. Nesse caso, são 200 unidades independentes de dispositivo de largura para acomodar a largura da primeira [`Label`](xref:Xamarin.Forms.Label).
 
-O espaço pode ser distribuído em uma coluna ou linha usando o dimensionamento automático, o que permite que colunas e linhas se ajustem ao seu conteúdo. Isso é feito definindo a altura de um [`RowDefinition`](xref:Xamarin.Forms.RowDefinition)ou a largura de um [`ColumnDefinition`](xref:Xamarin.Forms.ColumnDefinition), para [`Auto`](xref:Xamarin.Forms.GridLength.Auto). O dimensionamento proporcional também pode ser usado para distribuir o espaço disponível entre as linhas e colunas da grade por proporções ponderadas. Isso é feito definindo a altura de um `RowDefinition` ou a largura de um `ColumnDefinition`, com um valor que usa o operador de `*`.
+O espaço pode ser distribuído em uma coluna ou linha usando o dimensionamento automático, o que permite que colunas e linhas se ajustem ao seu conteúdo. Isso é feito definindo a altura de um [`RowDefinition`](xref:Xamarin.Forms.RowDefinition)ou a largura de um [`ColumnDefinition`](xref:Xamarin.Forms.ColumnDefinition), para [`Auto`](xref:Xamarin.Forms.GridLength.Auto). O dimensionamento proporcional também pode ser usado para distribuir o espaço disponível entre as linhas e colunas da grade por proporções ponderadas. Isso é feito definindo a altura de um `RowDefinition`ou a largura de um `ColumnDefinition`, com um valor que usa o operador de `*`.
 
 > [!CAUTION]
 > Tente garantir que o menor número possível de linhas e colunas seja definido como [`Auto`](xref:Xamarin.Forms.GridLength.Auto) tamanho. Cada linha ou coluna dimensionada automaticamente fará o mecanismo de layout realizar cálculos de layout adicionais. Em vez disso, use linhas e colunas de tamanho fixo, se possível. Como alternativa, defina linhas e colunas para ocupar uma quantidade proporcional de espaço com o valor de enumeração [`GridUnitType.Star`](xref:Xamarin.Forms.GridUnitType.Star) .

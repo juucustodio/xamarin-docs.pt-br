@@ -6,12 +6,12 @@ ms.assetid: 442FC40A-84DD-A218-0D15-EAD86594B6D7
 author: davidortinau
 ms.author: daortin
 ms.date: 01/28/2016
-ms.openlocfilehash: b3444b962a032ceaeeba36f63ad975b3d80a9f14
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 551e9b1fc6298ddc2cf64e2e9ef60d90f6c1abac
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73016922"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "78291543"
 ---
 # <a name="building-cross-platform-applications"></a>Compilando aplicativos multiplataforma
 
@@ -19,7 +19,7 @@ Há duas opções para compartilhar código entre aplicativos móveis de platafo
 
 <a name="Sections" />
 
- [Visão Geral](~/cross-platform/app-fundamentals/building-cross-platform-applications/overview.md)
+ [Visão geral](~/cross-platform/app-fundamentals/building-cross-platform-applications/overview.md)
 
  [Parte 1 – noções básicas sobre a plataforma do Xamarin Mobile](~/cross-platform/app-fundamentals/building-cross-platform-applications/understanding-the-xamarin-mobile-platform.md)
 
@@ -35,7 +35,7 @@ Há duas opções para compartilhar código entre aplicativos móveis de platafo
 
  <a name="Cross-Platform_Mobile_Application_Case_Studies" />
 
-## <a name="case-studies"></a>Estudos de caso
+## <a name="case-studies"></a>Estudos de Caso
 
 Os princípios descritos neste documento são colocados em prática na *tarefa*de aplicativo de exemplo, bem como [aplicativos pré-criados](https://xamarin.com/prebuilt) como o [Xamarin CRM](https://xamarin.com/prebuilt/#xamarincrm).
 
@@ -67,4 +67,3 @@ Por fim, ele aborda brevemente os testes e fornece referências a um estudo de c
 - [Aplicativo de exemplo de tarefa (github)](https://docs.microsoft.com/samples/xamarin/mobile-samples/taskyportable/)
 - [Desenvolvimento de aplicativo móvel do xamarin: multiplataforma C# e fundamentos do Xamarin. Forms (Amazon)](https://www.amazon.com/Xamarin-Mobile-Application-Development-Cross-Platform/dp/1484202155/)
 - [Desenvolvimento móvel com C# por Greg Shackles (o ' Reilly)](https://shop.oreilly.com/product/0636920024002.do)
-- [Desenvolvimento móvel de plataforma cruzada profissional C# em por Scott Olson, John Hunter, Ben Horgen, Kenny goers (Wrox)](https://www.wrox.com/WileyCDA/WroxTitle/Professional-Cross-Platform-Mobile-Development-in-C-.productCd-1118157702.html)

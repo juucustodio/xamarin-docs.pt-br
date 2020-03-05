@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
 ms.openlocfilehash: 4569240d7419254bad41957d30b4ad652c7a3f4e
-ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2020
+ms.lasthandoff: 01/24/2020
 ms.locfileid: "75727934"
 ---
 # <a name="xamarinforms-datapages"></a>Páginas de DataPages do Xamarin. Forms
@@ -35,7 +35,7 @@ As fontes de dados e as páginas de dados associadas permitem aos desenvolvedore
 
 As páginas de DataPage são adicionadas a um aplicativo Xamarin. Forms, incluindo o pacote NuGet **Xamarin. Forms. Pages** .
 
-### <a name="data-sources"></a>Fontes de Dados
+### <a name="data-sources"></a>Fontes de dados
 
 A visualização tem algumas fontes de dados predefinidas disponíveis para uso:
 

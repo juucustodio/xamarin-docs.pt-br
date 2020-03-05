@@ -7,18 +7,18 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/01/2018
-ms.openlocfilehash: c913f18e34f93e9ab7adc09109ea5c9e9e5067a2
-ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
+ms.openlocfilehash: 7413fbe3f08988cfdb7c7b4e5237539aca250772
+ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75728142"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "78292308"
 ---
 # <a name="viewpager-with-views"></a>ViewPager com exibição
 
 _ViewPager é um Gerenciador de layout que permite implementar a navegação Gestural. A navegação Gestural permite que o usuário passe o dedo para a esquerda e para a direita para percorrer as páginas de dados. Este guia explica como implementar uma interface do usuário do swipeable com ViewPager e PagerTabStrip, usando exibições como páginas de dados (um guia subsequente aborda como usar fragmentos para as páginas)._
 
-## <a name="overview"></a>{1&gt;Visão Geral&lt;1}
+## <a name="overview"></a>Visão geral
 
 Este guia é uma explicação que fornece uma demonstração passo a passo sobre como usar `ViewPager` para implementar uma galeria de imagens de árvores decídua e verde. Nesse aplicativo, o usuário passa o dedo para a esquerda e para a direita por meio de um "catálogo de árvore" para exibir imagens de árvore. Na parte superior de cada página do catálogo, o nome da árvore é listado em uma`PagerTabStrip`e uma imagem da árvore é exibida em uma `ImageView`. Um adaptador é usado para a interface do `ViewPager` para o modelo de dados subjacente. Este aplicativo implementa um adaptador derivado de `PagerAdapter`. 
 
@@ -62,18 +62,13 @@ Abra **Resources/layout/Main. axml** e substitua seu conteúdo pelo seguinte XML
     android:layout_height="match_parent" >
 
 </android.support.v4.view.ViewPager>
+```
 
-```csharp
-This XML defines a `ViewPager` that occupies the entire screen. Note that
-you must use the fully-qualified name **android.support.v4.view.ViewPager**
-because `ViewPager` is packaged in a support library. `ViewPager` is
-available only from 
-[Android Support Library v4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/);
-it is not available in the Android SDK. 
+Esse XML define um `ViewPager` que ocupa a tela inteira. Observe que você deve usar o nome totalmente qualificado **Android. support. v4. View. ViewPager** porque `ViewPager` é empacotado em uma biblioteca de suporte. `ViewPager` está disponível somente na [biblioteca de suporte do Android v4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/); Ele não está disponível na SDK do Android. 
 
-## Set up ViewPager
+## <a name="set-up-viewpager"></a>Configurar o ViewPager
 
-Edit **MainActivity.cs** and add the following `using` statement:
+Edite **MainActivity.cs** e adicione a seguinte instrução de `using`:
 
 ```csharp
 using Android.Support.V4.View;
@@ -91,7 +86,7 @@ protected override void OnCreate(Bundle bundle)
 }
 ```
 
-Este código faz o seguinte:
+O código faz o seguinte:
 
 1. Define a exibição do recurso de layout **Main. axml** .
 
@@ -207,7 +202,7 @@ public override Java.Lang.Object InstantiateItem (View container, int position)
 }
 ```
 
-Este código faz o seguinte:
+O código faz o seguinte:
 
 1. Cria uma instância de um novo `ImageView` para exibir a imagem de árvore na posição especificada. O `MainActivity` do aplicativo é o contexto que será passado para o construtor de `ImageView`.
 
@@ -234,7 +229,7 @@ public override void DestroyItem(View container, int position, Java.Lang.Object 
 }
 ```
 
-Este código faz o seguinte:
+O código faz o seguinte:
 
 1. Converte o `View` de contêiner passado em uma referência de `ViewPager`.
 
@@ -327,6 +322,6 @@ Observe que o sublinhado é removido quando você converte para `PagerTitleStrip
 
 Este tutorial forneceu um exemplo passo a passo de como criar um aplicativo básico baseado em `ViewPager`sem usar `Fragment`s. Ele apresentou uma fonte de dados de exemplo contendo imagens e cadeias de caracteres de legendas, um layout `ViewPager` para exibir as imagens e uma subclasse de `PagerAdapter` que conecta a `ViewPager` à fonte de dados. Para ajudar o usuário a navegar pelo conjunto de dados, foram incluídas instruções que explicam como adicionar um `PagerTabStrip` ou `PagerTitleStrip` para exibir a legenda da imagem na parte superior de cada página. 
 
-## <a name="related-links"></a>Links Relacionados
+## <a name="related-links"></a>Links relacionados
 
 - [TreePager (exemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/userinterface-treepager)

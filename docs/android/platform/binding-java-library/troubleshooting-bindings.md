@@ -7,18 +7,18 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/01/2018
-ms.openlocfilehash: 2eea51764e0e0f13c1a1a91db664872a67420d33
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 0c273797d7512f062260e49e0f71fdd1132f037b
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73020551"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "78292679"
 ---
 # <a name="troubleshooting-bindings"></a>Solução de problemas de associação
 
 _Este artigo resume os erros comuns de servidor que podem ocorrer ao gerar associações, juntamente com possíveis causas e formas sugeridas de resolvê-las._
 
-## <a name="overview"></a>Visão Geral
+## <a name="overview"></a>Visão geral
 
 Associar um arquivo de biblioteca do Android (um **. aar** ou um **. jar**) raramente é um sórdida direto; Geralmente, é necessário um esforço adicional para atenuar os problemas resultantes das diferenças entre Java e .NET.
 Esses problemas impedirão o Xamarin. Android de ligar a biblioteca do Android e apresentarem-se como mensagens de erro no log de compilação. Este guia fornecerá algumas dicas para solucionar problemas, listar alguns dos problemas/cenários mais comuns e fornecer soluções possíveis para ligar com êxito a biblioteca do Android.
@@ -52,7 +52,7 @@ Depois de descompilar a biblioteca do Android, examine o código-fonte. Em geral
   - O nome da classe inclui um **$** , ou seja, **uma classe $.**
   - O nome da classe está totalmente comprometido com caracteres minúsculos, ou seja, **a. Class**      
 
-- **`import` instruções para bibliotecas não referenciadas** &ndash; identificar a biblioteca não referenciada e adicionar essas dependências ao projeto de associação Xamarin. Android com uma **ação de compilação** de **ReferenceJar** ou **EmbedddedReferenceJar** .
+- **`import` instruções para bibliotecas não referenciadas** &ndash; identificar a biblioteca não referenciada e adicionar essas dependências ao projeto de associação Xamarin. Android com uma **ação de compilação** de **ReferenceJar** ou **EmbedddedReferenceJar**.
 
 > [!NOTE]
 > A descompilação de uma biblioteca Java pode ser proibida ou sujeita a restrições legais com base em leis locais ou na licença sob a qual a biblioteca Java foi publicada. Se necessário, inscreva os serviços de um profissional legal antes de tentar descompilar uma biblioteca Java e inspecionar o código-fonte.
@@ -65,7 +65,7 @@ Como parte da criação de um projeto de associação, o Xamarin. Android irá g
 
 Esse arquivo fornece uma lista de todas as APIs Java que o Xamarin. Android está tentando associar. O conteúdo desse arquivo pode ajudar a identificar quaisquer tipos ou métodos ausentes, associação duplicada. Embora a inspeção desse arquivo seja entediante e demorada, ela pode fornecer pistas sobre o que pode estar causando problemas de ligação. Por exemplo, o **API. xml** pode revelar que uma propriedade está retornando um tipo inadequado ou que há dois tipos que compartilham o mesmo nome gerenciado.
 
-## <a name="known-issues"></a>Problemas Conhecidos
+## <a name="known-issues"></a>Problemas conhecidos
 
 Esta seção listará algumas das mensagens de erro ou sintomas comuns que ocorrem ao tentar associar uma biblioteca do Android.
 
@@ -157,7 +157,7 @@ public interface MediationInterstitialListener {
 }
 ```
 
-Isso é por design, de forma que nomes longos em tipos de argumento de evento sejam evitados. Para evitar esses conflitos, é necessária uma transformação de metadados. Edite [**Transforms\Metadata.xml**](https://github.com/xamarin/monodroid-samples/blob/master/AdMob/AdMob/Transforms/Metadata.xml) e adicione um atributo de `argsType` em qualquer uma das interfaces (ou no método de interface):
+Isso é por design, de forma que nomes longos em tipos de argumento de evento sejam evitados. Para evitar esses conflitos, é necessária uma transformação de metadados. Edite **Transforms\Metadata.xml** e adicione um atributo de `argsType` em qualquer uma das interfaces (ou no método de interface):
 
 ```xml
 <attr path="/api/package[@name='com.google.ads.mediation']/
@@ -204,7 +204,7 @@ Esse é um problema que ocorre com a associação de métodos Java com tipos de 
   }
   ```
 
-- Remova a covariância do código gerado C# . Isso envolve adicionar a seguinte transformação a **Transforms\Metadata.xml** , que fará com que C# o código gerado tenha um tipo de retorno de`Java.Lang.Object`:
+- Remova a covariância do código gerado C# . Isso envolve adicionar a seguinte transformação a **Transforms\Metadata.xml** , que fará com que C# o código gerado tenha um tipo de retorno de `Java.Lang.Object`:
 
   ```xml
   <attr

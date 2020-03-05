@@ -1,5 +1,5 @@
 ---
-title: Recursos de pirulito
+title: Recursos do Lollipop
 description: Este artigo fornece uma visão geral de alto nível dos novos recursos introduzidos no Android 5,0 (pirulito). Esses recursos incluem um novo estilo de interface de usuário chamado tema material, bem como novos recursos de suporte, como animações, exibição de sombras e tonalidades desenháveis. O Android 5,0 também inclui notificações aprimoradas, dois novos widgets de interface do usuário, um novo agendador de trabalhos e uma série de novas APIs para melhorar os recursos de armazenamento, rede, conectividade e multimídia.
 ms.prod: xamarin
 ms.assetid: 1CE99CFE-FAAC-49FC-AEDC-1A21FC6E946E
@@ -7,18 +7,18 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: 104141d98cecb31cae17f4510f742387be4a3fb7
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 297c7806ce8a880d65c38ef0e4672e41fee5acfe
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73027249"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "78291470"
 ---
-# <a name="lollipop-features"></a>Recursos de pirulito
+# <a name="lollipop-features"></a>Recursos do Lollipop
 
 _Este artigo fornece uma visão geral de alto nível dos novos recursos introduzidos no Android 5,0 (pirulito). Esses recursos incluem um novo estilo de interface de usuário chamado tema material, bem como novos recursos de suporte, como animações, exibição de sombras e tonalidades desenháveis. O Android 5,0 também inclui notificações aprimoradas, dois novos widgets de interface do usuário, um novo agendador de trabalhos e uma série de novas APIs para melhorar os recursos de armazenamento, rede, conectividade e multimídia._
 
-## <a name="lollipop-overview"></a>Visão geral da pirulito
+## <a name="lollipop-overview"></a>Visão geral do Lollipop
 
 O Android 5,0 (pirulito) apresenta uma nova linguagem de design, *design de material*e com ti um suporte para a conversão de novos recursos para tornar os aplicativos mais fáceis e intuitivos de usar. Com o design de material, o Android 5,0 não apenas dá aos telefones Android um cara; Ele também fornece um novo conjunto de regras de design para tablets baseados em Android, computadores desktop, inspeções e TVs inteligentes. Essas regras de design enfatizam a simplicidade e o mínimo ao usar atributos tactile familiares (como indicações de superfície e de borda realísticas) para ajudar os usuários a entenderem a interface de forma rápida e intuitiva.
 
@@ -44,7 +44,7 @@ Além das melhorias da interface do usuário trazidas por meio do tema do materi
 
 O seguinte é necessário para usar os novos recursos do Android 5,0 em aplicativos baseados no Xamarin:
 
-- O **xamarin. android** &ndash; Xamarin. Android 4,20 ou posterior deve ser instalado e configurado com o Visual Studio ou Visual Studio para Mac. 
+- O **xamarin. android** &ndash; Xamarin. Android 4,20 ou posterior deve ser instalado e configurado com o Visual Studio ou Visual Studio para Mac.
 
 - **SDK do Android** &ndash; Android 5,0 (API 21) ou posterior deve ser instalado por meio do gerenciador de SDK do Android.
 
@@ -105,7 +105,7 @@ As notificações foram alteradas significativamente no Android 5,0:
 
 - Os **sons e a vibração são tratados de maneira diferente** &ndash; sons de notificação e vibraçãos agora são manipulados por `Notification.Builder` em vez de `Ringtone`, `MediaPlayer`e `Vibrator`.
 
-- **Novo esquema de cores** &ndash; de acordo com o tema do material, as notificações são renderizadas com texto escuro ao longo de planos de fundo brancos ou muito leves. Além disso, os canais alfa em ícones de notificação podem ser modificados pelo Android para coordenar com esquemas de cores do sistema. 
+- **Novo esquema de cores** &ndash; de acordo com o tema do material, as notificações são renderizadas com texto escuro ao longo de planos de fundo brancos ou muito leves. Além disso, os canais alfa em ícones de notificação podem ser modificados pelo Android para coordenar com esquemas de cores do sistema.
 
 - Notificações de **tela de bloqueio** &ndash; as notificações agora podem aparecer na tela de bloqueio do dispositivo.
 
@@ -113,7 +113,7 @@ As notificações foram alteradas significativamente no Android 5,0:
 
 Na maioria dos casos, portar a funcionalidade de notificação de aplicativo existente para Android 5,0 requer as seguintes etapas:
 
-1. Converta seu código para usar `Notification.Builder` (ou `NotificationsCompat.Builder`) para criar notificações. 
+1. Converta seu código para usar `Notification.Builder` (ou `NotificationsCompat.Builder`) para criar notificações.
 
 2. Verifique se os ativos de notificação existentes estão visíveis no novo esquema de cores do tema do material.
 
@@ -133,7 +133,7 @@ O novo tema de material do Android 5,0 traz alterações de varredura para a apa
 
 O Android 5,0 o sauda com a tela inicial mostrada à esquerda. A captura de tela do centro é a primeira telas da lista de aplicativos, e a captura de tela à direita é a de **configurações** . A especificação de [design de material](https://material.io/guidelines/material-design/introduction.html) do Google explica as regras de design subjacentes por trás do novo conceito de tema de material.
 
-O tema material inclui três tipos internos que você pode usar em seu aplicativo: o `Theme.Material` tema escuro (o padrão), o tema `Theme.Material.Light` e o tema `Theme.Material.Light.DarkActionBar`: 
+O tema material inclui três tipos internos que você pode usar em seu aplicativo: o `Theme.Material` tema escuro (o padrão), o tema `Theme.Material.Light` e o tema `Theme.Material.Light.DarkActionBar`:
 
 [![capturas de tela dos temas escuro, claro e DarkActionBar](lollipop-images/three-material-themes-sml.png)](lollipop-images/three-material-themes.png#lightbox)
 
@@ -343,7 +343,7 @@ O sistema de notificação no Android 5,0 foi atualizado significativamente com 
 
 ![Exemplo de uma notificação não expandida do Android 5,0](lollipop-images/expanded-notification-contracted.png)
 
-Quando um ícone grande é exibido em uma notificação (como mostrado no exemplo acima), o Android 5,0 apresenta o ícone pequeno como um selo sobre o ícone grande. 
+Quando um ícone grande é exibido em uma notificação (como mostrado no exemplo acima), o Android 5,0 apresenta o ícone pequeno como um selo sobre o ícone grande.
 
 No Android 5,0, as notificações também podem aparecer na tela de bloqueio do dispositivo.
 Por exemplo, aqui está uma captura de tela de exemplo de uma tela de bloqueio com uma única notificação:
@@ -352,7 +352,8 @@ Por exemplo, aqui está uma captura de tela de exemplo de uma tela de bloqueio c
 
 Os usuários podem tocar duas vezes em uma notificação na tela de bloqueio para desbloquear o dispositivo e ir até o aplicativo que originou essa notificação ou passar o dedo para ignorar a notificação. As notificações têm uma nova configuração de *visibilidade* que determina a quantidade de conteúdo que pode ser exibida na tela de bloqueio. Os usuários podem escolher se deseja permitir que conteúdo confidencial seja mostrado em notificações de tela de bloqueio.
 
-O Android 5,0 apresenta um novo formato de apresentação de notificação de alta prioridade chamado *heads-up*. As notificações de cabeça para cima deslizam para baixo na parte superior da tela por alguns segundos e revertem para a sombra da notificação na parte superior da tela. As notificações de cabeçotes possibilitam que a interface do usuário do sistema Coloque informações importantes na frente de usuários sem interromper a atividade em execução no momento. O exemplo a seguir ilustra uma notificação simples que é exibida na parte superior de um aplicativo:
+O Android 5,0 apresenta um novo formato de apresentação de notificação de alta prioridade chamado *heads-up*. As notificações de cabeça para cima deslizam para baixo na parte superior da tela por alguns segundos e revertem para a sombra da notificação na parte superior da tela. As notificações de cabeçotes possibilitam que a interface do usuário do sistema Coloque informações importantes na frente de usuários sem interromper a atividade em execução no momento.
+O exemplo a seguir ilustra uma notificação simples que é exibida na parte superior de um aplicativo:
 
 [![exemplo de uma notificação de cabeça para cima](lollipop-images/heads-up-notification-sml.png)](lollipop-images/heads-up-notification.png#lightbox)
 
@@ -473,4 +474,3 @@ Se você for novo no Xamarin Android Development, leia [instalação e instalaç
 - [Visualização do desenvolvedor do Android L](https://developer.android.com/preview/index.html)
 - [Obter o SDK do Android](https://developer.android.com/sdk/index.html#Other)
 - [Design de material](https://developer.android.com/preview/material/index.html)
-- [Princípios de design de material](http://static.googleusercontent.com/media/www.google.com/en/us/design/material-design.pdf)

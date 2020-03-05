@@ -6,16 +6,16 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/09/2018
-ms.openlocfilehash: 911f56026a1495099e81a542b30b280f26b6a9e1
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: da4884e7f1e3ec1ae8653ea8ec4247fce54a6565
+ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73025455"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "78292456"
 ---
 # <a name="permissions-in-xamarinandroid"></a>Permissões no Xamarin. Android
 
-## <a name="overview"></a>Visão Geral
+## <a name="overview"></a>Visão geral
 
 Os aplicativos Android são executados em sua própria área restrita e, por motivos de segurança, não têm acesso a determinados recursos do sistema ou hardware no dispositivo. O usuário deve conceder explicitamente permissão ao aplicativo para poder usar esses recursos. Por exemplo, um aplicativo não pode acessar o GPS em um dispositivo sem permissão explícita do usuário. O Android gerará um `Java.Lang.SecurityException` se um aplicativo tentar acessar um recurso protegido sem permissão.
 
@@ -29,7 +29,7 @@ As permissões são declaradas no **AndroidManifest. xml** pelo desenvolvedor do
 Os aplicativos Android devem verificar em tempo de execução para ver se eles têm permissão para acessar um recurso protegido. Se o aplicativo não tiver permissão, ele deverá fazer solicitações usando as novas APIs fornecidas pelo SDK do Android para que o usuário conceda as permissões. As permissões são divididas em duas categorias:
 
 - **As permissões normais** &ndash; são permissões que representam pouco risco de segurança à segurança ou privacidade do usuário. O Android 6,0 concederá automaticamente permissões normais no momento da instalação. Consulte a documentação do Android para obter uma [lista completa das permissões normais](https://developer.android.com/guide/topics/permissions/normal-permissions.html).
-- **Permissões perigosas** &ndash; em contraste com as permissões normais, permissões perigosas são aquelas que protegem a segurança ou a privacidade do usuário. Eles devem ser explicitamente concedidos pelo usuário. Enviar ou receber uma mensagem SMS é um exemplo de uma ação que requer uma permissão perigosa.
+- **Permissões perigosas** &ndash; em contraste com as permissões normais, permissões perigosas são aquelas que protegem a segurança ou a privacidade do usuário. Eles devem ser concedidos explicitamente pelo usuário. Enviar ou receber uma mensagem SMS é um exemplo de uma ação que requer uma permissão perigosa.
 
 > [!IMPORTANT]
 > A categoria à qual uma permissão pertence pode mudar ao longo do tempo.  É possível que uma permissão que foi categorizada como uma permissão "normal" possa ser elevada em níveis futuros de API para uma permissão perigosa.
@@ -40,7 +40,7 @@ Antes de solicitar uma ou mais permissões, é uma prática recomendada fornecer
 
 Todo o fluxo de trabalho de verificação e solicitação de permissões é conhecido como verificação de _permissões em tempo de execução_ e pode ser resumido no diagrama a seguir: 
 
-[gráfico de fluxo de verificação de permissão em tempo de execução![](permissions-images/02-permissions-workflow-sml.png)](permissions-images/02-permissions-workflow.png#lightbox)
+[gráfico de fluxo de verificação de permissão em tempo de execução ![](permissions-images/02-permissions-workflow-sml.png)](permissions-images/02-permissions-workflow.png#lightbox)
 
 A biblioteca de suporte do Android reporta algumas das novas APIs para obter permissões para versões mais antigas do Android. Essas APIs reportadas verificarão automaticamente a versão do Android no dispositivo, de modo que não é necessário executar uma verificação de nível de API a cada vez.  
 
@@ -75,7 +75,7 @@ As permissões são adicionadas ao **AndroidManifest. xml** com o elemento `uses
 
 <!-- markdownlint-disable MD001 -->
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 É possível declarar as permissões usando o suporte a ferramentas interno do Visual Studio:
 
@@ -91,7 +91,7 @@ As permissões são adicionadas ao **AndroidManifest. xml** com o elemento `uses
 
     [![de permissões de câmera de exemplo selecionadas](permissions-images/06-selected-permission-vs-sml.png)](permissions-images/06-selected-permission-vs.png#lightbox)
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
 É possível declarar as permissões usando o suporte de ferramenta interno do Visual Studio para Mac:
 

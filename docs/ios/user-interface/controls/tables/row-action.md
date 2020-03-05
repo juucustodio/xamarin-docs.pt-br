@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/25/2017
-ms.openlocfilehash: 542ae6696bae8fccfa6d5ed9842bce126760da37
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 8efa116a82ba021c2a723dc6ab636f54b6b5af71
+ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73021863"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "78292028"
 ---
 # <a name="working-with-row-actions-in-xamarinios"></a>Trabalhando com ações de linha no Xamarin. iOS
 
@@ -33,7 +33,7 @@ Há três etapas necessárias para implementar ações de passar o dedo com `UIS
 
 1. Substituir `GetLeadingSwipeActionsConfiguration` e/ou `GetTrailingSwipeActionsConfiguration` métodos. Esses métodos retornam um `UISwipeActionsConfiguration`.
 2. Crie uma instância do `UISwipeActionsConfiguration` a ser retornado. Essa classe usa uma matriz de `UIContextualAction`.
-3. Criará um `UIContextualAction`.
+3. Crie um `UIContextualAction`.
 
 Eles são explicados com mais detalhes nas seções a seguir.
 

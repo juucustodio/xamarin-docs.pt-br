@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: e2d459650c4e5ea38d5e54aef64cc3d7dcb5625c
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 0e283c9d9d1143f7cf4b0d2da0616e94d6ce5bce
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73029874"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "78292462"
 ---
 # <a name="introduction-to-opentk-in-xamarinmac"></a>Introdução ao OpenTK no Xamarin. Mac
 
@@ -20,9 +20,9 @@ O OpenTK (The Open Toolkit) é uma biblioteca avançada de baixo C# nível que f
 
 [![](opentk-images/intro01.png "An example app run")](opentk-images/intro01.png#lightbox)
 
-Neste artigo, abordaremos os conceitos básicos do OpenTK em um aplicativo Xamarin. Mac. É altamente recomendável que você trabalhe pelo artigo [Hello, Mac](~/mac/get-started/hello-mac.md) primeiro, especificamente a [introdução às seções Xcode e Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) e [ações](~/mac/get-started/hello-mac.md#outlets-and-actions) , pois ela aborda os principais conceitos e técnicas que usaremos em Este artigo.
+Neste artigo, abordaremos os conceitos básicos do OpenTK em um aplicativo Xamarin. Mac. É altamente recomendável que você trabalhe pelo artigo [Hello, Mac](~/mac/get-started/hello-mac.md) primeiro, especificamente a [introdução às seções Xcode e Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) e [ações](~/mac/get-started/hello-mac.md#outlets-and-actions) , pois ela aborda os principais conceitos e técnicas que usaremos neste artigo.
 
-Talvez você queira dar uma olhada na seção [ C# expondo classes/métodos para Objective-C](~/mac/internals/how-it-works.md) do documento [interno do Xamarin. Mac](~/mac/internals/how-it-works.md) também, explica os comandos`Register`e`Export`usados para conectar suas C# classes ao Objective-C objetos e elementos de interface do usuário.
+Talvez você queira dar uma olhada na seção [ C# expondo classes/métodos para Objective-C](~/mac/internals/how-it-works.md) do documento [interno do Xamarin. Mac](~/mac/internals/how-it-works.md) também, explica os comandos `Register` e `Export` usados para conectar suas C# classes a objetos Objective-C e elementos de interface do usuário.
 
 <a name="About_OpenTK" />
 
@@ -40,7 +40,7 @@ Como mencionado acima, OpenTK (The Open Toolkit) é uma biblioteca avançada de 
 
 O OpenTK pode ser usado para jogos, aplicativos científicos ou outros projetos que exigem gráficos 3D, áudio ou funcionalidade computacional.
 
-Para obter mais informações, consulte [o site do kit de ferramentas aberto](http://www.opentk.com) .
+Para obter mais informações, consulte [o site do kit de ferramentas aberto](https://opentk.net) .
 
 <a name="OpenTK_Quickstart" />
 
@@ -286,7 +286,7 @@ Normalmente, o código de renderização estará com uma chamada para `GL.Clear`
 
 ### <a name="running-the-game-view"></a>Executando a exibição do jogo
 
-Com todos os eventos necessários definem e a exibição do jogo anexada à janela principal do Mac do nosso aplicativo, somos lidos para executar a exibição do jogo e exibir nossos elementos gráficos. Use o código a seguir:
+Com todos os eventos necessários definem e a exibição do jogo anexada à janela principal do Mac do nosso aplicativo, somos lidos para executar a exibição do jogo e exibir nossos elementos gráficos. Use o seguinte código:
 
 ```csharp
 // Run the game at 60 updates per second
@@ -329,6 +329,6 @@ Este artigo deu uma olhada rápida no trabalho com o OpenTK em um aplicativo Xam
 - [MonoMacGameView (exemplo)](https://docs.microsoft.com/samples/xamarin/mac-samples/monomacgamewindow)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Trabalhando com o Windows](~/mac/user-interface/window.md)
-- [O kit de ferramentas aberto](http://www.opentk.com)
+- [O kit de ferramentas aberto](https://opentk.net)
 - [Diretrizes de interface humana do OS X](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
 - [Introdução ao Windows](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/WinPanel/Introduction.html#//apple_ref/doc/uid/10000031-SW1)

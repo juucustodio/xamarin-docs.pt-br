@@ -5,12 +5,12 @@ description: Este documento compara e contrasta o WPF para Xamarin. Forms. Ele a
 author: davidortinau
 ms.author: daortin
 ms.date: 04/26/2017
-ms.openlocfilehash: e87595c121f1117d055d812cb06c81ecba850c12
-ms.sourcegitcommit: 211fed94fb96127a3e158ae1ff5d7eb831a203d8
+ms.openlocfilehash: 9c69449f88f9c237b5075967c89ff7ff3b6fb57a
+ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75955651"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "78291869"
 ---
 # <a name="wpf-vs-xamarinforms-similarities--differences"></a>WPF versus Xamarin. Forms: semelhanças & diferenças
 
@@ -74,11 +74,11 @@ Para obter um exemplo completo, consulte [propriedades vinculáveis no Xamarin. 
 
 ### <a name="attached-properties"></a>Propriedades anexadas
 
-As propriedades anexadas são um subconjunto da propriedade vinculável e funcionam da mesma maneira que no WPF. A principal diferença é que o wrapper de propriedade é ommitted nesse caso e substituído por um conjunto de métodos get/set estáticos na classe proprietária. Consulte [Propriedades anexadas no Xamarin. Forms](~/xamarin-forms/xaml/attached-properties.md) para obter mais informações.
+As propriedades anexadas são um subconjunto da propriedade vinculável e funcionam da mesma maneira que no WPF. A principal diferença é que o wrapper de propriedade é omitido nesse caso e substituído por um conjunto de métodos get/set estáticos na classe proprietária. Consulte [Propriedades anexadas no Xamarin. Forms](~/xamarin-forms/xaml/attached-properties.md) para obter mais informações.
 
 ### <a name="using-the-binding-engine"></a>Usando o mecanismo de associação
 
-O processo para usar o mecanismo de associação é o mesmo que no WPF. Ele pode ser utilizado no code-behind criando um objeto `Binding` vinculado a um objeto de origem (qualquer tipo .NET) e um valor de propriedade opcional (se ommitted, ele trata o objeto de origem como a própria propriedade, assim como o WPF). Em seguida, você pode usar `SetBinding` em qualquer `BindableObject` para associar a associação a uma `BindableProperty`.
+O processo para usar o mecanismo de associação é o mesmo que no WPF. Ele pode ser utilizado no code-behind criando um objeto `Binding` vinculado a um objeto de origem (qualquer tipo .NET) e um valor de propriedade opcional (se omitido, ele trata o objeto de origem como a própria propriedade, assim como o WPF). Em seguida, você pode usar `SetBinding` em qualquer `BindableObject` para associar a associação a uma `BindableProperty`.
 
 Como alternativa, você pode definir a relação de associação em XAML usando o `BindingExtension`. Ele tem os mesmos valores básicos que a extensão no WPF.
 
@@ -97,7 +97,7 @@ O suporte e o mecanismo de ligação são mais semelhantes à implementação do
   - ValidatesOnDataErrors
   - ValidatesOnExceptions
   - Coleção de ValidationRules
-  - {1&gt;XPath&lt;1}
+  - XPath
   - XmlNamespaceManager
 
 #### <a name="relativesource"></a>RelativeSource
@@ -171,7 +171,7 @@ Em dispositivos de telefone, _telas_ diferentes geralmente são a solução e, p
 |--- |--- |
 |Baseado em pilha (Push/pop)|NavigationPage|
 |Mestre/Detalhes|MasterDetailPage|
-|Guias|TabbedPage|
+|Tabulações|TabbedPage|
 |Passar o dedo para a esquerda/direita|CarouselView|
 
 O `NavigationPage` é a abordagem mais comum, e cada página tem uma propriedade `Navigation` que pode ser usada para enviar e desativar páginas na pilha de navegação. Esse é o equivalente mais próximo ao `NavigationService` encontrado no WPF.

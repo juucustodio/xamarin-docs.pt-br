@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: d9d47e750580bb9e4a0f4a2283cbd9e8c6a44c93
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.openlocfilehash: fd9bced0d2185fd9bd0d18932921c101b2ed207c
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75489083"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "78292925"
 ---
 # <a name="additional-ios-9-frameworks-changes"></a>Alterações adicionais em estruturas do iOS 9
 
@@ -61,7 +61,6 @@ Para obter mais informações, consulte os seguintes documentos:
 - [Introdução ao CloudKit](~/ios/data-cloud/intro-to-cloudkit.md) -nossa introdução ao uso do CloudKit em um aplicativo Xamarin. Ios.
 - [CloudKit início rápido](https://developer.apple.com/library/prerelease/ios/documentation/DataManagement/Conceptual/CloudKitQuickStart/Introduction/Introduction.html#//apple_ref/doc/uid/TP40014987) – introdução da Apple ao CloudKit.
 - [Referência do CLOUDKIT js](https://developer.apple.com/library/prerelease/ios/documentation/CloudKitJS/Reference/CloudKitJavaScriptReference/index.html#//apple_ref/doc/uid/TP40015359) – documentação do CloudKit js da Apple.
-- [Referência de serviços Web do CloudKit](https://developer.apple.com/library/prerelease/ios/documentation/DataManagement/Conceptual/CloutKitWebServicesReference/Introduction/Introduction.html#//apple_ref/doc/uid/TP40015240) – referência da Apple que descreve a interface http para CloudKit.
 - [Catálogo CloudKit: uma introdução ao CloudKit (Cocoa e JavaScript)](https://developer.apple.com/library/prerelease/ios/samplecode/CloudAtlas/Introduction/Intro.html#//apple_ref/doc/uid/TP40014599) – aplicativo de exemplo da Apple usando o CloudKit e o CloudKit js.
 
 > [!IMPORTANT]
@@ -117,7 +116,7 @@ if (NSProcessInfo.ProcessInfo.LowPowerModeEnabled) {
 A Apple incluiu as seguintes alterações na estrutura [HealthKit](xref:HealthKit) no Ios 9:
 
 - Suporte para exclusão em massa e controle de exclusão de entradas no banco de dados HealthKit. Consulte [referência da classe](https://developer.apple.com/library/prerelease/ios/documentation/HealthKit/Reference/HKHealthStore_Class/index.html#//apple_ref/doc/uid/TP40014708) [HKDeletedObject](https://developer.apple.com/library/prerelease/ios/documentation/HealthKit/Reference/HKDeletedObject_ClassReference/index.html#//apple_ref/occ/cl/HKDeletedObject), [HKAnchoredObjectQuery](https://developer.apple.com/library/prerelease/ios/documentation/HealthKit/Reference/HKAnchoredObjectQuery_Class/index.html#//apple_ref/occ/cl/HKAnchoredObjectQuery) e HKHealthStore da Apple para obter mais informações.
-- Novas características e categorias de acompanhamento foram adicionadas à classe `HKQuantityTypeIdentifier` (como `UVExposure`) e à classe `HKCategoryTypeIdentifier` (como `OvulationTestResult`). Consulte a [referência de constantes do HealthKit](https://developer.apple.com/library/prerelease/ios/documentation/HealthKit/Reference/HealthKit_Constants/index.html#//apple_ref/doc/uid/TP40014710) da Apple para obter mais informações.
+- Novas características e categorias de acompanhamento foram adicionadas à classe `HKQuantityTypeIdentifier` (como `UVExposure`) e à classe `HKCategoryTypeIdentifier` (como `OvulationTestResult`). 
 
 Consulte nossa [introdução à](~/ios/platform/healthkit.md) documentação do HealthKit para saber mais sobre como trabalhar com o HealthKit no Xamarin. Ios.
 
@@ -259,7 +258,7 @@ Para corrigir essa situação, use o layout automático e as classes de tamanho 
 
 Use a nova classe `UITextInputAssistantItem` para grupos de botão da barra de layout em uma _barra de atalhos_. A barra de atalhos é uma nova área que está disponível no teclado flexível para fornecer atalhos de digitação.
 
-## <a name="related-links"></a>Links Relacionados
+## <a name="related-links"></a>Links relacionados
 
 - [Amostras do iOS 9](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS9)
 - [Introdução ao iOS 9](~/ios/platform/introduction-to-ios9/index.md)

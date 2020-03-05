@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 1d49be1f4339b658e8202d4091b9a12b45d7b507
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 7cf18934c70acf59213a697ab57b6c5e308e7b2a
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73031915"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "78292856"
 ---
 # <a name="changes-to-storekit-in-ios-6"></a>Alterações no StoreKit no iOS 6
 
@@ -21,7 +21,7 @@ _o iOS 6 introduziu duas alterações na API do kit de loja: a capacidade de exi
 As principais alterações no kit de armazenamento no iOS6 são esses dois novos recursos:
 
 - **Exibição de conteúdo no aplicativo & compra** – os usuários podem comprar e baixar aplicativos, música, livros e outros conteúdos do iTunes sem sair de seu aplicativo. Você também pode vincular a seus próprios aplicativos para promover a compra ou apenas incentivar análises e classificações.
-- **Conteúdo hospedado de compra no aplicativo** – a Apple armazenará e fornecerá o conteúdo associado aos seus produtos de compra no aplicativo, o que elimina a necessidade de um servidor separado para hospedar seus arquivos, oferece suporte automático ao download em segundo plano e permite que você escreva menos código.
+- **Conteúdo hospedado de compra no aplicativo** – a Apple armazenará e fornecerá o conteúdo associado aos seus produtos de compra no aplicativo, o que elimina a necessidade de um servidor separado para hospedar seus arquivos, oferece suporte automático ao download em segundo plano e permite escrever menos código.
 
 Consulte os guias de [compra no aplicativo](~/ios/platform/in-app-purchasing/index.md) para obter uma cobertura detalhada das APIs do StoreKit.
 
@@ -100,14 +100,14 @@ Você pode implementar uma verificação de versão para determinar qual código
 if (UIDevice.CurrentDevice.CheckSystemVersion (6,0)) {
     // do iOS6+ stuff, using SKStoreProductViewController as shown above
 } else {
-    // don't do stuff requiring iOS 6.0, use the old syntax 
+    // don't do stuff requiring iOS 6.0, use the old syntax
     // (which will take the user out of your app)
     var nsurl = new NSUrl("http://itunes.apple.com/us/app/angry-birds/id343200656?mt=8");
     UIApplication.SharedApplication.OpenUrl (nsurl);
 }
 ```
 
-### <a name="errors"></a>Erros
+### <a name="errors"></a>Errors
 
 O seguinte erro ocorrerá se a ID da Apple usada não for válida, o que pode ser confuso, pois implica um problema de rede ou de autenticação de algum tipo.
 
@@ -129,20 +129,20 @@ Para aplicativos que você publica, é fácil encontrar a ID da **Apple** no iTu
 
  <a name="Search_API" />
 
-### <a name="search-api"></a>API de pesquisa
+### <a name="search-api"></a>API de Pesquisa
 
-A Apple fornece uma API de pesquisa dinâmica para consultar todos os produtos na App Store, no iTunes e no eróticos da iBookstore. Informações sobre como acessar a API de pesquisa podem ser encontradas nos [recursos afiliados da Apple](https://www.apple.com/itunes/affiliates/resources/documentation/itunes-store-web-service-search-api.html), embora a API seja exposta a qualquer pessoa (não apenas afiliadas registradas). O JSON resultante pode ser analisado para descobrir a `trackId` que é a ID da Apple a ser usada com `SKStoreProductViewController`.
+A Apple fornece uma API de pesquisa dinâmica para consultar todos os produtos na App Store, no iTunes e no eróticos da iBookstore. Informações sobre como acessar a API de pesquisa podem ser encontradas nos recursos afiliados da Apple, embora a API seja exposta a qualquer pessoa (não apenas afiliadas registradas). O JSON resultante pode ser analisado para descobrir a `trackId` que é a ID da Apple a ser usada com `SKStoreProductViewController`.
 
 Os resultados também incluirão outros metadados, incluindo informações de exibição e URLs do trabalho artístico que podem ser usados para renderizar o produto em seu aplicativo.
 
 Estes são alguns exemplos:
 
-- **aplicativo iBooks** – [https://itunes.apple.com/search?term=ibooks&amp ; entidade = software&amp; Country = US](https://itunes.apple.com/search?term=ibooks&amp;entity=software&amp;country=us)
-- **Ponto e Kangaroo iBook** – [https://itunes.apple.com/search?term=dot+and+the+kangaroo&amp ; entidade = ebook&amp; país = EUA](https://itunes.apple.com/search?term=dot+and+the+kangaroo&amp;entity=ebook&amp;country=us)
+- **aplicativo iBooks** – [https://itunes.apple.com/search?term=ibooks&amp; entidade = software&amp;Country = US](https://itunes.apple.com/search?term=ibooks&amp;entity=software&amp;country=us)
+- **Ponto e Kangaroo iBook** – [https://itunes.apple.com/search?term=dot+and+the+kangaroo&amp; entidade = ebook&amp;país = EUA](https://itunes.apple.com/search?term=dot+and+the+kangaroo&amp;entity=ebook&amp;country=us)
 
 ### <a name="enterprise-partner-feed"></a>Feed de parceiro corporativo
 
-A Apple fornece aos parceiros aprovados um despejo de dados completo de todos os seus produtos, na forma de arquivos simples prontos para o banco de dado para download. Se você se qualifica para acesso ao [feed de parceiros corporativos](https://www.apple.com/itunes/affiliates/resources/documentation/itunes-enterprise-partner-feed.html), a ID da Apple para qualquer produto pode ser encontrada nesse conjunto de código.
+A Apple fornece aos parceiros aprovados um despejo de dados completo de todos os seus produtos, na forma de arquivos simples prontos para o banco de dado para download. Se você se qualifica para acesso ao feed de parceiros corporativos, a ID da Apple para qualquer produto pode ser encontrada nesse conjunto de código.
 
 Muitos usuários do feed de parceiros corporativos são membros do [programa afiliado](https://www.apple.com/itunes/affiliates) que permite que as comissões sejam obtidas em vendas de produtos. `SKStoreProductViewController` não oferece suporte a IDs de afiliação (no momento da gravação).
 
@@ -170,8 +170,8 @@ e a ID da Apple é **496963922**.
 Se suas compras no aplicativo consistirem em conteúdo para download (como livros ou outras mídias, arte e configuração de nível de jogo ou outros arquivos grandes), esses arquivos serão usados para serem hospedados no servidor Web e os aplicativos precisarão incorporar o código para baixá-los com segurança após compras. A partir do iOS 6, a Apple hospedará seus arquivos em seus servidores, eliminando a necessidade de um servidor separado. O recurso está disponível somente para produtos não consumíveis (não consumíveis ou assinaturas). As vantagens de usar o serviço de hospedagem da Apple incluem:
 
 - Economize os custos de largura de banda & de hospedagem.
-- Provavelmente mais escalonável do que qualquer host de servidor que esteja sendo usado no momento. 
-- Menos código para escrever, já que você não precisa criar nenhum processamento do lado do servidor. 
+- Provavelmente mais escalonável do que qualquer host de servidor que esteja sendo usado no momento.
+- Menos código para escrever, já que você não precisa criar nenhum processamento do lado do servidor.
 - O download em segundo plano é implementado para você.
 
 Observação: não há suporte para testar conteúdo de compra no aplicativo hospedado no simulador do iOS, portanto, você deve testar com um dispositivo real.
@@ -196,7 +196,7 @@ Usar a App Store para fornecer compras no aplicativo *com conteúdo hospedado* r
 
 As seções a seguir explicam como implementar conteúdo hospedado, desde a criação e o carregamento do pacote até o gerenciamento do processo de compra e de download, usando o código de exemplo deste artigo.
 
-### <a name="sample-code"></a>Código de exemplo
+### <a name="sample-code"></a>Exemplo de código
 
 O projeto de exemplo *HostedNonConsumables* (em StoreKitiOS6. zip) usa conteúdo hospedado. O aplicativo oferece dois "capítulos de livros" para venda, o conteúdo para o qual é hospedado nos servidores da Apple. O conteúdo consiste em um arquivo de texto e uma imagem, embora um conteúdo muito mais complexo possa ser usado em um aplicativo real.
 
@@ -206,7 +206,7 @@ O aplicativo tem esta aparência antes, durante e após uma compra:
 
 O arquivo de texto e a imagem são baixados e copiados para o diretório de documentos do aplicativo. Para obter mais informações sobre os diferentes diretórios disponíveis para o armazenamento de aplicativos, consulte a [documentação do sistema de arquivos](~/ios/app-fundamentals/file-system.md).
 
-## <a name="itunes-connect"></a>Conexão do iTunes
+## <a name="itunes-connect"></a>iTunes Connect
 
 Ao criar novos produtos que usarão a hospedagem de conteúdo da Apple, certifique-se de selecionar o tipo de produto **não consumível** . Outros tipos de produtos não dão suporte à Hospedagem de conteúdo. Além disso, você não deve habilitar a hospedagem de conteúdo para os produtos *existentes* que vende; Ative apenas a hospedagem de conteúdo para novos produtos.
 
@@ -269,7 +269,8 @@ A maneira mais fácil de carregar pacotes de conteúdo é com a **ferramenta de 
 
 ![](changes-to-storekit-images/image13.png "Choose Archiven")
 
-O pacote de conteúdo será exibido no arquivo, conforme mostrado abaixo. O tipo e o ícone de arquivamento mostram essa linha é um **arquivo de conteúdo de compra no aplicativo**. Clique em **validar...** para verificar se há erros no nosso pacote de conteúdo sem realmente executar o carregamento.
+O pacote de conteúdo será exibido no arquivo, conforme mostrado abaixo.
+O tipo e o ícone de arquivamento mostram essa linha é um **arquivo de conteúdo de compra no aplicativo**. Clique em **validar...** para verificar se há erros no nosso pacote de conteúdo sem realmente executar o carregamento.
 
 [![](changes-to-storekit-images/image14.png "Validate the package")](changes-to-storekit-images/image14.png#lightbox)
 
@@ -469,7 +470,7 @@ public void SaveDownload (SKDownload download)
     // targetfolder will be "/Documents/com.xamarin.storekitdoc.montouchimages/" or something like that
     if (!System.IO.Directory.Exists (targetfolder))
         System.IO.Directory.CreateDirectory (targetfolder);
-    foreach (var file in System.IO.Directory.EnumerateFiles 
+    foreach (var file in System.IO.Directory.EnumerateFiles
              (System.IO.Path.Combine(download.ContentUrl.Path, "Contents"))) { // Contents directory is the default in .PKG files
         var fileName = file.Substring (file.LastIndexOf ("/") + 1);
         var newFilePath = System.IO.Path.Combine(targetfolder, fileName);
@@ -524,7 +525,6 @@ Este artigo introduziu dois novos recursos do Store Kit no iOS6: comprando o iTu
 - [Compras no aplicativo](~/ios/platform/in-app-purchasing/index.md)
 - [Referência da estrutura do StoreKit](https://developer.apple.com/library/prerelease/ios/#documentation/StoreKit/Reference/StoreKit_Collection/_index.html)
 - [Referência de classe SKStoreProductViewController](https://developer.apple.com/library/ios/documentation/StoreKit/Reference/SKITunesProductViewController_Ref/SKStoreProductViewController.html)
-- [Referência da API de pesquisa do iTunes](https://www.apple.com/itunes/affiliates/resources/documentation/itunes-store-web-service-search-api.html)
 - [SKDownload](https://developer.apple.com/library/prerelease/ios/#documentation/StoreKit/Reference/SKDownload_Ref/Introduction/Introduction.html)
 - [SKPaymentQueue](https://developer.apple.com/library/prerelease/ios/documentation/StoreKit/Reference/SKPaymentQueue_Class/Reference/Reference.html#/apple_ref/occ/instm/SKPaymentQueue/cancelDownloads:)
 - [SKProduct](https://developer.apple.com/library/prerelease/ios/documentation/StoreKit/Reference/SKProduct_Reference/Reference/Reference.html#/apple_ref/occ/instp/SKProduct/downloadable)

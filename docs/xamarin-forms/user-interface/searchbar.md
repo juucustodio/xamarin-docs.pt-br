@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 11/04/2019
-ms.openlocfilehash: 8888f1615f250a908930cec9058a54bd6e7fedc2
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.openlocfilehash: a48a91b886cadcbe9dfa73a524b7bfa9fb2cf5fb
+ms.sourcegitcommit: ccbf914615c0ce6b3f308d930f7a77418aeb4dbc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75490071"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "78293019"
 ---
 # <a name="xamarinforms-searchbar"></a>SearchBar Xamarin. Forms
 
@@ -31,12 +31,12 @@ A classe `SearchBar` define as seguintes propriedades:
 * [`FontSize`](xref:Xamarin.Forms.SearchBar.FontSize) pode ser um valor de enumeração `NamedSize` ou um valor `double` que representa tamanhos de fonte específicos entre plataformas.
 * [`HorizontalTextAlignment`](xref:Xamarin.Forms.SearchBar.HorizontalTextAlignment) é um valor de enumeração `TextAlignment` que define o alinhamento horizontal do texto da consulta.
 * `VerticalTextAlignment` é um valor de enumeração `TextAlignment` que define o alinhamento vertical do texto da consulta.
-* [`Placeholder`](xref:Xamarin.Forms.SearchBar.Placeholder) é uma `string` que define o texto do espaço reservado, como "Search...".
-* [`PlaceholderColor`](xref:Xamarin.Forms.SearchBar.PlaceholderColor) é uma `Color` que define a cor do texto do espaço reservado.
+* [`Placeholder`](xref:Xamarin.Forms.InputView.Placeholder) é uma `string` que define o texto do espaço reservado, como "Search...".
+* [`PlaceholderColor`](xref:Xamarin.Forms.InputView.PlaceholderColor) é uma `Color` que define a cor do texto do espaço reservado.
 * [`SearchCommand`](xref:Xamarin.Forms.SearchBar.SearchCommand) é um `ICommand` que permite a vinculação de ações do usuário, como toques ou cliques de dedos, a comandos definidos em um ViewModel.
 * [`SearchCommandParameter`](xref:Xamarin.Forms.SearchBar.SearchCommandParameter) é um `object` que especifica o parâmetro que deve ser passado para o `SearchCommand`.
-* [`Text`](xref:Xamarin.Forms.SearchBar.Text) é um `string` que contém o texto da consulta no `SearchBar`.
-* [`TextColor`](xref:Xamarin.Forms.SearchBar.TextColor) é uma `Color` que define a cor do texto da consulta.
+* [`Text`](xref:Xamarin.Forms.InputView.Text) é um `string` que contém o texto da consulta no `SearchBar`.
+* [`TextColor`](xref:Xamarin.Forms.InputView.TextColor) é uma `Color` que define a cor do texto da consulta.
 
 Essas propriedades são apoiadas por [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objetos, o que significa que o `SearchBar` pode ser personalizado e ser o destino de associações de dados. Especificar propriedades de fonte na `SearchBar` é consistente com a personalização de texto em outros [controles de texto do Xamarin. Forms](~/xamarin-forms/user-interface/text/index.md). Para obter mais informações, consulte [fontes no Xamarin. Forms](~/xamarin-forms/user-interface/text/fonts.md).
 
@@ -94,7 +94,7 @@ A captura de tela a seguir mostra o controle de `SearchBar` resultante:
 Uma pesquisa pode ser executada usando o controle de `SearchBar` anexando um manipulador de eventos a um dos seguintes eventos:
 
 * [`SearchButtonPressed`](xref:Xamarin.Forms.SearchBar.SearchButtonPressed) é chamado quando o usuário clica no botão de pesquisa ou pressiona a tecla Enter.
-* [`TextChanged`](xref:Xamarin.Forms.SearchBar.TextChanged) é chamado sempre que o texto na caixa de consulta é alterado.
+* [`TextChanged`](xref:Xamarin.Forms.InputView.TextChanged) é chamado sempre que o texto na caixa de consulta é alterado.
 
 O exemplo a seguir mostra um manipulador de eventos anexado ao evento `TextChanged` em XAML e usa uma `ListView` para exibir os resultados da pesquisa:
 

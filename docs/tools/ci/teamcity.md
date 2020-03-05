@@ -6,12 +6,12 @@ ms.assetid: AC2626CB-28A7-4808-B2A9-789D67899546
 author: davidortinau
 ms.author: daortin
 ms.date: 03/23/2017
-ms.openlocfilehash: 5a16ec338d5929a217ee2e4a622bdce4da617e86
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 94bc775366d832e0994b8d3c74a45123ff56c13b
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73029799"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "78292527"
 ---
 # <a name="using-team-city-with-xamarin"></a>Usando a cidade da equipe com o Xamarin
 
@@ -61,7 +61,7 @@ Uma etapa crucial na configuração de um servidor de compilação é instalar t
 3. **Xcode** – o Xcode é necessário para compilar e assinar aplicativos Ios.
 4. **Ferramentas de linha de comando do Xcode** – isso é descrito na etapa 1 da seção de instalação do guia [atualizando Ruby com rbenv](https://github.com/calabash/calabash-ios/wiki) .
 5. **Identidade de assinatura & perfis de provisionamento** – importe os certificados e o perfil de provisionamento por meio do Xcode. Consulte o guia da Apple sobre como [Exportar identidades de assinatura e perfis de provisionamento](https://developer.apple.com/library/ios/recipes/xcode_help-accounts_preferences/articles/export_signing_assets.html) para obter mais detalhes.
-6. **Repositórios de chaves do Android** – Copie os repositórios de chaves Android necessários para um diretório ao qual o usuário TeamCity tenha acesso, ou seja,  `~/Documents/keystores/MyAndroidApp1`.
+6. **Repositórios de chaves do Android** – Copie os repositórios de chaves Android necessários para um diretório ao qual o usuário TeamCity tenha acesso, ou seja, `~/Documents/keystores/MyAndroidApp1`.
 7. **Calabash** – essa é uma etapa opcional se seu aplicativo tiver testes escritos usando o Calabash. Consulte o guia [instalando o Calabash no os X Mavericks](https://github.com/calabash/calabash-ios/wiki) e o guia [atualizando Ruby com o rbenv](https://github.com/calabash/calabash-ios/wiki) para obter mais informações.
 
 O diagrama a seguir ilustra todos esses componentes:
@@ -87,7 +87,7 @@ O script de Build pode ser tão simples quanto um arquivo do PowerShell (no Wind
 
 - [**Falso**](https://fsharp.github.io/FAKE/) – é uma DSL baseada no, F# que possibilita utilizar bibliotecas existentes do .net, se necessário.
 
-A linguagem de script usada depende de suas preferências e requisitos. O exemplo [TaskyPro-Calabash](https://github.com/xamarin/test-cloud-samples/tree/master/TaskyPro/TaskyPro-Calabash) contém um exemplo de como usar o rake como um [script de compilação](https://github.com/xamarin/test-cloud-samples/blob/master/TaskyPro/TaskyPro-Calabash/Rakefile).
+A linguagem de script usada depende de suas preferências e requisitos.
 
 > [!NOTE]
 > É possível usar um sistema de compilação baseado em XML, como o MSBuild ou o NAnt, mas eles não têm a expressividade e a capacidade de manutenção de uma DSL dedicada à criação de software.

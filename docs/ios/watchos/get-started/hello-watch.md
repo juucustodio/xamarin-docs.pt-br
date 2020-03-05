@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 12/14/2016
-ms.openlocfilehash: f1551607a621ac3960c39d282111065c258ed90e
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 2d8b48892a5a1106b03778ac30eca4b18f049f4d
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73032771"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "78291865"
 ---
 # <a name="hello-watchos--walkthrough"></a>Olá, watchOS – Walkthrough
 
@@ -28,17 +28,17 @@ Confirme que seus identificadores de pacote seguem a Convenção de \*. watchkit
 
 Você deve ser capaz de executar seu aplicativo Watch agora, mas como o arquivo de storyboard em seu aplicativo Watch está em branco, você não conseguiria dizer.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
 ![](hello-watch-images/projectstructure.png "The Solution Explorer")
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 ![](hello-watch-images/vs-projectstructure.png "The Solution Explorer")
 
 -----
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
 Clique duas vezes na interface. Storyboard em seu aplicativo Watch para iniciar o Xamarin iOS designer (se você estiver em um Mac, você também pode clicar com o botão direito do mouse e **abrir com > Xcode Interface Builder**)
 
@@ -49,7 +49,7 @@ Clique duas vezes na interface. Storyboard em seu aplicativo Watch para iniciar 
 
     ![](hello-watch-images/interfacecontrollerattributes.png "Set the Identifier and Title of the Interface Controller to interfaceController and Hi Watch")
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 Clique duas vezes na interface. Storyboard em seu aplicativo Watch para editar com o Xamarin iOS designer no Visual Studio:
 
@@ -68,11 +68,11 @@ Crie sua interface do usuário:
 1. Arraste e solte um **botão** e um **rótulo** para a cena e
 1. Defina o texto e os atributos dos controles, conforme mostrado:
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
 ![](hello-watch-images/draganddrop.png "Set the text and attributes of the controls as shown")
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 ![](hello-watch-images/vs-draganddrop.png "Set the text and attributes of the controls as shown")
 
@@ -87,7 +87,7 @@ Crie sua interface do usuário:
 
 ![](hello-watch-images/buttonaction.png "The OnButtonPress Action added to a button")
 
-Depois de salvar o storyboard, o **InterfaceController.designer.cs** é atualizado com os nomes de controle e ações. Se você abrir esse arquivo após ele ter sido atualizado, poderá ver como o `RegisterAttribute` corresponde ao controlador e como os controles da interface do C# usuário correspondem às variáveis de instância marcadas com o`OutletAttribute`e como as ações são mapeadas para os métodos parciais marcados com o`ActionAttribute`:
+Depois de salvar o storyboard, o **InterfaceController.designer.cs** é atualizado com os nomes de controle e ações. Se você abrir esse arquivo após ele ter sido atualizado, poderá ver como o `RegisterAttribute` corresponde ao controlador e como os controles da interface do C# usuário correspondem às variáveis de instância marcadas com o `OutletAttribute` e como as ações são mapeadas para os métodos parciais marcados com o `ActionAttribute`:
 
 ```csharp
 // WARNING
@@ -155,6 +155,5 @@ Parabéns, você tem um aplicativo de inspeção!
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Introdução (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchkit-gettingstarted)
 - [Instalação e configuração](~/ios/watchos/get-started/installation.md)
 - [Primeiro vídeo do aplicativo Watch](https://blog.xamarin.com/your-first-watch-kit-app/)

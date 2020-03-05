@@ -7,30 +7,30 @@ ms.assetid: 56929D74-8F2C-44C6-90E6-3FBABCDC0A4B
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/05/2017
-ms.openlocfilehash: 98809dca503d03d3d592161608fa9a6fa0e5d394
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.openlocfilehash: d5cf0927c64732d6d0a44204db9509fae77f0d1d
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75488342"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "78292529"
 ---
 # <a name="finger-painting-in-skiasharp"></a>Pintura a dedo em SkiaSharp
 
 [![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
-_Use os dedos para pintar na tela._
+_Use seus dedos para pintar na tela._
 
-Um `SKPath` objeto pode ser continuamente atualizado e exibido. Esse recurso permite que um caminho a ser usado para o desenho interativo, como em um programa para pintura com dedo.
+Um objeto de `SKPath` pode ser atualizado e exibido continuamente. Esse recurso permite que um caminho a ser usado para o desenho interativo, como em um programa para pintura com dedo.
 
 ![](finger-paint-images/fingerpaintsample.png "An exercise in finger painting")
 
-O suporte a toque no xamarin. Forms não permite o acompanhamento de dedos individuais na tela, portanto, um efeito de controle de toque do xamarin. Forms foi desenvolvido para oferecer suporte a toque adicionais. Esse efeito é descrito no artigo [ **invocar eventos de efeitos**](~/xamarin-forms/app-fundamentals/effects/touch-tracking.md). O programa de exemplo [ **demonstrações de efeito do controle de toque** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-touchtrackingeffect/) inclui duas páginas que usam SkiaSharp, incluindo um programa para pintura com dedo.
+O suporte a toque no xamarin. Forms não permite o acompanhamento de dedos individuais na tela, portanto, um efeito de controle de toque do xamarin. Forms foi desenvolvido para oferecer suporte a toque adicionais. Esse efeito é descrito no artigo [**invocando eventos de efeitos**](~/xamarin-forms/app-fundamentals/effects/touch-tracking.md). As [**demonstrações de efeito de controle de toque**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-touchtrackingeffect/) do programa de exemplo incluem duas páginas que usam SkiaSharp, incluindo um programa de pintura a dedo.
 
-O [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) solução inclui esse evento de acompanhamento de toque. O projeto de biblioteca .NET Standard inclui o `TouchEffect` classe, o `TouchActionType` enumeração, o `TouchActionEventHandler` delegar e o `TouchActionEventArgs` classe. Cada um dos projetos de plataforma inclui um `TouchEffect` para a plataforma de classe; o projeto do iOS também contém um `TouchRecognizer` classe.
+A solução [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) inclui esse evento de acompanhamento de toque. O projeto de biblioteca .NET Standard inclui a classe `TouchEffect`, a enumeração `TouchActionType`, o delegado `TouchActionEventHandler` e a classe `TouchActionEventArgs`. Cada um dos projetos de plataforma inclui uma classe de `TouchEffect` para essa plataforma; o projeto do iOS também contém uma classe `TouchRecognizer`.
 
-O **pintura a dedo** página no **SkiaSharpFormsDemos** é uma implementação simplificada de pintura a dedo. Não permitir a seleção de cor ou largura de traço, ele não tem nenhuma maneira para limpar a tela e certamente não é possível salvar sua arte final.
+A página de **pintura digital** no **SkiaSharpFormsDemos** é uma implementação simplificada da pintura de dedos. Não permitir a seleção de cor ou largura de traço, ele não tem nenhuma maneira para limpar a tela e certamente não é possível salvar sua arte final.
 
-O [ **FingerPaintPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/FingerPaintPage.xaml) arquivo coloca a `SKCanvasView` em uma única célula `Grid` e anexa o `TouchEffect` para que `Grid`:
+O arquivo [**FingerPaintPage. XAML**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Paths/FingerPaintPage.xaml) coloca o `SKCanvasView` em um `Grid` de célula única e anexa o `TouchEffect` a esse `Grid`:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -51,9 +51,9 @@ O [ **FingerPaintPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/
 </ContentPage>
 ```
 
-Anexando a `TouchEffect` diretamente para o `SKCanvasView` não funciona em todas as plataformas.
+Anexar o `TouchEffect` diretamente ao `SKCanvasView` não funciona em todas as plataformas.
 
-O [ **FingerPaintPage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Paths/FingerPaintPage.xaml.cs) arquivo code-behind define duas coleções para armazenar o `SKPath` objetos, bem como um `SKPaint` objeto para esses caminhos de renderização:
+O arquivo code-behind [**FingerPaintPage.XAML.cs**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Paths/FingerPaintPage.xaml.cs) define duas coleções para armazenar os objetos `SKPath`, bem como um objeto `SKPaint` para processar esses caminhos:
 
 ```csharp
 public partial class FingerPaintPage : ContentPage
@@ -78,9 +78,9 @@ public partial class FingerPaintPage : ContentPage
 }
 ```
 
-Como o nome sugere, o `inProgressPaths` dicionário armazena os caminhos que estão atualmente sendo desenhados por um ou mais dedos. A chave do dicionário é a ID de toque que acompanha os eventos de toque. O `completedPaths` campo é uma coleção de caminhos que foram concluídos quando um dedo que estava desenhando o caminho tiradas da tela.
+Como o nome sugere, o dicionário de `inProgressPaths` armazena os caminhos que estão sendo desenhados atualmente por um ou mais dedos. A chave do dicionário é a ID de toque que acompanha os eventos de toque. O campo `completedPaths` é uma coleção de caminhos que foram concluídos quando um dedo que estava desenhando o caminho foi levantado da tela.
 
-O `TouchAction` manipulador gerencia essas duas coleções. Quando um dedo toca na tela, primeiro uma nova `SKPath` é adicionado ao `inProgressPaths`. Conforme desse dedo se move, pontos adicionais são adicionados ao caminho. Quando o dedo é liberado, o caminho é transferido para o `completedPaths` coleção. Você pode pintar com vários dedos simultaneamente. Após cada alteração em um dos caminhos ou coleções, o `SKCanvasView` é invalidado:
+O manipulador de `TouchAction` gerencia essas duas coleções. Quando um dedo toca a tela pela primeira vez, um novo `SKPath` é adicionado ao `inProgressPaths`. Conforme desse dedo se move, pontos adicionais são adicionados ao caminho. Quando o dedo é liberado, o caminho é transferido para a coleção de `completedPaths`. Você pode pintar com vários dedos simultaneamente. Após cada alteração em um dos caminhos ou coleções, a `SKCanvasView` é invalidada:
 
 ```csharp
 public partial class FingerPaintPage : ContentPage
@@ -136,9 +136,9 @@ public partial class FingerPaintPage : ContentPage
 }
 ```
 
-Os pontos que acompanha os eventos de rastreamento de toque são coordenadas do xamarin. Forms; eles devem ser convertidos em coordenadas de SkiaSharp, que são pixels. Essa é a finalidade de `ConvertToPixel` método.
+Os pontos que acompanha os eventos de rastreamento de toque são coordenadas do xamarin. Forms; eles devem ser convertidos em coordenadas de SkiaSharp, que são pixels. Essa é a finalidade do método `ConvertToPixel`.
 
-O `PaintSurface` manipulador, em seguida, simplesmente renderiza ambas as coleções de caminhos. Os caminhos concluídos anteriormente aparecem sob os caminhos em andamento:
+O manipulador de `PaintSurface`, em seguida, simplesmente renderiza as duas coleções de caminhos. Os caminhos concluídos anteriormente aparecem sob os caminhos em andamento:
 
 ```csharp
 public partial class FingerPaintPage : ContentPage
@@ -167,11 +167,11 @@ Seu dedo pinturas são limitadas apenas pelos seus talentos:
 
 [![](finger-paint-images/fingerpaint-small.png "Triple screenshot of the Finger Paint page")](finger-paint-images/fingerpaint-large.png#lightbox "Triple screenshot of the Finger Paint page")
 
-Agora, você já viu como desenhar linhas e definir curvas usando equações paramétricas. Uma seção posterior sobre [ **SkiaSharp curvas e caminhos** ](../curves/index.md) aborda os vários tipos de curvas que `SKPath` dá suporte. Mas um pré-requisito útil é uma exploração das [ **transformações de SkiaSharp**](../transforms/index.md).
+Agora, você já viu como desenhar linhas e definir curvas usando equações paramétricas. Uma seção posterior em [**curvas e caminhos de SkiaSharp**](../curves/index.md) abrange os vários tipos de curvas aos quais `SKPath` dá suporte. Mas um pré-requisito útil é uma exploração de [**transformações de SkiaSharp**](../transforms/index.md).
 
-## <a name="related-links"></a>Links Relacionados
+## <a name="related-links"></a>Links relacionados
 
-- [APIs de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
-- [Demonstrações de efeito do controle de toque (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-touchtrackingeffect/)
-- [Invocação de eventos de efeitos](~/xamarin-forms/app-fundamentals/effects/touch-tracking.md)
+- [APIs do SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [Demonstrações de efeito de controle de toque (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-touchtrackingeffect/)
+- [Invocando eventos de efeitos](~/xamarin-forms/app-fundamentals/effects/touch-tracking.md)

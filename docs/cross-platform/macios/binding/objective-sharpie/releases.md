@@ -6,12 +6,12 @@ ms.assetid: 1F4A1BE1-7205-43F4-89D0-6C8672F52598
 author: davidortinau
 ms.author: daortin
 ms.date: 10/11/2017
-ms.openlocfilehash: 2f1fb3706012fa86834986064a366071b644b2dc
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: f60be3f7dc14749f5cd58d5228c17fa85282cd78
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73015949"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "78292598"
 ---
 # <a name="objective-sharpie-release-history"></a>Histórico de lançamento de nitidez do objetivo
 
@@ -58,11 +58,9 @@ ms.locfileid: "73015949"
 
 ## <a name="216-march-17-2015"></a>2.1.6 (17 de março de 2015)
 
-[Baixar v 2.1.6](https://download.xamarin.com/objective-sharpie/ObjectiveSharpie-2.1.6.pkg)
-
 * Associação de expressão de operador binário fixa: o lado esquerdo da expressão foi alternado incorretamente com o lado direito (por exemplo, `1 << 0` foi incorretamente associado como `0 << 1`). Obrigado pelo Adam Kemp para observar isso!
 * Corrigido um problema com `NSInteger` e `NSUInteger` estão sendo associados como `int` e `uint` em vez de `nint` e `nuint` em i386; `-DNS_BUILD_32_LIKE_64` agora é passado para Clang para tornar a análise `objc/NSObjCRuntime.h` funcionar conforme o esperado em i386.
-* A arquitetura padrão para SDKs de Mac OS X (por exemplo, `-sdk macosx10.10`) agora é x86_64 em vez de i386, para que `-arch` possa ser omitida, a menos que a substituição do padrão seja desejada.
+* A arquitetura padrão para SDKs de Mac OS X (por exemplo, `-sdk macosx10.10`) agora é x86_64 em vez de i386, de modo que `-arch` pode ser omitida, a menos que a substituição do padrão seja desejada.
 
 ## <a name="210-march-15-2015"></a>2.1.0 (15 de março de 2015)
 
@@ -95,7 +93,7 @@ O objetivo de nitidez 2,0 é baseado no Clang 3.6.1.
 
 * Há uma heurística de nomenclatura aprimorada para enums anônimos que são imediatamente precedidas por um `typedef` resolver para um tipo integral interna, como `long` ou `int`.
 
-* Os ponteiros C agora estão C# associados como ponteiros`unsafe`em vez de`System.IntPtr`. Isso resulta em mais clareza na associação para quando você desejar transformar parâmetros de ponteiro em `out` ou `ref` parâmetros. Não é possível sempre inferir se um parâmetro deve ser `out` ou `ref`, portanto, o ponteiro é retido na associação para permitir a auditoria mais fácil.
+* Os ponteiros C agora estão C# associados como ponteiros `unsafe` em vez de `System.IntPtr`. Isso resulta em mais clareza na associação para quando você desejar transformar parâmetros de ponteiro em `out` ou `ref` parâmetros. Não é possível sempre inferir se um parâmetro deve ser `out` ou `ref`, portanto, o ponteiro é retido na associação para permitir a auditoria mais fácil.
 
 * Uma exceção à associação de ponteiros acima é quando um ponteiro de duas classificações para um objeto Objective-C é encontrado como um parâmetro. Nesses casos, a Convenção é predominante e o parâmetro será associado como `out` (por exemplo, `NSError **error` → `out NSError error`).
 
@@ -135,7 +133,7 @@ Consulte a documentação de [verificar atributos](~/cross-platform/macios/bindi
 
 [Baixar v 1.1.35](https://download.xamarin.com/objective-sharpie/ObjectiveSharpie-1.1.35.pkg)
 
-Correções de bugs secundárias.
+Correções de bug secundárias.
 
 ## <a name="111-december-15-2014"></a>1.1.1:15 de dezembro de 2014
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/01/2018
-ms.openlocfilehash: 600a94a0ee9eb5bcf06dc19d95cf9e77132a2e81
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: c7718ef7a02365e9ca09f7491804cbadfa0c9a41
+ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73029061"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "78292597"
 ---
 # <a name="viewpager"></a>ViewPager
 

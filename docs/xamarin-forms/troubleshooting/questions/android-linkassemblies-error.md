@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/07/2019
-ms.openlocfilehash: 71305dd7287df56036d0298ebfcf8a8cb7c4d3b3
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: a90c56102f77e3f64d9333eec03b025d24888977
+ms.sourcegitcommit: a3b7e016fb25584dbf57bae89b64a9f98031e7c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528368"
+ms.lasthandoff: 01/23/2020
+ms.locfileid: "78291802"
 ---
 # <a name="android-build-error--the-linkassemblies-task-failed-unexpectedly"></a>Erro de compilação do Android – a tarefa LinkAssemblies falhou inesperadamente
 
-Você poderá ver uma mensagem `The "LinkAssemblies" task failed unexpectedly` de erro ao criar um projeto Xamarin. Android que usa formulários. Isso acontece quando o vinculador está ativo (normalmente em uma compilação de *versão* para reduzir o tamanho do pacote do aplicativo); e isso ocorre porque os destinos do Android não são atualizados para a estrutura mais recente. (Mais informações: [Xamarin. Forms para requisitos do Android](~/get-started/requirements.md#android))
+Você pode ver uma mensagem de erro `The "LinkAssemblies" task failed unexpectedly` ao criar um projeto Xamarin. Android que usa formulários. Isso acontece quando o vinculador está ativo (normalmente em uma compilação de *versão* para reduzir o tamanho do pacote do aplicativo); e isso ocorre porque os destinos do Android não são atualizados para a estrutura mais recente. (Mais informações: [plataformas com suporte para Xamarin. Forms](~/get-started/supported-platforms.md#android-platform-support))
 
 A resolução para esse problema é verificar se você tem as versões de SDK do Android mais recentes com suporte e definir a **estrutura de destino** para a plataforma instalada mais recente. Também é recomendável que você defina a **versão de destino do Android** para a plataforma instalada mais recente e a **versão mínima do Android** para API 19 ou superior. Isso é considerado a configuração com suporte.
 
@@ -24,7 +24,7 @@ A resolução para esse problema é verificar se você tem as versões de SDK do
 
 1. Clique com o botão direito do mouse no projeto do Android e selecione **Opções** no menu.
 2. Na caixa de diálogo **Opções do projeto** , vá para **Build > Geral**.
-3. Defina a **compilação usando a versão do Android: (Estrutura de destino)**  para a plataforma instalada mais recente.
+3. Defina a **compilação usando a versão do Android: (estrutura de destino)** para a plataforma instalada mais recente.
 4. Na caixa de diálogo **Opções do projeto** , vá para **Compilar > aplicativo Android**.
 5. Defina a **versão mínima do Android** para o nível de API 19 ou superior e a **versão do Android de destino** para a plataforma instalada mais recente que você escolheu em (3).
 
@@ -32,7 +32,7 @@ A resolução para esse problema é verificar se você tem as versões de SDK do
 
 1. Clique com o botão direito do mouse no projeto do Android e selecione as **Propriedades** no menu.
 2. Nas propriedades do projeto, vá para **aplicativo**.
-3. Defina a **compilação usando a versão do Android: (Estrutura de destino)**  para a plataforma instalada mais recente.
+3. Defina a **compilação usando a versão do Android: (estrutura de destino)** para a plataforma instalada mais recente.
 4. Nas propriedades do projeto, vá para o **manifesto do Android**.
 5. Defina a **versão mínima do Android** para o nível de API 19 ou superior e a **versão do Android de destino** para a plataforma instalada mais recente que você escolheu em (3).
 

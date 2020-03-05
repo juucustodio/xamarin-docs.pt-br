@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/29/2017
-ms.openlocfilehash: c25ea0878906b31028143ff1ad689db56b197458
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 4a6ec3c34afc0c017d5b37eec080f7f9bad08c0c
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73032261"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "78291862"
 ---
 # <a name="additional-ios-10-frameworks-changes"></a>Alterações adicionais em estruturas do iOS 10
 
@@ -23,7 +23,7 @@ _Este artigo aborda as alterações adicionais, secundárias ou aprimoramentos n
 A estrutura AVFoundation inclui os seguintes aprimoramentos:
 
 - No iOS 10, o desenvolvedor não precisa mais implementar comportamentos de [AVPlayerItem](xref:AVFoundation.AVPlayerItem) diferentes com base no tipo de conteúdo. Basta definir a propriedade `Rate` e AVFoundation determinará quando o conteúdo suficiente está disponível para reprodução sem interrupções.
-- A nova classe [AVCapturePhotoOutput](xref:AVFoundation.AVCaptureFileOutput) substitui a classe preterida `AVCaptureStillImageOutput` e fornece um método unificado para lidar com todos os fluxos de trabalho de fotografia, fornecendo controle sofisticado e monitoramento do processo de captura e suporte para novos recursos, como como fotos ao vivo e o formato de captura bruta.
+- A nova classe [AVCapturePhotoOutput](xref:AVFoundation.AVCaptureFileOutput) substitui a classe preterida `AVCaptureStillImageOutput` e fornece um método unificado para lidar com todos os fluxos de trabalho de fotografia, fornecendo controle sofisticado e monitoramento do processo de captura e suporte para novos recursos, como fotos ao vivo e formato de captura bruto.
 - A nova classe `AVPlayerLooper` torna mais fácil fazer um loop de uma determinada mídia durante a reprodução.
 - A classe `AVAssetDownloadURLSession` permite o download e a reprodução posterior de fluxos de HLS criptografados FairPlay.
 - Por padrão, a classe [AVCaptureSession](xref:AVFoundation.AVCaptureSession) dá suporte automaticamente à captura de grande cor e de grande gama quando o hardware do dispositivo dá suporte a ela. Consulte a [referência de compatibilidade de dispositivo IOS](https://developer.apple.com/library/prerelease/content/documentation/DeviceInformation/Reference/iOSDeviceCompatibility/Introduction/Introduction.html#//apple_ref/doc/uid/TP40013599) da Apple para obter mais detalhes.
@@ -50,7 +50,7 @@ o iOS 10 faz os seguintes aprimoramentos para a estrutura de imagem principal:
 
 - Agora, o desenvolvedor pode processar imagens em um espaço de cores fora do espaço de cores de trabalho do contexto de imagem principal, convertendo e reduzindo o espaço de cores antes e depois do processamento.
 - Para dispositivos iOS que usam CPUs A8 ou A9, agora há suporte para o formato de imagem RAW. A imagem básica agora oferece suporte para decodificação de imagens BRUTAs da câmera iSight interna ou de uma câmera de terceiros. Use os métodos `FilterWithImageData` ou `FilterWithImageURL` da classe [CIFilter](xref:CoreImage.CIFilter) para processar imagens brutas.
-- Vários aprimoramentos de desempenho de renderização foram feitos para `UIImage` renderização (quando apoiado por armazenamentos de imagem de imagem principal) em objetos `UIImageView`. 
+- Vários aprimoramentos de desempenho de renderização foram feitos para `UIImage` renderização (quando apoiado por armazenamentos de imagem de imagem principal) em objetos `UIImageView`.
 - `UIImage` objetos marcados com largura ampla serão renderizados como uma cor de ampla gama em objetos `UIImageView` em dispositivos iOS que dão suporte a cores amplas.
 - O código do kernel da imagem de núcleo agora pode solicitar formatos de saída de pixel específicos.
 - O método `ImageWithExtent` da classe [CIFilter](xref:CoreImage.CIFilter) pode ser usado para inserir o processamento personalizado na operação de filtro. A imagem principal invocará o retorno de chamada fornecido entre os filtros ao processar uma imagem para saída ou exibição.
@@ -82,7 +82,7 @@ Os aprimoramentos a seguir foram feitos na estrutura de base para iOS 10:
 
 Os aprimoramentos a seguir foram feitos na estrutura GameKit no iOS 10:
 
-- O **aplicativo Game Center** foi preterido e removido do Ios. Se o aplicativo usar GameKit, ele _deverá_ apresentar sua própria interface para exibir recursos de GameKit, como placares, etc. 
+- O **aplicativo Game Center** foi preterido e removido do Ios. Se o aplicativo usar GameKit, ele _deverá_ apresentar sua própria interface para exibir recursos de GameKit, como placares, etc.
 - Um novo tipo de conta somente iCloud foi implementado pela classe [GKCloudPlayer](https://developer.apple.com/reference/gamekit/gkcloudplayer) .
 - A nova classe [GKGameSession](https://developer.apple.com/reference/gamekit/gkgamesession) fornece uma solução generalizada para gerenciar o armazenamento de dados persistente em Game Center. `GKGameSession` mantém uma lista de players e o aplicativo é responsável por implementar como e quando a data do participante é armazenada, recuperada ou trocada entre os jogadores. Em muitas instâncias, as sessões de jogos podem substituir as correspondências existentes, correspondências em tempo real ou métodos de salvamento de jogos persistentes.
 
@@ -165,7 +165,7 @@ Os aprimoramentos a seguir foram feitos na estrutura SceneKit no iOS 10:
 - A cor SceneKit Now corresponde a todas as cores lendo as informações do perfil de cor.
 - SceneKit interpreta valores de componente de cor em um espaço de cores RGB linear para todos os tipos de sombreador.
 - A renderização de espaço de cores linear e a grande cor podem ser desabilitadas especificando-se as chaves `SCNDisableLinearSpaceRendering` e `SCNDisableWideGamut` no `Info.plist`do aplicativo.
-- Crie Primates Polygon arbitrários (carregados a partir de arquivos ou gerados programaticamente) para especificar Geometry com a nova classe [SCNGeometryPrimitiveTypePolygon](https://developer.apple.com/reference/scenekit/1772322-scenekit_enumerations/scngeometryprimitivetype/scngeometryprimitivetypepolygon) .
+- Crie Primates Polygon arbitrários (carregados a partir de arquivos ou gerados programaticamente) para especificar Geometry com a nova classe [SCNGeometryPrimitiveTypePolygon](https://developer.apple.com/documentation/scenekit/scngeometryprimitivetype/scngeometryprimitivetypepolygon) .
 - Como o SceneKit lê e ajusta as informações de perfil de cor em imagens de textura, use catálogos de ativos para todas as imagens para garantir que essas informações sejam fornecidas.
 
 ## <a name="spritekit-enhancements"></a>Aprimoramentos do SpriteKit
@@ -192,7 +192,7 @@ Consulte o [exemplo de iOSTenThree](https://docs.microsoft.com/samples/xamarin/i
 Os aprimoramentos a seguir foram feitos na estrutura UIKit no iOS 10:
 
 - A nova API [UIPasteboard](xref:UIKit.UIPasteboard) fornece novas opções (como limitações de tempo de vida) e irá declarar automaticamente os tipos de conteúdo compatíveis para tipos de classe comuns.
-- Novo suporte à animação com interrupções, com base em objeto e totalmente interativo, foi adicionado e pode ser vinculado a gestos. Consulte a referência de [protocolo UIViewAnimating](https://developer.apple.com/reference/uikit/uiviewanimating)da Apple [, referência de classe UIViewPropertyAnimator](https://developer.apple.com/reference/uikit/uiviewpropertyanimator), referência de [protocolo UITimingCurveProvider](https://developer.apple.com/reference/uikit/uitimingcurveprovider), [referência de classe UICubicTimingParameters](https://developer.apple.com/reference/uikit/uicubictimingparameters) e [ Referência de classe UISpringTimingParameter](https://developer.apple.com/reference/uikit/uispringtimingparameters) para obter mais informações.
+- Novo suporte à animação com interrupções, com base em objeto e totalmente interativo, foi adicionado e pode ser vinculado a gestos. Consulte a referência de [protocolo UIViewAnimating](https://developer.apple.com/reference/uikit/uiviewanimating)da Apple [, referência de classe UIViewPropertyAnimator](https://developer.apple.com/reference/uikit/uiviewpropertyanimator), referência de [protocolo UITimingCurveProvider](https://developer.apple.com/reference/uikit/uitimingcurveprovider), [referência de classe UICubicTimingParameters](https://developer.apple.com/reference/uikit/uicubictimingparameters) e [referência de classe UISpringTimingParameter](https://developer.apple.com/reference/uikit/uispringtimingparameters) para obter mais informações.
 - O novo `UIPreviewInteraction` e `UIPreviewInteractionDelegate` permitem que o aplicativo de desenvolvedor forneça uma interface personalizada para operações de Peek e pop.
 - A nova classe `UIAccessibilityCustomRotor` permite que o aplicativo forneça funcionalidade personalizada e específica ao contexto para tecnologias assistenciais, como voz.
 - Use os símbolos `UIAccessibilityIsAssistiveTouchRunning` e `UIAccessibilityAssistiveTouchStatusDidChangeNotification` para determinar se o AssistiveTouch está habilitado.

@@ -1,12 +1,12 @@
 ---
-ms.openlocfilehash: dffa9c202d42cfb12ed67e219b4e3155e4e554d0
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
-ms.translationtype: HT
+ms.openlocfilehash: 0071fcc72844e4816e707c5828464859e09db68c
+ms.sourcegitcommit: 2503da076966d12a8bdbf7af209662b74913a15c
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70751916"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78261612"
 ---
-# <a name="contributing"></a>Contribuição
+# <a name="contributing"></a>Participante
 
 Obrigado por seu interesse em contribuir para a documentação do Xamarin!
 
@@ -64,6 +64,10 @@ A equipe do Xamarin examinará a PR e informará (por meio de comentários na PR
 Em seguida, depois que os comentários forem aplicados e sua alteração estiver boa, os mantenedores mesclarão a PR.
 
 Em um determinado ritmo, efetuaremos push de todas as confirmações do branch mestre para o site ativo e, em seguida, você poderá ver sua colaboração em https://docs.microsoft.com/xamarin/.
+
+### <a name="contributing-to-international-content"></a>Contribuindo para conteúdo internacional
+
+Atualmente, não são aceitas contribuições para conteúdo de MT (convertidas no computador) por enquanto. Em um esforço para melhorar a qualidade do conteúdo de MT, fizemos a transição para um mecanismo de MT neural. Aceitamos e incentivamos contribuições para conteúdo de tecnologia de tradução humana (HT), que é usado para treinar o mecanismo do neural. Assim, ao longo do tempo, as contribuições para o conteúdo da HT melhorarão a qualidade do HT e do MT. Os tópicos de MT terão uma isenção informando que parte do tópico pode ser MT e o botão **Editar** não será exibido quando for desabilitado.
 
 ## <a name="dos-and-donts"></a>O que FAZER e o que NÃO FAZER
 

@@ -7,24 +7,24 @@ ms.technology: xamarin-skiasharp
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: 16d576c599dbf5815b19aec4a2e8390f7ed0e601
-ms.sourcegitcommit: 191f1f3b13a14e2afadcb95126c5f653722f126f
+ms.openlocfilehash: 98081ed1a9aef1260150671d4fd026dd64c20b62
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/30/2019
-ms.locfileid: "75545563"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "78292321"
 ---
 # <a name="the-path-fill-types"></a>Os tipos de preenchimento do caminho
 
 [![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
-_Descubra os diferentes efeitos possíveis com tipos de preenchimento do caminho de SkiaSharp_
+_Descobrir os diferentes efeitos possíveis com os tipos de preenchimento de caminho SkiaSharp_
 
-Dois dos contornos em um caminho podem se sobrepor e as linhas que compõem uma única delimitação podem se sobrepor. Qualquer área fechada potencialmente pode ser preenchida, mas você não deseja preencher todas as áreas fechadas. Veja um exemplo:
+Dois dos contornos em um caminho podem se sobrepor e as linhas que compõem uma única delimitação podem se sobrepor. Qualquer área fechada potencialmente pode ser preenchida, mas você não deseja preencher todas as áreas fechadas. Aqui está um exemplo:
 
 ![](fill-types-images/filltypeexample.png "Five-pointed star partially filles")
 
-Você tem controle um pouco sobre isso. O algoritmo de preenchimento é regido pela [ `SKFillType` ](xref:SkiaSharp.SKPath.FillType) propriedade do `SKPath`, que você definir um membro do [ `SKPathFillType` ](xref:SkiaSharp.SKPathFillType) enumeração:
+Você tem controle um pouco sobre isso. O algoritmo de preenchimento é regido pela propriedade [`SKFillType`](xref:SkiaSharp.SKPath.FillType) de `SKPath`, que você define como um membro da enumeração [`SKPathFillType`](xref:SkiaSharp.SKPathFillType) :
 
 - `Winding`, o padrão
 - `EvenOdd`
@@ -35,7 +35,7 @@ Os algoritmos de contorno e par-ímpares determinam se qualquer área fechada é
 
 Com muitos caminhos de rotina, o algoritmo Enrolamento geralmente preenche todas as áreas contidas de um caminho. O algoritmo de par-ímpar geralmente produz resultados mais interessantes.
 
-O exemplo clássico é uma estrela de cinco pontas, conforme demonstrado a **Five-Pointed estrela** página. O [ **FivePointedStarPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/FivePointedStarPage.xaml) arquivo instancia dois `Picker` modos de exibição para selecionar o caminho de preencher o tipo e se o caminho é traçado ou preenchido ou ambos e em qual ordem:
+O exemplo clássico é uma estrela de cinco pontas, conforme demonstrado na página de **estrela de cinco pontas** . O arquivo [**FivePointedStarPage. XAML**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Paths/FivePointedStarPage.xaml) instancia duas exibições de `Picker` para selecionar o tipo de preenchimento de caminho e se o caminho é traçado ou preenchido ou ambos, e em que ordem:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -102,7 +102,7 @@ O exemplo clássico é uma estrela de cinco pontas, conforme demonstrado a **Fiv
 </ContentPage>
 ```
 
-O arquivo code-behind usa ambos `Picker` valores para desenhar uma estrela de cinco pontos:
+O arquivo code-behind usa ambos os valores `Picker` para desenhar uma estrela de cinco pontas:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -126,7 +126,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
     {
         // angle from vertical
         double angle = i * 4 * Math.PI / 5;
-        path.LineTo(center + new SKPoint(radius * (float)Math.Sin(angle), 
+        path.LineTo(center + new SKPoint(radius * (float)Math.Sin(angle),
                                         -radius * (float)Math.Cos(angle)));
     }
     path.Close();
@@ -168,20 +168,20 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-Normalmente, o tipo de preenchimento do caminho deve afetar apenas preenchimentos e não traços, mas os dois `Inverse` modos afetam preenchimentos e traços. Para preenchimentos, os dois `Inverse` tipos preencher as áreas oppositely, de modo que a área de fora a estrela é preenchida. Para traços, dois `Inverse` tipos de cor tudo, exceto o traço. Usando esses tipos de preenchimento inverso pode produzir alguns efeitos ímpares, como demonstra a captura de tela do iOS:
+Normalmente, o tipo de preenchimento de caminho deve afetar apenas os preenchimentos e não traços, mas os dois modos de `Inverse` afetam os preenchimentos e os traços. Para preenchimentos, os dois tipos de `Inverse` preencher áreas opostamente para que a área fora da estrela seja preenchida. Para traços, os dois tipos de `Inverse` colorem tudo, exceto o traço. Usando esses tipos de preenchimento inverso pode produzir alguns efeitos ímpares, como demonstra a captura de tela do iOS:
 
 [![](fill-types-images/fivepointedstar-small.png "Triple screenshot of the Five-Pointed Star page")](fill-types-images/fivepointedstar-large.png#lightbox "Triple screenshot of the Five-Pointed Star page")
 
 A captura de tela do Android mostra os efeitos típicos de retrocesso e ímpar, mas a ordem do traço e do preenchimento também afeta os resultados.
 
-O algoritmo de contorno é dependente da direção que as linhas são desenhadas. Normalmente, quando você estiver criando um caminho, você pode controlar nessa direção conforme você especificar que as linhas são desenhadas de um ponto para outro. No entanto, o `SKPath` classe também define os métodos, como `AddRect` e `AddCircle` que desenhar delimitações inteiras. Para controlar como esses objetos são desenhados, os métodos incluem um parâmetro do tipo [ `SKPathDirection` ](xref:SkiaSharp.SKPathDirection), que tem dois membros:
+O algoritmo de contorno é dependente da direção que as linhas são desenhadas. Normalmente, quando você estiver criando um caminho, você pode controlar nessa direção conforme você especificar que as linhas são desenhadas de um ponto para outro. No entanto, a classe `SKPath` também define métodos como `AddRect` e `AddCircle` que desempatem contornos inteiros. Para controlar como esses objetos são desenhados, os métodos incluem um parâmetro do tipo [`SKPathDirection`](xref:SkiaSharp.SKPathDirection), que tem dois membros:
 
 - `Clockwise`
 - `CounterClockwise`
 
-Os métodos `SKPath` que incluem uma `SKPathDirection` parâmetro dê a ele um valor padrão de `Clockwise`.
+Os métodos em `SKPath` que incluem um parâmetro `SKPathDirection` dão a ele um valor padrão de `Clockwise`.
 
-O **círculos sobrepostos** página cria um caminho com quatro círculos sobrepostos com um tipo de preenchimento do caminho par-ímpar:
+A página **círculos sobrepostos** cria um caminho com quatro círculos sobrepostos com um tipo de preenchimento de caminho par-ímpar:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -225,7 +225,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 [![](fill-types-images/overlappingcircles-small.png "Triple screenshot of the Overlapping Circles page")](fill-types-images/overlappingcircles-large.png#lightbox "Triple screenshot of the Overlapping Circles page")
 
-## <a name="related-links"></a>Links Relacionados
+## <a name="related-links"></a>Links relacionados
 
-- [APIs de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [APIs do SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

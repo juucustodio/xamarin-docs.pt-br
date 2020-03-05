@@ -7,18 +7,18 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/01/2018
-ms.openlocfilehash: 053847426d770408826297d9a80b6e38d7f6bc44
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 37afc9ef7773bbfefe442216055c0501af2ab966
+ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73029277"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "78291542"
 ---
 # <a name="xamarinandroid-cardview"></a>CardView Xamarin. Android
 
 _O widget Cardview é um componente de interface do usuário que apresenta conteúdo de texto e imagem em exibições semelhantes a cartões. Este guia explica como usar e personalizar o CardView em aplicativos Xamarin. Android e, ao mesmo tempo, manter a compatibilidade com versões anteriores do Android._
 
-## <a name="overview"></a>Visão Geral
+## <a name="overview"></a>Visão geral
 
 O widget `Cardview`, introduzido no Android 5,0 (pirulito), é um componente de interface do usuário que apresenta conteúdo de texto e imagem em exibições semelhantes a cartões. `CardView` é implementado como um widget de `FrameLayout` com cantos arredondados e uma sombra. Normalmente, um `CardView` é usado para apresentar um único item de linha em um `ListView` ou `GridView` grupo de exibição. Por exemplo, a captura de tela a seguir é um exemplo de um aplicativo de reserva de viagem que implementa cartões de destino de viagem baseados em `CardView`em um `ListView`rolável:
 
@@ -36,7 +36,7 @@ O seguinte é necessário para usar os novos recursos do Android 5,0 e posterior
 
 - **SDK do Android** &ndash; Android 5,0 (API 21) ou posterior deve ser instalado por meio do gerenciador de SDK do Android.
 
-- O **java jdk 1,8** &ndash; JDK 1,7 pode ser usado se você for especificamente voltados API nível 23 e anterior. O JDK 1,8 está disponível na [Oracle](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
+- O **java jdk 1,8** &ndash; JDK 1,7 pode ser usado se você estiver direcionado especificamente para a API de nível 23 e anterior. O JDK 1,8 está disponível na [Oracle](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
 
 Seu aplicativo também deve incluir o pacote de `Xamarin.Android.Support.v7.CardView`. Para adicionar o pacote de `Xamarin.Android.Support.v7.CardView` no Visual Studio para Mac:
 
@@ -168,7 +168,7 @@ os layouts de `CardView` podem ser personalizados definindo um ou mais atributos
 Cada atributo também pode ser alterado dinamicamente chamando um método equivalente `CardView` (para obter mais informações sobre `CardView` métodos, consulte a [referência de classe CardView](https://developer.android.com/reference/android/support/v7/widget/CardView.html)).
 Observe que esses atributos (exceto a cor do plano de fundo) aceitam um valor de dimensão, que é um número decimal seguido pela unidade. Por exemplo, `11.5dp` especifica 11,5 pixels independentes de densidade.
 
-#### <a name="padding"></a>Enchimento
+#### <a name="padding"></a>Preenchimento
 
 `CardView` oferece cinco atributos de preenchimento para posicionar o conteúdo dentro do cartão. Você pode defini-los no seu XML de layout ou pode chamar métodos análogos em seu código:
 

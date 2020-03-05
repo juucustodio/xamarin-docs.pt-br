@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: 4255891174b639022a45c45c22e0022cd0403f26
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: c0338fce694d61dc19484c56dbc00bb854d0d0d7
+ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73030592"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "78292387"
 ---
 # <a name="siri-remote-and-bluetooth-controllers-for-tvos-in-xamarin"></a>Controladores remotos e Bluetooth Siri para tvOS no Xamarin
 
@@ -38,12 +38,12 @@ O Siri Remote tem os seguintes recursos e usos esperados em seu aplicativo tvOS:
 
 |Recurso|Uso geral do aplicativo|Uso do aplicativo de jogo|
 |---|---|---|
-|**Superfície de toque**<br />Passe o dedo para navegar, pressione para selecionar e manter os menus contextuais.|**Tocar/passar o dedo**<br />Navegação de interface do usuário entre itens com foco.<br /><br />**Selecione**<br />Ativa o item selecionado (em foco).|**Tocar/passar o dedo**<br />Depende do design do jogo e pode ser usado como um teclado D tocando nas bordas.<br /><br />**Selecione**<br />Execute a função de botão principal.|
+|**Superfície de toque**<br />Passe o dedo para navegar, pressione para selecionar e manter os menus contextuais.|**Tocar/passar o dedo**<br />Navegação de interface do usuário entre itens com foco.<br /><br />**Clique**<br />Ativa o item selecionado (em foco).|**Tocar/passar o dedo**<br />Depende do design do jogo e pode ser usado como um teclado D tocando nas bordas.<br /><br />**Clique**<br />Execute a função de botão principal.|
 |**Menu**<br />Pressione para retornar à tela ou ao menu anterior.|Retorna à tela anterior e sai para a tela inicial da Apple TV na tela principal do aplicativo.|Pausar e retomar o jogo, retorna à tela anterior e sai para a tela inicial da Apple TV na tela principal do aplicativo.|
-|**Siri/pesquisa**<br />Em países com siri, pressione e segure para controle de voz, em todos os outros países, exibe a tela de pesquisa.|N/D|N/D|
+|**Siri/pesquisa**<br />Em países com siri, pressione e segure para controle de voz, em todos os outros países, exibe a tela de pesquisa.|n/d|n/d|
 |**Reproduzir/pausar**<br />Reproduzir e pausar mídia ou fornecer uma função secundária em aplicativos.|Inicia a reprodução de mídia e pausa/retoma a reprodução.|Executa a função de botão secundário ou ignora o vídeo introdutório (se existir).|
-|**Início**<br />Pressione para retornar à tela inicial, clique duas vezes para exibir aplicativos em execução, pressione e mantenha pressionado o dispositivo de suspensão.|N/D|N/D|
-|**Volume**<br />Controla o volume de equipamento de áudio/vídeo anexado.|N/D|N/D|
+|**Página Inicial**<br />Pressione para retornar à tela inicial, clique duas vezes para exibir aplicativos em execução, pressione e mantenha pressionado o dispositivo de suspensão.|n/d|n/d|
+|**Volume**<br />Controla o volume de equipamento de áudio/vídeo anexado.|n/d|n/d|
 
 <a name="Touch-Surface-Gestures" />
 
@@ -286,14 +286,14 @@ Um controlador de jogo tem os seguintes recursos e usos esperados em seu aplicat
 |**A**|Ativa o item selecionado (em foco).|Executa a função de botão primário e confirma as ações da caixa de diálogo.|
 |**B**|Retorna à tela anterior ou sai para a tela inicial se estiver na tela principal do aplicativo.|Executa a função de botão secundário ou retorna à tela anterior.|
 |**X**|Inicia a reprodução de mídia ou pausa/retoma a reprodução.|Depende do jogo.|
-|**Y**|N/D|Depende do jogo.|
+|**S**|n/d|Depende do jogo.|
 |**Menu**|Retorna à tela anterior ou sai para a tela inicial se estiver na tela principal do aplicativo.|Pause/retome o jogo, retorna à tela anterior ou sai para a tela inicial se estiver na tela principal do aplicativo.|
 |**Botão à esquerda**|Navega para a esquerda.|Depende do jogo.|
 |**Gatilho esquerdo**|Navega para a esquerda.|Depende do jogo.|
 |**Botão do ressalto direito**|Navega para a direita.|Depende do jogo.|
 |**Gatilho à direita**|Navega para a direita|Depende do jogo.|
 |**Thumbstick esquerdo**|Navega pelos elementos da interface do usuário (altera o foco).|Depende do jogo.|
-|**Thumbstick à direita**|N/D|Depende do jogo.|
+|**Thumbstick à direita**|n/d|Depende do jogo.|
 
 A Apple fornece as seguintes sugestões para trabalhar com controladores de jogo:
 

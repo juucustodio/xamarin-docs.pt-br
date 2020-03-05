@@ -7,12 +7,12 @@ manager: crdun
 ms.workload:
 - xamarin
 ms.date: 10/23/2018
-ms.openlocfilehash: 57e3444ebcbd87607da248ecacca5e76a44f1577
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: bd1a728dfe14ff9243402bedae74db7be93bf466
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73007443"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "78291871"
 ---
 # <a name="devops-with-xamarin"></a>DevOps com Xamarin
 
@@ -26,7 +26,7 @@ As tabelas a seguir identificam quais recursos de DevOps no Visual Studio devem 
 
 ## <a name="agile-tools"></a>Ferramentas agile
 
-Link de referência: **[About Agile tools and Agile project management](/azure/devops/boards/backlogs/overview?view=vsts)** (Sobre as ferramentas Agile e o gerenciamento de projetos Agile)
+Link de referência: **[About Agile tools and Agile project management](/azure/devops/boards/backlogs/backlogs-overview?view=azure-devops)** (Sobre as ferramentas Agile e o gerenciamento de projetos Agile)
 
 Comentário Geral: todos os recursos de planejamento e acompanhamento são independentes do tipo de projeto e de linguagens de codificação.
 
@@ -84,7 +84,7 @@ Link de referência: **[Azure Pipelines](/azure/devops/pipelines/index?view=vsts
 |Planejando testes, criando casos de teste e organizando conjuntos de testes|Sim||
 |Teste manual|Sim||
 |Gerenciador de Teste (testes de gravação e reprodução)|Sim|Somente dispositivos Windows e emuladores Android do Visual Studio.|
-|Cobertura de código|N/D||
+|Cobertura de código|n/d||
 |[Efetuar teste de unidade em seu código](/visualstudio/test/unit-test-your-code/)|Sim|Para os destinos Android e Windows, as ferramentas internas do MSTest podem ser usadas. Para executar testes de unidade em Windows, Android e iOS, o Xamarin recomenda NUnit. Confira [Usar o TFVC](/azure/devops/repos/tfvc/overview?view=vsts).|
 |[Usar a automação de interface do usuário para testar seu código](/visualstudio/test/use-ui-automation-to-test-your-code/)|Somente Windows|O gravador de teste da interface do usuário do Visual Studio é somente Windows. Para todas as plataformas, confira [Xamarin.UITest](/appcenter/test-cloud/uitest/).|
 

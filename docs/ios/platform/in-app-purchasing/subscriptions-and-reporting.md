@@ -7,26 +7,26 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: 8f930e2358562df7e68841b87b6a3df0914805fe
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 5e1019417ff7ac93abfe2396a4acaa76c66d182f
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73032298"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "78291475"
 ---
 # <a name="subscriptions-and-reporting-in-xamarinios"></a>Assinaturas e relatórios no Xamarin. iOS
 
 ## <a name="about-non-renewing-subscriptions"></a>Sobre assinaturas que não são renovadas
 
 Assinaturas não renovadas destinam-se a produtos que representam a venda de um serviço com uma restrição de tempo (como o acesso de uma semana a um aplicativo de navegação ou acesso limitado a tempo a um arquivo de dados).   
-   
+
 Principais diferenças entre assinaturas não renovadas e outros tipos de produtos:
 
-- A definição do produto no iTunes Connect não inclui o termo. O código do aplicativo deve ser capaz de inferir o período de validade da ID do produto. 
-- Eles podem ser comprados várias vezes (como um produto consumível). Os aplicativos são necessários para gerenciar o período de assinatura/expiração e renovação e impedir que o usuário compre assinaturas sobrepostas. 
-- As compras não são suportadas pela função de restauração StoreKit. Se a assinatura estiver disponível em todos os dispositivos de um usuário, o aplicativo terá que projetar e implementar esse recurso em conjunto com um servidor remoto. Os aplicativos também são responsáveis por fazer backup do status da assinatura para casos em que é feito backup de um dispositivo e restaurado do backup. 
+- A definição do produto no iTunes Connect não inclui o termo. O código do aplicativo deve ser capaz de inferir o período de validade da ID do produto.
+- Eles podem ser comprados várias vezes (como um produto consumível). Os aplicativos são necessários para gerenciar o período de assinatura/expiração e renovação e impedir que o usuário compre assinaturas sobrepostas.
+- As compras não são suportadas pela função de restauração StoreKit. Se a assinatura estiver disponível em todos os dispositivos de um usuário, o aplicativo terá que projetar e implementar esse recurso em conjunto com um servidor remoto. Os aplicativos também são responsáveis por fazer backup do status da assinatura para casos em que é feito backup de um dispositivo e restaurado do backup.
 - Visão geral da implementação
-- Assinaturas não renovadas normalmente devem ser implementadas usando o fluxo de trabalho fornecido pelo servidor e gerenciadas como produtos consumíveis. 
+- Assinaturas não renovadas normalmente devem ser implementadas usando o fluxo de trabalho fornecido pelo servidor e gerenciadas como produtos consumíveis.
 
 ## <a name="about-free-subscriptions"></a>Sobre assinaturas gratuitas
 
@@ -49,7 +49,7 @@ As assinaturas renováveis automaticamente devem ser implementadas usando o flux
 O segredo compartilhado de compra no aplicativo deve ser usado na solicitação JSON ao verificar assinaturas renováveis automaticamente no servidor. O segredo compartilhado é criado/acessado por meio do iTunes Connect.
 
 No iTunes Connect home page selecione **meus aplicativos**:   
-   
+
  [![](subscriptions-and-reporting-images/image2.png "Select My Apps")](subscriptions-and-reporting-images/image2.png#lightbox)  
 
 Selecione um aplicativo e clique na guia **compras no aplicativo** :
@@ -57,7 +57,7 @@ Selecione um aplicativo e clique na guia **compras no aplicativo** :
 [![](subscriptions-and-reporting-images/image6.png "Click on the In-App Purchases tab")](subscriptions-and-reporting-images/image6.png#lightbox)
 
 Na parte inferior da página, selecione **Exibir ou gerar um segredo compartilhado**:
-   
+
  [![](subscriptions-and-reporting-images/image40.png "Select View or generate a shared secret")](subscriptions-and-reporting-images/image40.png#lightbox)
 
  [![](subscriptions-and-reporting-images/image41.png "Generate a shared secret")](subscriptions-and-reporting-images/image41.png#lightbox)   
@@ -98,19 +98,18 @@ O objeto SKPaymentTransaction não inclui o termo de assinatura – você deve u
 
 Para facilitar o teste de assinaturas, suas durações são compactadas durante o teste na área restrita. uma renovação de assinaturas de 1 semana a cada 3 minutos, as assinaturas de 1 ano são renovadas a cada hora. As assinaturas serão renovadas automaticamente no máximo seis vezes durante o teste na área restrita.
 
-## <a name="reporting"></a>Relatórios
+## <a name="reporting"></a>Relatório
 
 o iTunes Connect ( [iTunesConnect.Apple.com](https://itunesconnect.apple.com)) fornece:   
-   
+
  **Vendas e tendências** – exibe detalhes de downloads de aplicativos, atualizações e compras no aplicativo.   
-   
+
  **Pagamentos e relatórios financeiros** – detalha a renda obtida por seus aplicativos, bem como a listagem de pagamentos que foram feitos a você e o quanto você está devido.
 
 Um relatório de vendas e tendências de exemplo é mostrado abaixo:   
 
  [![](subscriptions-and-reporting-images/image42.png "An example Sales and Trends report")](subscriptions-and-reporting-images/image42.png#lightbox)   
-   
- Há também um [aplicativo IOS **Mobile do ITC Connect**(iTunes link)](https://itunes.apple.com/us/app/itunes-connect-mobile/id376771144?mt=8).
-as capturas de tela do iPhone para algumas das estatísticas disponíveis são mostradas aqui:   
-   
+
+ Há também um aplicativo IOS **móvel do ITC Connect** . as capturas de tela do iPhone para algumas das estatísticas disponíveis são mostradas aqui:   
+
  [![](subscriptions-and-reporting-images/image43.png "iPhone screenshots for some of the statistics available")](subscriptions-and-reporting-images/image43.png#lightbox)

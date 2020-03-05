@@ -6,13 +6,13 @@ ms.assetid: 46AB0D5E-0025-4A8A-9D00-3E66C3D0BA2E
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 09/25/2019
-ms.openlocfilehash: 83aca8c9e64ffb01eb9773c17b42333f73c1aab5
-ms.sourcegitcommit: 9fa7cf9fae44ed092bc9cab17c843a443001734e
+ms.date: 01/17/2020
+ms.openlocfilehash: c71153cdaa94a7983b89968abc828011a648f2b1
+ms.sourcegitcommit: 10b4d7952d78f20f753372c53af6feb16918555c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72971259"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "78291946"
 ---
 # <a name="display-pop-ups"></a>Exibir pop-ups
 
@@ -48,7 +48,7 @@ async void OnAlertYesNoClicked (object sender, EventArgs e)
 
 A [UIActionSheet](https://developer.apple.com/library/ios/documentation/uikit/reference/uiactionsheet_class/Reference/Reference.html) é um elemento de interface do usuário comum no iOS. O método [`DisplayActionSheet`](xref:Xamarin.Forms.Page.DisplayActionSheet*) do Xamarin.Forms permite que você inclua esse controle em aplicativos de plataforma cruzada, renderizando alternativas nativas no Android e na UWP.
 
-Para exibir uma folha de ação, `await`[`DisplayActionSheet`](xref:Xamarin.Forms.Page.DisplayActionSheet*) em qualquer [`Page`](xref:Xamarin.Forms.Page), passando a mensagem e os rótulos do botão como cadeias de caracteres. O método retorna o rótulo de cadeia de caracteres do botão que foi clicado pelo usuário. Um exemplo simples é mostrado aqui:
+Para exibir uma planilha de ações, `await` [`DisplayActionSheet`](xref:Xamarin.Forms.Page.DisplayActionSheet*) em qualquer [`Page`](xref:Xamarin.Forms.Page), passando os rótulos de mensagem e botão como cadeias de caracteres. O método retorna o rótulo de cadeia de caracteres do botão que foi clicado pelo usuário. Um exemplo simples é mostrado aqui:
 
 ```csharp
 async void OnActionSheetSimpleClicked (object sender, EventArgs e)
@@ -95,14 +95,15 @@ A lista completa de argumentos para o método `DisplayPromptAsync` é:
 - `placeholder`, do tipo `string`, é o texto do espaço reservado a ser exibido no prompt. Esse é um argumento opcional, cujo valor padrão é `null`.
 - `maxLength`, do tipo `int`, é o comprimento máximo da resposta do usuário. Esse é um argumento opcional, cujo valor padrão é-1.
 - `keyboard`, do tipo `Keyboard`, é o tipo de teclado a ser usado para a resposta do usuário. Esse é um argumento opcional, cujo valor padrão é `Keyboard.Default`.
+- `initialValue`, do tipo `string`, é uma resposta predefinida que será exibida e que pode ser editada. Esse é um argumento opcional, cujo valor padrão é um `string`vazio.
 
 O exemplo a seguir mostra a definição de alguns dos argumentos opcionais:
 
 ```csharp
-string result = await DisplayPromptAsync("Question 2", "What's 5 + 5?", maxLength: 2, keyboard: Keyboard.Numeric);
+string result = await DisplayPromptAsync("Question 2", "What's 5 + 5?", initialValue: "10", maxLength: 2, keyboard: Keyboard.Numeric);
 ```
 
-Esse código limita o número de caracteres que podem ser inseridos em 2 e exibe o teclado numérico para a entrada do usuário:
+Esse código exibe uma resposta predefinida de 10, limita o número de caracteres que podem ser inseridos em 2 e exibe o teclado numérico para a entrada do usuário:
 
 [![Captura de tela de um prompt modal, no iOS e no Android](pop-ups-images/keyboard-prompt.png "Prompt modal")](pop-ups-images/keyboard-prompt-large.png#lightbox "Prompt modal")
 

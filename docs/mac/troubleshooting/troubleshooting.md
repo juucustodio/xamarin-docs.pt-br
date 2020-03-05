@@ -8,16 +8,16 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 7bb17abf8cdb943780bb3939aae8e461925b6517
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 8714297c4948dbb65c521d6a32bac3e437b40733
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73001601"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "78291479"
 ---
 # <a name="xamarinmac-troubleshooting-tips"></a>Dicas de solução de problemas do Xamarin. Mac
 
-## <a name="overview"></a>Visão Geral
+## <a name="overview"></a>Visão geral
 
 Às vezes, todos estamos presos enquanto trabalhamos em um projeto, na incapacidade de fazer com que uma API funcione da maneira desejada ou tentar contornar um bug. Nossa meta no Xamarin é que você tenha êxito ao escrever seus aplicativos móveis e de desktop, e fornecemos alguns recursos para ajudar.
 
@@ -54,7 +54,7 @@ A depuração desses programas pode ser frustrante, pois encontrar as informaç�
 - Você pode aumentar a saída adicionando "MONO_LOG_LEVEL" ao comando na linha de comando, por exemplo:
 
   `MONO_LOG_LEVEL=debug MyApp.app/Contents/MacOS/MyApp`
-- Você pode anexar um depurador nativo (`lldb`) ao processo para ver se isso fornece mais informações (isso requer uma licença paga). Por exemplo, faça o seguinte:
+- Você pode anexar um depurador nativo (`lldb`) ao processo para ver se isso fornece mais informações (isso requer uma licença paga). Por exemplo, proceda da seguinte maneira:
 
   1. Insira `lldb MyApp.app/Contents/MacOS/MyApp` no terminal.
   2. Insira `run` no terminal.
@@ -68,7 +68,7 @@ As seções a seguir abordam problemas conhecidos e suas soluções.
 
 ### <a name="unable-to-connect-to-the-debugger-in-sandboxed-apps"></a>Não é possível conectar-se ao depurador em aplicativos em área restrita
 
-O depurador se conecta a aplicativos Xamarin. Mac por meio de TCP, o que significa que, por padrão, quando você habilita a área restrita, ele não consegue se conectar ao aplicativo, portanto, se você tentar executar o aplicativo sem as permissões apropriadas habilitadas, você receberá um erro *"não é possível se conectar ao depurador"* .
+O depurador se conecta a aplicativos Xamarin. Mac por meio de TCP, o que significa que, por padrão, quando você habilita a área restrita, ele não consegue se conectar ao aplicativo, portanto, se você tentar executar o aplicativo sem as permissões apropriadas habilitadas, você receberá um erro *"não é possível conectar ao depurador"* .
 
 [![Editando os direitos](troubleshooting-images/debug01.png "Editando os direitos")](troubleshooting-images/debug01-large.png#lightbox)
 
@@ -80,7 +80,7 @@ Ao incluir bibliotecas de terceiros em seu aplicativo Xamarin. Mac, você pode r
 
 Isso pode ser resolvido abrindo as opções para o projeto Xamarin. Mac, indo para o **Build do mac** > **internacionalização** e verificando a internacionalização **oeste** :
 
-[![Editando as opções de compilação](troubleshooting-images/issue01.png "Editando as opções de compilação")](troubleshooting-images/issue01-large.png#lightbox)
+[![Editar as opções de build](troubleshooting-images/issue01.png "Editar as opções de build")](troubleshooting-images/issue01-large.png#lightbox)
 
 ### <a name="failed-to-compile-mm5103"></a>Falha ao compilar (mm5103)
 
@@ -112,7 +112,7 @@ Insira `Entitlements` para o nome e clique no botão **novo** . Se o projeto tiv
 
 ## <a name="community-support-on-the-forums"></a>Suporte da Comunidade nos fóruns
 
-A comunidade de desenvolvedores que usam produtos Xamarin é incrível e muitos visitam nossos [fóruns do xamarin. Mac](https://forums.xamarin.com/categories/mac) para compartilhar experiências e seus conhecimentos. Além disso, os engenheiros do Xamarin visitam periodicamente o fórum para ajudar.
+A comunidade de desenvolvedores que usam produtos Xamarin é incrível e muitos visitam nossos [fóruns do xamarin. Mac](https://forums.xamarin.com/categories/xamarin-mac) para compartilhar experiências e seus conhecimentos. Além disso, os engenheiros do Xamarin visitam periodicamente o fórum para ajudar.
 
 <a name="filing-a-bug"/>
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: 778b8eeb82ebfb62cfb8c16e14f341c9afb8ff7a
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: f6218977e9ad0d4c396ef127c3c3ca53dc56d7d3
+ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73022251"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "78292523"
 ---
 # <a name="xib-code-generation-in-xamarinios"></a>. xib geração de código no Xamarin. iOS
 
@@ -47,7 +47,7 @@ As classes não podem ser definidas em mais de um **. xib**ou entrarão em confl
 
 ## <a name="non-designer-class-parts"></a>Partes de classe que não são do designer
 
-As classes parciais do designer não devem ser usadas no estado em que se encontram. As saídas são privadas e nenhuma classe base é especificada. Espera-se que cada classe tenha uma parte de classe "não-designer" correspondente em outro arquivo, que define a classe base, usa ou expõe as saídas e define construtores que são necessários para instanciar a classe a partir do código nativo ao carregar o **. xib** . Os modelos default **. xib** fazem isso, mas para quaisquer classes personalizadas adicionais que você definir em um **. xib**, você deve adicionar manualmente a parte que não é de designer.
+As classes parciais do designer não devem ser usadas no estado em que se encontram. As saídas são privadas e nenhuma classe base é especificada. Espera-se que cada classe tenha uma parte de classe "não-designer" correspondente em outro arquivo, que define a classe base, usa ou expõe as saídas e define construtores que são necessários para instanciar a classe a partir do código nativo ao carregar o **. xib**. Os modelos default **. xib** fazem isso, mas para quaisquer classes personalizadas adicionais que você definir em um **. xib**, você deve adicionar manualmente a parte que não é de designer.
 
 A razão para isso é a necessidade de flexibilidade. Por exemplo, várias classes codebehind podiam fazer uma subclasse de uma classe abstrata gerenciada comum, que subclasse a classe a ser subclasse por IB.
 
@@ -81,7 +81,7 @@ Observe que esses métodos parciais são criados apenas C#para o, porque o CodeD
 
 ## <a name="cross-xib-class-usage"></a>Uso de classe entre XIB
 
-Às vezes, os usuários desejam referenciar a mesma classe de vários arquivos **. xib** , por exemplo, com os controladores de tabulação. Isso pode ser feito por explicitamente referenciando a definição de classe de outro arquivo **. xib** ou definindo o mesmo nome de classe novamente no segundo **. xib**.
+Às vezes, os usuários desejam referenciar a mesma classe de vários arquivos **. xib** , por exemplo, com os controladores de tabulação. Isso pode ser feito referenciando explicitamente a definição de classe de outro arquivo **. xib** ou definindo o mesmo nome de classe novamente no segundo **. xib**.
 
 O último caso pode ser problemático devido à Visual Studio para Mac processamento de arquivos **. xib** individualmente. Ele não pode detectar e mesclar automaticamente definições duplicadas, portanto, você pode acabar com conflitos aplicando o atributo de registro várias vezes quando a mesma classe parcial é definida em vários arquivos de designer. As versões recentes do Visual Studio para Mac tentam resolver isso, mas nem sempre podem funcionar conforme o esperado. No futuro, isso provavelmente não terá suporte e, em vez disso Visual Studio para Mac tornará todos os tipos definidos em todos os arquivos **. xib** e código gerenciado no projeto visível diretamente de todos os arquivos **. xib** .
 

@@ -6,16 +6,16 @@ ms.assetid: 46E0578A-7EB9-C105-ABB0-A043E501F36B
 author: davidortinau
 ms.author: daortin
 ms.date: 03/23/2017
-ms.openlocfilehash: 07eab1e8229cd6600bb8abdd324cb3eb12a8f886
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: a9f84192a312f9aba98817b75c058229e6c721bb
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73016850"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "78291553"
 ---
 # <a name="part-6---testing-and-app-store-approvals"></a>Parte 6 – Teste e aprovações da app store
 
-## <a name="testing"></a>Testes
+## <a name="testing"></a>Testando
 
 Muitos aplicativos (até mesmo aplicativos Android, em algumas lojas) terão que passar um processo de aprovação antes de serem publicados; Portanto, o teste é essencial para garantir que seu aplicativo chegue ao mercado (o que sozinha é bem sucedido com seus clientes). O teste pode assumir muitas formas, desde testes de unidade de nível de desenvolvedor até o gerenciamento de testes beta em uma ampla variedade de hardware.
 
@@ -31,7 +31,7 @@ Você também deve testar o máximo possível de dispositivos de hardware físic
 
 O celular e o ecossistema do Tablet estão crescendo o tempo todo, tornando impossível testar o número cada vez maior de dispositivos disponíveis. Para resolver esse problema, vários serviços oferecem a capacidade de controlar remotamente vários dispositivos diferentes para que os aplicativos possam ser instalados e testados sem a necessidade de investir diretamente em muitos hardwares.
 
-O [app Center Test](https://docs.microsoft.com/appcenter/test-cloud/preparing-for-upload/uitest) oferece uma maneira fácil de testar aplicativos Ios e Android em centenas de dispositivos diferentes.
+O App Center Test oferece uma maneira fácil de testar aplicativos iOS e Android em centenas de dispositivos diferentes. Para obter mais informações, consulte [preparando aplicativos xamarin. Android](/appcenter/test-cloud/preparing-for-upload/xamarin-android-uitest) e [preparando aplicativos xamarin. Ios](/appcenter/test-cloud/preparing-for-upload/xamarin-ios-uitest).
 
 ### <a name="test-management"></a>Gerenciamento de testes
 
@@ -50,13 +50,13 @@ O Xamarin [UITest](https://docs.microsoft.com/appcenter/test-cloud/preparing-for
 
 ## <a name="unit-testing"></a>Teste de unidade
 
-### <a name="touchunit"></a>Touch. Unit
+### <a name="touchunit"></a>Touch.Unit
 
 O Xamarin. iOS inclui uma estrutura de teste de unidade chamada Touch. Unit que segue os testes de escrita de estilo JUnit/NUnit.
 
 Consulte nosso [teste de unidade com a documentação do Xamarin. Ios](~/ios/deploy-test/touch.unit.md) para obter detalhes sobre como escrever testes e executar Touch. Unit.
 
-### <a name="andrunit"></a>Andr. Unit
+### <a name="andrunit"></a>Andr.Unit
 
 Há um equivalente de código-fonte aberto de Touch. Unit para Android chamado Andr. Unit. Você pode baixá-lo do [GitHub](https://github.com/spouliot/Andr.Unit) e ler sobre a ferramenta no [blog de@spouliot](https://spouliot.wordpress.com/2011/10/30/andr-unit-joins-the-family/).
 

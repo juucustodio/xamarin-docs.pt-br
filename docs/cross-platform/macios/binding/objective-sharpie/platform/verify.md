@@ -6,12 +6,12 @@ ms.assetid: 107FBCEA-266B-4295-B7AA-40A881B82B7B
 author: davidortinau
 ms.author: daortin
 ms.date: 01/15/2016
-ms.openlocfilehash: 6fffad744fa2f60239b0c96f01ff241e2cad9252
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: d951952103a94dfc60a8083a75998611b635cda9
+ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73016070"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "78292169"
 ---
 # <a name="objective-sharpie-verify-attributes"></a>Atributos de verificação de nitidez do objetivo
 
@@ -28,9 +28,9 @@ Depois de verificar se a associação está correta ou corrigi-la para estar cor
 
 O argumento de dica fornecido para o atributo pode ser referenciado cruzado com a documentação abaixo. A documentação para todos os atributos de `[Verify]` produzidos será fornecida no console também após a conclusão da associação.
 
-|Dica de `[Verify]`|Descrição|
+|Dica de `[Verify]`|DESCRIÇÃO|
 |---|---|
-|InferredFromPreceedingTypedef|O nome dessa declaração foi inferido por uma convenção comum do `typedef` imediatamente anterior no código-fonte nativo original. Verifique se o nome inferido está correto, pois essa Convenção é ambígua.|
+|InferredFromPreceedingTypedef|O nome dessa declaração foi inferido por uma convenção comum da `typedef` imediatamente anterior no código-fonte nativo original. Verifique se o nome inferido está correto, pois essa Convenção é ambígua.|
 |ConstantsInterfaceAssociation|Não há nenhuma maneira de ser possível determinar com qual interface Objective-C uma declaração de variável externa pode ser associada. As instâncias desses são vinculadas como `[Field]` Propriedades em uma interface parcial em uma interface curta por concreto para produzir uma API mais intuitiva, possivelmente eliminando totalmente a interface ' Constants '.|
 |MethodToProperty|Um método Objective-C foi associado como C# uma propriedade devido a uma convenção como não usar nenhum parâmetro e retornar um valor (retorno não nulo). Geralmente, métodos como esses devem ser associados como propriedades para trazer uma API mais agradável, mas às vezes os falsos positivos podem ocorrer e a associação deve realmente ser um método.|
 |StronglyTypedNSArray|Um `NSArray*` nativo foi associado como `NSObject[]`. Pode ser possível digitar mais fortemente a matriz na associação com base nas expectativas definidas por meio da documentação da API (por exemplo, comentários no arquivo de cabeçalho) ou examinando o conteúdo da matriz por meio de testes. Por exemplo, um NSArray * contendo apenas NSNumber * instancescan ser associado como `NSNumber[]` em vez de `NSObject[]`.|

@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/09/2015
-ms.openlocfilehash: d988be9163c0a6e12735425a139c03d9641fa95c
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: f7526b6cecebadd30e95718b7e537026a6557adf
+ms.sourcegitcommit: f43d5ecafd19cbc5cce39201916a83927a34617a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70772758"
+ms.lasthandoff: 03/02/2020
+ms.locfileid: "78291478"
 ---
 # <a name="device-orientation"></a>Orientação do dispositivo
 
-[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-responsivelayout)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-responsivelayout)
 
 É importante considerar como seu aplicativo será usado e como orientação paisagem pode ser incorporada para melhorar a experiência do usuário. Layouts individuais podem ser projetados para acomodar várias orientações e melhor usa o espaço disponível. No nível do aplicativo, rotação pode ser desabilitada ou habilitada.
 
@@ -28,25 +28,25 @@ Ao usar o xamarin. Forms, o método com suporte de controlar a orientação do d
 
 ### <a name="ios"></a>iOS
 
-No iOS, a orientação do dispositivo está configurada para aplicativos que usam o **Info. plist** arquivo. Esse arquivo incluirá as configurações de orientação para iPhone e iPod, bem como configurações para iPad, se o aplicativo inclui-lo como um destino. A seguir estão as instruções específicas para seu IDE. Use as opções de IDE na parte superior deste documento para selecionar quais instruções que você gostaria de ver:
+No iOS, a orientação do dispositivo é configurada para aplicativos que usam o arquivo **info. plist** . Esse arquivo incluirá as configurações de orientação para iPhone e iPod, bem como configurações para iPad, se o aplicativo inclui-lo como um destino. A seguir estão as instruções específicas para seu IDE. Use as opções de IDE na parte superior deste documento para selecionar quais instruções que você gostaria de ver:
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-No Visual Studio, abra o projeto do iOS e abra **Info. plist**. O arquivo será aberto em um painel de configuração, começando com o guia de informações de implantação do iPhone:
+No Visual Studio, abra o projeto do iOS e abra **info. plist**. O arquivo será aberto em um painel de configuração, começando com o guia de informações de implantação do iPhone:
 
 ![Informações de implantação no Visual Studio do iPhone](device-orientation-images/orientation-vs-iphone.png)
 
-Para configurar a orientação do iPad, selecione a **informações de implantação do iPad** guia na parte superior esquerda do painel, em seguida, selecione das orientações disponíveis:
+Para configurar a orientação do iPad, selecione a guia **informações de implantação do iPad** na parte superior esquerda do painel e, em seguida, selecione uma das orientações disponíveis:
 
 ![Orientações de dispositivo com suporte no Visual Studio](device-orientation-images/orientation-vs-ipad.png)
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
-No Visual Studio para Mac, abra o projeto do iOS e abra **Info. plist**. Sob o **aplicativo** guia, seções estarão disponíveis para definir a orientação:
+No Visual Studio para Mac, abra o projeto do iOS e abra o **info. plist**. Na guia **aplicativo** , as seções estarão disponíveis para definir a orientação:
 
 ![iPhone informações de implantação no Visual Studio para Mac](device-orientation-images/orientation-xam-ui.png)
 
-Se você preferir editar os valores usando uma interface do editor de chave-valor, selecione o **origem**> guia na parte inferior da tela:
+Se você preferir editar os valores usando uma interface de editor de chave-valor, selecione a guia **fonte**> na parte inferior da tela:
 
 ![Orientações de dispositivo com suporte no Visual Studio para Mac](device-orientation-images/orientation-xam-source.png)
 
@@ -54,7 +54,7 @@ Se você preferir editar os valores usando uma interface do editor de chave-valo
 
 ### <a name="android"></a>Android
 
-Para controlar a orientação no Android, abra **MainActivity.cs** e defina a orientação usando o atributo decorar o `MainActivity` classe:
+Para controlar a orientação no Android, abra **MainActivity.cs** e defina a orientação usando o atributo decoração da classe `MainActivity`:
 
 ```csharp
 namespace MyRotatingApp.Droid
@@ -68,37 +68,36 @@ namespace MyRotatingApp.Droid
 
 Xamarin. Android dá suporte a várias opções para especificar a orientação:
 
-- **Paisagem** &ndash; força a orientação do aplicativo para ser paisagem, independentemente dos dados do sensor.
-- **Retrato** &ndash; força a orientação do aplicativo para ser retrato, independentemente dos dados do sensor.
-- **Usuário** &ndash; faz com que o aplicativo a ser apresentada usando a orientação de preferência do usuário.
-- **Por trás** &ndash; faz com que a orientação do aplicativo ser o mesmo que a orientação do [atividade](xref:Android.App.Activity) por trás dele.
-- **Sensor** &ndash; faz com que a orientação do aplicativo seja determinado pelo sensor, mesmo se o usuário tiver desabilitado a rotação automática.
-- **SensorLandscape** &ndash; faz com que o aplicativo para usar a orientação de paisagem durante o uso de dados de sensor para alterar a direção em que a tela é voltado para a (de modo que a tela não é vista como cabeça para baixo).
-- **SensorPortrait** &ndash; faz com que o aplicativo para usar a orientação de retrato durante o uso de dados de sensor para alterar a direção em que a tela é voltado para a (de modo que a tela não é vista como cabeça para baixo).
-- **ReverseLandscape** &ndash; faz com que o aplicativo para usar a orientação paisagem, voltado para a direção oposta usual para aparecer "cabeça para baixo."
-- **ReversePortrait** &ndash; faz com que o aplicativo para usar a orientação retrato, voltado para a direção oposta usual para aparecer "cabeça para baixo."
-- **FullSensor** &ndash; faz com que o aplicativo se baseiam nos dados de sensor para selecionar a orientação correta (fora de 4 a possíveis).
-- **FullUser** &ndash; faz com que o aplicativo para usar as preferências do usuário orientação. Se a rotação automática estiver habilitada, todas as 4 orientações podem ser usadas.
-- **UserLandscape** &ndash; _\[Nepodporuje\]_ faz com que o aplicativo para usar a orientação paisagem, a menos que o usuário tenha a rotação automática habilitada, caso em que ele usará o sensor para determinar a orientação. Esta opção interromperá a compilação.
-- **UserPortrait** &ndash; _\[Nepodporuje\]_ faz com que o aplicativo para usar a orientação retrato, a menos que o usuário tenha a rotação automática habilitada, caso em que ele usará o sensor para determinar a orientação. Esta opção interromperá a compilação.
-- **Bloqueado** &ndash; _\[não tem suporte\]_ faz com que o aplicativo para usar a orientação da tela física que quer que seja no lançamento, sem responder a alterações no dispositivo do orientação. Esta opção interromperá a compilação.
+- **Paisagem** &ndash; força a orientação do aplicativo a ser paisagem, independentemente dos dados do sensor.
+- **Retrato** &ndash; força a orientação do aplicativo a ser retrato, independentemente dos dados do sensor.
+- &ndash; de **usuário** faz com que o aplicativo seja apresentado usando a orientação preferencial do usuário.
+- **Por trás** &ndash; faz com que a orientação do aplicativo seja igual à orientação da [atividade](xref:Android.App.Activity) por trás dela.
+- O **sensor** &ndash; faz com que a orientação do aplicativo seja determinada pelo sensor, mesmo que o usuário tenha desabilitado a rotação automática.
+- **SensorLandscape** &ndash; faz com que o aplicativo use a orientação paisagem ao usar dados de sensor para alterar a direção com a qual a tela está voltada (para que a tela não seja vista como de cabeça para baixo).
+- **SensorPortrait** &ndash; faz com que o aplicativo use a orientação retrato ao usar dados de sensor para alterar a direção com a qual a tela está voltada (para que a tela não seja vista como de cabeça para baixo).
+- **ReverseLandscape** &ndash; faz com que o aplicativo use a orientação paisagem, voltada para a direção oposta, para que pareça "de cabeça para baixo".
+- **ReversePortrait** &ndash; faz com que o aplicativo use orientação retrato, voltado para a direção oposta, para que pareça "de cabeça para baixo".
+- **FullSensor** &ndash; faz com que o aplicativo confie nos dados do sensor para selecionar a orientação correta (fora dos possíveis 4).
+- **FullUser** &ndash; faz com que o aplicativo use as preferências de orientação do usuário. Se a rotação automática estiver habilitada, todas as 4 orientações podem ser usadas.
+- _Não há suporte para_ o &ndash; **userlandscape**\[\]faz com que o aplicativo use a orientação paisagem, a menos que o usuário tenha a rotação automática habilitada; nesse caso, ele usará o sensor para determinar a orientação. Esta opção interromperá a compilação.
+- _Não há suporte para_ o &ndash; do **userretrato**\[\]faz com que o aplicativo use a orientação retrato, a menos que o usuário tenha a rotação automática habilitada; nesse caso, ele usará o sensor para determinar a orientação. Esta opção interromperá a compilação.
+- _Não há suporte para_ o &ndash; **bloqueado**\[\]faz com que o aplicativo use a orientação da tela, o que estiver na inicialização, sem responder às alterações na orientação física do dispositivo. Esta opção interromperá a compilação.
 
 Observe que as APIs do Android nativos fornecem muito controle sobre como a orientação é gerenciada, incluindo as opções que contradizem explicitamente o usuário expresso preferências.
 
 ### <a name="universal-windows-platform"></a>Plataforma universal do Windows
 
-Na Universal Windows Platform (UWP), as orientações com suporte são definidas **Package. appxmanifest** arquivo. Abrir o manifesto irá revelar um painel de configuração onde as orientações com suporte podem ser selecionadas.
+No Plataforma Universal do Windows (UWP), as orientações com suporte são definidas no arquivo **Package. appxmanifest** . Abrir o manifesto irá revelar um painel de configuração onde as orientações com suporte podem ser selecionadas.
 
 <a name="Reacting_to_Changes_in_Orientation" />
 
 ## <a name="reacting-to-changes-in-orientation"></a>Reagir a alterações na orientação
 
-Xamarin. Forms não oferece quaisquer eventos nativos para notificar seu aplicativo de alterações de orientação no código compartilhado. No entanto, o `SizeChanged` eventos do `Page` é acionada quando a largura ou altura do `Page` alterações. Quando a largura do `Page` é maior que a altura, o dispositivo estiver no modo paisagem. Para obter mais informações, consulte [exibir uma imagem com base na orientação da tela](https://github.com/xamarin/recipes/tree/master/Recipes/xamarin-forms/Controls/screen-orientation).
+Xamarin. Forms não oferece quaisquer eventos nativos para notificar seu aplicativo de alterações de orientação no código compartilhado. No entanto, o[Xamarin. Essentials](~/essentials/index.md) contém uma classe [`DeviceDisplay`] que fornece notificações de alterações de orientação.
 
-> [!NOTE]
-> Há um pacote de NuGet existente e gratuito para receber notificações de alterações de orientação no código compartilhado. Consulte a [repositório GitHub](https://github.com/aliozgur/Xamarin.Plugins/tree/master/DeviceOrientation) para obter mais informações.
+Para detectar orientações sem o Xamarin. Essentials, monitore o evento `SizeChanged` do `Page`, que é acionado quando a largura ou a altura da `Page` é alterada. Quando a largura do `Page` for maior que a altura, o dispositivo estará no modo paisagem. Para obter mais informações, consulte [exibir uma imagem com base na orientação da tela](https://github.com/xamarin/recipes/tree/master/Recipes/xamarin-forms/Controls/screen-orientation).
 
-Como alternativa, é possível substituir a [ `OnSizeAllocated` ](xref:Xamarin.Forms.Page.OnSizeAllocated*) método em um `Page`, inserindo qualquer layout alterar lógica nele. O `OnSizeAllocated` método é chamado sempre que um `Page` é alocado um novo tamanho, o que ocorre sempre que o dispositivo seja girado. Observe que a implementação base de `OnSizeAllocated` executa funções importantes de layout, portanto, é importante chamar a implementação base na substituição:
+Como alternativa, é possível substituir o método [`OnSizeAllocated`](xref:Xamarin.Forms.Page.OnSizeAllocated*) em um `Page`, inserindo qualquer lógica de alteração de layout lá. O método `OnSizeAllocated` é chamado sempre que um `Page` é alocado um novo tamanho, o que acontece sempre que o dispositivo é girado. Observe que a implementação base de `OnSizeAllocated` executa funções de layout importantes, portanto, é importante chamar a implementação base na substituição:
 
 ```csharp
 protected override void OnSizeAllocated(double width, double height)
@@ -109,7 +108,7 @@ protected override void OnSizeAllocated(double width, double height)
 
 Falha ao executar essa etapa resulta em uma página não está funcionando.
 
-Observe que o `OnSizeAllocated` método pode ser chamado várias vezes quando um dispositivo é girado. Alterando o layout de cada vez que é um desperdício de recursos e pode levar a cintilação. Considere o uso de uma variável de instância dentro de sua página para controlar se a orientação é em paisagem ou retrato e redesenhar somente quando há uma alteração:
+Observe que o método `OnSizeAllocated` pode ser chamado muitas vezes quando um dispositivo é girado. Alterando o layout de cada vez que é um desperdício de recursos e pode levar a cintilação. Considere o uso de uma variável de instância dentro de sua página para controlar se a orientação é em paisagem ou retrato e redesenhar somente quando há uma alteração:
 
 ```csharp
 private double width = 0;
@@ -129,11 +128,11 @@ protected override void OnSizeAllocated(double width, double height)
 
 Depois que tiver sido detectada uma alteração na orientação do dispositivo, você talvez queira adicionar ou remover exibições adicionais de/para sua interface do usuário para reagir a alterações no espaço disponível. Por exemplo, considere a Calculadora interna em cada plataforma em Retrato:
 
-![](device-orientation-images/calculator-portrait.png "Aplicativo de calculadora em Retrato")
+![](device-orientation-images/calculator-portrait.png "Calculator Application in Portrait")
 
 e o cenário:
 
-![](device-orientation-images/calculator-landscape.png "Aplicativo de calculadora em Paisagem")
+![](device-orientation-images/calculator-landscape.png "Calculator Application in Landscape")
 
 Observe que os aplicativos aproveitam o espaço disponível com a adição de mais funcionalidades em paisagem.
 
@@ -143,23 +142,23 @@ Observe que os aplicativos aproveitam o espaço disponível com a adição de ma
 
 É possível para interfaces de design usando os layouts internos para que eles normalmente a transição quando o dispositivo é girado. Durante a criação de interfaces que continuarão a ser atraente ao responder a alterações na orientação, considere as seguintes regras gerais:
 
-- **Preste atenção às taxas** &ndash; alterações na orientação podem causar problemas quando determinadas suposições são feitas com relação a taxas. Por exemplo, uma exibição que teria bastante espaço em 1/3, o espaço vertical de uma tela em Retrato não caber em 1/3 do espaço vertical em paisagem.
-- **Tenha cuidado com os valores absolutos** &ndash; valores absolutos (pixel) que fazem sentido em Retrato talvez não faça sentido em paisagem. Quando valores absolutos forem necessárias, use layouts aninhados para isolar seu impacto. Por exemplo, seria razoável usar valores absolutos em um `TableView` `ItemTemplate` quando o modelo de item tem uma altura uniforme garantida.
+- **Preste atenção às proporções** &ndash; alterações na orientação pode causar problemas quando determinadas pressuposições são feitas com relação às proporções. Por exemplo, uma exibição que teria bastante espaço em 1/3, o espaço vertical de uma tela em Retrato não caber em 1/3 do espaço vertical em paisagem.
+- **Tenha cuidado com valores absolutos** &ndash; valores absolutos (pixel) que fazem sentido em retrato talvez não façam sentido em paisagem. Quando valores absolutos forem necessárias, use layouts aninhados para isolar seu impacto. Por exemplo, seria razoável usar valores absolutos em um `TableView` `ItemTemplate` quando o modelo de item tiver uma altura uniforme garantida.
 
 As regras acima também se aplicam ao implementar interfaces para vários tamanhos de tela e são geralmente considerados práticas recomendadas. O restante deste guia explicará exemplos específicos de layouts responsivos usando cada um dos layouts primários no xamarin. Forms.
 
 > [!NOTE]
-> Para maior clareza, as seções a seguir demonstram como implementar layouts responsivos usando apenas um tipo de `Layout` por vez. Na prática, geralmente é mais simples de misturar `Layout`s para obter um layout desejado usando o mais simples ou mais intuitiva `Layout` para cada componente.
+> Para maior clareza, as seções a seguir demonstram como implementar layouts responsivos usando apenas um tipo de `Layout` de cada vez. Na prática, geralmente é mais simples misturar `Layout`s para obter um layout desejado usando o `Layout` mais simples ou mais intuitivo para cada componente.
 
 ### <a name="stacklayout"></a>StackLayout
 
 Considere o aplicativo a seguir, exibido em Retrato:
 
-![](device-orientation-images/photo-stack-portrait.png "Aplicativo de fotos em Retrato")
+![](device-orientation-images/photo-stack-portrait.png "Photo Application in Portrait")
 
 e o cenário:
 
-![](device-orientation-images/photo-stack-landscape.png "Aplicativo de fotos em Paisagem")
+![](device-orientation-images/photo-stack-landscape.png "Photo Application in Landscape")
 
 Que pode ser feito com o XAML a seguir:
 
@@ -204,7 +203,7 @@ Title="Stack Photo Editor - XAML">
 </ContentPage>
 ```
 
-Alguns C# é usado para alterar a orientação do `outerStack` com base na orientação do dispositivo:
+Alguns C# são usados para alterar a orientação de `outerStack` com base na orientação do dispositivo:
 
 ```csharp
 protected override void OnSizeAllocated (double width, double height){
@@ -223,17 +222,17 @@ protected override void OnSizeAllocated (double width, double height){
 
 Observe o seguinte:
 
-- `outerStack` é ajustado para apresentar os controles e a imagem como uma pilha horizontal ou vertical, dependendo da orientação, para aproveitar melhor o espaço disponível.
+- `outerStack` é ajustado para apresentar a imagem e os controles como uma pilha horizontal ou vertical, dependendo da orientação, para melhor tirar proveito do espaço disponível.
 
 ### <a name="absolutelayout"></a>AbsoluteLayout
 
 Considere o aplicativo a seguir, exibido em Retrato:
 
-![](device-orientation-images/photo-abs-portrait.png "Aplicativo de fotos em Retrato")
+![](device-orientation-images/photo-abs-portrait.png "Photo Application in Portrait")
 
 e o cenário:
 
-![](device-orientation-images/photo-abs-landscape.png "Aplicativo de fotos em Paisagem")
+![](device-orientation-images/photo-abs-landscape.png "Photo Application in Landscape")
 
 Que pode ser feito com o XAML a seguir:
 
@@ -275,17 +274,17 @@ Title="AbsoluteLayout - XAML" BackgroundImageSource="deer.jpg">
 Observe o seguinte:
 
 - Por causa da maneira que a página foi disposta, não é necessário para o código procedural introduzir a capacidade de resposta.
-- O `ScrollView` está sendo usado para permitir que o rótulo fique visível, mesmo quando a altura da tela é menor que a soma das alturas dos botões e a imagem fixas.
+- O `ScrollView` está sendo usado para permitir que o rótulo fique visível mesmo quando a altura da tela for menor que a soma das alturas fixas dos botões e da imagem.
 
 ### <a name="relativelayout"></a>RelativeLayout
 
 Considere o aplicativo a seguir, exibido em Retrato:
 
-![](device-orientation-images/photo-rel-portrait.png "Aplicativo de fotos em Retrato")
+![](device-orientation-images/photo-rel-portrait.png "Photo Application in Portrait")
 
 e o cenário:
 
-![](device-orientation-images/photo-rel-landscape.png "Aplicativo de fotos em Paisagem")
+![](device-orientation-images/photo-rel-landscape.png "Photo Application in Landscape")
 
 Que pode ser feito com o XAML a seguir:
 
@@ -366,17 +365,17 @@ BackgroundImageSource="deer.jpg">
 Observe o seguinte:
 
 - Por causa da maneira que a página foi disposta, não é necessário para o código procedural introduzir a capacidade de resposta.
-- O `ScrollView` está sendo usado para permitir que o rótulo fique visível, mesmo quando a altura da tela é menor que a soma das alturas dos botões e a imagem fixas.
+- O `ScrollView` está sendo usado para permitir que o rótulo fique visível mesmo quando a altura da tela for menor que a soma das alturas fixas dos botões e da imagem.
 
 ### <a name="grid"></a>Grade
 
 Considere o aplicativo a seguir, exibido em Retrato:
 
-![](device-orientation-images/photo-grid-portrait.png "Aplicativo de fotos em Retrato")
+![](device-orientation-images/photo-grid-portrait.png "Photo Application in Portrait")
 
 e o cenário:
 
-![](device-orientation-images/photo-grid-landscape.png "Aplicativo de fotos em Paisagem")
+![](device-orientation-images/photo-grid-landscape.png "Photo Application in Landscape")
 
 Que pode ser feito com o XAML a seguir:
 
@@ -472,7 +471,7 @@ Observe o seguinte:
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Layout (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
-- [Exemplo de BusinessTumble (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-businesstumble)
-- [Layout dinâmico (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-responsivelayout)
+- [Layout (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
+- [Exemplo de BusinessTumble (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-businesstumble)
+- [Layout responsivo (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-responsivelayout)
 - [Exibir uma imagem com base na orientação da tela](https://github.com/xamarin/recipes/tree/master/Recipes/xamarin-forms/Controls/screen-orientation)

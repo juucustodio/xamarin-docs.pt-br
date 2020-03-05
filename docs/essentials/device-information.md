@@ -1,18 +1,18 @@
 ---
-title: 'Xamarin.Essentials: Informações sobre o dispositivo'
+title: 'Xamarin.Essentials: Informações do dispositivo'
 description: Este documento descreve a classe DeviceInfo no Xamarin.Essentials, que fornece informações sobre o dispositivo no qual o aplicativo está em execução.
 ms.assetid: A1AC5373-926A-4FB6-8D7D-4B87EB8EB522
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 11/04/2018
-ms.openlocfilehash: 29b67e4410a3549e4e2cd63121ffa2e2205e0941
-ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
-ms.translationtype: HT
+ms.openlocfilehash: 1cab4ea8ea3f98def4830e101783db1554efa69c
+ms.sourcegitcommit: 099b06e311a40c00eeea85465ff9b97867a5c5de
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76940812"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78295411"
 ---
-# <a name="xamarinessentials-device-information"></a>Xamarin.Essentials: Informações sobre o dispositivo
+# <a name="xamarinessentials-device-information"></a>Xamarin.Essentials: Informações do dispositivo
 
 A classe **DeviceInfo** fornece informações sobre o dispositivo no qual o aplicativo está em execução.
 
@@ -79,9 +79,9 @@ var deviceType = DeviceInfo.DeviceType;
 
 ## <a name="platform-implementation-specifics"></a>Particularidades de implementação da plataforma
 
-# <a name="iostabios"></a>[iOS](#tab/ios)
+# <a name="ios"></a>[iOS](#tab/ios)
 
-O iOS não expõe uma API para os desenvolvedores obterem o nome do dispositivo iOS específico. Em vez disso, um identificador de hardware retorna, como _iPhone10.6_, que se refere ao iPhone X. A Apple não fornece um mapeamento desses identificadores, mas isso pode ser encontrado no [The iPhone Wiki](https://www.theiphonewiki.com/wiki/Models) (uma fonte não oficial).
+o iOS não expõe uma API para que os desenvolvedores obtenham o modelo do dispositivo iOS específico. Em vez disso, um identificador de hardware é retornado como _iPhone10, 6,_ que se refere ao iPhone X. Um mapeamento desses identificadores não é fornecido pela Apple, mas pode ser encontrado nessas (fontes não oficiais) [o wiki do iPhone](https://www.theiphonewiki.com/wiki/Models) e [obter o modelo do IOS](https://github.com/dannycabrera/Get-iOS-Model).
 
 --------------
 

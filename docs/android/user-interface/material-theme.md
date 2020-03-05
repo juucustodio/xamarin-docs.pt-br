@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/01/2018
-ms.openlocfilehash: 5e83e34dab407c5be84fc5b4c3c0c445d56907e3
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 809f6241b3a17f63fe3077f896095c303e1dfd2e
+ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73028756"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "78291798"
 ---
 # <a name="material-theme"></a>Tema de material
 
@@ -44,7 +44,7 @@ O seguinte é necessário para usar os novos recursos de tema do material do And
 
 - **SDK do Android** &ndash; Android 5,0 (API 21) ou posterior deve ser instalado por meio do gerenciador de SDK do Android.
 
-- O **java jdk 1,8** &ndash; JDK 1,7 pode ser usado se você for especificamente voltados API nível 23 e anterior. O JDK 1,8 está disponível na [Oracle](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
+- O **java jdk 1,8** &ndash; JDK 1,7 pode ser usado se você estiver direcionado especificamente para a API de nível 23 e anterior. O JDK 1,8 está disponível na [Oracle](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
 
 Para saber como configurar um projeto de aplicativo do Android 5,0, consulte [Configurando um projeto do android 5,0](~/android/platform/lollipop.md).
 

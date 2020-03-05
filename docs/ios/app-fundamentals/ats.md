@@ -7,18 +7,18 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/13/2017
-ms.openlocfilehash: e0ab824eff4c8bb18a2bd1998862df433cdade1a
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 84d235bb7c6874255ea025ff5897e150bd6f023b
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73011098"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "78293012"
 ---
 # <a name="app-transport-security-in-xamarinios"></a>Segurança de transporte de aplicativo no Xamarin. iOS
 
 _A ATS (segurança de transporte de aplicativo) impõe conexões seguras entre os recursos da Internet (como o servidor back-end do aplicativo) e seu aplicativo._
 
-Este artigo apresentará as alterações de segurança que a segurança de transporte de aplicativo impõe em um aplicativo iOS 9 e [o que isso significa para seus projetos do Xamarin. Ios](#xamarinsupport), que abordará as [Opções de configuração de ATS](#config) e abordará como recusar a [ATS](#optout) ATS, se necessário. Como o ATS está habilitado por padrão, as conexões de Internet não seguras gerarão uma exceção nos aplicativos do iOS 9 (a menos que você tenha explicitamente permitido).
+Este artigo apresentará as alterações de segurança que a segurança de transporte de aplicativo impõe em um aplicativo iOS 9 e [o que isso significa para seus projetos do Xamarin. Ios](#xamarinsupport), que abordará as [Opções de configuração do ATS](#config) e abordará como [recusar](#optout) o ATS ATS, se necessário. Como o ATS está habilitado por padrão, as conexões de Internet não seguras gerarão uma exceção nos aplicativos do iOS 9 (a menos que você tenha explicitamente permitido).
 
 ## <a name="about-app-transport-security"></a>Sobre a segurança de transporte de aplicativo
 
@@ -93,11 +93,11 @@ Para definir a implementação de HTTPClient usada por um aplicativo iOS, clique
 
 O manipulador gerenciado é o manipulador HttpClient totalmente gerenciado que foi enviado com versões anteriores do Xamarin. iOS e é o manipulador padrão.
 
-Prós
+Prós:
 
 - É o mais compatível com Microsoft .NET e a versão mais antiga do Xamarin.
 
-Contras
+Contras:
 
 - Ele não está totalmente integrado ao iOS (por exemplo, é limitado a TLS 1,0).
 - Normalmente, é muito mais lento do que as APIs nativas.
@@ -107,12 +107,12 @@ Contras
 
 O manipulador baseado em CFNetwork é baseado na estrutura de `CFNetwork` nativa.
 
-Prós
+Prós:
 
 - Usa a API nativa para obter melhor desempenho e tamanhos executáveis menores.
 - Adiciona suporte para padrões mais recentes, como o TLS 1,2.
 
-Contras
+Contras:
 
 - Requer o iOS 6 ou posterior.
 - Não disponível de watchOS.
@@ -122,12 +122,12 @@ Contras
 
 O manipulador baseado em NSUrlSession é baseado na API de `NSUrlSession` nativa.
 
-Prós
+Prós:
 
 - Usa a API nativa para obter melhor desempenho e tamanhos executáveis menores.
 - Adiciona suporte para padrões mais recentes, como o TLS 1,2.
 
-Contras
+Contras:
 
 - Requer o iOS 7 ou posterior.
 - Alguns recursos e opções do HttpClient não estão disponíveis.
@@ -136,7 +136,7 @@ Contras
 
 Ao tentar se conectar à Internet, seja diretamente ou de uma exibição da Web no iOS 9, você pode receber um erro no formato:
 
-> A segurança de transporte de aplicativo bloqueou um HTTP de texto não criptografado (http://www.-the-blocked-domain.com) carregar o recurso porque ele não é seguro. Exceções temporárias podem ser configuradas por meio do arquivo info. plist do seu aplicativo.
+> A segurança de transporte de aplicativo bloqueou uma carga de recurso de HTTP (`http://www.-the-blocked-domain.com`) de texto não criptografado, pois ela não é segura. Exceções temporárias podem ser configuradas por meio do arquivo info. plist do seu aplicativo.
 
 No iOS9, a ATS (segurança de transporte de aplicativo) impõe conexões seguras entre os recursos da Internet (como o servidor back-end do aplicativo) e seu aplicativo. Além disso, o ATS exige a comunicação usando o protocolo de `HTTPS` e a comunicação de API de alto nível a ser criptografada usando TLS versão 1,2 com sigilo de encaminhamento.
 

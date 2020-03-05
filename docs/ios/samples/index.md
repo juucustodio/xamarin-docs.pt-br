@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 12/31/2019
-ms.openlocfilehash: 7b9bb93f75faba55d5ad79f60dc5697eada36cb5
-ms.sourcegitcommit: 55167ad9db910c5c0eb5a84c0923cb07acd2530e
+ms.openlocfilehash: a712486018079167b8e6756e183b1eb7cb096009
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/02/2020
-ms.locfileid: "75607628"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "78291811"
 ---
 # <a name="xamarinios-samples"></a>Amostras do Xamarin. iOS
 
@@ -24,21 +24,21 @@ Aplicativos de exemplo de Xamarin.iOS e demonstrações de código para ajudar v
       :::column:::
 [![ARKit (iOS 11)](images/arkit.png)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-arkitplacingobjects/)
 
-### <a name="arkit-ios-11httpsdocsmicrosoftcomsamplesxamarinios-samplesios11-arkitplacingobjects"></a>[ARKit (iOS 11)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-arkitplacingobjects/)
+### <a name="arkit-ios-11"></a>[ARKit (iOS 11)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-arkitplacingobjects/)
 
 Demonstração de realidade aumentada ARKit para colocar objetos em superfícies detectadas.
     :::column-end:::
     :::column:::
 [![MapKit (iOS 11)](images/mapkit.png)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-mapkitsample/)
 
-### <a name="mapkit-ios-11httpsdocsmicrosoftcomsamplesxamarinios-samplesios11-mapkitsample"></a>[MapKit (iOS 11)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-mapkitsample/)
+### <a name="mapkit-ios-11"></a>[MapKit (iOS 11)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-mapkitsample/)
 
 Novos recursos do iOS 11 no MapKit: marcadores de divisão e agrupamento com base no nível de zoom.
     :::column-end:::
     :::column:::
 [![do coreml & Azure (iOS 11)](images/coremlazure.png)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-coremlazuremodel/)
 
-### <a name="coreml--azure-ios-11httpsdocsmicrosoftcomsamplesxamarinios-samplesios11-coremlazuremodel"></a>[Do coreml & Azure (iOS 11)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-coremlazuremodel/)
+### <a name="coreml--azure-ios-11"></a>[Do coreml & Azure (iOS 11)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-coremlazuremodel/)
 
 Estrutura Vision do iOS 11 e CoreML, usando um modelo treinado com o Serviço de Visão Personalizada do Azure.
     :::column-end:::
@@ -48,21 +48,21 @@ Estrutura Vision do iOS 11 e CoreML, usando um modelo treinado com o Serviço de
     :::column:::
 [![contatos](images/contacts.png)](https://docs.microsoft.com/samples/xamarin/ios-samples/contacts)
 
-### <a name="contactshttpsdocsmicrosoftcomsamplesxamarinios-samplescontacts"></a>[Contatos](https://docs.microsoft.com/samples/xamarin/ios-samples/contacts)
+### <a name="contacts"></a>[Contatos](https://docs.microsoft.com/samples/xamarin/ios-samples/contacts)
 
 Como usar controladores e propriedades de exibição ContactsUI.
     :::column-end:::
     :::column:::
 [![catálogo WatchKit](images/watchos.png)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog/)
 
-### <a name="watchkit-cataloghttpsdocsmicrosoftcomsamplesxamarinios-sampleswatchos-watchkitcatalog"></a>[Catálogo WatchKit](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog/)
+### <a name="watchkit-catalog"></a>[Catálogo WatchKit](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog/)
 
 Conjunto de controles de interface do usuário disponível no watchOS.
     :::column-end:::
     :::column:::
-[![catálogo da interface do usuário do tvOS](images/tvosui.png)](https://docs.microsoft.com/xamarin/ios-samples/tvos-uicatalog/)
+[![catálogo da interface do usuário do tvOS](images/tvosui.png)](https://docs.microsoft.com/samples/xamarin/ios-samples/tvos-uicatalog/)
 
-### <a name="tvos-ui-cataloghttpsdocsmicrosoftcomsamplesxamarinios-samplestvos-uicatalog"></a>[Catálogo da interface do usuário do tvOS](https://docs.microsoft.com/samples/xamarin/ios-samples/tvos-uicatalog/)
+### <a name="tvos-ui-catalog"></a>[Catálogo da interface do usuário do tvOS](https://docs.microsoft.com/samples/xamarin/ios-samples/tvos-uicatalog/)
 
 Demonstra como usar diversas exibições e controles na estrutura UIKit do tvOS.
     :::column-end:::

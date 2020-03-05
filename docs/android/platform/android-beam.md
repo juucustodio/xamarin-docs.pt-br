@@ -6,18 +6,18 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 06/06/2017
-ms.openlocfilehash: 11f1d38eb10421d4ecef3e2039688b2d9a6d9e6e
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: aab121ed5f811baf38eed48cf891ccdf076eaf44
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73027822"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "78293010"
 ---
 # <a name="android-beam"></a>Beam do Android
 
 O feixe do Android é uma tecnologia NFC (comunicação a curta distância) introduzida no Android 4,0 que permite que os aplicativos compartilhem informações sobre o NFC quando estiverem próximos.
 
-[Diagrama![ilustrando dois dispositivos em informações de compartilhamento de proximidade próximas](android-beam-images/androidbeam.png)](android-beam-images/androidbeam.png#lightbox)
+[Diagrama ![ilustrando dois dispositivos em informações de compartilhamento de proximidade próximas](android-beam-images/androidbeam.png)](android-beam-images/androidbeam.png#lightbox)
 
 O feixe do Android funciona enviando mensagens por meio de NFC quando dois dispositivos estão no intervalo. Os dispositivos sobre 4cm uns dos outros podem compartilhar dados usando o feixe do Android. Uma atividade em um dispositivo cria uma mensagem e especifica uma atividade (ou atividades) que pode lidar com o envio por push. Quando a atividade especificada estiver em primeiro plano e os dispositivos estiverem no intervalo, o feixe do Android enviará por push a mensagem para o segundo dispositivo. No dispositivo receptor, uma tentativa é invocada contendo os dados da mensagem.
 
@@ -79,5 +79,3 @@ Para obter um exemplo de código completo que usa o feixe do Android, mostrado e
 ## <a name="related-links"></a>Links relacionados
 
 - [Demonstração do feixe do Android (exemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/androidbeamdemo)
-- [Introdução ao sanduíche de sorvete](https://www.android.com/about/ice-cream-sandwich/)
-- [Plataforma Android 4,0](https://developer.android.com/sdk/android-4.0.html)

@@ -6,13 +6,13 @@ ms.assetId: 602456B5-701B-4948-B454-B1F31283F1CF
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 12/11/2019
-ms.openlocfilehash: 4119a650c431013bb0c8e680de600ed4e73d0c93
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.date: 02/11/2020
+ms.openlocfilehash: 6131287b200846a033e0c476d7039dfd774cab68
+ms.sourcegitcommit: 10b4d7952d78f20f753372c53af6feb16918555c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75490384"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "78292532"
 ---
 # <a name="xamarinforms-swipeview"></a>SwipeView Xamarin. Forms
 
@@ -30,7 +30,7 @@ O `SwipeView` é um controle de contêiner que envolve um item de conteúdo e fo
 Forms.SetFlags("SwipeView_Experimental");
 ```
 
-`SwipeView` Define as propriedades a seguir:
+`SwipeView` define as seguintes propriedades:
 
 - `LeftItems`, do tipo `SwipeItems`, que representa os itens do dedo que podem ser invocados quando o controle é transdedodo do lado esquerdo.
 - `RightItems`, do tipo `SwipeItems`, que representa os itens do dedo que podem ser invocados quando o controle é transdedodo do lado direito.
@@ -57,7 +57,7 @@ Além disso, `SwipeView` define um método `Close`, que fecha os itens do dedo.
 
 Um `SwipeView` deve definir o conteúdo que o `SwipeView` encapsulado e os itens do dedo que são revelados pelo gesto de passar o dedo. Os itens do dedo são um ou mais objetos `SwipeItem` que são colocados em uma das quatro coleções direcionais `SwipeView`-`LeftItems`, `RightItems`, `TopItems`ou `BottomItems`.
 
-O exemplo a seguir mostra como instanciar um `SwipeView` no XAML:
+O exemplo a seguir mostra como criar uma instância de um `SwipeView` em XAML:
 
 ```xaml
 <SwipeView>
@@ -82,6 +82,49 @@ O exemplo a seguir mostra como instanciar um `SwipeView` no XAML:
                VerticalOptions="Center" />
     </Grid>
 </SwipeView>
+```
+
+Este é o código C# equivalente:
+
+```csharp
+// SwipeItems
+SwipeItem favoriteSwipeItem = new SwipeItem
+{
+    Text = "Favorite",
+    IconImageSource = "favorite.png",
+    BackgroundColor = Color.LightGreen
+};
+favoriteSwipeItem.Invoked += OnFavoriteSwipeItemInvoked;
+
+SwipeItem deleteSwipeItem = new SwipeItem
+{
+    Text = "Delete",
+    IconImageSource = "delete.png",
+    BackgroundColor = Color.LightPink
+};
+deleteSwipeItem.Invoked += OnDeleteSwipeItemInvoked;
+
+List<SwipeItem> swipeItems = new List<SwipeItem>() { favoriteSwipeItem, deleteSwipeItem };
+
+// SwipeView content
+Grid grid = new Grid
+{
+    HeightRequest = 60,
+    WidthRequest = 300,
+    BackgroundColor = Color.LightGray
+};
+grid.Children.Add(new Label
+{
+    Text = "Swipe right",
+    HorizontalOptions = LayoutOptions.Center,
+    VerticalOptions = LayoutOptions.Center
+});
+
+SwipeView swipeView = new SwipeView
+{
+    LeftItems = new SwipeItems(swipeItems),
+    Content = grid
+};
 ```
 
 Neste exemplo, o conteúdo de `SwipeView` é uma [`Grid`](xref:Xamarin.Forms.Grid) que contém uma [`Label`](xref:Xamarin.Forms.Label):
@@ -136,14 +179,16 @@ O exemplo a seguir mostra dois objetos `SwipeItem` na coleção `LeftItems` de u
 </SwipeView>
 ```
 
-A aparência de cada `SwipeItem` é definida pelas propriedades `Text`, `IconImageSource`e `BackgroundColor`:
+A aparência de cada `SwipeItem` é definida por uma combinação das propriedades `Text`, `IconImageSource`e `BackgroundColor`:
 
 [![Captura de tela de itens de deslize do SwipeView, no iOS e no Android](swipeview-images/swipeview-swipeitems.png "SwipeView passar itens")](swipeview-images/swipeview-swipeitems-large.png#lightbox "SwipeView passar itens")
 
 Quando um `SwipeItem` é tocado, seu evento de `Invoked` é acionado e manipulado por seu manipulador de eventos registrado. Como alternativa, a propriedade `Command` pode ser definida como uma implementação de `ICommand` que será executada quando o `SwipeItem` for invocado.
 
 > [!NOTE]
-> Além de definir os itens do dedo como `SwipeItem` objetos, também é possível definir exibições de item de toque personalizado. Para obter mais informações, consulte [Personalizar itens do dedo](#custom-swipe-items).
+> Quando a aparência de um `SwipeItem` é definida somente usando as propriedades `Text` ou `IconImageSource`, o conteúdo é sempre centralizado.
+
+Além de definir os itens do dedo como `SwipeItem` objetos, também é possível definir exibições de item de toque personalizado. Para obter mais informações, consulte [Personalizar itens do dedo](#custom-swipe-items).
 
 ## <a name="swipe-direction"></a>Direção do dedo
 
@@ -288,4 +333,4 @@ Além disso, ao definir a propriedade `Command` de um `SwipeItem` ou `SwipeItemV
 ## <a name="related-links"></a>Links relacionados
 
 - [SwipeView (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-swipeviewdemos/)
-- [Xamarin. Forms MenuItem](~/xamarin-forms/user-interface/menuitem.md)
+- [MenuItem do Xamarin.Forms](~/xamarin-forms/user-interface/menuitem.md)

@@ -6,12 +6,12 @@ ms.assetid: AE51F523-74F4-4EC0-B531-30B71C4D36DF
 author: davidortinau
 ms.author: daortin
 ms.date: 11/14/2017
-ms.openlocfilehash: d081795ecfcc5d0aa2559b866fcc57076fe8248b
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: f0e2128bca5d2965395647353cd5a95a4030439f
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73007023"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "78292857"
 ---
 # <a name="getting-started-with-macos"></a>Introdução ao macOS
 
@@ -19,7 +19,7 @@ ms.locfileid: "73007023"
 
 * Siga as instruções no guia [introdução ao Objective-C](~/tools/dotnet-embedding/get-started/objective-c/index.md) .
 
-## <a name="hello-world"></a>Hello world
+## <a name="hello-world"></a>Olá, Mundo
 
 Primeiro, crie um exemplo simples do Hello World C#no.
 
@@ -82,7 +82,7 @@ Abra **ViewController. m**e substitua o conteúdo por:
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+
     MyNSView *view = [[MyNSView alloc] init];
     view.frame = CGRectMake(0, 200, 200, 200);
     [self.view addSubview: view];
@@ -94,5 +94,3 @@ Abra **ViewController. m**e substitua o conteúdo por:
 Por fim, execute o projeto Xcode e algo assim será exibido:
 
 ![Olá do C# exemplo em execução no simulador](macos-images/hello-from-csharp-mac.png)
-
-Um exemplo mais completo e de aparência melhor [está disponível aqui](https://github.com/mono/Embeddinator-4000/tree/objc/samples/mac/weather).

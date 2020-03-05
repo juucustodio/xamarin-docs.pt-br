@@ -6,13 +6,13 @@ ms.assetid: 59CD1344-8248-406C-9144-0C8A67141E5B
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 11/06/2019
-ms.openlocfilehash: 038ff27907573c1fe15516f6f4caf26d0892ab9f
-ms.sourcegitcommit: 283810340de5310f63ef7c3e4b266fe9dc2ffcaf
+ms.date: 02/07/2020
+ms.openlocfilehash: c3c4863814949be2e6575e92136ca740452a2f3c
+ms.sourcegitcommit: f43d5ecafd19cbc5cce39201916a83927a34617a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73662336"
+ms.lasthandoff: 03/02/2020
+ms.locfileid: "78292611"
 ---
 # <a name="xamarinforms-map-initialization-and-configuration"></a>Inicialização e configuração do mapa do Xamarin. Forms
 
@@ -58,12 +58,12 @@ Exibir e interagir com um mapa no iOS não requer nenhuma configuração adicion
 
 - iOS 11 e posterior
   - [`NSLocationWhenInUseUsageDescription`](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW26) – para usar serviços de localização quando o aplicativo está em uso
-  - [`NSLocationAlwaysAndWhenInUseUsageDescription`](https://developer.apple.com/documentation/corelocation/choosing_the_authorization_level_for_location_services/requesting_always_authorization?language=objc) – para usar serviços de localização em todos os momentos
-- iOS 10 e anterior
+  - [`NSLocationAlwaysAndWhenInUseUsageDescription`](https://developer.apple.com/documentation/bundleresources/information_property_list/nslocationalwaysandwheninuseusagedescription) – para usar serviços de localização em todos os momentos
+- iOS 10 e versões anteriores
   - [`NSLocationWhenInUseUsageDescription`](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW26) – para usar serviços de localização quando o aplicativo está em uso
   - [`NSLocationAlwaysUsageDescription`](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW18) – para usar serviços de localização em todos os momentos    
 
-Para dar suporte ao iOS 11 e anteriores, você pode incluir todas as três chaves: `NSLocationWhenInUseUsageDescription`, `NSLocationAlwaysAndWhenInUseUsageDescription` e `NSLocationAlwaysUsageDescription`.
+Para dar suporte ao iOS 11 e anteriores, você pode incluir todas as três chaves: `NSLocationWhenInUseUsageDescription`, `NSLocationAlwaysAndWhenInUseUsageDescription`e `NSLocationAlwaysUsageDescription`.
 
 A representação XML para essas chaves no **info. plist** é mostrada abaixo. Você deve atualizar os valores de `string` para refletir como seu aplicativo está usando as informações de local:
 
@@ -91,7 +91,7 @@ O processo de configuração para exibir e interagir com um mapa no Android é:
 1. Obtenha uma chave de API do Google Maps e adicione-a ao manifesto.
 1. Especifique o número de versão dos serviços de Google Play no manifesto.
 1. Especifique o requisito para a biblioteca herdada do Apache HTTP no manifesto.
-1. adicional Especifique a permissão WRITE_EXTERNAL_STORAGE no manifesto.
+1. adicional Especifique a permissão de WRITE_EXTERNAL_STORAGE no manifesto.
 1. adicional Especifique as permissões de local no manifesto.
 1. adicional Solicitar permissões de local de tempo de execução na classe `MainActivity`.
 
@@ -105,14 +105,16 @@ Depois de obter uma chave de API, ela deve ser adicionada dentro do elemento `<a
 
 ```xml
 <application ...>
-    <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="PASTE-YOUR-API-KEY-HERE" />
+    <meta-data android:name="com.google.android.geo.API_KEY" android:value="PASTE-YOUR-API-KEY-HERE" />
 </application>
 ```
 
 Isso incorpora a chave de API ao manifesto. Sem uma chave de API válida, o controle de [`Map`](xref:Xamarin.Forms.Maps.Map) exibirá uma grade em branco.
 
 > [!NOTE]
-> Observe que, para que seu APK acesse o Google Maps, você deve incluir impressões digitais e nomes de pacote do SHA-1 para cada repositório de chaves (depuração e versão) que você usa para assinar seu APK. Por exemplo, se você usar um computador para depuração e outro computador para gerar a versão APK, deverá incluir a impressão digital do certificado SHA-1 do repositório de chaves de depuração do primeiro computador e a impressão digital do certificado SHA-1 do repositório de chaves de lançamento do o segundo computador. Lembre-se também de editar as credenciais de chave se o **nome do pacote** do aplicativo for alterado. Consulte [obtendo uma chave de API do Google Maps](~/android/platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md).
+> `com.google.android.geo.API_KEY` é o nome de metadados recomendado para a chave de API. Para compatibilidade com versões anteriores, o nome de metadados do `com.google.android.maps.v2.API_KEY` pode ser usado, mas permite apenas a autenticação para a API do Maps do Android v2.
+
+Para que seu APK acesse o Google Maps, você deve incluir impressões digitais e nomes de pacote do SHA-1 para cada repositório de chaves (depuração e versão) que você usa para assinar seu APK. Por exemplo, se você usar um computador para outro computador para gerar a versão APK e de depuração, você deve incluir a impressão digital SHA-1 do certificado do repositório de chaves de depuração do primeiro computador e a impressão digital do certificado SHA-1 do repositório de chaves de versão o segundo computador. Lembre-se também de editar as credenciais de chave se o **nome do pacote** do aplicativo for alterado. Consulte [obtendo uma chave de API do Google Maps](~/android/platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md).
 
 #### <a name="specify-the-google-play-services-version-number"></a>Especificar o número de versão dos serviços de Google Play
 
@@ -134,7 +136,7 @@ Se o aplicativo Xamarin. Forms for direcionado à API 28 ou superior, você deve
 
 Isso informa o aplicativo para usar a biblioteca de cliente http do Apache, que foi removida do `bootclasspath` no Android 9.
 
-#### <a name="specify-the-write_external_storage-permission"></a>Especificar a permissão WRITE_EXTERNAL_STORAGE
+#### <a name="specify-the-write_external_storage-permission"></a>Especificar a permissão de WRITE_EXTERNAL_STORAGE
 
 Se o aplicativo for direcionado à API 22 ou inferior, poderá ser necessário adicionar a permissão `WRITE_EXTERNAL_STORAGE` ao manifesto, como um filho do elemento `<manifest>`:
 
@@ -234,6 +236,9 @@ O efeito geral desse código é que, quando o aplicativo solicita o local do usu
 ### <a name="universal-windows-platform"></a>Plataforma Universal do Windows
 
 No UWP, seu aplicativo deve ser autenticado antes de poder exibir um mapa e consumir serviços de mapa. Para autenticar seu aplicativo, você deve especificar uma chave de autenticação do Maps. Para obter mais informações, consulte [solicitar uma chave de autenticação do Maps](/windows/uwp/maps-and-location/authentication-key). O token de autenticação deve ser especificado na chamada do método `FormsMaps.Init("AUTHORIZATION_TOKEN")`, para autenticar o aplicativo com o Bing Maps.
+
+> [!NOTE]
+> No UWP, para usar os serviços de mapa, como geocodificação, você também deve definir a propriedade `MapService.ServiceToken` como o valor da chave de autenticação. Isso pode ser feito com a seguinte linha de código: `Windows.Services.Maps.MapService.ServiceToken = "INSERT_AUTH_TOKEN_HERE";`.
 
 Além disso, se seu aplicativo precisar acessar o local do usuário, você deverá habilitar a capacidade de localização no manifesto do pacote. Isso pode ser feito da seguinte maneira:
 

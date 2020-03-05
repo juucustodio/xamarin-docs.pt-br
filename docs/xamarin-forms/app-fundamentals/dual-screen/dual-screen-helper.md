@@ -1,5 +1,5 @@
 ---
-title: DualScreenHelper do Xamarin.Forms
+title: Auxiliares da plataforma de tela dupla do Xamarin. Forms
 description: Este guia explica como usar a classe DualScreenHelper do Xamarin.Forms para otimizar sua experiência de aplicativo com dispositivos de tela dupla, como o Surface Duo e o Surface Neo.
 ms.prod: xamarin
 ms.assetid: 5aa184c2-5611-427d-85c7-1c56486c3e1b
@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidortinau
 ms.author: daortin
 ms.date: 02/08/2020
-ms.openlocfilehash: 26e6389dc7effd52fad8307e1e3191fc4b760fe6
-ms.sourcegitcommit: 524fc148bad17272bda83c50775771daa45bfd7e
-ms.translationtype: HT
+ms.openlocfilehash: e16e926d9eb3c5f3ca04b7e1359f24624a971617
+ms.sourcegitcommit: 5b6d3bddf7148f8bb374de5657bdedc125d72ea7
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77480578"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160563"
 ---
-# <a name="xamarinforms-dualscreenhelper"></a>DualScreenHelper do Xamarin.Forms
+# <a name="xamarinforms-dual-screen-platform-helpers"></a>Auxiliares da plataforma de tela dupla do Xamarin. Forms
+
+![](~/media/shared/preview.png "This API is currently pre-release")
 
 [![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://github.com/xamarin/xamarin-forms-samples/UserInterface/DualScreenDemos)
 
@@ -30,7 +32,7 @@ A classe `DualScreenHelper` pode ser usada para detectar se um dispositivo é co
 ```csharp
 async void OpenCompactWindowClicked(object sender, EventArgs e)
 {
-    if(!DualScreenHelper.HasCompactModeSupport())
+    if (!DualScreenHelper.HasCompactModeSupport())
     {
         await DisplayAlert("Unsupported", "This platform doesn't support this feature", "Ok");
         return;

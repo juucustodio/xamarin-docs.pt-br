@@ -6,13 +6,13 @@ ms.assetid: 92D7B618-07FA-4343-9D0F-212525E92C39
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/14/2019
-ms.openlocfilehash: ce0e0b63206ab918b5d761be3e619370aec1eec7
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.date: 01/28/2020
+ms.openlocfilehash: 735a572f4aadfc224e545e371525b96f29c9552e
+ms.sourcegitcommit: 10b4d7952d78f20f753372c53af6feb16918555c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75489746"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "78291482"
 ---
 # <a name="xamarinforms-carouselview-scrolling"></a>CarouselView de Xamarin. Forms
 
@@ -132,7 +132,7 @@ Este código de exemplo resulta na rolagem mínima necessária para rolar o item
 > [!NOTE]
 > O membro [`ScrollToPosition.MakeVisible`](xref:Xamarin.Forms.ScrollToPosition) é usado por padrão, se o argumento `position` não for especificado ao chamar o método `ScrollTo`.
 
-### <a name="start"></a>Início
+### <a name="start"></a>Iniciar
 
 O membro [`ScrollToPosition.Start`](xref:Xamarin.Forms.ScrollToPosition) indica que o item deve ser rolado até o início da exibição:
 
@@ -142,7 +142,7 @@ carouselView.ScrollTo(monkey, position: ScrollToPosition.Start);
 
 Este código de exemplo resulta no item que está sendo rolado para o início da exibição.
 
-### <a name="center"></a>Center
+### <a name="center"></a>Centro
 
 O membro [`ScrollToPosition.Center`](xref:Xamarin.Forms.ScrollToPosition) indica que o item deve ser rolado para o centro da exibição:
 
@@ -152,7 +152,7 @@ carouselViewView.ScrollTo(monkey, position: ScrollToPosition.Center);
 
 Este código de exemplo resulta no item que está sendo rolado para o centro da exibição.
 
-### <a name="end"></a>Encerramento
+### <a name="end"></a>End
 
 O membro [`ScrollToPosition.End`](xref:Xamarin.Forms.ScrollToPosition) indica que o item deve ser rolado para o final da exibição:
 
@@ -217,6 +217,10 @@ A enumeração [`SnapPointsType`](xref:Xamarin.Forms.SnapPointsType) define os s
 
 Por padrão, em um [`CarouselView`](xref:Xamarin.Forms.CarouselView), a propriedade [`SnapPointsType`](xref:Xamarin.Forms.ItemsLayout.SnapPointsType) é definida como `SnapPointsType.MandatorySingle`, o que garante que a rolagem role apenas um item de cada vez.
 
+As capturas de tela a seguir mostram uma [`CarouselView`](xref:Xamarin.Forms.CarouselView) com ajuste desativado:
+
+[![Captura de tela de um CarouselView sem pontos de encaixe, no iOS e no Android](scrolling-images/snappoints-none.png "CarouselView sem pontos de encaixe")](scrolling-images/snappoints-none-large.png#lightbox "CarouselView sem pontos de encaixe")
+
 ### <a name="snap-points-alignment"></a>Alinhamento dos pontos de ajuste
 
 A enumeração de [`SnapPointsAlignment`](xref:Xamarin.Forms.SnapPointsAlignment) define os membros `Start`, `Center`e `End`.
@@ -224,7 +228,7 @@ A enumeração de [`SnapPointsAlignment`](xref:Xamarin.Forms.SnapPointsAlignment
 > [!IMPORTANT]
 > O valor da propriedade [`SnapPointsAlignment`](xref:Xamarin.Forms.ItemsLayout.SnapPointsAlignment) só é respeitado quando a propriedade [`SnapPointsType`](xref:Xamarin.Forms.ItemsLayout.SnapPointsType) é definida como `Mandatory`ou `MandatorySingle`.
 
-#### <a name="start"></a>Início
+#### <a name="start"></a>Iniciar
 
 O membro `SnapPointsAlignment.Start` indica que os pontos de ajuste estão alinhados com a borda à esquerda dos itens. O exemplo de XAML a seguir mostra como definir esse membro de enumeração:
 
@@ -254,9 +258,11 @@ CarouselView carouselView = new CarouselView
 };
 ```
 
-Quando um usuário passa o dedo para iniciar uma rolagem em uma [`CarouselView`](xref:Xamarin.Forms.CarouselView)horizontalmente, o item à esquerda será alinhado à esquerda da exibição.
+Quando um usuário passa o dedo para iniciar uma rolagem em uma [`CarouselView`](xref:Xamarin.Forms.CarouselView)horizontalmente, o item à esquerda será alinhado à esquerda da exibição:
 
-#### <a name="center"></a>Center
+[![Captura de tela de um CarouselView com pontos de ajuste iniciais, no iOS e no Android](scrolling-images/snappoints-start.png "CarouselView com pontos de ajuste de início")](scrolling-images/snappoints-start-large.png#lightbox "CarouselView com pontos de ajuste de início")
+
+#### <a name="center"></a>Centro
 
 O membro `SnapPointsAlignment.Center` indica que os pontos de ajuste estão alinhados ao centro dos itens.
 
@@ -288,9 +294,11 @@ CarouselView carouselView = new CarouselView
 };
 ```
 
-Quando um usuário passa o dedo para iniciar uma rolagem em uma [`CarouselView`](xref:Xamarin.Forms.CarouselView)horizontalmente, o item central será alinhado ao centro da exibição.
+Quando um usuário passa o dedo para iniciar uma rolagem em uma [`CarouselView`](xref:Xamarin.Forms.CarouselView)horizontalmente, o item central será alinhado ao centro da exibição:
 
-#### <a name="end"></a>Encerramento
+[![Captura de tela de um CarouselView com pontos de alinhamento centralizados, no iOS e no Android](scrolling-images/snappoints-center.png "CarouselView com pontos de alinhamento do centro")](scrolling-images/snappoints-center-large.png#lightbox "CarouselView com pontos de alinhamento do centro")
+
+#### <a name="end"></a>End
 
 O membro `SnapPointsAlignment.End` indica que os pontos de ajuste estão alinhados com a borda à direita dos itens. O exemplo de XAML a seguir mostra como definir esse membro de enumeração:
 
@@ -321,6 +329,8 @@ CarouselView carouselView = new CarouselView
 ```
 
 Quando um usuário passa o dedo para iniciar uma rolagem em uma [`CarouselView`](xref:Xamarin.Forms.CarouselView)horizontalmente, o item à direita será alinhado à direita da exibição.
+
+[![Captura de tela de um CarouselView com pontos de ajuste finais, no iOS e no Android](scrolling-images/snappoints-end.png "CarouselView com pontos de ajuste finais")](scrolling-images/snappoints-end-large.png#lightbox "CarouselView com pontos de ajuste finais")
 
 ## <a name="related-links"></a>Links relacionados
 

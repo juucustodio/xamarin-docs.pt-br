@@ -6,12 +6,12 @@ ms.assetid: 1E6825DF-1254-4FCB-B94D-ADD33D1B5309
 author: davidortinau
 ms.author: daortin
 ms.date: 03/23/2017
-ms.openlocfilehash: 6d420faf59d940bb111b5ecd326a29083cab012e
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 4f91e683b826657a9740de7e0b98137858130042
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73029921"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "78291801"
 ---
 # <a name="using-jenkins-with-xamarin"></a>Usando Jenkins com Xamarin
 
@@ -341,7 +341,7 @@ Assinar e zipaligningr os APK são tecnicamente duas tarefas separadas que são 
 
 Ambos os comandos exigem parâmetros de linha de comando que podem variar de projeto para projeto. Além disso, alguns desses parâmetros de linha de comando são senhas que não devem aparecer na saída do console quando a compilação está em execução. Armazenaremos alguns desses parâmetros de linha de comando em variáveis de ambiente. As variáveis de ambiente necessárias para a assinatura e/ou o alinhamento do zip são descritas na tabela a seguir:
 
-|Variável de ambiente|Descrição|
+|Variável de ambiente|DESCRIÇÃO|
 |--- |--- |
 |KEYSTORE_FILE|Este é o caminho para o keystore para assinar o APK|
 |KEYSTORE_ALIAS|A chave no repositório de chaves que será usada para assinar o APK.|
@@ -387,7 +387,7 @@ Depois que todas as ações de compilação estiverem em vigor, é uma boa prát
 
 ### <a name="submitting-tests-to-test-cloud"></a>Enviando testes para Test Cloud
 
-Os testes automatizados podem ser enviados para Test Cloud usando comandos do Shell. Para obter mais informações sobre como configurar uma execução de teste no Xamarin Test Cloud, consulte este guia para usar o [Xamarin. UITest](/appcenter/test-cloud/preparing-for-upload/uitest/).
+Os testes automatizados podem ser enviados para Test Cloud usando comandos do Shell. Para obter mais informações sobre como configurar uma execução de teste no Xamarin Test Cloud, consulte [preparando aplicativos xamarin. Android](/appcenter/test-cloud/preparing-for-upload/xamarin-android-uitest) e [preparando aplicativos xamarin. Ios](/appcenter/test-cloud/preparing-for-upload/xamarin-ios-uitest).
 
 ## <a name="summary"></a>Resumo
 

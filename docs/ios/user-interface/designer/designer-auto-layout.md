@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: f15c754a47f910f430af3c036ed510cc9e130eac
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 35a8d3aeb00ac73f944712cb31f913f98bd3b6e8
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73021804"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "78291666"
 ---
 # <a name="auto-layout-with-the-xamarin-designer-for-ios"></a>Layout automático com o Xamarin Designer para iOS
 
@@ -69,7 +69,7 @@ O pop-up do editor de restrições nos permite adicionar e atualizar as várias 
 
 Para as restrições de edição no modo de exibição selecionado, clique nas reticências para exibir as restrições popover: ![edição popover](designer-auto-layout-images/constraints-popup.png)
 
-Ao abrir o popover de restrições, ele exibe as restrições predefinidas na exibição. Podemos definir todas as restrições de espaçamento selecionando **todos os lados** da ComboBox no canto superior direito e selecionar **limpar tudo** para removê-los. 
+Ao abrir o popover de restrições, ele exibe as restrições predefinidas na exibição. Podemos definir todas as restrições de espaçamento selecionando **todos os lados** da ComboBox no canto superior direito e selecionar **limpar tudo** para removê-los.
 
 O **W** definirá Width e **H** definirá a restrição de altura. Ao verificar a **taxa de proporção**, a altura e a largura das exibições serão controladas em diferentes tamanhos de tela, a largura da exibição será usada como numerador para o ração e a altura como o denominador.
 
@@ -185,7 +185,7 @@ Para acessar uma restrição no código, primeiro você precisa expô-lo no desi
 3. Em seguida, atribua um **nome** à restrição na guia **widget** do Gerenciador de **Propriedades**:
 
     [![](designer-auto-layout-images/modify02.png "The Widget Tab")](designer-auto-layout-images/modify02.png#lightbox)
-4. Salve as alterações.
+4. Salve suas alterações.
 
 Com as alterações acima em vigor, você pode acessar a restrição no código e modificar suas propriedades. Por exemplo, você pode usar o seguinte para definir a altura do modo de exibição anexado como zero:
 
@@ -201,7 +201,7 @@ Dada a seguinte configuração para a restrição no designer do iOS:
 
 Em vez de atualizar instantaneamente a exibição anexada em resposta às alterações de restrição, o mecanismo de layout automático agenda um _passo de layout adiado_ para o futuro próximo. Durante essa passagem adiada, não apenas a restrição de exibição fornecida é atualizada, as restrições para cada exibição na hierarquia são recalculadas e atualizadas para ajustar o novo layout.
 
-A qualquer momento, você pode agendar sua própria passagem de layout adiado chamando os métodos `SetNeedsLayout` ou `SetNeedsUpdateConstraints` da exibição pai. 
+A qualquer momento, você pode agendar sua própria passagem de layout adiado chamando os métodos `SetNeedsLayout` ou `SetNeedsUpdateConstraints` da exibição pai.
 
 A passagem de layout adiada consiste em duas passagens exclusivas por meio da hierarquia de exibição:
 
@@ -234,4 +234,3 @@ Este guia introduziu o layout automático (ou "adaptável") do iOS e o conceito 
 - [Instruções de controles designáveis do iOS](~/ios/user-interface/designer/ios-designable-controls-walkthrough.md)
 - [Visão geral de Designer Android](~/android/user-interface/android-designer/index.md)
 - [Restrições programáticas](~/ios/user-interface/programmatic-layout-constraints.md)
-- [Apple – guia de layout automático](https://developer.apple.com/library/ios/documentation/userexperience/conceptual/AutolayoutPG/Introduction/Introduction.html#/apple_ref/doc/uid/TP40010853-CH13-SW1)

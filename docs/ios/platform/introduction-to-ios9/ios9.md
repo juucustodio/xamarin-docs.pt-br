@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: edc778879aa88d420f41bd2b7b8e15b6d80b5939
-ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
+ms.openlocfilehash: e12bac1f65981776a7bd650cbc840cc0cdf72892
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75728259"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "78292682"
 ---
 # <a name="ios-9-compatibility"></a>Compatibilidade com o iOS 9
 
@@ -21,9 +21,7 @@ _Mesmo que você não pretenda adicionar recursos do iOS 9 ao seu aplicativo ime
 > [!IMPORTANT]
 > As informações nesta página são para clientes com aplicativos já existentes na loja de aplicativos direcionados para o iOS 8 ou anterior, que ainda não enviaram atualizações para a compatibilidade com o iOS 9. Se você já estiver usando as versões mais recentes – Xcode 7 e Xamarin. iOS 9-para o desenvolvimento de seu aplicativo, visite a [introdução ao Ios 9](~/ios/platform/introduction-to-ios9/index.md).
 
-Quando a primeira versão beta do iOS 9 apareceu, identificamos dois problemas com versões anteriores do Xamarin que manifestavam como aplicativos mais antigos que não conseguem iniciar no iOS 9.
-
-Esses dois problemas (conforme [detalhado em nossos fóruns](https://forums.xamarin.com/discussion/comment/131529/#Comment_131529)) foram:
+Quando a primeira versão beta do iOS 9 apareceu, identificamos dois problemas com versões anteriores do Xamarin que manifestavam como aplicativos mais antigos que não conseguem iniciar no iOS 9:
 
 - Aplicativos criados para iOS 8 ou anterior não podem ser iniciados em dispositivos de 32 bits (incluindo aplicativos criados com o [API unificada](~/cross-platform/macios/unified/index.md)).
 - Falha de P/Invoke com o caminho completo não especificado.
@@ -99,7 +97,7 @@ Dyld Message: no cache image with name (/System/Library/PrivateFrameworks/JavaSc
 
 **Correção:** Isso será abordado para o iOS 9, mas há uma solução alternativa fácil que você pode se aplicar nesse meio tempo: Basta direcionar para uma versão mais recente do iOS no seu projeto (você pode tentar o iOS 7 nesse caso). Outras estruturas podem apresentar problemas semelhantes, por exemplo, a estrutura WebKit tornou-se pública no iOS 8 (e, portanto, direcionar para o iOS 7 resultará nesse erro; você deve direcionar o iOS 8 para usar WebKit em seu aplicativo).
 
-## <a name="related-links"></a>Links Relacionados
+## <a name="related-links"></a>Links relacionados
 
 - [informações de versão de compatibilidade do iOS 9](https://releases.xamarin.com/ios-hotfix-for-ios-9-preview-xcode-6/)
 - [Introdução ao iOS 9](~/ios/platform/introduction-to-ios9/index.md)

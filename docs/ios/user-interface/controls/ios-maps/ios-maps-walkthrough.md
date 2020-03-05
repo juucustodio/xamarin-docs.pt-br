@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: 404483bb0c2c405fb810ebcd3a8007692219f522
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 7e9010eb579f28e62b5f7ab72ac061e9898e7ecf
+ms.sourcegitcommit: a9b180651863cb7da31d3af14182fe3ad44796f7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73022009"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "78291544"
 ---
 # <a name="annotations-and-overlays-in-xamarinios"></a>Anotações e sobreposições no Xamarin. iOS
 
@@ -80,7 +80,7 @@ Vamos começar criando um novo projeto do **Ios vazio**e dando a ele um nome rel
 
     ```
 
-1. Crie uma nova instância do `MapDelegate` e atribua-a ao `Delegate` do `MKMapView`. Novamente, vamos implcodeent o `MapDelegate` em breve:
+1. Crie uma nova instância do `MapDelegate` e atribua-a ao `Delegate` do `MKMapView`. Novamente, implementaremos o `MapDelegate` em breve:
 
     ```csharp
     mapDelegate = new MapDelegate ();
@@ -107,7 +107,7 @@ Vamos começar criando um novo projeto do **Ios vazio**e dando a ele um nome rel
 
     e cadeia de caracteres:
 
-    `Maps Walkthrough Docs Sample`
+    `Maps Walkthrough Docs Sample`.
 
 ## <a name="conferenceannotationcs--a-class-for-custom-annotations"></a>ConferenceAnnotation.cs – uma classe para anotações personalizadas
 
@@ -245,7 +245,7 @@ Isso conclui o código em `ViewDidLoad`. Agora precisamos implementar nossa clas
     }
     ```
 
-1. Para ocultar a imagem quando o usuário desmarcar a anotação tocando em qualquer outro lugar do mapa, implemente o método `DidSelectAnnotationView` da seguinte maneira:
+1. Para ocultar a imagem quando o usuário desmarcar a anotação tocando em qualquer outro lugar do mapa, implemente o método `DidDeselectAnnotationView` da seguinte maneira:
 
     ```csharp
     public override void DidDeselectAnnotationView (MKMapView mapView, MKAnnotationView view)

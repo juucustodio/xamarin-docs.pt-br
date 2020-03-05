@@ -8,18 +8,18 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/27/2018
-ms.openlocfilehash: 32fecaff7f6896c03f3ac094d478fef3338f844d
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: b1125ab554bd9c73917c106c7486b742f16e628a
+ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73025717"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "78292109"
 ---
 # <a name="xamarinmac-error-messages-mmp"></a>Mensagens de erro do Xamarin. Mac (MMP)
 
 ## <a name="mm0xxx-mmp-error-messages"></a>MM0xxx: mensagens de erro do MMP
 
-Por exemplo, parâmetros, ambiente, ferramentas ausentes.
+Por ex.: parâmetros, ambiente, ferramentas ausentes.
 
 <a name="MM0000" />
 
@@ -158,7 +158,7 @@ O Xamarin. Mac requer os arquivos de cabeçalho, da versão do SDK especificada 
 
 Uma solução potencial, alternativa, é habilitar o vinculador gerenciado. Isso removerá a API não usada, incluindo, na maioria dos casos, a nova API em que os arquivos de cabeçalho estão ausentes (ou incompletos). No entanto, isso não funcionará se o seu projeto usar a API que foi introduzida em um SDK mais recente do que o que o Xcode fornece.
 
-Uma segunda solução potencial, alternativa, é usar o registrador dinâmico em vez disso. Isso irá impor um custo de inicialização ao registrar tipos dinamicamente, mas remover o requisito de arquivo de cabeçalho. 
+Uma segunda solução potencial, alternativa, é usar o registrador dinâmico em vez disso. Isso irá impor um custo de inicialização ao registrar tipos dinamicamente, mas remover o requisito de arquivo de cabeçalho.
 
 Uma solução Straw seria usar uma versão mais antiga do Xamarin. Mac, uma que dá suporte ao SDK que seu projeto requer.
 
@@ -210,7 +210,7 @@ A otimização especificada não foi reconhecida.
 
 O formato aceito é `[+|-]optimization-name`, em que `optimization-name` é um dos valores listados na mensagem de erro.
 
-Consulte [criar otimizações](https://developer.xamarin.com/guides/cross-platform/macios/build-optimizations) para obter uma descrição completa de cada otimização.
+Consulte [criar otimizações](~/cross-platform/macios/optimizations.md) para obter uma descrição completa de cada otimização.
 
 <a name="MM0133" />
 
@@ -220,9 +220,9 @@ Consulte [criar otimizações](https://developer.xamarin.com/guides/cross-platfo
 
 #### <a name="mm0134-32-bit-applications-should-be-migrated-to-64-bit"></a>MM0134: os aplicativos de 32 bits devem ser migrados para 64 bits.
 
-A Apple anunciou que não permitirá envios de armazenamento de aplicativos macOS de aplicativos de 32 bits (a partir de janeiro de 2018). 
+A Apple anunciou que não permitirá envios de armazenamento de aplicativos macOS de aplicativos de 32 bits (a partir de janeiro de 2018).
 
-Além disso, os aplicativos de 32 bits não serão executados na versão do macOS após a alta Sierra "sem comprometimentos". 
+Além disso, os aplicativos de 32 bits não serão executados na versão do macOS após a alta Sierra "sem comprometimentos".
 
 Para obter mais detalhes: https://developer.apple.com/news/?id=06282017a
 
@@ -270,7 +270,7 @@ Como uma solução de última Straw, use uma versão mais antiga do Xamarin. Mac
 
 <a name="MM1406" />
 
-#### <a name="mm1406-target-framework-0-is-invalid-when-targetting-xamarinmac-45-net-framwork"></a>MM1406: a estrutura de destino '{0}' é inválida quando voltados Xamarin. Mac 4,5 .NET framwork.
+#### <a name="mm1406-target-framework-0-is-invalid-when-targeting-xamarinmac-45-net-framwork"></a>MM1406: a estrutura de destino '{0}' é inválida ao direcionar o Xamarin. Mac 4,5 .NET framwork.
 
 <a name="MM1407" />
 

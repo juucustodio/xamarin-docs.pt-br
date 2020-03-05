@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 07/29/2019
-ms.openlocfilehash: 0812347e85b0ccb6aa0bbb16649a89bb4d961c9b
-ms.sourcegitcommit: a14edebf00f3e0f8944e59042ca7aa5c42173e30
+ms.openlocfilehash: afdf9029f836ac8e55b2bb338b31f669af946c12
+ms.sourcegitcommit: 6d86aac422d6ce2131930d18ada161d117c8c61b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72780348"
+ms.lasthandoff: 02/24/2020
+ms.locfileid: "78291603"
 ---
 # <a name="xamarinforms-toolbaritem"></a>ToolbarItem Xamarin. Forms
 
@@ -102,9 +102,15 @@ void OnItemClicked(object sender, EventArgs e)
 
 `ToolbarItem` objetos também podem usar as propriedades `Command` e `CommandParameter` para reagir à entrada do usuário sem manipuladores de eventos. Para obter mais informações sobre a interface de `ICommand` e a vinculação de dados MVVM, consulte [comportamento MVVM do Xamarin. Forms MenuItem](~/xamarin-forms/user-interface/menuitem.md#define-menuitem-behavior-with-mvvm).
 
+## <a name="enable-or-disable-a-toolbaritem-at-runtime"></a>Habilitar ou desabilitar um ToolbarItem em tempo de execução
+
+Para habilitar a desabilitação de um `ToolbarItem` em tempo de execução, vincule sua propriedade `Command` a uma implementação de `ICommand` e verifique se um delegado de `canExecute` habilita e desabilita o `ICommand` conforme apropriado.
+
+Para obter mais informações, consulte [habilitar ou desabilitar um MenuItem em tempo de execução](menuitem.md#enable-or-disable-a-menuitem-at-runtime).
+
 ## <a name="primary-and-secondary-menus"></a>Menus primários e secundários
 
-O `ToolbarItemOrder` enum tem os valores `Default`, `Primary` e `Secondary`.
+O `ToolbarItemOrder` enum tem os valores `Default`, `Primary`e `Secondary`.
 
 Quando a propriedade `Order` estiver definida como `Primary`, o objeto `ToolbarItem` aparecerá na barra de navegação principal em todas as plataformas. `ToolbarItem` objetos são priorizados sobre o título da página, que será truncado para liberar espaço para os itens. As capturas de tela a seguir mostram `ToolbarItem` objetos no menu principal no iOS e no Android:
 
@@ -121,4 +127,4 @@ Quando a propriedade `Order` é definida como `Secondary`, o comportamento varia
 
 * [Demonstrações do ToolbarItem](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-toolbaritem/)
 * [Imagens no Xamarin. Forms](~/xamarin-forms/user-interface/images.md)
-* [Xamarin. Forms MenuItem](~/xamarin-forms/user-interface/menuitem.md)
+* [MenuItem do Xamarin.Forms](~/xamarin-forms/user-interface/menuitem.md)

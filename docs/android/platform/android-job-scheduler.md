@@ -7,18 +7,18 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2018
-ms.openlocfilehash: 4b1e0b32050b22a63bb89b28107877ef3e196b16
-ms.sourcegitcommit: 6de849e2feca928ce5d91a3897e7d4049301081c
+ms.openlocfilehash: 10d2ae6ac35f02d75ef6e04a0531ec3f5dafd668
+ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75667033"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "78292610"
 ---
 # <a name="android-job-scheduler"></a>Agendador de trabalhos do Android
 
 _Este guia discute como agendar o trabalho em segundo plano usando a API do Agendador de trabalho do Android, que está disponível em dispositivos Android que executam o Android 5,0 (API nível 21) e superior._
 
-## <a name="overview"></a>{1&gt;Visão Geral&lt;1} 
+## <a name="overview"></a>Visão geral 
 
 Uma das melhores maneiras de manter um aplicativo Android responsivo ao usuário é garantir que o trabalho complexo ou de longa execução seja executado em segundo plano. No entanto, é importante que o trabalho em segundo plano não afete negativamente a experiência do usuário com o dispositivo. 
 
@@ -55,7 +55,7 @@ Para agendar o trabalho com o Agendador de trabalhos do Android, um aplicativo X
 
 Este guia discutirá detalhadamente como implementar uma classe de `JobService` e agendá-la com o `JobScheduler`.
 
-## <a name="requirements"></a>Requisitos do
+## <a name="requirements"></a>Requisitos
 
 O Agendador de trabalhos do Android requer a API do Android 21 (Android 5,0) ou superior. 
 
@@ -76,7 +76,7 @@ Todo o trabalho executado pela biblioteca do Agendador de trabalhos do Android d
 3. Defina a propriedade `Permission` no `ServiceAttribute` como a cadeia de caracteres `android.permission.BIND_JOB_SERVICE`.
 4. Substitua o método `OnStartJob`, adicionando o código para executar o trabalho. O Android invocará esse método no thread principal do aplicativo para executar o trabalho. Trabalho que levará mais tempo que alguns milissegundos devem ser executados em um thread para evitar o bloqueio do aplicativo.
 5. Quando o trabalho é concluído, o `JobService` deve chamar o método `JobFinished`. Esse método é como `JobService` informa ao `JobScheduler` que o trabalho é feito. A falha ao chamar `JobFinished` resultará na `JobService` de colocar demandas desnecessárias no dispositivo, reduzindo a vida útil da bateria. 
-6. É uma boa ideia também substituir o método `OnStopJob`. Esse método é chamado pelo Android quando o trabalho está sendo desligado antes de ser concluído e fornece ao `JobService` uma oportunidade de descartar corretamente todos os recursos. Esse método deve retornar `true` se for necessário reagendar o trabalho ou `false` se não for desejável para executar novamente o trabalho.
+6. É uma boa ideia também substituir o método `OnStopJob`. Esse método é chamado pelo Android quando o trabalho está sendo desligado antes de ser concluído e fornece ao `JobService` uma oportunidade de descartar corretamente todos os recursos. Esse método deve retornar `true` se for necessário reagendar o trabalho ou `false` se não for desejável executar novamente o trabalho.
 
 O código a seguir é um exemplo da `JobService` mais simples para um aplicativo, usando a TPL para realizar um trabalho de forma assíncrona:
 
@@ -135,7 +135,7 @@ var jobInfo = jobBuilder.Build();  // creates a JobInfo object.
 
 Um recurso poderoso do Agendador de trabalhos do Android é a capacidade de controlar quando um trabalho é executado ou sob quais condições um trabalho pode ser executado. A tabela a seguir descreve alguns dos métodos em `JobInfo.Builder` que permitem que um aplicativo influencie quando um trabalho pode ser executado:  
 
-|  Método | Descrição   |
+|  Método | DESCRIÇÃO   |
 |---|---|
 | `SetMinimumLatency`  | Especifica que um atraso (em milissegundos) deve ser observado antes de um trabalho ser executado. |
 | `SetOverridingDeadline`  | Declara que o trabalho deve ser executado antes dessa hora (em milissegundos) ter decorrido. |
@@ -148,7 +148,7 @@ Um recurso poderoso do Agendador de trabalhos do Android é a capacidade de cont
 
 O `SetBackoffCriteria` fornece algumas diretrizes sobre quanto tempo o `JobScheduler` deve aguardar antes de tentar executar um trabalho novamente. Há duas partes para os critérios de retirada: um atraso em milissegundos (valor padrão de 30 segundos) e o tipo de retirada que deve ser usado (às vezes chamado de _política de retirada_ ou a _política de repetição_). As duas políticas são encapsuladas na enumeração `Android.App.Job.BackoffPolicy`:
 
-- `BackoffPolicy.Exponential` &ndash; uma política de retirada exponencial aumentará o valor inicial da retirada exponencialmente após cada falha. Na primeira vez que um trabalho falhar, a biblioteca aguardará o intervalo inicial especificado antes de reagendar o trabalho – exemplo 30 segundos. Na segunda vez em que o trabalho falhar, a biblioteca aguardará pelo menos 60 segundos antes de tentar executar o trabalho. Após a terceira tentativa com falha, a biblioteca aguardará 120 segundos e assim por diante. Este é o valor padrão.
+- `BackoffPolicy.Exponential` &ndash; uma política de retirada exponencial aumentará o valor inicial da retirada exponencialmente após cada falha. Na primeira vez que um trabalho falhar, a biblioteca aguardará o intervalo inicial especificado antes de reagendar o trabalho – exemplo 30 segundos. Na segunda vez em que o trabalho falhar, a biblioteca aguardará pelo menos 60 segundos antes de tentar executar o trabalho. Após a terceira tentativa com falha, a biblioteca aguardará 120 segundos e assim por diante. Esse é o valor padrão.
 - `BackoffPolicy.Linear` &ndash; essa estratégia é uma retirada linear de que o trabalho deve ser reagendado para ser executado em intervalos definidos (até que tenha sucesso). A retirada linear é mais adequada para o trabalho que deve ser concluído assim que possível ou para problemas que serão resolvidos rapidamente. 
 
 Para obter mais detalhes sobre como criar um objeto `JobInfo`, leia [a documentação do Google para a classe `JobInfo.Builder`](https://developer.android.com/reference/android/app/job/JobInfo.Builder.html).
@@ -218,7 +218,7 @@ jobScheduler.Cancel(1)
 
 Este guia abordou como usar o Agendador de trabalhos do Android para executar o trabalho de forma inteligente em segundo plano. Ele abordou como encapsular o trabalho a ser executado como um `JobService` e como usar o `JobScheduler` para agendar esse trabalho, especificando os critérios com uma `JobTrigger` e como as falhas devem ser tratadas com um `RetryStrategy`.
 
-## <a name="related-links"></a>Links Relacionados
+## <a name="related-links"></a>Links relacionados
 
 - [Agendamento de trabalhos inteligentes](https://developer.android.com/topic/performance/scheduling.html)
 - [Referência da API do JobScheduler](https://developer.android.com/reference/android/app/job/JobScheduler.html)

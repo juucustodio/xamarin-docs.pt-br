@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 08/14/2018
-ms.openlocfilehash: ac96363378e91c60956d28352535733c7e954e6a
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 43dbafe16d7cbabdb3b7902dd3d46d845f213fcd
+ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73021992"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "78291598"
 ---
 # <a name="picker-control-in-xamarinios"></a>Controle do seletor no Xamarin. iOS
 
@@ -127,7 +127,7 @@ Um seletor pode ter várias colunas ou _componentes_. Componentes particionam um
 ![Seletor com dois componentes](picker-images/image3.png "Seletor com dois componentes")
 
 Para especificar o número de componentes em um seletor, use o [`GetComponentCount`](xref:UIKit.UIPickerViewModel.GetComponentCount(UIKit.UIPickerView)) 
-método.
+ProcessOnStatus...
 
 ### <a name="customizing-a-pickers-appearance"></a>Personalizando a aparência de um seletor
 
@@ -168,9 +168,9 @@ var calendar = new NSCalendar(NSCalendarType.Gregorian);
 var currentDate = NSDate.Now;
 var components = new NSDateComponents();
 components.Year = -60;
-NSDate minDate = calendar.DateByAddingComponents(components, NSDate.Now, NSCalendarOptions.None);
+NSDate minDate = calendar.DateByAddingComponents(components, currentDate, NSCalendarOptions.None);
 datePickerView.MinimumDate = minDate;
-datePickerView.MaximumDate = NSDate.Now;
+datePickerView.MaximumDate = currentDate;
 ```
 
 > [!TIP]
@@ -189,11 +189,11 @@ A propriedade [`MinuteInterval`](xref:UIKit.UIDatePicker.MinuteInterval) define 
 datePickerView.MinuteInterval = 10;
 ```
 
-#### <a name="mode"></a>Modo
+#### <a name="mode"></a>Mode
 
 Os seletores de data dão suporte a quatro [modos](xref:UIKit.UIDatePickerMode), descritos abaixo:
 
-##### <a name="uidatepickermodetime"></a>UIDatePickerMode. time
+##### <a name="uidatepickermodetime"></a>UIDatePickerMode.Time
 
 `UIDatePickerMode.Time` exibe a hora com um seletor de hora e minuto e uma designação opcional AM ou PM:
 
@@ -201,9 +201,9 @@ Os seletores de data dão suporte a quatro [modos](xref:UIKit.UIDatePickerMode),
 datePickerView.Mode = UIDatePickerMode.Time;
 ```
 
-![UIDatePickerMode. time](picker-images/image8.png "UIDatePickerMode. time")
+![UIDatePickerMode. time](picker-images/image8.png "UIDatePickerMode.Time")
 
-##### <a name="uidatepickermodedate"></a>UIDatePickerMode. Date
+##### <a name="uidatepickermodedate"></a>UIDatePickerMode.Date
 
 `UIDatePickerMode.Date` exibe a data com um seletor de mês, dia e ano:
 
@@ -211,7 +211,7 @@ datePickerView.Mode = UIDatePickerMode.Time;
 datePickerView.Mode = UIDatePickerMode.Date;
 ```
 
-![UIDatePickerMode. Date](picker-images/image7.png "UIDatePickerMode. Date")
+![UIDatePickerMode. Date](picker-images/image7.png "UIDatePickerMode.Date")
 
 A ordem dos seletores depende da localidade do seletor de data, que por padrão usa a localidade do sistema. A imagem acima mostra o layout dos seletores na localidade `en_US`, mas as seguintes alterações são feitas no pedido para o dia | Mês | Year
 
@@ -221,7 +221,7 @@ datePickerView.Locale = NSLocale.FromLocaleIdentifier("en_GB");
 
 ![Dia | Mês | Year](picker-images/image9.png "Dia | Mês | Year")
 
-##### <a name="uidatepickermodedateandtime"></a>UIDatePickerMode. DateAndTime
+##### <a name="uidatepickermodedateandtime"></a>UIDatePickerMode.DateAndTime
 
 `UIDatePickerMode.DateAndTime` exibe uma exibição reduzida da data, o tempo em horas e minutos e uma designação de AM ou PM opcional (dependendo se um relógio de 12 ou 24 horas é usado):
 
@@ -229,12 +229,12 @@ datePickerView.Locale = NSLocale.FromLocaleIdentifier("en_GB");
 datePickerView.Mode = UIDatePickerMode.DateAndTime;
 ```
 
-![UIDatePickerMode. DateAndTime](picker-images/image6.png "UIDatePickerMode. DateAndTime")
+![UIDatePickerMode. DateAndTime](picker-images/image6.png "UIDatePickerMode.DateAndTime")
 
 Assim como ocorre com [`UIDatePickerMode.Date`](#uidatepickermodedate), a ordem dos seletores e o uso de um relógio de 12 ou 24 horas depende da localidade do seletor de data.
 
 > [!TIP]
-> Use a propriedade `Date` para capturar o valor de um seletor de data no modo `UIDatePickerMode.Time`, `UIDatePickerMode.Date` ou `UIDatePickerMode.DateAndTime`. Esse valor é armazenado como um `NSDate`.
+> Use a propriedade `Date` para capturar o valor de um seletor de data no modo `UIDatePickerMode.Time`, `UIDatePickerMode.Date`ou `UIDatePickerMode.DateAndTime`. Esse valor é armazenado como um `NSDate`.
 
 ##### <a name="uidatepickermodecountdowntimer"></a>UIDatePickerMode.CountDownTimer
 
@@ -293,8 +293,8 @@ Vários valores de `NSDateFormatterStyle` exibem horas da seguinte maneira:
 
 - `NSDateFormatterStyle.Full`: horário de Verão do leste 7:46:00 PM
 - `NSDateFormatterStyle.Long`: EDT do 7:47:00 PM
-- `NSDateFormatterStyle.Medium`:7:47:00 PM
-- `NSDateFormatterSytle.Short`:7:47 PM
+- `NSDateFormatterStyle.Medium`: 7:47:00 PM
+- `NSDateFormatterSytle.Short`: 7:47 PM
 
 ##### <a name="datestyle"></a>Datastyle
 
@@ -308,12 +308,12 @@ dateTimeformat.DateStyle = NSDateFormatterStyle.Long;
 Vários valores de `NSDateFormatterStyle` exibem datas da seguinte maneira:
 
 - `NSDateFormatterStyle.Full`: quarta-feira, 2 de agosto de 2017 às 7:48 PM
-- `NSDateFormatterStyle.Long`:2 de agosto de 2017 às 7:49 PM
-- `NSDateFormatterStyle.Medium`:2 de agosto de 2017, 7:49 PM
-- `NSDateFormatterStyle.Short`:8/2/17, 7:50 PM
+- `NSDateFormatterStyle.Long`: 2 de agosto de 2017 às 7:49 PM
+- `NSDateFormatterStyle.Medium`: 2 de agosto de 2017, 7:49 PM
+- `NSDateFormatterStyle.Short`: 8/2/17, 7:50 PM
 
 > [!NOTE]
-> `DateFormat` e `DateStyle` / `TimeStyle` fornecem diferentes maneiras de especificar a formatação de data e hora. As propriedades definidas mais recentemente determinam a saída do formatador de data.
+> `DateFormat` e `DateStyle`/`TimeStyle` fornecem diferentes maneiras de especificar a formatação de data e hora. As propriedades definidas mais recentemente determinam a saída do formatador de data.
 
 ## <a name="related-links"></a>Links relacionados
 

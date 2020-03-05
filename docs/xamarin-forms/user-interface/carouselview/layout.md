@@ -6,13 +6,13 @@ ms.assetid: fede0382-c972-4023-a4ea-fe5cadec91a6
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/14/2019
-ms.openlocfilehash: 0149a66fedd98a94f1c9d96bf8e7e57715d1b90b
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.date: 01/28/2020
+ms.openlocfilehash: 2e3d3ccd42907ef3678ccfb634c036930800a145
+ms.sourcegitcommit: 10b4d7952d78f20f753372c53af6feb16918555c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75488251"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "78291810"
 ---
 # <a name="xamarinforms-carouselview-layout"></a>Layout CarouselView do Xamarin. Forms
 
@@ -47,7 +47,7 @@ A classe `LinearItemsLayout` herda da classe [`ItemsLayout`](xref:Xamarin.Forms.
 
 ## <a name="horizontal-layout"></a>Layout horizontal
 
-Por padrão, [`CarouselView`](xref:Xamarin.Forms.CarouselView) exibirá seus itens horizontalmente. Portanto, não é necessário definir a propriedade [`ItemsLayout`](xref:Xamarin.Forms.ItemsView.ItemsLayout) para usar este layout:
+Por padrão, [`CarouselView`](xref:Xamarin.Forms.CarouselView) exibirá seus itens horizontalmente. Portanto, não é necessário definir a propriedade [`ItemsLayout`](xref:Xamarin.Forms.CarouselView.ItemsLayout) para usar este layout:
 
 ```xaml
 <CarouselView ItemsSource="{Binding Monkeys}">
@@ -87,7 +87,7 @@ Por padrão, [`CarouselView`](xref:Xamarin.Forms.CarouselView) exibirá seus ite
 </CarouselView>
 ```
 
-Como alternativa, esse layout também pode ser feito definindo a propriedade [`ItemsLayout`](xref:Xamarin.Forms.ItemsView.ItemsLayout) como um objeto `LinearItemsLayout`, especificando o `Horizontal` [`ItemsLayoutOrientation`](xref:Xamarin.Forms.ItemsLayoutOrientation) membro de enumeração como o valor da propriedade `Orientation`:
+Como alternativa, esse layout também pode ser feito definindo a propriedade [`ItemsLayout`](xref:Xamarin.Forms.CarouselView.ItemsLayout) como um objeto `LinearItemsLayout`, especificando o `Horizontal` [`ItemsLayoutOrientation`](xref:Xamarin.Forms.ItemsLayoutOrientation) membro de enumeração como o valor da propriedade `Orientation`:
 
 ```xaml
 <CarouselView ItemsSource="{Binding Monkeys}">
@@ -108,11 +108,13 @@ CarouselView carouselView = new CarouselView
 };
 ```
 
-Isso resulta em um layout que cresce horizontalmente à medida que novos itens são adicionados.
+Isso resulta em um layout que cresce horizontalmente à medida que novos itens são adicionados:
+
+[![Captura de tela de um layout horizontal CarouselView, no iOS e no Android](layout-images/horizontal.png "Layout horizontal CarouselView")](layout-images/horizontal-large.png#lightbox "Layout horizontal CarouselView")
 
 ## <a name="vertical-layout"></a>Layout vertical
 
-[`CarouselView`](xref:Xamarin.Forms.CarouselView) pode exibir seus itens verticalmente definindo a propriedade [`ItemsLayout`](xref:Xamarin.Forms.ItemsView.ItemsLayout) como um objeto `LinearItemsLayout`, especificando o membro de enumeração de [`ItemsLayoutOrientation`](xref:Xamarin.Forms.ItemsLayoutOrientation) `Vertical` como o valor da propriedade `Orientation`:
+[`CarouselView`](xref:Xamarin.Forms.CarouselView) pode exibir seus itens verticalmente definindo a propriedade [`ItemsLayout`](xref:Xamarin.Forms.CarouselView.ItemsLayout) como um objeto `LinearItemsLayout`, especificando o membro de enumeração de [`ItemsLayoutOrientation`](xref:Xamarin.Forms.ItemsLayoutOrientation) `Vertical` como o valor da propriedade `Orientation`:
 
 ```xaml
 <CarouselView ItemsSource="{Binding Monkeys}">
@@ -165,7 +167,9 @@ CarouselView carouselView = new CarouselView
 };
 ```
 
-Isso resulta em um layout que cresce verticalmente à medida que novos itens são adicionados.
+Isso resulta em um layout que cresce verticalmente à medida que novos itens são adicionados:
+
+[![Captura de tela de um layout vertical CarouselView, no iOS e no Android](layout-images/vertical.png "Layout vertical CarouselView")](layout-images/vertical-large.png#lightbox "Layout vertical CarouselView")
 
 ## <a name="partially-visible-adjacent-items"></a>Itens adjacentes parcialmente visíveis
 
@@ -188,13 +192,15 @@ CarouselView carouselView = new CarouselView
 };
 ```
 
-O resultado é que os itens adjacentes são parcialmente expostos na tela.
+O resultado é que os itens adjacentes são parcialmente expostos na tela:
+
+[![Captura de tela de um CollectionView com itens adjacentes parcialmente visíveis, no iOS e no Android](layout-images/peek-items.png "Indefinições da área de Peek do CarouselView")](layout-images/peek-items-large.png#lightbox "Indefinições de área de pico do CarouselView")
 
 ## <a name="item-spacing"></a>Espaçamento de item
 
 Por padrão, cada item em um [`CarouselView`](xref:Xamarin.Forms.CarouselView) não tem espaço vazio em volta dele. Esse comportamento pode ser alterado definindo as propriedades no layout de itens usado pelo `CarouselView`.
 
-Quando um [`CarouselView`](xref:Xamarin.Forms.CarouselView) define sua propriedade [`ItemsLayout`](xref:Xamarin.Forms.ItemsView.ItemsLayout) como um objeto `LinearItemsLayout`, a propriedade `LinearItemsLayout.ItemSpacing` pode ser definida como um valor de `double` que representa o espaço vazio em volta de cada item:
+Quando um [`CarouselView`](xref:Xamarin.Forms.CarouselView) define sua propriedade [`ItemsLayout`](xref:Xamarin.Forms.CarouselView.ItemsLayout) como um objeto `LinearItemsLayout`, a propriedade `LinearItemsLayout.ItemSpacing` pode ser definida como um valor de `double` que representa o espaço vazio em volta de cada item:
 
 ```xaml
 <CarouselView ItemsSource="{Binding Monkeys}">
@@ -238,7 +244,9 @@ void OnImageTapped(object sender, EventArgs e)
 }
 ```
 
-O manipulador de eventos `OnImageTapped` é executado em resposta a um objeto [`Image`](xref:Xamarin.Forms.Image) que está sendo tocado e altera as dimensões da imagem (e seu quadro pai), para que seja exibido mais facilmente.
+O manipulador de eventos `OnImageTapped` é executado em resposta a um objeto [`Image`](xref:Xamarin.Forms.Image) que está sendo tocado e altera as dimensões da imagem (e seu `Frame`pai), para que seja mais facilmente exibido:
+
+[![Captura de tela de um CarouselView com dimensionamento de item dinâmico, no iOS e no Android](layout-images/runtime-resizing.png "Dimensionamento de item dinâmico CarouselView")](layout-images/runtime-resizing-large.png#lightbox "Dimensionamento de item dinâmico CarouselView")
 
 ## <a name="right-to-left-layout"></a>Layout da direita para a esquerda
 

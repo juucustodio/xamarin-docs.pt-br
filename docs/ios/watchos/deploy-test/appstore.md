@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: bbf580007f4d149501efe424f0e36178a49f6aa5
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: a622684461bfe2e4a57b910288ee1f9afb54c694
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73028365"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "78292248"
 ---
 # <a name="deploying-watchos-apps-to-the-app-store"></a>Implantando aplicativos watchOS na loja de aplicativos
 
@@ -65,7 +65,7 @@ A lista de **perfis de provisionamento** mostrará todos os perfis de correspond
 
 <a name="iTunes_Connect"/>
 
-## <a name="itunes-connect"></a>Conexão do iTunes
+## <a name="itunes-connect"></a>iTunes Connect
 
 Siga a [visão geral da distribuição do aplicativo](~/ios/deploy-test/app-distribution/index.md), em particular:
 
@@ -128,7 +128,7 @@ O Xcode mostrará automaticamente os arquivos criados no Visual Studio para Mac.
 
 Em seguida, você pode enviar o aplicativo para aprovação na página **versões** . Consulte a [visão geral da distribuição de aplicativo do IOS](~/ios/deploy-test/app-distribution/index.md) para obter mais informações.
 
-## <a name="troubleshooting"></a>Solução de problemas
+## <a name="troubleshooting"></a>solução de problemas
 
 Aqui estão alguns erros que podem ser encontrados durante o envio à loja de aplicativos e as etapas que você pode executar para corrigi-los.
 
@@ -177,7 +177,7 @@ Verifique se você tem a versão mais recente do Visual Studio para Mac e se o *
 > [!IMPORTANT]
 > Há um bug conhecido no ícone de observação do Visual Studio para Mac suporte: ele espera uma imagem de pixel 88x88 para a imagem de **29x29@3x** (que deve ser 87x87 pixels).
 
-Não é possível corrigir isso em Visual Studio para Mac-edite o ativo da imagem no Xcode ou edite manualmente o arquivo **Contents. JSON** (para corresponder a [Este exemplo](https://github.com/xamarin/monotouch-samples/blob/master/WatchKit/WatchKitCatalog/WatchApp/Resources/Images.xcassets/AppIcons.appiconset/Contents.json#L126-L132)).
+Não é possível corrigir isso em Visual Studio para Mac-edite o ativo da imagem no Xcode ou edite manualmente o arquivo **Contents. JSON** .
 
 ### <a name="invalid-watchkit-support"></a>Suporte a WatchKit inválido
 

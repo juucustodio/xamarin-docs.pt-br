@@ -6,12 +6,12 @@ ms.assetid: da4b4ba9-9205-47dc-8bae-23272ede2c50
 author: davidortinau
 ms.author: daortin
 ms.date: 04/24/2019
-ms.openlocfilehash: e1a540eef2a4d54ead68ae4a9427b0622b668182
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 42be47e74b4b0da60d517a17bb6090c58448b718
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73014545"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "78292105"
 ---
 # <a name="xamarinforms-using-visual-basicnet"></a>Xamarin. Forms usando o Visual Basic.NET
 
@@ -32,7 +32,7 @@ Siga estas etapas para criar um projeto do Xamarin. Forms simples que usa Visual
 
 2. Na janela **criar um novo projeto** , digite **Xamarin. Forms** para filtrar a lista e selecione **aplicativo móvel (xamarin. Forms)** e pressione **Avançar**.
 
-    [Filtro de![para aplicativos Xamarin. Forms](xamarin-forms-images/02-sml.png)](xamarin-forms-images/02.png#lightbox)
+    [Filtro de ![para aplicativos Xamarin. Forms](xamarin-forms-images/02-sml.png)](xamarin-forms-images/02.png#lightbox)
 
 3. Na próxima tela, digite um nome para o projeto e pressione **criar**.
 
@@ -46,7 +46,7 @@ Siga estas etapas para criar um projeto do Xamarin. Forms simples que usa Visual
 
 6. Digite **Visual Basic biblioteca** para filtrar as opções de projeto e escolha a opção **biblioteca de classes (.net Standard)** com o ícone de Visual Basic:
 
-    [Filtro de![para Visual Basic biblioteca](xamarin-forms-images/06-sml.png)](xamarin-forms-images/06.png#lightbox)
+    [Filtro de ![para Visual Basic biblioteca](xamarin-forms-images/06-sml.png)](xamarin-forms-images/06.png#lightbox)
 
 7. Na próxima tela, digite um nome para o projeto e pressione **criar**.
 
@@ -121,7 +121,7 @@ Clique com o botão direito do mouse no nó **referências** nos projetos do And
 
 Conforme indicado na [página do Visual Basic.net portátil](~/cross-platform/platform/visual-basic/index.md), o Xamarin não oferece suporte à linguagem Visual Basic. Isso significa que há algumas limitações sobre onde você pode usar Visual Basic:
 
-- As páginas XAML não podem ser incluídas no projeto Visual Basic-o gerador code-behind só pode C#compilar. É possível incluir o XAML em uma biblioteca de classes separada, C# referenciada e portátil e usar DataBinding para popular os arquivos XAML por meio de modelos de Visual Basic (um exemplo disso é incluído no [exemplo](https://github.com/xamarin/mobile-samples/tree/master/VisualBasic/XamarinFormsVB/XamlPages)).
+- As páginas XAML não podem ser incluídas no projeto Visual Basic-o gerador code-behind só pode C#compilar. É possível incluir o XAML em uma biblioteca de classes separada, C# referenciada e portátil e usar DataBinding para popular os arquivos XAML por meio de modelos de Visual Basic (um exemplo disso é incluído no [exemplo](https://github.com/xamarin/mobile-samples/tree/master/VisualBasic/XamarinFormsVB)).
 
 - Renderizadores personalizados não podem ser gravados em Visual Basic, eles devem ser C# gravados nos projetos da plataforma nativa.
 

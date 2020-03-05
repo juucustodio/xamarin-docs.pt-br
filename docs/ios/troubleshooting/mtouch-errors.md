@@ -8,18 +8,18 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/06/2018
-ms.openlocfilehash: d8bb526f8e53ab2005e2e59556597c351d33f87a
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: a26c83565e4cfa64272549e12a35206dff6ec3c0
+ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73031199"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "78292600"
 ---
 # <a name="xamarinios-errors"></a>Erros do Xamarin. iOS
 
 ## <a name="mt0xxx-mtouch-error-messages"></a>MT0xxx: mensagens de erro do mTouch
 
-Por exemplo, parâmetros, ambiente, ferramentas ausentes.
+Por ex.: parâmetros, ambiente, ferramentas ausentes.
 
 <!--
  MT0xxx mtouch itself, e.g. parameters, environment (e.g. missing tools)
@@ -36,7 +36,7 @@ Ocorreu uma condição de erro inesperada. Registre um novo problema no [GitHub]
 - Um caso de teste mínimo que reproduza o erro; e
 - Todas as informações de versão
 
-A maneira mais fácil de obter informações exatas sobre a versão é usar o menu **Visual Studio para Mac** , **sobre Visual Studio para Mac** item, mostrar o botão **detalhes** e copiar/colar a versão informações (você pode usar o botão **copiar informações** ) .
+A maneira mais fácil de obter informações exatas sobre a versão é usar o menu **Visual Studio para Mac** , **sobre Visual Studio para Mac** item, mostrar o botão **detalhes** e copiar/colar a versão informações (você pode usar o botão **copiar informações** ).
 
 <a name="MT0001" />
 
@@ -971,7 +971,7 @@ Remova o `NOTICE` do diretório do projeto.
 
 ### <a name="mt1019-your-application-has-entitlements-not-supported-by-your-current-provisioning-profile-and-could-not-be-installed-on-the-device--please-check-the-ios-device-log-for-more-detailed-information-error-0xe8008016"></a>MT1019: seu aplicativo tem direitos sem suporte pelo seu perfil de provisionamento atual e não pôde ser instalado no dispositivo ' * '. Consulte o log do dispositivo iOS para obter informações mais detalhadas (erro: 0xe8008016).
 
-Isso pode acontecer se:
+Isso pode ocorrer se:
 
 - Seu aplicativo tem direitos para os quais o perfil de provisionamento atual não oferece suporte.
   Soluções possíveis:
@@ -1010,7 +1010,7 @@ Coisas para tentar resolver isso:
 
 - Exclua o aplicativo do dispositivo e tente novamente.
 - Desconecte o dispositivo e reconecte-o.
-- Reinicialize o dispositivo.
+- Reinicie o dispositivo.
 - Reinicialize o Mac.
 
 <a name="MT1024" />
@@ -1031,7 +1031,7 @@ Coisas para tentar resolver isso:
 
 - Exclua o aplicativo do dispositivo e tente novamente.
 - Desconecte o dispositivo e reconecte-o.
-- Reinicialize o dispositivo.
+- Reinicie o dispositivo.
 - Reinicialize o Mac.
 - Sincronize o dispositivo com o iTunes (isso removerá todos os relatórios de falha do dispositivo).
 
@@ -1045,7 +1045,7 @@ Coisas para tentar resolver isso:
 
 - Exclua o aplicativo do dispositivo e tente novamente.
 - Desconecte o dispositivo e reconecte-o.
-- Reinicialize o dispositivo.
+- Reinicie o dispositivo.
 - Reinicialize o Mac.
 - Sincronize o dispositivo com o iTunes (isso removerá todos os relatórios de falha do dispositivo).
 
@@ -1325,7 +1325,7 @@ Coisas para tentar resolver isso:
 
 - Exclua o aplicativo do dispositivo e tente novamente.
 - Desconecte o dispositivo e reconecte-o.
-- Reinicialize o dispositivo.
+- Reinicie o dispositivo.
 - Reinicialize o Mac.
 - Sincronize o dispositivo com o iTunes (isso removerá todos os relatórios de falha do dispositivo).
 
@@ -1339,7 +1339,7 @@ Coisas para tentar resolver isso:
 
 - Exclua o aplicativo do dispositivo e tente novamente.
 - Desconecte o dispositivo e reconecte-o.
-- Reinicialize o dispositivo.
+- Reinicie o dispositivo.
 - Reinicialize o Mac.
 - Sincronize o dispositivo com o iTunes (isso removerá todos os relatórios de falha do dispositivo).
 
@@ -1353,7 +1353,7 @@ Coisas para tentar resolver isso:
 
 - Exclua o aplicativo do dispositivo e tente novamente.
 - Desconecte o dispositivo e reconecte-o.
-- Reinicialize o dispositivo.
+- Reinicie o dispositivo.
 - Reinicialize o Mac.
 - Sincronize o dispositivo com o iTunes (isso removerá todos os relatórios de falha do dispositivo).
 
@@ -1367,7 +1367,7 @@ Coisas para tentar resolver isso:
 
 - Exclua o aplicativo do dispositivo e tente novamente.
 - Desconecte o dispositivo e reconecte-o.
-- Reinicialize o dispositivo.
+- Reinicie o dispositivo.
 - Reinicialize o Mac.
 - Sincronize o dispositivo com o iTunes (isso removerá todos os relatórios de falha do dispositivo).
 
@@ -1381,7 +1381,7 @@ Coisas para tentar resolver isso:
 
 - Exclua o aplicativo do dispositivo e tente novamente.
 - Desconecte o dispositivo e reconecte-o.
-- Reinicialize o dispositivo.
+- Reinicie o dispositivo.
 - Reinicialize o Mac.
 - Sincronize o dispositivo com o iTunes (isso removerá todos os relatórios de falha do dispositivo).
 
@@ -1395,7 +1395,7 @@ Coisas para tentar resolver isso:
 
 - Exclua o aplicativo do dispositivo e tente novamente.
 - Desconecte o dispositivo e reconecte-o.
-- Reinicialize o dispositivo.
+- Reinicie o dispositivo.
 - Reinicialize o Mac.
 - Sincronize o dispositivo com o iTunes (isso removerá todos os relatórios de falha do dispositivo).
 
@@ -1409,7 +1409,7 @@ Coisas para tentar resolver isso:
 
 - Exclua o aplicativo do dispositivo e tente novamente.
 - Desconecte o dispositivo e reconecte-o.
-- Reinicialize o dispositivo.
+- Reinicie o dispositivo.
 - Reinicialize o Mac.
 - Sincronize o dispositivo com o iTunes (isso removerá todos os relatórios de falha do dispositivo).
 
@@ -1709,7 +1709,7 @@ Isso geralmente indica um bug no compilador AOT. Registre um novo problema no [G
 
 <a name="MT3002" />
 
-### <a name="mt3002-aot-restriction-method--must-be-static-since-it-is-decorated-with-monopinvokecallback-see-developerxamarincomguidesiosadvanced_topicslimitationsreverse_callbacksiosinternalslimitationsmdreverse-callbacks"></a>MT3002: restrição de AOT: o método ' * ' deve ser estático, pois está decorado com [MonoPInvokeCallback]. Consulte [developer.xamarin.com/guides/ios/advanced_topics/limitations/#Reverse_Callbacks](~/ios/internals/limitations.md#reverse-callbacks)
+### <a name="mt3002-aot-restriction-method--must-be-static-since-it-is-decorated-with-monopinvokecallback-see-developerxamarincomguidesiosadvanced_topicslimitationsreverse_callbacks"></a>MT3002: restrição de AOT: o método ' * ' deve ser estático, pois está decorado com [MonoPInvokeCallback]. Consulte [developer.xamarin.com/guides/ios/advanced_topics/limitations/#Reverse_Callbacks](~/ios/internals/limitations.md#reverse-callbacks)
 
 Essa mensagem de erro é proveniente do compilador AOT.
 
@@ -1789,7 +1789,7 @@ Se você acreditar que o Xamarin. iOS deve dar suporte ao tipo em questão, regi
 
 <a name="MT4102" />
 
-### <a name="mt4102-the-registrar-found-an-invalid-type--in-signature-for-method--use--instead"></a>MT4102: o registrador encontrou um tipo inválido `*` na assinatura para o método `*`. Use `*` em seu lugar.
+### <a name="mt4102-the-registrar-found-an-invalid-type--in-signature-for-method--use--instead"></a>MT4102: o registrador encontrou um tipo inválido `*` na assinatura para o método `*`. Use `*` em vez disso.
 
 Atualmente, isso ocorre apenas com um tipo: System. DateTime. Em vez disso, use o equivalente de Objective-C (NSDate).
 
@@ -1855,7 +1855,7 @@ Esse é sempre um bug no Xamarin. iOS; Registre um novo problema no [GitHub](htt
 
 <a name="MT4112" />
 
-### <a name="mt4112-the-registrar-found-an-invalid-type--registering-generic-types-with-objective-c-is-not-supported-and-may-lead-to-random-behavior-andor-crashes-for-backwards-compatibility-with-older-versions-of-xamarinios-it-is-possible-to-ignore-this-error-by-passing---unsupported--enable-generics-in-registrar-as-an-additional-mtouch-argument-in-the-projects-ios-build-options-page-see-developerxamarincomguidesiosadvanced_topicsregistrariosinternalsregistrarmd-for-more-information"></a>MT4112: o registrador encontrou um tipo inválido `*`. Não há suporte para o registro de tipos genéricos com Objective-C e isso pode levar a comportamento aleatório e/ou falhas (para compatibilidade com versões anteriores do Xamarin. iOS, é possível ignorar esse erro passando `--unsupported--enable-generics-in-registrar` como um argumento mTouch adicional em a página de opções de Build do iOS do projeto. Consulte [Developer.xamarin.com/Guides/Ios/advanced_topics/registrar](~/ios/internals/registrar.md) para obter mais informações).
+### <a name="mt4112-the-registrar-found-an-invalid-type--registering-generic-types-with-objective-c-is-not-supported-and-may-lead-to-random-behavior-andor-crashes-for-backwards-compatibility-with-older-versions-of-xamarinios-it-is-possible-to-ignore-this-error-by-passing---unsupported--enable-generics-in-registrar-as-an-additional-mtouch-argument-in-the-projects-ios-build-options-page-see-developerxamarincomguidesiosadvanced_topicsregistrar-for-more-information"></a>MT4112: o registrador encontrou um tipo inválido `*`. Não há suporte para o registro de tipos genéricos com Objective-C e isso pode levar a um comportamento aleatório e/ou a falhas (para compatibilidade com versões anteriores do Xamarin. iOS. é possível ignorar esse erro passando `--unsupported--enable-generics-in-registrar` como um argumento mTouch adicional na página de opções de Build do iOS do projeto. Consulte [Developer.xamarin.com/Guides/Ios/advanced_topics/registrar](~/ios/internals/registrar.md) para obter mais informações).
 
 <a name="MT4113" />
 
@@ -2209,7 +2209,7 @@ Se você encontrar isso ao desenvolver um projeto de associação para uma bibli
 
 Isso geralmente indica um bug no Xamarin. iOS; Registre um novo problema no [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
-### <a name="mt52xx-linking"></a>MT52xx: vinculação
+### <a name="mt52xx-linking"></a>MT52xx: Linking
 
 <!--
   MT52xx linking
@@ -2239,7 +2239,7 @@ Isso geralmente indica um bug no Xamarin. iOS; Registre um novo problema no [Git
 
 Isso acontece quando o vinculador nativo não consegue encontrar um símbolo que é referenciado em algum lugar. Há vários motivos pelos quais isso pode ocorrer:
 
-- Uma associação de terceiros requer uma estrutura, mas a associação não especifica isso em seu atributo `[LinkWith]`. Soluções
+- Uma associação de terceiros requer uma estrutura, mas a associação não especifica isso em seu atributo `[LinkWith]`. Soluções:
   - Se você for o autor da Associação de terceiros ou tiver acesso à sua fonte, modifique o atributo `[LinkWith]` da Associação para incluir a estrutura necessária:
 
     ```csharp
@@ -2251,7 +2251,7 @@ Isso acontece quando o vinculador nativo não consegue encontrar um símbolo que
 - Uma associação gerenciada refere-se a símbolos nativos que não existem na biblioteca nativa.
     Isso geralmente acontece quando uma associação existe por algum tempo, e o código nativo foi modificado durante esse tempo para que uma classe nativa específica tenha sido removida ou renomeada, enquanto a associação não foi atualizada.
 - P/Invoke refere-se a um símbolo nativo que não existe. A partir do Xamarin. iOS 7,4, um erro <a href="#MT5214">MT5214</a> será relatado para esse caso (consulte MT5214 para obter mais informações).
-- Uma associação/biblioteca de terceiros foi criada usando C++, mas a associação não especifica isso em seu atributo`[LinkWith]`. Isso geralmente é razoavelmente fácil de reconhecer, pois os símbolos têm C++ símbolos configurados (um exemplo comum é`__ZNKSt9exception4whatEv`).
+- Uma associação/biblioteca de terceiros foi criada usando C++, mas a associação não especifica isso em seu atributo `[LinkWith]`. Isso geralmente é razoavelmente fácil de reconhecer, pois os símbolos têm C++ símbolos configurados (um exemplo comum é `__ZNKSt9exception4whatEv`).
   - Se você for o autor da Associação de terceiros ou tiver acesso à sua fonte, modifique o atributo `[LinkWith]` da Associação para definir o sinalizador `IsCxx`:
 
     ```csharp
@@ -2266,7 +2266,7 @@ Isso acontece quando o vinculador nativo não consegue encontrar um símbolo que
 
 Isso acontece quando o vinculador nativo não consegue encontrar uma classe Objective-C que é referenciada em algum lugar. Há vários motivos pelos quais isso pode ocorrer: o mesmo que para [MT5210](#MT5210) e, além disso:
 
-- Uma associação de terceiros associada a um protocolo Objective-C, mas não o anota com o atributo `[Protocol]` em sua definição de API. Soluções
+- Uma associação de terceiros associada a um protocolo Objective-C, mas não o anota com o atributo `[Protocol]` em sua definição de API. Soluções:
   - Adicione o atributo `[Protocol]` ausente:
 
     ```csharp
@@ -2502,7 +2502,7 @@ Ocorreu um erro de segurança durante a remoção de símbolos de depuração do
 
 *Tarefa do MSBuild: DetectDebugNetworkConfigurationTaskBase*
 
-Etapas de solução de problemas:
+Etapas para solucionar problemas:
 
 - Tente executar `csharp -e 'System.Net.Dns.GetHostEntry (System.Net.Dns.GetHostName ()).AddressList'` (que deve fornecer um endereço IP e não um erro, obviamente).
 - Tente executar o "ping \`hostname\`", que pode fornecer mais informações, como: `cannot resolve MyHost.local: Unknown host`
@@ -2775,14 +2775,14 @@ Em alguns casos, trata-se de um problema de "rede local" e pode ser resolvido co
 
 Onde * pode ser:
 
-- cadeia de caracteres
-- array
+- string
+- matriz
 - dicionário
 - bool
 - real
 - inteiro
 - date
-- Dados
+- data
 
 <a name="MT7046" />
 

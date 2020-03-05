@@ -6,12 +6,12 @@ ms.assetid: 7C65A55C-71FA-46C5-A1B4-955B82559844
 author: davidortinau
 ms.author: daortin
 ms.date: 10/19/2016
-ms.openlocfilehash: fe4b9ade9e6e462c3472a8bb3bb8750ed6cac326
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 8194c369aa0e4f8bb17a1a162354b4f72c6aaa41
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73015886"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "78292104"
 ---
 # <a name="binding-troubleshooting"></a>Solução de problemas de associação
 
@@ -44,15 +44,15 @@ Se você se deparar com um caso em que a passagem de `null` gera um `ArgumentNul
 
 Seus comentários são importantes para nós. Se você encontrar problemas com o Xamarin. Mac:
 
-- Verifique os [Fóruns do Xamarin.Mac](https://forums.xamarin.com/categories/mac)
-- Pesquise o [repositório de problemas](https://github.com/xamarin/xamarin-macios/issues) 
+- Verifique os [Fóruns do Xamarin.Mac](https://forums.xamarin.com/categories/xamarin-mac)
+- Pesquise o [repositório de problemas](https://github.com/xamarin/xamarin-macios/issues)
 - Antes de mudar para problemas do GitHub, os problemas do Xamarin eram rastreados no [Bugzilla](https://bugzilla.xamarin.com/describecomponents.cgi). Procure lá por problemas correspondentes.
 - Se você não encontrar um problema correspondente, envie um novo problema no [repositório de problemas do GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
-Os problemas do GitHub são todos públicos. Não é possível ocultar comentários ou anexos. 
+Os problemas do GitHub são todos públicos. Não é possível ocultar comentários ou anexos.
 
 Inclua tanto do seguinte quanto possível:
 
-- Um exemplo simples reproduzindo o problema. Isso é **inestimável**, quando possível. 
+- Um exemplo simples reproduzindo o problema. Isso é **inestimável**, quando possível.
 - O rastreamento de pilha completo da falha.
 - O código C# ao redor da falha.

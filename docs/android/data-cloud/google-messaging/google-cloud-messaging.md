@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 05/02/2019
-ms.openlocfilehash: 742555da24120eaeadcc4b6232b24d23f41da283
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: e9b0337c9cdcfbd8f738a11c5dffff427df620bc
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73023712"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "78292677"
 ---
 # <a name="google-cloud-messaging"></a>Google Cloud Messaging
 
@@ -23,11 +23,11 @@ ms.locfileid: "73023712"
 
 _Google Cloud Messaging (GCM) é um serviço que facilita as mensagens entre aplicativos móveis e aplicativos de servidor. Este artigo fornece uma visão geral de como o GCM funciona e explica como configurar os serviços do Google para que seu aplicativo possa usar o GCM._
 
-[logotipo do![Google Cloud Messaging](google-cloud-messaging-images/preview-sml.png)](google-cloud-messaging-images/preview.png#lightbox)
+[logotipo do ![Google Cloud Messaging](google-cloud-messaging-images/preview-sml.png)](google-cloud-messaging-images/preview.png#lightbox)
 
 Este tópico fornece uma visão geral de alto nível de como Google Cloud Messaging roteia mensagens entre seu aplicativo e um servidor de aplicativos e fornece um procedimento passo a passo para adquirir credenciais para que seu aplicativo possa usar os serviços do GCM.
 
-## <a name="overview"></a>Visão Geral
+## <a name="overview"></a>Visão geral
 
 O Google Cloud Messaging (GCM) é um serviço que manipula o envio, o roteamento e a fila de mensagens entre aplicativos de servidor e aplicativos cliente móveis. Um *aplicativo cliente* é um aplicativo habilitado para GCM que é executado em um dispositivo. O *servidor de aplicativos* (fornecido por você ou sua empresa) é o servidor habilitado para GCM ao qual seu aplicativo cliente se comunica por meio do gcm:
 
@@ -35,11 +35,9 @@ O Google Cloud Messaging (GCM) é um serviço que manipula o envio, o roteamento
 
 Usando o GCM, os servidores de aplicativos podem enviar mensagens para um único dispositivo, um grupo de dispositivos ou vários dispositivos que se inscreveram em um tópico. Seu aplicativo cliente pode usar o GCM para assinar mensagens downstream de um servidor de aplicativos (por exemplo, para receber notificações remotas). Além disso, o GCM possibilita que os aplicativos cliente enviem mensagens upstream de volta ao servidor de aplicativos.
 
-Para obter informações sobre como implementar um servidor de aplicativos para GCM, consulte [sobre o servidor de conexão do gcm](https://developers.google.com/cloud-messaging/server).
-
 ## <a name="google-cloud-messaging-in-action"></a>Google Cloud Messaging em ação
 
-Quando as mensagens downstream são enviadas de um servidor de aplicativos para um aplicativo cliente, o servidor de aplicativos envia a mensagem para um *servidor de conexão GCM*; o servidor de conexão GCM, por sua vez, encaminha a mensagem para um dispositivo que está executando seu aplicativo cliente. As mensagens podem ser enviadas por HTTP ou [XMPP](https://developers.google.com/cloud-messaging/ccs) (protocolo de mensagens extensível e de presença). Como os aplicativos cliente nem sempre estão conectados ou em execução, o servidor de conexão do GCM enfileira e armazena mensagens, enviando-as aos aplicativos cliente à medida que eles se reconectam e ficam disponíveis. Da mesma forma, o GCM enfileirará mensagens de upstream do aplicativo cliente para o servidor de aplicativos, se o servidor de aplicativos não estiver disponível.
+Quando as mensagens downstream são enviadas de um servidor de aplicativos para um aplicativo cliente, o servidor de aplicativos envia a mensagem para um *servidor de conexão GCM*; o servidor de conexão GCM, por sua vez, encaminha a mensagem para um dispositivo que está executando seu aplicativo cliente. As mensagens podem ser enviadas por HTTP ou [XMPP](https://firebase.google.com/docs/cloud-messaging/xmpp-server-ref) (protocolo de mensagens extensível e de presença). Como os aplicativos cliente nem sempre estão conectados ou em execução, o servidor de conexão do GCM enfileira e armazena mensagens, enviando-as aos aplicativos cliente à medida que eles se reconectam e ficam disponíveis. Da mesma forma, o GCM enfileirará mensagens de upstream do aplicativo cliente para o servidor de aplicativos, se o servidor de aplicativos não estiver disponível.
 
 O GCM usa as seguintes credenciais para identificar o servidor de aplicativos e seu aplicativo cliente e usa essas credenciais para autorizar transações de mensagens por meio do GCM:
 
@@ -61,7 +59,7 @@ As seções a seguir explicam como essas credenciais são usadas quando os aplic
 
 Um aplicativo cliente instalado em um dispositivo deve primeiro se registrar no GCM antes que as mensagens possam ocorrer. O aplicativo cliente deve concluir as etapas de registro mostradas no diagrama a seguir:
 
-[etapas de registro do aplicativo![](google-cloud-messaging-images/02-app-registration-sml.png)](google-cloud-messaging-images/02-app-registration.png#lightbox)
+[etapas de registro do aplicativo ![](google-cloud-messaging-images/02-app-registration-sml.png)](google-cloud-messaging-images/02-app-registration.png#lightbox)
 
 1. O aplicativo cliente entra em contato com o GCM para obter um token de registro, passando a ID de remetente para GCM.
 
@@ -73,8 +71,6 @@ O servidor de aplicativos armazena em cache o token de registro para comunicaç�
 
 Quando o aplicativo cliente não deseja mais receber mensagens do servidor de aplicativos, ele pode enviar uma solicitação ao servidor de aplicativos para excluir o token de registro. Se o aplicativo cliente estiver recebendo mensagens de tópico (explicadas mais adiante neste artigo), ele poderá cancelar a assinatura do tópico.
 Se o aplicativo cliente for desinstalado de um dispositivo, o GCM detectará isso e notificará automaticamente o servidor de aplicativos para excluir o token de registro.
-
-Os [aplicativos cliente de registro](https://developers.google.com/cloud-messaging/registration) do Google explicam o processo de registro em mais detalhes; Ele explica o cancelamento de registro e a desassinatura e descreve o processo de cancelamento de registro quando um aplicativo cliente é desinstalado.
 
 ### <a name="downstream-messaging"></a>Mensagens downstream
 
@@ -96,15 +92,15 @@ Para obter informações detalhadas (incluindo exemplos de código) sobre o rece
 
 #### <a name="topic-messaging"></a>Mensagens de tópico
 
-O *tópico mensagens* é um tipo de mensagens downstream em que o servidor de aplicativos envia uma única mensagem para vários dispositivos de aplicativo cliente que assinam um tópico (como uma previsão do tempo). As mensagens de tópico podem ter até 2 KB de comprimento e o tópico mensagens dá suporte a até 1 milhão assinaturas por aplicativo. Se o GCM estiver sendo usado somente para mensagens de tópico, o aplicativo cliente não precisará enviar um token de registro para o servidor de aplicativos. As [mensagens de tópico de implementação](https://developers.google.com/cloud-messaging/topic-messaging) do Google explicam como enviar mensagens de um servidor de aplicativos para vários dispositivos que assinam um tópico específico.
+O *tópico mensagens* é um tipo de mensagens downstream em que o servidor de aplicativos envia uma única mensagem para vários dispositivos de aplicativo cliente que assinam um tópico (como uma previsão do tempo). As mensagens de tópico podem ter até 2 KB de comprimento e o tópico mensagens dá suporte a até 1 milhão assinaturas por aplicativo. Se o GCM estiver sendo usado somente para mensagens de tópico, o aplicativo cliente não precisará enviar um token de registro para o servidor de aplicativos.
 
 #### <a name="group-messaging"></a>Mensagens de grupo
 
-*Mensagens de grupo* são um tipo de mensagens downstream em que o servidor de aplicativos envia uma única mensagem para vários dispositivos de aplicativo cliente que pertencem a um grupo (por exemplo, um grupo de dispositivos que pertencem a um único usuário). As mensagens de grupo podem ter até 2 KB de comprimento para dispositivos iOS e até 4 KB de comprimento para dispositivos Android. Um grupo é limitado a um máximo de 20 membros. As [mensagens do grupo de dispositivos](https://developers.google.com/cloud-messaging/notifications) do Google explicam como os servidores de aplicativos podem enviar uma única mensagem para várias instâncias de aplicativo cliente em execução em dispositivos que pertencem a um grupo.
+*Mensagens de grupo* são um tipo de mensagens downstream em que o servidor de aplicativos envia uma única mensagem para vários dispositivos de aplicativo cliente que pertencem a um grupo (por exemplo, um grupo de dispositivos que pertencem a um único usuário). As mensagens de grupo podem ter até 2 KB de comprimento para dispositivos iOS e até 4 KB de comprimento para dispositivos Android. Um grupo é limitado a um máximo de 20 membros.
 
 ### <a name="upstream-messaging"></a>Mensagens upstream
 
-Se seu aplicativo cliente se conectar a um servidor que dá suporte a [XMPP](https://developers.google.com/cloud-messaging/ccs), ele poderá enviar mensagens de volta ao servidor de aplicativos, conforme ilustrado no diagrama a seguir:
+Se seu aplicativo cliente se conectar a um servidor que dá suporte a [XMPP](https://firebase.google.com/docs/cloud-messaging/xmpp-server-ref), ele poderá enviar mensagens de volta ao servidor de aplicativos, conforme ilustrado no diagrama a seguir:
 
 [![diagrama de mensagens upstream](google-cloud-messaging-images/04-upstream-sml.png)](google-cloud-messaging-images/04-upstream.png#lightbox)
 
@@ -118,7 +114,7 @@ Se seu aplicativo cliente se conectar a um servidor que dá suporte a [XMPP](htt
 
 5. O servidor de aplicativos processa a mensagem.
 
-[As mensagens de upstream](https://developers.google.com/cloud-messaging/ccs#upstream) do Google explicam como estruturar mensagens codificadas em JSON e enviá-las a servidores de aplicativos que executam o servidor de conexão de nuvem baseado em XMPP do Google.
+[As mensagens de upstream](https://firebase.google.com/docs/cloud-messaging/xmpp-server-ref#upstream) do Google explicam como estruturar mensagens codificadas em JSON e enviá-las a servidores de aplicativos que executam o servidor de conexão de nuvem baseado em XMPP do Google.
 
 <a name="settingup" />
 
@@ -164,8 +160,6 @@ Para exibir a **chave de API**, clique em **Gerenciador de API** e, em seguida, 
 [![exibir a chave de API](google-cloud-messaging-images/11-view-credentials-sml.png)](google-cloud-messaging-images/11-view-credentials.png#lightbox)
 
 ## <a name="for-further-reading"></a>Para leitura adicional
-
-- O [registro de aplicativos cliente](https://developers.google.com/cloud-messaging/registration) do Google descreve o processo de registro de cliente em mais detalhes e fornece informações sobre como configurar a repetição automática e manter o estado de registro em sincronia.
 
 - [Rfc 6120](https://tools.ietf.org/html/rfc6120) e [RFC 6121](https://tools.ietf.org/html/rfc6121) explicam e definem o protocolo XMPP (Extensible Messaging and Presence Protocol).
 
