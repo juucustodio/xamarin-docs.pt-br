@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 11/27/2019
-ms.openlocfilehash: 8b633481d74810bc4d86d68f8c36d55980092510
-ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
+ms.openlocfilehash: 778f56ec844e2802c1e1bc783824d55218678761
+ms.sourcegitcommit: e9d88587aafc912124b87732d81c3910247ad811
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "78291809"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78337286"
 ---
 # <a name="send-and-receive-push-notifications-with-azure-notification-hubs-and-xamarinforms"></a>Enviar e receber notificações por push com hubs de notificação do Azure e Xamarin. Forms
 
@@ -518,6 +518,7 @@ Os hubs de notificação do Azure permitem que você verifique se o aplicativo p
 1. Ao testar se um aplicativo pode receber notificações por push, você deve usar um dispositivo físico. Os dispositivos virtuais Android e iOS podem não estar configurados corretamente para receber notificações por push.
 1. O aplicativo Android de exemplo registra seu token e modelos uma vez quando o token firebase é emitido. Durante os testes, talvez seja necessário solicitar um novo token e registrá-lo novamente com o Hub de notificação do Azure. A melhor maneira de forçar isso é limpar o projeto, excluir as pastas `bin` e `obj` e desinstalar o aplicativo do dispositivo antes de recompilar e implantar.
 1. Muitas partes do fluxo de notificação por push são executadas de forma assíncrona. Isso pode fazer com que os pontos de interrupção não sejam atingidos ou estejam sendo atingidos em uma ordem inesperada. Use o registro de dispositivo ou de depuração para rastrear a execução sem interromper o fluxo do aplicativo. Filtre o log do dispositivo Android usando o `DebugTag` especificado em `Constants`.
+1. Quando a depuração é interrompida no Visual Studio, o aplicativo é forçado a ser fechado. Todos os receptores de mensagens ou outros serviços iniciados como parte do processo de depuração serão fechados e não responderão a eventos de mensagem.
 
 ## <a name="create-a-notification-dispatcher"></a>Criar um Dispatcher de notificação
 
