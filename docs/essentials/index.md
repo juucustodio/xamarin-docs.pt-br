@@ -5,12 +5,12 @@ ms.assetid: 4EDC9897-5FD1-44CA-A26D-2E5AB472C99A
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 02/26/2020
-ms.openlocfilehash: a0d1e397725ca0a60eb68fb0e6b989ee22c3f56a
-ms.sourcegitcommit: 3d39bafe4c56b15cbb695b1f7f02b926e1033f58
+ms.openlocfilehash: 42cdfe6c54354f1616606c9b3a40de78446c5c39
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78155263"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78910726"
 ---
 # <a name="xamarinessentials"></a>Xamarin.Essentials
 
@@ -28,6 +28,7 @@ Siga os guias para integrar esses recursos Xamarin.Essentials em seus aplicativo
 
 * [Acelerômetro](accelerometer.md?context=xamarin/xamarin-forms) – recuperar dados de aceleração do dispositivo no espaço tridimensional.
 * [Informações do aplicativo](app-information.md?context=xamarin/xamarin-forms) – localize informações sobre o aplicativo.
+* [Tema do aplicativo](app-theme.md?context=xamarin/xamarin-forms) – detectar o tema atual solicitado para o aplicativo.
 * [Barômetro](barometer.md?context=xamarin/xamarin-forms) – monitorar o barômetro em relação a alterações de pressão.
 * [Bateria](battery.md?context=xamarin/xamarin-forms) – facilmente detectar o nível de bateria, o código-fonte e o estado.
 * [Área de transferência](clipboard.md?context=xamarin/xamarin-forms) – definir ou ler rapidamente e facilmente texto na área de transferência.

@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 01/28/2020
 ms.openlocfilehash: 735a572f4aadfc224e545e371525b96f29c9552e
-ms.sourcegitcommit: 10b4d7952d78f20f753372c53af6feb16918555c
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "78291482"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78913116"
 ---
 # <a name="xamarinforms-carouselview-scrolling"></a>CarouselView de Xamarin. Forms
 
@@ -142,7 +142,7 @@ carouselView.ScrollTo(monkey, position: ScrollToPosition.Start);
 
 Este código de exemplo resulta no item que está sendo rolado para o início da exibição.
 
-### <a name="center"></a>Centro
+### <a name="center"></a>Center
 
 O membro [`ScrollToPosition.Center`](xref:Xamarin.Forms.ScrollToPosition) indica que o item deve ser rolado para o centro da exibição:
 
@@ -152,7 +152,7 @@ carouselViewView.ScrollTo(monkey, position: ScrollToPosition.Center);
 
 Este código de exemplo resulta no item que está sendo rolado para o centro da exibição.
 
-### <a name="end"></a>End
+### <a name="end"></a>Encerramento
 
 O membro [`ScrollToPosition.End`](xref:Xamarin.Forms.ScrollToPosition) indica que o item deve ser rolado para o final da exibição:
 
@@ -262,7 +262,7 @@ Quando um usuário passa o dedo para iniciar uma rolagem em uma [`CarouselView`]
 
 [![Captura de tela de um CarouselView com pontos de ajuste iniciais, no iOS e no Android](scrolling-images/snappoints-start.png "CarouselView com pontos de ajuste de início")](scrolling-images/snappoints-start-large.png#lightbox "CarouselView com pontos de ajuste de início")
 
-#### <a name="center"></a>Centro
+#### <a name="center"></a>Center
 
 O membro `SnapPointsAlignment.Center` indica que os pontos de ajuste estão alinhados ao centro dos itens.
 
@@ -298,7 +298,7 @@ Quando um usuário passa o dedo para iniciar uma rolagem em uma [`CarouselView`]
 
 [![Captura de tela de um CarouselView com pontos de alinhamento centralizados, no iOS e no Android](scrolling-images/snappoints-center.png "CarouselView com pontos de alinhamento do centro")](scrolling-images/snappoints-center-large.png#lightbox "CarouselView com pontos de alinhamento do centro")
 
-#### <a name="end"></a>End
+#### <a name="end"></a>Encerramento
 
 O membro `SnapPointsAlignment.End` indica que os pontos de ajuste estão alinhados com a borda à direita dos itens. O exemplo de XAML a seguir mostra como definir esse membro de enumeração:
 
