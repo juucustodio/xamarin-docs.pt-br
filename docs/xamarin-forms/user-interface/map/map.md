@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 10/29/2019
 ms.openlocfilehash: 1cfda90360557af1160d421f18807f8b534967a8
-ms.sourcegitcommit: 3ea19e3a51515b30349d03c70a5b3acd7eca7fe7
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73426226"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78912822"
 ---
 # <a name="xamarinforms-map-control"></a>Controle de Mapeamento Xamarin. Forms
 
@@ -106,15 +106,15 @@ Map map = new Map
 
 As capturas de tela a seguir mostram um [`Map`](xref:Xamarin.Forms.Maps.Map) quando a propriedade [`MapType`](xref:Xamarin.Forms.Maps.Map.MapType) é definida como `Street`:
 
-[![Captura de tela do controle de mapa com o tipo de mapa de rua, no iOS e no Android](map-images/maptype-street.png "Controle de mapa com a rua MapType")](map-images/maptype-street-large.png#lightbox "Map control with the street map type")
+[![Captura de tela do controle de mapa com o tipo de mapa de rua, no iOS e no Android](map-images/maptype-street.png "Controle de mapa com a rua MapType")](map-images/maptype-street-large.png#lightbox "Controle de mapa com o tipo de mapa de rua")
 
 As capturas de tela a seguir mostram um [`Map`](xref:Xamarin.Forms.Maps.Map) quando a propriedade [`MapType`](xref:Xamarin.Forms.Maps.Map.MapType) é definida como `Satellite`:
 
-[![Captura de tela do controle de mapa com o tipo de mapa satélite, no iOS e no Android](map-images/maptype-satellite.png "Controle de mapa com o satélite MapType")](map-images/maptype-satellite-large.png#lightbox "Map control with the satellite map type")
+[![Captura de tela do controle de mapa com o tipo de mapa satélite, no iOS e no Android](map-images/maptype-satellite.png "Controle de mapa com o satélite MapType")](map-images/maptype-satellite-large.png#lightbox "Controle de mapa com o tipo de mapa satélite")
 
 As capturas de tela a seguir mostram um [`Map`](xref:Xamarin.Forms.Maps.Map) quando a propriedade [`MapType`](xref:Xamarin.Forms.Maps.Map.MapType) é definida como `Hybrid`:
 
-[![Captura de tela do controle de mapa com o tipo de mapa híbrido, no iOS e no Android](map-images/maptype-hybrid.png "Controle de mapa com o MapType híbrido")](map-images/maptype-hybrid-large.png#lightbox "Map control with the hybrid map type")
+[![Captura de tela do controle de mapa com o tipo de mapa híbrido, no iOS e no Android](map-images/maptype-hybrid.png "Controle de mapa com o MapType híbrido")](map-images/maptype-hybrid-large.png#lightbox "Controle de mapa com o tipo de mapa híbrido")
 
 ## <a name="display-a-specific-location-on-a-map"></a>Exibir um local específico em um mapa
 

@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 11/05/2019
 ms.openlocfilehash: 4049b3bdfdd6077dcfa151df9553722e63def0ba
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75489954"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78912742"
 ---
 # <a name="xamarinforms-shell-flyout"></a>Submenu Shell do Xamarin.Forms
 

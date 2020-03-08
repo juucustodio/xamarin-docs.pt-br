@@ -7,11 +7,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 01/22/2020
 ms.openlocfilehash: 4c9096edddeb00070aaabc3e93b283f2d55c1bfa
-ms.sourcegitcommit: a3b7e016fb25584dbf57bae89b64a9f98031e7c9
-ms.translationtype: HT
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2020
-ms.locfileid: "76550001"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78911620"
 ---
 # <a name="uninstall-xamarin-from-visual-studio"></a>Desinstalar o Xamarin do Visual Studio
 
@@ -50,7 +50,7 @@ Para desinstalar completamente o Visual Studio 2017, escolha **Desinstalar** no 
 > [!IMPORTANT]
 > Se houver duas (ou mais) instâncias do Visual Studio instaladas SxS (lado a lado), como uma versão de lançamento e uma versão prévia, desinstalar uma instância poderá remover algumas funcionalidades do Xamarin de outras instâncias do Visual Studio, incluindo:
 >
-> - Criador de perfil do Xamarin
+> - Xamarin Profiler
 > - Pastas de trabalho/Inspetor do Xamarin
 > - Simulador do iOS remoto do Xamarin
 > - SDK do Bonjour da Apple

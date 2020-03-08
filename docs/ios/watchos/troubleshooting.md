@@ -9,17 +9,17 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017
 ms.openlocfilehash: 06524163fadc4300d55ec90f35723fd1561bb8a0
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "78292525"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78915525"
 ---
 # <a name="watchos-troubleshooting"></a>Solução de problemas do watchOS
 
 Esta página contém informações adicionais e soluções alternativas para os problemas que você pode encontrar.
 
-- [Problemas Conhecidos](#knownissues)
+- [Problemas conhecidos](#knownissues)
 
 - [Removendo o canal alfa de imagens de ícone](#noalpha)
 
@@ -52,7 +52,7 @@ Esta página contém informações adicionais e soluções alternativas para os 
 - Você pode ver um erro "o aplicativo não foi criado" ao tentar iniciar o aplicativo. Isso ocorre depois de uma **limpeza** quando o projeto de inicialização é definido como o projeto de extensão de inspeção.
     A correção é selecionar **compilar > Recompilar tudo** e, em seguida, reiniciar o aplicativo.
 
-### <a name="visual-studio"></a>Visual Studio
+### <a name="visual-studio"></a>{1&gt;Visual Studio&lt;1}
 
 O suporte ao designer do iOS para o kit de inspeção *requer* que a solução seja configurada corretamente. Se as referências do projeto não estiverem definidas (consulte [como definir referências](~/ios/watchos/get-started/project-references.md)), a superfície de design não funcionará corretamente.
 
@@ -166,7 +166,7 @@ with an alpha channel. Icons should not have an alpha channel.
 
     ![](troubleshooting-images/add-6.png "Opening the storyboard in Interface Builder")
 
-8. Selecione o novo controlador de interface e dê a ele o ClassName que você definiu acima, por exemplo, `MyInterfaceController`.
+8. Selecione o novo controlador de interface e dê a ele o ClassName que você definiu acima, por exemplo, `MyInterfaceController`
     Se tudo funcionou corretamente, ele deverá aparecer automaticamente na lista suspensa **classe:** e você poderá selecioná-lo a partir daí.
 
     ![](troubleshooting-images/add-4.png "Setting a custom class")
@@ -257,7 +257,7 @@ Os argumentos restantes são explicados abaixo:
 
 ### <a name="--sdkroot"></a>--sdkroot
 
-Obrigatórios. Especifica o caminho para o Xcode (6,2 ou posterior).
+Obrigatório. Especifica o caminho para o Xcode (6,2 ou posterior).
 
 Exemplo:
 
@@ -291,7 +291,7 @@ Exemplo:
 --device=:v2:runtime=com.apple.CoreSimulator.SimRuntime.iOS-8-2,devicetype=com.apple.CoreSimulator.SimDeviceType.iPhone-6
 ```
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [WatchKitCatalog (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
 - [WatchTables (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchtables)

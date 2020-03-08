@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 01/20/2020
 ms.openlocfilehash: 3798e3612547d36905dd62e6314f158958782874
-ms.sourcegitcommit: 5b6d3bddf7148f8bb374de5657bdedc125d72ea7
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78292608"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78911369"
 ---
 # <a name="fonts-in-xamarinforms"></a>Fontes no xamarin. Forms
 
@@ -61,7 +61,7 @@ O Xamarin. Forms também define campos na enumeração de [`NamedSize`](xref:Xam
 
 Estilos de fonte, como **negrito** e *itálico* , podem ser definidos na propriedade `FontAttributes`. Atualmente, há suporte para os seguintes valores:
 
-- **Nenhuma**
+- **Nenhum**
 - **Negrito**
 - **Colocadas**
 

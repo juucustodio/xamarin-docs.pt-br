@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
 ms.openlocfilehash: 4731be58c1fadae0bba6768570ecfd181b071dd2
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73031860"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78915714"
 ---
 # <a name="ios-7-user-interface-overview"></a>Visão geral da interface do usuário do iOS 7
 
@@ -201,7 +201,7 @@ Em nosso aplicativo, veremos que a exibição é reposicionada novamente, de mod
 
  [![](ios7-ui-images/good.png "Example with whole image visible")](ios7-ui-images/good.png#lightbox)
 
-Observe que, embora os efeitos das APIs `TopLayoutGuide/BottomLayoutGuide` e `EdgesForExtendedLayout` sejam semelhantes, eles destinam-se a preencher metas diferentes. Alterar a configuração de `EdgesForExtendedLayout` do padrão pode corrigir exibições recortadas em aplicativos criados para o iOS 6, mas um bom design do iOS 7 deve respeitar a estética de tela inteira e fornecer uma experiência de exibição de tela inteira, contando com `TopLayoutGuide` e `BottomLayoutGuide` corretamente Posicione o conteúdo que deve ser manipulado em um local confortável para o usuário.
+Observe que, embora os efeitos das APIs `TopLayoutGuide/BottomLayoutGuide` e `EdgesForExtendedLayout` sejam semelhantes, eles destinam-se a preencher metas diferentes. Alterar a configuração de `EdgesForExtendedLayout` do padrão pode corrigir exibições recortadas em aplicativos criados para iOS 6, mas um bom design do iOS 7 deve respeitar a estética de tela inteira e fornecer uma experiência de exibição de tela inteira, contando com `TopLayoutGuide` e `BottomLayoutGuide` para posicionar corretamente o conteúdo que pretende ser manipulado em um local confortável para o usuário.
 
 Consulte o [ImageViewer](https://docs.microsoft.com/samples/xamarin/ios-samples/ios7-ui-updates/) para obter um exemplo funcional.
 
