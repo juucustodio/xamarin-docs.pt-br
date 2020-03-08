@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
 ms.openlocfilehash: dc71da512519cdd7fcc56df1ff987ffbc1354663
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70760400"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78915267"
 ---
 # <a name="containerized-microservices"></a>Microsserviços em contêineres
 
@@ -20,9 +20,9 @@ O desenvolvimento de aplicativos cliente-servidor resultou em um foco na criaç�
 
 Especialmente em relação à idade da nuvem, é que os componentes individuais não podem ser facilmente dimensionados. Um aplicativo monolítico contém funcionalidade específica de domínio e normalmente é dividido por camadas funcionais, como front-end, lógica de negócios e armazenamento de dados. Um aplicativo monolítico é dimensionado com a clonagem de todo o aplicativo em vários computadores, como ilustrado na Figura 8-1.
 
-![](containerized-microservices-images/monolithicapp.png "Abordagem de dimensionamento de aplicativos monolítico")
+![](containerized-microservices-images/monolithicapp.png "Monolithic application scaling approach")
 
-**Figura 8-1**: Abordagem de dimensionamento de aplicativos monolítico
+**Figura 8-1**: abordagem de dimensionamento de aplicativos monolítico
 
 ## <a name="microservices"></a>Microsserviços
 
@@ -30,9 +30,9 @@ Os microserviços oferecem uma abordagem diferente para desenvolvimento e implan
 
 Os microserviços podem escalar horizontalmente de forma independente, em comparação com aplicativos monolíticos gigantes que são dimensionados juntos. Isso significa que uma área funcional específica, que exige mais capacidade de processamento ou largura de banda de rede para dar suporte à demanda, pode ser dimensionada em vez de reduzir desnecessariamente outras áreas do aplicativo. A Figura 8-2 ilustra essa abordagem, em que os microserviços são implantados e dimensionados de forma independente, criando instâncias de serviços entre máquinas.
 
-![](containerized-microservices-images/microservicesapp.png "Abordagem de dimensionamento de aplicativos de microserviços")
+![](containerized-microservices-images/microservicesapp.png "Microservices application scaling approach")
 
-**Figura 8-2**: Abordagem de dimensionamento de aplicativos de microserviços
+**Figura 8-2**: abordagem de dimensionamento do aplicativo de microserviços
 
 A expansão do microserviço pode ser quase instantânea, permitindo que um aplicativo se adapte às cargas em constante mudança. Por exemplo, um único microserviço na funcionalidade voltada para a Web de um aplicativo pode ser o único microserviço no aplicativo que precisa ser expandido para lidar com o tráfego de entrada adicional.
 
@@ -64,9 +64,9 @@ Um contêiner é um ambiente operacional isolado, controlado por recursos e port
 
 Há muitas semelhanças entre contêineres e máquinas virtuais, como ilustrado na Figura 8-3.
 
-![](containerized-microservices-images/containersvsvirtualmachines.png "Abordagem de dimensionamento de aplicativos de microserviços")
+![](containerized-microservices-images/containersvsvirtualmachines.png "Microservices application scaling approach")
 
-**Figura 8-3**: Comparação de máquinas virtuais e contêineres
+**Figura 8-3**: comparação de máquinas virtuais e contêineres
 
 Um contêiner executa um sistema operacional, tem um sistema de arquivos e pode ser acessado em uma rede como se fosse uma máquina virtual ou física. No entanto, a tecnologia e os conceitos usados por contêineres são muito diferentes das máquinas virtuais. As máquinas virtuais incluem os aplicativos, as dependências necessárias e um sistema operacional convidado completo. Os contêineres incluem o aplicativo e suas dependências, mas compartilham o sistema operacional com outros contêineres, executando como processos isolados no sistema operacional do host (além de contêineres do Hyper-V que são executados dentro de uma máquina virtual especial por contêiner). Portanto, os contêineres compartilham recursos e normalmente exigem menos recursos do que as máquinas virtuais.
 
@@ -74,17 +74,17 @@ A vantagem de uma abordagem de implantação e desenvolvimento orientada a cont�
 
 Os principais conceitos ao criar e trabalhar com contêineres são:
 
-- Host do contêiner: A máquina virtual ou física configurada para hospedar contêineres. O host do contêiner executará um ou mais contêineres.
-- Imagem de contêiner: Uma imagem consiste em uma União de sistemas de fileem camadas empilhados um em cima do outro e é a base de um contêiner. Uma imagem não tem estado e nunca muda conforme é implantada em ambientes diferentes.
-- Container Um contêiner é uma instância de tempo de execução de uma imagem.
-- Imagem do sistema operacional do contêiner: Os contêineres são implantados a partir de imagens. A imagem do sistema operacional do contêiner é a primeira camada em potencialmente muitas camadas de imagem que compõem um contêiner. Um sistema operacional de contêiner é imutável e não pode ser modificado.
-- Repositório do contêiner: Cada vez que uma imagem de contêiner é criada, a imagem e suas dependências são armazenadas em um repositório local. Essas imagens podem ser reutilizadas muitas vezes no host do contêiner. As imagens de contêiner também podem ser armazenadas em um registro público ou privado, como o [Hub do Docker](https://hub.docker.com/), para que possam ser usadas em diferentes hosts de contêiner.
+- Host do contêiner: a máquina virtual ou física configurada para hospedar contêineres. O host do contêiner executará um ou mais contêineres.
+- Imagem de contêiner: uma imagem consiste em uma União de sistemas de fileem camadas empilhados um em cima do outro e é a base de um contêiner. Uma imagem não tem estado e nunca muda conforme é implantada em ambientes diferentes.
+- Contêiner: um contêiner é uma instância de tempo de execução de uma imagem.
+- Imagem do sistema operacional do contêiner: contêineres são implantados a partir de imagens. A imagem do sistema operacional do contêiner é a primeira camada em potencialmente muitas camadas de imagem que compõem um contêiner. Um sistema operacional de contêiner é imutável e não pode ser modificado.
+- Repositório de contêiner: cada vez que uma imagem de contêiner é criada, a imagem e suas dependências são armazenadas em um repositório local. Essas imagens podem ser reutilizadas várias vezes no host do contêiner. As imagens de contêiner também podem ser armazenadas em um registro público ou privado, como o [Hub do Docker](https://hub.docker.com/), para que possam ser usadas em diferentes hosts de contêiner.
 
 As empresas estão cada vez mais adotando contêineres ao implementar aplicativos baseados em microserviço, e o Docker se tornou a implementação de contêiner padrão que foi adotada pela maioria das plataformas de software e fornecedores de nuvem.
 
 O aplicativo de referência eShopOnContainers usa o Docker para hospedar quatro microserviços de back-end em contêineres, como ilustrado na Figura 8-4.
 
-![](containerized-microservices-images/microservicesarchitecture.png "eShopOnContainers fazer referência a microserviços de back-end do aplicativo")
+![](containerized-microservices-images/microservicesarchitecture.png "eShopOnContainers reference application back-end microservices")
 
 **Figura 8-4**: eShopOnContainers de aplicativos de referência de back-end do aplicativo
 
@@ -92,7 +92,7 @@ A arquitetura dos serviços de back-end no aplicativo de referência é decompos
 
 Cada Microservice tem seu próprio banco de dados, permitindo que ele seja totalmente dissociado dos outros microservices. Quando necessário, a consistência entre os bancos de dados de diferentes microservices é obtida usando eventos de nível de aplicativo. Para obter mais informações, consulte [comunicação entre os microserviços](#communication_between_microservices).
 
-Para obter mais informações sobre o aplicativo de referência [, consulte microservices do .net: Arquitetura para aplicativos .NET em contêineres](https://aka.ms/microservicesebook).
+Para obter mais informações sobre o aplicativo de referência, consulte [microservices do .net: arquitetura para aplicativos .net em contêineres](https://aka.ms/microservicesebook).
 
 <a name="communication_between_client_and_microservices" />
 
@@ -100,14 +100,14 @@ Para obter mais informações sobre o aplicativo de referência [, consulte micr
 
 O aplicativo móvel eShopOnContainers comunica-se com os microserviços de back-end em contêineres usando a comunicação *direta de cliente para microserviço* , que é mostrada na Figura 8-5.
 
-![](containerized-microservices-images/directclienttomicroservicecommunication.png "Abordagem de dimensionamento de aplicativos de microserviços")
+![](containerized-microservices-images/directclienttomicroservicecommunication.png "Microservices application scaling approach")
 
-**Figura 8-5**: Comunicação direta de cliente com microsserviço
+**Figura 8-5**: comunicação direta de cliente para microserviço
 
 Com a comunicação direta entre cliente e microserviço, o aplicativo móvel faz solicitações para cada microserviço diretamente por meio de seu ponto de extremidade público, com uma porta TCP diferente por microserviço. Em produção, o ponto de extremidade normalmente se mapearia para o balanceador de carga do microserviço, que distribui solicitações entre as instâncias disponíveis.
 
 > [!TIP]
-> Considere o uso da comunicação do gateway de API. A comunicação direta entre o cliente e o microserviço pode ter desvantagens ao criar um aplicativo baseado em microatendimento grande e complexo, mas é mais do que adequado para um pequeno aplicativo. Ao criar um grande aplicativo baseado em microserviço com dezenas de microserviços, considere o uso da comunicação do gateway de API. Para obter mais informações, [consulte microservices do .net: Arquitetura para aplicativos .NET em contêineres](https://aka.ms/microservicesebook).
+> Considere o uso da comunicação do gateway de API. A comunicação direta entre o cliente e o microserviço pode ter desvantagens ao criar um aplicativo baseado em microatendimento grande e complexo, mas é mais do que adequado para um pequeno aplicativo. Ao criar um grande aplicativo baseado em microserviço com dezenas de microserviços, considere o uso da comunicação do gateway de API. Para obter mais informações, consulte [microservices do .net: arquitetura para aplicativos .net em contêineres](https://aka.ms/microservicesebook).
 
 <a name="communication_between_microservices" />
 
@@ -121,28 +121,28 @@ A comunicação assíncrona baseada em eventos com base em mensagens é essencia
 
 Um barramento de evento permite a comunicação de publicação/assinatura entre os microserviços, sem exigir que os componentes sejam explicitamente cientes uns dos outros, como mostra a Figura 8-6.
 
-![](containerized-microservices-images/eventbus.png "Publicar-assinar com um barramento de evento")
+![](containerized-microservices-images/eventbus.png "Publish-subscribe with an event bus")
 
 **Figura 8-6:** Publicar-assinar com um barramento de evento
 
 Da perspectiva do aplicativo, o barramento de evento é simplesmente um canal de publicação-assinatura exposto por meio de uma interface. No entanto, a maneira como o barramento de evento é implementado pode variar. Por exemplo, uma implementação de barramento de evento poderia usar o RabbitMQ, o barramento de serviço do Azure ou outros barramentos de serviço, como NServiceBus e MassTransit. A Figura 8-7 mostra como um barramento de evento é usado no aplicativo de referência eShopOnContainers.
 
-![](containerized-microservices-images/microservicesarchitecturewitheventbus.png "Comunicação assíncrona controlada por evento no aplicativo de referência")
+![](containerized-microservices-images/microservicesarchitecturewitheventbus.png "Asynchronous event-driven communication in the reference application")
 
 **Figura 8-7:** Comunicação assíncrona controlada por evento no aplicativo de referência
 
 O barramento de evento eShopOnContainers, implementado usando o RabbitMQ, fornece a funcionalidade de publicação/assinatura assíncrona de um para muitos. Isso significa que depois de publicar um evento, pode haver vários assinantes ouvindo o mesmo evento. A Figura 8-9 ilustra essa relação.
 
-![](containerized-microservices-images/eventdrivencommunication.png "Comunicação um-para-muitos")
+![](containerized-microservices-images/eventdrivencommunication.png "One-to-many communication")
 
-**Figura 8-9**: Comunicação um-para-muitos
+**Figura 8-9**: comunicação um-para-muitos
 
 Essa abordagem de comunicação de um para muitos usa eventos para implementar transações de negócios que abrangem vários serviços, garantindo a consistência eventual entre os serviços. Uma transação de eventualidade consiste em uma série de etapas distribuídas. Portanto, quando o microserviço do perfil de usuário recebe o comando UpdateUser, ele atualiza os detalhes do usuário em seu banco de dados e publica o evento userupdate no barramento de evento. O microserviço da cesta e o microserviço de pedidos se inscreveram para receber esse evento e, em resposta, atualize suas informações de comprador em seus respectivos bancos de dados.
 
 > [!NOTE]
 > O barramento de evento eShopOnContainers, implementado usando RabbitMQ, destina-se a ser usado apenas como uma prova de conceito. Para sistemas de produção, as implementações alternativas de barramento de evento devem ser consideradas.
 
-Para obter informações sobre a implementação do barramento de [evento, consulte microservices do .net: Arquitetura para aplicativos .NET em contêineres](https://aka.ms/microservicesebook).
+Para obter informações sobre a implementação do barramento de evento, consulte [microservices do .net: arquitetura para aplicativos .net em contêineres](https://aka.ms/microservicesebook).
 
 ## <a name="summary"></a>Resumo
 

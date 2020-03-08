@@ -8,17 +8,17 @@ author: davidortinau
 ms.author: daortin
 ms.date: 02/16/2018
 ms.openlocfilehash: 965ed4e802c05f8450192c0fec17fe31e464c779
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73028690"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78916627"
 ---
 # <a name="debug-on-a-wear-device"></a>Depurar em um dispositivo Wear
 
 _Este artigo explica como depurar um aplicativo de desgaste do Xamarin. Android em um dispositivo de desgaste._
 
-## <a name="overview"></a>Visão Geral
+## <a name="overview"></a>Visão geral
 
 Se você tiver um dispositivo de desgaste do Android, como um SmartWatch de desgaste do Android, poderá executar o aplicativo no dispositivo em vez de usar um emulador. (Se você ainda não estiver familiarizado com o processo de implantação e execução de aplicativos de desgaste do Android, consulte [Olá, desgaste](~/android/wear/get-started/hello-wear.md).)
 

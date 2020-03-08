@@ -8,17 +8,17 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2019
 ms.openlocfilehash: 986045a4be352da0e439de87fdc70e2958b48d36
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75489993"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78910694"
 ---
 # <a name="xamarinforms-tabbedpage"></a>TabbedPage Xamarin. Forms
 
 [![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-tabbedpagewithnavigationpage)
 
-A [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) do Xamarin.Forms consiste em uma lista de guias e uma área do detalhe maior, com cada guia carregando conteúdo na área do detalhe. As capturas de tela a seguir mostram uma `TabbedPage` no iOS e no Android:
+O [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) do Xamarin.Forms consiste em uma lista de guias e uma área de detalhes maior, com cada guia carregando conteúdo na área de detalhes. As capturas de tela a seguir mostram uma `TabbedPage` no iOS e no Android:
 
 [![Captura de tela de um TabbedPage contendo três guias, no iOS e no Android](tabbed-page-images/tabbedpage-today.png "TabbedPage com três guias")](tabbed-page-images/tabbedpage-today-large.png#lightbox "TabbedPage com três guias")
 
@@ -34,7 +34,7 @@ No Android, a lista de guias é exibida na parte superior da tela, e a área de 
 
 Na Plataforma Universal do Windows (UWP), a lista de guias é exibida na parte superior da tela e a área de detalhes está abaixo. Cada guia consiste em um título. No entanto, os ícones podem ser adicionados a cada guia com uma plataforma específica. Para obter mais informações, consulte [ícones de TabbedPage no Windows](~/xamarin-forms/platform/windows/tabbedpage-icons.md).
 
-## <a name="create-a-tabbedpage"></a>Criar uma TabbedPage
+## <a name="create-a-tabbedpage"></a>Criar um TabbedPage
 
 Duas abordagens podem ser usadas para criar uma [`TabbedPage`](xref:Xamarin.Forms.TabbedPage):
 

@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 01/13/2020
 ms.openlocfilehash: a73123b89cba932f2e2cb907645f6fe858cf6176
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
-ms.translationtype: HT
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76725228"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78914457"
 ---
 # <a name="xamarinforms-control-templates"></a>Modelos de controle do Xamarin.Forms
 
@@ -296,7 +296,7 @@ O seguinte exemplo de XAML mostra um estilo *implícito* que consome o `CardView
 </ContentPage>
 ```
 
-Neste exemplo, o [`Style`](xref:Xamarin.Forms.Style) *implícito* é aplicado automaticamente a cada objeto `CardView` e define a propriedade [`ControlTemplate`](xref:Xamarin.Forms.TemplatedView.ControlTemplate) de cada `CardView` para `CardViewControlTemplate`.
+Neste exemplo, o[ `Style`implícito](xref:Xamarin.Forms.Style) é aplicado automaticamente a cada objeto `CardView` e define a propriedade [`ControlTemplate`](xref:Xamarin.Forms.TemplatedView.ControlTemplate) de cada `CardView` para `CardViewControlTemplate`.
 
 Para saber mais sobre páginas, veja [Estilos do Xamarin.Forms](~/xamarin-forms/user-interface/styles/index.md).
 
@@ -494,7 +494,7 @@ No runtime, quando `TealTemplate` é aplicado à página, o conteúdo da página
 
 ## <a name="get-a-named-element-from-a-template"></a>Obter um elemento nomeado de um modelo
 
-Elementos nomeados dentro de um modelo de controle podem ser recuperados do controle modelo personalizado ou da página modelo. Isso pode ser obtido com o método `GetTemplateChild`, que retorna o elemento nomeado na árvore visual [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) instanciada, se encontrado. Caso contrário, retornará `null`.
+Elementos nomeados dentro de um modelo de controle podem ser recuperados do controle modelo personalizado ou da página modelo. Isso pode ser obtido com o método `GetTemplateChild`, que retorna o elemento nomeado na árvore visual [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) instanciada, se encontrado. Caso contrário, ele retornará `null`.
 
 Depois que um modelo de controle foi instanciado, o método `OnApplyTemplate` do modelo é chamado. O método `GetTemplateChild`, portanto, deve ser chamado de uma substituição de `OnApplyTemplate` no controle modelo ou na página modelo.
 

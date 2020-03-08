@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
 ms.openlocfilehash: de5728710a408b8e0c7c68dc89c7e6484cbcc3ce
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "70760160"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78915316"
 ---
 # <a name="validation-in-enterprise-apps"></a>Validação em aplicativos empresariais
 
@@ -24,7 +24,7 @@ No contexto do padrão Model-View-ViewModel (MVVM), um modelo de exibição ou m
 
 **Figura 6-1**: classes de validação no aplicativo móvel eShopOnContainers
 
-As propriedades do modelo de exibição que exigem validação são do tipo `ValidatableObject<T>` e cada instância de `ValidatableObject<T>` tem regras de validação adicionadas à sua propriedade `Validations`. A validação é invocada do modelo de exibição chamando o método `Validate` da instância `ValidatableObject<T>`, que recupera as regras de validação e as executa na propriedade `ValidatableObject<T>` `Value`. Todos os erros de validação são colocados na propriedade `Errors` da instância `ValidatableObject<T>`, e a propriedade `IsValid` da instância `ValidatableObject<T>` é atualizada para indicar se a validação foi bem-sucedida ou falhou.
+As propriedades do modelo de exibição que exigem validação são do tipo `ValidatableObject<T>`e cada instância de `ValidatableObject<T>` tem regras de validação adicionadas à sua propriedade `Validations`. A validação é invocada do modelo de exibição chamando o método `Validate` da instância `ValidatableObject<T>`, que recupera as regras de validação e as executa na propriedade `ValidatableObject<T>` `Value`. Todos os erros de validação são colocados na propriedade `Errors` da instância `ValidatableObject<T>`, e a propriedade `IsValid` da instância `ValidatableObject<T>` é atualizada para indicar se a validação foi bem-sucedida ou falhou.
 
 A notificação de alteração de propriedade é fornecida pela classe `ExtendedBindableObject` e, portanto, um controle de [`Entry`](xref:Xamarin.Forms.Entry) pode ser associado à propriedade `IsValid` da instância `ValidatableObject<T>` na classe do modelo de exibição para ser notificado de se os dados inseridos são válidos ou não.
 
@@ -424,7 +424,7 @@ Cada [`Label`](xref:Xamarin.Forms.Label) é associado à propriedade `Errors` do
 
 O aplicativo móvel eShopOnContainers executa a validação síncrona do lado do cliente das propriedades do modelo de exibição e notifica o usuário sobre quaisquer erros de validação, destacando o controle que contém os dados inválidos e exibindo as mensagens de erro que informam ao usuário Por que os dados são inválidos.
 
-As propriedades do modelo de exibição que exigem validação são do tipo `ValidatableObject<T>` e cada instância de `ValidatableObject<T>` tem regras de validação adicionadas à sua propriedade `Validations`. A validação é invocada do modelo de exibição chamando o método `Validate` da instância `ValidatableObject<T>`, que recupera as regras de validação e as executa na propriedade `ValidatableObject<T>` `Value`. Todos os erros de validação são colocados na propriedade `Errors` do `ValidatableObject<T>`instance, e a propriedade `IsValid` da instância `ValidatableObject<T>` é atualizada para indicar se a validação foi bem-sucedida ou falhou.
+As propriedades do modelo de exibição que exigem validação são do tipo `ValidatableObject<T>`e cada instância de `ValidatableObject<T>` tem regras de validação adicionadas à sua propriedade `Validations`. A validação é invocada do modelo de exibição chamando o método `Validate` da instância `ValidatableObject<T>`, que recupera as regras de validação e as executa na propriedade `ValidatableObject<T>` `Value`. Todos os erros de validação são colocados na propriedade `Errors` da instância `ValidatableObject<T>`, e a propriedade `IsValid` da instância `ValidatableObject<T>` é atualizada para indicar se a validação foi bem-sucedida ou falhou.
 
 ## <a name="related-links"></a>Links relacionados
 

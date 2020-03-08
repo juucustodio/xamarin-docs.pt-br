@@ -1,5 +1,5 @@
 ---
-title: Requisitos de sistema
+title: Requisitos do Sistema
 description: Este documento lista os requisitos de sistema para compilar aplicativos com o Xamarin em computadores Mac e Windows. Também contém links para instruções de instalação.
 ms.prod: xamarin
 ms.assetid: dd344d57-18e2-42a5-8c15-3f5be4123c72
@@ -7,11 +7,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 10/16/2019
 ms.openlocfilehash: c4eaebc8d5f184b1108815c37e992fa97e67aa8f
-ms.sourcegitcommit: a3b7e016fb25584dbf57bae89b64a9f98031e7c9
-ms.translationtype: HT
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2020
-ms.locfileid: "76550014"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78914173"
 ---
 # <a name="system-requirements"></a>Requisitos do sistema
 

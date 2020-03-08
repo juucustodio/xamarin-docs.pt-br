@@ -9,11 +9,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 02/19/2016
 ms.openlocfilehash: aaf2086fd8128d68baa401ab646b31bcbc279545
-ms.sourcegitcommit: efbc69acf4ea484d8815311b058114379c9db8a2
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73842976"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78916477"
 ---
 # <a name="xamarinforms-app-class"></a>Classe App do Xamarin.Forms
 

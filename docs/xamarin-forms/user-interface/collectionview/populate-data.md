@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 12/11/2019
 ms.openlocfilehash: 9442f7878d9290946fabb7bfc5dee77a828228c7
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75488161"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78913405"
 ---
 # <a name="xamarinforms-collectionview-data"></a>Dados CollectionView do Xamarin. Forms
 
@@ -99,7 +99,7 @@ collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
 Neste exemplo, os dados da propriedade [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) são associados à propriedade `Monkeys` do ViewModel conectado.
 
 > [!NOTE]
-> Associações compiladas podem ser habilitadas para melhorar o desempenho de vinculação de dados em aplicativos Xamarin. Forms. Para saber mais, confira [Associações compiladas](~/xamarin-forms/app-fundamentals/data-binding/compiled-bindings.md).
+> Associações compiladas podem ser habilitadas para melhorar o desempenho de vinculação de dados em aplicativos Xamarin. Forms. Para obter mais informações, confira [Associações compiladas do Xamarin.Forms](~/xamarin-forms/app-fundamentals/data-binding/compiled-bindings.md).
 
 Para obter mais informações sobre associação de dados, confira [Associação de Dados do Xamarin.Forms](~/xamarin-forms/app-fundamentals/data-binding/index.md).
 
@@ -330,7 +330,7 @@ o `SwipeView` dá suporte a quatro direções de toque diferentes, com a direç�
 
 Para obter mais informações sobre o controle de `SwipeView`, consulte [Xamarin. Forms SwipeView](~/xamarin-forms/user-interface/swipeview.md).
 
-## <a name="pull-to-refresh"></a>Puxar para atualizar
+## <a name="pull-to-refresh"></a>Efetuar pull para atualizar
 
 o [`CollectionView`](xref:Xamarin.Forms.CollectionView) dá suporte à funcionalidade de pull para atualizar por meio do `RefreshView`, que permite que os dados sejam exibidos para serem atualizados ao puxar a lista de itens. O `RefreshView` é um controle de contêiner que fornece a funcionalidade de pull para atualizar para seu filho, desde que o filho ofereça suporte a conteúdo rolável. Portanto, o pull para a atualização é implementado para um `CollectionView` definindo-o como o filho de um `RefreshView`:
 
@@ -424,6 +424,6 @@ void OnCollectionViewRemainingItemsThresholdReached(object sender, EventArgs e)
 - [CollectionView (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
 - [RefreshView Xamarin. Forms](~/xamarin-forms/user-interface/refreshview.md)
 - [SwipeView Xamarin. Forms](~/xamarin-forms/user-interface/swipeview.md)
-- [Associação de dados do Xamarin. Forms](~/xamarin-forms/app-fundamentals/data-binding/index.md)
+- [Associação de dados do Xamarin.Forms](~/xamarin-forms/app-fundamentals/data-binding/index.md)
 - [Modelos de dados do Xamarin. Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)
 - [Criar um DataTemplateSelector Xamarin. Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md)

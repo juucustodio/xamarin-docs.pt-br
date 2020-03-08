@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
 ms.openlocfilehash: 2f5d04b49658abe9d366e264d8f1a659732a2c33
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73028484"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78917549"
 ---
 # <a name="using-testflight-to-distribute-xamarinios-apps"></a>Usando TestFlight para distribuir aplicativos Xamarin.iOS
 
@@ -93,7 +93,7 @@ Primeiro, compile o [distribuível final](~/ios/deploy-test/app-distribution/app
 
 <!-- markdownlint-disable MD001 -->
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
 ### <a name="create-an-archive"></a>Criar um arquivo morto
 
@@ -120,10 +120,10 @@ Primeiro, compile o [distribuível final](~/ios/deploy-test/app-distribution/app
 
  Consulte a seção [Enviando seu aplicativo para a Apple](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md) para saber mais sobre essas etapas.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 ### <a name="building-your-final-distributable"></a>Compilando seu distribuível final
- Uma vez que o plug-in Xamarin para Visual Studio não dá suporte a arquivamento de aplicativos Xamarin.iOS para publicação na App Store, há duas opções para publicar um aplicativo iOS do Visual Studio. Elas são:
+ Uma vez que o plug-in Xamarin para Visual Studio não dá suporte a arquivamento de aplicativos Xamarin.iOS para publicação na App Store, há duas opções para publicar um aplicativo iOS do Visual Studio. Estes são:
 
 1. Carregar um IPA criado por meio do comando de Compilar IPA Adhoc.
 1. Carregar um pacote `.app` compactado.

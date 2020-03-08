@@ -1,5 +1,5 @@
 ---
-title: '{1&gt;Dicas de Solução de Problemas&lt;1}'
+title: Dicas de solução de problemas
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 56137ACA-4811-B312-6860-E16D0FA123F7
@@ -8,13 +8,13 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/15/2018
 ms.openlocfilehash: 6d83afa47c459633506736b2497a82c444352c90
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75488927"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78912530"
 ---
-# <a name="troubleshooting-tips"></a>{1&gt;Dicas de Solução de Problemas&lt;1}
+# <a name="troubleshooting-tips"></a>Dicas de solução de problemas
 
 ## <a name="getting-diagnostic-information"></a>Obtendo informações de diagnóstico
 
@@ -515,7 +515,7 @@ using (var groupData = new JavaList<IDictionary<string, object>> ()) {
 
 ## <a name="unexpected-nullreferenceexceptions"></a>NullReferenceExceptions inesperadas
 
-Ocasionalmente o [logdedepuraçãodoAndroid](~/android/deploy-test/debugging/android-debug-log.md) mencionaráNullReferenceExceptionsque &ldquo;nãopodemacontecer,&rdquo; ouqueserãoprovenientesdocódigodetempodeexecuçãodomonoparaAndroidlogoantesdoaplicativosetornarem :
+Ocasionalmente, o [log de depuração do Android](~/android/deploy-test/debugging/android-debug-log.md) mencionará NullReferenceExceptions que &ldquo;não pode acontecer,&rdquo; ou venha do código de tempo de execução do mono para Android logo antes do aplicativo se tornarem inativos:
 
 ```shell
 E/mono(15202): Unhandled Exception: System.NullReferenceException: Object reference not set to an instance of an object

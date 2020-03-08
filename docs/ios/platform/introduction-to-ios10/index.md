@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/29/2017
 ms.openlocfilehash: ce262faf2d79e6a2cc969df582446fdc2ec29bde
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73032221"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78910863"
 ---
 # <a name="introduction-to-ios-10"></a>Introdução ao iOS 10
 
@@ -52,7 +52,7 @@ Além disso, as extensões de aplicativo de teclado de terceiros têm os seguint
 - A nova propriedade `DocumentInputMode` da classe `UITextDocumentProxy` pode determinar o idioma de entrada de um documento e permitir que a extensão do teclado se alinhe com esse idioma.
 - O novo método `HandleInputModeList` permite que a extensão do teclado exiba o menu do seletor de teclado do sistema em resposta à tecla do globo que está sendo tocado.
 
-Para obter mais informações, consulte nossa [introdução às extensões](~/ios/platform/extensions.md), [integração de aplicativos de mensagens](~/ios/platform/message-app-integration/index.md), [introdução a sugestões proativas](~/ios/platform/search/proactive-suggestions.md), [introdução ao SiriKit](~/ios/platform/sirikit/index.md), [introdução às notificações de usuário](~/ios/platform/user-notifications/index.md) e à Apple [ Guia de programação de extensão de aplicativo](https://developer.apple.com/library/prerelease/content/documentation/General/Conceptual/ExtensibilityPG/index.html#//apple_ref/doc/uid/TP40014214).
+Para obter mais informações, consulte nossa [introdução às extensões](~/ios/platform/extensions.md), [integração de aplicativos de mensagens](~/ios/platform/message-app-integration/index.md), [introdução a sugestões proativas](~/ios/platform/search/proactive-suggestions.md), [introdução ao SiriKit](~/ios/platform/sirikit/index.md), [introdução às notificações de usuário](~/ios/platform/user-notifications/index.md) e [Guia de programação de extensão de aplicativo](https://developer.apple.com/library/prerelease/content/documentation/General/Conceptual/ExtensibilityPG/index.html#//apple_ref/doc/uid/TP40014214)da Apple.
 
 ## <a name="app-search-enhancements"></a>Aperfeiçoamentos na pesquisa de aplicativo
 
@@ -168,7 +168,7 @@ Para saber mais, consulte nossa [introdução ao guia de SiriKit](~/ios/platform
 
 o iOS 10 inclui um novo Speech API que permite ao aplicativo dar suporte ao reconhecimento de fala contínuo e transcrever a fala (a partir de fluxos de áudio dinâmicos ou gravados) em texto.
 
-Como o reconhecimento de fala requer a transmissão e o armazenamento temporário de dados nos servidores da Apple, o aplicativo _deve_ solicitar a permissão do usuário para executar o reconhecimento, incluindo a chave de `NSSpeechRecognitionUsageDescription` em seu arquivo de `Info.plist` e chamar o `SFSpeechRecognizer.RequestAutorization` forma.
+Como o reconhecimento de fala requer a transmissão e o armazenamento temporário de dados nos servidores da Apple, o aplicativo _deve_ solicitar a permissão do usuário para executar o reconhecimento, incluindo a chave de `NSSpeechRecognitionUsageDescription` em seu arquivo de `Info.plist` e chamar o método `SFSpeechRecognizer.RequestAutorization`.
 
 Para saber mais, consulte nossa [introdução ao guia de reconhecimento de fala](~/ios/platform/speech.md) .
 

@@ -6,11 +6,11 @@ author: jamesmontemagno
 ms.author: jamont
 ms.date: 03/13/2019
 ms.openlocfilehash: 2ee4683bce02e95c52235afa823be21b89863208
-ms.sourcegitcommit: 8ecfa339d0f3e7687977bfe4fc96448942690183
-ms.translationtype: HT
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67558670"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78910813"
 ---
 # <a name="xamarinessentials-geolocation"></a>Xamarin.Essentials: Geolocalização
 
@@ -22,9 +22,9 @@ A classe **Geolocation** fornece APIs para recuperar as coordenadas atuais de ge
 
 Para acessar a funcionalidade de **Geolocalização**, a seguinte configuração específica da plataforma é necessária:
 
-# <a name="androidtabandroid"></a>[Android](#tab/android)
+# <a name="android"></a>[Android](#tab/android)
 
-As permissões Coarse Location e Fine Location são necessárias e devem ser configuradas no projeto do Android. Além disso, se o seu aplicativo for destinado ao Android 5.0 (API nível 21) ou superior, você deverá declarar que ele usa os recursos de hardware no arquivo de manifesto. Isso pode ser usado das seguintes maneiras:
+As permissões Coarse Location e Fine Location são necessárias e devem ser configuradas no projeto do Android. Além disso, se o seu aplicativo for destinado ao Android 5.0 (API nível 21) ou superior, você deverá declarar que ele usa os recursos de hardware no arquivo de manifesto. Ela pode ser usado das seguintes maneiras:
 
 Abra o arquivo **AssemblyInfo.cs** na pasta **Propriedades** e adicione:
 
@@ -50,7 +50,7 @@ Abra o arquivo **AndroidManifest.xml** na pasta **Propriedades** e adicione o se
 
 Ou clique com o botão direito no projeto do Android e abra as propriedades do projeto. Em **Manifesto do Android**, localize a área **Permissões necessárias:** e marque as permissões **ACCESS_COARSE_LOCATION** e **ACCESS_FINE_LOCATION**. Isso atualizará automaticamente o arquivo **AndroidManifest.xml**.
 
-# <a name="iostabios"></a>[iOS](#tab/ios)
+# <a name="ios"></a>[iOS](#tab/ios)
 
 O **Info.plist** do seu aplicativo deve conter a chave `NSLocationWhenInUseUsageDescription` para acessar o local do dispositivo.
 
@@ -63,7 +63,7 @@ Ou edite manualmente o arquivo, adicione o seguinte e atualize a justificativa:
 <string>Fill in a reason why your app needs access to location.</string>
 ```
 
-# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
+# <a name="uwp"></a>[UWP](#tab/uwp)
 
 Você deve definir a permissão `Location` para o aplicativo. Isso pode ser feito abrindo o **Package.appxmanifest**, selecionando a guia **Funcionalidades** e marcando **Local**.
 
@@ -208,7 +208,7 @@ if (location != null)
 
 As classes [`Location`](xref:Xamarin.Essentials.Location) e [`LocationExtensions`](xref:Xamarin.Essentials.LocationExtensions) definem métodos `CalculateDistance` que permitem o cálculo da distância entre duas localizações geográficas. Essa distância calculada não considera estradas ou outros caminhos e é simplesmente a distância mais curta entre os dois pontos ao longo da superfície da Terra, também conhecido como _ortodromia_ ou, coloquialmente, a distância "em linha reta".
 
-Veja um exemplo:
+Aqui está um exemplo:
 
 ```csharp
 Location boston = new Location(42.358056, -71.063611);

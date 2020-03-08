@@ -8,17 +8,17 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/01/2018
 ms.openlocfilehash: c7718ef7a02365e9ca09f7491804cbadfa0c9a41
-ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "78292597"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78914247"
 ---
 # <a name="viewpager"></a>ViewPager
 
 _ViewPager é um Gerenciador de layout que permite implementar a navegação Gestural. A navegação Gestural permite que o usuário passe o dedo para a esquerda e para a direita para percorrer as páginas de dados. Este guia explica como implementar a navegação Gestural com o ViewPager, com e sem fragmentos. Ele também descreve como adicionar indicadores de página usando PagerTitleStrip e PagerTabStrip._
 
-## <a name="overview"></a>Visão geral
+## <a name="overview"></a>Visão Geral
 
 Um cenário comum no desenvolvimento de aplicativos é a necessidade de fornecer aos usuários navegação Gestural entre exibições irmãos. Nessa abordagem, o usuário passa o dedo para a esquerda ou direita para acessar páginas de conteúdo (por exemplo, em um assistente de instalação ou em uma apresentação de slides). Você pode criar essas exibições de passe do dedo usando o widget `ViewPager`, disponível na [biblioteca de suporte do Android v4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/). O `ViewPager` é um widget de layout composto por várias exibições filhas em que cada exibição filho constitui uma página no layout: 
 
@@ -44,7 +44,7 @@ Para usar `ViewPager` em seu projeto de aplicativo, você deve instalar o pacote
 Três componentes são usados para implementar a navegação Gestural com `ViewPager`:
 
 - ViewPager
-- Personalizado
+- Adaptador
 - Indicador de pager
 
 Cada um desses componentes é resumido abaixo.
@@ -55,7 +55,7 @@ Cada um desses componentes é resumido abaixo.
 
 [![closeup do aplicativo TreePager exibindo uma transição entre exibições](images/02-transition-sml.png)](images/02-transition.png#lightbox)
 
-### <a name="adapter"></a>Personalizado
+### <a name="adapter"></a>Adaptador
 
 `ViewPager` efetua pull de seus dados de um *adaptador*. O trabalho do adaptador é criar os `View`s exibidos pelo `ViewPager`, fornecendo-os conforme necessário. O diagrama a seguir ilustra esse conceito &ndash; o adaptador cria e popula `View`s e os fornece ao `ViewPager`. Como o `ViewPager` detecta os gestos de toque do usuário, ele solicita que o adaptador forneça o `View` apropriado a ser exibido: 
 

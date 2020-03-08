@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
 ms.openlocfilehash: 3c754acc3502d7aa2c47264e734187ffe060c029
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73030843"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78915785"
 ---
 # <a name="working-with-tvos-navigation-and-focus-in-xamarin"></a>Trabalhando com navegação e foco do tvOS no Xamarin
 
@@ -48,7 +48,7 @@ A Apple sugere o seguinte em mente ao criar a navegação para seu aplicativo tv
 - **Fornecer navegação para trás por meio do botão de menu** – para criar uma experiência fácil e familiar, permita que os usuários naveguem para trás usando o botão de **menu** do Siri Remote. Pressionar o botão de **menu** sempre deve retornar à tela anterior ou retornar ao menu principal do aplicativo. No nível superior do aplicativo, pressionar o botão de **menu** deve retornar para a tela inicial da Apple TV.
 - **Normalmente, evite exibir um botão voltar** – porque pressionar o botão de **menu** no Siri remoto navega para trás pela pilha de tela, evite exibir um controle extra que duplique esse comportamento. Uma exceção a essa regra é para telas de compra ou telas com ações destrutivas (como excluir conteúdo) em que um botão de **cancelamento** também deve ser exibido.
 - **Mostre grandes coleções em uma única tela, em vez de muitos** – o Siri Remote foi projetado para fazer a movimentação por uma grande coleção de conteúdo de forma rápida e fácil usando gestos. Se seu aplicativo funciona com uma grande coleção de itens focados, considere mantê-los em uma única tela, em vez de dividi-los em várias telas que exigem mais navegação na parte do usuário.
-- **Use controles padrão para navegação** novamente, para criar uma experiência do usuário fácil e familiar, sempre que possível, use controles internos de `UIKit` como controles de página, barras de tabulação, controles segmentados, exibições de tabela, exibições de coleção e exibições divididas para seu navegação do aplicativo. Como o usuário já está familiarizado com esses elementos, eles poderão, de forma intuitiva, navegar no seu aplicativo.
+- **Use controles padrão para navegação** novamente, para criar uma experiência do usuário fácil e familiar, sempre que possível, use controles internos de `UIKit`, como controles de página, barras de guias, controles segmentados, exibições de tabela, exibições de coleção e exibições divididas para a navegação do aplicativo. Como o usuário já está familiarizado com esses elementos, eles poderão, de forma intuitiva, navegar no seu aplicativo.
 - **Favorecer a navegação horizontal de conteúdo** -por causa da natureza da Apple TV, passar da esquerda para a direita na Siri remota é mais natural do que para cima e para baixo. Considere essa opção ao criar layouts de conteúdo para seu aplicativo.
 
 <a name="Focus-and-Selection" />
