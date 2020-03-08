@@ -9,11 +9,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 11/04/2019
 ms.openlocfilehash: 726ebd55b38460ee966113e4ee487327cd42b03d
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "78291554"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78912841"
 ---
 # <a name="styling-xamarinforms-apps-using-cascading-style-sheets-css"></a>Aplicar estilo a aplicativos xamarin. Forms usando folhas de estilo em cascata (CSS)
 
@@ -319,7 +319,7 @@ Esse seletor identifica todos os elementos [`Image`](xref:Xamarin.Forms.Image) q
 
 Os seguintes seletores CSS são suportados pelo xamarin. Forms:
 
-|Seletor|Exemplo|DESCRIÇÃO|
+|Seletor|{1&gt;Exemplo&lt;1}|Descrição|
 |---|---|---|
 |`.class`|`.header`|Seleciona todos os elementos com a propriedade `StyleClass` contendo ' header '. Observe que este seletor é diferencia maiusculas de minúsculas.|
 |`#id`|`#email`|Seleciona todos os elementos com `StyleId` definido como `email`. Se `StyleId` não estiver definido, fallback para `x:Name`. Ao usar o XAML, `x:Name` é preferível sobre `StyleId`. Observe que este seletor é diferencia maiusculas de minúsculas.|
@@ -350,7 +350,7 @@ Os seguintes seletores são atualmente suportados:
 
 As propriedades CSS a seguir têm suporte do Xamarin. Forms (na coluna **valores, os** tipos são em _itálico_, enquanto os literais de cadeia de caracteres são `gray`):
 
-|Propriedade|Aplica-se a|Valores|Exemplo|
+|Propriedade|Aplica-se a|Valores|{1&gt;Exemplo&lt;1}|
 |---|---|---|---|
 |`align-content`|`FlexLayout`| `stretch` \| `center` \| `start` \| `end` \| `spacebetween` \| `spacearound` \| `spaceevenly` \| `flex-start` \| `flex-end` \| `space-between` \| `space-around` \| `initial` |`align-content: space-between;`|
 |`align-items`|`FlexLayout`| `stretch` \| `center` \| `start` \| `end` \| `flex-start` \| `flex-end` \| `initial` |`align-items: flex-start;`|
@@ -405,7 +405,7 @@ As propriedades CSS a seguir têm suporte do Xamarin. Forms (na coluna **valores
 
 As propriedades a seguir têm suportadas no momento:
 
-- `all: initial`.
+- `all: initial`
 - Propriedades de layout (caixa ou grade).
 - Propriedades abreviadas, como `font`e `border`.
 
@@ -417,7 +417,7 @@ O direcionamento de elementos de `Span` tem um problema conhecido que impede que
 
 As seguintes propriedades CSS específicas do Xamarin. Forms também têm suporte (na coluna **valores** , os tipos são em _itálico_, enquanto os literais de cadeia de caracteres são `gray`):
 
-|Propriedade|Aplica-se a|Valores|Exemplo|
+|Propriedade|Aplica-se a|Valores|{1&gt;Exemplo&lt;1}|
 |---|---|---|---|
 |`-xf-bar-background-color`|`NavigationPage`, `TabbedPage`|\| de _cores_ `initial` |`-xf-bar-background-color: teal;`|
 |`-xf-bar-text-color`|`NavigationPage`, `TabbedPage`|\| de _cores_ `initial` |`-xf-bar-text-color: gray`|
@@ -438,7 +438,7 @@ As seguintes propriedades CSS específicas do Xamarin. Forms também têm suport
 
 As seguintes propriedades de CSS específicas do shell do Xamarin. Forms também têm suporte (na coluna **valores, os** tipos são em _itálico_, enquanto os literais de cadeia de caracteres são `gray`):
 
-|Propriedade|Aplica-se a|Valores|Exemplo|
+|Propriedade|Aplica-se a|Valores|{1&gt;Exemplo&lt;1}|
 |---|---|---|---|
 |`-xf-flyout-background`|`Shell`|\| de _cores_ `initial` |`-xf-flyout-background: red;`|
 |`-xf-shell-background`|`Element`|\| de _cores_ `initial` |`-xf-shell-background: green;`|
@@ -452,7 +452,7 @@ As seguintes propriedades de CSS específicas do shell do Xamarin. Forms também
 |`-xf-shell-title`|`Element`|\| de _cores_ `initial` |`-xf-shell-title: teal;`|
 |`-xf-shell-unselected`|`Element`|\| de _cores_ `initial` |`-xf-shell-unselected: limegreen;`|
 
-### <a name="color"></a>Color
+### <a name="color"></a>Cor
 
 Há suporte para os seguintes valores de `color`:
 
@@ -493,7 +493,7 @@ O significado exato de cada valor de `namedsize` é dependente da plataforma e d
 
 **Vídeo de CSS do Xamarin. Forms 3,0**
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [MonkeyAppCSS (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-monkeyappcss)
 - [Dicionários de recurso](~/xamarin-forms/xaml/resource-dictionaries.md)

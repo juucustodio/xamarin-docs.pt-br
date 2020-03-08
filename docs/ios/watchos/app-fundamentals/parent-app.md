@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017
 ms.openlocfilehash: 3e11b163d16be9711bf09102e3ab8604d98299d7
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75487757"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78910865"
 ---
 # <a name="working-with-the-watchos-parent-application-in-xamarin"></a>Trabalhando com o aplicativo pai no Xamarin watchOS
 
@@ -20,7 +20,7 @@ Há diferentes maneiras de se comunicar entre o aplicativo de inspeção e o apl
 
 - Observe que os aplicativos podem [executar código](#run-code) no aplicativo pai no iPhone.
 
-- Assista extensões can [compartilhar um local de armazenamento](#shared-storage) com o aplicativo de iPhone pai.
+- As extensões de inspeção podem [compartilhar um local de armazenamento](#shared-storage) com o aplicativo pai do iPhone.
 
 - Use a entrega para passar dados de uma notificação para o aplicativo Watch, enviando o usuário para um controlador de interface específico no aplicativo.
 
@@ -35,11 +35,11 @@ Esses dois exemplos demonstram como usar `WCSession` para executar código e env
 
 ## <a name="shared-storage"></a>Armazenamento compartilhado
 
-Se você configurar uma [grupo de aplicativos](~/ios/watchos/app-fundamentals/app-groups.md) e extensões do iOS 8 (incluindo extensões de inspeção) podem compartilhar dados com o aplicativo pai.
+Se você configurar um [grupo de aplicativos](~/ios/watchos/app-fundamentals/app-groups.md) , as extensões do IOS 8 (incluindo extensões de inspeção) poderão compartilhar dados com o aplicativo pai.
 
 ### <a name="nsuserdefaults"></a>NSUserDefaults
 
-O código a seguir pode ser escrito na extensão de aplicativo de inspeção e o aplicativo de iPhone pai para que eles podem fazer referência a um conjunto comum de `NSUserDefaults`:
+O código a seguir pode ser escrito na extensão do aplicativo de inspeção e no aplicativo pai do iPhone para que eles possam fazer referência a um conjunto comum de `NSUserDefaults`:
 
 ```csharp
 NSUserDefaults shared = new NSUserDefaults(
@@ -70,11 +70,11 @@ Console.WriteLine ("agcpath: " + appGroupContainerPath);
 // use the path to create and update files
 ```
 
-Observação: se o caminho estiver `null` , em seguida, verifique a [configuração do grupo de aplicativo](~/ios/watchos/app-fundamentals/app-groups.md) para garantir que os perfis de provisionamento foram configurados corretamente e tem sido baixado/instalado no computador de desenvolvimento.
+Observação: se o caminho for `null`, verifique a [configuração do grupo de aplicativos](~/ios/watchos/app-fundamentals/app-groups.md) para garantir que os perfis de provisionamento tenham sido configurados corretamente e tenham sido baixados/instalados no computador de desenvolvimento.
 
-Para obter mais informações, consulte o [recursos do grupo de aplicativo](~/ios/deploy-test/provisioning/capabilities/app-groups-capabilities.md) documentação.
+Para obter mais informações, consulte a documentação de [recursos do grupo de aplicativos](~/ios/deploy-test/provisioning/capabilities/app-groups-capabilities.md) .
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [Referência de WKInterfaceController da Apple](https://developer.apple.com/library/prerelease/ios/documentation/WatchKit/Reference/WKInterfaceController_class/index.html#//apple_ref/occ/clm/WKInterfaceController/openParentApplication:reply:)
-- [Apple compartilhamento de dados com seu aplicativo contém](https://developer.apple.com/library/ios/documentation/General/Conceptual/ExtensibilityPG/ExtensionScenarios.html)
+- [Referência do WKInterfaceController da Apple](https://developer.apple.com/library/prerelease/ios/documentation/WatchKit/Reference/WKInterfaceController_class/index.html#//apple_ref/occ/clm/WKInterfaceController/openParentApplication:reply:)
+- [Dados de compartilhamento da Apple com seu aplicativo recipiente](https://developer.apple.com/library/ios/documentation/General/Conceptual/ExtensibilityPG/ExtensionScenarios.html)

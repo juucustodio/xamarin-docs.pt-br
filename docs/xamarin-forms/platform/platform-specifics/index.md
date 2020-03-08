@@ -1,5 +1,5 @@
 ---
-title: Especificidades da plataforma
+title: Elementos específicos à plataforma
 description: Especificidades da plataforma permitem que você consumir funcionalidade só está disponível em uma plataforma específica, sem implementar renderizadores personalizados ou efeitos. Este artigo explica como consumir e criar especificações específicas da plataforma.
 ms.prod: xamarin
 ms.assetid: 4729DB9C-8800-4E29-9D66-3BE13C5F8C94
@@ -8,31 +8,31 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 10/01/2018
 ms.openlocfilehash: f6190b9c0d29d57d6d509bdff25e2ce3572e3a3c
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68646844"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78910549"
 ---
-# <a name="platform-specifics"></a>Especificidades da plataforma
+# <a name="platform-specifics"></a>Elementos específicos à plataforma
 
-[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
-_Especificidades da plataforma permitem que você consumir funcionalidade só está disponível em uma plataforma específica, sem implementar renderizadores personalizados ou efeitos._
+_As especificações de plataforma permitem que você consuma a funcionalidade que só está disponível em uma plataforma específica, sem implementar renderizadores ou efeitos personalizados._
 
 O processo para o consumo de um específico da plataforma por meio de XAML, ou por meio do código API fluente é da seguinte maneira:
 
-1. Adicionar um `xmlns` declaração ou `using` diretiva para o [ `Xamarin.Forms.PlatformConfiguration` ](xref:Xamarin.Forms.PlatformConfiguration) namespace.
-1. Adicionar um `xmlns` declaração ou `using` diretiva para o namespace que contém a funcionalidade específica da plataforma:
-    1. No iOS, essa é a [ `Xamarin.Forms.PlatformConfiguration.iOSSpecific` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) namespace.
-    1. No Android, essa é a [ `Xamarin.Forms.PlatformConfiguration.AndroidSpecific` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific) namespace. Para Android AppCompat, esse é o [ `Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat) namespace.
-    1. Na plataforma Universal do Windows, isso é o [ `Xamarin.Forms.PlatformConfiguration.WindowsSpecific` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific) namespace.
-1. Aplicar o específicos da plataforma de XAML ou de código com o `On<T>` API fluente. O valor de `T` pode ser o [ `iOS` ](xref:Xamarin.Forms.PlatformConfiguration.iOS), [ `Android` ](xref:Xamarin.Forms.PlatformConfiguration.Android), ou [ `Windows` ](xref:Xamarin.Forms.PlatformConfiguration.Windows) tipos do [ `Xamarin.Forms.PlatformConfiguration` ](xref:Xamarin.Forms.PlatformConfiguration) namespace.
+1. Adicione uma declaração de `xmlns` ou `using` diretiva para o namespace [`Xamarin.Forms.PlatformConfiguration`](xref:Xamarin.Forms.PlatformConfiguration) .
+1. Adicione uma declaração de `xmlns` ou `using` diretiva para o namespace que contém a funcionalidade específica da plataforma:
+    1. No iOS, esse é o namespace [`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) .
+    1. No Android, esse é o namespace [`Xamarin.Forms.PlatformConfiguration.AndroidSpecific`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific) . Para o Android AppCompat, esse é o namespace [`Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat) .
+    1. Na Plataforma Universal do Windows, esse é o namespace [`Xamarin.Forms.PlatformConfiguration.WindowsSpecific`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific) .
+1. Aplique a plataforma específica do XAML ou do código com a API Fluent `On<T>`. O valor de `T` pode ser os tipos [`iOS`](xref:Xamarin.Forms.PlatformConfiguration.iOS), [`Android`](xref:Xamarin.Forms.PlatformConfiguration.Android)ou [`Windows`](xref:Xamarin.Forms.PlatformConfiguration.Windows) do namespace [`Xamarin.Forms.PlatformConfiguration`](xref:Xamarin.Forms.PlatformConfiguration) .
 
 > [!NOTE]
 > Observe que a tentativa de consumir um específico da plataforma em uma plataforma em que ele não está disponível não resultará em erro. Em vez disso, o código será executado sem o específicos da plataforma que está sendo aplicado.
 
-Especificidades da plataforma consumidos por meio de `On<T>` retorno da API de código fluente [ `IPlatformElementConfiguration` ](xref:Xamarin.Forms.IPlatformElementConfiguration`2) objetos. Isso permite que várias especificações de plataforma a ser invocado no mesmo objeto com método em cascata.
+Especificações de plataforma consumidas por meio do `On<T>` API de código Fluent [`IPlatformElementConfiguration`](xref:Xamarin.Forms.IPlatformElementConfiguration`2) objetos de retorno. Isso permite que várias especificações de plataforma a ser invocado no mesmo objeto com método em cascata.
 
 Para obter mais informações sobre as especificações de plataforma fornecidas pelo Xamarin. Forms, consulte [especificações da plataforma iOS](~/xamarin-forms/platform/ios/index.md), [especificações da plataforma Android](~/xamarin-forms/platform/android/index.md)e [especificações da plataforma Windows](~/xamarin-forms/platform/windows/index.md).
 
@@ -46,24 +46,24 @@ O processo para a criação de uma plataforma específica é da seguinte maneira
 1. Crie uma classe específica da plataforma que irá expor o efeito. Para obter mais informações, consulte [criando uma classe específica da plataforma](#creating-a-platform-specific-class).
 1. Na classe específica da plataforma, implemente uma propriedade anexada para permitir que o específicos da plataforma ser consumida por meio de XAML. Para obter mais informações, consulte [adicionando uma propriedade anexada](#adding-an-attached-property).
 1. Na classe específica da plataforma, implemente métodos de extensão para permitir que o específicos da plataforma ser consumida por meio de um API fluente de código. Para obter mais informações, consulte [adicionando métodos de extensão](#adding-extension-methods).
-1. Modifique a implementação em vigor para que o efeito é aplicado somente se a plataforma específica foi invocada na mesma plataforma como o efeito. Para obter mais informações, consulte [criando o efeito de](#creating-the-effect).
+1. Modifique a implementação em vigor para que o efeito é aplicado somente se a plataforma específica foi invocada na mesma plataforma como o efeito. Para obter mais informações, consulte [criando o efeito](#creating-the-effect).
 
 O resultado de expor um efeito como uma plataforma específica é que o efeito pode ser consumido com mais facilidade por meio de XAML e um API fluente de código.
 
 > [!NOTE]
 > É previu que fornecedores usará essa técnica para criar seus próprios-especificidades da plataforma, para facilitar o consumo por usuários. Embora os usuários podem optar por criar seus próprios especificidades da plataforma, deve-se observar que ela requer mais código que criar e consumir um efeito.
 
-O [aplicativo de exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shadowplatformspecific) demonstra `Shadow` uma plataforma específica que adiciona uma sombra ao texto exibido por um [`Label`](xref:Xamarin.Forms.Label) controle:
+O [aplicativo de exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shadowplatformspecific) demonstra um `Shadow` específico da plataforma que adiciona uma sombra ao texto exibido por um controle de [`Label`](xref:Xamarin.Forms.Label) :
 
-![](images/screenshots.png "Específico da plataforma de sombra")
+![](images/screenshots.png "Shadow Platform-Specific")
 
-O [aplicativo de exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shadowplatformspecific) implementa `Shadow` a plataforma específica em cada plataforma, para facilitar a compreensão. No entanto, além de cada implementação do efeito específico da plataforma, a implementação da classe sombra é praticamente idêntica para cada plataforma. Portanto, este guia concentra-se na implementação da classe de sombra e efeito associado em uma única plataforma.
+O [aplicativo de exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shadowplatformspecific) implementa a `Shadow` específica da plataforma em cada plataforma, para facilitar a compreensão. No entanto, além de cada implementação do efeito específico da plataforma, a implementação da classe sombra é praticamente idêntica para cada plataforma. Portanto, este guia concentra-se na implementação da classe de sombra e efeito associado em uma única plataforma.
 
-Para obter mais informações sobre os efeitos, consulte [personalizar controles com efeitos](~/xamarin-forms/app-fundamentals/effects/index.md).
+Para obter mais informações sobre efeitos, consulte [Personalizando controles com efeitos](~/xamarin-forms/app-fundamentals/effects/index.md).
 
 ### <a name="creating-a-platform-specific-class"></a>Criando uma classe específica da plataforma
 
-Uma plataforma específica é criada como um `public static` classe:
+Uma plataforma específica é criada como uma classe de `public static`:
 
 ```csharp
 namespace MyCompany.Forms.PlatformConfiguration.iOS
@@ -75,11 +75,11 @@ namespace MyCompany.Forms.PlatformConfiguration.iOS
 }
 ```
 
-As seções a seguir discutem a implementação do `Shadow` efeito específico da plataforma e associado.
+As seções a seguir discutem a implementação do `Shadow` efeito associado e específico da plataforma.
 
 #### <a name="adding-an-attached-property"></a>Adicionando uma propriedade anexada
 
-Uma propriedade anexada deve ser adicionada para o `Shadow` específicos da plataforma para permitir o consumo por meio de XAML:
+Uma propriedade anexada deve ser adicionada à `Shadow` específica da plataforma para permitir o consumo por meio de XAML:
 
 ```csharp
 namespace MyCompany.Forms.PlatformConfiguration.iOS
@@ -152,16 +152,16 @@ namespace MyCompany.Forms.PlatformConfiguration.iOS
 }
 ```
 
-O `IsShadowed` propriedade anexada é usada para adicionar o `MyCompany.LabelShadowEffect` efeito e removê-lo do controle que o `Shadow` classe está anexado ao. Isso anexado propriedade registra o `OnIsShadowedPropertyChanged` método que será executado quando o valor da propriedade é alterado. Por sua vez, esse método chama o `AttachEffect` ou `DetachEffect` método para adicionar ou remover o efeito com base no valor da `IsShadowed` propriedade anexada. O efeito é adicionado ou removido do controle, modificando o controle [ `Effects` ](xref:Xamarin.Forms.Element.Effects) coleção.
+A propriedade anexada `IsShadowed` é usada para adicionar o efeito de `MyCompany.LabelShadowEffect` ao e removê-lo do, o controle ao qual a classe `Shadow` está anexada. Essa propriedade anexada registra o método `OnIsShadowedPropertyChanged` que será executado quando o valor da propriedade for alterado. Por sua vez, esse método chama o `AttachEffect` ou o método `DetachEffect` para adicionar ou remover o efeito com base no valor da propriedade `IsShadowed` anexada. O efeito é adicionado ou removido do controle modificando a coleção de [`Effects`](xref:Xamarin.Forms.Element.Effects) do controle.
 
 > [!NOTE]
 > Observe que o efeito é resolvido, especificando um valor que é uma concatenação do nome do grupo de resolução e identificador exclusivo que é especificado na implementação do efeito. Para obter mais informações, consulte [criando um efeito](~/xamarin-forms/app-fundamentals/effects/creating.md).
 
-Para obter mais informações sobre propriedades anexadas, consulte [propriedades anexadas](~/xamarin-forms/xaml/attached-properties.md).
+Para obter mais informações sobre as propriedades anexadas, confira [Propriedades anexadas](~/xamarin-forms/xaml/attached-properties.md).
 
 #### <a name="adding-extension-methods"></a>Adicionando métodos de extensão
 
-Métodos de extensão devem ser adicionados para o `Shadow` específicos da plataforma para permitir o consumo por meio de um API fluente de código:
+Os métodos de extensão devem ser adicionados à `Shadow` específica da plataforma para permitir o consumo por meio de uma API de código fluente:
 
 ```csharp
 namespace MyCompany.Forms.PlatformConfiguration.iOS
@@ -189,11 +189,11 @@ namespace MyCompany.Forms.PlatformConfiguration.iOS
 }
 ```
 
-O `IsShadowed` e `SetIsShadowed` chamar get de métodos de extensão e definir acessadores para o `IsShadowed` anexado a propriedade, respectivamente. Cada método de extensão funciona com o `IPlatformElementConfiguration<iOS, FormsElement>` tipo, que especifica que a plataforma específica pode ser invocada sob [ `Label` ](xref:Xamarin.Forms.Label) instâncias do iOS.
+Os métodos de extensão `IsShadowed` e `SetIsShadowed` invocam os acessadores get e Set para a propriedade `IsShadowed` anexada, respectivamente. Cada método de extensão opera no tipo de `IPlatformElementConfiguration<iOS, FormsElement>`, que especifica que a plataforma específica pode ser invocada em instâncias de [`Label`](xref:Xamarin.Forms.Label) do Ios.
 
 #### <a name="creating-the-effect"></a>Criando o efeito
 
-O `Shadow` específico da plataforma adiciona a `MyCompany.LabelShadowEffect` para um [ `Label` ](xref:Xamarin.Forms.Label)e a remove. O seguinte exemplo de código mostra o `LabelShadowEffect` implementação para o projeto do iOS:
+A `Shadow` específica da plataforma adiciona a `MyCompany.LabelShadowEffect` a uma [`Label`](xref:Xamarin.Forms.Label)e a remove. O exemplo de código a seguir mostra a implementação de `LabelShadowEffect` para o projeto do iOS:
 
 ```csharp
 [assembly: ResolutionGroupName("MyCompany")]
@@ -246,15 +246,15 @@ namespace ShadowPlatformSpecific.iOS
 }
 ```
 
-O `UpdateShadow` método define `Control.Layer` as propriedades para criar a sombra, desde que o `IsShadowed` propriedade anexada é definida como `true`e desde que o `Shadow` específicos da plataforma foi invocado na mesma plataforma que o Efeito é implementado para. Essa verificação é realizada com o `OnThisPlatform` método.
+O método `UpdateShadow` define `Control.Layer` Propriedades para criar a sombra, desde que a propriedade `IsShadowed` anexada esteja definida como `true`e desde que a `Shadow` específica da plataforma tenha sido invocada na mesma plataforma para a qual o efeito é implementado. Essa verificação é executada com o método `OnThisPlatform`.
 
-Se o `Shadow.IsShadowed` anexado alterações de valor de propriedade em tempo de execução, o efeito precisa responder, removendo a sombra. Portanto, uma versão de substituição de `OnElementPropertyChanged` método é usado para responder à alteração de propriedade associável chamando o `UpdateShadow` método.
+Se o valor da propriedade anexada `Shadow.IsShadowed` for alterado em tempo de execução, o efeito precisará responder removendo a sombra. Portanto, uma versão substituída do método `OnElementPropertyChanged` é usada para responder à alteração da propriedade vinculável chamando o método `UpdateShadow`.
 
-Para obter mais informações sobre como criar um efeito, consulte [criando um efeito](~/xamarin-forms/app-fundamentals/effects/creating.md) e [passando os parâmetros de efeito como propriedades anexadas](~/xamarin-forms/app-fundamentals/effects/passing-parameters/attached-properties.md).
+Para obter mais informações sobre como criar um efeito, consulte [criando um efeito](~/xamarin-forms/app-fundamentals/effects/creating.md) e [passando parâmetros de efeito como propriedades anexadas](~/xamarin-forms/app-fundamentals/effects/passing-parameters/attached-properties.md).
 
 ### <a name="consuming-the-platform-specific"></a>Consumindo a plataforma específica
 
-O `Shadow` específico da plataforma é consumido em XAML, definindo o `Shadow.IsShadowed` anexado à propriedade um `boolean` valor:
+A `Shadow` específica da plataforma é consumida em XAML definindo a propriedade `Shadow.IsShadowed` anexada como um valor `boolean`:
 
 ```xaml
 <ContentPage xmlns:ios="clr-namespace:MyCompany.Forms.PlatformConfiguration.iOS" ...>
@@ -264,7 +264,7 @@ O `Shadow` específico da plataforma é consumido em XAML, definindo o `Shadow.I
 </ContentPage>
 ```
 
-Como alternativa, ele pode ser consumido de C# usando a API fluente:
+Como alternativa, ele pode ser consumido de c# usando a API fluente:
 
 ```csharp
 using Xamarin.Forms.PlatformConfiguration;
@@ -277,11 +277,11 @@ shadowLabel.On<iOS>().SetIsShadowed(true);
 
 ## <a name="related-links"></a>Links relacionados
 
-- [PlatformSpecifics (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
-- [ShadowPlatformSpecific (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shadowplatformspecific)
+- [PlatformSpecifics (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+- [ShadowPlatformSpecific (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shadowplatformspecific)
 - [Especificações da plataforma iOS](~/xamarin-forms/platform/ios/index.md)
 - [Especificações da plataforma Android](~/xamarin-forms/platform/android/index.md)
 - [Especificações da plataforma Windows](~/xamarin-forms/platform/windows/index.md)
-- [Personalizar controles com efeitos](~/xamarin-forms/app-fundamentals/effects/index.md)
+- [Personalizando controles com efeitos](~/xamarin-forms/app-fundamentals/effects/index.md)
 - [Propriedades anexadas](~/xamarin-forms/xaml/attached-properties.md)
 - [API PlatformConfiguration](xref:Xamarin.Forms.PlatformConfiguration)

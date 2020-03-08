@@ -8,15 +8,15 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/15/2017
 ms.openlocfilehash: 54fcc3bb683f6ca4515d807da5c3345cf71a2df3
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
-ms.translationtype: HT
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76725235"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78917745"
 ---
 # <a name="apple-pay-capabilities-in-xamarinios"></a>Recursos Apple Pay no Xamarin.iOS
 
-_A adição de funcionalidades a um aplicativo geralmente requer uma configuração de provisionamento adicional. Este guia explica a configuração necessária para as funcionalidades do Apple Pay._
+_A adição de recursos a um aplicativo geralmente requer configuração de provisionamento adicional. Este guia explica a configuração necessária para os recursos de Apple Pay._
 
 O Apple Pay permite que os usuários paguem produtos físicos usando o dispositivo iOS. Esta seção descreve como criar todos os componentes necessários para o Apple Pay na Central de Desenvolvedores da Apple.
 
@@ -148,12 +148,12 @@ Para obter mais informações sobre o uso do Apple Pay, consulte o guia a seguir
 
 * [Introdução ao Apple Pay](~/ios/platform/apple-pay.md)
 
-## <a name="next-steps"></a>Próximas etapas
+## <a name="next-steps"></a>{1&gt;{2&gt;Próximas etapas&lt;2}&lt;1}
 
 A lista a seguir descreve as etapas adicionais que precisam ser executadas:
 
 * Use o namespace do framework em seu aplicativo.
 * Adicione os direitos necessários para seu aplicativo. As informações sobre os direitos necessários e como adicioná-los estão detalhadas no guia [Trabalhando com direitos](~/ios/deploy-test/provisioning/entitlements.md).
-* Na **Assinatura de Pacote do iOS** do Aplicativo, verifique se a opção **Direitos Personalizados** está definida como **Entitlements.plist**. Esta _não_ é a configuração padrão para builds de Depuração e do Simulador do iOS.
+* Na **Assinatura de Pacote do iOS** do Aplicativo, verifique se a opção **Direitos Personalizados** está definida como **Entitlements.plist**. Isso _não_ a configuração padrão para compilações de depuração e do IOS Simulator.
 
 Se você encontrar problemas com serviços de aplicativos, consulte a seção [Solução de problemas](~/ios/deploy-test/provisioning/capabilities/index.md) do guia principal.

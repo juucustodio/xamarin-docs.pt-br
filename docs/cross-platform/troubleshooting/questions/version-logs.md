@@ -8,17 +8,17 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/29/2017
 ms.openlocfilehash: 68de58f499788d803aa0af6c68f20e2265b1d6b5
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73013169"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78912306"
 ---
 # <a name="where-can-i-find-my-version-information-and-logs"></a>Onde posso encontrar informações e logs da minha versão?
 
 ## <a name="outline"></a>Contorno
 
-- [Informações de versão](#version-information)
+- [Informações da versão](#version-information)
   - Informações de versão do Windows
   - Informações de versão do Mac
   - Android SDK Tools, plataforma-ferramentas, compilação-ferramentas
@@ -50,7 +50,7 @@ Geralmente, é melhor enviar de volta todas as informações dos botões **copia
 
 **Ajuda > sobre > Mostrar detalhes > copiar informações [botão]**
 
-#### <a name="visual-studio"></a>Visual Studio
+#### <a name="visual-studio"></a>{1&gt;Visual Studio&lt;1}
 
 **Ajuda > sobre Microsoft Visual Studio > copiar informações [botão]**
 
@@ -68,7 +68,7 @@ Abra o Gerenciador de SDK do Android e faça uma captura de tela da seção de *
 
 **Ferramentas > Abrir Gerenciador de SDK do Android**
 
-#### <a name="visual-studio"></a>Visual Studio
+#### <a name="visual-studio"></a>{1&gt;Visual Studio&lt;1}
 
 **Ferramentas > Android > Abrir Gerenciador de SDK do Android...**
 
@@ -156,17 +156,17 @@ Esses são os logs do instalador do `XamarinInstaller.dmg`.
 
 (Observe que esse item de menu aparecerá somente depois que o aplicativo tiver sido iniciado.)
 
-### <a name="visual-studio"></a>Visual Studio
+### <a name="visual-studio"></a>{1&gt;Visual Studio&lt;1}
 
 **Exibir > saída > Mostrar saída de: Depurar**
 
-### <a name="a-idadb-logcat-nameadb-logcat-android-adbhttpsdeveloperandroidcomtoolshelpadbhtml-logcat-logs"></a><a id="adb-logcat" name="adb-logcat" />Android [`adb`](https://developer.android.com/tools/help/adb.html) logs do logcat
+### <a name="a-idadb-logcat-nameadb-logcat-android-adb-logcat-logs"></a><a id="adb-logcat" name="adb-logcat" />Android [`adb`](https://developer.android.com/tools/help/adb.html) logs do logcat
 
-Depois de executar o comando `adb`, anexe novamente o arquivo **android_logcat. txt** da área de trabalho. Essas instruções pressupõem que você tenha apenas um dispositivo anexado.
+Depois de executar o comando `adb`, anexe novamente o arquivo **android_logcat. txt** de sua área de trabalho. Essas instruções pressupõem que você tenha apenas um dispositivo anexado.
 
 Consulte também a página [log de depuração do Android](~/android/deploy-test/debugging/android-debug-log.md) .
 
-#### <a name="visual-studio"></a>Visual Studio
+#### <a name="visual-studio"></a>{1&gt;Visual Studio&lt;1}
 
 1. **Ferramentas > Android > Iniciar Prompt de comando do ADB do Android**
 2. Limpar o log: `adb logcat -c`
