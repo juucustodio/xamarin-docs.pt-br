@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 05/06/2019
 ms.openlocfilehash: a4cc237ef738edeccf66f1a91a010e4831c1c72f
-ms.sourcegitcommit: 10b4d7952d78f20f753372c53af6feb16918555c
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "78291555"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78918423"
 ---
 # <a name="xamarinforms-collectionview-selection"></a>Seleção de CollectionView do Xamarin. Forms
 
@@ -30,7 +30,7 @@ Todas essas propriedades são apoiadas por objetos [`BindableProperty`](xref:Xam
 
 Por padrão, [`CollectionView`](xref:Xamarin.Forms.CollectionView) seleção está desabilitada. No entanto, esse comportamento pode ser alterado definindo o valor da propriedade [`SelectionMode`](xref:Xamarin.Forms.SelectableItemsView.SelectionMode) como um dos membros da enumeração [`SelectionMode`](xref:Xamarin.Forms.SelectionMode) :
 
-- `None` – indica que os itens não podem ser selecionados. Esse é o valor padrão.
+- `None` – indica que os itens não podem ser selecionados. Este é o valor padrão.
 - `Single` – indica que um único item pode ser selecionado, com o item selecionado sendo realçado.
 - `Multiple` – indica que vários itens podem ser selecionados, com os itens selecionados sendo realçados.
 

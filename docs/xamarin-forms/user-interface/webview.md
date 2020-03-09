@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 11/04/2019
 ms.openlocfilehash: 26fbe6af639c67a94408605ba456bb3a100d2355
-ms.sourcegitcommit: 3d39bafe4c56b15cbb695b1f7f02b926e1033f58
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78291601"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78912644"
 ---
 # <a name="xamarinforms-webview"></a>WebView do xamarin. Forms
 
@@ -34,7 +34,7 @@ o `WebView` dá suporte aos seguintes tipos de conteúdo:
 > [!NOTE]
 > `WebView` no Windows não oferece suporte a Silverlight, flash ou qualquer controle ActiveX, mesmo que eles tenham suporte do Internet Explorer nessa plataforma.
 
-### <a name="websites"></a>Sites
+### <a name="websites"></a>Websites
 
 Para exibir um site da Internet, defina a propriedade [`Source`](xref:Xamarin.Forms.WebViewSource) do `WebView`como uma URL de cadeia de caracteres:
 
@@ -326,7 +326,7 @@ public partial class InAppBrowserXaml : ContentPage
 }
 ```
 
-É isso!
+É só isso!
 
 ![Botões de navegação do WebView](webview-images/in-app-browser.png)
 
@@ -427,7 +427,7 @@ Para que `WebView` funcionem, você deve verificar se as permissões estão defi
 - O **Android** &ndash; requer `INTERNET` somente ao exibir o conteúdo da rede. Conteúdo local não requer nenhuma permissão especial.
 - o **iOS** &ndash; não requer permissões especiais.
 
-## <a name="layout"></a>Layout
+## <a name="layout"></a>{1&gt;Layout&lt;1}
 
 Ao contrário da maioria das outras exibições do Xamarin. Forms, `WebView` requer que `HeightRequest` e `WidthRequest` sejam especificados quando contidos em StackLayout ou RelativeLayout. Se você não especificar essas propriedades, o `WebView` não será renderizado.
 
@@ -563,7 +563,7 @@ Você pode ver a janela com o novo sinalizador em vigor nesta captura de tela:
 
 Agora, quando você cria uma nova compilação (versão) e a envia para a loja de aplicativos, não deve haver nenhum aviso sobre a API preterida.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Trabalhando com o WebView (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithwebview)
 - [WebView (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-webview)

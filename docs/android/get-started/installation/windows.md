@@ -8,17 +8,17 @@ author: davidortinau
 ms.author: daortin
 ms.date: 06/22/2018
 ms.openlocfilehash: 0caea0c31275a7459286c143cc92ca90731dd93b
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73020694"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78912448"
 ---
 # <a name="windows-installation"></a>Instalação do Windows
 
 _Este guia descreve as etapas para instalar o Xamarin.Android para Visual Studio no Windows e explica como configurar o Xamarin.Android para compilar seu primeiro aplicativo Xamarin.Android._
 
-## <a name="overview"></a>Visão Geral
+## <a name="overview"></a>Visão geral
 
 Como o Xamarin agora está incluído em todas as edições do Visual Studio sem custos adicionais e sem precisar de uma licença separada, você pode usar o instalador do Visual Studio para baixar e instalar ferramentas Xamarin.Android.
 (As etapas de instalação manual e licenciamento necessárias para versões anteriores do Xamarin. Android não são mais necessárias.) Neste guia, você aprenderá o seguinte:
@@ -71,9 +71,9 @@ O [Android Emulator](https://developer.android.com/studio/run/emulator) pode ser
 
 Emular um dispositivo Android em um computador envolve os seguintes componentes:
 
-- **Google Android Emulator** &ndash; Trata-se de um emulador com base em [QEMU](https://www.qemu.org/) que cria um dispositivo virtualizado em execução na estação de trabalho do desenvolvedor.
-- **Uma imagem de emulador** &ndash; A _imagem de emulador_ é um modelo ou uma especificação do hardware e do sistema operacional que deve ser virtualizado. Por exemplo, uma imagem de emulador deve identificar os requisitos de hardware para um Nexus 5X executando o Android 7.0 com o Google Play Services instalado. Outra imagem de emulador pode especificar um tablet de 10 polegadas executando o Android 6.0.
-- **AVD (Dispositivo Virtual Android)** &ndash; Um _Dispositivo Virtual Android_ é um dispositivo Android emulado criado com base em uma imagem de emulador. Ao executar e testar aplicativos Android, o Xamarin.Android iniciará o Android Emulator, iniciando um AVD específico, instalará o APK e, em seguida, executará o aplicativo.
+- O **Google Android Emulator** &ndash; este é um emulador baseado em [QEMU](https://www.qemu.org/) que cria um dispositivo virtualizado em execução na estação de trabalho do desenvolvedor.
+- **Uma imagem de emulador** &ndash; uma _imagem de emulador_ é um modelo ou uma especificação do hardware e do sistema operacional que deve ser virtualizado. Por exemplo, uma imagem de emulador deve identificar os requisitos de hardware para um Nexus 5X executando o Android 7.0 com o Google Play Services instalado. Outra imagem de emulador pode especificar um tablet de 10 polegadas executando o Android 6.0.
+- O **AVD (dispositivo virtual Android)** &ndash; um _dispositivo virtual Android_ é um dispositivo Android emulado criado a partir de uma imagem de emulador. Ao executar e testar aplicativos Android, o Xamarin.Android iniciará o Android Emulator, iniciando um AVD específico, instalará o APK e, em seguida, executará o aplicativo.
 
 É possível obter uma melhoria significativa de desempenho ao desenvolver em computadores baseados em x86 usando imagens especiais de emulador otimizadas para a arquitetura x86 e uma das duas tecnologias de virtualização abaixo:
 
@@ -109,7 +109,7 @@ Neste artigo, você aprendeu a configurar e instalar a plataforma Xamarin.Androi
 
 A próxima etapa é dar uma olhada nos tutoriais [Olá, Android](~/android/get-started/hello-android/index.md) para aprender a criar um aplicativo Xamarin.Android funcional.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Baixar o Visual Studio](https://visualstudio.microsoft.com/vs/)
 - [Instalar as Ferramentas do Visual Studio para Xamarin](~/get-started/installation/windows.md)

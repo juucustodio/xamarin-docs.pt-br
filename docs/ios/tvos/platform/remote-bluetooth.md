@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
 ms.openlocfilehash: c0338fce694d61dc19484c56dbc00bb854d0d0d7
-ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "78292387"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78915780"
 ---
 # <a name="siri-remote-and-bluetooth-controllers-for-tvos-in-xamarin"></a>Controladores remotos e Bluetooth Siri para tvOS no Xamarin
 
@@ -40,10 +40,10 @@ O Siri Remote tem os seguintes recursos e usos esperados em seu aplicativo tvOS:
 |---|---|---|
 |**Superfície de toque**<br />Passe o dedo para navegar, pressione para selecionar e manter os menus contextuais.|**Tocar/passar o dedo**<br />Navegação de interface do usuário entre itens com foco.<br /><br />**Clique**<br />Ativa o item selecionado (em foco).|**Tocar/passar o dedo**<br />Depende do design do jogo e pode ser usado como um teclado D tocando nas bordas.<br /><br />**Clique**<br />Execute a função de botão principal.|
 |**Menu**<br />Pressione para retornar à tela ou ao menu anterior.|Retorna à tela anterior e sai para a tela inicial da Apple TV na tela principal do aplicativo.|Pausar e retomar o jogo, retorna à tela anterior e sai para a tela inicial da Apple TV na tela principal do aplicativo.|
-|**Siri/pesquisa**<br />Em países com siri, pressione e segure para controle de voz, em todos os outros países, exibe a tela de pesquisa.|n/d|n/d|
+|**Siri/pesquisa**<br />Em países com siri, pressione e segure para controle de voz, em todos os outros países, exibe a tela de pesquisa.|N/D|N/D|
 |**Reproduzir/pausar**<br />Reproduzir e pausar mídia ou fornecer uma função secundária em aplicativos.|Inicia a reprodução de mídia e pausa/retoma a reprodução.|Executa a função de botão secundário ou ignora o vídeo introdutório (se existir).|
-|**Página Inicial**<br />Pressione para retornar à tela inicial, clique duas vezes para exibir aplicativos em execução, pressione e mantenha pressionado o dispositivo de suspensão.|n/d|n/d|
-|**Volume**<br />Controla o volume de equipamento de áudio/vídeo anexado.|n/d|n/d|
+|**Início**<br />Pressione para retornar à tela inicial, clique duas vezes para exibir aplicativos em execução, pressione e mantenha pressionado o dispositivo de suspensão.|N/D|N/D|
+|**Volume**<br />Controla o volume de equipamento de áudio/vídeo anexado.|N/D|N/D|
 
 <a name="Touch-Surface-Gestures" />
 
@@ -51,7 +51,7 @@ O Siri Remote tem os seguintes recursos e usos esperados em seu aplicativo tvOS:
 
 A superfície de toque do Siri remoto é capaz de detectar uma variedade de gestos de dedo único que você pode responder em seu aplicativo Xamarin. tvOS:
 
-|Passar o dedo|Clique em|Toque|
+|Passar o dedo|Clique|Toque|
 |---|---|---|
 |![](remote-bluetooth-images/Gesture01.png)|![](remote-bluetooth-images/Gesture02.png)|![](remote-bluetooth-images/Gesture03.png)|
 |Move a seleção (foco) entre os elementos da interface do usuário na tela (para cima, para baixo à esquerda, à direita). O passe do dedo pode ser usado para rolar por listas grandes de conteúdo rapidamente usando o inércia.|Ativa o item selecionado (em foco) ou atua como o botão principal em um jogo. Clicar e segurar pode ativar menus contextuais ou funções secundárias.|Tocar levemente na superfície de toque nas bordas atua como botões direcionais em um teclado D, movendo o foco para cima, para baixo, para a esquerda ou para a direita, dependendo da área tocada. Dependendo do aplicativo, o pode ser usado para revelar controles ocultos.|
@@ -286,14 +286,14 @@ Um controlador de jogo tem os seguintes recursos e usos esperados em seu aplicat
 |**A**|Ativa o item selecionado (em foco).|Executa a função de botão primário e confirma as ações da caixa de diálogo.|
 |**B**|Retorna à tela anterior ou sai para a tela inicial se estiver na tela principal do aplicativo.|Executa a função de botão secundário ou retorna à tela anterior.|
 |**X**|Inicia a reprodução de mídia ou pausa/retoma a reprodução.|Depende do jogo.|
-|**S**|n/d|Depende do jogo.|
+|**Y**|N/D|Depende do jogo.|
 |**Menu**|Retorna à tela anterior ou sai para a tela inicial se estiver na tela principal do aplicativo.|Pause/retome o jogo, retorna à tela anterior ou sai para a tela inicial se estiver na tela principal do aplicativo.|
 |**Botão à esquerda**|Navega para a esquerda.|Depende do jogo.|
 |**Gatilho esquerdo**|Navega para a esquerda.|Depende do jogo.|
 |**Botão do ressalto direito**|Navega para a direita.|Depende do jogo.|
 |**Gatilho à direita**|Navega para a direita|Depende do jogo.|
 |**Thumbstick esquerdo**|Navega pelos elementos da interface do usuário (altera o foco).|Depende do jogo.|
-|**Thumbstick à direita**|n/d|Depende do jogo.|
+|**Thumbstick à direita**|N/D|Depende do jogo.|
 
 A Apple fornece as seguintes sugestões para trabalhar com controladores de jogo:
 
@@ -365,7 +365,7 @@ Para obter informações sobre como implementar o suporte ao controlador de jogo
 
 Este artigo abordou o novo Siri Remote que acompanha o Apple TV, gestos de superfície de toque e botões remotos Siri. Em seguida, ele abordou o trabalho com gestos e storyboards, gestos e código e eventos de baixo nível. Por fim, se discutida trabalhando com controladores de jogo.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Amostras do tvOS](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
 - [tvOS](https://developer.apple.com/tvos/)
