@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 11/04/2019
 ms.openlocfilehash: 08fb22627ab6b40c94c17d94321ed0bac60beedd
-ms.sourcegitcommit: 9dd0b076ab4ecdbbd1b029d2e0d67d900e1c4494
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73567888"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78915273"
 ---
 # <a name="dependency-injection"></a>Injeção de dependência
 
@@ -144,7 +144,7 @@ var viewModel = _container.Resolve(viewModelType);
 Neste exemplo, TinyIoC é solicitado a resolver o tipo de modelo de exibição para um modelo de exibição solicitado, e o contêiner também resolverá quaisquer dependências. Ao resolver o tipo de `ProfileViewModel`, as dependências a serem resolvidas são um objeto `ISettingsService` e um objeto `IOrderService`. Como os registros de interface foram usados ao registrar as classes `SettingsService` e `OrderService`, TinyIoC retorna instâncias singleton para as classes `SettingsService` e `OrderService` e passa-as para o construtor da classe `ProfileViewModel`. Para obter mais informações sobre como o aplicativo móvel eShopOnContainers constrói modelos de exibição e os associa a exibições, consulte [criando automaticamente um modelo de exibição com um localizador de modelo de exibição](~/xamarin-forms/enterprise-application-patterns/mvvm.md#automatically_creating_a_view_model_with_a_view_model_locator).
 
 > [!NOTE]
-> Efetuar o registro e a resolução de tipos usando um contêiner tem um custo de desempenho devido ao uso da reflexão pelo contêiner para criar cada tipo, especialmente se as dependências estiverem sendo reconstruídas para cada navegação de página no aplicativo. Se houver muitas dependências ou se elas forem profundas, o custo da criação poderá aumentar significativamente.
+> As ações de registro e resolução de tipos com um contêiner afetam o desempenho devido ao uso de reflexão do contêiner para criar cada tipo, especialmente se as dependências estão sendo reconstruídas para cada navegação de página no aplicativo. Se houver muitas dependências ou se elas forem profundas, o custo da criação poderá aumentar significativamente.
 
 <a name="managing_the_lifetime_of_resolved_objects" />
 
@@ -169,7 +169,7 @@ A injeção de dependência permite o desacoplamento de tipos concretos do códi
 
 O TinyIoC é um contêiner leve que apresenta desempenho superior em plataformas móveis em comparação com a maioria dos contêineres bem conhecidos. Ele facilita a criação de aplicativos menos rígidos e fornece todos os recursos normalmente encontrados em contêineres de injeção de dependência, incluindo métodos para registrar mapeamentos de tipo, resolver objetos, gerenciar tempos de vida de objeto e injetar objetos dependentes em construtores de objetos que ele resolve.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Download do eBook (PDF de 2Mb)](https://aka.ms/xamarinpatternsebook)
 - [eShopOnContainers (GitHub) (exemplo)](https://github.com/dotnet-architecture/eShopOnContainers)

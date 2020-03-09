@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/20/2017
 ms.openlocfilehash: 13891100d3571f9e847243172aa974072f46e7fe
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73001821"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78914748"
 ---
 # <a name="unified-storyboards-in-xamarinios"></a>Storyboards unificados no Xamarin. iOS
 
@@ -112,18 +112,18 @@ Esta seção abordará os tipos típicos de coleções de características que o
 
 Veja a seguir uma coleção de características típica que o desenvolvedor pode ver em um iPhone:
 
-|propriedade|Valor|
+|Propriedade|{1&gt;Valor&lt;1}|
 |--- |--- |
 |`HorizontalSizeClass`|Compactá|
 |`VerticalSizeClass`|Normal|
-|`UserInterfaceIdom`|Telefone|
+|`UserInterfaceIdom`|Phone|
 |`DisplayScale`|2.0|
 
 O conjunto acima representaria uma coleção de características totalmente qualificada, pois ela tem valores para todas as suas propriedades de característica.
 
 Também é possível ter uma coleção de características que não tenha alguns de seus valores (que a Apple se refere como *não especificado*):
 
-|propriedade|Valor|
+|Propriedade|{1&gt;Valor&lt;1}|
 |--- |--- |
 |`HorizontalSizeClass`|Compactá|
 |`VerticalSizeClass`|Não especificado|
@@ -214,9 +214,9 @@ Primeiro, o iOS 8 faz algumas configurações para se preparar para que a transi
 
 o iOS 8 fornece vários retornos de chamada que o desenvolvedor pode usar para participar da alteração de característica, como mostrado na tabela a seguir:
 
-|Fase|Retorno|Descrição|
+|Fase|Callback|Descrição|
 |--- |--- |--- |
-|Configuração|<ul><li>`WillTransitionToTraitCollection`</li><li>`TraitCollectionDidChange`</li></ul>|<ul><li>Esse método é chamado no início de uma alteração de característica antes que uma coleção de características seja definida para o novo valor.</li><li>O método é chamado quando o valor da coleção de características é alterado, mas antes de qualquer animação ocorrer.</li></ul>|
+|Instalação|<ul><li>`WillTransitionToTraitCollection`</li><li>`TraitCollectionDidChange`</li></ul>|<ul><li>Esse método é chamado no início de uma alteração de característica antes que uma coleção de características seja definida para o novo valor.</li><li>O método é chamado quando o valor da coleção de características é alterado, mas antes de qualquer animação ocorrer.</li></ul>|
 |Animação|`WillTransitionToTraitCollection`|O coordenador de transição que é passado para esse método tem uma propriedade `AnimateAlongside` que permite ao desenvolvedor adicionar animações que serão executadas junto com as animações padrão.|
 |Limpar|`WillTransitionToTraitCollection`|Fornece um método para que os desenvolvedores incluam seu próprio código de limpeza depois que a transição ocorre.|
 
@@ -242,7 +242,7 @@ Em um controlador de exibição de divisão, o controlador de exibição primár
 
 ### <a name="showing-view-controllers"></a>Mostrando controladores de exibição
 
-Outra alteração que a Apple fez no iOS 8 é a forma como o desenvolvedor mostra os controladores de exibição. No passado, se o aplicativo tivesse um controlador de exibição de folha (como um controlador de exibição de tabela) e o desenvolvedor mostrasse um diferente (por exemplo, em resposta ao usuário tocando em uma célula), o aplicativo voltaria para a hierarquia do controlador para o O controlador de exibição de navegação e chama o método `PushViewController` em relação a ele para exibir a nova exibição.
+Outra alteração que a Apple fez no iOS 8 é a forma como o desenvolvedor mostra os controladores de exibição. No passado, se o aplicativo tivesse um controlador de exibição de folha (como um controlador de exibição de tabela) e o desenvolvedor mostrasse um diferente (por exemplo, em resposta ao usuário tocando em uma célula), o aplicativo voltaria para a hierarquia do controlador para o controlador de exibição de navegação e chamaria o método `PushViewController` em relação a ele para exibir a nova exibição.
 
 Isso apresentou um acoplamento muito rígido entre o controlador de navegação e o ambiente em que ele estava sendo executado. No iOS 8, a Apple o desacoplado fornecendo dois novos métodos:
 
@@ -253,7 +253,7 @@ Esses métodos funcionam iniciando no controlador de exibição de folha e orien
 
 Os desenvolvedores podem implementar `ShowViewController` e `ShowDetailViewController` em seus próprios controladores de exibição personalizados para obter a mesma funcionalidade automatizada que `UINavigationController` e `UISplitViewController` fornece.
 
-### <a name="how-it-works"></a>Como funciona
+### <a name="how-it-works"></a>Como ele funciona
 
 Nesta seção, vamos dar uma olhada em como esses métodos são realmente implementados no iOS 8. Primeiro, vamos examinar o novo método `GetTargetForAction`:
 
@@ -680,7 +680,7 @@ Para ver uma implementação de storyboards unificados, consulte o `UnifiedStory
 
 O arquivo da tela de inicialização é exibido como uma tela inicial enquanto um aplicativo iOS está sendo iniciado para fornecer comentários ao usuário de que o aplicativo está realmente sendo inicializado. Antes do iOS 8, o desenvolvedor teria que incluir vários ativos de imagem `Default.png` para cada tipo de dispositivo, orientação e resolução de tela em que o aplicativo estaria em execução. Por exemplo, `Default@2x.png`, `Default-Landscape@2x~ipad.png`, `Default-Portrait@2x~ipad.png`, etc.
 
-A fatoração nos novos dispositivos iPhone 6 e iPhone 6 Plus (e o próximo Apple Watch) com todos os dispositivos iPhone e iPad existentes representa uma grande variedade de tamanhos, orientações e resoluções de `Default.png` de imagens da tela de inicialização que devem ser criados e mantidos. Além disso, esses arquivos podem ser muito grandes e "inchar" o pacote de aplicativos de entrega, aumentando a quantidade de tempo necessária para baixar o aplicativo da iTunes App Store (possivelmente mantendo a capacidade de ser entregue em uma rede de celular) e aumentar a quantidade de armazenamento necessária no dispositivo do usuário final.
+A fatoração nos novos dispositivos iPhone 6 e iPhone 6 Plus (e o próximo Apple Watch) com todos os dispositivos iPhone e iPad existentes representa uma grande variedade de tamanhos, orientações e resoluções de `Default.png` de imagem da tela de inicialização que devem ser criados e mantidos. Além disso, esses arquivos podem ser muito grandes e "inchar" o pacote de aplicativos de entrega, aumentando a quantidade de tempo necessária para baixar o aplicativo da iTunes App Store (possivelmente mantendo a capacidade de ser entregue em uma rede de celular) e aumentar a quantidade de armazenamento necessária no dispositivo do usuário final.
 
 Novo no iOS 8, o desenvolvedor pode criar um único arquivo `.xib` atômico no Xcode que usa o layout automático e classes de tamanho para criar uma *tela de inicialização dinâmica* que funcionará para cada dispositivo, resolução e orientação. Isso não apenas reduz a quantidade de trabalho necessária do desenvolvedor para criar e manter todos os ativos de imagem necessários, mas reduz consideravelmente o tamanho do grupo instalado do aplicativo.
 
@@ -757,7 +757,7 @@ Este artigo resumiu rapidamente as classes de tamanho e como elas afetam o layou
 
 Por fim, este artigo abordou os conceitos básicos da criação de storyboards unificados com o Xamarin iOS designer, que funcionará em dispositivos iOS e criará uma tela única de inicialização dinâmica que será exibida como a tela de inicialização em cada dispositivo iOS 8.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Fotos adaptáveis (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-adaptivephotos)
 - [Telas de inicialização dinâmica (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-dynamiclaunchscreen)
