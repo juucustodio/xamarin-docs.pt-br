@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 07/23/2018
 ms.openlocfilehash: 1bb0fae73a1e3647cdc0e3266c7b44ac04fcc1ee
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73020422"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78914215"
 ---
 # <a name="file-storage-and-access-with-xamarinandroid"></a>Armazenamento de arquivos e acesso com Xamarin. Android
 
@@ -64,7 +64,7 @@ Este documento fará referência ao diretório de armazenamento interno como _ar
 
 Para maximizar o compartilhamento de código, os aplicativos Xamarin. Android (ou aplicativos Xamarin. Forms destinados ao Xamarin. Android) devem usar o método [`System.Environment.GetFolderPath()`](xref:System.Environment.GetFolderPath*) . No Xamarin. Android, esse método retornará uma cadeia de caracteres para um diretório que é o mesmo local que `Android.Content.Context.FilesDir`. Esse método usa um enum, `System.Environment.SpecialFolder`, que é usado para identificar um conjunto de constantes enumeradas que representam os caminhos de pastas especiais usadas pelo sistema operacional. Nem todos os valores de `System.Environment.SpecialFolder` serão mapeados para um diretório válido no Xamarin. Android. A tabela a seguir descreve qual caminho pode ser esperado para um determinado valor de `System.Environment.SpecialFolder`:
 
-| System. Environment. SpecialFolder | Caminho  |
+| System.Environment.SpecialFolder | Caminho  |
 |----------------------|---|
 | `ApplicationData` | **/.Config de _armazenamento interno de\__** |
 | `Desktop` | **/Desktop de _armazenamento interno de\__** |

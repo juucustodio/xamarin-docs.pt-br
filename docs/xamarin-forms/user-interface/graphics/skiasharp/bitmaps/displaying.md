@@ -8,23 +8,23 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/17/2018
 ms.openlocfilehash: 9955b68346c74435a3a141c69d02e1bec5856bd3
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70759507"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78916401"
 ---
 # <a name="displaying-skiasharp-bitmaps"></a>Exibição de bitmaps de SkiaSharp
 
-[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
-O assunto de bitmaps de SkiaSharp foi introduzido no artigo  **[Noções básicas de Bitmap no SkiaSharp](../basics/bitmaps.md)** . Esse artigo mostrou três maneiras de bitmaps de carga e de três maneiras de exibir bitmaps. Este artigo examina as técnicas para carregar bitmaps e o uso de se aprofundar a `DrawBitmap` métodos de `SKCanvas`.
+O assunto dos bitmaps SkiaSharp foi introduzido no artigo **[noções básicas de bitmap em SkiaSharp](../basics/bitmaps.md)** . Esse artigo mostrou três maneiras de bitmaps de carga e de três maneiras de exibir bitmaps. Este artigo revisa as técnicas para carregar bitmaps e aprofundar-se no uso dos métodos de `DrawBitmap` de `SKCanvas`.
 
-![Exibindo a amostra](displaying-images/DisplayingSample.png "exibindo o exemplo")
+![Exibindo exemplo](displaying-images/DisplayingSample.png "Exibindo exemplo")
 
-O `DrawBitmapLattice` e `DrawBitmapNinePatch` métodos são discutidos neste artigo  **[segmentada a exibição de bitmaps de SkiaSharp](segmented.md)** .
+Os métodos `DrawBitmapLattice` e `DrawBitmapNinePatch` são discutidos no artigo **[exibição segmentada de bitmaps SkiaSharp](segmented.md)** .
 
-Os exemplos nesta página são obtidos de **[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** aplicativo. Na home page do aplicativo, escolha **SkiaSharp Bitmaps**e, em seguida, vá para o **Bitmaps exibindo** seção.
+Os exemplos nesta página são do aplicativo **[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** . Na home page desse aplicativo, escolha **bitmaps SkiaSharp**e, em seguida, vá para a seção **exibindo bitmaps** .
 
 ## <a name="loading-a-bitmap"></a>Carregar um bitmap
 
@@ -34,23 +34,23 @@ Um bitmap usado por um aplicativo de SkiaSharp geralmente vem de uma das três f
 - De um recurso incorporado no executável
 - Da biblioteca de fotos do usuário
 
-Também é possível que um aplicativo de SkiaSharp criar um novo bitmap e, em seguida, desenhar nele ou definir os bits de bitmap algoritmicamente. Essas técnicas são discutidas nos artigos **[criação e desenho em SkiaSharp Bitmaps](drawing.md)** e **[acessando Pixels do Bitmap de SkiaSharp](pixel-bits.md)** .
+Também é possível que um aplicativo de SkiaSharp criar um novo bitmap e, em seguida, desenhar nele ou definir os bits de bitmap algoritmicamente. Essas técnicas são discutidas nos artigos **[criando e desenhando bitmaps SkiaSharp](drawing.md)** e **[acessando pixels de bitmap SkiaSharp](pixel-bits.md)** .
 
-Nos seguintes três exemplos de código de carregamento de um bitmap, a classe deve para conter um campo do tipo `SKBitmap`:
+Nos três exemplos de código a seguir de carregamento de um bitmap, pressupõe-se que a classe contenha um campo do tipo `SKBitmap`:
 
 ```csharp
 SKBitmap bitmap;
 ```
 
-Como o artigo **[Noções básicas de Bitmap no SkiaSharp](../basics/bitmaps.md)** mencionado, a melhor maneira de carregar um bitmap na Internet é com o [ `HttpClient` ](xref:System.Net.Http.HttpClient) classe. Uma única instância da classe pode ser definida como um campo:
+Como as **[noções básicas de bitmap do artigo no SkiaSharp](../basics/bitmaps.md)** declararam, a melhor maneira de carregar um bitmap pela Internet é com a classe [`HttpClient`](xref:System.Net.Http.HttpClient) . Uma única instância da classe pode ser definida como um campo:
 
 ```csharp
 HttpClient httpClient = new HttpClient();
 ```
 
-Ao usar `HttpClient` com aplicativos iOS e Android, você vai querer definir propriedades do projeto, conforme descrito nos documentos  **[Transport Layer Security (TLS) 1.2](~/cross-platform/app-fundamentals/transport-layer-security.md)** .
+Ao usar o `HttpClient` com aplicativos iOS e Android, você desejará definir as propriedades do projeto conforme descrito nos documentos em **[TLS (segurança da camada de transporte) 1,2](~/cross-platform/app-fundamentals/transport-layer-security.md)** .
 
-O código que usa `HttpClient` geralmente envolve a `await` operador, portanto, ele deve residir em um `async` método:
+O código que usa `HttpClient` geralmente envolve o operador `await`, portanto, ele deve residir em um método `async`:
 
 ```csharp
 try
@@ -71,13 +71,13 @@ catch
 }
 ```
 
-Observe que o `Stream` objeto obtido `GetStreamAsync` é copiado para um `MemoryStream`. Android não permite que o `Stream` de `HttpClient` a serem processados pelo thread principal, exceto em métodos assíncronos. 
+Observe que o objeto `Stream` obtido de `GetStreamAsync` é copiado em um `MemoryStream`. O Android não permite que o `Stream` de `HttpClient` seja processado pelo thread principal, exceto em métodos assíncronos. 
 
-O [`SKBitmap.Decode`](xref:SkiaSharp.SKBitmap.Decode(System.IO.Stream)) faz muito trabalho: O `Stream` objeto passado a ele faz referência a um bloco de memória que contém um bitmap inteiro em um dos formatos de arquivo de bitmap comuns, geralmente JPEG, png ou GIF. O `Decode` método deve determinar o formato e, em seguida, decodificar o arquivo de bitmap em formato de bitmap interno do SkiaSharp.
+O [`SKBitmap.Decode`](xref:SkiaSharp.SKBitmap.Decode(System.IO.Stream)) faz muito trabalho: o objeto `Stream` passado a ele faz referência a um bloco de memória que contém um bitmap inteiro em um dos formatos de arquivo de bitmap comuns, geralmente JPEG, png ou GIF. O método `Decode` deve determinar o formato e, em seguida, decodificar o arquivo de bitmap no próprio formato de bitmap interno do SkiaSharp.
 
-Depois de seu código chama `SKBitmap.Decode`, provavelmente invalidará os `CanvasView` para que o `PaintSurface` manipulador pode exibir o bitmap carregado recentemente.
+Depois que seu código chama `SKBitmap.Decode`, ele provavelmente invalidará o `CanvasView` para que o manipulador de `PaintSurface` possa exibir o bitmap recém carregado.
 
-A segunda maneira de carregar um bitmap é, incluindo o bitmap como um recurso incorporado na biblioteca do .NET Standard referenciada pelos projetos de plataforma individual. Um recurso que ID é transmitida para o [ `GetManifestResourceStream` ](xref:System.Reflection.Assembly.GetManifestResourceStream(System.String)) método. Esta ID de recurso consiste do nome do assembly, o nome da pasta e o nome do arquivo de recurso separado por pontos:
+A segunda maneira de carregar um bitmap é, incluindo o bitmap como um recurso incorporado na biblioteca do .NET Standard referenciada pelos projetos de plataforma individual. Uma ID de recurso é passada para o método [`GetManifestResourceStream`](xref:System.Reflection.Assembly.GetManifestResourceStream(System.String)) . Esta ID de recurso consiste do nome do assembly, o nome da pasta e o nome do arquivo de recurso separado por pontos:
 
 ```csharp
 string resourceID = "assemblyName.folderName.fileName";
@@ -92,7 +92,7 @@ using (Stream stream = assembly.GetManifestResourceStream(resourceID))
 
 Arquivos de bitmap também podem ser armazenados como recursos do projeto de plataforma individual para iOS, Android e Universal Windows Platform (UWP). No entanto, ao carregar esses bitmaps requer código que está localizado no projeto da plataforma.
 
-Uma terceira abordagem para obtenção de um bitmap é da biblioteca de imagens do usuário. O código a seguir usa um serviço de dependência que está incluído na **[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** aplicativo. O **SkiaSharpFormsDemo** inclui o .NET Standard Library a `IPhotoLibrary` interface, enquanto cada um dos projetos de plataforma contém um `PhotoLibrary` classe que implementa essa interface.
+Uma terceira abordagem para obtenção de um bitmap é da biblioteca de imagens do usuário. O código a seguir usa um serviço de dependência que está incluído no aplicativo **[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** . A biblioteca de .NET Standard **SkiaSharpFormsDemo** inclui a interface `IPhotoLibrary`, enquanto cada um dos projetos de plataforma contém uma classe `PhotoLibrary` que implementa essa interface.
 
 ```csharp
 IPhotoicturePicker picturePicker = DependencyService.Get<IPhotoLibrary>();
@@ -107,18 +107,18 @@ using (Stream stream = await picturePicker.GetImageStreamAsync())
 }
 ```
 
-Em geral, esse código também invalida a `CanvasView` para que o `PaintSurface` manipulador pode exibir o novo bitmap.
+Em geral, esse código também invalida o `CanvasView` para que o manipulador de `PaintSurface` possa exibir o novo bitmap.
 
-O `SKBitmap` classe define várias propriedades úteis, incluindo [ `Width` ](xref:SkiaSharp.SKBitmap.Width) e [ `Height` ](xref:SkiaSharp.SKBitmap.Height), que revelam as dimensões de pixel do bitmap, bem como muitos métodos, incluindo métodos para criar bitmaps, copiá-los e expor os bits de pixel. 
+A classe `SKBitmap` define várias propriedades úteis, incluindo [`Width`](xref:SkiaSharp.SKBitmap.Width) e [`Height`](xref:SkiaSharp.SKBitmap.Height), que revelam as dimensões de pixel do bitmap, bem como muitos métodos, incluindo métodos para criar bitmaps, para copiá-los e para expor os bits de pixel. 
 
 ## <a name="displaying-in-pixel-dimensions"></a>Exibindo em dimensões de pixel
 
-O SkiaSharp [ `Canvas` ](xref:SkiaSharp.SKCanvas) classe define quatro `DrawBitmap` métodos. Esses métodos permitem que bitmaps sejam exibidos de duas maneiras fundamentalmente diferentes: 
+A classe [`Canvas`](xref:SkiaSharp.SKCanvas) SkiaSharp define quatro métodos `DrawBitmap`. Esses métodos permitem que bitmaps sejam exibidos de duas maneiras fundamentalmente diferentes: 
 
-- Especificando um `SKPoint` valor (ou separados `x` e `y` valores) exibe o bitmap em suas dimensões de pixel. Os pixels do bitmap são mapeados diretamente para pixels da tela do vídeo.
+- Especificar um valor de `SKPoint` (ou valores `x` e `y` separados) exibe o bitmap em suas dimensões de pixel. Os pixels do bitmap são mapeados diretamente para pixels da tela do vídeo.
 - Especificar um retângulo faz com que o bitmap a ser ampliada para o tamanho e a forma do retângulo. 
 
-Exibir um bitmap em suas dimensões de pixel usando [ `DrawBitmap` ](xref:SkiaSharp.SKCanvas.DrawBitmap(SkiaSharp.SKBitmap,SkiaSharp.SKPoint,SkiaSharp.SKPaint)) com um `SKPoint` parâmetro ou [ `DrawBitmap` ](xref:SkiaSharp.SKCanvas.DrawBitmap(SkiaSharp.SKBitmap,System.Single,System.Single,SkiaSharp.SKPaint)) com separado `x` e `y` parâmetros:
+Você exibe um bitmap em suas dimensões de pixel usando [`DrawBitmap`](xref:SkiaSharp.SKCanvas.DrawBitmap(SkiaSharp.SKBitmap,SkiaSharp.SKPoint,SkiaSharp.SKPaint)) com um parâmetro `SKPoint` ou [`DrawBitmap`](xref:SkiaSharp.SKCanvas.DrawBitmap(SkiaSharp.SKBitmap,System.Single,System.Single,SkiaSharp.SKPaint)) com os parâmetros `x` e `y` separados:
 
 ```csharp
 DrawBitmap(SKBitmap bitmap, SKPoint pt, SKPaint paint = null)
@@ -128,7 +128,7 @@ DrawBitmap(SKBitmap bitmap, float x, float y, SKPaint paint = null)
 
 Esses dois métodos são funcionalmente idênticos. O ponto especificado indica o local do canto superior esquerdo do bitmap em relação à tela. Como a resolução de pixel de dispositivos móveis é tão alta, menores bitmaps normalmente são exibidos um pouco pequenos nesses dispositivos.
 
-Opcional `SKPaint` parâmetro permite que você exiba o bitmap usando transparência. Para fazer isso, crie uma `SKPaint` do objeto e defina o `Color` propriedade para qualquer `SKColor` valor com um alfa de canal menor que 1. Por exemplo:
+O parâmetro `SKPaint` opcional permite que você exiba o bitmap usando transparência. Para fazer isso, crie um objeto `SKPaint` e defina a propriedade `Color` como qualquer valor de `SKColor` com um canal alfa menor que 1. Por exemplo:
 
 ```csharp
 paint.Color = new SKColor(0, 0, 0, 0x80);
@@ -140,11 +140,11 @@ O 0x80 passado como o último argumento indica 50% de transparência. Você tamb
 paint.Color = SKColors.Red.WithAlpha(0x80);
 ```
 
-No entanto, a cor em si é irrelevante. Apenas o canal alfa é examinado quando você usa o `SKPaint` do objeto em um `DrawBitmap` chamar.
+No entanto, a cor em si é irrelevante. Somente o canal alfa é examinado quando você usa o objeto `SKPaint` em uma chamada `DrawBitmap`.
 
-O `SKPaint` objeto também desempenha uma função ao usar de bitmaps exibindo modos do blend ou efeitos de filtro. Esses são demonstrados nos artigos [modos de composição e o blend SkiaSharp](../effects/blend-modes/index.md) e [filtros de imagem de SkiaSharp](../effects/image-filters.md).
+O objeto `SKPaint` também desempenha uma função ao exibir bitmaps usando modos de mesclagem ou efeitos de filtro. Eles são demonstrados nos artigos [SkiaSharp composição e mesclagem modos](../effects/blend-modes/index.md) e [filtros de imagem SkiaSharp](../effects/image-filters.md).
 
-O **dimensões de Pixel** página de **[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** programa de exemplo exibe um recurso de bitmap é 320 pixels de largura por 240 pixels de altura:
+A página **dimensões de pixel** no programa de exemplo **[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** exibe um recurso de bitmap que tem 320 pixels de largura por 240 pixels de altura:
 
 ```csharp
 public class PixelDimensionsPage : ContentPage
@@ -186,15 +186,15 @@ public class PixelDimensionsPage : ContentPage
 }
 ```
 
-O `PaintSurface` manipulador centraliza o bitmap, calculando `x` e `y` valores com base nas dimensões de pixel da superfície de exibição e as dimensões de pixel do bitmap:
+O manipulador de `PaintSurface` centraliza o bitmap calculando `x` e `y` valores com base nas dimensões de pixel da superfície de exibição e nas dimensões de pixel do bitmap:
 
-[![Dimensões de pixel](displaying-images/PixelDimensions.png "dimensões de Pixel")](displaying-images/PixelDimensions-Large.png#lightbox)
+[![Dimensões de pixel](displaying-images/PixelDimensions.png "Dimensões de pixel")](displaying-images/PixelDimensions-Large.png#lightbox)
 
 Se o aplicativo deseja exibir o bitmap no canto superior esquerdo, ele simplesmente passaria coordenadas de (0, 0). 
 
 ## <a name="a-method-for-loading-resource-bitmaps"></a>Um método de carregamento de bitmaps de recurso
 
-Muitos dos exemplos em breve serão preciso carregar recursos de bitmap. Estático `BitmapExtensions` classe de **[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** solução contém um método para ajudar:
+Muitos dos exemplos em breve serão preciso carregar recursos de bitmap. A classe de `BitmapExtensions` estática na solução **[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** contém um método para ajudar:
 
 ```csharp
 static class BitmapExtensions
@@ -212,13 +212,13 @@ static class BitmapExtensions
 }
 ```
 
-Observe que o `Type` parâmetro. Isso pode ser o `Type` objeto associado a qualquer tipo no assembly que armazena o recurso de bitmap.
+Observe o parâmetro `Type`. Pode ser o objeto `Type` associado a qualquer tipo no assembly que armazena o recurso de bitmap.
 
-Isso `LoadBitmapResource` método será usado em todos os exemplos subsequentes que exigem recursos de bitmap.
+Esse método de `LoadBitmapResource` será usado em todos os exemplos subsequentes que exigem recursos de bitmap.
 
 ## <a name="stretching-to-fill-a-rectangle"></a>Alongando para preencher um retângulo
 
-O `SKCanvas` classe define também uma [ `DrawBitmap` ](xref:SkiaSharp.SKCanvas.DrawBitmap(SkiaSharp.SKBitmap,SkiaSharp.SKRect,SkiaSharp.SKPaint)) método que renderiza o bitmap de um retângulo e outro [ `DrawBitmap` ](xref:SkiaSharp.SKCanvas.DrawBitmap(SkiaSharp.SKBitmap,SkiaSharp.SKRect,SkiaSharp.SKRect,SkiaSharp.SKPaint)) método que renderiza um subconjunto retangular do bitmap para um retângulo:
+A classe `SKCanvas` também define um método [`DrawBitmap`](xref:SkiaSharp.SKCanvas.DrawBitmap(SkiaSharp.SKBitmap,SkiaSharp.SKRect,SkiaSharp.SKPaint)) que renderiza o bitmap para um retângulo e outro método [`DrawBitmap`](xref:SkiaSharp.SKCanvas.DrawBitmap(SkiaSharp.SKBitmap,SkiaSharp.SKRect,SkiaSharp.SKRect,SkiaSharp.SKPaint)) que renderiza um subconjunto retangular do bitmap para um retângulo:
 
 ```
 DrawBitmap(SKBitmap bitmap, SKRect dest, SKPaint paint = null)
@@ -226,9 +226,9 @@ DrawBitmap(SKBitmap bitmap, SKRect dest, SKPaint paint = null)
 DrawBitmap(SKBitmap bitmap, SKRect source, SKRect dest, SKPaint paint = null)
 ```
 
-Em ambos os casos, o bitmap é esticado para preencher o retângulo denominado `dest`. No segundo método, o `source` retângulo permite que você selecione um subconjunto do bitmap. O `dest` retângulo é relativo ao dispositivo de saída; o `source` retângulo é relativo ao bitmap.
+Em ambos os casos, o bitmap é alongado para preencher o retângulo chamado `dest`. No segundo método, o retângulo `source` permite que você selecione um subconjunto do bitmap. O retângulo de `dest` é relativo ao dispositivo de saída; o retângulo `source` é relativo ao bitmap.
 
-O **preencher o retângulo** página demonstra o primeiro desses dois métodos, exibindo o bitmap mesmo usado no exemplo anterior em um retângulo do mesmo tamanho como a tela: 
+A página **retângulo de preenchimento** demonstra o primeiro desses dois métodos exibindo o mesmo bitmap usado no exemplo anterior em um retângulo com o mesmo tamanho que a tela: 
 
 ```csharp
 public class FillRectanglePage : ContentPage
@@ -258,15 +258,15 @@ public class FillRectanglePage : ContentPage
 }
 ```
 
-Observe o uso do novo `BitmapExtensions.LoadBitmapResource` método para definir o `SKBitmap` campo. O retângulo de destino é obtido o [ `Rect` ](xref:SkiaSharp.SKImageInfo.Rect) propriedade do `SKImageInfo`, que descreve o tamanho da superfície de exibição:
+Observe o uso do novo método `BitmapExtensions.LoadBitmapResource` para definir o campo `SKBitmap`. O retângulo de destino é obtido da propriedade [`Rect`](xref:SkiaSharp.SKImageInfo.Rect) de `SKImageInfo`, que descreve o tamanho da superfície de exibição:
 
-[![Preencher o retângulo](displaying-images/FillRectangle.png "preencher o retângulo")](displaying-images/FillRectangle-Large.png#lightbox)
+[![Retângulo de preenchimento](displaying-images/FillRectangle.png "Retângulo de preenchimento")](displaying-images/FillRectangle-Large.png#lightbox)
 
-Isso é geralmente _não_ o que você deseja. A imagem é distorcida pelo sendo ampliada de forma diferente nas direções horizontais e verticais. Ao exibir um bitmap em algo diferente de seu tamanho de pixel, geralmente você deseja preservar a taxa de proporção original do bitmap.
+Normalmente, isso _não_ é o que você deseja. A imagem é distorcida pelo sendo ampliada de forma diferente nas direções horizontais e verticais. Ao exibir um bitmap em algo diferente de seu tamanho de pixel, geralmente você deseja preservar a taxa de proporção original do bitmap.
 
 ## <a name="stretching-while-preserving-the-aspect-ratio"></a>Alongando enquanto preserva a taxa de proporção
 
-Ampliar um bitmap, preservando a taxa de proporção é um processo também conhecido como _dimensionamento uniforme_. Esse termo sugere uma abordagem algorítmica. Uma possível solução é mostrada na **dimensionamento uniforme** página:
+Esticar um bitmap enquanto preserva a taxa de proporção é um processo também conhecido como _dimensionamento uniforme_. Esse termo sugere uma abordagem algorítmica. Uma solução possível é mostrada na página de **dimensionamento uniforme** :
 
 ```csharp
 public class UniformScalingPage : ContentPage
@@ -303,25 +303,25 @@ public class UniformScalingPage : ContentPage
 }
 ```
 
-O `PaintSurface` manipulador calcula uma `scale` fator é o mínimo, a proporção entre a largura de exibição e a altura e a altura e largura do bitmap. O `x` e `y` valores, em seguida, podem ser calculados para centralizar o bitmap com escala dentro a altura e largura de exibição. O retângulo de destino tem um canto superior esquerdo do `x` e `y` e um canto inferior direito desses valores mais a largura dimensionada e a altura do bitmap:
+O manipulador de `PaintSurface` calcula um fator de `scale` que é o mínimo da proporção da largura e altura da exibição para a largura e a altura do bitmap. Os valores de `x` e `y` podem então ser calculados para centralizar o bitmap dimensionado dentro da largura e altura de exibição. O retângulo de destino tem um canto superior esquerdo de `x` e `y` e um canto inferior direito desses valores, além da largura e altura da escala do bitmap:
 
-[![Dimensionamento uniforme](displaying-images/UniformScaling.png "dimensionamento uniforme")](displaying-images/UniformScaling-Large.png#lightbox)
+[![Dimensionamento uniforme](displaying-images/UniformScaling.png "Dimensionamento uniforme")](displaying-images/UniformScaling-Large.png#lightbox)
 
 Ative virar o telefone para ver o bitmap ampliado para essa área:
 
-[![Uniforme Scaling paisagem](displaying-images/UniformScaling-Landscape.png "dimensionamento uniforme paisagem")](displaying-images/UniformScaling-Landscape-Large.png#lightbox)
+[![Paisagem de dimensionamento uniforme](displaying-images/UniformScaling-Landscape.png "Paisagem de dimensionamento uniforme")](displaying-images/UniformScaling-Landscape-Large.png#lightbox)
 
-A vantagem de usar este `scale` fator se tornará óbvio quando você deseja implementar um algoritmo um pouco diferente. Suponha que você deseja preservar a taxa de proporção do bitmap, mas também preencher o retângulo de destino. A única maneira que isso é possível é cortando parte da imagem, mas você pode implementar esse algoritmo simplesmente alterando `Math.Min` para `Math.Max` no código acima. Aqui está o resultado: 
+A vantagem de usar esse `scale` fator se torna óbvio quando você deseja implementar um algoritmo um pouco diferente. Suponha que você deseja preservar a taxa de proporção do bitmap, mas também preencher o retângulo de destino. A única maneira possível é cortar parte da imagem, mas você pode implementar esse algoritmo simplesmente alterando `Math.Min` para `Math.Max` no código acima. Eis o resultado: 
 
-[![Alternativa de colocação em escala uniforme](displaying-images/UniformScaling-Alternative.png "alternativa dimensionamento uniforme")](displaying-images/UniformScaling-Alternative-Large.png#lightbox)
+[![Alternativa de dimensionamento uniforme](displaying-images/UniformScaling-Alternative.png "Alternativa de dimensionamento uniforme")](displaying-images/UniformScaling-Alternative-Large.png#lightbox)
 
 Taxa de proporção do bitmap é preservada mas áreas à esquerda e à direita do bitmap são cortadas.
 
 ## <a name="a-versatile-bitmap-display-function"></a>Uma função de exibição do bitmap versátil
 
-Os ambientes de programação baseado em XAML (por exemplo, UWP e xamarin. Forms) tem um recurso para expandir ou reduzir o tamanho de bitmaps, preservando a suas proporções. Embora SkiaSharp não inclui esse recurso, você pode implementá-lo você mesmo. O `BitmapExtensions` classe incluída na [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) aplicativo mostra como. A classe define dois novos `DrawBitmap` métodos que executam o cálculo de taxa de proporção. Esses novos métodos são métodos de extensão de `SKCanvas`.
+Os ambientes de programação baseado em XAML (por exemplo, UWP e xamarin. Forms) tem um recurso para expandir ou reduzir o tamanho de bitmaps, preservando a suas proporções. Embora SkiaSharp não inclui esse recurso, você pode implementá-lo você mesmo. A classe `BitmapExtensions` incluída no aplicativo [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) mostra como. A classe define dois novos métodos de `DrawBitmap` que executam o cálculo de taxa de proporção. Esses novos métodos são métodos de extensão do `SKCanvas`.
 
-O novo `DrawBitmap` métodos incluem um parâmetro do tipo `BitmapStretch`, uma enumeração definida na **BitmapExtensions.cs** arquivo:
+Os novos métodos de `DrawBitmap` incluem um parâmetro do tipo `BitmapStretch`, uma enumeração definida no arquivo **BitmapExtensions.cs** :
 
 ```csharp
 public enum BitmapStretch
@@ -335,9 +335,9 @@ public enum BitmapStretch
 }
 ```
 
-O `None`, `Fill`, `Uniform`, e `UniformToFill` membros são os mesmos na UWP [ `Stretch` ](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.stretch.aspx) enumeração. O xamarin. Forms semelhante [ `Aspect` ](xref:Xamarin.Forms.Aspect) enumeração define os membros `Fill`, `AspectFit`, e `AspectFill`.
+Os membros `None`, `Fill`, `Uniform`e `UniformToFill` são os mesmos da enumeração do UWP [`Stretch`](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.stretch.aspx) . A enumeração de [`Aspect`](xref:Xamarin.Forms.Aspect) Xamarin. Forms semelhante define Membros `Fill`, `AspectFit`e `AspectFill`.
 
-O **dimensionamento uniforme** página mostrada acima centraliza o bitmap dentro do retângulo, mas você pode querer outras opções, como posicionamento de bitmap na parte esquerda ou direita do retângulo, ou a parte superior ou inferior. Essa é a finalidade de `BitmapAlignment` enumeração:
+A página de **dimensionamento uniforme** mostrada acima centraliza o bitmap dentro do retângulo, mas você pode desejar outras opções, como posicionar o bitmap no lado esquerdo ou direito do retângulo, ou na parte superior ou inferior. Essa é a finalidade da enumeração de `BitmapAlignment`:
 
 ```csharp
 public enum BitmapAlignment
@@ -348,9 +348,9 @@ public enum BitmapAlignment
 }
 ```
 
-Configurações de alinhamento não têm nenhum efeito quando usado com `BitmapStretch.Fill`.
+As configurações de alinhamento não têm efeito quando usadas com `BitmapStretch.Fill`.
 
-A primeira `DrawBitmap` função de extensão contém um retângulo de destino, mas nenhum retângulo de origem. Os padrões são definidos para que se você quiser que o bitmap centralizado, você precisa apenas especificar um `BitmapStretch` membro:
+A primeira função de extensão `DrawBitmap` contém um retângulo de destino, mas nenhum retângulo de origem. Os padrões são definidos de forma que, se você quiser centralizar o bitmap, precisará especificar apenas um membro `BitmapStretch`:
 
 ```csharp
 static class BitmapExtensions
@@ -394,7 +394,7 @@ static class BitmapExtensions
 }
 ```
 
-A principal finalidade desse método é calcular um fator de dimensionamento denominado `scale` que é aplicado, em seguida, para a altura e largura do bitmap ao chamar o `CalculateDisplayRect` método. Esse é o método que calcula um retângulo para exibir o bitmap com base no alinhamento horizontal e vertical:
+A principal finalidade desse método é calcular um fator de dimensionamento chamado `scale` que é então aplicado à largura e altura do bitmap ao chamar o método `CalculateDisplayRect`. Esse é o método que calcula um retângulo para exibir o bitmap com base no alinhamento horizontal e vertical:
 
 ```csharp
 static class BitmapExtensions
@@ -442,7 +442,7 @@ static class BitmapExtensions
 }
 ```
 
-O `BitmapExtensions` classe contém adicional `DrawBitmap` método com um retângulo de origem para especificar um subconjunto do bitmap. Esse método é semelhante à primeira, exceto pelo fato do fator de escala é calculado com base na `source` retângulo e, em seguida, aplicada para o `source` retângulo na chamada para `CalculateDisplayRect`:
+A classe `BitmapExtensions` contém um método `DrawBitmap` adicional com um retângulo de origem para especificar um subconjunto do bitmap. Esse método é semelhante ao primeiro, exceto pelo fato de que o fator de dimensionamento é calculado com base no retângulo de `source` e, em seguida, aplicado ao retângulo de `source` na chamada para `CalculateDisplayRect`:
 
 ```csharp
 static class BitmapExtensions
@@ -486,7 +486,7 @@ static class BitmapExtensions
 }
 ```
 
-A primeira dessas duas novas `DrawBitmap` métodos é demonstrada em de **modos de dimensionamento** página. O arquivo XAML contém três `Picker` elementos que permitem que você selecione os membros de `BitmapStretch` e `BitmapAlignment` enumerações:
+O primeiro desses dois novos métodos de `DrawBitmap` é demonstrado na página **modos de dimensionamento** . O arquivo XAML contém três elementos `Picker` que permitem selecionar membros do `BitmapStretch` e `BitmapAlignment` enumerações:
 
 ```xaml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -578,7 +578,7 @@ A primeira dessas duas novas `DrawBitmap` métodos é demonstrada em de **modos 
 </ContentPage>
 ```
 
-O arquivo code-behind simplesmente invalida as `CanvasView` quando qualquer `Picker` item foi alterado. O `PaintSurface` manipulador acessa os três `Picker` modos de exibição para chamar o `DrawBitmap` método de extensão:
+O arquivo code-behind simplesmente invalida o `CanvasView` quando qualquer item de `Picker` foi alterado. O manipulador de `PaintSurface` acessa as três `Picker` exibições para chamar o método de extensão `DrawBitmap`:
 
 ```csharp
 public partial class ScalingModesPage : ContentPage
@@ -617,9 +617,9 @@ public partial class ScalingModesPage : ContentPage
 
 Aqui estão algumas combinações de opções:
 
-[![Modos de dimensionamento](displaying-images/ScalingModes.png "modos de dimensionamento")](displaying-images/ScalingModes-Large.png#lightbox)
+[![Modos de dimensionamento](displaying-images/ScalingModes.png "Modos de dimensionamento")](displaying-images/ScalingModes-Large.png#lightbox)
 
-O **retângulo subconjunto** página tem praticamente o mesmo arquivo XAML que **modos de dimensionamento**, mas o arquivo code-behind define um subconjunto retangular do bitmap fornecido pelo `SOURCE` campo: 
+A página de **subconjunto de retângulo** tem praticamente o mesmo arquivo XAML que os **modos de dimensionamento**, mas o arquivo code-behind define um subconjunto retangular do bitmap fornecido pelo campo `SOURCE`: 
 
 ```csharp
 public partial class ScalingModesPage : ContentPage
@@ -661,9 +661,9 @@ public partial class ScalingModesPage : ContentPage
 
 Esta fonte de retângulo isola head do monkey, conforme mostrado nessas capturas de tela:
 
-[![Subconjunto do retângulo](displaying-images/RectangleSubset.png "subconjunto de retângulo")](displaying-images/RectangleSubset-Large.png#lightbox)
+[![Subconjunto de retângulo](displaying-images/RectangleSubset.png "Subconjunto de retângulo")](displaying-images/RectangleSubset-Large.png#lightbox)
 
 ## <a name="related-links"></a>Links relacionados
 
-- [APIs de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [APIs do SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
