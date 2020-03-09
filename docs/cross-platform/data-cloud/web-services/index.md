@@ -7,11 +7,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/23/2017
 ms.openlocfilehash: ebd7cad9ef33a44dbc7aa469bb4e866bdfea2e61
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "78291731"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78915370"
 ---
 # <a name="introduction-to-web-services"></a>Introdução aos serviços Web
 
@@ -438,11 +438,11 @@ client.ClientCredentials.UserName.UserName = @"foo";
 client.ClientCredentials.UserName.Password = @"mrsnuggles";
 ```
 
-No exemplo acima, se você receber a mensagem "ficou sem trampolines do tipo 0", poderá aumentar o número do tipo 0 trampolines adicionando o argumento `–aot “trampolines={number of trampolines}”` à compilação. Para saber mais, confira [Solução de problemas](~/ios/troubleshooting/troubleshooting.md#trampolines).
+No exemplo acima, se você receber a mensagem "ficou sem trampolines do tipo 0", poderá aumentar o número do tipo 0 trampolines adicionando o argumento `–aot “trampolines={number of trampolines}”` à compilação. Para obter mais informações, confira [Solução de problemas](~/ios/troubleshooting/troubleshooting.md#trampolines).
 
 Para obter mais informações sobre a autenticação básica HTTP, embora no contexto de um serviço Web REST, consulte [Autenticando um serviço Web RESTful](~/xamarin-forms/data-cloud/authentication/rest.md).
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Serviços Web no Xamarin. Forms](~/xamarin-forms/data-cloud/index.yml)
 - [Ferramenta de utilitário de metadados ServiceModel (svcutil. exe)](https://docs.microsoft.com/dotnet/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe)
