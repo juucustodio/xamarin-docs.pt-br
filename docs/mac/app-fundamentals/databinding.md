@@ -8,17 +8,17 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
 ms.openlocfilehash: 81a1f63078a5f7a2a70f731d1790f85f4283d22f
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73030214"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78918853"
 ---
 # <a name="data-binding-and-key-value-coding-in-xamarinmac"></a>Vinculação de dados e codificação de chave-valor no Xamarin. Mac
 
 _Este artigo aborda o uso da codificação de valor-chave e da observação de valor-chave para permitir a vinculação de dados a elementos da interface do usuário no Interface Builder do Xcode._
 
-## <a name="overview"></a>Visão Geral
+## <a name="overview"></a>Visão geral
 
 Ao trabalhar com C# o e o .net em um aplicativo Xamarin. Mac, você tem acesso à mesma codificação de chave-valor e técnicas de vinculação de dados que um desenvolvedor trabalhando no *Objective-C* e no *Xcode* . Como o Xamarin. Mac se integra diretamente com o Xcode, você pode usar o _interface Builder_ do Xcode para associar dados a elementos da interface do usuário em vez de escrever código.
 
@@ -26,9 +26,9 @@ Usando a codificação de valor chave e técnicas de vinculação de dados em se
 
 [![Um exemplo do aplicativo em execução](databinding-images/intro01.png "Um exemplo do aplicativo em execução")](databinding-images/intro01-large.png#lightbox)
 
-Neste artigo, abordaremos as noções básicas de como trabalhar com codificação de chave-valor e vinculação de dados em um aplicativo Xamarin. Mac. É altamente recomendável que você trabalhe pelo artigo [Hello, Mac](~/mac/get-started/hello-mac.md) primeiro, especificamente a [introdução às seções Xcode e Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) e [ações](~/mac/get-started/hello-mac.md#outlets-and-actions) , pois ela aborda os principais conceitos e técnicas que usaremos em Este artigo.
+Neste artigo, abordaremos as noções básicas de como trabalhar com codificação de chave-valor e vinculação de dados em um aplicativo Xamarin. Mac. É altamente recomendável que você trabalhe pelo artigo [Hello, Mac](~/mac/get-started/hello-mac.md) primeiro, especificamente a [introdução às seções Xcode e Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) e [ações](~/mac/get-started/hello-mac.md#outlets-and-actions) , pois ela aborda os principais conceitos e técnicas que usaremos neste artigo.
 
-Talvez você queira dar uma olhada na seção [ C# expondo classes/métodos para Objective-C](~/mac/internals/how-it-works.md) do documento [interno do Xamarin. Mac](~/mac/internals/how-it-works.md) também, explica o `Register` e `Export` atributos usados para conectar suas C# classes ao Objective-C objetos e elementos de interface do usuário.
+Talvez você queira dar uma olhada na seção [ C# expondo classes/métodos para Objective-C](~/mac/internals/how-it-works.md) do documento [interno do Xamarin. Mac](~/mac/internals/how-it-works.md) também, explica o `Register` e `Export` atributos usados para conectar suas C# classes a objetos Objective-C e elementos de interface do usuário.
 
 <a name="What_is_Key-Value_Coding" />
 
@@ -317,7 +317,7 @@ namespace MacDatabinding
 }
 ```
 
-A maioria dos recursos dessa classe foi abordada na seção [o que é codificação de chave-valor](#What_is_Key-Value_Coding) acima. No entanto, vamos dar uma olhada em alguns elementos específicos e algumas adições feitas para permitir que essa classe atue como um modelo de dados para **controladores de matriz** e controladores de **árvore** (que usaremos posteriormente para **exibições de árvore**de ligação de dados, **exibições de estrutura de tópicos** e **exibições de coleção**).
+A maioria dos recursos dessa classe foi abordada na seção [o que é codificação de chave-valor](#What_is_Key-Value_Coding) acima. No entanto, vamos examinar alguns elementos específicos e algumas adições que foram feitas para permitir que essa classe atue como um modelo de dados para **controladores de matriz** e de **árvore** (que usaremos mais tarde para **exibições de árvore**de ligação de dados, **exibições de estrutura de tópicos** e **exibições de coleção**).
 
 Primeiro, como um funcionário pode ser um gerente, usamos um `NSArray` (especificamente um `NSMutableArray` para que os valores possam ser modificados) para permitir que os funcionários que eles gerenciaram sejam anexados a eles:
 
@@ -334,7 +334,7 @@ public NSArray People {
 Duas coisas a serem observadas aqui:
 
 1. Usamos um `NSMutableArray` em vez de uma matriz C# ou coleção padrão, pois isso é um requisito para associar dados a controles AppKit, como **exibições de tabela**, **exibições de estrutura de tópicos** e **coleções**.
-2. Expunhamos a matriz de funcionários ao convertê-lo em um `NSArray` para fins de vinculação C# de dados e alteramos seu nome formatado, `People`, para um que a ligação de dados espera, `personModelArray` na forma de **matriz {class_name}** (Observe que o primeiro caractere foi tornar-se minúsculas).
+2. Exportamos a matriz de funcionários ao convertê-lo em um `NSArray` para fins de vinculação C# de dados e alteramos seu nome formatado, `People`, para um que a vinculação de dados espera, `personModelArray` na matriz de formato **{class_name}** (Observe que o primeiro caractere foi feito em letras minúsculas).
 
 Em seguida, precisamos adicionar alguns métodos públicos de nome especialmente para dar suporte a **controladores de matriz** e de **árvore**:
 
@@ -423,7 +423,7 @@ Primeiro, vamos adicionar um novo **controlador de exibição** ao nosso arquivo
 
 [![Adicionando um novo controlador de exibição](databinding-images/simple01.png "Adicionando um novo controlador de exibição")](databinding-images/simple01-large.png#lightbox)
 
-Em seguida, retorne para Visual Studio para Mac, edite o arquivo **SimpleViewController.cs** (que foi adicionado automaticamente ao nosso projeto) e expor uma instância do `PersonModel` ao qual iremos vincular dados em nosso formulário. Adicione o seguinte código:
+Em seguida, retorne para Visual Studio para Mac, edite o arquivo **SimpleViewController.cs** (que foi adicionado automaticamente ao nosso projeto) e expor uma instância do `PersonModel` ao qual iremos vincular dados em nosso formulário. Adicione os códigos a seguir:
 
 ```csharp
 private PersonModel _person = new PersonModel();
@@ -507,7 +507,7 @@ Primeiro, vamos adicionar um novo **controlador de exibição** ao nosso arquivo
 
 [![Adicionando um novo controlador de exibição](databinding-images/table01.png "Adicionando um novo controlador de exibição")](databinding-images/table01-large.png#lightbox)
 
-Em seguida, vamos editar o arquivo **TableViewController.cs** (que foi adicionado automaticamente ao nosso projeto) e expor uma matriz (`NSArray`) de `PersonModel` classes para as quais iremos associar dados. Adicione o seguinte código:
+Em seguida, vamos editar o arquivo **TableViewController.cs** (que foi adicionado automaticamente ao nosso projeto) e expor uma matriz (`NSArray`) de `PersonModel` classes para as quais iremos associar dados. Adicione os códigos a seguir:
 
 ```csharp
 private NSMutableArray _people = new NSMutableArray();
@@ -622,7 +622,7 @@ Primeiro, vamos adicionar um novo **controlador de exibição** ao nosso arquivo
 
 [![Adicionando um novo controlador de exibição](databinding-images/outline01.png "Adicionando um novo controlador de exibição")](databinding-images/outline01-large.png#lightbox)
 
-Em seguida, vamos editar o arquivo **OutlineViewController.cs** (que foi adicionado automaticamente ao nosso projeto) e expor uma matriz (`NSArray`) de `PersonModel` classes para as quais iremos associar dados. Adicione o seguinte código:
+Em seguida, vamos editar o arquivo **OutlineViewController.cs** (que foi adicionado automaticamente ao nosso projeto) e expor uma matriz (`NSArray`) de `PersonModel` classes para as quais iremos associar dados. Adicione os códigos a seguir:
 
 ```csharp
 private NSMutableArray _people = new NSMutableArray();
@@ -889,7 +889,7 @@ Essa linha está informando que a chave `Title` não existe no objeto ao qual es
 
 Este artigo deu uma visão detalhada de como trabalhar com vinculação de dados e codificação de valor de chave em um aplicativo Xamarin. Mac. Primeiro, ele analisou a exposição de C# uma classe para Objective-C usando KVC (codificação de valor chave) e KVO (key-value Observation). Em seguida, ele mostrou como usar uma classe compatível com KVO e vincular dados a elementos da interface do usuário no Interface Builder do Xcode. Por fim, ele mostrou uma ligação de dados complexa usando **controladores de matriz** e de **árvore**.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Storyboard MacDatabinding (exemplo)](https://docs.microsoft.com/samples/xamarin/mac-samples/macdatabinding-storyboard)
 - [MacDatabinding XIBs (exemplo)](https://docs.microsoft.com/samples/xamarin/mac-samples/macdatabinding-xibs)
