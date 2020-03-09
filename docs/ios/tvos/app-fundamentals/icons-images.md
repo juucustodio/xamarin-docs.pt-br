@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
 ms.openlocfilehash: b1b6d07b221f702b54833bd87161d6abbadbd4e8
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73030848"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78915776"
 ---
 # <a name="working-with-tvos-icons-and-images-in-xamarin"></a>Trabalhando com ícones e imagens do tvOS no Xamarin
 
@@ -38,7 +38,7 @@ A imagem de inicialização é exibida rapidamente e dá a impressão de que seu
 
 As imagens de inicialização não são uma oportunidade para anúncios ou expressões artísticas, elas só existem para dar a impressão de que seu aplicativo é iniciado rapidamente e está pronto para uso.
 
-|Tamanho da imagem de inicialização|Anotações|
+|Tamanho da imagem de inicialização|{1&gt;Observações&lt;1}|
 |---|---|
 |1920x1080px|Somente arquivos. png não em camadas|
 
@@ -135,7 +135,7 @@ Cada aplicativo deve fornecer uma versão pequena e uma grande de seu ícone de 
 
 |Ícone pequeno||Ícone grande||
 |---|---|---|---|
-|Tamanho real|400x240px|Tamanho|1280x768px|
+|Tamanho real|400x240px|Size|1280x768px|
 |Tamanho da zona segura|370x222px|||
 |Tamanho não focalizado|300x180px|||
 |Tamanho focado|370x222px|||
@@ -187,7 +187,7 @@ Se o usuário tiver colocado seu aplicativo Xamarin. tvOS na linha superior da t
 
 A imagem da prateleira superior pode ser fornecida como um único `.png` estático ou arquivo de `.lsr` (consulte [criando imagens em camadas](#Creating-Layered-Images)) ou pode ser criada dinamicamente em tempo de execução como uma única linha de itens com foco (consulte o [conteúdo de prateleira superior dinâmico](#Dynamic-Top-Shelf-Content) abaixo).
 
-|Tamanho da imagem de prateleira superior|Anotações|
+|Tamanho da imagem de prateleira superior|{1&gt;Observações&lt;1}|
 |---|---|
 |1920x720px|Arquivo estático. png ou em camadas. LSR|
 
@@ -318,7 +318,7 @@ Faça o seguinte:
 
 Este artigo abordou todos os tipos de imagem e tamanhos usados em um aplicativo Xamarin. tvOS. Primeiro, ele abordou imagens de inicialização, imagens em camadas, ícones de aplicativos, imagens mais importantes e imagens de Game Center. Em seguida, ele abordou o trabalho com imagens em seu aplicativo Xamarin. tvOS.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Amostras do tvOS](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
 - [tvOS](https://developer.apple.com/tvos/)

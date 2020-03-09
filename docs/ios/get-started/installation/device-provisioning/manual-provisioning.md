@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 07/15/2017
 ms.openlocfilehash: 945a42485486dbfddfd023a72e88d9127651c71f
-ms.sourcegitcommit: 6f09bc2b760e76a61a854f55d6a87c4f421ac6c8
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/02/2020
-ms.locfileid: "75607939"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78911496"
 ---
 # <a name="manual-provisioning-for-xamarinios"></a>Provisionamento manual para o Xamarin.iOS
 
@@ -73,11 +73,11 @@ Para gerar uma identidade de assinatura, faça o seguinte:
 
 ### <a name="understanding-certificate-key-pairs"></a>Entendendo pares de chaves de certificado
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
 O Perfil do Desenvolvedor contém certificados, suas chaves associadas e eventuais perfis de provisionamento associados à conta. Existem na realidade duas versões de um Perfil do Desenvolvedor – uma está no Portal do Desenvolvedor, a outra reside em um Mac local. A diferença entre os dois é o tipo de chaves que contêm: _o perfil no Portal armazena todas as chaves públicas associadas com os certificados, enquanto a cópia no seu Mac local contém todas as chaves privadas_. Para que os certificados sejam válidos, os pares de chaves devem ser correspondentes. Mantenha um backup do perfil do desenvolvedor no Mac local, porque se as chaves privadas forem perdidas, todos os certificados e perfis de provisionamento precisarão ser regenerados.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 O Perfil do Desenvolvedor contém certificados, suas chaves associadas e eventuais perfis de provisionamento associados à conta. Existem na realidade duas versões de um Perfil do Desenvolvedor – uma está no Portal do Desenvolvedor, a outra reside em um Mac. A diferença entre os dois é o tipo de chaves que contêm: _o perfil no Portal armazena todas as chaves públicas associadas com os certificados, enquanto a cópia no seu Mac contém todas as chaves privadas_. Para que os certificados sejam válidos, os pares de chaves devem ser correspondentes. Mantenha um backup do perfil do desenvolvedor no Mac do Host de Build do Xamarin, porque se as chaves privadas forem perdidas, todos os certificados e perfis de provisionamento precisarão ser regenerados.
 
@@ -126,7 +126,7 @@ Ao criar um perfil de provisionamento para desenvolvimento, devemos especificar 
 
     [![](manual-provisioning-images/add06.png "Provide a name for the new device and the device Identifier")](manual-provisioning-images/add06.png#lightbox)
 
-11. Clique no botão **Continue (Continuar)** .
+11. Clique no botão **Continuar**.
 12. Por fim, examine as informações e clique no botão **Register (Registrar)** :
 
     [![](manual-provisioning-images/add07.png "Review the information")](manual-provisioning-images/add07.png#lightbox)
@@ -143,7 +143,7 @@ Como com o Certificado de Desenvolvimento, os Perfis de provisionamento podem se
 
 Antes de criar um perfil de provisionamento, deve ser criada uma *ID do aplicativo*. Uma ID do aplicativo é uma cadeia de caracteres no estilo DNS reverso que identifica um aplicativo de modo exclusivo. As etapas a seguir será demonstram como criar uma **ID do Aplicativo Curinga**, que pode ser usada para criar e instalar a maioria dos aplicativos. Cada uma das **IDs do aplicativo explícitas** só permite a instalação de um aplicativo (com a ID do pacote correspondente) e elas geralmente são usadas para determinadas funcionalidades do iOS, como Apple Pay e HealthKit. Para obter informações sobre como criar IDs do aplicativo explícitas, consulte o guia [Trabalhando com funcionalidades](~/ios/deploy-test/provisioning/capabilities/index.md).
 
-### <a name="app-id"></a>ID do aplicativo
+### <a name="app-id"></a>ID do Aplicativo
 
 1. No [portal do desenvolvedor](https://developer.apple.com/account/overview.action), navegue até a seção *Certificate, Identifiers and Profiles (Certificados, Identificadores e Perfis)* no Apple Developer Center (Centro de Desenvolvedores da Apple). Selecione **App IDs (IDs do Aplicativo)** em **Identifiers (Identificadores)** .
 2. Clique no botão **+** e forneça um **Nome**:
@@ -207,12 +207,12 @@ Certificados e perfis de provisionamento que foram criados no Portal de Desenvol
 
 Os novos certificados ou perfis de provisionamento estarão disponíveis no Visual Studio para Mac ou Visual Studio e prontos para uso.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
 > [!IMPORTANT]
 > Pode ser necessário parar e reiniciar o Visual Studio para Mac para que ele exiba certificados novos ou modificados ou perfis atualizados pelo Xcode.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 > [!IMPORTANT]
 > Pode ser necessário parar e reiniciar o Visual Studio para que ele exiba certificados novos ou modificados ou perfis atualizados pelo Xcode.
@@ -231,7 +231,7 @@ A Apple fornece uma seleção de serviços de aplicativos especiais, também cha
 
 Neste momento, o provisionamento já deve estar concluído e o aplicativo pronto para ser implantado no dispositivo. Para fazer isso, siga as etapas abaixo:
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
 > [!IMPORTANT]
 > Antes de começar, verifique se selecionou **Provisionamento manual** em **Info.plist**.
@@ -250,7 +250,7 @@ Neste momento, o provisionamento já deve estar concluído e o aplicativo pronto
 4. Certifique-se de definir a configuração de build para **iPhone** / **iPad**, em vez do simulador.
 5. Clique em **Executar** no Visual Studio para Mac e exiba o aplicativo em execução no dispositivo.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 > [!IMPORTANT]
 > Antes de começar, lembre-se de selecionar **Provisionamento Manual** em **Projeto > Propriedades de Provisionamento…** .
