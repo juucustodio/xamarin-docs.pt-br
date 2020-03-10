@@ -9,11 +9,11 @@ author: maddyleger1
 ms.author: maleger
 ms.date: 02/04/2019
 ms.openlocfilehash: b287d523101bb8ca7faca8ea95ee898ccf9c0bb1
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "68757258"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78918031"
 ---
 # <a name="xaml-previewer-for-xamarinforms"></a>Visualizar XAML para Xamarin. Forms
 
@@ -52,7 +52,7 @@ Você pode alterar se a tela é dividida vertical ou horizontalmente ou recolher
 
 O botão **Visualizar** é exibido no editor quando você abre uma página XAML. Mostre ou oculte o visualizador pressionando os botões **Visualizar** ou **dividir** na parte inferior esquerda de qualquer janela de documento XAML:
 
-[pré-visor ![Xamarin. Forms habilitado com o botão Visualizar ou dividir](xaml-previewer-images/xamlp-list-sml.png)](xaml-previewer-images/xamlp-list.png#lightbox)
+[![o pré-visor Xamarin. Forms habilitado com o botão Visualizar ou dividir](xaml-previewer-images/xamlp-list-sml.png)](xaml-previewer-images/xamlp-list.png#lightbox)
 
 > [!NOTE]
 > Em versões mais antigas do Visual Studio para Mac, o botão **Visualizar** estava localizado no canto superior direito da janela.

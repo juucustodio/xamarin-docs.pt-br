@@ -7,11 +7,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 06/19/2018
 ms.openlocfilehash: 92b08a9cfd725c1114b71fad4f29e6f28cd828b3
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73029631"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78914369"
 ---
 # <a name="workbooks-installation-and-requirements"></a>Instalação e requisitos de pastas de trabalho
 
@@ -21,13 +21,13 @@ ms.locfileid: "73029631"
 
 <!-- markdownlint-disable MD001 -->
 
-# <a name="windowstabwindows"></a>[Windows](#tab/windows)
+# <a name="windows"></a>[Windows](#tab/windows)
 
 1. Verifique os [requisitos](#requirements) abaixo.
 2. Baixe e instale o [Xamarin Workbooks para Windows](https://dl.xamarin.com/interactive/XamarinInteractive.msi).
 3. Comece a [brincar](~/tools/workbooks/workbook.md) com pastas de trabalho.
 
-# <a name="macostabmacos"></a>[macOS](#tab/macos)
+# <a name="macos"></a>[macOS](#tab/macos)
 
 1. Verifique os [requisitos](#requirements) abaixo.
 2. Baixe e instale o [Xamarin Workbooks para Mac](https://dl.xamarin.com/interactive/XamarinInteractive.pkg).
@@ -53,7 +53,7 @@ ms.locfileid: "73029631"
 |Console (.NET Framework)|Com suporte no Mac e no Windows|
 |Console (.NET Core)|Com suporte no Mac e no Windows|
 
-## <a name="reporting-bugs"></a>Relatando bugs
+## <a name="reporting-bugs"></a>Relatar bugs
 
 [Informe os problemas no GitHub][bugs]e inclua todas as seguintes informações:
 

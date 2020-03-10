@@ -9,17 +9,17 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/06/2018
 ms.openlocfilehash: a26c83565e4cfa64272549e12a35206dff6ec3c0
-ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "78292600"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78911553"
 ---
 # <a name="xamarinios-errors"></a>Erros do Xamarin. iOS
 
 ## <a name="mt0xxx-mtouch-error-messages"></a>MT0xxx: mensagens de erro do mTouch
 
-Por ex.: parâmetros, ambiente, ferramentas ausentes.
+Por exemplo, parâmetros, ambiente, ferramentas ausentes.
 
 <!--
  MT0xxx mtouch itself, e.g. parameters, environment (e.g. missing tools)
@@ -1789,7 +1789,7 @@ Se você acreditar que o Xamarin. iOS deve dar suporte ao tipo em questão, regi
 
 <a name="MT4102" />
 
-### <a name="mt4102-the-registrar-found-an-invalid-type--in-signature-for-method--use--instead"></a>MT4102: o registrador encontrou um tipo inválido `*` na assinatura para o método `*`. Use `*` em vez disso.
+### <a name="mt4102-the-registrar-found-an-invalid-type--in-signature-for-method--use--instead"></a>MT4102: o registrador encontrou um tipo inválido `*` na assinatura para o método `*`. Use `*` em seu lugar.
 
 Atualmente, isso ocorre apenas com um tipo: System. DateTime. Em vez disso, use o equivalente de Objective-C (NSDate).
 
@@ -2775,14 +2775,14 @@ Em alguns casos, trata-se de um problema de "rede local" e pode ser resolvido co
 
 Onde * pode ser:
 
-- string
-- matriz
+- cadeia de caracteres
+- array
 - dicionário
 - bool
 - real
 - inteiro
 - date
-- data
+- Dados
 
 <a name="MT7046" />
 

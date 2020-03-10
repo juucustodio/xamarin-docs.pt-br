@@ -10,11 +10,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 10/05/2018
 ms.openlocfilehash: 5fadd1ba556b15cb92134471f007e41f04fce69e
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
-ms.translationtype: HT
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76724766"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78911843"
 ---
 # <a name="hello-ios--deep-dive"></a>Hello, iOS – Aprofundamento
 
@@ -355,7 +355,7 @@ public override void ViewDidLoad ()
 
 O aplicativo Phoneword introduziu vários conceitos não abordados neste guia. Esses conceitos incluem:
 
-- **Alterar o texto do botão** – o aplicativo Phoneword demonstrou como alterar o texto de um **botão** chamando `SetTitle` no **botão** e passando o novo texto e o _estado do controle_ do **botão**. Por exemplo, o código a seguir altera o texto do CallButton para “Call”:
+- **Alterar o texto do botão** – o aplicativo Phoneword demonstrou como alterar o texto de um **botão** chamando `SetTitle` no **botão** e passando o novo texto e o **estado do controle** do _botão_. Por exemplo, o código a seguir altera o texto do CallButton para “Call”:
 
     ```csharp
     CallButton.SetTitle ("Call", UIControlState.Normal);
@@ -435,7 +435,7 @@ O aplicativo será implantado no dispositivo iOS:
 
 ### <a name="generate-custom-icons-and-launch-images"></a>Gerar ícones personalizados e imagens de inicialização
 
-Nem todo mundo tem um designer disponível para criar os ícones personalizados e imagens de inicialização que um aplicativo precisa para se destacar. Aqui estão várias abordagens alternativas para gerar a arte final personalizada para o aplicativo:
+Nem todos têm um designer disponível para criar os ícones personalizados e iniciar imagens que um aplicativo precisa destacar. Aqui estão várias abordagens alternativas para gerar arte do aplicativo personalizado:
 
 ::: zone pivot="macos"
 

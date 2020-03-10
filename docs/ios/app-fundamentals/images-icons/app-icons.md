@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 05/22/2017
 ms.openlocfilehash: 37695ef93a1005febf12369e7d1defccf6130832
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75488420"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78916533"
 ---
 # <a name="application-icons-in-xamarinios"></a>Ícones de aplicativo no Xamarin. iOS
 
@@ -54,7 +54,7 @@ Os tamanhos e resoluções de ativos de imagem a seguir serão necessários para
 
     ||1x|2|
     |---|---|---|
-    |Ícone do Aplicativo|60x60<sup>1</sup>|120x120|
+    |Ícone do Aplicativo|60 x 60<sup>1</sup>|120x120|
     |Destaque|40x40<sup>2</sup>|80x80|
     |Configurações|-|-|
 
@@ -64,7 +64,7 @@ Os tamanhos e resoluções de ativos de imagem a seguir serão necessários para
     |---|---|---|
     |Ícone do Aplicativo|57 x 57|114x114|
     |Destaque|29 x 29|58x58|
-    |Configurações|29x29<sup>3, 4</sup>|58x58<sup>3, 4</sup>|
+    |Configurações|29X29<sup>3, 4</sup>|58x58<sup>3, 4</sup>|
 
 ### <a name="ipad-icon-sizes"></a>Tamanhos de ícone do iPad
 
@@ -73,7 +73,7 @@ Os tamanhos e resoluções de ativos de imagem a seguir serão necessários para
     ||2x (iPad Pro)|
     |---|---|
     |Ícone do Aplicativo|167x167<sup>6</sup>|
-    |Destaque|120x120<sup>6</sup>|
+    |Destaque|120 x 120<sup>6</sup>|
     |Configurações|58x58<sup>5</sup>|
 
 - **iPad: iOS 7 & 8**
@@ -90,7 +90,7 @@ Os tamanhos e resoluções de ativos de imagem a seguir serão necessários para
     |---|---|---|
     |Ícone do Aplicativo|72 x 72|144x144|
     |Destaque|50 x 50|100x100|
-    |Configurações|29x29<sup>3, 5</sup>|58x58<sup>3, 5</sup>|
+    |Configurações|29X29<sup>3, 5</sup>|58x58<sup>3, 5</sup>|
 
  1. O Visual Studio para Mac e o Xcode não dão mais suporte à definição da imagem 1x para iOS 7.
  2. Não há suporte para a definição de uma imagem 1x para iOS 7 ao usar catálogos de ativos.
@@ -109,7 +109,7 @@ Para ícones, um conjunto de imagens `AppIcon` especial pode ser adicionado ao a
 
 Para usar um catálogo de ativos, siga estas etapas:
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
 1. Clique duas vezes no arquivo `Info.plist` no **Gerenciador de soluções** para abri-lo para edição.
 2. Role para baixo até a seção **ícones do iPhone** .
@@ -129,7 +129,7 @@ Para usar um catálogo de ativos, siga estas etapas:
 7. Clique no botão **abrir** para incluir a imagem no projeto e defini-la no xcasset.
 8. Repita para todas as imagens necessárias.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 1. Clique duas vezes nas informações * *.  \* * arquivo no **Gerenciador de soluções**:
 
@@ -166,7 +166,7 @@ Se você estiver usando o método ad hoc de entregar o aplicativo (para usuário
 
 Para especificar a Arte do iTunes, faça o seguinte:
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
 1. Clique duas vezes no arquivo `Info.plist` no **Gerenciador de soluções** para abri-lo para edição.
 2. Role até a seção **trabalho artístico do iTunes** do editor: 
@@ -175,7 +175,7 @@ Para especificar a Arte do iTunes, faça o seguinte:
 3. Para qualquer imagem ausente, clique na miniatura no editor, selecione o arquivo de imagem para a arte do iTunes desejada na caixa de diálogo abrir arquivo e clique no botão **OK** .
 4. Repita essa etapa até que todas as imagens necessárias tenham sido especificadas para o aplicativo.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 1. Clique duas vezes no arquivo `Info.plist` no **Gerenciador de soluções** para abri-lo para edição.
 
@@ -187,7 +187,7 @@ Para especificar a Arte do iTunes, faça o seguinte:
 
 -----
 
-## <a name="related-links"></a>Links Relacionados
+## <a name="related-links"></a>Links relacionados
 
 - [Trabalhando com imagens (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/workingwithimages)
 - [Hello, iPhone](~/ios/get-started/hello-ios/index.md)

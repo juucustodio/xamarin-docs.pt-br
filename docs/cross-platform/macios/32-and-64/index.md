@@ -7,11 +7,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/29/2017
 ms.openlocfilehash: 5ba451de857444bc5b12b750ae479b62abdb75a3
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73016328"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78910758"
 ---
 # <a name="3264-bit-platform-considerations"></a>considerações sobre a plataforma de 32/64 bits
 
@@ -36,7 +36,7 @@ Para aplicativos móveis Xamarin. iOS que foram convertidos no API Unificada, os
 
 <!-- markdownlint-disable MD001 -->
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
 1. No **painel de soluções**, clique duas vezes no projeto do aplicativo para abrir a janela **Opções do projeto** .
 2. Selecione **Build do IOS**.
@@ -51,7 +51,7 @@ Para aplicativos móveis Xamarin. iOS que foram convertidos no API Unificada, os
 5. Clique em **OK**.
 6. Execute uma compilação limpa.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 1. Na **Gerenciador de soluções**, clique com o botão direito do mouse no projeto do aplicativo e selecione **Propriedades**.
 2. Selecione **Build do IOS**.

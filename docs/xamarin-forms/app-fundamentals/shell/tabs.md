@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 11/06/2019
 ms.openlocfilehash: 0ffcbe99ef9696c5fde501809bea5ddcc7a793a7
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75489824"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78913399"
 ---
 # <a name="xamarinforms-shell-tabs"></a>Guias do Shell do Xamarin.Forms
 

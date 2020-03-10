@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 06/14/2017
 ms.openlocfilehash: 9353cffd924688058c1495b9258cc7f0e0ce7b82
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75489200"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78910820"
 ---
 # <a name="introduction-to-ios-8"></a>Introdução ao iOS 8
 
@@ -26,7 +26,7 @@ Este guia apresenta as novas APIs para desenvolvedores do Xamarin. iOS.
 
 Também há algumas APIs que foram preteridas no iOS 8, que são detalhadas no final deste documento.
 
-## <a name="requirements"></a>Requisitos do
+## <a name="requirements"></a>Requisitos
 
 Os itens a seguir são necessários para criar aplicativos iOS 8 no Visual Studio para Mac:
 
@@ -44,7 +44,7 @@ Controlar seus dispositivos de seu iPhone não é uma nova aplicação de tecnol
 
 Com o HomeKit, aplicativos de terceiros e Siri podem descobrir acessórios e adicioná-los ao seu banco de dados de configuração residencial pessoal, editar e agir sobre esses dados e se comunicar com acessórios e seus serviços para executar uma ação.
 
-### <a name="configuration"></a>Configuração do
+### <a name="configuration"></a>Configuração
 
 O diagrama a seguir mostra a hierarquia básica da configuração dos acessórios do HomeKit:
 
@@ -164,7 +164,7 @@ Com todos os aprimoramentos feitos no iOS 8, várias APIs foram preteridas. Algu
 ## <a name="summary"></a>Resumo
 Neste artigo, examinamos alguns dos novos recursos introduzidos pela Apple no iOS 8.
 
-## <a name="related-links"></a>Links Relacionados
+## <a name="related-links"></a>Links relacionados
 
 - [UIKitEnhancements (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-uikitenhancements)
 - [Introdução às extensões de aplicativo](~/ios/platform/extensions.md)

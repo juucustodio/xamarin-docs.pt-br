@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 09/17/2019
 ms.openlocfilehash: 7aef14cbb854d89a2088a450353b943402f76a86
-ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72697228"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78913391"
 ---
 # <a name="xamarinforms-collectionview-scrolling"></a>Rolagem de CollectionView do Xamarin. Forms
 
@@ -20,7 +20,7 @@ ms.locfileid: "72697228"
 
 [`CollectionView`](xref:Xamarin.Forms.CollectionView) define dois métodos [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) , que rolam itens para o modo de exibição. Uma das sobrecargas rola o item no índice especificado para a exibição, enquanto o outro rola o item especificado para a exibição. Ambas as sobrecargas têm argumentos adicionais que podem ser especificados para indicar o grupo ao qual o item pertence, a posição exata do item após a conclusão da rolagem e se a rolagem deve ser animada.
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView) define um evento de [`ScrollToRequested`](xref:Xamarin.Forms.ItemsView.ScrollToRequested) que é acionado quando um dos métodos de [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) é invocado. O objeto [`ScrollToRequestedEventArgs`](xref:Xamarin.Forms.ScrollToRequestedEventArgs) que acompanha o evento `ScrollToRequested` tem muitas propriedades, incluindo `IsAnimated`, `Index`, `Item` e `ScrollToPosition`. Essas propriedades são definidas a partir dos argumentos especificados nas chamadas de método `ScrollTo`.
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) define um evento de [`ScrollToRequested`](xref:Xamarin.Forms.ItemsView.ScrollToRequested) que é acionado quando um dos métodos de [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) é invocado. O objeto [`ScrollToRequestedEventArgs`](xref:Xamarin.Forms.ScrollToRequestedEventArgs) que acompanha o evento `ScrollToRequested` tem muitas propriedades, incluindo `IsAnimated`, `Index`, `Item`e `ScrollToPosition`. Essas propriedades são definidas a partir dos argumentos especificados nas chamadas de método `ScrollTo`.
 
 Além disso, [`CollectionView`](xref:Xamarin.Forms.CollectionView) define um evento de `Scrolled` que é acionado para indicar que a rolagem ocorreu. O objeto `ItemsViewScrolledEventArgs` que acompanha o evento `Scrolled` tem muitas propriedades. Para obter mais informações, consulte [detectar rolagem](#detect-scrolling).
 
@@ -229,10 +229,10 @@ Por padrão, a propriedade [`SnapPointsType`](xref:Xamarin.Forms.ItemsLayout.Sna
 
 ### <a name="snap-points-alignment"></a>Alinhamento dos pontos de ajuste
 
-A enumeração de [`SnapPointsAlignment`](xref:Xamarin.Forms.SnapPointsAlignment) define os membros `Start`, `Center` e `End`.
+A enumeração de [`SnapPointsAlignment`](xref:Xamarin.Forms.SnapPointsAlignment) define os membros `Start`, `Center`e `End`.
 
 > [!IMPORTANT]
-> O valor da propriedade [`SnapPointsAlignment`](xref:Xamarin.Forms.ItemsLayout.SnapPointsAlignment) só é respeitado quando a propriedade [`SnapPointsType`](xref:Xamarin.Forms.ItemsLayout.SnapPointsType) é definida como `Mandatory` ou `MandatorySingle`.
+> O valor da propriedade [`SnapPointsAlignment`](xref:Xamarin.Forms.ItemsLayout.SnapPointsAlignment) só é respeitado quando a propriedade [`SnapPointsType`](xref:Xamarin.Forms.ItemsLayout.SnapPointsType) é definida como `Mandatory`ou `MandatorySingle`.
 
 #### <a name="start"></a>Início
 
