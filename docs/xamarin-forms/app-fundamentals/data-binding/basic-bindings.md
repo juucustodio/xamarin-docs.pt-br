@@ -9,11 +9,11 @@ ms.author: dabritch
 ms.date: 01/22/2019
 ms.custom: video
 ms.openlocfilehash: 2227e2bd47a5b4960d28be67bac7947a4fb57a93
-ms.sourcegitcommit: 191f1f3b13a14e2afadcb95126c5f653722f126f
-ms.translationtype: MT
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/30/2019
-ms.locfileid: "75545655"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78912623"
 ---
 # <a name="xamarinforms-basic-bindings"></a>Associações básicas do Xamarin.Forms
 
@@ -24,7 +24,7 @@ A associação de dados do Xamarin.Forms vincula um par de propriedades entre do
 - O *destino* é o objeto (e a propriedade) no qual a associação de dados é definida.
 - A *origem* é o objeto (e propriedade) referenciado pela associação de dados.
 
-Essa distinção, às vezes, pode ser um pouco confusa: no caso mais simples, os dados fluem da origem para o destino, o que significa que o valor da propriedade de destino é definido pelo valor da propriedade da origem. No entanto, em alguns casos, os dados podem fluir do destino para a origem ou em ambas os sentidos. Para evitar confusão, tenha em mente que o destino é sempre o objeto no qual a associação de dados está definida, mesmo se estiver fornecendo os dados em vez de recebendo.
+Às vezes, essa distinção pode ser um pouco confusa: No caso mais simples, os dados fluem da origem para o destino, o que significa que o valor da propriedade de destino é definido pelo valor da propriedade da origem. No entanto, em alguns casos, os dados podem fluir do destino para a origem ou em ambas os sentidos. Para evitar confusão, tenha em mente que o destino é sempre o objeto no qual a associação de dados está definida, mesmo se estiver fornecendo os dados em vez de recebendo.
 
 ## <a name="bindings-with-a-binding-context"></a>Associações com um contexto de associação
 
@@ -87,7 +87,7 @@ Essa regra implica que o objeto de destino deve ser uma instância de uma classe
 
 Não há uma regra para a propriedade de origem, que é especificada como uma cadeia de caracteres. Internamente, a reflexão é usada para acessar a propriedade real. Nesse caso específico, no entanto, a propriedade `Value` também tem suporte de uma propriedade associável.
 
-O código pode ser simplificado um pouco: a propriedade associável `RotationProperty` é definida por `VisualElement`e herdada por `Label` e também por `ContentPage`, portanto, o nome de classe não é necessário na chamada `SetBinding`:
+O código pode ser um pouco simplificado: A propriedade associável `RotationProperty` é definida por `VisualElement` e herdada por `Label` e também por `ContentPage`, portanto, o nome de classe não é necessário na chamada `SetBinding`:
 
 ```csharp
 label.SetBinding(RotationProperty, "Value");
@@ -97,7 +97,7 @@ No entanto, incluir o nome de classe é um bom lembrete do objeto de destino.
 
 Ao manipular `Slider`, o `Label` gira de acordo:
 
-[![Vinculação de código básica](basic-bindings-images/basiccodebinding-small.png "Vinculação de código básica")](basic-bindings-images/basiccodebinding-large.png#lightbox "Vinculação de código básica")
+[![Associação de código básica](basic-bindings-images/basiccodebinding-small.png "Associação de código básica")](basic-bindings-images/basiccodebinding-large.png#lightbox "Associação de código básica")
 
 A página **Associação de XAML básica** é idêntica à **Associação de código básica**, exceto que ela define a associação de dados inteira em XAML:
 
@@ -138,7 +138,7 @@ Mas isso não é certo. Essa marcação define a propriedade `BindingContext` pa
 
 Observe que a propriedade de origem é especificada com a propriedade [`Path`](xref:Xamarin.Forms.Xaml.BindingExtension.Path) do `BindingExtension`, que corresponde à propriedade [`Path`](xref:Xamarin.Forms.Binding.Path) da classe [`Binding`](xref:Xamarin.Forms.Binding).
 
-A marcação mostrada na página **Associação de XAML básica** pode ser simplificada: extensões de marcação XAML, como `x:Reference` e `Binding`, podem ter atributos de *propriedade de conteúdo* definidos, que, para extensões de marcação XAML, significa que o nome da propriedade não precisa aparecer. A propriedade `Name` é a propriedade de conteúdo do `x:Reference`, e a propriedade `Path` é a propriedade de conteúdo do `Binding`, o que significa que elas podem ser eliminadas das expressões:
+A marcação mostrada na página **Associação de XAML básica** pode ser simplificada: As extensões de marcação XAML, como `x:Reference` e `Binding`, podem ter atributos de *propriedade de conteúdo* definidos, o que, para extensões de marcação XAML, significa que o nome da propriedade não precisa aparecer. A propriedade `Name` é a propriedade de conteúdo do `x:Reference`, e a propriedade `Path` é a propriedade de conteúdo do `Binding`, o que significa que elas podem ser eliminadas das expressões:
 
 ```xaml
 <Label Text="TEXT"
@@ -193,11 +193,11 @@ O construtor `Binding` tem seis parâmetros, portanto o parâmetro `source` é e
 
 Executar este programa pode ser um pouco surpreendente:
 
-[![Associação de código alternativo](basic-bindings-images/alternativecodebinding-small.png "Associação de código alternativo")](basic-bindings-images/alternativecodebinding-large.png#lightbox "Associação de código alternativo")
+[![Associação de código alternativa](basic-bindings-images/alternativecodebinding-small.png "Associação de código alternativa")](basic-bindings-images/alternativecodebinding-large.png#lightbox "Associação de código alternativa")
 
 A tela do iOS à esquerda mostra como a tela aparece quando a página é exibida pela primeira vez. Onde está o `Label`?
 
-O problema é que o `Slider` tem um valor inicial de 0. Isso faz com que a propriedade `Scale` do `Label` também seja definida como 0, substituindo o valor padrão de 1. Isso resulta no `Label` sendo inicialmente invisível. Como demonstra a captura de tela do Android, você pode manipular o `Slider` para fazer com que os `Label` apareçam novamente, mas sua desexibição inicial é desconcerta.
+O problema é que o `Slider` tem um valor inicial de 0. Isso faz com que a propriedade `Scale` do `Label` também seja definida como 0, substituindo o valor padrão de 1. Isso resulta no `Label` sendo inicialmente invisível. Como demonstram as capturas de tela do Android, é possível manipular o `Slider` para fazer o `Label` aparecer novamente, mas o desaparecimento inicial dele é desconcertante.
 
 Você descobrirá no [próximo artigo](binding-mode.md) como evitar esse problema ao inicializar `Slider` do valor padrão da propriedade `Scale`.
 
@@ -255,7 +255,7 @@ Embora as extensões de marcação XAML geralmente sejam delimitadas por chaves,
 </Label>
 ```
 
-Agora as propriedades `Source` e `Path` são os atributos XAML regulares: os valores aparecem entre aspas e os atributos não são separados por uma vírgula. A extensão de marcação `x:Reference` também pode se tornar um elemento de objeto:
+Agora as propriedades `Source` e `Path` são atributos normais de XAML: Os valores aparecem entre aspas e os atributos não são separados por uma vírgula. A extensão de marcação `x:Reference` também pode se tornar um elemento de objeto:
 
 ```xaml
 <Label Text="TEXT"
@@ -329,7 +329,7 @@ A propriedade `BindingContext` do `StackLayout` é definida para o objeto `slide
 
 No [próximo artigo](binding-mode.md), você verá como o *modo de associação* pode alterar o fluxo de dados entre objetos de origem e destino.
 
-## <a name="related-links"></a>Links Relacionados
+## <a name="related-links"></a>Links relacionados
 
 - [Demonstrações de associação de dados (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 - [Capítulo de associação de dados do catálogo de Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)
