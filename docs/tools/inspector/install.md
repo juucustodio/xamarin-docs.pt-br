@@ -7,23 +7,23 @@ author: davidortinau
 ms.author: daortin
 ms.date: 06/19/2018
 ms.openlocfilehash: 19c4a15fb2490c7bace4798b0cb8e062b1379a04
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73029691"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78917585"
 ---
 # <a name="inspector-installation-and-requirements"></a>Instalação e requisitos do Inspetor
 
 ## <a name="download-and-installation"></a>Download e instalação
 
-# <a name="windowstabwindows"></a>[Windows](#tab/windows)
+# <a name="windows"></a>[Windows](#tab/windows)
 
 1. Baixe e instale o [Visual Studio Enterprise](https://visualstudio.microsoft.com/vs/) e selecione o **desenvolvimento móvel com** carga de trabalho do .net.
 1. [Entre](https://docs.microsoft.com/visualstudio/ide/signing-in-to-visual-studio) para habilitar sua assinatura do Enterprise.
 1. [Inspecione](~/tools/inspector/inspect.md) seu próprio aplicativo!
 
-# <a name="macostabmacos"></a>[macOS](#tab/macos)
+# <a name="macos"></a>[macOS](#tab/macos)
 
 1. Baixe e instale o [Visual Studio para Mac](https://visualstudio.microsoft.com/vs/mac/).
 1. [Entre](https://docs.microsoft.com/visualstudio/mac/activation) para habilitar sua assinatura do Enterprise.
@@ -33,7 +33,7 @@ ms.locfileid: "73029691"
 
 ## <a name="requirements"></a>Requisitos
 
-### <a name="supported-operating-systems"></a>Supported Operating Systems
+### <a name="supported-operating-systems"></a>Sistemas operacionais com suporte
 
 - **Mac** -OS X 10,11 ou superior
 - **Windows** -Windows 7 ou superior (com o Internet Explorer 11 ou superior e o .NET 4.6.1 ou superior)
@@ -49,7 +49,7 @@ A inspeção do aplicativo ao vivo está disponível para clientes empresariais.
 
 ### <a name="supported-app-platforms"></a>Plataformas de aplicativos com suporte
 
-|Plataforma de aplicativo|Suporte a IDE|Anotações|
+|Plataforma de aplicativo|Suporte a IDE|Observações|
 |--- |--- |--- |
 |Mac|Somente com suporte no Visual Studio para Mac|
 |iOS|Com suporte no Visual Studio 2017 e Visual Studio para Mac| O comportamento do vinculador deve ser definido como **não vincular** (em opções do projeto de **compilação do IOS** ) |
@@ -58,7 +58,7 @@ A inspeção do aplicativo ao vivo está disponível para clientes empresariais.
 
 <a name="reporting-bugs" />
 
-## <a name="reporting-bugs"></a>Relatando bugs
+## <a name="reporting-bugs"></a>Relatar bugs
 
 Os bugs devem ser relatados diretamente por meio do Visual Studio:
 
