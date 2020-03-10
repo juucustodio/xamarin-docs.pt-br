@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/02/2017
-ms.openlocfilehash: 4ccd22945caa9d81970867e0b037069389538b88
-ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
+ms.openlocfilehash: 67b760a58628950caa33fe9009c5023c8696691c
+ms.sourcegitcommit: 60d2243809d8e980fca90b9f771e72f8c0e64d71
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "78292026"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "78946311"
 ---
 # <a name="walkthrough-binding-an-ios-objective-c-library"></a>Walkthrough: associando uma biblioteca de Objective do iOS-C
 
@@ -420,10 +420,13 @@ A partir do acima, podemos ver que temos o SDK do `iphoneos9.3` instalado em nos
 Insira o seguinte comando no aplicativo de terminal:
 
 ```bash
-sharpie bind --output=InfColorPicker --namespace=InfColorPicker --sdk=[iphone-os] [full-path-to-project]/InfColorPicker/InfColorPicker/*.h
+sharpie bind --output=InfColorPicker --namespace=InfColorPicker --sdk=[iphone-os] -scope [full-path-to-project]/InfColorPicker/InfColorPicker [full-path-to-project]/InfColorPicker/InfColorPicker/*.h
 ```
 
-Em que `[full-path-to-project]` é o caminho completo para o diretório em que o arquivo de projeto do **InfColorPicker** Xcode está localizado em nosso computador e [iPhone-os] é o SDK do IOS que instalamos, conforme observado pelo comando `sharpie xcode -sdks`. Observe que, neste exemplo, passamos **\*. h** como um parâmetro, que inclui *todos* os arquivos de cabeçalho nesse diretório. normalmente, você não deve fazer isso, mas, em vez disso, ler atentamente os arquivos de cabeçalho para localizar o arquivo **. h** de nível superior que faz referência a todos os outros arquivos relevantes e apenas passá-lo para a nitidez objetiva.
+Em que `[full-path-to-project]` é o caminho completo para o diretório em que o arquivo de projeto do **InfColorPicker** Xcode está localizado em nosso computador e [iPhone-os] é o SDK do IOS que instalamos, conforme observado pelo comando `sharpie xcode -sdks`. Observe que, neste exemplo, passamos **\*. h** como um parâmetro, que inclui *todos* os arquivos de cabeçalho nesse diretório. normalmente, você não deve fazer isso, mas, em vez disso, ler atentamente os arquivos de cabeçalho para localizar o arquivo **. h** de nível superior que faz referência a todos os outros arquivos relevantes e apenas passá-lo para a nitidez objetiva. 
+
+> [!TIP] 
+> Para o argumento `-scope`, passe a pasta que tem os cabeçalhos que você deseja associar. Sem o argumento `-scope`, a nitidez do objetivo tentará gerar associações para todos os cabeçalhos do SDK do iOS que são importados, por exemplo, `#import <UIKit.h>`, resultando em um grande arquivo de definições que provavelmente gerará erros durante a compilação do projeto de associação. Com o conjunto de argumentos `-scope`, a nitidez do objetivo não gerará associações para nenhum cabeçalho fora da pasta com escopo. 
 
 A seguinte [saída](walkthrough-images/os05.png) será gerada no terminal:
 

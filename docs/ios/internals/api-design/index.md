@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
 ms.openlocfilehash: a2435b30b7d5b468fca6c55d295c87b9a0d20652
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.sourcegitcommit: 60d2243809d8e980fca90b9f771e72f8c0e64d71
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "78292927"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "78915183"
 ---
 # <a name="xamarinios-api-design"></a>Design de API do Xamarin. iOS
 
@@ -257,7 +257,7 @@ public partial class void MyView : UIView {
 }
 ```
 
-#### <a name="delegates"></a>Delega
+#### <a name="delegates"></a>Delegados
 
 Objective-C C# e tem significados diferentes para o delegado de palavra em cada idioma.
 
@@ -283,7 +283,7 @@ Por exemplo, considere a classe UIWebView. Isso é expedido para uma instância 
 
 ##### <a name="via-events"></a>Por meio de eventos
 
-Para muitos tipos, o Xamarin. iOS criará automaticamente um delegado apropriado que encaminhará as chamadas C# de `UIWebViewDelegate` para eventos. Para `UIWebView`:
+Para muitos tipos, o Xamarin. iOS criará automaticamente um delegado apropriado que encaminhará as chamadas C# de `UIWebViewDelegate` para eventos. Para o `UIWebView`:
 
 - O método webViewDidStartLoad é mapeado para o evento [UIWebView. LoadStarted](xref:UIKit.UIWebView.LoadStarted) .
 - O método webViewDidFinishLoad é mapeado para o evento [UIWebView. Loadfinalized](xref:UIKit.UIWebView.LoadFinished) .

@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 02/14/2020
 ms.openlocfilehash: 09bcb49db7f257a415518b259672ca8e776cdbc4
-ms.sourcegitcommit: 5d22f37dfc358678df52a4d17c57261056a72cb7
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "78291941"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78917275"
 ---
 # <a name="xamarinforms-views"></a>Modos de exibição do xamarin. Forms
 
@@ -24,14 +24,14 @@ As exibições são objetos de interface do usuário, como rótulos, botões e c
 
 ## <a name="views-for-presentation"></a>Exibições para apresentação
 
-### <a name="label"></a>Rótulo
+### <a name="label"></a>Rotular
 
 |     |     |
 | --- | --- |
 | [`Label`](xref:Xamarin.Forms.Label) exibe cadeias de texto de linha única ou blocos de texto de várias linhas, com a formatação constante ou variável. Defina a propriedade [`Text`](xref:Xamarin.Forms.Label.Text) como uma cadeia de caracteres para formatação constante ou defina a propriedade [`FormattedText`](xref:Xamarin.Forms.Label.FormattedText) como um objeto [`FormattedString`](xref:Xamarin.Forms.FormattedString) para formatação de variável.<br /><br />[Documentação da API](xref:Xamarin.Forms.Label) / [guia](~/xamarin-forms/user-interface/text/label.md) / [exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text) | [![Exemplo de rótulo](views-images/Label.png "Exemplo de rótulo")](views-images/Label-Large.png#lightbox "Exemplo de rótulo")<br /> código desta página / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/LabelDemoPage.xaml) [ C# ](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/LabelDemoPage.cs) |
 |     |     |
 
-### <a name="image"></a>Imagem
+### <a name="image"></a>Image
 
 |     |     |
 | --- | --- |
@@ -45,7 +45,7 @@ As exibições são objetos de interface do usuário, como rótulos, botões e c
 | [`BoxView`](xref:Xamarin.Forms.BoxView) exibe um retângulo sólido colorido pela propriedade [`Color`](xref:Xamarin.Forms.BoxView.Color) . `BoxView` tem uma solicitação de tamanho padrão de 40x40. Para outros tamanhos, atribua as propriedades [`WidthRequest`](xref:Xamarin.Forms.VisualElement.WidthRequest) e [`HeightRequest`](xref:Xamarin.Forms.VisualElement.HeightRequest) .<br /><br />[Documentação da API](xref:Xamarin.Forms.BoxView) / [guia](~/xamarin-forms/user-interface/boxview.md) / [amostra 1](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/boxview-basicboxview), [2](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/boxview-textdecoration), [3](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/boxview-listviewcolors/), [4](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/boxview-gameoflife), [5](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/boxview-dotmatrixclock)e [6](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/boxview-boxviewclock) | [![Exemplo de BoxView](views-images/BoxView.png "Exemplo de BoxView")](views-images/BoxView-Large.png#lightbox "Exemplo de BoxView")<br />código desta página / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/BoxViewDemoPage.xaml) [ C# ](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/BoxViewDemoPage.cs) |
 |     |     |
 
-### <a name="webview"></a>Exibição da Web
+### <a name="webview"></a>WebView
 
 |     |     |
 | --- | --- |
@@ -59,7 +59,7 @@ As exibições são objetos de interface do usuário, como rótulos, botões e c
 | [`OpenGLView`](xref:Xamarin.Forms.OpenGLView) exibe gráficos OpenGL em projetos Ios e Android. Não há nenhum suporte para a plataforma Universal do Windows. Os projetos iOS e Android exigem uma referência ao assembly **OpenTK-1,0** ou ao assembly da versão 1.0.0.0 do **OpenTK** . `OpenGLView` é mais fácil de usar em um projeto compartilhado; Se usado em uma biblioteca de .NET Standard, um serviço de dependência também será necessário (conforme mostrado no código de exemplo).<br /><br />Esse é o único recurso de gráficos que é criado no Xamarin. Forms, mas um aplicativo Xamarin. Forms também pode renderizar gráficos usando [`SkiaSharp`](~/xamarin-forms/user-interface/graphics/skiasharp/index.md)ou [`UrhoSharp`](~/xamarin-forms/user-interface/graphics/urhosharp.md).<br /><br />[Documentação da API](xref:Xamarin.Forms.OpenGLView)<br /><br /> | [![Exemplo de OpenGLView](views-images/OpenGLView.png "Exemplo de OpenGLView")](views-images/OpenGLView-Large.png#lightbox "Exemplo de OpenGLView")<br />código para esta página / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/OpenGLViewDemoPage.xaml) com [code-behind](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/OpenGLViewDemoPage.xaml.cs) [ C# ](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/OpenGLViewDemoPage.cs) |
 |     |     |
 
-### <a name="map"></a>Mapeamento
+### <a name="map"></a>Mapa
 
 |     |     |
 | --- | --- |
@@ -133,7 +133,7 @@ As exibições são objetos de interface do usuário, como rótulos, botões e c
 | [`Stepper`](xref:Xamarin.Forms.Stepper) permite que o usuário selecione um valor de `double` de um intervalo de valores incrementais especificado com as propriedades [`Minimum`](xref:Xamarin.Forms.Stepper.Minimum), [`Maximum`](xref:Xamarin.Forms.Stepper.Maximum)e [`Increment`](xref:Xamarin.Forms.Stepper.Increment) .<br /><br />[Documentação da API](xref:Xamarin.Forms.Stepper)  / [guia](~/xamarin-forms/user-interface/stepper.md) / [exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-stepperdemos) | [![Exemplo de stepper](views-images/Stepper.png "Exemplo de stepper")](views-images/Stepper-Large.png#lightbox "Exemplo de stepper")<br />código desta página / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/StepperDemoPage.xaml) [ C# ](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/StepperDemoPage.cs) |
 |     |     |
 
-### <a name="switch"></a>Opção
+### <a name="switch"></a>Alternar
 
 |     |     |
 | --- | --- |

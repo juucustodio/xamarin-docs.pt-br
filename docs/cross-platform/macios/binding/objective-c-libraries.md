@@ -7,11 +7,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/06/2018
 ms.openlocfilehash: 6841e94ad13357c51e6ccf59e35c659dfb9954aa
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73016287"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78915196"
 ---
 # <a name="binding-objective-c-libraries"></a>Associando bibliotecas de Objective-C
 
@@ -34,14 +34,14 @@ Você pode usar o projeto de [exemplo de associação do IOS](https://github.com
 
 ## <a name="getting-started"></a>Introdução
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
 A maneira mais fácil de criar uma associação é criar um projeto de associação do Xamarin. iOS.
 Você pode fazer isso em Visual Studio para Mac selecionando o tipo de projeto, biblioteca do **iOS > > biblioteca de associações**:
 
 [![](objective-c-libraries-images/00-sml.png "Do this from Visual Studio for Mac by selecting the project type, iOS Library Bindings Library")](objective-c-libraries-images/00.png#lightbox)
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 A maneira mais fácil de criar uma associação é criar um projeto de associação do Xamarin. iOS.
 Você pode fazer isso no Visual Studio no Windows selecionando o tipo de projeto, o **visual C# > Ios > biblioteca de associações (Ios)** :
@@ -674,7 +674,7 @@ Consulte a documentação do [`[BindAs]`](~/cross-platform/macios/binding/bindin
 
 ### <a name="binding-notifications"></a>Notificações de associação
 
-As notificações são mensagens que são postadas no `NSNotificationCenter.DefaultCenter` e são usadas como um mecanismo para transmitir mensagens de uma parte do aplicativo para outra. Os desenvolvedores se inscrevem em notificações normalmente usando o método [addobservar](xref:Foundation.NSNotificationCenter) do [NSNotificationCenter](xref:Foundation.NSNotificationCenter.AddObserver(Foundation.NSString,System.Action{Foundation.NSNotification})). Quando um aplicativo publica uma mensagem no centro de notificações, ele normalmente contém uma carga armazenada no dicionário [NSNotification. UserInfo](xref:Foundation.NSNotification.UserInfo) . Esse dicionário é de tipo fraco e a obtenção de informações sobre ele é propenso a erros, pois os usuários normalmente precisam ler na documentação quais chaves estão disponíveis no dicionário e os tipos de valores que podem ser armazenados no dicionário. Às vezes, a presença de chaves também é usada como um booliano.
+As notificações são mensagens que são postadas no `NSNotificationCenter.DefaultCenter` e são usadas como um mecanismo para transmitir mensagens de uma parte do aplicativo para outra. Os desenvolvedores se inscrevem em notificações normalmente usando o método [Addobservar](xref:Foundation.NSNotificationCenter.AddObserver(Foundation.NSString,System.Action{Foundation.NSNotification})) do [NSNotificationCenter](xref:Foundation.NSNotificationCenter). Quando um aplicativo publica uma mensagem no centro de notificações, ele normalmente contém uma carga armazenada no dicionário [NSNotification. UserInfo](xref:Foundation.NSNotification.UserInfo) . Esse dicionário é de tipo fraco e a obtenção de informações sobre ele é propenso a erros, pois os usuários normalmente precisam ler na documentação quais chaves estão disponíveis no dicionário e os tipos de valores que podem ser armazenados no dicionário. Às vezes, a presença de chaves também é usada como um booliano.
 
 O gerador de associação do Xamarin. iOS fornece suporte para os desenvolvedores ligarem notificações. Para fazer isso, defina o [`[Notification]`](~/cross-platform/macios/binding/binding-types-reference.md#NotificationAttribute)
 o atributo em uma propriedade que também foi marcada com um [`[Field]`](~/cross-platform/macios/binding/binding-types-reference.md#FieldAttribute)
@@ -779,7 +779,7 @@ interface MyUIViewExtension {
 }
 ```
 
-Acima, você criará um `MyUIViewExtension` uma classe que contém o método de extensão `MakeBackgroundRed`.  Isso significa que agora você pode chamar "MakeBackgroundRed" em qualquer subclasse `UIView`, dando a você a mesma funcionalidade que obteria no Objective-C. Em alguns outros casos, as categorias são usadas para não estender uma classe de sistema, mas para organizar a funcionalidade, puramente para fins de decoração.  Assim:
+Acima, você criará um `MyUIViewExtension` uma classe que contém o método de extensão `MakeBackgroundRed`.  Isso significa que agora você pode chamar "MakeBackgroundRed" em qualquer subclasse `UIView`, dando a você a mesma funcionalidade que obteria no Objective-C. Em alguns outros casos, as categorias são usadas para não estender uma classe de sistema, mas para organizar a funcionalidade, puramente para fins de decoração.  Dessa forma:
 
 ```csharp
 @interface SocialNetworking (Twitter)

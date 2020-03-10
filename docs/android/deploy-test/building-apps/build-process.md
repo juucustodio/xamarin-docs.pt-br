@@ -6,20 +6,20 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/06/2020
-ms.openlocfilehash: 883a6c3edc0c4e0bf6eac92b1766ec18ac114f8c
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.openlocfilehash: bce2b6f29129894ed446100c87b5e92d3572ed2f
+ms.sourcegitcommit: 60d2243809d8e980fca90b9f771e72f8c0e64d71
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78911531"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "78946268"
 ---
 # <a name="build-process"></a>Processo de build
 
-## <a name="overview"></a>Visão geral
+## <a name="overview"></a>Visão Geral
 
 O processo de build do Xamarin.Android é responsável por juntar tudo isto: [gerar `Resource.designer.cs`](~/android/internals/api-design.md), dar suporte a `AndroidAsset`, `AndroidResource` e outras [ações de build](#Build_Actions), gerar [wrappers que podem ser chamados pelo Android](~/android/platform/java-integration/android-callable-wrappers.md) e gerar um `.apk` para execução em dispositivos Android.
 
-## <a name="application-packages"></a>Pacotes de Aplicativos
+## <a name="application-packages"></a>Pacotes de aplicativos
 
 Em termos gerais, há dois tipos de pacotes de aplicativos do Android (arquivos `.apk`) que o sistema de build do Xamarin.Android pode gerar:
 
@@ -138,7 +138,7 @@ Propriedades do MSBuild controlam o comportamento dos destinos. Elas são especi
 
 - **DebugSymbols** &ndash; um valor booliano que determina se o pacote Android é *depurável*, em combinação com a propriedade `$(DebugType)`. Um pacote depurável contém símbolos de depuração, define o atributo `//application/@android:debuggable` para `true` e adiciona automaticamente a permissão `INTERNET` para um depurador possa ser anexado ao processo. Um aplicativo será depurável se `DebugSymbols` for `True` *e* `DebugType` for a cadeia de caracteres ou `Full`vazia.
 
-- **Debugtype** &ndash; especifica o [tipo de símbolos de depuração](https://docs.microsoft.com/visualstudio/msbuild/csc-task) a serem gerados como parte da compilação, o que também afeta se o aplicativo é depurável. Os valores possíveis incluem:
+- **Debugtype** &ndash; especifica o [tipo de símbolos de depuração](https://docs.microsoft.com/visualstudio/msbuild/csc-task) a serem gerados como parte da compilação, o que também afeta se o aplicativo é depurável. Os possíveis valores incluem:
 
   - **Full**: todos os símbolos são gerados. Se a propriedade do MSBuild `DebugSymbols` também é `True`, o pacote do aplicativo é depurável.
 
@@ -231,7 +231,7 @@ As [Propriedades de Assinatura](#Signing_Properties) também são relevantes ao 
 
   Essa propriedade só será relevante se `$(AndroidPackageFormat)` estiver definida como `aab`.
 
-  Adicionado no Xamarin. Android 10,2.
+  Adicionado no Xamarin. Android 10,3.
 
   [bundle-config-format]: https://developer.android.com/studio/build/building-cmdline#bundleconfig
 
@@ -483,14 +483,14 @@ As [Propriedades de Assinatura](#Signing_Properties) também são relevantes ao 
 
 - **AndroidSupportedAbis** &ndash; uma propriedade de cadeia de caracteres que contém uma lista delimitada por ponto-e-vírgula (`;`) de abis que deve ser incluída na `.apk`.
 
-  Os valores suportados incluem:
+  Os valores compatíveis incluem:
 
   - `armeabi-v7a`
   - `x86`
   - `arm64-v8a`: requer o Xamarin.Android 5.1 e posterior.
   - `x86_64`: requer o Xamarin.Android 5.1 e posterior.
 
-- **AndroidTlsProvider** &ndash; um valor de cadeia de caracteres que especifica qual provedor TLS deve ser usado em um aplicativo. Os valores possíveis são:
+- **AndroidTlsProvider** &ndash; um valor de cadeia de caracteres que especifica qual provedor TLS deve ser usado em um aplicativo. Os possíveis valores são:
 
   - Redefinição/a cadeia de caracteres vazia: no Xamarin. Android 7,3 e superior, isso é equivalente a `btls`.
 
@@ -650,7 +650,7 @@ As [Propriedades de Assinatura](#Signing_Properties) também são relevantes ao 
 
 As seguintes propriedades de MSBuild são usadas com [projetos de associação](~/android/platform/binding-java-library/index.md):
 
-- **AndroidClassParser** &ndash; uma propriedade de cadeia de caracteres que controla como `.jar` arquivos são analisados. Os valores possíveis incluem:
+- **AndroidClassParser** &ndash; uma propriedade de cadeia de caracteres que controla como `.jar` arquivos são analisados. Os possíveis valores incluem:
 
   - **class-parse**: usa `class-parse.exe` para analisar o código de bytes Java diretamente, sem a assistência de uma JVM. Esse valor é experimental.
 
@@ -668,7 +668,7 @@ As seguintes propriedades de MSBuild são usadas com [projetos de associação](
 
   O valor padrão será alterado em uma versão futura.
 
-- **AndroidCodegenTarget** &ndash; uma propriedade de cadeia de caracteres que controla o Abi de destino de geração de código. Os valores possíveis incluem:
+- **AndroidCodegenTarget** &ndash; uma propriedade de cadeia de caracteres que controla o Abi de destino de geração de código. Os possíveis valores incluem:
 
   - **XamarinAndroid**: usa a API de associação JNI presente desde o mono para Android 1,0. Assemblies de associação criados com Xamarin.Android 5.0 ou posterior podem ser executados apenas no Xamarin.Android 5.0 ou posterior (adições de API/ABI), mas o *código-fonte* é compatível com o das versões anteriores do produto.
 
@@ -684,7 +684,7 @@ As seguintes propriedades de MSBuild são usadas com [projetos de associação](
 
     O valor padrão é `XAJavaInterop1`.
 
-### <a name="resource-properties"></a>Propriedades do recurso
+### <a name="resource-properties"></a>Propriedades de recurso
 
 Propriedades do recurso controlam a geração do arquivo `Resource.designer.cs`, que fornece acesso a recursos do Android.
 

@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
 ms.openlocfilehash: 0af85c1c27d2b329d81cc680a0fc4c075d4a86dd
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73028603"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78915403"
 ---
 # <a name="introduction-to-fastlane-for-ios"></a>Introdução ao fastlane para iOS
 
