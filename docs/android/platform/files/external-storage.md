@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 07/23/2018
 ms.openlocfilehash: 96b0d6a00c7825939b1f89ed63e3e5559ca4ef59
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "73020477"
 ---
 # <a name="external-storage"></a>Armazenamento externo
@@ -102,7 +102,7 @@ Cada uma dessas duas tarefas será discutida abaixo.
 
 A primeira etapa antes de gravar no armazenamento externo é verificar se ele é legível ou gravável. A propriedade `Android.OS.Environment.ExternalStorageState` mantém uma cadeia de caracteres que identifica o estado do armazenamento externo. Essa propriedade retornará uma cadeia de caracteres que representa o estado. Esta tabela é uma lista dos valores de `ExternalStorageState` que podem ser retornados por `Environment.ExternalStorageState`:
 
-| ExternalStorageState | Descrição  |
+| ExternalStorageState | DESCRIÇÃO  |
 |----------------------|---|
 | MediaBadRemoval      | A mídia foi removida abruptamente sem ser corretamente desmontada. |
 | MediaChecking        | A mídia está presente, mas está passando por uma verificação de disco.  |
@@ -137,13 +137,13 @@ Todos os aplicativos Android devem declarar uma das duas permissões para o arma
 > [!NOTE]
 > Se o usuário conceder `WRITE_EXTERNAL_STORAGE`, `READ_EXTERNAL_STORAGE` também será concedido implicitamente. Não é necessário solicitar ambas as permissões em **AndroidManifest. xml**.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 As permissões também podem ser adicionadas usando a guia **manifesto do Android** das **Propriedades da solução**:
 
 ![Gerenciador de Soluções-permissões necessárias para o Visual Studio](./images/required-permissions.w157.png)
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
 As permissões também podem ser adicionadas usando a guia **manifesto do Android** do **painel Propriedades da solução**:
 

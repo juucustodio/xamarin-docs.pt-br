@@ -8,12 +8,12 @@ author: davidortinau
 ms.author: daortin
 ms.custom: video
 ms.date: 03/05/2020
-ms.openlocfilehash: 0947f31700310b7da80dfa412c18585962a337ac
-ms.sourcegitcommit: 60d2243809d8e980fca90b9f771e72f8c0e64d71
+ms.openlocfilehash: f0612ca53bc54cf4b15982b7743c64b1997a4455
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 03/10/2020
-ms.locfileid: "78946292"
+ms.locfileid: "79031074"
 ---
 # <a name="automatic-provisioning-for-xamarinios"></a>Provisionamento automático para o Xamarin.iOS
 
@@ -90,7 +90,7 @@ No Visual Studio para Mac e no Visual Studio 2019 (versão 16,5 ou superior), o 
 
 Em alguns casos, os direitos do aplicativo exigem uma ID do Aplicativo explícita. Os seguintes direitos não dão suporte a IDs de Aplicativo curinga:
 
-- Grupos de Aplicativos
+- Grupos de aplicativo
 - Domínios Associados
 - Apple Pay
 - Game Center
@@ -99,14 +99,14 @@ Em alguns casos, os direitos do aplicativo exigem uma ID do Aplicativo explícit
 - Ponto de acesso
 - Compra no aplicativo
 - Multipath
-- NFC
+- {1&gt;NFC&lt;1}
 - VPN pessoal
 - Notificações por Push
-- Configuração de Acessório sem Fio
+- Configuração de acessório sem fio
 
 Se seu aplicativo usar um desses direitos, o Visual Studio tentará criar uma ID de aplicativo explícita (em vez de uma curinga).
 
-## <a name="troubleshoot"></a>Solução de problemas 
+## <a name="troubleshoot"></a>Solucionar problemas 
 
 - Pode levar várias horas para que uma nova conta de desenvolvedor da Apple seja aprovada. Você não poderá habilitar o provisionamento automático até que a conta tenha sido aprovada.
 - Se o processo de provisionamento automático falhar com a mensagem de erro `Authentication Service Is Unavailable`, entre na [App Store Connect](https://appstoreconnect.apple.com/) ou [appleid.Apple.com](https://appleid.apple.com) para verificar se você aceitou os contratos de serviço mais recentes.
@@ -118,9 +118,3 @@ Se seu aplicativo usar um desses direitos, o Visual Studio tentará criar uma ID
 - [Distribuição de aplicativo](~/ios/deploy-test/app-distribution/index.md)
 - [Solução de problemas](~/ios/deploy-test/troubleshooting.md)
 - [Apple – Guia de distribuição de aplicativo](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/Introduction/Introduction.html)
-
-## <a name="related-video"></a>Vídeo relacionados
-
-> [!Video https://channel9.msdn.com/Shows/XamarinShow/Snack-Pack-Simplified-iOS-Provisioning-in-Visual-Studio-with-fastlane/player]
-
-[!include[](~/essentials/includes/xamarin-show-essentials.md)]

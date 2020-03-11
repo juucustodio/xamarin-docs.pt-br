@@ -8,32 +8,32 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2016
 ms.openlocfilehash: 80f332e45d6c46ad49543923e85cbb2eceadb378
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70767592"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "78911461"
 ---
 # <a name="passing-arguments-in-xaml"></a>Passando argumentos em XAML
 
-[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-passingconstructorarguments)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-passingconstructorarguments)
 
-_Este artigo demonstra como usar os atributos XAML que podem ser usados para passar argumentos para o construtor não padrão, para chamar métodos de fábrica e para especificar o tipo de um argumento genérico._
+_Este artigo demonstra como usar os atributos XAML que podem ser usados para passar argumentos para construtores não padrão, para chamar métodos de fábrica e para especificar o tipo de um argumento genérico._
 
 ## <a name="overview"></a>Visão geral
 
-Ele geralmente é necessário instanciar objetos com construtores que requerem argumentos, ou chamando um método de criação estáticos. Isso pode ser obtido em XAML usando o `x:Arguments` e `x:FactoryMethod` atributos:
+Ele geralmente é necessário instanciar objetos com construtores que requerem argumentos, ou chamando um método de criação estáticos. Isso pode ser obtido em XAML usando os atributos `x:Arguments` e `x:FactoryMethod`:
 
-- O `x:Arguments` atributo é usado para especificar argumentos de construtor para um construtor não padrão ou para uma declaração de objeto do método de fábrica. Para obter mais informações, consulte [passar argumentos de construtor](#constructor_arguments).
-- O `x:FactoryMethod` atributo é usado para especificar um método de fábrica que pode ser usado para inicializar um objeto. Para obter mais informações, consulte [chamando métodos de fábrica](#factory_methods).
+- O atributo `x:Arguments` é usado para especificar argumentos de construtor para um construtor não padrão ou para uma declaração de objeto de método de fábrica. Para obter mais informações, consulte [passando argumentos de Construtor](#constructor_arguments).
+- O atributo `x:FactoryMethod` é usado para especificar um método de fábrica que pode ser usado para inicializar um objeto. Para obter mais informações, consulte [chamando métodos de fábrica](#factory_methods).
 
-Além disso, o `x:TypeArguments` atributo pode ser usado para especificar os argumentos de tipo genérico para o construtor de um tipo genérico. Para obter mais informações, consulte [especificando um argumento de tipo genérico](#generic_type_arguments).
+Além disso, o atributo `x:TypeArguments` pode ser usado para especificar os argumentos de tipo genérico para o construtor de um tipo genérico. Para obter mais informações, consulte [especificando um argumento de tipo genérico](#generic_type_arguments).
 
 <a name="constructor_arguments" />
 
 ## <a name="passing-constructor-arguments"></a>Passando argumentos de construtor
 
-Argumentos podem ser passados para um construtor não padrão usando o `x:Arguments` atributo. Cada argumento de construtor deve ser delimitado dentro de um elemento XML que representa o tipo do argumento. Xamarin. Forms dá suporte aos seguintes elementos para tipos básicos:
+Os argumentos podem ser passados para um construtor não padrão usando o atributo `x:Arguments`. Cada argumento de construtor deve ser delimitado dentro de um elemento XML que representa o tipo do argumento. Xamarin. Forms dá suporte aos seguintes elementos para tipos básicos:
 
 - `x:Object`
 - `x:Boolean`
@@ -50,7 +50,7 @@ Argumentos podem ser passados para um construtor não padrão usando o `x:Argume
 - `x:Array`
 - `x:DateTime`
 
-O exemplo de código a seguir demonstra como usar o `x:Arguments` atributo com três [ `Color` ](xref:Xamarin.Forms.Color) construtores:
+O exemplo de código a seguir demonstra o uso do atributo `x:Arguments` com três construtores [`Color`](xref:Xamarin.Forms.Color) :
 
 ```xaml
 <BoxView HeightRequest="150" WidthRequest="150" HorizontalOptions="Center">
@@ -87,9 +87,9 @@ O exemplo de código a seguir demonstra como usar o `x:Arguments` atributo com t
 </BoxView>
 ```
 
-O número de elementos dentro de `x:Arguments` marca e os tipos desses elementos devem corresponder a um dos [ `Color` ](xref:Xamarin.Forms.Color) construtores. O `Color` [construtor](xref:Xamarin.Forms.Color.%23ctor(System.Double)) com um único parâmetro requer um valor de escala de cinza de 0 (preto) a 1 (branco). O `Color` [construtor](xref:Xamarin.Forms.Color.%23ctor(System.Double,System.Double,System.Double)) com três parâmetros requer um valor de vermelho, verde e azul, variando de 0 a 1. O `Color` [construtor](xref:Xamarin.Forms.Color.%23ctor(System.Double,System.Double,System.Double,System.Double)) com quatro parâmetros adiciona um canal alfa, como o quarto parâmetro.
+O número de elementos dentro da marca de `x:Arguments` e os tipos desses elementos devem corresponder a um dos construtores de [`Color`](xref:Xamarin.Forms.Color) . O [Construtor](xref:Xamarin.Forms.Color.%23ctor(System.Double)) de `Color` com um único parâmetro requer um valor de escala de cinza de 0 (preto) para 1 (branco). O [Construtor](xref:Xamarin.Forms.Color.%23ctor(System.Double,System.Double,System.Double)) de `Color` com três parâmetros requer um valor vermelho, verde e azul que varia de 0 a 1. O [Construtor](xref:Xamarin.Forms.Color.%23ctor(System.Double,System.Double,System.Double,System.Double)) de `Color` com quatro parâmetros adiciona um canal alfa como o quarto parâmetro.
 
-As capturas de tela a seguir mostram o resultado da chamada a cada [ `Color` ](xref:Xamarin.Forms.Color) construtor com os valores de argumento especificado:
+As capturas de tela a seguir mostram o resultado da chamada de cada Construtor de [`Color`](xref:Xamarin.Forms.Color) com os valores de argumento especificados:
 
 ![BoxView. Color especificada com x:Arguments](passing-arguments-images/passing-arguments.png)
 
@@ -97,9 +97,9 @@ As capturas de tela a seguir mostram o resultado da chamada a cada [ `Color` ](x
 
 ## <a name="calling-factory-methods"></a>Chamar métodos de fábrica
 
-Métodos de fábrica podem ser chamados em XAML, especificando o método nome usando o `x:FactoryMethod` atributo e seus argumentos usando o `x:Arguments` atributo. Um método de fábrica é um `public static` método que retorna os valores do mesmo tipo que a classe ou estrutura que define os métodos ou objetos.
+Os métodos de fábrica podem ser chamados em XAML especificando o nome do método usando o atributo `x:FactoryMethod` e seus argumentos usando o atributo `x:Arguments`. Um método de fábrica é um método `public static` que retorna objetos ou valores do mesmo tipo que a classe ou estrutura que define os métodos.
 
-O [ `Color` ](xref:Xamarin.Forms.Color) estrutura define vários métodos de fábrica e o exemplo de código a seguir demonstra a chamada três argumentos:
+A estrutura de [`Color`](xref:Xamarin.Forms.Color) define um número de métodos de fábrica e o exemplo de código a seguir demonstra como chamar três deles:
 
 ```xaml
 <BoxView HeightRequest="150" WidthRequest="150" HorizontalOptions="Center">
@@ -137,9 +137,9 @@ O [ `Color` ](xref:Xamarin.Forms.Color) estrutura define vários métodos de fá
 </BoxView>
 ```
 
-O número de elementos dentro de `x:Arguments` marca e os tipos desses elementos devem coincidir com os argumentos de método de fábrica que está sendo chamado. O [ `FromRgba` ](xref:Xamarin.Forms.Color.FromRgba(System.Int32,System.Int32,System.Int32,System.Int32)) método de fábrica exige quatro [ `Int32` ](https://docs.microsoft.com/dotnet/api/system.int32) parâmetros, que representam os valores de vermelhos, verdes, azuis e alfabéticos, variando de 0 a 255, respectivamente. O [ `FromHsla` ](xref:Xamarin.Forms.Color.FromHsla(System.Double,System.Double,System.Double,System.Double)) método de fábrica exige quatro [ `Double` ](https://docs.microsoft.com/dotnet/api/system.double) parâmetros, que representam o matiz, saturação, luminosidade e valores alfa, variando de 0 a 1, respectivamente. O [ `FromHex` ](xref:Xamarin.Forms.Color.FromHex(System.String)) método de fábrica exige uma [ `String` ](https://docs.microsoft.com/dotnet/api/system.string) que representa o hexadecimal (A) de cor RGB.
+O número de elementos dentro da marca de `x:Arguments` e os tipos desses elementos devem corresponder aos argumentos do método de fábrica que está sendo chamado. O método de fábrica [`FromRgba`](xref:Xamarin.Forms.Color.FromRgba(System.Int32,System.Int32,System.Int32,System.Int32)) requer quatro parâmetros [`Int32`](https://docs.microsoft.com/dotnet/api/system.int32) , que representam os valores vermelho, verde, azul e alfa, variando de 0 a 255, respectivamente. O método de fábrica de [`FromHsla`](xref:Xamarin.Forms.Color.FromHsla(System.Double,System.Double,System.Double,System.Double)) requer quatro parâmetros [`Double`](https://docs.microsoft.com/dotnet/api/system.double) , que representam os valores de matiz, saturação, luminosidade e alfa, variando de 0 a 1, respectivamente. O método de fábrica [`FromHex`](xref:Xamarin.Forms.Color.FromHex(System.String)) requer uma [`String`](https://docs.microsoft.com/dotnet/api/system.string) que represente A cor HEXADECIMAL (a) RGB.
 
-As capturas de tela a seguir mostram o resultado da chamada a cada [ `Color` ](xref:Xamarin.Forms.Color) método de fábrica com os valores de argumento especificado:
+As capturas de tela a seguir mostram o resultado da chamada de cada método de fábrica de [`Color`](xref:Xamarin.Forms.Color) com os valores de argumento especificados:
 
 ![BoxView. Color especificada com x:FactoryMethod e x:Arguments](passing-arguments-images/factory-methods.png)
 
@@ -147,7 +147,7 @@ As capturas de tela a seguir mostram o resultado da chamada a cada [ `Color` ](x
 
 ## <a name="specifying-a-generic-type-argument"></a>Especificando um argumento de tipo genérico
 
-Argumentos de tipo genérico para o construtor de um tipo genérico podem ser especificados usando o `x:TypeArguments` de atributo, conforme demonstrado no exemplo de código a seguir:
+Argumentos de tipo genérico para o construtor de um tipo genérico podem ser especificados usando o atributo `x:TypeArguments`, conforme demonstrado no exemplo de código a seguir:
 
 ```xaml
 <ContentPage ...>
@@ -163,7 +163,7 @@ Argumentos de tipo genérico para o construtor de um tipo genérico podem ser es
 </ContentPage>
 ```
 
-O [ `OnPlatform` ](xref:Xamarin.Forms.OnPlatform`1) classe é uma classe genérica e deve ser instanciado com um `x:TypeArguments` atributo que corresponde ao tipo de destino. No [ `On` ](xref:Xamarin.Forms.On) classe, o [ `Platform` ](xref:Xamarin.Forms.On.Platform) atributo pode aceitar um único `string` valor ou vários delimitada por vírgula `string` valores. Neste exemplo, o [ `StackLayout.Margin` ](xref:Xamarin.Forms.View.Margin) estiver definida como uma plataforma específica [ `Thickness` ](xref:Xamarin.Forms.Thickness).
+A classe [`OnPlatform`](xref:Xamarin.Forms.OnPlatform`1) é uma classe genérica e deve ser instanciada com um atributo `x:TypeArguments` que corresponda ao tipo de destino. Na classe [`On`](xref:Xamarin.Forms.On) , o atributo [`Platform`](xref:Xamarin.Forms.On.Platform) pode aceitar um único valor de `string` ou vários valores de `string` delimitados por vírgula. Neste exemplo, a propriedade [`StackLayout.Margin`](xref:Xamarin.Forms.View.Margin) é definida como uma [`Thickness`](xref:Xamarin.Forms.Thickness)específica da plataforma.
 
 ## <a name="summary"></a>Resumo
 
@@ -172,5 +172,5 @@ Este artigo demonstrou usando os atributos XAML que podem ser usados para passar
 ## <a name="related-links"></a>Links relacionados
 
 - [Namespaces XAML](~/xamarin-forms/xaml/namespaces.md)
-- [Passando argumentos de construtor (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-passingconstructorarguments)
-- [Chamar métodos de fábrica (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-callingfactorymethods)
+- [Passando argumentos de Construtor (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-passingconstructorarguments)
+- [Chamando métodos de fábrica (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-callingfactorymethods)

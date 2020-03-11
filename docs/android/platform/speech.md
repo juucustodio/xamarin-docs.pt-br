@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 04/02/2018
 ms.openlocfilehash: e8c7d1a4fb3537644ed3b7737158a5e50abcdae5
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "73019761"
 ---
 # <a name="android-speech"></a>Fala do Android
@@ -123,11 +123,11 @@ protected override void OnActivityResult(int requestCode, Result resultVal, Inte
 }
 ```
 
-## <a name="text-to-speech"></a>Conversão de Texto em Fala
+## <a name="text-to-speech"></a>Texto em fala
 
 A conversão de texto em fala não é exatamente o inverso da fala em texto e se baseia em dois componentes principais; um mecanismo de conversão de texto em fala que está sendo instalado no dispositivo e um idioma que está sendo instalado.
 
-Em grande parte, os dispositivos Android vêm com o serviço padrão do Google TTS instalado e pelo menos um idioma. Isso é estabelecido quando o dispositivo é configurado pela primeira vez e será baseado em onde o dispositivo está no momento (por exemplo, um telefone configurado na Alemanha instalará o idioma alemão, enquanto um nos Estados Unidos terá inglês americano).
+Em grande parte, os dispositivos Android vêm com o serviço padrão do Google TTS instalado e pelo menos um idioma. Isso é estabelecido quando o dispositivo é configurado pela primeira vez e será baseado em onde o dispositivo está no momento (por exemplo, um telefone configurado na Alemanha instalará o idioma alemão, enquanto um na América terá inglês americano).
 
 ### <a name="step-1---instantiating-texttospeech"></a>Etapa 1-criando uma instância de TextToSpeech
 
@@ -231,7 +231,7 @@ Neste guia, vimos as noções básicas da conversão de texto em fala e fala em 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [DependencyService Xamarin. Forms](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/dependencyservice//)
+- [Xamarin.Forms DependencyService](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/dependencyservice//)
 - [Conversão de Texto em Fala (exemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/platformfeatures-texttospeech)
 - [Fala para texto (exemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/platformfeatures-speechtotext)
 - [Namespace do Android. Speech](xref:Android.Speech)

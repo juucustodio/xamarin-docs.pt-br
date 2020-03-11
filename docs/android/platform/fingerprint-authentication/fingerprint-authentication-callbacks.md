@@ -7,10 +7,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 06/06/2017
 ms.openlocfilehash: 8dc06740355bd95828e1a1bd8d9d15a2ef37e6b2
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "73027526"
 ---
 # <a name="responding-to-authentication-callbacks"></a>Responder a chamadas de autenticação
@@ -116,7 +116,7 @@ Uma lista e descrição dos códigos de erro e códigos de ajuda podem ser encon
 
 - **`ErrorCanceled`** &ndash; (valor 5) a operação foi cancelada porque o sensor de impressão digital não está disponível. Por exemplo, isso pode acontecer quando o usuário é alternado, o dispositivo está bloqueado ou outra operação pendente impede ou desabilita.
 
-- **`ErrorHwUnavailable`** &ndash; (valor 1) o hardware está indisponível. Tente novamente mais tarde.
+- **`ErrorHwUnavailable`** &ndash; (valor 1) o hardware está indisponível. Tente novamente depois.
 
 - **`ErrorLockout`** &ndash; (valor 7) a operação foi cancelada porque a API está bloqueada devido a muitas tentativas.
 

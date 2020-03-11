@@ -9,10 +9,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 08/27/2018
 ms.openlocfilehash: d73c72fa70a22bacf122f5c3957b789914dfd765
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "78912320"
 ---
 # <a name="android-emulator-troubleshooting"></a>Solução de problemas do Android Emulator
@@ -139,7 +139,7 @@ VT feature disabled in BIOS/UEFI
 Para corrigir esse problema, reinicialize o BIOS do computador e habilite as seguintes opções:
 
 - Tecnologia de virtualização (pode ter um rótulo diferente dependendo do fabricante da placa-mãe).
-- Prevenção de Execução de Dados Baseada em Hardware.
+- Prevenção de Execução de Dados Imposta por Hardware
 
 Se a aceleração de hardware estiver habilitada e o BIOS estiver configurado corretamente, o emulador deverá ser executado com êxito com aceleração de hardware.
 No entanto, ainda poderá haver problemas devido a questões específicas do Hyper-V e do HAXM, conforme explicado a seguir.
@@ -307,7 +307,7 @@ Se o Device Guard estiver habilitado, use as seguintes etapas para desabilitá-l
     mountvol Z: /d
     ```
 
-7. Reinicie o computador. Na tela de inicialização, você verá um prompt semelhante à mensagem seguinte:
+7. Reinicie seu computador. Na tela de inicialização, você verá um prompt semelhante à mensagem seguinte:
 
    **Você deseja desabilitar o Credential Guard?**
 

@@ -8,17 +8,17 @@ author: davidortinau
 ms.author: daortin
 ms.date: 04/11/2018
 ms.openlocfilehash: 59969abae739db1d9035ec31738c39a3912f47ae
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "73027770"
 ---
 # <a name="binding-a-jar"></a>Associação de um .JAR
 
 _Este passo a passo fornece instruções passo a passo para criar uma biblioteca de associações Java do Xamarin. Android a partir de um Android. Arquivo JAR._
 
-## <a name="overview"></a>Visão Geral
+## <a name="overview"></a>Visão geral
 
 A Comunidade do Android oferece muitas bibliotecas Java que você talvez queira usar em seu aplicativo. Essas bibliotecas Java geralmente são empacotadas no. Formato JAR (arquivo Java), mas você pode empacotar um. JAR-o em uma *biblioteca de associações Java* para que sua funcionalidade esteja disponível para aplicativos Xamarin. Android. A finalidade da biblioteca de associações Java é fazer as APIs no. Arquivo JAR disponível para C# codificar por meio de wrappers de código gerados automaticamente.
 

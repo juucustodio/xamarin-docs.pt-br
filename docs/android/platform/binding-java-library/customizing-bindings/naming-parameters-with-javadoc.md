@@ -8,17 +8,17 @@ author: davidortinau
 ms.author: daortin
 ms.date: 06/20/2017
 ms.openlocfilehash: 060c4759d39bc3b8c424ce46dc615644540fe9c2
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "73027675"
 ---
 # <a name="naming-parameters-with-javadoc"></a>Nomeando parâmetros com Javadoc
 
 _Este artigo explica como recuperar nomes de parâmetro em um projeto de associação Java usando o Javadoc gerado a partir do projeto Java._
 
-## <a name="overview"></a>Visão Geral
+## <a name="overview"></a>Visão geral
 
 Ao associar uma biblioteca Java existente, alguns metadados sobre a API associada são perdidos. Em particular, os nomes dos parâmetros para os métodos. Os nomes de parâmetro serão exibidos como `p0`, `p1`, etc. Isso ocorre porque os arquivos Java `.class` não preservam os nomes de parâmetro que foram usados no código-fonte Java. 
 

@@ -6,12 +6,12 @@ ms.assetid: BBE47BA8-78BC-6A2B-63BA-D1A45CB1D3A5
 author: davidortinau
 ms.author: daortin
 ms.date: 03/23/2017
-ms.openlocfilehash: e1fa76faf0313a21061af585052a3b137243db55
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.openlocfilehash: c8b4dcbfbf65bc4059125404b0d20ed35fa31f29
+ms.sourcegitcommit: ce4670de51e24116a944c778ee64585bd0aae0e1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75488641"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79088930"
 ---
 # <a name="part-4---dealing-with-multiple-platforms"></a>Parte 4 – Lidar com várias plataformas
 
@@ -87,7 +87,7 @@ A implementação pode conter código específico da plataforma e até mesmo ref
 
 Ter que criar e passar implementações no código compartilhado. Se a interface for usada em profundidade no código compartilhado, ela acabará sendo passada por meio de vários parâmetros de método ou, de outra forma, por Push por meio da cadeia de chamadas. Se o código compartilhado usar muitas interfaces diferentes, todos eles deverão ser criados e definidos no código compartilhado em algum lugar.
 
-#### <a name="inheritance"></a>{1&gt;Herança&lt;1}
+#### <a name="inheritance"></a>Herança
 
 O código compartilhado pode implementar classes abstratas ou virtuais que poderiam ser estendidas em um ou mais projetos específicos da plataforma. Isso é semelhante ao uso de interfaces, mas com algum comportamento já implementado. Há diferentes pontos de vista sobre se as interfaces ou herança são uma opção de design melhor: C# em particular porque só permite a herança única que pode determinar a maneira como suas APIs podem ser projetadas no futuro. Use a herança com cuidado.
 
@@ -158,10 +158,12 @@ Cada versão de API também define uma nova diretiva de compilador, portanto, um
 
 #### <a name="mac"></a>Mac
 
-Atualmente, não há um símbolo interno para o Xamarin. Mac, mas você pode adicionar o seu próprio nas opções de projeto de aplicativo do Mac **> compilar > compilador** na caixa **definir símbolos** ou editar o arquivo **. csproj** e adicionar lá (por exemplo `__MAC__`)
+O Xamarin. Mac define `__MACOS__` que você pode usar para compilar apenas para macOS:
 
-```xml
-<PropertyGroup><DefineConstants>__MAC__;$(DefineConstants)</DefineConstants></PropertyGroup>
+```csharp
+#if __MACOS__
+// macOS-specific code
+#endif
 ```
 
 #### <a name="universal-windows-platform-uwp"></a>UWP (Plataforma Universal do Windows)

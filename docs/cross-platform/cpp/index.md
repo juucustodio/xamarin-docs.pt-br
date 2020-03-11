@@ -6,15 +6,15 @@ author: mikeparker104
 ms.author: miparker
 ms.date: 11/07/2019
 ms.openlocfilehash: 42a59570d727657b2f3c23bd9d1f37e1205717d0
-ms.sourcegitcommit: efbc69acf4ea484d8815311b058114379c9db8a2
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "73842814"
 ---
 # <a name="use-cc-libraries-with-xamarin"></a>Usar C/C++ bibliotecas com o Xamarin
 
-## <a name="overview"></a>Visão Geral
+## <a name="overview"></a>Visão geral
 
 O Xamarin permite que os desenvolvedores criem aplicativos móveis nativos de plataforma cruzada com o Visual Studio. Geralmente, C# as associações são usadas para expor componentes de plataforma existentes aos desenvolvedores. No entanto, há ocasiões em que os aplicativos Xamarin precisam trabalhar com bases de código existentes. Às vezes, as equipes simplesmente não têm tempo, orçamento ou recursos para portar uma base de código grande, bem testada e C#altamente otimizada para.
 
@@ -24,7 +24,7 @@ No entanto, em alguns casos, há um desejo (ou requisito) para manter oC++ C/Too
 
 Esta postagem descreve uma abordagem de alto nível para esse cenário e percorre um exemplo simples.
 
-## <a name="background"></a>Informações preliminares
+## <a name="background"></a>Segundo plano
 
 O cC++ /é considerado uma linguagem de plataforma cruzada, mas é preciso tomar muito cuidado para garantir que o código-fonte seja realmente entre plataformas, usando apenasC++ C/com suporte de todos os compiladores de destino e que contenham pouca ou nenhuma plataforma ou código específico de compilador incluso.
 
@@ -73,7 +73,7 @@ Depois que o feed é configurado, o pacote precisa ser referenciado de cada proj
 
 O repositório de código-fonte contém uma [lista de leituras adicionais](https://github.com/xamcat/mobcat-samples/tree/master/cpp_with_xamarin#wrapping-up) que inclui artigos sobre como configurar um feed do NuGet privado no Azure DevOps e como enviar por push o pacote para esse feed. Embora exijam um pouco mais de tempo de configuração do que um diretório local, esse tipo de feed é melhor em um ambiente de desenvolvimento de equipe.
 
-## <a name="walk-through"></a>Orientação
+## <a name="walk-through"></a>Passo a passo
 
 As etapas fornecidas são específicas para **Visual Studio para Mac**, mas a estrutura funciona no **Visual Studio 2017** também.
 
@@ -166,8 +166,8 @@ Este estágio requer as [bibliotecas pré-compiladas](https://github.com/xamcat/
 
     | **NOME DO PROJETO**  | **NOME DO MODELO**   | **MENU NOVO PROJETO**   |
     |-------------------| --------------------| -----------------------|
-    | MathFuncs. Android | Biblioteca de Classes       | Biblioteca de > do Android      |
-    | MathFuncs. iOS     | Biblioteca de associação     | Biblioteca de > do iOS          |
+    | MathFuncs.Android | Biblioteca de classes       | Biblioteca de > do Android      |
+    | MathFuncs.iOS     | Biblioteca de associação     | Biblioteca de > do iOS          |
 
 19. Em **Gerenciador de soluções**, clique duas vezes no projeto **MathFuncs. Android** e navegue até as configurações do **compilador** .
 

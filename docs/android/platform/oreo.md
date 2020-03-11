@@ -9,10 +9,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 07/06/2018
 ms.openlocfilehash: 56430f8c4988c16a31f9806b0ffb8b6355d6340b
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "73019994"
 ---
 # <a name="oreo-features"></a>Recursos do Oreo
@@ -21,7 +21,7 @@ _Como começar a usar o Xamarin. Android para desenvolver aplicativos para a ver
 
 [Android 8,0 Oreo](https://developer.android.com/index.html) é a versão mais recente do Android disponível no Google. O Android Oreo oferece muitos recursos novos de interesse para desenvolvedores do Xamarin. Android. Esses recursos incluem canais de notificação, notificações de notificação, fontes personalizadas em XML, fontes para download, preenchimento automático e imagem em imagem (PIP). O Android Oreo inclui novas APIs para esses novos recursos, e essas APIs estão disponíveis para aplicativos Xamarin. Android quando você usa o Xamarin. Android 8,0 e posterior.
 
-[imagem do![Oreo Hero do Android](oreo-images/01-android-o-logo-sml.png)](oreo-images/01-android-o-logo.png#lightbox)
+[imagem do ![Oreo Hero do Android](oreo-images/01-android-o-logo-sml.png)](oreo-images/01-android-o-logo.png#lightbox)
 
 Este artigo foi estruturado para ajudá-lo a começar a desenvolver aplicativos Xamarin. Android para Android 8,0 Oreo. Ele explica como instalar as atualizações necessárias, configurar o SDK e criar um emulador (ou dispositivo) para teste. Ele também fornece uma descrição dos novos recursos no Android 8,0 Oreo, com links para aplicativos de exemplo que ilustram como usar os recursos do Oreo do Android em aplicativos Xamarin. Android.
 
@@ -35,7 +35,7 @@ O seguinte é necessário para usar os recursos do Android Oreo em aplicativos b
 
 - **SDK do Android** &ndash; SDK do Android 8,0 (API 26) ou posterior deve ser instalado por meio do gerenciador de SDK do Android.
 
-## <a name="getting-started"></a>Guia de Introdução
+## <a name="getting-started"></a>Introdução
 
 Para começar a usar o Android Oreo com o Xamarin. Android, você deve baixar e instalar as ferramentas e os pacotes de SDK mais recentes antes de criar um projeto Oreo do Android:
 
@@ -55,7 +55,7 @@ Para adicionar o suporte do Android Oreo ao Visual Studio, faça o seguinte:
 
 <!-- markdownlint-disable MD001 -->
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 - Para o Visual Studio 2019, use o [Gerenciador do SDK](~/android/get-started/installation/android-sdk.md) para instalar o nível de API 26,0 ou posterior.
 
@@ -65,7 +65,7 @@ Para adicionar o suporte do Android Oreo ao Visual Studio, faça o seguinte:
 
     2. Use o [Gerenciador do SDK](~/android/get-started/installation/android-sdk.md) para instalar o nível de API 26,0 ou posterior.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
 - Atualize para a versão estável mais recente do Visual Studio para Mac, conforme explicado em [atualizando Visual Studio para Mac](https://docs.microsoft.com/visualstudio/mac/update).
 
@@ -77,7 +77,7 @@ Para obter mais informações sobre o suporte do Xamarin para Android Oreo, cons
 
 Para criar um projeto com o Xamarin. Android 8,0, primeiro você deve usar o Xamarin SDK do Android Manager para instalar a plataforma SDK para **Android 8,0-Oreo** ou posterior. Você também deve instalar o Android SDK Tools 26,0 ou posterior.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 1. Inicie o Gerenciador do SDK (no Visual Studio, clique em **ferramentas > Android > o Gerenciador de SDK do Android**).
 
@@ -89,7 +89,7 @@ Para criar um projeto com o Xamarin. Android 8,0, primeiro você deve usar o Xam
 
     [![selecionando Android SDK Tools 26 no Gerenciador de SDK do Android](oreo-images/win/02-sdk-tools.png)](oreo-images/win/02-sdk-tools.png#lightbox)
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
 1. Inicie o Gerenciador do SDK (em Visual Studio para Mac, clique em **ferramentas > Gerenciador do SDK**).
 
@@ -113,11 +113,11 @@ Ao criar um projeto do Android, você deve definir as configurações de versão
 
 Se você tentar iniciar o Gerenciador de AVD baseado em GUI do Google padrão depois de instalar o Android SDK Tools 26,0 ou posterior, você poderá obter a seguinte caixa de diálogo de erro, que instrui você a usar a ferramenta de linha de comando AVD Manager **avdmanager** em vez disso:
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 ![Caixa de diálogo de aviso do Android Emulator Manager](oreo-images/win/03-avd-warning.png)
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
 ![Caixa de diálogo de aviso do Android Emulator Manager](oreo-images/mac/03-avd-warning.png)
 
@@ -132,7 +132,7 @@ Para criar dispositivos virtuais sem o Android Device Manager, siga as etapas na
 
 Para usar o **avdmanager** para criar um novo dispositivo virtual, siga estas etapas:
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 1. Abra uma janela de prompt de comando e defina `JAVA_HOME` para o local do SDK do Java em seu computador. Para uma instalação típica do Xamarin, você pode usar o seguinte comando:
 
@@ -159,7 +159,7 @@ Depois de **avdmanager** criar seu dispositivo virtual, ele será incluído no m
 
 [![novo AVD adicionado ao menu suspenso do dispositivo](oreo-images/win/04-android-o-avd-sml.png)](oreo-images/win/04-android-o-avd.png#lightbox)
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
 1. Abra uma janela de **terminal** e altere para o local do diretório de ferramentas de SDK do Android no seu Mac. Para uma instalação típica do Xamarin, você pode usar o seguinte comando:
 
@@ -278,7 +278,7 @@ O exemplo [PictureInPicture](https://docs.microsoft.com/samples/xamarin/monodroi
 
 ### <a name="other-features"></a>Outros recursos
 
-O Android Oreo contém muitos outros novos recursos, como a biblioteca de suporte de Emoji, a API de local, os limites de plano de fundo, a cor de ampla gama de aplicativos, novos codecs de áudio, aprimoramentos do WebView, suporte aprimorado à navegação de teclado e uma nova API de AAudio (Pro Audio) para áudio de baixa latência de alto desempenho, para obter mais informações sobre esses recursos, consulte o tópico [recursos e APIs de Oreo do Android](https://developer.android.com/about/versions/oreo/android-8.0.html) para desenvolvedores do Android.
+O Android Oreo contém muitos outros novos recursos, como a biblioteca de suporte de Emoji, a API de localização, os limites de plano de fundo, a cor de ampla gama de aplicativos, novos codecs de áudio, melhorias de WebView, suporte à navegação de teclado aprimorado [e uma](https://developer.android.com/about/versions/oreo/android-8.0.html) nova API de AAudio (Pro Audio) para áudio de baixa latência de alto desempenho, para obter mais informações sobre esses
 
 ## <a name="behavior-changes"></a>Alterações de comportamento
 
@@ -294,7 +294,7 @@ Para melhorar a experiência do usuário, o Android Oreo impõe limitações sob
 
 Para obter mais informações sobre os novos limites de execução em segundo plano, consulte o tópico [limites de execução em segundo plano](https://developer.android.com/about/versions/oreo/background.html) do desenvolvedor do Android.
 
-### <a name="breaking-changes"></a>Alterações significativas
+### <a name="breaking-changes"></a>Alterações de quebra
 
 Os aplicativos destinados ao Android Oreo ou superior devem modificar seus aplicativos para dar suporte às seguintes alterações, quando aplicável:
 
@@ -302,7 +302,7 @@ Os aplicativos destinados ao Android Oreo ou superior devem modificar seus aplic
 
 - Para aplicativos destinados a Oreo do Android, o `PendingIntent.GetService()` não funciona devido a novos limites colocados em serviços iniciados em segundo plano. Se você estiver destinando ao Android Oreo, deverá usar [PendingIntent. getbroadcast](xref:Android.App.PendingIntent.GetBroadcast*) .  
 
-## <a name="sample-code"></a>Código de exemplo
+## <a name="sample-code"></a>Exemplo de código
 
 Vários exemplos do Xamarin. Android estão disponíveis para mostrar como aproveitar os recursos do Oreo do Android:
 

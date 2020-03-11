@@ -9,17 +9,17 @@ author: davidortinau
 ms.author: daortin
 ms.date: 08/29/2018
 ms.openlocfilehash: 2ea7c9b9f900bc339d183c2f5b317792ebec5232
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "73026828"
 ---
 # <a name="xamarinandroid-and-java-development-kit-9-or-later"></a>Xamarin. Android e Java Development Kit 9 ou posterior
 
 _Este artigo explica como resolver erros do Java Development Kit (JDK) 9 ou posteriores no Xamarin. Android._
 
-## <a name="overview"></a>Visão Geral
+## <a name="overview"></a>Visão geral
 
 O Xamarin. Android usa o Java Development Kit (JDK) para integrar com o SDK do Android para a criação de aplicativos Android e a execução do Android designer. As versões mais recentes do SDK do Android (API 24 e superior) exigem o JDK 8 (1,8) ou a versão prévia do Microsoft Mobile OpenJDK. **Como as ferramentas de SDK do Android disponíveis no Google ainda não são compatíveis com o JDK 9, o Xamarin. Android não funciona com o JDK 9 ou posterior.**
 

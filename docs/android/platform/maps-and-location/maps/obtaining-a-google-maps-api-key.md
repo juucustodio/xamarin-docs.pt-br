@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 06/25/2018
 ms.openlocfilehash: 371876d087c7027d4cfe2d2d9ada8b0dbedb5dd5
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
-ms.translationtype: HT
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "75488966"
 ---
 # <a name="obtaining-a-google-maps-api-key"></a>Obter uma chave de API do Google Maps
@@ -49,7 +49,7 @@ Por padrão, o repositório de chaves que é usado para assinar versões de depu
 
 Informações sobre um repositório de chaves são obtidas executando o comando `keytool` no JDK. Normalmente, essa ferramenta é encontrada no diretório bin do Java:
 
-**/System/Library/Java/JavaVirtualMachines/[VERSION].jdk/Contents/Home/bin/keytool**
+**/System/Library/Java/JavaVirtualMachines/[VERSION]. JDK/Contents/Home/bin/keytool**
 
 -----
 
@@ -133,11 +133,11 @@ Após a criação do projeto de API do **console do desenvolvedor do Google** , 
 
 1. Na página **SDK do Maps para Android** exibida (depois de clicar em **habilitar** na etapa anterior), vá para a guia **credenciais** e clique no botão **criar credenciais** :
 
-   [![SDK do Maps para mensagem de credenciais do Android](obtaining-a-google-maps-api-key-images/05-api-is-enabled-vs-sml.png)](obtaining-a-google-maps-api-key-images/05-api-is-enabled-vs.png#lightbox)
+   [SDK do Maps ![para mensagem de credenciais do Android](obtaining-a-google-maps-api-key-images/05-api-is-enabled-vs-sml.png)](obtaining-a-google-maps-api-key-images/05-api-is-enabled-vs.png#lightbox)
 
 2. Clique em **chave de API**:
 
-   [![caixa de diálogo adicionar credenciais ao seu projeto](obtaining-a-google-maps-api-key-images/06-add-credentials-to-your-project-vs-sml.png)](obtaining-a-google-maps-api-key-images/06-add-credentials-to-your-project-vs.png#lightbox)
+   [caixa de diálogo ![adicionar credenciais ao seu projeto](obtaining-a-google-maps-api-key-images/06-add-credentials-to-your-project-vs-sml.png)](obtaining-a-google-maps-api-key-images/06-add-credentials-to-your-project-vs.png#lightbox)
 
 3. Depois que esse botão é clicado, a chave de API é gerada. Em seguida, é necessário restringir essa chave para que apenas seu aplicativo possa chamar APIs com essa chave. Clique em **restringir chave**:
 
@@ -159,7 +159,7 @@ Após a criação do projeto de API do **console do desenvolvedor do Google** , 
 
    [![adicionar outra impressão digital cria outro certificado SHA-1](obtaining-a-google-maps-api-key-images/11-second-fingerprint-vs-sml.png)](obtaining-a-google-maps-api-key-images/11-second-fingerprint-vs.png#lightbox)
 
-8. Clique no botão **Save (Salvar)** para salvar suas alterações. Em seguida, você retornará à lista de suas chaves de API. Se você tiver outras chaves de API que você criou anteriormente, elas também serão listadas aqui. Neste exemplo, apenas uma chave de API (criada nas etapas anteriores) está listada:
+8. Clique no botão **Salvar** para salvar as alterações. Em seguida, você retornará à lista de suas chaves de API. Se você tiver outras chaves de API que você criou anteriormente, elas também serão listadas aqui. Neste exemplo, apenas uma chave de API (criada nas etapas anteriores) está listada:
 
    [![XamarinMapsDemoKey é mostrado na lista de chaves de API](obtaining-a-google-maps-api-key-images/12-list-of-apis-vs-sml.png)](obtaining-a-google-maps-api-key-images/12-list-of-apis-vs.png#lightbox)
 
@@ -192,7 +192,7 @@ Por fim, adicione essa chave de API ao arquivo **AndroidManifest. xml** do seu a
 </manifest>
 ```
 
-## <a name="related-links"></a>Links Relacionados
+## <a name="related-links"></a>Links relacionados
 
 - [Console de APIs do Google](https://code.google.com/apis/console/)
 - [A chave de API do Google Maps](https://developers.google.com/maps/documentation/android/start#the_google_maps_api_key)

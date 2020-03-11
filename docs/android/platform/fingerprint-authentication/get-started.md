@@ -7,10 +7,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 08/17/2018
 ms.openlocfilehash: 746a096f93036e63b29bc917826259f88426cead
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "73020280"
 ---
 # <a name="getting-started-with-fingerprint-authentication"></a>Introdução com autenticação de impressão digital
@@ -23,13 +23,13 @@ Para começar, vamos primeiro abordar como configurar um projeto Xamarin. Androi
 
 ## <a name="requesting-permissions-in-the-application-manifest"></a>Solicitando permissões no manifesto do aplicativo
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 Um aplicativo Android deve solicitar a permissão de `USE_FINGERPRINT` no manifesto. A captura de tela a seguir mostra como adicionar essa permissão ao aplicativo no Visual Studio:
 
 [![habilitar o uso de impressão digital\_na tela de manifesto do Android](get-started-images/fingerprint-01-vs.png)](get-started-images/fingerprint-01-vs.png#lightbox) 
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
 Um aplicativo Android deve solicitar a permissão de `USE_FINGERPRINT` no manifesto. A captura de tela a seguir mostra como adicionar essa permissão ao aplicativo no Visual Studio para Mac:
 
@@ -109,7 +109,7 @@ Para obter mais informações sobre como solicitar permissões no Android 6,0, c
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Noticioso](xref:Android.Content.Context)
+- [Contexto](xref:Android.Content.Context)
 - [Keyguardmanager](xref:Android.App.KeyguardManager)
 - [ContextCompat](https://developer.android.com/reference/android/support/v4/content/ContextCompat)
 - [Impressão digital](https://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.html)

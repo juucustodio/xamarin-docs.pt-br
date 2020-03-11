@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 06/22/2018
 ms.openlocfilehash: 0caea0c31275a7459286c143cc92ca90731dd93b
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "78912448"
 ---
 # <a name="windows-installation"></a>Instalação do Windows
@@ -65,7 +65,7 @@ Você pode usar o Gerenciador de SDK do Android do Google para instalar as vers�
 
 Para saber mais sobre o uso do Gerenciador de SDK do Android do Xamarin, consulte [Instalação do SDK do Android](~/android/get-started/installation/android-sdk.md).
 
-### <a name="android-emulator"></a>Emulador do Android
+### <a name="android-emulator"></a>Android Emulator
 
 O [Android Emulator](https://developer.android.com/studio/run/emulator) pode ser uma ferramenta útil para desenvolver e testar um aplicativo Xamarin.Android. Por exemplo, um dispositivo físico, como um tablet, talvez não esteja prontamente disponível durante o desenvolvimento ou um desenvolvedor pode querer executar alguns testes de integração no computador antes de confirmar o código.
 
@@ -101,7 +101,7 @@ Na caixa de diálogo **Novo Projeto**, selecione **Android** em **Modelos** e cl
 
 [![Captura de tela da caixa de diálogo Novo Projeto criando um aplicativo Android em branco](windows-images/11-first-app-sml.w157.png)](windows-images/11-first-app.w157.png#lightbox)
 
-É só isso! Agora, você está pronto para usar o Xamarin.Android para criar aplicativos Android!
+É isso! Agora, você está pronto para usar o Xamarin.Android para criar aplicativos Android!
 
 ## <a name="summary"></a>Resumo
 
@@ -109,7 +109,7 @@ Neste artigo, você aprendeu a configurar e instalar a plataforma Xamarin.Androi
 
 A próxima etapa é dar uma olhada nos tutoriais [Olá, Android](~/android/get-started/hello-android/index.md) para aprender a criar um aplicativo Xamarin.Android funcional.
 
-## <a name="related-links"></a>Links Relacionados
+## <a name="related-links"></a>Links relacionados
 
 - [Baixar o Visual Studio](https://visualstudio.microsoft.com/vs/)
 - [Instalar as Ferramentas do Visual Studio para Xamarin](~/get-started/installation/windows.md)

@@ -6,12 +6,12 @@ ms.assetid: 044FF669-0B81-4186-97A5-148C8B56EE9C
 author: davidortinau
 ms.author: daortin
 ms.date: 03/29/2017
-ms.openlocfilehash: 5e36a66949c55a85d84cbbb17fa4d276e3af1eee
-ms.sourcegitcommit: acbaedbcb78bb5629d4a32e3b00f11540c93c216
+ms.openlocfilehash: 2dea16633181d6b1120a5f9a90da685df66e5451
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "78291473"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79031009"
 ---
 # <a name="advanced-manual-real-world-example"></a>Exemplo avançado (manual) do mundo real
 
@@ -124,7 +124,10 @@ Done.
 
 Você observará que passamos um argumento `-scope build/Headers` para a nitidez objetiva. Como as bibliotecas C e Objective-C devem `#import` ou `#include` outros arquivos de cabeçalho que são detalhes de implementação da biblioteca e não a API que você deseja associar, o argumento `-scope` informa a nitidez do objetivo para ignorar qualquer API que não esteja definida em um arquivo em algum lugar dentro do diretório `-scope`.
 
-Você encontrará o argumento de `-scope` geralmente é opcional para bibliotecas implementadas com clareza, no entanto, não há nenhum dano no fornecimento explícito.
+Você encontrará o argumento de `-scope` geralmente é opcional para bibliotecas implementadas com clareza, no entanto, não há nenhum dano no fornecimento explícito. 
+
+> [!TIP]
+> Se os cabeçalhos da biblioteca importarem quaisquer cabeçalhos do SDK do iOS, por exemplo, `#import <Foundation.h>`, você precisará definir o escopo, caso contrário, a nitidez do objetivo gerará definições de associação para o cabeçalho do SDK do iOS que foi importado, resultando em uma associação enorme que provavelmente gerará erros durante a compilação do projeto de associação. 
 
 Além disso, especificamos `-c -Ibuild/headers`. Em primeiro lugar, o argumento `-c` informa a nitidez do objetivo para interromper a interpretação de argumentos de linha de comando e passar quaisquer argumentos subsequentes _diretamente para o compilador Clang_. Portanto, `-Ibuild/Headers` é um argumento de compilador Clang que instrui o Clang a procurar por inclusões em `build/Headers`, que é onde os cabeçalhos POP residem. Sem esse argumento, Clang não saberá onde localizar os arquivos que `POP.h` está `#import`ing. _Quase todos os "problemas" com o uso de nitidez objetiva se resumem para descobrir o que passar para o Clang_.
 

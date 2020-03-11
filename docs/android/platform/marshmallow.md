@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/01/2018
 ms.openlocfilehash: fb1ba92be9527d490b3d34bd4c0e454b0a750837
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "73019986"
 ---
 # <a name="marshmallow-features"></a>Recursos do marshmallow
@@ -20,7 +20,7 @@ _Este artigo ajuda você a começar a usar o usando o Xamarin. Android para dese
 
 Este artigo fornece uma descrição dos novos recursos no Android 6,0 marshmallow, explica como preparar o Xamarin. Android para desenvolvimento de marshmallow do Android e fornece links para aplicativos de exemplo que ilustram como usar o New Android marshmallow recursos em aplicativos Xamarin. Android. 
 
-## <a name="overview"></a>Visão Geral
+## <a name="overview"></a>Visão geral
 
 [Android 6,0 marshmallow](https://developer.android.com/about/versions/marshmallow/index.html), é a próxima versão principal do Android após a pirulito do Android.
 O Xamarin. Android dá suporte ao Android marshmallow e inclui:
@@ -69,7 +69,7 @@ O seguinte é necessário para usar os novos recursos do Android marshmallow em 
 
 Você pode continuar a usar o [JDK 1,7](https://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html) se estiver desenvolvendo especificamente para o nível de API 23 ou anterior. 
 
-## <a name="getting-started"></a>Guia de Introdução
+## <a name="getting-started"></a>Introdução
 
 Para começar a usar o Android marshmallow com o Xamarin. Android, você deve baixar e instalar as ferramentas e os pacotes de SDK mais recentes antes de criar um projeto marshmallow do Android: 
 

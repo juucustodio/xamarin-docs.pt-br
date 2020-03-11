@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 06/19/2017
 ms.openlocfilehash: 4683bbaa5aa48c7b5de5fb9a87a4cd3fbc0aeada
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "73019508"
 ---
 # <a name="my-android-resourcedesignercs-file-will-not-update"></a>Meu arquivo Resource.designer.cs do Android não será atualizado
@@ -27,7 +27,7 @@ Um bug no Xamarin. Studio 5,1 arquivo. csproj corrompido anteriormente, excluind
 
 1. Crie um novo projeto de aplicativo Xamarin. Android, defina todas as propriedades do projeto para corresponder ao projeto antigo e adicione todos os seus recursos, arquivos de origem, etc. de volta ao projeto.
 
-   **OU**
+   **OR**
 
 2. Faça uma cópia de backup do arquivo. csproj do projeto original, abra-o em um editor de texto e adicione de volta os elementos ausentes de um arquivo. csproj gerado de forma limpa.
 

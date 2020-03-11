@@ -7,15 +7,15 @@ author: davidortinau
 ms.author: daortin
 ms.date: 02/07/2018
 ms.openlocfilehash: 0e8d3748c7ddd337cf2f27f5b272b208e79d503a
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "73027512"
 ---
 # <a name="creating-a-fragment"></a>Criando um fragmento
 
-Para criar um fragmento, uma classe deve herdar de `Android.App.Fragment` e, em seguida, substituir o método `OnCreateView`. `OnCreateView` será chamado pela atividade de hospedagem quando for o momento de colocar o fragmento na tela e retornará um `View`. Um `OnCreateView` típico criará esse `View` ao replanar um arquivo de layout e, em seguida, anexá-lo a um contêiner pai. As características do contêiner são importantes, pois o Android aplicará os parâmetros de layout do pai à interface do usuário do fragmento. O exemplo a seguir ilustra isto:
+Para criar um fragmento, uma classe deve herdar de `Android.App.Fragment` e, em seguida, substituir o método `OnCreateView`. `OnCreateView` será chamado pela atividade de hospedagem quando for o momento de colocar o fragmento na tela e retornará um `View`. Um `OnCreateView` típico criará esse `View` ao replanar um arquivo de layout e, em seguida, anexá-lo a um contêiner pai. As características do contêiner são importantes, pois o Android aplicará os parâmetros de layout do pai à interface do usuário do fragmento. O exemplo a seguir ilustra isso:
 
 ```csharp
 public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
@@ -106,7 +106,7 @@ OU
 Os fragmentos têm seu próprio ciclo de vida que é, de certa forma, independente do, mas ainda são afetados pelo [ciclo de vida da atividade de hospedagem](~/android/app-fundamentals/activity-lifecycle/index.md).
 Por exemplo, quando uma atividade é pausada, todos os fragmentos associados são pausados. O diagrama a seguir descreve o ciclo de vida do fragmento.
 
-[diagrama de fluxo de![ilustrando o ciclo de vida do fragmento](creating-a-fragment-images/fragment-lifecycle.png)](creating-a-fragment-images/fragment-lifecycle.png#lightbox)
+[diagrama de fluxo de ![ilustrando o ciclo de vida do fragmento](creating-a-fragment-images/fragment-lifecycle.png)](creating-a-fragment-images/fragment-lifecycle.png#lightbox)
 
 ### <a name="fragment-creation-lifecycle-methods"></a>Métodos de ciclo de vida de criação de fragmento
 

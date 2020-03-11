@@ -8,17 +8,17 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/01/2018
 ms.openlocfilehash: a638ccf7810c737faaeded7fcc98fcf657c85288
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "73027204"
 ---
 # <a name="jelly-bean-features"></a>Recursos do Jelly Bean
 
 _Este documento fornecerá uma visão geral de alto nível dos novos recursos para desenvolvedores que foram introduzidos no Android 4,1. Esses recursos incluem: notificações aprimoradas, atualizações no feixe do Android para compartilhar arquivos grandes, atualizações em multimídia, descoberta de rede ponto a ponto, animações, novas permissões._
 
-## <a name="overview"></a>Visão Geral
+## <a name="overview"></a>Visão geral
 
 O Android 4,1 (API nível 16), também conhecido como "Jelly Bean", foi lançado em 9 de julho de 2012. Este artigo fornecerá uma introdução de alto nível a alguns dos novos recursos do Android 4,1 para desenvolvedores que usam o Xamarin. Android. Alguns desses novos recursos introduzidos são aprimoramentos em animações para iniciar uma atividade, novos sons para uma câmera e suporte aprimorado para navegação na pilha de aplicativos. Agora é possível recortar e colar com tentativas.
 
@@ -30,11 +30,11 @@ Finalmente, várias novas permissões foram adicionadas no Android 4,1.
 
 ## <a name="requirements"></a>Requisitos
 
-Para desenvolver aplicativos Xamarin. Android usando o Jelly Bean, é necessário instalar o Xamarin. Android 4.2.6 ou superior e o Android 4,1 (API nível 16) por meio do Gerenciador de SDK do Android, conforme mostrado na captura de tela a seguir:
+O desenvolvimento de aplicativos xamarin. Android usando o Jelly Bean requer a instalação do xamarin. Android 4.2.6 ou posterior e Android 4.1 (API nível 16) por meio do Gerenciador de SDK do Android, conforme mostrado na seguinte captura de tela:
 
 [![selecionando o Android 4,1 no Gerenciador de SDK do Android](jelly-bean-images/image1.png)](jelly-bean-images/image1.png#lightbox)
 
-## <a name="whats-new"></a>O Que Há de Novo
+## <a name="whats-new"></a>What's New
 
 ### <a name="animations"></a>Animations
 
@@ -143,7 +143,7 @@ Para criar um serviço que pode ser consumido por outros serviços, a classe `Ns
 
 Para descobrir serviços na rede e a implementação de `Nsd.DiscoveryListener` passada para `NsdManager.discoverServices()`.
 
-#### <a name="network-usage"></a>Uso de rede
+#### <a name="network-usage"></a>Uso de Rede
 
 Um novo método, `ConnectivityManager.IsActiveNetworkMetered` permite que um dispositivo Verifique se ele está conectado a uma rede limitada. Esse método pode ser usado para ajudar a gerenciar o uso de dados, informando com precisão os usuários de que pode haver encargos caros para operações de dados.
 

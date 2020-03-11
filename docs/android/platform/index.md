@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 08/21/2018
 ms.openlocfilehash: 3ad3661ff50ad7f4be95421de57dc5017392a59f
-ms.sourcegitcommit: b751605179bef8eee2df92cb484011a7dceb6fda
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "78292167"
 ---
 # <a name="platform-features"></a>Recursos da plataforma

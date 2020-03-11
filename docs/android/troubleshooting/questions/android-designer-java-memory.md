@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 06/02/2018
 ms.openlocfilehash: 9c9b9f5a205a2eef7db9f27e8d09b10ce65a4318
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "73027051"
 ---
 # <a name="adjusting-java-memory-parameters-for-the-android-designer"></a>Ajustar os parâmetros de memória do Java para o Android Designer
@@ -30,9 +30,9 @@ Os seguintes nomes de propriedade correspondem à opção de [linha de comando](
 
 - **AndroidDesignerJavaRendererPermSize** -XX: MaxPermSize
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-1. Abra a solução no Visual Studio.
+1. Abra sua solução no Visual Studio.
 
 2. Selecione cada projeto do Android um por um no Gerenciador de Soluções e clique em [Mostrar todos os arquivos](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/4afxey9h(v=vs.90)) duas vezes em cada projeto. Você pode ignorar projetos que não contêm nenhum arquivo de layout de `.axml`. Esta etapa garantirá que cada diretório do projeto contenha um arquivo de `.csproj.user`.
 
@@ -62,7 +62,7 @@ Os seguintes nomes de propriedade correspondem à opção de [linha de comando](
 
 8. Reinicie o Visual Studio e reabra sua solução.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
 1. Abra sua solução no Visual Studio para Mac para garantir que o diretório de solução contenha um arquivo de `.userprefs`.
 

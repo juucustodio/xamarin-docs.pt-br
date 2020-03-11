@@ -8,17 +8,17 @@ author: davidortinau
 ms.author: daortin
 ms.date: 02/06/2018
 ms.openlocfilehash: 884b69b0cdecf4f979cec314b6440974c5bac97d
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "73019805"
 ---
 # <a name="an-introduction-to-renderscript"></a>Uma introdução ao renderscript
 
 _Este guia apresenta o renderscript e explica como usar as APIs intrínsecas do renderscript em um aplicativo Xamarin. Android que tem como destino o nível de API 17 ou superior._
 
-## <a name="overview"></a>Visão Geral
+## <a name="overview"></a>Visão geral
 
 Renderscript é uma estrutura de programação criada pelo Google com a finalidade de melhorar o desempenho de aplicativos Android que exigem recursos computacionais extensivos. É uma API de nível baixo e de alto desempenho baseada em [C99](https://en.wikipedia.org/wiki/C99). Como é uma API de nível baixo que será executada em CPUs, GPUs ou DSPs, o renderscript é adequado para aplicativos Android que talvez precisem executar qualquer um dos seguintes:
 
@@ -49,7 +49,7 @@ Há três conceitos importantes para usar o Renderscripts em um aplicativo Andro
 3. A **memória alocada** &ndash; dados são passados de e para um kernel por meio de uma _[alocação](xref:Android.Renderscripts.Allocation)_ . Um kernel pode ter uma entrada e/ou uma alocação de saída.
 
 O namespace [Android. Renderscripts](xref:Android.Renderscripts) contém as classes para interagir com o tempo de execução do renderscript. Em particular, a classe [`Renderscript`](xref:Android.Renderscripts.RenderScript) gerenciará o ciclo de vida e os recursos do mecanismo renderscript. O aplicativo do Android deve inicializar um ou mais [`Android.Renderscripts.Allocation`](xref:Android.Renderscripts.Allocation)
-objeto. Uma alocação é uma API gerenciada que é responsável pela alocação e pelo acesso à memória que é compartilhada entre o aplicativo Android e o tempo de execução do renderscript. Normalmente, uma alocação é criada para entrada e, opcionalmente, outra alocação é criada para manter a saída do kernel. O mecanismo de tempo de execução do renderscript e as classes de wrapper gerenciados associadas gerenciarão o acesso à memória mantida pelas alocações, não haverá necessidade de um desenvolvedor de aplicativos Android para realizar qualquer trabalho extra.
+banco de dados. Uma alocação é uma API gerenciada que é responsável pela alocação e pelo acesso à memória que é compartilhada entre o aplicativo Android e o tempo de execução do renderscript. Normalmente, uma alocação é criada para entrada e, opcionalmente, outra alocação é criada para manter a saída do kernel. O mecanismo de tempo de execução do renderscript e as classes de wrapper gerenciados associadas gerenciarão o acesso à memória mantida pelas alocações, não haverá necessidade de um desenvolvedor de aplicativos Android para realizar qualquer trabalho extra.
 
 Uma alocação conterá um ou mais [Android. Renderscripts. Elements](xref:Android.Renderscripts.Element).
 Os elementos são um tipo especializado que descreve os dados em cada alocação.

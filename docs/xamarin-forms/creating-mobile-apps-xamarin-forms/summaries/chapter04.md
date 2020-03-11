@@ -1,6 +1,6 @@
 ---
-title: Resumo do capítulo 4. Rolando a pilha
-description: 'Criando aplicativos móveis com Xamarin. Forms: Resumo do capítulo 4. Rolando a pilha'
+title: Resumo do capítulo 4. Rolagem da pilha
+description: 'Criação de aplicativos móveis com xamarin. Forms: Resumo do capítulo 4. Rolagem da pilha'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 7A39FD4F-15AD-4F94-960E-9FEEB63FFD44
@@ -8,13 +8,13 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
 ms.openlocfilehash: bda9d5cb323524981bed9c3bb55998513dd69aab
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "73032871"
 ---
-# <a name="summary-of-chapter-4-scrolling-the-stack"></a>Resumo do capítulo 4. Rolando a pilha
+# <a name="summary-of-chapter-4-scrolling-the-stack"></a>Resumo do capítulo 4. Rolagem da pilha
 
 [![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04)
 
@@ -35,7 +35,7 @@ Defina a propriedade [`Orientation`](xref:Xamarin.Forms.StackLayout.Orientation)
 
 Defina a propriedade [`Spacing`](xref:Xamarin.Forms.StackLayout.Spacing) de `StackLayout` como um valor `double` para especificar um espaçamento entre os filhos. O valor padrão é 6.
 
-No código, você pode adicionar itens à coleção de `Children` de `StackLayout` em um loop `for` ou `foreach`, conforme demonstrado no exemplo [**ColorLoop**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/ColorLoop) , ou pode inicializar a coleção de `Children` com uma lista de exibições individuais, conforme demonstrado em [**colorlist** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/ColorList). Os filhos devem derivar de `View`, mas podem incluir outros objetos `StackLayout`.
+No código, você pode adicionar itens à coleção de `Children` de `StackLayout` em um loop `for` ou `foreach`, conforme demonstrado no exemplo [**ColorLoop**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/ColorLoop) , ou pode inicializar a coleção de `Children` com uma lista de exibições individuais, conforme demonstrado em [**colorlist**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/ColorList). Os filhos devem derivar de `View`, mas podem incluir outros objetos `StackLayout`.
 
 ## <a name="scrolling-content"></a>Rolando conteúdo
 
@@ -81,13 +81,13 @@ Isso é demonstrado no exemplo de [**VerticalOptionsDemo**](https://github.com/x
 
 ## <a name="frame-and-boxview"></a>Quadro e BoxView
 
-Essas duas exibições retangulares são geralmente usadas para fins de apresentação.
+Esses dois modos de exibição retangulares geralmente são usados para fins de apresentação.
 
-A exibição [`Frame`](xref:Xamarin.Forms.Frame) exibe um quadro retangular ao contrário de outra exibição, que pode ser um layout como `StackLayout`. `Frame` herda uma propriedade [`Content`](xref:Xamarin.Forms.ContentView.Content) de [`ContentView`](xref:Xamarin.Forms.ContentView) que você definiu para a exibição a ser exibida no `Frame`. O `Frame` é transparente por padrão. Defina as três propriedades a seguir para personalizar a aparência do quadro:
+A exibição [`Frame`](xref:Xamarin.Forms.Frame) exibe um quadro retangular ao contrário de outra exibição, que pode ser um layout como `StackLayout`. `Frame` herda uma propriedade [`Content`](xref:Xamarin.Forms.ContentView.Content) de [`ContentView`](xref:Xamarin.Forms.ContentView) que você definiu para a exibição a ser exibida no `Frame`. O `Frame` é transparente por padrão. Defina as seguintes três propriedades para personalizar a aparência do quadro:
 
 - A propriedade [`OutlineColor`](xref:Xamarin.Forms.Frame.OutlineColor) para torná-la visível. É comum definir `OutlineColor` como `Color.Accent` quando você não conhece o esquema de cores subjacente.
 - A propriedade [`HasShadow`](xref:Xamarin.Forms.Frame.HasShadow) pode ser definida como `true` para exibir uma sombra preta em dispositivos IOS.
-- Defina a propriedade [`Padding`](xref:Xamarin.Forms.Layout.Padding) como um valor de `Thickness` para deixar um espaço entre o quadro e o conteúdo do quadro. O valor padrão é 20 unidades em todos os lados.
+- Defina a propriedade [`Padding`](xref:Xamarin.Forms.Layout.Padding) como um valor de `Thickness` para deixar um espaço entre o quadro e o conteúdo do quadro. O valor padrão é de 20 unidades de todos os lados.
 
 O `Frame` tem `HorizontalOptions` padrão e `VerticalOptions` valores de `LayoutOptions.Fill`, o que significa que o `Frame` preencherá seu contêiner. Com outras configurações, o tamanho do `Frame` é baseado no tamanho de seu conteúdo.
 
@@ -99,13 +99,13 @@ Se a `BoxView` for restrita (suas propriedades `HorizontalOptions` e `VerticalOp
 
 Muitas vezes, você definirá as propriedades [`WidthRequest`](xref:Xamarin.Forms.VisualElement.WidthRequest) e [`HeightRequest`](xref:Xamarin.Forms.VisualElement.HeightRequest) de `BoxView` para dar a ela um tamanho específico. Isso é ilustrado pelo exemplo de [**SizedBoxView**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/SizedBoxView) .
 
-Você pode usar várias instâncias de `StackLayout` para combinar uma `BoxView` e várias instâncias de `Label` em uma `Frame` para exibir uma cor específica e, em seguida, colocar cada uma dessas exibições em uma `StackLayout` em uma `ScrollView` para criar a lista atraente de cores mostrado no exemplo de [**ColorBlocks**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/ColorBlocks) :
+Você pode usar várias instâncias de `StackLayout` para combinar uma `BoxView` e várias instâncias de `Label` em uma `Frame` para exibir uma cor específica e, em seguida, colocar cada uma dessas exibições em uma `StackLayout` em uma `ScrollView` para criar a lista atraente de cores mostradas no exemplo [**ColorBlocks**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/ColorBlocks) :
 
 [![Captura de tela tripla de blocos de cor](images/ch04fg11-small.png "Lista de cores")](images/ch04fg11-large.png#lightbox "Lista de cores")
 
 ## <a name="a-scrollview-in-a-stacklayout"></a>Um ScrollView em um StackLayout?
 
-Colocar um `StackLayout` em uma `ScrollView` é comum, mas colocar um `ScrollView` em um `StackLayout` também é conveniente. Teoricamente, isso não deve ser possível porque os filhos de um `StackLayout` vertical não são restringidos verticalmente. Mas um `ScrollView` deve ser verticalmente restrito. Ele deve receber uma altura específica para que possa determinar o tamanho de seu filho para rolagem.
+Colocar um `StackLayout` em uma `ScrollView` é comum, mas colocar um `ScrollView` em um `StackLayout` também é conveniente. Teoricamente, isso não deve ser possível porque os filhos de um `StackLayout` vertical não são restringidos verticalmente. Mas um `ScrollView` deve ser verticalmente restrito. Ele deve receber uma altura específica para que, em seguida, ele pode determinar o tamanho de seu filho para rolagem.
 
 O truque é dar ao `ScrollView` filho do `StackLayout` uma `VerticalOptions` configuração de `FillAndExpand`. Isso é demonstrado no exemplo de [**blackcat**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/BlackCat) .
 

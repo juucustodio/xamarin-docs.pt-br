@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 06/25/2018
 ms.openlocfilehash: 7b74f564f2b6e9613874a774258a7e999002e61a
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "73027075"
 ---
 # <a name="launching-the-maps-application"></a>Iniciando o aplicativo Maps
@@ -56,7 +56,7 @@ Para obter mais informações sobre esquemas de URI geográfica, consulte [Mostr
 
 Além do esquema geográfico, o Android também dá suporte ao carregamento de exibições de rua de uma intenção. Um exemplo do aplicativo de exibição de rua iniciado no Xamarin. Android é mostrado abaixo:
 
-[captura de tela de exemplo![de uma exibição de rua](maps-application-images/03-streetview.png)](maps-application-images/03-streetview.png#lightbox)
+[captura de tela de exemplo ![de uma exibição de rua](maps-application-images/03-streetview.png)](maps-application-images/03-streetview.png#lightbox)
 
 Para iniciar uma exibição de rua, basta usar o esquema de URI de `google.streetview`, conforme demonstrado no código a seguir:
 

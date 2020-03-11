@@ -7,10 +7,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 02/16/2018
 ms.openlocfilehash: e61be6f0189eb825c15fd75764a16706e588ebc9
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "73020512"
 ---
 # <a name="how-content-providers-work"></a>Como os provedores de conteúdo funcionam
@@ -49,7 +49,7 @@ O Android oferece acesso a uma ampla variedade de dados do sistema e do usuário
 
 As classes primárias usadas ao trabalhar com um `ContentProvider` são mostradas aqui:
 
-[diagrama de classe de![do aplicativo provedor de conteúdo e consumindo interações de aplicativo](how-it-works-images/classdiagram1.png)](how-it-works-images/classdiagram1.png#lightbox)
+[diagrama de classe de ![do aplicativo provedor de conteúdo e consumindo interações de aplicativo](how-it-works-images/classdiagram1.png)](how-it-works-images/classdiagram1.png#lightbox)
 
 Neste diagrama, o `ContentProvider` implementa consultas e registra os URIS que outros aplicativos usam para localizar dados. O `ContentResolver` atua como um ' proxy ' para os `ContentProvider` (métodos de consulta, inserção, atualização e exclusão). O `SQLiteOpenHelper` contém dados usados pelo `ContentProvider`, mas não é exposto diretamente ao consumo de aplicativos.
 O `CursorAdapter` passa o cursor retornado pela `ContentResolver` para exibir em uma `ListView`. O `UriMatcher` é uma classe auxiliar que analisa URIs ao processar consultas.

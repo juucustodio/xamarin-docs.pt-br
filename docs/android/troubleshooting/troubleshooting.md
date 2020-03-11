@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/15/2018
 ms.openlocfilehash: 6d83afa47c459633506736b2497a82c444352c90
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "78912530"
 ---
 # <a name="troubleshooting-tips"></a>Dicas de solução de problemas
@@ -19,7 +19,7 @@ ms.locfileid: "78912530"
 ## <a name="getting-diagnostic-information"></a>Obtendo informações de diagnóstico
 
 O Xamarin. Android tem alguns locais a serem examinados ao rastrear vários bugs.
-Elas incluem:
+Eles incluem:
 
 1. Saída do MSBuild de diagnóstico.
 2. Logs de implantação de dispositivo.

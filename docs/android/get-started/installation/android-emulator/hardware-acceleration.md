@@ -9,10 +9,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 08/27/2018
 ms.openlocfilehash: a724a21dfffead307ca3d65d5ff134cf2d7c90db
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "78912414"
 ---
 # <a name="hardware-acceleration-for-emulator-performance-hyper-v--haxm"></a>Aceleração de hardware para o desempenho do emulador (Hyper-V e HAXM)
@@ -72,7 +72,7 @@ O Hyper-V é executado na Plataforma de Hipervisor do Windows. Para usar o Andro
 - Na BIOS do computador, os itens a seguir devem estar habilitados:
 
   - Tecnologia de virtualização (pode ter um rótulo diferente dependendo do fabricante da placa-mãe).
-  - Prevenção de Execução de Dados Baseada em Hardware.
+  - Prevenção de Execução de Dados Imposta por Hardware
 
 - O computador deve estar atualizado para com a atualização do Windows 10 de abril de 2018 (build 1803) ou posterior. Você pode verificar sua versão do Windows está atualizada executando as seguintes etapas:
 
@@ -152,7 +152,7 @@ Pacotes de instalação do HAXM para Windows estão disponíveis na página [Int
 
 Ao criar um dispositivo virtual (confira [Gerenciando dispositivos virtuais com o Android Device Manager](~/android/get-started/installation/android-emulator/device-manager.md)), certifique-se de selecionar uma imagem de sistema baseada em **x86**. Se você usar uma imagem de sistema baseada em ARM, o dispositivo virtual não será acelerado e será executado lentamente.
 
-## <a name="troubleshooting"></a>Solução de problemas
+## <a name="troubleshooting"></a>solução de problemas
 
 Para obter ajuda para solucionar problemas de aceleração de hardware, confira o guia de [solução de problemas](~/android/get-started/installation/android-emulator/troubleshooting.md?tabs=vswin#accel-issues-win) do Android Emulator.
 
@@ -241,7 +241,7 @@ Pacotes de instalação do HAXM para macOS estão disponíveis na página [Hardw
 
    [![Janela de instalação do Intel Hardware Accelerated Execution Manager](hardware-acceleration-images/mac/01-haxm-installer-sml.png)](hardware-acceleration-images/mac/01-haxm-installer.png#lightbox)
 
-## <a name="troubleshooting"></a>Solução de problemas
+## <a name="troubleshooting"></a>solução de problemas
 
 Para obter ajuda para solucionar problemas de aceleração de hardware, confira o guia de [solução de problemas](~/android/get-started/installation/android-emulator/troubleshooting.md?tabs=vsmac#accel-issues-mac) do Android Emulator.
 

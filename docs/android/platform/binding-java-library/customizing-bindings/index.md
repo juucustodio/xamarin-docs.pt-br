@@ -8,23 +8,23 @@ author: davidortinau
 ms.author: daortin
 ms.date: 09/25/2017
 ms.openlocfilehash: 04f3720d8684129476c955819390e91330a7800a
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "73020650"
 ---
 # <a name="customizing-bindings"></a>Personalização de associações
 
 _Você pode personalizar uma associação do Xamarin. Android editando os metadados que controlam o processo de associação. Essas modificações manuais geralmente são necessárias para resolver erros de compilação e para formatar a API resultante para que seja mais consistente com C#/.net. Esses guias explicam a estrutura desses metadados, como modificar os metadados e como usar o JavaDoc para recuperar os nomes dos parâmetros do método._
 
-## <a name="overview"></a>Visão Geral
+## <a name="overview"></a>Visão geral
 
 O Xamarin. Android automatiza grande parte do processo de ligação; no entanto, em alguns casos, a modificação manual é necessária para resolver os seguintes problemas:
 
 - Resolvendo erros de compilação causados por tipos ausentes, tipos ofuscados, nomes duplicados, problemas de visibilidade de classe e outras situações que não podem ser resolvidas pelas ferramentas do Xamarin. Android. 
 
-- Alterar o mapeamento que o Xamarin. Android usa para associar a API do Android a diferentes C# tipos no (por exemplo, muitos desenvolvedores preferem mapear as constantes C# do Java `int`para`enum`constantes).
+- Alterar o mapeamento que o Xamarin. Android usa para associar a API do Android a diferentes C# tipos no (por exemplo, muitos desenvolvedores preferem mapear as constantes C# do Java `int` para `enum` constantes).
 
 - Removendo tipos não utilizados que não precisam ser associados. 
 

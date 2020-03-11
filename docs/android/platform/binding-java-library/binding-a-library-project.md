@@ -8,17 +8,17 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/01/2018
 ms.openlocfilehash: 2ac402bf423c9f3fe136d1ba31622d915d2e2eef
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "73027735"
 ---
 # <a name="binding-an-eclipse-library-project"></a>Associação de um projeto de biblioteca do Eclipse
 
 _Este tutorial explica como usar modelos de projeto Xamarin. Android para associar um projeto de biblioteca do Android do eclipse._
 
-## <a name="overview"></a>Visão Geral
+## <a name="overview"></a>Visão geral
 
 Ainda. Os arquivos AAR estão se tornando cada vez mais a norma da distribuição da biblioteca do Android, em alguns casos, é necessário criar uma associação para um *projeto de biblioteca do Android*. Os projetos de biblioteca do Android são projetos especiais do Android que contêm código compartilhável e recursos que podem ser referenciados por projetos de aplicativos do Android. Normalmente, você se associa a um projeto de biblioteca do Android quando a biblioteca é criada no IDE do eclipse.
 Este tutorial fornece exemplos de como criar um projeto de biblioteca do Android. ZIP da estrutura de diretório de um projeto Eclipse.

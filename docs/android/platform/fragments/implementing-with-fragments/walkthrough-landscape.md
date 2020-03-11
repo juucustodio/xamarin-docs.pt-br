@@ -8,15 +8,15 @@ author: davidortinau
 ms.author: daortin
 ms.date: 04/26/2018
 ms.openlocfilehash: 4d9ef88f39914f8fa5e578577ee9f6977c2bc88e
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "73020262"
 ---
 # <a name="fragments-walkthrough-ndash-landscape"></a>Orientação de fragmentos &ndash; paisagem
 
-A [orientação de fragmentos &ndash; parte 1](./walkthrough.md) demonstrou como criar e usar fragmentos em um aplicativo Android que tem como alvo as telas menores em um telefone. A próxima etapa neste passo a passos é modificar o aplicativo para tirar proveito do espaço horizontal extra no Tablet &ndash; haverá uma atividade que sempre será a lista de reproduções (o `TitlesFragment`) e `PlayQuoteFragment` será adicionado dinamicamente à atividade em r esponse para uma seleção feita pelo usuário:
+A [orientação de fragmentos &ndash; parte 1](./walkthrough.md) demonstrou como criar e usar fragmentos em um aplicativo Android que tem como alvo as telas menores em um telefone. A próxima etapa neste passo a passos é modificar o aplicativo para tirar proveito do espaço horizontal extra no Tablet &ndash; haverá uma atividade que sempre será a lista de reproduções (o `TitlesFragment`) e `PlayQuoteFragment` será adicionado dinamicamente à atividade em resposta a uma seleção feita pelo usuário:
 
 [![aplicativo em execução no Tablet](./walkthrough-landscape-images/01-tablet-screenshot-sml.png)](./walkthrough-landscape-images/01-tablet-screenshot.png#lightbox)
 
@@ -34,15 +34,15 @@ As seguintes modificações se basearão no trabalho que foi feito nos [fragment
 
 ## <a name="1-create-an-alternate-layout"></a>1. criar um layout alternativo
 
-Quando a atividade principal é criada em um dispositivo Android, o Android decide qual layout será carregado com base na orientação do dispositivo. Por padrão, o Android fornecerá o arquivo de layout **Resources/layout/activity_main. axml** . Para dispositivos que carregam no modo paisagem, o Android fornecerá o arquivo de layout **Resources/layout-Land/activity_main. axml** . O guia sobre os [recursos do Android](/xamarin/android/app-fundamentals/resources-in-android) contém mais detalhes sobre como o Android decide quais arquivos de recursos carregar para um aplicativo.
+Quando a atividade principal é criada em um dispositivo Android, o Android decide qual layout será carregado com base na orientação do dispositivo. Por padrão, o Android fornecerá o arquivo de layout de **recursos/layout/activity_main. axml** . Para dispositivos que carregam no modo paisagem, o Android fornecerá o arquivo de layout **Resources/layout-Land/activity_main. axml** . O guia sobre os [recursos do Android](/xamarin/android/app-fundamentals/resources-in-android) contém mais detalhes sobre como o Android decide quais arquivos de recursos carregar para um aplicativo.
 
-Crie um layout alternativo que direcione a orientação **paisagem** seguindo as etapas descritas no guia de [layouts alternativos](/xamarin/android/user-interface/android-designer/alternative-layout-views) . Isso deve adicionar um novo arquivo de recurso de layout ao projeto, **Resources/layout/activity_main. axml**:
+Crie um layout alternativo que direcione a orientação **paisagem** seguindo as etapas descritas no guia de [layouts alternativos](/xamarin/android/user-interface/android-designer/alternative-layout-views) . Isso deve adicionar um novo arquivo de recurso de layout ao projeto, **recursos/layout/activity_main. axml**:
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 [![layout alternativo no Gerenciador de Soluções](./walkthrough-landscape-images/02-alternate-layout.w157-sml.png)](./walkthrough-landscape-images/02-alternate-layout.w157.png#lightbox)
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
 [![layout alternativo no Painel de Soluções](./walkthrough-landscape-images/02-alternate-layout.m743-sml.png)](./walkthrough-landscape-images/02-alternate-layout.m743.png#lightbox)
 

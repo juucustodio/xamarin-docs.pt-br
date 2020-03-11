@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 06/05/2018
 ms.openlocfilehash: 280fe11f935db0a364f3342b22bb9544cdda1e6d
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "73020240"
 ---
 # <a name="firebase-job-dispatcher"></a>Dispatcher de trabalho do Firebase
@@ -289,6 +289,6 @@ Este guia abordou como usar o Dispatcher de trabalhos do firebase para realizar 
 
 - [Xamarin. firebase. JobDispatcher no NuGet](https://www.nuget.org/packages/Xamarin.Firebase.JobDispatcher)
 - [firebase-Dispatcher de trabalho no GitHub](https://github.com/firebase/firebase-jobdispatcher-android)
-- [Xamarin.Firebase.JobDispatcher Binding](https://github.com/xamarin/XamarinComponents/tree/master/Android/FirebaseJobDispatcher)
+- [Associação do Xamarin. firebase. JobDispatcher](https://github.com/xamarin/XamarinComponents/tree/master/Android/FirebaseJobDispatcher)
 - [Agendamento de trabalhos inteligentes](https://developer.android.com/topic/performance/scheduling.html)
 - [Otimizações de memória e bateria do Android – Google I/O 2016 (vídeo)](https://www.youtube.com/watch?v=VC2Hlb22mZM&feature=youtu.be)

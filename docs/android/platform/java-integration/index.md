@@ -8,23 +8,23 @@ author: davidortinau
 ms.author: daortin
 ms.date: 01/18/2017
 ms.openlocfilehash: ecaa02e036c74074b4fa922ea079355b72ff02e2
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "73020093"
 ---
 # <a name="java-integration-with-xamarinandroid"></a>Integração do Java com o Xamarin. Android
 
 _O ecossistema Java inclui uma coleção diversificada e imensa de componentes. Muitos desses componentes podem ser usados para reduzir o tempo necessário para desenvolver um aplicativo Android. Este documento apresentará e fornecerá uma visão geral de alto nível de algumas das maneiras como os desenvolvedores podem usar esses componentes Java existentes para aprimorar sua experiência de desenvolvimento de aplicativos Xamarin. Android._
 
-## <a name="overview"></a>Visão Geral
+## <a name="overview"></a>Visão geral
 
 Dada a extensão do ecossistema do Java, é muito provável que qualquer funcionalidade específica necessária para um aplicativo Xamarin. Android já tenha sido codificada em Java. Por isso, é atraente tentar reutilizar essas bibliotecas existentes ao criar um aplicativo Xamarin. Android.
 
 Há três maneiras possíveis de reutilizar bibliotecas Java em um aplicativo Xamarin. Android: 
 
-- **Criar uma biblioteca de associações Java** &ndash; com essa técnica, um projeto Xamarin. Android é usado para criar C# wrappers em todos os tipos de Java. Um aplicativo Xamarin. Android pode referenciar os C# wrappers criados por esse projeto e, em seguida, usar o arquivo`.jar`. 
+- **Criar uma biblioteca de associações Java** &ndash; com essa técnica, um projeto Xamarin. Android é usado para criar C# wrappers em todos os tipos de Java. Um aplicativo Xamarin. Android pode referenciar os C# wrappers criados por esse projeto e, em seguida, usar o arquivo `.jar`. 
 
 - A **interface nativa do java** &ndash; a *interface* *nativa do Java* (JNI) é uma estrutura que permite que código não Java ( C#como C++ ou) chame ou seja chamado pelo código Java em execução dentro de uma JVM. 
 

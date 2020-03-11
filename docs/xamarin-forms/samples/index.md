@@ -8,10 +8,10 @@ author: profexorgeek
 ms.author: jusjohns
 ms.date: 12/27/2019
 ms.openlocfilehash: 3cd7979a3e244866b190c9534c472ea44b9f9c30
-ms.sourcegitcommit: c4f72221a6dce1276a90f2b52282b8145f8e0f1c
-ms.translationtype: HT
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/27/2019
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "75502915"
 ---
 # <a name="xamarinforms-samples"></a>Exemplos do Xamarin.Forms
@@ -24,21 +24,21 @@ Aplicativos de exemplo do Xamarin.Forms e demonstrações de código para ajudar
     :::column:::
 [![todo](images/todo.png)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo/)
 
-### <a name="todohttpsdocsmicrosoftcomsamplesxamarinxamarin-forms-samplestodo"></a>[Todo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo/)
+### <a name="todo"></a>[Todo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo/)
 
 Este exemplo demonstra um aplicativo de Lista de tarefas em que os dados são armazenados e acessados em um banco de dados local do SQLite.
     :::column-end:::
     :::column:::
 [![BugSweeper](images/bugsweeper.png)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/bugsweeper/)
 
-### <a name="bugsweeperhttpsdocsmicrosoftcomsamplesxamarinxamarin-forms-samplesbugsweeper"></a>[BugSweeper](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/bugsweeper/)
+### <a name="bugsweeper"></a>[BugSweeper](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/bugsweeper/)
 
 Este é um jogo conhecido com um novo toque. Dez bugs ficam ocultos em uma grade de blocos 9 por 9. Para vencer, você deve localizar e sinalizador os dez bugs.
     :::column-end:::
     :::column:::
-[![Calculadora de RPN](images/rpncalc.png)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/rpncalculator/)
+[Calculadora de ![RPN](images/rpncalc.png)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/rpncalculator/)
 
-### <a name="rpn-calculatorhttpsdocsmicrosoftcomsamplesxamarinxamarin-forms-samplesrpncalculator"></a>[Calculadora de RPN](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/rpncalculator/)
+### <a name="rpn-calculator"></a>[Calculadora de RPN](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/rpncalculator/)
 
 Uma calculadora RPN (Reverse Polish Notation) permite que os números e as operações sejam inseridas sem parênteses ou uma chave de igual.
     :::column-end:::
@@ -48,21 +48,21 @@ Uma calculadora RPN (Reverse Polish Notation) permite que os números e as opera
     :::column:::
 [![SpinPaint](images/spinpaint.png)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-spinpaint/)
 
-### <a name="spinpainthttpsdocsmicrosoftcomsamplesxamarinxamarin-forms-samplesskiasharpforms-spinpaint"></a>[SpinPaint](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-spinpaint/)
+### <a name="spinpaint"></a>[SpinPaint](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-spinpaint/)
 
 O programa simula um disco giratório que você poderá pintar tocando e movendo seus dedos. O SpinPaint responde ao toque pintando uma linha sob o dedo, mas também duplica essa linha em três imagens de espelho nos outros três quadrantes do disco.
     :::column-end:::
     :::column:::
-[![Exemplos de XAML](images/xaml.png)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples/)
+[Exemplos de ![XAML](images/xaml.png)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples/)
 
-### <a name="xaml-sampleshttpsdocsmicrosoftcomsamplesxamarinxamarin-forms-samplesxamlsamples"></a>[Exemplos de XAML](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples/)
+### <a name="xaml-samples"></a>[Exemplos de XAML](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples/)
 
 XAML (eXtensible Application Markup Language) permite que os desenvolvedores definam interfaces do usuário em aplicativos Xamarin.Forms usando marcação em vez do código.
     :::column-end:::
         :::column:::
 [![Xuzzle](images/xuzzle.png)](https://docs.microsoft.com/samples/xamarin/mobile-samples/liveplayer-xamagonxuzzlelp/)
 
-### <a name="xuzzlehttpsdocsmicrosoftcomsamplesxamarinmobile-samplesliveplayer-xamagonxuzzlelp"></a>[Xuzzle](https://docs.microsoft.com/samples/xamarin/mobile-samples/liveplayer-xamagonxuzzlelp/)
+### <a name="xuzzle"></a>[Xuzzle](https://docs.microsoft.com/samples/xamarin/mobile-samples/liveplayer-xamagonxuzzlelp/)
 
 Este jogo é uma variação do quebra-cabeça clássico 14-15 que pode ser resolvido por blocos deslizantes na ordem correta.
     :::column-end:::

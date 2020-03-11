@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/29/2017
 ms.openlocfilehash: 68de58f499788d803aa0af6c68f20e2265b1d6b5
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "78912306"
 ---
 # <a name="where-can-i-find-my-version-information-and-logs"></a>Onde posso encontrar informações e logs da minha versão?
@@ -50,7 +50,7 @@ Geralmente, é melhor enviar de volta todas as informações dos botões **copia
 
 **Ajuda > sobre > Mostrar detalhes > copiar informações [botão]**
 
-#### <a name="visual-studio"></a>{1&gt;Visual Studio&lt;1}
+#### <a name="visual-studio"></a>Visual Studio
 
 **Ajuda > sobre Microsoft Visual Studio > copiar informações [botão]**
 
@@ -68,7 +68,7 @@ Abra o Gerenciador de SDK do Android e faça uma captura de tela da seção de *
 
 **Ferramentas > Abrir Gerenciador de SDK do Android**
 
-#### <a name="visual-studio"></a>{1&gt;Visual Studio&lt;1}
+#### <a name="visual-studio"></a>Visual Studio
 
 **Ferramentas > Android > Abrir Gerenciador de SDK do Android...**
 
@@ -156,7 +156,7 @@ Esses são os logs do instalador do `XamarinInstaller.dmg`.
 
 (Observe que esse item de menu aparecerá somente depois que o aplicativo tiver sido iniciado.)
 
-### <a name="visual-studio"></a>{1&gt;Visual Studio&lt;1}
+### <a name="visual-studio"></a>Visual Studio
 
 **Exibir > saída > Mostrar saída de: Depurar**
 
@@ -166,7 +166,7 @@ Depois de executar o comando `adb`, anexe novamente o arquivo **android_logcat. 
 
 Consulte também a página [log de depuração do Android](~/android/deploy-test/debugging/android-debug-log.md) .
 
-#### <a name="visual-studio"></a>{1&gt;Visual Studio&lt;1}
+#### <a name="visual-studio"></a>Visual Studio
 
 1. **Ferramentas > Android > Iniciar Prompt de comando do ADB do Android**
 2. Limpar o log: `adb logcat -c`

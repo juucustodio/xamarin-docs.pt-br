@@ -9,23 +9,23 @@ author: davidortinau
 ms.author: daortin
 ms.date: 09/07/2018
 ms.openlocfilehash: 0f7499551db7d86d7978b9c3e1f562a2f054c202
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "73019524"
 ---
 # <a name="how-do-i-update-the-java-development-kit-jdk-version"></a>Como faço para atualizar a versão do JDK (Java Development Kit)?
 
 _Este artigo ilustra como atualizar a versão do Java Development Kit (JDK) no Windows e no Mac._
 
-## <a name="overview"></a>Visão Geral
+## <a name="overview"></a>Visão geral
 
 O Xamarin. Android usa o Java Development Kit (JDK) para integrar com o SDK do Android para a criação de aplicativos Android e a execução do Android designer. As versões mais recentes do SDK do Android (API 24 e superior) exigem o JDK 8 (1,8). Como alternativa, você pode instalar a versão [prévia do Microsoft Mobile OpenJDK](~/android/get-started/installation/openjdk.md). Eventualmente, o Microsoft Mobile OpenJDK substituirá o JDK 8 para desenvolvimento do Xamarin. Android.
 
 Para atualizar para o Microsoft Mobile OpenJDK, consulte [Microsoft Mobile OpenJDK Preview](~/android/get-started/installation/openjdk.md). Para atualizar para o JDK 8, siga estas etapas:
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 1. Baixe o JDK 8 (1,8) do [site da Oracle](https://www.oracle.com/technetwork/java/javase/downloads/index.html):
 
@@ -41,11 +41,11 @@ Para atualizar para o Microsoft Mobile OpenJDK, consulte [Microsoft Mobile OpenJ
 
 4. Abra o Visual Studio e atualize o **local do Java Development Kit** para apontar para o novo JDK em **ferramentas > opções > Xamarin > configurações Android > local do Java Development Kit**:
 
-    [configuração de caminho![para o JDK na página de configurações do Android](update-jdk-images/image4-sml.png)](update-jdk-images/image4.png#lightbox)
+    [configuração de caminho ![para o JDK na página de configurações do Android](update-jdk-images/image4-sml.png)](update-jdk-images/image4.png#lightbox)
 
 Certifique-se de reiniciar o Visual Studio depois de atualizar o local.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
 1. Baixe o JDK 8 (1,8) do [site da Oracle](https://www.oracle.com/technetwork/java/javase/downloads/index.html):
 

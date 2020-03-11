@@ -7,10 +7,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 04/26/2019
 ms.openlocfilehash: d5898f9c6ee30eb1f12bf6480b93a609e762e6ea
-ms.sourcegitcommit: ec62e2624295aa502ec35ac782031d61d61c3aaa
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/11/2020
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "75886587"
 ---
 # <a name="remoted-ios-simulator-for-windows"></a>Simulador remoto de iOS para Windows
@@ -73,7 +73,7 @@ Para desabilitar o simulador do iOS remoto para Windows, navegue até **ferramen
 
 Com essa opção desabilitada, a depuração abre o simulador de iOS no host de Build do Mac conectado.
 
-## <a name="troubleshooting"></a>Solução de problemas
+## <a name="troubleshooting"></a>solução de problemas
 
 Se você tiver problemas com o simulador do iOS remoto, poderá exibir os logs nestes locais:
 

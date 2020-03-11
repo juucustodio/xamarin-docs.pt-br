@@ -8,17 +8,17 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/01/2018
 ms.openlocfilehash: 43061272f3d3486926f38af792ee3b9df0c53670
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "73027236"
 ---
 # <a name="kitkat-features"></a>Recursos do KitKat
 
 _O Android 4,4 (KitKat) vem carregado com um infinidade de recursos para usuários e desenvolvedores. Este guia destaca vários desses recursos e fornece exemplos de código e detalhes de implementação para ajudá-lo a tirar o máximo proveito do KitKat._
 
-## <a name="overview"></a>Visão Geral
+## <a name="overview"></a>Visão geral
 
 O Android 4,4 (API nível 19), também conhecido como "KitKat", foi lançado no final de 2013. O KitKat oferece uma variedade de novos recursos e aprimoramentos, incluindo:
 
@@ -151,11 +151,11 @@ O exemplo acima usa a estrutura de transição para criar uma transição autom�
 
 A captura de tela abaixo mostra o aplicativo antes da animação:
 
-[captura de tela do aplicativo![antes do início da animação](kitkat-images/trans-before.png)](kitkat-images/trans-before.png#lightbox)
+[captura de tela do aplicativo ![antes do início da animação](kitkat-images/trans-before.png)](kitkat-images/trans-before.png#lightbox)
 
 A captura de tela abaixo mostra o aplicativo após a animação:
 
-[captura de tela do aplicativo![após a conclusão da animação](kitkat-images/trans-after.png)](kitkat-images/trans-after.png#lightbox)
+[captura de tela do aplicativo ![após a conclusão da animação](kitkat-images/trans-after.png)](kitkat-images/trans-after.png#lightbox)
 
 Você pode obter mais controle sobre a transição com cenas, que são abordadas na próxima seção.
 
@@ -321,7 +321,7 @@ A estrutura de acesso de armazenamento (SAF) é uma nova maneira para os usuári
 Essa alteração requer duas ações no lado do desenvolvedor: primeiro, os aplicativos que exigem conteúdo de provedores precisam ser atualizados para uma nova maneira de solicitar conteúdo. Em segundo lugar, os aplicativos que gravam dados em um `ContentProvider` precisam ser modificados para usar a nova estrutura. Ambos os cenários dependem do novo [`DocumentsProvider`](xref:Android.Provider.DocumentsProvider)
 API.
 
-#### <a name="documentsprovider"></a>Documentprovider
+#### <a name="documentsprovider"></a>DocumentsProvider
 
 No KitKat, as interações com `ContentProviders` são abstratas com a classe `DocumentsProvider`. Isso significa que o SAF não se importa onde os dados estão fisicamente, desde que possam ser acessados por meio da API `DocumentsProvider`. Provedores locais, serviços de nuvem e dispositivos de armazenamento externo usam a mesma interface e são tratados da mesma forma, fornecendo ao usuário e ao desenvolvedor um local para interagir com o conteúdo do usuário.
 
@@ -394,19 +394,19 @@ Retorna um `System.IO.Stream`, portanto, todo o processo de streaming pode ser e
 
 Para obter mais informações sobre como carregar, criar e editar conteúdo com a estrutura de acesso de armazenamento, consulte a [documentação do Android para a estrutura de acesso de armazenamento](https://developer.android.com/guide/topics/providers/document-provider.html).
 
-### <a name="printing"></a>Imprimindo
+### <a name="printing"></a>Impressão
 
 A impressão de conteúdo é simplificada no KitKat com a introdução dos [serviços de impressão](xref:Android.PrintServices) e `PrintManager`. KitKat também é a primeira versão de API para aproveitar totalmente as [APIs do serviço de impressão em nuvem do Google](https://developers.google.com/cloud-print/) usando o [aplicativo de impressão do Google Cloud](https://play.google.com/store/apps/details?id=com.google.android.apps.cloudprint).
 A maioria dos dispositivos fornecidos com o KitKat baixa automaticamente o aplicativo de impressão do Google Cloud e o [plug-in do serviço de impressão HP](https://play.google.com/store/apps/details?id=com.hp.android.printservice)quando eles se conectam pela primeira vez ao wifi Um usuário pode verificar as configurações de impressão de seu dispositivo navegando até **configurações > sistema > impressão**:
 
-[captura de tela de exemplo do![de telas de configurações de impressão](kitkat-images/printing.png)](kitkat-images/printing.png#lightbox)
+[captura de tela de exemplo do ![de telas de configurações de impressão](kitkat-images/printing.png)](kitkat-images/printing.png#lightbox)
 
 > [!NOTE]
 > Embora as APIs de impressão estejam configuradas para funcionar com a impressão em nuvem do Google por padrão, o Android ainda permite aos desenvolvedores preparar o conteúdo de impressão usando as novas APIs e enviá-la a outros aplicativos para lidar com a impressão.
 
 #### <a name="printing-html-content"></a>Imprimindo conteúdo HTML
 
-O KitKat cria automaticamente um [`PrintDocumentAdapter`](xref:Android.Print.PrintDocumentAdapter) para uma exibição da web com `WebView.CreatePrintDocumentAdapter`. Imprimir conteúdo da Web é um esforço coordenado entre um [`WebViewClient`](xref:Android.Webkit.WebViewClient) que aguarda o carregamento do conteúdo HTML e permite que a atividade saiba disponibilizar a opção de impressão no menu opções e a atividade, que aguarda que o usuário selecione a opção de impressão e c alls `Print`no `PrintManager`. Esta seção aborda a configuração básica necessária para imprimir o conteúdo HTML na tela.
+O KitKat cria automaticamente um [`PrintDocumentAdapter`](xref:Android.Print.PrintDocumentAdapter) para uma exibição da web com `WebView.CreatePrintDocumentAdapter`. Imprimir conteúdo da Web é um esforço coordenado entre um [`WebViewClient`](xref:Android.Webkit.WebViewClient) que aguarda o carregamento do conteúdo HTML e permite que a atividade saiba disponibilizar a opção de impressão no menu opções e a atividade, que aguarda o usuário selecionar a opção de impressão e chama `Print`no `PrintManager`. Esta seção aborda a configuração básica necessária para imprimir o conteúdo HTML na tela.
 
 Observe que o carregamento e a impressão de conteúdo da Web exigem a permissão da Internet:
 
@@ -482,7 +482,7 @@ class MyWebViewClient : WebViewClient
 
 `OnPageFinished` também define o valor de `dataLoaded` como `true`, para que `OnCreateOptionsMenu` possa recriar o menu com a opção imprimir em vigor.
 
-##### <a name="printmanager"></a>Gerenciador de digerente
+##### <a name="printmanager"></a>PrintManager
 
 O exemplo de código a seguir imprime o conteúdo de um `WebView`:
 
@@ -624,7 +624,7 @@ public class MainActivity : Activity, ISensorEventListener
 
 `OnSensorChanged` será chamado se a contagem de etapas for atualizada enquanto o aplicativo estiver em primeiro plano. Se o aplicativo entrar no plano de fundo, ou se o dispositivo estiver suspenso, `OnSensorChanged` não será chamado; no entanto, as etapas continuarão a ser contadas até que `UnregisterListener` seja chamado.
 
-Tenha em mente que *o valor da contagem de etapas é cumulativo em todos os aplicativos que registram o sensor*. Isso significa que mesmo que você desinstale e reinstale o aplicativo e inicialize a variável `count` em 0 na inicialização do aplicativo, o valor relatado pelo sensor permanecerá o número total de etapas realizadas enquanto o sensor foi registrado, seja pelo seu aplicativo ou outro. Você pode impedir que seu aplicativo adicione ao contador de etapas chamando `UnregisterListener` na `SensorManager`, conforme ilustrado pelo código abaixo:
+Tenha em mente que *o valor da contagem de etapas é cumulativo em todos os aplicativos que registram o sensor*. Isso significa que mesmo se você desinstalar e reinstalar seu aplicativo e inicializar a variável `count` em 0 na inicialização do aplicativo, o valor relatado pelo sensor permanecerá o número total de etapas realizadas enquanto o sensor foi registrado, seja por seu aplicativo ou outro. Você pode impedir que seu aplicativo adicione ao contador de etapas chamando `UnregisterListener` na `SensorManager`, conforme ilustrado pelo código abaixo:
 
 ```csharp
 protected override void OnPause()
@@ -641,7 +641,7 @@ A reinicialização do dispositivo redefine a contagem de etapas como 0. Seu apl
 
 <a name="developer_tools" />
 
-## <a name="developer-tools"></a>Ferramentas para Desenvolvedores
+## <a name="developer-tools"></a>Ferramentas de Desenvolvedor
 
 ### <a name="screen-recording"></a>Gravação de tela
 

@@ -7,10 +7,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 06/12/2017
 ms.openlocfilehash: c32d666da1347b947c55209ed7c7ec31a97a70e0
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "73027293"
 ---
 # <a name="providing-backwards-compatibility-with-the-android-support-package"></a>Fornecendo compatibilidade com versões anteriores com o pacote de suporte do Android

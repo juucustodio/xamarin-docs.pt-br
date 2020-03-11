@@ -9,17 +9,17 @@ author: davidortinau
 ms.author: daortin
 ms.date: 04/26/2018
 ms.openlocfilehash: b601fc37cc75dcd43c3688de8d302f0a47a06b35
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "73027414"
 ---
 # <a name="implementing-fragments---walkthrough"></a>Implementando fragmentos – passo a passos
 
 _Os fragmentos são componentes autocontidos e modulares que podem ajudar a resolver a complexidade dos aplicativos Android que visam dispositivos com uma variedade de tamanhos de tela. Este artigo explica como criar e usar fragmentos ao desenvolver aplicativos Xamarin. Android._
 
-## <a name="overview"></a>Visão Geral
+## <a name="overview"></a>Visão geral
 
 Nesta seção, você examinará como criar e usar fragmentos em um aplicativo Xamarin. Android. Esse aplicativo exibirá os títulos de várias jogadas por William Shakespeare em uma lista. Quando o usuário toca no título de uma reprodução, o aplicativo exibirá uma cotação da reprodução em uma atividade separada:
 

@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 08/21/2018
 ms.openlocfilehash: 0105b43116df697bc6688becb77298c236dfa601
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "73019882"
 ---
 # <a name="android-pie-features"></a>Recursos de pizza do Android
@@ -126,7 +126,7 @@ Window.Attributes.LayoutInDisplayCutoutMode =
 
 Os exemplos a seguir fornecem exemplos desses modos de recorte. A primeira captura de tela à esquerda é do aplicativo em modo não-fullscreen. Na captura de tela do centro, o aplicativo é colocado no ecrã inteiro com `LayoutInDisplayCutoutMode` definido como `LayoutInDisplayCutoutModeShortEdges`. Observe que o plano de fundo branco do aplicativo se estende à área de recorte de exibição:
 
-[Exemplo de![exibir modos de recorte no emulador](pie-images/03-cutout-modes-sml.png)](pie-images/03-cutout-modes.png#lightbox)
+[Exemplo de ![exibir modos de recorte no emulador](pie-images/03-cutout-modes-sml.png)](pie-images/03-cutout-modes.png#lightbox)
 
 Na captura de tela final (acima à direita), `LayoutInDisplayCutoutMode` é definido como `LayoutInDisplayCutoutModeShortNever` antes que ele vá para o ecrã completo.
 Observe que o plano de fundo branco do aplicativo não tem permissão para estender para a área de recorte de exibição.

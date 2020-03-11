@@ -7,10 +7,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 02/05/2018
 ms.openlocfilehash: 1438c012608b367c21ebcc401c058b186b917f53
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "73027796"
 ---
 # <a name="working-with-the-android-manifest"></a>Trabalhando com o manifesto do Android
@@ -53,7 +53,7 @@ Este exemplo faz com que o fragmento XML a seguir seja adicionado ao **AndroidMa
 
 O atributo `[Activity]` não tem nenhum efeito sobre tipos de `abstract`; os tipos de `abstract` são ignorados.
 
-### <a name="activity-name"></a>Nome da Atividade
+### <a name="activity-name"></a>Nome da atividade
 
 A partir do Xamarin. Android 5,1, o nome do tipo de uma atividade é baseado no MD5SUM do nome qualificado do assembly do tipo que está sendo exportado. Isso permite que o mesmo nome totalmente qualificado seja fornecido de dois assemblies diferentes e não obtenha um erro de empacotamento. (Antes do Xamarin. Android 5,1, o nome do tipo padrão da atividade foi criado a partir do namespace em minúsculas e do nome da classe.) 
 
@@ -148,7 +148,7 @@ Quando você adiciona permissões ao manifesto do Android (conforme descrito em 
 <uses-permission android:name="android.permission.INTERNET" />
 ```
 
-As compilações de depuração definem automaticamente algumas permissões para facilitar a depuração (como `INTERNET` e `READ_EXTERNAL_STORAGE`) &ndash; essas configurações são definidas somente no **obj/Debug/Android/AndroidManifest. xml** gerado e não são mostrados como habilitados noconfigurações de permissões. 
+As compilações de depuração definem automaticamente algumas permissões para facilitar a depuração (como `INTERNET` e `READ_EXTERNAL_STORAGE`) &ndash; essas configurações são definidas somente no **obj/Debug/Android/AndroidManifest. xml** gerado e não são mostradas como habilitadas nas configurações de **permissões necessárias** . 
 
 Por exemplo, se você examinar o arquivo de manifesto gerado em **obj/Debug/Android/AndroidManifest. xml**, poderá ver os seguintes elementos de permissão adicionados: 
 
@@ -157,7 +157,7 @@ Por exemplo, se você examinar o arquivo de manifesto gerado em **obj/Debug/Andr
 <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 ```
 
-Na versão Build da versão do manifesto (em **obj/Debug/Android/AndroidManifest. xml**), essas permissões *não* são configuradas automaticamente. Se você achar que mudar para uma compilação de versão faz com que seu aplicativo perca uma permissão que estava disponível na compilação de depuração, verifique se você definiu explicitamente essa permissão nas configurações de **permissões necessárias** para seu aplicativo (consulte **Build > Android Aplicativo** em Visual Studio para Mac; consulte **propriedades > manifesto do Android** no Visual Studio). 
+Na versão Build da versão do manifesto (em **obj/Debug/Android/AndroidManifest. xml**), essas permissões *não* são configuradas automaticamente. Se você achar que mudar para uma compilação de versão faz com que seu aplicativo perca uma permissão que estava disponível na compilação de depuração, verifique se você definiu explicitamente essa permissão nas configurações de **permissões necessárias** para seu aplicativo (consulte **Compilar > aplicativo Android** no Visual Studio para Mac; consulte **Propriedades > manifesto do Android** no Visual Studio). 
 
 ## <a name="advanced-features"></a>Recursos avançados
 
@@ -166,7 +166,7 @@ Na versão Build da versão do manifesto (em **obj/Debug/Android/AndroidManifest
 O manifesto do Android fornece uma maneira de descrever os recursos de sua atividade. Isso é feito por meio de [tentativas](https://developer.android.com/guide/topics/manifest/intent-filter-element.html) e do [`[IntentFilter]`](xref:Android.App.IntentFilterAttribute)
 atributo personalizado. Você pode especificar quais ações são apropriadas para sua atividade com o [`IntentFilter`](xref:Android.App.IntentFilterAttribute#ctor*)
 e quais categorias são apropriadas com o [`Categories`](xref:Android.App.IntentFilterAttribute.Categories)
-property. Pelo menos uma atividade deve ser fornecida (motivo pelo qual as atividades são fornecidas no Construtor). `[IntentFilter]` pode ser fornecida várias vezes, e cada uso resulta em um elemento `<intent-filter/>` separado dentro do `<activity/>`. Por exemplo:
+. Pelo menos uma atividade deve ser fornecida (motivo pelo qual as atividades são fornecidas no Construtor). `[IntentFilter]` pode ser fornecida várias vezes, e cada uso resulta em um elemento `<intent-filter/>` separado dentro do `<activity/>`. Por exemplo:
 
 ```csharp
 [Activity (Label="Awesome Demo App", MainLauncher=true, Icon="@drawable/myicon")] 

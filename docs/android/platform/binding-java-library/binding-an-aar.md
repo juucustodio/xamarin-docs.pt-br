@@ -8,17 +8,17 @@ author: davidortinau
 ms.author: daortin
 ms.date: 04/11/2018
 ms.openlocfilehash: 103720c8cb47b1ac4cfe5cfadeb6b18828318ad3
-ms.sourcegitcommit: 5a23c66f81853884480aca666d649a56d68c01cb
-ms.translationtype: HT
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "73618544"
 ---
 # <a name="binding-an-aar"></a>Associação de um .AAR
 
 _Este passo a passo fornece instruções passo a passo para criar uma biblioteca de associações Java do Xamarin. Android a partir de um Android. Arquivo AAR._
 
-## <a name="overview"></a>Visão Geral
+## <a name="overview"></a>Visão geral
 
 O *arquivo morto do Android (. AAR)* é o formato de arquivo para bibliotecas Android.
 Um. O arquivo AAR é um. Arquivo ZIP que contém o seguinte:
@@ -70,7 +70,7 @@ Além disso, este aplicativo de exemplo recuperará e exibirá um recurso de ima
 
 [imagem de macaco ![Xamarin](binding-an-aar-images/00-monkey-sml.png)](binding-an-aar-images/00-monkey.png#lightbox)
 
-Esse recurso de imagem reside em **res/empate/monkey.png** em **textanalyze. aar**.
+Esse recurso de imagem reside em **res/empate/macaco. png** em **textanalyze. aar**.
 
 ### <a name="creating-the-bindings-library"></a>Criando a biblioteca de associações
 
@@ -132,7 +132,7 @@ A captura de tela acima realça os dois métodos `TextAnalyzer` que o aplicativo
 
 ### <a name="accessing-aar-types"></a>Acess. Tipos de AAR
 
-Depois de adicionar uma referência ao seu aplicativo que aponta para a biblioteca de associação, você pode acessar os tipos de Java no. AAR como você acessaria C# tipos (graças aos C# wrappers). C#o código do aplicativo pode chamar `TextAnalyzer`métodos, conforme ilustrado neste exemplo:
+Depois de adicionar uma referência ao seu aplicativo que aponta para a biblioteca de associação, você pode acessar os tipos de Java no. AAR como você acessaria C# tipos (graças aos C# wrappers). C#o código do aplicativo pode chamar `TextAnalyzer` métodos, conforme ilustrado neste exemplo:
 
 ```csharp
 using Com.Xamarin.Textcounter;
@@ -268,9 +268,9 @@ Você também pode acessar layouts de recursos que residem no. AAR. Para fazer i
 var a = new ArrayAdapter<string>(this, Resource.Layout.row_layout, ...);
 ```
 
-O exemplo **textanalyze. aar** contém um arquivo de imagem que reside em **res/Drawable/monkey.png**. Vamos acessar esse recurso de imagem e usá-lo em nosso aplicativo de exemplo:
+O exemplo **textanalyze. aar** contém um arquivo de imagem que reside em **res/Drawable/macaco. png**. Vamos acessar esse recurso de imagem e usá-lo em nosso aplicativo de exemplo:
 
-Edite o layout **BindingTest** (**Main. axml**) e adicione um `ImageView` ao final do contêiner `LinearLayout`. Este `ImageView` exibe a imagem encontrada em **\@drawable/monkey**; essa imagem será carregada a partir da seção de recursos de **textanalyze. aar**:
+Edite o layout **BindingTest** (**Main. axml**) e adicione um `ImageView` ao final do contêiner `LinearLayout`. Este `ImageView` exibe a imagem encontrada em **\@desenhável/macaco**; essa imagem será carregada a partir da seção de recursos de **textanalyze. aar**:
 
 ```xml
     ...

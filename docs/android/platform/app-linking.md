@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 02/16/2018
 ms.openlocfilehash: af90c286d2bb960a9f78547dd15c3d98a69529ae
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "75487822"
 ---
 # <a name="app-linking-in-android"></a>Vinculação de aplicativo no Android
@@ -36,7 +36,7 @@ Se o usuário não tiver aplicativos instalados que ofereçam suporte ao URI e u
 
 Este guia discutirá como configurar um aplicativo Android 6,0 e como criar e publicar o arquivo de links de ativos digitais para dar suporte à vinculação de aplicativos no Android 6,0.
 
-## <a name="requirements"></a>Requisitos do
+## <a name="requirements"></a>Requisitos
 
 Este guia requer o Xamarin. Android 6,1 e um aplicativo que tem como alvo o Android 6,0 (API nível 23) ou superior.
 
@@ -167,7 +167,7 @@ Há dois testes que podem ser executados para garantir que os filtros de intenç
         -d "http://<domain1>/recipe/scalloped-potato"
     ```
 
-2. Exibe as políticas de tratamento de links existentes para os aplicativos instalados em um determinado dispositivo. O comando a seguir despejará uma lista de políticas de link para cada usuário no dispositivo com as informações a seguir. No prompt de comando, digite o seguinte comando:
+2. Exibe as políticas de tratamento de links existentes para os aplicativos instalados em um determinado dispositivo. O comando a seguir despejará uma lista de políticas de link para cada usuário no dispositivo com as informações a seguir. No prompt de comando, digite o comando a seguir:
 
     ```shell
     $ adb shell dumpsys package domain-preferred-apps
@@ -192,7 +192,7 @@ Há dois testes que podem ser executados para garantir que os filtros de intenç
 
 Este guia abordou como a vinculação de aplicativos funciona no Android 6,0. Em seguida, ele abordou como configurar um aplicativo Android 6,0 para dar suporte e responder a links de aplicativo. Ele também abordou como testar a vinculação de aplicativos em um aplicativo Android.
 
-## <a name="related-links"></a>Links Relacionados
+## <a name="related-links"></a>Links relacionados
 
 - [Encontrando a assinatura MD5 ou SHA1 do repositório de chaves](~/android/deploy-test/signing/keystore-signature.md)
 - [AppLinks](https://developers.facebook.com/docs/applinks)
