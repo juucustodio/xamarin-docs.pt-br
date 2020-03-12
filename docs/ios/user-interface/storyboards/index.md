@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: 13f5c594543934e14295615517e3de01a98a69a5
-ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
+ms.openlocfilehash: 3d9531bbaa38a0a0a9bb42d22c79a63fda75c449
+ms.sourcegitcommit: 926f9a44065b41c7d74794a94bee66b61e903bf2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "78291545"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79134002"
 ---
 # <a name="introduction-to-storyboards-in-xamarinios"></a>Introdução aos storyboards no Xamarin. iOS
 
@@ -22,7 +22,7 @@ Antes de o formato de arquivo de storyboard ter sido introduzido pela Apple como
 
 Um storyboard pode ser criado, aberto e editado com o Xamarin iOS designer. Este guia também explica como usar o designer para criar seus storyboards ao usar C# o para programar a navegação.
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 Os storyboards podem ser usados com o Xcode, o designer do iOS no Visual Studio para Mac e o Visual Studio 2019 com as cargas de trabalho do Xamarin instaladas.
 
@@ -82,7 +82,7 @@ Qualquer aplicativo usando classes de tamanho também usará o novo [*continuaç
 
 [![](images/adaptivesegue.png "The Adaptive Segues dropdown")](images/adaptivesegue.png#lightbox)
 
-|Transição|DESCRIÇÃO|
+|Transição|Descrição|
 |--- |--- |
 |Mostrar|Isso é muito semelhante a um transição de push, mas leva o conteúdo da tela para conta.|
 |Mostrar detalhes|Se o aplicativo exibir uma exibição mestre e de detalhes (por exemplo, em um controlador de exibição de divisão em um iPad), o conteúdo substituirá a exibição de detalhes. Se o aplicativo exibir apenas o mestre ou detalhes, o conteúdo substituirá a parte superior da pilha do controlador de exibição.|
@@ -187,6 +187,10 @@ A captura de tela abaixo mostra dois controladores de exibição em nossa superf
     [![](images/add-storyboard2.png "Adding storyboard")](images/add-storyboard2.png#lightbox)
 
 2. Clique com o botão direito do mouse no arquivo de storyboard e selecione **abrir com > Xcode Interface Builder** para abri-lo no Xcode.
+
+    *Se preferir usar o compilador de interface do Xcode por padrão, você poderá escolher na Visual Studio para Mac preferências em **projetos > Ios**:*
+
+![](images/set-preferred-designer-tool.png "Selecting the preferred designer tool")
 
 3. No Xcode, abra a biblioteca (por meio da **exibição > mostrar biblioteca** ou *Shift + Command + L*) para mostrar uma lista de objetos que podem ser adicionados ao storyboard. Adicione um `Navigation Controller` ao storyboard arrastando o objeto da lista para o storyboard. Por padrão, a `Navigation Controller` fornecerá duas telas; a tela à direita é uma `TableViewController` que iremos substituir por uma exibição mais simples, para que possa ser removida clicando na exibição e pressionando a tecla Delete.
 
@@ -476,7 +480,7 @@ Quando o aplicativo é executado e o usuário clica no elemento da interface do 
 
 Este artigo apresenta o conceito de storyboards e como eles podem ser benéficos no desenvolvimento de aplicativos iOS. Ele aborda cenas, exibir controladores, exibições e exibir hierarquias e como os bastidores são vinculados junto com tipos diferentes de continuações.  Ele também explora a instanciação de controladores de exibição manualmente de um storyboard e a criação de continuações condicional.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Storyboard manual (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/manualstoryboard/)
 - [Introdução ao designer do iOS](~/ios/user-interface/designer/introduction.md)

@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
 ms.openlocfilehash: 4731be58c1fadae0bba6768570ecfd181b071dd2
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.sourcegitcommit: ce4670de51e24116a944c778ee64585bd0aae0e1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78915714"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79088936"
 ---
 # <a name="ios-7-user-interface-overview"></a>Visão geral da interface do usuário do iOS 7
 
@@ -262,6 +262,6 @@ No iOS 7, o usuário pode especificar o tamanho do texto nas configurações do 
 
 Este artigo aborda as alterações nos elementos da interface do usuário no iOS 7. Ele examina várias das alterações feitas nas exibições e nos controles no UIKit, destacando as alterações visuais, bem como as alterações nas APIs relacionadas. Por fim, ele introduz novas APIs para trabalhar com conteúdo de tela inteira, novo suporte a cores de tonalidade e tipo dinâmico.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [ImageViewer (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios7-ui-updates)
