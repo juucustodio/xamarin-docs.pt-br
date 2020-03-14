@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 12/05/2017
 ms.openlocfilehash: f986099011dbccb0eb43c62d253ee497d46ca08e
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78915631"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79304901"
 ---
 # <a name="installing-and-using-watchos-in-xamarin"></a>Instalar e usar o watchOS no Xamarin
 
@@ -214,7 +214,7 @@ To test the functionality in your  and
 
 Os arquivos de modelo watchOS (como `InterfaceController`, `ExtensionDelegate`, `NotificationController`e `ComplicationController`) vêm com seus métodos de ciclo de vida necessários já implementados. Adicione chamadas de `Console.WriteLine` e leia a **saída do aplicativo** para entender melhor o ciclo de vida do evento.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [WatchKitCatalog (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
 - [Primeiro vídeo do aplicativo Watch](https://blog.xamarin.com/your-first-watch-kit-app/)

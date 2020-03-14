@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017
 ms.openlocfilehash: b9b4d201e02d60bd6131c8693d9ac6a233e4fe10
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78918730"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79304915"
 ---
 # <a name="deploying-and-testing-watchos-apps-with-xamarin"></a>Implantando e testando aplicativos watchOS com o Xamarin
 
@@ -68,7 +68,7 @@ Para distribuição, você só precisará criar um perfil de provisionamento de 
 
 <a name="App_Groups" />
 
-## <a name="app-groups"></a>Grupos de Aplicativos
+## <a name="app-groups"></a>Grupos de aplicativo
 
 Você pode usar um grupo de aplicativos para compartilhar dados entre seu aplicativo iOS e a extensão Watch. Você deve garantir que sua solução tenha:
 
@@ -104,6 +104,6 @@ Clique duas vezes para editar o arquivo **. plist de direitos** nesses projetos:
 
 Não **habilite** direitos no projeto de aplicativo Watch. Não é necessário habilitá-lo no próprio relógio.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Guia de envio do Apple WatchKit](https://developer.apple.com/app-store/watch/)

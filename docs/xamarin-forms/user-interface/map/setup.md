@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 02/07/2020
 ms.openlocfilehash: c3c4863814949be2e6575e92136ca740452a2f3c
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78912965"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79305461"
 ---
 # <a name="xamarinforms-map-initialization-and-configuration"></a>Inicialização e configuração do mapa do Xamarin. Forms
 

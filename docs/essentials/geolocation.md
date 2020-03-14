@@ -6,11 +6,11 @@ author: jamesmontemagno
 ms.author: jamont
 ms.date: 03/13/2019
 ms.openlocfilehash: 2ee4683bce02e95c52235afa823be21b89863208
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78910813"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79304320"
 ---
 # <a name="xamarinessentials-geolocation"></a>Xamarin.Essentials: Geolocalização
 
@@ -146,9 +146,9 @@ catch (Exception ex)
 
 A tabela a seguir descreve a precisão por plataforma:
 
-### <a name="lowest"></a>O menor
+### <a name="lowest"></a>Mais Baixo
 
-| Plataforma | Distância (em metros) |
+| Platform | Distância (em metros) |
 | --- | --- |
 | Android | 500 |
 | iOS | 3000 |
@@ -156,7 +156,7 @@ A tabela a seguir descreve a precisão por plataforma:
 
 ### <a name="low"></a>Baixo
 
-| Plataforma | Distância (em metros) |
+| Platform | Distância (em metros) |
 | --- | --- |
 | Android | 500 |
 | iOS | 1000 |
@@ -164,7 +164,7 @@ A tabela a seguir descreve a precisão por plataforma:
 
 ### <a name="medium-default"></a>Médio (padrão)
 
-| Plataforma | Distância (em metros) |
+| Platform | Distância (em metros) |
 | --- | --- |
 | Android | 100–500 |
 | iOS | 100 |
@@ -172,17 +172,17 @@ A tabela a seguir descreve a precisão por plataforma:
 
 ### <a name="high"></a>Alta
 
-| Plataforma | Distância (em metros) |
+| Platform | Distância (em metros) |
 | --- | --- |
-| Android | 0–100 |
+| Android | 0 - 100 |
 | iOS | 10 |
 | UWP | <= 10 |
 
 ### <a name="best"></a>Melhor
 
-| Plataforma | Distância (em metros) |
+| Platform | Distância (em metros) |
 | --- | --- |
-| Android | 0–100 |
+| Android | 0 - 100 |
 | iOS | ~0 |
 | UWP | <= 10 |
 
@@ -208,7 +208,7 @@ if (location != null)
 
 As classes [`Location`](xref:Xamarin.Essentials.Location) e [`LocationExtensions`](xref:Xamarin.Essentials.LocationExtensions) definem métodos `CalculateDistance` que permitem o cálculo da distância entre duas localizações geográficas. Essa distância calculada não considera estradas ou outros caminhos e é simplesmente a distância mais curta entre os dois pontos ao longo da superfície da Terra, também conhecido como _ortodromia_ ou, coloquialmente, a distância "em linha reta".
 
-Aqui está um exemplo:
+Veja um exemplo:
 
 ```csharp
 Location boston = new Location(42.358056, -71.063611);

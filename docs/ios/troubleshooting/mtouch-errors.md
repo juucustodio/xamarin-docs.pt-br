@@ -9,11 +9,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/06/2018
 ms.openlocfilehash: a26c83565e4cfa64272549e12a35206dff6ec3c0
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78911553"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79304761"
 ---
 # <a name="xamarinios-errors"></a>Erros do Xamarin. iOS
 
@@ -2775,14 +2775,14 @@ Em alguns casos, trata-se de um problema de "rede local" e pode ser resolvido co
 
 Onde * pode ser:
 
-- cadeia de caracteres
-- array
+- string
+- matriz
 - dicionário
-- bool
+- {1&gt;bool&lt;1}
 - real
-- inteiro
+- integer
 - date
-- Dados
+- data
 
 <a name="MT7046" />
 

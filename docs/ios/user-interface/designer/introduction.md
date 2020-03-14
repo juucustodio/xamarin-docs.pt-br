@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 01/31/2018
 ms.openlocfilehash: 6b02a0f8476cf47ca6df279653095fe0845b36c9
-ms.sourcegitcommit: 60d2243809d8e980fca90b9f771e72f8c0e64d71
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "78915166"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79304698"
 ---
 # <a name="ios-designer-basics"></a>Noções básicas do iOS designer
 
@@ -20,7 +20,7 @@ _Este guia apresenta o Xamarin Designer para iOS. Ele demonstra como usar o desi
 
 O Xamarin Designer para iOS é um designer de interface visual semelhante ao Interface Builder do Xcode e ao Designer Android. Alguns dos seus muitos recursos incluem a integração direta com o Visual Studio para Windows e Mac, edição do tipo "arrastar e soltar", uma interface para configurar manipuladores de eventos e a capacidade de renderizar controles personalizados.
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 O designer do iOS está disponível em Visual Studio para Mac e no Visual Studio 2017 e posterior no Windows. No Visual Studio para Windows, o designer do iOS requer uma conexão com um host de Build do Mac configurado corretamente, embora o Xcode não precise estar em execução.
 
@@ -349,7 +349,7 @@ O **painel de propriedades** contém três seções:
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-### <a name="properties-window"></a>Janela Propriedades
+### <a name="properties-window"></a>Janela de Propriedades
 
 Use a **janela Propriedades** para editar a identidade, os estilos visuais, a acessibilidade e o comportamento de um controle. A captura de tela a seguir ilustra as opções da **janela Propriedades** de um botão:
 
@@ -492,7 +492,7 @@ Este e outros guias relacionados ao iOS designer referem-se ao uso de storyboard
 
 Este guia forneceu uma introdução ao designer do iOS, descrevendo seus recursos e descrevendo as ferramentas que ele oferece para criar interfaces de usuário belas.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Introdução ao Storyboards](~/ios/user-interface/storyboards/index.md)
 - [Instruções de controles designáveis do iOS](~/ios/user-interface/designer/ios-designable-controls-walkthrough.md)

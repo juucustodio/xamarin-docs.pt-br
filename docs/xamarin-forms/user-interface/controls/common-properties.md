@@ -8,17 +8,17 @@ author: profexorgeek
 ms.author: jusjohns
 ms.date: 08/21/2019
 ms.openlocfilehash: 6d10e665c6461655440ddfb2c524cb56a14337f6
-ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "78911322"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79304208"
 ---
 # <a name="xamarinforms-common-control-properties-methods-and-events"></a>Propriedades, métodos e eventos de controle comum do Xamarin. Forms
 
 A classe `VisualElement` Xamarin. Forms é a classe base para a maioria dos controles usados em um aplicativo Xamarin. Forms. A classe `VisualElement` define muitas [Propriedades](#properties), [métodos](#methods)e [eventos](#events) que são usados na derivação de classes.
 
-## <a name="properties"></a>Propriedades
+## <a name="properties"></a>{1&gt;Propriedades&lt;1}
 
 As propriedades a seguir estão disponíveis em instâncias de `VisualElement`. Para obter uma lista completa, consulte as [Propriedades da API do visualelement](xref:Xamarin.Forms.VisualElement#properties).
 
@@ -176,7 +176,7 @@ A propriedade `X` é um valor de `double` somente leitura que descreve a posiç�
 
 A propriedade `Y` é um valor de `double` somente leitura que descreve a posição Y atual do controle.
 
-## <a name="methods"></a>Métodos
+## <a name="methods"></a>{1&gt;Métodos&lt;1}
 
 Os métodos a seguir estão disponíveis na classe `VisualElement`. Para obter uma lista completa, consulte [métodos de API do visualelement](xref:Xamarin.Forms.VisualElement#methods).
 

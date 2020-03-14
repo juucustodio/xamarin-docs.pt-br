@@ -9,17 +9,17 @@ author: maddyleger1
 ms.author: maleger
 ms.date: 02/04/2019
 ms.openlocfilehash: b287d523101bb8ca7faca8ea95ee898ccf9c0bb1
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78918031"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79305314"
 ---
 # <a name="xaml-previewer-for-xamarinforms"></a>Visualizar XAML para Xamarin. Forms
 
 _Consulte os layouts do Xamarin. Forms renderizados conforme você digita_
 
-## <a name="overview"></a>Visão Geral
+## <a name="overview"></a>Visão geral
 
 O visualizador XAML mostra como sua página XAML do Xamarin. Forms será exibida no iOS e no Android. Quando você fizer alterações no XAML, verá-as visualizadas imediatamente junto com seu código. O modo de visualização de XAML está disponível no Visual Studio e Visual Studio para Mac.
 

@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
 ms.openlocfilehash: d6c9b74c9abc1a2c493c31699b52969a7d129429
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78915279"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79305265"
 ---
 # <a name="the-model-view-viewmodel-pattern"></a>O padrão Model-View-ViewModel
 
@@ -364,7 +364,7 @@ O padrão MVVM (Model-View-ViewModel) ajuda a separar corretamente a lógica de 
 
 Usando o padrão MVVM, a interface do usuário do aplicativo e a apresentação subjacente e a lógica de negócios são separadas em três classes separadas: a exibição, que encapsula a interface do usuário e a lógica da interface do usuário; o modelo de exibição, que encapsula a lógica de apresentação e o estado; e o modelo, que encapsula a lógica de negócios e os dados do aplicativo.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Download do eBook (PDF de 2Mb)](https://aka.ms/xamarinpatternsebook)
 - [eShopOnContainers (GitHub) (exemplo)](https://github.com/dotnet-architecture/eShopOnContainers)

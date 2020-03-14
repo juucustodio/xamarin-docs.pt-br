@@ -8,17 +8,17 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/01/2018
 ms.openlocfilehash: c7718ef7a02365e9ca09f7491804cbadfa0c9a41
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78914247"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79304537"
 ---
 # <a name="viewpager"></a>ViewPager
 
 _ViewPager é um Gerenciador de layout que permite implementar a navegação Gestural. A navegação Gestural permite que o usuário passe o dedo para a esquerda e para a direita para percorrer as páginas de dados. Este guia explica como implementar a navegação Gestural com o ViewPager, com e sem fragmentos. Ele também descreve como adicionar indicadores de página usando PagerTitleStrip e PagerTabStrip._
 
-## <a name="overview"></a>Visão Geral
+## <a name="overview"></a>Visão geral
 
 Um cenário comum no desenvolvimento de aplicativos é a necessidade de fornecer aos usuários navegação Gestural entre exibições irmãos. Nessa abordagem, o usuário passa o dedo para a esquerda ou direita para acessar páginas de conteúdo (por exemplo, em um assistente de instalação ou em uma apresentação de slides). Você pode criar essas exibições de passe do dedo usando o widget `ViewPager`, disponível na [biblioteca de suporte do Android v4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/). O `ViewPager` é um widget de layout composto por várias exibições filhas em que cada exibição filho constitui uma página no layout: 
 
@@ -35,7 +35,7 @@ Este guia demonstra as duas abordagens:
 
 - Em [Viewpager com fragmentos](~/android/user-interface/controls/view-pager/viewpager-and-fragments.md), um aplicativo [FlashCardPager](https://docs.microsoft.com/samples/xamarin/monodroid-samples/userinterface-flashcardpager) um pouco mais complexo é desenvolvido para demonstrar como usar `ViewPager` com `Fragment`s para criar um aplicativo que apresenta problemas de matemática como cartões flash e responde à entrada do usuário. 
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 Para usar `ViewPager` em seu projeto de aplicativo, você deve instalar o pacote de [biblioteca de suporte do Android v4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/) . Para obter mais informações sobre a instalação de pacotes do NuGet, consulte [Walkthrough: incluindo um NuGet em seu projeto](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough). 
 
@@ -44,7 +44,7 @@ Para usar `ViewPager` em seu projeto de aplicativo, você deve instalar o pacote
 Três componentes são usados para implementar a navegação Gestural com `ViewPager`:
 
 - ViewPager
-- Adaptador
+- Personalizado
 - Indicador de pager
 
 Cada um desses componentes é resumido abaixo.
@@ -55,7 +55,7 @@ Cada um desses componentes é resumido abaixo.
 
 [![closeup do aplicativo TreePager exibindo uma transição entre exibições](images/02-transition-sml.png)](images/02-transition.png#lightbox)
 
-### <a name="adapter"></a>Adaptador
+### <a name="adapter"></a>Personalizado
 
 `ViewPager` efetua pull de seus dados de um *adaptador*. O trabalho do adaptador é criar os `View`s exibidos pelo `ViewPager`, fornecendo-os conforme necessário. O diagrama a seguir ilustra esse conceito &ndash; o adaptador cria e popula `View`s e os fornece ao `ViewPager`. Como o `ViewPager` detecta os gestos de toque do usuário, ele solicita que o adaptador forneça o `View` apropriado a ser exibido: 
 
@@ -73,7 +73,7 @@ Há duas exibições que podem produzir essas informações de navegação para 
 
 Este guia demonstra como immplementr componentes de aplicativo de `ViewPager`, adaptador e indicador e integrá-los para dar suporte à navegação do Gestural. 
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [TreePager (exemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/userinterface-treepager)
 - [FlashCardPager (exemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/userinterface-flashcardpager)

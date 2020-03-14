@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017
 ms.openlocfilehash: f79a07a04eddeea1441f7938fdef210a37fb920a
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78918465"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79305489"
 ---
 # <a name="part-2-essential-xaml-syntax"></a>Parte 2. Sintaxe essencial do XAML
 
@@ -529,7 +529,7 @@ Essa é a maneira padrão de definir uma propriedade de `Padding` dependente de 
 
 Com elementos de propriedade e propriedades anexadas, grande parte da sintaxe XAML básica estabelecida. No entanto, às vezes, você precisa definir propriedades para objetos de uma maneira indireta, por exemplo, a partir de um dicionário de recursos. Essa abordagem é abordada na próxima parte, parte [3. Extensões de marcação XAML](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md).
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [XamlSamples](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
 - [Parte 1. Introdução com XAML](~/xamarin-forms/xaml/xaml-basics/get-started-with-xaml.md)

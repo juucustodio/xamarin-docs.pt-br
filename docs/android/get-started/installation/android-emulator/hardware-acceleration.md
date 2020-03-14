@@ -9,11 +9,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 08/27/2018
 ms.openlocfilehash: a724a21dfffead307ca3d65d5ff134cf2d7c90db
-ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "78912414"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79304075"
 ---
 # <a name="hardware-acceleration-for-emulator-performance-hyper-v--haxm"></a>Aceleração de hardware para o desempenho do emulador (Hyper-V e HAXM)
 
@@ -152,7 +152,7 @@ Pacotes de instalação do HAXM para Windows estão disponíveis na página [Int
 
 Ao criar um dispositivo virtual (confira [Gerenciando dispositivos virtuais com o Android Device Manager](~/android/get-started/installation/android-emulator/device-manager.md)), certifique-se de selecionar uma imagem de sistema baseada em **x86**. Se você usar uma imagem de sistema baseada em ARM, o dispositivo virtual não será acelerado e será executado lentamente.
 
-## <a name="troubleshooting"></a>solução de problemas
+## <a name="troubleshooting"></a>Solução de problemas
 
 Para obter ajuda para solucionar problemas de aceleração de hardware, confira o guia de [solução de problemas](~/android/get-started/installation/android-emulator/troubleshooting.md?tabs=vswin#accel-issues-win) do Android Emulator.
 
@@ -241,12 +241,12 @@ Pacotes de instalação do HAXM para macOS estão disponíveis na página [Hardw
 
    [![Janela de instalação do Intel Hardware Accelerated Execution Manager](hardware-acceleration-images/mac/01-haxm-installer-sml.png)](hardware-acceleration-images/mac/01-haxm-installer.png#lightbox)
 
-## <a name="troubleshooting"></a>solução de problemas
+## <a name="troubleshooting"></a>Solução de problemas
 
 Para obter ajuda para solucionar problemas de aceleração de hardware, confira o guia de [solução de problemas](~/android/get-started/installation/android-emulator/troubleshooting.md?tabs=vsmac#accel-issues-mac) do Android Emulator.
 
 ::: zone-end
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Run Apps on the Android Emulator](https://developer.android.com/studio/run/emulator) (Executar aplicativos no Android Emulator)

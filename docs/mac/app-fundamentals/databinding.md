@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
 ms.openlocfilehash: 81a1f63078a5f7a2a70f731d1790f85f4283d22f
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78918853"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79304992"
 ---
 # <a name="data-binding-and-key-value-coding-in-xamarinmac"></a>Vinculação de dados e codificação de chave-valor no Xamarin. Mac
 
@@ -423,7 +423,7 @@ Primeiro, vamos adicionar um novo **controlador de exibição** ao nosso arquivo
 
 [![Adicionando um novo controlador de exibição](databinding-images/simple01.png "Adicionando um novo controlador de exibição")](databinding-images/simple01-large.png#lightbox)
 
-Em seguida, retorne para Visual Studio para Mac, edite o arquivo **SimpleViewController.cs** (que foi adicionado automaticamente ao nosso projeto) e expor uma instância do `PersonModel` ao qual iremos vincular dados em nosso formulário. Adicione os códigos a seguir:
+Em seguida, retorne para Visual Studio para Mac, edite o arquivo **SimpleViewController.cs** (que foi adicionado automaticamente ao nosso projeto) e expor uma instância do `PersonModel` ao qual iremos vincular dados em nosso formulário. Adicione o seguinte código:
 
 ```csharp
 private PersonModel _person = new PersonModel();
@@ -507,7 +507,7 @@ Primeiro, vamos adicionar um novo **controlador de exibição** ao nosso arquivo
 
 [![Adicionando um novo controlador de exibição](databinding-images/table01.png "Adicionando um novo controlador de exibição")](databinding-images/table01-large.png#lightbox)
 
-Em seguida, vamos editar o arquivo **TableViewController.cs** (que foi adicionado automaticamente ao nosso projeto) e expor uma matriz (`NSArray`) de `PersonModel` classes para as quais iremos associar dados. Adicione os códigos a seguir:
+Em seguida, vamos editar o arquivo **TableViewController.cs** (que foi adicionado automaticamente ao nosso projeto) e expor uma matriz (`NSArray`) de `PersonModel` classes para as quais iremos associar dados. Adicione o seguinte código:
 
 ```csharp
 private NSMutableArray _people = new NSMutableArray();
@@ -622,7 +622,7 @@ Primeiro, vamos adicionar um novo **controlador de exibição** ao nosso arquivo
 
 [![Adicionando um novo controlador de exibição](databinding-images/outline01.png "Adicionando um novo controlador de exibição")](databinding-images/outline01-large.png#lightbox)
 
-Em seguida, vamos editar o arquivo **OutlineViewController.cs** (que foi adicionado automaticamente ao nosso projeto) e expor uma matriz (`NSArray`) de `PersonModel` classes para as quais iremos associar dados. Adicione os códigos a seguir:
+Em seguida, vamos editar o arquivo **OutlineViewController.cs** (que foi adicionado automaticamente ao nosso projeto) e expor uma matriz (`NSArray`) de `PersonModel` classes para as quais iremos associar dados. Adicione o seguinte código:
 
 ```csharp
 private NSMutableArray _people = new NSMutableArray();

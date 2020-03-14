@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/25/2018
-ms.openlocfilehash: 3803d7e14b161a7c166bcae37e3d9f46b7637984
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 822f2ae57241cd51f9e9c4eb2b63c75d30867d83
+ms.sourcegitcommit: c83b55f60ece20e9163b3e587130250fdf113a16
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73026643"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79190327"
 ---
 # <a name="publishing-xamarinios-apps-to-the-app-store"></a>Publicar aplicativos Xamarin.iOS na App Store
 
@@ -89,15 +89,15 @@ Para obter instruções detalhadas, confira [Criar um perfil de distribuição](
 
 ## <a name="update-the-release-build-configuration"></a>Atualizar a configuração de build da Versão
 
-Os projetos novos do Xamarin.iOS configuram automaticamente as _configurações de build_ **Depurar** e **Versão**. Para configurar corretamente a compilação **Versão**, siga estas etapas:
+Os novos projetos do Xamarin. iOS definem automaticamente **Release** _as configurações_de **depuração** e versão de compilação. Para configurar corretamente a compilação **Versão**, siga estas etapas:
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
 1. No **Painel de Soluções**, abra **Info.plist**. Selecione **Provisionamento manual**. Salve e feche o arquivo.
 2. Clique com o botão direito do mouse no **Nome do projeto** no **Painel de Soluções**, selecione **Opções** e navegue até a guia **Compilação do iOS**.
 3. Defina a **Configuração** como **Versão** e **Plataforma** como **iPhone**.
 4. Para compilar com um SDK específico do iOS, selecione-o na lista **Versão do SDK**. Caso contrário, deixe esse valor como **Padrão**.
-5. A vinculação reduz o tamanho total do aplicativo ao eliminar o código não utilizado. Na maioria dos casos, o **Comportamento do vinculador** deve ser definido como o valor padrão de **Vincular apenas SDKs da estrutura**. Em algumas situações, como ao usar bibliotecas de terceiros, pode ser necessário definir esse valor como **Não vincular** para garantir que o código necessário não seja removido. Para saber mais, consulte o guia [Vincular aplicativos do Xamarin.iOS](~/ios/deploy-test/linker.md).
+5. A vinculação reduz o tamanho total do aplicativo ao eliminar o código não utilizado. Na maioria dos casos, o **Comportamento do vinculador** deve ser definido como o valor padrão de **Vincular apenas SDKs da estrutura**. O uso da opção **não vincular** pode fazer com que a Apple rejeite o aplicativo devido à presença de APIs do IOS não públicas no Xamarin. Ios que seria vinculada com a opção **vincular somente SDKs do Framework** . **Vincular tudo** deve ser usado com cuidado, pois ele removerá o código de todos os assemblies no projeto, incluindo as bibliotecas de terceiros, e poderá distribuir o código que a biblioteca de terceiros só pode usar por meio de reflexão que o vinculador não pode detectar, como faz a análise de código estático para determinar qual código de biblioteca está sendo usado. Use **vincular tudo** com cuidado, pois você pode ter que preservar manualmente algumas classes e/ou métodos, etc., para evitar falhas de tempo de execução devido a código ausente. Para saber mais, consulte o guia [Vincular aplicativos do Xamarin.iOS](~/ios/deploy-test/linker.md).
 6. Confira **Otimizar imagens PNG** para diminuir ainda mais o tamanho do aplicativo.
 7. A depuração _não_ deve ser habilitada, pois deixará o build maior, sem necessidade.
 8. Para o iOS 11, selecione uma das arquiteturas de dispositivo compatíveis com **ARM64**. Para saber mais sobre a compilação para dispositivos iOS de 64 bits, consulte a seção **Habilitar compilações de 64 bits de aplicativos Xamarin.iOS** da documentação [Considerações sobre plataformas de 32/64 bits](~/cross-platform/macios/32-and-64/index.md).
@@ -121,13 +121,13 @@ Os projetos novos do Xamarin.iOS configuram automaticamente as _configurações 
 
 15. Clique em **OK** para salvar as alterações nas propriedades do projeto.
 
-# <a name="visual-studio-2019tabwindows"></a>[Visual Studio 2019](#tab/windows)
+# <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/windows)
 
 1. Verifique se o Visual Studio 2019 foi [emparelhado a um host de Build do Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
 2. Clique com o botão direito do mouse em **Nome do Projeto** no **Gerenciador de Soluções** e selecione **Propriedades**.
 3. Navegue até a guia **iOS Build** e defina **Configuração** como **Versão** e **Plataforma** como **iPhone**.
 4. Para compilar com um SDK específico do iOS, selecione-o na lista **Versão do SDK**. Caso contrário, deixe esse valor como **Padrão**.
-5. A vinculação reduz o tamanho total do aplicativo ao eliminar o código não utilizado. Na maioria dos casos, o **Comportamento do vinculador** deve ser definido como o valor padrão de **Vincular apenas SDKs da estrutura**. Em algumas situações, como ao usar bibliotecas de terceiros, pode ser necessário definir esse valor como **Não vincular** para garantir que o código necessário não seja removido. Para saber mais, consulte o guia [Vincular aplicativos do Xamarin.iOS](~/ios/deploy-test/linker.md).
+5. A vinculação reduz o tamanho total do aplicativo ao eliminar o código não utilizado. Na maioria dos casos, o **Comportamento do vinculador** deve ser definido como o valor padrão de **Vincular apenas SDKs da estrutura**. O uso da opção **não vincular** pode fazer com que a Apple rejeite o aplicativo devido à presença de APIs do IOS não públicas no Xamarin. Ios que seria vinculada com a opção **vincular somente SDKs do Framework** . **Vincular tudo** deve ser usado com cuidado, pois ele removerá o código de todos os assemblies no projeto, inlcuding bibliotecas de terceiros e poderá distribuir o código que a biblioteca de terceiros só pode usar por meio de reflexão que o vinculador não pode detectar, pois faz a análise de código estático para determinar qual código de biblioteca está sendo usado. Use **vincular tudo** com cuidado, pois você pode ter que preservar manualmente algumas classes e/ou métodos, etc., para evitar falhas de tempo de execução devido a código ausente. Para saber mais, consulte o guia [Vincular aplicativos do Xamarin.iOS](~/ios/deploy-test/linker.md).
 6. Confira **Otimizar imagens PNG** para diminuir ainda mais o tamanho do aplicativo.
 7. A depuração não deve ser habilitada, pois deixará o build maior, sem necessidade.
 8. Para o iOS 11, selecione uma das arquiteturas de dispositivo compatíveis com **ARM64**. Para saber mais sobre a compilação para dispositivos iOS de 64 bits, consulte a seção **Habilitar compilações de 64 bits de aplicativos Xamarin.iOS** da documentação [Considerações sobre plataformas de 32/64 bits](~/cross-platform/macios/32-and-64/index.md).
@@ -150,13 +150,13 @@ Os projetos novos do Xamarin.iOS configuram automaticamente as _configurações 
 
 14. Salve a configuração de build e feche-a.
 
-# <a name="visual-studio-2017tabwin-vs2017"></a>[Visual Studio 2017](#tab/win-vs2017)
+# <a name="visual-studio-2017"></a>[Visual Studio 2017](#tab/win-vs2017)
 
 1. Verifique se o Visual Studio 2017 foi [emparelhado com um host de build do Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
 2. Clique com o botão direito do mouse em **Nome do Projeto** no **Gerenciador de Soluções** e selecione **Propriedades**.
 3. Navegue até a guia **iOS Build** e defina **Configuração** como **Versão** e **Plataforma** como **iPhone**.
 4. Para compilar com um SDK específico do iOS, selecione-o na lista **Versão do SDK**. Caso contrário, deixe esse valor como **Padrão**.
-5. A vinculação reduz o tamanho total do aplicativo ao eliminar o código não utilizado. Na maioria dos casos, o **Comportamento do vinculador** deve ser definido como o valor padrão de **Vincular apenas SDKs da estrutura**. Em algumas situações, como ao usar bibliotecas de terceiros, pode ser necessário definir esse valor como **Não vincular** para garantir que o código necessário não seja removido. Para saber mais, consulte o guia [Vincular aplicativos do Xamarin.iOS](~/ios/deploy-test/linker.md).
+5. A vinculação reduz o tamanho total do aplicativo ao eliminar o código não utilizado. Na maioria dos casos, o **Comportamento do vinculador** deve ser definido como o valor padrão de **Vincular apenas SDKs da estrutura**. O uso da opção **não vincular** pode fazer com que a Apple rejeite o aplicativo devido à presença de APIs do IOS não públicas no Xamarin. Ios que seria vinculada com a opção **vincular somente SDKs do Framework** . **Vincular tudo** deve ser usado com cuidado, pois ele removerá o código de todos os assemblies no projeto, inlcuding bibliotecas de terceiros e poderá distribuir o código que a biblioteca de terceiros só pode usar por meio de reflexão que o vinculador não pode detectar, pois faz a análise de código estático para determinar qual código de biblioteca está sendo usado. Use **vincular tudo** com cuidado, pois você pode ter que preservar manualmente algumas classes e/ou métodos, etc., para evitar falhas de tempo de execução devido a código ausente. Para saber mais, consulte o guia [Vincular aplicativos do Xamarin.iOS](~/ios/deploy-test/linker.md).
 6. Confira **Otimizar imagens PNG** para diminuir ainda mais o tamanho do aplicativo.
 7. A depuração não deve ser habilitada, pois deixará o build maior, sem necessidade.
 8. Para o iOS 11, selecione uma das arquiteturas de dispositivo compatíveis com **ARM64**. Para saber mais sobre a compilação para dispositivos iOS de 64 bits, consulte a seção **Habilitar compilações de 64 bits de aplicativos Xamarin.iOS** da documentação [Considerações sobre plataformas de 32/64 bits](~/cross-platform/macios/32-and-64/index.md).
@@ -202,7 +202,7 @@ Para saber como fazer isso, leia o guia [Configurar um aplicativo no iTunes Conn
 
 Com as configurações de build configuradas corretamente e o iTunes Connect aguardando seu envio, agora você pode criar seu aplicativo e enviá-lo para a Apple.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
 1. No Visual Studio para Mac, selecione a configuração de build **Versão** e um dispositivo (não um simulador) no qual compilar.
 
@@ -237,7 +237,7 @@ Com as configurações de build configuradas corretamente e o iTunes Connect agu
     >
     > Para conferir uma solução alternativa para esse erro, veja [esta postagem nos Fóruns do Xamarin](https://forums.xamarin.com/discussion/40388/disallowed-paths-itunesmetadata-plist-found-at-when-submitting-to-app-store/p1).
 
-# <a name="visual-studio-2019tabwindows"></a>[Visual Studio 2019](#tab/windows)
+# <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/windows)
 
 > [!NOTE]
 > A publicação na loja de aplicativos tem suporte no Visual Studio 2019 versão 16,3 e superior.
@@ -263,7 +263,7 @@ Com as configurações de build configuradas corretamente e o iTunes Connect agu
 
     ![Captura de tela da janela pop-up para inserir sua ID da Apple e a senha específica do aplicativo.](publishing-to-the-app-store-images/connectInfo-win.png "Captura de tela da janela pop-up para inserir sua ID da Apple e a senha específica do aplicativo.")
 
-# <a name="visual-studio-2017tabwin-vs2017"></a>[Visual Studio 2017](#tab/win-vs2017)
+# <a name="visual-studio-2017"></a>[Visual Studio 2017](#tab/win-vs2017)
 
 > [!NOTE]
 > O Visual Studio 2017 não oferece suporte ao fluxo de trabalho de publicação completo encontrado em Visual Studio para Mac e no Visual Studio 2019.
@@ -277,7 +277,7 @@ Com as configurações de build configuradas corretamente e o iTunes Connect agu
 
     ![Configuração de compilação e seleção de plataforma](publishing-to-the-app-store-images/chooseConfig-w157.png "Configuração de compilação e seleção de plataforma")
 
-3. Compile o projeto. Isso cria um arquivo .ipa.
+3. Crie o projeto. Isso cria um arquivo .ipa.
 
     > [!NOTE]
     > A seção [Configuração de build Atualizar a versão](#update-the-release-build-configuration) deste documento configurou as configurações de build do aplicativo para criar um arquivo .ipa para cada build de **Versão**.

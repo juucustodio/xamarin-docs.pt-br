@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
 ms.openlocfilehash: 3c754acc3502d7aa2c47264e734187ffe060c029
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78915785"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79304719"
 ---
 # <a name="working-with-tvos-navigation-and-focus-in-xamarin"></a>Trabalhando com navegação e foco do tvOS no Xamarin
 
@@ -274,7 +274,7 @@ Com essa propriedade definida como `true`, o modo de exibição de imagem automa
 
 Este artigo abordou o conceito de foco e como ele é usado para manipular a navegação em uma interface do usuário do aplicativo Xamarin. tvOS. Ele examina como os controles de navegação internos do tvOS usam foco, realce e seleção para fornecer navegação. Em seguida, vimos como o foco pode ser usado com da Parallax e imagens em camadas para fornecer pistas visuais para o estado de navegação atual para o usuário final. Por fim, ele examinou o trabalho com o foco, as atualizações de foco, o foco em coleções e a habilitação de da Parallax.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Amostras do tvOS](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
 - [tvOS](https://developer.apple.com/tvos/)

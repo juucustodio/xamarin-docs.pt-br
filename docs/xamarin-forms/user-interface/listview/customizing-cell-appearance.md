@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 09/12/2019
 ms.openlocfilehash: ab54b54c9f2f7d6d7748137ea079439b7c3ddfca
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78916850"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79305447"
 ---
 # <a name="customizing-listview-cell-appearance"></a>Personalizando a aparência de célula do ListView
 
@@ -253,7 +253,7 @@ var listView = new ListView
 
 No iOS e no Android, se o [`ListView`](xref:Xamarin.Forms.ListView) estiver reciclando elementos e a célula Personalizada usar um processador personalizado, o renderizador personalizado deverá implementar corretamente a notificação de alteração de propriedade. Quando as células forem reutilizadas, seus valores de propriedade serão alterados quando o contexto de associação for atualizado para o de uma célula disponível, com `PropertyChanged` eventos sendo gerados. Para obter mais informações, consulte [Personalizando um ViewCell](~/xamarin-forms/app-fundamentals/custom-renderer/viewcell.md). Para obter mais informações sobre a reciclagem de célula, consulte [estratégia de cache](~/xamarin-forms/user-interface/listview/performance.md#caching-strategy).
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Células internas (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-builtincells)
 - [Células personalizadas (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-customcells)

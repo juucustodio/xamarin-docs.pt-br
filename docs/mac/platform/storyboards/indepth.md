@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
 ms.openlocfilehash: 06774d13cf053b661dd0b2d24b7df0c0b767b4db
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78918829"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79304908"
 ---
 # <a name="working-with-storyboards-in-xamarinmac"></a>Trabalhando com storyboards no Xamarin. Mac
 
@@ -354,7 +354,7 @@ Para obter um exemplo complexo de como trabalhar com storyboards em um aplicativ
 
 O código do SourceWriter foi totalmente comentado e, quando disponível, foram fornecidos links de tecnologias-chave ou métodos para informações relevantes na Documentação de Guias do Xamarin.Mac.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Trabalhando com o Windows](~/mac/user-interface/window.md)

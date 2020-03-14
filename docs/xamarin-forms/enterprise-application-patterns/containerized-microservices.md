@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
 ms.openlocfilehash: dc71da512519cdd7fcc56df1ff987ffbc1354663
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78915267"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79305188"
 ---
 # <a name="containerized-microservices"></a>Microsserviços em contêineres
 
@@ -56,7 +56,7 @@ No entanto, uma solução baseada em microatendimento também tem possíveis des
 - Em produção, há uma complexidade operacional na implantação e gerenciamento de um sistema comprometido de muitos serviços independentes.
 - A comunicação direta entre o cliente e o microserviço pode dificultar a refatoração dos contratos de microserviços. Por exemplo, ao longo do tempo como o sistema é particionado em serviços talvez precisem ser alterados. Um único serviço pode ser dividido em dois ou mais serviços, e dois serviços podem ser mesclados. Quando os clientes se comunicam diretamente com os microserviços, esse trabalho de refatoração pode interromper a compatibilidade com os aplicativos cliente.
 
-## <a name="containerization"></a>Transporte em contêineres
+## <a name="containerization"></a>Conteinerização
 
 A Containerização é uma abordagem para o desenvolvimento de software no qual um aplicativo e seu conjunto de dependências com controle de versão, além de sua configuração de ambiente abstraido como arquivos de manifesto de implantação, são empacotados como uma imagem de contêiner, testado como uma unidade e implantado em um sistema operacional do host.
 
@@ -150,7 +150,7 @@ Os microserviços oferecem uma abordagem ao desenvolvimento e à implantação d
 
 Um contêiner é um ambiente operacional isolado, controlado por recursos e portátil, onde um aplicativo pode ser executado sem tocar nos recursos de outros contêineres ou no host. As empresas estão cada vez mais adotando contêineres ao implementar aplicativos baseados em microserviço, e o Docker se tornou a implementação de contêiner padrão que foi adotada pela maioria das plataformas de software e fornecedores de nuvem.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Download do eBook (PDF de 2Mb)](https://aka.ms/xamarinpatternsebook)
 - [eShopOnContainers (GitHub) (exemplo)](https://github.com/dotnet-architecture/eShopOnContainers)

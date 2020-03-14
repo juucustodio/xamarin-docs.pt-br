@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 09/05/2017
 ms.openlocfilehash: 928936815c89dd74d0ad3775f59ea210702c8857
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78915727"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79304845"
 ---
 # <a name="drag-and-drop-in-xamarinios"></a>Arrastar e soltar no Xamarin. iOS
 
@@ -185,7 +185,7 @@ Abra o exemplo junto com outro aplicativo (como observações) e arraste linhas 
 
 ![captura de tela da operação de arrastar em andamento](drag-and-drop-images/01-sml.png)
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Diretrizes de interface humana de arrastar e soltar (Apple)](https://developer.apple.com/ios/human-interface-guidelines/interaction/drag-and-drop/)
 - [Exemplo de exibição de tabela de arrastar e soltar](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-draganddroptableview)

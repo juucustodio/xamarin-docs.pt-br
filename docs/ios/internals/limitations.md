@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 04/09/2018
 ms.openlocfilehash: 91513936a0223af0e4220154d0fe65ee0a599a4f
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78911566"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79304397"
 ---
 # <a name="limitations-of-xamarinios"></a>Limitações do Xamarin. iOS
 
@@ -49,7 +49,7 @@ class Foo<T> : UIView {
 
 ## <a name="no-dynamic-code-generation"></a>Nenhuma geração de código dinâmico
 
-Como o kernel do iOS impede que um aplicativo gere código dinamicamente, o Xamarin. iOS não oferece suporte a nenhuma forma de geração de código dinâmico. Eles incluem:
+Como o kernel do iOS impede que um aplicativo gere código dinamicamente, o Xamarin. iOS não oferece suporte a nenhuma forma de geração de código dinâmico. Elas incluem:
 
 - O System. Reflection. Emit não está disponível.
 - Não há suporte para System. Runtime. Remoting.
@@ -107,7 +107,7 @@ A pilha de comunicação remota não está disponível no Xamarin. iOS.
 
 Os recursos a seguir foram desabilitados no tempo de execução do iOS do mono:
 
-- Criador de perfil
+- Criador de Perfil
 - Reflection. Emit
 - Funcionalidade Reflection. Emit. Save
 - Associações COM

@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
 ms.openlocfilehash: 8640800717a88e800503e93c339eeb080707374e
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78915698"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79304852"
 ---
 # <a name="web-views-in-xamarinios"></a>Exibições da Web no Xamarin. iOS
 
@@ -115,6 +115,6 @@ Isso produz a seguinte exibição da Web:
 
 [![o efeito de ScalesPagesToFit](webview-images/webview.png)](webview-images/webview.png#lightbox)
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Webviews (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/webview)

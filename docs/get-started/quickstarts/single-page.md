@@ -10,11 +10,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 04/01/2019
 ms.openlocfilehash: c1d7aa1535fe979df222aaedc6ba2cf3bae0d51c
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78911682"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79304299"
 ---
 # <a name="create-a-single-page-xamarinforms-application"></a>Criar um aplicativo Xamarin.Forms de página única
 
@@ -32,7 +32,7 @@ O guia de início rápido explica como criar um aplicativo do Xamarin.Forms mult
 
 ::: zone pivot="windows"
 
-### <a name="prerequisites"></a>Pré-requisitos
+### <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
 
 - Visual Studio 2019 (versão mais recente), com a carga de trabalho de **Desenvolvimento móvel com .NET** instalada.
 - Conhecimento de C#.
@@ -186,7 +186,7 @@ Para obter mais informações sobre esses pré-requisitos, confira [Como instala
 ::: zone-end
 ::: zone pivot="win-vs2017"
 
-### <a name="prerequisites"></a>Pré-requisitos
+### <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
 
 - Visual Studio 2017, com a carga de trabalho de **Desenvolvimento móvel com .NET** instalada.
 - Conhecimento de C#.
@@ -336,7 +336,7 @@ Para obter mais informações sobre esses pré-requisitos, confira [Como instala
 ::: zone-end
 ::: zone pivot="macos"
 
-### <a name="prerequisites"></a>Pré-requisitos
+### <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
 
 - Visual Studio para Mac (versão mais recente), compatível com a plataforma iOS e Android instalada.
 - Xcode (versão mais recente).
@@ -488,7 +488,7 @@ Para obter mais informações sobre esses pré-requisitos, confira [Como instala
 
 ::: zone-end
 
-## <a name="next-steps"></a>Próximas etapas
+## <a name="next-steps"></a>{1&gt;{2&gt;Próximas etapas&lt;2}&lt;1}
 
 Neste guia de início rápido, você aprendeu a:
 

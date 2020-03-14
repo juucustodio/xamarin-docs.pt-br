@@ -6,13 +6,13 @@ ms.assetid: D10506DD-BAA0-437F-A4AD-882D16E7B60D
 ms.technology: xamarin-forms
 author: davidortinau
 ms.author: daortin
-ms.date: 02/19/2020
-ms.openlocfilehash: 7136e3240a39321b2d67ca29c16a0758cf5c4cfb
-ms.sourcegitcommit: 524fc148bad17272bda83c50775771daa45bfd7e
+ms.date: 03/13/2020
+ms.openlocfilehash: 104237155797ca90c52ad385e8349480f9666c4c
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "78292039"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79303496"
 ---
 # <a name="detect-dark-mode-in-xamarinforms-applications"></a>Detectar o modo escuro em aplicativos Xamarin. Forms
 
@@ -41,13 +41,54 @@ As capturas de tela a seguir mostram páginas com tema, para o modo claro e escu
 
 ## <a name="define-themes"></a>Definir temas
 
-Siga o [Guia de temas](theming.md) para obter detalhes passo a passo sobre como criar temas escuros e leves.
+Siga o [Guia de temas](theming.md) para obter detalhes passo a passo sobre como criar temas escuros e leves. 
+
+Você pode definir facilmente um novo tema para seu aplicativo no local apropriado do código de plataforma. Para carregar um novo tema, basta substituir o dicionário de recursos atual do aplicativo por um dicionário de recursos com tema de sua escolha:
+
+```csharp
+App.Current.Resources = new YourDarkTheme();
+```
+
+## <a name="detect-and-apply-theme"></a>Detectar e aplicar tema
+
+A detecção do tema em execução no momento pode ser obtida usando o recurso [`RequestedTheme`](~/essentials/app-theme.md) do [Xamarin. Essentials](~/essentials/index.md) (versão 1.4.0 ou mais recente). Em seguida, você pode criar um método auxiliar em uma nova classe ou na classe `App` para configurar o tema:
+
+```csharp
+public partial class App : Application
+{
+    public static void ApplyTheme()
+    {
+        if (AppInfo.RequestedTheme == AppTheme.Dark)
+        {
+            // change to light theme
+            // e.g. App.Current.Resources = new YourLightTheme();
+        }
+        else
+        {
+            // change to dark theme
+            // e.g. App.Current.Resources = new YourDarkTheme();
+        }
+    }
+}
+```
 
 ## <a name="react-to-appearance-mode-changes"></a>Reagir às alterações no modo de aparência
 
 O modo de aparência em um dispositivo pode ser alterado por vários motivos, dependendo de como o usuário configurou suas preferências, incluindo escolher explicitamente um modo, hora do dia ou fatores ambientais, como a baixa luz. Você precisará adicionar o código de plataforma para garantir que seu aplicativo possa reagir a essas alterações, e as seções a seguir discutirão isso mais detalhadamente.
 
 ### <a name="android"></a>Android
+
+Para dar suporte ao modo escuro em seu aplicativo, você deve atualizar o tema do aplicativo, que pode ser encontrado em `Resources/values/styles.xml`, para herdar de um tema de `DayNight`:
+
+```xml
+<style name="MainTheme.Base" parent="Theme.AppCompat.DayNight">
+```
+
+Se você tiver atualizado para os [componentes materiais](https://www.nuget.org/packages/Xamarin.Google.Android.Material/) do AndroidX (1.1.0-RC2) ou mais recente, poderá usar:
+
+```xml
+<style name="MainTheme.Base" parent="Theme.MaterialComponents.DayNight">
+```
 
 No arquivo **MainActivity.cs** do seu aplicativo, adicione o campo `ConfigChanges.UiMode` à propriedade `ConfigurationChanges` no atributo `Activity`, para que seu aplicativo seja notificado sobre as alterações no modo de interface do usuário:
 
@@ -63,17 +104,7 @@ No mesmo arquivo **MainActivity.cs** , substitua o método `OnConfigurationChang
 public override void OnConfigurationChanged(Configuration newConfig)
 {
     base.OnConfigurationChanged(newConfig);
-
-    if ((newConfig.UiMode & UiMode.NightNo) != 0)
-    {
-        // change to light theme
-        // e.g. App.Current.Resources = new YourLightTheme();
-    }
-    else
-    {
-        // change to dark theme
-        // e.g. App.Current.Resources = new YourDarkTheme();
-    }
+    App.ApplyTheme();
 }
 ```
 
@@ -103,7 +134,7 @@ namespace YourApp.iOS.Renderers
 
             try
             {
-                SetAppTheme();
+                App.ApplyTheme();
             }
             catch (Exception ex)
             {
@@ -115,24 +146,7 @@ namespace YourApp.iOS.Renderers
         {
             base.TraitCollectionDidChange(previousTraitCollection);
 
-            if(this.TraitCollection.UserInterfaceStyle != previousTraitCollection.UserInterfaceStyle)
-            {
-                SetAppTheme();
-            }
-        }
-
-        void SetAppTheme()
-        {
-            if (this.TraitCollection.UserInterfaceStyle == UIUserInterfaceStyle.Dark)
-            {
-                // change to dark theme
-                // e.g. App.Current.Resources = new YourDarkTheme();
-            }
-            else
-            {
-                // change to light theme
-                // e.g. App.Current.Resources = new YourLightTheme();
-            }
+            App.ApplyTheme();
         }
     }
 }
@@ -147,7 +161,6 @@ No UWP, adicione o seguinte código ao arquivo **MainPage.XAML.cs** do seu aplic
 ```csharp
 public sealed partial class MainPage
 {
-
     UISettings uiSettings;
 
     public MainPage()
@@ -162,34 +175,12 @@ public sealed partial class MainPage
 
     private void ColorValuesChanged(UISettings sender, object args)
     {
-        var backgroundColor = sender.GetColorValue(UIColorType.Background);
-        var isDarkMode = backgroundColor == Colors.Black;
-        if(isDarkMode)
+        Xamarin.Essentials.MainThread.BeginInvokeOnMainThread(() =>
         {
-            Xamarin.Essentials.MainThread.BeginInvokeOnMainThread(() =>
-            {
-                // change to dark theme
-                // e.g. App.Current.Resources = new YourDarkTheme();
-            });
-        }
-        else
-        {
-            Xamarin.Essentials.MainThread.BeginInvokeOnMainThread(() =>
-            {
-                // change to light theme
-                // e.g. App.Current.Resources = new YourLightTheme();
-            });
-        }
+            App.ApplyTheme();
+        });
     }
 }
-```
-
-## <a name="set-dark-and-light-themes"></a>Definir temas escuros e claros
-
-Depois de seguir o guia de [temas](theming.md) , você pode definir facilmente um novo tema para seu aplicativo no local apropriado do código de plataforma acima. Para carregar um novo tema, basta substituir o dicionário de recursos atual do aplicativo por um dicionário de recursos com tema de sua escolha:
-
-```csharp
-App.Current.Resources = new YourDarkTheme();
 ```
 
 ## <a name="related-links"></a>Links relacionados

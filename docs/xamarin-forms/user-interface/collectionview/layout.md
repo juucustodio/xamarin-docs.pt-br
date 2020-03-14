@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/22/2019
 ms.openlocfilehash: 6c2b3d8bad621db3110fe25041125c5694f21180
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78917433"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79304474"
 ---
 # <a name="xamarinforms-collectionview-layout"></a>Layout CollectionView do Xamarin. Forms
 
@@ -529,7 +529,7 @@ Esse código resulta em uma grade vertical de duas colunas, que tem um espaçame
 
 Por padrão, cada item em um [`CollectionView`](xref:Xamarin.Forms.CollectionView) é individualmente medido e dimensionado, desde que os elementos da interface do usuário no [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) não especifiquem tamanhos fixos. Esse comportamento, que pode ser alterado, é especificado pelo valor da propriedade [`CollectionView.ItemSizingStrategy`](xref:Xamarin.Forms.StructuredItemsView.ItemSizingStrategy) . Esse valor de propriedade pode ser definido como um dos membros de enumeração de [`ItemSizingStrategy`](xref:Xamarin.Forms.ItemSizingStrategy) :
 
-- `MeasureAllItems` – cada item é medido individualmente. Esse é o valor padrão.
+- `MeasureAllItems` – cada item é medido individualmente. Este é o valor padrão.
 - `MeasureFirstItem` – somente o primeiro item é medido, com todos os itens subsequentes que recebem o mesmo tamanho do primeiro item.
 
 > [!IMPORTANT]

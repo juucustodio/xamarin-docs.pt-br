@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/20/2017
 ms.openlocfilehash: 13891100d3571f9e847243172aa974072f46e7fe
-ms.sourcegitcommit: 60d2243809d8e980fca90b9f771e72f8c0e64d71
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "78914748"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79304964"
 ---
 # <a name="unified-storyboards-in-xamarinios"></a>Storyboards unificados no Xamarin. iOS
 
@@ -112,18 +112,18 @@ Esta seção abordará os tipos típicos de coleções de características que o
 
 Veja a seguir uma coleção de características típica que o desenvolvedor pode ver em um iPhone:
 
-|propriedade|Valor|
+|Propriedade|{1&gt;Valor&lt;1}|
 |--- |--- |
 |`HorizontalSizeClass`|Compactá|
 |`VerticalSizeClass`|Normal|
-|`UserInterfaceIdom`|Telefone|
+|`UserInterfaceIdom`|Phone|
 |`DisplayScale`|2.0|
 
 O conjunto acima representaria uma coleção de características totalmente qualificada, pois ela tem valores para todas as suas propriedades de característica.
 
 Também é possível ter uma coleção de características que não tenha alguns de seus valores (que a Apple se refere como *não especificado*):
 
-|propriedade|Valor|
+|Propriedade|{1&gt;Valor&lt;1}|
 |--- |--- |
 |`HorizontalSizeClass`|Compactá|
 |`VerticalSizeClass`|Não especificado|
@@ -214,9 +214,9 @@ Primeiro, o iOS 8 faz algumas configurações para se preparar para que a transi
 
 o iOS 8 fornece vários retornos de chamada que o desenvolvedor pode usar para participar da alteração de característica, como mostrado na tabela a seguir:
 
-|Fase|Callback|DESCRIÇÃO|
+|Fase|Callback|Descrição|
 |--- |--- |--- |
-|Configuração|<ul><li>`WillTransitionToTraitCollection`</li><li>`TraitCollectionDidChange`</li></ul>|<ul><li>Esse método é chamado no início de uma alteração de característica antes que uma coleção de características seja definida para o novo valor.</li><li>O método é chamado quando o valor da coleção de características é alterado, mas antes de qualquer animação ocorrer.</li></ul>|
+|Instalação|<ul><li>`WillTransitionToTraitCollection`</li><li>`TraitCollectionDidChange`</li></ul>|<ul><li>Esse método é chamado no início de uma alteração de característica antes que uma coleção de características seja definida para o novo valor.</li><li>O método é chamado quando o valor da coleção de características é alterado, mas antes de qualquer animação ocorrer.</li></ul>|
 |Animação|`WillTransitionToTraitCollection`|O coordenador de transição que é passado para esse método tem uma propriedade `AnimateAlongside` que permite ao desenvolvedor adicionar animações que serão executadas junto com as animações padrão.|
 |Limpar|`WillTransitionToTraitCollection`|Fornece um método para que os desenvolvedores incluam seu próprio código de limpeza depois que a transição ocorre.|
 
@@ -757,7 +757,7 @@ Este artigo resumiu rapidamente as classes de tamanho e como elas afetam o layou
 
 Por fim, este artigo abordou os conceitos básicos da criação de storyboards unificados com o Xamarin iOS designer, que funcionará em dispositivos iOS e criará uma tela única de inicialização dinâmica que será exibida como a tela de inicialização em cada dispositivo iOS 8.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Fotos adaptáveis (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-adaptivephotos)
 - [Telas de inicialização dinâmica (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-dynamiclaunchscreen)

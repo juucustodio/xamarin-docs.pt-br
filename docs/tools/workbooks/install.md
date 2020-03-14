@@ -7,11 +7,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 06/19/2018
 ms.openlocfilehash: 92b08a9cfd725c1114b71fad4f29e6f28cd828b3
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78914369"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79305041"
 ---
 # <a name="workbooks-installation-and-requirements"></a>Instalação e requisitos de pastas de trabalho
 
@@ -35,7 +35,7 @@ ms.locfileid: "78914369"
 
 -----
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 #### <a name="supported-operating-systems"></a>Supported Operating Systems
 
@@ -44,7 +44,7 @@ ms.locfileid: "78914369"
 
 #### <a name="supported-app-platforms"></a>Plataformas de aplicativos com suporte
 
-|Plataforma de aplicativo|Suporte do so|Anotações|
+|Plataforma de aplicativo|Suporte do so|{1&gt;Observações&lt;1}|
 |--- |--- |--- |
 |Mac|Somente com suporte no Mac|
 |iOS|Com suporte no Mac e no Windows|O Xamarin. iOS 11,0 e o Xcode 9,0 ou posterior devem ser instalados no Mac. A execução de pastas de trabalho do iOS no Windows requer um host de Build do Mac executando todas as versões acima e o [simulador do IOS remoto](~/tools/ios-simulator/index.md) instalado no Windows.|
@@ -88,12 +88,12 @@ Visual Studio para Mac
 - **O Visual Studio > sobre o Visual Studio > Mostrar detalhes > copiar informações**
 - Colar no relatório de bugs
 
-Visual Studio
+{1&gt;Visual Studio&lt;1}
 
 - **Ajuda > sobre o Visual Studio > copiar informações**
 - Informe-nos a sua versão do sistema operacional e se você está executando o Windows de 32 bits ou 64 bits.
 
-### <a name="samples"></a>Exemplos
+### <a name="samples"></a>Amostras
 
 Se você puder anexar ou vincular ao arquivo **. Workbooks** com problemas, isso pode ajudar a resolver seu bug mais rapidamente.
 
@@ -114,7 +114,7 @@ Se você estiver tendo problemas para conectar sua pasta de trabalho do iOS ou A
 
 ## <a name="uninstall"></a>Desinstalar
 
-### <a name="windows"></a>Windows
+### <a name="windows"></a>Portal
 
 Dependendo de como você adquiriu as pastas de trabalho, talvez seja necessário executar dois procedimentos de desinstalação. Verifique ambos para desinstalar completamente o software.
 

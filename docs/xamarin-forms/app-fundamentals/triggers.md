@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 02/21/2020
 ms.openlocfilehash: bf9c06dae0df7da1cc69a85d8436376494039959
-ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "78912052"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79305125"
 ---
 # <a name="xamarinforms-triggers"></a>Gatilhos do Xamarin.Forms
 
@@ -105,7 +105,7 @@ que é como nos referimos a outras propriedades do controle. Quando o tamanho do
 
 Além de especificar `Setter`s, você também pode fornecer [`EnterActions` e `ExitActions`](#enteractions-and-exitactions).
 
-## <a name="event-triggers"></a>Gatilhos de evento
+## <a name="event-triggers"></a>Disparadores de evento
 
 O elemento `EventTrigger` requer apenas uma propriedade `Event`, como `"Clicked"` no exemplo a seguir.
 

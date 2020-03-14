@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 06/12/2019
 ms.openlocfilehash: 25ddbea75d0fd6858f848499281da5d5f0b68171
-ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "78911311"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79305321"
 ---
 # <a name="xamarinforms-device-class"></a>Classe de dispositivo do xamarin. Forms
 
@@ -180,7 +180,7 @@ Os aplicativos às vezes usam threads em segundo plano para executar operações
 
 A classe `Device` inclui os seguintes métodos `static` que podem ser usados para interagir com elementos de interface do usuário de threads de planos de fundo:
 
-| Método | Argumentos | Retornos | Finalidade |
+| Método | Argumentos | Retorna | Finalidade |
 |---|---|---|---|
 | `BeginInvokeOnMainThread` | `Action` | `void` | Invoca uma `Action` no thread principal e não aguarda sua conclusão. |
 | `InvokeOnMainThreadAsync<T>` | `Func<T>` | `Task<T>` | Invoca um `Func<T>` no thread principal e aguarda sua conclusão. |

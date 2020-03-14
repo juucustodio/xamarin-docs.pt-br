@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 02/11/2020
 ms.openlocfilehash: 150c358346f90a513e1558dc847ad7eb6dd6e6e2
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78918610"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79304523"
 ---
 # <a name="xamarinforms-carouselview-interaction"></a>Interação CarouselView do Xamarin. Forms
 
@@ -49,7 +49,7 @@ Quando o item atualmente exibido for alterado, a propriedade `CurrentItem` será
 > [!IMPORTANT]
 > A propriedade `Position` é alterada quando a propriedade `CurrentItem` é alterada. Isso fará com que o `PositionChangedCommand` seja executado e a `PositionChanged` acionando o evento.
 
-### <a name="event"></a>Evento
+### <a name="event"></a>{1&gt;Evento&lt;1}
 
 O exemplo de XAML a seguir mostra um [`CarouselView`](xref:Xamarin.Forms.CarouselView) que usa um manipulador de eventos para responder à alteração do item atual:
 
@@ -82,7 +82,7 @@ Neste exemplo, o manipulador de eventos `OnCurrentItemChanged` expõe os itens a
 
 [![Captura de tela de um CarouselView com itens anteriores e atuais, no iOS e no Android](interaction-images/current-item-events.png "CarouselView com itens atuais e anteriores")](interaction-images/current-item-events-large.png#lightbox "CarouselView com itens atuais e anteriores")
 
-### <a name="command"></a>Comando
+### <a name="command"></a>{1&gt;Comando&lt;1}
 
 O exemplo de XAML a seguir mostra um [`CarouselView`](xref:Xamarin.Forms.CarouselView) que usa um comando para responder à alteração do item atual:
 
@@ -122,7 +122,7 @@ Quando o item atualmente exibido for alterado, a propriedade `Position` será de
 > [!NOTE]
 > Definir a propriedade `Position` como 0 fará com que o primeiro item na coleção subjacente seja exibido.
 
-### <a name="event"></a>Evento
+### <a name="event"></a>{1&gt;Evento&lt;1}
 
 O exemplo de XAML a seguir mostra um [`CarouselView`](xref:Xamarin.Forms.CarouselView) que usa um manipulador de eventos para responder à alteração da propriedade `Position`:
 
@@ -155,7 +155,7 @@ Neste exemplo, o manipulador de eventos `OnCurrentItemChanged` expõe as posiç�
 
 [![Captura de tela de um CarouselView com posições anteriores e atuais, no iOS e no Android](interaction-images/current-position-events.png "CarouselView com as posições atual e anterior")](interaction-images/current-position-events-large.png#lightbox "CarouselView com as posições atual e anterior")
 
-### <a name="command"></a>Comando
+### <a name="command"></a>{1&gt;Comando&lt;1}
 
 O exemplo XAML a seguir mostra um [`CarouselView`](xref:Xamarin.Forms.CarouselView) que usa um comando para responder à alteração da propriedade `Position`:
 

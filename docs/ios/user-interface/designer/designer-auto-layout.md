@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
 ms.openlocfilehash: 35a8d3aeb00ac73f944712cb31f913f98bd3b6e8
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78919162"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79304691"
 ---
 # <a name="auto-layout-with-the-xamarin-designer-for-ios"></a>Layout automático com o Xamarin Designer para iOS
 
@@ -20,7 +20,7 @@ O layout automático (também chamado de "layout adaptável") é uma abordagem d
 
 Neste guia, apresentamos restrições e como trabalhar com eles no Xamarin iOS designer. Este guia não aborda o trabalho com restrições programaticamente. Para obter informações sobre como usar o layout automático programaticamente, consulte a [documentação da Apple](https://developer.apple.com/library/prerelease/ios/documentation/UserExperience/Conceptual/AutolayoutPG/ProgrammaticallyCreatingConstraints.html).
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 O Xamarin Designer para iOS está disponível em Visual Studio para Mac no Visual Studio 2017 e posterior no Windows.
 
@@ -185,7 +185,7 @@ Para acessar uma restrição no código, primeiro você precisa expô-lo no desi
 3. Em seguida, atribua um **nome** à restrição na guia **widget** do Gerenciador de **Propriedades**:
 
     [![](designer-auto-layout-images/modify02.png "The Widget Tab")](designer-auto-layout-images/modify02.png#lightbox)
-4. Salve suas alterações.
+4. Salve as alterações.
 
 Com as alterações acima em vigor, você pode acessar a restrição no código e modificar suas propriedades. Por exemplo, você pode usar o seguinte para definir a altura do modo de exibição anexado como zero:
 
@@ -228,7 +228,7 @@ A chave aqui é chamar o método `LayoutIfNeeded` da exibição pai dentro do bl
 
 Este guia introduziu o layout automático (ou "adaptável") do iOS e o conceito de restrições como representações matemáticas de relações entre elementos na superfície de design. Ele descreveu como habilitar o layout automático no designer do iOS, trabalhando com a **barra de ferramentas de restrições**e editando restrições individualmente na superfície de design. Em seguida, explicamos como solucionar problemas de três restrições comuns. Por fim, ele mostrou como modificar restrições no código.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Introdução ao Storyboards](~/ios/user-interface/storyboards/index.md)
 - [Instruções de controles designáveis do iOS](~/ios/user-interface/designer/ios-designable-controls-walkthrough.md)

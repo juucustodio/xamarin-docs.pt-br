@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
 ms.openlocfilehash: d56cc499112a937cd1a22664adeedd54c4397341
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78915828"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79304173"
 ---
 # <a name="the-skiasharp-circular-gradients"></a>Os gradientes circulares de SkiaSharp
 
@@ -331,7 +331,7 @@ public class RadialSpecularHighlightPage : ContentPage
 }
 ```
 
-A chamada `CreateRadialGradient` cria um gradiente que começa nesse ponto de `offCenter` com branco e termina com vermelho a uma distância da metade do raio. Veja como ela se parece:
+A chamada `CreateRadialGradient` cria um gradiente que começa nesse ponto de `offCenter` com branco e termina com vermelho a uma distância da metade do raio. Veja como é sua aparência:
 
 [![Realce de especula radial](circular-gradients-images/RadialSpecularHighlight.png "Realce de especula radial")](circular-gradients-images/RadialSpecularHighlight-Large.png#lightbox)
 

@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 07/23/2018
 ms.openlocfilehash: 1bb0fae73a1e3647cdc0e3266c7b44ac04fcc1ee
-ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "78914215"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79304404"
 ---
 # <a name="file-storage-and-access-with-xamarinandroid"></a>Armazenamento de arquivos e acesso com Xamarin. Android
 
@@ -141,7 +141,7 @@ Os arquivos privados não aparecerão como mídia compartilhável. Por exemplo, 
 
 Os arquivos públicos serão coletados por `MediaStore`. Diretórios que têm um nome de arquivo de zero byte **. O nomedia** não será verificado pelo `MediaStore`.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 * [Armazenamento externo](~/android/platform/files/external-storage.md)
 * [Salvar arquivos no armazenamento do dispositivo](https://developer.android.com/training/data-storage/files)

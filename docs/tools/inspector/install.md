@@ -7,11 +7,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 06/19/2018
 ms.openlocfilehash: 19c4a15fb2490c7bace4798b0cb8e062b1379a04
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78917585"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79305062"
 ---
 # <a name="inspector-installation-and-requirements"></a>Instalação e requisitos do Inspetor
 
@@ -31,9 +31,9 @@ ms.locfileid: "78917585"
 
 -----
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
-### <a name="supported-operating-systems"></a>Sistemas operacionais com suporte
+### <a name="supported-operating-systems"></a>Supported Operating Systems
 
 - **Mac** -OS X 10,11 ou superior
 - **Windows** -Windows 7 ou superior (com o Internet Explorer 11 ou superior e o .NET 4.6.1 ou superior)
@@ -49,7 +49,7 @@ A inspeção do aplicativo ao vivo está disponível para clientes empresariais.
 
 ### <a name="supported-app-platforms"></a>Plataformas de aplicativos com suporte
 
-|Plataforma de aplicativo|Suporte a IDE|Observações|
+|Plataforma de aplicativo|Suporte a IDE|{1&gt;Observações&lt;1}|
 |--- |--- |--- |
 |Mac|Somente com suporte no Visual Studio para Mac|
 |iOS|Com suporte no Visual Studio 2017 e Visual Studio para Mac| O comportamento do vinculador deve ser definido como **não vincular** (em opções do projeto de **compilação do IOS** ) |
@@ -75,7 +75,7 @@ Visual Studio para Mac
 - **O Visual Studio > sobre o Visual Studio > Mostrar detalhes > copiar informações**
 - Colar no relatório de bugs
 
-Visual Studio
+{1&gt;Visual Studio&lt;1}
 
 - **Ajuda > sobre o Visual Studio > copiar informações**
 - Informe-nos a sua versão do sistema operacional e se você está executando o Windows de 32 bits ou 64 bits.
@@ -97,12 +97,12 @@ Visual Studio para Mac
 
 - `~/Library/Logs/VisualStudio/7.0/Ide.log`
 
-Visual Studio
+{1&gt;Visual Studio&lt;1}
 
 - `%LOCALAPPDATA%\Xamarin\Logs\{VS version}\Inspector {date}.log`
 - O conteúdo do painel de **saída** do Visual Studio também pode ser informativo.
 
-### <a name="project-settings"></a>Configurações do projeto
+### <a name="project-settings"></a>Configurações do Projeto
 
 Se você puder anexar o **. csproj** para o projeto que está tentando inspecionar, ele seria extremamente útil. Isso é mais fácil do que perguntar sobre configurações individuais.
 

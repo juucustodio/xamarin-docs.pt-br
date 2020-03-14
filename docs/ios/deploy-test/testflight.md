@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
 ms.openlocfilehash: 2f5d04b49658abe9d366e264d8f1a659732a2c33
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78917549"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79304201"
 ---
 # <a name="using-testflight-to-distribute-xamarinios-apps"></a>Usando TestFlight para distribuir aplicativos Xamarin.iOS
 
@@ -29,7 +29,7 @@ Anteriormente, o binário era gerado no Visual Studio para Mac e carregado para 
 - O aplicativo TestFlight agora é um aplicativo iOS real, assim, opera com mais rapidez.
 - Depois da conclusão do teste beta, o processo de mover o aplicativo para análise é rápido e eficiente; basta um clique de botão.
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 Somente aplicativos iOS 8.0 ou superiores pode ser testado por meio de TestFlight.
 
@@ -123,7 +123,7 @@ Primeiro, compile o [distribuível final](~/ios/deploy-test/app-distribution/app
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 ### <a name="building-your-final-distributable"></a>Compilando seu distribuível final
- Uma vez que o plug-in Xamarin para Visual Studio não dá suporte a arquivamento de aplicativos Xamarin.iOS para publicação na App Store, há duas opções para publicar um aplicativo iOS do Visual Studio. Estes são:
+ Uma vez que o plug-in Xamarin para Visual Studio não dá suporte a arquivamento de aplicativos Xamarin.iOS para publicação na App Store, há duas opções para publicar um aplicativo iOS do Visual Studio. Elas são:
 
 1. Carregar um IPA criado por meio do comando de Compilar IPA Adhoc.
 1. Carregar um pacote `.app` compactado.
@@ -267,7 +267,7 @@ Depois que o teste beta tiver sido concluído, você poderá enviar seu aplicati
 
 Este artigo analisou como usar Testes Beta do TestFlight da Apple por meio do iTunes Connect. Abordou como carregar um novo build para o iTunes Connect e como convidar testadores Beta internos e externos a usar nosso aplicativo.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Criando um registro do iTunes Connect](~/ios/deploy-test/app-distribution/app-store-distribution/itunesconnect.md#creating)
 - [Publicando na App Store](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md)

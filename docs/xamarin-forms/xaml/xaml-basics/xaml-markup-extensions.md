@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 03/27/2018
 ms.openlocfilehash: 89e2026ff16a9614234d6ee4bfa4df620cf58b56
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78917686"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79304453"
 ---
 # <a name="part-3-xaml-markup-extensions"></a>Parte 3. Extensões de marcação do XAML
 
@@ -558,7 +558,7 @@ Aqui está o programa em execução:
 
 As extensões de marcação XAML mostradas aqui oferecem suporte importante para arquivos XAML. Mas talvez a extensão de marcação XAML mais valiosa seja `Binding`, que é abordada na próxima parte desta série, [parte 4. Noções básicas de ligação de dados](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md).
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [XamlSamples](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
 - [Parte 1. Introdução com XAML](~/xamarin-forms/xaml/xaml-basics/get-started-with-xaml.md)

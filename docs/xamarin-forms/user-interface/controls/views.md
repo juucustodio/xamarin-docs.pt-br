@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 02/14/2020
 ms.openlocfilehash: 09bcb49db7f257a415518b259672ca8e776cdbc4
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78917275"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79304460"
 ---
 # <a name="xamarinforms-views"></a>Modos de exibição do xamarin. Forms
 
@@ -31,7 +31,7 @@ As exibições são objetos de interface do usuário, como rótulos, botões e c
 | [`Label`](xref:Xamarin.Forms.Label) exibe cadeias de texto de linha única ou blocos de texto de várias linhas, com a formatação constante ou variável. Defina a propriedade [`Text`](xref:Xamarin.Forms.Label.Text) como uma cadeia de caracteres para formatação constante ou defina a propriedade [`FormattedText`](xref:Xamarin.Forms.Label.FormattedText) como um objeto [`FormattedString`](xref:Xamarin.Forms.FormattedString) para formatação de variável.<br /><br />[Documentação da API](xref:Xamarin.Forms.Label) / [guia](~/xamarin-forms/user-interface/text/label.md) / [exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text) | [![Exemplo de rótulo](views-images/Label.png "Exemplo de rótulo")](views-images/Label-Large.png#lightbox "Exemplo de rótulo")<br /> código desta página / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/LabelDemoPage.xaml) [ C# ](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/LabelDemoPage.cs) |
 |     |     |
 
-### <a name="image"></a>Image
+### <a name="image"></a>Imagem
 
 |     |     |
 | --- | --- |
@@ -45,7 +45,7 @@ As exibições são objetos de interface do usuário, como rótulos, botões e c
 | [`BoxView`](xref:Xamarin.Forms.BoxView) exibe um retângulo sólido colorido pela propriedade [`Color`](xref:Xamarin.Forms.BoxView.Color) . `BoxView` tem uma solicitação de tamanho padrão de 40x40. Para outros tamanhos, atribua as propriedades [`WidthRequest`](xref:Xamarin.Forms.VisualElement.WidthRequest) e [`HeightRequest`](xref:Xamarin.Forms.VisualElement.HeightRequest) .<br /><br />[Documentação da API](xref:Xamarin.Forms.BoxView) / [guia](~/xamarin-forms/user-interface/boxview.md) / [amostra 1](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/boxview-basicboxview), [2](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/boxview-textdecoration), [3](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/boxview-listviewcolors/), [4](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/boxview-gameoflife), [5](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/boxview-dotmatrixclock)e [6](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/boxview-boxviewclock) | [![Exemplo de BoxView](views-images/BoxView.png "Exemplo de BoxView")](views-images/BoxView-Large.png#lightbox "Exemplo de BoxView")<br />código desta página / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/BoxViewDemoPage.xaml) [ C# ](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/BoxViewDemoPage.cs) |
 |     |     |
 
-### <a name="webview"></a>WebView
+### <a name="webview"></a>Exibição da Web
 
 |     |     |
 | --- | --- |
@@ -119,7 +119,7 @@ As exibições são objetos de interface do usuário, como rótulos, botões e c
 | `CheckBox` permite ao usuário selecionar um valor booliano usando um tipo de botão que pode ser marcado ou vazio. A propriedade `IsChecked` é o estado da `CheckBox`e o evento `CheckedChanged` é acionado quando o estado é alterado.<br /><br />Documentação/ [guia](~/xamarin-forms/user-interface/checkbox.md) da API / [exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-checkboxdemos) | [![Exemplo da caixa de seleção](views-images/CheckBox.png "Exemplo da caixa de seleção")](views-images/CheckBox-Large.png#lightbox "Exemplo da caixa de seleção")<br />código desta página / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/CheckBoxPage.xaml) [ C# ](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/CheckBoxPage.cs) |
 |     |     |
 
-### <a name="slider"></a>Controle deslizante
+### <a name="slider"></a>Controle Deslizante
 
 |     |     |
 | --- | --- |
@@ -232,7 +232,7 @@ Essas duas classes derivam da classe [`InputView`](xref:Xamarin.Forms.InputView)
 | [`TableView`](xref:Xamarin.Forms.TableView) exibe uma lista de linhas do tipo [`Cell`](xref:Xamarin.Forms.Cell) com cabeçalhos e subtítulos opcionais. Defina a propriedade [`Root`](xref:Xamarin.Forms.TableView.Root) como um objeto do tipo [`TableRoot`](xref:Xamarin.Forms.TableRoot)e adicione [`TableSection`](xref:Xamarin.Forms.TableSection) objetos a esse `TableRoot`. Cada `TableSection` é uma coleção de objetos `Cell`.<br /><br />[Documentação da API](xref:Xamarin.Forms.TableView) / [guia](~/xamarin-forms/user-interface/tableview.md) / [exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-tableview) | [![Exemplo de TableView](views-images/TableView.png "Exemplo de TableView")](views-images/TableView-Large.png#lightbox "Exemplo de TableView")<br />código desta página / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/TableViewFormDemoPage.xaml) [ C# ](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/TableViewFormDemoPage.cs) |
 |     |     |
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Exemplo de FormsGallery do Xamarin. Forms](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery)
 - [Amostras do Xamarin.Forms](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms)

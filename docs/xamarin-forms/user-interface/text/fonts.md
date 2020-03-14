@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 01/20/2020
 ms.openlocfilehash: 3798e3612547d36905dd62e6314f158958782874
-ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "78911369"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79304054"
 ---
 # <a name="fonts-in-xamarinforms"></a>Fontes no xamarin. Forms
 
@@ -61,7 +61,7 @@ O Xamarin. Forms também define campos na enumeração de [`NamedSize`](xref:Xam
 
 Estilos de fonte, como **negrito** e *itálico* , podem ser definidos na propriedade `FontAttributes`. Atualmente, há suporte para os seguintes valores:
 
-- **Nenhuma**
+- **Nenhum**
 - **Negrito**
 - **Colocadas**
 
@@ -121,7 +121,7 @@ A propriedade [`Device.RuntimePlatform`](~/xamarin-forms/platform/device.md#prov
 
 O Xamarin. Forms define os campos na enumeração de [`NamedSize`](xref:Xamarin.Forms.NamedSize) que representam tamanhos de fonte específicos. A tabela a seguir mostra os membros do `NamedSize` e seus tamanhos padrão no iOS, Android e na Plataforma Universal do Windows (UWP):
 
-| Membro | iOS | Android | UWP |
+| {1&gt;Membro&lt;1} | iOS | Android | UWP |
 | --- | --- | --- | --- |
 | `Default` | 16 | 14 | 14 |
 | `Micro` | 11 | 10 | 15,667 |
@@ -184,7 +184,7 @@ new Label
 }
 ```
 
-### <a name="windows"></a>Windows
+### <a name="windows"></a>Portal
 
 Xamarin. Forms para plataformas do Windows pode fazer referência a uma fonte personalizada que foi adicionada ao projeto seguindo um padrão de nomenclatura específico. Primeiro, adicione o arquivo de fonte à pasta **/assets/fonts/** no projeto de aplicativo e defina a **ação de compilação: content**. Em seguida, use o caminho completo e o nome de arquivo da fonte, seguidos de um hash (#) e da **fonte**, como o trecho de código abaixo demonstra:
 

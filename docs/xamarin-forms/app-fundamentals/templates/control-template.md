@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 01/13/2020
 ms.openlocfilehash: a73123b89cba932f2e2cb907645f6fe858cf6176
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78914457"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79305132"
 ---
 # <a name="xamarinforms-control-templates"></a>Modelos de controle do Xamarin.Forms
 
@@ -494,7 +494,7 @@ No runtime, quando `TealTemplate` é aplicado à página, o conteúdo da página
 
 ## <a name="get-a-named-element-from-a-template"></a>Obter um elemento nomeado de um modelo
 
-Elementos nomeados dentro de um modelo de controle podem ser recuperados do controle modelo personalizado ou da página modelo. Isso pode ser obtido com o método `GetTemplateChild`, que retorna o elemento nomeado na árvore visual [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) instanciada, se encontrado. Caso contrário, ele retornará `null`.
+Elementos nomeados dentro de um modelo de controle podem ser recuperados do controle modelo personalizado ou da página modelo. Isso pode ser obtido com o método `GetTemplateChild`, que retorna o elemento nomeado na árvore visual [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) instanciada, se encontrado. Caso contrário, retornará `null`.
 
 Depois que um modelo de controle foi instanciado, o método `OnApplyTemplate` do modelo é chamado. O método `GetTemplateChild`, portanto, deve ser chamado de uma substituição de `OnApplyTemplate` no controle modelo ou na página modelo.
 

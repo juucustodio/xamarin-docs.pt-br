@@ -7,11 +7,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2018
 ms.openlocfilehash: 8c21895918e4d4ac9a82804d4b140fbf7bf798fe
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78911071"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79303921"
 ---
 # <a name="preparing-an-application-for-release"></a>Preparar um aplicativo para lançamento
 
@@ -331,7 +331,7 @@ O **Lista de Arquivos Mortos** exibe a lista de todos os arquivos mortos para a 
 
 O **Painel de Detalhes** exibe informações adicionais sobre cada arquivo morto. Também permite que o usuário iniciar o fluxo de trabalho de distribuição ou abra a pasta na qual a distribuição foi criada. A seção **Comentários de Build** torna possível incluir comentários de build no arquivo morto.
 
-### <a name="distribution"></a>Distribuição
+### <a name="distribution"></a>Distribution
 
 Quando uma versão arquivada do aplicativo estiver pronta para publicação, selecione o arquivo morto no **Gerenciador de Arquivo Morto** e clique no botão **Distribuir...** :
 
@@ -370,7 +370,7 @@ Aqui, é possível selecionar o canal de distribuição:
 
 -----
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Dispositivos de vários núcleos e o Xamarin.Android](~/android/deploy-test/multicore-devices.md)
 - [Arquiteturas de CPU](~/android/app-fundamentals/cpu-architectures.md)

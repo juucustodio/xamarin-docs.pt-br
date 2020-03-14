@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
 ms.openlocfilehash: a2435b30b7d5b468fca6c55d295c87b9a0d20652
-ms.sourcegitcommit: 60d2243809d8e980fca90b9f771e72f8c0e64d71
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "78915183"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79304796"
 ---
 # <a name="xamarinios-api-design"></a>Design de API do Xamarin. iOS
 
@@ -238,7 +238,7 @@ Há alguns métodos expostos em `NSArray`, para os casos de canto em que você t
 
 Além disso, na **API clássica** em vez de expor `CGRect`, `CGPoint` e `CGSize` da API CoreGraphics, substituímos aqueles pelas implementações `System.Drawing` `RectangleF`, `PointF` e `SizeF`, pois eles ajudarão os desenvolvedores a preservar o código OpenGL existente que usa OpenTK. Ao usar o novo **API unificada**de 64 bits, a API CoreGraphics deve ser usada.
 
-#### <a name="inheritance"></a>Herança
+#### <a name="inheritance"></a>{1&gt;Herança&lt;1}
 
 O design de API do Xamarin. iOS permite que os desenvolvedores estendam tipos de Objective-C nativos da mesma C# forma que estendem um tipo, usando a palavra-chave "override" em uma classe derivada, bem como encadeando a implementação de C# base usando a palavra-chave "base".
 
@@ -707,6 +707,6 @@ Um efeito colateral de que o gerenciamento automático de memória tem é que o 
 
 Se você não mantiver uma referência em suas variáveis estática ou de instância para seus objetos, o mono chamará o método Dispose () neles, e eles liberarão a referência ao objeto. Como essa pode ser a única referência pendente, o tempo de execução do Objective-C destruirá o objeto para você.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Campos de associação](~/cross-platform/macios/binding/objective-c-libraries.md#Binding_Fields)

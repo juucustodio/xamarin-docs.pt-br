@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
 ms.openlocfilehash: 0f523c7149366cff85164f26f3f47b87801002cb
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78916489"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79305251"
 ---
 # <a name="enterprise-app-navigation"></a>Navegação de aplicativo empresarial
 
@@ -306,7 +306,7 @@ O Xamarin. Forms inclui suporte para a navegação de página, que normalmente r
 
 Este capítulo apresentou uma classe `NavigationService`, que é usada para executar o modelo de exibição-primeira navegação de modelos de exibição. Colocar a lógica de navegação em classes de modelo de exibição significa que a lógica pode ser exercitada por meio de testes automatizados. Além disso, o modelo de exibição pode então implementar a lógica para controlar a navegação a fim de garantir que determinadas regras de negócio sejam impostas.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Download do eBook (PDF de 2Mb)](https://aka.ms/xamarinpatternsebook)
 - [eShopOnContainers (GitHub) (exemplo)](https://github.com/dotnet-architecture/eShopOnContainers)

@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 11/27/2019
 ms.openlocfilehash: 4427d347723284a2f8897612f10857270c9631bf
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78913408"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79305209"
 ---
 # <a name="improve-xamarinforms-app-performance"></a>Aprimorar o desempenho do Aplicativo Xamarin.Forms
 
@@ -184,7 +184,7 @@ A capacidade de resposta geral do seu aplicativo pode ser aprimorada e os gargal
     > [!IMPORTANT]
     > Todas as propriedades de controle que são atualizadas por meio da ligação de dados serão automaticamente empacotadas para o thread da interface do usuário.
 
-### <a name="error-handling"></a>Tratamento de erros
+### <a name="error-handling"></a>Manipulação de erros
 
 - Saiba mais sobre a manipulação de exceção assíncrona. As exceções sem tratamento que são geradas pelo código que está sendo executado de forma assíncrona são propagadas de volta para o thread de chamada, exceto em determinados cenários. Para obter mais informações, consulte [tratamento de exceção (biblioteca paralela de tarefas)](/dotnet/standard/parallel-programming/exception-handling-task-parallel-library).
 - Evite criar `async void` métodos e, em vez disso, crie `async Task` métodos. Isso permite o tratamento de erros, a capacidade de composição e a possibilidade de teste mais fáceis. A exceção a essa diretriz são os manipuladores de eventos assíncronos, que devem retornar `void`. Para obter mais informações, consulte [evitar Async void](/archive/msdn-magazine/2013/march/async-await-best-practices-in-asynchronous-programming#avoid-async-void).

@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 12/04/2019
 ms.openlocfilehash: 693dd29e59aee73a206398a8a44cc4f15e385d8d
-ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "78911471"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79303949"
 ---
 # <a name="consuming-xaml-markup-extensions"></a>Consumo de extensões de marcação do XAML
 
@@ -594,7 +594,7 @@ Para obter informações sobre como exibir ícones de fonte especificando os dad
 
 Se você tiver encontrado uma necessidade de uma extensão de marcação XAML que não esteja disponível no Xamarin. Forms, você poderá [criar a sua própria](creating.md).
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Extensões de marcação (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-markupextensions)
 - [Capítulo extensões de marcação XAML do livro Xamarin. Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter10.md)

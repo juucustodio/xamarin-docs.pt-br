@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 08/21/2018
-ms.openlocfilehash: 3ad3661ff50ad7f4be95421de57dc5017392a59f
-ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.openlocfilehash: 38052eee1b71ace9795f5c16bdf714f9538e353d
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "78292167"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79303470"
 ---
 # <a name="platform-features"></a>Recursos da plataforma
 
@@ -41,6 +41,10 @@ O Android 3,0 introduziu fragmentos, mostrando como dar suporte a designs mais f
 ## <a name="app-linking"></a>[Vinculação de aplicativo](~/android/platform/app-linking.md)
 
 Este guia discutirá como o Android 6,0 dá suporte à _vinculação de aplicativos_, uma técnica que permite que os aplicativos móveis respondam a URLs em sites. Ele discutirá como implementar a vinculação de aplicativos em um aplicativo Android 6,0 e como configurar um site para conceder permissões ao aplicativo móvel para lidar com links de aplicativo para o domínio.
+
+## <a name="androidx"></a>[AndroidX](~/android/platform/androidx.md)
+
+Este artigo fornece uma descrição do uso do AndroidX em seus projetos do Xamarin. Android e fornece links para a documentação que ilustra como migrar seu aplicativo da biblioteca de suporte do Android para o AndroidX.
 
 ## <a name="android-10"></a>[Android 10](~/android/platform/android-10.md)
 

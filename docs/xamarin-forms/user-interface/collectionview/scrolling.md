@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 09/17/2019
 ms.openlocfilehash: 7aef14cbb854d89a2088a450353b943402f76a86
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78913391"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79304180"
 ---
 # <a name="xamarinforms-collectionview-scrolling"></a>Rolagem de CollectionView do Xamarin. Forms
 
@@ -134,7 +134,7 @@ Este código de exemplo resulta na rolagem mínima necessária para rolar o item
 > [!NOTE]
 > O membro [`ScrollToPosition.MakeVisible`](xref:Xamarin.Forms.ScrollToPosition) é usado por padrão, se o argumento `position` não for especificado ao chamar o método `ScrollTo`.
 
-### <a name="start"></a>Início
+### <a name="start"></a>Iniciar
 
 O membro [`ScrollToPosition.Start`](xref:Xamarin.Forms.ScrollToPosition) indica que o item deve ser rolado até o início da exibição:
 
@@ -146,7 +146,7 @@ Este código de exemplo resulta no item que está sendo rolado para o início da
 
 [![Captura de tela de uma lista vertical CollectionView com um item rolado na exibição, no iOS e no Android](scrolling-images/scrolltoposition-start.png "Lista vertical CollectionView com item rolado")](scrolling-images/scrolltoposition-start-large.png#lightbox "Lista vertical CollectionView com item rolado")
 
-### <a name="center"></a>Centralizado
+### <a name="center"></a>Center
 
 O membro [`ScrollToPosition.Center`](xref:Xamarin.Forms.ScrollToPosition) indica que o item deve ser rolado para o centro da exibição:
 
@@ -158,7 +158,7 @@ Este código de exemplo resulta no item que está sendo rolado para o centro da 
 
 [![Captura de tela de uma lista vertical CollectionView com um item rolado na exibição, no iOS e no Android](scrolling-images/scrolltoposition-center.png "Lista vertical CollectionView com item rolado")](scrolling-images/scrolltoposition-center-large.png#lightbox "Lista vertical CollectionView com item rolado")
 
-### <a name="end"></a>End
+### <a name="end"></a>Encerramento
 
 O membro [`ScrollToPosition.End`](xref:Xamarin.Forms.ScrollToPosition) indica que o item deve ser rolado para o final da exibição:
 
@@ -234,7 +234,7 @@ A enumeração de [`SnapPointsAlignment`](xref:Xamarin.Forms.SnapPointsAlignment
 > [!IMPORTANT]
 > O valor da propriedade [`SnapPointsAlignment`](xref:Xamarin.Forms.ItemsLayout.SnapPointsAlignment) só é respeitado quando a propriedade [`SnapPointsType`](xref:Xamarin.Forms.ItemsLayout.SnapPointsType) é definida como `Mandatory`ou `MandatorySingle`.
 
-#### <a name="start"></a>Início
+#### <a name="start"></a>Iniciar
 
 O membro `SnapPointsAlignment.Start` indica que os pontos de ajuste estão alinhados com a borda à esquerda dos itens.
 
@@ -269,7 +269,7 @@ Quando um usuário passa o dedo para iniciar uma rolagem, o item superior será 
 
 [![Captura de tela de uma lista vertical de CollectionView com pontos de partida de início, no iOS e no Android](scrolling-images/snappoints-start.png "Lista vertical CollectionView com pontos de ajuste de início")](scrolling-images/snappoints-start-large.png#lightbox "Lista vertical CollectionView com pontos de ajuste de início")
 
-#### <a name="center"></a>Centralizado
+#### <a name="center"></a>Center
 
 O membro `SnapPointsAlignment.Center` indica que os pontos de ajuste estão alinhados ao centro dos itens. O exemplo de XAML a seguir mostra como definir esse membro de enumeração:
 
@@ -302,7 +302,7 @@ Quando um usuário passa o dedo para iniciar uma rolagem, o item superior será 
 
 [![Captura de tela de uma lista vertical CollectionView com pontos de alinhamento do centro, no iOS e no Android](scrolling-images/snappoints-center.png "Lista vertical CollectionView com pontos de alinhamento do centro")](scrolling-images/snappoints-center-large.png#lightbox "Lista vertical CollectionView com pontos de alinhamento do centro")
 
-#### <a name="end"></a>End
+#### <a name="end"></a>Encerramento
 
 O membro `SnapPointsAlignment.End` indica que os pontos de ajuste estão alinhados com a borda à direita dos itens. O exemplo de XAML a seguir mostra como definir esse membro de enumeração:
 

@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 07/02/2018
 ms.openlocfilehash: b646893d8bbe63aa537c973c90552e0367735e47
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78913619"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79303900"
 ---
 # <a name="signing-the-android-application-package"></a>Assinatura do Pacote de Aplicativos Android
 
@@ -149,6 +149,6 @@ O APK está pronto para copiar do Finder e enviar para seu destino final. É rec
 
 -----
 
-## <a name="next-steps"></a>Próximas etapas
+## <a name="next-steps"></a>{1&gt;{2&gt;Próximas etapas&lt;2}&lt;1}
 
 Depois que o pacote de aplicativo for assinado para versão, ele deve ser publicado. As seguintes seções descrevem várias maneiras de publicar um aplicativo.

@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/29/2017
 ms.openlocfilehash: ce262faf2d79e6a2cc969df582446fdc2ec29bde
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78910863"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79304768"
 ---
 # <a name="introduction-to-ios-10"></a>Introdução ao iOS 10
 
@@ -42,7 +42,7 @@ A Apple forneceu vários novos pontos de extensão de aplicativo no iOS 10:
 
 - Diretório de chamada
 - Interface do usuário de tentativas e intenções
-- Mensagens
+- Messages
 - Conteúdo da notificação
 - Notification Services
 - Pacote de adesivo
@@ -230,6 +230,6 @@ As seguintes APIs foram preteridas no iOS 10:
 
 Consulte a documentação de [diferenças da API do ios 9,3 para ios 10,0](https://developer.apple.com/library/prerelease/content/releasenotes/General/iOS10APIDiffs/index.html) da Apple para obter uma lista completa de reprovações.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Amostras do iOS 10](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS10)

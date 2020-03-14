@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/08/2017
 ms.openlocfilehash: 528ccd66cc013f83752d93251cb9714115b29819
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78915326"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79305181"
 ---
 # <a name="authentication-and-authorization"></a>Autenticação e autorização
 
@@ -478,7 +478,7 @@ Há muitas abordagens para integrar a autenticação e a autorização em um apl
 
 O aplicativo móvel solicita tokens de segurança do IdentityServer, seja para autenticar um usuário ou para acessar um recurso. Ao acessar um recurso, um token de acesso deve ser incluído na solicitação para APIs que exigem autorização. O middleware da IdentityServer valida tokens de acesso de entrada para garantir que eles sejam enviados de um emissor confiável e que sejam válidos para serem usados com a API que os recebe.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Download do eBook (PDF de 2Mb)](https://aka.ms/xamarinpatternsebook)
 - [eShopOnContainers (GitHub) (exemplo)](https://github.com/dotnet-architecture/eShopOnContainers)

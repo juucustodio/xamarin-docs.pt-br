@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
 ms.openlocfilehash: de5728710a408b8e0c7c68dc89c7e6484cbcc3ce
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78915316"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79305279"
 ---
 # <a name="validation-in-enterprise-apps"></a>Validação em aplicativos empresariais
 
@@ -426,7 +426,7 @@ O aplicativo móvel eShopOnContainers executa a validação síncrona do lado do
 
 As propriedades do modelo de exibição que exigem validação são do tipo `ValidatableObject<T>`e cada instância de `ValidatableObject<T>` tem regras de validação adicionadas à sua propriedade `Validations`. A validação é invocada do modelo de exibição chamando o método `Validate` da instância `ValidatableObject<T>`, que recupera as regras de validação e as executa na propriedade `ValidatableObject<T>` `Value`. Todos os erros de validação são colocados na propriedade `Errors` da instância `ValidatableObject<T>`, e a propriedade `IsValid` da instância `ValidatableObject<T>` é atualizada para indicar se a validação foi bem-sucedida ou falhou.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Download do eBook (PDF de 2Mb)](https://aka.ms/xamarinpatternsebook)
 - [eShopOnContainers (GitHub) (exemplo)](https://github.com/dotnet-architecture/eShopOnContainers)

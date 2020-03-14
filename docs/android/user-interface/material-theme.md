@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/01/2018
 ms.openlocfilehash: 809f6241b3a17f63fe3077f896095c303e1dfd2e
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78916679"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79304544"
 ---
 # <a name="material-theme"></a>Tema de material
 
@@ -36,7 +36,7 @@ Você pode usar um único tema para um aplicativo inteiro ou pode usar temas dif
 
 Como o tema material tem suporte apenas no Android 5,0 e posterior, você não pode usá-lo (ou um tema personalizado derivado do tema material) para aplicar um tema ao seu aplicativo para ser executado em versões anteriores do Android. No entanto, você pode configurar seu aplicativo para usar o tema de material em dispositivos Android 5,0 e retornar de volta a um tema anterior quando ele for executado em versões mais antigas do Android (consulte a seção [compatibilidade](#compatibility) deste artigo para obter detalhes).
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 O seguinte é necessário para usar os novos recursos de tema do material do Android 5,0 em aplicativos baseados no Xamarin:
 
@@ -264,7 +264,7 @@ Para obter mais informações sobre a compatibilidade de temas com versões mais
 
 Este artigo introduziu o novo estilo de interface de usuário tema do material incluído no Android 5,0 (pirulito). Ele descreveu os três tipos de tema de material interno que você pode usar para estilizar seu aplicativo, explicado como criar um tema personalizado para a identidade visual de seu aplicativo e forneceu um exemplo de como aplicar um tema a um modo de exibição individual. Por fim, este artigo explicou como usar o tema material em seu aplicativo, mantendo a compatibilidade com versões anteriores do Android.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [ThemeSwitcher (exemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android50-themeswitcher)
 - [Introdução à pirulito](../platform/lollipop.md)

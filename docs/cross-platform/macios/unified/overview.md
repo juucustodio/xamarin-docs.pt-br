@@ -7,11 +7,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/29/2017
 ms.openlocfilehash: 8402a48602dd94578e688faeb038aec69684e7d4
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78917551"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79304334"
 ---
 # <a name="unified-api-overview"></a>Visão geral de API Unificada
 
@@ -228,7 +228,7 @@ Anteriormente, isso seria um erro do compilador, pois um `Action` não pode ser 
 
 ### <a name="custom-delegates-replaced-with-actiont"></a>Delegados personalizados substituídos por ação\<T >
 
-Em **um** simples (por exemplo, um parâmetro), os delegados do .net foram substituídos por `Action<T>`. Por ex.:
+Em **um** simples (por exemplo, um parâmetro), os delegados do .net foram substituídos por `Action<T>`. Por exemplo,
 
 ```csharp
 public delegate void NSNotificationHandler (NSNotification notification);
@@ -312,7 +312,7 @@ Baixo impacto: na maioria dos casos essa alteração não afetará os aplicativo
 Alterações adicionais a serem observadas estão listadas nas [dicas para atualizar aplicativos para o API unificada](~/cross-platform/macios/unified/updating-tips.md).
 
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Atualizando aplicativos iOS](updating-ios-apps.md)
 - [Atualizando aplicativos do Mac](updating-mac-apps.md)

@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/15/2017
 ms.openlocfilehash: 54fcc3bb683f6ca4515d807da5c3345cf71a2df3
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78917745"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79304656"
 ---
 # <a name="apple-pay-capabilities-in-xamarinios"></a>Recursos Apple Pay no Xamarin.iOS
 

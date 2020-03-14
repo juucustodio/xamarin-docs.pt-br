@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 09/13/2016
 ms.openlocfilehash: e5a61af4cd8a09df3ffddb74658f646aa8edfa1f
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73032076"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79304754"
 ---
 # <a name="visual-design-updates-in-ios-11"></a>Atualizações de Design Visual no iOS 11
 
@@ -55,7 +55,7 @@ NavigationItem.SearchController = searchController;
 
 Dependendo da funcionalidade do seu aplicativo, você pode ou não desejar que a barra de pesquisa seja ocultada quando um usuário rolar por uma lista. Você pode ajustar isso usando a propriedade `HidesSearchBarWhenScrolling`.
 
-## <a name="margins"></a>Margens
+## <a name="margins"></a>{1&gt;Margens&lt;1}
 
 A Apple criou uma nova propriedade – `directionalLayoutMargins` – que pode ser usada para definir o espaço entre exibições e subexibições. Use `directionalLayoutMargins` com `leading` ou `trailing` indefinições. Independentemente de o sistema ser um idioma da esquerda para a direita ou da direita para a esquerda, o espaçamento em seu aplicativo é definido adequadamente pelo iOS.
 
@@ -78,7 +78,7 @@ A área segura é uma nova maneira de pensar sobre o espaço visível do seu apl
 
 [Guia de layout da área de ![segura versus superior e inferior](visual-design-images/image10-sml.png)](visual-design-images/image10.png#lightbox)
 
-Anteriormente, se você adicionou uma exibição e queria que ela estivesse visível na área verde acima, você a restringiria na _parte inferior_ da `TopLayoutGuide` e na _parte superior_ da `BottomLayoutGuide`. No iOS 11, você seria restringi-lo na _parte superior_ e na _parte inferior_ da área de segurança. Segue um exemplo:
+Anteriormente, se você adicionou uma exibição e queria que ela estivesse visível na área verde acima, você a restringiria na _parte inferior_ da `TopLayoutGuide` e na _parte superior_ da `BottomLayoutGuide`. No iOS 11, você seria restringi-lo na _parte superior_ e na _parte inferior_ da área de segurança. Há um exemplo a seguir:
 
 ```csharp
 var safeGuide = View.SafeAreaLayoutGuide;
@@ -113,7 +113,7 @@ o iOS 11 expandiu a funcionalidade das ações de linha. `UISwipeActionsConfigur
 
 As exibições de tabela têm suporte para arrastar e soltar no iOS 11. Para obter mais informações, consulte a guia de [arrastar e soltar](~/ios/platform/introduction-to-ios11/drag-and-drop.md#uitableview) .
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [O que há de novo no iOS 11 (Apple)](https://developer.apple.com/ios/)
 - [Página de produto da App Store atualizada (Apple)](https://developer.apple.com/app-store/product-page/)

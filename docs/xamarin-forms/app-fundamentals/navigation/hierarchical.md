@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/14/2018
 ms.openlocfilehash: 11ad1fb18d1263eb77ef037350a3633510934c42
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78915673"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79305111"
 ---
 # <a name="hierarchical-navigation"></a>Navegação hierárquica
 
@@ -359,7 +359,7 @@ Como alternativa, é possível sugerir uma barra de navegação estendida coloca
 - No Android, só é possível colocar modos de exibição na barra de navegação de um `NavigationPage` em aplicativos que usam a compatibilidade de aplicativos.
 - Não é recomendável colocar modos de exibição grandes e complexos, como [`ListView`](xref:Xamarin.Forms.ListView) e [`TableView`](xref:Xamarin.Forms.TableView), na barra de navegação de uma `NavigationPage`.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Navegação da página](https://developer.xamarin.com/r/xamarin-forms/book/chapter24.pdf)
 - [Hierárquica (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-hierarchical)

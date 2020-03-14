@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/17/2018
 ms.openlocfilehash: 9955b68346c74435a3a141c69d02e1bec5856bd3
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78916401"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79304012"
 ---
 # <a name="displaying-skiasharp-bitmaps"></a>Exibição de bitmaps de SkiaSharp
 
@@ -311,7 +311,7 @@ Ative virar o telefone para ver o bitmap ampliado para essa área:
 
 [![Paisagem de dimensionamento uniforme](displaying-images/UniformScaling-Landscape.png "Paisagem de dimensionamento uniforme")](displaying-images/UniformScaling-Landscape-Large.png#lightbox)
 
-A vantagem de usar esse `scale` fator se torna óbvio quando você deseja implementar um algoritmo um pouco diferente. Suponha que você deseja preservar a taxa de proporção do bitmap, mas também preencher o retângulo de destino. A única maneira possível é cortar parte da imagem, mas você pode implementar esse algoritmo simplesmente alterando `Math.Min` para `Math.Max` no código acima. Eis o resultado: 
+A vantagem de usar esse `scale` fator se torna óbvio quando você deseja implementar um algoritmo um pouco diferente. Suponha que você deseja preservar a taxa de proporção do bitmap, mas também preencher o retângulo de destino. A única maneira possível é cortar parte da imagem, mas você pode implementar esse algoritmo simplesmente alterando `Math.Min` para `Math.Max` no código acima. Este é o resultado: 
 
 [![Alternativa de dimensionamento uniforme](displaying-images/UniformScaling-Alternative.png "Alternativa de dimensionamento uniforme")](displaying-images/UniformScaling-Alternative-Large.png#lightbox)
 

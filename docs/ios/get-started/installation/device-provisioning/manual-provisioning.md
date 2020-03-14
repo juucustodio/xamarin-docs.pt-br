@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/06/2020
 ms.openlocfilehash: 04cb1b9303e571b2a10cdfa621dcd312162e2893
-ms.sourcegitcommit: 60d2243809d8e980fca90b9f771e72f8c0e64d71
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "78967932"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79304859"
 ---
 # <a name="manual-provisioning-for-xamarinios"></a>Provisionamento manual para o Xamarin.iOS
 
@@ -78,7 +78,7 @@ Ao criar um perfil de provisionamento para desenvolvimento, devemos especificar 
 
     ![Captura de tela da nova página de registro de dispositivo com os campos populados corretamente.](manual-provisioning-images/new-device-info.png)
 
-7. Clique em **Continue**.
+7. Clique em **Continuar**.
 8. Examine as informações e clique em **registrar**.
 
 Repita as etapas acima para qualquer dispositivo iOS que será usado para testar ou depurar um aplicativo Xamarin.iOS.
@@ -99,7 +99,7 @@ Antes de criar um perfil de provisionamento, deve ser criada uma *ID do aplicati
 
    ![Captura de tela da página de registro da nova ID do aplicativo com os campos obrigatórios preenchidos.](manual-provisioning-images/new-app-id.png)
 
-4. Clique em **Continue**.
+4. Clique em **Continuar**.
 5. Examine as informações e clique em **registrar**.
 
 ### <a name="new-provisioning-profile"></a>Novo perfil de provisionamento
