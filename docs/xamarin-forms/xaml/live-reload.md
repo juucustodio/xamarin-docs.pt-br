@@ -8,26 +8,29 @@ author: pierceboggan
 ms.author: piboggan
 robots: noindex
 ms.date: 10/26/2018
-ms.openlocfilehash: a5a5a9acf47603601461660df689a7a5fa6aee00
-ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
+ms.openlocfilehash: e6c8e7b84ba8e3d0f6e6247798bb9164a3bc994d
+ms.sourcegitcommit: 8df67f0d76ff762b517d27b8d4c217d3a3379a18
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75728337"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79423896"
 ---
 # <a name="xamarin-live-reload-preview"></a>Recarregamento do Xamarin Live (versão prévia)
 
 > [!NOTE]
-> A versão prévia da recarga do Xamarin Live terminou e queremos agradecer a todos os seus comentários e comentários. Leia nosso [roteiro](https://docs.microsoft.com/visualstudio/productinfo/vs-roadmap) para o Visual Studio 2019 para saber mais sobre os novos recursos de produtividade nos quais estamos trabalhando para o Xamarin. Forms. Essa extensão permanecerá disponível para o Visual Studio 2017, mas não receberá atualizações futuras.
+> A versão prévia da recarga do Xamarin Live terminou e queremos agradecer a todos os seus comentários e comentários. 
+>
+> Para editar seu XAML enquanto seu aplicativo estiver em execução, use o [Hot recarregamento XAML para Xamarin. Forms](~/xamarin-forms/xaml/hot-reload.md).
+>
 
 O Xamarin Live reload permite que você **faça alterações no XAML e os veja refletido em tempo real, sem a necessidade de outra compilação e implantação**. Todas as alterações feitas em seu XAML serão reimplantadas no salvamento e refletidas em seu destino de implantação.
 
-## <a name="requirements"></a>Requisitos do
+## <a name="requirements"></a>Requisitos
 
 * [Visual Studio 2017 versão 15,7 ou superior](https://visualstudio.microsoft.com/vs/) com o **desenvolvimento móvel com** carga de trabalho do .net.
 * [Xamarin. Forms 3.0.0 ou superior](https://www.nuget.org/packages/Xamarin.Forms/).
 
-## <a name="getting-started"></a>Guia de Introdução
+## <a name="getting-started"></a>Introdução
 ### <a name="1-install-xamarin-live-reload-from-the-visual-studio-marketplace"></a>1. Instale o Xamarin Live recarregar do Visual Studio Marketplace
 
 A recarga ao vivo do Xamarin é distribuída por meio do Visual Studio Marketplace. Para instalar a extensão, visite a [página de recarregamento do Xamarin Live no site Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=Xamarin.XamarinLiveReload) e clique em **baixar**.
@@ -105,14 +108,14 @@ Se você estiver Depurando em um emulador do Android ou no simulador do iOS, a r
 
 ### <a name="does-it-require-debugging-the-app"></a>Ele requer a depuração do aplicativo? 
 
-No. Na verdade, você pode até mesmo iniciar todos os seus destinos de aplicativo com suporte (Android, iOS e UWP) em qualquer número de dispositivos ou simuladores/emuladores e ver todas as atualizações ao mesmo tempo. 
+Não. Na verdade, você pode até mesmo iniciar todos os seus destinos de aplicativo com suporte (Android, iOS e UWP) em qualquer número de dispositivos ou simuladores/emuladores e ver todas as atualizações ao mesmo tempo. 
 
 ## <a name="limitations"></a>Limitações
 
 * Há suporte apenas para o recarregamento de XAML.
 * O estado da interface do usuário não pode ser mantido entre reimplantações, a menos que o MVVM seja usado.
 
-## <a name="known-issues"></a>Problemas Conhecidos
+## <a name="known-issues"></a>Problemas conhecidos
 
 * Somente com suporte no Visual Studio.
 * A vinculação deve ser definida para **não vincular** ou **vincular somente SDKs de estrutura** 
@@ -121,9 +124,9 @@ No. Na verdade, você pode até mesmo iniciar todos os seus destinos de aplicati
 * Os elementos que contêm AutomationId podem causar uma falha de recarregamento.
 * Editar XAML durante a depuração UWP pode causar uma falha de tempo de execução. Solução alternativa: use **Iniciar sem depuração (Ctrl + F5)** em vez de **Iniciar Depuração (F5)** .
 
-## <a name="troubleshooting"></a>Solução de problemas
+## <a name="troubleshooting"></a>solução de problemas
 
-### <a name="error-codes"></a>Códigos de erro
+### <a name="error-codes"></a>Códigos do Erro
 
 * **XLR001**: *o projeto atual referencia ' Xamarin. LiveReload ' versão do pacote NUGET ' [Version] ', mas a extensão de recarregamento do Xamarin Live requer a versão ' [Version] '.*
 
@@ -160,7 +163,7 @@ Se você tiver uma versão prévia mais antiga e tiver problemas para desinstal�
 1. Exclua a pasta **C:\Program Files (x86) \Microsoft Visual Studio\Preview\Enterprise\Common7\IDE\Extensions\Xamarin\LiveReload** (Observação: substitua "Enterprise" pela edição instalada e "Preview" por "2017" se você instalou em um vs estável)
 2. Abra um **prompt de comando do desenvolvedor** para o Visual Studio e execute `devenv /updateconfiguration`. 
 
-## <a name="tips--tricks"></a>Dicas e truques
+## <a name="tips--tricks"></a>Dicas & truques
 
 * Desde que as configurações de recarga ao vivo não sejam alteradas (incluindo as chaves de criptografia, como se você desativar a **geração automática de chaves de criptografia**) e criar a partir do mesmo computador, não será necessário compilar e implantar o aplicativo após a implantação inicial, a menos que você altere o código ou as dependências. Você pode simplesmente iniciar um aplicativo implantado anteriormente e ele se conectará ao último host usado.
 

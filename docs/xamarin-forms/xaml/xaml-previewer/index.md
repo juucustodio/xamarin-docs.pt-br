@@ -7,13 +7,13 @@ ms.assetid: 84769ff1-72fd-4c44-8251-dd6d5bf8c7b2
 ms.technology: xamarin-forms
 author: maddyleger1
 ms.author: maleger
-ms.date: 02/04/2019
-ms.openlocfilehash: b287d523101bb8ca7faca8ea95ee898ccf9c0bb1
-ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+ms.date: 03/16/2020
+ms.openlocfilehash: 465783c0771b666a276d18f47cf5d3d458d52933
+ms.sourcegitcommit: 8df67f0d76ff762b517d27b8d4c217d3a3379a18
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79305314"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79423922"
 ---
 # <a name="xaml-previewer-for-xamarinforms"></a>Visualizar XAML para Xamarin. Forms
 
@@ -29,11 +29,11 @@ O visualizador XAML mostra como sua página XAML do Xamarin. Forms será exibida
 
 ### <a name="visual-studio-2019"></a>Visual Studio 2019
 
-Você pode abrir o visualizador XAML clicando nas setas no painel exibição de divisão. Se você quiser alterar o comportamento padrão de exibição de divisão, use as **ferramentas > opções > caixa de diálogo visualização do Xamarin > Forms** . Nesta caixa de diálogo, você pode selecionar a exibição de documento padrão e a orientação de divisão.
+Você pode abrir o visualizador XAML clicando nas setas no painel exibição de divisão. Se você quiser alterar o comportamento padrão de exibição de divisão, use as **ferramentas > opções > o xamarin > xamarin. Forms XAML Visualizer** . Nesta caixa de diálogo, você pode selecionar a exibição de documento padrão e a orientação de divisão.
 
 [![Opções de visualização do Xamarin. Forms no Visual Studio](xaml-previewer-images/xamlp-options-vs-sm.png "Opções de visualização do Xamarin. Forms no Visual Studio")](xaml-previewer-images/xamlp-options-vs-lg.png#lightbox)
 
-Quando você abrir um arquivo XAML, o editor será aberto de tamanho completo ou ao lado do previsor, com base nas configurações selecionadas na caixa de diálogo **ferramentas > opções > Xamarin > Forms de visualização** . No entanto, a divisão pode ser alterada para cada arquivo na janela do editor.
+Quando você abrir um arquivo XAML, o editor será aberto de tamanho completo ou ao lado do previsor, com base nas configurações selecionadas na caixa de diálogo **ferramentas > > xamarin > xamarin. Forms XAML do modo de exibição** . No entanto, a divisão pode ser alterada para cada arquivo na janela do editor.
 
 #### <a name="xaml-preview-controls"></a>Controles de visualização XAML
 
@@ -44,6 +44,10 @@ Escolha se você deseja ver seu código, o visualizador XAML ou ambos selecionan
 Você pode alterar se a tela é dividida vertical ou horizontalmente ou recolher um painel completamente:
 
 [![Controles de orientação do painel de visualização do Xamarin. Forms no Visual Studio](xaml-previewer-images/xamlp-controls-orientation-vs-sm.png "Controles de orientação do painel de visualização do Xamarin. Forms no Visual Studio")](xaml-previewer-images/xamlp-controls-orientation-vs-lg.png#lightbox)
+
+#### <a name="enable-or-disable-the-xaml-previewer"></a>Habilitar ou desabilitar o previsor XAML
+
+Você pode desativar a visualização de XAML na caixa de diálogo **ferramentas > > xamarin > xamarin. Forms XAML de visualização** , selecionando **editor XML padrão** como seu **editor XAML padrão**. Isso também desativa a estrutura de tópicos do documento, o painel de propriedades e a caixa de ferramentas XAML. Para ativar o Visualizar XAML e essas ferramentas novamente, altere o **editor XAML padrão** para o **Xamarin. Forms previsor**.
 
 ::: zone-end
 ::: zone pivot="macos"
@@ -56,6 +60,10 @@ O botão **Visualizar** é exibido no editor quando você abre uma página XAML.
 
 > [!NOTE]
 > Em versões mais antigas do Visual Studio para Mac, o botão **Visualizar** estava localizado no canto superior direito da janela.
+
+#### <a name="enable-or-disable-the-xaml-previewer"></a>Habilitar ou desabilitar o previsor XAML
+
+Você pode desativar o Visualizar XAML no **Visual Studio > preferências > editor de texto >** caixa de diálogo XAML selecionando o **editor XML padrão** como seu **editor XAML padrão**. Isso também desativa a estrutura de tópicos do documento, o painel de propriedades e a caixa de ferramentas XAML. Para ativar o Visualizar XAML e essas ferramentas novamente, altere o **editor XAML padrão** para o **Xamarin. Forms previsor**.
 
 ::: zone-end
 
@@ -87,7 +95,7 @@ if (!DesignMode.IsDesignModeEnabled)
 
 Essa propriedade será útil se você inicializar uma biblioteca em seu construtor de página que não seja executada em tempo de design.
 
-## <a name="troubleshooting"></a>Solução de problemas
+## <a name="troubleshooting"></a>solução de problemas
 
 Verifique os problemas abaixo e os [fóruns do Xamarin](https://forums.xamarin.com/categories/xamarin-forms), se o previsor não estiver funcionando.
 
