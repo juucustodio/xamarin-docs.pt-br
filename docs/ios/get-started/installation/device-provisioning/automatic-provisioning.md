@@ -8,22 +8,24 @@ author: davidortinau
 ms.author: daortin
 ms.custom: video
 ms.date: 03/05/2020
-ms.openlocfilehash: f0612ca53bc54cf4b15982b7743c64b1997a4455
-ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.openlocfilehash: 069c40b74876bea1d3a0c8fca23b3d90c4b91635
+ms.sourcegitcommit: 997f7b6a1a1bc50b98c3ca5bbc75d6875ba2ae9a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "79031074"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79510673"
 ---
 # <a name="automatic-provisioning-for-xamarinios"></a>Provisionamento automático para o Xamarin.iOS
 
 _Depois que o Xamarin. iOS tiver sido instalado com êxito, a próxima etapa no desenvolvimento do iOS será provisionar seu dispositivo iOS. Este guia explora o uso do provisionamento automático para solicitar perfis e certificados de desenvolvimento._
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 O provisionamento automático está disponível em Visual Studio para Mac, Visual Studio 2019 e Visual Studio 2017 (versão 15,7 e superior). 
 
-Você também deve ter uma conta de desenvolvedor da Apple paga para usar esse recurso. Mais informações sobre as contas de desenvolvedor da Apple estão disponíveis no guia de [provisionamento de dispositivos](~/ios/get-started/installation/device-provisioning/index.md) .
+> [!NOTE]
+> Você também deve ter uma conta de desenvolvedor da Apple paga para usar esse recurso. Mais informações sobre as contas de desenvolvedor da Apple estão disponíveis no guia de [provisionamento de dispositivos](~/ios/get-started/installation/device-provisioning/index.md) .
+> Se você não tiver uma conta de desenvolvedor da Apple paga, consulte o guia [provisionamento gratuito para Xamarin. iOS] (~/Ios/Get-Started/Installation/Device-Provisioning/Free-Provisioning.MD).
 
 > [!NOTE]
 > Antes de começar, certifique-se de primeiro aceitar todos os contratos de licença no [portal do desenvolvedor da Apple](https://developer.apple.com/account/) ou no [App Store Connect](https://appstoreconnect.apple.com/).
@@ -101,18 +103,18 @@ Em alguns casos, os direitos do aplicativo exigem uma ID do Aplicativo explícit
 - Multipath
 - {1&gt;NFC&lt;1}
 - VPN pessoal
-- Notificações por Push
+- Notificações por push
 - Configuração de acessório sem fio
 
 Se seu aplicativo usar um desses direitos, o Visual Studio tentará criar uma ID de aplicativo explícita (em vez de uma curinga).
 
-## <a name="troubleshoot"></a>Solucionar problemas 
+## <a name="troubleshoot"></a>Solução de problemas 
 
 - Pode levar várias horas para que uma nova conta de desenvolvedor da Apple seja aprovada. Você não poderá habilitar o provisionamento automático até que a conta tenha sido aprovada.
 - Se o processo de provisionamento automático falhar com a mensagem de erro `Authentication Service Is Unavailable`, entre na [App Store Connect](https://appstoreconnect.apple.com/) ou [appleid.Apple.com](https://appleid.apple.com) para verificar se você aceitou os contratos de serviço mais recentes.
 - Se você receber a mensagem de erro `Authentication Error: Xcode 7.3 or later is required to continue developing with your Apple ID.`, verifique se a equipe selecionada tem uma associação paga ativa ao programa de desenvolvedor da Apple. Para usar uma conta de desenvolvedor da Apple paga, confira o guia de [provisionamento gratuito para aplicativos Xamarin. Ios](~/ios/get-started/installation/device-provisioning/free-provisioning.md) .
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Provisionamento gratuito](~/ios/get-started/installation/device-provisioning/free-provisioning.md)
 - [Distribuição de aplicativo](~/ios/deploy-test/app-distribution/index.md)
