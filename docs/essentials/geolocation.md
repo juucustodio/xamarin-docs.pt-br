@@ -5,12 +5,12 @@ ms.assetid: 8F66092C-13F0-4FEE-8AA5-901D5F79B357
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 03/13/2019
-ms.openlocfilehash: 2ee4683bce02e95c52235afa823be21b89863208
-ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+ms.openlocfilehash: 840aadcafea88ef08f53e16f535439be0862fee9
+ms.sourcegitcommit: 6c60914b380ff679bbffd7790edd4d5e18005d0a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79304320"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80070352"
 ---
 # <a name="xamarinessentials-geolocation"></a>Xamarin.Essentials: Geolocalização
 
@@ -146,9 +146,9 @@ catch (Exception ex)
 
 A tabela a seguir descreve a precisão por plataforma:
 
-### <a name="lowest"></a>Mais Baixo
+### <a name="lowest"></a>O menor
 
-| Platform | Distância (em metros) |
+| Plataforma | Distância (em metros) |
 | --- | --- |
 | Android | 500 |
 | iOS | 3000 |
@@ -156,7 +156,7 @@ A tabela a seguir descreve a precisão por plataforma:
 
 ### <a name="low"></a>Baixo
 
-| Platform | Distância (em metros) |
+| Plataforma | Distância (em metros) |
 | --- | --- |
 | Android | 500 |
 | iOS | 1000 |
@@ -164,7 +164,7 @@ A tabela a seguir descreve a precisão por plataforma:
 
 ### <a name="medium-default"></a>Médio (padrão)
 
-| Platform | Distância (em metros) |
+| Plataforma | Distância (em metros) |
 | --- | --- |
 | Android | 100–500 |
 | iOS | 100 |
@@ -172,17 +172,17 @@ A tabela a seguir descreve a precisão por plataforma:
 
 ### <a name="high"></a>Alta
 
-| Platform | Distância (em metros) |
+| Plataforma | Distância (em metros) |
 | --- | --- |
-| Android | 0 - 100 |
+| Android | 0–100 |
 | iOS | 10 |
 | UWP | <= 10 |
 
 ### <a name="best"></a>Melhor
 
-| Platform | Distância (em metros) |
+| Plataforma | Distância (em metros) |
 | --- | --- |
-| Android | 0 - 100 |
+| Android | 0–100 |
 | iOS | ~0 |
 | UWP | <= 10 |
 
@@ -208,7 +208,7 @@ if (location != null)
 
 As classes [`Location`](xref:Xamarin.Essentials.Location) e [`LocationExtensions`](xref:Xamarin.Essentials.LocationExtensions) definem métodos `CalculateDistance` que permitem o cálculo da distância entre duas localizações geográficas. Essa distância calculada não considera estradas ou outros caminhos e é simplesmente a distância mais curta entre os dois pontos ao longo da superfície da Terra, também conhecido como _ortodromia_ ou, coloquialmente, a distância "em linha reta".
 
-Veja um exemplo:
+Aqui está um exemplo:
 
 ```csharp
 Location boston = new Location(42.358056, -71.063611);
@@ -217,6 +217,24 @@ double miles = Location.CalculateDistance(boston, sanFrancisco, DistanceUnits.Mi
 ```
 
 O construtor `Location` tem argumentos de latitude e longitude, nessa ordem. Os valores de latitude positiva estão ao norte do Equador, e os valores de longitude positiva estão a leste do Meridiano primário. Use o argumento final para `CalculateDistance` a fim de especificar milhas ou quilômetros. A classe `UnitConverters` também define os métodos `KilometersToMiles` e `MilesToKilometers` para conversão entre as duas unidades.
+
+## <a name="platform-differences"></a>Diferenças entre plataformas
+
+A altitude é calculada de forma diferente em cada plataforma.
+
+# <a name="android"></a>[Android](#tab/android)
+
+No Android, [altitude](https://developer.android.com/reference/android/location/Location#getAltitude()), se disponível, é retornado em medidores acima da referência WGS 84 elipsoide. Se esse local não tiver uma altitude, 0,0 será retornado.
+
+# <a name="ios"></a>[iOS](#tab/ios)
+
+No iOS, a [altitude](https://developer.apple.com/documentation/corelocation/cllocation/1423820-altitude) é medida em metros. Os valores positivos indicam altitudes acima do nível do mar, enquanto os valores negativos indicam altitudes abaixo do nível do Sea.
+
+# <a name="uwp"></a>[UWP](#tab/uwp)
+
+No UWP, a altitude é retornada em metros. Consulte a documentação do [AltitudeReferenceSystem](https://docs.microsoft.com/uwp/api/windows.devices.geolocation.geopoint.altitudereferencesystem#Windows_Devices_Geolocation_Geopoint_AltitudeReferenceSystem) para obter mais informações.
+
+-----
 
 ## <a name="api"></a>API
 

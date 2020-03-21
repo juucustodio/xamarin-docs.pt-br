@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/16/2020
-ms.openlocfilehash: c321884039674d3abb1a4b510ddfe2c062c28211
-ms.sourcegitcommit: 10b4d7952d78f20f753372c53af6feb16918555c
+ms.openlocfilehash: 55fda0be2e260c5aa4a34ab2dcc1ac3cac33b92a
+ms.sourcegitcommit: 6c60914b380ff679bbffd7790edd4d5e18005d0a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "78292788"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80070286"
 ---
 # <a name="tabbedpage-translucent-tab-bar-on-ios"></a>Barra de guias translúcida TabbedPage no iOS
 
@@ -41,7 +41,7 @@ On<iOS>().SetTranslucencyMode(TranslucencyMode.Opaque);
 O método `TabbedPage.On<iOS>` especifica que essa plataforma específica será executada somente no iOS. O método `TabbedPage.SetTranslucencyMode`, no namespace [`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) , é usado para definir o modo Translucency da barra de guias em uma [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) especificando um dos seguintes valores de enumeração `TranslucencyMode`:
 
 - `Default`, que define a barra de guias para seu modo de Translucency padrão. Este é o valor padrão da propriedade `TabbedPage.TranslucencyMode`.
-- `Transparent`, que define a barra de guias como translúcida.
+- `Translucent`, que define a barra de guias como translúcida.
 - `Opaque`, que define a barra de guias como opaca.
 
 Além disso, o método `GetTranslucencyMode` pode ser usado para recuperar o valor atual da enumeração `TranslucencyMode` que é aplicada ao [`TabbedPage`](xref:Xamarin.Forms.TabbedPage).

@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidortinau
 ms.author: daortin
 ms.date: 02/08/2020
-ms.openlocfilehash: eb4d3d80fa416f7bb94f3137a0925a9a9807cb10
-ms.sourcegitcommit: 524fc148bad17272bda83c50775771daa45bfd7e
-ms.translationtype: HT
+ms.openlocfilehash: d8a57ac8688a0113ef267ea25fb54cbaaf562957
+ms.sourcegitcommit: 6c60914b380ff679bbffd7790edd4d5e18005d0a
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77480607"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80070380"
 ---
 # <a name="xamarinforms-dual-screen-design-patterns"></a>Padrões de design de tela dupla do Xamarin.Forms
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://github.com/xamarin/xamarin-forms-samples/tree/pre-release/UserInterface/DualScreenDemos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/DualScreenDemos)
 
 Este guia apresenta nossos padrões de design recomendados para dispositivos de tela dupla com código e amostras para ajudar você a criar interfaces que fornecem experiências de usuário envolventes e úteis.
 
@@ -270,5 +270,5 @@ O padrão complementar demonstra como é possível usar a segunda tela para forn
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Exemplos de Tela Dupla (GitHub)](https://github.com/xamarin/xamarin-forms-samples/tree/pre-release/UserInterface/DualScreenDemos)
+- [Exemplos de Tela Dupla (GitHub)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/DualScreenDemos)
 - [Criar aplicativos para dispositivos de tela dupla](index.md)

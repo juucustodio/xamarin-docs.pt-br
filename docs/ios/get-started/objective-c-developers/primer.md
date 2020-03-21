@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/05/2017
-ms.openlocfilehash: 6b2753b0f1a7389d62866e5c8003b439a283e5b5
-ms.sourcegitcommit: 1c87135a47780f34102952d4b140850b4f08b075
+ms.openlocfilehash: 56ee74e7a276edc960d2251bd33ccb90c1fa3cb4
+ms.sourcegitcommit: 6c60914b380ff679bbffd7790edd4d5e18005d0a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74536511"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80070375"
 ---
 # <a name="c-primer-for-objective-c-developers"></a>Manual de introdução a C# para Desenvolvedores de Objective-C
 
@@ -85,7 +85,7 @@ Sendo um superconjunto de C, o Objective-C usa cabeçalhos para declarações p�
 Por exemplo, o código a seguir inclui o namespace `UIKit`, tornando todas as classes no namespace disponíveis para a implementação:
 
 ```csharp
-using UIKit
+using UIKit;
 namespace MyAppNamespace
 {
     // implementation of classes
@@ -94,7 +94,7 @@ namespace MyAppNamespace
 
 Além disso, a palavra-chave de namespace no código acima define o namespace usado para o próprio arquivo de implementação. Se vários arquivos de implementação compartilharem o mesmo namespace, não será necessário incluir o namespace em uma diretiva using também, pois isso estará implícito.
 
-### <a name="properties"></a>{1&gt;Propriedades&lt;1}
+### <a name="properties"></a>Propriedades
 
 Objective-C e C# têm o conceito de propriedades para fornecer uma abstração de alto nível em torno de métodos de acessador. Em Objective-C, a diretiva de compilador @property é usada para gerar de forma eficaz os métodos acessadores. Por outro lado, C# inclui suporte para propriedades na própria linguagem. Uma propriedade de C# pode ser implementada usando um estilo mais longo que acessa um campo de suporte ou usando uma sintaxe de propriedade automática menor, conforme mostrado nos seguintes exemplos:
 
