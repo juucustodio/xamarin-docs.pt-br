@@ -6,13 +6,13 @@ ms.assetid: 938E85C8-521D-43B9-92CB-D591A06D98A6
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 09/27/2019
-ms.openlocfilehash: fa92409b33717e528c3cfb83a24148c698836594
-ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
+ms.date: 03/23/2020
+ms.openlocfilehash: 9e3e602eda0d2fa78dd25905a2b6ccf3ce5a744d
+ms.sourcegitcommit: d83c6af42ed26947aa7c0ecfce00b9ef60f33319
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72697137"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80247594"
 ---
 # <a name="xamarinforms-data-binding"></a>Associação de dados do Xamarin.Forms
 
@@ -28,7 +28,7 @@ Para que esse trabalho seja realizado com êxito, o programa deve ser notificado
 
 ## <a name="the-data-binding-solution"></a>A solução de associação de dados
 
-A associação de dados automatiza esse trabalho e torna os manipuladores de eventos desnecessários. (No entanto, os eventos ainda são necessários, pois a infraestrutura de vinculação de dados os usa.) As associações de dados podem ser implementadas no código ou em XAML, mas são muito mais comuns em XAML, em que ajudam a reduzir o tamanho do arquivo code-behind. Substituindo o código procedural em manipuladores de eventos por marcação ou código declarativo, o aplicativo é simplificado e esclarecido.
+A associação de dados automatiza esse trabalho e torna os manipuladores de eventos desnecessários. Associações de dados podem ser implementadas no código ou em XAML, mas são muito mais comuns em XAML, em que elas ajudam a reduzir o tamanho do arquivo code-behind. Substituindo o código procedural em manipuladores de eventos por marcação ou código declarativo, o aplicativo é simplificado e esclarecido.
 
 Um dos dois objetos envolvidos em uma associação de dados quase sempre é um elemento derivado de `View` e que faz parte da interface visual de uma página. O outro objeto é uma das seguintes opções:
 
@@ -39,39 +39,39 @@ Em programas de demonstração, tais como aqueles na amostra [**DataBindingDemos
 
 Associações de dados são exploradas na seguinte série de artigos:
 
-## <a name="basic-bindingsbasic-bindingsmd"></a>[Associações básicas](basic-bindings.md)
+## <a name="basic-bindings"></a>[Associações básicas](basic-bindings.md)
 
 Aprenda a diferença entre a origem e o destino da associação de dados e veja associações de dados simples em código e em XAML.
 
-## <a name="binding-modebinding-modemd"></a>[Modo de associação](binding-mode.md)
+## <a name="binding-mode"></a>[Modo de associação](binding-mode.md)
 
 Descubra como o modo de associação pode controlar o fluxo de dados entre os dois objetos.
 
-## <a name="string-formattingstring-formattingmd"></a>[Formação de cadeia de caracteres](string-formatting.md)
+## <a name="string-formatting"></a>[Formação de cadeia de caracteres](string-formatting.md)
 
 Use uma associação de dados para formatar e exibir objetos como cadeias de caracteres.
 
-## <a name="binding-pathbinding-pathmd"></a>[Caminho de associação](binding-path.md)
+## <a name="binding-path"></a>[Caminho de associação](binding-path.md)
 
 Aprofunde-se na propriedade `Path` da associação de dados para acessar subpropriedades e os membros da coleção.
 
-## <a name="binding-value-convertersconvertersmd"></a>[Conversores de associação de valor](converters.md)
+## <a name="binding-value-converters"></a>[Conversores de associação de valor](converters.md)
 
 Use conversores de valor de associação para alterar os valores dentro da associação de dados.
 
-## <a name="relative-bindingsrelative-bindingsmd"></a>[Associações relativas](relative-bindings.md)
+## <a name="relative-bindings"></a>[Associações relativas](relative-bindings.md)
 
 Use associações relativas para definir a origem da associação em relação à posição do destino da associação.
 
-## <a name="binding-fallbacksbinding-fallbacksmd"></a>[Fallbacks de associação](binding-fallbacks.md)
+## <a name="binding-fallbacks"></a>[Fallbacks de associação](binding-fallbacks.md)
 
 Torne as associações de dados mais robustas definindo valores de fallback que deverão ser usados se o processo de associação falhar.
 
-## <a name="the-command-interfacecommandingmd"></a>[A interface de comando](commanding.md)
+## <a name="the-command-interface"></a>[A interface de comando](commanding.md)
 
 Implemente a propriedade `Command` com associações de dados.
 
-## <a name="compiled-bindingscompiled-bindingsmd"></a>[Associações compiladas](compiled-bindings.md)
+## <a name="compiled-bindings"></a>[Associações compiladas](compiled-bindings.md)
 
 Use associações compiladas para melhorar o desempenho de associação de dados.
 

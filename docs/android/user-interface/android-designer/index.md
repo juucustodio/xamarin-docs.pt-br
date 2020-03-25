@@ -7,18 +7,18 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 07/25/2018
-ms.openlocfilehash: 8793dafe5bc44999cb884621d0c41956674b05e0
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: bd49e498a3d54dea883292dcca42b0b4eaa6b9a2
+ms.sourcegitcommit: d83c6af42ed26947aa7c0ecfce00b9ef60f33319
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73029402"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80247568"
 ---
 # <a name="xamarinandroid-designer"></a>Xamarin. Designer Android
 
 _Este artigo descreve os recursos do Xamarin. Designer Android. Ele explica as noções básicas do designer, demonstrando como usar o designer para dispor visualmente de widgets e editar propriedades. Ele também ilustra como usar o designer para trabalhar com interfaces do usuário e recursos em várias configurações, como temas, linguagens e configurações de dispositivo, bem como design para modos de exibição alternativos, como paisagem e retrato._
 
-## <a name="overview"></a>Visão Geral
+## <a name="overview"></a>Visão geral
 
 O Xamarin. Android dá suporte a um estilo declarativo de design de interface do usuário com base em arquivos XML, bem como a criação programática da interface do usuário no código.
 Ao usar a abordagem declarativa, os arquivos XML podem ser editados manualmente ou modificados usando o Xamarin. Designer Android. O uso de um designer permite comentários imediatos durante a criação da interface do usuário, acelera o desenvolvimento e torna o processo de criação da interface do usuário menos trabalhoso.
@@ -46,6 +46,8 @@ Este artigo pesquisa os diversos recursos do Xamarin. Designer Android. Ele expl
  [Exibições de layout alternativos](~/android/user-interface/android-designer/alternative-layout-views.md)
 
  [Recursos de design de material](~/android/user-interface/android-designer/material-design-features.md)
+
+ [Diagnóstico de layout do Android](~/android/user-interface/android-designer/diagnostics.md)
 
 ## <a name="summary"></a>Resumo
 

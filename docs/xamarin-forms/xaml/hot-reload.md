@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: maddyleger1
 ms.author: maleger
 ms.date: 03/14/2020
-ms.openlocfilehash: 225b7dc7dc639031b3198a8fb9e7fe9fb9d7ee7f
-ms.sourcegitcommit: 8df67f0d76ff762b517d27b8d4c217d3a3379a18
+ms.openlocfilehash: a6cb5a0e3573ebf998bb2f81c08ff63c81678b54
+ms.sourcegitcommit: ec112800a76089ab1db66fe24b8bbcc510e067b4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79423870"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80159802"
 ---
 # <a name="xaml-hot-reload-for-xamarinforms"></a>Hot recarregamento de XAML para Xamarin. Forms
 
@@ -59,7 +59,7 @@ O Hot recarregamento de XAML dá suporte à depuração simultânea no Visual St
 
 ## <a name="known-limitations"></a>Limitações conhecidas
 
-* Outros destinos do Xamarin. Forms, como UWP e MacOS, ainda *não* têm suporte. Você pode acompanhar o progresso do suporte a UWP [aqui](https://developercommunity.visualstudio.com/idea/661682/xaml-hot-reload-for-xamarinforms-on-uwp.html).
+* Outros destinos do Xamarin. Forms, como UWP e macOS, ainda *não* têm suporte. Você pode acompanhar o progresso do suporte a UWP [aqui](https://developercommunity.visualstudio.com/idea/661682/xaml-hot-reload-for-xamarinforms-on-uwp.html).
 * Você não pode adicionar, remover ou renomear arquivos ou pacotes NuGet durante uma sessão de recarga ativa de XAML. Se você adicionar ou remover um arquivo ou pacote NuGet, recompile e reimplante seu aplicativo para continuar usando o Hot recarregamento de XAML.
 * Defina seu vinculador para **não vincular** ou **vincular nenhum** para obter a melhor experiência. A configuração do **SDK do link somente** funciona na maior parte do tempo, mas pode falhar em determinados casos. As configurações do vinculador podem ser encontradas nas opções de Build do Android e iOS.
 * A depuração em um iPhone físico exige que o intérprete use o Hot recarregamento de XAML. Para fazer isso, abra as configurações do projeto, selecione a guia Build do iOS e certifique-se **de habilitar a configuração do intérprete mono** está habilitada. Talvez seja necessário alterar a opção de **plataforma** na parte superior da página de propriedades para **iPhone**.
