@@ -285,7 +285,7 @@ A página de **composição do Brick-Wall** mostra um exemplo de uma tarefa de c
 
 Na preparação para a composição, um _fosco_ correspondente foi criado, que é outro bitmap que é preto onde você deseja que a imagem seja exibida e transparente caso contrário. Esse arquivo é denominado **SeatedMonkeyMatte. png** e está entre os recursos na pasta de **mídia** no exemplo de [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) :
 
-![Macaco encaixado fosco](porter-duff-images/SeatedMonkeyMatte.png "Macaco encaixado fosco")
+![Macaco sentado fosco](porter-duff-images/SeatedMonkeyMatte.png "Macaco sentado fosco")
 
 Esse _não_ é um fosco criado de especialista. De maneira ideal, fosco deve incluir pixels parcialmente transparentes em torno da borda dos pixels pretos, e esse fosco não.
 
