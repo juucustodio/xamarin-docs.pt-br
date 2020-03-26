@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2018
-ms.openlocfilehash: 8c21895918e4d4ac9a82804d4b140fbf7bf798fe
-ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+ms.openlocfilehash: c9c6816115d89212ea720f027d51af6c990cfe8d
+ms.sourcegitcommit: 7fd88ada5b44a62390fe1a73ef08014e4d236a2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79303921"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80261304"
 ---
 # <a name="preparing-an-application-for-release"></a>Preparar um aplicativo para lançamento
 
@@ -27,7 +27,7 @@ Use as seguintes etapas para criar o aplicativo para versão:
 
 - **[Proteja o aplicativo](#protect_app)** &ndash; impedir que usuários ou invasores depurem, violem ou façam engenharia reversa do aplicativo desabilitando a depuração, ofuscando o código gerenciado, adicionando antidebug e antiadulteração e usando a compilação nativa.
 
-- **[Definir propriedades de empacotamento](#Set_Packaging_Properties)** &ndash; Propriedades de empacotamento controlam a criação do pacote de aplicativos Android (APK). Esta etapa otimiza o APK, protege seus ativos e modula o empacotamento conforme necessário.
+- **[Definir propriedades de empacotamento](#Set_Packaging_Properties)** &ndash; Propriedades de empacotamento controlam a criação do pacote de aplicativos Android (APK). Esta etapa otimiza o APK, protege seus ativos e modula o empacotamento conforme necessário. Além disso, você pode fornecer aos usuários um pacote de aplicativos do Android que é otimizado para seus dispositivos.
 
 - **[Compilar](#Compile)** &ndash; esta etapa compila o código e os ativos para verificar se ele é criado no modo de versão.
 
@@ -268,6 +268,16 @@ Quando a opção **Habilitar Multi-Dex** é habilitada, as ferramentas de SDK do
 É possível que um aplicativo não use todos os métodos em cada biblioteca referenciada, portanto, é possível que uma ferramenta como o ProGuard (veja acima) possa remover métodos não utilizados do código. A prática recomendada será habilitar **Habilitar Multi-Dex** somente se for absolutamente necessário, ou seja, o aplicativo ainda faz referência a mais métodos Java de 65K, mesmo após usar o ProGuard.
 
 Para obter mais informações sobre Multi-Dex, consulte [Configurar aplicativos com métodos acima de 64K](https://developer.android.com/tools/building/multidex.html).
+
+### <a name="android-app-bundles"></a>Pacotes de aplicativos Android
+
+Os pacotes de aplicativo diferem do APKs, pois não podem ser implantados diretamente em um dispositivo. Em vez disso, é um formato que deve ser carregado com todos os seus códigos e recursos compilados. Depois de carregar seu pacote de aplicativo assinado, Google Play terá tudo o que precisa para criar e assinar o APKs do seu aplicativo e atendê-los para seus usuários usando a entrega dinâmica.
+
+Para habilitar o suporte para pacotes de aplicativos Android, você precisará aceitar o valor `bundle` da propriedade **formato de pacote do Android** em suas opções de projeto do Android. Antes de fazer isso, certifique-se de alterar seu projeto para uma configuração de `Release`, já que os pacotes de aplicativos são destinados apenas a lançamentos de versão.
+
+Agora você pode gerar um pacote de aplicativo seguindo o [fluxo de arquivo morto](#archive). Isso irá gerar um pacote de aplicativo para seu aplicativo.
+
+Para obter mais informações sobre os pacotes de aplicativos do Android, consulte [pacotes de aplicativos do Android](https://developer.android.com/guide/app-bundle/).
 
 <a name="Compile" />
 
