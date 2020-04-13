@@ -1,116 +1,116 @@
 ---
-title: Xamarin. Forms MediaElement
-description: Este artigo explica como usar o MediaElement para reproduzir vídeo e áudio em um aplicativo Xamarin. Forms.
+title: Xamarin.Forms MediaElement
+description: Este artigo explica como usar o MediaElement para reproduzir vídeo e áudio em um aplicativo Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: e65f1e56-a80d-46c7-9ff4-7ae6650a3165
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/18/2020
-ms.openlocfilehash: 76a30bfb17c8263345d781386acf9d34c01aae3b
-ms.sourcegitcommit: 5b6d3bddf7148f8bb374de5657bdedc125d72ea7
+ms.openlocfilehash: 6f6c51c428de569ceb09ed6a26cfc36881c86dc5
+ms.sourcegitcommit: b93754b220fca3d6e3d131341e3cfbe233d10f84
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78291672"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80628334"
 ---
-# <a name="xamarinforms-mediaelement"></a>Xamarin. Forms MediaElement
+# <a name="xamarinforms-mediaelement"></a>Xamarin.Forms MediaElement
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/MediaElementDemos)
+[![Baixar](~/media/shared/download.png) amostra Baixar a amostra](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-mediaelementdemos/)
 
-[`MediaElement`](xref:Xamarin.Forms.MediaElement) é uma exibição para reproduzir vídeo e áudio. A mídia com suporte da plataforma subjacente pode ser reproduzida a partir das seguintes fontes:
+[`MediaElement`](xref:Xamarin.Forms.MediaElement)é uma exibição para reproduzir vídeo e áudio. A mídia suportada pela plataforma subjacente pode ser reproduzida a partir das seguintes fontes:
 
-- A Web, usando um URI (HTTP ou HTTPS).
-- Um recurso inserido no aplicativo de plataforma, usando o esquema de URI de `ms-appx:///`.
-- Arquivos que vêm das pastas de dados locais e temporárias do aplicativo, usando o esquema URI `ms-appdata:///`.
+- A web, usando um URI (HTTP ou HTTPS).
+- Um recurso incorporado no aplicativo `ms-appx:///` da plataforma, usando o esquema URI.
+- Arquivos provenientes das pastas de dados locais e `ms-appdata:///` temporários do aplicativo, usando o esquema URI.
 - A biblioteca do dispositivo.
 
-[`MediaElement`](xref:Xamarin.Forms.MediaElement) pode usar os controles de reprodução de plataforma, que são chamados de controles de transporte. No entanto, eles são desabilitados por padrão e podem ser substituídos por seus próprios controles de transporte. As capturas de tela a seguir mostram `MediaElement` reproduzir um vídeo com os controles de transporte de plataforma:
+[`MediaElement`](xref:Xamarin.Forms.MediaElement)pode usar os controles de reprodução da plataforma, que são chamados de controles de transporte. No entanto, eles são desativados por padrão e podem ser substituídos por seus próprios controles de transporte. As capturas `MediaElement` de tela a seguir mostram a reprodução de um vídeo com os controles de transporte da plataforma:
 
-[![Captura de tela de um MediaElement executando um vídeo, no iOS e no Android](mediaelement-images/playback-controls.png "MediaElement reproduzindo um vídeo")](mediaelement-images/playback-controls-large.png#lightbox "MediaElement reproduzindo um vídeo")
+[![Captura de tela de um MediaElement reproduzindo um vídeo, no iOS e Android](mediaelement-images/playback-controls.png "MediaElement reproduzindo um vídeo")](mediaelement-images/playback-controls-large.png#lightbox "MediaElement reproduzindo um vídeo")
 
-[`MediaElement`](xref:Xamarin.Forms.MediaElement) está disponível no Xamarin. Forms 4,5. No entanto, ele está experimental e só pode ser usado adicionando a seguinte linha de código ao arquivo *app.XAML.cs* :
+[`MediaElement`](xref:Xamarin.Forms.MediaElement)está disponível em Xamarin.Forms 4.5. No entanto, atualmente é experimental e só pode ser usado adicionando a seguinte linha de código ao seu arquivo *App.xaml.cs:*
 
 ```csharp
 Device.SetFlags(new string[]{ "MediaElement_Experimental" });
 ```
 
 > [!NOTE]
-> o [`MediaElement`](xref:Xamarin.Forms.MediaElement) está disponível em Ios, Android, plataforma universal do Windows (UWP), macOS, Windows Presentation Foundation e tizen.
+> [`MediaElement`](xref:Xamarin.Forms.MediaElement)está disponível no iOS, Android, Universal Windows Platform (UWP), macOS, Windows Presentation Foundation e Tizen.
 
-[`MediaElement`](xref:Xamarin.Forms.MediaElement) define as propriedades a seguir:
+[`MediaElement`](xref:Xamarin.Forms.MediaElement)define as seguintes propriedades:
 
-- [`Aspect`](xref:Xamarin.Forms.MediaElement.Aspect), do tipo [`Aspect`](xref:Xamarin.Forms.Aspect), determina como a mídia será dimensionada para se ajustar à área de exibição. O valor padrão dessa propriedade é `AspectFit`.
-- [`AutoPlay`](xref:Xamarin.Forms.MediaElement.AutoPlay), do tipo `bool`, indica se a reprodução de mídia será iniciada automaticamente quando a propriedade [`Source`](xref:Xamarin.Forms.MediaElement.Source) for definida. O valor padrão dessa propriedade é `true`.
-- [`BufferingProgress`](xref:Xamarin.Forms.MediaElement.BufferingProgress), do tipo `double`, indica o progresso atual do buffer. O valor padrão dessa propriedade é 0,0.
-- [`CanSeek`](xref:Xamarin.Forms.MediaElement.CanSeek), do tipo `bool`, indica se a mídia pode ser reposicionada definindo o valor da propriedade [`Position`](xref:Xamarin.Forms.MediaElement.Position) . Trata-se de uma propriedade somente leitura.
-- [`CurrentState`](xref:Xamarin.Forms.MediaElement.CurrentState), do tipo [`MediaElementState`](xref:Xamarin.Forms.MediaElementState), indica o status atual do controle. Esta é uma propriedade somente leitura, cujo valor padrão é `MediaElementState.Closed`.
-- [`Duration`](xref:Xamarin.Forms.MediaElement.Duration), do tipo `TimeSpan?`, indica a duração da mídia aberta no momento. Esta é uma propriedade somente leitura cujo valor padrão é `null`.
-- [`IsLooping`](xref:Xamarin.Forms.MediaElement.IsLooping), do tipo `bool`, descreve se a fonte de mídia carregada atualmente deve retomar a reprodução do início depois de atingir seu fim. O valor padrão dessa propriedade é `false`.
-- [`KeepScreenOn`](xref:Xamarin.Forms.MediaElement.KeepScreenOn), do tipo `bool`, determina se a tela do dispositivo deve permanecer durante a reprodução de mídia. O valor padrão dessa propriedade é `false`.
-- [`Position`](xref:Xamarin.Forms.MediaElement.Position), do tipo `TimeSpan`, descreve o progresso atual por meio do tempo de reprodução da mídia. O valor padrão dessa propriedade é `TimeSpan.Zero`.
-- [`ShowsPlaybackControls`](xref:Xamarin.Forms.MediaElement.ShowsPlaybackControls), do tipo `bool`, determina se os controles de reprodução de plataformas são exibidos. O valor padrão dessa propriedade é `false`.
-- [`Source`](xref:Xamarin.Forms.MediaElement.Source), do tipo [`MediaSource`](xref:Xamarin.Forms.MediaSource), indica a origem da mídia carregada no controle.
-- [`VideoHeight`](xref:Xamarin.Forms.MediaElement.VideoHeight), do tipo `int`, indica a altura do controle. Trata-se de uma propriedade somente leitura.
-- [`VideoWidth`](xref:Xamarin.Forms.MediaElement.VideoWidth), do tipo `int`, indica a largura do controle. Trata-se de uma propriedade somente leitura.
-- [`Volume`](xref:Xamarin.Forms.MediaElement.Volume), do tipo `double`, determina o volume da mídia, que é representado em uma escala linear entre 0 e 1. Essa propriedade usa uma associação de `TwoWay` e seu valor padrão é 1.
+- [`Aspect`](xref:Xamarin.Forms.MediaElement.Aspect), do [`Aspect`](xref:Xamarin.Forms.Aspect)tipo, determina como a mídia será dimensionada para se adequar à área de exibição. O valor padrão dessa propriedade é `AspectFit`.
+- [`AutoPlay`](xref:Xamarin.Forms.MediaElement.AutoPlay), do `bool`tipo, indica se a reprodução [`Source`](xref:Xamarin.Forms.MediaElement.Source) de mídia começará automaticamente quando a propriedade estiver definida. O valor padrão dessa propriedade é `true`.
+- [`BufferingProgress`](xref:Xamarin.Forms.MediaElement.BufferingProgress), do `double`tipo, indica o progresso do buffering atual. O valor padrão desta propriedade é 0.0.
+- [`CanSeek`](xref:Xamarin.Forms.MediaElement.CanSeek), do `bool`tipo, indica se a mídia pode ser [`Position`](xref:Xamarin.Forms.MediaElement.Position) reposicionada definindo o valor da propriedade. Trata-se de uma propriedade somente leitura.
+- [`CurrentState`](xref:Xamarin.Forms.MediaElement.CurrentState), do [`MediaElementState`](xref:Xamarin.Forms.MediaElementState)tipo, indica o estado atual do controle. Esta é uma propriedade somente leitura, `MediaElementState.Closed`cujo valor padrão é .
+- [`Duration`](xref:Xamarin.Forms.MediaElement.Duration), do `TimeSpan?`tipo, indica a duração da mídia aberta atualmente. Esta é uma propriedade somente leitura `null`cujo valor padrão é .
+- [`IsLooping`](xref:Xamarin.Forms.MediaElement.IsLooping), do `bool`tipo , descreve se a fonte de mídia atualmente carregada deve retomar a reprodução desde o início após chegar ao seu fim. O valor padrão dessa propriedade é `false`.
+- [`KeepScreenOn`](xref:Xamarin.Forms.MediaElement.KeepScreenOn), do `bool`tipo, determina se a tela do dispositivo deve permanecer acesa durante a reprodução da mídia. O valor padrão dessa propriedade é `false`.
+- [`Position`](xref:Xamarin.Forms.MediaElement.Position), do `TimeSpan`tipo, descreve o progresso atual através do tempo de reprodução da mídia. O valor padrão dessa propriedade é `TimeSpan.Zero`.
+- [`ShowsPlaybackControls`](xref:Xamarin.Forms.MediaElement.ShowsPlaybackControls), do `bool`tipo, determina se os controles de reprodução das plataformas são exibidos. O valor padrão dessa propriedade é `false`.
+- [`Source`](xref:Xamarin.Forms.MediaElement.Source), do [`MediaSource`](xref:Xamarin.Forms.MediaSource)tipo, indica a fonte da mídia carregada no controle.
+- [`VideoHeight`](xref:Xamarin.Forms.MediaElement.VideoHeight), do `int`tipo, indica a altura do controle. Trata-se de uma propriedade somente leitura.
+- [`VideoWidth`](xref:Xamarin.Forms.MediaElement.VideoWidth), do `int`tipo, indica a largura do controle. Trata-se de uma propriedade somente leitura.
+- [`Volume`](xref:Xamarin.Forms.MediaElement.Volume), do `double`tipo, determina o volume da mídia, que é representada em uma escala linear entre 0 e 1. Esta propriedade `TwoWay` usa uma vinculação, e seu valor padrão é 1.
 
-Essas propriedades, com exceção da propriedade `CanSeek`, são apoiadas por objetos [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) , o que significa que eles podem ser destinos de associações de dados e estilizados.
+Essas propriedades, com exceção da propriedade, são apoiadas por `CanSeek` [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objetos, o que significa que podem ser alvos de vinculações de dados e estilizados.
 
-A classe [`MediaElement`](xref:Xamarin.Forms.MediaElement) também define quatro eventos:
+A [`MediaElement`](xref:Xamarin.Forms.MediaElement) classe também define quatro eventos:
 
-- [`MediaOpened`](xref:Xamarin.Forms.MediaElement.MediaOpened) é acionado quando o fluxo de mídia é validado e aberto.
-- [`MediaEnded`](xref:Xamarin.Forms.MediaElement.MediaEnded) é acionado quando a `MediaElement` termina de reproduzir sua mídia.
-- [`MediaFailed`](xref:Xamarin.Forms.MediaElement.MediaFailed) é acionado quando há um erro associado à origem da mídia.
-- [`SeekCompleted`](xref:Xamarin.Forms.MediaElement.SeekCompleted) é acionado quando o ponto de busca de uma operação de busca solicitada está pronto para reprodução.
+- [`MediaOpened`](xref:Xamarin.Forms.MediaElement.MediaOpened)é disparado quando o fluxo de mídia foi validado e aberto.
+- [`MediaEnded`](xref:Xamarin.Forms.MediaElement.MediaEnded)é demitido `MediaElement` quando o acabamento saem jogando sua mídia.
+- [`MediaFailed`](xref:Xamarin.Forms.MediaElement.MediaFailed)é disparado quando há um erro associado com a fonte de mídia.
+- [`SeekCompleted`](xref:Xamarin.Forms.MediaElement.SeekCompleted)é acionado quando o ponto de busca de uma operação de busca solicitada está pronto para reprodução.
 
-Além disso, [`MediaElement`](xref:Xamarin.Forms.MediaElement) inclui os métodos [`Play`](xref:Xamarin.Forms.MediaElement.Play), [`Pause`](xref:Xamarin.Forms.MediaElement.Pause)e [`Stop`](xref:Xamarin.Forms.MediaElement.Stop) .
+Além [`MediaElement`](xref:Xamarin.Forms.MediaElement) disso, [`Play`](xref:Xamarin.Forms.MediaElement.Play)inclui [`Pause`](xref:Xamarin.Forms.MediaElement.Pause), [`Stop`](xref:Xamarin.Forms.MediaElement.Stop) e métodos.
 
-Para obter informações sobre os formatos de mídia com suporte no Android, consulte [formatos de mídia com suporte](https://developer.android.com/guide/topics/media/media-formats) no Developer.Android.com. Para obter informações sobre os formatos de mídia com suporte no Plataforma Universal do Windows (UWP), consulte [codecs com suporte](/windows/uwp/audio-video-camera/supported-codecs).
+Para obter informações sobre formatos de mídia suportados no Android, consulte [formatos de mídia suportados](https://developer.android.com/guide/topics/media/media-formats) em developer.android.com. Para obter informações sobre formatos de mídia suportados na Universal Windows Platform (UWP), consulte [codecs suportados](/windows/uwp/audio-video-camera/supported-codecs).
 
 ## <a name="play-remote-media"></a>Reproduzir mídia remota
 
-Um [`MediaElement`](xref:Xamarin.Forms.MediaElement) pode reproduzir arquivos de mídia remota usando os esquemas de URI http e HTTPS. Isso é feito definindo a propriedade [`Source`](xref:Xamarin.Forms.MediaElement.Source) como o URI do arquivo de mídia:
+A [`MediaElement`](xref:Xamarin.Forms.MediaElement) pode reproduzir arquivos de mídia remota usando os esquemas HTTP e HTTPS URI. Isso é feito [`Source`](xref:Xamarin.Forms.MediaElement.Source) definindo a propriedade para o URI do arquivo de mídia:
 
 ```xaml
 <MediaElement Source="https://sec.ch9.ms/ch9/5d93/a1eab4bf-3288-4faf-81c4-294402a85d93/XamarinShow_mid.mp4"
               ShowsPlaybackControls="True" />
 ```
 
-Por padrão, a mídia definida pela propriedade [`Source`](xref:Xamarin.Forms.MediaElement.Source) é reproduzida imediatamente após a mídia ser aberta. Para suprimir a reprodução automática de mídia, defina a propriedade [`AutoPlay`](xref:Xamarin.Forms.MediaElement.AutoPlay) como `false`.
+Por padrão, a mídia definida [`Source`](xref:Xamarin.Forms.MediaElement.Source) pela propriedade é reproduzido imediatamente após a mídia ser aberta. Para suprimir a reprodução [`AutoPlay`](xref:Xamarin.Forms.MediaElement.AutoPlay) automática `false`de mídia, defina a propriedade como .
 
-Os controles de reprodução de mídia são desabilitados por padrão e são habilitados pela definição da propriedade [`ShowsPlaybackControls`](xref:Xamarin.Forms.MediaElement.ShowsPlaybackControls) como `true`. [`MediaElement`](xref:Xamarin.Forms.MediaElement) usará os controles de reprodução da plataforma.
+Os controles de reprodução de mídia são desativados [`ShowsPlaybackControls`](xref:Xamarin.Forms.MediaElement.ShowsPlaybackControls) por `true`padrão e são ativados definindo a propriedade para . [`MediaElement`](xref:Xamarin.Forms.MediaElement)em seguida, usará os controles de reprodução da plataforma.
 
 ## <a name="play-local-media"></a>Reproduzir mídia local
 
 A mídia local pode ser reproduzida a partir das seguintes fontes:
 
-- Um recurso inserido no aplicativo de plataforma, usando o esquema de URI de `ms-appx:///`.
-- Arquivos que vêm das pastas de dados locais e temporárias do aplicativo, usando o esquema URI `ms-appdata:///`.
+- Um recurso incorporado no aplicativo `ms-appx:///` da plataforma, usando o esquema URI.
+- Arquivos provenientes das pastas de dados locais e `ms-appdata:///` temporários do aplicativo, usando o esquema URI.
 - A biblioteca do dispositivo.
 
-Para obter mais informações sobre esses esquemas de URI, consulte [esquemas de URI](/windows/uwp/app-resources/uri-schemes).
+Para obter mais informações sobre esses esquemas URI, consulte [esquemas URI](/windows/uwp/app-resources/uri-schemes).
 
-### <a name="play-media-embedded-in-the-app-package"></a>Reproduzir mídia inserida no pacote do aplicativo
+### <a name="play-media-embedded-in-the-app-package"></a>Reproduzir mídia incorporada no pacote do aplicativo
 
-Um [`MediaElement`](xref:Xamarin.Forms.MediaElement) pode reproduzir arquivos de mídia inseridos no pacote do aplicativo, usando o esquema de URI de `ms-appx:///`. Os arquivos de mídia são inseridos no pacote do aplicativo colocando-os no projeto da plataforma.
+Uma [`MediaElement`](xref:Xamarin.Forms.MediaElement) pode reproduzir arquivos de mídia que estão `ms-appx:///` incorporados no pacote do aplicativo, usando o esquema URI. Os arquivos de mídia são incorporados no pacote do aplicativo, colocando-os no projeto da plataforma.
 
-O armazenamento de um arquivo de mídia no projeto de plataforma é diferente para cada plataforma:
+Armazenar um arquivo de mídia no projeto da plataforma é diferente para cada plataforma:
 
-- No iOS, os arquivos de mídia devem ser armazenados na pasta **recursos** ou uma subpasta da pasta **recursos** . O arquivo de mídia deve ter uma `Build Action` de `BundleResource`.
-- No Android, os arquivos de mídia devem ser armazenados em uma subpasta de **recursos** denominada **RAW**. A pasta **raw** não pode conter subpastas. O arquivo de mídia deve ter uma `Build Action` de `AndroidResource`.
-- No UWP, os arquivos de mídia podem ser armazenados em qualquer pasta no projeto. O arquivo de mídia deve ter uma `BuildAction` de `Content`.
+- No iOS, os arquivos de mídia devem ser armazenados na pasta **Recursos** ou em uma subpasta da pasta **Recursos.** O arquivo de `Build Action` mídia `BundleResource`deve ter um de .
+- No Android, os arquivos de mídia devem ser armazenados em uma subpasta de **recursos** denominada **raw**. A pasta **raw** não pode conter subpastas. O arquivo de `Build Action` mídia `AndroidResource`deve ter um de .
+- No UWP, os arquivos de mídia podem ser armazenados em qualquer pasta do projeto. O arquivo de `BuildAction` mídia `Content`deve ter um de .
 
-Os arquivos de mídia que atendem a esses critérios podem ser reproduzidos usando o esquema URI `ms-appx:///`:
+Os arquivos de mídia que atendam a `ms-appx:///` esses critérios podem ser reproduzidos usando o esquema URI:
 
 ```xaml
 <MediaElement Source="ms-appx:///XamarinForms101UsingEmbeddedImages.mp4"
               ShowsPlaybackControls="True" />
 ```
 
-Ao usar a vinculação de dados, um conversor de valor pode ser usado para aplicar este esquema de URI:
+Ao usar a vinculação de dados, um conversor de valor pode ser usado para aplicar este esquema URI:
 
 ```csharp
 public class VideoSourceConverter : IValueConverter
@@ -132,27 +132,27 @@ public class VideoSourceConverter : IValueConverter
 }
 ```
 
-Uma instância do `VideoSourceConverter` pode ser usada para aplicar o esquema de URI de `ms-appx:///` a um arquivo de mídia inserido:
+Uma instância `VideoSourceConverter` do pode então ser `ms-appx:///` usada para aplicar o esquema URI a um arquivo de mídia incorporado:
 
 ```xaml
 <MediaElement Source="{Binding MediaSource, Converter={StaticResource VideoSourceConverter}}"
               ShowsPlaybackControls="True" />
 ```
 
-Para obter mais informações sobre o esquema de URI do MS-Appx, consulte [MS-Appx e MS-Appx-Web](/windows/uwp/app-resources/uri-schemes#ms-appx-and-ms-appx-web).
+Para obter mais informações sobre o esquema uri ms-appx, consulte [ms-appx e ms-appx-web](/windows/uwp/app-resources/uri-schemes#ms-appx-and-ms-appx-web).
 
 ### <a name="play-media-from-the-apps-local-and-temporary-folders"></a>Reproduzir mídia das pastas locais e temporárias do aplicativo
 
-Um [`MediaElement`](xref:Xamarin.Forms.MediaElement) pode reproduzir arquivos de mídia que são copiados para as pastas de dados locais ou temporárias do aplicativo, usando o esquema de URI de `ms-appdata:///`.
+Uma [`MediaElement`](xref:Xamarin.Forms.MediaElement) pode reproduzir arquivos de mídia que são copiados para as `ms-appdata:///` pastas de dados locais ou temporárias do aplicativo, usando o esquema URI.
 
-O exemplo a seguir mostra a propriedade [`Source`](xref:Xamarin.Forms.MediaElement.Source) definida como um arquivo de mídia que é armazenado na pasta de dados locais do aplicativo:
+O exemplo a [`Source`](xref:Xamarin.Forms.MediaElement.Source) seguir mostra a propriedade definida como um arquivo de mídia armazenado na pasta de dados local do aplicativo:
 
 ```xaml
 <MediaElement Source="ms-appdata:///local/XamarinVideo.mp4"
               ShowsPlaybackControls="True" />
 ```
 
-O exemplo a seguir mostra a propriedade [`Source`](xref:Xamarin.Forms.MediaElement.Source) para um arquivo de mídia que é armazenado na pasta de dados temporária do aplicativo:
+O exemplo a [`Source`](xref:Xamarin.Forms.MediaElement.Source) seguir mostra a propriedade para um arquivo de mídia armazenado na pasta de dados temporários do aplicativo:
 
 ```xaml
 <MediaElement Source="ms-appdata:///temp/XamarinVideo.mp4"
@@ -160,9 +160,9 @@ O exemplo a seguir mostra a propriedade [`Source`](xref:Xamarin.Forms.MediaEleme
 ```
 
 > [!IMPORTANT]
-> Além de reproduzir arquivos de mídia que são armazenados nas pastas de dados locais ou temporárias do aplicativo, a UWP também pode reproduzir arquivos de mídia localizados na pasta de roaming do aplicativo. Isso pode ser obtido por meio da prefixação do arquivo de mídia com `ms-appdata:///roaming/`.
+> Além de reproduzir arquivos de mídia armazenados nas pastas de dados locais ou temporárias do aplicativo, o UWP também pode reproduzir arquivos de mídia que estão localizados na pasta de roaming do aplicativo. Isso pode ser conseguido prefixando `ms-appdata:///roaming/`o arquivo de mídia com .
 
-Ao usar a vinculação de dados, um conversor de valor pode ser usado para aplicar este esquema de URI:
+Ao usar a vinculação de dados, um conversor de valor pode ser usado para aplicar este esquema URI:
 
 ```csharp
 public class VideoSourceConverter : IValueConverter
@@ -181,18 +181,18 @@ public class VideoSourceConverter : IValueConverter
 }
 ```
 
-Uma instância do `VideoSourceConverter` pode ser usada para aplicar o esquema de URI de `ms-appdata:///` a um arquivo de mídia na pasta de dados local ou temporária do aplicativo:
+Uma instância `VideoSourceConverter` do pode então ser `ms-appdata:///` usada para aplicar o esquema URI a um arquivo de mídia na pasta de dados local ou temporária do aplicativo:
 
 ```xaml
 <MediaElement Source="{Binding MediaSource, Converter={StaticResource VideoSourceConverter}}"
               ShowsPlaybackControls="True" />
 ```
 
-Para obter mais informações sobre o esquema de URI do MS-AppData, consulte [MS-AppData](/windows/uwp/app-resources/uri-schemes#ms-appdata).
+Para obter mais informações sobre o esquema uri ms-appdata, consulte [ms-appdata](/windows/uwp/app-resources/uri-schemes#ms-appdata).
 
 #### <a name="copying-a-media-file-to-the-apps-local-or-temporary-data-folder"></a>Copiando um arquivo de mídia para a pasta de dados local ou temporária do aplicativo
 
-A reprodução de um arquivo de mídia armazenado na pasta de dados local ou temporária do aplicativo exige que o arquivo de mídia seja copiado ali pelo aplicativo. Isso pode ser feito, por exemplo, copiando um arquivo de mídia do pacote do aplicativo:
+Reproduzir um arquivo de mídia armazenado na pasta de dados local ou temporário do aplicativo requer que o arquivo de mídia seja copiado pelo aplicativo. Isso pode ser feito, por exemplo, copiando um arquivo de mídia do pacote do aplicativo:
 
 ```csharp
 // This method copies the video from the app package to the app data
@@ -219,17 +219,17 @@ public static async Task CopyVideoIfNotExists(string filename)
 ```
 
 > [!NOTE]
-> O exemplo de código acima usa a classe `FileSystem` incluída no Xamarin. Essentials. Para obter mais informações, consulte [Xamarin. Essentials: auxiliares do sistema de arquivos](~/essentials/file-system-helpers.md?context=xamarin%2Fxamarin-forms&tabs=android).
+> O exemplo de `FileSystem` código acima usa a classe incluída em Xamarin.Essentials. Para obter mais informações, consulte [Xamarin.Essentials: File System Helpers](~/essentials/file-system-helpers.md?context=xamarin%2Fxamarin-forms&tabs=android).
 
 ### <a name="play-media-from-the-device-library"></a>Reproduzir mídia da biblioteca de dispositivos
 
-A maioria dos dispositivos móveis e computadores desktops modernos tem a capacidade de gravar vídeos e áudio usando a câmera e o microfone do dispositivo. A mídia criada é então armazenada como arquivos no dispositivo. Esses arquivos podem ser recuperados da biblioteca e reproduzidos pelo [`MediaElement`](xref:Xamarin.Forms.MediaElement).
+A maioria dos dispositivos móveis e computadores de mesa modernos têm a capacidade de gravar vídeos e áudio usando a câmera e o microfone do dispositivo. As mídias criadas são então armazenadas como arquivos no dispositivo. Esses arquivos podem ser recuperados da biblioteca [`MediaElement`](xref:Xamarin.Forms.MediaElement)e reproduzidos pelo .
 
-Cada uma das plataformas inclui uma instalação que permite ao usuário selecionar mídia na biblioteca do dispositivo. No Xamarin. Forms, os projetos de plataforma podem invocar essa funcionalidade e podem ser chamados pela classe [`DependencyService`](xref:Xamarin.Forms.DependencyService) .
+Cada uma das plataformas inclui uma facilidade que permite ao usuário selecionar mídia na biblioteca do dispositivo. No Xamarin.Forms, os projetos da plataforma podem invocar essa [`DependencyService`](xref:Xamarin.Forms.DependencyService) funcionalidade, e ela pode ser chamada pela classe.
 
-O serviço de dependência de separação de vídeo usado no aplicativo de exemplo é muito semelhante a um definido na [separação de uma foto da biblioteca de imagens](~/xamarin-forms/app-fundamentals/dependency-service/photo-picker.md), exceto que o seletor retorna um nome de arquivo em vez de um objeto `Stream`. O projeto de código compartilhado define uma interface chamada `IVideoPicker`, que define um único método chamado `GetVideoFileAsync`. Em seguida, cada plataforma implementa essa interface em uma classe `VideoPicker`.
+O serviço de dependência de escolha de vídeo usado no aplicativo de amostra é muito semelhante ao definido em [Escolher uma foto da Biblioteca de imagens,](~/xamarin-forms/app-fundamentals/dependency-service/photo-picker.md)exceto que o seletor retorna um nome de arquivo em vez de um `Stream` objeto. O projeto de código compartilhado `IVideoPicker`define uma interface nomeada `GetVideoFileAsync`, que define um único método chamado . Cada plataforma então implementa `VideoPicker` essa interface em uma classe.
 
-O exemplo de código a seguir mostra como recuperar um arquivo de mídia da biblioteca de dispositivos:
+O exemplo de código a seguir mostra como recuperar um arquivo de mídia da biblioteca do dispositivo:
 
 ```csharp
 string filename = await DependencyService.Get<IVideoPicker>().GetVideoFileAsync();
@@ -242,21 +242,21 @@ if (!string.IsNullOrWhiteSpace(filename))
 }
 ```
 
-O serviço de dependência de separação de vídeo é invocado chamando o método `DependencyService.Get` para obter a implementação de uma interface de `IVideoPicker` no projeto de plataforma. O método `GetVideoFileAsync`, em seguida, é chamado nessa instância, e o FileName retornado é usado para criar um objeto [`FileMediaSource`](xref:Xamarin.Forms.FileMediaSource) e defini-lo como a propriedade [`Source`](xref:Xamarin.Forms.MediaElement.Source) da [`MediaElement`](xref:Xamarin.Forms.MediaElement).
+O serviço de dependência de seleção de vídeo é invocado chamando o `DependencyService.Get` método para obter a implementação de uma `IVideoPicker` interface no projeto da plataforma. O `GetVideoFileAsync` método é então chamado nessa instância, e o nome [`FileMediaSource`](xref:Xamarin.Forms.FileMediaSource) de arquivo retornado [`Source`](xref:Xamarin.Forms.MediaElement.Source) é [`MediaElement`](xref:Xamarin.Forms.MediaElement)usado para criar um objeto e defini-lo como propriedade do .
 
-## <a name="change-video-aspect-ratio"></a>Alterar a taxa de proporção do vídeo
+## <a name="change-video-aspect-ratio"></a>Mudar a proporção do vídeo
 
-A propriedade [`Aspect`](xref:Xamarin.Forms.MediaElement.Aspect) determina como a mídia de vídeo será dimensionada para caber na área de exibição. Por padrão, essa propriedade é definida como o membro de enumeração `AspectFit`, mas pode ser definida como qualquer um dos membros de enumeração [`Aspect`](xref:Xamarin.Forms.Aspect) :
+A [`Aspect`](xref:Xamarin.Forms.MediaElement.Aspect) propriedade determina como a mídia de vídeo será dimensionada para se adequar à área de exibição. Por padrão, esta propriedade `AspectFit` é definida como membro de enumeração, [`Aspect`](xref:Xamarin.Forms.Aspect) mas pode ser definida para qualquer um dos membros de enumeração:
 
-- `AspectFit` indica que o vídeo será letterboxed, se necessário, para se ajustar à área de exibição, preservando a taxa de proporção.
-- `AspectFill` indica que o vídeo será recortado para que ele preencha a área de exibição, preservando a taxa de proporção.
-- `Fill` indica que o vídeo será alongado para preencher a área de exibição.
+- `AspectFit`indica que o vídeo será em caixa de correio, se necessário, para caber na área de exibição, preservando a proporção.
+- `AspectFill`indica que o vídeo será cortado de modo que preencha a área de exibição, preservando a proporção.
+- `Fill`indica que o vídeo será estendido para preencher a área de exibição.
 
-## <a name="poll-for-position-data"></a>Pesquisa de dados de posição
+## <a name="poll-for-position-data"></a>Enquete para dados de posição
 
-A notificação de alteração de propriedade para a propriedade [`Position`](xref:Xamarin.Forms.MediaElement.Position) vinculável só é acionada na chave momentos, como a reprodução iniciada e terminação, e a pausa ocorre. Portanto, a vinculação de dados com a propriedade `Position` não produzirá dados de posição precisos. Em vez disso, você deve configurar um temporizador e sondar a propriedade.
+A notificação de [`Position`](xref:Xamarin.Forms.MediaElement.Position) alteração de propriedade para a propriedade vinculável só é acionada em momentos-chave, como início e término da reprodução e pausa. Portanto, os dados `Position` vinculados à propriedade não produzirão dados de posição precisos. Em vez disso, você deve configurar um temporizador e pesquisar a propriedade.
 
-Um bom lugar para fazer isso é na substituição de `OnAppearing` para a página que requer os dados de posição conforme a mídia é reproduzida:
+Um bom lugar para fazer `OnAppearing` isso está na substituição da página que requer os dados de posição à medida que a mídia é reproduzida:
 
 ```csharp
 bool polling = true;
@@ -282,50 +282,50 @@ protected override void OnDisappearing()
 }
 ```
 
-Neste exemplo, a substituição de `OnAppearing` inicia um temporizador que atualiza `positionLabel` com o valor de `Position` a cada segundo. O retorno de chamada do timer é invocado a cada segundo, até que o retorno de chamada retorne `false`. Quando a navegação de página ocorre, o `OnDisappearing` substituição é executado, o que interrompe o retorno de chamada do temporizador que está sendo chamado.
+Neste exemplo, `OnAppearing` a substituição inicia um temporizador que atualiza `positionLabel` com o valor a `Position` cada segundo. O retorno do cronotemizador é invocado `false`a cada segundo, até que o retorno do retorno do retorno . Quando ocorre a `OnDisappearing` navegação da página, a substituição é executada, o que impede que o retorno do crono temporizador seja invocado.
 
-## <a name="understand-mediasource-types"></a>Entender os tipos de Mediary
+## <a name="understand-mediasource-types"></a>Entenda os tipos de MediaSource
 
-Um [`MediaElement`](xref:Xamarin.Forms.MediaElement) pode reproduzir mídia definindo sua propriedade [`Source`](xref:Xamarin.Forms.MediaElement.Source) como um arquivo de mídia local ou remoto. A propriedade `Source` é do tipo [`MediaSource`](xref:Xamarin.Forms.MediaSource), e essa classe define dois métodos estáticos:
+Uma [`MediaElement`](xref:Xamarin.Forms.MediaElement) mídia pode reproduzir [`Source`](xref:Xamarin.Forms.MediaElement.Source) definindo sua propriedade para um arquivo de mídia remoto ou local. A `Source` propriedade é [`MediaSource`](xref:Xamarin.Forms.MediaSource)do tipo , e esta classe define dois métodos estáticos:
 
-- [`FromFile`](xref:Xamarin.Forms.MediaSource.FromFile*), retorna uma instância de [`MediaSource`](xref:Xamarin.Forms.MediaSource) de um argumento `string`.
-- [`FromUri`](xref:Xamarin.Forms.MediaSource.FromUri*), retorna uma instância de [`MediaSource`](xref:Xamarin.Forms.MediaSource) de um argumento `Uri`.
+- [`FromFile`](xref:Xamarin.Forms.MediaSource.FromFile*), retorna [`MediaSource`](xref:Xamarin.Forms.MediaSource) uma `string` instância de um argumento.
+- [`FromUri`](xref:Xamarin.Forms.MediaSource.FromUri*), retorna [`MediaSource`](xref:Xamarin.Forms.MediaSource) uma `Uri` instância de um argumento.
 
-Além disso, a classe [`MediaSource`](xref:Xamarin.Forms.MediaSource) também tem operadores implícitos que retornam `MediaSource` instâncias de argumentos `string` e `Uri`.
-
-> [!NOTE]
-> Quando a propriedade [`Source`](xref:Xamarin.Forms.MediaElement.Source) é definida em XAML, um conversor de tipo é invocado para retornar uma instância de [`MediaSource`](xref:Xamarin.Forms.MediaSource) de um `string` ou `Uri`.
-
-A classe [`MediaSource`](xref:Xamarin.Forms.MediaSource) também tem duas classes derivadas:
-
-- [`UriMediaSource`](xref:Xamarin.Forms.UriMediaSource), que é usado para especificar um arquivo de mídia remoto de um URI. Essa classe tem uma propriedade [`Uri`](xref:Xamarin.Forms.UriMediaSource.Uri) que pode ser definida como um `Uri`.
-- [`FileMediaSource`](xref:Xamarin.Forms.FileMediaSource), que é usado para especificar um arquivo de mídia local de um `string`. Essa classe tem uma propriedade [`File`](xref:Xamarin.Forms.FileMediaSource.File) que pode ser definida como um `string`. Além disso, essa classe tem operadores implícitos para converter um `string` em um objeto `FileMediaSource` e um objeto `FileMediaSource` para um `string`.
+Além disso, [`MediaSource`](xref:Xamarin.Forms.MediaSource) a classe também tem `MediaSource` operadores implícitos que retornam instâncias `string` e `Uri` argumentos.
 
 > [!NOTE]
-> Quando um objeto de [`FileMediaSource`](xref:Xamarin.Forms.FileMediaSource) é criado em XAML, um conversor de tipo é invocado para retornar uma instância de [`FileMediaSource`](xref:Xamarin.Forms.FileMediaSource) de um `string`.
+> Quando [`Source`](xref:Xamarin.Forms.MediaElement.Source) a propriedade é definida em XAML, um [`MediaSource`](xref:Xamarin.Forms.MediaSource) conversor `string` de `Uri`tipo é invocado para retornar uma instância de um ou .
 
-## <a name="determine-mediaelement-status"></a>Determinar o status do MediaElement
+A [`MediaSource`](xref:Xamarin.Forms.MediaSource) classe também tem duas classes derivadas:
 
-A classe [`MediaElement`](xref:Xamarin.Forms.MediaElement) define uma propriedade vinculável somente leitura chamada [`CurrentState`](xref:Xamarin.Forms.MediaElement.CurrentState), do tipo [`MediaElementState`](xref:Xamarin.Forms.MediaElementState). Essa propriedade indica o status atual do controle, como se a mídia está sendo reproduzida ou pausada, ou se ainda não está pronta para reproduzir a mídia.
+- [`UriMediaSource`](xref:Xamarin.Forms.UriMediaSource), que é usado para especificar um arquivo de mídia remota de um URI. Esta classe [`Uri`](xref:Xamarin.Forms.UriMediaSource.Uri) tem uma propriedade que `Uri`pode ser definida como um .
+- [`FileMediaSource`](xref:Xamarin.Forms.FileMediaSource), que é usado para especificar `string`um arquivo de mídia local a partir de um . Esta classe [`File`](xref:Xamarin.Forms.FileMediaSource.File) tem uma propriedade que `string`pode ser definida como um . Além disso, esta classe tem operadores `FileMediaSource` implícitos `FileMediaSource` para converter `string`um a um `string` objeto, e um objeto para um .
 
-A enumeração [`MediaElementState`](xref:Xamarin.Forms.MediaElementState) define os seguintes membros:
+> [!NOTE]
+> Quando [`FileMediaSource`](xref:Xamarin.Forms.FileMediaSource) um objeto é criado em XAML, um conversor de tipo é invocado para retornar uma [`FileMediaSource`](xref:Xamarin.Forms.FileMediaSource) instância de um `string`.
 
-- `Closed` indica que o `MediaElement` não contém mídia.
-- `Opening` indica que o `MediaElement` está validando e tentando carregar a origem especificada.
-- `Buffering` indica que o `MediaElement` está carregando a mídia para reprodução. Sua propriedade [`Position`](xref:Xamarin.Forms.MediaElement.Position) não avança durante esse estado. Se o `MediaElement` estiver executando vídeo, ele continuará exibindo o último quadro exibido.
-- `Playing` indica que a `MediaElement` está reproduzindo a origem da mídia.
-- `Paused` indica que o `MediaElement` não avança sua propriedade [`Position`](xref:Xamarin.Forms.MediaElement.Position) . Se o `MediaElement` estiver executando vídeo, ele continuará a exibir o quadro atual.
-- `Stopped` indica que a `MediaElement` contém mídia, mas não está sendo reproduzida ou pausada. Sua propriedade [`Position`](xref:Xamarin.Forms.MediaElement.Position) é 0 e não avança. Se a mídia carregada for vídeo, o `MediaElement` exibirá o primeiro quadro.
+## <a name="determine-mediaelement-status"></a>Determine o status do MediaElement
 
-Geralmente, não é necessário examinar a propriedade [`CurrentState`](xref:Xamarin.Forms.MediaElement.CurrentState) ao usar os controles de transporte [`MediaElement`](xref:Xamarin.Forms.MediaElement) . No entanto, essa propriedade se torna importante ao implementar seus próprios controles de transporte.
+A [`MediaElement`](xref:Xamarin.Forms.MediaElement) classe define uma propriedade vinculável [`CurrentState`](xref:Xamarin.Forms.MediaElement.CurrentState)somente [`MediaElementState`](xref:Xamarin.Forms.MediaElementState)leitura chamada , do tipo . Esta propriedade indica o status atual do controle, como se a mídia está reproduzindo ou pausada, ou se ainda não está pronta para reproduzir a mídia.
+
+A [`MediaElementState`](xref:Xamarin.Forms.MediaElementState) enumeração define os seguintes membros:
+
+- `Closed`indica que `MediaElement` o não contém mídia.
+- `Opening`indica que `MediaElement` o está validando e tentando carregar a fonte especificada.
+- `Buffering`indica que `MediaElement` o está carregando a mídia para reprodução. Sua [`Position`](xref:Xamarin.Forms.MediaElement.Position) propriedade não avança durante este estado. Se `MediaElement` o vídeo estava reproduzindo, ele continua a exibir o último quadro exibido.
+- `Playing`indica que `MediaElement` o está reproduzindo a fonte de mídia.
+- `Paused`indica que `MediaElement` o não [`Position`](xref:Xamarin.Forms.MediaElement.Position) avança sua propriedade. Se `MediaElement` o vídeo estava reproduzindo, ele continua a exibir o quadro atual.
+- `Stopped`indica que `MediaElement` a mídia contém, mas não está sendo reproduzida ou pausada. Sua [`Position`](xref:Xamarin.Forms.MediaElement.Position) propriedade é 0 e não avança. Se a mídia carregada for `MediaElement` vídeo, o quadro será exibido.
+
+Geralmente não é necessário examinar [`CurrentState`](xref:Xamarin.Forms.MediaElement.CurrentState) a propriedade [`MediaElement`](xref:Xamarin.Forms.MediaElement) ao usar os controles de transporte. No entanto, essa propriedade torna-se importante ao implementar seus próprios controles de transporte.
 
 ## <a name="implement-custom-transport-controls"></a>Implementar controles de transporte personalizados
 
-Os controles de transporte de um player de mídia incluem os botões que executam as funções **reproduzir**, **Pausar**e **parar**. Em geral, esses botões são identificados com ícones conhecidos, em vez de um texto, e as funções **Reproduzir** e **Pausar** geralmente são combinadas em um botão.
+Os controles de transporte de um media player incluem os botões que executam as funções **Play**, **Pause**e **Stop**. Em geral, esses botões são identificados com ícones conhecidos, em vez de um texto, e as funções **Reproduzir** e **Pausar** geralmente são combinadas em um botão.
 
-Por padrão, os controles de reprodução [`MediaElement`](xref:Xamarin.Forms.MediaElement) estão desabilitados. Isso permite que você controle a `MediaElement` de forma programática ou fornecendo seus próprios controles de transporte. Para dar suporte a isso, `MediaElement` inclui os métodos [`Play`](xref:Xamarin.Forms.MediaElement.Play), [`Pause`](xref:Xamarin.Forms.MediaElement.Pause)e [`Stop`](xref:Xamarin.Forms.MediaElement.Stop) .
+Por padrão, [`MediaElement`](xref:Xamarin.Forms.MediaElement) os controles de reprodução estão desativados. Isso permite que `MediaElement` você controle a programação ou fornecendo seus próprios controles de transporte. Em apoio a `MediaElement` isso, [`Pause`](xref:Xamarin.Forms.MediaElement.Pause)inclui [`Stop`](xref:Xamarin.Forms.MediaElement.Stop) [`Play`](xref:Xamarin.Forms.MediaElement.Play), e métodos.
 
-O exemplo de XAML a seguir mostra uma página que contém um [`MediaElement`](xref:Xamarin.Forms.MediaElement) e controles de transporte personalizados:
+O exemplo XAML a seguir [`MediaElement`](xref:Xamarin.Forms.MediaElement) mostra uma página que contém controles de transporte personalizados e a seguir:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -374,9 +374,9 @@ O exemplo de XAML a seguir mostra uma página que contém um [`MediaElement`](xr
 </ContentPage>
 ```
 
-Neste exemplo, os controles de transporte personalizados são definidos como objetos [`Button`](xref:Xamarin.Forms.Button) . No entanto, há apenas dois objetos `Button`, com o primeiro `Button` representando **Play** e **Pause**, e a segunda `Button` representando **Stop**. [`DataTrigger`](xref:Xamarin.Forms.DataTrigger) objetos são usados para habilitar e desabilitar os botões e alternar o primeiro botão entre **reproduzir** e **Pausar**. Para obter mais informações sobre gatilhos de dados, consulte [gatilhos do Xamarin. Forms](~/xamarin-forms/app-fundamentals/triggers.md).
+Neste exemplo, os controles de transporte [`Button`](xref:Xamarin.Forms.Button) personalizados são definidos como objetos. No entanto, `Button` há apenas dois `Button` objetos, com o `Button` primeiro representando **Play** and **Pause**, e o segundo representando **Stop**. [`DataTrigger`](xref:Xamarin.Forms.DataTrigger)objetos são usados para ativar e desativar os botões e para alternar o primeiro botão entre **Reproduzir** e **Pausar**. Para obter mais informações sobre gatilhos de dados, consulte [Xamarin.Forms Triggers](~/xamarin-forms/app-fundamentals/triggers.md).
 
-O arquivo code-behind tem os manipuladores para os eventos de [`Clicked`](xref:Xamarin.Forms.Button.Clicked) :
+O arquivo de código atrás tem [`Clicked`](xref:Xamarin.Forms.Button.Clicked) os manipuladores para os eventos:
 
 ```csharp
 void OnPlayPauseButtonClicked(object sender, EventArgs args)
@@ -398,26 +398,26 @@ void OnStopButtonClicked(object sender, EventArgs args)
 }
 ```
 
-O botão **Play** pode ser pressionado, quando ele se torna habilitado, para começar a reprodução:
+O botão **Play** pode ser pressionado, uma vez ativado, para iniciar a reprodução:
 
-[![Captura de tela de um MediaElement com controles de transporte personalizados em iOS e Android](mediaelement-images/custom-transport-playback.png "MediaElement reproduzindo um vídeo")](mediaelement-images/custom-transport-playback-large.png#lightbox "MediaElement reproduzindo um vídeo")
+[![Captura de tela de um MediaElement com controles de transporte personalizados, no iOS e Android](mediaelement-images/custom-transport-playback.png "MediaElement reproduzindo um vídeo")](mediaelement-images/custom-transport-playback-large.png#lightbox "MediaElement reproduzindo um vídeo")
 
-Pressionar o botão **Pausar** resulta na pausa da reprodução:
+Pressionar o botão **Pausar** resulta em pausa de reprodução:
 
-[![Captura de tela de um MediaElement com reprodução pausada, no iOS e no Android](mediaelement-images/custom-transport-paused.png "MediaElement com um vídeo em pausa")](mediaelement-images/custom-transport-paused-large.png#lightbox "MediaElement com um vídeo em pausa")
+[![Captura de tela de um MediaElement com reprodução pausada, no iOS e Android](mediaelement-images/custom-transport-paused.png "MediaElement com um vídeo pausado")](mediaelement-images/custom-transport-paused-large.png#lightbox "MediaElement com um vídeo pausado")
 
-Pressionar o botão **parar** interrompe a reprodução e retorna a posição do arquivo de mídia para o início.
+Pressionar o botão **Parar** interrompe a reprodução e retorna a posição do arquivo de mídia para o início.
 
 ## <a name="implement-a-custom-position-bar"></a>Implementar uma barra de posição personalizada
 
-Os controles de transporte implementados por cada plataforma incluem uma barra de posição. Essa barra é semelhante a um controle deslizante e mostra o local atual da mídia dentro de sua duração total. Além disso, você pode manipular a barra de posição para avançar ou retroceder para uma nova posição no vídeo.
+Os controles de transporte implementados por cada plataforma incluem uma barra de posição. Esta barra se assemelha a um controle deslizante e mostra a localização atual da mídia dentro de sua duração total. Além disso, você pode manipular a barra de posição para mover para frente ou para trás para uma nova posição no vídeo.
 
-A implementação de uma barra de posição personalizada requer conhecer a duração da mídia e a posição de reprodução atual. Esses dados estão disponíveis nas propriedades [`Duration`](xref:Xamarin.Forms.MediaElement.Duration) e [`Position`](xref:Xamarin.Forms.MediaElement.Position) .
+A implementação de uma barra de posição personalizada requer saber a duração da mídia e a posição de reprodução atual. Esses dados estão [`Duration`](xref:Xamarin.Forms.MediaElement.Duration) disponíveis [`Position`](xref:Xamarin.Forms.MediaElement.Position) nas propriedades.
 
 > [!IMPORTANT]
-> O [`Position`](xref:Xamarin.Forms.MediaElement.Position) deve ser sondado para obter dados de posição precisos. Para obter mais informações, consulte [sondagem de dados de posição](#poll-for-position-data).
+> Deve [`Position`](xref:Xamarin.Forms.MediaElement.Position) ser pesquisado para obter dados de posição precisos. Para obter mais informações, consulte [Pesquisa para dados de posição](#poll-for-position-data).
 
-Uma barra de posição personalizada pode ser implementada usando um [`Slider`](xref:Xamarin.Forms.Slider), conforme mostrado no exemplo a seguir:
+Uma barra de posição personalizada [`Slider`](xref:Xamarin.Forms.Slider)pode ser implementada usando a, como mostrado no exemplo a seguir:
 
 ```csharp
 public class PositionSlider : Slider
@@ -480,14 +480,14 @@ public class PositionSlider : Slider
 }
 ```
 
-A classe `PositionSlider` define suas próprias propriedades `Duration` e `Position` vinculáveis e uma propriedade vinculável `TimeToEnd`. Todas as três propriedades são do tipo `TimeSpan`. O manipulador de propriedade alterada para a propriedade `Duration` define a propriedade `Maximum` do [`Slider`](xref:Xamarin.Forms.Slider) como a propriedade `TotalSeconds` do valor de `TimeSpan`. A propriedade `TimeToEnd` é calculada com base nas alterações nas propriedades `Duration` e `Position` e começa na duração da mídia e diminui para zero à medida que a reprodução prossegue.
+A `PositionSlider` classe define `Duration` suas `Position` propriedades próprias `TimeToEnd` e vinculáveis, e uma propriedade vinculável. Todas as três `TimeSpan`propriedades são do tipo . O manipulador alterado de `Duration` propriedade `Maximum` para a [`Slider`](xref:Xamarin.Forms.Slider) propriedade `TotalSeconds` define `TimeSpan` a propriedade do para a propriedade do valor. A `TimeToEnd` propriedade é calculada com `Duration` `Position` base em alterações nas propriedades e começa na duração da mídia e diminui para zero à medida que a reprodução prossegue.
 
-A `PositionSlider` é atualizada a partir do [`Slider`](xref:Xamarin.Forms.Slider) subjacente quando a `Slider` é movida para indicar que a mídia deve ser avançada ou revertida para uma nova posição. Isso é detectado no manipulador de `PropertyChanged` no construtor de `PositionSlider`. O manipulador verifica uma alteração na propriedade `Value` e, se for diferente da propriedade `Position`, então a propriedade `Position` será definida com base na propriedade `Value`. Para obter mais informações sobre como usar um [`Slider`](xref:Xamarin.Forms.Slider) consulte o [controle deslizante Xamarin. Forms](~/xamarin-forms/user-interface/slider.md)
+O `PositionSlider` é atualizado a [`Slider`](xref:Xamarin.Forms.Slider) partir `Slider` do subjacente quando o é movido para indicar que a mídia deve ser avançada ou revertida para uma nova posição. Isso é detectado `PropertyChanged` no manipulador `PositionSlider` da construtora. O manipulador verifica uma alteração na propriedade `Value` e, se for diferente da propriedade `Position`, então a propriedade `Position` será definida com base na propriedade `Value`. Para obter mais [`Slider`](xref:Xamarin.Forms.Slider) informações sobre como usar um controle de voz, [Xamarin.Forms Slider](~/xamarin-forms/user-interface/slider.md)
 
 > [!NOTE]
-> No Android, a [`Slider`](xref:Xamarin.Forms.Slider) tem apenas 1000 etapas discretas, independentemente das configurações de `Minimum` e `Maximum`. Se o comprimento da mídia for maior que 1000 segundos, dois valores `Position` diferentes corresponderão ao mesmo `Value` do `Slider`. É por isso que o código acima verifica se a nova posição e a posição existente são maiores que um centésimo da duração geral.
+> No Android, [`Slider`](xref:Xamarin.Forms.Slider) o único tem 1000 passos `Minimum` `Maximum` discretos, independentemente das configurações. Se o comprimento da mídia for superior a `Position` 1000 segundos, então dois valores diferentes corresponderiam ao mesmo `Value` do `Slider`. É por isso que o código acima verifica se a nova posição e a posição existentes são maiores que um centésimo da duração total.
 
-O exemplo a seguir mostra o `PositionSlider` que está sendo consumido em uma página:
+O exemplo a `PositionSlider` seguir mostra o ser consumido em uma página:
 
 ```xaml
 <controls:PositionSlider x:Name="positionSlider"
@@ -504,17 +504,17 @@ O exemplo a seguir mostra o `PositionSlider` que está sendo consumido em uma p�
 </controls:PositionSlider>
 ```
 
-Neste exemplo, a propriedade `Duration` da `PositionSlider` é associada a dados à propriedade [`Duration`](xref:Xamarin.Forms.MediaElement.Duration) do [`MediaElement`](xref:Xamarin.Forms.MediaElement). Quando a propriedade [`Value`](xref:Xamarin.Forms.Slider.Value) da [`Slider`](xref:Xamarin.Forms.Slider) é alterada, o evento `ValueChanged` é acionado e o manipulador de `OnPositionSliderValueChanged` é executado. Esse manipulador define a propriedade [`MediaElement.Position`](xref:Xamarin.Forms.MediaElement.Position) como o valor da propriedade `PositionSlider.Position`. Portanto, arrastar o `Slider` resulta na alteração da posição de reprodução de mídia:
+Neste exemplo, `Duration` a propriedade `PositionSlider` do está vinculado [`Duration`](xref:Xamarin.Forms.MediaElement.Duration) aos [`MediaElement`](xref:Xamarin.Forms.MediaElement)dados da propriedade do . Quando [`Value`](xref:Xamarin.Forms.Slider.Value) a propriedade [`Slider`](xref:Xamarin.Forms.Slider) das `ValueChanged` alterações, `OnPositionSliderValueChanged` o evento é acionado e o manipulador é executado. Este manipulador [`MediaElement.Position`](xref:Xamarin.Forms.MediaElement.Position) define a propriedade `PositionSlider.Position` para o valor da propriedade. Portanto, arrastando `Slider` os resultados na posição de reprodução de mídia mudando:
 
-[![Captura de tela de um MediaElement com uma barra de posição personalizada, no iOS e no Android](mediaelement-images/custom-position-bar.png "MediaElement com uma barra de posição personalizada")](mediaelement-images/custom-position-bar-large.png#lightbox "MediaElement com uma barra de posição personalizada")
+[![Captura de tela de um MediaElement com uma barra de posição personalizada, no iOS e Android](mediaelement-images/custom-position-bar.png "MediaElement com uma barra de posição personalizada")](mediaelement-images/custom-position-bar-large.png#lightbox "MediaElement com uma barra de posição personalizada")
 
-Além disso, um objeto [`DataTrigger`](xref:Xamarin.Forms.DataTrigger) é usado para desabilitar o `PositionSlider` quando a mídia está em buffer. Para obter mais informações sobre gatilhos de dados, consulte [gatilhos do Xamarin. Forms](~/xamarin-forms/app-fundamentals/triggers.md).
+Além disso, [`DataTrigger`](xref:Xamarin.Forms.DataTrigger) um objeto é `PositionSlider` usado para desativar quando a mídia está buffering. Para obter mais informações sobre gatilhos de dados, consulte [Xamarin.Forms Triggers](~/xamarin-forms/app-fundamentals/triggers.md).
 
 ## <a name="implement-a-custom-volume-control"></a>Implementar um controle de volume personalizado
 
-Os controles de reprodução de mídia implementados por cada plataforma incluem uma barra de volume. Essa barra é semelhante a um controle deslizante e mostra o volume da mídia. Além disso, você pode manipular a barra de volume para aumentar ou diminuir o volume.
+Os controles de reprodução de mídia implementados por cada plataforma incluem uma barra de volume. Esta barra se assemelha a um controle deslizante e mostra o volume da mídia. Além disso, você pode manipular a barra de volume para aumentar ou diminuir o volume.
 
-Uma barra de volume personalizada pode ser implementada usando um [`Slider`](xref:Xamarin.Forms.Slider), conforme mostrado no exemplo a seguir:
+Uma barra de volume personalizada [`Slider`](xref:Xamarin.Forms.Slider)pode ser implementada usando a, como mostrado no exemplo a seguir:
 
 ```xaml
 <StackLayout>
@@ -528,18 +528,18 @@ Uma barra de volume personalizada pode ser implementada usando um [`Slider`](xre
 </StackLayout>
 ```
 
-Neste exemplo, os dados de [`Slider`](xref:Xamarin.Forms.Slider) associam sua propriedade `Value` à propriedade [`Volume`](xref:Xamarin.Forms.MediaElement.Volume) do [`MediaElement`](xref:Xamarin.Forms.MediaElement). Isso é possível porque a propriedade `Volume` usa uma associação de `TwoWay`. Portanto, alterar a propriedade `Value` resultará na alteração da propriedade `Volume`.
+Neste exemplo, [`Slider`](xref:Xamarin.Forms.Slider) os dados `Value` vinculam [`Volume`](xref:Xamarin.Forms.MediaElement.Volume) sua propriedade [`MediaElement`](xref:Xamarin.Forms.MediaElement)à propriedade do . Isso é possível `Volume` porque `TwoWay` a propriedade usa uma vinculação. Portanto, a `Value` mudança do imóvel `Volume` resultará na mudança do imóvel.
 
 > [!NOTE]
-> A propriedade [`Volume`](xref:Xamarin.Forms.MediaElement.Volume) tem um retorno de chamada vlidation que garante que seu valor seja maior ou igual a 0,0 e menor ou igual a 1,0.
+> A [`Volume`](xref:Xamarin.Forms.MediaElement.Volume) propriedade possui um retorno de chamada de vlidação que garante que seu valor seja maior ou igual a 0,0, e menor ou igual a 1,0.
 
-Para obter mais informações sobre como usar um [`Slider`](xref:Xamarin.Forms.Slider) consulte o [controle deslizante Xamarin. Forms](~/xamarin-forms/user-interface/slider.md)
+Para obter mais [`Slider`](xref:Xamarin.Forms.Slider) informações sobre como usar um controle de voz, [Xamarin.Forms Slider](~/xamarin-forms/user-interface/slider.md)
 
 ## <a name="related-links"></a>Links relacionados
 
-- [MediaElementDemos (exemplo)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/MediaElementDemos)
+- [MediaElementDemos (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-mediaelementdemos/)
 - [Esquemas de URI](/windows/uwp/app-resources/uri-schemes)
-- [Gatilhos do Xamarin. Forms](~/xamarin-forms/app-fundamentals/triggers.md)
-- [Controle deslizante do Xamarin. Forms](~/xamarin-forms/user-interface/slider.md)
-- [Android: formatos de mídia com suporte](https://developer.android.com/guide/topics/media/media-formats)
-- [UWP: codecs com suporte](/windows/uwp/audio-video-camera/supported-codecs)
+- [Gatilhos do Xamarin.Forms](~/xamarin-forms/app-fundamentals/triggers.md)
+- [Xamarin.Forms Slider](~/xamarin-forms/user-interface/slider.md)
+- [Android: Formatos de mídia suportados](https://developer.android.com/guide/topics/media/media-formats)
+- [UWP: Codecs suportados](/windows/uwp/audio-video-camera/supported-codecs)

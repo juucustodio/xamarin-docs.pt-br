@@ -8,25 +8,25 @@ author: davidortinau
 ms.author: daortin
 ms.date: 06/21/2018
 ms.openlocfilehash: 49d1eea60f766f4cb61484a6e441506cf8f046ff
-ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "78292383"
 ---
 # <a name="is-it-possible-to-connect-to-android-emulators-running-on-a-mac-from-a-windows-vm"></a>É possível se conectar aos emuladores de Android em execução em um Mac usando uma VM do Windows?
 
-Para se conectar ao Android Emulator em execução em um Mac de uma máquina virtual do Windows, use as seguintes etapas:
+Para se conectar ao Emulador Android em execução em um Mac a partir de uma máquina virtual do Windows, use as seguintes etapas:
 
 1. Inicie o emulador no Mac.
 
-2. Eliminar o servidor de `adb` no Mac:
+2. Mate `adb` o servidor no Mac:
 
     ```bash
     adb kill-server
     ```
 
-3. Observe que o emulador está escutando duas portas TCP na interface de rede de loopback:
+3. Observe que o emulador está ouvindo em 2 portas TCP na interface de rede de loopback:
 
     ```bash
     lsof -iTCP -sTCP:LISTEN -P | grep 'emulator\|qemu'
@@ -35,9 +35,9 @@ Para se conectar ao Android Emulator em execução em um Mac de uma máquina vir
     emulator6 94105 macuser   21u  IPv4 0xa8dacfb1d845a51f      0t0  TCP localhost:5554 (LISTEN)
     ```
 
-    A porta ímpar é aquela usada para se conectar ao `adb`. Consulte também [https://developer.android.com/tools/devices/emulator.html#emulatornetworking](https://developer.android.com/tools/devices/emulator.html#emulatornetworking).
+    A porta numerada ímpar é `adb`a usada para se conectar a . Veja [https://developer.android.com/tools/devices/emulator.html#emulatornetworking](https://developer.android.com/tools/devices/emulator.html#emulatornetworking)também .
 
-4. _Opção 1_: Use `nc` para encaminhar pacotes TCP de entrada recebidos externamente na porta 5555 (ou qualquer outra porta que desejar) para a porta ímpar na interface de loopback (**127.0.0.1 5555** neste exemplo) e para encaminhar os pacotes de saída de outra maneira:
+4. _Opção 1_ `nc` : Usar para encaminhar pacotes TCP de entrada recebidos externamente na porta 5555 (ou qualquer outra porta que você gosta) para a porta numerada ímpar na interface de loopback **(127.0.0.1 5555** neste exemplo) e para encaminhar os pacotes de saída de volta para o outro lado:
 
     ```bash
     cd /tmp
@@ -45,41 +45,41 @@ Para se conectar ao Android Emulator em execução em um Mac de uma máquina vir
     nc -kl 5555 0<backpipe | nc 127.0.0.1 5555 > backpipe
     ```
 
-    Contanto que os comandos de `nc` permaneçam em execução em uma janela de terminal, os pacotes serão encaminhados conforme o esperado. Você pode digitar Control-C na janela do terminal para encerrar os comandos do `nc` quando terminar de usar o emulador.
+    Enquanto os `nc` comandos permanecerem em execução em uma janela de Terminal, os pacotes serão encaminhados como esperado. Você pode digitar Control-C na janela `nc` Terminal para sair dos comandos assim que terminar usando o emulador.
 
-    (A opção 1 é geralmente mais fácil do que a opção 2, especialmente se as **preferências do sistema > segurança & privacidade > o firewall** for ativado.)
+    (A opção 1 geralmente é mais fácil do que a Opção 2, especialmente se **as preferências do sistema > segurança & privacidade > firewall** estiver ligada.)
 
-    _Opção 2_: Use `pfctl` para redirecionar pacotes TCP da porta `5555` (ou qualquer outra porta que você desejar) na interface de [rede compartilhada](https://kb.parallels.com/en/4948) para a porta ímpar na interface de loopback (`127.0.0.1:5555` neste exemplo):
+    _Opção 2_ `pfctl` : Usar para redirecionar `5555` pacotes TCP da porta (ou qualquer outra porta que você goste) na`127.0.0.1:5555` interface De Rede [Compartilhada](https://kb.parallels.com/en/4948) para a porta numerada ímpar na interface de loopback (neste exemplo):
 
     ```bash
     sed '/rdr-anchor/a rdr pass on vmnet8 inet proto tcp from any to any port 5555 -> 127.0.0.1 port 5555' /etc/pf.conf | sudo pfctl -ef -
     ```
 
-    Esse comando configura o encaminhamento de porta usando o serviço do sistema `pf packet filter`. As quebras de linha são importantes. Lembre-se de mantê-los intactos quando copiar e colar. Você também precisará ajustar o nome da interface de *vmnet8* se estiver usando paralelos. `vmnet8` é o nome do *dispositivo NAT* especial para o modo de *rede compartilhado* no VMware Fusion. A interface de rede apropriada em paralelos é provavelmente [vnic0](https://download.parallels.com/doc/psbm/en/Parallels_Server_Bare_Metal_Users_Guide/29258.htm).
+    Este comando configura o encaminhamento `pf packet filter` da porta usando o serviço do sistema. As quebras de linha são importantes. Certifique-se de mantê-los intactos ao copiar. Você também precisará ajustar o nome da interface do *vmnet8* se estiver usando Paralelos. `vmnet8`é o nome do *dispositivo NAT* especial para o modo *de rede compartilhada* no VMWare Fusion. A interface de rede apropriada em Paralelos é provavelmente [vnic0](https://download.parallels.com/doc/psbm/en/Parallels_Server_Bare_Metal_Users_Guide/29258.htm).
 
-5. Conecte-se ao emulador do computador Windows:
+5. Conecte-se ao emulador a partir da máquina Windows:
 
     ```cmd
     C:\> adb connect ip-address-of-the-mac:5555
     ```
 
-    Substitua "IP-address-of-the-Mac" pelo endereço IP do Mac, por exemplo, conforme listado por `ifconfig vmnet8 | grep 'inet '`. Se necessário, substitua `5555` pela outra porta que você gostou da etapa 4\. (Observação: uma maneira de obter o acesso de linha de comando para `adb` é por meio de [**ferramentas > prompt de comando do ADB do android >** ](~/cross-platform/troubleshooting/questions/version-logs.md#adb-logcat) no Visual Studio.)
+    Substitua o "ip-address-of-the-mac" pelo endereço IP do `ifconfig vmnet8 | grep 'inet '`Mac, por exemplo, conforme listado por . Se necessário, `5555` substitua-o pela outra porta que você gosta a partir do passo 4\. (Nota: uma maneira de obter `adb` acesso à linha de comando é através de [**ferramentas > Android > Prompt de comando Android Adb**](~/cross-platform/troubleshooting/questions/version-logs.md#adb-logcat) no Visual Studio.)
 
-### <a name="alternate-technique-using-ssh"></a>Técnica alternativa usando `ssh`
+### <a name="alternate-technique-using-ssh"></a>Técnica alternativa usando`ssh`
 
-Se você tiver habilitado _acesso remoto_ no Mac, poderá usar o encaminhamento de porta `ssh` para se conectar ao emulador.
+Se você habilitou o _Login Remoto_ no `ssh` Mac, então você pode usar o encaminhamento da porta para se conectar ao emulador.
 
-1. Instale um cliente SSH no Windows. Uma opção é instalar o [git para Windows](https://git-for-windows.github.io/). O comando `ssh` estará disponível no prompt de comando do **git bash** .
+1. Instale um cliente SSH no Windows. Uma opção é instalar [o Git para Windows](https://git-for-windows.github.io/). O `ssh` comando estará disponível no prompt de comando **Git Bash.**
 
-2. Siga as etapas 1-3 acima para iniciar o emulador, encerre o servidor `adb` no Mac e identifique as portas do emulador.
+2. Siga as etapas 1-3 de cima para `adb` iniciar o emulador, mate o servidor no Mac e identifique as portas do emulador.
 
-3. Execute `ssh` no Windows para configurar o encaminhamento de porta bidirecional entre uma porta local no Windows (`localhost:15555` neste exemplo) e a porta do emulador ímpar na interface de loopback do Mac (`127.0.0.1:5555` neste exemplo):
+3. Execute `ssh` no Windows para configurar o encaminhamento de portas bidirecionais entre uma porta local no Windows (neste`localhost:15555` exemplo) e`127.0.0.1:5555` a porta do emulador numerada ímpar na interface de loopback do Mac (neste exemplo):
 
     ```cmd
     C:\> ssh -L localhost:15555:127.0.0.1:5555 mac-username@ip-address-of-the-mac
     ```
 
-    Substitua `mac-username` pelo nome de usuário do Mac, conforme listado por `whoami`. Substitua `ip-address-of-the-mac` pelo endereço IP do Mac.
+    Substitua com `mac-username` o nome `whoami`de usuário do Mac conforme listado por . Substitua pelo `ip-address-of-the-mac` endereço IP do Mac.
 
 4. Conecte-se ao emulador usando a porta local no Windows:
 
@@ -87,18 +87,18 @@ Se você tiver habilitado _acesso remoto_ no Mac, poderá usar o encaminhamento 
     C:\> adb connect localhost:15555
     ```
 
-    (Observação: uma maneira fácil de obter o acesso de linha de comando para `adb` é por meio de [ **Ferramentas > prompt de comando do ADB** do Android > no Visual Studio](~/cross-platform/troubleshooting/questions/version-logs.md#adb-logcat).)
+    (Nota: uma maneira fácil de `adb` obter acesso à linha de comando é através de [ **ferramentas > Android > Prompt de comando Android Adb** no Visual Studio](~/cross-platform/troubleshooting/questions/version-logs.md#adb-logcat).)
 
-Um pequeno cuidado: se você usar a porta `5555` para a porta local, `adb` irá considerar que o emulador está sendo executado localmente no Windows. Isso não causa problemas no Visual Studio, mas em Visual Studio para Mac ele faz com que o aplicativo saia imediatamente após a inicialização.
+Um pequeno cuidado: se `5555` você usar `adb` a porta para a porta local, pensará que o emulador está sendo executado localmente no Windows. Isso não causa nenhum problema no Visual Studio, mas no Visual Studio para Mac faz com que o aplicativo saia imediatamente após o lançamento.
 
-### <a name="alternate-technique-using-adb--h-is-not-yet-supported"></a>Ainda não há suporte para a técnica alternativa usando o `adb -H`
+### <a name="alternate-technique-using-adb--h-is-not-yet-supported"></a>A técnica `adb -H` alternativa que usa ainda não é suportada
 
-Teoricamente, outra abordagem seria usar a funcionalidade interna do `adb`para se conectar a um `adb` Server em execução em um computador remoto (consulte, por exemplo, [https://stackoverflow.com/a/18551325](https://stackoverflow.com/a/18551325)).
-Mas, no momento, as extensões do Xamarin. Android IDE não fornecem uma maneira de configurar essa opção.
+Em teoria, outra abordagem `adb`seria usar o recurso interno `adb` para se conectar a um [https://stackoverflow.com/a/18551325](https://stackoverflow.com/a/18551325)servidor em execução em uma máquina remota (veja, por exemplo).
+Mas as extensões Xamarin.Android IDE não fornecem atualmente uma maneira de configurar essa opção.
 
 ## <a name="contact-information"></a>Informações de contato
 
-Este documento discute o comportamento atual a partir de março de 2016. A técnica descrita neste documento não faz parte do pacote de testes estável para o Xamarin, portanto, ele pode ser interrompido no futuro.
+Este documento discute o comportamento atual a partir de março de 2016. A técnica descrita neste documento não faz parte da suíte de testes estáveis para Xamarin, por isso pode quebrar no futuro.
 
-Se você observar que a técnica não funciona mais, ou se você notar outros erros no documento, sinta-se à vontade para adicionar à discussão sobre o seguinte thread de Fórum: [http://forums.xamarin.com/discussion/33702/android-emulator-from-host-device-inside-windows-vm](https://forums.xamarin.com/discussion/33702/android-emulator-from-host-device-inside-windows-vm).
+Se você notar que a técnica não funciona mais, ou se você notar outros erros no documento, [http://forums.xamarin.com/discussion/33702/android-emulator-from-host-device-inside-windows-vm](https://forums.xamarin.com/discussion/33702/android-emulator-from-host-device-inside-windows-vm)sinta-se livre para adicionar à discussão sobre o seguinte segmento de fórum: .
 Obrigado!

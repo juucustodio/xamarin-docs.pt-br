@@ -8,25 +8,25 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/09/2018
 ms.openlocfilehash: 5996cfa3c0a18fc186ea862a2b3d7910594e1281
-ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73027018"
 ---
 # <a name="why-cant-my-android-release-build-connect-to-the-internet"></a>Por que meu build de versão do Android não pode se conectar à Internet?
 
 ## <a name="cause"></a>Causa
 
-A causa mais comum desse problema é que a permissão da **Internet** é incluída automaticamente em uma compilação de depuração, mas deve ser definida manualmente para uma compilação de versão. Isso ocorre porque a permissão da Internet é usada para permitir que um depurador se anexe ao processo, conforme descrito para "DebugSymbols" [aqui](~/android/deploy-test/building-apps/build-process.md).
+A causa mais comum deste problema é que a permissão da **INTERNET** é automaticamente incluída em uma compilação de depuração, mas deve ser definida manualmente para uma compilação de versão. Isso ocorre porque a permissão da Internet é usada para permitir que um depurador seja anexado ao processo, conforme descrito para "DebugSymbols" [aqui](~/android/deploy-test/building-apps/build-process.md).
 
 ## <a name="fix"></a>Fix
 
-Para resolver o problema, você pode exigir a permissão de Internet no manifesto do Android. Isso pode ser feito por meio do editor de manifesto ou do SourceCode do manifesto:
+Para resolver o problema, você pode exigir a permissão da Internet no Manifesto Android. Isso pode ser feito através do editor do manifesto ou do código-fonte do manifesto:
 
-- Correção no editor: em seu projeto Android, acesse **Propriedades-> AndroidManifest. xml-> permissões necessárias** e verifique a **Internet**
+- Corrigir no Editor: Em seu projeto Android, vá para **Propriedades -> AndroidManifest.xml -> Permissões Necessárias** e verifique **a Internet**
 
-- Correção em SourceCode: Abra o AndroidManifest em um editor de origem e adicione a marca de permissão dentro das marcas de `<Manifest>`:
+- Corrigir em Código-fonte: Abra o AndroidManifest em um `<Manifest>` editor-fonte e adicione a tag de permissão dentro das tags:
 
     ```xml
     <Manifest>

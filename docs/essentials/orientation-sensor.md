@@ -6,10 +6,10 @@ author: jamesmontemagno
 ms.author: jamont
 ms.date: 11/04/2018
 ms.openlocfilehash: 5423872da7966bc7e4bb88e278d76b709f114158
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "70120709"
 ---
 # <a name="xamarinessentials-orientationsensor"></a>Xamarin.Essentials: OrientationSensor
@@ -17,7 +17,7 @@ ms.locfileid: "70120709"
 A classe **OrientationSensor** permite monitorar a orientação de um dispositivo no espaço tridimensional.
 
 > [!NOTE]
-> Essa classe é usada para determinar a orientação de um dispositivo no espaço tridimensional. Se for necessário determinar se a exibição de vídeo do dispositivo está no modo retrato ou paisagem, use a propriedade `Orientation` do objeto `ScreenMetrics` disponível na classe [`DeviceDisplay`](device-display.md).
+> Essa classe é usada para determinar a orientação de um dispositivo no espaço tridimensional. Se você precisar determinar se a exibição de vídeo do `Orientation` dispositivo está `ScreenMetrics` no modo [`DeviceDisplay`](device-display.md) retrato ou paisagem, use a propriedade do objeto disponível na classe.
 
 ## <a name="get-started"></a>Introdução
 
@@ -74,7 +74,7 @@ public class OrientationSensorTest
 }
 ```
 
-As leituras `OrientationSensor` são apresentadas na forma de um [`Quaternion`](xref:System.Numerics.Quaternion) que descreve a orientação do dispositivo com base em dois sistemas de coordenadas 3D:
+`OrientationSensor`as leituras são relatadas [`Quaternion`](xref:System.Numerics.Quaternion) na forma de um que descreve a orientação do dispositivo com base em dois sistemas de coordenadas 3D:
 
 O dispositivo (geralmente um telefone ou tablet) possui um sistema de coordenadas 3D com os seguintes eixos:
 

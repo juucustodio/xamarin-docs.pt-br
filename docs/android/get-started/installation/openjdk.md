@@ -8,15 +8,15 @@ author: vyedin
 ms.author: vyedin
 ms.date: 07/22/2018
 ms.openlocfilehash: a24edbc10d529878092b474df7f186d14049d5e0
-ms.sourcegitcommit: f8e22a3b0642179bf44a312e9a2fac0fbad8683c
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57239107"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "60955062"
 ---
 # <a name="microsofts-mobile-openjdk-distribution"></a>Distribuição do Mobile OpenJDK da Microsoft
 
-_Este guia descreve as etapas para mudar para uma distribuição interna do OpenJDK. Essa distribuição se destina ao desenvolvimento móvel._
+_Este guia descreve as etapas para mudar para uma distribuição interna do OpenJDK. Esta distribuição destina-se ao desenvolvimento móvel._
 
 ## <a name="overview"></a>Visão geral
 
@@ -59,7 +59,7 @@ Aponte o IDE para o novo JDK:
 
 ![Definir o caminho do JDK para a distribuição do Microsoft Mobile OpenJDK no Windows](openjdk-images/vs.png)
 
-## <a name="known-issues"></a>Problemas Conhecidos
+## <a name="known-issues"></a>Problemas conhecidos
 
 ### <a name="package-openjdkv1regkeyversion18025chipx64-failed-to-install"></a>Falha na instalação do pacote 'OpenJDKV1.RegKey,version=1.8.0.25,chip=x64'
 

@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidortinau
 ms.author: daortin
 ms.date: 02/08/2020
-ms.openlocfilehash: d8a57ac8688a0113ef267ea25fb54cbaaf562957
-ms.sourcegitcommit: 6c60914b380ff679bbffd7790edd4d5e18005d0a
+ms.openlocfilehash: ab83869a4e865d1ce3b1fee83e84ce4e2fd913c6
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80070380"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "80628327"
 ---
 # <a name="xamarinforms-dual-screen-design-patterns"></a>Padrões de design de tela dupla do Xamarin.Forms
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/DualScreenDemos)
+[![Baixar](~/media/shared/download.png) amostra Baixar a amostra](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-dualscreendemos/)
 
 Este guia apresenta nossos padrões de design recomendados para dispositivos de tela dupla com código e amostras para ajudar você a criar interfaces que fornecem experiências de usuário envolventes e úteis.
 
@@ -117,7 +117,7 @@ Esse padrão é ideal para o conteúdo destinado a um layout de duas páginas, c
 </Grid>
 ```
 
-O [`CollectionView`](xref:Xamarin.Forms.CollectionView), com um layout de grade que se divide na largura da dobradiça, é a maneira ideal de oferecer essa experiência de tela dupla.
+O [`CollectionView`](xref:Xamarin.Forms.CollectionView), com um layout de grade que se divide na largura da dobradiça, faz uma abordagem ideal para oferecer essa experiência de tela dupla.
 
 ## <a name="dual-view-pattern"></a>Padrão de exibição dupla
 
@@ -270,5 +270,5 @@ O padrão complementar demonstra como é possível usar a segunda tela para forn
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Exemplos de Tela Dupla (GitHub)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/DualScreenDemos)
+- [DualScreen (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-dualscreendemos/)
 - [Criar aplicativos para dispositivos de tela dupla](index.md)

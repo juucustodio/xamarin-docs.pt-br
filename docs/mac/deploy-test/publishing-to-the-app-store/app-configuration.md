@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 04/12/2017
 ms.openlocfilehash: f008ac42bfffeda2a47ca30aa2991d91f990732f
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "76725032"
 ---
 # <a name="mac-app-configuration"></a>Configuração do aplicativo Mac
@@ -20,7 +20,7 @@ ms.locfileid: "76725032"
 
 Clique com botão direito do mouse no projeto do aplicativo Mac no Visual Studio para Mac e escolha **Opções**.
 
-### <a name="application-settings"></a>Configurações de aplicativo
+### <a name="application-settings"></a>Configurações do aplicativo
 
 Para alterar as configurações de aplicativo de um aplicativo Xamarin.Mac, clique duas vezes no arquivo **Info.plist** no **Painel de Soluções**:
 
@@ -51,6 +51,6 @@ A seção **Build do Mac** da caixa de diálogo **Opções de Projeto** permite 
 ## <a name="related-links"></a>Links relacionados
 
 - [Instalação](/visualstudio/mac/installation/)
-- [Amostra do Hello, Mac](~/mac/get-started/hello-mac.md)
+- [Olá, amostra mac](~/mac/get-started/hello-mac.md)
 - [Distribua aplicativos na Mac App Store](https://developer.apple.com/devcenter/mac/checklist/)
 - [ID de Desenvolvedor e GateKeeper](https://developer.apple.com/developer-id/)

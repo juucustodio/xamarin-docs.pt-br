@@ -7,10 +7,10 @@ ms.author: jamont
 ms.custom: video
 ms.date: 07/10/2019
 ms.openlocfilehash: 251c1b8102327093fcb142ca056743f00618f81b
-ms.sourcegitcommit: f43d5ecafd19cbc5cce39201916a83927a34617a
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/02/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "78214967"
 ---
 # <a name="get-started-with-xamarinessentials"></a>Introdução ao Xamarin.Essentials
@@ -19,7 +19,7 @@ O Xamarin.Essentials oferece uma API única entre plataformas que funciona com q
 
 ## <a name="installation"></a>Instalação
 
-O Xamarin. Essentials está disponível como um pacote NuGet e está incluído em todos os novos projetos no Visual Studio. Ele também pode ser adicionado a qualquer existente usando o Visual Studio com as etapas a seguir.
+Xamarin.Essentials está disponível como um pacote NuGet e está incluído em todos os novos projetos no Visual Studio. Ele também pode ser adicionado a qualquer disponível usando o Visual Studio com as etapas seguintes.
 
 1. Faça o download e instale o [Visual Studio](https://visualstudio.microsoft.com/) com as [Ferramentas do Visual Studio para Xamarin](~/get-started/installation/index.md).
 
@@ -28,7 +28,7 @@ O Xamarin. Essentials está disponível como um pacote NuGet e está incluído e
     > [!IMPORTANT]
     > Se adicionar a um projeto UWP, verifique se o Build 16299 ou superior está definido nas propriedades do projeto.
 
-3. Adicione o pacote NuGet [**Xamarin.Essentials**](https://www.nuget.org/packages/Xamarin.Essentials/) a cada projeto:
+3. Adicione o pacote [**Xamarin.Essentials**](https://www.nuget.org/packages/Xamarin.Essentials/) NuGet a cada projeto:
 
     <!--markdownlint-disable MD023 -->
     # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
@@ -37,7 +37,7 @@ O Xamarin. Essentials está disponível como um pacote NuGet e está incluído e
 
     # <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
-    No painel de Gerenciador de Soluções, clique com o botão direito do mouse no nome do projeto e selecione **adicionar > adicionar pacotes NuGet...** . Pesquise por **Xamarin. Essentials** e instale o pacote em **todos os** projetos, incluindo bibliotecas do Android, Ios e .net Standard.
+    No painel Solution Explorer, clique com o botão direito do mouse no nome do projeto e **selecione Adicionar > Adicionar pacotes NuGet...**. Procure **xamarin.Essentials** e instale o pacote em **TODOS os** projetos, incluindo bibliotecas Android, iOS e .NET Standard.
 
     -----
 
@@ -51,9 +51,9 @@ O Xamarin. Essentials está disponível como um pacote NuGet e está incluído e
 
     # <a name="android"></a>[Android](#tab/android)
 
-    O Xamarin.Essentials é compatível com, no mínimo, a versão 4.4 do Android, correspondente ao nível da API 19, mas, para compilação, a versão de destino do Android deve ser 9.0, que corresponde ao nível da API 28. (No Visual Studio, essas duas versões são definidas na caixa de diálogo Propriedades do projeto para o projeto do Android, na guia manifesto do Android. No Visual Studio para Mac, eles são definidos na caixa de diálogo opções do projeto para o projeto do Android, na guia aplicativo do Android.)
+    O Xamarin.Essentials é compatível com, no mínimo, a versão 4.4 do Android, correspondente ao nível da API 19, mas, para compilação, a versão de destino do Android deve ser 9.0, que corresponde ao nível da API 28. (No Visual Studio, essas duas versões são definidas na caixa de diálogo Project Properties para o projeto Android, na guia Manifesto do Android. No Visual Studio para Mac, eles estão definidos na caixa de diálogo Opções de Projeto para o projeto Android, na guia Aplicativo para Android.)
 
-    O xamarin. Essentials instala a versão 28.0.0.3 das bibliotecas Xamarin. Android. support necessárias. Qualquer outra biblioteca Xamarin. Android. support que seu aplicativo requer também deve ser atualizada para a versão 28.0.0.3 usando o Gerenciador de pacotes NuGet. Todas as bibliotecas Xamarin. Android. support usadas pelo seu aplicativo devem ser as mesmas e devem ter pelo menos a versão 28.0.0.3. Confira a [página de solução de problemas](troubleshooting.md) se tiver problemas para adicionar o NuGet do Xamarin.Essentials ou para atualizar NuGets na sua solução.
+    Xamarin.Essentials instala a versão 28.0.0.3 do Xamarin.Android.Support bibliotecas que ele requer. Quaisquer outras bibliotecas Xamarin.Android.Support que seu aplicativo requer também devem ser atualizadas para a versão 28.0.0.3 usando o gerenciador de pacotes NuGet. Todas as bibliotecas xamarin.android.support usadas pelo seu aplicativo devem ser as mesmas, e devem ser pelo menos a versão 28.0.0.3. Confira a [página de solução de problemas](troubleshooting.md) se tiver problemas para adicionar o NuGet do Xamarin.Essentials ou para atualizar NuGets na sua solução.
 
     No `MainLauncher` do projeto do Android ou qualquer `Activity` que é iniciada, o Xamarin.Essentials deve ser inicializado no método `OnCreate`:
 

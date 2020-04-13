@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 01/29/2016
 ms.openlocfilehash: bfa8c2cdcdcd6305618c0cd8e9cb69bde59b4f0b
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73030200"
 ---
 # <a name="xamarinios-performance"></a>Desempenho do Xamarin.iOS
@@ -21,11 +21,11 @@ O baixo desempenho de aplicativo se apresenta de várias maneiras. Ele pode faze
 Este documento descreve técnicas que podem ser usadas para melhorar o desempenho e o uso de memória em aplicativos Xamarin.iOS.
 
 > [!NOTE]
-> Antes de ler esse artigo, você deve primeiro ler [Desempenho de plataforma cruzada](~/cross-platform/deploy-test/memory-perf-best-practices.md), que discute técnicas que não são específicas a uma plataforma para melhorar o uso de memória e o desempenho de aplicativos criados usando a plataforma Xamarin.
+>  Antes de ler esse artigo, você deve primeiro ler [Desempenho de plataforma cruzada](~/cross-platform/deploy-test/memory-perf-best-practices.md), que discute técnicas específicas sem plataforma para melhorar o uso de memória e o desempenho de aplicativos criados usando a plataforma Xamarin.
 
 ## <a name="avoid-strong-circular-references"></a>Evitar referências circulares fortes
 
-Em algumas situações, é possível criar ciclos de referência fortes que podem impedir que os objetos tenham sua memória recuperada pelo coletor de lixo. Por exemplo, considere o caso no qual uma subclasse derivada de [`NSObject`](xref:Foundation.NSObject), como uma classe que herda de [`UIView`](xref:UIKit.UIView), é adicionada a um contêiner derivado de `NSObject` e é altamente referenciado do Objective-C, conforme mostrado no exemplo de código a seguir:
+Em algumas situações, é possível criar ciclos de referência fortes que podem impedir que os objetos tenham sua memória recuperada pelo coletor de lixo. Por exemplo, considere o [`NSObject`](xref:Foundation.NSObject)caso em que uma subclasse derivada, como uma `NSObject`classe que herda de , é adicionada a um recipiente derivado e é fortemente referenciada a partir de Objective-C, como mostrado no seguinte exemplo de [`UIView`](xref:UIKit.UIView)código:
 
 ```csharp
 class Container : UIView
@@ -56,7 +56,7 @@ container.AddSubview (new MyView (container));
 
 Quando esse código cria a instância `Container`, o objeto C# terá uma referência forte a um objeto Objective-C. Da mesma forma, a instância `MyView` também terá uma referência forte a um objeto Objective-C.
 
-Além disso, a chamada para `container.AddSubview` aumentará a contagem de referência na instância `MyView` não gerenciada. Quando isso acontece, o tempo de execução do Xamarin.iOS cria uma instância `GCHandle` para manter o objeto `MyView` ativo no código gerenciado, uma vez que não há nenhuma garantia de que qualquer objeto gerenciado manterá uma referência a ele. De uma perspectiva de código gerenciado, o objeto `MyView` seria recuperado depois que a chamada [`AddSubview`](xref:UIKit.UIView.AddSubview(UIKit.UIView)) não fosse para o `GCHandle`.
+Além disso, a chamada para `container.AddSubview` aumentará a contagem de referência na instância `MyView` não gerenciada. Quando isso acontece, o runtime do Xamarin.iOS cria uma instância `GCHandle` para manter o objeto `MyView` ativo no código gerenciado, uma vez que não há nenhuma garantia de que qualquer objeto gerenciado manterá uma referência a ele. De uma perspectiva de `MyView` código gerenciada, o [`AddSubview`](xref:UIKit.UIView.AddSubview(UIKit.UIView)) objeto seria recuperado `GCHandle`após a chamada se não fosse pelo .
 
 O objeto `MyView` não gerenciado terá um `GCHandle` apontando para o objeto gerenciado, conhecido como um *link forte*. O objeto gerenciado terá uma referência para a instância `Container`. Por sua vez, a instância `Container` terá uma referência gerenciada ao objeto `MyView`.
 
@@ -101,11 +101,11 @@ container.AddSubview (new MyView (container));
 
 Aqui, o objeto contido não manterá o pai ativo. No entanto, o pai mantém o filho ativo por meio da chamada feita para `container.AddSubView`.
 
-Isso também ocorre em APIs do iOS que usam o padrão delegado ou de fonte de dados, em que uma classe par contém a implementação, por exemplo, ao definir a propriedade [`Delegate`](xref:UIKit.UITableView.Delegate*)
-ou a [`DataSource`](xref:UIKit.UITableView.DataSource*)
-na classe [`UITableView`](xref:UIKit.UITableView).
+Isso também acontece em APIs do iOS que usam o padrão de delegado ou fonte de dados, onde uma classe de pares contém a implementação; por exemplo, ao definir o[`Delegate`](xref:UIKit.UITableView.Delegate*)
+propriedade ou o[`DataSource`](xref:UIKit.UITableView.DataSource*)
+na [`UITableView`](xref:UIKit.UITableView) classe.
 
-No caso das classes que são criadas somente para implementar um protocolo, por exemplo a [`IUITableViewDataSource`](xref:UIKit.IUITableViewDataSource), o que você pode fazer é, em vez de criar uma subclasse, apenas implementar a interface na classe e substituir o método, atribuindo a propriedade `DataSource` à `this`.
+No caso de classes que são criadas puramente para implementar [`IUITableViewDataSource`](xref:UIKit.IUITableViewDataSource)um protocolo, por exemplo, o que você pode fazer é, em vez de criar uma `DataSource` subclasse, você pode simplesmente implementar a interface na classe e substituir o método, e atribuir a propriedade a `this`.
 
 #### <a name="weak-attribute"></a>Atributo fraco
 
@@ -219,7 +219,7 @@ Para obter mais informações, confira [Rules to Avoid Retain Cycles](https://ww
 
 ## <a name="optimize-table-views"></a>Otimizar modos de exibição de tabela
 
-Os usuários desejam obter uma rolagem suave e tempos de carregamento rápidos nas instâncias [`UITableView`](xref:UIKit.UITableView). No entanto, o desempenho de rolagem pode ser prejudicado quando as células tiverem hierarquias do modo de exibição profundamente aninhadas ou quando as células tiverem layouts complexos. Contudo, existem técnicas que podem ser usadas para evitar o baixo desempenho de `UITableView`:
+Os usuários esperam rolagem suave [`UITableView`](xref:UIKit.UITableView) e tempos de carga rápidos para as instâncias. No entanto, o desempenho de rolagem pode ser prejudicado quando as células tiverem hierarquias do modo de exibição profundamente aninhadas ou quando as células tiverem layouts complexos. Contudo, existem técnicas que podem ser usadas para evitar o baixo desempenho de `UITableView`:
 
 - Células de reutilização. Para saber mais, confira [Células de Reutilização](#reuse-cells).
 - Reduzir o número de subexibições.
@@ -228,11 +228,11 @@ Os usuários desejam obter uma rolagem suave e tempos de carregamento rápidos n
 - Torne a célula e quaisquer exibições, opacas.
 - Evite gradientes e a colocação da imagem em escala.
 
-Coletivamente, essas técnicas podem ajudar a manter a rolagem das instâncias [`UITableView`](xref:UIKit.UITableView) suave.
+Coletivamente, essas técnicas [`UITableView`](xref:UIKit.UITableView) podem ajudar a manter as instâncias rolando suavemente.
 
 ### <a name="reuse-cells"></a>Reutilizar células
 
-Ao exibir centenas de linhas em um [`UITableView`](xref:UIKit.UITableView), seria um desperdício de memória criar centenas de objetos [`UITableViewCell`](xref:UIKit.UITableViewCell) quando apenas um pequeno número deles é exibido na tela ao mesmo tempo. Em vez disso, apenas as células visíveis na tela podem ser carregadas na memória, com o **conteúdo** sendo carregado nessas células reutilizadas. Isso impede a instanciação de centenas de objetos adicionais, economizando tempo e memória.
+Ao exibir centenas de linhas [`UITableView`](xref:UIKit.UITableView)em um, seria um desperdício [`UITableViewCell`](xref:UIKit.UITableViewCell) de memória criar centenas de objetos quando apenas um pequeno número deles é exibido na tela ao mesmo tempo. Em vez disso, apenas as células visíveis na tela podem ser carregadas na memória, com o **conteúdo** sendo carregado nessas células reutilizadas. Isso impede a instanciação de centenas de objetos adicionais, economizando tempo e memória.
 
 Portanto, quando uma célula desaparece da tela, seu modo de exibição poderá ser colocado em uma fila para reutilização, conforme mostrado no exemplo de código a seguir:
 
@@ -250,13 +250,13 @@ class MyTableSource : UITableViewSource
 }
 ```
 
-Conforme o usuário rola, o [`UITableView`](xref:UIKit.UITableView) chama a substituição `GetCell` para solicitar novos modos de exibição para mostrar. Essa substituição, então, chama o método [`DequeueReusableCell`](xref:UIKit.UITableView.DequeueReusableCell(Foundation.NSString)) e, se uma célula estiver disponível para reutilização, ele será retornado.
+À medida que o [`UITableView`](xref:UIKit.UITableView) usuário `GetCell` rola, o call the override para solicitar novas exibições para exibir. Essa substituição então [`DequeueReusableCell`](xref:UIKit.UITableView.DequeueReusableCell(Foundation.NSString)) chama o método e se uma célula estiver disponível para reutilização, ela será devolvida.
 
 Para obter mais informações, confira [Reutilização de Célula](~/ios/user-interface/controls/tables/populating-a-table-with-data.md) em [Populating a Table with Data](~/ios/user-interface/controls/tables/populating-a-table-with-data.md) (Preenchendo uma Tabela usando dados).
 
 ## <a name="use-opaque-views"></a>Usar exibições opacas
 
-Certifique-se de que todas as exibições que não apresentem transparência definida tenham sua propriedade [`Opaque`](xref:UIKit.UIView.Opaque) configurada. Isso garantirá que os modos de exibição sejam processados de forma ideal pelo sistema de desenho. Isso é particularmente importante quando uma exibição é inserida em um [`UIScrollView`](xref:UIKit.UIScrollView) ou faz parte de uma animação complexa. Caso contrário, o sistema de desenho alinhará as exibições com outros tipos de conteúdo, o que pode afetar visivelmente no desempenho.
+Certifique-se de que quaisquer pontos [`Opaque`](xref:UIKit.UIView.Opaque) de vista que não tenham transparência definida tenham sua propriedade definida. Isso garantirá que os modos de exibição sejam processados de forma ideal pelo sistema de desenho. Isso é particularmente importante quando uma [`UIScrollView`](xref:UIKit.UIScrollView)visão é incorporada em uma , ou faz parte de uma animação complexa. Caso contrário, o sistema de desenho alinhará as exibições com outros tipos de conteúdo, o que pode afetar visivelmente no desempenho.
 
 ## <a name="avoid-fat-xibs"></a>Evitar XIBs pesados
 
@@ -264,7 +264,7 @@ Embora os XIBs tenham sido amplamente substituídos pelos storyboards, há algum
 
 ## <a name="optimize-image-resources"></a>Otimizar os recursos de imagem
 
-As imagens são alguns dos recursos mais caros que os aplicativos usam e, geralmente, são capturadas em alta resolução. Portanto, ao exibir uma imagem do pacote do aplicativo em um [`UIImageView`](xref:UIKit.UIImageView), certifique-se de que a imagem e o `UIImageView` sejam do mesmo tamanho. A colocação de imagens em escala no tempo de execução pode ser uma operação cara, especialmente se o `UIImageView` for inserido em uma [`UIScrollView`](xref:UIKit.UIScrollView).
+As imagens são alguns dos recursos mais caros que os aplicativos usam e, geralmente, são capturadas em alta resolução. Portanto, ao exibir uma imagem do pacote do [`UIImageView`](xref:UIKit.UIImageView)aplicativo em um `UIImageView` , certifique-se de que a imagem e são de tamanho idêntico. Dimensionar imagens em tempo de execução `UIImageView` pode ser [`UIScrollView`](xref:UIKit.UIScrollView)uma operação cara, especialmente se a estiver embutida em um .
 
 Para obter mais informações, confira [Otimizar os recursos de imagem](~/cross-platform/deploy-test/memory-perf-best-practices.md#optimizeimages) na guia [Desempenho de plataforma cruzada](~/cross-platform/deploy-test/memory-perf-best-practices.md).
 
@@ -278,7 +278,7 @@ Em particular, o simulador não simula de forma alguma a memória ou as restriç
 
 Os jogos tendem a ter loops comprimidos para executar a lógica do jogo e atualizar a tela. As taxas de quadro típicas variam de trinta a sessenta quadros por segundo. Alguns desenvolvedores acreditam que devem atualizar a tela quantas vezes forem possíveis por segundo, combinando a simulação de jogo com as atualizações na tela e podem se sentir motivados a ir além dos sessenta quadros por segundo.
 
-No entanto, o servidor de exibição executa atualizações de tela em um limite de sessenta vezes por segundo. Portanto, a tentativa de atualizar a tela de modo mais rápido do que esse limite pode causar subdivisão e intermitências da tela. É melhor estruturar o código para que as atualizações de tela sejam sincronizadas com a atualização da exibição. Isso pode ser obtido usando a classe [`CoreAnimation.CADisplayLink`](xref:CoreAnimation.CADisplayLink), que é um temporizador adequado para visualização e jogos executados em sessenta quadros por segundo.
+No entanto, o servidor de exibição executa atualizações de tela em um limite de sessenta vezes por segundo. Portanto, a tentativa de atualizar a tela de modo mais rápido do que esse limite pode causar subdivisão e intermitências da tela. É melhor estruturar o código para que as atualizações de tela sejam sincronizadas com a atualização da exibição. Isso pode ser conseguido [`CoreAnimation.CADisplayLink`](xref:CoreAnimation.CADisplayLink) usando a classe, que é um temporizador adequado para visualização e jogos que roda a sessenta quadros por segundo.
 
 ## <a name="avoid-core-animation-transparency"></a>Evitar transparência de animação de núcleo
 

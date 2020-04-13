@@ -7,10 +7,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 02/16/2018
 ms.openlocfilehash: 2d84d149b2eb4194de35fabc69cf44af99c04d25
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "76724120"
 ---
 # <a name="manually-signing-the-apk"></a>Assinando manualmente o APK
@@ -26,7 +26,7 @@ Depois de o aplicativo ser compilado para liberação, o APK deverá ser assinad
 
 A ordem das etapas é importante e depende de qual ferramenta é usada para assinar o APK. Ao usar **apksigner**, é importante primeiro usar **zipalign** no aplicativo e, em seguida, assiná-lo com **apksigner**.  Caso seja necessário usar **jarsigner** para assinar o APK, é importante primeiro assinar o APK e, em seguida, executar **zipalign**.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 Este guia se concentrará no uso do **apksigner** usando as ferramentas de build do SDK de Android v24.0.3 ou superior. Ele pressupõe que um APK já foi compilado.
 
@@ -118,14 +118,14 @@ Quando esse comando for executado, **apksigner** solicitará a senha para o repo
 Consulte a [documentação do Google](https://developer.android.com/studio/command-line/apksigner.html) para obter mais detalhes sobre o uso do **apksigner**.
 
 > [!NOTE]
-> De acordo com o [problema do Google 62696222](https://issuetracker.google.com/issues/62696222), **apksigner** está "ausente" no SDK do Android. A solução para isso é instalar as ferramentas de build do SDK do Android v25.0.3 e usar essa versão do **apksigner**.  
+>  De acordo com o [problema do Google 62696222](https://issuetracker.google.com/issues/62696222), **apksigner** está "ausente" no SDK do Android. A solução para isso é instalar as ferramentas de build do SDK do Android v25.0.3 e usar essa versão do **apksigner**.  
 
 <a name="Sign_the_APK_with_jarsigner" />
 
 ### <a name="sign-the-apk-with-jarsigner"></a>Assinar o APK com jarsigner
 
 > [!WARNING]
-> Esta seção aplica-se somente caso seja necessário assinar o APK com o utilitário **jarsigner**. Os desenvolvedores são incentivados a usar o **apksigner** para assinar o APK.
+>  Esta seção aplica-se somente caso seja necessário assinar o APK com o utilitário **jarsigner**. Os desenvolvedores são incentivados a usar o **apksigner** para assinar o APK.
 
 Essa técnica envolve a assinatura do arquivo APK usando o comando **[jarsigner](https://docs.oracle.com/javase/8/docs/technotes/tools/windows/jarsigner.html)** do SDK do Java.  A ferramenta **jarsigner** é fornecida pelo SDK do Java.
 
@@ -136,7 +136,7 @@ $ jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore xample.keysto
 ```
 
 > [!NOTE]
-> Ao usar **jarsigner**, é importante assinar o APK _primeiro_ e, depois, usar o **zipalign**.  
+>  Ao usar **jarsigner**, é importante assinar o APK _primeiro_ e, depois, usar o **zipalign**.  
 
 ## <a name="related-links"></a>Links relacionados
 

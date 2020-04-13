@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 10/16/2019
 ms.openlocfilehash: 76696c094634c90fc0f9d445b932e04f53bc87c7
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73022517"
 ---
 # <a name="xamarinios-installation"></a>Instalação do Xamarin.iOS
@@ -25,7 +25,7 @@ Para compilar no Xamarin.iOS, é necessário:
 - a versão mais recente do Xcode
 - a versão mínima do macOS exigida pelo Xcode
 
-Para obter os requisitos de versão específicos, consulte as últimas notas de versão do [Xamarin. Ios](/xamarin/ios/release-notes/).
+Para requisitos específicos da versão, consulte as [notas de versão xamarin.iOS mais recentes](/xamarin/ios/release-notes/).
 
 A versão mais recente do Xcode pode ser baixada da [Central de Desenvolvedores do iOS](https://developer.apple.com/devcenter/ios/index.action#downloads) (logon necessário) ou por meio da Mac App Store:
 
@@ -43,5 +43,5 @@ Para obter instruções sobre como instalar o Xamarin.iOS em um computador do Wi
 
 Depois de instalar com êxito o Xamarin.iOS, saiba como provisionar o dispositivo iOS, de modo a desenvolver e testar um aplicativo Xamarin.iOS no dispositivo.
 
-- [Configurar o dispositivo para desenvolvimento](device-provisioning/index.md)
+- [Configurar dispositivo para desenvolvimento](device-provisioning/index.md)
 - [Provisionamento gratuito](~/ios/get-started/installation/device-provisioning/free-provisioning.md)

@@ -1,5 +1,5 @@
 ---
-title: Introdução com autenticação de impressão digital
+title: Começando com autenticação de impressão digital
 ms.prod: xamarin
 ms.assetid: 7BACCB36-8E3E-4E5D-B8EF-56A639839FD2
 ms.technology: xamarin-android
@@ -7,39 +7,39 @@ author: davidortinau
 ms.author: daortin
 ms.date: 08/17/2018
 ms.openlocfilehash: 746a096f93036e63b29bc917826259f88426cead
-ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73020280"
 ---
-# <a name="getting-started-with-fingerprint-authentication"></a>Introdução com autenticação de impressão digital
+# <a name="getting-started-with-fingerprint-authentication"></a>Começando com autenticação de impressão digital
 
-Para começar, vamos primeiro abordar como configurar um projeto Xamarin. Android para que o aplicativo possa usar a autenticação de impressão digital:
+Para começar, vamos primeiro cobrir como configurar um projeto Xamarin.Android para que o aplicativo seja capaz de usar autenticação de impressão digital:
 
-1. Atualize **AndroidManifest. xml** para declarar as permissões que as APIs de impressão digital exigem.
-2. Obtenha uma referência para o `FingerprintManager`.
-3. Verifique se o dispositivo é capaz de fazer a verificação de impressão digital.
+1. Atualize **o AndroidManifest.xml** para declarar as permissões que as APIs de impressão digital requerem.
+2. Obter uma referência `FingerprintManager`ao .
+3. Verifique se o dispositivo é capaz de digitalizar impressões digitais.
 
-## <a name="requesting-permissions-in-the-application-manifest"></a>Solicitando permissões no manifesto do aplicativo
+## <a name="requesting-permissions-in-the-application-manifest"></a>Solicitando permissões no Manifesto de Solicitação
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-Um aplicativo Android deve solicitar a permissão de `USE_FINGERPRINT` no manifesto. A captura de tela a seguir mostra como adicionar essa permissão ao aplicativo no Visual Studio:
+Um aplicativo Android `USE_FINGERPRINT` deve solicitar a permissão no manifesto. A captura de tela a seguir mostra como adicionar essa permissão ao aplicativo no Visual Studio:
 
-[![habilitar o uso de impressão digital\_na tela de manifesto do Android](get-started-images/fingerprint-01-vs.png)](get-started-images/fingerprint-01-vs.png#lightbox) 
+[![Habilitação\_USE FINGERPRINT na tela do Manifesto do Android](get-started-images/fingerprint-01-vs.png)](get-started-images/fingerprint-01-vs.png#lightbox) 
 
 # <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
-Um aplicativo Android deve solicitar a permissão de `USE_FINGERPRINT` no manifesto. A captura de tela a seguir mostra como adicionar essa permissão ao aplicativo no Visual Studio para Mac:
+Um aplicativo Android `USE_FINGERPRINT` deve solicitar a permissão no manifesto. A captura de tela a seguir mostra como adicionar essa permissão ao aplicativo no Visual Studio para Mac:
 
-[![habilitar UseFingerprint na tela do aplicativo Android](get-started-images/fingerprint-01-xs.png)](get-started-images/fingerprint-01-xs.png#lightbox) 
+[![Habilitação do UseFingerprint na tela do aplicativo para Android](get-started-images/fingerprint-01-xs.png)](get-started-images/fingerprint-01-xs.png#lightbox) 
 
 -----
 
-## <a name="getting-an-instance-of-the-fingerprintmanager"></a>Obtendo uma instância do Fingerprintmanager
+## <a name="getting-an-instance-of-the-fingerprintmanager"></a>Obtendo uma instância do Gerenciador de Impressões Digitais
 
-Em seguida, o aplicativo deve obter uma instância do `FingerprintManager` ou da classe `FingerprintManagerCompat`. Para ser compatível com versões mais antigas do Android, um aplicativo Android deve usar a API de compatibilidade encontrada no pacote NuGet do suporte do Android v4. O trecho a seguir demonstra como obter o objeto apropriado do sistema operacional: 
+Em seguida, o aplicativo deve `FingerprintManager` obter `FingerprintManagerCompat` uma instância da classe ou da classe. Para ser compatível com versões mais antigas do Android, um aplicativo Android deve usar a API de compatibilidade encontrada no pacote Android Support v4 NuGet. O trecho a seguir demonstra como obter o objeto apropriado do sistema operacional: 
 
 ```csharp
 // Using the Android Support Library v4
@@ -49,15 +49,15 @@ FingerprintManagerCompat fingerprintManager = FingerprintManagerCompat.From(cont
 FingerprintManager fingerprintManager = context.GetSystemService(Context.FingerprintService) as FingerprintManager;
 ```  
 
-No trecho anterior, o `context` é qualquer `Android.Content.Context`do Android. Normalmente, essa é a atividade que está executando a autenticação.
+No trecho anterior, o `context` é `Android.Content.Context`qualquer Android . Normalmente esta é a Atividade que está realizando a autenticação.
 
-## <a name="checking-for-eligibility"></a>Verificando a qualificação
+## <a name="checking-for-eligibility"></a>Verificando a elegibilidade
 
-Um aplicativo deve executar várias verificações para garantir que seja possível usar a autenticação de impressão digital. No total, há cinco condições que o aplicativo usa para verificar a elegibilidade:  
+Um aplicativo deve realizar várias verificações para garantir que seja possível usar autenticação de impressão digital. No total, existem cinco condições que o aplicativo usa para verificar a elegibilidade:  
 
-**Nível de API 23** &ndash; as APIs de impressão digital exigem o nível de API 23 ou superior. A classe `FingerprintManagerCompat` encapsulará a verificação de nível de API para você. Por esse motivo, é recomendável usar a **biblioteca de suporte do Android v4** e `FingerprintManagerCompat`; Isso considerará uma dessas verificações.
+**API nível 23** &ndash; As APIs de impressão digital requerem nível DePI 23 ou superior. A `FingerprintManagerCompat` classe encerrará a verificação de nível de API para você. Por essa razão, recomenda-se o uso `FingerprintManagerCompat`da Biblioteca de Suporte android **v4** e ; isso vai explicar o um desses cheques.
 
-&ndash; de **hardware** quando o aplicativo é iniciado pela primeira vez, ele deve verificar a presença de um scanner de impressão digital:
+**Hardware** &ndash; Quando o aplicativo é iniciado pela primeira vez, ele deve verificar a presença de um scanner de impressões digitais:
 
 ```csharp
 FingerprintManagerCompat fingerprintManager = FingerprintManagerCompat.From(context);
@@ -67,7 +67,7 @@ if (!fingerprintManager.IsHardwareDetected)
 }
 ```
 
-O **dispositivo é protegido** &ndash; o usuário deve ter o dispositivo protegido com um bloqueio de tela. Se o usuário não tiver protegido o dispositivo com um bloqueio de tela e a segurança for importante para o aplicativo, o usuário deverá ser notificado de que um bloqueio de tela deve ser configurado. O trecho de código a seguir mostra como verificar este requiste:
+**Dispositivo está protegido** &ndash; O usuário deve ter o dispositivo protegido com um bloqueio de tela. Se o usuário não tiver protegido o dispositivo com um bloqueio de tela e a segurança for importante para o aplicativo, então o usuário deve ser notificado de que um bloqueio de tela deve ser configurado. O seguinte trecho de código mostra como verificar este pré-requiste:
 
 ```csharp
 KeyguardManager keyguardManager = (KeyguardManager) GetSystemService(KeyguardService);
@@ -76,7 +76,7 @@ if (!keyguardManager.IsKeyguardSecure)
 }
 ```
 
-**Impressões digitais inscritas** &ndash; o usuário deve ter pelo menos uma impressão digital registrada com o sistema operacional. Essa verificação de permissão deve ocorrer antes de cada tentativa de autenticação:
+**Impressões digitais inscritas** &ndash; O usuário deve ter pelo menos uma impressão digital registrada no sistema operacional. Esta verificação de permissão deve ocorrer antes de cada tentativa de autenticação:
 
 ```csharp
 FingerprintManagerCompat fingerprintManager = FingerprintManagerCompat.From(context);
@@ -87,7 +87,7 @@ if (!fingerprintManager.HasEnrolledFingerprints)
 }
 ```
 
-**Permissões** &ndash; o aplicativo deve solicitar permissão do usuário antes de usar o aplicativo. Para Android 5,0 e inferior, o usuário concede a permissão como uma condição de instalação do aplicativo. O Android 6,0 introduziu um novo modelo de permissão que verifica as permissões em tempo de execução. Este trecho de código é um exemplo de como verificar permissões no Android 6,0:
+**Permissões** &ndash; O aplicativo deve solicitar permissão ao usuário antes de usar o aplicativo. Para android 5.0 e inferior, o usuário concede a permissão como condição para instalar o aplicativo. O Android 6.0 introduziu um novo modelo de permissão que verifica permissões em tempo de execução. Este trecho de código é um exemplo de como verificar permissões no Android 6.0:
 
 ```csharp
 // The context is typically a reference to the current activity.
@@ -103,15 +103,15 @@ else
 }
 ```
 
-A verificação de todas essas condições sempre que o aplicativo oferece opções de autenticação garantirá que o usuário obtenha a melhor experiência do usuário. Alterações ou atualizações em seu dispositivo ou sistema operacional podem afetar a disponibilidade da autenticação de impressão digital. Se você optar por armazenar em cache os resultados de qualquer uma dessas verificações, certifique-se de atender aos cenários de atualização.
+Verificar todas essas condições cada vez que o aplicativo oferece opções de autenticação garantirá que o usuário obtenha a melhor experiência do usuário. Alterações ou upgrades em seu dispositivo ou sistema operacional podem afetar a disponibilidade de autenticação de impressão digital. Se você optar por armazenar os resultados de qualquer uma dessas verificações, certifique-se de atender a cenários de upgrade.
 
-Para obter mais informações sobre como solicitar permissões no Android 6,0, consulte o guia do Android [solicitando permissões em tempo de execução](https://developer.android.com/training/permissions/requesting.html).
+Para obter mais informações sobre como solicitar permissões no Android 6.0, consulte o guia do Android [solicitando permissões em Run-Time](https://developer.android.com/training/permissions/requesting.html).
 
 ## <a name="related-links"></a>Links relacionados
 
 - [Contexto](xref:Android.Content.Context)
-- [Keyguardmanager](xref:Android.App.KeyguardManager)
+- [KeyguardManager](xref:Android.App.KeyguardManager)
 - [ContextCompat](https://developer.android.com/reference/android/support/v4/content/ContextCompat)
-- [Impressão digital](https://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.html)
+- [Gerenciador de impressões digitais](https://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.html)
 - [FingerprintManagerCompat](https://developer.android.com/reference/android/support/v4/hardware/fingerprint/FingerprintManagerCompat.html)
 - [Solicitando permissões em tempo de execução](https://developer.android.com/training/permissions/requesting.html)

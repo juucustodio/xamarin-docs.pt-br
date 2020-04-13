@@ -6,13 +6,13 @@ author: jamesmontemagno
 ms.author: jamont
 ms.date: 01/06/2020
 ms.openlocfilehash: c07e0c7d9645c22f0d70c75fd7d8dffdec8cde04
-ms.sourcegitcommit: fec87846fcb262fc8b79774a395908c8c8fc8f5b
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/21/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "77545039"
 ---
-# <a name="xamarinessentials-unit-converters"></a>Xamarin.Essentials: Conversores de unidade
+# <a name="xamarinessentials-unit-converters"></a>Xamarin.Essentials: Conversores de unidades
 
 A classe **UnitConverters** fornece vários conversores de unidade para ajudar os desenvolvedores ao usar o Xamarin.Essentials.
 
@@ -43,8 +43,8 @@ Veja esta lista das conversões disponíveis:
 - MilesToMeters
 - MilesToKilometers
 - KilometersToMiles
-- MetersToInternationalFeet
-- InternationalFeetToMeters
+- Metros de metrosinternacionais
+- Medidores de pés internacionais
 - DegreesToRadians
 - RadiansToDegrees
 - DegreesPerSecondToRadiansPerSecond
@@ -62,9 +62,9 @@ Veja esta lista das conversões disponíveis:
 - CoordinatesToMiles
 - CoordinatesToKilometers
 - KilogramsToPounds
-- PoundsToKilograms
-- StonesToPounds
-- PoundsToStones
+- LibrasTokilograms
+- StonestoLibras
+- PoundsTostones
 
 ## <a name="api"></a>API
 

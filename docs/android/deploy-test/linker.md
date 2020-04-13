@@ -7,10 +7,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/30/2018
 ms.openlocfilehash: 729dede97a9b153738ca72af499d4d1e9d77fae0
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73021452"
 ---
 # <a name="linking-on-android"></a>Vinculação no Android
@@ -26,7 +26,7 @@ Por exemplo, a amostra [Hello, Android](https://docs.microsoft.com/samples/xamar
 
 A vinculação resulta em um pacote que tem 30% do tamanho do pacote original (desvinculado) na 1.2.0 e 18% do pacote desvinculado na 4.0.1.
 
-## <a name="control"></a>Controle
+## <a name="control"></a>Control
 
 A vinculação se baseia em *análise estática*. Consequentemente, tudo o que depende do ambiente de runtime não será detectado:
 
@@ -48,7 +48,7 @@ public class MyActivity {
 }
 ```
 
-### <a name="linker-behavior"></a>Comportamento do Linker
+### <a name="linker-behavior"></a>Comportamento do vinculador
 
 O mecanismo principal para controlar o vinculador é a lista suspensa **Comportamento do vinculador** (*Vinculação* no Visual Studio) dentro da caixa de diálogo **Opções de Projeto**. Há três opções:
 
@@ -178,8 +178,8 @@ class MyActivity {
 
 ### <a name="linkdescription"></a>LinkDescription
 
-A [`@(LinkDescription)`](~/android/deploy-test/building-apps/build-process.md)
-**Ação de build** pode ser usada em arquivos que podem conter um [arquivo de configuração de vinculador personalizado](~/cross-platform/deploy-test/linker.md).
+A [`@(LinkDescription)`](~/android/deploy-test/building-apps/build-process.md) 
+ **ação Build** pode ser usada em arquivos que podem conter um arquivo de [configuração de linker personalizado](~/cross-platform/deploy-test/linker.md).
 arquivo. Arquivos de configuração de vinculador personalizados podem ser necessários para preservar membros `internal` ou `private` que precisam ser preservados.
 
 ### <a name="custom-attributes"></a>Atributos personalizados
@@ -209,5 +209,5 @@ Quando um assembly é vinculado, os seguintes tipos de atributo personalizados s
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Configuração personalizada do Linker](~/cross-platform/deploy-test/linker.md)
+- [Configuração de linker personalizado](~/cross-platform/deploy-test/linker.md)
 - [Vinculação no iOS](~/ios/deploy-test/linker.md)

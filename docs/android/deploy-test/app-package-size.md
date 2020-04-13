@@ -8,17 +8,17 @@ author: davidortinau
 ms.author: daortin
 ms.date: 02/05/2018
 ms.openlocfilehash: ff1bc56ab1cf02e9e5354da94bebd0661da34bc5
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73028166"
 ---
 # <a name="application-package-size"></a>Tamanho dos pacotes de aplicativos
 
 _Este artigo examina as partes que constituem um pacote do aplicativo do Xamarin.Android e as estratégias associadas que podem ser usadas para a implantação eficiente do pacote durante a depuração e as etapas de lançamento de desenvolvimento._
 
-## <a name="overview"></a>Visão Geral
+## <a name="overview"></a>Visão geral
 
 Xamarin.Android usa uma variedade de mecanismos para minimizar o tamanho do pacote, mas mantendo uma depuração e um processo de implantação eficientes. Neste artigo, examinamos a versão do Xamarin.Android e o fluxo de trabalho de implantação de depuração, bem como o modo como a plataforma do Xamarin.Android assegura o build e lançamento de pacotes de aplicativos pequenos.
 
@@ -26,13 +26,13 @@ Xamarin.Android usa uma variedade de mecanismos para minimizar o tamanho do paco
 
 Para enviar um aplicativo totalmente independente, o pacote deve incluir o aplicativo, as bibliotecas associadas, o conteúdo, o runtime Mono e os assemblies necessários da biblioteca BCL (biblioteca de classes base). Por exemplo, se usássemos o modelo "Hello World" padrão, o conteúdo de um build de pacote completo teria esta aparência:
 
-[![Tamanho do pacote antes de vinculador](app-package-size-images/hello-world-package-size-before-linker.png)](app-package-size-images/hello-world-package-size-before-linker.png#lightbox)
+[![Tamanho do pacote antes do linker](app-package-size-images/hello-world-package-size-before-linker.png)](app-package-size-images/hello-world-package-size-before-linker.png#lightbox)
 
 15,8 MB é um tamanho de download maior do que gostaríamos. O problema são as bibliotecas BCL, pois elas incluem mscorlib, System e Mono.Android, que fornecem muitos dos componentes necessários para executar o aplicativo. No entanto, elas também fornecem funcionalidades que você pode não estar usando em seu aplicativo, portanto, pode ser preferível excluir esses componentes.
 
 Quando compilamos um aplicativo para distribuição, executamos um processo conhecido como vinculação, que examina o aplicativo e remove qualquer código que não é usado diretamente. Esse processo é semelhante à funcionalidade que a [Coleta de Lixo](~/android/internals/garbage-collection.md) fornece para memória alocada no heap. Mas, em vez de operar em objetos, a vinculação opera em seu código. Por exemplo, há um namespace inteiro em System.dll para enviar e receber email, mas se seu aplicativo não usa essa funcionalidade, o código está apenas ocupando espaço. Depois de executar o vinculador no aplicativo Olá, Mundo, nosso pacote agora está parecido com isto:
 
-[![Tamanho do pacote depois do vinculador](app-package-size-images/hello-world-package-size-after-linker.png)](app-package-size-images/hello-world-package-size-after-linker.png#lightbox)
+[![Tamanho do pacote após linker](app-package-size-images/hello-world-package-size-after-linker.png)](app-package-size-images/hello-world-package-size-after-linker.png#lightbox)
 
 Como podemos ver, isso remove uma quantidade significativa de BCL que não estava sendo usada. Observe que o tamanho final da BCL depende do que o aplicativo realmente usa. Por exemplo, se olhamos um aplicativo de exemplo mais significativo chamado ApiDemo, podemos ver que o componente de BCL aumentou de tamanho, porque a ApiDemo usa uma parte maior da BCL do que o Hello, World:
 
@@ -46,9 +46,9 @@ As coisas são tratadas de forma ligeiramente diferente para builds de depuraç�
 
 O Android é relativamente lento para copiar e instalar um pacote, por isso, queremos que o tamanho do pacote seja o menor possível. Conforme abordado acima, uma maneira possível para minimizar o tamanho do pacote é por meio do vinculador. A vinculação é lenta, no entanto, e geralmente queremos implantar apenas as partes do aplicativo que foram alteradas desde a última implantação. Para fazer isso, separamos os componentes principais do Xamarin.Android do nosso aplicativo.
 
-Na primeira vez que depuramos no dispositivo, copiamos dois pacotes grandes chamados *tempo de execução compartilhado* e *plataforma compartilhada*. O runtime compartilhado contém o runtime Mono e a BCL, enquanto a plataforma compartilhada contém os assemblies específicos de nível da API do Android:
+Na primeira vez que depuramos no dispositivo, copiamos dois pacotes grandes chamados *runtime compartilhado* e *plataforma compartilhada*. O runtime compartilhado contém o runtime Mono e a BCL, enquanto a plataforma compartilhada contém os assemblies específicos de nível da API do Android:
 
-[![Tamanho de pacote de tempo de execução compartilhado](app-package-size-images/shared-runtime-package-size.png)](app-package-size-images/shared-runtime-package-size.png#lightbox)
+[![Tamanho do pacote de tempo de execução compartilhado](app-package-size-images/shared-runtime-package-size.png)](app-package-size-images/shared-runtime-package-size.png#lightbox)
 
 A ação de copiar estes componentes principais é realizada apenas uma vez, já que usa uma grande quantidade de tempo, mas permite que eles sejam usados por quaisquer aplicativos subsequentes em execução no modo de depuração. Por fim, podemos copiar o aplicativo propriamente dito, que é pequeno e rápido:
 
@@ -66,7 +66,7 @@ Para habilitar a *Implantação de Assembly Rápida*, faça o seguinte:
 
     ![Opções do Projeto Build do Android](app-package-size-images/fastdev0.png)
 
-3. Marque as caixas de seleção **Usar tempo de execução Mono compartilhado** e **Implantação de Assembly Rápida**:  
+3. Marque as caixas de seleção **Usar runtime Mono compartilhado** e **Implantação de Assembly Rápida**:  
 
     ![Caixas de seleção selecionadas na guia Empacotamento](app-package-size-images/fastdev.png)
 

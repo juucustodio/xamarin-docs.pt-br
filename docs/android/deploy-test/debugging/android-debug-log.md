@@ -8,15 +8,15 @@ author: davidortinau
 ms.author: daortin
 ms.date: 06/22/2018
 ms.openlocfilehash: 39ee1039104052b8799debf19f09439f57a1791d
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73028090"
 ---
 # <a name="android-debug-log"></a>Log de depuração do Android
 
-Um truque muito comum que os desenvolvedores usam para depurar seus aplicativos é fazer chamadas para o `Console.WriteLine`. No entanto, em uma plataforma móvel como Android não há console. Dispositivos Android fornecem um log que você pode utilizar ao gravar aplicativos. Ele às vezes é chamado de _logcat_, devido ao comando digitado para recuperá-lo. Use a ferramenta **Log de Depuração** para visualizar os dados registrados.
+Um truque muito comum que os desenvolvedores usam para depurar seus aplicativos é fazer chamadas para o `Console.WriteLine`. No entanto, em uma plataforma móvel como Android não há console. Dispositivos Android fornecem um log que você pode utilizar ao gravar aplicativos. Isso às vezes é referido como _logcat_ devido ao comando que você digita para recuperá-lo. Use a ferramenta **Log de Depuração** para visualizar os dados registrados.
 
 ## <a name="android-debug-log-overview"></a>Visão geral do log de depuração do Android
 
@@ -32,11 +32,11 @@ O **Log de Depuração** não exibe mensagens de log que são geradas durante o 
 
 ## <a name="accessing-the-debug-log-from-visual-studio"></a>Acessar o Log de Depuração do Visual Studio
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 Para abrir a ferramenta **Log do Dispositivo**, clique no ícone **Log do Dispositivo (logcat)** na barra de ferramentas:
 
-[![Localização da ferramenta Log do Dispositivo na barra de ferramentas](android-debug-log-images/vswin-01-logcat-sml.png)](android-debug-log-images/vswin-01-logcat.png#lightbox)
+[![Localização da ferramenta Registro de Dispositivos na barra de ferramentas](android-debug-log-images/vswin-01-logcat-sml.png)](android-debug-log-images/vswin-01-logcat.png#lightbox)
 
 Como alternativa, inicie a ferramenta **Log do Dispositivo** por meio de uma das seguintes seleções de menu:
 
@@ -45,9 +45,9 @@ Como alternativa, inicie a ferramenta **Log do Dispositivo** por meio de uma das
 
 A captura de tela a seguir ilustra as várias partes da janela **Ferramenta de Depuração**:
 
-[![Partes da janela Ferramenta de Depuração](android-debug-log-images/vswin-03-features-sml.png)](android-debug-log-images/vswin-03-features.png#lightbox)
+[![Partes da janela Debug Tool](android-debug-log-images/vswin-03-features-sml.png)](android-debug-log-images/vswin-03-features.png#lightbox)
 
-- **Seletor de Dispositivo** &ndash; Seleciona qual dispositivo físico ou emulador em execução monitorar.
+- **Seletor** &ndash; de dispositivos Seleciona qual dispositivo físico ou emulador em execução para monitorar.
 
 - **Entradas de Log** &ndash; Uma tabela de mensagens de log de logcat.
 
@@ -61,21 +61,21 @@ A captura de tela a seguir ilustra as várias partes da janela **Ferramenta de D
 
 Quando a janela da ferramenta **Log de Depuração** for exibida, use o menu suspenso do dispositivo para escolher o dispositivo Android a ser monitorado:
 
-[![Localização do Seletor de Dispositivo](android-debug-log-images/vswin-02-devices-combo-sml.png)](android-debug-log-images/vswin-02-devices-combo.png#lightbox)
+[![Localização do Seletor de Dispositivos](android-debug-log-images/vswin-02-devices-combo-sml.png)](android-debug-log-images/vswin-02-devices-combo.png#lightbox)
 
 Após o dispositivo ser selecionado, a ferramenta **Log de Dispositivo** adiciona automaticamente entradas de log de um aplicativo em execução &ndash; essas entradas de log são mostradas na tabela de entradas de log. Alternar entre dispositivos interrompe e inicia o registro de dispositivo. Observe que um projeto Android deve ser carregado antes que qualquer dispositivo apareça no seletor de dispositivos. Se o dispositivo não aparecer no seletor de dispositivos, verifique se ele está disponível no menu suspenso do dispositivo do Visual Studio ao lado do botão **Iniciar**.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
 Para abrir a ferramenta **Log de Dispositivo**, clique em **Exibir > Pads > Log de Dispositivo**:
 
-[![Localização do item de menu Log de Dispositivo](android-debug-log-images/vsmac-01-logcat-sml.png)](android-debug-log-images/vsmac-01-logcat.png#lightbox)
+[![Localização do item do menu Registro de Dispositivos](android-debug-log-images/vsmac-01-logcat-sml.png)](android-debug-log-images/vsmac-01-logcat.png#lightbox)
 
 A captura de tela a seguir ilustra as várias partes da janela **Ferramenta de Depuração**:
 
-[![Recursos da janela Ferramenta de Depuração](android-debug-log-images/vsmac-03-features-sml.png)](android-debug-log-images/vsmac-03-features.png#lightbox)
+[![Características da janela Ferramenta de depuração](android-debug-log-images/vsmac-03-features-sml.png)](android-debug-log-images/vsmac-03-features.png#lightbox)
 
-- **Seletor de Dispositivo** &ndash; Seleciona qual dispositivo físico ou emulador em execução monitorar.
+- **Seletor** &ndash; de dispositivos Seleciona qual dispositivo físico ou emulador em execução para monitorar.
 
 - **Entradas de Log** &ndash; Uma tabela de mensagens de log de logcat.
 
@@ -95,7 +95,7 @@ A captura de tela a seguir ilustra as várias partes da janela **Ferramenta de D
 
 Quando a janela da ferramenta Log de Depuração for exibida, use o menu suspenso do dispositivo para escolher o dispositivo Android a ser monitorado:
 
-[![Localização do Seletor de Dispositivo](android-debug-log-images/vsmac-02-devices-combo-sml.png)](android-debug-log-images/vsmac-02-devices-combo.png#lightbox)
+[![Localização do seletor de dispositivos](android-debug-log-images/vsmac-02-devices-combo-sml.png)](android-debug-log-images/vsmac-02-devices-combo.png#lightbox)
 
 Após o dispositivo ser selecionado, a ferramenta **Log de Dispositivo** adiciona automaticamente entradas de log de um aplicativo em execução &ndash; essas entradas de log são mostradas na tabela de entradas de log. Alternar entre dispositivos interrompe e inicia o registro de dispositivo. Observe que um projeto Android deve ser carregado antes que qualquer dispositivo apareça no seletor de dispositivos. Se o dispositivo não aparecer no seletor de dispositivos, verifique se ele está disponível no menu suspenso do dispositivo do Visual Studio ao lado do botão **Iniciar**.
 
@@ -103,7 +103,7 @@ Após o dispositivo ser selecionado, a ferramenta **Log de Dispositivo** adicion
 
 ## <a name="accessing-from-the-command-line"></a>Acessando da Linha de Comando
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 Outra opção é exibir o log de depuração por meio da linha de comando. Abra uma janela do prompt de comando e navegue até a pasta de ferramentas da plataforma do SDK do Android (normalmente, a pasta de ferramentas da plataforma SDK está localizada em **C:\\Arquivos de Programas (x86)\\Android\\android-sdk\\platform-tools**).
 
@@ -113,7 +113,7 @@ Se apenas um único dispositivo (dispositivo físico ou emulador) estiver conect
 $ adb logcat
 ```
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
 Outra opção é exibir o log de depuração por meio da linha de comando. Abra uma janela do Terminal e navegue até a pasta de ferramentas de plataforma do Android SDK (normalmente, a pasta de ferramentas de plataforma do SDK está localizada em **/Users/username/Library/Developer/Xamarin/android-sdk-macosx/platform-tools**).
 

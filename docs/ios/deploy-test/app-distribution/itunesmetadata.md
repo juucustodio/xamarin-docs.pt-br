@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
 ms.openlocfilehash: 63a5ed357a903700ea89d858bcde9798ddf97942
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "76724614"
 ---
 # <a name="the-itunesmetadataplist-file-in-xamarinios-apps"></a>O arquivo iTunesMetadata.plist em aplicativos Xamarin.iOS
@@ -284,7 +284,7 @@ As chaves a seguir são incluídas em todos os arquivos `iTunesMetadata.plist` n
 
 ## <a name="creating-an-itunesmetadataplist-file"></a>Criando um Arquivo iTunesMetadata.plist
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
  Ao trabalhar com um arquivo `iTunesMetadata.plist` no Visual Studio para Mac, você tem duas opções:
 
@@ -297,15 +297,15 @@ As chaves a seguir são incluídas em todos os arquivos `iTunesMetadata.plist` n
 
 Faça o seguinte:
 
-1. No **Gerenciador de Soluções**, clique com o botão direito do mouse no arquivo de projeto Xamarin.iOS e selecione **Adicionar** > **Novo Arquivo...**
-2. Na caixa de diálogo Novo Arquivo, selecione **iOS** > **Lista de Propriedades**:
+1. No **Gerenciador de Soluções**, clique com o botão direito do mouse no arquivo de projeto Xamarin.iOS e selecione **Adicionar** > **Novo Arquivo... **
+2. Na caixa de diálogo novo arquivo, selecione**lista de propriedades do** **iOS:** > 
 
     ![](itunesmetadata-images/image01.png "Select iOS Property List")
 3. Digite `iTunesMetadata` para o **Nome** e clique no botão **Novo**.
 4. Clique duas vezes no arquivo `iTunesMetadata.plist` no **Gerenciador de Soluções** para abri-lo para edição:
 
     ![](itunesmetadata-images/image02.png "The iTunesMetadata.plist editor")
-5. Clique no **+** verde para criar uma nova entrada e digite `UIRequiredDeviceCapabilities` como o nome da chave:
+5. Clique no **+** verde para criar `UIRequiredDeviceCapabilities` uma nova entrada e digite como o nome-chave:
 
     ![](itunesmetadata-images/image03.png "Create a new entry and enter UIRequiredDeviceCapabilities as the key name")
 6. Clique no tipo de valor da **Cadeia de caracteres** e selecione **Dicionário** na lista pop-up:
@@ -332,11 +332,11 @@ Faça o seguinte:
 2. Copie o conteúdo de exemplo da seção [O Conteúdo do iTunesMetadata.plist](#iTunesMetadata_contents) acima.
 3. Cole o conteúdo no arquivo e edite-o conforme necessário.
 4. Salve o arquivo e retorne ao Visual Studio para Mac.
-5. No **Gerenciador de Soluções**, clique com o botão direito do mouse no arquivo de projeto Xamarin.iOS e selecione **Adicionar** > **Arquivos Existentes...** .
+5. No **Gerenciador de Soluções**, clique com o botão direito do mouse no arquivo de projeto Xamarin.iOS e selecione **Adicionar** > **Arquivos Existentes...**.
 6. Na caixa de diálogo Abrir Arquivo, selecione o arquivo `iTunesMetadata.plist` que foi criado acima e clique no botão **OK**.
 7. Deixe a **Ação de Build** desse arquivo definida como **Nenhuma**.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 O plug-in do Xamarin para o Visual Studio dá suporte apenas para um editor visual para os arquivos `Info.plist` e `Entitlement.plist`, portanto você precisará criar seu arquivo `iTunesMetadata.plist` em um editor de texto padrão e incluí-lo manualmente no seu projeto Xamarin.iOS.
 
@@ -346,7 +346,7 @@ Faça o seguinte:
 2. Copie o conteúdo de exemplo da seção [O Conteúdo do iTunesMetadata.plist](#iTunesMetadata_contents) acima.
 3. Cole o conteúdo no arquivo e edite-o conforme necessário.
 4. Salve o arquivo e retorne ao Visual Studio.
-5. No **Gerenciador de Soluções**, clique com o botão direito do mouse no arquivo de projeto Xamarin.iOS e selecione **Adicionar** > **Arquivos Existentes...** .
+5. No **Gerenciador de Soluções**, clique com o botão direito do mouse no arquivo de projeto Xamarin.iOS e selecione **Adicionar** > **Arquivos Existentes...**.
 6. Na caixa de diálogo Abrir Arquivo, selecione o arquivo `iTunesMetadata.plist` que você criou anteriormente e clique no botão **Abrir**.
 7. Deixe a **Ação de Build** desse arquivo definida como **Nenhuma**.
 
@@ -361,9 +361,9 @@ Esse artigo abordou o arquivo `iTunesMetadata.plist` que pode ser usado para inf
 ## <a name="related-links"></a>Links relacionados
 
 - [Distribuição da App Store](~/ios/deploy-test/app-distribution/app-store-distribution/index.md)
-- [Como configurar um aplicativo no iTunes Connect](~/ios/deploy-test/app-distribution/app-store-distribution/itunesconnect.md)
+- [Configurando um aplicativo no iTunes Connect](~/ios/deploy-test/app-distribution/app-store-distribution/itunesconnect.md)
 - [Publicando na App Store](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md)
 - [Distribuição interna](~/ios/deploy-test/app-distribution/in-house-distribution.md)
 - [Distribuição Ad Hoc](~/ios/deploy-test/app-distribution/ad-hoc-distribution.md)
-- [Suporte a IPA](~/ios/deploy-test/app-distribution/ipa-support.md)
+- [Suporte ipa](~/ios/deploy-test/app-distribution/ipa-support.md)
 - [Solução de problemas](~/ios/deploy-test/troubleshooting.md)

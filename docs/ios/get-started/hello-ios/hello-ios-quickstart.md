@@ -10,10 +10,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 10/05/2018
 ms.openlocfilehash: 5dcc37730008e6e39b96128bc1368f022daa2d06
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73023004"
 ---
 # <a name="hello-ios--quickstart"></a>Olá, iOS – Guia de Início Rápido
@@ -64,11 +64,11 @@ Este passo a passo descreve como criar um aplicativo chamado Phoneword que conve
 
     ![](hello-ios-quickstart-images/image3new.png "iOS solution")
 
-2. Na **caixa de diálogo Nova Solução**, escolha o modelo **iOS > Aplicativo > Aplicativo de Exibição Única**, garantindo que C# esteja selecionado. Clique em **Avançar**:
+2. Na **caixa de diálogo Nova Solução**, escolha o modelo **iOS > Aplicativo > Aplicativo de Exibição Única**, garantindo que C# esteja selecionado. Clique **em Next**:
 
     ![](hello-ios-quickstart-images/image4new.png "Choose Single View Application")
 
-3. Configure o aplicativo. Dê a ele o **Nome** `Phoneword_iOS` e deixe o resto como padrão. Clique em **Avançar**:
+3. Configure o aplicativo. Dê a ele o **Nome** `Phoneword_iOS` e deixe o resto como padrão. Clique **em Next**:
 
     ![](hello-ios-quickstart-images/image5new.png "Enter the app name")
 
@@ -82,7 +82,7 @@ Este passo a passo descreve como criar um aplicativo chamado Phoneword que conve
 
     ![](hello-ios-quickstart-images/image7new.png "The iOS Designer")
 
-    Observe que as _classes de tamanho_ estão habilitadas por padrão. Consulte o guia [Storyboards Unificados](~/ios/user-interface/storyboards/unified-storyboards.md) para saber mais sobre elas.
+    Observe que _as classes de tamanho_ estão habilitadas por padrão. Consulte o guia [Storyboards Unificados](~/ios/user-interface/storyboards/unified-storyboards.md) para saber mais sobre elas.
 
 7. No **Painel de Caixa de Ferramentas**, digite "rótulo" na barra de pesquisa e arraste um **Rótulo** para a superfície de design (a área no centro):
 
@@ -99,7 +99,7 @@ Este passo a passo descreve como criar um aplicativo chamado Phoneword que conve
 
     ![](hello-ios-quickstart-images/image10.png "Set the label to Enter a Phoneword")
 
-10. Pesquise “campo de texto” dentro da Caixa de Ferramentas e arraste um **Campo de Texto** da **Caixa de Ferramentas** para a superfície de design e coloque-o no **Rótulo**. Ajuste a largura até o **Campo de Texto** ter a mesma largura que o **Rótulo**:
+10. Pesquise “campo de texto” dentro da Caixa de Ferramentas e arraste um **Campo de Texto** da **Caixa de Ferramentas** para a superfície de design e coloque-o no **Rótulo**. Ajuste a largura até que o **campo de texto esteja** na mesma largura que o **rótulo**:
 
     ![](hello-ios-quickstart-images/image12new.png "Make the Text Field the same width as the Label")
 
@@ -107,19 +107,19 @@ Este passo a passo descreve como criar um aplicativo chamado Phoneword que conve
 
     ![](hello-ios-quickstart-images/image13new.png "Change the Title property to 1-855-XAMARIN")
 
-12. Arraste um **Botão** da **Caixa de Ferramentas** para a superfície de design e coloque-o no **Campo de Texto**. Ajuste a largura de modo que o **botão** seja tão largo quanto o **Campo de Texto** e o **Rótulo**:
+12. Arraste um **Botão** da **Caixa de Ferramentas** para a superfície de design e coloque-o no **Campo de Texto**. Ajuste a largura para que o **botão** seja tão largo quanto o **campo de texto** e o **rótulo:**
 
     ![](hello-ios-quickstart-images/image14new.png "Adjust the width so the Button is as wide as the Text Field and Label")
 
-13. Com o **Botão** selecionado na superfície de design, altere a propriedade **Nome** na seção **Identidade** do **Painel de Propriedades** para `TranslateButton`. Altere a propriedade **Título** “Traduzir”:
+13. Com o **Botão** selecionado na superfície de design, altere a propriedade **Nome** na seção **Identidade** do **Painel de Propriedades** para `TranslateButton`. Alterar a propriedade **Título** para "Traduzir":
 
     ![](hello-ios-quickstart-images/image15new.png "Change the Title property to Translate")
 
-14. Repita as duas etapas acima e arraste um **Botão** de **Caixa de Ferramentas** para a superfície de design e coloque-o sob o primeiro **Botão**. Ajuste a largura para que o **Botão** tenha a mesma largura que o primeiro **Botão**:
+14. Repita as duas etapas acima e arraste um **Botão** de **Caixa de Ferramentas** para a superfície de design e coloque-o sob o primeiro **Botão**. Ajuste a largura para que o **botão** seja tão largo quanto o primeiro **botão:**
 
     ![](hello-ios-quickstart-images/image16new.png "Adjust the width so the Button is as wide as the first Button")
 
-15. Com o segundo **Botão** selecionado na superfície de design, altere a propriedade **Nome** na seção **Identidade** do **Painel de Propriedades** para `CallButton`. Alterar a propriedade **Título** para “Chamada”:
+15. Com o segundo **Botão** selecionado na superfície de design, altere a propriedade **Nome** na seção **Identidade** do **Painel de Propriedades** para `CallButton`. Alterar a propriedade **Título** para "Chamar":
 
     ![](hello-ios-quickstart-images/image17new.png "Change the Title property to Call")
 
@@ -246,7 +246,7 @@ Este passo a passo descreve como criar um aplicativo chamado Phoneword que conve
         };
     ```
 
-22. Salve as alterações e, em seguida, compile o aplicativo escolhendo **compilar > compilar tudo** ou pressionar **⌘ + B**.  Se o aplicativo for compilado, uma mensagem de êxito aparecerá na parte superior do IDE:
+22. Salve as alterações e, em seguida, construa o aplicativo escolhendo **Build > Build All** ou pressionando + **B**.  Se o aplicativo for compilado, uma mensagem de sucesso aparecerá na parte superior do IDE:
 
     ![](hello-ios-quickstart-images/image21.png "A success message will appear at the top of the IDE")
 
@@ -284,13 +284,13 @@ Este passo a passo descreve como criar um aplicativo chamado Phoneword que conve
 
     ![](hello-ios-quickstart-images/image001-.png "The Start screen")
 
-    Crie uma solução Xamarin.iOS selecionando **Arquivo > Novo > Projeto... > Visual C# > iPhone e iPad > Aplicativo iOS (Xamarin)** :
+    Crie uma solução Xamarin.iOS selecionando **Arquivo > Novo > Projeto... > Visual C# > iPhone e iPad > Aplicativo iOS (Xamarin)**:
 
-    ![Selecionar tipo de projeto do aplicativo iOS (Xamarin)](hello-ios-quickstart-images/image002.w157.png "Selecionar tipo de projeto do aplicativo iOS (Xamarin)")
+    ![Selecione o tipo de projeto do aplicativo iOS (Xamarin)](hello-ios-quickstart-images/image002.w157.png "Selecione o tipo de projeto do aplicativo iOS (Xamarin)")
 
     Na próxima caixa de diálogo que aparece, selecione o modelo **Aplicativo de Modo de Exibição Único** e pressione **OK** para criar o projeto:
 
-    ![Selecionar modelo de projeto de exibição única](hello-ios-quickstart-images/image002-2.w157.png "Selecionar modelo de projeto de exibição única")
+    ![Selecione o modelo de projeto Single View](hello-ios-quickstart-images/image002-2.w157.png "Selecione o modelo de projeto Single View")
 
 1. Confirme se o ícone do Xamarin Mac Agent na barra de ferramentas está verde.
 
@@ -317,7 +317,7 @@ Este passo a passo descreve como criar um aplicativo chamado Phoneword que conve
     > [!NOTE]
     > Você pode abrir **Propriedades** ou a **Caixa de Ferramentas** a qualquer momento navegando para o menu **Exibir**.
 
-1. Pesquise “campo de texto” dentro da Caixa de Ferramentas e arraste um **Campo de Texto** da **Caixa de Ferramentas** para a superfície de design e coloque-o no **Rótulo**. Ajuste a largura até o **Campo de Texto** ter a mesma largura que o **Rótulo**:
+1. Pesquise “campo de texto” dentro da Caixa de Ferramentas e arraste um **Campo de Texto** da **Caixa de Ferramentas** para a superfície de design e coloque-o no **Rótulo**. Ajuste a largura até que o **campo de texto esteja** na mesma largura que o **rótulo**:
 
     ![](hello-ios-quickstart-images/vs-image12.png "Adjust the width until the Text Field is the same width as the Label")
 
@@ -325,19 +325,19 @@ Este passo a passo descreve como criar um aplicativo chamado Phoneword que conve
 
     ![](hello-ios-quickstart-images/vs-image13.png "Change the Text property to 1-855-XAMARIN")
 
-1. Arraste um **Botão** da **Caixa de Ferramentas** para a superfície de design e coloque-o no **Campo de Texto**. Ajuste a largura de modo que o **botão** seja tão largo quanto o **Campo de Texto** e o **Rótulo**:
+1. Arraste um **Botão** da **Caixa de Ferramentas** para a superfície de design e coloque-o no **Campo de Texto**. Ajuste a largura para que o **botão** seja tão largo quanto o **campo de texto** e o **rótulo:**
 
     ![](hello-ios-quickstart-images/vs-image14.png "Adjust the width so the Button is as wide as the Text Field and Label")
 
-1. Com o **Botão** selecionado na superfície de design, altere a propriedade **Nome** na seção **Identidade** de **Propriedades** para `TranslateButton`. Altere a propriedade **Título** “Traduzir”:
+1. Com o **Botão** selecionado na superfície de design, altere a propriedade **Nome** na seção **Identidade** de **Propriedades** para `TranslateButton`. Alterar a propriedade **Título** para "Traduzir":
 
     ![](hello-ios-quickstart-images/vs-image15.png "Change the Title property to Translate")
 
-1. Repita as duas etapas anteriores e arraste um **Botão** de **Caixa de Ferramentas** para a superfície de design e coloque-o sob o primeiro **Botão**. Ajuste a largura para que o **Botão** tenha a mesma largura que o primeiro **Botão**:
+1. Repita as duas etapas anteriores e arraste um **Botão** de **Caixa de Ferramentas** para a superfície de design e coloque-o sob o primeiro **Botão**. Ajuste a largura para que o **botão** seja tão largo quanto o primeiro **botão:**
 
     ![](hello-ios-quickstart-images/vs-image16.png "Adjust the width so the Button is as wide as the first Button")
 
-1. Com o segundo **Botão** selecionado na superfície de design, altere a propriedade **Nome** na seção **Identidade** de **Propriedades** para `CallButton`. Alterar a propriedade **Título** para “Chamada”:
+1. Com o segundo **Botão** selecionado na superfície de design, altere a propriedade **Nome** na seção **Identidade** de **Propriedades** para `CallButton`. Alterar a propriedade **Título** para "Chamar":
 
     ![](hello-ios-quickstart-images/vs-image17.png "Change the Title property to Call")
 
@@ -468,7 +468,7 @@ Este passo a passo descreve como criar um aplicativo chamado Phoneword que conve
     };
     ```
 
-1. Salve as alterações e, em seguida, compile o aplicativo escolhendo **compilar > criar solução** ou pressionar **Ctrl + Shift + B**.  Se o aplicativo for compilado, uma mensagem de êxito aparecerá na parte inferior do IDE:
+1. Salve as alterações e, em seguida, construa o aplicativo escolhendo **Build > Build Solution** ou pressionando **Ctrl + Shift + B**.  Se o aplicativo for compilado, uma mensagem de sucesso aparecerá na parte inferior do IDE:
 
     ![](hello-ios-quickstart-images/vs-image21.png "A success message will appear at the bottom of the IDE")
 
@@ -494,7 +494,7 @@ Agora é hora de examinar as ferramentas e as habilidades mostradas neste guia n
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Ícones de aplicativo e imagens de inicialização do Xamarin (amostra)](https://github.com/xamarin/ios-samples/blob/master/Hello_iOS/Resources/XamarinAppIconsandLaunchImages.zip?raw=true)
-- [Hello, iOS (amostra)](https://docs.microsoft.com/samples/xamarin/ios-samples/hello-ios)
+- [Ícones de aplicativo e imagens de inicialização do Xamarin (exemplo)](https://github.com/xamarin/ios-samples/blob/master/Hello_iOS/Resources/XamarinAppIconsandLaunchImages.zip?raw=true)
+- [Hello, iOS (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/hello-ios)
 - [Diretrizes da interface humana do iOS](https://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/Introduction/Introduction.html)
-- [Portal de provisionamento do iOS](https://developer.apple.com/ios/manage/overview/index.action)
+- [Portal de Provisionamento do iOS](https://developer.apple.com/ios/manage/overview/index.action)

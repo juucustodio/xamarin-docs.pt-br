@@ -1,5 +1,5 @@
 ---
-title: Layout de tela dupla do Xamarin. Forms
+title: Xamarin.Forms layout de tela dupla
 description: Este guia explica como usar o TwoPaneView do Xamarin.Forms para otimizar a experiência de aplicativo para dispositivos de tela dupla, como o Surface Duo e o Surface Neo.
 ms.prod: xamarin
 ms.assetid: 17ee8afa-5e7c-4a4f-a9b6-2aca03f30fe3
@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidortinau
 ms.author: daortin
 ms.date: 02/08/2020
-ms.openlocfilehash: e961dc537d8b793feb3587ec89b69c53ab821088
-ms.sourcegitcommit: 5b6d3bddf7148f8bb374de5657bdedc125d72ea7
+ms.openlocfilehash: 44f7701adbe742828d8ec33dec21c316d11bf93e
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78160565"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "80628283"
 ---
-# <a name="xamarinforms-dual-screen-layout"></a>Layout de tela dupla do Xamarin. Forms
+# <a name="xamarinforms-dual-screen-layout"></a>Xamarin.Forms layout de tela dupla
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/DualScreenDemos)
+[![Baixar](~/media/shared/download.png) amostra Baixar a amostra](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-dualscreendemos/)
 
 A classe `TwoPaneView` representa um contêiner com duas exibições que dimensionam e posicionam o conteúdo no espaço disponível, lado a lado ou de cima para baixo. `TwoPaneView` herda de `Grid`, portanto, a maneira mais fácil de entender essas propriedades é imaginar que elas estão sendo aplicadas a uma grade.
 
@@ -73,4 +73,4 @@ As propriedades a seguir se aplicam quando `TwoPaneView` estiver ocupando uma ou
 
 ## <a name="related-links"></a>Links relacionados
 
-- [DualScreen (exemplo)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/DualScreenDemos)
+- [DualScreen (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-dualscreendemos/)

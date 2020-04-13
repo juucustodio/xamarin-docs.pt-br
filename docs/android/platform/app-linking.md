@@ -1,6 +1,6 @@
 ---
-title: Vinculação de aplicativo no Android
-description: Este guia discutirá como o Android 6,0 dá suporte à vinculação de aplicativos, uma técnica que permite que os aplicativos móveis respondam a URLs em sites. Ele discutirá o que é a vinculação de aplicativos, como implementar a vinculação de aplicativos em um aplicativo Android 6,0 e como configurar um site para conceder permissões ao aplicativo móvel para um domínio.
+title: Vinculação de aplicativos no Android
+description: Este guia discutirá como o Android 6.0 suporta o link de aplicativos, uma técnica que permite que aplicativos móveis respondam a URLs em sites. Ele discutirá o que é vinculação de aplicativos, como implementar o link de aplicativos em um aplicativo Android 6.0 e como configurar um site para conceder permissões ao aplicativo móvel para um domínio.
 ms.prod: xamarin
 ms.assetid: 48174E39-19FD-43BC-B54C-9AF11D4B1F91
 ms.technology: xamarin-android
@@ -8,61 +8,61 @@ author: davidortinau
 ms.author: daortin
 ms.date: 02/16/2018
 ms.openlocfilehash: af90c286d2bb960a9f78547dd15c3d98a69529ae
-ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "75487822"
 ---
-# <a name="app-linking-in-android"></a>Vinculação de aplicativo no Android
+# <a name="app-linking-in-android"></a>Vinculação de aplicativos no Android
 
-_Este guia discutirá como o Android 6,0 dá suporte à vinculação de aplicativos, uma técnica que permite que os aplicativos móveis respondam a URLs em sites. Ele discutirá o que é a vinculação de aplicativos, como implementar a vinculação de aplicativos em um aplicativo Android 6,0 e como configurar um site para conceder permissões ao aplicativo móvel para um domínio._
+_Este guia discutirá como o Android 6.0 suporta o link de aplicativos, uma técnica que permite que aplicativos móveis respondam a URLs em sites. Ele discutirá o que é vinculação de aplicativos, como implementar o link de aplicativos em um aplicativo Android 6.0 e como configurar um site para conceder permissões ao aplicativo móvel para um domínio._
 
-## <a name="app-linking-overview"></a>Visão geral da vinculação de aplicativos
+## <a name="app-linking-overview"></a>Visão geral do link de aplicativos
 
-Os aplicativos móveis que não estão mais ativos em um silo &ndash; em muitos casos eles são componentes importantes de suas empresas, juntamente com seus sites. É desejável que as empresas conectem diretamente seus aplicativos móveis e de presença na Web, com links em um site que inicia aplicativos móveis e exibem conteúdo relevante no aplicativo móvel. A *vinculação de aplicativo* (também conhecida como *vinculação profunda*) é uma técnica que permite que um dispositivo móvel responda a um URI e inicie um aplicativo móvel que corresponda a esse URI.
+Os aplicativos móveis não vivem mais &ndash; em um silo, em muitos casos, eles são um componente importante de seus negócios, juntamente com seu site. É desejável que as empresas conectem perfeitamente sua presença web e aplicativos móveis, com links em um site lançando aplicativos móveis e exibindo conteúdo relevante no aplicativo móvel. *O app-linking* (também chamado *de deep-linking)* é uma técnica que permite que um dispositivo móvel responda a um URI e lance um aplicativo móvel que corresponda a esse URI.
 
-O Android lida com a vinculação de aplicativo por meio do *sistema de intenção* &ndash; quando o usuário clica em um link em um navegador móvel, o navegador móvel enviará uma intenção que o Android delegará a um aplicativo registrado. Por exemplo, clicar em um link em um site de culinária abriria um aplicativo móvel associado a esse site e exibirá uma receita específica para o usuário. Se houver mais de um aplicativo registrado para lidar com essa intenção, o Android gerará o que é conhecido como uma *caixa de diálogo de desambiguidade* que solicitará a um usuário qual aplicativo selecionar o aplicativo que deve lidar com a intenção, por exemplo:
+O Android lida com a vinculação de aplicativos através do *sistema* &ndash; de intenções quando o usuário clica em um link em um navegador móvel, o navegador móvel enviará uma intenção que o Android delegará para um aplicativo registrado. Por exemplo, clicar em um link em um site de culinária abriria um aplicativo móvel associado a esse site e exibiria uma receita específica para o usuário. Se houver mais de um aplicativo registrado para lidar com essa intenção, então o Android levantará o que é conhecido como *diálogo de desambiguação* que perguntará a um usuário qual aplicativo selecionará o aplicativo que deve lidar com a intenção, por exemplo:
 
-![Captura de tela de exemplo de uma caixa de diálogo de desambiguidade](app-linking-images/01-disambiguation-dialog.png)
+![Exemplo de captura de tela de uma caixa de diálogo de desambiguação](app-linking-images/01-disambiguation-dialog.png)
 
-O Android 6,0 melhora isso usando a manipulação automática de links. É possível que o Android registre automaticamente um aplicativo como o manipulador padrão para um URI &ndash; o aplicativo será iniciado automaticamente e navegará diretamente para a atividade relevante. Como o Android 6,0 decide manipular um clique de URI depende dos seguintes critérios:
+O Android 6.0 melhora isso usando o manuseio automático do link. É possível que o Android registre automaticamente um aplicativo &ndash; como o manipulador padrão de um URI, o aplicativo iniciará automaticamente e navegará diretamente para a Atividade relevante. Como o Android 6.0 decide lidar com um clique uri depende dos seguintes critérios:
 
-1. **Um aplicativo existente já está associado ao URI** &ndash; o usuário pode já ter associado um aplicativo existente a um URI. Nesse caso, o Android continuará a usar esse aplicativo.
-2. **Nenhum aplicativo existente está associado ao URI, mas um aplicativo de suporte está instalado** &ndash; nesse cenário, o usuário não especificou um aplicativo existente, portanto, o Android usará o aplicativo de suporte instalado para lidar com a solicitação.
-3. **Nenhum aplicativo existente está associado ao URI, mas muitos aplicativos de suporte são instalados** &ndash; porque há vários aplicativos que dão suporte ao URI, a caixa de diálogo de desambiguidade será exibida e o usuário deverá selecionar qual aplicativo tratará o URI.
+1. **Um aplicativo existente já está associado ao URI** &ndash; O usuário pode já ter associado um aplicativo existente a um URI. Nesse caso, o Android continuará a usar esse aplicativo.
+2. **Nenhum aplicativo existente está associado ao URI, mas um aplicativo de suporte é instalado** &ndash; Neste cenário, o usuário não especificou um aplicativo existente, então o Android usará o aplicativo de suporte instalado para lidar com a solicitação.
+3. **Nenhum aplicativo existente está associado ao URI, mas muitos aplicativos de suporte estão instalados** &ndash; Como existem vários aplicativos que suportam o URI, a caixa de diálogo de desambiguação será exibida e o usuário deve selecionar qual aplicativo irá lidar com o URI.
 
-Se o usuário não tiver aplicativos instalados que ofereçam suporte ao URI e um for instalado posteriormente, o Android definirá esse aplicativo como o manipulador padrão para o URI depois de verificar a associação com o site associado ao URI.
+Se o usuário não tiver nenhum aplicativo instalado que suporte o URI e um for instalado posteriormente, o Android definirá esse aplicativo como o manipulador padrão para o URI depois de verificar a associação com o site associado ao URI.
 
-Este guia discutirá como configurar um aplicativo Android 6,0 e como criar e publicar o arquivo de links de ativos digitais para dar suporte à vinculação de aplicativos no Android 6,0.
+Este guia discutirá como configurar um aplicativo Android 6.0 e como criar e publicar o arquivo Digital Asset Links para suportar o vinculação de aplicativos no Android 6.0.
 
 ## <a name="requirements"></a>Requisitos
 
-Este guia requer o Xamarin. Android 6,1 e um aplicativo que tem como alvo o Android 6,0 (API nível 23) ou superior.
+Este guia requer Xamarin.Android 6.1 e um aplicativo que tem como alvo o Android 6.0 (Nível API 23) ou superior.
 
-A vinculação de aplicativo é possível em versões anteriores do Android usando o [pacote NuGet de rebites](https://www.nuget.org/packages/Rivets/) da loja de componentes do Xamarin. O pacote de rebites não é compatível com a vinculação de aplicativo no Android 6,0; Ele não dá suporte à vinculação de aplicativos Android 6,0.
+O app-linking é possível em versões anteriores do Android usando o [pacote Rebite NuGet](https://www.nuget.org/packages/Rivets/) da loja De Componentes Xamarin. O pacote Rebites não é compatível com o link de aplicativo no Android 6.0; ele não suporta a vinculação do aplicativo Android 6.0.
 
-## <a name="configuring-app-linking-in-android-60"></a>Configurando a vinculação de aplicativos no Android 6,0
+## <a name="configuring-app-linking-in-android-60"></a>Configuração de App-Linking no Android 6.0
 
-A configuração de links de aplicativo no Android 6,0 envolve duas etapas principais:
+A configuração de links de aplicativos no Android 6.0 envolve dois passos principais:
 
-1. **Adicionar um ou mais filtros de tentativa para o URI do site** &ndash; o guia de filtros de intenção do Android em como tratar uma URL clique em um navegador móvel.
-2. **Publicar um arquivo *JSON de links de ativos digitais* no site** &ndash; esse é um arquivo que é carregado em um site e é usado pelo Android para verificar a relação entre o aplicativo móvel e o domínio do site. Sem isso, o Android não pode instalar o aplicativo como o identificador padrão para URIS; o usuário deve fazer isso manualmente.
+1. **Adicionando um ou mais filtros de intenção para o site Uri os** &ndash; filtros de intenção guiam o Android em como lidar com um clique de URL em um navegador móvel.
+2. **Publicando um arquivo *JSON de Digital Asset Links* no site** &ndash; este é um arquivo que é carregado em um site e é usado pelo Android para verificar a relação entre o aplicativo móvel e o domínio do site. Sem isso, o Android não pode instalar o aplicativo como o cabo padrão para URI's; o usuário deve fazê-lo manualmente.
 
 <a name="configure-intent-filter" />
 
-### <a name="configuring-the-intent-filter"></a>Configurando o filtro de intenção
+### <a name="configuring-the-intent-filter"></a>Configuração do filtro de intenções
 
-É necessário configurar um filtro de intenção que mapeia um URI (ou um conjunto de URIs) de um site para uma atividade em um aplicativo Android. No Xamarin. Android, essa relação é estabelecida com a adornação de uma atividade com o [IntentFilterAttribute](xref:Android.App.IntentFilterAttribute). O filtro de intenção deve declarar as seguintes informações:
+É necessário configurar um filtro de intenção que mapeie um URI (ou possível um conjunto de URIs) de um site para uma atividade em um aplicativo Android. No Xamarin.Android, essa relação é estabelecida adornando uma atividade com o [IntentFilterAttribute](xref:Android.App.IntentFilterAttribute). O filtro de intenções deve declarar as seguintes informações:
 
-- **`Intent.ActionView`** &ndash; isso registrará o filtro de intenção para responder às solicitações para exibir informações
-- **`Categories`** &ndash; o filtro de intenção deve registrar tanto o **[intuito. CategoryBrowsable](xref:Android.Content.Intent.CategoryBrowsable)** quanto o **[intuito. CategoryDefault](xref:Android.Content.Intent.CategoryDefault)** para poder lidar corretamente com o URI da Web.
-- **`DataScheme`** &ndash; o filtro de intenção deve declarar `http` e/ou `https`. Esses são os únicos dois esquemas válidos.
-- **`DataHost`** &ndash; esse é o domínio do qual os URIs serão originados.
-- **`DataPathPrefix`** &ndash; esse é um caminho opcional para os recursos no site.
-- **`AutoVerify`** &ndash; o atributo `autoVerify` informa ao Android para verificar a relação entre o aplicativo e o site. Isso será discutido mais abaixo.
+- **`Intent.ActionView`**&ndash; Isso registrará o filtro de intenções para responder às solicitações de visualização de informações
+- **`Categories`**&ndash; O filtro de intenções deve registrar **[intenção.CategoryBrowsable](xref:Android.Content.Intent.CategoryBrowsable)** e **[Intention.CategoryDefault](xref:Android.Content.Intent.CategoryDefault)** para poder lidar adequadamente com o URI da Web.
+- **`DataScheme`**&ndash; O filtro de `http` intenções `https`deve declarar e/ou . Estes são os dois únicos esquemas válidos.
+- **`DataHost`**&ndash; Este é o domínio do qual as URIs se originarão.
+- **`DataPathPrefix`**&ndash; Este é um caminho opcional para recursos no site.
+- **`AutoVerify`**&ndash; O `autoVerify` atributo diz ao Android para verificar a relação entre o aplicativo e o site. Isso será discutido mais abaixo.
 
-O exemplo a seguir mostra como usar o [IntentFilterAttribute](xref:Android.App.IntentFilterAttribute) para manipular links de `https://www.recipe-app.com/recipes` e de `http://www.recipe-app.com/recipes`:
+O exemplo a seguir mostra como usar o [IntentFilterAttribute](xref:Android.App.IntentFilterAttribute) para lidar com links de `https://www.recipe-app.com/recipes` e de `http://www.recipe-app.com/recipes`:
 
 ```csharp
 [IntentFilter(new [] { Intent.ActionView },
@@ -77,24 +77,24 @@ public class RecipeActivity : Activity
 }
 ```
 
-O Android verificará todos os hosts identificados pelos filtros de intenção em relação ao arquivo de ativos digitais no site antes de registrar o aplicativo como o manipulador padrão para um URI. Todos os filtros de intenção devem passar na verificação antes que o Android possa estabelecer o aplicativo como o manipulador padrão.
+O Android verificará cada host identificado pelos filtros de intenção contra o Arquivo de Ativos Digitais no site antes de registrar o aplicativo como o manipulador padrão de um URI. Todos os filtros de intenção devem passar pela verificação antes que o Android possa estabelecer o aplicativo como o manipulador padrão.
 
 ### <a name="creating-the-digital-assets-link-file"></a>Criando o arquivo de link de ativos digitais
 
-O aplicativo Android 6,0 – a vinculação exige que o Android Verifique a associação entre o aplicativo e o site antes de definir o aplicativo como o manipulador padrão para o URI. Essa verificação ocorrerá quando o aplicativo for instalado pela primeira vez. O arquivo de *links de ativos digitais* é um arquivo JSON que é hospedado pelos domínios da Web(s) relevantes.
+O link de aplicativo do Android 6.0 requer que o Android verifique a associação entre o aplicativo e o site antes de definir o aplicativo como o manipulador padrão para o URI. Essa verificação ocorrerá quando o aplicativo for instalado pela primeira vez. O arquivo *Digital Assets Links* é um arquivo JSON hospedado pelos domínios web relevantes.
 
 > [!NOTE]
-> O atributo `android:autoVerify` deve ser definido pelo filtro de intenção &ndash; caso contrário, o Android não executará a verificação.
+> O `android:autoVerify` atributo deve ser &ndash; definido pelo filtro de intenção caso contrário o Android não realizará a verificação.
 
-O arquivo é colocado pelo webmaster do domínio no local **https://domain/.well-known/assetlinks.json** .
+O arquivo é colocado pelo webmaster do **https://domain/.well-known/assetlinks.json**domínio no local .
 
-O arquivo de ativo digital contém os metadados necessários para que o Android Verifique a associação. Um arquivo **assetlinks. JSON** tem os seguintes pares de chave-valor:
+O Arquivo de Ativos Digitais contém os meta-dados necessários para que o Android verifique a associação. Um arquivo **assetlinks.json** tem os seguintes pares de valor de chave:
 
-- `namespace` &ndash; o namespace do aplicativo Android.
-- `package_name` &ndash; o nome do pacote do aplicativo Android (declarado no manifesto do aplicativo).
-- `sha256_cert_fingerprints` &ndash; as impressões digitais SHA256 do aplicativo assinado. Consulte o guia [localizando a assinatura MD5 ou SHA1 do repositório de chaves](~/android/deploy-test/signing/keystore-signature.md) para obter mais informações sobre como obter a impressão digital SHA1 de um aplicativo.
+- `namespace`&ndash; o namespace do aplicativo para Android.
+- `package_name`&ndash; o nome do pacote do aplicativo para Android (declarado no manifesto do aplicativo).
+- `sha256_cert_fingerprints`&ndash; as impressões digitais SHA256 do aplicativo assinado. Consulte o guia Encontrar a [Assinatura MD5 ou SHA1 do seu Keystore](~/android/deploy-test/signing/keystore-signature.md) para obter mais informações sobre como obter a impressão digital SHA1 de um aplicativo.
 
-O trecho a seguir é um exemplo de **assetlinks. JSON** com um único aplicativo listado:
+O seguinte trecho é um exemplo de **assetlinks.json** com um único aplicativo listado:
 
 ```json
 [
@@ -113,7 +113,7 @@ O trecho a seguir é um exemplo de **assetlinks. JSON** com um único aplicativo
 ]
 ```
 
-É possível registrar mais de uma impressão digital SHA256 para dar suporte a diferentes versões ou compilações do seu aplicativo. Esse próximo arquivo **assetlinks. JSON** é um exemplo de registro de vários aplicativos:
+É possível registrar mais de uma impressão digital SHA256 para suportar diferentes versões ou compilações do seu aplicativo. Este próximo arquivo **assetlinks.json** é um exemplo de registro de vários aplicativos:
 
 ```json
 [
@@ -144,22 +144,22 @@ O trecho a seguir é um exemplo de **assetlinks. JSON** com um único aplicativo
 ]
 ```
 
-O [site do Google Digital Asset links](https://developers.google.com/digital-asset-links/tools/generator) tem uma ferramenta online que pode ajudar na criação e no teste do arquivo de ativos digitais.
+O [site do Google Digital Asset Links](https://developers.google.com/digital-asset-links/tools/generator) possui uma ferramenta online que pode auxiliar na criação e teste do arquivo Digital Assets.
 
-### <a name="testing-app-links"></a>Testando links de aplicativo
+### <a name="testing-app-links"></a>Testando links de aplicativos
 
-Depois de implementar links de aplicativo, as várias partes devem ser testadas para garantir que funcionem conforme o esperado.
+Depois de implementar links de aplicativos, as várias peças devem ser testadas para garantir que funcionem como esperado.
 
-É possível confirmar se o arquivo de ativos digitais está formatado corretamente e hospedado usando a API de links de ativos digitais do Google, conforme mostrado neste exemplo:
+É possível confirmar que o arquivo Digital Assets está devidamente formatado e hospedado usando a API Digital Asset Links do Google, como mostrado neste exemplo:
 
 ```html
 https://digitalassetlinks.googleapis.com/v1/statements:list?source.web.site=
   https://<WEB SITE ADDRESS>:&relation=delegate_permission/common.handle_all_urls
 ```
 
-Há dois testes que podem ser executados para garantir que os filtros de intenção tenham sido configurados corretamente e que o aplicativo esteja definido como o manipulador padrão para um URI:
+Existem dois testes que podem ser realizados para garantir que os filtros de intenção foram configurados corretamente e que o aplicativo é definido como o manipulador padrão de um URI:
 
-1. O arquivo de ativo digital está adequadamente hospedado conforme descrito acima. O primeiro teste expedirá uma intenção que o Android deve redirecionar para o aplicativo móvel. O aplicativo do Android deve iniciar e exibir a atividade registrada para a URL. Em um prompt de comando, digite:
+1. O Arquivo de Ativos Digitais está devidamente hospedado conforme descrito acima. O primeiro teste enviará uma intenção que o Android deve redirecionar para o aplicativo móvel. O aplicativo para Android deve iniciar e exibir a Atividade registrada para a URL. Em um tipo de prompt de comando:
 
     ```shell
     $ adb shell am start -a android.intent.action.VIEW \
@@ -167,15 +167,15 @@ Há dois testes que podem ser executados para garantir que os filtros de intenç
         -d "http://<domain1>/recipe/scalloped-potato"
     ```
 
-2. Exibe as políticas de tratamento de links existentes para os aplicativos instalados em um determinado dispositivo. O comando a seguir despejará uma lista de políticas de link para cada usuário no dispositivo com as informações a seguir. No prompt de comando, digite o comando a seguir:
+2. Exibir as políticas de manipulação de links existentes para os aplicativos instalados em um determinado dispositivo. O comando a seguir dispensará uma lista de políticas de link para cada usuário no dispositivo com as seguintes informações. No prompt de comando, digite o comando a seguir:
 
     ```shell
     $ adb shell dumpsys package domain-preferred-apps
     ```
 
-    - **`Package`** &ndash; o nome do pacote do aplicativo.
-    - **`Domain`** &ndash; os domínios (separados por espaços) cujos links da Web serão manipulados pelo aplicativo
-    - **`Status`** &ndash; este é o status atual de tratamento de links para o aplicativo. Um valor de **sempre** significa que o aplicativo tem `android:autoVerify=true` declarado e passou na verificação do sistema. Ele é seguido por um número hexadecimal que representa o registro do sistema Android da preferência.
+    - **`Package`**&ndash; O nome do pacote do aplicativo.
+    - **`Domain`**&ndash; Os domínios (separados por espaços) cujos links da Web serão manipulados pelo aplicativo
+    - **`Status`**&ndash; Este é o status atual de manipulação de links para o aplicativo. Um valor de **sempre** significa `android:autoVerify=true` que o aplicativo declarou e passou pela verificação do sistema. É seguido por um número hexadecimal representando o registro de preferência do sistema Android.
 
     Por exemplo:
 
@@ -190,11 +190,11 @@ Há dois testes que podem ser executados para garantir que os filtros de intenç
 
 ## <a name="summary"></a>Resumo
 
-Este guia abordou como a vinculação de aplicativos funciona no Android 6,0. Em seguida, ele abordou como configurar um aplicativo Android 6,0 para dar suporte e responder a links de aplicativo. Ele também abordou como testar a vinculação de aplicativos em um aplicativo Android.
+Este guia discutiu como o app-linking funciona no Android 6.0. Em seguida, cobriu como configurar um aplicativo Android 6.0 para suportar e responder a links de aplicativos. Ele também discutiu como testar a vinculação de aplicativos em um aplicativo Android.
 
 ## <a name="related-links"></a>Links relacionados
 
 - [Encontrando a assinatura MD5 ou SHA1 do repositório de chaves](~/android/deploy-test/signing/keystore-signature.md)
 - [AppLinks](https://developers.facebook.com/docs/applinks)
 - [Links de ativos digitais do Google](https://developers.google.com/digital-asset-links/)
-- [Gerador de lista de instruções e testador](https://developers.google.com/digital-asset-links/tools/generator)
+- [Gerador e testador da lista de declarações](https://developers.google.com/digital-asset-links/tools/generator)

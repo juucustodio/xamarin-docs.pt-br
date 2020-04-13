@@ -1,5 +1,5 @@
 ---
-title: 'Xamarin.Essentials: Detectar movimento'
+title: 'Xamarin.Essentials: Detecte shake'
 description: A classe Accelerometer no Xamarin.Essentials permite detectar um movimento do dispositivo.
 ms.assetid: 07513D32-120F-4F12-8757-A47802A8027B
 author: jamesmontemagno
@@ -7,13 +7,13 @@ ms.author: jamont
 ms.date: 05/28/2019
 ms.custom: video
 ms.openlocfilehash: d2aef2c32b3fe2815f1176779a8c28ae8d421ed1
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "67832591"
 ---
-# <a name="xamarinessentials-detect-shake"></a>Xamarin.Essentials: Detectar movimento
+# <a name="xamarinessentials-detect-shake"></a>Xamarin.Essentials: Detecte shake
 
 A classe **[Accelerometer](accelerometer.md)** permite monitorar o sensor de acelerômetro do dispositivo, que indica a aceleração do dispositivo no espaço tridimensional. Além disso, ele permite que você se registre para eventos quando o usuário sacudir o dispositivo.
 

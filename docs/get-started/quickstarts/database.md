@@ -10,15 +10,15 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 04/01/2019
 ms.openlocfilehash: 2cd4726566e73aece5d0deef90ad1feedefaa2d8
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "71249673"
 ---
 # <a name="store-data-in-a-local-sqlitenet-database"></a>Armazenar dados em um banco de dados SQLite.NET local
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-database/)
+[![Baixar](~/media/shared/download.png) amostra Baixar a amostra](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-database/)
 
 Neste guia de início rápido, você aprenderá a:
 
@@ -30,7 +30,7 @@ O guia de início rápido explica como armazenar dados em um banco de dados SQLi
 [![](database-images/screenshots1-sml.png "Notes Page")](database-images/screenshots1.png#lightbox "Notes Page")
 [![](database-images/screenshots2-sml.png "Note Entry Page")](database-images/screenshots2.png#lightbox "Note Entry Page")
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 Você deve concluir com êxito o [início rápido anterior](multi-page.md) antes de tentar este guia de início rápido. Como alternativa, baixe o [exemplo de início rápido anterior](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-multipage/) e use-o como o ponto de partida para este guia de início rápido.
 
@@ -40,7 +40,7 @@ Você deve concluir com êxito o [início rápido anterior](multi-page.md) antes
 
 1. Inicie o Visual Studio e abra a solução Notes.
 
-2. Na **Gerenciador de Soluções**, selecione o projeto **Notes**, clique com o botão direito do mouse e selecione **Gerenciar Pacotes do NuGet…** :
+2. Na **Gerenciador de Soluções**, selecione o projeto **Notes**, clique com o botão direito do mouse e selecione **Gerenciar Pacotes do NuGet…**:
 
     ![](database-images/vs/add-nuget-packages.png "Add NuGet Packages")    
 
@@ -50,7 +50,7 @@ Você deve concluir com êxito o [início rápido anterior](multi-page.md) antes
 
     > [!NOTE]
     > Há diversos pacotes NuGet com nomes semelhantes. O pacote correto tem estes atributos:
-    > - **Autor(es):** Frank A. Krueger
+    > - **Autor(s):** Frank A. Krueger
     > - **Id:** sqlite-net-pcl
     > - **Link do NuGet:** [sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)  
     >
@@ -214,7 +214,7 @@ Você deve concluir com êxito o [início rápido anterior](multi-page.md) antes
     }
     ```    
 
-    Esse código preenche o [`ListView`](xref:Xamarin.Forms.ListView) com todas as observações armazenadas no banco de dados.
+    Este código preenche [`ListView`](xref:Xamarin.Forms.ListView) o com quaisquer notas armazenadas no banco de dados.
 
     Salve as alterações em **NotesPage.xaml** pressionando **CTRL+S** e feche o arquivo.
 
@@ -240,7 +240,7 @@ Você deve concluir com êxito o [início rápido anterior](multi-page.md) antes
       }
       ```    
 
-      O `NoteEntryPage` armazena uma instância de `Note`, que representa uma única observação, no [`BindingContext` da página ](xref:Xamarin.Forms.BindableObject.BindingContext). Quando o manipulador de eventos `OnSaveButtonClicked` é executado, a instância de `Note` é salva no banco de dados e o aplicativo navega de volta para a página anterior. Quando o manipulador de eventos `OnDeleteButtonClicked` é executado, a instância de `Note` é excluída do banco de dados e o aplicativo navega de volta para a página anterior.
+      As `NoteEntryPage` lojas `Note` uma instância, que representa uma [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) única nota, na página. Quando o manipulador de eventos `OnSaveButtonClicked` é executado, a instância de `Note` é salva no banco de dados e o aplicativo navega de volta para a página anterior. Quando o manipulador de eventos `OnDeleteButtonClicked` é executado, a instância de `Note` é excluída do banco de dados e o aplicativo navega de volta para a página anterior.
 
       Salve as alterações em **NoteEntryPage.xaml.cs** pressionando **CTRL+S** e feche o arquivo.
 
@@ -257,7 +257,7 @@ Você deve concluir com êxito o [início rápido anterior](multi-page.md) antes
 
 1. Inicie o Visual Studio para Mac e abra o projeto Notes.
 
-2. No **Painel de Soluções**, selecione o projeto **Observações**, clique com o botão direito do mouse e selecione **Adicionar > Adicionar Pacotes do NuGet…** :
+2. No **Painel de Soluções**, selecione o projeto **Observações**, clique com o botão direito do mouse e selecione **Adicionar > Adicionar Pacotes do NuGet…**:
 
     ![](database-images/vsmac/add-nuget-packages.png "Add NuGet Packages")    
 
@@ -431,7 +431,7 @@ Você deve concluir com êxito o [início rápido anterior](multi-page.md) antes
     }
     ```    
 
-    Esse código preenche o [`ListView`](xref:Xamarin.Forms.ListView) com todas as observações armazenadas no banco de dados.
+    Este código preenche [`ListView`](xref:Xamarin.Forms.ListView) o com quaisquer notas armazenadas no banco de dados.
 
     Salve as alterações em **NotesPage.xaml.cs** ao escolher **Arquivo > Salvar** (ou ao pressionar **& #8984; + S**) e feche o arquivo.
 
@@ -457,7 +457,7 @@ Você deve concluir com êxito o [início rápido anterior](multi-page.md) antes
       }
       ```    
 
-      O `NoteEntryPage` armazena uma instância de `Note`, que representa uma única observação, no [`BindingContext` da página ](xref:Xamarin.Forms.BindableObject.BindingContext). Quando o manipulador de eventos `OnSaveButtonClicked` é executado, a instância de `Note` é salva no banco de dados e o aplicativo navega de volta para a página anterior. Quando o manipulador de eventos `OnDeleteButtonClicked` é executado, a instância de `Note` é excluída do banco de dados e o aplicativo navega de volta para a página anterior.
+      As `NoteEntryPage` lojas `Note` uma instância, que representa uma [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) única nota, na página. Quando o manipulador de eventos `OnSaveButtonClicked` é executado, a instância de `Note` é salva no banco de dados e o aplicativo navega de volta para a página anterior. Quando o manipulador de eventos `OnDeleteButtonClicked` é executado, a instância de `Note` é excluída do banco de dados e o aplicativo navega de volta para a página anterior.
 
       Salve as alterações em **NoteEntryPage.xaml.cs** escolhendo **Arquivo > Salvar** (ou pressionando **&#8984; + S**) e feche o arquivo.
 

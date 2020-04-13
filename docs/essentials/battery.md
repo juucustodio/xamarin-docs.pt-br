@@ -7,10 +7,10 @@ ms.author: jamont
 ms.date: 01/22/2019
 ms.custom: video
 ms.openlocfilehash: cba17707f9129feecc618c9a7c2f144ad40f0168
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "70756930"
 ---
 # <a name="xamarinessentials-battery"></a>Xamarin.Essentials: Bateria
@@ -23,9 +23,9 @@ A classe **Battery** permite que você verifique as informações sobre a bateri
 
 Para acessar a funcionalidade **Battery**, a configuração específica da plataforma a seguir é necessária.
 
-# <a name="androidtabandroid"></a>[Android](#tab/android)
+# <a name="android"></a>[Android](#tab/android)
 
-A permissão `Battery` é necessária e deve ser configurada no projeto do Android. Ela pode ser usado das seguintes maneiras:
+A permissão `Battery` é necessária e deve ser configurada no projeto do Android. Isso pode ser usado das seguintes maneiras:
 
 Abra o arquivo **AssemblyInfo.cs** na pasta **Propriedades** e adicione:
 
@@ -35,7 +35,7 @@ Abra o arquivo **AssemblyInfo.cs** na pasta **Propriedades** e adicione:
 
 OU Atualize o Manifesto do Android:
 
-Abra o arquivo **AndroidManifest.xml** na pasta **Propriedades** e adicione o seguinte dentro do nó do **manifesto**.
+Abra o arquivo **AndroidManifest.xml** na pasta **Propriedades** e adicione o seguinte dentro do **nó manifesto.**
 
 ```xml
 <uses-permission android:name="android.permission.BATTERY_STATS" />
@@ -43,11 +43,11 @@ Abra o arquivo **AndroidManifest.xml** na pasta **Propriedades** e adicione o se
 
 Ou clique com o botão direito do mouse no projeto do Android e abra as propriedades do projeto. Em **Manifesto do Android**, localize a área **Permissões necessárias:** e marque a permissão **Bateria**. Isso atualizará automaticamente o arquivo **AndroidManifest.xml**.
 
-# <a name="iostabios"></a>[iOS](#tab/ios)
+# <a name="ios"></a>[iOS](#tab/ios)
 
 Não exige mais configurações.
 
-# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
+# <a name="uwp"></a>[UWP](#tab/uwp)
 
 Não exige mais configurações.
 
@@ -164,16 +164,16 @@ Se o status da economia de energia for alterado para `On`, o aplicativo deverá 
 
 ## <a name="platform-differences"></a>Diferenças entre plataformas
 
-# <a name="androidtabandroid"></a>[Android](#tab/android)
+# <a name="android"></a>[Android](#tab/android)
 
 Sem diferenças entre plataformas.
 
-# <a name="iostabios"></a>[iOS](#tab/ios)
+# <a name="ios"></a>[iOS](#tab/ios)
 
 - O dispositivo deve ser usado para testar APIs. 
 - Só retornará `AC` ou `Battery` para `PowerSource`.
 
-# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
+# <a name="uwp"></a>[UWP](#tab/uwp)
 
 - Só retornará `AC` ou `Battery` para `PowerSource`.
 

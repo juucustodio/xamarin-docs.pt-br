@@ -8,15 +8,15 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/15/2017
 ms.openlocfilehash: 54fcc3bb683f6ca4515d807da5c3345cf71a2df3
-ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "79304656"
 ---
 # <a name="apple-pay-capabilities-in-xamarinios"></a>Recursos Apple Pay no Xamarin.iOS
 
-_A adição de recursos a um aplicativo geralmente requer configuração de provisionamento adicional. Este guia explica a configuração necessária para os recursos de Apple Pay._
+_Adicionar recursos a um aplicativo geralmente requer configuração de provisionamento adicional. Este guia explica a configuração necessária para os recursos do Apple Pay._
 
 O Apple Pay permite que os usuários paguem produtos físicos usando o dispositivo iOS. Esta seção descreve como criar todos os componentes necessários para o Apple Pay na Central de Desenvolvedores da Apple.
 
@@ -44,7 +44,7 @@ A ID do comerciante é usada para informar o Apple Pay que você pode aceitar pa
 
     ![Detalhes da nova ID do comerciante](apple-pay-capabilities-images/image58.png)
 
-4. Confirme os detalhes e **Registre** sua ID: 
+4. Confirme os detalhes e **registre** seu ID: 
 
     ![Confirmação de ID do comerciante](apple-pay-capabilities-images/image59.png)
 
@@ -52,11 +52,11 @@ A ID do comerciante é usada para informar o Apple Pay que você pode aceitar pa
 
 ## <a name="create-an-app-id-with-the-apple-pay-capability-that-includes-the-merchant-id"></a>Crie uma ID do aplicativo com a capacidade do Apple Pay que inclui a ID do comerciante
 
-1. Na [Central de Desenvolvedores](https://developer.apple.com/account/) clique em **IDs do aplicativo** em **Identificadores**:
+1. No [Centro de Desenvolvedores](https://developer.apple.com/account/) clique em **IDs de aplicativos** em **Identificadores**:
 
     ![Selecione a ID do aplicativo na Central de Desenvolvedores](apple-pay-capabilities-images/image6.png)
 
-2. Selecione o botão **+** para adicionar uma nova ID do aplicativo:
+2. Selecione **+** o botão para adicionar um novo ID do aplicativo:
 
     ![Botão Adicionar nova ID do aplicativo](apple-pay-capabilities-images/image27.png)
 
@@ -76,7 +76,7 @@ A ID do comerciante é usada para informar o Apple Pay que você pode aceitar pa
 
     ![Editar ID do aplicativo](apple-pay-capabilities-images/image38.png)
 
-7. Role até o final desta seção expandida e clique em **Editar**.
+7. Role até a parte inferior desta seção expandida e clique **em Editar**.
 8. Role na lista até o Apple Pay e clique no botão **Editar**:  
 
     ![Editar detalhes da ID do aplicativo do Apple Pay](apple-pay-capabilities-images/image39.png)
@@ -89,7 +89,7 @@ A ID do comerciante é usada para informar o Apple Pay que você pode aceitar pa
 
     ![Tela de confirmação](apple-pay-capabilities-images/image41.png)
 
-Agora esta ID do aplicativo pode ser usada para gerar, ou gerar novamente, um novo perfil de provisionamento, conforme descrito no guia [Trabalhando com funcionalidades](~/ios/deploy-test/provisioning/capabilities/index.md).
+Este ID do aplicativo agora pode ser usado para gerar, ou para regerar, um novo perfil de provisionamento, conforme descrito no guia [Trabalhando com Recursos.](~/ios/deploy-test/provisioning/capabilities/index.md)
 
 <a name="certificate" />
 
@@ -148,12 +148,12 @@ Para obter mais informações sobre o uso do Apple Pay, consulte o guia a seguir
 
 * [Introdução ao Apple Pay](~/ios/platform/apple-pay.md)
 
-## <a name="next-steps"></a>{1&gt;{2&gt;Próximas etapas&lt;2}&lt;1}
+## <a name="next-steps"></a>Próximas etapas
 
 A lista a seguir descreve as etapas adicionais que precisam ser executadas:
 
 * Use o namespace do framework em seu aplicativo.
 * Adicione os direitos necessários para seu aplicativo. As informações sobre os direitos necessários e como adicioná-los estão detalhadas no guia [Trabalhando com direitos](~/ios/deploy-test/provisioning/entitlements.md).
-* Na **Assinatura de Pacote do iOS** do Aplicativo, verifique se a opção **Direitos Personalizados** está definida como **Entitlements.plist**. Isso _não_ a configuração padrão para compilações de depuração e do IOS Simulator.
+* Na **Assinatura de Pacote do iOS** do Aplicativo, verifique se a opção **Direitos Personalizados** está definida como **Entitlements.plist**.Esta _não_ é a configuração padrão para compilações de Debug e iOS Simulator.
 
 Se você encontrar problemas com serviços de aplicativos, consulte a seção [Solução de problemas](~/ios/deploy-test/provisioning/capabilities/index.md) do guia principal.

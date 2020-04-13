@@ -8,15 +8,15 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 01/19/2016
 ms.openlocfilehash: ad2868a82f662f45066a6111a1dd3bd2aacad671
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "70771877"
 ---
 # <a name="introduction-to-custom-renderers"></a>Introdução a renderizadores personalizados
 
-_Os renderizadores personalizados fornecem uma abordagem poderosa para personalizar a aparência e o comportamento dos controles Xamarin. Forms. Eles podem ser usados para alterações de estilo pequeno ou para personalização sofisticada de comportamento e layout específico da plataforma. Este artigo fornece uma introdução aos renderizadores personalizados e descreve o processo de criação de um renderizador personalizado._
+_Renderizadores personalizados fornecem uma abordagem poderosa para personalizar a aparência e o comportamento dos controles Xamarin.Forms. Eles podem ser usados para pequenas mudanças de estilo ou personalização de layout e comportamento sofisticadas específicas da plataforma. Este artigo fornece uma introdução aos renderizadores personalizados e descreve o processo para criar um renderizador personalizado._
 
 [Páginas, Layouts e Controles](~/xamarin-forms/user-interface/controls/index.md) do Xamarin.Forms apresenta uma API comum para descrever interfaces do usuário móveis multiplataforma. Cada página, layout e controle é renderizado de maneira diferente em cada plataforma usando uma classe `Renderer`, que por sua vez cria um controle nativo (correspondente à representação no Xamarin.Forms), organiza sua disposição na tela e adiciona o comportamento especificado no código compartilhado.
 
@@ -66,7 +66,7 @@ O processo para criar uma classe de renderizador personalizado é a seguinte:
 
 1. Criar uma subclasse da classe do renderizador que renderiza o controle nativo.
 1. Substitua o método que renderiza o controle nativo e escreva a lógica para personalizá-lo. Frequentemente, o método `OnElementChanged` é usado para renderizar o controle nativo, que é chamado quando um controle do Xamarin.Forms correspondente é criado.
-1. Adicionar um atributo `ExportRenderer` à classe do renderizador personalizado para especificar que ele será usado para renderizar o controle do Xamarin.Forms. Este atributo é usado para registrar o renderizador personalizado no Xamarin.Forms.
+1. Adicionar um atributo `ExportRenderer` à classe do renderizador personalizado para especificar que ele será usado para renderizar o controle do Xamarin.Forms. Esse atributo é usado para registrar o renderizador personalizado no Xamarin.Forms.
 
 > [!NOTE]
 > Para a maioria dos elementos do Xamarin.Forms, o fornecimento de um renderizador personalizado em cada projeto de plataforma é opcional. Se um renderizador personalizado não estiver registrado, será usado o renderizador padrão da classe base do controle. No entanto, são necessários renderizadores personalizados em cada projeto da plataforma durante a renderização de um elemento [View](xref:Xamarin.Forms.View) ou [ViewCell](xref:Xamarin.Forms.ViewCell).
@@ -87,7 +87,7 @@ Isso força o compilador a reconhecer o tipo `ClassInPCL` resolvendo-o. Como alt
 [assembly: Preserve (typeof (ClassInPCL))]
 ```
 
-Isso cria uma referência ao tipo `ClassInPCL`, indicando que ele é necessário no tempo de execução. Para obter mais informações, confira [Preservando o código](~/ios/deploy-test/linker.md).
+Isso cria uma referência ao tipo `ClassInPCL`, indicando que ele é necessário no runtime. Para obter mais informações, confira [Preservando o código](~/ios/deploy-test/linker.md).
 
 ## <a name="summary"></a>Resumo
 

@@ -7,33 +7,33 @@ author: davidortinau
 ms.author: daortin
 ms.date: 02/16/2018
 ms.openlocfilehash: 3062afda82be2b45146687b9d77210a42f8f55fa
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "75487952"
 ---
 # <a name="publishing-an-application"></a>Publicando um aplicativo
 
 Quando um bom aplicativo é criado, as pessoas querem usá-lo. Esta seção aborda as etapas envolvidas com a distribuição pública de um aplicativo criado com o Xamarin.Android por meio de canais, como email, um servidor Web particular, Google Play ou a Amazon App Store para Android.
 
-## <a name="overview"></a>{1&gt;Visão Geral&lt;1}
+## <a name="overview"></a>Visão geral
 
 A etapa final no desenvolvimento de um aplicativo Xamarin.Android é publicar o aplicativo. A publicação é o processo de compilação de um aplicativo Xamarin.Android para que ele esteja pronto para que os usuários instalem em seus dispositivos e envolve duas tarefas essenciais:
 
-- **Preparando para a publicação** &ndash; é criada uma versão de lançamento do aplicativo que pode ser implantada em dispositivos com Android (consulte [preparando um aplicativo para liberação](~/android/deploy-test/release-prep/index.md) para obter mais informações sobre a preparação da versão).
+- **Preparação para publicação** &ndash; Uma versão de lançamento do aplicativo é criada que pode ser implantada em dispositivos Android (consulte [Preparar um aplicativo para lançamento](~/android/deploy-test/release-prep/index.md) para obter mais informações sobre a preparação do lançamento).
 
-- A **distribuição** &ndash; versão de lançamento de um aplicativo é disponibilizada por meio de um ou mais dos vários canais de distribuição.
+- **Distribuição** &ndash; A versão de um aplicativo é disponibilizada por meio de um ou mais dos vários canais de distribuição.
 
 O diagrama a seguir ilustra as etapas envolvidas na publicação de um aplicativo Xamarin.Android:
 
-[![Fluxograma Compilar e implantar](images/build-and-deploy-steps.png)](images/build-and-deploy-steps.png#lightbox)
+[![Construir e implantar fluxograma](images/build-and-deploy-steps.png)](images/build-and-deploy-steps.png#lightbox)
 
 Como pode ser visto no diagrama acima, a preparação é a mesma, independentemente do método de distribuição usado. Há várias maneiras que um aplicativo Android pode ser liberado para usuários:
 
-- **Por meio de um site** &ndash; um aplicativo Xamarin. Android pode ser disponibilizado para download em um site, do qual os usuários podem instalar o aplicativo clicando em um link.
-- **Por email** &ndash; é possível que os usuários instalem um aplicativo Xamarin. Android a partir de seus emails. O aplicativo será instalado quando o anexo for aberto com um dispositivo Android.
-- **Por meio de um mercado** &ndash; há vários Marketplaces de aplicativos que existem para distribuição, como [Google Play](https://play.google.com/) ou [Amazon App Store para Android](https://www.amazon.com/mobile-apps/b?ie=UTF8&node=2350149011) .
+- **Por meio de um site** &ndash; Um aplicativo Xamarin.Android pode ser disponibilidade para download em um site, do qual os usuários podem, em seguida, instalar o aplicativo ao clicar em um link.
+- **Por email** &ndash; É possível que os usuários instalem um aplicativo Xamarin.Android pelo email. O aplicativo será instalado quando o anexo for aberto com um dispositivo Android.
+- **Por meio de um mercado** &ndash; Há vários mercados de aplicativos que existem para distribuição, como [Google Play](https://play.google.com/) ou [Amazon App Store for Android](https://www.amazon.com/mobile-apps/b?ie=UTF8&node=2350149011).
 
 Usar um marketplace estabelecido é a maneira mais comum para publicar um aplicativo, pois ele fornece um alcance mais amplo do mercado e maior controle sobre a distribuição. No entanto, a publicação de um aplicativo por meio de um marketplace requer esforço adicional.
 
@@ -50,16 +50,16 @@ O Google Play é indiscutivelmente o marketplace mais abrangente e popular para 
 
 Esta seção mostrou como carregar o aplicativo em lojas como o Google Play, junto com o material promocional apropriado. Arquivos de expansão APK foram explicados, fornecendo uma visão geral conceitual sobre o que são e como funcionam. Os serviços de licenciamento do Google também foram descritos. Finalmente, meios alternativos de distribuição foram apresentados, incluindo o uso de um servidor Web HTTP, distribuição de email simples e a Amazon App Store para Android.
 
-## <a name="related-links"></a>Links Relacionados
+## <a name="related-links"></a>Links relacionados
 
 - [HelloWorldPublishing (amostra)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/helloworldpublishing)
-- [Processo de Compilação](~/android/deploy-test/building-apps/build-process.md)
+- [Processo de build](~/android/deploy-test/building-apps/build-process.md)
 - [Vinculação](~/android/deploy-test/linker.md)
-- [Obter uma chave de API do Google Maps](~/android/platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md)
+- [Obtenção de uma chave de API do Google Maps](~/android/platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md)
 - [Implantar via Visual Studio App Center](https://docs.microsoft.com/appcenter/distribution/stores/googleplay)
 - [Assinatura de aplicativos](https://source.android.com/security/apksigning/)
-- [Como publicar no Google Play](https://developer.android.com/distribute/googleplay/publish/index.html)
+- [Publicando no Google Play](https://developer.android.com/distribute/googleplay/publish/index.html)
 - [Licenciamento de aplicativos do Google](https://developer.android.com/guide/google/play/licensing/index.html)
 - [Android.Play.ExpansionLibrary](https://github.com/mattleibow/Android.Play.ExpansionLibrary)
-- [Portal de Distribuição de Aplicativo Móvel](https://developer.amazon.com/welcome.html)
-- [Perguntas Frequentes da Distribuição de Aplicativo Móvel da Amazon](https://developer.amazon.com/help/faq.html)
+- [Portal de distribuição de aplicativo móvel](https://developer.amazon.com/welcome.html)
+- [Perguntas frequentes da distribuição de aplicativo móvel da Amazon](https://developer.amazon.com/help/faq.html)

@@ -7,10 +7,10 @@ ms.author: jamont
 ms.date: 01/29/2019
 ms.custom: video
 ms.openlocfilehash: 69d0cb503d329ccfb4c29fb6cc4a589bef97e893
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "70756988"
 ---
 # <a name="xamarinessentials-app-information"></a>Xamarin.Essentials: Informações do aplicativo
@@ -60,32 +60,32 @@ Esta página de configurações permite ao usuário alterar permissões do aplic
 
 ## <a name="platform-implementation-specifics"></a>Particularidades de implementação da plataforma
 
-# <a name="androidtabandroid"></a>[Android](#tab/android)
+# <a name="android"></a>[Android](#tab/android)
 
 Informações do aplicativo são obtidas do `AndroidManifest.xml` para os seguintes campos:
 
-- **Build** – `android:versionCode` no nó `manifest`
-- **Name** - `android:label` no nó `application`
-- **PackageName**: `package` no nó `manifest`
-- **VersionString** – `android:versionName` no nó `application`
+- **Construir** `android:versionCode` – `manifest` em nó
+- **Name** -  Nome`android:label` no `application` nó
+- **Nome**do `package` pacote `manifest` : no nó
+- **VersionString** `android:versionName` – `application` no nó
 
-# <a name="iostabios"></a>[iOS](#tab/ios)
+# <a name="ios"></a>[iOS](#tab/ios)
 
 Informações do aplicativo são obtidas do `Info.plist` para os seguintes campos:
 
-- **Build** – `CFBundleVersion`
-- **Name** - `CFBundleDisplayName` se definido, caso contrário `CFBundleName`
-- **PackageName**: `CFBundleIdentifier`
-- **VersionString** – `CFBundleShortVersionString`
+- **Construir** –`CFBundleVersion`
+- **Name** -  Nome`CFBundleDisplayName` se definido, caso mais`CFBundleName`
+- **Nome do pacote:**`CFBundleIdentifier`
+- **VersionString** -`CFBundleShortVersionString`
 
-# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
+# <a name="uwp"></a>[UWP](#tab/uwp)
 
 Informações do aplicativo são obtidas do `Package.appxmanifest` para os seguintes campos:
 
 - **Build** – usa o `Build` da `Version` no nó `Identity`
-- **Name** - `DisplayName` no nó `Properties`
-- **PackageName**: `Name` no nó `Identity`
-- **VersionString** – `Version` no nó `Identity`
+- **Name** -  Nome`DisplayName` no `Properties` nó
+- **Nome**do `Name` pacote `Identity` : no nó
+- **VersionString** `Version` – `Identity` no nó
 
 --------------
 

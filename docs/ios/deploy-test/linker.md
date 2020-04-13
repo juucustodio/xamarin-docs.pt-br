@@ -1,5 +1,5 @@
 ---
-title: Usando Linker em aplicativos Xamarin.iOS
+title: Vinculando aplicativos Xamarin.iOS
 description: Este documento descreve o Linker do Xamarin.iOS, que é usado para eliminar código não utilizado de um aplicativo Xamarin.iOS a fim de reduzir seu tamanho.
 ms.prod: xamarin
 ms.assetid: 3A4B2178-F264-0E93-16D1-8C63C940B2F9
@@ -8,33 +8,33 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/24/2017
 ms.openlocfilehash: 284705973f9c0ec606572170f7e927ed4745ddd1
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73030233"
 ---
-# <a name="linking-xamarinios-apps"></a>Usando Linker em aplicativos Xamarin.iOS
+# <a name="linking-xamarinios-apps"></a>Vinculando aplicativos Xamarin.iOS
 
-Ao compilar seu aplicativo, o Visual Studio para Mac ou o Visual Studio chama uma ferramenta chamada **mtouch**, que inclui um linker para código gerenciado. Ele é usado para remover os recursos que o aplicativo não está usando das class libraries. A meta é reduzir o tamanho do aplicativo, que será fornecido com apenas as partes necessárias.
+Ao compilar seu aplicativo, o Visual Studio para Mac ou o Visual Studio chama uma ferramenta chamada **mtouch**, que inclui um vinculador para código gerenciado. Ele é usado para remover os recursos que o aplicativo não está usando das class libraries. A meta é reduzir o tamanho do aplicativo, que será fornecido com apenas as partes necessárias.
 
-O linker usa análise estática para determinar os diferentes caminhos de código que seu aplicativo é suscetível a seguir. Ela é um pouco pesada, já que precisa passar por todos os detalhes de cada assembly, para verificar se nada detectável foi removido. Ele não é habilitado por padrão em builds do simulador para acelerar o tempo de compilação durante a depuração. No entanto, já que ele produz aplicativos menores e que pode acelerar a compilação AOT e o upload para o dispositivo, todos os *builds de dispositivos (Release)* estão usando o linker por padrão.
+O vinculador usa análise estática para determinar os diferentes caminhos de código que seu aplicativo é suscetível a seguir. Ela é um pouco pesada, já que precisa passar por todos os detalhes de cada assembly, para verificar se nada detectável foi removido. Ele não é habilitado por padrão em builds do simulador para acelerar o tempo de compilação durante a depuração. No entanto, já que ele produz aplicativos menores e que pode acelerar a compilação AOT e o upload para o dispositivo, todos os *builds de dispositivos (versão)* estão usando o vinculador por padrão.
 
-Já que o linker é uma ferramenta estática, ele não pode marcar para inclusão tipos e métodos que são chamados por meio de reflection, ou instanciados dinamicamente. Há várias opções de soluções alternativas para essa limitação.
+Já que o vinculador é uma ferramenta estática, ele não pode marcar para tipos de inclusão e métodos que são chamados por meio de reflexão, ou instanciados dinamicamente. Há várias opções de soluções alternativas para essa limitação.
 
 <a name="Linker_Behavior" />
 
-## <a name="linker-behavior"></a>Comportamento do Linker
+## <a name="linker-behavior"></a>Comportamento do vinculador
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
-O processo de _linking_ pode ser personalizado por meio do menu suspenso de comportamento do linker em **Opções do Projeto**. Para acessá-lo, clique duas vezes no projeto iOS e navegue até **Build do iOS > Opções do Linker**, conforme ilustrado abaixo:
+O processo de vinculação pode ser personalizado por meio do menu suspenso de comportamento do vinculador em **Opções do Projeto**. Para acessá-lo, clique duas vezes no projeto iOS e navegue até **Build do iOS > Opções do Vinculador**, conforme ilustrado abaixo:
 
 [![](linker-images/image1.png "Linker Options")](linker-images/image1.png#lightbox)
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-O processo de _linking_ pode ser personalizado por meio do menu suspenso de comportamento do linker nas **Propriedades do Projeto** no Visual Studio.
+O processo de vinculação pode ser personalizado por meio do menu suspenso de comportamento do vinculador nas **Propriedades do Projeto** no Visual Studio.
 
 Faça o seguinte:
 
@@ -44,7 +44,7 @@ Faça o seguinte:
 2. Nas **Propriedades do Projeto**, selecione **Build do iOS**:
 
     ![](linker-images/linking02w.png "Select IOS Build")
-3. Siga as instruções abaixo para alterar as opções do linker.
+3. Siga as instruções abaixo para alterar as opções de vinculação.
 
 -----
 
@@ -128,7 +128,7 @@ Se você deseja que o _linker_ ignore vários assemblies, inclua vários argumen
 --linkskip=NameOfFirstAssembly --linkskip=NameOfSecondAssembly
 ```
 
-Não há nenhuma interface do usuário para usar essa opção, mas ela pode ser fornecida na caixa de diálogo Opções do Projeto do Visual Studio para Mac ou no painel Propriedades do projeto do Visual Studio, dentro do campo de texto **Argumentos adicionais do mtouch**. (por exemplo, *--linkskip=mscorlib* não vincularia mscorlib, mas vincularia outros assemblies na solução).
+Não há nenhuma interface do usuário para usar essa opção, mas ela pode ser fornecida na caixa de diálogo Opções do Projeto do Visual Studio para Mac ou no painel Propriedades do projeto do Visual Studio, dentro do campo de texto **Argumentos adicionais do mtouch**. Por exemplo, *--linkskip=mscorlib* não vincularia mscorlib, mas vincularia outros assemblies na solução).
 
 <a name="Disabling_Link_Away" />
 
@@ -138,15 +138,15 @@ O _linker_ removerá código que tem uma chance muito baixa de ser usado em disp
 
 Isso corresponde à opção *-nolinkaway* ao usar a ferramenta de linha de comando mtouch.
 
-Não há nenhuma interface do usuário para usar essa opção, mas ela pode ser fornecida na caixa de diálogo Opções do Projeto do Visual Studio para Mac ou no painel Propriedades do projeto do Visual Studio, dentro do campo de texto **Argumentos adicionais do mtouch**. (por exemplo, *--nolinkaway* não removeria o código extra (cerca de 100 KB)).
+Não há nenhuma interface do usuário para usar essa opção, mas ela pode ser fornecida na caixa de diálogo Opções do Projeto do Visual Studio para Mac ou no painel Propriedades do projeto do Visual Studio, dentro do campo de texto **Argumentos adicionais do mtouch**. Por exemplo, *--nolinkaway* não removeria o código extra (cerca de 100 KB)).
 
-### <a name="marking-your-assembly-as-linker-ready"></a>Marcar o assembly como pronto para o Linker
+### <a name="marking-your-assembly-as-linker-ready"></a>Marcar o assembly como pronto para o vinculador
 
 Os usuários podem selecionar a opção de apenas vincular os assemblies do SDK, sem nenhuma vinculação ao seu código.  Isso também significa que todas as bibliotecas de terceiros que não fazem parte do SDK principal do Xamarin não serão vinculadas.
 
 Isso normalmente acontece porque eles não desejam adicionar manualmente atributos `[Preserve]` ao seu código.  O efeito colateral é que bibliotecas de terceiros não serão vinculadas, o que geralmente é um bom padrão, pois não é possível saber se uma outra biblioteca de terceiros é compatível com o _linker_ ou não.
 
-Se você tiver uma biblioteca no seu projeto ou se você for um desenvolvedor de bibliotecas reutilizáveis e desejar que o _linker_ trate o assembly como vinculável, tudo o que você precisa fazer é adicionar o atributo no nível de assembly [`LinkerSafe`](xref:Foundation.LinkerSafeAttribute), assim:
+Se você tem uma biblioteca em seu projeto, ou você é um desenvolvedor de bibliotecas reutilizáveis e deseja que o linker [`LinkerSafe`](xref:Foundation.LinkerSafeAttribute)trate sua montagem como vinculável, tudo o que você precisa fazer é adicionar o atributo de nível de montagem, como este:
 
 ```csharp
 [assembly:LinkerSafe]
@@ -167,6 +167,6 @@ Siga as [instruções para criar um arquivo de configuração do vinculador](~/c
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Configuração personalizada do Linker](~/cross-platform/deploy-test/linker.md)
+- [Configuração de linker personalizado](~/cross-platform/deploy-test/linker.md)
 - [Usando Linker no Mac](~/mac/deploy-test/linker.md)
-- [Usando Linker no Android](~/android/deploy-test/linker.md)
+- [Vinculação no Android](~/android/deploy-test/linker.md)

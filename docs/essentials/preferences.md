@@ -7,10 +7,10 @@ ms.author: jamont
 ms.date: 01/15/2019
 ms.custom: video
 ms.openlocfilehash: e812ab5b85db396ee3cb473f4a659ac188c9212f
-ms.sourcegitcommit: 98fdc3b4a7ef10d5b45167315dbffe94853af71a
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "79497046"
 ---
 # <a name="xamarinessentials-preferences"></a>Xamarin.Essentials: Preferências
@@ -41,7 +41,7 @@ Para recuperar um valor das preferências, ou um padrão, se não for definido:
 var myValue = Preferences.Get("my_key", "default_value");
 ```
 
-Para verificar se uma determinada _chave_ existe nas preferências:
+Para verificar se existe uma determinada _chave_ nas preferências:
 
 ```csharp
 bool hasKey = Preferences.ContainsKey("my_key");
@@ -67,24 +67,24 @@ Os tipos de dados a seguir têm suporte em **Preferences**:
 
 - **bool**
 - **double**
-- **int**
-- **float**
-- **long**
-- **string**
-- **DateTime**
+- **INT**
+- **FLOAT**
+- **Longas**
+- **cadeia de caracteres**
+- **Datetime**
 
-## <a name="integrate-with-system-settings"></a>Integrar com as configurações do sistema
+## <a name="integrate-with-system-settings"></a>Integre-se às configurações do sistema
 
-As preferências são armazenadas nativamente, o que permite que você integre suas configurações às configurações do sistema nativo. Siga os exemplos de plataforma e documetnation para integrar com a plataforma:
+As preferências são armazenamento nativamente, o que permite que você integre suas configurações nas configurações nativas do sistema. Siga a plataforma documetnation e amostras para integrar com a plataforma:
 
-* Apple: [implementando um pacote de configurações do IOS](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/UserDefaults/Preferences/Preferences.html)
-* [Exemplo de preferências do iOS aplicativo](https://docs.microsoft.com/samples/xamarin/ios-samples/appprefs/)
-* [Configurações de watchOS](https://developer.xamarin.com/guides/ios/watch/working-with/settings/)
-* Android: [introdução com telas de configurações](https://developer.android.com/guide/topics/ui/settings.html)
+* Apple: [Implementando um pacote de configurações do iOS](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/UserDefaults/Preferences/Preferences.html)
+* [Amostra de preferências do iOS Applicaton](https://docs.microsoft.com/samples/xamarin/ios-samples/appprefs/)
+* [Configurações do watchOS](https://developer.xamarin.com/guides/ios/watch/working-with/settings/)
+* Android: [Começando com telas de configurações](https://developer.android.com/guide/topics/ui/settings.html)
 
 ## <a name="implementation-details"></a>Detalhes da implementação
 
-Os valores de `DateTime` são armazenados em um formato binário de 64 bits (inteiro longo) usando dois métodos definidos pela classe `DateTime`: o método [`ToBinary`](xref:System.DateTime.ToBinary) é usado para codificar o valor `DateTime` e o método [`FromBinary`](xref:System.DateTime.FromBinary(System.Int64)) decodifica o valor. Confira a documentação desses métodos para conhecer os ajustes que podem ser feitos em valores decodificados ao armazenar um `DateTime` que não seja um valor UTC (Tempo Universal Coordenado).
+Os `DateTime` valores são armazenados em um formato binário de 64 bits `DateTime` (inteiro [`ToBinary`](xref:System.DateTime.ToBinary) longo) usando dois `DateTime` métodos [`FromBinary`](xref:System.DateTime.FromBinary(System.Int64)) definidos pela classe: O método é usado para codificar o valor e o método decodifica o valor. Confira a documentação desses métodos para conhecer os ajustes que podem ser feitos em valores decodificados ao armazenar um `DateTime` que não seja um valor UTC (Tempo Universal Coordenado).
 
 ## <a name="platform-implementation-specifics"></a>Particularidades de implementação da plataforma
 
@@ -100,7 +100,7 @@ Todos os dados são armazenados em [Preferências Compartilhadas](https://develo
 
 [ApplicationDataContainer](https://docs.microsoft.com/uwp/api/windows.storage.applicationdatacontainer) é usado para armazenar os valores no dispositivo. Se nenhum `sharedName` for especificado, o `LocalSettings` será usado, caso contrário, o nome será usado para criar um novo contêiner dentro do `LocalSettings`. 
 
-`LocalSettings` também tem a seguinte restrição de que o nome de cada configuração pode ter 255 caracteres de comprimento máximo. Cada configuração pode ter até 8K bytes de tamanho e cada configuração composta pode ter até 64K bytes de tamanho.
+`LocalSettings`também tem a seguinte restrição de que o nome de cada configuração pode ser de 255 caracteres no máximo. Cada configuração pode ter até 8K bytes de tamanho e cada configuração composta pode ter até 64K bytes de tamanho.
 
 --------------
 

@@ -7,13 +7,13 @@ ms.author: jamont
 ms.date: 04/02/2019
 ms.custom: video
 ms.openlocfilehash: fe8730ba6bc664269d79c550fb4e0abef7767fe0
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "70765007"
 ---
-# <a name="xamarinessentials-browser"></a>Xamarin.Essentials: Navegador
+# <a name="xamarinessentials-browser"></a>Xamarin.Essentials: Browser
 
 A classe **Browser** permite que um aplicativo abra um link da Web no navegador preferido do sistema otimizado ou no navegador externo.
 
@@ -64,7 +64,7 @@ await Browser.OpenAsync(uri, new BrowserLaunchOptions
 
 ## <a name="platform-implementation-specifics"></a>Particularidades de implementação da plataforma
 
-# <a name="androidtabandroid"></a>[Android](#tab/android)
+# <a name="android"></a>[Android](#tab/android)
 
 O Modo de Inicialização determina como o navegador é iniciado:
 
@@ -76,7 +76,7 @@ As [Custom Tabs do Chrome](https://developer.chrome.com/multidevice/android/cust
 
 Uma `Intent` será usada para solicitar o Uri que será aberto por meio do navegador normal dos sistemas.
 
-# <a name="iostabios"></a>[iOS](#tab/ios)
+# <a name="ios"></a>[iOS](#tab/ios)
 
 ## <a name="system-preferred"></a>Sistema preferido
 
@@ -86,7 +86,7 @@ Uma `Intent` será usada para solicitar o Uri que será aberto por meio do naveg
 
 O padrão `OpenUrl` no aplicativo principal é usado para iniciar o navegador padrão fora do aplicativo.
 
-# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
+# <a name="uwp"></a>[UWP](#tab/uwp)
 
 O navegador padrão do usuário sempre será iniciado independentemente do `BrowserLaunchMode`.
 

@@ -9,10 +9,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 02/19/2016
 ms.openlocfilehash: aaf2086fd8128d68baa401ab646b31bcbc279545
-ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "79305020"
 ---
 # <a name="xamarinforms-app-class"></a>Classe App do Xamarin.Forms
@@ -20,10 +20,10 @@ ms.locfileid: "79305020"
 A classe base `Application` oferece os seguintes recursos, que são expostos na subclasse `App` padrão de seus projetos:
 
 * Uma propriedade `MainPage`, que é onde a página inicial do aplicativo deve ser definida.
-* Um [ dicionário de `Properties`](#Properties_Dictionary) persistente para armazenar valores simples durante alterações de estado do ciclo de vida.
+* Um [ `Properties` dicionário](#Properties_Dictionary) persistente para armazenar valores simples através das alterações do estado do ciclo de vida.
 * Uma propriedade `Current` estática que contém uma referência ao objeto do aplicativo atual.
 
-Ela também expõe [Métodos de ciclo de vida](~/xamarin-forms/app-fundamentals/app-lifecycle.md) como `OnStart`, `OnSleep` e `OnResume`, bem como eventos de navegação modal.
+Também expõe [métodos de ciclo de vida,](~/xamarin-forms/app-fundamentals/app-lifecycle.md) como `OnStart`, `OnSleep`e `OnResume` eventos de navegação modal.
 
 Dependendo do modelo escolhido, a classe `App` poderá ser definida de uma das duas maneiras:
 
@@ -54,7 +54,7 @@ public partial class App : Application
 }
 ```
 
-Além de configurar a propriedade [`MainPage`](xref:Xamarin.Forms.Application.MainPage), o code-behind também deve chamar o método `InitializeComponent` para carregar e analisar o XAML associado.
+Além de definir [`MainPage`](xref:Xamarin.Forms.Application.MainPage) a propriedade, o code-behind também deve chamar o `InitializeComponent` método para carregar e analisar o XAML associado.
 
 ## <a name="mainpage-property"></a>Propriedade MainPage
 

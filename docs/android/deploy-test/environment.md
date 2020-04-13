@@ -7,10 +7,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 02/15/2018
 ms.openlocfilehash: 54fc52c2f2460726fe1c22149d4e7cc0e8a92609
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73028068"
 ---
 # <a name="xamarinandroid-environment"></a>Ambiente do Xamarin.Android
@@ -48,7 +48,7 @@ O tipo qualificado por assembly que deve herdar de [HttpMessageHandler](https://
 
 No Xamarin.Android 6.1, essa variável de ambiente não é definida por padrão e [HttpClientHandler](https://docs.microsoft.com/dotnet/api/system.net.http.httpclienthandler?view=xamarinandroid-7.1) é usada.
 
-Como alternativa, o valor `Xamarin.Android.Net.AndroidClientHandler` pode ser especificado para usar [`java.net.URLConnection`](xref:Java.Net.URLConnection)
+Alternativamente, o `Xamarin.Android.Net.AndroidClientHandler` valor pode ser especificado para usar[`java.net.URLConnection`](xref:Java.Net.URLConnection)
 para acesso à rede, que *talvez* permita o uso do TLS 1.2 quando Android dá suporte a ele.
 
 Adicionado no Xamarin.Android 6.1.
@@ -95,7 +95,7 @@ Controla quais informações adicionais o Xamarin.Android registrará em `adb lo
 - `gref`: imprimir mensagens de referência global de JNI.
 - `lref`: imprimir mensagens de referência local de JNI.
   > [!NOTE]
-  > Isso *realmente* enviará spam `adb logcat`.
+  > isso *realmente* enviará `adb logcat` como spam.
   > No Xamarin.Android 5.1, isso também criará um arquivo `.__override__/lrefs.txt`, que pode ficar *gigantesco*.
   > Evite isso.
 - `timing`: imprimir algumas informações de tempo de método. Isso também criará os arquivos `.__override__/methods.txt` e `.__override__/counters.txt`.
@@ -131,7 +131,7 @@ Em geral, a recomendação é *não usar*. O uso de rastreamento enviará a saí
 A propriedade do sistema `debug.mono.wref` permite substituir o mecanismo de referência fraca JNI padrão detectado. Há dois valores compatíveis:
 
 - `jni`: use referências fracas JNI, conforme criadas pelo `JNIEnv::NewWeakGlobalRef()` e destruídas por `JNIEnv::DeleteWeakGlobalREf()`.
-- `java`: Use referências globais JNI que fazem referência a instâncias de `java.lang.WeakReference`.
+- `java`: Use referências JNI `java.lang.WeakReference` Global que fazem referência às instâncias.
 
 `java` é usado, por padrão, até a API-7 e na API-19 (Kit Kat) com ART habilitado. (A API-8 adicionou referências `jni` e o ART *interrompeu* `jni` referências.)
 

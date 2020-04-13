@@ -8,17 +8,17 @@ author: davidortinau
 ms.author: daortin
 ms.date: 01/18/2017
 ms.openlocfilehash: d94a647583539ac6af603a9074e1966c1c41d587
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73028456"
 ---
 # <a name="infoplist-reference-for-xamarinios"></a>Referência de Info.plist para Xamarin.iOS
 
 Para obter mais informações sobre como trabalhar com chaves Info.Plist, veja o guia [Trabalhando com segurança e privacidade](~/ios/app-fundamentals/security-privacy.md). 
 
-## <a name="location"></a>Local 
+## <a name="location"></a>Location 
 
 O acesso ao local do usuário também requer modificações em Info.plist. As seguintes chaves relacionadas a dados locais devem ser definidas: 
 
@@ -45,7 +45,7 @@ NSRemindersUsageDescription
     
 NSBluetoothPeripheralUsageDescription 
 
-## <a name="microphone"></a>Microphone 
+## <a name="microphone"></a>Microfone 
 
 NSMicrophoneUsageDescription 
 

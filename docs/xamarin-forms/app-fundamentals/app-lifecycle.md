@@ -8,25 +8,25 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 05/31/2018
 ms.openlocfilehash: 41e8d073982bf7963b3a77a939bf28e52e86feaa
-ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "67675184"
 ---
 # <a name="xamarinforms-app-lifecycle"></a>Ciclo de vida do aplicativo no Xamarin.Forms
 
-A classe base [`Application`](xref:Xamarin.Forms.Application) fornece os seguintes recursos:
+A [`Application`](xref:Xamarin.Forms.Application) classe base fornece os seguintes recursos:
 
-- [Métodos de ciclo de vida](#Lifecycle_Methods) `OnStart`, `OnSleep` e `OnResume`.
-- [Eventos de navegação de página](#page) [`PageAppearing`](xref:Xamarin.Forms.Application.PageAppearing), [`PageDisappearing`](xref:Xamarin.Forms.Application.PageDisappearing).
-- [Eventos de navegação modal](#modal) `ModalPushing`, `ModalPushed`, `ModalPopping` e `ModalPopped`.
+- [Métodos de ciclo de](#Lifecycle_Methods) `OnStart`vida, `OnSleep`e `OnResume`.
+- [Eventos de navegação de](#page) [`PageAppearing`](xref:Xamarin.Forms.Application.PageAppearing)página , [`PageDisappearing`](xref:Xamarin.Forms.Application.PageDisappearing).
+- Eventos `ModalPushing`de navegação `ModalPushed` `ModalPopping` [modal,](#modal) , e `ModalPopped`.
 
 <a name="Lifecycle_Methods" />
 
 ## <a name="lifecycle-methods"></a>Métodos de ciclo de vida
 
-A classe [`Application`](xref:Xamarin.Forms.Application) contém três métodos virtuais que podem ser substituídos para responder às alterações de ciclo de vida:
+A [`Application`](xref:Xamarin.Forms.Application) classe contém três métodos virtuais que podem ser substituídos para responder às alterações do ciclo de vida:
 
 - `OnStart` – chamado quando o aplicativo é iniciado.
 - `OnSleep` – chamado sempre que o aplicativo vai para segundo plano.
@@ -59,21 +59,21 @@ protected override void OnResume()
 
 ## <a name="page-notification-events"></a>Eventos de notificação de página
 
-Há dois eventos na classe [`Application`](xref:Xamarin.Forms.Application) que fornecem notificação quando páginas aparecem e desaparecem:
+Existem dois eventos [`Application`](xref:Xamarin.Forms.Application) na classe que fornecem notificação de páginas que aparecem e desaparecem:
 
-- [`PageAppearing`](xref:Xamarin.Forms.Application.PageAppearing) – gerado quando uma página está prestes a aparecer na tela.
-- [`PageDisappearing`](xref:Xamarin.Forms.Application.PageDisappearing) – gerado quando uma página está prestes a desaparecer da tela.
+- [`PageAppearing`](xref:Xamarin.Forms.Application.PageAppearing)- levantada quando uma página está prestes a aparecer na tela.
+- [`PageDisappearing`](xref:Xamarin.Forms.Application.PageDisappearing)- levantado quando uma página está prestes a desaparecer da tela.
 
 Esses eventos podem ser usados em cenários em que você deseja controlar páginas à medida em que aparecem na tela.
 
 > [!NOTE]
-> Os eventos [`PageAppearing`](xref:Xamarin.Forms.Application.PageAppearing) e [`PageDisappearing`](xref:Xamarin.Forms.Application.PageDisappearing) são gerados da classe base [`Page`](xref:Xamarin.Forms.Page) imediatamente após os eventos [`Page.Appearing`](xref:Xamarin.Forms.Page.Appearing) e [`Page.Disappearing`](xref:Xamarin.Forms.Page.Disappearing), respectivamente.
+> Os [`PageAppearing`](xref:Xamarin.Forms.Application.PageAppearing) [`PageDisappearing`](xref:Xamarin.Forms.Application.PageDisappearing) eventos são levantados [`Page`](xref:Xamarin.Forms.Page) da classe base [`Page.Appearing`](xref:Xamarin.Forms.Page.Appearing) [`Page.Disappearing`](xref:Xamarin.Forms.Page.Disappearing) imediatamente após os eventos, respectivamente.
 
 <a name="modal" />
 
 ## <a name="modal-navigation-events"></a>Eventos de navegação modal
 
-Há quatro eventos na classe [`Application`](xref:Xamarin.Forms.Application), cada um com seus próprios argumentos de evento, que permitem que você responda quando páginas modais são mostradas e ignoradas:
+Há quatro eventos [`Application`](xref:Xamarin.Forms.Application) na classe, cada um com seus próprios argumentos de evento, que permitem que você responda às páginas modais sendo mostradas e descartadas:
 
 - `ModalPushing` – acionado quando uma página é enviada por push de forma modal.
 - `ModalPushed` – acionado após uma página ter sido enviada por push de forma modal.

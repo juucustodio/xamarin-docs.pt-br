@@ -5,12 +5,12 @@ ms.assetid: 4EDC9897-5FD1-44CA-A26D-2E5AB472C99A
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 02/26/2020
-ms.openlocfilehash: 42cdfe6c54354f1616606c9b3a40de78446c5c39
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.openlocfilehash: 1d68203e80e0bc28e7060d5873c122db8c2ff960
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78910726"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "80387198"
 ---
 # <a name="xamarinessentials"></a>Xamarin.Essentials
 
@@ -28,7 +28,7 @@ Siga os guias para integrar esses recursos Xamarin.Essentials em seus aplicativo
 
 * [Acelerômetro](accelerometer.md?context=xamarin/xamarin-forms) – recuperar dados de aceleração do dispositivo no espaço tridimensional.
 * [Informações do aplicativo](app-information.md?context=xamarin/xamarin-forms) – localize informações sobre o aplicativo.
-* [Tema do aplicativo](app-theme.md?context=xamarin/xamarin-forms) – detectar o tema atual solicitado para o aplicativo.
+* [Tema do aplicativo](app-theme.md?context=xamarin/xamarin-forms) – Detecte o tema atual solicitado para o aplicativo.
 * [Barômetro](barometer.md?context=xamarin/xamarin-forms) – monitorar o barômetro em relação a alterações de pressão.
 * [Bateria](battery.md?context=xamarin/xamarin-forms) – facilmente detectar o nível de bateria, o código-fonte e o estado.
 * [Área de transferência](clipboard.md?context=xamarin/xamarin-forms) – definir ou ler rapidamente e facilmente texto na área de transferência.
@@ -61,6 +61,7 @@ Siga os guias para integrar esses recursos Xamarin.Essentials em seus aplicativo
 * [Conversores de unidade](unit-converters.md?context=xamarin/xamarin-forms) – métodos auxiliares para converter unidades.
 * [Controle de versão](version-tracking.md?context=xamarin/xamarin-forms) – controlar a versão de aplicativos e os números de build.
 * [Vibrar](vibrate.md?context=xamarin/xamarin-forms) – fazer o dispositivo vibrar.
+* [Autenticador da Web](web-authenticator.md?context=xamarin/xamarin-forms) - Inicie fluxos de autenticação da Web e ouça um retorno de chamada.
 
 ## <a name="troubleshooting"></a>[Solução de problemas](troubleshooting.md?context=xamarin/xamarin-forms)
 

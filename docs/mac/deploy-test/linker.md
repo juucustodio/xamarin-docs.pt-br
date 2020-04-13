@@ -8,17 +8,17 @@ author: davidortinau
 ms.author: daortin
 ms.date: 11/10/2017
 ms.openlocfilehash: f4ab94c4eede4a122ac834e075270a375bca0807
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73030003"
 ---
 # <a name="xamarinmac-linker-options"></a>Opções do vinculador do Xamarin.Mac
 
 _A vinculação é uma poderosa ferramenta de otimização que reduz o tamanho do seu aplicativo, removendo o código não utilizado._
 
-## <a name="overview"></a>Visão Geral
+## <a name="overview"></a>Visão geral
 
 Com base na [Estrutura de Destino](~/mac/platform/target-framework.md) utilizada pelo seu projeto, as opções de vinculador disponíveis podem ser limitadas. Isso ocorre devido ao fato de que a vinculação requer a criação de um gráfico de objeto de todo tipo usado pelo seu aplicativo e isso não é possível no Completo (ou Sem Suporte) devido a System.Configuration.
 
@@ -27,7 +27,7 @@ Há quatro opções disponíveis:
 - **Nenhum** – Desabilitar todas as vinculações. O padrão na configuração de Depuração no Moderno e todas as configurações no Completo.
 - **SDK** – Vincula todos os assemblies do SDK, exceto os assemblies de usuário. Padrão na configuração de Versão no Moderno. Indisponível no Completo.
 - **Completo** – Vincula todos os assemblies. Isso requer que o código do usuário seja seguro para o vinculador, confira as [notas](~/ios/deploy-test/linker.md) para obter mais informações. Indisponível no Completo.
-- **Plataforma** – Vincula somente o Xamarin.Mac.dll. Veja mais detalhes a seguir.
+- **Plataforma** – Vincula somente o Xamarin.Mac.dll. Confira os detalhes abaixo.
 
 ## <a name="platform-linking"></a>Vinculação de plataforma
 
@@ -49,7 +49,7 @@ Para alterar a configuração do vinculador para um projeto Xamarin.Mac, faça o
 2. No **Gerenciador de Soluções**, clique duas vezes no arquivo do projeto para abrir a caixa de diálogo **Opções de Projeto**.
 3. Na guia **Build do Mac**, selecione o tipo de **Comportamento do Vinculador** que atende às necessidades do aplicativo:
 
-    ![Escolher o comportamento do vinculador a ser usado](linker-images/link-behavior.png "Escolher o comportamento do vinculador a ser usado")
+    ![Escolha qual comportamento de linker usar](linker-images/link-behavior.png "Escolha qual comportamento de linker usar")
 
 4. A vinculação da plataforma para Estruturas de Destino Completas não aparecerá no IDE até uma atualização futura. Até lá, adicione `--linkplatform` aos **Argumentos mmp adicionais** em vez disso.
 5. Clique no botão **OK** para salvar suas alterações.

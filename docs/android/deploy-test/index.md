@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 04/25/2018
 ms.openlocfilehash: 4b7d3d19ce8766ccdbfc41163fcad44074e832b8
-ms.sourcegitcommit: ec112800a76089ab1db66fe24b8bbcc510e067b4
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "80159751"
 ---
 # <a name="deployment-and-testing"></a>Implantação e Teste
@@ -20,11 +20,11 @@ Os guias desta seção explicam como testar um aplicativo, otimizar seu desempen
 
 ## <a name="application-package-sizes"></a>[Tamanho dos pacotes de aplicativos](app-package-size.md)
 
-Este artigo examina as partes que constituem um pacote de aplicativos do Xamarin.Android e as estratégias associadas que podem ser usadas para a implantação eficiente do pacote durante a depuração e as etapas de lançamento da implantação.
+Este artigo examina as partes que constituem um pacote do aplicativo do Xamarin.Android e as estratégias associadas que podem ser usadas para a implantação eficiente do pacote durante a depuração e as etapas de lançamento de desenvolvimento.
 
 ## <a name="apply-changes"></a>[Aplicar alterações](apply-changes.md)
 
-Este guia aborda o recurso aplicar alterações, que permite que você envie por push alterações de recursos para seu aplicativo em execução sem reiniciar o aplicativo.
+Este guia abrange o recurso Aplicar alterações, que permite que você empurre alterações de recursos para o aplicativo em execução sem reiniciar o aplicativo.
 
 ## <a name="building-apps"></a>[Compilar aplicativos](building-apps/index.md)
 

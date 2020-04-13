@@ -1,5 +1,5 @@
 ---
-title: 'Xamarin.Essentials: Compartilhar'
+title: 'Xamarin.Essentials: compartilhar'
 description: A classe Share no Xamarin.Essentials permite que um aplicativo compartilhe dados, como links de texto e da Web com outros aplicativos no dispositivo.
 ms.assetid: B7B01D55-0129-4C87-B515-89F8F4E94665
 author: jamesmontemagno
@@ -7,13 +7,13 @@ ms.author: jamont
 ms.date: 01/06/2020
 ms.custom: video
 ms.openlocfilehash: f964967dce0dbb7e49d52a7f865b0fe8a9957bbe
-ms.sourcegitcommit: fec87846fcb262fc8b79774a395908c8c8fc8f5b
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/21/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "77545206"
 ---
-# <a name="xamarinessentials-share"></a>Xamarin.Essentials: Compartilhar
+# <a name="xamarinessentials-share"></a>Xamarin.Essentials: compartilhar
 
 A classe **Share** permite que um aplicativo compartilhe dados, como links de texto e da Web com outros aplicativos no dispositivo.
 
@@ -79,7 +79,7 @@ await Share.RequestAsync(new ShareFileRequest
 
 ## <a name="presentation-location"></a>Local de apresentação
 
-Ao solicitar um compartilhamento no iPadOS, você tem a possibilidade de apresentá-lo em um controle. Você pode especificar a localização usando a propriedade `PresentationSourceBounds`:
+Ao solicitar um compartilhamento no iPadOS, você tem a capacidade de apresentar em um pop sobre o controle. Você pode especificar `PresentationSourceBounds` o local usando a propriedade:
 
 ```csharp
 await Share.RequestAsync(new ShareFileRequest
@@ -112,8 +112,8 @@ await Share.RequestAsync(new ShareFileRequest
 
 ## <a name="api"></a>API
 
-- [Código-fonte de Share](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Share)
-- [Documentação da API de Share](xref:Xamarin.Essentials.Share)
+- [Compartilhar código-fonte](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Share)
+- [Compartilhar documentação da API](xref:Xamarin.Essentials.Share)
 
 ## <a name="related-video"></a>Vídeo relacionados
 

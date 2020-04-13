@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
 ms.openlocfilehash: 58fbe6d688ffb506db4316ee29d79a364f849a97
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73030421"
 ---
 # <a name="ipa-support-in-xamarinios"></a>Suporte de IPA no Xamarin.iOS
@@ -54,7 +54,7 @@ Consulte a documentação [Arte do iTunes](~/ios/app-fundamentals/images-icons/a
 
 ## <a name="creating-an-ipa"></a>Como criar um IPA
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
 A ação de criar um IPA agora é interna no novo fluxo de trabalho de publicação. Para fazer isso, siga as instruções abaixo para arquivar seu aplicativo, assiná-lo e salvar seu IPA.
 
@@ -70,7 +70,7 @@ Para compilar um IPA, é preciso criar um _arquivo morto_ de um build de versão
 
     ![](ipa-support-images/buildxs01new.png "Select the Release | Device configuration")
 
-1. No menu **Compilar**, selecione **Arquivo para Publicação**:
+1. No menu **Build,** selecione **'Arquivamento para publicação':**
 
     ![](ipa-support-images/buildxs02new.png "Select Archive for Publishing")
 
@@ -88,7 +88,7 @@ Observe que, para os builds não da App Store, o arquivo **iTunesMetadata.plist*
 
 Para assinar seu aplicativo e prepará-lo para distribuição:
 
-1. Selecione o botão **Assinar e Distribuir...** , como ilustrado abaixo:
+1. Selecione o botão **Assinar e Distribuir...**, como ilustrado abaixo:
 
     ![](ipa-support-images/buildxs04new.png "Select Sign and Distribute...")
 
@@ -112,7 +112,7 @@ Para assinar seu aplicativo e prepará-lo para distribuição:
 
 Em determinados casos, como em um ambiente de CI, pode ser necessário compilar o IPA via linha de comando. Siga as etapas abaixo para fazer isso:
 
-1. Marque **Opções de Projeto > Opções de IPA do iOS > Incluir imagens do iTunesArtwork** e marque **Compilar pacote ad hoc/empresarial (IPA)** :
+1. Marque **Opções de Projeto > Opções de IPA do iOS > Incluir imagens do iTunesArtwork** e marque **Compilar pacote ad hoc/empresarial (IPA)**:
 
     ![](ipa-support-images/imagexs04.png "Include iTunesArtwork images and Build ad-hoc/enterprise package IPA is checked")
 
@@ -123,7 +123,7 @@ Em determinados casos, como em um ambiente de CI, pode ser necessário compilar 
     <IpaIncludeArtwork>false</IpaIncludeArtwork>
     ```
 
-1. Se estiver incluindo um arquivo **iTunesMetadata.plist** opcional, clique no botão **...** , selecione-o na lista e clique no botão **OK**:
+1. Se estiver incluindo um arquivo **iTunesMetadata.plist** opcional, clique no botão **...**, selecione-o na lista e clique no botão **OK**:
 
      ![](ipa-support-images/imagexs03.png "Select iTunesMetadata.plist from the list")
 
@@ -133,9 +133,9 @@ Em determinados casos, como em um ambiente de CI, pode ser necessário compilar 
     /Library/Frameworks/Mono.framework/Commands/msbuild YourSolution.sln /p:Configuration=Ad-Hoc /p:Platform=iPhone /p:BuildIpa=true
     ```
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-Após o perfil de provisionamento ser criado e selecionado, o arquivo **iTunesMetadata.plist** opcional ser criado e a Arte do iTunes ser definida no Visual Studio, você poderá compilar um IPA para distribuição. Em seguida, você precisará configurar seu projeto. Faça o seguinte:
+ Depois que o perfil de provisionamento for criado e selecionado, o arquivo **iTunesMetadata.plist** opcional for criado e a Arte do iTunes for definida no Visual Studio, você poderá compilar um IPA para distribuição. Em seguida, você precisará configurar seu projeto. Faça o seguinte:
 
 1. No **Gerenciador de Soluções**, clique com o botão direito do mouse no nome do projeto Xamarin.iOS e selecione **Propriedades** para abri-lo para edição:
 
@@ -148,7 +148,7 @@ Após o perfil de provisionamento ser criado e selecionado, o arquivo **iTunesMe
     > [!NOTE]
     > Uma configuração ad hoc pode não estar disponível para projetos do Xamarin.iOS mais recentes. Se não estiver disponível, selecione a configuração de **Versão**.
 
-3. Se estiver incluindo um arquivo **iTunesMetadata.plist** opcional, clique no botão **...** , selecione-o na lista e clique no botão **Abrir**:
+3. Se estiver incluindo um arquivo **iTunesMetadata.plist** opcional, clique no botão **...**, selecione-o na lista e clique no botão **Abrir**:
 
     ![](ipa-support-images/imagevs03.png "Select iTunesMetadata.plist from the list")
 
@@ -159,7 +159,7 @@ Após o perfil de provisionamento ser criado e selecionado, o arquivo **iTunesMe
     ![](ipa-support-images/imagevs05.png "Select Ad Hoc from the Build Configuration dropdown")
 
 7. Compile o projeto para criar o pacote IPA.
-8. O IPA será compilado na pasta **Bin > iOS Device > Ad Hoc (ou Versão)** :
+8. O IPA será compilado na pasta **Bin > iOS Device > Ad Hoc (ou Versão)**:
 
     ![](ipa-support-images/imagevs06.png "The IPA in the file explorer")
 
@@ -229,11 +229,11 @@ O pacote IPA resultante pode ser entregue a seus usuários de teste para instala
 
 O novo aplicativo iOS será mostrado na seção **Meus Aplicativos**, na qual você pode clicar com o botão direito do mouse e obter informações sobre o aplicativo:
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
  ![](ipa-support-images/installxs01.png "The new iOS application in the My Apps section")
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
  ![](ipa-support-images/installvs01.png "The new iOS application in the My Apps section")
 
@@ -250,9 +250,9 @@ Este artigo abordou a configuração necessária para preparar um aplicativo Xam
 ## <a name="related-links"></a>Links relacionados
 
 - [Distribuição da App Store](~/ios/deploy-test/app-distribution/app-store-distribution/index.md)
-- [Como configurar um aplicativo no iTunes Connect](~/ios/deploy-test/app-distribution/app-store-distribution/itunesconnect.md)
+- [Configurando um aplicativo no iTunes Connect](~/ios/deploy-test/app-distribution/app-store-distribution/itunesconnect.md)
 - [Publicando na App Store](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md)
-- [Distribuição Interna](~/ios/deploy-test/app-distribution/in-house-distribution.md)
+- [Distribuição interna](~/ios/deploy-test/app-distribution/in-house-distribution.md)
 - [Distribuição Ad Hoc](~/ios/deploy-test/app-distribution/ad-hoc-distribution.md)
 - [O arquivo iTunesMetadata.plist](~/ios/deploy-test/app-distribution/itunesmetadata.md)
 - [Solução de problemas](~/ios/deploy-test/troubleshooting.md)

@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
 ms.openlocfilehash: 92bf7934b1ad4f6d959fc458f536cf3b3426df51
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73026364"
 ---
 # <a name="ios-build-mechanics"></a>Mecânica de Compilação do iOS
@@ -26,26 +26,26 @@ A velocidade de compilação do Xamarin também pode ser afetada por vários rec
 
 ## <a name="timing-apps"></a>Sincronizar aplicativos
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
 Para habilitar os resultados de diagnóstico do MSBuild no Visual Studio para Mac:
 
 1. Clique em **Visual Studio para Mac > Preferências...**
 2. No modo de exibição de árvore à esquerda, selecione **Projetos > Compilar**
-3. No painel direito, defina a lista suspensa detalhes do log para **diagnóstico**:[![](ios-build-mechanics-images/image2.png "Definindo o detalhamento do log")](ios-build-mechanics-images/image2.png#lightbox)
-4. Clique em **OK**
+3. No painel à direita, defina a verbosidade de log para baixo como **Diagnóstico**:[![](ios-build-mechanics-images/image2.png "Configurando o nível de detalhes do Log")](ios-build-mechanics-images/image2.png#lightbox)
+4. Clique em **OK**.
 5. Reiniciar o Visual Studio para Mac
 6. Limpar e recompilar o seu pacote
 7. Exibir os resultados de diagnóstico no Painel de Erros (Exibição > Painéis > Erros) clicando no botão de Resultado de Compilação
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 Para habilitar os resultados de diagnóstico do MSBuild no Visual Studio para Mac:
 
 1. Clique em **Ferramentas > Opções...**
 2. No modo de exibição de árvore à esquerda, selecione **Projetos e Soluções > Compilar e Executar**
-3. No painel direito, defina o *menu suspenso de detalhes de saída de compilação do MSBuild* como **diagnóstico**:[![](ios-build-mechanics-images/image2-vs.png "Definindo o detalhamento de saída da compilação do MSBuild")](ios-build-mechanics-images/image2-vs.png#lightbox)
-4. Clique em **OK**
+3. No painel à direita, defina a *verbosidade* de saída de compilação do MSBuild como **Diagnóstico**:[![](ios-build-mechanics-images/image2-vs.png "Configurar o detalhamento dos resultados de build do MSBuild")](ios-build-mechanics-images/image2-vs.png#lightbox)
+4. Clique em **OK**.
 5. Limpe e recompile o seu pacote.
 6. Os resultados de diagnóstico estão visíveis no painel Resultados.
 
@@ -67,7 +67,7 @@ Total time: 1554 ms
 
 As ferramentas do Xamarin, tecnicamente, funcionam em qualquer Mac que possa executar o OS X 10.10 Yosemite ou posterior. No entanto, as experiências de desenvolvedor e tempos de compilação podem ser prejudicados pelo desempenho do Mac.
 
-No estado desconectado, o Visual Studio no Windows só realizará a fase de compilação do C# e não tentará executar a vinculação ou compilação AOT, empacotar o aplicativo em um pacote _.app_ nem conectar-se ao pacote de aplicativos. (A C# fase de compilação raramente é um afunilamento de desempenho.) Tentativa de identificar onde o Build está diminuindo a velocidade, criando diretamente no host de Build do Mac em Visual Studio para Mac.
+No estado desconectado, o Visual Studio no Windows apenas executa a fase de compilação C# e não tenta realizar a compilação de linking ou AOT, empacotar o aplicativo em um _Pacote .app_ ou assinar o pacote do aplicativo. (A fase de compilação C# raramente é um gargalo de desempenho.) Tente identificar onde no pipeline a construção está diminuindo, construindo diretamente no mac building host no Visual Studio para Mac.
 
 Além disso, um dos locais mais comuns para a lentidão é a conexão de rede entre o computador Windows e o host de compilação do Mac. Isso pode ocorrer devido a um obstáculo físico na rede, usar uma conexão sem fio ou ter que viajar por um computador saturado (como um serviço Mac na nuvem).
 
@@ -165,7 +165,7 @@ Considere as seguintes opções ao usar o Vinculador:
   - No entanto, se você escolher **Vincular Todos** o aplicativo poderá falhar, principalmente se os componentes externos forem usados. Isso ocorre porque alguns componentes usam Reflexão em determinados tipos.
   - A reflexão e análise estática não funcionam em conjunto. 
 
-As ferramentas podem ser instruídas a manterem os itens dentro do aplicativo usando o [atributo `[Preserve]`](~/ios/deploy-test/linker.md). 
+As ferramentas podem ser instruídas a manter as coisas dentro do aplicativo usando o [ `[Preserve]` atributo](~/ios/deploy-test/linker.md). 
 
 Caso você não tenha acesso ao código-fonte ou ele seja gerado por uma ferramenta e você não queira alterá-lo, ele ainda poderá ser vinculado criando um arquivo XML que descreve todos os tipos e membros que precisam ser preservados. Em seguida, é possível adicionar o sinalizador `--xml={file.name}.xml` às opções de projeto, que processaram o código exatamente como se você estivesse usando Atributos.
 
@@ -278,6 +278,6 @@ L3 Cache: 4 MB
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Publicação do Blog](https://blog.xamarin.com/xamarin-ios-build-improvements/)
+- [Blog](https://blog.xamarin.com/xamarin-ios-build-improvements/)
 - [Vinculação no iOS](~/ios/deploy-test/linker.md)
-- [Configuração personalizada do Linker](~/cross-platform/deploy-test/linker.md)
+- [Configuração de linker personalizado](~/cross-platform/deploy-test/linker.md)

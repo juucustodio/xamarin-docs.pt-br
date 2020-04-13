@@ -1,6 +1,6 @@
 ---
-title: Portando Java para C# para Xamarin. Android
-description: Uma terceira opção para usar o Java em um aplicativo Xamarin. Android é portar o código-fonte C#Java para.
+title: Portando Java para C# para Xamarin.Android
+description: Uma terceira opção para usar Java em um aplicativo Xamarin.Android é portar o código fonte Java para C#.
 ms.prod: xamarin
 ms.assetid: 39E528BD-010F-47FC-BE48-8E7848E30454
 ms.technology: xamarin-android
@@ -8,30 +8,30 @@ author: davidortinau
 ms.author: daortin
 ms.date: 04/05/2016
 ms.openlocfilehash: 8f96fcc4aadcd8f082d55dc568b2517f048edaf2
-ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73027187"
 ---
-# <a name="porting-java-to-c-for-xamarinandroid"></a>Portando Java para C# para Xamarin. Android
+# <a name="porting-java-to-c-for-xamarinandroid"></a>Portando Java para C# para Xamarin.Android
 
-Essa abordagem pode ser de interesse para as organizações que:
+Essa abordagem pode ser de interesse das organizações que:
 
-- **Estão alternando pilhas de tecnologia de Java C#para.**
-- **Deve manter um C# e uma versão Java do mesmo produto.**
+- **Estão mudando pilhas de tecnologia de Java para C#.**
+- **Deve manter uma versão C# e java do mesmo produto.**
 - **Deseja ter uma versão .NET de uma biblioteca Java popular.**
 
-Há duas maneiras de portar código Java para C#. A primeira maneira é portar o código manualmente. Isso envolve os desenvolvedores experientes que entendem o .NET e o Java e estão familiarizados com os idiomas apropriados para cada idioma. Essa abordagem faz mais sentido para pequenas quantidades de código ou para organizações que desejam sair completamente do Java para C#o.
+Existem duas maneiras de portar código Java para C#. A primeira maneira é portar o código manualmente. Isso envolve desenvolvedores qualificados que entendem tanto .NET quanto Java e estão familiarizados com as expressões adequadas para cada idioma. Essa abordagem faz mais sentido para pequenas quantidades de código, ou para organizações que desejam se afastar completamente de Java para C#.
 
-A segunda metodologia de portabilidade é tentar automatizar o processo usando um conversor de código, como [nitidez](https://github.com/mono/sharpen). A [nitidez](https://github.com/mono/sharpen) é um conversor de código-fonte aberto do que foi originalmente usado para portar o código para *Db4o* de Java para C#. Db4o é um banco de dados orientado a objeto que era desenvolvido em Java e, em seguida, portado para .NET. Usar um conversor de código pode fazer sentido para projetos que devem existir em ambos os idiomas e que exigem alguma paridade entre os dois.
+A segunda metodologia de portação é tentar automatizar o processo usando um conversor de código, como [o Sharpen](https://github.com/mono/sharpen). [Sharpen](https://github.com/mono/sharpen) é um conversor de código aberto da Versant que foi originalmente usado para portar o código para *db4o* de Java para C#. db4o é um banco de dados orientado a objetos que o Versant desenvolveu em Java e, em seguida, foi portado para .NET. Usar um conversor de código pode fazer sentido para projetos que devem existir em ambos os idiomas e que requerem alguma paridade entre os dois.
 
-Um exemplo de quando uma ferramenta de conversão de código automatizada faz sentido pode ser vista no projeto [ngit](https://github.com/mono/ngit) .
-Ngit é uma porta do [as jgit](https://eclipse.org/)do projeto Java.
-O as jgit em si é uma implementação de Java do sistema de gerenciamento de código-fonte [git](https://git-scm.com/) . Para gerar C# código do Java, os programadores ngit usam um sistema automatizado personalizado para extrair o código Java do as jgit, aplicar alguns patches para acomodar o processo de conversão e, em seguida, executar C# a nitidez, o que gera o código. Isso permite que o projeto ngit se beneficie do trabalho contínuo e contínuo feito no as jgit.
+Um exemplo de quando uma ferramenta automatizada de conversão de código faz sentido pode ser visto no projeto [ngit.](https://github.com/mono/ngit)
+Ngit é uma porta do projeto Java [jgit](https://eclipse.org/).
+Jgit em si é uma implementação Java do sistema de gerenciamento de código fonte [Git.](https://git-scm.com/) Para gerar o código C# de Java, os programadores ngit usam um sistema automatizado personalizado para extrair o código Java do jgit, aplicar alguns patches para acomodar o processo de conversão e, em seguida, executar o Sharpen, que gera o código C#. Isso permite que o projeto ngit se beneficie do trabalho contínuo e contínuo que é feito no jgit.
 
-Geralmente, há uma quantidade de trabalho não trivial envolvida na inicialização de uma ferramenta de conversão de código automatizada, e isso pode provar ser uma barreira a ser usada. Em muitos casos, pode ser mais simples e mais fácil de portar Java C# para a mão.
+Muitas vezes há uma quantidade não trivial de trabalho envolvida com bootstrapping uma ferramenta de conversão de código automatizada, e isso pode ser uma barreira para usar. Em muitos casos, pode ser mais simples e fácil portar Java para C# à mão.
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Ferramenta de conversão de nitidez](https://github.com/mono/sharpen)
+- [Ferramenta de conversão de afiação](https://github.com/mono/sharpen)

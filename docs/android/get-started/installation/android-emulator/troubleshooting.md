@@ -9,15 +9,15 @@ author: davidortinau
 ms.author: daortin
 ms.date: 08/27/2018
 ms.openlocfilehash: d73c72fa70a22bacf122f5c3957b789914dfd765
-ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "79304047"
 ---
 # <a name="android-emulator-troubleshooting"></a>Solução de problemas do Android Emulator
 
-_Este artigo descreve as mensagens de aviso e os problemas mais comuns que ocorrem durante a configuração e a execução do Android Emulator. Além disso, ele descreve soluções para resolver esses erros, bem como várias dicas de solução de problemas para ajudá-lo a diagnosticar problemas de emulador._
+_Este artigo descreve as mensagens de aviso mais comuns e problemas que ocorrem durante a configuração e execução do Emulador android. Além disso, descreve soluções para resolver esses erros, bem como várias dicas de solução de problemas para ajudá-lo a diagnosticar problemas de emuladores._
 
 ::: zone pivot="windows"
 
@@ -33,7 +33,7 @@ Se vir um erro sobre uma falha ao instalar o APK no emulador ou sobre uma falha 
 
 2. Abra um prompt de comando e vá para a pasta em que o **adb** está instalado. Se o SDK do Android estiver instalado na localização padrão, o **adb** estará localizado em **C:\\Arquivos de Programas (x86)\\Android\\android-sdk\\platform-tools\\adb.exe**. Se não estiver, modifique esse caminho para a localização do SDK do Android em seu computador.
 
-3. Digite o seguinte comando:
+3. Digite o seguinte comando: 
 
    ```shell
    adb devices
@@ -63,7 +63,7 @@ Se o dispositivo virtual em execução no emulador não tem o Google Play Servic
 
 Por exemplo, este dispositivo virtual incluirá o Google Play Services e o Google Play Store:
 
-[![Exemplo de AVD com o Google Play Services e o Google Play Store habilitados](troubleshooting-images/win/00-add-gps-w158-sml.png)](troubleshooting-images/win/00-add-gps-w158.png#lightbox)
+[![Exemplo AVD com Google Play Services e Google Play Store ativado](troubleshooting-images/win/00-add-gps-w158-sml.png)](troubleshooting-images/win/00-add-gps-w158.png#lightbox)
 
 > [!NOTE]
 > Imagens do Google Play Store estão disponíveis apenas para alguns tipos de dispositivos básicos, como Pixel, Pixel 2, Nexus 5 e Nexus 5X.
@@ -92,7 +92,7 @@ Se essa mensagem de erro for exibida, confira [Problemas de aceleração de hard
 
 Uma causa comum para esse problema é não estar usando uma imagem com base em x86 em seu dispositivo virtual (AVD). Ao criar um dispositivo virtual (confira [Gerenciando dispositivos virtuais com o Android Device Manager](~/android/get-started/installation/android-emulator/device-manager.md)), certifique-se de selecionar uma imagem de sistema baseada em x86:
 
-[![Selecionar uma imagem de sistema x86 para um dispositivo virtual](troubleshooting-images/win/02-x86-virtual-device-w158-sml.png)](troubleshooting-images/win/02-x86-virtual-device-w158.png#lightbox)
+[![Selecionando uma imagem do sistema x86 para um dispositivo virtual](troubleshooting-images/win/02-x86-virtual-device-w158-sml.png)](troubleshooting-images/win/02-x86-virtual-device-w158.png#lightbox)
 
 <a name="accel-issues-win" />
 
@@ -139,7 +139,7 @@ VT feature disabled in BIOS/UEFI
 Para corrigir esse problema, reinicialize o BIOS do computador e habilite as seguintes opções:
 
 - Tecnologia de virtualização (pode ter um rótulo diferente dependendo do fabricante da placa-mãe).
-- Prevenção de Execução de Dados Imposta por Hardware
+- Prevenção de Execução de Dados Baseada em Hardware.
 
 Se a aceleração de hardware estiver habilitada e o BIOS estiver configurado corretamente, o emulador deverá ser executado com êxito com aceleração de hardware.
 No entanto, ainda poderá haver problemas devido a questões específicas do Hyper-V e do HAXM, conforme explicado a seguir.
@@ -278,7 +278,7 @@ O Device Guard e o Credential Guard podem impedir que o Hyper-V seja desabilitad
 
 2. No **Resumo do Sistema**, verifique se **Segurança com base em Virtualização de Device Guard** está presente e está no estado **Em execução**:
 
-   [![O Device Guard está presente e em execução](troubleshooting-images/win/04-device-guard-sml.png)](troubleshooting-images/win/04-device-guard.png#lightbox)
+   [![O Device Guard está presente e funcionando](troubleshooting-images/win/04-device-guard-sml.png)](troubleshooting-images/win/04-device-guard.png#lightbox)
 
 Se o Device Guard estiver habilitado, use as seguintes etapas para desabilitá-lo:
 
@@ -288,7 +288,7 @@ Se o Device Guard estiver habilitado, use as seguintes etapas para desabilitá-l
 
 3. No **Editor de Política de Grupo Local**, navegue até **Configuração do Computador > Modelos Administrativos > Sistema > Device Guard**:
 
-   [![Device Guard no Editor de Política de Grupo Local](troubleshooting-images/win/05-group-policy-editor-sml.png)](troubleshooting-images/win/05-group-policy-editor.png#lightbox)
+   [![Guarda de dispositivos no editor de políticas de grupo local](troubleshooting-images/win/05-group-policy-editor-sml.png)](troubleshooting-images/win/05-group-policy-editor.png#lightbox)
 
 4. Altere a opção **Ativar Segurança Baseada em Virtualização** para **Desabilitada** (conforme mostrado acima) e saia do **Editor de Política de Grupo Local**.
 
@@ -307,7 +307,7 @@ Se o Device Guard estiver habilitado, use as seguintes etapas para desabilitá-l
     mountvol Z: /d
     ```
 
-7. Reinicie o computador. Na tela de inicialização, você verá um prompt semelhante à mensagem seguinte:
+7. Reinicie seu computador. Na tela de inicialização, você verá um prompt semelhante à mensagem seguinte:
 
    **Você deseja desabilitar o Credential Guard?**
 
@@ -369,7 +369,7 @@ Se vir um erro sobre uma falha ao instalar o APK no emulador ou sobre uma falha 
 
 2. Abra um prompt de comando e vá para a pasta em que o **adb** está instalado. Se o SDK do Android estiver instalado na localização padrão, o **adb** estará localizado no diretório **~/Library/Developer/Xamarin/android-sdk-macosx/platform-tools/adb**. Se não estiver, modifique o caminho para a localização do SDK do Android no computador.
 
-3. Digite o seguinte comando:
+3. Digite o seguinte comando: 
 
    ```shell
    adb devices
@@ -399,7 +399,7 @@ Se o dispositivo virtual em execução no emulador não tem o Google Play Servic
 
 Por exemplo, este dispositivo virtual incluirá o Google Play Services e o Google Play Store:
 
-[![Exemplo de AVD com o Google Play Services e o Google Play Store habilitados](troubleshooting-images/mac/01-google-play-services-m75-sml.png)](troubleshooting-images/mac/01-google-play-services-m75.png#lightbox)
+[![Exemplo AVD com Google Play Services e Google Play Store ativado](troubleshooting-images/mac/01-google-play-services-m75-sml.png)](troubleshooting-images/mac/01-google-play-services-m75.png#lightbox)
 
 > [!NOTE]
 > Imagens do Google Play Store estão disponíveis apenas para alguns tipos de dispositivos básicos, como Pixel, Pixel 2, Nexus 5 e Nexus 5X.
@@ -424,7 +424,7 @@ Se a aceleração de hardware não estiver habilitada, poderá aparecer uma caix
 
 Uma causa comum para esse problema é não estar usando uma imagem com base em x86 em seu dispositivo virtual. Ao criar um dispositivo virtual (confira [Gerenciando dispositivos virtuais com o Android Device Manager](~/android/get-started/installation/android-emulator/device-manager.md)), certifique-se de selecionar uma imagem de sistema baseada em x86:
 
-[![Selecionar uma imagem de sistema x86 para um dispositivo virtual](troubleshooting-images/mac/02-x86-virtual-device-m75-sml.png)](troubleshooting-images/mac/02-x86-virtual-device-m75.png#lightbox)
+[![Selecionando uma imagem do sistema x86 para um dispositivo virtual](troubleshooting-images/mac/02-x86-virtual-device-m75-sml.png)](troubleshooting-images/mac/02-x86-virtual-device-m75.png#lightbox)
 
 <a name="accel-issues-mac" />
 

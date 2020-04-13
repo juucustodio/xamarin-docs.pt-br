@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 05/02/2018
 ms.openlocfilehash: ae32588d75ec3152a1b8b8558d40abbe2e76d1b4
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73022483"
 ---
 # <a name="introduction-to-xamarinios-for-visual-studio"></a>Introdução ao Xamarin.iOS para Visual Studio
@@ -32,7 +32,7 @@ Há alguns requisitos que devem ser seguidos ao desenvolver para iOS no Visual S
 
 Há várias opções de configuração disponíveis para você escolher a que funciona melhor para suas necessidades de desenvolvimento. Elas estão listadas abaixo:
 
-- Usar um Mac como seu computador de desenvolvimento principal e executar uma máquina virtual Windows com Visual Studio instalado. É recomendável usar o software de VM como [Parallels](https://www.parallels.com/products/desktop/) ou [VMWare](https://www.vmware.com/products/fusion/).
+- Usar um Mac como seu computador de desenvolvimento principal e executar uma máquina virtual Windows com Visual Studio instalado. Recomendamos o uso de softwarevm como [Parallels](https://www.parallels.com/products/desktop/) ou [VMWare](https://www.vmware.com/products/fusion/) .
 - Usar um Mac apenas como um host de build. Nesse cenário, estaria conectado à mesma rede que um computador Windows com as ferramentas [necessárias](~/get-started/installation/windows.md#installation) instaladas.
 
 Em qualquer caso, você deve seguir estas etapas:
@@ -73,7 +73,7 @@ Cada item é explicado a seguir:
 
 ## <a name="ios-output-options"></a>Opções de saída do iOS
 
-### <a name="output-window"></a>Janela Saída
+### <a name="output-window"></a>Janela de saída
 
 Há opções no painel *Saída* que você pode exibir para detectar erros e mensagens de build, implantação e conexão.
 
@@ -95,7 +95,7 @@ Outros painéis de Saída do Visual Studio padrão, como Depuração e Build, ai
 
   [![](introduction-to-xamarin-ios-for-visual-studio-images/output2-sml.png "Debugging Output")](introduction-to-xamarin-ios-for-visual-studio-images/output2-large.png#lightbox)
 
-- **Build** & **Ordem de Build**
+- **Construir** & **ordem de construção**
 
   [![](introduction-to-xamarin-ios-for-visual-studio-images/output1-sml.png "MSBuild Output")](introduction-to-xamarin-ios-for-visual-studio-images/output1-large.png#lightbox)
 
@@ -105,15 +105,15 @@ As Propriedades do Projeto do Visual Studio podem ser acessadas clicando com o b
 
 ![](introduction-to-xamarin-ios-for-visual-studio-images/iosproperties.png "Configuring an iOS application")
 
-- *Assinatura do Pacote do iOS* – conecta-se ao Mac para preencher as identidades de assinatura de código e os perfis de provisionamento:
+- *Assinatura de pacote sinortiza -* conecta-se ao Mac para preencher as identidades de assinatura de código e perfis de provisionamento:
 
   ![Preencha as identidades de assinatura de código e os perfis de provisionamento](introduction-to-xamarin-ios-for-visual-studio-images/bundlesigning.png)
 
-- *Opções de IPA do iOS* – o arquivo IPA será salvo no sistema de arquivos do Mac:
+- *Opções ipa do iOS* – o arquivo IPA será salvo no sistema de arquivos do Mac:
 
   ![Opções de IPA do iOS](introduction-to-xamarin-ios-for-visual-studio-images/ipaoptions.png)
 
-- *Opções de Execução do iOS* – configure parâmetros adicionais:
+- *Opções de execução do iOS* – Configure parâmetros adicionais:
 
   ![Opções de Execução do iOS](introduction-to-xamarin-ios-for-visual-studio-images/iosrunoptions.png)
 
@@ -181,7 +181,7 @@ Este artigo descreveu como usar o Xamarin iOS para Visual Studio. Ele listou os 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Xamarin.iOS Installation](~/ios/get-started/installation/windows/index.md)
-- [Provisionamento de Dispositivo](~/ios/get-started/installation/device-provisioning/index.md)
+- [Instalação do Xamarin.iOS](~/ios/get-started/installation/windows/index.md)
+- [Provisionamento de dispositivos](~/ios/get-started/installation/device-provisioning/index.md)
 - [Criando a interface do usuário iOS no Código](~/ios/app-fundamentals/ios-code-only.md)
 - [Conectar um Mac ao seu ambiente do Visual Studio com XMA (vídeo)](https://university.xamarin.com/lightninglectures/xamarin-mac-agent)

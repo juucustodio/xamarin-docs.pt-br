@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 02/15/2018
 ms.openlocfilehash: 0520439b89458b7f73a025cd8d6b2cf8fc41dac0
-ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "76940630"
 ---
 # <a name="building-abi-specific-apks"></a>Compilação de APKs específicos para ABI
@@ -43,9 +43,9 @@ O Google recomenda um algoritmo específico para o código de versão, que usa u
 Expandindo esse esquema de código da versão de oito dígitos, será possível incluir, no código de versão, algumas informações de ABI que garantirão que o Google Play distribuirá o APK correto para um dispositivo. A lista a seguir explica este formato de código de versão de oito dígitos (indexado da esquerda para a direita):
 
 - **Índice 0** (vermelho no diagrama abaixo) &ndash; um inteiro para a ABI:
-  - 1 &ndash; `armeabi`
-  - 2 &ndash; `armeabi-v7a`
-  - 6 &ndash; `x86`
+  - 1 &ndash;`armeabi`
+  - 2 &ndash;`armeabi-v7a`
+  - 6 &ndash;`x86`
 
 - **Índice 1-2** (laranja no diagrama abaixo) &ndash; o nível da API mínimo compatível com o aplicativo.
 
@@ -95,19 +95,19 @@ Compilar o APK por ABI melhor é realizado usando `xbuild` ou `msbuild`, conform
 
 A lista a seguir explica cada parâmetro de linha de comando:
 
-- `/t:Package`&ndash; Cria um APK Android que é assinado usando o repositório de chaves de depuração
+- `/t:Package`&ndash; Cria um APK Android que é assinado usando o keystore de pura
 
-- `/p:AndroidSupportedAbis=<TARGET_ABI>` &ndash; Esta é a ABI a ser usada como destino. Deve ser uma entre `armeabi`, `armeabi-v7a` ou `x86`
+- `/p:AndroidSupportedAbis=<TARGET_ABI>`&ndash; Esta é a ABI para o alvo. Deve ser uma entre `armeabi`, `armeabi-v7a` ou `x86`
 
-- `/p:IntermediateOutputPath=obj.<TARGET_ABI>/` &ndash; Este é o diretório que conterá os arquivos intermediários que são criados como parte do build. Se necessário, o Xamarin.Android criará um diretório com o nome da ABI, tal como `obj.armeabi-v7a`. É recomendável usar uma pasta para cada ABI, pois isso impede problemas resultantes do "vazamento" de arquivos de um build para o outro. Observe que esse valor é encerrado com um separador de diretório (um `/` no caso de OS X).
+- `/p:IntermediateOutputPath=obj.<TARGET_ABI>/`&ndash; Este é o diretório que manterá os arquivos intermediários que são criados como parte da compilação. Se necessário, o Xamarin.Android criará um diretório com o nome da ABI, tal como `obj.armeabi-v7a`. É recomendável usar uma pasta para cada ABI, pois isso impede problemas resultantes do "vazamento" de arquivos de um build para o outro. Observe que esse valor é encerrado com um separador de diretório (um `/` no caso de OS X).
 
 - `/p:AndroidManifest` &ndash; Essa propriedade especifica o caminho para o arquivo **AndroidManifest.XML** que será usado durante o build.
 
-- `/p:OutputPath=bin.<TARGET_ABI>` &ndash; Este é o diretório que conterá o APK final. O Xamarin.Android criará um diretório com o nome da ABI, por exemplo, `bin.armeabi-v7a`.
+- `/p:OutputPath=bin.<TARGET_ABI>`&ndash; Este é o diretório que abrigará o APK final. O Xamarin.Android criará um diretório com o nome da ABI, por exemplo, `bin.armeabi-v7a`.
 
-- `/p:Configuration=Release` &ndash; Execute um build de versão do APK. Os builds de depuração podem não ser carregados no Google Play.
+- `/p:Configuration=Release`&ndash; Execute uma compilação de liberação do APK. Os builds de depuração podem não ser carregados no Google Play.
 
-- `<CS_PROJ FILE>` &ndash; Este é o caminho para o arquivo `.csproj` do projeto do Xamarin.Android.
+- `<CS_PROJ FILE>`&ndash; Este é o `.csproj` caminho para o arquivo para o projeto Xamarin.Android.
 
 ### <a name="sign-and-zipalign-the-apk"></a>Assinar e efetuar o zipalign no APK
 
@@ -139,7 +139,7 @@ O [rakefile](https://github.com/xamarin/monodroid-samples/blob/master/OneABIPerA
 
 1. [Compilar um build de versão](https://github.com/xamarin/monodroid-samples/blob/master/OneABIPerAPK/Rakefile.rb#L63) do projeto Xamarin.Android que terá como destino exclusivo a ABI, usando o **AndroidManifest.XML** que foi criado na etapa anterior.
 
-1. [Assine o APK](https://github.com/xamarin/monodroid-samples/blob/master/OneABIPerAPK/Rakefile.rb#L66) com um repositório de chaves de produção.
+1. [Assine o APK](https://github.com/xamarin/monodroid-samples/blob/master/OneABIPerAPK/Rakefile.rb#L66) com uma loja de chaves de produção.
 
 1. [Efetuar o zipalign](https://github.com/xamarin/monodroid-samples/blob/master/OneABIPerAPK/Rakefile.rb#L67) no APK.
 
@@ -154,10 +154,10 @@ $ rake build
 
 Após a tarefa rake ser concluída, haverá três pastas `bin` com o arquivo `xamarin.helloworld.apk`. A próxima captura de tela mostra cada uma dessas pastas com os respectivos conteúdos:
 
-[![Locais de pastas específicas de uma plataforma que contêm xamarin.helloworld.apk](abi-specific-apks-images/image01.png)](abi-specific-apks-images/image01.png#lightbox)
+[![Localizações de pastas específicas da plataforma contendo xamarin.helloworld.apk](abi-specific-apks-images/image01.png)](abi-specific-apks-images/image01.png#lightbox)
 
 > [!NOTE]
-> O processo de build descrito neste guia pode ser implementado em um dos diversos sistemas de build. Embora não tenhamos um exemplo escrito anteriormente, isso também deverá ser possível com [Powershell](https://technet.microsoft.com/scriptcenter/powershell.aspx) / [psake](https://github.com/psake/psake) ou [Fake](https://fsharp.github.io/FAKE/).
+> O processo de build descrito neste guia pode ser implementado em um dos diversos sistemas de build. Embora não tenhamos um exemplo pré-escrito, também deve ser possível com [powershell](https://technet.microsoft.com/scriptcenter/powershell.aspx) / [psake](https://github.com/psake/psake) ou [Fake](https://fsharp.github.io/FAKE/).
 
 ## <a name="summary"></a>Resumo
 

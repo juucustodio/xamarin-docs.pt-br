@@ -8,25 +8,25 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 05/10/2018
 ms.openlocfilehash: c93feb9527892b7b4c60c9d213361d19d3bc4b93
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "70771729"
 ---
 # <a name="implementing-a-view"></a>Implementando uma exibição
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-view)
+[![Baixar](~/media/shared/download.png) amostra Baixar a amostra](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-view)
 
-_Controles de interfaces do usuário personalizadas do Xamarin.Forms devem derivar da classe View, que é usada para colocar os layouts e controles na tela. Este artigo demonstra como criar um renderizador personalizado para um controle personalizado do Xamarin.Forms, que é usado para exibir um fluxo de vídeo de visualização com a câmera do dispositivo._
+_Xamarin.Forms controles personalizados de interface do usuário devem derivar da classe Exibir, que é usada para colocar layouts e controles na tela. Este artigo demonstra como criar um renderizador personalizado para um controle personalizado Xamarin.Forms que é usado para exibir uma transmissão de vídeo de visualização da câmera do dispositivo._
 
-Cada exibição do Xamarin.Forms tem um renderizador que o acompanha para cada plataforma que cria uma instância de um controle nativo. Quando um [`View`](xref:Xamarin.Forms.View) é renderizado por um aplicativo Xamarin.Forms no iOS, é criada uma instância da classe `ViewRenderer`, que, por sua vez, cria uma instância de um controle `UIView` nativo. Na plataforma Android, a classe `ViewRenderer` cria uma instância de um controle `View` nativo. Na UWP (Plataforma Universal do Windows), a classe `ViewRenderer` cria uma instância de um controle `FrameworkElement` nativo. Para obter mais informações sobre as classes de renderizador e de controle nativo para as quais os controles do Xamarin.Forms são mapeadas, confira [Classes base do renderizador e controles nativos](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md).
+Cada exibição do Xamarin.Forms tem um renderizador que o acompanha para cada plataforma que cria uma instância de um controle nativo. Quando [`View`](xref:Xamarin.Forms.View) um é renderizado por um aplicativo Xamarin.Forms no iOS, a classe é instanciada, o `ViewRenderer` que, por sua vez, instancia um controle nativo. `UIView` Na plataforma Android, a classe `ViewRenderer` cria uma instância de um controle `View` nativo. Na UWP (Plataforma Universal do Windows), a classe `ViewRenderer` cria uma instância de um controle `FrameworkElement` nativo. Para obter mais informações sobre as classes de renderizador e de controle nativo para as quais os controles do Xamarin.Forms são mapeadas, confira [Classes base do renderizador e controles nativos](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md).
 
-O seguinte diagrama ilustra a relação entre o [`View`](xref:Xamarin.Forms.View) e os controles nativos correspondentes que o implementam:
+O diagrama a seguir [`View`](xref:Xamarin.Forms.View) ilustra a relação entre os controles nativos correspondentes que o implementam:
 
-![](view-images/view-classes.png "Relação entre a classe View e suas classes de implementação nativas")
+![](view-images/view-classes.png "Relationship Between the View Class and its Implementing Native Classes")
 
-E possível usar o processo de renderização para implementar personalizações específicas da plataforma criando um renderizador personalizado para um [`View`](xref:Xamarin.Forms.View) em cada plataforma. O processo para fazer isso é o seguinte:
+O processo de renderização pode ser usado para implementar personalizações [`View`](xref:Xamarin.Forms.View) específicas da plataforma, criando um renderizador personalizado para um em cada plataforma. O processo para fazer isso é o seguinte:
 
 1. [Criar](#Creating_the_Custom_Control) um controle personalizado do Xamarin.Forms.
 1. [Consumir](#Consuming_the_Custom_Control) o controle personalizado do Xamarin.Forms.
@@ -38,7 +38,7 @@ Agora, cada item será discutido separadamente, a fim de implementar um renderiz
 
 ## <a name="creating-the-custom-control"></a>Criando o controle personalizado
 
-É possível criar um controle personalizado criando subclasses da classe [`View`](xref:Xamarin.Forms.View), conforme mostrado no exemplo de código a seguir:
+Um controle personalizado pode ser criado [`View`](xref:Xamarin.Forms.View) subclassificando a classe, como mostrado no exemplo de código a seguir:
 
 ```csharp
 public class CameraPreview : View
@@ -110,7 +110,7 @@ Agora, é possível adicionar um renderizador personalizado a cada projeto de ap
 
 ## <a name="creating-the-custom-renderer-on-each-platform"></a>Criando o renderizador personalizado em cada plataforma
 
-O processo para criar a classe do renderizador personalizado é o seguinte:
+O processo para criar a classe do renderizador personalizado é a seguinte:
 
 1. Crie uma subclasse da classe `ViewRenderer<T1,T2>` que renderiza o controle personalizado. O primeiro argumento de tipo deve ser o controle personalizado a que o renderizador se aplica, neste caso, `CameraPreview`. O segundo argumento de tipo deve ser o controle nativo que implementará o controle personalizado.
 1. Substitua o método `OnElementChanged` que renderiza o controle personalizado e escreva a lógica para personalizá-lo. Esse método é chamado quando o controle do Xamarin.Forms correspondente é criado.
@@ -121,13 +121,13 @@ O processo para criar a classe do renderizador personalizado é o seguinte:
 
 O diagrama a seguir ilustra as responsabilidades de cada projeto no aplicativo de exemplo, bem como as relações entre elas:
 
-![](view-images/solution-structure.png "Responsabilidades do projeto de renderizador personalizado de CameraPreview")
+![](view-images/solution-structure.png "CameraPreview Custom Renderer Project Responsibilities")
 
 O controle personalizado `CameraPreview` é renderizado por classes de renderizador específicas da plataforma, que derivam da classe `ViewRenderer` para cada plataforma. Isso faz com que cada controle personalizado `CameraPreview` seja renderizado com controles específicos da plataforma, conforme mostrado nas capturas de tela seguir:
 
-![](view-images/screenshots.png "CameraPreview em cada plataforma")
+![](view-images/screenshots.png "CameraPreview on each Platform")
 
-A classe `ViewRenderer` expõe o método `OnElementChanged`, que é chamado quando um controle personalizado do Xamarin.Forms é criado para renderizar o controle nativo correspondente. Esse método usa um parâmetro `ElementChangedEventArgs`, que contém as propriedades `OldElement` e `NewElement`. Essas propriedades representam o elemento do Xamarin.Forms a que o renderizador *estava* anexado e o elemento a que o renderizador *está* anexado, respectivamente. No aplicativo de exemplo, a propriedade `OldElement` será `null` e a propriedade `NewElement` conterá uma referência à instância de `CameraPreview`.
+A classe `ViewRenderer` expõe o método `OnElementChanged`, que é chamado quando um controle personalizado do Xamarin.Forms é criado para renderizar o controle nativo correspondente. Esse método usa um parâmetro `ElementChangedEventArgs`, que contém as propriedades `OldElement` e `NewElement`. Essas propriedades representam o elemento do Xamarin.Forms ao qual o renderizador *estava* anexado e o elemento do Xamarin.Forms ao qual o renderizador *está* anexado, respectivamente. No aplicativo de exemplo, a propriedade `OldElement` será `null` e a propriedade `NewElement` conterá uma referência à instância de `CameraPreview`.
 
 Uma versão de substituição do método `OnElementChanged`, em cada classe de renderizador específica da plataforma, é o lugar para realização da instanciação e da personalização do controle nativo. O método `SetNativeControl` deve ser usado para instanciar o controle nativo e esse método também atribuirá a referência de controle à propriedade `Control`. Além disso, é possível obter uma referência ao controle do Xamarin.Forms que está sendo renderizado por meio da propriedade `Element`.
 
@@ -269,7 +269,7 @@ Desde que a propriedade `Control` seja `null`, o método `SetNativeControl` ser�
 
 ### <a name="creating-the-custom-renderer-on-uwp"></a>Criando o renderizador personalizado na UWP
 
-O exemplo de código a seguir mostra o renderizador personalizado para a UWP:
+O seguinte exemplo de código mostra o renderizador personalizado para o UWP:
 
 ```csharp
 [assembly: ExportRenderer(typeof(CameraPreview), typeof(CameraPreviewRenderer))]
@@ -330,7 +330,7 @@ Desde que a propriedade `Control` seja `null`, um novo `CaptureElement` será in
 
 ## <a name="summary"></a>Resumo
 
-Este artigo demonstrou como criar um renderizador personalizado para um controle personalizado do Xamarin.Forms, que é usado para exibir um fluxo de vídeo de visualização com a câmera do dispositivo. Controles da interface do usuário personalizadas do Xamarin.Forms devem derivar da classe [`View`](xref:Xamarin.Forms.View), que é usada para colocar os layouts e controles na tela.
+Este artigo demonstrou como criar um renderizador personalizado para um controle personalizado do Xamarin.Forms, que é usado para exibir um fluxo de vídeo de visualização com a câmera do dispositivo. Xamarin.Forms controles personalizados de interface [`View`](xref:Xamarin.Forms.View) do usuário devem derivar da classe, que é usada para colocar layouts e controles na tela.
 
 ## <a name="related-links"></a>Links relacionados
 

@@ -8,17 +8,17 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
 ms.openlocfilehash: 79d8df3300b302512a7de4140968dbc4c8e79abc
-ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "76940338"
 ---
 # <a name="xamarinforms-binding-path"></a>Caminho de associação do Xamarin.Forms
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
+[![Baixar](~/media/shared/download.png) amostra Baixar a amostra](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
-Em todos os exemplos anteriores de associação de dados, a propriedade [`Path`](xref:Xamarin.Forms.Binding.Path) da classe `Binding` (ou a propriedade [`Path`](xref:Xamarin.Forms.Xaml.BindingExtension.Path) da extensão de marcação `Binding`) foi definida como uma única propriedade. Na verdade, é possível definir `Path` como uma *subpropriedade* (uma propriedade de uma propriedade) ou como um membro de uma coleção.
+Em todos os exemplos anteriores [`Path`](xref:Xamarin.Forms.Binding.Path) de vinculação de dados, a `Binding` propriedade da classe (ou a [`Path`](xref:Xamarin.Forms.Xaml.BindingExtension.Path) propriedade da extensão de `Binding` marcação) foi definida como uma única propriedade. Na verdade, é possível definir `Path` como uma *subpropriedade* (uma propriedade de uma propriedade) ou como um membro de uma coleção.
 
 Por exemplo, suponha que a página contenha um `TimePicker`:
 
@@ -103,7 +103,7 @@ A associação no terceiro `Label` nas páginas **Variações de caminho** refer
                       StringFormat='The middle day of the week is {0}'}" />
 ```
 
-A origem é definida como a propriedade estática `CultureInfo.CurrentCulture`, que é um objeto do tipo `CultureInfo`. Esse classe define uma propriedade chamada `DateTimeFormat` do tipo [`DateTimeFormatInfo`](xref:System.Globalization.DateTimeFormatInfo) que contém uma coleção `DayNames`. O índice seleciona o quarto item.
+A origem é definida como a propriedade estática `CultureInfo.CurrentCulture`, que é um objeto do tipo `CultureInfo`. Essa classe define uma `DateTimeFormat` propriedade [`DateTimeFormatInfo`](xref:System.Globalization.DateTimeFormatInfo) nomeada `DayNames` de tipo que contém uma coleção. O índice seleciona o quarto item.
 
 O quarto `Label` faz algo similar, mas para a cultura associada à França. A propriedade `Source` da associação é definida como o objeto `CultureInfo` com um construtor:
 
@@ -142,7 +142,7 @@ Este é o programa em execução:
 
 ## <a name="debugging-complex-paths"></a>Caminhos complexos de depuração
 
-Definições de caminhos complexos podem ser difíceis de construir: Você precisa saber o tipo de cada subpropriedade ou o tipo dos itens na coleção para adicionar corretamente a próxima subpropriedade, mas os tipos propriamente ditos não são exibidos no caminho. Uma boa técnica é criar o caminho de forma incremental e examinar os resultados intermediários. Para esse último exemplo, você pode começar sem nenhuma definição de `Path`:
+Definições de caminhos complexos podem ser difíceis de serem construídas: você precisa saber o tipo de cada subpropriedade ou o tipo dos itens na coleção para adicionar corretamente a próxima subpropriedade, mas os tipos propriamente ditos não são exibidos no caminho. Uma boa técnica é criar o caminho de forma incremental e examinar os resultados intermediários. Para esse último exemplo, você pode começar sem nenhuma definição de `Path`:
 
 ```xaml
 <Label Text="{Binding Source={x:Reference page},

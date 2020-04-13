@@ -9,10 +9,10 @@ ms.author: crdun
 ms.custom: video
 ms.date: 05/23/2019
 ms.openlocfilehash: cf54d4a6d8cdedc4ddde0beedeaadd361356990a
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "66252315"
 ---
 # <a name="installing-xamarin"></a>Instalando o Xamarin
@@ -21,7 +21,7 @@ _Como configurar o Visual Studio e o Xamarin para começar a compilar aplicativo
 
 ::: zone pivot="windows"
 
-## <a name="installing-xamarin-on-windows"></a>Instalando o Xamarin no Windows
+## <a name="installing-xamarin-on-windows"></a>Instalar o Xamarin no Windows
 
 > [!Video https://channel9.msdn.com/Shows/XamarinShow/Installing-Visual-Studio-2019-for-Mobile-Development-with-NET--Xamarin/player]
 
@@ -32,7 +32,7 @@ _Como configurar o Visual Studio e o Xamarin para começar a compilar aplicativo
 ::: zone-end
 ::: zone pivot="win-vs2017"
 
-## <a name="installing-xamarin-on-windows"></a>Instalando o Xamarin no Windows
+## <a name="installing-xamarin-on-windows"></a>Instalar o Xamarin no Windows
 
 > [!Video https://channel9.msdn.com/Shows/XamarinShow/Installing-Visual-Studio-2017-for-Mobile-Development-with-NET/player]
 
@@ -43,7 +43,7 @@ _Como configurar o Visual Studio e o Xamarin para começar a compilar aplicativo
 ::: zone-end
 ::: zone pivot="macos"
 
-## <a name="installing-xamarin-on-macos"></a>Instalando o Xamarin no macOS
+## <a name="installing-xamarin-on-macos"></a>Instalar o Xamarin no macOS
 
 > [!Video https://channel9.msdn.com/Shows/XamarinShow/Installing-Visual-Studio-for-Mac-for-Mobile-Development-with-NET/player]
 
@@ -56,4 +56,4 @@ Além deste vídeo, há uma [guia de instalação passo a passo](/visualstudio/m
 ## <a name="related-links"></a>Links relacionados
 
 - [Desinstalando o Xamarin](~/get-started/installation/uninstalling-xamarin.md)
-- [Instruções de configuração de firewall do Xamarin](firewall.md)
+- [Instruções de configuração do Firewall Xamarin](firewall.md)

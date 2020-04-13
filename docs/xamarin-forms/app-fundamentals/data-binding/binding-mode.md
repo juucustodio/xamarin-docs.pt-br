@@ -8,15 +8,15 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 05/01/2018
 ms.openlocfilehash: 3bf1ab647faa4b6c4735585ddfeaeb704d7d3f41
-ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "79304999"
 ---
 # <a name="xamarinforms-binding-mode"></a>Modo de associação do Xamarin.Forms
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
+[![Baixar](~/media/shared/download.png) amostra Baixar a amostra](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
 No [artigo anterior](basic-bindings.md), as páginas **Associação de código alternativa** e **Associação de XAML alternativa** apresentavam um `Label` com sua propriedade `Scale` associada à propriedade `Value` de um `Slider`. Como o valor inicial de `Slider` é 0, isso fez com que a propriedade `Scale` do `Label` fosse definida como 0 em vez de 1 e o `Label` desapareceu.
 
@@ -47,23 +47,23 @@ A princípio, isso pode parecer o inverso: agora o `Label` é a origem de associ
 
 Como você pode esperar, o `Slider` é inicializada com o valor 1 do valor inicial `Opacity` de `Label`. Isso é mostrado na captura de tela do iOS à esquerda:
 
-[![Associação inversa](binding-mode-images/reversebinding-small.png "Associação inversa")](binding-mode-images/reversebinding-large.png#lightbox "Associação inversa")
+[![Vinculação reversa](binding-mode-images/reversebinding-small.png "Vinculação reversa")](binding-mode-images/reversebinding-large.png#lightbox "Vinculação reversa")
 
-Mas você pode se surpreender que o `Slider` continue funcionando, como demonstra a captura de tela do Android. Isso parece sugerir que a associação de dados funciona melhor quando o `Slider` é o destino da associação em vez de `Label`, porque a inicialização funciona como poderíamos esperar.
+Mas você pode se `Slider` surpreender que o continua a funcionar, como demonstra a captura de tela do Android. Isso parece sugerir que a associação de dados funciona melhor quando o `Slider` é o destino da associação em vez de `Label`, porque a inicialização funciona como poderíamos esperar.
 
 A diferença entre a amostra **Associação inversa** e as amostras anteriores envolve o *modo de associação*.
 
 ## <a name="the-default-binding-mode"></a>O modo de associação padrão
 
-O modo de associação é especificado com um membro da enumeração [`BindingMode`](xref:Xamarin.Forms.BindingMode):
+O modo de vinculação é [`BindingMode`](xref:Xamarin.Forms.BindingMode) especificado com um membro da enumeração:
 
 - [`Default`](xref:Xamarin.Forms.BindingMode.Default)
-- [`TwoWay`](xref:Xamarin.Forms.BindingMode.TwoWay) &ndash; dados vão de ambas as maneiras entre a origem e o destino
-- [`OneWay`](xref:Xamarin.Forms.BindingMode.OneWay) dados de &ndash; vão da origem para o destino
-- [`OneWayToSource`](xref:Xamarin.Forms.BindingMode.OneWayToSource) dados de &ndash; vão do destino para a origem
-- [`OneTime`](xref:Xamarin.Forms.BindingMode.OneWayToSource) dados de &ndash; vão da origem para o destino, mas somente quando o `BindingContext` for alterado (novo com Xamarin. Forms 3,0)
+- [`TwoWay`](xref:Xamarin.Forms.BindingMode.TwoWay)&ndash; dados vai para os dois lados entre fonte e alvo
+- [`OneWay`](xref:Xamarin.Forms.BindingMode.OneWay)&ndash; dados vai de fonte para alvo
+- [`OneWayToSource`](xref:Xamarin.Forms.BindingMode.OneWayToSource)&ndash; dados vai de alvo para fonte
+- [`OneTime`](xref:Xamarin.Forms.BindingMode.OneWayToSource)&ndash; os dados vão de fonte para `BindingContext` alvo, mas somente quando as alterações (novas com Xamarin.Forms 3.0)
 
-Cada propriedade associável tem um modo de associação padrão definido quando a propriedade associável é criada, que está disponível na propriedade [`DefaultBindingMode`](xref:Xamarin.Forms.BindableProperty.DefaultBindingMode) do objeto `BindableProperty`. Esse modo de associação padrão indica o modo em vigor quando essa propriedade é um destino da associação de dados.
+Cada propriedade vinculável possui um modo de vinculação padrão definido quando a propriedade [`DefaultBindingMode`](xref:Xamarin.Forms.BindableProperty.DefaultBindingMode) vinculável `BindableProperty` é criada e que está disponível a partir da propriedade do objeto. Esse modo de associação padrão indica o modo em vigor quando essa propriedade é um destino da associação de dados.
 
 O modo de associação padrão para a maioria das propriedades, como `Rotation`, `Scale` e `Opacity`, é `OneWay`. Quando essas propriedades são destinos de associação de dados, a propriedade de destino é definida na origem.
 
@@ -109,7 +109,7 @@ Propriedades de destino com um modo de associação igual a `OneTime` são atual
 
 A página **Seletor de cor simples** demonstra o uso de um ViewModel simples. As associações de dados permitem que o usuário selecione uma cor usando três elementos `Slider` para o matiz, a saturação e a luminosidade.
 
-O ViewModel é a origem da associação de dados. O ViewModel *não* define propriedades vinculáveis, mas implementa um mecanismo de notificação que permite que a infraestrutura de associação seja notificada quando o valor de uma propriedade é alterado. Esse mecanismo de notificação é a interface [`INotifyPropertyChanged`](xref:System.ComponentModel.INotifyPropertyChanged), que define um único evento chamado [`PropertyChanged`](xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged). Em geral, uma classe que implementa essa interface dispara o evento quando uma de suas propriedades públicas altera o valor. O evento não precisa ser disparado se a propriedade nunca é alterada. (A interface `INotifyPropertyChanged` também é implementada por `BindableObject` e um evento `PropertyChanged` é disparado sempre que uma propriedade vinculável altera o valor.)
+O ViewModel é a origem da associação de dados. O ViewModel *não* define propriedades vinculáveis, mas implementa um mecanismo de notificação que permite que a infraestrutura de associação seja notificada quando o valor de uma propriedade é alterado. Este mecanismo de [`INotifyPropertyChanged`](xref:System.ComponentModel.INotifyPropertyChanged) notificação é a interface, [`PropertyChanged`](xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged)que define um único evento chamado . Em geral, uma classe que implementa essa interface dispara o evento quando uma de suas propriedades públicas altera o valor. O evento não precisa ser disparado se a propriedade nunca é alterada. (A interface `INotifyPropertyChanged` também é implementada por `BindableObject` e um evento `PropertyChanged` é disparado sempre que uma propriedade vinculável altera o valor.)
 
 A classe `HslColorViewModel` define cinco propriedades: as propriedades `Hue`, `Saturation`, `Luminosity` e `Color` estão correlacionadas. Quando um dos três componentes de cor altera o valor, a propriedade `Color` é recalculada e os eventos `PropertyChanged` são disparados para todas as quatro propriedades:
 
@@ -261,9 +261,9 @@ No entanto, a propriedade `Value` do `Slider` é `TwoWay`. Isso permite que cada
 
 Quando o programa é executado pela primeira vez, a `BoxView`, o `Label` e três elementos `Slider` são definidos no ViewModel com base na propriedade `Color` inicial definida quando foi criada uma instância do ViewModel. Isso é mostrado na captura de tela do iOS à esquerda:
 
-[![Seletor de cor simples](binding-mode-images/simplecolorselector-small.png "Seletor de cor simples")](binding-mode-images/simplecolorselector-large.png#lightbox "Seletor de cor simples")
+[![Seletor de cores simples](binding-mode-images/simplecolorselector-small.png "Seletor de cores simples")](binding-mode-images/simplecolorselector-large.png#lightbox "Seletor de cores simples")
 
-Conforme você manipula os controles deslizantes, os `BoxView` e `Label` são atualizados de acordo, conforme ilustrado pela captura de tela do Android.
+À medida que você manipula `BoxView` `Label` os controles deslizantes, os e são atualizados de acordo, conforme ilustrado pela captura de tela do Android.
 
 A criação de uma instância do ViewModel no dicionário de recursos é uma abordagem comum. Também é possível criar uma instância do ViewModel dentro de marcas de elemento de propriedade para a propriedade `BindingContext`. No arquivo XAML **Seletor de cor simples**, tente remover o `HslColorViewModel` do dicionário de recursos e defini-lo como a propriedade `BindingContext` da `Grid` desta forma:
 
@@ -282,7 +282,7 @@ O contexto de associação pode ser definido em uma variedade de formas. Às vez
 
 ## <a name="overriding-the-binding-mode"></a>Substituindo o modo de associação
 
-Se o modo de associação padrão na propriedade de destino não é adequado para uma associação de dados específica, é possível substituí-lo definindo a propriedade [`Mode`](xref:Xamarin.Forms.BindingBase.Mode) de `Binding` (ou a propriedade [`Mode`](xref:Xamarin.Forms.Xaml.BindingExtension.Mode) da extensão de marcação `Binding`) com um dos membros da enumeração `BindingMode`.
+Se o modo de vinculação padrão na propriedade de destino não for adequado para [`Mode`](xref:Xamarin.Forms.BindingBase.Mode) uma `Binding` vinculação [`Mode`](xref:Xamarin.Forms.Xaml.BindingExtension.Mode) de dados `Binding` específica, é possível substituí-lo `BindingMode` definindo a propriedade de (ou a propriedade da extensão de marcação) a um dos membros da enumeração.
 
 No entanto, a definição da propriedade `Mode` como `TwoWay` nem sempre funciona como esperado. Por exemplo, tente modificar o arquivo XAML **Associação de XAML alternativa** para incluir `TwoWay` na definição de associação:
 
@@ -313,7 +313,7 @@ Defina o modo de associação como `OneWayToSource` na amostra **Associação de
 Agora o `Slider` é inicializado como 1 (o valor padrão de `Scale`), mas a manipulação do `Slider` não afeta a propriedade `Scale` e, portanto, isso não é muito útil.
 
 > [!NOTE]
-> A classe [`VisualElement`](xref:Xamarin.Forms.VisualElement) define também as propriedades [`ScaleX`](xref:Xamarin.Forms.VisualElement.ScaleX) e [`ScaleY`](xref:Xamarin.Forms.VisualElement.ScaleY), que podem dimensionar o `VisualElement` de forma diferente nos sentidos horizontal e vertical.
+> A [`VisualElement`](xref:Xamarin.Forms.VisualElement) classe também [`ScaleX`](xref:Xamarin.Forms.VisualElement.ScaleX) [`ScaleY`](xref:Xamarin.Forms.VisualElement.ScaleY) define e propriedades, `VisualElement` que podem escalar de forma diferente nas direções horizontal e vertical.
 
 Uma aplicação muito útil de substituir o modo de associação padrão com `TwoWay` envolve a propriedade `SelectedItem` de `ListView`. O modo de associação padrão é `OneWayToSource`. Quando uma associação de dados é definida na propriedade `SelectedItem` para referenciar uma propriedade de origem em um ViewModel, essa propriedade de origem é definida na seleção de `ListView`. No entanto, em algumas circunstâncias, também é recomendável inicializar a `ListView` no ViewModel.
 
@@ -675,13 +675,13 @@ public partial class SampleSettingsPage : ContentPage
 
 A captura de tela do iOS à esquerda mostra o programa quando ele é executado pela primeira vez. O construtor em `SampleSettingsViewModel` inicializa a cor da tela de fundo como branca e isto é o que é selecionado na `ListView`:
 
-[![Configurações de exemplo](binding-mode-images/samplesettings-small.png "Configurações de exemplo")](binding-mode-images/samplesettings-large.png#lightbox "Configurações de exemplo")
+[![Configurações de amostra](binding-mode-images/samplesettings-small.png "Configurações de amostra")](binding-mode-images/samplesettings-large.png#lightbox "Configurações de amostra")
 
 A outra captura de tela mostra as configurações alteradas. Ao experimentar com essa página, lembre-se de colocar o programa no modo de suspensão ou encerrá-lo no dispositivo ou no emulador em que está sendo executado. O encerramento do programa no depurador do Visual Studio não chamará a substituição `OnSleep` na classe `App`.
 
 No próximo artigo, você verá como especificar a [**Formatação da cadeia de caracteres**](string-formatting.md) de associações de dados que são definidas na propriedade `Text` de `Label`.
 
-## <a name="related-links"></a>Links Relacionados
+## <a name="related-links"></a>Links relacionados
 
 - [Demonstrações de associação de dados (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 - [Capítulo de associação de dados do catálogo de Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)

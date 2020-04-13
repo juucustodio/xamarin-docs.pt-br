@@ -1,6 +1,6 @@
 ---
 title: Passando parâmetros de efeito como propriedades anexadas
-description: Propriedades anexadas podem ser usadas para definir parâmetros de efeito que respondem a alterações de propriedade de tempo de execução. Este artigo demonstra o uso de propriedades anexadas para passar parâmetros para um efeito e a alteração de um parâmetro em tempo de execução.
+description: Propriedades anexadas podem ser usadas para definir parâmetros de efeito que respondem a alterações de propriedade de runtime. Este artigo demonstra o uso de propriedades anexadas para passar parâmetros para um efeito e a alteração de um parâmetro em runtime.
 ms.prod: xamarin
 ms.assetid: DFCDCB9F-17DD-4117-BD53-B4FB206BB387
 ms.technology: xamarin-forms
@@ -8,19 +8,19 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/05/2016
 ms.openlocfilehash: 2fcfbfa8a1780a9da4e9bfe187dc99a5172e95f0
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "70771477"
 ---
 # <a name="passing-effect-parameters-as-attached-properties"></a>Passando parâmetros de efeito como propriedades anexadas
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-shadoweffectruntimechange)
+[![Baixar](~/media/shared/download.png) amostra Baixar a amostra](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-shadoweffectruntimechange)
 
-_Propriedades anexadas podem ser usadas para definir parâmetros de efeito que respondem a alterações de propriedade de tempo de execução. Este artigo demonstra o uso de propriedades anexadas para passar parâmetros para um efeito e a alteração de um parâmetro em tempo de execução._
+_As propriedades anexadas podem ser usadas para definir parâmetros de efeito que respondam às alterações de propriedade em tempo de execução. Este artigo demonstra o uso de propriedades anexadas para passar parâmetros para um efeito e alterar um parâmetro em tempo de execução._
 
-O processo para criar parâmetros de efeito que respondem a alterações de propriedade de tempo de execução é o seguinte:
+O processo para criar parâmetros de efeito que respondem a alterações de propriedade de runtime é o seguinte:
 
 1. Crie uma classe `static` que contém uma propriedade anexada para cada parâmetro a ser passado para o efeito.
 1. Adicione outra propriedade anexada à classe que será usada para controlar a adição ou remoção do efeito para o controle a que a classe será anexada. Certifique-se de que a propriedade anexada registre um delegado `propertyChanged` que será executado quando o valor da propriedade for alterado.
@@ -28,18 +28,18 @@ O processo para criar parâmetros de efeito que respondem a alterações de prop
 1. Implemente a lógica no delegado `propertyChanged` para adicionar e remover o efeito.
 1. Implemente uma classe aninhada dentro da classe `static`, com o mesmo nome do efeito, que cria uma subclasse da classe `RoutingEffect`. Para o construtor, chame o construtor da classe base passando uma concatenação do nome do grupo de resolução e a ID exclusiva que foi especificada em cada classe de efeito específica da plataforma.
 
-Em seguida, é possível passar parâmetros para o efeito adicionando as propriedades anexadas e valores de propriedade ao controle apropriado. Além disso, os parâmetros podem ser alterados no tempo de execução especificando um novo valor da propriedade anexada.
+Em seguida, é possível passar parâmetros para o efeito adicionando as propriedades anexadas e valores de propriedade ao controle apropriado. Além disso, os parâmetros podem ser alterados no runtime especificando um novo valor da propriedade anexada.
 
 > [!NOTE]
 > Uma propriedade anexada é um tipo especial de propriedade associável, definida em uma classe, mas anexada a outros objetos e reconhecível no XAML como atributos que contêm uma classe e um nome de propriedade separados por um ponto. Para obter mais informações, confira [Propriedades anexadas](~/xamarin-forms/xaml/attached-properties.md).
 
-O aplicativo de exemplo demonstra um `ShadowEffect` que adiciona uma sombra ao texto exibido por um controle [`Label`](xref:Xamarin.Forms.Label). Além disso, a cor da sombra pode ser alterada em tempo de execução. O diagrama a seguir ilustra as responsabilidades de cada projeto no aplicativo de exemplo, bem como as relações entre elas:
+O aplicativo de `ShadowEffect` exemplo demonstra uma sombra ao [`Label`](xref:Xamarin.Forms.Label) texto exibido por um controle. Além disso, a cor da sombra pode ser alterada em runtime. O diagrama a seguir ilustra as responsabilidades de cada projeto no aplicativo de exemplo, bem como as relações entre elas:
 
-![](attached-properties-images/shadow-effect.png "Responsabilidades do projeto de efeito de sombra")
+![](attached-properties-images/shadow-effect.png "Shadow Effect Project Responsibilities")
 
-Um controle [`Label`](xref:Xamarin.Forms.Label) no `HomePage` é personalizado pelo `LabelShadowEffect` em cada projeto específico da plataforma. Os parâmetros são passados para cada `LabelShadowEffect` por meio das propriedades anexadas na classe `ShadowEffect`. Cada classe `LabelShadowEffect` é derivada da classe `PlatformEffect` de cada plataforma. Isso faz com que uma sombra seja adicionada ao texto exibido pelo controle `Label`, conforme mostrado nas capturas de tela seguir:
+Um [`Label`](xref:Xamarin.Forms.Label) controle `HomePage` no é personalizado `LabelShadowEffect` pelo projeto específico da plataforma. Os parâmetros são passados para cada `LabelShadowEffect` por meio das propriedades anexadas na classe `ShadowEffect`. Cada classe `LabelShadowEffect` é derivada da classe `PlatformEffect` de cada plataforma. Isso faz com que uma sombra seja adicionada ao texto exibido pelo controle `Label`, conforme mostrado nas capturas de tela seguir:
 
-![](attached-properties-images/screenshots.png "Efeito de sombra em cada plataforma")
+![](attached-properties-images/screenshots.png "Shadow Effect on each Platform")
 
 ## <a name="creating-effect-parameters"></a>Criando parâmetros de efeito
 
@@ -99,14 +99,14 @@ public static class ShadowEffect
 
 O `ShadowEffect` contém cinco propriedades anexadas, com getters e setters `static` para cada propriedade anexada. Quatro dessas propriedades representam parâmetros a serem passados para cada `LabelShadowEffect` específico da plataforma. A classe `ShadowEffect` também define uma propriedade anexada `HasShadow` que é usada para controlar a adição ou remoção do efeito para o controle a que a classe `ShadowEffect` é anexada. Essa propriedade anexada registra o método `OnHasShadowChanged` que será executado quando o valor da propriedade for alterado. Esse método adiciona ou remove o efeito com base no valor da propriedade anexada `HasShadow`.
 
-A classe `LabelShadowEffect` aninhada, que cria uma subclasse da classe [`RoutingEffect`](xref:Xamarin.Forms.RoutingEffect), dá suporte à adição e à remoção de efeitos. A classe `RoutingEffect` representa um efeito independente de plataforma que encapsula um efeito interno, que é geralmente é específico da plataforma. Isso simplifica o processo de remoção do efeito, porque não há nenhum acesso de tempo de compilação às informações de tipo para um efeito específico da plataforma. O construtor `LabelShadowEffect` chama o construtor da classe base, passando um parâmetro composto por uma concatenação do nome do grupo de resolução e pela ID exclusiva que foi especificada em cada classe de efeito específica da plataforma. Isso habilita a adição e a remoção do efeito no método `OnHasShadowChanged`, da seguinte maneira:
+A classe `LabelShadowEffect` aninhada, [`RoutingEffect`](xref:Xamarin.Forms.RoutingEffect) que subclasse a classe, suporta adição e remoção de efeitos. A classe `RoutingEffect` representa um efeito independente de plataforma que encapsula um efeito interno, que é geralmente é específico da plataforma. Isso simplifica o processo de remoção do efeito, porque não há nenhum acesso de tempo de compilação às informações de tipo para um efeito específico da plataforma. O construtor `LabelShadowEffect` chama o construtor da classe base, passando um parâmetro composto por uma concatenação do nome do grupo de resolução e pela ID exclusiva que foi especificada em cada classe de efeito específica da plataforma. Isso habilita a adição e a remoção do efeito no método `OnHasShadowChanged`, da seguinte maneira:
 
-- **Adição de efeito** – uma nova instância do `LabelShadowEffect` é adicionada à coleção [`Effects`](xref:Xamarin.Forms.Element.Effects) do controle. Isso substitui o uso do método [`Effect.Resolve`](xref:Xamarin.Forms.Effect.Resolve(System.String)) para adicionar o efeito.
+- **Adição de efeito** – uma nova instância do `LabelShadowEffect` é adicionada à coleção [`Effects`](xref:Xamarin.Forms.Element.Effects) do controle. Isso substitui o [`Effect.Resolve`](xref:Xamarin.Forms.Effect.Resolve(System.String)) uso do método para adicionar o efeito.
 - **Remoção de efeito** – a primeira instância do `LabelShadowEffect` na coleção [`Effects`](xref:Xamarin.Forms.Element.Effects) do controle é recuperada e removida.
 
 ## <a name="consuming-the-effect"></a>Consumindo o efeito
 
-Cada `LabelShadowEffect` específico da plataforma pode ser consumido adicionando as propriedades anexadas a um controle [`Label`](xref:Xamarin.Forms.Label), conforme demonstrado no exemplo de código XAML a seguir:
+Cada plataforma `LabelShadowEffect` específica pode ser consumida adicionando [`Label`](xref:Xamarin.Forms.Label) as propriedades anexadas a um controle, conforme demonstrado no seguinte exemplo de código XAML:
 
 ```xaml
 <Label Text="Label Shadow Effect" ...
@@ -122,7 +122,7 @@ Cada `LabelShadowEffect` específico da plataforma pode ser consumido adicionand
 </Label>
 ```
 
-O [`Label`](xref:Xamarin.Forms.Label) equivalente em C# é mostrado no exemplo de código a seguir:
+O [`Label`](xref:Xamarin.Forms.Label) equivalente em C# é mostrado no seguinte exemplo de código:
 
 ```csharp
 var label = new Label {
@@ -151,9 +151,9 @@ ShadowEffect.SetDistanceY (label, 5);
 ShadowEffect.SetColor (label, color));
 ```
 
-Definir a propriedade anexada `ShadowEffect.HasShadow` como `true` executa o método `ShadowEffect.OnHasShadowChanged` que adiciona ou remove o `LabelShadowEffect` ao controle [`Label`](xref:Xamarin.Forms.Label). Nos dois exemplos de código, a propriedade anexada `ShadowEffect.Color` fornece valores de cor específicos da plataforma. Para obter mais informações, confira [Classe do dispositivo](~/xamarin-forms/platform/device.md).
+Definir `ShadowEffect.HasShadow` a propriedade `true` anexada `ShadowEffect.OnHasShadowChanged` para executar o método `LabelShadowEffect` que [`Label`](xref:Xamarin.Forms.Label) adiciona ou remove o controle. Nos dois exemplos de código, a propriedade anexada `ShadowEffect.Color` fornece valores de cor específicos da plataforma. Para obter mais informações, confira [Classe do dispositivo](~/xamarin-forms/platform/device.md).
 
-Além disso, um [`Button`](xref:Xamarin.Forms.Button) permite que a cor da sombra seja alterada em tempo de execução. Quando o usuário clica no `Button`, a código a seguir altera a cor da sombra definindo a propriedade anexada `ShadowEffect.Color`:
+Além disso, [`Button`](xref:Xamarin.Forms.Button) um permite que a cor da sombra seja alterada em tempo de execução. Quando o usuário clica no `Button`, a código a seguir altera a cor da sombra definindo a propriedade anexada `ShadowEffect.Color`:
 
 ```csharp
 ShadowEffect.SetColor (label, Color.Teal);
@@ -174,7 +174,7 @@ Os efeitos que podem ser consumidos adicionando propriedades anexadas a um contr
 </Style>
 ```
 
-O [`Style`](xref:Xamarin.Forms.Style) pode ser aplicado a um [`Label`](xref:Xamarin.Forms.Label) definindo sua propriedade [`Style`](xref:Xamarin.Forms.NavigableElement.Style) para a instância de `Style` usando a extensão de marcação `StaticResource`, conforme demonstrado no exemplo de código a seguir:
+O [`Style`](xref:Xamarin.Forms.Style) pode ser aplicado [`Label`](xref:Xamarin.Forms.Label) a [`Style`](xref:Xamarin.Forms.NavigableElement.Style) a definindo sua propriedade na `Style` instância usando a `StaticResource` extensão de marcação, conforme demonstrado no exemplo de código a seguir:
 
 ```xaml
 <Label Text="Label Shadow Effect" ... Style="{StaticResource ShadowEffectStyle}" />
@@ -237,7 +237,7 @@ O método `OnAttached` chama métodos que recuperam os valores de propriedade an
 
 #### <a name="responding-to-property-changes"></a>Respondendo a alterações de propriedade
 
-Se qualquer um dos valores da propriedade anexada `ShadowEffect` for alterado em tempo de execução, o efeito precisará responder exibindo as alterações. Uma versão de substituição do método `OnElementPropertyChanged`, na classe de efeito específica da plataforma, é o lugar para responder a alterações de propriedade vinculáveis, conforme demonstrado no código de exemplo a seguir:
+Se qualquer um dos valores da propriedade anexada `ShadowEffect` for alterado em runtime, o efeito precisará responder exibindo as alterações. Uma versão de substituição do método `OnElementPropertyChanged`, na classe de efeito específica da plataforma, é o lugar para responder a alterações de propriedade vinculáveis, conforme demonstrado no código de exemplo a seguir:
 
 ```csharp
 public class LabelShadowEffect : PlatformEffect
@@ -318,11 +318,11 @@ namespace EffectsDemo.Droid
     }
 ```
 
-O método `OnAttached` chama métodos que recuperam os valores de propriedade anexada usando os getters `ShadowEffect` e chama um método que chama o método [`TextView.SetShadowLayer`](xref:Android.Widget.TextView.SetShadowLayer*) para criar uma sombra usando os valores da propriedade. Essa funcionalidade é encapsulada em um bloco `try`/`catch` caso o controle a que o efeito está anexado não tenha as propriedades de `Control.Layer`. Nenhuma implementação é fornecida pelo método `OnDetached` porque nenhuma limpeza é necessária.
+O `OnAttached` método chama métodos que recuperam `ShadowEffect` os valores de propriedade anexados [`TextView.SetShadowLayer`](xref:Android.Widget.TextView.SetShadowLayer*) usando os getters e chama um método que chama o método para criar uma sombra usando os valores de propriedade. Essa funcionalidade é encapsulada em um bloco `try`/`catch` caso o controle a que o efeito está anexado não tenha as propriedades de `Control.Layer`. Nenhuma implementação é fornecida pelo método `OnDetached` porque nenhuma limpeza é necessária.
 
 #### <a name="responding-to-property-changes"></a>Respondendo a alterações de propriedade
 
-Se qualquer um dos valores da propriedade anexada `ShadowEffect` for alterado em tempo de execução, o efeito precisará responder exibindo as alterações. Uma versão de substituição do método `OnElementPropertyChanged`, na classe de efeito específica da plataforma, é o lugar para responder a alterações de propriedade vinculáveis, conforme demonstrado no código de exemplo a seguir:
+Se qualquer um dos valores da propriedade anexada `ShadowEffect` for alterado em runtime, o efeito precisará responder exibindo as alterações. Uma versão de substituição do método `OnElementPropertyChanged`, na classe de efeito específica da plataforma, é o lugar para responder a alterações de propriedade vinculáveis, conforme demonstrado no código de exemplo a seguir:
 
 ```csharp
 public class LabelShadowEffect : PlatformEffect
@@ -404,11 +404,11 @@ namespace EffectsDemo.UWP
 }
 ```
 
-A Plataforma Universal do Windows não fornece um efeito de sombra, de forma que a implementação de `LabelShadowEffect` nas duas plataformas simula o efeito adicionando um segundo deslocamento [`Label`](xref:Xamarin.Forms.Label) atrás do `Label` principal. O método `OnAttached` cria o novo `Label` e define algumas propriedades de layout no `Label`. Em seguida, ele chama métodos que recuperam os valores da propriedade anexada usando os getters `ShadowEffect` e cria a sombra definindo as propriedades [`TextColor`](xref:Xamarin.Forms.Label.TextColor), [`TranslationX`](xref:Xamarin.Forms.VisualElement.TranslationX) e [`TranslationY`](xref:Xamarin.Forms.VisualElement.TranslationY) para controlar a cor e a localização do `Label`. Em seguida, o `shadowLabel` é inserido deslocado atrás do `Label` principal. Essa funcionalidade é encapsulada em um bloco `try`/`catch` caso o controle a que o efeito está anexado não tenha as propriedades de `Control.Layer`. Nenhuma implementação é fornecida pelo método `OnDetached` porque nenhuma limpeza é necessária.
+A Plataforma Universal Windows não fornece um efeito `LabelShadowEffect` de sombra, e assim a implementação [`Label`](xref:Xamarin.Forms.Label) em `Label`ambas as plataformas simula uma adicionando um segundo deslocamento atrás do principal . O método `OnAttached` cria o novo `Label` e define algumas propriedades de layout no `Label`. Em seguida, ele chama métodos que `ShadowEffect` recuperam os valores de propriedade [`TextColor`](xref:Xamarin.Forms.Label.TextColor) [`TranslationX`](xref:Xamarin.Forms.VisualElement.TranslationX)anexados [`TranslationY`](xref:Xamarin.Forms.VisualElement.TranslationY) usando os getters `Label`e cria a sombra definindo as propriedades e propriedades para controlar a cor e a localização do . Em seguida, o `shadowLabel` é inserido deslocado atrás do `Label` principal. Essa funcionalidade é encapsulada em um bloco `try`/`catch` caso o controle a que o efeito está anexado não tenha as propriedades de `Control.Layer`. Nenhuma implementação é fornecida pelo método `OnDetached` porque nenhuma limpeza é necessária.
 
 #### <a name="responding-to-property-changes"></a>Respondendo a alterações de propriedade
 
-Se qualquer um dos valores da propriedade anexada `ShadowEffect` for alterado em tempo de execução, o efeito precisará responder exibindo as alterações. Uma versão de substituição do método `OnElementPropertyChanged`, na classe de efeito específica da plataforma, é o lugar para responder a alterações de propriedade vinculáveis, conforme demonstrado no código de exemplo a seguir:
+Se qualquer um dos valores da propriedade anexada `ShadowEffect` for alterado em runtime, o efeito precisará responder exibindo as alterações. Uma versão de substituição do método `OnElementPropertyChanged`, na classe de efeito específica da plataforma, é o lugar para responder a alterações de propriedade vinculáveis, conforme demonstrado no código de exemplo a seguir:
 
 ```csharp
 public class LabelShadowEffect : PlatformEffect
@@ -431,12 +431,12 @@ O método `OnElementPropertyChanged` atualiza a cor ou o deslocamento da sombra,
 
 ## <a name="summary"></a>Resumo
 
-Este artigo demonstrou o uso de propriedades anexadas para passar parâmetros para um efeito e a alteração de um parâmetro em tempo de execução. Propriedades anexadas podem ser usadas para definir parâmetros de efeito que respondem a alterações de propriedade de tempo de execução.
+Este artigo demonstrou o uso de propriedades anexadas para passar parâmetros para um efeito e a alteração de um parâmetro em runtime. Propriedades anexadas podem ser usadas para definir parâmetros de efeito que respondem a alterações de propriedade de runtime.
 
 ## <a name="related-links"></a>Links relacionados
 
 - [Renderizadores personalizados](~/xamarin-forms/app-fundamentals/custom-renderer/index.md)
-- [Effect](xref:Xamarin.Forms.Effect)
+- [Efeito](xref:Xamarin.Forms.Effect)
 - [PlatformEffect](xref:Xamarin.Forms.PlatformEffect`2)
 - [RoutingEffect](xref:Xamarin.Forms.RoutingEffect)
 - [Efeito de sombra (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-shadoweffectruntimechange)

@@ -8,15 +8,15 @@ author: profexorgeek
 ms.author: jusjohns
 ms.date: 09/16/2019
 ms.openlocfilehash: 34763804e9833224721ea32f9c7e6200dd5faba7
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "75607874"
 ---
 # <a name="what-is-xamarin"></a>O que é o Xamarin?
 
-[![Capturas de tela do aplicativo de exemplo Xamarin no iOS e no Android](what-is-xamarin-images/xamarin-app-cropped.png)](what-is-xamarin-images/xamarin-app.png#lightbox)
+[![Capturas de tela do aplicativo Exemplo Xamarin no iOS e Android](what-is-xamarin-images/xamarin-app-cropped.png)](what-is-xamarin-images/xamarin-app.png#lightbox)
 
 O Xamarin é uma plataforma de software livre para a criação de aplicativos modernos e de alto desempenho para iOS, Android e Windows com o .NET. O Xamarin é uma camada de abstração que gerencia a comunicação de código compartilhado com o código de plataforma subjacente. O Xamarin é executado em um ambiente gerenciado que fornece conveniências, como alocação de memória e coleta de lixo.
 
@@ -57,7 +57,7 @@ O Xamarin combina as capacidades de plataformas nativas e adiciona vários recur
 
 ### <a name="xamarinandroid"></a>Xamarin.Android
 
-[![Diagrama da arquitetura do Xamarin.Android](what-is-xamarin-images/android-architecture-cropped.png)](what-is-xamarin-images/android-architecture.png#lightbox)
+[![Diagrama de arquitetura Xamarin.Android](what-is-xamarin-images/android-architecture-cropped.png)](what-is-xamarin-images/android-architecture.png#lightbox)
 
 Os aplicativos Xamarin.Android compilam de C# para **IL (linguagem intermediária)** que, em seguida, passa por compilação **JIT (Just-In-Time)** em um assembly nativo quando o aplicativo é iniciado. Os aplicativos Xamarin.Android são executados no ambiente de execução Mono, lado a lado com a máquina virtual ART (Runtime do Android). O Xamarin fornece associações .NET para os namespaces Android.* e Java.*. O ambiente de execução Mono chama esses namespaces por meio de **MCW (Wrappers Chamáveis Gerenciados)** e fornece **ACW (Wrappers Chamáveis Android)** para o ART, permitindo que ambos os ambientes invoquem o código entre si.
 
@@ -65,7 +65,7 @@ Para obter mais informações, confira a [Arquitetura do Xamarin.Android](~/andr
 
 ### <a name="xamarinios"></a>Xamarin.iOS
 
-[![Diagrama da arquitetura do Xamarin.iOS](what-is-xamarin-images/ios-architecture-cropped.png)](what-is-xamarin-images/ios-architecture.png#lightbox)
+[![Diagrama de arquitetura Xamarin.iOS](what-is-xamarin-images/ios-architecture-cropped.png)](what-is-xamarin-images/ios-architecture.png#lightbox)
 
 Os aplicativos Xamarin.iOS são totalmente compilados **AOT (Ahead-of-Time)** de C# para o código do assembly ARM nativo. O Xamarin usa **Seletores** para expor Objective-C para C# gerenciado e **Registradores** para expor código C# gerenciado para Objective-C. Os seletores e registradores coletivamente são chamados de "associações" e permitem a comunicação de Objective-C e C#.
 

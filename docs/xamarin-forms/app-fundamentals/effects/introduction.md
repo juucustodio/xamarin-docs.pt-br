@@ -8,15 +8,15 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
 ms.openlocfilehash: e9325c34c645b75f28c7e2070f6bb095780ddb02
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "70771458"
 ---
 # <a name="introduction-to-effects"></a>Introdução aos efeitos
 
-_Os efeitos permitem que os controles nativos em cada plataforma sejam personalizados e normalmente são usados para alterações de estilo pequeno. Este artigo fornece uma introdução aos efeitos, descreve o limite entre efeitos e renderizadores personalizados, além de descrever a classe PlatformEffect._
+_Os efeitos permitem que os controles nativos em cada plataforma sejam personalizados, e são normalmente usados para pequenas mudanças de estilo. Este artigo fornece uma introdução aos efeitos, descreve o limite entre efeitos e renderizadores personalizados e descreve a classe PlatformEffect._
 
 [Páginas, Layouts e Controles](~/xamarin-forms/user-interface/controls/index.md) do Xamarin.Forms apresenta uma API comum para descrever interfaces do usuário móveis multiplataforma. Cada página, layout e controle é renderizado de maneira diferente em cada plataforma usando uma classe `Renderer`, que por sua vez cria um controle nativo (correspondente à representação no Xamarin.Forms), organiza sua disposição na tela e adiciona o comportamento especificado no código compartilhado.
 
@@ -38,10 +38,10 @@ Tudo que pode ser feito com um efeito também pode ser feito com um renderizador
 
 A tabela a seguir lista o namespace para a classe `PlatformEffect` em cada plataforma, bem como os tipos de suas propriedades:
 
-|Plataforma|espaço de nome|Contêiner|Controle|
+|Plataforma|Namespace|Contêiner|Control|
 |--- |--- |--- |--- |
 |iOS|Xamarin.Forms.Platform.iOS|UIView|UIView|
-|Android|Xamarin.Forms.Platform.Android|ViewGroup|Exibir|
+|Android|Xamarin.Forms.Platform.Android|ViewGroup|Visualizar|
 |UWP (Plataforma Universal do Windows)|Xamarin.Forms.Platform.UWP|FrameworkElement|FrameworkElement|
 
 Cada classe `PlatformEffect` específica da plataforma expõe as propriedades a seguir:
@@ -54,10 +54,10 @@ Os efeitos não têm informações de tipo sobre o contêiner, o controle ou o e
 
 Cada classe `PlatformEffect` específica da plataforma expõe os métodos a seguir, que devem ser substituídos para implementar um efeito:
 
-- [`OnAttached`](xref:Xamarin.Forms.Effect.OnAttached) – chamado quando um efeito é anexado a um controle do Xamarin.Forms. Uma versão de substituição desse método, em cada classe de efeito específica da plataforma, é o lugar certo para realizar a personalização do controle, bem como a manipulação de exceções caso o efeito não possa ser aplicado ao controle do Xamarin.Forms especificado.
-- [`OnDetached`](xref:Xamarin.Forms.Effect.OnDetached) – chamado quando um efeito é desanexado de um controle do Xamarin.Forms. Uma versão de substituição deste método, em cada classe de efeito específica da plataforma, é o lugar para executar qualquer limpeza de efeito, como cancelar o registro de um manipulador de eventos.
+- [`OnAttached`](xref:Xamarin.Forms.Effect.OnAttached)– chamado quando um efeito é anexado a um controle Xamarin.Forms. Uma versão de substituição desse método, em cada classe de efeito específica da plataforma, é o lugar certo para realizar a personalização do controle, bem como a manipulação de exceções caso o efeito não possa ser aplicado ao controle do Xamarin.Forms especificado.
+- [`OnDetached`](xref:Xamarin.Forms.Effect.OnDetached)– chamado quando um efeito é desvinculado de um controle Xamarin.Forms. Uma versão de substituição deste método, em cada classe de efeito específica da plataforma, é o lugar para executar qualquer limpeza de efeito, como cancelar o registro de um manipulador de eventos.
 
-Além disso, o `PlatformEffect` expõe o método [`OnElementPropertyChanged`](xref:Xamarin.Forms.PlatformEffect`2.OnElementPropertyChanged(System.ComponentModel.PropertyChangedEventArgs)), que também pode ser substituído. Esse método é chamado quando uma propriedade do elemento foi alterada. Uma versão de substituição do método, em cada classe de efeito específica da plataforma, é o lugar para responder a alterações de propriedade vinculáveis sobre o controle do Xamarin.Forms. Uma verificação da propriedade alterada sempre deve ser feita, pois essa substituição pode ser chamada várias vezes.
+Além disso, `PlatformEffect` o [`OnElementPropertyChanged`](xref:Xamarin.Forms.PlatformEffect`2.OnElementPropertyChanged(System.ComponentModel.PropertyChangedEventArgs)) método expõe, que também pode ser substituído. Esse método é chamado quando uma propriedade do elemento foi alterada. Uma versão de substituição do método, em cada classe de efeito específica da plataforma, é o lugar para responder a alterações de propriedade vinculáveis sobre o controle do Xamarin.Forms. Uma verificação da propriedade alterada sempre deve ser feita, pois essa substituição pode ser chamada várias vezes.
 
 ## <a name="related-links"></a>Links relacionados
 

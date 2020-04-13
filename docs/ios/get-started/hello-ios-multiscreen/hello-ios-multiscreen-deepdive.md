@@ -9,10 +9,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 10/05/2018
 ms.openlocfilehash: 3bcfb20d8283f621ac1d32730ee67be2b09efe50
-ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "79304628"
 ---
 # <a name="hello-ios-multiscreen--deep-dive"></a>Olá, iOS multitela – análise detalhada
@@ -24,15 +24,15 @@ Então, nos aprofundamos no controlador de navegação e aprendemos a usá-lo pa
 
 ## <a name="model-view-controller-mvc"></a>MVC (Modelo-Exibição-Controlador)
 
-No tutorial [Hello, iOS](~/ios/get-started/hello-ios/index.md), aprendemos que aplicativos iOS têm apenas uma *Janela* para a qual controladores de exibição são responsáveis por carregar suas *Hierarquias de Exibição de Conteúdo*. No segundo passo a passo do Phoneword, adicionamos uma segunda tela ao nosso aplicativo e enviamos alguns dados (uma lista de números de telefone) entre as duas telas, conforme ilustra o diagrama a seguir:
+No tutorial [hello, iOS,](~/ios/get-started/hello-ios/index.md) aprendemos que os aplicativos iOS têm apenas uma *Janela* que os controladores de exibição são responsáveis por carregar suas Hierarquias de *Visualização* de Conteúdo na Janela. No segundo passo a passo do Phoneword, adicionamos uma segunda tela ao nosso aplicativo e enviamos alguns dados (uma lista de números de telefone) entre as duas telas, conforme ilustra o diagrama a seguir:
 
  [![](hello-ios-multiscreen-deepdive-images/08.png "This diagram illustrates passing data between two screens")](hello-ios-multiscreen-deepdive-images/08.png#lightbox)
 
-Em nosso exemplo, os dados foram coletados na primeira tela, passados do primeiro controlador de exibição para o segundo e exibidos pela segunda tela. Essa separação de telas, de controladores de exibição e de dados segue o padrão *MVC (Modelo, Exibição, Controlador)* . Nas próximas seções, discutimos os benefícios do padrão, seus componentes e como os utilizamos em nosso aplicativo Phoneword.
+Em nosso exemplo, os dados foram coletados na primeira tela, passados do primeiro controlador de exibição para o segundo e exibidos pela segunda tela. Essa separação de telas, controladores de visualização e dados segue o padrão *Modelo, Exibição, Controlador (MVC).* Nas próximas seções, discutimos os benefícios do padrão, seus componentes e como os utilizamos em nosso aplicativo Phoneword.
 
 ### <a name="benefits-of-the-mvc-pattern"></a>Benefícios do padrão MVC
 
-Modelo-Exibição-Controlador é um *padrão de design* – uma solução de arquitetura reutilizável para um problema ou caso de uso comum no código. MVC é uma arquitetura de aplicativos com uma *GUI (Interface Gráfica do Usuário)* . Ele atribui aos objetos no aplicativo uma entre três funções: *Modelo* (lógica de dados ou aplicativo), *Exibição* (interface do usuário) e *Controlador* (code-behind). O diagrama a seguir ilustra as relações entre as três partes do padrão MVC e o usuário:
+Modelo-Exibição-Controlador é um *padrão de design* – uma solução de arquitetura reutilizável para um problema ou caso de uso comum no código. MVC é uma arquitetura de aplicativos com uma *GUI (Interface Gráfica do Usuário)*. Ele atribui aos objetos no aplicativo uma entre três funções: *Modelo* (lógica de dados ou aplicativo), *Exibição* (interface do usuário) e *Controlador* (code-behind). O diagrama a seguir ilustra as relações entre as três partes do padrão MVC e o usuário:
 
  [![](hello-ios-multiscreen-deepdive-images/00.png "This diagram illustrates the relationships between the three pieces of the MVC pattern and the user")](hello-ios-multiscreen-deepdive-images/00.png#lightbox)
 
@@ -52,15 +52,15 @@ Em alguns casos, a parte do Modelo do MVC pode estar vazia. Por exemplo, podemos
 > [!NOTE]
 > Na literatura de alguns, a parte do Modelo do padrão MVC pode referir-se a todo o back-end do aplicativo e não apenas aos dados exibidos na interface do usuário. Neste guia, usamos uma interpretação moderna do Modelo, mas a distinção não é particularmente importante.
 
-### <a name="view"></a>Exibir
+### <a name="view"></a>Visualizar
 
 Uma Exibição é o componente responsável por renderizar a interface do usuário. Em quase todas as plataformas que usam o padrão MVC, a interface do usuário é composta por uma hierarquia de exibições. Podemos pensar em uma Exibição no MVC como uma hierarquia de exibições com uma única exibição, conhecida como exibição de raiz, na parte superior da hierarquia e qualquer número de exibições filho (conhecidas como subexibições) abaixo dela. No iOS, a hierarquia de Exibição de Conteúdo de uma tela corresponde ao componente de Exibição no MVC.
 
-### <a name="controller"></a>Controlador
+### <a name="controller"></a>Controller
 
 O objeto de Controlador é o componente que conecta tudo e é representado no iOS por `UIViewController`. Podemos pensar no Controlador como o código de apoio para uma tela ou um conjunto de exibições. O controlador é responsável por escutar solicitações do usuário e retornar a hierarquia de exibições apropriada. Ele escuta a solicitações da Exibição (cliques de botão, entrada de texto, etc.) e executa processamento, a modificação da Exibição e o recarregamento da Exibição adequados. O Controlador também é responsável por criar ou recuperar o Modelo de qualquer armazenamento de dados de apoio que exista no aplicativo e preencher a Exibição com seus dados.
 
-Controladores também podem gerenciar outros Controladores. Por exemplo, um Controlador poderá carregar outro Controlador se ele precisar exibir uma tela diferente ou gerenciar uma pilha de Controladores para monitorar sua ordem e as transições entre eles. Na próxima seção, veremos um exemplo de um Controlador que gerencia outros Controladores conforme apresentamos um tipo especial de controlador de exibição do iOS chamado *controlador de navegação*.
+Controladores também podem gerenciar outros Controladores. Por exemplo, um Controlador poderá carregar outro Controlador se ele precisar exibir uma tela diferente ou gerenciar uma pilha de Controladores para monitorar sua ordem e as transições entre eles. Na próxima seção, veremos um exemplo de um Controlador que gerencia outros Controladores à medida que introduzimos um tipo especial de controlador de exibição do iOS chamado controlador de *navegação*.
 
 ## <a name="navigation-controller"></a>Controlador de navegação
 
@@ -72,7 +72,7 @@ O controlador de navegação é comum em aplicativos iOS e fornece navegação p
 
 O controlador de navegação atende a três funções principais:
 
-- **Fornece Ganchos para Navegação de Avanço** – o controlador de navegação usa uma metáfora de navegação hierárquica na qual Hierarquias de Exibição de Conteúdo são *enviadas por push* para uma *pilha de navegação*. Você pode pensar em uma pilha de navegação como uma pilha de cartas de baralho, em que apenas a carta superior está visível, conforme ilustra o diagrama a seguir:  
+- **Fornece ganchos para navegação a frente** – O controlador de navegação usa uma metáfora de navegação hierárquica onde as hierarquias de exibição de conteúdo são *empurradas* para uma *pilha de navegação* . Você pode pensar em uma pilha de navegação como uma pilha de cartas de baralho, em que apenas a carta superior está visível, conforme ilustra o diagrama a seguir:  
 
     [![](hello-ios-multiscreen-deepdive-images/02.png "This diagram illustrates navigation as a stack of cards")](hello-ios-multiscreen-deepdive-images/02.png#lightbox)
 
@@ -80,14 +80,14 @@ O controlador de navegação atende a três funções principais:
 
     [![](hello-ios-multiscreen-deepdive-images/03.png "This diagram illustrates 'popping' a card off the stack")](hello-ios-multiscreen-deepdive-images/03.png#lightbox)
 
-- **Fornece uma Barra de Título** – a parte superior do controlador de navegação é chamada de *Barra de Título*. Ele é responsável por exibir o título do controlador de exibição, conforme ilustrado pelo diagrama a seguir:  
+- **Fornece uma barra de título** – A parte superior do controlador de navegação é chamada de Barra de *Título* . Ele é responsável por exibir o título do controlador de exibição, conforme ilustrado pelo diagrama a seguir:  
 
     [![](hello-ios-multiscreen-deepdive-images/04.png "The Title Bar is responsible for displaying the view controller title")](hello-ios-multiscreen-deepdive-images/04.png#lightbox)
 
 ### <a name="root-view-controller"></a>Controlador de exibição raiz
 
 Um controlador de navegação não gerencia uma hierarquia de Exibição de Conteúdo e, portanto, não tem nada para exibir por conta própria.
-Em vez disso, o controlador de navegação é associado a um *Controlador de exibição raiz*:
+Em vez disso, um controlador de navegação é emparelhado com um *controlador de exibição raiz*:
 
  [![](hello-ios-multiscreen-deepdive-images/05.png "A navigation controller is paired with a Root view controller")](hello-ios-multiscreen-deepdive-images/05.png#lightbox)
 
@@ -97,7 +97,7 @@ O Controlador de exibição raiz representa o primeiro controlador de exibição
 
 ### <a name="additional-navigation-options"></a>Opções de navegação adicionais
 
-O controlador de navegação é uma maneira comum de lidar com a navegação no iOS, mas não é a única opção. Por exemplo, um [Controlador de Barra de Guia](~/ios/user-interface/controls/creating-tabbed-applications.md) pode dividir um aplicativo em diferentes áreas funcionais e um [Controlador de exibição dividida](https://github.com/xamarin/recipes/tree/master/Recipes/ios/content_controls/split_view/use_split_view_to_show_two_controllers) pode ser usado para criar exibições mestre/detalhadas. Combinar controladores de navegação com esses outros paradigmas de navegação possibilita várias maneiras flexíveis de apresentar o conteúdo no iOS e de navegar nele.
+O controlador de navegação é uma maneira comum de lidar com a navegação no iOS, mas não é a única opção. Por exemplo, um [Controlador de Barras de Guia](~/ios/user-interface/controls/creating-tabbed-applications.md) pode dividir um aplicativo em diferentes áreas funcionais e um controlador de [exibição Split](https://github.com/xamarin/recipes/tree/master/Recipes/ios/content_controls/split_view/use_split_view_to_show_two_controllers) pode ser usado para criar exibições de mestre/detalhe. Combinar controladores de navegação com esses outros paradigmas de navegação possibilita várias maneiras flexíveis de apresentar o conteúdo no iOS e de navegar nele.
 
 ## <a name="handling-transitions"></a>Lidando com transições
 
@@ -189,9 +189,9 @@ CallHistoryButton.TouchUpInside += (object sender, EventArgs e) => {
 
 O aplicativo Phoneword introduziu vários conceitos não abordados neste guia. Esses conceitos incluem:
 
-- **Criação automática de controladores de exibição** – quando inserimos um nome de classe para o controlador de exibição no **Painel de Propriedades**, o designer do iOS verifica se a classe existe e, em seguida, gera a classe de apoio do controlador de exibição para nós. Para saber mais sobre este e outros recursos de designer do iOS, consulte o guia de [Introdução ao iOS Designer](~/ios/user-interface/designer/introduction.md).
-- **Controlador de exibição de tabela** – o `CallHistoryController` é um Controlador de exibição de tabela. Um Controlador de exibição de tabela contém uma Exibição de Tabela, o layout mais comum e a ferramenta de exibição de dados no iOS. Tabelas estão além do escopo deste guia. Para saber mais sobre Controladores de exibição de tabela, veja o guia [Trabalhando com Tabelas e Células](~/ios/user-interface/controls/tables/index.md).
-- **ID do Storyboard** – Definir a ID do Storyboard cria uma classe de controlador de exibição em Objective-C, que contém o code-behind para o controlador de exibição no Storyboard. Usamos a ID do Storyboard para localizar a classe Objective-C e instanciar o controlador de exibição no Storyboard. Para saber mais sobre IDs de Storyboard, consulte o guia [Introduction to Storyboards](~/ios/user-interface/storyboards/index.md) (Introdução a Storyboards).
+- **Criação automática de controladores de exibição** – Quando inserimos um nome de classe para o controlador de exibição no **Bloco de Propriedades,** o designer do iOS verifica se essa classe existe e, em seguida, gera a classe de backup do controlador de exibição para nós. Para saber mais sobre este e outros recursos de designer do iOS, consulte o guia de [Introdução ao iOS Designer](~/ios/user-interface/designer/introduction.md).
+- **Controlador de exibição de tabela** – O `CallHistoryController` é um controlador de exibição de tabela. Um Controlador de exibição de tabela contém uma Exibição de Tabela, o layout mais comum e a ferramenta de exibição de dados no iOS. Tabelas estão além do escopo deste guia. Para obter mais informações sobre os controladores de exibição de tabela, consulte o guia [Trabalhando com Tabelas e Células.](~/ios/user-interface/controls/tables/index.md)
+- **ID do storyboard** – A configuração do Storyboard ID cria uma classe de controlador de exibição no Objective-C contendo o código atrás para o controlador de exibição no Storyboard. Usamos a ID do Storyboard para localizar a classe Objective-C e instanciar o controlador de exibição no Storyboard. Para saber mais sobre IDs de Storyboard, consulte o guia [Introduction to Storyboards](~/ios/user-interface/storyboards/index.md) (Introdução a Storyboards).
 
 ## <a name="summary"></a>Resumo
 
@@ -203,6 +203,6 @@ Em seguida, vamos aprender a compilar aplicativos de plataforma cruzada com Xama
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Hello, iOS (amostra)](https://docs.microsoft.com/samples/xamarin/ios-samples/hello-ios)
+- [Hello, iOS (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/hello-ios)
 - [Diretrizes da interface humana do iOS](https://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/Introduction/Introduction.html)
-- [Portal de provisionamento do iOS](https://developer.apple.com/ios/manage/overview/index.action)
+- [Portal de Provisionamento do iOS](https://developer.apple.com/ios/manage/overview/index.action)

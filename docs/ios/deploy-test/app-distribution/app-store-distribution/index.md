@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 08/23/2017
 ms.openlocfilehash: 73c4e992fae1a2d525670604d98f277fe4fde794
-ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "79304229"
 ---
 # <a name="app-store-distribution"></a>Distribuição da App Store
@@ -23,7 +23,7 @@ Depois que um aplicativo Xamarin.iOS foi desenvolvido, a próxima etapa do ciclo
 > Aplicativos também devem dar suporte aos tamanhos de tela do iPhone XS e de 12,9 pol. do iPad Pro.
 
 > [!IMPORTANT]
-> Se você estiver procurando recursos em relação ao `UIWebView` aviso de reprovação (ITMS-90809) ao usar o Xamarin. Forms, consulte a documentação do [WebView xamarin. Forms](~/xamarin-forms/user-interface/webview.md#uiwebview-deprecation-and-app-store-rejection-itms-90809) .
+> Se você estiver procurando recursos `UIWebView` em relação ao aviso de depreciação (ITMS-90809) ao usar o Xamarin.Forms, consulte a documentação [do Xamarin.Forms WebView.](~/xamarin-forms/user-interface/webview.md#uiwebview-deprecation-and-app-store-rejection-itms-90809)
 
 Distribuir um aplicativo, assim como ocorre com o desenvolvimento de um aplicativo, requer provisionar os aplicativos usando o *perfil de provisionamento* apropriado. Perfis de provisionamento são arquivos que contêm informações de assinatura de código, bem como a identidade do aplicativo e o mecanismo de distribuição desejado. Também apresentam informações sobre os dispositivos nos quais o aplicativo pode ser implantado para distribuição fora da App Store.
 
@@ -49,29 +49,29 @@ Você pode selecionar a mesma **ID do Aplicativo** e os mesmos **Dispositivos** 
 ## <a name="creating-a-distribution-certificate"></a>Criando um certificado de distribuição
 
 1. Navegue até a seção *Certificates, Identifiers & Profiles (Certificados, Identificadores e Perfis)* do Apple Developer Member Center (Central de Associados do Desenvolvedor da Apple).
-2. Em *Certificates (Certificados)* , selecione **Production (Produção)** .
-3. Clique no botão **+** para criar um novo Certificado.
-4. No título *Produção*, selecione **App Store e Ad Hoc**:
+2. Em *Certificates (Certificados)*, selecione **Production (Produção)**.
+3. Clique **+** no botão para criar um novo Certificado.
+4. No título *Produção,* selecione **App Store e Ad Hoc**:
 
     [![](images/createcertmanually01.png "Select App Store and Ad Hoc")](images/createcertmanually01.png#lightbox)
-5. Clique em **Continuar** e siga as instruções para criar uma Solicitação de Assinatura de Certificado por meio do Acesso do Sistema de Chaves:
+5. Clique em **Continue (Continuar)** e siga as instruções para criar uma Solicitação de Assinatura de Certificado por meio do Acesso do Sistema de Chaves: 
 
     [![](images/createcertmanually02.png "Create a Certificate Signing Request via Keychain Access")](images/createcertmanually02.png#lightbox)
-6. Depois de criar o CSR conforme as instruções, clique em **Continuar** e carregue o CSR na Central de Associados:
+6. Depois de criar o CSR conforme as instruções, clique em **Continuar** e carregue o CSR na Central de Associados:    
 
     [![](images/createcertmanually03.png "Upload the CSR to the Member Center")](images/createcertmanually03.png#lightbox)
 
 7. Clique em **Generate (Gerar)** para criar o certificado.
-8. Por fim, escolha **Download (Baixar)** o certificado concluído e clique duas vezes no arquivo para instalá-lo.
-9. Neste ponto, o certificado deve ser instalado no computador, mas talvez você precise [Refresh your profiles (Atualizar seus perfis)](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#download) para garantir que estejam visíveis no Xcode.
+8. Finalmente, **baixe** o certificado preenchido e clique duas vezes no arquivo para instalá-lo.
+9. Neste ponto, o certificado deve ser instalado na máquina, mas você pode precisar [atualizar seus perfis,](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#download)para garantir que eles estejam visíveis no Xcode.
 
 Também é possível solicitar um Certificado usando a caixa de diálogo Preferências no Xcode. Para fazer isso, siga as etapas abaixo:
 
-1. Selecione sua equipe e clique em **gerenciar certificados...** :[![](images/selectteam.png "Selecione a equipe e exiba os detalhes")](images/selectteam.png#lightbox)
+1. Selecione sua equipe e clique **em Gerenciar certificados...**:[![](images/selectteam.png "Selecione a equipe e os Detalhes da Exibição")](images/selectteam.png#lightbox)
 
-2. Em seguida, clique no botão **criar** ao lado do **certificado de distribuição do IOS**:[![](images/selectcert.png "Criar um certificado de distribuição do iOS")](images/selectcert.png#lightbox)
+2. Em seguida, clique no botão **Criar** ao lado do **Certificado de Distribuição do iOS**:[![](images/selectcert.png "Crie um Certificado de Distribuição iOS")](images/selectcert.png#lightbox)
 
-3. Dependendo dos privilégios da sua equipe, a identidade de assinatura será gerada, conforme mostrado abaixo, ou talvez você precise aguardar até que um agente ou administrador de equipe o aprove:[![](images/generated.png "A identidade de assinatura será gerada e uma caixa de diálogo exibida")](images/generated.png#lightbox)
+3. Dependendo dos privilégios da sua equipe, a identidade de assinatura será gerada, como mostrado abaixo, ou você pode ter que esperar até que um agente da equipe ou o admin aprove:[![](images/generated.png "A identidade de assinatura será gerada e uma caixa de diálogo será exibida")](images/generated.png#lightbox)
 
 <a name="creatingprofile" />
 
@@ -83,8 +83,8 @@ Também é possível solicitar um Certificado usando a caixa de diálogo Prefer�
 
 Como com qualquer outro Perfil de Provisionamento que você criar, uma ID do Aplicativo será necessária para identificar o Aplicativo que você está distribuindo ao dispositivo do usuário. Se ainda não tiver criado uma, siga as etapas abaixo para criá-la:
 
-1. No [Apple Developer Center (Centro de Desenvolvedores da Apple)](https://developer.apple.com/account/overview.action), navegue até a seção *Certificate, Identifiers and Profiles (Certificados, Identificadores e Perfis)* . Selecione **App IDs (IDs do Aplicativo)** em **Identifiers (Identificadores)** .
-2. Clique no botão **+** e forneça um **Name (Nome)** que o identificará no Portal.
+1. No [Apple Developer Center (Centro de Desenvolvedores da Apple)](https://developer.apple.com/account/overview.action), navegue até a seção *Certificate, Identifiers and Profiles (Certificados, Identificadores e Perfis)*. Selecione **App IDs (IDs do Aplicativo)** em **Identifiers (Identificadores)**.
+2. Clique **+** no botão e forneça um **Nome** que irá identificá-lo no Portal.
 3. O prefixo do aplicativo já deve estar definido como sua ID de Equipe e não pode ser alterado. Selecione uma ID do Aplicativo Explícita ou Curinga e insira uma ID de Pacote no formato DNS inverso, como:
     - **Explícito**: com.[DomainName].[AppName]
     - **Curinga**: com.[DomainName].*
@@ -95,15 +95,15 @@ Como com qualquer outro Perfil de Provisionamento que você criar, uma ID do Apl
 
 Depois de obter os componentes obrigatórios necessários para criar um Perfil de Distribuição, siga as etapas abaixo para criá-lo:
 
-1. Volte para o Portal de Provisionamento da Apple e selecione **Provisionamento** > **Distribuição**:
+1. Retornar ao Portal de Provisionamento da Apple e selecionar **Distribuição de** > **Provisionamento**:
 
     [![](images/distribute01.png "RSelect Provisioning > Distribution")](images/distribute01.png#lightbox)
 
-2. Clique no botão **+** e selecione o tipo de Perfil de Distribuição que deseja criar como **App Store**:
+2. Clique **+** no botão e selecione o tipo de Perfil de Distribuição que você deseja criar como **App Store**:
 
     [![](images/distribute02.png "Create an App Store distribution profile")](images/distribute02.png#lightbox)
 
-3. Clique no botão **Continuar** e selecione a ID do Aplicativo na lista suspensa para a qual você deseja criar um Perfil de Distribuição:
+3. Clique no botão **Continue (Continuar)** e selecione a ID do Aplicativo na lista suspensa para qual você deseja criar um Perfil de Distribuição: 
 
     [![](images/distribute03.png "Select App ID from the dropdown list")](images/distribute03.png#lightbox)
 
@@ -127,7 +127,7 @@ Depois de obter os componentes obrigatórios necessários para criar um Perfil d
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
- Talvez você precise fechar o Visual Studio e fazer com que o Xcode (no Mac do Host do Build) atualize sua lista de Identidades de Assinatura e Perfis de Provisionamento disponíveis (seguindo as instruções na seção [Solicitando Identidades de Assinatura](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#download)) antes de um novo perfil de distribuição ser disponibilizado no Visual Studio.
+ Você pode ter que sair do Visual Studio e ter o Xcode (no Mac do Build Host) atualizar sua lista de identidades de assinatura disponíveis e perfis de provisionamento (seguindo as instruções na seção [Solicitantes de Identidades de Assinatura)](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#download) antes que um novo Perfil de Distribuição esteja disponível no Visual Studio.
 
 -----
 
@@ -142,7 +142,7 @@ Quando você estiver pronto para fazer um build final de um aplicativo Xamarin.i
  No Visual Studio para Mac, faça o seguinte:
 
 1. Clique duas vezes no nome do projeto no **Gerenciador de Soluções** para abri-lo para edição.
-2. Selecione **Assinatura do Pacote do iOS** e **Versão | iPhone** na lista suspensa **Configuração**:
+2. Selecione **Assinatura do Pacote do iOS** e **Versão | iPhone** na lista suspensa **Configuração**: 
 
     ![](images/releasexs01.png "Select Release | iPhone from the Configuration dropdown")
 3. Na maioria dos casos, a **Identidade de Assinatura** e o **Perfil de Provisionamento** podem ser deixados em seus valores padrão de **Automático** e o Visual Studio para Mac escolherá o perfil correto com base no Identificador de Pacote na Info.plist:
@@ -158,7 +158,7 @@ Quando você estiver pronto para fazer um build final de um aplicativo Xamarin.i
  No Visual Studio, faça o seguinte:
 
 1. Clique com o botão direito do mouse no nome do projeto no **Gerenciador de Soluções** e selecione **Propriedades** para abri-lo para edição.
-2. Selecione **Assinatura do Pacote do iOS** e **Versão | iPhone** na lista suspensa **Configuração**:
+2. Selecione **Assinatura do Pacote do iOS** e **Versão | iPhone** na lista suspensa **Configuração**: 
 
     ![](images/releasevs01.png "Select Release | iPhone from the Configuration dropdown")
 3. Na maioria dos casos, a **Identidade de Assinatura** e o **Perfil de Provisionamento** podem ser deixados em seus valores padrão de **Automático** e o Visual Studio escolherá o perfil correto com base no Identificador de Pacote na Info.plist
@@ -199,11 +199,11 @@ Para saber mais sobre a publicação de aplicativos na App Store, consulte [Como
 
 Este artigo abordou os principais componentes na preparação de um aplicativo Xamarin.iOS para distribuição na App Store.
 
-## <a name="related-links"></a>Links Relacionados
+## <a name="related-links"></a>Links relacionados
 
-- [Como configurar um aplicativo no iTunes Connect](~/ios/deploy-test/app-distribution/app-store-distribution/itunesconnect.md)
+- [Configurando um aplicativo no iTunes Connect](~/ios/deploy-test/app-distribution/app-store-distribution/itunesconnect.md)
 - [Publicando na App Store](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md)
-- [Distribuição Interna](~/ios/deploy-test/app-distribution/in-house-distribution.md)
+- [Distribuição interna](~/ios/deploy-test/app-distribution/in-house-distribution.md)
 - [Distribuição Ad Hoc](~/ios/deploy-test/app-distribution/ad-hoc-distribution.md)
 - [O arquivo iTunesMetadata.plist](~/ios/deploy-test/app-distribution/itunesmetadata.md)
-- [Suporte a IPA](~/ios/deploy-test/app-distribution/ipa-support.md)
+- [Suporte ipa](~/ios/deploy-test/app-distribution/ipa-support.md)

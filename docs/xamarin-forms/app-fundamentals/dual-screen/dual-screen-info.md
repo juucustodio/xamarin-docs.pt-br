@@ -1,5 +1,5 @@
 ---
-title: Recursos de dispositivo de tela dupla do Xamarin. Forms
+title: Xamarin.Forms recursos de dispositivos de tela dupla
 description: Este guia explica como usar a classe DualScreenInfo do Xamarin.Forms para otimizar sua experiência de aplicativo com dispositivos de tela dupla, como o Surface Duo e o Surface Neo.
 ms.prod: xamarin
 ms.assetid: dd5eb074-f4cb-4ab4-b47d-76f862ac7cfa
@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidortinau
 ms.author: daortin
 ms.date: 02/08/2020
-ms.openlocfilehash: 8dda1960fceaf7738c44d58b10149b8c20fa543f
-ms.sourcegitcommit: 5b6d3bddf7148f8bb374de5657bdedc125d72ea7
+ms.openlocfilehash: 3393f8f4468b58289443af3d2eea558cca4588d2
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78160594"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "80628253"
 ---
-# <a name="xamarinforms-dual-screen-device-capabilities"></a>Recursos de dispositivo de tela dupla do Xamarin. Forms
+# <a name="xamarinforms-dual-screen-device-capabilities"></a>Xamarin.Forms recursos de dispositivos de tela dupla
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/DualScreenDemos)
+[![Baixar](~/media/shared/download.png) amostra Baixar a amostra](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-dualscreendemos/)
 
 A classe `DualScreenInfo` permite determinar o painel de sua exibição, o tamanho máximo dele, a posição do dispositivo, o ângulo da dobradiça e muito mais.
 
@@ -214,4 +214,4 @@ A captura de tela a seguir mostra o layout resultante:
 
 ## <a name="related-links"></a>Links relacionados
 
-- [DualScreen (exemplo)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/DualScreenDemos)
+- [DualScreen (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-dualscreendemos/)

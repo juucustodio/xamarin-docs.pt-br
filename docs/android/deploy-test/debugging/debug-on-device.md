@@ -8,13 +8,13 @@ author: davidortinau
 ms.author: daortin
 ms.date: 02/16/2018
 ms.openlocfilehash: 3ca524e451a7a4eb838805c839b33c4b9dd6bddd
-ms.sourcegitcommit: 5821c9709bf5e06e6126233932f94f9cf3524577
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "75556529"
 ---
-# <a name="debug-on-an-android-device"></a>Depurar em um dispositivo Android
+# <a name="debug-on-an-android-device"></a>Depuração em um dispositivo Android
 
 _Este artigo explica como depurar um aplicativo Xamarin.Android em um dispositivo Android físico._
 
@@ -24,7 +24,7 @@ _Este artigo explica como depurar um aplicativo Xamarin.Android em um dispositiv
 
 Quando um dispositivo é conectado ao computador, a depuração de um aplicativo Xamarin.Android é feito da mesma forma como qualquer outro produto Xamarin ou aplicativo .NET. Verifique se a configuração **Depurar** e o dispositivo externo estão selecionados no IDE; isso garantirá que os símbolos de depuração necessários estejam disponíveis e que o IDE possa se conectar ao aplicativo em execução: 
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 ![Configuração de depuração selecionada](debug-on-device-images/image1-vs.png)
 
@@ -36,7 +36,7 @@ Depois que o dispositivo foi selecionado, o Xamarin.Android conectará ao dispos
 
 ![Ponto de interrupção atingido](debug-on-device-images/image3-vs.png)
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
 ![Configuração de depuração selecionada](debug-on-device-images/image1-xs.png)
 
@@ -54,7 +54,7 @@ Depois que o dispositivo foi selecionado, o Xamarin.Android conectará ao dispos
 
 Este documento discutiu como depurar um aplicativo Xamarin.Android definindo um ponto de interrupção e selecionando o dispositivo de destino.
 
-## <a name="related-links"></a>Links Relacionados
+## <a name="related-links"></a>Links relacionados
 
-- [Configurar o dispositivo para desenvolvimento](~/android/get-started/installation/set-up-device-for-development.md)
+- [Configurar dispositivo para desenvolvimento](~/android/get-started/installation/set-up-device-for-development.md)
 - [Configuração do atributo depurável](~/android/deploy-test/debuggable-attribute.md)

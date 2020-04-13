@@ -7,10 +7,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 12/20/2017
 ms.openlocfilehash: 4cc7f3b36c43d9c9bb611b7d669f8304aab05820
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73021262"
 ---
 # <a name="google-licensing-services"></a>Licenciamento de Serviços do Google
@@ -26,7 +26,7 @@ O Licenciamento do Google é seguro de maneira que cada resposta é assinada usa
 
 Um aplicativo que implementou o Licenciamento do Google faz uma solicitação a um serviço hospedado pelo aplicativo Google Play no dispositivo. O Google Play, em seguida, envia essa solicitação ao servidor de Licenciamento do Google, que responde com o status da licença: 
 
-[![Diagrama de fluxo de trabalho do servidor de licenciamento](google-licensing-services-images/gp-licensing-service-overview.png)](google-licensing-services-images/gp-licensing-service-overview.png#lightbox)
+[![Diagrama do fluxo de trabalho do servidor de licenciamento](google-licensing-services-images/gp-licensing-service-overview.png)](google-licensing-services-images/gp-licensing-service-overview.png#lightbox)
 
 O diagrama acima ilustra esse fluxo de trabalho: 
 

@@ -7,45 +7,45 @@ author: davidortinau
 ms.author: daortin
 ms.date: 12/13/2019
 ms.openlocfilehash: 6e54dba0c832596818c5163dc4e14ad1e659e040
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "75487965"
 ---
 # <a name="debuggable-attribute"></a>Atributo depurável
 
-Para possibilitar a depuração, o Android é compatível com o JDWP (protocolo de transmissão de depuração do Java). Essa é uma tecnologia que permite que ferramentas como ADB se comuniquem com uma JVM. Embora o JDWP seja importante durante o desenvolvimento, ele deve ser desabilitado antes da publicação do aplicativo.
+Para possibilitar a depuração, o Android é compatível com o JDWP (protocolo de transmissão de depuração do Java). Essa é uma tecnologia que permite que ferramentas como ADB se comuniquem com uma JVM. Embora o JDWP seja importante durante o desenvolvimento, ele deve ser desativado antes da publicação do aplicativo.
 
-JDWP pode ser configurado pelo valor do atributo `android:debuggable` em um aplicativo Android. Escolha _uma_ das três maneiras a seguir para definir esse atributo no Xamarin. Android:
+JDWP pode ser configurado pelo `android:debuggable` valor do atributo em um aplicativo Android. Escolha _uma_ das três maneiras a seguir para definir este atributo no Xamarin.Android:
 
 ## <a name="androidmanifestxml"></a>AndroidManifest.xml
 
-Crie ou abra `AndroidManifext.xml` arquivo e defina o atributo `android:debuggable`. Tome cuidado para não enviar sua compilação de versão com a depuração habilitada.
+Crie ou `AndroidManifext.xml` abra o `android:debuggable` arquivo e defina o atributo lá. Tome cuidado extra para não enviar sua compilação de liberação com a depuração ativada.
 
 ## <a name="add-an-application-class-attribute"></a>Adicionar um atributo de classe de aplicativo
 
-Se seu aplicativo Xamarin. Android tiver uma classe com um atributo `[Application]`, atualize o atributo para `[Application(Debuggable = true)]`. Defina-o como `false` para desabilitar.
+Se o seu aplicativo Xamarin.Android `[Application]` tiver uma classe `[Application(Debuggable = true)]`com um atributo, atualize o atributo para . Configure-o para `false` desativar.
 
-## <a name="add-an-assembly-attribute"></a>Adicionar um atributo de assembly
+## <a name="add-an-assembly-attribute"></a>Adicionar um atributo de montagem
 
-Se seu aplicativo Xamarin. Android ainda não tiver um atributo de classe `[Application]`, adicione um atributo de nível de assembly `[assembly: Application(Debuggable=true)]` em um arquivo c#. Defina-o como `false` para desabilitar.
+Se o aplicativo Xamarin.Android NÃO `[Application]` tiver um atributo de `[assembly: Application(Debuggable=true)]` classe, adicione um atributo de nível de montagem em um arquivo c#. Configure-o para `false` desativar.
 
 ## <a name="summary"></a>Resumo
 
 Se `AndroidManifest.xml` e `ApplicationAttribute` estiverem presentes, o conteúdo de `AndroidManifest.xml` tem prioridade sobre o que é especificado pelo `ApplicationAttribute`.
 
-Se você adicionar um atributo de classe _e_ um atributo de assembly, haverá um erro de compilador:
+Se você adicionar um atributo de classe _e_ um atributo de montagem, haverá um erro do compilador:
 
 ```error
 "Error The "GenerateJavaStubs" task failed unexpectedly.
 System.InvalidOperationException: Application cannot have both a type with an [Application] attribute and an [assembly:Application] attribute."
 ```
 
-Por padrão – se nem o `AndroidManifest.xml` nem o `ApplicationAttribute` estiver presente – o valor do atributo `android:debuggable` dependerá se os símbolos de depuração serão ou não gerados. Se os símbolos de depuração estiverem presentes, o Xamarin. Android definirá o atributo `android:debuggable` como `true` para você.
+Por padrão – `AndroidManifest.xml` se `ApplicationAttribute` nem o nem o `android:debuggable` presente está presente – o valor do atributo depende se símbolos de depuração são gerados ou não. Se os símbolos de depuração estiverem presentes, `android:debuggable` então `true` o Xamarin.Android definirá o atributo para você.
 
 > [!WARNING]
-> O valor do atributo `android:debuggable` não depende necessariamente da configuração da compilação. É possível que builds de versão definam o atributo `android:debuggable` para true. Se você usar um atributo para definir esse valor, poderá optar por encapsular o atributo em uma diretiva de compilador:
+> O valor `android:debuggable` do atributo NÃO depende necessariamente da configuração de compilação. É possível que builds de versão definam o atributo `android:debuggable` para true. Se você usar um atributo para definir esse valor, você pode optar por envolver o atributo em uma diretiva de compilador:
 > 
 > ```csharp
 > #if DEBUG
@@ -55,6 +55,6 @@ Por padrão – se nem o `AndroidManifest.xml` nem o `ApplicationAttribute` esti
 > #endif
 > ```
 
-## <a name="related-links"></a>Links Relacionados
+## <a name="related-links"></a>Links relacionados
 
 - [Aplicativos depuráveis no Android Market](https://labs.f-secure.com/archive/debuggable-apps-in-android-market/)

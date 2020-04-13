@@ -7,10 +7,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 08/28/2018
 ms.openlocfilehash: 970985e419c5710699b6bdda49da8b59ef3c6cb6
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "71119256"
 ---
 # <a name="installing-xamarin-in-visual-studio-2019"></a>Como instalar o Xamarin no Visual Studio 2019
@@ -44,7 +44,7 @@ Para obter informações mais detalhadas, consulte o guia [Como instalar o Xamar
 1. [Instalar o Visual Studio para Mac](https://docs.microsoft.com/visualstudio/mac/installation)
 2. [Conectar o Visual Studio ao host de build do Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md)
 3. [Configuração do desenvolvedor iOS](~/ios/get-started/installation/device-provisioning/index.md) – necessária para executar o aplicativo no dispositivo
-4. [Simulador de iOS remoto](~/tools/ios-simulator/index.md)
+4. [Simulador de iOS Remoto](~/tools/ios-simulator/index.md)
 5. [Introdução ao Xamarin.iOS para Visual Studio](~/ios/get-started/installation/windows/introduction-to-xamarin-ios-for-visual-studio.md)
 
 ### <a name="android"></a>Android
@@ -52,6 +52,6 @@ Para obter informações mais detalhadas, consulte o guia [Como instalar o Xamar
 Para obter informações mais detalhadas, consulte o guia [Instalando o Xamarin.Android no Windows](~/android/get-started/installation/windows.md).
 
 1. [Configuração do Xamarin.Android](~/android/get-started/installation/windows.md#configuration)
-2. [Usando o Gerenciador de SDK do Xamarin Android](~/android/get-started/installation/android-sdk.md?ide=vs)
+2. [Como usar o Gerenciador de SDK do Xamarin Android](~/android/get-started/installation/android-sdk.md?ide=vs)
 3. [Emulador do SDK do Android](~/android/get-started/installation/android-emulator/index.md)
-4. [Configurar o dispositivo para desenvolvimento](~/android/get-started/installation/set-up-device-for-development.md)
+4. [Configurar dispositivo para desenvolvimento](~/android/get-started/installation/set-up-device-for-development.md)

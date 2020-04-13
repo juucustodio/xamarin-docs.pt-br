@@ -6,10 +6,10 @@ author: jamesmontemagno
 ms.author: jamont
 ms.date: 03/13/2019
 ms.openlocfilehash: 840aadcafea88ef08f53e16f535439be0862fee9
-ms.sourcegitcommit: 6c60914b380ff679bbffd7790edd4d5e18005d0a
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "80070352"
 ---
 # <a name="xamarinessentials-geolocation"></a>Xamarin.Essentials: Geolocalização
@@ -24,7 +24,7 @@ Para acessar a funcionalidade de **Geolocalização**, a seguinte configuração
 
 # <a name="android"></a>[Android](#tab/android)
 
-As permissões Coarse Location e Fine Location são necessárias e devem ser configuradas no projeto do Android. Além disso, se o seu aplicativo for destinado ao Android 5.0 (API nível 21) ou superior, você deverá declarar que ele usa os recursos de hardware no arquivo de manifesto. Ela pode ser usado das seguintes maneiras:
+As permissões Coarse Location e Fine Location são necessárias e devem ser configuradas no projeto do Android. Além disso, se o seu aplicativo for destinado ao Android 5.0 (API nível 21) ou superior, você deverá declarar que ele usa os recursos de hardware no arquivo de manifesto. Isso pode ser usado das seguintes maneiras:
 
 Abra o arquivo **AssemblyInfo.cs** na pasta **Propriedades** e adicione:
 
@@ -152,7 +152,7 @@ A tabela a seguir descreve a precisão por plataforma:
 | --- | --- |
 | Android | 500 |
 | iOS | 3000 |
-| UWP | 1\.000–5.000 |
+| UWP | 1.000–5.000 |
 
 ### <a name="low"></a>Baixo
 
@@ -189,7 +189,7 @@ A tabela a seguir descreve a precisão por plataforma:
 <a name="calculate-distance" />
 
 ## <a name="detecting-mock-locations"></a>Detectando locais fictícios
-Alguns dispositivos podem retornar um local fictício do provedor ou por um aplicativo que fornece locais fictícios. Você pode detectar isso usando o `IsFromMockProvider` em qualquer [`Location`](xref:Xamarin.Essentials.Location).
+Alguns dispositivos podem retornar um local fictício do provedor ou por um aplicativo que fornece locais fictícios. Você pode detectar isso `IsFromMockProvider` usando [`Location`](xref:Xamarin.Essentials.Location)o em qualquer .
 
 ```csharp
 var request = new GeolocationRequest(GeolocationAccuracy.Medium);
@@ -206,7 +206,7 @@ if (location != null)
 
 ## <a name="distance-between-two-locations"></a>Distância entre dois locais
 
-As classes [`Location`](xref:Xamarin.Essentials.Location) e [`LocationExtensions`](xref:Xamarin.Essentials.LocationExtensions) definem métodos `CalculateDistance` que permitem o cálculo da distância entre duas localizações geográficas. Essa distância calculada não considera estradas ou outros caminhos e é simplesmente a distância mais curta entre os dois pontos ao longo da superfície da Terra, também conhecido como _ortodromia_ ou, coloquialmente, a distância "em linha reta".
+As [`Location`](xref:Xamarin.Essentials.Location) [`LocationExtensions`](xref:Xamarin.Essentials.LocationExtensions) classes `CalculateDistance` definem métodos que permitem calcular a distância entre dois locais geográficos. Essa distância calculada não considera estradas ou outros caminhos e é simplesmente a distância mais curta entre os dois pontos ao longo da superfície da Terra, também conhecido como _ortodromia_ ou, coloquialmente, a distância "em linha reta".
 
 Aqui está um exemplo:
 
@@ -224,15 +224,15 @@ A altitude é calculada de forma diferente em cada plataforma.
 
 # <a name="android"></a>[Android](#tab/android)
 
-No Android, [altitude](https://developer.android.com/reference/android/location/Location#getAltitude()), se disponível, é retornado em medidores acima da referência WGS 84 elipsoide. Se esse local não tiver uma altitude, 0,0 será retornado.
+No Android, [a altitude](https://developer.android.com/reference/android/location/Location#getAltitude()), se disponível, é devolvida em metros acima do elipsóide de referência WGS 84. Se este local não tiver uma altitude, então 0.0 é devolvido.
 
 # <a name="ios"></a>[iOS](#tab/ios)
 
-No iOS, a [altitude](https://developer.apple.com/documentation/corelocation/cllocation/1423820-altitude) é medida em metros. Os valores positivos indicam altitudes acima do nível do mar, enquanto os valores negativos indicam altitudes abaixo do nível do Sea.
+No iOS, [a altitude](https://developer.apple.com/documentation/corelocation/cllocation/1423820-altitude) é medida em metros. Valores positivos indicam altitudes acima do nível do mar, enquanto valores negativos indicam altitudes abaixo do nível do mar.
 
 # <a name="uwp"></a>[UWP](#tab/uwp)
 
-No UWP, a altitude é retornada em metros. Consulte a documentação do [AltitudeReferenceSystem](https://docs.microsoft.com/uwp/api/windows.devices.geolocation.geopoint.altitudereferencesystem#Windows_Devices_Geolocation_Geopoint_AltitudeReferenceSystem) para obter mais informações.
+Na UWP, a altitude é devolvida em metros. Consulte a documentação [altitudeReferenceSystem](https://docs.microsoft.com/uwp/api/windows.devices.geolocation.geopoint.altitudereferencesystem#Windows_Devices_Geolocation_Geopoint_AltitudeReferenceSystem) para obter mais informações.
 
 -----
 

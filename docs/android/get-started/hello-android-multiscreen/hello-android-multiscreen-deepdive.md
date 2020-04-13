@@ -9,15 +9,15 @@ author: davidortinau
 ms.author: daortin
 ms.date: 10/05/2018
 ms.openlocfilehash: 4acbfe810abefd9a25721ddf59c9f4f197afdf28
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73020972"
 ---
 # <a name="hello-android-multiscreen-deep-dive"></a>Multitela do Hello, Android: aprofundamento
 
-_Neste guia de duas partes, o aplicativo Phoneword básico (criado no Hello, guia do Android) é expandido para lidar com uma segunda tela. Ao longo do caminho, os blocos básicos de construção de aplicativos para Android são introduzidos. Uma análise mais profunda da arquitetura do Android está incluída para ajudá-lo a desenvolver uma melhor compreensão da estrutura e da funcionalidade do aplicativo Android._
+_Neste guia de duas partes, o aplicativo básico Phoneword (criado no guia Hello, Android) é expandido para lidar com uma segunda tela. Ao longo do caminho, os blocos básicos de construção de aplicativos android são introduzidos. Um mergulho mais profundo na arquitetura Android está incluído para ajudá-lo a desenvolver uma melhor compreensão da estrutura e funcionalidade do aplicativo Android._
 
 No [Início rápido de multitela do Hello, Android](~/android/get-started/hello-android-multiscreen/hello-android-multiscreen-quickstart.md), você compilou e executou seu primeiro aplicativo Xamarin.Android multitela.
 
@@ -58,7 +58,7 @@ Foram feitas tentativas para navegar entre as telas. É hora de aprofundar-se ne
 
 ### <a name="launching-a-second-activity-with-an-intent"></a>Iniciando uma segunda atividade com uma intenção
 
-No aplicativo Phoneword, uma Intenção foi usada para inicializar uma segunda tela (Atividade). Comece criando uma Intenção, passando o *Contexto* atual (`this`, fazendo referência ao **Contexto** atual) e o tipo de Bloco de Aplicativo que você está procurando (`TranslationHistoryActivity`):
+No aplicativo Phoneword, uma Intenção foi usada para inicializar uma segunda tela (Atividade). Comece criando uma Intenção, *Context* passando`this`no Contexto atual ( , referindo-se ao **contexto**atual`TranslationHistoryActivity`) e o tipo de Bloco de Aplicativo que você está procurando ( ):
 
 ```csharp
 Intent intent = new Intent(this, typeof(TranslationHistoryActivity));

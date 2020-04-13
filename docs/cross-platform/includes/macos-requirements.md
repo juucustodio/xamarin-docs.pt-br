@@ -1,13 +1,13 @@
 ---
 ms.topic: include
 ms.openlocfilehash: 5a3909fd766225a1d87cdb1ba12992dd6b27bb33
-ms.sourcegitcommit: be9658de032f3893741261f16162a664952ce178
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "64987051"
 ---
-||Recomendado|Observações|
+||Recomendadas|Observações|
 |---|---|---|
 |**Sistema operacional**|macOS Mojave (10.14)|O [Xcode 10](https://developer.apple.com/documentation/xcode_release_notes/xcode_10_release_notes) exige o macOS High Sierra (10.13) ou mais recente.|
 |**Xamarin.iOS**|SDK do iOS 12|O SDK do iOS 12 é fornecido com o Xcode 10.|

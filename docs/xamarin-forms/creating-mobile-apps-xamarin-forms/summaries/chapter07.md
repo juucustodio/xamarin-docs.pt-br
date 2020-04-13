@@ -1,6 +1,6 @@
 ---
-title: Resumo do capítulo 7. XAML versus código
-description: 'Criação de aplicativos móveis com xamarin. Forms: Resumo do capítulo 7. XAML versus código'
+title: Resumo do Capítulo 7. XAML versus código
+description: 'Criando aplicativos móveis com Xamarin.Forms: Resumo do Capítulo 7. XAML versus código'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: E91F387B-CE90-481C-8D90-CB25519BFD2B
@@ -8,81 +8,81 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
 ms.openlocfilehash: ce4dde3716176daf826678809339afb84c25d84a
-ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "61334718"
 ---
-# <a name="summary-of-chapter-7-xaml-vs-code"></a>Resumo do capítulo 7. XAML versus código
+# <a name="summary-of-chapter-7-xaml-vs-code"></a>Resumo do Capítulo 7. XAML versus código
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter07)
+[![Baixar](~/media/shared/download.png) amostra Baixar a amostra](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter07)
 
 > [!NOTE]
-> Observações sobre essa página indicam áreas onde o xamarin. Forms foi bifurcado do material apresentado no livro.
+> As notas nesta página indicam áreas onde xamarin.forms divergiu do material apresentado no livro.
 
-Xamarin. Forms dá suporte a uma linguagem de marcação baseada em XML chamada o de Extensible Application Markup Language ou XAML (pronunciada "zammel"). XAML fornece uma alternativa para c# na definição do layout da interface do usuário de um aplicativo xamarin. Forms e definir associações entre os elementos de interface do usuário e os dados subjacentes.
+Xamarin.Forms suporta uma linguagem de marcação baseada em XML chamada Linguagem de Marcação de Aplicativos Extensíveis ou XAML (pronuncia-se "zammel"). O XAML fornece uma alternativa ao C# na definição do layout da interface de usuário de um aplicativo Xamarin.Forms e na definição de vinculações entre elementos de interface do usuário e dados subjacentes.
 
 ## <a name="properties-and-attributes"></a>Propriedades e atributos
 
-Estruturas e classes do xamarin. Forms se tornam elementos XML em XAML e propriedades dessas classes e estruturas se tornam atributos XML. Para ser instanciada em XAML, uma classe geralmente deve ter um construtor público sem parâmetros. Todas as propriedades definidas em XAML devem ter acessadores públicos `set`.
+Xamarin.Forms classes e estruturas tornam-se elementos XML em XAML, e propriedades dessas classes e estruturas tornam-se atributos XML. Para ser instanciado em XAML, uma classe geralmente deve ter um construtor público sem parâmetros. Todas as propriedades definidas em `set` XAML devem ter acessórios públicos.
 
-Para propriedades dos tipos de dados básicos (`string`, `double`, `bool`e assim por diante), o analisador XAML usa os métodos de `TryParse` padrão para converter as configurações de atributo para esses tipos. O analisador XAML também pode facilmente lidar com tipos de enumeração e pode combinar membros de enumeração se o tipo de enumeração for sinalizado com o atributo `Flags`.
+Para propriedades dos tipos`string`de `double` `bool`dados básicos ( , , e assim por `TryParse` diante), o analisador XAML usa os métodos padrão para converter configurações de atributos para esses tipos. O analisador XAML também pode lidar facilmente com tipos de enumeração, e pode combinar `Flags` membros de enumeração se o tipo de enumeração for sinalizado com o atributo.
 
-Para auxiliar o analisador XAML, tipos mais complexos (ou propriedades desses tipos) podem incluir um [`TypeConverterAttribute`](xref:Xamarin.Forms.TypeConverterAttribute) que identifica uma classe derivada de [`TypeConverter`](xref:Xamarin.Forms.TypeConverter) que dá suporte à conversão de valores de cadeia de caracteres para esses tipos. Por exemplo, o [`ColorTypeConverter`](xref:Xamarin.Forms.ColorTypeConverter) converte nomes de cor e cadeias de caracteres, como "#rrggbb", em valores `Color`.
+Para ajudar o analisador XAML, tipos mais complexos (ou propriedades desses tipos) podem incluir uma que identifica uma [`TypeConverterAttribute`](xref:Xamarin.Forms.TypeConverterAttribute) classe que deriva da [`TypeConverter`](xref:Xamarin.Forms.TypeConverter) qual suporta a conversão de valores de string para esses tipos. Por exemplo, [`ColorTypeConverter`](xref:Xamarin.Forms.ColorTypeConverter) o converte nomes de cores e `Color` strings, como "#rrggbb", em valores.
 
-## <a name="property-element-syntax"></a>Sintaxe de elemento de propriedade
+## <a name="property-element-syntax"></a>Sintaxe de elemento sionto de propriedade
 
-No XAML, classes e os objetos criados a partir delas são expressas como elementos XML. Eles são conhecidos como *elementos de objeto*. A maioria das propriedades desses objetos são expressas como atributos XML. Esses são chamados de *atributos de propriedade*.
+No XAML, as classes e os objetos criados a partir deles são expressos como elementos XML. Estes são conhecidos como *elementos de objeto.* A maioria das propriedades desses objetos são expressas como atributos XML. Estes são chamados *atributos de propriedade.*
 
-Às vezes, uma propriedade deve ser definida como um objeto que não pode ser expresso como uma cadeia de caracteres simple. Nesse caso, o XAML dá suporte a uma marca chamada um *elemento de propriedade* que consiste no nome da classe e no nome da propriedade separados por um ponto. Um elemento de objeto, em seguida, pode aparecer dentro de um par de marcas de elemento de propriedade.
+Às vezes, uma propriedade deve ser definida como um objeto que não pode ser expresso como uma simples string. Nesse caso, xAML suporta uma tag chamada um elemento de *propriedade* que consiste no nome da classe e nome da propriedade separados por um período. Um elemento de objeto pode então aparecer dentro de um par de tags de elemento de propriedade.
 
 ## <a name="adding-a-xaml-page-to-your-project"></a>Adicionando uma página XAML ao seu projeto
 
-Uma biblioteca de classes portátil do xamarin. Forms pode conter uma página XAML quando ele é criado, ou você pode adicionar uma página XAML para um projeto existente. Na caixa de diálogo para adicionar um novo item, escolha o item que se refere a uma página XAML, ou `ContentPage` e XAML. (Não é um `ContentView`.)
+Uma Biblioteca de classes portáteis Xamarin.Forms pode conter uma página XAML quando ela é criada pela primeira vez, ou você pode adicionar uma página XAML a um projeto existente. Na caixa de diálogo para adicionar um novo item, escolha o item que se refere a uma página XAML, ou `ContentPage` xAML. (Não `ContentView`é um .)
 
 > [!NOTE]
-> Opções do Visual Studio foram alteradas desde que este capítulo foi escrito.
+> As opções do Visual Studio mudaram desde que este capítulo foi escrito.
 
-Dois arquivos são criados: um arquivo XAML com a extensão de nome de arquivo. XAML e um arquivo c# com a extensão. xaml.cs. O C# arquivo é geralmente chamado de *code-behind* do arquivo XAML. O arquivo code-behind é uma definição de classe parcial que deriva de `ContentPage`. No momento da compilação, o XAML é analisado e outra definição de classe parcial é gerada para a mesma classe. Essa classe gerada inclui um método chamado `InitializeComponent` que é chamado a partir do construtor do arquivo code-behind.
+Dois arquivos são criados: um arquivo XAML com a extensão filename .xaml e um arquivo C# com a extensão .xaml.cs. O arquivo C# é frequentemente referido como o *código-atrás* do arquivo XAML. O arquivo de código atrás é uma `ContentPage`definição de classe parcial que deriva de . No momento da compilação, o XAML é analisado e outra definição parcial de classe é gerada para a mesma classe. Esta classe gerada inclui `InitializeComponent` um método chamado do construtor do arquivo de código atrás.
 
-Durante o tempo de execução, na conclusão da chamada de `InitializeComponent`, todos os elementos do arquivo XAML foram instanciados e inicializados da mesma forma como se tivessem sido C# criados no código.
+Durante o tempo de execução, ao final da `InitializeComponent` chamada, todos os elementos do arquivo XAML foram instanciados e inicializados como se tivessem sido criados em código C#.
 
-O elemento raiz no arquivo XAML é `ContentPage`. A marca raiz contém pelo menos duas declarações de namespace XML, uma para os elementos Xamarin. Forms e outra definindo um prefixo de `x` para elementos e atributos intrínsecos a todas as implementações de XAML. A marca raiz também contém um atributo `x:Class` que indica o namespace e o nome da classe que deriva de `ContentPage`. Isso coincide com o nome de namespace e classe no arquivo code-behind.
+O elemento raiz no arquivo `ContentPage`XAML é . A tag raiz contém pelo menos duas declarações de namespace XML, uma `x` para os elementos Xamarin.Forms e a outra definindo um prefixo para elementos e atributos intrínsecos a todas as implementações XAML. A tag raiz `x:Class` também contém um atributo que indica o `ContentPage`namespace e o nome da classe que deriva de . Isso corresponde ao namespace e nome da classe no arquivo de código atrás.
 
-A combinação de XAML e código é demonstrada pelo exemplo de [**CodePlusXaml**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter07) .
+A combinação de XAML e código é demonstrada pela amostra [**CodePlusXaml.**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter07)
 
 ## <a name="the-xaml-compiler"></a>O compilador XAML
 
-O Xamarin. Forms tem um compilador XAML, mas seu uso é opcional com base no uso de um [`XamlCompilationAttribute`](xref:Xamarin.Forms.Xaml.XamlCompilationAttribute). Se o XAML não é compilado, o XAML é analisado no momento da compilação e o arquivo XAML é incorporado na PCL, onde também é analisada em tempo de execução. Se o XAML é compilado, o processo de compilação converte a XAML em um formato binário, e o processamento de tempo de execução é mais eficiente.
+Xamarin.Forms tem um compilador XAML, mas seu uso é [`XamlCompilationAttribute`](xref:Xamarin.Forms.Xaml.XamlCompilationAttribute)opcional com base no uso de um . Se o XAML não for compilado, o XAML será analisado no tempo de compilação, e o arquivo XAML será incorporado no PCL, onde também é analisado em tempo de execução. Se o XAML for compilado, o processo de compilação converte o XAML em uma forma binária, e o processamento em tempo de execução é mais eficiente.
 
 ## <a name="platform-specificity-in-the-xaml-file"></a>Especificidade da plataforma no arquivo XAML
 
-Em XAML, a classe [`OnPlatform`](xref:Xamarin.Forms.OnPlatform`1) pode ser usada para selecionar a marcação dependente de plataforma. Essa é uma classe genérica e deve ser instanciada com um atributo `x:TypeArguments` que corresponda ao tipo de destino. A classe [`OnIdiom`](xref:Xamarin.Forms.OnIdiom`1) é semelhante, mas é usada com muito menos frequência.
+No XAML, [`OnPlatform`](xref:Xamarin.Forms.OnPlatform`1) a classe pode ser usada para selecionar marcação dependente da plataforma. Esta é uma classe genérica e deve `x:TypeArguments` ser instanciada com um atributo que corresponde ao tipo de destino. A [`OnIdiom`](xref:Xamarin.Forms.OnIdiom`1) classe é semelhante, mas usada com muito menos freqüência.
 
-O uso de `OnPlatform` foi alterado desde que o livro foi publicado. Ele foi usado originalmente em conjunto com propriedades chamadas `iOS`, `Android`e `WinPhone`. Ele agora é usado com objetos de [`On`](xref:Xamarin.Forms.On) filhos. Defina a propriedade [`Platform`](xref:Xamarin.Forms.On.Platform) como uma cadeia de caracteres consistente com os campos de `const` públicos da classe [`Device`](xref:Xamarin.Forms.Device) . Defina a propriedade [`Value`](xref:Xamarin.Forms.On.Value) com um valor consistente com o atributo `x:TypeArguments` da marca `OnPlatform`.
+O uso `OnPlatform` de mudou desde que o livro foi publicado. Foi originalmente usado em conjunto `iOS` `Android`com `WinPhone`propriedades nomeadas , e . Agora é usado [`On`](xref:Xamarin.Forms.On) com objetos infantis. Defina [`Platform`](xref:Xamarin.Forms.On.Platform) a propriedade como uma `const` seqüência consistente com os campos públicos da [`Device`](xref:Xamarin.Forms.Device) classe. Defina [`Value`](xref:Xamarin.Forms.On.Value) a propriedade como `x:TypeArguments` um valor `OnPlatform` consistente com o atributo da tag.
 
-`OnPlatform` é demonstrado no exemplo [**ScaryColorList**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter07/ScaryColorList) , portanto, chamado porque contém blocos de XAML quase idêntico. A existência dessa marcação repetitivas sugere que as técnicas devem estar disponíveis para reduzi-lo.
+`OnPlatform`é demonstrado na amostra [**ScaryColorList,**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter07/ScaryColorList) assim chamada porque contém blocos de XAML quase idêntico. A existência dessa marcação repetitiva sugere que as técnicas devem estar disponíveis para reduzi-la.
 
 ## <a name="the-content-property-attributes"></a>Os atributos de propriedade de conteúdo
 
-Alguns elementos de propriedade ocorrem com muita frequência, como a marca de `<ContentPage.Content>` no elemento raiz de um `ContentPage`ou a marca `<StackLayout.Children>` que inclui os filhos de `StackLayout`.
+Alguns elementos de propriedade ocorrem `<ContentPage.Content>` com bastante freqüência, como a tag no elemento raiz de a `ContentPage`, ou a `<StackLayout.Children>` tag que inclui os filhos de `StackLayout`.
 
-Cada classe tem permissão para identificar uma propriedade com um [`ContentPropertyAttribute`](xref:Xamarin.Forms.ContentPropertyAttribute) na classe. Para essa propriedade, as marcas de elemento de propriedade não são necessárias. `ContentPage` define sua propriedade Content como `Content`e `Layout<T>` (a classe da qual `StackLayout` deriva) define sua propriedade Content como `Children`. Essas marcas de elemento de propriedade não são necessárias.
+Cada classe pode identificar uma [`ContentPropertyAttribute`](xref:Xamarin.Forms.ContentPropertyAttribute) propriedade com um na classe. Para esta propriedade, as etiquetas de elemento de propriedade não são necessárias. `ContentPage`define sua propriedade `Content`de `Layout<T>` conteúdo como , `StackLayout` e (a classe da `Children`qual deriva) define sua propriedade de conteúdo como . Essas etiquetas de elemento de propriedade não são necessárias.
 
-O elemento Property de `Label` é `Text`.
+O elemento `Label` de `Text`propriedade de é .
 
 ## <a name="formatted-text"></a>Texto formatado
 
-O exemplo [**Textvariations**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter07/TextVariations) contém vários exemplos de definição das propriedades `Text` e `FormattedText` de `Label`. Em XAML, os objetos `Span` aparecem como filhos do objeto `FormattedString`.
+A amostra [**TextVariations**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter07/TextVariations) contém vários `Text` exemplos `FormattedText` de `Label`definir as propriedades de . Em XAML, `Span` objetos aparecem `FormattedString` como filhos do objeto.
 
- Quando uma cadeia de caracteres de várias linhas é definida como a propriedade `Text`, os caracteres de fim de linha são convertidos em caracteres de espaço, mas os caracteres de fim de linha são preservados quando uma cadeia de caracteres de várias linhas é exibida como conteúdo das marcas `Label` ou `Label.Text`:
+ Quando uma seqüência de `Text` caracteres multilinha é definida como propriedade, os caracteres de fim de linha são convertidos em `Label` caracteres espaciais, mas os caracteres de fim de linha são preservados quando uma seqüência de caracteres multilinha aparece como conteúdo das tags: `Label.Text`
 
- [![Captura de tela tripla de compartilhamento de variações de texto](images/ch07fg03-small.png "Variações de texto formatado")](images/ch07fg03-large.png#lightbox "Variações de texto formatado")
+ [![Captura de tela tripla do compartilhamento de variações de texto](images/ch07fg03-small.png "Variações de texto formatado")](images/ch07fg03-large.png#lightbox "Variações de texto formatado")
 
 ## <a name="related-links"></a>Links relacionados
 
 - [Capítulo 7 texto completo (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch07-Apr2016.pdf)
-- [Exemplos do capítulo 7](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter07)
-- [Exemplo do F# capítulo 7](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter07/FS/CodePlusXaml)
+- [Capítulo 7 amostras](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter07)
+- [Capítulo 7 F# amostra](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter07/FS/CodePlusXaml)
 - [Noções básicas de XAML](~/xamarin-forms/xaml/xaml-basics/index.md)

@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
 ms.openlocfilehash: 1a14bcc15299360a17b4c9e7a363b6d6e6f2e69a
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "76725019"
 ---
 # <a name="publishing-xamarinmac-apps-to-the-mac-app-store"></a>Publicando aplicativos Xamarin.Mac na Mac App Store
@@ -36,32 +36,32 @@ Escolha o tipo de registro correto para a sua situação.
 > [!NOTE]
 > As escolhas feitas aqui afetarão a forma como algumas telas aparecem ao configurar uma conta de desenvolvedor. As descrições e capturas de tela neste documento são feitas da perspectiva de uma conta de desenvolvedor de **Pessoa Física**. Em uma **Empresa**, algumas opções só estarão disponíveis para usuários **Administradores de Equipe**.
 
-### <a name="certificates-and-identifiersmacdeploy-testpublishing-to-the-app-storecertificates-identifiersmd"></a>[Certificados e identificadores](~/mac/deploy-test/publishing-to-the-app-store/certificates-identifiers.md)
+### <a name="certificates-and-identifiers"></a>[Certificados e identificadores](~/mac/deploy-test/publishing-to-the-app-store/certificates-identifiers.md)
 
 Esse guia o orienta durante a criação dos Certificados e Identificadores que serão necessários para publicar um aplicativo Xamarin.Mac.
 
-### <a name="create-provisioning-profilemacdeploy-testpublishing-to-the-app-storeprofilesmd"></a>[Criar perfil de provisionamento](~/mac/deploy-test/publishing-to-the-app-store/profiles.md)
+### <a name="create-provisioning-profile"></a>[Criar perfil de provisionamento](~/mac/deploy-test/publishing-to-the-app-store/profiles.md)
 
 Esse guia o orienta na criação dos Perfis de Provisionamento que serão necessários para publicar um aplicativo Xamarin.Mac.
 
-### <a name="mac-app-configurationmacdeploy-testpublishing-to-the-app-storeapp-configurationmd"></a>[Configuração de aplicativos Mac](~/mac/deploy-test/publishing-to-the-app-store/app-configuration.md)
+### <a name="mac-app-configuration"></a>[Configuração de aplicativos Mac](~/mac/deploy-test/publishing-to-the-app-store/app-configuration.md)
 
 Este guia explica como configurar um aplicativo Xamarin.Mac para publicação.
 
-### <a name="sign-with-developer-idmacdeploy-testpublishing-to-the-app-storesigningmd"></a>[Entrar com a ID de desenvolvedor](~/mac/deploy-test/publishing-to-the-app-store/signing.md)
+### <a name="sign-with-developer-id"></a>[Entrar com a ID de desenvolvedor](~/mac/deploy-test/publishing-to-the-app-store/signing.md)
 
 Este guia explica como assinar um aplicativo Xamarin.Mac com a ID de Desenvolvedor para publicação.
 
-### <a name="bundle-for-mac-app-storemacdeploy-testpublishing-to-the-app-storebundlingmd"></a>[Pacote para Mac App Store](~/mac/deploy-test/publishing-to-the-app-store/bundling.md)
+### <a name="bundle-for-mac-app-store"></a>[Pacote para Mac App Store](~/mac/deploy-test/publishing-to-the-app-store/bundling.md)
 
 Este guia ensina como agrupar um aplicativo Xamarin.Mac para publicação na Mac App Store.
 
-### <a name="upload-to-mac-app-storemacdeploy-testpublishing-to-the-app-storeuploadingmd"></a>[Carregar na Mac App Store](~/mac/deploy-test/publishing-to-the-app-store/uploading.md)
+### <a name="upload-to-mac-app-store"></a>[Carregar na Mac App Store](~/mac/deploy-test/publishing-to-the-app-store/uploading.md)
 
 Este guia ensina como fazer upload de aplicativos Xamarin.Mac para publicação na Mac App Store.
 
 ## <a name="related-links"></a>Links relacionados
 
 - [Instalação](/visualstudio/mac/installation/)
-- [Amostra do Hello, Mac](~/mac/get-started/hello-mac.md)
+- [Olá, amostra mac](~/mac/get-started/hello-mac.md)
 - [ID de Desenvolvedor e GateKeeper](https://developer.apple.com/developer-id/)

@@ -9,10 +9,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 10/16/2019
 ms.openlocfilehash: b335533bfddf78e5fe2770356d29e27dbdccd0f2
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73022778"
 ---
 # <a name="get-started-with-xamarinios"></a>Introdução ao Xamarin.iOS
@@ -28,7 +28,7 @@ Para compilar no Xamarin.iOS, é necessário:
 - a versão mais recente do Xcode
 - a versão mínima do macOS exigida pelo Xcode
 
-Para obter os requisitos de versão específicos, consulte as últimas notas de versão do [Xamarin. Ios](/xamarin/ios/release-notes/).
+Para requisitos específicos da versão, consulte as [notas de versão xamarin.iOS mais recentes](/xamarin/ios/release-notes/).
 
 A versão mais recente do Xcode pode ser baixada da [Central de Desenvolvedores do iOS](https://developer.apple.com/devcenter/ios/index.action#downloads) (logon necessário) ou por meio da Mac App Store:
 
@@ -36,19 +36,19 @@ A versão mais recente do Xcode pode ser baixada da [Central de Desenvolvedores 
 
 ## <a name="getting-started-series"></a>Série de introdução
 
-### <a name="setup-and-installationiosget-startedinstallationindexmd"></a>[Instalação e configuração](~/ios/get-started/installation/index.md)
+### <a name="setup-and-installation"></a>[Instalação e instalação](~/ios/get-started/installation/index.md)
 
 Coloque o Xamarin.iOS em funcionamento no Visual Studio para Mac ou Visual Studio. Esta seção aborda o download e a instalação usando o instalador do Xamarin, conexão com a conta da Microsoft, itens de solução de problemas comuns, provisionamento de dispositivos e muito mais.
 
-### <a name="hello-iosiosget-startedhello-iosindexmd"></a>[Hello, iOS](~/ios/get-started/hello-ios/index.md)
+### <a name="hello-ios"></a>[Hello, iOS](~/ios/get-started/hello-ios/index.md)
 
 Este guia de duas partes ensina a compilar seu primeiro aplicativo Xamarin.iOS usando Visual Studio para Mac ou Visual Studio e apresenta os conceitos básicos do desenvolvimento do aplicativo iOS com o Xamarin. Este guia também apresenta conceitos, ferramentas e etapas necessárias para compilar e implantar um aplicativo Xamarin.iOS.
 
-### <a name="hello-ios-multiscreeniosget-startedhello-ios-multiscreenindexmd"></a>[Multitela Hello, iOS](~/ios/get-started/hello-ios-multiscreen/index.md)
+### <a name="hello-ios-multiscreen"></a>[Multitela Hello, iOS](~/ios/get-started/hello-ios-multiscreen/index.md)
 
 Este guia de duas partes explora a expansão do aplicativo criado no guia do Hello, iOS para processar uma segunda tela. Ele apresenta conceitos, como o padrão de design Modelo-Exibição-Controlador, implementação da navegação de iOS e desenvolvimento de um entendimento mais profundo da estrutura e funcionalidade do aplicativo iOS.
 
-## <a name="xamarin-for-objective-c-developersobjective-c-developersindexmd"></a>[Xamarin para desenvolvedores de Objective-C](objective-c-developers/index.md)
+## <a name="xamarin-for-objective-c-developers"></a>[Xamarin para Desenvolvedores Objective-C](objective-c-developers/index.md)
 
 Fornece informações para desenvolvedores do Objective-C que estão em transição para a plataforma Xamarin.
 

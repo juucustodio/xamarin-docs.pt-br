@@ -7,15 +7,15 @@ author: profexorgeek
 ms.author: jusjohns
 ms.date: 09/18/2019
 ms.openlocfilehash: aaceb6089a5b7e5f0551dafe9ef1fe50d01433d9
-ms.sourcegitcommit: 24883be72e485e5311dd0eb91f9a22f78eeec11a
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/17/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "77374017"
 ---
 # <a name="what-is-xamarinforms"></a>O que é o Xamarin.Forms?
 
-[![Capturas de tela do aplicativo de exemplo Xamarin.Forms no iOS e no Android](what-is-xamarin-forms-images/xamarin-forms-app-cropped.png)](what-is-xamarin-forms-images/xamarin-forms-app.png#lightbox)
+[![Capturas de tela do exemplo Xamarin.Forms aplicativo no iOS e Android](what-is-xamarin-forms-images/xamarin-forms-app-cropped.png)](what-is-xamarin-forms-images/xamarin-forms-app.png#lightbox)
 
 O Xamarin.Forms é uma estrutura de interface do usuário de software livre. O Xamarin.Forms permite que os desenvolvedores compilem aplicativos Android, iOS e Windows usando uma única base de código compartilhada.
 

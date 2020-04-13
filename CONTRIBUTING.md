@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 0071fcc72844e4816e707c5828464859e09db68c
-ms.sourcegitcommit: 2503da076966d12a8bdbf7af209662b74913a15c
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "78261612"
 ---
 # <a name="contributing"></a>Participante
@@ -43,7 +43,7 @@ Para novo conteúdo e grandes contribuições [abra um problema](https://github.
 
 No caso de um novo tópico, você poderá usar o [arquivo de modelo](../contributing-guidelines/template.md) como ponto de partida. Ele contém as diretrizes de escrita e também explica os metadados necessários para cada artigo, como informações do autor.
 
-Para imagens e outros recursos estáticos, adicione-os à subpasta chamada **\<mypage>-images**. Se você estiver criando uma pasta para o conteúdo, adicione uma pasta de imagens à nova pasta.
+Para imagens e outros recursos estáticos, adicione-os à subpasta chamada ** \<mypage>-images**. Se você estiver criando uma pasta para o conteúdo, adicione uma pasta de imagens à nova pasta.
 
 #### <a name="example-structure"></a>Exemplo de estrutura
 
@@ -65,9 +65,9 @@ Em seguida, depois que os comentários forem aplicados e sua alteração estiver
 
 Em um determinado ritmo, efetuaremos push de todas as confirmações do branch mestre para o site ativo e, em seguida, você poderá ver sua colaboração em https://docs.microsoft.com/xamarin/.
 
-### <a name="contributing-to-international-content"></a>Contribuindo para conteúdo internacional
+### <a name="contributing-to-international-content"></a>Contribuindo para o conteúdo internacional
 
-Atualmente, não são aceitas contribuições para conteúdo de MT (convertidas no computador) por enquanto. Em um esforço para melhorar a qualidade do conteúdo de MT, fizemos a transição para um mecanismo de MT neural. Aceitamos e incentivamos contribuições para conteúdo de tecnologia de tradução humana (HT), que é usado para treinar o mecanismo do neural. Assim, ao longo do tempo, as contribuições para o conteúdo da HT melhorarão a qualidade do HT e do MT. Os tópicos de MT terão uma isenção informando que parte do tópico pode ser MT e o botão **Editar** não será exibido quando for desabilitado.
+As contribuições para o conteúdo de MT (Machine Translated) não são aceitas no momento. Em um esforço para melhorar a qualidade do conteúdo MT, fizemos a transição para um motor Neural MT. Aceitamos e incentivamos contribuições para o conteúdo de Human Translated (HT), que é usado para treinar o motor Neural MT. Assim, com o tempo, as contribuições para o conteúdo HT melhorarão a qualidade tanto do HT quanto do MT. Os tópicos do MT terão uma isenção de responsabilidade afirmando que parte do tópico pode ser MT, e o botão **Editar** não será exibido como está desativado.
 
 ## <a name="dos-and-donts"></a>O que FAZER e o que NÃO FAZER
 

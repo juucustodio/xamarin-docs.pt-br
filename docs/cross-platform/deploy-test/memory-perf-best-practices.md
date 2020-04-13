@@ -7,10 +7,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/24/2017
 ms.openlocfilehash: d0b195b90bb57b6d0717c0fb06d0202857851fe7
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73016522"
 ---
 # <a name="cross-platform-performance"></a>Desempenho de plataforma cruzada
@@ -165,7 +165,7 @@ O campo `handler` mantém a referência para o método anônimo e é usado para 
 ## <a name="use-weak-references-to-prevent-immortal-objects"></a>Usar referências fracas para impedir a criação de objetos imortais
 
 > [!NOTE]
-> Os desenvolvedores iOS devem revisar a documentação sobre [evitar referências circulares no iOS](~/ios/deploy-test/performance.md#avoid-strong-circular-references) para garantir que os aplicativos usem a memória com eficiência.
+> Os desenvolvedores iOS do  devem revisar a documentação ao [evitar referências circulares no iOS](~/ios/deploy-test/performance.md#avoid-strong-circular-references) para garantir que seus aplicativos usem a memória com eficiência.
 
 <a name="lazy" />
 
@@ -371,9 +371,9 @@ Esse artigo descreve e discute técnicas para aumentar o desempenho dos aplicati
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Desempenho do Xamarin.iOS](~/ios/deploy-test/performance.md)
+- [Desempenho xamarin.iOS](~/ios/deploy-test/performance.md)
 - [Desempenho do Xamarin.Android](~/android/deploy-test/performance.md)
 - [Introdução ao Xamarin Profiler](~/tools/profiler/index.md)
-- [Desempenho do Xamarin.Forms](~/xamarin-forms/deploy-test/performance.md)
-- [Visão geral do suporte assíncrono](~/cross-platform/platform/async.md)
+- [Xamarin.Forms Performance](~/xamarin-forms/deploy-test/performance.md)
+- [Visão geral do suporte de async](~/cross-platform/platform/async.md)
 - [IDisposable](xref:System.IDisposable)

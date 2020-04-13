@@ -8,17 +8,17 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 03/23/2020
 ms.openlocfilehash: 9e3e602eda0d2fa78dd25905a2b6ccf3ce5a744d
-ms.sourcegitcommit: d83c6af42ed26947aa7c0ecfce00b9ef60f33319
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "80247594"
 ---
 # <a name="xamarinforms-data-binding"></a>Associação de dados do Xamarin.Forms
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
+[![Baixar](~/media/shared/download.png) amostra Baixar a amostra](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
-_A vinculação de dados é a técnica de vincular propriedades de dois objetos para que as alterações em uma propriedade sejam refletidas automaticamente na outra propriedade. A vinculação de dados é parte integrante da arquitetura do aplicativo MVVM (Model-View-ViewModel)._
+_Vinculação de dados é a técnica de vincular propriedades de dois objetos para que as alterações em uma propriedade sejam automaticamente refletidas na outra propriedade. A vinculação de dados é parte integrante da arquitetura de aplicativos Model-View-ViewModel (MVVM)._
 
 ## <a name="the-data-linking-problem"></a>O problema de associação de dados
 
@@ -35,7 +35,7 @@ Um dos dois objetos envolvidos em uma associação de dados quase sempre é um e
 - Outro derivado de `View`, geralmente na mesma página.
 - Um objeto em um arquivo de código.
 
-Em programas de demonstração, tais como aqueles na amostra [**DataBindingDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos), associações de dados entre dois derivados de `View` geralmente são mostrados para fins de clareza e simplicidade. No entanto, os mesmos princípios podem ser aplicados às associações de dados entre um `View` e outros objetos. Quando um aplicativo é criado usando a arquitetura MVVM (Model-View-ViewModel), a classe com dados subjacentes geralmente é chamada de ViewModel.
+Em programas de demonstração, tais como aqueles na amostra [**DataBindingDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos), associações de dados entre dois derivados de `View` geralmente são mostrados para fins de clareza e simplicidade. No entanto, os mesmos princípios podem ser aplicados às associações de dados entre um `View` e outros objetos. Quando um aplicativo é construído usando a arquitetura Model-View-ViewModel (MVVM), a classe com dados subjacentes é frequentemente chamada de modelo de exibição.
 
 Associações de dados são exploradas na seguinte série de artigos:
 
@@ -61,7 +61,7 @@ Use conversores de valor de associação para alterar os valores dentro da assoc
 
 ## <a name="relative-bindings"></a>[Associações relativas](relative-bindings.md)
 
-Use associações relativas para definir a origem da associação em relação à posição do destino da associação.
+Use ligações relativas para definir a fonte de ligação em relação à posição do alvo de ligação.
 
 ## <a name="binding-fallbacks"></a>[Fallbacks de associação](binding-fallbacks.md)
 

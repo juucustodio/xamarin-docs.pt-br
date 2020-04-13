@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.assetid: 11111111-2222-3333-4444-555555555555
 ms.prod: xamarin
 ms.openlocfilehash: f26a786f3da909c7d948fe99b4b3a1423352ecbe
-ms.sourcegitcommit: ec62c7f28abc8e121656f1b93146657d90a4cab4
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/21/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "77553567"
 ---
 # <a name="metadata-and-markdown-template"></a>Metadados e modelo Markdown
@@ -45,9 +45,9 @@ Algumas observações importantes:
 - **Deve** haver um espaço entre os dois-pontos (:) e o valor de um elemento de metadados.
 - Se um elemento de metadados opcional não tiver um valor, exclua-o (não deixe em branco ou use "na").
 - Dois-pontos em um valor (por exemplo, um título) quebram o analisador de metadados. Nesse caso, coloque o título entre aspas duplas (por exemplo, `title: "Writing .NET Core console apps: An advanced step-by-step guide"`).
-- **title**: Esse título aparecerá nos resultados do mecanismo de pesquisa. O título não precisa ser idêntico ao título do cabeçalho H1 e deve conter 60 caracteres ou menos.
-- **author**, **manager**, **ms.reviewer**: O campo author deve conter o **nome de usuário do GitHub** do autor, não seu alias.  Por outro lado, os campos “manager” e “ms.reviewer” devem conter aliases da Microsoft. ms.reviewer especifica o nome do PM/desenvolvedor associado ao artigo ou ao recurso.
-- **ms.assetid**: Esse é o GUID do artigo usado para fins de acompanhamento interno, como BI (Business Intelligence). Ao criar um arquivo markdown, obtenha um GUID em [https://www.guidgenerator.com](https://www.guidgenerator.com).
+- **title**: esse título aparecerá nos resultados do mecanismo de pesquisa. O título não precisa ser idêntico ao título do cabeçalho H1 e deve conter 60 caracteres ou menos.
+- **author**, **manager**, **ms.reviewer**: o campo autor deve conter o **nome de usuário do GitHub** do autor, não seu alias.  Por outro lado, os campos “manager” e “ms.reviewer” devem conter aliases da Microsoft. ms.reviewer especifica o nome do PM/desenvolvedor associado ao artigo ou ao recurso.
+- **ms.assetid**: esse é o GUID do artigo usado para fins de acompanhamento interno, como BI (Business Intelligence). Ao criar um novo arquivo Markdown, obtenha um GUID de [https://www.guidgenerator.com](https://www.guidgenerator.com).
 
 ## <a name="basic-markdown-gfm-and-special-characters"></a>Marcação básica, GFM e caracteres especiais
 
@@ -66,10 +66,10 @@ O Markdown usa caracteres especiais, como \*, \` e \# para formatação. Se dese
 
 Os nomes de arquivo usam as seguintes regras:
 
-- Conter apenas letras minúsculas, números e hifens.
+- Contêm apenas letras minúsculas, números e hifens.
 - Sem espaços nem caracteres de pontuação. Use os hifens para separar palavras e números no nome do arquivo.
-- Use verbos de ação específicos, como desenvolver, comprar, compilar, solucionar problemas. Sem palavras no gerúndio.
-- Sem palavras pequenas – não inclua artigos nem preposições.
+- Use verbos de ação específicos, como desenvolver, comprar, compilar, solucionar problemas. Sem palavras terminando em -ndo.
+- Sem palavras pequenas - não inclua um, e, o, em, ou, etc.
 - Deve estar em Markdown e usar a extensão de arquivo .md.
 - Mantenha os nomes de arquivo razoavelmente curtos. Eles fazem parte da URL dos artigos.
 
@@ -78,7 +78,7 @@ Os nomes de arquivo usam as seguintes regras:
 Use a capitalização de estilo da frase. Sempre coloque em maiúsculas:
 
 - A primeira palavra de um cabeçalho.
-- A palavra após dois pontos em um título ou cabeçalho (por exemplo, "Como classificar uma matriz").
+- A palavra após dois-pontos em um título ou cabeçalho (por exemplo, “Como: classificar uma matriz”).
 
 Os cabeçalhos devem ser feitos usando o atx-style ou seja, use de 1 a 6 caracteres de hash (#) no início da linha para indicar um cabeçalho correspondente aos níveis de cabeçalho HTML de H1 a H6. Exemplos de cabeçalhos de primeiro e segundo nível são usados acima.
 
@@ -147,50 +147,50 @@ Para obter mais informações sobre como usar essa notação, consulte [Using cr
 
 Quando o UID contém os caracteres especiais \` ou \#, o valor do UID precisa ser codificado em HTML como %60 e %23, respectivamente, como nos seguintes exemplos:
 
-- Exemplo: @System.Threading.Tasks.Task\`1 se torna `@System.Threading.Tasks.Task%601`
+- Exemplo: @System.Threading.Tasks.Task\`1 torna-se `@System.Threading.Tasks.Task%601`
 - Exemplo: @System.Exception.\#ctor torna-se `@System.Exception.%23ctor`
 
 ## <a name="lists"></a>Listas
 
 ### <a name="ordered-lists"></a>Listas ordenadas
 
-1. Este
-1. É
+1. Esse
+1. Is
 1. Uma
-1. Ordenada
+1. Encomendado
 1. Lista
 
 #### <a name="ordered-list-with-an-embedded-list"></a>Lista ordenada com uma lista inserida
 
 1. Esta
 1. é
-1. uma
+1. an
 1. lista
     1. Senhorita Costa
     1. Professor Mendes
 1. ordered
-1. lista
+1. list
 
 ### <a name="unordered-lists"></a>Listas não ordenadas
 
-- Este
+- Esse
 - is
 - a
 - com marcadores
-- lista
+- list
 
 #### <a name="unordered-list-with-an-embedded-list"></a>Lista não ordenada com uma lista inserida
 
-- Este
+- Esse
 - com marcadores
-- lista
+- list
   - Sra. Pereira
   - Sr. Martins
-- contém
-- outras
+- contains
+- Outros
     1. Coronel Teixeira
     1. Sra. Barbosa
-- listas
+- lists
 
 ## <a name="horizontal-rule"></a>Régua horizontal
 
@@ -198,10 +198,10 @@ Quando o UID contém os caracteres especiais \` ou \#, o valor do UID precisa se
 
 ## <a name="tables"></a>Tabelas
 
-| Tabelas        | São           | Legais  |
+| Tabelas        | São           | Estática  |
 | ------------- |:-------------:| -----:|
 | A coluna 3 está      | alinhada à direita | US$ 1.600 |
-| A coluna 2 está      | centralizada      |   US$ 12 |
+| A coluna 2 está      | centralizada      |   U$12 |
 | A coluna 1 está por padrão | alinhada à esquerda     |    US$ 1 |
 
 É possível usar uma [ferramenta de gerador de tabelas Markdown](http://www.tablesgenerator.com/markdown_tables) para ajudar a criá-las com mais facilidade.
@@ -230,7 +230,7 @@ namespace HelloWorld
 }
 ```
 
-#### <a name="xml"></a>xml
+#### <a name="xml"></a>Xml
 
 ```xml
 <dict>
@@ -296,9 +296,9 @@ Use backticks (&#96;) para `inline code`. Use código embutido para comandos da 
 [![alt text for linked image](images/dotnet.png)](https://dot.net)
 ```
 
-## <a name="videos"></a>Vídeos
+## <a name="videos"></a>vídeos
 
-### <a name="channel-9"></a>Channel 9
+### <a name="channel-9"></a>Canal 9
 
 Use esta sintaxe de blockquote especial:
 

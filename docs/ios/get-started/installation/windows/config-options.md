@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 04/16/2018
 ms.openlocfilehash: c5c819221bc08f1c39bde9b5900c2f9f9889764d
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73022529"
 ---
 # <a name="configuring-visual-studio-for-ios-development"></a>Configurando o Visual Studio para desenvolvimento do iOS
@@ -42,7 +42,7 @@ Quando um projeto do iOS é aberto no Visual Studio 2019 ou no Visual Studio 201
 
 Se essa barra de ferramentas não aparecer, abra o menu **Modo de Exibição** no Visual Studio 2019 ou no Visual Studio 2017 e escolha **Barras de Ferramentas > iOS**:
 
-![Habilitando a barra de ferramentas do iOS](config-options-images/ios-toolbar-enable.png "Habilitando a barra de ferramentas do iOS")
+![Ativando a barra de ferramentas do iOS](config-options-images/ios-toolbar-enable.png "Ativando a barra de ferramentas do iOS")
 
 ## <a name="solution-platforms-drop-down-menu"></a>Menu suspenso Plataformas de Solução
 
@@ -51,11 +51,11 @@ O menu suspenso **Plataformas de Solução** permite que você escolha se o pró
 Para verificar se este menu suspenso está visível na barra de ferramentas Padrão:
 
 - No Visual Studio 2019 ou no Visual Studio 2017, clique na seta para baixo na borda direita da barra de ferramentas Padrão.
-- Escolha **Adicionar ou Remover Botões** 
+- Escolha **adicionar ou remover botões** 
 - Verifique se o item **Plataformas de Solução** está selecionado:
 
-![Habilitando o menu suspenso plataformas de soluções](config-options-images/solution-platforms-enable.png "Habilitando o menu suspenso plataformas de soluções")
+![Ativando o menu suspenso plataformas de solução](config-options-images/solution-platforms-enable.png "Ativando o menu suspenso plataformas de solução")
 
 Com um projeto do iOS aberto, as barras de ferramentas **Padrão** e **iOS** agora devem ser semelhantes à captura de tela a seguir:
 
-![Barras de ferramentas standard e iOS](config-options-images/toolbars.png "Barras de ferramentas standard e iOS")
+![Barras de ferramentas padrão e iOS](config-options-images/toolbars.png "Barras de ferramentas padrão e iOS")

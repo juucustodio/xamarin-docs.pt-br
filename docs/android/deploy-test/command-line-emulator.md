@@ -7,10 +7,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 11/05/2018
 ms.openlocfilehash: 35e10ffc20e075e0245c7e42f7fd0aff24de4abb
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73021576"
 ---
 # <a name="command-line-emulator"></a>Emulador de linha de comando
@@ -35,4 +35,4 @@ No macOS
 
 O motivo da necessidade do tamanho da partição é permitir que o emulador tenha bastante espaço para obter a plataforma Xamarin.Android instalada no emulador, já que por padrão, o tamanho do emulador é pequeno.
 
-Encontre mais informações sobre parâmetros adicionais no site do Android aqui – [https://developer.android.com/studio/run/emulator-commandline](https://developer.android.com/studio/run/emulator-commandline)
+Você pode descobrir mais informações sobre parâmetros extras no site do Android aqui -[https://developer.android.com/studio/run/emulator-commandline](https://developer.android.com/studio/run/emulator-commandline)

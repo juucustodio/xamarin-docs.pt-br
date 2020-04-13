@@ -8,15 +8,15 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
 ms.openlocfilehash: 41254fb6aac176cd796fba851478b31f774553d2
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73023450"
 ---
 # <a name="walkthrough---using-apples-instruments-tool"></a>Passo a passo – Usando a Ferramenta de Instrumentos da Apple
 
-_Este artigo explica como usar a ferramenta instrumentos da Apple para diagnosticar problemas de memória em um aplicativo iOS criado com o Xamarin. Ele demonstra como iniciar instrumentos, tirar instantâneos de heap e analisar o crescimento da memória. Ele também mostra como usar instrumentos para exibir e identificar as linhas exatas de código que causam o problema de memória._
+_Este artigo mostra como usar a ferramenta Instruments da Apple para diagnosticar problemas de memória em um aplicativo iOS construído com Xamarin. Ele demonstra como lançar Instrumentos, tirar fotos de pilhas e analisar o crescimento da memória. Ele também mostra como usar instrumentos para exibir e identificar as linhas exatas de código que causam o problema de memória._
 
 Esta página demonstra como usar a **ferramenta de instrumentos do Xcode** para diagnosticar um problema de memória em um aplicativo iOS.
 Primeiro, baixe o [exemplo do MemoryDemo](https://docs.microsoft.com/samples/xamarin/ios-samples/profiling-memorydemo) e abra a solução **antes** no Visual Studio para Mac.
@@ -48,11 +48,11 @@ Primeiro, baixe o [exemplo do MemoryDemo](https://docs.microsoft.com/samples/xam
 12. Expanda o nó **Geração** com o maior **Crescimento** e classifique por **Crescimento** (decrescente).
 13. Altere o painel **Inspetor** para **Mostrar Detalhes Estendidos** (o "E"), que mostra o **Rastreamento de Pilha**.
 
-14. Observe que o nó **&lt;non-object>** mostra um crescimento excessivo de memória. Clique na seta ao lado desse nó para ver mais detalhes – clique com o botão direito do mouse no rastreamento de pilha para adicionar **Local de Origem** ao painel:
+14. Observe ** &lt;** que o nó>não objeto mostra crescimento excessivo da memória. Clique na seta ao lado deste nó para ver mais detalhes - clique com o botão direito do mouse no trace da pilha para adicionar **a localização de origem** ao painel:
 
     ![](walkthrough-apples-instrument-images/03-mem-growth.png "Add Source Location to the pane")
 
-15. Classifique por **Tamanho** e exiba **Detalhes Estendidos**:
+15. Classificar por **tamanho** e exibir a exibição **detalheestendido:**
 
     ![](walkthrough-apples-instrument-images/04-extended-detail.png "Sort by Size and display the  Extended Detail view")
 
@@ -97,5 +97,5 @@ Por fim, o aplicativo foi examinado novamente para verificar se que o problema f
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Amostra do Memory Demo](https://docs.microsoft.com/samples/xamarin/ios-samples/profiling-memorydemo)
+- [Exemplo de MemoryDemo](https://docs.microsoft.com/samples/xamarin/ios-samples/profiling-memorydemo)
 - [Coleta de lixo do Xamarin.iOS (publicação do blog)](https://c-sharx.net/2015-04-27-xamarin-ios-the-garbage-collector-and-me/)

@@ -8,15 +8,15 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/15/2017
 ms.openlocfilehash: f98603c2ffac35362c6697e4806bf4b2daf44710
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73030180"
 ---
 # <a name="app-group-capabilities-in-xamarinios"></a>Recursos de grupo de aplicativo no Xamarin.iOS
 
-_A adição de recursos a um aplicativo geralmente requer configuração de provisionamento adicional. Este guia explica a configuração necessária para os recursos do grupo de aplicativos._
+_Adicionar recursos a um aplicativo geralmente requer configuração de provisionamento adicional. Este guia explica a configuração necessária para os recursos do App Group._
 
 Um grupo de aplicativos permite que diferentes aplicativos (ou um aplicativo e suas extensões) acessem um local de armazenamento de arquivo compartilhado. Grupos de aplicativo podem ser usados para dados como:
 
@@ -28,7 +28,7 @@ Um grupo de aplicativos permite que diferentes aplicativos (ou um aplicativo e s
 
 O local compartilhado é configurado usando um [Grupo de Aplicativos](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/EntitlementKeyReference/Chapters/EnablingAppSandbox.html#//apple_ref/doc/uid/TP40011195-CH4-SW19), que é configurado na seção **Certificados, Identificadores e Perfis** na [Central de Desenvolvedores da Apple](https://developer.apple.com/account/). Esse valor também deve ser referenciado em cada projeto Entitlements.plist.
 
-O grupo de aplicativos terá um identificador, que normalmente é a ID de Pacote com um grupo. prefixo. Por exemplo, a ID do Pacote `com.xamarin.WatchSettings` teria o grupo de aplicativos `group.com.xamarin.WatchSettings`.
+O grupo de aplicativos terá um identificador, que normalmente é a ID de Pacote com um grupo.. Por exemplo, a ID do Pacote `com.xamarin.WatchSettings` teria o grupo de aplicativos `group.com.xamarin.WatchSettings`.
 
 Para criar um novo grupo de aplicativos, faça o seguinte:
 
@@ -49,23 +49,23 @@ Faça o seguinte:
 
 1. Visite a [Central de Desenvolvedores do iOS](https://developer.apple.com/account/) da Apple e faça logon com uma Conta de Desenvolvedor da Apple.
 2. No menu **Recursos do Programa**, selecione **Certificados, IDs e Perfis**.
-3. Em **Identifiers (Identificadores)** , selecione **App IDs (IDs do Aplicativo)** e clique no botão **+** para criar uma nova ID.
+3. Em **Identifiers (Identificadores)**, selecione **App IDs (IDs do Aplicativo)** e clique no botão **+** para criar uma nova ID.
 4. Insira um nome para a ID do aplicativo e dê a ela uma ID do aplicativo explícita.
-5. Em **Serviços de Aplicativos**, habilite **Grupos de Aplicativos** e clique no botão Continuar:
+5. Em **Serviços de Aplicativos** habilite **Grupos de Aplicativos** e, em seguida, clique no botão Continuar:
 
     ![Adicionar Serviços de Aplicativos no grupo de aplicativos](app-groups-capabilities-images/image53.png)
 
 6. Verifique as configurações e clique no botão **Registrar** para criar a ID do aplicativo.
 7. Clique no botão **Done (Concluído)** para retornar à lista de IDs do aplicativo registradas.
-8. Selecione a ID do aplicativo recém-criada na lista e clique no botão **Edit (Editar)** :
+8. Selecione a ID do aplicativo recém-criada na lista e clique no botão **Edit (Editar)**:
 
     ![Selecionar a ID do aplicativo na lista](app-groups-capabilities-images/image54.png)
 
-9. No serviço **App Group (Grupo de Aplicativos)** , clique no botão **Edit (Editar)** :
+9. No serviço **App Group (Grupo de Aplicativos)**, clique no botão **Edit (Editar)**:
 
     ![Selecionar a ID do aplicativo na lista](app-groups-capabilities-images/image55.png)
 
-10. Selecione o grupo de aplicativo que foi criado anteriormente e clique no botão **Continue (Continuar)** :
+10. Selecione o grupo de aplicativo que foi criado anteriormente e clique no botão **Continue (Continuar)**:
 
     ![Adicionar grupo de aplicativos](app-groups-capabilities-images/image56.png)
 
@@ -78,6 +78,6 @@ A lista a seguir descreve as etapas adicionais que precisam ser executadas:
 
 * Use o namespace do framework em seu aplicativo.
 * Adicione os direitos necessários para seu aplicativo. As informações sobre os direitos necessários e como adicioná-los estão detalhadas no guia [Trabalhando com direitos](~/ios/deploy-test/provisioning/entitlements.md).
-* Na **Assinatura de Pacote do iOS** do aplicativo, certifique-se de que **Direitos Personalizados** está definido como **Entitlements.plist**. Isso _não_ a configuração padrão para compilações de depuração e do IOS Simulator.
+* Na **Assinatura de Pacote do iOS** do aplicativo, certifique-se de que **Direitos Personalizados** está definido como **Entitlements.plist**.Esta _não_ é a configuração padrão para compilações de Debug e iOS Simulator.
 
 Se você encontrar problemas com serviços de aplicativos, consulte a seção [Solução de problemas](~/ios/deploy-test/provisioning/capabilities/index.md) do guia principal.

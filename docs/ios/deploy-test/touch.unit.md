@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
 ms.openlocfilehash: 08ddf282c8839a6283b90c0736c0b4259bd01469
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73028451"
 ---
 # <a name="unit-testing-xamarinios-apps"></a>Teste de unidade de aplicativos Xamarin.iOS
@@ -21,7 +21,7 @@ Os testes de unidade com o Xamarin.iOS são feitos usando a estrutura Touch.Unit
 
 ## <a name="setting-up-a-test-project-in-visual-studio-for-mac"></a>Configurar um projeto de teste no Visual Studio para Mac
 
-Para configurar uma estrutura de teste de unidade para seu projeto, tudo o que você precisa fazer é adicionar à solução um projeto do tipo **Projeto de Testes de Unidade iOS**. Faça isso clicando com o botão direito do mouse na sua solução e selecionar **Adicionar > Adicionar Novo Projeto**. Na lista, selecione **iOS > Testes > API Unificado > Projeto de Testes de Unidade iOS** (você pode escolher C# ou F#).
+ Para configurar uma estrutura de teste de unidade para seu projeto, tudo o que você precisa fazer é adicionar à solução um projeto do tipo **Projeto de Testes de Unidade iOS**. Faça isso clicando com o botão direito do mouse na sua solução e selecionar **Adicionar > Adicionar Novo Projeto**. Na lista, selecione **iOS > Testes > API Unificado > Projeto de Testes de Unidade iOS** (você pode escolher C# ou F#).
 
 ![](touch.unit-images/00.png "Choose either C# or F#")
 
@@ -112,7 +112,7 @@ O executor de teste permite que você veja quais testes são registrados e selec
 
 Você pode executar acessórios de teste individuais selecionando o acessório texto nas exibições aninhadas ou você pode executar todos os seus testes com "Executar tudo". Se você executar o teste padrão, ele deverá incluir um teste aprovado, um não aprovado e um ignorado. Esta é a aparência do relatório e você pode fazer uma busca detalhada diretamente nos testes não aprovados e descobrir mais informações sobre a falha:
 
-[![](touch.unit-images/05-sml.png "Um relatório de exemplo")](touch.unit-images/05.png#lightbox)[![](touch.unit-images/06-sml.png "Um relatório de exemplo")](touch.unit-images/06.png#lightbox)[![](touch.unit-images/07-sml.png "Um relatório de exemplo")](touch.unit-images/07.png#lightbox)
+[![](touch.unit-images/05-sml.png "Um relatório amostral")](touch.unit-images/05.png#lightbox) [![](touch.unit-images/06-sml.png "Um relatório amostral")](touch.unit-images/06.png#lightbox) [![](touch.unit-images/07-sml.png "Um relatório amostral")](touch.unit-images/07.png#lightbox)
 
 Você também pode examinar a janela Saída do Aplicativo no seu IDE para ver quais testes estão sendo executados e seus status atuais.
 

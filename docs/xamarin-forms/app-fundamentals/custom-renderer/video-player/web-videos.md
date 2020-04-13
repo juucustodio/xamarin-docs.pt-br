@@ -8,15 +8,15 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
 ms.openlocfilehash: 107b2a970041c70bb021b03dd98f8c91eaea8d34
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "70771754"
 ---
 # <a name="playing-a-web-video"></a>Reproduzindo um vídeo da Web
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
+[![Baixar](~/media/shared/download.png) amostra Baixar a amostra](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
 
 A classe `VideoPlayer` define uma propriedade `Source` usada para especificar a origem do arquivo de vídeo, bem como uma propriedade `AutoPlay`. `AutoPlay` tem uma configuração padrão igual a `true`, o que significa que o vídeo deve iniciar a reprodução automaticamente após a definição de `Source`:
 
@@ -54,7 +54,7 @@ namespace FormsVideoLibrary
 }
 ```
 
-A propriedade `Source` é do tipo `VideoSource`, que é padronizado após a classe abstrata [`ImageSource`](xref:Xamarin.Forms.ImageSource) do Xamarin.Forms e seus três derivados [`UriImageSource`](xref:Xamarin.Forms.UriImageSource), [`FileImageSource`](xref:Xamarin.Forms.FileImageSource) e [`StreamImageSource`](xref:Xamarin.Forms.StreamImageSource). No entanto, nenhuma opção de fluxo está disponível para o `VideoPlayer`, pois o iOS e o Android não dão suporte à reprodução de um vídeo de um fluxo.
+A `Source` propriedade é `VideoSource`do tipo , que é padronizada após a classe [`ImageSource`](xref:Xamarin.Forms.ImageSource) abstrata Xamarin.Forms, e seus três derivados, [`UriImageSource`](xref:Xamarin.Forms.UriImageSource) [`FileImageSource`](xref:Xamarin.Forms.FileImageSource)e [`StreamImageSource`](xref:Xamarin.Forms.StreamImageSource). No entanto, nenhuma opção de fluxo está disponível para o `VideoPlayer`, pois o iOS e o Android não dão suporte à reprodução de um vídeo de um fluxo.
 
 ## <a name="video-sources"></a>Fontes de vídeo
 
@@ -225,7 +225,7 @@ namespace FormsVideoLibrary.iOS
 
 Posteriormente, quando a propriedade `Source` é alterada, o método `OnElementPropertyChanged` é chamado com uma propriedade `PropertyName` igual a "Origem", e `SetSource` é chamado novamente.
 
-Para reproduzir um arquivo de vídeo no iOS, um objeto do tipo [`AVAsset`](xref:AVFoundation.AVAsset) é criado primeiro para encapsular o arquivo de vídeo e ele é usado para criar um [`AVPlayerItem`](xref:AVFoundation.AVPlayerItem), que é então transferido para o objeto `AVPlayer`. É desta forma que o método `SetSource` manipula a propriedade `Source` quando ela é do tipo `UriVideoSource`:
+Para reproduzir um arquivo de vídeo no [`AVAsset`](xref:AVFoundation.AVAsset) iOS, um objeto de tipo é criado pela [`AVPlayerItem`](xref:AVFoundation.AVPlayerItem)primeira vez para encapsular o arquivo de vídeo, e que é usado para criar um , que é então entregue ao `AVPlayer` objeto. É desta forma que o método `SetSource` manipula a propriedade `Source` quando ela é do tipo `UriVideoSource`:
 
 ```csharp
 namespace FormsVideoLibrary.iOS
@@ -465,7 +465,7 @@ Com a implementação dessas propriedades nos três renderizadores, é possível
 
 A classe `VideoSourceConverter` converte a cadeia de caracteres em uma `UriVideoSource`. Quando você navega para a página **Reproduzir um vídeo da Web**, o vídeo começa a ser carregado e inicia a execução quando uma quantidade suficiente de dados é baixada e armazenada em buffer. O vídeo tem cerca de 10 minutos:
 
-[![Reproduzir um vídeo da Web](web-videos-images/playwebvideo-small.png "Reproduzir um vídeo da Web")](web-videos-images/playwebvideo-large.png#lightbox "Reproduzir um vídeo da Web")
+[![Reproduzir vídeo da Web](web-videos-images/playwebvideo-small.png "Reproduzir vídeo da Web")](web-videos-images/playwebvideo-large.png#lightbox "Reproduzir vídeo da Web")
 
 Em cada uma das plataformas, os controles de transporte esmaecem se não são usados, mas podem ser restaurados para exibição com um toque no vídeo.
 
@@ -521,4 +521,4 @@ Como alternativa, você pode definir a propriedade `Source` em um arquivo de ví
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Demonstrações do player de vídeo (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
+- [Demonstrações do player de vídeo (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)

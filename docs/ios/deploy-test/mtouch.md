@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 06/05/2017
 ms.openlocfilehash: 2a0f9d063b319c0f412f6e8f47a59f0f994678ae
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73026279"
 ---
 # <a name="using-mtouch-to-bundle-xamarinios-apps"></a>Usando mtouch para o agrupar aplicativos Xamarin.iOS
@@ -41,7 +41,7 @@ export PATH=$PATH:/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/bin
 > [!WARNING]
 > Para usar o `mtouch`, não dependa da existência do **/Developer/MonoTouch/usr/bin**, um link simbólico que aponta para **/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/bin**. Esse link simbólico existe apenas para manter a compatibilidade com versões mais antigas do MonoTouch que não foram instaladas em **/Library/Frameworks/...** e pode desaparecer em uma versão futura.
 
-## <a name="building"></a>Compilação
+## <a name="building"></a>Construção
 
 O comando `mtouch` pode compilar o código de três maneiras diferentes:
 
@@ -92,7 +92,7 @@ PID: 98460
 Press enter to terminate the application
 ```
 
-É altamente recomendável que você também mantenha um log dos arquivos de saída padrão e de erro padrão para ajudar na depuração. A saída de `Console.WriteLine` vai para `stdout`, enquanto a saída de `Console.Error.WriteLine` e eventuais outras mensagens de erro de tempo de execução vai para `stderr`.
+É altamente recomendável que você também mantenha um log dos arquivos de saída padrão e de erro padrão para ajudar na depuração. A saída de `Console.WriteLine` vai para `stdout`, enquanto a saída de `Console.Error.WriteLine` e eventuais outras mensagens de erro de runtime vai para `stderr`.
 
 Para fazer isso, use os sinalizadores `--stdout` e `--stderr`:
 

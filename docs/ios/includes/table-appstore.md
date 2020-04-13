@@ -1,16 +1,16 @@
 ---
 ms.openlocfilehash: 8cd3861093d4548c5252150cb3c74921c6217b25
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "70775819"
 ---
 |ID de gênero|Nome de gênero|
 |---|---|
-|6000|Negócio|
-|6001|Previsão do tempo|
-|6002|Utilitários|
+|6000|Business|
+|6001|Clima|
+|6002|Utilidades|
 |6003|Viagens|
 |6004|Esportes|
 |6005|Redes sociais|
@@ -36,10 +36,10 @@ Subgêneros de jogos (6014):
 |ID de gênero|Nome de gênero|
 |---|---|
 |7001|Ação|
-|7002|Aventura|
+|7002|Adventure|
 |7003|Fliperama|
-|7004|Placa|
-|7005|Cartão|
+|7004|Board|
+|7005|Card|
 |7006|Cassino|
 |7007|Dados|
 |7008|Formação educacional|
@@ -53,7 +53,7 @@ Subgêneros de jogos (6014):
 |7016|Esportes|
 |7017|Estratégia|
 |7018|Trívia|
-|7019|Palavra|
+|7019|Word|
 
 Subgêneros de banca de jornal (6021):
 
@@ -64,7 +64,7 @@ Subgêneros de banca de jornal (6021):
 |13003|Casa e ambiente|
 |13004|Ao ar livre e natureza|
 |13005|Esportes e lazer|
-|13006|Automotivos|
+|13006|Automotivo|
 |13007|Artes e fotografia|
 |13008|Noivas e casamentos|
 |13009|Negócios e investimentos|

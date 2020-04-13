@@ -9,10 +9,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 05/30/2018
 ms.openlocfilehash: ab4e0e79c39d36adcfb29e9659c2c6a924c80470
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73020870"
 ---
 # <a name="editing-android-virtual-device-properties"></a>Editar propriedades do Dispositivo Virtual Android
@@ -25,7 +25,7 @@ _Este artigo explica como usar o Android Device Manager para editar as proprieda
 
 O **Android Device Manager** é compatível com a edição de propriedades de perfis individuais de dispositivos virtuais Android. As telas **Novo Dispositivo** e **Editar Dispositivo** listam as propriedades do dispositivo virtual na primeira coluna, com os valores correspondentes de cada propriedade na segunda coluna (como mostrado neste exemplo): 
 
-[![Tela Novo Dispositivo de exemplo](device-properties-images/win/01-new-device-editor-sml.png)](device-properties-images/win/01-new-device-editor.png#lightbox)
+[![Exemplo de nova tela do dispositivo](device-properties-images/win/01-new-device-editor-sml.png)](device-properties-images/win/01-new-device-editor.png#lightbox)
 
 Ao selecionar uma propriedade, uma descrição detalhada é exibida à direita. É possível modificar as *propriedades de perfil de hardware* e as *propriedades de AVD*. As propriedades de perfil de hardware (como `hw.ramSize` e `hw.accelerometer`) descrevem as características físicas do dispositivo emulado. Essas características são o tamanho da tela, a quantidade de RAM disponível e se existe um acelerômetro. As propriedades de AVD especificam a operação do AVD quando ele é executado. Por exemplo, as propriedades de AVD podem ser configuradas para especificar como o AVD usa a placa gráfica do computador de desenvolvimento para renderização.
 
@@ -50,7 +50,7 @@ Ao selecionar uma propriedade, uma descrição detalhada é exibida à direita. 
 
 O **Android Device Manager** é compatível com a edição de propriedades de perfis individuais de dispositivos virtuais Android. As telas **Novo Dispositivo** e **Editar Dispositivo** listam as propriedades do dispositivo virtual na primeira coluna, com os valores correspondentes de cada propriedade na segunda coluna (como mostrado neste exemplo): 
 
-[![Tela Novo Dispositivo de exemplo](device-properties-images/mac/01-new-device-editor-sml.png)](device-properties-images/mac/01-new-device-editor.png#lightbox)
+[![Exemplo de nova tela do dispositivo](device-properties-images/mac/01-new-device-editor-sml.png)](device-properties-images/mac/01-new-device-editor.png#lightbox)
 
 Ao selecionar uma propriedade, uma descrição detalhada é exibida à direita. É possível modificar as *propriedades de perfil de hardware* e as *propriedades de AVD*. As propriedades de perfil de hardware (como `hw.ramSize` e `hw.accelerometer`) descrevem as características físicas do dispositivo emulado. Essas características são o tamanho da tela, a quantidade de RAM disponível e se existe um acelerômetro. As propriedades de AVD especificam a operação do AVD quando ele é executado. Por exemplo, as propriedades de AVD podem ser configuradas para especificar como o AVD usa a placa gráfica do computador de desenvolvimento para renderização.
 

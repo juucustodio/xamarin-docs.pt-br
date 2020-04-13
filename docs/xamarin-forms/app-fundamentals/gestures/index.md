@@ -8,30 +8,30 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/25/2018
 ms.openlocfilehash: 33968fb935e8b69736ac338bfa0479e4f278e64a
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50106176"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "61184564"
 ---
 # <a name="xamarinforms-gestures"></a>Gestos do Xamarin.Forms
 
 _Reconhecedores de gestos podem ser usados para detectar a interação do usuário com exibições em um aplicativo Xamarin.Forms._
 
-A classe [`GestureRecognizer`](xref:Xamarin.Forms.GestureRecognizer) do Xamarin.Forms dá suporte a gestos de toque, de pinçagem, de panorâmica e de passar o dedo em instâncias de [`View`](xref:Xamarin.Forms.View).
+A classe Xamarin.Forms [`GestureRecognizer`](xref:Xamarin.Forms.GestureRecognizer) suporta gestos de toque, pinça, panela e deslizamento em [`View`](xref:Xamarin.Forms.View) instâncias.
 
-## <a name="adding-a-tap-gesture-recognizertapmd"></a>[Adicionando um reconhecedor de gestos de toque](tap.md)
+## <a name="adding-a-tap-gesture-recognizer"></a>[Adicionando um reconhecedor de gestos de toque](tap.md)
 
-Um gesto de toque é usado para detecção de toque e é reconhecido com a classe [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer).
+Um gesto de toque é usado [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer) para detecção de toques e é reconhecido com a classe.
 
-## <a name="adding-a-pinch-gesture-recognizerpinchmd"></a>[Adicionando um reconhecedor de gestos de pinçagem](pinch.md)
+## <a name="adding-a-pinch-gesture-recognizer"></a>[Adicionando um reconhecedor de gestos de pinçagem](pinch.md)
 
-Um gesto de pinçagem é usado para aplicar zoom interativo e é reconhecido com a classe [`PinchGestureRecognizer`](xref:Xamarin.Forms.PinchGestureRecognizer).
+Um gesto de pinça é usado para [`PinchGestureRecognizer`](xref:Xamarin.Forms.PinchGestureRecognizer) realizar zoom interativo e é reconhecido com a classe.
 
-## <a name="adding-a-pan-gesture-recognizerpanmd"></a>[Adicionando um reconhecedor de gestos de panorâmica](pan.md)
+## <a name="adding-a-pan-gesture-recognizer"></a>[Adicionando um reconhecedor de gestos de panorâmica](pan.md)
 
-Um gesto de panorâmica é usado para detectar a movimentação dos dedos na tela e aplicar essa movimentação ao conteúdo. Ele é reconhecido com a classe [`PanGestureRecognizer`](xref:Xamarin.Forms.PanGestureRecognizer).
+Um gesto de panela é usado para detectar o movimento dos dedos ao redor [`PanGestureRecognizer`](xref:Xamarin.Forms.PanGestureRecognizer) da tela e aplicar esse movimento ao conteúdo, e é reconhecido com a classe.
 
-## <a name="adding-a-swipe-gesture-recognizerswipemd"></a>[Adicionando um reconhecedor de gestos de passar o dedo](swipe.md)
+## <a name="adding-a-swipe-gesture-recognizer"></a>[Adicionando um reconhecedor de gestos de passar o dedo](swipe.md)
 
-Um gesto de passar o dedo ocorre quando um dedo é movido pela tela na direção horizontal ou vertical e geralmente é usado para iniciar a navegação pelo conteúdo. Gestos de passar o dedo são reconhecidos com a classe [`SwipeGestureRecognizer`](xref:Xamarin.Forms.SwipeGestureRecognizer).
+Um gesto de passar o dedo ocorre quando um dedo é movido pela tela na direção horizontal ou vertical e geralmente é usado para iniciar a navegação pelo conteúdo. Gestos de furto são [`SwipeGestureRecognizer`](xref:Xamarin.Forms.SwipeGestureRecognizer) reconhecidos com a classe.

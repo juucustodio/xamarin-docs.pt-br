@@ -8,15 +8,15 @@ author: davidortinau
 ms.author: daortin
 ms.date: 05/29/2018
 ms.openlocfilehash: 81377d790d695b60465319aeb166eb1e62483211
-ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "76940937"
 ---
 # <a name="pair-to-mac-for-xamarinios-development"></a>Emparelhar com o Mac para desenvolvimento no Xamarin.iOS
 
-_Este guia descreve como usar a funcionalidade Emparelhar com Mac para conectar o Visual Studio 2019 a um host de build do Mac. As mesmas instruções se aplicam ao Visual Studio 2017._
+_Este guia descreve como usar o Pair to Mac para conectar o Visual Studio 2019 a um host de compilação Mac. As mesmas instruções se aplicam ao Visual Studio 2017._
 
 ## <a name="overview"></a>Visão geral
 
@@ -88,7 +88,7 @@ Agora que o acesso remoto está habilitado, conecte o Visual Studio 2019 ao Mac.
 
 3. Selecione um Mac na lista. Clique em **Conectar**.
 
-4. Insira o nome de usuário e a senha.
+4. Insira seu nome de usuário e sua senha.
 
     - Na primeira vez que se conectar a um Mac, você precisará inserir seu nome de usuário e senha do computador:
 
@@ -112,7 +112,7 @@ Agora que o acesso remoto está habilitado, conecte o Visual Studio 2019 ao Mac.
       Pode haver apenas um Mac conectado por vez.
 
       > [!TIP]
-      > Clicar com o botão direito do mouse em qualquer Mac na lista **Emparelhar com Mac** exibe um menu de contexto que permite **Conectar...** , **Esquecer este Mac** ou **Desconectar**:
+      > Clicar com o botão direito do mouse em qualquer Mac na lista **Emparelhar com Mac** exibe um menu de contexto que permite **Conectar...**, **Esquecer este Mac** ou **Desconectar**:
       >
       > ![Os menus de contexto Emparelhar com Mac](images/contextmenu.png "Os menus de contexto Emparelhar com Mac")
       >
@@ -141,7 +141,7 @@ Se não vir um Mac específico listado na caixa de diálogo **Emparelhar com Mac
 
       Dependendo de sua configuração de rede, talvez seja necessário usar um nome de interface diferente de `en0`. Por exemplo: `en1`, `en2`, etc.
 
-2. Na caixa de diálogo **Emparelhar com Mac** do Visual Studio 2019, selecione **Adicionar Mac...** :
+2. Na caixa de diálogo **Emparelhar com Mac** do Visual Studio 2019, selecione **Adicionar Mac...**:
 
     [![O botão Adicionar Mac na caixa de diálogo Emparelhar com Mac](images/addtomac.png "O botão Adicionar Mac na caixa de diálogo Emparelhar com Mac")](images/addtomac-large.png#lightbox)
 
@@ -160,7 +160,7 @@ Se não vir um Mac específico listado na caixa de diálogo **Emparelhar com Mac
 
 ## <a name="automatic-mac-provisioning"></a>Provisionamento automático do Mac
 
-Começando com o [Visual Studio 2019 versão 15.6](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes#automatic-macos-provisioning), a função Emparelhar com Mac provisiona um Mac automaticamente com o software necessário para a criação de aplicativos Xamarin.iOS: Mono, Xamarin.iOS (a estrutura de software, não o IDE do Visual Studio para Mac) e várias ferramentas relacionadas a Xcode (mas não o Xcode em si).
+Começando com [visual studio 2019 versão 15.6](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes#automatic-macos-provisioning), Pair to Mac provisiona automaticamente um Mac com software necessário para a construção de aplicativos Xamarin.iOS: Mono, Xamarin.iOS (a estrutura de software, não o Visual Studio para Mac IDE), e várias ferramentas relacionadas ao Xcode (mas não xcode em si).
 
 > [!IMPORTANT]
 >
@@ -176,9 +176,9 @@ O Emparelhar com Mac fará a verificação para certificar-se de que o Mono est�
 
 O progresso é indicado por vários prompts, conforme mostrado pelas seguintes capturas de tela (clique para ampliar):
 
-||Verificação de instalação|Baixando|Instalando o
+||Verificação de instalação|Baixando|Instalando
 |---|---|---|---|
-|Mono|[![Instalação do Mono ausente](images/mono-missing.png "Instalação do Mono ausente")](images/mono-missing-large.png#lightbox)|[![Baixar o Mono](images/mono-downloading.png "Baixar Mono")](images/mono-downloading-large.png#lightbox)|[![Instalar o Mono](images/mono-installing.png "Instalar Mono")](images/mono-installing-large.png#lightbox)|
+|Mono|[![Instalação do Mono ausente](images/mono-missing.png "Instalação do Mono ausente")](images/mono-missing-large.png#lightbox)|[![Baixar o Mono](images/mono-downloading.png "Baixar Mono")](images/mono-downloading-large.png#lightbox)|[![Instalar Mono](images/mono-installing.png "Instalar Mono")](images/mono-installing-large.png#lightbox)|
 
 ### <a name="xamarinios"></a>Xamarin.iOS
 
@@ -192,7 +192,7 @@ O Emparelhar com Mac faz upgrade do Xamarin.iOS no Mac para corresponder à vers
 
 O progresso é indicado por vários prompts, conforme mostrado pelas seguintes capturas de tela (clique para ampliar):
 
-||Verificação de instalação|Baixando|Instalando o
+||Verificação de instalação|Baixando|Instalando
 |---|---|---|---|
 |Xamarin.iOS|[![Instalação do Xamarin.iOS ausente](images/xamios-missing.png "Instalação do Xamarin.iOS ausente")](images/xamios-missing-large.png#lightbox)|[![Baixar o Xamarin.iOS](images/xamios-downloading.png "Baixar Xamarin.iOS")](images/xamios-downloading-large.png#lightbox)|[![Instalar o Xamarin.iOS](images/xamios-installing.png "Instalando o Xamarin.iOS")](images/xamios-installing-large.png#lightbox)|
 
@@ -236,7 +236,7 @@ Os parâmetros passados para `msbuild` no exemplo acima são:
 - `ServerPassword` – a senha a ser usada ao fazer logon no host de build do Mac.
 
 > [!NOTE]
-> O Visual Studio 2019 armazena o `msbuild` no seguinte diretório: **C:\Arquivos de Programas (x86)\Microsoft Visual Studio\2019\\&lt;Version&gt;\MSBuild\Atual\Bin**
+> Visual Studio `msbuild` 2019 armazena no seguinte diretório: **C:\Arquivos de programa (x86)\Microsoft Visual Studio\2019\\&lt;Versão&gt;\MSBuild\Current\Bin**
 
 Na primeira vez em que o Emparelhar com Mac fizer logon em um determinado host de build do Mac usando o Visual Studio 2019 ou a linha de comando, ele configurará chaves SSH. Com essas chaves, logons futuros não exigirão um nome de usuário ou senha. As chaves recém-criadas são armazenadas em **%LOCALAPPDATA%\Xamarin\MonoTouch**.
 

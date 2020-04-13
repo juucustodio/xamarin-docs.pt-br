@@ -9,10 +9,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 04/16/2018
 ms.openlocfilehash: d638bf17d2a4ea23134a2d4ed335637f67e46ff7
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73022459"
 ---
 # <a name="installing-xamarinios-on-windows"></a>Como instalar o Xamarin.iOS no Windows
@@ -21,13 +21,13 @@ _Este artigo descreve como configurar um computador Windows e um host de build d
 
 ::: zone pivot="windows"
 
-## <a name="overview"></a>Visão Geral
+## <a name="overview"></a>Visão geral
 
 Para criar aplicativos do Xamarin.iOS com o Visual Studio 2019 no Windows, você precisará de:
 
 - Um computador Windows com o Visual Studio 2019 instalado. Ele pode ser físico ou uma máquina virtual.
 
-  - [Requisitos de sistema do Windows](~/cross-platform/get-started/requirements.md#windows-requirements)
+  - [Requisitos do sistema Windows](~/cross-platform/get-started/requirements.md#windows-requirements)
 
 - Uma rede acessível por Mac configurada com ferramentas de build da Apple e Xamarin.iOS. O Visual Studio 2019 acessa esse computador através de uma conexão de rede para usar as ferramentas de build da Apple, que são necessárias para compilar aplicativos do iOS nativos.
 
@@ -38,7 +38,7 @@ Para criar aplicativos do Xamarin.iOS com o Visual Studio 2019 no Windows, você
   >
   > Se não tiver acesso a um Mac, você poderá usar [MacinCloud](https://www.macincloud.com/pages/visual-studio-mac.html) ou [MacStadium](https://www.macstadium.com/). Ambos os serviços fornecem o hardware do Mac baseado em nuvem que você pode usar para criar projetos do Xamarin.iOS.
 
-## <a name="setup"></a>Configuração
+## <a name="setup"></a>Instalação
 
 Para obter a configuração para o desenvolvimento do Xamarin.iOS no Visual Studio 2019, siga estas etapas:
 
@@ -68,17 +68,17 @@ Para obter a configuração para o desenvolvimento do Xamarin.iOS no Visual Stud
 ::: zone-end
 ::: zone pivot="win-vs2017"
 
-## <a name="overview"></a>Visão Geral
+## <a name="overview"></a>Visão geral
 
 Para criar aplicativos Xamarin.iOS com o Visual Studio 2017 no Windows, você precisará de:
 
 - Um computador Windows com o Visual Studio 2017 instalado. Ele pode ser físico ou uma máquina virtual.
-  - [Requisitos de sistema do Windows](~/cross-platform/get-started/requirements.md#windows-requirements)
+  - [Requisitos do sistema Windows](~/cross-platform/get-started/requirements.md#windows-requirements)
 
 - Uma rede acessível por Mac configurada com ferramentas de build da Apple e Xamarin.iOS. O Visual Studio 2017 acessa esse computador com uma conexão de rede para usar as ferramentas de build da Apple, que são necessárias para compilar aplicativos do iOS nativos.
   - [Requisitos de sistema do Mac](~/cross-platform/get-started/requirements.md#macos-requirements)
 
-## <a name="setup"></a>Configuração
+## <a name="setup"></a>Instalação
 
 Para obter a configuração para o desenvolvimento do Xamarin.iOS no Visual Studio 2017, siga estas etapas:
 
@@ -86,7 +86,7 @@ Para obter a configuração para o desenvolvimento do Xamarin.iOS no Visual Stud
 
     O Xamarin.iOS funciona com o Visual Studio 2017 edições Community, Professional e Enterprise, em uma máquina virtual ou independente.
 
-    - [Instalar o Visual Studio 2017](~/get-started/installation/windows.md).
+    - [Instale o Visual Studio 2017](~/get-started/installation/windows.md).
 
 2. Configurar Mac (instalar Xcode e Visual Studio para Mac)
 
@@ -114,4 +114,4 @@ Este artigo descreve como configurar um computador Windows e um host de build do
 
 - [Introdução ao Xamarin.iOS para Visual Studio](introduction-to-xamarin-ios-for-visual-studio.md)
 - [Configurando o Visual Studio para desenvolvimento do iOS](config-options.md)
-- [Provisionamento de Dispositivo](~/ios/get-started/installation/device-provisioning/index.md)
+- [Provisionamento de dispositivos](~/ios/get-started/installation/device-provisioning/index.md)

@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 04/12/2017
 ms.openlocfilehash: 00d7610bda3d1b7c9f954df64bb6e3af982b1d06
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "76725513"
 ---
 # <a name="provisioning-profiles-for-xamarinmac-apps"></a>Perfis de provisionamento para aplicativos Xamarin.Mac
@@ -92,7 +92,7 @@ Sempre que o desenvolvedor mudar os recursos que estão sendo usados por uma ID 
 ## <a name="related-links"></a>Links relacionados
 
 - [Instalação](~//mac/get-started/installation.md)
-- [Amostra do Hello, Mac](~//mac/get-started/hello-mac.md)
+- [Olá, amostra mac](~//mac/get-started/hello-mac.md)
 - [Distribua aplicativos na Mac App Store](https://developer.apple.com/devcenter/mac/checklist/)
-- [Guia de Ferramentas: Assinatura de Código do Aplicativo](https://developer.apple.com/library/mac/#documentation/ToolsLanguages/Conceptual/OSXWorkflowGuide/CodeSigning/CodeSigning.html)
+- [Guia de ferramentas: assinatura de código do aplicativo](https://developer.apple.com/library/mac/#documentation/ToolsLanguages/Conceptual/OSXWorkflowGuide/CodeSigning/CodeSigning.html)
 - [ID de Desenvolvedor e GateKeeper](https://developer.apple.com/developer-id/)

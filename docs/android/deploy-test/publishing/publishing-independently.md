@@ -7,10 +7,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
 ms.openlocfilehash: dee49d556173ec0b9544820f129eef8a9cce404f
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73021315"
 ---
 # <a name="publishing-independently"></a>Publicação Independente
@@ -33,7 +33,7 @@ Visite a [visualstudio.com](https://visualstudio.microsoft.com/xamarin/) para ba
 
 Por padrão, o Android impede que os usuários baixem e instalem aplicativos de locais diferentes do Google Play. Para permitir a instalação de fontes diferentes do marketplace, um usuário deve habilitar a configuração *Fontes desconhecidas* em um dispositivo antes de tentar instalar um aplicativo. A configuração para isso pode ser encontrada em **Configurações > Segurança**, conforme mostrado no diagrama a seguir:
 
-[![Tela de Configurações de segurança](publishing-independently-images/settings.png)](publishing-independently-images/settings.png#lightbox)
+[![Tela de configurações de segurança](publishing-independently-images/settings.png)](publishing-independently-images/settings.png#lightbox)
 
 > [!IMPORTANT]
 > Alguns provedores de rede podem impedir a instalação de aplicativos de fontes desconhecidas, independentemente dessa configuração.
@@ -42,7 +42,7 @@ Por padrão, o Android impede que os usuários baixem e instalem aplicativos de 
 
 Anexar a versão APK a um email é uma maneira rápida e fácil de distribuir um aplicativo para usuários. Quando o usuário abre o email em um dispositivo com Android, o Android reconhecerá o anexo APK e exibirá um botão **Instalar**, conforme mostrado na imagem a seguir:
 
-[![Botão Instalar para anexo](publishing-independently-images/publishing-via-email.png)](publishing-independently-images/publishing-via-email.png#lightbox)
+[![Instale o botão para fixação](publishing-independently-images/publishing-via-email.png)](publishing-independently-images/publishing-via-email.png#lightbox)
 
 Embora a distribuição por email seja simples, ela fornece algumas proteções contra pirataria ou distribuição não autorizada. Ela é melhor reservada para situações em que os destinatários do aplicativo sejam poucos e eles são confiáveis para não distribuir o aplicativo.
 
@@ -55,12 +55,12 @@ Embora a distribuição por email seja simples, ela fornece algumas proteções 
 Instalação manual é uma terceira opção de instalação de aplicativos. Para efetuar uma instalação manual de um aplicativo:
 
 1. **Distribuir uma cópia do APK para usuário** &ndash; Por exemplo, essa cópia pode ser distribuída em um CD ou unidade flash USB.
-1. **(O usuário) instala o aplicativo em um dispositivo Android**  &ndash; Usar a linha de comando *Ferramenta Android Debug Bridge* (**adb**). **adb** é uma ferramenta de linha de comando versátil que permite a comunicação com uma instância do emulador ou um dispositivo Android. O SDK do Android inclui o **adb**; ele pode ser encontrado no diretório **\<sdk>/platform-tools/** .
+1. **(O usuário) instala o aplicativo em um dispositivo Android**  &ndash; Usar a linha de comando *Ferramenta Android Debug Bridge* (**adb**). **adb** é uma ferramenta de linha de comando versátil que permite a comunicação com uma instância do emulador ou um dispositivo Android. O SDK do Android inclui o **adb**; ele pode ser encontrado no diretório **\<sdk>/platform-tools/**.
 
 O dispositivo Android deve estar conectado com um cabo USB no computador.
 Computadores com Windows também podem exigir drivers USB adicionais do fornecedor do telefone para serem reconhecidos pelo **adb**. Instruções de instalação para esses drivers adicionais de USB estão além do escopo deste documento.
 
-Antes de emitir qualquer comando **adb**, é útil saber quais instâncias de emuladores ou dispositivos estão conectados, caso haja algum. É possível ver uma lista do que está conectado por meio do comando `devices`, conforme demonstrado no seguinte snippet:
+Antes de emitir quaisquer comandos **adb,** é útil saber quais instâncias ou dispositivos emuladores estão conectados, se houver. É possível ver uma lista do que está conectado por meio do comando `devices`, conforme demonstrado no seguinte snippet:
 
 ```shell
 $ adb devices

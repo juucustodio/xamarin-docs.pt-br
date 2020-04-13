@@ -8,15 +8,15 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/15/2017
 ms.openlocfilehash: 658184203c81079af9b4946c4da18dfb98381b0f
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73028549"
 ---
 # <a name="wallet-capabilities-in-xamarinios"></a>Recursos Wallet no Xamarin.iOS
 
-_A adição de recursos a um aplicativo geralmente requer configuração de provisionamento adicional. Este guia explica a configuração necessária para os recursos de carteira._
+_Adicionar recursos a um aplicativo geralmente requer configuração de provisionamento adicional. Este guia explica a configuração necessária para os recursos da Wallet._
 
 Wallet é um aplicativo que armazena e exibe códigos de barras e outros conteúdos que permitem aos usuários exibir tíquetes, passagens aéreas e cupons diretamente do dispositivo. Essas informações são armazenadas em um _passe_. Por exemplo, uma passagem aérea ou um único tíquete seriam um único passe. 
 
@@ -28,7 +28,7 @@ Os desenvolvedores podem trabalhar com o Wallet de várias maneiras:
 
 * Aplicativos de canal são aplicativos que não manipulam passes diretamente. Eles têm uma interação mínima com o passe além de recebê-lo e dar ao usuário a opção de adicioná-lo ao Wallet. Esses aplicativos não precisam de nenhum provisionamento ou direito especial, mas usam alguns métodos do PassKit Framework.
 
-## <a name="developer-center"></a>Developer Center
+## <a name="developer-center"></a>Central de Desenvolvedores
 
 Para criar um novo perfil de provisionamento a ser usado com o Wallet, faça o seguinte:
 
@@ -37,7 +37,7 @@ Para criar um novo perfil de provisionamento a ser usado com o Wallet, faça o s
     
     ![Seleção de ID do aplicativo](wallet-capabilities-images/image17.png)
 
-3. Clique no ícone **+** no canto superior direito da página.
+3. Clique **+** no ícone no canto superior direito da página.
 4. Registre uma nova ID do aplicativo, dando a ela um **nome** e um identificador de lote. (Observe que esse identificador de lote deve corresponder à ID de lote no projeto):
    
     ![Adicionar detalhes da ID do aplicativo](wallet-capabilities-images/image18.png)

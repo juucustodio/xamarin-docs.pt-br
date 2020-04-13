@@ -7,10 +7,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 01/22/2020
 ms.openlocfilehash: 4c9096edddeb00070aaabc3e93b283f2d55c1bfa
-ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "79304313"
 ---
 # <a name="uninstall-xamarin-from-visual-studio"></a>Desinstalar o Xamarin do Visual Studio
@@ -39,7 +39,7 @@ O Xamarin é desinstalado do Visual Studio 2019 e do Visual Studio 2017 usando o
 
     [![](uninstalling-xamarin-images/vs2017-04-sml.png "Press the Modify button")](uninstalling-xamarin-images/vs2017-04.png#lightbox)
 
-Componentes individuais do Xamarin (como o criador de perfil ou as pastas de trabalho) podem ser desinstalados, alternando para a guia **Componentes Individuais** na etapa 3 e desmarcando componentes específicos:
+Componentes individuais de Xamarin (como o Profiler ou Workbooks) podem ser desinstalados mudando para a guia **Componentes Individuais** na etapa 3 e desverificando componentes específicos:
 
 [![](uninstalling-xamarin-images/vs2017-components-sml.png "Uninstall individual components")](uninstalling-xamarin-images/vs2017-components.png#lightbox)
 
@@ -50,7 +50,7 @@ Para desinstalar completamente o Visual Studio 2017, escolha **Desinstalar** no 
 > [!IMPORTANT]
 > Se houver duas (ou mais) instâncias do Visual Studio instaladas SxS (lado a lado), como uma versão de lançamento e uma versão prévia, desinstalar uma instância poderá remover algumas funcionalidades do Xamarin de outras instâncias do Visual Studio, incluindo:
 >
-> - Xamarin Profiler
+> - Criador de perfil do Xamarin
 > - Pastas de trabalho/Inspetor do Xamarin
 > - Simulador do iOS remoto do Xamarin
 > - SDK do Bonjour da Apple

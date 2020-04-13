@@ -1,5 +1,5 @@
 ---
-title: 'Xamarin.Essentials: Conectividade'
+title: 'Xamarin.Essentials: Connectivity'
 description: A classe Connectivity no Xamarin.Essentials permite monitorar alterações em condições de rede do dispositivo, verificar o acesso da rede atual e como ele está conectado no momento.
 ms.assetid: E1B1F152-B1D5-4227-965E-C0AEBF528F49
 author: jamesmontemagno
@@ -7,13 +7,13 @@ ms.author: jamont
 ms.date: 01/08/2019
 ms.custom: video
 ms.openlocfilehash: c70510f7b47f93c6119532b6a1c06f6c2e9e56ea
-ms.sourcegitcommit: afe9d93373d66eb45d82cabefca83b5733969634
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "67855766"
 ---
-# <a name="xamarinessentials-connectivity"></a>Xamarin.Essentials: Conectividade
+# <a name="xamarinessentials-connectivity"></a>Xamarin.Essentials: Connectivity
 
 A classe **Connectivity** permite monitorar alterações em condições de rede do dispositivo, verificar o acesso da rede atual e como ele está conectado no momento.
 
@@ -23,9 +23,9 @@ A classe **Connectivity** permite monitorar alterações em condições de rede 
 
 Para acessar a funcionalidade **Connectivity**, a seguinte configuração específica da plataforma é necessária.
 
-# <a name="androidtabandroid"></a>[Android](#tab/android)
+# <a name="android"></a>[Android](#tab/android)
 
-A permissão `AccessNetworkState` é necessária e deve ser configurada no projeto do Android. Ela pode ser usado das seguintes maneiras:
+A permissão `AccessNetworkState` é necessária e deve ser configurada no projeto do Android. Isso pode ser usado das seguintes maneiras:
 
 Abra o arquivo **AssemblyInfo.cs** na pasta **Propriedades** e adicione:
 
@@ -35,7 +35,7 @@ Abra o arquivo **AssemblyInfo.cs** na pasta **Propriedades** e adicione:
 
 OU Atualize o Manifesto do Android:
 
-Abra o arquivo **AndroidManifest.xml** na pasta **Propriedades** e adicione o seguinte dentro do nó do **manifesto**.
+Abra o arquivo **AndroidManifest.xml** na pasta **Propriedades** e adicione o seguinte dentro do **nó manifesto.**
 
 ```xml
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -43,11 +43,11 @@ Abra o arquivo **AndroidManifest.xml** na pasta **Propriedades** e adicione o se
 
 Ou clique com o botão direito do mouse no projeto do Android e abra as propriedades do projeto. Em **Manifesto do Android**, localize a área **Permissões necessárias:** e marque a permissão **Acessar estado da rede**. Isso atualizará automaticamente o arquivo **AndroidManifest.xml**.
 
-# <a name="iostabios"></a>[iOS](#tab/ios)
+# <a name="ios"></a>[iOS](#tab/ios)
 
 Não exige mais configurações.
 
-# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
+# <a name="uwp"></a>[UWP](#tab/uwp)
 
 Não exige mais configurações.
 

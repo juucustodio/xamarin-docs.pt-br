@@ -9,10 +9,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 09/02/2018
 ms.openlocfilehash: b56275ef903aa7def239a2e19980f52d83e6194f
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "75489733"
 ---
 # <a name="hello-mac-walkthrough"></a>Olá, Mac – passo a passo
@@ -29,11 +29,11 @@ Os seguintes conceitos serão abordados:
 
 - **Visual Studio para Mac** – Introdução ao Visual Studio para Mac e como criar aplicativos Xamarin.Mac com ele.
 - **Anatomia de um aplicativo de Xamarin.Mac** – de que um aplicativo Xamarin.Mac consiste.
-- **Interface Builder do Xcode** – como usar o Interface Builder do Xcode para definir a interface do usuário de um aplicativo.
-- **Saídas e ações** – como usar saídas e ações para conectar controles na interface do usuário.
+- **Construtor de interfaces do Xcode** – Como usar o Construtor de Interfaces do Xcode para definir a interface de usuário de um aplicativo.
+- **Outlets e Ações** – Como usar tomadas e ações para conectar controles na interface do usuário.
 - **Teste/implantação** – como executar e testar um aplicativo Xamarin.Mac.
 
-## <a name="requirements"></a>Requisitos do
+## <a name="requirements"></a>Requisitos
 
 O desenvolvimento de aplicativos Xamarin.Mac requer:
 
@@ -53,7 +53,7 @@ Para executar um aplicativo criado com o Xamarin.Mac, você precisará do seguin
 
 Como mencionado acima, este guia explica as etapas para criar um aplicativo Mac chamado `Hello_Mac` que adiciona um único botão e um rótulo para a janela principal. Quando o botão for clicado, o rótulo exibirá o número de vezes que isso ocorreu.
 
-Para começar, faça o seguinte:
+Para começar, execute uma destas etapas:
 
 1. Inicie o Visual Studio para Mac:
 
@@ -63,7 +63,7 @@ Para começar, faça o seguinte:
 
     [![](hello-mac-images/setup02-sml.png "Selecting a Cocoa App")](hello-mac-images/setup02.png#lightbox)
 
-3. Digite `Hello_Mac` para o **Nome do Aplicativo** e mantenha todo o restante como padrão. Clique em **Avançar**:
+3. Digite `Hello_Mac` para o **Nome do Aplicativo** e mantenha todo o restante como padrão. Clique **em Next**:
 
     [![](hello-mac-images/setup03-sml.png "Setting the name of the app")](hello-mac-images/setup03.png#lightbox)
 
@@ -77,7 +77,7 @@ O Visual Studio para Mac criará o novo aplicativo Xamarin.Mac e exibirá os arq
 
 [![](hello-mac-images/project01-sml.png "The new solution default view")](hello-mac-images/project01.png#lightbox)
 
-O Visual Studio para Mac usa a mesma estrutura de **Solução** e **Projeto** que o Visual Studio 2019. Uma solução é um contêiner que pode conter um ou mais projetos; os projetos podem incluir aplicativos, bibliotecas de suporte, aplicativos de teste, etc. O **arquivo > novo** modelo de projeto cria uma solução e um projeto de aplicativo automaticamente.
+O Visual Studio para Mac usa a mesma estrutura de **Solução** e **Projeto** que o Visual Studio 2019. Uma solução é um contêiner que pode abrigar um ou mais projetos; projetos podem incluir aplicativos, bibliotecas de suporte, aplicativos de teste, etc. O modelo **File > New Project** cria uma solução e um projeto de aplicativo automaticamente.
 
 ## <a name="anatomy-of-a-xamarinmac-application"></a>Anatomia de um aplicativo Xamarin.Mac
 
@@ -269,15 +269,15 @@ Nas seções a seguir, dê uma olhada no que cada um desses recursos do Xcode fa
 
 Quando abre um arquivo **.storyboard** para edição no Xcode, o Visual Studio para Mac cria um *Arquivo de Projeto do Xcode* em segundo plano para comunicar alterações entre o próprio programa e o Xcode. Posteriormente, quando o desenvolvedor retorna do Xcode para o Visual Studio para Mac, alterações feitas neste projeto são sincronizadas com o projeto Xamarin.Mac pelo Visual Studio para Mac.
 
-A seção **Navegação do Projeto** permite ao desenvolvedor navegar entre todos os arquivos que compõem esse projeto Xcode de _shim_. Normalmente, eles se interessarão nos arquivos `.storyboard` nessa lista, por exemplo, `Main.storyboard`.
+A seção **De navegação** de projeto permite que o desenvolvedor navegue entre todos os arquivos que compõem este projeto Xcode _shim._ Normalmente, eles se interessarão nos arquivos `.storyboard` nessa lista, por exemplo, `Main.storyboard`.
 
 ### <a name="interface-hierarchy"></a>Hierarquia de interface
 
-A seção **Hierarquia de interface** permite que o desenvolvedor acesse facilmente várias propriedades importantes da interface do usuário como seus **Espaços reservados** e a **Janela** principal. Esta seção pode ser usada para acessar os elementos individuais (exibições) que compõem a interface do usuário e ajustar a maneira como são aninhados arrastando-os pelo interior da hierarquia.
+A seção **Hierarquia de Interface** permite que o desenvolvedor acesse facilmente várias propriedades-chave da interface do usuário, como seus Espaços **Reservados** e **janela**principal . Esta seção pode ser usada para acessar os elementos individuais (exibições) que compõem a interface do usuário e ajustar a maneira como são aninhados arrastando-os pelo interior da hierarquia.
 
 ### <a name="interface-editor"></a>Editor de interface
 
-A seção **Editor de interface** fornece a superfície na qual a interface do usuário é disposta graficamente. Arraste elementos da seção **biblioteca** da seção **Propriedades & utilitários** para criar o design. Conforme elementos de interface do usuário (exibições) são adicionados à área de design, eles serão adicionados à seção **Hierarquia de interface** na ordem em que aparecem no **Editor de interface**.
+A seção **Editor de interface** fornece a superfície na qual a interface do usuário é graficamente disposta. Arraste elementos da seção **Biblioteca** da seção **Propriedades & Utilitários** para criar o design. Conforme elementos de interface do usuário (exibições) são adicionados à área de design, eles serão adicionados à seção **Hierarquia de interface** na ordem em que aparecem no **Editor de interface**.
 
 ### <a name="properties--utilities"></a>Propriedades e utilitários
 
@@ -348,7 +348,7 @@ Para usar o Interface Builder, faça o seguinte:
 
 10. Clique no botão **Adicionar 4 Restrições** para adicionar as restrições e feche o editor.
 
-11. Selecione o rótulo e clique no ícone **Editor de Restrições** novamente:
+11. Selecione o rótulo e clique novamente no ícone **'Editor de restrições':**
 
     [![](hello-mac-images/xcode14.png "Adding constraints to the label")](hello-mac-images/xcode14.png#lightbox)
 
@@ -360,7 +360,7 @@ Para usar o Interface Builder, faça o seguinte:
 
 Quando redimensionar e mover controles, observe que o Interface Builder fornece dicas úteis de ajuste com base nas [Diretrizes de Interface Humana do macOS](https://developer.apple.com/design/human-interface-guidelines/macos/overview/themes/). Essas diretrizes ajudarão o desenvolvedor a criar aplicativos de alta qualidade que terão uma aparência e proporcionarão uma sensação familiares para os usuários do Mac.
 
-Examine a seção **Hierarquia de interface** para ver como a hierarquia e o layout dos elementos que compõem a interface do usuário são exibidos:
+Veja na seção **Hierarquia de Interface** para ver como o layout e a hierarquia dos elementos que compõem a interface do usuário são mostrados:
 
 [![](hello-mac-images/xcode15.png "Selecting an element in the Interface Hierarchy")](hello-mac-images/xcode15.png#lightbox)
 
@@ -450,7 +450,7 @@ Faça o seguinte:
 Com a interface do usuário conectada e exposta ao código C#, retorne para o Visual Studio para Mac e deixe-o sincronizar as alterações feitas no Xcode e no Interface Builder.
 
 > [!NOTE]
-> Provavelmente, demorou muito tempo para criar a interface do usuário e **Saídas** e **Ações** para esse primeiro aplicativo. Isso pode parecer muito trabalho, mas muitos conceitos novos foram introduzidos e muito tempo foi utilizado abordando novidades. Após praticar por um tempo e trabalhar com o Interface Builder, essa interface e todas as suas **Saídas** e **Ações** podem ser criadas em apenas um ou dois minutos.
+> Provavelmente levou muito tempo para criar a interface de usuário e **Outlets** e **Ações** para este primeiro app, e pode parecer muito trabalho, mas muitos novos conceitos foram introduzidos e muito tempo foi gasto cobrindo novos terrenos. Após praticar por um tempo e trabalhar com o Interface Builder, essa interface e todas as suas **Saídas** e **Ações** podem ser criadas em apenas um ou dois minutos.
 
 ### <a name="synchronizing-changes-with-xcode"></a>Sincronizando alterações com o Xcode
 
@@ -515,7 +515,7 @@ public override void ViewDidLoad ()
 }
 ```
 
-Use `ViewDidLoad`, em vez de outro método como `Initialize`, pois `ViewDidLoad` é chamado *após* o sistema operacional ter carregado e instanciado a interface do usuário do arquivo **.storyboard**. Se o desenvolvedor tivesse tentado acessar o controle de rótulo antes do arquivo **.storyboard** ter sido totalmente carregado e instanciado, um erro `NullReferenceException` seria gerado, porque o controle de rótulo ainda não teria sido criado.
+Use `ViewDidLoad`, em vez `Initialize`de `ViewDidLoad` outro método como , porque é chamado *depois* que o SISTEMA OPERACIONAL carregou e instanciaa a interface do usuário a partir do arquivo **.storyboard.** Se o desenvolvedor tivesse tentado acessar o controle de rótulo antes do arquivo **.storyboard** ter sido totalmente carregado e instanciado, um erro `NullReferenceException` seria gerado, porque o controle de rótulo ainda não teria sido criado.
 
 Em seguida, adicione o código para responder ao usuário que clica no botão. Adicione o método parcial a seguir à classe `ViewController`:
 
@@ -551,7 +551,7 @@ Se não houver erros, uma mensagem de **Build bem-sucedido** será exibida na ba
 
 Há três maneiras de executar o aplicativo:
 
-- Pressione **⌘+Enter**.
+- Pressione **:+Enter**.
 - No menu **Executar**, escolha **Depuração**.
 - Clique no botão **Reproduzir** na barra de ferramentas do Visual Studio para Mac (imediatamente acima do **Gerenciador de Soluções**).
 
@@ -589,7 +589,7 @@ O código do SourceWriter foi totalmente comentado e, quando disponível, foram 
 
 Este artigo abordou os conceitos básicos de um aplicativo Xamarin.Mac padrão. Ele abordou a criação de um novo aplicativo no Visual Studio para Mac, a concepção da interface do usuário no Xcode e Interface Builder, a exposição dos elementos da interface do usuário ao código C# usando **Saídas** e **Ações**, a adição de código para trabalhar com os elementos de interface do usuário e, por fim, a compilação e teste de um aplicativo Xamarin.Mac.
 
-## <a name="related-links"></a>Links Relacionados
+## <a name="related-links"></a>Links relacionados
 
-- [Hello, Mac (amostra)](https://docs.microsoft.com/samples/xamarin/mac-samples/hello-mac)
+- [Hello, Mac (exemplo)](https://docs.microsoft.com/samples/xamarin/mac-samples/hello-mac)
 - [Diretrizes de Interface Humana do macOS](https://developer.apple.com/design/human-interface-guidelines/macos/overview/themes/)

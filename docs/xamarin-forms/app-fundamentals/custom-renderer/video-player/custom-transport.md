@@ -8,15 +8,15 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
 ms.openlocfilehash: efe41fa5f25f6257587fd97a2711e9037b94dc6e
-ms.sourcegitcommit: 10b4d7952d78f20f753372c53af6feb16918555c
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "77636010"
 ---
 # <a name="custom-video-transport-controls"></a>Controles personalizados de transporte de vídeo
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
+[![Baixar](~/media/shared/download.png) amostra Baixar a amostra](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
 
 Os controles de transporte de um player de vídeo incluem os botões que executam as funções **Reproduzir**, **Pausar** e **Parar**. Em geral, esses botões são identificados com ícones conhecidos, em vez de um texto, e as funções **Reproduzir** e **Pausar** geralmente são combinadas em um botão.
 
@@ -278,9 +278,9 @@ namespace FormsVideoLibrary
 }
 ```
 
-Isso é semelhante ao modo como o controle [`WebView`](xref:Xamarin.Forms.WebView) usa a interface [`IWebViewController`](xref:Xamarin.Forms.IWebViewController) para implementar as propriedades `CanGoBack` e `CanGoForward`. (Confira o código-fonte de [`WebView`](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Core/WebView.cs) e seus renderizadores para obter detalhes.)
+Isso é semelhante [`WebView`](xref:Xamarin.Forms.WebView) à forma [`IWebViewController`](xref:Xamarin.Forms.IWebViewController) como o `CanGoBack` `CanGoForward` controle usa a interface para implementar as propriedades. (Consulte o código [`WebView`](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Core/WebView.cs) fonte e seus renderizadores para obter detalhes.)
 
-Isso possibilita que uma classe externa a `VideoPlayer` defina a propriedade `Status` referenciando a interface `IVideoPlayerController`. (Você verá o código em breve.) A propriedade pode ser definida em outras classes também, mas é improvável que ela seja definida inadvertidamente. O mais importante é que a propriedade `Status` não pode ser definida por meio de uma associação de dados.
+Isso possibilita que uma classe externa a `VideoPlayer` defina a propriedade `Status` referenciando a interface `IVideoPlayerController`. (Você verá o código em breve.) A propriedade pode ser definida a partir de outras classes também, mas é improvável que seja definida inadvertidamente. O mais importante é que a propriedade `Status` não pode ser definida por meio de uma associação de dados.
 
 Para auxiliar os renderizadores a manter essa propriedade `Status` atualizada, a classe `VideoPlayer` define um evento `UpdateStatus` que é disparado a cada décimo de segundo:
 
@@ -360,11 +360,11 @@ namespace FormsVideoLibrary.iOS
 }
 ```
 
-Duas propriedades de `AVPlayer` devem ser acessadas: A propriedade [`Status`](xref:AVFoundation.AVPlayer.Status*) do tipo `AVPlayerStatus` e a propriedade [`TimeControlStatus`](xref:AVFoundation.AVPlayer.TimeControlStatus*) do tipo `AVPlayerTimeControlStatus`. Observe que a propriedade `Element` (que é o `VideoPlayer`) precisa ser convertida em `IVideoPlayerController` para definir a propriedade `Status`.
+Dois imóveis `AVPlayer` devem ser [`Status`](xref:AVFoundation.AVPlayer.Status*) acessados: `AVPlayerStatus` O [`TimeControlStatus`](xref:AVFoundation.AVPlayer.TimeControlStatus*) imóvel `AVPlayerTimeControlStatus`do tipo e o imóvel do tipo . Observe que a propriedade `Element` (que é o `VideoPlayer`) precisa ser convertida em `IVideoPlayerController` para definir a propriedade `Status`.
 
 ### <a name="the-android-status-setting"></a>A configuração de status de Android
 
-A propriedade [`IsPlaying`](xref:Android.Widget.VideoView.IsPlaying) do `VideoView` do Android é um booliano que indica somente se o vídeo está sendo reproduzido ou está em pausa. Para determinar se a `VideoView` ainda não pode reproduzir nem pausar o vídeo, o evento `Prepared` de `VideoView` precisa ser manipulado. Esses dois manipuladores são definidos no método `OnElementChanged` e são desanexados durante a substituição `Dispose`:
+A [`IsPlaying`](xref:Android.Widget.VideoView.IsPlaying) propriedade do `VideoView` Android é um Booleano que só indica se o vídeo está sendo reproduzido ou pausado. Para determinar se a `VideoView` ainda não pode reproduzir nem pausar o vídeo, o evento `Prepared` de `VideoView` precisa ser manipulado. Esses dois manipuladores são definidos no método `OnElementChanged` e são desanexados durante a substituição `Dispose`:
 
 ```csharp
 namespace FormsVideoLibrary.Droid
@@ -451,7 +451,7 @@ namespace FormsVideoLibrary.Droid
 
 ### <a name="the-uwp-status-setting"></a>A configuração de status do UWP
 
-O `VideoPlayerRenderer` do UWP usa o evento `UpdateStatus`, mas não precisa dele para definir a propriedade `Status`. O `MediaElement` define um evento [`CurrentStateChanged`](xref:Windows.UI.Xaml.Controls.MediaElement.CurrentStateChanged) que permite que o renderizador seja notificado quando a propriedade [`CurrentState`](xref:Windows.UI.Xaml.Controls.MediaElement.CurrentState*) é alterada. A propriedade é desanexada na substituição `Dispose`:
+O `VideoPlayerRenderer` do UWP usa o evento `UpdateStatus`, mas não precisa dele para definir a propriedade `Status`. O `MediaElement` evento [`CurrentStateChanged`](xref:Windows.UI.Xaml.Controls.MediaElement.CurrentStateChanged) define um evento que permite que [`CurrentState`](xref:Windows.UI.Xaml.Controls.MediaElement.CurrentState*) o renderizador seja notificado quando a propriedade for alterada. A propriedade é desanexada na substituição `Dispose`:
 
 ```csharp
 namespace FormsVideoLibrary.UWP
@@ -489,7 +489,7 @@ namespace FormsVideoLibrary.UWP
 }
 ```
 
-A propriedade `CurrentState` é do tipo [`MediaElementState`](/uwp/api/windows.ui.xaml.media.mediaelementstate) e é mapeada com facilidade para `VideoStatus`:
+A `CurrentState` propriedade é [`MediaElementState`](/uwp/api/windows.ui.xaml.media.mediaelementstate)de tipo, `VideoStatus`e mapeia facilmente em :
 
 ```csharp
 namespace FormsVideoLibrary.UWP
@@ -522,7 +522,7 @@ namespace FormsVideoLibrary.UWP
 
 ## <a name="play-pause-and-stop-buttons"></a>Botões Reproduzir, Pausar e Parar
 
-É problemático usar caracteres Unicode para imagens simbólicas de **Reproduzir**, **Pausar** e **Parar**. A seção [Diversos – Técnico](https://unicode-table.com/en/blocks/miscellaneous-technical/) do padrão Unicode define três caracteres de símbolo aparentemente apropriados para essa finalidade. Elas são:
+É problemático usar caracteres Unicode para imagens simbólicas de **Reproduzir**, **Pausar** e **Parar**. A seção [Diversos – Técnico](https://unicode-table.com/en/blocks/miscellaneous-technical/) do padrão Unicode define três caracteres de símbolo aparentemente apropriados para essa finalidade. Estes são:
 
 - 0x23F5 (triângulo médio preto apontando para a direita) ou &#x23F5; para **Reproduzir**
 - 0x23F8 (barra vertical dupla) ou &#x23F8; para **Pausar**
@@ -649,7 +649,7 @@ namespace VideoPlayerDemos
 
 Como `AutoPlay` é definido como `false` no arquivo **CustomTransport.xaml**, você precisará pressionar o botão **Reproduzir** quando ele ficar habilitado para iniciar o vídeo. Os botões são definidos para que os caracteres Unicode abordados acima sejam acompanhados por seus equivalentes de texto. Os botões têm uma aparência consistente em cada plataforma durante a reprodução do vídeo:
 
-[![Execução de transporte personalizado](custom-transport-images/customtransportplaying-small.png "Execução de transporte personalizado")](custom-transport-images/customtransportplaying-large.png#lightbox "Execução de transporte personalizado")
+[![Reprodução de transporte personalizado](custom-transport-images/customtransportplaying-small.png "Reprodução de transporte personalizado")](custom-transport-images/customtransportplaying-large.png#lightbox "Reprodução de transporte personalizado")
 
 Porém, no Android e no UWP, o botão **Reproduzir** é muito diferente quando o vídeo está em pausa:
 
@@ -659,4 +659,4 @@ Em um aplicativo de produção, provavelmente, você desejará usar suas própri
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Demonstrações do player de vídeo (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
+- [Demonstrações do player de vídeo (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)

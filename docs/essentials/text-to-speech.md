@@ -1,18 +1,18 @@
 ---
-title: 'Xamarin.Essentials: Conversão de texto em fala'
+title: 'Xamarin.Essentials: Text-to-Speech'
 description: A classe TextToSpeech no Xamarin.Essentials permite que um aplicativo utilize os mecanismos internos de conversão de texto em fala para repetir o texto do dispositivo e, também, consulte os idiomas disponíveis, compatíveis com o mecanismo.
 ms.assetid: AEEF03AE-A047-4DF0-B0E8-CC8D9A7B8351
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 11/04/2018
 ms.openlocfilehash: 6d89f70a8b7f6229297f86deb3cb83cf940fa7df
-ms.sourcegitcommit: 4f8dc5298a95d591a59e97cdd347fd82858a1019
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/03/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "66469466"
 ---
-# <a name="xamarinessentials-text-to-speech"></a>Xamarin.Essentials: Conversão de texto em fala
+# <a name="xamarinessentials-text-to-speech"></a>Xamarin.Essentials: Text-to-Speech
 
 A classe **TextToSpeech** permite que um aplicativo utilize os mecanismos internos de conversão de texto em fala para repetir o texto do dispositivo e, também, consulte os idiomas disponíveis, compatíveis com o mecanismo.
 
@@ -115,7 +115,7 @@ Veja a seguir os valores com suporte para esses parâmetros:
 
 | Parâmetro | Mínimo | Máximo |
 | --- | :---: | :---: |
-| Densidade | 0 | 2.0 |
+| Densidade | 0 | 2,0 |
 | Volume | 0 | 1.0 |
 
 ### <a name="speech-locales"></a>Localidades de fala

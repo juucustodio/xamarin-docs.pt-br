@@ -6,10 +6,10 @@ author: jamesmontemagno
 ms.author: jamont
 ms.date: 03/13/2019
 ms.openlocfilehash: 4e43159fb9cae6646be54d8efc24c334bc071477
-ms.sourcegitcommit: fec87846fcb262fc8b79774a395908c8c8fc8f5b
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/21/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "77545155"
 ---
 # <a name="xamarinessentials-platform-extensions"></a>Xamarin.Essentials: Extensões de plataforma
@@ -30,13 +30,13 @@ using Xamarin.Essentials;
 
 Todas as extensões de plataforma só podem ser chamadas do iOS, do Android ou do projeto UWP.
 
-## <a name="android-extensions"></a>Extensões do Android
+## <a name="android-extensions"></a>Extensões androides
 
-Essas extensões só podem ser acessadas por um projeto Android.
+Essas extensões só podem ser acessadas a partir de um projeto Android.
 
-### <a name="application-context--activity"></a>Atividade e contexto do aplicativo
+### <a name="application-context--activity"></a>Contexto de aplicação & atividade
 
-Usando as extensões de plataforma na classe `Platform`, você pode acessar o `Context` ou o `Activity` atuais do aplicativo em execução.
+Usando as extensões `Platform` da plataforma na classe, `Context` `Activity` você pode ter acesso ao aplicativo atual ou para o aplicativo em execução.
 
 ```csharp
 
@@ -46,7 +46,7 @@ var context = Platform.AppContext;
 var activity = Platform.CurrentActivity;
 ```
 
-Se houver uma situação em que o `Activity` seja necessário, mas o aplicativo ainda não tenha sido totalmente iniciado, o método `WaitForActivityAsync` deverá ser usado.
+Se houver uma situação em que o `Activity` aplicativo seja necessário, mas a aplicação ainda não tenha sido totalmente iniciada, o `WaitForActivityAsync` método deve ser usado.
 
 ```csharp
 var activity = await Platform.WaitForActivityAsync();
@@ -54,7 +54,7 @@ var activity = await Platform.WaitForActivityAsync();
 
 ### <a name="activity-lifecycle"></a>Ciclo de vida de atividade
 
-Além de obter a Atividade atual, você também pode registrar os eventos do ciclo de vida.
+Além de obter a atividade atual, você também pode se registrar para eventos do ciclo de vida.
 
 ```csharp
 protected override void OnCreate(Bundle bundle)
@@ -76,37 +76,37 @@ void Platform_ActivityStateChanged(object sender, Xamarin.Essentials.ActivitySta
     Toast.MakeText(this, e.State.ToString(), ToastLength.Short).Show();
 ```
 
-Os estados da atividade são os seguintes:
+Os estados de atividade são os seguintes:
 
 * Criado
 * Retomada
-* Paused
+* Em Pausa
 * Destruído
 * SaveInstanceState
-* Introdução
+* Started (iniciado)
 * Parado
 
-Leia a documentação do [Ciclo de vida da atividade](https://docs.microsoft.com/xamarin/android/app-fundamentals/activity-lifecycle/) para saber mais.
+Leia a documentação do [ciclo de vida da atividade](https://docs.microsoft.com/xamarin/android/app-fundamentals/activity-lifecycle/) para saber mais.
 
 ## <a name="ios-extensions"></a>Extensões do iOS
 
-Essas extensões só podem ser acessadas por um projeto iOS.
+Essas extensões só podem ser acessadas a partir de um projeto iOS.
 
-### <a name="current-uiviewcontroller"></a>UIViewController atual
+### <a name="current-uiviewcontroller"></a>UIViewcontroller atual
 
-Obtenha acesso ao `UIViewController` atualmente visível:
+Obtenha acesso ao atualmente visível: `UIViewController`
 
 ```csharp
 var vc = Platform.GetCurrentUIViewController();
 ```
 
-Esse método retornará `null` se não for possível detectar um `UIViewController`.
+Este método `null` retornará se `UIViewController`não conseguir detectar um .
 
 ## <a name="cross-platform-extensions"></a>Extensões multiplataforma
 
 Essas extensões existem em todas as plataformas.
 
-### <a name="point"></a>Ponto
+### <a name="point"></a>Point
 
 ```csharp
 var system = new System.Drawing.Point(x, y);

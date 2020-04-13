@@ -8,22 +8,22 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 06/05/2019
 ms.openlocfilehash: ea259d1ee9dc4a94322c38b3e96bee654197bb87
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/08/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "67650450"
 ---
 # <a name="xamarinforms-dependencyservice"></a>Xamarin.Forms DependencyService
 
-## <a name="introductionintroductionmd"></a>[Introdução](introduction.md)
+## <a name="introduction"></a>[Introdução](introduction.md)
 
-A classe [`DependencyService`](xref:Xamarin.Forms.DependencyService) é um localizador de serviço que permite que os aplicativos Xamarin.Forms invoquem a funcionalidade de plataforma nativa de um código compartilhado.
+A [`DependencyService`](xref:Xamarin.Forms.DependencyService) classe é um localizador de serviço que permite que os aplicativos Xamarin.Forms invoque a funcionalidade da plataforma nativa a partir de código compartilhado.
 
-## <a name="registration-and-resolutionregistration-and-resolutionmd"></a>[Registro e resolução](registration-and-resolution.md)
+## <a name="registration-and-resolution"></a>[Registro e resolução](registration-and-resolution.md)
 
-As implementações de plataforma devem ser registradas no [`DependencyService`](xref:Xamarin.Forms.DependencyService) e então resolvidas de um código compartilhado para invocá-las.
+As implementações da plataforma [`DependencyService`](xref:Xamarin.Forms.DependencyService)devem ser registradas com o , e depois resolvidas a partir de código compartilhado para invocá-los.
 
-## <a name="picking-a-photo-from-the-libraryphoto-pickermd"></a>[Como escolher uma foto da biblioteca de imagens](photo-picker.md)
+## <a name="picking-a-photo-from-the-library"></a>[Como escolher uma foto da biblioteca de imagens](photo-picker.md)
 
-Este artigo explica como usar a classe [`DependencyService`](xref:Xamarin.Forms.DependencyService) do Xamarin.Forms para escolher uma foto da biblioteca de imagens do telefone.
+Este artigo explica como usar a [`DependencyService`](xref:Xamarin.Forms.DependencyService) classe Xamarin.Forms para escolher uma foto na biblioteca de imagens do telefone.

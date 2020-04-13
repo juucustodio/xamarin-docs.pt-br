@@ -8,15 +8,15 @@ author: davidortinau
 ms.author: daortin
 ms.date: 08/09/2018
 ms.openlocfilehash: 6e80daf2be1b672dc7d0de3e303dfb9261c10472
-ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "76940909"
 ---
 # <a name="setting-up-the-android-sdk-for-xamarinandroid"></a>Configurando o SDK do Android para o Xamarin.Android
 
-_O Visual Studio inclui um Android SDK Manager que você pode usar para baixar ferramentas, plataformas e outros componentes do SDK do Android que são necessários para desenvolver aplicativos Xamarin.Android._
+_O Visual Studio inclui um Android SDK Manager que você pode usar para baixar ferramentas, plataformas e outros componentes do SDK do Android necessários para desenvolver aplicativos Xamarin.Android._
 
 ## <a name="overview"></a>Visão geral
 
@@ -27,7 +27,7 @@ Este guia explica como usar o Xamarin Android SDK Manager no Visual Studio e no 
 
 O Xamarin Android SDK Manager (instalado como parte da carga de trabalho de **Desenvolvimento móvel com .NET**) ajuda você a baixar os componentes mais recentes do Android que são necessários para desenvolver aplicativos Xamarin.Android. Ele substitui o Gerenciador de SDK autônomo do Google, que foi preterido.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 ## <a name="requirements"></a>Requisitos
 
@@ -54,7 +54,7 @@ O Gerenciador de SDK do Xamarin Android também requer o Java Development Kit (q
 
 Para iniciar o Gerenciador de SDK no Visual Studio, clique em **Ferramentas > Android > Gerenciador de SDK do Android**:
 
-[![Local do item de menu do Gerenciador de SDK do Android](android-sdk-images/win/02-sdk-manager-menu-item-sml.png)](android-sdk-images/win/02-sdk-manager-menu-item.png#lightbox)
+[![Localização do item do menu do Android SDK Manager](android-sdk-images/win/02-sdk-manager-menu-item-sml.png)](android-sdk-images/win/02-sdk-manager-menu-item.png#lightbox)
 
 O Gerenciador do SDK do Android será aberto na tela **SDKs e Ferramentas do Android**. Esta tela mostra duas guias, &ndash; **Plataformas** e **Ferramentas**:
 
@@ -93,37 +93,37 @@ Clique em **Aceitar** se estiver de acordo com os termos e condições. Na parte
 
 ### <a name="platforms-tab"></a>Guia Plataformas
 
-A guia **Plataformas** exibe uma lista de versões de SDK de plataforma junto com outros recursos (como imagens do sistema) para cada plataforma:
+A guia Plataformas exibe uma lista de **versões** de SDK da plataforma, juntamente com outros recursos (como imagens do sistema) para cada plataforma:
 
 [![Captura de tela do painel Plataformas](android-sdk-images/win/08-platforms-pane-sml.png)](android-sdk-images/win/08-platforms-pane.png#lightbox)
 
 Essa tela lista a versão do Android (como **Android 8.0**), o nome do código (**Oreo**), o nível da API (como **26**) e os tamanhos dos componentes dessa plataforma (como **1 GB**). A guia **Plataformas** pode ser usada para instalar componentes do nível da API do Android que você quer direcionar. Para saber mais sobre as versões do Android e os níveis da API, veja [Noções básicas sobre níveis da API do Android](~/android/app-fundamentals/android-api-levels.md).
 
-Se todos os componentes de uma plataforma estiverem instalados, uma marca de seleção aparecerá ao lado do nome da plataforma. Se nem todos os componentes de uma plataforma estiverem instalados, a caixa da plataforma será preenchida. É possível expandir uma plataforma para ver seus componentes (e quais deles estão instalados) clicando na caixa **+** à esquerda da plataforma.
-Clique em **-** para recolher a lista de componentes de uma plataforma.
+Se todos os componentes de uma plataforma estiverem instalados, uma marca de seleção aparecerá ao lado do nome da plataforma. Se nem todos os componentes de uma plataforma estiverem instalados, a caixa da plataforma será preenchida. Você pode expandir uma plataforma para ver seus componentes (e quais **+** componentes estão instalados) clicando na caixa à esquerda da plataforma.
+Clique **-** para desexpandir a listagem de componentes para uma plataforma.
 
 Para adicionar outra plataforma ao SDK, clique na caixa ao lado da plataforma até que a marca de seleção apareça para instalar todos os componentes e, em seguida, clique em **Aplicar Alterações**:
 
-[![Exemplo de como adicionar componentes Android 7.1 Nougat ao SDK do Android](android-sdk-images/win/09-adding-a-platform-sml.png)](android-sdk-images/win/09-adding-a-platform.png#lightbox)
+[![Exemplo de adicionar componentes Android 7.1 Nougat ao Android SDK](android-sdk-images/win/09-adding-a-platform-sml.png)](android-sdk-images/win/09-adding-a-platform.png#lightbox)
 
 Para instalar somente componentes específicos, clique uma vez na caixa ao lado da plataforma. É possível selecionar quaisquer componentes individuais necessários:
 
-[![Exemplo de como adicionar alguns componentes do Android 7.1](android-sdk-images/win/10-adding-some-components-sml.png)](android-sdk-images/win/10-adding-some-components.png#lightbox)
+[![Exemplo de adicionar alguns componentes do Android 7.1](android-sdk-images/win/10-adding-some-components-sml.png)](android-sdk-images/win/10-adding-some-components.png#lightbox)
 
 Observe que o número de componentes a serem instalados é exibido ao lado do botão **Aplicar Alterações**. Depois de clicar no botão **Aplicar Alterações**, a tela **Aceitação da Licença** será exibida, como mostrado antes.
 Clique em **Aceitar** se estiver de acordo com os termos e condições. Essa caixa de diálogo poderá ser exibida outras vezes quando houver diversos componentes a serem instalados. Na parte inferior da janela, uma barra de progresso indicará o andamento do download e da instalação. Quando o processo de download e instalação for concluído (isso pode levar vários minutos, de acordo com a quantidade de componentes que precisam ser baixados), os componentes adicionados serão marcados com uma marca de seleção e listados como **Instalados**.
 
 ### <a name="repository-selection"></a>Seleção de repositórios
 
-Por padrão, o Gerenciador do SDK do Android baixa os componentes e as ferramentas da plataforma de um repositório gerenciado pela Microsoft. Se você precisar acessar plataformas e ferramentas experimentais alfa/beta que ainda não estão disponíveis no repositório da Microsoft, poderá alterar o Gerenciador do SDK e fazer com que ele use o repositório do Google. Para fazer essa alteração, clique no ícone de engrenagem no canto inferior direito e selecione **Repositório > Google (Não compatível)** :
+Por padrão, o Gerenciador do SDK do Android baixa os componentes e as ferramentas da plataforma de um repositório gerenciado pela Microsoft. Se você precisar acessar plataformas e ferramentas experimentais alfa/beta que ainda não estão disponíveis no repositório da Microsoft, poderá alterar o Gerenciador do SDK e fazer com que ele use o repositório do Google. Para fazer essa alteração, clique no ícone de engrenagem no canto inferior direito e selecione **Repositório > Google (Não compatível)**:
 
-[![Selecionar repositório do Google](android-sdk-images/win/11-google-repo-w157-sml.png)](android-sdk-images/win/11-google-repo-w157.png#lightbox)
+[![Selecionando o repositório do Google](android-sdk-images/win/11-google-repo-w157-sml.png)](android-sdk-images/win/11-google-repo-w157.png#lightbox)
 
-Quando o repositório do Google é selecionado, os pacotes adicionais que não estavam disponíveis anteriormente poderão aparecer na guia **Plataformas**. (Na captura de tela acima, a **Plataforma do SDK do Android 28** foi adicionada alterando para o repositório do Google.) O uso do repositório do Google não tem suporte e, portanto, não é recomendado para o desenvolvimento cotidiano.
+Quando o repositório do Google é selecionado, os pacotes adicionais que não estavam disponíveis anteriormente poderão aparecer na guia **Plataformas**. (Na captura de tela acima, a plataforma 28 do **Android SDK** foi adicionada mudando para o repositório do Google.) Tenha em mente que o uso do repositório do Google não é suportado e, portanto, não é recomendado para o desenvolvimento cotidiano.
 
-Para voltar a usar o repositório compatível de plataformas e ferramentas, clique em **Microsoft (Recomendado)** . Assim, a lista de pacotes e ferramentas será restaurada para a seleção padrão.
+Para voltar a usar o repositório compatível de plataformas e ferramentas, clique em **Microsoft (Recomendado)**. Assim, a lista de pacotes e ferramentas será restaurada para a seleção padrão.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
 ## <a name="requirements"></a>Requisitos
 
@@ -146,7 +146,7 @@ O Gerenciador de SDK do Xamarin Android também requer o Java Development Kit (q
 
 Para iniciar o Gerenciador de SDK no Visual Studio para Mac, clique em **Ferramentas > Gerenciador de SDK**:
 
-[![Local do item de menu do Gerenciador de SDK do Android](android-sdk-images/mac/01-sdk-manager-menu-item-m75-sml.png)](android-sdk-images/mac/01-sdk-manager-menu-item-m75.png#lightbox)
+[![Localização do item do menu do Android SDK Manager](android-sdk-images/mac/01-sdk-manager-menu-item-m75-sml.png)](android-sdk-images/mac/01-sdk-manager-menu-item-m75.png#lightbox)
 
 O **Gerenciador de SDK do Android** será aberto na **janela Preferências**, que contém três guias, **Plataformas**, **Ferramentas** e **Locais**:
 
@@ -183,7 +183,7 @@ Clique em **Aceitar** se estiver de acordo com os termos e condições. Na parte
 
 ### <a name="platforms-tab"></a>Guia Plataformas
 
-A guia **Plataformas** exibe uma lista de versões de SDK de plataforma junto com outros recursos (como imagens do sistema) para cada plataforma:
+A guia Plataformas exibe uma lista de **versões** de SDK da plataforma, juntamente com outros recursos (como imagens do sistema) para cada plataforma:
 
 [![Captura de tela do painel Plataformas](android-sdk-images/mac/06-platforms-tab-m75-sml.png)](android-sdk-images/mac/06-platforms-tab-m75.png#lightbox)
 
@@ -194,24 +194,24 @@ Clique na **seta para baixo** para recolher a lista de componentes de uma plataf
 
 Para adicionar outra plataforma ao SDK, clique na caixa ao lado da plataforma até que a marca de seleção apareça para instalar todos os componentes e, em seguida, clique em **Aplicar Alterações**:
 
-[![Exemplo de como adicionar todos os componentes de uma plataforma](android-sdk-images/mac/07-install-all-m75-sml.png)](android-sdk-images/mac/07-install-all-m75.png#lightbox)
+[![Exemplo de adicionar todos os componentes de uma plataforma](android-sdk-images/mac/07-install-all-m75-sml.png)](android-sdk-images/mac/07-install-all-m75.png#lightbox)
 
 Para instalar somente alguns componentes, clique uma vez na caixa ao lado da plataforma. É possível selecionar quaisquer componentes individuais necessários:
 
-[![Exemplo de como adicionar alguns componentes](android-sdk-images/mac/08-individual-components-m75-sml.png)](android-sdk-images/mac/08-individual-components-m75.png#lightbox)
+[![Exemplo de adicionar alguns componentes](android-sdk-images/mac/08-individual-components-m75-sml.png)](android-sdk-images/mac/08-individual-components-m75.png#lightbox)
 
 Observe que o número de componentes a serem instalados é exibido ao lado do botão **Aplicar Alterações**. Depois de clicar no botão **Aplicar Alterações**, a tela **Aceitação da Licença** será exibida, como mostrado antes.
 Clique em **Aceitar** se estiver de acordo com os termos e condições. Essa caixa de diálogo poderá ser exibida outras vezes quando houver diversos componentes a serem instalados. Na parte inferior da janela, uma barra de progresso indicará o andamento do download e da instalação. Quando o processo de download e instalação for concluído (isso pode levar vários minutos, de acordo com a quantidade de componentes que precisam ser baixados), os componentes adicionados serão marcados com uma marca de seleção e listados como **Instalados**.
 
 ### <a name="repository-selection"></a>Seleção de repositórios
 
-Por padrão, o Gerenciador do SDK do Android baixa os componentes e as ferramentas da plataforma de um repositório gerenciado pela Microsoft. Se você precisar acessar plataformas e ferramentas experimentais alfa/beta que ainda não estão disponíveis no repositório da Microsoft, poderá alterar o Gerenciador do SDK e fazer com que ele use o repositório do Google. Para fazer essa alteração, clique no ícone de engrenagem no canto inferior direito e selecione **Repositório > Google (Não compatível)** :
+Por padrão, o Gerenciador do SDK do Android baixa os componentes e as ferramentas da plataforma de um repositório gerenciado pela Microsoft. Se você precisar acessar plataformas e ferramentas experimentais alfa/beta que ainda não estão disponíveis no repositório da Microsoft, poderá alterar o Gerenciador do SDK e fazer com que ele use o repositório do Google. Para fazer essa alteração, clique no ícone de engrenagem no canto inferior direito e selecione **Repositório > Google (Não compatível)**:
 
-[![Selecionar repositório do Google](android-sdk-images/mac/09-google-repo-m75-sml.png)](android-sdk-images/mac/09-google-repo-m75.png#lightbox)
+[![Selecionando o repositório do Google](android-sdk-images/mac/09-google-repo-m75-sml.png)](android-sdk-images/mac/09-google-repo-m75.png#lightbox)
 
-Quando o repositório do Google é selecionado, os pacotes adicionais que não estavam disponíveis anteriormente poderão aparecer na guia **Plataformas**. (Na captura de tela acima, a **Plataforma do SDK do Android 28** foi adicionada alterando para o repositório do Google.) O uso do repositório do Google não tem suporte e, portanto, não é recomendado para o desenvolvimento cotidiano.
+Quando o repositório do Google é selecionado, os pacotes adicionais que não estavam disponíveis anteriormente poderão aparecer na guia **Plataformas**. (Na captura de tela acima, a plataforma 28 do **Android SDK** foi adicionada mudando para o repositório do Google.) Tenha em mente que o uso do repositório do Google não é suportado e, portanto, não é recomendado para o desenvolvimento cotidiano.
 
-Para voltar a usar o repositório compatível de plataformas e ferramentas, clique em **Microsoft (Recomendado)** . Assim, a lista de pacotes e ferramentas será restaurada para a seleção padrão.
+Para voltar a usar o repositório compatível de plataformas e ferramentas, clique em **Microsoft (Recomendado)**. Assim, a lista de pacotes e ferramentas será restaurada para a seleção padrão.
 
 -----
 

@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
 ms.openlocfilehash: f4d38bb66a34257c1e0a27c5fbbfe16f59743e83
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "76725500"
 ---
 # <a name="bundling-for-the-mac-app-store"></a>Agrupamento para Mac App Store
@@ -25,7 +25,7 @@ Esta seção descreve as noções básicas da criação de um aplicativo para la
 
 Altere **Configuração** para **Versão** antes de atualizar as opções de assinatura de código e empacotamento. O desenvolvedor precisa garantir que usem a **identidade** e o perfil de provisionamento criados acima quando assinarem o aplicativo para lançamento na App Store.
 
-[![Editar as opções de assinatura de código](bundling-images/sign.png)](bundling-images/sign-large.png#lightbox)
+[![Edição das opções de assinatura de código](bundling-images/sign.png)](bundling-images/sign-large.png#lightbox)
 
 Verifique se a opção de criar um pacote do instalador foi marcada nas configurações de **Build do Mac**:
 
@@ -45,6 +45,6 @@ Depois que o aplicativo tiver sido compilado, o desenvolvedor poderá clicar com
 ## <a name="related-links"></a>Links relacionados
 
 - [Instalação](/visualstudio/mac/installation/)
-- [Amostra do Hello, Mac](~/mac/get-started/hello-mac.md)
+- [Olá, amostra mac](~/mac/get-started/hello-mac.md)
 - [Distribua aplicativos na Mac App Store](https://developer.apple.com/devcenter/mac/checklist/)
 - [ID de Desenvolvedor e GateKeeper](https://developer.apple.com/developer-id/)

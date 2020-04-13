@@ -1,6 +1,6 @@
 ---
-title: RoundEffect reutilizáveis do Xamarin. Forms
-description: RoundEffect é um efeito reutilizável que pode ser aplicado a qualquer controle derivado de Visualelement para renderizar o controle como um círculo.
+title: Xamarin.Forms Reutilizável RoundEffect
+description: RoundEffect é um efeito reutilizável que pode ser aplicado a qualquer controle derivado do VisualElement para tornar o controle como um círculo.
 ms.prod: xamarin
 ms.assetid: B5DE7507-B565-4EE5-9897-27E5733FD173
 ms.technology: xamarin-forms
@@ -8,23 +8,23 @@ author: profexorgeek
 ms.author: jusjohns
 ms.date: 10/25/2019
 ms.openlocfilehash: 851ed7a2ad1c416b4d03d583b9d0aeb7f7774eea
-ms.sourcegitcommit: aa7e9d2c370ba9cbc830f10b94b4cd4221fc5467
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73055956"
 ---
-# <a name="xamarinforms-reusable-roundeffect"></a>RoundEffect reutilizáveis do Xamarin. Forms
+# <a name="xamarinforms-reusable-roundeffect"></a>Xamarin.Forms Reutilizável RoundEffect
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-roundeffect/)
+[![Baixar](~/media/shared/download.png) amostra Baixar a amostra](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-roundeffect/)
 
-O RoundEffect simplifica a renderização de qualquer controle derivado de Visualelement como um círculo. Esse efeito pode ser usado para criar imagens circulares, botões e outros controles:
+O RoundEffect simplifica a renderização de qualquer controle que deriva do VisualElement como um círculo. Esse efeito pode ser usado para criar imagens circulares, botões e outros controles:
 
-[![capturas de tela do RoundEffect no iOS e no Android](example-roundeffect-images/round-effect-cropped.png)](example-roundeffect-images/round-effect.png#lightbox)
+[![Screenshots roundEffect no iOS e Android](example-roundeffect-images/round-effect-cropped.png)](example-roundeffect-images/round-effect.png#lightbox)
 
-## <a name="create-a-shared-routingeffect"></a>Criar um RoutingEffect compartilhado
+## <a name="create-a-shared-routingeffect"></a>Crie um RoutingEffect compartilhado
 
-Uma classe de efeito deve ser criada no projeto compartilhado para criar um efeito de plataforma cruzada. O aplicativo de exemplo cria uma classe `RoundEffect` vazia que deriva da classe `RoutingEffect`:
+Uma classe de efeito deve ser criada no projeto compartilhado para criar um efeito multiplataforma. O aplicativo de `RoundEffect` exemplo cria uma `RoutingEffect` classe vazia que deriva da classe:
 
 ```csharp
 public class RoundEffect : RoutingEffect
@@ -35,11 +35,11 @@ public class RoundEffect : RoutingEffect
 }
 ```
 
-Essa classe permite que o projeto compartilhado resolva as referências ao efeito no código ou XAML, mas não fornece nenhuma funcionalidade. O efeito deve ter implementações para cada plataforma.
+Esta classe permite que o projeto compartilhado resolva as referências ao efeito em código ou XAML, mas não fornece nenhuma funcionalidade. O efeito deve ter implementações para cada plataforma.
 
-## <a name="implement-the-android-effect"></a>Implementar o efeito do Android
+## <a name="implement-the-android-effect"></a>Implementar o efeito Android
 
-O projeto da plataforma Android define uma classe `RoundEffect` que deriva de `PlatformEffect`. Essa classe é marcada com `assembly` atributos que permitem que o Xamarin. Forms resolva a classe Effect:
+O projeto da plataforma `RoundEffect` Android define `PlatformEffect`uma classe que deriva de . Esta classe é `assembly` marcada com atributos que permitem que xamarin.Forms resolva a classe de efeito:
 
 ```csharp
 [assembly: ResolutionGroupName("Xamarin")]
@@ -53,7 +53,7 @@ namespace RoundEffectDemo.Droid
 }
 ```
 
-A plataforma Android usa o conceito de um `OutlineProvider` para definir as bordas de um controle. O projeto de exemplo inclui uma classe `CornerRadiusProvider` que deriva da classe `ViewOutlineProvider`:
+A plataforma Android usa `OutlineProvider` o conceito de um para definir as bordas de um controle. O projeto amostral `CornerRadiusProvider` inclui uma classe `ViewOutlineProvider` que deriva da classe:
 
 ```csharp
 class CornerRadiusOutlineProvider : ViewOutlineProvider
@@ -78,9 +78,9 @@ class CornerRadiusOutlineProvider : ViewOutlineProvider
 }
 ```
 
-Essa classe usa as propriedades `Width` e `Height` da instância `Element` Xamarin. Forms para calcular um raio que é metade da dimensão mais curta.
+Esta classe `Width` usa `Height` as propriedades da ocorrência `Element` Xamarin.Forms para calcular um raio que é metade da dimensão mais curta.
 
-Depois que um provedor de estrutura de tópicos é definido, a classe `RoundEffect` pode consumi-lo para implementar o efeito:
+Uma vez definido um `RoundEffect` provedor de contorno, a classe pode consumi-lo para implementar o efeito:
 
 ```csharp
 public class RoundEffect : PlatformEffect
@@ -114,16 +114,16 @@ public class RoundEffect : PlatformEffect
 }
 ```
 
-O método `OnAttached` é chamado quando o efeito é anexado a um elemento. O objeto `OutlineProvider` existente é salvo para que possa ser restaurado quando o efeito for desanexado. Uma nova instância do `CornerRadiusOutlineProvider` é usada como a `OutlineProvider` e `ClipToOutline` é definida como true para recortar elementos estouros para as bordas da estrutura de tópicos.
+O `OnAttached` método é chamado quando o efeito é anexado a um elemento. O objeto `OutlineProvider` existente é salvo para que possa ser restaurado quando o efeito for separado. Uma nova instância `CornerRadiusOutlineProvider` do é `OutlineProvider` `ClipToOutline` usado como o e é definido como verdadeiro para cortar elementos transbordantes para as bordas do contorno.
 
-O método `OnDetatched` é chamado quando o efeito é removido de um elemento e restaura o valor de `OutlineProvider` original.
+O `OnDetatched` método é chamado quando o efeito é removido `OutlineProvider` de um elemento e restaura o valor original.
 
 > [!NOTE]
-> Dependendo do tipo de elemento, a propriedade `Control` pode ou não ser nula. Se a propriedade `Control` não for nula, os cantos arredondados poderão ser aplicados diretamente ao controle. No entanto, se for nulo, os cantos arredondados deverão ser aplicados ao objeto `Container`. O campo `effectTarget` permite que o efeito seja aplicado ao objeto apropriado.
+> Dependendo do tipo de `Control` elemento, a propriedade pode ou não ser nula. Se `Control` a propriedade não for nula, os cantos arredondados podem ser aplicados diretamente ao controle. No entanto, se for nulo, os `Container` cantos arredondados devem ser aplicados ao objeto. O `effectTarget` campo permite que o efeito seja aplicado ao objeto apropriado.
 
-## <a name="implement-the-ios-effect"></a>Implementar o efeito de iOS
+## <a name="implement-the-ios-effect"></a>Implementar o efeito iOS
 
-O projeto da plataforma iOS define uma classe `RoundEffect` que deriva de `PlatformEffect`. Essa classe é marcada com `assembly` atributos que permitem que o Xamarin. Forms resolva a classe Effect:
+O projeto da plataforma `RoundEffect` iOS define `PlatformEffect`uma classe que deriva de . Esta classe é `assembly` marcada com atributos que permitem que xamarin.Forms resolva a classe de efeito:
 
 ```csharp
 [assembly: ResolutionGroupName("Xamarin")]
@@ -136,7 +136,7 @@ namespace RoundEffectDemo.iOS
     }
 ```
 
-No iOS, os controles têm uma propriedade `Layer`, que tem uma propriedade `CornerRadius`. A implementação da classe `RoundEffect` no iOS calcula o raio do canto apropriado e atualiza a propriedade `CornerRadius` da camada:
+No iOS, os `Layer` controles têm uma `CornerRadius` propriedade, que tem uma propriedade. A `RoundEffect` implementação de classe no iOS calcula o `CornerRadius` raio de canto apropriado e atualiza a propriedade da camada:
 
 ```csharp
 public class RoundEffect : PlatformEffect
@@ -183,14 +183,14 @@ public class RoundEffect : PlatformEffect
 }
 ```
 
-O método `CalculateRadius` calcula um raio com base na dimensão mínima do `Element`Xamarin. Forms. O método `OnAttached` é chamado quando o efeito é anexado a um controle e atualiza a propriedade `CornerRadius` da camada. Ele define a propriedade `ClipToBounds` como `true`, de forma que os elementos estouros sejam recortados nas bordas do controle. O método `OnDetatched` é chamado quando o efeito é removido de um controle e reverte essas alterações, restaurando o raio do canto original.
+O `CalculateRadius` método calcula um raio com base na dimensão mínima das formas `Element`de Xamarin. O `OnAttached` método é chamado quando o efeito é anexado a `CornerRadius` um controle e atualiza a propriedade da camada. Ele define `ClipToBounds` a `true` propriedade para que elementos transbordantes sejam cortados para as bordas do controle. O `OnDetatched` método é chamado quando o efeito é removido de um controle e inverte essas alterações, restaurando o raio de canto original.
 
 > [!NOTE]
-> Dependendo do tipo de elemento, a propriedade `Control` pode ou não ser nula. Se a propriedade `Control` não for nula, os cantos arredondados poderão ser aplicados diretamente ao controle. No entanto, se for nulo, os cantos arredondados deverão ser aplicados ao objeto `Container`. O campo `effectTarget` permite que o efeito seja aplicado ao objeto apropriado.
+> Dependendo do tipo de `Control` elemento, a propriedade pode ou não ser nula. Se `Control` a propriedade não for nula, os cantos arredondados podem ser aplicados diretamente ao controle. No entanto, se for nulo, os `Container` cantos arredondados devem ser aplicados ao objeto. O `effectTarget` campo permite que o efeito seja aplicado ao objeto apropriado.
 
 ## <a name="consume-the-effect"></a>Consumir o efeito
 
-Quando o efeito é implementado entre plataformas, ele pode ser consumido por controles Xamarin. Forms. Um aplicativo comum da `RoundEffect` está tornando um objeto `Image` circular. O XAML a seguir mostra o efeito que está sendo aplicado a uma instância de `Image`:
+Uma vez que o efeito é implementado em todas as plataformas, ele pode ser consumido pelos controles Xamarin.Forms. Uma aplicação comum `RoundEffect` do `Image` é fazer uma circular de objeto. O XAML a seguir mostra o `Image` efeito sendo aplicado a uma instância:
 
 ```xaml
 <Image Source=outdoors"
@@ -202,7 +202,7 @@ Quando o efeito é implementado entre plataformas, ele pode ser consumido por co
 </Image>
 ```
 
-O efeito também pode ser aplicado no código:
+O efeito também pode ser aplicado em código:
 
 ```csharp
 var image = new Image
@@ -214,13 +214,13 @@ var image = new Image
 image.Effects.Add(new RoundEffect());
 ```
 
-A classe `RoundEffect` pode ser aplicada a qualquer controle derivado de `VisualElement`.
+A `RoundEffect` classe pode ser aplicada a qualquer `VisualElement`controle que deriva de .
 
 > [!NOTE]
-> Para o efeito para calcular o raio correto, o controle ao qual ele é aplicado deve ter um dimensionamento explícito. Portanto, as propriedades `HeightRequest` e `WidthRequest` devem ser definidas. Se o controle afetado aparecer em um `StackLayout`, sua propriedade `HorizontalOptions` não deverá usar um dos valores de **expansão** como `LayoutOptions.CenterAndExpand` ou não terá dimensões precisas.
+> Para o efeito para calcular o raio correto, o controle a que é aplicado deve ter dimensionamento explícito. Portanto, as `HeightRequest` `WidthRequest` propriedades e propriedades devem ser definidas. Se o controle afetado `StackLayout`aparecer `HorizontalOptions` em um , sua propriedade `LayoutOptions.CenterAndExpand` não deve usar um dos valores **expandir,** como ou não terá dimensões precisas.
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Aplicativo de exemplo RoundEffect](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-roundeffect/)
-- [Introdução aos Efeitos](~/xamarin-forms/app-fundamentals/effects/introduction.md)
-- [Criar um efeito](~/xamarin-forms/app-fundamentals/effects/creating.md)
+- [Aplicativo de amostra RoundEffect](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-roundeffect/)
+- [Introdução aos efeitos](~/xamarin-forms/app-fundamentals/effects/introduction.md)
+- [Criando um efeito](~/xamarin-forms/app-fundamentals/effects/creating.md)

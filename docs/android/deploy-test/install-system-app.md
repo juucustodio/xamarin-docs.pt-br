@@ -8,15 +8,15 @@ author: davidortinau
 ms.author: daortin
 ms.date: 02/15/2018
 ms.openlocfilehash: 72cddde86708b5573dc578165354d137c4dc35b6
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "76723894"
 ---
 # <a name="installing-xamarinandroid-as-a-system-app"></a>Instalando o Xamarin.Android como um aplicativo de sistema
 
-_Este guia discute as diferenças entre um aplicativo de sistema e um aplicativo de usuário e como instalar um aplicativo Xamarin.Android como um aplicativo de sistema. Este guia se aplica aos autores de imagens ROM personalizadas do Android. Ele não explicará como criar um ROM personalizado._
+_Este guia discutirá as diferenças entre um aplicativo do sistema e um aplicativo do usuário, e como instalar um aplicativo Xamarin.Android como um aplicativo do sistema. Este guia se aplica a autores de imagens rom android personalizadas. Ele não explicará como criar uma ROM personalizada._
 
 ## <a name="system-app"></a>Aplicativo de sistema
 
@@ -28,7 +28,7 @@ Aplicativos de sistema se comportam exatamente como aplicativos de usuário, mas
 
 - Aplicativos de sistema são atualizáveis, exatamente como um _aplicativo de usuário_ normal. No entanto, como uma cópia do aplicativo sempre existe em **/system/app/**, sempre é possível reverter o aplicativo para a versão original.
 
-- Determinadas permissões somente para sistema que não estão disponíveis para um aplicativo de usuário podem ser concedidas a aplicativos de sistema. É um exemplo de uma permissão somente para sistema é [`BLUETOOTH_PRIVILEGED`](https://developer.android.com/reference/android/Manifest.permission.html#BLUETOOTH_PRIVILEGED), que permite que os aplicativos emparelhem com dispositivos Bluetooth sem nenhuma interação do usuário.
+- Determinadas permissões somente para sistema que não estão disponíveis para um aplicativo de usuário podem ser concedidas a aplicativos de sistema. Um exemplo de permissão [`BLUETOOTH_PRIVILEGED`](https://developer.android.com/reference/android/Manifest.permission.html#BLUETOOTH_PRIVILEGED)somente para o sistema é, que permite que os aplicativos emparelhem com dispositivos Bluetooth sem qualquer interação do usuário.
 
 É possível distribuir um aplicativo Xamarin.Android como um aplicativo de sistema. Além de fornecer um APK para o ROM personalizado, há duas bibliotecas compartilhadas, **libmonodroid.so** e **libmonosgen-2.0.so**, que devem ser copiadas manualmente do APK para o sistema de arquivos da imagem ROM. Este guia explica as etapas envolvidas.
 
@@ -61,6 +61,6 @@ Este guia discute as diferenças entre um _aplicativo de sistema_ e um _aplicati
 ## <a name="related-links"></a>Links relacionados
 
 - [Publicando um aplicativo](~/android/deploy-test/publishing/index.md)
-- [Arquiteturas de CPU](~/android/app-fundamentals/cpu-architectures.md)
+- [Arquitetura de CPU](~/android/app-fundamentals/cpu-architectures.md)
 - [BLUETOOTH_PRIVILEGED](https://developer.android.com/reference/android/Manifest.permission.html#BLUETOOTH_PRIVILEGED)
 - [Gerenciamento de ABI](https://developer.android.com/ndk/guides/abis)

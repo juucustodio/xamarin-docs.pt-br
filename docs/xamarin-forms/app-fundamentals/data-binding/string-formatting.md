@@ -8,23 +8,23 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
 ms.openlocfilehash: bdd28e1ce6d36a0a025ac43a709af2e38a313526
-ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "76940378"
 ---
 # <a name="xamarinforms-string-formatting"></a>Formatação de cadeia de caracteres do Xamarin.Forms
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
+[![Baixar](~/media/shared/download.png) amostra Baixar a amostra](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
 Às vezes, é conveniente usar associações de dados para exibir a representação de cadeia de caracteres de um objeto ou um valor. Por exemplo, talvez você deseje usar um `Label` para exibir o valor atual de um `Slider`. Nesta associação de dados, o `Slider` é a origem e o destino é a propriedade `Text` do `Label`.
 
-Ao exibir cadeias de caracteres no código, a ferramenta mais avançada é o método estático [`String.Format`](xref:System.String.Format(System.String,System.Object)). A cadeia de caracteres de formatação inclui códigos de formatação para diversos tipos de objetos, sendo que você pode incluir outros textos junto com os valores que estão sendo formatados. Confira o artigo [Formatando tipos no .NET](/dotnet/standard/base-types/formatting-types/) para obter mais informações sobre a formatação da cadeia de caracteres.
+Ao exibir strings em código, a ferramenta [`String.Format`](xref:System.String.Format(System.String,System.Object)) mais poderosa é o método estático. A cadeia de caracteres de formatação inclui códigos de formatação para diversos tipos de objetos, sendo que você pode incluir outros textos junto com os valores que estão sendo formatados. Confira o artigo [Formatando tipos no .NET](/dotnet/standard/base-types/formatting-types/) para obter mais informações sobre a formatação da cadeia de caracteres.
 
 ## <a name="the-stringformat-property"></a>A propriedade StringFormat
 
-Este recurso é levado para as associações de dados: Você define a propriedade [`StringFormat`](xref:Xamarin.Forms.BindingBase.StringFormat) de `Binding` (ou a propriedade [`StringFormat`](xref:Xamarin.Forms.Xaml.BindingExtension.StringFormat) da extensão de marcação `Binding`) como uma cadeia de caracteres de formatação padrão do .NET com um espaço reservado:
+Esta instalação é transportada em vinculações de [`StringFormat`](xref:Xamarin.Forms.BindingBase.StringFormat) dados: `Binding` Você [`StringFormat`](xref:Xamarin.Forms.Xaml.BindingExtension.StringFormat) define a `Binding` propriedade de (ou a propriedade da extensão de marcação) para uma seqüência de formatação .NET padrão com um espaço reservado:
 
 ```xaml
 <Slider x:Name="slider" />
@@ -123,7 +123,7 @@ A última seção define o `BindingContext` com valor de `Math.PI` e o exibe com
 
 Este é o programa em execução:
 
-[![Formação de cadeia de caracteres](string-formatting-images/stringformatting-small.png "Formação de cadeia de caracteres")](string-formatting-images/stringformatting-large.png#lightbox "Formação de cadeia de caracteres")
+[![Formatação de cordas](string-formatting-images/stringformatting-small.png "Formação de cadeia de caracteres")](string-formatting-images/stringformatting-large.png#lightbox "Formação de cadeia de caracteres")
 
 ## <a name="viewmodels-and-string-formatting"></a>ViewModels e formatação de cadeia de caracteres
 
@@ -176,11 +176,11 @@ Essa abordagem é apresentada na amostra **Melhor Seletor de Cor**, que usa o me
 
 Agora há três pares de elementos `Slider` e `Label` associados à mesma propriedade de origem no objeto `HslColorViewModel`. A única diferença é que `Label` tem uma propriedade `StringFormat` para exibir cada valor `Slider`.
 
-[![Melhor seletor de cores](string-formatting-images/bettercolorselector-small.png "Melhor Seletor de cores")](string-formatting-images/bettercolorselector-large.png#lightbox "Melhor Seletor de cores")
+[![Melhor Seletor de cores](string-formatting-images/bettercolorselector-small.png "Melhor Seletor de cores")](string-formatting-images/bettercolorselector-large.png#lightbox "Melhor Seletor de cores")
 
 Você deve estar se perguntando como poderá exibir valores RGB (vermelho, verde, azul) em formato hexadecimal tradicional de dois dígitos. Esses valores inteiros não estão diretamente disponíveis na estrutura `Color`. Uma solução é calcular valores inteiros dos componentes de cor dentro do ViewModel e expô-los como propriedades. Em seguida, você pode formatá-los usando a especificação de formatação `X2`.
 
-Outra abordagem é mais geral: Você pode gravar um *conversor de valor de associação* como abordado no artigo posterior, [**Conversores de valor de associação**](converters.md).
+Outra abordagem é mais geral: você pode escrever um *conversor de valor de associação* conforme abordado no artigo posterior, [**Conversores de valor de associação**](converters.md).
 
 No entanto, o próximo artigo explora o [**Caminho de associação**](binding-path.md) com mais detalhes e mostra como você pode usá-lo para referenciar subpropriedades e itens em coleções.
 

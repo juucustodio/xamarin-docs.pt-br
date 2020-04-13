@@ -7,17 +7,17 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
 ms.openlocfilehash: 288ff00b35c369581e50b8e8777f85b7b6119590
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73021298"
 ---
 # <a name="publishing-to-the-amazon-app-store"></a>Publicação na Amazon App Store
 
 O Programa de distribuição de aplicativos móveis da Amazon permite que desenvolvedores de aplicativos móveis publiquem seus aplicativos no Amazon. Esta seção aborda brevemente a Amazon App Store para Android. 
 
-[ ![Tela do Amazon App Store](publishing-to-amazon-images/amazon-app-store.png)](publishing-to-amazon-images/amazon-app-store.png#lightbox)
+[![Tela da Amazon App Store](publishing-to-amazon-images/amazon-app-store.png)](publishing-to-amazon-images/amazon-app-store.png#lightbox)
 
 O Amazon não limita o tamanho de APKs. No entanto, se um APK for maior que 30 MB, usará o FTP para distribuição, em vez do Portal de distribuição de aplicativos móveis da Amazon.
 

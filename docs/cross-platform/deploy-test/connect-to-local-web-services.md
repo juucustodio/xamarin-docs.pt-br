@@ -7,15 +7,15 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 10/16/2019
 ms.openlocfilehash: 29261f2ef6366c0dac8ac82e63584366a5cca0b0
-ms.sourcegitcommit: 233aaa1ac3d8f40c09b6daf6d944ea0b4cbee381
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "74135273"
 ---
 # <a name="connect-to-local-web-services-from-ios-simulators-and-android-emulators"></a>Conectar-se aos Serviços Web Locais em simuladores do iOS e emuladores do Android
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todorest/)
+[![Baixar](~/media/shared/download.png) amostra Baixar a amostra](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todorest/)
 
 Muitos aplicativos móveis consomem serviços Web. Durante a fase de desenvolvimento, é comum implantar um serviço Web localmente e consumi-lo de um aplicativo móvel em execução no simulador do iOS ou no emulador do Android. Isso evita a necessidade de implantar o serviço Web em um ponto de extremidade hospedado e possibilita uma experiência de depuração simples, pois o aplicativo móvel e o serviço Web estão sendo executados localmente.
 
@@ -27,7 +27,7 @@ Os aplicativos móveis em execução no simulador do iOS ou no emulador do Andro
 No entanto, é necessário um trabalho adicional para que o aplicativo em execução no simulador do iOS ou no emulador do Android possam consumir um serviço Web local que esteja exposto via HTTPS. Para este cenário, o processo é da seguinte maneira:
 
 1. Crie um certificado autoassinado de desenvolvimento em seu computador. Para saber mais, confira as informações sobre como [criar um certificado de desenvolvimento](#create-a-development-certificate).
-1. Configure seu projeto para usar a pilha de rede `HttpClient` apropriada para sua compilação de depuração. Para saber mais, confira as informações sobre como [configurar o projeto](#configure-your-project).
+1. Configure seu projeto para `HttpClient` usar a pilha de rede apropriada para sua compilação de depuração. Para saber mais, confira as informações sobre como [configurar o projeto](#configure-your-project).
 1. Especifique o endereço do computador local. Para saber mais, confira as informações sobre como [especificar o endereço do computador local](#specify-the-local-machine-address).
 1. Ignore a verificação de segurança do certificado de desenvolvimento local. Para saber mais, veja [Ignorar a verificação de segurança do certificado](#bypass-the-certificate-security-check).
 
@@ -66,7 +66,7 @@ No entanto, quando o aplicativo precisa se conectar a um serviço Web seguro que
 
 ### <a name="android"></a>Android
 
-Os aplicativos do Xamarin em execução no Android podem usar a pilha de rede gerenciada `HttpClient` ou a pilha de rede nativa `AndroidClientHandler`. Por padrão, a nova plataforma de projetos do Android usa a pilha de rede `AndroidClientHandler`, para dar suporte ao TLS 1.2, e usa as APIs nativas para um desempenho melhor e um executável de tamanho menor. Para obter mais informações sobre pilhas de rede do Android, consulte [seletor de implementação do HttpClient Stack e SSL/TLS para Android](~/android/app-fundamentals/http-stack.md).
+Os aplicativos do Xamarin em execução no Android podem usar a pilha de rede gerenciada `HttpClient` ou a pilha de rede nativa `AndroidClientHandler`. Por padrão, a nova plataforma de projetos do Android usa a pilha de rede `AndroidClientHandler`, para dar suporte ao TLS 1.2, e usa as APIs nativas para um desempenho melhor e um executável de tamanho menor. Para obter mais informações sobre as pilhas de rede Android, consulte [HttpClient Stack e o seletor de implementação SSL/TLS para Android](~/android/app-fundamentals/http-stack.md).
 
 ## <a name="specify-the-local-machine-address"></a>Especificar o endereço do computador local
 
@@ -87,7 +87,7 @@ No entanto, o roteador virtual para cada emulador gerencia um espaço de rede es
 
 ### <a name="xamarinforms-example"></a>Exemplo do Xamarin.Forms
 
-Em um aplicativo Xamarin.Forms, a classe [`Device`](xref:Xamarin.Forms.Device) pode ser usada para detectar a plataforma em que o aplicativo está sendo executado. O nome do host apropriado, que permite o acesso a serviços Web locais seguros, pode ser definido da seguinte maneira:
+Em um aplicativo Xamarin.Forms, a [`Device`](xref:Xamarin.Forms.Device) classe pode ser usada para detectar a plataforma em que o aplicativo está sendo executado. O nome do host apropriado, que permite o acesso a serviços Web locais seguros, pode ser definido da seguinte maneira:
 
 ```csharp
 public static string BaseAddress =
@@ -99,11 +99,11 @@ public static string TodoItemsUrl = $"{BaseAddress}/api/todoitems/";
 
 A tentativa de invocar um serviço Web local seguro de um aplicativo em execução no simulador do iOS ou no emulador Android resultará em uma `HttpRequestException` sendo acionada, mesmo ao usar a pilha de rede gerenciada em cada plataforma. Isso ocorre porque o certificado de desenvolvimento HTTPS local é autoassinado, e certificados autoassinados não são confiados pelo iOS nem pelo Android.
 
-Portanto, é necessário ignorar os erros de SSL quando um aplicativo consome um serviço Web local seguro. No momento, o mecanismo para realizar isso é diferente no iOS e no Android.
+Portanto, é necessário ignorar os erros de SSL quando um aplicativo consome um serviço Web local seguro. O mecanismo para conseguir isso é atualmente diferente no iOS e Android.
 
 ### <a name="ios"></a>iOS
 
-Os erros de SSL podem ser ignorados no iOS para serviços Web locais seguros, ao usar a pilha de rede gerenciada, definindo a propriedade `ServicePointManager.ServerCertificateValidationCallback` como um retorno de chamada que ignora o resultado da verificação de segurança de certificado para o certificado de desenvolvimento de HTTPS local:
+Erros de SSL podem ser ignorados no iOS para serviços web seguros `ServicePointManager.ServerCertificateValidationCallback` locais, ao usar a pilha de rede gerenciada, definindo a propriedade como um retorno de chamada que ignora o resultado da verificação de segurança do certificado para o certificado de desenvolvimento HTTPS local:
 
 ```csharp
 #if DEBUG
@@ -116,14 +116,14 @@ Os erros de SSL podem ser ignorados no iOS para serviços Web locais seguros, ao
 #endif
 ```
 
-Nesse exemplo de código, o resultado de validação de certificado do servidor é retornado quando o certificado que passar por validação não for o certificado `localhost`. Para esse certificado, o resultado da validação é ignorado e `true` é retornado, indicando que o certificado é válido. Esse código deve ser adicionado ao método `AppDelegate.FinishedLaunching` no iOS, antes da chamada do método `LoadApplication(new App())`.
+Nesse exemplo de código, o resultado de validação de certificado do servidor é retornado quando o certificado que passar por validação não for o certificado `localhost`. Para esse certificado, o resultado da validação é ignorado e `true` é retornado, indicando que o certificado é válido. Este código deve ser `AppDelegate.FinishedLaunching` adicionado ao método no `LoadApplication(new App())` iOS, antes da chamada do método.
 
 > [!NOTE]
-> As pilhas de rede nativas no iOS não se conectam ao `ServerCertificateValidationCallback`.
+> As pilhas de rede nativas no `ServerCertificateValidationCallback`iOS não se prendem ao .
 
 ### <a name="android"></a>Android
 
-Os erros de SSL podem ser ignorados no Android para serviços Web locais seguros, ao usar as pilhas de rede gerenciadas e nativas `AndroidClientHandler`, definindo a propriedade `ServerCertificateCustomValidationCallback` em um objeto `HttpClientHandler` como um retorno de chamada que ignora o resultado da verificação de segurança de certificado para o certificado de desenvolvimento de HTTPS local:
+Erros de SSL podem ser ignorados no Android para serviços `AndroidClientHandler` web seguros locais, `ServerCertificateCustomValidationCallback` ao usar `HttpClientHandler` as pilhas de rede gerenciadas e nativas, definindo a propriedade em um objeto para um retorno de chamada que ignora o resultado da verificação de segurança do certificado para o certificado de desenvolvimento HTTPS local:
 
 ```csharp
 public HttpClientHandler GetInsecureHandler()
@@ -139,11 +139,11 @@ public HttpClientHandler GetInsecureHandler()
 }
 ```
 
-Nesse exemplo de código, o resultado de validação de certificado do servidor é retornado quando o certificado que passar por validação não for o certificado `localhost`. Para esse certificado, o resultado da validação é ignorado e `true` é retornado, indicando que o certificado é válido. O objeto `HttpClientHandler` resultante deve ser passado como um argumento para o Construtor `HttpClient`.
+Nesse exemplo de código, o resultado de validação de certificado do servidor é retornado quando o certificado que passar por validação não for o certificado `localhost`. Para esse certificado, o resultado da validação é ignorado e `true` é retornado, indicando que o certificado é válido. O objeto `HttpClientHandler` resultante deve ser passado `HttpClient` como argumento para o construtor.
 
 ## <a name="related-links"></a>Links relacionados
 
 - [TodoREST (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todorest/)
-- [Habilitar HTTPS local](/aspnet/core/getting-started#enable-local-https)
+- [Habilitar o HTTPS local](/aspnet/core/getting-started#enable-local-https)
 - [Seletor de implementação de HttpClient e SSL/TLS para iOS/macOS](~/cross-platform/macios/http-stack.md)
 - [Seletor de implementação de SSL/TLS e da pilha HttpClient para Android](~/android/app-fundamentals/http-stack.md)

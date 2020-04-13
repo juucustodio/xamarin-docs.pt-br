@@ -8,61 +8,61 @@ author: davidortinau
 ms.author: daortin
 ms.date: 11/16/2017
 ms.openlocfilehash: 8685be4bb1cc45ff04dc8d9f7d8e64e7b1483b60
-ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73027020"
 ---
 # <a name="where-can-i-set-my-android-sdk-locations"></a>Onde posso configurar os locais de SDK do Android?
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-No Visual Studio, navegue até **ferramentas > opções > Xamarin > configurações do Android** para exibir e definir o local do SDK do Android:
+No Visual Studio, navegue até **ferramentas > opções > Xamarin > configurações** do Android para visualizar e definir a localização do Android SDK:
 
-[guia ![exemplo de locais em preferências](android-sdk-location-images/win/01-locations-sml.png)](android-sdk-location-images/win/01-locations.png#lightbox)
+[![Guia De exemplos de localização em Preferências](android-sdk-location-images/win/01-locations-sml.png)](android-sdk-location-images/win/01-locations.png#lightbox)
 
-O local padrão para cada caminho é o seguinte:
+O local padrão de cada caminho é o seguinte:
 
-- Local do Java Development Kit: 
+- Localização do kit de desenvolvimento Java: 
 
-    **C:\\arquivos de programas\\Java\\JDK 1.8.0 _131**
+    **C:\\Arquivos\\\\do programa Java jdk1.8.0_131**
 
-- SDK do Android local: 
+- Localização do Android SDK: 
 
-    **C:\\Program Files (x86)\\Android\\android-sdk**
+    **C:\\Arquivos do programa\\(x86) Android\\android-sdk**
 
-- Local de NDK do Android: 
+- Localização do Android NDK: 
 
-    **C:\\ProgramData\\Microsoft\\AndroidNDK64\\Android-NDK-r13b**
+    **C:\\\\ProgramData\\Microsoft AndroidNDK64\\android-ndk-r13b**
 
-Observe que o número de versão do NDK pode variar. Por exemplo, em vez de **Android-NDK-r13b**, pode ser uma versão anterior, como **Android-NDK-r10e**.
+Observe que o número da versão do NDK pode variar. Por exemplo, em vez de **android-ndk-r13b,** poderia ser uma versão anterior, como **android-ndk-r10e**.
 
-Para definir o local do SDK do Android, insira o caminho completo do diretório SDK do Android na caixa **local do SDK do Android** . Você pode navegar até o local do SDK do Android no explorador de arquivos, copiar o caminho da barra de endereços e colar esse caminho na caixa **SDK do Android local** .
-Por exemplo, se seu local de SDK do Android estiver em **C:\\usuários\\nome de usuário\\AppData\\local\\Android\\SDK**, desmarque o caminho antigo na caixa **local do SDK do Android** , Cole esse caminho e clique em **OK**.
+Para definir a localização do Android SDK, digite o caminho completo do diretório Android SDK na caixa **de localização do Android SDK.** Você pode navegar até a localização do Android SDK no File Explorer, copiar o caminho da barra de endereços e colar esse caminho na caixa **de localização do Android SDK.**
+Por exemplo, se a sua localização do Android SDK estiver em **\\C:\\Usuários nome de\\usuário AppData\\Local\\Android\\Sdk**, limpar o caminho antigo na caixa de localização do Android **SDK,** colar neste caminho e clicar em **OK**.
 
 # <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
-Em Visual Studio para Mac, navegue até **preferências > projetos > locais do SDK > Android**. Na página do **Android** , clique na guia **locais** para exibir e definir o local do SDK:
+No Visual Studio para Mac, navegue até **preferências > projetos > locais sdk > Android**. Na página do **Android,** clique na guia **Locais** para visualizar e definir a localização do SDK:
 
-[guia ![exemplo de locais em preferências](android-sdk-location-images/mac/01-locations-sml.png)](android-sdk-location-images/mac/01-locations.png#lightbox)
+[![Guia De exemplos de localização em Preferências](android-sdk-location-images/mac/01-locations-sml.png)](android-sdk-location-images/mac/01-locations.png#lightbox)
 
-O local padrão para cada caminho é o seguinte:
+O local padrão de cada caminho é o seguinte:
 
-- SDK do Android local: 
+- Localização do Android SDK: 
 
-    **~/Library/Developer/Xamarin/android-sdk-macosx**
+    **~/Biblioteca/Desenvolvedor/Xamarin/android-sdk-macosx**
 
-- Local de NDK do Android: 
+- Localização do Android NDK: 
 
-    **~/Library/Developer/Xamarin/android-ndk/android-ndk-r14b**
+    **~/Biblioteca/Desenvolvedor/Xamarin/android-ndk/android-ndk-r14b**
 
-- Localização do Java SDK (JDK): 
+- Java SDK (JDK) Localização: 
 
     **/usr**
 
-Observe que o número de versão do NDK pode variar. Por exemplo, em vez de **Android-NDK-r14b**, pode ser uma versão anterior, como **Android-NDK-r10e**.
+Observe que o número da versão do NDK pode variar. Por exemplo, em vez de **android-ndk-r14b,** poderia ser uma versão anterior, como **android-ndk-r10e**.
 
-Para definir o local do SDK do Android, insira o caminho completo do diretório SDK do Android na caixa **local do SDK do Android** . Você pode selecionar a pasta SDK do Android no localizador, pressionar **Ctrl +&#8984;+ I** para exibir informações da pasta, clicar e arrastar o caminho para a direita de **onde:** , copiar e, em seguida, colá-lo na caixa **SDK do Android local** na guia **locais** . Por exemplo, se seu local de SDK do Android estiver em **~/library/Developer/Android/SDK**, desmarque o caminho antigo na caixa **SDK do Android local** , Cole esse caminho e clique em **OK**.
+Para definir a localização do Android SDK, digite o caminho completo do diretório Android SDK na caixa **de localização do Android SDK.** Você pode selecionar a pasta Android SDK no Finder, pressionar **CTRL+&#8984;+I** para visualizar informações da pasta, clicar e arrastar o caminho para a direita de **Onde:**, copie, em seguida, cole-o na caixa **De localização do Android SDK** na guia **Locais.** Por exemplo, se a localização do Android SDK estiver em **~/Biblioteca/Desenvolvedor/Android/Sdk,** limpe o caminho antigo na caixa **de localização do Android SDK,** cole neste caminho e clique em **OK**.
 
 -----

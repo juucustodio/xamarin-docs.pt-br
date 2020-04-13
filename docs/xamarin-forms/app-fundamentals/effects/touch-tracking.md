@@ -8,17 +8,17 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 12/14/2018
 ms.openlocfilehash: cf5a97bca7c827101db951a440863839539c7e48
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
-ms.translationtype: HT
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "76725254"
 ---
 # <a name="invoking-events-from-effects"></a>Invocando eventos por meio de efeitos
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-touchtrackingeffect/)
+[![Baixar](~/media/shared/download.png) amostra Baixar a amostra](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-touchtrackingeffect/)
 
-_Um efeito pode definir e invocar um evento, sinalizando as alterações na exibição nativa subjacente. Este artigo mostra como implementar o acompanhamento de dedos multitoque de nível baixo e como gerar eventos que sinalizam a atividade de toque._
+_Um efeito pode definir e invocar um evento, sinalizando mudanças na visão nativa subjacente. Este artigo mostra como implementar o rastreamento de dedos multi-toque de baixo nível e como gerar eventos que sinalizam atividade de toque._
 
 O efeito descrito neste artigo fornece acesso aos eventos de toque de nível baixo. Esses eventos de nível baixo não estão disponíveis por meio das classes `GestureRecognizer` existentes, mas elas são vitais para alguns tipos de aplicativos. Por exemplo, um aplicativo de pintura a dedo precisa acompanhar dedos individuais à medida que eles se movem na tela. Um teclado musical precisa detectar toques e liberações em teclas individuais, bem como o deslize de um dedo de uma tecla a outra em um glissando.
 
@@ -44,7 +44,7 @@ A API do `Pointer` na Plataforma Universal do Windows se destina a unificar o mo
 
 Além disso, o UWP define mais dois eventos chamados `PointerEntered` e `PointerExited`. Eles indicam quando um mouse ou o dedo e move de um elemento para outro. Por exemplo, considere dois elementos adjacentes, chamados A e B. Ambos os elementos têm manipuladores instalados para os eventos de ponteiro. Quando um dedo pressiona A, o evento `PointerPressed` é invocado. Conforme o dedo se move, A invoca eventos `PointerMoved`. Se o dedo se move de A para B, A invoca um evento `PointerExited` e B invoca um evento `PointerEntered`. Se o dedo é então liberado, B invoca um evento `PointerReleased`.
 
-As plataformas iOS e Android são diferentes do UWP: A exibição que primeiro obtém a chamada a `TouchesBegan` ou `OnTouchEvent` quando um dedo toca a exibição continua obtendo todas as atividades de toque, mesmo se o dedo se mover para diferentes exibições. O UWP pode se comportar de forma semelhante se o aplicativo capturar o ponteiro: No manipulador de eventos `PointerEntered`, o elemento chama `CapturePointer` e, em seguida, obtém todas as atividades de toque desse dedo.
+As plataformas iOS e Android são diferentes do UWP: a exibição que primeiro obtém a chamada a `TouchesBegan` ou `OnTouchEvent` quando um dedo toca a exibição continua obtendo todas as atividades de toque, mesmo se o dedo se move para diferentes exibições. O UWP pode se comportar da mesma forma se o aplicativo captura o ponteiro: no manipulador de eventos `PointerEntered`, o elemento chama `CapturePointer` e, em seguida, obtém todas as atividades de toque desse dedo.
 
 A abordagem do UWP prova ser muito útil para alguns tipos de aplicativos, por exemplo, um teclado musical. Cada tecla pode manipular os eventos de toque dessa tecla e detectar quando um dedo deslizou de uma tecla para outra usando os eventos `PointerEntered` e `PointerExited`.
 
@@ -295,7 +295,7 @@ void FireEvent(TouchEffect touchEffect, int id, TouchActionType actionType, Poin
 }
 ```
 
-Todos os outros tipos de toque são processados de duas maneiras diferentes: Se a propriedade `Capture` for `true`, o evento de toque é uma tradução bastante simples para as informações de `TouchEffect`. Isso fica mais complicado quando `Capture` é `false` porque os eventos de toque talvez precisem ser movidos de uma exibição para outra. Essa é a responsabilidade do método `CheckForBoundaryHop`, que é chamado durante eventos de movimentação. Esse método faz uso de ambos os dicionários estáticos. Ele enumera pelo `viewDictionary` para determinar a exibição que o dedo está tocando no momento e, em seguida, ele usa `idToEffectDictionary` para armazenar a instância `TouchEffect` atual (e, portanto, a exibição atual) associado a uma ID específica:
+Todos os outros tipos de toque são processados de duas maneiras diferentes: se a propriedade `Capture` é `true`, o evento de toque é uma tradução muito simples das informações do `TouchEffect`. Isso fica mais complicado quando `Capture` é `false` porque os eventos de toque talvez precisem ser movidos de uma exibição para outra. Essa é a responsabilidade do método `CheckForBoundaryHop`, que é chamado durante eventos de movimentação. Esse método faz uso de ambos os dicionários estáticos. Ele enumera pelo `viewDictionary` para determinar a exibição que o dedo está tocando no momento e, em seguida, ele usa `idToEffectDictionary` para armazenar a instância `TouchEffect` atual (e, portanto, a exibição atual) associado a uma ID específica:
 
 ```csharp
 void CheckForBoundaryHop(int id, Point pointerLocation)
@@ -384,7 +384,7 @@ void AddBoxViewToLayout()
 }
 ```
 
-O manipulador `TouchAction` processa todos os eventos de toque para todos os elementos `BoxView`, mas é necessário ter algum cuidado: Ele não pode permitir dois dedos em uma única `BoxView` porque o programa implementa apenas a operação de arrastar e os dois dedos interferirão um com o outro. Por esse motivo, a página define uma classe inserida para cada dedo acompanhado no momento:
+O manipulador de eventos `TouchAction` processa todos os eventos de toque para todos os elementos `BoxView`, mas precisa ter algum cuidado: ele não pode permitir dois dedos em uma única `BoxView` porque o programa implementa apenas a operação de arrastar e os dois dedos interferirão um com o outro. Por esse motivo, a página define uma classe inserida para cada dedo acompanhado no momento:
 
 ```csharp
 class DragInfo

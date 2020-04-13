@@ -8,15 +8,15 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
 ms.openlocfilehash: 28e424f4946d05798b9ba309891845d9eab998b1
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "70771816"
 ---
 # <a name="implementing-a-video-player"></a>Implementar um player de vídeo
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
+[![Baixar](~/media/shared/download.png) amostra Baixar a amostra](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
 
 Às vezes é desejável reproduzir arquivos de vídeo em um aplicativo Xamarin.Forms. Esta série de artigos aborda como criar renderizadores personalizados para iOS, Android e o UWP (Plataforma Universal do Windows) para uma classe do Xamarin.Forms denominada `VideoPlayer`.
 
@@ -38,34 +38,34 @@ Um player de vídeo mais sofisticado tem alguns recursos adicionais, como contro
 
 A série de artigos a seguir mostra progressivamente como os renderizadores de plataforma e as classes de suporte são criados:
 
-## <a name="creating-the-platform-video-playersplayer-creationmd"></a>[Criar os players de vídeo de plataforma](player-creation.md)
+## <a name="creating-the-platform-video-players"></a>[Criando os reprodutores de vídeo da plataforma](player-creation.md)
 
 Cada plataforma requer uma classe `VideoPlayerRenderer` que cria e mantém um controle de player de vídeo compatível com a plataforma. Este artigo mostra a estrutura das classes do renderizador e o modo como os players são criados.
 
-## <a name="playing-a-web-videoweb-videosmd"></a>[Reproduzir um vídeo da Web](web-videos.md)
+## <a name="playing-a-web-video"></a>[Reproduzindo um vídeo da Web](web-videos.md)
 
 A fonte mais comum de vídeos para um player de vídeo é provavelmente a Internet. Este artigo descreve como um vídeo da Web pode ser referenciado e usado como uma fonte para o player de vídeo.
 
-## <a name="binding-video-sources-to-the-playersource-bindingsmd"></a>[Associando fontes de vídeo ao player](source-bindings.md)
+## <a name="binding-video-sources-to-the-player"></a>[Vinculação de fontes de vídeo para o jogador](source-bindings.md)
 
 Este artigo usa um `ListView` para apresentar uma coleção de vídeos para reproduzir. Um programa mostra como o arquivo code-behind pode definir a fonte de vídeo do player de vídeo, mas um segundo programa mostra como você pode usar a associação de dados entre o `ListView` e o player de vídeo.
 
-## <a name="loading-application-resource-videosloading-resourcesmd"></a>[Carregar vídeos de recursos do aplicativo](loading-resources.md)
+## <a name="loading-application-resource-videos"></a>[Carregando vídeos de recursos de aplicativos](loading-resources.md)
 
 Vídeos podem ser inseridos como recursos nos projetos de plataforma. Este artigo mostra como armazenar esses recursos e depois carregá-los no programa a ser reproduzido pelo player de vídeo.
 
-## <a name="accessing-the-devices-video-libraryaccessing-librarymd"></a>[Acessar a biblioteca de vídeos do dispositivo](accessing-library.md)
+## <a name="accessing-the-devices-video-library"></a>[Acessando a videoteca do dispositivo](accessing-library.md)
 
 Quando um vídeo é criado usando a câmera do dispositivo, o arquivo de vídeo é armazenado na biblioteca de imagens do dispositivo. Este artigo mostra como acessar o seletor de imagem do dispositivo para selecionar o vídeo e, em seguida, executá-lo usando o player de vídeo.
 
-## <a name="custom-video-transport-controlscustom-transportmd"></a>[Controles personalizados de transporte de vídeo](custom-transport.md)
+## <a name="custom-video-transport-controls"></a>[Controles personalizados de transporte de vídeo](custom-transport.md)
 
-Embora os players de vídeo em cada plataforma forneçam seus próprios controles de transporte na forma de botões para **Reproduzir** e **Pausar**, você pode suprimir a exibição desses botões e fornecer os seus próprios. Este artigo mostra como fazê-lo.
+Embora os players de vídeo em cada plataforma forneçam seus próprios controles de transporte na forma de botões para **Reproduzir** e **Pausar**, você pode suprimir a exibição desses botões e fornecer os seus próprios. Este artigo mostra como fazer isso.
 
-## <a name="custom-video-positioningcustom-positioningmd"></a>[Posicionamento de vídeo personalizado](custom-positioning.md)
+## <a name="custom-video-positioning"></a>[Posicionamento de vídeo personalizado](custom-positioning.md)
 
 Cada um dos players de vídeo da plataforma tem uma barra de posição que mostra o progresso do vídeo e permite que você avance ou retroceda para uma determinada posição. Este artigo demonstra como você pode substituir essa barra de posição com um controle personalizado.
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Demonstrações do player de vídeo (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
+- [Demonstrações do player de vídeo (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)

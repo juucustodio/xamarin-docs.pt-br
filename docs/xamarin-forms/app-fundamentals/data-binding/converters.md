@@ -8,19 +8,19 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
 ms.openlocfilehash: 05ad12de77e8895a23cd364b90abfbfb567ac573
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "70771617"
 ---
 # <a name="xamarinforms-binding-value-converters"></a>Conversores de valor de associação do Xamarin.Forms
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
+[![Baixar](~/media/shared/download.png) amostra Baixar a amostra](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
 Normalmente, associações de dados transferem dados de uma propriedade de origem para uma propriedade de destino e, em alguns casos, da propriedade de destino para a propriedade de origem. Essa transferência é simples quando as propriedades de origem e de destino são do mesmo tipo ou quando um tipo pode ser convertido para outro por meio de uma conversão implícita. Quando não é esse o caso, é necessário realizar uma conversão de tipo.
 
-No artigo [**Formatação de Cadeia de Caracteres**](string-formatting.md), você viu como é possível usar a propriedade `StringFormat` de uma associação de dados para converter qualquer tipo em uma cadeia de caracteres. Para outros tipos de conversões, você precisa escrever código especializado em uma classe que implementa a interface [`IValueConverter`](xref:Xamarin.Forms.IValueConverter). (A Plataforma Universal do Windows contém uma classe semelhante chamada [`IValueConverter`](/uwp/api/Windows.UI.Xaml.Data.IValueConverter/) no namespace `Windows.UI.Xaml.Data`, mas essa `IValueConverter` está no namespace `Xamarin.Forms`.) As classes que implementam `IValueConverter` são denominadas *conversores de valor*, mas também são conhecidas como *conversores de associação* ou *conversores de valor de associação*.
+No artigo [**Formatação de Cadeia de Caracteres**](string-formatting.md), você viu como é possível usar a propriedade `StringFormat` de uma associação de dados para converter qualquer tipo em uma cadeia de caracteres. Para outros tipos de conversões, você precisa escrever algum código [`IValueConverter`](xref:Xamarin.Forms.IValueConverter) especializado em uma classe que implemente a interface. (A Universal Windows Platform contém [`IValueConverter`](/uwp/api/Windows.UI.Xaml.Data.IValueConverter/) uma `Windows.UI.Xaml.Data` classe semelhante `IValueConverter` nomeada no `Xamarin.Forms` namespace, mas isso está no namespace.) As classes `IValueConverter` que implementam são chamadas *conversores de valor,* mas também são frequentemente referidas como *conversores de vinculação* ou *conversores de valor de vinculação*.
 
 ## <a name="the-ivalueconverter-interface"></a>A interface IValueConverter
 
@@ -43,11 +43,11 @@ public class IntToBoolConverter : IValueConverter
 }
 ```
 
-Você define uma instância dessa classe como a propriedade [`Converter`](xref:Xamarin.Forms.Binding.Converter) da classe `Binding` ou como a propriedade [`Converter`](xref:Xamarin.Forms.Xaml.BindingExtension.Converter) da extensão de marcação `Binding`. Essa classe se torna parte da associação de dados.
+Você define uma instância desta [`Converter`](xref:Xamarin.Forms.Binding.Converter) classe `Binding` para a [`Converter`](xref:Xamarin.Forms.Xaml.BindingExtension.Converter) propriedade da `Binding` classe ou para a propriedade da extensão de marcação. Essa classe se torna parte da associação de dados.
 
 O método `Convert` é chamado quando dados são passados da origem para o destino nas associações `OneWay` ou `TwoWay`. O parâmetro `value` é o objeto ou o valor da origem da associação de dados. O método deve retornar um valor com o tipo do destino da associação de dados. O método mostrado aqui converte o parâmetro `value` para um `int` e, em seguida, o compara com 0 para um valor retornado de `bool`.
 
-O método `ConvertBack` é chamado quando dados são passados do destino para a origem nas associações `TwoWay` ou `OneWayToSource`. `ConvertBack` realiza a conversão oposta: Ele pressupõe que o parâmetro `value` é um `bool` do destino e o converte em um valor retornado de `int` para a fonte.
+O método `ConvertBack` é chamado quando dados são passados do destino para a origem nas associações `TwoWay` ou `OneWayToSource`. `ConvertBack` realiza a conversão oposta: ele pressupõe que o parâmetro `value` é um `bool` do destino e o converte em um valor retornado de `int` para a fonte.
 
 Se a associação de dados também incluir uma configuração de `StringFormat`, o conversor de valor será invocado antes que o resultado seja formatado como uma cadeia de caracteres.
 
@@ -97,13 +97,13 @@ Se um conversor de valor for usado em várias páginas de seu aplicativo, você 
 
 A página **Habilitar Botões** demonstra uma necessidade comum quando um `Button` executa uma operação com base no texto que o usuário digita em uma exibição de `Entry`. Se nada tiver sido digitado no `Entry`, o `Button` deverá ser desabilitado. Cada `Button` contém uma associação de dados em sua propriedade `IsEnabled`. A origem da associação de dados é a propriedade `Length` da propriedade `Text` do `Entry` correspondente. Se essa propriedade `Length` não for 0, o conversor de valor retornará `true` e `Button` será habilitado:
 
-[![Habilitar Botões](converters-images/enablebuttons-small.png "Habilitar Botões")](converters-images/enablebuttons-large.png#lightbox "Habilitar Botões")
+[![Habilitar botões](converters-images/enablebuttons-small.png "Habilitar botões")](converters-images/enablebuttons-large.png#lightbox "Habilitar botões")
 
 Observe que a propriedade `Text` em cada `Entry` é inicializada como uma cadeia de caracteres vazia. A propriedade `Text` é `null` por padrão e a associação de dados não funcionará nesse caso.
 
 Alguns conversores de valor são escritos especificamente para aplicativos específicos, enquanto outros são generalizados. Se você souber que um conversor de valor será usado apenas em associações de `OneWay`, o método `ConvertBack` poderá simplesmente retornar `null`.
 
-O método `Convert` mostrado acima supõe implicitamente que o argumento `value` é do tipo `int` e que o valor retornado deve ser do tipo `bool`. Da mesma forma, o método `ConvertBack` supõe que o argumento `value` é do tipo `bool` e que o valor retornado é `int`. Se não for esse o caso, ocorrerá uma exceção de tempo de execução.
+O método `Convert` mostrado acima supõe implicitamente que o argumento `value` é do tipo `int` e que o valor retornado deve ser do tipo `bool`. Da mesma forma, o método `ConvertBack` supõe que o argumento `value` é do tipo `bool` e que o valor retornado é `int`. Se não for esse o caso, ocorrerá uma exceção de runtime.
 
 Você pode escrever conversores de valor de forma que eles sejam mais generalizados e aceitem vários tipos de dados diferentes. Os métodos `Convert` e `ConvertBack` podem usar os operadores `as` ou `is` com o parâmetro `value` ou podem chamar `GetType` nesse parâmetro para determinar seu tipo e, em seguida, fazer algo apropriado. O tipo esperado do valor retornado de cada método é determinado pelo parâmetro `targetType`. Às vezes, conversores de valor são usados com associações de dados com tipos de destino diferentes. O conversor de valor pode usar o argumento `targetType` para executar uma conversão para o tipo correto.
 
@@ -132,7 +132,7 @@ public class BoolToObjectConverter<T> : IValueConverter
 }
 ```
 
-A página **Alternar Indicadores** demonstra como ele pode ser usado para exibir o valor de uma exibição de `Switch`. Embora seja comum para instanciar os conversores de valor como recursos em um dicionário de recursos, esta página demonstra uma alternativa: Cada conversor de valor é instanciado entre marcas de elemento de propriedade `Binding.Converter`. O `x:TypeArguments` indica o argumento genérico e `TrueObject` e `FalseObject` são configurados como objetos desse tipo:
+A página **Alternar Indicadores** demonstra como ele pode ser usado para exibir o valor de uma exibição de `Switch`. Embora seja comum instanciar conversores de valor como recursos em um dicionário de recursos, esta página demonstra uma alternativa: cada conversor de valor é instanciado entre marcas do elemento de propriedade `Binding.Converter`. O `x:TypeArguments` indica o argumento genérico e `TrueObject` e `FalseObject` são configurados como objetos desse tipo:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -238,13 +238,13 @@ A página **Alternar Indicadores** demonstra como ele pode ser usado para exibir
 
 No último dos três pares de `Switch` e `Label`, o argumento genérico é definido como `Style` e objetos `Style` inteiros são fornecidos para os valores de `TrueObject` e `FalseObject`. Eles substituem o estilo implícito de `Label` definido no dicionário de recursos, portanto, as propriedades do estilo são atribuídas explicitamente ao `Label`. Ativar/desativar o `Switch` faz com que o `Label` correspondente reflita a alteração:
 
-[![Alternar Indicadores](converters-images/switchindicators-small.png "Alternar Indicadores")](converters-images/switchindicators-large.png#lightbox "Alternar Indicadores")
+[![Indicadores de switch](converters-images/switchindicators-small.png "Indicadores de switch")](converters-images/switchindicators-large.png#lightbox "Indicadores de switch")
 
-Também é possível usar [`Triggers`](~/xamarin-forms/app-fundamentals/triggers.md) para implementar alterações semelhantes na interface do usuário com base em outras exibições.
+Também é possível usar [`Triggers`](~/xamarin-forms/app-fundamentals/triggers.md) para implementar alterações semelhantes na interface do usuário com base em outras visualizações.
 
 ## <a name="binding-converter-parameters"></a>Parâmetros do conversor de associação
 
-A classe `Binding` define uma propriedade [`ConverterParameter`](xref:Xamarin.Forms.Binding.ConverterParameter) e a extensão de marcação `Binding` também define uma propriedade [`ConverterParameter`](xref:Xamarin.Forms.Xaml.BindingExtension.ConverterParameter). Se essa propriedade for definida, o valor será passado para os métodos `Convert` e `ConvertBack` como o argumento `parameter`. Mesmo se a instância do conversor de valor for compartilhada entre várias associações de dados, o `ConverterParameter` poderá ser diferente para realizar conversões de alguma forma diferentes.
+A `Binding` classe define [`ConverterParameter`](xref:Xamarin.Forms.Binding.ConverterParameter) uma propriedade, e a extensão de `Binding` marcação também define uma [`ConverterParameter`](xref:Xamarin.Forms.Xaml.BindingExtension.ConverterParameter) propriedade. Se essa propriedade for definida, o valor será passado para os métodos `Convert` e `ConvertBack` como o argumento `parameter`. Mesmo se a instância do conversor de valor for compartilhada entre várias associações de dados, o `ConverterParameter` poderá ser diferente para realizar conversões de alguma forma diferentes.
 
 O uso de `ConverterParameter` é demonstrado com um programa de seleção de cor. Nesse caso, o `RgbColorViewModel` tem três propriedades do tipo `double` denominadas `Red`, `Green`, e `Blue` que ele usa para construir um valor de `Color`:
 
@@ -460,9 +460,9 @@ A página **Seletor de Cor RGB** cria uma instância de `DoubleToIntConverter` e
 
 Os valores das propriedades `Red` e `Green` são exibidos com uma extensão de marcação `Binding`. A propriedade `Blue`, no entanto, instancia a classe `Binding` para demonstrar como um valor de `double` explícito pode ser definido como a propriedade `ConverterParameter`.
 
-Este é o resultado:
+Eis o resultado:
 
-[![Seletor de Cor RGB](converters-images/rgbcolorselector-small.png "Seletor de Cor RGB")](converters-images/rgbcolorselector-large.png#lightbox "Seletor de Cor RGB")
+[![Seletor de cores RGB](converters-images/rgbcolorselector-small.png "Seletor de cores RGB")](converters-images/rgbcolorselector-large.png#lightbox "Seletor de cores RGB")
 
 ## <a name="related-links"></a>Links relacionados
 

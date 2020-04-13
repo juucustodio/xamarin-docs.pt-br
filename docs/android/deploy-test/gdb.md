@@ -7,15 +7,15 @@ author: davidortinau
 ms.author: daortin
 ms.date: 02/05/2018
 ms.openlocfilehash: 51ebb8932f4b1ef8f10ba699e59ce53c98a38a50
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73021484"
 ---
 # <a name="gdb"></a>GDB
 
-## <a name="overview"></a>Visão Geral
+## <a name="overview"></a>Visão geral
 
 O Xamarin.Android 4.10 introduziu o suporte parcial para uso de `gdb` usando o destino de MSBuild `_Gdb`. 
 
@@ -57,7 +57,7 @@ O destino `_Gdb` iniciará uma atividade launcher declarada dentro de seu arquiv
 O destino `_Gdb` criará um diretório `gdb-symbols` e copiará o conteúdo dos diretórios `/system/lib` e `$APPDIR/lib` do seu destino para lá.
 
 > [!NOTE]
-> O conteúdo do diretório `gdb-symbols` está vinculado ao destino do Android no qual você implantou, e não será automaticamente substituído se você mudar o destino. (Considere esse um bug.) Se você alterar os dispositivos de destino do Android, será necessário excluir manualmente esse diretório.
+> O conteúdo do diretório `gdb-symbols` está vinculado ao destino do Android no qual você implantou, e não será automaticamente substituído se você mudar o destino. (Considere isso um bug.) Se você alterar dispositivos alvo do Android, você precisará excluir manualmente este diretório.
 
 Por fim, copie o comando `gdb` gerado e execute-o no shell:
 
