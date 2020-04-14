@@ -123,5 +123,5 @@
       items:
         - name: Notas específicas da plataforma
           href: ~/graphics-games/skiasharp/platform.md
-    - name: Reference API
+    - name: Referência de API
       href: /dotnet/api/skiasharp/

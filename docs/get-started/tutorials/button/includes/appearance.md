@@ -1,12 +1,12 @@
 ---
 ms.openlocfilehash: 1d2bed830af97ce1ff329a5396a415247a43189d
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2020
+ms.lasthandoff: 04/09/2020
 ms.locfileid: "61372892"
 ---
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
 1. Em **MainPage.xaml**, modifique a declaração [`Button`](xref:Xamarin.Forms.Button) para alterar sua aparência visual:
 
@@ -30,7 +30,7 @@ ms.locfileid: "61372892"
 
     Para obter mais informações sobre a configuração da aparência [`Button`](xref:Xamarin.Forms.Button), confira [Aparência do botão](~/xamarin-forms/user-interface/button.md#button-appearance) no guia [Botão do Xamarin.Forms](~/xamarin-forms/user-interface/button.md).
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/vsmac)
 
 1. Em **MainPage.xaml**, modifique a declaração [`Button`](xref:Xamarin.Forms.Button) para alterar sua aparência visual:
 

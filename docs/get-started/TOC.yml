@@ -7,7 +7,7 @@
     - name: Instalação
       href: installation/index.md
       items:
-        - name: Instalando o Xamarin no Windows
+        - name: Instalar o Xamarin no Windows
           href: installation/windows.md
           items:
             - name: Instalando versões prévias do Xamarin (Windows)
@@ -23,11 +23,11 @@
               href: /visualstudio/mac/uninstall
         - name: Instruções de configuração de firewall do Xamarin
           href: installation/firewall.md
-    - name: Plataformas com suporte
+    - name: Plataformas compatíveis
       href: supported-platforms.md
     - name: Primeiro aplicativo
       href: first-app/index.md
-    - name: Guias de Início Rápido
+    - name: Inícios rápidos
       href: quickstarts/index.md
       expanded: true
       items:
@@ -35,7 +35,7 @@
           href: quickstarts/single-page.md
         - name: Multipágina
           href: quickstarts/multi-page.md
-        - name: Banco de Dados
+        - name: Banco de dados
           href: quickstarts/database.md
         - name: Estilo
           href: quickstarts/styling.md
@@ -47,7 +47,7 @@
       items:
         - name: Layout empilhado
           href: tutorials/stacklayout/index.yml
-        - name: Rotular
+        - name: Rótulo
           href: tutorials/label/index.yml
         - name: Botão
           href: tutorials/button/index.yml
@@ -67,7 +67,7 @@
           href: tutorials/app-lifecycle/index.yml
         - name: Banco de dados local
           href: tutorials/local-database/index.yml
-        - name: Serviços da Web
+        - name: SERVIÇOS WEB
           href: tutorials/web-service/index.yml
     - name: Saiba mais sobre o Xamarin
       expanded: true

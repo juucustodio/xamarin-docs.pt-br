@@ -1,15 +1,15 @@
 ---
 ms.openlocfilehash: 87eb021e6cc571a9a5522697cde2aa11ee991308
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2020
+ms.lasthandoff: 04/09/2020
 ms.locfileid: "66193821"
 ---
 
 O Xamarin.Forms tem um pop-up modal, conhecido como uma folha de ações, que pode ser usado para orientar os usuários durante uma tarefa. Neste exercício, você usará o método [`DisplayActionSheet`](xref:Xamarin.Forms.Page.DisplayActionSheet*), da classe [`Page`](xref:Xamarin.Forms.Page), para exibir uma folha de ações que orienta os usuários durante uma tarefa.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
 1. Em **MainPage.xaml**, adicione uma nova declaração [`Button`](xref:Xamarin.Forms.Button) que exibirá uma folha de ações:
 
@@ -43,7 +43,7 @@ O Xamarin.Forms tem um pop-up modal, conhecido como uma folha de ações, que po
 
     Confira mais informações sobre a exibição de folhas de ação em [Orientar usuários durante tarefas](~/xamarin-forms/user-interface/pop-ups.md#guide-users-through-tasks) no guia [Exibir pop-ups](~/xamarin-forms/user-interface/pop-ups.md).
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/vsmac)
 
 1. Em **MainPage.xaml**, adicione uma nova declaração [`Button`](xref:Xamarin.Forms.Button) que exibirá uma folha de ações:
 

@@ -11,10 +11,10 @@ metadata:
   ms.author: dabritch
   ms.date: 01/24/2020
   ms.openlocfilehash: f800b61bfdf9d1e79eed6e943c2b49e4724ef641
-  ms.sourcegitcommit: 24883be72e485e5311dd0eb91f9a22f78eeec11a
+  ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
   ms.translationtype: HT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 02/17/2020
+  ms.lasthandoff: 04/09/2020
   ms.locfileid: "77374104"
 landingContent:
 - title: Introdução
@@ -23,7 +23,7 @@ landingContent:
     links:
     - text: Introdução ao Xamarin.iOS
       url: ~/ios/get-started/index.md
-    - text: Instalação e configuração
+    - text: Configuração e instalação
       url: ~/ios/get-started/installation/index.md
     - text: Criar seu primeiro aplicativo
       url: ~/ios/get-started/hello-ios/index.md
@@ -85,7 +85,7 @@ landingContent:
       url: ~/ios/platform/passkit.md
     - text: PhotoKit
       url: ~/ios/platform/photokit.md
-    - text: Pesquisar
+    - text: Search
       url: ~/ios/platform/search/index.md
     - text: SiriKit
       url: ~/ios/platform/sirikit/index.md
@@ -105,9 +105,9 @@ landingContent:
       url: ~/essentials/get-started.md?context=xamarin/ios
     - text: Suporte aos recursos e à plataforma
       url: ~/essentials/platform-feature-support.md?context=xamarin/ios
-    - text: Solução de problemas
+    - text: solução de problemas
       url: ~/essentials/troubleshooting.md?context=xamarin/ios
-    - text: Notas de Versão
+    - text: Notas de versão
       url: https://docs.microsoft.com/xamarin/essentials/release-notes/
 - title: Serviços de nuvem e de dados
   linkLists:
@@ -115,9 +115,9 @@ landingContent:
     links:
     - text: Azure Active Directory
       url: ~/cross-platform/data-cloud/active-directory/index.md?context=xamarin/ios
-    - text: Aplicativos móveis do Azure
+    - text: Aplicativos Móveis do Azure
       url: ~/cross-platform/data-cloud/mobile-apps.md
-    - text: Acesso a dados
+    - text: Acesso aos Dados
       url: ~/ios/data-cloud/data/index.md
     - text: System.Data
       url: ~/ios/data-cloud/system.data.md
@@ -191,7 +191,7 @@ landingContent:
       url: ~/essentials/index.md?context=xamarin/watchos
     - text: Implantação e teste
       url: ~/ios/watchos/deploy-test/index.md
-    - text: Solução de problemas
+    - text: solução de problemas
       url: ~/ios/watchos/troubleshooting.md
 - title: tvOS
   linkLists:
@@ -211,5 +211,5 @@ landingContent:
       url: ~/ios/tvos/deploy-test/index.md
     - text: Recursos internos
       url: ~/ios/tvos/internals/index.md
-    - text: Solução de problemas
+    - text: solução de problemas
       url: ~/ios/tvos/troubleshooting.md

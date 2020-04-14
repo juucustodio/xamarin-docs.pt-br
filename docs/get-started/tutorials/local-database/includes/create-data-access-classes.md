@@ -1,14 +1,14 @@
 ---
 ms.openlocfilehash: b11a5972c2aabace8a6991a82f5719f34450297d
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2020
+ms.lasthandoff: 04/09/2020
 ms.locfileid: "67841496"
 ---
 Neste exercício, você adicionará classes de acesso a dados ao projeto **LocalDatabaseTutorial**, que será usado para persistir dados sobre pessoas no banco de dados.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
 1. No **Gerenciador de Soluções**, no projeto **LocalDatabaseTutorial**, adicione uma nova classe chamada `Person` ao projeto. Em seguida, em **Person.cs**, remova todo o código do modelo e substitua-o pelo código a seguir:
 
@@ -120,7 +120,7 @@ Neste exercício, você adicionará classes de acesso a dados ao projeto **Local
 
 1. Compile a solução para garantir que não haja erros.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/vsmac)
 
 1. No **Painel de Soluções**, no projeto **LocalDatabaseTutorial**, adicione uma nova classe chamada `Person` ao projeto. Em seguida, em **Person.cs**, remova todo o código do modelo e substitua-o pelo código a seguir:
 

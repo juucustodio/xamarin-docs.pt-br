@@ -11,10 +11,10 @@ metadata:
   ms.author: dabritch
   ms.date: 12/30/2019
   ms.openlocfilehash: bbe7fd52581cd77ed7e7d910dd16264641c15abf
-  ms.sourcegitcommit: 524fc148bad17272bda83c50775771daa45bfd7e
+  ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
   ms.translationtype: HT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 02/20/2020
+  ms.lasthandoff: 04/09/2020
   ms.locfileid: "77480604"
 landingContent:
 - title: Referência de controles
@@ -41,15 +41,15 @@ landingContent:
     links:
     - text: BoxView
       url: boxview.md
-    - text: Image
+    - text: Imagem
       url: images.md
-    - text: Rotular
+    - text: Rótulo
       url: text/label.md
-    - text: Mapa
+    - text: Mapeamento
       url: map/index.md
     - text: MediaElement
       url: mediaelement.md
-    - text: WebView
+    - text: Exibição da Web
       url: webview.md
 - title: Exibições que iniciam comandos
   linkLists:
@@ -77,7 +77,7 @@ landingContent:
       url: slider.md
     - text: Passador
       url: stepper.md
-    - text: Alternar
+    - text: Opção
       url: switch.md
     - text: TimePicker
       url: timepicker.md
@@ -157,7 +157,7 @@ landingContent:
       url: layouts/contentview.md
     - text: FlexLayout
       url: layouts/flex-layout.md
-    - text: Quadro
+    - text: Frame
       url: layouts/frame.md
     - text: Grade
       url: layouts/grid.md

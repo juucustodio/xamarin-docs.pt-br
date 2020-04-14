@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 5d9d5e4eb757d6afd1c13cb4851edd23feaa6e65
-ms.sourcegitcommit: ccbf914615c0ce6b3f308d930f7a77418aeb4dbc
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2020
+ms.lasthandoff: 04/09/2020
 ms.locfileid: "77135101"
 ---
 A subclasse [`Application`](xref:Xamarin.Forms.Application) tem um dicionário [`Properties`](xref:Xamarin.Forms.Application.Properties) estático que pode ser usado para armazenar dados entre alterações de estado do ciclo de vida. Esse dicionário usa uma chave `string` e armazena um valor de `object`. O dicionário é salvo automaticamente no dispositivo e é populado novamente quando o aplicativo é reiniciado.
@@ -13,7 +13,7 @@ A subclasse [`Application`](xref:Xamarin.Forms.Application) tem um dicionário [
 
 Neste exercício, você modificará o aplicativo para persistir o texto de um [`Entry`](xref:Xamarin.Forms.Entry) após ser passado para segundo plano e restaurará o texto no `Entry` quando o aplicativo for reiniciado.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
 1. No **Gerenciador de Soluções**, no projeto **AppLifecycleTutorial**, expanda **App.xaml** e clique duas vezes em **App.xaml.cs** para abri-lo. Em seguida, em **App.xaml.cs**, remova todo o código de modelo e substitua-o pelo código a seguir:
 
@@ -117,7 +117,7 @@ Neste exercício, você modificará o aplicativo para persistir o texto de um [`
 
     Para obter mais informações sobre como persistir dados no dicionário de propriedades, confira [Dicionário de propriedades](~/xamarin-forms/app-fundamentals/application-class.md#properties-dictionary) no guia [Classe de aplicativo do Xamarin.Forms](~/xamarin-forms/app-fundamentals/application-class.md).
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/vsmac)
 
 1. No **Painel de Soluções**, no projeto **AppLifecycleTutorial**, expanda **App.xaml** e clique duas vezes em **App.xaml.cs** para abri-lo. Em seguida, em **App.xaml.cs**, remova todo o código de modelo e substitua-o pelo código a seguir:
 

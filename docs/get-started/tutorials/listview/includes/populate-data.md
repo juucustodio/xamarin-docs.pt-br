@@ -1,16 +1,16 @@
 ---
 ms.openlocfilehash: e03d0ada982cbf1d2954f4b677accc7ce7da793e
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2020
+ms.lasthandoff: 04/09/2020
 ms.locfileid: "69541418"
 ---
 Um [`ListView`](xref:Xamarin.Forms.ListView) é populado com os dados usando a propriedade [`ItemsSource`](xref:Xamarin.Forms.ItemsView`1.ItemsSource), que é do tipo `IEnumerable`. A etapa anterior populou o `ListView` no XAML com uma matriz de cadeias de caracteres. No entanto, normalmente um `ListView` será populado com os dados de uma coleção, definida no code-behind, que implementa `IEnumerable`.
 
 Neste exercício, você modificará o projeto **ListViewTutorial** para popular o [`ListView`](xref:Xamarin.Forms.ListView) com os dados de uma coleção de objetos armazenados em um `List`.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
 1. Na **Gerenciador de Soluções**, no projeto **ListViewTutorial**, adicione uma classe denominada `Monkey` que contém o código a seguir:
 
@@ -191,7 +191,7 @@ Neste exercício, você modificará o projeto **ListViewTutorial** para popular 
 
     O [`ListView`](xref:Xamarin.Forms.ListView) está exibindo a propriedade `Name` para cada `Monkey` na coleção `Monkeys`. Isso ocorre porque, por padrão, o `ListView` chama o método `ToString` ao exibir os objetos de uma coleção (que foi substituído na classe `Monkey` para retornar o valor da propriedade `Name`).
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/vsmac)
 
 1. Na **Painel de Soluções**, no projeto **ListViewTutorial**, adicione uma classe denominada `Monkey` que contém o código a seguir:
 

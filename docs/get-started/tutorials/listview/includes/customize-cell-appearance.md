@@ -1,16 +1,16 @@
 ---
 ms.openlocfilehash: 3c88b71cea834f5e6ef20d43332904c052c6e3a6
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2020
+ms.lasthandoff: 04/09/2020
 ms.locfileid: "61037334"
 ---
 Anteriormente, o [`ListView`](xref:Xamarin.Forms.ListView) era preenchido com os dados usando a associação de dados. No entanto, apesar da associação de dados a uma coleção, em que cada objeto na coleção definiu vários itens de dados, apenas um único item de dados foi exibido por objeto (a propriedade `Name` do objeto `Monkey`).
 
 Neste exercício, você modificará o projeto **ListViewTutorial** para que o [`ListView`](xref:Xamarin.Forms.ListView) exiba vários itens de dados em cada linha.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
 1. Na **MainPage.xaml**, modifique a declaração [`ListView`](xref:Xamarin.Forms.Image) para personalizar a aparência de cada linha:
 
@@ -60,7 +60,7 @@ Neste exercício, você modificará o projeto **ListViewTutorial** para que o [`
 
     [![Captura de tela de uma ListView cujos itens são modelados com um modelo de dados](../images/customize-cell-appearance.png "ListView exibindo dados modelados")](../images/customize-cell-appearance-large.png#lightbox "ListView exibindo dados modelados")
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/vsmac)
 
 1. Na **MainPage.xaml**, modifique a declaração [`ListView`](xref:Xamarin.Forms.Image) para personalizar a aparência de cada linha:
 

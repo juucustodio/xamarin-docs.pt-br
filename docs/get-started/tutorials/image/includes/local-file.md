@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 93ee0681adcc63fe05b4be88ff67f0aeee3e03ca
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2020
+ms.lasthandoff: 04/09/2020
 ms.locfileid: "61384366"
 ---
 Arquivos de imagem podem ser adicionados a projetos de plataforma e referenciados no código compartilhado do Xamarin.Forms. Esse método de distribuição de imagens é necessário quando as imagens são específicas da plataforma, como ao usar resoluções diferentes em diferentes plataformas ou designs ligeiramente diferentes.
@@ -16,7 +16,7 @@ Neste exercício, você modificará a solução **ImageTutorial** para exibir um
 > [!IMPORTANT]
 > Para usar uma única imagem em todas as plataformas *o mesmo nome de arquivo deve ser usado em todas as plataformas*, e deve ser um nome de recurso válido do Android (ou seja, apenas letras minúsculas, números, sublinhado e ponto são permitidos).
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
 1. Na **Gerenciador de Soluções**, no projeto **ImageTutorial.iOS**, expanda **Catálogos de Ativos** e clique duas vezes em **Ativos** para abri-lo. Em seguida, na guia **Assets.xcassets**, clique no botão **Mais** e selecione **Adicionar Conjunto de Imagens**:
 
@@ -62,7 +62,7 @@ Neste exercício, você modificará a solução **ImageTutorial** para exibir um
 
     Para obter mais informações sobre imagens locais, confira [Imagens locais](~/xamarin-forms/user-interface/images.md#local-images) no guia [Imagens no Xamarin.Forms](~/xamarin-forms/user-interface/images.md).
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/vsmac)
 
 1. No **Painel de Soluções**, no projeto **ImageTutorial.iOS**, clique duas vezes em **Assets.xcassets** para abri-lo. Em seguida, na **Lista de Ativos**, clique com o botão direito do mouse e selecione **Novo Conjunto de Imagens**:
 

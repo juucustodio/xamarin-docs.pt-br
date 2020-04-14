@@ -11,10 +11,10 @@ metadata:
   ms.author: dabritch
   ms.date: 01/27/2020
   ms.openlocfilehash: 394812b5150f7bbea46dff476bd2f896083b9a74
-  ms.sourcegitcommit: 24883be72e485e5311dd0eb91f9a22f78eeec11a
+  ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
   ms.translationtype: HT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 02/17/2020
+  ms.lasthandoff: 04/09/2020
   ms.locfileid: "77374078"
 landingContent:
 - title: Introdução
@@ -23,7 +23,7 @@ landingContent:
     links:
     - text: Introdução ao Xamarin.Android
       url: ~/android/get-started/index.md
-    - text: Instalação e configuração
+    - text: Configuração e instalação
       url: ~/android/get-started/installation/index.md
     - text: Criar seu primeiro aplicativo
       url: ~/android/get-started/hello-android/index.md
@@ -63,7 +63,7 @@ landingContent:
       url: ~/android/user-interface/android-designer/index.md
     - text: Tema de material
       url: ~/android/user-interface/material-theme.md
-    - text: Perfil do usuário
+    - text: Perfil de Usuário
       url: ~/android/user-interface/user-profile.md
     - text: Tela inicial
       url: ~/android/user-interface/splash-screen.md
@@ -105,9 +105,9 @@ landingContent:
       url: ~/essentials/get-started.md?context=xamarin/android
     - text: Suporte aos recursos e à plataforma
       url: ~/essentials/platform-feature-support.md?context=xamarin/android
-    - text: Solução de problemas
+    - text: solução de problemas
       url: ~/essentials/troubleshooting.md?context=xamarin/android
-    - text: Notas de Versão
+    - text: Notas de versão
       url: https://docs.microsoft.com/xamarin/essentials/release-notes/
 - title: Serviços de nuvem e de dados
   linkLists:
@@ -115,9 +115,9 @@ landingContent:
     links:
     - text: Azure Active Directory
       url: ~/cross-platform/data-cloud/active-directory/index.md?context=xamarin/android
-    - text: Aplicativos móveis do Azure
+    - text: Aplicativos Móveis do Azure
       url: ~/cross-platform/data-cloud/mobile-apps.md
-    - text: Acesso aos dados
+    - text: Acesso de dados
       url: ~/android/data-cloud/data-access/index.md
     - text: Sistemas de mensagens do Google
       url: ~/android/data-cloud/google-messaging/index.md
