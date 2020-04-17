@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 4fc6c50b5aa2ce502b4157ca2b15f0d33a68ecd1
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 2b524c657a95035773d18fb17bb86308a78ce37c
+ms.sourcegitcommit: 89b3e383a37db5b940f0c63bbfe9cb806dc7d5d1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "60896640"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389910"
 ---
 # <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
@@ -19,7 +19,7 @@ ms.locfileid: "60896640"
            HorizontalOptions="Center" />
     ```
 
-    Esse código define propriedades que alteram a aparência visual do [`Label`](xref:Xamarin.Forms.Label). A propriedade [`TextColor`](xref:Xamarin.Forms.Label.TextColor) define a cor do texto `Button`. A propriedade [`FontAttributes`](xref:Xamarin.Forms.Label.FontAttributes) define a fonte do rótulo como itálico e a propriedade [`FontSize`](xref:Xamarin.Forms.Label.FontSize) define o tamanho da fonte. Além disso, uma decoração de texto sublinhado é aplicada ao `Label` definindo sua propriedade [`TextDecorations`](xref:Xamarin.Forms.Label.TextDecorations) e ele é centralizado horizontalmente definindo a propriedade [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) como [`Center`](xref:Xamarin.Forms.LayoutOptions.Center).
+    Esse código define propriedades que alteram a aparência visual do [`Label`](xref:Xamarin.Forms.Label). A propriedade [`TextColor`](xref:Xamarin.Forms.Label.TextColor) define a cor do texto `Label`. A propriedade [`FontAttributes`](xref:Xamarin.Forms.Label.FontAttributes) define a fonte do rótulo como itálico e a propriedade [`FontSize`](xref:Xamarin.Forms.Label.FontSize) define o tamanho da fonte. Além disso, uma decoração de texto sublinhado é aplicada ao `Label` definindo sua propriedade [`TextDecorations`](xref:Xamarin.Forms.Label.TextDecorations) e ele é centralizado horizontalmente definindo a propriedade [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) como [`Center`](xref:Xamarin.Forms.LayoutOptions.Center).
 
 1. Na barra de ferramentas do Visual Studio, pressione o botão **Iniciar** (o botão triangular que se parece com o botão Reproduzir) para iniciar o aplicativo dentro de seu simulador remoto de iOS ou do Android Emulator escolhido. Observe que a aparência de [`Label`](xref:Xamarin.Forms.Label) mudou:
 
@@ -40,7 +40,7 @@ ms.locfileid: "60896640"
            HorizontalOptions="Center" />
     ```
 
-    Esse código define propriedades que alteram a aparência visual do [`Label`](xref:Xamarin.Forms.Label). A propriedade [`TextColor`](xref:Xamarin.Forms.Label.TextColor) define a cor do texto `Button`. A propriedade [`FontAttributes`](xref:Xamarin.Forms.Label.FontAttributes) define a fonte do rótulo como itálico e a propriedade [`FontSize`](xref:Xamarin.Forms.Label.FontSize) define o tamanho da fonte. Além disso, uma decoração de texto sublinhado é aplicada ao `Label` definindo sua propriedade [`TextDecorations`](xref:Xamarin.Forms.Label.TextDecorations) e ele é centralizado horizontalmente definindo a propriedade [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) como [`Center`](xref:Xamarin.Forms.LayoutOptions.Center).
+    Esse código define propriedades que alteram a aparência visual do [`Label`](xref:Xamarin.Forms.Label). A propriedade [`TextColor`](xref:Xamarin.Forms.Label.TextColor) define a cor do texto `Label`. A propriedade [`FontAttributes`](xref:Xamarin.Forms.Label.FontAttributes) define a fonte do rótulo como itálico e a propriedade [`FontSize`](xref:Xamarin.Forms.Label.FontSize) define o tamanho da fonte. Além disso, uma decoração de texto sublinhado é aplicada ao `Label` definindo sua propriedade [`TextDecorations`](xref:Xamarin.Forms.Label.TextDecorations) e ele é centralizado horizontalmente definindo a propriedade [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) como [`Center`](xref:Xamarin.Forms.LayoutOptions.Center).
 
 1. Na barra de ferramentas do Visual Studio para Mac, pressione o botão **Iniciar** (o botão triangular que se parece com um botão Reproduzir) para iniciar o aplicativo dentro do simulador de iOS ou do Android Emulator escolhido. Observe que a aparência de [`Label`](xref:Xamarin.Forms.Label) mudou:
 

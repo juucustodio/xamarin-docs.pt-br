@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 28a0b894d6230810f99ffaec4b93d9d87120e30f
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: c864f5d97e72a58e4b3c28fdeb97b7cfaea75992
+ms.sourcegitcommit: 89b3e383a37db5b940f0c63bbfe9cb806dc7d5d1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "67277084"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389970"
 ---
 # <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
@@ -42,7 +42,7 @@ Para concluir este tutorial, você precisará ter o Visual Studio 2019 (versão 
     </ContentPage>
     ```
 
-    Esse código define declarativamente a interface do usuário para a página, que é composta por um [`ListView`](xref:Xamarin.Forms.Image) em um [`StackLayout`](xref:Xamarin.Forms.StackLayout). A propriedade [`ListView.ItemsSource`](xref:Xamarin.Forms.ItemsView`1.ItemsSource) especifica os itens serem exibidos, que são definidos em uma matriz de cadeias de caracteres.
+    Esse código define declarativamente a interface do usuário para a página, que é composta por um [`ListView`](xref:Xamarin.Forms.ListView) em um [`StackLayout`](xref:Xamarin.Forms.StackLayout). A propriedade [`ListView.ItemsSource`](xref:Xamarin.Forms.ItemsView`1.ItemsSource) especifica os itens serem exibidos, que são definidos em uma matriz de cadeias de caracteres.
 
 1. Na barra de ferramentas do Visual Studio, pressione o botão **Iniciar** (o botão triangular que se parece com um botão Reproduzir) para iniciar o aplicativo dentro do simulador remoto de iOS ou do Android Emulator escolhido:
 
@@ -84,7 +84,7 @@ Para concluir este tutorial, você precisará ter o Visual Studio para Mac (vers
     </ContentPage>
     ```
 
-    Esse código define declarativamente a interface do usuário para a página, que é composta por um [`ListView`](xref:Xamarin.Forms.Image) em um [`StackLayout`](xref:Xamarin.Forms.StackLayout). A propriedade [`ListView.ItemsSource`](xref:Xamarin.Forms.ItemsView`1.ItemsSource) especifica os itens serem exibidos, que são definidos em uma matriz de cadeias de caracteres.
+    Esse código define declarativamente a interface do usuário para a página, que é composta por um [`ListView`](xref:Xamarin.Forms.ListView) em um [`StackLayout`](xref:Xamarin.Forms.StackLayout). A propriedade [`ListView.ItemsSource`](xref:Xamarin.Forms.ItemsView`1.ItemsSource) especifica os itens serem exibidos, que são definidos em uma matriz de cadeias de caracteres.
 
 1. Na barra de ferramentas do Visual Studio para Mac, pressione o botão **Iniciar** (o botão triangular que se parece com o botão Reproduzir) para iniciar o aplicativo dentro do simulador de iOS ou do Android Emulator escolhido:
 
