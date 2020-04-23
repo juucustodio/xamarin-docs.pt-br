@@ -5,12 +5,12 @@ ms.assetid: B3342772-FB88-4B7F-BC15-8BC78EED749E
 author: JonDouglas
 ms.author: jodou
 ms.date: 09/17/2019
-ms.openlocfilehash: c19c9e5bd279824ea2d3e4e9f88857388f786a2c
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: b26d99c131e9759da3077a767476de38712bcb18
+ms.sourcegitcommit: a9280318bf7bb69e4e5744ee739e76a9cba36b28
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73612279"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82047567"
 ---
 # <a name="android-10-with-xamarin"></a>Android 10 com Xamarin
 
@@ -78,7 +78,7 @@ Ao criar um projeto Android, você deve configurar as configurações da versão
 
 ### <a name="configure-a-device-or-emulator"></a>Configure um dispositivo ou emulador
 
-Se você estiver usando um dispositivo físico como um Pixel, você pode `System`  >  `System update`  >  baixar a atualização do Android 10 indo para as `Check for update` configurações do seu telefone. Se preferir mostrar o seu dispositivo, consulte as instruções sobre como piscar uma [imagem de fábrica](https://developers.google.com/android/images) ou imagem [OTA](https://developers.google.com/android/ota) para o seu dispositivo.
+Se você estiver usando um dispositivo físico como um Pixel, você pode baixar a atualização do Android 10 indo para o Sistema > atualização do sistema > Verifique para atualização nas configurações do seu telefone. Se preferir mostrar o seu dispositivo, consulte as instruções sobre como piscar uma [imagem de fábrica](https://developers.google.com/android/images) ou imagem [OTA](https://developers.google.com/android/ota) para o seu dispositivo.
 
 Se você estiver usando um emulador, crie um dispositivo virtual para o nível 29 da API e selecione uma imagem baseada em x86. Para obter informações sobre como usar o Gerenciador de Dispositivos Android para criar e gerenciar dispositivos virtuais, consulte [Gerenciando dispositivos virtuais com o Gerenciador de Dispositivos Android.](https://docs.microsoft.com/xamarin/android/get-started/installation/android-emulator/device-manager) Para obter informações sobre como usar o Emulador Android para testes e depuração, consulte [Depuração no Emulador do Android.](https://docs.microsoft.com/xamarin/android/deploy-test/debugging/debug-on-emulator)
 
