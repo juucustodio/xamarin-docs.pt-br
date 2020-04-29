@@ -6,19 +6,19 @@ ms.assetid: 60460F57-63C6-4916-BBB5-A870F1DF53D7
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 02/21/2020
-ms.openlocfilehash: bf9c06dae0df7da1cc69a85d8436376494039959
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.date: 04/17/2020
+ms.openlocfilehash: b4eeb776cafa131f13eb70aca5bd20df6eafa07f
+ms.sourcegitcommit: 8d13d2262d02468c99c4e18207d50cd82275d233
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "79305125"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82516725"
 ---
 # <a name="xamarinforms-triggers"></a>Gatilhos do Xamarin.Forms
 
-[![Baixar](~/media/shared/download.png) amostra Baixar a amostra](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithtriggers)
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithtriggers)
 
-Os gatilhos permitem expressar ações declarativamente em XAML que alteram a aparência dos controles com base em eventos ou alterações de propriedade. Além disso, os gatilhos estaduais, que são um [`VisualState`](xref:Xamarin.Forms.VisualState) grupo especializado de gatilhos, definem quando um deve ser aplicado.
+Os gatilhos permitem expressar ações declarativamente em XAML que alteram a aparência dos controles com base em eventos ou alterações de propriedade. Além disso, os gatilhos de estado, que são um grupo especializado de gatilhos [`VisualState`](xref:Xamarin.Forms.VisualState) , definem quando um deve ser aplicado.
 
 Você pode atribuir um gatilho diretamente a um controle ou adicioná-lo a um dicionário de recursos na página ou aplicativo a ser aplicado a vários controles.
 
@@ -53,7 +53,7 @@ As partes importantes da declaração do gatilho são:
 
 ### <a name="applying-a-trigger-using-a-style"></a>Aplicando um gatilho usando um estilo
 
-Gatilhos também podem ser adicionados a uma declaração `Style` em um controle, em uma página ou um aplicativo `ResourceDictionary`. Este exemplo declara um estilo implícito `Key` (ou seja, não está `Entry` definido), o que significa que ele se aplicará a todos os controles da página.
+Gatilhos também podem ser adicionados a uma declaração `Style` em um controle, em uma página ou um aplicativo `ResourceDictionary`. Este exemplo declara um estilo implícito (ou seja, não `Key` está definido), o que significa que ele será `Entry` aplicado a todos os controles na página.
 
 ```xaml
 <ContentPage.Resources>
@@ -103,7 +103,7 @@ que é como nos referimos a outras propriedades do controle. Quando o tamanho do
 > [!TIP]
 > Ao avaliar `Path=Text.Length`, sempre forneça um valor padrão para a propriedade de destino (por exemplo, `Text=""`), pois, caso contrário, ele será `null` e o gatilho não funcionará como esperado.
 
-Além de `Setter`especificar s você também pode fornecer [ `EnterActions` e `ExitActions` ](#enteractions-and-exitactions).
+Além de especificar `Setter`s, você também pode fornecer [ `EnterActions` e `ExitActions` ](#enteractions-and-exitactions).
 
 ## <a name="event-triggers"></a>Gatilhos de evento
 
@@ -157,7 +157,7 @@ Tenha cuidado ao compartilhar gatilhos em um `ResourceDictionary`, pois uma inst
 
 Observe que os gatilhos de evento não dão suporte a `EnterActions` e `ExitActions`    [descritos abaixo](#enteractions-and-exitactions).
 
-## <a name="multi-triggers"></a>Múltiplos gatilhos
+## <a name="multi-triggers"></a>Vários gatilhos
 
 Um `MultiTrigger` é semelhante a um `Trigger` ou `DataTrigger`, exceto que pode haver mais de uma condição. Todas as condições devem ser verdadeiras antes de `Setter`s serem disparados.
 
@@ -260,10 +260,10 @@ Na parte inferior das telas, o botão **Logon** permanece inativo até que ambos
 
 Outra maneira de implementar alterações quando ocorre um gatilho é adicionando as coleções `EnterActions` e `ExitActions` e especificando as implementações `TriggerAction<T>`.
 
-A [`EnterActions`](xref:Xamarin.Forms.TriggerBase.EnterActions) coleção é usada `IList` [`TriggerAction`](xref:Xamarin.Forms.TriggerAction) para definir um dos objetos que serão invocados quando a condição do gatilho for atendida. A [`ExitActions`](xref:Xamarin.Forms.TriggerBase.ExitActions) coleção é usada `IList` `TriggerAction` para definir um dos objetos que serão invocados após a condição do gatilho não ser mais atendida.
+A [`EnterActions`](xref:Xamarin.Forms.TriggerBase.EnterActions) coleção é usada para definir um `IList` dos [`TriggerAction`](xref:Xamarin.Forms.TriggerAction) objetos que serão invocados quando a condição do gatilho for atendida. A [`ExitActions`](xref:Xamarin.Forms.TriggerBase.ExitActions) coleção é usada para definir um `IList` dos `TriggerAction` objetos que serão invocados depois que a condição do gatilho não for mais atendida.
 
 > [!NOTE]
-> Os [`TriggerAction`](xref:Xamarin.Forms.TriggerAction) objetos `EnterActions` definidos nas coleções `ExitActions` e [`EventTrigger`](xref:Xamarin.Forms.EventTrigger) coleções são ignorados pela classe.    
+> Os [`TriggerAction`](xref:Xamarin.Forms.TriggerAction) objetos definidos nas coleções `EnterActions` e `ExitActions` são ignorados pela [`EventTrigger`](xref:Xamarin.Forms.EventTrigger) classe.    
 
 Você pode fornecer *ambos* `EnterActions` e `ExitActions`, bem como `Setter`s em um gatilho, mas lembre-se de que `Setter`s são chamados imediatamente (eles não aguardam o `EnterAction` ou o `ExitAction` ser concluído). Como alternativa, você pode executar tudo no código e não usar `Setter`s.
 
@@ -314,39 +314,39 @@ public class FadeTriggerAction : TriggerAction<VisualElement>
 }
 ```
 
-## <a name="state-triggers"></a>Gatilhos estaduais
+## <a name="state-triggers"></a>Gatilhos de estado
 
-Os gatilhos estaduais foram introduzidos em Xamarin.Forms 4.5, e são um grupo [`VisualState`](xref:Xamarin.Forms.VisualState) especializado de gatilhos que definem as condições sob as quais um deve ser aplicado. No entanto, eles são atualmente experimentais e só podem ser usados adicionando a seguinte linha de código ao seu arquivo *App.xaml.cs:*
+Os gatilhos de estado foram introduzidos no Xamarin. Forms 4,5 e são um grupo especializado de gatilhos que definem as [`VisualState`](xref:Xamarin.Forms.VisualState) condições sob as quais um deve ser aplicado. No entanto, eles são experimentais no momento e só podem ser usados adicionando a seguinte linha de código ao arquivo *app.XAML.cs* :
 
 ```csharp
 Device.SetFlags(new string[]{ "StateTriggers_Experimental" });
 ```
 
-Os gatilhos estaduais [`StateTriggers`](xref:Xamarin.Forms.VisualState.StateTriggers) são [`VisualState`](xref:Xamarin.Forms.VisualState)adicionados à coleção de um . Esta coleção pode conter um único gatilho de estado, ou vários gatilhos de estado. A [`VisualState`](xref:Xamarin.Forms.VisualState) será aplicado quando qualquer estado acionador na coleta estiver ativo.
+Os [`StateTriggers`](xref:Xamarin.Forms.VisualState.StateTriggers) gatilhos de estado são adicionados à coleção [`VisualState`](xref:Xamarin.Forms.VisualState)de um. Essa coleção pode conter um único gatilho de estado ou vários gatilhos de estado. Um [`VisualState`](xref:Xamarin.Forms.VisualState) será aplicado quando qualquer gatilho de estado na coleção estiver ativo.
 
-Ao usar gatilhos de estado para controlar estados visuais, o Xamarin.Forms [`VisualState`](xref:Xamarin.Forms.VisualState)usa as seguintes regras de precedência para determinar qual gatilho (e correspondente) estará ativo:
+Ao usar gatilhos de estado para controlar os Estados visuais, o Xamarin. Forms usa as seguintes regras de precedência para [`VisualState`](xref:Xamarin.Forms.VisualState)determinar qual gatilho (e correspondente) estará ativo:
 
-1. Qualquer gatilho que [`StateTriggerBase`](xref:Xamarin.Forms.StateTriggerBase)deriva de .
-1. Um [`AdaptiveTrigger`](xref:Xamarin.Forms.AdaptiveTrigger) ativado devido [`MinWindowWidth`](xref:Xamarin.Forms.AdaptiveTrigger.MinWindowWidth) à condição ser atendida.
-1. Um [`AdaptiveTrigger`](xref:Xamarin.Forms.AdaptiveTrigger) ativado devido [`MinWindowHeight`](xref:Xamarin.Forms.AdaptiveTrigger.MinWindowHeight) à condição ser atendida.
+1. Qualquer gatilho derivado de [`StateTriggerBase`](xref:Xamarin.Forms.StateTriggerBase).
+1. Um [`AdaptiveTrigger`](xref:Xamarin.Forms.AdaptiveTrigger) ativado devido à [`MinWindowWidth`](xref:Xamarin.Forms.AdaptiveTrigger.MinWindowWidth) condição que está sendo atendida.
+1. Um [`AdaptiveTrigger`](xref:Xamarin.Forms.AdaptiveTrigger) ativado devido à [`MinWindowHeight`](xref:Xamarin.Forms.AdaptiveTrigger.MinWindowHeight) condição que está sendo atendida.
 
-Se vários gatilhos estiverem simultaneamente ativos (por exemplo, dois gatilhos personalizados) então o primeiro gatilho declarado na marcação prevalecerá.
+Se vários gatilhos estiverem ativos simultaneamente (por exemplo, dois gatilhos personalizados), o primeiro gatilho declarado na marcação terá precedência.
 
 > [!NOTE]
-> Os gatilhos de estado [`Style`](xref:Xamarin.Forms.Style)podem ser definidos em um , ou diretamente em elementos.
+> Os gatilhos de estado podem ser [`Style`](xref:Xamarin.Forms.Style)definidos em um, ou diretamente em elementos.
 
-Para obter mais informações sobre estados visuais, consulte [Xamarin.Forms Visual State Manager](~/xamarin-forms/user-interface/visual-state-manager.md).
+Para obter mais informações sobre os Estados visuais, consulte [Gerenciador de estado visual do Xamarin. Forms](~/xamarin-forms/user-interface/visual-state-manager.md).
 
-### <a name="state-trigger"></a>Gatilho do estado
+### <a name="state-trigger"></a>Gatilho de estado
 
-A [`StateTrigger`](xref:Xamarin.Forms.StateTrigger) classe, que deriva [`StateTriggerBase`](xref:Xamarin.Forms.StateTriggerBase) da classe, tem uma [`IsActive`](xref:Xamarin.Forms.StateTrigger.IsActive) propriedade vinculável. A `StateTrigger` desencadeia [`VisualState`](xref:Xamarin.Forms.VisualState) uma mudança `IsActive` quando a propriedade muda de valor.
+A [`StateTrigger`](xref:Xamarin.Forms.StateTrigger) classe, que deriva da [`StateTriggerBase`](xref:Xamarin.Forms.StateTriggerBase) classe, tem uma [`IsActive`](xref:Xamarin.Forms.StateTrigger.IsActive) propriedade vinculável. Um `StateTrigger` dispara uma [`VisualState`](xref:Xamarin.Forms.VisualState) alteração quando a `IsActive` Propriedade muda de valor.
 
-A [`StateTriggerBase`](xref:Xamarin.Forms.StateTriggerBase) classe, que é a classe base para [`IsActive`](xref:Xamarin.Forms.StateTriggerBase.IsActive) todos [`IsActiveChanged`](xref:Xamarin.Forms.StateTriggerBase.IsActiveChanged) os gatilhos estaduais, tem uma propriedade e um evento. Este evento é [`VisualState`](xref:Xamarin.Forms.VisualState) acionado sempre que ocorre uma mudança.
+A [`StateTriggerBase`](xref:Xamarin.Forms.StateTriggerBase) classe, que é a classe base para todos os gatilhos de estado [`IsActive`](xref:Xamarin.Forms.StateTriggerBase.IsActive) , tem uma [`IsActiveChanged`](xref:Xamarin.Forms.StateTriggerBase.IsActiveChanged) Propriedade e um evento. Esse evento é acionado [`VisualState`](xref:Xamarin.Forms.VisualState) sempre que ocorre uma alteração. Além disso, a `StateTriggerBase` classe tem `OnAttached` substituíveis `OnDetached` e métodos.
 
 > [!IMPORTANT]
-> A [`StateTrigger.IsActive`](xref:Xamarin.Forms.StateTrigger.IsActive) propriedade vinculável esconde [`StateTriggerBase.IsActive`](xref:Xamarin.Forms.StateTriggerBase.IsActive) a propriedade herdada.
+> A [`StateTrigger.IsActive`](xref:Xamarin.Forms.StateTrigger.IsActive) propriedade vinculável oculta a propriedade [`StateTriggerBase.IsActive`](xref:Xamarin.Forms.StateTriggerBase.IsActive) herdada.
 
-O exemplo XAML [`Style`](xref:Xamarin.Forms.Style) a seguir [`StateTrigger`](xref:Xamarin.Forms.StateTrigger) mostra um que inclui objetos:
+O exemplo de XAML a seguir [`Style`](xref:Xamarin.Forms.Style) mostra um [`StateTrigger`](xref:Xamarin.Forms.StateTrigger) que inclui objetos:
 
 ```xaml
 <Style TargetType="Grid">
@@ -379,9 +379,9 @@ O exemplo XAML [`Style`](xref:Xamarin.Forms.Style) a seguir [`StateTrigger`](xre
 </Style>
 ```
 
-Neste exemplo, os [`Style`](xref:Xamarin.Forms.Style) alvos [`Grid`](xref:Xamarin.Forms.Grid) implícitos são objetos. Quando `IsToggled` a propriedade do `true`objeto vinculado é, `Grid` a cor de fundo do é definida como preta. Quando `IsToggled` a propriedade do `false`objeto [`VisualState`](xref:Xamarin.Forms.VisualState) vinculado se torna, uma alteração `Grid` é acionada, e a cor de fundo do torna-se branca.
+Neste exemplo, os objetos de [`Style`](xref:Xamarin.Forms.Style) destinos [`Grid`](xref:Xamarin.Forms.Grid) implícitos. Quando a `IsToggled` Propriedade do objeto associado é `true`, a cor do plano de fundo `Grid` do é definida como preto. Quando a `IsToggled` Propriedade do objeto ligado se torna `false`, uma [`VisualState`](xref:Xamarin.Forms.VisualState) alteração é disparada e a cor do plano `Grid` de fundo fica branca.
 
-Além disso, toda vez que uma [`VisualState`](xref:Xamarin.Forms.VisualState) mudança ocorre, o [`IsActiveChanged`](xref:Xamarin.Forms.StateTriggerBase.IsActiveChanged) evento para o `VisualState` é disparado. Cada `VisualState` um registra um manipulador de eventos para este evento:
+Além disso, sempre que ocorre [`VisualState`](xref:Xamarin.Forms.VisualState) uma alteração, o [`IsActiveChanged`](xref:Xamarin.Forms.StateTriggerBase.IsActiveChanged) evento para o `VisualState` é acionado. Cada `VisualState` registro de um manipulador de eventos para este evento:
 
 ```csharp
 void OnCheckedStateIsActiveChanged(object sender, EventArgs e)
@@ -397,7 +397,7 @@ void OnUncheckedStateIsActiveChanged(object sender, EventArgs e)
 }
 ```
 
-Neste exemplo, quando um [`IsActiveChanged`](xref:Xamarin.Forms.StateTriggerBase.IsActiveChanged) manipulador para o evento é [`VisualState`](xref:Xamarin.Forms.VisualState) acionado, o manipulador desadeia se o está ativo ou não. Por exemplo, as seguintes mensagens são saídas `Checked` para a `Unchecked` janela do console ao mudar do estado visual para o estado visual:
+Neste exemplo, quando um manipulador para o [`IsActiveChanged`](xref:Xamarin.Forms.StateTriggerBase.IsActiveChanged) evento é acionado, o manipulador faz a saída [`VisualState`](xref:Xamarin.Forms.VisualState) se o está ativo ou não. Por exemplo, as seguintes mensagens são enviadas para a janela do console ao mudar do `Checked` estado visual para o `Unchecked` estado visual:
 
 ```
 Checked state active: False
@@ -405,19 +405,19 @@ Unchecked state active: True
 ```
 
 > [!NOTE]
-> Os gatilhos de estado personalizados podem [`StateTriggerBase`](xref:Xamarin.Forms.StateTriggerBase) ser criados derivando da classe.
+> Os gatilhos de estado personalizado podem ser criados derivando [`StateTriggerBase`](xref:Xamarin.Forms.StateTriggerBase) -se da classe e `OnAttached` substituindo os métodos e `OnDetached` para executar quaisquer registros e limpeza necessários.
 
-### <a name="adaptive-trigger"></a>Gatilho adaptativo
+### <a name="adaptive-trigger"></a>Gatilho adaptável
 
-Um [`AdaptiveTrigger`](xref:Xamarin.Forms.AdaptiveTrigger) aciona uma [`VisualState`](xref:Xamarin.Forms.VisualState) alteração quando a janela é uma altura ou largura especificada. Este gatilho tem duas propriedades vinculáveis:
+Um [`AdaptiveTrigger`](xref:Xamarin.Forms.AdaptiveTrigger) dispara uma [`VisualState`](xref:Xamarin.Forms.VisualState) alteração quando a janela é uma altura ou largura especificada. Esse gatilho tem duas propriedades vinculáveis:
 
-- [`MinWindowHeight`](xref:Xamarin.Forms.AdaptiveTrigger.MinWindowHeight), do `double`tipo, que indica a [`VisualState`](xref:Xamarin.Forms.VisualState) altura mínima da janela em que deve ser aplicado.
-- [`MinWindowWidth`](xref:Xamarin.Forms.AdaptiveTrigger.MinWindowHeight), do `double`tipo, que indica a [`VisualState`](xref:Xamarin.Forms.VisualState) largura mínima da janela na qual deve ser aplicada a janela.
+- [`MinWindowHeight`](xref:Xamarin.Forms.AdaptiveTrigger.MinWindowHeight), do tipo `double`, que indica a altura mínima da janela à qual [`VisualState`](xref:Xamarin.Forms.VisualState) o deve ser aplicado.
+- [`MinWindowWidth`](xref:Xamarin.Forms.AdaptiveTrigger.MinWindowHeight), do tipo `double`, que indica a largura mínima da janela na qual [`VisualState`](xref:Xamarin.Forms.VisualState) o deve ser aplicado.
 
 > [!NOTE]
-> O [`AdaptiveTrigger`](xref:Xamarin.Forms.AdaptiveTrigger) deriva da [`StateTriggerBase`](xref:Xamarin.Forms.StateTriggerBase) classe e, portanto, pode [`IsActiveChanged`](xref:Xamarin.Forms.StateTriggerBase.IsActiveChanged) anexar um manipulador de eventos ao evento.
+> O [`AdaptiveTrigger`](xref:Xamarin.Forms.AdaptiveTrigger) deriva da [`StateTriggerBase`](xref:Xamarin.Forms.StateTriggerBase) classe e, portanto, pode anexar um manipulador de eventos ao [`IsActiveChanged`](xref:Xamarin.Forms.StateTriggerBase.IsActiveChanged) evento.
 
-O exemplo XAML [`Style`](xref:Xamarin.Forms.Style) a seguir [`AdaptiveTrigger`](xref:Xamarin.Forms.AdaptiveTrigger) mostra um que inclui objetos:
+O exemplo de XAML a seguir [`Style`](xref:Xamarin.Forms.Style) mostra um [`AdaptiveTrigger`](xref:Xamarin.Forms.AdaptiveTrigger) que inclui objetos:
 
 ```xaml
 <Style TargetType="StackLayout">
@@ -448,31 +448,31 @@ O exemplo XAML [`Style`](xref:Xamarin.Forms.Style) a seguir [`AdaptiveTrigger`](
 </Style>
 ```
 
-Neste exemplo, os [`Style`](xref:Xamarin.Forms.Style) alvos [`StackLayout`](xref:Xamarin.Forms.StackLayout) implícitos são objetos. Quando a largura da janela estiver entre 0 `StackLayout` e 800 unidades independentes do dispositivo, os objetos aos quais são `Style` aplicados terão uma orientação vertical. Quando a largura da janela é >= [`VisualState`](xref:Xamarin.Forms.VisualState) 800 unidades independentes do dispositivo, a alteração é acionada e a `StackLayout` orientação muda para horizontal:
+Neste exemplo, os objetos de [`Style`](xref:Xamarin.Forms.Style) destinos [`StackLayout`](xref:Xamarin.Forms.StackLayout) implícitos. Quando a largura da janela estiver entre 0 e 800 unidades independentes de dispositivo `StackLayout` , os objetos aos `Style` quais o é aplicado terão uma orientação vertical. Quando a largura da janela é >= 800 unidades independentes de dispositivo, [`VisualState`](xref:Xamarin.Forms.VisualState) a alteração é disparada `StackLayout` e a orientação muda para horizontal:
 
-![Vertical StackLayout VisualState](triggers-images/adaptivetrigger-vertical.png "Exemplo adaptiveTrigger")
-![Horizontal StackLayout VisualState](triggers-images/adaptivetrigger-horizontal.png "Exemplo adaptiveTrigger")
+![StackLayout vertical VisualState](triggers-images/adaptivetrigger-vertical.png "Exemplo de AdaptiveTrigger")
+![horizontal StackLayout VisualState](triggers-images/adaptivetrigger-horizontal.png "Exemplo de AdaptiveTrigger")
 
-As [`MinWindowHeight`](xref:Xamarin.Forms.AdaptiveTrigger.MinWindowHeight) [`MinWindowWidth`](xref:Xamarin.Forms.AdaptiveTrigger.MinWindowHeight) propriedades podem ser usadas independentemente ou em conjunto entre si. O XAML a seguir mostra um exemplo de definir ambas as propriedades:
+As [`MinWindowHeight`](xref:Xamarin.Forms.AdaptiveTrigger.MinWindowHeight) propriedades [`MinWindowWidth`](xref:Xamarin.Forms.AdaptiveTrigger.MinWindowHeight) e podem ser usadas de forma independente ou em conjunto entre si. O XAML a seguir mostra um exemplo de como definir ambas as propriedades:
 
 ```xaml
 <AdaptiveTrigger MinWindowWidth="800"
                  MinWindowHeight="1200"/>
 ```
 
-Neste exemplo, [`AdaptiveTrigger`](xref:Xamarin.Forms.AdaptiveTrigger) o indica [`VisualState`](xref:Xamarin.Forms.VisualState) que o correspondente será aplicado quando a largura da janela atual for >= 800 unidades independentes do dispositivo e a altura atual da janela for >= 1200 unidades independentes do dispositivo.
+Neste exemplo, o [`AdaptiveTrigger`](xref:Xamarin.Forms.AdaptiveTrigger) indica que o correspondente [`VisualState`](xref:Xamarin.Forms.VisualState) será aplicado quando a largura da janela atual for >= 800 unidades independentes de dispositivo e a altura da janela atual for >= 1200 unidades independentes de dispositivo.
 
-### <a name="compare-state-trigger"></a>Compare o gatilho do estado
+### <a name="compare-state-trigger"></a>Comparar gatilho de estado
 
-O [`CompareStateTrigger`](xref:Xamarin.Forms.CompareStateTrigger) gatilho [`VisualState`](xref:Xamarin.Forms.VisualState) é uma alteração quando uma propriedade é igual a um valor específico. Este gatilho tem duas propriedades vinculáveis:
+O [`CompareStateTrigger`](xref:Xamarin.Forms.CompareStateTrigger) dispara uma [`VisualState`](xref:Xamarin.Forms.VisualState) alteração quando uma propriedade é igual a um valor específico. Esse gatilho tem duas propriedades vinculáveis:
 
-- [`Property`](xref:Xamarin.Forms.CompareStateTrigger.Property), do `object`tipo, que indica a propriedade sendo comparada pelo gatilho.
-- [`Value`](xref:Xamarin.Forms.CompareStateTrigger.Value), do `object`tipo, que indica [`VisualState`](xref:Xamarin.Forms.VisualState) o valor no qual deve ser aplicado.
+- [`Property`](xref:Xamarin.Forms.CompareStateTrigger.Property), do tipo `object`, que indica a propriedade sendo comparada pelo gatilho.
+- [`Value`](xref:Xamarin.Forms.CompareStateTrigger.Value), do tipo `object`, que indica o valor no qual o [`VisualState`](xref:Xamarin.Forms.VisualState) deve ser aplicado.
 
 > [!NOTE]
-> O [`CompareStateTrigger`](xref:Xamarin.Forms.CompareStateTrigger) deriva da [`StateTriggerBase`](xref:Xamarin.Forms.StateTriggerBase) classe e, portanto, pode [`IsActiveChanged`](xref:Xamarin.Forms.StateTriggerBase.IsActiveChanged) anexar um manipulador de eventos ao evento.
+> O [`CompareStateTrigger`](xref:Xamarin.Forms.CompareStateTrigger) deriva da [`StateTriggerBase`](xref:Xamarin.Forms.StateTriggerBase) classe e, portanto, pode anexar um manipulador de eventos ao [`IsActiveChanged`](xref:Xamarin.Forms.StateTriggerBase.IsActiveChanged) evento.
 
-O exemplo XAML [`Style`](xref:Xamarin.Forms.Style) a seguir [`CompareStateTrigger`](xref:Xamarin.Forms.CompareStateTrigger) mostra um que inclui objetos:
+O exemplo de XAML a seguir [`Style`](xref:Xamarin.Forms.Style) mostra um [`CompareStateTrigger`](xref:Xamarin.Forms.CompareStateTrigger) que inclui objetos:
 
 ```xaml
 <Style TargetType="Grid">
@@ -520,21 +520,21 @@ O exemplo XAML [`Style`](xref:Xamarin.Forms.Style) a seguir [`CompareStateTrigge
 </Grid>
 ```
 
-Neste exemplo, os [`Style`](xref:Xamarin.Forms.Style) alvos [`Grid`](xref:Xamarin.Forms.Grid) implícitos são objetos. Quando [`IsChecked`](xref:Xamarin.Forms.CheckBox.IsChecked) a propriedade [`CheckBox`](xref:Xamarin.Forms.CheckBox) `false`do é , `Grid` a cor de fundo do é definido como branco. Quando `CheckBox.IsChecked` a `true`propriedade [`VisualState`](xref:Xamarin.Forms.VisualState) se torna , uma alteração é `Grid` acionada, e a cor de fundo do fica preto:
+Neste exemplo, os objetos de [`Style`](xref:Xamarin.Forms.Style) destinos [`Grid`](xref:Xamarin.Forms.Grid) implícitos. Quando a [`IsChecked`](xref:Xamarin.Forms.CheckBox.IsChecked) Propriedade do [`CheckBox`](xref:Xamarin.Forms.CheckBox) é `false`, a cor do plano de fundo `Grid` do é definida como branco. Quando a `CheckBox.IsChecked` Propriedade se `true`torna, [`VisualState`](xref:Xamarin.Forms.VisualState) uma alteração é disparada e a cor do `Grid` plano de fundo fica preta:
 
-[![Captura de tela de uma mudança de estado visual desencadeada, no iOS e Android](triggers-images/comparestatetrigger-unchecked.png "Compareexemplo do StateTrigger")](triggers-images/comparestatetrigger-unchecked-large.png#lightbox "Compareexemplo do StateTrigger")
-[![Screenshot de uma mudança de estado visual desencadeada, no iOS e Android](triggers-images/comparestatetrigger-checked.png "Compareexemplo do StateTrigger")](triggers-images/comparestatetrigger-unchecked-large.png#lightbox "Compareexemplo do StateTrigger")
+[![Captura de tela de uma alteração de estado visual disparada, na](triggers-images/comparestatetrigger-unchecked.png "Exemplo de CompareStateTrigger")](triggers-images/comparestatetrigger-unchecked-large.png#lightbox "Exemplo de CompareStateTrigger")
+[![captura de tela do IOS e Android de uma alteração de estado visual disparada, no Ios e no Android](triggers-images/comparestatetrigger-checked.png "Exemplo de CompareStateTrigger")](triggers-images/comparestatetrigger-unchecked-large.png#lightbox "Exemplo de CompareStateTrigger")
 
-### <a name="device-state-trigger"></a>Gatilho do estado do dispositivo
+### <a name="device-state-trigger"></a>Gatilho de estado do dispositivo
 
-O [`DeviceStateTrigger`](xref:Xamarin.Forms.DeviceStateTrigger) gatilho [`VisualState`](xref:Xamarin.Forms.VisualState) é uma alteração com base na plataforma do dispositivo em que o aplicativo está sendo executado. Este gatilho tem uma única propriedade vinculável:
+O [`DeviceStateTrigger`](xref:Xamarin.Forms.DeviceStateTrigger) dispara uma [`VisualState`](xref:Xamarin.Forms.VisualState) alteração com base na plataforma do dispositivo em que o aplicativo está sendo executado. Esse gatilho tem uma única propriedade vinculável:
 
-- [`Device`](xref:Xamarin.Forms.DeviceStateTrigger.Device), do `string`tipo, que indica a [`VisualState`](xref:Xamarin.Forms.VisualState) plataforma do dispositivo em que deve ser aplicado.
+- [`Device`](xref:Xamarin.Forms.DeviceStateTrigger.Device), do tipo `string`, que indica a plataforma do dispositivo na qual [`VisualState`](xref:Xamarin.Forms.VisualState) o deve ser aplicado.
 
 > [!NOTE]
-> O [`DeviceStateTrigger`](xref:Xamarin.Forms.DeviceStateTrigger) deriva da [`StateTriggerBase`](xref:Xamarin.Forms.StateTriggerBase) classe e, portanto, pode [`IsActiveChanged`](xref:Xamarin.Forms.StateTriggerBase.IsActiveChanged) anexar um manipulador de eventos ao evento.
+> O [`DeviceStateTrigger`](xref:Xamarin.Forms.DeviceStateTrigger) deriva da [`StateTriggerBase`](xref:Xamarin.Forms.StateTriggerBase) classe e, portanto, pode anexar um manipulador de eventos ao [`IsActiveChanged`](xref:Xamarin.Forms.StateTriggerBase.IsActiveChanged) evento.
 
-O exemplo XAML [`Style`](xref:Xamarin.Forms.Style) a seguir `DeviceStateTrigger` mostra um que inclui objetos:
+O exemplo de XAML a seguir [`Style`](xref:Xamarin.Forms.Style) mostra um `DeviceStateTrigger` que inclui objetos:
 
 ```xaml
 <Style x:Key="DeviceStateTriggerPageStyle"
@@ -575,20 +575,20 @@ O exemplo XAML [`Style`](xref:Xamarin.Forms.Style) a seguir `DeviceStateTrigger`
 </Style>
 ```
 
-Neste exemplo, os [`Style`](xref:Xamarin.Forms.Style) alvos [`ContentPage`](xref:Xamarin.Forms.ContentPage) explícitos são objetos. `ContentPage`objetos que consomem o estilo definem sua cor de fundo para prata no iOS, para azul pálido no Android e para aquamarine no UWP. As capturas de tela a seguir mostram as páginas resultantes no iOS e Android:
+Neste exemplo, os objetos de [`Style`](xref:Xamarin.Forms.Style) destinos [`ContentPage`](xref:Xamarin.Forms.ContentPage) explícitos. `ContentPage`os objetos que consomem o estilo definem sua cor de plano de fundo como prata no iOS, para azul pálido no Android e para azul marinho no UWP. As capturas de tela a seguir mostram as páginas resultantes no iOS e no Android:
 
-[![Captura de tela de uma mudança de estado visual desencadeada, no iOS e Android](triggers-images/devicestatetrigger.png "Exemplo de DeviceStateTrigger")](triggers-images/devicestatetrigger-large.png#lightbox "Exemplo de DeviceStateTrigger")
+[![Captura de tela de uma alteração de estado visual disparada, no iOS e no Android](triggers-images/devicestatetrigger.png "Exemplo de DeviceStateTrigger")](triggers-images/devicestatetrigger-large.png#lightbox "Exemplo de DeviceStateTrigger")
 
-### <a name="orientation-state-trigger"></a>Gatilho do estado de orientação
+### <a name="orientation-state-trigger"></a>Gatilho de estado de orientação
 
-O [`OrientationStateTrigger`](xref:Xamarin.Forms.OrientationStateTrigger) gatilho [`VisualState`](xref:Xamarin.Forms.VisualState) é uma mudança quando a orientação do dispositivo muda. Este gatilho tem uma única propriedade vinculável:
+O [`OrientationStateTrigger`](xref:Xamarin.Forms.OrientationStateTrigger) dispara uma [`VisualState`](xref:Xamarin.Forms.VisualState) alteração quando a orientação do dispositivo é alterada. Esse gatilho tem uma única propriedade vinculável:
 
-- [`Orientation`](xref:Xamarin.Forms.OrientationStateTrigger.Orientation), do [`DeviceOrientation`](xref:Xamarin.Forms.Internals.DeviceOrientation)tipo, que indica [`VisualState`](xref:Xamarin.Forms.VisualState) a orientação a que deve ser aplicado.
+- [`Orientation`](xref:Xamarin.Forms.OrientationStateTrigger.Orientation), do tipo [`DeviceOrientation`](xref:Xamarin.Forms.Internals.DeviceOrientation), que indica a orientação à qual o [`VisualState`](xref:Xamarin.Forms.VisualState) deve ser aplicado.
 
 > [!NOTE]
-> O [`OrientationStateTrigger`](xref:Xamarin.Forms.OrientationStateTrigger) deriva da [`StateTriggerBase`](xref:Xamarin.Forms.StateTriggerBase) classe e, portanto, pode [`IsActiveChanged`](xref:Xamarin.Forms.StateTriggerBase.IsActiveChanged) anexar um manipulador de eventos ao evento.
+> O [`OrientationStateTrigger`](xref:Xamarin.Forms.OrientationStateTrigger) deriva da [`StateTriggerBase`](xref:Xamarin.Forms.StateTriggerBase) classe e, portanto, pode anexar um manipulador de eventos ao [`IsActiveChanged`](xref:Xamarin.Forms.StateTriggerBase.IsActiveChanged) evento.
 
-O exemplo XAML [`Style`](xref:Xamarin.Forms.Style) a seguir `OrientationStateTrigger` mostra um que inclui objetos:
+O exemplo de XAML a seguir [`Style`](xref:Xamarin.Forms.Style) mostra um `OrientationStateTrigger` que inclui objetos:
 
 ```xaml
 <Style x:Key="OrientationStateTriggerPageStyle"
@@ -620,10 +620,10 @@ O exemplo XAML [`Style`](xref:Xamarin.Forms.Style) a seguir `OrientationStateTri
 </Style>
 ```
 
-Neste exemplo, os [`Style`](xref:Xamarin.Forms.Style) alvos [`ContentPage`](xref:Xamarin.Forms.ContentPage) explícitos são objetos. `ContentPage`objetos que consomem o estilo definem sua cor de fundo para prata quando a orientação é retrato, e definem sua cor de fundo para branco quando a orientação é paisagem.
+Neste exemplo, os objetos de [`Style`](xref:Xamarin.Forms.Style) destinos [`ContentPage`](xref:Xamarin.Forms.ContentPage) explícitos. `ContentPage`os objetos que consomem o estilo definem sua cor de plano de fundo como prata quando a orientação é retrato e definem a cor do plano de fundo como branco quando a orientação é paisagem.
 
 ## <a name="related-links"></a>Links relacionados
 
 - [Exemplo de gatilhos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithtriggers)
-- [Xamarin.Forms Visual State Manager](~/xamarin-forms/user-interface/visual-state-manager.md)
-- [Xamarin.Forms Trigger API](xref:Xamarin.Forms.TriggerAction`1)
+- [Gerenciador de estado visual do Xamarin. Forms](~/xamarin-forms/user-interface/visual-state-manager.md)
+- [API de gatilho do Xamarin. Forms](xref:Xamarin.Forms.TriggerAction`1)

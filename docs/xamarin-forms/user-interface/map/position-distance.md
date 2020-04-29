@@ -6,19 +6,19 @@ ms.assetid: 2F4EA3D2-1351-40AD-A71D-CF7F1F18F1E8
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/30/2019
-ms.openlocfilehash: a68eab7bb3e6da764f5a35af4461d6af2be50ebe
-ms.sourcegitcommit: 3ea19e3a51515b30349d03c70a5b3acd7eca7fe7
+ms.date: 03/10/2020
+ms.openlocfilehash: 567e1b5620378f0c1b64d17c56c8fb451f18abc3
+ms.sourcegitcommit: 8d13d2262d02468c99c4e18207d50cd82275d233
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73426149"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82517442"
 ---
 # <a name="xamarinforms-map-position-and-distance"></a>Posição e distância do mapa do Xamarin. Forms
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 
-O namespace [`Xamarin.Forms.Maps`](xref:Xamarin.Forms.Maps) contém uma struct [`Position`](xref:Xamarin.Forms.Maps.Position) que é normalmente usada ao posicionar um mapa e seus pins, e um [`Distance`](xref:Xamarin.Forms.Maps.Distance) struct que pode, opcionalmente, ser usado ao posicionar um mapa.
+O [`Xamarin.Forms.Maps`](xref:Xamarin.Forms.Maps) namespace contém uma [`Position`](xref:Xamarin.Forms.Maps.Position) struct que é normalmente usada ao posicionar um mapa e seus PINs e uma [`Distance`](xref:Xamarin.Forms.Maps.Distance) struct que pode, opcionalmente, ser usada ao posicionar um mapa.
 
 ## <a name="position"></a>Posição
 
@@ -27,35 +27,38 @@ O [`Position`](xref:Xamarin.Forms.Maps.Position) struct encapsula uma posição 
 - [`Latitude`](xref:Xamarin.Forms.Maps.Position.Latitude), do tipo `double`, que representa a latitude da posição em graus decimais.
 - [`Longitude`](xref:Xamarin.Forms.Maps.Position.Longitude), do tipo `double`, que representa a longitude da posição em graus decimais.
 
-[`Position`](xref:Xamarin.Forms.Maps.Position) objetos são criados com o Construtor `Position`, que requer argumentos de latitude e longitude especificados como valores `double`:
+[`Position`](xref:Xamarin.Forms.Maps.Position)os objetos são criados com `Position` o construtor, que requer argumentos de latitude e longitude especificados `double` como valores:
 
 ```csharp
 Position position = new Position(36.9628066, -122.0194722);
 ```
 
+Ao criar um `Position` objeto, o valor de latitude será clamped entre-90,0 e 90,0, e o valor de longitude será clamped entre-180,0 e 180,0.
+
 > [!NOTE]
-> Ao criar um objeto de `Position`, o valor de latitude será clamped entre-90,0 e 90,0, e o valor de longitude será clamped entre-180,0 e 180,0.
+> A `GeographyUtils` classe tem um `ToRadians` método de extensão que converte `double` um valor de graus em radianos e um `ToDegrees` método de extensão que converte `double` um valor de radianos em graus.
 
-## <a name="distance"></a>Alcance
+## <a name="distance"></a>Distância
 
-O [`Distance`](xref:Xamarin.Forms.Maps.Distance) struct encapsula uma distância armazenada como um valor de `double`, que representa a distância em metros. Essa estrutura define três propriedades somente leitura:
+A [`Distance`](xref:Xamarin.Forms.Maps.Distance) estrutura encapsula uma distância armazenada como um `double` valor, que representa a distância em metros. Essa estrutura define três propriedades somente leitura:
 
 - [`Kilometers`](xref:Xamarin.Forms.Maps.Distance.Kilometers), do tipo `double`, que representa a distância em quilômetros que é distribuída pelo `Distance`.
 - [`Meters`](xref:Xamarin.Forms.Maps.Distance.Meters), do tipo `double`, que representa a distância em metros que é distribuída pelo `Distance`.
 - [`Miles`](xref:Xamarin.Forms.Maps.Distance.Miles), do tipo `double`, que representa a distância em milhas que é distribuída pelo `Distance`.
 
-[`Distance`](xref:Xamarin.Forms.Maps.Distance) objetos podem ser criados com o Construtor `Distance`, que requer um argumento de medidores especificado como um `double`:
+[`Distance`](xref:Xamarin.Forms.Maps.Distance)os objetos podem ser criados com `Distance` o construtor, que requer um argumento de medidores `double`especificado como um:
 
 ```csharp
 Distance distance = new Distance(1450.5);
 ```
 
-Como alternativa, [`Distance`](xref:Xamarin.Forms.Maps.Distance) objetos podem ser criados com os métodos de fábrica [`FromKilometers`](xref:Xamarin.Forms.Maps.Distance.FromKilometers*), [`FromMeters`](xref:Xamarin.Forms.Maps.Distance.FromMeters*)e [`FromMiles`](xref:Xamarin.Forms.Maps.Distance.FromMiles*) :
+Como alternativa, [`Distance`](xref:Xamarin.Forms.Maps.Distance) os objetos podem ser criados com [`FromKilometers`](xref:Xamarin.Forms.Maps.Distance.FromKilometers*)os [`FromMeters`](xref:Xamarin.Forms.Maps.Distance.FromMeters*)métodos [`FromMiles`](xref:Xamarin.Forms.Maps.Distance.FromMiles*)de fábrica `BetweenPositions` ,, e:
 
 ```csharp
 Distance distance1 = Distance.FromKilometers(1.45); // argument represents the number of kilometers
 Distance distance2 = Distance.FromMeters(1450.5);   // argument represents the number of meters
 Distance distance3 = Distance.FromMiles(0.969);     // argument represents the number of miles
+Distance distance4 = Distance.BetweenPositions(position1, position2);
 ```
 
 ## <a name="related-links"></a>Links relacionados

@@ -1,24 +1,24 @@
 ---
 title: Estilo de apresentação de página modal no iOS
-description: Especificidades da plataforma permitem que você consumir funcionalidade só está disponível em uma plataforma específica, sem implementar renderizadores personalizados ou efeitos. Este artigo explica como consumir os conjuntos específicos da plataforma iOS, o estilo de apresentação de uma página modal.
+description: As especificações de plataforma permitem que você consuma a funcionalidade que só está disponível em uma plataforma específica, sem implementar renderizadores ou efeitos personalizados. Este artigo explica como consumir os conjuntos específicos da plataforma iOS, o estilo de apresentação de uma página modal.
 ms.prod: xamarin
 ms.assetid: C791F7CF-330A-44BA-987A-4CFCCBB9278B
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/24/2018
-ms.openlocfilehash: 3b1a88968334bed42be53119c26de43ef9cd1419
-ms.sourcegitcommit: eb23b7d745d1090376f9def07e0f11cb089494d0
+ms.date: 04/02/2020
+ms.openlocfilehash: 5078b280499929e0e2e3691539cf1927b4c79fe7
+ms.sourcegitcommit: 8d13d2262d02468c99c4e18207d50cd82275d233
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72171049"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82517533"
 ---
 # <a name="modal-page-presentation-style-on-ios"></a>Estilo de apresentação de página modal no iOS
 
 [![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
-Essa plataforma específica do iOS é usada para definir o estilo de apresentação de uma página modal. Ele é consumido em XAML, definindo o `Page.ModalPresentationStyle` propriedade associável a uma `UIModalPresentationStyle` valor de enumeração:
+Essa plataforma específica do iOS é usada para definir o estilo de apresentação de uma página modal. Ele é consumido em XAML definindo `Page.ModalPresentationStyle` a propriedade vinculável `UIModalPresentationStyle` como um valor de enumeração:
 
 ```xaml
 <ContentPage ...
@@ -28,7 +28,7 @@ Essa plataforma específica do iOS é usada para definir o estilo de apresentaç
 </ContentPage>
 ```
 
-Como alternativa, ele pode ser consumido de c# usando a API fluente:
+Como alternativa, ele pode ser consumido em C# usando a API fluente:
 
 ```csharp
 using Xamarin.Forms.PlatformConfiguration;
@@ -45,22 +45,25 @@ public class iOSModalFormSheetPageCS : ContentPage
 }
 ```
 
-O `Page.On<iOS>` método Especifica que este específicos da plataforma serão executado apenas no iOS. O `Page.SetModalPresentationStyle` método, no [ `Xamarin.Forms.PlatformConfiguration.iOSSpecific` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) namespace, é usado para definir o estilo de apresentação modal em um [ `Page` ](xref:Xamarin.Forms.Page) especificando um dos seguintes `UIModalPresentationStyle` enumeração valores:
+O `Page.On<iOS>` método especifica que essa plataforma específica será executada somente no Ios. O `Page.SetModalPresentationStyle` método, no [`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) namespace, é usado para definir o estilo de apresentação modal em um [`Page`](xref:Xamarin.Forms.Page) especificando um dos seguintes `UIModalPresentationStyle` valores de enumeração:
 
-- `FullScreen`, que define o estilo de apresentação modal para abranger a tela inteira. Por padrão, as páginas modais são exibidas usando esse estilo de apresentação.
-- `FormSheet`, que define o estilo de apresentação modal seja menor do que a tela e centralizada no.
+- `FullScreen`, que define o estilo de apresentação modal para abranger toda a tela. Por padrão, as páginas modais são exibidas usando este estilo de apresentação.
+- `FormSheet`, que define o estilo de apresentação modal a ser centralizado e menor que a tela.
+- `Automatic`, que define o estilo de apresentação modal como o padrão escolhido pelo sistema. Para a maioria dos controladores `UIKit` de exibição, `UIModalPresentationStyle.PageSheet`o mapeia para o, mas alguns controladores de exibição do sistema podem mapeá-lo para um estilo diferente.
+- `OverFullScreen`, que define o estilo de apresentação modal para cobrir a tela.
+- `PageSheet`, que define o estilo de apresentação modal para cobrir o conteúdo subjacente.
 
-Além disso, o `GetModalPresentationStyle` método pode ser usado para recuperar o valor atual do `UIModalPresentationStyle` enumeração é aplicada para o [ `Page` ](xref:Xamarin.Forms.Page).
+Além disso, o `GetModalPresentationStyle` método pode ser usado para recuperar o valor atual da `UIModalPresentationStyle` Enumeração aplicada ao. [`Page`](xref:Xamarin.Forms.Page)
 
-O resultado é que o estilo de apresentação modal em uma [ `Page` ](xref:Xamarin.Forms.Page) podem ser definidos:
+O resultado é que o estilo de apresentação modal em [`Page`](xref:Xamarin.Forms.Page) um pode ser definido:
 
-[![](page-presentation-style-images/modal-presentation-style-small.png "Estilos de apresentação modal em um iPad")](page-presentation-style-images/modal-presentation-style-large.png#lightbox "Estilos de apresentação modal em um iPad")
+[![](page-presentation-style-images/modal-presentation-style-small.png "Modal Presentation Styles")](page-presentation-style-images/modal-presentation-style-large.png#lightbox "Modal Presentation Styles")
 
 > [!NOTE]
-> As páginas que usam esse específicos da plataforma para definir o estilo de apresentação modal devem usar a navegação modal. Para obter mais informações, consulte [páginas modais do xamarin. Forms](~/xamarin-forms/app-fundamentals/navigation/modal.md).
+> As páginas que usam essa plataforma específica para definir o estilo de apresentação modal devem usar a navegação modal. Para obter mais informações, consulte [páginas modais do Xamarin. Forms](~/xamarin-forms/app-fundamentals/navigation/modal.md).
 
 ## <a name="related-links"></a>Links relacionados
 
-- [PlatformSpecifics (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+- [PlatformSpecifics (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [Criação de itens específicos à plataforma](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [API iOSSpecific](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)

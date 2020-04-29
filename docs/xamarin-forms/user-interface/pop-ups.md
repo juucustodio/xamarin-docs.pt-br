@@ -6,23 +6,23 @@ ms.assetid: 46AB0D5E-0025-4A8A-9D00-3E66C3D0BA2E
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 01/17/2020
-ms.openlocfilehash: c71153cdaa94a7983b89968abc828011a648f2b1
-ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+ms.date: 03/10/2020
+ms.openlocfilehash: 87348d5821c2c9e2e46a777f212bd5f69d1a54d0
+ms.sourcegitcommit: 8d13d2262d02468c99c4e18207d50cd82275d233
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79305552"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82517574"
 ---
 # <a name="display-pop-ups"></a>Exibir pop-ups
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-pop-ups)
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-pop-ups)
 
-Exibir um alerta, pedir a um usuário para fazer uma escolha ou exibir um prompt é uma tarefa comum da interface do usuário. O Xamarin. Forms tem três métodos na classe [`Page`](xref:Xamarin.Forms.Page) para interagir com o usuário por meio de um pop-up: [`DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert*), [`DisplayActionSheet`](xref:Xamarin.Forms.Page.DisplayActionSheet*)e `DisplayPromptAsync`. Eles são renderizados com os controles nativos apropriados em cada plataforma.
+Exibir um alerta, pedir a um usuário para fazer uma escolha ou exibir um prompt é uma tarefa comum da interface do usuário. O [`Page`](xref:Xamarin.Forms.Page) Xamarin. Forms tem três métodos na classe para interagir com o usuário por meio de um pop-up [`DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert*): [`DisplayActionSheet`](xref:Xamarin.Forms.Page.DisplayActionSheet*), e `DisplayPromptAsync`. Eles são renderizados com os controles nativos apropriados em cada plataforma.
 
 ## <a name="display-an-alert"></a>Exibir um alerta
 
-Todas as plataformas com suporte do Xamarin.Forms têm um pop-up modal para alertar o usuário ou fazer perguntas simples a ele. Para exibir esses alertas no Xamarin.Forms, use o método [`DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert*) em qualquer [`Page`](xref:Xamarin.Forms.Page). A linha de código a seguir mostra uma mensagem simples para o usuário:
+Todas as plataformas com suporte do Xamarin.Forms têm um pop-up modal para alertar o usuário ou fazer perguntas simples a ele. Para exibir esses alertas no Xamarin. Forms, use o [`DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert*) método em qualquer [`Page`](xref:Xamarin.Forms.Page)um. A linha de código a seguir mostra uma mensagem simples para o usuário:
 
 ```csharp
 await DisplayAlert ("Alert", "You have been alerted", "OK");
@@ -32,7 +32,7 @@ await DisplayAlert ("Alert", "You have been alerted", "OK");
 
 Este exemplo não coleta informações do usuário. O alerta é exibido de forma modal e, após descartado, o usuário continua interagindo com o aplicativo.
 
-O método [`DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert*) também pode ser usado para capturar a resposta do usuário apresentando dois botões e retornando um `boolean`. Para obter uma resposta a um alerta, forneça texto para os dois botões e para o método `await`. Após o usuário selecionar uma das opções, a resposta será retornada ao seu código. Observe as palavras-chave `async` e `await` no código de exemplo abaixo:
+O [`DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert*) método também pode ser usado para capturar a resposta de um usuário apresentando dois botões e retornando `boolean`um. Para obter uma resposta a um alerta, forneça texto para os dois botões e para o método `await`. Após o usuário selecionar uma das opções, a resposta será retornada ao seu código. Observe as palavras-chave `async` e `await` no código de exemplo abaixo:
 
 ```csharp
 async void OnAlertYesNoClicked (object sender, EventArgs e)
@@ -46,9 +46,9 @@ async void OnAlertYesNoClicked (object sender, EventArgs e)
 
 ## <a name="guide-users-through-tasks"></a>Orientar os usuários por meio de tarefas
 
-A [UIActionSheet](https://developer.apple.com/library/ios/documentation/uikit/reference/uiactionsheet_class/Reference/Reference.html) é um elemento de interface do usuário comum no iOS. O método [`DisplayActionSheet`](xref:Xamarin.Forms.Page.DisplayActionSheet*) do Xamarin.Forms permite que você inclua esse controle em aplicativos de plataforma cruzada, renderizando alternativas nativas no Android e na UWP.
+A [UIActionSheet](https://developer.apple.com/library/ios/documentation/uikit/reference/uiactionsheet_class/Reference/Reference.html) é um elemento de interface do usuário comum no iOS. O método Xamarin. [`DisplayActionSheet`](xref:Xamarin.Forms.Page.DisplayActionSheet*) Forms permite que você inclua esse controle em aplicativos de plataformas cruzadas, Renderizando alternativas nativas no Android e no UWP.
 
-Para exibir uma planilha de ações, `await` [`DisplayActionSheet`](xref:Xamarin.Forms.Page.DisplayActionSheet*) em qualquer [`Page`](xref:Xamarin.Forms.Page), passando os rótulos de mensagem e botão como cadeias de caracteres. O método retorna o rótulo de cadeia de caracteres do botão que foi clicado pelo usuário. Um exemplo simples é mostrado aqui:
+Para exibir uma folha de ação, `await` [`DisplayActionSheet`](xref:Xamarin.Forms.Page.DisplayActionSheet*) em qualquer [`Page`](xref:Xamarin.Forms.Page), passando a mensagem e os rótulos do botão como cadeias de caracteres. O método retorna o rótulo de cadeia de caracteres do botão que foi clicado pelo usuário. Um exemplo simples é mostrado aqui:
 
 ```csharp
 async void OnActionSheetSimpleClicked (object sender, EventArgs e)
@@ -72,9 +72,9 @@ async void OnActionSheetCancelDeleteClicked (object sender, EventArgs e)
 
 [![DisplayActionSheet](pop-ups-images/action2-sml.png "Caixa de diálogo da folha de ações com o botão destruir")](pop-ups-images/action2.png#lightbox "Caixa de diálogo da folha de ações com o botão destruir")
 
-## <a name="display-a-prompt"></a>Exibir um prompt
+## <a name="display-a-prompt"></a>exibir um prompt
 
-Para exibir um prompt, chame o `DisplayPromptAsync` em qualquer [`Page`](xref:Xamarin.Forms.Page), passando um título e uma mensagem como argumentos `string`:
+Para exibir um prompt, chame o `DisplayPromptAsync` em qualquer [`Page`](xref:Xamarin.Forms.Page), passando um título e uma mensagem `string` como argumentos:
 
 ```csharp
 string result = await DisplayPromptAsync("Question 1", "What's your name?");
@@ -84,9 +84,9 @@ O prompt é exibido de moda modal:
 
 [![Captura de tela de um prompt modal, no iOS e no Android](pop-ups-images/simple-prompt.png "Prompt modal")](pop-ups-images/simple-prompt-large.png#lightbox "Prompt modal")
 
-Se o botão OK for tocado, a resposta inserida será retornada como um `string`. Se o botão de cancelamento for tocado, `null` será retornado.
+Se o botão OK for tocado, a resposta inserida será retornada como `string`um. Se o botão de cancelamento `null` for tocado, será retornado.
 
-A lista completa de argumentos para o método `DisplayPromptAsync` é:
+A lista completa de argumentos para `DisplayPromptAsync` o método é:
 
 - `title`, do tipo `string`, é o título a ser exibido no prompt.
 - `message`, do tipo `string`, é a mensagem a ser exibida no prompt.
@@ -95,7 +95,7 @@ A lista completa de argumentos para o método `DisplayPromptAsync` é:
 - `placeholder`, do tipo `string`, é o texto do espaço reservado a ser exibido no prompt. Esse é um argumento opcional, cujo valor padrão é `null`.
 - `maxLength`, do tipo `int`, é o comprimento máximo da resposta do usuário. Esse é um argumento opcional, cujo valor padrão é-1.
 - `keyboard`, do tipo `Keyboard`, é o tipo de teclado a ser usado para a resposta do usuário. Esse é um argumento opcional, cujo valor padrão é `Keyboard.Default`.
-- `initialValue`, do tipo `string`, é uma resposta predefinida que será exibida e que pode ser editada. Esse é um argumento opcional, cujo valor padrão é um `string`vazio.
+- `initialValue`, do tipo `string`, é uma resposta predefinida que será exibida e que pode ser editada. Esse é um argumento opcional, cujo valor padrão é um vazio `string`.
 
 O exemplo a seguir mostra a definição de alguns dos argumentos opcionais:
 
@@ -106,9 +106,6 @@ string result = await DisplayPromptAsync("Question 2", "What's 5 + 5?", initialV
 Esse código exibe uma resposta predefinida de 10, limita o número de caracteres que podem ser inseridos em 2 e exibe o teclado numérico para a entrada do usuário:
 
 [![Captura de tela de um prompt modal, no iOS e no Android](pop-ups-images/keyboard-prompt.png "Prompt modal")](pop-ups-images/keyboard-prompt-large.png#lightbox "Prompt modal")
-
-> [!NOTE]
-> No momento, o método `DisplayPromptAsync` só é implementado no iOS e no Android.
 
 ## <a name="related-links"></a>Links relacionados
 

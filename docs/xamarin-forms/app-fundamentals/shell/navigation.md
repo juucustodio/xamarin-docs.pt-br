@@ -6,17 +6,17 @@ ms.assetid: 57079D89-D1CB-48BD-9FEE-539CEC29EABB
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/06/2019
-ms.openlocfilehash: 70f8f630558730f6074373eb3a814209921235de
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.date: 04/02/2020
+ms.openlocfilehash: a40a2dc01c37773539089287d561f4c52ef7f6de
+ms.sourcegitcommit: 8d13d2262d02468c99c4e18207d50cd82275d233
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "71674562"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82516524"
 ---
 # <a name="xamarinforms-shell-navigation"></a>Navegação do Shell do Xamarin.Forms
 
-[![Baixar](~/media/shared/download.png) amostra Baixar a amostra](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 
 O Shell do Xamarin.Forms inclui uma experiência de navegação baseada em URI que usa rotas para qualquer página no aplicativo sem precisar seguir uma hierarquia definida. Além disso, eles também oferecem a capacidade de navegar para trás, sem precisar visitar todas as páginas na pilha de navegação.
 
@@ -27,7 +27,7 @@ O Shell do Xamarin.Forms inclui uma experiência de navegação baseada em URI q
 - `CurrentState`, do tipo `ShellNavigationState`, o estado de navegação atual do `Shell`.
 - `Current`, do tipo `Shell`, um alias convertido em tipo para `Application.Current.MainPage`.
 
-As `BackButtonBehavior` `CurrentItem`propriedades `CurrentState` e propriedades [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) são apoiadas por objetos, o que significa que essas propriedades podem ser alvos de vinculações de dados.
+As `BackButtonBehavior`propriedades `CurrentItem`,, `CurrentState` e são apoiadas por [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objetos, o que significa que essas propriedades podem ser destinos de associações de dados.
 
 A navegação é executada pela invocação do método `GoToAsync`, da classe `Shell`. Quando a navegação estiver prestes a ser executada, um evento `Navigating` será acionado, e um evento `Navigated` será acionado quando a navegação for concluída.
 
@@ -158,8 +158,8 @@ Além disso, há suporte para os seguintes formatos de rota relativa:
 
 | Formatar | Descrição |
 | --- | --- |
-| //*Rota* | A hierarquia de rotas será pesquisada à procura da rota especificada, acima da rota exibida atualmente. |
-| ///*Rota* | A hierarquia de rotas será pesquisada à procura da rota especificada, abaixo da rota exibida atualmente. |
+| //*rota* | A hierarquia de rotas será pesquisada à procura da rota especificada, acima da rota exibida atualmente. |
+| ///*rota* | A hierarquia de rotas será pesquisada à procura da rota especificada, abaixo da rota exibida atualmente. |
 
 #### <a name="contextual-navigation"></a>Navegação contextual
 
@@ -173,6 +173,36 @@ bears
 ```
 
 Quando a página registrada para a rota `monkeys` for exibida, a navegação até a rota `details` exibirá a página registrada para a rota `monkeys/details`. Da mesma forma, quando a página registrada para a rota `bears` for exibida, a navegação até a rota `details` exibirá a página registrada para a rota `bears/details`. Saiba mais sobre como registrar as rotas neste exemplo em [Registrar rotas de página](#register-page-routes).
+
+### <a name="backwards-navigation"></a>Navegação regressiva
+
+A navegação para trás pode ser executada especificando ".." como o argumento para o `GotoAsync` método:
+
+```csharp
+await Shell.Current.GoToAsync("..");
+```
+
+A navegação para trás com ".." também pode ser combinada com uma rota, da seguinte maneira:
+
+```csharp
+await Shell.Current.GoToAsync("../route");
+```
+
+Neste exemplo, o efeito geral é navegar para trás e, em seguida, navegar até a rota especificada.
+
+> [!IMPORTANT]
+> Navegar para trás e para uma rota especificada só será possível se a navegação para trás colocar você no local atual na hierarquia de rotas para navegar até a rota especificada.
+
+Da mesma forma, é possível navegar para trás várias vezes e, em seguida, navegar para uma rota especificada:
+
+```csharp
+await Shell.Current.GoToAsync("../../route");
+```
+
+Neste exemplo, o efeito geral é navegar duas vezes para trás e, em seguida, navegar até a rota especificada.
+
+> [!NOTE]
+> Os dados também podem ser passados ao navegar com "..". Para obter mais informações, consulte [transmitir dados](#pass-data).
 
 ### <a name="invalid-routes"></a>Rotas inválidas
 
@@ -272,9 +302,9 @@ async void OnCollectionViewSelectionChanged(object sender, SelectionChangedEvent
 }
 ```
 
-Este exemplo de código recupera o [`CollectionView`](xref:Xamarin.Forms.CollectionView)elefante atualmente selecionado `elephantdetails` no `elephantName` , e navega para a rota, passando como um parâmetro de consulta. Os parâmetros de consulta serão codificados em URL para navegação, portanto, "Elefante Indiano" se tornará "Elefante%20Indiano".
+Este exemplo de código recupera o elefante selecionado no momento [`CollectionView`](xref:Xamarin.Forms.CollectionView)no e navega até a `elephantdetails` rota, passando `elephantName` como um parâmetro de consulta. Os parâmetros de consulta serão codificados em URL para navegação, portanto, "Elefante Indiano" se tornará "Elefante%20Indiano".
 
-Para receber os dados, a classe que representa a página a ser [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext)navegada ou `QueryPropertyAttribute` a classe para a página deve ser decorada com um parâmetro para cada parâmetro de consulta:
+Para receber dados, a classe que representa a página que está sendo navegada, ou a classe para a página [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext), deve ser decorada com `QueryPropertyAttribute` um para cada parâmetro de consulta:
 
 ```csharp
 [QueryProperty("Name", "name")]
@@ -291,7 +321,7 @@ public partial class ElephantDetailPage : ContentPage
 }
 ```
 
-O primeiro argumento `QueryPropertyAttribute` para o especifica o nome da propriedade que receberá os dados, com o segundo argumento especificando o id do parâmetro de consulta. Portanto, o `QueryPropertyAttribute` exemplo acima especifica que `Name` a propriedade receberá os `name` dados passados no parâmetro `GoToAsync` de consulta do URI na chamada do método. Em `Name` seguida, a URL decodifica o valor do parâmetro [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) de consulta e o usa para definir a página para o objeto que será exibido.
+O primeiro argumento para o `QueryPropertyAttribute` especifica o nome da propriedade que receberá os dados, com o segundo argumento especificando a ID de parâmetro de consulta. Portanto, o `QueryPropertyAttribute` no exemplo acima Especifica que a `Name` Propriedade receberá os dados passados no parâmetro de `name` consulta do URI na chamada do `GoToAsync` método. A `Name` Propriedade, então, a URL decodifica o valor do parâmetro de consulta e o usa para [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) definir a da página para o objeto que será exibido.
 
 > [!NOTE]
 > Uma classe pode ser decorada com vários objetos `QueryPropertyAttribute`.
@@ -302,11 +332,11 @@ A classe `BackButtonBehavior` define as propriedades a seguir, que controlam a a
 
 - `Command`, do tipo `ICommand`, que é executado quando o botão Voltar é pressionado.
 - `CommandParameter`, do tipo `object`, que é o parâmetro passado para `Command`.
-- `IconOverride`, do [`ImageSource`](xref:Xamarin.Forms.ImageSource)tipo , o ícone usado para o botão de volta.
+- `IconOverride`, do tipo [`ImageSource`](xref:Xamarin.Forms.ImageSource), o ícone usado para o botão voltar.
 - `IsEnabled`, do tipo `boolean`, indica se o botão Voltar está habilitado. O valor padrão é `true`.
 - `TextOverride`, do tipo `string`, o texto usado para o botão Voltar.
 
-Todas essas propriedades são [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) apoiadas por objetos, o que significa que as propriedades podem ser alvos de vinculações de dados.
+Todas essas propriedades são apoiadas por [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objetos, o que significa que as propriedades podem ser destinos de associações de dados.
 
 A classe `BackButtonBehavior` pode ser consumida por meio da definição da propriedade anexada `Shell.BackButtonBehavior` a um objeto `BackButtonBehavior`:
 
@@ -335,7 +365,7 @@ Shell.SetBackButtonBehavior(this, new BackButtonBehavior
 
 A propriedade `Command` é definida como uma `ICommand` a ser executada quando o botão Voltar é pressionado, e a propriedade `IconOverride` é definida como o ícone usado pelo botão Voltar:
 
-[![Captura de tela de um ícone de botão shell de volta, no iOS e Android](navigation-images/back-button.png "Substituição do ícone do botão de volta da shell")](navigation-images/back-button-large.png#lightbox "Substituição do ícone do botão de volta da shell")
+[![Captura de tela de uma substituição de ícone de botão voltar do Shell, no iOS e no Android](navigation-images/back-button.png "Substituir ícone do botão voltar do Shell")](navigation-images/back-button-large.png#lightbox "Substituir ícone do botão voltar do Shell")
 
 ## <a name="related-links"></a>Links relacionados
 

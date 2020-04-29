@@ -1,5 +1,5 @@
 ---
-title: Caixa de seleção Xamarin. Forms
+title: Caixa de seleção do Xamarin.Forms
 description: A caixa de seleção Xamarin. Forms é um tipo de botão que pode ser marcado ou vazio. Quando uma caixa de seleção é marcada, ela é considerada como ativada. Quando uma caixa de seleção está vazia, ela é considerada como off.
 ms.prod: xamarin
 ms.assetid: B8B9268B-BCB8-42B9-B08C-C0F22C137238
@@ -7,29 +7,29 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/11/2019
-ms.openlocfilehash: f78ca9d2cf7a9e57b81c5d923c64b36a7982c4b0
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: 10b7c4c3478545863ef49a23ef0f1be777e7eda9
+ms.sourcegitcommit: 8d13d2262d02468c99c4e18207d50cd82275d233
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "68739153"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82517125"
 ---
-# <a name="xamarinforms-checkbox"></a>Caixa de seleção Xamarin. Forms
+# <a name="xamarinforms-checkbox"></a>Caixa de seleção do Xamarin.Forms
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-checkboxdemos/)
+[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-checkboxdemos/)
 
-O `CheckBox` Xamarin. Forms é um tipo de botão que pode ser marcado ou vazio. Quando uma caixa de seleção é marcada, ela é considerada como ativada. Quando uma caixa de seleção está vazia, ela é considerada como off.
+O Xamarin. Forms `CheckBox` é um tipo de botão que pode ser marcado ou vazio. Quando uma caixa de seleção é marcada, ela é considerada como ativada. Quando uma caixa de seleção está vazia, ela é considerada como off.
 
-`CheckBox` define uma propriedade `bool` chamada `IsChecked`, que indica se a `CheckBox` está marcada. Essa propriedade também tem o suporte de um objeto [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) , o que significa que ele pode ser estilizado e ser o destino de associações de dados.
+`CheckBox`define uma `bool` propriedade chamada `IsChecked`, que indica se o `CheckBox` está marcado. Essa propriedade também é apoiada por um [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objeto, o que significa que ele pode ser estilizado e ser o destino de associações de dados.
 
 > [!NOTE]
-> A propriedade `IsChecked` vinculável tem um modo de associação padrão de [`BindingMode.TwoWay`](xref:Xamarin.Forms.BindingMode.TwoWay).
+> A `IsChecked` propriedade vinculável tem um modo de associação [`BindingMode.TwoWay`](xref:Xamarin.Forms.BindingMode.TwoWay)padrão de.
 
-`CheckBox` define um evento de `CheckedChanged` que é disparado quando a propriedade `IsChecked` é alterada, seja pela manipulação do usuário ou quando um aplicativo define a propriedade `IsChecked`. O objeto `CheckedChangedEventArgs` que acompanha o evento `CheckedChanged` tem uma única propriedade denominada `Value`, do tipo `bool`. Quando o evento é acionado, o valor da propriedade `Value` é definido como o novo valor da propriedade `IsChecked`.
+`CheckBox`define um `CheckedChanged` evento que é disparado `IsChecked` quando a propriedade é alterada, seja por meio da manipulação do usuário `IsChecked` ou quando um aplicativo define a propriedade. O `CheckedChangedEventArgs` objeto que acompanha o `CheckedChanged` evento tem uma única propriedade chamada `Value`, do tipo. `bool` Quando o evento é acionado, o valor da `Value` propriedade é definido como o novo valor da `IsChecked` propriedade.
 
 ## <a name="create-a-checkbox"></a>Criar uma caixa de seleção
 
-O exemplo a seguir mostra como criar uma instância de um `CheckBox` em XAML:
+O exemplo a seguir mostra como criar uma `CheckBox` instância de em XAML:
 
 ```xaml
 <CheckBox />
@@ -39,7 +39,7 @@ Esse XAML resulta na aparência mostrada nas seguintes capturas de tela:
 
 ![Captura de tela de uma caixa de seleção vazia no iOS e no Android](checkbox-images/checkbox-empty.png "Caixa de seleção vazia")
 
-Por padrão, o `CheckBox` está vazio. O `CheckBox` pode ser verificado pela manipulação do usuário ou definindo a propriedade `IsChecked` como `true`:
+Por padrão, o `CheckBox` está vazio. O `CheckBox` pode ser verificado pela manipulação do usuário ou definindo a `IsChecked` Propriedade como: `true`
 
 ```xaml
 <CheckBox IsChecked="true" />
@@ -57,13 +57,13 @@ CheckBox checkBox = new CheckBox { IsChecked = true };
 
 ## <a name="respond-to-a-checkbox-changing-state"></a>Responder a um estado de alteração de caixa de seleção
 
-Quando a propriedade `IsChecked` é alterada, seja pela manipulação do usuário ou quando um aplicativo define a propriedade `IsChecked`, o evento `CheckedChanged` é disparado. Um manipulador de eventos para esse evento pode ser registrado para responder à alteração:
+Quando a `IsChecked` propriedade é alterada, seja por meio da manipulação do usuário ou quando `IsChecked` um aplicativo define `CheckedChanged` a propriedade, o evento é acionado. Um manipulador de eventos para esse evento pode ser registrado para responder à alteração:
 
 ```xaml
 <CheckBox CheckedChanged="OnCheckBoxCheckedChanged" />
 ```
 
-O arquivo code-behind contém o manipulador para o evento `CheckedChanged`:
+O arquivo code-behind contém o manipulador para o `CheckedChanged` evento:
 
 ```csharp
 void OnCheckBoxCheckedChanged(object sender, CheckedChangedEventArgs e)
@@ -72,9 +72,9 @@ void OnCheckBoxCheckedChanged(object sender, CheckedChangedEventArgs e)
 }
 ```
 
-O argumento `sender` é o `CheckBox` responsável por esse evento. Você pode usar isso para acessar o objeto `CheckBox` ou para distinguir entre vários objetos `CheckBox` que compartilham o mesmo evento `CheckedChanged`.
+O `sender` argumento é o `CheckBox` responsável por esse evento. Você pode usar isso para acessar o `CheckBox` objeto ou para distinguir entre vários `CheckBox` objetos que compartilham o mesmo `CheckedChanged` manipulador de eventos.
 
-Como alternativa, um manipulador de eventos para o evento `CheckedChanged` pode ser registrado no código:
+Como alternativa, um manipulador de eventos para `CheckedChanged` o evento pode ser registrado no código:
 
 ```csharp
 CheckBox checkBox = new CheckBox { ... };
@@ -86,7 +86,7 @@ checkBox.CheckedChanged += (sender, e) =>
 
 ## <a name="data-bind-a-checkbox"></a>Associação de dados a uma caixa de seleção
 
-O manipulador de eventos `CheckedChanged` pode ser eliminado usando a vinculação de dados e os gatilhos para responder a um `CheckBox` que está sendo marcado ou vazio:
+O `CheckedChanged` manipulador de eventos pode ser eliminado usando a vinculação de dados e os gatilhos para responder a um `CheckBox` sendo marcado ou vazio:
 
 ```xaml
 <CheckBox x:Name="checkBox" />
@@ -104,9 +104,9 @@ O manipulador de eventos `CheckedChanged` pode ser eliminado usando a vinculaç�
 </Label>
 ```
 
-Neste exemplo, o [`Label`](xref:Xamarin.Forms.Label) usa uma expressão de associação em um gatilho de dados para monitorar a propriedade `IsChecked` do `CheckBox`. Quando essa propriedade se torna `true`, as propriedades `FontAttributes` e `FontSize` do `Label` mudam. Quando a propriedade `IsChecked` retorna para `false`, as propriedades `FontAttributes` e `FontSize` da `Label` são redefinidas para o estado inicial.
+Neste exemplo, o [`Label`](xref:Xamarin.Forms.Label) usa uma expressão de associação em um gatilho de dados para monitorar `IsChecked` a propriedade do `CheckBox`. Quando essa propriedade se `true`torna, `FontAttributes` as `FontSize` Propriedades e da `Label` alteração. Quando a `IsChecked` propriedade retorna para `false`, as `FontAttributes` propriedades `FontSize` e de `Label` são redefinidas para o estado inicial.
 
-Nas capturas de tela a seguir, a captura de tela do iOS mostra a formatação [`Label`](xref:Xamarin.Forms.Label) quando o `CheckBox` está vazio, enquanto a captura de tela do Android mostra a formatação `Label` quando o `CheckBox` está marcado:
+Nas capturas de tela a seguir, a captura de [`Label`](xref:Xamarin.Forms.Label) tela do IOS `CheckBox` mostra a formatação quando o está vazio, enquanto `Label` a captura de `CheckBox` tela do Android mostra a formatação quando o está marcado:
 
 [![Captura de tela de uma caixa de seleção de associação de dados, no iOS e no Android](checkbox-images/checkbox-databinding.png "Caixa de seleção Associação de dados")](checkbox-images/checkbox-databinding-large.png#lightbox "Caixa de seleção Associação de dados")
 
@@ -114,25 +114,25 @@ Para obter mais informações sobre gatilhos, consulte [gatilhos do Xamarin. For
 
 ## <a name="disable-a-checkbox"></a>Desabilitar uma caixa de seleção
 
-Às vezes, um aplicativo entra em um estado em que um `CheckBox` que está sendo verificado não é uma operação válida. Nesses casos, o `CheckBox` pode ser desabilitado definindo sua propriedade `IsEnabled` como `false`.
+Às vezes, um aplicativo entra em um `CheckBox` estado em que uma está sendo verificada não é uma operação válida. Nesses casos, o `CheckBox` pode ser desabilitado definindo sua `IsEnabled` Propriedade como. `false`
 
-## <a name="checkbox-appearance"></a>Aparência da caixa de seleção
+## <a name="checkbox-appearance"></a>Aparência da CheckBox
 
-Além das propriedades que `CheckBox` herda da classe [`View`](xref:Xamarin.Forms.View) , `CheckBox` também define uma propriedade `Color` que define sua cor como uma [`Color`](xref:Xamarin.Forms.Color):
+Além `CheckBox` das propriedades que herdam da [`View`](xref:Xamarin.Forms.View) classe, `CheckBox` também definem uma `Color` propriedade que define sua cor como: [`Color`](xref:Xamarin.Forms.Color)
 
 ```xaml
 <CheckBox Color="Red" />
 ```
 
-As capturas de tela a seguir mostram uma série de objetos `CheckBox` verificados, onde cada objeto tem sua propriedade `Color` definida como uma [`Color`](xref:Xamarin.Forms.Color)diferente:
+As capturas de tela a seguir mostram uma `CheckBox` série de objetos verificados, onde `Color` cada objeto tem sua propriedade [`Color`](xref:Xamarin.Forms.Color)definida como um diferente:
 
 ![Captura de tela de caixas de seleção coloridas em iOS e Android](checkbox-images/checkbox-colors.png "Caixa de seleção colorida")
 
 ## <a name="checkbox-visual-states"></a>Estados visuais da caixa de seleção
 
-`CheckBox` tem um [`VisualState`](xref:Xamarin.Forms.VisualState) `IsChecked` que pode ser usado para iniciar uma alteração visual no `CheckBox` quando ele se torna marcado.
+`CheckBox`tem um `IsChecked` [`VisualState`](xref:Xamarin.Forms.VisualState) que pode ser usado para iniciar uma alteração visual no `CheckBox` quando ele se torna marcado.
 
-O exemplo de XAML a seguir mostra como definir um estado visual para o estado de `IsChecked`:
+O exemplo de XAML a seguir mostra como definir um estado visual para `IsChecked` o estado:
 
 ```xaml
 <CheckBox ...>
@@ -156,12 +156,12 @@ O exemplo de XAML a seguir mostra como definir um estado visual para o estado de
 </CheckBox>
 ```
 
-Neste exemplo, a `IsChecked` [`VisualState`](xref:Xamarin.Forms.VisualState) especifica que, quando a `CheckBox` estiver marcada, sua propriedade `Color` será definida como verde. O `Normal` `VisualState` especifica que quando o `CheckBox` estiver em um estado normal, sua propriedade `Color` será definida como vermelho. Portanto, o efeito geral é que o `CheckBox` é vermelho quando está vazio e verde quando é marcado.
+Neste `IsChecked` [`VisualState`](xref:Xamarin.Forms.VisualState) exemplo, o especifica que quando o `CheckBox` estiver marcado, sua `Color` propriedade será definida como verde. O `Normal` `VisualState` especifica que quando o `CheckBox` estiver em um estado normal, sua `Color` propriedade será definida como vermelho. Portanto, o efeito geral é que o `CheckBox` é vermelho quando está vazio e verde quando é marcado.
 
 Para obter mais informações sobre os Estados visuais, consulte [Gerenciador de estado visual do Xamarin. Forms](~/xamarin-forms/user-interface/visual-state-manager.md).
 
 ## <a name="related-links"></a>Links relacionados
 
 - [Demonstrações da caixa de seleção (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-checkboxdemos/)
-- [Gatilhos do Xamarin. Forms](~/xamarin-forms/app-fundamentals/triggers.md)
+- [Gatilhos do Xamarin.Forms](~/xamarin-forms/app-fundamentals/triggers.md)
 - [Gerenciador de estado visual do Xamarin. Forms](~/xamarin-forms/user-interface/visual-state-manager.md)

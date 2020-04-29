@@ -6,13 +6,13 @@ ms.assetid: AF4BDD27-89F6-48AE-A8CD-D7E4DDA2CCA2
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 03/20/2020
-ms.openlocfilehash: cebb996da992058616f9cf96ef3212c9ce27022a
-ms.sourcegitcommit: 6c60914b380ff679bbffd7790edd4d5e18005d0a
+ms.date: 04/14/2020
+ms.openlocfilehash: cca377a7a88599bc34fd66695ad303162e6be200
+ms.sourcegitcommit: 8d13d2262d02468c99c4e18207d50cd82275d233
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80112585"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82516545"
 ---
 # <a name="xamarinforms-experimental-flags"></a>Sinalizadores experimentais do Xamarin. Forms
 
@@ -20,10 +20,13 @@ Quando um novo recurso Xamarin. Forms é implementado, às vezes ele é colocado
 
 O Xamarin. Forms inclui os seguintes sinalizadores experimentais:
 
+- `AppTheme_Experimental`
 - `CarouselView_Experimental`
+- `Expander_Experimental`
 - `IndicatorView_Experimental`
 - `Markup_Experimental`
 - `MediaElement_Experimental`
+- `RadioButton_Experimental`
 - `Shell_UWP_Experimental`
 - `StateTriggers_Experimental`
 - `SwipeView_Experimental`
@@ -31,46 +34,46 @@ O Xamarin. Forms inclui os seguintes sinalizadores experimentais:
 Usar a funcionalidade que está atrás de um sinalizador experimental exige que você habilite o sinalizador ou os sinalizadores em seu aplicativo. Há duas abordagens para habilitar sinalizadores experimentais:
 
 - Habilite o sinalizador experimental, ou sinalizadores, em seus projetos de plataforma.
-- Habilite o sinalizador experimental, ou sinalizadores, na sua classe de `App`.
+- Habilite o sinalizador experimental, ou sinalizadores, em `App` sua classe.
 
 > [!WARNING]
 > O consumo da funcionalidade que está atrás de um sinalizador experimental, sem habilitar o sinalizador resultará em seu aplicativo lançar uma exceção que indica qual sinalizador deve ser habilitado.
 
 ## <a name="enable-flags-in-platform-projects"></a>Habilitar sinalizadores em projetos de plataforma
 
-O método `Xamarin.Forms.Forms.SetFlags` pode ser usado para habilitar um sinalizador experimental em seus projetos de plataforma:
+O `Xamarin.Forms.Forms.SetFlags` método pode ser usado para habilitar um sinalizador experimental em seus projetos de plataforma:
 
 ```csharp
 Xamarin.Forms.Forms.SetFlags("CarouselView_Experimental");
 ```
 
-O método `SetFlags` deve ser invocado em sua classe `AppDelegate` no iOS, na sua classe `MainActivity` no Android e na sua classe `App` no UWP.
+O `SetFlags` método deve ser invocado em `AppDelegate` sua classe no Ios, em `MainActivity` sua classe no Android e em sua `App` classe no UWP.
 
 > [!IMPORTANT]
-> A habilitação de um sinalizador experimental em seus projetos de plataforma deve ocorrer antes que o método `Forms.Init` seja invocado.
+> A habilitação de um sinalizador experimental em seus projetos de plataforma `Forms.Init` deve ocorrer antes que o método seja invocado.
 
-O método `Xamarin.Forms.Forms.SetFlags` aceita um argumento de matriz `string`, o que torna possível habilitar vários sinalizadores experimentais em uma única chamada de método:
+O `Xamarin.Forms.Forms.SetFlags` método aceita um `string` argumento de matriz, o que torna possível habilitar vários sinalizadores experimentais em uma única chamada de método:
 
 ```csharp
 Xamarin.Forms.Forms.SetFlags(new string[] { "CarouselView_Experimental", "IndicatorView_Experimental", "SwipeView_Experimental" });
 ```
 
 > [!WARNING]
-> Nunca chame o método `SetFlags` mais de uma vez, pois as chamadas subsequentes substituirão o resultado de chamadas anteriores.
+> Nunca chame o `SetFlags` método mais de uma vez, pois as chamadas subsequentes substituirão o resultado de chamadas anteriores.
 
 ## <a name="enable-flags-in-your-app-class"></a>Habilitar sinalizadores em sua classe de aplicativo
 
-O método `Device.SetFlags` pode ser usado para habilitar um sinalizador experimental na classe `App` em seu projeto de código compartilhado:
+O `Device.SetFlags` método pode ser usado para habilitar um sinalizador experimental na `App` classe em seu projeto de código compartilhado:
 
 ```csharp
 Device.SetFlags(new string[]{ "MediaElement_Experimental" });
 ```
 
-O método `Device.SetFlags` aceita um argumento `IReadOnlyList<string>`, o que torna possível habilitar vários sinalizadores experimentais em uma única chamada de método:
+O `Device.SetFlags` método aceita um `IReadOnlyList<string>` argumento, o que torna possível habilitar vários sinalizadores experimentais em uma única chamada de método:
 
 ```csharp
 Device.SetFlags(new string[]{ "CarouselView_Experimental", "MediaElement_Experimental", "SwipeView_Experimental" });
 ```
 
 > [!WARNING]
-> Nunca chame o método `SetFlags` mais de uma vez, pois as chamadas subsequentes substituirão o resultado de chamadas anteriores.
+> Nunca chame o `SetFlags` método mais de uma vez, pois as chamadas subsequentes substituirão o resultado de chamadas anteriores.
