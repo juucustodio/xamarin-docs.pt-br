@@ -5,12 +5,12 @@ ms.assetid: 34062D84-3E55-4AF7-A688-8551068B1E57
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 01/06/2020
-ms.openlocfilehash: e31a45a060356b372b9da62a667f5d68e06c73c9
-ms.sourcegitcommit: 1b3ef8178370dac377519c16de8a2ec7a26cda3d
+ms.openlocfilehash: 3d61267ae78a4b84907a2bcf6e944eb286b113dd
+ms.sourcegitcommit: 8b94b2af2ac69e4a60e210ddc764f4d276c8d88d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82127114"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82605440"
 ---
 # <a name="xamarinessentials-permissions"></a>Xamarin. Essentials: permissões
 
@@ -37,6 +37,8 @@ var status = await Permissions.CheckStatusAsync<Permissions.LocationWhenInUse>()
 ```
 
 Um `PermissionException` será gerado se a permissão necessária não for declarada.
+
+É melhor verificar o status da permissão antes de solicitá-la. Cada sistema operacional retornará um estado padrão diferente se o usuário nunca tiver sido solicitado. iOS retorna `Unknown`, enquanto outros retornam `Denied`.
 
 ## <a name="requesting-permissions"></a>Solicitando permissões
 
