@@ -1,10 +1,12 @@
-- name: What's New
+- name: O Que Há de Novo
   href: index.yml
   expanded: true
   items:
     - name: 2020
       expanded: true
       items:
+        - name: Abril
+          href: 2020-04.md
         - name: Fevereiro
           href: 2020-02.md
     - name: 2019
