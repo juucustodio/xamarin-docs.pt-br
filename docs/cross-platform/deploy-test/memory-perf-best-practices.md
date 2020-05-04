@@ -6,12 +6,12 @@ ms.assetid: 9ce61f18-22ac-4b93-91be-5b499677d661
 author: davidortinau
 ms.author: daortin
 ms.date: 03/24/2017
-ms.openlocfilehash: d0b195b90bb57b6d0717c0fb06d0202857851fe7
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: f99b64b67f4f1cabf3a5884fabb1301e5ee39eee
+ms.sourcegitcommit: 06043f6a5628a7326ac6690eb62ead8e4780f4a7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73016522"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82738788"
 ---
 # <a name="cross-platform-performance"></a>Desempenho de plataforma cruzada
 
@@ -265,6 +265,8 @@ SGen utiliza um dos três heaps para alocar espaço para objetos:
 
 Uma das vantagens de SGen é que o tempo necessário para executar uma coleta de lixo secundária é proporcional ao número de novos objetos ativos que foram criados desde a última coleta de lixo secundária. Isso reduzirá o impacto de coleta de lixo sobre o desempenho de um aplicativo, porque essas coletas de lixo secundárias levarão menos tempo do que uma coleta de lixo principal. Coletas de lixo principais ainda ocorrem, mas com menos frequência.
 
+O coletor de lixo do SGen é o padrão no Xamarin. iOS 9.2.1 e superior e, portanto, será usado automaticamente. Observe que a capacidade de alterar o coletor de lixo foi removida das versões mais recentes do Visual Studio. Para obter mais informações, consulte [novo sistema de contagem de referência](~/ios/internals/newrefcount.md).
+
 ### <a name="reducing-pressure-on-the-garbage-collector"></a>Redução da pressão sobre o coletor de lixo
 
 Quando SGen inicia uma coleta de lixo, ele interromperá os threads do aplicativo enquanto ele recupera a memória. Enquanto a memória está sendo recuperada, o aplicativo pode ter uma pequena pausa ou apresentar intermitências na interface do usuário. O quão perceptível essa pausa é depende de dois fatores:
@@ -371,9 +373,9 @@ Esse artigo descreve e discute técnicas para aumentar o desempenho dos aplicati
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Desempenho xamarin.iOS](~/ios/deploy-test/performance.md)
+- [Desempenho do Xamarin. iOS](~/ios/deploy-test/performance.md)
 - [Desempenho do Xamarin.Android](~/android/deploy-test/performance.md)
 - [Introdução ao Xamarin Profiler](~/tools/profiler/index.md)
-- [Xamarin.Forms Performance](~/xamarin-forms/deploy-test/performance.md)
-- [Visão geral do suporte de async](~/cross-platform/platform/async.md)
+- [Desempenho do Xamarin. Forms](~/xamarin-forms/deploy-test/performance.md)
+- [Visão geral do suporte assíncrono](~/cross-platform/platform/async.md)
 - [IDisposable](xref:System.IDisposable)
