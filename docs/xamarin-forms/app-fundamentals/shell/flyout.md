@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/22/2020
-ms.openlocfilehash: cd5ee471385761cad9f99c4b78103b9773415ddb
-ms.sourcegitcommit: 8d13d2262d02468c99c4e18207d50cd82275d233
+ms.openlocfilehash: 5e5c50a9195ceb2716e3ca5306b72654fedc46e8
+ms.sourcegitcommit: 443ecd9146fe2a7bbb9b5ab6d33c835876efcf1f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82517078"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82852477"
 ---
 # <a name="xamarinforms-shell-flyout"></a>Submenu Shell do Xamarin.Forms
 
@@ -480,7 +480,13 @@ A classe `Shell` tem uma propriedade associável denominada `CurrentItem`, do ti
 
 Esse código define o objeto `ShellContent` denominado `aboutItem` como a propriedade `CurrentItem`, o que faz com que ele seja exibido. Nesse exemplo, uma conversão implícita é usada para encapsular o objeto `ShellContent` em um objeto `Tab`, que é encapsulado em um objeto `FlyoutItem`.
 
-Este é o código C# equivalente:
+O código C# equivalente, dado um `ShellContent` objeto chamado `aboutItem`, é:
+
+```csharp
+CurrentItem = aboutItem;
+```
+
+Neste exemplo, a `CurrentItem` propriedade é definida na `Shell` classe de subclasse. Como alternativa, a `CurrentItem` propriedade pode ser definida em qualquer classe por meio `Shell.Current` da propriedade estática:
 
 ```csharp
 Shell.Current.CurrentItem = aboutItem;

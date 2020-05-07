@@ -6,13 +6,13 @@ ms.assetid: E44F5D0F-DB8E-46C7-8789-114F1652A6C5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 03/11/2020
-ms.openlocfilehash: 7a2671c47a6d2fceaf2b444cfa8988b4bb8c249c
-ms.sourcegitcommit: 8d13d2262d02468c99c4e18207d50cd82275d233
+ms.date: 05/06/2020
+ms.openlocfilehash: 31b705a51e405285cc5eaae391dd0794bfacfd9c
+ms.sourcegitcommit: 443ecd9146fe2a7bbb9b5ab6d33c835876efcf1f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82517269"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82852479"
 ---
 # <a name="xamarinforms-webview"></a>WebView Xamarin. Forms
 
@@ -114,7 +114,7 @@ No código acima, `@` é usado para marcar o HTML como um literal de cadeia de [
 
 ### <a name="local-html-content"></a>Conteúdo HTML local
 
-O WebView pode exibir conteúdo de HTML, CSS e JavaScript inseridos no aplicativo. Por exemplo:
+O WebView pode exibir conteúdo de HTML, CSS e JavaScript inseridos no aplicativo. Por exemplo: 
 
 ```html
 <html>
@@ -352,7 +352,7 @@ O [`WebNavigatedEventArgs`](xref:Xamarin.Forms.WebNavigatedEventArgs) objeto que
 - `Source`– o elemento que realizou a navegação.
 - `Url`– o destino de navegação.
 
-Se você antecipar o uso de páginas da Web que levam muito tempo para carregar, considere usar [`Navigating`](xref:Xamarin.Forms.WebView.Navigating) os [`Navigated`](xref:Xamarin.Forms.WebView.Navigated) eventos e para implementar um indicador de status. Por exemplo:
+Se você antecipar o uso de páginas da Web que levam muito tempo para carregar, considere usar [`Navigating`](xref:Xamarin.Forms.WebView.Navigating) os [`Navigated`](xref:Xamarin.Forms.WebView.Navigated) eventos e para implementar um indicador de status. Por exemplo: 
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -554,11 +554,13 @@ Uma versão de visualização do vinculador está disponível para corrigir esse
 
 Os pré-requisitos para isso funcionam são:
 
-- O **xamarin. Forms 4,5 ou** &ndash; versões de pré-lançamento posteriores do xamarin. Forms 4,5 podem ser usadas.
-- **Xamarin. Ios 13.10.0.17 ou superior** &ndash; Verifique sua versão do xamarin. Ios [no Visual Studio](~/cross-platform/troubleshooting/questions/version-logs.md#version-information). Esta versão do Xamarin. iOS está incluída no Visual Studio para Mac 8.4.1 e no Visual Studio 16.4.3.
-- A **remoção de `UIWebView` referências ao** &ndash; seu código não deve ter nenhuma `UIWebView` referência a ou nenhuma classe que faça `UIWebView`uso do.
+- **Xamarin. Forms 4,5 ou superior**. O Xamarin. Forms 4,6 ou superior será necessário se seu aplicativo usar o Visual de material.
+- **Xamarin. Ios 13.10.0.17 ou superior**. Verifique sua versão do Xamarin. iOS [no Visual Studio](~/cross-platform/troubleshooting/questions/version-logs.md#version-information). Esta versão do Xamarin. iOS está incluída no Visual Studio para Mac 8.4.1 e no Visual Studio 16.4.3.
+- **Remova as referências `UIWebView`a **. Seu código não deve ter nenhuma referência a `UIWebView` ou nenhuma classe que use `UIWebView`.
 
-### <a name="configure-the-linker-preview"></a>Configurar a visualização do vinculador
+Para obter mais informações sobre como detectar e `UIWebView` remover referências, consulte [UIWebView preterition](~/ios/user-interface/controls/webview.md#uiwebview-deprecation).
+
+### <a name="configure-the-linker"></a>Configurar o vinculador
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
@@ -575,7 +577,7 @@ Você pode ver a janela com o novo sinalizador em vigor nesta captura de tela:
 
 # <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
-Siga estas etapas para que o vinculador remova `UIWebView` as referências
+Siga estas etapas para que o vinculador remova `UIWebView` as referências:
 
 1. **Abra as opções** &ndash; de projeto do IOS clique com o botão direito do mouse no seu projeto Ios e escolha **Opções**.
 1. **Navegue até a seção** &ndash; Build do IOS e selecione a seção **Build do IOS** .
@@ -594,3 +596,4 @@ Agora, quando você cria uma nova compilação (versão) e a envia para a loja d
 
 - [Trabalhando com o WebView (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithwebview)
 - [WebView (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-webview)
+- [Reprovação de UIWebView](~/ios/user-interface/controls/webview.md#uiwebview-deprecation)

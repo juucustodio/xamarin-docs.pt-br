@@ -6,12 +6,12 @@ ms.assetid: FD8FE199-898B-4841-8041-CC9CA1A00917
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/29/2020
-ms.openlocfilehash: 3dc1a2cb99c5ef018807a8ac81139a6cace3c66f
-ms.sourcegitcommit: 8d13d2262d02468c99c4e18207d50cd82275d233
+ms.openlocfilehash: 29875b3f6c747d5dc2f45eb876a269d2bc7e85c6
+ms.sourcegitcommit: 443ecd9146fe2a7bbb9b5ab6d33c835876efcf1f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82516495"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82852462"
 ---
 # <a name="connect-to-local-web-services-from-ios-simulators-and-android-emulators"></a>Conectar-se a serviços da Web locais de simuladores do iOS e de emuladores do Android
 
@@ -113,7 +113,16 @@ public HttpClientHandler GetInsecureHandler()
 }
 ```
 
-Nesse exemplo de código, o resultado de validação de certificado do servidor é retornado quando o certificado que passar por validação não for o certificado `localhost`. Para esse certificado, o resultado da validação é ignorado e `true` é retornado, indicando que o certificado é válido. O objeto `HttpClientHandler` resultante deve ser passado como um argumento para o `HttpClient` Construtor.
+Nesse exemplo de código, o resultado de validação de certificado do servidor é retornado quando o certificado que passar por validação não for o certificado `localhost`. Para esse certificado, o resultado da validação é ignorado e `true` é retornado, indicando que o certificado é válido. O objeto `HttpClientHandler` resultante deve ser passado como um argumento para o `HttpClient` Construtor para compilações de depuração:
+
+```csharp
+#if DEBUG
+    HttpClientHandler insecureHandler = GetInsecureHandler();
+    HttpClient client = new HttpClient(insecureHandler);
+#else
+    HttpClient client = new HttpClient();
+#endif
+```
 
 ## <a name="related-links"></a>Links relacionados
 
