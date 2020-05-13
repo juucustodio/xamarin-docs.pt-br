@@ -3,14 +3,15 @@ title: 'Xamarin.Essentials: Text-to-Speech'
 description: A classe TextToSpeech no Xamarin.Essentials permite que um aplicativo utilize os mecanismos internos de conversão de texto em fala para repetir o texto do dispositivo e, também, consulte os idiomas disponíveis, compatíveis com o mecanismo.
 ms.assetid: AEEF03AE-A047-4DF0-B0E8-CC8D9A7B8351
 author: jamesmontemagno
+ms.custom: video
 ms.author: jamont
 ms.date: 11/04/2018
-ms.openlocfilehash: 6d89f70a8b7f6229297f86deb3cb83cf940fa7df
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: abe591d67ea749de4ae9a2f8dadf4df07712691a
+ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "66469466"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83149722"
 ---
 # <a name="xamarinessentials-text-to-speech"></a>Xamarin.Essentials: Text-to-Speech
 
@@ -150,3 +151,9 @@ public async Task SpeakNow()
 
 - [Código-fonte TextToSpeech](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/TextToSpeech)
 - [Documentação da API do TextToSpeech](xref:Xamarin.Essentials.TextToSpeech)
+
+## <a name="related-video"></a>Vídeo relacionados
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Text-to-Speech-XamarinEssentials-API-of-the-Week/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]

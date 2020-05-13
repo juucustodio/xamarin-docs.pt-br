@@ -3,14 +3,15 @@ title: Xamarin.Essentials Launcher
 description: A classe Launcher no Xamarin.Essentials permite que um aplicativo abra um URI pelo sistema.
 ms.assetid: BABF40CC-8BEE-43FD-BE12-6301DF27DD33
 author: jamesmontemagno
+ms.custom: video
 ms.author: jamont
 ms.date: 08/20/2019
-ms.openlocfilehash: 88c1450d28b4c94fe8079b8915503cf5de118644
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: f84d3bf379562c8ddd96a32dfb9f15b03b0a6827
+ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "75488511"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83149783"
 ---
 # <a name="xamarinessentials-launcher"></a>Xamarin.Essentials: Launcher
 
@@ -54,15 +55,15 @@ public class LauncherTest
 }
 ```
 
-### <a name="additional-platform-setup"></a>Configuração adicional da plataforma
+### <a name="additional-platform-setup"></a>Configuração de plataforma adicional
 
 # <a name="android"></a>[Android](#tab/android)
 
-Sem configuração adicional.
+Nenhuma configuração adicional.
 
 # <a name="ios"></a>[iOS](#tab/ios)
 
-No iOS 9 e maior, a Apple impõe quais esquemas um aplicativo pode consultar. Para especificar quais esquemas você gostaria `LSApplicationQueriesSchemes` de `Info.plist` usar, você deve especificar em seu arquivo.
+No iOS 9 e superior, a Apple impõe o esquema que um aplicativo pode consultar. Para especificar quais esquemas você gostaria de usar, você deve especificar `LSApplicationQueriesSchemes` em seu `Info.plist` arquivo.
 
 ```
 <key>LSApplicationQueriesSchemes</key>
@@ -74,7 +75,7 @@ No iOS 9 e maior, a Apple impõe quais esquemas um aplicativo pode consultar. Pa
 
 # <a name="uwp"></a>[UWP](#tab/uwp)
 
-Sem configuração adicional.
+Nenhuma configuração adicional.
 
 -----
 
@@ -82,7 +83,7 @@ Sem configuração adicional.
 
 Esse recurso permite que um aplicativo solicite que outros aplicativos abram e exibam um arquivo. O Xamarin.Essentials detectará automaticamente o tipo de arquivo (MIME) e solicitará que o arquivo seja aberto.
 
-Aqui está uma amostra de escrever texto em disco e solicitando que ele seja aberto:
+Aqui está um exemplo de gravação de texto em disco e solicitação de abertura:
 
 ```csharp
 var fn = "File.txt";
@@ -119,3 +120,9 @@ Sem diferenças entre plataformas.
 
 - [Código-fonte do Inicializador](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Launcher)
 - [Documentação da API do Inicializador](xref:Xamarin.Essentials.Launcher)
+
+## <a name="related-video"></a>Vídeo relacionados
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Launcher-XamarinEssentials-API-of-the-Week/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]

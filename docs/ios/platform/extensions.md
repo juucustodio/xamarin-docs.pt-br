@@ -7,13 +7,13 @@ ms.technology: xamarin-ios
 ms.custom: xamu-video
 author: davidortinau
 ms.author: daortin
-ms.date: 03/22/2017
-ms.openlocfilehash: 0cf44a05f8b40a07dcc099d5789171f4a234a0c2
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.date: 05/12/2020
+ms.openlocfilehash: 6f2f1a908a43d81b2aabf5cb2db2f7a230356fa4
+ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73032579"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83149925"
 ---
 # <a name="ios-extensions-in-xamarinios"></a>extensões do iOS no Xamarin. iOS
 
@@ -21,26 +21,26 @@ ms.locfileid: "73032579"
 
 **Criando extensões no vídeo do iOS**
 
-As extensões, como introduzidas no iOS 8, são `UIViewControllers` especializadas que são apresentadas por iOS dentro de contextos padrão, como no **centro de notificações**, como tipos de teclado personalizados solicitados pelo usuário para executar entradas especializadas ou outros contextos como editar uma foto em que a extensão pode fornecer filtros de efeito especiais.
+As extensões, como introduzidas no iOS 8, são especializadas `UIViewControllers` que são apresentadas por Ios dentro de contextos padrão, como no **centro de notificações**, como tipos de teclado personalizados solicitados pelo usuário para executar entradas especializadas ou outros contextos como editar uma foto onde a extensão pode fornecer filtros de efeito especiais.
 
 Todas as extensões são instaladas em conjunto com um aplicativo de contêiner (com os dois elementos escritos usando as APIs unificadas de 64 bits) e são ativadas de um ponto de extensão específico em um aplicativo host. E, como eles serão usados como suplementos para funções de sistema existentes, eles devem ser de alto desempenho, de Lean e robustos. 
 
 ## <a name="extension-points"></a>Pontos de extensão
 
-|Digite|Descrição|Ponto de extensão|Aplicativo host|
+|Type|Descrição|Ponto de extensão|Aplicativo host|
 |--- |--- |--- |--- |
 |Ação|Editor ou Visualizador especializado para um tipo de mídia específico|`com.apple.ui-services`|Qualquer|
 |Provedor de documentos|Permite que o aplicativo use um repositório de documentos remoto|`com.apple.fileprovider-ui`|Aplicativos usando um [UIDocumentPickerViewController](xref:UIKit.UIDocumentPickerViewController)|
-|Teclado|Teclados alternativos|`com.apple.keyboard-service`|Qualquer|
+|Keyboard|Teclados alternativos|`com.apple.keyboard-service`|Qualquer|
 |Edição de fotos|Manipulação e edição de fotos|`com.apple.photo-editing`|Editor de photos. app|
 |Compartilhar|Compartilha dados com redes sociais, serviços de mensagens, etc.|`com.apple.share-services`|Qualquer|
 |Hoje|"Widgets" que aparecem na tela atual ou no centro de notificações|`com.apple.widget-extensions`|Hoje e centro de notificações|
 
-[Pontos de extensão adicionais](~/ios/platform/introduction-to-ios10/index.md#app-extensions) foram adicionados no Ios 10.
+Pontos de extensão adicionais foram adicionados no [Ios 10](~/ios/platform/introduction-to-ios10/index.md#app-extensions) e no [IOS 12](~/ios/platform/introduction-to-ios12/index.md#notification-improvements). Você pode encontrar a tabela completa de todos os tipos com suporte no [Guia de programação de extensão de aplicativo do IOS](https://developer.apple.com/library/archive/documentation/General/Conceptual/ExtensibilityPG/index.html#//apple_ref/doc/uid/TP40014214-CH20-SW2).
 
 ## <a name="limitations"></a>Limitações
 
-As extensões têm várias limitações, algumas das quais são universais para todos os tipos (por exemplo, nenhum tipo de extensão pode acessar câmeras ou microfones), enquanto outros tipos de extensão podem ter limitações específicas sobre seu uso (por exemplo, teclados personalizados Não pode ser usado para proteger campos de entrada de dados, como para senhas). 
+As extensões têm várias limitações, algumas das quais são universais para todos os tipos (por exemplo, nenhum tipo de extensão pode acessar câmeras ou microfones), enquanto outros tipos de extensão podem ter limitações específicas sobre seu uso (por exemplo, teclados personalizados não podem ser usados para proteger campos de entrada de dados, como para senhas). 
 
 As limitações universais são:
 
@@ -49,9 +49,9 @@ As limitações universais são:
 - As extensões não podem acessar câmeras ou microfones do dispositivo (embora possam acessar os arquivos de mídia existentes)
 - As extensões não podem receber dados de descarte de ar (embora possam transmitir dados por meio do ar)
 - [UIActionSheet](xref:UIKit.UIActionSheet) e [UIAlertView](xref:UIKit.UIAlertView) não estão disponíveis; as extensões devem usar [UIAlertController](xref:UIKit.UIAlertController)
-- Vários membros de [UIApplication](xref:UIKit.UIApplication) não estão disponíveis: [UIApplication. SharedApplication](xref:UIKit.UIApplication.SharedApplication), [UIApplication. OpenURL](xref:UIKit.UIApplication.OpenUrl(Foundation.NSUrl)), [UIApplication. BeginIgnoringInteractionEvents](xref:UIKit.UIApplication.BeginIgnoringInteractionEvents) e [ UIApplication. EndIgnoringInteractionEvents](xref:UIKit.UIApplication.EndIgnoringInteractionEvents)
+- Vários membros de [UIApplication](xref:UIKit.UIApplication) não estão disponíveis: [UIApplication. SharedApplication](xref:UIKit.UIApplication.SharedApplication), [UIApplication. OpenURL](xref:UIKit.UIApplication.OpenUrl(Foundation.NSUrl)), [UIApplication. BeginIgnoringInteractionEvents](xref:UIKit.UIApplication.BeginIgnoringInteractionEvents) e [UIApplication. EndIgnoringInteractionEvents](xref:UIKit.UIApplication.EndIgnoringInteractionEvents)
 - o iOS impõe um limite de uso de memória de 16 MB nas extensões de hoje.
-- Por padrão, as extensões de teclado não têm acesso à rede. Isso afeta a depuração no dispositivo (a restrição não é imposta no simulador), pois o Xamarin. iOS requer acesso à rede para que a depuração funcione. É possível solicitar o acesso à rede definindo o valor `Requests Open Access` no info. plist do projeto para `Yes`. Consulte o guia de [teclado personalizado](https://developer.apple.com/library/content/documentation/General/Conceptual/ExtensibilityPG/CustomKeyboard.html) da Apple para obter mais informações sobre as limitações de extensão do teclado.
+- Por padrão, as extensões de teclado não têm acesso à rede. Isso afeta a depuração no dispositivo (a restrição não é imposta no simulador), pois o Xamarin. iOS requer acesso à rede para que a depuração funcione. É possível solicitar o acesso à rede definindo o `Requests Open Access` valor no info. plist do projeto como `Yes` . Consulte o guia de [teclado personalizado](https://developer.apple.com/library/content/documentation/General/Conceptual/ExtensibilityPG/CustomKeyboard.html) da Apple para obter mais informações sobre as limitações de extensão do teclado.
 
 Para limitações individuais, consulte o guia de [programação de extensões de aplicativo](https://developer.apple.com/library/ios/documentation/General/Conceptual/ExtensibilityPG/)da Apple.
 
@@ -63,11 +63,21 @@ O aplicativo no qual a extensão é usada (onde o usuário encontra o ponto de e
 
 Normalmente, o aplicativo de contêiner descreve a extensão e orienta o usuário pelo processo de habilitá-lo.
 
+## <a name="debug-and-release-versions-of-extensions"></a>Depurar e liberar versões de extensões
+
+Os limites de memória para executar extensões de aplicativo são significativamente menores do que os limites de memória aplicados a um aplicativo em primeiro plano. Os simuladores que executam o iOS têm menos restrições aplicadas às extensões e você pode executar a extensão sem problemas. No entanto, a execução da mesma extensão em um dispositivo pode levar a resultados inesperados, incluindo a falha da extensão ou que está sendo encerrada agressivamente pelo sistema. Portanto, certifique-se de criar e testar a extensão em um dispositivo antes de entregá-la. 
+
+Você deve garantir que as seguintes configurações sejam aplicadas ao projeto de contêiner e a todas as extensões referenciadas:
+
+1. Crie um pacote de aplicativos na configuração de **versão** .
+1. Nas configurações do projeto de **Build do IOS** , defina a opção de **comportamento do vinculador** **somente para vincular SDKs do Framework** ou **vincular tudo**.
+1. Nas configurações do projeto de **depuração do IOS** , desmarque a opção **Habilitar depuração** e **Habilitar criação de perfil** .
+
 ## <a name="extension-lifecycle"></a>Ciclo de vida da extensão
 
 Uma extensão pode ser tão simples quanto uma única [UIViewController](xref:UIKit.UIViewController) ou extensões mais complexas que apresentam várias telas de interface do usuário. Quando o usuário encontra um _ponto de extensão_ (como ao compartilhar uma imagem), ele terá a oportunidade de escolher entre as extensões registradas para esse ponto de extensão. 
 
-Se eles escolherem uma das extensões do aplicativo, sua `UIViewController` será instanciada e iniciará o ciclo de vida do controlador de exibição normal. No entanto, ao contrário de um aplicativo normal, que são suspensos, mas que não são geralmente encerrados quando o usuário termina de interagir com eles, as extensões são carregadas, executadas e encerradas repetidamente.
+Se eles escolherem uma das extensões do seu aplicativo, ele `UIViewController` será instanciado e iniciará o ciclo de vida do controlador de exibição normal. No entanto, ao contrário de um aplicativo normal, que são suspensos, mas que não são geralmente encerrados quando o usuário termina de interagir com eles, as extensões são carregadas, executadas e encerradas repetidamente.
 
 As extensões podem se comunicar com seus aplicativos host por meio de um objeto [NSExtensionContext](xref:Foundation.NSExtensionContext) . Algumas extensões têm operações que recebem retornos de chamada assíncronos com os resultados. Esses retornos de chamada serão executados em threads em segundo plano e a extensão deverá levar isso em consideração; por exemplo, usando [NSObject. InvokeOnMainThread](xref:Foundation.NSObject.InvokeOnMainThread*) se desejar atualizar a interface do usuário. Consulte a seção [comunicando-se com o aplicativo host](#communicating-with-the-host-app) abaixo para obter mais detalhes.
 
@@ -89,13 +99,13 @@ O aplicativo de contêiner usado para instalar a extensão tem os seguintes requ
 
 Além disso, o projeto da extensão tem os seguintes requisitos:
 
-- Ele deve ter um identificador de pacote que começa com o identificador de pacote do seu aplicativo de contêiner. Por exemplo, se o aplicativo de contêiner tiver um identificador de pacote de `com.myCompany.ContainerApp`, o identificador da extensão poderá ser `com.myCompany.ContainerApp.MyExtension`: 
+- Ele deve ter um identificador de pacote que começa com o identificador de pacote do seu aplicativo de contêiner. Por exemplo, se o aplicativo de contêiner tiver um identificador de pacote de `com.myCompany.ContainerApp` , o identificador da extensão poderá ser `com.myCompany.ContainerApp.MyExtension` : 
 
   ![](extensions-images/bundleidentifiers.png) 
-- Ele deve definir a `NSExtensionPointIdentifier` de chave, com um valor apropriado (como `com.apple.widget-extension` para um widget da central de notificações **atual** ), em seu arquivo de `Info.plist`.
-- Ele também deve definir a chave de `NSExtensionMainStoryboard` *ou a chave* de `NSExtensionPrincipalClass` em seu arquivo de `Info.plist` com um valor apropriado:
-  - Use a chave `NSExtensionMainStoryboard` para especificar o nome do Storyboard que apresenta a interface do usuário principal para a extensão (menos `.storyboard`). Por exemplo, `Main` para o arquivo de `Main.storyboard`.
-  - Use a chave `NSExtensionPrincipalClass` para especificar a classe que será inicializada quando a extensão for iniciada. O valor deve corresponder ao valor de **registro** de seu `UIViewController`: 
+- Ele deve definir a chave `NSExtensionPointIdentifier` , com um valor apropriado (por exemplo, `com.apple.widget-extension` para um widget da central de notificações **atual** ), em seu `Info.plist` arquivo.
+- Ele também *deve definir a* `NSExtensionMainStoryboard` chave ou a `NSExtensionPrincipalClass` chave em seu `Info.plist` arquivo com um valor apropriado:
+  - Use a `NSExtensionMainStoryboard` chave para especificar o nome do Storyboard que apresenta a interface do usuário principal para a extensão (menos `.storyboard` ). Por exemplo, `Main` para o `Main.storyboard` arquivo.
+  - Use a `NSExtensionPrincipalClass` chave para especificar a classe que será inicializada quando a extensão for iniciada. O valor deve corresponder ao valor de **registro** de seu `UIViewController` : 
 
   ![](extensions-images/registerandprincipalclass.png)
 
@@ -145,7 +155,7 @@ Em seguida, você precisará criar a interface para o widget **atual** . Isso po
 
 Para criar a interface do usuário com um storyboard, faça o seguinte:
 
-1. No **Gerenciador de soluções**, clique duas vezes no arquivo de `Main.storyboard` do projeto de extensão para abri-lo para edição: 
+1. No **Gerenciador de soluções**, clique duas vezes no arquivo do projeto de extensão `Main.storyboard` para abri-lo para edição: 
 
     [![](extensions-images/today08.png "Double-click the Extension projects Main.storyboard file to open it for editing")](extensions-images/today08.png#lightbox)
 2. Selecione o rótulo que foi adicionado automaticamente à interface do usuário por modelo e dê a ele o **nome** `TodayMessage` na guia **widget** do **Gerenciador de propriedades**: 
@@ -157,21 +167,21 @@ Para criar a interface do usuário com um storyboard, faça o seguinte:
 
 Para criar a interface do usuário no código, faça o seguinte: 
 
-1. No **Gerenciador de soluções**, selecione o projeto **DaysRemaining** , adicione uma nova classe e chame-a `CodeBasedViewController`: 
+1. No **Gerenciador de soluções**, selecione o projeto **DaysRemaining** , adicione uma nova classe e chame-o `CodeBasedViewController` : 
 
     [![](extensions-images/code01.png "Aelect the DaysRemaining project, add a new class and call it CodeBasedViewController")](extensions-images/code01.png#lightbox)
-2. Novamente, no **Gerenciador de soluções**, clique duas vezes no arquivo de `Info.plist` da extensão para abri-lo para edição: 
+2. Novamente, no **Gerenciador de soluções**, clique duas vezes no arquivo da extensão `Info.plist` para abri-lo para edição: 
 
     [![](extensions-images/code02.png "Double-click Extensions Info.plist file to open it for editing")](extensions-images/code02.png#lightbox)
-3. Selecione a **exibição de origem** (na parte inferior da tela) e abra o nó `NSExtension`: 
+3. Selecione o **modo de exibição de origem** (na parte inferior da tela) e abra o `NSExtension` nó: 
 
     [![](extensions-images/code03.png "Select the Source View from the bottom of the screen and open the NSExtension node")](extensions-images/code03.png#lightbox)
-4. Remova a chave de `NSExtensionMainStoryboard` e adicione uma `NSExtensionPrincipalClass` com o valor `CodeBasedViewController`: 
+4. Remova a `NSExtensionMainStoryboard` chave e adicione uma `NSExtensionPrincipalClass` com o valor `CodeBasedViewController` : 
 
     [![](extensions-images/code04.png "Remove the NSExtensionMainStoryboard key and add a NSExtensionPrincipalClass with the value CodeBasedViewController")](extensions-images/code04.png#lightbox)
-5. Salve as alterações.
+5. Salve suas alterações.
 
-Em seguida, edite o arquivo de `CodeBasedViewController.cs` e faça com que ele se pareça com o seguinte:
+Em seguida, edite o `CodeBasedViewController.cs` arquivo e faça com que ele se pareça com o seguinte:
 
 ```csharp
 using System;
@@ -207,11 +217,11 @@ namespace DaysRemaining
 }
 ```
 
-Observe que a `[Register("CodeBasedViewController")]` corresponde ao valor que você especificou para o `NSExtensionPrincipalClass` acima.
+Observe que o `[Register("CodeBasedViewController")]` corresponde ao valor que você especificou para o `NSExtensionPrincipalClass` acima.
 
 ### <a name="coding-the-extension"></a>Codificando a extensão
 
-Com a interface do usuário criada, abra o `TodayViewController.cs` ou o arquivo de `CodeBasedViewController.cs` (com base no método usado para criar a interface do usuário acima), altere o método **ViewDidLoad** e faça com que ele fique semelhante ao seguinte:
+Com a interface do usuário criada, abra o `TodayViewController.cs` ou o `CodeBasedViewController.cs` arquivo (com base no método usado para criar a interface do usuário acima), altere o método **ViewDidLoad** e faça com que ele se pareça com o seguinte:
 
 ```csharp
 public override void ViewDidLoad ()
@@ -232,13 +242,13 @@ public override void ViewDidLoad ()
 }
 ```
 
-Se estiver usando o método de interface do usuário baseado em código, substitua o comentário de `// Insert code to power extension here...` pelo novo código acima. Depois de chamar a implementação base (e inserir um rótulo para a versão baseada em código), esse código faz um cálculo simples para obter o dia do ano e quantos dias restam. Em seguida, ele exibe a mensagem no rótulo (`TodayMessage`) que você criou no design da interface do usuário.
+Se estiver usando o método de interface do usuário baseado em código, substitua o `// Insert code to power extension here...` Comentário pelo novo código acima. Depois de chamar a implementação base (e inserir um rótulo para a versão baseada em código), esse código faz um cálculo simples para obter o dia do ano e quantos dias restam. Em seguida, ele exibe a mensagem no rótulo ( `TodayMessage` ) que você criou no design da interface do usuário.
 
-Observe como esse processo é semelhante ao processo normal de escrever um aplicativo. A `UIViewController` de uma extensão tem o mesmo ciclo de vida de um controlador de exibição em um aplicativo, exceto que as extensões não têm modos de segundo plano e não são suspensas quando o usuário termina de usá-las. Em vez disso, as extensões são inicializadas e desalocadas repetidamente conforme necessário.
+Observe como esse processo é semelhante ao processo normal de escrever um aplicativo. Uma extensão `UIViewController` tem o mesmo ciclo de vida de um controlador de exibição em um aplicativo, exceto que as extensões não têm modos de segundo plano e não são suspensas quando o usuário termina de usá-las. Em vez disso, as extensões são inicializadas e desalocadas repetidamente conforme necessário.
 
 ### <a name="creating-the-container-app-user-interface"></a>Criando a interface do usuário do aplicativo de contêiner
 
-Para este passo a passos, o aplicativo de contêiner é simplesmente usado como um método para enviar e instalar a extensão e não fornece nenhuma funcionalidade própria. Edite o arquivo de `Main.storyboard` do TodayContainer e adicione algum texto definindo a função da extensão e como instalá-lo:
+Para este passo a passos, o aplicativo de contêiner é simplesmente usado como um método para enviar e instalar a extensão e não fornece nenhuma funcionalidade própria. Edite o arquivo do TodayContainer `Main.storyboard` e adicione algum texto definindo a função da extensão e como instalá-lo:
 
 [![](extensions-images/today10.png "Edit the TodayContainers Main.storyboard file and add some text defining the Extensions function and how to install it")](extensions-images/today10.png#lightbox)
 
@@ -264,11 +274,11 @@ O novo widget será adicionado à exibição **atual** e os resultados serão ex
 
 ## <a name="communicating-with-the-host-app"></a>Comunicando-se com o aplicativo host
 
-A extensão de exemplo hoje que você criou acima não se comunica com seu aplicativo host (a tela **hoje** ). Se tiver feito isso, ele usaria a propriedade [ExtensionContext](xref:Foundation.NSExtensionContext) do `TodayViewController` ou `CodeBasedViewController` classes. 
+A extensão de exemplo hoje que você criou acima não se comunica com seu aplicativo host (a tela **hoje** ). Se tiver feito isso, ele usaria a propriedade [ExtensionContext](xref:Foundation.NSExtensionContext) das `TodayViewController` classes ou `CodeBasedViewController` . 
 
-Para extensões que receberão dados de seus aplicativos host, os dados estarão na forma de uma matriz de objetos [NSExtensionItem](xref:Foundation.NSExtensionItem) armazenados na propriedade [InputItems](xref:Foundation.NSExtensionContext.InputItems) do [ExtensionContext](xref:Foundation.NSExtensionContext) do `UIViewController` da extensão.
+Para extensões que receberão dados de seus aplicativos host, os dados estarão na forma de uma matriz de objetos [NSExtensionItem](xref:Foundation.NSExtensionItem) armazenados na propriedade [InputItems](xref:Foundation.NSExtensionContext.InputItems) do [ExtensionContext](xref:Foundation.NSExtensionContext) da extensão `UIViewController` .
 
-Outra extensão, como as extensões de edição de fotos, pode distinguir entre o usuário concluindo ou cancelando o uso. Isso será sinalizado de volta para o aplicativo host por meio dos métodos [CompleteRequest](xref:Foundation.NSExtensionContext.CompleteRequest*) e [CancelRequest](xref:Foundation.NSExtensionContext.CancelRequest*) da propriedade [ExtensionContext](xref:Foundation.NSExtensionContext) .
+Outras extensões, como extensões de edição de fotos, podem distinguir entre o usuário concluindo ou cancelando o uso. Isso será sinalizado de volta para o aplicativo host por meio dos métodos [CompleteRequest](xref:Foundation.NSExtensionContext.CompleteRequest*) e [CancelRequest](xref:Foundation.NSExtensionContext.CancelRequest*) da propriedade [ExtensionContext](xref:Foundation.NSExtensionContext) .
 
 Para obter mais informações, consulte o [Guia de programação de extensões de aplicativo](https://developer.apple.com/library/ios/documentation/General/Conceptual/ExtensibilityPG/index.html#//apple_ref/doc/uid/TP40014214-CH20-SW1)da Apple.
 
@@ -276,7 +286,7 @@ Para obter mais informações, consulte o [Guia de programação de extensões d
 
 Um grupo de aplicativos permite que diferentes aplicativos (ou um aplicativo e suas extensões) acessem um local de armazenamento de arquivo compartilhado. Grupos de aplicativo podem ser usados para dados como:
 
-- [Configurações do Apple Watch](~/ios/watchos/app-fundamentals/settings.md).
+- [Configurações de Apple Watch](~/ios/watchos/app-fundamentals/settings.md).
 - [NSUserDefaults compartilhados](~/ios/app-fundamentals/user-defaults.md).
 - [Arquivos compartilhados](~/ios/watchos/app-fundamentals/parent-app.md#files).
 
@@ -286,7 +296,7 @@ Para obter mais informações, consulte a seção [grupos de aplicativos](~/ios/
 
 Ao trabalhar com extensões, use um identificador de tipo uniforme (UTI) para criar e manipular dados trocados entre o aplicativo, outros aplicativos e/ou serviços.
 
-A classe estática `MobileCoreServices.UTType` define as seguintes propriedades auxiliares relacionadas às definições de `kUTType...` da Apple:
+A `MobileCoreServices.UTType` classe estática define as seguintes propriedades auxiliares relacionadas às definições da Apple `kUTType...` :
 
 - `kUTTypeAlembic` - `Alembic`
 - `kUTTypeAliasFile` - `AliasFile`
@@ -432,7 +442,7 @@ A classe estática `MobileCoreServices.UTType` define as seguintes propriedades 
 - `kUTTypeXPCService` - `XPCService`
 - `kUTTypeZipArchive` - `ZipArchive`
 
-Consulte o exemplo a seguir:
+Consulte o seguinte exemplo:
 
 ```csharp
 using MobileCoreServices;
@@ -464,3 +474,4 @@ Este documento abordou as extensões, o que são, o tipo de pontos de extensão 
 
 - [ContainerApp (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/intro-to-extensions)
 - [Criando extensões no Xamarin. iOS (vídeo)](https://university.xamarin.com/lightninglectures/creating-extensions-in-ios)
+- [Otimizar a eficiência e o desempenho de uma extensão de aplicativo iOS](https://developer.apple.com/library/archive/documentation/General/Conceptual/ExtensibilityPG/ExtensionCreation.html#//apple_ref/doc/uid/TP40014214-CH5-SW7)

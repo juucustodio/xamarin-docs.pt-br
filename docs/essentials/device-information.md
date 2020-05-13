@@ -3,14 +3,15 @@ title: 'Xamarin.Essentials: Informações do dispositivo'
 description: Este documento descreve a classe DeviceInfo no Xamarin.Essentials, que fornece informações sobre o dispositivo no qual o aplicativo está em execução.
 ms.assetid: A1AC5373-926A-4FB6-8D7D-4B87EB8EB522
 author: jamesmontemagno
+ms.custom: video
 ms.author: jamont
 ms.date: 11/04/2018
-ms.openlocfilehash: 1cab4ea8ea3f98def4830e101783db1554efa69c
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 1790e950dfccddcca84adf97bcff64f905ee59f6
+ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "78295411"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83150084"
 ---
 # <a name="xamarinessentials-device-information"></a>Xamarin.Essentials: Informações do dispositivo
 
@@ -55,7 +56,7 @@ var deviceType = DeviceInfo.DeviceType;
 
 ## <a name="platforms"></a>Plataformas
 
-[`DeviceInfo.Platform`](xref:Xamarin.Essentials.DeviceInfo.Platform)correlaciona-se com uma seqüência constante que mapeia o sistema operacional. Os valores podem ser verificados com a classe `DevicePlatform`:
+[`DeviceInfo.Platform`](xref:Xamarin.Essentials.DeviceInfo.Platform)correlaciona com uma cadeia de caracteres constante que mapeia para o sistema operacional. Os valores podem ser verificados com a classe `DevicePlatform`:
 
 - **DevicePlatform.iOS** – iOS
 - **DevicePlatform.Android** – Android
@@ -64,7 +65,7 @@ var deviceType = DeviceInfo.DeviceType;
 
 ## <a name="idioms"></a>Linguagens
 
-[`DeviceInfo.Idiom`](xref:Xamarin.Essentials.DeviceInfo.Idiom)correlaciona uma seqüência constante que mapeia o tipo de dispositivo em que o aplicativo está sendo executado. Os valores podem ser verificados com a classe `DeviceIdiom`:
+[`DeviceInfo.Idiom`](xref:Xamarin.Essentials.DeviceInfo.Idiom)correlaciona uma cadeia de caracteres constante que mapeia para o tipo de dispositivo no qual o aplicativo está sendo executado. Os valores podem ser verificados com a classe `DeviceIdiom`:
 
 - **DeviceIdiom.Phone** – Telefone
 - **DeviceIdiom.Tablet** – Tablet
@@ -81,7 +82,7 @@ var deviceType = DeviceInfo.DeviceType;
 
 # <a name="ios"></a>[iOS](#tab/ios)
 
-O iOS não expõe uma API para desenvolvedores obterem o modelo do dispositivo iOS específico. Em vez disso, um identificador de hardware é devolvido, como o _iPhone10,6,_ que se refere ao iPhone X. Um mapeamento desses identificadores não é fornecido pela Apple, mas pode ser encontrado nestas (fontes não oficiais) [O iPhone Wiki](https://www.theiphonewiki.com/wiki/Models) e [Get iOS Model](https://github.com/dannycabrera/Get-iOS-Model).
+o iOS não expõe uma API para que os desenvolvedores obtenham o modelo do dispositivo iOS específico. Em vez disso, um identificador de hardware é retornado como _iPhone10, 6,_ que se refere ao iPhone X. Um mapeamento desses identificadores não é fornecido pela Apple, mas pode ser encontrado nessas (fontes não oficiais) [o wiki do iPhone](https://www.theiphonewiki.com/wiki/Models) e [obter o modelo do IOS](https://github.com/dannycabrera/Get-iOS-Model).
 
 --------------
 
@@ -89,3 +90,9 @@ O iOS não expõe uma API para desenvolvedores obterem o modelo do dispositivo i
 
 - [Código-fonte de DeviceInfo](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/DeviceInfo)
 - [Documentação da API de DeviceInfo](xref:Xamarin.Essentials.DeviceInfo)
+
+## <a name="related-video"></a>Vídeo relacionados
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Device-Information-XamarinEssentials-API-of-the-Week/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]

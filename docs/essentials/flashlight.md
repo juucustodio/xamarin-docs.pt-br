@@ -3,14 +3,15 @@ title: 'Xamarin.Essentials: Lanterna'
 description: Este documento descreve a classe Flashlight no Xamarin.Essentials, que tem a capacidade de ativar ou desativar o flash da câmera do dispositivo para transformá-lo em uma lanterna.
 ms.assetid: 06A03553-D212-43A2-9E6E-C2D2D93EB136
 author: jamesmontemagno
+ms.custom: video
 ms.author: jamont
 ms.date: 11/04/2018
-ms.openlocfilehash: b94ba73b334ac68b256ca840956f987a4ef670ce
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 1a8601860afaf033c9bdb62c187fe228d2e83435
+ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "61075552"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83149950"
 ---
 # <a name="xamarinessentials-flashlight"></a>Xamarin.Essentials: Lanterna
 
@@ -35,7 +36,7 @@ Abra o arquivo **AssemblyInfo.cs** na pasta **Propriedades** e adicione:
 
 OU Atualize o Manifesto do Android:
 
-Abra o arquivo **AndroidManifest.xml** na pasta **Propriedades** e adicione o seguinte dentro do **nó manifesto.**
+Abra o arquivo **AndroidManifest. xml** na pasta **Propriedades** e adicione o seguinte dentro do nó do **manifesto** .
 
 ```xml
 <uses-permission android:name="android.permission.FLASHLIGHT" />
@@ -50,6 +51,8 @@ Ao adicionar essas permissões, o [Google Play filtrará automaticamente os disp
 [assembly: UsesFeature("android.hardware.camera", Required = false)]
 [assembly: UsesFeature("android.hardware.camera.autofocus", Required = false)]
 ```
+
+[!include[](~/essentials/includes/android-permissions.md)]
 
 # <a name="ios"></a>[iOS](#tab/ios)
 
@@ -122,3 +125,9 @@ Uma textura de superfície da câmera é criada para ativar ou desativar o `Flas
 
 - [Código-fonte de Lanterna](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Flashlight)
 - [Documentação da API de Lanterna](xref:Xamarin.Essentials.Flashlight)
+
+## <a name="related-video"></a>Vídeo relacionados
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Flashlight-XamarinEssentials-API-of-the-Week/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]

@@ -3,14 +3,15 @@ title: 'Xamarin.Essentials: Informações da tela do dispositivo'
 description: Este documento descreve a classe DeviceDisplay no Xamarin.Essentials, que fornece métricas da tela do dispositivo no qual o aplicativo está em execução.
 ms.assetid: 2821C908-C613-490D-8E8C-1BD3269FCEEA
 author: jamesmontemagno
+ms.custom: video
 ms.author: jamont
 ms.date: 11/04/2018
-ms.openlocfilehash: 77af173bc3297ac9ccdef22dccbeab054895f772
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 1d72458fa32db58d0c5da278dbb424aa2b1714d1
+ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "70756899"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83150117"
 ---
 # <a name="xamarinessentials-device-display-information"></a>Xamarin.Essentials: Informações da tela do dispositivo
 
@@ -91,7 +92,7 @@ Sem diferenças.
 
 # <a name="ios"></a>[iOS](#tab/ios)
 
-- O acesso a `DeviceDisplay` deve ser no thread da interface do usuário, caso contrário uma exceção será lançada. Você pode [`MainThread.BeginInvokeOnMainThread`](~/essentials/main-thread.md) usar o método para executar esse código no segmento de ida e rei.
+- O acesso a `DeviceDisplay` deve ser no thread da interface do usuário, caso contrário uma exceção será lançada. Você pode usar o [`MainThread.BeginInvokeOnMainThread`](~/essentials/main-thread.md) método para executar esse código no thread da interface do usuário.
 
 # <a name="uwp"></a>[UWP](#tab/uwp)
 
@@ -103,3 +104,9 @@ Sem diferenças.
 
 - [Código-fonte de DeviceDisplay](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/DeviceDisplay)
 - [Documentação da API de DeviceDisplay](xref:Xamarin.Essentials.DeviceDisplay)
+
+## <a name="related-video"></a>Vídeo relacionados
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Device-Display-Information-XamarinEssentials-API-of-the-Week/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]

@@ -3,14 +3,15 @@ title: 'Xamarin. Essentials: tema do aplicativo'
 description: Este documento descreve a API de tema do aplicativo solicitada no Xamarin. Essentials, que fornece informações sobre qual estilo de tema é solicitado para o aplicativo em execução.
 ms.assetid: F6F6D496-A8A9-4B9A-AF1A-370D937E5073
 author: jamesmontemagno
+ms.custom: video
 ms.author: jamont
 ms.date: 01/06/2020
-ms.openlocfilehash: e27f43ae17fcdaf7bb40b75907a7595c5c20988b
-ms.sourcegitcommit: 9c517f2c5af21aab0775f91286f42e919ff52292
+ms.openlocfilehash: 84c246eb60f4ee561bbf2bcfee6eb587ce601a4a
+ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82619869"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83150146"
 ---
 # <a name="xamarinessentials-app-theme"></a>Xamarin. Essentials: tema do aplicativo
 
@@ -62,7 +63,7 @@ Não especificado sempre será retornado em versões do iOS com mais de 13,0
 
 # <a name="uwp"></a>[UWP](#tab/uwp)
 
-A `RequestedTheme` chamada deve ser chamada no thread da interface do usuário ou uma exceção será gerada.
+`RequestedTheme`A chamada deve ser chamada no thread da interface do usuário ou uma exceção será gerada.
 
 Os aplicativos UWP respeitarão sua configuração no aplicativo UWP. XAML em **RequestedTheme**. Se ele estiver definido como um tema específico, o Xamarin. Essentials sempre retornará essa configuração. Para usar o tema dinâmico do sistema operacional, remova este nó do seu aplicativo e, em seguida, quando seu aplicativo for executado, ele retornará o tema definido pelo usuário nas configurações do Windows (**configurações > personalização > cores > escolha o modo de aplicativo padrão**).
 
@@ -74,3 +75,9 @@ Você pode ler mais sobre a [documentação do tema solicitado por UWP](https://
 
 - [Código-fonte de AppInfo](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/AppInfo)
 - [Documentação da API de AppInfo](xref:Xamarin.Essentials.AppInfo)
+
+## <a name="related-video"></a>Vídeo relacionados
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Theme-Detection-XamarinEssentials-API-of-the-Week/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]

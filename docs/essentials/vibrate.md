@@ -3,14 +3,15 @@ title: 'Xamarin.Essentials: Vibração'
 description: Este documento descreve a classe Vibration no Xamarin.Essentials, que permite iniciar e parar a funcionalidade de vibrar por um tempo desejado.
 ms.assetid: 7E8B24C4-2625-4DAE-A129-383542D34F1E
 author: jamesmontemagno
+ms.custom: video
 ms.author: jamont
 ms.date: 11/04/2018
-ms.openlocfilehash: 2e4cf713f9ad7478c0d8e288fd3beff4b5015ef5
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: a002cd6ed183ffeafef92cb40d48b2792347714d
+ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "70120109"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83149834"
 ---
 # <a name="xamarinessentials-vibration"></a>Xamarin.Essentials: Vibração
 
@@ -34,7 +35,7 @@ Abra o arquivo **AssemblyInfo.cs** na pasta **Propriedades** e adicione:
 
 OU Atualize o Manifesto do Android:
 
-Abra o arquivo **AndroidManifest.xml** na pasta **Propriedades** e adicione o seguinte dentro do **nó manifesto.**
+Abra o arquivo **AndroidManifest. xml** na pasta **Propriedades** e adicione o seguinte dentro do nó do **manifesto** .
 
 ```xml
 <uses-permission android:name="android.permission.VIBRATE" />
@@ -121,3 +122,9 @@ Sem diferenças entre plataformas.
 
 - [Código-fonte de Vibração](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Vibration)
 - [Documentação da API de Vibração](xref:Xamarin.Essentials.Vibration)
+
+## <a name="related-video"></a>Vídeo relacionados
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Vibration-XamarinEssentials-API-of-the-Week/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]

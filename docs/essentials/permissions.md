@@ -4,13 +4,14 @@ description: Este documento descreve a classe de permissões no Xamarin. Essenti
 ms.assetid: 34062D84-3E55-4AF7-A688-8551068B1E57
 author: jamesmontemagno
 ms.author: jamont
+ms.custom: video
 ms.date: 01/06/2020
-ms.openlocfilehash: 3d61267ae78a4b84907a2bcf6e944eb286b113dd
-ms.sourcegitcommit: 8b94b2af2ac69e4a60e210ddc764f4d276c8d88d
+ms.openlocfilehash: fbce02300363c3ec68c35c11afb25342f06f4be1
+ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82605440"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83150076"
 ---
 # <a name="xamarinessentials-permissions"></a>Xamarin. Essentials: permissões
 
@@ -19,6 +20,8 @@ A classe **Permissions** fornece a capacidade de verificar e solicitar permissõ
 ## <a name="get-started"></a>Introdução
 
 [!include[](~/essentials/includes/get-started.md)]
+
+[!include[](~/essentials/includes/android-permissions.md)]
 
 ## <a name="using-permissions"></a>Usando permissões
 
@@ -38,23 +41,23 @@ var status = await Permissions.CheckStatusAsync<Permissions.LocationWhenInUse>()
 
 Um `PermissionException` será gerado se a permissão necessária não for declarada.
 
-É melhor verificar o status da permissão antes de solicitá-la. Cada sistema operacional retornará um estado padrão diferente se o usuário nunca tiver sido solicitado. iOS retorna `Unknown`, enquanto outros retornam `Denied`.
+É melhor verificar o status da permissão antes de solicitá-la. Cada sistema operacional retornará um estado padrão diferente se o usuário nunca tiver sido solicitado. iOS retorna `Unknown` , enquanto outros retornam `Denied` .
 
 ## <a name="requesting-permissions"></a>Solicitando permissões
 
-Para solicitar uma permissão dos usuários, use o `RequestAsync` método junto com a permissão específica para solicitar. Se o usuário concedeu permissão anteriormente e não o revogou, esse método retornará `Granted` immediatelly e não exibirá uma caixa de diálogo. 
+Para solicitar uma permissão dos usuários, use o `RequestAsync` método junto com a permissão específica para solicitar. Se o usuário concedeu permissão anteriormente e não o revogou, esse método retornará `Granted` imediatamente e não exibirá uma caixa de diálogo.
 
 ```csharp
 var status = await Permissions.RequestAsync<Permissions.LocationWhenInUse>();
 ```
 
-Um `PermissionException` será gerado se a permissão necessária não for declarada. 
+Um `PermissionException` será gerado se a permissão necessária não for declarada.
 
-Observe que, em algumas plataformas, uma solicitação de permissão só pode ser ativada uma única vez. Solicitações adicionais devem ser tratadas pelo desenvolvedor para verificar se um permissão está no `Denied` estado e pedir ao usuário para ligá-lo manualmente.
+Observe que, em algumas plataformas, uma solicitação de permissão só pode ser ativada uma única vez. Solicitações adicionais devem ser manipuladas pelo desenvolvedor para verificar se uma permissão está no `Denied` estado e solicitar que o usuário a ative manualmente.
 
 ## <a name="permission-status"></a>Status da permissão
 
-Ao usar `CheckStatusAsync` o `RequestAsync` ou `PermissionStatus` um será retornado que será usado para determinar as próximas etapas.
+Ao usar `CheckStatusAsync` `RequestAsync` o ou um `PermissionStatus` será retornado que pode ser usado para determinar as próximas etapas:
 
 * Desconhecido-a permissão está em um estado desconhecido
 * Negado-o usuário negou a solicitação de permissão
@@ -64,7 +67,7 @@ Ao usar `CheckStatusAsync` o `RequestAsync` ou `PermissionStatus` um será retor
 
 ## <a name="available-permissions"></a>Permissões disponíveis
 
-O Xamarin. Essentials tenta abstrair o máximo de permissões possível, no entanto, cada sistema operacional tem um conjunto diferente de permissões de tempo de execução. Além disso, há diferenças na capacidade de fornecer uma única API para algumas permissões. Aqui está um guia para as permissões disponíveis no momento:
+O Xamarin. Essentials tenta abstrair o máximo de permissões possível. No entanto, cada sistema operacional tem um conjunto diferente de permissões de tempo de execução. Além disso, há diferenças ao fornecer uma única API para algumas permissões. Aqui está um guia para as permissões disponíveis no momento:
 
 Guia de ícones:
 
@@ -72,7 +75,7 @@ Guia de ícones:
 * ![Sem suporte](~/media/shared/no.png "Sem suporte ou obrigatório") -sem suporte/obrigatório
 
 | Permissão | Android | iOS | UWP | watchOS | tvOS | Tizen |
-| --- | :---: | :---: | :---: | :---: | :---: | :---: | :---: 
+| --- | :---: | :---: | :---: | :---: | :---: | :---: | :---:
 | CalendarRead   | ![Com suporte para Android](~/media/shared/yes.png "Com suporte para Android") | ![iOS com suporte](~/media/shared/yes.png "iOS com suporte") | ![UWP sem suporte](~/media/shared/no.png "UWP sem suporte") | ![watchOS com suporte](~/media/shared/yes.png "watchOS com suporte") | ![tvOS não tem suporte](~/media/shared/no.png "tvOS não tem suporte") | ![Tizen não tem suporte](~/media/shared/no.png "Tizen não tem suporte") |
 | CalendarWrite | ![Com suporte para Android](~/media/shared/yes.png "Com suporte para Android") | ![iOS com suporte](~/media/shared/yes.png "iOS com suporte") | ![UWP sem suporte](~/media/shared/no.png "UWP sem suporte") | ![watchOS com suporte](~/media/shared/yes.png "watchOS com suporte") | ![tvOS não tem suporte](~/media/shared/no.png "tvOS não tem suporte") | ![Tizen não tem suporte](~/media/shared/no.png "Tizen não tem suporte") |
 | Câmera | ![Com suporte para Android](~/media/shared/yes.png "Com suporte para Android") | ![iOS com suporte](~/media/shared/yes.png "iOS com suporte") | ![UWP sem suporte](~/media/shared/no.png "UWP sem suporte") | ![watchOS não tem suporte](~/media/shared/no.png "watchOS não tem suporte") | ![tvOS não tem suporte](~/media/shared/no.png "tvOS não tem suporte") | ![Tizen com suporte](~/media/shared/yes.png "Tizen com suporte") |
@@ -88,7 +91,7 @@ Guia de ícones:
 | Lembretes | ![Android sem suporte](~/media/shared/no.png "Android sem suporte") | ![iOS com suporte](~/media/shared/yes.png "iOS com suporte") | ![UWP sem suporte](~/media/shared/no.png "UWP sem suporte") | ![watchOS com suporte](~/media/shared/yes.png "watchOS com suporte") | ![tvOS não tem suporte](~/media/shared/no.png "tvOS não tem suporte") | ![Tizen não tem suporte](~/media/shared/no.png "Tizen não tem suporte") |
 | Sensores | ![Com suporte para Android](~/media/shared/yes.png "Com suporte para Android") | ![iOS com suporte](~/media/shared/yes.png "iOS com suporte") | ![UWP com suporte](~/media/shared/yes.png "UWP com suporte") | ![watchOS com suporte](~/media/shared/yes.png "watchOS com suporte") | ![tvOS não tem suporte](~/media/shared/no.png "tvOS não tem suporte") | ![Tizen não tem suporte](~/media/shared/no.png "Tizen não tem suporte") |
 | SMS | ![Com suporte para Android](~/media/shared/yes.png "Com suporte para Android") | ![iOS com suporte](~/media/shared/yes.png "iOS com suporte") | ![UWP sem suporte](~/media/shared/no.png "UWP sem suporte") | ![watchOS não tem suporte](~/media/shared/no.png "watchOS não tem suporte") | ![tvOS não tem suporte](~/media/shared/no.png "tvOS não tem suporte") | ![Tizen não tem suporte](~/media/shared/no.png "Tizen não tem suporte") |
-| Fala | ![Com suporte para Android](~/media/shared/yes.png "Com suporte para Android") | ![iOS com suporte](~/media/shared/yes.png "iOS com suporte") | ![UWP sem suporte](~/media/shared/no.png "UWP sem suporte") | ![watchOS não tem suporte](~/media/shared/no.png "watchOS não tem suporte") | ![tvOS não tem suporte](~/media/shared/no.png "tvOS não tem suporte") | ![Tizen não tem suporte](~/media/shared/no.png "Tizen não tem suporte") |
+| Speech | ![Com suporte para Android](~/media/shared/yes.png "Com suporte para Android") | ![iOS com suporte](~/media/shared/yes.png "iOS com suporte") | ![UWP sem suporte](~/media/shared/no.png "UWP sem suporte") | ![watchOS não tem suporte](~/media/shared/no.png "watchOS não tem suporte") | ![tvOS não tem suporte](~/media/shared/no.png "tvOS não tem suporte") | ![Tizen não tem suporte](~/media/shared/no.png "Tizen não tem suporte") |
 | StorageRead | ![Com suporte para Android](~/media/shared/yes.png "Com suporte para Android") | ![iOS sem suporte](~/media/shared/no.png "iOS sem suporte") | ![UWP sem suporte](~/media/shared/no.png "UWP sem suporte") | ![watchOS não tem suporte](~/media/shared/no.png "watchOS não tem suporte") | ![tvOS não tem suporte](~/media/shared/no.png "tvOS não tem suporte") | ![Tizen não tem suporte](~/media/shared/no.png "Tizen não tem suporte") |
 | StorageWrite | ![Com suporte para Android](~/media/shared/yes.png "Com suporte para Android") | ![iOS sem suporte](~/media/shared/no.png "iOS sem suporte") | ![UWP sem suporte](~/media/shared/no.png "UWP sem suporte") | ![watchOS não tem suporte](~/media/shared/no.png "watchOS não tem suporte") | ![tvOS não tem suporte](~/media/shared/no.png "tvOS não tem suporte") | ![Tizen não tem suporte](~/media/shared/no.png "Tizen não tem suporte") |
 
@@ -142,7 +145,7 @@ public async Task<PermissionStatus> CheckAndRequestPermissionAsync<T>(T permissi
 
 ## <a name="extending-permissions"></a>Estendendo permissões
 
-A API de permissões foi criada para ser flexível e extensível para aplicativos que exigem validação ou permissões adicionais que não estão incluídas no Xamarin. Essentials. Crie uma nova classe que herda de `BasePermission` e implemente os métodos abstratos necessários. Então 
+A API de permissões foi criada para ser flexível e extensível para aplicativos que exigem validação ou permissões adicionais que não estão incluídas no Xamarin. Essentials. Crie uma nova classe que herda de `BasePermission` e implemente os métodos abstratos necessários. Então
 
 ```csharp
 public class MyPermission : BasePermission
@@ -167,7 +170,35 @@ public class MyPermission : BasePermission
 }
 ```
 
-Ao implementar uma permissão em uma plataforma específica, a `BasePlatformPermission` classe pode ser herdada de. Isso fornece métodos adicionais de auxiliares de plataforma para verificar automaticamente as declarações.
+Ao implementar uma permissão em uma plataforma específica, a `BasePlatformPermission` classe pode ser herdada de. Isso fornece métodos auxiliares de plataforma adicionais para verificar automaticamente as declarações. Isso pode ajudar ao criar permissões personalizadas para fazer o agrupamento. Por exemplo, você pode solicitar o acesso de leitura e gravação ao armazenamento no Android usando a seguinte permissão personalizada.
+
+Crie uma nova permissão em seu projeto do qual você está chamando permissões.
+
+```csharp
+public partial class ReadWriteStoragePermission  : Xamarin.Essentials.Permissions.BasePlatformPermission
+{
+
+}
+```
+
+Em seu projeto Android, estenda a permissão com permissões que você gostaria de solicitar.
+
+```csharp
+public partial class ReadWriteStoragePermission : Xamarin.Essentials.Permissions.BasePlatformPermission
+{
+    public override (string androidPermission, bool isRuntime)[] RequiredPermissions => new List<(string androidPermission, bool isRuntime)>
+    {
+        (Android.Manifest.Permission.ReadExternalStorage, true),
+        (Android.Manifest.Permission.WriteExternalStorage, true)
+    }.ToArray();
+}
+```
+
+Em seguida, você pode chamar sua nova permissão da lógica compartilhada.
+
+```csharp
+await Permissions.RequestAsync<ReadWriteStoragePermission>();
+```
 
 ## <a name="platform-implementation-specifics"></a>Particularidades de implementação da plataforma
 
@@ -179,7 +210,7 @@ Leia mais sobre as [permissões na documentação do Xamarin. Android](https://d
 
 # <a name="ios"></a>[iOS](#tab/ios)
 
-As permissões devem ter uma cadeia de caracteres `Info.plist` correspondente no arquivo. Quando uma permissão é solicitada e um pop-up não aparece mais, se você solicitar a permissão uma segunda vez. Você deve solicitar que o usuário ajuste manualmente a configuração na tela de configurações de aplicativos no iOS.
+As permissões devem ter uma cadeia de caracteres correspondente no `Info.plist` arquivo. Uma vez que uma permissão é solicitada e um pop-up não será mais exibido se você solicitar a permissão uma segunda vez. Você deve solicitar que o usuário ajuste manualmente a configuração na tela de configurações de aplicativos no iOS.
 
 Leia mais sobre a documentação de [recursos de privacidade e segurança do IOS](https://docs.microsoft.com/xamarin/ios/app-fundamentals/security-privacy) .
 
@@ -196,3 +227,9 @@ Leia mais sobre a documentação da [declaração de capacidade do aplicativo](h
 - [Código-fonte de permissões](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Permissions)
 - [Documentação da API de permissões](xref:Xamarin.Essentials.Permissions)
 
+
+## <a name="related-video"></a>Vídeo relacionados
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Permissions-XamarinEssentials-API-of-the-Week/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]

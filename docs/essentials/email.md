@@ -3,14 +3,15 @@ title: 'Xamarin.Essentials: Email'
 description: A classe Email no Xamarin.Essentials permite que um aplicativo abra o aplicativo de email padrão com uma informação especificada, incluindo assunto, corpo e destinatários (PARA, CC, CCO).
 ms.assetid: 5FBB6FF0-0E7B-4C29-8F06-91642AF12629
 author: jamesmontemagno
+ms.custom: video
 ms.author: jamont
 ms.date: 08/20/2019
-ms.openlocfilehash: cccbe5f539e2807e749433623e938438e67965e8
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 77fcadf3ec58a38acac5eca14b43d937414a4a60
+ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "70060088"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83150104"
 ---
 # <a name="xamarinessentials-email"></a>Xamarin.Essentials: Email
 
@@ -64,7 +65,7 @@ public class EmailTest
 
 ## <a name="file-attachments"></a>Anexos de Arquivo
 
-Esse recurso permite que um aplicativo envie arquivos por email em clientes de email no dispositivo. O Xamarin.Essentials detectará automaticamente o tipo de arquivo (MIME) e solicitará que o arquivo seja adicionado como um anexo. Cada cliente de email é diferente poderá ser compatível somente com extensões de arquivo específicas ou até mesmo não ser com nenhuma.
+Esse recurso permite que um aplicativo envie arquivos por email em clientes de email no dispositivo. O Xamarin.Essentials detectará automaticamente o tipo de arquivo (MIME) e solicitará que o arquivo seja adicionado como um anexo. Cada cliente de email é diferente e só pode dar suporte a extensões de arquivo específicas ou nenhum.
 
 Aqui está um exemplo de como gravar texto no disco e adicioná-lo como um anexo de email:
 
@@ -106,3 +107,9 @@ Nem todos os clientes de email dão suporte ao envio de anexos. Para obter mais 
 
 - [Código-fonte de email](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Email)
 - [Documentação da API de email](xref:Xamarin.Essentials.Email)
+
+## <a name="related-video"></a>Vídeo relacionados
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Email-XamarinEssentials-API-of-the-Week/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]
