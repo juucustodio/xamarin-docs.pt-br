@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: d6dbc82e56959399c2befb6a12f0a2cf3793ee5b
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 97e52d593e2b59d127da324d8ad74ad7b2096cdd
+ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "67559977"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83343413"
 ---
 O tamanho e a posição das exibições filho dentro de um [`StackLayout`](xref:Xamarin.Forms.StackLayout) dependem dos valores das propriedades [`HeightRequest`](xref:Xamarin.Forms.VisualElement.HeightRequest) e [`WidthRequest`](xref:Xamarin.Forms.VisualElement.WidthRequest) da exibição filho e dos valores das propriedades [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) e [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions).
 
@@ -55,7 +55,7 @@ As propriedades [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions)
 
     [![Captura de tela de exibições filho em um StackLayout, com opções de alinhamento e expansão definidas, no iOS e no Android](../images/alignment-expansion.png "StackLayout contendo instâncias de rótulo, com alinhamento e expansão definidos")](../images/alignment-expansion-large.png#lightbox "StackLayout contendo instâncias de rótulo, com alinhamento e expansão definidos")
 
-    Um [`StackLayout`](xref:Xamarin.Forms.StackLayout) respeita somente as preferências de alinhamento em exibições filho que estão na direção oposta à orientação `StackLayout`. Portanto, as exibições filho [`Label`](xref:Xamarin.Forms.Label) dentro do `StackLayout` orientado verticalmente definem suas propriedades [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) como um dos campos de alinhamento:
+    Um [`StackLayout`](xref:Xamarin.Forms.StackLayout) respeita somente as preferências de alinhamento em exibições filho que estão na direção oposta à orientação `StackLayout`. Portanto, as exibições filho de [`Label`](xref:Xamarin.Forms.Label) dentro do `StackLayout` orientado verticalmente definem suas propriedades [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) como um dos campos de alinhamento:
 
     - [`Start`](xref:Xamarin.Forms.LayoutOptions.Start), que posiciona o [`Label`](xref:Xamarin.Forms.Label) à esquerda do [`StackLayout`](xref:Xamarin.Forms.StackLayout).
     - [`Center`](xref:Xamarin.Forms.LayoutOptions.Center), que centraliza o [`Label`](xref:Xamarin.Forms.Label) no [`StackLayout`](xref:Xamarin.Forms.StackLayout).
@@ -111,7 +111,7 @@ As propriedades [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions)
 
     [![Captura de tela de exibições filho em um StackLayout, com opções de alinhamento e expansão definidas, no iOS e no Android](../images/alignment-expansion.png "StackLayout contendo instâncias de rótulo, com alinhamento e expansão definidos")](../images/alignment-expansion-large.png#lightbox "StackLayout contendo instâncias de rótulo, com alinhamento e expansão definidos")
 
-    Um [`StackLayout`](xref:Xamarin.Forms.StackLayout) respeita somente as preferências de alinhamento em exibições filho que estão na direção oposta à orientação `StackLayout`. Portanto, as exibições filho [`Label`](xref:Xamarin.Forms.Label) dentro do `StackLayout` orientado verticalmente definem suas propriedades [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) como um dos campos de alinhamento:
+    Um [`StackLayout`](xref:Xamarin.Forms.StackLayout) respeita somente as preferências de alinhamento em exibições filho que estão na direção oposta à orientação `StackLayout`. Portanto, as exibições filho de [`Label`](xref:Xamarin.Forms.Label) dentro do `StackLayout` orientado verticalmente definem suas propriedades [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) como um dos campos de alinhamento:
 
     - [`Start`](xref:Xamarin.Forms.LayoutOptions.Start), que posiciona o [`Label`](xref:Xamarin.Forms.Label) à esquerda do [`StackLayout`](xref:Xamarin.Forms.StackLayout).
     - [`Center`](xref:Xamarin.Forms.LayoutOptions.Center), que centraliza o [`Label`](xref:Xamarin.Forms.Label) no [`StackLayout`](xref:Xamarin.Forms.StackLayout).
