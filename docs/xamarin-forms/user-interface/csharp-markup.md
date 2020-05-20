@@ -6,19 +6,19 @@ ms.assetid: D41B9DCD-5C34-4C2F-B177-FC082AB2E9E0
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 03/25/2020
-ms.openlocfilehash: fa758b1240570f90ebf8a723401176f6be9dd6ac
-ms.sourcegitcommit: 8d13d2262d02468c99c4e18207d50cd82275d233
+ms.date: 05/15/2020
+ms.openlocfilehash: 4fa8397dafbbdd836f88193081720b4960f1ce5d
+ms.sourcegitcommit: bc0c1740aa0708459729c0e671ab3ff7de3e2eee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82532607"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83425814"
 ---
 # <a name="xamarinforms-c-markup"></a>Marcação do Xamarin. Forms C#
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
 
-[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-csharpmarkupdemos/)
+[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-csharpmarkupdemos/)
 
 A marcação C# é um conjunto de métodos e classes auxiliares fluentes para simplificar o processo de criação de interfaces de usuário Xamarin. Forms declarativas em C#. A API fluente fornecida pela marcação C# está disponível no `Xamarin.Forms.Markup` namespace.
 
@@ -35,9 +35,14 @@ Device.SetFlags(new string[]{ "Markup_Experimental" });
 
 ## <a name="basic-example"></a>Exemplo básico
 
-O exemplo a seguir mostra a [`Entry`](xref:Xamarin.Forms.Entry) criação de um objeto em C#:
+O exemplo a seguir mostra a configuração do conteúdo da página para um novo [`Grid`](xref:Xamarin.Forms.Grid) contendo um [`Label`](xref:Xamarin.Forms.Label) e um [`Entry`](xref:Xamarin.Forms.Entry) , em C#:
 
 ```csharp
+Grid grid = new Grid();
+
+Label label = new Label { Text = "Code: " };
+grid.Children.Add(label, 0, 1);
+
 Entry entry = new Entry
 {
     Placeholder = "Enter number",
@@ -48,12 +53,14 @@ Entry entry = new Entry
     HeightRequest = 44,
     Margin = fieldMargin
 };
-entry.SetBinding(Entry.TextProperty, new Binding("RegistrationCode", BindingMode.TwoWay));
 grid.Children.Add(entry, 0, 2);
 Grid.SetColumnSpan(entry, 2);
+entry.SetBinding(Entry.TextProperty, new Binding("RegistrationCode"));
+
+Content = grid;
 ```
 
-Este exemplo cria um [`Entry`](xref:Xamarin.Forms.Entry) objeto que vincula dados à `RegistrationCode` Propriedade do ViewModel, usando uma `TwoWay` associação. Ele é definido para aparecer em uma linha específica em um [`Grid`](xref:Xamarin.Forms.Grid)e abrange todas as colunas no `Grid`. Além disso, a altura do `Entry` é definida, junto com o tamanho da fonte de seu texto e seu. `Margin`
+Este exemplo cria um [`Grid`](xref:Xamarin.Forms.Grid) objeto, com filho [`Label`](xref:Xamarin.Forms.Label) e [`Entry`](xref:Xamarin.Forms.Entry) objetos. O `Label` exibe texto e os `Entry` dados são associados à `RegistrationCode` Propriedade do ViewModel. Cada exibição filho é definida para aparecer em uma linha específica no `Grid` e o `Entry` abrange todas as colunas no `Grid` . Além disso, a altura do `Entry` é definida, junto com seu teclado, cores, o tamanho da fonte de seu texto e seu `Margin` . Por fim, a `Page.Content` propriedade é definida como o `Grid` objeto.
 
 A marcação C# permite que esse código seja reescrito usando sua API fluente:
 
@@ -61,9 +68,18 @@ A marcação C# permite que esse código seja reescrito usando sua API fluente:
 using Xamarin.Forms.Markup;
 using static Xamarin.Forms.Markup.GridRowsColumns;
 
-Entry entry = new Entry { Placeholder = "Enter number", Keyboard = Keyboard.Numeric, BackgroundColor = Color.AliceBlue, TextColor = Color.Black } .Font (15)
-                         .Row (BodyRow.CodeEntry) .ColumnSpan (All<BodyCol>()) .Margin (fieldMargin) .Height (44)
-                         .Bind (nameof(vm.RegistrationCode), BindingMode.TwoWay);
+Content = new Grid
+{
+  Children =
+  {
+    new Label { Text = "Code:" }
+               .Row (BodyRow.CodeHeader) .Column (BodyCol.Header),
+
+    new Entry { Placeholder = "Enter number", Keyboard = Keyboard.Numeric, BackgroundColor = Color.AliceBlue, TextColor = Color.Black } .Font (15)
+               .Row (BodyRow.CodeEntry) .ColumnSpan (All<BodyCol>()) .Margin (fieldMargin) .Height (44)
+               .Bind (nameof(vm.RegistrationCode))
+  }
+}};
 ```
 
 Este exemplo é idêntico ao exemplo anterior, mas a API Fluent de marcação do C# simplifica o processo de criação da interface do usuário em C#.
@@ -71,9 +87,9 @@ Este exemplo é idêntico ao exemplo anterior, mas a API Fluent de marcação do
 > [!NOTE]
 > A marcação C# inclui métodos de extensão que definem propriedades de exibição específicas. Esses métodos de extensão não se destinam a substituir todos os setters de propriedade. Em vez disso, eles foram projetados para melhorar a legibilidade do código e podem ser usados em combinação com setters de propriedade. É recomendável sempre usar um método de extensão quando houver um para uma propriedade, mas você pode escolher seu saldo preferido.
 
-## <a name="data-binding"></a>Associação de dados
+## <a name="data-binding"></a>Vinculação de dados
 
-A marcação C# inclui `Bind` um método de extensão, juntamente com sobrecargas, que cria uma associação de dados entre uma propriedade de exibição vinculável e uma propriedade especificada. O `Bind` método conhece a propriedade vinculável padrão para a maioria dos controles incluídos no Xamarin. Forms. Portanto, normalmente não é necessário especificar a propriedade de destino ao usar esse método. No entanto, você também pode registrar a propriedade vinculável padrão para controles adicionais:
+A marcação C# inclui um `Bind` método de extensão, juntamente com sobrecargas, que cria uma associação de dados entre uma propriedade de exibição vinculável e uma propriedade especificada. O `Bind` método conhece a propriedade vinculável padrão para a maioria dos controles incluídos no Xamarin. Forms. Portanto, normalmente não é necessário especificar a propriedade de destino ao usar esse método. No entanto, você também pode registrar a propriedade vinculável padrão para controles adicionais:
 
 ```csharp
 using Xamarin.Forms.Markup;
@@ -92,7 +108,7 @@ new Label { Text = "No data available" }
            .Bind (Label.IsVisibleProperty, nameof(vm.Empty))
 ```
 
-Além disso, o `BindCommand` método de extensão pode se associar ao padrão `Command` de um `CommandParameter` controle e às propriedades em uma única chamada de método:
+Além disso, o `BindCommand` método de extensão pode se associar ao padrão de um controle `Command` e às `CommandParameter` Propriedades em uma única chamada de método:
 
 ```csharp
 using Xamarin.Forms.Markup;
@@ -102,7 +118,7 @@ new TextCell { Text = "Tap me" }
               .BindCommand (nameof(vm.TapCommand))
 ```
 
-Por padrão, o `CommandParameter` é associado ao contexto de associação. Você também pode especificar o caminho de associação e a origem `Command` para o `CommandParameter` e as associações:
+Por padrão, o `CommandParameter` é associado ao contexto de associação. Você também pode especificar o caminho de associação e a origem para o `Command` e as `CommandParameter` associações:
 
 ```csharp
 using Xamarin.Forms.Markup;
@@ -114,7 +130,7 @@ new TextCell { Text = "Tap Me" }
 
 Neste exemplo, o contexto de associação é uma `Item` instância, portanto, você não precisa especificar uma origem para a `Id` `CommandParameter` associação.
 
-Se você só precisa associar `Command`ao, você pode passar `null` para o `parameterPath` argumento do `BindCommand` método. Como alternativa, use o `Bind` método.
+Se você só precisa associar ao `Command` , você pode passar `null` para o `parameterPath` argumento do `BindCommand` método. Como alternativa, use o `Bind` método.
 
 Você também pode registrar o padrão `Command` e `CommandParameter` as propriedades para controles adicionais:
 
@@ -128,7 +144,7 @@ DefaultBindableProperties.RegisterCommand(
 );
 ```
 
-O código do conversor embutido pode ser `Bind` passado para o `convert` método `convertBack` com os parâmetros e:
+O código do conversor embutido pode ser passado para o `Bind` método com os `convert` `convertBack` parâmetros e:
 
 ```csharp
 using Xamarin.Forms.Markup;
@@ -161,7 +177,7 @@ new Label { Text = "Tree" }
            .Bind (Label.MarginProperty, nameof(TreeNode.TreeDepth), converter: treeMarginConverter),
 ```
 
-A `FuncConverter` classe também dá `CultureInfo` suporte a objetos:
+A `FuncConverter` classe também dá suporte a `CultureInfo` objetos:
 
 ```csharp
 using Xamarin.Forms.Markup;
@@ -188,7 +204,7 @@ new Label { } .FormattedText (
 
 ### <a name="gesture-recognizers"></a>Reconhecedores de gestos
 
-`Command`as `CommandParameter` Propriedades e podem ser vinculadas `GestureElement` a `View` dados e tipos `BindClickGesture`usando `BindSwipeGesture`os métodos `BindTapGesture` de extensão, e:
+`Command``CommandParameter`as propriedades e podem ser vinculadas a dados `GestureElement` e `View` tipos usando os `BindClickGesture` métodos de `BindSwipeGesture` extensão, e `BindTapGesture` :
 
 ```csharp
 using Xamarin.Forms.Markup;
@@ -198,9 +214,9 @@ new Label { Text = "Tap Me" }
            .BindTapGesture (nameof(vm.TapCommand))
 ```
 
-Este exemplo cria um reconhecedor de gesto do tipo especificado e o [`Label`](xref:Xamarin.Forms.Label)adiciona ao. Os `Bind*Gesture` métodos de extensão oferecem os mesmos parâmetros que `BindCommand` os métodos de extensão. No entanto, `Bind*Gesture` por padrão, `CommandParameter`o não `BindCommand` se associa, enquanto o faz.
+Este exemplo cria um reconhecedor de gesto do tipo especificado e o adiciona ao [`Label`](xref:Xamarin.Forms.Label) . Os `Bind*Gesture` métodos de extensão oferecem os mesmos parâmetros que os `BindCommand` métodos de extensão. No entanto, por padrão, o não se `Bind*Gesture` associa `CommandParameter` , enquanto `BindCommand` o faz.
 
-Para inicializar um reconhecedor de gesto com parâmetros, `ClickGesture`use `PanGesture`os `PinchGesture`métodos `SwipeGesture`de extensão `TapGesture` ,,, e:
+Para inicializar um reconhecedor de gesto com parâmetros, use os `ClickGesture` métodos de extensão,, `PanGesture` `PinchGesture` , `SwipeGesture` e `TapGesture` :
 
 ```csharp
 using Xamarin.Forms.Markup;
@@ -210,13 +226,13 @@ new Label { Text = "Tap Me" }
            .TapGesture (g => g.Bind(nameof(vm.DoubleTapCommand)).NumberOfTapsRequired = 2)
 ```
 
-Como um reconhecedor de gesto `BindableObject`é um, você pode `Bind` usar `BindCommand` os métodos de extensão e ao inicializá-lo. Você também pode inicializar tipos de reconhecedor de gestos personalizados com o método de `Gesture<TGestureElement, TGestureRecognizer>` extensão.
+Como um reconhecedor de gesto é um `BindableObject` , você pode usar os `Bind` métodos de `BindCommand` extensão e ao inicializá-lo. Você também pode inicializar tipos de reconhecedor de gestos personalizados com o `Gesture<TGestureElement, TGestureRecognizer>` método de extensão.
 
 ## <a name="layout"></a>Layout
 
 A marcação C# inclui uma série de métodos de extensão de layout que dão suporte ao posicionamento de exibições em layouts e conteúdo em exibições:
 
-| Type | Métodos de extensão |
+| Tipo | Métodos de extensão |
 |---|---|
 | `FlexLayout` | `AlignSelf`, `Basis`, `Grow`, `Menu`, `Order`, `Shrink` |
 | `Grid` | `Row`, `Column`, `RowSpan`, `ColumnSpan` |
@@ -228,13 +244,13 @@ A marcação C# inclui uma série de métodos de extensão de layout que dão su
 
 ### <a name="left-to-right-and-right-to-left-support"></a>Suporte da esquerda para a direita e da direita para a esquerda
 
-Para a marcação C# projetada para dar suporte à direção de fluxo da esquerda para a direita (EPD) ou da direita para a esquerda (RTL), os métodos de extensão listados acima oferecem o conjunto de nomes mais `Left`intuitivo `Right`: `Top` , `Bottom`e.
+Para a marcação C# projetada para dar suporte à direção de fluxo da esquerda para a direita (EPD) ou da direita para a esquerda (RTL), os métodos de extensão listados acima oferecem o conjunto de nomes mais intuitivo: `Left` , `Right` `Top` e `Bottom` .
 
-Para tornar o conjunto correto de métodos de extensão esquerdo e direito disponíveis e, no processo, tornar explícito para qual direção de fluxo a marcação é projetada, inclua uma das duas `using` diretivas a `using Xamarin.Forms.Markup.LeftToRight;`seguir: `using Xamarin.Forms.Markup.RightToLeft;`ou.
+Para tornar o conjunto correto de métodos de extensão esquerdo e direito disponíveis e, no processo, tornar explícito para qual direção de fluxo a marcação é projetada, inclua uma das duas `using` diretivas a seguir: `using Xamarin.Forms.Markup.LeftToRight;` ou `using Xamarin.Forms.Markup.RightToLeft;` .
 
 Para a marcação C# projetada para dar suporte à direção de fluxo da esquerda para a direita e da direita para a esquerda, é recomendável usar os métodos de extensão na tabela a seguir, em vez de um dos namespaces acima:
 
-| Type | Métodos de extensão |
+| Tipo | Métodos de extensão |
 |---|---|
 | `Label` | `TextStart`, `TextEnd` |
 | `LayoutOptions` | `Start`, `End` <br/> `StartExpand`, `EndExpand` |
@@ -261,7 +277,7 @@ Ao seguir a Convenção consistentemente, você poderá ler rapidamente a marca�
 
 ## <a name="grid-rows-and-columns"></a>Linhas e colunas de grade
 
-As enumerações podem ser usadas para [`Grid`](xref:Xamarin.Forms.Grid) definir linhas e colunas, em vez de usar números. Isso oferece a vantagem de que a renumeração não é necessária ao adicionar ou remover linhas ou colunas.
+As enumerações podem ser usadas para definir [`Grid`](xref:Xamarin.Forms.Grid) linhas e colunas, em vez de usar números. Isso oferece a vantagem de que a renumeração não é necessária ao adicionar ou remover linhas ou colunas.
 
 > [!IMPORTANT]
 > Definir [`Grid`](xref:Xamarin.Forms.Grid) linhas e colunas usando enumerações requer a seguinte `using` diretiva:`using static Xamarin.Forms.Markup.GridRowsColumns;`
@@ -340,7 +356,7 @@ new Grid
 
 ## <a name="fonts"></a>Fontes
 
-Os controles na lista a seguir podem chamar os `FontSize`métodos `Bold`de `Italic`extensão, `Font` , e para definir a aparência do texto exibido pelo controle:
+Os controles na lista a seguir podem chamar os `FontSize` métodos de extensão,, `Bold` `Italic` e `Font` para definir a aparência do texto exibido pelo controle:
 
 - `Button`
 - `DatePicker`
@@ -354,7 +370,7 @@ Os controles na lista a seguir podem chamar os `FontSize`métodos `Bold`de `Ital
 
 ## <a name="effects"></a>Efeitos
 
-Os efeitos podem ser anexados a controles `Effect` com o método de extensão:
+Os efeitos podem ser anexados a controles com o `Effect` método de extensão:
 
 ```csharp
 using Xamarin.Forms.Markup;
@@ -446,7 +462,7 @@ public App()
 }
 ```
 
-Estilos explícitos podem ser consumidos com o método de `Style` extensão.
+Estilos explícitos podem ser consumidos com o `Style` método de extensão.
 
 ```csharp
 using static CSharpForMarkupExample.Styles;
@@ -456,7 +472,7 @@ new Button { Text = "Tap Me" } .Style (FilledButton),
 ```
 
 > [!NOTE]
-> Além do método de `Style` extensão, também `ApplyToDerivedTypes`há os métodos de `BasedOn`extensão `Add`,, `CanCascade` e.
+> Além do método de `Style` extensão, também há os `ApplyToDerivedTypes` métodos de `BasedOn` extensão,, `Add` e `CanCascade` .
 
 Como alternativa, você pode criar seus próprios métodos de extensão de estilo:
 
@@ -478,7 +494,7 @@ new Button { Text = "Tap Me" } .Filled ()
 
 ## <a name="platform-specifics"></a>Elementos específicos da plataforma
 
-O `Invoke` método de extensão pode ser usado para aplicar as especificações de plataforma. No entanto, para evitar erros de ambiguidade, `using` não inclua diretivas `Xamarin.Forms.PlatformConfiguration.*Specific` para os namespaces diretamente. Em vez disso, crie um alias de namespace e consuma a plataforma específica por meio do alias:
+O `Invoke` método de extensão pode ser usado para aplicar as especificações de plataforma. No entanto, para evitar erros de ambiguidade, não inclua `using` diretivas para os `Xamarin.Forms.PlatformConfiguration.*Specific` namespaces diretamente. Em vez disso, crie um alias de namespace e consuma a plataforma específica por meio do alias:
 
 ```csharp
 using Xamarin.Forms.Markup;
@@ -510,7 +526,7 @@ Para obter mais informações sobre especificações de plataforma, consulte [re
 
 Uma ordem recomendada e o agrupamento de propriedades e métodos auxiliares é:
 
-- **Finalidade**: qualquer propriedade ou método auxiliar cujo valor identifica a finalidade do controle (por exemplo `Text`, `Placeholder`,,`Assign`.).
+- **Finalidade**: qualquer propriedade ou método auxiliar cujo valor identifica a finalidade do controle (por exemplo `Text` , `Placeholder` ,,. `Assign` ).
 - **Outro**: todas as propriedades ou métodos auxiliares que não são layout ou associação, na mesma linha ou em várias linhas.
 - **Layout**: o layout é ordenado de maneira invertida: linhas e colunas, opções de layout, margem, tamanho, preenchimento e alinhamento de conteúdo.
 - **Ligação**: a associação de dados é executada no final da cadeia de métodos, com uma propriedade associada por linha. Se a propriedade ligável *padrão* estiver associada, ela deverá estar no final da cadeia de métodos.

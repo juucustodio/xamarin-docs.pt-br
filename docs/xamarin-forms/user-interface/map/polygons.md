@@ -7,23 +7,23 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2020
-ms.openlocfilehash: e1edbc4d7376023c9d3051b0518c8dc7368e63a7
-ms.sourcegitcommit: 8d13d2262d02468c99c4e18207d50cd82275d233
+ms.openlocfilehash: 3a7c31f7d9c30e812e955a164404c357fe9aa340
+ms.sourcegitcommit: bc0c1740aa0708459729c0e671ab3ff7de3e2eee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82517331"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83425821"
 ---
 # <a name="xamarinforms-map-polygons-and-polylines"></a>Polígonos e polilinhas do mapa do Xamarin. Forms
 
-[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
+[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 
-`Polygon`os `Polyline`elementos, `Circle` e permitem realçar áreas específicas em um mapa. Um `Polygon` é uma forma totalmente incluída que pode ter uma cor de preenchimento e de traçado. Um `Polyline` é uma linha que não coloca totalmente uma área. Um `Circle` realça uma área circular do mapa:
+`Polygon`os `Polyline` elementos, e `Circle` permitem realçar áreas específicas em um mapa. Um `Polygon` é uma forma totalmente incluída que pode ter uma cor de preenchimento e de traçado. Um `Polyline` é uma linha que não coloca totalmente uma área. Um `Circle` realça uma área circular do mapa:
 
-[!["Captura de tela de um polígono de mapa e Polyline, na](polygons-images/polygon-polyline.png "Polígono e polilinha em um mapa")](polygons-images/polygon-polyline-large.png#lightbox "Polígono e polilinha em um mapa")
-[![captura de tela do IOS e do Android" de um círculo de mapa, no Ios e no Android "](polygons-images/circle.png "Círculo em um mapa")](polygons-images/circle-large.png#lightbox "Círculo em um mapa")
+[!["Captura de tela de um polígono de mapa e Polyline, no Ios e no Android"](polygons-images/polygon-polyline.png "Polígono e polilinha em um mapa")](polygons-images/polygon-polyline-large.png#lightbox "Polígono e polilinha em um mapa") 
+ [ !["Captura de tela de um círculo de mapa, no Ios e no Android"](polygons-images/circle.png "Círculo em um mapa")](polygons-images/circle-large.png#lightbox "Círculo em um mapa")
 
-As `Polygon`classes `Polyline`, e `Circle` derivam da `MapElement` classe, que expõe as seguintes propriedades vinculáveis:
+As `Polygon` `Polyline` classes, e `Circle` derivam da `MapElement` classe, que expõe as seguintes propriedades vinculáveis:
 
 - `StrokeColor`é um `Color` objeto que determina a cor da linha.
 - `StrokeWidth`é um `float` objeto que determina a largura da linha.
@@ -32,7 +32,7 @@ A `Polygon` classe define uma propriedade ligável adicional:
 
 - `FillColor`é um `Color` objeto que determina a cor do plano de fundo do polígono.
 
-Além disso, as `Polygon` classes `Polyline` e definem uma `GeoPath` Propriedade, que é uma lista de [`Position`](xref:Xamarin.Forms.Maps.Position) objetos que especificam os pontos da forma.
+Além disso, as `Polygon` `Polyline` classes e definem uma `GeoPath` propriedade, que é uma lista de [`Position`](xref:Xamarin.Forms.Maps.Position) objetos que especificam os pontos da forma.
 
 A `Circle` classe define as seguintes propriedades vinculáveis:
 
@@ -45,7 +45,7 @@ A `Circle` classe define as seguintes propriedades vinculáveis:
 
 ## <a name="create-a-polygon"></a>Criar um polígono
 
-Um `Polygon` objeto pode ser adicionado a um mapa, instanciando-o e adicionando-o à coleção `MapElements` do mapa. Isso pode ser feito no XAML da seguinte maneira:
+Um `Polygon` objeto pode ser adicionado a um mapa, instanciando-o e adicionando-o à coleção do mapa `MapElements` . Isso pode ser feito no XAML da seguinte maneira:
 
 ```xaml
 <ContentPage ...
@@ -104,14 +104,14 @@ Polygon polygon = new Polygon
 map.MapElements.Add(polygon);
 ```
 
-As `StrokeColor` propriedades `StrokeWidth` e são especificadas para personalizar o contorno do polígono. O `FillColor` valor da propriedade corresponde `StrokeColor` ao valor da propriedade, mas tem um valor alfa especificado para torná-lo transparente, permitindo que o mapa subjacente fique visível por meio da forma. A `GeoPath` propriedade contém uma lista de `Position` objetos que definem as coordenadas geográficas dos pontos do polígono. Um `Polygon` objeto é renderizado no mapa depois que ele é adicionado à `MapElements` coleção do. `Map`
+As `StrokeColor` `StrokeWidth` Propriedades e são especificadas para personalizar o contorno do polígono. O `FillColor` valor da propriedade corresponde ao `StrokeColor` valor da propriedade, mas tem um valor alfa especificado para torná-lo transparente, permitindo que o mapa subjacente fique visível por meio da forma. A `GeoPath` propriedade contém uma lista de `Position` objetos que definem as coordenadas geográficas dos pontos do polígono. Um `Polygon` objeto é renderizado no mapa depois que ele é adicionado à `MapElements` coleção do `Map` .
 
 > [!NOTE]
 > Um `Polygon` é uma forma totalmente incluída. O primeiro e o último pontos serão automaticamente conectados se não corresponderem.
 
 ## <a name="create-a-polyline"></a>Criar uma polilinha
 
-Um `Polyline` objeto pode ser adicionado a um mapa, instanciando-o e adicionando-o à coleção `MapElements` do mapa. Isso pode ser feito no XAML da seguinte maneira:
+Um `Polyline` objeto pode ser adicionado a um mapa, instanciando-o e adicionando-o à coleção do mapa `MapElements` . Isso pode ser feito no XAML da seguinte maneira:
 
 ```xaml
 <ContentPage ...
@@ -166,11 +166,11 @@ Polyline polyline = new Polyline
 map.MapElements.Add(polyline);
 ```
 
-As `StrokeColor` propriedades `StrokeWidth` e são especificadas para personalizar a linha. A `GeoPath` propriedade contém uma lista de `Position` objetos que definem as coordenadas geográficas dos pontos de polilinha. Um `Polyline` objeto é renderizado no mapa depois que ele é adicionado à `MapElements` coleção do. `Map`
+As `StrokeColor` `StrokeWidth` Propriedades e são especificadas para personalizar a linha. A `GeoPath` propriedade contém uma lista de `Position` objetos que definem as coordenadas geográficas dos pontos de polilinha. Um `Polyline` objeto é renderizado no mapa depois que ele é adicionado à `MapElements` coleção do `Map` .
 
 ## <a name="create-a-circle"></a>Criar um círculo
 
-Um `Circle` objeto pode ser adicionado a um mapa, instanciando-o e adicionando-o à coleção `MapElements` do mapa. Isso pode ser feito no XAML da seguinte maneira:
+Um `Circle` objeto pode ser adicionado a um mapa, instanciando-o e adicionando-o à coleção do mapa `MapElements` . Isso pode ser feito no XAML da seguinte maneira:
 
 ```xaml
 <ContentPage ...
@@ -212,7 +212,7 @@ Map map = new Map();
 // Instantiate a Circle
 Circle circle = new Circle
 {
-    Center = new Position(37.79752, -122.40183);,
+    Center = new Position(37.79752, -122.40183),
     Radius = new Distance(250),
     StrokeColor = Color.FromHex("#88FF0000"),
     StrokeWidth = 8,
@@ -223,10 +223,10 @@ Circle circle = new Circle
 map.MapElements.Add(circle);
 ```
 
-O local do `Circle` no mapa é determinado pelo valor das propriedades `Center` e. `Radius` A `Center` propriedade define o centro do círculo, na latitude e longitude, enquanto a `Radius` propriedade define o raio do círculo em metros. As `StrokeColor` propriedades `StrokeWidth` e são especificadas para personalizar o contorno do círculo. O `FillColor` valor da propriedade especifica a cor dentro do perímetro do círculo. Os dois valores de cor especificam um canal alfa, permitindo que o mapa subjacente fique visível por meio do círculo. O `Circle` objeto é renderizado no mapa depois que ele é adicionado à `MapElements` coleção do. `Map`
+O local do `Circle` no mapa é determinado pelo valor das `Center` `Radius` Propriedades e. A `Center` propriedade define o centro do círculo, na latitude e longitude, enquanto a `Radius` propriedade define o raio do círculo em metros. As `StrokeColor` `StrokeWidth` Propriedades e são especificadas para personalizar o contorno do círculo. O `FillColor` valor da propriedade especifica a cor dentro do perímetro do círculo. Os dois valores de cor especificam um canal alfa, permitindo que o mapa subjacente fique visível por meio do círculo. O `Circle` objeto é renderizado no mapa depois que ele é adicionado à `MapElements` coleção do `Map` .
 
 > [!NOTE]
-> A `GeographyUtils` classe tem um `ToCircumferencePositions` método de extensão que converte `Circle` um objeto (que `Center` define `Radius` e valores de propriedade) em uma `Position` lista de objetos que compõem as coordenadas de latitude e longitude do perímetro do círculo.
+> A `GeographyUtils` classe tem um `ToCircumferencePositions` método de extensão que converte um `Circle` objeto (que define `Center` e valores de `Radius` Propriedade) em uma lista de `Position` objetos que compõem as coordenadas de latitude e longitude do perímetro do círculo.
 
 ## <a name="related-links"></a>Links relacionados
 

@@ -6,12 +6,12 @@ author: jamesmontemagno
 ms.author: jamont
 ms.date: 04/02/2019
 ms.custom: video
-ms.openlocfilehash: f8e5a31b855158e1f801354c66f3d3d255eca559
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 41d9efa66318f4c3f5315351d3c1f51b4e503521
+ms.sourcegitcommit: 44c44ad60c5c880a39006493aedd2d7aa834a27e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "75488485"
+ms.lasthandoff: 05/18/2020
+ms.locfileid: "83550894"
 ---
 # <a name="xamarinessentials-secure-storage"></a>Xamarin.Essentials: Secure Storage
 
@@ -133,11 +133,11 @@ SecureStorage.RemoveAll();
 
 O [Repositório de chaves do Android](https://developer.android.com/training/articles/keystore.html) é usado para armazenar a chave de criptografia usada para criptografar o valor antes que ele seja salvo em [Preferências Compartilhadas](https://developer.android.com/training/data-storage/shared-preferences.html) com um nome de arquivo **[ID-DO-SEU-PACOTE-DE-APLICATIVO].xamarinessentials**.  A chave (não uma chave de criptografia, a _chave_ para o _valor_) usada no arquivo de preferências compartilhadas é um _Hash MD5_ da chave passada para as APIs do `SecureStorage`.
 
-## <a name="api-level-23-and-higher"></a>Nível da API 23 e superior
+**Nível da API 23 e superior**
 
 Em níveis da API mais recentes, uma chave **AES** é obtida do Repositório de chaves do Android e usada com uma cifra **AES/GCM/NoPadding** para criptografar o valor antes que ele seja armazenado no arquivo de preferências compartilhadas.
 
-## <a name="api-level-22-and-lower"></a>Nível da API 22 e inferior
+**Nível da API 22 e inferior**
 
 Em níveis de API mais antigos, o Repositório de chaves do Android só é compatível com o armazenamento de chaves **RSA**, que é usado com uma cifra **RSA/ECB/PKCS1Padding** para criptografar uma chave **AES** (aleatoriamente gerada no runtime) e armazenado no arquivo de preferências compartilhadas sob a chave _SecureStorageKey_, caso ainda não tenha sido gerado.
 
@@ -155,7 +155,7 @@ Em alguns casos os dados do conjunto de chaves estão sincronizados com o iCloud
 
 Os valores criptografados são armazenados em `ApplicationData.Current.LocalSettings`, dentro de um contêiner com o nome **[ID-DE-SEU-APLICATIVO].xamarinessentials**.
 
-**SecureStorage** usa a API [Preferências](preferences.md) e segue a mesma persistência de dados descrita na documentação de [Preferências](preferences.md#persistence). Ele também `LocalSettings` usa o que tem uma restrição de que o nome de cada configuração pode ser de 255 caracteres no máximo. Cada configuração pode ter até 8K bytes de tamanho e cada configuração composta pode ter até 64K bytes de tamanho.
+**SecureStorage** usa a API [Preferências](preferences.md) e segue a mesma persistência de dados descrita na documentação de [Preferências](preferences.md#persistence). Ele também usa o `LocalSettings` que tem uma restrição de que o nome de cada configuração pode ter 255 caracteres de comprimento máximo. Cada configuração pode ter até 8K bytes de tamanho e cada configuração composta pode ter até 64K bytes de tamanho.
 
 -----
 

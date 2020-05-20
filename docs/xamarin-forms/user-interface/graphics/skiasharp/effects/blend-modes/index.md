@@ -1,34 +1,34 @@
 ---
-title: Modos de mesclagem de SkiaSharp
-description: Use o blend modos para definir o que acontece quando os objetos gráficos são empilhados em uma da outra.
+title: Modos de mesclagem SkiaSharp
+description: Use modos de mesclagem para definir o que acontece quando objetos gráficos são empilhados uns aos outros.
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: CE1B222E-A2D0-4016-A532-EC1E59EE3D6B
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
-ms.openlocfilehash: 8071f310e899575699e1d0b925541f2863b00676
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 829d764f03dd77c6126c2f4bced750ae570a3bc6
+ms.sourcegitcommit: bc0c1740aa0708459729c0e671ab3ff7de3e2eee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68645188"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83425690"
 ---
-# <a name="skiasharp-blend-modes"></a>Modos de mesclagem de SkiaSharp
+# <a name="skiasharp-blend-modes"></a>Modos de mesclagem SkiaSharp
 
-[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
-Esses artigos enfocam o [ `BlendMode` ](xref:SkiaSharp.SKPaint.BlendMode) propriedade do [ `SKPaint` ](xref:SkiaSharp.SKPaint). O `BlendMode` propriedade é do tipo [ `SKBlendMode` ](xref:SkiaSharp.SKBlendMode), uma enumeração com membros de 29.
+Esses artigos se concentram na [`BlendMode`](xref:SkiaSharp.SKPaint.BlendMode) propriedade de [`SKPaint`](xref:SkiaSharp.SKPaint) . A `BlendMode` propriedade é do tipo [`SKBlendMode`](xref:SkiaSharp.SKBlendMode) , uma enumeração com 29 membros.
 
-O `BlendMode` propriedade determina o que acontece quando um objeto gráfico (geralmente chamado do _código-fonte_) é renderizado sobre objetos gráficos existentes (chamado o _destino_). Normalmente, esperamos que o novo objeto de gráfico para ocultar objetos debaixo dele. Mas o que acontece apenas porque é o modo de mesclagem padrão `SKBlendMode.SrcOver`, o que significa que a fonte é desenhada _sobre_ o destino. Os outros membros de 28 `SKBlendMode` causar outros efeitos. Na programação de gráficos, a técnica de objetos gráficos de várias maneiras de combinação é conhecida como _composição_.
+A `BlendMode` propriedade determina o que acontece quando um objeto gráfico (geralmente chamado de _origem_) é renderizado sobre os objetos gráficos existentes (chamados de _destino_). Normalmente, esperamos que o novo objeto gráfico oculte os objetos abaixo dele. Mas isso ocorre apenas porque o modo de mesclagem padrão é `SKBlendMode.SrcOver` , o que significa que a origem é desenhada _sobre_ o destino. Os outros 28 membros de `SKBlendMode` causam outros efeitos. Na programação de gráficos, a técnica de combinar objetos gráficos de várias maneiras é conhecida como _composição_.
 
 ## <a name="the-skblendmodes-enumeration"></a>A enumeração SKBlendModes
 
-Os modos do blend SkiaSharp intimamente correspondem aos descritos no W3C [ **composição e a combinação do nível 1** ](https://www.w3.org/TR/compositing-1/) especificação. O Skia [ **referência SkBlendMode** ](https://skia.org/user/api/SkBlendMode_Reference) também fornece informações úteis em segundo plano. Para obter uma introdução geral misturar modos, o [ **modos de mesclagem** ](https://en.wikipedia.org/wiki/Blend_modes) artigo na Wikipédia é um bom começo. Modos de mesclagem têm suporte do Adobe Photoshop, portanto, não há muito mais informações online sobre os modos de mesclagem nesse contexto.
+Os modos de combinação de SkiaSharp correspondem de forma mais próxima aos descritos na especificação W3C de [**composição e mesclagem nível 1**](https://www.w3.org/TR/compositing-1/) . A [**visão geral**](https://skia.org/user/api/SkBlendMode_Overview) do skia SkBlendMode também fornece informações úteis sobre o plano de fundo. Para obter uma introdução geral aos modos de mesclagem, o artigo [**modos de mesclagem**](https://en.wikipedia.org/wiki/Blend_modes) na Wikipédia é um bom começo. Os modos de mesclagem têm suporte no Adobe Photoshop, portanto, há muitas informações online adicionais sobre modos de mesclagem nesse contexto.
 
-Os membros de 29 do `SKBlendMode` enumeração pode ser dividida em três categorias:
+Os 29 membros da `SKBlendMode` enumeração podem ser divididos em três categorias:
 
-| Porter Duff | Separáveis    | Não separáveis |
+| Carregador-Duff | Separáveis    | Não separáveis |
 | ----------- | ------------ | ------------- |
 | `Clear`     | `Modulate`   | `Hue`         |
 | `Src`       | `Screen`     | `Saturation`  |
@@ -44,53 +44,53 @@ Os membros de 29 do `SKBlendMode` enumeração pode ser dividida em três catego
 | `Xor`       | `Multiply`   |               |
 | `Plus`      |              |               |
 
-Os nomes dessas três categorias levará mais significado nas discussões que seguem. A ordem que os membros são listados aqui é o mesmo na definição do `SKBlendMode` enumeração. Os membros de 13 enumeração na primeira coluna tem os valores de inteiro de 0 a 12. A segunda coluna são membros de enumeração que correspondem aos números inteiros de 13 a 24, e os membros na terceira coluna têm valores de 25 a 28.
+Os nomes dessas três categorias terão mais significado nas discussões a seguir. A ordem em que os membros são listados aqui é igual à definição da `SKBlendMode` enumeração. Os 13 membros de enumeração na primeira coluna têm os valores inteiros de 0 a 12. A segunda coluna são membros de enumeração que correspondem a números inteiros de 13 a 24, e os membros na terceira coluna têm valores de 25 a 28.
 
-Esses modos de mesclagem são discutidos em _aproximadamente_ a mesma ordem no documento de **composição e MESCLAgem** do W3C de nível 1, mas há algumas diferenças: O `Src` modo é chamado de _cópia_ no documento W3C e `Plus` é chamado de _mais claro_. O documento do W3C define uma _Normal_ modo de mesclagem que não está incluído no `SKBlendModes` pois ele seria o mesmo que `SrcOver`. O `Modulate` modo de mesclagem (na parte superior da primeira coluna) não está incluído no documento do W3C e discussão sobre o `Multiply` modo precede `Screen`.
+Esses modos de mesclagem são discutidos em _aproximadamente_ a mesma ordem no documento de **composição e MESCLAgem** do W3C de nível 1, mas há algumas diferenças: o `Src` modo é chamado de _cópia_ no documento W3C e `Plus` é chamado _mais claro_. O documento W3C define um modo de mesclagem _normal_ que não está incluído no `SKBlendModes` porque seria o mesmo que o `SrcOver` . O `Modulate` modo de mesclagem (na parte superior da primeira coluna) não está incluído no documento W3C e a discussão sobre o `Multiply` modo precede `Screen` .
 
-Porque o `Modulate` modo blend é exclusivo para Skia, serão discutida como um modo de Porter Duff adicional e como um modo separável.
+Como o `Modulate` modo de mesclagem é exclusivo do skia, ele será discutido como um modo carregador-Duff adicional e como um modo separáveis.
 
-## <a name="the-importance-of-transparency"></a>A importância de transparência
+## <a name="the-importance-of-transparency"></a>A importância da transparência
 
-Historicamente, a composição foi desenvolvida em conjunto com o conceito do _canal alfa_. Em uma superfície de exibição, como `SKCanvas` o objeto e um bitmap de cor completa, cada pixel consiste em 4 bytes: 1 byte cada para os componentes vermelho, verde e azul e um byte adicional para transparência. Esse componente alfa é 0 para transparência total e 0xFF para opacidade total, com diferentes níveis de transparência entre esses valores.
+Historicamente, a composição foi desenvolvida em conjunto com o conceito do _canal alfa_. Em uma superfície de exibição, como o `SKCanvas` objeto e um bitmap de cor completa, cada pixel consiste em 4 bytes: 1 byte cada para os componentes vermelho, verde e azul e um byte adicional para transparência. Esse componente alfa é 0 para transparência total e 0xFF para opacidade total, com diferentes níveis de transparência entre esses valores.
 
-Muitos dos modos de mesclagem se baseiam na transparência. Geralmente, quando um `SKCanvas` é obtido pela primeira vez em um `PaintSurface` manipulador, ou quando um `SKCanvas` é criado para desenhar em um bitmap, a primeira etapa é essa chamada:
+Muitos dos modos de mesclagem dependem da transparência. Normalmente, quando um `SKCanvas` é obtido pela primeira vez em um `PaintSurface` manipulador, ou quando um `SKCanvas` é criado para desenhar em um bitmap, a primeira etapa é esta chamada:
 
 ```csharp
 canvas.Clear();
 ```
 
-Esse método substitui todos os pixels da tela com pixels pretos transparentes, equivalentes a `new SKColor(0, 0, 0, 0)` ou o inteiro 0x00000000. Todos os bytes de todos os pixels são inicializados em zero.
+Esse método substitui todos os pixels da tela por pixels pretos transparentes, equivalentes a `new SKColor(0, 0, 0, 0)` ou o inteiro 0x00000000. Todos os bytes de todos os pixels são inicializados para zero.
 
-A superfície de desenho de um `SKCanvas` que é obtido em um `PaintSurface` manipulador pode parecer ter um plano de fundo branco, mas só porque o `SKCanvasView` em si tem um plano de fundo transparente, e a página tem um plano de fundo branco. Você pode demonstrar esse fato para si mesmo, definindo o xamarin. Forms `BackgroundColor` propriedade de `SKCanvasView` para uma cor do xamarin. Forms:
+A superfície de desenho de um `SKCanvas` que é obtida em um `PaintSurface` manipulador pode parecer ter um plano de fundo branco, mas isso só ocorre porque ele `SKCanvasView` tem um plano de fundo transparente e a página tem um plano de fundo branco. Você pode demonstrar esse fato por conta própria definindo a propriedade Xamarin. Forms `BackgroundColor` de `SKCanvasView` para uma cor do Xamarin. Forms:
 
 ```csharp
 canvasView.BackgroundColor = Color.Red;
 ```
 
-Ou, em uma classe que deriva de `ContentPage`, você pode definir a cor de plano de fundo da página:
+Ou, em uma classe derivada de `ContentPage` , você pode definir a cor do plano de fundo da página:
 
 ```csharp
 BackgroundColor = Color.Red;
 ```
 
-Você verá que esta tela de fundo vermelha atrás de seus elementos gráficos de SkiaSharp porque o SkiaSharp tela em si é transparente.
+Você verá esse plano de fundo vermelho por trás dos seus gráficos SkiaSharp porque a própria tela SkiaSharp é transparente.
 
-O artigo [ **SkiaSharp transparência** ](../../basics/transparency.md) mostrou algumas técnicas básicas usando transparência para organizar vários elementos gráficos em uma imagem composta. Os modos do blend ir além disso, mas transparência permanece crucial para os modos de mesclagem. 
+O artigo [**SkiaSharp Transparency**](../../basics/transparency.md) mostrou algumas técnicas básicas de uso da transparência para organizar vários gráficos em uma imagem composta. Os modos de mesclagem vão além disso, mas a transparência permanece crucial para os modos de mesclagem.
 
-## <a name="skiasharp-porter-duff-blend-modesporter-duffmd"></a>[Modos de mesclagem Porter-Duff SkiaSharp](porter-duff.md)
+## <a name="skiasharp-porter-duff-blend-modes"></a>[Modos de SkiaSharp carregador-Duff Blend](porter-duff.md)
 
-Use os modos do blend Porter Duff para compor cenas com base em imagens de origem e destino.
+Use os modos de mesclagem carregador-Duff para compor cenas com base em imagens de origem e de destino.
 
-## <a name="skiasharp-separable-blend-modesseparablemd"></a>[Modos de mesclagem separáveis de SkiaSharp](separable.md)
+## <a name="skiasharp-separable-blend-modes"></a>[Modos de SkiaSharp separáveis Blend](separable.md)
 
-Use os modos do blend separáveis para alterar as cores vermelhas, verdes e azuis.
+Use os modos de combinação separáveis para alterar as cores vermelha, verde e azul.
 
-## <a name="skiasharp-non-separable-blend-modesnon-separablemd"></a>[Modos de mesclagem não separáveis de SkiaSharp](non-separable.md)
+## <a name="skiasharp-non-separable-blend-modes"></a>[Modos de mistura SkiaSharp não separáveis](non-separable.md)
 
-Use os modos de mesclagem não separáveis para alterar o matiz, saturação ou luminosidade.
+Use os modos de combinação não separáveis para alterar matiz, saturação ou luminosidade.
 
 ## <a name="related-links"></a>Links relacionados
 
-- [APIs de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [APIs do SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
