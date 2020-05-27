@@ -4,14 +4,14 @@ description: A classe Map no Xamarin.Essentials permite que um aplicativo abra o
 ms.assetid: BABF40CC-8BEE-43FD-BE12-6301DF27DD33
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 04/02/2019
+ms.date: 05/26/2020
 ms.custom: video
-ms.openlocfilehash: c0875534d88ea5b66b3072c35b9d38894fe98934
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 16f4a69e2d9216bb2e03fbcb663403d198b42c98
+ms.sourcegitcommit: 6a6cbb62bcf149f9515ee8868679a8a07ce17956
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "61354563"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83862710"
 ---
 # <a name="xamarinessentials-map"></a>Xamarin.Essentials: Mapa
 
@@ -39,7 +39,14 @@ public class MapTest
         var location = new Location(47.645160, -122.1306032);
         var options =  new MapLaunchOptions { Name = "Microsoft Building 25" };
 
-        await Map.OpenAsync(location, options);
+        try
+        {
+            await Map.OpenAsync(location, options);
+        }
+        catch (Exception ex)
+        {
+            // No map application available to open
+        }
     }
 }
 ```
@@ -65,12 +72,19 @@ public class MapTest
             };
         var options =  new MapLaunchOptions { Name = "Microsoft Building 25" };
 
-        await Map.OpenAsync(placemark, options);
+        try
+        {
+            await Map.OpenAsync(placemark, options);
+        }
+        catch (Exception ex)
+        {
+            // No map application available to open or placemark can not be located
+        }
     }
 }
 ```
 
-## <a name="extension-methods"></a>Métodos de extensão
+## <a name="extension-methods"></a>Métodos de Extensão
 
 Se você já tiver uma referência a uma `Location` ou `Placemark`, use o método de extensão interno `OpenMapAsync` com `MapLaunchOptions` opcional:
 
@@ -79,7 +93,14 @@ public class MapTest
 {
     public async Task OpenPlacemarkOnMap(Placemark placemark)
     {
-        await placemark.OpenMapAsync();
+        try
+        {
+            await placemark.OpenMapAsync();
+        }
+        catch (Exception ex)
+        {
+            // No map application available to open
+        }
     }
 }
 ```
