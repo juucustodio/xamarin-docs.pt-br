@@ -1,44 +1,47 @@
 ---
-title: Os gradientes circulares de SkiaSharp
-description: Saiba mais sobre os diferentes tipos de gradientes com base em círculos.
-ms.prod: xamarin
-ms.technology: xamarin-skiasharp
-ms.assetid: 400AE23A-6A0B-4FA8-BD6B-DE4146B04732
-author: davidbritch
-ms.author: dabritch
-ms.date: 08/23/2018
-ms.openlocfilehash: d56cc499112a937cd1a22664adeedd54c4397341
-ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+title: ''
+description: ''
+ms.prod: ''
+ms.technology: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 418d29010a8cce81d2bb8c365608c54b61739622
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79304173"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84135636"
 ---
-# <a name="the-skiasharp-circular-gradients"></a>Os gradientes circulares de SkiaSharp
+# <a name="the-skiasharp-circular-gradients"></a>Os gradientes circulares do SkiaSharp
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
-A classe [`SKShader`](xref:SkiaSharp.SKShader) define métodos estáticos para criar quatro tipos diferentes de gradientes. O artigo de [**gradiente linear SkiaSharp**](linear-gradient.md) discute o método [`CreateLinearGradient`](xref:SkiaSharp.SKShader.CreateLinearGradient*) . Este artigo aborda os outros três tipos de gradientes, que se baseiam em círculos.
+A [`SKShader`](xref:SkiaSharp.SKShader) classe define métodos estáticos para criar quatro tipos diferentes de gradientes. O artigo [**gradiente linear SkiaSharp**](linear-gradient.md) discute o [`CreateLinearGradient`](xref:SkiaSharp.SKShader.CreateLinearGradient*) método. Este artigo aborda os outros três tipos de gradientes, todos baseados em círculos.
 
-O método [`CreateRadialGradient`](xref:SkiaSharp.SKShader.CreateRadialGradient*) cria um gradiente que emana do centro de um círculo:
+O [`CreateRadialGradient`](xref:SkiaSharp.SKShader.CreateRadialGradient*) método cria um gradiente que emana do centro de um círculo:
 
 ![Exemplo de gradiente radial](circular-gradients-images/RadialGradientSample.png)
 
-O método [`CreateSweepGradient`](xref:SkiaSharp.SKShader.CreateSweepGradient*) cria um gradiente que varre em todo o centro de um círculo:
+O [`CreateSweepGradient`](xref:SkiaSharp.SKShader.CreateSweepGradient*) método cria um gradiente que é varrido em todo o centro de um círculo:
 
-![Exemplo de gradiente de varredura](circular-gradients-images/SweepGradientSample.png)
+![Exemplo de gradação de varredura](circular-gradients-images/SweepGradientSample.png)
 
-O terceiro tipo de gradiente é muito incomum. Ele é chamado de gradiente cônica de dois pontos e é definido pelo método [`CreateTwoPointConicalGradient`](xref:SkiaSharp.SKShader.CreateTwoPointConicalGradient*) . Estende o gradiente de um único círculo para outro:
+O terceiro tipo de gradiente é bastante incomum. Ele é chamado de gradiente cônica de dois pontos e é definido pelo [`CreateTwoPointConicalGradient`](xref:SkiaSharp.SKShader.CreateTwoPointConicalGradient*) método. O gradiente se estende de um círculo para outro:
 
-![Exemplo de gradiente cônica](circular-gradients-images/ConicalGradientSample.png)
+![Amostra de gradiente cônica](circular-gradients-images/ConicalGradientSample.png)
 
-Se os dois círculos têm tamanhos diferentes, o gradiente assume a forma de um cone.
+Se os dois círculos forem tamanhos diferentes, o gradiente assume a forma de um cone.
 
-Este artigo explora esses gradientes em mais detalhes.
+Este artigo explora esses gradientes mais detalhadamente.
 
-## <a name="the-radial-gradient"></a>Gradiente radial
+## <a name="the-radial-gradient"></a>O gradiente radial
 
-O método [`CreateRadialGradient`](xref:SkiaSharp.SKShader.CreateRadialGradient(SkiaSharp.SKPoint,System.Single,SkiaSharp.SKColor[],System.Single[],SkiaSharp.SKShaderTileMode)) tem a seguinte sintaxe:
+O [`CreateRadialGradient`](xref:SkiaSharp.SKShader.CreateRadialGradient(SkiaSharp.SKPoint,System.Single,SkiaSharp.SKColor[],System.Single[],SkiaSharp.SKShaderTileMode)) método tem a seguinte sintaxe:
 
 ```csharp
 public static SKShader CreateRadialGradient (SKPoint center, 
@@ -48,13 +51,13 @@ public static SKShader CreateRadialGradient (SKPoint center,
                                              SKShaderTileMode mode)
 ```
 
-Uma sobrecarga de [`CreateRadialGradient`](xref:SkiaSharp.SKShader.CreateRadialGradient(SkiaSharp.SKPoint,System.Single,SkiaSharp.SKColor[],System.Single[],SkiaSharp.SKShaderTileMode,SkiaSharp.SKMatrix)) também inclui um parâmetro de matriz de transformação.
+Uma [`CreateRadialGradient`](xref:SkiaSharp.SKShader.CreateRadialGradient(SkiaSharp.SKPoint,System.Single,SkiaSharp.SKColor[],System.Single[],SkiaSharp.SKShaderTileMode,SkiaSharp.SKMatrix)) sobrecarga também inclui um parâmetro de matriz de transformação.
 
-Os dois primeiros especificam o Centro de um círculo e um raio. O gradiente começa nesse centro e se estende para fora para `radius` pixels. O que acontece além `radius` depende do argumento [`SKShaderTileMode`](xref:SkiaSharp.SKShaderTileMode) . O parâmetro `colors` é uma matriz de duas ou mais cores (assim como nos métodos de gradiente linear) e `colorPos` é uma matriz de inteiros no intervalo de 0 a 1. Esses inteiros indicam as posições relativas das cores ao longo dessa `radius` linha. Você pode definir esse argumento como `null` para espaçar igualmente as cores.
+Os dois primeiros argumentos especificam o centro de um círculo e um raio. O gradiente começa nesse centro e se estende para fora para `radius` pixels. O que acontece além `radius` depende do [`SKShaderTileMode`](xref:SkiaSharp.SKShaderTileMode) argumento. O `colors` parâmetro é uma matriz de duas ou mais cores (assim como nos métodos de gradiente linear) e `colorPos` é uma matriz de inteiros no intervalo de 0 a 1. Esses inteiros indicam as posições relativas das cores ao longo dessa `radius` linha. Você pode definir esse argumento como `null` para espaçar igualmente as cores.
 
-Se você usar `CreateRadialGradient` para preencher um círculo, poderá definir o centro do gradiente para o centro do círculo e o raio do gradiente para o raio do círculo. Nesse caso, o argumento `SKShaderTileMode` não tem efeito sobre a renderização do gradiente. Mas se a área preenchida pelo gradiente for maior do que o círculo definido pelo gradiente, o argumento `SKShaderTileMode` terá um efeito profundo sobre o que acontece fora do círculo.
+Se você usar `CreateRadialGradient` o para preencher um círculo, poderá definir o centro do gradiente para o centro do círculo e o raio do gradiente para o raio do círculo. Nesse caso, o `SKShaderTileMode` argumento não tem nenhum efeito sobre a renderização do gradiente. Mas se a área preenchida pelo gradiente for maior do que o círculo definido pelo gradiente, o `SKShaderTileMode` argumento terá um efeito profundo sobre o que acontece fora do círculo.
 
-O efeito da `SKShaderMode` é demonstrado na página **gradiente radial** no exemplo [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) . O arquivo XAML para esta página cria uma instância de um `Picker` que permite selecionar um dos três membros da enumeração `SKShaderTileMode`:
+O efeito de `SKShaderMode` é demonstrado na página **gradiente radial** no exemplo [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) . O arquivo XAML para esta página cria uma instância de um `Picker` que permite que você selecione um dos três membros da `SKShaderTileMode` enumeração:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -136,13 +139,13 @@ public partial class RadialGradientPage : ContentPage
 }
 ```
 
-Esse código cria um gradiente com preta no centro, esmaecida gradualmente para branco 100 pixels a partir do centro. O que acontece além desse raio depende do argumento `SKShaderTileMode`:
+Esse código cria um gradiente com preto no centro, esmaecido gradualmente até o White 100 pixels do centro. O que acontece além desse raio depende do `SKShaderTileMode` argumento:
 
 [![Gradiente radial](circular-gradients-images/RadialGradient.png "Gradiente radial")](circular-gradients-images/RadialGradient-Large.png#lightbox)
 
-Em todos os três casos, o gradiente preenche a tela. Na tela do iOS à esquerda, o gradiente além do raio continua com a última cor é branca. Esse é o resultado de `SKShaderTileMode.Clamp`. A tela do Android mostra o efeito de `SKShaderTileMode.Repeat`: a 100 pixels do centro, o gradiente começa novamente com a primeira cor, que é preta. O gradiente se repete a cada 100 pixels do radius. 
+Em todos os três casos, o gradiente preenche a tela. Na tela do iOS à esquerda, o gradiente além do raio continua com a última cor, que é branco. Esse é o resultado de `SKShaderTileMode.Clamp` . A tela do Android mostra o efeito de `SKShaderTileMode.Repeat` : a 100 pixels do centro, o gradiente começa novamente com a primeira cor, que é preta. O gradiente se repete a cada 100 pixels de raio. 
 
-A tela de Plataforma Universal do Windows à direita mostra como `SKShaderTileMode.Mirror` faz com que os gradientes sejam alternados para direções. O primeiro gradiente é de preto no centro em branco em um raio de 100 pixels. A próxima é branca do raio de 100 pixels para preto em um raio de 200 pixels e Avançar gradiente é invertido novamente.
+A tela de Plataforma Universal do Windows à direita mostra como `SKShaderTileMode.Mirror` faz com que os gradientes sejam alternados para direções. O primeiro gradiente é de preto no centro para branco em um raio de 100 pixels. O próximo é branco do raio de 100-pixel para preto em um raio de 200 pixels e o próximo gradiente é revertido novamente.
 
 Você pode usar mais de duas cores em um gradiente radial. O exemplo de **gradiente de arco arco-íris** cria uma matriz de oito cores correspondentes às cores do arco-íris e terminando com vermelho e também uma matriz de oito valores de posição:
 
@@ -204,17 +207,17 @@ public class RainbowArcGradientPage : ContentPage
 }
 ```
 
-Suponha que o mínimo da largura e da altura da tela seja 1000, o que significa que o valor de `rainbowWidth` é 250. Os valores `outerRadius` e `innerRadius` são definidos como 1000 e 750, respectivamente. Esses valores são usados para calcular a matriz de `positions`; os oito valores variam de 0,75 f a 1. O valor de `radius` é usado para traçar o círculo. O valor de 875 significa que se estende a largura do traço de 250 pixels entre o raio de 750 pixels e o raio de 1000 pixels:
+Suponha que o mínimo da largura e da altura da tela seja 1000, o que significa que o `rainbowWidth` valor é 250. Os `outerRadius` `innerRadius` valores e são definidos como 1000 e 750, respectivamente. Esses valores são usados para calcular a `positions` matriz; os oito valores variam de 0,75 f a 1. O `radius` valor é usado para traçar o círculo. O valor de 875 significa que a largura do traço de 250 pixels se estende entre o raio de 750 pixels e o raio de 1000 pixels:
 
 [![Gradiente de arco-íris](circular-gradients-images/RainbowArcGradient.png "Gradiente de arco-íris")](circular-gradients-images/RainbowArcGradient-Large.png#lightbox)
 
-Se você preencher a tela inteira com esse gradiente, veria que ela está vermelha dentro do raio interno. Isso ocorre porque a matriz de `positions` não começa com 0. A primeira cor é usada para deslocamentos de 0 até o primeiro valor de matriz. O gradiente é também vermelho além do raio externo. Esse é o resultado do modo de bloco `Clamp`. Como o gradiente é usado para traçar uma linha espessa, essas áreas vermelhas não são visíveis.
+Se você preencher toda a tela com esse gradiente, verá que ela é vermelha no raio interno. Isso ocorre porque a `positions` matriz não começa com 0. A primeira cor é usada para deslocamentos de 0 por meio do primeiro valor de matriz. O gradiente também está vermelho além do raio externo. Esse é o resultado do `Clamp` modo de bloco. Como o gradiente é usado para traçar uma linha espessa, essas áreas vermelhas não são visíveis.
 
-## <a name="radial-gradients-for-masking"></a>Gradientes radiais para o mascaramento
+## <a name="radial-gradients-for-masking"></a>Gradientes radiais para mascaramento
 
-Como gradientes lineares, gradientes radiais podem incorporar as cores transparentes ou parcialmente transparentes. Esse recurso é útil para um processo chamado _mascaramento_, que oculta parte de uma imagem para acentuar outra parte da imagem.
+Como gradientes lineares, gradientes radiais podem incorporar cores transparentes ou parcialmente transparentes. Esse recurso é útil para um processo chamado _mascaramento_, que oculta parte de uma imagem para acentuar outra parte da imagem.
 
-A página **máscara de gradiente radial** mostra um exemplo. O programa carrega um dos bitmaps de recurso. Os campos `CENTER` e `RADIUS` foram determinados de um exame do bitmap e fazem referência a uma área que deve ser realçada. O manipulador de `PaintSurface` começa calculando um retângulo para exibir o bitmap e, em seguida, o exibe nesse retângulo:
+A página **máscara de gradiente radial** mostra um exemplo. O programa carrega um dos bitmaps de recurso. Os `CENTER` `RADIUS` campos e foram determinados de um exame do bitmap e fazem referência a uma área que deve ser realçada. O `PaintSurface` manipulador começa calculando um retângulo para exibir o bitmap e, em seguida, o exibe nesse retângulo:
 
 ```csharp
 public class RadialGradientMaskPage : ContentPage
@@ -278,19 +281,19 @@ public class RadialGradientMaskPage : ContentPage
 }
 ```
 
-Depois de desenhar o bitmap, um código simples converte `CENTER` e `RADIUS` para `center` e `radius`, que se referem à área realçada no bitmap que foi dimensionado e deslocado para exibição. Esses valores são usados para criar um gradiente radial com center e o radius. As duas cores começam em transparente no Centro de e para o primeiro 60% do raio. Em seguida, o gradiente fica branca:
+Depois de desenhar o bitmap, alguns códigos simples são convertidos `CENTER` e `RADIUS` em `center` e `radius` , que se referem à área realçada no bitmap que foi dimensionado e deslocado para exibição. Esses valores são usados para criar um gradiente radial com esse centro e o raio. As duas cores começam em transparente no centro e para o primeiro 60% do raio. Em seguida, o gradiente desaparece para o branco:
 
 [![Máscara de gradiente radial](circular-gradients-images/RadialGradientMask.png "Máscara de gradiente radial")](circular-gradients-images/RadialGradientMask-Large.png#lightbox)
 
-Essa abordagem não é a melhor maneira para mascarar um bitmap. O problema é que a máscara principalmente tem uma cor branca, que foi escolhida para coincidir com o plano de fundo da tela. Se o plano de fundo for outro &mdash; de cor ou talvez o próprio gradiente &mdash; ele não corresponderá. Uma abordagem melhor para mascaramento é mostrada no artigo [SkiaSharp carregador-Duff Blend Modes](../blend-modes/porter-duff.md).
+Essa abordagem não é a melhor maneira de mascarar um bitmap. O problema é que a máscara tem, na maioria, uma cor de branco, que foi escolhida para corresponder ao plano de fundo da tela. Se o plano de fundo for outra cor &mdash; ou talvez um gradiente &mdash; , ele não corresponderá. Uma abordagem melhor para mascaramento é mostrada no artigo [SkiaSharp carregador-Duff Blend Modes](../blend-modes/porter-duff.md).
 
-## <a name="radial-gradients-for-specular-highlights"></a>Gradientes radiais realces especulares
+## <a name="radial-gradients-for-specular-highlights"></a>Gradientes radiais para realces especulares
 
-Quando uma luz atinge uma superfície arredondada, ele reflete a luz em muitas direções, mas algumas da luz bounces diretamente para os olhos do visualizador. Isso geralmente cria a aparência de uma área branca difusa na superfície chamada de _realce especular_.
+Quando uma luz dura uma superfície arredondada, ela reflete a luz em muitas direções, mas algumas das luzes se resaltam diretamente para o olho do visualizador. Isso geralmente cria a aparência de uma área branca difusa na superfície chamada de _realce especular_.
 
-Elementos gráficos tridimensionais, realces especulares geralmente resultam de algoritmos usados para determinar os caminhos de luz e sombreamento. Em gráficos bidimensionais, realces especulares, às vezes, são adicionados para sugerir a aparência de uma superfície 3D. Um realce especular pode transformar um círculo vermelho simples em uma bola vermelha redonda.
+Em gráficos tridimensionais, os realces especulares geralmente resultam dos algoritmos usados para determinar os caminhos leves e o sombreamento. Em gráficos bidimensionais, às vezes, os realces especulares são adicionados para sugerir a aparência de uma superfície 3D. Um realce especular pode transformar um círculo vermelho simples em uma bola vermelha redonda.
 
-A página de **realce de especula radial** usa um gradiente radial para fazer exatamente isso. O manipulador de `PaintSurface` se aplica ao cálculo de um raio para o círculo e dois valores de `SKPoint` &mdash; um `center` e um `offCenter` que é metade entre o centro e a borda superior esquerda do círculo:
+A página de **realce de especula radial** usa um gradiente radial para fazer exatamente isso. O `PaintSurface` manipulador se aplica ao cálculo de um raio para o círculo e `SKPoint` a dois valores &mdash; a `center` e `offCenter` a metade entre o centro e a borda superior esquerda do círculo:
 
 ```csharp
 public class RadialSpecularHighlightPage : ContentPage
@@ -331,15 +334,15 @@ public class RadialSpecularHighlightPage : ContentPage
 }
 ```
 
-A chamada `CreateRadialGradient` cria um gradiente que começa nesse ponto de `offCenter` com branco e termina com vermelho a uma distância da metade do raio. Veja como é sua aparência:
+A `CreateRadialGradient` chamada cria um gradiente que começa nesse `offCenter` ponto com branco e termina com vermelho a uma distância da metade do raio. Veja como ela se parece:
 
 [![Realce de especula radial](circular-gradients-images/RadialSpecularHighlight.png "Realce de especula radial")](circular-gradients-images/RadialSpecularHighlight-Large.png#lightbox)
 
-Se você examinar de perto desse gradiente, você pode decidir que tem falhas. O gradiente é centralizado em torno de um ponto específico, e talvez você queira que ele fosse um pouco menos simétricos para refletir a superfície de cantos arredondada. Nesse caso, você pode preferir o realce especular mostrado abaixo na seção [**gradientes cônicas para realces especulares**](#conical-gradients-for-specular-highlights).
+Se você olhar mais de acordo com esse gradiente, poderá decidir se ele tem falhas. O gradiente é centralizado em um ponto específico e talvez você queira que ele fosse um pouco menos simétrico para refletir a superfície arredondada. Nesse caso, você pode preferir o realce especular mostrado abaixo na seção [**gradientes cônicas para realces especulares**](#conical-gradients-for-specular-highlights).
 
-## <a name="the-sweep-gradient"></a>O gradiente de varredura
+## <a name="the-sweep-gradient"></a>O gradiente de limpeza
 
-O método [`CreateSweepGradient`](xref:SkiaSharp.SKShader.CreateSweepGradient(SkiaSharp.SKPoint,SkiaSharp.SKColor[],System.Single[])) tem a sintaxe mais simples de todos os métodos de criação de gradiente:
+O [`CreateSweepGradient`](xref:SkiaSharp.SKShader.CreateSweepGradient(SkiaSharp.SKPoint,SkiaSharp.SKColor[],System.Single[])) método tem a sintaxe mais simples de todos os métodos de criação de gradiente:
 
 ```csharp
 public static SKShader CreateSweepGradient (SKPoint center, 
@@ -347,15 +350,15 @@ public static SKShader CreateSweepGradient (SKPoint center,
                                             Single[] colorPos)
 ```
 
-Ele é apenas um centro, uma matriz de cores e as posições de cor. O gradiente começa à direita do ponto central e varre 360 graus no sentido horário em torno do centro. Observe que não há `SKShaderTileMode` parâmetro.
+É apenas um centro, uma matriz de cores e as posições de cor. O gradiente começa à direita do ponto central e varre 360 graus no sentido horário em todo o centro. Observe que não há nenhum `SKShaderTileMode` parâmetro.
 
-Uma sobrecarga de [`CreateSweepGradient`](xref:SkiaSharp.SKShader.CreateSweepGradient(SkiaSharp.SKPoint,SkiaSharp.SKColor[],System.Single[],SkiaSharp.SKMatrix)) com um parâmetro de transformação de matriz também está disponível. Você pode aplicar uma transformação de rotação para o gradiente para alterar o ponto de partida. Você também pode aplicar uma transformação de escala para alterar a direção de no sentido horário para no sentido anti-horário.
+Uma [`CreateSweepGradient`](xref:SkiaSharp.SKShader.CreateSweepGradient(SkiaSharp.SKPoint,SkiaSharp.SKColor[],System.Single[],SkiaSharp.SKMatrix)) sobrecarga com um parâmetro de transformação de matriz também está disponível. Você pode aplicar uma transformação de rotação ao gradiente para alterar o ponto de partida. Você também pode aplicar uma transformação de escala para alterar a direção do sentido horário para o sentido anti-horário.
 
 A página **gradação de limpeza** usa um gradiente de limpeza para colorir um círculo com uma largura de traço de 50 pixels:
 
 [![Gradação de limpeza](circular-gradients-images/SweepGradient.png "Gradação de limpeza")](circular-gradients-images/SweepGradient-Large.png#lightbox)
 
-A classe `SweepGradientPage` define uma matriz de oito cores com valores de matiz diferentes. Observe que a matriz começa e termina com vermelho (um valor de matiz 0 ou 360), que é exibido na extremidade direita nas capturas de tela:
+A `SweepGradientPage` classe define uma matriz de oito cores com valores de matiz diferentes. Observe que a matriz começa e termina com vermelho (um valor de matiz 0 ou 360), que aparece na extrema direita das capturas de tela:
 
 ```csharp
 public class SweepGradientPage : ContentPage
@@ -421,15 +424,15 @@ public class SweepGradientPage : ContentPage
 }
 ```
 
-O programa também implementa um `TapGestureRecognizer` que habilita algum código no final do manipulador de `PaintSurface`. Esse código usa o mesmo gradiente para preencher a tela:
+O programa também implementa um `TapGestureRecognizer` que habilita algum código no final do `PaintSurface` manipulador. Esse código usa o mesmo gradiente para preencher a tela:
 
 [![Gradiente de limpeza completo](circular-gradients-images/SweepGradientFull.png "Gradiente de limpeza completo")](circular-gradients-images/SweepGradientFull-Large.png#lightbox)
 
-Essas capturas de tela demonstram que os preenchimentos com gradiente qualquer área é colorida por ele. Se o gradiente não começar e terminar com a mesma cor, haverá uma descontinuidade à direita do ponto central.
+Essas capturas de tela demonstram que o gradiente preenche qualquer área colorida. Se o gradiente não começar e terminar com a mesma cor, haverá uma descontinuidade à direita do ponto central.
 
-## <a name="the-two-point-conical-gradient"></a>O gradiente de cone de duas pontas
+## <a name="the-two-point-conical-gradient"></a>O gradiente cônica de dois pontos
 
-O método [`CreateTwoPointConicalGradient`](xref:SkiaSharp.SKShader.CreateTwoPointConicalGradient(SkiaSharp.SKPoint,System.Single,SkiaSharp.SKPoint,System.Single,SkiaSharp.SKColor[],System.Single[],SkiaSharp.SKShaderTileMode)) tem a seguinte sintaxe:
+O [`CreateTwoPointConicalGradient`](xref:SkiaSharp.SKShader.CreateTwoPointConicalGradient(SkiaSharp.SKPoint,System.Single,SkiaSharp.SKPoint,System.Single,SkiaSharp.SKColor[],System.Single[],SkiaSharp.SKShaderTileMode)) método tem a seguinte sintaxe:
 
 ```csharp
 public static SKShader CreateTwoPointConicalGradient (SKPoint startCenter, 
@@ -441,9 +444,9 @@ public static SKShader CreateTwoPointConicalGradient (SKPoint startCenter,
                                                       SKShaderTileMode mode)
 ```
 
-Os parâmetros começam com pontos centrais e raios para dois círculos, chamados de círculo de _início_ e _fim_ . Os três parâmetros restantes são os mesmos para `CreateLinearGradient` e `CreateRadialGradient`. Uma sobrecarga de [`CreateTwoPointConicalGradient`](xref:SkiaSharp.SKShader.CreateTwoPointConicalGradient(SkiaSharp.SKPoint,System.Single,SkiaSharp.SKPoint,System.Single,SkiaSharp.SKColor[],System.Single[],SkiaSharp.SKShaderTileMode,SkiaSharp.SKMatrix)) inclui uma transformação de matriz.
+Os parâmetros começam com pontos centrais e raios para dois círculos, chamados de círculo de _início_ e _fim_ . Os três parâmetros restantes são os mesmos para `CreateLinearGradient` e `CreateRadialGradient` . Uma [`CreateTwoPointConicalGradient`](xref:SkiaSharp.SKShader.CreateTwoPointConicalGradient(SkiaSharp.SKPoint,System.Single,SkiaSharp.SKPoint,System.Single,SkiaSharp.SKColor[],System.Single[],SkiaSharp.SKShaderTileMode,SkiaSharp.SKMatrix)) sobrecarga inclui uma transformação de matriz.
 
-O gradiente começa no início círculo e termina em círculo final. O parâmetro `SKShaderTileMode` rege o que acontece além dos dois círculos. O gradiente de cone de duas pontas é apenas gradação inteiramente não preenche uma área. Se os dois círculos tem o mesmo raio, o gradiente é restrito a um retângulo com uma largura que é o mesmo que o diâmetro dos círculos. Se os dois círculos tem raios diferentes, o gradiente constitui um cone.
+O gradiente começa no círculo inicial e termina no círculo final. O `SKShaderTileMode` parâmetro controla o que acontece além dos dois círculos. O gradiente cônica de dois pontos é o único gradiente que não preenche totalmente uma área. Se os dois círculos tiverem o mesmo raio, o gradiente será restrito a um retângulo com uma largura igual ao diâmetro dos círculos. Se os dois círculos tiverem raios diferentes, o gradiente forma um cone.
 
 É provável que você queira experimentar o gradiente cônica de dois pontos, de modo que a página **gradiente cônica** deriva de `InteractivePage` para permitir que dois pontos de toque sejam movidos para o raios de dois círculos:
 
@@ -493,7 +496,7 @@ O gradiente começa no início círculo e termina em círculo final. O parâmetr
 </local:InteractivePage>
 ```
 
-O arquivo code-behind define os dois objetos `TouchPoint` com raios fixos de 50 e 100:
+O arquivo code-behind define os dois `TouchPoint` objetos com raios fixos de 50 e 100:
 
 ```csharp
 public partial class ConicalGradientPage : InteractivePage
@@ -567,27 +570,27 @@ public partial class ConicalGradientPage : InteractivePage
 }
 ```
 
-A matriz de `colors` é vermelha, verde e azul. O código em direção à parte inferior do manipulador de `PaintSurface` desenha os dois pontos de toque como círculos pretos para que eles não obstruam o gradiente.
+A `colors` matriz é vermelha, verde e azul. O código em direção à parte inferior do `PaintSurface` manipulador desenha os dois pontos de toque como círculos pretos para que eles não obstruam o gradiente.
 
-Observe que `DrawRect` chamada usa o gradiente para colorir a tela inteira. Em geral, no entanto, grande parte da tela permanece sem cor, o gradiente. Aqui está o programa mostrando três configurações possíveis:
+Observe que a `DrawRect` chamada usa o gradiente para colorir a tela inteira. No entanto, no caso geral, grande parte da tela permanece descolorido pelo gradiente. Aqui está o programa mostrando três configurações possíveis:
 
 [![Gradiente cônica](circular-gradients-images/ConicalGradient.png "Gradiente cônica")](circular-gradients-images/ConicalGradient-Large.png#lightbox)
 
-A tela do iOS à esquerda mostra o efeito da configuração de `SKShaderTileMode` de `Clamp`. O gradiente começa com vermelho dentro da extremidade do círculo menor do que é o oposto do lado mais próximo ao segundo círculo. O valor de `Clamp` também faz com que o vermelho continue até o ponto do cone. O gradiente termina com azul na borda externa do círculo maior do que está mais próximo ao primeiro círculo, mas continua com azul dentro desse círculo e muito mais.
+A tela do iOS à esquerda mostra o efeito da `SKShaderTileMode` configuração de `Clamp` . O gradiente começa com vermelho dentro da borda do círculo menor que é oposto ao lado mais próximo do segundo círculo. O `Clamp` valor também faz com que o vermelho continue até o ponto do cone. O gradiente termina com azul na borda externa do círculo maior que é mais próximo do primeiro círculo, mas continua com azul dentro desse círculo e além disso.
 
-A tela do Android é semelhante, mas com uma `SKShaderTileMode` de `Repeat`. Agora é mais clara do que o gradiente começa dentro do círculo primeiro e termina fora do círculo de segundo. A configuração `Repeat` faz com que o gradiente repita novamente com vermelho dentro do círculo maior.
+A tela do Android é semelhante, mas com um `SKShaderTileMode` de `Repeat` . Agora é mais claro que o gradiente começa dentro do primeiro círculo e termina fora do segundo círculo. A `Repeat` configuração faz com que o gradiente repita novamente com vermelho dentro do círculo maior.
 
-A tela UWP mostra o que acontece quando é movido para o círculo menor inteiramente dentro do círculo maior. O gradiente deixa de ser um cone e, em vez disso, preenche toda a área. O efeito é semelhante ao gradiente radial, mas é assimétrica, se o círculo menor não exatamente é centralizado dentro do círculo maior.
+A tela UWP mostra o que acontece quando o círculo menor é movido inteiramente dentro do círculo maior. O gradiente pára de ser um cone e, em vez disso, preenche toda a área. O efeito é semelhante ao gradiente radial, mas é assimétrico se o círculo menor não estiver exatamente centralizado no círculo maior.
 
-Quando um círculo é aninhado em outro, mas ele é ideal para um realce especular, você talvez dúvidas a utilidade prática do gradiente.
+Você pode ter dúvidas quanto à utilidade prática do gradiente quando um círculo está aninhado em outro, mas é ideal para um realce especular.
 
-## <a name="conical-gradients-for-specular-highlights"></a>Cônica gradientes de realces especulares
+## <a name="conical-gradients-for-specular-highlights"></a>Gradientes cônicas para realces especulares
 
-Neste artigo, você viu como usar um gradiente radial para criar um realce especular. Você também pode usar o gradiente de cone de duas pontas para essa finalidade, e talvez você prefira a aparência dele:
+Anteriormente neste artigo, você viu como usar um gradiente radial para criar um realce especular. Você também pode usar o gradiente cônica de dois pontos para essa finalidade, e você pode preferir como ele parece:
 
 [![Realce de especular cônica](circular-gradients-images/ConicalSpecularHighlight.png "Realce de especular cônica")](circular-gradients-images/ConicalSpecularHighlight-Large.png#lightbox)
 
-A aparência assimétrica melhor sugere a superfície arredondada do objeto. 
+A aparência assimétrica sugere melhor a superfície arredondada do objeto. 
 
 O código de desenho na página de **realce especular cônicas** é o mesmo que a página de **realce especular radial** , exceto pelo sombreador:
 
@@ -615,7 +618,7 @@ public class ConicalSpecularHighlightPage : ContentPage
 }
 ```
 
-Os dois círculos têm centros de `offCenter` e `center`. O círculo centralizado em `center` está associado a um raio que abrange toda a bola, mas o círculo centralizado em `offCenter` tem um raio de apenas um pixel. O gradiente efetivamente começa nesse ponto e termina na borda da bola.
+Os dois círculos têm centros de `offCenter` e `center` . O círculo centralizado em `center` está associado a um raio que abrange toda a bola, mas o círculo centralizado em `offCenter` tem um raio de apenas um pixel. O gradiente começa com eficiência nesse ponto e termina na borda da bola.
 
 ## <a name="related-links"></a>Links relacionados
 

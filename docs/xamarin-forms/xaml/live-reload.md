@@ -1,26 +1,29 @@
 ---
-title: Recarregamento do Xamarin Live (versão prévia)
-description: Veja as alterações em seu XAML refletidas em tempo real, sem a necessidade de outra compilação e implantação.
-ms.prod: xamarin
-ms.assetid: 4917273d-32f9-401a-a52c-5cfb53a2170d
-ms.technology: xamarin-forms
-author: pierceboggan
-ms.author: piboggan
-robots: noindex
-ms.date: 10/26/2018
-ms.openlocfilehash: e6c8e7b84ba8e3d0f6e6247798bb9164a3bc994d
-ms.sourcegitcommit: 8df67f0d76ff762b517d27b8d4c217d3a3379a18
+title: ''
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+robots: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: b67594e2675c774512f3bf64f2e91ef10dbff444
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79423896"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84134206"
 ---
 # <a name="xamarin-live-reload-preview"></a>Recarregamento do Xamarin Live (versão prévia)
 
 > [!NOTE]
 > A versão prévia da recarga do Xamarin Live terminou e queremos agradecer a todos os seus comentários e comentários. 
 >
-> Para editar seu XAML enquanto seu aplicativo estiver em execução, use o [Hot recarregamento XAML para Xamarin. Forms](~/xamarin-forms/xaml/hot-reload.md).
+> Para editar seu XAML enquanto seu aplicativo estiver em execução, use o [Hot recarregamento Xamarin.Forms XAML para ](~/xamarin-forms/xaml/hot-reload.md).
 >
 
 O Xamarin Live reload permite que você **faça alterações no XAML e os veja refletido em tempo real, sem a necessidade de outra compilação e implantação**. Todas as alterações feitas em seu XAML serão reimplantadas no salvamento e refletidas em seu destino de implantação.
@@ -28,7 +31,7 @@ O Xamarin Live reload permite que você **faça alterações no XAML e os veja r
 ## <a name="requirements"></a>Requisitos
 
 * [Visual Studio 2017 versão 15,7 ou superior](https://visualstudio.microsoft.com/vs/) com o **desenvolvimento móvel com** carga de trabalho do .net.
-* [Xamarin. Forms 3.0.0 ou superior](https://www.nuget.org/packages/Xamarin.Forms/).
+* [ Xamarin.Forms 3.0.0 ou superior](https://www.nuget.org/packages/Xamarin.Forms/).
 
 ## <a name="getting-started"></a>Introdução
 ### <a name="1-install-xamarin-live-reload-from-the-visual-studio-marketplace"></a>1. Instale o Xamarin Live recarregar do Visual Studio Marketplace
@@ -45,7 +48,7 @@ Como alternativa, você pode procurá-lo na guia **online** da caixa de diálogo
 
 Adicionar a recarga ao vivo a aplicativos móveis existentes pode ser feito em três etapas:
 
-1. Verifique se todos os projetos estão atualizados para usar [Xamarin. Forms 3.0.0 ou superior](https://www.nuget.org/packages/Xamarin.Forms/) ou superior.
+1. Verifique se todos os projetos estão atualizados para usar o [ Xamarin.Forms 3.0.0 ou superior](https://www.nuget.org/packages/Xamarin.Forms/) ou superior.
 
 2. Adicione o pacote NuGet do **Xamarin. LiveReload** :
 
@@ -53,9 +56,9 @@ Adicionar a recarga ao vivo a aplicativos móveis existentes pode ser feito em t
     
     b. **Projetos compartilhados** – instale o NuGet do **Xamarin. LiveReload** em todos os projetos de plataforma (como Android, Ios, UWP, etc.). Verifique se a **origem do pacote** está definida como **todos**.
 
-    [![adicionar o Xamarin Live recarregar o NuGet com o Gerenciador de pacotes NuGet](images/addlivereloadnuget.w157-sml.png)](images/addlivereloadnuget.w157.png#lightbox)
+    [![Adicionar o Xamarin Live recarregar NuGet com o Gerenciador de pacotes NuGet](images/addlivereloadnuget.w157-sml.png)](images/addlivereloadnuget.w157.png#lightbox)
 
-3. Adicione `LiveReload.Init();` ao Construtor na classe `Application`, conforme mostrado no seguinte trecho de código:
+3. Adicione `LiveReload.Init();` ao Construtor na `Application` classe, conforme mostrado no seguinte trecho de código:
 
 ```csharp
 public partial class App : Application
@@ -79,7 +82,7 @@ Compile e implante seu aplicativo. Depois que o aplicativo for implantado, abra 
 
 > [!Video https://www.youtube.com/embed/-5WJZpeXlC8]
 
-O recarregamento ao vivo funciona com alterações em qualquer arquivo XAML. Alterações C# ou adição/remoção de pacotes NuGet requer uma nova compilação e implantação para entrar em vigor.
+O recarregamento ao vivo funciona com alterações em qualquer arquivo XAML. Alterações em C# ou adição/remoção de pacotes NuGet requer uma nova compilação e implantação para entrar em vigor.
 
 ## <a name="frequently-asked-questions"></a>Perguntas frequentes 
 ### <a name="is-xamarin-live-reload-available-on-visual-studio-for-mac"></a>A recarga do Xamarin Live está disponível no Visual Studio para Mac? 
@@ -92,11 +95,11 @@ Como seu aplicativo é compilado, o recarregamento ao vivo funciona com todas as
 
 ### <a name="what-changes-does-live-reload-redeploy"></a>Quais alterações o reimplanta ao vivo? 
 
-O recarregamento ao vivo aplica apenas as alterações feitas em XAML ou CSS. Se você fizer alterações em um C# arquivo, uma recompilação será necessária. 
+O recarregamento ao vivo aplica apenas as alterações feitas em XAML ou CSS. Se você fizer alterações em um arquivo C#, uma recompilação será necessária. 
 
 ### <a name="what-platforms-are-supported"></a>Quais plataformas têm suporte? 
 
-O recarregamento ao vivo funciona em qualquer plataforma com suporte do Xamarin. Forms, incluindo Android, iOS e UWP.
+O recarregamento ao vivo funciona em qualquer plataforma com suporte no Xamarin.Forms , incluindo Android, Ios e UWP.
 
 ### <a name="does-this-work-on-emulators-simulators-and-physical-devices"></a>Isso funciona em emuladores, simuladores e dispositivos físicos? 
 
@@ -122,9 +125,9 @@ Não. Na verdade, você pode até mesmo iniciar todos os seus destinos de aplica
 * Recarregar recursos de todo o aplicativo (ou seja, **app. XAML** ou dicionários de recursos compartilhados), a navegação do aplicativo é redefinida. 
 * O recarregamento de ContentView atualmente requer o recarregamento da página recipiente.
 * Os elementos que contêm AutomationId podem causar uma falha de recarregamento.
-* Editar XAML durante a depuração UWP pode causar uma falha de tempo de execução. Solução alternativa: use **Iniciar sem depuração (Ctrl + F5)** em vez de **Iniciar Depuração (F5)** .
+* Editar XAML durante a depuração UWP pode causar uma falha de tempo de execução. Solução alternativa: use **Iniciar sem depuração (Ctrl + F5)** em vez de **Iniciar Depuração (F5)**.
 
-## <a name="troubleshooting"></a>solução de problemas
+## <a name="troubleshooting"></a>Solução de problemas
 
 ### <a name="error-codes"></a>Códigos do Erro
 
@@ -142,11 +145,11 @@ Não. Na verdade, você pode até mesmo iniciar todos os seus destinos de aplica
 
 * *Exceção ao carregar assemblies: System. IO. FileNotFoundException: não foi possível carregar o assembly ' Xamarin. Live. recarregar, Version = 0.3.27.0, Culture = neutral, PublicKeyToken = '.*
 
-  O projeto host deve estar usando `PackageReference` em vez de `packages.config`
+  O projeto host deve estar usando `PackageReference` em vez de`packages.config`
 
 ### <a name="app-doesnt-connect"></a>O aplicativo não se conecta
 
-Quando o aplicativo é criado, as informações de **ferramentas > opções > Xamarin > recarregamento ao vivo** (nome do host, chaves de criptografia e porta) são incorporadas ao aplicativo, de modo que quando `LiveReload.Init()` é executado, nenhum emparelhamento ou configuração é necessário para que a conexão seja realizada com sucesso.
+Quando o aplicativo é criado, as informações de **ferramentas > opções > Xamarin > recarregamento ao vivo** (nome do host, chaves de criptografia e porta) são incorporadas ao aplicativo, de modo que, quando `LiveReload.Init()` executado, nenhum emparelhamento ou configuração seja necessário para que a conexão seja realizada com sucesso.
 
 Além de problemas normais de rede (firewall, dispositivo em uma rede diferente), o principal motivo pelo qual o aplicativo pode não conectar com êxito o IDE é porque sua configuração difere daquela do Visual Studio. Isso pode acontecer se:
 
@@ -161,7 +164,7 @@ Esses casos são resolvidos criando e implantando o aplicativo novamente.
 Se você tiver uma versão prévia mais antiga e tiver problemas para desinstalá-lo, siga estas etapas:
 
 1. Exclua a pasta **C:\Program Files (x86) \Microsoft Visual Studio\Preview\Enterprise\Common7\IDE\Extensions\Xamarin\LiveReload** (Observação: substitua "Enterprise" pela edição instalada e "Preview" por "2017" se você instalou em um vs estável)
-2. Abra um **prompt de comando do desenvolvedor** para o Visual Studio e execute `devenv /updateconfiguration`. 
+2. Abra um **prompt de comando do desenvolvedor** para o Visual Studio e execute `devenv /updateconfiguration` . 
 
 ## <a name="tips--tricks"></a>Dicas & truques
 
@@ -173,9 +176,9 @@ Se você tiver uma versão prévia mais antiga e tiver problemas para desinstal�
 
 ## <a name="live-reload-server"></a>Servidor de recarregamento dinâmico
 
-Em cenários em que uma conexão do aplicativo em execução para seu computador (como indicado usando `localhost` ou `127.0.0.1` em **ferramentas > opções > Xamarin > Live recarregar**) não é possível (ou seja, firewalls, redes diferentes), você pode configurar um servidor remoto em vez disso, o IDE e o aplicativo serão conectardos.
+Em cenários em que uma conexão do aplicativo em execução para seu computador (como indicado usando `localhost` ou `127.0.0.1` em **ferramentas > opções > Xamarin > recarregamento ao vivo**) não é possível (ou seja, firewalls, redes diferentes), você pode configurar um servidor remoto em vez disso, o IDE e o aplicativo serão conectardos.
 
-O recarregamento ao vivo usa o [protocolo MQTT](https://mqtt.org/) padrão para trocar mensagens e, portanto, pode se comunicar com [servidores](https://github.com/mqtt/mqtt.github.io/wiki/servers)de terceiros. Há até mesmo [servidores públicos](https://github.com/mqtt/mqtt.github.io/wiki/public_brokers) (também conhecidos como *agentes*) disponíveis que você pode usar. O recarregamento ao vivo foi testado com `broker.hivemq.com` e `iot.eclipse.org` nomes de host, bem como os serviços fornecidos por [www.cloudmqtt.com](https://www.cloudmqtt.com) e [www.cloudamqp.com](https://www.cloudamqp.com). Você também pode implantar seu próprio servidor MQTT na nuvem, como [HiveMQ no Azure](https://www.hivemq.com/blog/hivemq-on-windows-azure-mqtt-microsoft-cloud).
+O recarregamento ao vivo usa o [protocolo MQTT](https://mqtt.org/) padrão para trocar mensagens e, portanto, pode se comunicar com [servidores](https://github.com/mqtt/mqtt.github.io/wiki/servers)de terceiros. Há até mesmo [servidores públicos](https://github.com/mqtt/mqtt.github.io/wiki/public_brokers) (também conhecidos como *agentes*) disponíveis que você pode usar. O recarregamento ao vivo foi testado com `broker.hivemq.com` e `iot.eclipse.org` os nomes de host, bem como os serviços fornecidos por [www.cloudmqtt.com](https://www.cloudmqtt.com) e [www.cloudamqp.com](https://www.cloudamqp.com). Você também pode implantar seu próprio servidor MQTT na nuvem, como [HiveMQ no Azure](https://www.hivemq.com/blog/hivemq-on-windows-azure-mqtt-microsoft-cloud).
 
 Você pode configurar qualquer porta, mas é comum usar a porta 1883 padrão para servidores remotos. As mensagens de recarga ao vivo usam uma forte criptografia simétrica AES de ponta a ponta, portanto, é seguro conectar-se a servidores remotos. Por padrão, a chave de criptografia e o vetor de inicialização (IV) são regenerados em todas as sessões do Visual Studio.
 
@@ -185,6 +188,6 @@ Provavelmente, a maneira mais fácil é instalar o servidor [mosquitto](https://
 2. Adicione uma nova regra de porta de entrada para 1883 (porta MQTT padrão) na guia rede
 3. Abrir o [Cloud Shell](https://docs.microsoft.com/azure/cloud-shell/overview) (modo bash)
 4. Digite `ssh [USERNAME]@[PUBLIC_IP]` usando o nome de usuário que você escolheu em 1) e o IP público mostrado na página de visão geral da VM
-5. Execute `sudo apt-get install mosquitto`, inserindo a senha que você escolheu em 1)
+5. Execute `sudo apt-get install mosquitto` , inserindo a senha que você escolheu em 1)
 
 Agora você pode usar esse IP para se conectar ao seu próprio servidor MQTT.

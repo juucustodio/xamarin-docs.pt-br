@@ -1,24 +1,27 @@
 ---
-title: Comportamentos anexados
-description: Comportamentos anexados são classes estáticas com uma ou mais propriedades anexadas. Este artigo demonstra como criar e consumir comportamentos anexados.
-ms.prod: xamarin
-ms.assetid: ECEE6AEC-44FA-4AF7-BAD0-88C6EE48422E
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 04/06/2016
-ms.openlocfilehash: 7d16eef4fe5422fb5cf3c039c66d1b0f113727fd
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: ''
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 08b1c738dc87bb9373436a3fd96486eb15341112
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "77131125"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84139419"
 ---
 # <a name="attached-behaviors"></a>Comportamentos anexados
 
-[![Baixar](~/media/shared/download.png) amostra Baixar a amostra](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-attachednumericvalidationbehavior)
+[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-attachednumericvalidationbehavior)
 
-_Comportamentos anexados são classes estáticas com uma ou mais propriedades anexadas. Este artigo demonstra como criar e consumir comportamentos anexados._
+_Os comportamentos anexados são classes estáticas com uma ou mais propriedades anexadas. Este artigo demonstra como criar e consumir comportamentos anexados._
 
 ## <a name="overview"></a>Visão geral
 
@@ -26,14 +29,14 @@ Uma propriedade anexada é um tipo especial de propriedade associável. Elas sã
 
 Uma propriedade anexada pode definir um delegado `propertyChanged` que será executado quando o valor da propriedade for alterado, por exemplo, quando a propriedade for definida em um controle. Quando o delegado `propertyChanged` é executado, é passada a ele uma referência ao controle a que ele está sendo anexado, bem como parâmetros que contêm os valores antigo e novo da propriedade. Esse delegado pode ser usado para adicionar uma nova funcionalidade ao controle a que a propriedade está anexada manipulando a referência que é passada, da seguinte maneira:
 
-1. O `propertyChanged` delegado lança a referência de controle, que é recebida como um , para o tipo de [`BindableObject`](xref:Xamarin.Forms.BindableObject)controle que o comportamento é projetado para melhorar.
+1. O `propertyChanged` delegado converte a referência de controle, que é recebida como um [`BindableObject`](xref:Xamarin.Forms.BindableObject) , para o tipo de controle que o comportamento foi projetado para aprimorar.
 1. O delegado `propertyChanged` modifica as propriedades do controle, chama os métodos do controle ou registra manipuladores de eventos para eventos expostos pelo controle, a fim de implementar a funcionalidade do comportamento de núcleo.
 
-Um problema com comportamentos anexados é que eles são definidos em uma classe `static`, com propriedades `static` e métodos. Isso dificulta a criação de comportamentos anexados com estado. Além disso, os comportamentos do Xamarin.Forms substituíram os comportamentos anexados como a abordagem preferencial para a construção de comportamentos. Para obter mais informações sobre comportamentos no Xamarin.Forms, confira [Comportamentos do Xamarin.Forms](~/xamarin-forms/app-fundamentals/behaviors/creating.md) e [Comportamentos reutilizáveis](~/xamarin-forms/app-fundamentals/behaviors/reusable/index.md).
+Um problema com comportamentos anexados é que eles são definidos em uma classe `static`, com propriedades `static` e métodos. Isso dificulta a criação de comportamentos anexados com estado. Além disso, Xamarin.Forms os comportamentos substituíram os comportamentos anexados como a abordagem preferida para a construção do comportamento. Para obter mais informações sobre Xamarin.Forms comportamentos, consulte [ Xamarin.Forms comportamentos](~/xamarin-forms/app-fundamentals/behaviors/creating.md) e [comportamentos reutilizáveis](~/xamarin-forms/app-fundamentals/behaviors/reusable/index.md).
 
 ## <a name="creating-an-attached-behavior"></a>Criando um comportamento anexado
 
-O aplicativo de `NumericValidationBehavior`amostra demonstra um , que destaca [`Entry`](xref:Xamarin.Forms.Entry) o valor inserido pelo usuário `double`em um controle em vermelho, se não for um . Esse comportamento é mostrado no exemplo de código a seguir:
+O aplicativo de exemplo demonstra um `NumericValidationBehavior` , que realça o valor inserido pelo usuário em um [`Entry`](xref:Xamarin.Forms.Entry) controle em vermelho, se não for um `double` . Esse comportamento é mostrado no exemplo de código a seguir:
 
 ```csharp
 public static class NumericValidationBehavior
@@ -80,11 +83,11 @@ public static class NumericValidationBehavior
 }
 ```
 
-A classe `NumericValidationBehavior` contém uma propriedade anexada chamada `AttachBehavior`, com um getter e setter `static`, que controla a adição ou remoção do comportamento do controle a que ele será anexado. Essa propriedade anexada registra o método `OnAttachBehaviorChanged` que será executado quando o valor da propriedade for alterado. Este método registra ou desregistra um [`TextChanged`](xref:Xamarin.Forms.InputView.TextChanged) manipulador de eventos para `AttachBehavior` o evento, com base no valor da propriedade anexada. A funcionalidade central do comportamento é `OnEntryTextChanged` fornecida pelo método, que analisa [`Entry`](xref:Xamarin.Forms.Entry) o valor inserido pelo `TextColor` usuário e define a propriedade `double`como vermelha se o valor não for um .
+A classe `NumericValidationBehavior` contém uma propriedade anexada chamada `AttachBehavior`, com um getter e setter `static`, que controla a adição ou remoção do comportamento do controle a que ele será anexado. Essa propriedade anexada registra o método `OnAttachBehaviorChanged` que será executado quando o valor da propriedade for alterado. Esse método registra ou Desregistra um manipulador de eventos para o [`TextChanged`](xref:Xamarin.Forms.InputView.TextChanged) evento, com base no valor da `AttachBehavior` Propriedade anexada. A funcionalidade principal do comportamento é fornecida pelo `OnEntryTextChanged` método, que analisa o valor inserido no [`Entry`](xref:Xamarin.Forms.Entry) pelo usuário e define a `TextColor` propriedade como vermelha se o valor não for um `double` .
 
 ## <a name="consuming-an-attached-behavior"></a>Consumindo um comportamento anexado
 
-A `NumericValidationBehavior` classe pode ser `AttachBehavior` consumida adicionando [`Entry`](xref:Xamarin.Forms.Entry) a propriedade anexada a um controle, como demonstrado no seguinte exemplo de código XAML:
+A `NumericValidationBehavior` classe pode ser consumida adicionando a `AttachBehavior` Propriedade anexada a um [`Entry`](xref:Xamarin.Forms.Entry) controle, conforme demonstrado no exemplo de código XAML a seguir:
 
 ```xaml
 <ContentPage ... xmlns:local="clr-namespace:WorkingWithBehaviors;assembly=WorkingWithBehaviors" ...>
@@ -94,7 +97,7 @@ A `NumericValidationBehavior` classe pode ser `AttachBehavior` consumida adicion
 </ContentPage>
 ```
 
-O [`Entry`](xref:Xamarin.Forms.Entry) equivalente em C# é mostrado no seguinte exemplo de código:
+O equivalente [`Entry`](xref:Xamarin.Forms.Entry) em C# é mostrado no seguinte exemplo de código:
 
 ```csharp
 var entry = new Entry { Placeholder = "Enter a System.Double" };
@@ -116,14 +119,14 @@ A classe `NumericValidationBehavior` pode ser removida de um controle definindo 
 <Entry Placeholder="Enter a System.Double" local:NumericValidationBehavior.AttachBehavior="false" />
 ```
 
-O [`Entry`](xref:Xamarin.Forms.Entry) equivalente em C# é mostrado no seguinte exemplo de código:
+O equivalente [`Entry`](xref:Xamarin.Forms.Entry) em C# é mostrado no seguinte exemplo de código:
 
 ```csharp
 var entry = new Entry { Placeholder = "Enter a System.Double" };
 NumericValidationBehavior.SetAttachBehavior (entry, false);
 ```
 
-No runtime, o método `OnAttachBehaviorChanged` será executado quando o valor da propriedade anexada `AttachBehavior` for definida como `false`. O `OnAttachBehaviorChanged` método, então, cancelará o [`TextChanged`](xref:Xamarin.Forms.InputView.TextChanged) registro do manipulador de eventos para o evento, garantindo que o comportamento não seja executado à medida que o usuário interage com o controle.
+No runtime, o método `OnAttachBehaviorChanged` será executado quando o valor da propriedade anexada `AttachBehavior` for definida como `false`. O `OnAttachBehaviorChanged` método então desregistrará o manipulador de eventos para o [`TextChanged`](xref:Xamarin.Forms.InputView.TextChanged) evento, garantindo que o comportamento não seja executado enquanto o usuário interage com o controle.
 
 ## <a name="summary"></a>Resumo
 

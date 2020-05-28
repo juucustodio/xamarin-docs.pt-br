@@ -1,51 +1,54 @@
 ---
-title: Responder a alterações de tema do sistema em aplicativos Xamarin. Forms
-description: Os aplicativos Xamarin. Forms podem responder às alterações de tema do sistema operacional usando o tipo OnAppTheme e a extensão de marcação DynamicResource.
-ms.assetid: D10506DD-BAA0-437F-A4AD-882D16E7B60D
-ms.prod: xamarin
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 04/22/2020
-ms.openlocfilehash: c524ac0809044e576a8d56561642f6c3bf2df4a4
-ms.sourcegitcommit: 8d13d2262d02468c99c4e18207d50cd82275d233
+title: Responder a alterações de tema do sistema em Xamarin.Forms aplicativos
+description: Xamarin.Formsos aplicativos podem responder às alterações de tema do sistema operacional usando o tipo OnAppTheme e a extensão de marcação DynamicResource.
+ms.assetid: ''
+ms.prod: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 2bb83f4ad5c30adccfc961938df64dda9cef1f6b
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82532838"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84140056"
 ---
-# <a name="respond-to-system-theme-changes-in-xamarinforms-applications"></a>Responder a alterações de tema do sistema em aplicativos Xamarin. Forms
+# <a name="respond-to-system-theme-changes-in-xamarinforms-applications"></a>Responder a alterações de tema do sistema em Xamarin.Forms aplicativos
 
-[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-systemthemesdemo/)
+[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-systemthemesdemo/)
 
 Os dispositivos normalmente incluem temas leves e escuros, que se referem a um amplo conjunto de preferências de aparência que podem ser definidas no nível do sistema operacional. Os aplicativos devem respeitar esses temas do sistema e responder imediatamente quando o tema do sistema for alterado.
 
 O tema do sistema pode ser alterado por vários motivos, dependendo da configuração do dispositivo. Isso inclui o tema do sistema que está sendo explicitamente alterado pelo usuário, ele se altera devido à hora do dia e é alterado devido a fatores ambientais, como baixa luz.
 
-Os aplicativos Xamarin. Forms podem responder às alterações de tema do sistema definindo recursos `AppThemeColor` com a classe `OnAppTheme<T>` , a classe e `OnAppTheme` a extensão de marcação. Esses recursos devem ser consumidos com `DynamicResource` a extensão de marcação.
+Xamarin.Formsos aplicativos podem responder às alterações de tema do sistema definindo recursos com a `AppThemeColor` classe, a `OnAppTheme<T>` classe e a `OnAppTheme` extensão de marcação. Esses recursos devem ser consumidos com a `DynamicResource` extensão de marcação.
 
 > [!IMPORTANT]
-> Responder a uma alteração de tema do sistema é experimental no momento e só pode ser usado pela `AppTheme_Experimental` definição do sinalizador. Para obter mais informações, consulte [sinalizadores experimentais](~/xamarin-forms/internals/experimental-flags.md).
+> Responder a uma alteração de tema do sistema é experimental no momento e só pode ser usado pela definição do `AppTheme_Experimental` sinalizador. Para obter mais informações, consulte [sinalizadores experimentais](~/xamarin-forms/internals/experimental-flags.md).
 
-Os requisitos a seguir devem ser atendidos para que o Xamarin. Forms responda a uma alteração de tema do sistema:
+Os requisitos a seguir devem ser atendidos para Xamarin.Forms que o responda a uma alteração de tema do sistema:
 
-- Xamarin. Forms 4,6 ou superior.
+- Xamarin.Forms4,6 ou superior.
 - iOS 13 ou superior.
 - Android 10 (API 29) ou superior.
 - O UWP Build 14393 ou superior.
 
 As capturas de tela a seguir mostram páginas com tema, para temas de sistema leves e escuros no iOS e no Android:
 
-[![Captura de tela da página principal de um aplicativo com tema, na](system-theme-changes-images/main-page-both-themes.png "Página principal do aplicativo com tema")](system-theme-changes-images/main-page-both-themes-large.png#lightbox "Página principal do aplicativo com tema")
-[![captura de tela do IOS e do Android da página de detalhes de um aplicativo com tema, no Ios e no Android](system-theme-changes-images/detail-page-both-themes.png "Página de detalhes do aplicativo com tema")](system-theme-changes-images/detail-page-both-themes-large.png#lightbox "Página de detalhes do aplicativo com tema")
+[![Captura de tela da página principal de um aplicativo com tema, no Ios e no Android](system-theme-changes-images/main-page-both-themes.png "Página principal do aplicativo com tema")](system-theme-changes-images/main-page-both-themes-large.png#lightbox "Página principal do aplicativo com tema") 
+ [ ![Captura de tela da página de detalhes de um aplicativo com tema, no Ios e no Android](system-theme-changes-images/detail-page-both-themes.png "Página de detalhes do aplicativo com tema")](system-theme-changes-images/detail-page-both-themes-large.png#lightbox "Página de detalhes do aplicativo com tema")
 
 ## <a name="define-and-consume-theme-resources"></a>Definir e consumir recursos de tema
 
-Os recursos para temas claros e escuros podem ser `AppThemeColor` definidos com a `OnAppTheme<T>` classe, a classe `OnAppTheme` e a extensão de marcação. Com cada abordagem, esses recursos são automaticamente aplicados com base no valor do tema atual do sistema. Além disso, os objetos que consumirem esses recursos serão atualizados automaticamente se o tema do sistema for alterado enquanto um aplicativo estiver em execução.
+Os recursos para temas claros e escuros podem ser definidos com a `AppThemeColor` classe, a `OnAppTheme<T>` classe e a `OnAppTheme` extensão de marcação. Com cada abordagem, esses recursos são automaticamente aplicados com base no valor do tema atual do sistema. Além disso, os objetos que consumirem esses recursos serão atualizados automaticamente se o tema do sistema for alterado enquanto um aplicativo estiver em execução.
 
 ### <a name="appthemecolor"></a>AppThemeColor
 
-A `AppThemeColor` classe é usada para definir [`Color`](xref:Xamarin.Forms.Color) recursos para os temas de sistema claro e escuro. `AppThemeColor`os recursos devem ser definidos em [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary)um:
+A `AppThemeColor` classe é usada para definir [`Color`](xref:Xamarin.Forms.Color) recursos para os temas de sistema claro e escuro. `AppThemeColor`os recursos devem ser definidos em um [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) :
 
 ```xaml
 <Application ...>
@@ -78,7 +81,7 @@ A `AppThemeColor` classe é usada para definir [`Color`](xref:Xamarin.Forms.Colo
 </Application>
 ```
 
-Cada `AppThemeColor` recurso deve ter um `x:Key` atributo, que fornece uma chave descritiva no [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary). O valor das propriedades `Light` e `Dark` deve ser [`Color`](xref:Xamarin.Forms.Color) Objects. Além disso, uma `Default` propriedade pode ser definida como a `Color` para ser usada pelo objeto de consumo por padrão.
+Cada `AppThemeColor` recurso deve ter um `x:Key` atributo, que fornece uma chave descritiva no [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) . O valor das `Light` Propriedades e `Dark` deve ser [`Color`](xref:Xamarin.Forms.Color) Objects. Além disso, uma `Default` propriedade pode ser definida como a `Color` para ser usada pelo objeto de consumo por padrão.
 
 `AppThemeColor`os recursos podem ser consumidos em linha:
 
@@ -87,7 +90,7 @@ Cada `AppThemeColor` recurso deve ter um `x:Key` atributo, que fornece uma chave
        TextColor="{DynamicResource PrimaryTextColor}" />
 ```
 
-Como alternativa, `AppThemeColor` os recursos podem ser consumidos por [`Style`](xref:Xamarin.Forms.Style) objetos implícitos ou explícitos:
+Como alternativa, os `AppThemeColor` recursos podem ser consumidos por objetos implícitos ou explícitos [`Style`](xref:Xamarin.Forms.Style) :
 
 ```xaml
 <Style TargetType="NavigationPage">
@@ -99,11 +102,11 @@ Como alternativa, `AppThemeColor` os recursos podem ser consumidos por [`Style`]
 ```
 
 > [!IMPORTANT]
-> `AppThemeColor`os recursos devem ser consumidos com a extensão de `DynamicResource` marcação. Isso garante que a aparência do objeto de consumo seja atualizada quando o tema do sistema for alterado.
+> `AppThemeColor`os recursos devem ser consumidos com a `DynamicResource` extensão de marcação. Isso garante que a aparência do objeto de consumo seja atualizada quando o tema do sistema for alterado.
 
-### <a name="onappthemelttgt"></a>OnAppTheme&lt;T&gt;
+### <a name="onappthemelttgt"></a>OnAppTheme &lt; T&gt;
 
-A `OnAppTheme<T>` classe é usada para definir recursos de qualquer tipo para os temas de sistema claro e escuro. `OnAppTheme<T>`os recursos devem ser definidos em [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary)um, com `T` o argumento especificado como o valor do `x:TypeArguments` atributo:
+A `OnAppTheme<T>` classe é usada para definir recursos de qualquer tipo para os temas de sistema claro e escuro. `OnAppTheme<T>`os recursos devem ser definidos em um [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) , com o `T` argumento especificado como o valor do `x:TypeArguments` atributo:
 
 ```xaml
 <Application ...>
@@ -116,7 +119,7 @@ A `OnAppTheme<T>` classe é usada para definir recursos de qualquer tipo para os
 </Application>
 ```
 
-Cada `OnAppTheme<T>` recurso deve ter um `x:Key` atributo, que fornece uma chave descritiva no [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary). O valor das propriedades `Light` e `Dark` deve ser objetos do tipo definido como o `x:TypeArguments` atributo. Além disso, uma `Default` propriedade pode ser definida como um objeto do tipo `T` a ser usado pelo objeto de consumo por padrão.
+Cada `OnAppTheme<T>` recurso deve ter um `x:Key` atributo, que fornece uma chave descritiva no [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) . O valor das `Light` Propriedades e `Dark` deve ser objetos do tipo definido como o `x:TypeArguments` atributo. Além disso, uma `Default` propriedade pode ser definida como um objeto do tipo `T` a ser usado pelo objeto de consumo por padrão.
 
 `OnAppTheme<T>`os recursos podem ser consumidos em linha:
 
@@ -126,7 +129,7 @@ Cada `OnAppTheme<T>` recurso deve ter um `x:Key` atributo, que fornece uma chave
        HeightRequest="200" /
 ```
 
-Como alternativa, `OnAppTheme<T>` os recursos podem ser consumidos por [`Style`](xref:Xamarin.Forms.Style) objetos implícitos ou explícitos:
+Como alternativa, os `OnAppTheme<T>` recursos podem ser consumidos por objetos implícitos ou explícitos [`Style`](xref:Xamarin.Forms.Style) :
 
 ```xaml
 <Style x:Key="imageLogoStyle"
@@ -139,7 +142,7 @@ Como alternativa, `OnAppTheme<T>` os recursos podem ser consumidos por [`Style`]
 ```
 
 > [!IMPORTANT]
-> `OnAppTheme<T>`os recursos devem ser consumidos com a extensão de `DynamicResource` marcação. Isso garante que a aparência do objeto de consumo seja atualizada quando o tema do sistema for alterado.
+> `OnAppTheme<T>`os recursos devem ser consumidos com a `DynamicResource` extensão de marcação. Isso garante que a aparência do objeto de consumo seja atualizada quando o tema do sistema for alterado.
 
 ### <a name="onapptheme-markup-extension"></a>Extensão de marcação OnAppTheme
 
@@ -155,9 +158,9 @@ A `OnAppTheme` extensão de marcação permite que você especifique um recurso 
 </ContentPage>
 ```
 
-Neste exemplo, a cor do texto do primeiro [`Label`](xref:Xamarin.Forms.Label) é definida como verde quando o dispositivo está usando seu tema claro e é definido como vermelho quando o dispositivo está usando seu tema escuro. Da mesma forma [`Image`](xref:Xamarin.Forms.Image) , o exibe um arquivo de imagem diferente baseado no tema atual do sistema.
+Neste exemplo, a cor do texto do primeiro [`Label`](xref:Xamarin.Forms.Label) é definida como verde quando o dispositivo está usando seu tema claro e é definido como vermelho quando o dispositivo está usando seu tema escuro. Da mesma forma, o [`Image`](xref:Xamarin.Forms.Image) exibe um arquivo de imagem diferente baseado no tema atual do sistema.
 
-Para obter mais informações sobre `OnAppTheme` a extensão de marcação, consulte [OnAppTheme Markup Extension](~/xamarin-forms/xaml/markup-extensions/consuming.md#onapptheme-markup-extension).
+Para obter mais informações sobre a `OnAppTheme` extensão de marcação, consulte [OnAppTheme Markup Extension](~/xamarin-forms/xaml/markup-extensions/consuming.md#onapptheme-markup-extension).
 
 ## <a name="detect-the-current-system-theme"></a>Detectar o tema atual do sistema
 
@@ -175,7 +178,7 @@ A `RequestedTheme` propriedade retorna um `OSAppTheme` membro de enumeração. A
 
 ## <a name="react-to-theme-changes"></a>Reagir às alterações do tema
 
-O tema do sistema em um dispositivo pode ser alterado por vários motivos, dependendo de como o dispositivo está configurado. Os aplicativos Xamarin. Forms podem ser notificados quando o tema do sistema é `Application.RequestedThemeChanged` alterado ao manipular o evento:
+O tema do sistema em um dispositivo pode ser alterado por vários motivos, dependendo de como o dispositivo está configurado. Xamarin.Formsos aplicativos podem ser notificados quando o tema do sistema muda de acordo com a manipulação do `Application.RequestedThemeChanged` evento:
 
 ```csharp
 Application.Current.RequestedThemeChanged += (s, a) =>
@@ -184,12 +187,12 @@ Application.Current.RequestedThemeChanged += (s, a) =>
 };
 ```
 
-O `AppThemeChangedEventArgs` objeto, que acompanha o `RequestedThemeChanged` evento, tem uma única propriedade chamada `RequestedTheme`, do tipo. `OSAppTheme` Essa propriedade pode ser examinada para detectar o tema do sistema solicitado.
+O `AppThemeChangedEventArgs` objeto, que acompanha o `RequestedThemeChanged` evento, tem uma única propriedade chamada `RequestedTheme` , do tipo `OSAppTheme` . Essa propriedade pode ser examinada para detectar o tema do sistema solicitado.
 
 ## <a name="related-links"></a>Links relacionados
 
 - [SystemThemes (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-systemthemesdemo/)
 - [Extensão de marcação OnAppTheme](~/xamarin-forms/xaml/markup-extensions/consuming.md#onapptheme-markup-extension)
 - [Dicionários de recurso](~/xamarin-forms/xaml/resource-dictionaries.md)
-- [Estilos dinâmicos no Xamarin. Forms](~/xamarin-forms/user-interface/styles/xaml/dynamic.md)
-- [Aplicar estilo a aplicativos do Xamarin.Forms usando os estilos XAML](~/xamarin-forms/user-interface/styles/xaml/index.md)
+- [Estilos dinâmicos emXamarin.Forms](~/xamarin-forms/user-interface/styles/xaml/dynamic.md)
+- [Estilizando Xamarin.Forms aplicativos usando estilos XAML](~/xamarin-forms/user-interface/styles/xaml/index.md)

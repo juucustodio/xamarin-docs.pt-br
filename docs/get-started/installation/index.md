@@ -1,19 +1,22 @@
 ---
-title: Instalando o Xamarin
-description: Esta seção fornece uma visão geral das práticas de instalação e de configuração que podem ser usadas para configurar o Xamarin no Visual Studio.
-zone_pivot_groups: platform-dev16
-ms.prod: xamarin
-ms.assetid: 0f813a14-2f0c-415d-8667-4563f3dc06e8
-author: conceptdev
-ms.author: crdun
-ms.custom: video
-ms.date: 05/23/2019
-ms.openlocfilehash: cf54d4a6d8cdedc4ddde0beedeaadd361356990a
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: ''
+description: ''
+zone_pivot_groups: ''
+ms.prod: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.custom: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 928a8f9ca1792fa79f3c5995959e6407c23649f4
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "66252315"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84133049"
 ---
 # <a name="installing-xamarin"></a>Instalando o Xamarin
 
@@ -21,7 +24,7 @@ _Como configurar o Visual Studio e o Xamarin para começar a compilar aplicativo
 
 ::: zone pivot="windows"
 
-## <a name="installing-xamarin-on-windows"></a>Instalar o Xamarin no Windows
+## <a name="installing-xamarin-on-windows"></a>Instalando o Xamarin no Windows
 
 > [!Video https://channel9.msdn.com/Shows/XamarinShow/Installing-Visual-Studio-2019-for-Mobile-Development-with-NET--Xamarin/player]
 
@@ -32,7 +35,7 @@ _Como configurar o Visual Studio e o Xamarin para começar a compilar aplicativo
 ::: zone-end
 ::: zone pivot="win-vs2017"
 
-## <a name="installing-xamarin-on-windows"></a>Instalar o Xamarin no Windows
+## <a name="installing-xamarin-on-windows"></a>Instalando o Xamarin no Windows
 
 > [!Video https://channel9.msdn.com/Shows/XamarinShow/Installing-Visual-Studio-2017-for-Mobile-Development-with-NET/player]
 
@@ -56,4 +59,4 @@ Além deste vídeo, há uma [guia de instalação passo a passo](/visualstudio/m
 ## <a name="related-links"></a>Links relacionados
 
 - [Desinstalando o Xamarin](~/get-started/installation/uninstalling-xamarin.md)
-- [Instruções de configuração do Firewall Xamarin](firewall.md)
+- [Instruções de configuração de firewall do Xamarin](firewall.md)

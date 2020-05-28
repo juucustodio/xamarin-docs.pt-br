@@ -1,20 +1,23 @@
 ---
-title: Extensões da plataforma do Xamarin.Essentials
-description: O Xamarin.Essentials fornece vários métodos de extensão de plataforma quando é preciso trabalhar com tipos de plataforma, como retângulo, tamanho e o ponto.
-ms.assetid: AB4D198A-4FD7-479E-8627-01F887A6D056
-author: jamesmontemagno
-ms.author: jamont
-ms.date: 03/13/2019
-ms.openlocfilehash: 4e43159fb9cae6646be54d8efc24c334bc071477
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: Xamarin.EssentialsExtensões de plataforma
+description: Xamarin.Essentialsfornece vários métodos de extensão de plataforma ao ter que trabalhar com tipos de plataforma como Rect, size e Point.
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 3266d3870dc0d1ddef747168b2ac6b4d397a7c33
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "77545155"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84135350"
 ---
 # <a name="xamarinessentials-platform-extensions"></a>Xamarin.Essentials: Extensões de plataforma
 
-O Xamarin.Essentials fornece vários métodos de extensão de plataforma quando é preciso trabalhar com tipos de plataforma, como retângulo, tamanho e o ponto. Isso significa que você pode converter entre a versão `System` desses tipos para iOS, Android e tipos específicos de UWP. 
+Xamarin.Essentialsfornece vários métodos de extensão de plataforma ao ter que trabalhar com tipos de plataforma como Rect, size e Point. Isso significa que você pode converter entre a versão `System` desses tipos para iOS, Android e tipos específicos de UWP.
 
 ## <a name="get-started"></a>Introdução
 
@@ -22,7 +25,7 @@ O Xamarin.Essentials fornece vários métodos de extensão de plataforma quando 
 
 ## <a name="using-platform-extensions"></a>Usando as extensões de plataforma
 
-Adicione uma referência ao Xamarin.Essentials na classe:
+Adicione uma referência a Xamarin.Essentials em sua classe:
 
 ```csharp
 using Xamarin.Essentials;
@@ -30,13 +33,13 @@ using Xamarin.Essentials;
 
 Todas as extensões de plataforma só podem ser chamadas do iOS, do Android ou do projeto UWP.
 
-## <a name="android-extensions"></a>Extensões androides
+## <a name="android-extensions"></a>Extensões do Android
 
-Essas extensões só podem ser acessadas a partir de um projeto Android.
+Essas extensões só podem ser acessadas de um projeto Android.
 
-### <a name="application-context--activity"></a>Contexto de aplicação & atividade
+### <a name="application-context--activity"></a>Atividade de & de contexto do aplicativo
 
-Usando as extensões `Platform` da plataforma na classe, `Context` `Activity` você pode ter acesso ao aplicativo atual ou para o aplicativo em execução.
+Usando as extensões de plataforma na `Platform` classe, você pode obter acesso ao `Context` aplicativo atual ou `Activity` em execução.
 
 ```csharp
 
@@ -46,7 +49,7 @@ var context = Platform.AppContext;
 var activity = Platform.CurrentActivity;
 ```
 
-Se houver uma situação em que o `Activity` aplicativo seja necessário, mas a aplicação ainda não tenha sido totalmente iniciada, o `WaitForActivityAsync` método deve ser usado.
+Se houver uma situação em que o `Activity` é necessário, mas o aplicativo não tiver sido totalmente iniciado, o `WaitForActivityAsync` método deverá ser usado.
 
 ```csharp
 var activity = await Platform.WaitForActivityAsync();
@@ -54,7 +57,7 @@ var activity = await Platform.WaitForActivityAsync();
 
 ### <a name="activity-lifecycle"></a>Ciclo de vida de atividade
 
-Além de obter a atividade atual, você também pode se registrar para eventos do ciclo de vida.
+Além de obter a atividade atual, você também pode se registrar para eventos de ciclo de vida.
 
 ```csharp
 protected override void OnCreate(Bundle bundle)
@@ -76,33 +79,33 @@ void Platform_ActivityStateChanged(object sender, Xamarin.Essentials.ActivitySta
     Toast.MakeText(this, e.State.ToString(), ToastLength.Short).Show();
 ```
 
-Os estados de atividade são os seguintes:
+Os Estados de atividade são os seguintes:
 
 * Criado
 * Retomada
 * Em Pausa
 * Destruído
 * SaveInstanceState
-* Started (iniciado)
+* Iniciado
 * Parado
 
 Leia a documentação do [ciclo de vida da atividade](https://docs.microsoft.com/xamarin/android/app-fundamentals/activity-lifecycle/) para saber mais.
 
 ## <a name="ios-extensions"></a>Extensões do iOS
 
-Essas extensões só podem ser acessadas a partir de um projeto iOS.
+Essas extensões só podem ser acessadas de um projeto do iOS.
 
-### <a name="current-uiviewcontroller"></a>UIViewcontroller atual
+### <a name="current-uiviewcontroller"></a>UIViewController atual
 
-Obtenha acesso ao atualmente visível: `UIViewController`
+Obter acesso ao atualmente visível `UIViewController` :
 
 ```csharp
 var vc = Platform.GetCurrentUIViewController();
 ```
 
-Este método `null` retornará se `UIViewController`não conseguir detectar um .
+Esse método retornará `null` se não for possível detectar um `UIViewController` .
 
-## <a name="cross-platform-extensions"></a>Extensões multiplataforma
+## <a name="cross-platform-extensions"></a>Extensões de plataforma cruzada
 
 Essas extensões existem em todas as plataformas.
 

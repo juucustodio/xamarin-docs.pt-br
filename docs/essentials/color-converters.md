@@ -1,21 +1,24 @@
 ---
-title: Conversores de cor do Xamarin.Essentials
-description: A classe ColorConverters no Xamarin.Essentials fornece vários métodos auxiliares e métodos de extensão para trabalhar com System.Drawing.Color.
-ms.assetid: B10428D6-89E2-4714-A39F-7E6E626391B2
-author: jamesmontemagno
-ms.author: jamont
-ms.date: 01/06/2020
-ms.custom: video
-ms.openlocfilehash: 159add7ee83f3c65d791fc49ee3a85ddaaabae1d
-ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
+title: Xamarin.EssentialsConversores de cor
+description: A classe ColorConverters no Xamarin.Essentials fornece vários métodos auxiliares e métodos de extensão para trabalhar com System. Drawing. Color.
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+ms.custom: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 57b85a909855594c70bfd529d7a794b4bd7bca7e
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83150133"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84130215"
 ---
-# <a name="xamarinessentials-color-converters"></a>Xamarin. Essentials: conversores de cor
+# <a name="xamarinessentials-color-converters"></a>Xamarin.Essentials: Conversores de cor
 
-A classe **ColorConverters** no Xamarin.Essentials fornece vários métodos auxiliares para System.Drawing.Color.
+A classe **ColorConverters** no Xamarin.Essentials fornece vários métodos auxiliares para System. Drawing. Color.
 
 ## <a name="get-started"></a>Introdução
 
@@ -23,13 +26,13 @@ A classe **ColorConverters** no Xamarin.Essentials fornece vários métodos auxi
 
 ## <a name="using-color-converters"></a>Usando conversores de cor
 
-Adicione uma referência ao Xamarin.Essentials na classe:
+Adicione uma referência a Xamarin.Essentials em sua classe:
 
 ```csharp
 using Xamarin.Essentials;
 ```
 
-Ao trabalhar com `System.Drawing.Color`, você pode usar os conversores internos do Xamarin.Forms para criar uma cor de Hsl, Hex ou UInt.
+Ao trabalhar com `System.Drawing.Color` , você pode usar os conversores internos de Xamarin.Forms para criar uma cor de HSL, Hex ou uint.
 
 ```csharp
 var blueHex = ColorConverters.FromHex("#3498db");

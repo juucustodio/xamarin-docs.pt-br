@@ -1,24 +1,27 @@
 ---
-title: Sombras suspensas de ImageButton no Android
-description: Especificidades da plataforma permitem que você consumir funcionalidade só está disponível em uma plataforma específica, sem implementar renderizadores personalizados ou efeitos. Este artigo explica como consumir a plataforma Android específica que habilita uma sombra em um ImageButton.
-ms.prod: xamarin
-ms.assetid: D3604D87-9F9F-4FE2-8B10-DF3B143C0734
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 07/10/2018
-ms.openlocfilehash: 567216171dd289e849ee0164452e4b876953f2a3
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+title: ''
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 5e2ad97eb5e7db3b832e8fb4340c86904b766b9a
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68653592"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84139993"
 ---
 # <a name="imagebutton-drop-shadows-on-android"></a>Sombras suspensas de ImageButton no Android
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
-Esse recurso específico da plataforma Android é usado para habilitar uma sombra em um `ImageButton`. Ele é consumido em XAML, definindo o `ImageButton.IsShadowEnabled` para a propriedade associável `true`, junto com um número opcional associável propriedades adicionais que controlam a sombra:
+Esse recurso específico da plataforma Android é usado para habilitar uma sombra em um `ImageButton` . Ele é consumido em XAML definindo- `ImageButton.IsShadowEnabled` se a propriedade vinculável como `true` , juntamente com várias propriedades adicionais vinculáveis opcionais que controlam a sombra projetada:
 
 ```xaml
 <ContentPage ...
@@ -44,7 +47,7 @@ Esse recurso específico da plataforma Android é usado para habilitar uma sombr
 </ContentPage>
 ```
 
-Como alternativa, ele pode ser consumido de C# usando a API fluente:
+Como alternativa, ele pode ser consumido em C# usando a API fluente:
 
 ```csharp
 using Xamarin.Forms.PlatformConfiguration;
@@ -60,24 +63,24 @@ imageButton.On<Android>()
 ```
 
 > [!IMPORTANT]
-> Uma sombra é desenhada como parte do `ImageButton` em segundo plano e o plano de fundo é desenhada apenas se o `BackgroundColor` propriedade está definida. Portanto, uma sombra não será desenhada se o `ImageButton.BackgroundColor` propriedade não está definida.
+> Uma sombra de projeção é desenhada como parte do `ImageButton` plano de fundo e o plano de fundo só será desenhado se a `BackgroundColor` propriedade estiver definida. Portanto, uma sombra não será desenhada se a `ImageButton.BackgroundColor` propriedade não estiver definida.
 
-O `ImageButton.On<Android>` método Especifica que este específicos da plataforma serão executado apenas no Android. O `ImageButton.SetIsShadowEnabled` método, no [ `Xamarin.Forms.PlatformConfiguration.AndroidSpecific` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific) namespace, é usada para controlar se uma sombra está habilitada no `ImageButton`. Além disso, os métodos a seguir podem ser invocados para controlar a sombra:
+O `ImageButton.On<Android>` método especifica que essa plataforma específica será executada somente no Android. O `ImageButton.SetIsShadowEnabled` método, no [`Xamarin.Forms.PlatformConfiguration.AndroidSpecific`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific) namespace, é usado para controlar se uma sombra de soltar está habilitada no `ImageButton` . Além disso, os seguintes métodos podem ser invocados para controlar a sombra:
 
-- `SetShadowColor` – Define a cor da sombra. A cor padrão é [ `Color.Default` ](xref:Xamarin.Forms.Color.Default*).
-- `SetShadowOffset` – Define o deslocamento da sombra. O deslocamento altera a direção da sombra é convertida e é especificada como uma [ `Size` ](xref:Xamarin.Forms.Size) valor. O `Size` valores de estrutura são expressos em unidades independentes de dispositivo, com o primeiro valor que está sendo a distância para a esquerda (valor negativo) ou a direita (valor positivo) e o segundo valor sendo a distância acima (valor negativo) ou abaixo (valor positivo) . O valor padrão dessa propriedade é (0,0, 0,0), que resulta na sombra que está sendo convertido em torno de cada lado do `ImageButton`.
-- `SetShadowRadius`– Define o raio de desfoque usado para renderizar a sombra projetada. O valor de raio padrão é 10.0.
+- `SetShadowColor`– define a cor da sombra de projeção. A cor padrão é [`Color.Default`](xref:Xamarin.Forms.Color.Default*) .
+- `SetShadowOffset`– define o deslocamento da sombra de projeção. O deslocamento muda a direção em que a sombra é convertida e é especificada como um [`Size`](xref:Xamarin.Forms.Size) valor. Os `Size` valores de estrutura são expressos em unidades independentes de dispositivo, com o primeiro valor sendo a distância à esquerda (valor negativo) ou à direita (valor positivo) e o segundo valor sendo a distância acima (valor negativo) ou abaixo (valor positivo). O valor padrão dessa propriedade é (0,0, 0,0), que resulta na conversão da sombra em todos os lados do `ImageButton` .
+- `SetShadowRadius`– define o raio de desfoque usado para renderizar a sombra. O valor padrão de RADIUS é 10,0.
 
 > [!NOTE]
-> O estado de uma sombra pode ser consultado por meio da chamada a `GetIsShadowEnabled`, `GetShadowColor`, `GetShadowOffset`, e `GetShadowRadius` métodos.
+> O estado de uma sombra de depósito pode ser consultado chamando os `GetIsShadowEnabled` `GetShadowColor` métodos,, `GetShadowOffset` e `GetShadowRadius` .
 
-O resultado é que uma sombra pode ser habilitada em um `ImageButton`:
+O resultado é que uma sombra pode ser habilitada em um `ImageButton` :
 
-![](imagebutton-drop-shadow-images/imagebutton-drop-shadow.png "ImageButton com sombra")
+![](imagebutton-drop-shadow-images/imagebutton-drop-shadow.png "ImageButton with drop shadow")
 
 ## <a name="related-links"></a>Links relacionados
 
-- [PlatformSpecifics (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+- [PlatformSpecifics (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [Criação de itens específicos à plataforma](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [API AndroidSpecific](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific)
 - [API AndroidSpecific. AppCompat](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat)

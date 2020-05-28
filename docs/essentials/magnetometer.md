@@ -1,17 +1,10 @@
 ---
-title: 'Xamarin.Essentials: Magnetômetro'
-description: A classe Magnetometer no Xamarin.Essentials permite que você monitore o sensor do magnetômetro do dispositivo, que indica a orientação do dispositivo em relação ao campo magnético da Terra.
-ms.assetid: 64DD0D41-03E2-40DD-9EC8-101CA0ED852B
-author: jamesmontemagno
-ms.author: jamont
-ms.date: 11/04/2018
-ms.openlocfilehash: 7682afd26bc09e467c5badbea25c9d478c7bb842
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "70226803"
+Título: ' ' Xamarin.Essentials : magnetômetro ' ' Descrição: MS. AssetID: autor: MS. Author: MS. Date: no-loc:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
+
 ---
+
 # <a name="xamarinessentials-magnetometer"></a>Xamarin.Essentials: Magnetômetro
 
 A classe **Magnetometer** permite que você monitore o sensor do magnetômetro do dispositivo, que indica a orientação do dispositivo em relação ao campo magnético da Terra.
@@ -22,7 +15,7 @@ A classe **Magnetometer** permite que você monitore o sensor do magnetômetro d
 
 ## <a name="using-magnetometer"></a>Como usar Magnetometer
 
-Adicione uma referência ao Xamarin.Essentials na classe:
+Adicione uma referência a Xamarin.Essentials em sua classe:
 
 ```csharp
 using Xamarin.Essentials;
@@ -71,7 +64,7 @@ public class MagnetometerTest
 }
 ```
 
-Todos os dados são devolvidos em μT (microteslas).
+Todos os dados são retornados em μT (microteslas).
 
 [!include[](~/essentials/includes/sensor-speed.md)]
 

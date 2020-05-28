@@ -1,32 +1,35 @@
 ---
-title: Submenu Shell do Xamarin.Forms
-description: O submenu é o menu raiz de um aplicativo Shell e é acessível por meio de um ícone ou passando o dedo na lateral da tela. O submenu consiste em um cabeçalho opcional, itens de submenu e itens de menu opcionais.
-ms.prod: xamarin
-ms.assetid: FEDE51EB-577E-4B3E-9890-B7C1A5E52516
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 04/22/2020
-ms.openlocfilehash: 5e5c50a9195ceb2716e3ca5306b72654fedc46e8
-ms.sourcegitcommit: 443ecd9146fe2a7bbb9b5ab6d33c835876efcf1f
+title: Xamarin.FormsSubmenu do Shell
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: b336a594fa7525000e119333b56284368a23cc03
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82852477"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84134947"
 ---
-# <a name="xamarinforms-shell-flyout"></a>Submenu Shell do Xamarin.Forms
+# <a name="xamarinforms-shell-flyout"></a>Xamarin.FormsSubmenu do Shell
 
-[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
+[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 
 O submenu é o menu raiz de um aplicativo Shell e é acessível por meio de um ícone ou passando o dedo na lateral da tela. O submenu consiste em um cabeçalho opcional, itens de submenu e itens de menu opcionais:
 
 ![Captura de tela de um submenu anotado do Shell](flyout-images/flyout-annotated.png "Submenu anotado")
 
-Se necessário, a cor do plano de fundo do submenu pode ser [`Color`](xref:Xamarin.Forms.Color) definida como `Shell.FlyoutBackgroundColor` a por meio da propriedade vinculável. Essa propriedade também pode ser definida em uma folha de estilos em cascata (CSS). Saiba mais em [propriedades específicas do Shell do Xamarin.Forms](~/xamarin-forms/user-interface/styles/css/index.md#xamarinforms-shell-specific-properties).
+Se necessário, a cor do plano de fundo do submenu pode ser definida como a [`Color`](xref:Xamarin.Forms.Color) por meio da `Shell.FlyoutBackgroundColor` propriedade vinculável. Essa propriedade também pode ser definida em uma folha de estilos em cascata (CSS). Para obter mais informações, consulte [ Xamarin.Forms Propriedades específicas do Shell](~/xamarin-forms/user-interface/styles/css/index.md#xamarinforms-shell-specific-properties).
 
 ## <a name="flyout-icon"></a>Ícone de submenu
 
-Por padrão, os aplicativos Shell têm um ícone de hambúrguer que, quando pressionado, abre o submenu suspenso. Esse ícone pode ser alterado definindo a `Shell.FlyoutIcon` propriedade vinculável, do tipo [`ImageSource`](xref:Xamarin.Forms.ImageSource), para um ícone apropriado:
+Por padrão, os aplicativos Shell têm um ícone de hambúrguer que, quando pressionado, abre o submenu suspenso. Esse ícone pode ser alterado definindo a `Shell.FlyoutIcon` propriedade vinculável, do tipo [`ImageSource`](xref:Xamarin.Forms.ImageSource) , para um ícone apropriado:
 
 ```xaml
 <Shell ...
@@ -95,7 +98,7 @@ Como resultado, teremos o cabeçalho do submenu a seguir:
 
 ![Captura de tela do cabeçalho do submenu](flyout-images/flyout-header.png "Cabeçalho do submenu")
 
-Como alternativa, a aparência do cabeçalho do submenu pode ser definida `Shell.FlyoutHeaderTemplate` definindo a propriedade [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)como a:
+Como alternativa, a aparência do cabeçalho do submenu pode ser definida definindo a `Shell.FlyoutHeaderTemplate` propriedade como a [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) :
 
 ```xaml
 <Shell.FlyoutHeaderTemplate>
@@ -133,9 +136,9 @@ O exemplo a seguir mostra como recolher o cabeçalho do submenu à medida que o 
 
 ## <a name="flyout-background-image"></a>Imagem da tela de fundo do submenu
 
-O submenu pode ter uma imagem de tela de fundo opcional, que aparece sob o cabeçalho do submenu e atrás de quaisquer itens do submenu e do menu. A imagem de plano de fundo pode ser especificada `FlyoutBackgroundImage` definindo a propriedade vinculável [`ImageSource`](xref:Xamarin.Forms.ImageSource), do tipo, em um arquivo, recurso inserido, URI ou fluxo.
+O submenu pode ter uma imagem de tela de fundo opcional, que aparece sob o cabeçalho do submenu e atrás de quaisquer itens do submenu e do menu. A imagem de plano de fundo pode ser especificada definindo a `FlyoutBackgroundImage` propriedade vinculável, do tipo [`ImageSource`](xref:Xamarin.Forms.ImageSource) , em um arquivo, recurso inserido, URI ou fluxo.
 
-A taxa de proporção da imagem de plano de fundo pode ser configurada definindo a `FlyoutBackgroundImageAspect` propriedade [`Aspect`](xref:Xamarin.Forms.Aspect)vinculável, do tipo `Aspect` , para um dos membros da enumeração:
+A taxa de proporção da imagem de plano de fundo pode ser configurada definindo a `FlyoutBackgroundImageAspect` propriedade vinculável, do tipo [`Aspect`](xref:Xamarin.Forms.Aspect) , para um dos `Aspect` membros da enumeração:
 
 - [`AspectFill`](xref:Xamarin.Forms.Aspect.AspectFill)-Corta a imagem para que ela preencha a área de exibição enquanto preserva a taxa de proporção.
 - [`AspectFit`](xref:Xamarin.Forms.Aspect.AspectFit)-letterboxes a imagem, se necessário, para que a imagem caiba na área de exibição, com espaço em branco adicionado à parte superior/inferior ou aos lados, dependendo se a imagem for larga ou comprida.
@@ -214,10 +217,10 @@ O Shell tem operadores de conversão implícita que permitem que a hierarquia vi
 </Shell>
 ```
 
-Essa conversão [`ContentPage`](xref:Xamarin.Forms.ContentPage) implícita encapsula automaticamente cada objeto em `ShellContent` objetos, que são encapsulados em `Tab` objetos, que são encapsulados `FlyoutItem` em objetos.
+Essa conversão implícita encapsula automaticamente cada [`ContentPage`](xref:Xamarin.Forms.ContentPage) objeto em `ShellContent` objetos, que são encapsulados em objetos `Tab` , que são encapsulados em `FlyoutItem` objetos.
 
 > [!IMPORTANT]
-> Em um aplicativo de Shell, [`ContentPage`](xref:Xamarin.Forms.ContentPage) cada um filho de um `ShellContent` objeto é criado durante a inicialização do aplicativo. Adicionar outros objetos `ShellContent` usando essa abordagem fará com que sejam criadas outras páginas durante a inicialização do aplicativo, o que pode levar a uma experiência ruim de inicialização. No entanto, o Shell também é capaz de criar páginas sob demanda, em resposta à navegação. Saiba mais em [Carregamento de páginas eficiente](tabs.md#efficient-page-loading) no guia sobre as [abas do Shell do Xamarin.Forms](tabs.md).
+> Em um aplicativo de Shell, cada [`ContentPage`](xref:Xamarin.Forms.ContentPage) um filho de um `ShellContent` objeto é criado durante a inicialização do aplicativo. Adicionar outros objetos `ShellContent` usando essa abordagem fará com que sejam criadas outras páginas durante a inicialização do aplicativo, o que pode levar a uma experiência ruim de inicialização. No entanto, o Shell também é capaz de criar páginas sob demanda, em resposta à navegação. Para obter mais informações, consulte [carregamento de página eficiente](tabs.md#efficient-page-loading) no guia de [ Xamarin.Forms guias do Shell](tabs.md) .
 
 ### <a name="flyoutitem-class"></a>Classe FlyoutItem
 
@@ -235,7 +238,7 @@ A classe `FlyoutItem` inclui as seguintes propriedades que controlam o comportam
 - `Title`, do tipo `string`, o título a ser exibido na interface do usuário.
 - `Route`, do tipo `string`, a cadeia de caracteres usada para resolver o item.
 
-Todas essas propriedades, exceto a `Route` Propriedade, são apoiadas por [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objetos, o que significa que as propriedades podem ser destinos de associações de dados.
+Todas essas propriedades, exceto a `Route` propriedade, são apoiadas por [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objetos, o que significa que as propriedades podem ser destinos de associações de dados.
 
 > [!NOTE]
 > Todos os objetos de `FlyoutItem` em um objeto Shell na subclasse são adicionados à coleção `Shell.Items`, que define a lista de itens que será exibida no submenu.
@@ -249,7 +252,7 @@ Além disso, a classe `FlyoutItem` expõe os seguintes métodos substituíveis:
 
 ## <a name="flyout-vertical-scroll"></a>Rolagem vertical do submenu
 
-Por padrão, um submenu pode ser rolado verticalmente quando os itens do submenu não se ajustam ao submenu. Esse comportamento pode ser alterado definindo a `Shell.FlyoutVerticalScrollMode` propriedade vinculável como um dos membros `ScrollMode` da enumeração:
+Por padrão, um submenu pode ser rolado verticalmente quando os itens do submenu não se ajustam ao submenu. Esse comportamento pode ser alterado definindo a `Shell.FlyoutVerticalScrollMode` propriedade vinculável como um dos `ScrollMode` membros da enumeração:
 
 - `Disabled`– indica que a rolagem vertical será desabilitada.
 - `Enabled`– indica que a rolagem vertical será habilitada.
@@ -321,7 +324,7 @@ Isso resulta nos seguintes itens de submenu:
 
 ## <a name="define-flyoutitem-appearance"></a>Definir a aparência de FlyoutItem
 
-A aparência de cada `FlyoutItem` um pode ser personalizada definindo a `Shell.ItemTemplate` Propriedade anexada como [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)um:
+A aparência de cada um `FlyoutItem` pode ser personalizada definindo a `Shell.ItemTemplate` Propriedade anexada como um [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) :
 
 ```xaml
 <Shell ...>
@@ -350,16 +353,16 @@ Este exemplo exibe o título de cada objeto `FlyoutItem` em itálico:
 
 [![Captura de tela dos objetos modelados FlyoutItem, no iOS e no Android](flyout-images/flyoutitem-templated.png "Objetos FlyoutItem modelo de Shell")](flyout-images/flyoutitem-templated-large.png#lightbox "Objetos FlyoutItem modelo de Shell")
 
-Como `Shell.ItemTemplate` é uma propriedade anexada, modelos diferentes podem ser anexados `FlyoutItem` a objetos específicos.
+Como `Shell.ItemTemplate` é uma propriedade anexada, modelos diferentes podem ser anexados a `FlyoutItem` objetos específicos.
 
 > [!NOTE]
-> O Shell fornece `Title` as `FlyoutIcon` Propriedades e para [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) o do `ItemTemplate`.
+> O Shell fornece `Title` as `FlyoutIcon` Propriedades e para o [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) do `ItemTemplate` .
 
-Além disso, o Shell inclui três classes de estilo, que são automaticamente `FlyoutItem` aplicadas a objetos. Para obter mais informações, consulte [classes de estilo FlyoutItem e MenuItem](#flyoutitem-and-menuitem-style-classes).
+Além disso, o Shell inclui três classes de estilo, que são automaticamente aplicadas a `FlyoutItem` objetos. Para obter mais informações, consulte [classes de estilo FlyoutItem e MenuItem](#flyoutitem-and-menuitem-style-classes).
 
 ### <a name="default-template-for-flyoutitems"></a>Modelo padrão para FlyoutItems
 
-O padrão [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) usado para cada `FlyoutItem` um é mostrado abaixo:
+O padrão [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) usado para cada um `FlyoutItem` é mostrado abaixo:
 
 ```xaml
 <DataTemplate x:Key="FlyoutTemplate">
@@ -438,7 +441,7 @@ O padrão [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) usado para cada `Fly
 
 Esse modelo pode ser usado como base para fazer alterações no layout de submenu existente e também mostra os Estados visuais que são implementados para itens de submenu.
 
-Além disso, os [`Grid`](xref:Xamarin.Forms.Grid)elementos [`Image`](xref:Xamarin.Forms.Image), e [`Label`](xref:Xamarin.Forms.Label) têm `x:Name` valores e, portanto, podem ser direcionados com o Gerenciador de estado visual. Para obter mais informações, consulte [definir estado em vários elementos](~/xamarin-forms/user-interface/visual-state-manager.md#set-state-on-multiple-elements).
+Além disso, os [`Grid`](xref:Xamarin.Forms.Grid) [`Image`](xref:Xamarin.Forms.Image) elementos, e [`Label`](xref:Xamarin.Forms.Label) têm `x:Name` valores e, portanto, podem ser direcionados com o Gerenciador de estado visual. Para obter mais informações, consulte [definir estado em vários elementos](~/xamarin-forms/user-interface/visual-state-manager.md#set-state-on-multiple-elements).
 
 > [!NOTE]
 > O mesmo modelo também pode ser usado para `MenuItem` objetos.
@@ -480,13 +483,13 @@ A classe `Shell` tem uma propriedade associável denominada `CurrentItem`, do ti
 
 Esse código define o objeto `ShellContent` denominado `aboutItem` como a propriedade `CurrentItem`, o que faz com que ele seja exibido. Nesse exemplo, uma conversão implícita é usada para encapsular o objeto `ShellContent` em um objeto `Tab`, que é encapsulado em um objeto `FlyoutItem`.
 
-O código C# equivalente, dado um `ShellContent` objeto chamado `aboutItem`, é:
+O código C# equivalente, dado um `ShellContent` objeto chamado `aboutItem` , é:
 
 ```csharp
 CurrentItem = aboutItem;
 ```
 
-Neste exemplo, a `CurrentItem` propriedade é definida na `Shell` classe de subclasse. Como alternativa, a `CurrentItem` propriedade pode ser definida em qualquer classe por meio `Shell.Current` da propriedade estática:
+Neste exemplo, a `CurrentItem` propriedade é definida na classe de subclasse `Shell` . Como alternativa, a `CurrentItem` propriedade pode ser definida em qualquer classe por meio da `Shell.Current` propriedade estática:
 
 ```csharp
 Shell.Current.CurrentItem = aboutItem;
@@ -494,7 +497,7 @@ Shell.Current.CurrentItem = aboutItem;
 
 ## <a name="menu-items"></a>Itens de menu
 
-Os itens de menu podem ser adicionados opcionalmente ao submenu e cada item de menu é representado [`MenuItem`](xref:Xamarin.Forms.MenuItem) por um objeto. A posição dos objetos `MenuItem` no submento depende da ordem de declaração deles na hierarquia visual do Shell. Portanto, qualquer objeto `MenuItem` declarado antes do objeto `FlyoutItem` aparecerá na parte superior do submenu, e qualquer objeto `MenuItem` declarado após `FlyoutItem` aparecerá na parte inferior do submenu.
+Os itens de menu podem ser adicionados opcionalmente ao submenu e cada item de menu é representado por um [`MenuItem`](xref:Xamarin.Forms.MenuItem) objeto. A posição dos objetos `MenuItem` no submento depende da ordem de declaração deles na hierarquia visual do Shell. Portanto, qualquer objeto `MenuItem` declarado antes do objeto `FlyoutItem` aparecerá na parte superior do submenu, e qualquer objeto `MenuItem` declarado após `FlyoutItem` aparecerá na parte inferior do submenu.
 
 > [!NOTE]
 > A `MenuItem` classe tem um [`Clicked`](xref:Xamarin.Forms.MenuItem.Clicked) evento e uma [`Command`](xref:Xamarin.Forms.MenuItem.Command) propriedade. Portanto, os objetos `MenuItem` permitem cenários que executam uma ação em resposta ao `MenuItem` que está sendo tocado. Esses cenários incluem realizar a navegação e abrir um navegador em uma página da Web específica.
@@ -518,14 +521,14 @@ Esse código adiciona dois [`MenuItem`](xref:Xamarin.Forms.MenuItem) objetos ao 
 
 [![Captura de tela do submenu contendo objetos MenuItem, no iOS e no Android](flyout-images/flyout.png "Submenu do Shell contendo objetos MenuItem")](flyout-images/flyout-large.png#lightbox "Submenu do Shell contendo objetos MenuItem")
 
-O primeiro [`MenuItem`](xref:Xamarin.Forms.MenuItem) objeto executa um `ICommand` chamado `RandomPageCommand`, que navega para uma página aleatória no aplicativo. O segundo objeto `MenuItem` executa um `ICommand` denominado `HelpCommand`, que abre a URL especificada pela propriedade `CommandParameter` em um navegador da Web.
+O primeiro [`MenuItem`](xref:Xamarin.Forms.MenuItem) objeto executa um `ICommand` chamado `RandomPageCommand` , que navega para uma página aleatória no aplicativo. O segundo objeto `MenuItem` executa um `ICommand` denominado `HelpCommand`, que abre a URL especificada pela propriedade `CommandParameter` em um navegador da Web.
 
 > [!NOTE]
-> O [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) de cada `MenuItem` é herdado do `Shell` objeto de subclasse.
+> O [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) de cada `MenuItem` é herdado do objeto de subclasse `Shell` .
 
 ## <a name="define-menuitem-appearance"></a>Definir a aparência do MenuItem
 
-A aparência de cada `MenuItem` um pode ser personalizada definindo a `Shell.MenuItemTemplate` Propriedade anexada como [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)um:
+A aparência de cada um `MenuItem` pode ser personalizada definindo a `Shell.MenuItemTemplate` Propriedade anexada como um [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) :
 
 ```xaml
 <Shell ...>
@@ -562,7 +565,7 @@ Este exemplo anexa o `MenuItemTemplate` no nível do Shell a cada objeto `MenuIt
 [![Captura de tela de objetos MenuItem com modelo, em iOS e Android](flyout-images/menuitem-templated.png "Objetos MenuItem modelo do Shell")](flyout-images/menuitem-templated-large.png#lightbox "Objetos MenuItem modelo do Shell")
 
 > [!NOTE]
-> O Shell fornece [`Text`](xref:Xamarin.Forms.MenuItem.Text) as [`IconImageSource`](xref:Xamarin.Forms.MenuItem.IconImageSource) Propriedades e para [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) o do `MenuItemTemplate`. Você também pode usar `Title` o no lugar `Text` de `Icon` e, no `IconImageSource` lugar dele, permitirá que você reutilize o mesmo modelo para itens de menu e itens de submenu
+> O Shell fornece [`Text`](xref:Xamarin.Forms.MenuItem.Text) as [`IconImageSource`](xref:Xamarin.Forms.MenuItem.IconImageSource) Propriedades e para o [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) do `MenuItemTemplate` . Você também pode usar `Title` o no lugar de `Text` e, `Icon` no lugar dele `IconImageSource` , permitirá que você reutilize o mesmo modelo para itens de menu e itens de submenu
 
 Como `Shell.MenuItemTemplate` é uma propriedade anexada, diferentes modelos podem ser anexados a objetos `MenuItem` específicos:
 
@@ -609,7 +612,7 @@ Este exemplo anexa o `MenuItemTemplate` no nível do Shell ao primeiro objeto `M
 
 ## <a name="flyoutitem-and-menuitem-style-classes"></a>Classes de estilo FlyoutItem e MenuItem
 
-O Shell inclui três classes de estilo, que são automaticamente `FlyoutItem` aplicadas `MenuItem` aos objetos e. Os nomes de classe de estilo são:
+O Shell inclui três classes de estilo, que são automaticamente aplicadas aos `FlyoutItem` `MenuItem` objetos e. Os nomes de classe de estilo são:
 
 - `FlyoutItemLabelStyle`
 - `FlyoutItemImageStyle`
@@ -642,10 +645,10 @@ O XAML a seguir mostra um exemplo de definição de estilos para essas classes d
 
 Esses estilos serão automaticamente aplicados aos `FlyoutItem` objetos e `MenuItem` , sem a necessidade de definir suas [`StyleClass`](xref:Xamarin.Forms.NavigableElement.StyleClass) Propriedades para os nomes de classe de estilo.
 
-Além disso, as classes de estilo personalizado podem ser definidas e `FlyoutItem` aplicadas `MenuItem` a objetos e. Para obter mais informações sobre classes de estilo, consulte [classes de estilo Xamarin. Forms](~/xamarin-forms/user-interface/styles/xaml/style-class.md).
+Além disso, as classes de estilo personalizado podem ser definidas e aplicadas a `FlyoutItem` `MenuItem` objetos e. Para obter mais informações sobre classes de estilo, consulte [ Xamarin.Forms classes de estilo](~/xamarin-forms/user-interface/styles/xaml/style-class.md).
 
 ## <a name="related-links"></a>Links relacionados
 
 - [Xaminals (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
-- [Classes de estilo Xamarin. Forms](~/xamarin-forms/user-interface/styles/xaml/style-class.md)
-- [Gerenciador de estado visual do Xamarin. Forms](~/xamarin-forms/user-interface/visual-state-manager.md)
+- [Xamarin.FormsClasses de estilo](~/xamarin-forms/user-interface/styles/xaml/style-class.md)
+- [Xamarin.FormsGerenciador de estado visual](~/xamarin-forms/user-interface/visual-state-manager.md)

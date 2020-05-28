@@ -1,18 +1,10 @@
 ---
-title: 'Xamarin.Essentials: Discagem telefônica'
-description: A classe PhoneDialer no Xamarin.Essentials permite que um aplicativo abra um número de telefone pelo discador
-ms.assetid: E7457942-4D7B-4195-A2FF-417919B9537F
-author: jamesmontemagno
-ms.custom: video
-ms.author: jamont
-ms.date: 07/02/2019
-ms.openlocfilehash: a955399b40f26d4a03a4047d56f7bebe3ad5b5c4
-ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83150041"
+Título: ' ' Xamarin.Essentials : Descrição da discagem telefônica ' ': ' a classe PhoneDialer no Xamarin.Essentials permite que um aplicativo Abra um número de telefone na discagem ' MS. AssetID: autor: MS. Custom: MS. Author: MS. Date: no-loc:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
+
 ---
+
 # <a name="xamarinessentials-phone-dialer"></a>Xamarin.Essentials: Discagem telefônica
 
 A classe **PhoneDialer** permite que um aplicativo abra um número de telefone pelo discador.
@@ -23,7 +15,7 @@ A classe **PhoneDialer** permite que um aplicativo abra um número de telefone p
 
 ## <a name="using-phone-dialer"></a>Como usar a Discagem telefônica
 
-Adicione uma referência ao Xamarin.Essentials na classe:
+Adicione uma referência a Xamarin.Essentials em sua classe:
 
 ```csharp
 using Xamarin.Essentials;

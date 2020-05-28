@@ -1,29 +1,32 @@
 ---
-title: O FlexLayout Xamarin. Forms
-description: Use FlexLayout para empilhar ou encapsular uma coleção de exibições filho.
-ms.prod: xamarin
-ms.assetid: 6A91EA70-268C-462C-AAAF-F8DA011403F8
-ms.technology: xamarin-forms
-ms.custom: xamu-video
-author: davidbritch
-ms.author: dabritch
-ms.date: 05/07/2018
-ms.openlocfilehash: 507f78bf887d8d11e93a5a6a1f7d074c55e69360
-ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
+title: O Xamarin.Forms FlexLayout
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+ms.custom: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 031a846b7546c204d45c7437acd829d6cb49bfbb
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83149966"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84137198"
 ---
-# <a name="the-xamarinforms-flexlayout"></a>O FlexLayout Xamarin. Forms
+# <a name="the-xamarinforms-flexlayout"></a>O Xamarin.Forms FlexLayout
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-flexlayoutdemos)
 
 _Use FlexLayout para empilhar ou encapsular uma coleção de exibições filho._
 
-O Xamarin. Forms [`FlexLayout`](xref:Xamarin.Forms.FlexLayout) é novo no xamarin. Forms versão 3,0. Ele se baseia no módulo de [layout de caixa flexível](https://www.w3.org/TR/css-flexbox-1/)CSS, normalmente conhecido como _layout flexível_ ou _caixa flexível_, portanto chamado porque inclui muitas opções flexíveis para organizar os filhos no layout.
+O Xamarin.Forms [`FlexLayout`](xref:Xamarin.Forms.FlexLayout) é novo na Xamarin.Forms versão 3,0. Ele se baseia no módulo de [layout de caixa flexível](https://www.w3.org/TR/css-flexbox-1/)CSS, normalmente conhecido como _layout flexível_ ou _caixa flexível_, portanto chamado porque inclui muitas opções flexíveis para organizar os filhos no layout.
 
-`FlexLayout`é semelhante ao Xamarin. Forms [`StackLayout`](~/xamarin-forms/user-interface/layouts/stacklayout.md) , no sentido de que ele pode organizar seus filhos horizontal e verticalmente em uma pilha. No entanto, o `FlexLayout` também é capaz de encapsular seus filhos se houver muitos para caber em uma única linha ou coluna, além de ter muitas opções de orientação, alinhamento e adaptação a vários tamanhos de tela.
+`FlexLayout`é semelhante ao Xamarin.Forms [`StackLayout`](~/xamarin-forms/user-interface/layouts/stacklayout.md) em que ele pode organizar seus filhos horizontal e verticalmente em uma pilha. No entanto, o `FlexLayout` também é capaz de encapsular seus filhos se houver muitos para caber em uma única linha ou coluna, além de ter muitas opções de orientação, alinhamento e adaptação a vários tamanhos de tela.
 
 `FlexLayout`deriva de [`Layout<View>`](xref:Xamarin.Forms.Layout`1) e herda uma [`Children`](xref:Xamarin.Forms.Layout`1.Children) Propriedade do tipo `IList<View>` .
 
@@ -609,11 +612,11 @@ Você pode definir os `Grow` valores e `Shrink` para acomodar situações em que
 
 ## <a name="css-styling-with-flexlayout"></a>Estilo de CSS com FlexLayout
 
-Você pode usar o recurso de [estilo de CSS](~/xamarin-forms/user-interface/styles/css/index.md) introduzido com o Xamarin. Forms 3,0 em conexão com o `FlexLayout` . A página de **itens do catálogo CSS** do exemplo **[FlexLayoutDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-flexlayoutdemos)** duplica o layout da página de **itens do catálogo** , mas com uma folha de estilos CSS para muitos dos estilos:
+Você pode usar o recurso de [estilo de CSS](~/xamarin-forms/user-interface/styles/css/index.md) introduzido com Xamarin.Forms 3,0 em conexão com o `FlexLayout` . A página de **itens do catálogo CSS** do exemplo **[FlexLayoutDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-flexlayoutdemos)** duplica o layout da página de **itens do catálogo** , mas com uma folha de estilos CSS para muitos dos estilos:
 
 [![A página de itens do catálogo CSS](flex-layout-images/CssCatalogItems.png "A página de itens do catálogo CSS")](flex-layout-images/CssCatalogItems-Large.png#lightbox)
 
-O arquivo **CatalogItemsPage. XAML** original tem cinco `Style` definições em sua `Resources` seção com 15 `Setter` objetos. No arquivo **CssCatalogItemsPage. XAML** , que foi reduzido para duas `Style` definições com apenas quatro `Setter` objetos. Esses estilos complementam a folha de estilos CSS para propriedades que o recurso de estilo de CSS do Xamarin. Forms atualmente não suporta:
+O arquivo **CatalogItemsPage. XAML** original tem cinco `Style` definições em sua `Resources` seção com 15 `Setter` objetos. No arquivo **CssCatalogItemsPage. XAML** , que foi reduzido para duas `Style` definições com apenas quatro `Setter` objetos. Esses estilos complementam a folha de estilos CSS para propriedades que o Xamarin.Forms recurso de estilo de CSS atualmente não suporta:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -738,7 +741,7 @@ Você viu que pode definir as propriedades diretamente no `FlexLayout` e pode de
 
 > [!VIDEO https://youtube.com/embed/Ng3sel_5D_0]
 
-**Vídeo de layout flexível do Xamarin. Forms 3,0**
+**Xamarin.Formsvídeo de layout flexível 3,0**
 
 ## <a name="related-links"></a>Links relacionados
 

@@ -1,22 +1,25 @@
 ---
-title: Controle de Mapeamento Xamarin. Forms
-description: O controle de mapa é uma exibição de plataforma cruzada para exibir e anotar mapas. Ele usa o controle de mapa nativo para cada plataforma, fornecendo uma experiência de mapas rápida e familiar para os usuários.
-ms.prod: xamarin
-ms.assetid: 22C99029-0B16-43A6-BF58-26B48C4AED38
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 10/29/2019
-ms.openlocfilehash: 3861200446ea9c0e368aa251f3e7ec3f992c7152
-ms.sourcegitcommit: 8d13d2262d02468c99c4e18207d50cd82275d233
+title: Xamarin.FormsControle de Mapeamento
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 32564b48b6d5e7acc619a966af30a086fb56d5e6
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82517519"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84129396"
 ---
-# <a name="xamarinforms-map-control"></a>Controle de Mapeamento Xamarin. Forms
+# <a name="xamarinforms-map-control"></a>Xamarin.FormsControle de Mapeamento
 
-[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
+[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 
 O [`Map`](xref:Xamarin.Forms.Maps.Map) controle é uma exibição de plataforma cruzada para exibir e anotar mapas. Ele usa o controle de mapa nativo para cada plataforma, fornecendo uma experiência de mapas rápida e familiar para os usuários:
 
@@ -24,23 +27,23 @@ O [`Map`](xref:Xamarin.Forms.Maps.Map) controle é uma exibição de plataforma 
 
 A [`Map`](xref:Xamarin.Forms.Maps.Map) classe define as seguintes propriedades que controlam a aparência e o comportamento do mapa:
 
-- [`IsShowingUser`](xref:Xamarin.Forms.Maps.Map.IsShowingUser), do tipo `bool`, indica se o mapa está mostrando o local atual do usuário.
-- [`ItemsSource`](xref:Xamarin.Forms.Maps.Map.ItemsSource), do tipo `IEnumerable`, que especifica a coleção de `IEnumerable` itens a serem exibidos.
-- [`ItemTemplate`](xref:Xamarin.Forms.Maps.Map.ItemTemplate), do tipo [`DataTemplate`](xref:Xamarin.Forms.DataTemplate), que especifica o [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) a ser aplicado a cada item na coleção de itens exibidos.
-- `ItemTemplateSelector`, do tipo [`DataTemplateSelector`](xref:Xamarin.Forms.DataTemplateSelector), que especifica o [`DataTemplateSelector`](xref:Xamarin.Forms.DataTemplateSelector) que será usado para escolher um [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) para um item no tempo de execução.
-- [`HasScrollEnabled`](xref:Xamarin.Forms.Maps.Map.HasScrollEnabled), do tipo `bool`, determina se o mapa tem permissão para rolar.
-- [`HasZoomEnabled`](xref:Xamarin.Forms.Maps.Map.HasZoomEnabled), do tipo `bool`, determina se o mapa tem permissão para aplicar zoom.
-- `MapElements`, do tipo `IList<MapElement>`, representa a lista de elementos no mapa, como polígonos e polilinhas.
-- [`MapType`](xref:Xamarin.Forms.Maps.Map.MapType), do tipo [`MapType`](xref:Xamarin.Forms.Maps.Map.MapType), indica o estilo de exibição do mapa.
-- `MoveToLastRegionOnLayoutChange`, do tipo `bool`, controla se a região de mapa exibida será movida de sua região atual para sua região definida anteriormente quando ocorrer uma alteração de layout.
-- [`Pins`](xref:Xamarin.Forms.Maps.Map.Pins), do tipo `IList<Pin>`representa a lista de Pins no mapa.
-- [`VisibleRegion`](xref:Xamarin.Forms.Maps.Map.VisibleRegion), do tipo [`MapSpan`](xref:Xamarin.Forms.Maps.MapSpan), retorna a região exibida no momento do mapa.
+- [`IsShowingUser`](xref:Xamarin.Forms.Maps.Map.IsShowingUser), do tipo `bool` , indica se o mapa está mostrando o local atual do usuário.
+- [`ItemsSource`](xref:Xamarin.Forms.Maps.Map.ItemsSource), do tipo `IEnumerable` , que especifica a coleção de `IEnumerable` itens a serem exibidos.
+- [`ItemTemplate`](xref:Xamarin.Forms.Maps.Map.ItemTemplate), do tipo [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) , que especifica o [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) a ser aplicado a cada item na coleção de itens exibidos.
+- `ItemTemplateSelector`, do tipo [`DataTemplateSelector`](xref:Xamarin.Forms.DataTemplateSelector) , que especifica o [`DataTemplateSelector`](xref:Xamarin.Forms.DataTemplateSelector) que será usado para escolher um [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) para um item no tempo de execução.
+- [`HasScrollEnabled`](xref:Xamarin.Forms.Maps.Map.HasScrollEnabled), do tipo `bool` , determina se o mapa tem permissão para rolar.
+- [`HasZoomEnabled`](xref:Xamarin.Forms.Maps.Map.HasZoomEnabled), do tipo `bool` , determina se o mapa tem permissão para aplicar zoom.
+- `MapElements`, do tipo `IList<MapElement>` , representa a lista de elementos no mapa, como polígonos e polilinhas.
+- [`MapType`](xref:Xamarin.Forms.Maps.Map.MapType), do tipo [`MapType`](xref:Xamarin.Forms.Maps.Map.MapType) , indica o estilo de exibição do mapa.
+- `MoveToLastRegionOnLayoutChange`, do tipo `bool` , controla se a região de mapa exibida será movida de sua região atual para sua região definida anteriormente quando ocorrer uma alteração de layout.
+- [`Pins`](xref:Xamarin.Forms.Maps.Map.Pins), do tipo `IList<Pin>` representa a lista de Pins no mapa.
+- [`VisibleRegion`](xref:Xamarin.Forms.Maps.Map.VisibleRegion), do tipo [`MapSpan`](xref:Xamarin.Forms.Maps.MapSpan) , retorna a região exibida no momento do mapa.
 
-Essas propriedades, com exceção das `MapElements`Propriedades, `Pins`e `VisibleRegion` , são apoiadas por [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objetos, o que significa que podem ser destinos de associações de dados.
+Essas propriedades, com exceção das `MapElements` `Pins` Propriedades, e `VisibleRegion` , são apoiadas por [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objetos, o que significa que podem ser destinos de associações de dados.
 
-A [`Map`](xref:Xamarin.Forms.Maps.Map) classe também define um `MapClicked` evento que é acionado quando o mapa é tocado. O `MapClickedEventArgs` objeto que acompanha o evento tem uma única propriedade chamada `Position`, do tipo. [`Position`](xref:Xamarin.Forms.Maps.Position) Quando o evento é acionado, `Position` a propriedade é definida como o local do mapa que foi tocado. Para obter informações sobre [`Position`](xref:Xamarin.Forms.Maps.Position) a estrutura, consulte [posição e distância do mapa](position-distance.md).
+A [`Map`](xref:Xamarin.Forms.Maps.Map) classe também define um `MapClicked` evento que é acionado quando o mapa é tocado. O `MapClickedEventArgs` objeto que acompanha o evento tem uma única propriedade chamada `Position` , do tipo [`Position`](xref:Xamarin.Forms.Maps.Position) . Quando o evento é acionado, a `Position` propriedade é definida como o local do mapa que foi tocado. Para obter informações sobre a [`Position`](xref:Xamarin.Forms.Maps.Position) estrutura, consulte [posição e distância do mapa](position-distance.md).
 
-Para obter informações sobre [`ItemsSource`](xref:Xamarin.Forms.Maps.Map.ItemsSource)as [`ItemTemplate`](xref:Xamarin.Forms.Maps.Map.ItemTemplate)Propriedades, `ItemTemplateSelector` e, consulte [exibir uma coleção de PIN](pins.md#display-a-pin-collection).
+Para obter informações sobre [`ItemsSource`](xref:Xamarin.Forms.Maps.Map.ItemsSource) as [`ItemTemplate`](xref:Xamarin.Forms.Maps.Map.ItemTemplate) Propriedades, e `ItemTemplateSelector` , consulte [exibir uma coleção de PIN](pins.md#display-a-pin-collection).
 
 ## <a name="display-a-map"></a>Exibir um mapa
 
@@ -54,7 +57,7 @@ Um [`Map`](xref:Xamarin.Forms.Maps.Map) pode ser exibido adicionando-o a um layo
 ```
 
 > [!NOTE]
-> Uma definição `xmlns` de namespace adicional é necessária para fazer referência aos controles Xamarin. Forms. Maps. No exemplo anterior, o `Xamarin.Forms.Maps` namespace é referenciado por `maps` meio da palavra-chave.
+> Uma `xmlns` definição de namespace adicional é necessária para fazer referência ao Xamarin.Forms . Controles de mapas. No exemplo anterior, o `Xamarin.Forms.Maps` namespace é referenciado por meio da `maps` palavra-chave.
 
 Este é o código C# equivalente:
 
@@ -75,11 +78,11 @@ namespace WorkingWithMaps
 }
 ```
 
-Este exemplo chama o construtor [`Map`](xref:Xamarin.Forms.Maps.Map) padrão, que centraliza o mapa em Roma:
+Este exemplo chama o [`Map`](xref:Xamarin.Forms.Maps.Map) construtor padrão, que centraliza o mapa em Roma:
 
 [![Captura de tela do controle de mapa com o local padrão, no iOS e no Android](map-images/map-default.png "Controle de mapa com local padrão")](map-images/map-default-large.png#lightbox "Controle de mapa com local padrão")
 
-Como alternativa, um [`MapSpan`](xref:Xamarin.Forms.Maps.MapSpan) argumento pode ser passado para um [`Map`](xref:Xamarin.Forms.Maps.Map) Construtor para definir o ponto central e o nível de zoom do mapa quando ele é carregado. Para obter mais informações, consulte [exibir um local específico em um mapa](#display-a-specific-location-on-a-map).
+Como alternativa, um [`MapSpan`](xref:Xamarin.Forms.Maps.MapSpan) argumento pode ser passado para um [`Map`](xref:Xamarin.Forms.Maps.Map) construtor para definir o ponto central e o nível de zoom do mapa quando ele é carregado. Para obter mais informações, consulte [exibir um local específico em um mapa](#display-a-specific-location-on-a-map).
 
 ## <a name="map-types"></a>Tipos de mapa
 
@@ -89,7 +92,7 @@ A [`Map.MapType`](xref:Xamarin.Forms.Maps.Map.MapType) propriedade pode ser defi
 - `Satellite`Especifica que um mapa que contém imagens satélite será exibido.
 - `Hybrid`Especifica que um mapa que combina a rua e os dados de satélite serão exibidos.
 
-Por padrão, um [`Map`](xref:Xamarin.Forms.Maps.Map) exibirá um mapa de rua se [`MapType`](xref:Xamarin.Forms.Maps.Map.MapType) a propriedade for indefinida. Como alternativa, a `MapType` propriedade pode ser definida como um dos membros [`MapType`](xref:Xamarin.Forms.Maps.MapType) da enumeração:
+Por padrão, um [`Map`](xref:Xamarin.Forms.Maps.Map) exibirá um mapa de rua se a [`MapType`](xref:Xamarin.Forms.Maps.Map.MapType) propriedade for indefinida. Como alternativa, a `MapType` propriedade pode ser definida como um dos [`MapType`](xref:Xamarin.Forms.Maps.MapType) membros da enumeração:
 
 ```xaml
 <maps:Map MapType="Satellite" />
@@ -104,15 +107,15 @@ Map map = new Map
 };
 ```
 
-As capturas de tela a [`Map`](xref:Xamarin.Forms.Maps.Map) seguir mostram [`MapType`](xref:Xamarin.Forms.Maps.Map.MapType) um quando a propriedade `Street`é definida como:
+As capturas de tela a seguir mostram um [`Map`](xref:Xamarin.Forms.Maps.Map) quando a [`MapType`](xref:Xamarin.Forms.Maps.Map.MapType) propriedade é definida como `Street` :
 
 [![Captura de tela do controle de mapa com o tipo de mapa de rua, no iOS e no Android](map-images/maptype-street.png "Controle de mapa com a rua MapType")](map-images/maptype-street-large.png#lightbox "Controle de mapa com o tipo de mapa de rua")
 
-As capturas de tela a [`Map`](xref:Xamarin.Forms.Maps.Map) seguir mostram [`MapType`](xref:Xamarin.Forms.Maps.Map.MapType) um quando a propriedade `Satellite`é definida como:
+As capturas de tela a seguir mostram um [`Map`](xref:Xamarin.Forms.Maps.Map) quando a [`MapType`](xref:Xamarin.Forms.Maps.Map.MapType) propriedade é definida como `Satellite` :
 
 [![Captura de tela do controle de mapa com o tipo de mapa satélite, no iOS e no Android](map-images/maptype-satellite.png "Controle de mapa com o satélite MapType")](map-images/maptype-satellite-large.png#lightbox "Controle de mapa com o tipo de mapa satélite")
 
-As capturas de tela a [`Map`](xref:Xamarin.Forms.Maps.Map) seguir mostram [`MapType`](xref:Xamarin.Forms.Maps.Map.MapType) um quando a propriedade `Hybrid`é definida como:
+As capturas de tela a seguir mostram um [`Map`](xref:Xamarin.Forms.Maps.Map) quando a [`MapType`](xref:Xamarin.Forms.Maps.Map.MapType) propriedade é definida como `Hybrid` :
 
 [![Captura de tela do controle de mapa com o tipo de mapa híbrido, no iOS e no Android](map-images/maptype-hybrid.png "Controle de mapa com o MapType híbrido")](map-images/maptype-hybrid-large.png#lightbox "Controle de mapa com o tipo de mapa híbrido")
 
@@ -147,7 +150,7 @@ MapSpan mapSpan = new MapSpan(position, 0.01, 0.01);
 Map map = new Map(mapSpan);
 ```
 
-Este exemplo cria um [`Map`](xref:Xamarin.Forms.Maps.Map) objeto que mostra a região especificada pelo [`MapSpan`](xref:Xamarin.Forms.Maps.MapSpan) objeto. O `MapSpan` objeto é centralizado na latitude e na longitude representada por um [`Position`](xref:Xamarin.Forms.Maps.Position) objeto e abrange os graus de 0, 1 latitude e 0, 1 longitude. Para obter informações sobre [`Position`](xref:Xamarin.Forms.Maps.Position) a estrutura, consulte [posição e distância do mapa](position-distance.md). Para obter informações sobre como passar argumentos em XAML, consulte [passando argumentos em XAML](~/xamarin-forms/xaml/passing-arguments.md).
+Este exemplo cria um [`Map`](xref:Xamarin.Forms.Maps.Map) objeto que mostra a região especificada pelo [`MapSpan`](xref:Xamarin.Forms.Maps.MapSpan) objeto. O `MapSpan` objeto é centralizado na latitude e na longitude representada por um [`Position`](xref:Xamarin.Forms.Maps.Position) objeto e abrange os graus de 0, 1 latitude e 0, 1 longitude. Para obter informações sobre a [`Position`](xref:Xamarin.Forms.Maps.Position) estrutura, consulte [posição e distância do mapa](position-distance.md). Para obter informações sobre como passar argumentos em XAML, consulte [passando argumentos em XAML](~/xamarin-forms/xaml/passing-arguments.md).
 
 O resultado é que, quando o mapa é exibido, ele é centralizado em um local específico e abrange um número específico de graus de latitude e Longitude:
 
@@ -155,21 +158,21 @@ O resultado é que, quando o mapa é exibido, ele é centralizado em um local es
 
 ## <a name="create-a-mapspan-object"></a>Criar um objeto MapSpan
 
-Há várias abordagens para a criação [`MapSpan`](xref:Xamarin.Forms.Maps.MapSpan) de objetos. Uma abordagem comum é fornecer os argumentos necessários ao `MapSpan` Construtor. Essas são uma latitude e longitude representadas por um [`Position`](xref:Xamarin.Forms.Maps.Position) objeto e `double` valores que representam os graus de latitude e longitude que são abrangidos pelo `MapSpan`. Para obter informações sobre [`Position`](xref:Xamarin.Forms.Maps.Position) a estrutura, consulte [posição e distância do mapa](position-distance.md).
+Há várias abordagens para a criação de [`MapSpan`](xref:Xamarin.Forms.Maps.MapSpan) objetos. Uma abordagem comum é fornecer os argumentos necessários ao `MapSpan` Construtor. Essas são uma latitude e longitude representadas por um [`Position`](xref:Xamarin.Forms.Maps.Position) objeto e `double` valores que representam os graus de latitude e longitude que são abrangidos pelo `MapSpan` . Para obter informações sobre a [`Position`](xref:Xamarin.Forms.Maps.Position) estrutura, consulte [posição e distância do mapa](position-distance.md).
 
 Como alternativa, há três métodos na [`MapSpan`](xref:Xamarin.Forms.Maps.MapSpan) classe que retornam novos `MapSpan` objetos:
 
-1. [`ClampLatitude`](xref:Xamarin.Forms.Maps.MapSpan.ClampLatitude*)Retorna um `MapSpan` com o mesmo `LongitudeDegrees` que a instância de classe do método e um raio definido por seus `north` argumentos `south` e.
-1. [`FromCenterAndRadius`](xref:Xamarin.Forms.Maps.MapSpan.FromCenterAndRadius*)Retorna um `MapSpan` que é definido por seus [`Position`](xref:Xamarin.Forms.Maps.Position) argumentos [`Distance`](xref:Xamarin.Forms.Maps.Distance) e.
+1. [`ClampLatitude`](xref:Xamarin.Forms.Maps.MapSpan.ClampLatitude*)Retorna um `MapSpan` com o mesmo `LongitudeDegrees` que a instância de classe do método e um raio definido por seus `north` `south` argumentos e.
+1. [`FromCenterAndRadius`](xref:Xamarin.Forms.Maps.MapSpan.FromCenterAndRadius*)Retorna um `MapSpan` que é definido por seus [`Position`](xref:Xamarin.Forms.Maps.Position) [`Distance`](xref:Xamarin.Forms.Maps.Distance) argumentos e.
 1. [`WithZoom`](xref:Xamarin.Forms.Maps.MapSpan.WithZoom*)Retorna um `MapSpan` com o mesmo centro da instância de classe do método, mas com um raio multiplicado por seu `double` argumento.
 
-Para obter informações sobre [`Distance`](xref:Xamarin.Forms.Maps.Distance) a estrutura, consulte [posição e distância do mapa](position-distance.md).
+Para obter informações sobre a [`Distance`](xref:Xamarin.Forms.Maps.Distance) estrutura, consulte [posição e distância do mapa](position-distance.md).
 
-Depois que [`MapSpan`](xref:Xamarin.Forms.Maps.MapSpan) um tiver sido criado, as seguintes propriedades podem ser acessadas para recuperar dados sobre ele:
+Depois que um [`MapSpan`](xref:Xamarin.Forms.Maps.MapSpan) tiver sido criado, as seguintes propriedades podem ser acessadas para recuperar dados sobre ele:
 
-- [`Center`](xref:Xamarin.Forms.Maps.MapSpan.Center), que representa o [`Position`](xref:Xamarin.Forms.Maps.Position) no centro geográfico do `MapSpan`.
-- [`LatitudeDegrees`](xref:Xamarin.Forms.Maps.MapSpan.LatitudeDegrees), que representa os graus de latitude que são abrangidos pelo `MapSpan`.
-- [`LongitudeDegrees`](xref:Xamarin.Forms.Maps.MapSpan.LongitudeDegrees), que representa os graus de longitude que são abrangidos pelo `MapSpan`.
+- [`Center`](xref:Xamarin.Forms.Maps.MapSpan.Center), que representa o [`Position`](xref:Xamarin.Forms.Maps.Position) no centro geográfico do `MapSpan` .
+- [`LatitudeDegrees`](xref:Xamarin.Forms.Maps.MapSpan.LatitudeDegrees), que representa os graus de latitude que são abrangidos pelo `MapSpan` .
+- [`LongitudeDegrees`](xref:Xamarin.Forms.Maps.MapSpan.LongitudeDegrees), que representa os graus de longitude que são abrangidos pelo `MapSpan` .
 - [`Radius`](xref:Xamarin.Forms.Maps.MapSpan.Radius), que representa o `MapSpan` raio.
 
 ## <a name="move-the-map"></a>Mover o mapa
@@ -185,7 +188,7 @@ map.MoveToRegion(mapSpan);
 
 ## <a name="zoom-the-map"></a>Aplicar zoom ao mapa
 
-O nível de zoom de [`Map`](xref:Xamarin.Forms.Maps.Map) um pode ser alterado sem alterar seu local. Isso pode ser feito usando a interface do usuário do mapa ou programaticamente chamando [`MoveToRegion`](xref:Xamarin.Forms.Maps.Map.MoveToRegion*) o [`MapSpan`](xref:Xamarin.Forms.Maps.MapSpan) método com um argumento que usa o local [`Position`](xref:Xamarin.Forms.Maps.Position) atual como o argumento:
+O nível de zoom de um [`Map`](xref:Xamarin.Forms.Maps.Map) pode ser alterado sem alterar seu local. Isso pode ser feito usando a interface do usuário do mapa ou programaticamente chamando o [`MoveToRegion`](xref:Xamarin.Forms.Maps.Map.MoveToRegion*) método com um [`MapSpan`](xref:Xamarin.Forms.Maps.MapSpan) argumento que usa o local atual como o [`Position`](xref:Xamarin.Forms.Maps.Position) argumento:
 
 ```csharp
 double zoomLevel = 0.5;
@@ -196,21 +199,21 @@ if (map.VisibleRegion != null)
 }
 ```
 
-Neste exemplo, o [`MoveToRegion`](xref:Xamarin.Forms.Maps.Map.MoveToRegion*) método é chamado com um [`MapSpan`](xref:Xamarin.Forms.Maps.MapSpan) argumento que especifica o local atual do mapa, por meio da [`Map.VisibleRegion`](xref:Xamarin.Forms.Maps.Map.VisibleRegion) Propriedade, e o nível de zoom como graus de latitude e longitude. O resultado geral é que o nível de zoom do mapa é alterado, mas seu local não é. Uma abordagem alternativa para implementar o zoom em um mapa é usar o [`MapSpan.WithZoom`](xref:Xamarin.Forms.Maps.MapSpan.WithZoom*) método para controlar o fator de zoom.
+Neste exemplo, o [`MoveToRegion`](xref:Xamarin.Forms.Maps.Map.MoveToRegion*) método é chamado com um [`MapSpan`](xref:Xamarin.Forms.Maps.MapSpan) argumento que especifica o local atual do mapa, por meio da [`Map.VisibleRegion`](xref:Xamarin.Forms.Maps.Map.VisibleRegion) propriedade, e o nível de zoom como graus de latitude e longitude. O resultado geral é que o nível de zoom do mapa é alterado, mas seu local não é. Uma abordagem alternativa para implementar o zoom em um mapa é usar o [`MapSpan.WithZoom`](xref:Xamarin.Forms.Maps.MapSpan.WithZoom*) método para controlar o fator de zoom.
 
 > [!IMPORTANT]
-> Aplicar zoom a um mapa, seja por meio da interface do usuário do mapa ou [`Map.HasZoomEnabled`](xref:Xamarin.Forms.Maps.Map.HasZoomEnabled) programaticamente, requer que a propriedade seja `true`. Para obter mais informações sobre essa propriedade, consulte [Disable zoom](#disable-zoom).
+> Aplicar zoom a um mapa, seja por meio da interface do usuário do mapa ou programaticamente, requer que a [`Map.HasZoomEnabled`](xref:Xamarin.Forms.Maps.Map.HasZoomEnabled) propriedade seja `true` . Para obter mais informações sobre essa propriedade, consulte [Disable zoom](#disable-zoom).
 
 ## <a name="customize-map-behavior"></a>Personalizar comportamento do mapa
 
 O comportamento de um [`Map`](xref:Xamarin.Forms.Maps.Map) pode ser personalizado definindo algumas de suas propriedades e manipulando o `MapClicked` evento.
 
 > [!NOTE]
-> A personalização de comportamento de mapa adicional pode ser obtida com a criação de um renderizador personalizado de mapa. Para obter mais informações, consulte [Personalizando um mapa do Xamarin. Forms](~/xamarin-forms/app-fundamentals/custom-renderer/map-pin.md).
+> A personalização de comportamento de mapa adicional pode ser obtida com a criação de um renderizador personalizado de mapa. Para obter mais informações, consulte [Personalizando um Xamarin.Forms mapa](~/xamarin-forms/app-fundamentals/custom-renderer/map-pin.md).
 
 ### <a name="disable-scroll"></a>Desabilitar rolagem
 
-A [`Map`](xref:Xamarin.Forms.Maps.Map) classe define uma [`HasScrollEnabled`](xref:Xamarin.Forms.Maps.Map.HasScrollEnabled) Propriedade do tipo `bool`. Por padrão, essa propriedade `true`é, que indica que o mapa tem permissão para rolar. Quando essa propriedade for definida como `false`, o mapa não será rolado. O exemplo a seguir mostra a configuração desta propriedade:
+A [`Map`](xref:Xamarin.Forms.Maps.Map) classe define uma [`HasScrollEnabled`](xref:Xamarin.Forms.Maps.Map.HasScrollEnabled) Propriedade do tipo `bool` . Por padrão, essa propriedade é `true` , que indica que o mapa tem permissão para rolar. Quando essa propriedade for definida como `false` , o mapa não será rolado. O exemplo a seguir mostra a configuração desta propriedade:
 
 ```xaml
 <maps:Map HasScrollEnabled="false" />
@@ -227,7 +230,7 @@ Map map = new Map
 
 ### <a name="disable-zoom"></a>Desabilitar zoom
 
-A [`Map`](xref:Xamarin.Forms.Maps.Map) classe define uma [`HasZoomEnabled`](xref:Xamarin.Forms.Maps.Map.HasZoomEnabled) Propriedade do tipo `bool`. Por padrão, essa propriedade `true`é, que indica que o zoom pode ser executado no mapa. Quando essa propriedade é definida como `false`, o mapa não pode ser ampliado. O exemplo a seguir mostra a configuração desta propriedade:
+A [`Map`](xref:Xamarin.Forms.Maps.Map) classe define uma [`HasZoomEnabled`](xref:Xamarin.Forms.Maps.Map.HasZoomEnabled) Propriedade do tipo `bool` . Por padrão, essa propriedade é `true` , que indica que o zoom pode ser executado no mapa. Quando essa propriedade é definida como `false` , o mapa não pode ser ampliado. O exemplo a seguir mostra a configuração desta propriedade:
 
 ```xaml
 <maps:Map HasZoomEnabled="false" />
@@ -244,7 +247,7 @@ Map map = new Map
 
 ### <a name="show-the-users-location"></a>Mostrar o local do usuário
 
-A [`Map`](xref:Xamarin.Forms.Maps.Map) classe define uma [`IsShowingUser`](xref:Xamarin.Forms.Maps.Map.IsShowingUser) Propriedade do tipo `bool`. Por padrão, essa propriedade `false`é, que indica que o mapa não está mostrando o local atual do usuário. Quando essa propriedade é definida como `true`, o mapa mostra o local atual do usuário. O exemplo a seguir mostra a configuração desta propriedade:
+A [`Map`](xref:Xamarin.Forms.Maps.Map) classe define uma [`IsShowingUser`](xref:Xamarin.Forms.Maps.Map.IsShowingUser) Propriedade do tipo `bool` . Por padrão, essa propriedade é `false` , que indica que o mapa não está mostrando o local atual do usuário. Quando essa propriedade é definida como `true` , o mapa mostra o local atual do usuário. O exemplo a seguir mostra a configuração desta propriedade:
 
 ```xaml
 <maps:Map IsShowingUser="true" />
@@ -264,7 +267,7 @@ Map map = new Map
 
 ### <a name="maintain-map-region-on-layout-change"></a>Manter a região do mapa na alteração de layout
 
-A [`Map`](xref:Xamarin.Forms.Maps.Map) classe define uma `MoveToLastRegionOnLayoutChange` Propriedade do tipo `bool`. Por padrão, essa propriedade `true`é, que indica que a região do mapa exibida será movida de sua região atual para sua região definida anteriormente quando ocorrer uma alteração de layout, como na rotação do dispositivo. Quando essa propriedade é definida como `false`, a região de mapa exibida permanecerá centralizada quando ocorrer uma alteração de layout. O exemplo a seguir mostra a configuração desta propriedade:
+A [`Map`](xref:Xamarin.Forms.Maps.Map) classe define uma `MoveToLastRegionOnLayoutChange` Propriedade do tipo `bool` . Por padrão, essa propriedade é `true` , que indica que a região do mapa exibida será movida de sua região atual para sua região definida anteriormente quando ocorrer uma alteração de layout, como na rotação do dispositivo. Quando essa propriedade é definida como `false` , a região de mapa exibida permanecerá centralizada quando ocorrer uma alteração de layout. O exemplo a seguir mostra a configuração desta propriedade:
 
 ```xaml
 <maps:Map MoveToLastRegionOnLayoutChange="false" />
@@ -281,9 +284,9 @@ Map map = new Map
 
 ### <a name="map-clicks"></a>Cliques de mapa
 
-A [`Map`](xref:Xamarin.Forms.Maps.Map) classe define um `MapClicked` evento que é acionado quando o mapa é tocado. O `MapClickedEventArgs` objeto que acompanha o evento tem uma única propriedade chamada `Position`, do tipo. [`Position`](xref:Xamarin.Forms.Maps.Position) Quando o evento é acionado, `Position` a propriedade é definida como o local do mapa que foi tocado. Para obter informações sobre [`Position`](xref:Xamarin.Forms.Maps.Position) a estrutura, consulte [posição e distância do mapa](position-distance.md).
+A [`Map`](xref:Xamarin.Forms.Maps.Map) classe define um `MapClicked` evento que é acionado quando o mapa é tocado. O `MapClickedEventArgs` objeto que acompanha o evento tem uma única propriedade chamada `Position` , do tipo [`Position`](xref:Xamarin.Forms.Maps.Position) . Quando o evento é acionado, a `Position` propriedade é definida como o local do mapa que foi tocado. Para obter informações sobre a [`Position`](xref:Xamarin.Forms.Maps.Position) estrutura, consulte [posição e distância do mapa](position-distance.md).
 
-O exemplo de código a seguir mostra um manipulador de `MapClicked` eventos para o evento:
+O exemplo de código a seguir mostra um manipulador de eventos para o `MapClicked` evento:
 
 ```csharp
 void OnMapClicked(object sender, MapClickedEventArgs e)
@@ -292,7 +295,7 @@ void OnMapClicked(object sender, MapClickedEventArgs e)
 }
 ```
 
-Neste exemplo, o `OnMapClicked` manipulador de eventos gera a latitude e a longitude que representam o local do mapa tocado. O manipulador de eventos pode ser registrado com `MapClicked` o evento da seguinte maneira:
+Neste exemplo, o `OnMapClicked` manipulador de eventos gera a latitude e a longitude que representam o local do mapa tocado. O manipulador de eventos pode ser registrado com o `MapClicked` evento da seguinte maneira:
 
 ```xaml
 <maps:Map MapClicked="OnMapClicked" />
@@ -309,5 +312,5 @@ map.MapClicked += OnMapClicked;
 
 - [Exemplo de mapas](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 - [Posição e distância do mapa](position-distance.md)
-- [Personalizar um mapa do Xamarin.Forms](~/xamarin-forms/app-fundamentals/custom-renderer/map-pin.md)
+- [Personalizando um Xamarin.Forms mapa](~/xamarin-forms/app-fundamentals/custom-renderer/map-pin.md)
 - [Passando argumentos em XAML](~/xamarin-forms/xaml/passing-arguments.md)

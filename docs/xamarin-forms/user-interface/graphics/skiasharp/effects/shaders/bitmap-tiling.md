@@ -1,48 +1,51 @@
 ---
-title: Lado a lado o bitmap de SkiaSharp
-description: Lado a lado de uma área através de bitmaps repetida horizontal e verticalmente.
-ms.prod: xamarin
-ms.technology: xamarin-skiasharp
-ms.assetid: 9ED14E07-4DC8-4B03-8A33-772838BF51EA
-author: davidbritch
-ms.author: dabritch
-ms.date: 08/23/2018
-ms.openlocfilehash: f019b6e031774d7bcdf593015394d0c73c96949b
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+title: ''
+description: ''
+ms.prod: ''
+ms.technology: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 6a28dd20eb8978334365ac217df1241e5288fd28
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70198653"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84137417"
 ---
-# <a name="skiasharp-bitmap-tiling"></a>Lado a lado o bitmap de SkiaSharp
+# <a name="skiasharp-bitmap-tiling"></a>SkiaSharp bitmap em blocos
 
-[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
-[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/catclock)
+[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/catclock)
 
-Como você viu nos dois artigos anteriores, o [ `SKShader` ](xref:SkiaSharp.SKShader) classe pode criar gradientes lineares ou circulares. Este artigo enfoca o `SKShader` objeto que usa um bitmap para uma área lado a lado. O bitmap pode ser repetido horizontal e verticalmente, em sua orientação original ou como alternativa invertida horizontalmente e verticalmente. A inversão evita o descontinuidades entre os blocos:
+Como você viu nos dois artigos anteriores, a [`SKShader`](xref:SkiaSharp.SKShader) classe pode criar gradientes lineares ou circulares. Este artigo se concentra no `SKShader` objeto que usa um bitmap para dividir uma área. O bitmap pode ser repetido horizontal e verticalmente, em sua orientação original ou invertido alternadamente horizontal e verticalmente. A inversão evita descontinuidades entre os blocos:
 
-![Exemplo de lado a lado de bitmap](bitmap-tiling-images/BitmapTilingSample.png "lado a lado exemplo de Bitmap")
+![Exemplo de bitmap em blocos](bitmap-tiling-images/BitmapTilingSample.png "Exemplo de bitmap em blocos")
 
-Estático [ `SKShader.CreateBitmap` ](xref:SkiaSharp.SKShader.CreateBitmap(SkiaSharp.SKBitmap,SkiaSharp.SKShaderTileMode,SkiaSharp.SKShaderTileMode)) método que cria esse sombreador tem um `SKBitmap` parâmetro e dois membros a [ `SKShaderTileMode` ](xref:SkiaSharp.SKShaderTileMode) enumeração:
+O [`SKShader.CreateBitmap`](xref:SkiaSharp.SKShader.CreateBitmap(SkiaSharp.SKBitmap,SkiaSharp.SKShaderTileMode,SkiaSharp.SKShaderTileMode)) método estático que cria esse sombreador tem um `SKBitmap` parâmetro e dois membros da [`SKShaderTileMode`](xref:SkiaSharp.SKShaderTileMode) enumeração:
 
 ```csharp
 public static SKShader CreateBitmap (SKBitmap src, SKShaderTileMode tmx, SKShaderTileMode tmy)
 ```
 
-Os dois parâmetros seguintes indicam os modos usados para o lado a lado horizontal e vertical lado a lado. Isso é o mesmo `SKShaderTileMode` enumeração também é usada com os métodos de gradiente.
+Os dois parâmetros indicam os modos usados para divisão horizontal e divisão vertical. Essa é a mesma `SKShaderTileMode` enumeração que também é usada com os métodos de gradiente.
 
-Um [ `CreateBitmap` ](xref:SkiaSharp.SKShader.CreateBitmap(SkiaSharp.SKBitmap,SkiaSharp.SKShaderTileMode,SkiaSharp.SKShaderTileMode,SkiaSharp.SKMatrix)) sobrecarga inclui um `SKMatrix` argumento para executar uma transformação em bitmaps de lado a lado:
+Uma [`CreateBitmap`](xref:SkiaSharp.SKShader.CreateBitmap(SkiaSharp.SKBitmap,SkiaSharp.SKShaderTileMode,SkiaSharp.SKShaderTileMode,SkiaSharp.SKMatrix)) sobrecarga inclui um `SKMatrix` argumento para executar uma transformação nos bitmaps de lado ladrilho:
 
 ```csharp
 public static SKShader CreateBitmap (SKBitmap src, SKShaderTileMode tmx, SKShaderTileMode tmy, SKMatrix localMatrix)
 ```
 
-Este artigo contém vários exemplos de como usar essa transformação de matriz com bitmaps lado a lado.
+Este artigo contém vários exemplos de como usar essa transformação de matriz com bitmaps de ladrilhos.
 
 ## <a name="exploring-the-tile-modes"></a>Explorando os modos de bloco
 
-O primeiro programa na **lado a lado do Bitmap** seção o **sombreadores e outros efeitos** página da [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) exemplo Demonstra os efeitos dos dois `SKShaderTileMode` argumentos. O **Bitmap bloco Inverter modos** arquivo XAML instancia um `SKCanvasView` e duas `Picker` modos de exibição que permitem que você selecione um `SKShaderTilerMode` valor para o lado a lado horizontal e vertical. Observe que uma matriz do `SKShaderTileMode` membros é definido no `Resources` seção:
+O primeiro programa na seção de **bitmap em blocos gráficos** da página **sombreadores e outros efeitos** do exemplo [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) demonstra os efeitos dos dois `SKShaderTileMode` argumentos. O **bloco bitmap flip Modes** o arquivo XAML instancia uma `SKCanvasView` e duas `Picker` exibições que permitem selecionar um `SKShaderTilerMode` valor para divisão horizontal e vertical. Observe que uma matriz dos `SKShaderTileMode` Membros é definida na `Resources` seção:
 
 ```xaml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -85,7 +88,7 @@ O primeiro programa na **lado a lado do Bitmap** seção o **sombreadores e outr
 </ContentPage>
 ```
 
-O construtor do arquivo code-behind carrega no recurso de bitmap que mostra um monkey sentado. Primeiro corta a imagem usando o [ `ExtractSubset` ](xref:SkiaSharp.SKBitmap.ExtractSubset(SkiaSharp.SKBitmap,SkiaSharp.SKRectI)) método `SKBitmap` , de modo que o head e pés tocam as bordas do bitmap. O construtor, em seguida, usa o [ `Resize` ](xref:SkiaSharp.SKBitmap.Resize(SkiaSharp.SKImageInfo,SkiaSharp.SKBitmapResizeMethod)) método para criar outro bitmap de metade do tamanho. Essas alterações tornam o bitmap de um pouco mais adequado para o lado a lado:
+O construtor do arquivo code-behind carrega no recurso de bitmap que mostra um macaco sentado. Ele primeiro corta a imagem usando o [`ExtractSubset`](xref:SkiaSharp.SKBitmap.ExtractSubset(SkiaSharp.SKBitmap,SkiaSharp.SKRectI)) método de `SKBitmap` para que o cabeçalho e os pés estejam tocando nas bordas do bitmap. Em seguida, o construtor usa o [`Resize`](xref:SkiaSharp.SKBitmap.Resize(SkiaSharp.SKImageInfo,SkiaSharp.SKBitmapResizeMethod)) método para criar outro bitmap de metade do tamanho. Essas alterações tornam o bitmap um pouco mais adequado para colocação em blocos:
 
 ```csharp
 public partial class BitmapTileFlipModesPage : ContentPage
@@ -141,21 +144,21 @@ public partial class BitmapTileFlipModesPage : ContentPage
 }
 ```
 
-O `PaintSurface` manipulador obtém o `SKShaderTileMode` as configurações dos dois `Picker` modos de exibição e cria um `SKShader` objeto com base em bitmap e esses dois valores. Esse sombreador é usado para preencher a tela:
+O `PaintSurface` manipulador obtém as `SKShaderTileMode` configurações das duas `Picker` exibições e cria um `SKShader` objeto com base no bitmap e nesses dois valores. Este sombreador é usado para preencher a tela:
 
-[![Modos de bloco invertido de bitmap](bitmap-tiling-images/BitmapTileFlipModes.png "modos de bloco invertido de Bitmap")](bitmap-tiling-images/BitmapTileFlipModes-Large.png#lightbox)
+[![Modos de deslocamento de bloco de bitmap](bitmap-tiling-images/BitmapTileFlipModes.png "Modos de deslocamento de bloco de bitmap")](bitmap-tiling-images/BitmapTileFlipModes-Large.png#lightbox)
 
-A tela do iOS à esquerda mostra o efeito dos valores padrão de `SKShaderTileMode.Clamp`. O bitmap fica no canto superior esquerdo. Abaixo do bitmap, a linha inferior de pixels é repetida todo o caminho para baixo. À direita do bitmap, a coluna mais à direita de pixels é repetida por toda. O restante da tela é colorido por pixel marrom-escuro no canto inferior direito do bitmap. Deve ser óbvio que o `Clamp` opção quase nunca é usada com lado a lado de bitmap!
+A tela do iOS à esquerda mostra o efeito dos valores padrão de `SKShaderTileMode.Clamp` . O bitmap fica no canto superior esquerdo. Abaixo do bitmap, a linha inferior de pixels é repetida em todo o caminho. À direita do bitmap, a coluna mais à direita de pixels é repetida em todo o caminho. O restante da tela é colorido pelo pixel marrom escuro no canto inferior direito do bitmap. Deve ser óbvio que a `Clamp` opção quase nunca é usada com blocos de bitmaps.
 
-A tela Android no centro mostra o resultado de `SKShaderTileMode.Repeat` para ambos os argumentos. O bloco é repetido horizontal e verticalmente. Mostra a tela a plataforma Universal do Windows `SKShaderTileMode.Mirror`. Os blocos são repetidos mas alternadamente invertidos horizontalmente e verticalmente. A vantagem dessa opção é que não há nenhum o descontinuidades entre os blocos.
+A tela do Android no centro mostra o resultado de `SKShaderTileMode.Repeat` para ambos os argumentos. O bloco é repetido horizontal e verticalmente. A tela de Plataforma Universal do Windows mostra `SKShaderTileMode.Mirror` . Os blocos são repetidos, mas alternados de forma horizontal e vertical. A vantagem dessa opção é que não há nenhum descontinuidades entre os blocos.
 
-Tenha em mente que você pode usar opções diferentes para a repetição horizontal e vertical. Você pode especificar `SKShaderTileMode.Mirror` como o segundo argumento para `CreateBitmap` mas `SKShaderTileMode.Repeat` como o terceiro argumento. Em cada linha, o Monkeys a (Macacos) ainda alternativo entre a imagem normal e a imagem espelhada, mas nenhuma do Monkeys (Macacos) é de cabeça para baixo.
+Tenha em mente que você pode usar opções diferentes para a repetição horizontal e vertical. Você pode especificar `SKShaderTileMode.Mirror` como o segundo argumento para `CreateBitmap` , mas `SKShaderTileMode.Repeat` como o terceiro argumento. Em cada linha, o Monkeys ainda alterna entre a imagem normal e a imagem espelho, mas nenhuma das Monkeys está de cabeça para baixo.
 
-## <a name="patterned-backgrounds"></a>Planos de fundo
+## <a name="patterned-backgrounds"></a>Planos de fundo padronizados
 
-Lado a lado de bitmap é comumente usada para criar um plano de fundo com padrão de um bitmap relativamente pequeno. O exemplo clássico é uma parede de tijolos.
+Em geral, o bitmap em blocos é usado para criar um plano de fundo padronizado de um bitmap relativamente pequeno. O exemplo clássico é uma parede de tijolos.
 
-O **algorítmica parede de tijolos** página cria um bitmap pequeno que é semelhante a um brick inteiro e duas metades de um brick separados por elementos básicos. Como esse bloco é usado no próximo exemplo, ela tem criada por um construtor estático e tornar público com uma propriedade estática:
+A página de **parede do Brick de algoritmo** cria um bitmap pequeno que se assemelha a um Brick inteiro e duas metades de um Brick separados por cimento. Como esse Brick é usado no exemplo a seguir também, ele é criado por um construtor estático e torna-se público com uma propriedade estática:
 
 ```csharp
 public class AlgorithmicBrickWallPage : ContentPage
@@ -206,11 +209,11 @@ public class AlgorithmicBrickWallPage : ContentPage
 }
 ```
 
-O bitmap resultante é 70 pixels de largura e 60 pixels de altura:
+O bitmap resultante tem 70 pixels de largura e 60 pixels de altura:
 
-![Lado a lado de parede de tijolos algorítmicos](bitmap-tiling-images/AlgorithmicBrickWallTile.png "algorítmica Brick de parede lado a lado")
+![Bloco de parede de Brick de algoritmo](bitmap-tiling-images/AlgorithmicBrickWallTile.png "Bloco de parede de Brick de algoritmo")
 
-O restante dos **algorítmica parede de tijolos** página cria um `SKShader` objeto que se repete essa imagem horizontalmente e verticalmente:
+O restante da página de **parede do Brick de algoritmo** cria um `SKShader` objeto que repete essa imagem horizontal e verticalmente:
 
 ```csharp
 public class AlgorithmicBrickWallPage : ContentPage
@@ -247,15 +250,15 @@ public class AlgorithmicBrickWallPage : ContentPage
 }
 ```
 
-Aqui está o resultado:
+Eis o resultado:
 
-[![Parede de tijolos algorítmica](bitmap-tiling-images/AlgorithmicBrickWall.png "parede de tijolos algorítmica")](bitmap-tiling-images/AlgorithmicBrickWall-Large.png#lightbox)
+[![Parede de Bricks de algoritmo](bitmap-tiling-images/AlgorithmicBrickWall.png "Parede de Bricks de algoritmo")](bitmap-tiling-images/AlgorithmicBrickWall-Large.png#lightbox)
 
-Talvez você prefira algo um pouco mais realista. Nesse caso, você pode tirar uma fotografia de uma parede de tijolos real e, em seguida, cortá-la. Esse bitmap é 300 pixels de largura e 150 pixels de altura:
+Você pode preferir algo um pouco mais realista. Nesse caso, você pode tirar uma fotografia de uma parede de tijolos real e, em seguida, cortá-la. Esse bitmap tem 300 pixels de largura e 150 pixels de altura:
 
-![Bloco de parede de tijolos](bitmap-tiling-images/BrickWallTile.jpg "Brick de parede lado a lado")
+![Bloco do Brick Wall](bitmap-tiling-images/BrickWallTile.jpg "Bloco do Brick Wall")
 
-Esse bitmap é usado na **parede de tijolos fotográfica** página:
+Esse bitmap é usado na página de **parede do Brick fotográfico** :
 
 ```csharp
 public class PhotographicBrickWallPage : ContentPage
@@ -294,17 +297,17 @@ public class PhotographicBrickWallPage : ContentPage
 }
 ```
 
-Observe que o `SKShaderTileMode` argumentos a serem `CreateBitmap` são ambos `Mirror`. Essa opção geralmente é necessária quando você usa blocos criados a partir de imagens do mundo real. Os blocos de espelhamento evita o descontinuidades:
+Observe que os `SKShaderTileMode` argumentos para `CreateBitmap` são ambos `Mirror` . Essa opção é geralmente necessária quando você usa blocos criados a partir de imagens do mundo real. O espelhamento dos blocos evita descontinuidades:
 
-[![Parede de tijolos fotográfica](bitmap-tiling-images/PhotographicBrickWall.png "parede de tijolos fotográfica")](bitmap-tiling-images/PhotographicBrickWall-Large.png#lightbox)
+[![Mural do Brick fotográfico](bitmap-tiling-images/PhotographicBrickWall.png "Mural do Brick fotográfico")](bitmap-tiling-images/PhotographicBrickWall-Large.png#lightbox)
 
-Algum trabalho é necessário para obter um bitmap adequado para o bloco. Isso não funciona muito bem porque o bloco mais escuro se destaca muito. Regularmente, ele aparece nas imagens repetidas, revelando o fato de que a parede de tijolos foi construído a partir de um bitmap menor.
+É necessário algum trabalho para obter um bitmap adequado para o bloco. Este não funciona muito bem porque o Brick mais escuro se destaca muito. Ele aparece regularmente dentro das imagens repetidas, revelando o fato de que essa parede de Brick foi construída a partir de um bitmap menor.
 
-O **Media** pasta da [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) exemplo também inclui a imagem de um muro:
+A pasta de **mídia** do exemplo [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) também inclui essa imagem de uma parede de pedra:
 
-![Pedra de parede lado a lado](bitmap-tiling-images/StoneWallTile.jpg "pedra de parede lado a lado")
+![Bloco de parede de pedra](bitmap-tiling-images/StoneWallTile.jpg "Bloco de parede de pedra")
 
-No entanto, o bitmap original é um pouco grande demais para um bloco. Ele pode ser redimensionado, mas o `SKShader.CreateBitmap` método também pode redimensionar o bloco, aplicando uma transformação a ele. Essa opção é demonstrada na **pedra parede** página:
+No entanto, o bitmap original é um pouco grande para um bloco. Ele pode ser redimensionado, mas o `SKShader.CreateBitmap` método também pode redimensionar o bloco aplicando uma transformação a ele. Essa opção é demonstrada na página de **parede da pedra** :
 
 ```csharp
 public class StoneWallPage : ContentPage
@@ -347,11 +350,11 @@ public class StoneWallPage : ContentPage
 }
 ```
 
-Um `SKMatrix` valor é criado para a escala da imagem para metade de seu tamanho original:
+Um `SKMatrix` valor é criado para dimensionar a imagem para metade do tamanho original:
 
-[![Pedra parede](bitmap-tiling-images/StoneWall.png "pedra parede")](bitmap-tiling-images/StoneWall-Large.png#lightbox)
+[![Parede da pedra](bitmap-tiling-images/StoneWall.png "Parede da pedra")](bitmap-tiling-images/StoneWall-Large.png#lightbox)
 
-A transformação funciona no bitmap original usado no `CreateBitmap` método? Ou ele transformar a matriz resultante dos blocos? 
+A transformação opera no bitmap original usado no `CreateBitmap` método? Ou ele transforma a matriz resultante de blocos? 
 
 Uma maneira fácil de responder a essa pergunta é incluir uma rotação como parte da transformação:
 
@@ -360,29 +363,29 @@ SKMatrix matrix = SKMatrix.MakeScale(0.5f, 0.5f);
 SKMatrix.PostConcat(ref matrix, SKMatrix.MakeRotationDegrees(15));
 ```
 
-Se a transformação é aplicada ao bloco individual, em seguida, deve ser girada de cada imagem repetida do bloco e o resultado conteria o descontinuidades muitos. Mas é óbvio que a matriz composta de blocos é transformada nesta captura de tela:
+Se a transformação for aplicada ao bloco individual, cada imagem repetida do bloco deverá ser girada e o resultado conterá muitos descontinuidades. Mas é óbvio nesta captura de tela que a matriz composta de blocos é transformada:
 
-[![Pedra parede girado](bitmap-tiling-images/StoneWallRotated.png "pedra parede girado")](bitmap-tiling-images/StoneWallRotated-Large.png#lightbox)
+[![Parede de pedra girada](bitmap-tiling-images/StoneWallRotated.png "Parede de pedra girada")](bitmap-tiling-images/StoneWallRotated-Large.png#lightbox)
 
-Na seção [ **bloco alinhamento**](#tile-alignment), você verá um exemplo de uma transformação de conversão aplicada para o sombreador.
+Na seção [**alinhamento de bloco**](#tile-alignment), você verá um exemplo uma transformação traduzir aplicada ao sombreador.
 
-O standalone [ **relógio Cat** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/catclock) exemplo (não fazem parte do **SkiaSharpFormsDemos**) simula um plano de fundo de madeira granulação usando lado a lado de bitmap com base nesse bitmap de 240 pixels quadrado:
+O exemplo de [**relógio Cat**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/catclock) autônomo (que não faz parte de **SkiaSharpFormsDemos**) simula um plano de fundo de granulação de madeira usando o bitmap com base em blocos de bits baseado neste bitmap quadrado de 240 pixels:
 
-![Granularidade de madeira](bitmap-tiling-images/WoodGrain.png "granulação de madeira")
+![Granulação de madeira](bitmap-tiling-images/WoodGrain.png "Granulação de madeira")
 
-Essa é uma fotografia de um chão de madeira. O `SKShaderTileMode.Mirror` opção permite que ele seja exibido como uma área maior de madeira:
+Essa é uma fotografia de um piso de madeira. A `SKShaderTileMode.Mirror` opção permite que ela apareça como uma área muito maior de madeira:
 
-[![CAT relógio](bitmap-tiling-images/CatClock.png "Cat relógio")](bitmap-tiling-images/CatClock-Large.png#lightbox)
+[![Relógio de gato](bitmap-tiling-images/CatClock.png "Relógio de gato")](bitmap-tiling-images/CatClock-Large.png#lightbox)
 
 ## <a name="tile-alignment"></a>Alinhamento de bloco
 
-Todos os exemplos mostrados até agora têm usado o sombreador criado pelo `SKShader.CreateBitmap` para cobrir a tela inteira. Na maioria dos casos, você estará usando o lado a lado de bitmap para preenchimento de áreas pequenas ou (raramente mais) para preencher os interiores das linhas espessas. Aqui está o bloco de parede de tijolos fotográfica usado para um retângulo menor:
+Todos os exemplos mostrados até agora já usaram o sombreador criado pelo `SKShader.CreateBitmap` para cobrir a tela inteira. Na maioria dos casos, você usará a divisão de bitmap para o arquivamento de áreas menores ou (mais raramente) para preencher os interiores de linhas espessas. Este é o bloco de parede de tijolo fotográfico usado para um retângulo menor:
 
-[![Alinhamento de bloco](bitmap-tiling-images/TileAlignment.png "alinhamento de bloco")](bitmap-tiling-images/TileAlignment-Large.png#lightbox)
+[![Alinhamento de bloco](bitmap-tiling-images/TileAlignment.png "Alinhamento de bloco")](bitmap-tiling-images/TileAlignment-Large.png#lightbox)
 
-Isso pode parecer bem para você, ou talvez não. Talvez você seja incomodado que o padrão de lado a lado não começa com um brick completo no canto superior esquerdo do retângulo. Isso ocorre porque os sombreadores são alinhados com a tela e não o objeto de gráfico que eles Adornar.
+Isso pode parecer bem para você ou talvez não. Talvez você tenha se incomodado de que o padrão de divisão não começa com um Brick completo no canto superior esquerdo do retângulo. Isso ocorre porque os sombreadores são alinhados com a tela e não com o objeto gráfico que adornam.
 
-A correção é simples. Criar um `SKMatrix` valor com base em uma transformação de conversão. A transformação efetivamente desloca o padrão lado a lado para o ponto onde você deseja que o canto superior esquerdo do bloco para ser alinhado. Essa abordagem é demonstrada na **alinhamento de bloco** página, que criou a imagem dos blocos não alinhados mostrado acima:
+A correção é simples. Crie um `SKMatrix` valor com base em uma transformação de tradução. A transformação alterna efetivamente o padrão de lado do ladrilho para o ponto em que você deseja que o canto superior esquerdo do bloco seja alinhado. Essa abordagem é demonstrada na página **alinhamento do bloco** , que criou a imagem dos blocos não alinhados mostrados acima:
 
 ```csharp
 public class TileAlignmentPage : ContentPage
@@ -450,11 +453,11 @@ public class TileAlignmentPage : ContentPage
 }
 ```
 
-O **alinhamento de bloco** página inclui uma `TapGestureRecognizer`. Toque ou clique em tela e o programa alterna para o `SKShader.CreateBitmap` método com um `SKMatrix` argumento. Essa transformação muda o padrão para que o canto superior esquerdo contém um brick completo:
+A página **alinhamento de bloco** inclui um `TapGestureRecognizer` . Toque ou clique na tela e o programa alternará para o `SKShader.CreateBitmap` método com um `SKMatrix` argumento. Essa transformação muda o padrão para que o canto superior esquerdo contenha um Brick completo:
 
-[![Bloco alinhamento tocado](bitmap-tiling-images/TileAlignmentTapped.png "tocado de alinhamento de bloco")](bitmap-tiling-images/TileAlignmentTapped-Large.png#lightbox)
+[![Alinhamento de bloco tocado](bitmap-tiling-images/TileAlignmentTapped.png "Alinhamento de bloco tocado")](bitmap-tiling-images/TileAlignmentTapped-Large.png#lightbox)
 
-Você também pode usar essa técnica para garantir que o padrão de bitmap lado a lado é centralizado dentro da área que ela pinta. No **blocos centralizado** página, o `PaintSurface` manipulador primeiro calcula as coordenadas como se ele vai exibir o bitmap único no centro da tela. Ele usa essas coordenadas para criar uma transformação de translação para `SKShader.CreateBitmap`. Essa transformação muda o padrão inteiro para que um bloco é centralizado:
+Você também pode usar essa técnica para garantir que o padrão de bitmap lado a lado seja centralizado dentro da área que ele pinta. Na página **blocos centralizados** , o `PaintSurface` manipulador calcula primeiro as coordenadas como se vai exibir o bitmap único no centro da tela. Em seguida, ele usa essas coordenadas para criar uma transformação de conversão para `SKShader.CreateBitmap` . Essa transformação muda o padrão inteiro para que um bloco seja centralizado:
 
 ```csharp
 public class CenteredTilesPage : ContentPage
@@ -502,35 +505,35 @@ public class CenteredTilesPage : ContentPage
 }
 ```
 
-O `PaintSurface` manipulador conclui desenhando um círculo no centro da tela. Claro, um dos blocos é exatamente no centro do círculo, e os outros são organizados em um padrão de simétrico:
+O `PaintSurface` manipulador é concluído ao desenhar um círculo no centro da tela. Claro que um dos blocos está exatamente no centro do círculo, e os outros são organizados em um padrão simétrico:
 
-[![Centralizado blocos](bitmap-tiling-images/CenteredTiles.png "centralizada de blocos")](bitmap-tiling-images/CenteredTiles-Large.png#lightbox)
+[![Blocos centralizados](bitmap-tiling-images/CenteredTiles.png "Blocos centralizados")](bitmap-tiling-images/CenteredTiles-Large.png#lightbox)
 
-Outra abordagem de centralização é realmente um pouco mais fácil. Em vez de construir uma transformação de translação que coloca um bloco no centro, você pode centralizar um canto do padrão lado a lado. No `SKMatrix.MakeTranslation` chamar, use os argumentos para o centro da tela:
+Outra abordagem de centralização é, na verdade, um pouco mais fácil. Em vez de construir uma transformação de conversão que coloca um bloco no centro, você pode centralizar um canto do padrão lado a lado. Na `SKMatrix.MakeTranslation` chamada, use argumentos para o centro da tela:
 
 ```csharp
 SKMatrix matrix = SKMatrix.MakeTranslation(info.Rect.MidX, info.Rect.MidY);
 ```
 
-O padrão é ainda centralizado e simétricos, mas nenhum bloco está no Centro de:
+O padrão ainda é centralizado e simétrico, mas nenhum bloco está no centro:
 
-[![Centralizado alternativo de blocos](bitmap-tiling-images/CenteredTilesAlternate.png "centralizado alternativo de blocos")](bitmap-tiling-images/CenteredTilesAlternate-Large.png#lightbox)
+[![Blocos centralizados alternativos](bitmap-tiling-images/CenteredTilesAlternate.png "Blocos centralizados alternativos")](bitmap-tiling-images/CenteredTilesAlternate-Large.png#lightbox)
 
 ## <a name="simplification-through-rotation"></a>Simplificação por meio de rotação
 
-Às vezes, usando uma transformação no `SKShader.CreateBitmap` método pode simplificar o bloco de bitmap. Isso fica evidente quando a tentativa de definir um bloco para um limite de link da cadeia. O **ChainLinkTile.cs** arquivo cria o bloco mostrado aqui (com um plano de fundo rosa para fins de clareza):
+Às vezes, usar uma transformação de rotação no `SKShader.CreateBitmap` método pode simplificar o bloco de bitmap. Isso fica evidente ao tentar definir um bloco para um limite de link de cadeia. O arquivo **ChainLinkTile.cs** cria o bloco mostrado aqui (com um plano de fundo rosa para fins de clareza):
 
-![Bloco de cadeia por link físico](bitmap-tiling-images/HardChainLinkTile.png "bloco cadeia por link físico")
+![Bloco de link de cadeia rígida](bitmap-tiling-images/HardChainLinkTile.png "Bloco de link de cadeia rígida")
 
-O bloco deve incluir dois links, para que o código no bloco se divide em quatro quadrantes. Os quadrantes do canto superior esquerdo e direito inferior são os mesmos, mas eles não estão completos. Os fios têm pouco cortes que devem ser tratados com alguns de desenho adicionais nos quadrantes canto superior direito e inferior esquerdo. O arquivo que faz todo esse trabalho é 174 linhas de comprimento.
+O bloco precisa incluir dois links, para que o código divida o bloco em quatro quadrantes. Os quadrantes superior esquerdo e inferior direito são os mesmos, mas não estão completos. Os cabos têm poucos chanfros que devem ser manipulados com um desenho adicional nos quadrantes superior direito e inferior esquerdo. O arquivo que faz todo esse trabalho é de 174 linhas de comprimento.
 
-Na verdade, para ser muito mais fácil de criar este bloco:
+Torna-se muito mais fácil criar esse bloco:
 
-![Bloco de vínculo de cadeia mais fácil](bitmap-tiling-images/EasierChainLinkTile.png "mais fáceis de bloco de vínculo de cadeia")
+![Bloco de link de cadeia mais fácil](bitmap-tiling-images/EasierChainLinkTile.png "Bloco de link de cadeia mais fácil")
 
-Se o sombreador de bloco de bitmap é girada em 90 graus, os elementos visuais são praticamente as mesmas.
+Se o sombreador de bloco de bitmap for girado 90 graus, os visuais serão praticamente iguais.
 
-O código para criar o bloco de vínculo de cadeia mais fácil é parte do **Link cadeia bloco** página. O construtor determina um tamanho de bloco com base no tipo de dispositivo que o programa está sendo executado e, em seguida, chama `CreateChainLinkTile`, que desenha o bitmap usando linhas, caminhos e sombreadores de gradiente:
+O código para criar o bloco de link de cadeia mais fácil faz parte da página do **bloco link de cadeia** . O Construtor determina um tamanho de bloco com base no tipo de dispositivo em que o programa está sendo executado e, em seguida, chama `CreateChainLinkTile` , que desenha o bitmap usando linhas, caminhos e sombreadores de gradiente:
 
 ```csharp
 public class ChainLinkFencePage : ContentPage
@@ -618,7 +621,7 @@ public class ChainLinkFencePage : ContentPage
 }
 ```
 
-Com exceção de fios, no bloco é transparente, que significa que você pode exibi-lo na parte superior de outra coisa. O programa carrega em um dos recursos de bitmap, exibe-o para preencher a tela e, em seguida, desenha o sombreador na parte superior:
+Exceto para os fios, o bloco é transparente, o que significa que você pode exibi-lo com base em algo mais. O programa é carregado em um dos recursos de bitmap, exibe-o para preencher a tela e, em seguida, desenha o sombreador na parte superior:
 
 ```csharp
 public class ChainLinkFencePage : ContentPage
@@ -650,17 +653,17 @@ public class ChainLinkFencePage : ContentPage
 }
 ```
 
-Observe que o sombreador é girada 45 graus, portanto, é orientado, como um limite de link de cadeia real:
+Observe que o sombreador é girado 45 graus para que ele seja orientado como um limite de link de cadeia real:
 
-[![Limite de Link cadeia](bitmap-tiling-images/ChainLinkFence.png "cadeia metálica")](bitmap-tiling-images/ChainLinkFence-Large.png#lightbox)
+[![Limite de link de cadeia](bitmap-tiling-images/ChainLinkFence.png "Limite de link de cadeia")](bitmap-tiling-images/ChainLinkFence-Large.png#lightbox)
 
-## <a name="animating-bitmap-tiles"></a>Animando blocos de bitmap
+## <a name="animating-bitmap-tiles"></a>Animação de blocos de bitmap
 
-Você pode animar um padrão de bloco de bitmap inteiro Animando a transformação de matriz. Talvez você queira que o padrão a ser mover horizontal ou verticalmente, ou ambos. Você pode fazer isso criando uma transformação de conversão com base nas coordenadas adaptação.
+Você pode animar um padrão inteiro de bloco de bitmap animando a transformação de matriz. Talvez você queira que o padrão seja movido horizontalmente ou verticalmente ou ambos. Você pode fazer isso criando uma transformação de tradução com base nas coordenadas de mudança.
 
-Também é possível desenhar em um bitmap pequeno, ou para manipular bits de pixel do bitmap em uma taxa de 60 vezes por segundo. Esse bitmap pode ser usado para o lado a lado e o padrão de lado a lado inteiro pode parecer ser animada. 
+Também é possível desenhar em um bitmap pequeno ou manipular os bits de pixel do bitmap na taxa de 60 vezes por segundo. Esse bitmap, em seguida, pode ser usado para colocação em blocos, e todo o padrão do lado do ladrilho pode parecer animado. 
 
-O **bloco de Bitmap animado** página demonstra essa abordagem. Um bitmap é instanciado como um campo para ser 64 pixels quadrados. O construtor chama `DrawBitmap` para dar a ele uma aparência inicial. Se o `angle` campo é zero (como ele é quando o método é chamado pela primeira vez), em seguida, o bitmap conterá duas linhas transversais como um X. As linhas são feitas longo o suficiente para sempre chegar até a borda do bitmap independentemente do `angle` valor: 
+A página do **bloco bitmap animado** demonstra essa abordagem. Um bitmap é instanciado como um campo para ser quadrado de 64 pixels. O construtor chama `DrawBitmap` para dar a ele uma aparência inicial. Se o `angle` campo for zero (como é quando o método é chamado pela primeira vez), o bitmap conterá duas linhas cruzadas como um X. As linhas são feitas por tempo suficiente para sempre alcançar a borda do bitmap, independentemente do `angle` valor: 
 
 ```csharp
 public class AnimatedBitmapTilePage : ContentPage
@@ -705,7 +708,7 @@ public class AnimatedBitmapTilePage : ContentPage
 }
 ```
 
-A sobrecarga de animação ocorre na `OnAppearing` e `OnDisappearing` substitui. O `OnTimerTick` método anima a `angle` valor de graus de 0 a 360 graus a cada 10 segundos para girar a Figura X dentro do bitmap:
+A sobrecarga da animação ocorre nas `OnAppearing` `OnDisappearing` substituições e. O `OnTimerTick` método anima o `angle` valor de 0 graus a 360 graus a cada 10 segundos para girar a figura X no bitmap:
 
 ```csharp
 public class AnimatedBitmapTilePage : ContentPage
@@ -746,9 +749,9 @@ public class AnimatedBitmapTilePage : ContentPage
 }
 ```
 
-Devido a simetria da figura X, isso é o mesmo como girar o `angle` valor de 0 graus a cada 2,5 segundos de 90 graus.
+Devido à simetria da figura X, isso é o mesmo que girar o `angle` valor de 0 graus a 90 graus a cada 2,5 segundos.
 
-O `PaintSurface` manipulador cria um sombreador de bitmap e usa o objeto de pintura para a tela inteira de cores:
+O `PaintSurface` manipulador cria um sombreador do bitmap e usa o objeto de pintura para colorir a tela inteira:
 
 ```csharp
 public class AnimatedBitmapTilePage : ContentPage
@@ -773,12 +776,12 @@ public class AnimatedBitmapTilePage : ContentPage
 }
 ```
 
-O `SKShaderTileMode.Mirror` opções Certifique-se de que os braços da X em cada bitmap join com um X em bitmaps adjacentes para criar um padrão animado geral que parece muito mais complexo do que a animação simple sugeriria:
+As `SKShaderTileMode.Mirror` Opções garantem que os braços do x em cada bitmap ingressem com o X nos bitmaps adjacentes para criar um padrão animado geral que pareça muito mais complexo do que a animação simples sugere:
 
-[![Animada Bitmap lado a lado](bitmap-tiling-images/AnimatedBitmapTile.png "animada Bitmap lado a lado")](bitmap-tiling-images/AnimatedBitmapTile-Large.png#lightbox)
+[![Bloco bitmap animado](bitmap-tiling-images/AnimatedBitmapTile.png "Bloco bitmap animado")](bitmap-tiling-images/AnimatedBitmapTile-Large.png#lightbox)
 
 ## <a name="related-links"></a>Links relacionados
 
-- [APIs de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
-- [CatClock (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/catclock)
+- [APIs do SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [CatClock (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/catclock)

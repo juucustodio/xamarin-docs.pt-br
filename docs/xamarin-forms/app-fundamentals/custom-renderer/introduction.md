@@ -1,30 +1,33 @@
 ---
-title: Introdução a renderizadores personalizados
-description: Este artigo fornece uma introdução aos renderizadores personalizados e descreve o processo de criação de um renderizador personalizado.
-ms.prod: xamarin
-ms.assetid: 264314BE-1C5C-4727-A14E-F6F98151CDBD
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 01/19/2016
-ms.openlocfilehash: ad2868a82f662f45066a6111a1dd3bd2aacad671
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: ''
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: e2bed4d5e8f89efa2997fb085278c4b549870245
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "70771877"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84135315"
 ---
 # <a name="introduction-to-custom-renderers"></a>Introdução a renderizadores personalizados
 
-_Renderizadores personalizados fornecem uma abordagem poderosa para personalizar a aparência e o comportamento dos controles Xamarin.Forms. Eles podem ser usados para pequenas mudanças de estilo ou personalização de layout e comportamento sofisticadas específicas da plataforma. Este artigo fornece uma introdução aos renderizadores personalizados e descreve o processo para criar um renderizador personalizado._
+_Os renderizadores personalizados fornecem uma abordagem poderosa para personalizar a aparência e o comportamento dos Xamarin.Forms controles. Eles podem ser usados para alterações de estilo pequeno ou para personalização sofisticada de comportamento e layout específico da plataforma. Este artigo fornece uma introdução aos renderizadores personalizados e descreve o processo de criação de um renderizador personalizado._
 
-[Páginas, Layouts e Controles](~/xamarin-forms/user-interface/controls/index.md) do Xamarin.Forms apresenta uma API comum para descrever interfaces do usuário móveis multiplataforma. Cada página, layout e controle é renderizado de maneira diferente em cada plataforma usando uma classe `Renderer`, que por sua vez cria um controle nativo (correspondente à representação no Xamarin.Forms), organiza sua disposição na tela e adiciona o comportamento especificado no código compartilhado.
+Xamarin.Forms[Páginas, layouts e controles](~/xamarin-forms/user-interface/controls/index.md) apresentam uma API comum para descrever interfaces de usuário móvel de plataforma cruzada. Cada página, layout e controle são renderizados de forma diferente em cada plataforma, usando uma `Renderer` classe que, por sua vez, cria um controle nativo (correspondente à Xamarin.Forms representação), organiza-o na tela e adiciona o comportamento especificado no código compartilhado.
 
 Os desenvolvedores podem implementar suas próprias classes `Renderer` personalizadas para personalizar a aparência e/ou o comportamento de um controle. Renderizadores personalizados de um determinado tipo podem ser adicionados ao projeto de um aplicativo para personalizar o controle em um lugar enquanto permite o comportamento padrão em outras plataformas; ou renderizadores personalizados diferentes podem ser adicionados a cada projeto de aplicativo para criar uma aparência diferente no iOS, no Android e na UWP (Plataforma Universal do Windows). No entanto, implementar uma classe de renderizador personalizado para executar uma personalização de controle simples geralmente gera uma resposta pesada. Os efeitos simplificam esse processo e normalmente são usados para pequenas alterações de estilo. Para obter mais informações, veja [Efeitos](~/xamarin-forms/app-fundamentals/effects/index.md).
 
 ## <a name="examining-why-custom-renderers-are-necessary"></a>Examinando por que renderizadores personalizados são necessários
 
-Alterar a aparência de um controle do Xamarin.Forms sem usar um renderizador personalizado é um processo de duas etapas que envolve criar um controle personalizado por meio de subclasses e, em seguida, consumir o controle personalizado no lugar do controle original. O código a seguir mostra um exemplo da criação de subclasses do controle `Entry`:
+Alterar a aparência de um Xamarin.Forms controle, sem usar um processador personalizado, é um processo de duas etapas que envolve a criação de um controle personalizado por meio de subclasses e o consumo do controle personalizado no lugar do controle original. O código a seguir mostra um exemplo da criação de subclasses do controle `Entry`:
 
 ```csharp
 public class MyEntry : Entry
@@ -65,17 +68,17 @@ A alteração da cor da tela de fundo do controle em cada plataforma foi feira u
 O processo para criar uma classe de renderizador personalizado é a seguinte:
 
 1. Criar uma subclasse da classe do renderizador que renderiza o controle nativo.
-1. Substitua o método que renderiza o controle nativo e escreva a lógica para personalizá-lo. Frequentemente, o método `OnElementChanged` é usado para renderizar o controle nativo, que é chamado quando um controle do Xamarin.Forms correspondente é criado.
-1. Adicionar um atributo `ExportRenderer` à classe do renderizador personalizado para especificar que ele será usado para renderizar o controle do Xamarin.Forms. Esse atributo é usado para registrar o renderizador personalizado no Xamarin.Forms.
+1. Substitua o método que renderiza o controle nativo e escreva a lógica para personalizá-lo. Geralmente, o `OnElementChanged` método é usado para renderizar o controle nativo, que é chamado quando o Xamarin.Forms controle correspondente é criado.
+1. Adicione um `ExportRenderer` atributo à classe de processador personalizado para especificar que ele será usado para renderizar o Xamarin.Forms controle. Esse atributo é usado para registrar o renderizador personalizado com Xamarin.Forms .
 
 > [!NOTE]
-> Para a maioria dos elementos do Xamarin.Forms, o fornecimento de um renderizador personalizado em cada projeto de plataforma é opcional. Se um renderizador personalizado não estiver registrado, será usado o renderizador padrão da classe base do controle. No entanto, são necessários renderizadores personalizados em cada projeto da plataforma durante a renderização de um elemento [View](xref:Xamarin.Forms.View) ou [ViewCell](xref:Xamarin.Forms.ViewCell).
+> Para a maioria dos Xamarin.Forms elementos, é opcional fornecer um renderizador personalizado em cada projeto de plataforma. Se um renderizador personalizado não estiver registrado, será usado o renderizador padrão da classe base do controle. No entanto, são necessários renderizadores personalizados em cada projeto da plataforma durante a renderização de um elemento [View](xref:Xamarin.Forms.View) ou [ViewCell](xref:Xamarin.Forms.ViewCell).
 
-Os tópicos desta série fornecem demonstrações e explicações sobre esse processo para diferentes elementos do Xamarin.Forms.
+Os tópicos desta série fornecerão demonstrações e explicações desse processo para diferentes Xamarin.Forms elementos.
 
 ## <a name="troubleshooting"></a>Solução de problemas
 
-Se um controle personalizado estiver em um projeto de biblioteca do .NET Standard que foi adicionado à solução (ou seja, não na biblioteca do .NET Standard criada pelo modelo de projeto de aplicativo do Xamarin.Forms para Visual Studio para Mac/Visual Studio), poderá ocorrer uma exceção no iOS ao tentar acessar o controle personalizado. Se esse problema ocorrer, ele poderá ser resolvido criando uma referência ao controle personalizado usando a classe `AppDelegate`:
+Se um controle personalizado estiver contido em um projeto de biblioteca .NET Standard que foi adicionado à solução (ou seja, não a biblioteca de .NET Standard criada pelo modelo de projeto de aplicativo Visual Studio para Mac/Visual Studio Xamarin.Forms ), poderá ocorrer uma exceção no Ios ao tentar acessar o controle personalizado. Se esse problema ocorrer, ele poderá ser resolvido criando uma referência ao controle personalizado usando a classe `AppDelegate`:
 
 ```csharp
 var temp = new ClassInPCL(); // in AppDelegate, but temp not used anywhere
@@ -91,8 +94,8 @@ Isso cria uma referência ao tipo `ClassInPCL`, indicando que ele é necessário
 
 ## <a name="summary"></a>Resumo
 
-Este artigo forneceu uma introdução aos renderizadores personalizados e descreveu o processo de criação de um renderizador personalizado. Renderizadores personalizados fornecem uma abordagem eficiente para personalizar a aparência e o comportamento de controles do Xamarin.Forms. Eles podem ser usados para pequenas alterações de estilo ou personalização sofisticada de comportamento e de layout específico da plataforma.
+Este artigo forneceu uma introdução aos renderizadores personalizados e descreveu o processo de criação de um renderizador personalizado. Os renderizadores personalizados fornecem uma abordagem poderosa para personalizar a aparência e o comportamento dos Xamarin.Forms controles. Eles podem ser usados para pequenas alterações de estilo ou personalização sofisticada de comportamento e de layout específico da plataforma.
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Efeitos](~/xamarin-forms/app-fundamentals/effects/index.md)
+- [Effect](~/xamarin-forms/app-fundamentals/effects/index.md)

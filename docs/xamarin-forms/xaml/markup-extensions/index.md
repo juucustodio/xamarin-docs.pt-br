@@ -1,65 +1,68 @@
 ---
-title: Extensões de marcação XAML
-description: O artigo explica como usar extensões de marcação de XAML de xamarin. Forms para estender o poder e flexibilidade do XAML, permitindo que os atributos do elemento a ser definido de fontes diferentes cadeias de caracteres de texto literal.
-ms.prod: xamarin
-ms.assetid: EB06C8B7-3FD5-47B7-A09C-A13063BD110F
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 01/05/2018
-ms.openlocfilehash: 40a50ecf93c8b77577e8e74df2e134b0ce3f80b6
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+title: ''
+description: O artigo explica como usar Xamarin.Forms extensões de marcação XAML para estender a potência e a flexibilidade do XAML, permitindo que os atributos do elemento sejam definidos de fontes diferentes de cadeias de caracteres de texto literal.
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 568cffc335f28b1a47f3278ad061d851ebef84b6
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70767545"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84130384"
 ---
-# <a name="xaml-markup-extensions"></a>Extensões de marcação XAML
+# <a name="xaml-markup-extensions"></a>Extensões de marcação do XAML
 
-[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-markupextensions)
+[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-markupextensions)
 
-Extensões de marcação XAML ajudam a estender o poder e flexibilidade do XAML, permitindo que os atributos do elemento a ser definido de fontes diferentes cadeias de caracteres de texto literal.
+As extensões de marcação XAML ajudam a ampliar o poder e a flexibilidade do XAML, permitindo que os atributos de elemento sejam definidos de fontes diferentes de cadeias de caracteres de texto literal.
 
-Por exemplo, normalmente você defina as `Color` propriedade de `BoxView` semelhante a esta:
+Por exemplo, normalmente você define a `Color` propriedade de `BoxView` como esta:
 
 ```xaml
 <BoxView Color="Blue" />
 ```
 
-Ou, você pode defini-lo como um valor hexadecimal de cor RGB:
+Ou você pode defini-lo como um valor de cor RGB hexadecimal:
 
 ```xaml
 <BoxView Color="#FF0080" />
 ```
 
-Em ambos os casos, a cadeia de caracteres de texto é definida como o `Color` atributo será convertido em um `Color` valor pela [ `ColorTypeConverter` ](xref:Xamarin.Forms.ColorTypeConverter) classe.
+Em ambos os casos, a cadeia de caracteres de texto definida como o `Color` atributo é convertida em um `Color` valor pela [`ColorTypeConverter`](xref:Xamarin.Forms.ColorTypeConverter) classe.
 
-Talvez você prefira em vez disso, defina as `Color` de um valor armazenado em um dicionário de recurso, ou o valor de uma propriedade estática de uma classe que você criou ou uma propriedade de tipo de atributo `Color` de outro elemento na página, ou construídos a partir de Separe os valores de matiz, saturação e luminosidade.
+Em vez disso, você pode preferir definir o `Color` atributo de um valor armazenado em um dicionário de recursos ou do valor de uma propriedade estática de uma classe que você criou, ou de uma propriedade do tipo `Color` de outro elemento na página, ou construídos a partir de valores separados de matiz, saturação e luminosidade.
 
-Todas essas opções são possíveis usando extensões de marcação XAML. Mas não deixe a frase "extensões de marcação" assustam você: As extensões de marcação XAML *não* são extensões para XML. Mesmo com extensões de marcação XAML, o XAML é sempre XML legal.
+Todas essas opções são possíveis usando extensões de marcação XAML. Mas não deixe a frase "extensões de marcação" assustam você: as extensões de marcação XAML *não* são extensões para XML. Mesmo com extensões de marcação XAML, o XAML é sempre XML válido.
 
-Uma extensão de marcação é realmente apenas uma maneira diferente para expressar um atributo de um elemento. Extensões de marcação XAML são geralmente identificadas por uma configuração de atributo que é colocada entre chaves:
+Uma extensão de marcação é, na verdade, apenas uma maneira diferente de expressar um atributo de um elemento. Extensões de marcação XAML geralmente são identificáveis por uma configuração de atributo que está entre chaves:
 
 ```xaml
 <BoxView Color="{StaticResource themeColor}" />
 ```
 
-Qualquer configuração de atributo entre chaves é *sempre* uma extensão de marcação XAML. No entanto, como você verá, extensões de marcação XAML também podem ser referenciadas sem o uso de chaves.
+Qualquer configuração de atributo entre chaves é *sempre* uma extensão de marcação XAML. No entanto, como você verá, as extensões de marcação XAML também podem ser referenciadas sem o uso de chaves.
 
-Este artigo está dividido em duas partes:
+Este artigo é dividido em duas partes:
 
-## <a name="consuming-xaml-markup-extensionsconsumingmd"></a>[Consumo de extensões de marcação XAML](consuming.md)  
+## <a name="consuming-xaml-markup-extensions"></a>[Consumo de extensões de marcação do XAML](consuming.md)  
 
-Use as extensões de marcação XAML definidas no xamarin. Forms.
+Use as extensões de marcação XAML definidas em Xamarin.Forms .
 
-## <a name="creating-xaml-markup-extensionscreatingmd"></a>[Criação de extensões de marcação XAML](creating.md)
+## <a name="creating-xaml-markup-extensions"></a>[Criação de extensões de marcação do XAML](creating.md)
 
-Escreva suas próprias extensões de marcação XAML personalizados.
+Escreva suas próprias extensões de marcação XAML personalizadas.
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Extensões de marcação (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-markupextensions)
-- [Capítulo de extensões de marcação XAML do xamarin. Forms book](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter10.md)
+- [Extensões de marcação (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-markupextensions)
+- [Capítulo de extensões de marcação XAML do Xamarin.Forms livro](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter10.md)
 - [Dicionários de recurso](~/xamarin-forms/xaml/resource-dictionaries.md)
 - [Estilos dinâmicos](~/xamarin-forms/user-interface/styles/dynamic.md)
 - [Associação de dados](~/xamarin-forms/app-fundamentals/data-binding/index.md)

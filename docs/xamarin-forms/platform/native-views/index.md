@@ -1,30 +1,33 @@
 ---
-title: Exibições nativas no Xamarin. Forms
-description: Exibições nativas do iOS, Android e Plataforma Universal do Windows (UWP) podem ser referenciadas diretamente do Xamarin. Forms e podem interagir com exibições do Xamarin. Forms.
-ms.prod: xamarin
-ms.assetid: 2294a023-d763-41de-a9da-c2bfc239a132
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 11/24/2016
-ms.openlocfilehash: c49d6633e3fb78aa026cbd16cb2c6092a1c463f1
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+title: Exibições nativas noXamarin.Forms
+description: Exibições nativas do iOS, Android e Plataforma Universal do Windows (UWP) podem ser referenciadas diretamente do Xamarin.Forms e podem interagir com Xamarin.Forms exibições.
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: b622d19675694f4d4c7816a81f969b93cdfb5828
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70760010"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84139562"
 ---
-# <a name="native-views-in-xamarinforms"></a>Exibições nativas no Xamarin. Forms
+# <a name="native-views-in-xamarinforms"></a>Exibições nativas noXamarin.Forms
 
-_Exibições nativas do iOS, Android e Plataforma Universal do Windows (UWP) podem ser referenciadas diretamente de Xamarin. Forms. As propriedades e os manipuladores de eventos podem ser definidos em exibições nativas e podem interagir com exibições do Xamarin. Forms._
+_Exibições nativas do iOS, Android e Plataforma Universal do Windows (UWP) podem ser referenciadas diretamente do Xamarin.Forms . As propriedades e os manipuladores de eventos podem ser definidos em exibições nativas e podem interagir com Xamarin.Forms exibições._
 
-## <a name="native-views-in-xamlxamlmd"></a>[Exibições nativos em XAML](xaml.md)
+## <a name="native-views-in-xaml"></a>[Exibições nativas em XAML](xaml.md)
 
-Exibições nativas do iOS, Android e UWP podem ser referenciadas diretamente de páginas Xamarin. Forms criadas usando XAML.
+Exibições nativas do iOS, Android e UWP podem ser referenciadas diretamente de Xamarin.Forms páginas criadas usando XAML.
 
-## <a name="native-views-in-ccodemd"></a>[Exibições nativas em C#](code.md)
+## <a name="native-views-in-c"></a>[Exibições nativas em C#](code.md)
 
-Exibições nativas do iOS, Android e UWP podem ser referenciadas diretamente das páginas do xamarin. Forms criadas usando a linguagem c#.
+Exibições nativas do iOS, Android e UWP podem ser referenciadas diretamente de Xamarin.Forms páginas criadas usando C#.
 
 ## <a name="related-links"></a>Links relacionados
 

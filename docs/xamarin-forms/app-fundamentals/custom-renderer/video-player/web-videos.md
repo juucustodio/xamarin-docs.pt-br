@@ -1,22 +1,25 @@
 ---
-title: Reproduzindo um vídeo da Web
-description: Este artigo explica como reproduzir vídeos da Web em um aplicativo de player de vídeo usando o Xamarin.Forms.
-ms.prod: xamarin
-ms.assetid: 75781A10-865D-4BA8-8D6B-E3DA012922BC
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 02/12/2018
-ms.openlocfilehash: 107b2a970041c70bb021b03dd98f8c91eaea8d34
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: ''
+description: Este artigo explica como reproduzir vídeos da Web em um aplicativo de player de vídeo, usando o Xamarin.Forms .
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: b4269b768d6dd9a0eadbbe557f701f8a43b74c99
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "70771754"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84133673"
 ---
 # <a name="playing-a-web-video"></a>Reproduzindo um vídeo da Web
 
-[![Baixar](~/media/shared/download.png) amostra Baixar a amostra](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
+[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
 
 A classe `VideoPlayer` define uma propriedade `Source` usada para especificar a origem do arquivo de vídeo, bem como uma propriedade `AutoPlay`. `AutoPlay` tem uma configuração padrão igual a `true`, o que significa que o vídeo deve iniciar a reprodução automaticamente após a definição de `Source`:
 
@@ -54,7 +57,7 @@ namespace FormsVideoLibrary
 }
 ```
 
-A `Source` propriedade é `VideoSource`do tipo , que é padronizada após a classe [`ImageSource`](xref:Xamarin.Forms.ImageSource) abstrata Xamarin.Forms, e seus três derivados, [`UriImageSource`](xref:Xamarin.Forms.UriImageSource) [`FileImageSource`](xref:Xamarin.Forms.FileImageSource)e [`StreamImageSource`](xref:Xamarin.Forms.StreamImageSource). No entanto, nenhuma opção de fluxo está disponível para o `VideoPlayer`, pois o iOS e o Android não dão suporte à reprodução de um vídeo de um fluxo.
+A `Source` propriedade é do tipo `VideoSource` , que é padronizado após a Xamarin.Forms [`ImageSource`](xref:Xamarin.Forms.ImageSource) classe abstrata e seus três derivativos,, [`UriImageSource`](xref:Xamarin.Forms.UriImageSource) [`FileImageSource`](xref:Xamarin.Forms.FileImageSource) e [`StreamImageSource`](xref:Xamarin.Forms.StreamImageSource) . No entanto, nenhuma opção de fluxo está disponível para o `VideoPlayer`, pois o iOS e o Android não dão suporte à reprodução de um vídeo de um fluxo.
 
 ## <a name="video-sources"></a>Fontes de vídeo
 
@@ -190,7 +193,7 @@ Toda a outra lógica que envolve fontes de vídeo é implementada nos renderizad
 
 ### <a name="the-ios-video-source"></a>A fonte de vídeo do iOS
 
-Duas seções do `VideoPlayerRenderer` estão envolvidas na definição da fonte de vídeo do player de vídeo. Quando o Xamarin.Forms cria pela primeira vez um objeto do tipo `VideoPlayer`, o método `OnElementChanged` é chamado com a propriedade `NewElement` do objeto de argumentos definida como esse `VideoPlayer`. O método `OnElementChanged` chama `SetSource`:
+Duas seções do `VideoPlayerRenderer` estão envolvidas na definição da fonte de vídeo do player de vídeo. Quando o Xamarin.Forms primeiro cria um objeto do tipo `VideoPlayer` , o `OnElementChanged` método é chamado com a `NewElement` Propriedade do objeto Arguments definido como isso `VideoPlayer` . O método `OnElementChanged` chama `SetSource`:
 
 ```csharp
 namespace FormsVideoLibrary.iOS
@@ -225,7 +228,7 @@ namespace FormsVideoLibrary.iOS
 
 Posteriormente, quando a propriedade `Source` é alterada, o método `OnElementPropertyChanged` é chamado com uma propriedade `PropertyName` igual a "Origem", e `SetSource` é chamado novamente.
 
-Para reproduzir um arquivo de vídeo no [`AVAsset`](xref:AVFoundation.AVAsset) iOS, um objeto de tipo é criado pela [`AVPlayerItem`](xref:AVFoundation.AVPlayerItem)primeira vez para encapsular o arquivo de vídeo, e que é usado para criar um , que é então entregue ao `AVPlayer` objeto. É desta forma que o método `SetSource` manipula a propriedade `Source` quando ela é do tipo `UriVideoSource`:
+Para reproduzir um arquivo de vídeo no iOS, um objeto do tipo [`AVAsset`](xref:AVFoundation.AVAsset) é criado primeiro para encapsular o arquivo de vídeo e que é usado para criar um [`AVPlayerItem`](xref:AVFoundation.AVPlayerItem) , que é então entregue ao `AVPlayer` objeto. É desta forma que o método `SetSource` manipula a propriedade `Source` quando ela é do tipo `UriVideoSource`:
 
 ```csharp
 namespace FormsVideoLibrary.iOS

@@ -1,24 +1,27 @@
 ---
-title: Caminho de associação do Xamarin.Forms
-description: Este artigo explica como usar associações de dados do Xamarin.Forms para acessar subpropriedades e membros da coleção com a propriedade Path da classe Binding.
-ms.prod: xamarin
-ms.assetid: 3CF721A5-E157-468B-AD3A-DA0A45E58E8D
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 01/05/2018
-ms.openlocfilehash: 79d8df3300b302512a7de4140968dbc4c8e79abc
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: Xamarin.FormsCaminho de associação
+description: Este artigo explica como usar Xamarin.Forms associações de dados para acessar subpropriedades e membros da coleção com a propriedade Path da classe Binding.
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 0657f39d0584405ea1a6d7611ac789488817770f
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "76940338"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84139732"
 ---
-# <a name="xamarinforms-binding-path"></a>Caminho de associação do Xamarin.Forms
+# <a name="xamarinforms-binding-path"></a>Xamarin.FormsCaminho de associação
 
-[![Baixar](~/media/shared/download.png) amostra Baixar a amostra](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
+[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
-Em todos os exemplos anteriores [`Path`](xref:Xamarin.Forms.Binding.Path) de vinculação de dados, a `Binding` propriedade da classe (ou a [`Path`](xref:Xamarin.Forms.Xaml.BindingExtension.Path) propriedade da extensão de `Binding` marcação) foi definida como uma única propriedade. Na verdade, é possível definir `Path` como uma *subpropriedade* (uma propriedade de uma propriedade) ou como um membro de uma coleção.
+Em todos os exemplos anteriores de associação de dados, a [`Path`](xref:Xamarin.Forms.Binding.Path) propriedade da `Binding` classe (ou a [`Path`](xref:Xamarin.Forms.Xaml.BindingExtension.Path) propriedade da `Binding` extensão de marcação) foi definida como uma única propriedade. Na verdade, é possível definir `Path` como uma *subpropriedade* (uma propriedade de uma propriedade) ou como um membro de uma coleção.
 
 Por exemplo, suponha que a página contenha um `TimePicker`:
 
@@ -103,7 +106,7 @@ A associação no terceiro `Label` nas páginas **Variações de caminho** refer
                       StringFormat='The middle day of the week is {0}'}" />
 ```
 
-A origem é definida como a propriedade estática `CultureInfo.CurrentCulture`, que é um objeto do tipo `CultureInfo`. Essa classe define uma `DateTimeFormat` propriedade [`DateTimeFormatInfo`](xref:System.Globalization.DateTimeFormatInfo) nomeada `DayNames` de tipo que contém uma coleção. O índice seleciona o quarto item.
+A origem é definida como a propriedade estática `CultureInfo.CurrentCulture`, que é um objeto do tipo `CultureInfo`. Essa classe define uma propriedade chamada `DateTimeFormat` de tipo [`DateTimeFormatInfo`](xref:System.Globalization.DateTimeFormatInfo) que contém uma `DayNames` coleção. O índice seleciona o quarto item.
 
 O quarto `Label` faz algo similar, mas para a cultura associada à França. A propriedade `Source` da associação é definida como o objeto `CultureInfo` com um construtor:
 
@@ -157,13 +160,13 @@ Isso exibe o tipo da origem da associação ou `DataBindingDemos.PathVariationsP
                       StringFormat='{0}'}" />
 ```
 
-O tipo da propriedade `Content` agora é revelado como sendo `Xamarin.Forms.StackLayout`. Adicione a propriedade `Children` ao `Path` e o tipo será `Xamarin.Forms.ElementCollection'1[Xamarin.Forms.View]`, que é uma classe interna do Xamarin.Forms, mas, obviamente, um tipo de coleção. Adicione um índice a ele e o tipo será `Xamarin.Forms.Label`. Continue dessa maneira.
+O tipo da propriedade `Content` agora é revelado como sendo `Xamarin.Forms.StackLayout`. Adicione a `Children` propriedade ao `Path` e o tipo é `Xamarin.Forms.ElementCollection'1[Xamarin.Forms.View]` , que é uma classe interna a Xamarin.Forms , mas obviamente um tipo de coleção. Adicione um índice a ele e o tipo será `Xamarin.Forms.Label`. Continue dessa maneira.
 
-Como o Xamarin.Forms processa o caminho de associação, ele instala um manipulador `PropertyChanged` em qualquer objeto no caminho que implementa a interface `INotifyPropertyChanged`. Por exemplo, a associação final reage a uma alteração no primeiro `Label` porque a propriedade `Text` é alterada.
+Como Xamarin.Forms processa o caminho de associação, ele instala um `PropertyChanged` manipulador em qualquer objeto no caminho que implementa a `INotifyPropertyChanged` interface. Por exemplo, a associação final reage a uma alteração no primeiro `Label` porque a propriedade `Text` é alterada.
 
 Se uma propriedade no caminho de associação não implementar `INotifyPropertyChanged`, todas as alterações a essa propriedade serão ignoradas. Algumas alterações podem invalidar por completo o caminho de associação. Portanto, você deverá usar essa técnica somente quando a cadeia de caracteres de propriedades e subpropriedades nunca se tornarem inválidas.
 
 ## <a name="related-links"></a>Links relacionados
 
 - [Demonstrações de associação de dados (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
-- [Capítulo de associação de dados do catálogo de Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)
+- [Capítulo de vinculação de dados do Xamarin.Forms livro](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)

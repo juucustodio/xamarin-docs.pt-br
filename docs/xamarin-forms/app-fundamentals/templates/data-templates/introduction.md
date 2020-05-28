@@ -1,26 +1,29 @@
 ---
-title: Introdução a modelos de dados do Xamarin.Forms
-description: Os modelos de dados do Xamarin.Forms fornecem a capacidade de definir a apresentação de dados em controles compatíveis. Este artigo fornece uma introdução aos modelos de dados, examinando o motivo pelo qual eles são necessários.
-ms.prod: xamarin
-ms.assetid: 4ED4ACF4-BE4A-44ED-8EAF-C03947B8663B
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 09/11/2017
-ms.openlocfilehash: 10bba38de1dc8908ad853d5e4ca2bb845b4ac8c6
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: Introdução aos Xamarin.Forms modelos de dados
+description: Xamarin.Formsos modelos de dados fornecem a capacidade de definir a apresentação de dados em controles com suporte. Este artigo fornece uma introdução aos modelos de dados, examinando o motivo pelo qual eles são necessários.
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: f71e0a67b823d92a17158a076707f606f6a4c73f
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "70771276"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84136104"
 ---
-# <a name="introduction-to-xamarinforms-data-templates"></a>Introdução a modelos de dados do Xamarin.Forms
+# <a name="introduction-to-xamarinforms-data-templates"></a>Introdução aos Xamarin.Forms modelos de dados
 
-[![Baixar](~/media/shared/download.png) amostra Baixar a amostra](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/templates-datatemplates)
+[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/templates-datatemplates)
 
-_Os modelos de dados xamarin.forms fornecem a capacidade de definir a apresentação de dados sobre controles suportados. Este artigo fornece uma introdução aos modelos de dados, examinando por que eles são necessários._
+_Os modelos de dados do Xamarin. Forms fornecem a capacidade de definir a apresentação de dados em controles com suporte. Este artigo fornece uma introdução aos modelos de dados, examinando por que eles são necessários._
 
-Considere [`ListView`](xref:Xamarin.Forms.ListView) um que exibe `Person` uma coleção de objetos. O exemplo de código a seguir mostra a definição da classe `Person`:
+Considere um [`ListView`](xref:Xamarin.Forms.ListView) que exibe uma coleção de `Person` objetos. O exemplo de código a seguir mostra a definição da classe `Person`:
 
 ```csharp
 public class Person
@@ -31,7 +34,7 @@ public class Person
 }
 ```
 
-A classe `Person` define as propriedades `Name`, `Age` e `Location`, que podem ser definidas quando um objeto `Person` é criado. O [`ListView`](xref:Xamarin.Forms.ListView) é usado para `Person` exibir a coleção de objetos, como mostrado no seguinte exemplo de código XAML:
+A classe `Person` define as propriedades `Name`, `Age` e `Location`, que podem ser definidas quando um objeto `Person` é criado. O [`ListView`](xref:Xamarin.Forms.ListView) é usado para exibir a coleção de `Person` objetos, conforme mostrado no exemplo de código XAML a seguir:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -56,12 +59,12 @@ A classe `Person` define as propriedades `Name`, `Age` e `Location`, que podem s
 </ContentPage>
 ```
 
-Os itens são adicionados ao [`ListView`](xref:Xamarin.Forms.ListView) em XAML, inicializando a [`ItemsSource`](xref:Xamarin.Forms.ItemsView`1.ItemsSource) propriedade a partir de uma matriz de `Person` instâncias.
+Os itens são adicionados ao [`ListView`](xref:Xamarin.Forms.ListView) XAML in, inicializando a [`ItemsSource`](xref:Xamarin.Forms.ItemsView`1.ItemsSource) propriedade de uma matriz de `Person` instâncias.
 
 > [!NOTE]
 > Observe que o elemento `x:Array` requer um atributo `Type` que indica o tipo dos itens na matriz.
 
-A página C# equivalente é mostrada no exemplo [`ItemsSource`](xref:Xamarin.Forms.ItemsView`1.ItemsSource) de código `List` `Person` a seguir, que inicializa a propriedade para uma das instâncias:
+A página C# equivalente é mostrada no exemplo de código a seguir, que inicializa a [`ItemsSource`](xref:Xamarin.Forms.ItemsView`1.ItemsSource) propriedade para uma `List` das `Person` instâncias:
 
 ```csharp
 public WithoutDataTemplatePageCS()
@@ -88,7 +91,7 @@ public WithoutDataTemplatePageCS()
 }
 ```
 
-As [`ListView`](xref:Xamarin.Forms.ListView) `ToString` chamadas ao exibir os objetos na coleção. Como não há uma substituição de `Person.ToString`, `ToString` retorna o nome do tipo de cada objeto, conforme mostrado nas capturas de tela seguir:
+As [`ListView`](xref:Xamarin.Forms.ListView) chamadas `ToString` ao exibir os objetos na coleção. Como não há uma substituição de `Person.ToString`, `ToString` retorna o nome do tipo de cada objeto, conforme mostrado nas capturas de tela seguir:
 
 ![](introduction-images/no-data-template.png "ListView without a Data Template")
 
@@ -105,32 +108,32 @@ public class Person
 }
 ```
 
-Isso resulta [`ListView`](xref:Xamarin.Forms.ListView) na `Person.Name` exibição do valor da propriedade de cada objeto na coleção, conforme mostrado nas capturas de tela a seguir:
+Isso resulta na [`ListView`](xref:Xamarin.Forms.ListView) exibição do `Person.Name` valor da propriedade para cada objeto na coleção, conforme mostrado nas capturas de tela a seguir:
 
 ![](introduction-images/override-tostring.png "ListView with a Data Template")
 
-A substituição `Person.ToString` poderia retornar uma cadeia de caracteres formatada composta pelas propriedades `Name`, `Age` e `Location`. No entanto, essa abordagem oferece apenas controle limitado sobre a aparência de cada item de dados. Para maior flexibilidade, pode-se criar um [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) que defina o aparecimento dos dados.
+A substituição `Person.ToString` poderia retornar uma cadeia de caracteres formatada composta pelas propriedades `Name`, `Age` e `Location`. No entanto, essa abordagem oferece apenas controle limitado sobre a aparência de cada item de dados. Para obter mais flexibilidade, [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) é possível criar um que defina a aparência dos dados.
 
 ## <a name="creating-a-datatemplate"></a>Criando um DataTemplate
 
-A [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) é usado para especificar a aparência dos dados e normalmente usa vinculação de dados para exibir dados. Seu cenário de uso comum é ao exibir [`ListView`](xref:Xamarin.Forms.ListView)dados de uma coleção de objetos em um . Por exemplo, quando um `ListView` está associado a uma coleção de objetos `Person`, a propriedade `ListView.ItemTemplate` é definida como um `DataTemplate` que define a aparência de cada objeto `Person` no `ListView`. O `DataTemplate` conterá elementos que associam aos valores de propriedade de cada objeto `Person`. Para obter mais informações sobre vinculação de dados, veja [Noções básicas de vinculação de dados](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md).
+Um [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) é usado para especificar a aparência dos dados e normalmente usa a vinculação de dados para exibir dados. Seu cenário de uso comum é ao exibir dados de uma coleção de objetos em um [`ListView`](xref:Xamarin.Forms.ListView) . Por exemplo, quando um `ListView` está associado a uma coleção de objetos `Person`, a propriedade `ListView.ItemTemplate` é definida como um `DataTemplate` que define a aparência de cada objeto `Person` no `ListView`. O `DataTemplate` conterá elementos que associam aos valores de propriedade de cada objeto `Person`. Para obter mais informações sobre vinculação de dados, veja [Noções básicas de vinculação de dados](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md).
 
-A [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) pode ser usado como um valor para as seguintes propriedades:
+Um [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) pode ser usado como um valor para as seguintes propriedades:
 
 - [`ListView.HeaderTemplate`](xref:Xamarin.Forms.ListView.HeaderTemplate)
 - [`ListView.FooterTemplate`](xref:Xamarin.Forms.ListView.FooterTemplate)
 - [`ListView.GroupHeaderTemplate`](xref:Xamarin.Forms.ListView.GroupHeaderTemplate)
-- [`ItemsView.ItemTemplate`](xref:Xamarin.Forms.ItemsView`1), que é [`ListView`](xref:Xamarin.Forms.ListView)herdado por .
-- [`MultiPage.ItemTemplate`](xref:Xamarin.Forms.MultiPage`1), que é [`CarouselPage`](xref:Xamarin.Forms.CarouselPage)herdado por , [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage)e [`TabbedPage`](xref:Xamarin.Forms.TabbedPage).
+- [`ItemsView.ItemTemplate`](xref:Xamarin.Forms.ItemsView`1), que é herdado pelo [`ListView`](xref:Xamarin.Forms.ListView) .
+- [`MultiPage.ItemTemplate`](xref:Xamarin.Forms.MultiPage`1), que é herdado por [`CarouselPage`](xref:Xamarin.Forms.CarouselPage) , [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) e [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) .
 
 > [!NOTE]
-> Note que, [`TableView`](xref:Xamarin.Forms.TableView) embora [`Cell`](xref:Xamarin.Forms.Cell) o uso de objetos, ele não usa um [`DataTemplate`](xref:Xamarin.Forms.DataTemplate). Isso acontece porque as associações de dados sempre são definidas diretamente em objetos `Cell`.
+> Observe que, embora o [`TableView`](xref:Xamarin.Forms.TableView) faça uso de [`Cell`](xref:Xamarin.Forms.Cell) objetos, ele não usa um [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) . Isso acontece porque as associações de dados sempre são definidas diretamente em objetos `Cell`.
 
-Um [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) que é colocado como um filho direto das propriedades listadas acima é conhecido como um *modelo inline*. Como alternativa, é possível definir um `DataTemplate` como um recurso de nível de controle, nível de página ou nível de aplicativo. Escolher onde definir [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) um impacto onde ele pode ser usado:
+Um [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) que é colocado como um filho direto das propriedades listadas acima é conhecido como um *modelo embutido*. Como alternativa, é possível definir um `DataTemplate` como um recurso de nível de controle, nível de página ou nível de aplicativo. Escolhendo onde definir um [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) impacto onde ele pode ser usado:
 
 - Um [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) definido no nível de controle só pode ser aplicado ao controle.
 - Um [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) definido no nível da página pode ser aplicado a vários controles válidos na página.
-- Um [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) definido no nível de aplicação pode ser aplicado a controles válidos em toda a aplicação.
+- Um [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) definido no nível do aplicativo pode ser aplicado a controles válidos em todo o aplicativo.
 
 Modelos de dados posicionados mais baixo na hierarquia de exibição têm precedência sobre os definidos mais acima quando eles compartilham atributos de `x:Key`. Por exemplo, um modelo de dados no nível do aplicativo será substituído por um modelo de dados no nível da página e um modelo de dados no nível da página será substituído por um modelo de dados no nível de controle ou por um modelo de dados embutido.
 
