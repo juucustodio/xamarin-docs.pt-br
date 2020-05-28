@@ -1,18 +1,21 @@
 ---
-title: Usar dados de tempo de design com o previsor XAML
-description: Este artigo explica como usar dados de tempo de design para mostrar layouts com dados pesados no visualizador XAML sem executar seu aplicativo.
-ms.prod: xamarin
-ms.assetid: 0F608019-5951-4BE6-80E0-9EEE1733D642
-ms.technology: xamarin-forms
-author: maddyleger1
-ms.author: maleger
-ms.date: 03/27/2019
-ms.openlocfilehash: 47171c3853fa8f5eb572971e119d51733cb53a40
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+title: ''
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 182256fd572a370a7b322898b1e24ade12e971fd
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72303247"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84127333"
 ---
 # <a name="use-design-time-data-with-the-xaml-previewer"></a>Usar dados de tempo de design com o previsor XAML
 
@@ -38,9 +41,9 @@ Por exemplo, você pode adicionar texto a um rótulo que geralmente tem dados as
 
 [![Dados de tempo de design com texto em um rótulo](xaml-previewer-images/designtimedata-label-sm.png "Dados de tempo de design com texto um rótulo")](xaml-previewer-images/designtimedata-label-lg.png#lightbox)
 
-Neste exemplo, sem `d:Text`, o previsor XAML não mostraria nada para o rótulo. Em vez disso, ele mostra "Name!" onde o rótulo terá dados reais em tempo de execução.
+Neste exemplo, sem `d:Text` , o visualizador XAML não mostraria nada para o rótulo. Em vez disso, ele mostra "Name!" onde o rótulo terá dados reais em tempo de execução.
 
-Você pode usar `d:` com qualquer atributo para um controle Xamarin. Forms, como cores, tamanhos de fonte e espaçamento. Você pode até mesmo adicioná-lo ao próprio controle:
+Você pode usar `d:` com qualquer atributo para um Xamarin.Forms controle, como cores, tamanhos de fonte e espaçamento. Você pode até mesmo adicioná-lo ao próprio controle:
 
 ```xaml
 <d:Button Text="Design Time Button" />
@@ -88,7 +91,7 @@ ListViews são uma maneira popular de exibir dados em um aplicativo móvel. No e
 
 Este exemplo mostrará um ListView de três textcéls no previsor XAML. Você pode alterar `x:String` para um modelo de dados existente em seu projeto.
 
-Você também pode criar uma matriz de objetos de dados. Por exemplo, as propriedades públicas de um objeto de dados `Monkey` podem ser construídas como dados de tempo de design:
+Você também pode criar uma matriz de objetos de dados. Por exemplo, as propriedades públicas de um `Monkey` objeto de dados podem ser construídas como dados de tempo de design:
 
 ```csharp
 namespace Monkeys.Models
@@ -137,7 +140,7 @@ Se você não quiser adicionar dados de tempo de design a controles individuais,
 
 ### <a name="requirements"></a>Requisitos
 
-Os dados de tempo de design exigem uma versão mínima do Xamarin. Forms 3,6.
+Os dados de tempo de design exigem uma versão mínima de Xamarin.Forms 3,6.
 
 ### <a name="intellisense-shows-squiggly-lines-under-my-design-time-data"></a>O IntelliSense mostra linhas onduladas sob meus dados de tempo de design
 

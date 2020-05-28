@@ -1,35 +1,38 @@
 ---
-title: Personalizando uma ListView
-description: Uma ListView do Xamarin.Forms é uma exibição que mostra uma coleção de dados como uma lista vertical. Este artigo demonstra como criar um renderizador personalizado que encapsula os controles de lista e layouts de célula nativa específicos a uma plataforma, permitindo mais controle sobre o desempenho do controle de lista nativo.
-ms.prod: xamarin
-ms.assetid: 2FBCB8C8-4F32-45E7-954F-63AD29D5F1B5
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 11/29/2017
-ms.openlocfilehash: 384ad20cc1456f3de01ddbe241bf2d8b58de387f
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: ''
+description: Um Xamarin.Forms ListView é uma exibição que exibe uma coleção de dados como uma lista vertical. Este artigo demonstra como criar um renderizador personalizado que encapsula os controles de lista e layouts de célula nativa específicos a uma plataforma, permitindo mais controle sobre o desempenho do controle de lista nativo.
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 3403948c2853289610a73bb36073f09c0c86137d
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "70771927"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84135298"
 ---
 # <a name="customizing-a-listview"></a>Personalizando uma ListView
 
-[![Baixar](~/media/shared/download.png) amostra Baixar a amostra](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-listview)
+[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-listview)
 
-_A Xamarin.Forms ListView é uma exibição que exibe uma coleção de dados como uma lista vertical. Este artigo demonstra como criar um renderizador personalizado que encapsula controles de lista específicos da plataforma e layouts de células nativas, permitindo mais controle sobre o desempenho de controle de lista nativo._
+_Um Xamarin.Forms ListView é uma exibição que exibe uma coleção de dados como uma lista vertical. Este artigo demonstra como criar um renderizador personalizado que encapsula controles de lista específicos da plataforma e layouts de células nativas, permitindo mais controle sobre o desempenho do controle de lista nativa._
 
-Cada exibição do Xamarin.Forms tem um renderizador que o acompanha para cada plataforma que cria uma instância de um controle nativo. Quando [`ListView`](xref:Xamarin.Forms.ListView) um é renderizado por um aplicativo Xamarin.Forms, no iOS a `ListViewRenderer` classe é `UITableView` instanciada, o que, por sua vez, instancia um controle nativo. Na plataforma Android, a classe `ListViewRenderer` cria uma instância de um controle `ListView` nativo. Na UWP (Plataforma Universal do Windows), a classe `ListViewRenderer` cria uma instância de um controle `ListView` nativo. Para obter mais informações sobre as classes de renderizador e de controle nativo para as quais os controles do Xamarin.Forms são mapeadas, confira [Classes base do renderizador e controles nativos](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md).
+Cada Xamarin.Forms exibição tem um renderizador que acompanha para cada plataforma que cria uma instância de um controle nativo. Quando um [`ListView`](xref:Xamarin.Forms.ListView) é renderizado por um Xamarin.Forms aplicativo, no Ios, a `ListViewRenderer` classe é instanciada, o que, por sua vez, instancia um `UITableView` controle nativo. Na plataforma Android, a classe `ListViewRenderer` cria uma instância de um controle `ListView` nativo. Na UWP (Plataforma Universal do Windows), a classe `ListViewRenderer` cria uma instância de um controle `ListView` nativo. Para obter mais informações sobre o renderizador e as classes de controle nativo que Xamarin.Forms controlam o mapa para o, consulte [classes base do processador e controles nativos](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md).
 
-O diagrama a seguir [`ListView`](xref:Xamarin.Forms.ListView) ilustra a relação entre o controle e os controles nativos correspondentes que o implementam:
+O diagrama a seguir ilustra a relação entre o [`ListView`](xref:Xamarin.Forms.ListView) controle e os controles nativos correspondentes que o implementam:
 
 ![](listview-images/listview-classes.png "Relationship Between the ListView Control and the Implementing Native Controls")
 
-O processo de renderização pode ser aproveitado para implementar personalizações [`ListView`](xref:Xamarin.Forms.ListView) específicas da plataforma, criando um renderizador personalizado para um em cada plataforma. O processo para fazer isso é o seguinte:
+O processo de renderização pode ser aproveitado para implementar personalizações específicas da plataforma criando um renderizador personalizado para um [`ListView`](xref:Xamarin.Forms.ListView) em cada plataforma. O processo para fazer isso é o seguinte:
 
-1. [Criar](#Creating_the_Custom_ListView_Control) um controle personalizado do Xamarin.Forms.
-1. [Consumir](#Consuming_the_Custom_Control) o controle personalizado do Xamarin.Forms.
+1. [Crie](#Creating_the_Custom_ListView_Control) um Xamarin.Forms controle personalizado.
+1. [Consuma](#Consuming_the_Custom_Control) o controle personalizado do Xamarin.Forms .
 1. [Criar](#Creating_the_Custom_Renderer_on_each_Platform) o renderizador personalizado para o controle em cada plataforma.
 
 Agora, cada item será abordado separadamente, a fim de implementar um renderizador de `NativeListView` que tira proveito dos layouts de célula nativos e dos controles de lista específicos da plataforma. Esse cenário é útil ao portar um aplicativo nativo existente que contém código de lista e de célula pode ser reutilizado. Além disso, ele permite a personalização detalhada de recursos de controle de lista que podem afetar o desempenho, como a virtualização de dados.
@@ -38,7 +41,7 @@ Agora, cada item será abordado separadamente, a fim de implementar um renderiza
 
 ## <a name="creating-the-custom-listview-control"></a>Criando o controle ListView personalizado
 
-Um [`ListView`](xref:Xamarin.Forms.ListView) controle personalizado pode ser criado `ListView` subclassificando a classe, como mostrado no exemplo de código a seguir:
+Um [`ListView`](xref:Xamarin.Forms.ListView) controle personalizado pode ser criado por meio da subclasse da `ListView` classe, conforme mostrado no exemplo de código a seguir:
 
 ```csharp
 public class NativeListView : ListView
@@ -136,7 +139,7 @@ public class MainPageCS : ContentPage
 O controle personalizado `NativeListView` usa renderizadores personalizados específicos da plataforma para exibir uma lista de dados, que são populados por meio da propriedade `Items`. Cada linha na lista contém três itens de dados – um nome, uma categoria e um nome de arquivo de imagem. O layout de cada linha na lista é definido pelo renderizador personalizado específico da plataforma.
 
 > [!NOTE]
-> Como `NativeListView` o controle personalizado será renderizado usando controles de lista específicos da plataforma que incluem capacidade de rolagem, [`ScrollView`](xref:Xamarin.Forms.ScrollView)o controle personalizado não deve ser hospedado em controles de layout roláveis, como o .
+> Como o `NativeListView` controle personalizado será renderizado usando controles de lista específicos da plataforma que incluem a capacidade de rolagem, o controle personalizado não deve ser hospedado em controles de layout rolável, como o [`ScrollView`](xref:Xamarin.Forms.ScrollView) .
 
 Agora, é possível adicionar um renderizador personalizado a cada projeto de aplicativo para criar layouts de célula nativa e controles de lista específicos da plataforma.
 
@@ -147,8 +150,8 @@ Agora, é possível adicionar um renderizador personalizado a cada projeto de ap
 O processo para criar a classe do renderizador personalizado é a seguinte:
 
 1. Crie uma subclasse da classe `ListViewRenderer` que renderiza o controle personalizado.
-1. Substitua o método `OnElementChanged` que renderiza o controle personalizado e escreva a lógica para personalizá-lo. Este método é chamado quando o [`ListView`](xref:Xamarin.Forms.ListView) Xamarin.Forms correspondente é criado.
-1. Adicione um atributo `ExportRenderer` à classe do renderizador personalizado para especificar que ele será usado para renderizar o controle personalizado do Xamarin.Forms. Esse atributo é usado para registrar o renderizador personalizado no Xamarin.Forms.
+1. Substitua o método `OnElementChanged` que renderiza o controle personalizado e escreva a lógica para personalizá-lo. Esse método é chamado quando o correspondente Xamarin.Forms [`ListView`](xref:Xamarin.Forms.ListView) é criado.
+1. Adicione um `ExportRenderer` atributo à classe de processador personalizado para especificar que ele será usado para renderizar o Xamarin.Forms controle personalizado. Esse atributo é usado para registrar o renderizador personalizado com Xamarin.Forms .
 
 > [!NOTE]
 > O fornecimento de um renderizador personalizado em cada projeto da plataforma é opcional. Se um renderizador personalizado não estiver registrado, será usado o renderizador padrão da classe base da célula.
@@ -161,9 +164,9 @@ O controle personalizado `NativeListView` é renderizado por classes de renderiz
 
 ![](listview-images/screenshots.png "NativeListView on each Platform")
 
-A classe `ListViewRenderer` expõe o método `OnElementChanged`, que é chamado quando um controle personalizado do Xamarin.Forms é criado para renderizar o controle nativo correspondente. Esse método usa um parâmetro `ElementChangedEventArgs`, que contém as propriedades `OldElement` e `NewElement`. Essas propriedades representam o elemento do Xamarin.Forms ao qual o renderizador *estava* anexado e o elemento do Xamarin.Forms ao qual o renderizador *está* anexado, respectivamente. No aplicativo de exemplo, a propriedade `OldElement` será `null` e a propriedade `NewElement` conterá uma referência à instância de `NativeListView`.
+A `ListViewRenderer` classe expõe o `OnElementChanged` método, que é chamado quando o Xamarin.Forms controle personalizado é criado para renderizar o controle nativo correspondente. Esse método usa um parâmetro `ElementChangedEventArgs`, que contém as propriedades `OldElement` e `NewElement`. Essas propriedades representam o Xamarin.Forms elemento ao qual o renderizador *foi* anexado e o Xamarin.Forms elemento ao qual o renderizador *está* anexado, respectivamente. No aplicativo de exemplo, a propriedade `OldElement` será `null` e a propriedade `NewElement` conterá uma referência à instância de `NativeListView`.
 
-Uma versão de substituição do método `OnElementChanged`, em cada classe de renderizador específica da plataforma, é o lugar para realização da personalização do controle nativo. Uma referência tipada ao controle nativo que está sendo usado na plataforma pode ser acessada por meio da propriedade `Control`. Além disso, é possível obter uma referência ao controle do Xamarin.Forms que está sendo renderizado por meio da propriedade `Element`.
+Uma versão de substituição do método `OnElementChanged`, em cada classe de renderizador específica da plataforma, é o lugar para realização da personalização do controle nativo. Uma referência tipada ao controle nativo que está sendo usado na plataforma pode ser acessada por meio da propriedade `Control`. Além disso, uma referência ao Xamarin.Forms controle que está sendo processado pode ser obtida por meio da `Element` propriedade.
 
 É necessário ter cuidado ao assinar manipuladores de eventos no método `OnElementChanged`, conforme demonstrado no seguinte exemplo de código:
 
@@ -182,11 +185,11 @@ protected override void OnElementChanged (ElementChangedEventArgs<Xamarin.Forms.
 }
 ```
 
-O controle nativo deve ser configurado e os manipuladores de eventos devem ser inscritos apenas quando o renderizador personalizado for anexado a um novo elemento Xamarin.Forms. De forma semelhante, a inscrição de quaisquer manipuladores de evento inscritos só deve ser cancelada quando o elemento ao qual o renderizador está anexado for alterado. Adotar essa abordagem ajudará a criar um renderizador personalizado que não sofre perdas de memória.
+O controle nativo só deve ser configurado e os manipuladores de eventos assinados quando o renderizador personalizado é anexado a um novo Xamarin.Forms elemento. De forma semelhante, a inscrição de quaisquer manipuladores de evento inscritos só deve ser cancelada quando o elemento ao qual o renderizador está anexado for alterado. Adotar essa abordagem ajudará a criar um renderizador personalizado que não sofre perdas de memória.
 
-Uma versão de substituição do método `OnElementPropertyChanged`, em cada classe de renderizador específica da plataforma, é o lugar para responder a alterações de propriedade vinculáveis sobre o controle personalizado do Xamarin.Forms. Uma verificação da propriedade alterada sempre deve ser feita, pois essa substituição pode ser chamada várias vezes.
+Uma versão substituída do `OnElementPropertyChanged` método, em cada classe de processador específica da plataforma, é o local para responder às alterações de propriedade vinculáveis no Xamarin.Forms controle personalizado. Uma verificação da propriedade alterada sempre deve ser feita, pois essa substituição pode ser chamada várias vezes.
 
-Cada classe de renderizador personalizado é decorada com um atributo `ExportRenderer` que registra o renderizador no Xamarin.Forms. O atributo aceita dois parâmetros – o nome do tipo de controle personalizado do Xamarin.Forms que está sendo renderizado e o nome do tipo de renderizador personalizado. O prefixo `assembly` do atributo especifica que o atributo se aplica a todo o assembly.
+Cada classe de processador personalizado é decorada com um `ExportRenderer` atributo que registra o renderizador com Xamarin.Forms . O atributo usa dois parâmetros – o nome do tipo do Xamarin.Forms controle personalizado que está sendo renderizado e o nome do tipo do renderizador personalizado. O prefixo `assembly` do atributo especifica que o atributo se aplica a todo o assembly.
 
 As seções a seguir abordam a implementação de cada classe de renderizador personalizado específica da plataforma.
 
@@ -216,7 +219,7 @@ namespace CustomRenderer.iOS
 }
 ```
 
-O controle `UITableView` é configurado criando uma instância da classe `NativeiOSListViewSource`, desde que o renderizador personalizado esteja anexado a um novo elemento do Xamarin.Forms. Essa classe fornece dados ao controle `UITableView` substituindo os métodos `RowsInSection` e `GetCell` da classe `UITableViewSource` e expondo uma propriedade `Items` que contém a lista de dados a serem exibidos. A classe também fornece uma substituição do método `RowSelected` que invoca o evento `ItemSelected` fornecido pelo controle personalizado `NativeListView`. Para obter mais informações sobre as substituições de método, confira [Subclassificação de UITableViewSource](~/ios/user-interface/controls/tables/populating-a-table-with-data.md). O método `GetCell` retorna um `UITableCellView` que é preenchido com os dados para cada linha na lista e é mostrado no exemplo de código a seguir:
+O `UITableView` controle é configurado pela criação de uma instância da `NativeiOSListViewSource` classe, desde que o renderizador personalizado seja anexado a um novo Xamarin.Forms elemento. Essa classe fornece dados ao controle `UITableView` substituindo os métodos `RowsInSection` e `GetCell` da classe `UITableViewSource` e expondo uma propriedade `Items` que contém a lista de dados a serem exibidos. A classe também fornece uma substituição do método `RowSelected` que invoca o evento `ItemSelected` fornecido pelo controle personalizado `NativeListView`. Para obter mais informações sobre as substituições de método, confira [Subclassificação de UITableViewSource](~/ios/user-interface/controls/tables/populating-a-table-with-data.md). O método `GetCell` retorna um `UITableCellView` que é preenchido com os dados para cada linha na lista e é mostrado no exemplo de código a seguir:
 
 ```csharp
 public override UITableViewCell GetCell (UITableView tableView, NSIndexPath indexPath)
@@ -360,7 +363,7 @@ namespace CustomRenderer.Droid
 }
 ```
 
-O controle `ListView` nativo é configurado, desde que o renderizador personalizado esteja anexado a um novo elemento do Xamarin.Forms. Essa configuração envolve a criação de uma instância da classe `NativeAndroidListViewAdapter` que fornece dados para o controle `ListView` nativo e o registro de um manipulador de eventos para processar o evento `ItemClick`. Por sua vez, esse manipulador invocará o evento `ItemSelected` fornecido pelo controle personalizado `NativeListView`. O evento `ItemClick` terá a assinatura cancelada se o elemento Xamarin.Forms a que o renderizador está anexado for alterado.
+O `ListView` controle nativo é configurado desde que o renderizador personalizado esteja anexado a um novo Xamarin.Forms elemento. Essa configuração envolve a criação de uma instância da classe `NativeAndroidListViewAdapter` que fornece dados para o controle `ListView` nativo e o registro de um manipulador de eventos para processar o evento `ItemClick`. Por sua vez, esse manipulador invocará o evento `ItemSelected` fornecido pelo controle personalizado `NativeListView`. O `ItemClick` cancelamento da assinatura do evento se o Xamarin.Forms elemento ao qual o processador está anexado for alterado.
 
 O `NativeAndroidListViewAdapter` deriva da classe `BaseAdapter` e expõe uma propriedade `Items` que contém a lista de dados a serem exibidos, além de substituir os métodos `Count`, `GetView`, `GetItemId` e `this[int]`. Para obter mais informações sobre essas substituições de método, confira [Implementando um ListAdapter](~/android/user-interface/layouts/list-view/populating.md). O método `GetView` retorna uma exibição para cada linha, preenchida com os dados, e é mostrado no exemplo de código a seguir:
 
@@ -513,7 +516,7 @@ namespace CustomRenderer.UWP
 }
 ```
 
-O controle `ListView` nativo é configurado, desde que o renderizador personalizado esteja anexado a um novo elemento do Xamarin.Forms. Essa configuração envolve definir como o controle `ListView` nativo responderá à seleção de itens, ao preenchimento dos dados exibidos pelo controle, à definição da aparência e do conteúdo de cada célula e ao registro de um manipulador de eventos para processar o evento `SelectionChanged`. Por sua vez, esse manipulador invocará o evento `ItemSelected` fornecido pelo controle personalizado `NativeListView`. O evento `SelectionChanged` terá a assinatura cancelada se o elemento Xamarin.Forms a que o renderizador está anexado for alterado.
+O `ListView` controle nativo é configurado desde que o renderizador personalizado esteja anexado a um novo Xamarin.Forms elemento. Essa configuração envolve definir como o controle `ListView` nativo responderá à seleção de itens, ao preenchimento dos dados exibidos pelo controle, à definição da aparência e do conteúdo de cada célula e ao registro de um manipulador de eventos para processar o evento `SelectionChanged`. Por sua vez, esse manipulador invocará o evento `ItemSelected` fornecido pelo controle personalizado `NativeListView`. O `SelectionChanged` cancelamento da assinatura do evento se o Xamarin.Forms elemento ao qual o processador está anexado for alterado.
 
 A aparência e o conteúdo de cada célula `ListView` nativa são definidos por um `DataTemplate` denominado `ListViewItemTemplate`. Esse `DataTemplate` é armazenado no dicionário de recursos de nível de aplicativo e é mostrado no exemplo de código a seguir:
 

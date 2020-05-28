@@ -1,46 +1,49 @@
 ---
-title: Xamarin. Forms RelativeLayout
-description: Este artigo explica como usar a classe RelativeLayout do xamarin. Forms para criar interfaces do usuário que são dimensionados de acordo com qualquer tamanho de tela.
-ms.prod: xamarin
-ms.assetid: 2530BCB8-01B8-4C4F-BF14-CA53659F1B5A
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 11/25/2015
-ms.openlocfilehash: d8c2cc4f31b148ee3181629e5b3b5faf01016617
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+title: Xamarin.FormsRelativeLayout
+description: Este artigo explica como usar a Xamarin.Forms classe RelativeLayout para criar UIs que são dimensionadas de acordo com qualquer tamanho de tela.
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: f250b109f759bcf6bb7fa4ac0573743ac12c4bc1
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70772534"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84127183"
 ---
-# <a name="xamarinforms-relativelayout"></a>Xamarin. Forms RelativeLayout
+# <a name="xamarinforms-relativelayout"></a>Xamarin.FormsRelativeLayout
 
-[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
+[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
 
-`RelativeLayout` é usado para a posição e modos de exibição de tamanho em relação a propriedades das exibições de layout ou irmão. Diferentemente `AbsoluteLayout`, `RelativeLayout` não tem o conceito da âncora de movimentação e não tem recursos para posicionar elementos em relação a margem inferior ou direita do layout. `RelativeLayout` oferece suporte a elementos de posicionamento fora de seus próprios limites.
+`RelativeLayout`é usado para posicionar e dimensionar exibições em relação às propriedades das exibições de layout ou irmãos. Ao contrário do, o não `AbsoluteLayout` `RelativeLayout` tem o conceito da âncora de movimentação e não tem recursos para posicionar elementos em relação às bordas inferior ou direita do layout. `RelativeLayout`o oferece suporte ao posicionamento de elementos fora de seus próprios limites.
 
-[![](relative-layout-images/layouts-sml.png "Xamarin. Forms Layouts")](relative-layout-images/layouts.png#lightbox "Layouts do xamarin. Forms")
+[![](relative-layout-images/layouts-sml.png "Xamarin.Forms Layouts")](relative-layout-images/layouts.png#lightbox "Xamarin.Forms Layouts")
 
 ## <a name="purpose"></a>Finalidade
 
-`RelativeLayout` pode ser usado para posicionar os modos de exibição na tela em relação ao layout geral ou a outros modos de exibição.
+`RelativeLayout`pode ser usado para posicionar exibições na tela em relação ao layout geral ou a outras exibições.
 
-![](relative-layout-images/flag.png "Exploração de RelativeLayout")
+![](relative-layout-images/flag.png "RelativeLayout Exploration")
 
 ## <a name="usage"></a>Uso
 
 ### <a name="understanding-constraints"></a>Noções básicas sobre restrições
 
-Posicionar e dimensionar um modo de exibição dentro de um `RelativeLayout` é feito com restrições. Uma expressão de restrição pode incluir as seguintes informações:
+O posicionamento e o dimensionamento de uma exibição dentro de um `RelativeLayout` é feito com restrições. Uma expressão de restrição pode incluir as seguintes informações:
 
-- **Tipo de** &ndash; se a restrição é relativo ao pai ou para outro modo.
-- **Propriedade** &ndash; qual propriedade a ser usado como base para a restrição.
+- **Tipo** &ndash; de se a restrição é relativa ao pai ou a outra exibição.
+- **Propriedade** &ndash; Qual propriedade deve ser usada como base para a restrição.
 - **Fator** &ndash; o fator a ser aplicado ao valor da propriedade.
 - **Constante** &ndash; o valor a ser usado como um deslocamento do valor.
-- **ElementName** &ndash; o nome da exibição que a restrição é relativo.
+- **ElementName** &ndash; o nome da exibição à qual a restrição é relativa.
 
-No XAML, as restrições são expressos como `ConstraintExpression`s. Considere o exemplo a seguir:
+No XAML, as restrições são expressas como `ConstraintExpression` s. Considere o exemplo a seguir:
 
 ```xaml
 <BoxView Color="Green" WidthRequest="50" HeightRequest="50"
@@ -56,7 +59,7 @@ No XAML, as restrições são expressos como `ConstraintExpression`s. Considere 
                              Constant=-100}" />
 ```
 
-No C#, as restrições são expressas de forma diferente, usando funções em vez de expressões na exibição. Restrições são especificadas como argumentos para o layout `Add` método:
+No C#, as restrições são expressas de maneira um pouco diferente, usando funções em vez de expressões na exibição. As restrições são especificadas como argumentos para o método do layout `Add` :
 
 ```csharp
 layout.Children.Add(box, Constraint.RelativeToParent((parent) =>
@@ -72,17 +75,17 @@ layout.Children.Add(box, Constraint.RelativeToParent((parent) =>
 
 Observe os seguintes aspectos do layout acima:
 
-- O `x` e `y` restrições são especificadas com suas próprias restrições.
-- No C#, as restrições relativas são definidas como funções. Conceitos, como `Factor` não estiverem lá, mas pode ser implementado manualmente.
-- A caixa `x` coordenada é definida como a metade da largura do pai, -100.
-- A caixa `y` coordenada é definida como a metade da altura do pai, -100.
+- As `x` `y` restrições e são especificadas com suas próprias restrições.
+- No C#, as restrições relativas são definidas como funções. Conceitos como `Factor` não existem, mas podem ser implementados manualmente.
+- A `x` coordenada da caixa é definida como metade da largura do pai,-100.
+- A `y` coordenada da caixa é definida como metade da altura do pai,-100.
 
 > [!NOTE]
-> Por causa da maneira que as restrições são definidas, é possível fazer os layouts mais complexos no C# que podem ser especificados com XAML.
+> Devido à maneira como as restrições são definidas, é possível fazer layouts mais complexos em C# do que pode ser especificado com XAML.
 
-Os dois exemplos acima definem restrições como `RelativeToParent` &ndash; ou seja, seus valores são em relação ao elemento pai. Também é possível definir restrições como relativos a outra exibição. Isso permite que os layouts mais intuitivos (para o desenvolvedor) e pode deixar a intenção do seu código de layout mais aparente.
+Os dois exemplos acima definem restrições como `RelativeToParent` &ndash; isto é, seus valores são relativos ao elemento pai. Também é possível definir restrições em relação a outra exibição. Isso permite layouts mais intuitivos (para desenvolvedores) e pode tornar a intenção de seu código de layout mais prontamente aparente.
 
-Considere um layout em que um elemento deve ser menor do que o outro de 20 pixels. Se ambos os elementos são definidos com valores constantes, menor poderia ter seus `Y` restrição definida como uma constante que é maior que 20 pixels, o `Y` restrição do maior elemento. Essa abordagem deixa a desejar se o elemento superior é posicionado usando uma proporção, para que o tamanho de pixel não é conhecido. Nesse caso, restringir o elemento com base na posição do elemento para outro é mais robusta:
+Considere um layout em que um elemento precisa ter 20 pixels inferiores a outro. Se ambos os elementos forem definidos com valores constantes, o menor poderá ter sua `Y` restrição definida como uma constante que é de 20 pixels maior do que a `Y` restrição do elemento superior. Essa abordagem será curta se o elemento superior for posicionado usando uma proporção, de modo que o tamanho do pixel não seja conhecido. Nesse caso, restringir o elemento com base na posição de outro elemento é mais robusto:
 
 ```xaml
 <RelativeLayout>
@@ -105,7 +108,7 @@ Considere um layout em que um elemento deve ser menor do que o outro de 20 pixel
 </RelativeLayout>
 ```
 
-Para realizar o mesmo layout no C#:
+Para realizar o mesmo layout em C#:
 
 ```csharp
 layout.Children.Add (redBox, Constraint.RelativeToParent ((parent) => {
@@ -128,21 +131,21 @@ layout.Children.Add (blueBox, Constraint.RelativeToView (redBox, (Parent, siblin
     }));
 ```
 
-Isso produz a seguinte saída, com a posição da caixa azul determinada _relativo_ para a posição da caixa vermelha:
+Isso produz a seguinte saída, com a posição da caixa azul determinada _em relação_ à posição da caixa vermelha:
 
-![](relative-layout-images/red-blue-box.png "RelativeLayout com BoxViews vermelho e azul")
+![](relative-layout-images/red-blue-box.png "RelativeLayout with Red and Blue BoxViews")
 
 ### <a name="sizing"></a>Dimensionamento
 
-Modos de exibição apresentados pelo `RelativeLayout` tem duas opções para especificar seu tamanho:
+Os modos de exibição dispostos por `RelativeLayout` têm duas opções para especificar seu tamanho:
 
 - `HeightRequest & WidthRequest`
 - `RelativeLayout.WidthConstraint` & `RelativeLayout.HeightConstraint`
 
-`HeightRequest` e `WidthRequest` especificam a altura desejada e a largura da exibição, mas pode ser substituída pelos layouts conforme necessário. `WidthConstraint` e `HeightConstraint` dá suporte à definição a altura e largura como um valor em relação a propriedades de layout ou outra exibição, ou como um valor constante.
+`HeightRequest`e `WidthRequest` especifique a altura e a largura pretendidas da exibição, mas podem ser substituídas por layouts conforme necessário. `WidthConstraint`e `HeightConstraint` suporte para definir a altura e a largura como um valor relativo às propriedades do layout ou de outra exibição, ou como um valor constante.
 
-## <a name="exploring-a-complex-layout"></a>Explorando um Layout complexo
-Cada um dos layouts têm vantagens e desvantagens para a criação de layouts específicos. Em toda esta série de artigos de layout, um aplicativo de exemplo foi criado com o mesmo layout de página implementado usando três layouts diferentes.
+## <a name="exploring-a-complex-layout"></a>Explorando um layout complexo
+Cada um dos layouts tem pontos fortes e fracos para a criação de layouts específicos. Ao longo desta série de artigos de layout, um aplicativo de exemplo foi criado com o mesmo layout de página implementado usando três layouts diferentes.
 
 Considere o seguinte XAML:
 
@@ -221,13 +224,13 @@ Title="RelativeLayout">
 </ContentPage>
 ```
 
-O código acima resulta no layout a seguir:
+O código acima resulta no seguinte layout:
 
-![](relative-layout-images/relative.png "RelativeLayout complexo")
+![](relative-layout-images/relative.png "Complex RelativeLayout")
 
-Observe que `RelativeLayouts`s forem aninhadas, pois em alguns casos layouts de aninhamento pode ser mais fácil do que apresentar todos os elementos do layout do mesmo. Além disso, observe que alguns elementos são `RelativeToView`, pois o que permite layout mais fácil e intuitivo quando as relações entre os modos de exibição de guia de posicionamento.
+Observe que `RelativeLayouts` s estão aninhados, pois, em alguns casos, o aninhamento de layouts pode ser mais fácil do que apresentar todos os elementos dentro do mesmo layout. Observe também que alguns elementos são `RelativeToView` , porque isso permite um layout mais fácil e intuitivo quando as relações entre o posicionamento do guia de exibições.
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Layout (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
-- [Exemplo de BusinessTumble (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-businesstumble)
+- [Layout (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
+- [Exemplo de BusinessTumble (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-businesstumble)

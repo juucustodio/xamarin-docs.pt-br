@@ -1,24 +1,27 @@
 ---
-title: Visibilidade da barra de status da página no iOS
-description: Especificidades da plataforma permitem que você consumir funcionalidade só está disponível em uma plataforma específica, sem implementar renderizadores personalizados ou efeitos. Este artigo explica como consumir a plataforma específica do iOS que define a visibilidade da barra de status em uma página.
-ms.prod: xamarin
-ms.assetid: D8BB7C24-A27F-4758-8557-6A81F909ABD9
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 10/24/2018
-ms.openlocfilehash: a187efa9310fa150ddc884d8b42da5ccb9ecee11
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+title: ''
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 69594924f26afff133d8f211199cac44e66254d9
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655851"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84128018"
 ---
 # <a name="page-status-bar-visibility-on-ios"></a>Visibilidade da barra de status da página no iOS
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
-Essa plataforma específica do IOS é usada para definir a visibilidade da barra de status em um [`Page`](xref:Xamarin.Forms.Page)e inclui a capacidade de controlar como a barra de status entra ou sai do. `Page` Ele é consumido em XAML, definindo o `Page.PrefersStatusBarHidden` propriedade anexada a um valor da `StatusBarHiddenMode` enumeração e, opcionalmente, o `Page.PreferredStatusBarUpdateAnimation` propriedade anexada a um valor da `UIStatusBarAnimation` enumeração:
+Essa plataforma específica do iOS é usada para definir a visibilidade da barra de status em um [`Page`](xref:Xamarin.Forms.Page) e inclui a capacidade de controlar como a barra de status entra ou sai do `Page` . Ele é consumido em XAML definindo- `Page.PrefersStatusBarHidden` se a propriedade anexada como um valor da `StatusBarHiddenMode` enumeração e, opcionalmente, a `Page.PreferredStatusBarUpdateAnimation` Propriedade anexada a um valor da `UIStatusBarAnimation` enumeração:
 
 ```xaml
 <ContentPage ...
@@ -29,7 +32,7 @@ Essa plataforma específica do IOS é usada para definir a visibilidade da barra
 </ContentPage>
 ```
 
-Como alternativa, ele pode ser consumido de C# usando a API fluente:
+Como alternativa, ele pode ser consumido em C# usando a API fluente:
 
 ```csharp
 using Xamarin.Forms.PlatformConfiguration;
@@ -40,19 +43,19 @@ On<iOS>().SetPrefersStatusBarHidden(StatusBarHiddenMode.True)
          .SetPreferredStatusBarUpdateAnimation(UIStatusBarAnimation.Fade);
 ```
 
-O `Page.On<iOS>` método Especifica que este específicos da plataforma serão executado apenas no iOS. O `Page.SetPrefersStatusBarHidden` método, no `Xamarin.Forms.PlatformConfiguration.iOSSpecific` namespace, é usado para definir a visibilidade da barra de status em um [ `Page` ](xref:Xamarin.Forms.Page) especificando um dos `StatusBarHiddenMode` valores de enumeração: `Default`, `True` , ou `False`. O `StatusBarHiddenMode.True` e `StatusBarHiddenMode.False` valores definidos a visibilidade da barra de status, independentemente da orientação do dispositivo e o `StatusBarHiddenMode.Default` valor oculta a barra de status em um ambiente compact verticalmente.
+O `Page.On<iOS>` método especifica que essa plataforma específica será executada somente no Ios. O `Page.SetPrefersStatusBarHidden` método, no `Xamarin.Forms.PlatformConfiguration.iOSSpecific` namespace, é usado para definir a visibilidade da barra de status em um [`Page`](xref:Xamarin.Forms.Page) especificando um dos `StatusBarHiddenMode` valores de enumeração: `Default` , `True` ou `False` . Os `StatusBarHiddenMode.True` `StatusBarHiddenMode.False` valores e definem a visibilidade da barra de status, independentemente da orientação do dispositivo, e o `StatusBarHiddenMode.Default` valor oculta a barra de status em um ambiente verticalmente compacto.
 
-O resultado é que a visibilidade da barra de status em uma [ `Page` ](xref:Xamarin.Forms.Page) podem ser definidos:
+O resultado é que a visibilidade da barra de status em um [`Page`](xref:Xamarin.Forms.Page) pode ser definida:
 
-![](page-status-bar-visibility-images/hide-status-bar.png "Específicos de plataforma de visibilidade de barra de status")
+![](page-status-bar-visibility-images/hide-status-bar.png "Status Bar Visibility Platform-Specific")
 
 > [!NOTE]
-> Em um [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage), especificado `StatusBarHiddenMode` valor de enumeração também atualizará a barra de status em todas as páginas filho. Em todos os outros [ `Page` ](xref:Xamarin.Forms.Page)-tipos derivados, especificados `StatusBarHiddenMode` valor de enumeração só atualizará a barra de status na página atual.
+> Em um [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) , o `StatusBarHiddenMode` valor de enumeração especificado também atualizará a barra de status em todas as páginas filho. Em todos os outros [`Page`](xref:Xamarin.Forms.Page) tipos derivados, o `StatusBarHiddenMode` valor de enumeração especificado atualizará apenas a barra de status na página atual.
 
-O `Page.SetPreferredStatusBarUpdateAnimation` método é usado para definir como a barra de status entra ou sai do [ `Page` ](xref:Xamarin.Forms.Page) especificando um da `UIStatusBarAnimation` valores de enumeração: `None`, `Fade`, ou `Slide`. Se o `Fade` ou `Slide` o valor de enumeração for especificado, uma segunda 0,25 animação é executada como a barra de status entra ou sai do `Page`.
+O `Page.SetPreferredStatusBarUpdateAnimation` método é usado para definir como a barra de status entra ou sai do [`Page`](xref:Xamarin.Forms.Page) especificando um dos `UIStatusBarAnimation` valores de enumeração: `None` , `Fade` ou `Slide` . Se o `Fade` `Slide` valor de enumeração ou for especificado, uma animação de 0,25 segundos será executada à medida que a barra de status entrar ou sair do `Page` .
 
 ## <a name="related-links"></a>Links relacionados
 
-- [PlatformSpecifics (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+- [PlatformSpecifics (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [Criação de itens específicos à plataforma](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [API iOSSpecific](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)

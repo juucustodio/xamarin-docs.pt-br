@@ -1,18 +1,11 @@
 ---
-title: 'Xamarin.Essentials: Área de transferência'
-description: Este documento descreve a classe Clipboard no Xamarin.Essentials, que permite copiar e colar o texto para a área de transferência do sistema entre aplicativos.
-ms.assetid: C52AE99A-0FB3-425D-9106-3DA5777FEFA0
-author: jamesmontemagno
-ms.author: jamont
-ms.date: 01/06/2020
-ms.custom: video
-ms.openlocfilehash: 0b5eaf3feb608a352f8f9c97bdddac55c89d4f94
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "77545173"
+Título: ' ' Xamarin.Essentials : área de transferência ' ' Descrição: ' este documento descreve a classe de área de transferência no Xamarin.Essentials , que permite copiar e colar texto na área de transferência do sistema entre aplicativos. '
+MS. AssetID: autor: MS. Author: MS. Data: MS. Custom: no-loc:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
+
 ---
+
 # <a name="xamarinessentials-clipboard"></a>Xamarin.Essentials: Área de transferência
 
 A classe **Clipboard** permite que você copie e cole o texto para a área de transferência do sistema entre aplicativos.
@@ -23,7 +16,7 @@ A classe **Clipboard** permite que você copie e cole o texto para a área de tr
 
 ## <a name="using-clipboard"></a>Como usar Clipboard
 
-Adicione uma referência ao Xamarin.Essentials na classe:
+Adicione uma referência a Xamarin.Essentials em sua classe:
 
 ```csharp
 using Xamarin.Essentials;
@@ -47,7 +40,7 @@ Para ler o texto da **Área de Transferência**:
 var text = await Clipboard.GetTextAsync();
 ```
 
-Sempre que qualquer conteúdo da área de transferência for alterado, um evento é acionado:
+Sempre que qualquer um dos conteúdos da área de transferência tiver alterado, um evento será disparado:
 
 ```csharp
 public class ClipboardTest

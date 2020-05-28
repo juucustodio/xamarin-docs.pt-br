@@ -1,49 +1,52 @@
 ---
-title: Expansor do Xamarin. Forms
-description: O controle expansor do Xamarin. Forms fornece um contêiner expansível para hospedar qualquer conteúdo. O conteúdo é exibido ou oculto tocando no cabeçalho do expansor.
-ms.prod: xamarin
-ms.assetid: 381DCB55-522D-4414-B45B-E8DD70AA9985
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 04/15/2020
-ms.openlocfilehash: b1e573a6070a637ef2fdfa65bb0fc1375522fc3c
-ms.sourcegitcommit: 443ecd9146fe2a7bbb9b5ab6d33c835876efcf1f
+title: Xamarin.FormsExpansor
+description: O Xamarin.Forms controle Expander fornece um contêiner expansível para hospedar qualquer conteúdo. O conteúdo é exibido ou oculto tocando no cabeçalho do expansor.
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 5e9afa0f6d27003891963af5715d5721e3129306
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82852500"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84129526"
 ---
-# <a name="xamarinforms-expander"></a>Expansor do Xamarin. Forms
+# <a name="xamarinforms-expander"></a>Xamarin.FormsExpansor
 
-[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-expanderdemos/)
+[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-expanderdemos/)
 
-O controle Xamarin. `Expander` Forms fornece um contêiner expansível para hospedar qualquer conteúdo. O controle tem um cabeçalho e conteúdo, e o conteúdo é mostrado ou oculto tocando no `Expander` cabeçalho. Quando apenas o `Expander` cabeçalho é mostrado, o `Expander` é *recolhido*. Quando o `Expander` conteúdo estiver visível, `Expander` o será *expandido*.
+O Xamarin.Forms `Expander` controle fornece um contêiner expansível para hospedar qualquer conteúdo. O controle tem um cabeçalho e conteúdo, e o conteúdo é mostrado ou oculto tocando no `Expander` cabeçalho. Quando apenas o `Expander` cabeçalho é mostrado, o `Expander` é *recolhido*. Quando o `Expander` conteúdo estiver visível, o `Expander` será *expandido*.
 
-As capturas de tela a `Expander` seguir mostram um em seus Estados recolhidos e expandidos, com caixas vermelhas indicando o cabeçalho e o conteúdo:
+As capturas de tela a seguir mostram um `Expander` em seus Estados recolhidos e expandidos, com caixas vermelhas indicando o cabeçalho e o conteúdo:
 
 ![Captura de tela de um expansor em Estados recolhidos e expandidos, no iOS e no Android](expander-images/expander.png "Expansor no iOS e Android")
 
 > [!IMPORTANT]
-> `Expander`o é experimental e só pode ser usado com a definição `Expander_Experimental` do sinalizador. Para obter mais informações, consulte [sinalizadores experimentais](~/xamarin-forms/internals/experimental-flags.md).
+> `Expander`o é experimental e só pode ser usado com a definição do `Expander_Experimental` sinalizador. Para obter mais informações, consulte [sinalizadores experimentais](~/xamarin-forms/internals/experimental-flags.md).
 >
-> Além disso, o `Expander` controle é totalmente implementado no `Xamarin.Forms` namespace. Portanto, ele está disponível em todas as plataformas com suporte no Xamarin. Forms.
+> Além disso, o `Expander` controle é totalmente implementado no `Xamarin.Forms` namespace. Portanto, ele está disponível em todas as plataformas com suporte no Xamarin.Forms .
 
 O `Expander` controle define as seguintes propriedades:
 
-- `CollapseAnimationEasing`, do tipo [`Easing`](xref:Xamarin.Forms.Easing), que representa a função de atenuação a ser aplicada `Expander` ao conteúdo quando ele está sendo recolhido.
-- `CollapseAnimationLength`, do tipo `uint`, que define a duração da animação quando o `Expander` está sendo recolhido. O valor padrão dessa propriedade é 250 MS.
-- `Command`, do tipo `ICommand`, que é executado quando o `Expander` cabeçalho é tocado.
+- `CollapseAnimationEasing`, do tipo [`Easing`](xref:Xamarin.Forms.Easing) , que representa a função de atenuação a ser aplicada ao `Expander` conteúdo quando ele está sendo recolhido.
+- `CollapseAnimationLength`, do tipo `uint` , que define a duração da animação quando o `Expander` está sendo recolhido. O valor padrão dessa propriedade é 250 MS.
+- `Command`, do tipo `ICommand` , que é executado quando o `Expander` cabeçalho é tocado.
 - `CommandParameter`, do tipo `object`, que é o parâmetro passado para `Command`.
-- `Content`, do tipo [`View`](xref:Xamarin.Forms.View), que define o conteúdo a ser exibido quando o `Expander` expande.
-- `ContentTemplate`, do tipo [`DataTemplate`](xref:Xamarin.Forms.DataTemplate), que é o modelo usado para aumentar dinamicamente o conteúdo do `Expander`.
-- `ExpandAnimationEasing`, do tipo [`Easing`](xref:Xamarin.Forms.Easing), que representa a função de atenuação a ser aplicada `Expander` ao conteúdo durante a expansão.
-- `ExpandAnimationLength`, do tipo `uint`, que define a duração da animação quando o `Expander` expande. O valor padrão dessa propriedade é 250 MS.
-- `ForceUpdateSizeCommand`, do tipo `ICommand`, que define o comando que é executado quando o tamanho da força `Expander` é atualizado. Essa propriedade usa o `OneWayToSource` modo de associação.
-- `Header`, do tipo [`View`](xref:Xamarin.Forms.View), que define o conteúdo do cabeçalho.
-- `IsExpanded`, do tipo `bool`, que determina se o `Expander` é expandido. Essa propriedade usa o `TwoWay` modo de associação e tem um valor padrão de `false`.
-- `Spacing`, do tipo `double`, que representa o espaço entre o cabeçalho e seu conteúdo. O valor padrão dessa propriedade é 0.
-- `State`, do tipo `ExpanderState`, que representa o estado do `Expander`. Essa propriedade usa o `OneWayToSource` modo de associação.
+- `Content`, do tipo [`View`](xref:Xamarin.Forms.View) , que define o conteúdo a ser exibido quando o `Expander` expande.
+- `ContentTemplate`, do tipo [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) , que é o modelo usado para aumentar dinamicamente o conteúdo do `Expander` .
+- `ExpandAnimationEasing`, do tipo [`Easing`](xref:Xamarin.Forms.Easing) , que representa a função de atenuação a ser aplicada ao `Expander` conteúdo durante a expansão.
+- `ExpandAnimationLength`, do tipo `uint` , que define a duração da animação quando o `Expander` expande. O valor padrão dessa propriedade é 250 MS.
+- `ForceUpdateSizeCommand`, do tipo `ICommand` , que define o comando que é executado quando o tamanho da `Expander` força é atualizado. Essa propriedade usa o `OneWayToSource` modo de associação.
+- `Header`, do tipo [`View`](xref:Xamarin.Forms.View) , que define o conteúdo do cabeçalho.
+- `IsExpanded`, do tipo `bool` , que determina se o `Expander` é expandido. Essa propriedade usa o `TwoWay` modo de associação e tem um valor padrão de `false` .
+- `Spacing`, do tipo `double` , que representa o espaço entre o cabeçalho e seu conteúdo. O valor padrão dessa propriedade é 0.
+- `State`, do tipo `ExpanderState` , que representa o estado do `Expander` . Essa propriedade usa o `OneWayToSource` modo de associação.
 
 Essas propriedades são apoiadas por [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objetos, o que significa que eles podem ser destinos de associações de dados e com estilo.
 
@@ -57,11 +60,11 @@ A enumeração `ExpanderState` define os seguintes membros:
 - `Collapsing`indica que o `Expander` está sendo recolhido.
 - `Collapsed`indica que o `Expander` está recolhido.
 
-O `Expander` controle também define um `Tapped` evento que é acionado quando `Expander` o cabeçalho é tocado. Além disso, `Expander` o inclui `ForceUpdateSize` um método que pode ser chamado para redimensionar `Expander` de forma programática o em tempo de execução.
+O `Expander` controle também define um `Tapped` evento que é acionado quando o `Expander` cabeçalho é tocado. Além disso, `Expander` o inclui um `ForceUpdateSize` método que pode ser chamado para redimensionar de forma programática o `Expander` em tempo de execução.
 
 ## <a name="create-an-expander"></a>Criar um expansor
 
-O exemplo a seguir mostra como criar uma `Expander` instância de em XAML:
+O exemplo a seguir mostra como criar uma instância de `Expander` em XAML:
 
 ```xaml
 <Expander>
@@ -86,10 +89,10 @@ O exemplo a seguir mostra como criar uma `Expander` instância de em XAML:
 </Expander>
 ```
 
-Neste exemplo, o `Expander` é recolhido por padrão e exibe um [`Label`](xref:Xamarin.Forms.Label) como seu cabeçalho. Tocar no cabeçalho resulta na `Expander` expansão para revelar seu conteúdo, que é um [`Grid`](xref:Xamarin.Forms.Grid) que contém controles filho. Quando o `Expander` é expandido, tocar em seu cabeçalho recolhe `Expander`o.
+Neste exemplo, o `Expander` é recolhido por padrão e exibe um [`Label`](xref:Xamarin.Forms.Label) como seu cabeçalho. Tocar no cabeçalho resulta na `Expander` expansão para revelar seu conteúdo, que é um [`Grid`](xref:Xamarin.Forms.Grid) que contém controles filho. Quando o `Expander` é expandido, tocar em seu cabeçalho recolhe o `Expander` .
 
 > [!IMPORTANT]
-> Ao definir a `Expander.Content` Propriedade, implícita ou explicitamente, o `Expander` conteúdo é criado quando a página que o contém é navegada, mesmo que o `Expander` seja recolhido. No entanto `Expander.ContentTemplate` , a propriedade pode ser definida como conteúdo que só fica inplana quando `Expander` o é expandido pela primeira vez. Para obter mais informações, consulte [criar conteúdo do expansor sob demanda](#create-expander-content-on-demand).
+> Ao definir a `Expander.Content` propriedade, implícita ou explicitamente, o `Expander` conteúdo é criado quando a página que o contém é navegada, mesmo que o `Expander` seja recolhido. No entanto, a `Expander.ContentTemplate` propriedade pode ser definida como conteúdo que só fica inplana quando o é `Expander` expandido pela primeira vez. Para obter mais informações, consulte [criar conteúdo do expansor sob demanda](#create-expander-content-on-demand).
 
 Como alternativa, um `Expander` pode ser criado no código:
 
@@ -133,7 +136,7 @@ expander.Content = grid;
 
 ## <a name="create-expander-content-on-demand"></a>Criar conteúdo do expansor sob demanda
 
-`Expander`o `Expander` conteúdo pode ser criado sob demanda, em resposta à expansão. Isso pode ser feito definindo a `Expander.ContentTemplate` Propriedade como um [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) que contém o conteúdo:
+`Expander`o conteúdo pode ser criado sob demanda, em resposta à `Expander` expansão. Isso pode ser feito definindo a `Expander.ContentTemplate` propriedade como um [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) que contém o conteúdo:
 
 ```xaml
 <Expander>
@@ -168,7 +171,7 @@ A vantagem dessa abordagem é que, quando uma página contém vários `Expander`
 
 ## <a name="add-an-expansion-indicator"></a>Adicionar um indicador de expansão
 
-Um [`Image`](xref:Xamarin.Forms.Image) pode ser adicionado a um `Expander` cabeçalho para fornecer uma indicação visual do estado de expansão. Um [`DataTrigger`](xref:Xamarin.Forms.DataTrigger) pode ser anexado ao `Image`, que altera a `Source` Propriedade com base no valor da `Expander.IsExpanded` Propriedade:
+Um [`Image`](xref:Xamarin.Forms.Image) pode ser adicionado a um `Expander` cabeçalho para fornecer uma indicação visual do estado de expansão. Um [`DataTrigger`](xref:Xamarin.Forms.DataTrigger) pode ser anexado ao `Image` , que altera a `Source` propriedade com base no valor da `Expander.IsExpanded` Propriedade:
 
 ```xaml
 <Expander>
@@ -215,15 +218,15 @@ Neste exemplo, o [`Image`](xref:Xamarin.Forms.Image) exibe o `expand` ícone por
 
 ![Captura de tela de um ícone de expansor no estado recolhido, no iOS e no Android](expander-images/icon-expand.png "Ícone expandido no iOS e no Android")
 
-A `IsExpanded` Propriedade se `true` torna quando `Expander` o cabeçalho é tocado, o que resulta `collapse` no ícone que está sendo exibido:
+A `IsExpanded` propriedade se torna `true` quando o `Expander` cabeçalho é tocado, o que resulta no `collapse` ícone que está sendo exibido:
 
 ![Captura de tela de um ícone de expansor no estado de expansão, no iOS e no Android](expander-images/icon-collapse.png "Ícone expandido no iOS e no Android")
 
-Para obter mais informações sobre gatilhos, consulte [gatilhos do Xamarin. Forms](~/xamarin-forms/app-fundamentals/triggers.md).
+Para obter mais informações sobre gatilhos, consulte [ Xamarin.Forms gatilhos](~/xamarin-forms/app-fundamentals/triggers.md).
 
 ## <a name="define-the-space-between-header-and-content"></a>Definir o espaço entre o cabeçalho e o conteúdo
 
-Por padrão, o conteúdo em um `Expander` aparece diretamente abaixo de seu cabeçalho. No entanto, esse comportamento pode ser alterado definindo `Spacing` a propriedade como `double` um valor que representa o espaço vazio entre o conteúdo e seu cabeçalho:
+Por padrão, o conteúdo em um `Expander` aparece diretamente abaixo de seu cabeçalho. No entanto, esse comportamento pode ser alterado definindo a `Spacing` propriedade como um `double` valor que representa o espaço vazio entre o conteúdo e seu cabeçalho:
 
 ```xaml
 <Expander Spacing="50"
@@ -255,7 +258,7 @@ Neste exemplo, o `Expander` conteúdo aparece 50 unidades independentes de dispo
 
 ## <a name="embed-an-expander-in-an-expander"></a>Inserir um expansor em um expansor
 
-O conteúdo de um `Expander` pode ser definido para outro `Expander` controle, para habilitar vários níveis de expansão. O XAML a seguir mostra `Expander` um cujo conteúdo é `Expander` outro objeto:
+O conteúdo de um `Expander` pode ser definido para outro `Expander` controle, para habilitar vários níveis de expansão. O XAML a seguir mostra um `Expander` cujo conteúdo é outro `Expander` objeto:
 
 ```xaml
 <Expander Spacing="10">
@@ -291,19 +294,19 @@ O conteúdo de um `Expander` pode ser definido para outro `Expander` controle, p
 </Expander>
 ```
 
-Neste exemplo, tocar no cabeçalho raiz `Expander` revela o cabeçalho para o filho `Expander`:
+Neste exemplo, tocar no cabeçalho raiz `Expander` revela o cabeçalho para o filho `Expander` :
 
 ![Captura de tela de um expansor inserido, no iOS e no Android](expander-images/embedded-expander1.png "Expansor inserido no iOS e no Android")
 
-Tocar no cabeçalho `Expander` filho faz com que seu conteúdo seja inalterado e exibido:
+Tocar no `Expander` cabeçalho filho faz com que seu conteúdo seja inalterado e exibido:
 
 ![Captura de tela de um expansor inserido, no iOS e no Android](expander-images/embedded-expander2.png "Expansor inserido no iOS e no Android")
 
 ## <a name="define-the-expand-and-collapse-animation"></a>Definir a animação de expandir e recolher
 
-A animação que ocorre quando um `Expander` expande ou recolhe pode ser definida definindo as `ExpandAnimationEasing` Propriedades e `CollapseAnimationEasing` como qualquer uma das funções de atenuação incluídas no Xamarin. Forms ou nas funções de atenuação personalizadas. Por padrão, as animações expandir e recolher ocorrem em 250 MS. No entanto, essas durações podem ser alteradas definindo `ExpandAnimationLength` as `CollapseAnimationLength` Propriedades e `uint` como valores.
+A animação que ocorre quando um `Expander` expande ou recolhe pode ser definida definindo as `ExpandAnimationEasing` `CollapseAnimationEasing` Propriedades e como qualquer uma das funções de atenuação incluídas no Xamarin.Forms , ou funções de atenuação personalizadas. Por padrão, as animações expandir e recolher ocorrem em 250 MS. No entanto, essas durações podem ser alteradas definindo `ExpandAnimationLength` as `CollapseAnimationLength` Propriedades e como `uint` valores.
 
-O XAML a seguir mostra um exemplo de como definir a animação que ocorre `Expander` quando o é expandido ou recolhido pelo usuário:
+O XAML a seguir mostra um exemplo de como definir a animação que ocorre quando o `Expander` é expandido ou recolhido pelo usuário:
 
 ```xaml
 <Expander ExpandAnimationEasing="{x:Static Easing.CubicIn}"
@@ -335,15 +338,15 @@ O XAML a seguir mostra um exemplo de como definir a animação que ocorre `Expan
 </Expander>
 ```
 
-Neste exemplo, a função `CubicIn` de atenuação acelera lentamente a animação de expansão em 500 MS e a `CubicOut` função de atenuação reduz rapidamente a animação de recolhimento em 500 ms.
+Neste exemplo, a `CubicIn` função de atenuação acelera lentamente a animação de expansão em 500 MS e a `CubicOut` função de atenuação reduz rapidamente a animação de recolhimento em 500 ms.
 
-Para saber mais sobre as funções de atenuação, confira [funções de atenuação do Xamarin. Forms](~/xamarin-forms/user-interface/animation/easing.md).
+Para obter mais informações sobre as funções de atenuação, consulte [ Xamarin.Forms facilitando funções](~/xamarin-forms/user-interface/animation/easing.md).
 
 ## <a name="resize-an-expander-at-runtime"></a>Redimensionar um expansor em tempo de execução
 
-Um `Expander` pode ser redimensionado programaticamente em tempo `ForceUpdateSize` de execução com o método.
+Um `Expander` pode ser redimensionado programaticamente em tempo de execução com o `ForceUpdateSize` método.
 
-Dado um `Expander` nome `expander`, cujo conteúdo inclui um [`Label`](xref:Xamarin.Forms.Label) que tem um `TapGestureRecognizer` anexado a ele, o exemplo de código a seguir mostra `ForceUpdateSize` a chamada do método:
+Dado um `Expander` nome `expander` , cujo conteúdo inclui um [`Label`](xref:Xamarin.Forms.Label) que tem um `TapGestureRecognizer` anexado a ele, o exemplo de código a seguir mostra a chamada do `ForceUpdateSize` método:
 
 ```csharp
 void OnLabelTapped(object sender, EventArgs e)
@@ -367,11 +370,11 @@ Neste exemplo, o `FontSize` de uma [`Label`](xref:Xamarin.Forms.Label) alteraç�
 
 ## <a name="disable-an-expander"></a>Desabilitar um expansor
 
-Um aplicativo pode inserir um estado em que a `Expander` expansão de uma não é uma operação válida. Nesses casos, o `Expander` pode ser desabilitado definindo sua `IsEnabled` Propriedade como false. Isso impedirá que os usuários expandam ou `Expander`recolham o.
+Um aplicativo pode inserir um estado em que a expansão de uma `Expander` não é uma operação válida. Nesses casos, o `Expander` pode ser desabilitado definindo sua `IsEnabled` propriedade como false. Isso impedirá que os usuários expandam ou recolham o `Expander` .
 
 ## <a name="related-links"></a>Links relacionados
 
 - [Demonstrações do expansor (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-expanderdemos/)
-- [Funções de atenuação do Xamarin. Forms](~/xamarin-forms/user-interface/animation/easing.md)
-- [Gatilhos do Xamarin.Forms](~/xamarin-forms/app-fundamentals/triggers.md)
-- [Layouts vinculáveis do Xamarin. Forms](~/xamarin-forms/user-interface/layouts/bindable-layouts.md)
+- [Xamarin.FormsFunções de atenuação](~/xamarin-forms/user-interface/animation/easing.md)
+- [Xamarin.FormsGatilhos](~/xamarin-forms/app-fundamentals/triggers.md)
+- [Xamarin.FormsLayouts vinculáveis](~/xamarin-forms/user-interface/layouts/bindable-layouts.md)

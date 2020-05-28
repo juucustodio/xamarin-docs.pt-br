@@ -1,18 +1,21 @@
 ---
-title: Acesso a dados remotos
-description: Este capítulo explica como o aplicativo móvel eShopOnContainers acessa dados dos microservices em contêineres.
-ms.prod: xamarin
-ms.assetid: 42eba6f5-9784-4e1a-9943-5c1fbeea7452
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 08/07/2017
-ms.openlocfilehash: 9c793f4d5f0cda5bff2dedef5e4e5e5bdfca69e5
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+title: ''
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 7a7482754653e2aecb069afa215b68306ade8a99
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "70770800"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84129574"
 ---
 # <a name="accessing-remote-data"></a>Acesso a dados remotos
 
@@ -29,11 +32,11 @@ O modelo REST usa um esquema de navegação para representar objetos e serviços
 > [!NOTE]
 > REST define um modelo de solicitação sem estado. Portanto, as solicitações HTTP devem ser independentes e podem ocorrer em qualquer ordem.
 
-A resposta de uma solicitação REST faz uso de códigos de status HTTP padrão. Por exemplo, uma solicitação que retorna dados válidos deve incluir o código de resposta HTTP 200 (OK), enquanto uma solicitação que não consegue localizar ou excluir um recurso especificado deve retornar uma resposta que inclui o código de status HTTP 404 (não encontrado).
+A resposta de uma solicitação REST faz uso de códigos de status HTTP padrão. Por exemplo, uma solicitação que retorna dados válidos deve incluir o código de resposta HTTP 200 (OK), enquanto uma solicitação que não consegue localizar ou excluir um recurso especificado deve retornar uma resposta que inclui o código de status HTTP 404 (Não Encontrado).
 
 Uma API Web RESTful expõe um conjunto de recursos conectados e fornece as operações principais que permitem que um aplicativo manipule esses recursos e navegue facilmente entre eles. Por esse motivo, os URIs que constituem uma API Web RESTful típica são orientadas para os dados que ele expõe e usam os recursos fornecidos pelo HTTP para operar nesses dados.
 
-Os dados incluídos por um aplicativo cliente em uma solicitação HTTP e as mensagens de resposta correspondentes do servidor Web podem ser apresentados em uma variedade de formatos, conhecidos como tipos de mídia. Quando um aplicativo cliente envia uma solicitação que retorna dados no corpo de uma mensagem, ele pode especificar os tipos de mídia que ele pode manipular no cabeçalho de `Accept` da solicitação. Se o servidor Web der suporte a esse tipo de mídia, ele poderá responder com uma resposta que inclui o cabeçalho `Content-Type` que especifica o formato dos dados no corpo da mensagem. Em seguida, é responsabilidade do aplicativo cliente analisar a mensagem de resposta e interpretar os resultados no corpo da mensagem adequadamente.
+Os dados incluídos por um aplicativo cliente em uma solicitação HTTP e as mensagens de resposta correspondentes do servidor Web podem ser apresentados em uma variedade de formatos, conhecidos como tipos de mídia. Quando um aplicativo cliente envia uma solicitação que retorna dados no corpo de uma mensagem, ele pode especificar os tipos de mídia que ele pode manipular no `Accept` cabeçalho da solicitação. Se o servidor Web oferecer suporte a esse tipo de mídia, ele poderá responder com uma resposta que inclui o `Content-Type` cabeçalho que especifica o formato dos dados no corpo da mensagem. Em seguida, é responsabilidade do aplicativo cliente analisar a mensagem de resposta e interpretar os resultados no corpo da mensagem adequadamente.
 
 Para obter mais informações sobre REST, consulte [design de API](/azure/architecture/best-practices/api-design/) e implementação de [API](/azure/architecture/best-practices/api-implementation/).
 
@@ -43,21 +46,21 @@ O aplicativo móvel eShopOnContainers usa o padrão Model-View-ViewModel (MVVM) 
 
 ### <a name="making-web-requests"></a>Como fazer solicitações da Web
 
-O aplicativo móvel eShopOnContainers usa a classe `HttpClient` para fazer solicitações por HTTP, com JSON sendo usado como o tipo de mídia. Essa classe fornece a funcionalidade de enviar solicitações HTTP de forma assíncrona e receber respostas HTTP de um recurso de URI identificado. A classe `HttpResponseMessage` representa uma mensagem de resposta HTTP recebida de uma API REST depois que uma solicitação HTTP é feita. Ele contém informações sobre a resposta, incluindo o código de status, os cabeçalhos e qualquer corpo. A classe `HttpContent` representa o corpo HTTP e os cabeçalhos de conteúdo, como `Content-Type` e `Content-Encoding`. O conteúdo pode ser lido usando qualquer um dos métodos de `ReadAs`, como `ReadAsStringAsync` e `ReadAsByteArrayAsync`, dependendo do formato dos dados.
+O aplicativo móvel eShopOnContainers usa a `HttpClient` classe para fazer solicitações por http, com JSON sendo usado como o tipo de mídia. Essa classe fornece a funcionalidade de enviar solicitações HTTP de forma assíncrona e receber respostas HTTP de um recurso de URI identificado. A `HttpResponseMessage` classe representa uma mensagem de resposta http recebida de uma API REST depois que uma solicitação HTTP é feita. Ele contém informações sobre a resposta, incluindo o código de status, os cabeçalhos e qualquer corpo. A `HttpContent` classe representa o corpo de http e cabeçalhos de conteúdo, como `Content-Type` e `Content-Encoding` . O conteúdo pode ser lido usando qualquer um dos `ReadAs` métodos, como `ReadAsStringAsync` e `ReadAsByteArrayAsync` , dependendo do formato dos dados.
 
 <a name="making_a_get_request" />
 
 #### <a name="making-a-get-request"></a>Fazendo uma solicitação GET
 
-A classe `CatalogService` é usada para gerenciar o processo de recuperação de dados do microserviço de catálogo. No método `RegisterDependencies` na classe `ViewModelLocator`, a classe `CatalogService` é registrada como um mapeamento de tipo em relação ao tipo de `ICatalogService` com o contêiner de injeção de dependência Autofac. Em seguida, quando uma instância da classe `CatalogViewModel` é criada, seu construtor aceita um tipo `ICatalogService`, que Autofac resolve, retornando uma instância da classe `CatalogService`. Para obter mais informações sobre injeção de dependência, consulte [introdução à injeção de dependência](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md#introduction_to_dependency_injection).
+A `CatalogService` classe é usada para gerenciar o processo de recuperação de dados do microserviço de catálogo. No `RegisterDependencies` método na `ViewModelLocator` classe, a `CatalogService` classe é registrada como um mapeamento de tipo em relação ao `ICatalogService` tipo com o contêiner de injeção de dependência Autofac. Em seguida, quando uma instância da `CatalogViewModel` classe é criada, seu construtor aceita um `ICatalogService` tipo, que Autofac resolve, retornando uma instância da `CatalogService` classe. Para obter mais informações sobre injeção de dependência, consulte [introdução à injeção de dependência](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md#introduction_to_dependency_injection).
 
-A Figura 10-1 mostra a interação das classes que lêem os dados do catálogo do microserviço de catálogo para exibição pelo `CatalogView`.
+A Figura 10-1 mostra a interação das classes que lêem os dados do catálogo do microserviço de catálogo para exibição pelo `CatalogView` .
 
 [![](accessing-remote-data-images/catalogdata.png "Retrieving data from the catalog microservice")](accessing-remote-data-images/catalogdata-large.png#lightbox "Retrieving data from the catalog microservice")
 
 **Figura 10-1**: Recuperando dados do microserviço de catálogo
 
-Quando o `CatalogView` é navegado, o método `OnInitialize` na classe `CatalogViewModel` é chamado. Esse método recupera dados de catálogo do microserviço de catálogo, conforme demonstrado no exemplo de código a seguir:
+Quando o `CatalogView` é navegado para, o `OnInitialize` método na `CatalogViewModel` classe é chamado. Esse método recupera dados de catálogo do microserviço de catálogo, conforme demonstrado no exemplo de código a seguir:
 
 ```csharp
 public override async Task InitializeAsync(object navigationData)  
@@ -68,7 +71,7 @@ public override async Task InitializeAsync(object navigationData)
 }
 ```
 
-Esse método chama o método `GetCatalogAsync` da instância `CatalogService` que foi injetada no `CatalogViewModel` pelo Autofac. O seguinte exemplo de código mostra o método `GetCatalogAsync`:
+Esse método chama o `GetCatalogAsync` método da `CatalogService` instância que foi injetada no `CatalogViewModel` por Autofac. O seguinte exemplo de código mostra o método `GetCatalogAsync`:
 
 ```csharp
 public async Task<ObservableCollection<CatalogItem>> GetCatalogAsync()  
@@ -83,9 +86,9 @@ public async Task<ObservableCollection<CatalogItem>> GetCatalogAsync()
 }
 ```
 
-Esse método cria o URI que identifica o recurso ao qual a solicitação será enviada e usa a classe `RequestProvider` para invocar o método HTTP GET no recurso, antes de retornar os resultados para o `CatalogViewModel`. A classe `RequestProvider` contém a funcionalidade que envia uma solicitação na forma de um URI que identifica um recurso, um método HTTP que indica a operação a ser executada nesse recurso e um corpo que contém os dados necessários para executar a operação. Para obter informações sobre como a classe de `RequestProvider` é injetada na `CatalogService class`, consulte [introdução à injeção de dependência](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md#introduction_to_dependency_injection).
+Esse método cria o URI que identifica o recurso ao qual a solicitação será enviada e usa a `RequestProvider` classe para invocar o método HTTP Get no recurso, antes de retornar os resultados para o `CatalogViewModel` . A `RequestProvider` classe contém a funcionalidade que envia uma solicitação na forma de um URI que identifica um recurso, um método http que indica a operação a ser executada nesse recurso e um corpo que contém os dados necessários para executar a operação. Para obter informações sobre como a `RequestProvider` classe é injetada no `CatalogService class` , consulte [introdução à injeção de dependência](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md#introduction_to_dependency_injection).
 
-O exemplo de código a seguir mostra o método `GetAsync` na classe `RequestProvider`:
+O exemplo de código a seguir mostra o `GetAsync` método na `RequestProvider` classe:
 
 ```csharp
 public async Task<TResult> GetAsync<TResult>(string uri, string token = "")  
@@ -103,9 +106,9 @@ public async Task<TResult> GetAsync<TResult>(string uri, string token = 
 }
 ```
 
-Esse método chama o método `CreateHttpClient`, que retorna uma instância da classe `HttpClient` com os cabeçalhos apropriados definidos. Em seguida, ele envia uma solicitação GET assíncrona para o recurso identificado pelo URI, com a resposta armazenada na instância de `HttpResponseMessage`. O método `HandleResponse` é invocado, o que gera uma exceção se a resposta não inclui um código de status HTTP de êxito. Em seguida, a resposta é lida como uma cadeia de caracteres, convertida de JSON em um objeto `CatalogRoot` e retornada para o `CatalogService`.
+Esse método chama o `CreateHttpClient` método, que retorna uma instância da `HttpClient` classe com os cabeçalhos apropriados definidos. Em seguida, ele envia uma solicitação GET assíncrona para o recurso identificado pelo URI, com a resposta armazenada na `HttpResponseMessage` instância. O `HandleResponse` método é invocado, o que gera uma exceção se a resposta não incluir um código de status HTTP de êxito. Em seguida, a resposta é lida como uma cadeia de caracteres, convertida de JSON em um `CatalogRoot` objeto e retornada para o `CatalogService` .
 
-O método `CreateHttpClient` é mostrado no seguinte exemplo de código:
+O `CreateHttpClient` método é mostrado no exemplo de código a seguir:
 
 ```csharp
 private HttpClient CreateHttpClient(string token = "")  
@@ -123,9 +126,9 @@ private HttpClient CreateHttpClient(string token = "")
 }
 ```
 
-Esse método cria uma nova instância da classe `HttpClient` e define o cabeçalho `Accept` de todas as solicitações feitas pela instância `HttpClient` como `application/json`, o que indica que espera-se que o conteúdo de qualquer resposta seja formatado usando JSON. Em seguida, se um token de acesso foi passado como um argumento para o método `CreateHttpClient`, ele é adicionado ao cabeçalho `Authorization` de quaisquer solicitações feitas pela instância `HttpClient`, prefixada com a `Bearer` de cadeia de caracteres. Para obter mais informações sobre autorização, consulte [Authorization](~/xamarin-forms/enterprise-application-patterns/authentication-and-authorization.md#authorization).
+Esse método cria uma nova instância da `HttpClient` classe e define o `Accept` cabeçalho de todas as solicitações feitas pela `HttpClient` instância para, o `application/json` que indica que espera-se que o conteúdo de qualquer resposta seja formatado usando JSON. Em seguida, se um token de acesso foi passado como um argumento para o `CreateHttpClient` método, ele é adicionado ao `Authorization` cabeçalho de quaisquer solicitações feitas pela `HttpClient` instância, prefixada com a cadeia de caracteres `Bearer` . Para obter mais informações sobre autorização, consulte [Authorization](~/xamarin-forms/enterprise-application-patterns/authentication-and-authorization.md#authorization).
 
-Quando o método `GetAsync` na classe `RequestProvider` chama `HttpClient.GetAsync`, o método `Items` na classe `CatalogController` no projeto Catalog. API é invocado, que é mostrado no seguinte exemplo de código:
+Quando o `GetAsync` método na `RequestProvider` classe chama `HttpClient.GetAsync` , o `Items` método na `CatalogController` classe no projeto Catalog. API é invocado, que é mostrado no exemplo de código a seguir:
 
 ```csharp
 [HttpGet]  
@@ -150,19 +153,19 @@ public async Task<IActionResult> Items(
 }
 ```
 
-Esse método recupera os dados do catálogo do banco de dados SQL usando o EntityFramework e o retorna como uma mensagem de resposta que inclui um código de status HTTP de êxito e uma coleção de instâncias de `CatalogItem` formatadas em JSON.
+Esse método recupera os dados do catálogo do banco de dados SQL usando o EntityFramework e o retorna como uma mensagem de resposta que inclui um código de status HTTP de êxito e uma coleção de instâncias formatadas em JSON `CatalogItem` .
 
 #### <a name="making-a-post-request"></a>Fazendo uma solicitação POST
 
-A classe `BasketService` é usada para gerenciar a recuperação de dados e o processo de atualização com o microserviço basket. No método `RegisterDependencies` na classe `ViewModelLocator`, a classe `BasketService` é registrada como um mapeamento de tipo em relação ao tipo de `IBasketService` com o contêiner de injeção de dependência Autofac. Em seguida, quando uma instância da classe `BasketViewModel` é criada, seu construtor aceita um tipo `IBasketService`, que Autofac resolve, retornando uma instância da classe `BasketService`. Para obter mais informações sobre injeção de dependência, consulte [introdução à injeção de dependência](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md#introduction_to_dependency_injection).
+A `BasketService` classe é usada para gerenciar a recuperação de dados e o processo de atualização com o microserviço basket. No `RegisterDependencies` método na `ViewModelLocator` classe, a `BasketService` classe é registrada como um mapeamento de tipo em relação ao `IBasketService` tipo com o contêiner de injeção de dependência Autofac. Em seguida, quando uma instância da `BasketViewModel` classe é criada, seu construtor aceita um `IBasketService` tipo, que Autofac resolve, retornando uma instância da `BasketService` classe. Para obter mais informações sobre injeção de dependência, consulte [introdução à injeção de dependência](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md#introduction_to_dependency_injection).
 
-A Figura 10-2 mostra a interação das classes que enviam os dados da cesta exibidos pelo `BasketView`, para o microserviço da cesta.
+A Figura 10-2 mostra a interação de classes que enviam os dados da cesta exibidos pelo `BasketView` , ao microserviço da cesta.
 
 [![](accessing-remote-data-images/basketdata.png "Sending data to the basket microservice")](accessing-remote-data-images/basketdata-large.png#lightbox "Sending data to the basket microservice")
 
 **Figura 10-2**: enviando dados para o microserviço da cesta
 
-Quando um item é adicionado à cesta de compras, o método `ReCalculateTotalAsync` na classe `BasketViewModel` é chamado. Esse método atualiza o valor total dos itens na cesta e envia os dados da cesta para o microserviço da cesta, conforme demonstrado no exemplo de código a seguir:
+Quando um item é adicionado à cesta de compras, o `ReCalculateTotalAsync` método na `BasketViewModel` classe é chamado. Esse método atualiza o valor total dos itens na cesta e envia os dados da cesta para o microserviço da cesta, conforme demonstrado no exemplo de código a seguir:
 
 ```csharp
 private async Task ReCalculateTotalAsync()  
@@ -176,7 +179,7 @@ private async Task ReCalculateTotalAsync()
 }
 ```
 
-Esse método chama o método `UpdateBasketAsync` da instância `BasketService` que foi injetada no `BasketViewModel` pelo Autofac. O método a seguir mostra o método `UpdateBasketAsync`:
+Esse método chama o `UpdateBasketAsync` método da `BasketService` instância que foi injetada no `BasketViewModel` por Autofac. O método a seguir mostra o `UpdateBasketAsync` método:
 
 ```csharp
 public async Task<CustomerBasket> UpdateBasketAsync(CustomerBasket customerBasket, string token)  
@@ -188,9 +191,9 @@ public async Task<CustomerBasket> UpdateBasketAsync(CustomerBasket customerB
 }
 ```
 
-Esse método cria o URI que identifica o recurso ao qual a solicitação será enviada e usa a classe `RequestProvider` para invocar o método HTTP POST no recurso, antes de retornar os resultados para o `BasketViewModel`. Observe que um token de acesso, obtido do IdentityServer durante o processo de autenticação, é necessário para autorizar solicitações ao microserviço da cesta. Para obter mais informações sobre autorização, consulte [Authorization](~/xamarin-forms/enterprise-application-patterns/authentication-and-authorization.md#authorization).
+Esse método cria o URI que identifica o recurso ao qual a solicitação será enviada e usa a `RequestProvider` classe para invocar o método http post no recurso, antes de retornar os resultados para o `BasketViewModel` . Observe que um token de acesso, obtido do IdentityServer durante o processo de autenticação, é necessário para autorizar solicitações ao microserviço da cesta. Para obter mais informações sobre autorização, consulte [Authorization](~/xamarin-forms/enterprise-application-patterns/authentication-and-authorization.md#authorization).
 
-O exemplo de código a seguir mostra um dos métodos `PostAsync` na classe `RequestProvider`:
+O exemplo de código a seguir mostra um dos `PostAsync` métodos na `RequestProvider` classe:
 
 ```csharp
 public async Task<TResult> PostAsync<TResult>(  
@@ -212,9 +215,9 @@ public async Task<TResult> PostAsync<TResult>(
 }
 ```
 
-Esse método chama o método `CreateHttpClient`, que retorna uma instância da classe `HttpClient` com os cabeçalhos apropriados definidos. Em seguida, ele envia uma solicitação POST assíncrona para o recurso identificado pelo URI, com os dados do carrinho serializado sendo enviados no formato JSON e a resposta armazenada na instância de `HttpResponseMessage`. O método `HandleResponse` é invocado, o que gera uma exceção se a resposta não inclui um código de status HTTP de êxito. Em seguida, a resposta é lida como uma cadeia de caracteres, convertida de JSON em um objeto `CustomerBasket` e retornada para o `BasketService`. Para obter mais informações sobre o método `CreateHttpClient`, consulte [fazendo uma solicitação get](#making_a_get_request).
+Esse método chama o `CreateHttpClient` método, que retorna uma instância da `HttpClient` classe com os cabeçalhos apropriados definidos. Em seguida, ele envia uma solicitação POST assíncrona para o recurso identificado pelo URI, com os dados do carrinho serializado sendo enviados no formato JSON e a resposta armazenada na `HttpResponseMessage` instância. O `HandleResponse` método é invocado, o que gera uma exceção se a resposta não incluir um código de status HTTP de êxito. Em seguida, a resposta é lida como uma cadeia de caracteres, convertida de JSON em um `CustomerBasket` objeto e retornada para o `BasketService` . Para obter mais informações sobre o `CreateHttpClient` método, consulte [fazendo uma solicitação get](#making_a_get_request).
 
-Quando o método `PostAsync` na classe `RequestProvider` chama `HttpClient.PostAsync`, o método `Post` na classe `BasketController` no projeto basket. API é invocado, que é mostrado no exemplo de código a seguir:
+Quando o `PostAsync` método na `RequestProvider` classe chama `HttpClient.PostAsync` , o `Post` método na `BasketController` classe no projeto basket. API é invocado, que é mostrado no exemplo de código a seguir:
 
 ```csharp
 [HttpPost]  
@@ -225,17 +228,17 @@ public async Task<IActionResult> Post([FromBody]CustomerBasket value)
 }
 ```
 
-Esse método usa uma instância da classe `RedisBasketRepository` para persistir os dados da cesta para o cache Redis e o retorna como uma mensagem de resposta que inclui um código de status HTTP de êxito e uma instância de `CustomerBasket` formatada em JSON.
+Esse método usa uma instância da `RedisBasketRepository` classe para persistir os dados da cesta para o cache Redis e o retorna como uma mensagem de resposta que inclui um código de status HTTP de êxito e uma `CustomerBasket` instância formatada JSON.
 
 #### <a name="making-a-delete-request"></a>Fazendo uma solicitação de exclusão
 
-A Figura 10-3 mostra as interações de classes que excluem dados de cesta do microserviço da cesta, para o `CheckoutView`.
+A Figura 10-3 mostra as interações de classes que excluem dados de cesta do microserviço da cesta para o `CheckoutView` .
 
 ![](accessing-remote-data-images/checkoutdata.png "Deleteing data from the basket microservice")
 
 **Figura 10-3**: excluindo dados do microserviço da cesta
 
-Quando o processo de check-out é invocado, o método `CheckoutAsync` na classe `CheckoutViewModel` é chamado. Esse método cria um novo pedido, antes de limpar a cesta de compras, conforme demonstrado no exemplo de código a seguir:
+Quando o processo de check-out é invocado, o `CheckoutAsync` método na `CheckoutViewModel` classe é chamado. Esse método cria um novo pedido, antes de limpar a cesta de compras, conforme demonstrado no exemplo de código a seguir:
 
 ```csharp
 private async Task CheckoutAsync()  
@@ -246,7 +249,7 @@ private async Task CheckoutAsync()
 }
 ```
 
-Esse método chama o método `ClearBasketAsync` da instância `BasketService` que foi injetada no `CheckoutViewModel` pelo Autofac. O método a seguir mostra o método `ClearBasketAsync`:
+Esse método chama o `ClearBasketAsync` método da `BasketService` instância que foi injetada no `CheckoutViewModel` por Autofac. O método a seguir mostra o `ClearBasketAsync` método:
 
 ```csharp
 public async Task ClearBasketAsync(string guidUser, string token)  
@@ -258,9 +261,9 @@ public async Task ClearBasketAsync(string guidUser, string token)
 }
 ```
 
-Esse método cria o URI que identifica o recurso ao qual a solicitação será enviada e usa a classe `RequestProvider` para invocar o método HTTP DELETE no recurso. Observe que um token de acesso, obtido do IdentityServer durante o processo de autenticação, é necessário para autorizar solicitações ao microserviço da cesta. Para obter mais informações sobre autorização, consulte [Authorization](~/xamarin-forms/enterprise-application-patterns/authentication-and-authorization.md#authorization).
+Esse método cria o URI que identifica o recurso ao qual a solicitação será enviada e usa a `RequestProvider` classe para invocar o método http Delete no recurso. Observe que um token de acesso, obtido do IdentityServer durante o processo de autenticação, é necessário para autorizar solicitações ao microserviço da cesta. Para obter mais informações sobre autorização, consulte [Authorization](~/xamarin-forms/enterprise-application-patterns/authentication-and-authorization.md#authorization).
 
-O exemplo de código a seguir mostra o método `DeleteAsync` na classe `RequestProvider`:
+O exemplo de código a seguir mostra o `DeleteAsync` método na `RequestProvider` classe:
 
 ```csharp
 public async Task DeleteAsync(string uri, string token = "")  
@@ -270,9 +273,9 @@ public async Task DeleteAsync(string uri, string token = "")
 }
 ```
 
-Esse método chama o método `CreateHttpClient`, que retorna uma instância da classe `HttpClient` com os cabeçalhos apropriados definidos. Em seguida, ele envia uma solicitação de exclusão assíncrona para o recurso identificado pelo URI. Para obter mais informações sobre o método `CreateHttpClient`, consulte [fazendo uma solicitação get](#making_a_get_request).
+Esse método chama o `CreateHttpClient` método, que retorna uma instância da `HttpClient` classe com os cabeçalhos apropriados definidos. Em seguida, ele envia uma solicitação de exclusão assíncrona para o recurso identificado pelo URI. Para obter mais informações sobre o `CreateHttpClient` método, consulte [fazendo uma solicitação get](#making_a_get_request).
 
-Quando o método `DeleteAsync` na classe `RequestProvider` chama `HttpClient.DeleteAsync`, o método `Delete` na classe `BasketController` no projeto basket. API é invocado, que é mostrado no exemplo de código a seguir:
+Quando o `DeleteAsync` método na `RequestProvider` classe chama `HttpClient.DeleteAsync` , o `Delete` método na `BasketController` classe no projeto basket. API é invocado, que é mostrado no exemplo de código a seguir:
 
 ```csharp
 [HttpDelete("{id}")]  
@@ -282,13 +285,13 @@ public void Delete(string id)
 }
 ```
 
-Esse método usa uma instância da classe `RedisBasketRepository` para excluir os dados da cesta do cache Redis.
+Esse método usa uma instância da `RedisBasketRepository` classe para excluir os dados da cesta do cache Redis.
 
 ## <a name="caching-data"></a>Armazenando dados em cache
 
 O desempenho de um aplicativo pode ser melhorado pelo armazenamento em cache de dados acessados com frequência para um armazenamento rápido localizado próximo ao aplicativo. Se o armazenamento rápido estiver mais próximo do aplicativo do que a fonte original, o Caching poderá melhorar significativamente os tempos de resposta ao recuperar dados.
 
-A forma mais comum de cache é o cache de leitura, em que um aplicativo recupera dados referenciando o cache. Se os dados não estiverem no cache, eles serão recuperados do armazenamento de dados e adicionados ao cache. Os aplicativos podem implementar o cache de leitura com o padrão de reserva de cache. Esse padrão determina se o item está atualmente no cache. Se o item não estiver no cache, ele será lido no repositório de dados e adicionado ao cache. Para obter mais informações, consulte o padrão de [reserva de cache](/azure/architecture/patterns/cache-aside/) .
+A forma mais comum de cache é o cache de leitura, em que um aplicativo recupera dados referenciando o cache. Se os dados não estiverem no cache, ele é recuperado do armazenamento de dados e adicionado ao cache. Os aplicativos podem implementar o cache de leitura com o padrão de reserva de cache. Esse padrão determina se o item está atualmente no cache. Se o item não estiver no cache, ele será lido no repositório de dados e adicionado ao cache. Para obter mais informações, consulte o padrão de [reserva de cache](/azure/architecture/patterns/cache-aside/) .
 
 > [!TIP]
 > Armazene em cache os dados que são lidos com frequência e que são alterados com pouca frequência. Esses dados podem ser adicionados ao cache sob demanda na primeira vez que são recuperados por um aplicativo. Isso significa que o aplicativo precisa buscar os dados apenas uma vez no armazenamento de dados, e esse acesso subsequente pode ser satisfeito usando o cache.
@@ -318,11 +321,11 @@ Também é possível que um cache seja preenchido se os dados tiverem permissão
 
 ### <a name="caching-images"></a>Imagens de cache
 
-O aplicativo móvel eShopOnContainers consome imagens de produtos remotos que se beneficiam do armazenamento em cache. Essas imagens são exibidas pelo controle de [`Image`](xref:Xamarin.Forms.Image) e o controle de `CachedImage` fornecido pela biblioteca [FFImageLoading](https://www.nuget.org/packages/Xamarin.FFImageLoading.Forms/) .
+O aplicativo móvel eShopOnContainers consome imagens de produtos remotos que se beneficiam do armazenamento em cache. Essas imagens são exibidas pelo [`Image`](xref:Xamarin.Forms.Image) controle e pelo `CachedImage` controle fornecido pela biblioteca [FFImageLoading](https://www.nuget.org/packages/Xamarin.FFImageLoading.Forms/) .
 
-O controle [`Image`](xref:Xamarin.Forms.Image) Xamarin. Forms dá suporte a cache de imagens baixadas. O Caching é habilitado por padrão e armazenará a imagem localmente por 24 horas. Além disso, o tempo de expiração pode ser configurado com a propriedade [`CacheValidity`](xref:Xamarin.Forms.UriImageSource.CacheValidity) . Para obter mais informações, consulte [Caching de imagem baixado](~/xamarin-forms/user-interface/images.md#downloaded-image-caching).
+O Xamarin.Forms [`Image`](xref:Xamarin.Forms.Image) controle dá suporte ao cache de imagens baixadas. O Caching é habilitado por padrão e armazenará a imagem localmente por 24 horas. Além disso, o tempo de expiração pode ser configurado com a [`CacheValidity`](xref:Xamarin.Forms.UriImageSource.CacheValidity) propriedade. Para obter mais informações, consulte [Caching de imagem baixado](~/xamarin-forms/user-interface/images.md#downloaded-image-caching).
 
-O controle de `CachedImage` do FFImageLoading é uma substituição para o controle de [`Image`](xref:Xamarin.Forms.Image) do Xamarin. Forms, fornecendo propriedades adicionais que habilitam a funcionalidade suplementar. Entre essa funcionalidade, o controle fornece cache configurável, enquanto dá suporte a erros e carregamento de espaços reservados de imagem. O exemplo de código a seguir mostra como o aplicativo móvel eShopOnContainers usa o controle de `CachedImage` no `ProductTemplate`, que é o modelo de dados usado pelo controle de [`ListView`](xref:Xamarin.Forms.ListView) no `CatalogView`:
+`CachedImage`O controle de FFImageLoading é uma substituição para o Xamarin.Forms [`Image`](xref:Xamarin.Forms.Image) controle, fornecendo propriedades adicionais que habilitam a funcionalidade suplementar. Entre essa funcionalidade, o controle fornece cache configurável, enquanto dá suporte a erros e carregamento de espaços reservados de imagem. O exemplo de código a seguir mostra como o aplicativo móvel eShopOnContainers usa o `CachedImage` controle no `ProductTemplate` , que é o modelo de dados usado pelo [`ListView`](xref:Xamarin.Forms.ListView) controle no `CatalogView` :
 
 ```xaml
 <ffimageloading:CachedImage
@@ -344,9 +347,9 @@ O controle de `CachedImage` do FFImageLoading é uma substituição para o contr
 </ffimageloading:CachedImage>
 ```
 
-O controle `CachedImage` define as propriedades `LoadingPlaceholder` e `ErrorPlaceholder` como imagens específicas da plataforma. A propriedade `LoadingPlaceholder` especifica a imagem a ser exibida enquanto a imagem especificada pela propriedade `Source` é recuperada e a propriedade `ErrorPlaceholder` especifica a imagem a ser exibida se ocorrer um erro ao tentar recuperar a imagem especificada pelo `Source` Propriedade.
+O `CachedImage` controle define as `LoadingPlaceholder` `ErrorPlaceholder` Propriedades e para imagens específicas da plataforma. A `LoadingPlaceholder` propriedade especifica a imagem a ser exibida enquanto a imagem especificada pela `Source` propriedade é recuperada e a `ErrorPlaceholder` propriedade especifica a imagem a ser exibida se ocorrer um erro ao tentar recuperar a imagem especificada pela `Source` propriedade.
 
-Como o nome indica, o controle de `CachedImage` armazena em cache as imagens remotas no dispositivo para o tempo especificado pelo valor da propriedade `CacheDuration`. Quando esse valor de propriedade não está explicitamente definido, o valor padrão de 30 dias é aplicado.
+Como o nome indica, o `CachedImage` controle armazena em cache as imagens remotas no dispositivo para o tempo especificado pelo valor da `CacheDuration` propriedade. Quando esse valor de propriedade não está explicitamente definido, o valor padrão de 30 dias é aplicado.
 
 ## <a name="increasing-resilience"></a>Aumentando a resiliência
 
@@ -373,14 +376,14 @@ A estratégia de repetição deve ser ajustada para corresponder aos requisitos 
 > [!NOTE]
 > Uma estratégia de repetição agressiva com atraso mínimo entre as tentativas e um grande número de tentativas, pode degradar um serviço remoto que está sendo executado perto de ou em capacidade. Além disso, essa estratégia de repetição também poderia afetar a capacidade de resposta do aplicativo se estiver tentando executar uma operação com falha continuamente.
 
-Se uma solicitação ainda falhar após várias tentativas, é melhor que o aplicativo impeça que outras solicitações vá para o mesmo recurso e relate uma falha. Depois, após um período definido, o aplicativo pode fazer uma ou mais solicitações ao recurso para ver se elas foram bem-sucedidas. Para obter mais informações, consulte [padrão de disjuntor](#circuit_breaker_pattern).
+Se uma solicitação ainda falhar após várias tentativas, é melhor que o aplicativo impeça que outras solicitações vá para o mesmo recurso e relate uma falha. Depois, após um período definido, o aplicativo pode fazer uma ou mais solicitações ao recurso para ver se elas foram bem-sucedidas. Para saber mais, veja [Padrão de Disjuntor](#circuit_breaker_pattern).
 
 > [!TIP]
-> Nunca implemente um mecanismo de repetição infinito. Use um número finito de repetições ou implemente o padrão de [disjuntor](/azure/architecture/patterns/circuit-breaker/) para permitir a recuperação de um serviço.
+> Nunca implemente um mecanismo de repetição infinita. Use um número finito de repetições ou implemente o padrão de [disjuntor](/azure/architecture/patterns/circuit-breaker/) para permitir a recuperação de um serviço.
 
-O aplicativo móvel eShopOnContainers atualmente não implementa o padrão de repetição ao fazer solicitações da Web RESTful. No entanto, o controle de `CachedImage`, fornecido pela biblioteca [FFImageLoading](https://www.nuget.org/packages/Xamarin.FFImageLoading.Forms/) , dá suporte ao tratamento de falhas transitórias, repetindo o carregamento da imagem. Se o carregamento da imagem falhar, outras tentativas serão feitas. O número de tentativas é especificado pela propriedade `RetryCount` e as repetições ocorrerão após um atraso especificado pela propriedade `RetryDelay`. Se esses valores de propriedade não estiverem explicitamente definidos, seus valores padrão serão aplicados – 3 para a propriedade `RetryCount` e 250 MS para a propriedade `RetryDelay`. Para obter mais informações sobre o controle de `CachedImage`, consulte [Caching images](#caching_images).
+O aplicativo móvel eShopOnContainers atualmente não implementa o padrão de repetição ao fazer solicitações da Web RESTful. No entanto, o `CachedImage` controle, fornecido pela biblioteca [FFImageLoading](https://www.nuget.org/packages/Xamarin.FFImageLoading.Forms/) , dá suporte ao tratamento de falhas transitórias, repetindo o carregamento da imagem. Se o carregamento da imagem falhar, outras tentativas serão feitas. O número de tentativas é especificado pela `RetryCount` propriedade e as repetições ocorrerão após um atraso especificado pela `RetryDelay` propriedade. Se esses valores de propriedade não estiverem explicitamente definidos, seus valores padrão serão aplicados – 3 para a `RetryCount` propriedade e 250 MS para a `RetryDelay` propriedade. Para obter mais informações sobre o `CachedImage` controle, consulte [Caching images](#caching_images).
 
-O aplicativo de referência eShopOnContainers implementa o padrão de repetição. Para obter mais informações, incluindo uma discussão sobre como combinar o padrão de repetição com a classe `HttpClient`, consulte [microservices do .net: arquitetura para aplicativos .net em contêineres](https://aka.ms/microservicesebook).
+O aplicativo de referência eShopOnContainers implementa o padrão de repetição. Para obter mais informações, incluindo uma discussão sobre como combinar o padrão de repetição com a `HttpClient` classe, consulte [microservices do .net: arquitetura para aplicativos .net em contêineres](https://aka.ms/microservicesebook).
 
 Para obter mais informações sobre o padrão de repetição, consulte o padrão de [repetição](/azure/architecture/patterns/retry/) .
 
@@ -400,7 +403,7 @@ Um disjuntor atua como um proxy para operações que podem falhar. O proxy deve 
 O aplicativo móvel eShopOnContainers atualmente não implementa o padrão de disjuntor. No entanto, o eShopOnContainers faz. Para obter mais informações, consulte [microservices do .net: arquitetura para aplicativos .net em contêineres](https://aka.ms/microservicesebook).
 
 > [!TIP]
-> Combine os padrões de repetição e disjuntor. Um aplicativo pode combinar os padrões de repetição e de disjuntor usando o padrão de repetição para invocar uma operação por meio de um disjuntor. No entanto, a lógica de repetição deve ser sensível a quaisquer exceções retornadas pelo disjuntor e abandonar tentativas de repetição se o disjuntor indicar que uma falha não é transitória.
+> Combine os padrões de repetição e disjuntor. Um aplicativo pode combinar os padrões de repetição e de disjuntor usando o padrão de repetição para invocar uma operação por meio de um disjuntor. No entanto, a lógica de repetição deverá ser sensível às exceções retornadas pelo disjuntor e abandonar as novas tentativas se o disjuntor indicar que uma falha não é transitória.
 
 Para obter mais informações sobre o padrão de disjuntor, consulte o padrão de [disjuntor](/azure/architecture/patterns/circuit-breaker/) .
 

@@ -1,41 +1,44 @@
 ---
-title: Criar um renderizador Visual Xamarin. Forms
-description: Crie elementos visuais Xamarin. Forms para serem aplicados seletivamente a objetos Visualelement, sem a necessidade de subclasse de exibições do Xamarin. Forms.
-ms.prod: xamarin
-ms.assetid: 80BF9C72-AC28-4AAF-9DDD-B60CBDD1CD59
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 03/12/2019
-ms.openlocfilehash: bc95b9be0605c353ee9f914cb065f79711b9f92b
-ms.sourcegitcommit: 41a029c69925e3a9d2de883751ebfd649e8747cd
+title: Criar um Xamarin.Forms renderizador Visual
+description: Crie Xamarin.Forms visuais para serem aplicados seletivamente a objetos visualelement, sem precisar de Xamarin.Forms exibições de subclasse.
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 23edbb007e912d13858686d1c5ec574c9e3349c7
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68978286"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84127134"
 ---
-# <a name="create-a-xamarinforms-visual-renderer"></a>Criar um renderizador Visual Xamarin. Forms
+# <a name="create-a-xamarinforms-visual-renderer"></a>Criar um Xamarin.Forms renderizador Visual
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-visualdemos)
+[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-visualdemos)
 
-O Visual Xamarin. Forms permite que os renderizadores sejam criados e aplicados seletivamente a [`VisualElement`](xref:Xamarin.Forms.VisualElement) objetos, sem a necessidade de criar uma subclasse de exibições do Xamarin. Forms. Um renderizador que especifica `IVisual` um tipo, como parte de `ExportRendererAttribute`seu, será usado para renderizar os modos de exibição, em vez do renderizador padrão. Em tempo de seleção do renderizador, o `Visual` propriedade do modo de exibição é inspecionada e incluída no processo de seleção do renderizador.
+Xamarin.FormsO Visual permite que os renderizadores sejam criados e aplicados seletivamente a [`VisualElement`](xref:Xamarin.Forms.VisualElement) objetos, sem a necessidade de Xamarin.Forms exibições de subclasse. Um renderizador que especifica um `IVisual` tipo, como parte de seu `ExportRendererAttribute` , será usado para renderizar os modos de exibição, em vez do renderizador padrão. No momento da seleção do processador, a `Visual` propriedade da exibição é inspecionada e incluída no processo de seleção do processador.
 
 > [!IMPORTANT]
-> Atualmente, [`Visual`](xref:Xamarin.Forms.VisualElement.Visual) a propriedade não pode ser alterada depois que a exibição tiver sido renderizada, mas isso será alterado em uma versão futura.
+> Atualmente [`Visual`](xref:Xamarin.Forms.VisualElement.Visual) , a propriedade não pode ser alterada depois que a exibição tiver sido renderizada, mas isso será alterado em uma versão futura.
 
-O processo para criar e consumir um renderizador Visual Xamarin. Forms é:
+O processo para criar e consumir um Xamarin.Forms renderizador Visual é:
 
 1. Crie renderizadores de plataforma para a exibição necessária. Para obter mais informações, consulte [criar renderizadores](#create-platform-renderers).
-1. Crie um tipo derivado de `IVisual`. Para obter mais informações, consulte [criar um tipo de IVisual](#create-an-ivisual-type).
-1. Registre o `IVisual` tipo como parte `ExportRendererAttribute` do que decora os renderizadores. Para obter mais informações, consulte [registrar o tipo IVisual](#register-the-ivisual-type).
+1. Crie um tipo derivado de `IVisual` . Para obter mais informações, consulte [criar um tipo de IVisual](#create-an-ivisual-type).
+1. Registre o `IVisual` tipo como parte do `ExportRendererAttribute` que decora os renderizadores. Para obter mais informações, consulte [registrar o tipo IVisual](#register-the-ivisual-type).
 1. Consuma o renderizador Visual definindo a [`Visual`](xref:Xamarin.Forms.VisualElement.Visual) Propriedade na exibição como o `IVisual` nome. Para obter mais informações, consulte [consumir o processador visual](#consume-the-visual-renderer).
 1. adicional Registre um nome para o `IVisual` tipo. Para obter mais informações, consulte [registrar um nome para o tipo IVisual](#register-a-name-for-the-ivisual-type).
 
 ## <a name="create-platform-renderers"></a>Criar renderizadores de plataforma
 
-Para obter informações sobre como criar uma classe de processador, consulte [renderizadores personalizados](~/xamarin-forms/app-fundamentals/custom-renderer/index.md). No entanto, observe que um renderizador Visual Xamarin. Forms é aplicado a uma exibição sem a necessidade de subclasse da exibição.
+Para obter informações sobre como criar uma classe de processador, consulte [renderizadores personalizados](~/xamarin-forms/app-fundamentals/custom-renderer/index.md). No entanto, observe que um Xamarin.Forms renderizador Visual é aplicado a uma exibição sem a necessidade de subclasse da exibição.
 
-As classes de processador descritas aqui implementam um [`Button`](xref:Xamarin.Forms.Button) personalizado que exibe seu texto com uma sombra.
+As classes de processador descritas aqui implementam um personalizado [`Button`](xref:Xamarin.Forms.Button) que exibe seu texto com uma sombra.
 
 ### <a name="ios"></a>iOS
 
@@ -92,7 +95,7 @@ public class CustomButtonRenderer : Xamarin.Forms.Platform.Android.AppCompat.But
 
 ## <a name="create-an-ivisual-type"></a>Criar um tipo de IVisual
 
-Em sua biblioteca de plataforma cruzada, crie um tipo que derive `IVisual`de:
+Em sua biblioteca de plataforma cruzada, crie um tipo que derive de `IVisual` :
 
 ```csharp
 public class CustomVisual : IVisual
@@ -100,7 +103,7 @@ public class CustomVisual : IVisual
 }
 ```
 
-O `CustomVisual` tipo pode então ser registrado em relação às classes do processador, [`Button`](xref:Xamarin.Forms.Button) permitindo que os objetos optem por usar os renderizadores.
+O `CustomVisual` tipo pode então ser registrado em relação às classes do processador, permitindo [`Button`](xref:Xamarin.Forms.Button) que os objetos optem por usar os renderizadores.
 
 ## <a name="register-the-ivisual-type"></a>Registrar o tipo IVisual
 
@@ -120,11 +123,11 @@ namespace VisualDemos.iOS
 }
 ```
 
-Neste exemplo para o projeto `ExportRendererAttribute` da plataforma Ios, especifica que a `CustomButtonRenderer` classe será usada para renderizar objetos consumidos [`Button`](xref:Xamarin.Forms.Button) , com `IVisual` o tipo registrado como o terceiro argumento. Um renderizador que especifica `IVisual` um tipo, como parte de `ExportRendererAttribute`seu, será usado para renderizar os modos de exibição, em vez do renderizador padrão.
+Neste exemplo para o projeto da plataforma iOS, `ExportRendererAttribute` especifica que a `CustomButtonRenderer` classe será usada para renderizar objetos consumidos [`Button`](xref:Xamarin.Forms.Button) , com o `IVisual` tipo registrado como o terceiro argumento. Um renderizador que especifica um `IVisual` tipo, como parte de seu `ExportRendererAttribute` , será usado para renderizar os modos de exibição, em vez do renderizador padrão.
 
 ## <a name="consume-the-visual-renderer"></a>Consumir o processador Visual
 
-Um [`Button`](xref:Xamarin.Forms.Button) objeto pode optar por usar as classes do processador definindo sua [`Visual`](xref:Xamarin.Forms.VisualElement.Visual) Propriedade como `Custom`:
+Um [`Button`](xref:Xamarin.Forms.Button) objeto pode optar por usar as classes do processador definindo sua [`Visual`](xref:Xamarin.Forms.VisualElement.Visual) propriedade como `Custom` :
 
 ```xaml
 <Button Visual="Custom"
@@ -137,22 +140,22 @@ Um [`Button`](xref:Xamarin.Forms.Button) objeto pode optar por usar as classes d
 > [!NOTE]
 > Em XAML, um conversor de tipo remove a necessidade de incluir o sufixo "Visual" no [`Visual`](xref:Xamarin.Forms.VisualElement.Visual) valor da propriedade. No entanto, o nome completo do tipo também pode ser especificado.
 
-O código c# equivalente é:
+Este é o código C# equivalente:
 
 ```csharp
 Button button = new Button { Text = "CUSTOM BUTTON", ... };
 button.Visual = new CustomVisual();
 ```
 
-No momento da seleção do processador [`Visual`](xref:Xamarin.Forms.VisualElement.Visual) , a propriedade [`Button`](xref:Xamarin.Forms.Button) do é inspecionada e incluída no processo de seleção do processador. Se um renderizador não estiver localizado, o renderizador padrão do Xamarin. Forms será usado.
+No momento da seleção do processador, a [`Visual`](xref:Xamarin.Forms.VisualElement.Visual) Propriedade do [`Button`](xref:Xamarin.Forms.Button) é inspecionada e incluída no processo de seleção do processador. Se um renderizador não estiver localizado, o Xamarin.Forms renderizador padrão será usado.
 
-As capturas de tela a seguir [`Button`](xref:Xamarin.Forms.Button)mostram o renderizado, que exibe o texto com uma sombra:
+As capturas de tela a seguir mostram o renderizado [`Button`](xref:Xamarin.Forms.Button) , que exibe o texto com uma sombra:
 
-[![Captura de tela do botão personalizado com texto sombreado no Ios e no Android](material-visual-images/custom-button.png "Botão com texto de sombra")](material-visual-images/custom-button-large.png#lightbox)
+[![Captura de tela do botão personalizado com texto sombreado no iOS e no Android](material-visual-images/custom-button.png "Botão com texto de sombra")](material-visual-images/custom-button-large.png#lightbox)
 
 ## <a name="register-a-name-for-the-ivisual-type"></a>Registrar um nome para o tipo IVisual
 
-O [`VisualAttribute`](xref:Xamarin.Forms.VisualAttribute) pode ser usado para, opcionalmente, registrar um nome diferente `IVisual` para o tipo. Essa abordagem pode ser usada para resolver conflitos de nomenclatura entre diferentes bibliotecas visuais, ou em situações em que você queira apenas fazer referência a um Visual por um nome diferente do nome do tipo.
+O [`VisualAttribute`](xref:Xamarin.Forms.VisualAttribute) pode ser usado para, opcionalmente, registrar um nome diferente para o `IVisual` tipo. Essa abordagem pode ser usada para resolver conflitos de nomenclatura entre diferentes bibliotecas visuais, ou em situações em que você queira apenas fazer referência a um Visual por um nome diferente do nome do tipo.
 
 O [`VisualAttribute`](xref:Xamarin.Forms.VisualAttribute) deve ser definido no nível do assembly na biblioteca de plataforma cruzada ou no projeto da plataforma:
 
@@ -173,5 +176,5 @@ O `IVisual` tipo pode então ser consumido por meio de seu nome registrado:
 ## <a name="related-links"></a>Links relacionados
 
 - [Visual do material (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-visualdemos)
-- [Visual de material do Xamarin. Forms](material-visual.md)
+- [Xamarin.FormsVisual do material](material-visual.md)
 - [Renderizadores personalizados](~/xamarin-forms/app-fundamentals/custom-renderer/index.md)

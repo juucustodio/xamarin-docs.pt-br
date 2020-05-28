@@ -1,24 +1,27 @@
 ---
-title: Modo de entrada de teclado virtual no Android
-description: Especificidades da plataforma permitem que você consumir funcionalidade só está disponível em uma plataforma específica, sem implementar renderizadores personalizados ou efeitos. Este artigo explica como consumir a plataforma Android específica que define o modo de operação para uma área de entrada de teclado virtual.
-ms.prod: xamarin
-ms.assetid: AFCDC92F-F61E-42F6-904B-50B5C4949970
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 07/10/2018
-ms.openlocfilehash: 835f75b473fe966b5e92e7cb599f7675a7a459dd
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+title: ''
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: c62d09c7d7848d9f62c018caa1698bb53a2a39a8
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655664"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84128707"
 ---
 # <a name="soft-keyboard-input-mode-on-android"></a>Modo de entrada de teclado virtual no Android
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
-Essa plataforma do Android específica é usada para definir o modo de operação para uma área de entrada de teclado virtual e é consumida em [`Application.WindowSoftInputModeAdjust`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.Application.WindowSoftInputModeAdjustProperty) XAML definindo a propriedade anexada como [`WindowSoftInputModeAdjust`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.WindowSoftInputModeAdjust) um valor da enumeração:
+Essa plataforma do Android específica é usada para definir o modo de operação para uma área de entrada de teclado virtual e é consumida em XAML definindo a [`Application.WindowSoftInputModeAdjust`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.Application.WindowSoftInputModeAdjustProperty) Propriedade anexada como um valor da [`WindowSoftInputModeAdjust`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.WindowSoftInputModeAdjust) enumeração:
 
 ```xaml
 <Application ...
@@ -28,7 +31,7 @@ Essa plataforma do Android específica é usada para definir o modo de operaçã
 </Application>
 ```
 
-Como alternativa, ele pode ser consumido de C# usando a API fluente:
+Como alternativa, ele pode ser consumido em C# usando a API fluente:
 
 ```csharp
 using Xamarin.Forms.PlatformConfiguration;
@@ -38,15 +41,15 @@ using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
 App.Current.On<Android>().UseWindowSoftInputModeAdjust(WindowSoftInputModeAdjust.Resize);
 ```
 
-O `Application.On<Android>` método Especifica que este específicos da plataforma serão executado apenas no Android. O [ `Application.UseWindowSoftInputModeAdjust` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.Application.UseWindowSoftInputModeAdjust(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Android,Xamarin.Forms.Application},Xamarin.Forms.PlatformConfiguration.AndroidSpecific.WindowSoftInputModeAdjust)) método, no [ `Xamarin.Forms.PlatformConfiguration.AndroidSpecific` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific) namespace, é usado para definir o modo de operação de área de entrada de teclado virtual, com o [ `WindowSoftInputModeAdjust` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.WindowSoftInputModeAdjust) enumeração fornecendo dois valores: [ `Pan` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.WindowSoftInputModeAdjust.Pan) e [ `Resize` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.WindowSoftInputModeAdjust.Resize). O `Pan` valor usa o [ `AdjustPan` ](xref:Android.Views.SoftInput.AdjustPan) opção de ajuste, o que não redimensione a janela quando um controle de entrada tem o foco. Em vez disso, o conteúdo da janela estendido para que o foco atual não é obscurecido pelo teclado virtual. O `Resize` valor usa o [ `AdjustResize` ](xref:Android.Views.SoftInput.AdjustResize) opção de ajuste, que redimensiona a janela quando um controle de entrada tem o foco, para liberar espaço para o teclado virtual.
+O `Application.On<Android>` método especifica que essa plataforma específica será executada somente no Android. O [ `Application.UseWindowSoftInputModeAdjust` ] (xref: Xamarin.Forms . PlatformConfiguration. AndroidSpecific. Application. UseWindowSoftInputModeAdjust ( Xamarin.Forms . IPlatformElementConfiguration { Xamarin.Forms . PlatformConfiguration. Android, Xamarin.Forms . Aplicativo}, Xamarin.Forms . PlatformConfiguration. AndroidSpecific. WindowSoftInputModeAdjust)), no [`Xamarin.Forms.PlatformConfiguration.AndroidSpecific`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific) namespace, é usado para definir o modo de operação da área de entrada do teclado virtual, com a [`WindowSoftInputModeAdjust`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.WindowSoftInputModeAdjust) Enumeração fornecendo dois valores: [`Pan`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.WindowSoftInputModeAdjust.Pan) e [`Resize`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.WindowSoftInputModeAdjust.Resize) . O `Pan` valor usa a [`AdjustPan`](xref:Android.Views.SoftInput.AdjustPan) opção de ajuste, que não redimensiona a janela quando um controle de entrada tem foco. Em vez disso, o conteúdo da janela é panorâmico para que o foco atual não seja obscurecido pelo teclado virtual. O `Resize` valor usa a [`AdjustResize`](xref:Android.Views.SoftInput.AdjustResize) opção de ajuste, que redimensiona a janela quando um controle de entrada tem foco, para liberar espaço para o teclado virtual.
 
-O resultado é que o teclado virtual área modo operacional pode ser definido quando um controle de entrada tem o foco de entrada:
+O resultado é que o modo operacional da área de entrada do teclado virtual pode ser definido quando um controle de entrada tem foco:
 
-[![](soft-keyboard-input-mode-images/pan-resize.png "Flexível de teclado específicos de plataforma de modo operacional")](soft-keyboard-input-mode-images/pan-resize-large.png#lightbox "teclado virtual operacional modo específico da plataforma")
+[![](soft-keyboard-input-mode-images/pan-resize.png "Soft Keyboard Operating Mode Platform-Specific")](soft-keyboard-input-mode-images/pan-resize-large.png#lightbox "Soft Keyboard Operating Mode Platform-Specific")
 
 ## <a name="related-links"></a>Links relacionados
 
-- [PlatformSpecifics (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+- [PlatformSpecifics (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [Criação de itens específicos à plataforma](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [API AndroidSpecific](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific)
 - [API AndroidSpecific. AppCompat](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat)
