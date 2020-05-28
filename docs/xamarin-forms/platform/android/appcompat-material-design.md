@@ -1,33 +1,37 @@
 ---
-title: Adicionando AppCompat e design de material
-description: Este artigo explica como converter aplicativos Android Xamarin. Forms existentes para usar AppCompat e design de material.
-ms.prod: xamarin
-ms.assetid: 045FBCDF-4D45-48BB-9911-BD3938C87D58
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 06/27/2017
-ms.openlocfilehash: 36c5733c347e3493b5ed423c52766c7e33fbdb3d
-ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
+title: ''
+description: Este artigo explica como converter Xamarin.Forms aplicativos Android existentes para usar AppCompat e design de material.
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 24206f6d6764c73f13a4b06fb44fa746f9d353af
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75728324"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84135701"
 ---
 # <a name="adding-appcompat-and-material-design"></a>Adicionando AppCompat e design de material
 
-_Siga estas etapas para converter aplicativos Android Xamarin. Forms existentes para usar AppCompat e design de material_
+_Siga estas etapas para converter os Xamarin.Forms aplicativos Android existentes para usar AppCompat e design de material_
 
 <!-- source https://gist.github.com/jassmith/a3b2a543f99126782936
 https://blog.xamarin.com/material-design-for-your-xamarin-forms-android-apps/ -->
 
-## <a name="overview"></a>{1&gt;Visão Geral&lt;1}
+## <a name="overview"></a>Visão geral
 
-Estas instruções explicam como atualizar seus aplicativos Android Xamarin. Forms existentes para usar a biblioteca AppCompat e habilitar o design de material na versão do Android de seus aplicativos Xamarin. Forms.
+Estas instruções explicam como atualizar seus Xamarin.Forms aplicativos Android existentes para usar a biblioteca AppCompat e habilitar o design de material na versão do Android de seus Xamarin.Forms aplicativos.
 
-### <a name="1-update-xamarinforms"></a>1. atualizar Xamarin. Forms
+### <a name="1-update-xamarinforms"></a>1. atualizarXamarin.Forms
 
-Verifique se a solução está usando o Xamarin. Forms 2,0 ou mais recente. Atualize o pacote do NuGet do Xamarin. Forms para 2,0, se necessário.
+Verifique se a solução está usando Xamarin.Forms 2,0 ou mais recente. Atualizar oXamarin.Forms
+  Pacote NuGet para 2,0, se necessário.
 
 ### <a name="2-check-android-version"></a>2. Verifique a versão do Android
 
@@ -39,7 +43,7 @@ Verifique se a estrutura de destino do projeto Android é Android 6,0 (marshmall
 
 Crie os três arquivos a seguir em seu projeto Android e cole o conteúdo abaixo. O Google fornece um [Guia de estilo](https://www.google.com/design/spec/style/color.html#color-color-palette) e um gerador de paleta de [cores](https://www.materialpalette.com/) para ajudá-lo a escolher um esquema de cores alternativo para aquele especificado.
 
-**Resources/values/colors.xml**
+**Recursos/valores/cores. xml**
 
 ```xml
 <resources>
@@ -50,7 +54,7 @@ Crie os três arquivos a seguir em seu projeto Android e cole o conteúdo abaixo
 </resources>
 ```
 
-**Resources/values/style.xml**
+**Recursos/valores/Style. xml**
 
 ```xml
 <resources>
@@ -68,7 +72,7 @@ Crie os três arquivos a seguir em seu projeto Android e cole o conteúdo abaixo
 
 Um estilo adicional deve ser incluído na pasta **Values-v21** para aplicar propriedades específicas ao ser executado em Android pirulito e mais recente.
 
-**Resources/values-v21/style.xml**
+**Resources/Values-v21/Style. xml**
 
 ```xml
 <resources>
@@ -82,9 +86,9 @@ Um estilo adicional deve ser incluído na pasta **Values-v21** para aplicar prop
 
 ### <a name="4-update-androidmanifestxml"></a>4. atualizar AndroidManifest. xml
 
-Para garantir que essas novas informações de tema sejam usadas, defina o tema no arquivo **AndroidManifest** adicionando `android:theme="@style/MyTheme"` (Deixe o restante do XML como ele estava).
+Para garantir que essas novas informações de tema sejam usadas, defina o tema no arquivo **AndroidManifest** adicionando `android:theme="@style/MyTheme"` (Deixe o restante do XML como ele era).
 
-**Properties/AndroidManifest.xml**
+**Propriedades/AndroidManifest. xml**
 
 ```xml
 ...
@@ -97,7 +101,7 @@ Para garantir que essas novas informações de tema sejam usadas, defina o tema 
 
 Crie os arquivos **Tabbar. axml** e **Toolbar. axml** no diretório de **recursos/layout** e cole o conteúdo abaixo:
 
-**Resources/layout/Tabbar.axml**
+**Recursos/layout/Tabbar. axml**
 
 ```xml
 <android.support.design.widget.TabLayout
@@ -113,7 +117,7 @@ Crie os arquivos **Tabbar. axml** e **Toolbar. axml** no diretório de **recurso
     app:tabMode="fixed" />
 ```
 
-Algumas propriedades para as guias foram definidas, incluindo a gravidade da guia para `fill` e modo como `fixed`.
+Algumas propriedades para as guias foram definidas, incluindo a gravidade da guia para `fill` e o modo como `fixed` .
 Se você tiver muitas guias, convém mudar isso para rolável – Leia a [documentação do TabLayout](https://developer.android.com/reference/android/support/design/widget/TabLayout.html) do Android para saber mais.
 
 **Recursos/layout/barra de ferramentas. axml**
@@ -135,9 +139,9 @@ Se você tiver muitas guias, convém mudar isso para rolável – Leia a [docume
 Nesses arquivos, estamos criando um tema específico para a barra de ferramentas que pode variar para seu aplicativo.
 Consulte a postagem do blog da [barra de ferramentas Hello](https://blog.xamarin.com/android-tips-hello-toolbar-goodbye-action-bar/) para saber mais.
 
-### <a name="6-update-the-mainactivity"></a>6. atualizar o `MainActivity`
+### <a name="6-update-the-mainactivity"></a>6. atualize o`MainActivity`
 
-Em aplicativos Xamarin. Forms existentes, a classe **MainActivity.cs** herdará de `FormsApplicationActivity`. Isso deve ser substituído por `FormsAppCompatActivity` para habilitar a nova funcionalidade.
+Em Xamarin.Forms aplicativos existentes, a classe **MainActivity.cs** herdará `FormsApplicationActivity` . Isso deve ser substituído por `FormsAppCompatActivity` para habilitar a nova funcionalidade.
 
 **MainActivity.cs**
 
@@ -145,7 +149,7 @@ Em aplicativos Xamarin. Forms existentes, a classe **MainActivity.cs** herdará 
 public class MainActivity : FormsAppCompatActivity  // was FormsApplicationActivity
 ```
 
-Por fim, "Conecte" os novos layouts da etapa 5 no método `OnCreate`, conforme mostrado aqui:
+Por fim, "Conecte" os novos layouts da etapa 5 no `OnCreate` método, como mostrado aqui:
 
 ```csharp
 protected override void OnCreate(Bundle bundle)

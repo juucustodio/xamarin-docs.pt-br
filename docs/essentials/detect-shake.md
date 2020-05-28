@@ -1,19 +1,12 @@
 ---
-title: 'Xamarin.Essentials: Detecte shake'
-description: A classe Accelerometer no Xamarin.Essentials permite detectar um movimento do dispositivo.
-ms.assetid: 07513D32-120F-4F12-8757-A47802A8027B
-author: jamesmontemagno
-ms.author: jamont
-ms.date: 05/28/2019
-ms.custom: video
-ms.openlocfilehash: d2aef2c32b3fe2815f1176779a8c28ae8d421ed1
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "67832591"
+Título: ' ' Xamarin.Essentials : detectar agite ' ' Descrição: ' a classe acelerômetro no Xamarin.Essentials permite que você detecte uma movimentação de uma mistura do dispositivo. '
+MS. AssetID: autor: MS. Author: MS. Data: MS. Custom: no-loc:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
+
 ---
-# <a name="xamarinessentials-detect-shake"></a>Xamarin.Essentials: Detecte shake
+
+# <a name="xamarinessentials-detect-shake"></a>Xamarin.Essentials: Detectar agite
 
 A classe **[Accelerometer](accelerometer.md)** permite monitorar o sensor de acelerômetro do dispositivo, que indica a aceleração do dispositivo no espaço tridimensional. Além disso, ele permite que você se registre para eventos quando o usuário sacudir o dispositivo.
 
@@ -23,7 +16,7 @@ A classe **[Accelerometer](accelerometer.md)** permite monitorar o sensor de ace
 
 ## <a name="using-detect-shake"></a>Usando a detecção de movimento
 
-Adicione uma referência ao Xamarin.Essentials na classe:
+Adicione uma referência a Xamarin.Essentials em sua classe:
 
 ```csharp
 using Xamarin.Essentials;

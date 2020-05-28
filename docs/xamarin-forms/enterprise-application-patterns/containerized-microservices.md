@@ -1,18 +1,21 @@
 ---
-title: Microsserviços em contêineres
-description: Este capítulo explica como usar os microserviços e contêineres para criar aplicativos de nuvem modernos ágeis, escalonáveis e confiáveis.
-ms.prod: xamarin
-ms.assetid: 5872ad92-04e0-4f1a-9691-79d5602f5683
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 08/07/2017
-ms.openlocfilehash: dc71da512519cdd7fcc56df1ff987ffbc1354663
-ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+title: ''
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: a05090c18039f9d3a7f9376285ce2863e0482903
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79305188"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84139250"
 ---
 # <a name="containerized-microservices"></a>Microsserviços em contêineres
 
@@ -56,9 +59,9 @@ No entanto, uma solução baseada em microatendimento também tem possíveis des
 - Em produção, há uma complexidade operacional na implantação e gerenciamento de um sistema comprometido de muitos serviços independentes.
 - A comunicação direta entre o cliente e o microserviço pode dificultar a refatoração dos contratos de microserviços. Por exemplo, ao longo do tempo como o sistema é particionado em serviços talvez precisem ser alterados. Um único serviço pode ser dividido em dois ou mais serviços, e dois serviços podem ser mesclados. Quando os clientes se comunicam diretamente com os microserviços, esse trabalho de refatoração pode interromper a compatibilidade com os aplicativos cliente.
 
-## <a name="containerization"></a>Conteinerização
+## <a name="containerization"></a>Transporte em contêineres
 
-A Containerização é uma abordagem para o desenvolvimento de software no qual um aplicativo e seu conjunto de dependências com controle de versão, além de sua configuração de ambiente abstraido como arquivos de manifesto de implantação, são empacotados como uma imagem de contêiner, testado como uma unidade e implantado em um sistema operacional do host.
+A Containerização é uma abordagem para o desenvolvimento de software no qual um aplicativo e seu conjunto de dependências com controle de versão, além de sua configuração de ambiente abstraido como arquivos de manifesto de implantação, são empacotados como uma imagem de contêiner, testado como uma unidade e implantados em um sistema operacional do host.
 
 Um contêiner é um ambiente operacional isolado, controlado por recursos e portátil, onde um aplicativo pode ser executado sem tocar nos recursos de outros contêineres ou no host. Portanto, um contêiner parece e age como um computador físico ou uma máquina virtual recentemente instalada.
 
@@ -146,11 +149,11 @@ Para obter informações sobre a implementação do barramento de evento, consul
 
 ## <a name="summary"></a>Resumo
 
-Os microserviços oferecem uma abordagem ao desenvolvimento e à implantação de aplicativos adequados para os requisitos de agilidade, escala e confiabilidade dos aplicativos de nuvem modernos. Uma das principais vantagens dos microserviços é que eles podem ser expandidos de forma independente, o que significa que uma área funcional específica pode ser dimensionada para exigir mais capacidade de processamento ou largura de banda de rede para dar suporte à demanda, sem áreas de dimensionamento desnecessariamente de o aplicativo que não está sofrendo maior demanda.
+Os microserviços oferecem uma abordagem ao desenvolvimento e à implantação de aplicativos adequados para os requisitos de agilidade, escala e confiabilidade dos aplicativos de nuvem modernos. Uma das principais vantagens dos microserviços é que eles podem ser expandidos de forma independente, o que significa que uma área funcional específica pode ser dimensionada para exigir mais capacidade de processamento ou largura de banda de rede para dar suporte à demanda, sem áreas de dimensionamento desnecessariamente do aplicativo que não estão sofrendo maior demanda.
 
 Um contêiner é um ambiente operacional isolado, controlado por recursos e portátil, onde um aplicativo pode ser executado sem tocar nos recursos de outros contêineres ou no host. As empresas estão cada vez mais adotando contêineres ao implementar aplicativos baseados em microserviço, e o Docker se tornou a implementação de contêiner padrão que foi adotada pela maioria das plataformas de software e fornecedores de nuvem.
 
-## <a name="related-links"></a>Links Relacionados
+## <a name="related-links"></a>Links relacionados
 
 - [Download do eBook (PDF de 2Mb)](https://aka.ms/xamarinpatternsebook)
 - [eShopOnContainers (GitHub) (exemplo)](https://github.com/dotnet-architecture/eShopOnContainers)

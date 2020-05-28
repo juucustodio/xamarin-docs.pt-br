@@ -1,33 +1,36 @@
 ---
-title: Integração com Xamarin.Forms
-description: Este artigo explica como criar gráficos de SkiaSharp que respondem ao toque e elementos de xamarin. Forms e demonstra isso com o código de exemplo.
-ms.prod: xamarin
-ms.technology: xamarin-skiasharp
-ms.assetid: 288224F1-7AEE-4148-A88D-A70C03F83D7A
-author: davidbritch
-ms.author: dabritch
-ms.date: 02/09/2017
-ms.openlocfilehash: 33ed7f3477f44662f3392d2125b61818b3ed885f
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+title: Integração com oXamarin.Forms
+description: Este artigo explica como criar gráficos SkiaSharp que respondem ao toque e aos Xamarin.Forms elementos e demonstra isso com o código de exemplo.
+ms.prod: ''
+ms.technology: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 9e763184f38719cda4526eb0a2dfdf39b2191a03
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70759443"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84137690"
 ---
-# <a name="integrating-with-xamarinforms"></a>Integração com Xamarin.Forms
+# <a name="integrating-with-xamarinforms"></a>Integração com oXamarin.Forms
 
-[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
-_Criar gráficos de SkiaSharp que respondem ao toque e elementos de xamarin. Forms_
+_Criar elementos gráficos do SkiaSharp que respondem ao toque e aos Xamarin.Forms elementos_
 
-Gráficos de SkiaSharp podem integrar com o restante do xamarin. Forms de várias maneiras. Você pode combinar uma tela de SkiaSharp e xamarin. Forms elementos na mesma página e até mesmo posicionar os elementos xamarin. Forms na parte superior de uma tela de SkiaSharp:
+Os gráficos do SkiaSharp podem se integrar com o restante de Xamarin.Forms várias maneiras. Você pode combinar uma tela de SkiaSharp e Xamarin.Forms elementos na mesma página e até mesmo posicionar Xamarin.Forms elementos sobre uma tela SkiaSharp:
 
-![](integration-images/integrationexample.png "Selecionar uma cor com os controles deslizantes")
+![](integration-images/integrationexample.png "Selecting a color with sliders")
 
-Outra abordagem para criar gráficos interativos de SkiaSharp em xamarin. Forms é por meio de toque.
-A segunda página do [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) programa é intitulado **toque em Ativar/desativar preencher**. Desenha um círculo simples de duas maneiras &mdash; sem um preenchimento e com um preenchimento &mdash; alternada por um toque. O [ `TapToggleFillPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/TapToggleFillPage.xaml.cs) classe mostra como você pode alterar os gráficos de SkiaSharp em resposta à entrada do usuário.
+Outra abordagem para criar gráficos interativos do SkiaSharp no Xamarin.Forms é por toque.
+A segunda página do programa [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) tem o direito de **tocar em Alternar Preenchimento**. Ele desenha um círculo simples de duas maneiras &mdash; sem um preenchimento e com um preenchimento &mdash; alternado por um toque. A [`TapToggleFillPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/TapToggleFillPage.xaml.cs) classe mostra como você pode alterar os elementos gráficos do SkiaSharp em resposta à entrada do usuário.
 
-Para esta página, o `SKCanvasView` classe é instanciada na [TapToggleFill.xaml](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/TapToggleFillPage.xaml) arquivo, que também define um xamarin. Forms [ `TapGestureRecognizer` ](xref:Xamarin.Forms.TapGestureRecognizer) no modo de exibição:
+Para essa página, a `SKCanvasView` classe é instanciada no arquivo [TapToggleFill. XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/TapToggleFillPage.xaml) , que também define um Xamarin.Forms [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer) na exibição:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -44,9 +47,9 @@ Para esta página, o `SKCanvasView` classe é instanciada na [TapToggleFill.xaml
 </ContentPage>
 ```
 
-Observe que o `skia` declaração de namespace XML.
+Observe a `skia` declaração de namespace XML.
 
-O `Tapped` manipulador para o `TapGestureRecognizer` objeto simplesmente alterna o valor de um campo booliano e chama o [ `InvalidateSurface` ](xref:SkiaSharp.Views.Forms.SKCanvasView.InvalidateSurface) método de `SKCanvasView`:
+O `Tapped` manipulador para o `TapGestureRecognizer` objeto simplesmente alterna o valor de um campo booliano e chama o [`InvalidateSurface`](xref:SkiaSharp.Views.Forms.SKCanvasView.InvalidateSurface) método de `SKCanvasView` :
 
 ```csharp
 bool showFill = true;
@@ -58,7 +61,7 @@ void OnCanvasViewTapped(object sender, EventArgs args)
 }
 ```
 
-A chamada para `InvalidateSurface` efetivamente gera uma chamada para o `PaintSurface` manipulador, que usa o `showFill` campo para preencher ou não, preencha o círculo:
+A chamada para `InvalidateSurface` gera efetivamente uma chamada para o `PaintSurface` manipulador, que usa o `showFill` campo para preencher ou não preencher o círculo:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -86,23 +89,23 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-O `StrokeWidth` propriedade foi definida como 50 para destacar a diferença. Você também pode ver a largura da linha inteira desenhando o interior primeiro e, em seguida, a estrutura de tópicos. Por padrão, os gráficos figuras que são desenhadas posteriormente no `PaintSurface` manipulador de eventos obscurecer os desenhados anteriormente no manipulador.
+A `StrokeWidth` propriedade foi definida como 50 para acentuar a diferença. Você também pode ver a largura da linha inteira desenhando o interior primeiro e, em seguida, o contorno. Por padrão, as figuras gráficas desenhadas posteriormente no `PaintSurface` manipulador de eventos obscurecem aquelas desenhadas anteriormente no manipulador.
 
-O **cor explorar** página demonstra como você pode também integrar SkiaSharp gráficos com outros elementos de xamarin. Forms e também demonstra a diferença entre os dois métodos alternativos de definição de cores em SkiaSharp. Estático [ `SKColor.FromHsl` ](xref:SkiaSharp.SKColor.FromHsl(System.Single,System.Single,System.Single,System.Byte)) método cria um `SKColor` valor com base no modelo de matiz-saturação-luminosidade:
+A página de **exploração de cores** demonstra como você também pode integrar gráficos SkiaSharp com outros Xamarin.Forms elementos e também demonstra a diferença entre dois métodos alternativos para definir cores em SkiaSharp. O [`SKColor.FromHsl`](xref:SkiaSharp.SKColor.FromHsl(System.Single,System.Single,System.Single,System.Byte)) método estático cria um `SKColor` valor baseado no modelo matiz-saturação-luminosidade:
 
 ```csharp
 public static SKColor FromHsl (Single h, Single s, Single l, Byte a)
 ```
 
-Estático [ `SKColor.FromHsv` ](xref:SkiaSharp.SKColor.FromHsv(System.Single,System.Single,System.Single,System.Byte)) método cria um `SKColor` valor com base no modelo de valor de matiz-saturação semelhante:
+O [`SKColor.FromHsv`](xref:SkiaSharp.SKColor.FromHsv(System.Single,System.Single,System.Single,System.Byte)) método estático cria um `SKColor` valor baseado no modelo de valor matiz-saturação-Value semelhante:
 
 ```csharp
 public static SKColor FromHsv (Single h, Single s, Single v, Byte a)
 ```
 
-Em ambos os casos, o `h` varia de argumento de 0 a 360. O `s`, `l`, e `v` argumentos variam de 0 a 100. O `a` (alfa ou opacidade) varia argumento de 0 a 255.
+Em ambos os casos, o `h` argumento varia de 0 a 360. Os `s` `l` argumentos, e `v` variam de 0 a 100. O `a` argumento (alfa ou Opacity) varia de 0 a 255.
 
-O [ **ColorExplorePage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/ColorExplorePage.xaml) arquivo cria dois `SKCanvasView` objetos em um `StackLayout` lado a lado com `Slider` e `Label` exibições que permitem que o usuário selecione HSL e HSV valores de cor:
+O arquivo [**ColorExplorePage. XAML**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/ColorExplorePage.xaml) cria dois `SKCanvasView` objetos lado a `StackLayout` lado com `Slider` e `Label` exibições que permitem ao usuário selecionar os valores de cor HSL e HSV:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -182,9 +185,9 @@ O [ **ColorExplorePage.xaml** ](https://github.com/xamarin/xamarin-forms-samples
 </ContentPage>
 ```
 
-Os dois `SKCanvasView` elementos estão em uma única célula `Grid` com um `Label` posicionados na parte superior para exibir o valor de cor RGB resultante.
+Os dois `SKCanvasView` elementos estão em uma única célula `Grid` com um `Label` na parte superior para exibir o valor de cor RGB resultante.
 
-O [ **ColorExplorePage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/ColorExplorePage.xaml.cs) arquivo code-behind é relativamente simple. Compartilhado `ValueChanged` manipulador para os três `Slider` elementos invalida apenas os dois `SKCanvasView` elementos. O `PaintSurface` manipuladores de limpar a tela com a cor indicada pela `Slider` elementos e também definir o `Label` sentado na parte superior do `SKCanvasView` elementos:
+O arquivo code-behind [**ColorExplorePage.XAML.cs**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/ColorExplorePage.xaml.cs) é relativamente simples. O `ValueChanged` manipulador compartilhado para os três `Slider` elementos simplesmente invalida ambos os `SKCanvasView` elementos. Os `PaintSurface` manipuladores desmarcam a tela com a cor indicada pelos `Slider` elementos e também definem a `Label` parte superior dos `SKCanvasView` elementos:
 
 ```csharp
 public partial class ColorExplorePage : ContentPage
@@ -229,17 +232,17 @@ public partial class ColorExplorePage : ContentPage
 }
 ```
 
-Em modelos de cor HSL tanto o HSV, o valor de matiz varia de 0 a 360 e indica o dominante matiz da cor. Essas são as cores tradicionais do arco-íris: vermelho, laranja, amarelo, verde, azul, indigo, violeta e novamente em um círculo para vermelho.
+Nos modelos de cor HSL e HSV, o valor de matiz varia de 0 a 360 e indica o matiz dominante da cor. Essas são as cores tradicionais do arco-íris: vermelho, laranja, amarelo, verde, azul, Indigo, violeta e de volta em um círculo para vermelho.
 
-No modelo de HSL, um valor 0 para luminosidade sempre é preto e um valor de 100 sempre é branco. Quando o valor de saturação é 0, os valores de luminosidade entre 0 e 100 são tons de cinza. Aumentando a saturação adiciona mais cores. Cores puras (que são valores RGB com um componente igual a 255, outro igual a 0 e o terceiro que varia de 0 a 255) ocorrem quando a saturação é 100 e a luminosidade é 50.
+No modelo HSL, um valor 0 para luminosidade é sempre preto e um valor 100 é sempre branco. Quando o valor de saturação é 0, os valores de luminosidade entre 0 e 100 são tons de cinza. Aumentar a saturação aumenta a cor. As cores puras (que são valores RGB com um componente igual a 255, outra igual a 0 e a terceira varia de 0 a 255) ocorrem quando a saturação é 100 e a claridade é 50.
 
-No modelo HSV, cores puras resultam quando a saturação e o valor 100. Quando o valor é 0, independentemente de outras configurações, a cor é preta. Tons de cinza ocorrem quando a saturação é 0 e o valor varia de 0 a 100.
+No modelo HSV, as cores puras resultam quando a saturação e o valor são 100. Quando o valor for 0, independentemente de qualquer outra configuração, a cor será preta. As tonalidades cinzas ocorrem quando a saturação é 0 e o valor varia de 0 a 100.
 
-Mas a melhor maneira de ter uma noção do que os dois modelos de experimentá-los por conta própria:
+Mas a melhor maneira de ter uma ideia para os dois modelos é experimentá-los por conta própria:
 
-[![](integration-images/colorexplore-large.png "Tripla captura de tela da página cor Explore")](integration-images/colorexplore-small.png#lightbox "tripla captura de tela da página explorar de cor")
+[![](integration-images/colorexplore-large.png "Triple screenshot of the Color Explore page")](integration-images/colorexplore-small.png#lightbox "Triple screenshot of the Color Explore page")
 
 ## <a name="related-links"></a>Links relacionados
 
-- [APIs de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [APIs do SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

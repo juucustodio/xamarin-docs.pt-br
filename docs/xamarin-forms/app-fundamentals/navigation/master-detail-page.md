@@ -1,24 +1,27 @@
 ---
-title: Página Mestre/Detalhes do Xamarin.Forms
-description: A MasterDetailPage do Xamarin.Forms é uma página que gerencia duas páginas relacionadas de informações – uma página mestra que apresenta itens e uma página de detalhes que apresenta detalhes sobre os itens na página mestra. Este artigo explica como usar uma MasterDetailPage e navegar entre suas páginas de informações.
-ms.prod: xamarin
-ms.assetid: 119945E3-58B8-4630-A3D2-8B561529D53B
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 12/01/2017
-ms.openlocfilehash: 702ec35bca051f7255c5c9d67d2dc68d4f89ca52
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: Xamarin.FormsPágina mestre-detalhes
+description: O Xamarin.Forms MasterDetailPage é uma página que gerencia duas páginas de informações relacionadas – uma página mestra que apresenta itens e uma página de detalhes que apresenta detalhes sobre os itens na página mestra. Este artigo explica como usar uma MasterDetailPage e navegar entre suas páginas de informações.
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 89b1dedcb6219a32332641550018405abd4b6870
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "68645953"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84137807"
 ---
-# <a name="xamarinforms-master-detail-page"></a>Página Mestre/Detalhes do Xamarin.Forms
+# <a name="xamarinforms-master-detail-page"></a>Xamarin.FormsPágina mestre-detalhes
 
-[![Baixar](~/media/shared/download.png) amostra Baixar a amostra](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-masterdetailpage)
+[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-masterdetailpage)
 
-_O Xamarin.Forms MasterDetailPage é uma página que gerencia duas páginas de informações relacionadas – uma página-mestre que apresenta itens e uma página de detalhes que apresenta detalhes sobre itens na página-mestre. Este artigo explica como usar um MasterDetailPage e navegar entre suas páginas de informações._
+_O Xamarin.Forms MasterDetailPage é uma página que gerencia duas páginas de informações relacionadas – uma página mestra que apresenta itens e uma página de detalhes que apresenta detalhes sobre os itens na página mestra. Este artigo explica como usar um MasterDetailPage e navegar entre suas páginas de informações._
 
 ## <a name="overview"></a>Visão geral
 
@@ -38,7 +41,7 @@ Uma página de detalhes exibe dados correspondentes ao item selecionado na pági
 
 A página de detalhes contém uma barra de navegação, cujo conteúdo dependem da plataforma:
 
-- No iOS, a barra de navegação está presente no topo da página e exibe um título, e tem um botão [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) que retorna à página-mestre, desde que a instância da página de detalhes esteja embrulhada na instância. Além disso, é possível retornar à página mestra passando o dedo na página de detalhes para a direita.
+- No iOS, a barra de navegação está presente na parte superior da página e exibe um título e tem um botão que retorna à página mestra, desde que a instância da página de detalhes seja encapsulada na [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) instância. Além disso, é possível retornar à página mestra passando o dedo na página de detalhes para a direita.
 - No Android, uma barra de navegação está presente na parte superior da página e exibe um título, um ícone e um botão que retorna à página mestra. O ícone é definido no atributo `[Activity]` que decora a classe `MainActivity` no projeto específico da plataforma Android.
 - Na UWP, uma barra de navegação está presente na parte superior da página e exibe um título e tem botão que retorna à página mestra.
 
@@ -48,7 +51,7 @@ O comportamento da experiência de navegação entre páginas mestras e de detal
 
 - No iOS, a página de detalhes *desliza* para a direita enquanto a página mestra desliza para a esquerda e a parte esquerda da página de detalhes ainda está visível.
 - No Android, as páginas mestras e de detalhes são *sobrepostas* umas às outras.
-- No UWP, a página-mestre desliza da parte esquerda sobre parte [`MasterBehavior`](xref:Xamarin.Forms.MasterDetailPage.MasterBehavior) da página `Popover`de detalhes, desde que a propriedade esteja definida como . Para obter mais informações, confira [Controlando o comportamento de exibição da página de detalhes](#Controlling_the_Detail_Page_Display_Behavior).
+- No UWP, a página mestra desliza da esquerda sobre parte da página de detalhes, desde que a [`MasterBehavior`](xref:Xamarin.Forms.MasterDetailPage.MasterBehavior) Propriedade esteja definida como `Popover` . Para obter mais informações, confira [Controlando o comportamento de exibição da página de detalhes](#Controlling_the_Detail_Page_Display_Behavior).
 
 Um comportamento semelhante será observado no modo paisagem, exceto que a página mestra no iOS e no Android tem uma largura semelhante à da página mestra no modo retrato; portanto, mais coisas da página de detalhes ficarão visíveis.
 
@@ -56,12 +59,12 @@ Para saber como controlar o comportamento de navegação, confira [Controlling t
 
 ## <a name="creating-a-masterdetailpage"></a>Criando um MasterDetailPage
 
-A [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) [`Master`](xref:Xamarin.Forms.MasterDetailPage.Master) contém [`Detail`](xref:Xamarin.Forms.MasterDetailPage.Detail) e propriedades que [`Page`](xref:Xamarin.Forms.Page)são ambas de tipo, que são usadas para obter e definir as páginas mestre e de detalhes, respectivamente.
+Um [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) Contains [`Master`](xref:Xamarin.Forms.MasterDetailPage.Master) e [`Detail`](xref:Xamarin.Forms.MasterDetailPage.Detail) Propriedades que são do tipo [`Page`](xref:Xamarin.Forms.Page) , que são usadas para obter e definir as páginas mestras e de detalhes respectivamente.
 
 > [!IMPORTANT]
-> A [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) foi projetado para ser uma página raiz, e usá-la como uma página infantil em outros tipos de página pode resultar em comportamento inesperado e inconsistente. Além disso, recomenda-se que a página [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) mestra [`ContentPage`](xref:Xamarin.Forms.ContentPage) de a deve ser sempre uma instância, [`NavigationPage`](xref:Xamarin.Forms.NavigationPage)e `ContentPage` que a página de detalhes só deve ser preenchida com [`TabbedPage`](xref:Xamarin.Forms.TabbedPage), e instâncias. Isso ajudará a garantir uma experiência do usuário consistente em todas as plataformas.
+> Um [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) é projetado para ser uma página raiz e usá-lo como uma página filho em outros tipos de página pode resultar em comportamento inesperado e inconsistente. Além disso, é recomendável que a página mestra de a [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) sempre seja uma [`ContentPage`](xref:Xamarin.Forms.ContentPage) instância e que a página de detalhes só deva ser populada [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) com [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) instâncias, e `ContentPage` . Isso ajudará a garantir uma experiência do usuário consistente em todas as plataformas.
 
-O exemplo de código XAML a seguir mostra um [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) que define as [`Master`](xref:Xamarin.Forms.MasterDetailPage.Master) propriedades: [`Detail`](xref:Xamarin.Forms.MasterDetailPage.Detail)
+O exemplo de código XAML a seguir mostra um [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) que define as [`Master`](xref:Xamarin.Forms.MasterDetailPage.Master) [`Detail`](xref:Xamarin.Forms.MasterDetailPage.Detail) Propriedades e:
 
 ```xaml
 <MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -81,7 +84,7 @@ O exemplo de código XAML a seguir mostra um [`MasterDetailPage`](xref:Xamarin.F
 </MasterDetailPage>
 ```
 
-O exemplo de código [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) a seguir mostra o equivalente criado em C#:
+O exemplo de código a seguir mostra o equivalente [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) criado em C#:
 
 ```csharp
 public class MainPageCS : MasterDetailPage
@@ -99,11 +102,11 @@ public class MainPageCS : MasterDetailPage
 }
 ```
 
-A [`MasterDetailPage.Master`](xref:Xamarin.Forms.MasterDetailPage.Master) propriedade está [`ContentPage`](xref:Xamarin.Forms.ContentPage) definida como uma instância. A [`MasterDetailPage.Detail`](xref:Xamarin.Forms.MasterDetailPage.Detail) propriedade é [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) definida como `ContentPage` uma instância contendo.
+A [`MasterDetailPage.Master`](xref:Xamarin.Forms.MasterDetailPage.Master) propriedade é definida como uma [`ContentPage`](xref:Xamarin.Forms.ContentPage) instância. A [`MasterDetailPage.Detail`](xref:Xamarin.Forms.MasterDetailPage.Detail) propriedade é definida como um [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) que contém uma `ContentPage` instância.
 
 ### <a name="creating-the-master-page"></a>Criando a página mestra
 
-O exemplo de código XAML `MasterPage` a seguir mostra a [`MasterDetailPage.Master`](xref:Xamarin.Forms.MasterDetailPage.Master) declaração do objeto, que é referenciada através da propriedade:
+O exemplo de código XAML a seguir mostra a declaração do `MasterPage` objeto, que é referenciada por meio da [`MasterDetailPage.Master`](xref:Xamarin.Forms.MasterDetailPage.Master) Propriedade:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -141,14 +144,14 @@ O exemplo de código XAML `MasterPage` a seguir mostra a [`MasterDetailPage.Mast
 </ContentPage>
 ```
 
-A página consiste [`ListView`](xref:Xamarin.Forms.ListView) em uma que é preenchida com dados [`ItemsSource`](xref:Xamarin.Forms.ItemsView`1.ItemsSource) em XAML, definindo sua propriedade para uma matriz de `MasterPageItem` instâncias. Cada `MasterPageItem` define propriedades `Title`, `IconSource` e `TargetType`.
+A página consiste em uma [`ListView`](xref:Xamarin.Forms.ListView) que é preenchida com dados em XAML, definindo sua [`ItemsSource`](xref:Xamarin.Forms.ItemsView`1.ItemsSource) propriedade como uma matriz de `MasterPageItem` instâncias. Cada `MasterPageItem` define propriedades `Title`, `IconSource` e `TargetType`.
 
-A [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) é atribuído [`ListView.ItemTemplate`](xref:Xamarin.Forms.ItemsView`1.ItemTemplate) à propriedade, `MasterPageItem`para exibir cada um . O `DataTemplate` contém [`ViewCell`](xref:Xamarin.Forms.ViewCell) um que [`Image`](xref:Xamarin.Forms.Image) consiste [`Label`](xref:Xamarin.Forms.Label)em um e um . O [`Image`](xref:Xamarin.Forms.Image) exibe `IconSource` o valor [`Label`](xref:Xamarin.Forms.Label) da `Title` propriedade, e `MasterPageItem`o exibe o valor da propriedade, para cada um .
+Um [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) é atribuído à [`ListView.ItemTemplate`](xref:Xamarin.Forms.ItemsView`1.ItemTemplate) propriedade, para exibir cada `MasterPageItem` . O `DataTemplate` contém um [`ViewCell`](xref:Xamarin.Forms.ViewCell) que consiste em um [`Image`](xref:Xamarin.Forms.Image) e um [`Label`](xref:Xamarin.Forms.Label) . O [`Image`](xref:Xamarin.Forms.Image) exibe o `IconSource` valor da propriedade e [`Label`](xref:Xamarin.Forms.Label) exibe o `Title` valor da propriedade para cada um `MasterPageItem` .
 
-A página [`Title`](xref:Xamarin.Forms.Page.Title) tem [`IconImageSource`](xref:Xamarin.Forms.Page.IconImageSource) suas propriedades definidas. O ícone será exibido na página de detalhes, desde que ela tenha uma barra de título. Isso deve ser ativado no iOS, envolvendo [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) a instância da página de detalhes em uma instância.
+A página tem suas [`Title`](xref:Xamarin.Forms.Page.Title) [`IconImageSource`](xref:Xamarin.Forms.Page.IconImageSource) Propriedades e definidas. O ícone será exibido na página de detalhes, desde que ela tenha uma barra de título. Isso deve ser habilitado no iOS encapsulando a instância da página de detalhes em uma [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) instância.
 
 > [!NOTE]
-> A [`MasterDetailPage.Master`](xref:Xamarin.Forms.MasterDetailPage.Master) página deve [`Title`](xref:Xamarin.Forms.Page.Title) ter sua propriedade definida, ou uma exceção ocorrerá.
+> A [`MasterDetailPage.Master`](xref:Xamarin.Forms.MasterDetailPage.Master) página deve ter sua [`Title`](xref:Xamarin.Forms.Page.Title) propriedade definida ou ocorrerá uma exceção.
 
 O exemplo de código a seguir mostra a página equivalente criada em C#:
 
@@ -214,7 +217,7 @@ As capturas de tela a seguir mostram a página mestra em cada plataforma:
 
 ### <a name="creating-and-displaying-the-detail-page"></a>Criação e exibição da página de detalhes
 
-A `MasterPage` instância `ListView` contém uma propriedade [`ListView`](xref:Xamarin.Forms.ListView) que expõe `MainPage` [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) sua instância para que a [`ItemSelected`](xref:Xamarin.Forms.ListView.ItemSelected) instância possa registrar um manipulador de eventos para lidar com o evento. Isso permite `MainPage` que a [`Detail`](xref:Xamarin.Forms.MasterDetailPage.Detail) instância defina a propriedade `ListView` na página que representa o item selecionado. O exemplo de código a seguir mostra o manipulador de eventos:
+A `MasterPage` instância contém uma `ListView` propriedade que expõe sua [`ListView`](xref:Xamarin.Forms.ListView) instância para que a `MainPage` [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) instância possa registrar um manipulador de eventos para manipular o [`ItemSelected`](xref:Xamarin.Forms.ListView.ItemSelected) evento. Isso permite que a `MainPage` instância defina a [`Detail`](xref:Xamarin.Forms.MasterDetailPage.Detail) propriedade para a página que representa o `ListView` item selecionado. O exemplo de código a seguir mostra o manipulador de eventos:
 
 ```csharp
 public partial class MainPage : MasterDetailPage
@@ -239,9 +242,9 @@ public partial class MainPage : MasterDetailPage
 
 O método `OnItemSelected` executa as seguintes ações:
 
-- Ele recupera [`SelectedItem`](xref:Xamarin.Forms.ListView.SelectedItem) a [`ListView`](xref:Xamarin.Forms.ListView) ocorrência e, desde que não `null`seja, define a página de detalhes para `TargetType` uma `MasterPageItem`nova instância do tipo de página armazenado na propriedade do . O tipo de página [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) é embrulhado em uma instância [`IconImageSource`](xref:Xamarin.Forms.Page.IconImageSource) para `MasterPage` garantir que o ícone referenciado através da propriedade no é mostrado na página de detalhes no iOS.
-- O item selecionado [`ListView`](xref:Xamarin.Forms.ListView) no `null` é definido para `ListView` garantir que nenhum dos itens `MasterPage` será selecionado na próxima vez que o for apresentado.
-- A página de detalhes é [`MasterDetailPage.IsPresented`](xref:Xamarin.Forms.MasterDetailPage.IsPresented) apresentada `false`ao usuário definindo a propriedade para . Esta propriedade controla se a página mestra ou de detalhes é apresentada. Ela deve ser definida como `true` para exibir a página mestra e como `false` para exibir a página de detalhes.
+- Ele recupera o [`SelectedItem`](xref:Xamarin.Forms.ListView.SelectedItem) da [`ListView`](xref:Xamarin.Forms.ListView) instância do e, desde que não esteja `null` , define a página de detalhes como uma nova instância do tipo de página armazenada na `TargetType` Propriedade do `MasterPageItem` . O tipo de página é encapsulado em uma [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) instância para garantir que o ícone referenciado por meio da [`IconImageSource`](xref:Xamarin.Forms.Page.IconImageSource) propriedade no `MasterPage` é mostrado na página de detalhes no Ios.
+- O item selecionado no [`ListView`](xref:Xamarin.Forms.ListView) é definido como `null` para garantir que nenhum dos itens seja `ListView` selecionado na próxima vez em que `MasterPage` for apresentado.
+- A página de detalhes é apresentada ao usuário definindo a [`MasterDetailPage.IsPresented`](xref:Xamarin.Forms.MasterDetailPage.IsPresented) propriedade como `false` . Esta propriedade controla se a página mestra ou de detalhes é apresentada. Ela deve ser definida como `true` para exibir a página mestra e como `false` para exibir a página de detalhes.
 
 As capturas de tela a seguir mostram a página de detalhes `ContactPage`, mostrada depois que ela for selecionada na página mestra:
 
@@ -251,7 +254,7 @@ As capturas de tela a seguir mostram a página de detalhes `ContactPage`, mostra
 
 ### <a name="controlling-the-detail-page-display-behavior"></a>Controle do comportamento de exibição da página de detalhes
 
-Como [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) o gerencia as páginas mestre e de detalhes depende se o aplicativo está sendo executado em [`MasterBehavior`](xref:Xamarin.Forms.MasterDetailPage.MasterBehavior) um telefone ou tablet, a orientação do dispositivo e o valor do imóvel. Essa propriedade determina como a página de detalhes será exibida. Os valores possíveis são:
+Como o [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) gerencia as páginas mestras e de detalhes depende se o aplicativo está sendo executado em um telefone ou Tablet, a orientação do dispositivo e o valor da [`MasterBehavior`](xref:Xamarin.Forms.MasterDetailPage.MasterBehavior) propriedade. Essa propriedade determina como a página de detalhes será exibida. Os valores possíveis são:
 
 - **Default** – as páginas são exibidas usando o padrão da plataforma.
 - **Popover** – a página de detalhes cobre ou cobre parcialmente a página mestra.
@@ -259,7 +262,7 @@ Como [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) o gerencia as pá
 - **SplitOnLandscape** – Uma tela dividida é usada quando o dispositivo está na orientação paisagem.
 - **SplitOnPortrait** – Uma tela dividida é usada quando o dispositivo está na orientação retrato.
 
-O exemplo de código XAML [`MasterBehavior`](xref:Xamarin.Forms.MasterDetailPage.MasterBehavior) a seguir [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage)demonstra como definir a propriedade em um:
+O exemplo de código XAML a seguir demonstra como definir a [`MasterBehavior`](xref:Xamarin.Forms.MasterDetailPage.MasterBehavior) propriedade em um [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) :
 
 ```xaml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -271,7 +274,7 @@ O exemplo de código XAML [`MasterBehavior`](xref:Xamarin.Forms.MasterDetailPage
 </MasterDetailPage>
 ```
 
-O exemplo de código [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) a seguir mostra o equivalente criado em C#:
+O exemplo de código a seguir mostra o equivalente [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) criado em C#:
 
 ```csharp
 public class MainPageCS : MasterDetailPage
@@ -286,11 +289,11 @@ public class MainPageCS : MasterDetailPage
 }
 ```
 
-No entanto, [`MasterBehavior`](xref:Xamarin.Forms.MasterDetailPage.MasterBehavior) o valor da propriedade afeta apenas aplicativos em execução em tablets ou na área de trabalho. Aplicativos em execução nos telefones sempre têm o comportamento *Popover*.
+No entanto, o valor da [`MasterBehavior`](xref:Xamarin.Forms.MasterDetailPage.MasterBehavior) propriedade afeta apenas os aplicativos em execução nos tablets ou na área de trabalho. Aplicativos em execução nos telefones sempre têm o comportamento *Popover*.
 
 ## <a name="summary"></a>Resumo
 
-Este artigo demonstrou como [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) usar um e navegar entre suas páginas de informações. O `MasterDetailPage` do Xamarin.Forms é uma página que gerencia duas páginas de informações relacionadas – uma página mestra que apresenta itens e uma página de detalhes que apresenta detalhes sobre os itens na página mestra.
+Este artigo demonstrou como usar um [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) e navegar entre suas páginas de informações. O Xamarin.Forms `MasterDetailPage` é uma página que gerencia duas páginas de informações relacionadas – uma página mestra que apresenta itens e uma página de detalhes que apresenta detalhes sobre os itens na página mestra.
 
 ## <a name="related-links"></a>Links relacionados
 

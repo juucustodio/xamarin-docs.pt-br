@@ -1,24 +1,27 @@
 ---
-title: Navegação do Shell do Xamarin.Forms
-description: Os aplicativos do Shell do Xamarin.Forms podem usar uma experiência baseada em URI que permite a navegação para qualquer página no aplicativo, sem precisar seguir uma hierarquia definida.
-ms.prod: xamarin
-ms.assetid: 57079D89-D1CB-48BD-9FEE-539CEC29EABB
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 04/02/2020
-ms.openlocfilehash: a40a2dc01c37773539089287d561f4c52ef7f6de
-ms.sourcegitcommit: 8d13d2262d02468c99c4e18207d50cd82275d233
+title: Xamarin.FormsNavegação do Shell
+description: Xamarin.FormsOs aplicativos de shell podem utilizar uma experiência de navegação baseada em URI que permite a navegação para qualquer página no aplicativo, sem a necessidade de seguir uma hierarquia de navegação de conjunto.
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: e67d49f300a8a98ec5685c33abf98f5b2ded08ed
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82516524"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84132386"
 ---
-# <a name="xamarinforms-shell-navigation"></a>Navegação do Shell do Xamarin.Forms
+# <a name="xamarinforms-shell-navigation"></a>Xamarin.FormsNavegação do Shell
 
-[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
+[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 
-O Shell do Xamarin.Forms inclui uma experiência de navegação baseada em URI que usa rotas para qualquer página no aplicativo sem precisar seguir uma hierarquia definida. Além disso, eles também oferecem a capacidade de navegar para trás, sem precisar visitar todas as páginas na pilha de navegação.
+Xamarin.FormsO Shell inclui uma experiência de navegação baseada em URI que usa rotas para navegar para qualquer página no aplicativo, sem precisar seguir uma hierarquia de navegação de conjunto. Além disso, eles também oferecem a capacidade de navegar para trás, sem precisar visitar todas as páginas na pilha de navegação.
 
 `Shell` define as seguintes propriedades relacionadas à navegação:
 
@@ -27,12 +30,12 @@ O Shell do Xamarin.Forms inclui uma experiência de navegação baseada em URI q
 - `CurrentState`, do tipo `ShellNavigationState`, o estado de navegação atual do `Shell`.
 - `Current`, do tipo `Shell`, um alias convertido em tipo para `Application.Current.MainPage`.
 
-As `BackButtonBehavior`propriedades `CurrentItem`,, `CurrentState` e são apoiadas por [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objetos, o que significa que essas propriedades podem ser destinos de associações de dados.
+As `BackButtonBehavior` `CurrentItem` Propriedades,, e `CurrentState` são apoiadas por [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objetos, o que significa que essas propriedades podem ser destinos de associações de dados.
 
 A navegação é executada pela invocação do método `GoToAsync`, da classe `Shell`. Quando a navegação estiver prestes a ser executada, um evento `Navigating` será acionado, e um evento `Navigated` será acionado quando a navegação for concluída.
 
 > [!NOTE]
-> A navegação ainda poderá ser realizada em um aplicativo do Shell do Xamarin.Forms usando a propriedade [Navigation](xref:Xamarin.Forms.NavigableElement.Navigation). Saiba mais em [Navegação hierárquica](~/xamarin-forms/app-fundamentals/navigation/hierarchical.md).
+> A navegação ainda pode ser executada em um Xamarin.Forms aplicativo de shell usando a propriedade de [navegação](xref:Xamarin.Forms.NavigableElement.Navigation) . Saiba mais em [Navegação hierárquica](~/xamarin-forms/app-fundamentals/navigation/hierarchical.md).
 
 ## <a name="routes"></a>Rotas
 
@@ -241,7 +244,7 @@ A classe `Tab` define uma propriedade `Stack`, do tipo `IReadOnlyList<Page>`, qu
 
 A classe `Shell` define um evento `Navigating`, que é acionado quando a navegação está prestes a ser realizada, devido à navegação programática ou à interação do usuário. O objeto `ShellNavigatingEventArgs` que acompanha o evento `Navigating` fornece as seguintes propriedades:
 
-| Propriedade | Type | Descrição |
+| Propriedade | Tipo | Descrição |
 |---|---|---|
 | `Current` | `ShellNavigationState` | O URI da página atual. |
 | `Source` | `ShellNavigationSource` | O tipo de navegação que ocorreu. |
@@ -256,7 +259,7 @@ Além disso, a classe `ShellNavigatingEventArgs` fornece um método `Cancel` que
 
 A classe `Shell` também define um evento`Navigated`, que é acionado quando a navegação é concluída. O objeto `ShellNavigatedEventArgs` que acompanha o evento `Navigating` fornece as seguintes propriedades:
 
-| Propriedade | Type | Descrição |
+| Propriedade | Tipo | Descrição |
 |---|---|---|
 | `Current` | `ShellNavigationState` | O URI da página atual. |
 | `Previous`| `ShellNavigationState` | O URI da página anterior. |
@@ -302,9 +305,9 @@ async void OnCollectionViewSelectionChanged(object sender, SelectionChangedEvent
 }
 ```
 
-Este exemplo de código recupera o elefante selecionado no momento [`CollectionView`](xref:Xamarin.Forms.CollectionView)no e navega até a `elephantdetails` rota, passando `elephantName` como um parâmetro de consulta. Os parâmetros de consulta serão codificados em URL para navegação, portanto, "Elefante Indiano" se tornará "Elefante%20Indiano".
+Este exemplo de código recupera o elefante selecionado no momento no e [`CollectionView`](xref:Xamarin.Forms.CollectionView) navega até a `elephantdetails` rota, passando `elephantName` como um parâmetro de consulta. Os parâmetros de consulta serão codificados em URL para navegação, portanto, "Elefante Indiano" se tornará "Elefante%20Indiano".
 
-Para receber dados, a classe que representa a página que está sendo navegada, ou a classe para a página [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext), deve ser decorada com `QueryPropertyAttribute` um para cada parâmetro de consulta:
+Para receber dados, a classe que representa a página que está sendo navegada, ou a classe para a página [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) , deve ser decorada com um `QueryPropertyAttribute` para cada parâmetro de consulta:
 
 ```csharp
 [QueryProperty("Name", "name")]
@@ -321,7 +324,7 @@ public partial class ElephantDetailPage : ContentPage
 }
 ```
 
-O primeiro argumento para o `QueryPropertyAttribute` especifica o nome da propriedade que receberá os dados, com o segundo argumento especificando a ID de parâmetro de consulta. Portanto, o `QueryPropertyAttribute` no exemplo acima Especifica que a `Name` Propriedade receberá os dados passados no parâmetro de `name` consulta do URI na chamada do `GoToAsync` método. A `Name` Propriedade, então, a URL decodifica o valor do parâmetro de consulta e o usa para [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) definir a da página para o objeto que será exibido.
+O primeiro argumento para o `QueryPropertyAttribute` especifica o nome da propriedade que receberá os dados, com o segundo argumento especificando a ID de parâmetro de consulta. Portanto, o `QueryPropertyAttribute` no exemplo acima Especifica que a `Name` Propriedade receberá os dados passados no `name` parâmetro de consulta do URI na `GoToAsync` chamada do método. A `Name` propriedade, então, a URL decodifica o valor do parâmetro de consulta e o usa para definir a [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) da página para o objeto que será exibido.
 
 > [!NOTE]
 > Uma classe pode ser decorada com vários objetos `QueryPropertyAttribute`.
@@ -332,7 +335,7 @@ A classe `BackButtonBehavior` define as propriedades a seguir, que controlam a a
 
 - `Command`, do tipo `ICommand`, que é executado quando o botão Voltar é pressionado.
 - `CommandParameter`, do tipo `object`, que é o parâmetro passado para `Command`.
-- `IconOverride`, do tipo [`ImageSource`](xref:Xamarin.Forms.ImageSource), o ícone usado para o botão voltar.
+- `IconOverride`, do tipo [`ImageSource`](xref:Xamarin.Forms.ImageSource) , o ícone usado para o botão voltar.
 - `IsEnabled`, do tipo `boolean`, indica se o botão Voltar está habilitado. O valor padrão é `true`.
 - `TextOverride`, do tipo `string`, o texto usado para o botão Voltar.
 

@@ -1,48 +1,51 @@
 ---
-title: Associações compiladas do Xamarin.Forms
-description: Este artigo explica como usar associações compiladas para aprimorar o desempenho da associação de dados em aplicativos Xamarin.Forms.
-ms.prod: xamarin
-ms.assetid: ABE6B7F7-875E-4402-A1D2-845CE374402B
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 09/18/2019
-ms.openlocfilehash: 531d9719eb4bf5c23001ebe4260254e13f9989eb
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: Xamarin.FormsAssociações compiladas
+description: Este artigo explica como usar associações compiladas para melhorar o desempenho de vinculação de dados em Xamarin.Forms aplicativos.
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 1f811de95009900016bb8b442265a9a079e0f612
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "72697150"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84139731"
 ---
-# <a name="xamarinforms-compiled-bindings"></a>Associações compiladas do Xamarin.Forms
+# <a name="xamarinforms-compiled-bindings"></a>Xamarin.FormsAssociações compiladas
 
-[![Baixar](~/media/shared/download.png) amostra Baixar a amostra](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
+[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
-_Associações compiladas são resolvidas mais rapidamente do que associações clássicas, melhorando assim o desempenho da associação de dados em aplicativos do Xamarin.Forms._
+_As associações compiladas são resolvidas mais rapidamente do que as associações clássicas, portanto, melhorando o desempenho da vinculação de dados em Xamarin.Forms aplicativos._
 
 Associações de dados têm dois problemas principais:
 
 1. Não há validação em tempo de compilação para expressões de associação. Em vez disso, as associações são resolvidas em runtime. Sendo assim, associações inválidas não são detectadas até o runtime, quando o aplicativo não se comporta conforme esperado ou mensagens de erro são exibidas.
 1. Elas não são econômicas. Associações são resolvidas em runtime usando a inspeção de objeto para uso geral (reflexão), e a sobrecarga de fazer isso varia de uma plataforma para outra.
 
-Associações compiladas melhoram o desempenho de associação de dados em aplicativos do Xamarin.Forms resolvendo expressões de associação em tempo de compilação, em vez de runtime. Além disso, essa validação em tempo de compilação das expressões de associação permite uma melhor experiência de solução de problemas para o desenvolvedor porque associações inválidas são relatadas como erros de build.
+As associações compiladas melhoram o desempenho de vinculação de dados em Xamarin.Forms aplicativos resolvendo expressões de associação em tempo de compilação em vez de tempo de execução. Além disso, essa validação em tempo de compilação das expressões de associação permite uma melhor experiência de solução de problemas para o desenvolvedor porque associações inválidas são relatadas como erros de build.
 
 O processo para usar associações compiladas é:
 
 1. Habilitar a compilação de XAML. Para obter mais informações sobre a compilação de XAML, confira [Compilação de XAML](~/xamarin-forms/xaml/xamlc.md).
-1. Defina `x:DataType` um [`VisualElement`](xref:Xamarin.Forms.VisualElement) atributo em um ao `VisualElement` tipo de objeto ao que os filhos se vincularão.
+1. Defina um `x:DataType` atributo em um [`VisualElement`](xref:Xamarin.Forms.VisualElement) para o tipo do objeto ao qual o `VisualElement` e seus filhos se associarão.
 
 > [!NOTE]
-> Recomenda-se definir o `x:DataType` atributo no mesmo nível na hierarquia [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) de exibição que o conjunto. No entanto, esse atributo pode ser redefinido em qualquer local em uma hierarquia de exibição.
+> É recomendável definir o `x:DataType` atributo no mesmo nível na hierarquia de exibição que o [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) está definido. No entanto, esse atributo pode ser redefinido em qualquer local em uma hierarquia de exibição.
 
-Para usar as vinculações `x:DataType` compiladas, o atributo deve ser `x:Type` definido como um literal de seqüência ou um tipo usando a extensão de marcação. No tempo de compilação de XAML, as expressões de associação inválidas serão relatadas como erros de build. No entanto, o compilador XAML relatará um erro de build somente para a primeira expressão de associação inválida que encontrar. Quaisquer expressões de vinculação `VisualElement` válidas definidas no ou em [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) seus filhos serão compiladas, independentemente de a ser definida em XAML ou código. Compilar uma expressão de associação gera o código compilado que obterá um valor de uma propriedade na *origem* e o definirá na propriedade de *destino* especificada na marcação. Além disso, dependendo da expressão de associação, o código gerado poderá observar alterações no valor da propriedade de *origem* e atualizar a propriedade de *destino*, e pode enviar por push alterações do *destino* para a *origem*.
+Para usar associações compiladas, o `x:DataType` atributo deve ser definido como um literal de cadeia de caracteres ou um tipo usando a `x:Type` extensão de marcação. No tempo de compilação de XAML, as expressões de associação inválidas serão relatadas como erros de build. No entanto, o compilador XAML relatará um erro de build somente para a primeira expressão de associação inválida que encontrar. Todas as expressões de associação válidas definidas no `VisualElement` ou seus filhos serão compiladas, independentemente de o [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) ser definido no XAML ou no código. Compilar uma expressão de associação gera o código compilado que obterá um valor de uma propriedade na *origem* e o definirá na propriedade de *destino* especificada na marcação. Além disso, dependendo da expressão de associação, o código gerado poderá observar alterações no valor da propriedade de *origem* e atualizar a propriedade de *destino*, e pode enviar por push alterações do *destino* para a *origem*.
 
 > [!IMPORTANT]
-> As vinculações compiladas estão atualmente desativadas para quaisquer expressões vinculantes que definam a [`Source`](xref:Xamarin.Forms.Binding.Source) propriedade. Isso acontece porque a propriedade `Source` sempre é definida usando a extensão de marcação `x:Reference`, que não pode ser resolvida em tempo de compilação.
+> As associações compiladas estão atualmente desabilitadas para todas as expressões de associação que definem a [`Source`](xref:Xamarin.Forms.Binding.Source) propriedade. Isso acontece porque a propriedade `Source` sempre é definida usando a extensão de marcação `x:Reference`, que não pode ser resolvida em tempo de compilação.
 
 ## <a name="use-compiled-bindings"></a>Usar associações compiladas
 
-A página **Compilou Color Selector** demonstra o uso de vinculações compiladas entre xamarin.forms visualizações e propriedades do modelo de visualização:
+A página **seletor de cores compilada** demonstra o uso de associações compiladas entre Xamarin.Forms exibições e propriedades do ViewModel:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -70,24 +73,24 @@ A página **Compilou Color Selector** demonstra o uso de vinculações compilada
 </ContentPage>
 ```
 
-A [`StackLayout`](xref:Xamarin.Forms.StackLayout) raiz instancia e `HslColorViewModel` inicializa a propriedade dentro das `Color` etiquetas de elemento de propriedade para a [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) propriedade. Essa `StackLayout` raiz também `x:DataType` define o atributo como o tipo de modelo `StackLayout` de exibição, indicando que quaisquer expressões vinculantes na hierarquia de exibição raiz serão compiladas. Isso pode ser verificado alterando qualquer uma das expressões vinculantes para vincular a uma propriedade de modelo de exibição inexistente, o que resultará em um erro de compilação. Embora este exemplo `x:DataType` defina o atributo para um literal de `x:Type` seqüência, ele também pode ser definido como um tipo com a extensão de marcação. Para obter mais `x:Type` informações sobre a extensão de marcação, consulte [x:Tipo de extensão de marcação](~/xamarin-forms/xaml/markup-extensions/consuming.md#type).
+A raiz [`StackLayout`](xref:Xamarin.Forms.StackLayout) instancia o `HslColorViewModel` e inicializa a `Color` Propriedade nas marcas de elemento de propriedade da [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) propriedade. Essa raiz `StackLayout` também define o `x:DataType` atributo como o tipo ViewModel, indicando que todas as expressões de associação na `StackLayout` hierarquia de exibição raiz serão compiladas. Isso pode ser verificado com a alteração de qualquer uma das expressões de associação para associar a uma propriedade ViewModel não existente, o que resultará em um erro de compilação. Embora este exemplo defina o `x:DataType` atributo como um literal de cadeia de caracteres, ele também pode ser definido como um tipo com a `x:Type` extensão de marcação. Para obter mais informações sobre a `x:Type` extensão de marcação, consulte a [extensão de marcação x:Type](~/xamarin-forms/xaml/markup-extensions/consuming.md#type).
 
 > [!IMPORTANT]
 > O atributo `x:DataType` pode ser redefinido em qualquer ponto de uma hierarquia de exibição.
 
-Os [`BoxView`](xref:Xamarin.Forms.BoxView) [`Label`](xref:Xamarin.Forms.Label) elementos [`Slider`](xref:Xamarin.Forms.Slider) e pontos de vista [`StackLayout`](xref:Xamarin.Forms.StackLayout)herdam o contexto vinculante do . Essas visualizações são todos alvos vinculativos que referenciam propriedades de origem no modelo de exibição. Para [`BoxView.Color`](xref:Xamarin.Forms.BoxView.Color) a propriedade [`Label.Text`](xref:Xamarin.Forms.Label.Text) e a propriedade, `OneWay` as vinculações de dados são – as propriedades na exibição são definidas a partir das propriedades no modelo de exibição. No entanto, [`Slider.Value`](xref:Xamarin.Forms.Slider.Value) `TwoWay` a propriedade usa uma vinculação. Isso permite `Slider` que cada um seja definido a partir do modelo `Slider`de exibição, e também para que o modelo de visualização seja definido a partir de cada um .
+Os [`BoxView`](xref:Xamarin.Forms.BoxView) [`Label`](xref:Xamarin.Forms.Label) elementos, e [`Slider`](xref:Xamarin.Forms.Slider) exibições herdam o contexto de associação do [`StackLayout`](xref:Xamarin.Forms.StackLayout) . Essas exibições são todos os destinos de associação que fazem referência às propriedades de origem no ViewModel. Para a [`BoxView.Color`](xref:Xamarin.Forms.BoxView.Color) propriedade e a [`Label.Text`](xref:Xamarin.Forms.Label.Text) propriedade, as associações de dados são `OneWay` – as propriedades na exibição são definidas a partir das propriedades no ViewModel. No entanto, a [`Slider.Value`](xref:Xamarin.Forms.Slider.Value) propriedade usa uma `TwoWay` associação. Isso permite que cada um `Slider` seja definido a partir do ViewModel e também que o ViewModel seja definido de cada um `Slider` .
 
-Quando o aplicativo é [`BoxView`](xref:Xamarin.Forms.BoxView)executado [`Label`](xref:Xamarin.Forms.Label) pela [`Slider`](xref:Xamarin.Forms.Slider) primeira vez, os elementos e `Color` elementos são definidos a partir do modelo de exibição com base no conjunto de propriedades iniciais quando o modelo de exibição foi instanciado. Isso é mostrado nas seguintes capturas de tela:
+Quando o aplicativo é executado pela primeira vez, os elementos [`BoxView`](xref:Xamarin.Forms.BoxView) , [`Label`](xref:Xamarin.Forms.Label) e, [`Slider`](xref:Xamarin.Forms.Slider) são todos definidos a partir do ViewModel com base na `Color` propriedade inicial definida quando o ViewModel foi instanciado. Isso é mostrado nas seguintes capturas de tela:
 
-[![Seletor de cores compilado](compiled-bindings-images/compiledcolorselector-small.png "Seletor de cores compilado")](compiled-bindings-images/compiledcolorselector-large.png#lightbox "Seletor de cores compilado")
+[![Seletor de cor compilado](compiled-bindings-images/compiledcolorselector-small.png "Seletor de cor compilado")](compiled-bindings-images/compiledcolorselector-large.png#lightbox "Seletor de cor compilado")
 
-À medida que os controles [`BoxView`](xref:Xamarin.Forms.BoxView) [`Label`](xref:Xamarin.Forms.Label) deslizantes são manipulados, os elementos são atualizados de acordo.
+À medida que os controles deslizantes são manipulados, os [`BoxView`](xref:Xamarin.Forms.BoxView) [`Label`](xref:Xamarin.Forms.Label) elementos e são atualizados de acordo.
 
 Para obter mais informações sobre o seletor de cores, confira [ViewModels e notificações de alteração de propriedade](~/xamarin-forms/app-fundamentals/data-binding/binding-mode.md#viewmodels-and-property-change-notifications).
 
-## <a name="use-compiled-bindings-in-a-datatemplate"></a>Use vinculações compiladas em um DataTemplate
+## <a name="use-compiled-bindings-in-a-datatemplate"></a>Usar associações compiladas em um DataTemplate
 
-As vinculações [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) em a são interpretadas no contexto do objeto que está sendo modelado. Portanto, ao usar associações compiladas em um `DataTemplate`, o `DataTemplate` precisa declarar o tipo de seu objeto de dados usando o atributo `x:DataType`.
+Associações em um [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) são interpretadas no contexto do objeto que está sendo modelado. Portanto, ao usar associações compiladas em um `DataTemplate`, o `DataTemplate` precisa declarar o tipo de seu objeto de dados usando o atributo `x:DataType`.
 
 A página **Lista de Cores Compilada** demonstra como usar associações compiladas em um [`DataTemplate`](xref:Xamarin.Forms.DataTemplate):
 
@@ -122,19 +125,19 @@ A página **Lista de Cores Compilada** demonstra como usar associações compila
 </ContentPage>
 ```
 
-A [`ListView.ItemsSource`](xref:Xamarin.Forms.ListView) propriedade está definida `NamedColor.All` para a propriedade estática. A `NamedColor` classe usa o reflexo .NET para enumerar todos os campos públicos estáticos da [`Color`](xref:Xamarin.Forms.Color) estrutura `All` e armazená-los com seus nomes em uma coleção acessível a partir da propriedade estática. Portanto, o `ListView` é preenchido com todas as instâncias de `NamedColor`. Para cada item em `ListView`, o contexto de associação para o item é definido como um objeto `NamedColor`. Os [`BoxView`](xref:Xamarin.Forms.BoxView) [`Label`](xref:Xamarin.Forms.Label) elementos [`ViewCell`](xref:Xamarin.Forms.ViewCell) no estão `NamedColor` ligados às propriedades.
+A [`ListView.ItemsSource`](xref:Xamarin.Forms.ListView) propriedade é definida como a `NamedColor.All` propriedade estática. A `NamedColor` classe usa a reflexão do .net para enumerar todos os campos públicos estáticos na [`Color`](xref:Xamarin.Forms.Color) estrutura e para armazená-los com seus nomes em uma coleção que é acessível por meio da `All` propriedade estática. Portanto, o `ListView` é preenchido com todas as instâncias de `NamedColor`. Para cada item em `ListView`, o contexto de associação para o item é definido como um objeto `NamedColor`. Os [`BoxView`](xref:Xamarin.Forms.BoxView) [`Label`](xref:Xamarin.Forms.Label) elementos e no [`ViewCell`](xref:Xamarin.Forms.ViewCell) são associados a `NamedColor` Propriedades.
 
-Observe que [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) o `x:DataType` atributo define `NamedColor` como sendo o tipo, indicando que quaisquer expressões vinculantes na hierarquia de `DataTemplate` exibição serão compiladas. Isso pode ser verificado alterando qualquer uma das expressões de associação para se associar a uma propriedade `NamedColor` inexistente, o que causará um erro de build.  Embora este exemplo `x:DataType` defina o atributo para um literal de `x:Type` seqüência, ele também pode ser definido como um tipo com a extensão de marcação. Para obter mais `x:Type` informações sobre a extensão de marcação, consulte [x:Tipo de extensão de marcação](~/xamarin-forms/xaml/markup-extensions/consuming.md#type).
+Observe que o [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) define o `x:DataType` atributo como o `NamedColor` tipo, indicando que todas as expressões de associação na `DataTemplate` hierarquia de exibição serão compiladas. Isso pode ser verificado alterando qualquer uma das expressões de associação para se associar a uma propriedade `NamedColor` inexistente, o que causará um erro de build.  Embora este exemplo defina o `x:DataType` atributo como um literal de cadeia de caracteres, ele também pode ser definido como um tipo com a `x:Type` extensão de marcação. Para obter mais informações sobre a `x:Type` extensão de marcação, consulte a [extensão de marcação x:Type](~/xamarin-forms/xaml/markup-extensions/consuming.md#type).
 
-Quando o aplicativo é [`ListView`](xref:Xamarin.Forms.ListView) executado pela `NamedColor` primeira vez, o é preenchido com instâncias. Quando um item `ListView` no é [`BoxView.Color`](xref:Xamarin.Forms.BoxView.Color) selecionado, a propriedade é definida como `ListView`a cor do item selecionado no :
+Quando o aplicativo é executado pela primeira vez, o [`ListView`](xref:Xamarin.Forms.ListView) é preenchido com `NamedColor` instâncias. Quando um item no `ListView` é selecionado, a [`BoxView.Color`](xref:Xamarin.Forms.BoxView.Color) propriedade é definida como a cor do item selecionado no `ListView` :
 
-[![Lista de cores compiladas](compiled-bindings-images/compiledcolorlist-small.png "Lista de cores compilada]")](compiled-bindings-images/compiledcolorlist-large.png#lightbox "Lista de cores compiladas")
+[![Lista de cores compilada](compiled-bindings-images/compiledcolorlist-small.png "Lista de cores compilada]")](compiled-bindings-images/compiledcolorlist-large.png#lightbox "Lista de cores compilada")
 
-Selecionando outros itens [`ListView`](xref:Xamarin.Forms.BoxView) nas atualizações a [`BoxView`](xref:Xamarin.Forms.BoxView)cor do .
+A seleção de outros itens no [`ListView`](xref:Xamarin.Forms.BoxView) atualiza a cor do [`BoxView`](xref:Xamarin.Forms.BoxView) .
 
-## <a name="combine-compiled-bindings-with-classic-bindings"></a>Combine amarras compiladas com ligações clássicas
+## <a name="combine-compiled-bindings-with-classic-bindings"></a>Combinar associações compiladas com associações clássicas
 
-Expressões de associação são compiladas apenas para a hierarquia de exibição em que o atributo `x:DataType` está definido. Por outro lado, exibições em uma hierarquia na qual o atributo `x:DataType` não está definido usarão associações clássicas. Portanto, é possível combinar associações compiladas e associações clássicas em uma página. Por exemplo, na seção anterior, as exibições dentro das [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) vinculações compiladas de uso, enquanto as [`BoxView`](xref:Xamarin.Forms.BoxView) que estão definidas para a cor selecionada no [`ListView`](xref:Xamarin.Forms.ListView) não.
+Expressões de associação são compiladas apenas para a hierarquia de exibição em que o atributo `x:DataType` está definido. Por outro lado, exibições em uma hierarquia na qual o atributo `x:DataType` não está definido usarão associações clássicas. Portanto, é possível combinar associações compiladas e associações clássicas em uma página. Por exemplo, na seção anterior, as exibições em [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) usar associações compiladas, enquanto a [`BoxView`](xref:Xamarin.Forms.BoxView) que está definida para a cor selecionada no não [`ListView`](xref:Xamarin.Forms.ListView) .
 
 Estruturar cuidadosamente os atributos `x:DataType`, portanto, pode levar a uma página que usa associações compiladas e clássicas. Como alternativa, o atributo `x:DataType` pode ser redefinido a qualquer momento em uma hierarquia de exibição como `null` usando a extensão de marcação `x:Null`. Fazer isso indica que qualquer expressão de associação de dentro da hierarquia de exibição usará associações clássicas. A página *Associações Mistas* demonstra essa abordagem:
 
@@ -158,7 +161,7 @@ Estruturar cuidadosamente os atributos `x:DataType`, portanto, pode levar a uma 
 </StackLayout>   
 ```
 
-A [`StackLayout`](xref:Xamarin.Forms.StackLayout) raiz `x:DataType` define o `HslColorViewModel` atributo como sendo o tipo, `StackLayout` indicando que qualquer expressão vinculante na hierarquia de exibição raiz será compilada. No entanto, o `StackLayout` interno redefine o atributo `x:DataType` como `null` com a expressão de marcação `x:Null`. Portanto, as expressões de associação no `StackLayout` interno usam associações clássicas. Apenas [`BoxView`](xref:Xamarin.Forms.BoxView)o , `StackLayout` dentro da hierarquia de visualização raiz, usa vinculações compiladas.
+A raiz [`StackLayout`](xref:Xamarin.Forms.StackLayout) define o `x:DataType` atributo como o `HslColorViewModel` tipo, indicando que qualquer expressão de associação na hierarquia de `StackLayout` exibição raiz será compilada. No entanto, o `StackLayout` interno redefine o atributo `x:DataType` como `null` com a expressão de marcação `x:Null`. Portanto, as expressões de associação no `StackLayout` interno usam associações clássicas. Somente o [`BoxView`](xref:Xamarin.Forms.BoxView) , dentro da `StackLayout` hierarquia de exibição raiz, usa associações compiladas.
 
 Para obter mais informações sobre a expressão de marcação `x:Null`, confira [Extensão de marcação x:Null](~/xamarin-forms/xaml/markup-extensions/consuming.md#null).
 
@@ -168,8 +171,8 @@ Associações compiladas melhoram o desempenho da associação de dados, com ben
 
 - Uma associação compilada que usa notificação de alteração de propriedade (ou seja, uma associação `OneWay`, `OneWayToSource` ou `TwoWay`) é resolvida aproximadamente oito vezes mais rápido do que uma associação clássica.
 - Uma associação compilada que não usa notificação de alteração de propriedade (ou seja, uma associação `OneTime`) é resolvida aproximadamente vinte vezes mais rápido do que uma associação clássica.
-- Definir [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) a vinculação em uma vinculação compilada que `OneWay` `OneWayToSource`usa `TwoWay` a notificação de alteração de propriedade `BindingContext` (ou seja, a , ou vinculação) é aproximadamente 5 vezes mais rápida do que definir a vinculação clássica.
-- Definir [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) a vinculação em uma vinculação compilada que não `OneTime` usa a notificação de alteração de `BindingContext` propriedade (ou seja, uma vinculação) é aproximadamente 7 vezes mais rápida do que definir a vinculação clássica.
+- Definir o [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) em uma associação compilada que usa a notificação de alteração de propriedade (ou seja `OneWay` , a, `OneWayToSource` ou `TwoWay` associação) é aproximadamente 5 vezes mais rápido do que definir o `BindingContext` em uma associação clássica.
+- Definir o [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) em uma associação compilada que não usa a notificação de alteração de propriedade (ou seja, uma `OneTime` associação) é aproximadamente 7 vezes mais rápido do que definir o `BindingContext` em uma associação clássica.
 
 Essas diferenças de desempenho podem aumentar em dispositivos móveis, dependendo da plataforma usada, da versão do sistema operacional usado e do dispositivo no qual o aplicativo está em execução.
 

@@ -1,45 +1,48 @@
 ---
-title: Xamarin. Forms MenuItem
-description: A classe MenuItem é usada para criar itens de menu para menus como menus de contexto de item de ListView e menus flutuantes de aplicativo Shell.
-ms.prod: xamarin
-ms.assetId: 62655C21-6053-466D-A7F4-DE2BE36538F5
-ms.technology: xamarin-forms
-author: profexorgeek
-ms.author: jusjohns
-ms.date: 08/01/2019
-ms.openlocfilehash: b4690feb6444405d090a0b2bafd6c8615b2ffa8b
-ms.sourcegitcommit: 6d86aac422d6ce2131930d18ada161d117c8c61b
+title: Xamarin.FormsMenuItem
+description: ''
+ms.prod: ''
+ms.assetId: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: de8c6bff2c9dc72821692708f5852cd874c31ede
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/24/2020
-ms.locfileid: "78292035"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84139198"
 ---
-# <a name="xamarinforms-menuitem"></a>Xamarin. Forms MenuItem
+# <a name="xamarinforms-menuitem"></a>Xamarin.FormsMenuItem
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-menuitemdemos/)
+[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-menuitemdemos/)
 
-A classe [`MenuItem`](xref:Xamarin.Forms.MenuItem) do Xamarin. Forms define itens de menu para menus como `ListView` menus de contexto do item e menus de submenu do aplicativo Shell.
+A Xamarin.Forms [`MenuItem`](xref:Xamarin.Forms.MenuItem) classe define itens de menu para menus como menus de `ListView` contexto de item e menus de submenu de aplicativo Shell.
 
-As capturas de tela a seguir mostram `MenuItem` objetos em um `ListView` menu de contexto no iOS e no Android:
+As capturas de tela a seguir mostram `MenuItem` objetos em um `ListView` menu de contexto no Ios e no Android:
 
 [!["MenuItems no iOS e no Android"](menuitem-images/menuitem-demo-cropped.png "MenuItems no iOS e no Android")](menuitem-images/menuitem-demo-full.png#lightbox "MenuItems em imagem completa do iOS e Android")
 
-A classe `MenuItem` define as seguintes propriedades:
+A `MenuItem` classe define as seguintes propriedades:
 
-* [`Command`](xref:Xamarin.Forms.MenuItem.Command) é um `ICommand` que permite a vinculação de ações do usuário, como toques ou cliques de dedos, a comandos definidos em um ViewModel.
-* [`CommandParameter`](xref:Xamarin.Forms.MenuItem.CommandParameter) é um `object` que especifica o parâmetro que deve ser passado para o `Command`.
-* [`IconImageSource`](xref:Xamarin.Forms.MenuItem.IconImageSource) é um valor de `ImageSource` que define o ícone de exibição.
-* [`IsDestructive`](xref:Xamarin.Forms.MenuItem.IsDestructive) é um valor de `bool` que indica se o `MenuItem` remove seu elemento de interface do usuário associado da lista.
-* [`IsEnabled`](xref:Xamarin.Forms.MenuItem.IsEnabled) é um valor `bool` que indica se este objeto responde à entrada do usuário.
-* [`Text`](xref:Xamarin.Forms.MenuItem.Text) é um valor de `string` que especifica o texto de exibição.
+* [`Command`](xref:Xamarin.Forms.MenuItem.Command)é um `ICommand` que permite a vinculação de ações do usuário, como toques ou cliques de dedos, a comandos definidos em um ViewModel.
+* [`CommandParameter`](xref:Xamarin.Forms.MenuItem.CommandParameter)é um `object` que especifica o parâmetro que deve ser passado para o `Command` .
+* [`IconImageSource`](xref:Xamarin.Forms.MenuItem.IconImageSource)é um `ImageSource` valor que define o ícone de exibição.
+* [`IsDestructive`](xref:Xamarin.Forms.MenuItem.IsDestructive)é um `bool` valor que indica se o `MenuItem` Remove seu elemento de interface do usuário associado da lista.
+* [`IsEnabled`](xref:Xamarin.Forms.MenuItem.IsEnabled)é um `bool` valor que indica se este objeto responde à entrada do usuário.
+* [`Text`](xref:Xamarin.Forms.MenuItem.Text)é um `string` valor que especifica o texto de exibição.
 
-Essas propriedades são apoiadas por [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objetos para que a instância `MenuItem` possa ser o destino de associações de dados.
+Essas propriedades são apoiadas por [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objetos para que a `MenuItem` instância possa ser o destino de associações de dados.
 
 ## <a name="create-a-menuitem"></a>Criar um MenuItem
 
-`MenuItem` objetos podem ser usados em um menu de contexto em itens de um objeto de `ListView`. O padrão mais comum é criar `MenuItem` objetos dentro de uma instância `ViewCell`, que é usada como o objeto `DataTemplate` para o `ListView`s `ItemTemplate`. Quando o objeto de `ListView` for preenchido, ele criará cada item usando o `DataTemplate`, expondo as opções de `MenuItem` quando o menu de contexto for ativado para um item.
+`MenuItem`os objetos podem ser usados em um menu de contexto nos itens de um `ListView` objeto. O padrão mais comum é criar `MenuItem` objetos dentro de uma `ViewCell` instância, que é usada como o `DataTemplate` objeto para os `ListView` s `ItemTemplate` . Quando o `ListView` objeto for preenchido, ele criará cada item usando o `DataTemplate` , expondo as `MenuItem` opções quando o menu de contexto for ativado para um item.
 
-O exemplo a seguir mostra `MenuItem` instanciação dentro do contexto de um objeto `ListView`:
+O exemplo a seguir mostra `MenuItem` a instanciação dentro do contexto de um `ListView` objeto:
 
 ```xaml
 <ListView>
@@ -96,7 +99,7 @@ ListView listView = new ListView
 
 ## <a name="define-menuitem-behavior-with-events"></a>Definir comportamento MenuItem com eventos
 
-A classe `MenuItem` expõe um evento `Clicked`. Um manipulador de eventos pode ser anexado a esse evento para reagir a toques ou cliques na instância de `MenuItem` em XAML:
+A `MenuItem` classe expõe um `Clicked` evento. Um manipulador de eventos pode ser anexado a esse evento para reagir a toques ou cliques na `MenuItem` instância do XAML:
 
 ```xaml
 <MenuItem ...
@@ -110,7 +113,7 @@ MenuItem item = new MenuItem { ... }
 item.Clicked += OnItemClicked;
 ```
 
-Os exemplos anteriores referenciaram um manipulador de eventos `OnItemClicked`. O código a seguir mostra uma implementação de exemplo:
+Os exemplos anteriores referenciaram um `OnItemClicked` manipulador de eventos. O código a seguir mostra uma implementação de exemplo:
 
 ```csharp
 void OnItemClicked(object sender, EventArgs e)
@@ -127,7 +130,7 @@ void OnItemClicked(object sender, EventArgs e)
 
 ## <a name="define-menuitem-behavior-with-mvvm"></a>Definir comportamento MenuItem com MVVM
 
-A classe `MenuItem` oferece suporte ao padrão Model-View-ViewModel (MVVM) por meio de objetos [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) e da interface `ICommand`. O XAML a seguir mostra `MenuItem` instâncias associadas a comandos definidos em um ViewModel:
+A `MenuItem` classe oferece suporte ao padrão Model-View-ViewModel (MVVM) por meio [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) de objetos e da `ICommand` interface. O XAML a seguir mostra as `MenuItem` instâncias associadas a comandos definidos em um ViewModel:
 
 ```xaml
 <ContentPage.BindingContext>
@@ -157,7 +160,7 @@ A classe `MenuItem` oferece suporte ao padrão Model-View-ViewModel (MVVM) por m
 </StackLayout>
 ```
 
-No exemplo anterior, dois objetos `MenuItem` são definidos com suas propriedades `Command` e `CommandParameter` associadas a comandos no ViewModel. O ViewModel contém os comandos referenciados no XAML:
+No exemplo anterior, dois `MenuItem` objetos são definidos com suas `Command` Propriedades e `CommandParameter` associadas a comandos no ViewModel. O ViewModel contém os comandos referenciados no XAML:
 
 ```csharp
 public class ListPageViewModel : INotifyPropertyChanged
@@ -176,7 +179,7 @@ public class ListPageViewModel : INotifyPropertyChanged
 }
 ```
 
-O aplicativo de exemplo inclui uma classe `DataService` usada para obter uma lista de itens para preencher os objetos `ListView`. Um ViewModel é instanciado, com itens da classe `DataService` e definido como o `BindingContext` no code-behind:
+O aplicativo de exemplo inclui uma `DataService` classe usada para obter uma lista de itens para preencher os `ListView` objetos. Um ViewModel é instanciado, com itens da `DataService` classe e definido como o `BindingContext` no code-behind:
 
 ```csharp
 public MenuItemXamlMvvmPage()
@@ -189,29 +192,29 @@ public MenuItemXamlMvvmPage()
 ## <a name="menuitem-icons"></a>Ícones MenuItem
 
 > [!WARNING]
-> `MenuItem` objetos exibem apenas os ícones no Android. Em outras plataformas, somente o texto especificado pela propriedade `Text` será exibido.
+> `MenuItem`os objetos exibem apenas os ícones no Android. Em outras plataformas, somente o texto especificado pela `Text` propriedade será exibido.
 
- Os ícones são especificados usando a propriedade `IconImageSource`. Se um ícone for especificado, o texto especificado pela propriedade `Text` não será exibido. A captura de tela a seguir mostra um `MenuItem` com um ícone no Android:
+ Os ícones são especificados usando a `IconImageSource` propriedade. Se um ícone for especificado, o texto especificado pela `Text` propriedade não será exibido. A captura de tela a seguir mostra um `MenuItem` com um ícone no Android:
 
 !["Captura de tela do ícone MenuItem no Android"](menuitem-images/menuitem-android-icon.png "Captura de tela do ícone MenuItem no Android")
 
-Para obter mais informações sobre como usar imagens no Xamarin. Forms, consulte [imagens no xamarin. Forms](~/xamarin-forms/user-interface/images.md).
+Para obter mais informações sobre como usar imagens no Xamarin.Forms , consulte [imagens em Xamarin.Forms ](~/xamarin-forms/user-interface/images.md).
 
 ## <a name="enable-or-disable-a-menuitem-at-runtime"></a>Habilitar ou desabilitar um MenuItem em tempo de execução
 
-Para habilitar a desabilitação de um `MenuItem` em tempo de execução, vincule sua propriedade `Command` a uma implementação de `ICommand` e verifique se um delegado de `canExecute` habilita e desabilita o `ICommand` conforme apropriado.
+Para habilitar a desabilitação de um `MenuItem` em tempo de execução, associe sua `Command` Propriedade a uma `ICommand` implementação e verifique se um `canExecute` delegado habilita e desabilita o `ICommand` conforme apropriado.
 
 > [!IMPORTANT]
-> Não vincule a propriedade `IsEnabled` a outra propriedade ao usar a propriedade `Command` para habilitar ou desabilitar a `MenuItem`.
+> Não associe a `IsEnabled` Propriedade a outra propriedade ao usar a `Command` propriedade para habilitar ou desabilitar o `MenuItem` .
 
-O exemplo a seguir mostra um `MenuItem` cuja propriedade `Command` está associada a uma `ICommand` chamada `MyCommand`:
+O exemplo a seguir mostra uma `MenuItem` cuja `Command` propriedade está associada a um `ICommand` nome `MyCommand` :
 
 ```xaml
 <MenuItem Text="My menu item"
           Command="{Binding MyCommand}" />
 ```
 
-A implementação de `ICommand` requer um delegado de `canExecute` que retorna o valor de uma propriedade `bool` para habilitar e desabilitar a `MenuItem`:
+A `ICommand` implementação requer um `canExecute` delegado que retorne o valor de uma `bool` propriedade para habilitar e desabilitar `MenuItem` :
 
 ```csharp
 public class MyViewModel : INotifyPropertyChanged
@@ -240,13 +243,13 @@ public class MyViewModel : INotifyPropertyChanged
 }
 ```
 
-Neste exemplo, a `MenuItem` será desabilitada até que a propriedade `IsMenuItemEnabled` seja definida. Quando isso ocorre, o método `Command.ChangeCanExecute` é chamado, o que faz com que o delegado de `canExecute` para `MyCommand` seja reavaliado.
+Neste exemplo, o `MenuItem` será desabilitado até que a `IsMenuItemEnabled` propriedade seja definida. Quando isso ocorre, o `Command.ChangeCanExecute` método é chamado, o que faz com que o `canExecute` delegado `MyCommand` seja reavaliado.
 
 ## <a name="cross-platform-context-menu-behavior"></a>Comportamento do menu de contexto de plataforma cruzada
 
 Os menus de contexto são acessados e exibidos de forma diferente em cada plataforma.
 
-No Android, o menu de contexto é ativado por uma prensa de longa duração em um item de lista. O menu de contexto substitui o título e a área da barra de navegação e `MenuItem` opções são exibidas como botões horizontais.
+No Android, o menu de contexto é ativado por uma prensa de longa duração em um item de lista. O menu de contexto substitui o título e a área da barra de navegação e `MenuItem` as opções são exibidas como botões horizontais.
 
 !["Captura de tela do menu de contexto no Android"](menuitem-images/menuitem-android-icon.png "Captura de tela do menu de contexto no Android")
 
@@ -261,4 +264,4 @@ No UWP, o menu de contexto é ativado clicando com o botão direito do mouse em 
 ## <a name="related-links"></a>Links relacionados
 
 * [Demonstrações MenuItem](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-menuitemdemos/)
-* [Imagens no Xamarin. Forms](~/xamarin-forms/user-interface/images.md)
+* [Imagens emXamarin.Forms](~/xamarin-forms/user-interface/images.md)

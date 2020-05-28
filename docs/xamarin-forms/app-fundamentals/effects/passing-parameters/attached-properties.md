@@ -1,18 +1,21 @@
 ---
-title: Passando parâmetros de efeito como propriedades anexadas
-description: Propriedades anexadas podem ser usadas para definir parâmetros de efeito que respondem a alterações de propriedade de runtime. Este artigo demonstra o uso de propriedades anexadas para passar parâmetros para um efeito e a alteração de um parâmetro em runtime.
-ms.prod: xamarin
-ms.assetid: DFCDCB9F-17DD-4117-BD53-B4FB206BB387
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 08/05/2016
-ms.openlocfilehash: cc33bc7eef68e5d6cb0a1b717da5e9d9f49338b2
-ms.sourcegitcommit: 05ba8ffb8b34ec881b89e442323f3edd8de18f2e
+title: ''
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: cf03d0c32d80d7a1821e323acdc84a351413efec
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/18/2020
-ms.locfileid: "83546018"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84138873"
 ---
 # <a name="passing-effect-parameters-as-attached-properties"></a>Passando parâmetros de efeito como propriedades anexadas
 

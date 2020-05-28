@@ -1,33 +1,36 @@
 ---
-title: Estilos de texto do xamarin. Forms
-description: Este artigo explica como o estilo do texto em aplicativos xamarin. Forms. Estilos podem ser definidos uma vez e usados por muitas exibições, mas um estilo só pode ser usado com modos de exibição de um tipo.
-ms.prod: xamarin
-ms.assetid: 57C0CFD6-A568-46B8-ADA1-BF25681893CF
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 05/22/2017
-ms.openlocfilehash: 66d7ae722281d9034cb4cdf1501662a7de396c2d
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+title: Xamarin.FormsEstilos de texto
+description: Este artigo explica como estilizar o texto em Xamarin.Forms aplicativos. Os estilos podem ser definidos uma vez e usados por muitas exibições, mas um estilo só pode ser usado com exibições de um tipo.
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 79a86fd7a2c0f5b82ca4b3e22b3ecedf42c5a0ba
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70770246"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84136143"
 ---
-# <a name="xamarinforms-text-styles"></a>Estilos de texto do xamarin. Forms
+# <a name="xamarinforms-text-styles"></a>Xamarin.FormsEstilos de texto
 
-[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
+[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
 
-_Estilo do texto no xamarin. Forms_
+_Estilo de texto no Xamarin. Forms_
 
-Estilos podem ser usados para ajustar a aparência de rótulos, entradas e editores. Estilos podem ser definidos uma vez e usados por muitas exibições, mas um estilo só pode ser usado com modos de exibição de um tipo.
-Estilos podem ser fornecidos um `Key` e aplicadas seletivamente usando um controle específico `Style` propriedade.
+Os estilos podem ser usados para ajustar a aparência de rótulos, entradas e editores. Os estilos podem ser definidos uma vez e usados por muitas exibições, mas um estilo só pode ser usado com exibições de um tipo.
+Os estilos podem ser atribuídos a `Key` e aplicados seletivamente usando uma propriedade de controle específica `Style` .
 
 <a name="Built-In_Styles" />
 
 ## <a name="built-in-styles"></a>Estilos internos
 
-Xamarin. Forms inclui vários [internos](xref:Xamarin.Forms.Device.Styles) estilos para cenários comuns:
+Xamarin.Formsinclui vários estilos [internos](xref:Xamarin.Forms.Device.Styles) para cenários comuns:
 
 - `BodyStyle`
 - `CaptionStyle`
@@ -36,13 +39,13 @@ Xamarin. Forms inclui vários [internos](xref:Xamarin.Forms.Device.Styles) estil
 - `SubtitleStyle`
 - `TitleStyle`
 
-Para aplicar um dos estilos internos, use o `DynamicResource` extensão de marcação para especificar o estilo:
+Para aplicar um dos estilos internos, use a `DynamicResource` extensão de marcação para especificar o estilo:
 
 ```xaml
 <Label Text="I'm a Title" Style="{DynamicResource TitleStyle}"/>
 ```
 
-No c#, os estilos internos são selecionados de `Device.Styles`:
+Em C#, os estilos internos são selecionados de `Device.Styles` :
 
 ```csharp
 label.Style = Device.Styles.TitleStyle;
@@ -54,9 +57,9 @@ label.Style = Device.Styles.TitleStyle;
 
 ## <a name="custom-styles"></a>Estilos personalizados
 
-Estilos consistem em setters e setters consistem em propriedades e os valores de propriedades serão definidos como.
+Os estilos consistem em setters e setters que consistem em Propriedades e os valores para os quais as propriedades serão definidas.
 
-No c#, um estilo personalizado para um rótulo com texto vermelho de tamanho 30 seria definido da seguinte maneira:
+Em C#, um estilo personalizado para um rótulo com texto vermelho de tamanho 30 seria definido da seguinte maneira:
 
 ```csharp
 var LabelStyle = new Style (typeof(Label)) {
@@ -69,7 +72,7 @@ var LabelStyle = new Style (typeof(Label)) {
 var label = new Label { Text = "Check out my style.", Style = LabelStyle };
 ```
 
-No XAML:
+Em XAML:
 
 ```xaml
 <ContentPage.Resources>
@@ -88,7 +91,7 @@ No XAML:
 </ContentPage.Content>
 ```
 
-Observe que os recursos (incluindo todos os estilos) são definidos dentro `ContentPage.Resources`, que é um irmão de mais familiar `ContentPage.Content` elemento.
+Observe que os recursos (incluindo todos os estilos) são definidos em `ContentPage.Resources` , que é um irmão do elemento mais familiar `ContentPage.Content` .
 
 ![Exemplo de estilos personalizados](styles-images/customstyle.png)
 
@@ -96,34 +99,34 @@ Observe que os recursos (incluindo todos os estilos) são definidos dentro `Cont
 
 ## <a name="applying-styles"></a>Aplicando estilos
 
-Quando um estilo tiver sido criado, ele pode ser aplicado a qualquer correspondência de exibição seu `TargetType`.
+Depois que um estilo é criado, ele pode ser aplicado a qualquer exibição correspondente `TargetType` .
 
-No XAML, estilos personalizados são aplicados aos modos de exibição, fornecendo seus `Style` propriedade com um `StaticResource` referenciando o estilo desejado de extensão de marcação:
+No XAML, os estilos personalizados são aplicados aos modos de exibição fornecendo sua `Style` propriedade com uma `StaticResource` extensão de marcação que faz referência ao estilo desejado:
 
 ```xaml
 <Label Text="Check out my style." Style="{StaticResource LabelStyle}" />
 ```
 
-No c#, estilos podem ser aplicados diretamente a um modo de exibição ou adicionados ao e recuperados de uma página `ResourceDictionary`. Para adicionar diretamente:
+No C#, os estilos podem ser aplicados diretamente a uma exibição ou adicionados e recuperados de uma página `ResourceDictionary` . Para adicionar diretamente:
 
 ```csharp
 var label = new Label { Text = "Check out my style.", Style = LabelStyle };
 ```
 
-Para adicionar e recuperar a partir da página `ResourceDictionary`:
+Para adicionar e recuperar a partir da página `ResourceDictionary` :
 
 ```csharp
 this.Resources.Add ("LabelStyle", LabelStyle);
 label.Style = (Style)Resources["LabelStyle"];
 ```
 
-Estilos internos são aplicados de forma diferente, pois eles precisam responder às configurações de acessibilidade. Para aplicar estilos internos em XAML, o `DynamicResource` extensão de marcação é usada:
+Os estilos internos são aplicados de forma diferente, pois precisam responder às configurações de acessibilidade. Para aplicar estilos internos em XAML, a extensão de `DynamicResource` marcação é usada:
 
 ```xaml
 <Label Text="I'm a Title" Style="{DynamicResource TitleStyle}"/>
 ```
 
-No c#, os estilos internos são selecionados de `Device.Styles`:
+Em C#, os estilos internos são selecionados de `Device.Styles` :
 
 ```csharp
 label.Style = Device.Styles.TitleStyle;
@@ -131,9 +134,9 @@ label.Style = Device.Styles.TitleStyle;
 
 ## <a name="accessibility"></a>Acessibilidade
 
-Os estilos internos existem para tornar mais fácil respeitar as preferências de acessibilidade. Ao usar qualquer um dos estilos internos, tamanhos de fonte aumentará automaticamente se um usuário define suas preferências de acessibilidade adequadamente.
+Os estilos internos existem para facilitar o respeitar as preferências de acessibilidade. Ao usar qualquer um dos estilos internos, os tamanhos de fonte aumentarão automaticamente se um usuário definir suas preferências de acessibilidade de forma adequada.
 
-Considere o exemplo a seguir da mesma página de modos de exibição estilizada com os estilos internos com as configurações de acessibilidade habilitados e desabilitados:
+Considere o exemplo a seguir da mesma página de exibições estilizadas com os estilos internos com as configurações de acessibilidade habilitadas e desabilitadas:
 
 Desabilitado:
 
@@ -143,11 +146,11 @@ Habilitado:
 
 ![Estilos de dispositivo com acessibilidade habilitada](styles-images/post-access.png)
 
-Para garantir a acessibilidade, certifique-se de que os estilos internos são usados como base para todos os estilos relacionada ao texto dentro de seu aplicativo e que você está usando estilos de forma consistente. Ver [estilos](~/xamarin-forms/user-interface/styles/index.md) para obter mais detalhes sobre a extensão e trabalhar com estilos, em geral.
+Para garantir a acessibilidade, verifique se os estilos internos são usados como base para qualquer estilo relacionado a texto em seu aplicativo e se você está usando os estilos de forma consistente. Consulte os [estilos](~/xamarin-forms/user-interface/styles/index.md) para obter mais detalhes sobre como estender e trabalhar com estilos em geral.
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Criação de aplicativos móveis com xamarin. Forms, capítulo 12](https://developer.xamarin.com/r/xamarin-forms/book/chapter12.pdf)
+- [Criando aplicativos móveis com o Xamarin.Forms , capítulo 12](https://developer.xamarin.com/r/xamarin-forms/book/chapter12.pdf)
 - [Estilos](~/xamarin-forms/user-interface/styles/index.md)
 - [Texto (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
 - [Estilo](xref:Xamarin.Forms.Style)

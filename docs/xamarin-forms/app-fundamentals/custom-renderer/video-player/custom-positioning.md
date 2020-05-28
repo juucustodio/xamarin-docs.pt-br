@@ -1,22 +1,25 @@
 ---
-title: Posicionamento de vídeo personalizado
-description: Este artigo explica como implementar uma barra de posição personalizada em um aplicativo de player de vídeo usando o Xamarin.Forms.
-ms.prod: xamarin
-ms.assetid: 6D792264-30FF-46F7-8C1B-2FEF9D277DF4
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 02/12/2018
-ms.openlocfilehash: 12633b728240c2f90d0265fe7b9efb65ea49bf1f
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: ''
+description: Este artigo explica como implementar uma barra de posição personalizada em um aplicativo de player de vídeo, usando o Xamarin.Forms .
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 97d32a03ee10e2f3b0a7442d1d70dab9236059b4
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "68650654"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84135077"
 ---
 # <a name="custom-video-positioning"></a>Posicionamento de vídeo personalizado
 
-[![Baixar](~/media/shared/download.png) amostra Baixar a amostra](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
+[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
 
 Os controles de transporte implementados por cada plataforma incluem uma barra de posição. Essa barra é semelhante a um controle deslizante ou a uma barra de rolagem e mostra a localização atual do vídeo dentro de sua duração total. Além disso, o usuário pode manipular a barra de posição para mover para frente ou para trás para uma nova posição no vídeo.
 
@@ -342,7 +345,7 @@ O método `SetTimeToEnd` é chamado dos manipuladores de propriedade alterada de
 
 ## <a name="a-custom-slider-for-video"></a>Um controle deslizante personalizado para vídeo
 
-É possível gravar um controle personalizado para uma barra de posição ou usar o `Slider` do Xamarin.Forms ou uma classe derivada de `Slider`, como a seguinte classe `PositionSlider`. A classe define duas novas propriedades denominadas `Duration` e `Position` do tipo `TimeSpan` que se destinam a ser associadas às duas propriedades de mesmo nome no `VideoPlayer`. Observe que o modo de associação padrão da propriedade `Position` é bidirecional:
+É possível escrever um controle personalizado para uma barra de posição ou usar o Xamarin.Forms `Slider` ou uma classe derivada de `Slider` , como a classe a seguir `PositionSlider` . A classe define duas novas propriedades denominadas `Duration` e `Position` do tipo `TimeSpan` que se destinam a ser associadas às duas propriedades de mesmo nome no `VideoPlayer`. Observe que o modo de associação padrão da propriedade `Position` é bidirecional:
 
 ```csharp
 namespace FormsVideoLibrary
@@ -414,7 +417,7 @@ No entanto, a implementação do Android de `Slider` tem apenas 1.000 etapas dis
 
 ## <a name="using-the-positionslider"></a>Usando o PositionSlider
 
-A documentação [`MediaElement`](/uwp/api/Windows.UI.Xaml.Controls.MediaElement/) para o UWP `Position` adverte sobre a vinculação à propriedade porque o imóvel é atualizado com freqüência. A documentação recomenda que um temporizador seja usado para consultar a propriedade `Position`.
+A documentação do UWP [`MediaElement`](/uwp/api/Windows.UI.Xaml.Controls.MediaElement/) avisa sobre a associação à `Position` propriedade porque a propriedade é atualizada com frequência. A documentação recomenda que um temporizador seja usado para consultar a propriedade `Position`.
 
 É uma boa recomendação, mas as três classes `VideoPlayerRenderer` já estão usando indiretamente um temporizador para atualizar a propriedade `Position`. A propriedade `Position` é alterada em um manipulador para o evento `UpdateStatus`, que é disparado apenas 10 vezes por segundo.
 

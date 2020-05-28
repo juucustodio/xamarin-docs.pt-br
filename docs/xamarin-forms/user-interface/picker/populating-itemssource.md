@@ -1,30 +1,33 @@
 ---
-title: Definindo a propriedade ItemsSource de um seletor
-description: O modo de exibição do seletor é um controle para selecionar um item de texto de uma lista de dados. Este artigo explica como preencher um seletor de dados, definindo a propriedade ItemsSource e como responder a seleção de item pelo usuário.
-ms.prod: xamarin
-ms.assetid: 8ECF390C-9DB2-4441-B9A3-101AE7E5AEC5
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 02/26/2019
-ms.openlocfilehash: 803cd1babc32e3a42d957c4bac0cc93c4552fb8c
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+title: ''
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 8c4fc732082a77a2e471465af448a487862b513c
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656115"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84136286"
 ---
-# <a name="setting-a-pickers-itemssource-property"></a>Definindo a propriedade ItemsSource de um seletor
+# <a name="setting-a-pickers-itemssource-property"></a>Definir a propriedade ItemsSource de um seletor
 
-[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-monkeyapppicker)
+[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-monkeyapppicker)
 
-_O modo de exibição do seletor é um controle para selecionar um item de texto de uma lista de dados. Este artigo explica como preencher um seletor de dados, definindo a propriedade ItemsSource e como responder a seleção de item pelo usuário._
+_A exibição do seletor é um controle para selecionar um item de texto de uma lista de dados. Este artigo explica como preencher um seletor com dados definindo a propriedade ItemsSource e como responder à seleção de itens pelo usuário._
 
-Xamarin. Forms 2.3.4 aprimorou o [ `Picker` ](xref:Xamarin.Forms.Picker) exibição adicionando a capacidade para preenchê-lo com dados, definindo sua [ `ItemsSource` ](xref:Xamarin.Forms.Picker.ItemsSource) propriedade e para recuperar o item selecionado do [ `SelectedItem` ](xref:Xamarin.Forms.Picker.SelectedItem) propriedade. Além disso, a cor do texto do item selecionado pode ser alterada definindo a [ `TextColor` ](xref:Xamarin.Forms.Picker.TextColor) propriedade como um [ `Color` ](xref:Xamarin.Forms.Color).
+Xamarin.Formso 2.3.4 aprimorou a [`Picker`](xref:Xamarin.Forms.Picker) exibição adicionando a capacidade de preenchê-la com os dados definindo sua [`ItemsSource`](xref:Xamarin.Forms.Picker.ItemsSource) propriedade e para recuperar o item selecionado da [`SelectedItem`](xref:Xamarin.Forms.Picker.SelectedItem) propriedade. Além disso, a cor do texto do item selecionado pode ser alterada definindo a [`TextColor`](xref:Xamarin.Forms.Picker.TextColor) propriedade como a [`Color`](xref:Xamarin.Forms.Color) .
 
 ## <a name="populating-a-picker-with-data"></a>Populando um seletor com dados
 
-Um [ `Picker` ](xref:Xamarin.Forms.Picker) podem ser populados com dados, definindo sua [ `ItemsSource` ](xref:Xamarin.Forms.Picker.ItemsSource) propriedade para um `IList` coleção. Cada item na coleção deve ser de ou derivado de, digite `object`. Itens podem ser adicionados no XAML, inicializando o `ItemsSource` propriedade de uma matriz de itens:
+Um [`Picker`](xref:Xamarin.Forms.Picker) pode ser preenchido com dados definindo sua [`ItemsSource`](xref:Xamarin.Forms.Picker.ItemsSource) propriedade como uma `IList` coleção. Cada item na coleção deve ser de, ou derivado de, Type `object` . Os itens podem ser adicionados em XAML inicializando a `ItemsSource` propriedade de uma matriz de itens:
 
 ```xaml
 <Picker x:Name="picker"
@@ -45,7 +48,7 @@ Um [ `Picker` ](xref:Xamarin.Forms.Picker) podem ser populados com dados, defini
 ```
 
 > [!NOTE]
-> Observe que o `x:Array` elemento requer um `Type` atributo que indica o tipo dos itens na matriz.
+> Observe que o elemento `x:Array` requer um atributo `Type` que indica o tipo dos itens na matriz.
 
 O código C# equivalente é mostrado abaixo:
 
@@ -65,12 +68,12 @@ picker.ItemsSource = monkeyList;
 
 ## <a name="responding-to-item-selection"></a>Respondendo à seleção de item
 
-Um [ `Picker` ](xref:Xamarin.Forms.Picker) dá suporte à seleção de um item por vez. Quando um usuário seleciona um item, o [ `SelectedIndexChanged` ](xref:Xamarin.Forms.Picker.SelectedIndexChanged) evento é acionado, o [ `SelectedIndex` ](xref:Xamarin.Forms.Picker.SelectedIndex) propriedade é atualizada em um inteiro que representa o índice do item selecionado na lista e o [ `SelectedItem` ](xref:Xamarin.Forms.Picker.SelectedItem) propriedade é atualizada para o `object` que representa o item selecionado. O [ `SelectedIndex` ](xref:Xamarin.Forms.Picker.SelectedIndex) propriedade é um número com base em zero que indica o item que o usuário selecionado. Se nenhum item for selecionado, que é o caso quando o [ `Picker` ](xref:Xamarin.Forms.Picker) primeiro é criado e inicializado, `SelectedIndex` será -1.
+Um [`Picker`](xref:Xamarin.Forms.Picker) dá suporte à seleção de um item por vez. Quando um usuário seleciona um item, o [`SelectedIndexChanged`](xref:Xamarin.Forms.Picker.SelectedIndexChanged) evento é acionado, a [`SelectedIndex`](xref:Xamarin.Forms.Picker.SelectedIndex) propriedade é atualizada para um inteiro que representa o índice do item selecionado na lista e a [`SelectedItem`](xref:Xamarin.Forms.Picker.SelectedItem) propriedade é atualizada para a `object` representação do item selecionado. A [`SelectedIndex`](xref:Xamarin.Forms.Picker.SelectedIndex) propriedade é um número de base zero que indica o item selecionado pelo usuário. Se nenhum item for selecionado, que é o caso quando o [`Picker`](xref:Xamarin.Forms.Picker) é criado e inicializado pela primeira vez, `SelectedIndex` será-1.
 
 > [!NOTE]
-> Item de comportamento de seleção em um [ `Picker` ](xref:Xamarin.Forms.Picker) podem ser personalizadas no iOS com uma plataforma específica. Para obter mais informações, consulte [seleção de Item de seletor controlando](~/xamarin-forms/platform/ios/picker-selection.md).
+> O comportamento de seleção de item em um [`Picker`](xref:Xamarin.Forms.Picker) pode ser personalizado no Ios com uma plataforma específica. Para obter mais informações, consulte [controle de seleção de item de seletor](~/xamarin-forms/platform/ios/picker-selection.md).
 
-O exemplo de código a seguir mostra como recuperar o [ `SelectedItem` ](xref:Xamarin.Forms.Picker.SelectedItem) valor da propriedade a [ `Picker` ](xref:Xamarin.Forms.Picker) no XAML:
+O exemplo de código a seguir mostra como recuperar o [`SelectedItem`](xref:Xamarin.Forms.Picker.SelectedItem) valor da Propriedade do [`Picker`](xref:Xamarin.Forms.Picker) em XAML:
 
 ```xaml
 <Label Text="{Binding Source={x:Reference picker}, Path=SelectedItem}" />
@@ -83,7 +86,7 @@ var monkeyNameLabel = new Label();
 monkeyNameLabel.SetBinding(Label.TextProperty, new Binding("SelectedItem", source: picker));
 ```
 
-Além disso, um manipulador de eventos pode ser executado quando o [ `SelectedIndexChanged` ](xref:Xamarin.Forms.Picker.SelectedIndexChanged) evento é acionado:
+Além disso, um manipulador de eventos pode ser executado quando o [`SelectedIndexChanged`](xref:Xamarin.Forms.Picker.SelectedIndexChanged) evento é acionado:
 
 ```csharp
 void OnPickerSelectedIndexChanged(object sender, EventArgs e)
@@ -98,14 +101,14 @@ void OnPickerSelectedIndexChanged(object sender, EventArgs e)
 }
 ```
 
-Esse método obtém o [ `SelectedIndex` ](xref:Xamarin.Forms.Picker.SelectedIndex) valor de propriedade e usa o valor para recuperar o item selecionado dos [ `ItemsSource` ](xref:Xamarin.Forms.Picker.ItemsSource) coleção. Isso é funcionalmente equivalente ao recuperar o item selecionado dos [ `SelectedItem` ](xref:Xamarin.Forms.Picker.SelectedItem) propriedade. Observe que cada item de `ItemsSource` coleção é do tipo `object`e, portanto, deve ser convertido em um `string` para exibição.
+Esse método obtém o [`SelectedIndex`](xref:Xamarin.Forms.Picker.SelectedIndex) valor da propriedade e usa o valor para recuperar o item selecionado da [`ItemsSource`](xref:Xamarin.Forms.Picker.ItemsSource) coleção. Isso é funcionalmente equivalente a recuperar o item selecionado da [`SelectedItem`](xref:Xamarin.Forms.Picker.SelectedItem) propriedade. Observe que cada item na `ItemsSource` coleção é do tipo `object` e, portanto, deve ser convertido em um `string` para exibição.
 
 > [!NOTE]
-> Um [ `Picker` ](xref:Xamarin.Forms.Picker) pode ser inicializado para exibir um item específico, configurando as [ `SelectedIndex` ](xref:Xamarin.Forms.Picker.SelectedIndex) ou [ `SelectedItem` ](xref:Xamarin.Forms.Picker.SelectedItem) propriedades. No entanto, essas propriedades devem ser definidas depois de inicializar o [ `ItemsSource` ](xref:Xamarin.Forms.Picker.ItemsSource) coleção.
+> Um [`Picker`](xref:Xamarin.Forms.Picker) pode ser inicializado para exibir um item específico definindo as [`SelectedIndex`](xref:Xamarin.Forms.Picker.SelectedIndex) [`SelectedItem`](xref:Xamarin.Forms.Picker.SelectedItem) Propriedades ou. No entanto, essas propriedades devem ser definidas após a inicialização da [`ItemsSource`](xref:Xamarin.Forms.Picker.ItemsSource) coleção.
 
 ## <a name="populating-a-picker-with-data-using-data-binding"></a>Populando um seletor com dados usando Associação de dados
 
-Um [ `Picker` ](xref:Xamarin.Forms.Picker) pode ser também preenchido com dados usando associação de dados para associar seu [ `ItemsSource` ](xref:Xamarin.Forms.Picker.ItemsSource) propriedade para um `IList` coleção. No XAML, isso é feito com o [ `Binding` ](xref:Xamarin.Forms.Xaml.BindingExtension) extensão de marcação:
+Um [`Picker`](xref:Xamarin.Forms.Picker) também pode ser preenchido com dados usando a vinculação de dados para associar sua [`ItemsSource`](xref:Xamarin.Forms.Picker.ItemsSource) Propriedade a uma `IList` coleção. Em XAML, isso é obtido com a [`Binding`](xref:Xamarin.Forms.Xaml.BindingExtension) extensão de marcação:
 
 ```xaml
 <Picker Title="Select a monkey"
@@ -122,7 +125,7 @@ picker.SetBinding(Picker.ItemsSourceProperty, "Monkeys");
 picker.ItemDisplayBinding = new Binding("Name");
 ```
 
-O [ `ItemsSource` ](xref:Xamarin.Forms.Picker.ItemsSource) associa dados de propriedade para o `Monkeys` propriedade do modelo de exibição conectados, que retorna um `IList<Monkey>` coleção. O seguinte exemplo de código mostra o `Monkey` classe, que contém quatro propriedades:
+Os [`ItemsSource`](xref:Xamarin.Forms.Picker.ItemsSource) dados de propriedade são associados à `Monkeys` Propriedade do modelo de exibição conectado, que retorna uma `IList<Monkey>` coleção. O exemplo de código a seguir mostra a `Monkey` classe, que contém quatro propriedades:
 
 ```csharp
 public class Monkey
@@ -134,11 +137,11 @@ public class Monkey
 }
 ```
 
-Ao associar a uma lista de objetos, o [ `Picker` ](xref:Xamarin.Forms.Picker) deve ser informado de qual propriedade a ser exibida de cada objeto. Isso é feito definindo a [ `ItemDisplayBinding` ](xref:Xamarin.Forms.Picker.ItemDisplayBinding) propriedade para a propriedade necessária de cada objeto. Nos exemplos de código acima, o `Picker` estiver definido para exibir cada `Monkey.Name` valor da propriedade.
+Ao associar a uma lista de objetos, o [`Picker`](xref:Xamarin.Forms.Picker) deve ser informado sobre qual propriedade Exibir de cada objeto. Isso é feito definindo a [`ItemDisplayBinding`](xref:Xamarin.Forms.Picker.ItemDisplayBinding) propriedade para a propriedade Required de cada objeto. Nos exemplos de código acima, o `Picker` é definido para exibir cada `Monkey.Name` valor de propriedade.
 
 ### <a name="responding-to-item-selection"></a>Respondendo à seleção de item
 
-Associação de dados pode ser usada para definir um objeto com o [ `SelectedItem` ](xref:Xamarin.Forms.Picker.SelectedItem) valor da propriedade quando ele é alterado:
+A ligação de dados pode ser usada para definir um objeto para o [`SelectedItem`](xref:Xamarin.Forms.Picker.SelectedItem) valor da propriedade quando ele for alterado:
 
 ```xaml
 <Picker Title="Select a monkey"
@@ -173,16 +176,16 @@ var detailsLabel = new Label();
 detailsLabel.SetBinding(Label.TextProperty, "SelectedMonkey.Details");
 ```
 
-O [ `SelectedItem` ](xref:Xamarin.Forms.Picker.SelectedItem) associa dados de propriedade para o `SelectedMonkey` propriedade do modelo de exibição conectado, o que é do tipo `Monkey`. Portanto, quando o usuário seleciona um item na [ `Picker` ](xref:Xamarin.Forms.Picker), o `SelectedMonkey` propriedade será definida para selecionado `Monkey` objeto. O `SelectedMonkey` dados de objeto são exibidos na interface do usuário por [ `Label` ](xref:Xamarin.Forms.Label) e [ `Image` ](xref:Xamarin.Forms.Image) modos de exibição:
+Os [`SelectedItem`](xref:Xamarin.Forms.Picker.SelectedItem) dados de propriedade são associados à `SelectedMonkey` Propriedade do modelo de exibição conectado, que é do tipo `Monkey` . Portanto, quando o usuário seleciona um item no [`Picker`](xref:Xamarin.Forms.Picker) , a `SelectedMonkey` propriedade será definida como o `Monkey` objeto selecionado. Os `SelectedMonkey` dados do objeto são exibidos na interface do usuário por [`Label`](xref:Xamarin.Forms.Label) e [`Image`](xref:Xamarin.Forms.Image) modos de exibição:
 
-![](populating-itemssource-images/monkeys.png "Seleção de Item do seletor")
+![](populating-itemssource-images/monkeys.png "Picker Item Selection")
 
 > [!NOTE]
-> Observe que o [ `SelectedItem` ](xref:Xamarin.Forms.Picker.SelectedItem) e [ `SelectedIndex` ](xref:Xamarin.Forms.Picker.SelectedIndex) ambas as propriedades dá suporte a associações bidirecionais por padrão.
+> Observe que as [`SelectedItem`](xref:Xamarin.Forms.Picker.SelectedItem) [`SelectedIndex`](xref:Xamarin.Forms.Picker.SelectedIndex) Propriedades e dão suporte a associações bidirecionais por padrão.
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Demonstração de seletor (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-pickerdemo)
-- [Monkey App (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-monkeyapppicker)
-- [Seletor de associável (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-bindablepicker)
+- [Demonstração do seletor (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-pickerdemo)
+- [Aplicativo de macaco (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-monkeyapppicker)
+- [Seletor vinculável (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-bindablepicker)
 - [API do seletor](xref:Xamarin.Forms.Picker)

@@ -1,54 +1,57 @@
 ---
-title: Caminhos e texto em SkiaSharp
-description: Este artigo explora a interseção de caminhos de SkiaSharp e texto e demonstra isso com o código de exemplo.
-ms.prod: xamarin
-ms.assetid: C14C07F6-4A84-4A8C-BDB4-CD61FBF0F79B
-ms.technology: xamarin-skiasharp
-author: davidbritch
-ms.author: dabritch
-ms.date: 08/01/2017
-ms.openlocfilehash: d38391f3fd0f02dda8bfd92fce650c557bda0153
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+title: ''
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: b0cbb7d26a2aea02a3255fc75947c20a3d803b86
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68645208"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84131892"
 ---
 # <a name="paths-and-text-in-skiasharp"></a>Caminhos e texto em SkiaSharp
 
-[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
-_Explore a intersecção de caminhos e texto_
+_Explore a interseção de caminhos e texto_
 
-Em sistemas de gráficos modernos, fontes de texto são coleções de contornos de caracteres, geralmente definidos por curvas de Bézier quadráticas. Consequentemente, muitos sistemas gráficos modernos incluem um recurso para converter caracteres de texto em um caminho de gráficos.
+Em sistemas gráficos modernos, as fontes de texto são coleções de contornos de caracteres, geralmente definidas por curvas Bézier quadráticas. Consequentemente, muitos sistemas gráficos modernos incluem uma instalação para converter caracteres de texto em um caminho gráfico.
 
-Você já viu que você pode traçar os contornos de caracteres de texto, bem como preenchê-los. Isso permite que você exiba os contornos de caracteres com uma largura de traço específica e até mesmo um efeito de caminho, conforme descrito na [ **efeitos de caminho** ](effects.md) artigo. Mas também é possível converter uma cadeia de caracteres em um `SKPath` objeto. Isso significa que os contornos de texto podem ser usados para recorte com as técnicas descritas na [ **recorte com caminhos de regiões** ](clipping.md) artigo.
+Você já viu que pode traçar os contornos de caracteres de texto, bem como preenchê-los. Isso permite que você exiba esses contornos de caractere com uma largura de traço específica e até mesmo um efeito de caminho, conforme descrito no artigo de [**efeitos de caminho**](effects.md) . Mas também é possível converter uma cadeia de caracteres em um `SKPath` objeto. Isso significa que os contornos de texto podem ser usados para recorte com técnicas que foram descritas no artigo [**recorte com caminhos e regiões**](clipping.md) .
 
-Além de usar um efeito de caminho para traçar um contorno de caractere, você também pode criar efeitos de caminho com base em um caminho que é derivado de uma cadeia de caracteres e você pode até combinar os dois efeitos:
+Além de usar um efeito de caminho para traçar um contorno de caractere, você também pode criar efeitos de caminho que se baseiam em um caminho derivado de uma cadeia de caracteres, e você pode até mesmo combinar os dois efeitos:
 
-![](text-paths-images/pathsandtextsample.png "Efeito de caminho do texto")
+![](text-paths-images/pathsandtextsample.png "Text Path Effect")
 
-Neste artigo anterior sobre [ **efeitos de caminho**](effects.md), você viu como o [ `GetFillPath` ](xref:SkiaSharp.SKPaint.GetFillPath(SkiaSharp.SKPath,SkiaSharp.SKPath,SkiaSharp.SKRect,System.Single)) método `SKPaint` pode obter uma descrição de um caminho traçado. Você também pode usar esse método com caminhos derivados de contornos de caracteres.
+No artigo anterior sobre os [**efeitos de caminho**](effects.md), você viu como o [`GetFillPath`](xref:SkiaSharp.SKPaint.GetFillPath(SkiaSharp.SKPath,SkiaSharp.SKPath,SkiaSharp.SKRect,System.Single)) método de `SKPaint` pode obter um contorno de um caminho traçado. Você também pode usar esse método com caminhos derivados de contornos de caractere.
 
-Por fim, este artigo demonstra outra interseção de caminhos e texto: O [`DrawTextOnPath`](xref:SkiaSharp.SKCanvas.DrawTextOnPath(System.String,SkiaSharp.SKPath,System.Single,System.Single,SkiaSharp.SKPaint)) método de `SKCanvas` permite exibir uma cadeia de caracteres de texto para que a linha de base do texto siga um caminho curvo.
+Por fim, este artigo demonstra outra interseção de caminhos e texto: o [`DrawTextOnPath`](xref:SkiaSharp.SKCanvas.DrawTextOnPath(System.String,SkiaSharp.SKPath,System.Single,System.Single,SkiaSharp.SKPaint)) método de `SKCanvas` permite que você exiba uma cadeia de caracteres de texto para que a linha de base do texto siga um caminho curvo.
 
-## <a name="text-to-path-conversion"></a>Texto para a conversão de caminho
+## <a name="text-to-path-conversion"></a>Conversão de texto em caminho
 
-O [ `GetTextPath` ](xref:SkiaSharp.SKPaint.GetTextPath(System.String,System.Single,System.Single)) método `SKPaint` converte uma cadeia de caracteres para um `SKPath` objeto:
+O [`GetTextPath`](xref:SkiaSharp.SKPaint.GetTextPath(System.String,System.Single,System.Single)) método de `SKPaint` converte uma cadeia de caracteres em um `SKPath` objeto:
 
 ```csharp
 public SKPath GetTextPath (String text, Single x, Single y)
 ```
 
-O `x` e `y` argumentos indicam o ponto de partida da linha de base do lado esquerdo do texto. Eles têm o mesmo papel aqui, como mostra a `DrawText` método de `SKCanvas`. No caminho, a linha de base do lado esquerdo do texto terá as coordenadas (x, y).
+Os `x` `y` argumentos e indicam o ponto de partida da linha de base do lado esquerdo do texto. Eles desempenham a mesma função aqui como no `DrawText` método de `SKCanvas` . Dentro do caminho, a linha de base do lado esquerdo do texto terá as coordenadas (x, y).
 
-O `GetTextPath` método é um exagero, se você quiser apenas preencher ou traçar o caminho resultante. O vetor perpendicular `DrawText` método permite que você faça isso. O `GetTextPath` método é mais útil para outras tarefas que envolvem caminhos.
+O `GetTextPath` método é um exagero se você simplesmente deseja preencher ou traçar o caminho resultante. O `DrawText` método normal permite que você faça isso. O `GetTextPath` método é mais útil para outras tarefas que envolvem caminhos.
 
-Uma dessas tarefas é de recorte. O **recorte texto** página cria um caminho de recorte com base nos contornos de caracteres da palavra "Código". Esse caminho é alongado para o tamanho da página para recortar um bitmap que contém uma imagem do **recorte texto** código-fonte:
+Uma dessas tarefas é o recorte. A página de **texto de recorte** cria um caminho de recorte com base nos contornos de caractere da palavra "código". Esse caminho é ampliado para o tamanho da página para recortar um bitmap que contém uma imagem do código-fonte do **texto de recorte** :
 
-[![](text-paths-images/clippingtext-small.png "Captura de tela da página de recorte texto tripla")](text-paths-images/clippingtext-large.png#lightbox "tripla captura de tela da página de texto de recorte")
+[![](text-paths-images/clippingtext-small.png "Triple screenshot of the Clipping Text page")](text-paths-images/clippingtext-large.png#lightbox "Triple screenshot of the Clipping Text page")
 
-O [ `ClippingTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/ClippingTextPage.cs) construtor de classe carrega o bitmap que é armazenado como um recurso inserido no **mídia** pasta da solução:
+O [`ClippingTextPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/ClippingTextPage.cs) Construtor de classe carrega o bitmap que é armazenado como um recurso incorporado na pasta de **mídia** da solução:
 
 ```csharp
 public class ClippingTextPage : ContentPage
@@ -75,9 +78,9 @@ public class ClippingTextPage : ContentPage
 }
 ```
 
-O `PaintSurface` manipulador começa criando um `SKPaint` adequado para o texto do objeto. O `Typeface` estiver definida, bem como a `TextSize`, embora para este aplicativo específico a `TextSize` propriedade é puramente arbitrária. Observe também que há nenhum `Style` configuração.
+O `PaintSurface` manipulador começa criando um `SKPaint` objeto adequado para texto. A `Typeface` propriedade é definida, bem como a `TextSize` , embora para esse aplicativo específico a `TextSize` propriedade seja puramente arbitrária. Observe também que não há nenhuma `Style` configuração.
 
-O `TextSize` e `Style` configurações de propriedade não são necessárias porque isso `SKPaint` objeto é usado exclusivamente para o `GetTextPath` chamada usando a cadeia de caracteres de texto "Código". O manipulador, em seguida, mede o resultante `SKPath` de objeto e aplica-se três transformações para centralizá-la e dimensioná-lo para o tamanho da página. O caminho, em seguida, pode ser definido como o caminho de recorte:
+As `TextSize` `Style` configurações de propriedade e não são necessárias porque esse `SKPaint` objeto é usado exclusivamente para a `GetTextPath` chamada usando a cadeia de texto "código". Em seguida, o manipulador mede o `SKPath` objeto resultante e aplica três transformações para centralizá-lo e dimensioná-lo para o tamanho da página. O caminho pode ser definido como o caminho de recorte:
 
 ```csharp
 public class ClippingTextPage : ContentPage
@@ -122,13 +125,13 @@ public class ClippingTextPage : ContentPage
 }
 ```
 
-Depois que o caminho de recorte é definido, o bitmap pode ser exibido e ele será recortado para os contornos de caracteres. Observe o uso do [ `AspectFill` ](xref:SkiaSharp.SKRect.AspectFill(SkiaSharp.SKSize)) método `SKRect` que calcula um retângulo para preencher a página enquanto preserva a taxa de proporção.
+Depois que o caminho de recorte for definido, o bitmap poderá ser exibido e ele será recortado para os contornos de caractere. Observe o uso do [`AspectFill`](xref:SkiaSharp.SKRect.AspectFill(SkiaSharp.SKSize)) método do `SKRect` que calcula um retângulo para preencher a página enquanto preserva a taxa de proporção.
 
-O **efeito de caminho do texto** página converte um caractere único e comercial em um caminho para criar um efeito de caminho 1D. Um objeto de pintura com esse efeito de caminho, em seguida, é usado para traçar o contorno de uma versão maior do que mesmo caractere:
+A página de **efeito de caminho de texto** converte um único caractere de e comercial em um caminho para criar um efeito de caminho 1D. Um objeto de pintura com esse efeito de caminho é usado para traçar o contorno de uma versão maior do mesmo caractere:
 
-[![](text-paths-images/textpatheffect-small.png "Tripla captura de tela da página de texto caminho efeito")](text-paths-images/textpatheffect-large.png#lightbox "tripla captura de tela da página do efeito de caminho do texto")
+[![](text-paths-images/textpatheffect-small.png "Triple screenshot of the Text Path Effect page")](text-paths-images/textpatheffect-large.png#lightbox "Triple screenshot of the Text Path Effect page")
 
-Muito do trabalho na [ `TextPathEffectPath` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/TextPathEffectPage.cs) classe ocorre no construtor e campos. Os dois `SKPaint` objetos definidos como campos são usados para duas finalidades diferentes: O primeiro (nomeado `textPathPaint`) é usado para converter o e comercial com `TextSize` um de 50 para um caminho para o efeito de caminho 1D. A segunda (`textPaint`) é usado para exibir a versão maior do e comercial com o efeito desse caminho. Por esse motivo, o `Style` de pintura Este segundo objeto é definido como `Stroke`, mas o `StrokeWidth` propriedade não é definida porque essa propriedade não é necessária ao usar um efeito de caminho 1D:
+Grande parte do trabalho na [`TextPathEffectPath`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/TextPathEffectPage.cs) classe ocorre nos campos e no construtor. Os dois `SKPaint` objetos definidos como campos são usados para duas finalidades diferentes: o primeiro (chamado `textPathPaint` ) é usado para converter o e comercial com um `TextSize` de 50 para um caminho para o efeito de caminho 1D. O segundo ( `textPaint` ) é usado para exibir a versão maior do e comercial com esse efeito de caminho. Por esse motivo, o `Style` desse segundo objeto Paint é definido como `Stroke` , mas a `StrokeWidth` propriedade não é definida porque essa propriedade não é necessária ao usar um efeito de caminho 1D:
 
 ```csharp
 public class TextPathEffectPage : ContentPage
@@ -173,9 +176,9 @@ public class TextPathEffectPage : ContentPage
 }
 ```
 
-O construtor usa primeiro a `textPathPaint` objeto para medir o e comercial com um `TextSize` de 50. Os negativos das coordenadas de centro do retângulo, em seguida, são passados para o `GetTextPath` método para converter o texto em um caminho. O caminho resultante tem a (0, 0) no Centro de caractere, o que é ideal para um efeito de caminho 1D de ponto.
+O construtor usa primeiro o `textPathPaint` objeto para medir o e comercial com um `TextSize` de 50. Os negativos das coordenadas centrais desse retângulo são passados para o `GetTextPath` método para converter o texto em um caminho. O caminho resultante tem o ponto (0, 0) no centro do caractere, que é ideal para um efeito de caminho 1D.
 
-Talvez você ache que o `SKPathEffect` criado no final do construtor de objeto pode ser definido como o `PathEffect` propriedade de `textPaint` em vez de salva como um campo. Mas esse não tornou deve funcionar muito bem porque ele distorcida os resultados do `MeasureText` chamar no `PaintSurface` manipulador:
+Você pode imaginar que o `SKPathEffect` objeto criado no final do Construtor poderia ser definido como a `PathEffect` propriedade de `textPaint` em vez de ser salvo como um campo. Mas isso não funciona muito bem porque distorceva os resultados da `MeasureText` chamada no `PaintSurface` manipulador:
 
 ```csharp
 public class TextPathEffectPage : ContentPage
@@ -207,17 +210,17 @@ public class TextPathEffectPage : ContentPage
 }
 ```
 
-Que `MeasureText` chamada é usada para centralizar o caractere na página. Para evitar problemas, o `PathEffect` propriedade é definida como o objeto de pintura depois que o texto foi medido, mas antes de ser exibido.
+Essa `MeasureText` chamada é usada para centralizar o caractere na página. Para evitar problemas, a `PathEffect` propriedade é definida como o objeto de pintura depois que o texto é medido, mas antes de ser exibido.
 
-## <a name="outlines-of-character-outlines"></a>Contornos dos contornos de caracteres
+## <a name="outlines-of-character-outlines"></a>Contornos de contornos de caracteres
 
-Normalmente o [ `GetFillPath` ](xref:SkiaSharp.SKPaint.GetFillPath(SkiaSharp.SKPath,SkiaSharp.SKPath,SkiaSharp.SKRect,System.Single)) método `SKPaint` converte um caminho para outro, aplicando as propriedades de pintura, mais notavelmente o traço largura e o caminho em vigor. Quando usada sem efeitos de caminho, `GetFillPath` efetivamente cria um caminho que descreve o outro caminho. Isso foi demonstrado na **toque, a estrutura de tópicos, o caminho** página na [ **efeitos de caminho** ](~/xamarin-forms/user-interface/graphics/skiasharp/curves/effects.md) artigo.
+Normalmente [`GetFillPath`](xref:SkiaSharp.SKPaint.GetFillPath(SkiaSharp.SKPath,SkiaSharp.SKPath,SkiaSharp.SKRect,System.Single)) , o método de `SKPaint` converte um caminho para outro aplicando Propriedades de pintura, mais notavelmente a largura do traço e o efeito do caminho. Quando usado sem efeitos de caminho, `GetFillPath` o cria efetivamente um caminho que descreve outro caminho. Isso foi demonstrado na página **tocar para descrever o caminho** no artigo de [**efeitos de caminho**](~/xamarin-forms/user-interface/graphics/skiasharp/curves/effects.md) .
 
-Você também pode chamar `GetFillPath` no caminho retornado do `GetTextPath` , mas primeiro você pode não estar totalmente certo o que seria a aparência.
+Você também pode chamar `GetFillPath` no caminho retornado `GetTextPath` , mas, a princípio, você pode não estar totalmente certo de como seria essa aparência.
 
-O **contornos de contorno de caracteres** página demonstra a técnica. O código relevante é na `PaintSurface` manipulador do [ `CharacterOutlineOutlinesPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/CharacterOutlineOutlinesPage.cs) classe.
+A página **contornos de caracteres da estrutura de tópicos** demonstra a técnica. Todo o código relevante está no `PaintSurface` manipulador da [`CharacterOutlineOutlinesPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/CharacterOutlineOutlinesPage.cs) classe.
 
-O construtor começa criando um `SKPaint` objeto nomeado `textPaint` com um `TextSize` propriedade com base no tamanho da página. Isso é convertido em um caminho usando o `GetTextPath` método. Os argumentos de coordenadas para `GetTextPath` centralizar com eficiência o caminho na tela:
+O Construtor começa criando um `SKPaint` objeto chamado `textPaint` com uma `TextSize` propriedade com base no tamanho da página. Isso é convertido em um caminho usando o `GetTextPath` método. Os argumentos de coordenadas para `GetTextPath` centralizar efetivamente o caminho na tela:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -269,27 +272,27 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-O `PaintSurface` manipulador, em seguida, cria um novo caminho chamado `outlinePath`. Isso se torna o caminho de destino na chamada para `GetFillPath`. O `StrokeWidth` propriedade das 25 causas `outlinePath` para descrever o contorno de um caminho de 25 pixels de largura traçar os caracteres de texto. Esse caminho é exibido em vermelho com uma largura de traço de 5:
+`PaintSurface`Em seguida, o manipulador cria um novo caminho chamado `outlinePath` . Isso se torna o caminho de destino na chamada para `GetFillPath` . A `StrokeWidth` propriedade de 25 faz com que você `outlinePath` Descreva o contorno de um caminho de 25 pixels, traçando os caracteres de texto. Esse caminho é exibido em vermelho com uma largura de traço de 5:
 
-[![](text-paths-images/characteroutlineoutlines-small.png "Captura de tela da página contornos de contorno de caracteres tripla")](text-paths-images/characteroutlineoutlines-large.png#lightbox "tripla captura de tela da página contornos de contorno de caracteres")
+[![](text-paths-images/characteroutlineoutlines-small.png "Triple screenshot of the Character Outline Outlines page")](text-paths-images/characteroutlineoutlines-large.png#lightbox "Triple screenshot of the Character Outline Outlines page")
 
-Observe atentamente e você verá sobreposições em que a estrutura de tópicos do caminho faz uma curva fechada. Esses são os artefatos normais desse processo.
+Examine com mais detalhes e você verá sobreposições onde o esboço do caminho faz um canto nítido. Esses são artefatos normais desse processo.
 
 ## <a name="text-along-a-path"></a>Texto ao longo de um caminho
 
-Normalmente, o texto é exibido em uma linha de base horizontal. Texto pode ser girado para executar vertical ou diagonalmente, mas a linha de base ainda é uma linha reta.
+Normalmente, o texto é exibido em uma linha de base horizontal. O texto pode ser girado para ser executado vertical ou diagonalmente, mas a linha de base ainda é uma linha reta.
 
-Há vezes, no entanto, quando deseja que o texto a ser executado ao longo de uma curva. Essa é a finalidade do [ `DrawTextOnPath` ](xref:SkiaSharp.SKCanvas.DrawTextOnPath(System.String,SkiaSharp.SKPath,System.Single,System.Single,SkiaSharp.SKPaint)) método `SKCanvas`:
+No entanto, há ocasiões em que você deseja que o texto seja executado ao longo de uma curva. Essa é a finalidade do [`DrawTextOnPath`](xref:SkiaSharp.SKCanvas.DrawTextOnPath(System.String,SkiaSharp.SKPath,System.Single,System.Single,SkiaSharp.SKPaint)) método de `SKCanvas` :
 
 ```csharp
 public Void DrawTextOnPath (String text, SKPath path, Single hOffset, Single vOffset, SKPaint paint)
 ```
 
-O texto especificado no primeiro argumento é feito para ser executado ao longo do caminho especificado como o segundo argumento. Você pode começar o texto em um deslocamento do início do caminho com o `hOffset` argumento. Normalmente, o caminho forma a linha de base do texto: Os ascendentes de texto estão em um lado do caminho, e os descendentes de texto estão no outro. Mas você pode deslocar a linha de base do texto do caminho com o `vOffset` argumento.
+O texto especificado no primeiro argumento é criado para ser executado ao longo do caminho especificado como o segundo argumento. Você pode iniciar o texto em um deslocamento desde o início do caminho com o `hOffset` argumento. Normalmente, o caminho forma a linha de base do texto: os ascendentes de texto estão em um lado do caminho e os descendentes de texto estão no outro. Mas você pode deslocar a linha de base de texto do caminho com o `vOffset` argumento.
 
-Esse método não tem nenhum recurso para fornecer orientação sobre como o `TextSize` propriedade de `SKPaint` para tornar o texto dimensionado perfeitamente para executados desde o início do caminho até o fim. Às vezes, você pode descobrir esse tamanho de texto por conta própria. Outras vezes, você precisará usar funções de medição de caminho a ser descrito no próximo artigo na [ **informações de caminho e enumeração**](information.md).
+Esse método não tem nenhum recurso para fornecer orientação sobre como definir a `TextSize` propriedade de `SKPaint` para tornar o texto dimensionado perfeitamente para ser executado desde o início do caminho até o fim. Às vezes, você pode descobrir esse tamanho de texto por conta própria. Outras vezes, você precisará usar funções de medição de caminho a serem descritas no próximo artigo sobre [**informações de caminho e enumeração**](information.md).
 
-O **Circular texto** programa quebra o texto em torno de um círculo. É fácil determinar a circunferência de um círculo, portanto, é fácil dimensionar o texto caiba exatamente. O `PaintSurface` manipulador do [ `CircularTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/CircularTextPage.cs) classe calcula um raio de um círculo com base no tamanho da página. Torna-se de que o círculo `circularPath`:
+O programa de **texto circular** encapsula o texto em um círculo. É fácil determinar a circunferência de um círculo, portanto, é fácil dimensionar o texto para se ajustar exatamente. O `PaintSurface` manipulador da [`CircularTextPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/CircularTextPage.cs) classe calcula um raio de um círculo com base no tamanho da página. Esse círculo se torna `circularPath` :
 
 ```csharp
 public class CircularTextPage : ContentPage
@@ -322,13 +325,13 @@ public class CircularTextPage : ContentPage
 }
 ```
 
-O `TextSize` propriedade de `textPaint` , em seguida, é ajustado para que a largura do texto corresponda a circunferência do círculo:
+A `TextSize` propriedade de `textPaint` é então ajustada para que a largura do texto corresponda à circunferência do círculo:
 
-[![](text-paths-images/circulartext-small.png "Captura de tela da página de texto Circular tripla")](text-paths-images/circulartext-large.png#lightbox "tripla captura de tela da página de texto Circular")
+[![](text-paths-images/circulartext-small.png "Triple screenshot of the Circular Text page")](text-paths-images/circulartext-large.png#lightbox "Triple screenshot of the Circular Text page")
 
-O texto em si foi escolhido como um pouco circular também: A palavra "Circle" é o assunto da frase e o objeto de uma frase preposicional.
+O texto em si foi escolhido como um pouco circular também: a palavra "Circle" é o assunto da frase e o objeto de uma frase preposicional.
 
 ## <a name="related-links"></a>Links relacionados
 
-- [APIs de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [APIs do SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

@@ -1,18 +1,21 @@
 ---
-title: Introdução ao desenvolvimento de aplicativos empresariais
-description: Este capítulo fornece uma introdução ao desenvolvimento de aplicativos empresariais e apresenta o aplicativo móvel eShopOnContainers.
-ms.prod: xamarin
-ms.assetid: cbce0659-fa03-447a-86ec-140438143230
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 08/07/2017
-ms.openlocfilehash: 9bde1140f6590daa4b1d40a8b56edec314bfc66d
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+title: ''
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 12582c567a439cf4e0236724bd373c3508f18748
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "70760233"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84139345"
 ---
 # <a name="introduction-to-enterprise-app-development"></a>Introdução ao desenvolvimento de aplicativos empresariais
 
@@ -36,7 +39,7 @@ Uma solução eficaz para esses desafios é particionar um aplicativo em compone
 
 No entanto, há muitos problemas que devem ser resolvidos ao particionar um aplicativo em componentes discretos e livremente acoplados. Elas incluem:
 
-- Decidindo como fornecer uma separação clara de preocupações entre os controles de interface do usuário e sua lógica. Uma das decisões mais importantes ao criar um aplicativo do Xamarin. Forms Enterprise é estabelecer a lógica de negócios em arquivos code-behind ou criar uma separação clara de preocupações entre os controles de interface do usuário e sua lógica, para tornar o aplicativo mais passível de manutenção e de teste. Para obter mais informações, consulte [Model-View-ViewModel](~/xamarin-forms/enterprise-application-patterns/mvvm.md).
+- Decidindo como fornecer uma separação clara de preocupações entre os controles de interface do usuário e sua lógica. Uma das decisões mais importantes ao criar um Xamarin.Forms aplicativo empresarial é colocar a lógica de negócios em arquivos code-behind ou criar uma separação limpa das preocupações entre os controles de interface do usuário e sua lógica, para tornar o aplicativo mais passível de manutenção e de teste. Para obter mais informações, consulte [Model-View-ViewModel](~/xamarin-forms/enterprise-application-patterns/mvvm.md).
 - Determinando se um contêiner de injeção de dependência deve ser usado. Contêineres de injeção de dependência reduzem a dependência entre objetos fornecendo um recurso para construir instâncias de classes com suas dependências injetadas e gerenciar seu tempo de vida com base na configuração do contêiner. Para obter mais informações, consulte [injeção de dependência](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md).
 - Escolher entre a plataforma fornecida eventos e a comunicação menos rígida baseada em mensagens entre componentes que são inconvenientes de vincular por referências de objeto e tipo. Para obter mais informações, consulte Introdução à [comunicação entre componentes livremente acoplados](~/xamarin-forms/enterprise-application-patterns/communicating-between-loosely-coupled-components.md).
 - Decidindo como navegar entre páginas, incluindo como invocar a navegação e onde a lógica de navegação deve residir. Para obter mais informações, veja [Navegação](~/xamarin-forms/enterprise-application-patterns/navigation.md).
@@ -45,7 +48,7 @@ No entanto, há muitos problemas que devem ser resolvidos ao particionar um apli
 - Determinando como acessar dados remotos de serviços da Web, incluindo como recuperar dados de maneira confiável e como armazenar dados em cache. Para obter mais informações, consulte [acessando dados remotos](~/xamarin-forms/enterprise-application-patterns/accessing-remote-data.md).
 - Decidindo como testar o aplicativo. Para obter mais informações, consulte [testes de unidade](~/xamarin-forms/enterprise-application-patterns/unit-testing.md).
 
-Este guia fornece orientação sobre esses problemas e se concentra nos padrões básicos e na arquitetura para criar um aplicativo empresarial multiplataforma usando o Xamarin. Forms. As diretrizes visam ajudar a produzir código adaptável, passível de manutenção e de teste, abordando cenários comuns de desenvolvimento de aplicativos empresariais Xamarin. Forms e separando as preocupações de apresentação, lógica de apresentação e entidades por meio de suporte para o Padrão Model-View-ViewModel (MVVM).
+Este guia fornece orientação sobre esses problemas e se concentra nos padrões básicos e na arquitetura para criar um aplicativo empresarial de plataforma cruzada usando o Xamarin.Forms . As diretrizes visam ajudar a produzir código adaptável, passível de manutenção e de teste, abordando Xamarin.Forms cenários comuns de desenvolvimento de aplicativos empresariais e separando as preocupações da apresentação, da lógica de apresentação e das entidades por meio do suporte para o padrão MVVM (Model-View-ViewModel).
 
 ## <a name="sample-application"></a>Aplicativo de exemplo
 
@@ -70,7 +73,7 @@ O aplicativo de exemplo é fornecido com três aplicativos cliente:
 
 - Um aplicativo MVC desenvolvido com ASP.NET Core.
 - Um aplicativo de página única (SPA) desenvolvido com angular 2 e typescript. Essa abordagem para aplicativos Web evita executar uma viagem de ida e volta ao servidor com cada operação.
-- Um aplicativo móvel desenvolvido com Xamarin. Forms, que dá suporte a iOS, Android e a Plataforma Universal do Windows (UWP).
+- Um aplicativo móvel desenvolvido com Xamarin.Forms o, que dá suporte a Ios, Android e a plataforma universal do Windows (UWP).
 
 Para obter informações sobre os aplicativos Web, consulte [arquitetando e desenvolvendo aplicativos Web modernos com ASP.NET Core e Microsoft Azure](https://aka.ms/WebAppEbook).
 
@@ -85,9 +88,9 @@ Esses serviços de back-end são implementados como microservices usando ASP.NET
 
 Para obter informações sobre a implementação dos serviços de back-end, consulte [microservices do .net: arquitetura para aplicativos .net em contêineres](https://aka.ms/microservicesebook).
 
-### <a name="mobile-app"></a>Aplicativo móvel
+### <a name="mobile-app"></a>Aplicativo Móvel
 
-Este guia concentra-se na criação de aplicativos empresariais de plataforma cruzada usando Xamarin. Forms e usa o aplicativo móvel eShopOnContainers como exemplo. A Figura 1-2 mostra as páginas do aplicativo móvel eShopOnContainers que fornecem a funcionalidade descrita anteriormente.
+Este guia se concentra na criação de aplicativos empresariais de plataforma cruzada usando Xamarin.Forms o e usa o aplicativo móvel eShopOnContainers como um exemplo. A Figura 1-2 mostra as páginas do aplicativo móvel eShopOnContainers que fornecem a funcionalidade descrita anteriormente.
 
 [![](introduction-images/screenshots.png "The eShopOnContainers mobile app")](introduction-images/screenshots-large.png#lightbox "The eShopOnContainers mobile app")
 
@@ -95,14 +98,14 @@ Este guia concentra-se na criação de aplicativos empresariais de plataforma cr
 
 O aplicativo móvel consome os serviços de back-end fornecidos pelo aplicativo de referência eShopOnContainers. No entanto, ele pode ser configurado para consumir dados de serviços fictícios para aqueles que desejam evitar a implantação dos serviços de back-end.
 
-O aplicativo móvel eShopOnContainers exercita a seguinte funcionalidade do Xamarin. Forms:
+O aplicativo móvel eShopOnContainers exercita a seguinte Xamarin.Forms funcionalidade:
 
 - XAML
 - Controles
 - Associações
 - Conversores
 - Estilos
-- Animations
+- Animações
 - Comandos
 - Comportamentos
 - Gatilhos
@@ -111,7 +114,7 @@ O aplicativo móvel eShopOnContainers exercita a seguinte funcionalidade do Xama
 - MessagingCenter
 - Controles personalizados
 
-Para obter mais informações sobre essa funcionalidade, consulte a [documentação do xamarin. Forms](~/xamarin-forms/index.yml)e [criando aplicativos móveis com Xamarin. Forms](https://aka.ms/xamebook).
+Para obter mais informações sobre essa funcionalidade, consulte a [ Xamarin.Forms documentação](~/xamarin-forms/index.yml)e [criando aplicativos móveis com Xamarin.Forms ](https://aka.ms/xamebook)o.
 
 Além disso, os testes de unidade são fornecidos para algumas das classes no aplicativo móvel eShopOnContainers.
 
@@ -119,7 +122,7 @@ Além disso, os testes de unidade são fornecidos para algumas das classes no ap
 
 A solução de aplicativo móvel eShopOnContainers organiza o código-fonte e outros recursos em projetos. Todos os projetos usam pastas para organizar o código-fonte e outros recursos em categorias. A tabela a seguir descreve os projetos que compõem o aplicativo móvel eShopOnContainers:
 
-|Projeto|Descrição|
+|Project|Descrição|
 |--- |--- |
 |eShopOnContainers. Core|Este projeto é o projeto de PCL (biblioteca de classes portátil) que contém o código compartilhado e a interface do usuário compartilhada.|
 |eShopOnContainers. Droid|Este projeto mantém o código específico do Android e é o ponto de entrada para o aplicativo do Android.|
@@ -130,7 +133,7 @@ A solução de aplicativo móvel eShopOnContainers organiza o código-fonte e ou
 |eShopOnContainers. TestRunner. Windows|Este projeto é o executor de teste Plataforma Universal do Windows para o projeto eShopOnContainers. UnitTests.|
 |eShopOnContainers. UnitTests|Este projeto contém testes de unidade para o projeto eShopOnContainers. Core.|
 
-As classes do aplicativo móvel eShopOnContainers podem ser usadas novamente em qualquer aplicativo Xamarin. Forms com pouca ou nenhuma modificação.
+As classes do aplicativo móvel eShopOnContainers podem ser usadas novamente em qualquer Xamarin.Forms aplicativo com pouca ou nenhuma modificação.
 
 ##### <a name="eshoponcontainerscore-project"></a>Projeto eShopOnContainers. Core
 
@@ -138,18 +141,18 @@ O projeto eShopOnContainers. Core PCL contém as seguintes pastas:
 
 |Pasta|Descrição|
 |--- |--- |
-|Animations|Contém classes que permitem que as animações sejam consumidas em XAML.|
+|Animações|Contém classes que permitem que as animações sejam consumidas em XAML.|
 |Comportamentos|Contém comportamentos que são expostos para exibir classes.|
 |Controles|Contém controles personalizados usados pelo aplicativo.|
 |Conversores|Contém conversores de valor que aplicam lógica personalizada a uma associação.|
-|Efeitos|Contém a classe `EntryLineColorEffect`, que é usada para alterar a cor da borda de controles de `Entry` específicos.|
-|Exceções|Contém o `ServiceAuthenticationException` personalizado.|
-|Extensões|Contém métodos de extensão para as classes `VisualElement` e `IEnumerable`.|
+|Efeitos|Contém a `EntryLineColorEffect` classe, que é usada para alterar a cor da borda de `Entry` controles específicos.|
+|Exceções|Contém o personalizado `ServiceAuthenticationException` .|
+|Extensões|Contém métodos de extensão para `VisualElement` as `IEnumerable` classes e.|
 |Auxiliares|Contém classes auxiliares para o aplicativo.|
 |Modelos|Contém as classes de modelo para o aplicativo.|
-|Propriedades|Contém `AssemblyInfo.cs`, um arquivo de metadados do assembly .NET.|
+|Propriedades|Contém `AssemblyInfo.cs` , um arquivo de metadados do assembly .net.|
 |Serviços|Contém interfaces e classes que implementam serviços que são fornecidos ao aplicativo.|
-|Gatilhos|Contém o gatilho `BeginAnimation`, que é usado para invocar uma animação em XAML.|
+|Gatilhos|Contém o `BeginAnimation` gatilho, que é usado para invocar uma animação em XAML.|
 |Validações|Contém classes envolvidas na validação de entrada de dados.|
 |ViewModels|Contém a lógica do aplicativo que é exposta a páginas.|
 |Exibições|Contém as páginas do aplicativo.|
@@ -160,7 +163,7 @@ Os projetos de plataforma contêm implementações de efeito, implementações d
 
 ## <a name="summary"></a>Resumo
 
-As ferramentas e plataformas de desenvolvimento de aplicativo móvel de plataforma cruzada do Xamarin fornecem uma solução abrangente para aplicativos cliente móveis B2E, B2B e B2C, fornecendo a capacidade de compartilhar código em todas as plataformas de destino (iOS, Android e Windows) e ajudar a reduzir o custo total de propriedade. Os aplicativos podem compartilhar sua interface do usuário e o código da lógica do aplicativo, mantendo a aparência da plataforma nativa.
+As ferramentas e plataformas de desenvolvimento de aplicativo móvel entre plataformas do Xamarin fornecem uma solução abrangente para aplicativos cliente móveis B2E, B2B e B2C, fornecendo a capacidade de compartilhar código em todas as plataformas de destino (iOS, Android e Windows) e ajudar a reduzir o custo total de propriedade. Os aplicativos podem compartilhar sua interface do usuário e o código da lógica do aplicativo, mantendo a aparência da plataforma nativa.
 
 Os desenvolvedores de aplicativos empresariais enfrentam vários desafios que podem alterar a arquitetura do aplicativo durante o desenvolvimento. Portanto, é importante criar um aplicativo para que ele possa ser modificado ou estendido ao longo do tempo. A criação de tal adaptabilidade pode ser difícil, mas normalmente envolve o particionamento de um aplicativo em componentes discretos e livremente acoplados que podem ser facilmente integrados em um aplicativo.
 

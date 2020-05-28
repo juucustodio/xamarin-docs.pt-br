@@ -1,22 +1,25 @@
 ---
-title: O que é o Xamarin?
-description: Este artigo apresenta o Xamarin e as bibliotecas relacionadas.
-ms.prod: xamarin
-ms.assetid: 33C83E13-F3E5-17B4-6512-207F3D3C5AB6
-ms.custom: video
-author: profexorgeek
-ms.author: jusjohns
-ms.date: 09/16/2019
-ms.openlocfilehash: 34763804e9833224721ea32f9c7e6200dd5faba7
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: ''
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.custom: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: a9a25cff30b9dfbed44e60faeae2f577d07940fc
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "75607874"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84139211"
 ---
 # <a name="what-is-xamarin"></a>O que é o Xamarin?
 
-[![Capturas de tela do aplicativo Exemplo Xamarin no iOS e Android](what-is-xamarin-images/xamarin-app-cropped.png)](what-is-xamarin-images/xamarin-app.png#lightbox)
+[![Capturas de tela do aplicativo Xamarin de exemplo no iOS e no Android](what-is-xamarin-images/xamarin-app-cropped.png)](what-is-xamarin-images/xamarin-app.png#lightbox)
 
 O Xamarin é uma plataforma de software livre para a criação de aplicativos modernos e de alto desempenho para iOS, Android e Windows com o .NET. O Xamarin é uma camada de abstração que gerencia a comunicação de código compartilhado com o código de plataforma subjacente. O Xamarin é executado em um ambiente gerenciado que fornece conveniências, como alocação de memória e coleta de lixo.
 
@@ -53,11 +56,11 @@ O Xamarin combina as capacidades de plataformas nativas e adiciona vários recur
 1. **Construções de Linguagem Moderna** – os aplicativos Xamarin são escritos em C#, uma linguagem moderna que inclui aprimoramentos significativos com relação a Objective-C e Java, como *Recursos de Linguagem Dinâmica, constructos funcionais como lambdas, LINQ, programação paralela, genéricos e muito mais.
 1. **BCL (Biblioteca de Classes Base) robusta** – os aplicativos Xamarin usam a BCL do .NET, uma grande coleção de classes com recursos abrangentes e simplificados, como suporte eficiente a XML, Banco de Dados, Serialização, E/S, Cadeia de Caracteres e Rede, e muito mais. O código C# existente pode ser compilado para uso em um aplicativo, que fornece acesso a milhares de bibliotecas que adicionam funcionalidade além da BCL.
 1. **IDE (ambiente de desenvolvimento integrado) moderno** – o Xamarin usa o Visual Studio, um IDE moderno que inclui recursos como preenchimento automático de código, um sistema sofisticado de gerenciamento de projetos e soluções, uma biblioteca de modelos de projetos abrangente, um controle do código-fonte integrado e muito mais.
-1. **Suporte multiplataforma móvel**: o Xamarin oferece suporte sofisticado multiplataforma para as três principais plataformas: iOS, Android e Windows. Os aplicativos podem ser escritos para compartilhar até 90% de seu código e a biblioteca Xamarin.Essentials oferece uma API unificada para acessar recursos comuns em todas as três plataformas. O código compartilhado pode reduzir significativamente os custos de desenvolvimento e o tempo de colocação no mercado para desenvolvedores móveis.
+1. **Suporte multiplataforma móvel**: o Xamarin oferece suporte sofisticado multiplataforma para as três principais plataformas: iOS, Android e Windows. Os aplicativos podem ser gravados para compartilhar até 90% de seu código e Xamarin.Essentials oferecem uma API unificada para acessar recursos comuns em todas as três plataformas. O código compartilhado pode reduzir significativamente os custos de desenvolvimento e o tempo de colocação no mercado para desenvolvedores móveis.
 
 ### <a name="xamarinandroid"></a>Xamarin.Android
 
-[![Diagrama de arquitetura Xamarin.Android](what-is-xamarin-images/android-architecture-cropped.png)](what-is-xamarin-images/android-architecture.png#lightbox)
+[![Diagrama de arquitetura do Xamarin. Android](what-is-xamarin-images/android-architecture-cropped.png)](what-is-xamarin-images/android-architecture.png#lightbox)
 
 Os aplicativos Xamarin.Android compilam de C# para **IL (linguagem intermediária)** que, em seguida, passa por compilação **JIT (Just-In-Time)** em um assembly nativo quando o aplicativo é iniciado. Os aplicativos Xamarin.Android são executados no ambiente de execução Mono, lado a lado com a máquina virtual ART (Runtime do Android). O Xamarin fornece associações .NET para os namespaces Android.* e Java.*. O ambiente de execução Mono chama esses namespaces por meio de **MCW (Wrappers Chamáveis Gerenciados)** e fornece **ACW (Wrappers Chamáveis Android)** para o ART, permitindo que ambos os ambientes invoquem o código entre si.
 
@@ -65,15 +68,15 @@ Para obter mais informações, confira a [Arquitetura do Xamarin.Android](~/andr
 
 ### <a name="xamarinios"></a>Xamarin.iOS
 
-[![Diagrama de arquitetura Xamarin.iOS](what-is-xamarin-images/ios-architecture-cropped.png)](what-is-xamarin-images/ios-architecture.png#lightbox)
+[![Diagrama de arquitetura do Xamarin. iOS](what-is-xamarin-images/ios-architecture-cropped.png)](what-is-xamarin-images/ios-architecture.png#lightbox)
 
 Os aplicativos Xamarin.iOS são totalmente compilados **AOT (Ahead-of-Time)** de C# para o código do assembly ARM nativo. O Xamarin usa **Seletores** para expor Objective-C para C# gerenciado e **Registradores** para expor código C# gerenciado para Objective-C. Os seletores e registradores coletivamente são chamados de "associações" e permitem a comunicação de Objective-C e C#.
 
 Para obter mais informações, confira a [Arquitetura do Xamarin.iOS](~/ios/internals/architecture.md).
 
-### <a name="xamarinessentials"></a>Xamarin.Essentials
+### Xamarin.Essentials
 
-O Xamarin.Essentials é uma biblioteca que fornece APIs multiplataforma para recursos de dispositivo nativo. Assim como o Xamarin, o Xamarin.Essentials é uma abstração que simplifica o processo de acesso a funcionalidades nativas. Alguns exemplos de funcionalidades fornecidas pelo Xamarin.Essentials incluem:
+Xamarin.Essentialsé uma biblioteca que fornece APIs de plataforma cruzada para recursos de dispositivo nativo. Como o Xamarin, Xamarin.Essentials é uma abstração que simplifica o processo de acesso à funcionalidade nativa. Alguns exemplos de funcionalidade fornecida pelo Xamarin.Essentials incluem:
 
 - Informações do dispositivo
 - Sistema de arquivos
@@ -84,9 +87,9 @@ O Xamarin.Essentials é uma biblioteca que fornece APIs multiplataforma para rec
 
 Para obter mais informações, confira [Xamarin.Essentials](~/essentials/index.md).
 
-### <a name="xamarinforms"></a>Xamarin.Forms
+### Xamarin.Forms
 
-O Xamarin.Forms é uma estrutura de interface do usuário de software livre. O Xamarin.Forms permite que os desenvolvedores compilem aplicativos iOS, Android e Windows usando uma única base de código compartilhada. O Xamarin.Forms permite que os desenvolvedores criem interfaces do usuário em XAML com code-behind em C#. Essas interfaces do usuário são renderizadas como controles nativos de alto desempenho em cada plataforma. Alguns exemplos de recursos fornecidos pelo Xamarin.Forms incluem:
+Xamarin.Formsé uma estrutura de interface do usuário de código-fonte aberto. Xamarin.Formspermite que os desenvolvedores compilem aplicativos iOS, Android e Windows a partir de uma única base de código compartilhada. Xamarin.Formspermite que os desenvolvedores criem interfaces de usuário em XAML com code-behind em C#. Essas interfaces do usuário são renderizadas como controles nativos de alto desempenho em cada plataforma. Alguns exemplos de recursos fornecidos pelo Xamarin.Forms incluem:
 
 - Idioma da interface do usuário XAML
 - Associação de dados
@@ -100,7 +103,7 @@ Para obter mais informações, confira [Xamarin.Forms](~/xamarin-forms/index.yml
 
 Os guias a seguir ajudarão você a criar seu primeiro aplicativo usando o Xamarin:
 
-- [Introdução ao Xamarin.Forms](~/xamarin-forms/index.yml)
+- [Introdução aoXamarin.Forms](~/xamarin-forms/index.yml)
 - [Introdução ao Xamarin.Android](~/android/index.yml)
 - [Introdução ao Xamarin.iOS](~/ios/index.yml)
 - [Introdução ao Xamarin.Mac](~/mac/index.yml)

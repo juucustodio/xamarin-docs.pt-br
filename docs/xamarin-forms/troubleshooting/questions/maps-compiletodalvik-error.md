@@ -1,22 +1,25 @@
 ---
-title: Por que meu Xamarin. Forms. Maps projeto do Android falha com COMPILETODALVIK erro de nível superior inesperado?
-ms.topic: troubleshooting
-ms.prod: xamarin
-ms.assetid: C0251EB1-F509-47AD-98D6-846AF46425E5
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 04/25/2017
-ms.openlocfilehash: 2872cc7b54e26d07b388f08d650048e8d3861930
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+title: Por que o meu Xamarin.Forms . Mapeia o projeto do Android falha com um erro de nível superior inesperado de COMPILETODALVIK?
+ms.topic: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: e29535e71cb77b05da41c043c6fd932ae4f5ce95
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70759961"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84135844"
 ---
-# <a name="why-does-my-xamarinformsmaps-android-project-fail-with-compiletodalvik-unexpected-top-level-error"></a>Por que meu Xamarin. Forms. Maps projeto do Android falha com COMPILETODALVIK erro de nível superior inesperado?
+# <a name="why-does-my-xamarinformsmaps-android-project-fail-with-compiletodalvik-unexpected-top-level-error"></a>Por que o meu Xamarin.Forms . Mapeia o projeto do Android falha com um erro de nível superior inesperado de COMPILETODALVIK?
 
-Esse erro pode ser visto no painel de erro de Visual Studio para Mac ou na janela de saída da compilação do Visual Studio; em projetos do Android usando Xamarin. Forms. Maps.
+Esse erro pode ser visto no painel de erro de Visual Studio para Mac ou na janela de saída da compilação do Visual Studio; em projetos do Android usando Xamarin.Forms . Los.
 
 Isso é normalmente resolvido aumentando o tamanho do heap do Java para seu projeto Xamarin. Android. Siga estas etapas para aumentar o tamanho do heap:
 

@@ -1,22 +1,25 @@
 ---
-title: Associando fontes de vídeo ao player
-description: Este artigo explica como associar fontes de vídeo ao player de vídeo usando o Xamarin.Forms.
-ms.prod: xamarin
-ms.assetid: 504E0C7E-051A-4AF2-B654-BAB4D0957928
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 02/12/2018
-ms.openlocfilehash: 3dfdb83f99e7b15866abcc4980473ddf075dff69
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: ''
+description: Este artigo explica como associar fontes de vídeo ao Player de vídeo usando o Xamarin.Forms .
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: c02764d6160bb8ce2481a3cf67e357933d25934f
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "70771774"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84133725"
 ---
 # <a name="binding-video-sources-to-the-player"></a>Associando fontes de vídeo ao player
 
-[![Baixar](~/media/shared/download.png) amostra Baixar a amostra](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
+[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
 
 Quando a propriedade `Source` da exibição `VideoPlayer` for definida como um novo arquivo de vídeo, o vídeo existente interromperá a execução e o novo vídeo será iniciado. Isso é demonstrado pela página **Selecionar vídeo da Web** do exemplo [**VideoPlayerDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos). A página inclui um `ListView` com os títulos dos três vídeos referenciados no arquivo **App.xaml**:
 
@@ -75,7 +78,7 @@ namespace VideoPlayerDemos
 
 Quando a página é carregada pela primeira vez, nenhum item é selecionado no `ListView`; portanto, é necessário selecionar um para que o vídeo comece a ser reproduzido:
 
-[![Selecione vídeo da Web](source-bindings-images/selectwebvideo-small.png "Selecione vídeo da Web")](source-bindings-images/selectwebvideo-large.png#lightbox "Selecione vídeo da Web")
+[![Selecionar vídeo da Web](source-bindings-images/selectwebvideo-small.png "Selecionar vídeo da Web")](source-bindings-images/selectwebvideo-large.png#lightbox "Selecionar vídeo da Web")
 
 A propriedade `Source` de `VideoPlayer` é apoiada por uma propriedade associável, o que significa que ela pode ser o destino de uma associação de dados. Isso é demonstrado pela página **Associar a VideoPlayer**. A marcação no arquivo **BindToVideoPlayer.xaml** é compatível com a seguinte classe que encapsula um título de um vídeo e um objeto `VideoSource` correspondente:
 

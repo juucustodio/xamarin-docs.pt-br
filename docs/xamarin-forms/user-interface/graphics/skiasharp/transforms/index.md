@@ -1,91 +1,94 @@
 ---
-title: Transformações de SkiaSharp
-description: Este artigo explora as transformações para exibir gráficos de SkiaSharp em aplicativos xamarin. Forms e demonstra isso com o código de exemplo.
-ms.prod: xamarin
-ms.technology: xamarin-skiasharp
-ms.assetid: E9BE322E-ECB3-4395-AFE4-4474A0F25551
-author: davidbritch
-ms.author: dabritch
-ms.date: 03/10/2017
-ms.openlocfilehash: d9c153f8da44c525b8851afb48682bd7a14a8c47
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+title: ''
+description: Este artigo explora as transformações para exibir gráficos SkiaSharp em Xamarin.Forms aplicativos e demonstra isso com o código de exemplo.
+ms.prod: ''
+ms.technology: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: e20ea5d1d3f813b04a927601fbe1180ff39ed176
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70770500"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84140186"
 ---
 # <a name="skiasharp-transforms"></a>Transformações de SkiaSharp
 
-[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
-_Saiba mais sobre as transformações de exibição de gráficos de SkiaSharp_
+_Saiba mais sobre transformações para exibir gráficos SkiaSharp_
 
-SkiaSharp dá suporte a transformações de tradicional de gráficos que são implementadas como métodos do [ `SKCanvas` ](xref:SkiaSharp.SKCanvas) objeto. Matematicamente, transformações alteram as coordenadas e tamanhos que você especificar na `SKCanvas` desenho funções como objetos gráficos são renderizados. Transformações geralmente são convenientes para desenho de gráficos repetitivos ou animação. Algumas técnicas &mdash; , como girar texto ou bitmaps &mdash; não são possíveis sem o uso de transformações.
+O SkiaSharp dá suporte a transformações gráficas tradicionais que são implementadas como métodos do [`SKCanvas`](xref:SkiaSharp.SKCanvas) objeto. Matematicamente, as transformações alteram as coordenadas e os tamanhos que você especifica em `SKCanvas` funções de desenho à medida que os objetos gráficos são renderizados. As transformações costumam ser convenientes para desenhar gráficos repetitivos ou animações. Algumas técnicas &mdash; , como bitmaps girados ou texto, &mdash; não são possíveis sem o uso de transformações.
 
-Transformações de SkiaSharp compatíveis com as seguintes operações:
+As transformações do SkiaSharp dão suporte às seguintes operações:
 
-- *Traduzir* em coordenadas de deslocamento de um local para outro
-- *Escala* para aumentar ou diminuir as coordenadas e tamanhos
-- *Girar* girar coordenadas em torno de um ponto
-- *Distorcer* deslocar as coordenadas horizontal ou verticalmente para que um retângulo se torna um paralelogramo
+- *Converter* para coordenadas de deslocamento de um local para outro
+- *Dimensionar* para aumentar ou diminuir as coordenadas e os tamanhos
+- *Girar* para girar coordenadas em um ponto
+- *Distorcer* para as coordenadas de deslocamento horizontal ou verticalmente para que um retângulo se torne um paralelogramo
 
-Eles são conhecidos como *afim* transforma. Transformações afins sempre preservam linhas paralelas e nunca causam uma coordenada ou tamanho para se tornar infinito. Um quadrado nunca é transformado em algo diferente de um paralelogramo, e um círculo nunca é transformado em algo diferente de uma elipse.
+Elas são conhecidas como transformações *afim* . As transformações afim sempre preservam as linhas paralelas e nunca fazem com que uma coordenada ou tamanho se torne infinito. Um quadrado nunca é transformado em nada além de um paralelogramo, e um círculo nunca é transformado em nada além de uma elipse.
 
-SkiaSharp também dá suporte a transformações não afins (também chamado de *projective* ou *perspectiva* transforma) com base em uma matriz de transformação de 3 por 3 padrão. Uma transformação não afim permite que um quadrado ser transformadas em qualquer diamante convexo, que é uma figura de quatro lados com todos os ângulos interior menor que 180 graus. Transformações não afins podem fazer com que as coordenadas ou tamanhos para se tornar infinito, mas elas são vitais para efeitos 3D.
+O SkiaSharp também dá suporte a transformações não-afim (também chamadas de transformações *projetadas* ou de *perspectiva* ) com base em uma matriz de transformação padrão 3-por-3. Uma transformação não afim permite que um quadrado seja transformado em qualquer diamante convexa, que é uma figura de quatro lados com todos os ângulos interiores inferiores a 180 graus. As transformações não afim podem fazer com que coordenadas ou tamanhos se tornem infinitas, mas são vitais para efeitos 3D.
 
-## <a name="differences-between-skiasharp-and-xamarinforms-transforms"></a>Diferenças entre SkiaSharp e transformações do xamarin. Forms
+## <a name="differences-between-skiasharp-and-xamarinforms-transforms"></a>Diferenças entre SkiaSharp e Xamarin.Forms transformações
 
-Xamarin. Forms também oferece suporte a transformações que são semelhantes do SkiaSharp. O xamarin. Forms [ `VisualElement` ](xref:Xamarin.Forms.VisualElement) classe define as propriedades de transformação a seguir:
+Xamarin.Formstambém oferece suporte a transformações semelhantes às do SkiaSharp. A Xamarin.Forms [`VisualElement`](xref:Xamarin.Forms.VisualElement) classe define as seguintes propriedades de transformação:
 
-- [`TranslationX`](xref:Xamarin.Forms.VisualElement.TranslationX) e [`TranslationY`](xref:Xamarin.Forms.VisualElement.TranslationY)
+- [`TranslationX`](xref:Xamarin.Forms.VisualElement.TranslationX)e[`TranslationY`](xref:Xamarin.Forms.VisualElement.TranslationY)
 - [`Scale`](xref:Xamarin.Forms.VisualElement.Scale)
-- [`Rotation`](xref:Xamarin.Forms.VisualElement.Rotation), [ `RotationX` ](xref:Xamarin.Forms.VisualElement.RotationX), e [`RotationY`](xref:Xamarin.Forms.VisualElement.RotationY)
+- [`Rotation`](xref:Xamarin.Forms.VisualElement.Rotation), [`RotationX`](xref:Xamarin.Forms.VisualElement.RotationX) e[`RotationY`](xref:Xamarin.Forms.VisualElement.RotationY)
 
-O `RotationX` e `RotationY` propriedades são as transformações de perspectiva que criar efeitos 3D aparentes.
+As `RotationX` `RotationY` Propriedades e são transformações em perspectiva que criam efeitos quase 3D.
 
-Há várias diferenças essenciais entre transformações de SkiaSharp e transformações do xamarin. Forms:
+Há várias diferenças cruciais entre transformações e transformações de SkiaSharp Xamarin.Forms :
 
-A primeira diferença é que as transformações de SkiaSharp são aplicadas a todo `SKCanvas` do objeto enquanto o xamarin. Forms são aplicadas ao indivíduo `VisualElement` derivados. (Você pode aplicar as transformações de xamarin. Forms para o `SKCanvasView` do objeto em si, pois `SKCanvasView` deriva `VisualElement`, mas dentro dessa `SKCanvasView`, aplicam as transformações SkiaSkarp.)
+A primeira diferença é que as transformações de SkiaSharp são aplicadas ao `SKCanvas` objeto inteiro, enquanto as Xamarin.Forms transformações são aplicadas a `VisualElement` derivações individuais. (Você pode aplicar as Xamarin.Forms transformações ao `SKCanvasView` próprio objeto, porque `SKCanvasView` deriva de `VisualElement` , mas dentro disso `SKCanvasView` , as transformações de SkiaSkarp se aplicam.)
 
-As transformações de SkiaSharp são relativas ao canto superior esquerdo dos `SKCanvas` enquanto as transformações de xamarin. Forms são relativas ao canto superior esquerdo do `VisualElement` ao qual eles são aplicados. Essa diferença é importante ao aplicar o dimensionamento e rotação transforma porque essas transformações são sempre relativas a um ponto específico.
+As transformações SkiaSharp são relativas ao canto superior esquerdo do `SKCanvas` enquanto as Xamarin.Forms transformações são relativas ao canto superior esquerdo do `VisualElement` ao qual elas são aplicadas. Essa diferença é importante ao aplicar transformações de dimensionamento e rotação porque essas transformações são sempre relativas a um ponto específico.
 
-A realmente grande diferença é que são de transformações de SKiaSharp *métodos* enquanto as transformações do xamarin. Forms são *propriedades*. Essa é uma diferença semântica além da diferença sintática: Transformações de SkiaSharp executam uma operação enquanto as transformações do Xamarin. Forms definem um estado. Transformações de SkiaSharp se aplicam a objetos de gráficos subsequentemente desenhado, mas não a objetos de gráficos são desenhados antes que a transformação é aplicada. Em contraste, uma transformação do xamarin. Forms aplica-se a um elemento de renderizado anteriormente assim que a propriedade está definida. Transformações de SkiaSharp são cumulativas, como os métodos são chamados; Transformações de xamarin. Forms são substituídas quando a propriedade é definida com outro valor.
+A diferença realmente grande é que as transformações de SKiaSharp são *métodos* , enquanto as Xamarin.Forms transformações são *Propriedades*. Essa é uma diferença semântica além da diferença sintática: as transformações SkiaSharp executam uma operação enquanto as Xamarin.Forms transformações definem um estado. As transformações de SkiaSharp se aplicam a objetos gráficos desenhados subsequentemente, mas não a objetos gráficos que são desenhados antes da aplicação da transformação. Por outro lado, uma Xamarin.Forms transformação se aplica a um elemento renderizado anteriormente assim que a propriedade é definida. As transformações de SkiaSharp são cumulativas, pois os métodos são chamados; Xamarin.Formsas transformações são substituídas quando a propriedade é definida com outro valor.
 
-Todos os programas de exemplo nesta seção são exibidos na **transformações de SkiaSharp** seção o [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) programa. Código-fonte pode ser encontrado na [ **transforma** ](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms) pasta da solução.
+Todos os programas de exemplo nesta seção aparecem na seção **transformações de SkiaSharp** do programa [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) . O código-fonte pode ser encontrado na pasta [**transformações**](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms) da solução.
 
-## <a name="the-translate-transformtranslatemd"></a>[A transformação de conversão](translate.md)
+## <a name="the-translate-transform"></a>[A transformação de conversão](translate.md)
 
-Saiba como usar a transformação de conversão para deslocar SkiaSharp gráficos.
+Saiba como usar a transformação converter para deslocar gráficos SkiaSharp.
 
-## <a name="the-scale-transformscalemd"></a>[A transformação de escala](scale.md)
+## <a name="the-scale-transform"></a>[A transformação de escala](scale.md)
 
-Descubra a transformação de escala de SkiaSharp para dimensionar objetos para vários tamanhos.
+Descubra a transformação escala de SkiaSharp para dimensionar objetos para vários tamanhos.
 
-## <a name="the-rotate-transformrotatemd"></a>[A transformação de rotação](rotate.md)
+## <a name="the-rotate-transform"></a>[A transformação de rotação](rotate.md)
 
-Explore os efeitos e animações possíveis com a transformação de rotação de SkiaSharp.
+Explore os efeitos e animações possíveis com a transformação SkiaSharp Rotate.
 
-## <a name="the-skew-transformskewmd"></a>[A transformação de distorção](skew.md)
+## <a name="the-skew-transform"></a>[A transformação de distorção](skew.md)
 
-Veja como a transformação de distorção pode criar o objeto de gráfico inclinado.
+Veja como a transformação de distorção pode criar um objeto gráfico inclinado.
 
-## <a name="matrix-transformsmatrixmd"></a>[Transformações de matriz](matrix.md)
+## <a name="matrix-transforms"></a>[Transformações de matriz](matrix.md)
 
 Aprofunde-se em transformações de SkiaSharp com a matriz de transformação versátil.
 
-## <a name="touch-manipulationstouchmd"></a>[Manipulações de toque](touch.md)
+## <a name="touch-manipulations"></a>[Manipulações de toque](touch.md)
 
-Transforma a matriz de uso para implementar as manipulações de toque para arrastar, dimensionamento e rotação.
+Use transformações de matriz para implementar manipulações de toque para arrastar, dimensionar e girar.
 
-## <a name="non-affine-transformsnon-affinemd"></a>[Transformações não afins](non-affine.md)
+## <a name="non-affine-transforms"></a>[Transformações não afins](non-affine.md)
 
-Vá além de oridinary com efeitos de transformação não afim.
+Vá além do oridinary com efeitos de transformação não afim.
 
-## <a name="3d-rotation3d-rotationmd"></a>[Rotação 3D](3d-rotation.md)
+## <a name="3d-rotation"></a>[Rotação 3D](3d-rotation.md)
 
-Use transformações não afins para girar objetos 2D no espaço 3D.
+Use transformações não afim para girar objetos 2D no espaço 3D.
 
 ## <a name="related-links"></a>Links relacionados
 
-- [APIs de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [APIs do SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

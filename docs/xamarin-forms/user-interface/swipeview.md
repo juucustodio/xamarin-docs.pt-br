@@ -1,30 +1,33 @@
 ---
-title: SwipeView Xamarin. Forms
-description: O SwipeView Xamarin. Forms é um controle de contêiner que encapsula um item de conteúdo e fornece itens de menu de contexto que são revelados por um gesto de passar o dedo.
-ms.prod: xamarin
-ms.assetId: 602456B5-701B-4948-B454-B1F31283F1CF
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 03/26/2020
-ms.openlocfilehash: 992e4dd1a2b2a1d1a4f0b76dadf4704241486415
-ms.sourcegitcommit: 520ea9d52266f745d2c09642bac21f64a56f8c31
+title: Xamarin.FormsSwipeView
+description: O Xamarin.Forms SwipeView é um controle de contêiner que envolve um item de conteúdo e fornece itens de menu de contexto que são revelados por um gesto de passar o dedo.
+ms.prod: ''
+ms.assetId: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 9c9d0621cdd5bb85690771d8bdfd0060b6a352cb
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82859102"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84136247"
 ---
-# <a name="xamarinforms-swipeview"></a>SwipeView Xamarin. Forms
+# <a name="xamarinforms-swipeview"></a>Xamarin.FormsSwipeView
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
 
-[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-swipeviewdemos/)
+[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-swipeviewdemos/)
 
 O `SwipeView` é um controle de contêiner que envolve um item de conteúdo e fornece itens de menu de contexto que são revelados por um gesto de passar o dedo:
 
 [![Captura de tela do SwipeView passando itens em um CollectionView, no iOS e no Android](swipeview-images/swipeview-collectionview.png "SwipeView passar itens")](swipeview-images/swipeview-collectionview-large.png#lightbox "SwipeView passar itens")
 
-`SwipeView`está disponível no Xamarin. Forms 4,4. No entanto, ele é experimental e só pode ser usado adicionando a linha de código a seguir à `AppDelegate` sua classe no Ios, à `MainActivity` sua classe no Android ou à sua `App` classe no UWP, antes de `Forms.Init`chamar:
+`SwipeView`está disponível em Xamarin.Forms 4,4. No entanto, ele é experimental e só pode ser usado adicionando a linha de código a seguir à sua `AppDelegate` classe no Ios, à sua `MainActivity` classe no Android ou à sua `App` classe no UWP, antes de chamar `Forms.Init` :
 
 ```csharp
 Forms.SetFlags("SwipeView_Experimental");
@@ -32,10 +35,10 @@ Forms.SetFlags("SwipeView_Experimental");
 
 `SwipeView` define as propriedades a seguir:
 
-- `LeftItems`, do tipo `SwipeItems`, que representa os itens de passar o dedo que podem ser invocados quando o controle é transformado do lado esquerdo.
-- `RightItems`, do tipo `SwipeItems`, que representa os itens do dedo que podem ser invocados quando o controle é transdedodo do lado direito.
-- `TopItems`, do tipo `SwipeItems`, que representa os itens do dedo que podem ser invocados quando o controle é transdedodo de cima para baixo.
-- `BottomItems`, do tipo `SwipeItems`, que representa os itens de passar o dedo que podem ser invocados quando o controle é transformado da parte inferior para cima.
+- `LeftItems`, do tipo `SwipeItems` , que representa os itens de passar o dedo que podem ser invocados quando o controle é transformado do lado esquerdo.
+- `RightItems`, do tipo `SwipeItems` , que representa os itens do dedo que podem ser invocados quando o controle é transdedodo do lado direito.
+- `TopItems`, do tipo `SwipeItems` , que representa os itens do dedo que podem ser invocados quando o controle é transdedodo de cima para baixo.
+- `BottomItems`, do tipo `SwipeItems` , que representa os itens de passar o dedo que podem ser invocados quando o controle é transformado da parte inferior para cima.
 
 Essas propriedades são apoiadas por [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objetos, o que significa que eles podem ser destinos de associações de dados e com estilo.
 
@@ -43,21 +46,21 @@ Além disso, o `SwipeView` herda a [`Content`](xref:Xamarin.Forms.ContentView.Co
 
 A `SwipeView` classe também define quatro eventos:
 
-- `SwipeStarted`é acionado quando um dedo é iniciado. O `SwipeStartedEventArgs` objeto que acompanha esse evento tem uma `SwipeDirection` Propriedade, do tipo. `SwipeDirection`
-- `SwipeChanging`é acionado à medida que o dedo se move. O `SwipeChangingEventArgs` objeto que acompanha esse evento tem `SwipeDirection` uma propriedade, do tipo `SwipeDirection`e uma `Offset` Propriedade do tipo. `double`
-- `SwipeEnded`é acionado quando um dedo termina. O `SwipeEndedEventArgs` objeto que acompanha esse evento tem uma `SwipeDirection` Propriedade, do tipo. `SwipeDirection`
+- `SwipeStarted`é acionado quando um dedo é iniciado. O `SwipeStartedEventArgs` objeto que acompanha esse evento tem uma `SwipeDirection` propriedade, do tipo `SwipeDirection` .
+- `SwipeChanging`é acionado à medida que o dedo se move. O `SwipeChangingEventArgs` objeto que acompanha esse evento tem uma `SwipeDirection` propriedade, do tipo `SwipeDirection` e uma `Offset` Propriedade do tipo `double` .
+- `SwipeEnded`é acionado quando um dedo termina. O `SwipeEndedEventArgs` objeto que acompanha esse evento tem uma `SwipeDirection` propriedade, do tipo `SwipeDirection` .
 - `CloseRequested`é acionado quando os itens do dedo são fechados.
 
-Além disso, `SwipeView` o `Open` inclui `Close` os métodos e, que programaticamente abrem e fecham os itens do dedo, respectivamente.
+Além disso, `SwipeView` `Open` o inclui `Close` os métodos e, que programaticamente abrem e fecham os itens do dedo, respectivamente.
 
 > [!NOTE]
-> `SwipeView`o tem uma plataforma específica no iOS e no Android, que controla a transição usada ao abrir um `SwipeView`. Para obter mais informações, consulte [modo de transição de toque SwipeView no](~/xamarin-forms/platform/ios/swipeview-swipetransitionmode.md) [modo de transição de toque do SwipeView e do Ios no Android](~/xamarin-forms/platform/android/swipeview-swipetransitionmode.md).
+> `SwipeView`o tem uma plataforma específica no iOS e no Android, que controla a transição usada ao abrir um `SwipeView` . Para obter mais informações, consulte [modo de transição de toque SwipeView no](~/xamarin-forms/platform/ios/swipeview-swipetransitionmode.md) [modo de transição de toque do SwipeView e do Ios no Android](~/xamarin-forms/platform/android/swipeview-swipetransitionmode.md).
 
 ## <a name="create-a-swipeview"></a>Criar um SwipeView
 
-Um `SwipeView` deve definir o conteúdo que envolve `SwipeView` o encapsulamento e os itens do dedo que são revelados pelo gesto de passar o dedo. Os itens do dedo são um ou mais `SwipeItem` objetos que são colocados em `SwipeView` uma das quatro coleções direcionais- `LeftItems`, `RightItems`, `TopItems`ou `BottomItems`.
+Um `SwipeView` deve definir o conteúdo que `SwipeView` envolve o encapsulamento e os itens do dedo que são revelados pelo gesto de passar o dedo. Os itens do dedo são um ou mais `SwipeItem` objetos que são colocados em uma das quatro `SwipeView` coleções direcionais- `LeftItems` , `RightItems` , `TopItems` ou `BottomItems` .
 
-O exemplo a seguir mostra como criar uma `SwipeView` instância de em XAML:
+O exemplo a seguir mostra como criar uma instância de `SwipeView` em XAML:
 
 ```xaml
 <SwipeView>
@@ -127,7 +130,7 @@ SwipeView swipeView = new SwipeView
 };
 ```
 
-Neste exemplo, o `SwipeView` conteúdo é um [`Grid`](xref:Xamarin.Forms.Grid) que contém: [`Label`](xref:Xamarin.Forms.Label)
+Neste exemplo, o `SwipeView` conteúdo é um [`Grid`](xref:Xamarin.Forms.Grid) que contém [`Label`](xref:Xamarin.Forms.Label) :
 
 [![Captura de tela do conteúdo do SwipeView, no iOS e no Android](swipeview-images/swipeview-content.png "Conteúdo do SwipeView")](swipeview-images/swipeview-content-large.png#lightbox "Conteúdo do SwipeView")
 
@@ -137,29 +140,29 @@ Os itens do dedo são usados para executar ações no `SwipeView` conteúdo e s�
 
 Por padrão, um item de dedo é executado quando ele é tocado pelo usuário. No entanto, esse comportamento pode ser alterado. Para obter mais informações, consulte [modo de toque](#swipe-mode).
 
-Depois que um item do dedo é executado, os itens do dedo ficam ocultos `SwipeView` e o conteúdo é exibido novamente. No entanto, esse comportamento pode ser alterado. Para obter mais informações, consulte [comportamento do dedo](#swipe-behavior).
+Depois que um item do dedo é executado, os itens do dedo ficam ocultos e o `SwipeView` conteúdo é exibido novamente. No entanto, esse comportamento pode ser alterado. Para obter mais informações, consulte [comportamento do dedo](#swipe-behavior).
 
 > [!NOTE]
 > Passe o dedo sobre o conteúdo e passe o dedo para que os itens possam ser colocados embutidos ou definidos como recursos.
 
 ## <a name="swipe-items"></a>Passar os itens
 
-As `LeftItems` `BottomItems` coleções `RightItems`, `TopItems`, e são do tipo `SwipeItems`. A `SwipeItems` classe define as seguintes propriedades:
+As `LeftItems` `RightItems` coleções,, e `TopItems` `BottomItems` são do tipo `SwipeItems` . A `SwipeItems` classe define as seguintes propriedades:
 
-- `Mode`, do tipo `SwipeMode`, que indica o efeito de uma interação de passar o dedo. Para obter mais informações sobre o modo de toque, consulte [modo de toque](#swipe-mode).
-- `SwipeBehaviorOnInvoked`, do tipo `SwipeBehaviorOnInvoked`, que indica como um `SwipeView` se comporta depois que um item de dedo é invocado. Para obter mais informações sobre o comportamento do dedo, consulte [comportamento do dedo](#swipe-behavior).
+- `Mode`, do tipo `SwipeMode` , que indica o efeito de uma interação de passar o dedo. Para obter mais informações sobre o modo de toque, consulte [modo de toque](#swipe-mode).
+- `SwipeBehaviorOnInvoked`, do tipo `SwipeBehaviorOnInvoked` , que indica como um `SwipeView` se comporta depois que um item de dedo é invocado. Para obter mais informações sobre o comportamento do dedo, consulte [comportamento do dedo](#swipe-behavior).
 
 Essas propriedades são apoiadas por [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objetos, o que significa que eles podem ser destinos de associações de dados e com estilo.
 
 Cada item do dedo é definido como um `SwipeItem` objeto que é colocado em uma das quatro `SwipeItems` coleções direcionais. A `SwipeItem` classe deriva da [`MenuItem`](xref:Xamarin.Forms.MenuItem) classe e adiciona os seguintes membros:
 
-- Uma `BackgroundColor` Propriedade, do tipo `Color`, que define a cor do plano de fundo do item do dedo. Essa propriedade é apoiada por uma propriedade vinculável.
+- Uma `BackgroundColor` propriedade, do tipo `Color` , que define a cor do plano de fundo do item do dedo. Essa propriedade é apoiada por uma propriedade vinculável.
 - Um `Invoked` evento, que é acionado quando o item do dedo é executado.
 
 > [!IMPORTANT]
-> A [`MenuItem`](xref:Xamarin.Forms.MenuItem) classe define várias propriedades, incluindo `Command`, `CommandParameter` `IconImageSource`, e `Text`. Essas propriedades podem ser definidas em um `SwipeItem` objeto para definir sua aparência e para definir um `ICommand` que é executado quando o item do dedo é invocado. Para obter mais informações, consulte [Xamarin. Forms MenuItem](~/xamarin-forms/user-interface/menuitem.md).
+> A [`MenuItem`](xref:Xamarin.Forms.MenuItem) classe define várias propriedades, incluindo `Command` , `CommandParameter` , `IconImageSource` e `Text` . Essas propriedades podem ser definidas em um `SwipeItem` objeto para definir sua aparência e para definir um `ICommand` que é executado quando o item do dedo é invocado. Para obter mais informações, consulte [ Xamarin.Forms MenuItem](~/xamarin-forms/user-interface/menuitem.md).
 
-O exemplo a seguir mostra `SwipeItem` dois objetos na `LeftItems` coleção de um `SwipeView`:
+O exemplo a seguir mostra dois `SwipeItem` objetos na `LeftItems` coleção de um `SwipeView` :
 
 ```xaml
 <SwipeView>
@@ -179,20 +182,20 @@ O exemplo a seguir mostra `SwipeItem` dois objetos na `LeftItems` coleção de u
 </SwipeView>
 ```
 
-A aparência de cada `SwipeItem` um é definida por uma combinação das `Text`propriedades `IconImageSource`, e `BackgroundColor` :
+A aparência de cada `SwipeItem` um é definida por uma combinação das `Text` `IconImageSource` Propriedades, e `BackgroundColor` :
 
 [![Captura de tela de itens de deslize do SwipeView, no iOS e no Android](swipeview-images/swipeview-swipeitems.png "SwipeView passar itens")](swipeview-images/swipeview-swipeitems-large.png#lightbox "SwipeView passar itens")
 
 Quando um `SwipeItem` é tocado, seu `Invoked` evento é acionado e manipulado por seu manipulador de eventos registrado. Como alternativa, a `Command` propriedade pode ser definida como uma `ICommand` implementação que será executada quando o `SwipeItem` for invocado.
 
 > [!NOTE]
-> Quando a aparência de um `SwipeItem` é definida somente usando as `Text` propriedades `IconImageSource` ou, o conteúdo é sempre centralizado.
+> Quando a aparência de um `SwipeItem` é definida somente usando as `Text` `IconImageSource` Propriedades ou, o conteúdo é sempre centralizado.
 
 Além de definir o dedo de itens como `SwipeItem` objetos, também é possível definir exibições de item de toque personalizado. Para obter mais informações, consulte [Personalizar itens do dedo](#custom-swipe-items).
 
 ## <a name="swipe-direction"></a>Direção do dedo
 
-`SwipeView`dá suporte a quatro direções de toque diferentes, com a direção do dedo sendo definida pela `SwipeItems` coleção direcional `SwipeItem` à qual os objetos são adicionados. Cada direção do dedo pode conter seus próprios itens de dedo. Por exemplo, o exemplo a seguir mostra `SwipeView` um cujos itens de passe do dedo dependem da direção do dedo:
+`SwipeView`dá suporte a quatro direções de toque diferentes, com a direção do dedo sendo definida pela `SwipeItems` coleção direcional à `SwipeItem` qual os objetos são adicionados. Cada direção do dedo pode conter seus próprios itens de dedo. Por exemplo, o exemplo a seguir mostra um `SwipeView` cujos itens de passe do dedo dependem da direção do dedo:
 
 ```xaml
 <SwipeView>
@@ -220,12 +223,12 @@ Além de definir o dedo de itens como `SwipeItem` objetos, também é possível 
 </SwipeView>
 ```
 
-Neste exemplo, o conteúdo `SwipeView` pode ser transdedodo para a direita ou para a esquerda. Passar o dedo para a direita mostrará o item de dedo de **exclusão** , enquanto o dedo para a esquerda mostrará os itens de dedo de **compartilhamento** e **favoritos** .
+Neste exemplo, o `SwipeView` conteúdo pode ser transdedodo para a direita ou para a esquerda. Passar o dedo para a direita mostrará o item de dedo de **exclusão** , enquanto o dedo para a esquerda mostrará os itens de dedo de **compartilhamento** e **favoritos** .
 
 > [!WARNING]
-> Somente uma instância de uma coleção `SwipeItems` direcional pode ser definida por vez em um `SwipeView`. Portanto, você não pode ter `LeftItems` duas definições em `SwipeView`um.
+> Somente uma instância de uma `SwipeItems` coleção direcional pode ser definida por vez em um `SwipeView` . Portanto, você não pode ter duas `LeftItems` definições em um `SwipeView` .
 
-Os `SwipeStarted`eventos `SwipeChanging`, e `SwipeEnded` relatam a direção do dedo por `SwipeDirection` meio da propriedade nos argumentos do evento. Essa propriedade é do tipo `SwipeDirection`, que é uma enumeração que consiste em quatro membros:
+Os `SwipeStarted` `SwipeChanging` eventos, e `SwipeEnded` relatam a direção do dedo por meio da `SwipeDirection` Propriedade nos argumentos do evento. Essa propriedade é do tipo `SwipeDirection` , que é uma enumeração que consiste em quatro membros:
 
 - `Right`indica que um toque à direita ocorreu.
 - `Left`indica que ocorreu um dedo à esquerda.
@@ -234,14 +237,14 @@ Os `SwipeStarted`eventos `SwipeChanging`, e `SwipeEnded` relatam a direção do 
 
 ## <a name="swipe-mode"></a>Modo de toque
 
-A `SwipeItems` classe tem uma `Mode` Propriedade, que indica o efeito de uma interação de passar o dedo. Essa propriedade deve ser definida como um dos membros `SwipeMode` da enumeração:
+A `SwipeItems` classe tem uma `Mode` propriedade, que indica o efeito de uma interação de passar o dedo. Essa propriedade deve ser definida como um dos `SwipeMode` membros da enumeração:
 
 - `Reveal`indica que um dedo revela os itens do dedo. Este é o valor padrão da propriedade `SwipeItems.Mode`.
 - `Execute`indica que um toque executa os itens do dedo.
 
-No modo de revelação, o usuário passa um `SwipeView` dedo para abrir um menu que consiste em um ou mais itens de toque e deve tocar explicitamente em um item de dedo para executá-lo. Depois que o item do dedo for executado, os itens do dedo serão fechados e `SwipeView` o conteúdo será exibido novamente. No modo de execução, o usuário passa um `SwipeView` dedo para abrir um menu que consiste em um ou mais itens de passar o dedo, que são executados automaticamente. Após a execução, os itens do dedo são fechados e `SwipeView` o conteúdo é exibido novamente.
+No modo de revelação, o usuário passa um dedo `SwipeView` para abrir um menu que consiste em um ou mais itens de toque e deve tocar explicitamente em um item de dedo para executá-lo. Depois que o item do dedo for executado, os itens do dedo serão fechados e o `SwipeView` conteúdo será exibido novamente. No modo de execução, o usuário passa um dedo `SwipeView` para abrir um menu que consiste em um ou mais itens de passar o dedo, que são executados automaticamente. Após a execução, os itens do dedo são fechados e o `SwipeView` conteúdo é exibido novamente.
 
-O exemplo a seguir mostra `SwipeView` um configurado para usar o modo de execução:
+O exemplo a seguir mostra um `SwipeView` configurado para usar o modo de execução:
 
 ```xaml
 <SwipeView>
@@ -257,17 +260,17 @@ O exemplo a seguir mostra `SwipeView` um configurado para usar o modo de execuç
 </SwipeView>
 ```
 
-Neste exemplo, o `SwipeView` conteúdo pode ser transdedodo direito para revelar o item do dedo, que é executado imediatamente. Após a execução, `SwipeView` o conteúdo será exibido novamente.
+Neste exemplo, o `SwipeView` conteúdo pode ser transdedodo direito para revelar o item do dedo, que é executado imediatamente. Após a execução, o `SwipeView` conteúdo será exibido novamente.
 
 ## <a name="swipe-behavior"></a>Comportamento do dedo
 
-A `SwipeItems` classe tem uma `SwipeBehaviorOnInvoked` Propriedade, que indica como um `SwipeView` se comporta depois que um item de dedo é invocado. Essa propriedade deve ser definida como um dos membros `SwipeBehaviorOnInvoked` da enumeração:
+A `SwipeItems` classe tem uma `SwipeBehaviorOnInvoked` propriedade, que indica como um `SwipeView` se comporta depois que um item de dedo é invocado. Essa propriedade deve ser definida como um dos `SwipeBehaviorOnInvoked` membros da enumeração:
 
-- `Auto`indica que no modo de revelação `SwipeView` o é fechado depois que um item de dedo é invocado e, `SwipeView` no modo de execução, o permanece aberto depois que um item de dedo é invocado. Este é o valor padrão da propriedade `SwipeItems.SwipeBehaviorOnInvoked`.
+- `Auto`indica que no modo de revelação o `SwipeView` é fechado depois que um item de dedo é invocado e, no modo de execução, o `SwipeView` permanece aberto depois que um item de dedo é invocado. Este é o valor padrão da propriedade `SwipeItems.SwipeBehaviorOnInvoked`.
 - `Close`indica que o `SwipeView` fecha depois que um item de dedo é invocado.
 - `RemainOpen`indica que o `SwipeView` permanece aberto depois que um item de dedo é invocado.
 
-O exemplo a seguir mostra `SwipeView` um configurado para permanecer aberto depois que um item de dedo é invocado:
+O exemplo a seguir mostra um `SwipeView` configurado para permanecer aberto depois que um item de dedo é invocado:
 
 ```xaml
 <SwipeView>
@@ -289,16 +292,16 @@ O exemplo a seguir mostra `SwipeView` um configurado para permanecer aberto depo
 
 ## <a name="custom-swipe-items"></a>Itens do dedo personalizado
 
-Itens de passe do dedo personalizados podem ser definidos `SwipeItemView` com o tipo. A `SwipeItemView` classe deriva da [`ContentView`](xref:Xamarin.Forms.ContentView) classe e adiciona as seguintes propriedades:
+Itens de passe do dedo personalizados podem ser definidos com o `SwipeItemView` tipo. A `SwipeItemView` classe deriva da [`ContentView`](xref:Xamarin.Forms.ContentView) classe e adiciona as seguintes propriedades:
 
-- `Command`, do tipo `ICommand`, que é executado quando um item de dedo é tocado.
+- `Command`, do tipo `ICommand` , que é executado quando um item de dedo é tocado.
 - `CommandParameter`, do tipo `object`, que é o parâmetro passado para `Command`.
 
 Essas propriedades são apoiadas por [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objetos, o que significa que eles podem ser destinos de associações de dados e com estilo.
 
-A `SwipeItemView` classe também define um `Invoked` evento que é disparado quando o item é tocado, `Command` depois que o é executado.
+A `SwipeItemView` classe também define um `Invoked` evento que é disparado quando o item é tocado, depois que o `Command` é executado.
 
-O exemplo a seguir mostra `SwipeItemView` um objeto na `LeftItems` coleção de um `SwipeView`:
+O exemplo a seguir mostra um `SwipeItemView` objeto na `LeftItems` coleção de um `SwipeView` :
 
 ```xaml
 <SwipeView>
@@ -322,20 +325,20 @@ O exemplo a seguir mostra `SwipeItemView` um objeto na `LeftItems` coleção de 
 </SwipeView>
 ```
 
-Neste exemplo `SwipeItemView` , o inclui um [`StackLayout`](xref:Xamarin.Forms.StackLayout) que contém um [`Entry`](xref:Xamarin.Forms.Entry) e um. [`Label`](xref:Xamarin.Forms.Label) Depois que o usuário insere a entrada `Entry`no, o restante do `SwipeViewItem` pode ser tocado, o que executa `ICommand` o definido pela `SwipeItemView.Command` propriedade.
+Neste exemplo, o `SwipeItemView` inclui um [`StackLayout`](xref:Xamarin.Forms.StackLayout) que contém um [`Entry`](xref:Xamarin.Forms.Entry) e um [`Label`](xref:Xamarin.Forms.Label) . Depois que o usuário insere a entrada no `Entry` , o restante do `SwipeViewItem` pode ser tocado, o que executa o `ICommand` definido pela `SwipeItemView.Command` propriedade.
 
 ## <a name="open-and-close-a-swipeview-programmatically"></a>Abrir e fechar um SwipeView programaticamente
 
-`SwipeView`inclui `Open` os `Close` métodos e, que programaticamente abrem e fecham os itens do dedo, respectivamente.
+`SwipeView`inclui `Open` `Close` os métodos e, que programaticamente abrem e fecham os itens do dedo, respectivamente.
 
-O `Open` método requer um `OpenSwipeItem` argumento para especificar a direção da qual `SwipeView` o será aberto. A `OpenSwipeItem` enumeração tem quatro membros:
+O `Open` método requer um `OpenSwipeItem` argumento para especificar a direção da qual o `SwipeView` será aberto. A `OpenSwipeItem` enumeração tem quatro membros:
 
 - `LeftItems`, que indica que o `SwipeView` será aberto da esquerda, para revelar os itens do dedo na `LeftItems` coleção.
 - `TopItems`, que indica que o `SwipeView` será aberto na parte superior, para revelar os itens do dedo na `TopItems` coleção.
 - `RightItems`, que indica que o `SwipeView` será aberto da direita, para revelar os itens do dedo na `RightItems` coleção.
 - `BottomItems`, que indica que o `SwipeView` será aberto na parte inferior, para revelar os itens do dedo na `BottomItems` coleção.
 
-Dado um `SwipeView` nomeado `swipeView`, o exemplo a seguir mostra como abrir um `SwipeView` para revelar os itens do dedo na `LeftItems` coleção:
+Dado um `SwipeView` nomeado `swipeView` , o exemplo a seguir mostra como abrir um `SwipeView` para revelar os itens do dedo na `LeftItems` coleção:
 
 ```csharp
 swipeView.Open(OpenSwipeItem.LeftItems);
@@ -348,15 +351,15 @@ swipeView.Close();
 ```
 
 > [!NOTE]
-> Quando o `Close` método é invocado, `CloseRequested` o evento é acionado.
+> Quando o `Close` método é invocado, o `CloseRequested` evento é acionado.
 
 ## <a name="disable-a-swipeview"></a>Desabilitar um SwipeView
 
-Um aplicativo pode inserir um estado no qual o toque de um item de conteúdo não é uma operação válida. Nesses casos, o `SwipeView` pode ser desabilitado definindo sua `IsEnabled` Propriedade como. `false` Isso impedirá que os usuários possam passar o dedo no conteúdo para revelar os itens do dedo.
+Um aplicativo pode inserir um estado no qual o toque de um item de conteúdo não é uma operação válida. Nesses casos, o `SwipeView` pode ser desabilitado definindo sua `IsEnabled` propriedade como `false` . Isso impedirá que os usuários possam passar o dedo no conteúdo para revelar os itens do dedo.
 
-Além disso, ao definir a `Command` propriedade de um `SwipeItem` ou `SwipeItemView`, o `CanExecute` delegado de `ICommand` pode ser especificado para habilitar ou desabilitar o item de deslize.
+Além disso, ao definir a `Command` propriedade de um `SwipeItem` ou `SwipeItemView` , o `CanExecute` delegado de `ICommand` pode ser especificado para habilitar ou desabilitar o item de deslize.
 
 ## <a name="related-links"></a>Links relacionados
 
 - [SwipeView (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-swipeviewdemos/)
-- [MenuItem do Xamarin.Forms](~/xamarin-forms/user-interface/menuitem.md)
+- [Xamarin.FormsMenuItem](~/xamarin-forms/user-interface/menuitem.md)

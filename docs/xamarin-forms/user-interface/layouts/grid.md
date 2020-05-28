@@ -1,24 +1,27 @@
 ---
-title: Grade do Xamarin. Forms
-description: A grade Xamarin. Forms é um layout que organiza seus filhos em linhas e colunas de células.
-ms.prod: xamarin
-ms.assetid: 762B1802-D185-494C-B643-74EED55882FE
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 05/15/2020
-ms.openlocfilehash: 4f1d9d0f2d597018b9832d918bbec3f0b2594773
-ms.sourcegitcommit: bc0c1740aa0708459729c0e671ab3ff7de3e2eee
+title: Xamarin.FormsGrade
+description: A Xamarin.Forms grade é um layout que organiza seus filhos em linhas e colunas de células.
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: c4e63d6c1701d9eb247ecb7c52188e5dbc045934
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83425856"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84138067"
 ---
-# <a name="xamarinforms-grid"></a>Grade do Xamarin. Forms
+# <a name="xamarinforms-grid"></a>Xamarin.FormsGrade
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-griddemos)
 
-[![Grade do Xamarin. Forms](grid-images/layouts.png "Grade do Xamarin. Forms")](grid-images/layouts-large.png#lightbox "Grade do Xamarin. Forms")
+[![Xamarin.FormsGrade](grid-images/layouts.png "[! Parar. Grade não-LOC (Xamarin. Forms)]")](grid-images/layouts-large.png#lightbox "[! Parar. Grade não-LOC (Xamarin. Forms)]")
 
 O [`Grid`](xref:Xamarin.Forms.Grid) é um layout que organiza seus filhos em linhas e colunas, que podem ter tamanhos proporcionais ou absolutos. Por padrão, um `Grid` contém uma linha e uma coluna. Além disso, um `Grid` pode ser usado como um layout pai que contém outros layouts filho.
 
@@ -735,6 +738,6 @@ public class ColorSlidersGridPageCS : ContentPage
 ## <a name="related-links"></a>Links relacionados
 
 - [Demonstrações em grade (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-griddemos)
-- [Opções de layout no Xamarin. Forms](layout-options.md)
-- [Escolha um layout do Xamarin. Forms](choose-layout.md)
-- [Aprimorar o desempenho do aplicativo Xamarin.Forms](~/xamarin-forms/deploy-test/performance.md)
+- [Opções de layout emXamarin.Forms](layout-options.md)
+- [Escolher um Xamarin.Forms layout](choose-layout.md)
+- [Melhorar o Xamarin.Forms desempenho do aplicativo](~/xamarin-forms/deploy-test/performance.md)

@@ -1,51 +1,54 @@
 ---
-title: Bancos de dados locais do Xamarin.Forms
-description: O Xamarin.Forms dá suporte a aplicativos controlados por banco de dados usando o mecanismo de banco de dados SQLite, que torna possível carregar e salvar objetos em código compartilhado. Este artigo descreve como os aplicativos Xamarin.Forms podem ler e gravar dados em um banco de dados SQLite local usando o SQLite.Net.
-ms.prod: xamarin
-ms.assetid: F687B24B-7DF0-4F8E-A21A-A9BB507480EB
-ms.technology: xamarin-forms
-author: profexorgeek
-ms.author: jusjohns
-ms.date: 12/05/2019
-ms.openlocfilehash: 2369afc693940d83971a43877da363e2c66b31b2
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: Xamarin.FormsBancos de dados locais
+description: Xamarin.Formsdá suporte a aplicativos controlados por banco de dados usando o mecanismo de banco de dados SQLite, que possibilita carregar e salvar objetos no código compartilhado. Este artigo descreve como Xamarin.Forms os aplicativos podem ler e gravar dados em um banco de dados SQLite local usando o SQLite.net.
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 04d813baae5796da68ea27389df33738af5cde3e
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80992398"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84130995"
 ---
-# <a name="xamarinforms-local-databases"></a>Bancos de dados locais do Xamarin.Forms
+# <a name="xamarinforms-local-databases"></a>Xamarin.FormsBancos de dados locais
 
-[![Baixar](~/media/shared/download.png) amostra Baixar a amostra](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo)
+[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo)
 
-O mecanismo de banco de dados SQLite permite que os aplicativos Xamarin.Forms carreguem e salvem objetos de dados em código compartilhado. O aplicativo de exemplo usa uma tabela de banco de dados SQLite para armazenar todos os itens. Este artigo descreve como usar SQLite.Net em código compartilhado para armazenar e recuperar informações em um banco de dados local.
+O mecanismo de banco de dados SQLite permite que Xamarin.Forms os aplicativos carreguem e salvem objetos de dados em código compartilhado. O aplicativo de exemplo usa uma tabela de banco de dados SQLite para armazenar itens de tarefas. Este artigo descreve como usar o SQLite.Net em código compartilhado para armazenar e recuperar informações em um banco de dados local.
 
-[![Capturas de tela do aplicativo Todolist no iOS e Android](databases-images/todo-list-sml.png)](databases-images/todo-list.png#lightbox "Aplicativo Todolist no iOS e Android")
+[![Capturas de tela do aplicativo ToDoList no iOS e Android](databases-images/todo-list-sml.png)](databases-images/todo-list.png#lightbox "Aplicativo ToDoList no iOS e Android")
 
-Integre SQLite.NET em aplicativos móveis seguindo estas etapas:
+Integre o SQLite.NET a aplicativos móveis seguindo estas etapas:
 
 1. [Instale o pacote NuGet](#install-the-sqlite-nuget-package).
 1. [Configurar constantes](#configure-app-constants).
 1. [Crie uma classe de acesso ao banco de dados](#create-a-database-access-class).
-1. [Acessar dados em Xamarin.Forms](#access-data-in-xamarinforms).
+1. [Acessar dados no Xamarin.Forms ](#access-data-in-xamarinforms).
 1. [Configuração avançada](#advanced-configuration).
 
-## <a name="install-the-sqlite-nuget-package"></a>Instale o pacote SQLite NuGet
+## <a name="install-the-sqlite-nuget-package"></a>Instalar o pacote NuGet do SQLite
 
-Use o gerenciador de pacotes NuGet para procurar **sqlite-net-pcl** e adicione a versão mais recente ao projeto de código compartilhado.
+Use o Gerenciador de pacotes NuGet para pesquisar o **SQLite-net-PCL** e adicione a versão mais recente ao projeto de código compartilhado.
 
 Há diversos pacotes NuGet com nomes semelhantes. O pacote correto tem estes atributos:
 
 - **Criado por:** Frank A. Krueger
-- **ID:** sqlite-net-pcl
+- **ID:** SQLite-net-PCL
 - **Link do NuGet:** [sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)
 
 > [!NOTE]
 > Apesar do nome do pacote, use o pacote NuGet **sqlite-net-pcl**, mesmo em projetos do .NET Standard.
 
-## <a name="configure-app-constants"></a>Configurar constantes de aplicativos
+## <a name="configure-app-constants"></a>Configurar constantes do aplicativo
 
-O projeto de amostra inclui um arquivo **Constants.cs** que fornece dados de configuração comuns:
+O projeto de exemplo inclui um arquivo **Constants.cs** que fornece dados de configuração comuns:
 
 ```csharp
 public static class Constants
@@ -71,28 +74,28 @@ public static class Constants
 }
 ```
 
-O arquivo constants `SQLiteOpenFlag` especifica valores de enum padrão que são usados para inicializar a conexão do banco de dados. O `SQLiteOpenFlag` enum suporta esses valores:
+O arquivo Constants especifica `SQLiteOpenFlag` valores de enumeração padrão que são usados para inicializar a conexão de banco de dados. A `SQLiteOpenFlag` Enumeração dá suporte a esses valores:
 
-- `Create`: A conexão criará automaticamente o arquivo do banco de dados se ele não existir.
-- `FullMutex`: A conexão é aberta no modo de rosca serializada.
-- `NoMutex`: A conexão é aberta no modo multi-threading.
-- `PrivateCache`: A conexão não participará do cache compartilhado, mesmo que esteja habilitado.
+- `Create`: A conexão criará automaticamente o arquivo de banco de dados, caso ele não exista.
+- `FullMutex`: A conexão é aberta no modo de Threading serializado.
+- `NoMutex`: A conexão é aberta no modo multi-threaded.
+- `PrivateCache`: A conexão não participará do cache compartilhado, mesmo se estiver habilitada.
 - `ReadWrite`: A conexão pode ler e gravar dados.
-- `SharedCache`: A conexão participará do cache compartilhado, se estiver habilitado.
-- `ProtectionComplete`: O arquivo é criptografado e inacessível enquanto o dispositivo está bloqueado.
-- `ProtectionCompleteUnlessOpen`: O arquivo é criptografado até ser aberto, mas é então acessível mesmo que o usuário bloqueia o dispositivo.
-- `ProtectionCompleteUntilFirstUserAuthentication`: O arquivo é criptografado até depois que o usuário inicializar e desbloquear o dispositivo.
-- `ProtectionNone`: O arquivo do banco de dados não está criptografado.
+- `SharedCache`: A conexão participará do cache compartilhado, se estiver habilitada.
+- `ProtectionComplete`: O arquivo está criptografado e inacessível enquanto o dispositivo está bloqueado.
+- `ProtectionCompleteUnlessOpen`: O arquivo é criptografado até ser aberto, mas é acessível mesmo que o usuário bloqueie o dispositivo.
+- `ProtectionCompleteUntilFirstUserAuthentication`: O arquivo é criptografado até que o usuário tenha inicializado e desbloqueado o dispositivo.
+- `ProtectionNone`: O arquivo de banco de dados não está criptografado.
 
-Você pode precisar especificar diferentes bandeiras dependendo de como seu banco de dados será usado. Para obter `SQLiteOpenFlags`mais informações sobre, consulte [Abrir uma nova conexão de banco de dados](https://www.sqlite.org/c3ref/open.html) em sqlite.org.
+Talvez seja necessário especificar sinalizadores diferentes dependendo de como seu banco de dados será usado. Para obter mais informações sobre `SQLiteOpenFlags` o, consulte [abrindo uma nova conexão de banco de dados](https://www.sqlite.org/c3ref/open.html) no SQLite.org.
 
-## <a name="create-a-database-access-class"></a>Crie uma classe de acesso ao banco de dados
+## <a name="create-a-database-access-class"></a>Criar uma classe de acesso ao banco de dados
 
-Uma classe de invólucro de banco de dados abstrai a camada de acesso aos dados do resto do aplicativo. Essa classe centraliza a lógica de consulta e simplifica o gerenciamento da inicialização do banco de dados, facilitando a refatoração ou expansão das operações de dados à medida que o aplicativo cresce. O aplicativo Todo `TodoItemDatabase` define uma classe para este fim.
+Uma classe de wrapper de banco de dados abstrai a camada de acesso de dado do restante do aplicativo. Essa classe centraliza a lógica de consulta e simplifica o gerenciamento da inicialização do banco de dados, facilitando a refatoração ou a expansão das operações do dado à medida que o aplicativo cresce. O aplicativo todo define uma `TodoItemDatabase` classe para essa finalidade.
 
 ### <a name="lazy-initialization"></a>Inicialização lenta
 
-O `TodoItemDatabase` uso da `Lazy` classe .NET para atrasar a inicialização do banco de dados até que ele seja acessado pela primeira vez. O uso da inicialização preguiçosa impede que o processo de carregamento do banco de dados adia o lançamento do aplicativo. Para obter mais informações, consulte [Lazy&lt;T&gt; Class](xref:System.Lazy`1).
+O `TodoItemDatabase` usa a `Lazy` classe .net para atrasar a inicialização do banco de dados até que ele seja acessado pela primeira vez. O uso da inicialização lenta impede que o processo de carregamento do banco de dados atrase a inicialização do aplicativo. Para obter mais informações, [consulte &lt; &gt; classe T lenta](xref:System.Lazy`1).
 
 ```csharp
 public class TodoItemDatabase
@@ -126,19 +129,19 @@ public class TodoItemDatabase
 }
 ```
 
-A conexão do banco de dados é um campo estático que garante que uma única conexão de banco de dados seja usada para a vida útil do aplicativo. Usar uma conexão estática persistente oferece melhor desempenho do que abrir e fechar conexões várias vezes durante uma única sessão de aplicativo.
+A conexão de banco de dados é um campo estático que garante que uma única conexão de banco de dados seja usada para a vida útil do aplicativo. Usar uma conexão persistente e estática oferece melhor desempenho do que abrir e fechar conexões várias vezes durante uma única sessão de aplicativo.
 
-O `InitializeAsync` método é responsável por verificar se já `TodoItem` existe uma tabela para armazenar objetos. Este método cria automaticamente a tabela se ela não existir.
+O `InitializeAsync` método é responsável por verificar se já existe uma tabela para armazenar `TodoItem` objetos. Esse método criará automaticamente a tabela se ela não existir.
 
 ### <a name="the-safefireandforget-extension-method"></a>O método de extensão SafeFireAndForget
 
-Quando `TodoItemDatabase` a classe é instanciada, ela deve inicializar a conexão do banco de dados, que é um processo assíncrono. No entanto:
+Quando a `TodoItemDatabase` classe é instanciada, ela deve inicializar a conexão de banco de dados, que é um processo assíncrono. No entanto:
 
-- Os construtores de classe não podem ser assíncronos.
-- Um método assíncrono que não é aguardado não lançará exceções.
-- O `Wait` uso do método bloqueia o fio _e_ engole exceções.
+- Construtores de classe não podem ser assíncronos.
+- Um método assíncrono que não é esperado não gerará exceções.
+- O uso do `Wait` método bloqueia o thread _e_ assimila as exceções.
 
-Para iniciar a inicialização assíncrona, evitar o bloqueio da execução e ter a `SafeFireAndForget`oportunidade de capturar exceções, o aplicativo de amostra usa um método de extensão chamado . O `SafeFireAndForget` método de extensão `Task` fornece funcionalidade adicional à classe:
+Para iniciar a inicialização assíncrona, evite bloquear a execução e ter a oportunidade de capturar exceções, o aplicativo de exemplo usa um método de extensão chamado `SafeFireAndForget` . O `SafeFireAndForget` método de extensão fornece funcionalidade adicional para a `Task` classe:
 
 ```csharp
 public static class TaskExtensions
@@ -166,13 +169,13 @@ public static class TaskExtensions
 }
 ```
 
-O `SafeFireAndForget` método aguarda a execução assíncrona do objeto fornecido, `Task` e permite que você anexe um `Action` que é chamado se uma exceção for lançada.
+O `SafeFireAndForget` método aguarda a execução assíncrona do objeto fornecido `Task` e permite que você anexe um `Action` que será chamado se uma exceção for gerada.
 
-Para obter mais informações, consulte [o padrão assíncrono baseado em tarefas (TAP)](https://docs.microsoft.com/dotnet/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap).
+Para obter mais informações, consulte [padrão assíncrono baseado em tarefa (toque)](https://docs.microsoft.com/dotnet/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap).
 
 ### <a name="data-manipulation-methods"></a>Métodos de manipulação de dados
 
-A `TodoItemDatabase` classe inclui métodos para os quatro tipos de manipulação de dados: criar, ler, editar e excluir. A biblioteca SQLite.NET fornece um simples Mapa Relacional de Objeto (ORM) que permite armazenar e recuperar objetos sem escrever instruções SQL.
+A `TodoItemDatabase` classe inclui métodos para os quatro tipos de manipulação de dados: criar, ler, editar e excluir. A biblioteca SQLite.NET fornece um ORM (mapa relacional de objeto) simples que permite armazenar e recuperar objetos sem escrever instruções SQL.
 
 ```csharp
 public class TodoItemDatabase {
@@ -214,9 +217,9 @@ public class TodoItemDatabase {
 }
 ```
 
-## <a name="access-data-in-xamarinforms"></a>Dados de acesso em Xamarin.Forms
+## <a name="access-data-in-xamarinforms"></a>Acessar dados emXamarin.Forms
 
-A classe Xamarin.Forms `App` expõe uma `TodoItemDatabase` instância da classe:
+A Xamarin.Forms `App` classe expõe uma instância da `TodoItemDatabase` classe:
 
 ```csharp
 static TodoItemDatabase database;
@@ -233,7 +236,7 @@ public static TodoItemDatabase Database
 }
 ```
 
-Essa propriedade permite que os componentes do Xamarin.Forms `Database` chamem métodos de recuperação e manipulação de dados na instância em resposta à interação do usuário. Por exemplo:
+Essa propriedade permite que Xamarin.Forms os componentes chamem métodos de recuperação e de manipulação de dados na `Database` instância do em resposta à interação do usuário. Por exemplo:
 
 ```csharp
 var saveButton = new Button { Text = "Save" };
@@ -247,47 +250,47 @@ saveButton.Clicked += async (sender, e) =>
 
 ## <a name="advanced-configuration"></a>Configuração avançada
 
-O SQLite fornece uma API robusta com mais recursos do que são cobertos neste artigo e no aplicativo de amostra. As seções a seguir cobrem características importantes para a escalabilidade.
+O SQLite fornece uma API robusta com mais recursos do que o que é abordado neste artigo e no aplicativo de exemplo. As seções a seguir abrangem recursos que são importantes para escalabilidade.
 
-Para obter mais informações, consulte [a Documentação SQLite](https://www.sqlite.org/docs.html) sobre sqlite.org.
+Para obter mais informações, consulte a [documentação do SQLite](https://www.sqlite.org/docs.html) em SQLite.org.
 
-### <a name="write-ahead-logging"></a>Registro de registro antecipada
+### <a name="write-ahead-logging"></a>Log write-ahead
 
-Por padrão, o SQLite usa um diário de reversão tradicional. Uma cópia do conteúdo do banco de dados inalterado é escrita em um arquivo de reversão separado, em seguida, as alterações são escritas diretamente no arquivo do banco de dados. O COMMIT ocorre quando o diário de reversão é excluído.
+Por padrão, o SQLite usa um diário de reversão tradicional. Uma cópia do conteúdo do banco de dados inalterado é gravada em um arquivo de reversão separado e, em seguida, as alterações são gravadas diretamente no arquivo de banco de dados. A confirmação ocorre quando o diário de reversão é excluído.
 
-Write-Ahead Logging (WAL) grava alterações em um arquivo WAL separado primeiro. No modo WAL, um COMMIT é um registro especial, anexado ao arquivo WAL, que permite que várias transações ocorram em um único arquivo WAL. Um arquivo WAL é mesclado de volta ao arquivo de banco de dados em uma operação especial chamada _checkpoint_.
+O registro write-ahead (WAL) grava as alterações em um arquivo WAL separado primeiro. No modo WAL, uma confirmação é um registro especial, acrescentado ao arquivo WAL, que permite que várias transações ocorram em um único arquivo WAL. Um arquivo WAL é mesclado de volta para o arquivo de banco de dados em uma operação especial chamada _ponto de verificação_.
 
-O WAL pode ser mais rápido para bancos de dados locais porque leitores e escritores não bloqueiam uns aos outros, permitindo que as operações de leitura e gravação sejam simultâneas. No entanto, o modo WAL não permite alterações no tamanho da _página,_ adiciona associações adicionais de arquivos ao banco de dados e adiciona a operação extra _de verificação._
+O WAL pode ser mais rápido para bancos de dados locais, pois leitores e gravadores não bloqueiam um ao outro, permitindo que as operações de leitura e gravação sejam simultâneas. No entanto, o modo WAL não permite alterações no _tamanho da página_, adiciona associações de arquivo adicionais ao banco de dados e adiciona a operação de _ponto de verificação_ extra.
 
-Para habilitar o WAL `EnableWriteAheadLoggingAsync` em `SQLiteAsyncConnection` SQLite.NET, chame o método na instância:
+Para habilitar WAL em SQLite.NET, chame o `EnableWriteAheadLoggingAsync` método na `SQLiteAsyncConnection` instância:
 
 ```csharp
 await Database.EnableWriteAheadLoggingAsync();
 ```
 
-Para obter mais informações, consulte [SQLite Write-Ahead Logging](https://www.sqlite.org/wal.html) on sqlite.org.
+Para obter mais informações, consulte [log write-ahead do SQLite](https://www.sqlite.org/wal.html) em SQLite.org.
 
 ### <a name="copying-a-database"></a>Copiando um banco de dados
 
-Existem vários casos em que pode ser necessário copiar um banco de dados SQLite:
+Há vários casos em que pode ser necessário copiar um banco de dados SQLite:
 
-- Um banco de dados foi enviado com seu aplicativo, mas deve ser copiado ou movido para armazenamento gravável no dispositivo móvel.
+- Um banco de dados foi enviado com seu aplicativo, mas deve ser copiado ou movido para o armazenamento gravável no dispositivo móvel.
 - Você precisa fazer um backup ou cópia do banco de dados.
-- Você precisa fazer a versão, mover ou renomear o arquivo do banco de dados.
+- Você precisará fazer a versão, mover ou renomear o arquivo de banco de dados.
 
 Em geral, mover, renomear ou copiar um arquivo de banco de dados é o mesmo processo que qualquer outro tipo de arquivo com algumas considerações adicionais:
 
-- Todas as conexões do banco de dados devem ser fechadas antes de tentar mover o arquivo do banco de dados.
-- Se você usar [o Write-Ahead Logging](#write-ahead-logging), o SQLite criará um arquivo de acesso à memória compartilhada (.shm) e um arquivo (Write Ahead Log) (.wal). Certifique-se de que você aplica quaisquer alterações nesses arquivos também.
+- Todas as conexões de banco de dados devem ser fechadas antes de tentar mover o arquivo de banco de dados.
+- Se você usar o [registro em log write-ahead](#write-ahead-logging), o SQLite criará um arquivo de acesso à memória compartilhada (. SHM) e um arquivo (log de gravação antecipada) (. Wal). Certifique-se de aplicar quaisquer alterações a esses arquivos também.
 
-Para obter mais informações, consulte [O tratamento de arquivos em Xamarin.Forms](~/xamarin-forms/data-cloud/data/files.md).
+Para obter mais informações, consulte [manipulação de Xamarin.Forms arquivos em ](~/xamarin-forms/data-cloud/data/files.md).
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Aplicação de amostra inteira](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo)
-- [pacote SQLite.NET NuGet](https://www.nuget.org/packages/sqlite-net-pcl/)
-- [Documentação SQLite](https://www.sqlite.org/docs.html)
-- [Usando SQLite com Android](~/android/data-cloud/data-access/using-sqlite-orm.md)
-- [Usando SQLite com iOS](~/ios/data-cloud/data/using-sqlite-orm.md)
-- [Padrão assíncrono baseado em tarefas (TAP)](https://docs.microsoft.com/dotnet/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap)
-- [Classe&lt;&gt; T Preguiçosa](xref:System.Lazy`1)
+- [Aplicativo de exemplo todo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo)
+- [Pacote NuGet do SQLite.NET](https://www.nuget.org/packages/sqlite-net-pcl/)
+- [Documentação do SQLite](https://www.sqlite.org/docs.html)
+- [Usando o SQLite com Android](~/android/data-cloud/data-access/using-sqlite-orm.md)
+- [Usando o SQLite com iOS](~/ios/data-cloud/data/using-sqlite-orm.md)
+- [Padrão assíncrono baseado em tarefa (toque)](https://docs.microsoft.com/dotnet/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap)
+- [&lt;Classe T &gt; lenta](xref:System.Lazy`1)

@@ -1,38 +1,41 @@
 ---
-title: Genéricos no XAML do Xamarin. Forms
-description: O XAML do Xamarin. Forms fornece suporte para o consumo de tipos CLR genéricos especificando as restrições genéricas como argumentos de tipo.
-ms.prod: xamarin
-ms.assetid: 97B73048-4F90-41AD-AB48-8EB804C4998B
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 04/28/2020
-ms.openlocfilehash: 9cda08a3bab0e25db2315c9795721e25d47d2429
-ms.sourcegitcommit: 154a3e7aec775327565bb54eda1a610976af1d6f
+title: Genéricos em Xamarin.Forms XAML
+description: Xamarin.FormsO XAML fornece suporte para o consumo de tipos CLR genéricos especificando as restrições genéricas como argumentos de tipo.
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 814e622a822e2eb1cf07f71bfb1da1d6eac5631f
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82624703"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84138106"
 ---
-# <a name="generics-in-xamarinforms-xaml"></a>Genéricos no XAML do Xamarin. Forms
+# <a name="generics-in-xamarinforms-xaml"></a>Genéricos em Xamarin.Forms XAML
 
-[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-generics/)
+[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-generics/)
 
-O XAML do Xamarin. Forms fornece suporte para o consumo de tipos CLR genéricos especificando as restrições genéricas como argumentos de tipo. Esse suporte é fornecido pela `x:TypeArguments` diretiva, que passa os argumentos de tipo restrito de um genérico para o construtor do tipo genérico.
+Xamarin.FormsO XAML fornece suporte para o consumo de tipos CLR genéricos especificando as restrições genéricas como argumentos de tipo. Esse suporte é fornecido pela `x:TypeArguments` diretiva, que passa os argumentos de tipo restrito de um genérico para o construtor do tipo genérico.
 
 > [!IMPORTANT]
-> Não há suporte para definir classes genéricas no XAML do Xamarin `x:TypeArguments` . Forms, com a diretiva.
+> Xamarin.FormsNão há suporte para definir classes genéricas em XAML, com a `x:TypeArguments` diretiva.
 
-Os argumentos de tipo são especificados como uma cadeia de caracteres e, normalmente, são `sys:String` prefixados, como e `sys:Int32`. A prefixação é necessária porque os tipos típicos de restrições genéricas do CLR vêm de bibliotecas que não estão mapeadas para o namespace padrão do Xamarin. Forms. No entanto, os tipos internos XAML 2009, como `x:String` e `x:Int32`, também podem ser especificados como argumentos de tipo, `x` em que é o namespace da linguagem XAML para XAML 2009. Para obter mais informações sobre os tipos internos XAML 2009, consulte [primitivos de linguagem xaml 2009](/dotnet/desktop-wpf/xaml-services/types-for-primitives#xaml-2009-language-primitives).
+Os argumentos de tipo são especificados como uma cadeia de caracteres e, normalmente, são prefixados, como `sys:String` e `sys:Int32` . A prefixação é necessária porque os tipos típicos de restrições genéricas do CLR são provenientes de bibliotecas que não são mapeadas para o Xamarin.Forms namespace padrão. No entanto, os tipos internos XAML 2009, como `x:String` e `x:Int32` , também podem ser especificados como argumentos de tipo, em que `x` é o namespace da linguagem xaml para XAML 2009. Para obter mais informações sobre os tipos internos XAML 2009, consulte [primitivos de linguagem xaml 2009](/dotnet/desktop-wpf/xaml-services/types-for-primitives#xaml-2009-language-primitives).
 
 Vários argumentos de tipo podem ser especificados usando um delimitador de vírgula. Além disso, se uma restrição genérica usar tipos genéricos, os argumentos de tipo de restrição aninhada deverão ser contidos entre parênteses.
 
 > [!NOTE]
-> A `x:Type` extensão de marcação fornece uma referência de tipo CLR para um tipo genérico e tem uma função semelhante para `typeof` o operador em C#. Para obter mais informações, consulte a [extensão de marcação x:Type](~/xamarin-forms/xaml/markup-extensions/consuming.md#type).
+> A `x:Type` extensão de marcação fornece uma referência de tipo CLR para um tipo genérico e tem uma função semelhante para o `typeof` operador em C#. Para obter mais informações, consulte a [extensão de marcação x:Type](~/xamarin-forms/xaml/markup-extensions/consuming.md#type).
 
 ## <a name="single-primitive-type-argument"></a>Argumento de tipo primitivo único
 
-Um único argumento de tipo primitivo pode ser especificado como um argumento de cadeia de caracteres `x:TypeArguments` prefixado usando a diretiva:
+Um único argumento de tipo primitivo pode ser especificado como um argumento de cadeia de caracteres prefixado usando a `x:TypeArguments` diretiva:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -55,9 +58,9 @@ Um único argumento de tipo primitivo pode ser especificado como um argumento de
 </ContentPage>
 ```
 
-Neste exemplo, `System.Collections.Generic` é definido como o `scg` namespace XAML. A `CollectionView.ItemsSource` propriedade é definida como uma `List<T>` instanciada com um `string` argumento de tipo, usando o `x:String` tipo interno XAML 2009. A `List<string>` coleção é inicializada com `string` vários itens.
+Neste exemplo, `System.Collections.Generic` é definido como o `scg` namespace XAML. A `CollectionView.ItemsSource` propriedade é definida como uma `List<T>` instanciada com um argumento de `string` tipo, usando o tipo interno XAML 2009 `x:String` . A `List<string>` coleção é inicializada com vários `string` itens.
 
-Como alternativa, mas de forma equivalente, `List<T>` a coleção pode ser instanciada com o `String` tipo CLR:
+Como alternativa, mas de forma equivalente, a `List<T>` coleção pode ser instanciada com o `String` tipo CLR:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -83,7 +86,7 @@ Como alternativa, mas de forma equivalente, `List<T>` a coleção pode ser insta
 
 ## <a name="single-object-type-argument"></a>Argumento de tipo de objeto único
 
-Um argumento de tipo de objeto único pode ser especificado como um argumento de cadeia de `x:TypeArguments` caracteres prefixado usando a diretiva:
+Um argumento de tipo de objeto único pode ser especificado como um argumento de cadeia de caracteres prefixado usando a `x:TypeArguments` diretiva:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -136,11 +139,11 @@ Um argumento de tipo de objeto único pode ser especificado como um argumento de
 </ContentPage>
 ```
 
-Neste `GenericsDemo.Models` exemplo, é definido como `models` o namespace XAML e `System.Collections.Generic` é definido como o `scg` namespace XAML. A `CollectionView.ItemsSource` propriedade é definida como uma `List<T>` instanciada com um `Monkey` argumento de tipo. A `List<Monkey>` coleção é inicializada com `Monkey` vários itens e um [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) que define a aparência de cada `Monkey` objeto é definido como o `ItemTemplate` do [`CollectionView`](xref:Xamarin.Forms.CollectionView).
+Neste exemplo, `GenericsDemo.Models` é definido como o `models` namespace XAML e `System.Collections.Generic` é definido como o `scg` namespace XAML. A `CollectionView.ItemsSource` propriedade é definida como uma `List<T>` instanciada com um argumento de `Monkey` tipo. A `List<Monkey>` coleção é inicializada com vários `Monkey` itens e um [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) que define a aparência de cada `Monkey` objeto é definido como o `ItemTemplate` do [`CollectionView`](xref:Xamarin.Forms.CollectionView) .
 
 ## <a name="multiple-type-arguments"></a>Argumentos de vários tipos
 
-Vários argumentos de tipo podem ser especificados como argumentos de cadeia de Caracteres prefixados, delimitados `x:TypeArguments` por uma vírgula, usando a diretiva. Quando uma restrição genérica usa tipos genéricos, os argumentos de tipo de restrição aninhada são contidos entre parênteses:
+Vários argumentos de tipo podem ser especificados como argumentos de cadeia de Caracteres prefixados, delimitados por uma vírgula, usando a `x:TypeArguments` diretiva. Quando uma restrição genérica usa tipos genéricos, os argumentos de tipo de restrição aninhada são contidos entre parênteses:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -205,7 +208,7 @@ Vários argumentos de tipo podem ser especificados como argumentos de cadeia de 
 </ContentPage    
 ```
 
-Neste `GenericsDemo.Models` exemplo, é definido como `models` o namespace XAML e `System.Collections.Generic` é definido como o `scg` namespace XAML. A `CollectionView.ItemsSource` propriedade é definida como uma `List<T>` instanciada com uma `KeyValuePair<TKey, TValue>` restrição, com os argumentos `string` de tipo de restrição interna e `Monkey`. A `List<KeyValuePair<string,Monkey>>` coleção é inicializada com `KeyValuePair` vários itens, usando o construtor não `KeyValuePair` padrão e [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) um que define a aparência de `Monkey` cada objeto é definido como o `ItemTemplate` do. [`CollectionView`](xref:Xamarin.Forms.CollectionView) Para obter informações sobre como passar argumentos para um construtor não padrão, consulte [passando argumentos de Construtor](~/xamarin-forms/xaml/passing-arguments.md#constructor_arguments).
+Neste exemplo, `GenericsDemo.Models` é definido como o `models` namespace XAML e `System.Collections.Generic` é definido como o `scg` namespace XAML. A `CollectionView.ItemsSource` propriedade é definida como uma `List<T>` instanciada com uma `KeyValuePair<TKey, TValue>` restrição, com os argumentos de tipo de restrição interna `string` e `Monkey` . A `List<KeyValuePair<string,Monkey>>` coleção é inicializada com vários `KeyValuePair` itens, usando o construtor não padrão `KeyValuePair` e um [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) que define a aparência de cada `Monkey` objeto é definido como o `ItemTemplate` do [`CollectionView`](xref:Xamarin.Forms.CollectionView) . Para obter informações sobre como passar argumentos para um construtor não padrão, consulte [passando argumentos de Construtor](~/xamarin-forms/xaml/passing-arguments.md#constructor_arguments).
 
 ## <a name="related-links"></a>Links relacionados
 

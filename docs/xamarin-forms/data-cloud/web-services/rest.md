@@ -1,24 +1,27 @@
 ---
-title: Consumir um serviço Web RESTful
-description: A integração de um serviço Web em um aplicativo é um cenário comum. Este artigo demonstra como consumir um serviço Web RESTful de um aplicativo Xamarin. Forms.
-ms.prod: xamarin
-ms.assetid: B540910C-9C51-416A-AAB9-057BF76489C3
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 01/22/2018
-ms.openlocfilehash: 6ccbb24be8c03d634c884853fb0ec339d49cf49d
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+title: ''
+description: A integração de um serviço Web em um aplicativo é um cenário comum. Este artigo demonstra como consumir um serviço Web RESTful de um Xamarin.Forms aplicativo.
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: ecfcede22e96a4a91f5367dae49b0d837ca2416f
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73029546"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84139159"
 ---
 # <a name="consume-a-restful-web-service"></a>Consumir um serviço Web RESTful
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todorest)
+[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todorest)
 
-_A integração de um serviço Web em um aplicativo é um cenário comum. Este artigo demonstra como consumir um serviço Web RESTful de um aplicativo Xamarin. Forms._
+_A integração de um serviço Web em um aplicativo é um cenário comum. Este artigo demonstra como consumir um serviço Web RESTful de um Xamarin.Forms aplicativo._
 
 REST é um estilo de arquitetura para a criação de serviços Web. As solicitações REST são feitas por HTTP usando os mesmos verbos HTTP que os navegadores da Web usam para recuperar páginas da Web e para enviar dados aos servidores. Os verbos são:
 
@@ -53,14 +56,14 @@ O serviço REST é escrito usando ASP.NET Core e fornece as seguintes operaçõe
 
 |Operação|Método HTTP|URI relativo|Parâmetros|
 |--- |--- |--- |--- |
-|Obter uma lista de itens pendentes|Obter|/api/todoitems/|
-|Criar um novo item de tarefas pendentes|Postar|/api/todoitems/|Um TodoItem formatado em JSON|
-|Atualizar um item pendente|Posicione|/api/todoitems/|Um TodoItem formatado em JSON|
-|Excluir um item pendente|DELETE|/api/todoitems/{id}|
+|Obter uma lista de itens pendentes|GET|/api/todoitems/|
+|Criar um novo item de tarefas pendentes|POST|/api/todoitems/|Um TodoItem formatado em JSON|
+|Atualizar um item pendente|PUT|/api/todoitems/|Um TodoItem formatado em JSON|
+|Excluir um item pendente|Delete (excluir)|/api/todoitems/{id}|
 
-A maioria dos URIs inclui a ID de `TodoItem` no caminho. Por exemplo, para excluir o `TodoItem` cuja ID é `6bb8a868-dba1-4f1a-93b7-24ebce87e243`, o cliente envia uma solicitação de exclusão para `http://hostname/api/todoitems/6bb8a868-dba1-4f1a-93b7-24ebce87e243`. Para obter mais informações sobre o modelo de dados usado no aplicativo de exemplo, consulte [modelando os dados](~/xamarin-forms/data-cloud/web-services/introduction.md).
+A maioria dos URIs inclui a `TodoItem` ID no caminho. Por exemplo, para excluir o `TodoItem` cuja ID é `6bb8a868-dba1-4f1a-93b7-24ebce87e243` , o cliente envia uma solicitação de exclusão para `http://hostname/api/todoitems/6bb8a868-dba1-4f1a-93b7-24ebce87e243` . Para obter mais informações sobre o modelo de dados usado no aplicativo de exemplo, consulte [modelando os dados](~/xamarin-forms/data-cloud/web-services/introduction.md).
 
-Quando a estrutura da API Web recebe uma solicitação, ela roteia a solicitação para uma ação. Essas ações são simplesmente métodos públicos na classe `TodoItemsController`. A estrutura usa uma tabela de roteamento para determinar qual ação invocar em resposta a uma solicitação, que é mostrada no exemplo de código a seguir:
+Quando a estrutura da API Web recebe uma solicitação, ela roteia a solicitação para uma ação. Essas ações são simplesmente métodos públicos na `TodoItemsController` classe. A estrutura usa uma tabela de roteamento para determinar qual ação invocar em resposta a uma solicitação, que é mostrada no exemplo de código a seguir:
 
 ```csharp
 config.Routes.MapHttpRoute(
@@ -78,13 +81,13 @@ A tabela de roteamento contém um modelo de rota e, quando a estrutura da API We
 
 O serviço REST usa a autenticação básica. Para obter mais informações, consulte [Autenticando um serviço Web RESTful](~/xamarin-forms/data-cloud/authentication/rest.md). Para obter mais informações sobre roteamento de ASP.NET Web API, consulte [Roteamento em ASP.NET Web API](https://www.asp.net/web-api/overview/web-api-routing-and-actions/routing-in-aspnet-web-api) no site ASP.net. Para obter mais informações sobre como criar o serviço REST usando ASP.NET Core, consulte [criando serviços de back-end para aplicativos móveis nativos](/aspnet/core/mobile/native-mobile-backend/).
 
-A classe `HttpClient` é usada para enviar e receber solicitações por HTTP. Ele fornece a funcionalidade para enviar solicitações HTTP e receber respostas HTTP de um recurso de URI identificado. Cada solicitação é enviada como uma operação assíncrona. Para obter mais informações sobre operações assíncronas, consulte [visão geral do suporte assíncrono](~/cross-platform/platform/async.md).
+A `HttpClient` classe é usada para enviar e receber solicitações por http. Ele fornece a funcionalidade para enviar solicitações HTTP e receber respostas HTTP de um recurso de URI identificado. Cada solicitação é enviada como uma operação assíncrona. Para obter mais informações sobre operações assíncronas, consulte [visão geral do suporte assíncrono](~/cross-platform/platform/async.md).
 
-A classe `HttpResponseMessage` representa uma mensagem de resposta HTTP recebida do serviço Web depois que uma solicitação HTTP é feita. Ele contém informações sobre a resposta, incluindo o código de status, os cabeçalhos e qualquer corpo. A classe `HttpContent` representa o corpo HTTP e os cabeçalhos de conteúdo, como `Content-Type` e `Content-Encoding`. O conteúdo pode ser lido usando qualquer um dos métodos de `ReadAs`, como `ReadAsStringAsync` e `ReadAsByteArrayAsync`, dependendo do formato dos dados.
+A `HttpResponseMessage` classe representa uma mensagem de resposta http recebida do serviço Web depois que uma solicitação HTTP é feita. Ele contém informações sobre a resposta, incluindo o código de status, os cabeçalhos e qualquer corpo. A `HttpContent` classe representa o corpo de http e cabeçalhos de conteúdo, como `Content-Type` e `Content-Encoding` . O conteúdo pode ser lido usando qualquer um dos `ReadAs` métodos, como `ReadAsStringAsync` e `ReadAsByteArrayAsync` , dependendo do formato dos dados.
 
 ### <a name="creating-the-httpclient-object"></a>Criando o objeto HTTPClient
 
-A instância de `HttpClient` é declarada no nível de classe para que o objeto fique por enquanto o aplicativo precisar fazer solicitações HTTP, conforme mostrado no exemplo de código a seguir:
+A `HttpClient` instância é declarada no nível de classe para que o objeto fique por enquanto o aplicativo precisar fazer solicitações HTTP, conforme mostrado no exemplo de código a seguir:
 
 ```csharp
 public class RestService : IRestService
@@ -102,7 +105,7 @@ public class RestService : IRestService
 
 ### <a name="retrieving-data"></a>Recuperando dados
 
-O método `HttpClient.GetAsync` é usado para enviar a solicitação GET para o serviço Web especificado pelo URI e, em seguida, receber a resposta do serviço Web, conforme mostrado no exemplo de código a seguir:
+O `HttpClient.GetAsync` método é usado para enviar a solicitação get para o serviço Web especificado pelo URI e, em seguida, receber a resposta do serviço Web, conforme mostrado no exemplo de código a seguir:
 
 ```csharp
 public async Task<List<TodoItem>> RefreshDataAsync ()
@@ -120,13 +123,13 @@ public async Task<List<TodoItem>> RefreshDataAsync ()
 }
 ```
 
-O serviço REST envia um código de status HTTP na propriedade `HttpResponseMessage.IsSuccessStatusCode`, para indicar se a solicitação HTTP foi bem-sucedida ou falhou. Para essa operação, o serviço REST envia o código de status HTTP 200 (OK) na resposta, o que indica que a solicitação foi bem-sucedida e que as informações solicitadas estão na resposta.
+O serviço REST envia um código de status HTTP na `HttpResponseMessage.IsSuccessStatusCode` propriedade, para indicar se a solicitação HTTP foi bem-sucedida ou falhou. Para essa operação, o serviço REST envia o código de status HTTP 200 (OK) na resposta, o que indica que a solicitação foi bem-sucedida e que as informações solicitadas estão na resposta.
 
-Se a operação HTTP tiver sido bem-sucedida, o conteúdo da resposta será lido, para exibição. A propriedade `HttpResponseMessage.Content` representa o conteúdo da resposta HTTP e o método `HttpContent.ReadAsStringAsync` grava de forma assíncrona o conteúdo HTTP em uma cadeia de caracteres. Esse conteúdo é então convertido de JSON em um `List` de instâncias `TodoItem`.
+Se a operação HTTP tiver sido bem-sucedida, o conteúdo da resposta será lido, para exibição. A `HttpResponseMessage.Content` propriedade representa o conteúdo da resposta http e o `HttpContent.ReadAsStringAsync` método grava o conteúdo http de forma assíncrona em uma cadeia de caracteres. Esse conteúdo é então convertido de JSON em um `List` de `TodoItem` instâncias.
 
 ### <a name="creating-data"></a>Criando dados
 
-O método `HttpClient.PostAsync` é usado para enviar a solicitação POST para o serviço Web especificado pelo URI e, em seguida, receber a resposta do serviço Web, conforme mostrado no exemplo de código a seguir:
+O `HttpClient.PostAsync` método é usado para enviar a solicitação post para o serviço Web especificado pelo URI e, em seguida, receber a resposta do serviço Web, conforme mostrado no exemplo de código a seguir:
 
 ```csharp
 public async Task SaveTodoItemAsync (TodoItem item, bool isNewItem = false)
@@ -153,9 +156,9 @@ public async Task SaveTodoItemAsync (TodoItem item, bool isNewItem = false)
 }
 ```
 
-A instância de `TodoItem` é convertida em uma carga JSON para envio ao serviço Web. Essa carga é inserida no corpo do conteúdo HTTP que será enviado ao serviço Web antes que a solicitação seja feita com o método `PostAsync`.
+A `TodoItem` instância é convertida em uma carga JSON para envio ao serviço Web. Essa carga é inserida no corpo do conteúdo HTTP que será enviado ao serviço Web antes que a solicitação seja feita com o `PostAsync` método.
 
-O serviço REST envia um código de status HTTP na propriedade `HttpResponseMessage.IsSuccessStatusCode`, para indicar se a solicitação HTTP foi bem-sucedida ou falhou. As respostas comuns para essa operação são:
+O serviço REST envia um código de status HTTP na `HttpResponseMessage.IsSuccessStatusCode` propriedade, para indicar se a solicitação HTTP foi bem-sucedida ou falhou. As respostas comuns para essa operação são:
 
 - **201 (criado)** – a solicitação resultou em um novo recurso que está sendo criado antes que a resposta fosse enviada.
 - **400 (solicitação inválida)** – a solicitação não é compreendida pelo servidor.
@@ -163,7 +166,7 @@ O serviço REST envia um código de status HTTP na propriedade `HttpResponseMess
 
 ### <a name="updating-data"></a>Atualizando dados
 
-O método `HttpClient.PutAsync` é usado para enviar a solicitação PUT para o serviço Web especificado pelo URI e, em seguida, receber a resposta do serviço Web, conforme mostrado no exemplo de código a seguir:
+O `HttpClient.PutAsync` método é usado para enviar a solicitação Put para o serviço Web especificado pelo URI e, em seguida, receber a resposta do serviço Web, conforme mostrado no exemplo de código a seguir:
 
 ```csharp
 public async Task SaveTodoItemAsync (TodoItem item, bool isNewItem = false)
@@ -174,9 +177,9 @@ public async Task SaveTodoItemAsync (TodoItem item, bool isNewItem = false)
 }
 ```
 
-A operação do método `PutAsync` é idêntica ao método `PostAsync` usado para criar dados no serviço Web. No entanto, as possíveis respostas enviadas do serviço Web são diferentes.
+A operação do `PutAsync` método é idêntica ao `PostAsync` método usado para criar dados no serviço Web. No entanto, as possíveis respostas enviadas do serviço Web são diferentes.
 
-O serviço REST envia um código de status HTTP na propriedade `HttpResponseMessage.IsSuccessStatusCode`, para indicar se a solicitação HTTP foi bem-sucedida ou falhou. As respostas comuns para essa operação são:
+O serviço REST envia um código de status HTTP na `HttpResponseMessage.IsSuccessStatusCode` propriedade, para indicar se a solicitação HTTP foi bem-sucedida ou falhou. As respostas comuns para essa operação são:
 
 - **204 (sem conteúdo)** – a solicitação foi processada com êxito e a resposta está intencionalmente em branco.
 - **400 (solicitação inválida)** – a solicitação não é compreendida pelo servidor.
@@ -184,7 +187,7 @@ O serviço REST envia um código de status HTTP na propriedade `HttpResponseMess
 
 ### <a name="deleting-data"></a>Excluindo dados
 
-O método `HttpClient.DeleteAsync` é usado para enviar a solicitação de exclusão para o serviço Web especificado pelo URI e, em seguida, receber a resposta do serviço Web, conforme mostrado no exemplo de código a seguir:
+O `HttpClient.DeleteAsync` método é usado para enviar a solicitação de exclusão para o serviço Web especificado pelo URI e, em seguida, receber a resposta do serviço Web, conforme mostrado no exemplo de código a seguir:
 
 ```csharp
 public async Task DeleteTodoItemAsync (string id)
@@ -200,7 +203,7 @@ public async Task DeleteTodoItemAsync (string id)
 }
 ```
 
-O serviço REST envia um código de status HTTP na propriedade `HttpResponseMessage.IsSuccessStatusCode`, para indicar se a solicitação HTTP foi bem-sucedida ou falhou. As respostas comuns para essa operação são:
+O serviço REST envia um código de status HTTP na `HttpResponseMessage.IsSuccessStatusCode` propriedade, para indicar se a solicitação HTTP foi bem-sucedida ou falhou. As respostas comuns para essa operação são:
 
 - **204 (sem conteúdo)** – a solicitação foi processada com êxito e a resposta está intencionalmente em branco.
 - **400 (solicitação inválida)** – a solicitação não é compreendida pelo servidor.
@@ -208,6 +211,6 @@ O serviço REST envia um código de status HTTP na propriedade `HttpResponseMess
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Criando Serviços de Back-end para Aplicativos Móveis Nativos](/aspnet/core/mobile/native-mobile-backend/)
+- [Criando serviços de back-end para aplicativos móveis nativos](/aspnet/core/mobile/native-mobile-backend/)
 - [TodoREST (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todorest)
 - [HttpClient](https://msdn.microsoft.com/library/system.net.http.httpclient(v=vs.110).aspx)

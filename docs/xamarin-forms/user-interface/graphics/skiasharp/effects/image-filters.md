@@ -1,34 +1,37 @@
 ---
-title: Filtros de imagem de SkiaSharp
-description: Saiba como usar o filtro de imagem para criar Desfoca e sombras.
-ms.prod: xamarin
-ms.technology: xamarin-skiasharp
-ms.assetid: 173E7B22-AEC8-4F12-B657-1C0CEE01AD63
-author: davidbritch
-ms.author: dabritch
-ms.date: 08/27/2018
-ms.openlocfilehash: f93f0462d476daaaa551833391b1be1865795476
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+title: ''
+description: ''
+ms.prod: ''
+ms.technology: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: eedbca080fce9f3001a7b1e2358845fd63c6121b
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70770537"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84136338"
 ---
-# <a name="skiasharp-image-filters"></a>Filtros de imagem de SkiaSharp
+# <a name="skiasharp-image-filters"></a>Filtros de imagem SkiaSharp
 
-[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
-Filtros de imagem são efeitos que operam em todos os bits de cor de pixels que compõem uma imagem. Eles são mais versáteis que os filtros de máscara, que operam apenas no canal alfa, conforme descrito no artigo [ **filtros de máscara de SkiaSharp**](mask-filters.md). Para usar um filtro de imagem, defina as [ `ImageFilter` ](xref:SkiaSharp.SKPaint.ImageFilter) propriedade do `SKPaint` a um objeto do tipo [ `SKImageFilter` ](xref:SkiaSharp.SKImageFilter) que você criou, chamando um dos métodos estáticos da classe.
+Os filtros de imagem são efeitos que operam em todos os bits de cor de pixels que compõem uma imagem. Eles são mais versáteis do que filtros de máscara, que só operam no canal alfa, conforme descrito no artigo [**SkiaSharp Mask Filters**](mask-filters.md). Para usar um filtro de imagem, defina a [`ImageFilter`](xref:SkiaSharp.SKPaint.ImageFilter) propriedade de `SKPaint` como um objeto do tipo [`SKImageFilter`](xref:SkiaSharp.SKImageFilter) que você criou chamando um dos métodos estáticos da classe.
 
-É a melhor maneira de se familiarizar com os filtros de máscara experimentando esses métodos estáticos. Você pode usar um filtro de máscara para desfocar um bitmap inteiro:
+A melhor maneira de se familiarizar com filtros de máscara é experimentando esses métodos estáticos. Você pode usar um filtro de máscara para borrar um bitmap inteiro:
 
-![Exemplo de desfoque](image-filters-images/ImageFilterExample.png "exemplo de desfoque")
+![Exemplo de desfoque](image-filters-images/ImageFilterExample.png "Exemplo de desfoque")
 
-Este artigo também demonstra o uso de um filtro de imagem para criar uma queda de sombra e para baixo-relevo efeitos e de alto-relevo.
+Este artigo também demonstra o uso de um filtro de imagem para criar uma sombra e para efeitos de relevo e engraving.
 
-## <a name="blurring-vector-graphics-and-bitmaps"></a>Gráficos vetoriais e bitmaps de desfoque
+## <a name="blurring-vector-graphics-and-bitmaps"></a>Desfocando gráficos vetoriais e bitmaps
 
-O efeito de desfoque criado [`SKImageFilter.CreateBlur`](xref:SkiaSharp.SKImageFilter.CreateBlur*) pelo método estático tem uma vantagem significativa sobre os métodos de desfoque [`SKMaskFilter`](xref:SkiaSharp.SKMaskFilter) na classe: O filtro de imagem pode borrar um bitmap inteiro. O método tem a seguinte sintaxe:
+O efeito de desfoque criado pelo [`SKImageFilter.CreateBlur`](xref:SkiaSharp.SKImageFilter.CreateBlur*) método estático tem uma vantagem significativa sobre os métodos de desfoque na [`SKMaskFilter`](xref:SkiaSharp.SKMaskFilter) classe: o filtro de imagem pode desfocar um bitmap inteiro. O método tem a seguinte sintaxe:
 
 ```csharp
 public static SkiaSharp.SKImageFilter CreateBlur (float sigmaX, float sigmaY,
@@ -36,9 +39,9 @@ public static SkiaSharp.SKImageFilter CreateBlur (float sigmaX, float sigmaY,
                                                   SKImageFilter.CropRect cropRect = null);
 ```
 
-O método tem dois valores de sigma &mdash; primeiro para a extensão de desfoque na direção horizontal e o segundo para a direção vertical. Você pode colocar em cascata filtros de imagem, especificando outro filtro de imagem como o terceiro argumento opcional. Um retângulo de corte também pode ser especificado.
+O método tem dois valores Sigma &mdash; o primeiro para a extensão de desfoque na direção horizontal e o segundo para a direção vertical. Você pode propagar filtros de imagem especificando outro filtro de imagem como o terceiro argumento opcional. Um retângulo de corte também pode ser especificado.
 
-O **imagem desfoque experimento** página na [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) inclui dois `Slider` modos de exibição que permitem que você fazer experiências com vários níveis de Desfoque de configuração:
+A página **experimento de desfoque de imagem** no [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) inclui dois modos de `Slider` exibição que permitem experimentar a configuração de vários níveis de desfoque:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -75,7 +78,7 @@ O **imagem desfoque experimento** página na [ **SkiaSharpFormsDemos** ](https:/
 </ContentPage>
 ```
 
-O arquivo code-behind usa os dois `Slider` valores de chamar `SKImageFilter.CreateBlur` para o `SKPaint` objeto usado para exibir texto e um bitmap:
+O arquivo code-behind usa os dois `Slider` valores para chamar `SKImageFilter.CreateBlur` o `SKPaint` objeto usado para exibir o texto e um bitmap:
 
 ```csharp
 public partial class ImageBlurExperimentPage : ContentPage
@@ -135,15 +138,15 @@ public partial class ImageBlurExperimentPage : ContentPage
 }
 ```
 
-As três capturas de tela mostram várias configurações para o `sigmaX` e `sigmaY` configurações:
+As três capturas de tela mostram várias configurações para as `sigmaX` `sigmaY` configurações e:
 
-[![Experimento de desfoque da imagem](image-filters-images/ImageBlurExperiment.png "experimento de desfoque da imagem")](image-filters-images/ImageBlurExperiment-Large.png#lightbox)
+[![Teste de desfoque de imagem](image-filters-images/ImageBlurExperiment.png "Teste de desfoque de imagem")](image-filters-images/ImageBlurExperiment-Large.png#lightbox)
 
-Para manter o desfoque consistente entre as resoluções e tamanhos de exibição diferentes, defina `sigmaX` e `sigmaY` para valores que são proporcionais ao tamanho da imagem de Desfoque aplicado ao pixel renderizado.
+Para manter o desfoque consistente entre diferentes tamanhos de exibição e resoluções, defina `sigmaX` e `sigmaY` com valores que são proporcionais ao tamanho de pixel renderizado da imagem à qual o desfoque é aplicado.
 
 ## <a name="drop-shadow"></a>Sombra
 
-O [ `SKImageFilter.CreateDropShadow` ](xref:SkiaSharp.SKImageFilter.CreateDropShadow*) método estático cria um `SKImageFilter` objeto para uma sombra:
+O [`SKImageFilter.CreateDropShadow`](xref:SkiaSharp.SKImageFilter.CreateDropShadow*) método estático cria um `SKImageFilter` objeto para uma sombra projetada:
 
 ```csharp
 public static SKImageFilter CreateDropShadow (float dx, float dy,
@@ -154,17 +157,17 @@ public static SKImageFilter CreateDropShadow (float dx, float dy,
                                               SKImageFilter.CropRect cropRect = null);
 ```
 
-Definir este objeto o `ImageFilter` propriedade de um `SKPaint` objeto e qualquer coisa que você desenha com esse objeto terá uma sombra atrás dele.
+Defina esse objeto como a `ImageFilter` propriedade de um `SKPaint` objeto e tudo o que você desenhar com esse objeto terá uma sombra subjacente.
 
-O `dx` e `dy` parâmetros indicam os deslocamentos horizontais e verticais da sombra em pixels, do objeto de gráfico. A convenção em gráficos 2D é assumir uma fonte de luz provenientes do canto superior esquerdo, o que implica que ambos esses argumentos devem ser positivos para posicionar a sombra abaixo e à direita do objeto gráfico.
+Os `dx` `dy` parâmetros e indicam os deslocamentos horizontal e vertical da sombra em pixels do objeto gráfico. A Convenção em gráficos 2D é assumir uma fonte de luz proveniente do canto superior esquerdo, o que implica que ambos os argumentos devem ser positivos para posicionar a sombra abaixo e à direita do objeto gráfico.
 
-O `sigmaX` e `sigmaY` parâmetros são desfoque fatores para a sombra projetada.
+Os `sigmaX` `sigmaY` parâmetros e são fatores de desfoque para a sombra.
 
-O `color` parâmetro é a cor da sombra. Isso `SKColor` valor pode incluir a transparência. Uma possibilidade é o valor de cor `SKColors.Black.WithAlpha(0x80)` para escurecer qualquer cor de fundo.
+O `color` parâmetro é a cor da sombra de projeção. Esse `SKColor` valor pode incluir transparência. Uma possibilidade é o valor de cor `SKColors.Black.WithAlpha(0x80)` para escurecer qualquer plano de fundo de cor.
 
-Os dois parâmetros finais são opcionais.
+Os dois últimos parâmetros são opcionais.
 
-O **Drop Shadow experimento** programa permite que você use valores de `dx`, `dy`, `sigmaX`, e `sigmaY` para exibir uma cadeia de caracteres de texto com uma sombra. O arquivo XAML instancia quatro `Slider` modos de exibição para definir estes valores:
+O programa de **teste do tipo "soltar sombra** " permite que você teste os valores de `dx` , `dy` , `sigmaX` e `sigmaY` para exibir uma cadeia de caracteres de texto com uma sombra. O arquivo XAML instancia quatro `Slider` modos de exibição para definir esses valores:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -224,7 +227,7 @@ O **Drop Shadow experimento** programa permite que você use valores de `dx`, `d
 </ContentPage>
 ```
 
-O arquivo code-behind usa esses valores para criar uma sombra vermelho em uma cadeia de caracteres de texto azul:
+O arquivo code-behind usa esses valores para criar uma sombra vermelha em uma cadeia de texto azul:
 
 ```csharp
 public partial class DropShadowExperimentPage : ContentPage
@@ -281,15 +284,15 @@ public partial class DropShadowExperimentPage : ContentPage
 }
 ```
 
-Aqui está o programa em execução:
+Este é o programa em execução:
 
-[![Descartar um experimento de sombra](image-filters-images/DropShadowExperiment.png "descartar o experimento de sombra")](image-filters-images/DropShadowExperiment-Large.png#lightbox)
+[![Teste de sombra drop](image-filters-images/DropShadowExperiment.png "Teste de sombra drop")](image-filters-images/DropShadowExperiment-Large.png#lightbox)
 
-Os valores de deslocamento negativos na captura de tela da plataforma Universal do Windows na extremidade direita causam a sombra sejam exibidos acima e à esquerda do texto. Isso sugere uma fonte de luz no canto direito inferior, que não é a convenção para gráficos de computador. Mas talvez ele não parece errado de qualquer forma, porque a sombra também se torna muito desfocada e parece mais ornamental que a maioria das sombras.
+Os valores de deslocamento negativo no Plataforma Universal do Windows captura de tela na extrema direita fazem com que a sombra apareça acima e à esquerda do texto. Isso sugere uma fonte de luz no canto inferior direito, que não é a Convenção para gráficos de computador. Mas não parece errado de nenhuma forma, talvez porque a sombra também se tornou muito borrada e parece mais ornamental do que a maioria das sombras.
 
 ## <a name="lighting-effects"></a>Efeitos de iluminação
 
-O `SKImageFilter` classe define seis métodos que têm nomes e parâmetros, listados aqui em ordem crescente complexidade semelhantes:
+A `SKImageFilter` classe define seis métodos que têm nomes e parâmetros semelhantes, listados aqui em ordem de complexidade crescente:
 
 - [`CreateDistantLitDiffuse`](xref:SkiaSharp.SKImageFilter.CreateDistantLitDiffuse*)
 - [`CreateDistantLitSpecular`](xref:SkiaSharp.SKImageFilter.CreateDistantLitSpecular*)
@@ -298,13 +301,13 @@ O `SKImageFilter` classe define seis métodos que têm nomes e parâmetros, list
 - [`CreateSpotLitDiffuse`](xref:SkiaSharp.SKImageFilter.CreateSpotLitDiffuse*)
 - [`CreateSpotLitSpecular`](xref:SkiaSharp.SKImageFilter.CreateSpotLitSpecular*)
 
-Esses métodos criam os filtros de imagem que imitam o efeito de diferentes tipos de luz em superfícies tridimensionais. O filtro de imagem resultante ilumina objetos bidimensionais, como se eles existiam no espaço 3D, que pode fazer com que esses objetos sejam exibidos com privilégios elevados ou baixo-relevo, ou com o realce especular.
+Esses métodos criam filtros de imagem que imitam o efeito de diferentes tipos de luz em superfícies tridimensionais. O filtro de imagem resultante ilumina objetos bidimensionais como se eles existissem no espaço 3D, o que pode fazer com que esses objetos apareçam com privilégios elevados ou embutidos ou com realce especulativo.
 
-O `Distant` luz métodos supõem que a luz é proveniente de uma distância distante. Para fins de objetos pois resolvem, é considerada a luz do ponto em uma direção consistente no espaço 3D, assim como o sol em uma pequena área da Terra. O `Point` métodos luz imitam uma lâmpada posicionada no espaço 3D que emite luz em todas as direções. O `Spot` light tem uma posição e uma direção, muito parecido com uma lanterna.
+Os `Distant` métodos leves pressupõem que a luz venha de uma distância distante. Com a finalidade de iluminar objetos, pressupõe-se que a luz aponte para uma direção consistente no espaço 3D, assim como o sol em uma pequena área da terra. Os `Point` métodos leves imitam uma lâmpada posicionada no espaço 3D que emite luz em todas as direções. A `Spot` luz tem uma posição e uma direção, bem como uma lanterna.
 
-Locais e instruções no espaço 3D são especificadas com valores da [ `SKPoint3` ](xref:SkiaSharp.SKPoint3) estrutura, que é semelhante ao `SKPoint` , mas com três propriedades nomeadas `X`, `Y`, e `Z`.
+Os locais e as direções no espaço 3D são especificados com valores da [`SKPoint3`](xref:SkiaSharp.SKPoint3) estrutura, que é semelhante a, `SKPoint` mas com três propriedades chamadas `X` , `Y` e `Z` .
 
-O número e a complexidade dos parâmetros para esses métodos dificultam experimentação com eles. Para começar, o **experiências de luz distante** página permite a você fazer experiências com parâmetros para o `CreateDistantLightDiffuse` método:
+O número e a complexidade dos parâmetros para esses métodos tornam a experimentação mais difícil. Para começar, a página **experimento de luz distante** permite que você experimente parâmetros para o `CreateDistantLightDiffuse` método:
 
 ```csharp
 public static SKImageFilter CreateDistantLitDiffuse (SKPoint3 direction,
@@ -317,7 +320,7 @@ public static SKImageFilter CreateDistantLitDiffuse (SKPoint3 direction,
 
 A página não usa os dois últimos parâmetros opcionais.
 
-Três `Slider` modos de exibição em que o XAML de arquivos permitem que você selecione o `Z` coordenada da `SKPoint3` valor, o `surfaceScale` parâmetro e o `kd` parâmetro, que é definido na documentação da API, como o "constante de iluminação difusa":
+Três `Slider` exibições no arquivo XAML permitem que você selecione a `Z` coordenada do `SKPoint3` valor, o `surfaceScale` parâmetro e o `kd` parâmetro, que é definido na documentação da API como a "constante de iluminação difusa":
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -368,7 +371,7 @@ Três `Slider` modos de exibição em que o XAML de arquivos permitem que você 
 </ContentPage>
 ```
 
-O arquivo code-behind obtém esses três valores e os utiliza para criar um filtro de imagem para exibir uma cadeia de caracteres de texto:
+O arquivo code-behind Obtém esses três valores e os usa para criar um filtro de imagem para exibir uma cadeia de texto:
 
 ```csharp
 public partial class DistantLightExperimentPage : ContentPage
@@ -426,21 +429,21 @@ public partial class DistantLightExperimentPage : ContentPage
 }
 ```
 
-O primeiro argumento de `SKImageFilter.CreateDistantLitDiffuse` é a direção da luz. Positivo X e Y coordenadas indicam que a luz é apontada para a direita e para baixo. Ponto de coordenadas Z positivo para a tela. O arquivo XAML permite que você selecione valores Z negativos, mas isso é apenas para que você possa ver o que acontece: Conceitualmente, as coordenadas Z negativas fazem com que a luz aponte para fora da tela. Para qualquer coisa que outros valores negativos, em seguida, pequenos, o efeito de iluminação deixará de funcionar.
+O primeiro argumento de `SKImageFilter.CreateDistantLitDiffuse` é a direção da luz. As coordenadas X e Y positivas indicam que a luz é apontada para a direita e para baixo. As coordenadas Z positivas apontam para a tela. O arquivo XAML permite que você selecione valores Z negativos, mas isso é apenas para que você possa ver o que acontece: conceitualmente, as coordenadas Z negativas fazem com que a luz aponte para fora da tela. Para qualquer outro valor negativo pequeno, o efeito de iluminação para de funcionar.
 
-O `surfaceScale` argumento pode variar de -1 para 1. (Os valores maiores ou menores não tem nenhum efeito adicional.) Esses são valores relativos no eixo Z que indicam o deslocamento do objeto gráfico (nesse caso, a cadeia de caracteres de texto) da superfície da tela. Use valores negativos para gerar a cadeia de caracteres de texto acima da superfície da tela e valores positivos seja pressionado-lo na tela.
+O `surfaceScale` argumento pode variar de – 1 a 1. (Valores superiores ou mais baixos não têm efeito adicional.) Esses são valores relativos no eixo Z que indicam a substituição do objeto gráfico (nesse caso, a cadeia de texto) da superfície da tela. Use valores negativos para gerar a cadeia de caracteres de texto acima da superfície da tela e os valores positivos para ensolte-la na tela.
 
-O `lightConstant` valor deve ser positivo. (O programa permite valores negativos para que você possa ver que eles fazem com que o efeito de parar de funcionar.) Valores mais altos fazem com que a luz mais intensa.
+O `lightConstant` valor deve ser positivo. (O programa permite valores negativos para que você possa ver que eles fazem com que o efeito pare de funcionar.) Valores mais altos causam uma luz mais intensa.
 
-Esses fatores podem ser balanceados para obter um alto-relevo efeito quando `surfaceScale` é negativo (assim como acontece com o iOS e Android capturas de tela) e um baixo-relevo efeito quando `surfaceScale` for positivo, como com a captura de tela UWP à direita:
+Esses fatores podem ser balanceados para obter um efeito em relevo quando `surfaceScale` é negativo (como nas capturas de tela do IOS e Android) e um efeito em baixo-relevo quando `surfaceScale` é positivo, como com a captura de tela UWP à direita:
 
-[![Experimento de luz distante](image-filters-images/DistantLightExperiment.png "experimento de luz distante")](image-filters-images/DistantLightExperiment-Large.png#lightbox)
+[![Experimento de luz distante](image-filters-images/DistantLightExperiment.png "Experimento de luz distante")](image-filters-images/DistantLightExperiment-Large.png#lightbox)
 
-A captura de tela Android tem um valor de Z de 0, o que significa que a luz só está apontando para baixo e para a direita. O plano de fundo não está aceso e a superfície da cadeia de caracteres de texto não está aceso ambos. A luz afeta somente a borda do texto para um efeito muito sutil.
+A captura de tela do Android tem um valor Z de 0, o que significa que a luz está apontando para baixo e para a direita. O plano de fundo não está aceso e a superfície da cadeia de texto não está iluminada. A luz afeta apenas a borda do texto para um efeito muito sutil.
 
-Uma abordagem alternativa para texto em relevo e baixo-relevo foi demonstrada no artigo [a transformação converter](../transforms/translate.md): A cadeia de texto é exibida duas vezes com cores diferentes que são ligeiramente deslocadas umas das outras.
+Uma abordagem alternativa para texto em relevo e de baixo relevo foi demonstrada no artigo [a transformação de conversão](../transforms/translate.md): a cadeia de texto é exibida duas vezes com cores diferentes que são um pouco deslocadas umas das outras.
 
 ## <a name="related-links"></a>Links relacionados
 
-- [APIs de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [APIs do SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

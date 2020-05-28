@@ -1,24 +1,27 @@
 ---
-title: Exemplos do Xamarin.Forms
-description: Aplicativos de exemplo do Xamarin.Forms e demonstrações de código para ajudar você entender os conceitos em Xamarin.Forms.
-ms.prod: xamarin
-ms.assetid: AB986E8E-E831-4E0A-9F1D-6C3D88F35E9C
-ms.technology: xamarin-forms
-author: profexorgeek
-ms.author: jusjohns
-ms.date: 12/27/2019
-ms.openlocfilehash: 3cd7979a3e244866b190c9534c472ea44b9f9c30
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: Xamarin.FormsAmostras
+description: Xamarin.Formsaplicativos de exemplo e demonstrações de código para ajudá-lo a começar e entender os conceitos no Xamarin.Forms .
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 896b5880b92cecc7bd9eb360306d902ff0f876c5
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "75502915"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84135935"
 ---
-# <a name="xamarinforms-samples"></a>Exemplos do Xamarin.Forms
+# <a name="xamarinforms-samples"></a>Xamarin.FormsAmostras
 
-Aplicativos de exemplo do Xamarin.Forms e demonstrações de código para ajudar você entender os conceitos em Xamarin.Forms.
+Xamarin.Formsaplicativos de exemplo e demonstrações de código para ajudá-lo a começar e entender os conceitos no Xamarin.Forms .
 
-[Todas as amostras de Xamarin.Forms](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms)
+[Todos os Xamarin.Forms exemplos](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms)
 
 :::row:::
     :::column:::
@@ -57,17 +60,17 @@ O programa simula um disco giratório que você poderá pintar tocando e movendo
 
 ### <a name="xaml-samples"></a>[Amostras XAML](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples/)
 
-XAML (eXtensible Application Markup Language) permite que os desenvolvedores definam interfaces do usuário em aplicativos Xamarin.Forms usando marcação em vez do código.
+XAML — a linguagem de marcação de aplicativo extensível — permite que os desenvolvedores definam interfaces de usuário em Xamarin.Forms aplicativos usando marcação em vez de código.
     :::column-end:::
         :::column:::
 [![Xuzzle](images/xuzzle.png)](https://docs.microsoft.com/samples/xamarin/mobile-samples/liveplayer-xamagonxuzzlelp/)
 
 ### <a name="xuzzle"></a>[Xuzzle](https://docs.microsoft.com/samples/xamarin/mobile-samples/liveplayer-xamagonxuzzlelp/)
 
-Este jogo é uma variação do clássico quebra-cabeça 14-15 que você pode resolver deslizando telhas para a ordem correta.
+Este jogo é uma variação do quebra-cabeça clássico 14-15 que pode ser resolvido por blocos deslizantes na ordem correta.
     :::column-end:::
 :::row-end:::
 
 ## <a name="all-samples"></a>Todas as amostras
 
-Para obter o conjunto completo de aplicativos de amostra Xamarin.Forms e demonstrações de código, consulte [Todas as amostras de Xamarin.Forms](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms).
+Para obter o conjunto completo de Xamarin.Forms aplicativos de exemplo e demonstrações de código, consulte [todos os Xamarin.Forms exemplos](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms).

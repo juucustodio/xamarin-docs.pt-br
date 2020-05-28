@@ -1,24 +1,27 @@
 ---
-title: Primeiro respondente do visualelement no iOS
-description: Especificidades da plataforma permitem que você consumir funcionalidade só está disponível em uma plataforma específica, sem implementar renderizadores personalizados ou efeitos. Este artigo explica como consumir a plataforma do iOS específica que permite que um objeto do Visualelement se torne o primeiro Respondente para eventos de toque.
-ms.prod: xamarin
-ms.assetid: 3A77BA02-B87A-44EC-AC51-9D3130EF314C
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 01/15/2020
-ms.openlocfilehash: be6c233b63d172d2fcacb1cea7f5e9aeeb7faed1
-ms.sourcegitcommit: 10b4d7952d78f20f753372c53af6feb16918555c
+title: ''
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: d8bd539c2bb0e8963afae3392b6f8e99d79af9af
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "78291814"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84136962"
 ---
 # <a name="visualelement-first-responder-on-ios"></a>Primeiro respondente do visualelement no iOS
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
-Essa plataforma específica do iOS permite que um objeto de [`VisualElement`](xref:Xamarin.Forms.VisualElement) se torne o primeiro Respondente para eventos de toque, em vez da página que contém o elemento. Ele é consumido em XAML definindo a propriedade vinculável `VisualElement.CanBecomeFirstResponder` como `true`:
+Essa plataforma do iOS específica permite que um [`VisualElement`](xref:Xamarin.Forms.VisualElement) objeto se torne o primeiro Respondente para eventos de toque, em vez da página que contém o elemento. Ele é consumido em XAML definindo a `VisualElement.CanBecomeFirstResponder` propriedade vinculável como `true` :
 
 ```xaml
 <ContentPage ...
@@ -31,7 +34,7 @@ Essa plataforma específica do iOS permite que um objeto de [`VisualElement`](xr
 </ContentPage>
 ```
 
-Como alternativa, ele pode ser consumido de c# usando a API fluente:
+Como alternativa, ele pode ser consumido em C# usando a API fluente:
 
 ```csharp
 using Xamarin.Forms.PlatformConfiguration;
@@ -43,7 +46,7 @@ Button button = new Button { Text = "OK" };
 button.On<iOS>().SetCanBecomeFirstResponder(true);
 ```
 
-O método `VisualElement.On<iOS>` especifica que essa plataforma específica será executada somente no iOS. O método `VisualElement.SetCanBecomeFirstResponder`, no namespace [`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) , é usado para definir o `VisualElement` para se tornar o primeiro Respondente para eventos de toque. Além disso, o método `VisualElement.CanBecomeFirstResponder` pode ser usado para retornar se o `VisualElement` é o primeiro Respondente a eventos de toque.
+O `VisualElement.On<iOS>` método especifica que essa plataforma específica será executada somente no Ios. O `VisualElement.SetCanBecomeFirstResponder` método, no [`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) namespace, é usado para definir o `VisualElement` para se tornar o primeiro Respondente para eventos de toque. Além disso, o `VisualElement.CanBecomeFirstResponder` método pode ser usado para retornar se o `VisualElement` é o primeiro Respondente a eventos de toque.
 
 O resultado é que um [`VisualElement`](xref:Xamarin.Forms.VisualElement) pode se tornar o primeiro Respondente para eventos de toque, em vez da página que contém o elemento. Isso permite que cenários como aplicativos de chat não despercam um teclado quando um [`Button`](xref:Xamarin.Forms.Button) é tocado.
 

@@ -1,33 +1,36 @@
 ---
-title: EventToCommandBehavior reutilizável
-description: Comportamentos podem ser usados para associar comandos a controles que não foram projetados para interagir com comandos. Este artigo demonstra como criar e consumir um comportamento de Xamarin.Forms para invocar um comando quando um evento é disparado.
-ms.prod: xamarin
-ms.assetid: EC7F6556-9776-40B8-9424-A8094482A2F3
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 11/09/2018
-ms.openlocfilehash: 292a6aaaea4fb0f84138e04c88f001c72ddd096d
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: ''
+description: Comportamentos podem ser usados para associar comandos a controles que não foram projetados para interagir com comandos. Este artigo demonstra como criar e consumir um Xamarin.Forms comportamento para invocar um comando quando um evento é disparado.
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 46d1566c89de763a469f30ce8ed2c6ef919f1426
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "68650906"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84135792"
 ---
 # <a name="reusable-eventtocommandbehavior"></a>EventToCommandBehavior reutilizável
 
-[![Baixar](~/media/shared/download.png) amostra Baixar a amostra](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-eventtocommandbehavior)
+[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-eventtocommandbehavior)
 
-_Comportamentos podem ser usados para associar comandos a controles que não foram projetados para interagir com comandos. Este artigo demonstra a criação e o consumo de um Xamarin.Forms comportamento para invocar um comando quando um evento é acionado._
+_Os comportamentos podem ser usados para associar comandos a controles que não foram projetados para interagir com comandos. Este artigo demonstra como criar e consumir um Xamarin.Forms comportamento para invocar um comando quando um evento é disparado._
 
 ## <a name="overview"></a>Visão geral
 
-A classe `EventToCommandBehavior` é um comportamento personalizado reutilizável do Xamarin.Forms que executa um comando em resposta a *qualquer* acionamento de evento. Por padrão, os argumentos de evento para o evento serão passados para [`IValueConverter`](xref:Xamarin.Forms.IValueConverter) o comando, e podem ser convertidos opcionalmente por uma implementação.
+A `EventToCommandBehavior` classe é um comportamento personalizado reutilizável Xamarin.Forms que executa um comando em resposta a *qualquer* acionamento de evento. Por padrão, os argumentos de evento para o evento serão passados para o comando e podem ser convertidos opcionalmente por uma [`IValueConverter`](xref:Xamarin.Forms.IValueConverter) implementação.
 
 As seguintes propriedades de comportamento precisam ser definidas para que o comportamento seja usado:
 
 - **EventName** – o nome do evento que o comportamento escuta.
-- **Command** – o `ICommand` a ser executado. O comportamento espera `ICommand` encontrar a [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) instância no controle anexado, que pode ser herdado de um elemento pai.
+- **Command** – o `ICommand` a ser executado. O comportamento espera encontrar a `ICommand` instância no [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) do controle anexado, que pode ser herdado de um elemento pai.
 
 As seguintes propriedades de comportamento opcionais também podem ser definidas:
 
@@ -35,17 +38,17 @@ As seguintes propriedades de comportamento opcionais também podem ser definidas
 - **Converter** – uma implementação de [`IValueConverter`](xref:Xamarin.Forms.IValueConverter) que alterará o formato dos dados de argumento do evento conforme eles são passados entre a *origem* e o *destino* pelo mecanismo de associação.
 
 > [!NOTE]
-> O `EventToCommandBehavior` é uma classe personalizada que pode estar localizada na [amostra de Comportamento de EventToCommand](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-eventtocommandbehavior), não fazendo parte do Xamarin.Forms.
+> O `EventToCommandBehavior` é uma classe personalizada que pode ser localizada no [exemplo de comportamento EventToCommand](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-eventtocommandbehavior)e não faz parte do Xamarin.Forms .
 
 ## <a name="creating-the-behavior"></a>Criação do comportamento
 
-A `EventToCommandBehavior` classe deriva `BehaviorBase<T>` da classe, que por [`Behavior<T>`](xref:Xamarin.Forms.Behavior`1) sua vez deriva da classe. O objetivo `BehaviorBase<T>` da classe é fornecer uma classe base para qualquer Xamarin.Forms comportamentos que requerem [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) que o comportamento seja definido para o controle anexado. Isso garante que o comportamento possa ser associado ao `ICommand` especificado pela propriedade `Command` e possa executá-lo quando o comportamento for consumido.
+A `EventToCommandBehavior` classe deriva da `BehaviorBase<T>` classe, que, por sua vez, deriva da [`Behavior<T>`](xref:Xamarin.Forms.Behavior`1) classe. A finalidade da `BehaviorBase<T>` classe é fornecer uma classe base para quaisquer Xamarin.Forms comportamentos que exijam que o [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) comportamento seja definido para o controle anexado. Isso garante que o comportamento possa ser associado ao `ICommand` especificado pela propriedade `Command` e possa executá-lo quando o comportamento for consumido.
 
-A `BehaviorBase<T>` classe fornece um [`OnAttachedTo`](xref:Xamarin.Forms.Behavior`1.OnAttachedTo(Xamarin.Forms.BindableObject)) método superridicularizado que define o [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) [`OnDetachingFrom`](xref:Xamarin.Forms.Behavior`1.OnDetachingFrom(Xamarin.Forms.BindableObject)) comportamento e um `BindingContext`método superridicularizado que limpa o . Além disso, a classe armazena uma referência ao controle anexado na propriedade `AssociatedObject`.
+A `BehaviorBase<T>` classe fornece um Overridable [ `OnAttachedTo` ] (xref: Xamarin.Forms . Comportamento `1.OnAttachedTo(Xamarin.Forms.BindableObject)) method that sets the [` BindingContext `](xref:Xamarin.Forms.BindableObject.BindingContext) of the behavior and an overridable [` OnDetachingFrom `](xref:Xamarin.Forms.Behavior` 1. OnDetachingFrom ( Xamarin.Forms . Acopláobject)) que limpa o `BindingContext` . Além disso, a classe armazena uma referência ao controle anexado na propriedade `AssociatedObject`.
 
 ### <a name="implementing-bindable-properties"></a>Implementação de propriedades associáveis
 
-A `EventToCommandBehavior` classe define [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) quatro instâncias que executam um comando definido pelo usuário quando um evento é acionado. Essas propriedades são mostradas no seguinte exemplo de código:
+A `EventToCommandBehavior` classe define quatro [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) instâncias, que executam um comando definido pelo usuário quando um evento é disparado. Essas propriedades são mostradas no seguinte exemplo de código:
 
 ```csharp
 public class EventToCommandBehavior : BehaviorBase<View>
@@ -67,13 +70,13 @@ public class EventToCommandBehavior : BehaviorBase<View>
 }
 ```
 
-Quando a classe `EventToCommandBehavior` é consumida, a propriedade `Command` deve ser associada a um `ICommand`, a ser executado em resposta ao acionamento do evento definido na propriedade `EventName`. O comportamento espera encontrar `ICommand` o [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) no controle anexado.
+Quando a classe `EventToCommandBehavior` é consumida, a propriedade `Command` deve ser associada a um `ICommand`, a ser executado em resposta ao acionamento do evento definido na propriedade `EventName`. O comportamento esperará localizar o `ICommand` no [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) do controle anexado.
 
 Por padrão, os argumentos do evento para o evento serão passados para o comando. Esses dados podem ser opcionalmente convertidos conforme são passados entre a *origem* e o *destino* pelo mecanismo de associação, especificando uma implementação de [`IValueConverter`](xref:Xamarin.Forms.IValueConverter) como o valor da propriedade `Converter`. Como alternativa, um parâmetro pode ser passado para o comando especificando o valor da propriedade `CommandParameter`.
 
 ### <a name="implementing-the-overrides"></a>Implementação de substituições
 
-A `EventToCommandBehavior` classe substitui [`OnAttachedTo`](xref:Xamarin.Forms.Behavior`1.OnAttachedTo(Xamarin.Forms.BindableObject)) [`OnDetachingFrom`](xref:Xamarin.Forms.Behavior`1.OnDetachingFrom(Xamarin.Forms.BindableObject)) os métodos `BehaviorBase<T>` e métodos da classe, como mostrado no exemplo de código a seguir:
+A `EventToCommandBehavior` classe substitui o [ `OnAttachedTo` ] (xref: Xamarin.Forms . Comportamento `1.OnAttachedTo(Xamarin.Forms.BindableObject)) and [` OnDetachingFrom `](xref:Xamarin.Forms.Behavior` 1. OnDetachingFrom ( Xamarin.Forms . Bindobject)) da `BehaviorBase<T>` classe, conforme mostrado no exemplo de código a seguir:
 
 ```csharp
 public class EventToCommandBehavior : BehaviorBase<View>
@@ -94,7 +97,7 @@ public class EventToCommandBehavior : BehaviorBase<View>
 }
 ```
 
-O [`OnAttachedTo`](xref:Xamarin.Forms.Behavior`1.OnAttachedTo(Xamarin.Forms.BindableObject)) método realiza a `RegisterEvent` configuração chamando o `EventName` método, passando o valor da propriedade como parâmetro. O [`OnDetachingFrom`](xref:Xamarin.Forms.Behavior`1.OnDetachingFrom(Xamarin.Forms.BindableObject)) método realiza a `DeregisterEvent` limpeza chamando o método, passando o valor do `EventName` imóvel como parâmetro.
+O [ `OnAttachedTo` ] (xref: Xamarin.Forms . Comportamento `1.OnAttachedTo(Xamarin.Forms.BindableObject)) method performs setup by calling the ` RegisterEvent ` method, passing in the value of the ` EventName ` property as a parameter. The [` OnDetachingFrom `](xref:Xamarin.Forms.Behavior` 1. OnDetachingFrom ( Xamarin.Forms . Acopláobject)) executa a limpeza chamando o `DeregisterEvent` método, passando o valor da `EventName` propriedade como um parâmetro.
 
 ### <a name="implementing-the-behavior-functionality"></a>Implementação da funcionalidade de comportamento
 
@@ -147,16 +150,16 @@ O método `RegisterEvent` é executado em resposta ao `EventToCommandBehavior` s
 O método `OnEvent` é executado em resposta ao acionamento do evento definido na propriedade `EventName`. Desde que a propriedade `Command` referencie um `ICommand` válido, o método tenta recuperar um parâmetro para passá-lo para o `ICommand` da seguinte maneira:
 
 - Se a propriedade `CommandParameter` define um parâmetro, ela é recuperada.
-- Caso contrário, `Converter` se a [`IValueConverter`](xref:Xamarin.Forms.IValueConverter) propriedade definir uma implementação, o conversor é executado e converte os dados do argumento de evento à medida que são passados entre *a fonte* e o *alvo* pelo mecanismo de vinculação.
+- Caso contrário, se a `Converter` propriedade definir uma [`IValueConverter`](xref:Xamarin.Forms.IValueConverter) implementação, o conversor será executado e converterá os dados de argumento de evento conforme eles forem passados entre a *origem* e o *destino* pelo mecanismo de associação.
 - Caso contrário, os argumentos do evento deverão ser o parâmetro.
 
-O limite `ICommand` de dados é então executado, passando o parâmetro [`CanExecute`](xref:Xamarin.Forms.Command.CanExecute(System.Object)) para `true`o comando, desde que o método retorne .
+O limite de dados `ICommand` é então executado, passando o parâmetro para o comando, desde que o [`CanExecute`](xref:Xamarin.Forms.Command.CanExecute(System.Object)) método retorne `true` .
 
-Embora não seja `EventToCommandBehavior` mostrado aqui, `DeregisterEvent` o também inclui um [`OnDetachingFrom`](xref:Xamarin.Forms.Behavior`1.OnDetachingFrom(Xamarin.Forms.BindableObject)) método que é executado pelo método. O método `DeregisterEvent` é usado para localizar e cancelar o registro do evento definido na propriedade `EventName`, para limpar possíveis perdas de memória.
+Embora não seja mostrado aqui, o `EventToCommandBehavior` também inclui um `DeregisterEvent` método que é executado pelo [ `OnDetachingFrom` ] (xref: Xamarin.Forms . Comportamento `1.OnDetachingFrom(Xamarin.Forms.BindableObject)) method. The ` DeregisterEvent ` method is used to locate and deregister the event defined in the ` EventName ' para limpar possíveis vazamentos de memória.
 
 ## <a name="consuming-the-behavior"></a>Consumo do comportamento
 
-A `EventToCommandBehavior` classe pode ser [`Behaviors`](xref:Xamarin.Forms.VisualElement.Behaviors) anexada à coleção de um controle, conforme demonstrado no seguinte exemplo de código XAML:
+A `EventToCommandBehavior` classe pode ser anexada à [`Behaviors`](xref:Xamarin.Forms.VisualElement.Behaviors) coleção de um controle, conforme demonstrado no exemplo de código XAML a seguir:
 
 ```xaml
 <ListView ItemsSource="{Binding People}">
@@ -194,9 +197,9 @@ var selectedItemLabel = new Label();
 selectedItemLabel.SetBinding(Label.TextProperty, "SelectedItemText");
 ```
 
-A `Command` propriedade do comportamento é `OutputAgeCommand` vinculada aos dados vinculados `Converter` à propriedade do `SelectedItemConverter` ViewModel associado, [`ListView`](xref:Xamarin.Forms.ListView) enquanto [`SelectedItemChangedEventArgs`](xref:Xamarin.Forms.SelectedItemChangedEventArgs)a propriedade é definida como exemplo, que retorna o [`SelectedItem`](xref:Xamarin.Forms.ListView.SelectedItem) do .
+A `Command` Propriedade do comportamento são dados associados à `OutputAgeCommand` Propriedade do ViewModel associado, enquanto a `Converter` propriedade é definida como a `SelectedItemConverter` instância, que retorna o [`SelectedItem`](xref:Xamarin.Forms.ListView.SelectedItem) do do [`ListView`](xref:Xamarin.Forms.ListView) [`SelectedItemChangedEventArgs`](xref:Xamarin.Forms.SelectedItemChangedEventArgs) .
 
-Em runtime, o comportamento responderá à interação com o controle. Quando um item é [`ListView`](xref:Xamarin.Forms.ListView)selecionado [`ItemSelected`](xref:Xamarin.Forms.ListView.ItemSelected) no , o evento `OutputAgeCommand` será acionado, que executará o no ViewModel. Por sua vez, isso `SelectedItemText` atualiza [`Label`](xref:Xamarin.Forms.Label) a propriedade ViewModel a que o vincular, conforme mostrado nas capturas de tela a seguir:
+Em runtime, o comportamento responderá à interação com o controle. Quando um item é selecionado no [`ListView`](xref:Xamarin.Forms.ListView) , o [`ItemSelected`](xref:Xamarin.Forms.ListView.ItemSelected) evento será acionado, o que executará o `OutputAgeCommand` no ViewModel. Por sua vez, isso atualiza a `SelectedItemText` Propriedade ViewModel à qual o está [`Label`](xref:Xamarin.Forms.Label) associado, conforme mostrado nas seguintes capturas de tela:
 
 [![](event-to-command-behavior-images/screenshots-sml.png "Sample Application with EventToCommandBehavior")](event-to-command-behavior-images/screenshots.png#lightbox "Sample Application with EventToCommandBehavior")
 
@@ -204,10 +207,10 @@ A vantagem de usar esse comportamento para executar um comando quando um evento 
 
 ## <a name="summary"></a>Resumo
 
-Este artigo demonstrou como usar um comportamento do Xamarin.Forms para invocar um comando quando um evento é disparado. Comportamentos podem ser usados para associar comandos a controles que não foram projetados para interagir com comandos.
+Este artigo demonstrou o uso de um Xamarin.Forms comportamento para invocar um comando quando um evento é disparado. Comportamentos podem ser usados para associar comandos a controles que não foram projetados para interagir com comandos.
 
 ## <a name="related-links"></a>Links relacionados
 
 - [Comportamento de EventToCommand (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-eventtocommandbehavior)
 - [Comportamento](xref:Xamarin.Forms.Behavior)
-- [Comportamento&lt;T&gt;](xref:Xamarin.Forms.Behavior`1)
+- [Comportamento &lt; T&gt;](xref:Xamarin.Forms.Behavior`1)

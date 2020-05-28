@@ -1,30 +1,33 @@
 ---
-title: Formatação de cadeia de caracteres do Xamarin.Forms
-description: Este artigo explica como usar associações de dados do Xamarin.Forms para formatar e exibir objetos como cadeias de caracteres. Isso é feito com a definição de StringFormat de Binding como uma cadeia de caracteres de formatação padrão do .NET com um espaço reservado.
-ms.prod: xamarin
-ms.assetid: 978C85B7-CB58-4483-A131-21B381A865E0
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 01/05/2018
-ms.openlocfilehash: bdd28e1ce6d36a0a025ac43a709af2e38a313526
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: Xamarin.FormsFormatação de cadeia de caracteres
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: d08a89d5394a227e3cee76603e4e97d2cf9495e0
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "76940378"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84135753"
 ---
-# <a name="xamarinforms-string-formatting"></a>Formatação de cadeia de caracteres do Xamarin.Forms
+# <a name="xamarinforms-string-formatting"></a>Xamarin.FormsFormatação de cadeia de caracteres
 
-[![Baixar](~/media/shared/download.png) amostra Baixar a amostra](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
+[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
 Às vezes, é conveniente usar associações de dados para exibir a representação de cadeia de caracteres de um objeto ou um valor. Por exemplo, talvez você deseje usar um `Label` para exibir o valor atual de um `Slider`. Nesta associação de dados, o `Slider` é a origem e o destino é a propriedade `Text` do `Label`.
 
-Ao exibir strings em código, a ferramenta [`String.Format`](xref:System.String.Format(System.String,System.Object)) mais poderosa é o método estático. A cadeia de caracteres de formatação inclui códigos de formatação para diversos tipos de objetos, sendo que você pode incluir outros textos junto com os valores que estão sendo formatados. Confira o artigo [Formatando tipos no .NET](/dotnet/standard/base-types/formatting-types/) para obter mais informações sobre a formatação da cadeia de caracteres.
+Ao exibir cadeias de caracteres no código, a ferramenta mais poderosa é o [`String.Format`](xref:System.String.Format(System.String,System.Object)) método estático. A cadeia de caracteres de formatação inclui códigos de formatação para diversos tipos de objetos, sendo que você pode incluir outros textos junto com os valores que estão sendo formatados. Confira o artigo [Formatando tipos no .NET](/dotnet/standard/base-types/formatting-types/) para obter mais informações sobre a formatação da cadeia de caracteres.
 
 ## <a name="the-stringformat-property"></a>A propriedade StringFormat
 
-Esta instalação é transportada em vinculações de [`StringFormat`](xref:Xamarin.Forms.BindingBase.StringFormat) dados: `Binding` Você [`StringFormat`](xref:Xamarin.Forms.Xaml.BindingExtension.StringFormat) define a `Binding` propriedade de (ou a propriedade da extensão de marcação) para uma seqüência de formatação .NET padrão com um espaço reservado:
+Esse recurso é transportado em associações de dados: você define a [`StringFormat`](xref:Xamarin.Forms.BindingBase.StringFormat) propriedade de `Binding` (ou a [`StringFormat`](xref:Xamarin.Forms.Xaml.BindingExtension.StringFormat) propriedade da `Binding` extensão de marcação) para uma cadeia de caracteres de formatação .NET padrão com um espaço reservado:
 
 ```xaml
 <Slider x:Name="slider" />
@@ -123,7 +126,7 @@ A última seção define o `BindingContext` com valor de `Math.PI` e o exibe com
 
 Este é o programa em execução:
 
-[![Formatação de cordas](string-formatting-images/stringformatting-small.png "Formação de cadeia de caracteres")](string-formatting-images/stringformatting-large.png#lightbox "Formação de cadeia de caracteres")
+[![Formação de cadeia de caracteres](string-formatting-images/stringformatting-small.png "Formação de cadeia de caracteres")](string-formatting-images/stringformatting-large.png#lightbox "Formação de cadeia de caracteres")
 
 ## <a name="viewmodels-and-string-formatting"></a>ViewModels e formatação de cadeia de caracteres
 
@@ -176,7 +179,7 @@ Essa abordagem é apresentada na amostra **Melhor Seletor de Cor**, que usa o me
 
 Agora há três pares de elementos `Slider` e `Label` associados à mesma propriedade de origem no objeto `HslColorViewModel`. A única diferença é que `Label` tem uma propriedade `StringFormat` para exibir cada valor `Slider`.
 
-[![Melhor Seletor de cores](string-formatting-images/bettercolorselector-small.png "Melhor Seletor de cores")](string-formatting-images/bettercolorselector-large.png#lightbox "Melhor Seletor de cores")
+[![Melhor seletor de cores](string-formatting-images/bettercolorselector-small.png "Melhor Seletor de cores")](string-formatting-images/bettercolorselector-large.png#lightbox "Melhor Seletor de cores")
 
 Você deve estar se perguntando como poderá exibir valores RGB (vermelho, verde, azul) em formato hexadecimal tradicional de dois dígitos. Esses valores inteiros não estão diretamente disponíveis na estrutura `Color`. Uma solução é calcular valores inteiros dos componentes de cor dentro do ViewModel e expô-los como propriedades. Em seguida, você pode formatá-los usando a especificação de formatação `X2`.
 
@@ -187,4 +190,4 @@ No entanto, o próximo artigo explora o [**Caminho de associação**](binding-pa
 ## <a name="related-links"></a>Links relacionados
 
 - [Demonstrações de associação de dados (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
-- [Capítulo de associação de dados do catálogo de Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)
+- [Capítulo de vinculação de dados do Xamarin.Forms livro](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)

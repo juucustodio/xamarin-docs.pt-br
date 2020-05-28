@@ -1,26 +1,29 @@
 ---
-title: Conversores de valor de associação do Xamarin.Forms
-description: Este artigo explica como converter valores dentro de uma associação de dados do Xamarin.Forms implementando um conversor de valor (que também é conhecido como um conversor de associação ou conversor de valor de associação).
-ms.prod: xamarin
-ms.assetid: 02B1BBE6-D804-490D-BDD4-8ACED8B70C92
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 01/05/2018
-ms.openlocfilehash: 05ad12de77e8895a23cd364b90abfbfb567ac573
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: Xamarin.FormsConversores de valor de associação
+description: Este artigo explica como converter ou converter valores em uma Xamarin.Forms Associação de dados implementando um conversor de valor (que também é conhecido como um conversor de associação ou conversor de valor de associação).
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: e1a4faabc8f0703b497062a8c5d587221692dab7
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "70771617"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84139747"
 ---
-# <a name="xamarinforms-binding-value-converters"></a>Conversores de valor de associação do Xamarin.Forms
+# <a name="xamarinforms-binding-value-converters"></a>Xamarin.FormsConversores de valor de associação
 
-[![Baixar](~/media/shared/download.png) amostra Baixar a amostra](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
+[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
 Normalmente, associações de dados transferem dados de uma propriedade de origem para uma propriedade de destino e, em alguns casos, da propriedade de destino para a propriedade de origem. Essa transferência é simples quando as propriedades de origem e de destino são do mesmo tipo ou quando um tipo pode ser convertido para outro por meio de uma conversão implícita. Quando não é esse o caso, é necessário realizar uma conversão de tipo.
 
-No artigo [**Formatação de Cadeia de Caracteres**](string-formatting.md), você viu como é possível usar a propriedade `StringFormat` de uma associação de dados para converter qualquer tipo em uma cadeia de caracteres. Para outros tipos de conversões, você precisa escrever algum código [`IValueConverter`](xref:Xamarin.Forms.IValueConverter) especializado em uma classe que implemente a interface. (A Universal Windows Platform contém [`IValueConverter`](/uwp/api/Windows.UI.Xaml.Data.IValueConverter/) uma `Windows.UI.Xaml.Data` classe semelhante `IValueConverter` nomeada no `Xamarin.Forms` namespace, mas isso está no namespace.) As classes `IValueConverter` que implementam são chamadas *conversores de valor,* mas também são frequentemente referidas como *conversores de vinculação* ou *conversores de valor de vinculação*.
+No artigo [**Formatação de Cadeia de Caracteres**](string-formatting.md), você viu como é possível usar a propriedade `StringFormat` de uma associação de dados para converter qualquer tipo em uma cadeia de caracteres. Para outros tipos de conversões, você precisa escrever um código especializado em uma classe que implementa a [`IValueConverter`](xref:Xamarin.Forms.IValueConverter) interface. (O Plataforma Universal do Windows contém uma classe semelhante chamada [`IValueConverter`](/uwp/api/Windows.UI.Xaml.Data.IValueConverter/) no `Windows.UI.Xaml.Data` namespace, mas isso `IValueConverter` está no `Xamarin.Forms` namespace.) As classes que implementam `IValueConverter` são chamadas de *conversores de valor*, mas também são conhecidas como *conversores de associação* ou *conversores de valor de associação*.
 
 ## <a name="the-ivalueconverter-interface"></a>A interface IValueConverter
 
@@ -43,7 +46,7 @@ public class IntToBoolConverter : IValueConverter
 }
 ```
 
-Você define uma instância desta [`Converter`](xref:Xamarin.Forms.Binding.Converter) classe `Binding` para a [`Converter`](xref:Xamarin.Forms.Xaml.BindingExtension.Converter) propriedade da `Binding` classe ou para a propriedade da extensão de marcação. Essa classe se torna parte da associação de dados.
+Você define uma instância dessa classe para a [`Converter`](xref:Xamarin.Forms.Binding.Converter) propriedade da `Binding` classe ou para a [`Converter`](xref:Xamarin.Forms.Xaml.BindingExtension.Converter) propriedade da `Binding` extensão de marcação. Essa classe se torna parte da associação de dados.
 
 O método `Convert` é chamado quando dados são passados da origem para o destino nas associações `OneWay` ou `TwoWay`. O parâmetro `value` é o objeto ou o valor da origem da associação de dados. O método deve retornar um valor com o tipo do destino da associação de dados. O método mostrado aqui converte o parâmetro `value` para um `int` e, em seguida, o compara com 0 para um valor retornado de `bool`.
 
@@ -238,13 +241,13 @@ A página **Alternar Indicadores** demonstra como ele pode ser usado para exibir
 
 No último dos três pares de `Switch` e `Label`, o argumento genérico é definido como `Style` e objetos `Style` inteiros são fornecidos para os valores de `TrueObject` e `FalseObject`. Eles substituem o estilo implícito de `Label` definido no dicionário de recursos, portanto, as propriedades do estilo são atribuídas explicitamente ao `Label`. Ativar/desativar o `Switch` faz com que o `Label` correspondente reflita a alteração:
 
-[![Indicadores de switch](converters-images/switchindicators-small.png "Indicadores de switch")](converters-images/switchindicators-large.png#lightbox "Indicadores de switch")
+[![Alternar indicadores](converters-images/switchindicators-small.png "Alternar indicadores")](converters-images/switchindicators-large.png#lightbox "Alternar indicadores")
 
-Também é possível usar [`Triggers`](~/xamarin-forms/app-fundamentals/triggers.md) para implementar alterações semelhantes na interface do usuário com base em outras visualizações.
+Também é possível usar [`Triggers`](~/xamarin-forms/app-fundamentals/triggers.md) o para implementar alterações semelhantes na interface do usuário com base em outras exibições.
 
 ## <a name="binding-converter-parameters"></a>Parâmetros do conversor de associação
 
-A `Binding` classe define [`ConverterParameter`](xref:Xamarin.Forms.Binding.ConverterParameter) uma propriedade, e a extensão de `Binding` marcação também define uma [`ConverterParameter`](xref:Xamarin.Forms.Xaml.BindingExtension.ConverterParameter) propriedade. Se essa propriedade for definida, o valor será passado para os métodos `Convert` e `ConvertBack` como o argumento `parameter`. Mesmo se a instância do conversor de valor for compartilhada entre várias associações de dados, o `ConverterParameter` poderá ser diferente para realizar conversões de alguma forma diferentes.
+A `Binding` classe define uma [`ConverterParameter`](xref:Xamarin.Forms.Binding.ConverterParameter) propriedade, e a `Binding` extensão de marcação também define uma [`ConverterParameter`](xref:Xamarin.Forms.Xaml.BindingExtension.ConverterParameter) propriedade. Se essa propriedade for definida, o valor será passado para os métodos `Convert` e `ConvertBack` como o argumento `parameter`. Mesmo se a instância do conversor de valor for compartilhada entre várias associações de dados, o `ConverterParameter` poderá ser diferente para realizar conversões de alguma forma diferentes.
 
 O uso de `ConverterParameter` é demonstrado com um programa de seleção de cor. Nesse caso, o `RgbColorViewModel` tem três propriedades do tipo `double` denominadas `Red`, `Green`, e `Blue` que ele usa para construir um valor de `Color`:
 
@@ -467,4 +470,4 @@ Eis o resultado:
 ## <a name="related-links"></a>Links relacionados
 
 - [Demonstrações de associação de dados (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
-- [Capítulo de associação de dados do catálogo de Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)
+- [Capítulo de vinculação de dados do Xamarin.Forms livro](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)
